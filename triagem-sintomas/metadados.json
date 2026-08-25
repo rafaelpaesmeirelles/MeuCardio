@@ -3452,5 +3452,365 @@
     "review_status": "revisado",
     "review_note": "Triagem construída inteiramente a partir de dois documentos já publicados e verificados desta pasta (diagnóstico por ITB/WIfI e classificação de Rutherford para isquemia aguda) — nenhuma fonte nova consultada nesta entrada. Não reproduz escala proprietária; encaminha para classificação/estadiamento detalhados nos documentos de origem.",
     "version": 1
+  },
+  {
+    "slug": "bradicardia-sintomatica",
+    "name": "Bradicardia sintomática / pulso lento",
+    "aliases": [
+      "pulso lento",
+      "frequência cardíaca baixa",
+      "bradiarritmia",
+      "FC baixa"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem de bradicardia com pulso no adulto, para separar comprometimento hemodinâmico que exige estabilização imediata (AHA 2025) de causas reversíveis (fármaco bradicardizante, hipercalemia, isquemia inferior), doença estrutural do sistema de condução (doença do nó sinusal, bloqueio atrioventricular) e adaptação fisiológica do atleta treinado.",
+    "questions": [
+      {
+        "id": "age",
+        "label": "Idade",
+        "type": "number",
+        "required": false,
+        "min": 0,
+        "max": 120,
+        "unit": "anos",
+        "section": "Contexto"
+      },
+      {
+        "id": "hemodynamic_instability",
+        "label": "Há síncope, pré-síncope, hipotensão, sinais de choque ou alteração aguda do estado mental associados à bradicardia?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "ischemic_chest_pain",
+        "label": "Há dor torácica isquêmica ou suspeita de infarto agudo do miocárdio, especialmente de parede inferior?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "severe_bradycardia_or_high_grade_av_block",
+        "label": "FC persistente <40 bpm, pausa sinusal ≥3 s durante a vigília, ou bloqueio atrioventricular de alto grau (Mobitz II ou 3º grau) ao ECG?",
+        "type": "boolean",
+        "required": true,
+        "section": "ECG e frequência"
+      },
+      {
+        "id": "bradycardizing_drug_use",
+        "label": "Uso atual de betabloqueador, digoxina, amiodarona, verapamil ou diltiazem?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fármacos e eletrólitos"
+      },
+      {
+        "id": "suspected_digoxin_toxicity",
+        "label": "Em uso de digoxina, há suspeita de intoxicação (sintomas gastrointestinais/visuais/neurológicos, taquicardia ventricular ou nível sérico elevado)?",
+        "type": "boolean",
+        "required": false,
+        "section": "Fármacos e eletrólitos"
+      },
+      {
+        "id": "hyperkalemia_suspected",
+        "label": "Há suspeita ou confirmação laboratorial de hipercalemia (ex.: doença renal, uso de IECA/BRA/espironolactona)?",
+        "type": "boolean",
+        "required": false,
+        "section": "Fármacos e eletrólitos"
+      },
+      {
+        "id": "known_conduction_disease_or_pacemaker",
+        "label": "Há doença do sistema de condução conhecida, marca-passo/CDI prévio ou histórico de síncope recorrente?",
+        "type": "boolean",
+        "required": false,
+        "section": "Contexto adicional"
+      },
+      {
+        "id": "trained_athlete_asymptomatic",
+        "label": "É atleta ou ex-atleta de endurance, completamente assintomático, com FC de repouso ≥30 bpm e resposta cronotrópica normal ao esforço (quando testada)?",
+        "type": "boolean",
+        "required": false,
+        "section": "Diferenciação do atleta treinado"
+      }
+    ],
+    "rules": [
+      {
+        "id": "instabilidade-hemodinamica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hemodynamic_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bradicardia com comprometimento cardiopulmonar (síncope, hipotensão, choque ou alteração aguda do estado mental)"
+          ],
+          "emergency_flow": [
+            "Via aérea/ventilação conforme necessidade, monitorização cardiorrespiratória contínua, ECG de 12 derivações e acesso venoso",
+            "Atropina 1 mg IV, repetível a cada 3-5 min até dose total de 3 mg (AHA 2025, Classe 2a)",
+            "Se instabilidade persistir: marca-passo transcutâneo e/ou dopamina 5-20 mcg/kg/min ou adrenalina 2-10 mcg/min IV",
+            "Marca-passo transvenoso temporário se a instabilidade persistir apesar da terapia inicial; em BAV de alto grau instável sem acesso IV/IO, considerar estimulação imediata (AHA 2025, Classe 2b)",
+            "Investigar e tratar causa reversível em paralelo (isquemia, hipercalemia, fármaco bradicardizante, hipóxia)"
+          ]
+        }
+      },
+      {
+        "id": "isquemia-iam-inferior",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "ischemic_chest_pain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bradicardia associada a dor torácica isquêmica/suspeita de infarto, especialmente de parede inferior — risco de bloqueio AV agudo"
+          ],
+          "suggested_tests": [
+            "ECG de 12 derivações seriado, troponina, avaliação de reperfusão coronariana conforme protocolo de síndrome coronariana aguda"
+          ]
+        }
+      },
+      {
+        "id": "intoxicacao-digitalica",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_digoxin_toxicity",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de intoxicação digitálica — considerar taquicardia ventricular bidirecional ao ECG (achado patognomônico) e hipercalemia associada na intoxicação aguda"
+          ],
+          "suggested_tests": [
+            "Nível sérico de digoxina, potássio, função renal, ECG de 12 derivações"
+          ],
+          "emergency_flow": [
+            "Considerar anticorpo antidigoxina (Fab) diante de bradicardia sintomática, bloqueio AV refratário a atropina, taquicardia ventricular ou potássio >5,5 mEq/L (>6 mEq/L em criança)",
+            "Dose empírica de 10 frascos em adulto (5 em criança <20 kg) quando o nível é desconhecido e o paciente está gravemente sintomático — não aguardar confirmação laboratorial",
+            "Não corrigir hiperpotassemia leve isoladamente antes do Fab: o próprio antídoto já reduz o potássio sérico ao neutralizar a digoxina livre"
+          ]
+        }
+      },
+      {
+        "id": "ecg-alto-risco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "severe_bradycardia_or_high_grade_av_block",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "FC persistente <40 bpm, pausa sinusal ≥3 s na vigília, ou BAV de alto grau (Mobitz II ou 3º grau) ao ECG"
+          ],
+          "differentials": [
+            "Doença do nó sinusal no idoso"
+          ],
+          "suggested_tests": [
+            "ECG de 12 derivações, monitorização/telemetria contínua, eletrólitos e função renal"
+          ]
+        }
+      },
+      {
+        "id": "hipercalemia",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "hyperkalemia_suspected",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Distúrbio eletrolítico (hipercalemia) como causa reversível de bradicardia/bloqueio de condução"
+          ],
+          "suggested_tests": [
+            "Potássio sérico, função renal, ECG (ondas T apiculadas, alargamento de QRS)"
+          ],
+          "emergency_flow": [
+            "Tratar hipercalemia conforme gravidade (estabilização de membrana, redistribuição e remoção) em paralelo ao suporte da bradicardia"
+          ]
+        }
+      },
+      {
+        "id": "farmaco-bradicardizante",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "bradycardizing_drug_use",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Uso de fármaco com potencial bradicardizante (betabloqueador, digoxina, amiodarona, verapamil ou diltiazem)"
+          ],
+          "differentials": [
+            "Polifarmácia e desprescrição cardiovascular"
+          ],
+          "suggested_tests": [
+            "Revisão da lista de medicamentos em uso, nível sérico quando aplicável (ex.: digoxina), função renal e eletrólitos"
+          ]
+        }
+      },
+      {
+        "id": "doenca-de-condução-conhecida",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "known_conduction_disease_or_pacemaker",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Doença do nó sinusal no idoso"
+          ],
+          "suggested_tests": [
+            "Interrogação de dispositivo quando marca-passo/CDI presente, ECG, Holter de 24-48h"
+          ]
+        }
+      },
+      {
+        "id": "bradicardia-fisiologica-do-atleta",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "trained_athlete_asymptomatic",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            },
+            {
+              "field": "severe_bradycardia_or_high_grade_av_block",
+              "op": "falsy"
+            },
+            {
+              "field": "ischemic_chest_pain",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "Bradicardia sinusal fisiológica do atleta"
+          ],
+          "suggested_tests": [
+            "ECG de 12 derivações basal; Holter e teste ergométrico com avaliação da resposta cronotrópica se a dúvida diagnóstica persistir"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "ECG de 12 derivações",
+      "Sinais vitais e pressão arterial",
+      "Eletrólitos (potássio) e função renal",
+      "Revisão da lista de medicamentos em uso"
+    ],
+    "differentials": [
+      "Doença do nó sinusal no idoso",
+      "Bloqueio atrioventricular de alto grau",
+      "Polifarmácia e desprescrição cardiovascular",
+      "Intoxicação digitálica",
+      "Hipercalemia",
+      "Isquemia ou infarto agudo do miocárdio (parede inferior)",
+      "Bradicardia sinusal fisiológica do atleta",
+      "Hipotireoidismo",
+      "Hipotermia"
+    ],
+    "red_flags": [
+      "Síncope, pré-síncope, hipotensão, choque ou alteração aguda do estado mental",
+      "FC persistente <40 bpm ou pausa sinusal ≥3 s durante a vigília",
+      "Bloqueio atrioventricular de alto grau (Mobitz II ou 3º grau)",
+      "Dor torácica isquêmica associada, especialmente com padrão de parede inferior",
+      "Suspeita de intoxicação digitálica ou de hipercalemia"
+    ],
+    "ambulatory_flow": [
+      "Confirmar se a bradicardia é sintomática e caracterizar o contexto (atleta treinado, fármaco em uso, doença de condução conhecida)",
+      "ECG de 12 derivações e revisão completa da lista de medicamentos, incluindo fármacos bradicardizantes",
+      "Holter de 24-48h e teste ergométrico com avaliação da resposta cronotrópica quando houver dúvida entre adaptação fisiológica e doença do nó sinusal",
+      "Encaminhar para avaliação de marca-passo definitivo quando indicado (Mobitz II, BAV completo, doença sintomática do nó sinusal)"
+    ],
+    "emergency_flow": [
+      "Avaliar comprometimento cardiopulmonar atribuível à bradicardia: hipotensão, alteração mental aguda, choque, dor torácica isquêmica ou insuficiência cardíaca aguda",
+      "Monitorização cardiorrespiratória contínua, ECG de 12 derivações e acesso venoso; tratar causas reversíveis em paralelo",
+      "Atropina 1 mg IV a cada 3-5 min até 3 mg quando houver comprometimento (AHA 2025)",
+      "Escalonar para marca-passo transcutâneo e/ou dopamina/adrenalina, e marca-passo transvenoso temporário se a instabilidade persistir",
+      "Em BAV de alto grau instável sem acesso IV/IO, considerar estimulação imediata enquanto o acesso é obtido"
+    ],
+    "tags": [
+      "bradicardia",
+      "pulso lento",
+      "bloqueio atrioventricular",
+      "doença do nó sinusal",
+      "marca-passo",
+      "fármaco bradicardizante",
+      "intoxicação digitálica",
+      "hipercalemia"
+    ],
+    "source_refs": [
+      "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376",
+      "American Heart Association. Adult Bradycardia With a Pulse Algorithm. 2025.",
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. European Heart Journal. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430",
+      "Second-Degree Atrioventricular Block. StatPearls (NCBI Bookshelf). NBK482359",
+      "Sharma S, Drezner JA, Baggish A, et al. International Recommendations for Electrocardiographic Interpretation in Athletes. J Am Coll Cardiol. 2017;69(8):1057-1075. DOI: 10.1016/j.jacc.2017.01.015. PMID: 28231933",
+      "Katritsis GD, Katritsis DG. The Electrocardiogram in Athletes Revisited. Arrhythm Electrophysiol Rev. 2013;2(2):99-104. DOI: 10.15420/aer.2013.2.2.99. PMID: 26835048",
+      "Cardiac Glycoside (Digoxin) Toxicity. StatPearls (NCBI Bookshelf). NBK459165",
+      "Digoxin Immune Fab. StatPearls (NCBI Bookshelf). NBK556101"
+    ],
+    "source_urls": [
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+      "https://www.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf",
+      "https://doi.org/10.1093/eurheartj/ehab364",
+      "https://www.ncbi.nlm.nih.gov/books/NBK482359/",
+      "https://pubmed.ncbi.nlm.nih.gov/28231933/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4711505/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK459165/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK556101/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Autorado em 25/08/2026 reaproveitando integralmente fatos/fontes já verificados em 4 documentos publicados do repositório (fluxograma-bradicardia-sintomatica-manejo-agudo, bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica, bradicardia-sinusal-do-atleta-versus-doenca-do-no-sinusal-criterios-de-diferenciacao, intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab) — nenhum número clínico novo foi introduzido. Diferenciais ligados ao catálogo de doenças usam o NOME EXATO já cadastrado: 'Doença do nó sinusal no idoso' (nova entrada esperada do outro agente de produção de grafo; se o nome exato divergir ao ser criada, ajustar este campo) e 'Polifarmácia e desprescrição cardiovascular' (nome exato confirmado por leitura direta de doencas/metadados.json, slug polifarmacia-e-desprecricao-cardiovascular — o nome sugerido no prompt do orquestrador, 'Polifarmácia cardiovascular no idoso: cascata de prescrição e desprescrição', NÃO é o nome real cadastrado). Demais diferenciais (intoxicação digitálica, hipercalemia, IAM inferior, hipotireoidismo, hipotermia) não têm entrada correspondente hoje em doencas/metadados.json — mantidos como texto livre, sem criar aresta falsa. Pendente revisão humana antes de publicar."
   }
 ]

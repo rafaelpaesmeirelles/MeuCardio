@@ -5179,5 +5179,328 @@
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
     "version": 1
+  },
+  {
+    "slug": "doenca-do-no-sinusal-no-idoso",
+    "name": "Doença do Nó Sinusal no Idoso",
+    "aliases": [
+      "Disfunção do nó sinusal",
+      "Sick sinus syndrome",
+      "Síndrome do nó sinusal doente",
+      "Síndrome bradicardia-taquicardia",
+      "Síndrome taquicardia-bradicardia",
+      "DNS"
+    ],
+    "area": "cardiogeriatria",
+    "category": "doenca_prevalente",
+    "subtype": "bradiarritmia",
+    "prevalence_rank": 3,
+    "completeness": "completo",
+    "summary": "A doença do nó sinusal (disfunção sinusal, antigamente chamada de \"sick sinus syndrome\") é a degeneração progressiva do automatismo e da condução do nó sinusal. Sua incidência não é estável ao longo da vida: multiplica com o avanço da idade, quase dobrando a cada década (HR 1,73; IC95% 1,47-2,05 por incremento de 5 anos), e é a indicação isolada mais comum de marca-passo permanente. Cerca de metade dos pacientes tem síndrome taquicardia-bradicardia — alternância entre bradicardia/pausa sinusal e taquiarritmia supraventricular paroxística, mais comumente fibrilação atrial — que exige avaliar em conjunto a indicação de marca-passo (bradicardia) e a de anticoagulação (fibrilação atrial), decisões independentes. A indicação de marca-passo depende da correlação entre sintoma (síncope, pré-síncope, fadiga, intolerância ao esforço) e bradicardia documentada, ou de incompetência cronotrópica — nunca de frequência cardíaca isolada nem da idade cronológica.",
+    "epidemiology": "Estudo de referência (Jensen et al., JACC 2014, PMID 25104519): 20.572 participantes das coortes ARIC e Cardiovascular Health Study combinadas, idade média basal de 59 anos, 43% homens, sem fibrilação atrial ou marca-passo no início do seguimento. 291 casos novos em 17 anos de seguimento, incidência de 0,8 por 1.000 pessoas-ano na população geral. A idade foi a variável mais fortemente associada ao risco: HR 1,73 (IC95% 1,47-2,05) por incremento de 5 anos — o risco quase dobra a cada década adicional de vida. População negra teve risco 41% menor que a branca (HR 0,59; IC95% 0,37-0,98), sem explicação mecanicista única estabelecida. Outros fatores associados: IMC mais elevado, NT-proBNP e cistatina C elevados, QRS mais longo, FC basal mais baixa, hipertensão e história de doença cardiovascular. Projeção para os EUA: de 78.000 casos novos/ano em 2012 para 172.000 em 2060, atribuída ao envelhecimento populacional. Dado complementar de fonte terciária (StatPearls, Semelka et al., PMID 29261930): a disfunção do nó sinusal se desenvolve em cerca de 1 a cada 600 pacientes cardíacos com 65 anos ou mais, com idade média do diagnóstico de 68 anos; foi responsável por mais da metade dos implantes de marca-passo nos EUA na década de 1990, mantendo-se como a indicação isolada mais comum desde então, ao lado do bloqueio atrioventricular avançado. A síndrome taquicardia-bradicardia está presente em pelo menos 50% dos pacientes com doença do nó sinusal.",
+    "presentation": [
+      "Síncope",
+      "Pré-síncope ou tontura recorrente",
+      "Fadiga inexplicada",
+      "Intolerância ao esforço (possível marcador de incompetência cronotrópica)",
+      "Palpitações, quando há síndrome taquicardia-bradicardia com fibrilação atrial paroxística associada",
+      "Achado incidental de bradicardia sinusal ou pausa em ECG/Holter de rotina, sem sintoma correlacionado — isso, isoladamente, não é indicação de tratamento"
+    ],
+    "differentials": [
+      "Bradicardia sinusal fisiológica (idoso condicionado, atleta)",
+      "Bradicardia induzida por fármaco (betabloqueador, bloqueador de canal de cálcio não di-hidropiridínico, digoxina, amiodarona) sem doença estrutural do nó sinusal",
+      "Bloqueio atrioventricular avançado (doença do nó AV, não do nó sinusal)",
+      "Hipotireoidismo",
+      "Apneia obstrutiva do sono",
+      "Síncope reflexa/neuromediada (vasovagal)",
+      "Bradicardia transitória por hipóxia ou isquemia miocárdica aguda"
+    ],
+    "tests": [
+      "ECG de repouso de 12 derivações",
+      "Holter de 24-48h — a doença costuma ser paroxística; ECG de repouso normal não exclui o diagnóstico",
+      "Monitor de eventos prolongado (7-30 dias) ou looper implantável quando os sintomas são esparsos e o Holter curto não captura a correlação",
+      "Teste ergométrico para avaliar incompetência cronotrópica",
+      "Função tireoidiana (TSH)",
+      "Revisão sistemática das medicações em uso, à procura de fármaco bradicardizante"
+    ],
+    "red_flags": [
+      "Síncope ou pré-síncope com instabilidade hemodinâmica associada (hipotensão sintomática, rebaixamento do nível de consciência, sinais de choque)",
+      "Pausa sinusal prolongada com correlação sintomática documentada",
+      "Síncope com trauma associado (queda com fratura, traumatismo cranioencefálico)",
+      "Bradicardia sintomática refratária após suspensão do fármaco bradicardizante não indispensável"
+    ],
+    "ambulatory_flow": [
+      "Investigar correlação sintoma-ritmo com Holter ou monitor de eventos prolongado antes de atribuir o sintoma a outra causa, mesmo com ECG de repouso normal — a doença costuma ser paroxística.",
+      "Revisar fármacos em uso; suspender ou reduzir bradicardizante não indispensável antes de considerar dispositivo, quando clinicamente possível.",
+      "Confirmar correlação temporal entre sintoma (síncope, pré-síncope, fadiga, intolerância ao esforço) e a bradicardia/pausa documentada antes de indicar marca-passo — não indicar por achado incidental assintomático.",
+      "Investigar incompetência cronotrópica por teste ergométrico quando houver intolerância ao esforço sem bradicardia de repouso.",
+      "Na síndrome taquicardia-bradicardia (fibrilação atrial paroxística associada), revisitar sistematicamente a indicação de anticoagulação — decisão independente da indicação de marca-passo, e que não deve ser esquecida após o implante resolver o sintoma da bradicardia.",
+      "Encaminhar para avaliação de indicação de marca-passo permanente quando houver correlação sintoma-bradicardia confirmada, ou incompetência cronotrópica documentada, ou bradicardia por fármaco indispensável que não pode ser reduzido.",
+      "Idade avançada isolada não é contraindicação ao implante quando há sintoma correlacionado — ponderar fragilidade, expectativa de vida e objetivos de cuidado como discussão separada, incluindo a conversa sobre desativação futura no momento do consentimento do implante."
+    ],
+    "emergency_flow": [
+      "Avaliar estabilidade hemodinâmica imediatamente (nível de consciência, pressão arterial, perfusão periférica).",
+      "Instabilidade hemodinâmica por bradicardia sintomática: atropina e considerar marca-passo transcutâneo/transvenoso temporário conforme protocolo de bradicardia sintomática, enquanto se investiga e trata a causa.",
+      "Suspender fármaco bradicardizante identificado como causa contribuinte, ponderando o risco de suspender medicação indispensável para outra condição.",
+      "ECG de 12 derivações e monitorização contínua para documentar o ritmo durante o evento agudo.",
+      "Investigar e corrigir causas reversíveis agudas (distúrbio eletrolítico, hipotireoidismo grave, isquemia miocárdica aguda) antes de assumir doença estrutural definitiva do nó sinusal.",
+      "Após estabilização, encaminhar para avaliação de indicação de marca-passo permanente quando a bradicardia sintomática não for atribuível a causa reversível transitória."
+    ],
+    "treatment_summary": "O tratamento definitivo da doença do nó sinusal sintomática é o marca-passo permanente — não há terapia farmacológica que reverta a degeneração do nó sinusal, e fármacos cronotrópicos positivos têm papel limitado e não substituem o dispositivo em doença estabelecida. A indicação depende da correlação entre sintoma (síncope, pré-síncope, fadiga, intolerância ao esforço) e bradicardia/pausa documentada, ou de incompetência cronotrópica — nunca de frequência cardíaca isolada ou da idade cronológica (princípio geral reproduzido por fonte terciária que cita nominalmente a diretriz 2018 ACC/AHA/HRS, PMID 30412709; a redação literal de Classe/Nível dessa diretriz não foi conferida em texto integral nesta linha de produção e segue como VERIFICAÇÃO HUMANA NECESSÁRIA para citação formal). Bradicardia sinusal assintomática não tem indicação de marca-passo, mesmo em paciente muito idoso. Quando o fármaco bradicardizante é indispensável para outra condição (ex.: betabloqueador na insuficiência cardíaca, controle de frequência na fibrilação atrial associada) e não pode ser reduzido sem prejuízo clínico maior, isso também é indicação reconhecida de marca-passo. Na síndrome taquicardia-bradicardia, a indicação de marca-passo (bradicardia) e a de anticoagulação (fibrilação atrial paroxística) são decisões independentes que precisam ser tomadas em conjunto — o marca-passo trata o sintoma da bradicardia, não reduz o risco tromboembólico da arritmia atrial associada. A decisão de implantar no paciente muito idoso ou frágil deve ponderar expectativa de vida, fragilidade e objetivos de cuidado, incluindo a discussão prévia sobre desativação futura no momento do consentimento do implante.",
+    "monitoring": [
+      "Reavaliação clínica periódica de sintomas mesmo após afastar indicação de marca-passo, já que a prevalência e a suspeita diagnóstica devem subir com a idade",
+      "Seguimento eletrofisiológico programado do dispositivo após implante de marca-passo",
+      "Revisitar sistematicamente a necessidade de anticoagulação a cada consulta quando houver componente de fibrilação atrial paroxística associado",
+      "Monitorar progressão para bloqueio atrioventricular associado, achado comum ao longo do seguimento da doença do nó sinusal"
+    ],
+    "assistant_questions": [
+      {
+        "id": "age_years",
+        "label": "Idade",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 120,
+        "unit": "anos",
+        "section": "Dados básicos"
+      },
+      {
+        "id": "sincope",
+        "label": "Síncope documentada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas"
+      },
+      {
+        "id": "pre_sincope",
+        "label": "Pré-síncope ou tontura recorrente?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas"
+      },
+      {
+        "id": "fadiga_intolerancia_esforco",
+        "label": "Fadiga ou intolerância ao esforço inexplicada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas"
+      },
+      {
+        "id": "bradicardia_documentada_ecg_holter",
+        "label": "Bradicardia sinusal, pausa sinusal ou bloqueio sinoatrial documentado em ECG ou Holter?",
+        "type": "boolean",
+        "required": true,
+        "section": "Documentação eletrocardiográfica"
+      },
+      {
+        "id": "correlacao_sintoma_ritmo",
+        "label": "Há correlação temporal entre o sintoma e a bradicardia/pausa documentada?",
+        "type": "boolean",
+        "required": false,
+        "section": "Documentação eletrocardiográfica"
+      },
+      {
+        "id": "incompetencia_cronotropica",
+        "label": "Incapacidade de elevar adequadamente a frequência cardíaca ao esforço (incompetência cronotrópica), mesmo sem bradicardia de repouso?",
+        "type": "boolean",
+        "required": false,
+        "section": "Documentação eletrocardiográfica"
+      },
+      {
+        "id": "fibrilacao_atrial_paroxistica",
+        "label": "Fibrilação atrial paroxística associada (síndrome taquicardia-bradicardia)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Documentação eletrocardiográfica"
+      },
+      {
+        "id": "uso_farmaco_bradicardizante",
+        "label": "Em uso de fármaco bradicardizante (betabloqueador, bloqueador de canal de cálcio não di-hidropiridínico, digoxina, amiodarona)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fármacos"
+      },
+      {
+        "id": "farmaco_indispensavel",
+        "label": "O fármaco bradicardizante é indispensável para outra condição e não pode ser reduzido/suspenso sem prejuízo clínico maior?",
+        "type": "boolean",
+        "required": false,
+        "section": "Fármacos"
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "label": "Instabilidade hemodinâmica associada (hipotensão sintomática, rebaixamento do nível de consciência, choque)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "emergencia-instabilidade-hemodinamica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bradicardia sintomática com instabilidade hemodinâmica — avaliar necessidade de atropina e marca-passo transcutâneo/transvenoso temporário imediato."
+          ],
+          "emergency_flow": [
+            "Priorizar estabilização hemodinâmica: atropina, marca-passo transcutâneo/transvenoso temporário conforme protocolo de bradicardia sintomática, e investigação simultânea de causa reversível."
+          ]
+        }
+      },
+      {
+        "id": "indicacao-marcapasso-correlacao-sintoma-ritmo",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "bradicardia_documentada_ecg_holter",
+              "op": "truthy"
+            },
+            {
+              "field": "correlacao_sintoma_ritmo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Encaminhar para avaliação de indicação de marca-passo permanente — bradicardia documentada com correlação sintomática confirmada é a indicação central da doença do nó sinusal."
+          ]
+        }
+      },
+      {
+        "id": "incompetencia-cronotropica-isolada",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "incompetencia_cronotropica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Incompetência cronotrópica é indicação reconhecida de marca-passo, mesmo na ausência de bradicardia de repouso — investigar com teste ergométrico ou monitorização prolongada."
+          ]
+        }
+      },
+      {
+        "id": "farmaco-bradicardizante-indispensavel",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "uso_farmaco_bradicardizante",
+              "op": "truthy"
+            },
+            {
+              "field": "farmaco_indispensavel",
+              "op": "truthy"
+            },
+            {
+              "field": "bradicardia_documentada_ecg_holter",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Considerar indicação de marca-passo permanente para permitir a manutenção do fármaco bradicardizante indispensável, em vez de reduzir ou suspender a medicação necessária para a outra condição."
+          ]
+        }
+      },
+      {
+        "id": "sindrome-taqui-bradi-revisitar-anticoagulacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "fibrilacao_atrial_paroxistica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Revisitar sistematicamente a indicação de anticoagulação para o componente de fibrilação atrial paroxística associado — a indicação de marca-passo trata a bradicardia e não reduz, isoladamente, o risco tromboembólico da arritmia atrial."
+          ]
+        }
+      },
+      {
+        "id": "idoso-limiar-suspeita-mais-baixo",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "age_years",
+              "op": "gte",
+              "value": 65
+            },
+            {
+              "any": [
+                {
+                  "field": "sincope",
+                  "op": "truthy"
+                },
+                {
+                  "field": "pre_sincope",
+                  "op": "truthy"
+                },
+                {
+                  "field": "fadiga_intolerancia_esforco",
+                  "op": "truthy"
+                }
+              ]
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Em paciente com 65 anos ou mais, a incidência de disfunção do nó sinusal sobe de forma acentuada com a idade — manter limiar mais baixo de suspeita diagnóstica diante de sintomas compatíveis, sem transformar isso em indicação automática de dispositivo na ausência de correlação sintoma-ritmo."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "disfunção sinusal",
+      "sick sinus syndrome",
+      "bradicardia",
+      "síndrome taquicardia-bradicardia",
+      "marca-passo",
+      "cardiogeriatria",
+      "fibrilação atrial paroxística",
+      "incompetência cronotrópica"
+    ],
+    "source_refs": [
+      "Jensen PN, Gronroos NN, Chen LY, et al. Incidence of and risk factors for sick sinus syndrome in the general population. J Am Coll Cardiol. 2014;64(6):531-538. PMID: 25104519. PMCID: PMC4139053 — texto integral obtido e conferido via PMC; 20.572 participantes das coortes ARIC e Cardiovascular Health Study, 291 casos novos em 17 anos (incidência 0,8/1.000 pessoas-ano), HR 1,73 (IC95% 1,47-2,05) por incremento de 5 anos de idade, HR 0,59 (IC95% 0,37-0,98) para população negra, projeção de 78.000 (2012) a 172.000 (2060) casos novos/ano nos EUA.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. J Am Coll Cardiol. 2019;74(7):e51-e156. PMID: 30412709 — existência, título, periódico e paginação confirmados via PubMed E-utilities. Texto integral bloqueado por acesso pago (JACC e a versão irmã em Circulation, PMID 30586772); a redação literal de Classe de Recomendação e Nível de Evidência não foi conferida em texto integral e é sinalizada como VERIFICAÇÃO HUMANA NECESSÁRIA para citação formal em decisão clínica individual — o conteúdo geral atribuído a ela reflete o que é reproduzido de forma consistente pela fonte terciária StatPearls abaixo.",
+      "Sohinki D, Ha FJ. Sinus Node Dysfunction. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 31334973. Bookshelf ID: NBK544253 — texto integral obtido e conferido via NCBI Bookshelf, incluindo a reprodução da incidência de 0,8/1.000 pessoas-ano (citando Jensen et al. 2014) e a definição de síndrome taquicardia-bradicardia.",
+      "Semelka M, Gera J, Usman S. Sick Sinus Syndrome. In: StatPearls. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 29261930. Bookshelf ID: NBK470599 — texto integral obtido e conferido via NCBI Bookshelf: disfunção do nó sinusal em cerca de 1 a cada 600 pacientes cardíacos com 65 anos ou mais, idade média do diagnóstico de 68 anos, síndrome taquicardia-bradicardia em pelo menos 50% dos pacientes com SSS, e doença do nó sinusal respondendo por mais de 50% dos implantes de marca-passo nos EUA na década de 1990."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25104519/",
+      "https://pubmed.ncbi.nlm.nih.gov/30412709/",
+      "https://pubmed.ncbi.nlm.nih.gov/31334973/",
+      "https://pubmed.ncbi.nlm.nih.gov/29261930/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Entrada de catálogo (Guia de Doenças, cardiogeriatria) derivada do documento já publicado e revisado 'doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo' (review_status: revisado), cujas fontes primárias (Jensen et al. JACC 2014, PMID 25104519, texto integral via PMC; StatPearls PMID 31334973 e 29261930, texto integral via NCBI Bookshelf) já haviam sido conferidas em texto integral por outra sessão de produção em 02/08/2026 — nenhum número clínico novo foi introduzido nesta entrada além do que já constava naquele documento e no documento complementar 'marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida'. A diretriz 2018 ACC/AHA/HRS (Kusumoto et al., PMID 30412709) segue com a redação literal de Classe/Nível não conferida em texto integral (bloqueio de acesso pago documentado no arquivo original), sinalizada como VERIFICAÇÃO HUMANA NECESSÁRIA no campo treatment_summary. review_status mantido em pendente_revisao por não ser decisão desta sessão de produção marcar como revisado — cabe ao Rafael.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo",
+      "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
+    ],
+    "patient_material_slug": "quando-o-coracao-bate-devagar-demais"
   }
 ]
