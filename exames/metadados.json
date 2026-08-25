@@ -9685,5 +9685,57 @@
       "morte súbita",
       "cardiologia do esporte"
     ]
+  },
+  {
+    "slug": "magnesio-serico-risco-arritmico-e-investigacao",
+    "name": "Magnésio sérico na avaliação de risco arrítmico e distúrbios eletrolíticos",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Concentração de magnésio no soro. Menos de 1% do magnésio corporal total está no compartimento sérico; por isso, o resultado é útil para detectar hipomagnesemia manifesta e acompanhar segurança da reposição, mas é um proxy imperfeito dos estoques corporais.",
+    "reference_range": "O NIH Office of Dietary Supplements descreve faixa sérica usual de aproximadamente 0,75–0,95 mmol/L e hipomagnesemia abaixo de 0,75 mmol/L. A ESC 2022 de cardio-oncologia lista ≤1,6 mEq/L (aproximadamente 0,8 mmol/L) como anormalidade corrigível associada ao risco de QT prolongado/TdP. A faixa do laboratório e o contexto clínico prevalecem; esses valores não definem, isoladamente, gravidade nem indicação de reposição intravenosa.",
+    "indications": "Hipocalemia persistente ou refratária; QT prolongado adquirido, torsades de pointes ou arritmia ventricular; uso de diuréticos, inibidor de bomba de prótons, cisplatina, aminoglicosídeo ou outro fármaco associado a perda de magnésio; perdas gastrointestinais; alcoolismo/desnutrição; hipocalcemia inexplicada; suspeita de toxicidade digitálica; monitorização de reposição em paciente com disfunção renal.",
+    "interpretation": "Resultado baixo sustenta deficiência e exige integrar potássio, cálcio, creatinina/eGFR, ECG/QTc, perdas e medicamentos. Resultado dentro da faixa não exclui depleção corporal quando a probabilidade clínica é alta. Na TdP, a indicação de magnésio para prevenir recorrência não depende de hipomagnesemia documentada; na TV polimórfica sustentada, o exame e a administração de magnésio não devem atrasar o choque não sincronizado.",
+    "limitations": "Não existe ponto de corte sérico universal que determine sozinho sintomas, risco arrítmico ou regime de reposição. Hemólise pode elevar falsamente o resultado. Função renal reduzida aumenta o risco de acumulação durante reposição. Magnésio urinário ou excreção fracionada podem ajudar a diferenciar perda renal de extrarrenal, mas dependem do método e da função renal.",
+    "source_refs": [
+      "NIH Office of Dietary Supplements. Magnesium: Fact Sheet for Health Professionals. https://ods.od.nih.gov/factsheets/magnesium-healthprofessional/ — faixa sérica usual, distribuição corporal e limitações da avaliação sérica.",
+      "Rosner MH, Ha N, Palmer BF, Perazella MA. Acquired Disorders of Hypomagnesemia. Mayo Clin Proc. 2023;98(4):581-596. DOI: 10.1016/j.mayocp.2022.12.002. PMID: 36872194.",
+      "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568.",
+      "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 AHA Guidelines for CPR and ECC. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "magnésio sérico",
+      "hipomagnesemia",
+      "torsades de pointes",
+      "hipocalemia refratária",
+      "qt longo",
+      "função renal"
+    ]
+  },
+  {
+    "slug": "potassio-serico-risco-arritmico-e-monitorizacao",
+    "name": "Potássio sérico na avaliação de risco arrítmico e monitorização cardiovascular",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Concentração sérica de potássio, eletrólito central para o potencial de membrana e a repolarização miocárdica. O resultado deve ser integrado ao ECG, sintomas, função renal, estado ácido-base, glicemia, magnésio e medicamentos que alteram distribuição ou excreção.",
+    "reference_range": "A referência depende do laboratório. Hipocalemia é geralmente definida como K⁺ <3,5 mmol/L; a revisão do Working Group da ESC classifica 3,0–3,4 mmol/L como leve, 2,5–2,9 mmol/L como moderada e <2,5 mmol/L como grave. O algoritmo ERC 2025 usa 2,5–2,9 mmol/L para moderada e ≤2,4 mmol/L para grave. Essas categorias orientam risco, mas não substituem sintomas, ECG e contexto clínico.",
+    "indications": "Uso de diurético, IECA/BRA/ARNI, antagonista mineralocorticoide ou quelante de potássio; insuficiência cardíaca; DRC/IRA; arritmia, síncope ou alteração de ECG; intoxicação digitálica; perdas gastrointestinais; suspeita de hiperaldosteronismo; insulinoterapia/beta-agonista em contexto de risco; antes e durante correção de hipo ou hipercalemia.",
+    "interpretation": "Valores baixos aumentam vulnerabilidade a ectopia e arritmia, sobretudo com digoxina, QT prolongado, hipomagnesemia ou cardiopatia estrutural. Valores altos exigem excluir pseudo-hipercalemia por hemólise e avaliar ECG/função renal. Não há base para converter uma faixa observacionalmente associada a menor risco em meta rígida universal; a urgência depende do valor, velocidade da mudança, sintomas, ECG e comorbidades.",
+    "limitations": "Hemólise, punção traumática, trombocitose ou leucocitose podem causar pseudo-hipercalemia. Alterações de pH, insulina e catecolaminas mudam a distribuição transcelular sem refletir estoque corporal. Uma medida isolada pode não capturar tendência rápida; resultados discordantes com o quadro clínico devem ser confirmados sem atrasar tratamento quando houver risco imediato.",
+    "source_refs": [
+      "Lott C, Karageorgos V, Abelairas-Gomez C, et al. European Resuscitation Council Guidelines 2025: Special Circumstances in Resuscitation. Resuscitation. 2025;215:110753. DOI: 10.1016/j.resuscitation.2025.110753.",
+      "Krogager ML, Kragholm K, Tamargo J, Torp-Pedersen C. Update on management of hypokalaemia and goals for the lower potassium level in patients with cardiovascular disease. Eur Heart J Cardiovasc Pharmacother. 2021;7(6):557-567. DOI: 10.1093/ehjcvp/pvab038."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "potássio sérico",
+      "hipocalemia",
+      "hipercalemia",
+      "risco arrítmico",
+      "monitorização laboratorial",
+      "função renal"
+    ]
   }
 ]

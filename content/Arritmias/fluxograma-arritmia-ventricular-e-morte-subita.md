@@ -133,5 +133,5 @@ Investigar e tratar, conforme o cenário:
 
 1. Auditar `fluxograma-taquicardia-de-qrs-largo-esc-2019.md` para garantir que a distinção monomórfica/polimórfica esteja explícita à luz da AHA 2025.
 2. Auditar o serviço/calculadora ACLS 2025 e o documento farmacológico correspondente para consistência com o fluxo canônico, sem duplicar algoritmo.
-3. Revisar o módulo de sulfato de magnésio para evitar que “primeira linha farmacológica” seja interpretada como anterior ao choque da TV polimórfica sustentada.
+3. Manter o módulo de sulfato de magnésio alinhado à prioridade do choque na TV polimórfica sustentada; revisão de segurança concluída em 25/08/2026.
 4. Conectar formalmente hipomagnesemia/hipocalemia e exames canônicos de K/Mg em lotes separados.

@@ -162,14 +162,33 @@ def inventory() -> dict[str, Any]:
 
         records = _records(payload)
         keys: dict[str, int] = {}
+        publication_identifiers: dict[str, list[str]] = {}
         for item in records:
             key = _slug(item)
             if key is not None:
                 keys[key] = keys.get(key, 0) + 1
+            if name == "estudos" and isinstance(item, dict):
+                pmid = str(item.get("pmid") or "").strip()
+                doi = str(item.get("doi") or "").strip().lower()
+                identifier = f"PMID:{pmid}" if pmid else (f"DOI:{doi}" if doi else None)
+                if identifier:
+                    publication_identifiers.setdefault(identifier, []).append(key or "<sem-slug>")
 
         duplicates = sorted(key for key, count in keys.items() if count > 1)
         result["records"] = len(records)
         result["duplicate_keys"] = duplicates[:100]
+        if name == "estudos":
+            # Um mesmo artigo pode ter mais de uma perspectiva temática curada
+            # (p.ex. INVICTUS em Valvopatias e Febre reumática). Esses verbetes
+            # são registros distintos, mas não publicações científicas distintas.
+            # Expor as duas métricas evita inflar a contagem de estudos únicos
+            # sem apagar perspectivas úteis do corpus.
+            result["unique_publications"] = len(publication_identifiers)
+            result["duplicate_publication_identifiers"] = {
+                identifier: slugs
+                for identifier, slugs in sorted(publication_identifiers.items())
+                if len(slugs) > 1
+            }
         total_records += len(records)
         fronts[name] = result
 
