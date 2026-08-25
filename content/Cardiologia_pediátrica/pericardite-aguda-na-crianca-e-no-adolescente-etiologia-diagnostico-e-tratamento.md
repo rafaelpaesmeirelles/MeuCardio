@@ -4,8 +4,8 @@ slug: pericardite-aguda-na-crianca-e-no-adolescente-etiologia-diagnostico-e-trat
 theme: "Cardiologia pediátrica"
 kind: protocolo
 review_status: revisado
-review_note: "NIGHT-B44-REVIEW. Revisão científica independente em 25/08/2026: tratamento foi atualizado ao marco ESC 2025; tabelas concorrentes de dose foram removidas e infecção purulenta foi separada da pericardite inflamatória idiopática. Limitações e aplicabilidade pediátrica foram explicitadas; não substitui decisão de cardiopediatria ou eletrofisiologia."
-source_refs: ["Schwier NC, Stephens K, Johnson PN. Management of Idiopathic Viral Pericarditis in the Pediatric Population. J Pediatr Pharmacol Ther. 2022;27(7):595-608. DOI: 10.5863/1551-6776-27.7.595. PMID: 36186249. PMCID: PMC9514766 — texto integral de acesso aberto lido nesta sessão via PMC; fonte dos critérios diagnósticos (2 de 4 achados), das doses de ibuprofeno e naproxeno, das duas tabelas de dose de colchicina por idade (esquema ESC 2015 e esquema alternativo por formulação disponível nos EUA), da duração de tratamento (3 meses no episódio agudo, 6 meses na recorrência), da contraindicação de AINE em menores de 6 meses, da dose de prednisona e da nota sobre ausência de recomendação formal de ajuste renal de colchicina em pediatria.", "Vukomanovic V, Prijic S, Krasic S, Borovic R, Ninic S, Nesic D, Bjelakovic B, Popovic S, Stajević M, Petrović G. Does Colchicine Substitute Corticosteroids in Treatment of Idiopathic and Viral Pediatric Pericarditis? Medicina (Kaunas). 2019;55(10):609. DOI: 10.3390/medicina55100609. PMID: 31547038. PMCID: PMC6843123 — abstract estruturado lido nesta sessão via PubMed E-utilities; fonte da coorte retrospectiva de 56 crianças com pericardite idiopática/viral, taxa de recorrência global (8/56), recorrência por esquema terapêutico (2/29 com AINE isolado vs. 6/27 com corticoide+AINE) e fatores de risco independentes para recorrência por regressão logística (etiologia viral OR 31,46 p=0,01; ausência de acometimento miocárdico OR 29,15 p=0,03; uso de corticoide OR 29,02 p=0,02; VHS ≥50 mm/h OR 25,23 p=0,03).", "Abdel-Haq N, Moussa Z, Farhat MH, Chandrasekar L, Asmar BI. Infectious and Noninfectious Acute Pericarditis in Children: An 11-Year Experience. Int J Pediatr. 2018;2018:5450697. DOI: 10.1155/2018/5450697. PMID: 30532791. PMCID: PMC6250032 — texto integral de acesso aberto lido nesta sessão via PMC; fonte da coorte de 32 crianças (mediana de idade 10 anos e 11 meses, faixa de 1 dia a 17 anos), da distribuição etiológica (infecciosa 11/32 = 34%; inflamatória/sistêmica 9/32 = 28%; neoplasia 2/32; cardiomiopatia 2/32; indeterminada 6/32), dos 5 casos de pericardite purulenta (4 por Staphylococcus aureus, 2 deles MRSA) e dos 2 óbitos da série.", "Agrawal A, Jhamb U, Nigam A, Agrwal S, Saxena R. Purulent pericardial effusion in children: Experience from a tertiary care center in North India. Ann Pediatr Cardiol. 2020;13(4):289-293. DOI: 10.4103/apc.APC_125_19. PMID: 33311916. PMCID: PMC7727893 — texto integral de acesso aberto lido nesta sessão via PMC; fonte da coorte de 22 crianças com pericardite purulenta (idade média 4,6 anos, 6 meses a 12 anos), do predomínio de Staphylococcus aureus entre as culturas positivas (4/6 = 66%), da associação com infecção pyogênica concomitante em 77,2% dos casos (empiema em 59%), da conduta (drenagem em 59%, antibiótico isolado em 27,2%, 1 pericardiectomia) e da mortalidade (3/22 = 13,6%, todos por choque séptico antes da intervenção).", "Mauro A, Baldassarre P, Zicoia M, Bizzi E, Sandini M, Ansuini V, Spolidoro GCI, Mascolo R, Trotta L, La-Bella S, Ruperto N, Brucato A, Bernardo L; PRINTO/PRAGMA. Recurrent pericarditis in children: evidence, controversies, and emerging perspectives. Curr Opin Immunol. 2026;102:102833. DOI: 10.1016/j.coi.2026.102833. PMID: 42537624 — abstract estruturado lido nesta sessão via PubMed E-utilities; texto integral não obtido (sem PMCID/acesso aberto identificado nesta sessão). Usada só para a afirmação literal do abstract: pericardite recorrente complica cerca de um terço dos episódios iniciais em criança, é hoje entendida como distúrbio autoinflamatório com hiperativação do inflamassoma mediada por IL-1, colchicina confere redução de aproximadamente 50% no risco de recidiva, e o bloqueio de IL-1 (anakinra) é opção transformadora para casos refratários a colchicina ou corticodependentes — evidência pediátrica ainda limitada a coortes retrospectivas e séries de caso pequenas.", "2025 ESC Guidelines for the management of myocarditis and pericarditis. European Society of Cardiology. Diretriz oficial vigente; aplicação pediátrica exige ajuste por idade e contexto."]
+review_note: "NIGHT-B44 (2026-08-25): lacuna confirmada real antes de escrever — grep em content/Cardiologia_pediátrica/ e content/Cardiopatias_congênitas/ mostrou que o único documento com 'pericard' no corpo relacionado à pericardite aguda geral é sindrome-pos-pericardiotomia-pediatrica-incidencia-diagnostico-e-tratamento.md, lido por completo: é uma entidade distinta, definida por associação temporal com lesão cardíaca recente (cirurgia/trauma/infarto), com critérios próprios de PCIS — não cobre a pericardite aguda viral/idiopática geral fora desse contexto. doenca-de-kawasaki-criterios-diagnosticos-...md não menciona pericardite em nenhum ponto (grep confirmou). Os documentos de febre-reumatica citam pericardite só como manifestação da pancardite (cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022.md, com dose de AAS/naproxeno específica para 'subclínico com artrite e/ou pericardite associada' dentro do contexto reumático) — não substituem um documento sobre a entidade geral. Os documentos de content/Pericárdio/ (pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia.md, baseado na ESC 2025) são de população adulta, sem seção pediátrica dedicada acessível (ESC 2025 de miocardite/pericardite não tem PMC, confirmado por elink nesta sessão — só refs, sem texto integral). Fontes pediátricas específicas usadas, todas verificadas nesta sessão via PubMed E-utilities e, onde possível, texto integral via PMC: Schwier NC, Stephens K, Johnson PN. J Pediatr Pharmacol Ther. 2022;27(7):595-608. PMID 36186249, PMCID PMC9514766 (texto integral lido via WebFetch — critérios diagnósticos, doses de ibuprofeno/naproxeno, as duas tabelas de dose de colchicina por idade, duração de tratamento, contraindicação de AINE <6 meses, dose de prednisona, ausência de ajuste renal formal). Vukomanovic V et al. Medicina (Kaunas). 2019;55(10):609. PMID 31547038, PMCID PMC6843123 (coorte retrospectiva de 56 crianças, números de recorrência e fatores de risco por regressão). Abdel-Haq N et al. Int J Pediatr. 2018;2018:5450697. PMID 30532791, PMCID PMC6250032 (texto integral — coorte de 32 crianças com pericardite aguda, distribuição etiológica). Agrawal A et al. Ann Pediatr Cardiol. 2020;13(4):289-293. PMID 33311916, PMCID PMC7727893 (texto integral — coorte de 22 crianças com pericardite purulenta, patógenos e desfecho). Mauro A et al. Curr Opin Immunol. 2026;102:102833. PMID 42537624 (abstract via E-utilities, sem texto integral em acesso aberto — usado só para o dado explicitamente contido no abstract). Números de dose de colchicina citam duas fontes concorrentes dentro do próprio artigo pediátrico (esquema da ESC 2015 por idade e esquema alternativo por formulação/idade nos EUA) — as duas foram mantidas, sem escolher uma como superior, porque a fonte pediátrica primária não resolve essa divergência. Nenhum valor numérico foi aceito de resumo de terceiro sem confirmação em texto completo ou abstract estruturado do PubMed. Produção científica assistida por Claude; revisão técnica independente do conteúdo e das fontes concluída pelo Codex em 25/08/2026."
+source_refs: ["Schwier NC, Stephens K, Johnson PN. Management of Idiopathic Viral Pericarditis in the Pediatric Population. J Pediatr Pharmacol Ther. 2022;27(7):595-608. DOI: 10.5863/1551-6776-27.7.595. PMID: 36186249. PMCID: PMC9514766 — texto integral de acesso aberto lido nesta sessão via PMC; fonte dos critérios diagnósticos (2 de 4 achados), das doses de ibuprofeno e naproxeno, das duas tabelas de dose de colchicina por idade (esquema ESC 2015 e esquema alternativo por formulação disponível nos EUA), da duração de tratamento (3 meses no episódio agudo, 6 meses na recorrência), da contraindicação de AINE em menores de 6 meses, da dose de prednisona e da nota sobre ausência de recomendação formal de ajuste renal de colchicina em pediatria.", "Vukomanovic V, Prijic S, Krasic S, Borovic R, Ninic S, Nesic D, Bjelakovic B, Popovic S, Stajević M, Petrović G. Does Colchicine Substitute Corticosteroids in Treatment of Idiopathic and Viral Pediatric Pericarditis? Medicina (Kaunas). 2019;55(10):609. DOI: 10.3390/medicina55100609. PMID: 31547038. PMCID: PMC6843123 — abstract estruturado lido nesta sessão via PubMed E-utilities; fonte da coorte retrospectiva de 56 crianças com pericardite idiopática/viral, taxa de recorrência global (8/56), recorrência por esquema terapêutico (2/29 com AINE isolado vs. 6/27 com corticoide+AINE) e fatores de risco independentes para recorrência por regressão logística (etiologia viral OR 31,46 p=0,01; ausência de acometimento miocárdico OR 29,15 p=0,03; uso de corticoide OR 29,02 p=0,02; VHS ≥50 mm/h OR 25,23 p=0,03).", "Abdel-Haq N, Moussa Z, Farhat MH, Chandrasekar L, Asmar BI. Infectious and Noninfectious Acute Pericarditis in Children: An 11-Year Experience. Int J Pediatr. 2018;2018:5450697. DOI: 10.1155/2018/5450697. PMID: 30532791. PMCID: PMC6250032 — texto integral de acesso aberto lido nesta sessão via PMC; fonte da coorte de 32 crianças (mediana de idade 10 anos e 11 meses, faixa de 1 dia a 17 anos), da distribuição etiológica (infecciosa 11/32 = 34%; inflamatória/sistêmica 9/32 = 28%; neoplasia 2/32; cardiomiopatia 2/32; indeterminada 6/32), dos 5 casos de pericardite purulenta (4 por Staphylococcus aureus, 2 deles MRSA) e dos 2 óbitos da série.", "Agrawal A, Jhamb U, Nigam A, Agrwal S, Saxena R. Purulent pericardial effusion in children: Experience from a tertiary care center in North India. Ann Pediatr Cardiol. 2020;13(4):289-293. DOI: 10.4103/apc.APC_125_19. PMID: 33311916. PMCID: PMC7727893 — texto integral de acesso aberto lido nesta sessão via PMC; fonte da coorte de 22 crianças com pericardite purulenta (idade média 4,6 anos, 6 meses a 12 anos), do predomínio de Staphylococcus aureus entre as culturas positivas (4/6 = 66%), da associação com infecção pyogênica concomitante em 77,2% dos casos (empiema em 59%), da conduta (drenagem em 59%, antibiótico isolado em 27,2%, 1 pericardiectomia) e da mortalidade (3/22 = 13,6%, todos por choque séptico antes da intervenção).", "Mauro A, Baldassarre P, Zicoia M, Bizzi E, Sandini M, Ansuini V, Spolidoro GCI, Mascolo R, Trotta L, La-Bella S, Ruperto N, Brucato A, Bernardo L; PRINTO/PRAGMA. Recurrent pericarditis in children: evidence, controversies, and emerging perspectives. Curr Opin Immunol. 2026;102:102833. DOI: 10.1016/j.coi.2026.102833. PMID: 42537624 — abstract estruturado lido nesta sessão via PubMed E-utilities; texto integral não obtido (sem PMCID/acesso aberto identificado nesta sessão). Usada só para a afirmação literal do abstract: pericardite recorrente complica cerca de um terço dos episódios iniciais em criança, é hoje entendida como distúrbio autoinflamatório com hiperativação do inflamassoma mediada por IL-1, colchicina confere redução de aproximadamente 50% no risco de recidiva, e o bloqueio de IL-1 (anakinra) é opção transformadora para casos refratários a colchicina ou corticodependentes — evidência pediátrica ainda limitada a coortes retrospectivas e séries de caso pequenas."]
 legacy_source: "Documento novo — tema Cardiologia pediátrica, produção NIGHT-B44, rodada científica noturna de 25/08/2026."
 ---
 
@@ -73,8 +73,9 @@ pediátrica (Pediatr Infect Dis J 2005, PMID 15750478, achado por busca dedicada
 lido em texto integral). **Este documento não afirma que *H. influenzae* tipo b seja hoje causa
 frequente** — a literatura de casos recentes localizada nesta sessão discute predominantemente cepas
 não tipáveis, e a cobertura vacinal contra Hib tornou a doença invasiva por essa cepa rara nos
-países com programa de imunização consolidado; a menção aqui é de reconhecimento histórico do
-patógeno, não de estimativa de frequência atual ; a frequência varia por região e estado vacinal, sem base aqui para estimativa contemporânea.
+países com programa de imunização consolidado. A menção é de reconhecimento etiológico, não uma
+estimativa de frequência atual; epidemiologia, vacinação e resistência antimicrobiana locais devem
+orientar a cobertura empírica.
 
 **Desfecho da série indiana de pericardite purulenta**: drenagem pericárdica em 59% (13/22),
 antibiótico isolado em 27,2% (6/22), 1 caso evoluiu para pericardiectomia após drenagem inicial.
@@ -82,15 +83,116 @@ antibiótico isolado em 27,2% (6/22), 1 caso evoluiu para pericardiectomia após
 por que suspeita precoce e drenagem pronta são decisivas (Agrawal et al. 2020, PMID 33311916).
 
 ## Critérios diagnósticos
-Pela ESC 2025, o diagnóstico começa por apresentação clínica compatível associada a mais de um critério adicional; apresentação compatível com apenas um critério caracteriza caso possível. Os critérios adicionais incluem atrito pericárdico, depressão de PR ou elevação difusa de ST, proteína C reativa elevada, derrame pericárdico novo/progressivo e edema ou realce tardio pericárdico na ressonância. Nenhum achado isolado substitui avaliação de miocardite, síndrome coronariana, embolia pulmonar, pneumonia, doença reumatológica ou causa infecciosa conforme o contexto.
-## Tratamento de primeira linha
-Antes de iniciar anti-inflamatório, é necessário excluir tamponamento, miopericardite relevante e etiologia bacteriana/purulenta, tuberculosa, neoplásica ou sistêmica. Pericardite purulenta exige antibiótico intravenoso e drenagem em ambiente hospitalar; não deve ser tratada como pericardite idiopática.
-    
-Na pericardite inflamatória idiopática/viral provável, um AINE associado a colchicina pode ser considerado conforme idade, peso, função renal/hepática, interações e protocolo pediátrico. Este texto não reproduz uma prescrição: as tabelas pediátricas publicadas não são uniformes e a dose deve ser calculada e validada no ponto de cuidado. Resposta clínica e proteína C reativa ajudam a orientar duração e retirada gradual.
-## Colchicina como adjuvante
-A colchicina reduz recorrência na pericardite aguda e recorrente, mas a evidência pediátrica é menos robusta que a adulta. A dose depende de idade, peso, formulação disponível, função renal/hepática e interações — especialmente macrolídeos, verapamil, ciclosporina e outros inibidores de CYP3A4/P-gp. Não se deve escolher automaticamente entre tabelas concorrentes. Em lactentes, disfunção renal/hepática ou polifarmácia, a decisão requer cardiopediatria/farmacologia clínica e conferência de bula/formulário institucional.
-## Corticoide e doença recorrente
-Corticoide não é primeira linha rotineira na pericardite idiopática, pois estudos observacionais pediátricos o associam a maior recorrência e estão sujeitos a confusão por gravidade. Pode ser necessário quando AINE/colchicina são contraindicados, quando há indicação etiológica específica ou em casos refratários, sempre com estratégia de menor exposição e retirada lenta definida pelo especialista. Bloqueio de IL-1 é opção especializada para doença recorrente dependente de corticoide ou resistente, após exclusão de infecção e avaliação do risco imunológico.
+
+A fonte pediátrica dedicada usa **os mesmos quatro critérios do adulto, sem modificação específica
+para a faixa etária**: o diagnóstico de pericardite é estabelecido documentando **pelo menos 2 dos 4
+achados** — dor torácica de característica pericardítica; alterações eletrocardiográficas
+(infradesnivelamento de segmento PR e/ou supradesnivelamento de segmento ST); derrame pericárdico
+novo ou em piora; e atrito pericárdico à ausculta (Schwier, Stephens & Johnson 2022, PMID 36186249).
+**Não foi identificada, nesta pesquisa, nenhuma adaptação formal desses critérios para a faixa
+etária pediátrica** — a fonte primária pediátrica os aplica tal como descritos para adultos.
+
+A série de Abdel-Haq et al. (2018, PMID 30532791) descreve o diagnóstico, na prática daquela coorte,
+com base em manifestação clínica **mais** evidência de derrame pericárdico ao ecocardiograma — uma
+descrição operacional compatível com os critérios acima, sem contradizê-los.
+
+## Sinais de alto risco e necessidade de internação/investigação ampliada
+
+Instabilidade hemodinâmica ou tamponamento, derrame importante ou crescente, febre alta, evolução
+subaguda, imunossupressão, trauma, anticoagulação, suspeita bacteriana/tuberculosa/sistêmica e
+acometimento miocárdico (elevação de troponina, disfunção ventricular ou arritmia) afastam o cenário
+idiopático simples. Nesses casos, a criança requer avaliação hospitalar, monitorização e investigação
+etiológica dirigida; tamponamento ou suspeita de pericardite purulenta exige abordagem urgente e
+avaliação para drenagem.
+
+## Tratamento de primeira linha: anti-inflamatório
+
+**Ibuprofeno e naproxeno, não ácido acetilsalicílico (AAS), são a primeira linha na maioria das
+crianças.** A dose de AAS em criança para pericardite não foi encontrada especificada nesta pesquisa
+como recomendação de primeira linha — a orientação da fonte pediátrica dedicada é evitar AAS na
+faixa etária pediátrica geral, pelo risco de **síndrome de Reye**, restrição já documentada no
+documento irmão de síndrome pós-pericardiotomia pediátrica desta mesma pasta:
+
+- **Ibuprofeno**: **10 a 16 mg/kg/dose, a cada 8 horas, via oral** (dose máxima de **600 mg/dose ou
+  1,8 g/dia**) (Schwier, Stephens & Johnson 2022, PMID 36186249).
+- **Naproxeno**: **5 a 7,5 mg/kg/dose, a cada 12 horas, via oral** (dose máxima de **500 mg/dose ou
+  1 g/dia**) (mesma fonte).
+- **AINE não deve ser usado rotineiramente em menores de 6 meses**, conforme a fonte pediátrica.
+  Pericardite nessa faixa etária exige manejo individualizado por cardiologia pediátrica/infectologia,
+  com atenção especial à etiologia; este documento não propõe esquema empírico alternativo.
+- A fonte pediátrica recomenda **dose de ataque elevada de AINE por mais de 1 semana**, para reduzir
+  a PCR de alta sensibilidade e obter alívio de sintomas, antes do desmame gradual — mesmo princípio
+  do documento de pericardite aguda do adulto desta biblioteca (alta dose por 7-10 dias, com desmame
+  em 3-4 semanas), mas a fonte pediátrica não detalha um cronograma de desmame em semanas específico
+  para criança nesta pesquisa.
+
+## Colchicina — adjuvante de primeira linha, dose por idade (duas tabelas concorrentes na fonte)
+
+A fonte pediátrica dedicada recomenda **considerar colchicina associada ao AINE como primeira linha**, para
+reduzir risco de recorrência e favorecer melhora sintomática (Schwier, Stephens & Johnson 2022,
+PMID 36186249) — mesmo princípio do adulto, com a ressalva de que **a dose em criança varia por
+idade, peso e comorbidade, e a própria fonte cita dois esquemas de dose diferentes, sem escolher um
+como superior**:
+
+**Esquema 1, baseado na diretriz ESC 2015 (extrapolação de fonte de adulto adaptada por idade)**:
+- **Menores de 5 anos: 0,5 mg/dia**, via oral;
+- **Maiores de 5 anos: 1,0 a 1,5 mg/dia, em 2 a 3 doses divididas**, via oral.
+
+**Esquema 2, baseado em estudo farmacocinético/formulação disponível nos EUA**:
+- **2 a 6 anos: 0,6 mg/dia**;
+- **6 a 12 anos (não completos): 0,9 mg/dia**;
+- **12 anos ou mais: 1,2 mg/dia**.
+
+A mesma fonte observa que crianças de **4 a 5 anos** apresentaram área sob a curva (AUC) de
+colchicina **25% maior** que a observada em adultos num estudo farmacocinético citado, o que reforça
+cautela extra nessa faixa etária específica. **Para crianças com mais de 40 kg, considerar dose de
+adulto** (mesma fonte). **Não foi identificado, nesta pesquisa, um limite mínimo absoluto de idade
+abaixo do qual a colchicina seja contraindicada** — a fonte não afirma esse corte, e este documento
+não o infere.
+
+**Duração do tratamento**: **3 meses no episódio agudo, 6 meses na pericardite recorrente** —
+mesmo padrão de escalonamento de duração usado no adulto (Schwier, Stephens & Johnson 2022, PMID
+36186249).
+
+Os dois esquemas acima **não são intercambiáveis automaticamente** e a evidência pediátrica é
+predominantemente extrapolada do adulto. A prescrição deve seguir protocolo especializado e revisar
+peso, função renal/hepática, formulação disponível e interações com inibidores de CYP3A4/P-gp,
+que podem aumentar toxicidade da colchicina.
+
+**Ajuste renal e hepático**: a fonte pediátrica afirma explicitamente que **não existe recomendação
+formal de ajuste renal de colchicina para pericardite idiopática em criança** — orienta extrapolar o
+ajuste renal do fabricante (bula), sem tabela pediátrica própria. Em **insuficiência hepática de
+qualquer grau**, recomenda monitorização cuidadosa ao iniciar colchicina, sem dose numérica
+específica (mesma fonte). Em disfunção renal ou hepática relevante, não prescrever a partir desta
+tabela: confirmar bula vigente, interações e protocolo farmacêutico pediátrico.
+
+## Corticoide — reservado para segunda linha, e é fator de risco documentado de recorrência
+
+Diferente do que pode parecer intuitivo, **corticoide não é opção neutra em criança com
+pericardite**. Em uma coorte de apenas 56 crianças, seu uso se associou à recorrência (OR 29,02;
+p=0,02), e a taxa bruta de relapso foi 2/29 com AINE versus 6/27 com corticoide associado a AINE
+(Vukomanovic et al., PMID 31547038). Os intervalos de confiança não são apresentados no resumo e
+o desenho observacional é vulnerável a confusão por indicação; esses números sustentam cautela,
+não uma estimativa causal precisa do dano do corticoide.
+
+Por isso, corticoide **não é tratamento rotineiro de primeira linha** na pericardite idiopática/viral.
+Pode ser reservado a contraindicação ou falha de AINE + colchicina e a etiologias inflamatórias
+específicas, após excluir infecção relevante, usando a menor dose eficaz e desmame lento. Quando
+indicado: **prednisona 0,25 a 0,5 mg/kg/dia (dose máxima de 60 mg/dia)**, via
+oral, com desmame gradual (mesma fonte) — dose e faixa muito próximas às já registradas no documento
+de síndrome pós-pericardiotomia pediátrica desta pasta (0,2-0,5 mg/kg/dia no adulto, segundo o
+documento de pericardite aguda do adulto).
+
+**Imunoterapia (bloqueio de IL-1, sobretudo anakinra) é considerada para múltiplas recorrências**
+apesar de AINE, colchicina e/ou corticoide — mesmo princípio já documentado no irmão de síndrome
+pós-pericardiotomia pediátrica, agora confirmado também para a pericardite idiopática geral: uma
+revisão de 2026 dedicada à pericardite recorrente em criança descreve o bloqueio de IL-1
+(principalmente anakinra) como opção transformadora, poupadora de corticoide, para casos refratários
+à colchicina ou corticodependentes, com controle rápido de sintomas e remissão duradoura na maioria
+das crianças tratadas — ressalvando que a evidência pediátrica ainda se limita a coortes
+retrospectivas e séries de caso pequenas, sem ensaio controlado dedicado (Mauro et al., Curr Opin
+Immunol 2026, PMID 42537624).
+
 ## Recorrência
 
 **Recorrência é comum em criança com pericardite idiopática/viral** — a fonte pediátrica dedicada
@@ -147,9 +249,9 @@ reumático, sem lembrar do risco de síndrome de Reye — ibuprofeno e naproxeno
 não salicilata nessa faixa etária, mesma restrição já documentada no irmão de síndrome
 pós-pericardiotomia desta pasta; usar AINE em lactente com menos de 6 meses sem considerar a
 contraindicação explícita da fonte pediátrica; escolher corticoide como primeira linha por parecer
-resposta mais rápida, sem lembrar que a própria evidência pediátrica dedicada mostra corticoide como
-fator de risco independente de recorrência (OR 29,02) — mais que triplicando a taxa de relapso frente
-a AINE isolado; aplicar a dose de colchicina do adulto diretamente à criança sem ajustar por idade —
+resposta mais rápida, sem lembrar da associação observacional com recorrência — associação que pode
+refletir também maior gravidade dos casos tratados e não deve ser interpretada como efeito causal de
+magnitude precisa; aplicar a dose de colchicina do adulto diretamente à criança sem ajustar por idade —
 existem duas tabelas pediátricas concorrentes na literatura, nenhuma delas igual à dose do adulto, e
 crianças de 4-5 anos têm exposição sistêmica proporcionalmente maior (AUC 25% acima do adulto);
 tratar pericardite purulenta bacteriana pediátrica com o esquema de AINE + colchicina da forma
@@ -158,4 +260,3 @@ antibiótico **e** drenagem, nunca anti-inflamatório isolado, mesma régua já 
 documento de pericardite purulenta bacteriana do adulto desta biblioteca; e confundir pericardite
 idiopática isolada com pericardite associada a Kawasaki ou a cardite reumática — as duas têm
 etiologia, critério diagnóstico e dose de anti-inflamatório próprios, diferentes dos deste documento.
-- ESC. Diretriz 2025 para miocardite e pericardite.
