@@ -3,10 +3,10 @@ title: "Coarctação de Aorta na Criança: Diagnóstico, Critérios de Interven�
 slug: coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual
 theme: "Cardiologia pediátrica"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Doshi AR, Chikkabyrappa S. Coarctation of Aorta in Children. Cureus. 2018;10(12):e3690. DOI: 10.7759/cureus.3690. PMID: 30761242. PMCID: PMC6368362 — texto integral aberto, lido nesta sessão via PMC/WebFetch; revisão de autores únicos (não é diretriz de sociedade), declarado explicitamente no corpo deste documento onde a distinção importa. Números de epidemiologia, critérios diagnósticos, indicação de intervenção e desfechos de sobrevida citados são os do próprio artigo.", "Prostin VR Pediatric (alprostadil) — bula oficial do fabricante, Pfizer. Dose de indução 0,05-0,1 µg/kg/min IV contínuo, redução progressiva para a menor dose eficaz (0,05/0,025/0,01 µg/kg/min), apneia em aproximadamente 10-12% dos pacientes tratados."]
 legacy_source: "Documento novo — tema Cardiologia pediátrica, redivisão 01-02/08/2026."
-review_note: "Lote 1B (2026-08-24): dose de PGE1 confirmada contra a bula oficial do fabricante (Pfizer, Prostin VR Pediatric) — substitui a marcação anterior de VERIFICAÇÃO HUMANA NECESSÁRIA. Corrigido no Lote 1B-correção (2026-08-24): removida a afirmação de que manter dose de ataque prolongada aumenta o risco de apneia 'sem benefício adicional' — essa formulação não é sustentada diretamente pela bula, que só orienta titulação descendente e monitorização respiratória; e removida a referência a uma hipótese de manutenção em 10-20 ng/kg/min, por não ter fonte própria nesta rodada. Pendente de validação médica final."
+review_note: "NIGHT-B06-REVIEW (2026-08-25): revisão editorial concluída. A dose de PGE1 foi conferida na bula oficial Pfizer; foram removidas a alegação não sustentada de ausência de benefício da dose de ataque prolongada e a faixa de manutenção de 10-20 ng/kg/min sem fonte própria. Permanecem apenas a titulação descendente e a monitorização respiratória descritas na bula, sem extrapolação adicional."
 ---
 
 # Coarctação de Aorta na Criança: Diagnóstico, Critérios de Intervenção e Hipertensão Residual

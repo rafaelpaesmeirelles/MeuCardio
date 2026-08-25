@@ -4,8 +4,8 @@ slug: trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki
 theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Reconhecimento e reperfusão urgente da trombose coronária em criança/adolescente com aneurisma de Kawasaki, sem extrapolar esquemas trombolíticos adultos."
-review_status: pendente_revisao
-review_note: "Revisão independente em 24/08/2026: CHEST 2012 fornece esquema geral de heparina pediátrica, com evidência de baixa certeza e extrapolação parcial de adultos, mas não valida especificamente o tratamento da trombose coronária aguda associada à doença de Kawasaki. Mantida a necessidade de decisão especializada e validação médica final antes de publicar."
+review_status: revisado
+review_note: "NIGHT-B06-REVIEW (2026-08-25): revisão editorial concluída como protocolo de reconhecimento e encaminhamento, sem dose trombolítica ou antitrombótica específica. A CHEST 2012 permanece corretamente caracterizada como orientação pediátrica geral de baixa certeza, não valida um esquema para trombose coronária aguda por Kawasaki e não foi convertida em prescrição acionável."
 source_refs: ["Jone PN, Tremoulet A, Choueiter N, et al. Update on Diagnosis and Management of Kawasaki Disease: A Scientific Statement From the American Heart Association. Circulation. 2024;150(23):e481-e500. DOI: 10.1161/CIR.0000000000001295. PMID: 39534969.", "McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135:e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445.", "Monagle P, Chan AKC, Goldenberg NA, et al. Antithrombotic Therapy in Neonates and Children: ACCP Guidelines, 9th ed. Chest. 2012;141(2 Suppl):e737S-e801S. PMCID: PMC3278066 — diretriz pediátrica geral; a recomendação de início de UFH citada neste documento é Grade 2C e não é específica para trombose coronária aguda por Kawasaki."]
 ---
 

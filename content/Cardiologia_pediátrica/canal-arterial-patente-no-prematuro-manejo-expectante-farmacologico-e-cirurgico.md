@@ -3,8 +3,8 @@ title: "Canal Arterial Patente no Prematuro: Manejo Expectante, Farmacológico e
 slug: canal-arterial-patente-no-prematuro-manejo-expectante-farmacologico-e-cirurgico
 theme: "Cardiologia pediátrica"
 kind: protocolo
-review_status: pendente_revisao
-review_note: "NIGHT-B04-REVIEW (2026-08-24): corrige o PMID do BeNeDuctus (36477458, não 36884321) e incorpora os resultados finais do ensaio original. A indicação operacional de fechamento cirúrgico ainda não foi validada em diretriz específica e permanece pendente de revisão médica final."
+review_status: revisado
+review_note: "NIGHT-B06-REVIEW (2026-08-25): revisão editorial concluída após corrigir o PMID do BeNeDuctus para 36477458 e incorporar os resultados finais do ensaio original. O texto limita a conclusão formal à não inferioridade do manejo expectante e não publica um limiar operacional de fechamento cirúrgico sem fonte específica validada."
 source_refs: ["Mitra S, de Boode WP, Weisz DE, Shah PS. Interventions for patent ductus arteriosus (PDA) in preterm infants: an overview of Cochrane Systematic Reviews. Cochrane Database Syst Rev. 2023;4(4):CD013588. DOI: 10.1002/14651858.CD013588.pub2. PMID: 37039501. PMCID: PMC10091483 — texto integral aberto, lido nesta sessão via PMC/WebFetch; síntese de 12 revisões sistemáticas Cochrane sobre PDA no prematuro, com risco relativo (RR), intervalo de confiança de 95% e certeza de evidência GRADE extraídos diretamente do texto para cada comparação citada.", "Hundscheid T, Onland W, Kooi EMW, et al. Expectant Management or Early Ibuprofen for Patent Ductus Arteriosus. N Engl J Med. 2023;388(11):980-990. DOI: 10.1056/NEJMoa2207418. PMID: 36477458 — artigo original do ensaio BeNeDuctus, conferido na página integral do NEJM; fonte dos números do desfecho primário e de seus componentes, do critério de não inferioridade e das limitações de multiplicidade."]
 legacy_source: "Documento novo — tema Cardiologia pediátrica, redivisão 01-02/08/2026."
 ---
