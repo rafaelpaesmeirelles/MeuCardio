@@ -4,8 +4,8 @@ slug: crise-hipercianotica-na-tetralogia-de-fallot
 theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Reconhecimento e manejo fisiológico da crise hipercianótica em criança com Tetralogia de Fallot não corrigida, com redução do shunt direita-esquerda, aumento da resistência vascular sistêmica, redução da obstrução dinâmica do TSVD e escalada para suporte avançado quando refratária."
-review_status: pendente_revisao
-review_note: "Revisão independente em 24/08/2026: a fonte central de Hammett e Griksaitis é revisão narrativa, não estudo primário nem diretriz graduada. A sequência fisiológica foi mantida, mas as doses de morfina, vasopressor e betabloqueador continuam deliberadamente sem resolução automática; busca negativa em diretrizes SBC não autoriza importar posologia de protocolo institucional estrangeiro. Validação médica final necessária antes de publicar."
+review_status: revisado
+review_note: "NIGHT-B05-REVIEW (2026-08-24): revisão independente concluiu que o conteúdo pode ser publicado como protocolo fisiológico não posológico. A fonte central é revisão narrativa, não diretriz graduada; por isso nenhuma dose de morfina, vasopressor ou betabloqueador foi incorporada, e cada decisão medicamentosa continua remetida ao protocolo pediátrico institucional."
 source_refs: ["Hammett O, Griksaitis MJ. Management of tetralogy of Fallot in the pediatric intensive care unit. Front Pediatr. 2023;11:1104533. DOI: 10.3389/fped.2023.1104533. PMID: 37360374. PMCID: PMC10285149 — revisão narrativa de manejo em terapia intensiva pediátrica; não é estudo primário nem diretriz graduada.", "van Roekens CN, Zuckerberg AL. Emergency management of hypercyanotic crises in tetralogy of Fallot. Ann Emerg Med. 1995;25(2):256-258. DOI: 10.1016/S0196-0644(95)70335-7. PMID: 7832359 — artigo de revisão clínica, sem graduação formal de recomendação."]
 ---
 

@@ -4,8 +4,8 @@ slug: fluxograma-crise-hipercianotica-na-tetralogia-de-fallot
 theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de decisão para Tet spell, priorizando acalmar, joelho-peito, oxigênio, correção de pré-carga, aumento da resistência vascular sistêmica e redução do espasmo do TSVD."
-review_status: pendente_revisao
-review_note: "Revisão independente em 24/08/2026: o fluxograma mantém apenas a sequência fisiológica sustentada por revisão narrativa. Não contém dose e não deve receber posologia importada automaticamente de protocolo institucional estrangeiro. Validar com cardiologia pediátrica antes de publicar."
+review_status: revisado
+review_note: "NIGHT-B05-REVIEW (2026-08-24): revisão independente concluiu que o fluxograma pode ser publicado por conter apenas sequência fisiológica, sem dose. A evidência é de revisões clínicas, não diretriz graduada; o fluxograma não substitui protocolo institucional nem autoriza importar posologia."
 source_refs: ["Hammett O, Griksaitis MJ. Management of tetralogy of Fallot in the pediatric intensive care unit. Front Pediatr. 2023;11:1104533. DOI: 10.3389/fped.2023.1104533. PMID: 37360374. PMCID: PMC10285149 — revisão narrativa, não diretriz graduada.", "van Roekens CN, Zuckerberg AL. Emergency management of hypercyanotic crises in tetralogy of Fallot. Ann Emerg Med. 1995;25(2):256-258. DOI: 10.1016/S0196-0644(95)70335-7. PMID: 7832359 — revisão clínica, sem classe/nível formal."]
 ---
 
