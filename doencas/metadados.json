@@ -3815,7 +3815,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
+    ]
   },
   {
     "slug": "tumores-cardiacos-fetais",
@@ -3999,7 +4002,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos"
+    ]
   },
   {
     "slug": "planejamento-parto-cardiopatia-fetal",
@@ -4027,7 +4033,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento"
+    ]
   },
   {
     "slug": "avaliacao-multidimensional-cardiogeriatrica",
