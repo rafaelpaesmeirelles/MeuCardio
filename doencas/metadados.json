@@ -2234,7 +2234,8 @@
       "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
       "cardioprotecao-guiada-por-troponina-o-ensaio-de-cardinale-e-o-icos-one",
       "carvedilol-na-prevencao-de-cardiotoxicidade-por-antraciclina-seguimento-final-ceccy-96-semanas"
-    ]
+    ],
+    "patient_material_slug": "cardiotoxicidade-por-antraciclinas"
   },
   {
     "slug": "miocardite-por-inibidor-checkpoint",
@@ -4614,7 +4615,8 @@
       "nilotinibe-doenca-arterial-obstrutiva-periferica-e-eventos-cardiovasculares-enestnd-10-anos",
       "ponatinibe-eventos-oclusivos-arteriais-reanalise-independente-do-pace",
       "hipertensao-pulmonar-por-bosutinibe-e-ponatinibe-comparacao-de-risco-entre-inibidores-de-bcr-abl"
-    ]
+    ],
+    "patient_material_slug": "cardiotoxicidade-bcr-abl"
   },
   {
     "slug": "cardiotoxicidade-inibidor-proteassoma",
@@ -4646,7 +4648,8 @@
     "version": 1,
     "related_document_slugs": [
       "carfilzomibe-cardiotoxicidade-em-mieloma-multiplo"
-    ]
+    ],
+    "patient_material_slug": "cardiotoxicidade-inibidor-proteassoma"
   },
   {
     "slug": "cardiotoxicidade-raf-mek",
@@ -4709,7 +4712,8 @@
       "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas-5fu-capecitabina",
       "fluxograma-sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
       "prevencao-cardiotoxicidade-fluoropirimidinas-avaliacao-cardiologica-rct-2025"
-    ]
+    ],
+    "patient_material_slug": "fluoropirimidinas-isquemia"
   },
   {
     "slug": "toxicidade-cardiovascular-car-t",
@@ -4743,7 +4747,8 @@
       "cardiotoxicidade-de-car-t-sindrome-de-liberacao-de-citocinas-e-inibidores-de-vegf",
       "sindrome-de-liberacao-de-citocinas-por-car-t-graduacao-astct-choque-distributivo-e-tocilizumabe",
       "fluxograma-sindrome-de-liberacao-de-citocinas-car-t-com-choque"
-    ]
+    ],
+    "patient_material_slug": "toxicidade-cardiovascular-car-t"
   },
   {
     "slug": "qt-longo-terapia-oncologica",
@@ -4777,7 +4782,8 @@
       "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao",
       "prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe",
       "prolongamento-de-qt-e-torsades-por-trioxido-de-arsenio"
-    ]
+    ],
+    "patient_material_slug": "qt-longo-terapia-oncologica"
   },
   {
     "slug": "trombose-associada-cancer",
@@ -5073,7 +5079,8 @@
       "tratar-hipertensao-cronica-leve-na-gestacao-o-ensaio-chap",
       "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
       "disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026"
-    ]
+    ],
+    "patient_material_slug": "hipertensao-cronica-gravidez"
   },
   {
     "slug": "hipertensao-gestacional",
@@ -5287,7 +5294,8 @@
       "estenose-mitral-e-aortica-na-gestacao-limiares-de-intervencao-e-tecnica-percutanea",
       "estenose-aortica-grave-sintomatica-na-gestacao",
       "estenose-mitral-descompensada-na-gestacao-e-edema-pulmonar"
-    ]
+    ],
+    "patient_material_slug": "valvopatias-na-gravidez"
   },
   {
     "slug": "cardiopatia-congenita-gravidez",
@@ -5388,7 +5396,8 @@
       "sindrome-coronariana-aguda-na-gestacao-e-puerperio",
       "dissecao-coronariana-espontanea-associada-a-gravidez-p-scad",
       "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025"
-    ]
+    ],
+    "patient_material_slug": "sindrome-coronariana-gravidez"
   },
   {
     "slug": "tromboembolismo-gravidez",
@@ -5422,7 +5431,8 @@
       "tromboembolismo-pulmonar-agudo-na-gestacao-e-puerperio-esc-2025",
       "diagnostico-de-tep-na-gestante-years-adaptado-e-a-estrategia-do-ct-pe-pregnancy",
       "tromboprofilaxia-na-gestacao-e-puerperio-dose-baixa-ou-intermediaria-o-ensaio-highlow"
-    ]
+    ],
+    "patient_material_slug": "tromboembolismo-gravidez"
   },
   {
     "slug": "medicamentos-cardiovasculares-gestacao-lactacao",
@@ -5455,7 +5465,8 @@
     "related_document_slugs": [
       "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
       "estatina-na-gestacao-a-revisao-da-fda-de-2021-e-onde-a-cautela-clinica-diverge-dela"
-    ]
+    ],
+    "patient_material_slug": "medicamentos-cardiovasculares-gestacao-lactacao"
   },
   {
     "slug": "plano-parto-cardiopatia-materna",
@@ -5488,7 +5499,8 @@
     "related_document_slugs": [
       "via-de-parto-e-insuficiencia-cardiaca-na-gestante-cardiopata-o-registro-ropac",
       "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz"
-    ]
+    ],
+    "patient_material_slug": "plano-parto-cardiopatia-materna"
   },
   {
     "slug": "seguimento-cardiovascular-pos-parto",
