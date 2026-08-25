@@ -6192,5 +6192,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "commotio-cordis-janela-de-risco-diagrama",
+    "title": "Diagrama — janela de risco do commotio cordis no ciclo cardíaco",
+    "modality": "Diagrama",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "file_path": "diagrama/commotio-cordis-janela-de-risco.jpg",
+    "findings": "Esquema didático (não é traçado de paciente real) de um ciclo de ECG em ritmo sinusal normal, com ondas P, complexo QRS e onda T identificadas, além dos intervalos PR e QT marcados. Uma faixa colorida destaca a 'janela de risco do commotio cordis' posicionada sobre a fase ascendente da onda T, imediatamente antes do seu pico.",
+    "teaching_points": "Diagrama didático baseado em modelo experimental suíno: impactos ocorridos aproximadamente 15–30 ms antes do pico da onda T apresentaram maior probabilidade de induzir fibrilação ventricular. Isso ilustra uma janela vulnerável, mas não permite afirmar que impactos fora dela sejam invariavelmente seguros em humanos. Em colapso após impacto torácico, iniciar resposta de emergência e desfibrilação precoce.",
+    "source_name": "Wikimedia Commons (imagem/licença) e Link et al., J Am Coll Cardiol 1998 (mecanismo experimental)",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/9632447/",
+    "license": "Domínio público",
+    "attribution": "Agateller, via Wikimedia Commons — domínio público (autodeclarado pelo autor/detentor dos direitos).",
+    "tags": [
+      "commotio cordis",
+      "ECG",
+      "diagrama",
+      "janela vulnerável",
+      "onda T",
+      "morte súbita no esporte"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

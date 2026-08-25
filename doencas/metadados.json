@@ -852,7 +852,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Fluxo próprio, sem reprodução de tabelas protegidas.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias"
+    ],
+    "patient_material_slug": "sincope-pediatrica"
   },
   {
     "slug": "comunicacao-interventricular",
@@ -1036,7 +1040,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Resumo original para apoio educacional e organização do seguimento.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
+      "crise-hipercianotica-na-tetralogia-de-fallot",
+      "fluxograma-crise-hipercianotica-na-tetralogia-de-fallot"
+    ],
+    "patient_material_slug": "tetralogia-de-fallot-e-coarctacao-de-aorta-acompanhamento-na-vida-adulta"
   },
   {
     "slug": "transposicao-das-grandes-arterias",
@@ -1095,7 +1105,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Não substitui protocolo neonatal de cardiopatia crítica.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
+      "fluxograma-d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
+      "isquemia-coronaria-aguda-apos-switch-arterial"
+    ],
+    "patient_material_slug": "transposicao-das-grandes-arterias"
   },
   {
     "slug": "taquicardia-supraventricular-fetal",
@@ -1154,7 +1170,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Terapia fetal deve ser conduzida por equipe especializada e protocolo materno-fetal.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
+    ],
+    "patient_material_slug": "taquicardia-supraventricular-fetal"
   },
   {
     "slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
@@ -1211,7 +1231,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Conteúdo para organização do cuidado e planejamento perinatal.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
+    ],
+    "patient_material_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal"
   },
   {
     "slug": "polifarmacia-e-desprecricao-cardiovascular",
@@ -1448,7 +1472,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Não recomenda retirada automática; toda mudança exige confirmação e plano de monitorização.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao"
+    ],
+    "patient_material_slug": "quantos-remedios-sao-demais-polifarmacia-no-idoso-cardiopata"
   },
   {
     "slug": "hipotensao-ortostatica-no-idoso",
@@ -1650,7 +1678,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Critérios numéricos devem ser conferidos na versão vigente do protocolo utilizado.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+      "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+      "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo"
+    ],
+    "patient_material_slug": "tontura-ao-levantar-hipotensao-ortostatica-e-pots"
   },
   {
     "slug": "fragilidade-pre-procedimento-cardiovascular",
@@ -2990,7 +3024,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico"
+    ],
+    "patient_material_slug": "defeito-septo-atrioventricular"
   },
   {
     "slug": "estenose-pulmonar-congenita",
@@ -3048,7 +3086,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "patient_material_slug": "valvula-aortica-bicuspide-o-que-significa-esse-diagnostico",
+    "related_document_slugs": [
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024"
+    ]
   },
   {
     "slug": "retorno-venoso-pulmonar-anomalo",
@@ -3078,7 +3120,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
+      "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
+      "fluxograma-retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato"
+    ],
+    "patient_material_slug": "retorno-venoso-pulmonar-anomalo"
   },
   {
     "slug": "atresia-pulmonar",
@@ -3107,7 +3155,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica"
+    ],
+    "patient_material_slug": "atresia-pulmonar"
   },
   {
     "slug": "atresia-tricuspide",
@@ -3136,7 +3188,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes"
+    ],
+    "patient_material_slug": "atresia-tricuspide"
   },
   {
     "slug": "tronco-arterial-comum",
@@ -3165,7 +3221,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "tronco-arterial-comum-classificacao-associacao-com-22q11-e-desfechos-cirurgicos-contemporaneos"
+    ],
+    "patient_material_slug": "tronco-arterial-comum"
   },
   {
     "slug": "anomalia-ebstein",
@@ -3223,7 +3283,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+      "descompensacao-aguda-da-circulacao-de-fontan",
+      "fluxograma-descompensacao-aguda-da-circulacao-de-fontan"
+    ],
+    "patient_material_slug": "fisiologia-ventriculo-unico"
   },
   {
     "slug": "canalopatias-pediatricas",
@@ -3281,7 +3347,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+      "cardiomiopatia-nao-compactada-do-ventriculo-esquerdo-na-crianca-criterios-diagnosticos-genetica-e-desfechos",
+      "cardiomiopatia-associada-a-distrofia-muscular-de-duchenne-e-a-terapia-celular-deramiocel-hope-2-e-hope-3"
+    ],
+    "patient_material_slug": "cardiomiopatias-pediatricas"
   },
   {
     "slug": "febre-reumatica-cardite",
@@ -3309,7 +3381,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda"
+    ],
+    "patient_material_slug": "cardite-reumatica-quando-a-febre-reumatica-atinge-o-coracao"
   },
   {
     "slug": "endocardite-pediatrica",
@@ -3337,7 +3413,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento"
+    ],
+    "patient_material_slug": "endocardite-pediatrica"
   },
   {
     "slug": "hipertensao-pulmonar-pediatrica",
@@ -3365,7 +3445,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade",
+      "crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+      "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd"
+    ],
+    "patient_material_slug": "hipertensao-pulmonar-pediatrica"
   },
   {
     "slug": "dislipidemias-pediatricas",
@@ -3421,7 +3507,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico"
+    ],
+    "patient_material_slug": "sopros-na-infancia"
   },
   {
     "slug": "dor-toracica-pediatrica",
@@ -3449,7 +3539,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
+    ],
+    "patient_material_slug": "dor-toracica-pediatrica"
   },
   {
     "slug": "arritmias-pediatricas",
@@ -3478,7 +3572,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "bradicardia-pediatrica-com-pulso-aha-aap-2025",
+      "taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
+      "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico"
+    ],
+    "patient_material_slug": "arritmias-pediatricas"
   },
   {
     "slug": "indicacoes-ecocardiograma-fetal",
@@ -3506,7 +3606,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
+    ],
+    "patient_material_slug": "indicacoes-ecocardiograma-fetal"
   },
   {
     "slug": "bloqueio-atrioventricular-fetal",
@@ -3534,7 +3638,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "bloqueio-av-congenito-completo-no-recem-nascido"
+    ],
+    "patient_material_slug": "gravidez-com-anticorpo-anti-ro-ssa-vigilancia-do-coracao-do-bebe"
   },
   {
     "slug": "flutter-atrial-fetal",
@@ -3562,7 +3671,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
+    ],
+    "patient_material_slug": "flutter-atrial-fetal"
   },
   {
     "slug": "extrassistoles-fetais",
@@ -3590,7 +3703,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
+    ],
+    "patient_material_slug": "extrassistoles-fetais"
   },
   {
     "slug": "tumores-cardiacos-fetais",
@@ -3618,7 +3735,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "tumores-cardiacos-fetais-rabdomioma-e-diagnostico-diferencial-de-massa-cardiaca-intrautero"
+    ],
+    "patient_material_slug": "tumores-cardiacos-fetais"
   },
   {
     "slug": "hidropisia-fetal-cardiovascular",
@@ -3646,7 +3767,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
+    ],
+    "patient_material_slug": "hidropisia-fetal-cardiovascular"
   },
   {
     "slug": "coarctacao-aorta-fetal",
@@ -3674,7 +3800,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual"
+    ],
+    "patient_material_slug": "coarctacao-aorta-fetal"
   },
   {
     "slug": "tetralogia-fallot-fetal",
@@ -3702,7 +3832,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica"
+    ],
+    "patient_material_slug": "tetralogia-fallot-fetal"
   },
   {
     "slug": "transposicao-grandes-arterias-fetal",
@@ -3730,7 +3864,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato"
+    ],
+    "patient_material_slug": "transposicao-grandes-arterias-fetal"
   },
   {
     "slug": "retorno-venoso-pulmonar-anomalo-fetal",
@@ -3758,7 +3896,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos"
+    ],
+    "patient_material_slug": "retorno-venoso-pulmonar-anomalo-fetal"
   },
   {
     "slug": "planejamento-parto-cardiopatia-fetal",
@@ -3786,7 +3928,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento"
+    ],
+    "patient_material_slug": "planejamento-parto-cardiopatia-fetal"
   },
   {
     "slug": "avaliacao-multidimensional-cardiogeriatrica",
@@ -3815,7 +3961,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+      "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
+      "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca"
+    ],
+    "patient_material_slug": "escala-de-fragilidade-e-o-cuidado-do-seu-coracao"
   },
   {
     "slug": "risco-quedas-cardiogeriatria",
@@ -4219,7 +4371,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
+      "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
+    ],
+    "patient_material_slug": "conversar-sobre-o-futuro-do-tratamento-planejamento-antecipado-de-cuidados"
   },
   {
     "slug": "plano-alta-cardiogeriatria",
@@ -4248,7 +4405,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "transicao-hospital-domicilio-na-ic-o-ensaio-pact-hf",
+      "telessaude-e-monitoramento-remoto-na-insuficiencia-cardiaca-do-idoso-o-que-funciona-e-para-quem",
+      "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao"
+    ]
   },
   {
     "slug": "cardiotoxicidade-anti-her2",
@@ -4362,7 +4524,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "toxicidade-cardiovascular-dos-inibidores-de-braf-e-mek-disfuncao-ventricular-hipertensao-e-vigilancia"
+    ],
+    "patient_material_slug": "cardiotoxicidade-raf-mek"
   },
   {
     "slug": "fluoropirimidinas-isquemia",
@@ -4897,7 +5063,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Aprofundado de básico para completo em 12/08/2026, com fontes internacionais adicionais conferidas via PubMed. Conteúdo permanece qualitativo e descritivo — nenhum corte numérico específico (idade, gradiente, PA em mmHg, escore) é fabricado aqui; onde a decisão depende de valor de corte, a orientação é usar a diretriz e as calculadoras validadas da plataforma. Sujeito a julgamento clínico individual.",
-    "version": 2
+    "version": 2,
+    "related_document_slugs": [
+      "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
+      "inducao-do-parto-na-hipertensao-gestacional-e-pre-eclampsia-leve-a-termo-o-ensaio-hypitat",
+      "fluxograma-eclampsia-e-hipertensao-grave-na-gestacao"
+    ],
+    "patient_material_slug": "pre-eclampsia-o-que-isso-significa-para-seu-coracao-depois-do-parto"
   },
   {
     "slug": "valvopatias-na-gravidez",
@@ -4982,7 +5154,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
+      "fluxograma-hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio"
+    ],
+    "patient_material_slug": "hipertensao-pulmonar-e-gravidez-por-que-planejar-com-antecedencia"
   },
   {
     "slug": "sindrome-coronariana-gravidez",
