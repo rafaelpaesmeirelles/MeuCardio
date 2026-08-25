@@ -4,7 +4,7 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Res = { slug: string; title: string; kind: string; frente?: string; theme: string; snippet: string; ano?: number };
-type Drug = { slug: string; generic_name: string; drug_class: string };
+type Drug = { slug: string; generic_name: string; drug_class: string; brand_names?: string[] };
 type Insight = Drug & {
   mechanism: string | null; presentations: string[]; dosing: Record<string, unknown>;
   renal_adjustment: string | null; hepatic_adjustment: string | null;
@@ -27,8 +27,6 @@ const AREAS = {
 } as const;
 type Area = keyof typeof AREAS;
 const ROTULOS: Record<string, string> = { documento: "Documento", estudo: "Estudo", evidencia: "Evidência", exame: "Exame", galeria: "Imagem", fluxograma: "Fluxograma", protocolo: "Protocolo" };
-const COBERTOS = new Set(["documento", "fluxograma", "evidencia", "estudo", "exame", "galeria"]);
-
 const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 function area(r: Res): Area {
   const f = norm(r.frente || r.kind);
@@ -98,16 +96,20 @@ export default function Busca() {
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
     const itens = s.value.results; setRes(itens);
+    let medicamentoForte = false;
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
     else {
-      const n = norm(termo), fortes = ds.value.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `));
+      const n = norm(termo), fortes = ds.value.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `) || d.brand_names?.some((marca) => norm(marca) === n));
       if (fortes.length === 1) {
+        medicamentoForte = true;
         try { const d = await api.get<Insight>(`/drug-insights/${fortes[0].slug}`); if (id === seq.current) setDrug(d); }
         catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }
-      } else {
-        const tema = itens.map((x) => x.theme).find((x) => norm(x) === n);
-        if (tema) try { const x = await api.get<{ grupos: Rel[] }>(`/relacionados?tema=${encodeURIComponent(tema)}`); if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !COBERTOS.has(g.tipo))); } catch { /* complemento opcional */ }
       }
+    }
+    if (!medicamentoForte) {
+      const n = norm(termo), tema = itens.map((x) => x.theme).find((x) => norm(x) === n);
+      const cobertos = new Set(itens.map((x) => x.kind === "fluxograma" ? "fluxograma" : (x.frente || x.kind)));
+      if (tema) try { const x = await api.get<{ grupos: Rel[] }>(`/relacionados?tema=${encodeURIComponent(tema)}`); if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !cobertos.has(g.tipo))); } catch { /* complemento opcional */ }
     }
     if (id === seq.current) setLoading(false);
   }
@@ -128,7 +130,7 @@ export default function Busca() {
       <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por área</p></div></header>
       <nav className="tct-nav" aria-label="Áreas">{ordenados.map(([a, xs]) => <a className="selo" href={`#area-${a}`} key={a}>{AREAS[a][0]} · {xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([a, xs]) => <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p><Link to={`${AREAS[a][2]}?q=${encodeURIComponent(assunto)}`}>Ver área →</Link></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {ordenados.map(([a, xs]) => <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
         {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
       </div>
     </section>}
