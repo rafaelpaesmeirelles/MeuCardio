@@ -5,12 +5,15 @@ theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Reconhecimento e manejo fisiológico da crise hipercianótica em criança com Tetralogia de Fallot não corrigida, com redução do shunt direita-esquerda, aumento da resistência vascular sistêmica, redução da obstrução dinâmica do TSVD e escalada para suporte avançado quando refratária."
 review_status: revisado
-source_refs: ["Hammett O, Griksaitis MJ. Management of tetralogy of Fallot in the pediatric intensive care unit. Front Pediatr. 2023;11:1104533. DOI: 10.3389/fped.2023.1104533. PMID: 37360374. PMCID: PMC10285149.", "van Roekens CN, Zuckerberg AL. Emergency management of hypercyanotic crises in tetralogy of Fallot. Ann Emerg Med. 1995;25(2):256-258. DOI: 10.1016/S0196-0644(95)70335-7. PMID: 7832359."]
+review_note: "NIGHT-B05-REVIEW (2026-08-24): revisão independente concluiu que o conteúdo pode ser publicado como protocolo fisiológico não posológico. A fonte central é revisão narrativa, não diretriz graduada; por isso nenhuma dose de morfina, vasopressor ou betabloqueador foi incorporada, e cada decisão medicamentosa continua remetida ao protocolo pediátrico institucional."
+source_refs: ["Hammett O, Griksaitis MJ. Management of tetralogy of Fallot in the pediatric intensive care unit. Front Pediatr. 2023;11:1104533. DOI: 10.3389/fped.2023.1104533. PMID: 37360374. PMCID: PMC10285149 — revisão narrativa de manejo em terapia intensiva pediátrica; não é estudo primário nem diretriz graduada.", "van Roekens CN, Zuckerberg AL. Emergency management of hypercyanotic crises in tetralogy of Fallot. Ann Emerg Med. 1995;25(2):256-258. DOI: 10.1016/S0196-0644(95)70335-7. PMID: 7832359 — artigo de revisão clínica, sem graduação formal de recomendação."]
 ---
 
 # Crise hipercianótica na Tetralogia de Fallot
 
 A crise hipercianótica (“Tet spell”) é uma deterioração aguda da oxigenação em criança com Tetralogia de Fallot ou fisiologia semelhante. O mecanismo central é aumento súbito do **shunt direita-esquerda**, geralmente por espasmo/agravamento da obstrução dinâmica da via de saída do ventrículo direito e/ou queda relativa da resistência vascular sistêmica.
+
+> **Força da evidência:** a fonte central desta síntese é uma **revisão narrativa de manejo em UTI pediátrica**, e não estudo primário ou diretriz de sociedade com classe/nível. Ela sustenta a lógica fisiológica e as categorias de intervenção, mas não autoriza transformar doses de protocolos institucionais em posologia universal.
 
 ## Reconhecimento
 

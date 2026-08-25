@@ -5,10 +5,13 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore para suspeita de SCA em criança/adolescente com aneurisma coronário de Kawasaki, priorizando angiografia e reperfusão especializada."
 review_status: revisado
+review_note: "NIGHT-B06-REVIEW (2026-08-25): revisão editorial concluída como árvore de reconhecimento e encaminhamento. O fluxograma mantém apenas modalidades de reperfusão descritas pelas fontes, sem hierarquia terapêutica ou dose; a escolha entre PCI, trombectomia, trombólise e cirurgia permanece condicionada à anatomia, aos recursos e à equipe especializada."
 source_refs: ["Jone PN, Tremoulet A, Choueiter N, et al. Circulation. 2024;150:e481-e500. DOI: 10.1161/CIR.0000000000001295. PMID: 39534969.", "McCrindle BW, et al. Circulation. 2017;135:e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445."]
 ---
 
 # Trombose coronária/infarto em Kawasaki
+
+> As modalidades abaixo não formam uma hierarquia universal. Não transformar a listagem em escolha automática de tratamento nem importar doses gerais de anticoagulação/trombólise para este cenário raro.
 
 ```mermaid
 flowchart TD
