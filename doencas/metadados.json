@@ -3570,7 +3570,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "dislipidemia-familiar-heterozigotica-pediatrica-rastreio-alvo-de-ldl-e-inicio-de-estatina"
+    ],
+    "patient_material_slug": "colesterol-alto-que-vem-de-familia-o-que-e-hipercolesterolemia-familiar"
   },
   {
     "slug": "sopros-na-infancia",
