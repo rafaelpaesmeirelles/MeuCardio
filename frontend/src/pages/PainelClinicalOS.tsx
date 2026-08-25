@@ -46,7 +46,7 @@ type ModuloItem = { to: string; label: string; icon: NomeIcone; adminOnly?: bool
 type ModuloGrupo = { title: string; tone: "cyan" | "violet" | "blue" | "amber" | "teal" | "slate"; icon: NomeIcone; items: ModuloItem[] };
 
 const ACOES: AcaoRapida[] = [
-  { to: "/ecg-ia", titulo: "IA para ECG", detalhe: "Opinião rápida sem cadastro", icone: "ecg", tone: "green", featured: true },
+  { to: "/exames-ia", titulo: "IA para Exames", detalhe: "Análise cardiovascular multimodal", icone: "ecg", tone: "green", featured: true },
   { to: "/receituario", titulo: "Prescrever", detalhe: "Novo receituário", icone: "prescricao", tone: "cyan" },
   { to: "/documentos", titulo: "Solicitar exames", detalhe: "Adicionar solicitação", icone: "clinica", tone: "blue" },
   { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices", icone: "calculadora", tone: "amber" },
@@ -88,7 +88,7 @@ const MODULOS: ModuloGrupo[] = [
   },
   {
     title: "Trabalho & Assistência", tone: "blue", icon: "pacientes", items: [
-      { to: "/ecg-ia", label: "IA para ECG · destaque", icon: "ecg" },
+      { to: "/exames-ia", label: "IA para Exames · destaque", icon: "ecg" },
       { to: "/round", label: "Pacientes", icon: "pacientes" },
       { to: "/receituario", label: "Prescrição", icon: "prescricao" },
       { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
@@ -167,7 +167,7 @@ function enderecoDestino(destino?: ProximoLocal | null) {
 }
 function destinoDoComando(valor: string) {
   const termo = valor.trim(); const normalizado = termo.toLocaleLowerCase("pt-BR");
-  if (/\b(ecg|eletrocardiograma)\b/.test(normalizado)) return "/ecg-ia";
+  if (/\b(ecg|eletrocardiograma|holter|mapa|ecocardiograma|resson[aâ]ncia|tomografia|exame cardiovascular)\b/.test(normalizado)) return "/exames-ia";
   if (/\b(prescrev|prescri|receita|receitu)/.test(normalizado)) return "/receituario";
   if (/\b(atestado|documento|relat[oó]rio|encaminhamento|solicitar exames?|pedido de exames?)/.test(normalizado)) return "/documentos";
   if (/\b(calcul|escore|score|cha.?ds.?vasc)/.test(normalizado)) return "/calculadoras";

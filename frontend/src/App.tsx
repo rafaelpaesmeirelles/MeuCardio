@@ -32,7 +32,7 @@ const Medicamentos = lazy(() => import("./pages/MedicamentosClinicalCommand"));
 const Interacoes = lazy(() => import("./pages/Interacoes"));
 const Condicoes = lazy(() => import("./pages/Condicoes"));
 const Prontuario = lazy(() => import("./pages/Prontuario"));
-const ECGQuickOpinion = lazy(() => import("./pages/ECGQuickOpinion"));
+const CardiovascularExamAI = lazy(() => import("./pages/CardiovascularExamAI"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
@@ -175,7 +175,8 @@ export default function App() {
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<Assistente />} />
           <Route path="prontuario" element={<Prontuario />} />
-          <Route path="ecg-ia" element={<ECGQuickOpinion />} />
+          <Route path="exames-ia" element={<CardiovascularExamAI />} />
+          <Route path="ecg-ia" element={<CardiovascularExamAI />} />
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
           <Route path="documentos" element={<Templates />} />

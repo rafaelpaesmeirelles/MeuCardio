@@ -120,6 +120,12 @@ class Settings(BaseSettings):
     # Vazio reutiliza o modelo principal do provedor. Permite homologar um
     # modelo vision específico sem alterar o restante da Assistente Clínica.
     ai_ecg_model: str = ""
+    # A central ampla usa Responses API + visão + arquivos + web search. Vazio
+    # seleciona o default vigente e testado do serviço.
+    ai_cardiovascular_exam_model: str = ""
+    # Trava adicional: somente true após aprovação formal dos controles de
+    # dados/retencao do projeto usado para processar dados de saúde.
+    ai_clinical_data_controls_approved: bool = False
 
     openai_api_key: str = ""
     # Confirme o identificador exato do modelo no painel da OpenAI antes do piloto.

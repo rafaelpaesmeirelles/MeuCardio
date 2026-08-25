@@ -162,6 +162,17 @@ export const api = {
     return request<T>(p, { method: "POST", body: form });
   },
 
+  uploadFormulario: <T>(
+    p: string,
+    arquivos: Array<{ campo: string; arquivo: File }>,
+    campos: Record<string, string>,
+  ) => {
+    const form = new FormData();
+    for (const { campo, arquivo } of arquivos) form.append(campo, arquivo);
+    for (const [chave, valor] of Object.entries(campos)) form.append(chave, valor);
+    return request<T>(p, { method: "POST", body: form });
+  },
+
   async blob(p: string, init: RequestInit = {}): Promise<Blob> {
     const headers = new Headers(init.headers);
     if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
