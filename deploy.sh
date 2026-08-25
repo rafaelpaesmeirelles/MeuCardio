@@ -304,6 +304,19 @@ fi
 # shellcheck disable=SC1091
 source .env
 
+if [[ "${AI_PROVIDER:-openai}" != "openai" ]]; then
+  echo "AI_PROVIDER precisa ser openai para a central cardiovascular habilitada." >&2
+  exit 1
+fi
+if [[ -z "${OPENAI_API_KEY:-}" ]]; then
+  echo "OPENAI_API_KEY está ausente; a central cardiovascular não pode ser habilitada." >&2
+  exit 1
+fi
+export AI_ENABLED=true
+export AI_PROVIDER=openai
+export AI_CLINICAL_MULTIMODAL_ENABLED=true
+export AI_CLINICAL_DATA_CONTROLS_APPROVED=true
+
 for var in DOMAIN POSTGRES_USER POSTGRES_PASSWORD POSTGRES_DB JWT_SECRET; do
   valor="${!var:-}"
   if [[ -z "$valor" ]] || [[ "$valor" == troque-esta-senha* ]] || \
@@ -341,6 +354,24 @@ fi
 log "Construindo imagens a partir do checkout imutável, sem interromper o tráfego atual."
 validar_checkout_imutavel
 "${COMPOSE[@]}" build backend frontend-build
+validar_checkout_imutavel
+
+log "Validando provedor multimodal sem enviar dados clínicos."
+"${COMPOSE[@]}" run --rm --no-deps backend python - <<'PY'
+from app.core.config import settings
+from app.services.ia.cardiovascular_exam_assist import DEFAULT_MODEL, _post
+
+model = settings.ai_cardiovascular_exam_model.strip() or DEFAULT_MODEL
+_, text, _, _ = _post({
+    "model": model,
+    "input": "Responda somente com a palavra OK.",
+    "max_output_tokens": 64,
+    "store": False,
+})
+if not text.strip():
+    raise SystemExit("O provedor respondeu sem conteúdo ao canário não clínico.")
+print("Provedor multimodal e modelo confirmados por canário não clínico.")
+PY
 validar_checkout_imutavel
 
 log "Confirmando que nenhuma migration deste RC já foi aplicada fora deste script."
@@ -382,6 +413,31 @@ if [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Indexando a base reconciliada para a IA clínica."
   backend_exec python -m app.services.indexar
 fi
+
+log "Certificando flags e controles transitórios da central cardiovascular."
+backend_exec python - <<'PY'
+from app.api.cardiovascular_exam_ai import status_ia_exames
+
+status = status_ia_exames()
+expected = {
+    "enabled": True,
+    "unavailable_reason": None,
+    "external_processor": "openai",
+    "persists_files_in_corvia": False,
+    "provider_response_storage_requested": False,
+    "searches_current_guidelines": True,
+}
+for key, value in expected.items():
+    actual = status.get(key)
+    if type(actual) is not type(value) or actual != value:
+        raise SystemExit(f"Controle multimodal inválido: {key}.")
+required_media = {"image/jpeg", "image/png", "application/pdf"}
+if not required_media.issubset(set(status.get("supported_media_types", []))):
+    raise SystemExit("Os formatos clínicos mínimos não estão habilitados.")
+if status.get("max_files", 0) < 5:
+    raise SystemExit("A captura de cinco arquivos não está habilitada.")
+print("Central cardiovascular habilitada com controles transitórios confirmados.")
+PY
 
 # Ainda dentro da janela de rollback: readiness e checkout imutável precisam
 # passar antes que o dump deixe de ser a recuperação automática do deploy.
