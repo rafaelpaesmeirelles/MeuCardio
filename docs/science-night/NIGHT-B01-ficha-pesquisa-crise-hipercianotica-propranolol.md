@@ -30,7 +30,7 @@ https://www.sheffieldchildrens.nhs.uk/download/1018/circulation/70782/management
 - **Autoria**: Dr Leila Rittey, Dr Fiona Willcoxson (Paediatric Cardiology, Leeds General Infirmary), Teresa Brooks (Advanced Clinical Pharmacist). Aprovado em "congenital cardiology governance meeting" da rede.
 - **População**: "Children with a diagnosis of Tetralogy of Fallot" antes da correção cirúrgica.
 - **Base de evidência declarada pela própria diretriz**: BMJ Best Practice (Tetralogy of Fallot) e Apitz C, Webb GD, Redington AN. Tetralogy of Fallot. Lancet. 2009;374(9699):1462-1471. **Sem classe/nível de evidência formal** — é consenso institucional de rede assistencial, não diretriz graduada de sociedade.
-- **Doses do fluxograma (Appendix 1), transcritas exatamente**:
+- **Doses do fluxograma (Appendix 1; versão textual acessível no Appendix 2), transcritas exatamente**:
   - Oxigênio 15 L via máscara não reinalante + joelho-peito + chamar ajuda.
   - Morfina IV bolus **50 microgramas/kg** (repetir 1× após 3 min se necessário); sem cânula: morfina IM **100 microgramas/kg**; "Do not give naloxone".
   - Cloreto de sódio 0,9% **20 mL/kg** em bolus.
