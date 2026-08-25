@@ -1,275 +1,138 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
-type Resultado = { slug: string; title: string; kind: string; frente?: string | null; theme: string; snippet: string; ano?: number | null };
-type MedicamentoBusca = { slug: string; generic_name: string; drug_class: string; brand_names?: string[] };
-type MedicamentoInsight = {
-  slug: string; generic_name: string; drug_class: string; brand_names: string[];
+type Res = { slug: string; title: string; kind: string; frente?: string; theme: string; snippet: string; ano?: number };
+type Drug = { slug: string; generic_name: string; drug_class: string };
+type Insight = Drug & {
   mechanism: string | null; presentations: string[]; dosing: Record<string, unknown>;
   renal_adjustment: string | null; hepatic_adjustment: string | null;
   contraindications: string[]; interactions: string[]; monitoring: string[];
-  indications: string[]; adverse_effects: string[]; pregnancy: string | null; lactation: string | null;
-  half_life_hours: number | null; half_life_note: string | null;
-  duration_of_action_hours: number | null; duration_of_action_note: string | null;
-  sbp_reduction_mmhg: number | null; dbp_reduction_mmhg: number | null;
-  bp_evidence_source: string | null; review_status: string;
+  indications: string[]; adverse_effects: string[];
+  half_life_hours: number | null; duration_of_action_hours: number | null;
+  sbp_reduction_mmhg: number | null; dbp_reduction_mmhg: number | null; bp_evidence_source: string | null;
 };
-type ConfiguracaoFrente = { id: string; titulo: string; descricao: string; ordem: number; rota: string };
-type ItemRelacionado = { slug: string; titulo: string; subtitulo: string | null; rota: string };
-type GrupoRelacionado = { tipo: string; rotulo: string; rota_lista: string; itens: ItemRelacionado[] };
-type RespostaRelacionados = { tema?: string; grupos: GrupoRelacionado[]; total: number };
+type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: { slug: string; titulo: string; subtitulo?: string; rota: string }[] };
 
-const FRENTES: Record<string, ConfiguracaoFrente> = {
-  visao_geral: { id: "visao_geral", titulo: "Visão geral e características", descricao: "Fundamentos, características e conteúdo de referência", ordem: 10, rota: "/biblioteca" },
-  condutas: { id: "condutas", titulo: "Condutas e protocolos", descricao: "Manejo, tratamento e aplicação prática", ordem: 11, rota: "/biblioteca" },
-  diretrizes: { id: "diretrizes", titulo: "Diretrizes e consensos", descricao: "Guidelines, consensos e posicionamentos", ordem: 12, rota: "/biblioteca" },
-  fluxogramas: { id: "fluxogramas", titulo: "Fluxogramas", descricao: "Algoritmos e caminhos de decisão", ordem: 13, rota: "/biblioteca" },
-  estudo: { id: "estudo", titulo: "Estudos", descricao: "Literatura original e trabalhos científicos", ordem: 20, rota: "/estudos" },
-  evidencia: { id: "evidencia", titulo: "Evidências", descricao: "Recomendações, classes e níveis de evidência", ordem: 30, rota: "/evidencias" },
-  exame: { id: "exame", titulo: "Exames", descricao: "Diagnóstico, indicação e interpretação", ordem: 40, rota: "/exames" },
-  galeria: { id: "galeria", titulo: "Galeria clínica", descricao: "Imagens e achados relacionados", ordem: 50, rota: "/galeria" },
-};
-const RÓTULO_KIND: Record<string, string> = {
-  documento: "Documento", estudo: "Estudo", evidencia: "Evidência", exame: "Exame",
-  galeria: "Imagem", fluxograma: "Fluxograma", protocolo: "Protocolo",
-};
+const AREAS = {
+  geral: ["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca", 10],
+  conduta: ["Condutas e protocolos", "Manejo, tratamento e aplicação prática", "/biblioteca", 11],
+  diretriz: ["Diretrizes e consensos", "Guidelines, consensos e posicionamentos", "/biblioteca", 12],
+  fluxo: ["Fluxogramas", "Algoritmos e caminhos de decisão", "/biblioteca", 13],
+  estudo: ["Estudos", "Literatura original e trabalhos científicos", "/estudos", 20],
+  evidencia: ["Evidências", "Recomendações e níveis de evidência", "/evidencias", 30],
+  exame: ["Exames", "Diagnóstico, indicação e interpretação", "/exames", 40],
+  galeria: ["Galeria clínica", "Imagens e achados relacionados", "/galeria", 50],
+} as const;
+type Area = keyof typeof AREAS;
+const ROTULOS: Record<string, string> = { documento: "Documento", estudo: "Estudo", evidencia: "Evidência", exame: "Exame", galeria: "Imagem", fluxograma: "Fluxograma", protocolo: "Protocolo" };
+const COBERTOS = new Set(["documento", "fluxograma", "evidencia", "estudo", "exame", "galeria"]);
 
-function normalizar(valor: string) {
-  return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").replace(/[^a-z0-9]+/g, " ").trim();
+const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+function area(r: Res): Area {
+  const f = norm(r.frente || r.kind);
+  if (/^(estudo|estudos|study)$/.test(f)) return "estudo";
+  if (/^(evidencia|evidencias|evidence)$/.test(f)) return "evidencia";
+  if (/^(exame|exames|lab test|lab tests)$/.test(f)) return "exame";
+  if (/^(galeria|imagem|imagens|gallery)$/.test(f)) return "galeria";
+  const t = norm(`${r.kind} ${r.title}`);
+  if (/\b(flux|algoritm|flowchart)/.test(t)) return "fluxo";
+  if (/\b(diretr|guideline|consens|posicionamento)/.test(t)) return "diretriz";
+  if (/\b(protoc|condut|manejo|tratamento|terapia|abordagem)/.test(t)) return "conduta";
+  return "geral";
 }
+const rota = (r: Res) => `${AREAS[area(r)][2]}/${r.slug}`;
 
-function idDaFrente(resultado: Resultado) {
-  const valor = normalizar(resultado.frente || resultado.kind).replaceAll(" ", "_");
-  if (["estudo", "estudos", "study"].includes(valor)) return "estudo";
-  if (["evidencia", "evidencias", "evidence"].includes(valor)) return "evidencia";
-  if (["exame", "exames", "lab_test", "lab_tests"].includes(valor)) return "exame";
-  if (["galeria", "imagem", "imagens", "gallery"].includes(valor)) return "galeria";
-  const texto = normalizar(`${resultado.kind} ${resultado.title}`);
-  if (/\b(fluxograma|algoritmo|flowchart)\b/.test(texto)) return "fluxogramas";
-  if (/\b(diretriz|diretrizes|guideline|guidelines|consenso|posicionamento)\b/.test(texto)) return "diretrizes";
-  if (/\b(protocolo|conduta|manejo|tratamento|terapia|abordagem)\b/.test(texto)) return "condutas";
-  return "visao_geral";
+function Snippet({ texto }: { texto: string }) {
+  return <>{texto.split(/<\/?mark>/i).map((p, i) => i % 2 ? <mark key={i}>{p}</mark> : p)}</>;
 }
-
-function rotaDoResultado(resultado: Resultado) {
-  const frente = FRENTES[idDaFrente(resultado)] ?? FRENTES.visao_geral;
-  return `${frente.rota}/${resultado.slug}`;
+function txt(v: unknown): string {
+  if (v == null) return "";
+  if (typeof v !== "object") return String(v);
+  if (Array.isArray(v)) return v.map(txt).filter(Boolean).join(" · ");
+  return Object.entries(v as Record<string, unknown>).map(([k, x]) => `${k.replaceAll("_", " ")}: ${txt(x)}`).filter((x) => !x.endsWith(": ")).join("\n");
 }
-
-function SnippetDestacado({ snippet }: { snippet: string }) {
-  const partes = snippet.split(/(<mark>|<\/mark>)/gi);
-  let destacado = false;
-  const nos: ReactNode[] = [];
-  partes.forEach((parte, indice) => {
-    if (/^<mark>$/i.test(parte)) { destacado = true; return; }
-    if (/^<\/mark>$/i.test(parte)) { destacado = false; return; }
-    if (parte) nos.push(destacado ? <mark key={indice}>{parte}</mark> : <span key={indice}>{parte}</span>);
-  });
-  return <>{nos}</>;
+function Lista({ itens, vazio = "Sem dado estruturado publicado." }: { itens: string[]; vazio?: string }) {
+  return itens.length ? <ul>{itens.map((x, i) => <li key={`${i}-${x.slice(0, 20)}`}>{x}</li>)}</ul> : <p>{vazio}</p>;
 }
-
-function textoEstruturado(valor: unknown): string {
-  if (valor == null) return "";
-  if (["string", "number", "boolean"].includes(typeof valor)) return String(valor);
-  if (Array.isArray(valor)) return valor.map(textoEstruturado).filter(Boolean).join(" · ");
-  if (typeof valor === "object") {
-    return Object.entries(valor as Record<string, unknown>)
-      .filter(([, item]) => textoEstruturado(item).trim())
-      .map(([chave, item]) => `${chave.replaceAll("_", " ")}: ${textoEstruturado(item)}`).join("\n");
-  }
-  return String(valor);
+function Topico({ id, nome, titulo, children }: { id: string; nome: string; titulo: string; children: ReactNode }) {
+  return <article id={id} className="cartao tct-topic"><p className="eyebrow">{nome}</p><h3>{titulo}</h3>{children}</article>;
 }
-
-function Lista({ itens, vazio = "Sem dado estruturado publicado." }: { itens: Array<string | null | undefined>; vazio?: string }) {
-  const validos = itens.filter((item): item is string => Boolean(item?.trim()));
-  if (!validos.length) return <p className="tct-muted">{vazio}</p>;
-  return <ul>{validos.map((item, indice) => <li key={`${indice}-${item.slice(0, 32)}`}>{item}</li>)}</ul>;
-}
-
-function PainelMedicamento({ medicamento }: { medicamento: MedicamentoInsight }) {
-  const dose = textoEstruturado(medicamento.dosing);
-  const potencia = [
-    medicamento.sbp_reduction_mmhg != null ? `PAS: ${medicamento.sbp_reduction_mmhg} mmHg` : null,
-    medicamento.dbp_reduction_mmhg != null ? `PAD: ${medicamento.dbp_reduction_mmhg} mmHg` : null,
-  ].filter((item): item is string => Boolean(item));
-
-  return (
-    <section className="tct-drug" aria-labelledby="tct-drug-title">
-      <header className="tct-section-heading">
-        <div><p className="eyebrow">Medicamento identificado</p><h2 id="tct-drug-title">{medicamento.generic_name}</h2><p>{medicamento.drug_class}</p></div>
-        <Link to={`/medicamentos?slug=${encodeURIComponent(medicamento.slug)}`} className="tct-open-all">Abrir verbete completo <span aria-hidden="true">→</span></Link>
-      </header>
-      <nav className="tct-topic-nav" aria-label="Tópicos do medicamento">
-        <a href="#caracteristicas">Características</a><a href="#posologia-potencia">Posologia e potência</a><a href="#indicacoes">Indicações</a><a href="#seguranca">Segurança</a>
-      </nav>
-      <div className="tct-drug-grid">
-        <article id="caracteristicas" className="tct-topic-card">
-          <p className="eyebrow">Características</p><h3>Perfil farmacológico</h3>
-          <dl>
-            <div><dt>Classe</dt><dd>{medicamento.drug_class}</dd></div>
-            {medicamento.mechanism && <div><dt>Mecanismo</dt><dd>{medicamento.mechanism}</dd></div>}
-            {medicamento.half_life_hours != null && <div><dt>Meia-vida</dt><dd>{medicamento.half_life_hours} h{medicamento.half_life_note ? ` · ${medicamento.half_life_note}` : ""}</dd></div>}
-            {medicamento.duration_of_action_hours != null && <div><dt>Duração de ação</dt><dd>{medicamento.duration_of_action_hours} h{medicamento.duration_of_action_note ? ` · ${medicamento.duration_of_action_note}` : ""}</dd></div>}
-            {medicamento.presentations.length > 0 && <div><dt>Apresentações</dt><dd>{medicamento.presentations.join(" · ")}</dd></div>}
-          </dl>
-        </article>
-        <article id="posologia-potencia" className="tct-topic-card">
-          <p className="eyebrow">Posologia e potência</p><h3>Dose e efeito publicados</h3>
-          {dose ? <p className="tct-structured">{dose}</p> : <p className="tct-muted">Sem posologia estruturada publicada.</p>}
-          {potencia.length > 0 && <div className="tct-potency">{potencia.map((item) => <strong key={item}>{item}</strong>)}</div>}
-          {medicamento.bp_evidence_source && <p className="tct-source">Fonte da estimativa: {medicamento.bp_evidence_source}</p>}
-        </article>
-        <article id="indicacoes" className="tct-topic-card">
-          <p className="eyebrow">Indicações</p><h3>Onde este medicamento se encaixa</h3><Lista itens={medicamento.indications} vazio="Sem indicação estruturada publicada." />
-        </article>
-        <article id="seguranca" className="tct-topic-card">
-          <p className="eyebrow">Segurança e monitorização</p><h3>O que verificar</h3>
-          <Lista itens={medicamento.monitoring} vazio="Sem monitorização estruturada publicada." />
-          {(medicamento.renal_adjustment || medicamento.hepatic_adjustment) && <dl>
-            {medicamento.renal_adjustment && <div><dt>Ajuste renal</dt><dd>{medicamento.renal_adjustment}</dd></div>}
-            {medicamento.hepatic_adjustment && <div><dt>Ajuste hepático</dt><dd>{medicamento.hepatic_adjustment}</dd></div>}
-          </dl>}
-          {medicamento.contraindications.length > 0 && <details><summary>Contraindicações ({medicamento.contraindications.length})</summary><Lista itens={medicamento.contraindications} /></details>}
-          {medicamento.interactions.length > 0 && <details><summary>Interações ({medicamento.interactions.length})</summary><Lista itens={medicamento.interactions} /></details>}
-          {medicamento.adverse_effects.length > 0 && <details><summary>Efeitos adversos ({medicamento.adverse_effects.length})</summary><Lista itens={medicamento.adverse_effects} /></details>}
-        </article>
-      </div>
-    </section>
-  );
+function PainelDrug({ d }: { d: Insight }) {
+  const dose = txt(d.dosing);
+  return <section className="cartao">
+    <header className="tct-head"><div><p className="eyebrow">Medicamento identificado</p><h2>{d.generic_name}</h2><p>{d.drug_class}</p></div><Link to={`/medicamentos?slug=${d.slug}`}>Verbete completo →</Link></header>
+    <nav className="tct-nav" aria-label="Tópicos do medicamento">{[["caracteristicas", "Características"], ["dose", "Posologia e potência"], ["indicacoes", "Indicações"], ["seguranca", "Segurança"]].map(([id, nome]) => <a className="selo" href={`#${id}`} key={id}>{nome}</a>)}</nav>
+    <div className="grade grade--2 tct-grid">
+      <Topico id="caracteristicas" nome="Características" titulo="Perfil farmacológico">
+        <p><strong>Classe:</strong> {d.drug_class}</p>{d.mechanism && <p>{d.mechanism}</p>}
+        {d.half_life_hours != null && <p><strong>Meia-vida:</strong> {d.half_life_hours} h</p>}{d.duration_of_action_hours != null && <p><strong>Ação:</strong> {d.duration_of_action_hours} h</p>}{d.presentations.length > 0 && <p><strong>Apresentações:</strong> {d.presentations.join(" · ")}</p>}
+      </Topico>
+      <Topico id="dose" nome="Posologia e potência" titulo="Dose e efeito publicados">
+        <p className="tct-pre">{dose || "Sem posologia estruturada publicada."}</p>
+        {(d.sbp_reduction_mmhg != null || d.dbp_reduction_mmhg != null) && <p><strong>PAS:</strong> {d.sbp_reduction_mmhg ?? "—"} mmHg · <strong>PAD:</strong> {d.dbp_reduction_mmhg ?? "—"} mmHg</p>}{d.bp_evidence_source && <small>{d.bp_evidence_source}</small>}
+      </Topico>
+      <Topico id="indicacoes" nome="Indicações" titulo="Onde se encaixa"><Lista itens={d.indications} /></Topico>
+      <Topico id="seguranca" nome="Segurança e monitorização" titulo="O que verificar">
+        <Lista itens={d.monitoring} />{d.renal_adjustment && <p><strong>Ajuste renal:</strong> {d.renal_adjustment}</p>}{d.hepatic_adjustment && <p><strong>Ajuste hepático:</strong> {d.hepatic_adjustment}</p>}
+        {[["Contraindicações", d.contraindications], ["Interações", d.interactions], ["Efeitos adversos", d.adverse_effects]].map(([nome, itens]) => (itens as string[]).length > 0 && <details key={nome as string}><summary>{nome as string}</summary><Lista itens={itens as string[]} /></details>)}
+      </Topico>
+    </div>
+  </section>;
 }
 
 export default function Busca() {
   const [params, setParams] = useSearchParams();
-  const [q, setQ] = useState(params.get("q") ?? "");
-  const [res, setRes] = useState<Resultado[] | null>(null);
-  const [medicamento, setMedicamento] = useState<MedicamentoInsight | null>(null);
-  const [relacionados, setRelacionados] = useState<RespostaRelacionados | null>(null);
-  const [termoBuscado, setTermoBuscado] = useState(params.get("q")?.trim() ?? "");
-  const [buscando, setBuscando] = useState(false);
-  const [erro, setErro] = useState("");
-  const [aviso, setAviso] = useState("");
-  const [tipo, setTipo] = useState("");
-  const buscaAtual = useRef(0);
+  const inicial = params.get("q") ?? "";
+  const [q, setQ] = useState(inicial), [assunto, setAssunto] = useState(inicial.trim());
+  const [res, setRes] = useState<Res[] | null>(null), [drug, setDrug] = useState<Insight | null>(null), [rel, setRel] = useState<Rel[]>([]);
+  const [loading, setLoading] = useState(false), [erro, setErro] = useState(""), [aviso, setAviso] = useState("");
+  const seq = useRef(0);
 
-  async function buscar(termoBruto: string) {
-    const termo = termoBruto.trim();
-    if (termo.length < 2) return;
-    const idBusca = ++buscaAtual.current;
-    setBuscando(true); setErro(""); setAviso(""); setMedicamento(null); setRelacionados(null); setTermoBuscado(termo);
-    setParams({ q: termo }, { replace: true });
-
-    const [resultadoBusca, resultadoMedicamentos] = await Promise.allSettled([
-      api.get<{ results: Resultado[] }>(`/search?q=${encodeURIComponent(termo)}`),
-      api.get<MedicamentoBusca[]>(`/drugs?q=${encodeURIComponent(termo)}`),
-    ]);
-    if (idBusca !== buscaAtual.current) return;
-    if (resultadoBusca.status === "rejected") {
-      const causa = resultadoBusca.reason;
-      setRes(null); setErro(causa instanceof ApiError ? causa.message : "Não foi possível consultar o conteúdo agora."); setBuscando(false); return;
-    }
-
-    setRes(resultadoBusca.value.results); setTipo("");
-    let encontrouMedicamentoForte = false;
-    if (resultadoMedicamentos.status === "fulfilled") {
-      const termoNormalizado = normalizar(termo);
-      const fortes = resultadoMedicamentos.value.filter((item) => {
-        const nome = normalizar(item.generic_name); const slug = normalizar(item.slug);
-        return nome === termoNormalizado || slug === termoNormalizado || nome.startsWith(`${termoNormalizado} `);
-      });
+  async function buscar(valor: string) {
+    const termo = valor.trim(); if (termo.length < 2) return;
+    const id = ++seq.current;
+    setLoading(true); setErro(""); setAviso(""); setDrug(null); setRel([]); setAssunto(termo); setParams({ q: termo }, { replace: true });
+    const [s, ds] = await Promise.allSettled([api.get<{ results: Res[] }>(`/search?q=${encodeURIComponent(termo)}`), api.get<Drug[]>(`/drugs?q=${encodeURIComponent(termo)}`)]);
+    if (id !== seq.current) return;
+    if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
+    const itens = s.value.results; setRes(itens);
+    if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
+    else {
+      const n = norm(termo), fortes = ds.value.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `));
       if (fortes.length === 1) {
-        encontrouMedicamentoForte = true;
-        try {
-          const insight = await api.get<MedicamentoInsight>(`/drug-insights/${fortes[0].slug}`);
-          if (idBusca === buscaAtual.current) setMedicamento(insight);
-        } catch (causa) {
-          if (idBusca === buscaAtual.current) setAviso(causa instanceof ApiError ? causa.message : "O resumo farmacológico não pôde ser carregado.");
-        }
-      }
-    } else setAviso("A busca geral foi concluída, mas o catálogo de medicamentos está temporariamente indisponível.");
-
-    if (resultadoMedicamentos.status === "fulfilled" && !encontrouMedicamentoForte && resultadoBusca.value.results.length > 0) {
-      const temas = resultadoBusca.value.results.map((item) => item.theme).filter((tema) => tema?.trim());
-      const temaExato = temas.find((tema) => normalizar(tema) === normalizar(termo));
-      // Só atravessa o ecossistema inteiro quando o próprio nome do tema é o
-      // assunto pesquisado. Um termo específico pode aparecer em vários
-      // documentos de um tema amplo (ex.: Noonan em Cardiologia pediátrica),
-      // mas isso não autoriza misturar todo o tema amplo ao resultado.
-      const temaCanonico = temaExato ?? null;
-      if (temaCanonico) {
-        try {
-          const conexoes = await api.get<RespostaRelacionados>(`/relacionados?tema=${encodeURIComponent(temaCanonico)}`);
-          if (idBusca === buscaAtual.current) setRelacionados(conexoes);
-        } catch {
-          // As conexões complementam a busca principal e não devem ocultá-la em caso de falha.
-        }
+        try { const d = await api.get<Insight>(`/drug-insights/${fortes[0].slug}`); if (id === seq.current) setDrug(d); }
+        catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }
+      } else {
+        const tema = itens.map((x) => x.theme).find((x) => norm(x) === n);
+        if (tema) try { const x = await api.get<{ grupos: Rel[] }>(`/relacionados?tema=${encodeURIComponent(tema)}`); if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !COBERTOS.has(g.tipo))); } catch { /* complemento opcional */ }
       }
     }
-    if (idBusca === buscaAtual.current) setBuscando(false);
+    if (id === seq.current) setLoading(false);
   }
+  useEffect(() => { if (inicial.trim().length > 1) void buscar(inicial); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, []);
 
-  useEffect(() => {
-    const inicial = params.get("q");
-    if (inicial && inicial.trim().length >= 2) void buscar(inicial);
-    // A consulta inicial deve acontecer apenas na montagem; buscar() atualiza a URL.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const grupos = new Map<Area, Res[]>();
+  (res ?? []).forEach((r) => { const a = area(r); grupos.set(a, [...(grupos.get(a) ?? []), r]); });
+  const ordenados = [...grupos].sort((a, b) => Number(AREAS[a[0]][3]) - Number(AREAS[b[0]][3]));
+  const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(area(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
 
-  const tipos = useMemo(() => Array.from(new Set((res ?? []).map((item) => item.kind))).sort(), [res]);
-  const resultados = useMemo(() => tipo ? (res ?? []).filter((item) => item.kind === tipo) : (res ?? []), [res, tipo]);
-  const grupos = useMemo(() => {
-    const mapa = new Map<string, Resultado[]>();
-    resultados.forEach((item) => { const frente = idDaFrente(item); mapa.set(frente, [...(mapa.get(frente) ?? []), item]); });
-    return [...mapa.entries()].map(([id, itens]) => ({ config: FRENTES[id] ?? FRENTES.visao_geral, itens })).sort((a, b) => a.config.ordem - b.config.ordem);
-  }, [resultados]);
-  const gruposRelacionados = useMemo(() => {
-    const jaCobertos = new Set(["documento", "fluxograma", "evidencia", "estudo", "exame", "galeria"]);
-    return (relacionados?.grupos ?? []).filter((grupo) => grupo.itens.length > 0 && !jaCobertos.has(grupo.tipo));
-  }, [relacionados]);
-  const timeline = useMemo(() => resultados
-    .filter((item) => ["estudo", "evidencia"].includes(idDaFrente(item)) && typeof item.ano === "number")
-    .sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0)), [resultados]);
-
-  return (
-    <main className="tct-page">
-      <header className="tct-hero">
-        <p className="eyebrow">Tudo com Tudo</p><h1>{termoBuscado ? `Tudo sobre ${termoBuscado}` : "Um assunto, todas as conexões"}</h1>
-        <p>Pesquise uma condição, medicamento ou achado. A Corvia organiza cada resultado por frente clínica, sem misturar conteúdos diferentes em uma lista única.</p>
-        <form className="tct-search" onSubmit={(evento) => { evento.preventDefault(); void buscar(q); }} role="search">
-          <label htmlFor="tct-search-input">Qual assunto você quer conectar?</label>
-          <div><input id="tct-search-input" type="search" value={q} onChange={(evento) => setQ(evento.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial, miocardite…" autoComplete="off" /><button className="botao" type="submit" disabled={q.trim().length < 2 || buscando}>{buscando ? "Buscando…" : "Conectar"}</button></div>
-        </form>
-      </header>
-
-      {erro && <Erro mensagem={erro} />}
-      {aviso && <div className="tct-warning" role="status">{aviso}</div>}
-      {buscando && <Carregando texto="Conectando áreas, estudos e evidências…" />}
-      {!buscando && medicamento && <PainelMedicamento medicamento={medicamento} />}
-
-      {!buscando && res !== null && (res.length > 0 || medicamento) && <section className="tct-results" aria-labelledby="tct-results-title">
-        <header className="tct-section-heading">
-          <div><p className="eyebrow">Mapa do assunto</p><h2 id="tct-results-title">Conteúdo conectado</h2><p>{res.length} resultado{res.length === 1 ? "" : "s"} distribuído{res.length === 1 ? "" : "s"} por área.</p></div>
-          {tipos.length > 1 && <label className="tct-type-filter">Filtrar tipo<select value={tipo} onChange={(evento) => setTipo(evento.target.value)}><option value="">Todos ({res.length})</option>{tipos.map((item) => <option key={item} value={item}>{RÓTULO_KIND[item] ?? item} ({res.filter((resultado) => resultado.kind === item).length})</option>)}</select></label>}
-        </header>
-        {grupos.length > 1 && <nav className="tct-topic-nav" aria-label="Áreas encontradas">{grupos.map(({ config, itens }) => <a key={config.id} href={`#frente-${config.id}`}>{config.titulo} <span>{itens.length}</span></a>)}</nav>}
-        <div className="tct-groups">{grupos.map(({ config, itens }) => <section className="tct-group" id={`frente-${config.id}`} key={config.id} aria-labelledby={`frente-${config.id}-titulo`}>
-          <header><div><p className="eyebrow">{itens.length} resultado{itens.length === 1 ? "" : "s"}</p><h3 id={`frente-${config.id}-titulo`}>{config.titulo}</h3><p>{config.descricao}</p></div><Link to={`${config.rota}?q=${encodeURIComponent(q.trim())}`}>Ver toda a área <span aria-hidden="true">→</span></Link></header>
-          <div className="tct-result-list">{itens.map((item) => <Link key={`${item.kind}-${item.slug}`} to={rotaDoResultado(item)} className="tct-result-card">
-            <span className="tct-result-card__meta">{item.theme} · {RÓTULO_KIND[item.kind] ?? item.kind}{item.ano ? ` · ${item.ano}` : ""}</span><strong>{item.title}</strong>{item.snippet && <p><SnippetDestacado snippet={item.snippet} /></p>}<span className="tct-result-card__open" aria-hidden="true">Abrir →</span>
-          </Link>)}</div>
-        </section>)}{gruposRelacionados.map((grupo) => <section className="tct-group tct-group--ecosystem" key={`relacionado-${grupo.tipo}`}>
-          <header><div><p className="eyebrow">Ecossistema conectado</p><h3>{grupo.rotulo}</h3><p>{grupo.itens.length} item{grupo.itens.length === 1 ? "" : "s"} do mesmo tema canônico.</p></div><Link to={grupo.rota_lista}>Ver toda a área <span aria-hidden="true">→</span></Link></header>
-          <div className="tct-result-list">{grupo.itens.map((item) => <Link key={`${grupo.tipo}-${item.slug}`} to={item.rota} className="tct-result-card"><span className="tct-result-card__meta">{grupo.rotulo}</span><strong>{item.titulo}</strong>{item.subtitulo && <p>{item.subtitulo}</p>}<span className="tct-result-card__open" aria-hidden="true">Abrir →</span></Link>)}</div>
-        </section>)}</div>
-      </section>}
-
-      {!buscando && timeline.length > 0 && <section className="tct-timeline" aria-labelledby="tct-timeline-title">
-        <header><p className="eyebrow">Timeline</p><h2 id="tct-timeline-title">Estudos e evidências ao longo do tempo</h2><p>A evolução científica do assunto em ordem cronológica.</p></header>
-        <ol>{timeline.map((item) => <li key={`timeline-${item.kind}-${item.slug}`}><time>{item.ano}</time><Link to={rotaDoResultado(item)}><small>{FRENTES[idDaFrente(item)].titulo}</small><strong>{item.title}</strong></Link></li>)}</ol>
-      </section>}
-
-      {!buscando && res !== null && res.length === 0 && !medicamento && <Vazio titulo="Nada encontrado" acao="Tente um termo mais curto, o princípio ativo ou um sinônimo clínico." />}
-    </main>
-  );
+  return <main className="tct-page">
+    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Todo o conhecimento do assunto, separado por área clínica.</p>
+      <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
+    </header>
+    {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando áreas…" />}
+    {!loading && drug && <PainelDrug d={drug} />}
+    {!loading && res && res.length > 0 && <section className="cartao">
+      <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por área</p></div></header>
+      <nav className="tct-nav" aria-label="Áreas">{ordenados.map(([a, xs]) => <a className="selo" href={`#area-${a}`} key={a}>{AREAS[a][0]} · {xs.length}</a>)}</nav>
+      <div className="grade grade--2 tct-grid">
+        {ordenados.map(([a, xs]) => <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p><Link to={`${AREAS[a][2]}?q=${encodeURIComponent(assunto)}`}>Ver área →</Link></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
+      </div>
+    </section>}
+    {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{AREAS[area(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
+    {!loading && res?.length === 0 && !drug && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
+  </main>;
 }
