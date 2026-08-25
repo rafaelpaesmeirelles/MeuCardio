@@ -1,5 +1,5 @@
 ---
-title: "Síndrome de Turner na Criança e Adolescente: Espectro Cardiovascular, Indexação Aórtica e Integração com a Indução Puberal"
+title: "Síndrome de Turner na Criança e Adolescente: Espectro, Vigilância Cardiovascular e Terapia Estrogênica"
 slug: sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio
 theme: "Cardiologia pediátrica"
 kind: estudo
@@ -9,7 +9,7 @@ source_refs: ["Gravholt CH, Andersen NH, Christin-Maitre S, Davis SM, Duijnhouwe
 legacy_source: "Documento novo — tema Cardiologia pediátrica, produção NIGHT-B49, rodada científica noturna de 25/08/2026."
 ---
 
-# Síndrome de Turner na Criança e Adolescente: Espectro Cardiovascular, Indexação Aórtica e Integração com a Indução Puberal
+# Síndrome de Turner na Criança e Adolescente: Espectro, Vigilância Cardiovascular e Terapia Estrogênica
 
 ## O que é, e por que este documento é distinto dos dois já publicados nesta plataforma que mais se aproximam do tema
 
@@ -139,9 +139,9 @@ Um dado prático da diretriz, com exemplo numérico próprio: em um estudo, o **
 
 ### Limiares para avaliação de cirurgia aórtica eletiva
 
-**Em adultos**: os valores abaixo são gatilhos para avaliação especializada e decisão individualizada sobre o momento da cirurgia aórtica eletiva, considerando fatores de risco de dissecção — **dilatação moderada** (AHI > 23 mm/m, ASI > 2,3 cm/m², ou Z > 3,5) **com pelo menos um fator de risco adicional** (valva bicúspide, coarctação de aorta, hipertensão, ou aumento rápido do diâmetro aórtico >3 mm/ano); o risco de dissecção provavelmente aumenta se mais de um fator adicional estiver presente. **Dilatação grave** (AHI > 25 mm/m, ASI > 2,5 cm/m², ou Z > 4) **como fator isolado** já deve motivar avaliação para cirurgia aórtica eletiva (recomendação R4.15, qualidade de evidência muito baixa — ⨁○○○).
+**Em adultos**: os valores abaixo são gatilhos para avaliação especializada e decisão individualizada sobre o momento da cirurgia aórtica eletiva, considerando fatores de risco de dissecção — **dilatação moderada** (AHI > 23 mm/m, ASI > 2,3 cm/m², ou Z > 3,5) **com pelo menos um fator de risco adicional** (valva bicúspide, coarctação de aorta, hipertensão, ou aumento rápido do diâmetro aórtico >3 mm/ano, limiar que a própria diretriz informa não estar validado especificamente em Turner); o risco de dissecção provavelmente aumenta se mais de um fator adicional estiver presente. **Dilatação grave** (AHI > 25 mm/m, ASI > 2,5 cm/m², ou Z > 4) **como fator isolado** já deve motivar avaliação para cirurgia aórtica eletiva (recomendação R4.15, qualidade de evidência muito baixa — ⨁○○○).
 
-**Em crianças e adolescentes**: o risco absoluto de dissecção é menor que no adulto. Os valores abaixo orientam avaliação em centro de aortopatia; não determinam cirurgia por si sós. A decisão é individualizada, considerando dilatação moderada (idade < 15 anos: Z > 3,5; idade ≥ 15 anos: AHI ≥ 23 mm/m, ASI > 2,3 cm/m², ou Z > 3,5) associada a hipertensão, coarctação, valva bicúspide, ou aumento rápido do diâmetro aórtico (>3 mm/ano ou >1 Z/ano) (recomendação R4.16, qualidade de evidência muito baixa — ⨁○○○).
+**Em crianças e adolescentes**: o risco absoluto de dissecção é menor que no adulto. Os valores abaixo orientam avaliação em centro de aortopatia; não determinam cirurgia por si sós. A decisão é individualizada, considerando dilatação moderada (idade < 15 anos: Z > 3,5; idade ≥ 15 anos: AHI ≥ 23 mm/m, ASI > 2,3 cm/m², ou Z > 3,5) associada a hipertensão, coarctação, valva bicúspide, ou aumento rápido do diâmetro aórtico (>3 mm/ano, não validado especificamente em Turner, ou >1 Z/ano em crianças) (recomendação R4.16, qualidade de evidência muito baixa — ⨁○○○).
 
 Em dois estudos, **ASI > 2,5 cm/m² (correspondente a AHI > 25 mm/m ou Z > 4) foi identificado como fator de risco independente de dissecção aórtica em Turner** (Carlson M et al., Circulation 2012, PMID 23032325, citado dentro do texto integral da diretriz de 2024).
 
@@ -197,7 +197,7 @@ A diretriz de 2024 detalha um protocolo por faixa etária, integrando ecocardiog
 | Ao diagnóstico (qualquer idade) | ETT, mesmo com ecocardiograma fetal/exame pós-natal normais; sempre incluindo visualização da origem e trajeto proximal das coronárias | Moderada/baixa (⨁⨁⨁○ / ⨁⨁○○) |
 | Sem doença cardiovascular significativa na triagem inicial | ETT aos 9-11 anos, após término do crescimento ou na transição para cuidado adulto, e depois **a cada 5-10 anos no adulto** | Baixa (⨁⨁○○) |
 | Coração e aorta completamente visualizados e normais em lactente/criança assintomática | RM inicial ainda recomendada, mas pode ser adiada até ser possível sem anestesia geral | Baixa (⨁⨁○○) |
-| **Todo adolescente e adulto recém-diagnosticado** | **RM deve ser realizada, além de ou em vez do ETT inicial — idealmente completa em até 12 meses** do diagnóstico | Baixa (⨁⨁○○) |
+| **Todo adolescente e adulto recém-diagnosticado** | **RM deve ser realizada, além de ou em vez do ETT inicial — idealmente completa em até 12 meses** do diagnóstico; achados anormais ou fatores de risco exigem antecipação conforme julgamento clínico | Baixa (⨁⨁○○) |
 | RM não tolerada/indisponível | TC como alternativa razoável; ETT e RM/TC do tórax devem ter sincronismo (*gating*) por ECG | Baixa (⨁⨁○○) |
 | Antes de gestação ou reprodução assistida | Imagem cardiovascular (idealmente RM ou TC) pelo menos uma vez, em até 2 anos antes | Baixa (⨁⨁○○) |
 
@@ -213,11 +213,11 @@ O ecocardiograma é valioso para diagnóstico e vigilância de cardiopatia cong�
 
 ### O que está explicitamente recomendado
 
-A imagem cardiovascular ao diagnóstico (ETT sempre; RM idealmente completa em até 12 meses) é recomendada **para toda adolescente e adulta recém-diagnosticada** (recomendações R4.7 e R4.10, já detalhadas acima) — na prática clínica, isso coloca a avaliação cardiovascular estrutural **antes ou concomitante** ao momento em que a decisão de iniciar a indução puberal com estrogênio costuma ser tomada em meninas diagnosticadas antes da puberdade.
+Ecocardiograma é recomendado ao diagnóstico para todas. Em adolescentes recém-diagnosticadas, a ressonância cardiovascular deve ser realizada além de ou em vez do ecocardiograma, idealmente em até 12 meses, conforme achados e julgamento clínico. A diretriz não condiciona o início do estradiol a um limiar aórtico específico nem cria um “clearance” cardiovascular temporal obrigatório antes da indução puberal.
 
 A diretriz também estabelece, de forma explícita, que quaisquer sinais ou sintomas sugestivos de dissecção aórtica aguda (dor torácica, cervical, no ombro, dorso ou flanco, sobretudo de início súbito e intensa) devem motivar avaliação imediata, **especialmente em quem tem dilatação aórtica ou valva bicúspide** (recomendação R4.12) — uma orientação de vigilância clínica que vale durante toda a vida, incluindo o período de indução puberal.
 
-Sobre a via e o tipo de estrogênio, a diretriz recomenda **preferência pela via transdérmica de estradiol** sobre a via oral para a reposição hormonal na síndrome de Turner, baseada no perfil mais fisiológico e no risco de metabólitos hepáticos potencialmente prejudiciais associado à via oral — um ensaio randomizado mostrou acúmulo significativo e desproporcional de estrogênios genotóxicos (metabolitos mutagênicos ligados a carcinogênese mamária pós-menopausa) com a via oral, comparado à via transdérmica. O **etinilestradiol não é recomendado para indução puberal**, entre outros motivos por seu perfil cardiovascular e metabólico desfavorável — a própria diretriz observa que ele "tende a aumentar a pressão arterial e está associado a maior risco de tromboembolismo venoso" (Gravholt CH et al., Eur J Endocrinol 2024, PMID 38748847, seção 3.4).
+Sobre a via e o tipo de estrogênio, a diretriz **sugere preferência pela via transdérmica de estradiol** (recomendação de baixa certeza), por perfil mais fisiológico e no risco de metabólitos hepáticos potencialmente prejudiciais associado à via oral — um ensaio randomizado mostrou acúmulo significativo e desproporcional de estrogênios genotóxicos (metabolitos mutagênicos ligados a carcinogênese mamária pós-menopausa) com a via oral, comparado à via transdérmica. Estradiol oral é alternativa válida quando a via transdérmica não é viável, considerando disponibilidade, preferência e adesão. O **etinilestradiol não é recomendado como primeira escolha para indução puberal**, embora possa ser preferível à ausência de reposição quando não há alternativa adequada, por seu perfil cardiovascular e metabólico menos favorável — a própria diretriz observa que ele "tende a aumentar a pressão arterial e está associado a maior risco de tromboembolismo venoso" (Gravholt CH et al., Eur J Endocrinol 2024, PMID 38748847, seção 3.4).
 
 ### O que a diretriz NÃO define, e não deve ser inferido
 
