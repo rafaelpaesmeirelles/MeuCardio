@@ -464,7 +464,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Não reproduz tabelas protegidas; escores-z devem ser calculados por fórmula validada e licenciável.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-do-choque-da-doenca-de-kawasaki",
+      "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+      "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki"
+    ],
+    "patient_material_slug": "doenca-de-kawasaki-o-que-os-pais-precisam-saber"
   },
   {
     "slug": "miocardite-pediatrica",
@@ -1718,7 +1724,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Não emite indicação ou contraindicação automática de procedimento.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao"
+    ],
+    "patient_material_slug": "fragilidade-e-o-coracao-a-idade-sozinha-nao-decide-o-tratamento"
   },
   {
     "slug": "insuficiencia-cardiaca-no-idoso",
@@ -1785,7 +1795,13 @@
     ],
     "review_status": "revisado",
     "review_note": "Tratamento farmacológico deve seguir diretriz de IC e avaliação individual de tolerância.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+      "anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso",
+      "sindrome-cardiorrenal-no-idoso-classificacao-e-o-mito-da-piora-renal-durante-a-descongestao"
+    ],
+    "patient_material_slug": "os-quatro-pilares-do-tratamento-da-insuficiencia-cardiaca"
   },
   {
     "slug": "fibrilacao-atrial-no-idoso",
@@ -1852,7 +1868,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Escores e doses não são calculados neste verbete; usar calculadoras validadas da plataforma.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+      "ablacao-de-fibrilacao-atrial-no-muito-idoso-seguranca-e-eficacia-por-faixa-etaria"
+    ],
+    "patient_material_slug": "fibrilacao-atrial-no-idoso-medo-de-cair-e-anticoagulacao"
   },
   {
     "slug": "avaliacao-basal-cardiooncologica",
@@ -3844,7 +3865,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal"
+    ],
+    "patient_material_slug": "sincope-e-risco-de-queda-por-que-prevenir-a-lesao-tambem-importa"
   },
   {
     "slug": "delirium-cardiogeriatria",
@@ -3902,7 +3927,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sarcopenia-e-caquexia-cardiaca-no-idoso-com-insuficiencia-cardiaca-definicoes-prevalencia-e-prognostico"
+    ]
   },
   {
     "slug": "anticoagulacao-idoso",
@@ -3931,7 +3959,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal"
+    ],
+    "patient_material_slug": "anticoagulacao-oral"
   },
   {
     "slug": "estenose-aortica-tavi-idoso",
@@ -4132,7 +4164,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Aprofundado de básico para completo em 12/08/2026, com fontes internacionais adicionais conferidas via PubMed. Conteúdo permanece qualitativo e descritivo — nenhum corte numérico específico (idade, gradiente, PA em mmHg, escore) é fabricado aqui; onde a decisão depende de valor de corte, a orientação é usar a diretriz e as calculadoras validadas da plataforma. Sujeito a julgamento clínico individual.",
-    "version": 2
+    "version": 2,
+    "related_document_slugs": [
+      "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+      "estenose-aortica-grave-descompensada-e-choque-no-idoso"
+    ],
+    "patient_material_slug": "estenose-aortica-e-troca-de-valva"
   },
   {
     "slug": "amiloidose-cardiaca-idoso",
@@ -4161,7 +4198,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "amiloidose-cardiaca-por-transtirretina-selvagem-attrwt-no-idoso",
+      "descompensacao-aguda-da-amiloidose-cardiaca-no-idoso"
+    ],
+    "patient_material_slug": "amiloidose-cardiaca"
   },
   {
     "slug": "doenca-coronariana-idoso",
@@ -4190,7 +4232,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita",
+      "doenca-coronariana-multiarterial-no-muito-idoso-cabg-versus-pci-e-o-cruzamento-entre-risco-precoce-e-beneficio-tardio"
+    ],
+    "patient_material_slug": "doenca-coronariana-e-infarto"
   },
   {
     "slug": "cuidados-paliativos-cardiovasculares",
@@ -4219,7 +4266,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
+      "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
+    ]
   },
   {
     "slug": "plano-alta-cardiogeriatria",
