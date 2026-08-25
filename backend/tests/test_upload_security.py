@@ -46,6 +46,17 @@ async def echo_upload(request: Request):
     return JSONResponse({"filename": upload.filename, "size": len(data)})
 
 
+async def echo_uploads(request: Request):
+    form = await request.form()
+    uploads = form.getlist("arquivos")
+    return JSONResponse({
+        "files": [
+            {"filename": upload.filename, "size": len(await upload.read())}
+            for upload in uploads
+        ],
+    })
+
+
 def _app(redis=None) -> Starlette:
     shared_redis = redis or FakeRedis()
     app = Starlette(
@@ -53,6 +64,7 @@ def _app(redis=None) -> Starlette:
             Route("/api/auth/me/foto", echo_upload, methods=["POST"]),
             Route("/api/auth/me/logo", echo_upload, methods=["POST"]),
             Route("/api/pedidos/{pedido_id:int}/exame", echo_upload, methods=["POST"]),
+            Route("/api/exames-ia/analisar", echo_uploads, methods=["POST"]),
             Route("/api/email/mensagens/anexos", echo_upload, methods=["POST"]),
             Route("/api/cursos/admin/{slug}/material", echo_upload, methods=["POST"]),
         ]
@@ -113,6 +125,36 @@ def test_limite_e_aplicado_antes_do_router_ler_o_arquivo():
             files={"arquivo": ("foto.jpg", oversized, "image/jpeg")},
         )
     assert response.status_code == 413
+
+
+def test_central_cardiovascular_reproduz_multiplos_arquivos_e_limita_a_cinco():
+    first = _png()
+    second = _png(width=5, height=5)
+    with TestClient(_app()) as client:
+        allowed = client.post(
+            "/api/exames-ia/analisar",
+            files=[
+                ("arquivos", ("frente.png", first, "image/png")),
+                ("arquivos", ("verso.png", second, "image/png")),
+            ],
+        )
+        blocked = client.post(
+            "/api/exames-ia/analisar",
+            files=[
+                ("arquivos", (f"foto-{index}.png", first, "image/png"))
+                for index in range(6)
+            ],
+        )
+
+    assert allowed.status_code == 200
+    assert allowed.json() == {
+        "files": [
+            {"filename": "frente.png", "size": len(first)},
+            {"filename": "verso.png", "size": len(second)},
+        ],
+    }
+    assert blocked.status_code == 422
+    assert "no máximo 5 arquivos" in blocked.json()["detail"]
 
 
 def test_pdf_clinico_com_javascript_e_rejeitado():
@@ -261,6 +303,9 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # Opinião rápida de ECG: leitura limitada a 20 MB + 1 byte,
         # validação real por validate_file() e corte antecipado na camada ASGI.
         "ecg_quick.py",
+        # Central multimodal cardiovascular: até cinco fotos/arquivos, com
+        # limites individual e agregado e validação antes do parser FastAPI.
+        "cardiovascular_exam_ai.py",
         # Prescrição livre especial: a devolução do PDF assinado também usa
         # o fluxo externo existente, com leitura limitada a 15 MB + 1 byte,
         # validação real do PDF por validate_file() e conferência criptográfica
@@ -273,6 +318,12 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert policy_for("POST", "/api/pedidos/1/exame") is not None
     assert policy_for("POST", "/api/pacientes/1/ecgs") is not None
     assert policy_for("POST", "/api/ecg-ia/analisar") is not None
+    cardiovascular_policy = policy_for("POST", "/api/exames-ia/analisar")
+    assert cardiovascular_policy is not None
+    assert cardiovascular_policy.max_files == 5
+    assert cardiovascular_policy.max_file_bytes == 20 * 1024 * 1024
+    assert cardiovascular_policy.max_total_file_bytes == 40 * 1024 * 1024
+    assert cardiovascular_policy.min_files == 0
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None

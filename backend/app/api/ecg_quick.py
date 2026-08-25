@@ -103,7 +103,7 @@ async def analisar_ecg_rapido(
     start, end = _operational_day_utc_bounds()
     used = db.query(AuditLog.id).filter(
         AuditLog.user_id == user.id,
-        AuditLog.action == "ai_ecg_transfer_attempt",
+        AuditLog.action.in_(("ai_ecg_transfer_attempt", "ai_clinical_exam_transfer_attempt")),
         AuditLog.created_at >= start,
         AuditLog.created_at < end,
     ).count()

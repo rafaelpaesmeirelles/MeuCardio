@@ -36,7 +36,7 @@ const ESTUDO_EDUCACAO: NavItem[] = [
 ];
 
 const TRABALHO_ASSISTENCIA: NavItem[] = [
-  { to: "/ecg-ia", label: "IA para ECG", icon: "ecg", featured: true },
+  { to: "/exames-ia", label: "IA para Exames", icon: "ecg", featured: true },
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },

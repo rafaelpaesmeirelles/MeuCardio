@@ -54,10 +54,21 @@ class UploadPolicy:
     name: str
     max_file_bytes: int
     kind: str
+    max_files: int = 1
+    max_total_file_bytes: int | None = None
+    min_files: int = 1
 
 
 _IMAGE_POLICY = UploadPolicy("imagem-perfil", 3 * 1024 * 1024, "image")
 _EXAM_POLICY = UploadPolicy("exame", 20 * 1024 * 1024, "exam")
+_CARDIOVASCULAR_EXAM_POLICY = UploadPolicy(
+    "exame-cardiovascular",
+    20 * 1024 * 1024,
+    "clinical_exam",
+    max_files=5,
+    max_total_file_bytes=40 * 1024 * 1024,
+    min_files=0,
+)
 _EMAIL_POLICY = UploadPolicy("anexo-email", 15 * 1024 * 1024, "email")
 
 
@@ -77,6 +88,8 @@ def policy_for(method: str, path: str) -> UploadPolicy | None:
         return _EXAM_POLICY
     if re.fullmatch(r"/api/pacientes/\d+/ecgs", path) or path == "/api/ecg-ia/analisar":
         return _EXAM_POLICY
+    if path == "/api/exames-ia/analisar":
+        return _CARDIOVASCULAR_EXAM_POLICY
     if path == "/api/email/mensagens/anexos":
         return _EMAIL_POLICY
     return None
@@ -213,6 +226,18 @@ def validate_file(data: bytes, filename: str, kind: str) -> str:
         return _verify_image(data, filename)
     if kind == "exam":
         return _verify_pdf(data, filename) if data.startswith(b"%PDF-") else _verify_image(data, filename)
+    if kind == "clinical_exam":
+        suffix = Path(filename).suffix.lower()
+        if data.startswith(b"%PDF-"):
+            return _verify_pdf(data, filename)
+        if data.startswith((b"\xff\xd8\xff", b"\x89PNG\r\n\x1a\n", b"RIFF")):
+            return _verify_image(data, filename)
+        if suffix in {".txt", ".csv"}:
+            return _verify_text(data, filename)
+        raise UploadRejected(
+            422,
+            "Anexe PDF, JPEG, PNG, WEBP, TXT ou CSV. DICOM, vídeo, DOCX e XLSX ainda não são aceitos.",
+        )
     if kind != "email":
         raise UploadRejected(500, "Política de upload desconhecida.")
 
@@ -228,7 +253,7 @@ def validate_file(data: bytes, filename: str, kind: str) -> str:
     raise UploadRejected(422, "Anexe PDF, JPEG, PNG, WEBP, DOCX, XLSX, PPTX, TXT ou CSV.")
 
 
-def _parse_single_file(body: bytes, content_type: str) -> tuple[str, bytes]:
+def _parse_files(body: bytes, content_type: str) -> list[tuple[str, bytes]]:
     message = BytesParser(policy=policy.default).parsebytes(
         b"Content-Type: " + content_type.encode("latin-1") + b"\r\nMIME-Version: 1.0\r\n\r\n" + body
     )
@@ -240,6 +265,12 @@ def _parse_single_file(body: bytes, content_type: str) -> tuple[str, bytes]:
             continue
         payload = part.get_payload(decode=True)
         files.append((safe_filename(part.get_filename()), payload or b""))
+    return files
+
+
+def _parse_single_file(body: bytes, content_type: str) -> tuple[str, bytes]:
+    """Preserva o contrato dos fluxos legados que aceitam um único anexo."""
+    files = _parse_files(body, content_type)
     if len(files) != 1:
         raise UploadRejected(422, "Envie exatamente um arquivo por requisição.")
     return files[0]
@@ -261,12 +292,13 @@ async def _read_and_validate(scope: Scope, receive: Receive, headers: Headers, u
     if not content_type.lower().startswith("multipart/form-data;"):
         raise UploadRejected(415, "O upload precisa usar multipart/form-data.")
 
-    max_body = upload_policy.max_file_bytes + _CHUNK_OVERHEAD
+    max_total = upload_policy.max_total_file_bytes or upload_policy.max_file_bytes
+    max_body = max_total + _CHUNK_OVERHEAD
     raw_length = headers.get("content-length")
     if raw_length:
         try:
             if int(raw_length) > max_body:
-                raise UploadRejected(413, f"O arquivo excede o limite de {upload_policy.max_file_bytes // 1048576} MB.")
+                raise UploadRejected(413, f"Os arquivos excedem o limite total de {max_total // 1048576} MB.")
         except ValueError:
             raise UploadRejected(400, "Content-Length inválido.") from None
 
@@ -281,16 +313,26 @@ async def _read_and_validate(scope: Scope, receive: Receive, headers: Headers, u
         chunk = message.get("body", b"")
         total += len(chunk)
         if total > max_body:
-            raise UploadRejected(413, f"O arquivo excede o limite de {upload_policy.max_file_bytes // 1048576} MB.")
+            raise UploadRejected(413, f"Os arquivos excedem o limite total de {max_total // 1048576} MB.")
         chunks.append(chunk)
         if not message.get("more_body", False):
             break
 
     body = b"".join(chunks)
-    filename, file_data = _parse_single_file(body, content_type)
-    if len(file_data) > upload_policy.max_file_bytes:
-        raise UploadRejected(413, f"O arquivo excede o limite de {upload_policy.max_file_bytes // 1048576} MB.")
-    validate_file(file_data, filename, upload_policy.kind)
+    files = _parse_files(body, content_type)
+    if len(files) < upload_policy.min_files:
+        raise UploadRejected(422, "Envie ao menos um arquivo por requisição.")
+    if len(files) > upload_policy.max_files:
+        raise UploadRejected(422, f"Envie no máximo {upload_policy.max_files} arquivos por requisição.")
+    if sum(len(file_data) for _, file_data in files) > max_total:
+        raise UploadRejected(413, f"Os arquivos excedem o limite total de {max_total // 1048576} MB.")
+    for filename, file_data in files:
+        if len(file_data) > upload_policy.max_file_bytes:
+            raise UploadRejected(
+                413,
+                f"Cada arquivo precisa ter no máximo {upload_policy.max_file_bytes // 1048576} MB.",
+            )
+        validate_file(file_data, filename, upload_policy.kind)
 
     delivered = False
 

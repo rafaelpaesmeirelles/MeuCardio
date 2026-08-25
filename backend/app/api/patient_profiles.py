@@ -1086,7 +1086,7 @@ def gerar_sugestao_ecg(
     start, end = _operational_day_utc_bounds()
     used = db.query(AuditLog.id).filter(
         AuditLog.user_id == user_id,
-        AuditLog.action == "ai_ecg_transfer_attempt",
+        AuditLog.action.in_(("ai_ecg_transfer_attempt", "ai_clinical_exam_transfer_attempt")),
         AuditLog.created_at >= start,
         AuditLog.created_at < end,
     ).count()

@@ -24,6 +24,8 @@ tzdata==2024.2
 # Decodificação estrutural de JPEG/PNG/WEBP nos uploads. Dependência direta,
 # em vez de depender acidentalmente da versão transitiva do ReportLab.
 pillow==12.3.0
+# Rasterização de PDFs clínicos para remover metadados, anotações e conteúdo oculto.
+pymupdf==1.26.7
 # Geração de PDF de todos os documentos do sistema (receita, atestado, laudo).
 # Mantida na linha 4.x: 4.4.10 declara suporte a Python 3.14 e elimina o uso
 # legado de ast.NameConstant, sem assumir as mudanças incompatíveis da versão 5.
