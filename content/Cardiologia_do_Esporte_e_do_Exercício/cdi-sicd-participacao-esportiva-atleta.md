@@ -5,10 +5,12 @@ theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
 fonte_producao: chatgpt
+review_note: "NIGHT-B22 (25/08/2026): identificada e acrescentada a fonte primária da subanálise do ICD Sports Registry sobre programação e choques, citada no corpo sem PMID rastreável — Olshansky B et al., Heart Rhythm 2019;16(4):581-587, PMID 30389442, confirmado via PubMed E-utilities com abstract completo (números batendo: 440 atletas, limiar alto reduz choques totais p=0,01 e inapropriados p=0,04, zero morte por arritmia relacionada a choque). Produção científica assistida; pendente de revisão independente e validação médica final."
 source_refs:
   - "Lampert R et al. Circulation. 2013;127:2021-2030. PMID: 23690453. DOI: 10.1161/CIRCULATIONAHA.112.000447"
   - "Gasperetti A et al. Heart Rhythm. 2025;22. PMID: 39307379. DOI: 10.1016/j.hrthm.2024.09.039"
   - "Kim JH et al. Circulation. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297"
+  - "Olshansky B, Atteya G, Cannom D, et al. Competitive athletes with implantable cardioverter-defibrillators—How to program? Data from the Implantable Cardioverter-Defibrillator Sports Registry. Heart Rhythm. 2019;16(4):581-587. PMID: 30389442. DOI: 10.1016/j.hrthm.2018.10.032"
 legacy_source: "Produção científica Grupo B — ChatGPT"
 ---
 
@@ -112,3 +114,4 @@ A decisão compartilhada **não significa ausência de contraindicações**. Sig
 - Lampert R, Olshansky B, Heidbuchel H, et al. Safety of sports for athletes with implantable cardioverter-defibrillators: results of a prospective, multinational registry. *Circulation*. 2013;127:2021-2030. PMID: 23690453. DOI: 10.1161/CIRCULATIONAHA.112.000447.
 - Gasperetti A, et al. Long-term performance of subcutaneous implantable defibrillators in athletes: a multicenter, real-world analysis of sport activities from the iSUSI registry. *Heart Rhythm*. 2025. PMID: 39307379. DOI: 10.1016/j.hrthm.2024.09.039.
 - Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. *Circulation*. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297.
+- Olshansky B, Atteya G, Cannom D, et al. Competitive athletes with implantable cardioverter-defibrillators—How to program? Data from the Implantable Cardioverter-Defibrillator Sports Registry. *Heart Rhythm*. 2019;16(4):581-587. PMID: 30389442. DOI: 10.1016/j.hrthm.2018.10.032.

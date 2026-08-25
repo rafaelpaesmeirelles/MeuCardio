@@ -4,7 +4,8 @@ slug: dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:36285872", "PMID:29463609", "PMID:32300931", "PMID:40162942"]
+review_note: "NIGHT-B22 (25/08/2026): identificada e acrescentada a fonte primária do 'estudo de registro em Copenhague' sobre acessibilidade de DEA, citado no corpo sem PMID rastreável — Karlsson L et al., Resuscitation 2019;136:30-37, PMID 30682401, confirmado via PubMed E-utilities com abstract completo (2.500 PCEH em Copenhague; desfibrilação por testemunha 13,8% vs. 4,8% e sobrevida em 30 dias 28,8% vs. 16,4%, DEA acessível vs. inacessível — batendo com a prosa do documento). Produção científica assistida; pendente de revisão independente e validação médica final."
+source_refs: ["PMID:36285872", "PMID:29463609", "PMID:32300931", "PMID:40162942", "PMID:30682401"]
 legacy_source: "Eur J Prev Cardiol 2023; Heart 2018; J Cardiovasc Transl Res 2020; JACC 2025"
 ---
 
@@ -112,3 +113,4 @@ O DEA é parte de um sistema. Um aparelho guardado, trancado ou sem pessoas trei
 - Outcomes after sudden cardiac arrest in sports centres with and without on-site external defibrillators. Heart. 2018. PMID 29463609. DOI 10.1136/heartjnl-2017-312441.
 - Pelto HF, Drezner JA. Design and Implementation of an Emergency Action Plan for Sudden Cardiac Arrest in Sport. J Cardiovasc Transl Res. 2020. PMID 32300931. DOI 10.1007/s12265-020-09988-1.
 - Petek BJ et al. Survival Outcomes After Sudden Cardiac Arrest in Young Competitive Athletes From the United States. JACC. 2025. PMID 40162942. DOI 10.1016/j.jacc.2025.03.006.
+- Karlsson L, Malta Hansen C, Wissenberg M, et al. Automated external defibrillator accessibility is crucial for bystander defibrillation and survival: A registry-based study. Resuscitation. 2019;136:30-37. PMID 30682401. DOI 10.1016/j.resuscitation.2019.01.014.

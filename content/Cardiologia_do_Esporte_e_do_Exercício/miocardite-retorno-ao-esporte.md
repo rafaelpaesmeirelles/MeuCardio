@@ -4,6 +4,7 @@ slug: miocardite-retorno-ao-esporte
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
+review_note: "NIGHT-B22 (25/08/2026): corrigida atribuição de autor/periódico/ano da referência 3 (PMID 32367345) na seção 'Referências verificadas' — o texto dizia 'Phelan D... Heart Lung Circ. 2020', quando o autor real é Patriki D, publicado em J Cardiovasc Transl Res. 2021;14(4):670-673 (confirmado via PubMed E-utilities esummary/efetch). O PMID, o título e o conteúdo já descritos no corpo do texto estavam corretos — só a citação estava com autoria/periódico errados. Produção científica assistida; pendente de revisão independente e validação médica final."
 source_refs: ["PMID:39973614", "DOI:10.1161/CIR.0000000000001297", "PMID:42061508", "DOI:10.1016/j.repc.2026.02.006", "PMID:32367345"]
 legacy_source: "AHA/ACC 2025; revisão 2026; estudo prospectivo piloto"
 ---
@@ -84,4 +85,4 @@ Retorno ao esporte após miocardite não é uma decisão por calendário. O pont
 
 1. Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151(11):e716-e761. PMID 39973614. DOI 10.1161/CIR.0000000000001297.
 2. Dores H, et al. Myocarditis in athletes: Challenges for return to play. Rev Port Cardiol. 2026;45(6):307-317. PMID 42061508. DOI 10.1016/j.repc.2026.02.006.
-3. Phelan D, et al. A Prospective Pilot Study to Identify a Myocarditis Cohort who may Safely Resume Sports Activities 3 Months after Diagnosis. Heart Lung Circ. 2020. PMID 32367345.
+3. Patriki D, et al. A Prospective Pilot Study to Identify a Myocarditis Cohort who may Safely Resume Sports Activities 3 Months after Diagnosis. J Cardiovasc Transl Res. 2021;14(4):670-673. PMID 32367345. DOI 10.1007/s12265-020-09983-6.
