@@ -3265,7 +3265,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica"
+    ]
   },
   {
     "slug": "atresia-tricuspide",
@@ -3621,7 +3624,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico"
+    ]
   },
   {
     "slug": "dor-toracica-pediatrica",
@@ -3649,7 +3655,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
+    ]
   },
   {
     "slug": "arritmias-pediatricas",
@@ -3834,7 +3843,10 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "tumores-cardiacos-fetais-rabdomioma-e-diagnostico-diferencial-de-massa-cardiaca-intrautero"
+    ]
   },
   {
     "slug": "hidropisia-fetal-cardiovascular",
