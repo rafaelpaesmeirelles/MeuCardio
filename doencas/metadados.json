@@ -871,7 +871,8 @@
     "version": 1,
     "related_document_slugs": [
       "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias"
-    ]
+    ],
+    "patient_material_slug": "sincope-pediatrica"
   },
   {
     "slug": "comunicacao-interventricular",
@@ -1133,7 +1134,8 @@
       "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
       "fluxograma-d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
       "isquemia-coronaria-aguda-apos-switch-arterial"
-    ]
+    ],
+    "patient_material_slug": "transposicao-das-grandes-arterias"
   },
   {
     "slug": "taquicardia-supraventricular-fetal",
@@ -1195,7 +1197,8 @@
     "version": 1,
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
-    ]
+    ],
+    "patient_material_slug": "taquicardia-supraventricular-fetal"
   },
   {
     "slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
@@ -1255,7 +1258,8 @@
     "version": 1,
     "related_document_slugs": [
       "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
-    ]
+    ],
+    "patient_material_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal"
   },
   {
     "slug": "polifarmacia-e-desprecricao-cardiovascular",
@@ -3136,7 +3140,8 @@
     "version": 1,
     "related_document_slugs": [
       "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico"
-    ]
+    ],
+    "patient_material_slug": "defeito-septo-atrioventricular"
   },
   {
     "slug": "estenose-pulmonar-congenita",
@@ -3237,7 +3242,8 @@
       "retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
       "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
       "fluxograma-retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato"
-    ]
+    ],
+    "patient_material_slug": "retorno-venoso-pulmonar-anomalo"
   },
   {
     "slug": "atresia-pulmonar",
@@ -3269,7 +3275,8 @@
     "version": 1,
     "related_document_slugs": [
       "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica"
-    ]
+    ],
+    "patient_material_slug": "atresia-pulmonar"
   },
   {
     "slug": "atresia-tricuspide",
@@ -3301,7 +3308,8 @@
     "version": 1,
     "related_document_slugs": [
       "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes"
-    ]
+    ],
+    "patient_material_slug": "atresia-tricuspide"
   },
   {
     "slug": "tronco-arterial-comum",
@@ -3333,7 +3341,8 @@
     "version": 1,
     "related_document_slugs": [
       "tronco-arterial-comum-classificacao-associacao-com-22q11-e-desfechos-cirurgicos-contemporaneos"
-    ]
+    ],
+    "patient_material_slug": "tronco-arterial-comum"
   },
   {
     "slug": "anomalia-ebstein",
@@ -3400,7 +3409,8 @@
       "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
       "descompensacao-aguda-da-circulacao-de-fontan",
       "fluxograma-descompensacao-aguda-da-circulacao-de-fontan"
-    ]
+    ],
+    "patient_material_slug": "fisiologia-ventriculo-unico"
   },
   {
     "slug": "canalopatias-pediatricas",
@@ -3469,7 +3479,8 @@
       "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
       "cardiomiopatia-nao-compactada-do-ventriculo-esquerdo-na-crianca-criterios-diagnosticos-genetica-e-desfechos",
       "cardiomiopatia-associada-a-distrofia-muscular-de-duchenne-e-a-terapia-celular-deramiocel-hope-2-e-hope-3"
-    ]
+    ],
+    "patient_material_slug": "cardiomiopatias-pediatricas"
   },
   {
     "slug": "febre-reumatica-cardite",
@@ -3532,7 +3543,8 @@
     "version": 1,
     "related_document_slugs": [
       "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento"
-    ]
+    ],
+    "patient_material_slug": "endocardite-pediatrica"
   },
   {
     "slug": "hipertensao-pulmonar-pediatrica",
@@ -3565,7 +3577,8 @@
       "hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade",
       "crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
       "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd"
-    ]
+    ],
+    "patient_material_slug": "hipertensao-pulmonar-pediatrica"
   },
   {
     "slug": "dislipidemias-pediatricas",
@@ -3628,7 +3641,8 @@
     "version": 1,
     "related_document_slugs": [
       "sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico"
-    ]
+    ],
+    "patient_material_slug": "sopros-na-infancia"
   },
   {
     "slug": "dor-toracica-pediatrica",
@@ -3659,7 +3673,8 @@
     "version": 1,
     "related_document_slugs": [
       "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
-    ]
+    ],
+    "patient_material_slug": "dor-toracica-pediatrica"
   },
   {
     "slug": "arritmias-pediatricas",
@@ -3693,7 +3708,8 @@
       "bradicardia-pediatrica-com-pulso-aha-aap-2025",
       "taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
       "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico"
-    ]
+    ],
+    "patient_material_slug": "arritmias-pediatricas"
   },
   {
     "slug": "indicacoes-ecocardiograma-fetal",
@@ -3724,7 +3740,8 @@
     "version": 1,
     "related_document_slugs": [
       "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
-    ]
+    ],
+    "patient_material_slug": "indicacoes-ecocardiograma-fetal"
   },
   {
     "slug": "bloqueio-atrioventricular-fetal",
@@ -3788,7 +3805,8 @@
     "version": 1,
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
-    ]
+    ],
+    "patient_material_slug": "flutter-atrial-fetal"
   },
   {
     "slug": "extrassistoles-fetais",
@@ -3819,7 +3837,8 @@
     "version": 1,
     "related_document_slugs": [
       "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
-    ]
+    ],
+    "patient_material_slug": "extrassistoles-fetais"
   },
   {
     "slug": "tumores-cardiacos-fetais",
@@ -3850,7 +3869,8 @@
     "version": 1,
     "related_document_slugs": [
       "tumores-cardiacos-fetais-rabdomioma-e-diagnostico-diferencial-de-massa-cardiaca-intrautero"
-    ]
+    ],
+    "patient_material_slug": "tumores-cardiacos-fetais"
   },
   {
     "slug": "hidropisia-fetal-cardiovascular",
@@ -3882,7 +3902,8 @@
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
       "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
-    ]
+    ],
+    "patient_material_slug": "hidropisia-fetal-cardiovascular"
   },
   {
     "slug": "coarctacao-aorta-fetal",
@@ -3913,7 +3934,8 @@
     "version": 1,
     "related_document_slugs": [
       "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual"
-    ]
+    ],
+    "patient_material_slug": "coarctacao-aorta-fetal"
   },
   {
     "slug": "tetralogia-fallot-fetal",
@@ -3944,7 +3966,8 @@
     "version": 1,
     "related_document_slugs": [
       "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica"
-    ]
+    ],
+    "patient_material_slug": "tetralogia-fallot-fetal"
   },
   {
     "slug": "transposicao-grandes-arterias-fetal",
@@ -3975,7 +3998,8 @@
     "version": 1,
     "related_document_slugs": [
       "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato"
-    ]
+    ],
+    "patient_material_slug": "transposicao-grandes-arterias-fetal"
   },
   {
     "slug": "retorno-venoso-pulmonar-anomalo-fetal",
@@ -4006,7 +4030,8 @@
     "version": 1,
     "related_document_slugs": [
       "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos"
-    ]
+    ],
+    "patient_material_slug": "retorno-venoso-pulmonar-anomalo-fetal"
   },
   {
     "slug": "planejamento-parto-cardiopatia-fetal",
@@ -4037,7 +4062,8 @@
     "version": 1,
     "related_document_slugs": [
       "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento"
-    ]
+    ],
+    "patient_material_slug": "planejamento-parto-cardiopatia-fetal"
   },
   {
     "slug": "avaliacao-multidimensional-cardiogeriatrica",
