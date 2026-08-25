@@ -9685,5 +9685,56 @@
       "morte súbita",
       "cardiologia do esporte"
     ]
+  },
+  {
+    "slug": "tcpe-no-atleta-avaliacao-funcional",
+    "name": "Teste cardiopulmonar de exercício (TCPE) no atleta",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "Resposta cardiovascular, ventilatória e metabólica integrada durante esforço progressivo — consumo de oxigênio no pico, limiares ventilatórios, relação entre ventilação e produção de CO₂ (VE/VCO₂), pulso de oxigênio, resposta cronotrópica, comportamento da pressão arterial, saturação periférica e eventual arritmia/sintoma induzido pelo esforço.",
+    "reference_range": "Não existe valor de referência único aplicável a todo atleta — a interpretação depende de modalidade, nível de treinamento, sexo, tamanho corporal e demanda específica do esporte praticado. Valores populacionais gerais podem classificar erroneamente como anormal um achado que é fisiológico para aquele atleta específico, e vice-versa.",
+    "indications": "Dispneia ou fadiga sem explicação clara; queda de desempenho em atleta previamente estável; diferenciação entre limitação cardiovascular, ventilatória e descondicionamento; avaliação funcional em cardiopatia conhecida; acompanhamento após miocardite ou outra doença cardiovascular; definição objetiva de resposta a tratamento; prescrição individualizada de exercício; integração com ecocardiografia de exercício ou outras modalidades funcionais em casos selecionados.",
+    "interpretation": "A interpretação clínica nunca deve depender de um único número — a leitura correta integra a trajetória de múltiplas variáveis ao longo do esforço, coerência entre elas e correlação com a modalidade esportiva. Estudo de rastreamento em atletas de elite antes dos Jogos Europeus de 2023 e Jogos Olímpicos de 2024 mostrou que a classificação esportiva baseada apenas em adaptação morfológica não captura integralmente a heterogeneidade funcional observada no TCPE — ou seja, dois atletas com coração morfologicamente parecido podem ter perfis funcionais bem distintos. Em esportes de endurance, consumo de oxigênio muito elevado é esperado; em esportes de força/potência, o padrão funcional costuma ser diferente, sem que isso represente doença.",
+    "limitations": "Exige equipe treinada em interpretação de TCPE especificamente em população atlética — a extrapolação direta de tabelas de referência populacionais gerais é uma fonte comum de erro de interpretação, tanto por falso-positivo (classificar como anormal um achado fisiológico do atleta muito treinado) quanto por falso-negativo (não captar limitação real por o valor absoluto ainda estar dentro da faixa 'normal' geral, mas abaixo do esperado para aquele atleta específico).",
+    "source_refs": [
+      "Squeo MR, et al. J Clin Med. 2025. PMID: 40649028 — rastreamento cardiopulmonar de atletas de elite antes dos Jogos Europeus de 2023 e Jogos Olímpicos de 2024.",
+      "EAPC/EACVI 2026. PMID: 42332973.",
+      "Kim JH, et al. Circulation. 2025;151(11):e716-e761. PMID: 39973614 (AHA/ACC 2025)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "TCPE",
+      "teste cardiopulmonar de exercício",
+      "atleta",
+      "VO2 pico",
+      "avaliação funcional"
+    ]
+  },
+  {
+    "slug": "troponina-apos-exercicio-intenso-no-atleta",
+    "name": "Troponina cardíaca após exercício intenso no atleta",
+    "category": "laboratorial",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "what_it_measures": "Troponina cardíaca de alta sensibilidade (hs-cTnI ou hs-cTnT), biomarcador de lesão miocárdica, dosado no contexto de exercício de endurance (maratona, ultramaratona, triatlo, ciclismo de longa distância) — situação em que a elevação transitória é fisiológica na maioria dos casos, não necessariamente síndrome coronariana aguda.",
+    "reference_range": "O mesmo limite superior de referência (percentil 99) usado fora do contexto esportivo — não existe um corte específico validado para 'troponina pós-exercício'. O que muda é a frequência esperada de elevação acima desse corte nesse contexto: uma meta-análise de 2026 (129 estudos, 7.289 atletas) encontrou 36% (IC95% 31-42%) de atletas com troponina acima do limite superior de referência após exercício, com pico entre 3 e 6 horas pós-esforço (52% de prevalência nessa janela) e maior frequência com ensaios de alta sensibilidade (58% vs. 26%) e com dosagem de cTnT (45% vs. 30%).",
+    "indications": "Atleta que chega ao pronto atendimento após maratona, ultramaratona ou esforço extremo com quadro sugestivo de possível síndrome coronariana aguda — dor torácica, alteração eletrocardiográfica, instabilidade hemodinâmica. Não tem papel estabelecido como rastreamento de rotina em atleta assintomático após treino ou competição.",
+    "interpretation": "Ultrapassar o percentil 99 após exercício intenso não é raro e não deve ser automaticamente equiparado a síndrome coronariana aguda — o resultado deve ser interpretado em conjunto com sintomas, ECG, dinâmica seriada, contexto hemodinâmico e probabilidade pré-teste de doença cardiovascular. Esportes de endurance — triatlo (49%), ciclismo (40%) e corrida (41%) — têm as maiores prevalências de elevação nessa meta-análise; sexo e nível de treinamento não se associaram à elevação. Estudo comparando a composição da cTnT em corredores pós-maratona e pacientes com IAM tipo 1 mostrou proporção muito menor de formas longas/intactas da molécula nos corredores, reforçando que a liberação pós-exercício tem características biológicas distintas da necrose miocárdica típica do infarto tipo 1.",
+    "limitations": "Dosagem de rotina em atleta assintomático não tem papel estabelecido como estratégia de rastreamento cardiovascular — a alta frequência de elevação transitória fisiológica cria risco real de investigação excessiva (angiografia, internação) quando não existe pergunta clínica adequada por trás do pedido do exame.",
+    "source_refs": [
+      "Stekelenburg JO, Berge K, Janssen SLJE, et al. Prevalence and Predictors of Cardiac Troponin Elevations Following Exercise: a Systematic Review, Meta-analysis, and Meta-regression. Eur J Prev Cardiol. 2026 Apr 15:zwag218. PMID: 41985028.",
+      "Dong X, et al. J Back Musculoskelet Rehabil. 2023;36:1023-1031. PMID: 37248881.",
+      "Airaksinen KEJ, et al. Composition of cardiac troponin release differs after marathon running and myocardial infarction. Open Heart. 2024. PMID: 39551608."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "hs-cTnI",
+      "hs-cTnT",
+      "atleta",
+      "maratona",
+      "lesão miocárdica induzida por exercício"
+    ]
   }
 ]
