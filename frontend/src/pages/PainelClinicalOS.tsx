@@ -46,6 +46,7 @@ type ModuloItem = { to: string; label: string; icon: NomeIcone; adminOnly?: bool
 type ModuloGrupo = { title: string; tone: "cyan" | "violet" | "blue" | "amber" | "teal" | "slate"; icon: NomeIcone; items: ModuloItem[] };
 
 const ACOES: AcaoRapida[] = [
+  { to: "/busca?modo=tudo-com-tudo", titulo: "Tudo com Tudo", detalhe: "Tema completo, organizado por áreas", icone: "busca", tone: "violet" },
   { to: "/exames-ia", titulo: "IA para Exames", detalhe: "Análise cardiovascular multimodal", icone: "ecg", tone: "green", featured: true },
   { to: "/receituario", titulo: "Prescrever", detalhe: "Novo receituário", icone: "prescricao", tone: "cyan" },
   { to: "/documentos", titulo: "Solicitar exames", detalhe: "Adicionar solicitação", icone: "clinica", tone: "blue" },
@@ -101,6 +102,7 @@ const MODULOS: ModuloGrupo[] = [
   },
   {
     title: "Ferramentas & Produtividade", tone: "amber", icon: "calculadora", items: [
+      { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca" },
       { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
       { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
