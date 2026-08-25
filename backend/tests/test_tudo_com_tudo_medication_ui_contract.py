@@ -23,6 +23,7 @@ def test_painel_chama_rota_contextual_do_medicamento_e_separa_grupos():
     assert 'resposta.grupos.filter((g) => g.itens.length > 0)' in fonte
     assert "grupos.map((g)" in fonte
     assert "resposta.temas.map" in fonte
+    assert "let ativo = true" in fonte and "if (ativo) setResposta(dados)" in fonte
 
 
 def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
@@ -30,6 +31,7 @@ def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
 
     assert "/drugs?q=" in fonte
     assert "/drug-insights/" in fonte
+    assert "brand_names?.some" in fonte
     assert '["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca"' in fonte
     assert '["Estudos", "Literatura original e trabalhos científicos", "/estudos"' in fonte
     assert '["Evidências", "Recomendações e níveis de evidência", "/evidencias"' in fonte
@@ -56,4 +58,6 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
     assert "Tudo sobre ${assunto}" in fonte
     assert "/relacionados?tema=" in fonte
     assert ".find((x) => norm(x) === n)" in fonte
+    assert "if (!medicamentoForte)" in fonte
+    assert "new Set(itens.map" in fonte
     assert "temasUnicos.length === 1" not in fonte
