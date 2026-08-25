@@ -61,7 +61,7 @@ No cenário pós-operatório imediato, Meziab et al. mostraram que a presença d
 
 ## Diagnóstico: Holter e teste de esforço
 
-A disfunção do nó sinusal é, por definição, um diagnóstico de **correlação entre ritmo e sintoma** ao longo do tempo, e não um achado pontual de ECG de repouso — por isso o Holter de 24 horas (ou monitorização ambulatorial prolongada) e o teste de esforço têm papel central:
+A disfunção do nó sinusal compreende um **espectro eletrofisiológico** — bradicardia inadequada para a idade, pausas sinusais, ritmo de escape juncional e/ou incompetência cronotrópica — que pode ser documentado mesmo em uma criança assintomática, sobretudo na vigilância pós-operatória. A correlação temporal entre ritmo e sintoma é decisiva para atribuir manifestações clínicas à bradicardia e para indicar marca-passo, mas **não é requisito para reconhecer e acompanhar a anormalidade do nó sinusal**. Como um ECG de repouso pontual pode não registrar o fenômeno, Holter (ou monitorização ambulatorial prolongada) e teste de esforço têm papel central:
 
 - **Holter**: documenta a frequência cardíaca mínima e média ao longo do dia, pausas sinusais, e a substituição do ritmo sinusal por ritmo de escape juncional — os achados que, segundo a definição operacional usada por Meziab et al., caracterizam a disfunção "absoluta" (bradicardia para a idade ou ritmo juncional <100 bpm).
 - **Teste de esforço**: avalia a **incompetência cronotrópica** — a incapacidade de elevar adequadamente a frequência cardíaca ao esforço —, um dos componentes do espectro da disfunção do nó sinusal explicitamente listado por Pinsker et al. junto com bradicardia sinusal, ritmo juncional e pausas sinusais.
