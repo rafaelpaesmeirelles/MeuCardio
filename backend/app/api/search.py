@@ -31,14 +31,15 @@ router = APIRouter(prefix="/api/search", tags=["busca"])
 SQL = text("""
 WITH achados AS (
   SELECT 'documento' AS frente, slug, title, kind, theme, source_tier,
+         NULL::integer AS ano,
          coalesce(summary, left(body_md, 800)) AS corpo, search_vector AS v
   FROM documents WHERE published = true
   UNION ALL
-  SELECT 'galeria', slug, title, modality, theme, NULL,
+  SELECT 'galeria', slug, title, modality, theme, NULL, NULL::integer,
          coalesce(findings, ''), search_vector
   FROM gallery_images WHERE published = true
   UNION ALL
-  SELECT 'exame', slug, name, category, theme, NULL,
+  SELECT 'exame', slug, name, category, theme, NULL, NULL::integer,
          coalesce(what_it_measures, '') || ' ' || coalesce(interpretation, ''),
          search_vector
   FROM lab_tests WHERE published = true
@@ -47,19 +48,20 @@ WITH achados AS (
   -- título nesta frente. Está declarado aqui para não parecer descuido.
   SELECT 'evidencia', slug, left(statement, 120),
          'Classe ' || recommendation_class || ' · nível ' || evidence_level,
-         theme, NULL, statement, search_vector
+         theme, NULL, year, statement, search_vector
   FROM evidence_records WHERE published = true
   UNION ALL
   SELECT 'estudo', slug, title, study_type, theme, NULL,
-         coalesce(summary, '') || ' ' || coalesce(key_findings, ''), search_vector
+         year, coalesce(summary, '') || ' ' || coalesce(key_findings, ''), search_vector
   FROM scientific_studies WHERE published = true
 )
-SELECT frente, slug, title, kind, theme, source_tier,
+SELECT frente, slug, title, kind, theme, source_tier, ano,
        ts_headline('portuguese', corpo, plainto_tsquery('portuguese', :q),
                    'StartSel=<mark>,StopSel=</mark>,MaxFragments=2,FragmentDelimiter= … ') AS snippet,
        ts_rank(v, plainto_tsquery('portuguese', :q)) AS rank
 FROM achados
 WHERE v @@ plainto_tsquery('portuguese', :q)
+  AND (CAST(:frente AS varchar) IS NULL OR frente = CAST(:frente AS varchar))
 ORDER BY rank DESC
 LIMIT :limit
 """)
@@ -70,13 +72,16 @@ def search(
     q: str = Query(..., min_length=2),
     frente: str | None = Query(
         None, description="documento|galeria|exame|evidencia|estudo — vazio traz todas"),
-    limit: int = Query(25, le=100),
+    limit: int = Query(60, ge=1, le=100),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
-    rows = [dict(r) for r in db.execute(SQL, {"q": q, "limit": limit}).mappings().all()]
-    if frente:
-        rows = [r for r in rows if r["frente"] == frente]
+    rows = [
+        dict(r)
+        for r in db.execute(
+            SQL, {"q": q, "frente": frente, "limit": limit}
+        ).mappings().all()
+    ]
     # Contagem por frente serve à interface: dizer "3 evidências, 1 estudo"
     # antes de o usuário rolar a lista é o que torna a busca ampliada útil, em
     # vez de apenas mais longa.
