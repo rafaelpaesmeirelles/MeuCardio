@@ -4678,7 +4678,11 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "toxicidade-cardiovascular-dos-inibidores-de-braf-e-mek-disfuncao-ventricular-hipertensao-e-vigilancia"
+    ],
+    "patient_material_slug": "cardiotoxicidade-raf-mek"
   },
   {
     "slug": "fluoropirimidinas-isquemia",
