@@ -119,13 +119,12 @@ A própria AHA 2025 declara que não há RCTs do tratamento farmacológico agudo
 
 - **Arritmias:** `fluxograma-torsades-de-pointes-e-qt-longo-adquirido`, TV/FV, tempestade elétrica, síndromes de QT longo.
 - **Farmacologia:** `sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa`, sotalol, ibutilida, metadona e outros fármacos pró-QT.
-- **Eletrólitos:** hipocalemia, hipomagnesemia, hipocalcemia; a ausência de um módulo canônico dedicado à hipomagnesemia continua sendo uma lacuna.
+- **Eletrólitos:** hipocalemia, hipomagnesemia e hipocalcemia; conectar a `hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao`.
 - **Toxicologia:** intoxicação digitálica deve ser distinguida, pois pode produzir TV bidirecional/polimórfica por mecanismo diferente.
 - **Populações especiais:** cardio-oncologia (fármacos pró-QT), doença renal, geriatria/polifarmácia e QT longo congênito.
 
 ## Pendências deliberadas para lote separado
 
-1. Criar módulo canônico de **hipomagnesemia** (causas, perdas renais/GI, refratariedade da hipocalemia, arritmias e reposição segura), sem duplicar o verbete farmacológico de MgSO4.
-2. Revisar o verbete de sulfato de magnésio para deixar explícito que “primeira linha farmacológica” nunca deve atrasar desfibrilação de TV polimórfica sustentada.
-3. Criar/normalizar itens canônicos de exame **potássio** e **magnésio** sem editar o manifesto monolítico de forma insegura.
-4. Auditar outros fluxos que tratem “TV polimórfica” como cardioversão sincronizada ou “qualquer TV polimórfica” como indicação de magnésio.
+1. Manter o módulo canônico de hipomagnesemia conectado ao verbete farmacológico de MgSO4, sem misturar investigação etiológica com prescrição parenteral.
+2. Manter a prioridade do choque explícita em qualquer atualização do verbete de sulfato de magnésio.
+3. Auditoria textual do corpus concluída em 25/08/2026: não restou orientação ativa de cardioversão sincronizada para TV polimórfica sustentada nem indicação rotineira de magnésio para TV polimórfica com QT normal.

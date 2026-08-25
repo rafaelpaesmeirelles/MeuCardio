@@ -96,6 +96,7 @@ Estratos originais: baixo 0-6, moderado 7-10, alto 11-21. O escore não deve ser
 
 - `torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo`
 - `sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa`
+- `hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao`
 - fármacos pró-QT (sotalol, ibutilida, metadona, antipsicóticos, antieméticos e outros)
 - hipocalemia/hipomagnesemia/hipocalcemia
 - isquemia miocárdica/ACS quando TV polimórfica ocorre sem QT longo
@@ -103,7 +104,5 @@ Estratos originais: baixo 0-6, moderado 7-10, alto 11-21. O escore não deve ser
 
 ## Pendências para os próximos lotes
 
-1. Auditar o verbete de sulfato de magnésio para alinhar a frase “primeira linha farmacológica” à prioridade do choque na TV polimórfica sustentada.
-2. Criar módulo de hipomagnesemia e sua relação com hipocalemia refratária, diuréticos, digoxina e risco arrítmico.
-3. Procurar outras ocorrências no corpus de “TV polimórfica → cardioversão sincronizada” e de “magnésio para qualquer TV polimórfica”.
-4. Normalizar exames canônicos de potássio e magnésio em lote seguro, sem edição cega do manifesto monolítico.
+1. Manter o verbete farmacológico alinhado à prioridade do choque na TV polimórfica sustentada.
+2. Auditoria textual do corpus concluída em 25/08/2026: não restou orientação ativa de cardioversão sincronizada para TV polimórfica sustentada nem indicação rotineira de magnésio para TV polimórfica com QT normal.

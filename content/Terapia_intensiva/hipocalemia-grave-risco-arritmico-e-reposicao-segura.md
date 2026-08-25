@@ -125,4 +125,4 @@ Não há base para transformar uma faixa de potássio observacionalmente associa
 
 **Exames:** potássio, magnésio, creatinina/eGFR, glicemia, ECG e, conforme hipótese etiológica, avaliação urinária/endócrina.
 
-**PENDÊNCIA ESTRUTURAL:** o corpus ainda precisa de um item canônico de exame `potássio sérico` e de uma conexão explícita no grafo entre hipocalemia ↔ hipomagnesemia ↔ QT longo/digoxina. Isso fica deliberadamente para lote separado para evitar ampliar o escopo desta mudança.
+**CONEXÃO ESTRUTURAL:** usar o módulo `hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao` para integrar hipocalemia refratária, QT longo/TdP, digoxina, perdas renais/GI e função renal. Os itens canônicos de exame potássio/magnésio devem permanecer separados das ordens de reposição.
