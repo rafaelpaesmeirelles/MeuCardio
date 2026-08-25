@@ -3261,25 +3261,40 @@
     ],
     "rules": [
       {
-        "id": "isquemia-aguda",
+        "id": "isquemia-aguda-inicio-subito",
         "priority": 100,
         "when": {
-          "any": [
+          "all": [
             {
               "field": "sudden_onset",
               "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Padrão compatível com isquemia aguda de membro — janela de salvamento depende do tempo até revascularização"
+          ],
+          "emergency_flow": [
+            "Acionar atendimento vascular de urgência sem aguardar exame de imagem extenso quando houver perda sensitiva/motora associada",
+            "Classificar por Rutherford (I/IIa/IIb/III) para decidir tempo e via de revascularização — classificação e conduta detalhadas no documento de origem",
+            "Não tentar revascularizar membro já com anestesia profunda e rigidez muscular (Rutherford III) sem avaliação vascular — risco de síndrome de reperfusão"
+          ]
+        }
+      },
+      {
+        "id": "isquemia-aguda-deficit-neurovascular",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sensory_or_motor_loss",
+              "op": "truthy"
             },
             {
-              "all": [
-                {
-                  "field": "sensory_or_motor_loss",
-                  "op": "truthy"
-                },
-                {
-                  "field": "pulse_absent",
-                  "op": "truthy"
-                }
-              ]
+              "field": "pulse_absent",
+              "op": "truthy"
             }
           ]
         },
@@ -3333,7 +3348,7 @@
           ]
         },
         "add": {
-          "risk": "alto",
+          "risk": "urgente",
           "red_flags": [
             "Dor isquêmica em repouso ou ferida que não cicatriza — padrão de isquemia crônica com ameaça de perda de membro (CLTI)"
           ],
@@ -3359,7 +3374,7 @@
           ]
         },
         "add": {
-          "risk": "moderado",
+          "risk": "prioritario",
           "supporting": [
             "Padrão clássico de claudicação intermitente de causa vascular — dor previsível ao esforço, aliviada em repouso"
           ],
@@ -3385,7 +3400,7 @@
           ]
         },
         "add": {
-          "risk": "baixo",
+          "risk": "rotina",
           "messages": [
             "Padrão sugestivo de causa não vascular (radicular/coluna, articular, venosa ou musculoesquelética) — não descarta DAP leve associada em paciente de risco, mas reduz a probabilidade pré-teste de claudicação vascular isolada"
           ]
