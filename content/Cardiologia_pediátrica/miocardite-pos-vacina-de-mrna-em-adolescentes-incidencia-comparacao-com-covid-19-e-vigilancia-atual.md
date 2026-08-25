@@ -4,7 +4,8 @@ slug: miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-co
 theme: "Cardiologia pediátrica"
 kind: protocolo
 review_status: revisado
-source_refs: ["Choi Y, Lee JS, Choe YJ, et al. Myocarditis and Pericarditis are Temporally Associated with BNT162b2 COVID-19 Vaccine in Adolescents: A Systematic Review and Meta-analysis. Pediatric Cardiology. 2025;46(8):2193-2206. PMID: 39404761 — abstract completo conferido via efetch/PubMed nesta sessão, todos os números de incidência por milhão citados.", "Kumar C, Akhileshwar, Kumar Neeraj R, et al. Systematic Review and Meta-Analysis of the Incidence of Myocarditis and Guillain-Barré Syndrome in Adolescents Receiving COVID-19 mRNA Vaccine. Cureus. 2025;17(11):e98208. DOI: 10.7759/cureus.98208. PMID: 41488264 — abstract completo conferido via efetch/PubMed nesta sessão; fonte de menor força editorial (Cureus), usada apenas para o dado comparativo Moderna vs. Pfizer, marcado como heterogêneo no próprio abstract (I² > 95%).", "Guo S, Cao C, Qin S, et al. Cardiac Safety Signals Following COVID-19 Vaccination in Children and Adolescents: A Nationwide VAERS Analysis, 2020-2025. Clinical Therapeutics. 2026 Jul 22. DOI: 10.1016/j.clinthera.2026.06.011. PMID: 42486752 — abstract completo conferido via efetch/PubMed nesta sessão; dado de vigilância passiva (VAERS), não estabelece causalidade nem risco absoluto, usado apenas como sinal de farmacovigilância mais recente disponível (até 2025)."]
+review_note: "NIGHT-B03 (2026-08-25): resolvida parcialmente a seção de VERIFICAÇÃO HUMANA NECESSÁRIA — a orientação de retorno ao esporte após miocardite pós-vacinal foi confirmada no texto integral do ACC 2022 Expert Consensus Decision Pathway (PMID 35307156, PMC8926109): evitar atividade extenuante por 3-6 meses, reavaliação com ECG/eco/monitor/RMC em 3-6 meses, manejo análogo ao da miocardite pós-infecção. Os pontos residuais (recuperação 6-12 meses, recorrência com dose subsequente, triagem pré-vacinal) continuam marcados como não verificados. Produção científica assistida; pendente de revisão independente e validação médica final."
+source_refs: ["Gluckman TJ, Bhave NM, Allen LA, et al. 2022 ACC Expert Consensus Decision Pathway on Cardiovascular Sequelae of COVID-19 in Adults: Myocarditis and Other Myocardial Involvement, Post-Acute Sequelae of SARS-CoV-2 Infection, and Return to Play. J Am Coll Cardiol. 2022;79(17):1717-1756. DOI: 10.1016/j.jacc.2022.02.003. PMID: 35307156. PMCID: PMC8926109 — texto integral aberto, lido nesta revisão via PMC. Fonte da conduta de retorno ao exercício (3-6 meses sem atividade extenuante, reavaliação antes da liberação) e do manejo análogo da miocardite vacinal. Nota de aplicabilidade: documento voltado a adultos ('in Adults') — extrapolação para adolescentes declarada; a incidência pediátrica vem das demais fontes deste documento.", "Choi Y, Lee JS, Choe YJ, et al. Myocarditis and Pericarditis are Temporally Associated with BNT162b2 COVID-19 Vaccine in Adolescents: A Systematic Review and Meta-analysis. Pediatric Cardiology. 2025;46(8):2193-2206. PMID: 39404761 — abstract completo conferido via efetch/PubMed nesta sessão, todos os números de incidência por milhão citados.", "Kumar C, Akhileshwar, Kumar Neeraj R, et al. Systematic Review and Meta-Analysis of the Incidence of Myocarditis and Guillain-Barré Syndrome in Adolescents Receiving COVID-19 mRNA Vaccine. Cureus. 2025;17(11):e98208. DOI: 10.7759/cureus.98208. PMID: 41488264 — abstract completo conferido via efetch/PubMed nesta sessão; fonte de menor força editorial (Cureus), usada apenas para o dado comparativo Moderna vs. Pfizer, marcado como heterogêneo no próprio abstract (I² > 95%).", "Guo S, Cao C, Qin S, et al. Cardiac Safety Signals Following COVID-19 Vaccination in Children and Adolescents: A Nationwide VAERS Analysis, 2020-2025. Clinical Therapeutics. 2026 Jul 22. DOI: 10.1016/j.clinthera.2026.06.011. PMID: 42486752 — abstract completo conferido via efetch/PubMed nesta sessão; dado de vigilância passiva (VAERS), não estabelece causalidade nem risco absoluto, usado apenas como sinal de farmacovigilância mais recente disponível (até 2025)."]
 legacy_source: "Documento novo, 10-12/08/2026. Busca no corpus (93 documentos da pasta, incluindo os de MIS-C, miocardite fulminante e cardiotoxicidade por antraciclina) não encontrou nenhum documento sobre miocardite pós-vacinal — lacuna genuína e clinicamente relevante para o cardiologista pediátrico, que participa de decisões de triagem pré-vacinal, interpretação de dor torácica/palpitação pós-vacina e liberação para esporte depois do quadro."
 ---
 
@@ -118,13 +119,25 @@ os números de incidência absoluta de Choi et al., acima.
   necessariamente se aplicam sem ajuste à mRNA-1273 (Moderna), cujo risco relativo aparenta ser
   maior segundo a fonte de Kumar et al.
 
-## Verificação humana necessária
+## Retorno à atividade física após miocardite pós-vacinal
 
-Os três artigos foram lidos pelo abstract indexado no PubMed/efetch nesta sessão. **Dado de
-desfecho de longo prazo específico da miocardite pós-vacinal** (recuperação da função ventricular
-em 6-12 meses, recorrência com dose subsequente, orientação de retorno ao esporte específica para
-este subtipo de miocardite) não foi verificado nesta sessão e não está incluído neste documento —
-`VERIFICAÇÃO HUMANA NECESSÁRIA` antes de usar este documento para orientar retorno à atividade
-física competitiva após miocardite pós-vacinal confirmada. Diretrizes de sociedades específicas
-sobre triagem pré-vacinal em paciente com cardiomiopatia ou miocardite prévia também não foram
-verificadas nesta sessão.
+A orientação formal de sociedade existe e foi conferida em texto integral nesta revisão: o **ACC
+2022 Expert Consensus Decision Pathway on Cardiovascular Sequelae of COVID-19** (Gluckman TJ et
+al., J Am Coll Cardiol 2022;79(17):1717-1756, PMID 35307156, PMCID PMC8926109) determina que a
+miocardite após vacina de mRNA deve ser **diagnosticada, categorizada e tratada de forma análoga à
+miocardite pós-infecção por SARS-CoV-2** (avaliação inicial com ECG, troponina e ecocardiograma;
+consulta com cardiologia e ressonância cardíaca quando a suspeita persiste). Para retorno ao
+exercício, o documento estabelece — para os dois subtipos, sem distinção de cronograma entre
+miocardite vacinal e infecciosa: **evitar atividade física extenuante por 3 a 6 meses**, com
+**reavaliação (por exemplo: ECG, ecocardiograma, monitor de ritmo ambulatorial, ressonância
+cardíaca) 3 a 6 meses após a apresentação** antes da liberação para retomada, decisão que deve ser
+individualizada por cardiologia (ACC 2022, PMC8926109 — texto integral lido nesta revisão).
+
+## Verificação humana necessária (residual)
+
+Os três artigos de incidência foram lidos pelo abstract indexado no PubMed/efetch. Permanecem
+**não verificados nesta revisão**, e fora deste documento: dados quantitativos de recuperação da
+função ventricular em 6-12 meses específicos do subtipo vacinal, taxa de recorrência com dose
+subsequente de vacina, e diretriz de sociedade sobre triagem pré-vacinal em paciente com
+cardiomiopatia ou miocardite prévia — `VERIFICAÇÃO HUMANA NECESSÁRIA` para esses pontos
+específicos antes de citá-los.

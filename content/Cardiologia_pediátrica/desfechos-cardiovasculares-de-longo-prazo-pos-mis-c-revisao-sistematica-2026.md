@@ -4,7 +4,8 @@ slug: desfechos-cardiovasculares-de-longo-prazo-pos-mis-c-revisao-sistematica-20
 theme: "Cardiologia pediátrica"
 kind: protocolo
 review_status: revisado
-source_refs: ["Alvarado-Gamarra G, Alcala-Marcos K, Celis CR, et al. Post-MIS-C cardiovascular outcomes: a systematic review. European Journal of Pediatrics. 2026;185(3). DOI: 10.1007/s00431-026-06798-6. PMID: 41721085 — abstract completo conferido via efetch/PubMed nesta sessão, número por número (número de estudos, n total, marcos temporais de resolução, qualidade da evidência)."]
+review_note: "NIGHT-B03 (2026-08-25): resolvida a ocorrência de VERIFICAÇÃO HUMANA NECESSÁRIA sobre protocolos de seguimento — o texto integral da revisão foi lido via PMC (PMC13107143) e confirma explicitamente que NÃO há protocolo fixo validado ('current recommendations provide no detailed guidance on follow-up length'); dados de prática dos estudos incluídos (69,1% seguem até 6 meses; RMC com edema/fibrose em 10,2% aos 6-9 meses) incorporados com essa moldura. Produção científica assistida; pendente de revisão independente e validação médica final."
+source_refs: ["Alvarado-Gamarra G, Alcala-Marcos K, Celis CR, et al. Post-MIS-C cardiovascular outcomes: a systematic review. European Journal of Pediatrics. 2026;185(3). DOI: 10.1007/s00431-026-06798-6. PMID: 41721085. PMCID: PMC13107143 — abstract conferido via efetch/PubMed e, nesta revisão (NIGHT-B03), texto integral aberto lido via PMC: fonte da constatação explícita de ausência de protocolo de seguimento validado, da distribuição de tempos de seguimento entre os estudos incluídos e dos achados de ressonância no período de 6-12 meses."]
 legacy_source: "Documento novo, 10-12/08/2026. A pasta já tem 'MIS-C com disfunção miocárdica e choque' e o fluxograma correspondente — os dois cobrem o manejo AGUDO/de emergência. Este documento cobre o SEGUIMENTO de longo prazo (6 a 24 meses após o quadro agudo), ângulo distinto e não coberto, confirmado por leitura do documento existente antes de escrever."
 ---
 
@@ -89,12 +90,18 @@ da heterogeneidade de definição de desfecho entre eles e do tempo de seguiment
   diastólica) variam entre os estudos incluídos — a revisão sistematiza, mas não elimina essa
   heterogeneidade de definição na literatura primária.
 
-## Verificação humana necessária
+## O que o texto completo acrescenta — e o que ele explicitamente não fornece
 
-O artigo foi lido pelo abstract indexado no PubMed/efetch nesta sessão. O texto completo pode
-conter, por estudo individual incluído, protocolos específicos de seguimento (intervalo exato de
-reavaliação ecocardiográfica, critérios objetivos de liberação esportiva) que não estão detalhados
-no abstract — `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de adotar um protocolo fixo de seguimento
-(por exemplo, "eco em 6 semanas, 6 meses e 1 ano") a partir só deste documento; consultar o artigo
-completo (Eur J Pediatr. 2026;185(3)) e, quando disponível, diretriz de sociedade (AHA/AAP) com
-recomendação de seguimento graduada por gravidade do quadro agudo.
+O texto integral da revisão foi lido nesta revisão (via PMC, PMC13107143), e a conclusão
+importante é **negativa e explícita**: a própria revisão afirma que *"current recommendations
+provide no detailed guidance on follow-up length or management of these patients"* e que estudos
+de longo prazo ainda são necessários para *"support the development of evidence-based follow-up
+recommendations after MIS-C"* — ou seja, **não existe, nem na literatura primária sistematizada,
+um protocolo fixo validado de seguimento** (por exemplo, "eco em 6 semanas, 6 meses e 1 ano").
+O que o texto completo documenta sobre a prática dos estudos incluídos: 58 estudos (69,1%)
+fizeram seguimento até 6 meses, com a maior parte (40,5%) avaliando especificamente aos 6 meses;
+os estudos com ressonância cardíaca no seguimento identificaram edema e/ou fibrose miocárdica em
+10,2% dos casos no período de 6-9 meses, por vezes persistindo até 12 meses; nenhum critério
+objetivo de liberação esportiva foi extraível dos estudos incluídos. Qualquer protocolo local de
+seguimento deve, portanto, ser assumido como institucional — e diretriz de sociedade (AHA/AAP)
+graduada por gravidade do quadro agudo, quando publicada, deve prevalecer sobre este documento.
