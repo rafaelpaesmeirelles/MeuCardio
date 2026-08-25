@@ -73,6 +73,7 @@ import "./styles/clinical-pixel-polish-conservative.css";
 import "./styles/home-desktop-symmetric-personalizable.css";
 import "./styles/clinical-ecg-featured.css";
 import "./styles/clinical-form-control-contrast.css";
+import "./styles/tudo-com-tudo.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
