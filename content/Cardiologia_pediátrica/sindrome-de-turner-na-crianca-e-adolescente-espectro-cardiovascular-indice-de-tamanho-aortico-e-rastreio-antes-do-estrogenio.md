@@ -84,7 +84,7 @@ A síndrome de Turner tem heterogeneidade fenotípica significativa, e comparaç
 
 (Gravholt CH et al., Eur J Endocrinol 2024, PMID 38748847)
 
-**Nota sobre presença de material do cromossomo Y**: em 10%-12% das pessoas com Turner, um cromossomo Y normal ou estruturalmente anormal pode ser detectado por métodos moleculares mais sensíveis que o cariótipo convencional (FISH, PCR, array-CGH), mesmo quando o cariótipo padrão não o identifica — achado com implicação principalmente gonadal (risco de gonadoblastoma, indicação de gonadectomia), não diretamente cardiovascular na diretriz revisada nesta sessão (Gravholt CH et al., 2024, PMID 38748847).
+**Nota sobre presença de material do cromossomo Y**: o valor de **10%-12%** refere-se à prevalência **total** de cromossomo Y normal ou estruturalmente anormal em pessoas com Turner, detectado pelo conjunto de métodos disponíveis — cariótipo, FISH, PCR ou array-CGH — e inclui grande parte dos casos 45,X/46,XY já representados na tabela. Não é a prevalência de material Y “críptico” adicional após cariótipo convencional negativo. A diretriz recomenda PCR, por ser mais sensível que FISH, em indivíduos 45,X com **sinais de virilização**, e não endossa busca universal de material Y em todas as pessoas 45,X. Quando material Y é identificado, a implicação principal é gonadal e a decisão sobre gonadectomia deve ser individualizada, ponderando risco de gonadoblastoma/dysgerminoma, função gonadal, fertilidade e autonomia (Gravholt CH et al., 2024, PMID 38748847).
 
 ## Dilatação e dissecção da aorta: a arteriopatia própria da síndrome de Turner
 
