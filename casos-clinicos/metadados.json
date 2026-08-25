@@ -16019,5 +16019,49 @@
       "Essebag V, Healey JS, Joza J, Nery PB, Kalfon E, Leiria TLL, Verma A, Ayala-Paredes F, Coutu B, Sumner GL, Becker G, Philippon F, Eikelboom J, Sandhu RK, Sapp J, Leather R, Yung D, Thibault B, Simpson CS, Ahmad K, Toal S, Sturmer M, Kavanagh K, Crystal E, Wells GA, Krahn AD, Birnie DH. Effect of Direct Oral Anticoagulants, Warfarin, and Antiplatelet Agents on Risk of Device Pocket Hematoma: Combined Analysis of BRUISE CONTROL 1 and 2. Circ Arrhythm Electrophysiol. 2019;12(10):e007545. DOI: 10.1161/CIRCEP.119.007545. PMID: 31610718"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-chagasica-atleta-caso",
+    "titulo": "Corredor amador de 42 anos com sorologia positiva para Chagas: pode continuar treinando?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 42 anos, corredor amador (treina 5x/semana, já completou 2 maratonas), nascido em área endêmica de Minas Gerais, descobriu sorologia positiva para Trypanosoma cruzi em doação de sangue. Assintomático. ECG com bloqueio de ramo direito isolado, sem outras alterações. Ecocardiograma com função sistólica de ventrículo esquerdo preservada e sem alteração segmentar. Ele pergunta se pode continuar treinando e competindo.",
+    "pergunta": "Qual a conduta mais apropriada nesta consulta?",
+    "opcoes": [
+      "Liberar sem nenhuma restrição, já que a função ventricular está preservada e ele está assintomático",
+      "Proibir qualquer atividade física até 'cura' da infecção, já que Chagas é doença cardíaca grave",
+      "Classificar como forma indeterminada da doença de Chagas, calcular o escore de Rassi como pano de fundo prognóstico, considerar TCPE com atenção ao PETCO₂ de pico, e explicar que não existe diretriz formal de elegibilidade esportiva específica para essa etiologia — a decisão será extrapolação individualizada, com reavaliação periódica",
+      "Encaminhar direto para transplante cardíaco por ser cardiopatia chagásica"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Este paciente está na forma indeterminada da doença de Chagas (sorologia positiva, sem sintomas, sem disfunção estrutural relevante ao eco — o BRD isolado é achado eletrocardiográfico comum nessa forma, não necessariamente cardiomiopatia estabelecida) — categoria distinta da cardiomiopatia chagásica com disfunção ventricular estabelecida. A literatura consultada não sustenta nem liberação irrestrita automática, nem proibição: o escore de Rassi (NYHA, cardiomegalia, disfunção sistólica, TVNS ao Holter, baixa voltagem de QRS, sexo masculino) é a ferramenta de estratificação prognóstica mais validada e deve compor a avaliação; o TCPE agrega valor prognóstico real na cardiomiopatia chagásica estabelecida, com PETCO₂ de pico ≤32 mmHg como preditor independente de pior desfecho (AUC 0,83) em pacientes já sintomáticos — achado a ter em mente se a doença progredir. Mas o ponto central deste caso é a honestidade sobre a lacuna: nenhuma sociedade (SBC, ESC, AHA/ACC) publicou diretriz formal de elegibilidade esportiva competitiva específica para cardiomiopatia chagásica — a decisão de liberação hoje é extrapolação clínica individualizada a partir dos princípios gerais de cardiomiopatia de outras etiologias, nunca protocolo automático.",
+    "source_refs": [
+      "Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. PMID: 16928995.",
+      "Vianna MVA, Ávila MR, Figueiredo PHS, et al. Functional predictors of poor outcomes in Chagas cardiomyopathy: The value of end-tidal carbon dioxide at peak exercise. Heart Lung. 2023;62:152-156. PMID: 37531867.",
+      "Marin-Neto JA, Rassi A Jr, Oliveira GMM, et al. SBC Guideline on the Diagnosis and Treatment of Patients with Cardiomyopathy of Chagas Disease - 2023. Arq Bras Cardiol. 2023;120(6):e20230269. PMID: 37377258."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "extrassistole-fetal-bloqueada-vs-bav-caso",
+    "titulo": "Frequência cardíaca fetal de 45 bpm ao Doppler obstétrico de rotina: bloqueio atrioventricular ou outra coisa?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Gestante, 29 semanas, sem histórico de doença autoimune (FAN e anti-Ro/SSA negativos), sem uso de fármacos arritmogênicos. Doppler obstétrico de rotina mostra frequência cardíaca fetal de 45 bpm, levantando suspeita de bloqueio atrioventricular completo. A gestante é encaminhada com urgência para ecocardiografia fetal dedicada.",
+    "pergunta": "Qual exame/achado é decisivo para diferenciar bloqueio atrioventricular completo de extrassístole atrial bloqueada em bigeminismo (a causa mais provável nesse contexto sem fator de risco autoimune) — e por quê?",
+    "opcoes": [
+      "A frequência cardíaca ventricular isolada — abaixo de 50 bpm já confirma BAV completo",
+      "M-mode ou Doppler pulsado avaliando a REGULARIDADE do ritmo ATRIAL: intervalo PP fixo indica BAV de alto grau/completo; intervalo PP irregular (encurtando a cada extrassístole) indica extrassístole atrial bloqueada, não BAV",
+      "Ressonância magnética fetal para avaliar diretamente o sistema de condução",
+      "Repetir o Doppler obstétrico em 24 horas para ver se a frequência se normaliza sozinha"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Frequência ventricular baixa sozinha NÃO diferencia as duas condições — o bigeminismo atrial bloqueado (extrassístoles atriais alternando com batimento sinusal normal, sem condução ao ventrículo) pode derrubar a frequência ventricular efetiva para a faixa de 40-50 bpm, sendo à primeira vista indistinguível de BAV de alto grau ou completo. O critério objetivo que separa as duas condições é a regularidade do ritmo ATRIAL, avaliada por M-mode (captando simultaneamente parede atrial e ventricular) ou Doppler pulsado (fluxo reverso na veia cava superior marcando a contração atrial, fluxo anterógrado na aorta ascendente marcando a ventricular): no BAV de alto grau/completo, as ondas P sinusais mantêm intervalo PP FIXO e regular, apesar da resposta ventricular lenta; na extrassístole atrial bloqueada, o intervalo PP é IRREGULAR — encurta a cada batimento prematuro que não é conduzido. Essa distinção muda a conduta por completo: BAV completo, sobretudo em contexto autoimune (anti-Ro/SSA), pode exigir investigação de causa materna, corticoterapia e planejamento de marca-passo neonatal; a extrassístole atrial bloqueada, mesmo alarmante à ausculta pela frequência baixa, não exige tratamento emergencial — a conduta é observação clínica e vigilância proporcional ao risco (o PAC bloqueado é, isoladamente, o fator de risco mais forte descrito para progressão a taquiarritmia, OR 30,3, o que justifica seguimento mais próximo, não pânico). Um segundo elemento reforça a suspeita de extrassístole neste caso: o início súbito de um BAV 2:1 é raro, enquanto a extrassístole atrial costuma surgir de forma súbita em feto com frequência até então normal — e a ausência de fator de risco autoimune (anti-Ro/SSA negativo) torna BAV autoimune ainda menos provável, embora não o exclua por si só.",
+    "source_refs": [
+      "Feng Y, Niu J, Wei Y, Yang H. Diagnosis, Risk Factors, and Management Principles of Fetal Premature Atrial Contractions. Maternal-Fetal Medicine. 2026;8(3):295-299. PMID: 42483290.",
+      "Liu WL, Peng YH. Case Report: Bradycardia in neonatal lupus: differential diagnosis between atrioventricular block and premature atrial contractions with block. Frontiers in Pediatrics. 2024;12:1337135. PMID: 39144470.",
+      "Bet BB, Eijsbroek FC, van Leeuwen E, et al. Fetal premature atrial contractions: natural course, risk factors and adverse outcome. Ultrasound Obstet Gynecol. 2024;63(5):650-657. PMID: 38030959."
+    ],
+    "review_status": "revisado"
   }
 ]
