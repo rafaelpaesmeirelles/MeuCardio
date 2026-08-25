@@ -30,11 +30,11 @@ def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
 
     assert "/drugs?q=" in fonte
     assert "/drug-insights/" in fonte
-    assert 'titulo: "Visão geral e características"' in fonte and 'rota: "/biblioteca"' in fonte
-    assert 'titulo: "Estudos"' in fonte and 'rota: "/estudos"' in fonte
-    assert 'titulo: "Evidências"' in fonte and 'rota: "/evidencias"' in fonte
-    assert 'titulo: "Exames"' in fonte and 'rota: "/exames"' in fonte
-    assert 'titulo: "Galeria clínica"' in fonte and 'rota: "/galeria"' in fonte
+    assert '["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca"' in fonte
+    assert '["Estudos", "Literatura original e trabalhos científicos", "/estudos"' in fonte
+    assert '["Evidências", "Recomendações e níveis de evidência", "/evidencias"' in fonte
+    assert '["Exames", "Diagnóstico, indicação e interpretação", "/exames"' in fonte
+    assert '["Galeria clínica", "Imagens e achados relacionados", "/galeria"' in fonte
     for topico in ("Características", "Posologia e potência", "Indicações", "Segurança", "Timeline"):
         assert topico in fonte
 
@@ -53,7 +53,7 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
         "Galeria clínica",
     ):
         assert area in fonte
-    assert "Tudo sobre ${termoBuscado}" in fonte
+    assert "Tudo sobre ${assunto}" in fonte
     assert "/relacionados?tema=" in fonte
-    assert "const temaCanonico = temaExato ?? null" in fonte
+    assert ".find((x) => norm(x) === n)" in fonte
     assert "temasUnicos.length === 1" not in fonte
