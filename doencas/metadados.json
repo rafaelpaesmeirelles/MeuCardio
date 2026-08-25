@@ -4052,7 +4052,9 @@
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
     "version": 1,
     "related_document_slugs": [
-      "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal"
+      "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+      "sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+      "fluxograma-sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia"
     ],
     "patient_material_slug": "sincope-e-risco-de-queda-por-que-prevenir-a-lesao-tambem-importa"
   },
@@ -4083,7 +4085,12 @@
     ],
     "review_status": "revisado",
     "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "version": 1,
+    "related_document_slugs": [
+      "delirium-pos-operatorio-em-cirurgia-cardiaca-no-idoso",
+      "prevencao-de-delirium-na-internacao-clinica-cardiologica-do-idoso-fora-do-contexto-cirurgico"
+    ],
+    "patient_material_slug": "confusao-ou-sonolencia-na-uti-entendendo-o-delirium"
   },
   {
     "slug": "sarcopenia-cardiovascular",
