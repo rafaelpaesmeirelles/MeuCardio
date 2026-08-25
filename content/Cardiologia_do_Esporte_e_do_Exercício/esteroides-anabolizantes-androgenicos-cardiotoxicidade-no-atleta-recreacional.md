@@ -4,7 +4,8 @@ slug: esteroides-anabolizantes-androgenicos-cardiotoxicidade-no-atleta-recreacio
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
-source_refs: ["Meagher S, Irwig MS, Rao P. Anabolic-androgenic steroids among recreational athletes and cardiovascular risk. Curr Opin Cardiol. 2025;40(4):221-229. DOI: 10.1097/HCO.0000000000001235. PMID: 40401476. PMCID: PMC12264803.", "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, et al. Cardiovascular Disease in Anabolic Androgenic Steroid Users. Circulation. 2025;151(12):828-834. PMID: 39945117.", "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, Andersen JT, Horwitz H. Mortality Among Users of Anabolic Steroids. JAMA. 2024."]
+review_note: "NIGHT-B22 revisado independentemente em 25/08/2026: referências e aplicabilidade conferidas; dados observacionais não foram convertidos em causalidade."
+source_refs: ["Meagher S, Irwig MS, Rao P. Anabolic-androgenic steroids among recreational athletes and cardiovascular risk. Curr Opin Cardiol. 2025;40(4):221-229. DOI: 10.1097/HCO.0000000000001235. PMID: 40401476. PMCID: PMC12264803.", "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, et al. Cardiovascular Disease in Anabolic Androgenic Steroid Users. Circulation. 2025;151(12):828-834. PMID: 39945117.", "Windfeld-Mathiasen J, Heerfordt IM, Dalhoff KP, Andersen JT, Horwitz H. Mortality Among Users of Anabolic Steroids. JAMA. 2024. PMID: 38483396. DOI: 10.1001/jama.2024.3180."]
 legacy_source: "Documento novo, 09/08/2026. Fonte primária Curr Opin Cardiol/PubMed/PMC conferida nesta sessão, texto integral lido."
 ---
 
