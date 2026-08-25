@@ -6192,5 +6192,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "commotio-cordis-janela-de-risco-diagrama",
+    "title": "Diagrama — janela de risco do commotio cordis no ciclo cardíaco",
+    "modality": "Diagrama",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "file_path": "diagrama/commotio-cordis-janela-de-risco.jpg",
+    "findings": "Esquema didático (não é traçado de paciente real) de um ciclo de ECG em ritmo sinusal normal, com ondas P, complexo QRS e onda T identificadas, além dos intervalos PR e QT marcados. Uma faixa colorida destaca a 'janela de risco do commotio cordis' posicionada sobre a fase ascendente da onda T, imediatamente antes do seu pico.",
+    "teaching_points": "O commotio cordis não é lesão estrutural direta — é acoplamento mecanoelétrico: um impacto torácico que ocorre por acaso durante essa janela estreita da repolarização ventricular (fase ascendente da onda T) pode desencadear fibrilação ventricular, mesmo com energia de impacto relativamente baixa e sem qualquer dano visível ao coração. Fora dessa janela, o mesmo impacto tipicamente não desencadeia arritmia. É por isso que o commotio cordis é evento súbito, imprevisível na maioria dos casos, e não depende de doença cardíaca prévia — reforçando por que é diagnóstico diferencial obrigatório em qualquer colapso súbito após impacto torácico no esporte, mesmo em atleta jovem sem história cardiovascular.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Commotio_Cordis_Risk_Zone.jpg",
+    "license": "Domínio público",
+    "attribution": "Agateller, via Wikimedia Commons — domínio público (autodeclarado pelo autor/detentor dos direitos).",
+    "tags": [
+      "commotio cordis",
+      "ECG",
+      "diagrama",
+      "janela vulnerável",
+      "onda T",
+      "morte súbita no esporte"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
