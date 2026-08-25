@@ -5,7 +5,8 @@ theme: "Cardiologia geriátrica"
 kind: protocolo
 summary: "Manejo de emergência do idoso com estenose aórtica grave e insuficiência cardíaca aguda ou choque, priorizando estabilização hemodinâmica, ecocardiograma imediato e avaliação precoce para intervenção valvar definitiva, com TAVI preferida à valvuloplastia de balão em muitos cenários contemporâneos."
 review_status: revisado
-source_refs: ["Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."]
+review_note: "NIGHT-B10 (2026-08-25): a ESC/EACTS 2025 (PMID 40878295) foi lida em texto integral (PDF advance-article com carimbo da OUP, obtido por espelho institucional; academic.oup.com trunca/403) — Seção 6.5 e Recommendation Table 4 transcritas com números exatos (25% das internações; choque 1,6-3,2%; mortalidade 30d da TAVI em choque 13-19%; BAV como ponte IIb-C). Confirmado no texto integral que a diretriz NÃO define vasopressor/dose para choque por EAo — o marcador correspondente foi deliberadamente MANTIDO. Verificador adversarial confirmou as quotes. Produção científica assistida; pendente de revisão independente e validação médica final."
+source_refs: ["Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — texto integral lido nesta revisão (PDF advance-article oficial da OUP via espelho institucional). Fonte da Seção 6.5 (choque/IC aguda) e da Recommendation Table 4, transcritas no corpo do texto."]
 ---
 
 # Estenose aórtica grave descompensada no idoso
@@ -48,12 +49,13 @@ A ESC/EACTS 2025 afirma que, em choque cardiogênico relacionado à doença valv
 
 Na prática contemporânea, **TAVI passou a substituir amplamente a valvuloplastia aórtica por balão (BAV)** no cenário agudo quando anatomia, acesso e capacidade do centro permitem tratamento transcateter definitivo.
 
-A diretriz 2025 registra que:
+A diretriz 2025 registra — com os números da Seção 6.5, agora verificados no texto integral lido nesta revisão:
 
-- TAVI emergencial/urgente é factível mesmo em choque e baixa FEVE em séries observacionais;
-- mortalidade precoce continua maior que na TAVI eletiva, refletindo a gravidade do paciente;
-- **BAV pode ser raramente considerada como ponte para TAVI ou SAVR** em pacientes cuidadosamente selecionados com EAo descompensada;
-- BAV apresenta risco importante, inclusive insuficiência aórtica aguda grave, e não deve ser tratada como solução definitiva rotineira.
+- a descompensação aguda responde por **até 25% das internações por EAo**, mas só uma minoria (**1,6-3,2%**) chega em choque cardiogênico;
+- TAVI emergencial/urgente é factível mesmo em choque e baixa FEVE em grandes séries observacionais, *"with similar device success, even if LVEF is low"*, com **mortalidade em 30 dias de 13-19%** — maior que na TAVI de rotina, refletindo a gravidade do paciente;
+- a BAV *"has been largely replaced by TAVI in recent years, due to the high risk of severe AR and mortality in the acute setting"* — não deve ser tratada como solução definitiva rotineira. A única recomendação formal com Classe/Nível aplicável é a da Recommendation Table 4: **valvotomia aórtica por balão pode ser considerada como ponte para SAVR ou TAVI em paciente hemodinamicamente instável** (e, se factível, em EAo grave que precisa de cirurgia não cardíaca urgente de alto risco) — **Classe IIb, Nível C**;
+- como ponte hemodinâmica adicional, a prosa da mesma seção cita a **estimulação rápida por eletrodo de marca-passo temporário**, que encurta a diástole e pode melhorar transitoriamente a hemodinâmica até a intervenção;
+- a moldura decisória permanece a do Heart Team em centro de valva (Classe I, C), e — fora do cenário de choque — a régua etária da diretriz é **TAVI recomendada em ≥70 anos com anatomia adequada (Classe I, A)** e SAVR em <70 anos com risco cirúrgico baixo (Classe I, B).
 
 ## Papel do idoso frágil
 
