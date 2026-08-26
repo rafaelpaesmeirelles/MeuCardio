@@ -43,14 +43,7 @@ Traçar a meta de LDL conforme a categoria de risco e prescrever estatina de alt
 - em intolerância a estatina em qualquer dose (mesmo após reintrodução/rechallenge), considerar ezetimiba — **Classe IIa, Nível C**
 
 ## Mudanca lipidograma
-A seção 5.4.3 da fonte primária confirma que a diferença entre amostras com e
-sem jejum é pequena para a maioria dos parâmetros; para rastreamento geral, a
-amostra sem jejum tem valor prognóstico ao menos equivalente e oferece maior
-conveniência. Isso **não elimina o jejum em todos os cenários**. O LDL-C
-calculado deve ser interpretado com cautela em diabetes, síndrome metabólica ou
-hipertrigliceridemia; a fórmula de Friedewald não deve ser usada quando TG
->400 mg/dL, especialmente em amostra sem jejum. A Diretriz Brasileira 2025
-recomenda repetir em jejum de 12 horas se TG >440 mg/dL em amostra sem jejum.
+A seção 5.4.3 do texto integral oficial ESC/EAS 2019 confirma que amostras sem jejum têm valor prognóstico pelo menos equivalente para rastreio geral e que a diferença média é pequena para a maioria dos parâmetros (a elevação média de TG é de aproximadamente 27 mg/dL). A coleta sem jejum pode ser usada na maioria dos casos, mas LDL calculado deve ser interpretado com cautela em síndrome metabólica, diabetes ou hipertrigliceridemia; a fórmula de Friedewald não deve ser usada com TG >400 mg/dL, especialmente em amostra sem jejum. A Diretriz Brasileira de Dislipidemias 2025 acrescenta regra operacional própria: se TG >440 mg/dL em amostra sem jejum, repetir coleta após 12 horas de jejum. Portanto, jejum deixou de ser rotina universal, não deixou de ter indicação clínica.
 
 ## Trigliceridos elevados
 - Estatina é o fármaco de primeira escolha para reduzir risco CV em pacientes de alto risco (ou risco maior) com hipertrigliceridemia e TG >200 mg/dL (>2,3 mmol/L) — **Classe I, Nível B**
@@ -88,7 +81,7 @@ Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025 foi pub
 - Não intensificar o tratamento até cumprir as duas condições simultaneamente — redução percentual ≥50% E valor absoluto de LDL da meta, não apenas uma delas
 - Exigir jejum por rotina para o lipidograma inicial, quando a coleta sem jejum já é aceita na maioria dos pacientes
 - Tratar iPCSK9 como opção de mesmo peso em qualquer paciente de muito alto risco não controlado: a força da recomendação varia de I/A (prevenção secundária) a IIb/C (prevenção primária sem HF) — não considerar iPCSK9 num paciente de prevenção secundária de muito alto risco que não atinge a meta com estatina + ezetimiba é o erro mais grave, por ser recomendação Classe I
-- Em idosos >75 anos, tratar o início de estatina em prevenção primária como automático — é Classe IIb (pode ser considerada, não deve ser considerada), condicionado a risco alto/muito alto. A diretriz recomenda considerar saúde global e risco de interações, mas **não define escore nem corte de fragilidade** para autorizar ou impedir tratamento; não inventar um limiar.
+- Em idosos >75 anos, tratar o início de estatina em prevenção primária como automático — é Classe IIb (pode ser considerada, não deve ser considerada), condicionado a risco alto/muito alto. O texto integral não exige escore formal nem corte de fragilidade: orienta ponderar estado geral de saúde, comorbidades, polifarmácia, função renal, risco de interação medicamentosa, LDL basal e preferência do paciente; há menos evidência randomizada direta nessa faixa etária sem doença vascular estabelecida.
 
 ## Tudo com Tudo
 

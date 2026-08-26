@@ -4,7 +4,7 @@ slug: trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolis
 theme: "Valvopatias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — seção 11.4.4 (Thrombosis) e Figura 10 (Management of left-sided obstructive and non-obstructive mechanical prosthetic thrombosis), texto integral obtido e conferido nesta sessão (11/08/2026).", "Roudaut R, Lafitte S, Roudaut MF, Reant P, Pillois X, Durrieu-Jaïs C, Coste P, Deville C, Roques X. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Arch Cardiovasc Dis. 2009;102(4):269-77. DOI: 10.1016/j.acvd.2009.01.007 · PMID: 19427604 — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026), fonte-base citada pela própria diretriz ESC/EACTS 2021 (referência 542 da diretriz) para a recomendação de fibrinólise versus cirurgia.", "Raj Mantoo M, Makkar N, Sharma G. Prosthetic valve thrombosis: contemporary concepts in diagnosis and management. Expert Rev Cardiovasc Ther. 2026;24(7):609-624. DOI: 10.1080/14779072.2026.2700450 · PMID: 42412081 — revisão de 2026, abstract conferido via PubMed E-utilities nesta sessão (11/08/2026)."]
+source_refs: ["Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194 — seção 14.4.4, Figura 20 e Recommendation Table 17 conferidas no texto integral oficial; a correção DOI 10.1093/eurheartj/ehag625 altera apenas a faixa NYHA de outra seção (9.2.4.2), sem afetar trombose valvar.", "Karthikeyan G, Rajashekar P, Devasenapathy N, et al. Urgent surgery vs fibrinolytic therapy for left-sided prosthetic valve thrombosis: a randomized trial. Eur Heart J. 2025;46(34):3373-3381. DOI: 10.1093/eurheartj/ehaf391. PMID: 40574603 — primeiro ensaio randomizado entre cirurgia urgente e fibrinólise em baixa dose/infusão lenta, texto integral aberto conferido.", "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — mantida como referência histórica para mostrar a mudança de recomendação em 2025.", "Roudaut R, Lafitte S, Roudaut MF, et al. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Arch Cardiovasc Dis. 2009;102(4):269-277. DOI: 10.1016/j.acvd.2009.01.007. PMID: 19427604 — coorte histórica observacional, não usada isoladamente para escolher a estratégia atual."]
 legacy_source: "Documento novo. A pasta já cobre em profundidade o alvo de INR crônico da prótese mecânica e a decisão mecânica-vs-biológica (`protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025.md`), e a janela de risco dos primeiros 3 meses de bioprótese, mas não havia nenhum documento sobre o cenário agudo de emergência: trombose de prótese mecânica JÁ INSTALADA — como diagnosticar, e como decidir entre fibrinólise e reoperação. É uma lacuna real e clinicamente relevante, cenário de decisão rápida à beira do leito."
 ---
 
@@ -21,31 +21,33 @@ Trombose valvar obstrutiva deve ser prontamente suspeitada em qualquer portador 
 - **Cinefluoroscopia** e **tomografia computadorizada cardíaca (TCC)**, quando disponíveis prontamente, complementam a avaliação — a fluoroscopia é particularmente útil para avaliar a mobilidade dos folhetos/disco da prótese mecânica.
 - A diferenciação entre trombo e pannus (tecido fibroso de encapsulamento crônico) pela TCC é importante para orientar a decisão: pannus responde mal à fibrinólise e tende a exigir reoperação.
 
-## A árvore de decisão da diretriz ESC/EACTS 2021 (Figura 10)
-A diretriz separa a decisão em dois ramos — obstrutiva e não obstrutiva — e dentro de cada ramo, o achado clínico decide o próximo passo.
+## A árvore de decisão vigente — ESC/EACTS 2025 (Figura 20)
+A diretriz de 2025 mantém a separação entre trombose obstrutiva e não obstrutiva, mas muda um ponto central: em insuficiência cardíaca aguda NYHA III-IV por trombose obstrutiva de prótese mecânica, a escolha entre reoperação e fibrinólise em baixa dose/infusão lenta deve ser feita pela Heart Team; cirurgia já não é apresentada como resposta automática para todo paciente grave.
 
 ### Trombose obstrutiva
-1. **Paciente criticamente enfermo** (instabilidade hemodinâmica) → **cirurgia imediata**, se disponível prontamente.
-2. **Paciente não criticamente enfermo**, com **anticoagulação recente inadequada** (isto é, a causa provável foi controle subterapêutico) → heparina não fracionada intravenosa ± AAS, com reavaliação de sucesso/falha.
-3. **Paciente não criticamente enfermo**, sem causa de anticoagulação inadequada identificável → decisão entre **fibrinólise** (se cirurgia não está disponível prontamente) ou **cirurgia** (se disponível), sempre pesando o risco cirúrgico individual.
-4. Em caso de **falha da fibrinólise** e **alto risco cirúrgico**, a diretriz reconhece que a decisão fica particularmente difícil — deve ser individualizada pela Heart Team.
+1. Confirmar rapidamente o mecanismo com ETE e/ou tomografia cardíaca 4D, além do ETT inicial, distinguindo trombo de pannus.
+2. Em **IC aguda NYHA III-IV por trombose obstrutiva**, realizar avaliação imediata pela Heart Team para escolher entre **nova troca valvar** e **fibrinólise em baixa dose/infusão lenta** (Classe I, Nível B).
+3. A escolha deve integrar estabilidade hemodinâmica, contraindicações a trombólise, risco de reoperação, extensão/localização do trombo, embolização, experiência do centro e possibilidade de resgate cirúrgico.
+4. Este protocolo não reproduz esquema numérico de fibrinolítico: trata-se de terapia hospitalar de alto risco, guiada por protocolo especializado e imagem seriada.
 
 ### Trombose não obstrutiva
-1. A conduta inicial é **otimizar a anticoagulação** e reavaliar em seguimento — trombo não obstrutivo pequeno, sem repercussão hemodinâmica, não é indicação automática de intervenção.
-2. Se houver **evento tromboembólico** associado, o tamanho do trombo decide: **≥10 mm** favorece intervenção; **<10 mm** favorece otimizar anticoagulação e reavaliar.
-3. Trombo persistente ou recorrente após otimização, com sinais de tromboembolismo, é indicação de **cirurgia** (ou fibrinólise, se a cirurgia for de alto risco).
+1. A conduta depende principalmente de evento tromboembólico, tamanho do trombo e resposta à anticoagulação otimizada.
+2. Trombo pequeno e sem repercussão não é indicação automática de intervenção.
+3. **Cirurgia deve ser considerada** para trombo grande (>10 mm) complicado por embolia ou persistente apesar de anticoagulação oral ótima (Classe IIa, Nível C).
 
 ## Recomendações formais da diretriz (Recommendations on management of prosthetic valve dysfunction)
 | Recomendação | Classe | Nível |
 |---|---|---|
-| Troca valvar urgente ou de emergência é recomendada para trombose obstrutiva em paciente criticamente enfermo, sem comorbidade grave que contraindique cirurgia | I | B |
-| Fibrinólise (ativador de plasminogênio tecidual recombinante, 10 mg em bolus + 90 mg em 90 minutos, com heparina não fracionada; ou estreptoquinase 1.500.000 U em 60 minutos, sem heparina não fracionada) deve ser considerada quando a cirurgia não está disponível ou é de risco muito alto, ou para trombose de prótese em posição direita (tricúspide/pulmonar) | IIa | B |
-| Cirurgia deve ser considerada para trombo não obstrutivo grande (>10 mm) complicado por embolismo | IIa | C |
+| ETE e/ou tomografia cardíaca 4D são recomendadas na suspeita de trombose valvar para confirmar o diagnóstico | I | C |
+| Avaliação pela Heart Team é recomendada na IC aguda NYHA III-IV por trombose obstrutiva de prótese mecânica, para decidir entre nova troca valvar e fibrinólise em baixa dose/infusão lenta | I | B |
+| Cirurgia deve ser considerada para trombo protético grande (>10 mm) complicado por embolia | IIa | C |
+| Anticoagulação com antagonista da vitamina K é recomendada na trombose de bioprótese antes de reintervenção | I | B |
+| Anticoagulação deve ser considerada em espessamento e mobilidade reduzida dos folhetos com gradiente elevado, pelo menos até resolução | IIa | B |
 
-**Nota sobre próteses do lado direito**: a fibrinólise é a estratégia preferida para trombose de prótese tricúspide/pulmonar, mesmo fora do cenário de "cirurgia indisponível" — o risco de embolização pulmonar (não sistêmica/cerebral) associado à fibrinólise nesse território é menor, o que muda o balanço risco-benefício em relação à posição esquerda.
+**Nota sobre próteses do lado direito**: a posição da prótese modifica o balanço entre embolização sistêmica e pulmonar, mas não autoriza trombólise automática. A decisão continua a exigir avaliação especializada das contraindicações, repercussão hemodinâmica e capacidade de resgate do centro.
 
-## Os números que sustentam a preferência por cirurgia, quando disponível
-A referência citada pela própria diretriz (Roudaut R et al., Arch Cardiovasc Dis 2009) analisou 263 episódios de obstrução de prótese valvar em 210 pacientes, comparando fibrinólise e cirurgia:
+## Da evidência observacional ao primeiro ensaio randomizado
+A coorte histórica de Roudaut et al. analisou 263 episódios de obstrução protética e encontrou maior restauração hemodinâmica e menos embolia com cirurgia, mas era observacional e refletia esquemas fibrinolíticos antigos:
 
 | Desfecho precoce | Cirurgia | Fibrinólise |
 |---|---|---|
@@ -54,21 +56,19 @@ A referência citada pela própria diretriz (Roudaut R et al., Arch Cardiovasc D
 | Episódios embólicos | 0,7% | 15% |
 | Complicações totais | 11,1% | 25,2% |
 
-A mortalidade precoce foi **igual** nos dois grupos, mas o sucesso hemodinâmico foi maior e as complicações (sobretudo embolia) foram bem menores com cirurgia. No **seguimento de longo prazo** (média de 6 anos), o grupo cirúrgico manteve resultados significativamente melhores em recorrência e mortalidade, e a **classe funcional NYHA no momento da apresentação** emergiu como forte preditor de morte tardia — outro argumento para não postergar a decisão quando a cirurgia está disponível.
-
-**Por que a fibrinólise continua tendo lugar, apesar desses números**: nem todo paciente tem cirurgia disponível prontamente, nem todo paciente tolera o risco cirúrgico (reoperação valvar tem mortalidade mais alta que cirurgia índice) — é exatamente por isso que a diretriz reserva a fibrinólise para "cirurgia indisponível ou de risco muito alto", e não a trata como alternativa equivalente de primeira linha na posição esquerda.
+O SAFE-PVT (79 pacientes, centro único) comparou cirurgia urgente com tPA em baixa dose/infusão lenta. A resposta clínica completa na alta não diferiu significativamente (71,8% vs. 67,5%; OR 1,22, IC95% 0,47-3,19; p=0,689). O composto de morte, AVC, sangramento maior ou embolia sistêmica foi mais frequente com cirurgia (28,2% vs. 7,5%; OR 5,14, IC95% 1,28-20,59; p=0,021), com 7 mortes em 39 versus 1 em 40; por outro lado, 25% do braço fibrinólise ficou com disfunção valvar residual. O ensaio é pequeno, unicêntrico e teve atraso cirúrgico relevante, portanto não transforma fibrinólise em resposta universal — sustenta a decisão individualizada adotada pela diretriz de 2025.
 
 ## Trombose de bioprótese — conduta diferente, não confundir
 Trombose de bioprótese (mais rara, mas descrita tanto após cirurgia quanto após implante transcateter) tem tratamento de **primeira linha farmacológico, não cirúrgico**: anticoagulação com antagonista de vitamina K e/ou heparina não fracionada é **recomendada (Classe I, Nível C)** antes de considerar reintervenção. A distinção entre trombo e pannus por TCC também é relevante aqui — a trombose de bioprótese pode se apresentar num espectro que vai de espessamento/redução de mobilidade do folheto (HALT — hypo-attenuated leaflet thickening, achado subclínico por TCC) até trombose clínica com gradiente elevado.
 
-## O que a revisão de 2026 acrescenta
-Uma revisão contemporânea (Raj Mantoo M et al., Expert Rev Cardiovasc Ther 2026) reforça que a prática vem se deslocando de um algoritmo rígido "sempre cirurgia" para **decisão individualizada guiada por imagem** — reconhecendo que protocolos padronizados de fibrinólise têm eficácia favorável em populações selecionadas, particularmente quando há restrição cirúrgica real. A cirurgia mantém papel central quando há contraindicação a trombolítico, trombo extenso, eventos recorrentes, ou falha de fibrinólise prévia — o que é consistente com, e não contradiz, a árvore de decisão da diretriz ESC/EACTS 2021 acima.
+## O que mudou na prática
+A diretriz de 2025 e o SAFE-PVT deslocam a prática de um algoritmo rígido de “sempre cirurgia” para decisão individualizada e guiada por imagem. Cirurgia mantém papel central quando há contraindicação a trombolítico, trombo extenso, evento recorrente, pannus ou falha de fibrinólise; fibrinólise em baixa dose/infusão lenta é uma alternativa formal, não um recurso apenas quando a cirurgia inexiste.
 
 ## Armadilhas clínicas
 - Tratar trombose obstrutiva em paciente estável como "não urgente" — mesmo sem instabilidade hemodinâmica franca, a obstrução valvar mecânica é emergência potencial, e o atraso na decisão (cirurgia ou fibrinólise) piora desfecho.
-- Escolher fibrinólise "porque é menos invasiva" em paciente com cirurgia prontamente disponível e sem contraindicação — os números de Roudaut mostram sucesso hemodinâmico maior e complicações embólicas bem menores com cirurgia nesse cenário; fibrinólise não é opção "mais segura" por padrão.
+- Escolher cirurgia ou fibrinólise por reflexo — a recomendação vigente exige Heart Team; cada estratégia troca riscos imediatos diferentes, e o SAFE-PVT não elimina a necessidade de individualização.
 - Aplicar o mesmo raciocínio de trombose de prótese mecânica à trombose de bioprótese — são entidades com fisiopatologia e primeira linha de tratamento diferentes (farmacológica na bioprótese, cirúrgica/fibrinolítica na mecânica obstrutiva).
-- Não investigar a causa da trombose (sobretudo anticoagulação subterapêutica recente) antes de decidir a estratégia — a diretriz distingue explicitamente esse cenário, que pode responder à simples otimização com heparina intravenosa, sem necessidade imediata de fibrinólise ou cirurgia.
-- Ignorar a posição da prótese na escolha da estratégia — próteses do lado direito (tricúspide/pulmonar) têm a fibrinólise como opção de primeira linha mesmo com cirurgia disponível, ao contrário das próteses do lado esquerdo.
+- Não investigar a causa da trombose (sobretudo anticoagulação subterapêutica recente) e não distinguir trombo de pannus antes de decidir a estratégia.
+- Reproduzir o esquema fibrinolítico rápido/em bolus da diretriz antiga como padrão atual — a ESC/EACTS 2025 especifica **baixa dose/infusão lenta** e manejo em centro experiente, sem autorizar prescrição fora de protocolo especializado.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: a diretriz ESC/EACTS 2021 é a referência vigente conferida nesta sessão; uma atualização ESC/EACTS de valvopatias mais recente pode ter refinado esta árvore de decisão — não foi possível confirmar nesta sessão se houve mudança de classe/nível para este tópico específico em atualização posterior a 2021.
+Atualizado contra a diretriz ESC/EACTS 2025 e o SAFE-PVT em 26/08/2026; a correção oficial de agosto de 2026 foi conferida e não modifica esta seção.
