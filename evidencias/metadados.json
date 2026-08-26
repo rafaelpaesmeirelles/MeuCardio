@@ -50048,5 +50048,117 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "escore-syntax-avaliar-complexidade-e-orientar-revascularizacao-dac-multiarterial",
+    "statement": "Em pacientes com doença arterial coronariana multiarterial, a avaliação da complexidade angiográfica por meio de um escore como o SYNTAX pode ser útil para estimar o risco de eventos e orientar a escolha da estratégia de revascularização.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore SYNTAX",
+      "revascularização miocárdica",
+      "doença arterial coronariana multiarterial",
+      "síndrome coronariana crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-syntax-maior-23-indica-crm-multiarterial-feve-preservada",
+    "statement": "Em pacientes com doença de múltiplos vasos coronarianos principais envolvendo a artéria descendente anterior, com escore SYNTAX maior que 23, fração de ejeção do ventrículo esquerdo preservada e envolvimento proximal da artéria descendente anterior, a cirurgia de revascularização do miocárdio é recomendada para redução do risco de infarto e aumento de sobrevida, em comparação à intervenção coronária percutânea e/ou ao tratamento clínico otimizado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore SYNTAX",
+      "cirurgia de revascularização do miocárdio",
+      "doença multiarterial",
+      "síndrome coronariana crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-calcio-coronario-reestratifica-risco-em-assintomaticos-risco-intermediario",
+    "statement": "Em pacientes assintomáticos com risco cardiovascular clínico intermediário, a tomografia de coronárias para determinação do escore de cálcio coronário (Agatston) é recomendada para reestratificação de risco.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore de cálcio coronário",
+      "escore de Agatston",
+      "tomografia de coronárias",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-calcio-coronario-nao-recomendado-em-dac-obstrutiva-conhecida",
+    "statement": "O uso do escore de cálcio coronário não é recomendado em pacientes com doença arterial coronariana obstrutiva já conhecida.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore de cálcio coronário",
+      "doença arterial coronariana obstrutiva",
+      "tomografia de coronárias"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "criterios-arc-hbr-identificam-alto-risco-de-sangramento-para-dapt-encurtada",
+    "statement": "O uso dos critérios ARC-HBR (Academic Research Consortium for High Bleeding Risk) deve ser considerado para identificação de pacientes com alto risco de sangramento candidatos a terapia antiplaquetária dupla (DAPT) de duração encurtada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "ARC-HBR",
+      "risco de sangramento",
+      "dupla terapia antiplaquetária",
+      "DAPT encurtada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-dapt-nao-deve-ser-usado-para-definir-duracao-da-dapt",
+    "statement": "O uso do escore DAPT para a decisão sobre o tempo de duração da dupla terapia antiplaquetária (DAPT) não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Guideline for Chronic Coronary Syndrome - 2025",
+    "reference": "Cesar LAM et al. Guideline for Chronic Coronary Syndrome - 2025. Arq Bras Cardiol. 2025;122(9):e20250619.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore DAPT",
+      "dupla terapia antiplaquetária",
+      "duração da DAPT"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
