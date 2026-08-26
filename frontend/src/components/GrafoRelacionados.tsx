@@ -6,8 +6,8 @@ import { api } from "../lib/api";
 /**
  * Painel do Grafo de Conhecimento Clínico (issue #52) — complementar ao
  * `TudoSobreEsteTema` já existente (que cruza por TEMA exato). Este consome
- * `GET /api/grafo/relacionados`, que devolve relações tipadas entre itens
- * específicos (não por tema), com pontuação de relevância própria.
+ * `GET /api/grafo/relacionados`, que devolve relações diretas e associações
+ * taxonômicas em dois saltos, com pontuação de relevância própria.
  *
  * Mesma disciplina do painel de tema: some por inteiro (`return null`)
  * quando não há nada no grafo para este item, quando a chamada falha
@@ -83,17 +83,19 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
     setResposta(null);
     const s = (slug ?? "").trim();
     if (!entityType || !s) return;
+    let ativo = true;
     const params = new URLSearchParams({ entity_type: entityType, slug: s });
     if (limitePorTipo) params.set("limite_por_tipo", String(limitePorTipo));
     api
       .get<Resposta>(`/grafo/relacionados?${params.toString()}`)
-      .then(setResposta)
+      .then((dados) => { if (ativo) setResposta(dados); })
       .catch(() => {
         // Silencioso de propósito, mesmo padrão de TudoSobreEsteTema: este
         // painel é um complemento da página, nunca o conteúdo principal —
         // falha de rede, 401 (sessão) ou 402 (assinatura) não podem quebrar
         // a leitura do item que o médico já abriu.
       });
+    return () => { ativo = false; };
   }, [entityType, slug, limitePorTipo]);
 
   if (!resposta || resposta.total === 0) return null;
@@ -110,9 +112,9 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
 
       <div style={{ marginTop: "0.7rem" }}>
         <DicaContextual id="grafo-relacionados" titulo="Tudo na Corvia está conectado">
-          Estes itens não foram buscados por você: são as relações que a Corvia já conhece entre
-          este conteúdo e o resto do ecossistema. Siga por qualquer um deles sem perder o
-          contexto — e volte quando quiser.
+          Relações diretas aparecem primeiro. Itens marcados como “mesmo tema” são conexões
+          taxonômicas mais amplas. Siga por qualquer um deles sem perder o contexto — e volte
+          quando quiser.
         </DicaContextual>
       </div>
 
@@ -122,6 +124,11 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
               <p style={{ fontWeight: 600, fontSize: "0.88rem", margin: "0 0 0.35rem" }}>
                 {rotuloTipo(g.tipo)}
+                {g.total_disponivel > g.itens.length && (
+                  <small style={{ marginLeft: "0.35rem", opacity: 0.72 }}>
+                    exibindo {g.itens.length} de {g.total_disponivel}
+                  </small>
+                )}
               </p>
               {g.rota_lista && (
                 <Link to={g.rota_lista} style={{ fontSize: "0.78rem" }}>
@@ -130,16 +137,23 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
               )}
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-              {g.itens.map((item) => (
-                <Link
-                  key={item.slug}
-                  to={item.rota}
-                  className="chip"
-                  style={{ textDecoration: "none", maxWidth: "26rem" }}
-                >
-                  {item.titulo}
-                </Link>
-              ))}
+              {g.itens.map((item) => {
+                const mesmoTema = item.relation_type === "belongs_to_topic";
+                return (
+                  <Link
+                    key={item.slug}
+                    to={item.rota}
+                    className="chip"
+                    title={mesmoTema ? "Conexão por tema canônico" : "Relação direta"}
+                    style={{ textDecoration: "none", maxWidth: "26rem" }}
+                  >
+                    {item.titulo}
+                    {mesmoTema && (
+                      <small style={{ marginLeft: "0.35rem", opacity: 0.72 }}>· mesmo tema</small>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         ))}

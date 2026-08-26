@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Item = {
   id: string;
@@ -12,7 +13,9 @@ type Item = {
 
 type Aplicacao = {
   id: number;
+  checklist: string | null;
   condicao: string;
+  theme: string | null;
   documento_origem: string | null;
   identificacao: string | null;
   itens: Item[];
@@ -36,21 +39,32 @@ export default function ChecklistAlta() {
   const [obs, setObs] = useState("");
   const [erro, setErro] = useState("");
   const [salvando, setSalvando] = useState(false);
+  const idAtual = useRef(id);
 
   useEffect(() => {
+    idAtual.current = id;
+    let ativo = true;
+    setA(null);
+    setErro("");
+    setSalvando(false);
     api
       .get<Aplicacao>(`/checklists/aplicacoes/${id}`)
       .then((r) => {
+        if (!ativo) return;
         setA(r);
         setMarcados(r.marcados || []);
         setObs(r.observacoes || "");
       })
-      .catch((e) => setErro(e?.message || "Não foi possível carregar."));
+      .catch((e) => {
+        if (ativo) setErro(e?.message || "Não foi possível carregar.");
+      });
+    return () => { ativo = false; };
   }, [id]);
 
   async function salvar(finalizar = false) {
     setSalvando(true);
     setErro("");
+    const idSolicitado = id;
     try {
       await api.patch(`/checklists/aplicacoes/${id}`, {
         marcados,
@@ -58,16 +72,18 @@ export default function ChecklistAlta() {
         finalizar,
       });
       const r = await api.get<Aplicacao>(`/checklists/aplicacoes/${id}`);
-      setA(r);
+      if (idAtual.current === idSolicitado) setA(r);
     } catch (e: any) {
-      setErro(e?.message || "Não foi possível salvar.");
+      if (idAtual.current === idSolicitado) {
+        setErro(e?.message || "Não foi possível salvar.");
+      }
     } finally {
-      setSalvando(false);
+      if (idAtual.current === idSolicitado) setSalvando(false);
     }
   }
 
   if (erro && !a) return <p className="erro">{erro}</p>;
-  if (!a) return <p>Carregando…</p>;
+  if (!a || String(a.id) !== id) return <p>Carregando…</p>;
 
   const finalizado = !!a.finalizado_em;
   const marcadoSet = new Set(marcados);
@@ -170,6 +186,9 @@ export default function ChecklistAlta() {
         <p className="checklist__origem">
           <Link to={`/biblioteca/${a.documento_origem}`}>Ver o protocolo de origem</Link>
         </p>
+      )}
+      {a.checklist && (
+        <GrafoRelacionados entityType="checklist" slug={a.checklist} />
       )}
     </div>
   );

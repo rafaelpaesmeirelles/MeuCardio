@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
@@ -193,6 +194,9 @@ export default function MaterialPaciente() {
               <strong>{m.titulo}</strong>
               {m.subtitulo && <span>{m.subtitulo}</span>}
               <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.7rem" }}>
+                <Link className="botao" to={`/material-paciente/${m.slug}`}>
+                  Ler e ver conexões
+                </Link>
                 <button
                   className="botao botao--acao"
                   onClick={() => baixar(m)}

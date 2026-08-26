@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api } from "../lib/api";
 import Fluxograma from "../components/Fluxograma";
 import Icone from "../components/Icone";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 import "../styles/emergencia.css";
 
 const CACHE = "corvia.emergencia";
@@ -40,10 +41,10 @@ function normalizarBusca(valor: string): string {
 }
 
 export default function Emergencia() {
+  const [params, setParams] = useSearchParams();
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [deCache, setDeCache] = useState<number | null>(null);
   const [erro, setErro] = useState("");
-  const [aberto, setAberto] = useState<string | null>(null);
   const [secaoAberta, setSecaoAberta] = useState<number>(0);
   const [busca, setBusca] = useState("");
   const [tema, setTema] = useState("");
@@ -72,11 +73,34 @@ export default function Emergencia() {
     });
   }, [busca, tema, pacote]);
 
-  const protocolo = useMemo(() => pacote?.protocolos.find((p) => p.slug === aberto) || null, [pacote, aberto]);
+  const slugAberto = params.get("protocolo");
+  useEffect(() => {
+    setSecaoAberta(0);
+    window.scrollTo({ top: 0, left: 0 });
+  }, [slugAberto]);
+  const protocolo = useMemo(
+    () => pacote?.protocolos.find((p) => p.slug === slugAberto) || null,
+    [pacote, slugAberto],
+  );
+  const protocoloInvalido = Boolean(pacote && slugAberto && !protocolo);
   const doc = protocolo ? pacote?.documentos[protocolo.documento_slug] : null;
   const fluxo = protocolo?.fluxograma_slug ? pacote?.documentos[protocolo.fluxograma_slug] : null;
   const diagrama = fluxo ? fonteMermaid(fluxo.body_md) : null;
   const blocos = doc ? secoes(doc.body_md) : [];
+  const relacionados = useMemo(() => (protocolo?.relacionados || []).map((slug) => {
+    const documento = pacote?.documentos[slug];
+    const protocoloRelacionado = pacote?.protocolos.find((item) => item.slug === slug);
+    if (documento) return { slug, titulo: documento.title, tipo: "documento" as const };
+    if (protocoloRelacionado) return { slug, titulo: protocoloRelacionado.titulo, tipo: "protocolo" as const };
+    return null;
+  }).filter((item): item is NonNullable<typeof item> => item !== null), [pacote, protocolo]);
+
+  function abrirProtocolo(slug: string | null) {
+    const proximos = new URLSearchParams(params);
+    if (slug) proximos.set("protocolo", slug);
+    else proximos.delete("protocolo");
+    setParams(proximos);
+  }
 
   return (
     <div className="emerg">
@@ -84,7 +108,10 @@ export default function Emergencia() {
 
       {erro && <p className="emerg__erro">{erro} Abra esta tela uma vez com conexão para que ela fique disponível offline.</p>}
 
-      {!aberto && <>
+      {!protocolo && <>
+        {protocoloInvalido && (
+          <p className="emerg__erro">O protocolo solicitado não está publicado ou não existe.</p>
+        )}
         <p className="emerg__aviso">Protocolos de risco imediato de vida. O conteúdo é o mesmo da biblioteca — aqui ele está filtrado e ampliado para leitura rápida.</p>
         <div className="emerg__busca">
           <label htmlFor="busca-emergencia">Buscar assunto</label>
@@ -93,14 +120,14 @@ export default function Emergencia() {
           {pacote && <small aria-live="polite">{protocolosFiltrados.length} de {pacote.protocolos.length} protocolo(s)</small>}
         </div>
 
-        <ul className="emerg__lista">{protocolosFiltrados.map((p) => <li key={p.slug}><button className="emerg__alvo" onClick={() => { setAberto(p.slug); setSecaoAberta(0); window.scrollTo(0, 0); }}><strong>{p.titulo}</strong>{p.gatilho && <span>{p.gatilho}</span>}</button></li>)}</ul>
+        <ul className="emerg__lista">{protocolosFiltrados.map((p) => <li key={p.slug}><button className="emerg__alvo" onClick={() => abrirProtocolo(p.slug)}><strong>{p.titulo}</strong>{p.gatilho && <span>{p.gatilho}</span>}</button></li>)}</ul>
         {pacote && pacote.protocolos.length === 0 && !erro && <p className="emerg__aviso">Nenhum protocolo publicado no modo emergência.</p>}
         {pacote && pacote.protocolos.length > 0 && protocolosFiltrados.length === 0 && <p className="emerg__semResultado">{busca.trim() ? `Nenhum protocolo encontrado para “${busca.trim()}”${tema ? ` em ${tema}` : ""}.` : `Nenhum protocolo encontrado em ${tema}.`}</p>}
       </>}
 
       {protocolo && doc && (
         <article className="emerg__protocolo emerg-command">
-          <button className="emerg__voltar" onClick={() => setAberto(null)}>← Todos os protocolos</button>
+          <button className="emerg__voltar" onClick={() => abrirProtocolo(null)}>← Todos os protocolos</button>
           <div className="emerg-command__layout">
             <main className="emerg-command__main">
               <header className="emerg-command__hero">
@@ -121,6 +148,28 @@ export default function Emergencia() {
               </div>
 
               <p className="emerg__origem">{doc.title} · nível de fonte {doc.source_tier} · {doc.review_status}</p>
+
+              {relacionados.length > 0 && (
+                <section className="cartao" style={{ marginTop: "0.8rem" }}>
+                  <p className="eyebrow">Protocolos e documentos relacionados</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
+                    {relacionados.map((item) => item.tipo === "protocolo" ? (
+                      <button
+                        type="button"
+                        className="chip"
+                        key={item.slug}
+                        onClick={() => abrirProtocolo(item.slug)}
+                      >
+                        {item.titulo}
+                      </button>
+                    ) : (
+                      <Link className="chip" key={item.slug} to={`/biblioteca/${item.slug}`}>
+                        {item.titulo}
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
             </main>
 
             <aside className="emerg-command__quick" aria-label="Acesso rápido">
@@ -133,8 +182,17 @@ export default function Emergencia() {
               <Link to="/diretrizes"><Icone nome="evidencia" /><span>Diretrizes</span></Link>
             </aside>
           </div>
+          <GrafoRelacionados entityType="protocolo_emergencia" slug={protocolo.slug} />
           <footer className="emerg-command__footer"><strong>Emergência é tempo. Aja rápido.</strong><span className="emerg-command__ecg" aria-hidden="true" /></footer>
         </article>
+      )}
+      {protocolo && !doc && (
+        <section className="emerg__erro">
+          <p>O documento clínico deste protocolo não está publicado ou não foi encontrado.</p>
+          <button type="button" className="emerg__voltar" onClick={() => abrirProtocolo(null)}>
+            ← Todos os protocolos
+          </button>
+        </section>
       )}
     </div>
   );

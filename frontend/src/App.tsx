@@ -11,11 +11,13 @@ const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
 const TimelineDoencas = lazy(() => import("./pages/TimelineDoencas"));
 const MaterialPaciente = lazy(() => import("./pages/MaterialPaciente"));
+const MaterialPacienteDetalhe = lazy(() => import("./pages/MaterialPacienteDetalhe"));
 const Emergencia = lazy(() => import("./pages/Emergencia"));
 const Trilha = lazy(() => import("./pages/Trilha"));
 const CasosClinicos = lazy(() => import("./pages/CasosClinicos"));
 const CasoClinico = lazy(() => import("./pages/CasoClinico"));
 const Checklists = lazy(() => import("./pages/Checklists"));
+const ChecklistModelo = lazy(() => import("./pages/ChecklistModelo"));
 const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
 const Indicadores = lazy(() => import("./pages/Indicadores"));
 const Cursos = lazy(() => import("./pages/Cursos"));
@@ -163,11 +165,13 @@ export default function App() {
           <Route path="trilhas" element={<Trilhas />} />
           <Route path="trilhas/timeline" element={<TimelineDoencas />} />
           <Route path="material-paciente" element={<MaterialPaciente />} />
+          <Route path="material-paciente/:slug" element={<MaterialPacienteDetalhe />} />
           <Route path="emergencia" element={<Emergencia />} />
           <Route path="trilhas/:slug" element={<Trilha />} />
           <Route path="casos-clinicos" element={<CasosClinicos />} />
           <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
           <Route path="checklists" element={<Checklists />} />
+          <Route path="checklists/:slug" element={<ChecklistModelo />} />
           <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
           <Route path="indicadores" element={<Indicadores />} />
           <Route path="cursos" element={<Cursos />} />

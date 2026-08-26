@@ -175,6 +175,9 @@ export default function Checklists() {
                   <button className="botao botao--acao" onClick={() => iniciar(modelo.slug)}>
                     Usar nesta alta
                   </button>
+                  <Link className="botao" to={`/checklists/${modelo.slug}`}>
+                    Abrir e ver conexões
+                  </Link>
                   {modelo.documento_origem && (
                     <Link className="checklist__origem" to={`/biblioteca/${modelo.documento_origem}`}>
                       Ver protocolo de origem

@@ -51,7 +51,8 @@ from app.core.db import Base
 # Allowlist estrutural — só conteúdo global/editorial pode virar nó do grafo.
 # Além das frentes já cobertas por `related_content.py`, doenças especializadas
 # e fluxos de triagem são conteúdo global versionado/publicável em tabelas
-# próprias (`specialty_diseases` e `symptom_triage_guides`). Nenhum tipo de
+# próprias (`specialty_diseases` e `symptom_triage_guides`) e um nó taxonômico
+# interno de tema. Nenhum tipo de
 # dado de paciente entra aqui — ver nota de segurança no docstring do módulo.
 TIPOS_ENTIDADE_PERMITIDOS = frozenset({
     "documento",
@@ -69,6 +70,10 @@ TIPOS_ENTIDADE_PERMITIDOS = frozenset({
     "calculadora",
     "doenca",
     "triagem_sintoma",
+    # Nó interno de taxonomia. Não é conteúdo clínico nem dado de paciente:
+    # permite representar item -> tema em O(N), sem materializar uma malha
+    # O(N²) de pares `same_theme`.
+    "tema",
 })
 
 # Catálogo de tipos de relação — evita a proliferação caótica que o pedido
@@ -98,6 +103,10 @@ TIPOS_RELACAO_PERMITIDOS = frozenset({
     "patient_education_for",        # material de paciente sobre o tema
     "differential_for",             # doença explicitamente listada como diferencial de sintoma/condição
     "same_theme",                   # mesmo tema clínico (proveniência: derivado por tema)
+    "belongs_to_topic",             # item associado ao nó canônico do tema
+    "derived_from",                 # conteúdo derivado de uma fonte editorial explícita
+    "uses_flowchart",               # protocolo usa fluxograma declarado em metadado
+    "contains",                     # contêiner curado (trilha) contém item explícito
 })
 
 # Proveniência — nunca "confiança implícita". Toda relação carrega qual dos

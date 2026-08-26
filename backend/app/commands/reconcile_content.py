@@ -37,6 +37,7 @@ from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
 from app.services.importer import _resolve_markdown_slug, import_directory
+from app.services.knowledge_graph import backfill_mesmo_tema
 from app.services.study_slug_aliases import canonicalize_study_slugs
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
@@ -350,6 +351,12 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
             db, canonical_slugs, publish_reviewed=publish_reviewed
         )
         database = _database_inventory(db, canonical_slugs)
+        if database["below_minimum"] and not allow_partial:
+            raise RuntimeError(
+                "Reconciliação incompleta: "
+                + json.dumps(database["below_minimum"], ensure_ascii=False, sort_keys=True)
+            )
+        knowledge_graph = backfill_mesmo_tema(db)
     finally:
         db.close()
 
@@ -360,12 +367,8 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         "unpublished_unreviewed": unpublished_unreviewed,
         "migrated_study_track_progress": migrated_study_track_progress,
         "database": database,
+        "knowledge_graph": knowledge_graph,
     }
-    if database["below_minimum"] and not allow_partial:
-        raise RuntimeError(
-            "Reconciliação incompleta: "
-            + json.dumps(database["below_minimum"], ensure_ascii=False, sort_keys=True)
-        )
     return result
 
 

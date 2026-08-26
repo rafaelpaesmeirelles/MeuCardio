@@ -28,7 +28,7 @@ ROTA = {
     "medicamento": "/medicamentos?slug={slug}",
     "estudo": "/estudos/{slug}",
     "calculadora": "/calculadoras/{slug}",
-    "checklist": "/checklists",
+    "checklist": "/checklists/{slug}",
     "evidencia": "/evidencias/{slug}",
     "caso_clinico": "/casos-clinicos/{slug}",
 }

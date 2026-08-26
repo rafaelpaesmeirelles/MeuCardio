@@ -260,7 +260,9 @@ def ver_aplicacao(
     ).first()
     return {
         "id": run.id,
+        "checklist": checklist.slug if checklist else None,
         "condicao": checklist.condicao if checklist else "—",
+        "theme": checklist.theme if checklist else None,
         "scope_type": (checklist.scope_type or "doenca") if checklist else None,
         "documento_origem": checklist.documento_origem if checklist else None,
         "identificacao": run.identificacao_livre,
