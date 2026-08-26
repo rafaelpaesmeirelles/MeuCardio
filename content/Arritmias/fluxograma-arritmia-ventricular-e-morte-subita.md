@@ -120,18 +120,11 @@ Investigar e tratar, conforme o cenário:
 
 “Causa reversível” não significa automaticamente risco futuro zero; a ESC 2022 ressalta que sobreviventes de parada atribuída a causa aparentemente corrigível ainda podem manter risco relevante conforme a cardiopatia de base.
 
-## Conexões canônicas
+## Tudo com Tudo
 
-- `fluxograma-torsades-de-pointes-e-qt-longo-adquirido`
-- `torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo`
-- tempestade elétrica / posição SBC-SOBRAC 2026
-- síndrome coronariana aguda/isquemia quando TV polimórfica ocorre sem QT longo
-- fármacos pró-QT, hipocalemia, hipomagnesemia e hipocalcemia
-- ablação de TV, CDI e prevenção secundária de morte súbita
-
-## Pendências deliberadas
-
-1. Auditar `fluxograma-taquicardia-de-qrs-largo-esc-2019.md` para garantir que a distinção monomórfica/polimórfica esteja explícita à luz da AHA 2025.
-2. Auditar o serviço/calculadora ACLS 2025 e o documento farmacológico correspondente para consistência com o fluxo canônico, sem duplicar algoritmo.
-3. Manter o módulo de sulfato de magnésio alinhado à prioridade do choque na TV polimórfica sustentada; revisão de segurança concluída em 25/08/2026.
-4. Conectar formalmente hipomagnesemia/hipocalemia e exames canônicos de K/Mg em lotes separados.
+- [Taquicardia de QRS largo regular monomórfica sem diagnóstico estabelecido](fluxograma-taquicardia-de-qrs-largo-esc-2019.md)
+- [Fluxograma de torsades de pointes e QT longo adquirido](fluxograma-torsades-de-pointes-e-qt-longo-adquirido.md)
+- [Torsades, QT longo adquirido e escore de Tisdale](torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo.md)
+- [Sulfato de magnésio em cardiologia](../Farmacologia/sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa.md)
+- [Hipocalemia grave e reposição segura](../Terapia_intensiva/hipocalemia-grave-risco-arritmico-e-reposicao-segura.md)
+- [Hipomagnesemia, risco arrítmico e hipocalemia refratária](../Terapia_intensiva/hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao.md)

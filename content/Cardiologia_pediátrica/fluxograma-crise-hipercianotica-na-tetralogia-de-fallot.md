@@ -56,3 +56,9 @@ flowchart TD
 ## Regra fisiológica
 
 O objetivo é quebrar o ciclo de **agitação → maior obstrução dinâmica do TSVD/queda relativa da RVS → mais shunt direita-esquerda → pior hipóxia/acidemia**. Por isso, joelho-peito, redução de estímulo, pré-carga adequada e aumento de RVS são medidas centrais.
+
+## Tudo com Tudo
+
+- [Protocolo da crise hipercianótica na Tetralogia de Fallot](crise-hipercianotica-na-tetralogia-de-fallot.md)
+- [Tetralogia de Fallot: rastreio pré-natal, crise de hipóxia e estratégia cirúrgica](tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica.md)
+- [Parada cardiorrespiratória pediátrica — AHA/AAP 2025](parada-cardiorrespiratoria-pediatrica-aha-aap-2025.md)

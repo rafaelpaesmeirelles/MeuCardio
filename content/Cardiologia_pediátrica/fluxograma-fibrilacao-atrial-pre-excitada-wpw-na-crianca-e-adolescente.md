@@ -5,7 +5,10 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de emergência para taquicardia irregular pré-excitada, evitando adenosina e demais bloqueadores nodais."
 review_status: revisado
-source_refs: ["Brugada J, Blom N, Sarquella-Brugada G, et al. Europace. 2013;15(9):1337-1382. DOI: 10.1093/europace/eut082.", "EHRA/EAPCI/AEPC/PACES/HRS/APHRS/LAHRS clinical consensus statement. Europace. 2025;27(4):euaf067."]
+source_refs:
+  - "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia, developed with the Association for European Paediatric and Congenital Cardiology. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425."
+  - "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 AHA/AAP Guidelines for CPR and ECC. Circulation. 2025;152(16_suppl_2):S479-S537. DOI: 10.1161/CIR.0000000000001368. PMID: 41122885."
+review_note: "Fluxo revisado em 26/08/2026 contra ESC 2019 e PALS AHA/AAP 2025. Incluídas energia de cardioversão, contraindicação de amiodarona IV e seleção farmacológica sem dose pediátrica não sustentada; demais parâmetros operacionais permanecem vinculados ao protocolo institucional."
 ---
 
 # FA pré-excitada/WPW pediátrica
@@ -15,10 +18,10 @@ flowchart TD
   R0["Criança/adolescente com taquicardia<br/>irregular, muito rápida e QRS largo/variável"]
   P1["Suspeitar FA pré-excitada/WPW;<br/>monitorização + acesso + ECG"]
   D1{"Instabilidade?<br/>choque, isquemia, edema pulmonar,<br/>alteração importante de consciência"}
-  C1(["Sim: cardioversão elétrica<br/>sincronizada imediata"])
+  C1(["Sim: cardioversão sincronizada<br/>0,5–1 J/kg; se falhar, 2 J/kg"])
   D2{"Ritmo irregular com<br/>pré-excitação provável?"}
-  P2["NÃO usar adenosina, digoxina,<br/>verapamil/diltiazem ou beta-bloqueador isolado"]
-  P3["Estável: procainamida/estratégia que atue<br/>na via acessória ou cardioversão,<br/>conforme protocolo pediátrico"]
+  P2["NÃO usar adenosina, digoxina,<br/>verapamil/diltiazem, beta-bloqueador<br/>isolado ou amiodarona IV"]
+  P3["Estável: considerar procainamida ou ibutilida IV<br/>com especialista e biblioteca pediátrica;<br/>cardioversão se falha"]
   D3{"Degenerou para FV/sem pulso?"}
   C2(["PCR pediátrica + desfibrilação"])
   C3(["Após conversão: eletrofisiologia<br/>e avaliação de ablação da via acessória"])
@@ -41,4 +44,10 @@ flowchart TD
 
 ## Regra prática
 
-Adenosina é excelente em algumas TSVs pediátricas, mas **pode ser perigosa na FA pré-excitada**. A irregularidade do ritmo é a pista que muda o algoritmo.
+Adenosina é excelente em algumas TSVs pediátricas, mas **pode ser perigosa na FA pré-excitada**. A irregularidade do ritmo é a pista que muda o algoritmo. O fluxo não fornece dose farmacológica: usar referência institucional pediátrica por peso, monitorização contínua e suporte de eletrofisiologia.
+
+## Tudo com Tudo
+
+- [Protocolo de FA pré-excitada/WPW pediátrica](fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente.md)
+- [Taquiarritmia pediátrica com pulso — AHA/AAP 2025](taquiarritmia-pediatrica-com-pulso-aha-aap-2025.md)
+- [Ablação por cateter na criança](ablacao-por-cateter-na-crianca-limites-de-peso-e-idade-crioablacao-e-mapeamento-eletroanatomico.md)

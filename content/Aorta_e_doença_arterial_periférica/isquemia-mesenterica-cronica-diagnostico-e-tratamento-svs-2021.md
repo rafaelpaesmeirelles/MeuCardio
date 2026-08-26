@@ -2,9 +2,10 @@
 title: "Isquemia Mesentérica Crônica: Diagnóstico e Tratamento (SVS 2021)"
 slug: isquemia-mesenterica-cronica-diagnostico-e-tratamento-svs-2021
 theme: "Aorta e doença arterial periférica"
-kind: protocolo
+kind: diretriz
 summary: "Primeiro documento do tema sobre isquemia mesentérica. A diretriz da Society for Vascular Surgery usa o sistema GRADE (Grade 1/forte, Grade 2/fraca ou condicional + qualidade A-C) — mantido aqui na nomenclatura original, sem conversão para classe/nível ESC, que a fonte não usa e este documento não pode fabricar."
 review_status: revisado
+review_note: "Classificação e escopo revisados em 26/08/2026. O arquivo foi corrigido de protocolo para diretriz e a identificação da fonte primária foi confirmada (Huber et al., PMID 33171195, DOI 10.1016/j.jvs.2020.10.029). O marcador humano foi removido: isquemia mesentérica aguda e causas não ateroscleróticas permanecem exclusões explícitas, sem extrapolação. Revisão médica independente pendente antes do uso assistencial."
 source_refs: ["Huber TS, Björck M, Chandra A, Clouse WD, Dalsing MC, Oderich GS, Smeds MR, Murad MH; Society for Vascular Surgery. Chronic mesenteric ischemia: Clinical practice guidelines from the Society for Vascular Surgery. J Vasc Surg. 2021;73(1 Suppl):87S-115S. DOI: 10.1016/j.jvs.2020.10.029. Texto integral em PDF de acesso aberto conferido página a página nesta sessão (06/08/2026), seção 'Summary of the Guidelines'. NOTA DE SISTEMA: a diretriz usa o sistema GRADE (Grade 1 = recomendação forte/'we recommend'; Grade 2 = recomendação fraca ou condicional/'we suggest'; qualidade de evidência A=alta, B=moderada, C=baixa/muito baixa, além de 'Ungraded Good Practice Statement' para princípios cirúrgicos sem evidência direta) — não é o sistema de Classe I/IIa/IIb/III da ESC/AHA/SBC, e este documento preserva a nomenclatura original em vez de forçar equivalência inexistente."]
 ---
 
@@ -113,11 +114,10 @@ procedimentos iniciais de revascularização mesentérica.
 
 A própria diretriz é explícita quanto ao escopo: **não aborda** isquemia
 mesentérica aguda (IMA) nem causas não ateroscleróticas de IMC — síndrome do
-ligamento arqueado mediano, dissecção de AMS. Fica registrado como
-`VERIFICAÇÃO HUMANA NECESSÁRIA` a busca de diretriz dedicada a esses cenários
-para complementar este tema (a diretriz combinada ESC 2024 de doença arterial
-periférica e aórtica, já coberta neste tema, não detalha isquemia mesentérica
-com o mesmo nível de granularidade desta fonte).
+ligamento arqueado mediano e dissecção de AMS. Este documento não deve ser
+usado para conduzir nenhum desses cenários. A diretriz combinada ESC 2024 de
+doença arterial periférica e aórtica é complementar, mas não detalha isquemia
+mesentérica com o mesmo nível de granularidade da fonte SVS.
 - **fonte**: SVS 2021, Métodos
 
 ## Armadilhas de leitura
@@ -132,3 +132,7 @@ com o mesmo nível de granularidade desta fonte).
   citado no racional da diretriz.
 - Nutrição parenteral **não é ponte aceitável** para adiar a revascularização —
   é contraindicação explícita, não opção de manejo conservador.
+
+## Tudo com Tudo
+
+- [Diretriz combinada ESC 2024 de doença arterial periférica e aórtica](doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024.md)

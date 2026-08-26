@@ -7,6 +7,7 @@ summary: "Árvore de decisão atualizada para TV polimórfica sustentada e torsa
 review_status: revisado
 source_refs: ["Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884 — TV polimórfica sustentada: choque não sincronizado imediato (COR 1, LOE B-NR); magnésio pode ser considerado na recorrência associada a QT longo/TdP (COR 2b, LOE C-LD); sem benefício do magnésio rotineiro na TV polimórfica com QT normal (COR 3, LOE C-LD).", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — retirada de fármaco causal, correção de eletrólitos, magnésio IV na TdP e aumento da frequência com pacing/isoproterenol em recorrência no QT longo adquirido.", "Tisdale JE, Jaynes HA, Kingery JR, et al. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — escore de risco de prolongamento de QTc em pacientes hospitalizados, não escore de tratamento da TdP; ≥2 fármacos pró-QT somam 6 pontos no total (3 do primeiro + 3 adicionais)."]
 legacy_source: "Atualização de segurança e revisão documental independente concluídas em 24/08/2026. A versão anterior encaminhava TV polimórfica com pulso e instabilidade para cardioversão sincronizada e não deixava claro que ≥2 fármacos pró-QT somam 6 pontos no total no Tisdale. O texto foi alinhado à AHA 2025, à ESC 2022 e ao estudo original do Tisdale; parâmetros operacionais continuam sujeitos ao protocolo institucional."
+review_note: "Revisão de 26/08/2026: recomendações e classes foram novamente conferidas na página oficial AHA 2025. A antiga marca de validação foi removida: doses, energia específica e metas eletrolíticas não são alegadas neste documento e permanecem, por desenho, no protocolo institucional. Conexões antes textuais foram convertidas em links locais existentes."
 ---
 
 # Fluxograma: Torsades de Pointes e QT Longo Adquirido — Conduta Imediata
@@ -64,7 +65,7 @@ A distinção importa porque TV polimórfica sem QT longo é frequentemente isqu
 
 Hipocalemia, hipomagnesemia e hipocalcemia reduzem a reserva de repolarização e devem ser corrigidas. A faixa de K⁺ **4,5-5,0 mmol/L** aparece em recomendações/consensos mais antigos com evidência baixa; a AHA 2025 não a transforma em meta universal para toda TdP.
 
-> **VALIDAÇÃO INSTITUCIONAL NECESSÁRIA:** metas numéricas de K/Mg, dose/velocidade de MgSO4 e energia específica do choque devem ser validadas contra o protocolo local antes de virar ordem operacional.
+Este fluxo **não prescreve** meta numérica universal de K/Mg, dose ou velocidade de MgSO4 nem energia específica do choque. Esses parâmetros operacionais pertencem ao protocolo institucional; a ausência deles aqui não é uma pendência de conteúdo.
 
 ### 4. Pacing/isoproterenol são estratégia de recorrência, não substituto do choque
 
@@ -92,17 +93,10 @@ O Tisdale foi criado para predizer **prolongamento de QTc em paciente hospitaliz
 
 Estratos originais: baixo 0-6, moderado 7-10, alto 11-21. O escore não deve ser automaticamente generalizado para ambulatório, pediatria ou para estimar risco absoluto de TdP.
 
-## Conexões prioritárias
+## Tudo com Tudo
 
-- `torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo`
-- `sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa`
-- `hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao`
-- fármacos pró-QT (sotalol, ibutilida, metadona, antipsicóticos, antieméticos e outros)
-- hipocalemia/hipomagnesemia/hipocalcemia
-- isquemia miocárdica/ACS quando TV polimórfica ocorre sem QT longo
-- intoxicação digitálica quando houver TV bidirecional/polimórfica por mecanismo tóxico
-
-## Pendências para os próximos lotes
-
-1. Manter o verbete farmacológico alinhado à prioridade do choque na TV polimórfica sustentada.
-2. Auditoria textual do corpus concluída em 25/08/2026: não restou orientação ativa de cardioversão sincronizada para TV polimórfica sustentada nem indicação rotineira de magnésio para TV polimórfica com QT normal.
+- [Arritmia ventricular e risco de morte súbita](fluxograma-arritmia-ventricular-e-morte-subita.md)
+- [Torsades, QT longo adquirido e escore de Tisdale](torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo.md)
+- [Sulfato de magnésio em cardiologia](../Farmacologia/sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa.md)
+- [Hipocalemia grave e reposição segura](../Terapia_intensiva/hipocalemia-grave-risco-arritmico-e-reposicao-segura.md)
+- [Hipomagnesemia, risco arrítmico e hipocalemia refratária](../Terapia_intensiva/hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao.md)

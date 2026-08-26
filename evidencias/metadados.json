@@ -45447,5 +45447,464 @@
     "review_status": "revisado",
     "published": false,
     "review_note": "Classe III e nível C conferidos na tabela da diretriz primária; se houver envolvimento miocárdico, aplicar a avaliação específica de miocardite."
+  },
+  {
+    "slug": "beta-bloqueador-diltiazem-ou-verapamil-primeira-escolha-controle-de-frequencia-na-fa-com-fevi-preservada",
+    "statement": "Betabloqueadores, diltiazem ou verapamil são recomendados como fármacos de primeira escolha para controle da frequência cardíaca em pacientes com fibrilação atrial e fração de ejeção do ventrículo esquerdo igual ou superior a 40%.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "controle de frequência",
+      "betabloqueador",
+      "diltiazem",
+      "verapamil"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-eou-digoxina-controle-de-frequencia-na-fa-com-fevi-reduzida",
+    "statement": "Betabloqueadores e/ou digoxina são recomendados para controle da frequência cardíaca em pacientes com fibrilação atrial e fração de ejeção do ventrículo esquerdo inferior a 40%.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "controle de frequência",
+      "betabloqueador",
+      "digoxina",
+      "icfer"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "amiodarona-intravenosa-para-controle-agudo-de-frequencia-na-fa-com-instabilidade-hemodinamica",
+    "statement": "Em pacientes críticos com fibrilação atrial e fração de ejeção do ventrículo esquerdo gravemente reduzida, a amiodarona intravenosa pode ser considerada para o controle agudo da frequência. Na instabilidade hemodinâmica atribuível à fibrilação atrial, a cardioversão elétrica sincronizada é a intervenção prioritária e não deve ser retardada pela amiodarona.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "amiodarona",
+      "controle de frequência",
+      "instabilidade hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "amiodarona-controle-de-ritmo-a-longo-prazo-em-todos-os-pacientes-com-fa-incluindo-icfer",
+    "statement": "A amiodarona é recomendada para controle de ritmo a longo prazo em todos os pacientes com fibrilação atrial, incluindo aqueles com insuficiência cardíaca com fração de ejeção reduzida; devido à sua toxicidade extracardíaca, outros antiarrítmicos devem ser considerados primeiro sempre que possível.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "amiodarona",
+      "controle de ritmo",
+      "icfer"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dronedarona-controle-de-ritmo-a-longo-prazo-na-fa-com-funcao-ventricular-normal-ou-icfep",
+    "statement": "A dronedarona é recomendada para controle de ritmo a longo prazo em pacientes com fibrilação atrial e função ventricular esquerda normal ou levemente comprometida, porém estável, ou com insuficiência cardíaca com fração de ejeção preservada, cardiopatia isquêmica ou valvar.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "dronedarona",
+      "controle de ritmo",
+      "icfep"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "flecainida-ou-propafenona-controle-de-ritmo-a-longo-prazo-na-fa-sem-cardiopatia-estrutural",
+    "statement": "Flecainida ou propafenona são recomendadas para controle de ritmo a longo prazo em pacientes com fibrilação atrial e função ventricular esquerda normal, desde que não haja cardiopatia estrutural, hipertrofia ventricular esquerda significativa ou isquemia miocárdica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "flecainida",
+      "propafenona",
+      "controle de ritmo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sotalol-pode-ser-considerado-para-controle-de-ritmo-a-longo-prazo-na-fa-com-monitorizacao",
+    "statement": "O sotalol pode ser considerado para controle de ritmo a longo prazo em pacientes com fibrilação atrial e função ventricular esquerda normal ou cardiopatia isquêmica, desde que seja realizada monitorização rigorosa do intervalo QT, potássio sérico, clearance de creatinina e outros fatores de risco de proarritmia.",
+    "recommendation_class": "IIb",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "sotalol",
+      "controle de ritmo",
+      "proarritmia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "terapia-antiarritmica-nao-recomendada-na-fa-permanente-sob-controle-de-frequencia",
+    "statement": "A terapia com antiarrítmicos não é recomendada em pacientes com fibrilação atrial permanente sob controle de frequência, nem em pacientes com distúrbios avançados de condução, a menos que haja marcapasso antibradicardia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "antiarrítmico",
+      "fa permanente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vernakalant-flecainida-ou-propafenona-para-cardioversao-farmacologica-da-fa-de-inicio-recente",
+    "statement": "Para cardioversão farmacológica de fibrilação atrial de início recente, recomenda-se vernakalant intravenoso, exceto em síndrome coronariana aguda recente ou insuficiência cardíaca grave; flecainida ou propafenona são alternativas somente na ausência de cardiopatia estrutural significativa.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "cardioversão farmacológica",
+      "vernakalanta",
+      "flecainida",
+      "propafenona"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "amiodarona-intravenosa-para-cardioversao-da-fa-em-pacientes-com-ic-ou-cardiopatia-estrutural",
+    "statement": "A amiodarona intravenosa é recomendada para cardioversão de fibrilação atrial em pacientes com insuficiência cardíaca ou cardiopatia estrutural, quando a cardioversão tardia é consistente com a situação clínica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "amiodarona",
+      "cardioversão",
+      "cardiopatia estrutural"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pre-tratamento-com-antiarritmico-para-facilitar-a-cardioversao-eletrica-da-fa",
+    "statement": "O pré-tratamento com amiodarona, flecainida, ibutilida ou propafenona deve ser considerado para facilitar o sucesso da cardioversão elétrica da fibrilação atrial.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "cardioversão elétrica",
+      "antiarrítmico",
+      "ibutilida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pill-in-the-pocket-flecainida-ou-propafenona-para-cardioversao-guiada-pelo-paciente-na-fa",
+    "statement": "Em pacientes selecionados com fibrilação atrial pouco frequente e de início recente, sem cardiopatia estrutural ou isquêmica significativa, uma dose oral única autoadministrada de flecainida ou propafenona ('pill-in-the-pocket') deve ser considerada somente após eficácia e segurança previamente testadas em ambiente médico e com bloqueio concomitante do nó atrioventricular, salvo contraindicação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498. PMID 32860505. DOI 10.1093/eurheartj/ehaa612.",
+    "theme": "Farmacologia",
+    "tags": [
+      "fibrilação atrial",
+      "pill-in-the-pocket",
+      "flecainida",
+      "propafenona",
+      "ambulatorial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "isglt2-em-diabetes-tipo-2-e-drc-para-prevencao-de-insuficiencia-cardiaca",
+    "statement": "Em pacientes com diabetes tipo 2 e doença renal crônica, um inibidor de SGLT2 é recomendado para reduzir o risco de hospitalização por insuficiência cardíaca ou morte cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. PMID 37622666. DOI 10.1093/eurheartj/ehad195.",
+    "theme": "Farmacologia",
+    "tags": [
+      "isglt2",
+      "diabetes tipo 2",
+      "doença renal crônica",
+      "prevenção de insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reposicao-de-ferro-intravenoso-para-alivio-de-sintomas-na-icfer-e-icfem-com-deficiencia-de-ferro",
+    "statement": "A reposição de ferro intravenoso é recomendada em pacientes sintomáticos com insuficiência cardíaca com fração de ejeção reduzida ou levemente reduzida e deficiência de ferro, para aliviar os sintomas e melhorar a qualidade de vida.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. PMID 37622666. DOI 10.1093/eurheartj/ehad195.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ferro intravenoso",
+      "deficiência de ferro",
+      "icfer",
+      "icfem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-carboximaltose-ou-derisomaltose-para-reduzir-hospitalizacao-por-ic",
+    "statement": "A reposição de ferro intravenoso com carboximaltose férrica ou derisomaltose férrica deve ser considerada em pacientes sintomáticos com insuficiência cardíaca com fração de ejeção reduzida ou levemente reduzida e deficiência de ferro, para reduzir o risco de hospitalização por insuficiência cardíaca.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. PMID 37622666. DOI 10.1093/eurheartj/ehad195.",
+    "theme": "Farmacologia",
+    "tags": [
+      "carboximaltose férrica",
+      "derisomaltose férrica",
+      "deficiência de ferro",
+      "hospitalização por ic"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-ou-verapamil-intravenoso-na-taquicardia-ventricular-idiopatica-tolerada",
+    "statement": "Em pacientes com taquicardia ventricular idiopática hemodinamicamente tolerada, o tratamento com betabloqueador intravenoso na taquicardia da via de saída do ventrículo direito, ou verapamil intravenoso na taquicardia fascicular, é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572. DOI 10.1093/eurheartj/ehac262.",
+    "theme": "Farmacologia",
+    "tags": [
+      "taquicardia ventricular idiopática",
+      "verapamil",
+      "betabloqueador",
+      "tv fascicular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-nao-seletivo-e-amiodarona-intravenosa-na-tempestade-eletrica-com-cardiopatia-estrutural",
+    "statement": "Em pacientes com cardiopatia estrutural e tempestade elétrica, a terapia antiarrítmica com betabloqueador, preferencialmente não seletivo, em combinação com amiodarona intravenosa, é recomendada, a menos que contraindicada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572. DOI 10.1093/eurheartj/ehac262.",
+    "theme": "Farmacologia",
+    "tags": [
+      "tempestade elétrica",
+      "betabloqueador",
+      "amiodarona",
+      "cardiopatia estrutural"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "magnesio-intravenoso-com-reposicao-de-potassio-em-torsades-de-pointes",
+    "statement": "O magnésio intravenoso com reposição de potássio é recomendado em pacientes com torsades de pointes.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572. DOI 10.1093/eurheartj/ehac262.",
+    "theme": "Farmacologia",
+    "tags": [
+      "torsades de pointes",
+      "magnésio",
+      "potássio",
+      "proarritmia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-intravenoso-na-taquicardia-ou-fibrilacao-ventricular-recorrente-durante-o-iamcsst",
+    "statement": "O tratamento com betabloqueador intravenoso é indicado em pacientes com taquicardia ventricular polimórfica ou fibrilação ventricular recorrente durante o infarto agudo do miocárdio com supradesnivelamento do segmento ST, salvo contraindicação.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572. DOI 10.1093/eurheartj/ehac262.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "iamcsst",
+      "fibrilação ventricular",
+      "taquicardia ventricular polimórfica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antiarritmico-profilatico-alem-de-betabloqueador-nao-recomendado-na-sindrome-coronariana-aguda",
+    "statement": "O tratamento profilático com antiarrítmicos, além dos betabloqueadores, não é recomendado na síndrome coronariana aguda.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572. DOI 10.1093/eurheartj/ehac262.",
+    "theme": "Farmacologia",
+    "tags": [
+      "antiarrítmico profilático",
+      "síndrome coronariana aguda",
+      "betabloqueador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "heart-score-deve-ser-utilizado-para-estratificacao-risco-alta-hospitalar",
+    "statement": "Em pacientes com dor torácica aguda no pronto-socorro, o escore HEART deve ser utilizado para estratificação de risco e auxílio na decisão de alta hospitalar.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021",
+    "reference": "Nicolau JC et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore HEART",
+      "dor torácica",
+      "pronto-socorro",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "heart-score-menor-igual-3-troponina-negativa-liberacao-reavaliacao-ambulatorial",
+    "statement": "Pacientes com escore HEART ≤ 3, troponina negativa no tempo apropriado ao ensaio/protocolo utilizado, eletrocardiograma sem alteração isquêmica e ausência de antecedentes de doença arterial coronariana podem receber alta do serviço de emergência para reavaliação ambulatorial.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021",
+    "reference": "Nicolau JC et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore HEART",
+      "dor torácica",
+      "alta precoce",
+      "troponina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-edacs-adapt-opcao-ao-heart-estratificacao-risco",
+    "statement": "O uso dos escores EDACS e ADAPT para estratificação de risco clínico pode ser considerado como opção ao escore HEART em pacientes com dor torácica aguda.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021",
+    "reference": "Nicolau JC et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore EDACS",
+      "escore ADAPT",
+      "escore HEART",
+      "dor torácica",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "heart-score-liberacao-precoce-atendidos-por-ambulancia",
+    "statement": "O uso do escore HEART para apoiar liberação precoce após atendimento iniciado por ambulância recebeu recomendação IIb/C na diretriz de 2021, mas não havia validação extra-hospitalar; o escore não autoriza alta na ambulância nem substitui avaliação e protocolo de troponina no serviço de emergência.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021",
+    "reference": "Nicolau JC et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnivelamento do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090.",
+    "theme": "Calculadoras",
+    "tags": [
+      "escore HEART",
+      "atendimento pré-hospitalar",
+      "liberação precoce",
+      "dor torácica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

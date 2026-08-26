@@ -47,21 +47,21 @@ O oxigênio isolado pode produzir melhora limitada enquanto o shunt direita-esqu
 
 ### 2. Corrigir hipovolemia quando presente
 
-A revisão pediátrica recomenda **expansão volêmica quando houver sinais de hipovolemia/choque**, pois a fisiologia da Tetralogia depende de enchimento adequado do VD. Este protocolo não fixa volume em mL/kg porque as fontes primárias usadas nesta ficha não estabelecem um bolus universal para toda criança; para volume específico, **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme protocolo de ressuscitação pediátrica e condição hemodinâmica.
+A revisão pediátrica recomenda **expansão volêmica quando houver sinais de hipovolemia/choque**, pois a fisiologia da Tetralogia depende de enchimento adequado do VD. Este protocolo não fixa volume em mL/kg porque as fontes não estabelecem um bolus universal para toda criança; titular pelo protocolo de ressuscitação pediátrica, condição hemodinâmica e reavaliação de perfusão/congestão.
 
 ### 3. Analgesia/sedação
 
-Analgesia e sedação ajudam a romper o ciclo de agitação, catecolaminas e piora da obstrução dinâmica. A literatura cita morfina e outros agentes. **Dose específica não é fixada aqui; VERIFICAÇÃO HUMANA NECESSÁRIA** contra protocolo pediátrico/bula vigente antes da administração.
+Analgesia e sedação ajudam a romper o ciclo de agitação, catecolaminas e piora da obstrução dinâmica. A literatura cita morfina e outros agentes, mas não sustenta uma dose universal para esta ficha; selecionar e titular o fármaco pelo protocolo pediátrico institucional e pela resposta hemodinâmica.
 
 ### 4. Aumentar a RVS se a crise persistir
 
 Agonistas alfa/vasopressores como **fenilefrina**, noradrenalina ou vasopressina podem aumentar RVS e reduzir o shunt direita-esquerda. A seleção depende do acesso, condição hemodinâmica e experiência da equipe.
 
-Nenhuma dose é registrada nesta ficha porque não foi confirmada em diretriz AHA/ESC/SBC ou bula vigente dentro desta revisão; para dose específica, **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+Nenhuma dose de vasopressor é registrada nesta ficha porque as fontes revisadas não definem posologia universal para o episódio. Usar bomba de infusão, monitorização contínua e protocolo institucional de UTI pediátrica; não extrapolar dose deste texto.
 
 ### 5. Reduzir espasmo do TSVD
 
-Betabloqueadores podem ser usados para reduzir taquicardia e espasmo muscular infundibular. A revisão de terapia intensiva pediátrica cita propranolol como fármaco frequentemente utilizado em crianças propensas a spells. **Dose aguda específica: VERIFICAÇÃO HUMANA NECESSÁRIA.**
+Betabloqueadores podem ser usados para reduzir taquicardia e espasmo muscular infundibular. A revisão de terapia intensiva pediátrica cita propranolol como fármaco frequentemente utilizado em crianças propensas a spells, mas não valida uma dose aguda universal; a administração fica restrita ao protocolo institucional e à equipe pediátrica experiente.
 
 ## Crise grave ou refratária
 
@@ -85,3 +85,9 @@ Migrar imediatamente para o **algoritmo de parada cardiorrespiratória pediátri
 - Induzir anestesia sem antecipar queda de RVS.
 - Repetir grandes volumes sem reavaliação de perfusão e congestão.
 - Adiar cardiologia/cirurgia após spell grave ou recorrente.
+
+## Tudo com Tudo
+
+- [Fluxograma da crise hipercianótica na Tetralogia de Fallot](fluxograma-crise-hipercianotica-na-tetralogia-de-fallot.md)
+- [Tetralogia de Fallot: rastreio pré-natal, crise de hipóxia e estratégia cirúrgica](tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica.md)
+- [Fluxograma de parada cardiorrespiratória pediátrica — AHA/AAP 2025](fluxograma-parada-cardiorrespiratoria-pediatrica-aha-aap-2025.md)

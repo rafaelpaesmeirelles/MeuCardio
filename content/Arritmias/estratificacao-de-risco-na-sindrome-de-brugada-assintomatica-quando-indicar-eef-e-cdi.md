@@ -4,7 +4,18 @@ slug: "estratificacao-de-risco-na-sindrome-de-brugada-assintomatica-quando-indic
 theme: "Arritmias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080", "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: Results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972", "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666", "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495", "Bazoukis G, et al. The Role of Electrophysiological Study in the Risk Stratification of Brugada Syndrome. Cardiol Rev. 2023. PMID: 37126436", "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275", "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344", "Rattanawong P, Kulthamrongsri N, Chung EH. Exercise and Exercise Stress Testing in Brugada Syndrome: Diagnostic, Prognostic, and Safety Implications. JACC Asia. 2026;6(6):848-859. DOI: 10.1016/j.jacasi.2026.03.021. PMID: 42233564 — revisão narrativa, conferida contra o abstract indexado no PubMed em 08/08/2026."]
+source_refs:
+  - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572. Texto integral e Pocket Guidelines conferidos em 26/08/2026."
+  - "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on inherited primary arrhythmia syndromes. Europace. 2013;15(10):1389-1406. DOI: 10.1093/europace/eut272. PMID: 24011539."
+  - "Sieira J, Brugada P. Brugada Syndrome: Defining the Risk in Asymptomatic Patients. Arrhythm Electrophysiol Rev. 2016;5(3):164-169. PMID: 28116080."
+  - "Probst V, et al. FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972."
+  - "Priori SG, et al. PRELUDE registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666."
+  - "Sieira J, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495."
+  - "Bazoukis G, et al. Role of electrophysiological study in Brugada syndrome risk stratification. Cardiol Rev. 2023. PMID: 37126436."
+  - "Gaita F, et al. The Brugada syndrome: risk stratification. Eur Heart J Suppl. 2023;25(Suppl C):C27-C31. PMID: 37125275."
+  - "Sieira J, et al. A score model to predict risk of events in Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. PMID: 28379344."
+  - "Rattanawong P, et al. Exercise and Exercise Stress Testing in Brugada Syndrome. JACC Asia. 2026;6(6):848-859. DOI: 10.1016/j.jacasi.2026.03.021. PMID: 42233564."
+review_note: "Revisão de 26/08/2026: incorporadas as recomendações específicas da ESC 2022 para o assintomático (EEF IIb/B; CDI em selecionados com FV induzível IIb/C; ablação III/C). Classes do consenso HRS/EHRA/APHRS 2013 conferidas no texto primário. Removida a afirmação desatualizada de que não existe recomendação formal para esse grupo."
 legacy_source: "Documento novo. O documento existente de canalopatias (content/Arritmias/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md) cobre diagnóstico e manejo geral e cita, como armadilha isolada, que CDI de rotina no assintomático sem evento documentado é inadequado — sem desenvolver a estratificação de risco em si. O documento de escore de Sieira (escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa.md) cobre o escore combinado e seu fracasso de validação externa, mas não o debate específico sobre inducibilidade no EEF nem o recorte assintomático puro. Este documento preenche essa lacuna: a decisão prática de EEF e/ou CDI em quem NUNCA teve síncope nem parada cardíaca. Atualizado em 08/08/2026 com seção sobre teste ergométrico (JACC Asia 2026, PMID 42233564) — nenhuma das ferramentas de risco já descritas neste documento (EEF, escore de Sieira, história familiar) incluía o teste de esforço; a revisão nova mostra que ele pode ter papel diagnóstico e prognóstico complementar."
 ---
 
@@ -12,7 +23,23 @@ legacy_source: "Documento novo. O documento existente de canalopatias (content/A
 
 ## O problema clínico
 
-A maioria dos pacientes com síndrome de Brugada é diagnosticada **sem nunca ter tido síncope ou parada cardíaca** — por padrão eletrocardiográfico tipo 1 achado em ECG de rotina, em rastreio familiar após um caso índice, ou incidentalmente durante investigação de febre ou uso de fármaco bloqueador de canal de sódio. Para esse grupo, as diretrizes clássicas (ESC 2015 e o consenso HRS/EHRA/APHRS 2013) definem claramente a conduta em quem **já teve** evento — parada cardíaca abortada é indicação Classe I de CDI, síncope com padrão tipo 1 espontâneo é Classe IIa —, mas **não oferecem recomendação específica para quem nunca teve nenhum dos dois** (Sieira J, Brugada P. Arrhythm Electrophysiol Rev. 2016;5(3):164-169, PMID 28116080). É exatamente essa lacuna — decidir sozinho, sem uma classe de recomendação pronta — que faz da síndrome de Brugada assintomática um dos cenários mais discutidos da eletrofisiologia clínica.
+A maioria dos pacientes com síndrome de Brugada é diagnosticada **sem nunca
+ter tido síncope ou parada cardíaca** — por padrão eletrocardiográfico tipo 1
+em ECG de rotina, rastreio familiar, febre ou teste com bloqueador de canal de
+sódio. O consenso HRS/EHRA/APHRS 2013 e a ESC 2015 concentravam as classes
+mais fortes em quem já havia apresentado evento. A **ESC 2022**, porém, passou
+a trazer recomendações explícitas para o assintomático:
+
+- EEF **pode ser considerado** no assintomático com padrão tipo 1 espontâneo
+  (**Classe IIb, nível B**);
+- CDI **pode ser considerado** em assintomáticos selecionados com FV induzida
+  no EEF usando até dois extraestímulos (**Classe IIb, nível C**);
+- ablação por cateter no assintomático **não é recomendada**
+  (**Classe III, nível C**).
+
+Essas classes fracas não autorizam EEF ou CDI de rotina: formalizam uma
+seleção individualizada justamente porque o risco absoluto é baixo e o valor
+prognóstico da inducibilidade permanece controverso.
 
 ## A incidência de eventos no assintomático é baixa, mas não desprezível
 
@@ -63,7 +90,12 @@ O papel da história familiar mudou de posição na própria literatura do grupo
 
 ## Síntese: quando o CDI é justificado, e quando é excessivo, no assintomático
 
-Não existe recomendação formal de classe (I/IIa/IIb/III) das diretrizes de sociedade especificamente dirigida ao paciente assintomático — as classes existentes (ESC 2015: Classe I para sobrevivente de parada cardíaca, Classe IIa para síncope com padrão espontâneo, Classe IIb considerando inducibilidade) foram desenhadas para o paciente **sintomático**, e a revisão de Sieira e Brugada é explícita: "nenhuma declaração específica é feita para pacientes assintomáticos" (PMID 28116080). Na ausência de uma classe pronta, a síntese que a própria literatura de risco propõe é de julgamento combinado, não de gatilho único:
+A ESC 2022 fornece hoje uma via formal, mas deliberadamente cautelosa:
+**EEF IIb/B** no assintomático com tipo 1 espontâneo e **CDI IIb/C** apenas em
+selecionados com FV induzida com até dois extraestímulos. Uma Classe IIb
+significa que a estratégia *pode* ser considerada; não transforma o resultado
+positivo em indicação automática. A síntese da literatura continua sendo de
+julgamento combinado, não de gatilho único:
 
 - **Três variáveis merecem consideração especial** no assintomático, segundo a coorte mais extensa e de seguimento mais longo dedicada ao tema: **padrão tipo 1 espontâneo, disfunção do nó sinusal e arritmia ventricular indutível na estimulação programada** (PMID 28116080).
 - **Padrão tipo 1 espontâneo isolado NÃO justifica, por si só, implante de CDI** — mesmo sendo a variável mais consistentemente associada a risco em toda a literatura, isoladamente ele não é suficiente (PMID 28116080). É um sinal de alerta que pede avaliação combinada, não uma indicação automática.
@@ -114,6 +146,18 @@ número de risco relativo ou HR.
 - **Descartar história familiar de morte súbita sem checar o recorte específico** — múltiplos parentes de primeiro grau falecidos antes dos 35 anos tem peso relatado como comparável ao padrão espontâneo, mesmo que história familiar genérica não tenha mostrado o mesmo peso em registros maiores como o FINGER.
 - **Ignorar o custo do CDI na decisão.** Cerca de 20% de choque inapropriado e 15% de complicação relacionada ao dispositivo são números altos o bastante para pesar contra o implante quando a taxa de evento anual de base é de apenas 0,5%.
 - **Aplicar o escore de Sieira como critério único e suficiente** para decidir a favor ou contra o CDI — seu desempenho caiu de C-index 0,82 (derivação) para 0,58 (validação externa independente), ou seja, próximo do acaso fora da coorte original.
-- **Presumir que existe recomendação de classe (I/IIa/IIb/III) formal das diretrizes específica para o assintomático** — não existe; as classes existentes de ESC 2015 e do consenso HRS/EHRA/APHRS 2013 foram escritas para quem já teve síncope ou parada cardíaca, e aplicá-las ao assintomático puro é extrapolação, não recomendação direta.
+- **Presumir que não existe recomendação formal para o assintomático** —
+  isso era compatível com revisões baseadas nas diretrizes anteriores, mas
+  ficou desatualizado com a ESC 2022. O erro oposto é ler **IIb** como
+  indicação rotineira: EEF e CDI permanecem decisões seletivas.
+- **Extrapolar classes entre documentos** — as Classes I/IIa do consenso
+  HRS/EHRA/APHRS 2013 referem-se a parada cardíaca, síncope arrítmica e outros
+  cenários sintomáticos; as recomendações específicas do assintomático aqui
+  são as da ESC 2022.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: o texto integral do consenso HRS/EHRA/APHRS 2013 (Priori SG et al. Heart Rhythm. 2013;10(12):1932-1963, PMID 24011539) está atrás de paywall da Elsevier nesta sessão de pesquisa — as classes de recomendação citadas neste documento (Classe I/IIa/IIb) vêm da revisão secundária de Sieira e Brugada (PMID 28116080), que as atribui à diretriz ESC 2015, e não foram conferidas diretamente no texto primário do consenso de 2013. Se a diretriz ESC 2015 ou o consenso de 2013 tiverem uma redação diferente da citada por essa fonte secundária, este documento precisa de correção.
+## Tudo com Tudo
+
+- [Canalopatias: QT longo, Brugada e TVPC](canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md)
+- [Diretriz ESC 2022 de arritmias ventriculares](arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md)
+- [Escore de Sieira e falha na validação externa](escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa.md)
+- [Ablação do substrato epicárdico na síndrome de Brugada](ablacao-do-substrato-epicardico-na-sindrome-de-brugada-nademanee-e-pappone.md)
