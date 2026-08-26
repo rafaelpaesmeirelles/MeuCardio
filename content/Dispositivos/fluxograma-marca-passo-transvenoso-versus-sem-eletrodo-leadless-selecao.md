@@ -34,13 +34,13 @@ flowchart TD
   D7 -->|"Sim"| C0(["Pode-se considerar sistema leadless<br/>bicameral após avaliação especializada;<br/>ponderar evidência mais recente e<br/>experiência do centro"])
   D7 -->|"Não"| C3(["Marca-passo transvenoso<br/>bicameral convencional"])
 
-  D0 -->|"Não, estimulação<br/>ventricular é suficiente"| D2{"Há necessidade real de<br/>sincronia atrioventricular<br/>(ritmo sinusal, estimulação<br/>ventricular frequente esperada)?"}
+  D0 -->|"Não, estimulação<br/>ventricular é suficiente"| D2{"O paciente mantém<br/>ritmo sinusal?"}
 
-  D2 -->|"Sim"| D3{"Leadless com sincronia AV<br/>(ex. Micra AV) disponível e<br/>critérios anatômicos/eletrofisiológicos<br/>adequados (MARVEL 2)?"}
+  D2 -->|"Sim — preservar<br/>sincronia AV"| D3{"Leadless com sincronia AV<br/>(ex. Micra AV) disponível e<br/>critérios anatômicos/eletrofisiológicos<br/>adequados (MARVEL 2)?"}
   D3 -->|"Sim"| C2(["Marca-passo sem eletrodo com<br/>sincronia atrioventricular<br/>(ex. Micra AV)"])
   D3 -->|"Não"| C3(["Marca-passo transvenoso<br/>bicameral convencional"])
 
-  D2 -->|"Não — FA permanente ou<br/>estimulação ocasional/backup"| D4{"Fatores de risco para complicação<br/>de bolsa/eletrodo: ausência de acesso<br/>venoso superior, hemodiálise, infecção<br/>prévia de CIED ou alto risco<br/>infeccioso?"}
+  D2 -->|"Não — FA permanente;<br/>VVI/VVIR é suficiente"| D4{"Fatores de risco para complicação<br/>de bolsa/eletrodo: ausência de acesso<br/>venoso superior, hemodiálise, infecção<br/>prévia de CIED ou alto risco<br/>infeccioso?"}
   D4 -->|"Sim"| C4(["Considerar preferencialmente<br/>marca-passo sem eletrodo unicameral,<br/>após avaliação anatômica e do risco<br/>de perfuração vascular/cardíaca"])
   D4 -->|"Não"| D5{"Preferência do paciente e<br/>disponibilidade institucional<br/>favorecem o sistema sem eletrodo?"}
   D5 -->|"Sim"| C5(["Marca-passo sem eletrodo<br/>unicameral (leadless)"])
@@ -61,10 +61,12 @@ transvenoso.
 **O MARVEL 2 avaliou sincronia AV mecânica, não elétrica**, comparando o
 algoritmo de detecção mecânica de contração atrial do Micra AV contra
 estimulação assíncrona — a decisão de usar essa plataforma depende de o
-paciente manter ritmo sinusal e de haver expectativa real de estimulação
-ventricular frequente, não é indicada indistintamente a todo paciente elegível
-a marcapasso unicameral. O estudo foi curto e não demonstrou desfechos clínicos
-de longo prazo equivalentes aos de um sistema bicameral convencional.
+paciente manter ritmo sinusal e se beneficiar de sincronia atrioventricular,
+não é indicada indistintamente a todo paciente elegível a marcapasso. Baixa
+carga esperada de estimulação não torna o ritmo sinusal equivalente à
+fibrilação atrial permanente para escolher VVI/VVIR. O estudo foi curto e não
+demonstrou desfechos clínicos de longo prazo equivalentes aos de um sistema
+bicameral convencional.
 
 **Sistemas leadless bicamerais passaram a existir depois da diretriz ESC
 2021.** O ensaio pivotal de 2023 demonstrou desempenho inicial de dois módulos

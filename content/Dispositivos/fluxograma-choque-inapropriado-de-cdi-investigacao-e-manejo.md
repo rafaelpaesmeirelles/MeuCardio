@@ -4,7 +4,7 @@ slug: fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo
 theme: "Dispositivos"
 kind: fluxograma
 fonte_producao: chatgpt
-summary: "Investigação sistemática de um choque de CDI a partir da interrogação do dispositivo: confirmar se a terapia foi apropriada e, quando não foi, distinguir taquicardia supraventricular mal discriminada, sobredetecção não fisiológica por falha de eletrodo, ruído/miopotencial e sobredetecção de onda T — cada causa com reprogramação ou conduta própria."
+summary: "Manejo do choque de CDI com triagem imediata de instabilidade e choques recorrentes, proteção para desfibrilação externa e, após estabilização, interrogação do dispositivo para distinguir terapia apropriada de causas de choque inapropriado."
 review_status: revisado
 review_note: "PMIDs conferidos individualmente no PubMed via E-utilities (esummary) nesta sessão: 36017572 (ESC 2022 VA/SCD, Zeppenfeld K, Eur Heart J 43(40):3997-4126 — corrige um PMID citado incorretamente em rodada anterior deste projeto, 36017553, que na verdade é a diretriz de avaliação perioperatória), 26949427 (consenso HRS/EHRA/APHRS/SOLAECE 2015 de programação de CDI, Wilkoff BL, J Arrhythm 32(1):1-28) e 23131066 (MADIT-RIT, Moss AJ, NEJM 367(24):2275-2283) — título, revista, volume/página e autor conferidos contra o registro oficial antes de citar. Pendente revisão médica independente antes de uso assistencial."
 source_refs: ["2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death · European Heart Journal · 2022 · 43(40):3997-4126 · https://pubmed.ncbi.nlm.nih.gov/36017572/", "2015 HRS/EHRA/APHRS/SOLAECE expert consensus statement on optimal implantable cardioverter-defibrillator programming and testing · Journal of Arrhythmia · 2016 · 32(1):1-28 · https://pubmed.ncbi.nlm.nih.gov/26949427/", "Reduction in inappropriate therapy and mortality through ICD programming (MADIT-RIT) · New England Journal of Medicine · 2012 · 367(24):2275-2283 · https://pubmed.ncbi.nlm.nih.gov/23131066/"]
@@ -12,11 +12,13 @@ source_refs: ["2022 ESC Guidelines for the management of patients with ventricul
 
 # Fluxograma: Choque inapropriado de CDI — investigação e manejo
 
-Todo choque de CDI, apropriado ou não, deve ser interrogado antes de qualquer
-decisão. O passo que evita erro é sempre o mesmo: revisar o eletrograma
-armazenado do episódio, não confiar no relato do paciente nem presumir pela
-frequência cardíaca isolada. A árvore abaixo parte dessa revisão e segue as
-quatro causas mais frequentes de terapia inapropriada — taquicardia
+Todo choque de CDI exige primeiro **triagem clínica imediata**. Instabilidade
+hemodinâmica, arritmia sustentada ou choques recorrentes são manejados como
+emergência, com monitorização e capacidade de desfibrilação externa, sem
+esperar a interrogação. Depois de estabilizar e proteger o paciente, revisar o
+eletrograma armazenado evita presumir a causa pelo relato ou pela frequência
+cardíaca isolada. A árvore então segue as quatro causas mais frequentes de
+terapia inapropriada — taquicardia
 supraventricular mal discriminada, falha de integridade do sistema de
 eletrodo, ruído/miopotencial e sobredetecção de onda T —, cada uma com conduta
 própria.
@@ -25,7 +27,14 @@ própria.
 
 ```mermaid
 flowchart TD
-  R0["Choque(s) do CDI —<br/>interrogar o dispositivo"] --> D1{"Eletrograma armazenado:<br/>a terapia foi apropriada?"}
+  R0["Choque(s) do CDI"] --> D0{"Instabilidade hemodinâmica,<br/>arritmia sustentada ou<br/>choques recorrentes?"}
+
+  D0 -->|"Sim"| C0(["ABC/ACLS conforme o ritmo, monitorização<br/>contínua e pás de desfibrilação externa<br/>instaladas; tratar TV/FV ou tempestade elétrica<br/>sem aguardar interrogação"])
+  D0 -->|"Não — paciente estável,<br/>episódio isolado"| C00(["Monitorização e avaliação clínica;<br/>providenciar interrogação urgente<br/>do dispositivo"])
+
+  C0 --> R1["Após estabilização e proteção<br/>para desfibrilação externa:<br/>interrogar o dispositivo"]
+  C00 --> R1
+  R1 --> D1{"Eletrograma armazenado:<br/>a terapia foi apropriada?"}
 
   D1 -->|"Sim, para TV/FV real"| C1(["Choque apropriado: investigar gatilhos<br/>reversíveis, isquemia e descompensação;<br/>reavaliar programação, antiarrítmico<br/>e indicação de ablação conforme<br/>a arritmia clínica"])
 
@@ -44,15 +53,18 @@ flowchart TD
   D2 -->|"Causa não identificada<br/>na interrogação"| C7(["Intensificar a monitorização remota,<br/>reavaliar em consulta próxima e<br/>considerar Holter/monitor externo"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7 conduta;
+  class C0,C00,C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 
 ## O que a árvore não mostra
 
-**Choques repetidos ou causa ainda incerta exigem avaliação urgente.** Se há
-terapias inapropriadas em sequência, a suspensão temporária das terapias de
-taquiarritmia por programação ou ímã só deve ocorrer com monitorização contínua
-e capacidade imediata de desfibrilação externa; o ímã não corrige a causa.
+**Choques repetidos ou causa ainda incerta exigem avaliação urgente.** Antes
+de suspender terapias, instalar monitorização contínua e proteção com
+desfibrilação externa. Se os choques forem recorrentes e houver forte suspeita
+de terapia inapropriada, a suspensão temporária por programação ou ímã pode
+ser considerada apenas com capacidade imediata de tratar TV/FV externamente;
+o ímã não corrige a causa. Se os choques tratarem TV/FV real, conduzir a
+tempestade elétrica e não atrasar desfibrilação para interrogar o CDI.
 
 **A reprogramação de discriminadores segue princípios do consenso de 2015, não
 uma regra única.** O documento recomenda, entre outras medidas, ampliar o
