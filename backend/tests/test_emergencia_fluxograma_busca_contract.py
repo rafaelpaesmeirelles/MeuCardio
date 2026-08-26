@@ -7,6 +7,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 FLUXOGRAMA = REPO_ROOT / "frontend/src/components/Fluxograma.tsx"
 EMERGENCIA = REPO_ROOT / "frontend/src/pages/Emergencia.tsx"
 ESTILO = REPO_ROOT / "frontend/src/styles/emergencia.css"
+ESTILO_MOBILE = REPO_ROOT / "frontend/src/styles/clinical-interior-board-lock.css"
 
 
 def _fonte(caminho: Path) -> str:
@@ -79,3 +80,16 @@ def test_busca_e_falha_do_fluxograma_possuem_estilos_visiveis():
     assert ".emerg__busca input" in fonte
     assert ".emerg__semResultado" in fonte
     assert ".fluxograma__erro" in fonte
+
+
+def test_emergencia_mobile_reserva_navegacao_e_impede_conteudo_sob_cabecalho():
+    pagina = _fonte(EMERGENCIA)
+    estilo = _fonte(ESTILO_MOBILE)
+
+    assert '<footer className="emerg__origem"' in pagina
+    assert 'aria-label="Origem e revisão do protocolo"' in pagina
+    assert "calc(5.4rem + env(safe-area-inset-bottom))" in estilo
+    assert "body.corvia-route--emergencia .clinical-os .emerg__topo" in estilo
+    assert "background:#071923!important" in estilo
+    assert "overflow-x:hidden" in estilo
+    assert ".emerg-command__main>.emerg__origem" in estilo
