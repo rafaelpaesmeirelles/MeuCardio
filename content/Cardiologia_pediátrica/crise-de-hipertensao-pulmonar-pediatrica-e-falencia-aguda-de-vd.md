@@ -5,7 +5,12 @@ theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Manejo inicial da criança com crise hipertensiva pulmonar, hipoxemia, baixo débito ou falência aguda de VD, priorizando remoção de gatilhos que elevam a resistência vascular pulmonar, restauração da perfusão sistêmica e vasodilatação pulmonar especializada."
 review_status: revisado
-source_refs: ["Wyckoff MH, Greif R, Morley PT, et al. 2024 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science With Treatment Recommendations. Circulation. 2024;150(24):e580-e664. DOI: 10.1161/CIR.0000000000001288.", "Bernier ML, Romer LH, Bembea MM. Spectrum of Current Management of Pediatric Pulmonary Hypertensive Crisis. Crit Care Explor. 2020;2(1):e0037. DOI: 10.1097/CCE.0000000000000037. PMID: 32166278. PMCID: PMC7063944.", "Abman SH, Hansmann G, Archer SL, et al. Pediatric Pulmonary Hypertension: Guidelines From the American Heart Association and American Thoracic Society. Circulation. 2015;132(21):2037-2099. DOI: 10.1161/CIR.0000000000000329. PMID: 26534956."]
+source_refs:
+  - "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 AHA/AAP Guidelines for CPR and ECC. Circulation. 2025;152(16_suppl_2):S479-S537. DOI: 10.1161/CIR.0000000000001368. PMID: 41122885."
+  - "Wyckoff MH, Greif R, Morley PT, et al. 2024 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science With Treatment Recommendations. Circulation. 2024;150(24):e580-e664. DOI: 10.1161/CIR.0000000000001288."
+  - "Bernier ML, Romer LH, Bembea MM. Spectrum of Current Management of Pediatric Pulmonary Hypertensive Crisis. Crit Care Explor. 2020;2(1):e0037. DOI: 10.1097/CCE.0000000000000037. PMID: 32166278. PMCID: PMC7063944."
+  - "Abman SH, Hansmann G, Archer SL, et al. Pediatric Pulmonary Hypertension: Guidelines From the American Heart Association and American Thoracic Society. Circulation. 2015;132(21):2037-2099. DOI: 10.1161/CIR.0000000000000329. PMID: 26534956."
+review_note: "Revisão editorial e de fonte concluída em 26/08/2026. A sequência foi atualizada contra o PALS AHA/AAP 2025: prevenção de gatilhos, iNO/prostaciclina como vasodilatador inicial e ECMO na refratariedade. Doses permanecem deliberadamente fora do protocolo porque a pesquisa multicêntrica documenta variação entre centros e a diretriz não define regime universal. Removido o marcador humano. Revisão médica independente pendente antes do uso assistencial."
 ---
 
 # Crise de hipertensão pulmonar pediátrica
@@ -50,11 +55,11 @@ Sedação/analgesia adequadas podem reduzir estímulo simpático; bloqueio neuro
 
 ## Vasodilatação pulmonar aguda
 
-ILCOR 2024 afirma que tratamentos específicos para hipertensão pulmonar podem ser considerados durante deterioração, incluindo **óxido nítrico inalatório (iNO)** e outras classes de vasodilatadores pulmonares.
+O PALS AHA/AAP 2025 recomenda **óxido nítrico inalatório (iNO) ou prostaciclina** como vasodilatador pulmonar inicial na crise ou na falência direita aguda por aumento da resistência vascular pulmonar (classe 1, nível B-R). Enquanto o vasodilatador é administrado, oxigênio e indução transitória de alcalose por ventilação ou álcali podem ser úteis sob monitorização intensiva (classe 2a, nível C-LD).
 
 A pesquisa multicêntrica norte-americana de Bernier et al. demonstrou que todos os centros respondentes utilizavam iNO em crise, mas com grande variação de concentração e demais terapias. Isso confirma um ponto importante: **não existe dose universal de resgate padronizada por evidência de alta qualidade para todas as crianças e etiologias**.
 
-Portanto, esta ficha não registra dose de iNO, prostaciclina, sildenafil, milrinona ou vasopressor. Para qualquer dose específica: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme protocolo do centro de hipertensão pulmonar/UTI pediátrica e fármaco utilizado.
+Portanto, esta ficha não registra dose de iNO, prostaciclina, sildenafil, milrinona ou vasopressor. A concentração, titulação e desmame devem seguir protocolo do centro de hipertensão pulmonar/UTI pediátrica, com monitorização contínua e prevenção de retirada abrupta; não se deve inferir posologia a partir deste texto.
 
 ## Se terapia específica foi interrompida
 
@@ -66,7 +71,7 @@ Hipotensão sistêmica agrava perfusão coronária direita e pode acelerar o col
 
 ## ECMO antes da parada
 
-O ILCOR 2024 estabelece que, em crianças com **crise hipertensiva pulmonar, baixo débito ou falência de VD apesar de terapia médica otimizada, ECMO pode ser considerada antes da parada cardíaca** ou como ECPR na parada refratária, em casos muito selecionados, como ponte para recuperação ou avaliação de terapia definitiva/transplante.
+O PALS 2025 estabelece que, em crianças com **hipertensão pulmonar refratária, baixo débito ou falência respiratória profunda apesar de terapia médica otimizada, ECMO pode ser considerada** (classe 2b, nível C-LD). A discussão deve ocorrer antes da parada quando a trajetória é refratária, como ponte para recuperação ou avaliação de terapia definitiva/transplante.
 
 ## Se evoluir para PCR
 
@@ -85,3 +90,9 @@ Migrar imediatamente ao algoritmo de PCR pediátrica. Durante PCR associada a hi
 - Suspender abruptamente vasodilatador pulmonar contínuo.
 - Escolher uma “dose padrão universal” de iNO ou vasoativo que a literatura pediátrica atual não sustenta.
 - Esperar parada cardíaca para discutir ECMO em deterioração refratária.
+
+## Tudo com Tudo
+
+- [Fluxograma da crise de hipertensão pulmonar pediátrica](fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd.md)
+- [HPPRN: diagnóstico e escada terapêutica](hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica.md)
+- [Hipertensão pulmonar pediátrica: causas e vasorreatividade](hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade.md)

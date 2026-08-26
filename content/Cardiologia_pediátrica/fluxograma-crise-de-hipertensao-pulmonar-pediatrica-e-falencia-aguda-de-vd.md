@@ -5,7 +5,11 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de emergência para criança com hipertensão pulmonar e deterioração aguda, focando correção de gatilhos que aumentam RVP, suporte do VD, vasodilatação pulmonar especializada e ECMO precoce em refratariedade."
 review_status: revisado
-source_refs: ["Wyckoff MH, Greif R, Morley PT, et al. 2024 International Consensus on Cardiopulmonary Resuscitation and Emergency Cardiovascular Care Science With Treatment Recommendations. Circulation. 2024;150(24):e580-e664. DOI: 10.1161/CIR.0000000000001288.", "Bernier ML, Romer LH, Bembea MM. Spectrum of Current Management of Pediatric Pulmonary Hypertensive Crisis. Crit Care Explor. 2020;2(1):e0037. DOI: 10.1097/CCE.0000000000000037. PMID: 32166278. PMCID: PMC7063944.", "Abman SH, Hansmann G, Archer SL, et al. Pediatric Pulmonary Hypertension: Guidelines From the American Heart Association and American Thoracic Society. Circulation. 2015;132(21):2037-2099. DOI: 10.1161/CIR.0000000000000329. PMID: 26534956."]
+source_refs:
+  - "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 AHA/AAP Guidelines for CPR and ECC. Circulation. 2025;152(16_suppl_2):S479-S537. DOI: 10.1161/CIR.0000000000001368. PMID: 41122885."
+  - "Wyckoff MH, Greif R, Morley PT, et al. 2024 International Consensus on CPR and ECC Science With Treatment Recommendations. Circulation. 2024;150(24):e580-e664. DOI: 10.1161/CIR.0000000000001288."
+  - "Bernier ML, Romer LH, Bembea MM. Spectrum of Current Management of Pediatric Pulmonary Hypertensive Crisis. Crit Care Explor. 2020;2(1):e0037. DOI: 10.1097/CCE.0000000000000037. PMID: 32166278. PMCID: PMC7063944."
+review_note: "Fluxo revisado em 26/08/2026 contra o PALS AHA/AAP 2025. Hierarquia de vasodilatador inicial e ECMO foi atualizada; nenhuma dose universal não sustentada foi acrescentada e os parâmetros operacionais permanecem vinculados ao protocolo institucional."
 ---
 
 # Crise de hipertensão pulmonar pediátrica
@@ -19,7 +23,7 @@ flowchart TD
   D2{"Instabilidade/baixo débito ou falência de VD?"}
   C1(["Não: manter terapia específica, tratar causa<br/>e reavaliar clínica/eco em ambiente monitorizado"])
   P3["Sim: preservar pressão sistêmica/perfusão coronária<br/>do VD + suporte vasoativo/inotrópico individualizado"]
-  P4["Considerar vasodilatação pulmonar de ação rápida,<br/>incluindo iNO, conforme centro/protocolo;<br/>restituir terapia específica se interrompida"]
+  P4["Iniciar iNO ou prostaciclina como vasodilatador;<br/>oxigênio e alcalose transitória podem ser úteis<br/>durante a administração; restituir terapia interrompida"]
   D3{"Precisa intubação/ventilação invasiva?"}
   C2(["Não: manter suporte e evitar hipercapnia/acidemia"])
   P5["Sim: intubação de alto risco com equipe experiente;<br/>evitar hipóxia, hipercapnia, dor/agitação e queda<br/>de pressão durante indução e ventilação"]
@@ -55,4 +59,10 @@ flowchart TD
 
 ## Nota de evidência
 
-O ILCOR 2024 oferece bons princípios para deterioração e parada em crianças com hipertensão pulmonar, mas a prática farmacológica de crise ainda varia muito entre centros. Por isso, a árvore **não força doses universais de iNO, prostaciclina, milrinona ou vasopressor**.
+O PALS 2025 recomenda iNO ou prostaciclina como terapia vasodilatadora inicial (classe 1, B-R) e permite considerar ECMO na refratariedade (classe 2b, C-LD). A prática farmacológica ainda varia muito entre centros; por isso, a árvore **não força doses universais de iNO, prostaciclina, milrinona ou vasopressor**.
+
+## Tudo com Tudo
+
+- [Protocolo da crise de hipertensão pulmonar pediátrica](crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd.md)
+- [HPPRN: diagnóstico e escada terapêutica](hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica.md)
+- [Fluxograma da crise de HPPRN](fluxograma-crise-de-hipertensao-pulmonar-persistente-do-recem-nascido.md)

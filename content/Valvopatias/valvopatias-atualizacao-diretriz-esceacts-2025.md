@@ -2,9 +2,10 @@
 title: "Valvopatias: Atualização Diretriz ESC/EACTS 2025"
 slug: valvopatias-atualizacao-diretriz-esceacts-2025
 theme: "Valvopatias"
-kind: diretriz
+kind: documento
 review_status: revisado
-source_refs: ["2025 ESC/EACTS Guidelines for the management of valvular heart disease · European Heart Journal · 2025 · https://www.escardio.org", "ESC 2025 – Novas diretrizes para manejo de doença cardíaca valvar · TribeMD · 2025 · https://tribemd.com/br/conteudos/esc%C2%AE-2025-%E2%80%93-novas-diretrizes-para-manejo-de-doen%C3%A7a-card%C3%ADaca-valvar/", "ESC 2025: Principais atualizações da nova diretriz de valvopatias · Afya Cardiologia · 2025 · https://portal.afya.com.br/cardiologia/esc-2025-principais-atualizacoes-da-nova-diretriz-de-valvopatias", "Valvopatias: Diretriz da ESC 2025 · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/508/valvopatias-diretriz-da-esc-2025/", "ESC 2025: Guideline revisions include new TAVI age threshold · Cardiovascular News · 2025 · https://cardiovascularnews.com/esc-2025-guideline-revisions-include-new-tavi-age-threshold/ — classes de recomendação do corte etário conferidas de forma independente em 30/07/2026."]
+source_refs: ["Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.", "Corrigendum to: 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2026;68(7):ezag193. DOI: 10.1093/ejcts/ezag193. PMID: 42452857.", "European Society of Cardiology. 2025 ESC/EACTS Guidelines for the management of valvular heart disease — página oficial."]
+review_note: "Revisão de 26/08/2026: reclassificado de diretriz para documento por ser um resumo de novidades que duplicava o nó canônico completo da ESC/EACTS 2025. Fontes secundárias foram substituídas pelo artigo primário, página oficial e corrigendum; a seção incompleta foi removida e o resumo passou a apontar para a diretriz canônica."
 legacy_source: "protocolos/modulo-atualizado-protocolo-de-valvopatias-esc-eacts-2025-substitui-destaques-da-versao-2021.md · Revisado a fundo em 30/07/2026: a mudança de corte etário de TAVI (75→70 anos) — o achado mais clinicamente crítico deste documento, porque pode levar a conduta desatualizada em quem só ler o documento ESC/EACTS 2021 desta mesma pasta — foi confirmada de forma independente contra múltiplas fontes secundárias concordantes, com as classes de recomendação exatas acrescentadas."
 ---
 
@@ -20,12 +21,12 @@ Diretriz chama atenção para o fato de que valvopatias são subdiagnosticadas e
 Mudança histórica: corte etário para indicação preferencial de TAVI reduzido de 75 para 70 anos, impulsionado por novos ensaios em pacientes de baixo risco cirúrgico (DEDICATE, EVOLUT Low Risk, PARTNER 3, NOTION) — corte aplicável a válvula aórtica **tricúspide** (não bicúspide) e independente do risco cirúrgico estimado.
 - **classes de recomendação do novo corte**: TAVI em ≥70 anos com valva tricúspide é **Classe I, Nível A**; SAVR permanece padrão em <70 anos com baixo risco cirúrgico, **Classe I, Nível B**.
 - **por que 70 e não outro número**: o corte foi calibrado para refletir a população real incluída nos RCTs que compararam SAVR e TAVI (DEDICATE, EVOLUT Low Risk, PARTNER 3, NOTION), nos quais TAVI mostrou não inferioridade — extrapolar o corte para faixa etária não representada nesses ensaios não tem o mesmo respaldo.
-- **fonte**: Cardiovascular News, síntese da diretriz publicada — classes de recomendação conferidas de forma independente contra múltiplas fontes secundárias concordantes.
+- **fonte**: diretriz ESC/EACTS 2025 (Praz et al.; PMID 40878291).
 
 ## Estrategia por idade atualizada
 - **pacientes mais jovens baixo risco (<70 anos)**: Cirurgia continua sendo indicada como primeira escolha (Classe I, Nível B)
 - **pacientes ≥70 anos com valva tricúspide, ou alto risco cirúrgico em qualquer idade**: TAVI recebe recomendação de Classe I (Nível A para ≥70 anos com valva tricúspide) como padrão de cuidado em estenose aórtica grave sintomática
-- **fonte**: TribeMD; Cardiovascular News
+- **fonte**: diretriz ESC/EACTS 2025.
 
 ## Estenose aortica assintomatica
 Ascensão da intervenção precoce em estenose aórtica assintomática, sustentada por dados dos estudos EARLY TAVR e EVOLVED
@@ -42,7 +43,7 @@ Reparo da valva é recomendado como terapia de escolha quando possível, em paci
 ## Insuficiencia tricuspide mudancas
 - **escore de risco**: TRI-SCORE introduzido/fortalecido para estratificação de risco
 - **terapias percutaneas**: Fortalecimento de indicações baseado nos estudos TRILUMINATE, TRISCEND II e Tri.FR
-- **fonte**: DozeCast
+- **fonte**: diretriz ESC/EACTS 2025.
 
 ## Doenca valvar mista e antitromboticos
 Novas indicações específicas para doença valvar mista; estratégias antitrombóticas pós-intervenção foram simplificadas
@@ -59,8 +60,9 @@ Reforço da importância de Heart Valve Centers de alto volume como padrão para
 ## Seguimento pos intervencao
 Protocolos mais detalhados estabelecidos para monitorar complicações, disfunção protética e necessidade de reintervenção no seguimento clínico e por imagem
 
-## Detalhamento pendente
- — valores numéricos específicos de gradiente/área valvar atualizados, escore TRI-SCORE detalhado, e algoritmo antitrombótico simplificado completo requerem consulta ao texto integral da diretriz publicada no European Heart Journal
+## Escopo e diretriz canônica
+
+Este documento é um resumo das mudanças de 2025, não uma transcrição de todas as tabelas. Critérios numéricos, classes completas, algoritmo antitrombótico e corrigendum estão no nó canônico [Doença valvar cardíaca: diagnóstico e manejo ESC/EACTS 2021→2025](doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025.md). A ausência desses detalhes neste resumo é deliberada e não deve ser preenchida por extrapolação.
 
 ## Armadilhas clinicas
 - Aplicar corte etário antigo de 75 anos para decisão TAVI vs. cirurgia (agora 70 anos)

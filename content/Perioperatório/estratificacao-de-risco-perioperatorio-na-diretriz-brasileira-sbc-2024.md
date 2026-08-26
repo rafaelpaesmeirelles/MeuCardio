@@ -6,6 +6,7 @@ kind: diretriz
 summary: "O que a diretriz brasileira de 2024 traz e a europeia não: RCRI e AUB-HAS2 lado a lado com suas variáveis, o VSG-CRI recomendado especificamente para cirurgia vascular arterial com pontuação e classes completas, o índice EMAPO desenvolvido e validado no Brasil, e o registro explícito de que nenhum algoritmo demonstrou superioridade na população brasileira."
 review_status: revisado
 source_refs: ["Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024 · Arquivos Brasileiros de Cardiologia · DOI: 10.36660/abc.20240590 — texto integral em acesso aberto no PubMed Central (PMC12094288)", "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery (RCRI). Circulation. 1999;100(10):1043-1049", "Pinho C, Grandini PC, Gualandro DM, et al. Multicenter Study of Perioperative Evaluation for Noncardiac Surgeries in Brazil (EMAPO). Clinics. 2007;62(1):17-22. DOI: 10.1590/s1807-59322007000100004", "POISE Study Group. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744"]
+review_note: "Revisão de 26/08/2026: o alerta residual no encerramento foi removido porque anticoagulação e manejo de CIED estão explicitamente fora do escopo deste resumo de estratificação, e nenhuma recomendação desses capítulos é alegada aqui. A exclusão foi preservada e conectada a módulos canônicos existentes, sem presumir equivalência entre SBC, ESC e AHA/ACC."
 ---
 
 # Estratificação de risco perioperatório na diretriz brasileira (SBC 2024)
@@ -215,7 +216,13 @@ farmacológicas mais perguntadas (betabloqueador, IECA/BRA, estatina) e o
 tempo mínimo de dupla antiagregação plaquetária antes de cirurgia — o que é
 onde a diretriz difere da europeia ou preenche lacuna dela. **O manejo
 perioperatório de anticoagulante oral (varfarina, DOAC) e de dispositivo
-cardíaco eletrônico implantável (marca-passo, CDI)** não foi transcrito, e não
-deve ser presumido como equivalente ao da ESC — **VERIFICAÇÃO HUMANA
-NECESSÁRIA** para quem precisar dessas duas recomendações específicas, que não
-estão aqui.
+cardíaco eletrônico implantável (marca-passo, CDI)** não foi transcrito e não
+deve ser inferido deste resumo nem presumido equivalente ao da ESC ou AHA/ACC.
+
+## Tudo com Tudo
+
+- [Diretriz SBC 2024: algoritmo de avaliação cardiovascular perioperatória](diretriz-sbc-2024-algoritmo-avaliacao-cardiovascular-perioperatoria.md)
+- [Manejo perioperatório de antitrombóticos](manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais.md)
+- [Anticoagulação e ponte com heparina no perioperatório](anticoagulacao-ponte-heparina-preoperatorio-arvore-aha-acc-2024.md)
+- [Manejo perioperatório de marca-passo e CDI](manejo-perioperatorio-de-marca-passo-e-cdi-em-cirurgia-nao-cardiaca.md)
+- [Árvore AHA/ACC 2024 para CIED na cirurgia não cardíaca](marcapasso-cdi-cied-cirurgia-nao-cardiaca-emi-arvore-aha-acc-2024.md)

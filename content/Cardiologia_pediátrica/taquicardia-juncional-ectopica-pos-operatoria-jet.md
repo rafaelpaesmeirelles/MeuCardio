@@ -5,7 +5,11 @@ theme: "Cardiologia pediátrica"
 kind: protocolo
 summary: "Reconhecimento e manejo escalonado da JET após cirurgia cardíaca congênita, priorizando redução de catecolaminas, correção metabólica, controle da frequência e restauração da sincronia AV."
 review_status: revisado
-source_refs: ["Sasikumar N, Kumar RK, Balaji S. Diagnosis and management of junctional ectopic tachycardia in children. Ann Pediatr Cardiol. 2021;14(3):372-381. DOI: 10.4103/apc.apc_35_21. PMID: 34667411. PMCID: PMC8457265.", "Junctional ectopic tachycardia after congenital heart surgery. PMID: 24988822."]
+source_refs:
+  - "Sasikumar N, Kumar RK, Balaji S. Diagnosis and management of junctional ectopic tachycardia in children. Ann Pediatr Cardiol. 2021;14(3):372-381. DOI: 10.4103/apc.apc_35_21. PMID: 34667411. PMCID: PMC8457265."
+  - "Arvind B, Kothari SS, Juneja R, et al. Ivabradine Versus Amiodarone in the Management of Postoperative Junctional Ectopic Tachycardia: A Randomized, Open-Label, Noninferiority Study. JACC Clin Electrophysiol. 2021;7(8):1052-1060. DOI: 10.1016/j.jacep.2021.01.020. PMID: 33812837."
+  - "Junctional ectopic tachycardia after congenital heart surgery. PMID: 24988822."
+review_note: "Revisão editorial e de fonte concluída em 26/08/2026. A revisão pediátrica e o ensaio randomizado aberto de ivabradina versus amiodarona foram conferidos; a sequência multipontual foi preservada sem transformar doses ou temperatura de protocolos locais em regra universal. Removido o marcador humano e adicionadas conexões ao fluxograma e ao hub de taquiarritmia. Revisão médica independente pendente antes do uso assistencial."
 ---
 
 # Taquicardia juncional ectópica pós-operatória (JET)
@@ -58,12 +62,11 @@ Em deterioração hemodinâmica, a literatura pediátrica utiliza estratégia mu
 
 - resfriamento controlado em centro experiente;
 - amiodarona ou procainamida como opções farmacológicas frequentes;
+- ivabradina oral como alternativa possível em centro experiente: em um ensaio aberto com 94 crianças, não foi inferior à amiodarona para conversão a ritmo sinusal, embora o controle de frequência tenha ocorrido um pouco mais cedo com amiodarona;
 - pacing para restaurar sincronia AV quando a frequência ventricular permitir;
 - correção agressiva dos fatores metabólicos/iatrogênicos.
 
-Não há regime universal de dose ou temperatura-alvo derivado de diretriz AHA/ESC/SBC específica para JET pediátrica nas fontes usadas nesta ficha.
-
-Para dose de amiodarona/procainamida, temperatura-alvo e parâmetros de pacing: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme protocolo da UTI/cardiologia pediátrica.
+Não há regime universal de dose, temperatura-alvo ou parâmetros de pacing derivado de diretriz AHA/ESC/SBC específica para JET pediátrica nas fontes usadas nesta ficha. Esses detalhes devem seguir protocolo da UTI/cardiologia pediátrica, com ajuste por peso, função ventricular, pressão arterial, QT e disponibilidade de fios epicárdicos; nenhuma posologia deve ser inferida deste texto.
 
 ## 5. Cardioversão elétrica
 
@@ -100,3 +103,9 @@ Em JET com choque/baixo débito progressivo apesar de tratamento:
 ## Limites da evidência
 
 O tratamento de JET pós-operatória é sustentado principalmente por estudos observacionais, séries e protocolos institucionais. A estratégia multipontual é consistente, mas doses e sequência exata variam entre centros.
+
+## Tudo com Tudo
+
+- [Fluxograma de JET pós-operatória pediátrica](fluxograma-taquicardia-juncional-ectopica-pos-operatoria-jet.md)
+- [Taquiarritmia pediátrica com pulso — AHA/AAP 2025](taquiarritmia-pediatrica-com-pulso-aha-aap-2025.md)
+- [Síndrome de baixo débito após cirurgia cardíaca congênita](sindrome-de-baixo-debito-pos-cirurgia-cardiaca-congenita.md)
