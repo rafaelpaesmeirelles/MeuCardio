@@ -26,12 +26,6 @@ type Doc = {
   source_refs: string[]; review_status: string; version: number;
 };
 
-function rotaDocumentoMarkdown(href = ""): string | null {
-  if (/^(?:#|\/\/|[a-z][\w+.-]*:)/i.test(href)) return null;
-  const destino = href.match(/(?:^|\/)([^/?#]+)\.md([?#].*)?$/i);
-  return destino ? `/biblioteca/${destino[1]}${destino[2] ?? ""}` : null;
-}
-
 export default function Documento() {
   const { slug } = useParams();
   const [doc, setDoc] = useState<Doc | null>(null);
@@ -62,11 +56,6 @@ export default function Documento() {
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
-            a({ href, children }) {
-              const rotaInterna = rotaDocumentoMarkdown(href);
-              if (rotaInterna) return <Link to={rotaInterna}>{children}</Link>;
-              return <a href={href}>{children}</a>;
-            },
             pre({ children, ...props }) {
               const fonte = fonteMermaid(children);
               if (fonte) return <Fluxograma fonte={fonte} />;
