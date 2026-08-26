@@ -49010,5 +49010,106 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "transtorno-mental-suporte-adesao-tratamento-cardiovascular",
+    "statement": "Pacientes com transtornos mentais necessitam de atenção e suporte intensificados para melhorar a adesão às mudanças de estilo de vida e ao tratamento farmacológico.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "European Society of Cardiology (ESC)",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ, Mach F, Smulders YM, Carballo D, Koskinas KC, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021 Sep 7;42(34):3227-3337. doi: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "transtorno mental",
+      "adesão terapêutica",
+      "prevenção cardiovascular",
+      "estilo de vida",
+      "ESC 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dcv-aterosclerotica-transtorno-mental-cuidado-interdisciplinar",
+    "statement": "Em pacientes com doença cardiovascular aterosclerótica (DCVA) e transtornos mentais, recomenda-se cuidado de saúde mental baseado em evidências e cooperação interdisciplinar.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "European Society of Cardiology (ESC)",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ, Mach F, Smulders YM, Carballo D, Koskinas KC, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021 Sep 7;42(34):3227-3337. doi: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "doença cardiovascular aterosclerótica",
+      "transtorno mental",
+      "cuidado interdisciplinar",
+      "saúde mental",
+      "ESC 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dcv-aterosclerotica-estresse-manejo-psicoterapeutico",
+    "statement": "Pacientes com doença cardiovascular aterosclerótica e estresse devem ser considerados para encaminhamento a manejo psicoterapêutico do estresse, visando melhorar desfechos cardiovasculares e reduzir sintomas de estresse.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "European Society of Cardiology (ESC)",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ, Mach F, Smulders YM, Carballo D, Koskinas KC, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021 Sep 7;42(34):3227-3337. doi: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "estresse psicossocial",
+      "fator de risco cardiovascular",
+      "psicoterapia",
+      "prevenção secundária",
+      "ESC 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doenca-coronariana-depressao-moderada-grave-isrs",
+    "statement": "Pacientes com doença coronariana e depressão maior moderada a grave devem ser considerados para tratamento antidepressivo com um ISRS (inibidor seletivo de recaptação de serotonina).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "European Society of Cardiology (ESC)",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ, Mach F, Smulders YM, Carballo D, Koskinas KC, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021 Sep 7;42(34):3227-3337. doi: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "doença coronariana",
+      "depressão maior",
+      "ISRS",
+      "antidepressivo",
+      "ESC 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "insuficiencia-cardiaca-depressao-antidepressivos-nao-recomendados",
+    "statement": "Em pacientes com insuficiência cardíaca e depressão maior, o uso de ISRS, IRSN (inibidores de recaptação de serotonina e noradrenalina) e antidepressivos tricíclicos não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "European Society of Cardiology (ESC)",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ, Mach F, Smulders YM, Carballo D, Koskinas KC, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021 Sep 7;42(34):3227-3337. doi: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "insuficiência cardíaca",
+      "depressão maior",
+      "ISRS",
+      "antidepressivo tricíclico",
+      "contraindicação",
+      "ESC 2021"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
