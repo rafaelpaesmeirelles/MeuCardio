@@ -46,10 +46,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
     if (!res.ok) throw new Error(await mensagemLogin(res));
 
-    // Login é um ponto seguro para uma recarga completa. O parâmetro único
-    // evita reaproveitamento do documento HTML por caches intermediários; o
-    // Caddy e o service worker também revalidam o shell.
-    window.location.replace(`/?login=${Date.now()}`);
+    // Não recarregue o documento depois do login. Em Safari/Chrome no iOS, uma
+    // navegação completa pode ser atendida pelo shell antigo do service worker
+    // enquanto os chunks correspondentes já não existem mais, deixando a tela
+    // branca. A sessão já foi gravada em cookie HttpOnly; ler o perfil e
+    // atualizar o contexto é suficiente para o App encaminhar o primeiro
+    // acesso a /minha-conta, KYC ou tour.
+    const perfil = await api.get<Usuario>("/auth/me");
+    setUsuario(perfil);
   }
 
   async function sair() {

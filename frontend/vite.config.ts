@@ -47,6 +47,10 @@ export default defineConfig({
       workbox: {
         skipWaiting: true,
         clientsClaim: true,
+        // Uma navegação digitada diretamente para /api precisa chegar ao
+        // backend. Sem esta negação, o fallback SPA pode devolver index.html
+        // no lugar de JSON e esconder falhas de sessão em PWA/mobile.
+        navigateFallbackDenylist: [/^\/api\//],
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
         // O PNG existe para clientes de e-mail que não renderizam SVG, mas
         // não precisa ocupar o precache offline do aplicativo.
@@ -70,7 +74,7 @@ export default defineConfig({
         navigateFallback: "index.html",
         runtimeCaching: [
           {
-            urlPattern: ({ request }) => request.mode === "navigate",
+            urlPattern: ({ request, url }) => request.mode === "navigate" && !url.pathname.startsWith("/api/"),
             handler: "NetworkFirst",
             options: {
               cacheName: "corvia-navegacao-v2",

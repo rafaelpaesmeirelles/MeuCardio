@@ -2385,3 +2385,30 @@
     flex-wrap: wrap;
   }
 }
+/* Falhas de chunk/renderização nunca podem resultar em uma raiz branca. */
+.app-recovery {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  color: var(--texto, #e8f3f7);
+  background: var(--fundo, #03101a);
+}
+
+.app-recovery__card {
+  width: min(100%, 34rem);
+  padding: clamp(1.4rem, 5vw, 2.4rem);
+  border: 1px solid rgba(104, 215, 223, 0.28);
+  border-radius: 1.25rem;
+  background: #082637;
+  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.app-recovery__card h1 {
+  margin: 0.35rem 0 0.75rem;
+}
+
+.app-recovery__card p {
+  line-height: 1.55;
+}
