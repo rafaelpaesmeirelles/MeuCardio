@@ -48,7 +48,17 @@
   .prehome--fullscreen .prehome-card__footer{margin-top:clamp(8px,1.1dvh,12px)!important;padding-top:clamp(8px,1.1dvh,12px)!important}
   .prehome--fullscreen .prehome-legal{margin-top:clamp(6px,.8dvh,10px)!important}
   .prehome--fullscreen .prehome-brand__content{min-height:0!important}
-  .prehome--fullscreen .prehome-brand__hologram{max-height:clamp(230px,37dvh,360px)!important}
+  .prehome--fullscreen .prehome-brand__hologram{
+    min-height:0!important;
+    max-height:clamp(230px,37dvh,360px)!important;
+    overflow:hidden!important;
+  }
+  .prehome--fullscreen .prehome-brand__heart{
+    width:auto!important;
+    height:min(310px,28dvh)!important;
+    max-width:68%!important;
+    max-height:calc(100% - 16px)!important;
+  }
 }
 
 /* Desktop largo: ocupa melhor o canvas, aproxima os dois blocos e elimina o excesso de vazio lateral. */
@@ -76,7 +86,8 @@
   .prehome-social__button{min-height:38px!important}
 }
 @media(min-width:821px) and (max-height:720px){
-  .prehome--fullscreen .prehome-brand__hologram{max-height:220px!important}
+  .prehome--fullscreen .prehome-brand__hologram{max-height:min(200px,31dvh)!important}
+  .prehome--fullscreen .prehome-brand__heart{height:min(184px,28dvh)!important}
   .prehome--fullscreen .prehome-card--login{padding-block:14px!important}
   .prehome--fullscreen .prehome-card__header p{font-size:.78rem!important}
   .prehome--fullscreen .prehome-card__footer,.prehome--fullscreen .prehome-legal{font-size:.65rem!important}
