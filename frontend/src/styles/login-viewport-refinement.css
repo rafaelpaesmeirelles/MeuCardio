@@ -55,9 +55,9 @@
   }
   .prehome--fullscreen .prehome-brand__heart{
     width:auto!important;
-    height:100%!important;
+    height:min(310px,28dvh)!important;
     max-width:68%!important;
-    max-height:100%!important;
+    max-height:calc(100% - 16px)!important;
   }
 }
 
@@ -86,7 +86,8 @@
   .prehome-social__button{min-height:38px!important}
 }
 @media(min-width:821px) and (max-height:720px){
-  .prehome--fullscreen .prehome-brand__hologram{max-height:min(220px,34dvh)!important}
+  .prehome--fullscreen .prehome-brand__hologram{max-height:min(200px,31dvh)!important}
+  .prehome--fullscreen .prehome-brand__heart{height:min(184px,28dvh)!important}
   .prehome--fullscreen .prehome-card--login{padding-block:14px!important}
   .prehome--fullscreen .prehome-card__header p{font-size:.78rem!important}
   .prehome--fullscreen .prehome-card__footer,.prehome--fullscreen .prehome-legal{font-size:.65rem!important}
