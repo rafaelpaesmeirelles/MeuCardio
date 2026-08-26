@@ -32,7 +32,36 @@ type UsuarioGerenciavel = {
   gratuito: boolean;
   pode_excluir_definitivamente: boolean;
   bloqueio_exclusao: string | null;
+  pode_ver_historico_acessos: boolean;
+  sessao_unica_ativa: boolean;
   corvia_mail: CorviaMail | null;
+};
+
+type MotivoRisco = { code: string; message: string; severity: "medio" | "alto" };
+type Acesso = {
+  id: number;
+  surface: "corvia_os" | "corvia_mail";
+  successful: boolean;
+  started_at: string;
+  last_seen_at: string | null;
+  ended_at: string | null;
+  end_reason: string | null;
+  end_reason_label: string | null;
+  active: boolean;
+  ip_address: string;
+  location: string;
+  operating_system: string;
+  browser: string;
+  device_type: string;
+  risk_level: "normal" | "medio" | "alto";
+  risk_reasons: MotivoRisco[];
+};
+type HistoricoAcessos = {
+  items: Acesso[];
+  total: number;
+  offset: number;
+  limit: number;
+  single_session_enforced: boolean;
 };
 
 type CampoTexto =
@@ -86,6 +115,9 @@ export default function AdminGerenciarUsuario() {
   const [confirmarEmail, setConfirmarEmail] = useState("");
   const [confirmarExclusao, setConfirmarExclusao] = useState(false);
   const [excluindo, setExcluindo] = useState(false);
+  const [historico, setHistorico] = useState<HistoricoAcessos | null>(null);
+  const [carregandoAcessos, setCarregandoAcessos] = useState(false);
+  const [revogandoSessao, setRevogandoSessao] = useState(false);
 
   function carregar() {
     if (!id) return;
@@ -96,6 +128,23 @@ export default function AdminGerenciarUsuario() {
   }
 
   useEffect(() => { carregar(); }, [id]);
+
+  async function carregarAcessos(offset = 0, append = false) {
+    if (!id) return;
+    setCarregandoAcessos(true);
+    try {
+      const pagina = await api.get<HistoricoAcessos>(`/admin/user-management/${id}/accesses?offset=${offset}&limit=200`);
+      setHistorico((atual) => append && atual
+        ? { ...pagina, items: [...atual.items, ...pagina.items], offset: 0 }
+        : pagina);
+    } catch (e) {
+      setErro(mensagemErro(e, "Não foi possível carregar o histórico de acessos."));
+    } finally { setCarregandoAcessos(false); }
+  }
+
+  useEffect(() => {
+    if (usuario?.pode_ver_historico_acessos) void carregarAcessos();
+  }, [id, usuario?.pode_ver_historico_acessos]);
 
   const emailConfere = useMemo(
     () => !!usuario && confirmarEmail.trim().toLowerCase() === usuario.email.trim().toLowerCase(),
@@ -176,6 +225,18 @@ export default function AdminGerenciarUsuario() {
     }
   }
 
+  async function revogarSessoes() {
+    if (!id) return;
+    setRevogandoSessao(true); setErro(""); setMensagem("");
+    try {
+      await api.post(`/admin/user-management/${id}/revoke-session`, {});
+      setMensagem("A sessão atual do CorVIA OS e do CorVIA Mail foi encerrada.");
+      await carregarAcessos();
+    } catch (e) {
+      setErro(mensagemErro(e, "Não foi possível encerrar a sessão do usuário."));
+    } finally { setRevogandoSessao(false); }
+  }
+
   if (erro && !usuario) return <><Link to="/admin/usuarios">← Voltar</Link><Erro mensagem={erro} /></>;
   if (!usuario) return <Carregando texto="Carregando gestão da conta…" />;
 
@@ -218,6 +279,66 @@ export default function AdminGerenciarUsuario() {
         <button className="botao" style={{ marginTop: 14 }} disabled={salvando} onClick={salvar}>{salvando ? "Salvando…" : "Salvar alterações"}</button>
       </section>
 
+      {usuario.pode_ver_historico_acessos && (
+        <section className="cartao cartao--clinico" style={{ maxWidth: 900, marginTop: 16 }}>
+          <p className="eyebrow">Segurança · visível somente para o proprietário</p>
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
+            <div>
+              <h2 style={{ marginTop: 4 }}>Histórico completo de acessos</h2>
+              <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem", maxWidth: "68ch" }}>
+                Sessão única ativa: um novo login invalida imediatamente o anterior no CorVIA OS e no CorVIA Mail.
+                Localização depende dos dados enviados pelo provedor de rede e pode ser imprecisa com VPN ou rede móvel.
+              </p>
+            </div>
+            <button className="botao botao--secundario" disabled={revogandoSessao} onClick={revogarSessoes}>
+              {revogandoSessao ? "Encerrando…" : "Encerrar acesso atual"}
+            </button>
+          </div>
+
+          {carregandoAcessos && !historico && <Carregando texto="Carregando acessos…" />}
+          {historico && (
+            <>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "12px 0" }}>
+                <span className="selo selo--info">{historico.total} registro{historico.total === 1 ? "" : "s"}</span>
+                <span className="selo selo--sucesso">Sessão única protegida</span>
+                {historico.items.some((item) => item.risk_level === "alto") && <span className="selo selo--atencao">Alerta de segurança</span>}
+              </div>
+              <div style={{ display: "grid", gap: 10 }}>
+                {historico.items.map((item) => (
+                  <article key={item.id} style={{ border: "1px solid var(--borda)", borderRadius: 12, padding: 12 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                      <strong>{item.surface === "corvia_mail" ? "CorVIA Mail" : "CorVIA OS"} · {new Date(item.started_at).toLocaleString("pt-BR")}</strong>
+                      <span className={`selo ${item.active ? "selo--sucesso" : item.risk_level === "alto" ? "selo--atencao" : "selo--info"}`}>
+                        {!item.successful ? "Tentativa recusada" : item.active ? "Sessão ativa" : item.risk_level === "alto" ? "Risco alto" : item.risk_level === "medio" ? "Atenção" : "Encerrada"}
+                      </span>
+                    </div>
+                    <div className="grade grade--2" style={{ marginTop: 8, fontSize: ".88rem" }}>
+                      <div><small style={{ color: "var(--texto-secundario)" }}>Local</small><br />{item.location}</div>
+                      <div><small style={{ color: "var(--texto-secundario)" }}>IP</small><br /><code>{item.ip_address}</code></div>
+                      <div><small style={{ color: "var(--texto-secundario)" }}>Sistema e dispositivo</small><br />{item.operating_system} · {item.device_type}</div>
+                      <div><small style={{ color: "var(--texto-secundario)" }}>Navegador</small><br />{item.browser}</div>
+                    </div>
+                    {item.last_seen_at && <p style={{ margin: "8px 0 0", fontSize: ".82rem", color: "var(--texto-secundario)" }}>Última atividade: {new Date(item.last_seen_at).toLocaleString("pt-BR")}</p>}
+                    {item.end_reason_label && <p style={{ margin: "6px 0 0", fontSize: ".82rem", color: "var(--texto-secundario)" }}>Situação: {item.end_reason_label}</p>}
+                    {item.risk_reasons.length > 0 && (
+                      <ul style={{ margin: "8px 0 0", paddingLeft: 20, color: item.risk_level === "alto" ? "var(--alerta)" : "var(--texto-secundario)" }}>
+                        {item.risk_reasons.map((reason) => <li key={reason.code}>{reason.message}</li>)}
+                      </ul>
+                    )}
+                  </article>
+                ))}
+                {!historico.items.length && <p style={{ color: "var(--texto-secundario)" }}>Nenhum acesso registrado desde a ativação deste controle.</p>}
+              </div>
+              {historico.total > historico.items.length && (
+                <button className="botao botao--secundario" style={{ marginTop: 12 }} disabled={carregandoAcessos} onClick={() => carregarAcessos(historico.items.length, true)}>
+                  {carregandoAcessos ? "Carregando…" : `Mostrar mais (${historico.total - historico.items.length} restantes)`}
+                </button>
+              )}
+            </>
+          )}
+        </section>
+      )}
+
       <section className="cartao" style={{ maxWidth: 900, marginTop: 16 }}>
         <p className="eyebrow">Senha do Clinical OS</p>
         <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem" }}>A troca administrativa revoga as sessões anteriores da conta.</p>
@@ -245,7 +366,7 @@ export default function AdminGerenciarUsuario() {
 
       <section className="cartao" style={{ maxWidth: 900, marginTop: 16, borderColor: "rgba(251,113,133,.5)" }}>
         <p className="eyebrow" style={{ color: "#fb7185" }}>Zona de exclusão definitiva</p>
-        <h2 style={{ marginTop: 4 }}>Excluir usuário do CorVIA</h2>
+        <h2 style={{ marginTop: 4 }}>Excluir definitivamente do CorVIA OS + CorVIA Mail</h2>
         <p style={{ color: "var(--texto-secundario)" }}>
           Esta ação é irreversível. Remove a conta local e, se houver, a caixa nativa do CorVIA Mail.
           Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.
@@ -267,7 +388,7 @@ export default function AdminGerenciarUsuario() {
           disabled={!usuario.pode_excluir_definitivamente || !emailConfere || !confirmarExclusao || excluindo}
           onClick={excluirDefinitivamente}
         >
-          {excluindo ? "Excluindo…" : "Excluir definitivamente"}
+          {excluindo ? "Excluindo…" : "Excluir definitivamente do OS e Mail"}
         </button>
       </section>
     </>

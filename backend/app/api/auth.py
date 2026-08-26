@@ -3,7 +3,7 @@ import secrets
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, Request, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, field_validator, model_validator
 from sqlalchemy.exc import SQLAlchemyError
@@ -27,25 +27,55 @@ log = logging.getLogger("meucardio.auth")
 
 
 @router.post("/login")
-def login(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+def login(
+    request: Request,
+    background_tasks: BackgroundTasks,
+    form: OAuth2PasswordRequestForm = Depends(),
+    db: Session = Depends(get_db),
+):
     user = db.query(User).filter(User.email == form.username.lower().strip()).first()
+    def falha(reason: str) -> None:
+        if not user:
+            return
+        from app.services.access_security import record_failed_login
+        access = record_failed_login(
+            db, user_id=user.id, surface="corvia_os", request=request, reason=reason,
+        )
+        if access.risk_level == "alto":
+            emails.enviar_alerta_seguranca(access.id)
+
     if not user or not verify_password(form.password, user.password_hash):
+        falha("invalid_credentials")
         raise HTTPException(status_code=401, detail="E-mail ou senha incorretos.")
     if user.status == "pendente":
+        falha("account_pending")
         raise HTTPException(
             status_code=403,
             detail="Seu cadastro ainda está em análise. Você recebe acesso assim que um "
                    "administrador confirmar seu registro no conselho de classe.",
         )
     if user.status == "rejeitado":
+        falha("account_rejected")
         raise HTTPException(
             status_code=403,
             detail="Sua solicitação de acesso não foi aprovada. Fale com a administração "
                    "do serviço para mais informações.",
         )
     if not user.is_active:
+        falha("account_inactive")
         raise HTTPException(status_code=403, detail="Esta conta está desativada.")
-    return {"access_token": create_access_token(user.email), "token_type": "bearer"}
+    from app.services.access_security import start_session
+    session_id, _access = start_session(
+        db, subject=user, user_id=user.id, surface="corvia_os", request=request,
+    )
+    from app.api.chat import gerenciador
+    background_tasks.add_task(gerenciador.encerrar_usuario, user.id)
+    if _access.risk_level == "alto":
+        background_tasks.add_task(emails.enviar_alerta_seguranca, _access.id)
+    return {
+        "access_token": create_access_token(user.email, session_id=session_id),
+        "token_type": "bearer",
+    }
 
 
 # `_cpf_mascarado` foi movida para `app/core/validators.py::cpf_mascarado`

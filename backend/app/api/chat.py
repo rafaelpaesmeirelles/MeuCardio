@@ -283,5 +283,14 @@ class GerenciadorDeConexoes:
             except Exception:
                 self.desconectar(user_id, ws)
 
+    async def encerrar_usuario(self, user_id: int) -> None:
+        """Derruba conexoes antigas quando a sessao unica e substituida."""
+        conexoes = list(self._conexoes.pop(user_id, []))
+        for ws in conexoes:
+            try:
+                await ws.close(code=4401, reason="Sessão substituída por um novo login.")
+            except Exception:
+                pass
+
 
 gerenciador = GerenciadorDeConexoes()

@@ -1,20 +1,21 @@
 from __future__ import annotations
 
 import logging
-from datetime import date
+from datetime import date, datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
 from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import delete, inspect, text, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
-from app.core.security import hash_password, require_admin
+from app.core.security import hash_password, is_owner_admin, require_admin, require_owner_admin
 from app.models.audit import AuditLog
 from app.models.email_account import EmailAccount
 from app.models.subscription import Subscription
 from app.models.user import User
+from app.models.user_access import UserAccess
 from app.services import mail360
 from app.services.mail360 import Mail360Error
 from app.services.professional_profile import normalize_council, normalize_professional_title
@@ -164,12 +165,130 @@ def _resumo(alvo: User, db: Session, admin: User) -> dict:
         "gratuito": bool(alvo.convidado or alvo.investidor or not _assinaturas_pagas(db, alvo.id)),
         "pode_excluir_definitivamente": pode,
         "bloqueio_exclusao": motivo,
+        "pode_ver_historico_acessos": is_owner_admin(admin),
+        "sessao_unica_ativa": True,
         "corvia_mail": None if not conta_email else {
             "id": conta_email.id,
             "email_address": conta_email.email_address,
             "status": conta_email.status,
         },
     }
+
+
+def _acesso_json(item: UserAccess, alvo: User, conta_email: EmailAccount | None) -> dict:
+    active_session_id = (
+        alvo.active_session_id if item.surface == "corvia_os"
+        else conta_email.active_session_id if conta_email else None
+    )
+    ativo = bool(
+        item.successful and item.ended_at is None and item.session_id
+        and active_session_id == item.session_id
+    )
+    local = ", ".join(
+        value for value in (item.city, item.region, item.country_code) if value
+    ) or "Localização não informada pelo provedor"
+    reason_labels = {
+        "invalid_credentials": "Credenciais incorretas",
+        "account_pending": "Cadastro ainda pendente",
+        "account_rejected": "Cadastro rejeitado",
+        "account_inactive": "Conta desativada",
+        "mail_suspended": "Caixa de e-mail suspensa",
+        "substituida_por_novo_login": "Substituída por um novo login",
+        "logout": "Logout normal",
+        "revogada_pelo_usuario": "Revogada pelo usuário",
+        "revogada_pelo_proprietario": "Revogada pelo proprietário",
+    }
+    return {
+        "id": item.id,
+        "surface": item.surface,
+        "successful": item.successful,
+        "started_at": item.started_at,
+        "last_seen_at": item.last_seen_at,
+        "ended_at": item.ended_at,
+        "end_reason": item.end_reason,
+        "end_reason_label": reason_labels.get(item.end_reason or "", item.end_reason),
+        "active": ativo,
+        "ip_address": item.ip_address or "Não informado",
+        "city": item.city,
+        "region": item.region,
+        "country_code": item.country_code,
+        "location": local,
+        "operating_system": item.operating_system or "Não identificado",
+        "browser": item.browser or "Não identificado",
+        "device_type": item.device_type or "Não identificado",
+        "risk_level": item.risk_level,
+        "risk_reasons": item.risk_reasons or [],
+    }
+
+
+@router.get("/{user_id}/accesses")
+def listar_acessos_usuario(
+    user_id: int,
+    offset: int = Query(0, ge=0),
+    limit: int = Query(200, ge=1, le=1000),
+    db: Session = Depends(get_db),
+    owner=Depends(require_owner_admin),
+):
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    query = db.query(UserAccess).filter(UserAccess.user_id == user_id)
+    total = query.count()
+    items = query.order_by(UserAccess.started_at.desc()).offset(offset).limit(limit).all()
+    conta_email = db.query(EmailAccount).filter(EmailAccount.user_id == user_id).first()
+    db.add(AuditLog(
+        user_id=owner.id,
+        action="admin_visualizar_historico_acessos",
+        entity="user",
+        entity_id=str(user_id),
+        detail={"offset": offset, "limit": limit},
+    ))
+    db.commit()
+    return {
+        "items": [_acesso_json(item, alvo, conta_email) for item in items],
+        "total": total,
+        "offset": offset,
+        "limit": limit,
+        "single_session_enforced": True,
+    }
+
+
+@router.post("/{user_id}/revoke-session")
+def revogar_sessao_usuario(
+    user_id: int,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    owner=Depends(require_owner_admin),
+):
+    alvo = db.get(User, user_id)
+    if not alvo:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+    now = datetime.now(timezone.utc)
+    ativos = db.query(UserAccess).filter(
+        UserAccess.user_id == user_id,
+        UserAccess.successful.is_(True),
+        UserAccess.ended_at.is_(None),
+    ).all()
+    for access in ativos:
+        access.ended_at = now
+        access.end_reason = "revogada_pelo_proprietario"
+    alvo.sessions_valid_after = now
+    alvo.active_session_id = None
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == user_id).first()
+    if conta:
+        conta.sessions_valid_after = now
+        conta.active_session_id = None
+    db.add(AuditLog(
+        user_id=owner.id,
+        action="admin_revogar_sessoes_usuario",
+        entity="user",
+        entity_id=str(user_id),
+        detail={"sessoes_encerradas": len(ativos), "incluiu_corvia_mail": bool(conta)},
+    ))
+    db.commit()
+    from app.api.chat import gerenciador
+    background_tasks.add_task(gerenciador.encerrar_usuario, user_id)
+    return {"revoked": True, "sessions_ended": len(ativos), "corvia_mail": bool(conta)}
 
 
 @router.get("/{user_id}")

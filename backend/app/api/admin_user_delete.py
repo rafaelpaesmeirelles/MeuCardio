@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from sqlalchemy import inspect, text
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
@@ -115,6 +115,7 @@ def _validar_exclusao_local(db: Session, user_id: int) -> None:
 def excluir_usuario_definitivamente(
     user_id: int,
     dados: ExcluirUsuario,
+    background_tasks: BackgroundTasks,
     db: Session = Depends(get_db),
     admin=Depends(require_admin),
 ):
@@ -209,6 +210,9 @@ def excluir_usuario_definitivamente(
                 user_id,
                 type(exc).__name__,
             )
+
+    from app.api.chat import gerenciador
+    background_tasks.add_task(gerenciador.encerrar_usuario, user_id)
 
     return {
         "excluido": True,

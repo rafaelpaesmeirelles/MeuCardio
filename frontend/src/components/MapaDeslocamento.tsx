@@ -105,6 +105,7 @@ export default function MapaDeslocamento({
   provider,
   updatedAt,
   googleMapsApiKey,
+  compact = false,
 }: {
   rotas: RotaDeslocamento[];
   origem: Origem;
@@ -112,6 +113,7 @@ export default function MapaDeslocamento({
   provider?: string;
   updatedAt?: string;
   googleMapsApiKey?: string | null;
+  compact?: boolean;
 }) {
   const [selecionada, setSelecionada] = useState(0);
   const [estadoMapa, setEstadoMapa] = useState<"carregando" | "pronto" | "erro">("carregando");
@@ -284,7 +286,7 @@ export default function MapaDeslocamento({
   }, [destino.latitude, destino.longitude, destino.name, geometrias, indiceSelecionado, mapaVersao, origem, rotaAtual, temGeometria]);
 
   return (
-    <div className="deslocamento-painel">
+    <div className={`deslocamento-painel${compact ? " deslocamento-painel--compact" : ""}`}>
       <div className="deslocamento-mapa" aria-label={temGeometria ? `Mapa do percurso até ${destino.name}` : `Mapa do destino ${destino.name}`}>
         {deveUsarGoogleMap && googleMapsApiKey && destinoValido ? (
           <>
@@ -333,7 +335,7 @@ export default function MapaDeslocamento({
         </div>
       </div>
 
-      <div className="deslocamento-rotas" aria-label="Comparação das rotas">
+      {!compact && <div className="deslocamento-rotas" aria-label="Comparação das rotas">
         <div className="deslocamento-rotas__cabecalho">
           <div><strong>{rotas.length} {rotas.length === 1 ? "rota disponível" : "rotas disponíveis"}</strong><span>{rotas.length ? "Selecione para comparar no mapa" : "Use sua localização para calcular o percurso"}</span></div>
           {urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Abrir navegação <Icone nome="seta" /></a>}
@@ -362,7 +364,7 @@ export default function MapaDeslocamento({
             </button>
           ))}
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

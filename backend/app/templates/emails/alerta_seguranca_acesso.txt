@@ -1,0 +1,16 @@
+ALERTA DE SEGURANÇA — CORVIA
+
+Usuário: {{ nome_usuario }} ({{ email_usuario }})
+Sistema: {{ superficie }}
+Data e hora: {{ quando }}
+Local: {{ local }}
+IP: {{ ip }}
+Dispositivo: {{ sistema }} · {{ navegador }}
+
+Motivos:
+{% for motivo in motivos %}- {{ motivo }}
+{% endfor %}
+
+Revisar e encerrar acesso: {{ link }}
+
+VPNs e redes móveis podem alterar a localização. O CorVIA já bloqueou a sessão anterior quando houve um novo login.

@@ -113,6 +113,9 @@ class User(Base):
     sessions_valid_after: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
+    # Identificador opaco da unica sessao principal autorizada. Cada novo
+    # login substitui este valor e invalida imediatamente o JWT anterior.
+    active_session_id: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
     assinatura_metodo_preferido: Mapped[str | None] = mapped_column(String(20), nullable=True)
 
     # Consentimento específico para o assistente de IA acionar ferramentas
@@ -163,3 +166,4 @@ class User(Base):
 def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:
     if oldvalue is not NO_VALUE and oldvalue is not None and value != oldvalue:
         target.sessions_valid_after = datetime.now(timezone.utc)
+        target.active_session_id = None

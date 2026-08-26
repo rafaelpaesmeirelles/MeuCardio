@@ -61,6 +61,8 @@ class EmailAccount(Base):
     sessions_valid_after: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
+    # A caixa tambem aceita apenas uma sessao propria por vez.
+    active_session_id: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
 
     # Acrescentado em 02/08/2026 — trava de reputação do domínio para o envio
     # de material do paciente pelo endereço do médico (ver
@@ -87,3 +89,4 @@ def _revogar_sessoes_email_ao_trocar_senha(target, value, oldvalue, initiator) -
     `None` nesse caso, e não há sessão anterior para revogar)."""
     if oldvalue is not NO_VALUE and oldvalue is not None and value != oldvalue:
         target.sessions_valid_after = datetime.now(timezone.utc)
+        target.active_session_id = None

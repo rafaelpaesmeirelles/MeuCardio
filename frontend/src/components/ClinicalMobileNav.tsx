@@ -83,7 +83,6 @@ export default function ClinicalMobileNav() {
   const sheetRef = useRef<HTMLElement>(null);
 
   const contaAdmin=CONTA_ADMIN
-    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const secoes: MobileSection[] = [

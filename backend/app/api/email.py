@@ -31,6 +31,7 @@ from fastapi import (
     BackgroundTasks,
     Depends,
     HTTPException,
+    Request,
     Response,
     UploadFile,
 )
@@ -529,17 +530,46 @@ TOKEN_EMAIL_PERMANECER_CONECTADO_MINUTOS = 30 * 24 * 60
 
 
 @router.post("/entrar")
-def entrar(dados: LoginEmail, db: Session = Depends(get_db)):
+def entrar(
+    request: Request,
+    dados: LoginEmail,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+):
     _exigir_configurado()
     endereco = dados.endereco.strip().lower()
     conta = db.query(EmailAccount).filter(EmailAccount.email_address == endereco).first()
     erro = HTTPException(status_code=401, detail="Endereço ou senha incorretos.")
     if not conta or not conta.password_hash or not verify_password(dados.senha, conta.password_hash):
+        if conta:
+            from app.services.access_security import record_failed_login
+            access = record_failed_login(
+                db, user_id=conta.user_id, surface="corvia_mail",
+                request=request, reason="invalid_credentials",
+            )
+            if access.risk_level == "alto":
+                emails.enviar_alerta_seguranca(access.id)
         raise erro
     if conta.status != "ativa":
+        from app.services.access_security import record_failed_login
+        access = record_failed_login(
+            db, user_id=conta.user_id, surface="corvia_mail",
+            request=request, reason="mail_suspended",
+        )
+        if access.risk_level == "alto":
+            emails.enviar_alerta_seguranca(access.id)
         raise HTTPException(status_code=403, detail="Esta caixa de e-mail está suspensa.")
     expira_em = TOKEN_EMAIL_PERMANECER_CONECTADO_MINUTOS if dados.permanecer_conectado else None
-    token = create_access_token(conta.email_address, scope="email", expires_minutes=expira_em)
+    from app.services.access_security import start_session
+    session_id, _access = start_session(
+        db, subject=conta, user_id=conta.user_id, surface="corvia_mail", request=request,
+    )
+    if _access.risk_level == "alto":
+        background_tasks.add_task(emails.enviar_alerta_seguranca, _access.id)
+    token = create_access_token(
+        conta.email_address, scope="email", expires_minutes=expira_em,
+        session_id=session_id,
+    )
     return {"access_token": token, "token_type": "bearer"}
 
 

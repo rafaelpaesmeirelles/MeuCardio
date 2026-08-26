@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 import re
+import secrets
 
 import bcrypt
 import jwt
@@ -45,7 +46,12 @@ def verify_password(raw: str, hashed: str) -> bool:
         return False
 
 
-def create_access_token(subject: str, scope: str = "app", expires_minutes: int | None = None) -> str:
+def create_access_token(
+    subject: str,
+    scope: str = "app",
+    expires_minutes: int | None = None,
+    session_id: str | None = None,
+) -> str:
     """Emite JWT com escopo e instante preciso para revogação de sessões.
 
     `scope` separa o token da conta Corvia (`app`) do token da caixa de e-mail
@@ -60,17 +66,16 @@ def create_access_token(subject: str, scope: str = "app", expires_minutes: int |
     Yahoo e Gmail, sempre oferecem essa opção)."""
     issued_at = datetime.now(timezone.utc)
     expire = issued_at + timedelta(minutes=expires_minutes if expires_minutes is not None else settings.jwt_expire_minutes)
-    return jwt.encode(
-        {
+    payload = {
             "sub": subject,
             "scope": scope,
             "iat": issued_at,
             "session_iat": issued_at.isoformat(),
             "exp": expire,
-        },
-        settings.jwt_secret,
-        algorithm=settings.jwt_algorithm,
-    )
+    }
+    if session_id:
+        payload["sid"] = session_id
+    return jwt.encode(payload, settings.jwt_secret, algorithm=settings.jwt_algorithm)
 
 
 def gravar_cookie_sessao(response: Response, token: str) -> None:
@@ -114,7 +119,7 @@ def limpar_cookie_sessao(response: Response) -> None:
     )
 
 
-def _identidade_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime | None]:
+def _dados_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime | None, str | None]:
     try:
         payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
     except (jwt.PyJWTError, TypeError):
@@ -141,16 +146,35 @@ def _identidade_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime
         except (TypeError, ValueError):
             raise ValueError("instante de sessão inválido") from None
 
+    session_id = payload.get("sid")
+    if session_id is not None and (not isinstance(session_id, str) or not session_id):
+        raise ValueError("sessão inválida")
+    return email, issued_at, session_id
+
+
+def _identidade_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime | None]:
+    """Contrato legado usado por testes e integrações internas."""
+    email, issued_at, _session_id = _dados_do_token(token, escopo_exigido)
     return email, issued_at
+
+
+def session_id_from_token(token: str | None, scope: str = "app") -> str | None:
+    if not token:
+        return None
+    try:
+        _subject, _issued_at, session_id = _dados_do_token(token, scope)
+        return session_id
+    except ValueError:
+        return None
 
 
 def _decodificar(
     token: str,
     escopo_exigido: str,
     erro: HTTPException,
-) -> tuple[str, datetime | None]:
+) -> tuple[str, datetime | None, str | None]:
     try:
-        return _identidade_do_token(token, escopo_exigido)
+        return _dados_do_token(token, escopo_exigido)
     except ValueError:
         raise erro
 
@@ -175,6 +199,16 @@ def _sessao_valida_para_usuario(user, issued_at: datetime | None) -> bool:
     return issued_at is not None and issued_at > valid_after
 
 
+def _sessao_unica_valida(subject, session_id: str | None) -> bool:
+    active = getattr(subject, "active_session_id", None)
+    # Compatibilidade de implantacao: tokens anteriores a esta versao nao
+    # tinham sid e continuam validos apenas enquanto a conta ainda nao fez um
+    # novo login gerenciado. A partir do primeiro, so o sid atual e aceito.
+    if active is None:
+        return session_id is None
+    return session_id is not None and secrets.compare_digest(active, session_id)
+
+
 def usuario_por_token_app(db: Session, token: str | None):
     """Resolve um usuário por JWT app para HTTP ou WebSocket.
 
@@ -186,11 +220,15 @@ def usuario_por_token_app(db: Session, token: str | None):
     if not token:
         return None
     try:
-        email, issued_at = _identidade_do_token(token, "app")
+        email, issued_at, session_id = _dados_do_token(token, "app")
     except ValueError:
         return None
     user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
-    if not user or not _sessao_valida_para_usuario(user, issued_at):
+    if (
+        not user
+        or not _sessao_valida_para_usuario(user, issued_at)
+        or not _sessao_unica_valida(user, session_id)
+    ):
         return None
     return user
 
@@ -222,6 +260,16 @@ def current_user(
     agora = datetime.now(timezone.utc)
     if user.last_seen_at is None or (agora - user.last_seen_at).total_seconds() > PRESENCA_THROTTLE_SEGUNDOS:
         user.last_seen_at = agora
+        try:
+            _email, _issued_at, session_id = _dados_do_token(token, "app")
+            if session_id:
+                from app.services.access_security import touch_session
+                touch_session(
+                    db, user_id=user.id, surface="corvia_os",
+                    session_id=session_id, now=agora,
+                )
+        except ValueError:
+            pass
         db.commit()
 
     return user
@@ -230,6 +278,18 @@ def current_user(
 def require_admin(user=Depends(current_user)):
     if user.role != "admin":
         raise HTTPException(status_code=403, detail="Ação restrita a administradores.")
+    return user
+
+
+def is_owner_admin(user) -> bool:
+    expected = (settings.admin_email or "").strip().lower()
+    actual = (getattr(user, "email", "") or "").strip().lower()
+    return bool(expected and user.role == "admin" and secrets.compare_digest(actual, expected))
+
+
+def require_owner_admin(user=Depends(current_user)):
+    if not is_owner_admin(user):
+        raise HTTPException(status_code=403, detail="Histórico de acessos restrito ao proprietário do CorVIA.")
     return user
 
 
@@ -334,7 +394,7 @@ def current_email_account(
     )
     if not token:
         raise credentials_error
-    email_address, issued_at = _decodificar(token, "email", credentials_error)
+    email_address, issued_at, session_id = _decodificar(token, "email", credentials_error)
     conta = db.query(EmailAccount).filter(EmailAccount.email_address == email_address).first()
     if not conta or conta.status != "ativa":
         raise credentials_error
@@ -342,7 +402,10 @@ def current_email_account(
     # de revogação que `current_user`/`usuario_por_token_app` já aplicam à
     # sessão principal — sem ele, trocar a senha da caixa não invalidava
     # tokens já emitidos (inclusive "permanecer conectado", até 30 dias).
-    if not _sessao_valida_para_usuario(conta, issued_at):
+    if (
+        not _sessao_valida_para_usuario(conta, issued_at)
+        or not _sessao_unica_valida(conta, session_id)
+    ):
         raise credentials_error
     # Achado relacionado, mesmo gate: a conta principal desativada (ex.:
     # banimento por admin) não derrubava a sessão da caixa — a coerência

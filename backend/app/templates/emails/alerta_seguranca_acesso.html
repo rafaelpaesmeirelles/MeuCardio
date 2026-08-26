@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;"><strong>Foi detectado um acesso de risco alto.</strong></p>
+<p style="margin:0 0 8px;">Usuário: {{ nome_usuario }} ({{ email_usuario }})</p>
+<p style="margin:0 0 8px;">Sistema: {{ superficie }}</p>
+<p style="margin:0 0 8px;">Data e hora: {{ quando }}</p>
+<p style="margin:0 0 8px;">Local: {{ local }}</p>
+<p style="margin:0 0 8px;">IP: {{ ip }}</p>
+<p style="margin:0 0 16px;">Dispositivo: {{ sistema }} · {{ navegador }}</p>
+{% if motivos %}
+<p style="margin:0 0 4px;"><strong>Motivos:</strong></p>
+<ul style="margin:0 0 16px;padding-left:20px;">{% for motivo in motivos %}<li>{{ motivo }}</li>{% endfor %}</ul>
+{% endif %}
+{{ botao("Revisar e encerrar acesso", link) }}
+<p style="margin:0;font-size:13px;color:#55666F;">VPNs e redes móveis podem alterar a localização. O CorVIA já bloqueou a sessão anterior quando houve um novo login.</p>
+{% endblock %}
