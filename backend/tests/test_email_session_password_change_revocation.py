@@ -234,12 +234,8 @@ def test_renewal_does_not_resurrect_a_revoked_email_session(
 def test_concurrent_devices_one_password_change_revokes_all_previous_sessions(
     client, criar_usuario, db, monkeypatch_mail360,
 ):
-    """Múltiplos dispositivos logados na mesma caixa ao mesmo tempo: os
-    DOIS tokens (emitidos em momentos diferentes, simulando dois
-    dispositivos) ficam inválidos assim que QUALQUER um deles troca a
-    senha — não é uma corrida vencida por quem chega primeiro, é uma marca
-    de tempo que invalida tudo que veio antes dela, em qualquer
-    dispositivo."""
+    """A caixa aceita só o login mais recente e a troca de senha também
+    revoga essa sessão única."""
     user, token_app = criar_usuario(email="revogacao.multidispositivo@teste.local")
     _dar_assinatura_email_ativa(db, user)
 
@@ -250,12 +246,11 @@ def test_concurrent_devices_one_password_change_revokes_all_previous_sessions(
     login_a = client.post("/api/email/entrar", json={"endereco": endereco, "senha": "senha-multi-1"})
     token_a = login_a.json()["access_token"]
 
-    # "Dispositivo B" loga um pouco depois — dois tokens simultaneamente
-    # válidos para a mesma caixa, cenário real de celular + computador.
+    # "Dispositivo B" loga depois e substitui imediatamente o dispositivo A.
     login_b = client.post("/api/email/entrar", json={"endereco": endereco, "senha": "senha-multi-1"})
     token_b = login_b.json()["access_token"]
 
-    assert client.get("/api/email/eu", headers={"Authorization": f"Bearer {token_a}"}).status_code == 200
+    assert client.get("/api/email/eu", headers={"Authorization": f"Bearer {token_a}"}).status_code == 401
     assert client.get("/api/email/eu", headers={"Authorization": f"Bearer {token_b}"}).status_code == 200
 
     # O dispositivo B troca a senha (ex.: suspeita de acesso indevido).
@@ -265,8 +260,7 @@ def test_concurrent_devices_one_password_change_revokes_all_previous_sessions(
         headers={"Authorization": f"Bearer {token_app}"},
     )
 
-    # Os DOIS tokens anteriores — inclusive o do próprio dispositivo que
-    # pediu a troca — precisam de novo login; nenhuma sessão sobrevive.
+    # Nenhum token anterior sobrevive à troca de senha.
     assert client.get("/api/email/eu", headers={"Authorization": f"Bearer {token_a}"}).status_code == 401
     assert client.get("/api/email/eu", headers={"Authorization": f"Bearer {token_b}"}).status_code == 401
 

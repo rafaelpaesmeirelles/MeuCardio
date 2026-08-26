@@ -72,8 +72,8 @@ def test_historico_e_restrito_ao_proprietario_e_expoe_dados_de_seguranca(
         target.email,
         **{
             "CF-Connecting-IP": "203.0.113.42",
-            "CF-IPCity": "São Paulo",
-            "CF-Region": "São Paulo",
+            "CF-IPCity": "Sao Paulo",
+            "CF-Region": "Sao Paulo",
             "CF-IPCountry": "BR",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0) Chrome/140.0 Safari/537.36",
         },
@@ -93,7 +93,7 @@ def test_historico_e_restrito_ao_proprietario_e_expoe_dados_de_seguranca(
     assert allowed.status_code == 200, allowed.text
     item = allowed.json()["items"][0]
     assert item["ip_address"] == "203.0.113.42"
-    assert item["location"] == "São Paulo, São Paulo, BR"
+    assert item["location"] == "Sao Paulo, Sao Paulo, BR"
     assert item["operating_system"] == "Windows"
     assert item["browser"] == "Google Chrome"
     assert item["active"] is True
@@ -115,14 +115,14 @@ def test_tentativas_repetidas_e_mudanca_rapida_geram_alertas_explicaveis(
     for _ in range(3):
         resposta = _login(
             client, target.email, "senha-errada",
-            **{"CF-Connecting-IP": "203.0.113.10", "CF-IPCity": "São Paulo", "CF-IPCountry": "BR"},
+            **{"CF-Connecting-IP": "203.0.113.10", "CF-IPCity": "Sao Paulo", "CF-IPCountry": "BR"},
         )
         assert resposta.status_code == 401
 
     first = _login(
         client, target.email,
         **{
-            "CF-Connecting-IP": "203.0.113.10", "CF-IPCity": "São Paulo",
+            "CF-Connecting-IP": "203.0.113.10", "CF-IPCity": "Sao Paulo",
             "CF-IPCountry": "BR", "User-Agent": "Mozilla/5.0 (Windows NT 10.0) Chrome/140.0",
         },
     )

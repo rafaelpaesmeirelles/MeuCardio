@@ -49,7 +49,8 @@ def test_external_email_is_verified_before_corvia_session():
     assert 'claims.get("email_verified"' in social
     assert 'body.get("email_verified") is not True' in social
     assert 'item.get("verified")' in social
-    assert "gravar_cookie_sessao(response, create_access_token(user.email, scope=\"app\"))" in social
+    assert "start_session(" in social
+    assert 'create_access_token(user.email,scope="app",session_id=session_id)' in compact(social)
 
 
 def test_yahoo_is_not_offered_as_social_login():
