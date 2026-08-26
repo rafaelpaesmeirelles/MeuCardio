@@ -11,6 +11,7 @@ on:
       - "frontend/src/pages/RedefinirSenha.tsx"
       - "frontend/src/components/PreHomeBrand.tsx"
       - "frontend/src/styles/login.css"
+      - "frontend/src/styles/login-viewport-refinement.css"
       - "frontend/src/main.tsx"
 
 permissions:
