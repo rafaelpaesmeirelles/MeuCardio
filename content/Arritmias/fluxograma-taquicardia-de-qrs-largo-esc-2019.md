@@ -39,11 +39,10 @@ flowchart TD
   D2 -->|"Sim"| P2["Manobras vagais podem ser tentadas<br/>quando apropriado"]
 
   P2 --> D3{"Adenosina é apropriada?"}
-  D3 -->|"Somente estável + regular + monomórfica"| C3(["Adenosina IV pode ser considerada<br/>para tratamento ou auxílio diagnóstico<br/>AHA 2025 — Classe IIb, B-NR"])
-  D3 -->|"Instável, irregular, polimórfica<br/>ou suspeita de pré-excitação"| C4(["NÃO usar adenosina nesta via;<br/>reclassificar o ritmo e seguir<br/>o algoritmo específico"])
+  D3 -->|"Estável + regular + monomórfica<br/>e sem cenário de exclusão"| C3(["Adenosina IV pode ser considerada<br/>para tratamento ou auxílio diagnóstico<br/>AHA 2025 — Classe IIb, B-NR"])
+  D3 -->|"Não — suspeita de pré-excitação<br/>ou outro cenário de exclusão"| C4(["NÃO usar adenosina nesta via.<br/>SAIR DESTA ÁRVORE e seguir<br/>o algoritmo específico"])
 
   C3 --> D4{"Persistência da taquicardia<br/>e paciente permanece estável?"}
-  C4 --> D4
 
   D4 -->|"Sim"| C5(["Antiarrítmico IV pode ser considerado:<br/>amiodarona, procainamida ou sotalol<br/>AHA 2025 — Classe IIb, B-R<br/>Escolha depende do contexto clínico"])
   D4 -->|"Não / deteriorou"| C6(["Cardioversão elétrica sincronizada<br/>se continua monomórfica organizada"])
