@@ -61,6 +61,17 @@ def test_authenticated_home_matches_reference_board_structure():
     assert main.index(reference_import) < main.index(contrast_import)
 
 
+def test_mobile_quick_actions_default_to_two_rows_without_duplicate_originals():
+    personalizer = _read("components/HomeQuickActionsPersonalizer.tsx")
+    css = _read("styles/home-desktop-symmetric-personalizable.css")
+
+    default_block = personalizer.split("const PADRAO_MOBILE = [", 1)[1].split("];", 1)[0]
+    assert default_block.count('"') == 16
+    assert "repeat(4,minmax(0,1fr))" in css
+    assert ".ccc-actions.qa-active>.ccc-action:not(.qa-action)" in css
+    assert css.count(".qa-active>.ccc-action:not(.qa-action)") == 1
+
+
 def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
     panel = _read("pages/PainelClinicalOS.tsx")
     app = _read("App.tsx")

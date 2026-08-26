@@ -7,6 +7,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 FLUXOGRAMA = REPO_ROOT / "frontend/src/components/Fluxograma.tsx"
 EMERGENCIA = REPO_ROOT / "frontend/src/pages/Emergencia.tsx"
 ESTILO = REPO_ROOT / "frontend/src/styles/emergencia.css"
+ESTILO_MOBILE = REPO_ROOT / "frontend/src/styles/clinical-interior-board-lock.css"
 
 
 def _fonte(caminho: Path) -> str:
@@ -79,3 +80,15 @@ def test_busca_e_falha_do_fluxograma_possuem_estilos_visiveis():
     assert ".emerg__busca input" in fonte
     assert ".emerg__semResultado" in fonte
     assert ".fluxograma__erro" in fonte
+
+
+def test_emergencia_mobile_reserva_navegacao_e_impede_conteudo_sob_cabecalho():
+    pagina = _fonte(EMERGENCIA)
+    estilo = _fonte(ESTILO)
+    estilo_final = _fonte(ESTILO_MOBILE)
+
+    assert '<p className="emerg__origem">' in pagina
+    assert "padding: 0 1rem 5.4rem" in estilo
+    assert ".emerg__origem { margin: 0.55rem 0.65rem" in estilo
+    assert "font-size: 0.58rem" in estilo
+    assert "linear-gradient(145deg,#081b28,#04121d)" in estilo_final

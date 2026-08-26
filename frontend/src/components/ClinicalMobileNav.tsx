@@ -47,6 +47,7 @@ const TRABALHO_ASSISTENCIA: LinkItem[] = [
 ];
 
 const FERRAMENTAS: LinkItem[] = [
+  { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca", featured: true },
   { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
   { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
   { to: "/apresentacao", label: "Apresentação", icon: "documento" },
@@ -82,7 +83,6 @@ export default function ClinicalMobileNav() {
   const sheetRef = useRef<HTMLElement>(null);
 
   const contaAdmin=CONTA_ADMIN
-    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const secoes: MobileSection[] = [

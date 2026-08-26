@@ -46,14 +46,14 @@ type ModuloItem = { to: string; label: string; icon: NomeIcone; adminOnly?: bool
 type ModuloGrupo = { title: string; tone: "cyan" | "violet" | "blue" | "amber" | "teal" | "slate"; icon: NomeIcone; items: ModuloItem[] };
 
 const ACOES: AcaoRapida[] = [
+  { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices", icone: "calculadora", tone: "amber" },
+  { to: "/assistente", titulo: "CorVIA IA", detalhe: "Assistente Clínica", icone: "assistente", tone: "blue" },
+  { to: "/emergencia", titulo: "Emergências", detalhe: "Condutas rápidas", icone: "emergencia", tone: "red" },
+  { to: "/diretrizes", titulo: "Guidelines", detalhe: "Diretrizes atuais", icone: "conhecimento", tone: "green" },
   { to: "/exames-ia", titulo: "IA para Exames", detalhe: "Análise cardiovascular multimodal", icone: "ecg", tone: "green", featured: true },
   { to: "/receituario", titulo: "Prescrever", detalhe: "Novo receituário", icone: "prescricao", tone: "cyan" },
   { to: "/documentos", titulo: "Solicitar exames", detalhe: "Adicionar solicitação", icone: "clinica", tone: "blue" },
-  { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices", icone: "calculadora", tone: "amber" },
-  { to: "/interacoes", titulo: "Interações", detalhe: "Segurança medicamentosa", icone: "medicamento", tone: "violet" },
-  { to: "/emergencia", titulo: "Emergências", detalhe: "Condutas rápidas", icone: "emergencia", tone: "red" },
-  { to: "/diretrizes", titulo: "Guidelines", detalhe: "Diretrizes atuais", icone: "conhecimento", tone: "green" },
-  { to: "/assistente", titulo: "CorVIA AI", detalhe: "Assistente Clínica", icone: "assistente", tone: "blue" },
+  { to: "/busca?modo=tudo-com-tudo", titulo: "Tudo com Tudo", detalhe: "Tema completo, organizado por áreas", icone: "busca", tone: "violet" },
 ];
 
 const MODULOS: ModuloGrupo[] = [
@@ -101,6 +101,7 @@ const MODULOS: ModuloGrupo[] = [
   },
   {
     title: "Ferramentas & Produtividade", tone: "amber", icon: "calculadora", items: [
+      { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca" },
       { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
       { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
@@ -467,7 +468,7 @@ export default function PainelClinicalOS() {
               <footer><Link to="/agenda">{rota ? "Ver rota" : "Abrir Agenda"} <Icone nome="seta" /></Link>{mobilidade?.enabled && destino?.location && (!mobilidade.automatic_foreground_refresh || !rota || erroRota) && <button type="button" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando..." : !usaOrigemSalva && permissao === "negada" ? "Tentar novamente" : rota ? "Atualizar rota" : "Calcular rota"}</button>}</footer>
             </div>
             <div className="ccc-mobile-commute__map ccc-reference-commute__map">
-              {destinoMapeavel && destino?.location ? <MapaDeslocamento rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>{retornoAtivo ? "Mapa do retorno" : "Mapa do próximo deslocamento"}</strong><span>{descricaoDeslocamento}</span></div>}
+              {destinoMapeavel && destino?.location ? <MapaDeslocamento compact rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>{retornoAtivo ? "Mapa do retorno" : "Mapa do próximo deslocamento"}</strong><span>{descricaoDeslocamento}</span></div>}
             </div>
           </article>
 

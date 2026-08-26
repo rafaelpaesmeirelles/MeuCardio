@@ -1,4 +1,5 @@
 from app.models.user import User  # noqa: F401
+from app.models.user_access import UserAccess  # noqa: F401
 from app.models.content import Document, DocumentRevision  # noqa: F401
 from app.models.drug import Drug  # noqa: F401
 from app.models.round import Patient, PatientProblem, PatientNote, PatientAISuggestion  # noqa: F401

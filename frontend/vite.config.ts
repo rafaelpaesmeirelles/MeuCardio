@@ -13,6 +13,10 @@ const validacaoPublicaSomenteOnline = /(?:^|\/)ValidarDocumento-[^/]*\.(?:js|css
 // execução. O chunk continua disponível por NetworkFirst, mas não ocupa o
 // precache inicial com uma tela que não funciona offline.
 const analiseCardiovascularSomenteOnline = /(?:^|\/)(?:ECGQuickOpinion|CardiovascularExamAI)-[^/]*\.(?:js|css)$/;
+// A busca transversal depende da API para resultados, conexões e detalhes de
+// medicamentos. O chunk segue disponível por NetworkFirst, sem ocupar o
+// precache com uma tela que não produz conteúdo offline.
+const buscaTudoComTudoSomenteOnline = /(?:^|\/)Busca-[^/]*\.js$/;
 
 export default defineConfig({
   plugins: [
@@ -48,6 +52,7 @@ export default defineConfig({
               if (loginSomenteOnline.test(entry.url)) return false;
               if (validacaoPublicaSomenteOnline.test(entry.url)) return false;
               if (analiseCardiovascularSomenteOnline.test(entry.url)) return false;
+              if (buscaTudoComTudoSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;

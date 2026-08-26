@@ -152,6 +152,12 @@ const ACAO_HISTORICO: Record<string, string> = {
   ativo: "Ativação/desativação da conta",
   convidado: "Status de convidado alterado",
   investidor: "Status de investidor alterado",
+  criar_usuario: "Conta criada",
+};
+
+const CAMPO_HISTORICO: Record<string, string> = {
+  role: "Perfil", email: "E-mail", tipo_acesso: "Tipo de acesso",
+  kyc_waivers: "Dispensas de verificação",
 };
 
 function rotuloAcao(action: string): string {
@@ -672,7 +678,9 @@ function AbaDocumentos({ kyc, conta, aoAtualizar }: { kyc: Kyc; conta: Conta; ao
 // porque a maioria das chaves já nasce em português no backend (ex.:
 // "tipo_acesso", "observacao", "plano_anterior").
 function humanizarChaveDetalhe(chave: string): string {
-  const texto = chave.replaceAll("_", " ");
+  if (CAMPO_HISTORICO[chave]) return CAMPO_HISTORICO[chave];
+  const texto = chave.replace("professional", "documento profissional").replace("personal", "documento pessoal")
+    .replace("front", "frente").replace("back", "verso").replaceAll("_", " ");
   return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
@@ -680,17 +688,18 @@ function humanizarChaveDetalhe(chave: string): string {
 // backend) — nunca um formato único conhecido de antemão. Em vez de despejar
 // o objeto cru (bug corrigido em 14/08/2026: aparecia como JSON bruto,
 // ilegível para quem não é desenvolvedor), cada valor primitivo vira uma
-// linha rotulada; valor desconhecido/aninhado cai no fallback de
-// JSON.stringify SÓ para aquele valor específico, nunca para o registro
-// inteiro — mantém "nunca dump cru" mesmo para o formato que não se
-// consegue formatar melhor.
+// linha rotulada; objetos aninhados são achatados em pares legíveis, sem
+// despejar JSON técnico na interface administrativa.
 function formatarValorDetalhe(valor: unknown): string {
   if (valor === null || valor === undefined || valor === "") return "—";
   if (typeof valor === "boolean") return valor ? "Sim" : "Não";
   if (Array.isArray(valor)) {
     return valor.length ? valor.map(formatarValorDetalhe).join(", ") : "—";
   }
-  if (typeof valor === "object") return JSON.stringify(valor);
+  if (typeof valor === "object") {
+    return Object.entries(valor as Record<string, unknown>)
+      .map(([chave, item]) => `${humanizarChaveDetalhe(chave)}: ${formatarValorDetalhe(item)}`).join(" · ") || "—";
+  }
   return String(valor);
 }
 

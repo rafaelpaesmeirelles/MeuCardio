@@ -20,5 +20,6 @@ def renovar_sessao_email(
         conta.email_address,
         scope="email",
         expires_minutes=SESSAO_EMAIL_PERSISTENTE_MINUTOS,
+        session_id=conta.active_session_id,
     )
     return {"access_token": token, "token_type": "bearer"}

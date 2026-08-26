@@ -8,6 +8,7 @@ canônica antes do envio, sem alterar regras de token, idempotência e EmailLog.
 from __future__ import annotations
 
 import logging
+from zoneinfo import ZoneInfo
 
 from app.services import emails_legacy as _legacy
 from app.services.emails_legacy import *  # noqa: F401,F403
@@ -143,3 +144,46 @@ def enviar_institucional_paciente(
 
 _legacy._enviar = _enviar
 _legacy.enviar_institucional_paciente = enviar_institucional_paciente
+
+
+def enviar_alerta_seguranca(access_id: int) -> bool:
+    """Notifica somente o proprietario sobre um evento classificado alto."""
+    from app.core.db import SessionLocal
+    from app.models.user import User
+    from app.models.user_access import UserAccess
+
+    db = SessionLocal()
+    try:
+        access = db.get(UserAccess, access_id)
+        if access is None or access.risk_level != "alto":
+            return False
+        user = db.get(User, access.user_id)
+        if user is None or not settings.admin_email:
+            return False
+        when = access.started_at.astimezone(ZoneInfo(settings.fuso_operacao)).strftime("%d/%m/%Y às %H:%M:%S")
+        location = ", ".join(
+            value for value in (access.city, access.region, access.country_code) if value
+        ) or "não informada pelo provedor"
+        return _enviar(
+            db,
+            tipo="alerta_seguranca_acesso",
+            destinatario=settings.admin_email,
+            assunto=f"CorVIA — alerta de segurança em {user.full_name}",
+            template="alerta_seguranca_acesso",
+            contexto={
+                "nome_usuario": user.full_name,
+                "email_usuario": user.email,
+                "quando": when,
+                "superficie": "CorVIA Mail" if access.surface == "corvia_mail" else "CorVIA OS",
+                "local": location,
+                "ip": access.ip_address or "não informado",
+                "sistema": access.operating_system or "não identificado",
+                "navegador": access.browser or "não identificado",
+                "motivos": [item.get("message", "") for item in (access.risk_reasons or [])],
+                "link": f"{settings.public_url}/admin/usuarios/{user.id}/gerenciar",
+            },
+            user_id=user.id,
+            chave_idempotencia=f"alerta_seguranca_acesso:{access.id}",
+        )
+    finally:
+        db.close()

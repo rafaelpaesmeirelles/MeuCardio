@@ -33,11 +33,23 @@ type Grupo = {
   itens: ItemRelacionado[];
 };
 
-type Resposta = { tema: string; grupos: Grupo[]; total: number };
+type Resposta = {
+  tema?: string;
+  medicamento?: { slug: string; titulo: string };
+  temas?: string[];
+  grupos: Grupo[];
+  total: number;
+};
 
 type Props = {
   /** Tema do item atual — o mesmo valor gravado em `theme`/`tema` no banco. */
-  tema: string | null | undefined;
+  tema?: string | null;
+  /**
+   * Medicamento que ancora o painel. Diferente do tema genérico
+   * "Farmacologia", esta rota atravessa somente indicações clínicas
+   * estruturadas do próprio fármaco.
+   */
+  medicamentoSlug?: string;
   /** Tipo e slug do próprio item, para nunca aparecer na sua própria lista. */
   excluirTipo?: string;
   excluirSlug?: string;
@@ -45,28 +57,33 @@ type Props = {
   titulo?: string;
 };
 
-export default function TudoSobreEsteTema({ tema, excluirTipo, excluirSlug, titulo }: Props) {
+export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, excluirSlug, titulo }: Props) {
   const [resposta, setResposta] = useState<Resposta | null>(null);
 
   useEffect(() => {
     setResposta(null);
     const t = (tema ?? "").trim();
-    if (!t) return;
+    if (!t && !medicamentoSlug) return;
+    let ativo = true;
     const params = new URLSearchParams({ tema: t });
     if (excluirTipo) params.set("excluir_tipo", excluirTipo);
     if (excluirSlug) {
       params.set("excluir_slug", excluirSlug);
       params.set("assunto", excluirSlug);
     }
+    const endpoint = medicamentoSlug
+      ? `/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`
+      : `/relacionados?${params.toString()}`;
     api
-      .get<Resposta>(`/relacionados?${params.toString()}`)
-      .then(setResposta)
+      .get<Resposta>(endpoint)
+      .then((dados) => { if (ativo) setResposta(dados); })
       .catch(() => {
         // Silencioso de propósito: este painel é um complemento da página, não
         // o conteúdo principal — uma falha aqui não pode quebrar a leitura do
         // item que o médico já abriu.
       });
-  }, [tema, excluirTipo, excluirSlug]);
+    return () => { ativo = false; };
+  }, [tema, medicamentoSlug, excluirTipo, excluirSlug]);
 
   if (!resposta || resposta.total === 0) return null;
   const grupos = resposta.grupos.filter((g) => g.itens.length > 0);
@@ -74,11 +91,17 @@ export default function TudoSobreEsteTema({ tema, excluirTipo, excluirSlug, titu
 
   return (
     <section className="cartao" style={{ marginTop: "1.2rem" }}>
-      <p className="eyebrow">{titulo ?? "Tudo sobre este tema no Ecossistema Corvia"}</p>
+      <p className="eyebrow">{titulo ?? "Tudo com Tudo"}</p>
       <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)", marginTop: "-0.2rem" }}>
-        {resposta.total} {resposta.total === 1 ? "item publicado" : "itens publicados"} sobre{" "}
-        <strong>{resposta.tema}</strong> em outras frentes do ecossistema — acesse direto.
+        {resposta.total} {resposta.total === 1 ? "item publicado" : "itens publicados"} relacionado{resposta.total === 1 ? "" : "s"} a{" "}
+        <strong>{resposta.medicamento?.titulo ?? resposta.tema}</strong> em áreas separadas do ecossistema — acesse direto.
       </p>
+
+      {!!resposta.temas?.length && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginTop: "0.65rem" }} aria-label="Contextos clínicos relacionados">
+          {resposta.temas.map((temaRelacionado) => <span className="chip" key={temaRelacionado}>{temaRelacionado}</span>)}
+        </div>
+      )}
 
       <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", marginTop: "0.8rem" }}>
         {grupos.map((g) => (

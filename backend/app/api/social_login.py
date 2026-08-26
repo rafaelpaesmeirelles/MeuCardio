@@ -19,7 +19,7 @@ from urllib.parse import urlencode
 
 import httpx
 import jwt
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
@@ -319,7 +319,12 @@ def start(provider: str) -> RedirectResponse:
 
 
 @router.api_route("/{provider}/callback", methods=["GET", "POST"])
-async def callback(provider: str, request: Request, db: Session = Depends(get_db)) -> RedirectResponse:
+async def callback(
+    provider: str,
+    request: Request,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+) -> RedirectResponse:
     provider = provider.lower().strip()
     if provider not in _SUPPORTED:
         return _login_error("unsupported_provider", provider)
@@ -353,7 +358,18 @@ async def callback(provider: str, request: Request, db: Session = Depends(get_db
     if user is None:
         return _login_error("account_not_linked", provider)
 
+    from app.services.access_security import start_session
+    session_id, _access = start_session(
+        db, subject=user, user_id=user.id, surface="corvia_os", request=request,
+    )
+    from app.api.chat import gerenciador
+    background_tasks.add_task(gerenciador.encerrar_usuario, user.id)
+    if _access.risk_level == "alto":
+        from app.services import emails
+        background_tasks.add_task(emails.enviar_alerta_seguranca, _access.id)
     response = RedirectResponse(url=f"/?login_social={provider}", status_code=303)
-    gravar_cookie_sessao(response, create_access_token(user.email, scope="app"))
+    gravar_cookie_sessao(
+        response, create_access_token(user.email, scope="app", session_id=session_id)
+    )
     _clear_flow_cookies(response)
     return response

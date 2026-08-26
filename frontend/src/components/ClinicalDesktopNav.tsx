@@ -99,7 +99,6 @@ export default function ClinicalDesktopNav() {
   const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
 
   const administracao=ADMINISTRACAO
-    .filter(item=>item.to!=="/receitas-para-assinatura"||pendentesAssinatura!==undefined)
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
 
   const sections: NavSection[] = [

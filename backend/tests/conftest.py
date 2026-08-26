@@ -50,6 +50,7 @@ from app.models.user import User  # noqa: E402
 # grava). Nunca inclui tabela de conteúdo clínico: esta suíte não mexe nelas.
 TABELAS_PARA_LIMPAR = (
     "password_reset_tokens",
+    "user_accesses",
     "email_accounts",
     "subscriptions",
     "audit_logs",

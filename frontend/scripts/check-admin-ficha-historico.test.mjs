@@ -187,6 +187,15 @@ function AbaHistorico({ historico }) {
   assert.ok(failures.some((f) => f.includes("dump cru")));
 });
 
+test("acusa JSON cru dentro do formatador de valores aninhados", () => {
+  const tsx = TSX_VALIDO.replace(
+    "function formatarValorDetalhe(valor) { return String(valor); }",
+    "function formatarValorDetalhe(valor) { return JSON.stringify(valor); }",
+  );
+  const failures = validateHistoricoRendering(tsx);
+  assert.ok(failures.some((f) => f.includes("JSON cru")));
+});
+
 test("acusa ausência de tratamento de estado vazio", () => {
   const tsx = TSX_VALIDO.replace(
     'if (historico.length === 0) {\n    return <p>Nenhum evento registrado para este assinante até o momento.</p>;\n  }\n  ',

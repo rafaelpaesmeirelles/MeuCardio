@@ -72,7 +72,13 @@ class OAuthSessionRecoveryMiddleware(BaseHTTPMiddleware):
                 or user.status in {"pendente", "rejeitado"}
             ):
                 return response
-            gravar_cookie_sessao(response, create_access_token(user.email, scope="app"))
+            from app.services.access_security import start_session
+            session_id, _access = start_session(
+                db, subject=user, user_id=user.id, surface="corvia_os", request=request,
+            )
+            gravar_cookie_sessao(
+                response, create_access_token(user.email, scope="app", session_id=session_id)
+            )
             return response
         finally:
             db.close()

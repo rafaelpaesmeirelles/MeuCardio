@@ -21,10 +21,10 @@ def test_launch_preserva_taxonomia_aprovada_dos_assistentes():
     painel = PAINEL.read_text(encoding="utf-8")
     tour = TOUR.read_text(encoding="utf-8")
 
-    # A prancha canônica aprovada usa CorVIA AI como ação rápida que abre a
+    # A nomenclatura aprovada usa CorVIA IA como ação rápida que abre a
     # Assistente Clínica. Isso é distinto do Assistente Pessoal da Home e do
     # CorVIA Chat, que permanece produto de comunicação profissional.
-    assert 'titulo: "CorVIA AI"' in painel
+    assert 'titulo: "CorVIA IA"' in painel
     assert 'detalhe: "Assistente Clínica"' in painel
     assert "Assistente Pessoal" in painel
     assert "CorVIA Chat" in tour
