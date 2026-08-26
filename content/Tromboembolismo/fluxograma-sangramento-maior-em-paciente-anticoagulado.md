@@ -3,90 +3,92 @@ title: "Sangramento maior em paciente anticoagulado"
 slug: fluxograma-sangramento-maior-em-paciente-anticoagulado
 theme: "Tromboembolismo"
 kind: fluxograma
-summary: "Árvore de decisão para sangramento em paciente anticoagulado: confirma primeiro se o sangramento é maior antes de cogitar qualquer antídoto, depois direciona a reversão específica por classe — varfarina, dabigatrana, inibidor do fator Xa (rivaroxabana/apixabana) ou heparina não fracionada."
+summary: "Fluxo de reversão urgente por classe de anticoagulante, distinguindo sangramento menor de maior, evitando suspensão automática de antiagregante e incorporando o alerta FDA de 2025 que retirou alfa-andexanete do mercado dos EUA por balanço risco-benefício desfavorável."
 review_status: revisado
-source_refs: ["Pollack CV Jr, Reilly PA, van Ryn J, et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441. DOI: 10.1056/NEJMoa1707278. PMID: 28693366", "Connolly SJ, Crowther M, Eikelboom JW, et al; ANNEXA-4 Investigators. Full Study Report of Andexanet Alfa for Bleeding Associated with Factor Xa Inhibitors. N Engl J Med. 2019;380(14):1326-1335. DOI: 10.1056/NEJMoa1814051. PMID: 30730782", "Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. 2020;76(5):594-622. DOI: 10.1016/j.jacc.2020.04.053. PMID: 32680646", "Garcia DA, Baglin TP, Weitz JI, Samama MM. Parenteral Anticoagulants: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e24S-e43S. DOI: 10.1378/chest.11-2291. PMID: 22315264"]
+source_refs: ["Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. J Am Coll Cardiol. 2020;76(5):594-622. DOI: 10.1016/j.jacc.2020.04.053. PMID: 32680646", "Greenberg SM, Ziai WC, Cordonnier C, et al. 2022 Guideline for the Management of Patients With Spontaneous Intracerebral Hemorrhage. Stroke. 2022;53(7):e282-e361. DOI: 10.1161/STR.0000000000000407. PMID: 35579034", "Pollack CV Jr, Reilly PA, van Ryn J, et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441. DOI: 10.1056/NEJMoa1707278. PMID: 28693366", "Connolly SJ, Sharma M, Cohen AT, et al; ANNEXA-I Investigators. Andexanet for Factor Xa Inhibitor-Associated Acute Intracerebral Hemorrhage. N Engl J Med. 2024;390(19):1745-1755. DOI: 10.1056/NEJMoa2313040. NCT03661528", "US Food and Drug Administration. Update on the Safety of Andexxa by AstraZeneca: FDA Safety Communication. Atualização de 22/12/2025 — FDA concluiu que os riscos superam os benefícios; vendas e fabricação nos EUA encerradas em 22/12/2025 e retirada da aprovação registrada em 23/12/2025", "Agência Nacional de Vigilância Sanitária. Ondexxya (alfa-andexanete): novo registro. Publicado em 05/09/2023 — registro brasileiro para reversão de apixabana ou rivaroxabana em sangramento com risco à vida ou não controlado", "Garcia DA, Baglin TP, Weitz JI, Samama MM. Parenteral Anticoagulants: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed. Chest. 2012;141(2 Suppl):e24S-e43S. DOI: 10.1378/chest.11-2291. PMID: 22315264"]
+review_note: "Revisão de 26/08/2026: removido o ramo automático e as doses de alfa-andexanete após incorporar ANNEXA-I e a comunicação FDA de dezembro de 2025. O ensaio mostrou melhor controle de expansão do hematoma, porém mais trombose e AVC isquêmico, sem diferença apreciável em função ou morte em 30 dias; a FDA posteriormente concluiu que os riscos superavam os benefícios e retirou a aprovação nos EUA. O registro Anvisa de 2023 foi preservado como contexto regulatório brasileiro, sem inferir situação comercial em tempo real. Corrigida a suspensão automática de antiagregante, adicionada a reversão parcial de heparina de baixo peso molecular e retirada a regra simplificada de protamina que ignorava dose e tempo desde a heparina."
 ---
 
 # Sangramento maior em paciente anticoagulado
 
-Nem todo sangramento em paciente anticoagulado pede antídoto: a primeira
-decisão é separar sangramento **maior** — risco de vida, local crítico ou
-instabilidade hemodinâmica — de sangramento menor, que tem conduta
-conservadora. Só depois dessa confirmação a árvore se ramifica pela classe do
-anticoagulante, porque o agente de reversão é específico para cada uma.
+Antídoto não é resposta para qualquer sangramento. Primeiro classifique a
+gravidade; depois identifique fármaco, última dose, função renal e sítio. Em
+hemorragia intracraniana ou outro local crítico, a reversão não deve esperar o
+resultado de ensaio específico quando há exposição clinicamente relevante.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Paciente em uso de anticoagulante,<br/>com sangramento ativo"]
+  R0["Sangramento ativo em paciente<br/>que usa anticoagulante"]
+  D1{"Sangramento maior?<br/>Local crítico, instabilidade, queda de Hb >=2 g/dL<br/>ou necessidade de >=2 unidades de hemácias"}
+  C1["Sangramento não maior:<br/>controle local e revisão da próxima dose;<br/>não administrar reversor rotineiramente"]
+  P1["Interromper o anticoagulante; registrar agente,<br/>dose/horário e função renal; hemograma, coagulação,<br/>tipagem e controle imediato da fonte"]
+  D2{"Qual anticoagulante?"}
+  C2["Antagonista da vitamina K:<br/>vitamina K IV + CCP de 4 fatores;<br/>dose do CCP pelo INR/produto;<br/>plasma apenas se CCP indisponível"]
+  C3["Dabigatrana:<br/>idarucizumabe 5 g IV;<br/>se indisponível, CCP ativado ou CCP<br/>pode ser considerado"]
+  C4["Apixabana, rivaroxabana ou edoxabana:<br/>CCP de 4 fatores ou CCP ativado pode ser<br/>considerado conforme protocolo institucional"]
+  C7["Heparina não fracionada:<br/>protamina IV calculada pela heparina residual<br/>(dose e tempo); máximo 50 mg e infusão lenta"]
+  C8["Heparina de baixo peso molecular:<br/>protamina pode reverter apenas parcialmente;<br/>calcular por agente, dose e tempo"]
+  C9["Outro agente ou exposição incerta:<br/>hematologia/toxicologia e protocolo específico;<br/>não improvisar antídoto cruzado"]
+
   R0 --> D1
-
-  D1{"É sangramento maior?<br/>Local crítico (SNC, pericárdio, via aérea,<br/>retroperitônio, intra-articular),<br/>instabilidade hemodinâmica, ou<br/>queda de Hb ≥2 g/dL / transfusão ≥2 unidades"}
-  D1 -->|"Não, sangramento menor"| C1
-  D1 -->|"Sim, sangramento maior"| P1
-
-  C1(["Conduta conservadora: medidas locais/compressão,<br/>considerar retardar ou omitir a próxima dose;<br/>não usar antídoto específico"])
-
-  P1["Suspender anticoagulante e antiagregante.<br/>Medidas locais/compressão, acesso calibroso,<br/>reposição volêmica e suporte hemodinâmico"]
+  D1 -->|"Não"| C1
+  D1 -->|"Sim"| P1
   P1 --> D2
-
-  D2{"Qual classe de anticoagulante?"}
-  D2 -->|"Varfarina ou outro antagonista de vitamina K"| C2
+  D2 -->|"Varfarina/AVK"| C2
   D2 -->|"Dabigatrana"| C3
-  D2 -->|"Rivaroxabana ou apixabana"| D3
-  D2 -->|"Heparina não fracionada"| C7
-
-  C2(["Vitamina K 5-10 mg IV<br/>+ CCP de 4 fatores (25 U/kg se INR 2 a menor que 4;<br/>35 U/kg se INR 4-6; 50 U/kg se INR maior que 6).<br/>Se CCP indisponível, plasma 10-15 mL/kg"])
-
-  C3(["Idarucizumabe 5 g IV<br/>(dois bolus de 2,5 g, até 15 min entre eles).<br/>Se indisponível, CCP ou CCP ativado 50 U/kg.<br/>Considerar carvão ativado se ingestão há 2-4h"])
-
-  D3{"Andexanet alfa disponível?"}
-  D3 -->|"Sim"| D4
-  D3 -->|"Não"| C6
-
-  C6(["CCP de 4 fatores (dose fixa de 2.000 U é razoável)<br/>ou CCP ativado. Considerar carvão ativado<br/>se ingestão há 2-4h"])
-
-  D4{"Dose de andexanet pelo critério do fármaco:<br/>apixabana até 5 mg, rivaroxabana até 10 mg,<br/>ou última dose há 8h ou mais = dose baixa;<br/>doses maiores, ou menos de 8h/hora desconhecida = dose alta"}
-  D4 -->|"Critério de dose baixa"| C4
-  D4 -->|"Critério de dose alta"| C5
-
-  C4(["Andexanet alfa dose baixa:<br/>bolus IV 400 mg a 30 mg/min,<br/>seguido de infusão 4 mg/min por 120 min"])
-
-  C5(["Andexanet alfa dose alta:<br/>bolus IV 800 mg a 30 mg/min,<br/>seguido de infusão 8 mg/min por 120 min"])
-
-  C7(["Protamina IV, 1 mg para cada 100 UI de heparina<br/>recebida nas últimas 2-3h<br/>(dose máxima 50 mg, infundir a menos de 5 mg/min)"])
+  D2 -->|"Inibidor direto do fator Xa"| C4
+  D2 -->|"HNF"| C7
+  D2 -->|"HBPM"| C8
+  D2 -->|"Outro/incerto"| C9
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7 conduta;
+  class C1,C2,C3,C4,C7,C8,C9 conduta;
 ```
 
-## O que se repete em todo ramo, e por isso não está no diagrama
+## Correções de segurança inseparáveis do fluxo
 
-**Suporte hemodinâmico e correção de fatores agravantes.** Cristaloide para
-reposição volêmica, correção de hipotermia e acidose — ambas pioram a
-coagulopatia —, e investigação de comorbidades que também contribuem para o
-sangramento (trombocitopenia, uremia, doença hepática). Transfusão de
-concentrado de hemácias segue meta habitual de hemoglobina, mais alta em
-doença coronariana estabelecida.
+**Antiagregante não é suspenso automaticamente.** O anticoagulante causador é
+interrompido no sangramento maior. Já aspirina ou inibidor P2Y12 exige balanço
+entre hemostasia e indicação — sobretudo após intervenção coronária recente —
+com a equipe responsável. A versão anterior mandava suspender ambos em bloco.
 
-**Envolvimento precoce da especialidade do sítio de sangramento**
-(neurocirurgia, endoscopia, radiologia intervencionista) corre em paralelo à
-reversão farmacológica, sem esperar o antídoto para acionar.
+**Alfa-andexanete não é mais um ramo automático.** No ANNEXA-I, em hemorragia
+intracerebral após inibidor do fator Xa, eficácia hemostática ocorreu em 67,0%
+com alfa-andexanete e 53,1% com cuidado usual, mas eventos trombóticos ocorreram
+em 10,3% versus 5,6% e AVC isquêmico em 6,5% versus 1,5%; não houve diferença
+apreciável em função ou morte em 30 dias. Em 22 de dezembro de 2025, a FDA
+informou que os riscos superavam os benefícios e encerrou venda/fabricação nos
+EUA; a retirada da aprovação consta em 23 de dezembro de 2025.
 
-**Risco trombótico após a reversão.** Os dois antídotos específicos removem
-temporariamente a proteção antitrombótica: evento trombótico em 30-90 dias
-ocorreu em 6,3-7,4% dos pacientes revertidos com idarucizumabe e em 10% dos
-revertidos com andexanet alfa. A anticoagulação deve ser retomada assim que a
-hemostasia permitir, não adiada indefinidamente por precaução.
+A Anvisa havia concedido registro ao Ondexxya em 4 de setembro de 2023 para
+apixabana/rivaroxabana em sangramento com risco à vida ou não controlado. Como
+os marcos regulatórios divergiram, eventual uso fora dos EUA requer conferir a
+situação regulatória e disponibilidade locais e decisão multidisciplinar; este
+fluxograma não publica dose nem o posiciona à frente do CCP.
 
-**Andexanet alfa não deve ser considerado sinônimo de sangramento controlado
-apenas pela queda laboratorial da atividade anti-fator Xa** — o ANNEXA-4
-mostrou que essa redução não prediz de forma confiável a eficácia hemostática
-clínica global, ao contrário do idarucizumabe, em que reversão laboratorial e
-desfecho clínico caminharam juntos.
+**Protamina depende de exposição residual.** A equivalência de 1 mg por 100 UI
+vale para heparina ainda circulante e deve cair conforme o tempo desde a dose.
+Aplicá-la a toda a heparina das últimas 2-3 horas superestima a necessidade e
+aumenta risco de hipotensão/broncoespasmo. Na HBPM, a neutralização é parcial.
 
-**Cada antídoto é específico para sua classe.** Andexanet alfa não reverte
-dabigatrana, e idarucizumabe não reverte inibidor do fator Xa — não há
-eficácia cruzada entre eles.
+**Carvão ativado não ocupa o algoritmo central.** Pode reduzir absorção após
+ingestão muito recente de anticoagulante oral, mas a janela varia pelo agente e
+a evidência clínica é limitada; risco de aspiração e proteção de via aérea são
+decisivos. Discutir com toxicologia, sem atrasar controle da fonte e reversão.
+
+## Retomada da anticoagulação
+
+Reversão aumenta risco trombótico, mas “retomar assim que houver hemostasia”
+não é um prazo universal. Sítio e causa do sangramento, controle definitivo da
+fonte, indicação trombótica e risco de recorrência definem a decisão. Hemorragia
+intracraniana exige algoritmo próprio e não deve herdar o prazo de sangramento
+extracraniano.
+
+## Tudo com Tudo
+
+- [Reversão de anticoagulante em sangramento maior](reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa.md)
+- [Reinício da anticoagulação após hemorragia intracraniana](../Fibrilação_atrial/reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach.md)
+- [TEV recorrente sob anticoagulação terapêutica](tev-recorrente-sob-anticoagulacao-em-dose-terapeutica-conduta.md)
+- [Interrupção do anticoagulante para procedimento eletivo](../Fibrilação_atrial/interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause.md)

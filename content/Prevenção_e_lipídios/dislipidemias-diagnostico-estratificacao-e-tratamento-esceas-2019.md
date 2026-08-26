@@ -2,9 +2,10 @@
 title: "Dislipidemias: Diagnóstico, Estratificação e Tratamento (ESC/EAS 2019)"
 slug: dislipidemias-diagnostico-estratificacao-e-tratamento-esceas-2019
 theme: "Prevenção e lipídios"
-kind: protocolo
+kind: diretriz
 review_status: revisado
-source_refs: ["Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk · European Heart Journal · 2020;41(1):111-188 · DOI 10.1093/eurheartj/ehz455 · PMID 31504418", "2019 ESC/EAS Guidelines for the management of dyslipidaemias — documento oficial completo (slide set com todas as tabelas de recomendação), hospedado pela European Atherosclerosis Society (co-autora da diretriz) · https://eas-society.org/wp-content/uploads/2022/11/2019_dyslipidaemias_guidelin.pdf", "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025 · Arquivos Brasileiros de Cardiologia · 2025 · https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-122-09-e20250640/0066-782X-abc-122-09-e20250640.x66747.pdf"]
+review_note: "Revisão de 26/08/2026: reclassificado de protocolo para diretriz, pois resume transversalmente o documento formal ESC/EAS 2019. Os dois marcadores humanos foram resolvidos no texto integral primário EHJ: amostra sem jejum tem valor prognóstico ao menos equivalente para rastreamento geral e pode ser usada na maioria dos casos; LDL calculado exige cautela em diabetes, síndrome metabólica ou hipertrigliceridemia e a fórmula de Friedewald não deve ser usada com TG >400 mg/dL. A diretriz não oferece escore nem corte de fragilidade para iniciar estatina após 75 anos; orienta considerar saúde global e interações, sem transformar isso em contraindicação categórica."
+source_refs: ["Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.", "2019 ESC/EAS Guidelines slide set with recommendation tables. European Atherosclerosis Society. https://eas-society.org/wp-content/uploads/2022/11/2019_dyslipidaemias_guidelin.pdf", "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640."]
 legacy_source: "protocolos/protocolo-clinico-dislipidemias-esc-eas-2019.md"
 ---
 
@@ -42,7 +43,14 @@ Traçar a meta de LDL conforme a categoria de risco e prescrever estatina de alt
 - em intolerância a estatina em qualquer dose (mesmo após reintrodução/rechallenge), considerar ezetimiba — **Classe IIa, Nível C**
 
 ## Mudanca lipidograma
-A diretriz aceita a coleta do lipidograma sem jejum para a avaliação inicial na maioria dos pacientes (seção 5.4.3 "Fasting or non-fasting?" do documento — texto integral não confirmado nesta revisão por bloqueio de acesso ao PDF completo em academic.oup.com, ver nota abaixo); não é correto dizer que "elimina" o jejum como opção, apenas que passa a ser dispensável na maior parte dos casos. A Diretriz Brasileira de Dislipidemias 2025 reafirma essa orientação com recomendação **Forte, certeza Moderada**: é aceitável colher amostra sem jejum, em particular em populações selecionadas (crianças e idosos); se triglicerídeos >440 mg/dL em amostra sem jejum, recomenda-se nova coleta em jejum de 12 horas. VERIFICAÇÃO HUMANA NECESSÁRIA: o texto integral da seção 5.4.3 da ESC/EAS 2019 (página 130 do artigo) não pôde ser lido nesta revisão — o `academic.oup.com` bloqueia acesso automatizado por Cloudflare, e o slide set oficial da EAS (fonte primária usada no restante deste documento) não reproduz essa seção específica em detalhe
+A seção 5.4.3 da fonte primária confirma que a diferença entre amostras com e
+sem jejum é pequena para a maioria dos parâmetros; para rastreamento geral, a
+amostra sem jejum tem valor prognóstico ao menos equivalente e oferece maior
+conveniência. Isso **não elimina o jejum em todos os cenários**. O LDL-C
+calculado deve ser interpretado com cautela em diabetes, síndrome metabólica ou
+hipertrigliceridemia; a fórmula de Friedewald não deve ser usada quando TG
+>400 mg/dL, especialmente em amostra sem jejum. A Diretriz Brasileira 2025
+recomenda repetir em jejum de 12 horas se TG >440 mg/dL em amostra sem jejum.
 
 ## Trigliceridos elevados
 - Estatina é o fármaco de primeira escolha para reduzir risco CV em pacientes de alto risco (ou risco maior) com hipertrigliceridemia e TG >200 mg/dL (>2,3 mmol/L) — **Classe I, Nível B**
@@ -80,4 +88,13 @@ Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025 foi pub
 - Não intensificar o tratamento até cumprir as duas condições simultaneamente — redução percentual ≥50% E valor absoluto de LDL da meta, não apenas uma delas
 - Exigir jejum por rotina para o lipidograma inicial, quando a coleta sem jejum já é aceita na maioria dos pacientes
 - Tratar iPCSK9 como opção de mesmo peso em qualquer paciente de muito alto risco não controlado: a força da recomendação varia de I/A (prevenção secundária) a IIb/C (prevenção primária sem HF) — não considerar iPCSK9 num paciente de prevenção secundária de muito alto risco que não atinge a meta com estatina + ezetimiba é o erro mais grave, por ser recomendação Classe I
-- Em idosos >75 anos, tratar o início de estatina em prevenção primária como automático — é Classe IIb (pode ser considerada, não deve ser considerada), condicionado a risco alto/muito alto; VERIFICAÇÃO HUMANA NECESSÁRIA quanto a um critério explícito de "grau de fragilidade" na fonte primária consultada nesta revisão (o documento oficial da EAS usado como fonte não traz esse termo — pode constar do texto integral do artigo, não confirmado aqui por bloqueio de acesso)
+- Em idosos >75 anos, tratar o início de estatina em prevenção primária como automático — é Classe IIb (pode ser considerada, não deve ser considerada), condicionado a risco alto/muito alto. A diretriz recomenda considerar saúde global e risco de interações, mas **não define escore nem corte de fragilidade** para autorizar ou impedir tratamento; não inventar um limiar.
+
+## Tudo com Tudo
+
+- [Atualização focada ESC/EAS 2025](dislipidemias-avaliacao-de-risco-e-manejo-atualizacao-focada-2025.md)
+- [Metas de LDL e estratificação — ESC/EAS 2025](dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md)
+- [Fluxograma de meta de LDL e escalonamento](fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025.md)
+- [Diretriz ACC/AHA 2026 — PREVENT, Lp(a), ApoB e metas](acc-aha-2026-diretriz-dislipidemia-prevent-lpa-apob-e-metas-ldl.md)
+- [Lipoproteína(a) — consenso EAS 2022](lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022.md)
+- [Inibidores de PCSK9 — FOURIER e ODYSSEY OUTCOMES](inibidores-de-pcsk9-e-desfecho-cardiovascular-fourier-e-odyssey-outcomes.md)
