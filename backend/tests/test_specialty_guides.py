@@ -37,12 +37,12 @@ def test_specialty_catalog_has_all_areas_and_canonical_minimum():
     items = _load(DISEASES_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 87
+    assert len(items) >= 88
     assert len(slugs) == len(set(slugs))
     assert {item["area"] for item in items} == {
-        "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
+        "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
-    assert FRONTS["doencas_especializadas"]["minimum"] == 87
+    assert FRONTS["doencas_especializadas"]["minimum"] == 88
     assert all(item.get("summary") for item in items)
     assert {item.get("review_status") for item in items} <= {
         "revisado", "pendente_revisao", "lacuna_declarada",
@@ -77,7 +77,7 @@ def test_assistants_exist_in_every_specialty_without_protected_score_replication
     assistants = [item for item in items if item.get("assistant_questions")]
 
     assert {item["area"] for item in assistants} == {
-        "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
+        "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
     serialized_rules = json.dumps(
         [item.get("assistant_rules", []) for item in assistants],
@@ -91,9 +91,9 @@ def test_triage_manifest_has_two_flows_and_special_populations():
     items = _load(TRIAGE_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 12
+    assert len(items) >= 15
     assert len(slugs) == len(set(slugs))
-    assert FRONTS["triagem_sintomas"]["minimum"] == 12
+    assert FRONTS["triagem_sintomas"]["minimum"] == 15
     assert all(item.get("questions") for item in items)
     assert all(item.get("rules") for item in items)
     assert all(item.get("ambulatory_flow") for item in items)
@@ -103,6 +103,55 @@ def test_triage_manifest_has_two_flows_and_special_populations():
         "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
     _assert_urls(items)
+
+
+def test_sudden_collapse_cycle_maps_exactly_to_cardiac_arrest_and_escalates():
+    diseases = _load(DISEASES_PATH)
+    triages = _load(TRIAGE_PATH)
+
+    disease = next(
+        item for item in diseases
+        if item["slug"] == "parada-cardiorrespiratoria-e-morte-subita-abortada"
+    )
+    triage = next(
+        item for item in triages
+        if item["slug"] == "colapso-subito-inconsciencia-e-respiracao-anormal"
+    )
+
+    assert disease["name"] == "Parada cardiorrespiratória"
+    assert disease["name"] in triage["differentials"]
+    assert disease["patient_material_slug"] == (
+        "colapso-subito-como-reconhecer-parada-e-usar-o-dea"
+    )
+    assert "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019" in (
+        disease["related_document_slugs"]
+    )
+
+    answers = {
+        "scene_safe": True,
+        "adult_patient": True,
+        "responsive": False,
+        "breathing_normally": False,
+        "definite_pulse_professional": "not_assessed_lay",
+        "emergency_activated": False,
+        "aed_requested": False,
+        "special_cause": False,
+    }
+    result = evaluate_rules(
+        questions=triage["questions"],
+        rules=triage["rules"],
+        answers=answers,
+        base_ambulatory_flow=triage["ambulatory_flow"],
+        base_emergency_flow=triage["emergency_flow"],
+        context="ambulatorio",
+    )
+
+    assert result["risk"] == "emergencia"
+    assert "possivel-parada-leigo" in result["matched_rules"]
+    assert "socorro-ainda-nao-acionado" in result["matched_rules"]
+    assert "dea-ainda-nao-solicitado" in result["matched_rules"]
+    assert result["invalid_fields"] == []
+    assert validate_answers(triage["questions"], answers) == ([], [])
 
 
 def test_rule_engine_escalates_and_selects_emergency_flow():

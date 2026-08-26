@@ -1,5 +1,361 @@
 [
   {
+    "slug": "colapso-subito-inconsciencia-e-respiracao-anormal",
+    "name": "Colapso súbito, inconsciência e respiração anormal",
+    "aliases": [
+      "pessoa caída e não responde",
+      "desmaio com gasping",
+      "respiração agônica após colapso",
+      "suspeita de parada cardíaca"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "cardiooncologia",
+      "gravidez"
+    ],
+    "summary": "Triagem de máxima prioridade para reconhecer possível parada cardiorrespiratória em adulto inconsciente ou não responsivo com respiração ausente ou anormal, inclusive gasping, ativar imediatamente o serviço de emergência, iniciar compressões e obter um DEA sem atrasos por tentativa prolongada de diagnóstico.",
+    "questions": [
+      {
+        "id": "scene_safe",
+        "label": "O local é seguro para aproximar-se e iniciar o atendimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "adult_patient",
+        "label": "A pessoa é adulta ou tem aparência de adulto?",
+        "type": "boolean",
+        "required": true,
+        "section": "Pessoa"
+      },
+      {
+        "id": "responsive",
+        "label": "A pessoa responde quando é chamada e tocada nos ombros?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "breathing_normally",
+        "label": "A pessoa respira normalmente, sem suspiros isolados, roncos lentos ou gasping?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "definite_pulse_professional",
+        "label": "Se você é profissional de saúde: há pulso definitivamente palpável em até 10 segundos?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "not_assessed_lay",
+            "label": "Não sou profissional ou não avaliei pulso"
+          },
+          {
+            "value": "definite_pulse",
+            "label": "Pulso definitivamente presente"
+          },
+          {
+            "value": "no_definite_pulse",
+            "label": "Pulso ausente ou incerto em até 10 segundos"
+          }
+        ],
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "emergency_activated",
+        "label": "O serviço de emergência já foi acionado pelo 192 ou pelo número local, preferencialmente em viva-voz?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      },
+      {
+        "id": "aed_requested",
+        "label": "Alguém foi buscar um desfibrilador externo automático (DEA), se houver um acessível?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      },
+      {
+        "id": "special_cause",
+        "label": "Há contexto de afogamento, asfixia, overdose/opioide, trauma, gestação ou outra causa especial?",
+        "type": "boolean",
+        "section": "Contexto"
+      }
+    ],
+    "rules": [
+      {
+        "id": "cena-insegura",
+        "priority": 110,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Risco para o socorrista impede aproximação segura"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente o serviço de emergência e só aproximar-se quando a cena estiver segura"
+          ]
+        }
+      },
+      {
+        "id": "possivel-parada-leigo",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "not_assessed_lay"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Adulto não responsivo com respiração ausente ou anormal: presumir parada cardiorrespiratória"
+          ],
+          "emergency_flow": [
+            "Acionar o 192 em viva-voz, iniciar imediatamente compressões no centro do tórax e usar o DEA assim que disponível"
+          ]
+        }
+      },
+      {
+        "id": "possivel-parada-profissional",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "no_definite_pulse"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Pulso ausente ou não definitivamente palpável em até 10 segundos"
+          ],
+          "emergency_flow": [
+            "Iniciar RCP pelo protocolo adulto, conectar desfibrilador/DEA e minimizar interrupções"
+          ]
+        }
+      },
+      {
+        "id": "respiracao-anormal-nao-e-respiracao-normal",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Gasping, suspiros isolados, roncos lentos ou respiração irregular não excluem parada e não devem atrasar compressões"
+          ]
+        }
+      },
+      {
+        "id": "pulso-com-apneia-profissional",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "definite_pulse"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Parada respiratória ou ventilação ineficaz com pulso presente"
+          ],
+          "emergency_flow": [
+            "Fornecer ventilação de resgate conforme treinamento, reavaliar pulso e seguir o protocolo de suporte básico/avançado"
+          ]
+        }
+      },
+      {
+        "id": "socorro-ainda-nao-acionado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "emergency_activated",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "missing_information": [
+            "Localização exata e acionamento do serviço de emergência"
+          ],
+          "emergency_flow": [
+            "Acionar o 192 ou o número local imediatamente, usando viva-voz para receber instruções sem interromper a resposta"
+          ]
+        }
+      },
+      {
+        "id": "dea-ainda-nao-solicitado",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "aed_requested",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Pedir que outra pessoa busque o DEA sem interromper compressões; ligar e seguir os comandos assim que chegar"
+          ]
+        }
+      },
+      {
+        "id": "causa-especial",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "special_cause",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Afogamento, asfixia, opioide, trauma e gestação exigem adaptações específicas sem atrasar a cadeia básica de sobrevivência"
+          ],
+          "messages": [
+            "Informar o contexto ao regulador do 192 e seguir as instruções específicas do protocolo"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Na resposta leiga, não solicitar exames nem prolongar avaliação: reconhecer ausência de resposta e respiração anormal",
+      "Para profissional, checar pulso simultaneamente à respiração por no máximo 10 segundos",
+      "Após retorno da circulação, ECG de 12 derivações e investigação dirigida da causa sem atrasar estabilização",
+      "Glicemia, eletrólitos, gasometria e imagem apenas no ambiente profissional conforme causa e estado clínico"
+    ],
+    "differentials": [
+      "Parada cardiorrespiratória",
+      "Parada respiratória com pulso",
+      "Síncope com recuperação espontânea",
+      "Crise convulsiva ou período pós-ictal",
+      "Obstrução grave de via aérea",
+      "Intoxicação ou overdose",
+      "Hipoglicemia ou outra causa metabólica de inconsciência"
+    ],
+    "red_flags": [
+      "Ausência de resposta",
+      "Respiração ausente, gasping, suspiros isolados ou roncos lentos e irregulares",
+      "Pulso ausente ou incerto em até 10 segundos para profissional de saúde",
+      "Colapso súbito durante esforço",
+      "Movimentos breves semelhantes a convulsão acompanhados de inconsciência e respiração anormal"
+    ],
+    "ambulatory_flow": [
+      "Esta apresentação não é ambulatorial enquanto a pessoa permanecer não responsiva ou sem respiração normal",
+      "Se houve recuperação completa antes da avaliação, tratar como síncope/colapso de alto risco e investigar a causa, sem reclassificar retrospectivamente gasping como respiração normal",
+      "Sobrevivente de parada requer investigação etiológica, prevenção secundária e plano de recuperação"
+    ],
+    "emergency_flow": [
+      "Confirmar segurança da cena e testar resposta rapidamente",
+      "Se adulto não responde e não respira normalmente, presumir parada, acionar o 192 e iniciar compressões",
+      "Leigo não deve perder tempo procurando pulso; profissional limita a checagem a 10 segundos",
+      "Solicitar DEA, ligá-lo e seguir os comandos, mantendo compressões até análise/choque",
+      "Usar o protocolo Parada cardiorrespiratória para RCP de alta qualidade, desfibrilação e causas reversíveis",
+      "Após retorno da circulação, avançar ao protocolo de cuidado pós-parada e investigação da etiologia"
+    ],
+    "tags": [
+      "colapso súbito",
+      "parada cardiorrespiratória",
+      "gasping",
+      "RCP",
+      "DEA",
+      "morte súbita",
+      "emergência"
+    ],
+    "source_refs": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001378.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203."
+    ],
+    "source_urls": [
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/systems-of-care",
+      "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O reconhecimento segue AHA 2025 Classe I, Nível C-LD: adulto inconsciente/não responsivo com respiração ausente ou anormal deve ser presumido em parada; leigo não checa pulso e profissional limita a avaliação a 10 segundos. As ações leigas não incluem fármacos nem procedimentos avançados.",
+    "version": 1
+  },
+  {
     "slug": "dor-toracica",
     "name": "Dor torácica",
     "aliases": [
