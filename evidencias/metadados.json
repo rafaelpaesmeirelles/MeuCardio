@@ -48683,5 +48683,332 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "lqts-betabloqueador-primeira-linha-em-sintomatico",
+    "statement": "O betabloqueador é recomendado como terapia de primeira linha em todo paciente sintomático com síndrome do QT longo e QTc prolongado documentado, preferencialmente um betabloqueador não seletivo (nadolol ou propranolol).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572. Classe e nível conferidos via reprodução literal da Tabela 1 da diretriz em Wang G, Chu H, Zhao N. Rev Cardiovasc Med. 2023;24(6):170. PMID: 39077522, e Könemann H et al. Europace. 2023;25(5):euad091. PMID: 37102266.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "betabloqueador",
+      "nadolol",
+      "canalopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lqts-mexiletina-terapia-genotipo-especifica-no-lqt3",
+    "statement": "A mexiletina é recomendada como terapia genótipo-específica em pacientes com síndrome do QT longo tipo 3 (LQT3) e QTc prolongado — recomendação nova em relação à diretriz de 2015, que dava apenas classe IIb, combinada a flecainida ou ranolazina.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572. Classe e nível conferidos via reprodução literal da Tabela 1 da diretriz em Wang G, Chu H, Zhao N. Rev Cardiovasc Med. 2023;24(6):170. PMID: 39077522, e Könemann H et al. Europace. 2023;25(5):euad091. PMID: 37102266.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "lqt3",
+      "mexiletina",
+      "terapia genótipo-específica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avnrt-ablacao-por-cateter-recomendada-para-sintomatica-recorrente",
+    "statement": "A ablação por cateter é recomendada para o tratamento da taquicardia por reentrada nodal atrioventricular (AVNRT) sintomática e recorrente.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia",
+    "reference": "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425. Tabela 'Recommendations for the treatment of AVNRT' (terapia crônica), seção 11.2.1.2, p. 685 do texto integral.",
+    "theme": "Arritmias",
+    "tags": [
+      "avnrt",
+      "ablação por cateter",
+      "taquicardia supraventricular",
+      "taquicardia por reentrada nodal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avnrt-farmacos-quando-ablacao-nao-e-desejavel-ou-factivel",
+    "statement": "Diltiazem ou verapamil (em pacientes sem insuficiência cardíaca com fração de ejeção reduzida) ou betabloqueadores devem ser considerados para o tratamento crônico da AVNRT quando a ablação por cateter não for desejável ou factível.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia",
+    "reference": "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425. Tabela 'Recommendations for the treatment of AVNRT' (terapia crônica), seção 11.2.1.2, p. 685 do texto integral.",
+    "theme": "Arritmias",
+    "tags": [
+      "avnrt",
+      "diltiazem",
+      "verapamil",
+      "betabloqueador",
+      "taquicardia supraventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avnrt-abstencao-de-tratamento-em-paciente-minimamente-sintomatico",
+    "statement": "A abstenção de tratamento deve ser considerada em pacientes com AVNRT minimamente sintomáticos, com episódios muito infrequentes e de curta duração.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia",
+    "reference": "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425. Tabela 'Recommendations for the treatment of AVNRT' (terapia crônica), seção 11.2.1.2, p. 685 do texto integral.",
+    "theme": "Arritmias",
+    "tags": [
+      "avnrt",
+      "conduta expectante",
+      "taquicardia supraventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "laao-percutaneo-em-contraindicacao-a-anticoagulacao-af-care-2024",
+    "statement": "A oclusão percutânea do apêndice atrial esquerdo pode ser considerada em pacientes com fibrilação atrial e contraindicações ao tratamento anticoagulante de longo prazo, para prevenir acidente vascular cerebral isquêmico e tromboembolismo.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723. Recommendation Table 10.",
+    "theme": "Dispositivos",
+    "tags": [
+      "oclusão de apêndice atrial esquerdo",
+      "LAAO",
+      "fibrilação atrial",
+      "AF-CARE",
+      "prevenção de AVC"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "laao-cirurgica-adjuvante-a-anticoagulacao-em-cirurgia-cardiaca-af-care-2024",
+    "statement": "O fechamento cirúrgico do apêndice atrial esquerdo é recomendado como adjuvante à anticoagulação oral em pacientes com fibrilação atrial submetidos a cirurgia cardíaca, para prevenir acidente vascular cerebral isquêmico e tromboembolismo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723. Recommendation Table 11 (embasada no LAAOS III, n=4811).",
+    "theme": "Dispositivos",
+    "tags": [
+      "oclusão de apêndice atrial esquerdo",
+      "LAAO cirúrgica",
+      "cirurgia cardíaca",
+      "AF-CARE",
+      "LAAOS III"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "laao-cirurgica-adjuvante-a-ablacao-endoscopica-ou-hibrida-af-care-2024",
+    "statement": "O fechamento cirúrgico do apêndice atrial esquerdo deve ser considerado como adjuvante à anticoagulação oral em pacientes com fibrilação atrial submetidos a ablação endoscópica ou híbrida, para prevenir acidente vascular cerebral isquêmico e tromboembolismo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723. Recommendation Table 11.",
+    "theme": "Dispositivos",
+    "tags": [
+      "oclusão de apêndice atrial esquerdo",
+      "LAAO cirúrgica",
+      "ablação híbrida de FA",
+      "AF-CARE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "laao-endoscopica-isolada-em-contraindicacao-a-anticoagulacao-af-care-2024",
+    "statement": "O fechamento cirúrgico endoscópico isolado (stand-alone) do apêndice atrial esquerdo pode ser considerado em pacientes com fibrilação atrial e contraindicações ao tratamento anticoagulante de longo prazo, para prevenir acidente vascular cerebral isquêmico e tromboembolismo.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723. Recommendation Table 11.",
+    "theme": "Dispositivos",
+    "tags": [
+      "oclusão de apêndice atrial esquerdo",
+      "LAAO endoscópica isolada",
+      "AF-CARE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-sarcoidose-cardiaca-com-feve-35-por-cento-ou-menos-esc-2022",
+    "statement": "A implantação de CDI é recomendada em pacientes com sarcoidose cardíaca que têm FEVE ≤35%.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 35.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "sarcoidose cardíaca",
+      "prevenção primária",
+      "morte súbita cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-sarcoidose-cardiaca-prevencao-secundaria-tv-sustentada-ou-pcr-abortada-esc-2022",
+    "statement": "A implantação de CDI é recomendada em pacientes com sarcoidose cardíaca que (1) têm taquicardia ventricular sustentada documentada, ou (2) parada cardíaca abortada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 35.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "sarcoidose cardíaca",
+      "prevenção secundária",
+      "taquicardia ventricular",
+      "parada cardíaca abortada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-sarcoidose-cardiaca-com-indicacao-de-marca-passo-por-bav-de-alto-grau-esc-2022",
+    "statement": "Em pacientes com sarcoidose cardíaca que têm indicação de estimulação cardíaca permanente relacionada a bloqueio atrioventricular de alto grau, a implantação de CDI deve ser considerada, independentemente da FEVE.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 35.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "sarcoidose cardíaca",
+      "marca-passo",
+      "bloqueio atrioventricular de alto grau"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-em-portador-de-dispositivo-de-assistencia-ventricular-com-tv-sintomatica-esc-2022",
+    "statement": "A implantação de CDI deve ser considerada em portadores de dispositivo de assistência ventricular esquerda (LVAD) com arritmias ventriculares sustentadas sintomáticas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 19.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "dispositivo de assistência ventricular",
+      "LVAD",
+      "arritmia ventricular sustentada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-em-amiloidose-cardiaca-com-tv-hemodinamicamente-mal-tolerada-esc-2022",
+    "statement": "Um CDI deve ser considerado em pacientes com amiloidose de cadeia leve ou amiloidose cardíaca associada à transtirretina que apresentem taquicardia ventricular hemodinamicamente mal tolerada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 32.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "amiloidose cardíaca",
+      "taquicardia ventricular",
+      "transtirretina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-em-cardiomiopatia-nao-compactada-com-fenotipo-ao-eco-ou-rmc-esc-2022",
+    "statement": "Em pacientes com fenótipo de cardiomiopatia não compactada do ventrículo esquerdo baseado em ressonância magnética cardíaca ou ecocardiograma, a implantação de CDI para prevenção primária de morte súbita cardíaca deve ser considerada, seguindo as recomendações da cardiomiopatia dilatada/hipocinética não dilatada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 31.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "cardiomiopatia não compactada",
+      "prevenção primária",
+      "morte súbita cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-em-cardiomiopatia-dilatada-com-mutacao-lmna-e-risco-em-5-anos-10-por-cento-ou-mais-esc-2022",
+    "statement": "A implantação de CDI deve ser considerada em pacientes com cardiomiopatia dilatada/hipocinética não dilatada portadores de mutação patogênica no gene LMNA, se o risco estimado em 5 anos de arritmia ventricular potencialmente fatal for ≥10%, e na presença de taquicardia ventricular não sustentada, FEVE <50% ou distúrbio de condução atrioventricular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 28.",
+    "theme": "Dispositivos",
+    "tags": [
+      "CDI",
+      "cardiomiopatia dilatada",
+      "mutação LMNA",
+      "genética",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-cdi-em-distrofia-miotonica-apos-ablacao-de-tv-por-reentrada-de-ramo-esc-2022",
+    "statement": "Em pacientes com distrofia miotônica submetidos a ablação de taquicardia ventricular por reentrada de ramo (bundle branch reentry), a implantação de marca-passo/CDI é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. doi:10.1093/eurheartj/ehac262. PMID: 36017572. Recommendation Table 33.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "CDI",
+      "distrofia miotônica",
+      "taquicardia ventricular por reentrada de ramo",
+      "doença neuromuscular"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
