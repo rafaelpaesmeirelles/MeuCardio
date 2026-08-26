@@ -160,6 +160,7 @@ jobs:
           ];
           const viewports = [
             ['notebook-1366x768', { width: 1366, height: 768 }],
+            ['desktop-baixo-1366x640', { width: 1366, height: 640 }],
             ['desktop-1440x900', { width: 1440, height: 900 }],
             ['mobile-390x844', { width: 390, height: 844 }],
           ];
@@ -191,6 +192,10 @@ jobs:
                 };
                 const sample = document.querySelector('.prehome-card');
                 const brand = document.querySelector('.prehome-brand');
+                const heart = document.querySelector('.prehome-brand__heart');
+                const journey = document.querySelector('.prehome-brand__journey');
+                const heartRect = heart?.getBoundingClientRect();
+                const journeyRect = journey?.getBoundingClientRect();
                 const style = sample ? getComputedStyle(sample) : null;
                 return {
                   width: innerWidth, height: innerHeight,
@@ -199,6 +204,8 @@ jobs:
                   sampleBackground: style?.backgroundColor || '',
                   canonicalMain: visible('.prehome'), logo: visible('.prehome-brand__logo'),
                   hologram: visible('.prehome-brand__hologram'),
+                  heartBottom: heartRect?.bottom ?? null,
+                  journeyTop: journeyRect?.top ?? null,
                   isMobile: viewportName.startsWith('mobile'), bodyText: document.body?.innerText || '',
                 };
               }, viewportName);
@@ -210,6 +217,7 @@ jobs:
               if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
               if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell prehome canônico ausente`);
               if (!metrics.isMobile && !metrics.hologram) report.failures.push(`${viewportName}/${name}: hero holográfico ausente no desktop`);
+              if (!metrics.isMobile && metrics.heartBottom !== null && metrics.journeyTop !== null && metrics.heartBottom > metrics.journeyTop - 8) report.failures.push(`${viewportName}/${name}: coração invade o texto da jornada (${metrics.heartBottom.toFixed(1)}px > ${metrics.journeyTop.toFixed(1)}px)`);
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });
