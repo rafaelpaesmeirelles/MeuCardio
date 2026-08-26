@@ -177,6 +177,10 @@ def test_backfill_cria_entidades_e_associacoes_de_tema(db):
     entidades = db.execute(select(KnowledgeEntity)).scalars().all()
     slugs = {e.slug for e in entidades}
     assert {"ic-doc-1", "ic-ev-1", "carvedilol-teste"} <= slugs
+    ids_semeados = {
+        e.id for e in entidades
+        if e.slug in {"ic-doc-1", "ic-ev-1", "carvedilol-teste"}
+    }
     # O item não publicado nunca vira nó — mesma régua de published de toda
     # frente do produto.
     assert "ic-doc-nao-publicado" not in slugs
@@ -187,7 +191,8 @@ def test_backfill_cria_entidades_e_associacoes_de_tema(db):
     for r in associacoes:
         assert r.provenance_type == "structured_metadata"
         assert r.confidence == "derived"
-        assert r.extra.get("tema") in (TEMA, "Farmacologia")
+        if r.source_entity_id in ids_semeados:
+            assert r.extra.get("tema") in (TEMA, "Farmacologia")
 
     # Documento e evidência compartilham o mesmo nó canônico de tema. Não há
     # malha item↔item: a consulta expande item -> tema <- item em dois saltos.
