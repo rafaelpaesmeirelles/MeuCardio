@@ -26,21 +26,10 @@ type Doc = {
   source_refs: string[]; review_status: string; version: number;
 };
 
-/** Converte links de arquivos do corpus (mesma pasta ou ../Tema/arquivo.md)
- * na rota pública usada pela biblioteca. Links externos e âncoras permanecem
- * intactos. */
-function rotaDocumentoMarkdown(href?: string): string | null {
-  if (!href || href.startsWith("#") || href.startsWith("//")) return null;
-  if (/^[a-z][a-z\d+.-]*:/i.test(href)) return null;
-
-  const caminho = href.split(/[?#]/, 1)[0];
-  if (!caminho.toLowerCase().endsWith(".md")) return null;
-
-  const arquivo = caminho.split("/").filter(Boolean).at(-1);
-  if (!arquivo) return null;
-  const slugDestino = arquivo.slice(0, -3);
-  const sufixo = href.slice(caminho.length);
-  return `/biblioteca/${slugDestino}${sufixo}`;
+function rotaDocumentoMarkdown(href = ""): string | null {
+  if (/^(?:#|\/\/|[a-z][\w+.-]*:)/i.test(href)) return null;
+  const destino = href.match(/(?:^|\/)([^/?#]+)\.md([?#].*)?$/i);
+  return destino ? `/biblioteca/${destino[1]}${destino[2] ?? ""}` : null;
 }
 
 export default function Documento() {
