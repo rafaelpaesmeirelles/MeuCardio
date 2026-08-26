@@ -4,7 +4,7 @@ slug: finerenona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["KERENDIA (finerenona, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2, 4.5 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/kerendia-epar-product-information_pt.pdf · consultado em 29/07/2026", "Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa2110956", "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140", "Moreno-Pérez O, Tejera-Muñoz A, Tomás-Gómez P, et al. Real-World Effectiveness and Safety of Finerenone in People With Type 2 Diabetes and Chronic Kidney Disease: A Spanish Multicentre Retrospective Observational Study (MEDFINE-RWD). Diabetes Obes Metab. 2026 Jul 30. DOI: 10.1111/dom.71160. PMID: 42533276 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
+source_refs: ["KERENDIA (finerenona, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2, 4.5 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/kerendia-epar-product-information_pt.pdf · consultado em 29/07/2026", "Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa2110956", "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140", "Moreno-Pérez O, Tejera-Muñoz A, Tomás-Gómez P, et al. Real-World Effectiveness and Safety of Finerenone in People With Type 2 Diabetes and Chronic Kidney Disease: A Spanish Multicentre Retrospective Observational Study (MEDFINE-RWD). Diabetes Obes Metab. 2026 Jul 30. DOI: 10.1111/dom.71160. PMID: 42533276 — números conferidos contra o abstract indexado no PubMed em 08/08/2026.", "Agarwal R, Filippatos G, Pitt B, et al. Cardiovascular and kidney outcomes with finerenone in patients with type 2 diabetes and chronic kidney disease: the FIDELITY pooled analysis. Eur Heart J. 2022;43(6):474-484. DOI: 10.1093/eurheartj/ehab777. PMID: 35023547. PMCID: PMC8830527 — análise agrupada primária conferida em 26/08/2026."]
 ---
 
 # Finerenona
@@ -63,10 +63,10 @@ finerenona se comporta **fora** do ambiente controlado do ensaio.
   mmol/L) em apenas 4,8%**; eventos renais maiores (MAKE) em 0,9% e eventos cardiovasculares maiores
   (MACE) em apenas 1,1% no seguimento mediano de 184 dias (~6 meses) — seguimento curto, não
   comparável diretamente às taxas de eventos em anos dos ensaios pivotais.
-  `VERIFICAÇÃO HUMANA NECESSÁRIA`: o abstract do MEDFINE-RWD não traz, para comparação direta, a
-  taxa de hiperpotassemia ≥5,5 mmol/L do pool FIDELITY (FIDELIO-DKD+FIGARO-DKD) — não fabricar esse
-  número de memória; quem precisar do contraste exato deve conferir o artigo original do pool
-  FIDELITY (Agarwal R et al.) diretamente.
+  A comparação direta com o pool FIDELITY seria inadequada: o artigo agrupado primário informa
+  **hiperpotassemia levando à suspensão permanente** em 1,7% com finerenona e 0,6% com placebo,
+  desfecho diferente da incidência de potássio ≥5,5 mmol/L reportada pelo MEDFINE-RWD. Portanto,
+  os 4,8% da coorte não devem ser contrastados numericamente com 1,7% do ensaio.
 - **implicação prática**: reforça, em população mais idosa e com uso concomitante intenso de
   iSGLT2/GLP-1 (cenário real de sobreposição terapêutica cada vez mais comum), que o efeito de
   redução de albuminúria e o perfil de segurança da finerenona se mantêm consistentes fora do

@@ -60,7 +60,11 @@ Aconselhamento sobre risco da gestação e opções contraceptivas apropriadas �
 - **DIU (dispositivo intrauterino)**: dois estudos não comparativos (Pundi et al., Rabajoli et al.) não encontraram endocardite entre usuárias de DIU; os estudos não diferenciaram consistentemente DIU de cobre de DIU hormonal (levonorgestrel).
 - **Esterilização cirúrgica**: fora do escopo da revisão, por não ser questão de segurança contraceptiva e sim cirúrgica.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA` permanece só para quem precisar do texto original das três referências que a própria diretriz cita (Kovacs 2015, Vigl 2010, Kaemmerer 2010) — não foram lidas nesta sessão.
+**Limite de escopo:** as três referências externas citadas pela diretriz
+(Kovacs 2015, Vigl 2010 e Kaemmerer 2010) não são usadas como fonte de
+nenhuma afirmação deste documento. O detalhamento por método acima deriva
+exclusivamente da revisão sistemática de Abarbanell et al., com sua baixa
+certeza e seus estudos pequenos explicitados.
 
 ## Armadilhas de leitura
 - **A classificação AP não é sinônimo do diagnóstico anatômico** — um mesmo diagnóstico de base pode ter subclasse fisiológica diferente conforme achados atuais (dilatação de aorta, função ventricular), e é a subclasse, não só o diagnóstico, que decide a conduta na gestação.
