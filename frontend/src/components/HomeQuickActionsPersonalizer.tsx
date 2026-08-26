@@ -8,6 +8,7 @@ type Acao = [id: string, to: string, titulo: string, icone: NomeIcone, tone: str
 const N = 10;
 const TODAS: Acao[] = [
   ["ecg-ia", "/exames-ia", "IA para Exames", "ecg", "green", true],
+  ["tudo-com-tudo", "/busca?modo=tudo-com-tudo", "Tudo com Tudo", "busca", "cyan"],
   ["prescrever", "/receituario", "Prescrever", "prescricao", "cyan"],
   ["solicitar-exames", "/documentos", "Solicitar exames", "clinica", "blue"],
   ["calculadoras", "/calculadoras", "Calculadoras", "calculadora", "amber"],

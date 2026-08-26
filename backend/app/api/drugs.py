@@ -84,7 +84,11 @@ def list_drugs(
     # Só medicamento publicado aparece — mesmo checkpoint das outras frentes.
     query = db.query(Drug).filter(Drug.published.is_(True))
     if q:
-        query = query.filter(Drug.generic_name.ilike(f"%{q}%"))
+        padrao = f"%{q}%"
+        query = query.filter(or_(
+            Drug.generic_name.ilike(padrao),
+            func.array_to_string(Drug.brand_names, " ").ilike(padrao),
+        ))
     if drug_class:
         query = query.filter(Drug.drug_class == drug_class)
     return [

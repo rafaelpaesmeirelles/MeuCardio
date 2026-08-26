@@ -47,6 +47,7 @@ const TRABALHO_ASSISTENCIA: LinkItem[] = [
 ];
 
 const FERRAMENTAS: LinkItem[] = [
+  { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca", featured: true },
   { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
   { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
   { to: "/apresentacao", label: "Apresentação", icon: "documento" },

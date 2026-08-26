@@ -20,7 +20,7 @@ def test_published_feature_inventory_is_intact():
     )
     assert result.returncode == 0, result.stdout + result.stderr
     assert "72 rotas React" in result.stdout
-    assert "47 destinos" in result.stdout
+    assert "48 destinos" in result.stdout
     assert "61 routers FastAPI" in result.stdout
 
 

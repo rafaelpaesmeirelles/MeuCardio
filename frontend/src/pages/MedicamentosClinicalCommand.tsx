@@ -251,7 +251,12 @@ function DetalheMedicamento({ drug, onClose }: { drug: Insight; onClose: () => v
         </div>
       </ClinicalSection>
 
-      <TudoSobreEsteTema tema="Farmacologia" excluirTipo="medicamento" excluirSlug={drug.slug} />
+      <TudoSobreEsteTema
+        medicamentoSlug={drug.slug}
+        excluirTipo="medicamento"
+        excluirSlug={drug.slug}
+        titulo="Tudo com Tudo · conhecimento ligado a este medicamento"
+      />
       <GrafoRelacionados entityType="medicamento" slug={drug.slug} />
     </div>
   );
