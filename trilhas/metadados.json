@@ -23338,5 +23338,341 @@
         "por_que": "Fecha com um caso concreto de negociacao entre evidencia clinica e decisao religiosa do paciente, sem impor nem ceder por reflexo."
       }
     ]
+  },
+  {
+    "slug": "trilha-doping-e-cardiotoxicidade-de-substancias-no-atleta",
+    "titulo": "Doping e Cardiotoxicidade de Substâncias no Atleta: Esteroides Anabolizantes e SARMs",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Reconhecer o espectro de cardiotoxicidade de esteroides anabolizantes androgênicos e SARMs no atleta competitivo e recreacional, da evidência epidemiológica de coorte à consequência clínica real vista em caso de fisiculturismo amador.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "esteroides-anabolizantes-doping-e-risco-cardiovascular-no-atleta",
+        "por_que": "Ponto de entrada: fundamenta o mecanismo geral de cardiotoxicidade do doping por esteroides anabolizantes androgênicos e o espectro de risco cardiovascular associado, antes de entrar em evidência epidemiológica e em subpopulações específicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "windfeld-mathiasen-2025-eaa-doenca-cardiovascular-coorte-nacional-dinamarquesa",
+        "por_que": "Traz a evidência epidemiológica de maior escala citada na etapa anterior: coorte nacional dinamarquesa relacionando uso de EAA a desfecho cardiovascular de longo prazo, fora do ambiente de elite."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "buhl-2025-uso-ilicito-de-eaa-e-status-cardiovascular-estudo-transversal",
+        "por_que": "Complementa a coorte de longo prazo com um corte transversal comparando o status cardiovascular de usuários e não usuários, reforçando o achado com outro desenho de estudo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "esteroides-anabolizantes-androgenicos-cardiotoxicidade-no-atleta-recreacional",
+        "por_que": "Traz o recorte que mais chega ao consultório fora do esporte de elite: o atleta recreacional/fisiculturista amador, população em que o uso é mais prevalente e menos monitorado clinicamente que no atleta competitivo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "sarms-fisiculturismo-cardiotoxicidade-suplemento-seguro",
+        "por_que": "Amplia a trilha para os SARMs, vendidos como alternativa 'mais segura' aos esteroides clássicos entre fisiculturistas — desfaz essa percepção com o mecanismo de cardiotoxicidade próprio da classe."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "van-wagoner-2017-composicao-quimica-sarms-vendidos-online",
+        "por_que": "Mostra por que o risco do SARM é ainda menos previsível do que o do esteroide anabolizante: a análise química de produtos vendidos online encontra rotulagem incorreta e substâncias não declaradas."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "leciejewska-2024-farmacovigilancia-sarms-lesao-hepatica",
+        "por_que": "Dado de farmacovigilância real mostrando que a toxicidade dos SARMs não fica restrita ao sistema cardiovascular — a lesão hepática associada reforça que 'suplemento de pesquisa' não é sinônimo de produto controlado ou seguro."
+      },
+      {
+        "ordem": 8,
+        "item_type": "caso_clinico",
+        "item_slug": "fisiculturista-icterica-sarm",
+        "por_que": "Fecha a trilha com a consequência clínica real de tudo o que as etapas anteriores descreveram em teoria: fisiculturista amador com icterícia após uso de 'suplemento de pesquisa' contendo SARM não declarado."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-coracao-de-atleta-populacoes-especiais-sexo-idade-e-treino",
+    "titulo": "Coração de Atleta em Populações Especiais: Sexo, Idade e Modalidade de Treinamento",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Entender como sexo biológico, idade (atleta master) e o tipo de treinamento (HIIT versus endurance clássico) modulam o remodelamento cardíaco do atleta, e como a imagem avançada e o teste cardiopulmonar de exercício ajudam a interpretar esse remodelamento sem rotular adaptação fisiológica como doença.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "coracao-atleta-feminina-remodelamento-ecg-eco",
+        "por_que": "Ponto de entrada pela lacuna histórica da cardiologia do esporte: os padrões de remodelamento cardíaco ao ECG e ao eco descritos classicamente vêm de coortes majoritariamente masculinas, e a atleta feminina tem particularidades próprias que este documento estabelece."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "hedge-2026-sexo-tamanho-cardiaco-basal-e-resposta-a-2-anos-de-treinamento-de-resistencia",
+        "por_que": "Traz o dado longitudinal que sustenta a etapa anterior: sexo e tamanho cardíaco basal predizem de forma diferente a resposta a dois anos de treinamento de resistência em adultos sedentários de meia-idade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "atleta-master-achados-cardiovasculares-e-participacao-esportiva",
+        "por_que": "Muda o eixo de sexo para idade: o atleta master soma às adaptações do treinamento os achados estruturais e elétricos esperados do envelhecimento, exigindo interpretação distinta da do atleta jovem."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hiit-treinamento-intervalado-alta-intensidade-remodelamento-cardiaco-atleta",
+        "por_que": "Terceiro eixo de variação, agora pela modalidade de treino: o HIIT produz um padrão e uma velocidade de remodelamento cardíaco distintos do treinamento contínuo de endurance clássico."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "venckunas-2025-hiit-de-7-semanas-e-hipertrofia-ventricular-esquerda-em-atletas-jovens",
+        "por_que": "Quantifica a velocidade do remodelamento induzido por HIIT descrito na etapa anterior: hipertrofia ventricular esquerda mensurável em apenas 7 semanas de treinamento intervalado em atletas amadores jovens."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "hiit-remodelamento-cardiaco-rapido-atleta-jovem-zona-cinzenta",
+        "por_que": "Aplica o achado do estudo anterior a um caso real: espessamento de parede após poucas semanas de HIIT levanta a pergunta prática de adaptação fisiológica versus achado que exige investigação — a 'zona cinzenta' também existe em prazo curto, não só em atleta veterano de endurance."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "imagem-avancada-atleta-rmc-tc-nuclear-2026",
+        "por_que": "Depois de estabelecer que sexo, idade e modalidade de treino mudam o fenótipo esperado, esta etapa traz as ferramentas de imagem avançada (RM cardíaca, TC, medicina nuclear) que ajudam a resolver os casos em que o eco isolado não basta."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "tcpe-avaliacao-funcional-atleta-interpretacao",
+        "por_que": "Fecha a trilha complementando a imagem estrutural com a avaliação funcional: o teste cardiopulmonar de exercício interpreta a capacidade funcional do atleta à luz do remodelamento descrito nas etapas anteriores, e não de forma isolada."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-morte-subita-no-esporte-causas-estruturais-raras-e-trauma",
+    "titulo": "Morte Súbita no Esporte: Causas Estruturais Raras e Trauma Torácico",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Reconhecer causas estruturais de morte súbita no atleta menos frequentes do que a cardiomiopatia hipertrófica e as canalopatias — anomalia coronária congênita, cardiomiopatia chagásica, doença valvar e aortopatia — além do trauma torácico como mecanismo distinto (commotio cordis), sempre ancorado em caso clínico real.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anomalias-coronarias-congenitas-atleta-esporte",
+        "por_que": "Ponto de entrada: anomalia de origem/trajeto coronariano congênita é causa estrutural de morte súbita no atleta jovem que pode não aparecer em nenhuma triagem de ECG de repouso, exigindo suspeição clínica dirigida."
+      },
+      {
+        "ordem": 2,
+        "item_type": "caso_clinico",
+        "item_slug": "sincope-durante-corrida-competitiva-anomalia-coronaria-suspeita",
+        "por_que": "Ilustra a suspeição clínica descrita na etapa anterior: síncope durante prova de corrida em atleta jovem é o cenário clássico que deve levantar a hipótese de anomalia coronária, não só de causa elétrica ou vasovagal."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-chagasica-exercicio-e-participacao-esportiva-no-atleta",
+        "por_que": "Segunda causa estrutural, com relevância epidemiológica própria no Brasil: a cardiomiopatia chagásica exige avaliação de participação esportiva distinta da cardiomiopatia hipertrófica ou da anomalia coronária, por seu substrato arritmogênico e de disfunção miocárdica próprios."
+      },
+      {
+        "ordem": 4,
+        "item_type": "caso_clinico",
+        "item_slug": "cardiomiopatia-chagasica-atleta-caso",
+        "por_que": "Aplica a etapa anterior a um cenário concreto e comum na prática brasileira: corredor amador de meia-idade com sorologia positiva para Chagas perguntando se pode continuar treinando."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-elegibilidade-esportiva-no-atleta",
+        "por_que": "Terceira causa estrutural: doença valvar (nativa ou protética) tem critérios próprios de elegibilidade esportiva, que dependem de gravidade, repercussão hemodinâmica e tipo de lesão, não sendo transponíveis das doenças miocárdicas das etapas anteriores."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "aortopatias-marfan-e-participacao-esportiva",
+        "por_que": "Quarta causa estrutural, e a de risco catastrófico mais súbito (dissecção aórtica): síndrome de Marfan e outras aortopatias exigem restrição esportiva mais estrita que as condições anteriores, por conta do risco irreversível de ruptura sob esforço."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "commotio-cordis-mecanismo-epidemiologia-e-prevencao",
+        "por_que": "Muda o eixo de doença estrutural prévia para mecanismo puramente traumático: commotio cordis ocorre em coração estruturalmente normal, por impacto torácico no momento vulnerável do ciclo cardíaco — mecanismo, epidemiologia e prevenção completamente distintos das seis etapas anteriores."
+      },
+      {
+        "ordem": 8,
+        "item_type": "caso_clinico",
+        "item_slug": "commotio-cordis-jovem-taco-de-beisebol-conduta-e-prognostico",
+        "por_que": "Fecha a trilha com o caso que define commotio cordis na prática: colapso imediato após impacto de bola/taco no peito em jovem, testando o reconhecimento do mecanismo descrito na etapa anterior e a conduta de emergência que dele decorre."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-emergencias-ambientais-e-parada-cardiaca-em-corridas-de-endurance",
+    "titulo": "Emergências Ambientais e Parada Cardíaca em Corridas de Rua e Endurance",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Reconhecer e conduzir as duas principais emergências cardiovasculares específicas de corridas de longa distância — golpe de calor por esforço e parada cardíaca súbita — apoiado na evidência epidemiológica mais recente sobre quando e por que elas ocorrem, incluindo o papel da autópsia molecular quando a causa é arritmogênica hereditária.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "golpe-de-calor-por-esforco-cardiovascular-atleta",
+        "por_que": "Ponto de entrada pela emergência ambiental mais comum e mais evitável em corridas de longa distância: o golpe de calor por esforço, com repercussão cardiovascular direta, frequentemente confundido com outras causas de colapso no atleta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "parada-cardiaca-em-maratonas-e-corridas-de-longa-distancia",
+        "por_que": "Segunda emergência, de maior gravidade imediata: estabelece a epidemiologia e as causas mais comuns de parada cardíaca especificamente no contexto de maratonas e corridas de longa distância, distinto do golpe de calor da etapa anterior embora possam coexistir."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "kim-2025-jama-parada-cardiaca-corridas-longa-distancia",
+        "por_que": "Traz o dado epidemiológico de maior porte publicado na JAMA que sustenta a etapa anterior, quantificando incidência e desfecho da parada cardíaca em corridas de longa distância."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "kato-2026-ritmo-de-corrida-antes-de-parada-cardiaca-subita-maratona",
+        "por_que": "Detalha um fator de risco modificável levantado pela epidemiologia geral: o ritmo de corrida imediatamente antes do evento, útil para orientar o próprio atleta sobre autorregulação de esforço em prova."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "parada-cardiorrespiratoria-em-eventos-esportivos-e-recreativos-inglaterra-2015-2022",
+        "por_que": "Amplia o quadro epidemiológico para além da maratona, cobrindo eventos esportivos e recreativos em geral — mostra que a mesma lógica de resposta rápida se aplica a um espectro mais largo de atividade física organizada."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "sessa-2026-bebidas-energeticas-smart-drugs-e-morte-subita-cardiaca",
+        "por_que": "Acrescenta um gatilho arrítmico específico e cada vez mais prevalente no atleta amador de endurance: bebidas energéticas e 'smart drugs' consumidas antes ou durante a prova, com mecanismo, evidência clínica e forense revisados."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "morte-subita-atleta-jovem-bebida-energetica-autopsia-molecular",
+        "por_que": "Fecha a trilha unindo o gatilho descrito na etapa anterior ao desfecho fatal e à investigação que deveria seguir todo caso de morte súbita inexplicada no atleta jovem: a autópsia molecular, capaz de revelar canalopatia hereditária que nenhum exame em vida havia mostrado."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-biomarcadores-miocardite-e-pericardite-retorno-ao-esporte",
+    "titulo": "Biomarcadores, Miocardite e Pericardite: Retorno ao Esporte Após Inflamação Cardíaca",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Interpretar corretamente a elevação de troponina e de outros biomarcadores cardíacos após exercício intenso, diferenciando-a de infarto e de miocardite (incluindo o cenário pós-viral/pós-COVID), e decidir com segurança o retorno ao esporte após miocardite ou pericardite.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "troponina-apos-exercicio-intenso-atleta-interpretacao",
+        "por_que": "Ponto de entrada pela dúvida mais frequente na prática: troponina elevada após exercício intenso é achado comum e em geral benigno, mas a trilha precisa primeiro estabelecer esse padrão esperado antes de discutir quando ele não é benigno."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "dong-2023-meta-analise-maratona-troponina-alta-sensibilidade",
+        "por_que": "Quantifica, em metanálise, a magnitude e a frequência da elevação de troponina de alta sensibilidade após corrida de maratona, dando escala numérica ao padrão descrito na etapa anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "airaksinen-2024-composicao-troponina-maratona-versus-infarto-miocardio",
+        "por_que": "Resolve a pergunta clínica mais importante da trilha até aqui: mostra que a composição da liberação de troponina após maratona é qualitativamente diferente da liberação no infarto do miocárdio, dando fundamento à diferenciação, não apenas ao valor numérico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-cardiacos-alem-troponina-atleta-nt-probnp",
+        "por_que": "Amplia a interpretação para além da troponina isolada: NT-proBNP e outros biomarcadores têm padrão de elevação induzida por exercício próprio, que complementa (e às vezes esclarece) o quadro quando a troponina isolada é ambígua."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "miocardite-retorno-ao-esporte",
+        "por_que": "Vira o eixo da trilha de 'elevação de biomarcador esperada' para doença inflamatória miocárdica real: quando a suspeita de miocardite se confirma, o retorno ao esporte segue protocolo de estratificação de risco e tempo de repouso próprio, diferente do atleta com troponina apenas transitoriamente elevada."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "covid-19-miocardite-pos-viral-atleta-triagem-retorno-esporte",
+        "por_que": "Aplica a lógica da etapa anterior ao cenário pós-viral que mais gerou protocolo de triagem sistemática na última década: miocardite pós-COVID-19 no atleta, com algoritmo próprio de triagem antes da liberação para o retorno ao esporte."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "pericardite-retorno-esporte-atleta",
+        "por_que": "Fecha a trilha na inflamação pericárdica, cujo período de restrição esportiva e critério de liberação diferem da miocardite das duas etapas anteriores, apesar de as duas condições poderem coexistir na mesma miopericardite."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-reds-e-prescricao-de-exercicio-no-atleta-e-cardiopata",
+    "titulo": "Hipertensão, RED-S e Prescrição de Exercício no Atleta e no Cardiopata",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Reconhecer hipertensão arterial e resposta pressórica exagerada ao esforço no atleta, identificar a síndrome de baixa disponibilidade energética relativa no esporte (RED-S) como risco cardiovascular muitas vezes subdiagnosticado, e saber prescrever exercício com segurança tanto no atleta saudável de necessidades especiais (para-atleta) quanto no paciente cardiopata que deseja retomar a prática esportiva.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-no-atleta-diagnostico-manejo-e-elegibilidade-esportiva",
+        "por_que": "Ponto de entrada: hipertensão arterial no atleta exige diagnóstico e manejo com atenção a fármacos permitidos por agências antidoping e a critérios próprios de elegibilidade esportiva, distintos da hipertensão da população geral."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "resposta-pressorica-exagerada-exercicio-atleta",
+        "por_que": "Complementa a etapa anterior com um achado ao teste de esforço, não ao repouso: a resposta pressórica exagerada durante o exercício pode preceder a hipertensão de repouso e tem valor prognóstico próprio no atleta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "reds-baixa-disponibilidade-energetica-risco-cardiovascular-atleta",
+        "por_que": "Muda o eixo de excesso (pressão) para déficit (energia): a síndrome de baixa disponibilidade energética relativa no esporte (RED-S) traz repercussão cardiovascular própria, frequentemente subdiagnosticada por não ser o motivo de consulta declarado do atleta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "holtzman-2025-disponibilidade-energetica-reds-atletas-masculinos",
+        "por_que": "Amplia a evidência da etapa anterior para uma população historicamente subestudada em RED-S — atletas do sexo masculino —, associando substitutos de baixa disponibilidade energética a desfechos da síndrome."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "heikura-2025-aplicacao-reds-cat2-atletas-de-elite",
+        "por_que": "Traz a aplicação prática da ferramenta de triagem CAT2 do COI para RED-S em mais de 200 atletas de elite, dando ao médico um instrumento concreto de rastreio para além do reconhecimento teórico da síndrome."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas",
+        "por_que": "Vira o eixo da trilha do atleta saudável em risco (excesso de pressão, déficit energético) para o paciente que já tem doença cardiovascular estabelecida e quer retomar a prática esportiva com segurança — a pergunta espelhada da trilha até aqui."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "para-atleta-avaliacao-periodica-cardiovascular",
+        "por_que": "Fecha a trilha numa população com necessidades de avaliação cardiovascular periódica que a prescrição de exercício convencional da etapa anterior não cobre por completo: o para-atleta, cuja condição de base costuma já ser cardiovascular ou neurológica com repercussão cardiovascular."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "pinheiro-2024-avaliacao-periodica-de-saude-em-para-atletas",
+        "por_que": "Dá lastro de consenso de especialistas ao posicionamento sobre avaliação periódica de saúde em para-atletas descrito na etapa anterior, fechando a trilha com a referência que sustenta a prática recomendada."
+      }
+    ]
   }
 ]
