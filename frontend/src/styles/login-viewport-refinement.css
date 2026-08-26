@@ -33,7 +33,8 @@
     content:"";
     pointer-events:none;
   }
-  .prehome--login .prehome-card--login,.prehome--login .prehome-legal{position:relative;z-index:1}
+  .prehome--login .prehome-card--login{position:relative;z-index:1}
+  .prehome--login .prehome-legal{z-index:1}
   .prehome--fullscreen>.prehome-access{align-items:center!important;justify-content:center!important;padding:clamp(10px,1.8dvh,22px) clamp(18px,3.2vw,48px)!important}
   .prehome--fullscreen .prehome-card--login{width:min(100%,560px)!important;max-height:none!important;margin:auto!important;overflow:visible!important;padding:clamp(18px,2.2dvh,28px) clamp(20px,2.4vw,34px)!important}
   .prehome--fullscreen .prehome-card__header{margin-bottom:clamp(10px,1.5dvh,18px)!important}
