@@ -18,12 +18,14 @@ type Tema = { theme: string; count: number };
 const ROTULO_TIPO: Record<string, string> = {
   ensaio_clinico: "Ensaio clínico",
   revisao_sistematica: "Revisão sistemática",
+  revisao_narrativa: "Revisão narrativa",
   metanalise: "Metanálise",
   consenso: "Consenso",
   coorte: "Coorte",
   caso_controle: "Caso-controle",
   estudo_de_coorte: "Estudo observacional",
   estudo_ecologico_descritivo: "Estudo ecológico descritivo",
+  estudo_transversal: "Estudo transversal",
   registro_prospectivo: "Registro prospectivo",
   coorte_retrospectiva: "Coorte retrospectiva",
 };

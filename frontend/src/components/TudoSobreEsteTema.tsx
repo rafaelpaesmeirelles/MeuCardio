@@ -54,7 +54,10 @@ export default function TudoSobreEsteTema({ tema, excluirTipo, excluirSlug, titu
     if (!t) return;
     const params = new URLSearchParams({ tema: t });
     if (excluirTipo) params.set("excluir_tipo", excluirTipo);
-    if (excluirSlug) params.set("excluir_slug", excluirSlug);
+    if (excluirSlug) {
+      params.set("excluir_slug", excluirSlug);
+      params.set("assunto", excluirSlug);
+    }
     api
       .get<Resposta>(`/relacionados?${params.toString()}`)
       .then(setResposta)

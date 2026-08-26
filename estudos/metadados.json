@@ -8831,7 +8831,8 @@
     "journal": "New England Journal of Medicine",
     "year": 2010,
     "doi": "10.1056/NEJMoa0907118",
-    "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa0907118",
+    "pmid": "20200382",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20200382/",
     "summary": "Ensaio randomizado com 1679 pacientes em choque (predominantemente séptico), comparando norepinefrina versus dopamina como vasopressor de primeira linha.",
     "key_findings": "Sem diferença significativa de mortalidade em 28 dias, nem em mortalidade na UTI, hospitalar, em 6 ou 12 meses, entre os grupos. Incidência de arritmias significativamente maior com dopamina (24,1% vs. 12,4%; p<0,001), incluindo arritmia grave exigindo suspensão da droga do estudo (6,1% vs. 1,6%; p<0,001). No subgrupo pré-especificado de choque cardiogênico, dopamina associada a mortalidade em 28 dias significativamente maior.",
     "clinical_implications": "Estabeleceu norepinefrina como vasopressor de primeira linha preferencial sobre dopamina no choque, particularmente pela menor incidência de arritmias e pelo sinal de pior desfecho com dopamina no subgrupo de choque cardiogênico — contrariou recomendação anterior de sociedades que sugeriam dopamina como primeira linha em hipotensão pós-IAM.",
@@ -24461,7 +24462,7 @@
   {
     "slug": "grutters-christiaans-2024-rastreio-em-cascata-doenca-cardiovascular-hereditaria",
     "title": "Rastreio genético em cascata em doença cardiovascular hereditária (Grutters & Christiaans, 2024)",
-    "study_type": "revisao_sistematica",
+    "study_type": "revisao_narrativa",
     "authors": "Grutters LA, Christiaans I",
     "journal": "Familial Cancer",
     "year": 2024,
@@ -24533,7 +24534,7 @@
   {
     "slug": "gorton-2024-propranolol-em-suicidios-dados-coroner-reino-unido",
     "title": "Envolvimento do propranolol em suicídios — estudo transversal com dados de coroner no Reino Unido (Gorton et al., 2024)",
-    "study_type": "coorte_retrospectiva",
+    "study_type": "estudo_transversal",
     "authors": "Gorton HC, Archer C, Algahtani T, Mughal F, Copeland CS",
     "journal": "BJPsych Open",
     "year": 2024,
@@ -24660,8 +24661,8 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/40884070/",
     "summary": "Primeiro ensaio randomizado, duplo-cego, multicêntrico (5 centros, n=93) testando terapia de IC otimizada (até 4 classes) versus placebo em pacientes com câncer avançado e IC em cuidados paliativos.",
     "key_findings": "Desfecho primário hierárquico (dias vivo/autocuidado/capacidade de caminhar/bem-estar) sem diferença entre grupos (win ratio 0,95; IC95% 0,57-1,58; p=0,83); mortalidade em 30 dias de 32%, sem diferença entre braços. Entre sobreviventes aos 30 dias: NT-proBNP -41% (p=0,040), FEVE +2,9 pontos (p=0,036), melhora de impressão global (OR 0,22; IC95% 0,06-0,75; p=0,016).",
-    "clinical_implications": "Em população de alta mortalidade precoce, otimizar terapia de IC não muda capacidade de autocuidado, mas para quem sobrevive além de 30 dias há sinal real de benefício — decisão deve ser individualizada, não automática em qualquer direção.",
-    "limitations": "Amostra pequena (n=93), mortalidade de 30 dias alta reduz poder estatístico para o desfecho primário.",
+    "clinical_implications": "O ensaio não demonstrou benefício no desfecho clínico primário nem na mortalidade. Os sinais em biomarcadores, FEVE e impressão global não justificam, isoladamente, manter terapia onerosa em cuidados paliativos; a decisão deve considerar objetivos e carga do tratamento.",
+    "limitations": "Amostra pequena (n=93) e mortalidade de 30 dias alta. As análises de NT-proBNP, FEVE e impressão global condicionaram-se ao subconjunto que sobreviveu 30 dias, definido após a randomização; são exploratórias, sujeitas a viés de sobrevivência e não demonstram benefício causal nem permitem identificar previamente quem se beneficiará.",
     "theme": "Cardio-oncologia",
     "tags": [
       "cuidados paliativos",
@@ -24753,7 +24754,7 @@
     "pmid": "40723036",
     "url": "https://pubmed.ncbi.nlm.nih.gov/40723036/",
     "summary": "Análise do Global Burden of Disease 2021 sobre carga de cardiopatia reumática em crianças de 0-14 anos, 1990-2021.",
-    "key_findings": "Casos prevalentes em crianças quase dobraram (4,37 para 6,23 milhões, 1990-2021); mortalidade infantil caiu 74% (1,24 para 0,32/100.000) enquanto incidência global subiu de 55,84 para 66,76 casos/100.000. África Subsaariana Central: incidência de 172,43/100.000.",
+    "key_findings": "Casos prevalentes em crianças aumentaram cerca de 43% (4,37 para 6,23 milhões, 1990-2021); mortalidade infantil caiu 74% (1,24 para 0,32/100.000) enquanto incidência global subiu de 55,84 para 66,76 casos/100.000. África Subsaariana Central: incidência de 172,43/100.000.",
     "clinical_implications": "Padrão clássico de doença de desigualdade: tratamento melhorou para quem já adoeceu, mas a cadeia de transmissão nas populações mais pobres não foi interrompida, gerando novos casos continuamente.",
     "limitations": "Estudo de modelagem baseado em dados de diferentes qualidades por região — estimativas para áreas com sistemas de vigilância mais fracos têm maior incerteza.",
     "theme": "Febre reumática",
@@ -24762,30 +24763,6 @@
       "GBD",
       "desigualdade em saúde",
       "pediatria"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "mutarelli-2025-tendencias-febre-reumatica-brasil-2008-2022",
-    "title": "Tendências temporais da febre reumática aguda no Brasil, 2008-2022 (Mutarelli et al., 2025)",
-    "study_type": "coorte_retrospectiva",
-    "authors": "Mutarelli A, Armelin L, Pantaleão AN, et al.",
-    "journal": "Arquivos Brasileiros de Cardiologia",
-    "year": 2025,
-    "doi": "10.36660/abc.20240763",
-    "pmid": "40834210",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/40834210/",
-    "summary": "Análise nacional de dados do SUS (2008-2022) sobre internações e óbitos por febre reumática aguda no Brasil.",
-    "key_findings": "11.061 internações e 65 óbitos no período; apenas 16% dos internados autodeclarados brancos contra 43,1% não-brancos; Nordeste concentrou 44% das internações. Pico de internação 10-14 anos, pico de mortalidade 15-19 anos.",
-    "clinical_implications": "A febre reumática no Brasil se concentra em população não-branca e na região Nordeste — políticas de triagem 'universais' sem esse recorte perdem justamente os grupos de maior risco.",
-    "limitations": "Dados administrativos do SUS, sujeitos a subnotificação e a variação de qualidade de registro entre regiões.",
-    "theme": "Febre reumática",
-    "tags": [
-      "febre reumática",
-      "Brasil",
-      "desigualdade racial",
-      "epidemiologia"
     ],
     "review_status": "revisado",
     "published": false
@@ -25624,54 +25601,6 @@
     "published": false
   },
   {
-    "slug": "athos-3-angiotensina-ii-choque-vasodilatador",
-    "title": "Angiotensina II Sintética no Choque Vasodilatador Refratário: o Ensaio ATHOS-3",
-    "study_type": "ensaio_clinico",
-    "authors": "Khanna A, English SW, Wang XS, Ham K, Tumlin J, Szerlip H, et al; ATHOS-3 Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2017,
-    "doi": "10.1056/NEJMoa1704154",
-    "pmid": "28528561",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28528561/",
-    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico (NCT02338843) que testou angiotensina II sintética intravenosa versus placebo em 321 pacientes com choque vasodilatador já em dose alta de vasopressor convencional (>0,2 µg/kg/min de noradrenalina).",
-    "key_findings": "Resposta pressórica na hora 3 (desfecho primário) em 69,9% (angiotensina II) vs. 23,4% (placebo), OR 7,95 (IC95% 4,76-13,3; p<0,001); mortalidade em 28 dias 46% vs. 54%, HR 0,78 (IC95% 0,57-1,07; p=0,12, sem significância); eventos tromboembólicos 12,9% vs. 5,1%, com trombose venosa profunda em 4,3% vs. 0,0%.",
-    "clinical_implications": "A angiotensina II é eficaz como vasopressor de resgate/adjuvante em choque vasodilatador refratário a dose alta de vasopressor convencional, elevando a pressão arterial, mas sem benefício de sobrevida demonstrado; a bula recomenda profilaxia de tromboembolismo venoso concomitante pelo sinal trombótico observado.",
-    "limitations": "Desfecho primário é pressórico, não de sobrevida, e o estudo não teve poder amostral para mortalidade; financiado pelo próprio fabricante (La Jolla Pharmaceutical Company); amostra pequena (321) para caracterizar com precisão eventos adversos raros.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "angiotensina II",
-      "choque vasodilatador",
-      "vasopressor",
-      "choque refratário"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "iabp-shock-ii-balao-intra-aortico-choque-cardiogenico",
-    "title": "Balão Intra-Aórtico no Choque Cardiogênico Pós-Infarto: o Ensaio IABP-SHOCK II",
-    "study_type": "ensaio_clinico",
-    "authors": "Thiele H, Zeymer U, Neumann FJ, et al; IABP-SHOCK II Trial Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2012,
-    "doi": "10.1056/NEJMoa1208410",
-    "pmid": "22920912",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/22920912/",
-    "summary": "Ensaio randomizado, prospectivo, aberto, multicêntrico com 600 pacientes com choque cardiogênico complicando infarto agudo do miocárdio, com revascularização precoce planejada, comparando balão intra-aórtico (IABP) versus controle sem IABP.",
-    "key_findings": "Mortalidade por qualquer causa em 30 dias 39,7% (IABP) vs. 41,3% (controle), RR 0,96 (IC95% 0,79-1,17; p=0,69), sem diferença; seguimento de 12 meses (Lancet 2013;382:1638) confirmou ausência de benefício tardio, mortalidade 52% vs. 51% (RR 1,01; IC95% 0,86-1,18; p=0,91); sem diferença em sangramento maior, complicação isquêmica periférica, sepse ou AVC.",
-    "clinical_implications": "O uso rotineiro de IABP no choque cardiogênico pós-infarto com revascularização precoce e terapia médica otimizada não reduz mortalidade em 30 dias nem em 12 meses, base pela qual diretrizes atuais deixaram de recomendar seu uso rotineiro nesse cenário.",
-    "limitations": "Ausência de benefício de mortalidade não significa que o dispositivo seja inseguro (desfechos de segurança não diferiram); dispositivos de suporte mais robustos (Impella, ECMO-VA) não foram testados neste ensaio.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "balão intra-aórtico",
-      "choque cardiogênico",
-      "infarto",
-      "suporte circulatório mecânico"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
     "slug": "coact-coronariografia-imediata-pos-parada",
     "title": "Coronariografia Imediata versus Adiada Após Parada Cardíaca Sem Supra de ST: o Ensaio COACT",
     "study_type": "ensaio_clinico",
@@ -25744,30 +25673,6 @@
     "published": false
   },
   {
-    "slug": "ttm2-hipotermia-normotermia-pos-parada",
-    "title": "Hipotermia versus Normotermia com Tratamento Precoce de Febre Após Parada Cardíaca: o Ensaio TTM2",
-    "study_type": "ensaio_clinico",
-    "authors": "Dankiewicz J, Cronberg T, Lilja G, et al",
-    "journal": "New England Journal of Medicine",
-    "year": 2021,
-    "doi": "10.1056/NEJMoa2100591",
-    "pmid": "34133859",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/34133859/",
-    "summary": "Ensaio randomizado com 1.900 adultos em coma após parada cardíaca extra-hospitalar de causa cardíaca ou desconhecida, comparando hipotermia induzida a 33°C versus normotermia com tratamento precoce de febre (≥37,8°C).",
-    "key_findings": "Mortalidade em 6 meses 50% (hipotermia) vs. 48% (normotermia), RR 1,04 (IC95% 0,94-1,14; p=0,37), sem diferença; função neurológica ruim (Rankin ≥4) idêntica nos dois grupos (55%); arritmia com repercussão hemodinâmica mais comum no grupo hipotermia (24% vs. 17%, p<0,001).",
-    "clinical_implications": "Induzir hipotermia a 33°C, comparado a apenas evitar febre, não reduziu mortalidade nem melhorou desfecho neurológico, e ainda trouxe mais arritmia hemodinamicamente relevante — reforça que evitar febre, não induzir frio, é o alvo terapêutico que sobrevive à evidência.",
-    "limitations": "Coorte de parada extra-hospitalar em adultos, sem extrapolação para pediatria ou parada intra-hospitalar; não compara método de resfriamento nem aborda o restante do cuidado pós-parada (hemodinâmica, ventilação).",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "hipotermia terapêutica",
-      "normotermia",
-      "pós-parada",
-      "arritmia"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
     "slug": "decade-dexmedetomidina-cirurgia-cardiaca",
     "title": "Dexmedetomidina para Prevenção de Fibrilação Atrial e Delirium no Pós-operatório de Cirurgia Cardíaca: o Ensaio DECADE",
     "study_type": "ensaio_clinico",
@@ -25787,78 +25692,6 @@
       "fibrilação atrial",
       "delirium",
       "cirurgia cardíaca"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "soap-ii-dopamina-noradrenalina-choque",
-    "title": "Dopamina versus Noradrenalina no Tratamento do Choque: o Ensaio SOAP II",
-    "study_type": "ensaio_clinico",
-    "authors": "De Backer D, Biston P, Devriendt J, et al; SOAP II Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2010,
-    "doi": "10.1056/NEJMoa0907118",
-    "pmid": "20200382",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/20200382/",
-    "summary": "Ensaio multicêntrico randomizado com 1.679 pacientes em choque, comparando dopamina versus noradrenalina como vasopressor de primeira linha, com análise de subgrupo pré-especificada por etiologia do choque.",
-    "key_findings": "Morte em 28 dias sem diferença significativa (52,5% dopamina vs. 48,5% noradrenalina; OR 1,17; IC95% 0,97-1,42; p=0,10); eventos arrítmicos muito mais frequentes com dopamina (24,1% vs. 12,4%; p<0,001); no subgrupo de choque cardiogênico (280 pacientes), dopamina associou-se a maior mortalidade em 28 dias (p=0,03), sem esse sinal no choque séptico ou hipovolêmico.",
-    "clinical_implications": "Sustenta a preferência por noradrenalina como vasopressor de primeira linha no choque em geral, especialmente no choque cardiogênico, onde dopamina associou-se a maior mortalidade e o miocárdio comprometido é mais vulnerável ao efeito arritmogênico.",
-    "limitations": "O achado por etiologia é análise de subgrupo, que exige cautela estatística adicional apesar de biologicamente plausível.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "dopamina",
-      "noradrenalina",
-      "choque cardiogênico",
-      "vasopressor"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "ecls-shock-ecmo-va-choque-cardiogenico-infarto",
-    "title": "ECMO Venoarterial Precoce no Choque Cardiogênico do Infarto: o Ensaio ECLS-SHOCK",
-    "study_type": "ensaio_clinico",
-    "authors": "Thiele H, Zeymer U, Akin I, Behnes M, Rassaf T, Mahabadi AA, et al; ECLS-SHOCK Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2023,
-    "doi": "10.1056/NEJMoa2307227",
-    "pmid": "37634145",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37634145/",
-    "summary": "Ensaio multicêntrico randomizado com 420 pacientes (417 analisados) com infarto agudo do miocárdio complicado por choque cardiogênico e revascularização precoce planejada, comparando ECMO precoce + tratamento clínico habitual versus tratamento clínico habitual isolado.",
-    "key_findings": "Morte por qualquer causa em 30 dias 47,8% (ECMO) vs. 49,0% (controle), RR 0,98 (IC95% 0,80-1,19; p=0,81), sem diferença; sangramento moderado ou grave 23,4% vs. 9,6% (RR 2,44); complicações vasculares periféricas exigindo intervenção 11,0% vs. 3,8% (RR 2,86); ventilação mecânica mais prolongada com ECMO.",
-    "clinical_implications": "O uso precoce e rotineiro de ECMO venoarterial no choque cardiogênico do infarto não reduz mortalidade e causa dano mensurável (sangramento e complicação vascular) — não deve ser instalado por reflexo ao diagnóstico.",
-    "limitations": "Não avalia ECMO como ponte para transplante/dispositivo de longa permanência nem choque cardiogênico de outra etiologia; não testa estratégia de resgate versus imediata diretamente.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "ECMO",
-      "choque cardiogênico",
-      "infarto",
-      "suporte circulatório mecânico"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "ecmo-cs-ecmo-va-choque-cardiogenico",
-    "title": "Implantação Imediata versus Estratégia Conservadora de ECMO no Choque Cardiogênico: o Ensaio ECMO-CS",
-    "study_type": "ensaio_clinico",
-    "authors": "Ostadal P, Rokyta R, Karasek J, Kruger A, Vondrakova D, Janotka M, et al; ECMO-CS Investigators",
-    "journal": "Circulation",
-    "year": 2023,
-    "doi": "10.1161/CIRCULATIONAHA.122.062949",
-    "pmid": "36335478",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36335478/",
-    "summary": "Ensaio randomizado com 122 pacientes (117 analisados) com choque cardiogênico em deterioração rápida ou grave, comparando VA-ECMO imediato versus estratégia inicialmente conservadora, permitindo ECMO de resgate em caso de piora.",
-    "key_findings": "Desfecho primário composto em 30 dias (morte, parada circulatória ressuscitada, implante de outro dispositivo) 63,8% (imediato) vs. 71,2% (conservador), HR 0,72 (IC95% 0,46-1,12; p=0,21), sem diferença; 39% do braço conservador acabou recebendo ECMO de resgate; mortalidade por qualquer causa 50,0% vs. 47,5%, sem diferença.",
-    "clinical_implications": "A estratégia de reservar ECMO para quem deteriora (\"ECMO de resgate\") não se mostrou inferior à implantação imediata em todos os pacientes, sustentando uma abordagem conservadora inicial que evita o dano do dispositivo em quem se estabilizaria de qualquer forma.",
-    "limitations": "Amostra pequena (122); alto cruzamento entre braços (39%) dilui a comparação de estratégias puras; ensaio aberto.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "ECMO",
-      "choque cardiogênico",
-      "estratégia conservadora",
-      "suporte circulatório mecânico"
     ],
     "review_status": "revisado",
     "published": false
@@ -25907,102 +25740,6 @@
       "ritmo não chocável",
       "pós-parada",
       "assistolia"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "danger-shock-impella-cp-iamcst",
-    "title": "Bomba de Fluxo Microaxial (Impella CP) no Choque Cardiogênico do IAMCST: o Ensaio DanGer Shock",
-    "study_type": "ensaio_clinico",
-    "authors": "Møller JE, Engstrøm T, Jensen LO, et al; DanGer Shock Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2024,
-    "doi": "10.1056/NEJMoa2312572",
-    "pmid": "38587239",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/38587239/",
-    "summary": "Ensaio internacional, multicêntrico, randomizado, com 360 pacientes (355 analisados) com IAMCST complicado por choque cardiogênico, comparando bomba de fluxo microaxial (Impella CP) mais cuidado padrão versus cuidado padrão isolado.",
-    "key_findings": "Morte por qualquer causa em 180 dias 45,8% (Impella) vs. 58,5% (cuidado padrão), HR 0,74 (IC95% 0,55-0,99; p=0,04); desfecho de segurança composto (sangramento grave, isquemia de membro, hemólise, falha do dispositivo, piora de regurgitação aórtica) 24,0% vs. 6,2%, RR 4,74; terapia renal substitutiva 41,9% vs. 26,7%.",
-    "clinical_implications": "Primeiro ensaio randomizado a demonstrar redução de mortalidade com suporte circulatório mecânico ativo no choque cardiogênico do IAMCST, mas com custo de segurança substancial (quase 5x mais eventos adversos graves e quase o dobro de terapia renal substitutiva) que deve ser explicitamente pesado na decisão.",
-    "limitations": "Resultado no limite convencional de significância (p=0,04, IC95% do HR chegando a 0,99); população restrita a IAMCST com choque cardiogênico, sem extrapolação a outras etiologias.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "Impella",
-      "choque cardiogênico",
-      "IAMCST",
-      "suporte circulatório mecânico"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "survive-levosimendana-dobutamina-ic-aguda",
-    "title": "Levosimendana versus Dobutamina na Insuficiência Cardíaca Aguda Descompensada: o Ensaio SURVIVE",
-    "study_type": "ensaio_clinico",
-    "authors": "Mebazaa A, Nieminen MS, Packer M, Cohen-Solal A, Kleber FX, et al; SURVIVE Investigators",
-    "journal": "JAMA",
-    "year": 2007,
-    "doi": "10.1001/jama.297.17.1883",
-    "pmid": "17473298",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/17473298/",
-    "summary": "Ensaio duplo-cego, multicêntrico (75 centros, 9 países), com 1.327 pacientes internados com insuficiência cardíaca agudamente descompensada necessitando suporte inotrópico, comparando levosimendana versus dobutamina, ambas endovenosas, com desfecho primário de mortalidade por qualquer causa em 180 dias.",
-    "key_findings": "Mortalidade em 180 dias 26% (levosimendana) vs. 28% (dobutamina), HR 0,91 (IC95% 0,74-1,13; p=0,40), sem diferença; queda maior de BNP com levosimendana, sem tradução em benefício clínico; mais fibrilação atrial, hipocalemia e cefaleia com levosimendana; mais insuficiência cardíaca no grupo dobutamina.",
-    "clinical_implications": "Contrariando o achado de mortalidade do menor ensaio LIDO (desfecho secundário), o SURVIVE — desenhado especificamente com mortalidade como desfecho primário e amostra seis vezes maior — não confirmou superioridade de sobrevida da levosimendana sobre a dobutamina; a escolha entre as duas não é de sobrevida, mas de perfil de efeito adverso.",
-    "limitations": "Selecionou pacientes que já necessitavam de suporte inotrópico, não respondendo sobre IC aguda sem essa indicação; não testa infusão intermitente ambulatorial.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "levosimendana",
-      "dobutamina",
-      "insuficiência cardíaca aguda",
-      "inotrópico"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "mint-limiar-transfusao-infarto-anemia",
-    "title": "Estratégia Restritiva versus Liberal de Transfusão no Infarto do Miocárdio com Anemia: o Ensaio MINT",
-    "study_type": "ensaio_clinico",
-    "authors": "Carson JL, Brooks MM, Hébert PC, Goodman SG, Bertolet M, et al; MINT Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2023,
-    "doi": "10.1056/NEJMoa2307983",
-    "pmid": "37952133",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/37952133/",
-    "summary": "Ensaio de fase 3 com 3.504 pacientes com infarto do miocárdio e hemoglobina <10 g/dL, comparando estratégia restritiva de transfusão (corte de 7 ou 8 g/dL) versus liberal (corte <10 g/dL), com desfecho primário composto de infarto ou morte em 30 dias.",
-    "key_findings": "Desfecho primário 16,9% (restritiva) vs. 14,5% (liberal), RR 1,15 (IC95% 0,99-1,34; p=0,07); morte 9,9% vs. 8,3% (RR 1,19); infarto 8,5% vs. 7,2% (RR 1,19) — todos os pontos estimados desfavoráveis à estratégia restritiva, sem atingir significância formal.",
-    "clinical_implications": "No infarto agudo com anemia, um limiar de transfusão mais alto que o usado no resto da medicina é defensável — o ensaio não demonstrou superioridade da liberal, mas também não pode excluir dano potencial da restritiva (p=0,07, todos os pontos estimados desfavoráveis a ela).",
-    "limitations": "Único dos três grandes ensaios de limiar transfusional desenhado para superioridade da liberal, sem alcançá-la; resultado no limite de significância exige leitura cautelosa.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "transfusão",
-      "infarto",
-      "anemia",
-      "hemoglobina"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "trics-iii-limiar-transfusao-cirurgia-cardiaca",
-    "title": "Estratégia Restritiva versus Liberal de Transfusão em Cirurgia Cardíaca: o Ensaio TRICS III",
-    "study_type": "ensaio_clinico",
-    "authors": "Mazer CD, Whitlock RP, Fergusson DA, Hall J, Belley-Cote E, et al; TRICS Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2017,
-    "doi": "10.1056/NEJMoa1711818",
-    "pmid": "29130845",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29130845/",
-    "summary": "Ensaio multicêntrico, aberto, de não inferioridade, com 5.243 adultos em cirurgia cardíaca com EuroSCORE I ≥6, comparando limiar restritivo de transfusão (<7,5 g/dL) versus liberal (<9,5 g/dL no centro cirúrgico/UTI ou <8,5 g/dL na enfermaria).",
-    "key_findings": "Desfecho primário composto (morte, infarto, AVC ou insuficiência renal nova com diálise) 11,4% (restritiva) vs. 12,5% (liberal), OR 0,90 (IC95% 0,76-1,07; p<0,001 para não inferioridade); transfusão 52,3% vs. 72,6% (OR 0,41); sem diferenças significativas nos demais desfechos secundários.",
-    "clinical_implications": "Em cirurgia cardíaca de risco moderado a alto, a estratégia restritiva de transfusão é não inferior à liberal e reduz substancialmente a exposição transfusional — o limiar restritivo está estabelecido nesse cenário.",
-    "limitations": "Exigiu EuroSCORE I ≥6 (população de risco moderado a alto, não cirurgia cardíaca em geral); desenho aberto, inerente ao tipo de intervenção.",
-    "theme": "Terapia intensiva",
-    "tags": [
-      "transfusão",
-      "cirurgia cardíaca",
-      "limiar transfusional",
-      "hemoglobina"
     ],
     "review_status": "revisado",
     "published": false
@@ -26224,78 +25961,6 @@
     "published": false
   },
   {
-    "slug": "ifcir-valvuloplastia-aortica-fetal-por-volume-de-centro",
-    "title": "IFCIR — Sucesso Técnico da Valvuloplastia Aórtica Fetal em Relação ao Volume do Centro",
-    "study_type": "coorte_retrospectiva",
-    "authors": "Gijtenbeek M, Morris SA, Herberg U, et al.",
-    "journal": "Circulation: Cardiovascular Interventions",
-    "year": 2026,
-    "doi": "10.1161/CIRCINTERVENTIONS.125.015593",
-    "pmid": "42261657",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/42261657/",
-    "summary": "Estudo do Registro Internacional de Intervenção Cardíaca Fetal (IFCIR) analisando 162 valvuloplastias aórticas fetais em 11 centros (2001-2018), com volume por centro entre 6 e 31 casos, avaliando a relação entre volume do centro e sucesso técnico/desfechos.",
-    "key_findings": "Taxa de sucesso técnico global de 80,2%; maior volume do centro não se associou a maior sucesso técnico, mas se associou a menor óbito fetal periprocedimento; maior peso fetal estimado, maior idade gestacional e punção cardíaca única foram os maiores determinantes de melhor desfecho.",
-    "clinical_implications": "Volume numérico de centro não deve ser único critério para decidir onde realizar a valvuloplastia aórtica fetal; peso fetal e idade gestacional maiores no momento do procedimento favorecem o resultado.",
-    "limitations": "Estudo de registro observacional multicêntrico sem randomização, cobrindo 2001-2018 (mudanças técnicas e de seleção posteriores não capturadas).",
-    "theme": "Cardiologia pediátrica",
-    "tags": [
-      "intervenção cardíaca fetal",
-      "estenose aórtica fetal",
-      "registro internacional",
-      "valvuloplastia"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "ifcir-intervencao-cardiaca-fetal-no-feto-hidropico",
-    "title": "IFCIR — Sobrevida com Intervenção Cardíaca Fetal no Feto Hidrópico",
-    "study_type": "estudo_de_coorte",
-    "authors": "Moon-Grady AJ, Tulzer A, Armstrong AK, et al.",
-    "journal": "Ultrasound in Obstetrics & Gynecology",
-    "year": 2026,
-    "doi": "10.1002/uog.70245",
-    "pmid": "42281210",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/42281210/",
-    "summary": "Análise do Registro Internacional de Intervenção Cardíaca Fetal (IFCIR) com 864 pares materno-fetais, focada nos 91 fetos (10,5%) que se apresentaram com hidropisia fetal, comparando sobrevida com e sem intervenção cardíaca fetal invasiva.",
-    "key_findings": "Sobrevida até a alta hospitalar de 35,6% (26/73) nos fetos hidrópicos submetidos a intervenção, versus 5,6% (1/18) nos manejados de forma expectante; óbito fetal relacionado ao procedimento em 20,5% (15/73); latência mediana de 8,9 semanas entre procedimento e parto.",
-    "clinical_implications": "Hidropisia fetal não é por si só contraindicação à intervenção cardíaca fetal — a sobrevida com intervenção supera com folga a conduta expectante, apesar do risco procedimental relevante, e essa comparação deve orientar a decisão compartilhada com a família.",
-    "limitations": "Dados de registro observacional, sujeitos a viés de seleção entre fetos escolhidos para intervenção e os manejados de forma expectante; sem randomização.",
-    "theme": "Cardiologia pediátrica",
-    "tags": [
-      "intervenção cardíaca fetal",
-      "hidropisia fetal",
-      "registro internacional",
-      "estenose aórtica fetal"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "preditores-de-intervencao-pos-natal-na-estenose-aortica-fetal-leve",
-    "title": "Preditores de Intervenção Pós-Natal na Estenose Aórtica Fetal Classificada como Leve",
-    "study_type": "coorte_retrospectiva",
-    "authors": "Papneja K, et al.",
-    "journal": "Journal of the American Society of Echocardiography",
-    "year": 2026,
-    "doi": null,
-    "pmid": "41033361",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41033361/",
-    "summary": "Estudo multicêntrico retrospectivo (4 centros, 2009-2019) com 22 fetos classificados com estenose aórtica leve no ecocardiograma fetal inicial, avaliando quais achados predizem necessidade de intervenção valvar aórtica pós-natal no primeiro ano de vida.",
-    "key_findings": "8 de 22 (36,4%) precisaram de intervenção valvar aórtica pós-natal no primeiro ano; 4 desses 8 (50%) tinham estenose aórtica crítica ao nascimento; gradiente de pico da valva aórtica fetal inicial >12,5 mmHg previu todos os casos que evoluíram para intervenção (p=0,0017 no exame inicial).",
-    "clinical_implications": "Estenose aórtica fetal 'leve' exige seguimento ecocardiográfico seriado, não alta do pré-natal — o gradiente de pico >12,5 mmHg no exame inicial é sinal de alerta concreto para intensificar o acompanhamento.",
-    "limitations": "Amostra pequena (n=22); estudo retrospectivo multicêntrico sem validação externa dos cortes numéricos propostos.",
-    "theme": "Cardiologia pediátrica",
-    "tags": [
-      "estenose aórtica fetal",
-      "ecocardiografia fetal",
-      "predição de intervenção",
-      "cardiologia fetal"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
     "slug": "registro-ishlt-transplante-cardiaco-pediatrico-relatorio-2022",
     "title": "Registro ISHLT — 25º Relatório de Transplante Cardíaco Pediátrico",
     "study_type": "registro_prospectivo",
@@ -26315,30 +25980,6 @@
       "registro ISHLT",
       "imunossupressão",
       "sobrevida"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "desfechos-cardiovasculares-de-longo-prazo-pos-mis-c-revisao-sistematica",
-    "title": "Desfechos Cardiovasculares de Longo Prazo Pós-MIS-C: Revisão Sistemática",
-    "study_type": "revisao_sistematica",
-    "authors": "Alvarado-Gamarra G, Alcala-Marcos K, Celis CR, et al.",
-    "journal": "European Journal of Pediatrics",
-    "year": 2026,
-    "doi": "10.1007/s00431-026-06798-6",
-    "pmid": "41721085",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41721085/",
-    "summary": "Revisão sistemática reunindo 84 estudos e 4.778 pacientes pediátricos pós-síndrome inflamatória multissistêmica (MIS-C), avaliando resolução de anormalidades cardiovasculares entre 6 e 24 meses de seguimento.",
-    "key_findings": "Maioria dos desfechos cardiovasculares resolveu entre 6 e 9 meses; RM cardíaca identificou edema/fibrose persistindo até 12 meses em alguns pacientes; 2 estudos relataram anormalidade coronariana ainda presente em 18-24 meses; pacientes pós-MIS-C tiveram mais eventos cardiovasculares que crianças com COVID-19 sem MIS-C, mas desfecho geral melhor que outras miocardites, com menor capacidade aeróbica residual no teste de esforço.",
-    "clinical_implications": "A maioria das anormalidades cardíacas agudas do MIS-C resolve entre 6-9 meses, mas caso tenha havido dilatação coronariana na fase aguda deve-se manter seguimento estendido; considerar teste de esforço formal antes de liberar retorno irrestrito ao esporte competitivo.",
-    "limitations": "Certeza de evidência classificada como muito baixa pelos próprios autores; apenas 7 dos 84 estudos tinham grupo comparador; heterogeneidade de definição de desfecho entre os estudos incluídos.",
-    "theme": "Cardiologia pediátrica",
-    "tags": [
-      "MIS-C",
-      "seguimento cardiovascular",
-      "revisão sistemática",
-      "miocardite"
     ],
     "review_status": "revisado",
     "published": false
@@ -26483,30 +26124,6 @@
       "aférese de lipoproteínas",
       "dislipidemia",
       "prevenção cardiovascular"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "choi-2025-metanalise-de-miocardite-pos-vacina-de-mrna-em-adolescentes",
-    "title": "Choi et al. 2025 — Metanálise de Miocardite Pós-Vacina de mRNA em Adolescentes",
-    "study_type": "metanalise",
-    "authors": "Choi Y, Lee JS, Choe YJ, et al.",
-    "journal": "Pediatric Cardiology",
-    "year": 2025,
-    "doi": null,
-    "pmid": "39404761",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/39404761/",
-    "summary": "Revisão sistemática e metanálise dedicada à vacina BNT162b2 (Pfizer-BioNTech) em adolescentes, estimando a incidência absoluta de miopericardite pós-vacinal e comparando-a com a incidência de miopericardite após infecção por COVID-19.",
-    "key_findings": "Incidência de miopericardite pós-vacina de 37,6 casos por milhão de doses (IC95% 24,2-53,8), contra 1.583,9 por milhão após infecção por COVID-19 (aproximadamente 42 vezes maior); maior risco em homens (43,1/milhão) e na segunda dose (47,7/milhão).",
-    "clinical_implications": "O risco de miopericardite após a própria infecção por COVID-19 é muito maior que o risco pós-vacinal — dado central para orientar a conversa de risco-benefício com famílias diante de hesitação vacinal motivada pelo medo de miocardite.",
-    "limitations": "Metanálise dedicada à BNT162b2; números de incidência absoluta não necessariamente se aplicam sem ajuste à vacina Moderna (mRNA-1273), cujo risco relativo aparenta ser maior segundo outras fontes.",
-    "theme": "Cardiologia pediátrica",
-    "tags": [
-      "miocardite pós-vacinal",
-      "mRNA",
-      "adolescentes",
-      "COVID-19"
     ],
     "review_status": "revisado",
     "published": false
@@ -26867,30 +26484,6 @@
       "reabilitação cardíaca",
       "teste cardiopulmonar de exercício",
       "qualidade de vida"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "ascend-aspirina-prevencao-primaria-diabetes",
-    "title": "ASCEND — Aspirina em Prevenção Primária em Pacientes com Diabetes Mellitus",
-    "study_type": "ensaio_clinico",
-    "authors": "ASCEND Study Collaborative Group; Bowman L, Mafham M, Wallendszus K, et al.",
-    "journal": "N Engl J Med",
-    "year": 2018,
-    "doi": "10.1056/NEJMoa1804988",
-    "pmid": "30146931",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30146931/",
-    "summary": "Ensaio randomizado, controlado por placebo, com 15.480 adultos com diabetes mellitus sem doença cardiovascular evidente, comparando aspirina 100mg/dia versus placebo, seguimento médio de 7,4 anos, avaliando evento vascular grave (desfecho primário de eficácia) e sangramento maior (desfecho primário de segurança).",
-    "key_findings": "Evento vascular grave 8,5% (aspirina) vs 9,6% (placebo), razão de taxas 0,88 (IC95% 0,79-0,97; p=0,01). Sangramento maior 4,1% vs 3,2% (razão de taxas 1,29; IC95% 1,09-1,52; p=0,003), majoritariamente gastrointestinal/extracraniano.",
-    "clinical_implications": "O benefício vascular real da aspirina em prevenção primária no diabético é amplamente neutralizado pelo aumento proporcional de sangramento maior, sustentando o afastamento do uso rotineiro nesta população — decisão individualizada pelo risco hemorrágico específico.",
-    "limitations": "População sem doença cardiovascular evidente na entrada; resultado não extrapolável a prevenção secundária.",
-    "theme": "Diabetes e cardiologia",
-    "tags": [
-      "aspirina",
-      "prevenção primária",
-      "diabetes",
-      "sangramento"
     ],
     "review_status": "revisado",
     "published": false
@@ -27275,30 +26868,6 @@
       "nefropatia diabética",
       "bloqueio do SRAA",
       "IDNT"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "ontarget-telmisartana-ramipril-alto-risco-vascular",
-    "title": "ONTARGET — Telmisartana, Ramipril ou Ambos em Alto Risco Vascular",
-    "study_type": "ensaio_clinico",
-    "authors": "ONTARGET Investigators; Yusuf S, Teo KK, Pogue J, et al.",
-    "journal": "N Engl J Med",
-    "year": 2008,
-    "doi": "10.1056/NEJMoa0801317",
-    "pmid": "18378520",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/18378520/",
-    "summary": "Ensaio com 25.620 pacientes de alto risco cardiovascular, telmisartana, ramipril ou combinação, seguimento mediano 56 meses.",
-    "key_findings": "Combinação de IECA+BRA não trouxe benefício adicional e associou-se a mais eventos adversos, definindo o limite de segurança do duplo bloqueio do SRAA.",
-    "clinical_implications": "Sustenta contraindicação da combinação IECA+BRA no manejo cardiovascular e renal, incluindo nefropatia diabética.",
-    "limitations": "População de alto risco vascular geral, não exclusivamente nefropatia diabética.",
-    "theme": "Diabetes e cardiologia",
-    "tags": [
-      "telmisartana",
-      "ramipril",
-      "duplo bloqueio SRAA",
-      "ONTARGET"
     ],
     "review_status": "revisado",
     "published": false
@@ -29689,7 +29258,7 @@
   {
     "slug": "felitti-1998-aces-estudo-fundador-abuso-infantil-e-doenca-cronica-adulta",
     "title": "Estudo ACE (Adverse Childhood Experiences) — relação entre abuso na infância, disfunção familiar e as principais causas de morte no adulto",
-    "study_type": "coorte_retrospectiva",
+    "study_type": "estudo_transversal",
     "authors": "Felitti VJ, Anda RF, Nordenberg D, Williamson DF, Spitz AM, Edwards V, Koss MP, Marks JS",
     "journal": "American Journal of Preventive Medicine",
     "year": 1998,
@@ -29713,7 +29282,7 @@
   {
     "slug": "liu-logan-alhusen-2020-revisao-violencia-por-parceiro-intimo-e-risco-cardiovascular",
     "title": "Revisão integrativa: risco e desfecho cardiovascular em mulheres que sofreram violência por parceiro íntimo",
-    "study_type": "revisao_sistematica",
+    "study_type": "revisao_narrativa",
     "authors": "Liu X, Logan J, Alhusen J",
     "journal": "Journal of Cardiovascular Nursing",
     "year": 2020,
@@ -30574,29 +30143,6 @@
     "published": false
   },
   {
-    "slug": "hilfiker-kleiner-2017-bromocriptina-multicentrico-cardiomiopatia-periparto",
-    "title": "Hilfiker-Kleiner et al. 2017 — Bromocriptina 1 semana versus 8 semanas na cardiomiopatia periparto (estudo multicêntrico alemão)",
-    "study_type": "ensaio_clinico",
-    "authors": "Hilfiker-Kleiner D, Haghikia A, Berliner D, et al.",
-    "journal": "European Heart Journal",
-    "year": 2017,
-    "doi": "10.1093/eurheartj/ehx355",
-    "pmid": "28934837",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/28934837/",
-    "summary": "Estudo multicêntrico alemão, 63 pacientes com cardiomiopatia periparto, sem grupo placebo, comparando regime de bromocriptina de 1 semana versus 8 semanas.",
-    "key_findings": "Fração de ejeção: grupo 1 semana 28±10% → 49±12%; grupo 8 semanas 27±10% → 51±10% — sem diferença significativa entre os grupos (p=0,381). Recuperação completa (FE≥50%): 52% (1 semana) vs. 68% (8 semanas).",
-    "clinical_implications": "Tanto o regime curto quanto o estendido de bromocriptina mostram recuperação substancial da fração de ejeção na cardiomiopatia periparto, sem vantagem estatisticamente demonstrada do regime mais longo — informa decisões sobre duração do tratamento.",
-    "limitations": "Ausência de braço placebo/controle, o que impede isolar o efeito do tratamento da recuperação espontânea; amostra relativamente pequena (63); estudo sem poder estatístico para detectar diferença real entre os regimes.",
-    "theme": "Gravidez",
-    "tags": [
-      "bromocriptina",
-      "cardiomiopatia periparto",
-      "fração de ejeção"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
     "slug": "goland-2017-ropac-cardiomiopatia-hipertrofica-gestacao",
     "title": "Goland et al. 2017 — Cardiomiopatia hipertrófica na gestação: dados do registro ROPAC",
     "study_type": "registro_prospectivo",
@@ -31051,30 +30597,6 @@
     "published": false
   },
   {
-    "slug": "silversides-2018-carpreg-ii-escore-risco-cardiaco-materno",
-    "title": "Silversides et al. 2018 — CARPREG II: atualização do escore de risco cardíaco materno",
-    "study_type": "registro_prospectivo",
-    "authors": "Silversides CK, Grewal J, Mason J, Sermer M, Kiess M, et al.",
-    "journal": "Journal of the American College of Cardiology",
-    "year": 2018,
-    "doi": "10.1016/j.jacc.2018.02.076",
-    "pmid": "29793631",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/29793631/",
-    "summary": "Coorte prospectiva consecutiva de 1.938 gestações em mulheres com cardiopatia, usada para derivar e descrever o escore de risco atualizado CARPREG II, e examinar tendências temporais em complicações cardíacas.",
-    "key_findings": "Complicações cardíacas ocorreram em 16% das gestações no geral. Frequência de edema pulmonar caiu ao longo do tempo: 8% (1994–2001) vs. 4% (2001–2014) (p=0,012).",
-    "clinical_implications": "O CARPREG II refina a predição de risco cardíaco materno com preditores adicionais além do escore CARPREG original, e o declínio observado no edema pulmonar ao longo do tempo sugere melhora no manejo contemporâneo da cardiopatia na gestação.",
-    "limitations": "Registro de grande porte baseado predominantemente em instituição única (possível viés de referência para centro especializado); comparação de tendência temporal é observacional e pode refletir mudanças de prática além do próprio escore de risco.",
-    "theme": "Gravidez",
-    "tags": [
-      "CARPREG II",
-      "escore de risco",
-      "cardiopatia e gestação",
-      "tendência temporal"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
     "slug": "bateman-2015-estatinas-primeiro-trimestre-malformacoes-congenitas",
     "title": "Bateman et al. 2015 — Estatinas no primeiro trimestre e risco de malformações congênitas",
     "study_type": "coorte_retrospectiva",
@@ -31405,30 +30927,6 @@
       "dinitrato de isossorbida",
       "insuficiência cardíaca",
       "raça e medicina"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "momentum-3-lvad-heartmate-3-vs-heartmate-2",
-    "title": "MOMENTUM 3 — LVAD de fluxo centrífugo (HeartMate 3) versus axial (HeartMate II) na IC avançada",
-    "study_type": "ensaio_clinico",
-    "authors": "Mehra MR, Uriel N, Naka Y, et al; MOMENTUM 3 Investigators",
-    "journal": "New England Journal of Medicine",
-    "year": 2019,
-    "doi": "10.1056/NEJMoa1900486",
-    "pmid": "30883052",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/30883052/",
-    "summary": "Ensaio randomizado, aberto, multicêntrico, com 1.028 pacientes com IC avançada candidatos a LVAD, randomizados para bomba de fluxo centrífugo com levitação magnética total (HeartMate 3, n=516) ou fluxo axial (HeartMate II, n=512), independente da intenção de uso, relatório final após duas análises interinas.",
-    "key_findings": "Sobrevida em 2 anos livre de AVC incapacitante ou reoperação: 76,9% (HeartMate 3) vs. 64,8% (HeartMate II); RR 0,84 (IC95% 0,78-0,91; p<0,001). Troca de bomba em 2 anos: 2,3% vs. 11,3%; RR 0,21 (IC95% 0,11-0,38; p<0,001). AVC de qualquer gravidade, sangramento maior e hemorragia digestiva também foram menores com o fluxo centrífugo.",
-    "clinical_implications": "Estabeleceu o HeartMate 3 como dispositivo padrão de LVAD, com quase eliminação da trombose de bomba pela levitação magnética total; o HeartMate II foi descontinuado comercialmente para novo implante nesta linha de evidência.",
-    "limitations": "Ensaio aberto (sem cegamento); não testa a indicação de LVAD em si, apenas qual tecnologia de bomba usar em quem já tem indicação estabelecida.",
-    "theme": "Insuficiência cardíaca",
-    "tags": [
-      "lvad",
-      "heartmate 3",
-      "insuficiência cardíaca avançada",
-      "dispositivo de assistência ventricular"
     ],
     "review_status": "revisado",
     "published": false
