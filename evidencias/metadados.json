@@ -6568,28 +6568,6 @@
     "review_status": "revisado"
   },
   {
-    "slug": "chagas-hiv-profilaxia-secundaria-com-benznidazol-com-cd4-abaixo-de-200",
-    "statement": "Na coinfecção Trypanosoma cruzi e HIV, a profilaxia secundária com benznidazol DUAS VEZES POR SEMANA em pacientes com CD4 abaixo de 200 células/mm³ é recomendação PONDERADA (Ponderado, Nível C). INCOERÊNCIA INTERNA DA FONTE, registrada e não corrigida: o texto corrido do mesmo capítulo descreve o esquema como benznidazol 5 mg/kg/dia TRÊS VEZES POR SEMANA e qualifica a conduta como CONTROVERSA, por falta de evidência — duas frequências diferentes e dois graus de convicção diferentes, no mesmo capítulo. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à frequência correta antes de prescrever.",
-    "recommendation_class": "Ponderado",
-    "evidence_level": "C",
-    "society": "SBC",
-    "year": 2023,
-    "guideline_title": "Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023",
-    "reference": "Marin-Neto JA, Rassi A Jr, Oliveira GMM, et al. Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6):e20230269. DOI: 10.36660/abc.20230269. PMID 37377258. PMCID PMC10344417 (acesso aberto). Tabela 13.1. NOTA DE SISTEMA: GRADE com graus Forte e Ponderada (condicional) e níveis de definição PRÓPRIA — A é evidência direta obtida NA cardiomiopatia chagásica, B é evidência extrapolada de outras cardiopatias ou direta de qualidade moderada, C é ausência de evidência empírica.",
-    "theme": "Cardiomiopatias",
-    "tags": [
-      "doença de Chagas",
-      "coinfecção HIV",
-      "reativação",
-      "profilaxia secundária",
-      "benznidazol",
-      "incoerência interna"
-    ],
-    "review_status": "pendente_revisao",
-    "published": false,
-    "review_note": "BLOQUEADO: a Tabela 13.1 e o texto corrido da diretriz SBC 2023 informam frequências diferentes de benznidazol. Não publicar nem usar para prescrição até reconciliação editorial com a fonte/autores."
-  },
-  {
     "slug": "chagas-hiv-terapia-antirretroviral-efetiva-e-a-unica-recomendacao-nivel-a",
     "statement": "Na coinfecção Trypanosoma cruzi e HIV, o uso de terapêutica ANTIRRETROVIRAL EFETIVA para manter a resposta imune adequada é recomendação FORTE, Nível A — a ÚNICA recomendação nível A de toda a diretriz de Chagas. Ou seja: o melhor tratamento antiparasitário preventivo neste paciente é tratar bem o HIV.",
     "recommendation_class": "Forte",
@@ -18413,11 +18391,11 @@
     "slug": "intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica",
     "statement": "Em população com incidência particularmente alta de febre reumática, a administração de penicilina G benzatina a cada 3 semanas (em vez do intervalo padrão de 4 semanas) é justificada e recomendada, porque o nível sérico do fármaco pode cair abaixo do nível protetor antes da quarta semana após a aplicação dessa dose.",
     "recommendation_class": "I",
-    "evidence_level": "?",
+    "evidence_level": "A",
     "society": "AHA",
     "year": 2009,
     "guideline_title": "Prevention of Rheumatic Fever and Diagnosis and Treatment of Acute Streptococcal Pharyngitis: A Scientific Statement from the American Heart Association",
-    "reference": "Gerber MA, Baltimore RS, Eaton CB, et al. Prevention of rheumatic fever and diagnosis and treatment of acute Streptococcal pharyngitis. Circulation. 2009;119(11):1541-1551. PMID 19246689 — Classe I do intervalo de 3 semanas conferida contra múltiplas fontes secundárias concordantes em 30/07/2026. VERIFICAÇÃO HUMANA NECESSÁRIA: a letra do nível de evidência não foi localizada com certeza no texto integral nesta revisão (bloqueado por paywall) — não deve ser assumida como B ou C sem conferir a diretriz original.",
+    "reference": "Gerber MA, Baltimore RS, Eaton CB, et al. Circulation. 2009;119(11):1541-1551. DOI: 10.1161/CIRCULATIONAHA.109.191959. PMID: 19246689. Tabela 4 e texto integral: penicilina G benzatina a cada 3 semanas em populações com incidência particularmente alta, Classe I, nível A. O cenário distinto de recorrência nos Estados Unidos apesar de adesão ao esquema de 4 semanas é Classe I, nível C. Conferido em 26/08/2026.",
     "theme": "Febre reumática",
     "tags": [
       "profilaxia secundária",
@@ -18425,9 +18403,9 @@
       "intervalo de aplicação",
       "alta incidência"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false,
-    "review_note": "BLOQUEADO: classe I confirmada, mas a letra do nível de evidência não foi localizada na fonte primária; o campo evidence_level permanece deliberadamente como ? até conferência humana."
+    "review_note": "Revisado contra o texto integral da declaração AHA 2009 e a Tabela 4: em populações com incidência particularmente alta, o intervalo de 3 semanas é Classe I, nível A. Preservada a distinção da recomendação Classe I, nível C aplicável a recorrência apesar de adesão ao esquema de 4 semanas nos Estados Unidos."
   },
   {
     "slug": "intervencao-eletiva-na-aortite-apenas-em-remissao",
@@ -44849,11 +44827,11 @@
     "slug": "profilaxia-antibiotica-pode-ser-considerada-em-procedimento-nao-odontologico-de-alto-risco",
     "statement": "Em pacientes de alto risco para endocardite infecciosa submetidos a procedimentos médicos não odontológicos (gastrointestinais, geniturinários, dermatológicos e de manejo de ferida), a profilaxia antibiótica pode ser considerada de forma individualizada — a força-tarefa elevou essa recomendação de Classe III (não recomendada, diretriz anterior) para Classe IIb, sem evidência causal direta comprovada entre bacteremia desses procedimentos e endocardite infecciosa subsequente. A medida preventiva central segue sendo garantir ambiente operacional asséptico durante o procedimento e tratar infecção ativa antes de procedimento eletivo em paciente de alto risco.",
     "recommendation_class": "IIb",
-    "evidence_level": "?",
+    "evidence_level": "C",
     "society": "ESC",
     "year": 2023,
     "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
-    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 · PMID: 37622656. Seção 3.3.2 (Non-dental procedures) e Recommendation Table 2 — classe IIb (elevada de Classe III da diretriz anterior) confirmada nesta sessão (12/08/2026) via texto de academic.oup.com; a letra do nível de evidência (A/B/C) associada a esta linha específica da Recommendation Table 2 não foi possível confirmar nesta sessão (a tabela completa não foi acessível por WebFetch, que recusou reproduzi-la por direitos autorais) — VERIFICAÇÃO HUMANA NECESSÁRIA para a letra exata do nível.",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656. Seção 3.3.2 e Recommendation Table 2: profilaxia antibiótica em paciente de alto risco submetido a procedimento não odontológico invasivo, Classe IIb, nível C. Tabela original e correções oficiais ehad625, ehad776 e ehae877 conferidas em 26/08/2026; nenhuma correção altera esta linha.",
     "theme": "Endocardite",
     "tags": [
       "profilaxia antibiótica",
@@ -44862,9 +44840,9 @@
       "ESC 2023"
     ],
     "document_slug": "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false,
-    "review_note": "BLOQUEADO: classe IIb confirmada na ESC 2023, mas a letra do nível de evidência da linha específica ainda não foi conferida na tabela original; não publicar enquanto evidence_level permanecer ?."
+    "review_note": "Revisado contra a Recommendation Table 2 da diretriz ESC 2023: profilaxia em pacientes de alto risco submetidos a procedimento não odontológico invasivo é Classe IIb, nível C. As três correções oficiais posteriores (ehad625, ehad776 e ehae877) foram verificadas e não alteram essa recomendação."
   },
   {
     "slug": "clonidina-para-metas-rigorosas-de-pa-na-hipertensao-resistente-e-refrataria-sbc-2025",
