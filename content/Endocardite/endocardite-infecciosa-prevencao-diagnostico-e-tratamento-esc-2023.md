@@ -4,7 +4,8 @@ slug: endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023
 theme: "Endocardite"
 kind: protocolo
 review_status: revisado
-source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 · PMID 37622656", "Evaluation of the 2023 Duke-ISCVID and 2023 Duke-ESC Clinical Criteria. Clin Infect Dis. 2024;78(3):655-662", "ESC guidelines 2023 on the management of endocarditis. Herz. 2024. PMID: 38092975"]
+review_note: "Revisão de 26/08/2026: o protocolo clínico foi mantido separado do resumo de diretriz já existente no acervo, evitando segunda entrada em kind diretriz, e ambos foram interligados. As recomendações foram confrontadas diretamente com o texto ESC/EHJ. Corrigidos dois atalhos perigosos: procedimento odontológico de risco só indica profilaxia em paciente cardiovascular de alto risco; TC cardíaca complementa TOE inconclusivo ou inviável, não é indicada automaticamente por S. aureus, acometimento tricúspide ou cirurgia valvar prévia. Os critérios paralelos Duke-ISCVID foram vinculados à publicação primária."
+source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.", "Fowler VG, Durack DT, Selton-Suty C, et al. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445."]
 legacy_source: "Fusão de dois documentos que cobriam a mesma diretriz em arquivos separados e complementares: este e endocardite-infecciosa-...-esc-2023-versao-completa.md, com apenas 1 seção em comum de 14 e 6 — quem lesse um perdia o que estava no outro. O absorvido, apesar do título 'versão completa', era o menos completo em procedência: apoiava-se num link do Scribd. Preservado dele todo o detalhe de imagem, cirurgia, dispositivos, complicação neurológica e populações especiais. Revisado a fundo em 30/07/2026: spot-check da indicação cirúrgica por vegetação ≥10mm (Recommendation Table 12) conferido diretamente contra o texto integral da diretriz já obtido nesta sessão — bate exatamente (Classe I, Nível C). Documento já era excepcionalmente rigoroso, com mudanças 2015→2023 rastreadas classe a classe."
 ---
 
@@ -32,7 +33,11 @@ A lista específica de procedimentos e populações está no documento dedicado
 `profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos.md`, nesta mesma pasta.
 
 ## Procedimentos de alto risco
-Procedimento odontológico com manipulação da região gengival ou periapical, cirurgia de implante e biópsia oral são considerados de alto risco para bacteremia e exigem profilaxia.
+Procedimento odontológico com manipulação da região gengival ou periapical,
+cirurgia de implante e biópsia oral são considerados de risco para bacteremia.
+**A profilaxia é recomendada quando esse procedimento é realizado em paciente
+com condição cardiovascular de alto risco para endocardite**, e não para toda
+pessoa submetida ao procedimento.
 
 ## Equipe de endocardite e centro de referencia
 A versão 2015 recomendava (IIa) diagnóstico e tratamento da endocardite complicada em centro de referência com equipe multidisciplinar. A de 2023 eleva a **Classe I** e introduz o conceito de **Centro de Válvula Cardíaca** com Equipe de Endocardite, exigindo comunicação regular entre centro local e de referência **mesmo na endocardite não complicada**.
@@ -40,7 +45,7 @@ A versão 2015 recomendava (IIa) diagnóstico e tratamento da endocardite compli
 ## Diagnostico por imagem
 - **ecocardiografia transesofagica**: sobe de Classe IIa (2015) para **Classe I** (2023) — recomendada em todos os casos de suspeita, mesmo com transtorácico positivo. A exceção é a endocardite isolada de válvula nativa direita com transtorácico de boa qualidade e achado inequívoco.
 - **quatro algoritmos novos**: para válvula nativa com hemocultura positiva, válvula nativa com hemocultura negativa, válvula protética e infecção relacionada a dispositivo implantado.
-- **TC, PET e ressonância**: TC cardíaca recomendada (Classe IB) na suspeita de infecção por *S. aureus*, abscesso de raiz aórtica, envolvimento tricúspide ou história de cirurgia valvar. PET-CT com 18F-FDG e demais técnicas nucleares ganharam papel ampliado, sobretudo em prótese valvar e dispositivo implantável.
+- **TC, PET e ressonância**: a TC cardíaca é recomendada em endocardite de válvula nativa ou protética quando o transesofágico é inconclusivo ou inviável, sobretudo para complicações perivalvares e periprotéticas. O ecocardiograma permanece superior para vegetações pequenas e perfuração de folheto. PET-CT com 18F-FDG e demais técnicas nucleares ganharam papel ampliado, sobretudo em prótese valvar e dispositivo implantável; TC de corpo inteiro ou cerebral pode pesquisar êmbolos, aneurismas e porta de entrada conforme o contexto.
 
 ## Criterios diagnosticos
 A estrutura clássica de Duke se mantém — diagnóstico definido por **2 critérios maiores**, ou **1 maior + 3 menores**, ou **5 menores**. A mudança de 2023 está no que conta como critério, não na contagem:
@@ -73,6 +78,7 @@ TC de crânio ou angiorressonância recomendadas (**Classe I**, subindo de IIa) 
 - **imagem**: transtorácico **e** transesofágico recomendados, em vez de apenas o transesofágico.
 - **remoção**: retirada completa do sistema recomendada sem demora (Classe IB) na endocardite definida relacionada a dispositivo, sob antibioticoterapia empírica inicial.
 - **reimplante**: quando indicado, em sítio distante do gerador anterior, o mais tardiamente possível, após resolução dos sinais e sintomas de infecção.
+- **culturas antes do reimplante**: a Figura 13 propõe culturas negativas por mais de 72 horas quando não há vegetação ou remanescente fibrótico; se houver vegetação, aguardar mais de 2 semanas de culturas negativas, sempre ponderando dependência de estimulação e risco individual.
 - **duração**: considerar 4 a 6 semanas de antibiótico após a remoção quando houver êmbolo séptico ou válvula protética (Classe IIa).
 
 ## Terapia antitrombotica
@@ -83,3 +89,12 @@ Idosos; endocardite de válvula protética transcateter (pós-TAVI e pós-implan
 
 ## Decisao compartilhada e diferencas por sexo
 A diretriz de 2023 introduz capítulo dedicado à decisão compartilhada e ao cuidado centrado no paciente, reconhecendo o impacto psicossocial do diagnóstico, e outro sobre diferenças de sexo na apresentação, no diagnóstico e nos desfechos.
+
+## Tudo com Tudo
+
+- [ESC 2023 — resumo da diretriz de endocardite infecciosa](esc-2023-diretriz-endocardite-infecciosa.md)
+- [Fluxograma de endocardite infecciosa — ESC 2023](fluxograma-endocardite-infecciosa-esc-2023.md)
+- [Critérios diagnósticos Duke-ISCVID 2023](duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa.md)
+- [Esquemas antibióticos por agente — ESC 2023](esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023.md)
+- [Indicações e timing cirúrgico](indicacoes-e-timing-cirurgico-na-endocardite-infecciosa.md)
+- [Profilaxia em procedimentos odontológicos](profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos.md)

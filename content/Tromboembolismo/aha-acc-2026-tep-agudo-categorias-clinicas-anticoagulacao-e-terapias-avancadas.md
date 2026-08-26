@@ -4,6 +4,7 @@ slug: aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avanc
 theme: "Tromboembolismo"
 kind: diretriz
 review_status: revisado
+review_note: "Revisão de 26/08/2026: texto integral primário do JACC e materiais oficiais AHA/ACC confrontados após a errata de 13/07/2026. Confirmadas as definições operacionais das categorias A-E, subcategorias C1-C3, D1-D2 e E1-E2, o modificador respiratório R e o limite de que terapias avançadas são razoáveis em E1 e apenas podem ser consideradas em D1-D2; categoria C isolada não é indicação automática."
 source_refs: ["Creager MA, Barnes GD, Giri J, et al. 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. J Am Coll Cardiol. 2026;87(13):1626-1710. DOI: 10.1016/j.jacc.2025.11.005. PMID: 41712898.", "Creager MA, Barnes GD, Giri J, et al. 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;153(12):e977-e1051. DOI: 10.1161/CIR.0000000000001415. PMID: 41712677.", "Creager MA, Barnes GD, Giri J, et al. Correction to: 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;154(2):e24. DOI: 10.1161/CIR.0000000000001462. PMID: 42441758."]
 legacy_source: "Documento novo. Diretriz de novo publicada em 19/02/2026. JACC/AHA/PubMed e errata formal de 13/07/2026 conferidos em 13/08/2026. Esta síntese usa os Top Take-Home Messages oficiais e não inventa doses, COR ou LOE não extraídos."
 ---
@@ -22,28 +23,48 @@ Paciente com TEP agudo sem sintomas atribuíveis ao evento.
 A diretriz afirma que pacientes nessa categoria podem ser manejados fora do hospital quando não há outro motivo clínico para internação.
 
 ### Categoria B — sintomático com baixa gravidade clínica
-Paciente sintomático, porém com baixo escore de gravidade clínica.
+Paciente sintomático, porém com baixo escore de gravidade clínica — por
+exemplo, **PESI ≤85, sPESI = 0 ou Hestia = 0**.
 
 A guideline favorece **alta hospitalar precoce** em pacientes adequadamente selecionados, desde que exista estrutura para anticoagulação, orientação e seguimento.
 
 ### Categoria C — sintomático com gravidade clínica aumentada
-Inclui pacientes com escore clínico elevado e pode incluir:
+Inclui pacientes com escore clínico elevado — por exemplo, **PESI >85, sPESI
+≥1 ou Hestia ≥1** — sem falência cardiopulmonar estabelecida. As subcategorias
+separam a repercussão objetiva:
 
-- biomarcadores elevados;
-- disfunção ventricular direita;
-- ou outros marcadores que aumentem risco mesmo sem falência cardiopulmonar estabelecida.
+- **C1**: VD normal e biomarcadores normais;
+- **C2**: VD anormal **ou** pelo menos um biomarcador anormal;
+- **C3**: VD anormal **e** pelo menos um biomarcador anormal.
 
 Esses pacientes devem ser hospitalizados para estratificação e tratamento apropriados.
 
 ### Categoria D — falência cardiopulmonar incipiente
 Representa deterioração hemodinâmica/respiratória em evolução, antes de um estado sustentado de falência cardiopulmonar plena.
 
+- **D1**: hipotensão transitória ou recorrente, inclusive relativa ao basal,
+  que é breve ou responde a volume, sem sinal de hipoperfusão/disfunção de
+  órgão;
+- **D2**: hipotensão transitória acompanhada de marcador de hipoperfusão ou
+  disfunção de órgão, como lactato persistentemente elevado, lesão renal
+  isquêmica ou alteração do estado mental.
+
 É um grupo em que terapias avançadas podem ser consideradas, especialmente nas subcategorias **D1–D2**, conforme quadro clínico, risco hemorrágico, anatomia, experiência local e decisão multidisciplinar.
 
 ### Categoria E — falência cardiopulmonar
 Caracterizada por falência cardiopulmonar estabelecida, incluindo **hipotensão persistente**.
 
-É o extremo de maior risco da classificação. Em **E1**, terapias de reperfusão/remoção de trombo avançadas são consideradas razoáveis segundo a guideline.
+É o extremo de maior risco da classificação. **E1** inclui hipotensão
+persistente com choque; **E2**, choque refratário ou parada cardíaca sem retorno
+da circulação espontânea após 30 minutos de ressuscitação. Em E1, terapias de
+reperfusão/remoção de trombo avançadas são consideradas razoáveis segundo a
+guideline.
+
+### Modificador respiratório R
+O sufixo **R** pode ser acrescentado a uma subcategoria quando há
+comprometimento respiratório proeminente. Ele não substitui a avaliação
+hemodinâmica: um paciente pode, por exemplo, ser C3R ou D2R, e a categoria deve
+ser atualizada se houver deterioração.
 
 ## Onde entram trombólise, trombectomia e cirurgia
 A diretriz reúne sob o conceito de terapias avançadas:
@@ -125,3 +146,12 @@ Esses tópicos exigem módulos próprios e fonte específica.
 
 ## Mensagem prática
 A guideline AHA/ACC 2026 reorganiza o TEP agudo em **categorias clínicas A–E**, amplia a precisão da decisão entre alta, internação e terapia avançada, prefere **LMWH à UFH** quando anticoagulação parenteral inicial é necessária e **DOAC a VKA** quando o paciente é elegível. Depois do evento agudo, o cuidado continua: sintomas e limitação funcional devem ser ativamente pesquisados por **pelo menos 1 ano**.
+
+## Tudo com Tudo
+
+- [TEP agudo — diagnóstico e manejo ESC/ERS 2019](tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019.md)
+- [Fluxograma diagnóstico do TEP — ESC 2019](fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019.md)
+- [Tratamento ambulatorial do TEP de baixo risco](tratamento-ambulatorial-do-tep-de-baixo-risco-aujesky-e-hestia.md)
+- [Terapia dirigida por cateter no TEP — PEERLESS](terapia-dirigida-por-cateter-no-tep-peerless-e-o-que-ainda-nao-esta-respondido.md)
+- [Trombectomia versus anticoagulação no TEP intermediário-alto — STORM-PE](trombectomia-mecanica-versus-anticoagulacao-isolada-no-tep-de-risco-intermediario-alto-storm-pe.md)
+- [Fluxograma de sangramento maior em paciente anticoagulado](fluxograma-sangramento-maior-em-paciente-anticoagulado.md)

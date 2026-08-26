@@ -5,7 +5,8 @@ theme: "Endocardite"
 kind: fluxograma
 summary: "Caminho decisório da endocardite infecciosa suspeita: hemoculturas e ecocardiograma como primeira linha, o papel da TC cardíaca e do PET/CT com 18F-FDG quando a ecocardiografia é inconclusiva, e as três indicações cirúrgicas com seus prazos (emergência, urgência)."
 review_status: revisado
-source_refs: ["2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · 44(39):3948-4042 · https://academic.oup.com/eurheartj/article/44/39/3948/7243107", "2023 ESC Guidelines for Management of Endocarditis: Key Points · American College of Cardiology · 2023 · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/20/49/2023-esc-guidelines-for-endocarditis-esc-2023", "2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria · Clinical Infectious Diseases · 2023 · 77(4):518-526 · https://academic.oup.com/cid/article/77/4/518/7151107"]
+review_note: "Revisão de 26/08/2026 pelo texto integral ESC/EHJ: corrigida a conduta após hemorragia intracraniana, que em 2023 é individualizada e não impõe espera usual de 4 semanas; completados os critérios próprios de cirurgia na endocardite direita; cirurgia por fungo/multirresistência passou de 'eletiva' para a categoria formal não urgente conforme a hemodinâmica. Removidos números de validação diagnóstica sem fonte no arquivo e acrescentadas conexões internas."
+source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.", "Fowler VG, Durack DT, Selton-Suty C, et al. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445."]
 ---
 
 # Fluxograma: Endocardite infecciosa (ESC 2023)
@@ -85,7 +86,7 @@ flowchart TD
 
   D4 -->|Não| D5{"Endocardite fúngica ou por<br/>germe multirresistente?"}
 
-  D5 -->|Sim| C5(["Cirurgia urgente ou eletiva<br/>conforme a hemodinâmica"])
+  D5 -->|Sim| C5(["Cirurgia urgente ou não urgente<br/>conforme a hemodinâmica"])
   D5 -->|Não| C6(["Tratamento clínico<br/>com vigilância ativa"])
 
   classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
@@ -100,14 +101,21 @@ flowchart TD
   completa do sistema, sem adiamento, já durante a antibioticoterapia
   empírica inicial.
 - **Endocardite de câmaras direitas**: cirurgia na regurgitação tricúspide
-  aguda grave com disfunção de ventrículo direito, embolia pulmonar
-  recorrente ou vegetação residual maior que 20 mm. Nesse cenário, o reparo
-  da valva tricúspide deve ser considerado em vez da troca.
+  aguda grave com disfunção de ventrículo direito apesar de diurético;
+  bacteremia persistente após pelo menos 1 semana de antibiótico apropriado;
+  embolia pulmonar recorrente que exija suporte ventilatório ou deixe
+  vegetação tricúspide residual >20 mm; ou acometimento simultâneo de
+  estruturas esquerdas. Nesse cenário, o reparo da valva tricúspide deve ser
+  considerado em vez da troca quando viável.
 - **Complicação neurológica**: após ataque isquêmico transitório ou acidente
   vascular cerebral não hemorrágico, a cirurgia não deve ser adiada quando há
-  insuficiência cardíaca, infecção não controlada ou abscesso. Depois de
-  acidente vascular hemorrágico, o adiamento por pelo menos 4 semanas é a
-  conduta usual.
+  insuficiência cardíaca, infecção não controlada, abscesso ou alto risco
+  embólico, salvo dano neurológico extenso ou prognóstico funcional muito
+  desfavorável. Na hemorragia intracraniana, **não existe espera automática de
+  4 semanas na ESC 2023**: decidir caso a caso com neurologia/neurocirurgia,
+  considerando mecanismo, volume e NIHSS. Se a cirurgia for adiada, repetir
+  TC ou RM em 1-2 semanas — antes se houver deterioração — para reavaliar o
+  momento.
 
 ## Antibioticoterapia: o desenho em duas fases
 
@@ -136,10 +144,11 @@ microrganismos considerados típicos, incorporaram TC cardíaca e PET/TC com
 cardíaco implantável como critério menor de predisposição. A Duke-ISCVID
 também elevou a inspeção intraoperatória a critério clínico maior.
 
-O ganho é de sensibilidade: a versão de 2023 alcançou 84% de sensibilidade
-clínica contra 70% da versão anterior. Os critérios da ESC 2023 tiveram
-sensibilidade de 82,7% e especificidade de 92,3%, contra 84,2% e 93,9% da
-Duke-ISCVID na mesma coorte.
+As versões não são intercambiáveis. A ESC inclui espondilodiscite como fenômeno
+vascular; a Duke-ISCVID inclui inspeção cirúrgica como critério maior e tem
+regras microbiológicas próprias. A diretriz ESC declara que seus novos
+critérios ainda precisam de validação prospectiva; não se deve escolher entre
+os sistemas por números isolados de uma única coorte.
 
 ## Profilaxia antibiótica
 
@@ -150,3 +159,12 @@ transplantados cardíacos e em pacientes de alto risco submetidos a
 procedimentos invasivos. Não há indicação de profilaxia antes de
 procedimento odontológico com o objetivo de prevenir endocardite associada a
 dispositivo cardíaco implantável.
+
+## Tudo com Tudo
+
+- [Protocolo clínico de endocardite infecciosa — ESC 2023](endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023.md)
+- [Resumo da diretriz ESC 2023](esc-2023-diretriz-endocardite-infecciosa.md)
+- [Critérios diagnósticos Duke-ISCVID 2023](duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa.md)
+- [Indicações e timing cirúrgico](indicacoes-e-timing-cirurgico-na-endocardite-infecciosa.md)
+- [Timing cirúrgico após AVC](timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023.md)
+- [Esquemas antibióticos por agente](esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023.md)

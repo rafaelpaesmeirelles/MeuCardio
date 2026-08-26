@@ -2,9 +2,10 @@
 title: "Diretriz Brasileira de Hipertensão 2025: Metas Pressóricas em Doença Coronariana, Diabetes e Insuficiência Cardíaca (Capítulo 8)"
 slug: diretriz-brasileira-de-hipertensao-2025-metas-em-doenca-coronariana-diabetes-e-insuficiencia-cardiaca-capitulo-8
 theme: "Hipertensão"
-kind: protocolo
+kind: diretriz
 review_status: revisado
-source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 8 (Hypertension and Associated Clinical Conditions), seções 8.1 (Doença arterial coronariana), 8.3 (Diabetes) e 8.7 (Insuficiência cardíaca), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low)", "BPROAD Investigators (citado dentro do texto da diretriz, referência 306 do documento original). Intensive Blood-Pressure Control in Patients with Type 2 Diabetes. Ensaio citado conforme descrito na diretriz brasileira — número de pacientes, desenho e resultados reproduzidos a partir do texto da diretriz, não conferidos nesta sessão contra o artigo original do BPROAD; sinalizado para verificação humana adicional caso se deseje citar o BPROAD como fonte primária isolada"]
+source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 8 (Hypertension and Associated Clinical Conditions), seções 8.1 (Doença arterial coronariana), 8.3 (Diabetes) e 8.7 (Insuficiência cardíaca), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low)", "Bi Y, Li M, Liu Y, et al; BPROAD Research Group. Intensive Blood-Pressure Control in Patients with Type 2 Diabetes. N Engl J Med. 2025;392(12):1155-1167. DOI: 10.1056/NEJMoa2412006. PMID: 39555827. NCT03808311 — 12.821 participantes, mediana de 4,2 anos; desfecho primário em 393 vs 492, HR 0,79 (IC95% 0,69-0,90); hipotensão sintomática e hiperpotassemia mais frequentes no grupo intensivo"]
+review_note: "Revisão de 26/08/2026: corrigida a classificação de protocolo para diretriz, pois este documento resume um capítulo formal da Diretriz Brasileira de Hipertensão 2025 com metodologia GRADE. A pendência humana sobre BPROAD foi resolvida por confronto direto com a publicação primária no NEJM/PubMed (PMID 39555827, DOI 10.1056/NEJMoa2412006). Confirmados n=12.821, metas <120 versus <140 mmHg, mediana de 4,2 anos, 393 versus 492 eventos, HR 0,79, IC95% 0,69-0,90, eventos adversos graves semelhantes e maior frequência de hipotensão sintomática/hiperpotassemia no grupo intensivo."
 legacy_source: "Documento novo. Complementa o resumo geral da diretriz brasileira já publicado nesta pasta (hipertensao-arterial-classificacao-diagnostico-metas.md, que cobre classificação/metas gerais/tratamento inicial) com o Capítulo 8, específico de populações de alto risco cardiovascular — doença coronariana, diabetes e insuficiência cardíaca —, que não estava coberto nesta pasta. A doença renal crônica (também parte do Capítulo 8) já tem documento próprio (controle-pressorico-na-doenca-renal-cronica-estagios-3-a-5.md) e não é repetida aqui."
 ---
 
@@ -82,4 +83,14 @@ O eixo comum das seções deste capítulo (DAC, diabetes, IC, e também DRC sob 
 - **A evidência de curva em J na DAC é observacional e de baixa certeza** — não é motivo, segundo a diretriz, para evitar tratar até a meta de <130/80mmHg na ausência de sintomas de hipoperfusão.
 - **A meta de PA em IC tem força FRACA e certeza BAIXA**, diferente da certeza mais alta em DAC e diabetes — não tratar como recomendação igualmente robusta.
 - **Combinar IECA e BRA simultaneamente não é recomendado pela diretriz** (força forte, certeza alta), inclusive nesses cenários de alto risco.
-- **O BPROAD é citado nesta diretriz de forma indireta** (a partir do texto e das referências do próprio documento da SBC/SBN/SBH) — os números reproduzidos aqui (n=12.821, 21% de redução, seguimento de 4,2 anos) vêm do texto da diretriz brasileira, não de conferência direta desta sessão contra o artigo original do BPROAD no PubMed. `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de citar o BPROAD como fonte primária isolada, fora do contexto desta diretriz.
+- **BPROAD foi conferido na fonte primária**: 12.821 participantes, mediana de
+  4,2 anos, 393 versus 492 eventos primários e HR 0,79 (IC95% 0,69-0,90).
+  A redução relativa de 21% não deve ser apresentada sem o intervalo de
+  confiança nem extrapolada automaticamente para populações fora da China.
+
+## Tudo com Tudo
+
+- [Hipertensão arterial: classificação, diagnóstico e metas](hipertensao-arterial-classificacao-diagnostico-metas.md)
+- [Diretriz Brasileira de Hipertensão 2025: resistente e refratária](diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12.md)
+- [Controle pressórico na doença renal crônica](controle-pressorico-na-doenca-renal-cronica-estagios-3-a-5.md)
+- [Estratificação cardiovascular no diabetes — Diretriz SBD 2025](../Diabetes_e_cardiologia/estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025.md)
