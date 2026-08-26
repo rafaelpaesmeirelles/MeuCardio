@@ -49152,5 +49152,278 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "betabloqueador-baseado-em-evidencia-recomendado-na-icfer-sintomatica",
+    "statement": "Um dos betabloqueadores com evidência de benefício em insuficiência cardíaca (bisoprolol, carvedilol, succinato de metoprolol de liberação prolongada) ou nebivolol é recomendado, além de IECA (ou ARNI) e antagonista do receptor mineralocorticoide, em pacientes estáveis e sintomáticos com insuficiência cardíaca com fração de ejeção reduzida, para reduzir o risco de hospitalização por insuficiência cardíaca e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "insuficiência cardíaca",
+      "fração de ejeção reduzida",
+      "icfer",
+      "bisoprolol",
+      "carvedilol",
+      "metoprolol",
+      "nebivolol"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antagonista-do-receptor-mineralocorticoide-recomendado-na-icfer-sintomatica",
+    "statement": "Um antagonista do receptor mineralocorticoide (espironolactona ou eplerenona) é recomendado em pacientes com insuficiência cardíaca com fração de ejeção reduzida que permanecem sintomáticos apesar do tratamento com IECA (ou ARNI) e betabloqueador, para reduzir o risco de hospitalização por insuficiência cardíaca e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+    "theme": "Farmacologia",
+    "tags": [
+      "espironolactona",
+      "eplerenona",
+      "antagonista mineralocorticoide",
+      "insuficiência cardíaca",
+      "icfer"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diureticos-recomendados-para-alivio-de-congestao-na-icfer",
+    "statement": "Diuréticos são recomendados em pacientes com insuficiência cardíaca com fração de ejeção reduzida que apresentam sinais e/ou sintomas de congestão, para reduzir os sintomas, melhorar a capacidade de exercício e reduzir as hospitalizações por insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+    "theme": "Farmacologia",
+    "tags": [
+      "diurético",
+      "congestão",
+      "insuficiência cardíaca",
+      "icfer"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "colchicina-em-baixa-dose-na-prevencao-secundaria-de-doenca-cardiovascular-aterosclerotica",
+    "statement": "O uso de colchicina em baixa dose (0,5 mg/dia) pode ser considerado na prevenção secundária de doença cardiovascular aterosclerótica, particularmente quando outros fatores de risco estão insuficientemente controlados ou quando ocorrem eventos cardiovasculares recorrentes apesar de terapia otimizada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337.",
+    "theme": "Farmacologia",
+    "tags": [
+      "colchicina",
+      "anti-inflamatório",
+      "prevenção secundária",
+      "doença aterosclerótica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ticagrelor-ou-prasugrel-preferidos-sobre-clopidogrel-na-sindrome-coronariana-aguda-sem-supra-de-st",
+    "statement": "Na ausência de contraindicações, ticagrelor ou prasugrel são recomendados preferencialmente ao clopidogrel, em associação ao ácido acetilsalicílico, por 12 meses, em pacientes com síndrome coronariana aguda sem supradesnivelamento do segmento ST tratados com estratégia invasiva.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation",
+    "reference": "Collet JP et al. 2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation. Eur Heart J. 2021;42(14):1289-1367.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ticagrelor",
+      "prasugrel",
+      "clopidogrel",
+      "dupla antiagregação",
+      "síndrome coronariana aguda sem supra de st"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doac-preferido-em-relacao-ao-antagonista-da-vitamina-k-na-fibrilacao-atrial",
+    "statement": "Quando a anticoagulação oral é iniciada em paciente elegível com fibrilação atrial, um anticoagulante oral direto (apixabana, dabigatrana, edoxabana ou rivaroxabana) é recomendado preferencialmente a um antagonista da vitamina K.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498.",
+    "theme": "Farmacologia",
+    "tags": [
+      "anticoagulante oral direto",
+      "doac",
+      "antagonista da vitamina k",
+      "fibrilação atrial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doac-nao-recomendado-em-protese-valvar-mecanica",
+    "statement": "O uso de anticoagulantes orais diretos não é recomendado em pacientes com fibrilação atrial portadores de prótese valvar cardíaca mecânica.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Hindricks G et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2021;42(5):373-498.",
+    "theme": "Farmacologia",
+    "tags": [
+      "anticoagulante oral direto",
+      "doac",
+      "prótese valvar mecânica",
+      "fibrilação atrial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rastreio-periodico-de-deficiencia-de-ferro-na-ic",
+    "statement": "É recomendado que todos os pacientes com IC sejam periodicamente rastreados para deficiência de ferro, com hemograma completo, ferritina sérica e saturação de transferrina (TSAT).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "deficiencia de ferro",
+      "rastreio",
+      "comorbidades",
+      "ferritina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-iv-carboximaltose-para-sintomas-e-qualidade-de-vida",
+    "statement": "A reposição de ferro intravenoso com carboximaltose férrica deve ser considerada em pacientes sintomáticos com ICFEr e deficiência de ferro, para aliviar os sintomas de IC e melhorar a capacidade de exercício e a qualidade de vida.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "deficiencia de ferro",
+      "icfer",
+      "carboximaltose ferrica",
+      "qualidade de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-iv-carboximaltose-para-reduzir-hospitalizacao",
+    "statement": "A reposição de ferro intravenoso com carboximaltose férrica deve ser considerada em pacientes recentemente hospitalizados por IC, com FEVE <50% e deficiência de ferro, para reduzir o risco de nova hospitalização por IC.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "deficiencia de ferro",
+      "carboximaltose ferrica",
+      "hospitalizacao por ic",
+      "pos-alta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ventilacao-servo-adaptativa-contraindicada-na-icfer-com-apneia-central",
+    "statement": "A ventilação servo-adaptativa NÃO é recomendada em pacientes com ICFEr e apneia do sono predominantemente central, pelo aumento da mortalidade por todas as causas e cardiovascular observado com essa terapia.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "apneia do sono",
+      "icfer",
+      "ventilacao servo-adaptativa",
+      "comorbidades",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "exercicio-fisico-e-reabilitacao-cardiaca-na-ic",
+    "statement": "É recomendado que pacientes com IC sejam encorajados à prática de exercício físico aeróbico regular, e a reabilitação cardíaca baseada em exercício deve ser oferecida, para melhorar a capacidade funcional e a qualidade de vida e reduzir o risco de hospitalização por IC.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "exercicio fisico",
+      "reabilitacao cardiaca",
+      "qualidade de vida",
+      "manejo multidisciplinar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "balao-intra-aortico-nao-recomendado-de-rotina-no-choque-cardiogenico",
+    "statement": "O uso rotineiro de balão intra-aórtico NÃO é recomendado em pacientes com choque cardiogênico, pela ausência de benefício de sobrevida demonstrado nos ensaios clínicos.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "choque cardiogenico",
+      "balao intra-aortico",
+      "ic aguda",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "suporte-circulatorio-mecanico-de-curto-prazo-no-choque-cardiogenico",
+    "statement": "O suporte circulatório mecânico de curto prazo pode ser considerado em pacientes com choque cardiogênico, como ponte para a recuperação, para a decisão ou para outra ponte, dependendo da causa e da reversibilidade do quadro.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "choque cardiogenico",
+      "suporte circulatorio mecanico",
+      "dispositivos",
+      "ic aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
