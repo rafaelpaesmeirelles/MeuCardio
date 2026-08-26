@@ -2,7 +2,7 @@
 title: "Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária — Definição, Epidemiologia e Algoritmo Terapêutico (Capítulo 12)"
 slug: diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12
 theme: "Hipertensão"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Texto completo em inglês consultado via PDF de acesso aberto publicado pelo próprio periódico (abccardiol.org), Capítulo 12 (Resistant and Refractory Hypertension, páginas 101-106), metodologia GRADE — força de recomendação (Strong/Weak) e certeza da evidência (High/Moderate/Low), não classe/nível ESC"]
 legacy_source: "Documento novo. A pasta já tem um resumo geral da diretriz brasileira de 2025 (hipertensao-arterial-classificacao-diagnostico-metas.md), que cobre classificação da PA, metas e tratamento inicial, com uma seção breve (4 linhas) sobre hipertensão resistente/refratária. Este documento aprofunda especificamente o Capítulo 12 da diretriz — definição, epidemiologia, fisiopatologia e o algoritmo terapêutico passo a passo completo —, que não estava coberto em profundidade em nenhum documento desta pasta. Complementa também os documentos de fármacos individuais para hipertensão resistente já publicados (espironolactona/PATHWAY-2, baxdrostat, lorundrostat, aprocitentana, zilebesirana, denervação renal), citados na diretriz como 'perspectivas' de tratamento."

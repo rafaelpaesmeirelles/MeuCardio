@@ -2,9 +2,10 @@
 title: "Avaliação cardiovascular pré-operatória: algoritmo integrado AHA/ACC 2024"
 slug: algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024
 theme: "Perioperatório"
-kind: documento
+kind: fluxograma
 fonte_producao: chatgpt
 review_status: revisado
+review_note: "Reclassificado em 26/08/2026: o conteúdo é uma árvore Mermaid de decisão baseada na AHA/ACC 2024 e deve aparecer na frente Fluxogramas. PMID e DOI já declarados; sem pendência de verificação humana."
 revisado_por_voce: false
 summary: "Árvore de decisão baseada na diretriz AHA/ACC 2024 para definir quando prosseguir para cirurgia, pausar para tratar doença cardiovascular ativa, usar escores, avaliar capacidade funcional, biomarcadores e testes adicionais."
 source_refs:

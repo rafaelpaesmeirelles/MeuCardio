@@ -2,7 +2,7 @@
 title: "Síncope: diagnóstico e manejo (ESC 2018)"
 slug: sincope-diagnostico-e-manejo-esc-2018
 theme: "Síncope"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre manejo no departamento de emergência (Tabelas 5, 6 e 7), tratamento da síncope reflexa (marca-passo), testes de função autonômica (seção 4.2.3) e estudo eletrofisiológico (seção 4.2.6), lidas no texto integral, incluindo as tabelas de recomendação.", "Sheldon RS, Sharma J, Koshman ML, et al. Diagnostic criteria for vasovagal syncope based on a quantitative history. Eur Heart J. 2006;27(3):344-350. PMID 16223744 — Escore de Sintomas de Calgary, números conferidos contra o abstract indexado em 30/07/2026."]
 legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao) tinha os critérios de admissão e as classes de recomendação de marca-passo/CDI marcados como 'não extraídos nesta rodada'; ambos resolvidos contra o texto integral da diretriz. Enriquecido novamente no mesmo dia: acrescentados testes de função autonômica (Valsalva, respiração profunda, MAPA), estudo eletrofisiológico (indicações e terapia guiada) e o Escore de Calgary — lacuna declarada no documento de classificação etiológica desta mesma pasta, fechada com texto integral da diretriz já obtido nesta sessão mais o artigo de derivação do escore."

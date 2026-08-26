@@ -2,7 +2,7 @@
 title: "Estratificação de Risco Cardiovascular no Diabetes: Diretriz da SBD 2025"
 slug: estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025
 theme: "Diabetes e cardiologia"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Sociedade Brasileira de Diabetes. Diretriz da Sociedade Brasileira de Diabetes — Edição 2025, capítulo Manejo do Risco Cardiovascular: Dislipidemia. DOI: 10.29327/5660187. Disponível em diretriz.diabetes.org.br"]
 ---

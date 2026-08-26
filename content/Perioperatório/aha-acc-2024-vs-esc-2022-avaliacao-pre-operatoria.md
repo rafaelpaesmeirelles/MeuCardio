@@ -2,9 +2,10 @@
 title: "AHA/ACC 2024 versus ESC 2022 na avaliação cardiovascular pré-operatória"
 slug: aha-acc-2024-vs-esc-2022-avaliacao-pre-operatoria
 theme: "Perioperatório"
-kind: documento
+kind: diretriz
 fonte_producao: chatgpt
 review_status: revisado
+review_note: "Reclassificado em 26/08/2026 como comparação de diretrizes contemporâneas, com PMID/DOI já declarados para AHA/ACC 2024 e ESC 2022; sem pendência de verificação humana."
 revisado_por_voce: false
 summary: "Comparação prática das duas principais diretrizes contemporâneas de avaliação cardiovascular em cirurgia não cardíaca, com árvore de decisão de pontos convergentes e diferenças operacionais."
 source_refs:

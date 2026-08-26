@@ -20,7 +20,9 @@ from __future__ import annotations
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.models.content import Document
 from app.models.drug import Drug
+from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
 from app.services.topic_relevance import (
@@ -38,6 +40,7 @@ _GENERIC_TOPIC_TOKENS = frozenset({
     "evidencia", "diretriz", "clinico", "clinica", "paciente", "adulto", "adultos",
     "crianca", "criancas", "adolescente", "agudo", "aguda", "cronico", "cronica",
     "grave", "arterial", "atrial", "ventricular", "atleta", "esporte", "exercicio",
+    "cardiomiopatia", "cardiomiopatias",
     "para", "pela", "pelo", "pelos", "pelas", "com", "sem", "entre", "versus",
     "apos", "antes", "durante", "como", "quando", "qual", "quais", "uma", "umas",
     "uns", "sobre", "este", "esta", "esse", "essa", "dos", "das", "nas", "nos",
@@ -107,7 +110,10 @@ def _tokens(value: object) -> set[str]:
 
 
 def _contextual_studies(
-    db: Session, themes: tuple[str, ...], origin_slug: str | None,
+    db: Session,
+    themes: tuple[str, ...],
+    origin_subject: str | None,
+    excluir_slug: str | None,
 ) -> list[ScientificStudy]:
     """Return only studies specifically connected to the origin subject.
 
@@ -115,9 +121,9 @@ def _contextual_studies(
     Without an origin or an overlap in specific title/slug/tag terms, the safe
     result is empty instead of the most recently inserted studies in the area.
     """
-    if not origin_slug:
+    if not origin_subject:
         return []
-    origin_terms = _tokens(origin_slug)
+    origin_terms = _tokens(origin_subject)
     for theme in themes:
         origin_terms -= _tokens(theme)
     if not origin_terms:
@@ -127,7 +133,7 @@ def _contextual_studies(
         select(ScientificStudy).where(
             ScientificStudy.theme.in_(themes),
             ScientificStudy.published.is_(True),
-            ScientificStudy.slug != origin_slug,
+            ScientificStudy.slug != excluir_slug,
         )
     ).scalars().all()
     ranked: list[tuple[int, int, str, ScientificStudy]] = []
@@ -143,7 +149,7 @@ def _contextual_studies(
 
 
 def _filter_groups_by_subject(
-    groups: list[dict], themes: tuple[str, ...], origin_slug: str | None,
+    groups: list[dict], themes: tuple[str, ...], origin_subject: str | None,
 ) -> None:
     """Remove theme-only neighbours from every non-study content front.
 
@@ -151,9 +157,9 @@ def _filter_groups_by_subject(
     must additionally share at least one specific subject term with its origin;
     the study group is ranked separately with its structured tags.
     """
-    if not origin_slug:
+    if not origin_subject:
         return
-    origin_terms = _tokens(origin_slug)
+    origin_terms = _tokens(origin_subject)
     for theme in themes:
         origin_terms -= _tokens(theme)
     if not origin_terms:
@@ -165,14 +171,72 @@ def _filter_groups_by_subject(
     for group in groups:
         if group["tipo"] == "estudo":
             continue
-        matched = []
-        for item in group.get("itens", []):
+        matched: list[tuple[int, int, dict]] = []
+        for position, item in enumerate(group.get("itens", [])):
             candidate_terms = _tokens((
                 item.get("slug"), item.get("titulo"), item.get("subtitulo"),
             ))
-            if origin_terms & candidate_terms:
-                matched.append(item)
-        group["itens"] = matched[:LIMITE_POR_CATEGORIA]
+            overlap = origin_terms & candidate_terms
+            if overlap:
+                matched.append((len(overlap), position, item))
+        matched.sort(key=lambda row: (-row[0], row[1]))
+        best_score = matched[0][0] if matched else 0
+        group["itens"] = [
+            row[2] for row in matched
+            if row[0] == best_score
+        ][:LIMITE_POR_CATEGORIA]
+
+
+def _origin_subject(
+    db: Session,
+    *,
+    assunto: str | None,
+    excluir_tipo: str | None,
+    excluir_slug: str | None,
+) -> str | None:
+    """Enrich an item's slug with its own reviewed structured metadata.
+
+    Acronyms and named trials frequently make a scientifically valid item look
+    orphaned when only its slug is compared with document titles. Studies reuse
+    their reviewed title/tags. Evidence records reuse only their explicit
+    ``document_slug`` relation and that document's reviewed title; the evidence
+    statement itself is deliberately not used as an implicit relation source.
+    Unknown item types and free-form subjects keep the previous slug-only
+    behaviour.
+    """
+    if not assunto:
+        return None
+    if not excluir_slug or assunto != excluir_slug:
+        return assunto
+
+    if excluir_tipo == "estudo":
+        item = db.execute(
+            select(ScientificStudy).where(
+                ScientificStudy.slug == excluir_slug,
+                ScientificStudy.published.is_(True),
+            )
+        ).scalar_one_or_none()
+        if item is not None:
+            return " ".join((assunto, item.title, " ".join(item.tags or [])))
+
+    if excluir_tipo == "evidencia":
+        item = db.execute(
+            select(EvidenceRecord).where(
+                EvidenceRecord.slug == excluir_slug,
+                EvidenceRecord.published.is_(True),
+            )
+        ).scalar_one_or_none()
+        if item is not None and item.document_slug:
+            document = db.execute(
+                select(Document).where(
+                    Document.slug == item.document_slug,
+                    Document.published.is_(True),
+                )
+            ).scalar_one_or_none()
+            if document is not None:
+                return " ".join((assunto, document.slug, document.title))
+
+    return assunto
 
 
 def temas_clinicos_do_medicamento(drug: Drug) -> list[str]:
@@ -211,6 +275,12 @@ def buscar_relacionados_contextuais(
         for variant in variants
     ]
     groups = _merge_groups(responses, limit=100)
+    origin_subject = _origin_subject(
+        db,
+        assunto=assunto,
+        excluir_tipo=excluir_tipo,
+        excluir_slug=excluir_slug,
+    )
 
     # The legacy service intentionally attached every drug only to
     # Farmacologia. For launch, keep that broad catalogue behavior there, but
@@ -233,7 +303,7 @@ def buscar_relacionados_contextuais(
         }
         groups.append(study_group)
     if assunto:
-        studies = _contextual_studies(db, variants, assunto)
+        studies = _contextual_studies(db, variants, origin_subject, excluir_slug)
         study_group["itens"] = [
             {
                 "slug": study.slug,
@@ -244,7 +314,7 @@ def buscar_relacionados_contextuais(
             for study in studies
         ]
         if filtrar_grupos_por_assunto:
-            _filter_groups_by_subject(groups, variants, assunto)
+            _filter_groups_by_subject(groups, variants, origin_subject)
     else:
         for group in groups:
             group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
@@ -271,10 +341,9 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
         buscar_relacionados_contextuais(
             db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
             assunto=drug.slug,
-            # As indicações vêm de campos clínicos estruturados do próprio
-            # fármaco e já são uma relação específica. Preserve documentos e
-            # demais frentes dessas indicações; apenas os estudos continuam
-            # exigindo correspondência explícita com o medicamento.
+            # Structured indications already prove the clinical-topic link.
+            # Preserve each supported topic's documents and other fronts;
+            # studies still require explicit overlap with the medication.
             filtrar_grupos_por_assunto=False,
         )
         for theme in themes

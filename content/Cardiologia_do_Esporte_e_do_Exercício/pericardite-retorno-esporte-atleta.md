@@ -4,7 +4,7 @@ slug: pericardite-retorno-esporte-atleta
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:39973614", "PMID:39976316"]
+source_refs: ["PMID:39973614", "PMID:39976316", "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412"]
 legacy_source: "AHA/ACC 2025 sports participation statement"
 ---
 
@@ -32,6 +32,8 @@ O statement AHA/ACC 2025 considera razoável retomar participação competitiva 
 - estabilidade clínica sem sinais de complicação.
 
 A decisão não deve se basear apenas em número fixo de semanas.
+
+Como referência histórica graduada, a ESC 2020 recomenda retorno após recuperação completa em uma janela de 30 dias a 3 meses, ajustada à gravidade (Classe I, Nível C), e contraindica esporte enquanto persistir inflamação ativa (Classe III, Nível C). A janela não substitui os critérios clínicos de resolução e não deve ser aplicada à miopericardite.
 
 ## Retorno deve ser progressivo
 
@@ -65,3 +67,4 @@ Por outro lado, qualquer suspeita de envolvimento miocárdico deve interromper e
 
 1. Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297.
 2. Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. J Am Coll Cardiol. 2025;85:1059-1108. PMID: 39976316. DOI: 10.1016/j.jacc.2024.12.025.
+3. Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.

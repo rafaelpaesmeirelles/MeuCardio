@@ -2,7 +2,7 @@
 title: "Desativação de CDI e marca-passo no fim de vida (consenso HRS/EHRA 2010)"
 slug: desativacao-de-cdi-e-marca-passo-no-fim-de-vida-consenso-hrs-ehra-2010
 theme: "Comunicação clínica"
-kind: protocolo
+kind: diretriz
 summary: "O consenso conjunto HRS/EHRA sobre desativação de dispositivo cardíaco implantável em paciente terminal ou que solicita suspensão de terapia: por que CDI e marca-passo são eticamente distintos, por que a desativação não é eutanásia nem suicídio assistido, e como conduzir a conversa e o procedimento."
 review_status: revisado
 source_refs: ["Padeletti L, Arnar DO, Boncinelli L, et al. EHRA Expert Consensus Statement on the management of cardiovascular implantable electronic devices in patients nearing end of life or requesting withdrawal of therapy. Europace. 2010;12(10):1480-1489. DOI: 10.1093/europace/euq275. PMID: 20675674 — documento conjunto com a Heart Rhythm Society (HRS), endossado por ACC, AHA, American Geriatrics Society, American Academy of Hospice and Palliative Medicine e Hospice and Palliative Nurses Association."]

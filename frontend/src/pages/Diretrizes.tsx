@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
@@ -30,6 +31,13 @@ type Notificacao = {
 
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
 type RespostaNotificacoes = { cutoff: string; items: Notificacao[] };
+type DiretrizBiblioteca = {
+  slug: string;
+  title: string;
+  theme: string;
+  summary: string | null;
+  review_status: string;
+};
 
 function dataBr(valor: string) {
   return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
@@ -44,16 +52,19 @@ function statusLabel(status: Atualizacao["status"]) {
 export default function Diretrizes() {
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
+  const [diretrizes, setDiretrizes] = useState<DiretrizBiblioteca[] | null>(null);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
     Promise.all([
       api.get<RespostaAtualizacoes>("/guideline-updates"),
       api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true"),
+      api.get<{ items: DiretrizBiblioteca[] }>("/library/documents?kind=diretriz&limit=200"),
     ])
-      .then(([lista, alertas]) => {
+      .then(([lista, alertas, biblioteca]) => {
         setAtualizacoes(lista);
         setNotificacoes(alertas);
+        setDiretrizes(biblioteca.items);
       })
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
@@ -84,7 +95,7 @@ export default function Diretrizes() {
   }
 
   if (erro) return <Erro mensagem={erro} />;
-  if (!atualizacoes || !notificacoes) return <Carregando texto="Verificando publicações oficiais…" />;
+  if (!atualizacoes || !notificacoes || !diretrizes) return <Carregando texto="Verificando publicações oficiais…" />;
 
   return (
     <div className="cc-page cc-guidelines-page">
@@ -144,6 +155,29 @@ export default function Diretrizes() {
                   {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Documento oficial ↗</a>}
                 </div>
               </article>
+            ))}
+          </div>
+        )}
+      </ClinicalSection>
+
+      <ClinicalSection
+        eyebrow="Biblioteca clínica"
+        title="Guidelines revisadas e conectadas"
+        description="Sínteses publicadas na CorVIA, organizadas por área e ligadas aos documentos e fluxogramas do mesmo assunto."
+      >
+        {diretrizes.length === 0 ? (
+          <ClinicalEmpty title="Nenhuma guideline revisada publicada" description="As sínteses aparecem aqui depois da revisão clínica e da publicação." />
+        ) : (
+          <div className="grade grade--2">
+            {diretrizes.map((item) => (
+              <Link key={item.slug} to={`/biblioteca/${item.slug}`} className="cartao" style={{ color: "inherit" }}>
+                <small>{item.theme}</small>
+                <strong>{item.title}</strong>
+                {item.summary && <p>{item.summary}</p>}
+                <span className={`selo ${item.review_status === "revisado" ? "selo--revisado" : "selo--pendente"}`}>
+                  {item.review_status === "revisado" ? "Revisada" : "Revisão pendente"}
+                </span>
+              </Link>
             ))}
           </div>
         )}

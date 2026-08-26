@@ -2,7 +2,7 @@
 title: "ESC 2023: diretriz de endocardite infecciosa"
 slug: esc-2023-diretriz-endocardite-infecciosa
 theme: "Endocardite"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."]
 legacy_source: "Documento novo. Diretriz oficial ESC/EHJ conferida em 08/08/2026."

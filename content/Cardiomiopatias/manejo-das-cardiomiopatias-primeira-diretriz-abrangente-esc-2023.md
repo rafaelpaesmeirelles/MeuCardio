@@ -1,5 +1,5 @@
 ---
-kind: protocolo
+kind: diretriz
 legacy_source: 'Protocolo de Cardiomiopatias (ESC 2023) · Revisado a fundo em 30/07/2026: documento é uma visão geral de escopo/estrutura da diretriz (quais fenótipos cobre, o que cada seção aborda), não faz afirmação clínica numérica isolada que exija verificação de PMID — as afirmações quantitativas específicas (gradiente de VSVE, HCM Risk-SCD, calculadoras de risco de ACM/CMD) já foram verificadas nos documentos dedicados desta mesma pasta. "Criterios internacao" ficou vazio de propósito: é um resumo de diretriz, não um protocolo de uma doença específica, e critério de internação não se aplica a esse recorte.'
 review_status: revisado
 slug: manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023

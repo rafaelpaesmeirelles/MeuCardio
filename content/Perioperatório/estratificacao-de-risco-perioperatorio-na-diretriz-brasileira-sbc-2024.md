@@ -2,7 +2,7 @@
 title: "Estratificação de risco perioperatório na diretriz brasileira (SBC 2024)"
 slug: estratificacao-de-risco-perioperatorio-na-diretriz-brasileira-sbc-2024
 theme: "Perioperatório"
-kind: protocolo
+kind: diretriz
 summary: "O que a diretriz brasileira de 2024 traz e a europeia não: RCRI e AUB-HAS2 lado a lado com suas variáveis, o VSG-CRI recomendado especificamente para cirurgia vascular arterial com pontuação e classes completas, o índice EMAPO desenvolvido e validado no Brasil, e o registro explícito de que nenhum algoritmo demonstrou superioridade na população brasileira."
 review_status: revisado
 source_refs: ["Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024 · Arquivos Brasileiros de Cardiologia · DOI: 10.36660/abc.20240590 — texto integral em acesso aberto no PubMed Central (PMC12094288)", "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery (RCRI). Circulation. 1999;100(10):1043-1049", "Pinho C, Grandini PC, Gualandro DM, et al. Multicenter Study of Perioperative Evaluation for Noncardiac Surgeries in Brazil (EMAPO). Clinics. 2007;62(1):17-22. DOI: 10.1590/s1807-59322007000100004", "POISE Study Group. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744"]

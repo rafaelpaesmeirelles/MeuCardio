@@ -2,7 +2,7 @@
 title: "ACC/AHA 2025: diretriz para adultos com cardiopatia congênita"
 slug: acc-aha-2025-diretriz-adultos-cardiopatia-congenita
 theme: "Cardiopatias congênitas"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. DOI: 10.1016/j.jacc.2025.09.006. PMID: 41411480."]
 legacy_source: "Documento novo. Diretriz oficial ACC/AHA/JACC conferida em 08/08/2026."

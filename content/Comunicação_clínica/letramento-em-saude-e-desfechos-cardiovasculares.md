@@ -2,7 +2,7 @@
 title: "Letramento em Saúde (Health Literacy) e Desfechos Cardiovasculares"
 slug: letramento-em-saude-e-desfechos-cardiovasculares
 theme: "Comunicação clínica"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Magnani JW, Mujahid MS, Aronow HD, et al; American Heart Association Council on Epidemiology and Prevention, Council on Cardiovascular Disease in the Young, Council on Cardiovascular and Stroke Nursing, Council on Peripheral Vascular Disease, Council on Quality of Care and Outcomes Research, and Stroke Council. Health Literacy and Cardiovascular Disease: Fundamental Relevance to Primary and Secondary Prevention: A Scientific Statement From the American Heart Association. Circulation. 2018;138(2):e48-e74. DOI: 10.1161/CIR.0000000000000579. PMID: 29866648", "Peterson PN, Shetterly SM, Clarke CL, et al. Health literacy and outcomes among patients with heart failure. JAMA. 2011;305(16):1695-1701. DOI: 10.1001/jama.2011.512. PMID: 21521851"]
 legacy_source: "Documento novo — os documentos já existentes desta pasta cobrem comunicação de risco, consentimento informado e decisão compartilhada, mas não o letramento em saúde do paciente como determinante independente de desfecho, com efeito quantificável mensurado especificamente em insuficiência cardíaca."

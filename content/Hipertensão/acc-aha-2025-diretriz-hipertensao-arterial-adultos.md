@@ -2,7 +2,7 @@
 title: "ACC/AHA 2025: diretriz de hipertensão arterial em adultos"
 slug: acc-aha-2025-diretriz-hipertensao-arterial-adultos
 theme: "Hipertensão"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242."]
 legacy_source: "Documento novo. Diretriz oficial AHA/ACC/JACC conferida em 08/08/2026."

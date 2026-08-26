@@ -2,9 +2,10 @@
 title: "Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)"
 slug: doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025
 theme: "Valvopatias"
-kind: protocolo
+kind: diretriz
 review_status: revisado
-source_refs: ["2025 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS · 2025 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/", "2021 ESC/EACTS Valvular Heart Disease Guidelines: Key Points · ACC · 2021 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/28/20/58/2021-esc-eacts-guidelines-vhd-esc-2021"]
+review_note: "Diretriz ESC/EACTS 2025, registro PubMed e corrigendum de julho de 2026 conferidos em 26/08/2026. O corrigendum remove apenas texto duplicado na seção de lacunas de evidência e não altera recomendações reproduzidas neste documento."
+source_refs: ["Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.", "Corrigendum to: 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2026;68(7):ezag193. DOI: 10.1093/ejcts/ezag193. PMID: 42452857.", "European Society of Cardiology. 2025 ESC/EACTS Guidelines for the management of valvular heart disease — página oficial. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"]
 legacy_source: "Fusão de dois documentos de valvopatia na mesma pasta, com 13 e 9 seções e 4 em comum. Revisado a fundo em 30/07/2026: o corte etário de TAVI (≥70 anos, valva tricúspide, independente do risco cirúrgico) já estava correto aqui e conferido de forma independente contra múltiplas fontes secundárias concordantes — consistente com os dois outros documentos desta pasta dedicados à mesma mudança, revisados na mesma sessão. Seção 'Criterios internacao', vazia, preenchida."
 ---
 

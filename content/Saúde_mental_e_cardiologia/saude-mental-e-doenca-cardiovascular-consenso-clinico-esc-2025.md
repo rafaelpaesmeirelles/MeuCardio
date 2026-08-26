@@ -2,10 +2,11 @@
 title: "Saúde mental e doença cardiovascular: consenso clínico ESC 2025"
 slug: saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025
 theme: "Saúde mental e cardiologia"
-kind: protocolo
+kind: diretriz
 summary: "O primeiro consenso clínico da ESC dedicado à relação entre saúde mental e doença cardiovascular: 34 declarações de consenso construídas por processo Delphi modificado (não classe/nível tradicional), o time Psycho-Cardio como estrutura de cuidado, os princípios ACTIVE para superar barreira de implementação, e números reais do quanto estresse psicossocial pesa como fator de risco cardiovascular — comparável a fator de risco somático clássico."
 review_status: revisado
-source_refs: ["Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease: developed under the auspices of the ESC Clinical Practice Guidelines Committee. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270."]
+review_note: "Auditoria de publicação em 26/08/2026: metadados da publicação primária conferidos no PubMed (PMID 40878270; DOI 10.1093/eurheartj/ehaf191) e documento/página oficial conferidos no portal ESC. Mantida a classificação como diretriz para exposição na interface, com natureza de Clinical Consensus Statement e método Delphi explicitados; não foram atribuídas classes/níveis de evidência que o documento não usa. Cinco vínculos internos conferidos contra slugs existentes."
+source_refs: ["Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease: developed under the auspices of the ESC Clinical Practice Guidelines Committee. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270.", "European Society of Cardiology. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease — página oficial, 29/08/2025. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/mental-health-and-cvd/"]
 legacy_source: "Versão anterior deste documento tinha citação incompleta/incorreta (PMID trocado, sem DOI) e prosa fragmentada, resultado de migração de corpus legado sem revisão. Reescrito e verificado contra o texto integral em 30/07/2026."
 ---
 
@@ -136,3 +137,11 @@ manejo farmacológico caso a caso.
 **Classe e nível de evidência tradicionais** não existem neste documento —
 é uma limitação do próprio consenso, não uma omissão da leitura: o processo
 Delphi modificado usado aqui não produz esse tipo de graduação.
+
+## Conteúdo CorVIA conectado
+
+- [Depressão pós-infarto e prognóstico cardiovascular](/biblioteca/depressao-pos-infarto-como-fator-de-risco-cardiovascular-van-melle-e-enrichd)
+- [Disparidade cardiovascular no transtorno mental grave](/biblioteca/disparidade-no-cuidado-cardiovascular-do-transtorno-mental-grave)
+- [Antipsicóticos, QT e morte súbita](/biblioteca/antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca)
+- [Segurança cardiovascular de antidepressivos](/biblioteca/seguranca-cardiovascular-de-psicofarmacos-antidepressivos-e-doenca-cardiaca)
+- [Intervenções diádicas paciente-cuidador na insuficiência cardíaca](/biblioteca/intervencoes-diadicas-cuidador-paciente-e-apoio-ao-cuidador-na-insuficiencia-cardiaca)

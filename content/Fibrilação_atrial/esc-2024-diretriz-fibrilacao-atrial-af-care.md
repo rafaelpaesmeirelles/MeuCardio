@@ -2,7 +2,7 @@
 title: "ESC 2024: diretriz de fibrilação atrial e o modelo AF-CARE"
 slug: esc-2024-diretriz-fibrilacao-atrial-af-care
 theme: "Fibrilação atrial"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723."]
 legacy_source: "Documento novo. Diretriz oficial ESC/EHJ conferida em 08/08/2026."

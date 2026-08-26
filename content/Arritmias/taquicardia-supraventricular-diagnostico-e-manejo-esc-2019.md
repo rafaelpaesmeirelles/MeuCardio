@@ -2,7 +2,7 @@
 title: "Taquicardia Supraventricular: Diagnóstico e Manejo (ESC 2019)"
 slug: taquicardia-supraventricular-diagnostico-e-manejo-esc-2019
 theme: "Arritmias"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["2019 ESC Guidelines for the management of patients with supraventricular tachycardia · European Heart Journal · 2020 · 41(5):655-720 · https://academic.oup.com/eurheartj/article/41/5/655/5556821", "ESC Guidelines for Management of Supraventricular Tachycardia: Key Points · American College of Cardiology · 2019 · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2019/09/10/12/36/2019-ESC-Guidelines-for-Supraventricular-Tachycardia"]
 ---

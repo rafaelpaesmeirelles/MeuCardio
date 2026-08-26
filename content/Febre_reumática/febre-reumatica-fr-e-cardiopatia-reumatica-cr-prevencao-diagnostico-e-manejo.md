@@ -1,5 +1,5 @@
 ---
-kind: protocolo
+kind: diretriz
 legacy_source: 'protocolos/protocolo-de-febre-reumatica-e-cardiopatia-reumatica-oms-2024.md · Revisado a fundo em 30/07/2026 contra o texto integral da diretriz OMS 2024 (NCBI Bookshelf NBK609692). Duas correções reais, uma delas com risco clínico direto: (1) o documento mandava teste de sensibilidade intradérmico obrigatório antes de cada injeção de penicilina benzatina — a OMS recomenda o oposto, teste NÃO deve ser feito rotineiramente em quem não tem história de alergia, e é conhecida barreira de adesão à profilaxia de longo prazo; (2) as doses de AAS/prednisolona estavam apresentadas como recomendação da OMS, quando a diretriz explicitamente declina recomendar a favor ou contra anti-inflamatório na FR aguda — doses mantidas como referência de protocolo nacional, agora com essa distinção explícita.'
 review_status: revisado
 slug: febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo

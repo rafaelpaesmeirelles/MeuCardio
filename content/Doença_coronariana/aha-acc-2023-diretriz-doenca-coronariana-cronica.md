@@ -2,7 +2,7 @@
 title: "AHA/ACC 2023: diretriz de doença coronariana crônica"
 slug: aha-acc-2023-diretriz-doenca-coronariana-cronica
 theme: "Doença coronariana"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Virani SS, Newby LK, Arnold SV, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. J Am Coll Cardiol. 2023;82(9):833-955. DOI: 10.1016/j.jacc.2023.04.003. PMID: 37480922."]
 legacy_source: "Documento novo. Diretriz oficial AHA/ACC/JACC conferida em 08/08/2026."

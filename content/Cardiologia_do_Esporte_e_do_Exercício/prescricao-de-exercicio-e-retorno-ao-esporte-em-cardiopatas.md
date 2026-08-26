@@ -4,7 +4,7 @@ slug: prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas
 theme: "Cardiologia do Esporte e do Exercício"
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:39973614", "PMID:30052887", "PMID:33846742"]
+source_refs: ["PMID:39973614", "PMID:30052887", "PMID:33846742", "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412"]
 legacy_source: "AHA/ACC 2025; EAPC/ESC"
 ---
 
