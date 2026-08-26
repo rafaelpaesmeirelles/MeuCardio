@@ -49111,5 +49111,46 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "esc-2021-vhd-escolha-protese-informado",
+    "statement": "Na escolha entre prótese valvar mecânica e biológica, a prótese mecânica é recomendada de acordo com o desejo do paciente devidamente informado, desde que não haja contraindicações à anticoagulação de longo prazo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. doi:10.1093/eurheartj/ehab395. PMID: 34453165.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "consentimento informado",
+      "escolha de prótese valvar",
+      "decisão compartilhada",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pesi-spesi-estratificacao-risco-tep-esc-2019",
+    "statement": "O uso do índice de gravidade de embolia pulmonar (PESI) original ou de sua versão simplificada (sPESI) é recomendado para a estratificação do risco de mortalidade precoce (hospitalar ou em 30 dias) em pacientes com embolia pulmonar aguda confirmada, complementando a avaliação clínica de instabilidade hemodinâmica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/ERS",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS)",
+    "reference": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. doi:10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Calculadoras",
+    "tags": [
+      "PESI",
+      "sPESI",
+      "embolia pulmonar",
+      "TEP",
+      "estratificação de risco",
+      "calculadora de risco",
+      "mortalidade precoce"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
