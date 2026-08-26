@@ -49,7 +49,7 @@ A AHA 2025 recomenda, para ELA suspeita com risco de vida:
 - **ácido tranexâmico**;
 - avaliação/tratamento precoce da coagulopatia e sangramento obstétrico.
 
-A dose de tranexâmico deve seguir o protocolo institucional de hemorragia obstétrica/PPH: **VERIFICAÇÃO HUMANA NECESSÁRIA** nesta ficha.
+**Limite operacional:** esta ficha não fixa dose de ácido tranexâmico; a administração deve seguir o protocolo institucional vigente de hemorragia obstétrica/PPH.
 
 Não esperar todos os exames de coagulação retornarem diante de hemorragia maciça clinicamente evidente.
 
@@ -59,7 +59,7 @@ A SMFM recomenda oxigenação/ventilação adequadas e uso de vasopressores/inot
 
 Isso é especialmente importante porque a fase inicial pode cursar com hipertensão pulmonar aguda e falência de VD; sobrecarga volêmica pode agravar dilatação direita, congestão e perfusão coronária do VD.
 
-Não existe bolus universal de cristalóide para ELA. Volume e vasoativos: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme eco/POCUS e protocolo de choque obstétrico.
+Não existe bolus universal de cristalóide para ELA. **Limite de evidência:** volume e vasoativos devem ser titulados pelo fenótipo no eco/POCUS, pela perfusão e pelo protocolo de choque obstétrico; esta ficha não cria um número único.
 
 ## 4. Ecocardiograma/POCUS ajuda a definir o fenótipo
 
@@ -80,7 +80,7 @@ A AHA 2025 considera razoável:
 - **vasodilatadores pulmonares inalados** em ELA com risco de vida, especialmente quando há falência direita/HP importante;
 - **VA-ECMO** em pacientes periparto com ELA grave refratária ao suporte convencional.
 
-Não há dose universal de vasodilatador pulmonar nesta recomendação. Dose/produto: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme protocolo de UTI/HP.
+Não há dose ou produto universal de vasodilatação pulmonar nessa recomendação. **Limite operacional:** a seleção deve seguir a hemodinâmica, a disponibilidade e o protocolo especializado de UTI/hipertensão pulmonar.
 
 ## 6. Atropina não é tratamento empírico da ELA
 
