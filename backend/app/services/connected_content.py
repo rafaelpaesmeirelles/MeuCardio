@@ -196,6 +196,7 @@ def buscar_relacionados_contextuais(
     excluir_tipo: str | None = None,
     excluir_slug: str | None = None,
     assunto: str | None = None,
+    filtrar_grupos_por_assunto: bool = True,
 ) -> dict:
     canonical = canonical_theme(tema)
     if not canonical:
@@ -242,7 +243,8 @@ def buscar_relacionados_contextuais(
             }
             for study in studies
         ]
-        _filter_groups_by_subject(groups, variants, assunto)
+        if filtrar_grupos_por_assunto:
+            _filter_groups_by_subject(groups, variants, assunto)
     else:
         for group in groups:
             group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
@@ -269,6 +271,11 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
         buscar_relacionados_contextuais(
             db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
             assunto=drug.slug,
+            # As indicações vêm de campos clínicos estruturados do próprio
+            # fármaco e já são uma relação específica. Preserve documentos e
+            # demais frentes dessas indicações; apenas os estudos continuam
+            # exigindo correspondência explícita com o medicamento.
+            filtrar_grupos_por_assunto=False,
         )
         for theme in themes
     ]
