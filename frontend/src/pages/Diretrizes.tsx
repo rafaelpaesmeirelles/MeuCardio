@@ -170,7 +170,7 @@ export default function Diretrizes() {
               <ClinicalContextLink
                 key={item.slug}
                 to={`/biblioteca/${item.slug}`}
-                icon="diretriz"
+                icon="evidencia"
                 title={item.title}
                 detail={item.theme}
               />
