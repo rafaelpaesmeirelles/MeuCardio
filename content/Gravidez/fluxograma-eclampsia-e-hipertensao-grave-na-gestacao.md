@@ -1,87 +1,100 @@
 ---
-title: "Eclâmpsia e hipertensão grave na gestação"
+title: "Fluxograma: eclâmpsia e hipertensão grave na gestação ou puerpério"
 slug: fluxograma-eclampsia-e-hipertensao-grave-na-gestacao
 theme: "Gravidez"
 kind: fluxograma
-summary: "Conduta imediata na gestante com PA ≥ 160/110 mmHg ou convulsão: a primeira bifurcação é convulsão presente (eclâmpsia) versus ausente (pré-eclâmpsia grave), o sulfato de magnésio como conduta central nas duas — tratamento na eclâmpsia, profilaxia na pré-eclâmpsia grave — e a escolha do anti-hipertensivo agudo conforme acesso venoso disponível."
+summary: "Conduta imediata diante de convulsão ou hipertensão grave obstétrica: trata qualquer PAS ≥160 ou PAD ≥110 mmHg sustentada, usa magnésio na eclâmpsia e restringe profilaxia sem convulsão às indicações obstétricas, sem atrasar estabilização e planejamento do parto."
 review_status: revisado
-source_refs: ["Altman D, Carroli G, Duley L, Farrell B, Moodley J, et al; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. Lancet. 2002;359(9321):1877-1890. PMID: 12057549 — 10.141 mulheres randomizadas em 33 países", "Easterling T, Mundle S, Bracken H, Parvekar S, Mool S, et al. Oral antihypertensive regimens (nifedipine retard, labetalol, and methyldopa) for management of severe hypertension in pregnancy: an open-label, randomised controlled trial. Lancet. 2019;394(10203):1011-1021. PMID: 31378394 — NCT01912677 e CTRI/2013/08/003866, 894 randomizadas em dois hospitais públicos de Nagpur, Índia. Financiamento: PREEMPT, com aporte da Bill & Melinda Gates Foundation", "Preeclampsia and Eclampsia · Merck Manual Professional Edition · https://www.merckmanuals.com/professional/gynecology-and-obstetrics/antenatal-complications/preeclampsia-and-eclampsia — dose de sulfato de magnésio (ataque 4,5 g IV/20min + manutenção 1,5 g/hora) e critérios ACOG de pré-eclâmpsia grave, conforme já reaproveitado em pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao.md nesta mesma pasta", "Emergency Treatment for Severe Hypertension in Pregnancy (resumo do ACOG Committee Opinion sobre terapia emergencial na hipertensão grave aguda na gestação) · The ObG Project · https://www.obgproject.com/2017/04/16/acog-guidance-emergency-treatment-severe-hypertension/ — consultado em 03/08/2026, doses de hidralazina e labetalol intravenosos e nifedipino oral de liberação imediata"]
+review_note: "Reescrito em 26/08/2026 contra a diretriz oficial NICE NG133 e o Magpie Trial. Corrigidos três riscos: o limiar passou de 'PA ≥160/110' para PAS ≥160 ou PAD ≥110 mmHg; magnésio deixou de ser automático em toda hipertensão grave sem convulsão; e o esquema secundário 4,5 g + 1,5 g/h foi substituído pelo Collaborative Eclampsia Trial regimen oficial (4 g em 5–15 min, depois 1 g/h). Retiradas doses de anti-hipertensivos copiadas de resumo secundário e metildopa como resgate imediato."
+source_refs: ["National Institute for Health and Care Excellence. Hypertension in pregnancy: diagnosis and management. NICE guideline NG133. Publicada em 25/06/2019, atualizada em 17/04/2023. Recomendações 1.8.2–1.8.7 conferidas em 26/08/2026. https://www.nice.org.uk/guidance/ng133/chapter/recommendations", "Altman D, Carroli G, Duley L, Farrell B, Moodley J, et al; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. Lancet. 2002;359(9321):1877-1890. DOI: 10.1016/S0140-6736(02)08778-0. PMID: 12057549."]
 ---
 
-# Eclâmpsia e hipertensão grave na gestação
+# Eclâmpsia e hipertensão grave na gestação ou puerpério
 
-Diante de PA ≥ 160/110 mmHg confirmada ou de convulsão na gestante ou puérpera, a
-primeira pergunta que separa as condutas é se a convulsão já aconteceu. O sulfato
-de magnésio é a conduta central nos dois ramos — tratamento na eclâmpsia
-estabelecida, profilaxia na pré-eclâmpsia grave sem convulsão — e depois, nos
-dois ramos, a hipertensão grave em si precisa de anti-hipertensivo agudo, cuja
-via (venosa ou oral) decide qual fármaco entra primeiro.
+Convulsão durante gestação ou puerpério é eclâmpsia até avaliação rápida de
+alternativas, sobretudo quando há hipertensão ou sinais de pré-eclâmpsia.
+Hipertensão grave significa **PAS ≥160 mmHg ou PAD ≥110 mmHg** sustentada; não é
+necessário que os dois componentes atinjam simultaneamente esses valores.
+
+Acionar obstetrícia, anestesia e cuidado crítico, proteger via aérea, posicionar
+com segurança, obter acesso venoso, monitorizar mãe e feto quando aplicável e
+colher hemograma/plaquetas, função renal, transaminases e outros exames dirigidos.
+Essas ações não devem atrasar magnésio na eclâmpsia nem o tratamento imediato da
+pressão grave.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Gestante ou puérpera com PA ≥ 160/110 mmHg<br/>confirmada, e/ou convulsão"] --> D1{"Convulsão presente?"}
+  A["Gestante ou puérpera com convulsão<br/>e/ou PAS ≥160 ou PAD ≥110 mmHg sustentada"]
+  B["ABCDE + prevenir trauma/aspiração;<br/>acesso IV, monitorização e equipe obstétrica;<br/>avaliar causas neurológicas/metabólicas em paralelo"]
+  C{"Convulsão eclâmptica<br/>atual ou prévia?"}
+  D["Sulfato de magnésio IV:<br/>4 g em 5–15 min, depois 1 g/h;<br/>continuar por 24 h após a última convulsão"]
+  E{"Nova convulsão<br/>apesar do magnésio?"}
+  F["Sulfato de magnésio adicional<br/>2–4 g IV em 5–15 min;<br/>reavaliar via aérea e diagnóstico"]
+  G{"Sem convulsão: pré-eclâmpsia grave<br/>em cuidado crítico, com parto planejado<br/>nas próximas 24 h e sinais preocupantes?"}
+  H["Considerar sulfato de magnésio IV<br/>com a equipe obstétrica; usar o mesmo<br/>esquema e monitorização institucional"]
+  I["Não administrar magnésio automaticamente<br/>apenas pelo número da pressão;<br/>vigilância materno-fetal e decisão obstétrica"]
+  J{"PAS ≥160 ou PAD ≥110 mmHg<br/>permanece sustentada?"}
+  K["Tratar imediatamente com uma opção:<br/>labetalol VO/IV, nifedipino VO ou<br/>hidralazina IV, segundo protocolo e contraindicações"]
+  L["Monitorar resposta e efeitos materno-fetais;<br/>modificar tratamento conforme resposta"]
+  M["Planejar momento do parto conforme gravidade,<br/>idade gestacional, condição fetal e estabilização;<br/>não atrasar parto por deterioração materna/fetal"]
 
-  D1 -->|"Sim — eclâmpsia"| P1["Sulfato de magnésio IV: ataque de 4,5 g<br/>em 20 min + manutenção de 1,5 g/hora<br/>(Magpie: reduz risco de nova convulsão em 58%)"]
+  A --> B --> C
+  C -->|"Sim"| D --> E
+  E -->|"Sim"| F --> J
+  E -->|"Não"| J
+  C -->|"Não"| G
+  G -->|"Sim"| H --> J
+  G -->|"Não"| I --> J
+  J -->|"Sim"| K --> L --> M
+  J -->|"Não"| M
 
-  D1 -->|"Não — hipertensão grave sem convulsão<br/>(pré-eclâmpsia grave)"| P2["Sulfato de magnésio IV profilático:<br/>mesmo esquema de ataque + manutenção<br/>(Magpie: eclâmpsia 0,8% vs. 1,9% com placebo,<br/>11 casos a menos por 1.000 tratadas)"]
-
-  P1 --> D2{"Acesso venoso disponível<br/>para o anti-hipertensivo?"}
-
-  D2 -->|"Sim"| C1(["Anti-hipertensivo IV: hidralazina<br/>ou labetalol, doses tituladas até<br/>controle (detalhes abaixo do diagrama)"])
-  D2 -->|"Não"| C2(["Anti-hipertensivo oral (Easterling 2019):<br/>nifedipino, labetalol ou metildopa<br/>(detalhes abaixo do diagrama)"])
-
-  P2 --> D3{"Acesso venoso disponível<br/>para o anti-hipertensivo?"}
-
-  D3 -->|"Sim"| C3(["Anti-hipertensivo IV: hidralazina<br/>ou labetalol, doses tituladas até<br/>controle (detalhes abaixo do diagrama)"])
-  D3 -->|"Não"| C4(["Anti-hipertensivo oral (Easterling 2019):<br/>nifedipino, labetalol ou metildopa<br/>(detalhes abaixo do diagrama)"])
-
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4 conduta;
+  classDef action fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class D,F,H,I,K,L,M action;
 ```
 
-## Sulfato de magnésio: dose e duração
+## Quando considerar magnésio sem convulsão
 
-**Ataque de 4,5 g IV em 20 minutos, seguido de manutenção em infusão contínua de
-1,5 g/hora** — o mesmo esquema serve para tratar a eclâmpsia já instalada e para
-a profilaxia na pré-eclâmpsia grave. Na profilaxia, **manter por 12 a 24 horas
-após o parto**. A dose é ajustada quando há insuficiência renal.
+Na pré-eclâmpsia grave em cuidado crítico, o NICE recomenda **considerar**
+magnésio quando o parto está planejado nas próximas 24 horas. A decisão ganha
+peso diante de cefaleia grave recorrente, escotomas, náuseas/vômitos, dor
+epigástrica, oligúria com hipertensão grave ou deterioração progressiva de
+creatinina, transaminases ou plaquetas. Isso não equivale a prescrever magnésio
+para toda pessoa que apresenta isoladamente um valor pressórico grave.
 
-**Um em cada quatro tem efeito colateral** com o sulfato (24% vs. 5% com placebo
-no Magpie) — é a contrapartida do benefício de 58% de redução relativa (11
-mulheres a menos com eclâmpsia por 1.000 tratadas, número absoluto pequeno porque
-a eclâmpsia é rara).
+O Magpie Trial sustenta o benefício preventivo do magnésio na pré-eclâmpsia,
+mas não define sozinho qual paciente contemporânea deve receber o fármaco; a
+seleção e o regime operacional vêm da diretriz. Diazepam, fenitoína e outros
+anticonvulsivantes **não substituem** sulfato de magnésio na eclâmpsia.
 
-## Anti-hipertensivo agudo: doses por via
+## Segurança do sulfato de magnésio
 
-**Se há acesso venoso:**
-- **Hidralazina IV**: 5 a 10 mg, repetir a cada 20 a 40 minutos se necessário
-- **Labetalol IV**: 10 a 20 mg iniciais, escalonando 20 a 80 mg a cada 10 a 30
-  minutos, até dose total máxima de 300 mg
+Monitorizar frequência respiratória, reflexos, diurese, estado neurológico e
+função renal segundo protocolo. O risco de acúmulo aumenta na disfunção renal;
+ajustes, suspensão e manejo de toxicidade devem seguir prescrição obstétrica e
+farmácia clínica. A dose adicional de 2–4 g vale para recorrência de convulsão,
+não para repetição automática por persistência da hipertensão.
 
-**Se não há acesso venoso** — via oral, conforme o ensaio de Easterling (2019),
-que testou justamente esse cenário em serviço público de poucos recursos:
-- **Nifedipino de liberação imediata 10 mg VO**, com escalonamento horário —
-  desfecho de controle pressórico em 6h em 84% (a maior frequência entre os três,
-  como droga isolada)
-- **Labetalol 200 mg VO**, com escalonamento horário — 77%
-- **Metildopa 1.000 mg VO em dose única, sem escalonamento** — 76%
+## Tratamento da pressão e parto
 
-A ressalva do próprio ensaio vale aqui: nifedipino e labetalol tinham
-escalonamento horário e a metildopa não, então a comparação é entre regimes, não
-entre fármacos em condições iguais — mas **os três são opções orais viáveis
-quando não há via endovenosa disponível de imediato**, e adiar o tratamento por
-falta de acesso venoso não é justificado pelo achado do ensaio.
+Na hipertensão grave em cuidado crítico durante gestação ou após o parto, o
+NICE indica tratamento imediato com **labetalol oral ou IV, nifedipino oral ou
+hidralazina IV**. A escolha considera acesso, contraindicações, frequência,
+função cardíaca e protocolo obstétrico; nifedipino não deve ser administrado por
+via sublingual. Este fluxo não reproduz escalonamentos de dose divergentes entre
+protocolos.
 
-## O que não está nesta árvore
+Controlar a pressão e a convulsão estabiliza a mãe, mas não elimina a doença
+placentária. Momento e via do parto dependem de idade gestacional, condição
+materna/fetal e resposta; deterioração não deve ser mascarada por uma medida de
+pressão temporariamente melhor.
 
-**Antecipação do parto versus conduta expectante** na hipertensão grave é decisão
-obstétrica que depende de idade gestacional, condição fetal e resposta ao
-tratamento — o documento-fonte não detalha os critérios dessa decisão, e por
-isso ela não entra como ramo aqui.
+## Tudo com Tudo
 
-**Reavaliação periódica da pressão e do quadro neurológico** se repete em todos
-os ramos e por isso também não é ramo: a pressão é reavaliada a cada dose de
-anti-hipertensivo, e o quadro neurológico (reflexos, cefaleia, distúrbio visual)
-é reavaliado enquanto o sulfato de magnésio estiver em infusão.
+- [Doença cardiovascular e gravidez — ESC 2025](fluxograma-doenca-cardiovascular-e-gravidez-esc-2025.md)
+- [Emergência hipertensiva](../Hipertensão/fluxograma-emergencia-hipertensiva.md)
+- [Cardiomiopatia periparto descompensada e choque](fluxograma-cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025.md)
+- [Síndrome coronariana aguda na gestação e puerpério](fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md)
+- [Síndrome aórtica aguda na gestação e puerpério](fluxograma-sindrome-aortica-aguda-na-gestacao-e-puerperio.md)
+- [Sulfato de magnésio em cardiologia](../Farmacologia/sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa.md)

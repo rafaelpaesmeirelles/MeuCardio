@@ -52,14 +52,16 @@ flowchart TD
 
 Cocaína e anestésicos locais também bloqueiam canais de sódio, mas possuem toxíndromes e recomendações próprias na diretriz. O fluxo acima é centrado em antidepressivos tricíclicos/tetracíclicos e outros agentes com fenótipo semelhante; não deve apagar a investigação de isquemia/hiperadrenergia por cocaína nem o manejo específico da toxicidade sistêmica por anestésico local.
 
-## Conteúdo CorVIA conectado
+## Tudo com Tudo
 
-- [Diretriz AHA 2025: intoxicações cardiotóxicas graves](/biblioteca/diretriz-aha-2025-intoxicacoes-cardiotoxicas-graves)
-- [Cardiotoxicidade por tricíclicos, organofosforados e cloroquina](/biblioteca/cardiotoxicidade-intoxicacao-exogena-triciclicos-organofosforados-cloroquina)
-- [Antidepressivos tricíclicos no cardiopata](/biblioteca/antidepressivos-triciclicos-no-cardiopata-risco-cardiovascular-e-toxicidade-em-superdosagem)
-- [Flecainida](/biblioteca/flecainida)
-- [Propafenona](/biblioteca/propafenona-cloridrato)
-- [Cardiotoxicidade aguda por cocaína](/biblioteca/cardiotoxicidade-aguda-por-cocaina-vasoespasmo-bloqueio-de-canal-de-sodio-e-por-que-nao-usar-betabloqueador-isolado)
+- [Diretriz AHA 2025: intoxicações cardiotóxicas graves](diretriz-aha-2025-intoxicacoes-cardiotoxicas-graves.md)
+- [Cardiotoxicidade por tricíclicos, organofosforados e cloroquina](../Terapia_intensiva/cardiotoxicidade-intoxicacao-exogena-triciclicos-organofosforados-cloroquina.md)
+- [Antidepressivos tricíclicos no cardiopata](../Saúde_mental_e_cardiologia/antidepressivos-triciclicos-no-cardiopata-risco-cardiovascular-e-toxicidade-em-superdosagem.md)
+- [Flecainida](flecainida.md)
+- [Propafenona](propafenona-cloridrato.md)
+- [Cardiotoxicidade aguda por cocaína](../Terapia_intensiva/cardiotoxicidade-aguda-por-cocaina-vasoespasmo-bloqueio-de-canal-de-sodio-e-por-que-nao-usar-betabloqueador-isolado.md)
+- [Taquicardia de QRS largo sem diagnóstico estabelecido](../Arritmias/fluxograma-taquicardia-de-qrs-largo-esc-2019.md)
+- [Parada cardiorrespiratória no adulto](../Terapia_intensiva/fluxograma-parada-cardiorrespiratoria-ritmo-inicial.md)
 
 ## Limite operacional
 
