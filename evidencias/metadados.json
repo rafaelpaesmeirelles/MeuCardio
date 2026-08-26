@@ -47304,5 +47304,81 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "decisao-compartilhada-quando-marca-passo-nao-e-mais-indicado",
+    "statement": "Quando a estimulação cardíaca deixa de estar indicada, é recomendado que a decisão sobre a estratégia de manejo do dispositivo (incluindo sua desativação) seja baseada em uma análise individual de risco-benefício, conduzida em processo de decisão compartilhada junto com o paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy",
+    "reference": "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "desativação de dispositivo",
+      "decisão compartilhada",
+      "marca-passo",
+      "fim de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cuidado-centrado-no-paciente-em-marca-passo-e-trc",
+    "statement": "Em pacientes considerados para implante de marca-passo ou terapia de ressincronização cardíaca, é recomendado que a decisão seja baseada na melhor evidência disponível, considerando os riscos e benefícios individuais de cada opção, as preferências do paciente e os objetivos de cuidado, seguindo abordagem de cuidado integrado e os princípios de cuidado centrado no paciente e decisão compartilhada durante a consulta.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy",
+    "reference": "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "cuidado centrado no paciente",
+      "decisão compartilhada",
+      "marca-passo",
+      "terapia de ressincronização cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "heart-team-discute-recomendacao-com-paciente-na-estenose-aortica",
+    "statement": "Na estenose aórtica grave, a escolha entre intervenção cirúrgica e transcateter deve ser baseada em avaliação cuidadosa de fatores clínicos, anatômicos e do procedimento pelo Heart Team, ponderando riscos e benefícios de cada abordagem para o paciente individual; a recomendação do Heart Team deve ser discutida com o paciente, que pode então fazer uma escolha de tratamento informada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "heart team",
+      "decisão compartilhada",
+      "estenose aórtica",
+      "consentimento informado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bioprotese-valvar-conforme-desejo-do-paciente-informado",
+    "statement": "É recomendado o implante de bioprótese valvar de acordo com o desejo do paciente devidamente informado sobre as alternativas, riscos e benefícios de cada tipo de prótese.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "prótese valvar",
+      "decisão compartilhada",
+      "consentimento informado",
+      "preferência do paciente"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
