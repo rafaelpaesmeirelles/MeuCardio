@@ -1,5 +1,91 @@
 [
   {
+    "slug": "resposta-imediata-ao-colapso-subito-e-suspeita-de-parada-no-adulto",
+    "condicao": "Resposta imediata ao colapso súbito e suspeita de parada no adulto",
+    "resumo": "Checklist de execução para reconhecer parada cardiorrespiratória sem confundir gasping com respiração normal, ativar a resposta, iniciar RCP e aplicar o DEA/desfibrilador com o mínimo de interrupção.",
+    "documento_origem": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001378.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663."
+    ],
+    "itens": [
+      {
+        "id": "pcr-cena-segura",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Segurança da cena confirmada antes da aproximação",
+        "origem_secao": "Reconhecimento da parada e início da resposta"
+      },
+      {
+        "id": "pcr-resposta-respiracao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Responsividade e respiração avaliadas rapidamente; gasping, suspiros isolados ou roncos lentos não foram classificados como respiração normal",
+        "origem_secao": "AHA 2025 — Recognition of Cardiac Arrest"
+      },
+      {
+        "id": "pcr-pulso-profissional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se profissional de saúde, pulso avaliado por no máximo 10 segundos; se ausente ou incerto, RCP iniciada sem prolongar a checagem",
+        "origem_secao": "AHA 2025 — Recognition of Cardiac Arrest"
+      },
+      {
+        "id": "pcr-acionamento",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Sistema de emergência acionado imediatamente, com localização exata informada e telefone em viva-voz quando possível",
+        "origem_secao": "AHA 2025 — Initiation of Resuscitation"
+      },
+      {
+        "id": "pcr-compressoes",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Compressões iniciadas imediatamente no centro do tórax e mantidas com profundidade e frequência adequadas, retorno completo e mínima interrupção",
+        "origem_secao": "RCP de alta qualidade — os números que definem a compressão"
+      },
+      {
+        "id": "pcr-dea",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "DEA/desfibrilador solicitado e aplicado assim que disponível, seguindo comandos e retomando compressões sem demora após análise ou choque",
+        "origem_secao": "Desfibrilação: o nível de energia"
+      },
+      {
+        "id": "pcr-revezamento",
+        "categoria": "equipe",
+        "obrigatorio": false,
+        "texto": "Quando há mais de um socorrista, funções delegadas e compressor revezado antes de perda perceptível de qualidade",
+        "origem_secao": "RCP de alta qualidade — os números que definem a compressão"
+      },
+      {
+        "id": "pcr-ritmo-causas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No ambiente profissional, ritmo classificado e causas reversíveis pesquisadas/tratadas em paralelo, sem pausas desnecessárias",
+        "origem_secao": "Ritmo chocável; Ritmo não chocável; Causas reversíveis"
+      },
+      {
+        "id": "pcr-pos-rosc",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Após retorno da circulação, cuidado pós-parada iniciado e investigação etiológica organizada; prognóstico neurológico não declarado precocemente por achado isolado",
+        "origem_secao": "Depois do retorno da circulação espontânea"
+      },
+      {
+        "id": "pcr-debriefing",
+        "categoria": "qualidade",
+        "obrigatorio": false,
+        "texto": "Tempos críticos, qualidade da RCP, uso do DEA e barreiras do sistema registrados para debriefing e melhoria",
+        "origem_secao": "AHA 2025 — Systems of Care and Quality Management"
+      }
+    ],
+    "revisao": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O checklist atualiza o reconhecimento e a ativação para AHA 2025 e reutiliza o protocolo canônico SBC existente para a execução avançada."
+  },
+  {
     "slug": "acompanhamento-apos-tavi-ou-savr-na-estenose-aortica-grave",
     "condicao": "Acompanhamento após TAVI ou SAVR por estenose aórtica grave",
     "resumo": "O que checar antes da alta e no primeiro seguimento após substituição valvar aórtica (transcateter ou cirúrgica), incluindo a janela de maior risco trombótico da bioprótese e a mudança de corte etário da diretriz 2025.",

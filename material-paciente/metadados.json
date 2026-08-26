@@ -1,5 +1,78 @@
 [
   {
+    "slug": "colapso-subito-como-reconhecer-parada-e-usar-o-dea",
+    "titulo": "Colapso súbito: como reconhecer uma parada e usar o DEA",
+    "subtitulo": "O que qualquer pessoa pode fazer nos primeiros minutos enquanto o 192 está a caminho",
+    "tema": "Emergências cardiovasculares",
+    "documento_slug": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+    "review_status": "revisado",
+    "resumo": "Orientação para leigos reconhecerem rapidamente um adulto que não responde e não respira normalmente, acionarem o SAMU, iniciarem compressões e usarem um desfibrilador externo automático sem esperar certeza diagnóstica ou a chegada da ambulância.",
+    "secoes": [
+      {
+        "titulo": "Duas perguntas que não podem esperar",
+        "paragrafos": [
+          "Depois de confirmar que o local é seguro, chame a pessoa em voz alta e toque seus ombros. Se ela não responder, observe rapidamente se respira de forma normal.",
+          "Suspiros isolados, roncos lentos, movimentos de boca ou uma respiração irregular e espaçada podem ser gasping. Isso não é respiração normal e pode acontecer durante uma parada cardíaca. Não espere a pessoa parar completamente de se mexer para agir."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que fazer imediatamente",
+        "paragrafos": [],
+        "itens": [
+          "Se o adulto não responde e não respira normalmente, trate como possível parada cardíaca",
+          "Peça ajuda e ligue para o SAMU pelo 192; coloque o telefone em viva-voz e siga as instruções do atendente",
+          "Comece compressões no centro do peito, fortes e rápidas, deixando o tórax voltar à posição entre elas",
+          "Peça para outra pessoa buscar um desfibrilador externo automático, o DEA, se houver um próximo",
+          "Ligue o DEA, cole as pás como mostram os desenhos e obedeça aos comandos de voz",
+          "Continue até a pessoa apresentar sinais claros de vida, a equipe assumir ou o local deixar de ser seguro"
+        ]
+      },
+      {
+        "titulo": "Não perca tempo procurando pulso",
+        "paragrafos": [
+          "Para quem não é profissional de saúde, tentar achar pulso costuma atrasar o início das compressões e pode dar uma falsa impressão de segurança. A orientação atual usa a ausência de resposta e de respiração normal para decidir agir.",
+          "O risco de atrasar a RCP em uma parada verdadeira é muito maior do que o risco de iniciar compressões em alguém inconsciente que ainda tenha circulação. O atendente do 192 ajudará a confirmar os próximos passos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O DEA é feito para orientar você",
+        "paragrafos": [
+          "O DEA analisa o ritmo sozinho e só libera choque quando identifica um ritmo que pode se beneficiar. Quem usa não decide se deve dar o choque: segue as instruções faladas do aparelho.",
+          "Enquanto o aparelho chega e é preparado, as compressões continuam. Quando o DEA mandar afastar, ninguém deve tocar a pessoa; depois da análise ou do choque, retome as compressões conforme o comando."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Situações especiais",
+        "paragrafos": [
+          "Em afogamento, asfixia, suspeita de overdose, trauma, gestação e em crianças, há adaptações importantes. Ainda assim, pedir ajuda rapidamente e seguir as instruções do 192 continua essencial.",
+          "Se a pessoa voltar a respirar ou se mexer, não encerre o atendimento. Mantenha-a sob observação, siga a orientação do serviço de emergência e aguarde avaliação médica."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Pessoa caída que não responde",
+      "Respiração ausente ou anormal, com gasping, suspiros ou roncos lentos",
+      "Colapso durante exercício, dor no peito ou palpitação",
+      "Movimentos parecidos com convulsão junto de inconsciência e respiração anormal",
+      "Nova perda de consciência depois de a pessoa parecer ter se recuperado"
+    ],
+    "perguntas": [
+      "Minha casa, clínica, condomínio, academia ou local de trabalho tem um DEA acessível?",
+      "Eu sei informar rapidamente o endereço exato ao 192?",
+      "Alguém da família ou da equipe fez treinamento prático de RCP e DEA?",
+      "Existe um plano para liberar a entrada da ambulância sem demora?"
+    ],
+    "fontes": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025. DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025. DOI: 10.1161/CIR.0000000000001378.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663."
+    ]
+  },
+  {
     "slug": "ablacao-de-fibrilacao-atrial-o-que-esperar",
     "titulo": "Ablação da fibrilação atrial: o que esperar do procedimento",
     "subtitulo": "Como funciona, como é feito e o que muda para você depois",
