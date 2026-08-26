@@ -16,8 +16,8 @@ Confirmado o diagnóstico de TEP agudo, a pergunta muda de "é TEP?" para "qual
 o risco de morte precoce, e isso muda a conduta agora?". A diretriz ESC 2019
 organiza essa resposta em quatro categorias, combinando instabilidade
 hemodinâmica, o escore clínico PESI (ou sua versão simplificada, sPESI),
-disfunção de ventrículo direito por imagem e biomarcador de lesão miocárdica
-elevado. A trombólise sistêmica de rotina só está indicada no risco alto — no
+disfunção de ventrículo direito por imagem e troponina cardíaca elevada. A
+trombólise sistêmica de rotina só está indicada no risco alto — no
 risco intermediário-alto, ela entra como opção de resgate diante de
 deterioração, não como conduta inicial.
 
@@ -31,14 +31,14 @@ flowchart TD
 
   D1 -->|"Não"| D2{"PESI classe III a V,<br/>ou sPESI ≥ 1?"}
 
-  D2 -->|"Não — PESI I-II<br/>ou sPESI 0"| D5{"Há disfunção de VD na imagem<br/>ou biomarcador cardíaco elevado?"}
+  D2 -->|"Não — PESI I-II<br/>ou sPESI 0"| D5{"Há disfunção de VD na imagem<br/>ou troponina cardíaca elevada?"}
 
-  D5 -->|"Sim"| C3(["TEP de risco intermediário-baixo:<br/>anticoagulação e observação hospitalar;<br/>o achado de VD/biomarcador impede<br/>classificar como baixo risco só<br/>pelo PESI ou sPESI"])
+  D5 -->|"Sim"| C3(["TEP de risco intermediário-baixo:<br/>anticoagulação e observação hospitalar;<br/>o achado de VD/troponina impede<br/>classificar como baixo risco só<br/>pelo PESI ou sPESI"])
   D5 -->|"Não"| D6{"Critérios de exclusão ambulatorial<br/>(por exemplo, Hestia) ausentes,<br/>anticoagulação e seguimento<br/>imediatos são viáveis?"}
   D6 -->|"Sim"| C2(["TEP de baixo risco: considerar<br/>tratamento ambulatorial ou<br/>alta hospitalar precoce"])
   D6 -->|"Não"| C6(["Tratar no hospital apesar da baixa<br/>mortalidade estimada: barreira clínica,<br/>social ou de seguimento torna a alta<br/>precoce insegura"])
 
-  D2 -->|"Sim"| D3{"Disfunção de ventrículo direito<br/>(eco ou angioTC) E biomarcador<br/>de lesão miocárdica elevado<br/>(troponina/BNP), os dois presentes?"}
+  D2 -->|"Sim"| D3{"Disfunção de ventrículo direito<br/>(eco ou angioTC) E troponina<br/>cardíaca elevada,<br/>os dois presentes?"}
 
   D3 -->|"Não — apenas um<br/>positivo, ou nenhum"| C3(["TEP de risco intermediário-baixo:<br/>anticoagulação e monitorização<br/>hospitalar"])
 
@@ -64,7 +64,7 @@ intermediário-alto.
 
 **PESI e sPESI são escores de mortalidade em 30 dias, não medem diretamente
 disfunção de VD.** Um paciente com PESI I-II ou sPESI 0 que apresente disfunção
-de VD ou biomarcador cardíaco elevado não deve ser chamado de baixo risco só
+de VD ou troponina cardíaca elevada não deve ser chamado de baixo risco só
 pelo escore; a ESC o posiciona na faixa intermediária-baixa. Além disso, alta
 precoce exige critérios clínicos e sociais de elegibilidade, e não apenas PESI
 baixo.
