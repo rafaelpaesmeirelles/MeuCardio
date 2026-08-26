@@ -6,6 +6,7 @@ kind: fluxograma
 summary: "Árvore para câncer + embolização + vegetação, diferenciando NBTE de endocardite infecciosa e orientando anticoagulação."
 review_status: revisado
 source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."]
+review_note: "Revisado em 26/08/2026 contra a seção 12.12 da diretriz ESC 2023 de endocardite (PMID 37622656). A árvore passou a exigir exclusão apropriada de endocardite infecciosa, inclusive investigação de endocardite com hemoculturas negativas quando plausível, antes de classificar vegetação como estéril. O ramo que encaminhava toda massa incompatível com NBTE para protocolo infeccioso foi corrigido para incluir excrescência de Lambl, fibroelastoma e tumor. Anticoagulação com LMWH, HNF ou VKA permanece considerada para todos, ponderada pelo risco hemorrágico; não há dados que sustentem DOAC. Cirurgia ficou restrita aos critérios citados pela ESC — disfunção valvar grave ou vegetação grande — sem transformar embolização recorrente isolada em indicação. Pendente revisão médica independente antes de uso assistencial."
 ---
 
 # NBTE associada ao câncer
@@ -13,24 +14,25 @@ source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines
 ```mermaid
 flowchart TD
   R0["Câncer/estado pró-trombótico<br/>+ AVC/embolia ou vegetação"]
-  P1["Hemoculturas + TTE<br/>+ ETE se suspeita persistente"]
-  D1{"Endocardite infecciosa plausível/<br/>culturas ou destruição valvar?"}
+  P1["Hemoculturas antes de antimicrobiano se viável<br/>+ TTE; ETE se TTE negativo/inconclusivo<br/>ou suspeita persistente"]
+  D1{"Endocardite infecciosa plausível ou<br/>investigação de cultura negativa incompleta?"}
   C1(["Sim: migrar para protocolo<br/>de endocardite infecciosa"])
   D2{"Vegetação estéril + contexto<br/>hipercoagulável compatível?"}
   P2["Diagnóstico provável de NBTE;<br/>envolver oncologia/hematologia"]
   D3{"Risco hemorrágico permite<br/>anticoagulação?"}
   P3["Considerar LMWH, HNF ou VKA;<br/>DOAC sem evidência específica para NBTE"]
-  P4["Risco hemorrágico alto:<br/>individualizar e tratar fator reversível"]
-  D4{"Disfunção valvar grave ou<br/>vegetação grande/êmbolos recorrentes?"}
+  P4["Risco hemorrágico alto:<br/>não anticoagular automaticamente;<br/>investigar e tratar fator reversível"]
+  D4{"Disfunção valvar grave<br/>ou vegetação grande?"}
   C2(["Sim: discutir cirurgia<br/>em equipe multidisciplinar"])
   C3(["Tratar câncer/causa subjacente<br/>+ reavaliar embolização e vegetação"])
+  C4(["Rever diagnóstico: excrescência de Lambl,<br/>fibroelastoma, tumor ou outra massa intracardíaca"])
 
   R0 --> P1
   P1 --> D1
   D1 -->|"Sim"| C1
   D1 -->|"Não"| D2
   D2 -->|"Sim"| P2
-  D2 -->|"Não"| C1
+  D2 -->|"Não"| C4
   P2 --> D3
   D3 -->|"Sim"| P3
   D3 -->|"Não"| P4
@@ -41,9 +43,9 @@ flowchart TD
   C2 --> C3
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3 conduta;
+  class C1,C2,C3,C4 conduta;
 ```
 
 ## Regra prática
 
-**Vegetação sem bactéria não significa vegetação sem risco:** NBTE é altamente embólica e exige tratar simultaneamente a hipercoagulabilidade e a causa oncológica.
+**Vegetação sem bactéria não significa vegetação sem risco:** NBTE é altamente embólica e exige tratar simultaneamente a hipercoagulabilidade e a causa oncológica. Hemoculturas negativas, isoladamente, não provam esterilidade; e recorrência embólica durante anticoagulação exige rever diagnóstico, intensidade/adesão e controle do câncer, não cirurgia automática.
