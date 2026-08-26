@@ -23252,5 +23252,91 @@
         "por_que": "Fecha a trilha no desfecho prático comum a boa parte dos diagnósticos das etapas 3 a 6: quando a estratificação de risco de ACM, canalopatia ou fenótipo arrítmico já resultou em implante de CDI ou S-ICD, a presença do dispositivo não deve ser usada, isoladamente, como motivo de desqualificação esportiva universal — a decisão volta a depender da doença de base e do fenótipo, não do dispositivo em si."
       }
     ]
+  },
+  {
+    "slug": "trilha-determinantes-sociais-risco-cardiovascular",
+    "titulo": "Determinantes sociais como risco cardiovascular oculto",
+    "tema": "Geral",
+    "objetivo": "Reconhecer contexto social — encarceramento, situacao de rua, migracao forcada, institucionalizacao na infancia, racismo estrutural e trabalho domestico informal — como fator de risco cardiovascular proprio, nao coadjuvante, com o rastreio ativo que cada cenario exige.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiovascular-populacao-carceraria-pos-soltura",
+        "por_que": "Comeca pela janela de maior risco documentada — as duas semanas apos a soltura prisional, com mortalidade cardiovascular ~2,5x maior que a populacao geral no seguimento."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-situacao-de-rua",
+        "por_que": "Situacao de rua multiplica o risco de forma comparavel ao encarceramento, com barreira de acesso a procedimento documentada mesmo em pais rico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "saude-cardiovascular-refugiados-migrantes-forcados",
+        "por_que": "Adiciona a dimensao de interrupcao de tratamento cronico durante deslocamento forcado, relevante para a populacao migrante atendida no Brasil."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "institucionalizacao-infantil-risco-cardiovascular",
+        "por_que": "Mostra que a exposicao pode comecar na infancia, muito antes do primeiro fator de risco cardiovascular classico aparecer."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "racismo-estrutural-discriminacao-hipertensao-risco-cardiovascular",
+        "por_que": "Fecha o quadro mecanistico: discriminacao racial cronica como via de estresse que eleva pressao arterial, com dado brasileiro do ELSA-Brasil."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "disparidade-racial-tratamento-iamcst-tempo-reperfusao",
+        "por_que": "Da o outro lado da mesma moeda — nao e so risco de adoecer, e tambem risco de ser tratado mais devagar quando o infarto acontece."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "risco-cardiovascular-trabalhadoras-domesticas",
+        "por_que": "Termina em uma categoria ocupacional concreta e numerosa no Brasil, ilustrando como os mecanismos anteriores (jornada, estresse cronico, acesso) se somam na pratica."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-comunicacao-cardiologica-em-situacoes-sensiveis",
+    "titulo": "Comunicação cardiológica em situações sensíveis",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo conduzir quatro conversas dificeis do consultorio: risco hereditario de morte subita na familia, jejum religioso em cardiopata, estigma de peso na consulta, e comunicacao com paciente surdo — sem perder rigor clinico nem acolhimento.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "comunicacao-risco-hereditario-morte-subita-familia-rastreio-cascata",
+        "por_que": "Comeca pela comunicacao mais dificil — risco hereditario de morte subita — e pelo protocolo que realmente aumenta a adesao ao rastreio familiar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estigma-de-peso-na-consulta-cardiologica",
+        "por_que": "Trata do vies que atrasa diagnostico antes mesmo da conversa comecar — reconhecer o proprio vies implicito e pre-requisito para as etapas seguintes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "comunicacao-paciente-surdo-cardiologia-libras",
+        "por_que": "Mostra por que bilhete escrito nao substitui interprete de Libras qualificado em consentimento de procedimento invasivo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "jejum-ramada-pacientes-cardiopatas-evidencia",
+        "por_que": "Fecha com um caso concreto de negociacao entre evidencia clinica e decisao religiosa do paciente, sem impor nem ceder por reflexo."
+      }
+    ]
   }
 ]
