@@ -49,7 +49,7 @@ A ESC recomenda:
 
 Atenolol deve ser substituído; metoprolol/propranolol são opções frequentemente utilizadas conforme indicação e contexto fetal.
 
-Dose específica: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme FC, PA, agente escolhido e monitorização fetal.
+**Limite operacional:** esta ficha não fixa dose de betabloqueador; a titulação depende de frequência cardíaca, pressão arterial, agente escolhido e monitorização fetal.
 
 Verapamil é opção de segunda linha quando betabloqueador não é tolerado.
 
@@ -74,13 +74,13 @@ Na emergência:
 - tratar taquicardia/FA que reduz tempo de enchimento;
 - diurético apenas quando congestão justifica, com reavaliação cuidadosa.
 
-Não há bolus ou dose de diurético universal para CMH gestacional: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme eco e hemodinâmica.
+Não há bolus ou dose de diurético universal para CMH gestacional. **Limite de evidência:** volume e diurese devem ser titulados pelo ecocardiograma, pela congestão e pela resposta hemodinâmica, sem um número único nesta ficha.
 
 ## 5. Hipotensão com LVOTO importante
 
 Antes de simplesmente aumentar inotropismo, reconhecer que maior contratilidade pode agravar obstrução dinâmica em alguns pacientes.
 
-A escolha de vasoativo deve preservar pressão sistêmica sem intensificar LVOTO; não existe esquema único explicitado pela diretriz de gestação. Dose/vasoativo: **VERIFICAÇÃO HUMANA NECESSÁRIA** em ambiente especializado.
+A escolha de vasoativo deve preservar pressão sistêmica sem intensificar LVOTO; a diretriz de gestação não explicita esquema único. **Limite operacional:** agente e dose devem seguir a fisiologia demonstrada e o protocolo do ambiente especializado.
 
 ## 6. Congestão
 

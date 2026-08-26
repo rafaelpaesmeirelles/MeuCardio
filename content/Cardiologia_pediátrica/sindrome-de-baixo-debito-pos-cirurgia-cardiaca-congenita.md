@@ -55,7 +55,7 @@ O volume deve ser ajustado ao fenótipo:
 - ventrículo restritivo/dilatado ou VD falente pode piorar com bolus repetidos;
 - pressão venosa elevada não significa necessariamente pré-carga efetiva adequada.
 
-Não há bolus universal de volume para LCOS pós-operatório congênito. Dose/volume específico: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme anatomia, eco e protocolo da UTI.
+Não há bolus universal de volume para LCOS pós-operatório congênito. **Limite de evidência:** a reposição deve ser titulada pela anatomia, pelo ecocardiograma e pelo protocolo da UTI; esta ficha não cria volume único.
 
 ## 3. Contratilidade e pós-carga
 
@@ -68,7 +68,7 @@ Inotrópicos/inodilatadores podem ser necessários quando há disfunção ventri
 - ritmo;
 - função renal.
 
-A revisão descreve uso de catecolaminas, milrinona e outras estratégias, porém não existe uma dose única aplicável a todas as anatomias congênitas. Para dose específica: **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+A revisão descreve uso de catecolaminas, milrinona e outras estratégias, porém não existe uma dose única aplicável a todas as anatomias congênitas. **Limite operacional:** agente e dose devem seguir o fenótipo hemodinâmico, a anatomia e o protocolo da UTI cardíaca pediátrica.
 
 ## 4. Ritmo e sincronia AV podem ser determinantes
 
@@ -85,7 +85,7 @@ Se houver arritmia:
 
 Ventilação com pressão positiva pode reduzir trabalho respiratório e consumo de oxigênio e, em alguns cenários, favorecer a circulação. Entretanto, pressão intratorácica excessiva pode reduzir retorno venoso e piorar débito, sobretudo em fisiologias dependentes de pré-carga ou de fluxo pulmonar passivo.
 
-Portanto, PEEP e pressões ventilatórias devem ser individualizadas; valor universal: **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+Portanto, PEEP e pressões ventilatórias devem ser individualizadas. **Limite de evidência:** não há valor universal aplicável às diferentes fisiologias congênitas; titular por oxigenação, mecânica pulmonar e resposta hemodinâmica.
 
 ## 6. Suspeitar de lesão residual quando o curso não faz sentido
 

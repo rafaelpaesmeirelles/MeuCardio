@@ -3,8 +3,10 @@ title: "Falência Aguda do Ventrículo Direito (Cor Pulmonale Agudo): Consenso A
 slug: falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024
 theme: "Terapia intensiva"
 kind: diretriz
+summary: "Consenso clínico ACVC/ESC para reconhecer falência aguda do ventrículo direito, evitar sobrecarga volêmica e pressão positiva desnecessária, sustentar a perfusão e tratar a causa."
 review_status: revisado
 source_refs: ["Diagnosis and treatment of right ventricular failure secondary to acutely increased right ventricular afterload (acute cor pulmonale): a clinical consensus statement of the Association for Acute CardioVascular Care (ACVC) of the European Society of Cardiology. Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312. DOI: 10.1093/ehjacc/zuad157. PMID: 38135288. Texto integral lido em 31/07/2026 via PMC10927027 — o registro do PubMed traz apenas o título, sem resumo"]
+review_note: "Classificação e conexões revisadas em 26/08/2026. Mantido na frente de diretrizes por ser consenso clínico operacional oficial ACVC/ESC, mas sem inventar Classe/Nível que a fonte não atribui. Os arquivos relacionados foram convertidos de nomes soltos em links locais funcionais."
 legacy_source: "Documento novo, escrito em 31/07/2026. A disfunção aguda de ventrículo direito era lacuna mapeada e ficou BLOQUEADA por fonte em dois ciclos: o consenso não tem resumo no PubMed. Foi destravada ao buscar o texto integral no PMC — método que passou a valer para todo documento de sociedade."
 ---
 
@@ -75,10 +77,12 @@ A ventilação com pressão positiva **eleva a resistência vascular pulmonar e 
 ## Sintese pratica
 No cor pulmonale agudo: **restringir fluido, noradrenalina como vasopressor de primeira linha, evitar pressão positiva desnecessária e tratar a causa** — trombólise na embolia pulmonar, prona na SDRA.
 
-Documentos relacionados nesta mesma pasta: `classificacao-scai-de-estagios-do-choque-cardiogenico.md`,
-`cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional.md` e
-`ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais.md`.
-O TEP de alto risco está em `tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019.md`, em Tromboembolismo.
+## Tudo com Tudo
+
+- [Classificação SCAI dos estágios do choque cardiogênico](classificacao-scai-de-estagios-do-choque-cardiogenico.md)
+- [Cateter de artéria pulmonar no choque cardiogênico](cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional.md)
+- [ECMO venoarterial no choque cardiogênico do infarto](ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais.md)
+- [Tromboembolismo pulmonar agudo: diagnóstico e manejo ESC/ERS 2019](../Tromboembolismo/tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019.md)
 
 ## Armadilhas clinicas
 - **Expandir volume por reflexo diante de hipotensão** — é a conduta que o consenso descreve como capaz de piorar tudo, por superdistensão e interdependência ventricular

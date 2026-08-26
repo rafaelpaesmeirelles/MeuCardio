@@ -5,6 +5,7 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de decisão para PCR pediátrica, separando FV/TV sem pulso de assistolia/AESP e incorporando energia por peso, epinefrina e antiarrítmico conforme AHA/AAP 2025."
 review_status: revisado
+review_note: "Sequência auditada em 26/08/2026 contra o algoritmo oficial AHA/AAP 2025 e a publicação primária (PMID 41122885). Corrigida transição de segurança: assistolia/AESP que se torna chocável entra no primeiro choque de 2 J/kg; a versão anterior saltava incorretamente para o bloco de 4 J/kg rotulado como segundo choque."
 source_refs: ["Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16_suppl_2):S479-S537. DOI: 10.1161/CIR.0000000000001368. PMID: 41122885.", "American Heart Association/American Academy of Pediatrics. Pediatric Cardiac Arrest Algorithm. 2025 CPR & ECC Guidelines. Algoritmo oficial consultado em heart.org nesta sessão."]
 ---
 
@@ -45,7 +46,7 @@ flowchart TD
   P6 --> P7
   P7 --> D3
   P8 --> D4
-  D4 -->|"Sim"| P4
+  D4 -->|"Sim — primeiro choque<br/>deste ritmo chocável"| P2
   D4 -->|"Não"| P9
   P9 --> D5
   D5 -->|"Sim"| C1

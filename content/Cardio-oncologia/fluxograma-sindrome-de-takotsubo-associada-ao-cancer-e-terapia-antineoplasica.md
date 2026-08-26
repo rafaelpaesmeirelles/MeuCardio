@@ -6,6 +6,7 @@ kind: fluxograma
 summary: "Árvore de decisão para suspeita de Takotsubo em paciente oncológico, excluindo SCA e overlap com miocardite por ICI."
 review_status: revisado
 source_refs: ["Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568."]
+review_note: "Revisado em 26/08/2026 contra a seção de Takotsubo relacionado ao câncer, a Figura 29 e a Tabela de Recomendação 27 da diretriz ESC 2022 de cardio-oncologia (PMID 36017568). Corrigido o ramo que encaminhava toda pessoa em ICI ao protocolo de miocardite: o papel da imunossupressão no TTS associado a ICI permanece desconhecido; metilprednisolona IV é recomendada quando a CMR demonstra inflamação miocárdica no padrão de TTS. Mantidas exclusão de SCA, interrupção temporária do agente causal e prevenção de fármacos que prolongam QT. Se o tratamento causal for reiniciado após recuperação, foram incluídos biomarcadores antes de cada ciclo de ICI e TTE diante de nova elevação. Pendente revisão médica independente antes de uso assistencial."
 ---
 
 # Takotsubo associado ao câncer
@@ -19,12 +20,12 @@ flowchart TD
   D2{"Padrão compatível com TTS<br/>e coronárias sem causa suficiente?"}
   C1(["Não: migrar para diagnóstico identificado<br/>SCA/miocardite/CTRCD/etc."])
   P3["Sim: interromper temporariamente<br/>o tratamento oncológico causal"]
-  D3{"Paciente em ICI ou CMR sugere<br/>inflamação miocárdica?"}
-  P4["Avaliar overlap com miocardite por ICI;<br/>seguir protocolo específico"]
+  D3{"Paciente em ICI E CMR demonstra<br/>inflamação miocárdica em padrão de TTS?"}
+  P4["Metilprednisolona IV + avaliar overlap<br/>e seguir protocolo de miocardite por ICI"]
   P5["Evitar fármacos QT-prolongadores;<br/>corrigir eletrólitos e monitorar arritmias"]
   D4{"Choque/IC grave?"}
   P6["Tratamento hemodinâmico guiado por eco;<br/>verificar obstrução dinâmica de VSVE"]
-  C2(["Repetir imagem até recuperação;<br/>rechallenge apenas após discussão MDT"])
+  C2(["Repetir imagem até recuperação;<br/>rechallenge apenas após discussão MDT.<br/>Se ICI reiniciado: cTn/NP antes de cada ciclo"])
 
   R0 --> P1
   P1 --> D1
@@ -48,4 +49,4 @@ flowchart TD
 
 ## Regra prática
 
-No câncer, TTS precisa ser separado de **SCA e miocardite por ICI** antes de ser tratado como simples disfunção ventricular por estresse.
+No câncer, TTS precisa ser separado de **SCA e miocardite por ICI** antes de ser tratado como simples disfunção ventricular por estresse. Se houver nova elevação de troponina ou peptídeo natriurético após reinício do ICI, repetir TTE. Inflamação miocárdica deve seguir o [fluxograma de miocardite por ICI](fluxograma-miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025.md); exposição ao ICI sem inflamação não basta para indicar imunossupressão.

@@ -5,7 +5,8 @@ theme: "Terapia intensiva"
 kind: fluxograma
 summary: "Árvore de decisão da hipotermia acidental: separa quem ainda tem circulação (isolamento e transporte para reaquecimento, com rota direta a centro de ECLS se houver risco de instabilidade) de quem já está em parada — onde a temperatura central abaixo ou acima de 30°C decide reter ou não a adrenalina, espaçar o intervalo de doses e adiar novos choques em FV refratária, sempre rumo a reaquecimento por ECLS/ECMO."
 review_status: revisado
-source_refs: ["Lott C, Truhlář A, Alfonzo A, et al.; ERC Special Circumstances Writing Group Collaborators. European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances. Resuscitation. 2021;161:152-219. DOI: 10.1016/j.resuscitation.2021.02.011. PMID: 33773826 — seção 'Hypothermia', caixa de recomendações práticas."]
+review_note: "Atualizado em 26/08/2026 contra ERC/RCUK 2025. Acrescentados FC <45/min como critério de transferência direta a centro ECPR, dose de ataque de amiodarona 300 mg no ritmo chocável com postergação das doses seguintes até >30 °C e a exceção de não administrar adrenalina aos 30 °C quando a ECPR é iminente. A seção de avalanche permanece atribuída à fonte ERC 2021."
+source_refs: ["Lott C, Karageorgos V, Abelairas-Gomez C, et al. European Resuscitation Council Guidelines 2025 Special Circumstances in Resuscitation. Resuscitation. 2025;215 Suppl 1:110753. DOI: 10.1016/j.resuscitation.2025.110753. PMID: 41117569.", "Resuscitation Council UK. Special circumstances guidelines 2025 — seção Accidental hypothermia, texto oficial conferido em 26/08/2026. https://www.resus.org.uk/library/2025-resuscitation-guidelines/special-circumstances-guidelines", "Lott C, Truhlář A, Alfonzo A, et al. European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances. Resuscitation. 2021;161:152-219. DOI: 10.1016/j.resuscitation.2021.02.011. PMID: 33773826 — mantida para o trecho específico de resgate em avalanche."]
 ---
 
 # Hipotermia acidental e parada cardiorrespiratória
@@ -30,7 +31,7 @@ flowchart TD
   D1 -->|"Não — ainda com circulação"| D2
   D1 -->|"Sim — em PCR"| D4
 
-  D2{"Risco de instabilidade iminente:<br/>temperatura central menor que 30°C, arritmia<br/>ventricular ou PAS menor que 90 mmHg?"}
+  D2{"Risco de instabilidade iminente:<br/>temperatura central <30°C, FC <45/min,<br/>arritmia ventricular ou PAS <90 mmHg?"}
   D2 -->|"Sim"| C1
   D2 -->|"Não"| C2
 
@@ -48,10 +49,10 @@ flowchart TD
   D5 -->|"Sim, persiste"| C3
   D5 -->|"Não — ritmo não chocável, ou reverteu"| C4
 
-  C3(["Suspender NOVAS tentativas de desfibrilação até a<br/>temperatura ultrapassar 30°C; manter RCP contínua<br/>(considerar RCP mecânica se transporte prolongado ou terreno<br/>difícil), rumo a reaquecimento por ECLS — preferencialmente ECMO"])
+  C3(["Após o 3º choque: amiodarona 300 mg de ataque;<br/>suspender NOVOS choques e doses adicionais de amiodarona<br/>até a temperatura ultrapassar 30°C; manter RCP contínua<br/>e seguir para reaquecimento por ECLS — preferencialmente VA-ECMO"])
   C4(["Manter RCP contínua, sem adrenalina, enquanto a temperatura<br/>estiver abaixo de 30°C; transporte direto a centro com ECLS<br/>para reaquecimento — preferencialmente ECMO, não CEC"])
 
-  M2["RCP e desfibrilação seguem o algoritmo PADRÃO de PCR (sem<br/>restrição); reintroduzir adrenalina em intervalo DOBRADO —<br/>a cada 6 a 10 minutos — até se aproximar da normotermia (35°C)"]
+  M2["RCP e desfibrilação seguem o algoritmo PADRÃO de PCR;<br/>aos 30°C, adrenalina 1 mg IV (exceto se ECPR iminente);<br/>repetir a cada 6–10 min enquanto a temperatura estiver entre 30–35°C"]
   M2 --> C5
 
   C5(["Ao atingir a normotermia, o protocolo padrão de drogas<br/>volta a valer; prosseguir RCP + reaquecimento (ECLS se<br/>disponível em até 6h; sem ECLS se não disponível) até RCE<br/>ou decisão de interromper"])

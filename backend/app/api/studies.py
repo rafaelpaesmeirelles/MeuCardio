@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.study import ScientificStudy
+from app.services.study_slug_aliases import canonical_study_slug
 
 router = APIRouter(prefix="/api/studies", tags=["estudos"])
 
@@ -71,7 +72,11 @@ def list_studies(
 
 @router.get("/{slug}")
 def get_study(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
-    s = db.query(ScientificStudy).filter(ScientificStudy.slug == slug, ScientificStudy.published.is_(True)).first()
+    canonical_slug = canonical_study_slug(slug)
+    s = db.query(ScientificStudy).filter(
+        ScientificStudy.slug == canonical_slug,
+        ScientificStudy.published.is_(True),
+    ).first()
     if not s:
         raise HTTPException(status_code=404, detail="Estudo não encontrado.")
     return _detail(s)

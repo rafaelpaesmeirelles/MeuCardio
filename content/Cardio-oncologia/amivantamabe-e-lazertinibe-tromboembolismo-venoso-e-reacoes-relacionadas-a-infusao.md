@@ -4,7 +4,8 @@ slug: amivantamabe-e-lazertinibe-tromboembolismo-venoso-e-reacoes-relacionadas-a
 theme: "Cardio-oncologia"
 kind: protocolo
 review_status: revisado
-source_refs: ["Cho BC, Felip E, Hayashi H, et al. Amivantamab plus Lazertinib in Previously Untreated EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2024;391(16):1486-1498. PMID 38924756. doi:10.1056/NEJMoa2403614", "Yang JC, et al. Overall Survival with Amivantamab-Lazertinib in EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2025;393(17):1681-1693. PMID 40923797. doi:10.1056/NEJMoa2503001", "Soo RA, et al. Asia-Pacific practical consensus in the management of adverse events related to amivantamab-based therapies. Lung Cancer. 2026;216:109405. PMID 42048802. doi:10.1016/j.lungcan.2026.109405", "RYBREVANT (amivantamab-vmjw) — bula/rótulo do FDA, DailyMed (National Library of Medicine), setid 1466c070-9f97-4fa4-a955-6a6b59981fb8"]
+review_note: "Revisão independente em 26/08/2026 conferiu o texto integral dos rótulos oficiais DailyMed/FDA de RYBREVANT intravenoso (revisado em 11/2025) e LAZCLUZE (revisado em 04/2026). O rótulo exige profilaxia anticoagulante nos quatro primeiros meses, desaconselha antagonistas da vitamina K, mas não escolhe um anticoagulante específico; essa ausência permanece como limite explícito, não como pendência editorial."
+source_refs: ["Cho BC, Felip E, Hayashi H, et al. Amivantamab plus Lazertinib in Previously Untreated EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2024;391(16):1486-1498. PMID 38924756. doi:10.1056/NEJMoa2403614", "Yang JC, et al. Overall Survival with Amivantamab-Lazertinib in EGFR-Mutated Advanced NSCLC (MARIPOSA). N Engl J Med. 2025;393(17):1681-1693. PMID 40923797. doi:10.1056/NEJMoa2503001", "Soo RA, et al. Asia-Pacific practical consensus in the management of adverse events related to amivantamab-based therapies. Lung Cancer. 2026;216:109405. PMID 42048802. doi:10.1016/j.lungcan.2026.109405", "RYBREVANT (amivantamab-vmjw) — rótulo oficial FDA/DailyMed, setid 1466c070-9f97-4fa4-a955-6a6b59981fb8, revisado em 11/2025", "LAZCLUZE (lazertinib) — rótulo oficial FDA/DailyMed, setid c417f9ee-2027-4ed5-92ad-3c19266de16c, revisado em 04/2026"]
 ---
 
 # Amivantamabe e Lazertinibe: Tromboembolismo Venoso e Reações Relacionadas à Infusão
@@ -71,11 +72,11 @@ A bula do FDA determina **anticoagulação profilática pelos primeiros quatro m
 com a combinação amivantamabe + lazertinibe.
 - **Classe de anticoagulante a evitar, explicitamente**: antagonistas de vitamina K **não são
   recomendados**
-- `VERIFICAÇÃO HUMANA NECESSÁRIA`: a bula consultada nesta sessão **não nomeia um anticoagulante
-  específico** (ex.: apixabana, rivaroxabana ou heparina de baixo peso molecular) como agente
-  preferencial de escolha — apenas exclui antagonistas de vitamina K. Antes de prescrever, confirmar
-  a orientação vigente de escolha de agente (a literatura de consenso de manejo de efeitos adversos,
-  ver abaixo, também não detalhou o agente específico no resumo consultado)
+- **Limite operacional do rótulo**: o texto integral **não nomeia um anticoagulante específico**
+  (por exemplo, apixabana, rivaroxabana ou heparina de baixo peso molecular) como agente preferencial;
+  apenas exclui antagonistas da vitamina K. A escolha do agente, dose e ajustes por função renal,
+  plaquetas, sangramento e interações devem seguir o protocolo de TEV oncológico aplicável, sem
+  atribuir ao rótulo uma preferência que ele não expressa
 - **fonte**: bula RYBREVANT/FDA, DailyMed
 
 O **consenso prático da região Ásia-Pacífico** (2026), voltado especificamente ao manejo de eventos
@@ -89,21 +90,24 @@ indexado, dose ou agente específico de anticoagulante.
   único rótulo regulatório
 
 ## Manejo agudo das reações relacionadas à infusão
+- Na primeira infusão fracionada, o rótulo intravenoso prescreve pré-medicação com glicocorticoide,
+  difenidramina (ou equivalente) e paracetamol; nas infusões subsequentes, anti-histamínico e
+  antipirético permanecem obrigatórios, e o glicocorticoide volta a ser usado conforme a tabela do
+  rótulo e após RRI grau 1–2
+- Na semana 1, dias 1 e 2, administrar por acesso venoso periférico; ter medicação e equipamento de
+  ressuscitação cardiopulmonar disponíveis
 - Interromper a infusão diante de suspeita de RRI
-- Conforme a gravidade: reduzir a velocidade de infusão na retomada, ou descontinuar
-  permanentemente o amivantamabe
-- **fonte**: bula RYBREVANT/FDA, DailyMed. `VERIFICAÇÃO HUMANA NECESSÁRIA`: esta sessão não conferiu
-  o protocolo completo de pré-medicação (corticosteroide, anti-histamínico, antipirético) nem a
-  formulação subcutânea (amivantamabe associado a hialuronidase, Rybrevant FASPRO), que tem perfil
-  de RRI e via de administração diferentes da formulação intravenosa aqui descrita — conferir a bula
-  específica da formulação antes de aplicar este protocolo à via subcutânea
+- RRI grau 1–2: após recuperação, retomar a 50% da velocidade vigente no momento da interrupção e
+  escalar conforme tolerância; RRI grau 3 recorrente ou grau 4: descontinuar definitivamente
+- **fonte**: rótulo RYBREVANT/FDA, DailyMed, seções 2.5 e 5.1. Este protocolo foi validado somente
+  para a formulação **intravenosa**. Não aplicar suas velocidades e pré-medicação à formulação
+  subcutânea RYBREVANT FASPRO, que tem rótulo, via e esquema próprios
 
 ## Contraindicações
-Não identificada, nas fontes consultadas nesta sessão, contraindicação absoluta específica ligada ao
-risco de TEV (por exemplo, TEV ativo nos últimos meses) além do julgamento clínico geral de
-ponderar risco-benefício de iniciar terapia anticoagulante-dependente em paciente com sangramento
-ativo ou risco hemorrágico elevado. `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de assumir ausência de
-contraindicação formal — não localizada nesta sessão não equivale a inexistente.
+O rótulo oficial do RYBREVANT intravenoso, revisado em novembro de 2025, declara **“nenhuma”** na
+seção formal de contraindicações. Isso não elimina a avaliação individual de benefício-risco antes
+de iniciar uma combinação dependente de profilaxia anticoagulante em paciente com sangramento ativo,
+alto risco hemorrágico ou outra contraindicação ao anticoagulante escolhido.
 
 ## Monitorização — síntese prática
 | Momento | Ação |
@@ -119,15 +123,17 @@ contraindicação formal — não localizada nesta sessão não equivale a inexi
 
 ## Situações especiais
 - **Amivantamabe em monoterapia** (sem lazertinibe, por exemplo em linhas posteriores de tratamento
-  pós-progressão a inibidor de EGFR): a magnitude do risco de TEV nesse contexto **não foi
-  quantificada nesta sessão** — os números de 36%/8% acima são específicos da combinação com
-  lazertinibe testada no MARIPOSA. `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de extrapolar a mesma
-  magnitude de risco para o amivantamabe isolado
+  pós-progressão a inibidor de EGFR): o alerta de TEV e a incidência de 36% do rótulo referem-se à
+  combinação com lazertinibe. O rótulo não fornece uma taxa correspondente de TEV para amivantamabe
+  isolado; portanto, **não extrapolar** a magnitude da combinação para a monoterapia
 - **Interação com anticoagulação já em curso por outra indicação** (ex.: paciente já em uso de DOAC
   por fibrilação atrial): ver o eixo geral de interação CYP3A4/P-gp entre DOAC e terapia
-  antineoplásica em `interacao-entre-anticoagulantes-orais-diretos-e-terapia-antineoplasica-cyp3a4-p-gp.md`
-  — não verificado nesta sessão se amivantamabe ou lazertinibe têm interação farmacocinética
-  relevante nesse eixo especificamente; `VERIFICAÇÃO HUMANA NECESSÁRIA`
+  antineoplásica em `interacao-entre-anticoagulantes-orais-diretos-e-terapia-antineoplasica-cyp3a4-p-gp.md`.
+  O rótulo do LAZCLUZE define lazertinibe como **substrato e inibidor fraco de CYP3A4** e como
+  **inibidor de BCRP**; não o caracteriza como inibidor de P-gp. Aumentou a exposição do substrato
+  CYP3A4 midazolam em 1,5 vez (AUC) e do substrato BCRP rosuvastatina em 2 vezes (AUC). Assim, revisar
+  individualmente o rótulo do anticoagulante e monitorar substratos CYP3A4/BCRP para os quais pequenas
+  variações possam causar eventos graves; o rótulo não fornece uma regra única de ajuste para DOAC
 
 ## Armadilha de leitura
 O par TEV 36% / RRI 63% é alto o bastante para parecer, à primeira leitura, motivo para reconsiderar

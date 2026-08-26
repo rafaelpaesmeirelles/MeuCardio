@@ -45,13 +45,14 @@ O benefício é **adjuvante** às medidas-padrão, não substituto delas. A extr
 - evitar intervenções e manipulações desnecessárias do sistema;
 - estimar risco individual e considerar plataformas alternativas quando apropriado.
 
-## Conteúdo CorVIA conectado
+## Tudo com Tudo
 
-- [Infecção de CIED: espectro clínico, biofilme, ETE e explante completo](/biblioteca/infeccao-de-cied-espectro-clinico-biofilme-eco-transesofagico-e-necessidade-de-explante-completo)
-- [Extração transvenosa de eletrodo: segurança e volume do centro](/biblioteca/extracao-de-eletrodo-transvenoso-seguranca-e-o-efeito-do-volume-do-centro)
-- [Complicações de bolsa do gerador](/biblioteca/complicacoes-de-bolso-do-gerador-hematoma-infeccao-erosao-fatores-de-risco-e-prevencao)
-- [Critérios Duke-ISCVID 2023](/biblioteca/duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa)
-- [Fluxograma de endocardite infecciosa ESC 2023](/biblioteca/fluxograma-endocardite-infecciosa-esc-2023)
+- [Fluxograma de suspeita de infecção de CIED, extração e reimplante](fluxograma-suspeita-infeccao-cied-extracao-reimplante-aha-2023.md)
+- [Infecção de CIED: espectro clínico, biofilme, ETE e explante completo](infeccao-de-cied-espectro-clinico-biofilme-eco-transesofagico-e-necessidade-de-explante-completo.md)
+- [Extração transvenosa de eletrodo: segurança e volume do centro](extracao-de-eletrodo-transvenoso-seguranca-e-o-efeito-do-volume-do-centro.md)
+- [Complicações de bolsa do gerador](complicacoes-de-bolso-do-gerador-hematoma-infeccao-erosao-fatores-de-risco-e-prevencao.md)
+- [Critérios Duke-ISCVID 2023](../Endocardite/duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa.md)
+- [Fluxograma de endocardite infecciosa ESC 2023](../Endocardite/fluxograma-endocardite-infecciosa-esc-2023.md)
 
 ## Limites de interpretação
 

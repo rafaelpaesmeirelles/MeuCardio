@@ -62,7 +62,7 @@ Hematócrito elevado isolado não é indicação.
 
 Desidratação pode piorar hiperviscosidade e reduzir pré-carga; expansão excessiva pode piorar falência direita/congestão.
 
-Volume deve ser guiado por clínica e hemodinâmica. Não existe bolus universal para Eisenmenger: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme perfil do paciente e protocolo especializado.
+Volume deve ser guiado por clínica e hemodinâmica. **Limite de evidência:** não existe bolus universal para Eisenmenger; a reposição deve ser titulada ao perfil do paciente e ao protocolo especializado.
 
 ## 5. Arritmias são mal toleradas
 
@@ -73,7 +73,7 @@ A ESC recomenda manter ritmo sinusal sempre que possível. Taquiarritmias podem 
 - cardioversão se instabilidade conforme algoritmo geral;
 - antiarrítmicos devem ser individualizados.
 
-Dose e escolha farmacológica específica: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme ritmo, QT, função ventricular e interações.
+**Limite operacional:** a diretriz não sustenta um antiarrítmico ou dose universal para todos esses cenários; a escolha depende do ritmo, QT, função ventricular e interações.
 
 ## 6. Anticoagulação: não é rotina
 
@@ -104,7 +104,7 @@ Na hipotensão ou falência direita:
 - ajustar pré-carga com cautela;
 - discutir terapia específica de HAP e suporte avançado com centro especializado.
 
-Não existe vasopressor/inotrópico universal para todo paciente Eisenmenger. Dose: **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+**Limite de evidência:** não existe vasopressor, inotrópico ou dose universal para todo paciente com Eisenmenger; a seleção deve seguir o fenótipo hemodinâmico e o protocolo do centro especializado.
 
 ## Armadilhas clínicas
 

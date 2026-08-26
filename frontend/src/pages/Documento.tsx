@@ -26,6 +26,23 @@ type Doc = {
   source_refs: string[]; review_status: string; version: number;
 };
 
+/** Converte links de arquivos do corpus (mesma pasta ou ../Tema/arquivo.md)
+ * na rota pública usada pela biblioteca. Links externos e âncoras permanecem
+ * intactos. */
+function rotaDocumentoMarkdown(href?: string): string | null {
+  if (!href || href.startsWith("#") || href.startsWith("//")) return null;
+  if (/^[a-z][a-z\d+.-]*:/i.test(href)) return null;
+
+  const caminho = href.split(/[?#]/, 1)[0];
+  if (!caminho.toLowerCase().endsWith(".md")) return null;
+
+  const arquivo = caminho.split("/").filter(Boolean).at(-1);
+  if (!arquivo) return null;
+  const slugDestino = arquivo.slice(0, -3);
+  const sufixo = href.slice(caminho.length);
+  return `/biblioteca/${slugDestino}${sufixo}`;
+}
+
 export default function Documento() {
   const { slug } = useParams();
   const [doc, setDoc] = useState<Doc | null>(null);
@@ -56,6 +73,11 @@ export default function Documento() {
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
+            a({ href, children }) {
+              const rotaInterna = rotaDocumentoMarkdown(href);
+              if (rotaInterna) return <Link to={rotaInterna}>{children}</Link>;
+              return <a href={href}>{children}</a>;
+            },
             pre({ children, ...props }) {
               const fonte = fonteMermaid(children);
               if (fonte) return <Fluxograma fonte={fonte} />;

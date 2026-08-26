@@ -35,7 +35,9 @@ from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.models.study_track import StudyTrackProgress
 from app.services.importer import _resolve_markdown_slug, import_directory
+from app.services.study_slug_aliases import canonicalize_study_slugs
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
@@ -314,6 +316,22 @@ def _database_inventory(
     }
 
 
+def _migrate_study_track_progress(db: Session) -> int:
+    """Troca slugs de estudos consolidados dentro do JSONB de progresso.
+
+    A alteração participa da mesma transação da sincronização de publicação:
+    se a reconciliação falhar, o progresso não fica parcialmente migrado.
+    """
+    updated = 0
+    for progress in db.query(StudyTrackProgress).all():
+        current = list(progress.concluidas or [])
+        migrated = canonicalize_study_slugs(current)
+        if set(migrated) != set(current):
+            progress.concluidas = migrated
+            updated += 1
+    return updated
+
+
 def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) -> dict[str, Any]:
     loads: dict[str, Any] = {}
     canonical_slugs: dict[str, set[str]] = {}
@@ -323,6 +341,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     db = SessionLocal()
     try:
         loads["controlados"] = _load_controlled_substances(db)
+        migrated_study_track_progress = _migrate_study_track_progress(db)
         published, unpublished_absent, unpublished_unreviewed = _synchronize_publication(
             db, canonical_slugs, publish_reviewed=publish_reviewed
         )
@@ -335,6 +354,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,
+        "migrated_study_track_progress": migrated_study_track_progress,
         "database": database,
     }
     if database["below_minimum"] and not allow_partial:
