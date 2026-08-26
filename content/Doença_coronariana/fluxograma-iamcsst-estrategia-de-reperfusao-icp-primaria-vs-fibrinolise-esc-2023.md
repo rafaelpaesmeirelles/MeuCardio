@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 summary: "Ramo de reperfusão do IAM com supra de ST na ESC 2023: relógio zerado no diagnóstico, ICP primária quando previsível em menos de 120 min, fibrinólise com bolus em menos de 10 min quando não, ICP de resgate ou angiografia de rotina em 2 a 24 h após a lise, e a conduta acima de 12 h conforme sintomas e instabilidade."
 review_status: revisado
-review_note: "Produção científica assistida (Claude, 26/08/2026); pendente de revisão independente e validação médica final. Conferido nesta sessão: texto integral das tabelas de recomendação da diretriz ESC 2023 de SCA (reperfusão no STEMI, transferência e intervenção após fibrinólise, terapia fibrinolítica, choque cardiogênico, logística hospitalar) e a figura de seleção da estratégia de reperfusão com os alvos de tempo, extraídos do slide set oficial da ESC (escardio.org); Tabelas S10 e S11 e seção 6.3 do material suplementar oficial (ehad191); metadados bibliográficos via Europe PMC. Derivado de stemi-estrategia-de-reperfusao-esc-2023.md, já publicado e verificado no acervo. O texto principal em academic.oup.com foi aberto, mas chega truncado antes da seção de reperfusão; as classes e níveis citados vêm do slide set oficial. Verificação adversarial (Claude, 26/08/2026): PDF integral da diretriz obtido via repisalud.isciii.es; conferidos com o texto integral todas as classes e níveis (Tabelas de Recomendação 3, 4, 7 e 9), os alvos de 60/90/10 min da Figura 7, a Tabela S11 e a Tabela S10 do suplemento, e DOI/PMID no Crossref/PubMed; nenhum número divergente. Correção: o nó de choque cardiogênico passou a citar a fibrinólise como alternativa (Classe IIa, nível C) quando a ICP primária não está disponível em 120 min e complicações mecânicas foram afastadas, conforme a Tabela de Recomendação 9; acrescentado o nível A às recomendações de anticoagulação e enoxaparina na fibrinólise (Tabela 7). Links do Tudo com Tudo conferidos, todos existentes no acervo."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. https://academic.oup.com/eurheartj/article/44/38/3720/7243210 (PDF integral: https://repisalud.isciii.es/bitstreams/8a2baba3-4a53-4627-ba4c-7198e25cc21b/download)"
   - "European Society of Cardiology. 2023 ESC Guidelines for the management of acute coronary syndromes — Slide Set (educational material). Recommendation tables for reperfusion therapy and timing of invasive strategy, fibrinolytic therapy, cardiogenic shock, and Figure on modes of presentation and pathways to invasive management in STEMI. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-coronary-syndromes/ (arquivo: https://dam-assets.escardio.org/download/ef329bf6d04711f0a67aaa68fd75a686)"
@@ -51,10 +51,10 @@ flowchart TD
   C9(["Considerar estratégia de ICP primária<br/>de rotina no apresentador tardio"])
   C10(["ICP de rotina da artéria ocluída<br/>não recomendada acima de 48 h sem sintomas<br/>Tratamento clínico e avaliação seletiva"])
 
-  R0 --> D1
+  R0 --> D2
+  D2 -->|"Sim, até 12 h"| D1
   D1 -->|"Sim"| C1
-  D1 -->|"Não"| D2
-  D2 -->|"Sim, até 12 h"| D3
+  D1 -->|"Não"| D3
   D3 -->|"Sim"| C2
   D3 -->|"Não: centro sem hemodinâmica<br/>ou ambulância"| D4
   D4 -->|"Sim"| C3

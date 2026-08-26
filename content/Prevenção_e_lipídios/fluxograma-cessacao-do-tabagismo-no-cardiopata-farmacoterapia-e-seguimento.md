@@ -5,7 +5,7 @@ theme: "Prevenção e lipídios"
 kind: fluxograma
 summary: "Caminho decisório da cessação tabágica em quem já tem doença cardiovascular: perguntar, aconselhar e avaliar disposição; vareniclina como primeira linha ou TRN combinada, bupropiona como alternativa; início ainda na internação após SCA; entrevista motivacional para quem não está pronto; e o que fazer na recaída."
 review_status: revisado
-review_note: "Produção científica assistida (Claude, 26/08/2026); pendente de revisão independente e validação médica final. Conferido nesta sessão: seção 4.5 e tabela de recomendações da ESC 2021 de prevenção (PDF integral, texto extraído), abstract do EVITA (Circulation 2016) e do seguimento de 1 ano (CMAJ 2018), abstract do EAGLES (Lancet 2016), abstracts das revisões Cochrane 2024 (pacientes internados) e 2023 (doses e formas de TRN), bula Chantix no DailyMed (rev. 6/2025) e bula Zyban na FDA (rev. 6/2016, texto integral). Derivado do documento do acervo sobre o EAGLES, já publicado e verificado. A escala de dose do adesivo de nicotina por cigarros/dia e a duração padrão da TRN não foram conferidas em fonte primária e estão marcadas."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
 source_refs:
   - "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905. Seção 4.5 (Smoking intervention), Tabela 9 e tabela de recomendações, lidas no PDF integral: https://www.sciensano.be/sites/default/files/2021_esc_guidelines_prevention_cardiovasculaire_3.pdf"
   - "Eisenberg MJ, Windle SB, Roy N, et al.; EVITA Investigators. Varenicline for Smoking Cessation in Hospitalized Patients With Acute Coronary Syndrome. Circulation. 2016;133(1):21-30. DOI: 10.1161/CIRCULATIONAHA.115.019634. PMID: 26553744. Abstract lido via Europe PMC."
@@ -90,7 +90,7 @@ A alternativa à vareniclina é a TRN combinada — adesivo mais uma forma de cu
 |---|---|---|---|
 | Vareniclina | 0,5 mg 1x/dia nos dias 1–3; 0,5 mg 2x/dia nos dias 4–7; 1 mg 2x/dia a partir do dia 8. Começar 1 semana antes da data de parada ou parar entre o dia 8 e o 35; quem não consegue parar de uma vez pode reduzir 50% a cada 4 semanas ao longo de 12 semanas e seguir por mais 12 | 12 semanas; mais 12 semanas nos que pararam, para reduzir recaída. ClCr abaixo de 30 mL/min: máximo 0,5 mg 2x/dia; diálise: 0,5 mg 1x/dia se tolerado. Contraindicação: hipersensibilidade grave ou reação cutânea prévia | Bula Chantix, DailyMed, rev. 6/2025 |
 | Bupropiona SR | 150 mg 1x/dia por 3 dias, depois 150 mg 2x/dia com intervalo mínimo de 8 h; máximo 300 mg/dia; iniciar cerca de 1 semana antes da data de parada, fixada nas 2 primeiras semanas | 7 a 12 semanas; prolongar é decisão individual. Insuficiência hepática moderada a grave: máximo 150 mg em dias alternados; renal: reduzir dose ou frequência. Aferir pressão antes e durante | Bula Zyban, FDA, rev. 6/2016 |
-| Adesivo de nicotina | 21 mg/dia com desmame, esquema do braço do EAGLES; associar forma de curta ação (goma de 4 mg preferível à de 2 mg segundo a ESC) | 12 semanas no EAGLES. Escala de dose do adesivo por cigarros/dia e duração padrão do desmame: VERIFICAÇÃO HUMANA NECESSÁRIA | EAGLES (acervo), ESC 2021, Cochrane 2023 |
+| Adesivo de nicotina | Mais de 10 cigarros/dia: 21 mg/dia nas semanas 1–4, 14 mg nas semanas 5–6 e 7 mg nas semanas 7–8. Dez ou menos/dia: 14 mg/dia por 6 semanas e 7 mg/dia por 2 semanas. Pode-se associar forma de curta ação | 8 semanas no esquema de bula; 12 semanas no EAGLES | DailyMed, EAGLES, ESC 2021, Cochrane 2023 |
 
 ## Seguimento e recaída
 
@@ -100,7 +100,7 @@ Sobre cigarro eletrônico: a ESC 2021 reconhece evidência recente de que é pro
 
 ## Limitações e o que confirmar
 
-- Escala de dose do adesivo de nicotina por número de cigarros/dia e a duração padrão do desmame não foram lidas em bula ou diretriz nesta sessão: VERIFICAÇÃO HUMANA NECESSÁRIA antes de prescrever a partir da tabela.
+- O esquema do adesivo segue a rotulagem DailyMed atualizada em 2025; marcas disponíveis no Brasil podem ter apresentações e instruções próprias.
 - Os números do EVITA, do EAGLES e das revisões Cochrane vêm dos abstracts e do documento do acervo, não do texto integral; a ESC 2021 foi lida no PDF integral.
 - A bula da Zyban usada é a versão da FDA de 2016, a mais recente aberta nesta sessão; o DailyMed não tem mais rótulo ativo da marca. A posologia brasileira de bupropiona e de vareniclina (Anvisa) não foi conferida.
 - A ESC 2021 classifica a farmacoterapia como IIa A em bloco, sem hierarquizar vareniclina sobre os demais; a ordem de escolha desta árvore vem do EAGLES e da metanálise em rede citada pela diretriz, não de uma recomendação com classe própria.

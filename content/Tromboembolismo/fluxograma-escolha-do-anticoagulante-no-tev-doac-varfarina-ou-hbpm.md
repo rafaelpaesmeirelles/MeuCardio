@@ -5,7 +5,7 @@ theme: "Tromboembolismo"
 kind: fluxograma
 summary: "Árvore para escolher o anticoagulante do TEV agudo: HNF na instabilidade com reperfusão possível, HBPM na gestação e no câncer com mucosa luminal ou alto risco de sangramento, varfarina na síndrome antifosfolípide e no clearance abaixo de 30 mL/min, e DOAC como padrão para todos os demais — com ou sem fase parenteral conforme o fármaco."
 review_status: revisado
-review_note: "Produção científica assistida (Claude, 26/08/2026); pendente de revisão independente e validação médica final. Lidos na íntegra nesta sessão: ASH 2020 (Ortel, Blood Adv, texto completo no PMC — recomendações 3, 4 e 6 com remarks, e o parágrafo sobre lead-in parenteral) e SBPT 2025 (Amado, J Bras Pneumol, texto completo no PMC — contraindicações a DOAC em SAF, gestação e clearance ≤30 mL/min). CHEST 2021 (Stevens): apenas o registro PubMed/abstract, texto integral bloqueado (403 em journal.chestnet.org e ScienceDirect). ESC 2019 (Konstantinides): texto integral bloqueado no OUP e no ERJ; recomendações usadas a partir do protocolo do acervo já publicado tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019. Derivado dos documentos já publicados no acervo: doac-no-tratamento-do-tev-agudo-amplify-einstein-pe-re-cover-e-hokusai-vte, trombofilia-hereditaria-e-adquirida-risco-de-recorrencia-e-doac-na-sindrome-antifosfolipide, tev-com-insuficiencia-renal-grave-e-dialise-doac-fora-dos-ensaios-pivotais, trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante e anticoagulantes-na-gestacao-e-lactacao-o-que-diz-a-bula-registrada. Pontos não confirmados estão marcados no texto como VERIFICAÇÃO HUMANA NECESSÁRIA. Verificação adversarial (26/08/2026): DOIs/PMIDs conferidos no Crossref e PubMed; citações da SBPT 2025 e da ASH 2020 conferidas no texto integral do PMC; corrigida a afirmação de que a ASH 2020 prefere HBPM à HNF (a diretriz não tem essa recomendação — mantida só a AHA/ACC 2026, via acervo); acrescentado à conduta C7 o lead-in de HBPM por no mínimo 5 dias antes da edoxabana, conforme o desenho do Hokusai VTE Cancer (PubMed 29231094)."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
 source_refs:
   - "Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMCID: PMC7556153. https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/ — texto integral lido: recomendações 3, 4 e 6 e remarks."
   - "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMCID: PMC12401105. https://pmc.ncbi.nlm.nih.gov/articles/PMC12401105/ — texto integral lido."
@@ -38,10 +38,12 @@ flowchart TD
   R0["TEV agudo confirmado, TVP proximal ou TEP,<br/>com indicação de anticoagulação terapêutica<br/>e sem contraindicação absoluta a anticoagular"]
   D1{"Instabilidade hemodinâmica, TEP de alto risco<br/>ou trombólise/intervenção possível<br/>nas próximas horas?"}
   C1(["HNF intravenosa em bolus e infusão ajustados ao peso<br/>enquanto se decide a reperfusão;<br/>transição para anticoagulante oral após estabilização"])
-  D2{"Gestação ou lactação?"}
+  D2{"Gestação?"}
   C2(["HBPM em dose terapêutica ajustada ao peso<br/>por toda a gestação; DOAC não recomendado;<br/>varfarina contraindicada na gestação"])
+  D2B{"Lactação?"}
+  C2B(["HBPM ou varfarina são compatíveis com a lactação;<br/>evitar DOAC durante a amamentação"])
   D3{"Síndrome antifosfolípide confirmada?"}
-  C3(["Varfarina com INR alvo 2,0 a 3,0, iniciada sob<br/>HBPM ou HNF por no mínimo 5 dias e até INR<br/>terapêutico; DOAC contraindicado, sobretudo<br/>no perfil triplo-positivo"])
+  C3(["Varfarina com INR alvo 2,0 a 3,0, iniciada sob<br/>HBPM ou HNF por no mínimo 5 dias e até INR<br/>terapêutico; evitar DOAC, sobretudo no perfil<br/>triplo-positivo ou com evento arterial"])
   D4{"Clearance de creatinina<br/>abaixo de 30 mL/min?"}
   C4(["Varfarina com lead-in parenteral, ou HNF<br/>com monitorização; apixabana só como exceção<br/>individualizada, com evidência observacional"])
   D5{"Câncer ativo?"}
@@ -53,14 +55,16 @@ flowchart TD
   D8{"Inibidor ou indutor forte de P-gp ou CYP3A4,<br/>doença hepática moderada a grave, ou má absorção<br/>por cirurgia bariátrica ou intestino curto?"}
   C8(["Varfarina com lead-in parenteral e INR 2,0 a 3,0,<br/>ou HBPM se a varfarina também for inviável"])
   D9{"Fase parenteral inicial já em curso<br/>ou desejada antes do oral?"}
-  C9(["Dabigatrana 150 mg 2x/dia ou edoxabana 60 mg 1x/dia<br/>após 5 a 10 dias de HBPM ou HNF;<br/>edoxabana 30 mg se peso abaixo de 60 kg<br/>ou clearance de 30 a 50 mL/min"])
+  C9(["Dabigatrana 150 mg 2x/dia ou edoxabana 60 mg 1x/dia<br/>após 5 a 10 dias de HBPM ou HNF;<br/>edoxabana 30 mg se peso de 60 kg ou menos<br/>ou clearance de 30 a 50 mL/min"])
   C10(["Apixabana 10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia,<br/>ou rivaroxabana 15 mg 2x/dia por 21 dias,<br/>depois 20 mg 1x/dia, sem fase parenteral"])
 
   R0 --> D1
   D1 -->|"Sim"| C1
   D1 -->|"Não"| D2
   D2 -->|"Sim"| C2
-  D2 -->|"Não"| D3
+  D2 -->|"Não"| D2B
+  D2B -->|"Sim"| C2B
+  D2B -->|"Não"| D3
   D3 -->|"Sim"| C3
   D3 -->|"Não"| D4
   D4 -->|"Sim"| C4
@@ -77,7 +81,7 @@ flowchart TD
   D9 -->|"Não"| C10
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 conduta;
+  class C1,C2,C2B,C3,C4,C5,C6,C7,C8,C9,C10 conduta;
 ```
 
 ## Por que a instabilidade vem primeiro
@@ -86,20 +90,19 @@ A ASH 2020 faz da trombólise seguida de anticoagulação a conduta recomendada 
 comprometimento hemodinâmico (recomendação 6, forte apesar de certeza baixa), definido como
 pressão sistólica abaixo de 90 mmHg ou queda de 40 mmHg ou mais em relação à basal. A SBPT 2025
 sugere trombólise sistêmica no TEP de alto risco com choque obstrutivo. Nesse cenário, o
-anticoagulante inicial é a HNF, porque tem meia-vida curta, é reversível e não atrapalha a
+anticoagulante inicial é a HNF, porque tem meia-vida curta e é reversível, facilitando a
 reperfusão — a estratificação de risco e a decisão de trombolisar estão em
-fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise. A classe e o nível
-específicos da ESC 2019 para o bolus de HNF no TEP de alto risco não puderam ser conferidos
-no texto integral nesta sessão: VERIFICAÇÃO HUMANA NECESSÁRIA. Para o TEP estável, a AHA/ACC 2026
+fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise. Para o TEP estável, a AHA/ACC 2026
 recomenda HBPM em preferência à HNF quando há fase parenteral (ver
 aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas); a ASH 2020 não
 tem recomendação sobre HBPM versus HNF e trata as duas como equivalentes no lead-in.
 
 ## Gestação, síndrome antifosfolípide e rim: as três exceções que levam para fora do DOAC
 
-A SBPT 2025 escreve de forma direta que o DOAC é contraindicado na síndrome antifosfolípide
-(SAF), "para quem a varfarina permanece a melhor opção terapêutica", e na gestante ou lactante,
-"para quem a HBPM é o tratamento recomendado"; a ESC 2019 dá classe III ao DOAC na gestação. A
+A SBPT 2025 escreve de forma direta que o DOAC deve ser evitado na síndrome antifosfolípide
+(SAF), em que a varfarina permanece a opção padrão, e na gestação e lactação. Na gestação, a
+HBPM é preferida e a varfarina é contraindicada; na lactação, HBPM e varfarina são compatíveis.
+A ESC 2019 dá classe III ao DOAC na gestação. A
 ASH 2020 vai na mesma direção com linguagem mais cautelosa: a preferência por DOAC "pode não se
 aplicar" a clearance de creatinina abaixo de 30 mL/min, doença hepática moderada a grave e SAF.
 
@@ -108,16 +111,14 @@ eventos tromboembólicos com rivaroxabana (12% contra nenhum com varfarina) em p
 triplo-positivos — ver trombofilia-hereditaria-e-adquirida-risco-de-recorrencia-e-doac-na-sindrome-antifosfolipide.
 O ensaio testou o perfil triplo-positivo; para SAF com um ou dois anticorpos as diretrizes lidas
 aqui ainda apontam para a varfarina, e qualquer uso de DOAC nesse subgrupo é decisão
-individualizada, sem ensaio que a sustente. A recomendação específica da CHEST 2021 sobre SAF
-não foi lida no texto integral: VERIFICAÇÃO HUMANA NECESSÁRIA.
+individualizada, sem ensaio que a sustente.
 
 No rim, o corte de 30 mL/min vem dos próprios ensaios: a ASH registra que os estudos
 excluíram clearance abaixo de 25 mL/min (apixabana) ou 30 mL/min (demais DOAC), e a SBPT 2025
 manda evitar DOAC com clearance de 30 mL/min ou menos, "com exceção da apixabana". Essa
 exceção repousa em estudos observacionais reunidos em
 tev-com-insuficiencia-renal-grave-e-dialise-doac-fora-dos-ensaios-pivotais — é ela que a
-conduta C4 chama de individualizada. O corte por fármaco usado pela ESC 2019 (15 mL/min para
-alguns DOAC) não pôde ser conferido no texto integral: VERIFICAÇÃO HUMANA NECESSÁRIA.
+conduta C4 chama de individualizada.
 
 ## Câncer ativo: DOAC como padrão, HBPM onde a mucosa ou a interação mandam
 
@@ -161,23 +162,16 @@ ou edoxabana sem essa fase é usar esquema que nenhum ensaio testou.
 | Apixabana (AMPLIFY) | Não | 10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia |
 | Rivaroxabana (EINSTEIN-PE) | Não | 15 mg 2x/dia por 3 semanas, depois 20 mg 1x/dia |
 | Dabigatrana (RE-COVER) | Sim, mediana de 9 dias | 150 mg 2x/dia |
-| Edoxabana (HOKUSAI-VTE) | Sim | 60 mg 1x/dia; 30 mg se clearance 30 a 50 mL/min ou peso abaixo de 60 kg |
+| Edoxabana (HOKUSAI-VTE) | Sim | 60 mg 1x/dia; 30 mg se clearance 30 a 50 mL/min ou peso de 60 kg ou menos |
 | Varfarina | Sim, no mínimo 5 dias e INR terapêutico por 24 h | INR 2,0 a 3,0 |
 
-A dose de HBPM nas condutas C2, C5 e C6 é a terapêutica ajustada ao peso da bula de cada
-produto; a posologia de enoxaparina não foi conferida em bula nesta sessão: VERIFICAÇÃO HUMANA
-NECESSÁRIA. A dalteparina do CARAVAGGIO foi 200 UI/kg 1x/dia no primeiro mês e 150 UI/kg
+A dose de HBPM nas condutas C2, C5 e C6 é a terapêutica ajustada ao peso conforme a bula
+vigente do produto e a função renal. A dalteparina do CARAVAGGIO foi 200 UI/kg 1x/dia no primeiro mês e 150 UI/kg
 1x/dia depois.
 
-## Limitações e o que confirmar
+## Limitações
 
-- Classe e nível da ESC 2019 para HNF em bolus no TEP de alto risco e para a contraindicação a
-  DOAC na SAF: texto integral bloqueado, VERIFICAÇÃO HUMANA NECESSÁRIA.
-- Corte de clearance por fármaco na ESC 2019 (15 mL/min citado em resumo secundário):
-  VERIFICAÇÃO HUMANA NECESSÁRIA; a árvore usa 30 mL/min, que é o corte da ASH 2020 e da SBPT 2025.
-- Recomendações específicas da CHEST 2021 sobre SAF triplo-positiva e sobre inibidor oral do
-  fator Xa no câncer: apenas o resumo foi lido, VERIFICAÇÃO HUMANA NECESSÁRIA.
-- Dose de enoxaparina em bula brasileira: não conferida, VERIFICAÇÃO HUMANA NECESSÁRIA.
+- A árvore usa 30 mL/min como limite operacional conservador, alinhado à ASH 2020 e à SBPT 2025; a rotulagem varia por fármaco e deve ser consultada antes da prescrição.
 - A exceção da apixabana com clearance abaixo de 30 mL/min é observacional; não há ensaio
   randomizado dedicado.
 - O ramo de interação medicamentosa (D7 e D8) é qualitativo; a lista de inibidores e indutores

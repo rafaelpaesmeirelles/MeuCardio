@@ -5,7 +5,7 @@ theme: "Gravidez"
 kind: fluxograma
 summary: "Manejo não emergencial da gestante com PA de 140/90 mmHg ou mais pela ESC 2025 e ESC 2024: separar crônica de gestacional pelas 20 semanas, reconhecer pré-eclâmpsia por proteinúria ou lesão de órgão, tratar a partir de 140/90 com alvo abaixo de 140/90, escolher labetalol, nifedipino ou metildopa, suspender IECA/BRA, indicar AAS e programar o parto conforme o diagnóstico."
 review_status: revisado
-review_note: "Produção científica assistida (Claude, 26/08/2026); pendente de revisão independente e validação médica final. Lidas na íntegra a seção 12.3 (Hypertensive disorders, Tabelas 14 e 15, Figuras 12A-12C e Recommendation Table 13) da ESC 2025 de doença cardiovascular e gravidez e a seção 9.2 (Pregnancy, Recommendation Table 22) e 10.4.2 da ESC 2024 de hipertensão, ambas em PDF do texto completo. Derivado dos documentos já publicados no acervo sobre CHAP, CHIPS/Magpie/Easterling, profilaxia com AAS, HYPITAT e bulas de anti-hipertensivos. Ponto marcado: corte de albumina/creatinina para proteinúria diverge dentro da própria ESC 2025 (Tabela 14 vs Figura 12B). Verificação adversarial (26/08/2026) contra os dois PDFs: DOIs/PMIDs conferidos no Crossref e PubMed; todos os números clínicos bateram. Ajustes: folha C6 passou a prever iniciar (não só manter) o anti-hipertensivo na gestacional diagnosticada a partir de 39 semanas; célula do nifedipino explicita que a Figura 12C não define formulação nem frequência; no Tudo com Tudo, o fluxograma geral de DCV e gravidez (que não trata de hipertensão) foi trocado pelo artigo de sFlt-1/PlGF citado no texto."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
 source_refs:
   - "De Backer J, Haugaa KH, Hasselberg NE, de Hosson M, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294. Seção 12.3, Tabelas 14-15, Figuras 12A-12C e Recommendation Table 13 lidas em 26/08/2026 no PDF integral: https://www.northwestchdnetwork.nhs.uk/wp-content/uploads/2025/12/ESC-Guidelines-for-the-management-of-CVD-in-Pregnancy-2025.pdf"
   - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715. Seções 9.2 (Recommendation Table 22) e 10.4.2 lidas em 26/08/2026 no PDF integral: https://www.cardioaragon.com/wp-content/uploads/2024-ESC-Guidelines-for-the-management-of-hypertension.EHeartJ.2024_.pdf"
@@ -32,12 +32,13 @@ flowchart TD
   R0["Gestante com PA de consultório de 140/90 mmHg ou mais,<br/>confirmada em duas ocasiões separadas,<br/>com aparelho validado para gestação"]
   D1{"PAS de 160 mmHg ou mais<br/>ou PAD de 110 mmHg ou mais?"}
   C1(["Emergência: internação e redução gradual da PA<br/>em ambiente hospitalar, com cardiotocografia contínua<br/>ver fluxograma de eclâmpsia e hipertensão grave"])
-  D2{"Proteinúria nova, disfunção de órgão materno<br/>ou disfunção uteroplacentária?"}
+  D0{"Idade gestacional<br/>abaixo de 20 semanas?"}
+  D2{"Com 20 semanas ou mais: proteinúria nova,<br/>disfunção de órgão materno ou<br/>disfunção uteroplacentária?"}
   P1["Pré-eclâmpsia: exames laboratoriais, avaliação<br/>do nível de cuidado e internação<br/>se houver preocupação clínica"]
   D3{"Característica grave: complicação neurológica,<br/>hematológica, cardiovascular, hepática ou renal?"}
   C2(["Pré-eclâmpsia com características graves:<br/>sulfato de magnésio para prevenir eclâmpsia<br/>e antecipação do parto<br/>ver fluxograma de eclâmpsia e hipertensão grave"])
   C3(["Pré-eclâmpsia sem características graves:<br/>anti-hipertensivo oral com alvo abaixo de 140/90 mmHg,<br/>PA pelo menos a cada 48 h, exames duas vezes por semana,<br/>parto às 37 semanas"])
-  D4{"Hipertensão prévia à gestação<br/>ou iniciada antes de 20 semanas?"}
+  D4{"Hipertensão conhecida antes da gestação<br/>ou documentada antes de 20 semanas?"}
   P2["Hipertensão crônica: rastrear causa secundária,<br/>proteinúria basal e exames laboratoriais,<br/>AAS 75 a 150 mg à noite da 12ª à 36ª ou 37ª semana"]
   D5{"Em uso de IECA, BRA<br/>ou inibidor direto de renina?"}
   C4(["Suspender o bloqueador do sistema renina-angiotensina<br/>e substituir por labetalol, nifedipino de liberação<br/>prolongada ou metildopa, alvo abaixo de 140/90 mmHg,<br/>parto planejado em torno de 39 semanas"])
@@ -49,17 +50,19 @@ flowchart TD
 
   R0 --> D1
   D1 -->|"Sim"| C1
-  D1 -->|"Não, PA entre 140/90 e 159/109 mmHg"| D2
+  D1 -->|"Não, PA entre 140/90 e 159/109 mmHg"| D0
+  D0 -->|"Sim"| P2
+  D0 -->|"Não, 20 semanas ou mais"| D2
   D2 -->|"Sim"| P1
   P1 --> D3
   D3 -->|"Sim"| C2
   D3 -->|"Não"| C3
   D2 -->|"Não"| D4
   D4 -->|"Sim, crônica"| P2
+  D4 -->|"Não, início após 20 semanas"| P3
   P2 --> D5
   D5 -->|"Sim"| C4
   D5 -->|"Não"| C5
-  D4 -->|"Não, após 20 semanas"| P3
   P3 --> D6
   D6 -->|"Sim"| C6
   D6 -->|"Não"| C7
@@ -91,15 +94,16 @@ crônica possa manter a dieta hipossódica que já fazia.
 
 ## Pré-eclâmpsia: proteinúria ou lesão de órgão
 
-Pré-eclâmpsia é hipertensão gestacional acompanhada, a partir de 20 semanas, de
+Pré-eclâmpsia é hipertensão acompanhada, a partir de 20 semanas, de
 pelo menos um dos achados abaixo (Tabela 14 da ESC 2025). Na hipertensa crônica,
 o mesmo conjunto — ou elevação adicional da PA com proteinúria nova — define a
-pré-eclâmpsia sobreposta, e por isso o nó D2 vem antes da separação
-crônica/gestacional.
+pré-eclâmpsia sobreposta. Por isso a árvore verifica primeiro se a gestação já
+alcançou 20 semanas e, só então, procura esses achados antes de separar a
+hipertensão crônica da gestacional.
 
 | Critério | Corte na ESC 2025 |
 |---|---|
-| Proteinúria | mais de 0,3 g em urina de 24 h ou albumina/creatinina em amostra isolada acima de 30 mg/mmol (Tabela 14); a Figura 12B usa albumina/creatinina de 8 mg/mmol ou proteína/creatinina de 30 mg/mmol ou mais — VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao corte de albumina/creatinina a adotar |
+| Proteinúria | 0,3 g ou mais em urina de 24 h, relação proteína/creatinina de 30 mg/mmol ou mais, ou relação albumina/creatinina de 8 mg/mmol ou mais (Figura 12B da ESC 2025) |
 | Lesão renal aguda | creatinina de 90 μmol/L (1 mg/dL) ou mais |
 | Disfunção hepática | ALT ou AST acima de 40 UI/L, com ou sem dor epigástrica ou em hipocôndrio direito |
 | Complicação neurológica | eclâmpsia, alteração do estado mental, cegueira, AVC, clônus, cefaleia intensa, escotomas persistentes |
@@ -187,12 +191,11 @@ reavaliação em 6 a 12 semanas, 6 e 12 meses e depois anual, porque o risco de
 hipertensão crônica é máximo nos primeiros 6 meses. A hipertensão pós-parto não
 complicada é tratada com nifedipino ou labetalol.
 
-## Limitações e o que confirmar
+## Limitações
 
-- Corte de proteinúria por albumina/creatinina: a Tabela 14 da ESC 2025 usa
-  acima de 30 mg/mmol e a Figura 12B usa 8 mg/mmol ou mais; a ESC 2024 diz que
-  abaixo de 30 mg/mmol exclui proteinúria. O fluxograma não escolhe entre eles —
-  VERIFICAÇÃO HUMANA NECESSÁRIA.
+- Para operacionalizar proteinúria, a árvore adota os cortes da Figura 12B da
+  ESC 2025: relação proteína/creatinina de 30 mg/mmol ou relação
+  albumina/creatinina de 8 mg/mmol. Esses dois exames não são intercambiáveis.
 - Dose de AAS: 75 a 150 mg (ESC 2025) versus 100 a 150 mg (ESC 2024); término
   em 36 ou 37 semanas. O texto traz as duas.
 - Classe da emergência em 160/110 mmHg: I C na ESC 2025, IIa C na ESC 2024.

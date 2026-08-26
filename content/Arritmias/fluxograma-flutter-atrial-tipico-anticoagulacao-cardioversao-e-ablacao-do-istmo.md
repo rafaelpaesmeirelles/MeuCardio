@@ -5,7 +5,7 @@ theme: "Arritmias"
 kind: fluxograma
 summary: "Árvore de decisão do flutter atrial típico: cardioversão elétrica imediata no instável; no estável, anticoagulação como na FA pelo CHA2DS2-VA, controle de frequência com bloqueadores do nó AV, reversão por cardioversão de baixa energia, ibutilida/dofetilida ou estimulação atrial, e ablação do istmo cavotricuspídeo como tratamento de primeira linha no flutter sintomático recorrente."
 review_status: revisado
-review_note: "Produção científica assistida (Claude, 26/08/2026); pendente de revisão independente e validação médica final. Lidas na íntegra, a partir do PDF da OUP, a seção 11.1.4 (flutter/MRAT, tabela de recomendações, Figuras 11 e 12) da diretriz ESC 2019 de TSV e, da diretriz ESC 2024 de FA, a Recommendation Table 6 (CHA2DS2-VA), a tabela de cardioversão (3 semanas, ETE, 4 semanas, 24 h), a tabela de controle de frequência e a seção 9.14 com a Recommendation Table 30 (flutter). Derivado dos documentos já publicados no acervo flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo.md, ablacao-do-istmo-cavotricuspideo-no-flutter-atrial-tipico-primeira-linha-sucesso-e-recorrencia.md (LADIP), fluxograma-fibrilacao-atrial-af-care-esc-2024.md e fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento.md. Verificação adversarial (Claude, 26/08/2026) contra o texto das duas diretrizes: todas as classes/níveis, percentuais, PMIDs e DOIs conferidos; corrigido o nível de evidência do alvo leniente de repouso abaixo de 110 bpm, de IIa C para IIa B (ESC 2024, tabela de controle de frequência); os 7 links do Tudo com Tudo apontam para slugs existentes."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
 source_refs:
   - "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. https://academic.oup.com/eurheartj/article/41/5/655/5556821 (PDF lido na íntegra: seção 11.1.4 e tabela de recomendações para arritmias atriais macrorreentrantes)."
   - "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. https://academic.oup.com/eurheartj/article/45/36/3314/7738779 (PDF lido: Recommendation Tables 6 e 30, tabelas de cardioversão e de controle de frequência, seção 9.14)."
@@ -102,7 +102,7 @@ A adenosina não é tratamento: a ESC 2019 admite seu uso apenas para desmascara
 
 ## Reversão no estável: elétrica, farmacológica ou por estimulação
 
-O ramo D3 aplica ao flutter a regra de cardioversão da ESC 2024, cuja tabela nomeia explicitamente "FA e flutter atrial" na exigência de 3 semanas de anticoagulação terapêutica antes de cardioversão programada (Classe I, nível B), com ETE para excluir trombo quando as 3 semanas não foram cumpridas (Classe I, nível B). Cardioversão precoce sem anticoagulação adequada ou ETE não é recomendada quando a duração passa de 24 h (Classe III, nível C). Essa regra de 24 h está escrita para FA; a ESC 2019 usava 48 h para o flutter. O corte mais conservador de 24 h é o adotado na árvore — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à aplicação literal desse corte ao flutter isolado. A via eletiva está detalhada em [fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento](/biblioteca/fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento).
+O ramo D3 aplica ao flutter a estratégia de segurança da ESC 2024, cuja tabela nomeia explicitamente "FA e flutter atrial" na exigência de 3 semanas de anticoagulação terapêutica antes de cardioversão programada (Classe I, nível B), com ETE para excluir trombo quando as 3 semanas não foram cumpridas (Classe I, nível B). A árvore adota o corte conservador de 24 h da diretriz atual; isso evita transportar para a prática o limiar antigo de 48 h diante de duração incerta. A via eletiva está detalhada em [fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento](/biblioteca/fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento).
 
 | Método de reversão (ESC 2019, flutter estável) | Classe, nível | Observação |
 |---|---|---|
@@ -113,7 +113,7 @@ O ramo D3 aplica ao flutter a regra de cardioversão da ESC 2024, cuja tabela no
 | Amiodarona IV | IIb, C | Se os anteriores não estão disponíveis ou são indesejáveis |
 | Propafenona ou flecainida | III, B | Não recomendadas: lentificam o flutter e favorecem condução 1:1 |
 
-A diretriz não traz dose de ibutilida ou dofetilida na seção de flutter; VERIFICAÇÃO HUMANA NECESSÁRIA na bula ou no protocolo institucional antes de prescrever, com monitorização do QT durante e após a infusão. Se a reversão farmacológica causar torsades, a conduta imediata está em [fluxograma-torsades-de-pointes-e-qt-longo-adquirido](/biblioteca/fluxograma-torsades-de-pointes-e-qt-longo-adquirido).
+A diretriz não traz dose de ibutilida ou dofetilida nessa seção; o fluxograma, portanto, não prescreve dose. O uso depende de disponibilidade local, bula vigente e protocolo institucional, com monitorização do QT durante e após a administração. Se houver torsades, a conduta imediata está em [fluxograma-torsades-de-pointes-e-qt-longo-adquirido](/biblioteca/fluxograma-torsades-de-pointes-e-qt-longo-adquirido).
 
 ## Longo prazo: ablação do ICT é primeira linha, não resgate
 
@@ -127,8 +127,8 @@ A ESC 2024 registra que 50 a 70% dos pacientes manifestam FA no seguimento de lo
 
 ## Limitações e o que confirmar
 
-- Corte de 24 h para cardioversão sem ETE ou anticoagulação prévia: escrito para FA na ESC 2024; a ESC 2019 usava 48 h para o flutter. VERIFICAÇÃO HUMANA NECESSÁRIA sobre qual corte aplicar ao flutter isolado.
-- Doses de ibutilida e dofetilida não constam da seção lida; VERIFICAÇÃO HUMANA NECESSÁRIA antes de prescrever.
+- O corte de 24 h é uma escolha conservadora alinhada à estratégia atual de cardioversão; duração incerta segue o ramo de anticoagulação/ETE.
+- Doses de ibutilida e dofetilida não são reproduzidas; consultar bula e protocolo institucional.
 - A árvore cobre apenas o flutter típico dependente do ICT. Flutter atípico, pós-cirurgia ou pós-ablação de FA tem controle de frequência ainda mais difícil e ablação restrita a centros experientes (Classe I, nível B na ESC 2019) — ver [flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablacao](/biblioteca/flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablacao).
 - A diretriz de 2019 admite que a evidência de anticoagulação no flutter isolado é extrapolada da FA e que o limiar de início pode ser mais alto que na FA; a de 2024 unificou a recomendação sem novo ensaio dedicado.
 - Não há aqui dose de betabloqueador, verapamil, diltiazem ou amiodarona IV: as tabelas de dose são as de FA e não foram lidas nesta sessão.
