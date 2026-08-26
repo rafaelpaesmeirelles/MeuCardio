@@ -68,8 +68,15 @@ export default function HomeQuickActionsPersonalizer() {
 
   useEffect(() => {
     const media = matchMedia("(min-width:901px)"), atualizar = () => setDesktop(media.matches);
-    media.addEventListener("change", atualizar);
-    return () => media.removeEventListener("change", atualizar);
+    // iOS/iPadOS antigos expõem MediaQueryList.addListener, mas não
+    // addEventListener. Uma exceção neste efeito desmontava a raiz logo após
+    // o login do primeiro acesso.
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", atualizar);
+      return () => media.removeEventListener("change", atualizar);
+    }
+    media.addListener(atualizar);
+    return () => media.removeListener(atualizar);
   }, []);
 
   useEffect(() => {
