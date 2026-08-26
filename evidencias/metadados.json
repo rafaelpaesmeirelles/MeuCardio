@@ -44730,5 +44730,556 @@
     "review_status": "revisado",
     "published": true,
     "review_note": "Classe IIa e nível C confirmados na tabela de recomendações para exercício em síndrome coronariana crônica da diretriz ESC 2020; redação alinhada ao texto integral e às restrições etárias descritas."
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-leve-recreativo-classe-i",
+    "statement": "Em atletas assintomáticos com estenose aórtica leve, a participação em todos os esportes recreativos é recomendada, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-moderada-recreativo-classe-iia",
+    "statement": "Em atletas assintomáticos com estenose aórtica moderada, esportes recreativos de intensidade leve a moderada devem ser considerados quando a fração de ejeção é ≥50%, a capacidade funcional é boa e o teste de esforço é normal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-grave-recreativo-leve-classe-iib",
+    "statement": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício recreativo de intensidade leve pode ser considerado quando a fração de ejeção é ≥50% e a resposta pressórica ao esforço é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica grave",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-grave-recreativo-moderada-alta-classe-iii",
+    "statement": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício recreativo de intensidade moderada a alta não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica grave",
+      "esporte recreativo",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-leve-competitivo-classe-i",
+    "statement": "Em atletas assintomáticos com estenose aórtica leve, a participação em todos os esportes competitivos é recomendada, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-moderada-competitivo-classe-iib",
+    "statement": "Em atletas assintomáticos com estenose aórtica moderada, esportes competitivos de esforço leve a moderado podem ser considerados quando a fração de ejeção é ≥50%, a capacidade funcional é boa e a resposta pressórica ao esforço é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-grave-competitivo-habilidade-classe-iib",
+    "statement": "Em atletas assintomáticos com estenose aórtica grave e fração de ejeção ≥50%, esportes de habilidade de baixa intensidade podem ser considerados em grupo selecionado.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica grave",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-aortica-grave-competitivo-moderada-alta-classe-iii",
+    "statement": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício de intensidade moderada ou alta não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose aórtica grave",
+      "esporte competitivo",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-leve-recreativo-classe-i",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica leve, todos os esportes recreativos são recomendados, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-moderada-recreativo-classe-iia",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica moderada, todos os esportes recreativos devem ser considerados quando o ventrículo esquerdo não está dilatado, a fração de ejeção é >50% e o teste de esforço é normal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-grave-recreativo-classe-iib",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica grave e ventrículo esquerdo leve a moderadamente dilatado, esportes recreativos de intensidade leve e moderada podem ser considerados quando a fração de ejeção é >50% e o teste de esforço é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica grave",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-fe-reduzida-recreativo-classe-iii",
+    "statement": "Em atletas com regurgitação aórtica, exercício recreativo de intensidade moderada ou alta não é recomendado quando a fração de ejeção é ≤50% e/ou há arritmia induzida pelo esforço.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica",
+      "disfunção de ve",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-leve-competitivo-classe-i",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica leve, todos os esportes competitivos são recomendados, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-moderada-competitivo-classe-iia",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica moderada, todos os esportes competitivos devem ser considerados quando a fração de ejeção é >50% e o teste de esforço é normal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-grave-competitivo-classe-iib",
+    "statement": "Em atletas assintomáticos com regurgitação aórtica grave e ventrículo esquerdo leve a moderadamente dilatado, a maioria dos esportes competitivos de intensidade leve a moderada pode ser considerada quando a fração de ejeção é >50% e o teste de esforço sob estresse é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica grave",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-aortica-grave-competitivo-classe-iii",
+    "statement": "Esporte competitivo de intensidade moderada ou alta não é recomendado em regurgitação aórtica grave e/ou fração de ejeção ≤50% e/ou arritmia induzida pelo esforço.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação aórtica grave",
+      "esporte competitivo",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-leve-recreativo-classe-i",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária leve, todos os esportes recreativos são recomendados, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-moderada-recreativo-classe-iia",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária moderada, todos os esportes recreativos devem ser considerados quando o diâmetro do ventrículo esquerdo está dentro do critério da diretriz, a fração de ejeção é ≥60%, a pressão sistólica de artéria pulmonar de repouso é <50 mmHg e o teste de esforço é normal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-grave-recreativo-classe-iib",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária grave, esportes recreativos de intensidade leve e moderada podem ser considerados quando os critérios de diâmetro do ventrículo esquerdo, fração de ejeção ≥60%, pressão sistólica de artéria pulmonar de repouso <50 mmHg e teste de esforço normal estão preenchidos.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral grave",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-leve-competitivo-classe-i",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária leve, todos os esportes competitivos são recomendados, se desejado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-moderada-competitivo-classe-iia",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária moderada, todos os esportes competitivos devem ser considerados quando os quatro critérios de gravidade e função (diâmetro do ventrículo esquerdo, fração de ejeção ≥60%, pressão sistólica de artéria pulmonar de repouso <50 mmHg e teste de esforço normal) estão preenchidos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-grave-competitivo-classe-iib",
+    "statement": "Em atletas assintomáticos com regurgitação mitral primária grave, esportes competitivos de intensidade leve podem ser considerados quando os quatro critérios de gravidade e função (diâmetro do ventrículo esquerdo, fração de ejeção ≥60%, pressão sistólica de artéria pulmonar de repouso <50 mmHg e teste de esforço normal) estão preenchidos.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral grave",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-regurgitacao-mitral-fe-reduzida-competitivo-classe-iii",
+    "statement": "Esporte competitivo não é recomendado em regurgitação mitral primária com fração de ejeção <60%.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "regurgitação mitral",
+      "disfunção de ve",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-leve-recreativo-classe-i",
+    "statement": "Em estenose mitral leve (área valvar mitral 1,5-2,0 cm²), todos os esportes recreativos são recomendados quando a pressão sistólica de artéria pulmonar de repouso é <40 mmHg e o teste de esforço é normal.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-moderada-recreativo-classe-iib",
+    "statement": "Em estenose mitral moderada (área valvar mitral 1,0-1,5 cm²), esportes recreativos de intensidade leve e moderada podem ser considerados quando a pressão sistólica de artéria pulmonar de repouso é <40 mmHg e o teste de esforço é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral",
+      "esporte recreativo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-grave-recreativo-classe-iii",
+    "statement": "Esporte de lazer de intensidade moderada ou alta não é recomendado em estenose mitral grave (área valvar mitral <1,0 cm²).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral grave",
+      "esporte recreativo",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-leve-competitivo-classe-i",
+    "statement": "Em estenose mitral leve (área valvar mitral 1,5-2,0 cm²), todos os esportes competitivos são recomendados quando a pressão sistólica de artéria pulmonar de repouso é <40 mmHg e o teste de esforço é normal.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-moderada-competitivo-classe-iib",
+    "statement": "Em estenose mitral moderada (área valvar mitral 1,0-1,5 cm²), esportes competitivos de intensidade leve podem ser considerados quando a pressão sistólica de artéria pulmonar de repouso é <40 mmHg e o teste de esforço é normal.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral",
+      "esporte competitivo",
+      "elegibilidade esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2020-esporte-estenose-mitral-grave-competitivo-classe-iii",
+    "statement": "Esporte competitivo não é recomendado em estenose mitral grave (área valvar mitral <1,0 cm²).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "estenose mitral grave",
+      "esporte competitivo",
+      "contraindicação esportiva",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
