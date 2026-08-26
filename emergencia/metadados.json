@@ -902,5 +902,16 @@
       "endocardite-infecciosa-com-instabilidade-ou-complicacao-aguda"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "suspeita-de-avc-agudo",
+    "titulo": "Suspeita de AVC agudo",
+    "gatilho": "Assimetria facial, fraqueza de braço, alteração da fala ou outro déficit neurológico focal de início súbito — mesmo se transitório",
+    "ordem": 123,
+    "documento_slug": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+    "fluxograma_slug": "fluxograma-suspeita-de-avc-agudo-primeira-hora",
+    "relacionados": [],
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt"
   }
 ]

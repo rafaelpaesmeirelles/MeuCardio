@@ -29360,5 +29360,91 @@
       }
     ],
     "revisao": "Verificado item a item em 2026-08-22 contra o documento de origem `inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao`, já publicado nesta base — cada um dos 12 itens corresponde a um alerta em quadro, cronograma de ECG ou conduta explícita da bula REVUFORJ/FDA (DailyMed) ou dos ensaios AUGMENT-101 já citados no documento (PMID 39121437, PMID 42311583). Nenhuma fonte nova consultada nesta rodada. Fecha a lacuna de 'emergência sem checklist derivado' para os dois protocolos já publicados em emergencia/metadados.json que compartilham este documento de origem (prolongamento-de-qtc-por-inibidor-de-menina-revumenibe e sindrome-de-diferenciacao-por-inibidor-de-menina-revumenibe). ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida aqui."
+  },
+  {
+    "slug": "primeira-hora-na-suspeita-de-avc-agudo",
+    "condicao": "Primeira hora na suspeita de AVC agudo",
+    "resumo": "Itens mínimos para não perder a janela, distinguir imitadores imediatos e encaminhar à neuroimagem sem iniciar antitrombótico ou reperfusão fora do protocolo.",
+    "documento_origem": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+    "theme": "Geral",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "source_refs": [
+      "Hewett Brumberg EK, Douma MJ, Alibertis K, et al. 2024 AHA/Red Cross Guidelines for First Aid. Circulation. DOI: 10.1161/CIR.0000000000001281.",
+      "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke. Stroke. DOI: 10.1161/STR.0000000000000513; correction DOI: 10.1161/STR.0000000000000530."
+    ],
+    "itens": [
+      {
+        "id": "avc-fast-ou-deficit-focal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FAST aplicado e outros déficits focais súbitos documentados; FAST negativo não usado isoladamente para excluir AVC",
+        "origem_secao": "Reconhecimento e acionamento"
+      },
+      {
+        "id": "avc-samu-protocolo",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "SAMU 192 ou protocolo institucional de AVC acionado imediatamente, sem espera por melhora espontânea",
+        "origem_secao": "Reconhecimento e acionamento"
+      },
+      {
+        "id": "avc-ultima-vez-bem",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Última vez sabidamente sem déficit registrada, distinguindo início testemunhado de sintoma percebido ao despertar",
+        "origem_secao": "Informações que não podem se perder"
+      },
+      {
+        "id": "avc-glicemia",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Glicemia verificada sem atrasar acionamento/neuroimagem; hipoglicemia corrigida por protocolo sem encerrar o alerta se o déficit persistir",
+        "origem_secao": "Informações que não podem se perder"
+      },
+      {
+        "id": "avc-anticoagulante",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uso de anticoagulante, nome do fármaco e horário da última dose registrados e comunicados à equipe de AVC",
+        "origem_secao": "Informações que não podem se perder"
+      },
+      {
+        "id": "avc-neuroimagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Neuroimagem urgente providenciada para distinguir isquemia de hemorragia antes de trombolítico ou antitrombótico",
+        "origem_secao": "Primeira hora no serviço de emergência"
+      },
+      {
+        "id": "avc-sem-aas-empirico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que AAS, anticoagulante ou outro antitrombótico não foi iniciado por conta própria antes da neuroimagem e decisão protocolar",
+        "origem_secao": "Segurança: o que não fazer antes da imagem"
+      },
+      {
+        "id": "avc-sem-reducao-pa-empirica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Pressão não reduzida agressivamente de forma empírica; metas definidas pelo subtipo e pela estratégia de reperfusão",
+        "origem_secao": "Segurança: o que não fazer antes da imagem"
+      },
+      {
+        "id": "avc-degluticao",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Nada por via oral antes da avaliação de deglutição",
+        "origem_secao": "Segurança: o que não fazer antes da imagem"
+      },
+      {
+        "id": "avc-equipe-reperfusao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Elegibilidade para alteplase, tenecteplase ou terapia endovascular decidida pela equipe de AVC com tempo, imagem, déficit e contraindicações documentados",
+        "origem_secao": "Primeira hora no serviço de emergência"
+      }
+    ],
+    "revisao": "Produzido por ChatGPT em 26/08/2026 com fontes oficiais atuais. Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
   }
 ]

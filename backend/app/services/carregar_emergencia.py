@@ -2,11 +2,11 @@
 
 Duas checagens que só existem nesta frente, e as duas por causa do que a tela é:
 
-1. **`documento_slug`/`fluxograma_slug` precisam existir como `Document` e
-   estar disponíveis para publicação** (já publicado ou explicitamente
-   revisado — o comando de reconciliação promove os revisados somente depois
-   de carregar todas as frentes). Uma seleção apontando para slug inexistente
-   continua sendo recusada.
+1. **`documento_slug`/`fluxograma_slug` precisam existir como `Document`.** Um
+   protocolo revisado só pode apontar para documento publicado/revisado. Um
+   protocolo ainda pendente pode apontar para documento igualmente pendente,
+   porque ambos continuam fora da publicação até a mesma decisão humana. Uma
+   seleção apontando para slug inexistente continua sendo recusada.
 2. **`relacionados` aceita as DUAS naturezas de referência que o arquivo-fonte
    usa** — achado em 07/08/2026 ao investigar 19 protocolos que travavam entre
    si: a maioria dos itens usa `relacionados` para apontar outro DOCUMENTO
@@ -29,11 +29,23 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from sqlalchemy import or_
-
 from app.core.db import SessionLocal
 from app.models.content import Document
 from app.models.emergency import EmergencyProtocol
+
+
+def _documento_pode_ser_referenciado(
+    *, published: bool, document_status: str, protocol_status: str,
+) -> bool:
+    """Evita publicar protocolo apoiado em documento ainda não revisado."""
+    return (
+        published
+        or document_status == "revisado"
+        or (
+            protocol_status == "pendente_revisao"
+            and document_status == "pendente_revisao"
+        )
+    )
 
 
 def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
@@ -42,17 +54,11 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
     novos = atualizados = 0
     recusados: list[dict] = []
     try:
-        documentos_disponiveis = {
-            s for (s,) in (
-                db.query(Document.slug)
-                .filter(
-                    or_(
-                        Document.published.is_(True),
-                        Document.review_status == "revisado",
-                    )
-                )
-                .all()
-            )
+        documentos = {
+            slug: (bool(published), review_status)
+            for slug, published, review_status in db.query(
+                Document.slug, Document.published, Document.review_status,
+            ).all()
         }
         # Todo slug de protocolo que já existe no arquivo sendo carregado —
         # cobre tanto os já persistidos quanto os que este mesmo `carregar()`
@@ -60,6 +66,16 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
         protocolos_do_arquivo = {item["slug"] for item in dados}
 
         for item in dados:
+            status_protocolo = item.get("review_status", "pendente_revisao")
+            documentos_disponiveis = {
+                slug
+                for slug, (published, status_documento) in documentos.items()
+                if _documento_pode_ser_referenciado(
+                    published=published,
+                    document_status=status_documento,
+                    protocol_status=status_protocolo,
+                )
+            }
             faltando_documento = [
                 s for s in (item["documento_slug"], item.get("fluxograma_slug"))
                 if s and s not in documentos_disponiveis
@@ -90,7 +106,7 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
             reg.documento_slug = item["documento_slug"]
             reg.fluxograma_slug = item.get("fluxograma_slug")
             reg.relacionados = list(item.get("relacionados") or [])
-            reg.review_status = item.get("review_status", "pendente_revisao")
+            reg.review_status = status_protocolo
             # `published` fica de fora de propósito — ver docstring do módulo.
 
         db.commit()

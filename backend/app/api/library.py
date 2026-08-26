@@ -42,7 +42,7 @@ def _library_document_links(body: str) -> str:
 # de arquivos físicos é certificado pelo inventário versionado e não é inferido
 # das tabelas, que representam registros científicos, não arquivos do filesystem.
 SCIENTIFIC_CORPUS_MINIMUM = SCIENTIFIC_MINIMUM
-SCIENTIFIC_FILES_EXPECTED = 1_327
+SCIENTIFIC_FILES_EXPECTED = 1_329
 
 CATALOG_FRONTS = (
     ("documentos", "Documentos científicos", "/biblioteca", Document),

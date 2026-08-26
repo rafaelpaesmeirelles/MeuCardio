@@ -51295,5 +51295,68 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "primeiros-socorros-suspeita-avc-acionar-emergencia-imediatamente-aha-2024",
+    "statement": "Quando houver suspeita de AVC em um adulto, o sistema de emergência deve ser acionado imediatamente.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/American Red Cross",
+    "year": 2024,
+    "guideline_title": "2024 American Heart Association and American Red Cross Guidelines for First Aid",
+    "reference": "Hewett Brumberg EK, Douma MJ, Alibertis K, et al.; on behalf of the American Heart Association and American Red Cross. 2024 American Heart Association and American Red Cross Guidelines for First Aid. Circulation. 2024;150:e519-e579. DOI: 10.1161/CIR.0000000000001281. Seção 6.2, Recommendation 1.",
+    "theme": "Geral",
+    "tags": [
+      "AVC",
+      "primeiros socorros",
+      "emergência",
+      "SAMU 192"
+    ],
+    "document_slug": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "published": false
+  },
+  {
+    "slug": "primeiros-socorros-avc-usar-fast-ou-cincinnati-aha-2024",
+    "statement": "O uso de uma escala de reconhecimento de AVC, como FAST ou Cincinnati Prehospital Stroke Scale, é recomendado para auxiliar o reconhecimento de AVC agudo em adultos.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/American Red Cross",
+    "year": 2024,
+    "guideline_title": "2024 American Heart Association and American Red Cross Guidelines for First Aid",
+    "reference": "Hewett Brumberg EK, Douma MJ, Alibertis K, et al.; on behalf of the American Heart Association and American Red Cross. 2024 American Heart Association and American Red Cross Guidelines for First Aid. Circulation. 2024;150:e519-e579. DOI: 10.1161/CIR.0000000000001281. Seção 6.2, Recommendation 2.",
+    "theme": "Geral",
+    "tags": [
+      "AVC",
+      "FAST",
+      "Cincinnati",
+      "reconhecimento"
+    ],
+    "document_slug": "fluxograma-suspeita-de-avc-agudo-primeira-hora",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "published": false
+  },
+  {
+    "slug": "primeiros-socorros-avc-glicemia-sem-atrasar-emergencia-aha-2024",
+    "statement": "É razoável que o socorrista meça a glicemia capilar em adulto com suspeita de AVC quando o recurso estiver disponível e isso não atrasar o acionamento do sistema de emergência.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-EO",
+    "society": "AHA/American Red Cross",
+    "year": 2024,
+    "guideline_title": "2024 American Heart Association and American Red Cross Guidelines for First Aid",
+    "reference": "Hewett Brumberg EK, Douma MJ, Alibertis K, et al.; on behalf of the American Heart Association and American Red Cross. 2024 American Heart Association and American Red Cross Guidelines for First Aid. Circulation. 2024;150:e519-e579. DOI: 10.1161/CIR.0000000000001281. Seção 6.2, Recommendation 3.",
+    "theme": "Geral",
+    "tags": [
+      "AVC",
+      "glicemia",
+      "hipoglicemia",
+      "imitador de AVC"
+    ],
+    "document_slug": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "published": false
   }
 ]

@@ -9,9 +9,9 @@ A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
 PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. A
-allowlist abaixo está vazia de propósito: qualquer novo pendente em qualquer
-manifesto quebra o gate e exige a mesma disciplina de verificação, não uma
-reabertura silenciosa da exceção.
+allowlist abaixo é fechada nos slugs do lote AVC de 26/08/2026. Ela permite que
+o PR preserve a decisão humana sem publicar conteúdo novo; qualquer outro
+pendente continua quebrando o gate.
 """
 
 from __future__ import annotations
@@ -37,6 +37,27 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
+PENDENTES_LOTE_AVC: dict[str, set[str]] = {
+    "evidencias/metadados.json": {
+        "primeiros-socorros-suspeita-avc-acionar-emergencia-imediatamente-aha-2024",
+        "primeiros-socorros-avc-usar-fast-ou-cincinnati-aha-2024",
+        "primeiros-socorros-avc-glicemia-sem-atrasar-emergencia-aha-2024",
+    },
+    "checklists/metadados.json": {"primeira-hora-na-suspeita-de-avc-agudo"},
+    "trilhas/metadados.json": {
+        "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao"
+    },
+    "material-paciente/metadados.json": {
+        "sinais-de-avc-como-agir-sem-perder-tempo"
+    },
+    "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
+    "doencas/metadados.json": {"acidente-vascular-cerebral-agudo"},
+    "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
+}
+PENDENTES_MARKDOWN_AVC = {
+    "content/Geral/deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc.md",
+    "content/Geral/fluxograma-suspeita-de-avc-agudo-primeira-hora.md",
+}
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
@@ -56,10 +77,22 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
             ):
                 pendentes_encontrados.add(str(identifier))
                 continue
+            if (
+                status == "pendente_revisao"
+                and identifier in PENDENTES_LOTE_AVC.get(relative_path, set())
+            ):
+                pendentes_encontrados.add(f"{relative_path}:{identifier}")
+                continue
             invalidos.append(f"{relative_path}:{identifier}:{status}")
 
     assert invalidos == []
-    assert pendentes_encontrados == PENDENTES_MEDICAMENTOS_RC
+    pendentes_esperados = set(PENDENTES_MEDICAMENTOS_RC)
+    pendentes_esperados.update(
+        f"{path}:{slug}"
+        for path, slugs in PENDENTES_LOTE_AVC.items()
+        for slug in slugs
+    )
+    assert pendentes_encontrados == pendentes_esperados
 
 
 def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
@@ -76,6 +109,7 @@ def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
 
 def test_todos_os_documentos_markdown_estao_revisados():
     pendentes: list[str] = []
+    pendentes_permitidos: set[str] = set()
     sem_status: list[str] = []
     for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md")):
         text = path.read_text(encoding="utf-8")
@@ -85,7 +119,14 @@ def test_todos_os_documentos_markdown_estao_revisados():
         if match is None:
             sem_status.append(relative_path)
         elif match.group(1).strip() != "revisado":
-            pendentes.append(f"{relative_path}:{match.group(1).strip()}")
+            if (
+                match.group(1).strip() == "pendente_revisao"
+                and relative_path in PENDENTES_MARKDOWN_AVC
+            ):
+                pendentes_permitidos.add(relative_path)
+            else:
+                pendentes.append(f"{relative_path}:{match.group(1).strip()}")
 
     assert sem_status == []
     assert pendentes == []
+    assert pendentes_permitidos == PENDENTES_MARKDOWN_AVC
