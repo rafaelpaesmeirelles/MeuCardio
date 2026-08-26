@@ -46554,5 +46554,159 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "estatina-de-alta-intensidade-para-meta-de-ldl-abaixo-de-55-no-risco-cv-muito-alto",
+    "statement": "Em pacientes com risco cardiovascular muito alto, recomenda-se terapia com estatina em dose intensiva, com meta de LDL-colesterol abaixo de 55 mg/dL (1,4 mmol/L) e redução de pelo menos 50% em relação ao valor basal.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. doi:10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Farmacologia",
+    "tags": [
+      "estatina",
+      "LDL-colesterol",
+      "dislipidemia",
+      "prevenção cardiovascular",
+      "hipolipemiante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ezetimiba-associada-a-estatina-quando-meta-de-ldl-nao-e-atingida",
+    "statement": "Se a meta de LDL-colesterol não for atingida com a dose máxima tolerada de estatina, recomenda-se a associação com ezetimiba.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. doi:10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ezetimiba",
+      "estatina",
+      "LDL-colesterol",
+      "dislipidemia",
+      "hipolipemiante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inibidor-de-pcsk9-associado-a-estatina-e-ezetimiba-na-prevencao-secundaria-de-risco-muito-alto",
+    "statement": "Em pacientes de risco muito alto em prevenção secundária que não atingem a meta de LDL-colesterol apesar do tratamento com a dose máxima tolerada de estatina associada à ezetimiba, recomenda-se a adição de um inibidor de PCSK9.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. doi:10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Farmacologia",
+    "tags": [
+      "inibidor de PCSK9",
+      "estatina",
+      "ezetimiba",
+      "prevenção secundária",
+      "hipolipemiante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aas-em-dose-baixa-na-sindrome-coronariana-cronica-com-infarto-ou-revascularizacao-previos",
+    "statement": "Recomenda-se ácido acetilsalicílico em dose baixa (75-100 mg/dia) em pacientes com síndrome coronariana crônica e antecedente de infarto do miocárdio ou revascularização miocárdica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes",
+    "reference": "Knuuti J, Wijns W, Saraste A, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes. Eur Heart J. 2020;41(3):407-477. doi:10.1093/eurheartj/ehz425. PMID: 31504439.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ácido acetilsalicílico",
+      "antiplaquetário",
+      "síndrome coronariana crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-recomendada-para-todos-os-pacientes-com-sindrome-coronariana-cronica",
+    "statement": "Recomenda-se terapia com estatina para todos os pacientes com síndrome coronariana crônica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes",
+    "reference": "Knuuti J, Wijns W, Saraste A, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes. Eur Heart J. 2020;41(3):407-477. doi:10.1093/eurheartj/ehz425. PMID: 31504439.",
+    "theme": "Farmacologia",
+    "tags": [
+      "estatina",
+      "síndrome coronariana crônica",
+      "hipolipemiante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ieca-recomendado-na-sindrome-coronariana-cronica-com-comorbidades-associadas",
+    "statement": "Recomenda-se o uso de inibidor da enzima conversora de angiotensina (IECA) em pacientes com síndrome coronariana crônica que apresentem hipertensão, fração de ejeção do ventrículo esquerdo ≤40%, diabetes mellitus ou doença renal crônica, salvo contraindicação.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes",
+    "reference": "Knuuti J, Wijns W, Saraste A, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes. Eur Heart J. 2020;41(3):407-477. doi:10.1093/eurheartj/ehz425. PMID: 31504439.",
+    "theme": "Farmacologia",
+    "tags": [
+      "IECA",
+      "síndrome coronariana crônica",
+      "diabetes",
+      "doença renal crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "arni-substitui-ieca-na-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida-sintomatica",
+    "statement": "Recomenda-se a substituição do IECA por um inibidor da neprilisina e do receptor de angiotensina (ARNI, sacubitril/valsartana) em pacientes com insuficiência cardíaca com fração de ejeção reduzida que permanecem sintomáticos apesar de tratamento otimizado com IECA, betabloqueador e antagonista mineralocorticoide, para reduzir o risco de morte cardiovascular e hospitalização por insuficiência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. doi:10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ARNI",
+      "sacubitril",
+      "valsartana",
+      "insuficiência cardíaca",
+      "fração de ejeção reduzida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doac-nao-recomendado-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+    "statement": "O uso de anticoagulantes orais diretos (DOACs) não é recomendado em pacientes com fibrilação atrial associada a estenose mitral moderada a grave.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. doi:10.1093/eurheartj/ehab395. PMID: 34453165.",
+    "theme": "Farmacologia",
+    "tags": [
+      "anticoagulante oral direto",
+      "DOAC",
+      "fibrilação atrial",
+      "estenose mitral"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
