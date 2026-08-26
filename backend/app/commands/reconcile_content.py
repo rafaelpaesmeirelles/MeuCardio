@@ -326,7 +326,11 @@ def _migrate_study_track_progress(db: Session) -> int:
     for progress in db.query(StudyTrackProgress).all():
         current = list(progress.concluidas or [])
         migrated = canonicalize_study_slugs(current)
-        if set(migrated) != set(current):
+        # Compare as lists so the migration also removes pre-existing
+        # duplicates and persists the deterministic ordering promised by
+        # ``canonicalize_study_slugs``. Comparing only sets would silently
+        # leave ``[slug, slug]`` unchanged.
+        if migrated != current:
             progress.concluidas = migrated
             updated += 1
     return updated

@@ -40139,7 +40139,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Eilenberg W, Klopf J, Sotir A, Scheuba A, Domenig C, Loewe C, Dalman R, Wanhainen A, Sakalihasan N, Ristl R, Kroyer B, Brostjan C, Neumayer C",
-    "journal": "Eur J Vasc Endovasc Surg"
+    "journal": "Eur J Vasc Endovasc Surg",
+    "doi": "10.1016/j.ejvs.2025.04.052",
+    "url": "https://doi.org/10.1016/j.ejvs.2025.04.052",
+    "limitations": "Ensaio de prova de conceito claramente subdimensionado: apenas 58 dos 170 participantes planejados foram randomizados porque o recrutamento foi interrompido pela pandemia. O seguimento de 18 meses, a inclusão apenas de não diabéticos e de AAA infrarrenal com 3,0-4,9 cm limitam a precisão e a generalização; ausência de diferença não exclui efeito menor."
   },
   {
     "slug": "tactic-leflunomida-em-arterite-de-takayasu-ativa",
@@ -40147,7 +40150,7 @@
     "study_type": "ensaio_clinico",
     "summary": "Ensaio multicêntrico chinês (6 centros), randomizado 1:1, duplo-cego, controlado por placebo, comparando leflunomida 20 mg/dia + prednisona versus placebo + prednisona por 24 semanas em 116 pacientes com arterite de Takayasu ativa, seguido de extensão aberta com leflunomida até a semana 52. Desfecho primário: remissão clínica na semana 24.",
     "key_findings": "Na análise mITT, remissão ocorreu em 44/54 (81,5%) do grupo leflunomida vs. 45/57 (78,9%) do placebo (diferença de risco 2,6%; IC95% -12,5 a 17,2) — desfecho primário não atingiu significância. O grupo leflunomida usou dose média de prednisona menor na semana 24 (diferença -2,1 mg/dia; IC95% -4,3 a 0,1). Eventos adversos foram menos frequentes com leflunomida (24,5% vs. 39,3%); houve 1 óbito, no grupo placebo.",
-    "clinical_implications": "Apesar de não atingir superioridade estatística para remissão, a leflunomida mostrou efeito poupador de corticoide e melhor perfil de tolerabilidade, sugerindo-se como opção terapêutica adicional em Takayasu — especialmente em subgrupos (mulheres, ≤40 anos, doença refratária) identificados em análises post-hoc. Confirmação em ensaios maiores ainda é necessária.",
+    "clinical_implications": "A leflunomida não demonstrou superioridade sobre placebo para remissão clínica em 24 semanas. A pequena diferença na dose de prednisona teve IC95% que incluiu ausência de efeito, e os sinais em subgrupos foram pós-hoc; portanto, o estudo é gerador de hipótese e não sustenta preferência rotineira por leflunomida com base nesses resultados isolados.",
     "theme": "Aorta e doença arterial periférica",
     "pmid": "42399917",
     "year": 2026,
@@ -40155,7 +40158,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Sun Y, Kong X, Dai X, Wu R, Pan L, Wu L, Chen X, Yang P, Chen H, Ma L, Jin X, Zhang W, Jiang L",
-    "journal": "BMC Med"
+    "journal": "BMC Med",
+    "doi": "10.1186/s12916-026-05009-1",
+    "url": "https://doi.org/10.1186/s12916-026-05009-1",
+    "limitations": "O desfecho primário foi negativo, com intervalo de confiança amplo para a diferença de remissão. A extensão após 24 semanas deixou de ser comparativa porque os grupos passaram a receber leflunomida; os achados por sexo, idade, refratariedade e subtipo de imagem foram pós-hoc e estão sujeitos a multiplicidade. A realização em seis centros chineses também limita a generalização."
   },
   {
     "slug": "incorporate-revascularizacao-coronaria-sistematica-apos-tratamento-de-isquemia-critica-de-membro",
@@ -40171,7 +40177,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Toth GG, Brodmann M, Kanoun Schnur SS, Bartus S, Vrsalovic M, Krestianinov O, Kala P, Bil J, Gil R, Kanovsky J, Di Serafino L, Paolucci L, Barbato E, Mangiacapra F, Ruzsa Z",
-    "journal": "Clin Res Cardiol"
+    "journal": "Clin Res Cardiol",
+    "doi": "10.1007/s00392-024-02487-2",
+    "url": "https://doi.org/10.1007/s00392-024-02487-2",
+    "limitations": "Ensaio aberto interrompido precocemente pela pandemia e sem poder estatístico adequado. O desfecho primário foi neutro na análise por intenção de tratar; o sinal favorável de MACCE apareceu como tendência na ITT e como resultado de análise por protocolo, suscetível a viés por não adesão e cruzamento. O seguimento principal foi de apenas 12 meses."
   },
   {
     "slug": "exercicio-domiciliar-supervisionado-em-sobreviventes-de-disseccao-aortica",
@@ -40179,7 +40188,7 @@
     "study_type": "ensaio_clinico",
     "summary": "Ensaio piloto multicêntrico (3 centros acadêmicos dos EUA) com 93 adultos ≥3 meses após dissecção aórtica tipo A ou B, randomizados para programa domiciliar de exercício guiado (circuito de 6 exercícios, 12 meses, com acompanhamento virtual) ou cuidado usual. Desfechos coprimários: segurança (eventos aórticos, hipertensão de esforço, sintomas) e qualidade de vida pelo PROMIS-29.",
     "key_findings": "Nenhuma morte, cirurgia aórtica ou dissecção recorrente em nenhum dos grupos (44 no exercício guiado, 49 no cuidado usual). Hipertensão de esforço durante sessões supervisionadas ocorreu em 17/44 (39%) do grupo exercício, manejada com ajuste de carga. Sem diferenças significativas na pressão arterial ambulatorial nem nos escores PROMIS-29 entre os grupos; 65 dos 93 completaram todos os marcos do estudo.",
-    "clinical_implications": "Contesta o dogma tradicional de restrição de atividade física após dissecção aórtica: exercício domiciliar de intensidade moderada mostrou-se viável e sem excesso de eventos aórticos neste piloto, mas o tamanho amostral reduzido exige confirmação em ensaios maiores antes de recomendar liberalização da atividade física na prática clínica.",
+    "clinical_implications": "O estudo sustenta a viabilidade de exercício domiciliar moderado, individualizado e monitorado em sobreviventes selecionados e clinicamente estáveis. Como o piloto não tinha poder para excluir aumento de eventos aórticos raros, não autoriza liberalização irrestrita nem substitui avaliação individual da anatomia aórtica, pressão arterial e resposta ao esforço.",
     "theme": "Aorta e doença arterial periférica",
     "pmid": "42389778",
     "year": 2026,
@@ -40187,7 +40196,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Bhatia D, Erabelli N, House K, Toy Y, Lim MS, Boyer LM, Eagle KA, Hofmann Bowman MK, Braverman AC, Prakash SK",
-    "journal": "Circ Cardiovasc Qual Outcomes"
+    "journal": "Circ Cardiovasc Qual Outcomes",
+    "doi": "10.1161/CIRCOUTCOMES.126.013292",
+    "url": "https://doi.org/10.1161/CIRCOUTCOMES.126.013292",
+    "limitations": "Ensaio piloto com 93 participantes, 16 perdas de seguimento e apenas 65 completando todos os marcos; o número de eventos aórticos foi zero em ambos os grupos, o que não demonstra equivalência nem exclui dano raro. A amostra selecionada, estável há pelo menos três meses e acompanhada em centros acadêmicos, limita a generalização. Hipertensão de esforço ocorreu em 39% do grupo exercício e exigiu ajuste de carga."
   },
   {
     "slug": "fragilidade-e-risco-de-aneurisma-de-aorta-no-uk-biobank",
@@ -40195,7 +40207,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Coorte prospectiva com 474.302 participantes do UK Biobank livres de aneurisma ou dissecção aórtica no início do estudo, com fragilidade classificada por fenótipo físico e por índice de fragilidade (não frágil/pré-frágil/frágil) e seguimento mediano de 15,1 anos, ligando dados a registros hospitalares e de óbito para aneurisma aórtico (AA), aneurisma abdominal (AAA), torácico (TAA) e dissecção (AD).",
     "key_findings": "Ocorreram 3.675 eventos de AA, 2.289 de AAA, 1.114 de TAA e 310 de AD. Pré-fragilidade e fragilidade associaram-se a maior risco de AA (índice de fragilidade: pré-frágil HR 1,67, IC95% 1,55-1,80; frágil HR 2,22, IC95% 1,96-2,51), padrão semelhante para AAA. Para TAA, apenas o índice de fragilidade foi significativo (pré-frágil HR 1,47, IC95% 1,29-1,67; frágil HR 1,61, IC95% 1,25-2,07). Nenhuma das medidas de fragilidade associou-se à dissecção aórtica.",
-    "clinical_implications": "Sugere que fragilidade poderia complementar a estratificação de risco para desenvolvimento de aneurisma (especialmente AAA), mas não parece útil para prever dissecção aórtica — reforçando que aneurisma e dissecção têm vias fisiopatológicas de risco distintas, com implicações para triagem e prevenção direcionadas.",
+    "clinical_implications": "A fragilidade associou-se prospectivamente ao diagnóstico de aneurisma, especialmente AAA, mas ainda não foi validada como critério de rastreamento. A ausência de associação estatística com dissecção, baseada em apenas 310 eventos, não prova ausência de relação causal nem autoriza excluir risco individual.",
     "theme": "Aorta e doença arterial periférica",
     "pmid": "42387383",
     "year": 2026,
@@ -40203,7 +40215,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Yang M, Zhang J, Chen J, Teng Y, Ye X, Li Q, Zhang L, Zhang K, Wang Y, Dang A, Feng W",
-    "journal": "BMC Cardiovasc Disord"
+    "journal": "BMC Cardiovasc Disord",
+    "doi": "10.1186/s12872-026-06175-z",
+    "url": "https://doi.org/10.1186/s12872-026-06175-z",
+    "limitations": "Coorte observacional sujeita a confusão residual e causalidade reversa, com fragilidade medida no basal e desfechos identificados por registros hospitalares e de óbito. O viés de voluntário saudável do UK Biobank reduz a representatividade. Houve somente 310 dissecções, limitando o poder para detectar associações menores e a interpretação do resultado nulo."
   },
   {
     "slug": "durabilidade-exercicio-supervisionado-versus-revascularizacao-endovascular-na-claudicacao-intermitente",
@@ -40219,7 +40234,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Puljevic M, Grubic-Rotkvic P, Dubravcic-Dosen M, Stajduhar A, Vrkic-Kirhmajer M",
-    "journal": "Healthcare (Basel)"
+    "journal": "Healthcare (Basel)",
+    "doi": "10.3390/healthcare14020170",
+    "url": "https://doi.org/10.3390/healthcare14020170",
+    "limitations": "A síntese incluiu apenas cinco ensaios e 728 participantes, com diferenças entre intervenções, segmentos arteriais, medidas de qualidade de vida e duração do seguimento. Comparações além de 24 meses e estimativas de reintervenção derivam de subconjuntos menores; o número reduzido de estudos limita avaliação de viés de publicação e precisão de eventos adversos raros."
   },
   {
     "slug": "cannabidiol-fase-2-na-pericardite-recorrente",
@@ -40374,7 +40392,7 @@
     "study_type": "ensaio_clinico",
     "summary": "Ensaio cluster-randomizado, stepped-wedge, cruzado (crossover), conduzido em 73 centros de doação de sangue na Inglaterra entre novembro de 2019 e novembro de 2022, testou quatro intervenções para prevenir reações vasovagais (síncope situacional) durante doação de sangue total, comparadas à prática padrão: bebida isotônica pré-doação (vs água), repouso pós-doação estendido para 3 minutos (vs 2 minutos), técnica de tensão muscular aplicada (AMT) modificada, e material psicossocial preparatório. Análise por intenção de tratar incluiu 1.379.095 doadores e 4.134.712 doações, com desfecho primário de reação vasovagal em sessão com perda de consciência.",
     "key_findings": "Foram registradas 4.388 reações vasovagais com perda de consciência e 60.517 reações vasovagais totais (com e sem perda de consciência) entre as 4,13 milhões de doações. Nenhuma das quatro intervenções reduziu de forma clara o desfecho primário frente à prática padrão (p conjunto = 0,21): OR 0,98 (IC95% 0,92–1,04) para bebida isotônica, OR 0,99 (IC95% 0,92–1,06) para repouso estendido, OR 1,12 (IC95% 1,00–1,26) para AMT modificada e OR 1,03 (IC95% 0,93–1,14) para intervenção psicossocial. A taxa de eventos absoluta foi de 10,7 por 10.000 doações sem intervenção versus 10,5 por 10.000 doações com intervenção.",
-    "clinical_implications": "Em um dos maiores ensaios já realizados sobre prevenção de síncope situacional relacionada à doação de sangue, nenhuma das estratégias amplamente adotadas por bancos de sangue mostrou benefício consistente sobre a prática padrão, sugerindo que serviços de hemoterapia podem simplificar protocolos sem comprometer a segurança do doador, redirecionando recursos.",
+    "clinical_implications": "As quatro intervenções não mostraram redução clara da perda de consciência em relação à prática padrão inglesa. O ensaio pode informar revisão de protocolos locais, mas não foi desenhado como estudo de não inferioridade para provar que retirar medidas existentes preserva a segurança; qualquer simplificação deve considerar contexto operacional, adesão e vigilância de eventos.",
     "theme": "Síncope",
     "pmid": "41554266",
     "year": 2026,
@@ -40382,7 +40400,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Kaptoge S, McMahon A, Wu Y, et al.; STRIDES Trial Group",
-    "journal": "Lancet Haematol"
+    "journal": "Lancet Haematol",
+    "doi": "10.1016/S2352-3026(25)00319-9",
+    "url": "https://doi.org/10.1016/S2352-3026(25)00319-9",
+    "limitations": "Randomização por centros, desenho stepped-wedge/fatorial e doações repetidas pelo mesmo participante tornam a inferência dependente do ajuste por cluster, período, implementação e possível carry-over. O comparador foi a prática padrão específica da Inglaterra, não ausência de prevenção. A baixa taxa absoluta do desfecho reduz a informação sobre subgrupos e não estabelece não inferioridade da retirada de intervenções."
   },
   {
     "slug": "zhang-2026-cardioneuroablacao-anatomica-empirica-versus-guiada-por-hafe-na-sincope-vasovagal",
@@ -40390,7 +40411,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Estudo retrospectivo, unicêntrico (China, julho de 2018 a julho de 2023), comparou duas estratégias de cardioneuroablação (CNA) para síncope vasovagal refratária: ablação empírica de plexos ganglionares em sítios anatômicos padrão (EAGC, n=70) versus ablação guiada por mapeamento de eletrogramas fracionados de alta amplitude (HAFE, n=39). Desfecho primário foi sobrevida livre de síncope em 24 meses; desfechos secundários incluíram tempo de procedimento, exposição à radiação e qualidade de vida pelo escore de disfunção por síncope (SDS).",
     "key_findings": "Não houve diferença significativa na sobrevida livre de síncope em 24 meses entre os grupos (HR 1,648; IC95% 0,648–4,194; log-rank p=0,285), com taxas de 85,6% no grupo EAGC e 77,2% no grupo HAFE. O grupo HAFE teve tempo de procedimento mais curto (mediana 66,0 min [IQR 52,0–87,5] vs 90,0 min [IQR 71,75–101,5]; p<0,001), menor dose de radiação (6,00 mGy [IQR 4,17–10,75] vs 12,00 mGy [IQR 6,48–20,00]; p=0,002) e menor tempo de fluoroscopia (2,53 min [IQR 1,92–4,06] vs 4,38 min [IQR 2,47–7,05]; p<0,001). Ambos os grupos reduziram significativamente o SDS (p<0,001), sem diferença entre grupos na magnitude da redução (p=0,487). Taxas de complicação foram comparáveis.",
-    "clinical_implications": "A eficácia clínica das duas estratégias de cardioneuroablação para síncope vasovagal refratária é equivalente em dois anos de seguimento; a escolha entre mapeamento guiado por HAFE e ablação empírica pode ser orientada por ganhos de eficiência procedural (menor tempo e radiação) com o mapeamento guiado, sem comprometer o resultado clínico.",
+    "clinical_implications": "Não foi detectada diferença estatisticamente significativa de recorrência entre as estratégias; isso não demonstra equivalência, pois o intervalo de confiança foi amplo. O HAFE associou-se a menor tempo e exposição à radiação, mas a escolha da técnica permanece dependente de confirmação prospectiva e da experiência do centro.",
     "theme": "Síncope",
     "pmid": "42145262",
     "year": 2026,
@@ -40398,7 +40419,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Zhang B, Du X, Luo C, et al.",
-    "journal": "Clin Cardiol"
+    "journal": "Clin Cardiol",
+    "doi": "10.1002/clc.70348",
+    "url": "https://doi.org/10.1002/clc.70348",
+    "limitations": "Coorte retrospectiva, unicêntrica e não randomizada, com grupos pequenos e desequilibrados (70 vs. 39), sujeita a seleção da técnica, confusão residual e curva de aprendizado. O intervalo de confiança do HR foi amplo e compatível com benefício ou dano relevante; ausência de significância não comprova equivalência."
   },
   {
     "slug": "fahim-2026-metanalise-marca-passo-empirico-na-sincope-inexplicada-com-bloqueio-bifascicular",
@@ -40406,7 +40430,7 @@
     "study_type": "metanalise",
     "summary": "Revisão sistemática e metanálise reuniu seis estudos (dois ensaios clínicos randomizados e quatro estudos de coorte; n=601) comparando implante empírico de marca-passo (EPI) versus abordagens alternativas (monitor cardíaco implantável ou estudo eletrofisiológico) em pacientes com síncope inexplicada e bloqueio bifascicular — população de risco para bloqueio atrioventricular de alto grau intermitente. Desfechos primários foram recorrência de síncope e bradicardia; desfechos secundários incluíram bradiarritmia, morte cardiovascular e complicações relacionadas ao dispositivo, sintetizados por modelo de efeitos aleatórios.",
     "key_findings": "O implante empírico de marca-passo reduziu significativamente a recorrência de síncope (RR 0,48; IC95% 0,35–0,65; p=3,4×10⁻⁶), de bradicardia (RR 0,06; IC95% 0,016–0,26; p=7,6×10⁻⁵) e de bradiarritmia (RR 0,64; IC95% 0,43–0,96; p=0,034), sem aumento significativo de complicações relacionadas ao dispositivo (RR 1,30; IC95% 1,00–1,71; p=0,06) nem de mortalidade cardiovascular (RR 0,98; IC95% 0,82–1,16; p=0,82).",
-    "clinical_implications": "Em pacientes com síncope inexplicada e bloqueio bifascicular — cenário clássico de incerteza terapêutica —, esta metanálise reforça o marca-passo empírico como estratégia razoável e segura para reduzir recorrência de síncope e bradicardia, sem custo adicional relevante em complicações, podendo orientar a decisão frente à alternativa de monitorização prolongada por ILR ou estudo eletrofisiológico.",
+    "clinical_implications": "A síntese sugere menor recorrência de síncope e bradicardia com marca-passo empírico, sem redução demonstrada de mortalidade cardiovascular. A estimativa de complicações (RR 1,30; IC95% 1,00-1,71) não permite afirmar ausência de dano; a decisão deve continuar individualizada frente a estudo eletrofisiológico ou monitorização prolongada.",
     "theme": "Síncope",
     "pmid": "41783543",
     "year": 2026,
@@ -40414,7 +40438,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Fahim M, Eldawud D, Sharma N, et al.",
-    "journal": "Int J Cardiol Heart Vasc"
+    "journal": "Int J Cardiol Heart Vasc",
+    "doi": "10.1016/j.ijcha.2026.101894",
+    "url": "https://doi.org/10.1016/j.ijcha.2026.101894",
+    "limitations": "Somente seis estudos e 601 participantes, combinando dois ensaios randomizados com quatro coortes observacionais e estratégias comparadoras distintas. Confusão por indicação e heterogeneidade clínica podem influenciar o efeito sobre síncope. O estudo não demonstrou benefício de mortalidade, e o limite inferior do IC95% para complicações foi 1,00."
   },
   {
     "slug": "puel-2026-apneia-obstrutiva-do-sono-e-sincope-vasovagal-recorrente-estudo-multicentrico",
@@ -40430,7 +40457,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Puel V, Gagnadoux F, Godard I, et al.",
-    "journal": "Arch Cardiovasc Dis"
+    "journal": "Arch Cardiovasc Dis",
+    "doi": "10.1016/j.acvd.2025.09.008",
+    "url": "https://doi.org/10.1016/j.acvd.2025.09.008",
+    "limitations": "Estudo observacional antes-depois sem grupo controle, com apenas 27 participantes que completaram 12 meses de CPAP. Está sujeito a seleção de aderentes, regressão à média, mudanças concomitantes, recordatório dos episódios e efeito placebo; as distribuições muito dispersas das contagens reforçam a incerteza. Não estabelece causalidade entre CPAP e redução de síncope."
   },
   {
     "slug": "archontakis-2026-sincope-cardiaca-subestimada-em-idosos-unidade-de-sincope",
@@ -40438,7 +40468,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Coorte observacional retrospectiva unicêntrica (Hospital Hippokration, Atenas) incluiu 171 pacientes com 65 anos ou mais avaliados por síncope de origem desconhecida ou quedas não esclarecidas, estratificados em via de investigação 'de alto risco' (cardíaca) ou 'de baixo risco' (autonômica) conforme julgamento clínico e diretrizes vigentes, com seguimento médio de 40,5 meses.",
     "key_findings": "Idade média foi 76,4±6,6 anos; um terço dos pacientes não relatava pródromos, 81,9% não identificavam gatilho reconhecível e 43,3% apresentavam alguma anormalidade no ECG de 12 derivações. Do total, 67,8% foram classificados na via cardíaca. Diagnóstico final foi estabelecido em 126 pacientes (73,7%): síncope cardíaca em 56,4%, síncope reflexa em 26,2%, hipotensão ortostática em 7,9% e quedas não sincopais em 9,5%. Monitor de eventos implantável (ILR) foi utilizado em 90,1% dos pacientes, com rendimento diagnóstico de 43%; diagnóstico por ECG ocorreu em 53,2% dos casos, com tempo médio até diagnóstico de 4,8±3,3 meses.",
-    "clinical_implications": "Em idosos com síncope inexplicada, a causa cardíaca — sobretudo arritmias — é mais frequente do que costuma ser reconhecida e deve ser ativamente investigada; uma abordagem estruturada com uso direcionado de monitor de eventos implantável melhora o rendimento diagnóstico e reduz o tempo até o diagnóstico nessa população de maior risco.",
+    "clinical_implications": "Em idosos encaminhados a uma unidade especializada por síncope ou quedas inexplicadas, a investigação estruturada identificou alta proporção de causas cardíacas. Os resultados apoiam avaliação ativa de arritmias em pacientes selecionados, mas não estimam a prevalência na população geral nem demonstram, por comparação controlada, que o ILR reduz o tempo diagnóstico.",
     "theme": "Síncope",
     "pmid": "41899373",
     "year": 2026,
@@ -40446,7 +40476,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Archontakis S, Oikonomou E, Milaras N, et al.",
-    "journal": "J Clin Med"
+    "journal": "J Clin Med",
+    "doi": "10.3390/jcm15062450",
+    "url": "https://doi.org/10.3390/jcm15062450",
+    "limitations": "Coorte retrospectiva de um único centro terciário de alto volume, com forte seleção de encaminhamento, julgamento clínico na escolha da via diagnóstica e ausência de comparador. ILR foi usado em 90,1% da amostra, o que impede separar o rendimento do dispositivo do protocolo global. Os percentuais não devem ser extrapolados à população idosa geral."
   },
   {
     "slug": "harshuk-2026-diagnostico-precoce-apos-implante-de-monitor-de-eventos-em-sincope-inexplicada",
@@ -40462,7 +40495,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Harshuk D, Dadon Z, Samara G, et al.",
-    "journal": "Int J Cardiol"
+    "journal": "Int J Cardiol",
+    "doi": "10.1016/j.ijcard.2026.134710",
+    "url": "https://doi.org/10.1016/j.ijcard.2026.134710",
+    "limitations": "Coorte retrospectiva de dois centros terciários, com 106 pacientes e apenas 15 diagnósticos precoces. As associações foram exploratórias em regressão penalizada e não constituem regra de seleção validada. Como todos receberam ILR, não houve comparação direta de rendimento, segurança ou custo com monitor externo por um mês."
   },
   {
     "slug": "tempest-trientina-na-cardiomiopatia-hipertrofica",
@@ -40478,7 +40514,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Farrant JP, et al.",
-    "journal": "Eur Heart J"
+    "journal": "Eur Heart J",
+    "doi": "10.1093/eurheartj/ehag512",
+    "url": "https://doi.org/10.1093/eurheartj/ehag512",
+    "limitations": "Ensaio de fase 2 com 154 participantes, seguimento de 52 semanas e desfecho substituto de massa ventricular por ressonância. A população era pouco sintomática (61,7% em NYHA I) e não houve demonstração de melhora da capacidade de exercício ou de eventos clínicos. A interação por massa basal e a análise de mediação exigem confirmação."
   },
   {
     "slug": "lcz-in-nhcm-sacubitril-valsartana-na-cardiomiopatia-hipertrofica-nao-obstrutiva",
@@ -40486,7 +40525,7 @@
     "study_type": "ensaio_clinico",
     "summary": "Ensaio de fase 2, multicêntrico, duplo-cego, controlado por placebo (NCT04164732) que testou sacubitril/valsartana (LCZ696) em pacientes adultos com cardiomiopatia hipertrófica não obstrutiva sintomática e capacidade de exercício reduzida (VO2 pico previsto ≤80%) — população até então sem terapia farmacológica de eficácia comprovada.",
     "key_findings": "40 pacientes randomizados 1:1 (idade mediana 57,5 anos; 80% em NYHA II; VO2 pico previsto médio 67,7%). Não houve diferença entre grupos na variação do VO2 pico em 50 semanas, o desfecho primário (p=0,55). Porém houve remodelamento estrutural favorável: a espessura do septo interventricular reduziu 4,7 mm a mais no grupo LCZ696 (p=0,0001) e a massa do VE indexada reduziu 22,5 g/m2 a mais (p=0,02); um escore composto z de parâmetros clínicos também melhorou (p=0,015), impulsionado por espessura parietal, massa do VE e troponina. Perfil de segurança semelhante ao já descrito para sacubitril/valsartana em insuficiência cardíaca.",
-    "clinical_implications": "Apesar de não atingir o desfecho funcional primário, o sinal consistente de remodelamento estrutural reverso sugere benefício potencial de sacubitril/valsartana na CMH não obstrutiva — subgrupo sem opções farmacológicas guiadas por evidência — justificando ensaios maiores com desfechos clínicos e de imagem como primários.",
+    "clinical_implications": "O ensaio foi negativo para o desfecho primário de VO2 pico. As mudanças estruturais e no escore composto são sinais exploratórios que justificam investigação adicional, mas não demonstram benefício funcional nem sustentam indicação rotineira de sacubitril/valsartana especificamente para CMH não obstrutiva.",
     "theme": "Cardiomiopatias",
     "pmid": "42615945",
     "year": 2026,
@@ -40494,7 +40533,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Petranovic M, et al.; LCZ in nHCM Trial Investigators",
-    "journal": "JACC Heart Fail"
+    "journal": "JACC Heart Fail",
+    "doi": "10.1016/j.jchf.2026.103237",
+    "url": "https://doi.org/10.1016/j.jchf.2026.103237",
+    "limitations": "Ensaio de fase 2 muito pequeno (40 participantes), com desfecho primário funcional negativo. Espessura septal, massa ventricular, troponina e escore composto foram análises adicionais sujeitas a multiplicidade e não substituem desfechos clínicos. O seguimento de 50 semanas não avalia eventos ou durabilidade."
   },
   {
     "slug": "ablacao-por-cateter-versus-terapia-medica-para-fibrilacao-atrial-na-amiloidose-cardiaca",
@@ -40502,7 +40544,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Estudo de coorte retrospectivo usando a base multicêntrica TriNetX (2019-2025) comparando ablação por cateter associada a antiarrítmicos versus terapia medicamentosa isolada em pacientes com amiloidose cardíaca e fibrilação atrial — população pouco estudada em ensaios controlados devido à infiltração amiloide atrial, que dificulta a ablação e favorece recorrência.",
     "key_findings": "De 5.562 pacientes identificados (893 com ablação, 4.669 só com terapia medicamentosa), 870 pacientes por grupo foram pareados por escore de propensão. Em 12 meses, a ablação associou-se a menor risco do desfecho composto (morte por qualquer causa, AVC isquêmico, sangramento e IAM subsequente): 8,3% vs. 13,2% (HR 0,591; IC95% 0,418-0,834; p=0,002), com redução também da mortalidade por qualquer causa. Não houve diferença em hospitalização geral, visitas a emergência, IC nova ou bloqueio atrioventricular. Reablação, cardioversão repetida e implante de marca-passo/CDI foram mais frequentes no grupo ablação.",
-    "clinical_implications": "Apesar da maior taxa de recorrência arrítmica e de reintervenção, a ablação por cateter mostrou-se associada a melhores desfechos compostos em pacientes selecionados com amiloidose cardíaca e FA, sugerindo que a estratégia não deve ser descartada por princípio nessa população — a decisão deve considerar estágio da doença e carga de sintomas.",
+    "clinical_implications": "A ablação associou-se a menor risco composto em pacientes selecionados, mas o desenho observacional não permite atribuir causalidade nem definir superioridade sobre terapia medicamentosa. A decisão pode ser considerada individualmente por sintomas, estágio da amiloidose e risco procedural, enquanto se aguardam dados prospectivos.",
     "theme": "Cardiomiopatias",
     "pmid": "42544221",
     "year": 2026,
@@ -40510,15 +40552,18 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Fahed J, et al.",
-    "journal": "Glob Cardiol Sci Pract"
+    "journal": "Glob Cardiol Sci Pract",
+    "doi": "10.21542/gcsp.2026.26",
+    "url": "https://doi.org/10.21542/gcsp.2026.26",
+    "limitations": "Coorte retrospectiva baseada em registros eletrônicos TriNetX; mesmo após pareamento, persistem confusão por indicação, seleção de pacientes mais aptos à ablação, erros de codificação e ausência de granularidade sobre subtipo/estágio da amiloidose e carga de FA. A comparação foi ablação mais antiarrítmicos versus terapia medicamentosa, com seguimento de 12 meses, e não estima efeito causal isolado da ablação."
   },
   {
     "slug": "imunoglobulina-intravenosa-e-desfecho-em-dez-anos-na-cardiomiopatia-dilatada-por-parvovirus-b19",
     "title": "Imunoglobulina Intravenosa e Desfecho Clínico em Dez Anos na Cardiomiopatia Dilatada com Persistência de Parvovírus B19",
     "study_type": "ensaio_clinico",
     "summary": "Seguimento de longo prazo de um ensaio randomizado que testou imunoglobulina intravenosa (IVIg) associada à terapia padrão em pacientes com cardiomiopatia dilatada e persistência miocárdica de parvovírus B19 (B19V) documentada por biópsia endomiocárdica. O ensaio original não havia mostrado melhora da função cardíaca em 6 meses; este estudo avalia desfechos clínicos após seguimento mediano de quase 7 anos e analisa mecanismos moleculares por sequenciamento de RNA de núcleo único.",
-    "key_findings": "50 pacientes randomizados (26 para IVIg 2g/kg/dia por 4 dias; 24 para placebo). Após seguimento mediano de 6,8 anos (IQR 5,6-10,3), o desfecho composto (morte cardíaca, hospitalização por IC, arritmia com risco de vida) ocorreu em apenas 1/26 pacientes do grupo IVIg versus 8/24 do grupo placebo (p=0,0075). Biópsias pareadas mostraram que a IVIg reduziu infiltração de monócitos e preveniu a expansão de cardiomiócitos lesados, com reprogramação transcricional que reduziu a sinalização mieloide-fibroblasto e a via TGFβ, além de melhora do metabolismo oxidativo dos cardiomiócitos.",
-    "clinical_implications": "Embora sem benefício funcional em 6 meses, a IVIg mostrou associação com desfechos clínicos francamente melhores no longo prazo em pacientes com cardiomiopatia dilatada e B19V persistente, com mecanismo antifibrótico/anti-inflamatório plausível — reforça a relevância da biópsia endomiocárdica para fenotipagem etiológica e a consideração de IVIg nesse subgrupo específico, embora o n pequeno exija confirmação em estudos maiores.",
+    "key_findings": "50 pacientes randomizados (26 para IVIg em dose total de 2 g/kg distribuída por 4 dias, 0,5 g/kg/dia; 24 para placebo). Após seguimento mediano de 6,8 anos (IQR 5,6-10,3), o desfecho composto (morte cardíaca, hospitalização por IC, arritmia com risco de vida) ocorreu em 1/26 pacientes do grupo IVIg versus 8/24 do grupo placebo (p=0,0075). Biópsias pareadas mostraram menor infiltração de monócitos e ausência da expansão de cardiomiócitos lesados observada no placebo, com análises transcriptômicas exploratórias de sinalização mieloide-fibroblasto, TGFβ e metabolismo oxidativo.",
+    "clinical_implications": "O seguimento pós-hoc gera uma hipótese de benefício tardio da IVIg apesar do desfecho funcional primário negativo aos 6 meses. O número muito pequeno de eventos e o caráter unicêntrico impedem recomendação clínica rotineira; o achado requer confirmação prospectiva multicêntrica antes de orientar IVIg ou biópsia especificamente com finalidade terapêutica nesse subgrupo.",
     "theme": "Cardiomiopatias",
     "pmid": "42135937",
     "year": 2026,
@@ -40526,7 +40571,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Sikking MA, et al.",
-    "journal": "Eur J Heart Fail"
+    "journal": "Eur J Heart Fail",
+    "doi": "10.1093/ejhf/xuag134",
+    "url": "https://doi.org/10.1093/ejhf/xuag134",
+    "limitations": "Seguimento pós-hoc de ensaio unicêntrico com apenas 50 pacientes e nove eventos compostos, produzindo grande incerteza estatística. O ensaio original foi negativo para FEVE aos 6 meses. O sequenciamento de RNA utilizou apenas o subconjunto com biópsias disponíveis, com efeito molecular pequeno frente à variabilidade entre pacientes; as análises mecanísticas são exploratórias."
   },
   {
     "slug": "variantes-raras-em-genes-de-cardiomiopatia-dilatada-e-arritmogenica-e-risco-arritmico-no-uk-biobank",
@@ -40534,7 +40582,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Estudo de coorte populacional usando dados de sequenciamento de exoma completo do UK Biobank para avaliar se portadores de variantes raras preditas como deletérias (PDrV) em 25 genes validados de cardiomiopatia dilatada (CMD) e arritmogênica (CMA) — sem diagnóstico clínico prévio de cardiomiopatia — têm maior risco de morte súbita/arritmia ventricular maligna e de morte por insuficiência cardíaca/transplante.",
     "key_findings": "469.671 participantes (54,2% mulheres; idade mediana basal 53,5 anos), seguimento mediano de 14 anos, com 5.786 eventos de morte súbita/arritmia ventricular maligna (SCD/MVA) e 4.611 eventos de morte por IC/transplante (HF/HT). PDrV foi encontrada em 12.973 (2,8%) participantes. Apesar da baixa penetrância para CMD (1,0%), portadores de PDrV tiveram maior risco de SCD/MVA (HR 1,28; IC95% 1,11-1,48) e de HF/HT (HR 1,32; IC95% 1,08-1,62). Em participantes sem cardiomiopatia ou outra cardiopatia no início do estudo, o risco de SCD/MVA permaneceu elevado apenas para variantes em genes de CMA (HR 1,34; IC95% 1,07-1,69).",
-    "clinical_implications": "Portar uma variante rara potencialmente deletéria em gene de CMD/CMA eleva o risco de eventos arrítmicos graves mesmo sem fenótipo clínico evidente no rastreio inicial, especialmente para genes arritmogênicos — dado relevante para discutir rastreamento genético em cascata familiar e vigilância de portadores assintomáticos, independentemente de diagnóstico de cardiomiopatia já estabelecido.",
+    "clinical_implications": "Variantes raras preditas como deletérias associaram-se a aumento modesto de risco populacional, sobretudo em genes de cardiomiopatia arritmogênica. O achado não converte automaticamente uma variante predita em patogênica nem define indicação de CDI; interpretação clínica, classificação genética formal, fenótipo e história familiar continuam indispensáveis.",
     "theme": "Cardiomiopatias",
     "pmid": "42520655",
     "year": 2026,
@@ -40542,7 +40590,10 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Gandin I, et al.",
-    "journal": "JACC Adv"
+    "journal": "JACC Adv",
+    "doi": "10.1016/j.jacadv.2026.103066",
+    "url": "https://doi.org/10.1016/j.jacadv.2026.103066",
+    "limitations": "Análise observacional do UK Biobank com viés de voluntário saudável e participantes predominantemente de ancestralidade europeia. As variantes foram classificadas por predição bioinformática em conjunto, sem adjudicação clínica individual de patogenicidade; penetrância e efeito variam por gene e variante. Desfechos derivados de registros e confusão residual limitam inferência causal e aplicação a decisões individuais."
   },
   {
     "slug": "cardiomiopatia-periparto-em-centro-terciario-desfechos-em-um-ano-coorte-indiana",
@@ -40550,7 +40601,7 @@
     "study_type": "estudo_de_coorte",
     "summary": "Estudo de coorte prospectiva observacional em um centro terciário de cardiologia na Índia (UNMICRC, Ahmedabad) que acompanhou mulheres internadas com cardiomiopatia periparto (CMPP) para descrever apresentação clínica, gravidade e desfechos clínicos e ecocardiográficos em 6 meses e 1 ano, incluindo fatores associados à recuperação da função ventricular.",
     "key_findings": "47 mulheres consecutivas (idade média 29,3 ± 5,5 anos), diagnosticadas entre junho de 2021 e junho de 2023. A maioria (83%) apresentou-se no pós-parto, com quadro grave: 98% em NYHA III-IV e 83% com disfunção sistólica grave do VE na admissão. A FEVE média melhorou de 25,7 ± 6,3% (basal) para 31,8 ± 9,4% (6 meses) e 38,8 ± 13,1% (1 ano) (p<0,0001). Recuperação ventricular (FEVE ≥45%) ocorreu em 13,3% dos casos em 6 meses e 42,2% em 1 ano. O TAPSE basal foi preditor independente de recuperação (OR 1,29; IC95% 1,03-1,61; p=0,03). Reinternação ocorreu em 29,8% e a mortalidade em 1 ano foi 6,4%.",
-    "clinical_implications": "Mesmo em quadros iniciais graves, a maioria das pacientes com CMPP tratadas com terapia guiada por diretriz e seguimento estruturado mostra recuperação funcional expressiva ao longo de 1 ano — reforça a importância de seguimento ecocardiográfico prolongado (a taxa de recuperação triplicou entre 6 meses e 1 ano) antes de decisões definitivas sobre prognóstico ou terapias avançadas (CDI, transplante).",
+    "clinical_implications": "Houve melhora média da função ventricular ao longo de um ano, mas apenas 42,2% atingiram FEVE ≥45%; portanto, não se pode afirmar recuperação da maioria. O estudo reforça seguimento clínico e ecocardiográfico longitudinal, sem substituir critérios individuais e diretrizes para CDI, suporte circulatório ou transplante.",
     "theme": "Cardiomiopatias",
     "pmid": "42537717",
     "year": 2026,
@@ -40558,6 +40609,9 @@
     "review_status": "revisado",
     "published": false,
     "authors": "Charaniya R, et al.",
-    "journal": "Indian Heart J"
+    "journal": "Indian Heart J",
+    "doi": "10.1016/j.ihj.2026.07.009",
+    "url": "https://doi.org/10.1016/j.ihj.2026.07.009",
+    "limitations": "Coorte prospectiva de um único centro terciário com apenas 47 mulheres hospitalizadas e sem grupo comparador, enriquecida para apresentações graves. O modelo de predição de recuperação tem poucos eventos e risco de sobreajuste; perdas de seguimento e tratamento ao longo do tempo podem influenciar as estimativas. Os resultados não se generalizam a casos ambulatoriais ou menos graves."
   }
 ]
