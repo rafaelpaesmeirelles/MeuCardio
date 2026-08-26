@@ -39,7 +39,8 @@ flowchart TD
 
   D3 -->|"Não"| D4{"Há pericardite inflamatória ou causa<br/>sistêmica identificada e tratável?"}
 
-  D4 -->|"Sim"| C4(["Tratar a pericardite ou a causa de<br/>base e monitorar clínica, PCR e<br/>ecocardiograma; não drenar apenas<br/>pelo tamanho se o paciente permanece<br/>estável e assintomático"])
+  D4 -->|"Sim"| P1["Tratar a pericardite ou a causa de<br/>base e monitorar clínica, PCR e<br/>ecocardiograma; a causa identificada<br/>não encerra a reavaliação"]
+  P1 --> D5
 
   D4 -->|"Não"| D5{"Há sintomas atribuíveis ao derrame,<br/>crescimento, comprometimento<br/>hemodinâmico ou falha do tratamento<br/>da causa/inflamação?"}
 
@@ -52,7 +53,7 @@ flowchart TD
   D6 -->|"Não"| C8(["Seguimento dirigido à etiologia e à<br/>evolução clínica/ecocardiográfica"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7,C8 conduta;
+  class C1,C2,C3,C5,C6,C7,C8 conduta;
 ```
 
 ## O que a árvore não mostra
@@ -64,6 +65,12 @@ revisão de 2024, mostrou que vigilância é uma opção segura para o fenótipo
 estritamente assintomático, crônico, idiopático e sem inflamação. A decisão
 deve integrar sintomas, hemodinâmica, evolução, inflamação e etiologia — não
 o diâmetro isolado.
+
+**Identificar uma causa não encerra a avaliação da drenagem.** Mesmo durante
+tratamento etiológico, sintomas atribuíveis ao derrame, crescimento ao
+ecocardiograma, comprometimento hemodinâmico ou falha da resposta exigem nova
+decisão sobre pericardiocentese ou via cirúrgica; estabilidade e ausência de
+sintomas é que sustentam vigilância sem drenagem pelo tamanho isolado.
 
 **Recorrência não significa pericardiectomia automática.** A diretriz ESC
 2025 recomenda considerar janela pleuropericárdica quando o derrame recidiva

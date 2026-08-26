@@ -59,9 +59,11 @@ flowchart TD
 
 ## A escolha da técnica, que a árvore não repete a cada folha
 
-**Valvotomia por balão via cateter** é a via recomendada para estenose
-pulmonar valvar não displásica e para estenose periférica (com implante de
-stent, frequentemente). **Cirurgia** é a via para estenose sub-infundibular
+**Valvuloplastia por balão via cateter** é a via recomendada para estenose
+pulmonar **valvar** não displásica. Na estenose **periférica dos ramos da
+artéria pulmonar**, a técnica é angioplastia por balão, frequentemente com
+implante de stent; o procedimento não envolve a valva. **Cirurgia** é a via
+para estenose sub-infundibular
 ou infundibular, para anel pulmonar hipoplásico, e para a valva **displásica**
 (cúspides pouco móveis, espessamento mixomatoso, frequentemente parte da
 síndrome de Noonan) — a literatura mostra taxa de sucesso menor da
