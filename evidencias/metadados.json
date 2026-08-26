@@ -48499,5 +48499,189 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "inibidor-de-pcsk9-em-hipercolesterolemia-familiar-de-muito-alto-risco",
+    "statement": "Em pacientes com hipercolesterolemia familiar de risco muito alto (com doença cardiovascular aterosclerótica estabelecida ou outro fator de risco maior) que não atingem a meta de LDL-C com estatina em dose máxima tolerada associada a ezetimiba, a adição de um inibidor de PCSK9 é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipercolesterolemia familiar",
+      "PCSK9",
+      "LDL",
+      "risco muito alto"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcsk9-em-prevencao-primaria-de-muito-alto-risco-sem-hf",
+    "statement": "Em pacientes de risco muito alto em prevenção primária, sem hipercolesterolemia familiar, que não atingem a meta de LDL-C apesar de estatina em dose máxima tolerada associada a ezetimiba, a adição de um inibidor de PCSK9 pode ser considerada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "PCSK9",
+      "prevenção primária",
+      "LDL",
+      "risco muito alto"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ezetimiba-em-intolerancia-a-estatina",
+    "statement": "Em pacientes com intolerância a estatina em qualquer dose, mesmo após reintrodução (rechallenge), a associação de ezetimiba pode ser considerada para redução do LDL-colesterol.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "intolerância a estatina",
+      "ezetimiba",
+      "LDL"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-de-placa-arterial-por-ultrassonografia-como-modificador-de-risco",
+    "statement": "Em indivíduos assintomáticos de risco cardiovascular baixo ou moderado, a avaliação de placa arterial (carotídea e/ou femoral) por ultrassonografia deve ser considerada como modificador de risco, para reclassificação de categoria de risco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estratificação de risco",
+      "ultrassonografia",
+      "placa arterial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-calcio-coronario-como-modificador-de-risco-esc-eas-2019",
+    "statement": "Em indivíduos assintomáticos de risco cardiovascular baixo ou moderado, o escore de cálcio coronário por tomografia computadorizada deve ser considerado como modificador de risco, para reclassificação de categoria de risco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estratificação de risco",
+      "escore de cálcio coronário",
+      "tomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-em-prevencao-secundaria-em-idosos-acima-de-65-anos",
+    "statement": "Em pessoas com mais de 65 anos e doença cardiovascular aterosclerótica já estabelecida, o tratamento com estatina é recomendado em prevenção secundária, da mesma forma que em pacientes mais jovens.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "idoso",
+      "prevenção secundária",
+      "estatina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dose-baixa-de-estatina-no-idoso-com-disfuncao-renal-ou-interacao",
+    "statement": "Em pessoas com mais de 65 anos, recomenda-se iniciar a estatina em dose baixa quando houver disfunção renal significativa e/ou potencial relevante de interação medicamentosa, com titulação até a meta de LDL-C.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "idoso",
+      "estatina",
+      "dose inicial",
+      "insuficiência renal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-como-primeira-escolha-na-hipertrigliceridemia-de-alto-risco",
+    "statement": "Em pacientes de alto risco (ou risco maior) com hipertrigliceridemia e triglicerídeos >200 mg/dL (>2,3 mmol/L), a estatina é recomendada como fármaco de primeira escolha para redução do risco cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EAS 2019",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk",
+    "reference": "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipertrigliceridemia",
+      "estatina",
+      "triglicerídeos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "evinacumabe-na-hipercolesterolemia-familiar-homozigota-a-partir-dos-5-anos",
+    "statement": "Em pacientes com hipercolesterolemia familiar homozigota, a partir de 5 anos de idade, que não atingem a meta de LDL-C apesar de dose máxima de terapia hipolipemiante, o uso de evinacumabe deve ser considerado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS 2025",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipercolesterolemia familiar homozigota",
+      "evinacumabe",
+      "ANGPTL3",
+      "criança"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lipoproteina-a-rastreamento-ao-menos-uma-vez-atualizacao-esc-eas-2025",
+    "statement": "A medida de lipoproteína(a) [Lp(a)] ao menos uma vez na vida de todo adulto deve ser considerada, no primeiro perfil lipídico ou no próximo disponível, para identificar indivíduos com risco cardiovascular aterosclerótico potencialmente aumentado por Lp(a) elevada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS 2025",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "lipoproteína(a)",
+      "rastreamento",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

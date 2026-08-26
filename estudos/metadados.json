@@ -38151,5 +38151,83 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "kardia-2-zilebesiran-terapia-adjuvante-na-hipertensao-nao-controlada",
+    "title": "KARDIA-2 — Zilebesiran como terapia adjuvante na hipertensão não controlada",
+    "study_type": "ensaio_clinico",
+    "authors": "Desai AS, Karns AD, Badariene J, et al.",
+    "journal": "JAMA",
+    "year": 2025,
+    "doi": "10.1001/jama.2025.6681",
+    "pmid": "40434761",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40434761/",
+    "summary": "Ensaio de fase 2, randomizado, duplo-cego, prospectivo, conduzido em 150 centros de 8 países entre janeiro de 2022 e dezembro de 2023, testando zilebesiran como terapia adicional em pacientes com hipertensão não controlada. Após run-in aberto de pelo menos 4 semanas com indapamida 2,5 mg, anlodipino 5 mg ou olmesartana 40 mg, pacientes aderentes com PAS ambulatorial média de 24h entre 130-160 mmHg foram randomizados (1:1) para dose única subcutânea de zilebesiran 600 mg ou placebo, dentro de cada coorte de fármaco de base. Desfecho primário: diferença na variação da PAS ambulatorial de 24h do início ao mês 3, em cada coorte.",
+    "key_findings": "De 1.491 pacientes que entraram no run-in, 663 foram randomizados para zilebesiran (n=332) ou placebo (n=331) — 130 na coorte indapamida, 240 anlodipino e 293 olmesartana. A diferença de médias ajustadas (LSM) na PAS ambulatorial de 24h aos 3 meses foi de -12,1 mmHg (IC95% -16,5 a -7,6; p<0,001) sobre indapamida, -9,7 mmHg (IC95% -12,9 a -6,6; p<0,001) sobre anlodipino, e -4,5 mmHg (IC95% -8,2 a -0,8; p=0,02) sobre olmesartana. Hipercalemia (5,5% vs. 1,8%), hipotensão (4,3% vs. 2,1%) e insuficiência renal aguda (4,9% vs. 1,5%) foram mais frequentes com zilebesiran, em geral leves e autolimitadas.",
+    "clinical_implications": "Demonstra que uma única dose subcutânea de zilebesiran produz redução pressórica adicional significativa quando somada a diuréticos tiazídicos, bloqueadores de canal de cálcio ou bloqueadores do receptor de angiotensina — reforça o potencial do silenciamento do angiotensinogênio como quarto pilar terapêutico complementar às classes já consagradas, com efeito aditivo mesmo sobre um BRA (olmesartana), embora de menor magnitude.",
+    "limitations": "Dose única avaliada em janela de apenas 3 meses, sem dados de segurança de doses repetidas a longo prazo; maior incidência de hipercalemia, hipotensão e lesão renal aguda no braço ativo exige vigilância, sobretudo em combinação com bloqueio duplo do SRAA; coortes com tamanhos desbalanceados (indapamida menor).",
+    "theme": "Hipertensão",
+    "tags": [
+      "kardia-2",
+      "zilebesiran",
+      "sirna",
+      "terapia combinada",
+      "angiotensinogênio",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "baxhtn-baxdrostat-fase-3-na-hipertensao-nao-controlada-e-resistente",
+    "title": "BaxHTN — Baxdrostat (inibidor da aldosterona sintase), ensaio de fase 3, na hipertensão não controlada e resistente",
+    "study_type": "ensaio_clinico",
+    "authors": "Flack JM, Azizi M, Brown JM, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2025,
+    "doi": "10.1056/NEJMoa2507109",
+    "pmid": "40888730",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40888730/",
+    "summary": "Ensaio de fase 3, multinacional, duplo-cego, randomizado, controlado por placebo, com 796 pacientes com PAS de consultório sentado entre 140 e <170 mmHg apesar de dois (hipertensão não controlada) ou três ou mais anti-hipertensivos incluindo diurético (hipertensão resistente). Após run-in de placebo de 2 semanas, os pacientes com PAS sentada ≥135 mmHg foram randomizados 1:1:1 para baxdrostat 1 mg, baxdrostat 2 mg ou placebo, uma vez ao dia por 12 semanas, além da terapia de base. Desfecho primário: variação da PAS sentada do início à semana 12.",
+    "key_findings": "Dos 796 randomizados, 794 receberam o tratamento (264 com 1 mg, 266 com 2 mg, 264 com placebo). Aos 12 semanas, a variação de médias ajustadas da PAS foi de -14,5 mmHg (IC95% -16,5 a -12,5) com 1 mg, -15,7 mmHg (IC95% -17,6 a -13,7) com 2 mg, e -5,8 mmHg (IC95% -7,9 a -3,8) com placebo — diferença corrigida por placebo de -8,7 mmHg (IC95% -11,5 a -5,8) com 1 mg e -9,8 mmHg (IC95% -12,6 a -7,0) com 2 mg (p<0,001 para ambas). Potássio >6,0 mmol/L ocorreu em 2,3% (1 mg), 3,0% (2 mg) e 0,4% (placebo).",
+    "clinical_implications": "Confirma em fase 3, com amostra robusta e desenho multinacional, o efeito anti-hipertensivo consistente do baxdrostat somado à terapia de base, tanto em hipertensão não controlada quanto resistente — consolida a inibição da aldosterona sintase como nova classe terapêutica candidata a uso clínico rotineiro nesse cenário, complementar à espironolactona (PATHWAY-2).",
+    "limitations": "Seguimento de apenas 12 semanas, sem dados de desfechos cardiovasculares duros nem de segurança renal/eletrolítica de longo prazo; sinal dose-dependente de hipercalemia grave (até 3,0% com 2 mg) exige monitorização estruturada de potássio, especialmente em combinação com IECA/BRA ou espironolactona.",
+    "theme": "Hipertensão",
+    "tags": [
+      "baxhtn",
+      "baxdrostat",
+      "inibidor da aldosterona sintase",
+      "hipertensão resistente",
+      "hipertensão não controlada",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "radiance-ii-denervacao-renal-por-ultrassom-sem-uso-de-medicamentos",
+    "title": "RADIANCE II — Denervação renal por ultrassom endovascular na hipertensão, sem a influência confundidora de medicações",
+    "study_type": "ensaio_clinico",
+    "authors": "Azizi M, Saxena M, Wang Y, et al.",
+    "journal": "JAMA",
+    "year": 2023,
+    "doi": "10.1001/jama.2023.0713",
+    "pmid": "36853250",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36853250/",
+    "summary": "Ensaio randomizado, controlado por procedimento simulado (sham), com pacientes e avaliadores de desfecho cegos, conduzido entre janeiro de 2019 e março de 2022 em 37 centros nos EUA e 24 na Europa. Incluiu pacientes de 18-75 anos com PA de consultório ≥140/90 mmHg apesar de até 2 anti-hipertensivos, com PA ambulatorial ≥135/85 mmHg e <170/105 mmHg após washout de 4 semanas das medicações. Pacientes com TFGe ≥40 mL/min/1,73m² e anatomia arterial renal adequada foram randomizados 2:1 para denervação renal por ultrassom ou procedimento sham, permanecendo sem anti-hipertensivos até os 2 meses de seguimento (salvo critérios pressóricos de resgate). Desfecho primário: variação da PAS ambulatorial diurna aos 2 meses.",
+    "key_findings": "Dos 1.038 pacientes elegíveis, 150 foram randomizados para denervação e 74 para sham (idade média 55 anos; 28,6% mulheres; 16,1% negros). A redução da PAS ambulatorial diurna foi maior com denervação (-7,9 mmHg) do que com sham (-1,8 mmHg) — diferença ajustada de -6,3 mmHg (IC95% -9,3 a -3,2; p<0,001), consistente ao longo do ciclo circadiano de 24h. De 7 desfechos pressóricos secundários, 6 favoreceram significativamente a denervação. Nenhum evento adverso maior foi relatado em ambos os grupos.",
+    "clinical_implications": "Reforça, num terceiro ensaio sham-controlado do programa RADIANCE (após SOLO e TRIO), que a denervação renal por ultrassom reduz a pressão arterial de forma consistente mesmo na ausência completa de medicação anti-hipertensiva — evidência importante para pacientes com hipertensão leve a moderada não resistente, ampliando o espectro de indicação da denervação renal além da hipertensão resistente clássica (coberta por RADIANCE-HTN TRIO já cadastrado neste catálogo).",
+    "limitations": "Seguimento curto (2 meses) para o desfecho primário, sem avaliação de eventos cardiovasculares duros; exclusão de pacientes sem anatomia arterial renal favorável limita a generalização; efeito placebo/sham não nulo (-1,8 mmHg) ilustra a importância do desenho sham-controlado nesse campo.",
+    "theme": "Hipertensão",
+    "tags": [
+      "radiance-ii",
+      "denervação renal",
+      "ultrassom",
+      "hipertensão",
+      "sham-controlado",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
