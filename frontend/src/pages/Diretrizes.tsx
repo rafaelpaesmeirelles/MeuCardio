@@ -160,23 +160,18 @@ export default function Diretrizes() {
       <ClinicalSection
         eyebrow="Biblioteca clínica"
         title="Guidelines revisadas e conectadas"
-        description="Sínteses publicadas na CorVIA, organizadas por área e ligadas aos documentos e fluxogramas do mesmo assunto."
       >
-        {diretrizes.length === 0 ? (
-          <ClinicalEmpty title="Nenhuma guideline revisada publicada" description="As sínteses aparecem aqui depois da revisão clínica e da publicação." />
-        ) : (
-          <div className="cc-context-grid">
-            {diretrizes.map((item) => (
-              <ClinicalContextLink
-                key={item.slug}
-                to={`/biblioteca/${item.slug}`}
-                icon="evidencia"
-                title={item.title}
-                detail={item.theme}
-              />
-            ))}
-          </div>
-        )}
+        <div className="cc-context-grid">
+          {diretrizes.map((item) => (
+            <ClinicalContextLink
+              key={item.slug}
+              to={`/biblioteca/${item.slug}`}
+              icon="evidencia"
+              title={item.title}
+              detail={item.theme}
+            />
+          ))}
+        </div>
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Da diretriz à decisão">
