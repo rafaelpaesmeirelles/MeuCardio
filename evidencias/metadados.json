@@ -46212,5 +46212,347 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "esc-2021-evitar-exposicao-de-longo-prazo-a-poluicao-do-ar-em-pacientes-de-alto-risco",
+    "statement": "Pacientes em risco (muito) alto para doença cardiovascular podem ser incentivados a evitar exposição de longo prazo a regiões com alta poluição do ar.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "poluição do ar",
+      "exposição ambiental",
+      "alto risco cardiovascular",
+      "prevenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-rastreio-oportunistico-de-risco-cardiovascular-em-regioes-com-alta-poluicao-do-ar",
+    "statement": "Em regiões onde a população tem exposição de longo prazo a níveis elevados de poluição do ar, programas de rastreio (oportunístico) de risco cardiovascular podem ser considerados.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "poluição do ar",
+      "rastreio de risco",
+      "exposição ambiental",
+      "saúde populacional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-medidas-populacionais-para-reduzir-poluicao-do-ar-e-mortalidade-cardiovascular",
+    "statement": "É recomendado implementar medidas para reduzir a poluição do ar — incluindo a redução da emissão de material particulado e de poluentes gasosos, a redução do uso de combustíveis fósseis e a limitação das emissões de dióxido de carbono — para reduzir a mortalidade e a morbidade cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "poluição do ar",
+      "política populacional",
+      "mudança climática",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-avaliacao-de-estressores-psicossociais-como-modificador-de-risco-cardiovascular",
+    "statement": "Sintomas de estresse e estressores psicossociais modificam o risco cardiovascular; a avaliação desses estressores deve ser considerada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "estresse psicossocial",
+      "solidão",
+      "modificador de risco",
+      "saúde mental e coração"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-ajuste-do-risco-cardiovascular-calculado-por-subgrupo-etnico",
+    "statement": "A multiplicação do risco cardiovascular calculado por um fator de risco relativo específico deve ser considerada para subgrupos étnicos específicos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "etnia",
+      "disparidade racial",
+      "estratificação de risco",
+      "equidade em saúde"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-avaliacao-de-risco-cardiovascular-em-condicoes-inflamatorias-cronicas",
+    "statement": "A avaliação do risco cardiovascular total deve ser considerada em adultos com condições inflamatórias crônicas.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "condição inflamatória crônica",
+      "comorbidade",
+      "rastreio de risco",
+      "doença cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-multiplicacao-do-risco-cardiovascular-por-1-5-na-artrite-reumatoide",
+    "statement": "A multiplicação do risco cardiovascular total calculado por um fator de 1,5 deve ser considerada em adultos com artrite reumatoide.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "artrite reumatoide",
+      "comorbidade inflamatória",
+      "estratificação de risco",
+      "doença cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-enxaqueca-com-aura-na-avaliacao-de-risco-cardiovascular",
+    "statement": "A presença de enxaqueca com aura deve ser considerada na avaliação de risco cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "enxaqueca",
+      "enxaqueca com aura",
+      "avaliação de risco",
+      "comorbidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-evitar-contraceptivo-hormonal-combinado-em-mulheres-com-enxaqueca-com-aura",
+    "statement": "Deve-se considerar evitar o uso de contraceptivos hormonais combinados em mulheres com enxaqueca com aura.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "enxaqueca com aura",
+      "contracepção hormonal",
+      "risco cardiovascular",
+      "saúde da mulher"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-avaliacao-de-risco-cardiovascular-em-homens-com-disfuncao-eretil",
+    "statement": "A avaliação do risco cardiovascular deve ser considerada em homens com disfunção erétil.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "disfunção erétil",
+      "marcador precoce",
+      "avaliação de risco cardiovascular",
+      "saúde do homem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2020-rastreio-cardiaco-com-ecg-de-12-derivacoes-em-atletas-competitivos",
+    "statement": "O rastreio cardíaco com história familiar, sintomas, exame físico e eletrocardiograma de 12 derivações deve ser considerado para atletas competitivos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease",
+    "reference": "2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412.",
+    "theme": "Geral",
+    "tags": [
+      "morte súbita cardíaca",
+      "atletas",
+      "rastreio pré-participação",
+      "eletrocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2023-acs-vacinacao-anual-contra-influenza",
+    "statement": "A vacinação anual contra influenza é recomendada para todos os pacientes com síndrome coronariana aguda.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+    "theme": "Geral",
+    "tags": [
+      "vacinação",
+      "influenza",
+      "prevenção cardiovascular",
+      "síndrome coronariana aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-reducao-da-ingestao-de-sal-para-reduzir-pressao-arterial-e-risco-cardiovascular",
+    "statement": "É recomendado reduzir a ingestão de sal para reduzir a pressão arterial e o risco de doença cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "sódio",
+      "sal",
+      "pressão arterial",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-restricao-do-consumo-de-alcool-a-100g-por-semana",
+    "statement": "É recomendado restringir o consumo de álcool a um máximo de 100 g por semana.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "álcool",
+      "consumo de álcool",
+      "prevenção cardiovascular",
+      "nutrição"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-restricao-do-consumo-de-acucares-livres-e-bebidas-acucaradas",
+    "statement": "É recomendado restringir o consumo de açúcares livres, em particular bebidas açucaradas, a um máximo de 10% da ingestão energética.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "açúcar livre",
+      "bebidas açucaradas",
+      "nutrição",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-reducao-do-tempo-sedentario-para-reduzir-mortalidade-e-morbidade-cardiovascular",
+    "statement": "É recomendado reduzir o tempo sedentário, mantendo pelo menos atividade física leve ao longo do dia, para reduzir a mortalidade e a morbidade por todas as causas e cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "tempo sedentário",
+      "atividade física",
+      "sedentarismo",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-rastreadores-de-atividade-vestiveis-para-aumentar-participacao-em-atividade-fisica",
+    "statement": "Intervenções no estilo de vida — como educação em grupo ou individual, técnicas de mudança de comportamento, aconselhamento telefônico e o uso de rastreadores de atividade baseados em dispositivos vestíveis (wearables) — devem ser consideradas para aumentar a participação em atividade física.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "dispositivos vestíveis",
+      "wearables",
+      "atividade física",
+      "mudança de comportamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc-2021-150-a-300-minutos-semanais-de-atividade-fisica-para-reduzir-mortalidade",
+    "statement": "É recomendado que adultos de todas as idades busquem realizar pelo menos 150-300 minutos por semana de atividade física aeróbica de intensidade moderada, ou 75-150 minutos por semana de intensidade vigorosa, ou uma combinação equivalente, para reduzir a mortalidade por todas as causas, a mortalidade cardiovascular e a morbidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905.",
+    "theme": "Geral",
+    "tags": [
+      "atividade física",
+      "combinação equivalente",
+      "prevenção cardiovascular",
+      "exercício aeróbico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
