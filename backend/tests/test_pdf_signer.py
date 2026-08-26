@@ -70,10 +70,12 @@ def _gerar_pfx_com_intermediaria(*, senha: str = "senha123") -> tuple[bytes, byt
     return pfx, certificado_ca.public_bytes(serialization.Encoding.DER)
 
 
-def _pdf_minimo(texto: str = "Documento de teste — Corvia") -> bytes:
+def _pdf_minimo(texto: str = "Documento de teste — Corvia", paginas: int = 1) -> bytes:
     buf = io.BytesIO()
     c = canvas.Canvas(buf)
-    c.drawString(100, 750, texto)
+    for pagina in range(1, paginas + 1):
+        c.drawString(100, 750, f"{texto} — página {pagina}")
+        c.showPage()
     c.save()
     return buf.getvalue()
 
@@ -126,6 +128,39 @@ def test_assinar_pdf_com_url_publica_usa_qr_e_permanece_integro():
     status = validate_pdf_signature(assinatura)
     assert status.intact is True
     assert status.valid is True
+
+
+def test_assinar_pdf_multipagina_exibe_selo_em_todas_as_paginas_e_assina_uma_vez():
+    import fitz
+    from pyhanko.pdf_utils.reader import PdfFileReader
+    from pyhanko.sign.validation import validate_pdf_signature
+
+    pfx = _gerar_pfx()
+    url = "https://corvia.med.br/validar/R123-0123456789ABCDEF"
+    assinado = pdf_signer.assinar_pdf(
+        _pdf_minimo(paginas=3),
+        pfx_bytes=pfx,
+        senha="senha123",
+        motivo="Documento clínico multipágina",
+        local="Ribeirão Preto",
+        codigo_validacao="R123-0123456789ABCDEF",
+        url_validacao=url,
+    )
+
+    leitor_hanko = PdfFileReader(io.BytesIO(assinado))
+    assert len(leitor_hanko.embedded_signatures) == 1
+    status = validate_pdf_signature(leitor_hanko.embedded_signatures[0])
+    assert status.intact is True
+    assert status.valid is True
+
+    documento = fitz.open(stream=assinado, filetype="pdf")
+    assert len(documento) == 3
+    # A página 1 contém o widget criptográfico. Nas páginas seguintes, a mesma
+    # aparência é um XObject incluído no byte range assinado.
+    assert documento[0].first_widget is not None
+    for pagina in documento[1:]:
+        assert any(nome.startswith("Stamp") for _xref, nome, *_resto in pagina.get_xobjects())
+        assert "ASSINATURA DIGITAL ICP-BRASIL" in pagina.get_text()
 
 
 def test_assinar_pdf_embute_cadeia_e_usa_subfiltro_pades():

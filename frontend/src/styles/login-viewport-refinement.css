@@ -1,8 +1,40 @@
 /* Ajuste cirúrgico do login desktop: viewport integral, sem barra interna e sem overflow lateral. */
 @media(min-width:821px){
   html,body,#root{overflow-x:hidden}
+  .login.prehome.prehome--login{
+    place-items:stretch!important;
+    padding:0!important;
+    background:
+      radial-gradient(circle at 28% 48%,rgba(14,112,218,.16),transparent 34%),
+      radial-gradient(circle at 76% 15%,rgba(104,68,226,.10),transparent 31%),
+      radial-gradient(circle at 54% 76%,rgba(18,173,205,.07),transparent 28%),
+      linear-gradient(138deg,#01050b,#03111e 52%,#020811)!important;
+  }
   .prehome--fullscreen{height:100dvh!important;min-height:100dvh!important;max-height:100dvh!important;overflow:hidden!important}
   .prehome--fullscreen>.prehome-brand,.prehome--fullscreen>.prehome-access{height:100dvh!important;min-height:0!important;max-height:100dvh!important;overflow:hidden!important}
+  .prehome--login>.prehome-brand{
+    width:100%!important;
+    border-right:0!important;
+    background:radial-gradient(circle at 58% 49%,rgba(16,116,211,.10),transparent 64%)!important;
+  }
+  .prehome--login>.prehome-access{
+    width:100%!important;
+    background:radial-gradient(circle at 64% 19%,rgba(96,65,213,.055),transparent 58%)!important;
+    overflow:visible!important;
+  }
+  .prehome--login>.prehome-access::before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:clamp(-180px,-11vw,-96px);
+    width:clamp(190px,15vw,280px);
+    background:linear-gradient(90deg,transparent,rgba(8,31,52,.24) 48%,transparent);
+    filter:blur(18px);
+    content:"";
+    pointer-events:none;
+  }
+  .prehome--login .prehome-card--login{position:relative;z-index:1}
+  .prehome--login .prehome-legal{z-index:1}
   .prehome--fullscreen>.prehome-access{align-items:center!important;justify-content:center!important;padding:clamp(10px,1.8dvh,22px) clamp(18px,3.2vw,48px)!important}
   .prehome--fullscreen .prehome-card--login{width:min(100%,560px)!important;max-height:none!important;margin:auto!important;overflow:visible!important;padding:clamp(18px,2.2dvh,28px) clamp(20px,2.4vw,34px)!important}
   .prehome--fullscreen .prehome-card__header{margin-bottom:clamp(10px,1.5dvh,18px)!important}
@@ -21,7 +53,7 @@
 
 /* Desktop largo: ocupa melhor o canvas, aproxima os dois blocos e elimina o excesso de vazio lateral. */
 @media(min-width:1180px){
-  .login.prehome.prehome--login{grid-template-columns:minmax(0,52%) minmax(0,48%)!important}
+  .login.prehome.prehome--login{grid-template-columns:minmax(0,54%) minmax(0,46%)!important}
   .prehome--fullscreen>.prehome-brand{padding-inline:clamp(32px,3.2vw,56px)!important}
   .prehome--fullscreen .prehome-brand__content{width:min(100%,760px)!important;margin-inline:auto!important;gap:clamp(12px,1.2vw,18px)!important}
   .prehome--fullscreen .prehome-brand__copy h1{max-width:18ch!important;font-size:clamp(1.85rem,2.55vw,2.65rem)!important}
@@ -33,7 +65,7 @@
 }
 
 @media(min-width:1600px){
-  .login.prehome.prehome--login{grid-template-columns:minmax(0,53%) minmax(0,47%)!important}
+  .login.prehome.prehome--login{grid-template-columns:minmax(0,55%) minmax(0,45%)!important}
   .prehome--fullscreen .prehome-card--login{width:min(100%,720px)!important}
 }
 

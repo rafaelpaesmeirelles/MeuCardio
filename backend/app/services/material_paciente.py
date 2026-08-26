@@ -70,7 +70,7 @@ class DocumentoProfissional(Documento):
         except (OSError, ValueError):
             return 0.0, 0.0
 
-    def identidade_primeira_pagina(self) -> None:
+    def identidade_primeira_pagina(self) -> float:
         """Logo no canto superior direito, sem disputar espaço com o título."""
         direita = self.largura - self.margem
         topo = self.altura - 34
@@ -97,6 +97,43 @@ class DocumentoProfissional(Documento):
                 x = direita - largura_texto(trecho, 7.0)
                 self.pdf.texto(x, y, trecho, 7.0, NEUTRO)
                 y -= 10
+        return y
+
+    def capa_profissional(self, titulo: str, subtitulo: str, etiqueta: str = "") -> None:
+        """Capa cuja faixa superior reserva as duas identidades lado a lado."""
+        self.abrir_pagina(com_cabecalho=False)
+        self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
+
+        altura_corvia = self._logo(self.margem, self.altura - 40, 132)
+        base_corvia = self.altura - 40 - altura_corvia
+        base_profissional = self.identidade_primeira_pagina()
+        self.y = min(base_corvia, base_profissional) - 26
+
+        for linha in quebrar(titulo, self.util, 21, True):
+            self.pdf.texto(self.margem, self.y - 21, linha, 21, NAVY, negrito=True)
+            self.y -= 27
+        self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, VERMELHO, 2.2)
+        self.y -= 20
+
+        if subtitulo:
+            for linha in quebrar(subtitulo, self.util, 11):
+                self.pdf.texto(self.margem, self.y - 11, linha, 11, TEAL)
+                self.y -= 16
+        if etiqueta:
+            self.y -= 6
+            largura = largura_texto(etiqueta.upper(), 7.5, True) + 22
+            self.pdf.retangulo(self.margem, self.y - 6, largura, 19, TINTA_TEAL)
+            self.pdf.texto(
+                self.margem + 11,
+                self.y,
+                etiqueta.upper(),
+                7.5,
+                TEAL,
+                negrito=True,
+                espaco_extra=1.1,
+            )
+            self.y -= 16
+        self.y -= 14
 
     def _cabecalho(self) -> None:
         topo = self.altura - 30
@@ -151,12 +188,11 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
         rodape="Material educativo · não substitui a consulta médica",
         medico=medico,
     )
-    documento.capa_simples(
+    documento.capa_profissional(
         material.titulo,
         material.subtitulo or "",
         etiqueta="Material para o paciente",
     )
-    documento.identidade_primeira_pagina()
 
     for secao in (material.secoes or []):
         if secao.get("titulo"):
