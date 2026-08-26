@@ -159,7 +159,7 @@ export default function Diretrizes() {
 
       <ClinicalSection
         eyebrow="Biblioteca clínica"
-        title="Guidelines revisadas e conectadas"
+        title="Guidelines conectadas"
       >
         <div className="cc-context-grid">
           {diretrizes.map((item) => (
