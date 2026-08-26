@@ -45281,5 +45281,62 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "clopidogrel-associado-a-aas-na-angina-instavel-e-iamssst",
+    "statement": "Em pacientes com angina instável ou infarto agudo do miocárdio sem supradesnivelamento do segmento ST, clopidogrel em dose de ataque de 300 mg via oral seguida de 75 mg uma vez ao dia, associado ao ácido acetilsalicílico por 12 meses, é recomendado, com base no estudo CURE.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826, Tabela S10 do material suplementar. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+    "theme": "Farmacologia",
+    "tags": [
+      "clopidogrel",
+      "angina instável",
+      "IAMSSST",
+      "dupla antiagregação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "clopidogrel-associado-a-aas-no-infarto-com-supra-de-st",
+    "statement": "Em pacientes com infarto agudo do miocárdio com supradesnivelamento do segmento ST, clopidogrel em dose de ataque de 300 mg via oral seguida de 75 mg uma vez ao dia, associado ao ácido acetilsalicílico, é recomendado, com base nos estudos CLARITY e COMMIT; em pacientes com 75 anos ou mais, a dose de ataque não é suprimida — é reduzida para 75 mg, igual à dose de manutenção habitual.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826, Tabela S10 do material suplementar. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+    "theme": "Farmacologia",
+    "tags": [
+      "clopidogrel",
+      "infarto com supra de ST",
+      "dose em idosos",
+      "dupla antiagregação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "clopidogrel-dose-dobrada-na-angioplastia-de-alto-risco-isquemico",
+    "statement": "Em pacientes submetidos a angioplastia coronária com alto risco isquêmico e baixo risco de sangramento, um esquema de clopidogrel com dose de ataque de 600 mg via oral, seguida de 150 mg uma vez ao dia por 7 dias e depois 75 mg uma vez ao dia, associado ao ácido acetilsalicílico, deve ser considerado, com base no estudo CURRENT OASIS 7.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826, Tabela S10 do material suplementar. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+    "theme": "Farmacologia",
+    "tags": [
+      "clopidogrel",
+      "angioplastia",
+      "alto risco isquêmico",
+      "CURRENT OASIS 7"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
