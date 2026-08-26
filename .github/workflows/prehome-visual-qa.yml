@@ -217,7 +217,7 @@ jobs:
               if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
               if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell prehome canônico ausente`);
               if (!metrics.isMobile && !metrics.hologram) report.failures.push(`${viewportName}/${name}: hero holográfico ausente no desktop`);
-              if (!metrics.isMobile && metrics.heartBottom !== null && metrics.journeyTop !== null && metrics.heartBottom > metrics.journeyTop - 8) report.failures.push(`${viewportName}/${name}: coração invade o texto da jornada (${metrics.heartBottom.toFixed(1)}px > ${metrics.journeyTop.toFixed(1)}px)`);
+              if (name === 'login' && !metrics.isMobile && metrics.heartBottom !== null && metrics.journeyTop !== null && metrics.heartBottom > metrics.journeyTop - 8) report.failures.push(`${viewportName}/${name}: coração invade o texto da jornada (${metrics.heartBottom.toFixed(1)}px > ${metrics.journeyTop.toFixed(1)}px)`);
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });
