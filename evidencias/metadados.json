@@ -47380,5 +47380,387 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "teste-ergometrico-obrigatorio-idoso-60-anos-esporte-alta-intensidade",
+    "statement": "O teste ergométrico deve ser realizado em indivíduos com 60 anos ou mais ao iniciarem atividade física de alta intensidade, esportiva, ou competições esportivas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "triagem pré-participação",
+      "idoso",
+      "esporte competitivo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-rastreio-morte-subita-familiar-atleta",
+    "statement": "O teste ergométrico é recomendado para o rastreamento de atletas com história de morte súbita em familiares de primeiro grau.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "morte súbita cardíaca",
+      "história familiar",
+      "atleta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-atleta-35-anos-alto-risco-pre-participacao",
+    "statement": "Em indivíduos com 35 anos ou mais e alto risco cardiovascular por escore clínico, é razoável realizar teste ergométrico na avaliação pré-participação para exercícios de alta intensidade e competições esportivas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "triagem pré-participação",
+      "alto risco cardiovascular",
+      "atleta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-atleta-35-59-anos-inicio-programa-exercicio",
+    "statement": "Em indivíduos de 35 a 59 anos, é razoável considerar a realização de teste ergométrico no início de programa de exercício de alta intensidade ou de competições esportivas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "triagem pré-participação",
+      "esporte competitivo",
+      "adulto"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-atleta-historia-familiar-dac-precoce",
+    "statement": "Em atletas com história familiar de doença arterial coronariana precoce (mulheres com menos de 65 anos, homens com menos de 55 anos), é razoável realizar pelo menos um teste ergométrico até os 35 anos de idade.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "doença arterial coronariana",
+      "história familiar",
+      "atleta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-atleta-diabetico-pre-participacao",
+    "statement": "Em atletas diabéticos, é razoável realizar teste ergométrico para diagnóstico de sinais e sintomas induzidos pelo esforço e para estratificação de risco e avaliação prognóstica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "diabetes",
+      "atleta",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-nao-indicado-ajuste-carga-treinamento-atleta",
+    "statement": "O teste ergométrico não é indicado apenas para o ajuste de carga de treinamento físico de atletas.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "prescrição de treinamento",
+      "atleta",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-nao-indicado-sindrome-excesso-treinamento",
+    "statement": "O teste ergométrico não é indicado no atleta com síndrome de excesso de treinamento (overtraining) sintomática.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "síndrome de overtraining",
+      "atleta",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-pre-participativa-esporte-recreacional-idoso-60-anos",
+    "statement": "É razoável realizar avaliação pré-participativa com teste ergométrico, em indivíduos assintomáticos com 60 anos ou mais, para atividades de lazer e esporte recreacional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "triagem pré-participação",
+      "esporte recreacional",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-pre-participacao-esporte-recreacional-35-59-anos-considerar",
+    "statement": "Em indivíduos assintomáticos de 35 a 59 anos, o teste ergométrico pode ser considerado na avaliação pré-participação para atividades de lazer e esporte recreacional.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "triagem pré-participação",
+      "esporte recreacional",
+      "adulto"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-nao-indicado-jovem-sem-risco-atividade-leve-moderada",
+    "statement": "O teste ergométrico não é indicado, de rotina, em paciente assintomático com menos de 35 anos e sem fator de risco cardiovascular, para início de programa de atividade física de intensidade leve ou moderada.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Brazilian Guideline for Exercise Test in the Adult Population - 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581. DOI: 10.36660/abc.20240110. PMCID: PMC11656589.",
+    "theme": "Cardiologia do Esporte e do Exercício",
+    "tags": [
+      "teste ergométrico",
+      "atividade física",
+      "jovem sem fator de risco",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-rastreio-de-depressao-recomendado-na-dac",
+    "statement": "Em pacientes com doença arterial coronariana, o rastreio de depressão é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 64 (Recommendations and Levels of Evidence for Psychological Assessment [Methods and Indicators of Anxiety and Depression] in CR) — coluna COR/LOE, distinta da coluna GOR/LOE (MINDS), sistema japonês próprio não utilizado aqui.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "depressão",
+      "rastreio",
+      "doença coronariana",
+      "reabilitação cardíaca",
+      "PHQ-9"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-uso-do-phq-9-para-avaliar-sintomas-depressivos-na-dac",
+    "statement": "É recomendado o uso do PHQ-9 e de outras escalas para avaliar sintomas depressivos em pacientes com doença arterial coronariana.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 64, coluna COR/LOE.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "depressão",
+      "PHQ-9",
+      "escala de rastreio",
+      "doença coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-avaliacao-de-funcao-cognitiva-pode-ser-considerada-na-dac",
+    "statement": "Em pacientes com doença arterial coronariana, a avaliação da função cognitiva pode ser considerada, tendo em mente a possibilidade de depressão ou delirium.",
+    "recommendation_class": "IIb",
+    "evidence_level": "A",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 64, coluna COR/LOE.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "função cognitiva",
+      "delirium",
+      "depressão",
+      "doença coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-ds-14-pode-ser-considerada-para-tracos-de-personalidade-tipo-d",
+    "statement": "A escala DS-14 pode ser considerada para avaliação de traços de personalidade (Tipo D) em pacientes com doença cardiovascular.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 64, coluna COR/LOE.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "personalidade tipo D",
+      "DS-14",
+      "doença cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-reabilitacao-cardiaca-recomendada-para-melhorar-sintomas-depressivos",
+    "statement": "É recomendado realizar reabilitação cardíaca para melhorar sintomas depressivos em pacientes com doença arterial coronariana.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 66 (Recommendations and Levels of Evidence for Psychological Interventions and Counseling in CR for Patients With CAD), coluna COR/LOE.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "reabilitação cardíaca",
+      "depressão",
+      "doença coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jacr-2021-antidepressivo-e-psicoterapia-devem-ser-considerados-para-sintomas-depressivos",
+    "statement": "A administração de antidepressivos e a realização de psicoterapia, como terapia cognitivo-comportamental, devem ser consideradas para melhorar sintomas depressivos em pacientes com doença arterial coronariana em reabilitação cardíaca.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS/JACR",
+    "year": 2021,
+    "guideline_title": "JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease",
+    "reference": "Makita S, Yasu T, Akashi YJ, et al.; Japanese Circulation Society/Japanese Association of Cardiac Rehabilitation Joint Working Group. JCS/JACR 2021 Guideline on Rehabilitation in Patients With Cardiovascular Disease. Circulation Journal. 2023;87(1):155-235. DOI: 10.1253/circj.CJ-22-0234. PMID: 36503954. Acesso aberto no J-STAGE, PDF integral baixado e conferido tabela a tabela nesta sessão (pdftotext -layout). Tabela 66, coluna COR/LOE. Complementar (sociedade e população/contexto distintos) à recomendação já cadastrada de ISRS na depressão maior em doença coronariana (ESC 2021, IIa B).",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "antidepressivo",
+      "terapia cognitivo-comportamental",
+      "depressão",
+      "doença coronariana",
+      "reabilitação cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jhrs-2019-remocao-de-eletrodo-funcionante-apos-decisao-compartilhada",
+    "statement": "A remoção do eletrodo (lead) pode ser considerada no cenário de eletrodos de estimulação ou desfibrilação normofuncionantes e não recolhidos pelo fabricante, em pacientes selecionados, após um processo de decisão compartilhada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS/JHRS",
+    "year": 2019,
+    "guideline_title": "JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias",
+    "reference": "Nogami A, Kurita T, Abe H, et al. JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109. PMCID: PMC8339126.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "decisão compartilhada",
+      "remoção de eletrodo",
+      "dispositivo cardíaco eletrônico implantável",
+      "extração de lead"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jhrs-2019-ablacao-de-via-acessoria-assintomatica-por-preferencia-do-paciente",
+    "statement": "Em pacientes assintomáticos com síndrome de pré-excitação, a ablação por cateter da via acessória pode ser considerada quando indicada pela preferência do paciente.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS/JHRS",
+    "year": 2019,
+    "guideline_title": "JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias",
+    "reference": "Nogami A, Kurita T, Abe H, et al. JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109. PMCID: PMC8339126.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "decisão compartilhada",
+      "preferência do paciente",
+      "ablação por cateter",
+      "síndrome de Wolff-Parkinson-White",
+      "pré-excitação assintomática"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "jcs-jhrs-2021-desativacao-de-cdi-em-fim-de-vida-com-equipe-multidisciplinar",
+    "statement": "Em pacientes com cardiodesfibrilador implantável (CDI) em fim de vida, a decisão sobre desativação deve ser tomada com apoio de uma equipe multidisciplinar, após obtenção de informação suficiente sobre o CDI para o paciente e a família.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS/JHRS",
+    "year": 2021,
+    "guideline_title": "JCS/JHRS 2021 Guideline Focused Update on Non-Pharmacotherapy of Cardiac Arrhythmias",
+    "reference": "Nogami A, Kurita T, Kusano K, et al. JCS/JHRS 2021 guideline focused update on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2022;38(1):1-30. doi:10.1002/joa3.12649. PMID: 35222748. PMCID: PMC8851582.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "desativação de dispositivo",
+      "cardiodesfibrilador implantável",
+      "decisão compartilhada",
+      "fim de vida",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
