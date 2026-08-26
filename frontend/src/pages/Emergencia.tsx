@@ -120,11 +120,7 @@ export default function Emergencia() {
                 </section>)}
               </div>
 
-              <footer className="emerg__origem" aria-label="Origem e revisão do protocolo">
-                <strong>{doc.title}</strong>
-                <span>Nível de fonte {doc.source_tier}</span>
-                <span>{doc.review_status}</span>
-              </footer>
+              <p className="emerg__origem">{doc.title} · nível de fonte {doc.source_tier} · {doc.review_status}</p>
             </main>
 
             <aside className="emerg-command__quick" aria-label="Acesso rápido">

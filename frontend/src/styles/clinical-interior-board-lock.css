@@ -9,20 +9,7 @@ body.corvia-route--pacientes .clinical-os :where(.ccc-patient-command__header,.c
 body.corvia-route--pacientes .clinical-os .ccc-patient-command__clinical .cartao--clinico{border-left:1px solid rgba(100,159,186,.13)!important}
 /* Emergency keeps red only as a clinical accent */
 body.corvia-route--emergencia .clinical-os .emerg{background:transparent!important}
-body.corvia-route--emergencia .clinical-os :where(.emerg__topo,.emerg__busca,.emerg__lista li,.emerg-command__hero,.emerg__diagrama,.emerg__secao,.emerg-command__quick){color:#d8e8eb;background:linear-gradient(145deg,rgba(8,27,40,.97),rgba(4,18,29,.99))!important;border-color:rgba(100,159,186,.13)!important;border-radius:8px!important;box-shadow:none!important}
+body.corvia-route--emergencia .clinical-os :where(.emerg__topo,.emerg__busca,.emerg__lista li,.emerg-command__hero,.emerg__diagrama,.emerg__secao,.emerg-command__quick){color:#d8e8eb;background:linear-gradient(145deg,#081b28,#04121d)!important;border-color:rgba(100,159,186,.13)!important;border-radius:8px!important;box-shadow:none!important}
 body.corvia-route--emergencia .clinical-os :where(.emerg__marca,.emerg-command__hero small,.emerg-command__footer strong){color:#ff7485!important}
 body.corvia-route--emergencia .clinical-os .emerg__alvo{color:#ecf7f9!important;background:transparent!important}
-body.corvia-route--emergencia .clinical-os .emerg-command__main>.emerg__origem{display:flex;align-items:center;flex-wrap:wrap;gap:.32rem .5rem;margin:0!important;padding:.58rem .72rem .68rem!important;border-top:1px solid rgba(100,159,186,.13);color:#91a8ad;font-size:.52rem;line-height:1.45;overflow-wrap:anywhere}
-body.corvia-route--emergencia .clinical-os .emerg-command__main>.emerg__origem strong{flex:1 1 100%;min-width:0;color:#b9cdd1;font-size:.56rem;font-weight:600}
-body.corvia-route--emergencia .clinical-os .emerg-command__main>.emerg__origem span{display:inline-flex;padding:.18rem .4rem;border:1px solid rgba(100,159,186,.16);border-radius:999px;background:rgba(4,18,29,.58);text-transform:none}
-@media(max-width:900px){
-body[class*="corvia-route--"] .clinical-os .cos-content{padding:.58rem .56rem 5.4rem!important}
-body[class*="corvia-route--"] .clinical-os .cos-content :where(.grade--2,.grade--3){grid-template-columns:1fr!important}
-body.corvia-route--emergencia .clinical-os .cos-content{padding:0!important}
-body.corvia-route--emergencia .clinical-os .emerg{box-sizing:border-box;inset:0!important;width:100%!important;max-width:none!important;padding:0 .56rem calc(5.4rem + env(safe-area-inset-bottom))!important;overflow-x:hidden;overscroll-behavior-y:contain;scroll-padding-top:3.75rem}
-body.corvia-route--emergencia .clinical-os .emerg__topo{position:sticky!important;top:0!important;z-index:4!important;isolation:isolate;margin:0 -.56rem .5rem!important;padding:.7rem .76rem!important;border:0!important;border-bottom:1px solid rgba(255,116,133,.26)!important;border-radius:0!important;background:#071923!important;box-shadow:0 8px 20px rgba(0,0,0,.36)!important}
-body.corvia-route--emergencia .clinical-os .emerg__protocolo,body.corvia-route--emergencia .clinical-os .emerg-command__main{width:100%;min-width:0}
-body.corvia-route--emergencia .clinical-os .emerg-command__main>.emerg__origem{padding:.55rem .65rem .65rem!important;font-size:.5rem}
-body.corvia-route--emergencia .clinical-os .emerg-command__footer{margin-bottom:.25rem}
-}
-@media(max-width:390px){body.corvia-route--emergencia .clinical-os .emerg-command__quick{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){body[class*="corvia-route--"] .clinical-os .cos-content{padding:.58rem .56rem 5.4rem!important}body[class*="corvia-route--"] .clinical-os .cos-content :where(.grade--2,.grade--3){grid-template-columns:1fr!important}}

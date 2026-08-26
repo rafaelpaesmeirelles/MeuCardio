@@ -84,12 +84,11 @@ def test_busca_e_falha_do_fluxograma_possuem_estilos_visiveis():
 
 def test_emergencia_mobile_reserva_navegacao_e_impede_conteudo_sob_cabecalho():
     pagina = _fonte(EMERGENCIA)
-    estilo = _fonte(ESTILO_MOBILE)
+    estilo = _fonte(ESTILO)
+    estilo_final = _fonte(ESTILO_MOBILE)
 
-    assert '<footer className="emerg__origem"' in pagina
-    assert 'aria-label="Origem e revisão do protocolo"' in pagina
-    assert "calc(5.4rem + env(safe-area-inset-bottom))" in estilo
-    assert "body.corvia-route--emergencia .clinical-os .emerg__topo" in estilo
-    assert "background:#071923!important" in estilo
-    assert "overflow-x:hidden" in estilo
-    assert ".emerg-command__main>.emerg__origem" in estilo
+    assert '<p className="emerg__origem">' in pagina
+    assert "padding: 0 1rem 5.4rem" in estilo
+    assert ".emerg__origem { margin: 0.55rem 0.65rem" in estilo
+    assert "font-size: 0.58rem" in estilo
+    assert "linear-gradient(145deg,#081b28,#04121d)" in estilo_final

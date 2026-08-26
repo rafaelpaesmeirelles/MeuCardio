@@ -29,7 +29,7 @@
   overflow-y: auto;
   background: var(--e-fundo);
   color: var(--e-texto);
-  padding: 0 1rem 4rem;
+  padding: 0 1rem 5.4rem;
   font-size: 1.08rem;
   line-height: 1.6;
   -webkit-overflow-scrolling: touch;
@@ -234,7 +234,7 @@
 .emerg__corpo :is(th, td) { border: 1px solid var(--e-borda); padding: 0.45rem 0.6rem; text-align: left; }
 .emerg__corpo th { background: var(--e-superficie); }
 
-.emerg__origem { margin-top: 1.6rem; color: var(--e-suave); font-size: 0.85rem; }
+.emerg__origem { margin: 0.55rem 0.65rem; color: var(--e-suave); font-size: 0.58rem; }
 
 /* Botão de acesso, fixo em todas as telas — o requisito é chegar aqui em um
  * ou dois toques a partir de qualquer lugar, então ele não pode morar no menu. */
