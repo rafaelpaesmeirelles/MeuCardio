@@ -31996,7 +31996,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/21730309/",
     "summary": "Estudo de derivação e validação usando a base multicêntrica (mais de 250 hospitais) do National Surgical Quality Improvement Program (NSQIP) do American College of Surgeons. Na coorte de derivação de 2007 (211.410 pacientes), regressão logística multivariada identificou cinco preditores independentes de infarto do miocárdio ou parada cardíaca perioperatórios: tipo de cirurgia, status funcional dependente, creatinina anormal, classe ASA e idade avançada. O modelo foi então validado na coorte de 2008 (257.385 pacientes).",
     "key_findings": "O modelo de cinco variáveis teve excelente discriminação, com estatística C de 0,884 na coorte de derivação e 0,874 na coorte de validação — superior à estatística C de 0,747 obtida quando o Índice de Risco Cardíaco Revisado (RCRI) de Lee foi aplicado à mesma coorte de validação de 2008.",
-    "clinical_implications": "Deu origem à calculadora de risco cardíaco Gupta-MICA (Myocardial Infarction or Cardiac Arrest), hoje incorporada à calculadora de risco cirúrgico do ACS-NSQIP e amplamente usada como alternativa ou complemento ao RCRI na estratificação de risco cardíaco pré-operatório, sobretudo por sua maior discriminação e por incorporar o tipo específico de cirurgia em vez de categorias amplas de risco cirúrgico.",
+    "clinical_implications": "O estudo derivou e validou internamente, em dados do NSQIP de 2007–2008, uma estimativa individualizada do risco perioperatório de infarto do miocárdio ou parada cardíaca, com melhor discriminação que o índice de Lee nessa base. O desempenho não deve ser presumido em outros sistemas ou épocas sem validação e calibração locais, especialmente porque o modelo não incorpora biomarcadores atuais.",
     "limitations": "Baseado em dados administrativos e de auditoria de qualidade cirúrgica dos EUA, com definição de infarto/parada cardíaca dependente da acurácia do registro NSQIP; não incorpora biomarcadores (troponina, NT-proBNP) nem variáveis eletrocardiográficas, hoje reconhecidos como preditores relevantes.",
     "theme": "Perioperatório",
     "tags": [
@@ -32048,7 +32048,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/25685919/",
     "summary": "Estudo longitudinal com 1.127 residentes de casas de repouso na França e Itália com mais de 80 anos (média 87,6 anos), avaliando a interação entre PA sistólica baixa (<130 mmHg) e uso de 2 ou mais anti-hipertensivos sobre a mortalidade em 2 anos.",
     "key_findings": "Pacientes com PAS < 130 mmHg em uso de ≥ 2 anti-hipertensivos tiveram maior mortalidade por todas as causas (HR ajustado 1,78; IC95% 1,34-2,37; p<0,001) comparados aos demais, achado confirmado em três análises de sensibilidade, incluindo pareamento por escore de propensão.",
-    "clinical_implications": "Alerta para o risco da polifarmácia anti-hipertensiva excessiva em idosos muito idosos e frágeis institucionalizados, reforçando a necessidade de individualizar metas pressóricas e considerar desprescrição nessa população, em contraste com dados de benefício em idosos robustos (como no HYVET).",
+    "clinical_implications": "Em idosos institucionalizados, a associação entre pressão sistólica <130 mmHg, uso de pelo menos dois anti-hipertensivos e maior mortalidade deve motivar revisão individualizada de medicamentos, metas e causas de hipotensão. Por se tratar de estudo observacional sujeito a causalidade reversa, não demonstra que os fármacos causaram a mortalidade nem que a desprescrição melhore desfechos.",
     "limitations": "Estudo observacional (não randomizado), sujeito a causalidade reversa (doença grave pode causar PA baixa e motivar mais fármacos); população institucionalizada limita generalização para idosos na comunidade.",
     "theme": "Hipertensão",
     "tags": [
@@ -32073,7 +32073,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/12435255/",
     "summary": "Ensaio fatorial 3x2 com 1.094 pacientes negros de 18 a 70 anos com nefropatia hipertensiva (TFG 20-65 mL/min/1,73m²), comparando duas metas de pressão arterial média (92 mmHg vs. 102-107 mmHg) e três classes de anti-hipertensivo inicial (ramipril, metoprolol, amlodipino).",
     "key_findings": "A meta pressórica mais baixa não reduziu significativamente o declínio da TFG nem o desfecho clínico composto (redução de risco de 2%; IC95% -22% a 21%; p=0,85). O ramipril reduziu o desfecho composto (declínio de TFG, doença renal terminal ou morte) em 22% versus metoprolol e 38% versus anlodipino.",
-    "clinical_implications": "Estabeleceu o IECA como agente de escolha para retardar a progressão de nefropatia hipertensiva em pacientes negros, independentemente da meta pressórica alcançada — resultado incorporado em diretrizes de nefrologia e cardiologia sobre doença renal e hipertensão nessa população.",
+    "clinical_implications": "Na população estudada — pacientes negros americanos com doença renal hipertensiva —, ramipril foi mais eficaz que metoprolol ou amlodipino para o desfecho clínico renal composto, enquanto a meta pressórica mais baixa não trouxe benefício adicional. A extrapolação direta para outras populações ou etiologias de doença renal requer cautela.",
     "limitations": "Meta pressórica mais baixa não atingiu diferença tão ampla quanto planejada entre os grupos; estudo restrito a pacientes negros americanos, limitando extrapolação direta a outras populações; duração de seguimento de 3 a 6,4 anos.",
     "theme": "Hipertensão",
     "tags": [
@@ -32370,7 +32370,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/19717846/",
     "summary": "Ensaio randomizado, duplo-cego, com 18.624 pacientes internados por síndrome coronariana aguda (com ou sem supra de ST), comparando ticagrelor (180 mg de ataque, 90 mg 2x/dia) versus clopidogrel (300-600 mg de ataque, 75 mg/dia), ambos associados a AAS, por 6 a 12 meses.",
     "key_findings": "Desfecho primário composto (morte cardiovascular, IAM ou AVC) em 9,8% com ticagrelor vs. 11,7% com clopidogrel (HR 0,84; IC95% 0,77-0,92; p<0,001). Mortalidade por causa cardiovascular reduzida (4,0% vs. 5,1%; p=0,001) e mortalidade total também reduzida, sem aumento do sangramento maior total, embora com mais sangramento maior não relacionado a cirurgia. Dispneia foi mais frequente com ticagrelor.",
-    "clinical_implications": "Estabeleceu o ticagrelor como antiplaquetário preferencial (junto do prasugrel) sobre o clopidogrel na síndrome coronariana aguda tratada de forma invasiva ou conservadora, sustentando as diretrizes atuais de dupla antiagregação plaquetária pós-SCA.",
+    "clinical_implications": "No PLATO, ticagrelor reduziu o desfecho composto de morte cardiovascular, infarto ou AVC e a mortalidade total em comparação com clopidogrel em pacientes com síndrome coronariana aguda, sem aumento significativo do sangramento maior total. O ensaio não comparou ticagrelor com prasugrel nem, isoladamente, define a seleção contemporânea entre inibidores de P2Y12 para cada paciente.",
     "limitations": "Achou-se interação regional (menor benefício na América do Norte), atribuída posteriormente a doses mais altas de AAS de manutenção nesse subgrupo. Efeito de dispneia levou a maior taxa de descontinuação do fármaco.",
     "theme": "Farmacologia",
     "tags": [
@@ -32448,7 +32448,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/",
     "summary": "Ensaio randomizado, duplo-cego, com 17.604 pacientes com sobrepeso ou obesidade e doença cardiovascular estabelecida, sem diabetes, comparando semaglutida 2,4 mg subcutânea semanal versus placebo, com seguimento médio de 39,8 meses, para desfecho primário MACE de três pontos.",
     "key_findings": "MACE em 6,5% com semaglutida vs. 8,0% com placebo (HR 0,80; IC95% 0,72-0,90; p<0,001). Eventos adversos que levaram à descontinuação permanente ocorreram em 16,6% versus 8,2%, respectivamente. O ensaio primário demonstra benefício do composto; não permite declarar superioridade estatística de cada componente individual apenas a partir desse resultado.",
-    "clinical_implications": "Primeiro ensaio a demonstrar redução de eventos cardiovasculares maiores com um agonista do receptor de GLP-1 em população com obesidade cardiovascular sem diabetes, ampliando a indicação de semaglutida para prevenção cardiovascular independente do controle glicêmico.",
+    "clinical_implications": "Demonstrou redução de eventos cardiovasculares maiores com semaglutida 2,4 mg em adultos com sobrepeso ou obesidade, doença cardiovascular estabelecida e sem diabetes. O resultado não deve ser extrapolado para prevenção primária, pessoas sem doença cardiovascular estabelecida ou outras populações não estudadas.",
     "limitations": "População majoritariamente com sobrepeso/obesidade e doença cardiovascular prévia (prevenção secundária); efeito específico atribuível à perda de peso versus mecanismos pleiotrópicos do GLP-1 ainda em debate.",
     "theme": "Farmacologia",
     "tags": [
@@ -32528,7 +32528,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/30730782/",
     "summary": "Estudo prospectivo, de braço único, com 352 pacientes com sangramento agudo maior em uso de rivaroxabana, apixabana, edoxabana ou enoxaparina, avaliando a eficácia hemostática e segurança do andexanet alfa, antídoto específico dos inibidores do fator Xa.",
     "key_findings": "Redução mediana da atividade anti-fator Xa de 92% (apixabana) e 92% (rivaroxabana) após o bolus. Hemostasia excelente ou boa em 82% dos pacientes avaliáveis em 12 horas. Eventos trombóticos ocorreram em 10% dos pacientes em 30 dias e morte em 14%, refletindo a gravidade basal da população (muitos com hemorragia intracraniana).",
-    "clinical_implications": "Forneceu a base regulatória para aprovação do andexanet alfa como antídoto específico para reversão de emergência do efeito anticoagulante dos inibidores diretos do fator Xa, complementando o idarucizumabe (dabigatrana) no arsenal de reversão de DOACs.",
+    "clinical_implications": "Mostrou redução substancial da atividade anti-fator Xa e hemostasia considerada boa ou excelente na maioria dos pacientes avaliáveis com sangramento maior associado a rivaroxabana ou apixabana. Como estudo de braço único, não estabelece benefício clínico comparativo frente ao concentrado de complexo protrombínico ou ao cuidado usual; eventos trombóticos e mortalidade permaneceram relevantes.",
     "limitations": "Ausência de grupo controle concorrente (comparação com coortes históricas de manejo padrão); taxa de eventos trombóticos pós-reversão que gera cautela quanto à retomada precoce da anticoagulação.",
     "theme": "Farmacologia",
     "tags": [
@@ -32555,7 +32555,7 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/18757088/",
     "summary": "Ensaio randomizado, duplo-cego, com 10.917 pacientes com doença arterial coronariana estável e fração de ejeção do ventrículo esquerdo <40%, em ritmo sinusal, comparando ivabradina versus placebo adicionados à terapia otimizada, com seguimento médio de 19 meses.",
     "key_findings": "Sem diferença significativa no desfecho primário composto (morte cardiovascular, hospitalização por IAM ou por IC nova/piora). Em análise de subgrupo pré-especificada com frequência cardíaca ≥70 bpm, houve redução de hospitalização por IAM fatal e não fatal (HR 0,64; IC95% 0,49-0,84; p=0,001) e de revascularização coronariana.",
-    "clinical_implications": "Apesar do resultado neutro na população geral, o sinal de benefício em pacientes com frequência cardíaca elevada ajudou a estabelecer a frequência cardíaca de repouso como alvo terapêutico e biomarcador de risco na doença coronariana com disfunção ventricular, complementando os achados do SHIFT em insuficiência cardíaca.",
+    "clinical_implications": "O estudo não demonstrou benefício da ivabradina para o desfecho primário na população geral com doença coronariana estável e disfunção ventricular. O achado no subgrupo com frequência cardíaca ≥70 bpm é hipótese-gerador e, isoladamente, não justifica ivabradina na doença coronariana estável apenas para reduzir a frequência cardíaca quando não há outra indicação.",
     "limitations": "Resultado neutro para o desfecho primário na população geral do estudo; achado positivo restrito a análise de subgrupo (frequência cardíaca ≥70 bpm), com valor hipótese-gerador.",
     "theme": "Farmacologia",
     "tags": [
