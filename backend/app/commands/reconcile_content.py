@@ -72,13 +72,13 @@ FRONTS: dict[str, dict[str, Any]] = {
     "doencas_especializadas": {
         "path": "/doencas/metadados.json",
         "model": SpecialtyDisease,
-        "minimum": 87,
+        "minimum": 88,
         "loader": "carregar_doencas_especializadas",
     },
     "triagem_sintomas": {
         "path": "/triagem-sintomas/metadados.json",
         "model": SymptomTriageGuide,
-        "minimum": 12,
+        "minimum": 13,
         "loader": "carregar_triagem_sintomas",
     },
 }

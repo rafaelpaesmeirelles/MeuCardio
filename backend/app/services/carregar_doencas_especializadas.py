@@ -23,7 +23,7 @@ CAMPOS = {
     "version",
 }
 
-AREAS = {"cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"}
+AREAS = {"geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"}
 CYANOSIS = {None, "cianotica", "acianotica", "nao_aplicavel"}
 COMPLETENESS = {"basico", "intermediario", "completo"}
 REVIEW = {"pendente_revisao", "revisado", "lacuna_declarada"}
