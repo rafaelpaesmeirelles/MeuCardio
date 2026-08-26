@@ -47934,5 +47934,247 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "trc-classe-i-qrs-130-149ms-lbbb",
+    "statement": "TRC é recomendada para pacientes sintomáticos com IC em ritmo sinusal, duração do QRS de 130-149 ms e morfologia de bloqueio de ramo esquerdo (BRE), com FEVE ≤35% apesar de terapia clínica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "ressincronizacao",
+      "bre",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-nao-lbbb-qrs-maior-igual-150ms",
+    "statement": "TRC deve ser considerada para pacientes sintomáticos com IC em ritmo sinusal, duração do QRS ≥150 ms e morfologia de QRS sem padrão de bloqueio de ramo esquerdo (não-BRE), com FEVE ≤35% apesar de terapia clínica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "ressincronizacao",
+      "nao-bre",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-nao-lbbb-qrs-130-149ms",
+    "statement": "TRC pode ser considerada para pacientes sintomáticos com IC em ritmo sinusal, duração do QRS de 130-149 ms e morfologia de QRS sem padrão de bloqueio de ramo esquerdo (não-BRE), com FEVE ≤35% apesar de terapia clínica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "ressincronizacao",
+      "nao-bre",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ivabradina-icfer-ritmo-sinusal",
+    "statement": "A ivabradina deve ser considerada em pacientes sintomáticos com FEVE ≤35%, em ritmo sinusal e com frequência cardíaca de repouso ≥70 bpm, apesar do tratamento com dose baseada em evidência de betabloqueador (ou dose máxima tolerada), IECA (ou INRA) e um antagonista mineralocorticoide, para reduzir o risco de hospitalização por IC e morte cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "ivabradina",
+      "icfer",
+      "frequencia cardiaca",
+      "farmacologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "digoxina-icfer-ritmo-sinusal",
+    "statement": "A digoxina pode ser considerada em pacientes com ICFEr sintomática em ritmo sinusal, apesar do tratamento com IECA (ou INRA), betabloqueador e antagonista mineralocorticoide, para reduzir o risco de hospitalização (tanto por todas as causas quanto por IC).",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "digoxina",
+      "icfer",
+      "farmacologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hidralazina-dinitrato-isossorbida-intolerancia-ieca-bra-inra",
+    "statement": "Hidralazina e dinitrato de isossorbida podem ser considerados em pacientes com ICFEr sintomática que não toleram nenhum de IECA, BRA ou INRA (ou nos quais estes são contraindicados), para reduzir o risco de morte e de hospitalização por IC.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "hidralazina",
+      "dinitrato de isossorbida",
+      "icfer",
+      "farmacologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-icfer-nao-isquemica",
+    "statement": "A implantação de CDI deve ser considerada para reduzir o risco de morte súbita e mortalidade por todas as causas em pacientes com IC sintomática (NYHA II-III) de etiologia não isquêmica e FEVE ≤35% apesar de ≥3 meses de terapia clínica otimizada, desde que a expectativa de sobrevida seja substancialmente maior que 1 ano com bom estado funcional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "prevencao primaria",
+      "icfer nao isquemica",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tromboprofilaxia-ic-aguda",
+    "statement": "A tromboprofilaxia (por exemplo, com heparina de baixo peso molecular) é recomendada em pacientes com IC aguda ainda não anticoagulados e sem contraindicação à anticoagulação, para reduzir o risco de trombose venosa profunda e embolia pulmonar.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "tromboprofilaxia",
+      "ic aguda",
+      "anticoagulacao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oxigenio-ic-aguda-hipoxemia",
+    "statement": "A oxigenoterapia é recomendada em pacientes com IC aguda e SpO2 <90% ou PaO2 <60 mmHg (8,0 kPa) para corrigir a hipoxemia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "oxigenoterapia",
+      "ic aguda",
+      "hipoxemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ventilacao-nao-invasiva-ic-aguda-desconforto-respiratorio",
+    "statement": "A ventilação não invasiva com pressão positiva (CPAP, BiPAP) deve ser considerada em pacientes com desconforto respiratório (frequência respiratória >25 irpm, SpO2 <90%) e iniciada o mais precocemente possível, para diminuir o desconforto respiratório e reduzir a taxa de intubação endotraqueal mecânica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "ventilacao nao invasiva",
+      "ic aguda",
+      "desconforto respiratorio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reavaliacao-precoce-1-2-semanas-pos-alta-ic",
+    "statement": "É recomendado reavaliar o paciente hospitalizado por IC entre 1 e 2 semanas após a alta, para verificar sinais de congestão, tolerabilidade medicamentosa e iniciar/otimizar a terapia baseada em evidência.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "pos-alta",
+      "seguimento precoce",
+      "ic aguda",
+      "transicao de cuidado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diureticos-icfep-congestao",
+    "statement": "Diuréticos são recomendados em pacientes com insuficiência cardíaca com fração de ejeção preservada e sinais e/ou sintomas de congestão, para aliviar os sintomas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "diureticos",
+      "icfep",
+      "congestao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rastreio-tratamento-comorbidades-icfep-icfem",
+    "statement": "É recomendado o rastreamento e tratamento de etiologias e de comorbidades cardiovasculares e não cardiovasculares em pacientes com insuficiência cardíaca com fração de ejeção levemente reduzida ou preservada, conforme as recomendações específicas para cada condição.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfep",
+      "icfem",
+      "comorbidades",
+      "rastreamento"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
