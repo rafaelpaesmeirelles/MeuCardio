@@ -26,7 +26,7 @@ se apoia tanto no achado clínico quanto na regurgitação valvar ao eco.
 flowchart TD
   R0["Febre reumática aguda com cardite confirmada<br/>(critérios de Jones já aplicados),<br/>ecocardiograma transtorácico realizado"] --> D1{"Qual a faixa de gravidade<br/>da cardite?"}
 
-  D1 -->|"Subclínica, com artrite<br/>e/ou pericardite associada"| C1(["AAS 100 mg/kg/dia (máx. 3-4 g) em 4 doses, OU<br/>naproxeno 20 mg/kg/dia (máx. 1.000 mg) em 2 doses —<br/>total de 2 semanas — Classe I, nível B"])
+  D1 -->|"Subclínica ou leve, com artrite<br/>e/ou pericardite associada"| C1(["AAS 100 mg/kg/dia (máx. 3-4 g) em 4 doses, OU<br/>naproxeno 20 mg/kg/dia (máx. 1.000 mg) em 2 doses —<br/>total de 2 semanas — Classe I, nível B"])
 
   D1 -->|"Subclínica a leve,<br/>sem artrite/pericardite associada"| D2{"Optar por corticoide<br/>— é opcional nesta faixa?"}
 

@@ -41,7 +41,7 @@ flowchart TD
 
   D1 -->|"Derrame pericárdico assintomático,<br/>achado em exame de imagem de<br/>seguimento oncológico"| C4(["Seguir a árvore de derrame pericárdico<br/>desta biblioteca para diagnóstico<br/>diferencial e decisão de drenagem,<br/>registrando a radioterapia prévia como<br/>etiologia possível"])
 
-  D1 -->|"Sinais insidiosos de insuficiência<br/>cardíaca direita, anos a décadas<br/>após a radioterapia"| D3{"Ecocardiograma, tomografia contrastada<br/>ou ressonância com realce tardio<br/>mostram espessamento pericárdico e<br/>critérios hemodinâmicos de constrição?"}
+  D1 -->|"Sinais insidiosos de insuficiência<br/>cardíaca direita, anos a décadas<br/>após a radioterapia"| D3{"Ecocardiograma mostra fisiologia de<br/>constrição ou, se o estudo for inconclusivo/<br/>discordante, a avaliação multimodal ou<br/>hemodinâmica confirma constrição?"}
 
   D3 -->|"Sim"| C5(["Pericardite constritiva actínica<br/>confirmada: encaminhar a centro<br/>experiente para avaliar pericardiectomia<br/>e doença miocárdica, coronária e valvar<br/>concomitante; a etiologia influencia<br/>risco e prognóstico cirúrgicos"])
 
@@ -85,3 +85,10 @@ particularidade validada que justifique um critério diagnóstico à parte. Isso
 não torna a etiologia irrelevante: fibrose miocárdica, coronariopatia e
 valvopatia actínicas podem coexistir e devem ser avaliadas antes de decidir
 pericardiectomia.
+
+**Espessamento pericárdico não é requisito diagnóstico.** Tomografia e
+ressonância ajudam a caracterizar espessamento, calcificação e inflamação,
+mas espessura normal não exclui pericardite constritiva. O diagnóstico é
+determinado pela fisiologia constritiva; quando ecocardiograma e quadro
+clínico forem inconclusivos ou discordantes, completar avaliação multimodal
+e, se necessário, hemodinâmica invasiva antes de afastar a hipótese.
