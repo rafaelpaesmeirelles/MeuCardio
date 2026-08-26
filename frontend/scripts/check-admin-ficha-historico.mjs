@@ -227,6 +227,13 @@ export function validateHistoricoRendering(tsx) {
     );
   }
 
+  const corpoFormatador = corpoDaFuncao(tsx, "formatarValorDetalhe");
+  if (!corpoFormatador) {
+    failures.push("não encontrei formatarValorDetalhe");
+  } else if (corpoFormatador.includes("JSON.stringify")) {
+    failures.push("formatarValorDetalhe não pode despejar objetos como JSON cru");
+  }
+
   const corpoAba = corpoDaFuncao(tsx, "AbaHistorico");
   if (!corpoAba) {
     failures.push("não encontrei a função AbaHistorico em AdminFichaAssinante.tsx");
