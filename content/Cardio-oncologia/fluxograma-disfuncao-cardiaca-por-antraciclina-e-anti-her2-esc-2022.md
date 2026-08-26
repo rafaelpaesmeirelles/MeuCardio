@@ -5,7 +5,8 @@ theme: "Cardio-oncologia"
 kind: fluxograma
 summary: "Duas árvores da diretriz ESC 2022 de cardio-oncologia, e elas divergem de propósito: na antraciclina, a CTRCD moderada assintomática manda interromper; na terapia anti-HER2, a mesma faixa de fração de ejeção manda continuar com cardioproteção. Confundir as duas custa tratamento oncológico."
 review_status: revisado
-source_refs: ["Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS) · European Heart Journal · 2022 · 43(41):4229-4361 · DOI: 10.1093/eurheartj/ehac244 — Tabela 3 (definição e graduação de CTRCD) e Tabela de Recomendação 24 (manejo durante quimioterapia com antraciclina)"]
+review_note: "Revisado em 26/08/2026 contra o texto primário oficial da ESC 2022, DOI 10.1093/eurheartj/ehac244: Tabela 3 e Tabelas de Recomendação 24-25/Figuras 25-26. A árvore anti-HER2 foi completada com os critérios de reinício após recuperação (assintomático e FEVE >=40%, idealmente >=50%), a vigilância por ecocardiograma e biomarcadores a cada dois ciclos nos quatro primeiros ciclos após reinício e a exceção restrita para câncer avançado sem alternativa eficaz. Nenhuma classe ou nível de evidência foi inferido a partir da apresentação gráfica. Pendente revisão médica independente antes de uso assistencial."
+source_refs: ["Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS) · European Heart Journal · 2022 · 43(41):4229-4361 · DOI: 10.1093/eurheartj/ehac244 — Tabela 3 (definição e graduação de CTRCD), Tabela de Recomendação 24 (manejo durante quimioterapia com antraciclina) e Tabela de Recomendação 25/Figura 26 (manejo durante terapia anti-HER2, interrupção, reinício e vigilância)"]
 ---
 
 # Fluxograma: Disfunção cardíaca relacionada ao tratamento oncológico — antraciclina e terapia anti-HER2 (ESC 2022)
@@ -93,7 +94,9 @@ flowchart TD
 
   D6 -->|"Moderado ou grave"| C9(["Interromper temporariamente a terapia anti-HER2.<br/>Na CTRCD grave, com FEVE abaixo de 40%, tratar<br/>precocemente conforme a diretriz de insuficiência<br/>cardíaca da ESC de 2021"])
 
-  D6 -->|"Leve"| C10(["Continuar ou interromper a terapia anti-HER2<br/>é decisão da equipe multidisciplinar"])
+  D6 -->|"Leve"| D10{"Decisão multidisciplinar:<br/>continuar ou interromper<br/>temporariamente a terapia anti-HER2?"}
+  D10 -->|"Continuar"| C10a(["Manter a terapia anti-HER2 com tratamento<br/>de insuficiência cardíaca e vigilância<br/>frequente por imagem e biomarcadores"])
+  D10 -->|"Interromper"| D8
 
   D5 -->|"Não, assintomático"| D7{"Faixa da fração de ejeção"}
 
@@ -103,16 +106,29 @@ flowchart TD
 
   D7 -->|"Leve: FEVE de 50% ou mais, com queda<br/>significativa do GLS e/ou elevação<br/>de biomarcador cardíaco"| C13(["Continuar a terapia anti-HER2. Cardioproteção<br/>com IECA ou BRA e/ou betabloqueador<br/>deve ser considerada"])
 
+  C9 --> D8{"Após a interrupção, os sinais e sintomas<br/>de IC resolveram e a FEVE recuperou<br/>para pelo menos 40%?"}
+  C11 --> D8
+
+  D8 -->|"Sim — idealmente FEVE<br/>recuperada para 50% ou mais"| C14(["Considerar reiniciar a terapia anti-HER2,<br/>mantendo o tratamento de IC. Fazer eco e<br/>biomarcadores a cada 2 ciclos nos primeiros<br/>4 ciclos; reduzir a frequência depois<br/>se função e biomarcadores permanecerem estáveis"])
+
+  D8 -->|"Não — sintomas persistem<br/>e/ou FEVE abaixo de 40%"| D9{"Não existe alternativa oncológica eficaz<br/>e o câncer avançado responde de forma<br/>relevante à terapia anti-HER2?"}
+
+  D9 -->|"Sim"| C15(["A retomada pode ser considerada somente<br/>após decisão multidisciplinar explícita,<br/>ponderando o benefício oncológico contra<br/>o risco cardíaco, com tratamento de IC<br/>e vigilância cardíaca estreita"])
+  D9 -->|"Não"| C16(["Manter a terapia anti-HER2 interrompida<br/>e tratar a insuficiência cardíaca;<br/>rediscutir a estratégia oncológica e<br/>cardiovascular em equipe multidisciplinar"])
+
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C9,C10,C11,C12,C13 conduta;
+  class C9,C10a,C11,C12,C13,C14,C15,C16 conduta;
 ```
 
 **Sobre a segunda árvore:** as condutas da terapia anti-HER2 estão reproduzidas
 com o verbo da própria diretriz — "é recomendado", "deve ser considerado" —, e
-não com rótulo de classe. O texto de onde vieram é a seção corrida sobre disfunção
-cardíaca relacionada à terapia anti-HER2, que não traz a coluna de classe e nível
-ao lado de cada linha, ao contrário da Tabela de Recomendação 24 da antraciclina.
-Preferi manter o verbo original a inferir a classe.
+não com rótulo de classe. A fonte primária organiza essas decisões na Tabela de
+Recomendação 25 e na Figura 26. Como as colunas gráficas de classe e nível não
+foram transcritas neste documento, foram preservados os verbos oficiais em vez de
+inferir uma graduação. A árvore inclui também o caminho de reinício após recuperação
+e a exceção estreita em que a retomada pode ser ponderada apesar de sintomas não
+resolvidos ou FEVE ainda abaixo de 40%: câncer avançado responsivo, sem alternativa
+oncológica eficaz e após decisão multidisciplinar.
 
 ## Reiniciar antraciclina depois de uma CTRCD
 

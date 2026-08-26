@@ -30,25 +30,25 @@ A taquiarritmia sustentada e não tratada pode precipitar **insuficiência card�
 - **Eficácia de aproximadamente 54,8% de resolução em fetos sem hidropisia** (Tsokkou S et al., PMID 40863402).
 - **Eficácia reduzida para cerca de 30-40% em fetos hidrópicos** — a fonte explica o mecanismo: "o estado edematoso da placenta compromete sua capacidade de transferir efetivamente a digoxina da circulação materna para a fetal", motivo pelo qual **a digoxina geralmente não é a primeira escolha em cenários de insuficiência cardíaca fetal já descompensada** (Tsokkou S et al., PMID 40863402).
 - **Nível sérico-alvo materno recomendado: 2,0 a 2,5 ng/mL**, mais alto que a faixa terapêutica usada fora da gestação, pelo aumento da taxa de filtração glomerular materna na gravidez.
-- **Dose de manutenção descrita: 0,125-0,25 mg VO uma vez ao dia (ou 0,0625-0,125 mg VO 2x/dia)** (Tsokkou S et al., PMID 40863402) — dose de referência da fonte consultada; ajuste individual e confirmação contra protocolo institucional permanecem como **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de prescrever.
+- **Dose de manutenção descrita: 0,125-0,25 mg VO uma vez ao dia (ou 0,0625-0,125 mg VO 2x/dia)** (Tsokkou S et al., PMID 40863402). **Limite operacional:** é um regime reportado em revisão narrativa, não uma prescrição executável; agente, dose e alvo sérico devem ser confirmados pela equipe de cardiologia/medicina fetal e pelo protocolo institucional.
 - **Monitorização materna**: eletrocardiograma (intervalo PR), nível sérico da droga, e eletrólitos (potássio, magnésio, cálcio).
 
 #### Flecainida — preferida no feto hidrópico
 - **Eficácia de aproximadamente 80-90% em fetos sem hidropisia e de aproximadamente 70-80% em fetos hidrópicos** (Tsokkou S et al., PMID 40863402) — a diferença de eficácia entre as duas situações é bem menor que a observada com digoxina.
 - **Passagem transplacentária muito superior à da digoxina**: níveis fetais atingem cerca de 90% da concentração materna em gestantes sem hidropisia, caindo para cerca de 80% em condições de hidropisia — ainda assim, uma transferência efetiva muito maior que a da digoxina no mesmo cenário. Por esse motivo, a flecainida "tem sido sugerida como opção de tratamento de primeira linha para fetos hidrópicos com TSV" (Tsokkou S et al., PMID 40863402).
-- **Dose de ataque descrita: 100 mg VO a cada 8h por 3 doses (300 mg no total)**; **dose de manutenção: 100 mg VO a cada 8h (máximo 400 mg/dia)** (Tsokkou S et al., PMID 40863402) — dose de referência da fonte consultada; confirmação contra protocolo institucional permanece como **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de prescrever.
+- **Dose de ataque descrita: 100 mg VO a cada 8h por 3 doses (300 mg no total)**; **dose de manutenção: 100 mg VO a cada 8h (máximo 400 mg/dia)** (Tsokkou S et al., PMID 40863402). **Limite operacional:** é um regime reportado em revisão narrativa, não uma prescrição executável; confirmar indicação, dose e monitorização com a equipe fetal e o protocolo institucional.
 - **Monitorização materna**: eletrocardiograma (duração do QRS) e nível sérico da droga se a dose for aumentada.
 
 #### Sotalol — segunda linha, com nicho específico
 - **Eficácia geral de aproximadamente 65-75%**, com achado notável: em séries pequenas, o sotalol atingiu **100% de sucesso em populações selecionadas de TSV com intervalo VA longo** (Tsokkou S et al., PMID 40863402) — mecanismo eletrofisiológico distinto da TRAV clássica por via acessória, em que o sotalol tem racional farmacológico mais favorável.
 - É betabloqueador não cardiosseletivo com propriedades de classe III; **contraindicado em asma grave/DPOC**.
-- **Dose de ataque descrita: 80 mg VO a cada 12h por 2 doses (160 mg no total)**; **dose de manutenção: 80-160 mg VO a cada 12h (máximo 480 mg/dia)** (Tsokkou S et al., PMID 40863402) — dose de referência da fonte consultada; confirmação contra protocolo institucional permanece como **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de prescrever.
+- **Dose de ataque descrita: 80 mg VO a cada 12h por 2 doses (160 mg no total)**; **dose de manutenção: 80-160 mg VO a cada 12h (máximo 480 mg/dia)** (Tsokkou S et al., PMID 40863402). **Limite operacional:** é um regime reportado em revisão narrativa, não uma prescrição executável; confirmar indicação, contraindicações, dose e monitorização com a equipe fetal e o protocolo institucional.
 - **Monitorização materna**: eletrocardiograma (QTc-alvo **< 500 ms** — e frequência cardíaca), eletrólitos, pressão arterial e avaliação pulmonar.
 
 #### Amiodarona — terapia de resgate
 - **Eficácia de aproximadamente 50-60%**, com a fonte advertindo que os **dados disponíveis são limitados**, sobretudo no subgrupo hidrópico.
 - **Passagem transplacentária pobre**, com razão de concentração feto-materna variando de **0,1 a 0,28** — é exatamente essa transferência ruim que reserva a amiodarona como **terapia de resgate** em casos refratários às demais, e não como primeira escolha.
-- **Dose de ataque descrita: 800-1.200 mg VO por dia (fracionada) por 7-10 dias**; **dose de manutenção: 400 mg VO uma vez ao dia (fracionada)** (Tsokkou S et al., PMID 40863402) — dose de referência da fonte consultada; confirmação contra protocolo institucional permanece como **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de prescrever.
+- **Dose de ataque descrita: 800-1.200 mg VO por dia (fracionada) por 7-10 dias**; **dose de manutenção: 400 mg VO uma vez ao dia (fracionada)** (Tsokkou S et al., PMID 40863402). **Limite operacional:** é um regime de resgate reportado em revisão narrativa, não uma prescrição executável; confirmar indicação, dose e monitorização materno-fetal com a equipe especializada e o protocolo institucional.
 - **Monitorização materna**: eletrocardiograma (QTc), função tireoidiana e função hepática.
 
 ### O que a maior coorte multicêntrica mostra sobre desfecho

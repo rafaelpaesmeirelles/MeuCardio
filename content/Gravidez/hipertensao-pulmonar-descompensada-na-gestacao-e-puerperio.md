@@ -44,19 +44,19 @@ O objetivo da ressuscitação é interromper esse ciclo sem provocar sobrecarga 
 
 A pré-carga deve ser otimizada com cautela. Tanto hipovolemia quanto expansão excessiva podem piorar o débito: a segunda aumenta dilatação do VD, deslocamento septal e congestão.
 
-Não há um bolus universal de volume recomendado para toda gestante com HAP descompensada. Para volume numérico específico: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme perfil hemodinâmico e protocolo de terapia intensiva.
+Não há um bolus universal de volume recomendado para toda gestante com HAP descompensada. **Limite de evidência:** a reposição deve ser titulada ao perfil hemodinâmico e à resposta, conforme protocolo de terapia intensiva; esta ficha não cria um volume numérico único.
 
 ### Pressão sistêmica e suporte vasoativo
 
 Hipotensão precisa ser tratada porque a pressão aórtica sustenta a perfusão coronária do VD. Vasopressor/inotrópico deve ser escolhido conforme pressão, débito, função do VD e ritmo.
 
-A diretriz não estabelece uma catecolamina única nem uma dose universal para todos esses cenários. Para escolha/dose numérica de vasoativo: **VERIFICAÇÃO HUMANA NECESSÁRIA** em protocolo especializado.
+A diretriz não estabelece uma catecolamina única nem uma dose universal para todos esses cenários. **Limite operacional:** agente e dose devem ser definidos pelo fenótipo de choque e pelo protocolo especializado, sem converter preferência local em recomendação geral.
 
 ## Vasodilatação pulmonar de resgate
 
 Em centro experiente, terapias de ação rápida para reduzir a resistência vascular pulmonar podem ser consideradas, incluindo vasodilatadores pulmonares inalados e terapias específicas para HAP compatíveis com o contexto gestacional.
 
-A escolha entre **óxido nítrico inalatório, prostanoides ou outras estratégias** depende de tratamento prévio, hemodinâmica, disponibilidade e experiência do centro. Esta ficha não fixa dose de resgate; para qualquer dose: **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+A escolha entre **óxido nítrico inalatório, prostanoides ou outras estratégias** depende de tratamento prévio, hemodinâmica, disponibilidade e experiência do centro. **Limite operacional:** esta ficha não fixa produto nem dose de resgate; ambos devem seguir o protocolo do centro especializado.
 
 ## Terapia para HAP já em uso
 
