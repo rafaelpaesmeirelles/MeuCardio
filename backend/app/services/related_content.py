@@ -266,7 +266,10 @@ def buscar_relacionados(
     grupos.append(_grupo(
         "protocolo_emergencia", "Modo Emergência", "/emergencia",
         [
-            ItemRelacionado("protocolo_emergencia", p.slug, p.titulo, p.gatilho, "/emergencia")
+            ItemRelacionado(
+                "protocolo_emergencia", p.slug, p.titulo, p.gatilho,
+                f"/emergencia?protocolo={p.slug}",
+            )
             for p, _tema_doc in protocolos[:limite_por_categoria]
         ],
     ))
@@ -282,7 +285,12 @@ def buscar_relacionados(
     ).scalars().all()
     grupos.append(_grupo(
         "checklist", "Checklists de alta", "/checklists",
-        [ItemRelacionado("checklist", c.slug, c.condicao, None, "/checklists") for c in checklists],
+        [
+            ItemRelacionado(
+                "checklist", c.slug, c.condicao, None, f"/checklists/{c.slug}",
+            )
+            for c in checklists
+        ],
     ))
 
     # --- materiais do paciente ------------------------------------------------
@@ -296,7 +304,13 @@ def buscar_relacionados(
     ).scalars().all()
     grupos.append(_grupo(
         "material_paciente", "Material para o paciente", "/material-paciente",
-        [ItemRelacionado("material_paciente", m.slug, m.titulo, m.subtitulo, "/material-paciente") for m in materiais],
+        [
+            ItemRelacionado(
+                "material_paciente", m.slug, m.titulo, m.subtitulo,
+                f"/material-paciente/{m.slug}",
+            )
+            for m in materiais
+        ],
     ))
 
     total = sum(len(g["itens"]) for g in grupos)

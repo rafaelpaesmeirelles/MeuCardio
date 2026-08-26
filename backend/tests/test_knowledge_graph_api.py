@@ -12,6 +12,7 @@ from app.models.content import Document
 from app.models.evidence import EvidenceRecord
 from app.models.knowledge import KnowledgeEntity, KnowledgeRelation
 from app.models.subscription import Subscription
+from app.services.knowledge_graph import BackfillEmAndamento
 
 TEMA = "Insuficiência cardíaca"
 
@@ -152,3 +153,16 @@ def test_backfill_e_idempotente_pela_rota_real(client, db, criar_usuario):
 
     assert entidades_1 == entidades_2
     assert relacoes_1 == relacoes_2
+
+
+def test_backfill_concorrente_responde_409(client, db, criar_usuario, monkeypatch):
+    from app.api import admin as admin_api
+
+    def _ocupado(_db, *, commit=True):
+        raise BackfillEmAndamento("Outra reconciliação está em andamento.")
+
+    monkeypatch.setattr(admin_api, "backfill_mesmo_tema", _ocupado)
+    resposta = client.post("/api/admin/grafo/backfill", headers=_headers_admin(criar_usuario))
+
+    assert resposta.status_code == 409
+    assert "em andamento" in resposta.json()["detail"]

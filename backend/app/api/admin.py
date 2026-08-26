@@ -18,7 +18,7 @@ from app.models.subscription import Subscription
 from app.models.user import User
 from app.services import emails
 from app.services.entitlement import acesso_administrativo_sem_pagamento, tem_acesso_ao_produto
-from app.services.knowledge_graph import backfill_mesmo_tema
+from app.services.knowledge_graph import BackfillEmAndamento, backfill_mesmo_tema
 from app.services.kyc import verificacao as kyc_verificacao
 from app.services.professional_profile import normalize_council, normalize_professional_title
 
@@ -1467,7 +1467,12 @@ def backfill_grafo_conhecimento(db: Session = Depends(get_db), admin=Depends(req
     não-destrutivo, pode ser chamado quantas vezes for preciso (ex.: depois
     de publicar conteúdo novo). Nunca toca em dado de paciente — só as
     frentes de conteúdo global já cobertas pelo allowlist do modelo."""
-    resultado = backfill_mesmo_tema(db)
+    # O log e a reconciliação participam da mesma transação: não existe
+    # backfill bem-sucedido sem sua trilha administrativa correspondente.
+    try:
+        resultado = backfill_mesmo_tema(db, commit=False)
+    except BackfillEmAndamento as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
     db.add(AuditLog(
         user_id=admin.id, action="grafo_backfill", entity="knowledge_graph",
         detail=resultado,

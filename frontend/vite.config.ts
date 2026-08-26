@@ -17,6 +17,11 @@ const analiseCardiovascularSomenteOnline = /(?:^|\/)(?:ECGQuickOpinion|Cardiovas
 // medicamentos. O chunk segue disponível por NetworkFirst, sem ocupar o
 // precache com uma tela que não produz conteúdo offline.
 const buscaTudoComTudoSomenteOnline = /(?:^|\/)Busca-[^/]*\.js$/;
+// Checklists aplicados, trilhas e materiais dependem da API para carregar
+// estado/conteúdo e para qualquer mutação ou geração de PDF. Pré-carregar os
+// chunks não os torna utilizáveis offline; eles permanecem disponíveis pelo
+// cache NetworkFirst de assets quando acessados.
+const conteudoConectadoSomenteOnline = /(?:^|\/)(?:ChecklistModelo|ChecklistAlta|MaterialPaciente|MaterialPacienteDetalhe|Trilha)-[^/]*\.js$/;
 
 export default defineConfig({
   plugins: [
@@ -53,6 +58,7 @@ export default defineConfig({
               if (validacaoPublicaSomenteOnline.test(entry.url)) return false;
               if (analiseCardiovascularSomenteOnline.test(entry.url)) return false;
               if (buscaTudoComTudoSomenteOnline.test(entry.url)) return false;
+              if (conteudoConectadoSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;

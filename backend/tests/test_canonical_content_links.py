@@ -37,3 +37,21 @@ def test_evidence_document_links_exist_and_keep_the_same_theme():
         item["slug"] for item in linked
         if documents[item["document_slug"]] != item["theme"]
     ]
+
+
+def test_checklist_document_links_resolve_when_declared():
+    document_slugs = {
+        _frontmatter_value(path, "slug") or path.stem
+        for path in (ROOT / "content").rglob("*.md")
+    }
+    checklists = json.loads(
+        (ROOT / "checklists" / "metadados.json").read_text(encoding="utf-8")
+    )
+    broken = [
+        item["slug"]
+        for item in checklists
+        if item.get("documento_origem")
+        and item["documento_origem"] not in document_slugs
+    ]
+
+    assert broken == []

@@ -47,7 +47,7 @@ expansão de tipos desta rodada não exige nova migração porque `entity_type` 
 estrutural**, não apenas documentação. `registrar_entidade()` rejeita qualquer
 `entity_type` fora do catálogo.
 
-Os **15 tipos permitidos** são conteúdo global/editorial:
+Os **16 tipos permitidos** são conteúdo global/editorial/taxonômico:
 
 1. `documento`
 2. `fluxograma`
@@ -64,6 +64,7 @@ Os **15 tipos permitidos** são conteúdo global/editorial:
 13. `calculadora`
 14. `doenca`
 15. `triagem_sintoma`
+16. `tema` — nó taxonômico interno; nunca contém dado de paciente
 
 `Patient`, `Prescription`, `Appointment`, `GeneratedDocument`, `ServiceOrder`,
 usuário, consulta, agenda ou qualquer outro dado individual **nunca pode virar
@@ -95,7 +96,7 @@ parametrizado.
 
 ## 4. Catálogo de tipos de relação
 
-A rodada de 21/08/2026 ampliou o catálogo para **20 relações**:
+O catálogo possui **24 relações**:
 
 - `treats`
 - `indicated_for`
@@ -117,6 +118,10 @@ A rodada de 21/08/2026 ampliou o catálogo para **20 relações**:
 - `patient_education_for`
 - `differential_for`
 - `same_theme`
+- `belongs_to_topic`
+- `derived_from`
+- `uses_flowchart`
+- `contains`
 
 `registrar_relacao()` rejeita qualquer valor fora desse catálogo.
 
@@ -172,7 +177,8 @@ relevância editorial/estrutural — **nunca patrocínio**.
 
 Valores usados pelos backfills atuais:
 
-- `same_theme`: `0.4`;
+- `belongs_to_topic`: `0.35`;
+- `same_theme`: `0.4` (legado preservado apenas para rollback);
 - doença → documento/fluxograma via `related_document_slugs`: `0.85`;
 - material ao paciente → doença via `patient_material_slug`: `0.9`;
 - doença → triagem via diferencial exato não ambíguo: `0.8`.
@@ -188,16 +194,22 @@ patrocínio participa do cálculo/gravação de `relevance_score`.
 `backfill_mesmo_tema()` mantém o nome histórico por compatibilidade, mas agora
 executa duas camadas.
 
-### 7.1 Camada clássica: `same_theme`
+### 7.1 Camada taxonômica: `belongs_to_topic`
 
-1. Lê as frentes já cruzadas por `related_content.py`, somente itens
-   `published=True`.
-2. Registra/atualiza um `KnowledgeEntity` por item.
-3. Cria `same_theme` entre tipos diferentes com o mesmo `theme`/`tema`.
-4. Limita a densidade a 5 vizinhos por par de tipos para evitar explosão
-   cartesiana.
-5. Usa `provenance_type=structured_metadata`, `confidence=derived` e
-   `review_status=pendente_revisao`.
+1. Lê as frentes publicadas e canonicaliza os dois aliases históricos
+   conhecidos.
+2. Registra/atualiza um `KnowledgeEntity` por item e um nó interno por tema.
+3. Cria uma associação `item -[belongs_to_topic]-> tema` por tema sustentado.
+4. A consulta expande `item -> tema <- outros itens`, priorizando relações
+   explícitas e paginando por tipo.
+5. Medicamentos podem pertencer a Farmacologia e a temas clínicos adicionais
+   apenas quando suas indicações estruturadas satisfazem a regra conservadora
+   já usada por `connected_content.py`.
+6. As antigas arestas `same_theme` permanecem armazenadas para rollback, mas
+   são ignoradas pela leitura quando o item já possui a nova associação.
+
+Esse desenho é O(N), inclui itens além dos cinco primeiros de cada tema e evita
+materializar centenas de milhares de pares item↔item.
 
 O casamento continua sendo igualdade de tema; não há heurística de linguagem.
 
@@ -257,19 +269,19 @@ A existência desses tipos no catálogo não autoriza fabricação automática. 
 só devem ser preenchidos quando houver metadado/fonte apropriada e processo de
 curadoria correspondente.
 
-## 8. Limitação conhecida do corpus — 21/08/2026
+## 8. Cobertura do corpus — 26/08/2026
 
-A infraestrutura suporta `related_document_slugs` e `patient_material_slug`, mas
-o inventário desta rodada encontrou **ausência desses campos no manifesto
-canônico atual de doenças**. Portanto, a existência do suporte no grafo não deve
-ser confundida com conectividade já preenchida.
+O inventário reprodutível lê os 9.452 itens e encontra cobertura temática
+explícita em 9.452/9.452. Além de `theme`/`tema`, as 87 doenças especializadas
+usam seu campo `area` e as 14 triagens usam `areas`: uma tabela fechada mapeia
+`geral`, `cardiopediatria`, `cardiogeriatria`, `cardiooncologia` e `gravidez`
+para cinco temas canônicos. São 129 associações de área; 89 delas cobrem os 61
+itens que antes dependiam de curadoria temática (49 doenças e 12 triagens), sem
+inferir nenhuma relação clínica.
 
-Isso é uma lacuna editorial real a ser atacada em rodadas de densificação:
-
-- mapear doenças existentes para documentos/fluxogramas já publicados;
-- mapear material ao paciente pertinente;
-- deduplicar por slug e conceito antes de gravar qualquer vínculo;
-- manter links sem fonte/semântico duvidoso fora do corpus publicável.
+Coincidência de URL, texto, referência bibliográfica ou tema não é promovida a
+`mentioned_in`, `differential_for` ou afirmação clínica. Esses candidatos
+continuam exigindo curadoria humana e fonte/slug relacional declarado.
 
 ## 9. API
 
@@ -296,8 +308,14 @@ Devolve:
 }
 ```
 
-A consulta lê arestas nas duas direções, deduplica o mesmo vizinho, ordena por
-`relevance_score` e exclui nó arquivado/relação rejeitada.
+A consulta lê arestas nas duas direções, deduplica o mesmo vizinho com ordem
+determinística, prioriza relação direta e revisada, ordena por
+`relevance_score` e exclui nó arquivado/relação rejeitada. A política pública é
+uma allowlist fechada: enquanto pendentes, somente `belongs_to_topic`,
+`same_theme`, `derived_from`, `uses_flowchart`, `contains` e `mentioned_in`
+podem aparecer. A única exceção de `associated_with` é a navegação determinística
+de `EmergencyProtocol.relacionados`. Todo tipo clínico atual ou futuro exige
+`review_status=revisado`.
 
 ### Backfill
 

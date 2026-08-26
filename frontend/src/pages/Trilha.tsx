@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../lib/api";
+import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Etapa = {
   ordem: number;
@@ -16,6 +17,7 @@ type Etapa = {
 type Detalhe = {
   slug: string;
   titulo: string;
+  tema: string | null;
   objetivo: string | null;
   total_etapas: number;
   concluidas: number;
@@ -38,25 +40,43 @@ export default function Trilha() {
   const { slug = "" } = useParams();
   const [d, setD] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
+  const [salvandoEtapa, setSalvandoEtapa] = useState<string | null>(null);
+  const slugAtual = useRef(slug);
 
   useEffect(() => {
-    api.get<Detalhe>(`/trilhas/${slug}`).then(setD).catch((e) => setErro(e?.message || "Erro"));
+    slugAtual.current = slug;
+    let ativo = true;
+    setD(null);
+    setErro("");
+    setSalvandoEtapa(null);
+    api.get<Detalhe>(`/trilhas/${slug}`)
+      .then((dados) => { if (ativo) setD(dados); })
+      .catch((e) => { if (ativo) setErro(e?.message || "Erro"); });
+    return () => { ativo = false; };
   }, [slug]);
 
   async function alternar(e: Etapa) {
+    if (salvandoEtapa) return;
+    setSalvandoEtapa(e.item_slug);
+    setErro("");
+    const slugSolicitado = slug;
     try {
       const r = await api.post<Detalhe>(`/trilhas/${slug}/progresso`, {
         item_slug: e.item_slug,
         concluida: !e.concluida,
       });
-      setD(r);
+      if (slugAtual.current === slugSolicitado) setD(r);
     } catch (err: any) {
-      setErro(err?.message || "Não foi possível salvar o progresso.");
+      if (slugAtual.current === slugSolicitado) {
+        setErro(err?.message || "Não foi possível salvar o progresso.");
+      }
+    } finally {
+      if (slugAtual.current === slugSolicitado) setSalvandoEtapa(null);
     }
   }
 
   if (erro && !d) return <p className="erro">{erro}</p>;
-  if (!d) return <p>Carregando…</p>;
+  if (!d || d.slug !== slug) return <p>Carregando…</p>;
 
   const pct = d.total_etapas ? Math.round((d.concluidas / d.total_etapas) * 100) : 0;
 
@@ -99,6 +119,7 @@ export default function Trilha() {
             <button
               className="trilha__marcar"
               onClick={() => alternar(e)}
+              disabled={salvandoEtapa !== null}
               aria-label={e.concluida ? "Desmarcar etapa" : "Marcar etapa como concluída"}
             >
               {e.concluida ? "✓" : e.ordem}
@@ -127,6 +148,8 @@ export default function Trilha() {
           </li>
         ))}
       </ol>
+
+      <GrafoRelacionados entityType="trilha" slug={d.slug} />
     </div>
   );
 }
