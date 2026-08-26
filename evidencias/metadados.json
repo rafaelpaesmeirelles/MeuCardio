@@ -48176,5 +48176,195 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "esc2025-tavi-recomendado-em-pacientes-70-anos-ou-mais-com-estenose-aortica-tricuspide",
+    "statement": "Em pacientes com estenose aórtica grave e válvula aórtica tricúspide, o TAVI é recomendado a partir dos 70 anos de idade, desde que a anatomia seja favorável.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EACTS",
+    "year": 2025,
+    "guideline_title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Praz F, Borger MA, Lanz J, Marin-Cuartas M, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. doi:10.1093/eurheartj/ehaf194. PMID: 40878295.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "TAVI",
+      "estenose aórtica",
+      "idoso",
+      "escolha de intervenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2025-savr-recomendado-em-pacientes-menores-de-70-anos-com-baixo-risco-cirurgico",
+    "statement": "A troca valvar aórtica cirúrgica (SAVR) é recomendada em pacientes com menos de 70 anos de idade e baixo risco cirúrgico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2025,
+    "guideline_title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Praz F, Borger MA, Lanz J, Marin-Cuartas M, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. doi:10.1093/eurheartj/ehaf194. PMID: 40878295.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "SAVR",
+      "estenose aórtica",
+      "idoso",
+      "escolha de intervenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2025-escolha-do-modo-de-intervencao-na-estenose-aortica-baseada-em-heart-team",
+    "statement": "A escolha entre TAVI e cirurgia deve ser baseada na avaliação da Heart Team quanto às características clínicas, anatômicas e do procedimento de cada paciente, incorporando o manejo ao longo da vida e a expectativa de vida estimada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2025,
+    "guideline_title": "2025 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Praz F, Borger MA, Lanz J, Marin-Cuartas M, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. doi:10.1093/eurheartj/ehaf194. PMID: 40878295.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "Heart Team",
+      "estenose aórtica",
+      "idoso",
+      "tomada de decisão compartilhada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-tratamento-da-hipertensao-em-idosos-menores-de-85-anos-sem-fragilidade-segue-diretriz-geral",
+    "statement": "Em pacientes idosos com menos de 85 anos e sem fragilidade moderada a grave, o tratamento da pressão arterial elevada e da hipertensão deve seguir as mesmas diretrizes aplicadas a pacientes mais jovens, desde que o tratamento anti-hipertensivo seja bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "fragilidade",
+      "meta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-manutencao-vitalicia-do-tratamento-anti-hipertensivo-apos-os-85-anos-se-tolerado",
+    "statement": "É recomendado manter o tratamento farmacológico de redução da pressão arterial por toda a vida, inclusive após os 85 anos de idade, desde que seja bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "hipertensão",
+      "muito idoso",
+      "continuidade do tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-limiar-140-90-para-iniciar-anti-hipertensivo-em-idoso-fragil-ou-85-anos-ou-mais",
+    "statement": "Em pacientes com hipotensão ortostática sintomática pré-tratamento, idade igual ou superior a 85 anos, fragilidade moderada a grave clinicamente significativa e/ou expectativa de vida limitada (menor que 3 anos), o tratamento anti-hipertensivo deve ser considerado apenas a partir de pressão arterial igual ou superior a 140/90 mmHg, já que o benefício na redução de desfechos cardiovasculares é incerto nesse contexto e é aconselhável monitorização rigorosa da tolerância ao tratamento.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "hipertensão",
+      "muito idoso",
+      "fragilidade",
+      "hipotensão ortostática"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-rastreio-de-fragilidade-antes-de-definir-metas-de-pressao-arterial-no-idoso",
+    "statement": "Como a segurança e a eficácia do tratamento da pressão arterial são menos certas em indivíduos com fragilidade moderada ou grave, deve-se considerar o rastreio de fragilidade em idosos com testes clínicos validados; as prioridades de saúde do paciente frágil e uma abordagem de decisão compartilhada devem ser consideradas ao definir tratamentos e metas de pressão arterial.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "fragilidade",
+      "rastreio",
+      "idoso",
+      "decisão compartilhada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-escolha-de-anti-hipertensivo-de-primeira-linha-no-idoso-fragil-ou-85-anos-ou-mais",
+    "statement": "Ao iniciar tratamento anti-hipertensivo em pacientes com 85 anos ou mais e/ou com fragilidade moderada a grave em qualquer idade, bloqueadores dos canais de cálcio di-hidropiridínicos de ação prolongada ou inibidores do sistema renina-angiotensina devem ser considerados como primeira escolha, seguidos, se necessário, de diurético em baixa dose se tolerado, evitando preferencialmente betabloqueador (a menos que haja indicação específica) ou alfabloqueador.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "hipertensão",
+      "muito idoso",
+      "fragilidade",
+      "escolha farmacológica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-desprescricao-anti-hipertensiva-com-queda-de-pa-e-progressao-da-fragilidade",
+    "statement": "Se a pressão arterial cair com a progressão da fragilidade, a desprescrição de anti-hipertensivos (e de outros fármacos que também possam reduzir a pressão arterial, como sedativos e alfabloqueadores prostático-específicos) pode ser considerada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. doi:10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "desprescrição",
+      "fragilidade",
+      "polifarmácia",
+      "hipertensão"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esc2024-manutencao-da-varfarina-em-vez-de-doac-no-idoso-fragil-com-polifarmacia",
+    "statement": "Em pacientes com 75 anos ou mais, clinicamente estáveis com varfarina em faixa terapêutica e em uso de múltiplos medicamentos (polifarmácia), manter a varfarina em vez de trocar para um DOAC pode ser considerado, para prevenir excesso de risco hemorrágico.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+    "reference": "Van Gelder IC, Rienstra M, Bunting KV, Casado-Arroyo R, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "fibrilação atrial",
+      "varfarina",
+      "DOAC",
+      "polifarmácia",
+      "idoso frágil"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
