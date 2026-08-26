@@ -104,6 +104,7 @@ def buscar_relacionados(
     tema: str,
     excluir_tipo: str | None = None,
     excluir_slug: str | None = None,
+    limite_por_categoria: int = LIMITE_POR_CATEGORIA,
 ) -> dict:
     """Devolve, agrupado por tipo, o conteúdo publicado do mesmo tema em todas
     as frentes do ecossistema Corvia — o "Tudo sobre este tema" das páginas de
@@ -123,7 +124,7 @@ def buscar_relacionados(
     if excluir_tipo == "documento" and excluir_slug:
         docs_q = docs_q.where(Document.slug != excluir_slug)
     docs = db.execute(
-        docs_q.order_by(Document.updated_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        docs_q.order_by(Document.updated_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "documento", "Documentos e protocolos", "/biblioteca",
@@ -136,7 +137,7 @@ def buscar_relacionados(
     if excluir_tipo == "fluxograma" and excluir_slug:
         fluxos_q = fluxos_q.where(Document.slug != excluir_slug)
     fluxos = db.execute(
-        fluxos_q.order_by(Document.updated_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        fluxos_q.order_by(Document.updated_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "fluxograma", "Fluxogramas", "/fluxogramas",
@@ -150,7 +151,7 @@ def buscar_relacionados(
     if excluir_tipo == "evidencia" and excluir_slug:
         ev_q = ev_q.where(EvidenceRecord.slug != excluir_slug)
     evidencias = db.execute(
-        ev_q.order_by(EvidenceRecord.created_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        ev_q.order_by(EvidenceRecord.created_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "evidencia", "Evidências", "/evidencias",
@@ -172,7 +173,7 @@ def buscar_relacionados(
     if excluir_tipo == "estudo" and excluir_slug:
         est_q = est_q.where(ScientificStudy.slug != excluir_slug)
     estudos = db.execute(
-        est_q.order_by(ScientificStudy.created_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        est_q.order_by(ScientificStudy.created_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "estudo", "Estudos", "/estudos",
@@ -186,7 +187,7 @@ def buscar_relacionados(
         if excluir_tipo == "medicamento" and excluir_slug:
             drug_q = drug_q.where(Drug.slug != excluir_slug)
         drogas = db.execute(
-            drug_q.order_by(Drug.generic_name).limit(LIMITE_POR_CATEGORIA)
+            drug_q.order_by(Drug.generic_name).limit(limite_por_categoria)
         ).scalars().all()
         medicamentos = [
             ItemRelacionado("medicamento", d.slug, d.generic_name, d.drug_class, f"/medicamentos?slug={d.slug}")
@@ -199,7 +200,7 @@ def buscar_relacionados(
     if excluir_tipo == "exame" and excluir_slug:
         ex_q = ex_q.where(LabTest.slug != excluir_slug)
     exames = db.execute(
-        ex_q.order_by(LabTest.name).limit(LIMITE_POR_CATEGORIA)
+        ex_q.order_by(LabTest.name).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "exame", "Exames", "/exames",
@@ -211,7 +212,7 @@ def buscar_relacionados(
     if excluir_tipo == "caso_clinico" and excluir_slug:
         cc_q = cc_q.where(ClinicalCase.slug != excluir_slug)
     casos = db.execute(
-        cc_q.order_by(ClinicalCase.created_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        cc_q.order_by(ClinicalCase.created_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "caso_clinico", "Casos clínicos", "/casos-clinicos",
@@ -223,7 +224,7 @@ def buscar_relacionados(
     if excluir_tipo == "trilha" and excluir_slug:
         tr_q = tr_q.where(StudyTrack.slug != excluir_slug)
     trilhas = db.execute(
-        tr_q.order_by(StudyTrack.created_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        tr_q.order_by(StudyTrack.created_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "trilha", "Trilhas de estudo", "/trilhas",
@@ -235,7 +236,7 @@ def buscar_relacionados(
     if excluir_tipo == "galeria" and excluir_slug:
         gal_q = gal_q.where(GalleryImage.slug != excluir_slug)
     imagens = db.execute(
-        gal_q.order_by(GalleryImage.created_at.desc()).limit(LIMITE_POR_CATEGORIA)
+        gal_q.order_by(GalleryImage.created_at.desc()).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "galeria", "Galeria de imagens", "/galeria",
@@ -248,7 +249,7 @@ def buscar_relacionados(
         for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
         if c.theme == tema and c.status == "implementada"
         and not _pular("calculadora", c.slug, excluir_tipo, excluir_slug)
-    ][:LIMITE_POR_CATEGORIA]
+    ][:limite_por_categoria]
     grupos.append(_grupo("calculadora", "Calculadoras", "/calculadoras", calculadoras))
 
     # --- protocolos de emergência (tema herdado do Document referenciado) --
@@ -266,7 +267,7 @@ def buscar_relacionados(
         "protocolo_emergencia", "Modo Emergência", "/emergencia",
         [
             ItemRelacionado("protocolo_emergencia", p.slug, p.titulo, p.gatilho, "/emergencia")
-            for p, _tema_doc in protocolos[:LIMITE_POR_CATEGORIA]
+            for p, _tema_doc in protocolos[:limite_por_categoria]
         ],
     ))
 
@@ -277,7 +278,7 @@ def buscar_relacionados(
     if excluir_tipo == "checklist" and excluir_slug:
         chk_q = chk_q.where(DischargeChecklist.slug != excluir_slug)
     checklists = db.execute(
-        chk_q.order_by(DischargeChecklist.condicao).limit(LIMITE_POR_CATEGORIA)
+        chk_q.order_by(DischargeChecklist.condicao).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "checklist", "Checklists de alta", "/checklists",
@@ -291,7 +292,7 @@ def buscar_relacionados(
     if excluir_tipo == "material_paciente" and excluir_slug:
         mat_q = mat_q.where(PatientMaterial.slug != excluir_slug)
     materiais = db.execute(
-        mat_q.order_by(PatientMaterial.titulo).limit(LIMITE_POR_CATEGORIA)
+        mat_q.order_by(PatientMaterial.titulo).limit(limite_por_categoria)
     ).scalars().all()
     grupos.append(_grupo(
         "material_paciente", "Material para o paciente", "/material-paciente",

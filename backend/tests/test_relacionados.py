@@ -83,6 +83,51 @@ def test_mesmo_tema_devolve_tipos_diferentes(client, db, criar_usuario):
     assert body["total"] >= 4
 
 
+def test_estudos_exigem_relacao_com_assunto_e_nao_apenas_mesmo_tema(
+    client, db, criar_usuario,
+):
+    _limpar(db)
+    db.add(Document(
+        slug="olmesartana-hipertensao", title="Olmesartana na hipertensão",
+        kind="modulo", theme="Hipertensão", body_md="conteúdo",
+        source_tier="A", review_status="revisado", published=True,
+    ))
+    db.add_all([
+        ScientificStudy(
+            slug="olmesartana-potencia-anti-hipertensiva", title="Potência anti-hipertensiva da olmesartana",
+            study_type="ensaio_clinico", journal="Hypertension", year=2024,
+            summary="resumo", key_findings="achados", clinical_implications="implicação",
+            theme="Hipertensão", tags=["olmesartana"], review_status="revisado", published=True,
+        ),
+        ScientificStudy(
+            slug="sprint-controle-intensivo", title="SPRINT — controle intensivo da pressão",
+            study_type="ensaio_clinico", journal="NEJM", year=2015,
+            summary="resumo", key_findings="achados", clinical_implications="implicação",
+            theme="Hipertensão", tags=["pressão arterial"], review_status="revisado", published=True,
+        ),
+    ])
+    db.commit()
+
+    headers = _headers(criar_usuario)
+    relacionado = client.get(
+        "/api/relacionados?tema=Hipertens%C3%A3o&assunto=olmesartana-hipertensao&excluir_tipo=documento&excluir_slug=olmesartana-hipertensao",
+        headers=headers,
+    )
+    assert relacionado.status_code == 200
+    por_tipo = {g["tipo"]: g["itens"] for g in relacionado.json()["grupos"]}
+    assert [item["slug"] for item in por_tipo["estudo"]] == [
+        "olmesartana-potencia-anti-hipertensiva"
+    ]
+
+    sem_relacao = client.get(
+        "/api/relacionados?tema=Hipertens%C3%A3o&assunto=tema-sem-correspondencia",
+        headers=headers,
+    )
+    assert sem_relacao.status_code == 200
+    por_tipo_sem_relacao = {g["tipo"]: g["itens"] for g in sem_relacao.json()["grupos"]}
+    assert por_tipo_sem_relacao["estudo"] == []
+
+
 def test_item_nao_publicado_nunca_aparece(client, db, criar_usuario):
     _limpar(db)
     db.add(Document(

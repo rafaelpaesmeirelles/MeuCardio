@@ -1,7 +1,7 @@
 ---
 title: "Choque cardiogênico — vasoativos ACC 2025 e árvore de dose"
 slug: choque-cardiogenico-vasoativos-acc-2025-arvore-de-dose
-theme: "Choque cardiogênico"
+theme: "Farmacologia"
 kind: documento
 fonte_producao: chatgpt
 review_status: revisado

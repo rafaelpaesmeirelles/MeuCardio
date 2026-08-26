@@ -42,6 +42,10 @@ def relacionados_medicamento(
 @router.get("")
 def relacionados(
     tema: str = Query(..., min_length=1, max_length=120),
+    assunto: str | None = Query(
+        None, min_length=1, max_length=255,
+        description="Slug/assunto específico do item de origem para filtrar relações por relevância.",
+    ),
     excluir_tipo: str | None = Query(
         None, description="Tipo do item de origem, para não aparecer na própria lista de relacionados."
     ),
@@ -50,5 +54,5 @@ def relacionados(
     _=Depends(current_user),
 ):
     return buscar_relacionados_contextuais(
-        db, tema, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug
+        db, tema, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug, assunto=assunto
     )

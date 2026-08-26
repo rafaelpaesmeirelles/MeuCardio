@@ -21,13 +21,27 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.drug import Drug
+from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
 from app.services.topic_relevance import (
     SUPPORTED_DRUG_TOPICS,
     canonical_theme,
     drug_matches_theme,
+    normalize_text,
     theme_variants,
 )
+
+
+_GENERIC_TOPIC_TOKENS = frozenset({
+    "cardiologia", "cardiovascular", "cardiaco", "cardiaca", "doenca", "sindrome",
+    "manejo", "tratamento", "terapia", "avaliacao", "diagnostico", "risco", "estudo",
+    "evidencia", "diretriz", "clinico", "clinica", "paciente", "adulto", "adultos",
+    "crianca", "criancas", "adolescente", "agudo", "aguda", "cronico", "cronica",
+    "grave", "arterial", "atrial", "ventricular", "atleta", "esporte", "exercicio",
+    "para", "pela", "pelo", "pelos", "pelas", "com", "sem", "entre", "versus",
+    "apos", "antes", "durante", "como", "quando", "qual", "quais", "uma", "umas",
+    "uns", "sobre", "este", "esta", "esse", "essa", "dos", "das", "nas", "nos",
+})
 
 
 def _merge_groups(responses: list[dict], *, limit: int = LIMITE_POR_CATEGORIA) -> list[dict]:
@@ -81,6 +95,86 @@ def _contextual_drugs(
     return items
 
 
+def _tokens(value: object) -> set[str]:
+    if isinstance(value, (list, tuple, set)):
+        text = " ".join(str(item) for item in value if item)
+    else:
+        text = str(value or "")
+    return {
+        token for token in normalize_text(text).split()
+        if len(token) >= 3 and not token.isdigit() and token not in _GENERIC_TOPIC_TOKENS
+    }
+
+
+def _contextual_studies(
+    db: Session, themes: tuple[str, ...], origin_slug: str | None,
+) -> list[ScientificStudy]:
+    """Return only studies specifically connected to the origin subject.
+
+    A shared broad theme is a catalogue boundary, not proof of a relationship.
+    Without an origin or an overlap in specific title/slug/tag terms, the safe
+    result is empty instead of the most recently inserted studies in the area.
+    """
+    if not origin_slug:
+        return []
+    origin_terms = _tokens(origin_slug)
+    for theme in themes:
+        origin_terms -= _tokens(theme)
+    if not origin_terms:
+        return []
+
+    studies = db.execute(
+        select(ScientificStudy).where(
+            ScientificStudy.theme.in_(themes),
+            ScientificStudy.published.is_(True),
+            ScientificStudy.slug != origin_slug,
+        )
+    ).scalars().all()
+    ranked: list[tuple[int, int, str, ScientificStudy]] = []
+    for study in studies:
+        title_overlap = origin_terms & _tokens((study.slug, study.title))
+        tag_overlap = origin_terms & _tokens(study.tags)
+        if not title_overlap and not tag_overlap:
+            continue
+        score = 3 * len(title_overlap) + 5 * len(tag_overlap)
+        ranked.append((score, study.year or 0, study.title.casefold(), study))
+    ranked.sort(key=lambda row: (-row[0], -row[1], row[2]))
+    return [row[3] for row in ranked[:LIMITE_POR_CATEGORIA]]
+
+
+def _filter_groups_by_subject(
+    groups: list[dict], themes: tuple[str, ...], origin_slug: str | None,
+) -> None:
+    """Remove theme-only neighbours from every non-study content front.
+
+    The base catalogue provides a broad candidate pool. An item-detail panel
+    must additionally share at least one specific subject term with its origin;
+    the study group is ranked separately with its structured tags.
+    """
+    if not origin_slug:
+        return
+    origin_terms = _tokens(origin_slug)
+    for theme in themes:
+        origin_terms -= _tokens(theme)
+    if not origin_terms:
+        for group in groups:
+            if group["tipo"] != "estudo":
+                group["itens"] = []
+        return
+
+    for group in groups:
+        if group["tipo"] == "estudo":
+            continue
+        matched = []
+        for item in group.get("itens", []):
+            candidate_terms = _tokens((
+                item.get("slug"), item.get("titulo"), item.get("subtitulo"),
+            ))
+            if origin_terms & candidate_terms:
+                matched.append(item)
+        group["itens"] = matched[:LIMITE_POR_CATEGORIA]
+
+
 def temas_clinicos_do_medicamento(drug: Drug) -> list[str]:
     """Clinical topics explicitly supported by the drug's structured indications.
 
@@ -101,6 +195,8 @@ def buscar_relacionados_contextuais(
     tema: str,
     excluir_tipo: str | None = None,
     excluir_slug: str | None = None,
+    assunto: str | None = None,
+    filtrar_grupos_por_assunto: bool = True,
 ) -> dict:
     canonical = canonical_theme(tema)
     if not canonical:
@@ -108,10 +204,13 @@ def buscar_relacionados_contextuais(
 
     variants = theme_variants(canonical)
     responses = [
-        _base(db, variant, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug)
+        _base(
+            db, variant, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug,
+            limite_por_categoria=100,
+        )
         for variant in variants
     ]
-    groups = _merge_groups(responses)
+    groups = _merge_groups(responses, limit=100)
 
     # The legacy service intentionally attached every drug only to
     # Farmacologia. For launch, keep that broad catalogue behavior there, but
@@ -125,6 +224,30 @@ def buscar_relacionados_contextuais(
         }
         groups.append(drug_group)
     drug_group["itens"] = _contextual_drugs(db, canonical, excluir_tipo, excluir_slug)
+
+    study_group = next((group for group in groups if group["tipo"] == "estudo"), None)
+    if study_group is None:
+        study_group = {
+            "tipo": "estudo", "rotulo": "Estudos",
+            "rota_lista": "/estudos", "itens": [],
+        }
+        groups.append(study_group)
+    if assunto:
+        studies = _contextual_studies(db, variants, assunto)
+        study_group["itens"] = [
+            {
+                "slug": study.slug,
+                "titulo": study.title,
+                "subtitulo": f"{study.journal} · {study.year}",
+                "rota": f"/estudos/{study.slug}",
+            }
+            for study in studies
+        ]
+        if filtrar_grupos_por_assunto:
+            _filter_groups_by_subject(groups, variants, assunto)
+    else:
+        for group in groups:
+            group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
 
     total = sum(len(group["itens"]) for group in groups)
     return {"tema": canonical, "grupos": groups, "total": total}
@@ -146,7 +269,13 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
     themes = temas_clinicos_do_medicamento(drug)
     responses = [
         buscar_relacionados_contextuais(
-            db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug
+            db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
+            assunto=drug.slug,
+            # As indicações vêm de campos clínicos estruturados do próprio
+            # fármaco e já são uma relação específica. Preserve documentos e
+            # demais frentes dessas indicações; apenas os estudos continuam
+            # exigindo correspondência explícita com o medicamento.
+            filtrar_grupos_por_assunto=False,
         )
         for theme in themes
     ]

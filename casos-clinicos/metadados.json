@@ -14517,12 +14517,12 @@
     "pergunta": "Qual a interpretação mais correta deste achado e a conduta recomendada?",
     "opcoes": [
       "Como o shunt continua pequeno (Qp:Qs 1,3) e a paciente está assintomática, não há indicação de fechamento nem de mudança na periodicidade do seguimento",
-      "O prolapso progressivo de cúspide aórtica associado a CIV perimembranosa/subarterial é uma indicação de fechamento independente do tamanho do shunt e da sobrecarga de volume do VE — a paciente deve ser encaminhada para avaliação de fechamento (cirúrgico ou percutâneo, conforme anatomia)",
+      "O prolapso progressivo de cúspide aórtica com insuficiência aórtica nova muda o risco apesar do shunt pequeno — a paciente deve ser encaminhada a centro de cardiopatia congênita do adulto para definir fechamento conforme progressão, gravidade da regurgitação e anatomia",
       "Solicitar apenas troca da valva aórtica isoladamente, já que o defeito septal é pequeno demais para justificar qualquer intervenção",
       "Aumentar o intervalo de seguimento ecocardiográfico, já que CIV pequena e restritiva tem baixo risco hemodinâmico documentado na literatura"
     ],
     "resposta_correta": 1,
-    "explicacao": "CIV pequena e restritiva não é sinônimo de 'sem necessidade de seguimento' — defeitos perimembranosos (sobretudo tipo 2, com extensão superior-anterior) e subarteriais têm associação bem descrita com prolapso progressivo da cúspide coronariana direita ou não coronariana, por efeito Venturi do próprio jato de shunt sobre o tecido valvar adjacente, independentemente do tamanho do defeito. Diferente da CIV moderada/grande com sobrecarga de volume de VE (cuja indicação de fechamento depende da sobrecarga hemodinâmica), a indicação de fechamento por prolapso valvar progressivo com insuficiência aórtica é reconhecida na prática contemporânea mesmo em defeito pequeno e sem sobrecarga de volume relevante — o corte exato de gravidade de regurgitação aórtica que define o momento ideal de fechar é *VERIFICAÇÃO HUMANA NECESSÁRIA* frente à tabela completa da diretriz, mas a progressão documentada já configura indicação de encaminhamento para avaliação, não de aumentar o intervalo entre exames.",
+    "explicacao": "CIV pequena e restritiva não é sinônimo de 'sem necessidade de seguimento'. Defeitos perimembranosos e, sobretudo, os de via de saída/subarteriais ficam adjacentes à valva aórtica e podem associar-se a prolapso de cúspide e insuficiência aórtica progressiva. A diretriz ESC de cardiopatias congênitas do adulto trata a regurgitação aórtica progressiva relacionada à CIV como fator específico na decisão de intervenção, separado da indicação por sobrecarga de volume do VE. Neste caso, o achado novo impede manter observação espaçada: exige avaliação especializada seriada e discussão de fechamento. A modalidade e o momento dependem da anatomia do defeito, da progressão e da gravidade da regurgitação; não devem ser definidos apenas pelo Qp:Qs pequeno nem por um corte isolado presumido.",
     "source_refs": [
       "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
       "Nguyen TVN, Ho SY, Do TN. Applied Anatomy of Perimembranous Ventricular Septal Defect for Transcatheter Device Closure. JACC Asia. 2026;6(7):1019-1032. DOI: 10.1016/j.jacasi.2026.03.002. PMID: 42412691."
@@ -16061,6 +16061,847 @@
       "Feng Y, Niu J, Wei Y, Yang H. Diagnosis, Risk Factors, and Management Principles of Fetal Premature Atrial Contractions. Maternal-Fetal Medicine. 2026;8(3):295-299. PMID: 42483290.",
       "Liu WL, Peng YH. Case Report: Bradycardia in neonatal lupus: differential diagnosis between atrioventricular block and premature atrial contractions with block. Frontiers in Pediatrics. 2024;12:1337135. PMID: 39144470.",
       "Bet BB, Eijsbroek FC, van Leeuwen E, et al. Fetal premature atrial contractions: natural course, risk factors and adverse outcome. Ultrasound Obstet Gynecol. 2024;63(5):650-657. PMID: 38030959."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-dois-choques-ansiedade-manejo",
+    "titulo": "Dois choques do CDI em um mês: o que fazer além de checar o dispositivo",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, cardiomiopatia isquêmica com CDI de prevenção secundária, recebe dois choques apropriados em três semanas (episódios de taquicardia ventricular). A interrogação do dispositivo confirma detecção e terapia corretas nos dois eventos. Na consulta de retorno, ele relata evitar sair de casa por medo de um novo choque em público e diz estar dormindo mal.",
+    "pergunta": "Além de confirmar o funcionamento adequado do dispositivo, qual é a conduta mais consistente com a evidência sobre sofrimento psicológico pós-choque?",
+    "opcoes": [
+      "Tranquilizar o paciente informando que os choques foram apropriados e agendar retorno de rotina em 6 meses",
+      "Rastrear ansiedade ativamente (ex.: HADS) e encaminhar para terapia cognitivo-comportamental breve, além de revisar a programação do dispositivo visando reduzir terapias futuras",
+      "Prescrever ansiolítico de uso contínuo sem outra investigação",
+      "Recomendar desativação temporária do CDI até a ansiedade melhorar"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Metanálise de quase 40 mil pacientes com CDI mostrou prevalência de ansiedade clinicamente relevante de 22,58% e de TEPT de 12,43%, com OR de 3,92 para ansiedade em pacientes chocados vs. não chocados (Ghezzi et al., EP Europace 2023). O ensaio Screen-ICD mostrou que TCC aplicada por enfermeiro treinado reduziu a ansiedade de forma robusta (d de Cohen -0,86) sem depender de psiquiatra dedicado (Berg et al., Eur J Prev Cardiol 2020). Ansiedade correlaciona com número de terapias recebidas — revisar a programação para reduzir choques futuros também é intervenção psicológica.",
+    "source_refs": [
+      "Ghezzi ES et al. Burden of mood symptoms and disorders in implantable cardioverter defibrillator patients. EP Europace. 2023;25(6):euad130. PMID: 37311667",
+      "Berg SK et al. Cognitive behavioural therapy significantly reduces anxiety in patients with implanted cardioverter defibrillator. Eur J Prev Cardiol. 2020;27(3):258-268. PMID: 31575299"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-atividade-sexual-poppers-pde5i",
+    "titulo": "Síncope durante atividade sexual em uso de tadalafila",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 34 anos, hipertensão arterial pulmonar em uso de tadalafila, apresenta síncope durante atividade sexual. Refere, com hesitação, uso concomitante de \"popper\" (nitrito de amila) para intensificar a experiência.",
+    "pergunta": "Qual é a explicação farmacológica mais provável para o evento?",
+    "opcoes": [
+      "Arritmia ventricular primária desencadeada pelo esforço sexual",
+      "Potenciação sinérgica da vasodilatação — nitrito de amila libera óxido nítrico que ativa a via GMPc, e o PDE5-inibidor bloqueia a degradação desse mesmo GMPc, causando queda de pressão arterial sinérgica",
+      "Reação alérgica aguda ao nitrito de amila",
+      "Efeito isolado da tadalafila em dose terapêutica, sem relação com o popper"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Nitrito de amila e PDE5-inibidores agem na mesma via (óxido nítrico–GMPc) por mecanismos complementares, produzindo queda de pressão sinérgica, não aditiva — por isso nitratos/nitritos são contraindicação formal ao uso concomitante de PDE5i (Kloner et al., J Cardiovasc Pharmacol Ther 2018). Um relato de dois casos em pacientes com HAP em uso de tadalafila descreveu exatamente síncope após uso concomitante de poppers (Salinas et al., 2024, resumo de congresso). A interação pode persistir até 24h após a tadalafila, dada sua meia-vida de 17,5h.",
+    "source_refs": [
+      "Kloner RA et al. A New Perspective on the Nitrate-Phosphodiesterase Type 5 Inhibitor Interaction. J Cardiovasc Pharmacol Ther. 2018;23(5):375-386. PMID: 29739235",
+      "Salinas N et al. \"Pop n' Drop\": Two Cases of Recreational Amyl Nitrite Use Among Patients With Pulmonary Arterial Hypertension on PDE5 Inhibitors Leading to Syncope. Am J Respir Crit Care Med. 2024;209(Suppl 1):A3956"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-jovem-uso-cocaina-betabloqueador",
+    "titulo": "Dor torácica em jovem com uso recente de cocaína: por que não começar com betabloqueador",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 27 anos, chega ao pronto-socorro com dor torácica opressiva há 40 minutos, sem fatores de risco cardiovascular clássicos. Ao ser questionado ativamente, admite uso de cocaína inalada há cerca de 1 hora. ECG mostra supradesnivelamento discreto de ST em parede inferior.",
+    "pergunta": "Qual conduta farmacológica inicial é mais apropriada?",
+    "opcoes": [
+      "Metoprolol intravenoso imediato para controle de frequência cardíaca, como em qualquer SCA",
+      "Benzodiazepínico primeiro, seguido de nitrato e/ou bloqueador de canal de cálcio não di-hidropiridínico; evitar betabloqueador puro nesta fase aguda",
+      "Betabloqueador combinado com IECA em bólus",
+      "Trombolítico imediato sem outra medida, independente do uso de cocaína"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cocaína causa vasoespasmo coronariano por estímulo alfa-adrenérgico não contraposto; betabloqueador puro pode piorar esse vasoespasmo (Lange et al., Ann Intern Med 1990). O manejo agudo de primeira linha é benzodiazepínico, nitrato e bloqueador de canal de cálcio não di-hidropiridínico (Richards et al., Clin Toxicol 2016). A revisão RUTI-Cocaine (Cediel et al., 2018) mostrou que betabloqueador de MANUTENÇÃO pós-alta (não na fase aguda) associou-se a menos MACE — a contraindicação é específica da fase aguda do vasoespasmo, não da classe inteira para sempre.",
+    "source_refs": [
+      "Cediel G et al. β-Blocker treatment and prognosis in acute coronary syndrome associated with cocaine consumption: RUTI-Cocaine Study. Int J Cardiol. 2018;260:7-10. PMID: 29622456",
+      "Lange RA et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. PMID: 1971166"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dispneia-subita-pos-preenchimento-gluteo-clandestino",
+    "titulo": "Dispneia súbita após preenchimento glúteo clandestino",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Mulher trans, 26 anos, chega à emergência com dispneia súbita, hipoxemia e febre baixa, iniciadas cerca de 6 horas antes. No exame, hesita em contar detalhes até ser acolhida sem julgamento; então revela ter feito uma aplicação de \"biopolímero\" em glúteos há 2 dias, em local não regulamentado.",
+    "pergunta": "Qual achado de imagem sustenta fortemente a hipótese diagnóstica mais provável?",
+    "opcoes": [
+      "Consolidação lobar única, compatível com pneumonia bacteriana típica",
+      "Opacidade em vidro fosco de distribuição periférica com espessamento de septos interlobulares na TC de tórax",
+      "Derrame pericárdico volumoso ao ecocardiograma",
+      "Nódulo pulmonar solitário calcificado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A série de referência de Restrepo et al. (2009) descreveu exatamente esse padrão — vidro fosco periférico com espessamento septal — em 100% dos 10 casos de embolia pulmonar por silicone líquido injetado clandestinamente, com 6 dos 10 pacientes evoluindo para SDRA. O atraso na revelação do procedimento é consistente com a barreira de acesso relacional documentada para mulheres trans/travestis no Brasil (transfobia institucional — Pinheiro et al., 2024), reforçando a importância do acolhimento sem julgamento na anamnese.",
+    "source_refs": [
+      "Restrepo CS et al. Silicone pulmonary embolism: report of 10 cases and review of the literature. J Comput Assist Tomogr. 2009;33(2):233-7. PMID: 19346851",
+      "Pinheiro TF et al. Difficulties and advances in access to and use of health services by transgender women and travestis in Brazil. Rev Bras Epidemiol. 2024;27(Suppl 1). PMID: 39166579"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fisiculturista-icterica-sarm",
+    "titulo": "Fisiculturista amador com icterícia após \"suplemento de pesquisa\"",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 24 anos, fisiculturista amador, procura atendimento com icterícia e prurido há 5 dias. Nega uso de esteroide anabolizante, mas relata ter usado, por três meses, um \"suplemento de pesquisa\" comprado pela internet chamado LGD-4033, sem ginecomastia nem outros sinais de virilização.",
+    "pergunta": "Qual é a hipótese diagnóstica mais provável e por quê a ausência de ginecomastia não a exclui?",
+    "opcoes": [
+      "Hepatite viral aguda, sem relação com o suplemento — SARMs não têm hepatotoxicidade descrita",
+      "Lesão hepática colestática induzida por SARM (ligandrol/LGD-4033) — o mecanismo de hepatotoxicidade e supressão gonadal do SARM é distinto do esteroide anabolizante clássico, por isso não produz os mesmos sinais de virilização",
+      "Colecistite aguda calculosa, sem relação com o uso de suplemento",
+      "Hepatite autoimune de início recente, coincidência temporal com o suplemento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Múltiplos relatos de caso descrevem lesão hepática colestática por LGD-4033 e outros SARMs, com resolução após suspensão (Lee et al., Mil Med 2023: bilirrubina de pico 36,37 mg/dL; Labban et al., Cureus 2024: bilirrubina 17 mg/dL, ALT 207). SARMs não produzem os sinais de virilização clássicos dos esteroides anabolizantes esteroides, então a ausência de ginecomastia NÃO exclui hepatotoxicidade — é justamente esse padrão silencioso que a torna fácil de passar despercebida na anamnese.",
+    "source_refs": [
+      "Lee BK et al. Selective Androgen Receptor Modulator-Induced Liver Injury in Active Duty Male. Mil Med. 2023;188(7-8):e2778-e2780. PMID: 35253885",
+      "Labban H et al. LGD-4033 and a Case of Drug-Induced Liver Injury. Cureus. 2024;16(9):e69601. PMID: 39421081"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-obesidade-atraso-diagnostico",
+    "titulo": "Dor torácica atribuída ao peso: quando o viés atrasa o diagnóstico",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Mulher, 45 anos, obesidade grau II, procura atendimento com dispneia aos esforços há 3 semanas. Já havia procurado atendimento duas vezes antes, sendo orientada a \"perder peso\" sem investigação complementar. Hoje o ECG mostra alterações sugestivas de isquemia.",
+    "pergunta": "O que a evidência sobre viés de peso em profissionais de saúde sustenta sobre este cenário?",
+    "opcoes": [
+      "É esperado e não representa problema, já que a obesidade de fato explica a maioria dos sintomas respiratórios",
+      "Médicos apresentam viés implícito anti-obesidade mensurável, associado a menor tempo de consulta e a mais exames pedidos porém com menos investigação real — o sintoma deveria ter sido investigado com a mesma régua usada em paciente magro desde a primeira consulta",
+      "O atraso é justificável porque investigação em paciente obeso tem menor acurácia diagnóstica",
+      "Não há evidência de viés de peso em ambiente médico, o caso é isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com Weight IAT em mais de 359 mil pessoas, incluindo 2.284 médicos, mostrou viés implícito anti-obesidade tão forte quanto na população geral (Sabin et al., 2012). Experimento com 122 médicos mostrou que pacientes mais pesados recebem MAIS exames solicitados mas MENOS tempo de consulta (Hebl & Xu, 2001) — mais exames não substitui anamnese e exame físico completos. \"É o peso\" não deveria ser aceito como explicação suficiente para dispneia sem completar a investigação padrão.",
+    "source_refs": [
+      "Sabin JA et al. Implicit and explicit anti-fat bias among a large sample of medical doctors. PLoS One. 2012;7(11):e48448. PMID: 23144885",
+      "Hebl MR, Xu J. Weighing the care: physicians' reactions to the size of a patient. Int J Obes Relat Metab Disord. 2001;25(8):1246-1252. PMID: 11477511"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "natimorto-previo-rastreio-cardiovascular",
+    "titulo": "História de natimorto e rastreio cardiovascular na consulta anos depois",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 41 anos, procura o cardiologista para avaliação de rotina. Na anamnese reprodutiva, relata ter tido um natimorto há 12 anos, sem complicação hipertensiva na época. Não há outros fatores de risco cardiovascular evidentes.",
+    "pergunta": "Qual é a conduta mais alinhada à evidência sobre natimorto e risco cardiovascular de longo prazo?",
+    "opcoes": [
+      "Ignorar o dado, já que não houve pré-eclâmpsia associada — sem relevância cardiovascular",
+      "Registrar o natimorto como fator de risco cardiovascular relevante na história reprodutiva e reforçar rastreio de diabetes e perfil lipídico, dado o risco aumentado documentado mesmo sem hipertensão gestacional",
+      "Solicitar cateterismo cardíaco de rotina por causa do antecedente",
+      "Recomendar apenas acompanhamento psicológico, sem relevância cardiovascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Coorte sueca de mais de 2,1 milhões de mulheres mostrou risco de mortalidade cardiovascular mais que triplicado após natimorto (HR 3,14; Täufer Cederlöf et al., 2022), independente de complicação hipertensiva concomitante. Metanálise de 56 estudos mostrou RR de 1,16 para diabetes tipo 2 e risco elevado de doença isquêmica/cerebrovascular especificamente após natimorto, não após aborto espontâneo isolado (Vlachou et al., 2024) — reforça rastreio metabólico ativo nessa população.",
+    "source_refs": [
+      "Täufer Cederlöf E et al. Pregnancy Complications and Risk of Cardiovascular Disease Later in Life. J Am Heart Assoc. 2022;11(2):e023079. PMID: 35014876",
+      "Vlachou F et al. Fetal loss and long-term maternal morbidity and mortality. PLoS Med. 2024;21(2):e1004342. PMID: 38335157"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-surdo-infarto-comunicacao-libras",
+    "titulo": "Paciente surdo com dor torácica: comunicação além do bilhete escrito",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Homem, 52 anos, surdo, usuário de Libras, chega ao pronto-socorro acompanhado de um sobrinho ouvinte que se oferece para \"traduzir\". O quadro é de dor torácica típica, e há indicação de cateterismo de urgência.",
+    "pergunta": "Qual conduta de comunicação a evidência sustenta como preferível para obter consentimento e explicar risco?",
+    "opcoes": [
+      "Aceitar o sobrinho como intérprete, já que ele está disponível e conhece Libras básico",
+      "Solicitar intérprete de Libras certificado, idealmente com familiaridade em terminologia médica, e não depender de bilhete escrito nem de acompanhante não certificado para explicar risco/consentimento de procedimento invasivo",
+      "Usar apenas comunicação escrita, já que é mais rápido em uma emergência",
+      "Adiar a explicação de risco até a família providenciar um médico que saiba Libras"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com 203 adultos surdos mostrou que 40% não reconhecem nenhum sintoma de infarto e a mediana de reconhecimento de fatores de risco é metade do esperado (Margellos-Anast et al., 2006) — isso torna frágil supor que um bilhete escrito ou tradução informal garanta compreensão real de um procedimento invasivo. Acesso a provedor/intérprete fluente em língua de sinais associa-se a mais uso de serviços preventivos (McKee et al., 2011). Português escrito pode ser segunda língua com domínio incompleto para usuário de Libras.",
+    "source_refs": [
+      "Margellos-Anast H et al. Cardiovascular disease knowledge among culturally Deaf patients in Chicago. Prev Med. 2006;42(3):235-239. PMID: 16460789",
+      "McKee MM et al. Impact of communication on preventive services among deaf American Sign Language users. Am J Prev Med. 2011;41(1):75-79. PMID: 21665066"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "autismo-adulto-agitacao-nova-equivalente-anginoso",
+    "titulo": "Adulto com autismo e agitação nova: pensar em equivalente anginoso",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 34 anos, transtorno do espectro autista, não verbal, é trazido pelo cuidador por agitação e recusa alimentar iniciadas há 2 dias, sem outra queixa localizatória clara. O cuidador descreve o comportamento como \"fora do habitual\" para ele.",
+    "pergunta": "Qual conduta é mais consistente com a literatura sobre subdiagnóstico cardiovascular em deficiência intelectual/autismo?",
+    "opcoes": [
+      "Atribuir a agitação ao próprio quadro de base e orientar manejo comportamental, sem investigação cardíaca",
+      "Investigar objetivamente (ECG, troponina) como possível equivalente de síndrome coronariana aguda ou descompensação cardíaca, tratando o relato do cuidador sobre mudança do padrão habitual com o mesmo peso clínico de um sintoma verbalizado",
+      "Solicitar apenas avaliação psiquiátrica, sem exame cardiovascular",
+      "Aguardar 1 semana para reavaliação antes de qualquer exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Relatório do LeDeR (Reino Unido) mostrou que arritmias e AVC/AIT são sistematicamente subdetectados em pessoas com deficiência intelectual (atribuído pelos próprios autores a 'falta de detecção', não menor incidência real), e que 54% dos óbitos cardiovasculares nessa população foram classificados como evitáveis. Estudo sueco mostrou mortalidade 2,6x maior em adultos autistas. Dor torácica clássica depende de relato verbal que pacientes não verbais não conseguem produzir — agitação, recusa alimentar e mudança de padrão podem ser o único sinal disponível.",
+    "source_refs": [
+      "Ding J et al. The causes and impact of CVD and circulatory disease in people with a learning disability in the 2022 LeDeR cohort. King's College London, 2024",
+      "Hirvikoski T et al. Premature mortality in autism spectrum disorder. Br J Psychiatry. 2016;208(3):232-238. PMID: 26541693"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-rua-iam-acesso-cateterismo",
+    "titulo": "Paciente em situação de rua com infarto: a disparidade de acesso a cateterismo",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 55 anos, em situação de rua, é trazido por equipe de resgate com dor torácica e supradesnivelamento de ST na parede inferior. Não tem documento, telefone ou endereço para contato de retorno.",
+    "pergunta": "O que a evidência sobre disparidade de acesso sustenta como ponto de atenção nesta situação?",
+    "opcoes": [
+      "A ausência de endereço fixo não deve alterar a probabilidade de indicação de cateterismo — a decisão de intervenção deve seguir o protocolo padrão baseado apenas em critério clínico e de imagem, sem que a condição social do paciente reduza a chance real de acesso ao procedimento",
+      "Cateterismo deve ser adiado até o paciente conseguir um endereço de contato",
+      "A situação de rua contraindica intervenção coronária percutânea por maior risco de sangramento",
+      "É aceitável reduzir a agressividade terapêutica quando não há como agendar seguimento ambulatorial"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Estudo americano com 24.890 internações cardiovasculares de pessoas em situação de rua mostrou taxa de cateterismo de 39,5% contra 70,9% em domiciliados com infarto agudo, e nenhum paciente em situação de rua com parada cardíaca recebeu ICP contra 4,7% dos domiciliados (Wadhera et al., 2020) — disparidade de acesso não justificada clinicamente. A situação de rua deve ser tratada como multiplicador de risco cardiovascular, não como razão para reduzir a agressividade terapêutica.",
+    "source_refs": [
+      "Wadhera RK et al. Disparities in Care and Mortality Among Homeless Adults Hospitalized for Cardiovascular Conditions. JAMA Intern Med. 2020;180(3):357-366. PMID: 31738826"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-recem-solto-hipertensao-descontrolada",
+    "titulo": "Hipertensão descontrolada em paciente recém-solto do sistema prisional",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem, 47 anos, hipertenso conhecido, comparece à consulta 10 dias após ser solto do sistema prisional. Relata ter ficado sem nenhuma medicação anti-hipertensiva desde a soltura. Pressão arterial na consulta: 176/104 mmHg.",
+    "pergunta": "Qual é a conduta mais alinhada à evidência sobre risco cardiovascular pós-soltura?",
+    "opcoes": [
+      "Tratar apenas como hipertensão não controlada de causa habitual, sem investigar a interrupção do tratamento",
+      "Reconhecer o período pós-soltura como janela de risco cardiovascular elevado (mortalidade cardiovascular ~2,5x maior que a população geral no seguimento), reiniciar tratamento com reconciliação medicamentosa ativa e reforçar retorno precoce",
+      "Orientar apenas mudança de estilo de vida, sem retomar medicação imediatamente",
+      "Encaminhar para avaliação psiquiátrica antes de tratar a hipertensão"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Coorte de Washington mostrou risco de morte 12,7x maior nas 2 primeiras semanas pós-soltura (Binswanger et al., 2007), e seguimento posterior mostrou razão de mortalidade padronizada de 2,49 para morte cardiovascular ao longo de anos (Binswanger et al., 2013). Medicação prescrita na prisão frequentemente não acompanha a pessoa na saída — reconciliação medicamentosa ativa é intervenção concreta nessa janela crítica.",
+    "source_refs": [
+      "Binswanger IA et al. Release from prison—a high risk of death for former inmates. N Engl J Med. 2007;356(2):157-165. PMID: 17215533"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "idoso-equimoses-atipicas-suspeita-maus-tratos",
+    "titulo": "Equimoses em local atípico no idoso: quando considerar maus-tratos",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 79 anos, hipertensa, comparece à consulta cardiológica de rotina acompanhada da filha, que responde por ela na maior parte da consulta. Ao exame, o cardiologista nota equimoses em face e pescoço em diferentes estágios de resolução, sem uso de anticoagulante que as justifique.",
+    "pergunta": "Qual conduta é mais consistente com a evidência sobre reconhecimento de maus-tratos ao idoso?",
+    "opcoes": [
+      "Ignorar o achado por não ser da alçada da cardiologia",
+      "Documentar objetivamente o achado físico sem julgamento sobre autoria, e considerar encaminhamento a serviço social/geriatria/proteção ao idoso conforme a rede disponível, já que face/pescoço são áreas frequentes de equimose por abuso",
+      "Confrontar diretamente a filha na presença da paciente",
+      "Solicitar apenas exames de coagulação, sem mais nenhuma conduta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Revisão sistemática sobre sinais físicos de maus-tratos ao idoso identificou equimose como achado predominante, concentrado em cabeça, face, pescoço e membros superiores (van Houten et al., 2022) — áreas frequentemente expostas em exame cardiovascular de rotina. Maus-tratos associam-se a maior uso de emergência e maior prevalência de síndrome metabólica (Dong & Simon, 2013 e 2015). A conduta correta é documentar e encaminhar via rede, não diagnosticar ou confrontar isoladamente.",
+    "source_refs": [
+      "van Houten ME et al. Types, characteristics and anatomic location of physical signs in elder abuse: a systematic review. Eur Geriatr Med. 2022;13(1):53-85. PMID: 34514555",
+      "Dong X, Simon MA. Association between elder abuse and use of ED. Am J Emerg Med. 2013;31(4):693-698. PMID: 23399343"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "insuficiencia-cardiaca-paciente-quer-jejuar-ramada",
+    "titulo": "Paciente com insuficiência cardíaca quer jejuar no Ramadã",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, insuficiência cardíaca com fração de ejeção reduzida, classe funcional II, compensado, em uso de furosemida, sacubitril-valsartana e espironolactona, pergunta ao cardiologista se pode jejuar no Ramadã.",
+    "pergunta": "Qual conduta é mais consistente com a evidência sobre jejum do Ramadã em IC compensada?",
+    "opcoes": [
+      "Proibir o jejum categoricamente por ter insuficiência cardíaca",
+      "Planejar a adaptação: paciente compensado em classe funcional II pode jejuar com segurança na maioria dos casos, com ajuste de horário do diurético e orientação de distribuição de líquidos entre iftar e suhoor — a não adesão à medicação, não o jejum em si, é o que mais se associa à descompensação",
+      "Autorizar sem qualquer ajuste de esquema medicamentoso",
+      "Suspender toda a medicação durante o mês do Ramadã"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com 249 pacientes com IC e FE reduzida mostrou que 91% completaram o jejum do Ramadã, com 92% estáveis ou melhores; a não adesão à medicação/dieta, não o jejum, foi o fator significativamente associado à descompensação (Abazid et al., 2018). Consenso da Sociedade Tunisiana de Cardiologia recomenda ajuste de horário de diurético e distribuição de líquidos entre iftar e suhoor. Contraindicação ao jejum fica reservada a IC avançada (classe III-IV, PAS<90, internação recente).",
+    "source_refs": [
+      "Abazid RM et al. Effects of Ramadan fasting on the symptoms of chronic heart failure. Saudi Med J. 2018;39(4):395-400. PMID: 29619492"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "gestante-adolescente-pre-eclampsia-obesidade",
+    "titulo": "Gestante adolescente com obesidade: risco multiplicativo de pré-eclâmpsia",
+    "tema": "Gravidez",
+    "nivel": "básico",
+    "enunciado": "Gestante, 16 anos, IMC pré-gestacional de 34 kg/m² (obesidade grau I), 28 semanas, sem hipertensão prévia conhecida. Pressão arterial na consulta: 138/88 mmHg.",
+    "pergunta": "Qual é a leitura correta do risco combinado de idade e obesidade nesta gestante?",
+    "opcoes": [
+      "Os dois fatores têm efeito aditivo simples e discreto sobre o risco de pré-eclâmpsia",
+      "Idade jovem e obesidade se somam de forma multiplicativa, não aditiva — estudo com quase 291 mil gestantes adolescentes mostrou OR ajustado de 3,79 para pré-eclâmpsia/eclâmpsia em adolescentes com obesidade extrema vs. mulheres de 20-24 anos sem obesidade",
+      "A obesidade neutraliza parcialmente o risco da idade jovem",
+      "Nenhum dos dois fatores altera o risco de pré-eclâmpsia isoladamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo populacional americano com 290.807 gestantes de 13-24 anos mostrou OR ajustado de 3,79 (IC95% 3,15-4,55) para pré-eclâmpsia/eclâmpsia em adolescentes com obesidade extrema comparadas a mulheres de 20-24 anos sem obesidade (Aliyu et al., 2010) — evidência de efeito multiplicativo, não apenas soma de dois fatores de risco isolados. Metanálise global mostrou prevalência de 6,7% de pré-eclâmpsia/eclâmpsia em adolescentes (Macedo et al., 2020).",
+    "source_refs": [
+      "Aliyu MH et al. Joint effect of obesity and teenage pregnancy on the risk of preeclampsia. J Adolesc Health. 2010;46(1):77-82. PMID: 20123261",
+      "Macedo TCC et al. Prevalence of preeclampsia and eclampsia in adolescent pregnancy. Eur J Obstet Gynecol Reprod Biol. 2020;248:177-186. PMID: 32283429"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "depressao-pos-parto-pre-eclampsia-rastreio-cardiovascular",
+    "titulo": "Depressão pós-parto após pré-eclâmpsia: dois fatores que se somam",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 32 anos, teve pré-eclâmpsia na última gestação há 8 meses e foi diagnosticada com depressão pós-parto no puerpério imediato, ainda em tratamento. Procura o cardiologista para avaliação de rotina.",
+    "pergunta": "Como interpretar a combinação desses dois antecedentes para o risco cardiovascular desta paciente?",
+    "opcoes": [
+      "Depressão pós-parto é questão exclusivamente psiquiátrica, sem relevância cardiovascular adicional além da pré-eclâmpsia isolada",
+      "A combinação de pré-eclâmpsia com depressão pós-parto carrega risco cardiovascular futuro maior do que qualquer um dos dois fatores isoladamente — metanálise mostrou OR de 1,28 para doença cardiovascular pós-parto nessa combinação",
+      "Depressão pós-parto reduz o risco cardiovascular por levar a mais contato com o sistema de saúde",
+      "Só a pré-eclâmpsia importa; depressão pós-parto não tem mecanismo biológico plausível de risco cardiovascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Metanálise de 11 estudos e mais de 1 milhão de participantes mostrou que depressão pré-natal/perinatal comórbida com hipertensão na gestação associou-se a 28% mais risco de doença cardiovascular pós-parto (OR 1,28; Abate et al., 2025). Coorte sueca mostrou HR 1,36 para doença cardiovascular após depressão perinatal em geral, com HR maior para depressão de início pós-parto (1,42) que anteparto (1,29) (Lu et al., Eur Heart J 2024). Depressão pós-parto deve compor a anamnese cardiovascular, não ficar restrita à psiquiatria.",
+    "source_refs": [
+      "Lu D et al. Perinatal depression and risk of maternal cardiovascular disease: a Swedish nationwide study. Eur Heart J. 2024;45(31):2865-2875. PMID: 38889798",
+      "Abate BB et al. Prenatal depression with comorbid diabetes or hypertension and the risk of adverse postnatal maternal health outcomes. J Psychosom Res. 2025;196:112341. PMID: 40769049"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "migrante-venezuelano-hipertensao-diagnostico-recente",
+    "titulo": "Migrante venezuelano com hipertensão descoberta na primeira consulta",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem, 44 anos, migrante venezuelano, chegou ao Brasil há 3 meses. Nunca havia sido diagnosticado com hipertensão no país de origem. Na primeira consulta, pressão arterial de 168/100 mmHg, sem outros sintomas.",
+    "pergunta": "Qual leitura é mais consistente com a literatura sobre saúde cardiovascular de migrantes forçados?",
+    "opcoes": [
+      "Tratar como hipertensão de início recente sem investigar história prévia — o valor isolado é suficiente para toda a decisão",
+      "Considerar a possibilidade de hipertensão pré-existente não diagnosticada ou com tratamento interrompido durante o deslocamento — estudos em refugiados mostram subdiagnóstico maciço (prevalência biométrica quase o dobro da autorreferida) e reavaliar em curto intervalo antes de decisão terapêutica definitiva",
+      "Assumir que a hipertensão é sempre transitória em migrantes recentes, sem necessidade de tratamento",
+      "Não há literatura relevante sobre isso, decisão deve seguir apenas o valor pressórico isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com refugiados sírios na Jordânia mostrou prevalência biométrica de hipertensão de 39,5% contra 17,2% por autorrelato — subdiagnóstico maciço (Ratnayake et al., 2020). Metanálise mostrou risco cardiovascular 1,71x maior em refugiados. A primeira medida de PA numa consulta inicial pode refletir tanto doença de base quanto semanas de descontrole por interrupção de tratamento durante o trânsito — reavaliação em curto prazo é mais informativa que decisão definitiva na primeira visita.",
+    "source_refs": [
+      "Ratnayake R et al. Access to Care and Prevalence of Hypertension and Diabetes Among Syrian Refugees in Northern Jordan. JAMA Netw Open. 2020;3(10):e2021678",
+      "Al-Rousan T et al. Epidemiology of cardiovascular disease and its risk factors among refugees and asylum seekers. Int J Cardiol Cardiovasc Risk Prev. 2022;12:200126. PMID: 35199106"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-hemorragico-pos-aborto-clandestino",
+    "titulo": "Choque hemorrágico após procedimento abortivo fora do sistema regulado",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 24 anos, chega à emergência com sangramento vaginal volumoso e dor pélvica após procedimento realizado fora do sistema de saúde regulado há 2 dias. Frequência cardíaca 118 bpm, pressão arterial 106/70 mmHg, consciente e orientada.",
+    "pergunta": "Qual afirmação sobre a interpretação dos sinais vitais está correta?",
+    "opcoes": [
+      "Pressão arterial dentro da faixa normal exclui choque hemorrágico significativo",
+      "Sinais vitais 'compensados' (taquicardia com PA ainda preservada) não afastam choque hemorrágico oculto — a resposta simpática compensatória mantém a pressão até que a perda ultrapasse ~30% da volemia; reposição volêmica e controle do foco devem ser priorizados independente da PA aparentemente normal",
+      "Só deve-se considerar choque hemorrágico se houver hipotensão franca já estabelecida",
+      "A taquicardia isolada, sem hipotensão, não requer nenhuma conduta imediata"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A fisiologia do choque hemorrágico mostra que a resposta simpática compensatória (taquicardia, vasoconstrição periférica) mantém a pressão arterial relativamente preservada até que a perda volêmica ultrapasse classicamente 30% — por isso sinais vitais 'normais' não excluem perda significativa (Hooper & Armstrong, StatPearls). No contexto de aborto inseguro, dados do SUS mostram cerca de 200 mil internações/ano por complicações de aborto no Brasil, a maioria fora de indicação médica/legal — o limiar de suspeição clínica na triagem, não a espera por hipotensão franca, é o que muda o desfecho.",
+    "source_refs": [
+      "Domingues RMSM et al. Aborto inseguro no Brasil: revisão sistemática da produção científica, 2008-2018. Cad Saúde Pública. 2020;36(Supl 1):e00190418. PMID: 32049122",
+      "Hooper N, Armstrong TJ. Hemorrhagic Shock. StatPearls Publishing, 2022"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cancer-avancado-ic-refrataria-manter-terapia",
+    "titulo": "Câncer avançado e insuficiência cardíaca refratária: manter ou suspender terapia?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 58 anos, câncer de mama metastático em cuidados paliativos, com insuficiência cardíaca por cardiotoxicidade prévia por antraciclina, em uso de sacubitril-valsartana e empagliflozina. Equipe discute se deve suspender a terapia cardioprotetora dado o prognóstico oncológico limitado.",
+    "pergunta": "O que o ensaio EMPATICC (2026) sustenta sobre essa decisão?",
+    "opcoes": [
+      "Suspender toda terapia de IC automaticamente, já que não há benefício algum em cuidados paliativos oncológicos",
+      "Manter terapia otimizada sem qualquer reavaliação, pois o benefício é sempre presente",
+      "Não há dado que muda a capacidade de autocuidado em 30 dias em população de alta mortalidade precoce (32%), mas entre quem sobrevive além desse ponto há sinal real de benefício (redução de NT-proBNP, melhora de FEVE e de impressão global) — decisão deve ser individualizada e reavaliada em 30 dias, não automática em nenhuma direção",
+      "A decisão deve depender exclusivamente da vontade da equipe assistente, sem base em evidência"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O EMPATICC (Anker et al., Eur Heart J 2026), primeiro ensaio randomizado nesse cenário exato, mostrou desfecho primário hierárquico sem diferença entre terapia otimizada e placebo (win ratio 0,95) e mortalidade de 30 dias de 32% em ambos os braços — mas entre sobreviventes aos 30 dias, NT-proBNP caiu 41%, FEVE subiu 2,9 pontos e a impressão global melhorou (OR 0,22). A leitura correta não é suspender nem manter por reflexo — é decisão compartilhada com reavaliação em 30 dias.",
+    "source_refs": [
+      "Anker MS et al. Heart failure therapy in patients with advanced cancer receiving specialized palliative care (EMPATICC trial). Eur Heart J. 2026;47(9):1034-1046. PMID: 40884070"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "familia-morte-subita-rastreio-cascata-comunicacao",
+    "titulo": "Após morte súbita de um jovem, como orientar o rastreio da família",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Jovem de 19 anos falece subitamente durante atividade esportiva. A autópsia molecular identifica variante patogênica associada a cardiomiopatia hipertrófica. Os pais perguntam ao cardiologista da família como devem proceder com os irmãos do falecido.",
+    "pergunta": "Qual conduta a evidência sobre rastreio em cascata sustenta como mais eficaz?",
+    "opcoes": [
+      "Aguardar que os irmãos procurem espontaneamente um cardiologista, sem plano estruturado",
+      "Produzir carta familiar por escrito explicando a variante e o teste-alvo, agendar aconselhamento genético formal antes ou logo após a alta/óbito, e nomear explicitamente quem vai contar a quem — presença de aconselhamento genético formal está associada a maior adesão ao rastreio em cascata",
+      "Testar apenas o pai e a mãe, já que os irmãos têm risco desprezível",
+      "Não há necessidade de teste genético dirigido; basta ecocardiograma de rotina sem correlação com a variante identificada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo em cardiomiopatia mostrou que, de 53 pacientes com resultado genético positivo, apenas 40% tiveram algum familiar rastreado — mas entre esses, 81% haviam passado por aconselhamento genético formal, a variável que mais separa famílias que se protegem das que não se protegem (Bui et al., 2025). Em programa de morte súbita, a comunicação depende de um único familiar contatado, sem garantia de alcançar todos os parentes de risco (Siskind et al., 2022) — protocolo estruturado de comunicação é o que melhora a adesão real.",
+    "source_refs": [
+      "Bui QM et al. Cardiomyopathy genetic testing: insights into demographics, counseling, and cascade screening. Future Cardiol. 2025;21(6):359-364. PMID: 40200748",
+      "Siskind T et al. Genetic screening of relatives of decedents experiencing sudden unexpected death. J Community Genet. 2022;13(6):629-639. PMID: 36203036"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "marfan-esportista-alto-diametro-aorta-indexacao-tamanho-corporal",
+    "titulo": "Diâmetro do seio de Valsalva aumentado em atleta grande: indexar antes de rotular",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 22 anos, atleta universitário de basquete, 1,98 m de altura, superfície corporal grande, assintomático, sem história familiar de aneurisma, dissecção ou morte súbita relacionada à aorta, sem fenótipo sugestivo de síndrome de Marfan. Ecocardiograma de triagem pré-participação mostra diâmetro absoluto do seio de Valsalva discretamente acima do limite de referência populacional geral (não indexado à superfície corporal).",
+    "pergunta": "Qual a interpretação mais adequada deste achado, à luz da meta-análise de 2025 sobre dimensão aórtica em atletas de elite?",
+    "opcoes": [
+      "O diâmetro aórtico absoluto acima do limite de referência já basta para diagnosticar aortopatia e desqualificar o atleta do esporte competitivo até investigação genética completa",
+      "A meta-análise de 2025 (21 estudos, 9.464 atletas de elite) encontrou diâmetro absoluto do seio de Valsalva discretamente maior em atletas, mas essa diferença deixou de ser evidente quando o diâmetro foi indexado à superfície corporal — a interpretação deve considerar sexo, tamanho corporal, idade, modalidade e trajetória longitudinal antes de rotular o achado como anormal",
+      "Como o atleta não tem fenótipo marfanoide nem história familiar, o achado deve ser ignorado e nenhum exame de imagem adicional ou seguimento futuro é necessário",
+      "Todo atleta de estatura alta deve ser automaticamente encaminhado para ressonância magnética cardíaca, independentemente do resultado do ecocardiograma"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise atualizada de 2025, reunindo 21 estudos e 9.464 atletas de elite, encontrou diâmetro absoluto do seio de Valsalva discretamente maior em atletas comparados a controles sedentários — mas essa diferença deixou de ser evidente quando o diâmetro foi indexado à superfície corporal, confirmando que dimensão absoluta isolada pode superestimar anormalidade em pessoas grandes e altamente treinadas. A interpretação deve considerar sexo, tamanho corporal, idade, modalidade esportiva e trajetória longitudinal — não um corte absoluto isolado. Isso não significa abandonar o seguimento: dilatação claramente desproporcional ao tamanho corporal, progressão documentada em exames seriados ou associação com achados sindrômicos não deve ser atribuída ao treinamento sem investigação, mas neste caso (sem fenótipo, sem história familiar, achado só discretamente acima do limite absoluto num atleta grande) a via correta é reavaliar com indexação adequada e seguimento, não desqualificação nem RMC indiscriminada.",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. PMID 39973614. DOI 10.1161/CIR.0000000000001297.",
+      "Aortic dimension in elite athletes: updated systematic review and meta-analysis. 2025. PMID 39590649.",
+      "Sports Participation and Physical Activity in Individuals with Heritable Thoracic Aortic Disease and Aortopathy Conditions. 2022. PMID 35710275. DOI 10.1016/j.csm.2022.02.009."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nt-probnp-ultramaratonista-pico-tardio-72-horas",
+    "titulo": "NT-proBNP ainda elevado 24h após ultramaratona: erro laboratorial ou cinética esperada?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 34 anos, ultramaratonista amador, procura pronto atendimento 24 horas após completar prova de 60 km, sem sintomas cardiovasculares. Exames mostram troponina de alta sensibilidade já em queda (havia estado mais de 3 vezes o valor basal logo após a prova) e NT-proBNP ainda elevado, cerca de 3,5 vezes o valor basal.",
+    "pergunta": "Qual a interpretação mais adequada da diferença de comportamento entre os dois biomarcadores neste momento?",
+    "opcoes": [
+      "O NT-proBNP ainda elevado 24h após a prova, enquanto a troponina já cai, indica necessariamente insuficiência cardíaca aguda e exige ecocardiograma emergencial antes de qualquer outra conduta",
+      "Isso é incompatibilidade entre os exames e um deles deve estar com erro laboratorial, já que os dois biomarcadores deveriam ter cinética idêntica após o esforço",
+      "É padrão fisiológico esperado: ao contrário da troponina (que costuma atingir pico entre 2 e 6 horas e retornar ao basal em até 24 horas), o NT-proBNP atinge pico mais tardiamente e pode permanecer elevado por até 72 horas após esforço prolongado — a diferença de cinética entre os dois marcadores não indica erro nem, isoladamente, patologia",
+      "O achado exige repetir a troponina imediatamente para 'descartar' elevação patológica, já que uma dosagem única nunca é suficiente"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A revisão de Wu C et al. (Front Physiol, 2026) descreve que a troponina de alta sensibilidade em padrão fisiológico costuma atingir pico entre 2 e 6 horas pós-esforço e retornar ao basal em até 24 horas, enquanto o NT-proBNP tem cinética mais lenta — pico mais tardio e permanência elevada por até 72 horas após esforço prolongado, em padrão de adaptação fisiológica. Após ultramaratona de 60 km, o aumento mediano do NT-proBNP documentado é de 3,5 vezes o valor basal, exatamente como neste caso. A diferença de cinética entre os biomarcadores não é erro nem, isoladamente, sinal de disfunção ventricular — a revisão orienta amostragem seriada (basal, 3h, 24h) e reserva investigação adicional para elevação prolongada além de 72h ou quadro sintomático, não para uma dosagem isolada tomada dentro da janela fisiológica esperada.",
+    "source_refs": [
+      "Wu C, Zhao Y, Zhao Y. Cardiac biomarkers in athletes and active individuals: a clinical review of exercise-induced elevations and diagnostic interpretation. Front Physiol. 2026;17:1868998. PMID: 42516255. DOI: 10.3389/fphys.2026.1868998."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bradicardia-28bpm-holter-corredor-endurance-fisiologica",
+    "titulo": "Frequência mínima de 28 bpm ao Holter em corredor assintomático: doença do nó sinusal?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "básico",
+    "enunciado": "Homem, 29 anos, corredor de endurance há 10 anos, assintomático, com boa capacidade funcional, realiza Holter de 24h como parte de avaliação de rotina que mostra frequência cardíaca mínima de 28 bpm durante o sono, sem pausas maiores que 2 segundos, com resposta cronotrópica adequada durante os períodos de atividade registrados.",
+    "pergunta": "Qual conduta é mais consistente com a evidência atual sobre bradicardia no atleta de endurance?",
+    "opcoes": [
+      "Indicar implante de marcapasso imediatamente, já que frequência mínima abaixo de 30 bpm é sempre indicação absoluta, independente de sintomas",
+      "A frequência mínima isoladamente, especialmente durante o sono, não define doença do nó sinusal — dados do consórcio Pro@Heart (465 atletas de endurance) mostram que 2% da coorte teve frequência mínima ≤30 bpm no Holter, sem aumento de eventos adversos em seguimento mediano de 5,5 anos; a decisão deve considerar sintomas, resposta cronotrópica e ausência de bloqueio de alto grau, não o número isolado",
+      "Como toda bradicardia de atleta é sempre 'vagotonia' benigna, nenhum seguimento futuro é necessário",
+      "O achado exige suspensão imediata do treinamento até normalização completa da frequência cardíaca de repouso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A análise do consórcio Pro@Heart (2026), com 465 atletas de endurance avaliados por Holter, imagem multimodal e teste cardiopulmonar, encontrou frequência cardíaca mínima ≤40 bpm em 38% da coorte e ≤30 bpm em 7 atletas (2% do total) — e, no seguimento mediano de 5,5 anos, bradicardia e pausas não se associaram a aumento de eventos adversos. Características tranquilizadoras incluem justamente o que este atleta apresenta: ausência de sintomas, resposta cronotrópica adequada ao exercício, ausência de bloqueio de alto grau e boa capacidade funcional. Uma frequência de repouso baixa isoladamente, especialmente durante o sono, não define doença do nó sinusal, e marcapasso não deve ser indicado apenas porque a frequência é muito baixa em atleta treinado — a indicação segue os mesmos princípios clínicos de correlação entre distúrbio de condução e sintomas ou risco documentado, ausentes neste caso.",
+    "source_refs": [
+      "D'Ambrosio P, et al. Bradycardia in Athletes: Prevalence, Mechanisms, and Risks. Circulation. 2026;153:616-630. PMID: 41410046. DOI: 10.1161/CIRCULATIONAHA.125.076170.",
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brugada-padrao-tipo-2-incidental-triagem-atleta-assintomatico",
+    "titulo": "Padrão de Brugada tipo 2 achado incidental na triagem: desqualificar o atleta?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 20 anos, jogador de vôlei, submetido a triagem cardiovascular pré-participação de rotina. ECG de 12 derivações mostra padrão eletrocardiográfico tipo 2 de Brugada nas derivações precordiais direitas, achado incidental. Assintomático, sem síncope prévia, sem história familiar de morte súbita, sem parada cardíaca ou fibrilação ventricular documentada.",
+    "pergunta": "Qual conduta é mais alinhada ao expert opinion da Italian Society of Sports Cardiology (SICSport 2025) sobre Brugada e participação esportiva?",
+    "opcoes": [
+      "Desqualificar o atleta de qualquer esporte competitivo de forma permanente, já que qualquer padrão eletrocardiográfico de Brugada equivale a síndrome de Brugada clínica",
+      "O padrão eletrocardiográfico tipo 2, isolado e sem outros fatores de risco (sem síncope suspeita, sem história familiar relevante, sem documentação de arritmia ventricular ou parada cardíaca prévia), não confirma a síndrome nem deve produzir desqualificação automática — a avaliação deve ser multiparamétrica, e casos assintomáticos de baixo risco podem, em cenários selecionados, ser considerados para participação esportiva",
+      "Como o atleta é assintomático, o achado deve ser ignorado e nenhuma avaliação especializada é necessária, mesmo diante de febre futura",
+      "O implante de cardiodesfibrilador é obrigatório antes de qualquer liberação esportiva neste cenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O expert opinion da Italian Society of Sports Cardiology (Scarà A et al., SICSport 2025) enfatiza que a presença de um padrão de Brugada no ECG deve ser interpretada de forma multiparamétrica, e que padrões tipo 2 ou 3 isolados, sem outros fatores de risco, não confirmam a síndrome e não devem produzir automaticamente desqualificação esportiva. O que aumenta a preocupação e exigiria avaliação especializada mais intensiva é padrão tipo 1 espontâneo, síncope suspeita de mecanismo arrítmico, parada cardíaca prévia, história familiar relevante de morte súbita ou documentação de arritmia ventricular — nenhum presente neste caso. O documento SICSport 2025 propõe que indivíduos assintomáticos de baixo risco podem, em cenários selecionados, ser considerados para participação esportiva, seguindo a mesma mudança conceitual do statement AHA/ACC 2025 e do consenso HRS 2024: evitar restrição baseada apenas no rótulo diagnóstico e realizar avaliação individualizada. CDI não é indicação automática — reservado a fenótipos de maior risco, não ao achado incidental isolado. A prevenção de hipertermia e o manejo agressivo de febre seguem relevantes, especialmente se o fenótipo for confirmado.",
+    "source_refs": [
+      "Scarà A, et al. Brugada Syndrome in Sports Cardiology: An Expert Opinion Statement of the Italian Society of Sports Cardiology (SICSport). Am J Cardiol. 2025;244:9-17. PMID: 40020769. DOI: 10.1016/j.amjcard.2025.02.031.",
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID: 38763377. DOI: 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-adolescente-tv-bidirecional-esforco-retorno-esporte",
+    "titulo": "CPVT em nadadora adolescente: o que autoriza o retorno à competição",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Menina, 15 anos, nadadora competitiva, diagnosticada com taquicardia ventricular polimórfica catecolaminérgica (CPVT) após episódio de síncope durante treino intenso. ECG basal normal. Iniciado betabloqueador. Após 3 meses de tratamento, repete teste de esforço máximo específico da modalidade.",
+    "pergunta": "Qual achado no teste de esforço de reavaliação seria o critério mais consistente com a literatura atual para considerar o retorno à natação competitiva?",
+    "opcoes": [
+      "Frequência cardíaca máxima atingida acima de 180 bpm, independentemente do ritmo observado",
+      "Ausência de ectopia ventricular complexa induzida por esforço, demonstrando controle terapêutico adequado do fenótipo arrítmico durante exercício que se aproxima da intensidade real da modalidade",
+      "Normalização isolada do ECG de repouso, sem necessidade de repetir o teste de esforço",
+      "Ausência de sintomas relatados pela própria paciente durante o treino, sem necessidade de nenhum exame objetivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na CPVT, o exercício é parte central do fenótipo — arritmias ventriculares bidirecionais ou polimórficas são induzidas por exercício ou emoção em coração estruturalmente normal, e o ECG basal pode ser normal, como neste caso. O consenso HRS 2024 e o statement AHA/ACC 2025 reforçam que o retorno ao esporte não deve ocorrer enquanto houver ectopia ventricular complexa induzida por esforço ou controle terapêutico inadequado — a reavaliação deve documentar supressão ou controle adequado do fenótipo arrítmico no contexto de esforço que se aproxima da modalidade real (aqui, natação competitiva), não apenas normalização do ECG de repouso ou ausência de sintomas subjetivos, que não substituem a documentação objetiva sob esforço controlado.",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: evaluation, treatment, and return to play. Heart Rhythm. 2024. PMID: 38763377.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. DOI: 10.1161/CIR.0000000000001297.",
+      "Aggarwal A, et al. Catecholaminergic Polymorphic Ventricular Tachycardia: Clinical Characteristics, Diagnostic Evaluation and Therapeutic Strategies. J Clin Med. 2024. PMID: 38542006."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pkp2-genotipo-positivo-fenotipo-negativo-corredor-endurance",
+    "titulo": "Variante patogênica em PKP2, fenótipo normal: o corredor de endurance pode continuar treinando?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 26 anos, corredor amador de longa distância (treina mais de 60 km/semana), sem sintomas, com ecocardiograma e ressonância cardíaca sem alterações estruturais. Teste genético, solicitado após identificação de variante patogênica em familiar com cardiomiopatia arritmogênica, revela que ele também é portador da mesma variante patogênica em PKP2.",
+    "pergunta": "Qual é a orientação mais consistente com o consenso HRS 2024 para este atleta genótipo-positivo/fenótipo-negativo?",
+    "opcoes": [
+      "Como o fenótipo é negativo (ecocardiograma e RMC normais), ele está liberado para qualquer volume e intensidade de treino de endurance sem nenhuma restrição ou reavaliação futura",
+      "A variante em PKP2 tem evidência mais consistente de penetrância relacionada ao exercício — deve-se discutir explicitamente que treinamento frequente de endurance em alta intensidade pode antecipar ou aumentar a expressão fenotípica e o risco arrítmico, com vigilância longitudinal, mesmo sem proibição absoluta de todo exercício",
+      "A presença da variante patogênica já basta para desqualificação esportiva definitiva e permanente, independentemente do fenótipo atual",
+      "Não há necessidade de qualquer seguimento adicional, já que uma variante genética isolada nunca se manifesta clinicamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso HRS de 2024 destaca que a associação entre exercício vigoroso e progressão de cardiomiopatia arritmogênica é particularmente convincente para a doença relacionada a PKP2. Em indivíduos genótipo-positivos/fenótipo-negativos, a presença de uma variante patogênica não equivale automaticamente à proibição absoluta de todo exercício — a abordagem moderna é individualizada — mas para variantes com evidência mais consistente de penetrância relacionada ao exercício, como PKP2, deve-se discutir explicitamente que treinamento frequente de endurance em alta intensidade pode antecipar ou aumentar expressão fenotípica e risco arrítmico. Vigilância longitudinal é parte essencial dessa estratégia, porque o fenótipo pode surgir ao longo do tempo — liberar sem nenhuma restrição nem reavaliação futura ignora exatamente o ponto que a evidência mais consistente sobre PKP2 destaca.",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID 38763377. DOI 10.1016/j.hrthm.2024.05.018.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151:e716-e761. PMID 39973614. DOI 10.1161/CIR.0000000000001297.",
+      "Arrhythmogenic Cardiomyopathy or \"Athlete's Heart\"?: A Systematic Approach to Differential Diagnosis. JACC Clinical Electrophysiology. 2025. PMID 41105061. DOI 10.1016/j.jacep.2025.08.026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cmh-baixo-risco-atleta-adulto-competicao-decisao-compartilhada",
+    "titulo": "Cardiomiopatia hipertrófica de baixo risco no triatleta: pode competir?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 30 anos, triatleta amador, com diagnóstico estabelecido de cardiomiopatia hipertrófica não obstrutiva, assintomático, sem síncope, sem arritmias ventriculares relevantes ao Holter, sem história familiar de morte súbita, com risco de morte súbita calculado como baixo pelas ferramentas clínicas aceitas. Deseja continuar competindo em provas de triatlo.",
+    "pergunta": "Qual conduta está mais alinhada à evidência mais recente sobre exercício e esporte competitivo na cardiomiopatia hipertrófica?",
+    "opcoes": [
+      "Toda cardiomiopatia hipertrófica é contraindicação automática e absoluta a qualquer esporte competitivo, independentemente do perfil de risco",
+      "Recomendar sedentarismo completo como única forma segura de reduzir risco cardiovascular",
+      "Em indivíduos de baixo risco como este, participação competitiva pode ser considerada após avaliação especializada e decisão compartilhada — meta-análise de 2026 (2.217 pacientes com CMH, 1.204 em grupos de exercício) não encontrou aumento de eventos cardiovasculares maiores associado ao exercício (RR 1,01; p=0,97), e coorte de atletas de baixo risco acompanhada por cerca de 7 anos não mostrou excesso de eventos entre os que optaram por continuar competindo",
+      "A presença de risco baixo dispensa qualquer reavaliação futura, já que a CMH é doença estática que não muda ao longo do tempo"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A cardiologia do esporte contemporânea abandonou a lógica antiga de contraindicação quase automática do exercício vigoroso na CMH. A meta-análise de 2026 (Borrelli F et al.) reuniu 8 estudos e 2.217 pacientes com CMH, dos quais 1.204 em grupos de exercício: o exercício não aumentou eventos cardiovasculares maiores (RR 1,01; p=0,97) e melhorou o VO2 pico em aproximadamente 1,76 mL/kg/min — com a ressalva de que a evidência é mais robusta para exercício estruturado/moderado do que para esporte competitivo de alta intensidade. A coorte de atletas adultos com CMH de baixo risco acompanhada por cerca de 7 anos (Pelliccia A et al., 2020) não encontrou aumento de eventos maiores entre quem optou por continuar competição versus quem reduziu ou suspendeu exercício — os dois eventos de parada/morte súbita observados na coorte ocorreram fora da prática esportiva. Em perfis de baixo risco como o deste triatleta, participação competitiva pode ser considerada após avaliação especializada e decisão compartilhada, mas a reavaliação deve ser periódica, porque CMH é doença dinâmica — sintomas, obstrução, arritmias e outros fatores de risco podem mudar ao longo do tempo.",
+    "source_refs": [
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025. PMID: 39973614. DOI: 10.1161/CIR.0000000000001297.",
+      "Zampieri M, et al. Hypertrophic cardiomyopathy: changing the paradigm of exercise prescription and competitive sport participation. Eur Heart J. 2026. PMID: 41065586. DOI: 10.1093/eurheartj/ehaf770.",
+      "Borrelli F, et al. Safety and efficacy of physical activity in hypertrophic cardiomyopathy patients: a systematic review and metanalysis. 2026. PMID: 41907051.",
+      "Pelliccia A, et al. Clinical outcomes in adult athletes with hypertrophic cardiomyopathy: a 7-year follow-up study. Br J Sports Med. 2020. PMID: 32532845."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-prevencao-primaria-atleta-retorno-esporte-organizado",
+    "titulo": "Atleta com CDI por prevenção primária quer voltar ao futebol amador",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 24 anos, jogador de futebol amador, portador de cardiodesfibrilador implantável (CDI) por prevenção primária devido a cardiomiopatia dilatada com função ventricular reduzida, atualmente compensada. Sem história de choques prévios. Pergunta se pode voltar a jogar futebol em nível competitivo amador.",
+    "pergunta": "Com base no registro prospectivo multinacional de atletas com CDI, qual afirmação é mais precisa para orientar esta decisão?",
+    "opcoes": [
+      "A presença do CDI, por si só, contraindica qualquer esporte competitivo, já que o risco de choque durante esforço é inaceitável",
+      "O CDI garante proteção completa contra qualquer desfecho grave durante o esporte, então a liberação pode ser automática e sem avaliação adicional",
+      "No registro de Lampert et al. (372 atletas com CDI em esporte organizado, seguimento mediano de 31 meses), não houve morte, parada cardíaca ressuscitada nem lesão relacionada a arritmia ou choque durante esporte, embora 37 participantes tenham recebido choques durante competição ou treino — a decisão deve considerar a doença de base, histórico arrítmico, tipo de esporte e programação do dispositivo, não apenas a presença do CDI",
+      "Como o paciente nunca teve choque, isso prova que o dispositivo nunca será necessário e pode ser removido antes da liberação esportiva"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O registro prospectivo multinacional de Lampert e colaboradores acompanhou 372 atletas portadores de CDI participando de esporte organizado ou atividades de maior risco por mediana de 31 meses: não houve morte, parada cardíaca ressuscitada nem lesão relacionada a arritmia ou choque durante esporte, embora choques tenham ocorrido durante competição ou treino em 37 participantes, com o dispositivo conseguindo terminar os episódios de arritmia ventricular documentados. O ponto central é que o CDI não transforma uma cardiopatia de alto risco em uma de baixo risco, mas também não deve ser usado isoladamente como motivo para proibição esportiva universal — a decisão depende da doença de base, histórico arrítmico, indicação do CDI (primária vs. secundária), resposta ao exercício, programação do dispositivo e tipo de esporte, incluindo risco de trauma e o que aconteceria com uma síncope naquele contexto.",
+    "source_refs": [
+      "Lampert R, Olshansky B, Heidbuchel H, et al. Safety of sports for athletes with implantable cardioverter-defibrillators: results of a prospective, multinational registry. Circulation. 2013;127:2021-2030. PMID: 23690453. DOI: 10.1161/CIRCULATIONAHA.112.000447.",
+      "Gasperetti A, et al. Long-term performance of subcutaneous implantable defibrillators in athletes: a multicenter, real-world analysis of sport activities from the iSUSI registry. Heart Rhythm. 2025. PMID: 39307379. DOI: 10.1016/j.hrthm.2024.09.039.",
+      "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151:e716-e761. DOI: 10.1161/CIR.0000000000001297.",
+      "Olshansky B, Atteya G, Cannom D, et al. Competitive athletes with implantable cardioverter-defibrillators—How to program? Data from the Implantable Cardioverter-Defibrillator Sports Registry. Heart Rhythm. 2019;16(4):581-587. PMID: 30389442. DOI: 10.1016/j.hrthm.2018.10.032."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "atleta-olimpica-inversao-onda-t-ancestralidade-interpretacao",
+    "titulo": "Inversão de onda T em atleta olímpica negra: achado esperado ou alarme?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 23 anos, atleta olímpica de atletismo, ascendência negra, ECG de triagem mostra inversão de onda T em derivações precordiais anteriores. Assintomática, sem palpitações, sem história familiar de cardiomiopatia ou morte súbita, ecocardiograma sem hipertrofia desproporcional, sem disfunção sistólica, sem dilatação anormal.",
+    "pergunta": "Qual é a interpretação mais adequada deste achado eletrocardiográfico, considerando os dados mais recentes sobre o coração da atleta feminina?",
+    "opcoes": [
+      "Inversão de onda T em qualquer atleta é sempre patológica e exige RMC de urgência antes de qualquer liberação, independente de outros achados",
+      "Inversão de onda T anterior é mais frequente em atletas negras do que em outros grupos étnicos (15,2% em atletas negras vs. 5,4% em brancas, segundo meta-análise de 2026) — isso não significa que toda inversão de T nessa população seja automaticamente fisiológica, mas que sexo, ancestralidade, território da inversão, sintomas, história familiar e imagem devem ser integrados antes de classificar o achado, evitando critério simplista baseado só em raça ou sexo",
+      "Como ela é mulher, o remodelamento elétrico do treinamento é sempre menor que o do homem e esse achado deve ser atribuído automaticamente a erro técnico do exame",
+      "A inversão de onda T em atleta feminina deve ser interpretada usando exclusivamente as referências de ECG construídas em populações masculinas, já que não há dado específico para mulheres"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise de 2026 (Laurier N et al., Eur J Prev Cardiol) reuniu 41 estudos com 11.956 atletas mulheres, 14.014 atletas homens e 549 mulheres não atletas e encontrou que inversão de onda T foi mais frequente em atletas negras (15,2%) do que em brancas (5,4%), atletas das ilhas do Pacífico (2,6%) ou atletas Métis (0,7%). Isso não significa que toda inversão de T em atleta negra seja fisiológica — significa que sexo, ancestralidade, território da inversão, sintomas, história familiar e imagem devem ser integrados, evitando critérios simplistas baseados apenas em raça ou sexo. A maior parte dos critérios históricos de 'coração de atleta' foi construída em populações predominantemente masculinas, e usar essas referências sem ajuste para sexo aumenta tanto o risco de sobrediagnóstico quanto de subdiagnóstico na atleta feminina. Neste caso, a ausência de sintomas, história familiar e achados estruturais anormais ao ecocardiograma é tranquilizadora, mas a decisão deve integrar todos esses elementos, não decidir por erro técnico presumido nem por RMC automática.",
+    "source_refs": [
+      "D'Ascenzi F, et al. Electrical and structural remodelling in female athlete's heart: A comparative study in women vs men athletes and controls. Int J Cardiol. 2024;400:131808. PMID: 38262482. DOI: 10.1016/j.ijcard.2024.131808.",
+      "Laurier N, et al. Normal echocardiographic and electrocardiographic indices in young female athletes: a meta-analysis across sex, types of sports, races, and ethnicities. Eur J Prev Cardiol. 2026;33:1332-1344. PMID: 41289042. DOI: 10.1093/eurjpc/zwaf755."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "macrotroponina-pos-covid-atleta-troponina-elevada-sem-lesao",
+    "titulo": "Troponina elevada em triatleta pós-COVID com exames de imagem normais",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 28 anos, triatleta amadora, retorno ao esporte 4 semanas após COVID-19 leve. Solicitada troponina cardíaca de triagem antes de retomar treinos intensos, mesmo assintomática — resultado mostra troponina I elevada. ECG, ecocardiograma e ressonância cardíaca são normais.",
+    "pergunta": "Diante desse achado, qual é a conduta mais consistente com a evidência mais recente sobre troponina falsamente elevada pós-COVID em atletas?",
+    "opcoes": [
+      "Troponina elevada sempre indica miocardite subclínica, independentemente dos outros exames, e exige afastamento esportivo prolongado",
+      "Considerar a possibilidade de macrotroponina — em coorte de 35 atletas pós-COVID, 51% tinham troponina elevada sem qualquer anormalidade em ECG, ecocardiograma ou RMC, e macrotroponina (interferência analítica por autoanticorpo IgG, sem lesão miocárdica real) foi confirmada em 16 dos 18 casos investigados — antes de escalar para investigação invasiva",
+      "O resultado deve ser descartado sem investigação alguma, já que troponina nunca se eleva de forma espúria",
+      "A triagem cardíaca de rotina com troponina é obrigatória em todo atleta assintomático antes do retorno ao esporte pós-COVID, segundo o consenso vigente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Hammerer-Lercher A et al. (Clin Chem Lab Med, 2025) avaliaram 35 atletas pós-COVID (16-75 anos) e encontraram troponina cardíaca elevada, principalmente troponina I, em 18 (51%) — sem qualquer anormalidade em ECG, ecocardiograma ou ressonância cardíaca. Investigando a causa, macrotroponina (complexo de troponina com autoanticorpo IgG que interfere no ensaio, gerando resultado falsamente elevado sem lesão miocárdica real) foi confirmada em 16 desses 18 atletas. A consequência prática: troponina elevada isolada em atleta assintomático, sem correlato em ECG/eco/RMC, não deve disparar automaticamente investigação invasiva — a possibilidade de macrotroponina deve ser considerada antes de escalar a investigação, embora a proporção exata em populações maiores siga como limitação da evidência (estudo pequeno, n=35). Além disso, pelo consenso ACC 2022, atletas assintomáticos ou com sintomas não cardiopulmonares não precisam de rastreio cardíaco de rotina antes do retorno gradual ao esporte pós-COVID — a triagem deve ser guiada por sintomas, não aplicada indiscriminadamente.",
+    "source_refs": [
+      "Mahneva O, Fakhoury TR, Hanspal SS, Gonzalez Velazquez JO, Patel N, Henzlova MJ. Systematic Review of COVID-19 and COVID-19 mRNA Vaccine Myocarditis in Athletes: Incidence, Diagnosis, Prognosis, and Return-to-Play Principles. Clin J Sport Med. 2025;35(2):191-205. PMID 39784904. DOI 10.1097/JSM.0000000000001320.",
+      "Van Name J, Wu K, Xi L. Myocarditis - A silent killer in athletes: Comparative analysis on the evidence before and after COVID-19 pandemic. Sports Med Health Sci. 2024;6(3):232-239. PMID 39234482. DOI 10.1016/j.smhs.2024.03.003.",
+      "Hammerer-Lercher A, Kissel CK, Wittfooth S, et al. False-positive cardiac troponin I values due to macrotroponin in healthy athletes after COVID-19. Clin Chem Lab Med. 2025;63(10):2093-2103. PMID 40853145. DOI 10.1515/cclm-2025-0427.",
+      "Jooste M, Sewry N, Valtonen M, Dyer M, Jordaan E, Schwellnus M. Factors associated with return-to-sport outcomes following pathogen-confirmed acute respiratory infections in athletes: AWARE X study. Br J Sports Med. 2026;60(14):1028-1035. PMID 42321006. DOI 10.1136/bjsports-2025-111446."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dea-acessibilidade-clube-esportivo-plano-emergencia",
+    "titulo": "DEA trancado na sala da administração: o plano de emergência do clube está errado?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "básico",
+    "enunciado": "Diretoria de um clube de futebol amador está decidindo onde e como instalar um desfibrilador externo automático (DEA) recém-adquirido. A proposta inicial é guardá-lo trancado na sala da administração, com acesso apenas durante o horário comercial, para 'evitar furto ou mau uso'.",
+    "pergunta": "Com base na evidência sobre DEA e sobrevida em parada cardíaca súbita no esporte, qual é o problema mais importante nesse plano?",
+    "opcoes": [
+      "Não há problema algum — o mais importante é apenas possuir um DEA no local, independentemente de onde ele fique guardado",
+      "Um DEA trancado ou de acesso restrito durante os treinos não está fisicamente acessível no momento da emergência — estudo de registro mostrou que paradas cobertas por DEA acessível tiveram maior desfibrilação por testemunha e maior sobrevida em 30 dias do que aquelas com DEA próximo, porém inacessível; e estudo prospectivo mostrou sobrevida neurologicamente intacta de 93% com DEA no local, contra 9% sem DEA",
+      "O ideal é substituir o treinamento de RCP da equipe por um DEA mais moderno, já que o aparelho sozinho já garante a sobrevida",
+      "DEA só é útil durante competições oficiais, não durante treinos, então mantê-lo trancado fora do horário de treino é seguro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Não basta a instituição 'ter um DEA' — ele precisa estar fisicamente acessível quando ocorre a emergência. O estudo de registro de Copenhague (Karlsson L et al., Resuscitation 2019) mostrou que paradas cobertas por DEA acessível tiveram maior frequência de desfibrilação por testemunha e maior sobrevida em 30 dias do que aquelas em que havia DEA próximo, porém inacessível no momento do evento. Em estudo prospectivo de centros esportivos amadores, a sobrevida neurologicamente intacta foi 93% quando havia DEA no local, contra apenas 9% quando não havia. O plano de emergência de qualquer instituição esportiva deve considerar localização fixa e sinalizada, acesso sem chave ou barreira administrativa durante toda atividade (não só competições — também treinos), distância real até as áreas de jogo/treino, e checagem periódica do aparelho — um DEA guardado, trancado ou sem pessoas treinadas ao redor não é um programa de prevenção de morte súbita.",
+    "source_refs": [
+      "Association between basic life support and survival in sports-related sudden cardiac arrest: a meta-analysis. PMID 36285872.",
+      "Outcomes after sudden cardiac arrest in sports centres with and without on-site external defibrillators. Heart. 2018. PMID 29463609. DOI 10.1136/heartjnl-2017-312441.",
+      "Pelto HF, Drezner JA. Design and Implementation of an Emergency Action Plan for Sudden Cardiac Arrest in Sport. J Cardiovasc Transl Res. 2020. PMID 32300931. DOI 10.1007/s12265-020-09988-1.",
+      "Petek BJ et al. Survival Outcomes After Sudden Cardiac Arrest in Young Competitive Athletes From the United States. JACC. 2025. PMID 40162942. DOI 10.1016/j.jacc.2025.03.006.",
+      "Karlsson L, Malta Hansen C, Wissenberg M, et al. Automated external defibrillator accessibility is crucial for bystander defibrillation and survival: A registry-based study. Resuscitation. 2019;136:30-37. PMID 30682401. DOI 10.1016/j.resuscitation.2019.01.014."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-aortica-grave-fe-preservada-atleta-esporte-recreativo",
+    "titulo": "Regurgitação aórtica grave com FE preservada: o ciclista pode continuar pedalando?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 27 anos, ciclista amador, com regurgitação aórtica classificada como grave ao ecocardiograma, assintomático, fração de ejeção de 58%, ventrículo esquerdo moderadamente dilatado, teste de esforço sem arritmia induzida e resposta pressórica normal. Deseja saber se pode continuar praticando ciclismo recreativo.",
+    "pergunta": "Segundo as tabelas de recomendação da 2020 ESC Guidelines on Sports Cardiology para regurgitação aórtica grave assintomática, qual é a orientação correta para esporte recreativo/lazer neste perfil?",
+    "opcoes": [
+      "Regurgitação aórtica grave é sempre contraindicação absoluta a qualquer atividade física, mesmo recreativa",
+      "Esportes recreativos de intensidade leve e moderada podem ser considerados (Classe IIb, Nível C), já que o ventrículo esquerdo está apenas leve a moderadamente dilatado, a FE está acima de 50% e o teste de esforço é normal — mas exercício recreativo de intensidade moderada ou alta seria contraindicado se a FE caísse a 50% ou menos, ou se houvesse arritmia induzida por esforço",
+      "Como é assintomático, ele está liberado para qualquer esporte competitivo de qualquer intensidade sem nenhuma restrição",
+      "A gravidade da lesão valvar não influencia a decisão esportiva — o único critério relevante é a presença de sintomas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A 2020 ESC Guidelines on Sports Cardiology and Exercise in Patients with Cardiovascular Disease (Pelliccia A et al., Eur Heart J 2021) traz, para regurgitação aórtica grave assintomática em esporte recreativo/lazer, a recomendação de esportes recreativos de intensidade leve e moderada com ventrículo esquerdo leve a moderadamente dilatado, FE > 50% e teste de esforço normal (Classe IIb, Nível C) — exatamente o perfil deste paciente. A diretriz contraindica (Classe III) exercício recreativo de intensidade moderada ou alta se a FE cair a ≤50% e/ou houver arritmia induzida por esforço, mas isso não está presente neste caso. Não é contraindicação absoluta a qualquer atividade (a FE preservada, a dilatação apenas moderada e o teste de esforço normal mudam a recomendação), nem liberação irrestrita para esporte competitivo de qualquer intensidade — a decisão esportiva depende de gravidade, dimensões do VE, função ventricular e resposta ao esforço, não apenas da presença ou ausência de sintomas.",
+    "source_refs": [
+      "Pelliccia A, Sharma S, Gati S, et al; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+      "Corrigendum to: 2020 ESC Guidelines on Sports Cardiology and Exercise in Patients with Cardiovascular Disease. Eur Heart J. 2021;42(5):548-549. PMID: 33532850. DOI: 10.1093/eurheartj/ehaa835."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fisiculturista-cardiomiopatia-esteroides-anabolizantes-investigacao",
+    "titulo": "Fisiculturista com queda de fração de ejeção após anos de esteroides anabolizantes",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 32 anos, fisiculturista competitivo, uso confirmado de esteroides anabolizantes androgênicos por mais de 5 anos, procura avaliação cardiológica por queixa inespecífica de cansaço aos esforços. Fração de ejeção reduzida ao ecocardiograma, sem doença coronariana conhecida, sem outra causa evidente identificada até o momento.",
+    "pergunta": "Com base na coorte nacional dinamarquesa de 2025, qual associação mais relevante deve orientar a investigação deste paciente?",
+    "opcoes": [
+      "Esteroides anabolizantes não têm associação estabelecida com cardiomiopatia — a causa deve ser buscada exclusivamente fora do uso de AAS",
+      "A coorte dinamarquesa (1.189 usuários de AAS sancionados versus 59.450 controles, seguimento médio de 11 anos) encontrou associação particularmente forte entre uso de AAS e cardiomiopatia (aHR 8,90; IC95% 4,99–15,88), além de risco aumentado de infarto, revascularização, tromboembolismo, arritmias e insuficiência cardíaca — o uso de AAS deve ser tratado como fator de risco cardiovascular clinicamente relevante e investigado ativamente neste quadro",
+      "Como o estudo é observacional, ele não deve influenciar em nada a investigação clínica deste paciente",
+      "A ausência de doença coronariana já exclui qualquer relação causal entre o uso de AAS e a disfunção ventricular encontrada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Windfeld-Mathiasen e colaboradores (Circulation, 2025) publicaram coorte baseada em registros nacionais dinamarqueses com 1.189 homens sancionados por uso de AAS em programa antidoping, pareados com 59.450 controles da população geral, seguimento médio de aproximadamente 11 anos. Comparados aos controles, os usuários de AAS apresentaram risco muito maior de cardiomiopatia (aHR 8,90; IC95% 4,99–15,88) — o achado mais marcante do estudo — além de infarto agudo do miocárdio (aHR 3,00), PCI ou CRM (aHR 2,95), tromboembolismo venoso (aHR 2,42), arritmias (aHR 2,26) e insuficiência cardíaca (aHR 3,63). O estudo é observacional e não prova causalidade absoluta, mas a magnitude e consistência dos sinais, especialmente para cardiomiopatia, tornam a exposição a AAS clinicamente relevante e devem motivar investigação ativa neste paciente — incluindo ecocardiograma com strain, RMC quando houver suspeita de fibrose, e reconhecimento de que a ausência de sintomas ou capacidade física preservada não excluem cardiotoxicidade relacionada a AAS.",
+    "source_refs": [
+      "Windfeld-Mathiasen J et al. Cardiovascular Disease in Anabolic Androgenic Steroid Users. Circulation. 2025. PMID 39945117. DOI 10.1161/CIRCULATIONAHA.124.071117.",
+      "Illicit Anabolic Steroid Use and Cardiovascular Status in Men and Women. 2025. PMID 40880090.",
+      "Cavalcante DN et al. Anabolic-androgenic steroids on cardiac structure and function in resistance-trained athletes: systematic review and meta-analysis. Int J Cardiol. 2026. PMID 40945618. DOI 10.1016/j.ijcard.2025.133896.",
+      "Baggish AL et al. Cardiovascular Toxicity of Illicit Anabolic-Androgenic Steroid Use. Circulation. 2017. PMID 28533317."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "extrassistoles-ventriculares-frequentes-corredor-fibrose-ventoux",
+    "titulo": "Extrassístoles ventriculares frequentes em corredor veterano: quando pedir ressonância?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 55 anos, corredor de endurance veterano há 25 anos, assintomático, Holter de 24h mostra extrassístoles ventriculares frequentes de morfologia única, sem pares, sem salvas, sem TV não sustentada, com supressão completa durante o pico de esforço no teste ergométrico.",
+    "pergunta": "Diante desse padrão, e à luz do estudo VENTOUX (2025), qual é a afirmação mais correta?",
+    "opcoes": [
+      "A quantidade elevada de extrassístoles, isoladamente, já basta para classificar o achado como de alto risco e indicar afastamento do esporte",
+      "Este conjunto de características (morfologia única, baixa complexidade, ausência de TV não sustentada, supressão ao esforço, ausência de sintomas) é compatível com ectopia idiopática de baixo risco — mas o estudo VENTOUX mostrou que fibrose miocárdica foi mais frequente em atletas veteranos de endurance que desenvolveram arritmia ventricular durante o seguimento do que naqueles sem arritmia, reforçando que fibrose e arritmia devem ser interpretadas em conjunto nesse grupo específico, o que pode justificar avaliação adicional dirigida",
+      "Como a extrassístole desaparece ao esforço, isso exclui definitivamente qualquer necessidade de investigação, independentemente da história de exposição a décadas de endurance",
+      "Holter é exame binário: número alto de extrassístoles sempre indica doença, número baixo sempre indica benignidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A quantidade absoluta de extrassístoles ventriculares não deve ser usada isoladamente como marcador de risco — morfologia, complexidade, comportamento ao esforço e substrato estrutural importam mais que a contagem. Neste caso, morfologia única, baixa complexidade, ausência de TV não sustentada e supressão ao esforço são achados que favorecem ectopia idiopática de baixo risco. Ainda assim, o estudo prospectivo VENTOUX (Javed W et al., 2025), que acompanhou 106 atletas masculinos veteranos de endurance assintomáticos com RMC e loop recorder implantável, mostrou que fibrose miocárdica foi mais frequente nos atletas que desenvolveram arritmia ventricular durante o seguimento do que naqueles sem arritmia — reforçando que, especialmente em atletas veteranos com grande exposição cumulativa a endurance (como este corredor de 25 anos), fibrose e arritmia devem ser interpretadas em conjunto, o que pode justificar RMC dirigida mesmo diante de um Holter aparentemente tranquilizador. Essa evidência é observacional, em grupo altamente selecionado, e não deve ser extrapolada para atletas jovens, mulheres ou esportes não endurance — mas não autoriza tratar o Holter como exame puramente binário.",
+    "source_refs": [
+      "Lampert R, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. PMID 38763377. DOI 10.1016/j.hrthm.2024.05.018.",
+      "Javed W, et al. Ventricular Arrhythmia and Cardiac Fibrosis in Endurance Experienced Athletes (VENTOUX). Circ Cardiovasc Imaging. 2025. PMID 40675176.",
+      "The timing and relationship of ventricular arrhythmia with exercise patterns in veteran male endurance athletes. 2026. PMID 41520681."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "golpe-de-calor-maratonista-resfriamento-antes-transporte",
+    "titulo": "Maratonista colapsa com hipertermia: resfriar ou transportar primeiro?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 38 anos, corre maratona em dia de calor intenso, colapsa nos últimos quilômetros com confusão mental e desorientação. Equipe médica de plantão mede temperatura retal de 41,2°C. Há um veículo de suporte avançado disponível a poucos metros.",
+    "pergunta": "Qual conduta imediata está mais alinhada ao consenso do ACSM (2023) e ao documento do Comitê Olímpico Internacional sobre manejo pré-hospitalar de golpe de calor por esforço?",
+    "opcoes": [
+      "Transportar imediatamente para o hospital mais próximo antes de iniciar qualquer medida de resfriamento, já que o transporte rápido é sempre prioridade máxima",
+      "Aguardar confirmação de causa cardíaca por ECG antes de iniciar qualquer resfriamento",
+      "Iniciar resfriamento corporal total rápido no local imediatamente, com o princípio 'resfriar primeiro, transportar depois' — o transporte para cuidado avançado deve ocorrer depois do resfriamento inicial, não antes, e o objetivo é reduzir a temperatura retal para abaixo de 39°C ainda no local",
+      "Não é necessário nenhum resfriamento ativo, já que o quadro tende a resolver espontaneamente com repouso"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O documento do grupo de trabalho de impacto climático adverso do Comitê Olímpico Internacional (Hosokawa Y et al., Br J Sports Med 2021) estabelece que o atleta com suspeita de golpe de calor por esforço deve ser resfriado no local até a temperatura retal ficar abaixo de 39°C, e que o transporte para cuidado avançado deve ocorrer depois do tratamento no local, não antes — 'cool first, transport second' (resfriar primeiro, transportar depois) é o princípio organizador, não uma sugestão isolada. O consenso de especialistas do ACSM (Roberts WO et al., 2023) reforça essa mesma lógica de 'cadeia de sobrevivência' análoga a outras emergências tempo-dependentes: identificar precocemente, interromper a atividade e iniciar resfriamento corporal total rápido são as medidas essenciais para sobrevivência, e o desfecho está relacionado à duração da hipertermia grave — quanto mais tempo em temperatura central elevada, pior o prognóstico esperado. Atrasar o resfriamento para transportar, ou para aguardar ECG, contraria diretamente esse princípio; e o quadro não deve ser tratado como autolimitado, já que a mortalidade descrita do golpe de calor por esforço gira em torno de 27%.",
+    "source_refs": [
+      "Roberts WO, Armstrong LE, Sawka MN, Yeargin SW, Heled Y, O'Connor FG. ACSM Expert Consensus Statement on Exertional Heat Illness: Recognition, Management, and Return to Activity. Curr Sports Med Rep. 2023;22(4):134-149. PMID: 37036463. DOI: 10.1249/JSR.0000000000001058.",
+      "Hosokawa Y, Racinais S, Akama T, Zideman D, Budgett R, Casa DJ, Bermon S, Grundstein AJ, Pitsiladis YP, Schobersberger W, Yamasawa F. Prehospital management of exertional heat stroke at sports competitions: International Olympic Committee Adverse Weather Impact Expert Working Group for the Olympic Games Tokyo 2020. Br J Sports Med. 2021;55(24):1405-1410. PMID: 33888465. PMCID: PMC8639927. DOI: 10.1136/bjsports-2020-103854.",
+      "Zhuang Y, Zhuang XH, Zhang XY, Wang DC, Yang Y. Mechanisms and Intervention Strategies for Heat Stroke-Associated Myocardial Dysfunction: A Narrative Review. West J Emerg Med. 2026;27(3):526-533. PMID: 42258868. PMCID: PMC13246188. DOI: 10.5811/westjem.53045."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-atleta-tiro-esportivo-escolha-anti-hipertensivo",
+    "titulo": "Hipertensão no atirador esportivo: qual anti-hipertensivo escolher sem violar a WADA?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 26 anos, atleta competitivo de tiro esportivo, diagnosticado com hipertensão arterial grau 1 (PA de consultório confirmada por MAPA), sem lesão de órgão-alvo. Necessita iniciar tratamento farmacológico.",
+    "pergunta": "Qual classe de anti-hipertensivo é a mais adequada para iniciar neste atleta, considerando a modalidade praticada e as restrições antidoping?",
+    "opcoes": [
+      "Diurético tiazídico, por ser a primeira linha mais barata e eficaz na população geral",
+      "Betabloqueador, já que reduz a frequência cardíaca e o tremor, otimizando o desempenho no tiro esportivo",
+      "IECA ou bloqueador do receptor de angiotensina (BRA), ou bloqueador de canal de cálcio — classes preferenciais porque não constam nas listas antidoping e não prejudicam a capacidade de exercício; diuréticos são banidos em todo esporte a qualquer momento (mascaram uso de substâncias dopantes), e betabloqueadores são proibidos pela WADA especificamente em modalidades que dependem de controle de tremor, como tiro esportivo e tiro com arco",
+      "Qualquer classe de anti-hipertensivo pode ser usada livremente, já que a lista antidoping da WADA não se aplica a medicamentos prescritos por indicação clínica legítima"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Segundo a posição da European Association of Preventive Cardiology (EAPC, 2019), IECA e BRA não constam nas listas antidoping e não prejudicam a capacidade de exercício, sendo preferenciais junto com bloqueadores de canal de cálcio. Diuréticos são banidos em todo esporte e em todas as modalidades, a qualquer momento (dentro e fora de competição), porque podem mascarar o uso de substâncias dopantes — essa restrição vale mesmo quando o diurético tem indicação clínica legítima. Betabloqueadores são raramente recomendados como primeira escolha por reduzirem o desempenho aeróbico e por risco de bradicardia excessiva, e classes específicas de betabloqueadores são especificamente proibidas pela WADA em modalidades que dependem de controle de tremor, como tiro esportivo e tiro com arco — exatamente a modalidade deste atleta, tornando o betabloqueador contraindicado aqui por regra antidoping, não apenas por efeito fisiológico. A lista antidoping da WADA é atualizada anualmente e deve ser verificada antes de prescrever, com solicitação de Autorização de Uso Terapêutico (TUE) quando aplicável — não existe isenção geral para medicamento com indicação clínica legítima.",
+    "source_refs": [
+      "Kim JH et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the AHA/ACC. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.12.025.",
+      "Niebauer J, Börjesson M, Carré F, et al. Brief recommendations for participation in competitive sports of athletes with arterial hypertension. Eur J Prev Cardiol. 2019;26(14):1549-1555. PMID: 31122039. DOI: 10.1177/2047487319852807.",
+      "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. PMID: 32860412. DOI: 10.1093/eurheartj/ehaa605.",
+      "Black HR, Sica D, Ferdinand K, White WB. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 6: Hypertension: A Scientific Statement from the American Heart Association and the American College of Cardiology. Circulation. 2015;132(22):e298-302. PMID: 26621647. DOI: 10.1161/CIR.0000000000000242."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiaca-maratona-incidencia-letalidade-organizacao-prova",
+    "titulo": "Vale a pena investir em cobertura médica ao longo de toda a maratona?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Organizadores de uma nova maratona de grande porte discutem o quanto investir em cobertura médica ao longo do percurso, argumentando que 'parada cardíaca em corrida é rara o suficiente para não justificar grande investimento'.",
+    "pergunta": "Com base no Race Associated Cardiac Event Registry (EUA, 2010-2023), qual argumento melhor contrapõe essa posição?",
+    "opcoes": [
+      "A incidência de parada cardíaca é de fato baixa (0,54 por 100.000 participantes, entre 29.311.597 concluintes) e por isso a cobertura médica extensa realmente não se justifica",
+      "Embora a incidência absoluta seja baixa e estável ao longo do tempo, a letalidade entre os casos de parada caiu de 71% (2000-2009) para 34% (2010-2023) — mostrando que a sobrevivência é modificável pela organização médica, e que investir em cobertura ao longo de todo o percurso (não só largada/chegada) é o que efetivamente muda esse desfecho, já que grandes contingentes tornam o número absoluto de eventos relevante mesmo com incidência baixa",
+      "Ritmo de prova permite identificar com segurança quais corredores estão em maior risco de parada, então a cobertura pode ser concentrada apenas nos corredores mais lentos",
+      "A maioria dos casos ocorre em mulheres jovens, então a cobertura deve ser direcionada especificamente para esse grupo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Race Associated Cardiac Event Registry, analisando maratonas e meias-maratonas nos EUA entre 2010 e 2023 (29.311.597 concluintes, 176 paradas cardíacas identificadas), mostrou incidência de 0,54 por 100.000 participantes — praticamente igual à década anterior. Porém a letalidade entre os casos de parada caiu de 71% (2000-2009) para 34% (2010-2023), e a incidência de morte cardíaca caiu de 0,39 para 0,20 por 100.000, compatível com avanços em reconhecimento, RCP, disponibilidade de DEA e resposta médica organizada — ou seja, a sobrevivência é modificável, mesmo sem eliminar a incidência da parada. Dados de maratonas japonesas (4,53 milhões de largadas, 74 casos) mostraram que o ritmo de prova não diferenciava claramente quem sofreria parada, então concentrar cobertura só nos mais lentos não é estratégia válida de triagem de risco. A maior parte dos casos ocorre em homens, não mulheres jovens. Um DEA na largada ou chegada não cobre adequadamente um percurso de dezenas de quilômetros — o plano de emergência deve distribuir equipes e pontos de DEA ao longo de todo o percurso, com reforço no trecho final, onde mais da metade dos eventos costuma se concentrar.",
+    "source_refs": [
+      "Kim JH et al. Cardiac Arrest During Long-Distance Running Races. JAMA. 2025. PMID 40159341. DOI 10.1001/jama.2025.3026.",
+      "Chocron R et al. Characteristics of sudden cardiac arrest during endurance racing: a decade of the Paris registry. Europace. 2026. PMID 41662626. DOI 10.1093/europace/euaf313.",
+      "Kato J et al. Marathon running pace immediately before sudden cardiac arrest. Am J Prev Cardiol. 2026. PMID 41567598. DOI 10.1016/j.ajpc.2025.101390.",
+      "Sudden cardiac arrest during marathons among young, middle-aged, and senior runners. 2024. PMID 39437933."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reds-corredora-bradicardia-amenorreia-baixa-disponibilidade-energetica",
+    "titulo": "Corredora com amenorreia, bradicardia e fraturas por estresse: é RED-S?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 21 anos, corredora universitária de longa distância, procura atendimento por queda de performance e fadiga persistente. Relata amenorreia há 6 meses e duas fraturas por estresse no último ano. Ao exame, bradicardia de 42 bpm e hipotensão leve. ECG sem alteração estrutural relevante. Ela relata alto volume de treino, mas nega intencionalmente restringir a alimentação.",
+    "pergunta": "Qual é a interpretação mais adequada deste quadro, segundo o consenso do IOC 2023 sobre RED-S?",
+    "opcoes": [
+      "Como ela nega restrição alimentar intencional, transtorno alimentar e RED-S podem ser descartados, e a investigação deve se limitar a causas cardíacas isoladas",
+      "O conjunto de achados (bradicardia desproporcional, amenorreia, fraturas por estresse recorrentes, queda de performance) é compatível com RED-S — a baixa disponibilidade energética pode resultar de incompatibilidade não intencional entre ingestão e o gasto energético elevado do treinamento, não exigindo necessariamente transtorno alimentar; a avaliação deve ser multidisciplinar, sem excluir concomitantemente uma avaliação cardíaca completa",
+      "RED-S é diagnóstico exclusivo de mulheres com transtorno alimentar confirmado, então sem esse diagnóstico psiquiátrico prévio a hipótese não deve ser considerada",
+      "A bradicardia isolada já basta para diagnosticar doença do nó sinusal e indicar marcapasso, sem necessidade de avaliar os demais achados sistêmicos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso do IOC 2023 sobre RED-S (Relative Energy Deficiency in Sport) reconhece que a baixa disponibilidade energética pode resultar de restrição intencional, transtorno alimentar, manipulação de composição corporal ou simplesmente incompatibilidade entre ingestão e o gasto energético elevado do treinamento — a abordagem não deve presumir psicopatologia nem tratar RED-S apenas como questão comportamental. O padrão clínico deste caso — bradicardia desproporcional ao contexto, hipotensão, amenorreia, fraturas por estresse recorrentes e queda sustentada de performance — é exatamente o tipo de convergência entre múltiplos domínios (cardiovascular, reprodutivo, ósseo) que aumenta a plausibilidade de RED-S, reconhecida em atletas de ambos os sexos, não apenas mulheres com transtorno alimentar diagnosticado. O núcleo do tratamento é restaurar disponibilidade energética adequada, com equipe multidisciplinar (medicina esportiva, nutrição, e quando necessário saúde mental, endocrinologia e cardiologia) — mas isso não dispensa investigação cardíaca dirigida (ECG, eventualmente monitorização de ritmo, avaliação de causas de bradicardia), porque não existe fármaco cardiovascular que trate a causa do RED-S, e a bradicardia de atleta só deve ser interpretada como fisiológica quando integrada aos demais achados, não isoladamente.",
+    "source_refs": [
+      "Mountjoy M et al. Br J Sports Med. 2023;57:1073-1097. DOI: 10.1136/bjsports-2023-106994.",
+      "Holtzman B et al. Br J Sports Med. 2025;59:48-55. PMID: 39461735. DOI: 10.1136/bjsports-2024-109165.",
+      "Heikura IA et al. Br J Sports Med. 2025;59:24-35. PMID: 39164063. DOI: 10.1136/bjsports-2024-108121."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "resposta-pressorica-exagerada-ciclista-elite-interpretacao-carga",
+    "titulo": "Pico pressórico de 240 mmHg em ciclista de elite: sempre patológico?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "avançado",
+    "enunciado": "Homem, 29 anos, ciclista de elite, realiza teste de esforço máximo em cicloergômetro atingindo carga muito elevada (>18 METs). A pressão arterial sistólica de pico ultrapassa 240 mmHg, valor que excederia limiares fixos usados na população geral para definir resposta pressórica exagerada. PA de repouso é normal, sem hipertensão mascarada ao MAPA.",
+    "pergunta": "Qual é a interpretação mais adequada deste achado, segundo a literatura de 2026 sobre resposta pressórica ao exercício em atletas de elite?",
+    "opcoes": [
+      "O valor absoluto de PAS de pico já basta para diagnosticar resposta pressórica exagerada patológica, independentemente da carga atingida",
+      "Estudo de 2026 com 474 atletas masculinos de elite mostrou que a relação entre PAS e MET atingido varia conforme o estágio de esforço, e que o limiar de 18 mmHg/MET sugerido para população geral pode não descrever adequadamente o padrão fisiológico de atletas de elite — a interpretação deve considerar a resposta de PA em relação à aptidão e à carga atingida, não apenas o pico absoluto, especialmente quando a PA de repouso é normal e não há hipertensão mascarada",
+      "Como ele é atleta de elite, nenhum grau de elevação pressórica ao esforço deveria sequer ser registrado ou considerado",
+      "O achado, isoladamente, já prediz com certeza hipertensão futura, independente do nível de condicionamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Limiar fixo de pressão sistólica máxima pode superestimar anormalidade em atletas que alcançam cargas de trabalho muito superiores às da população geral. O estudo de 2026 com 474 atletas masculinos de elite avaliados em teste máximo de ciclismo mostrou que a relação entre PAS e MET atingido varia conforme o estágio de esforço, e os autores alertaram que o valor de 18 mmHg/MET, sugerido para população geral, pode não descrever adequadamente o padrão fisiológico de atletas de elite — propondo limites de referência específicos para esse grupo. Neste ciclista, a PA de repouso normal e a ausência de hipertensão mascarada ao MAPA são achados tranquilizadores adicionais. A associação entre resposta pressórica exagerada e hipertensão futura, descrita na população geral e em adultos jovens normotensos, não deve ser extrapolada mecanicamente para atletas altamente treinados, porque condicionamento e carga máxima modificam a fisiologia do teste — a avaliação correta pondera PA em relação à aptidão e à carga atingida, não apenas o valor de pico absoluto.",
+    "source_refs": [
+      "Most A, et al. Association of central blood pressure with an exaggerated blood pressure response to exercise among elite athletes. Eur J Appl Physiol. 2024. PMID: 37987923. DOI: 10.1007/s00421-023-05353-7.",
+      "Exercise blood pressure relative to fitness in male elite athletes: stage-specific response patterns and athlete-specific reference limits. Eur J Prev Cardiol. 2026. PMID: 42319895. DOI: 10.1093/eurjpc/zwag322.",
+      "Kunimatsu N, et al. Exaggerated Blood Pressure Response to Exercise Is a Risk of Future Hypertension Even in Healthy, Normotensive Young Individuals. J Clin Med. 2024. PMID: 39408033."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "troponina-elevada-pos-maratona-corredor-nao-elite-nao-e-iam",
+    "titulo": "Troponina positiva em corredor amador após a primeira maratona: é infarto?",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 41 anos, corredor não elite, completa sua primeira maratona e procura pronto atendimento por precaução, sem dor torácica, sem dispneia, sem síncope. ECG sem alterações isquêmicas. Troponina I de alta sensibilidade colhida 4 horas após a prova está acima do percentil 99.",
+    "pergunta": "Qual é a interpretação mais adequada deste resultado, segundo a evidência mais recente sobre troponina pós-exercício em atletas?",
+    "opcoes": [
+      "Troponina acima do percentil 99 após qualquer esforço define infarto agudo do miocárdio e exige cateterismo cardíaco imediato, independentemente do quadro clínico",
+      "Elevação de troponina acima do percentil 99 após exercício intenso não é rara — meta-análise de 2026 (129 estudos, 7.289 atletas) encontrou prevalência de 36% globalmente, com pico de até 52% entre 3 e 6 horas em modalidades de endurance como corrida; na ausência de dor torácica, dispneia, síncope, alterações isquêmicas no ECG ou outros sinais de alarme, essa elevação isolada não deve ser automaticamente equiparada a síndrome coronariana aguda",
+      "Como o exame foi colhido após exercício, o resultado deve ser descartado sem qualquer registro ou acompanhamento",
+      "A dosagem de troponina de rotina após toda corrida é estratégia validada de rastreamento cardiovascular em atletas assintomáticos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise de 2026 (Stekelenburg JO et al., Eur J Prev Cardiol) reuniu 129 estudos e 7.289 atletas e encontrou que 36% (IC95% 31-42%) apresentaram troponina cardíaca acima do limite superior de referência após exercício, com prevalência maior em ensaios de alta sensibilidade (58% vs. 26%) e em esportes de endurance como corrida (41%), com pico de 52% entre 3 e 6 horas após o esforço — praticamente coincidente com o momento da coleta deste paciente (4 horas pós-prova). Estudo com corredores não elite da Maratona de Pequim encontrou mais de 72% com hs-cTnI acima do percentil 99, com retorno ao basal em duas semanas. A liberação de troponina pós-exercício tem composição molecular diferente da observada no infarto tipo 1 (menor proporção de formas longas/intactas da molécula), reforçando mecanismo fisiopatológico distinto — mas isso é informação fisiopatológica, não um teste clínico que descarte infarto isoladamente. Na ausência de sintomas, ECG normal e sem outros sinais de alarme, a elevação isolada não deve ser automaticamente equiparada a SCA nem justificar cateterismo imediato; ao mesmo tempo, troponina não tem papel estabelecido como exame de rastreamento de rotina em atletas assintomáticos, e a decisão de investigar deve continuar guiada por sintomas, cinética seriada e contexto clínico.",
+    "source_refs": [
+      "Dong X, et al. The association between marathon running and high-sensitivity cardiac troponin: A systematic review and meta-analysis. J Back Musculoskelet Rehabil. 2023;36:1023-1031. PMID: 37248881. DOI: 10.3233/BMR-220352.",
+      "Wang X, et al. Exercise-induced cardiac troponin elevations and cardiac ventricular dysfunction assessed by tissue Doppler echocardiography and speckle tracking among non-elite runners in Beijing marathon. J Sci Med Sport. 2024;27:508-514. PMID: 38697867. DOI: 10.1016/j.jsams.2024.04.005.",
+      "Airaksinen KEJ, et al. Composition of cardiac troponin release differs after marathon running and myocardial infarction. Open Heart. 2024. PMID: 39551608. NCT06000930.",
+      "Janssen SLJE, et al. Exercise-induced cardiac troponin release in athletes with versus without coronary atherosclerosis. Am J Physiol Heart Circ Physiol. 2024;326:H1045-H1052. PMID: 38363583. DOI: 10.1152/ajpheart.00021.2024.",
+      "Stekelenburg JO, Berge K, Janssen SLJE, Omland T, Myhre PL, Thompson PD, Aengevaeren VL, Eijsvogels TMH. Prevalence and Predictors of Cardiac Troponin Elevations Following Exercise: a Systematic Review, Meta-analysis, and Meta-regression. Eur J Prev Cardiol. 2026 Apr 15:zwag218. PMID: 41985028. DOI: 10.1093/eurjpc/zwag218."
     ],
     "review_status": "revisado"
   }

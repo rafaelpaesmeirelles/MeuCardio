@@ -67,7 +67,10 @@ export default function TudoSobreEsteTema({ tema, medicamentoSlug, excluirTipo, 
     let ativo = true;
     const params = new URLSearchParams({ tema: t });
     if (excluirTipo) params.set("excluir_tipo", excluirTipo);
-    if (excluirSlug) params.set("excluir_slug", excluirSlug);
+    if (excluirSlug) {
+      params.set("excluir_slug", excluirSlug);
+      params.set("assunto", excluirSlug);
+    }
     const endpoint = medicamentoSlug
       ? `/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`
       : `/relacionados?${params.toString()}`;
