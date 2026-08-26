@@ -50160,5 +50160,100 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "gravidez-avaliacao-de-risco-e-aconselhamento-pre-gestacional",
+    "statement": "É recomendada a avaliação de risco e o aconselhamento pré-gestacional em todas as mulheres com doença cardiovascular ou aórtica congênita ou adquirida, conhecida ou suspeita.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy",
+    "reference": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. DOI: 10.1093/eurheartj/ehy340. PMID: 30165544.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "gravidez",
+      "aconselhamento pré-concepção",
+      "avaliação de risco",
+      "comunicação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gravidez-aconselhamento-genetico-em-cardiopatia-congenita-e-canalopatias",
+    "statement": "O aconselhamento genético deve ser considerado em mulheres com cardiopatia congênita, arritmia congênita, miocardiopatias, doença aórtica ou malformações genéticas associadas a doença cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy",
+    "reference": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. DOI: 10.1093/eurheartj/ehy340. PMID: 30165544.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "gravidez",
+      "aconselhamento genético",
+      "cardiopatia congênita",
+      "comunicação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gravidez-aconselhamento-sobre-risco-de-diseccao-aortica",
+    "statement": "É recomendado que mulheres com doença aórtica recebam aconselhamento sobre o risco de dissecção aórtica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy",
+    "reference": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. DOI: 10.1093/eurheartj/ehy340. PMID: 30165544.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "gravidez",
+      "doença aórtica",
+      "comunicação de risco",
+      "dissecção aórtica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gravidez-aconselhamento-sobre-risco-de-recorrencia-em-miocardiopatia-periparto",
+    "statement": "Em pacientes com miocardiopatia periparto e miocardiopatia dilatada, o aconselhamento sobre o risco de recorrência em gestação subsequente é recomendado em todos os casos, mesmo após recuperação da função do ventrículo esquerdo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy",
+    "reference": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. DOI: 10.1093/eurheartj/ehy340. PMID: 30165544.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "gravidez",
+      "miocardiopatia periparto",
+      "comunicação de risco",
+      "aconselhamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gravidez-informar-mulheres-com-icfer-sobre-risco-de-deterioracao",
+    "statement": "É recomendado informar as mulheres com insuficiência cardíaca com fração de ejeção reduzida sobre o risco de deterioração da condição durante a gestação e o período periparto.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy",
+    "reference": "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. DOI: 10.1093/eurheartj/ehy340. PMID: 30165544.",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "gravidez",
+      "insuficiência cardíaca",
+      "comunicação de risco",
+      "educação do paciente"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
