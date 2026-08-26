@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
@@ -35,8 +34,6 @@ type DiretrizBiblioteca = {
   slug: string;
   title: string;
   theme: string;
-  summary: string | null;
-  review_status: string;
 };
 
 function dataBr(valor: string) {
@@ -168,16 +165,15 @@ export default function Diretrizes() {
         {diretrizes.length === 0 ? (
           <ClinicalEmpty title="Nenhuma guideline revisada publicada" description="As sínteses aparecem aqui depois da revisão clínica e da publicação." />
         ) : (
-          <div className="grade grade--2">
+          <div className="cc-context-grid">
             {diretrizes.map((item) => (
-              <Link key={item.slug} to={`/biblioteca/${item.slug}`} className="cartao" style={{ color: "inherit" }}>
-                <small>{item.theme}</small>
-                <strong>{item.title}</strong>
-                {item.summary && <p>{item.summary}</p>}
-                <span className={`selo ${item.review_status === "revisado" ? "selo--revisado" : "selo--pendente"}`}>
-                  {item.review_status === "revisado" ? "Revisada" : "Revisão pendente"}
-                </span>
-              </Link>
+              <ClinicalContextLink
+                key={item.slug}
+                to={`/biblioteca/${item.slug}`}
+                icon="diretriz"
+                title={item.title}
+                detail={item.theme}
+              />
             ))}
           </div>
         )}
