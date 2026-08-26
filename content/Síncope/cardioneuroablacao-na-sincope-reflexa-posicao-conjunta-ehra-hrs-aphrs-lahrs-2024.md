@@ -2,7 +2,7 @@
 title: "Cardioneuroablação na Síncope Reflexa: Seleção de Paciente e o que a Evidência Ainda Não Sustenta (EHRA/HRS/APHRS/LAHRS 2024)"
 slug: cardioneuroablacao-na-sincope-reflexa-posicao-conjunta-ehra-hrs-aphrs-lahrs-2024
 theme: "Síncope"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Aksu T, Brignole M, Calo L, Debruyne P, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS) and the Latin American Heart Rhythm Society (LAHRS). Europace. 2024;26(8):euae206. DOI: 10.1093/europace/euae206. PMID: 39082698 — texto integral acessado em acesso aberto (PMC11350289), licença CC BY, e conferido em 31/07/2026; a seção 'Writing committee position' é a base das conclusões deste documento", "Vojnika J, Patel D, Enriquiez A, et al. Physiological Markers of Effective Autonomic Denervation Are Associated With Outcomes After Cardioneuroablation for Vasovagal Syncope. JACC Clin Electrophysiol. 2026 Jun 23. DOI: 10.1016/j.jacep.2026.05.021. PMID: 42360261 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
 ---

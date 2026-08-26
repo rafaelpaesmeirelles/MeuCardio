@@ -3,81 +3,79 @@ title: "Dor torácica aguda com uso recente confirmado ou suspeito de cocaína"
 slug: fluxograma-dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina
 theme: "Saúde mental e cardiologia"
 kind: fluxograma
-summary: "Árvore de decisão para dor torácica aguda com uso recente (confirmado ou suspeito) de cocaína, sobretudo na primeira hora após o uso: avaliação padrão de SCA, e a diferenciação entre infarto por trombose coronariana verdadeira e disfunção miocárdica induzida por estimulante, potencialmente reversível."
+summary: "Árvore de decisão para não confundir uso recente de cocaína com intoxicação aguda: investigar e tratar a síndrome coronariana pelo fluxo habitual, acrescentando benzodiazepínico e vasodilatador quando há euforia, taquicardia ou hipertensão e restringindo o betabloqueador somente nesse cenário agudo."
 review_status: revisado
-source_refs: ["Mittleman MA, Mintzer D, Maclure M, Tofler GH, Sherwood JB, Muller JE. Triggering of myocardial infarction by cocaine. Circulation. 1999;99(21):2737-2741. PMID: 10351966 — estudo caso-cruzado do Determinants of Myocardial Infarction Onset Study, 3.946 pacientes pós-IAM entrevistados sobre uso de cocaína na hora anterior ao início dos sintomas", "McCord J, Jneid H, Hollander JE, de Lemos JA, Cercek B, Hsue P, Gibler WB, Ohman EM, Drew B, Philippides G, Newby LK; American Heart Association Acute Cardiac Care Committee of the Council on Clinical Cardiology. Management of cocaine-associated chest pain and myocardial infarction: a scientific statement from the American Heart Association. Circulation. 2008;117(14):1897-1907. PMID: 18347214 — declaração científica dedicada ao tema; existência e citação confirmadas, mas texto integral bloqueado por paywall em ahajournals.org, sem versão em PMC — conteúdo de manejo tratado como não conferido nesta sessão, ver marcação abaixo", "Schürer S, Klingel K, Sandri M, Majunke N, Besler C, Kandolf R, Lurz P, Luck M, Hertel P, Schuler G, Linke A, Mangner N. Clinical Characteristics, Histopathological Features, and Clinical Outcome of Methamphetamine-Associated Cardiomyopathy. JACC Heart Fail. 2017;5(6):435-445. PMID: 28571597 — coorte de 30 pacientes com biópsia endomiocárdica e desfecho comparado entre abstinência e uso continuado", "Sliman S, Waalen J, Shaw D. Methamphetamine-Associated Congestive Heart Failure: Increasing Prevalence and Relationship of Clinical Outcomes to Continued Use or Abstinence. Cardiovasc Toxicol. 2016;16(4):381-389. PMID: 26661075 — coorte independente confirmando o mesmo padrão de reversibilidade condicionada à abstinência"]
+source_refs: ["Mittleman MA, Mintzer D, Maclure M, Tofler GH, Sherwood JB, Muller JE. Triggering of myocardial infarction by cocaine. Circulation. 1999;99(21):2737-2741. PMID: 10351966 — estudo caso-cruzado em 3.946 pacientes pós-IAM; risco de início do infarto 23,7 vezes maior na primeira hora após o uso", "McCord J, Jneid H, Hollander JE, et al. Management of cocaine-associated chest pain and myocardial infarction: a scientific statement from the American Heart Association. Circulation. 2008;117(14):1897-1907. DOI: 10.1161/CIRCULATIONAHA.107.188950. PMID: 18347214 — declaração científica dedicada à apresentação aguda", "Amsterdam EA, Wenger NK, Brindis RG, et al. 2014 AHA/ACC Guideline for the Management of Patients With Non-ST-Elevation Acute Coronary Syndromes. J Am Coll Cardiol. 2014;64(24):e139-e228. DOI: 10.1016/j.jacc.2014.09.017. PMID: 25260718 — recomenda tratar a SCA associada a uso recente como as demais; a exceção é a presença de sinais de intoxicação aguda e o uso de betabloqueador sem terapia vasodilatadora coronariana", "Lo KB, Virk HUH, Lakhter V, et al. Clinical Outcomes After Treatment of Cocaine-Induced Chest Pain with Beta-Blockers: A Systematic Review and Meta-Analysis. Am J Med. 2019;132(4):505-509. DOI: 10.1016/j.amjmed.2018.11.041. PMID: 30562494 — cinco estudos observacionais, 1.447 pacientes; sem diferença significativa de infarto ou mortalidade, evidência insuficiente para revogar a cautela durante intoxicação aguda"]
+review_note: "Revisão de 26/08/2026: removido o marcador de verificação humana após confronto com a diretriz primária AHA/ACC 2014, a página educacional oficial do ACC que reproduz as recomendações específicas e a metanálise de Lo et al. A antiga proibição abrangente de betabloqueador foi corrigida: a recomendação Classe III (dano), nível C, refere-se a SCA com sinais de intoxicação aguda por cocaína/metanfetamina; uso recente sem intoxicação não deve retirar o paciente do tratamento habitual da SCA. O documento agora separa esse ponto do fluxograma farmacológico de vasoespasmo e não extrapola coortes de cardiomiopatia por metanfetamina para cocaína."
 ---
 
 # Dor torácica aguda com uso recente confirmado ou suspeito de cocaína
 
-A cocaína eleva o risco de início de infarto em **23,7 vezes** na hora seguinte
-ao uso, efeito abrupto e transitório que cai rapidamente depois dessa janela
-(Mittleman et al., 1999). A avaliação inicial segue o padrão de qualquer
-síndrome coronariana aguda, mas duas particularidades mudam a conduta: evitar
-betabloqueador isolado, e diferenciar infarto por trombose coronariana
-verdadeira de disfunção miocárdica induzida pelo estimulante — que pode ser
-reversível.
+A cocaína foi associada a risco **23,7 vezes maior de início de infarto na
+primeira hora** após o uso no estudo caso-cruzado de Mittleman et al. (1999).
+Esse dado aumenta a suspeita, mas não substitui ECG, troponina e estratificação
+clínica. A decisão que realmente muda o fluxo é distinguir **história recente de
+uso** de **intoxicação aguda em curso** — euforia, taquicardia e/ou hipertensão.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Dor torácica aguda em paciente com uso<br/>recente, confirmado ou suspeito, de cocaína<br/>— risco de infarto especialmente alto<br/>na 1ª hora após o uso"]
-  P1["ECG e troponina seriados,<br/>como em qualquer SCA.<br/>Evitar betabloqueador isolado<br/>na fase aguda"]
-  D1{"ECG e/ou troponina indicam<br/>lesão miocárdica aguda?"}
-  C1(["Sem evidência de lesão aguda:<br/>observação com reavaliação seriada<br/>de ECG e troponina. Manter suspeita<br/>pela janela de risco da 1ª hora"])
-  P2["Avaliar anatomia coronariana<br/>(angiografia/cateterismo)"]
-  D2{"Angiografia mostra lesão<br/>obstrutiva compatível com trombose?"}
-  C2(["Infarto por trombose coronariana<br/>confirmado: tratar como SCA padrão,<br/>com revascularização conforme indicado.<br/>Manter sem betabloqueador isolado"])
-  C3(["Suspeitar de cardiomiopatia induzida<br/>por estimulante (potencialmente reversível):<br/>tratar a disfunção miocárdica/IC,<br/>sem intervenção coronariana obrigatória.<br/>Cessação do uso é a medida mais<br/>associada à recuperação da função"])
+  R0["Dor torácica aguda e uso recente<br/>confirmado ou suspeito de cocaína"]
+  P1["ECG precoce, troponina seriada,<br/>monitorização e avaliação clínica<br/>como em qualquer suspeita de SCA"]
+  D1{"Há sinais de intoxicação aguda?<br/>Euforia, taquicardia e/ou hipertensão"}
+  P2["Tratar hiperatividade simpática:<br/>benzodiazepínico, isolado ou associado<br/>a nitroglicerina, conforme pressão e sintomas"]
+  C1["Não iniciar betabloqueador nessa fase<br/>sem terapia vasodilatadora coronariana;<br/>discutir qualquer exceção com especialista"]
+  P3["Uso recente sem intoxicação aguda:<br/>não suspender o cuidado padrão de SCA<br/>apenas por causa da exposição"]
+  D2{"ECG, troponina e evolução<br/>sustentam SCA ou isquemia persistente?"}
+  C2(["Sim: seguir estratégia de reperfusão ou<br/>invasiva e antitrombótica do protocolo de SCA,<br/>de acordo com ECG, risco e estabilidade"])
+  C3(["Não: manter observação e reavaliação seriada<br/>conforme risco; investigar vasoespasmo,<br/>aorta, embolia pulmonar, miocardite,<br/>Takotsubo e causas não cardíacas"])
 
-  R0 --> P1
-  P1 --> D1
-  D1 -->|"Não"| C1
-  D1 -->|"Sim"| P2
-  P2 --> D2
+  R0 --> P1 --> D1
+  D1 -->|"Sim"| P2 --> C1 --> D2
+  D1 -->|"Não"| P3 --> D2
   D2 -->|"Sim"| C2
-  D2 -->|"Não, mas com disfunção<br/>ventricular associada"| C3
+  D2 -->|"Não"| C3
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   class C1,C2,C3 conduta;
 ```
 
-## O que se repete em todo ramo, e por isso não está no diagrama
+## A regra do betabloqueador, sem generalização indevida
 
-**Reavaliação seriada de ECG e troponina** enquanto durar a dor ou a suspeita,
-independente do ramo em que o paciente estiver.
+A diretriz AHA/ACC 2014 recomenda que o paciente com SCA e história recente de
+cocaína ou metanfetamina seja tratado da mesma forma que o paciente sem essa
+exposição. A exceção é a presença de **sinais de intoxicação aguda**: nesse
+contexto, betabloqueador não deve ser administrado sem terapia vasodilatadora
+coronariana, pelo risco de potencializar espasmo (Classe III: dano, nível C).
+Benzodiazepínico, isolado ou com nitroglicerina, é opção razoável para controlar
+hipertensão e taquicardia nessa fase (Classe IIa, nível C).
 
-**Suporte geral de qualquer dor torácica aguda** — monitorização contínua,
-acesso venoso, oxigênio se houver hipoxemia — corre em paralelo, em qualquer
-ramo.
+Isso não equivale a proibição permanente. A metanálise de Lo et al. reuniu cinco
+estudos observacionais e 1.447 pacientes com dor torácica associada a cocaína e
+não encontrou diferença significativa de infarto (RR 1,08; IC 95% 0,61–1,91)
+ou mortalidade (RR 0,75; IC 95% 0,46–1,24) entre quem recebeu e quem não recebeu
+betabloqueador. A ausência de ensaios randomizados e a mistura de pacientes com
+e sem intoxicação ativa impedem usar esse resultado para revogar a cautela no
+ramo agudo; ele serve para impedir a extrapolação da contraindicação para todo
+uso passado, insuficiência cardíaca crônica ou alta hospitalar.
 
-**Perguntar diretamente sobre uso de substância** faz parte da anamnese em
-qualquer paciente jovem com dor torácica ou disfunção ventricular nova, mesmo
-sem fator de risco cardiovascular clássico — é informação que o paciente
-frequentemente não oferece espontaneamente.
+## Limites e segurança
 
-## Por que evitar betabloqueador isolado
+- Troponina positiva não obriga cateterismo em todos os casos; o tempo e a via
+  invasiva dependem do ECG, da estabilidade, da probabilidade de SCA e dos
+  diagnósticos alternativos, como nos protocolos gerais.
+- Dados de recuperação ventricular após abstinência de **metanfetamina** não
+  demonstram, por si, reversibilidade de uma disfunção atribuída à cocaína.
+- A janela de maior risco na primeira hora não autoriza alta imediata após ela;
+  observação e exames seriados são definidos pelo risco clínico e pelo protocolo
+  institucional.
 
-A mesma ressalva farmacológica vale aqui e no fluxograma desta coleção sobre
-vasoespasmo coronariano induzido por cocaína: o bloqueio beta isolado deixaria
-a vasoconstrição alfa-adrenérgica sem oposição. Essa recomendação é amplamente
-citada na literatura de emergência, mas **VERIFICAÇÃO HUMANA NECESSÁRIA** — a
-declaração científica dedicada da American Heart Association que a sustenta
-(McCord et al., 2008) está bloqueada por paywall e não foi lida na íntegra
-nesta sessão.
+## Tudo com Tudo
 
-## Por que a disfunção sem lesão obstrutiva pode não ser um infarto definitivo
-
-O mecanismo da cocaína inclui vasoconstrição coronariana direta, inclusive de
-segmentos sem placa angiograficamente visível — ou seja, dano miocárdico sem
-trombose obstrutiva é biologicamente plausível na apresentação aguda. A
-evidência de que essa disfunção pode reverter vem da cardiomiopatia associada
-à metanfetamina (MACM): numa coorte de 30 pacientes com biópsia
-endomiocárdica, a fração de ejeção subiu de **19 ± 6% para 43 ± 13%** entre os
-que pararam de usar, e não melhorou entre os que mantiveram o uso (Schürer et
-al., 2017), padrão confirmado em coorte independente (Sliman et al., 2016). O
-dado prático: **fração de ejeção baixa na apresentação não prediz, sozinha, o
-prognóstico** — a resposta à cessação do uso é o que separa quem recupera de
-quem não recupera, o que torna o encaminhamento a tratamento de transtorno por
-uso de substância parte central da conduta, não um adendo social.
+- [Fluxograma geral de síndrome coronariana aguda (ESC 2023)](../Doença_coronariana/fluxograma-sindrome-coronariana-aguda-esc-2023.md)
+- [Diretriz de síndrome coronariana aguda (ACC/AHA 2025)](../Doença_coronariana/acc-aha-2025-diretriz-sindrome-coronariana-aguda.md)
+- [Protocolo de dor torácica na emergência (SBC 2025)](../Doença_coronariana/protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025.md)
+- [Fluxograma farmacológico do vasoespasmo por cocaína](../Geral/fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina.md)
+- [Cardiotoxicidade aguda por cocaína e arritmia por bloqueio de sódio](../Terapia_intensiva/cardiotoxicidade-aguda-por-cocaina-vasoespasmo-bloqueio-de-canal-de-sodio-e-por-que-nao-usar-betabloqueador-isolado.md)
+- [Cocaína, metanfetamina, infarto e cardiomiopatia: limites de extrapolação](cocaina-e-metanfetamina-infarto-desencadeado-na-primeira-hora-e-cardiomiopatia-reversivel.md)

@@ -2,7 +2,7 @@
 title: "Valvopatias: Atualização Diretriz ESC/EACTS 2025"
 slug: valvopatias-atualizacao-diretriz-esceacts-2025
 theme: "Valvopatias"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["2025 ESC/EACTS Guidelines for the management of valvular heart disease · European Heart Journal · 2025 · https://www.escardio.org", "ESC 2025 – Novas diretrizes para manejo de doença cardíaca valvar · TribeMD · 2025 · https://tribemd.com/br/conteudos/esc%C2%AE-2025-%E2%80%93-novas-diretrizes-para-manejo-de-doen%C3%A7a-card%C3%ADaca-valvar/", "ESC 2025: Principais atualizações da nova diretriz de valvopatias · Afya Cardiologia · 2025 · https://portal.afya.com.br/cardiologia/esc-2025-principais-atualizacoes-da-nova-diretriz-de-valvopatias", "Valvopatias: Diretriz da ESC 2025 · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/508/valvopatias-diretriz-da-esc-2025/", "ESC 2025: Guideline revisions include new TAVI age threshold · Cardiovascular News · 2025 · https://cardiovascularnews.com/esc-2025-guideline-revisions-include-new-tavi-age-threshold/ — classes de recomendação do corte etário conferidas de forma independente em 30/07/2026."]
 legacy_source: "protocolos/modulo-atualizado-protocolo-de-valvopatias-esc-eacts-2025-substitui-destaques-da-versao-2021.md · Revisado a fundo em 30/07/2026: a mudança de corte etário de TAVI (75→70 anos) — o achado mais clinicamente crítico deste documento, porque pode levar a conduta desatualizada em quem só ler o documento ESC/EACTS 2021 desta mesma pasta — foi confirmada de forma independente contra múltiplas fontes secundárias concordantes, com as classes de recomendação exatas acrescentadas."

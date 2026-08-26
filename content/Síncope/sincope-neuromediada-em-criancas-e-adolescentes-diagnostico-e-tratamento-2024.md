@@ -2,7 +2,7 @@
 title: "Síncope Neuromediada em Crianças e Adolescentes: Diagnóstico e Tratamento (2024)"
 slug: sincope-neuromediada-em-criancas-e-adolescentes-diagnostico-e-tratamento-2024
 theme: "Síncope"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto lido linha a linha, não só resumo automatizado) nesta sessão. Diretriz de sociedade pediátrica CHINESA — não brasileira/ocidental, mencionado aqui por transparência de procedência. Usa sistema Classe I/IIa/IIb/III + Nível A/B/C, não GRADE."]
 ---

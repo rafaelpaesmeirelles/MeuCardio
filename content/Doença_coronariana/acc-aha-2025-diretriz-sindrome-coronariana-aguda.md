@@ -2,7 +2,7 @@
 title: "ACC/AHA 2025: diretriz para síndrome coronariana aguda"
 slug: acc-aha-2025-diretriz-sindrome-coronariana-aguda
 theme: "Doença coronariana"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025;85(22):2135-2237. DOI: 10.1016/j.jacc.2024.11.009. PMID: 40013746."]
 legacy_source: "Documento novo. Diretriz oficial ACC/AHA/JACC conferida em 08/08/2026."

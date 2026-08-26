@@ -291,7 +291,8 @@
       "lidocaina",
       "penicilina benzatina",
       "dor da injecao",
-      "adesao ao tratamento"
+      "adesao ao tratamento",
+      "benzilpenicilina benzatina"
     ],
     "review_status": "revisado",
     "published": false
@@ -3165,7 +3166,9 @@
       "laminopatia",
       "LMNA",
       "escore de risco",
-      "cardiodesfibrilador implantável"
+      "cardiodesfibrilador implantável",
+      "cardiomiopatia dilatada",
+      "CMD"
     ],
     "review_status": "revisado"
   },
@@ -5152,7 +5155,8 @@
       "sindrome de marfan",
       "atenolol",
       "losartan",
-      "comparacao direta de farmacos"
+      "comparacao direta de farmacos",
+      "aneurisma de aorta torácica"
     ],
     "review_status": "revisado",
     "published": false
@@ -5931,30 +5935,6 @@
       "levitação magnética",
       "insuficiência cardíaca avançada",
       "ensaio clínico"
-    ],
-    "review_status": "revisado",
-    "published": false
-  },
-  {
-    "slug": "momentum-3-relatorio-final-dav-de-fluxo-centrifugo",
-    "title": "MOMENTUM 3 (relatório final) — Dispositivo de assistência ventricular com levitação magnética total vs. fluxo axial",
-    "study_type": "ensaio_clinico",
-    "authors": "Mehra MR, Uriel N, Naka Y, et al.",
-    "journal": "New England Journal of Medicine",
-    "year": 2019,
-    "doi": "10.1056/NEJMoa1900486",
-    "pmid": "30883052",
-    "url": "https://doi.org/10.1056/NEJMoa1900486",
-    "summary": "Ensaio clínico randomizado com 1.028 pacientes (516 vs. 512) com insuficiência cardíaca avançada, comparando dispositivo de assistência ventricular de fluxo centrífugo com levitação magnética total (HeartMate 3) versus dispositivo de fluxo axial de geração anterior (HeartMate II), relatório final de desfecho em 2 anos.",
-    "key_findings": "Desfecho primário (sobrevida livre de AVC incapacitante ou reoperação por mau funcionamento da bomba em 2 anos): 76,9% (fluxo centrífugo) vs. 64,8% (fluxo axial), RR 0,84 (IC95% 0,78-0,91; p<0,001). Necessidade de troca da bomba: 2,3% vs. 11,3% (RR 0,21; p<0,001).",
-    "clinical_implications": "Estabeleceu a tecnologia de levitação magnética total como padrão em assistência ventricular de longa duração, reduzindo de forma marcante trombose de bomba e a necessidade de reoperação — mudança tecnológica que redefiniu a geração de dispositivos usada atualmente na prática.",
-    "limitations": "Compara duas gerações específicas de dispositivo — o resultado reflete o avanço tecnológico entre essas duas plataformas, não é generalizável a comparações entre outras marcas/modelos de DAV.",
-    "theme": "Cardiomiopatias",
-    "tags": [
-      "dispositivo de assistencia ventricular",
-      "levitacao magnetica",
-      "insuficiencia cardiaca avancada",
-      "heartmate 3"
     ],
     "review_status": "revisado",
     "published": false
@@ -16179,7 +16159,7 @@
     "key_findings": "Pressão sistólica média global padronizada por idade em 2015: 127,0 mmHg em homens e 122,3 mmHg em mulheres; diastólica: 78,7 mmHg (homens) e 76,7 mmHg (mulheres). Prevalência de pressão elevada em 2015: 24,1% em homens e 20,1% em mulheres. O número de adultos com pressão elevada aumentou de 594 milhões em 1975 para 1,13 bilhão em 2015, aumento concentrado em países de renda baixa e média. Países de alta renda ocidentais e da Ásia-Pacífico inverteram posição — de pressão mais alta do mundo em 1975 para as mais baixas em 2015 — enquanto leste e sudeste asiático, sul da Ásia, Oceania e África subsaariana podem ter tido aumento da pressão média no período.",
     "clinical_implications": "Documenta a transição epidemiológica global da hipertensão de doença associada a países ricos para condição concentrada em países de renda baixa e média, com implicações diretas para priorização de recursos de saúde pública e rastreio de hipertensão nesses contextos.",
     "limitations": "Dados agregados heterogêneos entre países e períodos, com maior incerteza estatística em regiões com poucos estudos disponíveis; cada estudo populacional contribuiu com medida única de pressão arterial (sem repetição da aferição), o que pode introduzir variabilidade de medida.",
-    "theme": "Geral",
+    "theme": "Hipertensão",
     "tags": [
       "hipertensão",
       "epidemiologia global",
@@ -20377,7 +20357,7 @@
     "authors": "Irnizarifka I, Tristan CD, Budiono EA, Wijayanto MA, Tanudjaya IS, Pranata R, Iqbal M",
     "journal": "Future Cardiology",
     "year": 2026,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1080/14796678.2026.2699788",
     "pmid": "42434806",
     "url": "https://pubmed.ncbi.nlm.nih.gov/42434806/",
     "summary": "Revisão sistemática de 7 estudos reunindo 160 pacientes (74 com taquicardia ventricular, 86 com extrassístole ventricular) tratados com ablação por campo pulsado (PFA), tecnologia não térmica baseada em eletroporação, ainda emergente para arritmia ventricular (diferente da fibrilação atrial, onde já está estabelecida).",
@@ -20393,7 +20373,8 @@
       "PFA"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1080/14796678.2026.2699788 verificado diretamente no registro PubMed PMID 42434806 em 26/08/2026."
   },
   {
     "slug": "pfa-focal-em-tv-e-extrassistole-ventricular-coorte-prospectiva-de-ruwald",
@@ -20402,7 +20383,7 @@
     "authors": "Ruwald MH, Johannessen A, Worck R, Hansen ML, Haugdal M, Hansen J",
     "journal": "Heart Rhythm",
     "year": 2026,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1016/j.hrthm.2025.02.014",
     "pmid": "39938768",
     "url": "https://pubmed.ncbi.nlm.nih.gov/39938768/",
     "summary": "Coorte prospectiva de 35 pacientes (24 com extrassístole ventricular, 11 com taquicardia ventricular) submetidos a ablação focal por campo pulsado com cateteres de ablação irrigados, com seguimento por Holter em 3 meses e monitorização domiciliar por dispositivo, seguimento médio de 288 ± 149 dias.",
@@ -20417,7 +20398,8 @@
       "eletroporação"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1016/j.hrthm.2025.02.014 verificado diretamente no registro PubMed PMID 39938768 em 26/08/2026."
   },
   {
     "slug": "dst-tiso-derivacao-predicao-de-inducibilidade-no-eef-brugada",
@@ -20426,7 +20408,7 @@
     "authors": "Iacopino S, Fabiano E, Sorrenti P, Petretta A, Colella J, Di Vilio A, et al",
     "journal": "Journal of Cardiovascular Electrophysiology",
     "year": 2024,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1111/jce.16348",
     "pmid": "38923783",
     "url": "https://pubmed.ncbi.nlm.nih.gov/38923783/",
     "summary": "Coorte de 128 pacientes com padrão tipo 1 de Brugada induzido por ajmalina, submetidos a estudo eletrofisiológico com estimulação ventricular programada (idade mediana 43 anos, 59% homens), testando um novo intervalo medido no ECG de superfície — o dST-Tiso (tempo entre o início da elevação do segmento ST em formato 'em teto' e seu retorno à linha isoelétrica) — como preditor de indutibilidade de arritmia ventricular.",
@@ -20442,7 +20424,8 @@
       "ajmalina"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1111/jce.16348 verificado diretamente no registro PubMed PMID 38923783 em 26/08/2026."
   },
   {
     "slug": "dst-tiso-validacao-prognostica-eventos-arritmicos-em-seguimento-real",
@@ -20451,7 +20434,7 @@
     "authors": "Iacopino S, Sorrenti PF, Fabiano G, Campagna G, Fabiano E, Petretta A, Colella J, et al",
     "journal": "The American Journal of Cardiology",
     "year": 2026,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1016/j.amjcard.2026.02.045",
     "pmid": "41763631",
     "url": "https://pubmed.ncbi.nlm.nih.gov/41763631/",
     "summary": "Coorte prospectiva de 281 pacientes com padrão eletrocardiográfico de Brugada (idade mediana 42 anos, 64% homens), seguimento mediano de 3,2 anos, testando se o critério dST-Tiso (derivado em estudo anterior dos mesmos autores) prediz eventos arrítmicos reais no seguimento, não apenas indutibilidade no EEF.",
@@ -20466,7 +20449,8 @@
       "estratificação de risco"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1016/j.amjcard.2026.02.045 verificado diretamente no registro PubMed PMID 41763631 em 26/08/2026."
   },
   {
     "slug": "calculadora-de-risco-de-cadrin-tourigny-derivacao-multinacional-cardiomiopatia-arritmogenica",
@@ -20475,7 +20459,7 @@
     "authors": "Cadrin-Tourigny J, Bosman LP, Wang W, Tadros R, Bhonsale A, Bourfiss M, et al",
     "journal": "Circulation: Arrhythmia and Electrophysiology",
     "year": 2021,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1161/CIRCEP.120.008509",
     "pmid": "33296238",
     "url": "https://pubmed.ncbi.nlm.nih.gov/33296238/",
     "summary": "Coorte multinacional de 864 pacientes com cardiomiopatia arritmogênica de ventrículo direito definida (idade média 40±16 anos, 53% homens), seguimento mediano de 5,75 anos, derivando uma calculadora de risco de arritmia ventricular com risco de vida (LTVA) a partir de preditores clínicos simples.",
@@ -20490,7 +20474,8 @@
       "calculadora de risco"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1161/CIRCEP.120.008509 verificado diretamente no registro PubMed PMID 33296238 em 26/08/2026."
   },
   {
     "slug": "cardiomiopatia-arritmogenica-por-desmoplaquina-limite-da-calculadora-de-cadrin-tourigny",
@@ -20499,7 +20484,7 @@
     "authors": "Gasperetti A, Carrick R, Protonotarios A, Laredo M, van der Schaaf I, Syrris P, et al",
     "journal": "JACC: Advances",
     "year": 2024,
-    "doi": "VERIFICAÇÃO HUMANA NECESSÁRIA",
+    "doi": "10.1016/j.jacadv.2024.100832",
     "pmid": "38938828",
     "url": "https://pubmed.ncbi.nlm.nih.gov/38938828/",
     "summary": "Coorte de 252 pacientes com cardiomiopatia arritmogênica causada por variante patogênica em desmoplaquina (DSP) — gene com fenótipo distinto do clássico ligado a PKP2 — idade média 39,6±16,9 anos, 35,3% homens, seguimento mediano de 44,5 meses, testando o desempenho da calculadora de risco de Cadrin-Tourigny (derivada em população predominantemente não-DSP) especificamente nesta população genética.",
@@ -20515,7 +20500,8 @@
       "morte súbita cardíaca"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "review_note": "DOI 10.1016/j.jacadv.2024.100832 verificado diretamente no registro PubMed PMID 38938828 em 26/08/2026."
   },
   {
     "slug": "realce-tardio-de-ventriculo-esquerdo-na-cardiomiopatia-arritmogenica-sem-valor-preditivo-incremental",
@@ -31211,6 +31197,58 @@
       "insuficiência cardíaca aguda",
       "acetazolamida",
       "diurético"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "npcqic-2015-monitorizacao-domiciliar-interestagio-peso-mortalidade-readmissao",
+    "title": "NPC-QIC 2015 — Monitorização domiciliar interestágio, crescimento, mortalidade e readmissão no ventrículo único",
+    "study_type": "estudo_de_coorte",
+    "authors": "Oster ME, Ehrlich A, King E, Petit CJ, Clabby M, Smith S, Glanville M, Anderson J, Darbie L, Beekman RH 3rd",
+    "journal": "Circulation",
+    "year": 2015,
+    "doi": "10.1161/CIRCULATIONAHA.114.014107",
+    "pmid": "26260497",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26260497/",
+    "summary": "Coorte multicêntrica retrospectiva com dados coletados prospectivamente pelo National Pediatric Cardiology Quality Improvement Collaborative entre 2008 e 2012. Comparou estratégias de monitorização domiciliar de saturação de oxigênio (n=494) e peso (n=472) durante o período entre as paliações de estágio I e II em crianças com fisiologia univentricular.",
+    "key_findings": "A mortalidade interestágio global foi 8,1% e 47% tiveram pelo menos uma readmissão não programada. Após ajuste, a monitorização domiciliar de saturação ou peso não se associou a menor mortalidade ou readmissão. O ganho no escore Z de peso foi semelhante com pesagem diária e semanal, mas a pesagem diária foi superior à ausência de monitorização do peso (0,33 ± 0,12 versus -0,15 ± 0,18; p<0,01).",
+    "clinical_implications": "Qualifica o sinal favorável dos estudos unicêntricos históricos: em uma coorte multicêntrica contemporânea, o benefício demonstrado concentrou-se no crescimento com pesagem domiciliar diária, sem associação observada com mortalidade ou readmissão. Sustenta usar a vigilância como parte de um programa interestágio integrado, sem atribuir isoladamente ao oxímetro ou à balança um efeito não demonstrado sobre desfechos duros.",
+    "limitations": "Análise observacional retrospectiva de registro, sem randomização das estratégias de monitorização e sujeita a confusão residual e diferenças entre centros. Associação não equivale a causalidade; o estudo não avalia todos os componentes dos programas integrados de cuidado interestágio.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "ventrículo único",
+      "Norwood",
+      "vigilância interestágio",
+      "monitorização domiciliar",
+      "crescimento",
+      "NPC-QIC"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gbd-2021-brasil-carga-atribuivel-fatores-de-risco",
+    "title": "GBD 2021 Brasil — Carga de doença atribuível a fatores de risco por sexo, idade e unidade federativa",
+    "study_type": "estudo_ecologico_descritivo",
+    "authors": "Malta DC, Gomes CS, Veloso GA, Felisbino-Mendes MS, Brant LCC, Teixeira RA, Prates EJS, Flor LS, Stein C, Vasconcelos NM, Machado IE, Silva AG, Naghavi M, Ribeiro ALP",
+    "journal": "Public Health",
+    "year": 2024,
+    "doi": "10.1016/j.puhe.2024.10.030",
+    "pmid": "39520735",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39520735/",
+    "summary": "Análise brasileira das estimativas do Global Burden of Disease de 1990 a 2021, estratificada por sexo, idade e unidade federativa. Avaliou mortalidade, anos de vida ajustados por incapacidade (DALYs), valor sumário de exposição e a relação da carga atribuível com o índice sociodemográfico.",
+    "key_findings": "Em 2021, a pressão arterial sistólica elevada ocupou o primeiro lugar entre os fatores de risco em todos os estados brasileiros, seguida pela glicemia elevada; o tabaco ficou em terceiro na maioria dos estados. Entre 1990 e 2021, caiu a carga atribuível ao tabaco (-50,2%), a riscos de água, saneamento e higiene (-58,0%) e à poluição do ar (-45,0%), enquanto aumentou a carga atribuível ao IMC elevado (+78,4%) e ao álcool (+15,7%).",
+    "clinical_implications": "Atualiza para o contexto brasileiro o estudo fundador GBD 2010: o controle da pressão arterial permanece prioridade populacional em todas as unidades federativas, enquanto o crescimento da carga associada ao IMC elevado exige prevenção integrada. As estimativas servem para priorização de políticas e planejamento, não para estimar o risco individual de um paciente.",
+    "limitations": "Estudo ecológico baseado em modelagem do GBD e em fontes heterogêneas de exposição e desfecho; depende das premissas dos modelos e da qualidade dos dados disponíveis em cada local. Frações atribuíveis populacionais não demonstram causalidade individual e não devem ser interpretadas como efeito de uma intervenção específica.",
+    "theme": "Hipertensão",
+    "tags": [
+      "Global Burden of Disease",
+      "Brasil",
+      "pressão arterial sistólica",
+      "carga de doença",
+      "DALY",
+      "fatores de risco"
     ],
     "review_status": "revisado",
     "published": false

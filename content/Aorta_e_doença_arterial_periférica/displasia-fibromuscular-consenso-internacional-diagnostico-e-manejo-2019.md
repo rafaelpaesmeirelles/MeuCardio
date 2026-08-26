@@ -2,7 +2,7 @@
 title: "Displasia Fibromuscular: Primeiro Consenso Internacional de Diagnóstico e Manejo (2019)"
 slug: displasia-fibromuscular-consenso-internacional-diagnostico-e-manejo-2019
 theme: "Aorta e doença arterial periférica"
-kind: protocolo
+kind: diretriz
 summary: "Primeiro documento do tema sobre displasia fibromuscular. Doença de mulher jovem/meia-idade, sub-diagnosticada, que mimetiza hipertensão essencial — o consenso fixa o critério de imagem que define o diagnóstico, o corte hemodinâmico que autoriza angioplastia renal e a recomendação de rastrear artérias do crânio à pelve uma vez achada em qualquer leito."
 review_status: revisado
 source_refs: ["Gornik HL, Persu A, Adlam D, et al. First International Consensus on the diagnosis and management of fibromuscular dysplasia. Vasc Med. 2019;24(2):164-189. DOI: 10.1177/1358863X18821816. PMID: 30648921 — publicado simultaneamente em Vascular Medicine e Journal of Hypertension; texto integral conferido nesta sessão (06/08/2026). Documento de consenso de sociedades (Society for Vascular Medicine e European Society of Hypertension, Grupo de Trabalho 'Hypertension and the Kidney'), não usa sistema de Classe I/IIa/IIb/III nem GRADE — recomendações apresentadas em linguagem de consenso ('is recommended', 'is reasonable'), preservada como tal neste documento."]

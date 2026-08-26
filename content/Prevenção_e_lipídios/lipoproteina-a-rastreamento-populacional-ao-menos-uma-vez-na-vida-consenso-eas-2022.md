@@ -2,7 +2,7 @@
 title: "Lipoproteína(a): Rastreamento ao Menos Uma Vez na Vida — o Consenso EAS 2022"
 slug: lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022
 theme: "Prevenção e lipídios"
-kind: estudo
+kind: diretriz
 review_status: revisado
 source_refs: ["Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785. PMCID: PMC9639807 — texto completo de acesso aberto no PMC, conferido nesta sessão"]
 legacy_source: "Documento novo, escrito em 01/08/2026. O documento já existente sobre Lp(a) nesta pasta (lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose.md) trata do ensaio de fase 2 de um siRNA que reduz a síntese de Lp(a) — pergunta terapêutica, ainda sem desfecho clínico. Faltava o documento que resolve a pergunta anterior a essa, a de rastreamento: quem dosar, com que frequência, e a partir de que valor a concentração deixa de ser 'apenas um número' e passa a mudar a estratificação de risco. É lacuna distinta e mais fundamental — a maioria dos médicos nunca solicitou Lp(a) nem sabe que a recomendação atual é dosar uma única vez na vida."

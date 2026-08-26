@@ -2,7 +2,7 @@
 title: "Falência Aguda do Ventrículo Direito (Cor Pulmonale Agudo): Consenso ACVC/ESC 2024"
 slug: falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024
 theme: "Terapia intensiva"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Diagnosis and treatment of right ventricular failure secondary to acutely increased right ventricular afterload (acute cor pulmonale): a clinical consensus statement of the Association for Acute CardioVascular Care (ACVC) of the European Society of Cardiology. Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312. DOI: 10.1093/ehjacc/zuad157. PMID: 38135288. Texto integral lido em 31/07/2026 via PMC10927027 — o registro do PubMed traz apenas o título, sem resumo"]
 legacy_source: "Documento novo, escrito em 31/07/2026. A disfunção aguda de ventrículo direito era lacuna mapeada e ficou BLOQUEADA por fonte em dois ciclos: o consenso não tem resumo no PubMed. Foi destravada ao buscar o texto integral no PMC — método que passou a valer para todo documento de sociedade."

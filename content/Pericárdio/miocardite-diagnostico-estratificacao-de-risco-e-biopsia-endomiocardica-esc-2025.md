@@ -2,7 +2,7 @@
 title: "Miocardite: Diagnóstico, Estratificação de Risco e Biópsia Endomiocárdica (ESC 2025)"
 slug: miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025
 theme: "Pericárdio"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Seções 3.3, 4.2, 4.3, 5.9.1 e 6.2.1, Tabelas 4, 5, 6, 7 e Recommendation Table 6, texto integral obtido e conferido diretamente em 30/07/2026."]
 legacy_source: "Documento novo, fecha lacuna explicitamente declarada em sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025.md, nesta mesma pasta: 'Diagnóstico multimodal, biópsia endomiocárdica, estratificação de risco, critérios de internação, manejo de miocardite fulminante e retorno ao esporte... ficam para expansão futura'. Este documento cobre diagnóstico, estratificação de risco e biópsia — retorno ao esporte segue como lacuna."

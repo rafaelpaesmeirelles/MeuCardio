@@ -128,6 +128,78 @@ def test_estudos_exigem_relacao_com_assunto_e_nao_apenas_mesmo_tema(
     assert por_tipo_sem_relacao["estudo"] == []
 
 
+def test_estudo_reutiliza_titulo_e_tags_revisados_para_encontrar_documento(
+    client, db, criar_usuario,
+):
+    _limpar(db)
+    db.add_all([
+        Document(
+            slug="ablacao-septal-na-cardiomiopatia-hipertrofica",
+            title="Ablação septal na cardiomiopatia hipertrófica obstrutiva",
+            kind="modulo", theme="Cardiomiopatias", body_md="conteúdo",
+            source_tier="A", review_status="revisado", published=True,
+        ),
+        Document(
+            slug="cardiomiopatia-hipertrofica-visao-geral",
+            title="Cardiomiopatia hipertrófica — visão geral",
+            kind="modulo", theme="Cardiomiopatias", body_md="conteúdo",
+            source_tier="A", review_status="revisado", published=True,
+        ),
+        ScientificStudy(
+            slug="ensaio-x1", title="Ablação septal alcoólica versus miectomia",
+            study_type="metanalise", journal="Heart", year=2023,
+            summary="resumo", key_findings="achados", clinical_implications="implicação",
+            theme="Cardiomiopatias", tags=["ablação septal", "cardiomiopatia hipertrófica"],
+            review_status="revisado", published=True,
+        ),
+    ])
+    db.commit()
+
+    r = client.get(
+        "/api/relacionados?tema=Cardiomiopatias&assunto=ensaio-x1"
+        "&excluir_tipo=estudo&excluir_slug=ensaio-x1",
+        headers=_headers(criar_usuario),
+    )
+    assert r.status_code == 200
+    por_tipo = {g["tipo"]: g["itens"] for g in r.json()["grupos"]}
+    assert [item["slug"] for item in por_tipo["documento"]] == [
+        "ablacao-septal-na-cardiomiopatia-hipertrofica"
+    ]
+
+
+def test_evidencia_reutiliza_apenas_seu_vinculo_documental_explicito(
+    client, db, criar_usuario,
+):
+    _limpar(db)
+    document = Document(
+        slug="hipertensao-resistente-algoritmo",
+        title="Hipertensão resistente — algoritmo terapêutico",
+        kind="modulo", theme="Hipertensão", body_md="conteúdo",
+        source_tier="A", review_status="revisado", published=True,
+    )
+    db.add(document)
+    db.add(EvidenceRecord(
+        slug="recomendacao-42", statement="Recomendação editorial revisada.",
+        recommendation_class="I", evidence_level="A", society="SBC", year=2025,
+        guideline_title="Diretriz Brasileira de Hipertensão 2025",
+        reference="Referência completa", theme="Hipertensão",
+        tags=["terapia"], document_slug=document.slug,
+        review_status="revisado", published=True,
+    ))
+    db.commit()
+
+    r = client.get(
+        "/api/relacionados?tema=Hipertens%C3%A3o&assunto=recomendacao-42"
+        "&excluir_tipo=evidencia&excluir_slug=recomendacao-42",
+        headers=_headers(criar_usuario),
+    )
+    assert r.status_code == 200
+    por_tipo = {g["tipo"]: g["itens"] for g in r.json()["grupos"]}
+    assert [item["slug"] for item in por_tipo["documento"]] == [
+        "hipertensao-resistente-algoritmo"
+    ]
+
+
 def test_item_nao_publicado_nunca_aparece(client, db, criar_usuario):
     _limpar(db)
     db.add(Document(

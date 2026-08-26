@@ -2,7 +2,7 @@
 title: "Síndromes inflamatórias miopericárdicas (IMPS): framework unificado e tratamento medicamentoso (ESC 2025)"
 slug: sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025
 theme: "Pericárdio"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — introdução (definição de IMPS), tabela de terminologia, e Recommendation Tables 9 e 10 (terapia medicamentosa de miocardite e pericardite), lidas no texto integral."]
 legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao) citava fonte secundária (Myocarditis Foundation, 'TKD') em vez da diretriz, e não trazia nenhuma classe/nível de recomendação."

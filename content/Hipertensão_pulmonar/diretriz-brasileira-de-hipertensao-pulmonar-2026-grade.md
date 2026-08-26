@@ -2,7 +2,7 @@
 title: "Diretriz Brasileira de Hipertensão Pulmonar 2026 (GRADE)"
 slug: diretriz-brasileira-de-hipertensao-pulmonar-2026-grade
 theme: "Hipertensão pulmonar"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Amado VM, Pereira MC, Correa RA, et al. Diretrizes brasileiras para o tratamento farmacológico da hipertensão pulmonar. Documento oficial da Sociedade Brasileira de Pneumologia e Tisiologia baseado na metodologia GRADE. Respir Res Clin Pract. 2026;52(3):e20250528. DOI: 10.36416/1806-3756/e20250528. PDF completo em português verificado na íntegra."]
 ---

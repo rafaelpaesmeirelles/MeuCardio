@@ -1,11 +1,12 @@
 ---
 title: "Doença cardiovascular e gestação (ESC 2025)"
 slug: doenca-cardiovascular-e-gestacao-esc-2025
-theme: "Geral"
-kind: protocolo
+theme: "Gravidez"
+kind: diretriz
 summary: "A diretriz que substitui a de 2018 muda o eixo central do aconselhamento em gestante de altíssimo risco (mWHO IV) — de contraindicação para decisão compartilhada com apoio psicológico —, cria uma seção própria para o Pregnancy Heart Team com critério de encaminhamento explícito, e abre uma seção inteiramente nova sobre desfechos gestacionais adversos como marcador de risco cardiovascular futuro."
 review_status: revisado
-source_refs: ["2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294."]
+review_note: "Diretriz ESC, página oficial, PubMed e errata de 2026 conferidos em 26/08/2026. A errata corrige abreviações, projeção radiológica, unidade do misoprostol e faixa de dose do verapamil; nenhum desses valores é reproduzido neste resumo."
+source_refs: ["De Backer J, Haugaa KH, Hasselberg NE, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.", "Correction to: 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2026;47(7):812. DOI: 10.1093/eurheartj/ehaf1011. PMID: 41428090.", "European Society of Cardiology. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy — página oficial. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"]
 ---
 
 # Doença cardiovascular e gestação (ESC 2025)

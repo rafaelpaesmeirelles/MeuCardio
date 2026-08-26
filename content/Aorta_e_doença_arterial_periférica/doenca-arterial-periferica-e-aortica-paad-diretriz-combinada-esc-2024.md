@@ -2,7 +2,7 @@
 title: "Doença arterial periférica e aórtica (PAAD): diretriz combinada ESC 2024"
 slug: doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024
 theme: "Aorta e doença arterial periférica"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — tabela de recomendações revisadas (metas de pressão arterial e LDL, rastreamento de AAA) e seção de cirurgia da aorta ascendente/raiz aórtica, lidas no texto integral."]
 legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, pendente_revisao) citava só a página institucional da ESC, sem PMID/DOI, e o corte de 45 mm para valva bicúspide estava sem o contexto que muda tudo: aplica-se só quando há cirurgia valvar concomitante, não à aortopatia bicúspide em geral (cujo corte eletivo é 50 mm)."

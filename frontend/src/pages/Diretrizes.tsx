@@ -30,6 +30,11 @@ type Notificacao = {
 
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
 type RespostaNotificacoes = { cutoff: string; items: Notificacao[] };
+type DiretrizBiblioteca = {
+  slug: string;
+  title: string;
+  theme: string;
+};
 
 function dataBr(valor: string) {
   return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
@@ -44,16 +49,19 @@ function statusLabel(status: Atualizacao["status"]) {
 export default function Diretrizes() {
   const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
   const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
+  const [diretrizes, setDiretrizes] = useState<DiretrizBiblioteca[] | null>(null);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
     Promise.all([
       api.get<RespostaAtualizacoes>("/guideline-updates"),
       api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true"),
+      api.get<{ items: DiretrizBiblioteca[] }>("/library/documents?kind=diretriz&limit=200"),
     ])
-      .then(([lista, alertas]) => {
+      .then(([lista, alertas, biblioteca]) => {
         setAtualizacoes(lista);
         setNotificacoes(alertas);
+        setDiretrizes(biblioteca.items);
       })
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
@@ -84,7 +92,7 @@ export default function Diretrizes() {
   }
 
   if (erro) return <Erro mensagem={erro} />;
-  if (!atualizacoes || !notificacoes) return <Carregando texto="Verificando publicações oficiais…" />;
+  if (!atualizacoes || !notificacoes || !diretrizes) return <Carregando texto="Verificando publicações oficiais…" />;
 
   return (
     <div className="cc-page cc-guidelines-page">
@@ -147,6 +155,23 @@ export default function Diretrizes() {
             ))}
           </div>
         )}
+      </ClinicalSection>
+
+      <ClinicalSection
+        eyebrow="Biblioteca clínica"
+        title="Guidelines conectadas"
+      >
+        <div className="cc-context-grid">
+          {diretrizes.map((item) => (
+            <ClinicalContextLink
+              key={item.slug}
+              to={`/biblioteca/${item.slug}`}
+              icon="evidencia"
+              title={item.title}
+              detail={item.theme}
+            />
+          ))}
+        </div>
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Da diretriz à decisão">

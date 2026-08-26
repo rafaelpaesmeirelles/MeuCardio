@@ -2,7 +2,7 @@
 title: "Tratamento Farmacológico do TEP: Diretriz Brasileira SBPT 2025 (GRADE)"
 slug: tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade
 theme: "Tromboembolismo"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Amado VM, Fernandes CJCDS, Salibe-Filho W, Gazzana MB, Rocha AT, Yoo HHB, Bernardo WM, Tanni S. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMCID: PMC12401105 (texto completo em acesso aberto)"]
 ---

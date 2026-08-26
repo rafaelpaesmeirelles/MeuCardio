@@ -3,105 +3,107 @@ title: "Intoxicação por betabloqueador ou antagonista de cálcio"
 slug: fluxograma-intoxicacao-por-betabloqueador-ou-antagonista-de-calcio
 theme: "Terapia intensiva"
 kind: fluxograma
-summary: "Árvore de decisão do choque cardiotóxico por betabloqueador ou bloqueador de canal de cálcio: atropina, glucagon e cálcio geralmente falham no paciente grave, a insulina em alta dose euglicêmica é a terapia central, e emulsão lipídica ou suporte circulatório mecânico (ECMO) entram como resgate no choque refratário."
+summary: "Fluxo AHA 2025 para hipotensão, bradicardia ou choque com risco de vida por betabloqueador ou bloqueador de canal de cálcio: separa glucagon e o timing da insulina no betabloqueador, cálcio e insulina precoce no bloqueador de cálcio, e VA-ECMO no choque cardiogênico refratário."
 review_status: revisado
-source_refs: ["Engebretsen KM, Kaczmarek KM, Morgan J, Holger JS. High-dose insulin therapy in beta-blocker and calcium channel-blocker poisoning. Clin Toxicol (Phila). 2011;49(4):277-283. DOI: 10.3109/15563650.2011.582471. PMID: 21563902 — revisão de 485 artigos identificados, 72 considerados relevantes", "American College of Medical Toxicology (ACMT). Position Statement: Guidance for the Use of Intravenous Lipid Emulsion. J Med Toxicol. 2017;13(1):124-125. DOI: 10.1007/s13181-016-0550-z. PMID: 27121236 — recomenda emulsão lipídica IV como resgate em intoxicação por fármaco lipofílico cardiotóxico, incluindo betabloqueador e bloqueador de canal de cálcio, com instabilidade hemodinâmica refratária à ressuscitação padrão (volume, inotrópico, vasopressor)", "Sepulveda EA, Pak A. Lipid Emulsion Therapy. [Updated 2024 Feb 16]. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan-. NBK549897 — esquema de dose da emulsão lipídica a 20% (bólus e infusão) usado neste fluxograma", "Torre DE, Mangino D, Pirri C. Veno-Arterial Extracorporeal Membrane Oxygenation in Cardiotoxic Drug-Induced Cardiogenic Shock: A Systematic Narrative Review. Life (Basel). 2025;15(6):925. DOI: 10.3390/life15060925. PMID: 40566578 — ECMO veno-arterial como resgate no choque cardiogênico refratário por intoxicação, incluindo betabloqueador e bloqueador de canal de cálcio"]
+source_refs: ["Cao D, Arens AM, Chow SL, et al. Part 10: Adult and Pediatric Special Circumstances of Resuscitation: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16_suppl_2):S578-S672. DOI: 10.1161/CIR.0000000000001380. PMID: 41122889 — recomendações separadas e graduadas para betabloqueador e bloqueador de canal de cálcio, incluindo insulina, vasopressor, glucagon, cálcio, emulsão lipídica e ECLS", "St-Onge M, Anseeuw K, Cantrell FL, et al. Experts Consensus Recommendations for the Management of Calcium Channel Blocker Poisoning in Adults. Crit Care Med. 2017;45(3):e306-e315. DOI: 10.1097/CCM.0000000000002087. PMID: 27749343. PMCID: PMC5312725 — consenso específico de BCC, evidência de qualidade muito baixa; detalha cálcio, insulina em alta dose, vasopressor e escalonamento", "Engebretsen KM, Kaczmarek KM, Morgan J, Holger JS. High-dose insulin therapy in beta-blocker and calcium channel-blocker poisoning. Clin Toxicol (Phila). 2011;49(4):277-283. DOI: 10.3109/15563650.2011.582471. PMID: 21563902 — revisão histórica da base pré-AHA 2025; não usada para igualar as duas intoxicações"]
+review_note: "Revisão de 26/08/2026: removidos os dois marcadores humanos mediante confronto com a diretriz oficial AHA 2025. O fluxo anterior tratava atropina, glucagon e cálcio como bloco indiferenciado, colocava insulina antes do vasopressor em ambas as intoxicações e apresentava emulsão lipídica com dose fixa como resgate padrão. A AHA distingue: no betabloqueador, vasopressor é recomendado, glucagon é razoável e insulina em alta dose entra quando a hipotensão é refratária ao vasopressor; no bloqueador de canal de cálcio, insulina em alta dose e vasopressor são recomendados para hipotensão, cálcio é razoável e a utilidade do glucagon é incerta. Emulsão lipídica tem utilidade incerta nos dois cenários. Doses foram retiradas deste fluxograma e remetidas ao protocolo institucional/toxicologia em tempo real."
 ---
 
 # Intoxicação por betabloqueador ou antagonista de cálcio
 
-Gatilho para este protocolo: **bradicardia com hipotensão refratária** ou
-**choque cardiogênico** em paciente com ingestão ou uso de **betabloqueador**
-ou **bloqueador de canal de cálcio**. O reflexo convencional (atropina,
-glucagon, cálcio) costuma decepcionar no paciente gravemente intoxicado — o
-que muda o desfecho é a **insulina em alta dose euglicêmica**, considerada
-terapia inicial/central pela revisão de Engebretsen et al.
+Este fluxo é para **hipotensão, bradicardia sintomática, choque ou parada com
+risco de vida** após exposição a betabloqueador ou bloqueador de canal de cálcio
+(BCC). Suporte básico/avançado, ventilação, monitorização, acesso vascular e
+contato imediato com centro de informação toxicológica devem ocorrer em
+paralelo. Atropina e marca-passo podem ser tentados conforme o algoritmo de
+bradicardia, mas têm resposta variável e não devem atrasar a terapia dirigida.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R["Choque cardiotóxico por betabloqueador ou<br/>bloqueador de canal de cálcio: hipotensão,<br/>bradicardia e resistência vascular sistêmica reduzida"]
-  R --> A1
+  R["Hipotensão, bradicardia sintomática,<br/>choque ou parada após possível<br/>betabloqueador ou BCC"]
+  P0["Suporte padrão sem atraso; ECG, glicemia,<br/>eletrólitos, função ventricular/vasoplegia;<br/>acionar centro toxicológico e UTI"]
+  D0{"Exposição predominante?"}
 
-  A1["Ressuscitação volêmica com solução salina<br/>(medida essencial) + monitorização contínua<br/>e acesso venoso calibroso"]
-  A1 --> B1
+  BB1["BETABLOQUEADOR com hipotensão:<br/>iniciar vasopressor; glucagon em bólus<br/>seguido de infusão é razoável se houver<br/>bradicardia sintomática ou hipotensão"]
+  BBD{"Hipotensão persiste apesar<br/>do vasopressor?"}
+  BB2["Administrar insulina em alta dose<br/>com manutenção da euglicemia;<br/>cálcio também pode ser considerado"]
 
-  B1["Tentar atropina para a bradicardia<br/>(geralmente pouco eficaz nesta intoxicação);<br/>glucagon e cálcio IV também podem ser<br/>considerados — atropina, glucagon e cálcio<br/>frequentemente FALHAM no paciente gravemente<br/>intoxicado (fonte não diferencia a eficácia de<br/>cada fármaco entre betabloqueador e bloqueador<br/>de canal de cálcio — VERIFICAÇÃO HUMANA NECESSÁRIA)"]
-  B1 --> D1
+  CCB1["BCC com hipotensão:<br/>administrar insulina em alta dose<br/>e vasopressor; cálcio IV é razoável"]
+  CCB2["Glucagon no BCC tem utilidade incerta;<br/>não substituir insulina, vasopressor<br/>e cálcio por resposta imprevisível"]
 
-  D1{"Choque grave ou refratário<br/>às medidas convencionais?"}
-  D1 -->|"Não — resposta hemodinâmica adequada"| C1
-  D1 -->|"Sim — choque grave/refratário"| B2
+  D1{"Choque cardiogênico persiste<br/>apesar das intervenções farmacológicas?"}
+  C1["Continuar terapia específica e monitorar<br/>glicemia, potássio, sobrecarga de volume,<br/>perfusão e resposta hemodinâmica"]
+  C2["Mobilizar precocemente ECLS/VA-ECMO<br/>em centro experiente; é razoável no choque<br/>cardiogênico refratário ou parada por intoxicação"]
+  C3["Emulsão lipídica IV não é resgate automático:<br/>utilidade incerta em BB e BCC; considerar apenas<br/>com toxicologista em caso altamente selecionado"]
 
-  C1(["Manter volume e atropina/glucagon/cálcio<br/>conforme resposta, com monitorização<br/>hemodinâmica contínua"])
-
-  B2["Iniciar insulina em alta dose euglicêmica:<br/>bólus de 1 U/kg seguido de infusão contínua<br/>de 1 a 10 U/kg/h — terapia inicial/central<br/>nesta intoxicação"]
-  B2 --> D2
-
-  D2{"Hipotensão/choque persiste apesar<br/>de volume e insulina em alta dose?"}
-  D2 -->|"Não — estabilizou"| C2
-  D2 -->|"Sim — choque persiste"| B3
-
-  C2(["Manter insulina em alta dose com volume,<br/>e monitorização hemodinâmica e<br/>laboratorial seriada"])
-
-  B3["Associar vasopressor/suporte inotrópico,<br/>titulado com cautela — catecolaminas elevam<br/>a resistência vascular sistêmica e a demanda<br/>miocárdica de oxigênio, podendo reduzir<br/>o débito cardíaco"]
-  B3 --> D3
-
-  D3{"Choque refratário mesmo com<br/>vasopressor/inotrópico associado?"}
-  D3 -->|"Não — estabilizou"| C3
-  D3 -->|"Sim — choque refratário"| B4
-
-  C3(["Manter suporte combinado (volume, insulina<br/>em alta dose, vasopressor titulado) com<br/>monitorização contínua"])
-
-  B4["Emulsão lipídica IV a 20% como resgate:<br/>bólus de 1,5 mL/kg seguido de infusão de<br/>0,25 mL/kg/min, podendo repetir o bólus e<br/>dobrar a infusão se persistir instabilidade<br/>(dose cumulativa máxima ≈ 12 mL/kg)"]
-  B4 --> D4
-
-  D4{"Choque refratário mesmo com<br/>emulsão lipídica, ou risco<br/>iminente de morte?"}
-  D4 -->|"Não — estabilizou"| C4
-  D4 -->|"Sim"| C5
-
-  C4(["Manter suporte combinado e monitorização;<br/>reduzir vasopressor conforme resposta"])
-  C5(["Acionar suporte circulatório mecânico<br/>(ECMO veno-arterial), em centro com<br/>capacidade para tal, como resgate final"])
+  R --> P0 --> D0
+  D0 -->|"Betabloqueador"| BB1 --> BBD
+  BBD -->|"Não"| C1
+  BBD -->|"Sim"| BB2 --> D1
+  D0 -->|"BCC"| CCB1 --> CCB2 --> D1
+  D1 -->|"Não"| C1
+  D1 -->|"Sim"| C2
+  C2 -. "decisão individualizada" .-> C3
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5 conduta;
+  class C1,C2,C3 conduta;
 ```
 
-## O que vale para todos os ramos, e por isso não está no diagrama
+## Por que os ramos não podem ser fundidos
 
-**Ressuscitação salina** mantida ao longo de todo o atendimento, não só na
-medida inicial — é o que corrige a vasodilatação e as pressões de enchimento
-baixas.
+Na intoxicação por **betabloqueador**, a AHA 2025 recomenda vasopressor para
+hipotensão (Classe 1, C-EO), considera razoável glucagon em bólus seguido de
+infusão para bradicardia sintomática ou hipotensão (Classe 2a, C-LD) e posiciona
+insulina em alta dose quando a hipotensão permanece refratária ao vasopressor
+(Classe 1, C-LD). Cálcio pode ser considerado, mas seu apoio vem de casos
+confundidos por tratamentos simultâneos (Classe 2b, C-EO).
 
-**Monitorização seriada de glicemia e potássio** durante toda a infusão de
-insulina em alta dose. A suplementação de glicose provavelmente será
-necessária durante toda a terapia e **por até 24 horas após a suspensão** da
-infusão, pelo risco de hipoglicemia tardia. **A queda do potássio sob
-insulina reflete deslocamento para o intracelular, não depleção dos
-estoques corporais** — não repor de forma agressiva.
+Na intoxicação por **BCC**, insulina em alta dose (Classe 1, B-NR) e vasopressor
+(Classe 1, C-LD) são recomendados para hipotensão; cálcio é razoável (Classe 2a,
+C-EO). A utilidade de glucagon em bólus seguido de infusão é **incerta**
+(Classe 2b, C-EO). Portanto, escrever que “glucagon e cálcio frequentemente
+falham” em ambas as intoxicações apaga diferenças que mudam a sequência.
 
-**A base de evidência da insulina em alta dose é animal e de relatos/séries
-de casos** — não há ensaio clínico controlado publicado em humanos. Em
-modelos animais, a insulina em alta dose mostrou-se superior a sais de
-cálcio, glucagon, epinefrina e vasopressina em sobrevida.
+## Insulina em alta dose: controles inseparáveis
 
-**Emulsão lipídica e ECMO usadas ao mesmo tempo** exigem atenção ao circuito
-— há relato de camadas, aglutinação e formação de coágulos na linha quando
-as duas terapias correm juntas.
+Insulina em alta dose exige protocolo com dextrose e monitorização frequente de
+glicemia e potássio. Hipoglicemia, hipocalemia e sobrecarga de volume são riscos
+explicitamente apontados pela AHA. O potássio pode cair por deslocamento
+intracelular; reposição e velocidade de correção dependem de concentração,
+arritmia e protocolo, não de um reflexo automático.
 
-## Limites
+Este fluxograma deliberadamente não replica dose, concentração ou velocidade de
+infusão. A prescrição deve ser conferida no protocolo institucional e com o
+centro toxicológico, porque envolve insulina em ordem de grandeza muito superior
+ao uso metabólico habitual, dextrose titulada e diferentes sais de cálcio. O
+documento específico de intoxicação por BCC do acervo contém a tabela
+farmacológica e a graduação do consenso de 2017.
 
-- **A revisão-base da parte de insulina é de 2011** e declara explicitamente
-  que não há ensaio clínico controlado em humanos para essa terapia.
-- **O documento-fonte não diferencia a eficácia de atropina, glucagon e
-  cálcio IV entre betabloqueador e bloqueador de canal de cálcio** — este
-  fluxograma trata os três como classe geral nesse ponto; a diferenciação
-  farmacológica clássica (por exemplo, glucagon atuando por via não
-  beta-adrenérgica, mais relevante no betabloqueador) não veio das fontes
-  consultadas para este documento e precisa de **VERIFICAÇÃO HUMANA
-  NECESSÁRIA** antes de orientar conduta.
-- **Emulsão lipídica e ECMO vêm de fontes novas**, pesquisadas especificamente
-  para este fluxograma porque o documento-fonte de hipercalemia/intoxicação
-  não cobre resgate em choque refratário — conferir a posologia da emulsão
-  lipídica e os critérios de acionamento de ECMO do serviço antes de aplicar.
+## Resgate e limites
+
+- ECLS/VA-ECMO é razoável quando o choque cardiogênico permanece refratário às
+  intervenções farmacológicas: Classe 2a, C-LD no betabloqueador adulto e
+  Classe 2a, B-NR no BCC adulto. A mobilização deve começar antes do colapso
+  irreversível.
+- A utilidade da emulsão lipídica intravenosa é incerta tanto no betabloqueador
+  quanto no BCC (Classe 2b, C-EO). A AHA registra relatos de parada abrupta após
+  sua administração; ela não deve ocupar automaticamente um degrau obrigatório
+  antes da ECMO.
+- Atenolol, nadolol e sotalol podem ser dialisáveis em intoxicação grave; essa
+  possibilidade depende do agente e não se aplica à classe inteira.
+- Propranolol pode causar bloqueio de canal de sódio e QRS largo; sotalol pode
+  prolongar repolarização. Esses fenótipos exigem terapias elétricas/toxicológicas
+  adicionais e não cabem no ramo hemodinâmico genérico.
+- Reposição volêmica deve ser guiada por responsividade e congestão. Insistir em
+  salina como medida “essencial” contínua pode piorar sobrecarga sem corrigir a
+  depressão miocárdica.
+
+## Tudo com Tudo
+
+- [Diretriz AHA 2025 de intoxicações cardiotóxicas graves](../Farmacologia/diretriz-aha-2025-intoxicacoes-cardiotoxicas-graves.md)
+- [Intoxicação grave por bloqueador de canal de cálcio: insulina e suporte mecânico](intoxicacao-grave-por-bloqueador-de-canal-de-calcio-insulina-em-dose-alta-euglicemica-e-escalonamento-para-suporte-mecanico.md)
+- [Hipercalemia grave e intoxicação por betabloqueador/BCC](hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio.md)
+- [Choque misto: componente cardiogênico e vasodilatador](choque-misto-componente-cardiogenico-e-vasodilatador-simultaneos-titulacao-dupla.md)
+- [Síndrome BRASH: diferenciar sinergia terapêutica de superdose](../Farmacologia/sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia.md)

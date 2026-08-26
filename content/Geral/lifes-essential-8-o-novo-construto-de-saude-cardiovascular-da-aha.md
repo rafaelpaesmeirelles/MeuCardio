@@ -2,9 +2,11 @@
 title: "Life's Essential 8: o Novo Construto de Saúde Cardiovascular da AHA"
 slug: lifes-essential-8-o-novo-construto-de-saude-cardiovascular-da-aha
 theme: "Geral"
-kind: estudo
+kind: diretriz
+summary: "Estrutura oficial AHA para medir saúde cardiovascular por oito domínios — dieta, atividade física, nicotina, sono, IMC, lipídios, glicemia e pressão arterial — sem confundi-la com escore de risco de eventos."
 review_status: revisado
-source_refs: ["Lloyd-Jones DM, Allen NB, Anderson CAM, et al. Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022;146(5):e18-e43. DOI: 10.1161/CIR.0000000000001078. PMID: 35766027"]
+review_note: "Publicação primária, texto aberto no PMC e página oficial AHA conferidos em 26/08/2026. Classificado como diretriz para tornar o framework oficial localizável na interface; é um Presidential Advisory de mensuração de saúde cardiovascular, não uma diretriz terapêutica nem um estudo primário."
+source_refs: ["Lloyd-Jones DM, Allen NB, Anderson CAM, et al. Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation. 2022;146(5):e18-e43. DOI: 10.1161/CIR.0000000000001078. PMID: 35766027. PMCID: PMC10503546.", "American Heart Association. Life's Essential Eight: Updating and Enhancing the American Heart Association's Cardiovascular Health Construct — página oficial, 29/06/2022. https://professional.heart.org/en/science-news/lifes-essential-8"]
 legacy_source: "Documento novo, escrito no ciclo 16 (07/08/2026). A pasta reúne dezenas de documentos sobre fatores de risco cardiovascular individuais (sono, dieta, atividade física, tabagismo, solidão etc.), mas nenhum documento apresentava o construto oficial que a American Heart Association usa para integrar esses fatores num escore único de saúde cardiovascular. Fecha essa lacuna com o advisory presidencial de Lloyd-Jones et al. 2022, PMID 35766027."
 ---
 
@@ -43,6 +45,14 @@ O Life's Essential 8 não substitui os escores de risco absoluto de evento (como
 - **Comunicação com o paciente**: um escore único de 0 a 100, com 8 componentes nomeados individualmente, é mais fácil de usar numa conversa de mudança de comportamento do que apresentar 8 valores de exame isolados sem hierarquia clara.
 - **Monitoramento longitudinal**: por ser recalculável a cada consulta com os mesmos 8 domínios, permite acompanhar trajetória de melhora ou piora ao longo do tempo, de forma mais granular do que apenas repetir o escore de risco absoluto a cada alguns anos.
 - **Identificação do componente mais deficitário**: ao decompor o escore composto nos 8 componentes individuais, fica explícito qual domínio está "puxando a média para baixo" — útil para direcionar a intervenção prioritária em vez de recomendações genéricas sobre "hábitos saudáveis".
+
+## Conteúdo CorVIA conectado
+
+- [Duração do sono e risco cardiovascular](/biblioteca/duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio)
+- [Atividade física concentrada no fim de semana](/biblioteca/atividade-fisica-concentrada-no-fim-de-semana-e-risco-cardiovascular)
+- [Cigarro eletrônico e risco cardiometabólico](/biblioteca/cigarro-eletronico-vaping-e-risco-cardiometabolico)
+- [Alimentos ultraprocessados e risco cardiovascular](/biblioteca/alimento-ultraprocessado-e-risco-cardiovascular-coorte-nutrinet-sante)
+- [Baixo peso ao nascer e risco cardiovascular futuro](/biblioteca/baixo-peso-ao-nascer-e-risco-cardiovascular-na-vida-adulta)
 
 ## Armadilhas clínicas
 - **Confundir Life's Essential 8 com um escore de risco de evento cardiovascular** — ele mede saúde cardiovascular atual (um construto de estado), não probabilidade de infarto ou AVC em X anos (um construto preditivo); os dois são complementares, não intercambiáveis.

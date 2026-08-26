@@ -2,7 +2,7 @@
 title: "Cardiopatia Chagásica Crônica: Escore de Rassi e Indicação de CDI (Diretriz Brasileira DCEI 2023)"
 slug: cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi
 theme: "Dispositivos"
-kind: protocolo
+kind: diretriz
 review_status: revisado
 source_refs: ["Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892 — seção 4.1.4, Cardiomiopatia Chagásica, e Tabela 23", "Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995"]
 ---
