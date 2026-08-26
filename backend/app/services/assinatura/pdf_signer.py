@@ -22,9 +22,11 @@ simulação: a assinatura em si é real, só não tem timestamp independente.
 from __future__ import annotations
 
 import io
+from datetime import datetime
 
 from asn1crypto import x509 as asn1_x509
 from pyhanko.pdf_utils.incremental_writer import IncrementalPdfFileWriter
+from pyhanko.pdf_utils.layout import BoxConstraints
 from pyhanko.pdf_utils.text import TextBoxStyle
 from pyhanko.sign import fields, signers
 from pyhanko.stamp import QRStampStyle, TextStampStyle
@@ -36,13 +38,32 @@ class FalhaAoAssinar(RuntimeError):
     de entrada está corrompido. Nunca capturado para fingir sucesso."""
 
 
-# Aparencia VISIVEL da mesma assinatura PAdES. Nao e um selo desenhado depois:
-# este widget e criado antes do calculo do hash e integra a revisao assinada.
-# Qualquer alteracao no texto, QR ou no restante do documento invalida a assinatura.
+# Aparencia VISIVEL da mesma assinatura PAdES. O widget da primeira pagina e
+# os selos das paginas adicionais sao criados antes do calculo do hash e
+# integram a revisao assinada. Qualquer alteracao no texto, QR ou no restante
+# do documento invalida a assinatura.
 _CAMPO_VISIVEL_PADRAO = (170, 20, 425, 88)
 # A RCE já possui um quadro regulamentar de identificação/assinatura. O selo
 # deve ocupar a metade direita desse quadro, sem cobrir comprador ou rodapé.
 _CAMPO_VISIVEL_RCE = (285, 220, 545, 270)
+
+
+class _PdfSignerComInstanteFixo(signers.PdfSigner):
+    """Mantém idêntico o horário exibido e o gravado na assinatura.
+
+    Os selos das páginas adicionais são conteúdo normal do PDF, inserido antes
+    do cálculo do hash. Fixar o instante no ``PdfSigningSession`` evita que o
+    selo da primeira página e os demais divirjam ao atravessar um segundo.
+    """
+
+    def __init__(self, *args, instante_assinatura: datetime, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._instante_assinatura = instante_assinatura
+
+    def init_signing_session(self, pdf_out, existing_fields_only=False):
+        sessao = super().init_signing_session(pdf_out, existing_fields_only)
+        sessao.system_time = self._instante_assinatura
+        return sessao
 
 
 def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None):
@@ -89,6 +110,41 @@ def _selo_visivel(codigo_validacao: str | None, url_validacao: str | None):
     return TextStampStyle(**comum)
 
 
+def _aplicar_selo_nas_paginas_adicionais(
+    escritor: IncrementalPdfFileWriter,
+    *,
+    estilo: QRStampStyle | TextStampStyle,
+    nome_assinante: str,
+    instante_assinatura: datetime,
+    url_validacao: str | None,
+) -> None:
+    """Repete a aparência verificável nas páginas 2..N antes de assinar.
+
+    A primeira página recebe o widget PAdES real em ``PdfSigner``. Nas demais,
+    o mesmo selo é aplicado como conteúdo da página *antes* do hash. Assim há
+    uma única assinatura criptográfica cobrindo o arquivo inteiro, e cada
+    página impressa também conserva identificação, horário, QR/URL e código.
+    """
+    total_paginas = int(escritor.root["/Pages"]["/Count"])
+    if total_paginas <= 1:
+        return
+
+    x1, y1, x2, y2 = _CAMPO_VISIVEL_PADRAO
+    parametros = {
+        "signer": nome_assinante,
+        "ts": instante_assinatura.strftime(estilo.timestamp_format),
+    }
+    if url_validacao:
+        parametros["url"] = url_validacao
+    selo = estilo.create_stamp(
+        escritor,
+        BoxConstraints(width=x2 - x1, height=y2 - y1),
+        parametros,
+    )
+    for indice_pagina in range(1, total_paginas):
+        selo.apply(indice_pagina, x1, y1)
+
+
 def assinar_pdf(
     pdf_bytes: bytes, *, pfx_bytes: bytes, senha: str, motivo: str, local: str,
     cadeia_der: list[bytes] | None = None, layout: str | None = None,
@@ -122,11 +178,21 @@ def assinar_pdf(
             box=_CAMPO_VISIVEL_RCE if layout == "RCE" else _CAMPO_VISIVEL_PADRAO,
             readable_field_name="Assinatura digital CorVIA",
         )
-        pdf_signer = signers.PdfSigner(
+        estilo_selo = _selo_visivel(codigo_validacao, url_validacao)
+        instante_assinatura = datetime.now().astimezone()
+        _aplicar_selo_nas_paginas_adicionais(
+            escritor,
+            estilo=estilo_selo,
+            nome_assinante=signer.subject_name or "Assinante do certificado",
+            instante_assinatura=instante_assinatura,
+            url_validacao=url_validacao,
+        )
+        pdf_signer = _PdfSignerComInstanteFixo(
             metadados,
             signer=signer,
-            stamp_style=_selo_visivel(codigo_validacao, url_validacao),
+            stamp_style=estilo_selo,
             new_field_spec=campo_visivel,
+            instante_assinatura=instante_assinatura,
         )
         appearance_text_params = {"url": url_validacao} if url_validacao else None
         saida = pdf_signer.sign_pdf(
