@@ -5,6 +5,7 @@ theme: "Febre reumática"
 kind: diretriz
 summary: "Os cortes numéricos exatos das quatro caixas de critérios da diretriz da World Heart Federation de 2023 — comprimento de jato por peso, velocidade de 3,0 m/s, gradiente de 4,0 mmHg, espessura do folheto anterior mitral por faixa etária — e o estadiamento A-D que substituiu 'borderline', 'definite' e 'latente'. Registra também duas incoerências internas do próprio documento, ainda presentes na versão corrigida pela errata."
 review_status: revisado
+review_note: "Conexões locais revisadas em 26/08/2026. A diretriz WHF foi preservada como nó diagnóstico ecocardiográfico e ligada à diretriz OMS 2024, aos critérios de Jones e aos módulos de profilaxia/valvopatia, sem misturar seus escopos."
 source_refs: ["Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com; o artigo NÃO está indexado no PubMed Central. Boxes 3 a 7 e Tabelas 1 a 3 transcritas item a item em 31/07/2026, na versão já corrigida pela errata abaixo", "Author Correction: 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 May;21(5):347. DOI: 10.1038/s41569-024-01018-w. PMID: 38532021 — errata de referência cruzada (Box 4 para Box 5), sem alteração de valor numérico; verificado que a versão consultada já a incorpora", "Koç S, Arslan D. Echocardiographic evidence of silent carditis in asymptomatic children with elevated antistreptolysin O titers: a cross-sectional study. Cardiol Young. 2026 Jun 24:1-5. DOI: 10.1017/S1047951126113730. PMID: 42339605 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
 ---
 
@@ -150,3 +151,10 @@ Saber onde ela se cala evita procurar em vão:
 - **Laudar "borderline" ou "cardiopatia reumática definitiva".** A nomenclatura foi aposentada, e o estágio A carrega conduta que o termo antigo não tinha
 - **Tratar a linha de fechamento ecogênica das cúspides aórticas como espessamento.** O próprio documento diz que isso é normal na paraesternal de eixo curto
 - **Supor que a morfologia é exigida para diagnosticar cardite na febre reumática AGUDA.** Não é: ali basta a regurgitação mitral e/ou aórtica patológica, pelos critérios confirmatórios
+
+## Tudo com Tudo
+
+- [Diretriz OMS 2024 de prevenção e diagnóstico da febre reumática](febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo.md)
+- [Fluxograma de febre reumática aguda pelos critérios de Jones](fluxograma-febre-reumatica-aguda-criterios-de-jones-2015.md)
+- [Profilaxia secundária antibiótica por categoria de risco](profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md)
+- [Padrão de acometimento valvar na cardiopatia reumática crônica](padrao-de-acometimento-valvar-mitral-versus-aortico-na-cardiopatia-reumatica-cronica-remedy.md)

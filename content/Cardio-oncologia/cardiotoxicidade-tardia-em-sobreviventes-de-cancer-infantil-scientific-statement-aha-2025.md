@@ -2,9 +2,10 @@
 title: "Cardiotoxicidade Tardia em Sobreviventes de Câncer Infantil: Scientific Statement da AHA 2025"
 slug: cardiotoxicidade-tardia-em-sobreviventes-de-cancer-infantil-scientific-statement-aha-2025
 theme: "Cardio-oncologia"
-kind: diretriz
+kind: documento
 review_status: revisado
 source_refs: ["Ryan TD, Bates JE, Kinahan KE, Leger KJ, Mulrooney DA, Narayan HK, Ness K, Okwuosa TM, Rainusso NC, Steinberger J, Armenian SH, et al. Cardiovascular Toxicity in Patients Treated for Childhood Cancer: A Scientific Statement From the American Heart Association. Circulation. 2025;151(15):e926-e943. DOI: 10.1161/CIR.0000000000001308. PMID: 40104841. PMCID: PMC12265934."]
+review_note: "Classificação corrigida em 26/08/2026: a publicação primária é um AHA Scientific Statement, não diretriz com classes e níveis de recomendação. Mantido como documento de consenso, com conexões locais para a coorte de risco tardio, prevenção durante o tratamento e rastreamento pós-radioterapia."
 legacy_source: "Documento novo, escrito em 19/08/2026. Esta pasta já cobre cardiotoxicidade de antraciclina/anti-HER2 e dexrazoxano especificamente em contexto pediátrico agudo, mas não tinha nenhum documento dedicado à cardiotoxicidade TARDIA — o risco cardiovascular de longo prazo no sobrevivente adulto de câncer infantil, que é causa de morte não relacionada a recidiva mais frequente nessa população."
 ---
 
@@ -32,4 +33,9 @@ Preenche uma lacuna real do acervo: nenhum documento cobria especificamente o se
 - **Assumir que só antraciclina e radioterapia importam** — o documento explicitamente amplia o escopo para terapias-alvo modernas
 - **Aplicar um intervalo de triagem universal** — a periodicidade depende da exposição e do risco individual descritos no protocolo integral
 
-Ver também: `dexrazoxano-como-cardioprotecao-na-antraciclina-pediatrica-o-ensaio-do-dfci-all-consortium.md`, nesta mesma pasta, para a cardioproteção durante o tratamento agudo.
+## Tudo com Tudo
+
+- [Risco cardiovascular tardio em sobreviventes de câncer na infância](risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia.md)
+- [Dexrazoxano como cardioproteção durante antraciclina pediátrica](dexrazoxano-como-cardioprotecao-na-antraciclina-pediatrica-o-ensaio-do-dfci-all-consortium.md)
+- [Rastreamento de doença coronariana tardia após radioterapia mediastinal](rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin.md)
+- [Diretriz ESC 2022 de cardio-oncologia](cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer.md)

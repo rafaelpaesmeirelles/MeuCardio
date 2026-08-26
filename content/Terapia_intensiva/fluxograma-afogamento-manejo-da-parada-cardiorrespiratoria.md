@@ -5,7 +5,8 @@ theme: "Terapia intensiva"
 kind: fluxograma
 summary: "Árvore de decisão do afogamento: separa a vítima consciente/respirando (prevenção da parada pelo ABCDE, com oxigênio titulado e escalonamento ventilatório) da vítima inconsciente sem respiração normal, em que a reanimação abre por 5 ventilações — não por compressão — antes de seguir para 30:2, DEA e, se malsucedida, RCP extracorpórea."
 review_status: revisado
-source_refs: ["Lott C, Truhlář A, Alfonzo A, et al.; ERC Special Circumstances Writing Group Collaborators. European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances. Resuscitation. 2021;161:152-219. DOI: 10.1016/j.resuscitation.2021.02.011. PMID: 33773826 — seção 'Drowning', caixa de recomendações práticas."]
+review_note: "Atualizado em 26/08/2026 contra ERC/RCUK 2025. Mantidas as cinco ventilações iniciais com oxigênio a 100% quando disponível, o prosseguimento com RCP padrão e a consideração de ECPR conforme protocolo local; acrescentada a limitação de pressão na bolsa-válvula-máscara para reduzir insuflação gástrica. Os alvos do ramo sem parada permanecem atribuídos à fonte ERC 2021."
+source_refs: ["Lott C, Karageorgos V, Abelairas-Gomez C, et al. European Resuscitation Council Guidelines 2025 Special Circumstances in Resuscitation. Resuscitation. 2025;215 Suppl 1:110753. DOI: 10.1016/j.resuscitation.2025.110753. PMID: 41117569.", "Resuscitation Council UK. Special circumstances guidelines 2025 — seção Drowning, texto oficial conferido em 26/08/2026. https://www.resus.org.uk/library/2025-resuscitation-guidelines/special-circumstances-guidelines", "Lott C, Truhlář A, Alfonzo A, et al. European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances. Resuscitation. 2021;161:152-219. DOI: 10.1016/j.resuscitation.2021.02.011. PMID: 33773826 — mantida para oxigenação e suporte ventilatório no paciente com circulação."]
 ---
 
 # Afogamento — manejo da parada cardiorrespiratória
@@ -38,7 +39,7 @@ flowchart TD
 
   C2(["Reclassificar como vítima sem PCR: seguir a prevenção da<br/>parada pelo ABCDE — via aérea, oxigênio titulado (SpO2 94-98%),<br/>monitorização de FC/PA/ECG"])
 
-  M2["Iniciar compressões torácicas: ciclos de 30 compressões<br/>para 2 ventilações; aplicar DEA assim que disponível e seguir<br/>as instruções; intubar a traqueia se for possível com segurança"]
+  M2["Iniciar compressões torácicas: ciclos de 30 compressões<br/>para 2 ventilações; na bolsa-válvula-máscara, limitar pressão<br/>para reduzir insuflação gástrica; aplicar DEA assim que disponível;<br/>considerar via aérea avançada se puder ser obtida com segurança"]
   M2 --> D3
 
   D3{"Esforços iniciais de reanimação malsucedidos?"}
