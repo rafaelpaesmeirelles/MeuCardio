@@ -16063,5 +16063,400 @@
       "Bet BB, Eijsbroek FC, van Leeuwen E, et al. Fetal premature atrial contractions: natural course, risk factors and adverse outcome. Ultrasound Obstet Gynecol. 2024;63(5):650-657. PMID: 38030959."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-dois-choques-ansiedade-manejo",
+    "titulo": "Dois choques do CDI em um mês: o que fazer além de checar o dispositivo",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, cardiomiopatia isquêmica com CDI de prevenção secundária, recebe dois choques apropriados em três semanas (episódios de taquicardia ventricular). A interrogação do dispositivo confirma detecção e terapia corretas nos dois eventos. Na consulta de retorno, ele relata evitar sair de casa por medo de um novo choque em público e diz estar dormindo mal.",
+    "pergunta": "Além de confirmar o funcionamento adequado do dispositivo, qual é a conduta mais consistente com a evidência sobre sofrimento psicológico pós-choque?",
+    "opcoes": [
+      "Tranquilizar o paciente informando que os choques foram apropriados e agendar retorno de rotina em 6 meses",
+      "Rastrear ansiedade ativamente (ex.: HADS) e encaminhar para terapia cognitivo-comportamental breve, além de revisar a programação do dispositivo visando reduzir terapias futuras",
+      "Prescrever ansiolítico de uso contínuo sem outra investigação",
+      "Recomendar desativação temporária do CDI até a ansiedade melhorar"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Metanálise de quase 40 mil pacientes com CDI mostrou prevalência de ansiedade clinicamente relevante de 22,58% e de TEPT de 12,43%, com OR de 3,92 para ansiedade em pacientes chocados vs. não chocados (Ghezzi et al., EP Europace 2023). O ensaio Screen-ICD mostrou que TCC aplicada por enfermeiro treinado reduziu a ansiedade de forma robusta (d de Cohen -0,86) sem depender de psiquiatra dedicado (Berg et al., Eur J Prev Cardiol 2020). Ansiedade correlaciona com número de terapias recebidas — revisar a programação para reduzir choques futuros também é intervenção psicológica.",
+    "source_refs": [
+      "Ghezzi ES et al. Burden of mood symptoms and disorders in implantable cardioverter defibrillator patients. EP Europace. 2023;25(6):euad130. PMID: 37311667",
+      "Berg SK et al. Cognitive behavioural therapy significantly reduces anxiety in patients with implanted cardioverter defibrillator. Eur J Prev Cardiol. 2020;27(3):258-268. PMID: 31575299"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-atividade-sexual-poppers-pde5i",
+    "titulo": "Síncope durante atividade sexual em uso de tadalafila",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 34 anos, hipertensão arterial pulmonar em uso de tadalafila, apresenta síncope durante atividade sexual. Refere, com hesitação, uso concomitante de \"popper\" (nitrito de amila) para intensificar a experiência.",
+    "pergunta": "Qual é a explicação farmacológica mais provável para o evento?",
+    "opcoes": [
+      "Arritmia ventricular primária desencadeada pelo esforço sexual",
+      "Potenciação sinérgica da vasodilatação — nitrito de amila libera óxido nítrico que ativa a via GMPc, e o PDE5-inibidor bloqueia a degradação desse mesmo GMPc, causando queda de pressão arterial sinérgica",
+      "Reação alérgica aguda ao nitrito de amila",
+      "Efeito isolado da tadalafila em dose terapêutica, sem relação com o popper"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Nitrito de amila e PDE5-inibidores agem na mesma via (óxido nítrico–GMPc) por mecanismos complementares, produzindo queda de pressão sinérgica, não aditiva — por isso nitratos/nitritos são contraindicação formal ao uso concomitante de PDE5i (Kloner et al., J Cardiovasc Pharmacol Ther 2018). Um relato de dois casos em pacientes com HAP em uso de tadalafila descreveu exatamente síncope após uso concomitante de poppers (Salinas et al., 2024, resumo de congresso). A interação pode persistir até 24h após a tadalafila, dada sua meia-vida de 17,5h.",
+    "source_refs": [
+      "Kloner RA et al. A New Perspective on the Nitrate-Phosphodiesterase Type 5 Inhibitor Interaction. J Cardiovasc Pharmacol Ther. 2018;23(5):375-386. PMID: 29739235",
+      "Salinas N et al. \"Pop n' Drop\": Two Cases of Recreational Amyl Nitrite Use Among Patients With Pulmonary Arterial Hypertension on PDE5 Inhibitors Leading to Syncope. Am J Respir Crit Care Med. 2024;209(Suppl 1):A3956"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-jovem-uso-cocaina-betabloqueador",
+    "titulo": "Dor torácica em jovem com uso recente de cocaína: por que não começar com betabloqueador",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 27 anos, chega ao pronto-socorro com dor torácica opressiva há 40 minutos, sem fatores de risco cardiovascular clássicos. Ao ser questionado ativamente, admite uso de cocaína inalada há cerca de 1 hora. ECG mostra supradesnivelamento discreto de ST em parede inferior.",
+    "pergunta": "Qual conduta farmacológica inicial é mais apropriada?",
+    "opcoes": [
+      "Metoprolol intravenoso imediato para controle de frequência cardíaca, como em qualquer SCA",
+      "Benzodiazepínico primeiro, seguido de nitrato e/ou bloqueador de canal de cálcio não di-hidropiridínico; evitar betabloqueador puro nesta fase aguda",
+      "Betabloqueador combinado com IECA em bólus",
+      "Trombolítico imediato sem outra medida, independente do uso de cocaína"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cocaína causa vasoespasmo coronariano por estímulo alfa-adrenérgico não contraposto; betabloqueador puro pode piorar esse vasoespasmo (Lange et al., Ann Intern Med 1990). O manejo agudo de primeira linha é benzodiazepínico, nitrato e bloqueador de canal de cálcio não di-hidropiridínico (Richards et al., Clin Toxicol 2016). A revisão RUTI-Cocaine (Cediel et al., 2018) mostrou que betabloqueador de MANUTENÇÃO pós-alta (não na fase aguda) associou-se a menos MACE — a contraindicação é específica da fase aguda do vasoespasmo, não da classe inteira para sempre.",
+    "source_refs": [
+      "Cediel G et al. β-Blocker treatment and prognosis in acute coronary syndrome associated with cocaine consumption: RUTI-Cocaine Study. Int J Cardiol. 2018;260:7-10. PMID: 29622456",
+      "Lange RA et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. PMID: 1971166"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dispneia-subita-pos-preenchimento-gluteo-clandestino",
+    "titulo": "Dispneia súbita após preenchimento glúteo clandestino",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Mulher trans, 26 anos, chega à emergência com dispneia súbita, hipoxemia e febre baixa, iniciadas cerca de 6 horas antes. No exame, hesita em contar detalhes até ser acolhida sem julgamento; então revela ter feito uma aplicação de \"biopolímero\" em glúteos há 2 dias, em local não regulamentado.",
+    "pergunta": "Qual achado de imagem sustenta fortemente a hipótese diagnóstica mais provável?",
+    "opcoes": [
+      "Consolidação lobar única, compatível com pneumonia bacteriana típica",
+      "Opacidade em vidro fosco de distribuição periférica com espessamento de septos interlobulares na TC de tórax",
+      "Derrame pericárdico volumoso ao ecocardiograma",
+      "Nódulo pulmonar solitário calcificado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A série de referência de Restrepo et al. (2009) descreveu exatamente esse padrão — vidro fosco periférico com espessamento septal — em 100% dos 10 casos de embolia pulmonar por silicone líquido injetado clandestinamente, com 6 dos 10 pacientes evoluindo para SDRA. O atraso na revelação do procedimento é consistente com a barreira de acesso relacional documentada para mulheres trans/travestis no Brasil (transfobia institucional — Pinheiro et al., 2024), reforçando a importância do acolhimento sem julgamento na anamnese.",
+    "source_refs": [
+      "Restrepo CS et al. Silicone pulmonary embolism: report of 10 cases and review of the literature. J Comput Assist Tomogr. 2009;33(2):233-7. PMID: 19346851",
+      "Pinheiro TF et al. Difficulties and advances in access to and use of health services by transgender women and travestis in Brazil. Rev Bras Epidemiol. 2024;27(Suppl 1). PMID: 39166579"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fisiculturista-icterica-sarm",
+    "titulo": "Fisiculturista amador com icterícia após \"suplemento de pesquisa\"",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 24 anos, fisiculturista amador, procura atendimento com icterícia e prurido há 5 dias. Nega uso de esteroide anabolizante, mas relata ter usado, por três meses, um \"suplemento de pesquisa\" comprado pela internet chamado LGD-4033, sem ginecomastia nem outros sinais de virilização.",
+    "pergunta": "Qual é a hipótese diagnóstica mais provável e por quê a ausência de ginecomastia não a exclui?",
+    "opcoes": [
+      "Hepatite viral aguda, sem relação com o suplemento — SARMs não têm hepatotoxicidade descrita",
+      "Lesão hepática colestática induzida por SARM (ligandrol/LGD-4033) — o mecanismo de hepatotoxicidade e supressão gonadal do SARM é distinto do esteroide anabolizante clássico, por isso não produz os mesmos sinais de virilização",
+      "Colecistite aguda calculosa, sem relação com o uso de suplemento",
+      "Hepatite autoimune de início recente, coincidência temporal com o suplemento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Múltiplos relatos de caso descrevem lesão hepática colestática por LGD-4033 e outros SARMs, com resolução após suspensão (Lee et al., Mil Med 2023: bilirrubina de pico 36,37 mg/dL; Labban et al., Cureus 2024: bilirrubina 17 mg/dL, ALT 207). SARMs não produzem os sinais de virilização clássicos dos esteroides anabolizantes esteroides, então a ausência de ginecomastia NÃO exclui hepatotoxicidade — é justamente esse padrão silencioso que a torna fácil de passar despercebida na anamnese.",
+    "source_refs": [
+      "Lee BK et al. Selective Androgen Receptor Modulator-Induced Liver Injury in Active Duty Male. Mil Med. 2023;188(7-8):e2778-e2780. PMID: 35253885",
+      "Labban H et al. LGD-4033 and a Case of Drug-Induced Liver Injury. Cureus. 2024;16(9):e69601. PMID: 39421081"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-obesidade-atraso-diagnostico",
+    "titulo": "Dor torácica atribuída ao peso: quando o viés atrasa o diagnóstico",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Mulher, 45 anos, obesidade grau II, procura atendimento com dispneia aos esforços há 3 semanas. Já havia procurado atendimento duas vezes antes, sendo orientada a \"perder peso\" sem investigação complementar. Hoje o ECG mostra alterações sugestivas de isquemia.",
+    "pergunta": "O que a evidência sobre viés de peso em profissionais de saúde sustenta sobre este cenário?",
+    "opcoes": [
+      "É esperado e não representa problema, já que a obesidade de fato explica a maioria dos sintomas respiratórios",
+      "Médicos apresentam viés implícito anti-obesidade mensurável, associado a menor tempo de consulta e a mais exames pedidos porém com menos investigação real — o sintoma deveria ter sido investigado com a mesma régua usada em paciente magro desde a primeira consulta",
+      "O atraso é justificável porque investigação em paciente obeso tem menor acurácia diagnóstica",
+      "Não há evidência de viés de peso em ambiente médico, o caso é isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com Weight IAT em mais de 359 mil pessoas, incluindo 2.284 médicos, mostrou viés implícito anti-obesidade tão forte quanto na população geral (Sabin et al., 2012). Experimento com 122 médicos mostrou que pacientes mais pesados recebem MAIS exames solicitados mas MENOS tempo de consulta (Hebl & Xu, 2001) — mais exames não substitui anamnese e exame físico completos. \"É o peso\" não deveria ser aceito como explicação suficiente para dispneia sem completar a investigação padrão.",
+    "source_refs": [
+      "Sabin JA et al. Implicit and explicit anti-fat bias among a large sample of medical doctors. PLoS One. 2012;7(11):e48448. PMID: 23144885",
+      "Hebl MR, Xu J. Weighing the care: physicians' reactions to the size of a patient. Int J Obes Relat Metab Disord. 2001;25(8):1246-1252. PMID: 11477511"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "natimorto-previo-rastreio-cardiovascular",
+    "titulo": "História de natimorto e rastreio cardiovascular na consulta anos depois",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 41 anos, procura o cardiologista para avaliação de rotina. Na anamnese reprodutiva, relata ter tido um natimorto há 12 anos, sem complicação hipertensiva na época. Não há outros fatores de risco cardiovascular evidentes.",
+    "pergunta": "Qual é a conduta mais alinhada à evidência sobre natimorto e risco cardiovascular de longo prazo?",
+    "opcoes": [
+      "Ignorar o dado, já que não houve pré-eclâmpsia associada — sem relevância cardiovascular",
+      "Registrar o natimorto como fator de risco cardiovascular relevante na história reprodutiva e reforçar rastreio de diabetes e perfil lipídico, dado o risco aumentado documentado mesmo sem hipertensão gestacional",
+      "Solicitar cateterismo cardíaco de rotina por causa do antecedente",
+      "Recomendar apenas acompanhamento psicológico, sem relevância cardiovascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Coorte sueca de mais de 2,1 milhões de mulheres mostrou risco de mortalidade cardiovascular mais que triplicado após natimorto (HR 3,14; Täufer Cederlöf et al., 2022), independente de complicação hipertensiva concomitante. Metanálise de 56 estudos mostrou RR de 1,16 para diabetes tipo 2 e risco elevado de doença isquêmica/cerebrovascular especificamente após natimorto, não após aborto espontâneo isolado (Vlachou et al., 2024) — reforça rastreio metabólico ativo nessa população.",
+    "source_refs": [
+      "Täufer Cederlöf E et al. Pregnancy Complications and Risk of Cardiovascular Disease Later in Life. J Am Heart Assoc. 2022;11(2):e023079. PMID: 35014876",
+      "Vlachou F et al. Fetal loss and long-term maternal morbidity and mortality. PLoS Med. 2024;21(2):e1004342. PMID: 38335157"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-surdo-infarto-comunicacao-libras",
+    "titulo": "Paciente surdo com dor torácica: comunicação além do bilhete escrito",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Homem, 52 anos, surdo, usuário de Libras, chega ao pronto-socorro acompanhado de um sobrinho ouvinte que se oferece para \"traduzir\". O quadro é de dor torácica típica, e há indicação de cateterismo de urgência.",
+    "pergunta": "Qual conduta de comunicação a evidência sustenta como preferível para obter consentimento e explicar risco?",
+    "opcoes": [
+      "Aceitar o sobrinho como intérprete, já que ele está disponível e conhece Libras básico",
+      "Solicitar intérprete de Libras certificado, idealmente com familiaridade em terminologia médica, e não depender de bilhete escrito nem de acompanhante não certificado para explicar risco/consentimento de procedimento invasivo",
+      "Usar apenas comunicação escrita, já que é mais rápido em uma emergência",
+      "Adiar a explicação de risco até a família providenciar um médico que saiba Libras"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com 203 adultos surdos mostrou que 40% não reconhecem nenhum sintoma de infarto e a mediana de reconhecimento de fatores de risco é metade do esperado (Margellos-Anast et al., 2006) — isso torna frágil supor que um bilhete escrito ou tradução informal garanta compreensão real de um procedimento invasivo. Acesso a provedor/intérprete fluente em língua de sinais associa-se a mais uso de serviços preventivos (McKee et al., 2011). Português escrito pode ser segunda língua com domínio incompleto para usuário de Libras.",
+    "source_refs": [
+      "Margellos-Anast H et al. Cardiovascular disease knowledge among culturally Deaf patients in Chicago. Prev Med. 2006;42(3):235-239. PMID: 16460789",
+      "McKee MM et al. Impact of communication on preventive services among deaf American Sign Language users. Am J Prev Med. 2011;41(1):75-79. PMID: 21665066"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "autismo-adulto-agitacao-nova-equivalente-anginoso",
+    "titulo": "Adulto com autismo e agitação nova: pensar em equivalente anginoso",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 34 anos, transtorno do espectro autista, não verbal, é trazido pelo cuidador por agitação e recusa alimentar iniciadas há 2 dias, sem outra queixa localizatória clara. O cuidador descreve o comportamento como \"fora do habitual\" para ele.",
+    "pergunta": "Qual conduta é mais consistente com a literatura sobre subdiagnóstico cardiovascular em deficiência intelectual/autismo?",
+    "opcoes": [
+      "Atribuir a agitação ao próprio quadro de base e orientar manejo comportamental, sem investigação cardíaca",
+      "Investigar objetivamente (ECG, troponina) como possível equivalente de síndrome coronariana aguda ou descompensação cardíaca, tratando o relato do cuidador sobre mudança do padrão habitual com o mesmo peso clínico de um sintoma verbalizado",
+      "Solicitar apenas avaliação psiquiátrica, sem exame cardiovascular",
+      "Aguardar 1 semana para reavaliação antes de qualquer exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Relatório do LeDeR (Reino Unido) mostrou que arritmias e AVC/AIT são sistematicamente subdetectados em pessoas com deficiência intelectual (atribuído pelos próprios autores a 'falta de detecção', não menor incidência real), e que 54% dos óbitos cardiovasculares nessa população foram classificados como evitáveis. Estudo sueco mostrou mortalidade 2,6x maior em adultos autistas. Dor torácica clássica depende de relato verbal que pacientes não verbais não conseguem produzir — agitação, recusa alimentar e mudança de padrão podem ser o único sinal disponível.",
+    "source_refs": [
+      "Ding J et al. The causes and impact of CVD and circulatory disease in people with a learning disability in the 2022 LeDeR cohort. King's College London, 2024",
+      "Hirvikoski T et al. Premature mortality in autism spectrum disorder. Br J Psychiatry. 2016;208(3):232-238. PMID: 26541693"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-rua-iam-acesso-cateterismo",
+    "titulo": "Paciente em situação de rua com infarto: a disparidade de acesso a cateterismo",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 55 anos, em situação de rua, é trazido por equipe de resgate com dor torácica e supradesnivelamento de ST na parede inferior. Não tem documento, telefone ou endereço para contato de retorno.",
+    "pergunta": "O que a evidência sobre disparidade de acesso sustenta como ponto de atenção nesta situação?",
+    "opcoes": [
+      "A ausência de endereço fixo não deve alterar a probabilidade de indicação de cateterismo — a decisão de intervenção deve seguir o protocolo padrão baseado apenas em critério clínico e de imagem, sem que a condição social do paciente reduza a chance real de acesso ao procedimento",
+      "Cateterismo deve ser adiado até o paciente conseguir um endereço de contato",
+      "A situação de rua contraindica intervenção coronária percutânea por maior risco de sangramento",
+      "É aceitável reduzir a agressividade terapêutica quando não há como agendar seguimento ambulatorial"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Estudo americano com 24.890 internações cardiovasculares de pessoas em situação de rua mostrou taxa de cateterismo de 39,5% contra 70,9% em domiciliados com infarto agudo, e nenhum paciente em situação de rua com parada cardíaca recebeu ICP contra 4,7% dos domiciliados (Wadhera et al., 2020) — disparidade de acesso não justificada clinicamente. A situação de rua deve ser tratada como multiplicador de risco cardiovascular, não como razão para reduzir a agressividade terapêutica.",
+    "source_refs": [
+      "Wadhera RK et al. Disparities in Care and Mortality Among Homeless Adults Hospitalized for Cardiovascular Conditions. JAMA Intern Med. 2020;180(3):357-366. PMID: 31738826"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "paciente-recem-solto-hipertensao-descontrolada",
+    "titulo": "Hipertensão descontrolada em paciente recém-solto do sistema prisional",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem, 47 anos, hipertenso conhecido, comparece à consulta 10 dias após ser solto do sistema prisional. Relata ter ficado sem nenhuma medicação anti-hipertensiva desde a soltura. Pressão arterial na consulta: 176/104 mmHg.",
+    "pergunta": "Qual é a conduta mais alinhada à evidência sobre risco cardiovascular pós-soltura?",
+    "opcoes": [
+      "Tratar apenas como hipertensão não controlada de causa habitual, sem investigar a interrupção do tratamento",
+      "Reconhecer o período pós-soltura como janela de risco cardiovascular elevado (mortalidade cardiovascular ~2,5x maior que a população geral no seguimento), reiniciar tratamento com reconciliação medicamentosa ativa e reforçar retorno precoce",
+      "Orientar apenas mudança de estilo de vida, sem retomar medicação imediatamente",
+      "Encaminhar para avaliação psiquiátrica antes de tratar a hipertensão"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Coorte de Washington mostrou risco de morte 12,7x maior nas 2 primeiras semanas pós-soltura (Binswanger et al., 2007), e seguimento posterior mostrou razão de mortalidade padronizada de 2,49 para morte cardiovascular ao longo de anos (Binswanger et al., 2013). Medicação prescrita na prisão frequentemente não acompanha a pessoa na saída — reconciliação medicamentosa ativa é intervenção concreta nessa janela crítica.",
+    "source_refs": [
+      "Binswanger IA et al. Release from prison—a high risk of death for former inmates. N Engl J Med. 2007;356(2):157-165. PMID: 17215533"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "idoso-equimoses-atipicas-suspeita-maus-tratos",
+    "titulo": "Equimoses em local atípico no idoso: quando considerar maus-tratos",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 79 anos, hipertensa, comparece à consulta cardiológica de rotina acompanhada da filha, que responde por ela na maior parte da consulta. Ao exame, o cardiologista nota equimoses em face e pescoço em diferentes estágios de resolução, sem uso de anticoagulante que as justifique.",
+    "pergunta": "Qual conduta é mais consistente com a evidência sobre reconhecimento de maus-tratos ao idoso?",
+    "opcoes": [
+      "Ignorar o achado por não ser da alçada da cardiologia",
+      "Documentar objetivamente o achado físico sem julgamento sobre autoria, e considerar encaminhamento a serviço social/geriatria/proteção ao idoso conforme a rede disponível, já que face/pescoço são áreas frequentes de equimose por abuso",
+      "Confrontar diretamente a filha na presença da paciente",
+      "Solicitar apenas exames de coagulação, sem mais nenhuma conduta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Revisão sistemática sobre sinais físicos de maus-tratos ao idoso identificou equimose como achado predominante, concentrado em cabeça, face, pescoço e membros superiores (van Houten et al., 2022) — áreas frequentemente expostas em exame cardiovascular de rotina. Maus-tratos associam-se a maior uso de emergência e maior prevalência de síndrome metabólica (Dong & Simon, 2013 e 2015). A conduta correta é documentar e encaminhar via rede, não diagnosticar ou confrontar isoladamente.",
+    "source_refs": [
+      "van Houten ME et al. Types, characteristics and anatomic location of physical signs in elder abuse: a systematic review. Eur Geriatr Med. 2022;13(1):53-85. PMID: 34514555",
+      "Dong X, Simon MA. Association between elder abuse and use of ED. Am J Emerg Med. 2013;31(4):693-698. PMID: 23399343"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "insuficiencia-cardiaca-paciente-quer-jejuar-ramada",
+    "titulo": "Paciente com insuficiência cardíaca quer jejuar no Ramadã",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, insuficiência cardíaca com fração de ejeção reduzida, classe funcional II, compensado, em uso de furosemida, sacubitril-valsartana e espironolactona, pergunta ao cardiologista se pode jejuar no Ramadã.",
+    "pergunta": "Qual conduta é mais consistente com a evidência sobre jejum do Ramadã em IC compensada?",
+    "opcoes": [
+      "Proibir o jejum categoricamente por ter insuficiência cardíaca",
+      "Planejar a adaptação: paciente compensado em classe funcional II pode jejuar com segurança na maioria dos casos, com ajuste de horário do diurético e orientação de distribuição de líquidos entre iftar e suhoor — a não adesão à medicação, não o jejum em si, é o que mais se associa à descompensação",
+      "Autorizar sem qualquer ajuste de esquema medicamentoso",
+      "Suspender toda a medicação durante o mês do Ramadã"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com 249 pacientes com IC e FE reduzida mostrou que 91% completaram o jejum do Ramadã, com 92% estáveis ou melhores; a não adesão à medicação/dieta, não o jejum, foi o fator significativamente associado à descompensação (Abazid et al., 2018). Consenso da Sociedade Tunisiana de Cardiologia recomenda ajuste de horário de diurético e distribuição de líquidos entre iftar e suhoor. Contraindicação ao jejum fica reservada a IC avançada (classe III-IV, PAS<90, internação recente).",
+    "source_refs": [
+      "Abazid RM et al. Effects of Ramadan fasting on the symptoms of chronic heart failure. Saudi Med J. 2018;39(4):395-400. PMID: 29619492"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "gestante-adolescente-pre-eclampsia-obesidade",
+    "titulo": "Gestante adolescente com obesidade: risco multiplicativo de pré-eclâmpsia",
+    "tema": "Gravidez",
+    "nivel": "básico",
+    "enunciado": "Gestante, 16 anos, IMC pré-gestacional de 34 kg/m² (obesidade grau I), 28 semanas, sem hipertensão prévia conhecida. Pressão arterial na consulta: 138/88 mmHg.",
+    "pergunta": "Qual é a leitura correta do risco combinado de idade e obesidade nesta gestante?",
+    "opcoes": [
+      "Os dois fatores têm efeito aditivo simples e discreto sobre o risco de pré-eclâmpsia",
+      "Idade jovem e obesidade se somam de forma multiplicativa, não aditiva — estudo com quase 291 mil gestantes adolescentes mostrou OR ajustado de 3,79 para pré-eclâmpsia/eclâmpsia em adolescentes com obesidade extrema vs. mulheres de 20-24 anos sem obesidade",
+      "A obesidade neutraliza parcialmente o risco da idade jovem",
+      "Nenhum dos dois fatores altera o risco de pré-eclâmpsia isoladamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo populacional americano com 290.807 gestantes de 13-24 anos mostrou OR ajustado de 3,79 (IC95% 3,15-4,55) para pré-eclâmpsia/eclâmpsia em adolescentes com obesidade extrema comparadas a mulheres de 20-24 anos sem obesidade (Aliyu et al., 2010) — evidência de efeito multiplicativo, não apenas soma de dois fatores de risco isolados. Metanálise global mostrou prevalência de 6,7% de pré-eclâmpsia/eclâmpsia em adolescentes (Macedo et al., 2020).",
+    "source_refs": [
+      "Aliyu MH et al. Joint effect of obesity and teenage pregnancy on the risk of preeclampsia. J Adolesc Health. 2010;46(1):77-82. PMID: 20123261",
+      "Macedo TCC et al. Prevalence of preeclampsia and eclampsia in adolescent pregnancy. Eur J Obstet Gynecol Reprod Biol. 2020;248:177-186. PMID: 32283429"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "depressao-pos-parto-pre-eclampsia-rastreio-cardiovascular",
+    "titulo": "Depressão pós-parto após pré-eclâmpsia: dois fatores que se somam",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 32 anos, teve pré-eclâmpsia na última gestação há 8 meses e foi diagnosticada com depressão pós-parto no puerpério imediato, ainda em tratamento. Procura o cardiologista para avaliação de rotina.",
+    "pergunta": "Como interpretar a combinação desses dois antecedentes para o risco cardiovascular desta paciente?",
+    "opcoes": [
+      "Depressão pós-parto é questão exclusivamente psiquiátrica, sem relevância cardiovascular adicional além da pré-eclâmpsia isolada",
+      "A combinação de pré-eclâmpsia com depressão pós-parto carrega risco cardiovascular futuro maior do que qualquer um dos dois fatores isoladamente — metanálise mostrou OR de 1,28 para doença cardiovascular pós-parto nessa combinação",
+      "Depressão pós-parto reduz o risco cardiovascular por levar a mais contato com o sistema de saúde",
+      "Só a pré-eclâmpsia importa; depressão pós-parto não tem mecanismo biológico plausível de risco cardiovascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Metanálise de 11 estudos e mais de 1 milhão de participantes mostrou que depressão pré-natal/perinatal comórbida com hipertensão na gestação associou-se a 28% mais risco de doença cardiovascular pós-parto (OR 1,28; Abate et al., 2025). Coorte sueca mostrou HR 1,36 para doença cardiovascular após depressão perinatal em geral, com HR maior para depressão de início pós-parto (1,42) que anteparto (1,29) (Lu et al., Eur Heart J 2024). Depressão pós-parto deve compor a anamnese cardiovascular, não ficar restrita à psiquiatria.",
+    "source_refs": [
+      "Lu D et al. Perinatal depression and risk of maternal cardiovascular disease: a Swedish nationwide study. Eur Heart J. 2024;45(31):2865-2875. PMID: 38889798",
+      "Abate BB et al. Prenatal depression with comorbid diabetes or hypertension and the risk of adverse postnatal maternal health outcomes. J Psychosom Res. 2025;196:112341. PMID: 40769049"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "migrante-venezuelano-hipertensao-diagnostico-recente",
+    "titulo": "Migrante venezuelano com hipertensão descoberta na primeira consulta",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem, 44 anos, migrante venezuelano, chegou ao Brasil há 3 meses. Nunca havia sido diagnosticado com hipertensão no país de origem. Na primeira consulta, pressão arterial de 168/100 mmHg, sem outros sintomas.",
+    "pergunta": "Qual leitura é mais consistente com a literatura sobre saúde cardiovascular de migrantes forçados?",
+    "opcoes": [
+      "Tratar como hipertensão de início recente sem investigar história prévia — o valor isolado é suficiente para toda a decisão",
+      "Considerar a possibilidade de hipertensão pré-existente não diagnosticada ou com tratamento interrompido durante o deslocamento — estudos em refugiados mostram subdiagnóstico maciço (prevalência biométrica quase o dobro da autorreferida) e reavaliar em curto intervalo antes de decisão terapêutica definitiva",
+      "Assumir que a hipertensão é sempre transitória em migrantes recentes, sem necessidade de tratamento",
+      "Não há literatura relevante sobre isso, decisão deve seguir apenas o valor pressórico isolado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo com refugiados sírios na Jordânia mostrou prevalência biométrica de hipertensão de 39,5% contra 17,2% por autorrelato — subdiagnóstico maciço (Ratnayake et al., 2020). Metanálise mostrou risco cardiovascular 1,71x maior em refugiados. A primeira medida de PA numa consulta inicial pode refletir tanto doença de base quanto semanas de descontrole por interrupção de tratamento durante o trânsito — reavaliação em curto prazo é mais informativa que decisão definitiva na primeira visita.",
+    "source_refs": [
+      "Ratnayake R et al. Access to Care and Prevalence of Hypertension and Diabetes Among Syrian Refugees in Northern Jordan. JAMA Netw Open. 2020;3(10):e2021678",
+      "Al-Rousan T et al. Epidemiology of cardiovascular disease and its risk factors among refugees and asylum seekers. Int J Cardiol Cardiovasc Risk Prev. 2022;12:200126. PMID: 35199106"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-hemorragico-pos-aborto-clandestino",
+    "titulo": "Choque hemorrágico após procedimento abortivo fora do sistema regulado",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 24 anos, chega à emergência com sangramento vaginal volumoso e dor pélvica após procedimento realizado fora do sistema de saúde regulado há 2 dias. Frequência cardíaca 118 bpm, pressão arterial 106/70 mmHg, consciente e orientada.",
+    "pergunta": "Qual afirmação sobre a interpretação dos sinais vitais está correta?",
+    "opcoes": [
+      "Pressão arterial dentro da faixa normal exclui choque hemorrágico significativo",
+      "Sinais vitais 'compensados' (taquicardia com PA ainda preservada) não afastam choque hemorrágico oculto — a resposta simpática compensatória mantém a pressão até que a perda ultrapasse ~30% da volemia; reposição volêmica e controle do foco devem ser priorizados independente da PA aparentemente normal",
+      "Só deve-se considerar choque hemorrágico se houver hipotensão franca já estabelecida",
+      "A taquicardia isolada, sem hipotensão, não requer nenhuma conduta imediata"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A fisiologia do choque hemorrágico mostra que a resposta simpática compensatória (taquicardia, vasoconstrição periférica) mantém a pressão arterial relativamente preservada até que a perda volêmica ultrapasse classicamente 30% — por isso sinais vitais 'normais' não excluem perda significativa (Hooper & Armstrong, StatPearls). No contexto de aborto inseguro, dados do SUS mostram cerca de 200 mil internações/ano por complicações de aborto no Brasil, a maioria fora de indicação médica/legal — o limiar de suspeição clínica na triagem, não a espera por hipotensão franca, é o que muda o desfecho.",
+    "source_refs": [
+      "Domingues RMSM et al. Aborto inseguro no Brasil: revisão sistemática da produção científica, 2008-2018. Cad Saúde Pública. 2020;36(Supl 1):e00190418. PMID: 32049122",
+      "Hooper N, Armstrong TJ. Hemorrhagic Shock. StatPearls Publishing, 2022"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cancer-avancado-ic-refrataria-manter-terapia",
+    "titulo": "Câncer avançado e insuficiência cardíaca refratária: manter ou suspender terapia?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 58 anos, câncer de mama metastático em cuidados paliativos, com insuficiência cardíaca por cardiotoxicidade prévia por antraciclina, em uso de sacubitril-valsartana e empagliflozina. Equipe discute se deve suspender a terapia cardioprotetora dado o prognóstico oncológico limitado.",
+    "pergunta": "O que o ensaio EMPATICC (2026) sustenta sobre essa decisão?",
+    "opcoes": [
+      "Suspender toda terapia de IC automaticamente, já que não há benefício algum em cuidados paliativos oncológicos",
+      "Manter terapia otimizada sem qualquer reavaliação, pois o benefício é sempre presente",
+      "Não há dado que muda a capacidade de autocuidado em 30 dias em população de alta mortalidade precoce (32%), mas entre quem sobrevive além desse ponto há sinal real de benefício (redução de NT-proBNP, melhora de FEVE e de impressão global) — decisão deve ser individualizada e reavaliada em 30 dias, não automática em nenhuma direção",
+      "A decisão deve depender exclusivamente da vontade da equipe assistente, sem base em evidência"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O EMPATICC (Anker et al., Eur Heart J 2026), primeiro ensaio randomizado nesse cenário exato, mostrou desfecho primário hierárquico sem diferença entre terapia otimizada e placebo (win ratio 0,95) e mortalidade de 30 dias de 32% em ambos os braços — mas entre sobreviventes aos 30 dias, NT-proBNP caiu 41%, FEVE subiu 2,9 pontos e a impressão global melhorou (OR 0,22). A leitura correta não é suspender nem manter por reflexo — é decisão compartilhada com reavaliação em 30 dias.",
+    "source_refs": [
+      "Anker MS et al. Heart failure therapy in patients with advanced cancer receiving specialized palliative care (EMPATICC trial). Eur Heart J. 2026;47(9):1034-1046. PMID: 40884070"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "familia-morte-subita-rastreio-cascata-comunicacao",
+    "titulo": "Após morte súbita de um jovem, como orientar o rastreio da família",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Jovem de 19 anos falece subitamente durante atividade esportiva. A autópsia molecular identifica variante patogênica associada a cardiomiopatia hipertrófica. Os pais perguntam ao cardiologista da família como devem proceder com os irmãos do falecido.",
+    "pergunta": "Qual conduta a evidência sobre rastreio em cascata sustenta como mais eficaz?",
+    "opcoes": [
+      "Aguardar que os irmãos procurem espontaneamente um cardiologista, sem plano estruturado",
+      "Produzir carta familiar por escrito explicando a variante e o teste-alvo, agendar aconselhamento genético formal antes ou logo após a alta/óbito, e nomear explicitamente quem vai contar a quem — presença de aconselhamento genético formal está associada a maior adesão ao rastreio em cascata",
+      "Testar apenas o pai e a mãe, já que os irmãos têm risco desprezível",
+      "Não há necessidade de teste genético dirigido; basta ecocardiograma de rotina sem correlação com a variante identificada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Estudo em cardiomiopatia mostrou que, de 53 pacientes com resultado genético positivo, apenas 40% tiveram algum familiar rastreado — mas entre esses, 81% haviam passado por aconselhamento genético formal, a variável que mais separa famílias que se protegem das que não se protegem (Bui et al., 2025). Em programa de morte súbita, a comunicação depende de um único familiar contatado, sem garantia de alcançar todos os parentes de risco (Siskind et al., 2022) — protocolo estruturado de comunicação é o que melhora a adesão real.",
+    "source_refs": [
+      "Bui QM et al. Cardiomyopathy genetic testing: insights into demographics, counseling, and cascade screening. Future Cardiol. 2025;21(6):359-364. PMID: 40200748",
+      "Siskind T et al. Genetic screening of relatives of decedents experiencing sudden unexpected death. J Community Genet. 2022;13(6):629-639. PMID: 36203036"
+    ],
+    "review_status": "revisado"
   }
 ]
