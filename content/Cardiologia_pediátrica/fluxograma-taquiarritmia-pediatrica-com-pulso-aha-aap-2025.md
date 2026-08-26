@@ -5,7 +5,8 @@ theme: "Cardiologia pediátrica"
 kind: fluxograma
 summary: "Árvore de decisão para TSV e taquicardia de QRS largo em lactentes e crianças com pulso, guiada por comprometimento cardiopulmonar e largura do QRS."
 review_status: revisado
-source_refs: ["Topjian AA, Raymond TT, Atkins D, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(suppl 2). Portal oficial AHA CPR & ECC Guidelines, seção 19 — Tachyarrhythmias."]
+review_note: "Fonte primária corrigida e conferida no PubMed em 26/08/2026: a autoria canônica começa por Lasa, não Topjian; PMID, DOI, volume, suplemento e páginas foram adicionados. Mantidas as energias de cardioversão e a restrição de adenosina ao QRS largo regular e monomórfico estável, sem inserir dose farmacológica ausente nesta ficha."
+source_refs: ["Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S479-S537. DOI: 10.1161/CIR.0000000000001368. PMID: 41122885. Publicação companheira em Pediatrics: DOI 10.1542/peds.2025-074351; PMID 41122862."]
 ---
 
 # Taquiarritmia pediátrica com pulso
@@ -49,3 +50,11 @@ flowchart TD
 ## Regra de segurança
 
 Na presença de comprometimento cardiopulmonar, a cardioversão sincronizada é prioritária **independentemente de o mecanismo ser supraventricular ou ventricular**. A diretriz AHA/AAP 2025 recomenda 0,5–1 J/kg inicialmente, escalando para 2 J/kg se necessário.
+
+## Tudo com Tudo
+
+- [Protocolo de taquiarritmia pediátrica com pulso](taquiarritmia-pediatrica-com-pulso-aha-aap-2025.md)
+- [Taquicardia supraventricular no lactente e na criança](taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico.md)
+- [Fluxograma de fibrilação atrial pré-excitada/WPW](fluxograma-fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente.md)
+- [Fluxograma de taquicardia juncional ectópica pós-operatória](fluxograma-taquicardia-juncional-ectopica-pos-operatoria-jet.md)
+- [Taquicardia ventricular idiopática na criança e no adolescente](taquicardia-ventricular-idiopatica-na-crianca-e-no-adolescente-diagnostico-diferencial-manobras-e-decisao-de-tratar.md)

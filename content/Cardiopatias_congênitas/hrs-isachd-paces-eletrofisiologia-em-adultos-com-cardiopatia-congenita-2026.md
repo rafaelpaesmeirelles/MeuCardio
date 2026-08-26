@@ -1,14 +1,15 @@
 ---
-title: "HRS/ISACHD/PACES 2026: Padrões para Eletrofisiologia em Adultos com Cardiopatia Congênita"
+title: "HRS/ISACHD/PACES 2026: Boas Práticas para Programas de Eletrofisiologia em Cardiopatia Congênita do Adulto"
 slug: hrs-isachd-paces-eletrofisiologia-em-adultos-com-cardiopatia-congenita-2026
 theme: "Cardiopatias congênitas"
-kind: diretriz
+kind: documento
 review_status: revisado
 source_refs: ["Khairy P, Etheridge SP, Araujo JJ, et al. HRS/ISACHD/PACES scientific statement on provider and institutional best practices for comprehensive adult congenital heart disease electrophysiology programs. Heart Rhythm. 2026 Jul;23(7):e1275-e1288. DOI: 10.1016/j.hrthm.2026.02.002. PMID: 41679448. Documento oficial HRS e PubMed conferidos em 08/08/2026."]
+review_note: "Classificação corrigida em 26/08/2026: a publicação primária é um scientific statement sobre competências profissionais, infraestrutura e organização de programas, não uma diretriz clínica com classes e níveis de recomendação. O conteúdo foi mantido como documento e conectado às diretrizes e vias clínicas locais de ACHD."
 legacy_source: "Documento novo, 08/08/2026. Atualização publicada na edição de julho de 2026; foco em organização de programas de eletrofisiologia para ACHD, competências e infraestrutura."
 ---
 
-# HRS/ISACHD/PACES 2026: Padrões para Eletrofisiologia em Adultos com Cardiopatia Congênita
+# HRS/ISACHD/PACES 2026: Boas Práticas para Programas de Eletrofisiologia em Cardiopatia Congênita do Adulto
 
 ## Por que esta atualização importa
 A população adulta com cardiopatia congênita já supera numericamente a população pediátrica em muitos sistemas de saúde. Com o envelhecimento dessa coorte, arritmias tornaram-se causa importante de morbidade, internação e mortalidade tardia.
@@ -86,3 +87,11 @@ Quanto maior a complexidade anatômica e cirúrgica, maior deve ser a integraç�
 
 ## Mensagem prática
 Em ACHD, **anatomia, cirurgia prévia, substrato arrítmico e estratégia de acesso precisam ser tratados como uma única decisão clínica**. O documento HRS/ISACHD/PACES 2026 formaliza essa realidade e fornece um modelo para treinamento, credenciamento, organização institucional e segurança procedural.
+
+## Tudo com Tudo
+
+- [Diretriz ACC/AHA 2025 para adultos com cardiopatia congênita](acc-aha-2025-diretriz-adultos-cardiopatia-congenita.md)
+- [Diretriz ESC 2020 de manejo abrangente da cardiopatia congênita do adulto](cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020.md)
+- [Estratificação de risco arrítmico na tetralogia de Fallot operada](estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada.md)
+- [Circulação de Fontan e transposição das grandes artérias no adulto](circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto.md)
+- [Arritmias e síndrome de Eisenmenger](arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto.md)

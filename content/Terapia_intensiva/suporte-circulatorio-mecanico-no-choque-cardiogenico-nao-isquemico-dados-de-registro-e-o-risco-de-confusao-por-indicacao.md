@@ -4,7 +4,7 @@ slug: suporte-circulatorio-mecanico-no-choque-cardiogenico-nao-isquemico-dados-d
 theme: "Terapia intensiva"
 kind: estudo
 review_status: revisado
-source_refs: ["Liu L, Memon B, Zou T, et al. Association of Mechanical Circulatory Support With In-Hospital Outcomes in Non-Ischemic Cardiogenic Shock: A Nationwide Inpatient Study. Clin Cardiol. 2026;49(7):e70416. DOI: 10.1002/clc.70416. PMID: 42487621. PMCID: PMC13392817 — números conferidos contra o abstract indexado no PubMed em 08/08/2026."]
+source_refs: ["Liu L, Memon B, Zou T, et al. Association of Mechanical Circulatory Support With In-Hospital Outcomes in Non-Ischemic Cardiogenic Shock: A Nationwide Inpatient Study. Clin Cardiol. 2026;49(7):e70416. DOI: 10.1002/clc.70416. PMID: 42487621. PMCID: PMC13392817 — coorte analítica, Tabelas 1 e 2 e modelos ajustados conferidos no texto integral aberto em 26/08/2026."]
 legacy_source: "Documento novo, 08/08/2026. Os três documentos já existentes sobre suporte circulatório mecânico no choque cardiogênico desta pasta (IABP-SHOCK II, Impella/DanGer Shock, suporte circulatório mecânico temporário em geral) tratam especificamente de choque cardiogênico de origem ISQUÊMICA (pós-infarto) — é o cenário estudado em praticamente todos os ensaios randomizados da área. Este documento cobre especificamente o choque cardiogênico NÃO isquêmico, população para a qual não existe ensaio randomizado, só dado observacional — e é fundamental que o leitor entenda a diferença de força de evidência entre os dois grupos de documentos."
 ---
 
@@ -12,16 +12,12 @@ legacy_source: "Documento novo, 08/08/2026. Os três documentos já existentes s
 
 ## Por que este documento existe, e por que ele é estruturalmente diferente dos outros desta pasta
 
-Os documentos já publicados sobre suporte circulatório mecânico no choque cardiogênico (IABP-SHOCK
-II, Impella no DanGer Shock, milrinona/dobutamina no DOReMi) descrevem **ensaios clínicos
-randomizados** — o padrão-ouro de evidência. Mas todos eles estudaram especificamente **choque
-cardiogênico de origem isquêmica**, complicando infarto agudo do miocárdio. **Não existe, até esta
-sessão, nenhum ensaio randomizado de suporte circulatório mecânico dedicado ao choque cardiogênico
-NÃO isquêmico** (por exemplo, miocardite fulminante, cardiomiopatia descompensada, choque pós-
-cardiotomia sem etiologia coronariana) — a evidência disponível para essa população é **observacional
-de registro**, com todas as limitações que isso implica. Este documento existe para preencher essa
-lacuna de forma honesta: apresentando o melhor dado disponível, mas com o alerta metodológico que o
-torna seguro de usar na prática.
+Os ensaios randomizados de **dispositivos** já publicados nesta base — IABP-SHOCK II e DanGer
+Shock — estudaram choque cardiogênico relacionado ao infarto. O DOReMi, também citado na pasta,
+comparou milrinona e dobutamina numa população de etiologias variadas, mas não avaliou suporte
+circulatório mecânico. A evidência randomizada de dispositivos no choque **não isquêmico** é muito
+mais limitada; este documento apresenta um estudo observacional nacional e mantém explícitas as
+limitações causais desse desenho.
 
 ## O estudo
 
@@ -40,16 +36,15 @@ torna seguro de usar na prática.
 
 ## Resultados
 
-- **amostra**: 104.045 internações por choque cardiogênico não isquêmico; **6.040 (5,8%) receberam
-  algum SCM**. Entre quem recebeu SCM isolado, IABP foi o mais comum, seguido de Impella e ECMO.
+- **amostra analítica**: 62.059 internações por choque cardiogênico não isquêmico, após excluir
+  41.268 registros com infarto agudo e 718 com combinação de dispositivos; **6.040 (9,7%) receberam
+  uma única estratégia de SCM**. Foram 3.324 com IABP, 1.518 com ECMO e 1.198 com Impella.
 - **mortalidade intra-hospitalar bruta**: 29,5% no conjunto com SCM isolado — **19,9% com IABP**,
   **37,4% com Impella**, **44,3% com ECMO**.
 - **mortalidade ajustada, comparada a nenhum SCM**: IABP associado a **menor** mortalidade
-  observada (aOR 0,58; IC95% 0,53-0,64; p<0,01); **Impella e ECMO associados a maior aOR** de
-  mortalidade (valores exatos não especificados no abstract indexado).
-  **VERIFICAÇÃO HUMANA NECESSÁRIA**: os valores numéricos exatos de aOR/IC para Impella e ECMO não
-  constam no abstract lido nesta sessão — só a direção do efeito (maior risco) foi relatada; quem
-  precisar do número exato deve consultar o artigo completo (PMCID PMC13392817, de acesso aberto).
+  observada (aOR 0,58; IC95% 0,53-0,64; p<0,01), enquanto ECMO (aOR 2,41; IC95% 2,14-2,72;
+  p<0,01) e Impella (aOR 1,39; IC95% 1,24-1,57; p<0,01) se associaram a maior mortalidade. Esses
+  números vêm da Tabela 2 do texto integral e não demonstram efeito causal dos dispositivos.
 - **tempo de internação**: maior com IABP e ECMO; sem diferença significativa com Impella.
 - **custo hospitalar**: todas as estratégias de SCM associadas a custo maior que nenhum SCM, com
   **ECMO mostrando o maior aumento** (razão de custo 3,30; IC95% 3,12-3,50).
@@ -101,9 +96,10 @@ Este é o ponto mais importante do documento, e o motivo de ele existir com este
   estudo expõe, não resolve** — os próprios autores concluem pedindo mais pesquisa, não recomendando
   uma estratégia sobre a outra.
 
-## Verificação humana necessária
+## Limitação documental resolvida nesta revisão
 
-O abstract indexado no PubMed não traz os valores exatos de odds ratio ajustado e intervalo de
-confiança para Impella e ECMO (só a direção do efeito, de maior risco). O artigo tem acesso aberto
-via PMC (PMCID PMC13392817) — quem precisar desses números específicos para decisão de protocolo
-institucional deve consultar o texto completo, não lido nesta sessão.
+O resumo indexado usa 104.045 como denominador inicial, mas o fluxograma e a Tabela 1 do texto
+integral mostram que a coorte analítica, após as exclusões, contém 62.059 internações. A revisão
+adota o denominador analítico e os valores ajustados da Tabela 2. Ainda assim, o NIS não informa a
+gravidade hemodinâmica que determinou a escolha do dispositivo; por isso, as associações não devem
+ser convertidas em preferência terapêutica.

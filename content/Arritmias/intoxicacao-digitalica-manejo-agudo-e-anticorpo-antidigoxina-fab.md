@@ -4,7 +4,8 @@ slug: intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab
 theme: "Arritmias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Cardiac Glycoside (Digoxin) Toxicity. StatPearls, NCBI Bookshelf, NBK459165 — seção de manifestações clínicas e achados eletrocardiográficos, consultada em 30/07/2026", "Digoxin Immune Fab. StatPearls, NCBI Bookshelf, NBK556101 — seção de indicações e fórmulas de dose, consultada em 30/07/2026"]
+review_note: "Revisão de segurança em 26/08/2026 confrontou as doses empíricas com o rótulo FDA/DailyMed vigente do DigiFab. Corrigida a ingestão aguda de quantidade desconhecida de 10 frascos no adulto/5 na criança para 20 frascos, com opção de iniciar 10 e completar mais 10; toxicidade crônica sem nível foi separada em 6 frascos se ≥20 kg e 1 frasco se <20 kg."
+source_refs: ["Cao D, Arens AM, Chow SL, et al. Part 10: Adult and Pediatric Special Circumstances of Resuscitation: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S578-S672. DOI: 10.1161/CIR.0000000000001380. PMID: 41122889.", "DigiFab (Digoxin Immune Fab [Ovine]). Prescribing Information aprovado pelo FDA, DailyMed SPL setid c05ee6a5-c98b-45f4-83fd-40781639d653. Seções 1, 2.1 e 5.3 conferidas em 26/08/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c05ee6a5-c98b-45f4-83fd-40781639d653"]
 legacy_source: "Documento novo — a monografia farmacológica de digoxina (content/Farmacologia/digoxina.md) já descreve os sintomas gerais de toxicidade digitálica, mas sem o antídoto (anticorpo Fab), suas fórmulas de dose, nem o achado eletrocardiográfico patognomônico (taquicardia ventricular bidirecional)."
 ---
 
@@ -32,14 +33,19 @@ Distinção clinicamente relevante porque muda o limiar de tratamento e a interp
 ## Formulas de dose
 - **Dose ingerida conhecida**: número de frascos = carga corporal total de digoxina (mg) ÷ 0,5mg de digoxina ligada por frasco — carga corporal calculada multiplicando a dose ingerida (mg) por 0,8
 - **Concentração sérica conhecida**: número de frascos = concentração sérica de digoxina (ng/mL) × peso (kg) ÷ 100
-- **Dose empírica, quando o nível é desconhecido**: **10 frascos** em adulto; **5 frascos** em criança <20kg
-- **fonte**: StatPearls (Digoxin Immune Fab)
+- **Ingestão aguda de quantidade desconhecida, sem nível disponível**:
+  **20 frascos**. O rótulo permite iniciar 10 frascos e, conforme a resposta
+  clínica, completar mais 10 para reduzir o risco de reação febril. Em criança
+  <20 kg, monitorar sobrecarga de volume.
+- **Toxicidade crônica sem concentração sérica**: **6 frascos** em adultos e
+  crianças ≥20 kg; **1 frasco** em lactentes e crianças <20 kg.
+- **fonte**: rótulo oficial DigiFab, FDA/DailyMed, seção 2.1.
 
 ## Sintese pratica
-O diagnóstico de intoxicação digitálica é primariamente clínico — o nível sérico de digoxina não se correlaciona sempre com a gravidade, e a bidirecional, quando presente, é o achado mais específico. A hiperpotassemia na intoxicação aguda funciona como marcador de gravidade, não como distúrbio a corrigir isoladamente antes do antídoto — o próprio Fab já reduz o potássio ao neutralizar a digoxina livre. As três vias de cálculo de dose do Fab (dose ingerida, nível sérico, ou empírica) cobrem os três cenários práticos: intoxicação testemunhada com dose conhecida, dosagem sérica já disponível, ou paciente gravemente sintomático sem tempo para aguardar resultado laboratorial.
+O diagnóstico de intoxicação digitálica é primariamente clínico — o nível sérico de digoxina não se correlaciona sempre com a gravidade, e a bidirecional, quando presente, é o achado mais específico. A hiperpotassemia na intoxicação aguda funciona como marcador de gravidade, não como distúrbio a corrigir isoladamente antes do antídoto — o próprio Fab já reduz o potássio ao neutralizar a digoxina livre. As vias de cálculo de dose do Fab cobrem intoxicação testemunhada com dose conhecida, dosagem sérica disponível e exposição sem nível. Na ingestão aguda desconhecida, a dose empírica do rótulo é 20 frascos; na toxicidade crônica sem nível, o esquema é menor e depende do corte de 20 kg.
 
 ## Armadilhas clinicas
 - Corrigir hiperpotassemia leve com medidas usuais (insulina/glicose, resina) antes de considerar o Fab na intoxicação aguda — o próprio antídoto já reduz o potássio, e a hiperpotassemia isolada é sinal de gravidade a ser tratado com Fab, não alvo terapêutico independente
 - Descartar intoxicação digitálica por nível sérico "normal" — o diagnóstico é clínico, e a correlação entre nível sérico e gravidade não é absoluta, especialmente na toxicidade crônica
-- Aguardar confirmação laboratorial do nível sérico antes de tratar paciente com complicação com risco de vida (bradicardia sintomática, bloqueio AV refratário, TV) — a dose empírica (10 frascos em adulto) existe exatamente para esse cenário
+- Aguardar confirmação laboratorial do nível sérico antes de tratar paciente com complicação com risco de vida (bradicardia sintomática, bloqueio AV refratário, TV) — na ingestão aguda de quantidade desconhecida, o rótulo indica 20 frascos (podendo iniciar 10 e completar mais 10); não reutilizar a antiga dose de 10 no adulto/5 na criança
 - Usar os mesmos limiares de concentração sérica para intoxicação aguda e crônica — os cortes são diferentes (≥10ng/mL na aguda, >6ng/mL na crônica em adulto), refletindo tempos de exposição e adaptação distintos

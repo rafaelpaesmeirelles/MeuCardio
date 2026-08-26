@@ -63,7 +63,7 @@ Retorno venoso inadequado reduz diretamente o fluxo pulmonar e o débito. Desidr
 
 Por outro lado, pressão venosa já é elevada no Fontan e expansão indiscriminada pode piorar ascite, derrames, congestão hepática e edema.
 
-**Não existe um bolus universal de volume para o Fontan descompensado.** Para quantidade específica: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme perfusão, congestão, ecocardiograma e protocolo de terapia intensiva.
+**Não existe um bolus universal de volume para o Fontan descompensado. Limite de evidência:** a reposição deve ser titulada por perfusão, congestão, ecocardiograma e protocolo de terapia intensiva; esta ficha não cria uma quantidade única.
 
 ## Respiração e ventilação: ponto crítico
 
@@ -78,7 +78,7 @@ Se intubação é indispensável:
 - usar as menores pressões intratorácicas compatíveis com ventilação/oxigenação seguras;
 - individualizar PEEP, porque PEEP excessiva pode reduzir fluxo pulmonar e débito, enquanto PEEP insuficiente também pode favorecer atelectasia/hipóxia e elevar RVP.
 
-A literatura não define uma PEEP universal ótima para todos os pacientes Fontan. Para valor numérico: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme mecânica pulmonar e resposta hemodinâmica.
+A literatura não define uma PEEP universal ótima para todos os pacientes Fontan. **Limite de evidência:** a PEEP deve ser individualizada pela mecânica pulmonar, oxigenação e resposta hemodinâmica; esta ficha não propõe um valor numérico geral.
 
 ## Arritmia pode ser o precipitante principal
 
@@ -121,7 +121,7 @@ Cateterismo hemodinâmico pode ser necessário para definir o mecanismo e permit
 
 Em choque persistente apesar de correção de gatilhos e otimização fisiológica, discutir cedo suporte avançado em centro de cardiopatia congênita, inclusive suporte circulatório mecânico/transplante quando aplicável.
 
-A literatura não estabelece uma catecolamina ou dose universal específica para circulação de Fontan. Para escolha/dose vasoativa: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme fenótipo hemodinâmico e protocolo especializado.
+A literatura não estabelece uma catecolamina ou dose universal específica para circulação de Fontan. **Limite operacional:** agente e dose devem seguir o fenótipo hemodinâmico e o protocolo do centro especializado, sem extrapolação automática nesta ficha.
 
 ## Armadilhas clínicas
 

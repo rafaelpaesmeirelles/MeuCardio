@@ -12,6 +12,7 @@ from app.models.lab_test import LabTest
 from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.models.user import User
+from app.services.study_slug_aliases import canonical_study_slug
 
 router = APIRouter(prefix="/api/favorites", tags=["favoritos"])
 
@@ -53,6 +54,14 @@ def _resumo_item(db: Session, item_type: str, item_id: int) -> dict | None:
         d = db.get(ScientificStudy, item_id)
         if not d:
             return None
+        canonical_slug = canonical_study_slug(d.slug)
+        if canonical_slug != d.slug:
+            canonical = db.query(ScientificStudy).filter(
+                ScientificStudy.slug == canonical_slug,
+                ScientificStudy.published.is_(True),
+            ).first()
+            if canonical:
+                d = canonical
         return {"title": d.title, "slug": d.slug, "url": f"/estudos/{d.slug}", "meta": str(d.year)}
     return None
 

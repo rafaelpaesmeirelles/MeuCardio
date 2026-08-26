@@ -49,7 +49,7 @@ flowchart TD
 
   D5 -->|"Sim"| C6(["Iniciar redução com alvo de PAS 140 mmHg<br/>e manutenção suave na faixa 130-150;<br/>reduzir abaixo de 130 mmHg<br/>é potencialmente prejudicial"])
 
-  D5 -->|"Não"| C7(["HIC grave, grande, com necessidade cirúrgica<br/>ou fora da faixa estudada: benefício e segurança<br/>da redução intensiva não estão estabelecidos;<br/>individualizar com neurologia/neurocirurgia,<br/>evitando picos e grandes oscilações"])
+  D5 -->|"Não"| C7(["Evidência insuficiente para meta única<br/>(PAS >220 mmHg, HIC grande/grave ou<br/>necessidade de descompressão); reduzir<br/>com cautela, monitorando perfusão cerebral<br/>e função renal, sem buscar PAS <130 mmHg"])
 
   D2 -->|"Edema agudo de pulmão"| C8(["Nitroglicerina ou nitroprussiato IV<br/>associado a diurético de alça e suporte<br/>ventilatório conforme congestão;<br/>meta imediata de PAS <140 mmHg;<br/>não iniciar/aumentar betabloqueador<br/>durante descompensação instável"])
 
@@ -62,6 +62,14 @@ flowchart TD
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11 conduta;
 ```
+
+**Limite do ramo de hemorragia intracerebral:** a diretriz AHA/ASA 2022
+considera insuficientes os dados para definir uma faixa-alvo em PAS >220
+mmHg, HIC grande/grave ou pacientes que necessitam descompressão cirúrgica.
+Análise pós-hoc do ATACH-2 em PAS inicial ≥220 mmHg associou a redução
+intensiva a mais deterioração neurológica precoce e eventos renais, sem
+benefício funcional; por isso, a diretriz orienta cautela, e não um alvo
+numérico extrapolado da população leve a moderada.
 
 ## O que vale para todo ramo de emergência, e por isso não está na árvore
 

@@ -4,7 +4,7 @@ slug: limiar-de-transfusao-no-cardiopata-mint-reality-e-trics-iii
 theme: "Terapia intensiva"
 kind: estudo
 review_status: revisado
-source_refs: ["Carson JL, Brooks MM, Hébert PC, Goodman SG, Bertolet M, et al; MINT Investigators. Restrictive or Liberal Transfusion Strategy in Myocardial Infarction and Anemia. N Engl J Med. 2023;389(26):2446-2456. DOI: 10.1056/NEJMoa2307983. PMID: 37952133. PMCID: PMC10837004 — NCT02981407, 3.504 pacientes na análise primária", "Ducrocq G, Gonzalez-Juanatey JR, Puymirat E, Lemesle G, Cachanado M, et al; REALITY Investigators. Effect of a Restrictive vs Liberal Blood Transfusion Strategy on Major Cardiovascular Events Among Patients With Acute Myocardial Infarction and Anemia: The REALITY Randomized Clinical Trial. JAMA. 2021;325(6):552-560. DOI: 10.1001/jama.2021.0135. PMID: 33560322. PMCID: PMC7873781 — NCT02648113, 668 randomizados, aberto, de não inferioridade, 35 hospitais na França e na Espanha. NOTA: existe Erratum em JAMA 2026;336(3):262, registrado mas NÃO lido nesta consulta", "Mazer CD, Whitlock RP, Fergusson DA, Hall J, Belley-Cote E, et al; TRICS Investigators. Restrictive or Liberal Red-Cell Transfusion for Cardiac Surgery. N Engl J Med. 2017;377(22):2133-2144. DOI: 10.1056/NEJMoa1711818. PMID: 29130845 — NCT02042898, 5.243 adultos com EuroSCORE I ≥ 6, aberto, de não inferioridade"]
+source_refs: ["Carson JL, Brooks MM, Hébert PC, Goodman SG, Bertolet M, et al; MINT Investigators. Restrictive or Liberal Transfusion Strategy in Myocardial Infarction and Anemia. N Engl J Med. 2023;389(26):2446-2456. DOI: 10.1056/NEJMoa2307983. PMID: 37952133. PMCID: PMC10837004 — NCT02981407, 3.504 pacientes na análise primária", "Ducrocq G, Gonzalez-Juanatey JR, Puymirat E, Lemesle G, Cachanado M, et al; REALITY Investigators. Effect of a Restrictive vs Liberal Blood Transfusion Strategy on Major Cardiovascular Events Among Patients With Acute Myocardial Infarction and Anemia: The REALITY Randomized Clinical Trial. JAMA. 2021;325(6):552-560. DOI: 10.1001/jama.2021.0135. PMID: 33560322. PMCID: PMC7873781 — NCT02648113, 668 randomizados, aberto, de não inferioridade, 35 hospitais na França e na Espanha. Errata: JAMA. 2026;336(3):262. DOI: 10.1001/jama.2026.0015. PMID: 42340742. PMCID: PMC13294815 — corrige eventos do composto primário para 29 vs. 36, sem alterar a conclusão de não inferioridade", "Mazer CD, Whitlock RP, Fergusson DA, Hall J, Belley-Cote E, et al; TRICS Investigators. Restrictive or Liberal Red-Cell Transfusion for Cardiac Surgery. N Engl J Med. 2017;377(22):2133-2144. DOI: 10.1056/NEJMoa1711818. PMID: 29130845 — NCT02042898, 5.243 adultos com EuroSCORE I ≥ 6, aberto, de não inferioridade"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A pasta tinha os vasoativos, o suporte mecânico e o cuidado pós-parada, mas nenhum documento sobre uma decisão que aparece todo dia na enfermaria e na UTI coronariana: em que hemoglobina transfundir o cardiopata. Os três ensaios não eram citados no repositório, e eles apontam para lados diferentes conforme o cenário — que é exatamente o motivo de precisarem ser lidos juntos."
 ---
 
@@ -40,9 +40,11 @@ Ducrocq G et al., JAMA. 2021;325(6):552-560 (PMID 33560322). **Aberto, de não i
 - **Margem de não inferioridade: limite superior do IC97,5% unilateral abaixo de 1,25**
 
 - **Transfundidos: 122 (35,7%) na restritiva vs. 323 (99,7%) na liberal**; **342 vs. 758 unidades**
-- **Desfecho primário: 36 (11,0%) vs. 45 (14,0%)** — diferença **−3,0%** (IC95% −8,4% a 2,4%)
-- **Risco relativo 0,79** (IC97,5% unilateral **0,00-1,19**) — **critério de não inferioridade ATINGIDO**
-- Morte por qualquer causa **5,6% vs. 7,7%**; reinfarto **2,1% vs. 3,1%**; revascularização de emergência **1,5% vs. 1,9%**; AVC isquêmico não fatal **0,6% nos dois**
+- **Desfecho primário corrigido: 29 (8,9%) vs. 36 (11,3%)** — diferença **−2,4%** (IC95% −7,4% a 2,6%)
+- **Risco relativo 0,79** (IC97,5% unilateral **0,00-1,25**) — **critério de não inferioridade ATINGIDO**
+- Morte por qualquer causa **5,9% vs. 8,1%**; reinfarto **2,1% vs. 3,1%**; revascularização de emergência **1,5% vs. 1,9%**; AVC isquêmico não fatal **0,6% nos dois**
+
+**Errata de 2026:** a análise original incluiu indevidamente eventos de insuficiência cardíaca no composto e classificou quatro participantes com retirada de consentimento antes de 30 dias como sem evento, quando deveriam constar como dados ausentes. A correção reduziu os eventos de 36 para 29 na estratégia restritiva e de 45 para 36 na liberal; a conclusão de não inferioridade não mudou.
 
 **Conclusão literal:** a estratégia restritiva resultou em taxa **não inferior** de eventos em 30 dias; **"no entanto, o intervalo de confiança incluiu o que pode ser um dano clinicamente importante."**
 
@@ -91,7 +93,7 @@ Insuficiência cardíaca — **anemia e deficiência de ferro são problemas dis
 - **O MINT é o único desenhado para superioridade da estratégia liberal**, e não a demonstrou
 - **Os cortes restritivos diferem entre os três** (7-8, 8 e 7,5 g/dL), o que impede comparação direta de magnitude
 - **O REALITY tem 668 pacientes** e idade mediana de 77 anos — coorte pequena e idosa
-- **Existe Erratum do REALITY** (JAMA 2026;336(3):262), **não lido nesta redação**
+- **A errata do REALITY foi incorporada** (JAMA. 2026;336(3):262; PMID 42340742): ela corrige o composto primário, mas não muda a conclusão de não inferioridade
 - **O TRICS III exigiu EuroSCORE I ≥ 6** — é população de risco moderado a alto, não cirurgia cardíaca em geral
 - **Nenhum dos três avalia o paciente com isquemia ativa e instabilidade hemodinâmica**, em que a decisão é individual por definição
 

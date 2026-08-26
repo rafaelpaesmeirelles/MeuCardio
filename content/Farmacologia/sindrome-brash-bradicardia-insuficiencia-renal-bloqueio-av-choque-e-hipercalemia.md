@@ -48,13 +48,13 @@ Esta ficha **não replica doses** já existentes no protocolo de hipercalemia do
 
 Avaliar hipovolemia, sepse, perda gastrointestinal, desidratação, nefrotóxicos e outras causas de injúria renal. Volume deve ser individualizado: tanto hipovolemia quanto congestão podem estar presentes.
 
-Não há um bolus universal definido para BRASH nas revisões publicadas. Para volume numérico específico: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme fenótipo hemodinâmico.
+Não há um bolus universal definido para BRASH nas revisões publicadas. **Limite de evidência:** o volume deve ser titulado ao fenótipo hemodinâmico e à resposta clínica; esta ficha não cria um número específico sem suporte.
 
 ### 4. Bradicardia e choque
 
 A resposta à atropina pode ser limitada porque a fisiopatologia não é predominantemente vagal. Se houver hipoperfusão persistente, o manejo pode exigir suporte cronotrópico/inotrópico/vasopressor e, em casos selecionados, pacing temporário.
 
-As revisões não sustentam um único agente nem uma dose universal para todos os pacientes. Para escolha/dose específica de catecolamina: **VERIFICAÇÃO HUMANA NECESSÁRIA** conforme ACLS, perfil hemodinâmico e protocolo institucional.
+As revisões não sustentam um único agente nem uma dose universal para todos os pacientes. **Limite de evidência:** a escolha e a dose de catecolamina devem seguir o perfil hemodinâmico, o ACLS vigente e o protocolo institucional; esta ficha não transforma relatos de caso em recomendação universal.
 
 ### 5. Diferenciar de intoxicação pura por bloqueador nodal
 

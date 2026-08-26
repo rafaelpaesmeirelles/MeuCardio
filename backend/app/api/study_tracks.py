@@ -16,6 +16,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.study_track import StudyTrack, StudyTrackProgress
 from app.models.user import User
+from app.services.study_slug_aliases import canonical_study_slug, canonicalize_study_slugs
 from app.services.timeline_conhecimento import montar_timeline, temas_disponiveis
 
 router = APIRouter(prefix="/api/trilhas", tags=["trilhas de estudo"])
@@ -110,7 +111,10 @@ def _progresso(db: Session, user_id: int, track: StudyTrack) -> StudyTrackProgre
 
 
 def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapas: bool = True) -> dict:
-    feitas = set((prog.concluidas if prog else []) or [])
+    # Compatibilidade imediata durante o deploy: a reconciliação persiste a
+    # migração, mas este caminho também reconhece progresso antigo antes que o
+    # comando operacional seja executado.
+    feitas = set(canonicalize_study_slugs(prog.concluidas if prog else []))
     etapas = t.etapas or []
     d = {
         "slug": t.slug, "titulo": t.titulo, "tema": t.tema, "objetivo": t.objetivo,
@@ -195,7 +199,8 @@ def marcar(slug: str, dados: MarcarEtapa,
     if t is None:
         raise HTTPException(status_code=404, detail="Trilha não encontrada.")
     validos = {e.get("item_slug") for e in (t.etapas or [])}
-    if dados.item_slug not in validos:
+    item_slug = canonical_study_slug(dados.item_slug)
+    if item_slug not in validos:
         raise HTTPException(status_code=422, detail="Esta etapa não pertence à trilha.")
 
     prog = _progresso(db, user.id, t)
@@ -203,8 +208,8 @@ def marcar(slug: str, dados: MarcarEtapa,
         prog = StudyTrackProgress(user_id=user.id, track_id=t.id, concluidas=[])
         db.add(prog)
 
-    feitas = set(prog.concluidas or [])
-    feitas.add(dados.item_slug) if dados.concluida else feitas.discard(dados.item_slug)
+    feitas = set(canonicalize_study_slugs(prog.concluidas))
+    feitas.add(item_slug) if dados.concluida else feitas.discard(item_slug)
     prog.concluidas = sorted(feitas)
     # A trilha se conclui sozinha quando a última etapa é marcada — não há botão
     # de "finalizar", porque a conclusão é consequência e não decisão.

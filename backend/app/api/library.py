@@ -1,3 +1,5 @@
+import re
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
@@ -21,6 +23,20 @@ from app.models.study_track import StudyTrack
 from app.services.content_areas import content_area_counts
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
+
+_RELATIVE_DOCUMENT_LINK = re.compile(
+    r"(\]\()(?![a-z][a-z\d+.-]*:|//|/|#)(?:[^()\s]+/)*([^/()\s]+)\.md([?#][^)]*)?(\))",
+    re.IGNORECASE,
+)
+
+
+def _library_document_links(body: str) -> str:
+    return _RELATIVE_DOCUMENT_LINK.sub(
+        lambda match: (
+            f"{match[1]}/biblioteca/{match[2]}{match[3] or ''}{match[4]}"
+        ),
+        body,
+    )
 
 # Os mínimos vêm da mesma fonte usada pelo reconciliador operacional. O número
 # de arquivos físicos é certificado pelo inventário versionado e não é inferido
@@ -200,7 +216,7 @@ def get_document(slug: str, db: Session = Depends(get_db), _=Depends(current_use
     d = db.query(Document).filter(Document.slug == slug, Document.published.is_(True)).first()
     if not d:
         raise HTTPException(status_code=404, detail="Documento não encontrado ou ainda em revisão.")
-    return {**_card(d), "body_md": d.body_md, "source_refs": d.source_refs,
+    return {**_card(d), "body_md": _library_document_links(d.body_md), "source_refs": d.source_refs,
             "source_tier": d.source_tier, "gaps": d.gaps, "version": d.version}
 
 

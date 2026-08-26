@@ -1,97 +1,95 @@
 ---
-title: "Hipercalemia grave"
+title: "Fluxograma: hipercalemia aguda no adulto"
 slug: fluxograma-hipercalemia-grave
 theme: "Terapia intensiva"
 kind: fluxograma
-summary: "Árvore de decisão da hipercalemia grave: o padrão do ECG — não só o valor numérico de potássio — decide se entra estabilização de membrana com cálcio, e a parada cardiorrespiratória muda o sal de cálcio indicado; redistribuição intracelular e remoção do potássio seguem em todos os ramos."
+summary: "Conduta adulta na hipercalemia moderada ou grave: confirma o resultado, separa alteração eletrocardiográfica de parada, estabiliza a membrana com dose equivalente de cálcio, desloca potássio e organiza remoção definitiva."
 review_status: revisado
-source_refs: ["Long B, Warix JR, Koyfman A. Controversies in Management of Hyperkalemia. J Emerg Med. 2018;55(2):192-205. DOI: 10.1016/j.jemermed.2018.04.004. PMID: 29731287 — revisão de manejo na emergência", "Kosiborod M, Rasmussen HS, Lavin P, Qunibi WY, Spinowitz B, et al. Effect of sodium zirconium cyclosilicate on potassium lowering for 28 days among outpatients with hyperkalemia: the HARMONIZE randomized clinical trial. JAMA. 2014;312(21):2223-2233. DOI: 10.1001/jama.2014.15688. PMID: 25402495 — NCT02088073, fase 3, 258 na fase aberta e 237 randomizados. NOTA: existe Erratum em JAMA 2015;313(5):526, sobre ERRO DE DOSE no texto, registrado mas NÃO lido nesta consulta"]
+review_note: "Reescrito em 26/08/2026 contra ERC/RCUK 2025 e UK Kidney Association 2023. Corrigida dose potencialmente insuficiente: 10 mL de gluconato de cálcio a 10% foi substituído pela dose equivalente do algoritmo 2025 (30 mL a 10% em 10 min quando o cloreto não estiver disponível; cloreto 10 mL a 10% em 5 min é a opção preferida no algoritmo). Removidos patiromer e combinação automática de diurético/quelante/diálise dos ramos de emergência. O regime de correção com ciclossilicato de sódio e zircônio foi explicitado como 10 g VO três vezes ao dia, por até 48–72 horas conforme resposta e protocolo, com potássio seriado; não é dose única. O fluxo é adulto e não deve ser extrapolado à pediatria, cujas recomendações de cálcio na parada diferem."
+source_refs: ["Lott C, Karageorgos V, Abelairas-Gomez C, et al. European Resuscitation Council Guidelines 2025 Special Circumstances in Resuscitation. Resuscitation. 2025;215 Suppl 1:110753. DOI: 10.1016/j.resuscitation.2025.110753. PMID: 41117569.", "Resuscitation Council UK. Special circumstances guidelines: hyper/hypokalaemia and other electrolyte disorders. Publicado em 27/10/2025. Recomendações e doses conferidas em 26/08/2026. https://www.resus.org.uk/professional-library/2025-resuscitation-guidelines/special-circumstances-guidelines", "Alfonzo A, Harrison A, Baines R, Chu A, Mann S, MacRury M. UK Kidney Association Clinical Practice Guideline: Management of Hyperkalaemia in Adults. Publicada em 19/12/2023; revisão programada para 19/10/2026. https://www.ukkidney.org/health-professionals/guidelines/treatment-acute-hyperkalaemia-adults-0"]
 ---
 
-# Hipercalemia grave
+# Hipercalemia aguda no adulto
 
-Gatilho para este protocolo: **potássio sérico elevado**, **alteração no ECG**
-ou **paciente sob bloqueio do SRAA** com hipercalemia. O eixo que separa as
-condutas não é o número do potássio isolado — é **o padrão do ECG**, do
-paciente sem alteração até o sine-wave, que é emergência com risco de parada
-cardiorrespiratória (PCR) iminente.
+Usar este fluxo no **adulto** com potássio confirmado de 6,0 mmol/L ou mais,
+ou com alteração eletrocardiográfica compatível e forte suspeita clínica. Repetir
+imediatamente uma amostra possivelmente hemolisada, mas não atrasar tratamento se
+há instabilidade, alteração de condução ou parada. Suspender fontes de potássio,
+obter ECG de 12 derivações e iniciar monitorização contínua.
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R["Hipercalemia grave: potássio sérico elevado,<br/>especialmente sob bloqueio do SRAA —<br/>avaliar ECG imediatamente"]
-  R --> D1
+  A["K ≥6,0 mmol/L ou suspeita forte<br/>com alteração eletrocardiográfica"]
+  B["Confirmar amostra sem hemólise; ECG contínuo;<br/>glicemia, função renal e causa; suspender K"]
+  C{"Parada cardiorrespiratória<br/>atribuída à hipercalemia?"}
+  D["ALS padrão + cloreto de cálcio 10% 10 mL IV<br/>+ bicarbonato de sódio 50 mmol IV;<br/>usar linhas separadas ou lavar a linha entre ambos"]
+  E{"Alteração eletrocardiográfica<br/>na hipercalemia grave?"}
+  F["Cloreto de cálcio 10% 10 mL IV em 5 min;<br/>se indisponível, gluconato de cálcio 10%<br/>30 mL IV em 10 min"]
+  G{"K 6,0–6,4 mmol/L<br/>ou ≥6,5 mmol/L?"}
+  H["Insulina solúvel 10 U + glicose 25 g IV;<br/>salbutamol nebulizado 10–20 mg como adjuvante"]
+  N["Insulina solúvel 10 U + glicose 25 g IV;<br/>monitorar glicemia e potássio durante a RCP"]
+  I["Se glicemia prévia <7 mmol/L:<br/>glicose 10% a 50 mL/h por 5 h"]
+  J["Ciclossilicato de sódio e zircônio 10 g VO<br/>3 vezes ao dia na correção, por até 48–72 h;<br/>ajustar/interromper pelo K seriado e discutir<br/>diálise se hipercalemia grave refratária"]
+  K["Repetir K, glicemia e ECG; monitorar rebote;<br/>tratar causa e rever fármacos"]
+  L["Reavaliar diagnóstico e tendência;<br/>tratar causa sem aplicar automaticamente<br/>o pacote de hipercalemia moderada/grave"]
+  M["Na parada refratária: considerar diálise/ECPR<br/>conforme recursos e protocolo local"]
 
-  D1{"ECG: qual o padrão predominante?"}
-  D1 -->|"Sem alteração eletrocardiográfica"| S1
-  D1 -->|"Onda T apiculada (alteração leve/moderada)"| D3
-  D1 -->|"Alargamento de QRS, perda de onda P ou padrão sine-wave (emergência, risco de PCR iminente)"| D5
+  A --> B --> C
+  C -->|"Sim"| D --> N --> M
+  C -->|"Não"| E
+  E -->|"Sim"| F --> H
+  E -->|"Não"| G
+  G -->|"Sim"| H
+  G -->|"Não"| L
+  H --> I --> J --> K
 
-  S1["Redistribuição intracelular: insulina<br/>(regular ou análogo de ação curta) + dextrose/glicose IV,<br/>associada a beta-agonista"]
-  S1 --> D2
-
-  D2{"Função renal permite diurético<br/>e não há indicação de diálise?"}
-  D2 -->|"Sim"| C1
-  D2 -->|"Não — insuficiência renal grave ou refratária"| C2
-
-  C1(["Remover potássio: diurético de alça ou tiazídico<br/>+ resina de troca (patiromer ou ciclossilicato<br/>de zircônio e sódio) para reforço da excreção"])
-  C2(["Remover potássio: diálise — meio mais eficiente —<br/>associada a resina de troca (patiromer/ciclossilicato)<br/>enquanto se organiza o acesso"])
-
-  D3{"Paciente já em parada cardiorrespiratória?"}
-  D3 -->|"Não"| M1
-  D3 -->|"Sim, em PCR"| M2
-
-  M1["Estabilização de membrana:<br/>gluconato de cálcio a 10%, 10 mL IV"]
-  M1 --> S2
-
-  S2["Redistribuição intracelular: insulina + dextrose/glicose IV,<br/>associada a beta-agonista"]
-  S2 --> D4
-
-  D4{"Função renal permite diurético<br/>e não há indicação de diálise?"}
-  D4 -->|"Sim"| C3
-  D4 -->|"Não — insuficiência renal grave ou refratária"| C4
-
-  C3(["Remover potássio: diurético de alça ou tiazídico<br/>+ resina de troca (patiromer ou ciclossilicato<br/>de zircônio e sódio)"])
-  C4(["Remover potássio: diálise — meio mais eficiente —<br/>associada a resina de troca (patiromer/ciclossilicato)<br/>enquanto se organiza o acesso"])
-
-  M2["Estabilização de membrana na parada: CLORETO de cálcio<br/>a 10%, 10 mL IV em bolus (não gluconato) + manobras de RCP"]
-  M2 --> C5
-
-  C5(["Redistribuição concomitante assim que possível<br/>(insulina + dextrose/glicose IV) e diálise emergencial<br/>ao retorno da circulação; seguir o protocolo de PCR<br/>para o restante do atendimento"])
-
-  D5{"Paciente já em parada cardiorrespiratória?"}
-  D5 -->|"Não"| M3
-  D5 -->|"Sim, em PCR"| M4
-
-  M3["Estabilização de membrana urgente: gluconato de cálcio<br/>a 10%, 10 mL IV, repetir se o ECG persistir alterado"]
-  M3 --> S3
-
-  S3["Redistribuição intracelular: insulina + dextrose/glicose IV,<br/>associada a beta-agonista"]
-  S3 --> C6
-
-  C6(["Remover potássio com urgência: diálise —<br/>meio mais eficiente — associada a resina de troca<br/>(patiromer/ciclossilicato) enquanto se organiza o acesso"])
-
-  M4["Estabilização de membrana na parada: CLORETO de cálcio<br/>a 10%, 10 mL IV em bolus (não gluconato) + manobras de RCP"]
-  M4 --> C7
-
-  C7(["Redistribuição concomitante assim que possível<br/>(insulina + dextrose/glicose IV) e diálise emergencial<br/>ao retorno da circulação; seguir o protocolo de PCR<br/>para o restante do atendimento"])
-
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7 conduta;
+  classDef action fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class D,F,H,I,J,K,L,M,N action;
 ```
 
-## O que vale para todos os ramos, e por isso não está no diagrama
+## O que cada etapa faz
 
-**Nunca usar poliestirenossulfonato de sódio** na hipercalemia aguda — a
-revisão de Long et al. afirma literalmente que ele **não é eficaz**, apesar de
-ainda ser prescrito por hábito na emergência.
+- **Cálcio estabiliza a membrana; não remove potássio.** Na hipercalemia grave
+  com alteração eletrocardiográfica, o algoritmo ERC/RCUK 2025 prefere 10 mL de
+  cloreto de cálcio a 10% em 5 minutos. Quando o cloreto não está disponível,
+  a dose alternativa é 30 mL de gluconato a 10% em 10 minutos. Não tratar os
+  dois volumes como equivalentes frasco a frasco.
+- **Insulina/glicose desloca potássio para dentro da célula.** Salbutamol é
+  adjuvante e não substitui insulina/glicose. Verificar glicemia repetidamente;
+  a infusão de glicose após o bólus é indicada pelo algoritmo quando a glicemia
+  pré-tratamento é inferior a 7 mmol/L.
+- **Remoção é necessária para evitar rebote.** O algoritmo 2025 inclui
+  ciclossilicato de sódio e zircônio no regime de correção de **10 g por via
+  oral três vezes ao dia**, por até 48–72 horas conforme resposta e protocolo,
+  com potássio seriado para ajustar ou interromper após a correção; não se trata
+  de uma dose única. Recomenda-se considerar diálise na hipercalemia grave
+  refratária. Diurético só é pertinente quando há
+  diurese e contexto volêmico apropriado; não é um degrau obrigatório.
+- **Patiromer não pertence ao resgate imediato.** Seu início de ação é tardio e
+  a bula não o indica como tratamento emergencial da hipercalemia com risco de
+  vida. Poliestirenossulfonato também não substitui as intervenções de ação
+  rápida nem a diálise quando esta é necessária.
 
-**Monitorização seriada de glicemia** durante e depois da insulina IV, pela
-hipoglicemia. **Potássio e ECG seriados** em todos os ramos, para reavaliar a
-resposta e a necessidade de repetir a estabilização de membrana.
+## Limites de segurança
 
-**Tratar a causa**: revisar e, em geral, suspender temporariamente o
-bloqueador do SRAA que motivou ou agravou a hipercalemia, e investigar outras
-causas (lesão renal aguda, rabdomiólise, acidose, hemólise) em paralelo ao
-tratamento agudo.
+Este fluxo não autoriza repetir cálcio indefinidamente nem prescrever insulina
+sem monitorização de glicose e potássio. Alterações eletrocardiográficas são
+insensíveis: um ECG aparentemente normal não torna seguro observar um paciente
+com potássio muito elevado. A decisão de diálise considera refratariedade,
+função renal, acidose, sobrecarga, catabolismo e possibilidade de rebote.
+
+Na intoxicação digitálica, hiperpotassemia pode indicar fragmentos Fab; seguir o
+fluxo específico e acionar toxicologia, em vez de transportar automaticamente
+toda esta sequência. Em criança, usar protocolo pediátrico próprio; as doses e
+as recomendações da parada adulta acima não devem ser convertidas por peso.
+
+## Tudo com Tudo
+
+- [Fluxograma de parada cardiorrespiratória no adulto](/biblioteca/fluxograma-parada-cardiorrespiratoria-ritmo-inicial)
+- [Fluxograma de intoxicação digitálica](/biblioteca/fluxograma-intoxicacao-digitalica)
+- [Síndrome BRASH](/biblioteca/sindrome-brash-bradicardia-insuficiencia-renal-bloqueio-av-choque-e-hipercalemia)
+- [Ciclossilicato de sódio e zircônio na hipercalemia](/biblioteca/ciclossilicato-de-sodio-e-zirconio-szc-na-hipercalemia-o-ensaio-harmonize)
+- [Patiromer e bloqueio do SRAA no DIAMOND](/biblioteca/hipercalemia-como-barreira-ao-bloqueio-do-sraa-o-ensaio-diamond-com-patiromer)
+- [Hipercalemia e intoxicação por betabloqueador/BCC](/biblioteca/hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio)

@@ -93,3 +93,13 @@ Se houver suspeita de intoxicação, hipercalemia, síndrome BRASH ou outra etio
 **Parada cardíaca** — ausência de pulso muda completamente o algoritmo; este documento pressupõe pulso presente.
 
 **Intoxicações específicas** — digoxina, betabloqueadores, bloqueadores de canal de cálcio e síndrome BRASH têm terapias causais próprias e devem ser conectadas ao fluxo de toxicologia/emergência correspondente.
+
+## Tudo com Tudo
+
+- [Hipercalemia aguda no adulto](../Terapia_intensiva/fluxograma-hipercalemia-grave.md)
+- [Intoxicação digitálica com risco de vida](fluxograma-intoxicacao-digitalica.md)
+- [Intoxicação por betabloqueador ou bloqueador de canal de cálcio](../Terapia_intensiva/fluxograma-intoxicacao-por-betabloqueador-ou-antagonista-de-calcio.md)
+- [Síndrome BRASH](../Farmacologia/fluxograma-sindrome-brash.md)
+- [Indicação de marca-passo na bradiarritmia](../Dispositivos/fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021.md)
+- [Bradicardia pediátrica com pulso](../Cardiologia_pediátrica/fluxograma-bradicardia-pediatrica-com-pulso-aha-aap-2025.md)
+- [Parada cardiorrespiratória no adulto](../Terapia_intensiva/fluxograma-parada-cardiorrespiratoria-ritmo-inicial.md)

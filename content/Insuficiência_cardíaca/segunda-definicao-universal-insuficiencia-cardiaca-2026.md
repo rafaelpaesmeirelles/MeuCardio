@@ -1,14 +1,15 @@
 ---
-title: "Segunda Definição Universal de Insuficiência Cardíaca — AHA/ACC/ESC/WHF 2026"
+title: "Segunda Definição Universal de Insuficiência Cardíaca — Consenso AHA/ACC/ESC/WHF 2026"
 slug: segunda-definicao-universal-insuficiencia-cardiaca-2026
 theme: "Insuficiência cardíaca"
-kind: diretriz
+kind: documento
 review_status: revisado
 source_refs: ["Walsh MN, Kober L, Sliwa K, et al.; Joint AHA/ACC/ESC/WHF Task Force for the Universal Definition of Heart Failure in collaboration with HFSA, HFA and JHFS. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). J Am Coll Cardiol. Published online June 29, 2026. DOI: 10.1016/j.jacc.2026.05.036. PMID: 42370864.", "Walsh MN, Kober L, Sliwa K, et al. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). Circulation. Published online June 29, 2026. DOI: 10.1161/CIR.0000000000001455. PMID: 42366997."]
+review_note: "Classificação corrigida em 26/08/2026: a fonte primária é um Expert Consensus Document de definição/nomenclatura, não diretriz terapêutica com classes e níveis de recomendação. Mantido como documento e conectado aos módulos locais de diagnóstico e tratamento."
 legacy_source: "Documento novo. Consenso internacional co-publicado por JACC/Circulation/EHJ/Global Heart em 29/06/2026; texto integral aberto e registros PubMed conferidos em 13/08/2026. Não é guideline terapêutica."
 ---
 
-# Segunda Definição Universal de Insuficiência Cardíaca — AHA/ACC/ESC/WHF 2026
+# Segunda Definição Universal de Insuficiência Cardíaca — Consenso AHA/ACC/ESC/WHF 2026
 
 ## O que mudou conceitualmente
 Em junho de 2026, AHA, ACC, ESC e WHF, em colaboração com HFSA, HFA e JHFS, publicaram a **Segunda Definição Universal de Insuficiência Cardíaca**.
@@ -138,3 +139,10 @@ Essa descrição contém muito mais informação prognóstica e terapêutica que
 
 ## Mensagem prática
 A Segunda Definição Universal de 2026 desloca a insuficiência cardíaca de uma classificação estática baseada em um número para um modelo **longitudinal, etiológico e fenotípico**. Estágio, causa, trajetória e contexto passam a ter peso explícito ao lado da FEVE. Para a prática, a consequência é simples: **medir a FEVE continua obrigatório; reduzir o paciente à FEVE deixa de ser suficiente.**
+
+## Tudo com Tudo
+
+- [Atualização focada ESC 2023 de insuficiência cardíaca](atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca.md)
+- [Fluxograma da insuficiência cardíaca aguda descompensada](fluxograma-insuficiencia-cardiaca-aguda-descompensada.md)
+- [Estratégia diurética na insuficiência cardíaca aguda](estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada.md)
+- [Consenso ACC 2026 para diagnóstico, fenótipos e tratamento da ICFEp](acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento.md)
