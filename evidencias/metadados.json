@@ -45338,5 +45338,879 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ldl-abaixo-de-55-mg-dl-e-reducao-de-50-porcento-em-risco-muito-alto",
+    "statement": "Em pacientes de risco cardiovascular muito alto (prevenção secundária ou primária), recomenda-se uma redução de LDL-C de pelo menos 50% em relação ao valor basal E uma meta de LDL-C abaixo de 55 mg/dL (1,4 mmol/L).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "LDL-C",
+      "meta de LDL",
+      "risco muito alto",
+      "dislipidemia",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ldl-abaixo-de-70-mg-dl-e-reducao-de-50-porcento-em-alto-risco",
+    "statement": "Em pacientes de risco cardiovascular alto, recomenda-se uma redução de LDL-C de pelo menos 50% em relação ao valor basal E uma meta de LDL-C abaixo de 70 mg/dL (1,8 mmol/L).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "LDL-C",
+      "meta de LDL",
+      "alto risco",
+      "dislipidemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ldl-abaixo-de-100-mg-dl-em-risco-moderado",
+    "statement": "Em pacientes de risco cardiovascular moderado, uma meta de LDL-C abaixo de 100 mg/dL (2,6 mmol/L) deve ser considerada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "LDL-C",
+      "meta de LDL",
+      "risco moderado",
+      "dislipidemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ldl-abaixo-de-116-mg-dl-em-risco-baixo",
+    "statement": "Em pacientes de risco cardiovascular baixo, uma meta de LDL-C abaixo de 116 mg/dL (3,0 mmol/L) deve ser considerada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "LDL-C",
+      "meta de LDL",
+      "risco baixo",
+      "dislipidemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-contraindicada-na-gravidez-e-amamentacao",
+    "statement": "O uso de estatina não é recomendado em mulheres que planejam engravidar, durante a gestação ou durante a amamentação.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "gravidez",
+      "amamentação",
+      "contraindicação",
+      "mulher"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-recomendada-em-doenca-arterial-periferica",
+    "statement": "O tratamento com estatina é recomendado em pacientes com doença arterial periférica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "doença arterial periférica",
+      "aterosclerose"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-ou-estatina-ezetimiba-na-doenca-renal-cronica-estagio-3-a-5",
+    "statement": "Estatina ou a combinação estatina/ezetimiba é recomendada em pacientes com doença renal crônica em estágios 3 a 5, não dependentes de diálise.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "ezetimiba",
+      "doença renal crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-nao-recomendada-em-dialise-sem-doenca-aterosclerotica",
+    "statement": "O início de tratamento com estatina não é recomendado em pacientes dependentes de diálise sem doença aterosclerótica cardiovascular.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "diálise",
+      "doença renal crônica",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "icosapente-etil-em-alto-risco-com-triglicerides-elevados-apesar-de-estatina",
+    "statement": "O icosapente etila (2 x 2 g/dia) em associação com estatina deve ser considerado em pacientes de alto risco (ou risco maior) com triglicerídeos entre 135 e 499 mg/dL (1,5-5,6 mmol/L) apesar do tratamento com estatina.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "icosapente etila",
+      "triglicerídeos",
+      "estatina",
+      "hipertrigliceridemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-para-prevencao-primaria-em-idosos-ate-75-anos",
+    "statement": "O tratamento com estatina para prevenção primária, de acordo com o nível de risco, é recomendado em pessoas idosas com até 75 anos, da mesma forma que em pacientes mais jovens.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "idoso",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inicio-de-estatina-em-idosos-acima-de-75-anos-pode-ser-considerado",
+    "statement": "O início de tratamento com estatina para prevenção primária em pessoas com mais de 75 anos pode ser considerado, particularmente se o risco cardiovascular for alto ou maior.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "idoso",
+      "prevenção primária",
+      ">75 anos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "meta-de-ldl-abaixo-de-55-mg-dl-na-hipercolesterolemia-familiar-de-alto-risco",
+    "statement": "Em pacientes com hipercolesterolemia familiar e doença aterosclerótica cardiovascular, ou com outro fator de risco maior, recomenda-se uma redução de LDL-C de pelo menos 50% em relação ao valor basal e uma meta de LDL-C abaixo de 55 mg/dL (1,4 mmol/L).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipercolesterolemia familiar",
+      "LDL-C",
+      "meta de LDL"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "criterios-clinicos-para-diagnostico-de-hipercolesterolemia-familiar",
+    "statement": "O uso de critérios diagnósticos clínicos, como os Critérios Holandeses da Rede de Clínicas de Lípides (Dutch Lipid Clinic Network Criteria), é recomendado para o diagnóstico clínico de hipercolesterolemia familiar em adultos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipercolesterolemia familiar",
+      "diagnóstico",
+      "critérios clínicos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rastreamento-em-cascata-apos-diagnostico-de-hipercolesterolemia-familiar",
+    "statement": "O rastreamento em cascata (familiar), preferencialmente confirmado por teste genético quando a mutação causadora for identificada, é recomendado assim que um caso de hipercolesterolemia familiar é diagnosticado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "hipercolesterolemia familiar",
+      "rastreamento em cascata",
+      "aconselhamento genético"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ldl-c-como-parametro-lipidico-primario-de-rastreamento",
+    "statement": "O LDL-C é recomendado como o principal parâmetro lipídico para rastreamento, diagnóstico e manejo da dislipidemia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "LDL-C",
+      "perfil lipídico",
+      "rastreamento",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reintroducao-de-estatina-para-confirmar-intolerancia",
+    "statement": "Em pacientes com suspeita de intolerância à estatina, a reintrodução (rechallenge) da estatina é recomendada para estabelecer uma relação causal entre o sintoma e o tratamento antes de concluir por intolerância definitiva.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "estatina",
+      "intolerância à estatina",
+      "efeitos adversos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fenofibrato-associado-a-estatina-em-triglicerides-persistentemente-altos",
+    "statement": "A associação de fenofibrato à estatina pode ser considerada em pacientes com triglicerídeos acima de 200 mg/dL apesar do tratamento com estatina.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "fenofibrato",
+      "triglicerídeos",
+      "estatina",
+      "hipertrigliceridemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lipoproteina-a-deve-ser-dosada-ao-menos-uma-vez-na-vida",
+    "statement": "A dosagem de lipoproteína(a) deve ser considerada ao menos uma vez na vida de cada adulto, para identificar indivíduos com valores muito elevados que carregam um risco de doença aterosclerótica cardiovascular comparável ao da hipercolesterolemia familiar heterozigótica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "lipoproteína(a)",
+      "Lp(a)",
+      "rastreamento",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "colesterol-nao-hdl-como-alvo-secundario-de-tratamento",
+    "statement": "O colesterol não-HDL deve ser considerado como alvo secundário de tratamento, particularmente em pessoas com triglicerídeos elevados, diabetes, obesidade ou LDL-C muito baixo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "colesterol não-HDL",
+      "alvo de tratamento",
+      "triglicerídeos",
+      "diabetes"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "atividade-fisica-150-a-300-minutos-semanais-para-reducao-de-mortalidade-esc-2021",
+    "statement": "Recomenda-se que adultos pratiquem ao menos 150 a 300 minutos por semana de atividade física aeróbica de intensidade moderada, ou 75 a 150 minutos por semana de intensidade vigorosa (ou uma combinação equivalente entre as duas), para reduzir a mortalidade por todas as causas e por doença cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "atividade física",
+      "exercício aeróbico",
+      "mortalidade cardiovascular",
+      "estilo de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "limite-de-100-gramas-de-alcool-por-semana-esc-2021",
+    "statement": "Recomenda-se limitar o consumo de bebida alcoólica a no máximo 100 gramas de álcool por semana.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "álcool",
+      "estilo de vida",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estratificacao-de-risco-cardiovascular-recomendada-em-todos-antes-de-terapia-cardiotoxica",
+    "statement": "A estratificação do risco de toxicidade cardiovascular é recomendada em todos os pacientes com câncer antes do início de terapia antineoplásica potencialmente cardiotóxica. A estratificação de risco não deve, porém, atrasar o início do tratamento oncológico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "estratificação de risco",
+      "avaliação basal",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "comunicar-resultado-da-avaliacao-de-risco-ao-paciente-e-equipe-assistente",
+    "statement": "Comunicar o resultado da avaliação de risco cardiovascular ao paciente e à equipe assistente (oncologista/hematologista) é recomendado, de modo que a estratégia de monitorização e cardioproteção seja compartilhada por toda a equipe.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "estratificação de risco",
+      "comunicação",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferramenta-hfa-icos-para-estratificar-risco-antes-de-terapia-cardiotoxica",
+    "statement": "O uso da ferramenta de risco HFA-ICOS (Heart Failure Association–International Cardio-Oncology Society) deve ser considerado para estratificar o risco cardiovascular basal em pacientes programados para terapia oncológica potencialmente cardiotóxica, classificando-os em baixo, médio, alto ou muito alto risco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "HFA-ICOS",
+      "estratificação de risco",
+      "avaliação basal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "risco-moderado-encaminhamento-a-cardiologia-pode-ser-considerado",
+    "statement": "Em pacientes classificados como risco moderado de toxicidade cardiovascular antes de terapia oncológica, o encaminhamento à cardiologia pode ser considerado — diferente do alto e muito alto risco, em que o encaminhamento é recomendação de Classe I.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "estratificação de risco",
+      "risco moderado",
+      "encaminhamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hbpm-para-profilaxia-de-tev-em-mieloma-multiplo-com-fatores-de-risco",
+    "statement": "A profilaxia de tromboembolismo venoso com heparina de baixo peso molecular é recomendada em pacientes com mieloma múltiplo que apresentam fatores de risco adicionais para tromboembolismo, dado o risco protrombótico elevado desta neoplasia e de seu tratamento (por exemplo, imunomoduladores associados a corticoide).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "mieloma múltiplo",
+      "tromboembolismo venoso",
+      "heparina de baixo peso molecular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitorizacao-de-qtc-basal-dia-14-e-dia-28-no-ribociclibe",
+    "statement": "A monitorização eletrocardiográfica do QTc é recomendada antes do início do ribociclibe, no dia 14 e no dia 28 do primeiro ciclo, pelo risco de prolongamento do intervalo QT associado a este inibidor de CDK4/6.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ribociclibe",
+      "QTc",
+      "inibidor de CDK4/6"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tratamento-de-tev-com-hbpm-em-cancer-e-plaquetas-acima-de-50-mil",
+    "statement": "O tratamento do tromboembolismo venoso associado ao câncer com heparina de baixo peso molecular é recomendado, em dose plena, em pacientes com contagem de plaquetas acima de 50.000/µL.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "tromboembolismo venoso",
+      "heparina de baixo peso molecular",
+      "trombocitopenia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-cardiaca-na-suspeita-de-amiloidose-cardiaca-de-cadeia-leve-al",
+    "statement": "A ressonância magnética cardíaca é recomendada na avaliação de pacientes com suspeita de amiloidose cardíaca de cadeia leve (AL), pela sua capacidade de identificar padrão de realce tardio e alterações teciduais sugestivas de infiltração amiloide.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "amiloidose cardíaca",
+      "cadeia leve AL",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-leve-assintomatica-anti-her2-continuar-terapia",
+    "statement": "Na disfunção cardíaca leve assintomática relacionada à terapia anti-HER2 (FEVE ≥50% associada a queda relativa do strain longitudinal global maior que 15% e/ou elevação de biomarcador cardíaco), continuar a terapia anti-HER2 é recomendado, com monitorização cardíaca mais frequente.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "anti-HER2",
+      "trastuzumabe",
+      "CTRCD leve"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-moderada-assintomatica-anti-her2-continuar-terapia-deve-ser-considerado",
+    "statement": "Na disfunção cardíaca moderada assintomática relacionada à terapia anti-HER2 (nova redução da FEVE para 40-49%), continuar a terapia anti-HER2 deve ser considerado, associada a cardioproteção farmacológica e monitorização cardíaca mais frequente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "anti-HER2",
+      "trastuzumabe",
+      "CTRCD moderada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-moderada-assintomatica-anti-her2-iniciar-ieca-bra-e-betabloqueador",
+    "statement": "Na disfunção cardíaca moderada assintomática relacionada à terapia anti-HER2, iniciar IECA ou BRA e betabloqueador é recomendado, em associação com a decisão de manter a terapia oncológica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "anti-HER2",
+      "trastuzumabe",
+      "cardioproteção",
+      "IECA",
+      "betabloqueador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-grave-assintomatica-anti-her2-interromper-e-iniciar-terapia-de-ic",
+    "statement": "Na disfunção cardíaca grave assintomática relacionada à terapia anti-HER2 (nova FEVE abaixo de 40%), a interrupção temporária da terapia anti-HER2 e o início de terapia para insuficiência cardíaca são recomendados; a decisão de reiniciar a terapia oncológica é multidisciplinar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "anti-HER2",
+      "trastuzumabe",
+      "CTRCD grave",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "miocardite-fulminante-por-ici-uti-e-metilprednisolona-intravenosa",
+    "statement": "Na miocardite fulminante associada a inibidor de checkpoint imunológico, a admissão em unidade de terapia intensiva, o tratamento com metilprednisolona intravenosa em altas doses e o suporte cardiovascular otimizado, incluindo suporte circulatório mecânico quando indicado, são recomendados.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "inibidor de checkpoint imunológico",
+      "miocardite fulminante",
+      "corticosteroide"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "qtcf-maior-ou-igual-a-500ms-suspensao-imediata-do-farmaco-agressor",
+    "statement": "Diante de QTcF ≥500 ms em paciente em tratamento oncológico, a suspensão imediata do fármaco potencialmente causador e a correção de distúrbios eletrolíticos e de outros fatores de risco associados são recomendadas, com ECG repetido a cada 24 horas até a resolução.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "QTc",
+      "prolongamento de QT",
+      "arritmia induzida por fármaco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "internacao-com-monitorizacao-eletrocardiografica-continua-no-primeiro-ciclo-de-inibidor-de-proteassoma-em-al-ca-de-alto-risco",
+    "statement": "Em pacientes com amiloidose cardíaca de cadeia leve (AL-CA) de alto risco que iniciam tratamento com inibidor de proteassoma, a internação com monitorização eletrocardiográfica contínua deve ser considerada no primeiro ciclo de terapia, pelo risco de arritmias e descompensação cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "amiloidose cardíaca",
+      "inibidor de proteassoma",
+      "monitorização eletrocardiográfica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-grave-ou-muito-grave-sintomatica-por-antraciclina-suspender-o-farmaco",
+    "statement": "Na disfunção cardíaca sintomática grave (internação por insuficiência cardíaca) ou muito grave (necessidade de suporte inotrópico, suporte circulatório mecânico ou consideração de transplante) relacionada à quimioterapia com antraciclina, a suspensão da antraciclina é recomendada, com tratamento de insuficiência cardíaca conforme diretriz específica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "CTRCD sintomática",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-leve-assintomatica-por-antraciclina-continuar-sem-interrupcao",
+    "statement": "Na disfunção cardíaca leve assintomática por antraciclina (FEVE ≥50% associada a queda relativa do strain longitudinal global maior que 15% e/ou nova elevação de biomarcador cardíaco), continuar a antraciclina sem interrupção é recomendado, com monitorização cardíaca a cada 1 ou 2 ciclos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "CTRCD leve",
+      "strain longitudinal global"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-leve-por-antraciclina-com-queda-de-strain-ou-troponina-ieca-bra-e-betabloqueador",
+    "statement": "Na disfunção cardíaca leve assintomática por antraciclina definida por queda significativa do strain longitudinal global ou por elevação de troponina acima do limite superior de normalidade, IECA ou BRA e/ou betabloqueador devem ser considerados.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "cardioproteção",
+      "IECA",
+      "betabloqueador",
+      "troponina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ctrcd-leve-por-antraciclina-com-elevacao-de-peptideo-natriuretico-ieca-bra-e-betabloqueador",
+    "statement": "Na disfunção cardíaca leve assintomática por antraciclina definida isoladamente por elevação de peptídeo natriurético acima do limite superior de normalidade, IECA ou BRA e/ou betabloqueador podem ser considerados.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "cardioproteção",
+      "peptídeo natriurético"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antraciclina-lipossomal-para-reduzir-risco-ao-reiniciar-apos-ctrcd-moderada-ou-grave",
+    "statement": "Em pacientes com disfunção cardíaca moderada ou grave relacionada a antraciclina, sintomática ou não, que ainda necessitam de mais quimioterapia com antraciclina, o uso de antraciclina lipossomal pode ser considerado como estratégia de redução do risco cardiovascular ao reiniciar o tratamento.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina lipossomal",
+      "reexposição",
+      "CTRCD"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dexrazoxano-antes-de-cada-ciclo-subsequente-ao-reiniciar-antraciclina-apos-ctrcd",
+    "statement": "Em pacientes com disfunção cardíaca moderada ou grave relacionada a antraciclina, sintomática ou não, que ainda necessitam de mais quimioterapia com antraciclina, o uso de dexrazoxano antes de cada ciclo subsequente pode ser considerado como estratégia de redução do risco cardiovascular ao reiniciar o tratamento — cenário distinto da indicação de dexrazoxano como cardioproteção primária em dose alta planejada de antraciclina.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "dexrazoxano",
+      "reexposição",
+      "antraciclina",
+      "CTRCD"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sobreviventes-de-cancer-avaliacao-anual-de-risco-cardiovascular-com-ecg-e-peptideo-natriuretico",
+    "statement": "Em sobreviventes de câncer que receberam fármaco antineoplásico potencialmente cardiotóxico ou radioterapia com exposição cardíaca, a avaliação anual de risco cardiovascular, incluindo eletrocardiograma e peptídeo natriurético, é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "sobrevivente de câncer",
+      "seguimento de longo prazo",
+      "peptídeo natriurético"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sobreviventes-de-cancer-reestratificacao-de-risco-cardiovascular-aos-5-anos",
+    "statement": "Em sobreviventes de câncer que receberam terapia potencialmente cardiotóxica, a reestratificação formal do risco cardiovascular aos 5 anos do término do tratamento é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "sobrevivente de câncer",
+      "reestratificação de risco",
+      "seguimento de longo prazo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sobrevivente-com-ctrcd-moderada-assintomatica-tardia-ieca-bra-e-betabloqueador",
+    "statement": "No sobrevivente de câncer que desenvolve disfunção cardíaca moderada assintomática de aparecimento tardio, IECA ou BRA e/ou betabloqueador são recomendados.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "sobrevivente de câncer",
+      "CTRCD tardia",
+      "cardioproteção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sobrevivente-com-ctrcd-leve-assintomatica-tardia-ieca-bra-e-betabloqueador-podem-ser-considerados",
+    "statement": "No sobrevivente de câncer que desenvolve disfunção cardíaca leve assintomática de aparecimento tardio, IECA ou BRA e/ou betabloqueador podem ser considerados.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "sobrevivente de câncer",
+      "CTRCD leve tardia",
+      "cardioproteção"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
