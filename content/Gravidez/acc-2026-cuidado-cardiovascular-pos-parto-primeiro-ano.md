@@ -4,6 +4,7 @@ slug: acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano
 theme: "Gravidez"
 kind: diretriz
 review_status: revisado
+review_note: "Registro PubMed e texto integral JACC conferidos em 13/08/2026; conexões locais revisadas em 26/08/2026. Trata-se de ACC Expert Consensus Decision Pathway clínico, sem COR/LOE formais; o nó foi ligado às emergências do puerpério e à prevenção cardiovascular longitudinal sem criar agenda universal de seguimento."
 source_refs: ["Lindley KJ, Bello NA, Berlacher KL, Hameed AB, Lane AD, Mahmoud Z, Malhamé I, Miller EC, Parikh P, Youmans A. Optimization of Postpartum Care for Patients With and at Risk for Premature and Long-Term Cardiovascular Disease: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol. Published online May 22, 2026. DOI: 10.1016/j.jacc.2025.11.001. PMID: 42171544."]
 legacy_source: "Documento novo. ACC Expert Consensus Decision Pathway publicado em 22/05/2026, com texto integral JACC e PubMed conferidos em 13/08/2026. É pathway de consenso, não guideline com COR/LOE formais."
 ---
@@ -146,3 +147,14 @@ Por isso, cuidado multiprofissional não é apenas conveniência organizacional.
 
 ## Mensagem prática
 O cuidado cardiovascular pós-parto deve ser tratado como **linha de cuidado contínua do hospital ao primeiro ano**, com vigilância mais intensa nas primeiras semanas, avaliação abrangente até 12 semanas e transição efetiva para prevenção longitudinal. O principal erro que o ACC 2026 tenta corrigir é o vazio assistencial entre a alta obstétrica e o reconhecimento tardio de doença cardiovascular ou risco cardiometabólico acumulado.
+
+## Tudo com Tudo
+
+- [Cardiomiopatia periparto descompensada e choque no puerpério](cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025.md)
+- [Fluxograma de cardiomiopatia periparto descompensada](fluxograma-cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025.md)
+- [Síndrome coronariana aguda por SCAD na gestação e puerpério](sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025.md)
+- [Fluxograma de hipertensão grave e eclâmpsia](fluxograma-eclampsia-e-hipertensao-grave-na-gestacao.md)
+- [Fluxograma de tromboembolismo pulmonar agudo na gestação e puerpério](fluxograma-tromboembolismo-pulmonar-agudo-na-gestacao-e-puerperio-esc-2025.md)
+- [Distúrbios hipertensivos da gestação e risco cardiovascular de longo prazo](disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026.md)
+- [Depressão pós-parto e risco cardiovascular materno](depressao-pos-parto-risco-cardiovascular-materno.md)
+- [Contraceptivo hormonal combinado e risco tromboembólico](contraceptivo-hormonal-combinado-e-risco-tromboembolico-o-papel-central-do-estrogenio.md)

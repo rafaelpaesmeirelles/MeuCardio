@@ -1,60 +1,114 @@
 ---
-kind: diretriz
-legacy_source: 'protocolos/protocolo-de-febre-reumatica-e-cardiopatia-reumatica-oms-2024.md · Revisado a fundo em 30/07/2026 contra o texto integral da diretriz OMS 2024 (NCBI Bookshelf NBK609692). Duas correções reais, uma delas com risco clínico direto: (1) o documento mandava teste de sensibilidade intradérmico obrigatório antes de cada injeção de penicilina benzatina — a OMS recomenda o oposto, teste NÃO deve ser feito rotineiramente em quem não tem história de alergia, e é conhecida barreira de adesão à profilaxia de longo prazo; (2) as doses de AAS/prednisolona estavam apresentadas como recomendação da OMS, quando a diretriz explicitamente declina recomendar a favor ou contra anti-inflamatório na FR aguda — doses mantidas como referência de protocolo nacional, agora com essa distinção explícita.'
-review_status: revisado
+title: "Febre Reumática e Cardiopatia Reumática: Prevenção e Diagnóstico (OMS 2024)"
 slug: febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo
-source_refs:
-- WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart
-  disease · OMS · 2024 · https://www.who.int/publications/i/item/9789240100077
-- WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease — Summary of recommendations · NCBI Bookshelf NBK609692 · 2024 · https://www.ncbi.nlm.nih.gov/books/NBK609692/ — texto integral das recomendações conferido diretamente em 30/07/2026
-theme: Febre reumática
-title: 'Febre Reumática (FR) e Cardiopatia Reumática (CR): Prevenção, Diagnóstico
-  e Manejo'
+theme: "Febre reumática"
+kind: diretriz
+summary: "Recomendações OMS 2024 para educação, tratamento da faringite estreptocócica, diagnóstico pelos critérios de Jones, ecocardiografia e profilaxia secundária, preservando o sistema GRADE e os limites do escopo oficial."
+review_status: revisado
+review_note: "Revisão de 26/08/2026 contra o resumo integral oficial da OMS/NCBI Bookshelf. Removidos esquemas de AAS, prednisolona, diurético, repouso, duração fixa da profilaxia, profilaxia de endocardite e regras epidemiológicas que vinham de fonte nacional não identificada ou estavam fora do escopo da diretriz OMS 2024. A OMS não formulou recomendação a favor nem contra anti-inflamatórios para impedir progressão para cardiopatia reumática."
+legacy_source: "Documento anteriormente denominado 'Febre Reumática (FR) e Cardiopatia Reumática (CR): Prevenção, Diagnóstico e Manejo'; o escopo foi corrigido para refletir a diretriz OMS 2024, que não é um protocolo completo de tratamento da fase aguda ou da valvopatia estabelecida."
+source_refs: ["World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO; 2024. ISBN 978-92-4-010007-7. PMID: 39631006. NCBI Bookshelf: NBK609707. https://www.ncbi.nlm.nih.gov/books/NBK609707/", "World Health Organization. Summary of recommendations. In: WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. 2024. NCBI Bookshelf: NBK609692. https://www.ncbi.nlm.nih.gov/books/NBK609692/ — texto integral das recomendações conferido em 26/08/2026."]
 ---
 
-# Febre Reumática (FR) e Cardiopatia Reumática (CR): Prevenção, Diagnóstico e Manejo
+# Febre Reumática e Cardiopatia Reumática: Prevenção e Diagnóstico (OMS 2024)
 
-## Definicao
-Problema de saúde pública prevenível, prevalente em países de baixa/média renda e comunidades marginalizadas de países de média/alta renda; CR caracteriza-se por alterações estruturais/funcionais crônicas do coração, mais comumente nas valvas, causadas por um ou mais episódios de FR, com pico diagnóstico entre 20-39 anos
+## Escopo e sistema de gradação
 
-## Criterios diagnosticos jones
-- **criterios maiores**: ['Artrite (migratória, grandes articulações, resolução em poucos dias)', 'Cardite (sopro pansistólico em ápice irradiando para axila - regurgitação mitral; sopro mesodiastólico apical - sopro de Carey Coombs por valvulite mitral; sopro protodiastólico em área aórtica - regurgitação aórtica)', 'Coreia (pode ser manifestação isolada)', 'Nódulos subcutâneos', 'Eritema marginado']
-- **criterios menores**: ['Febre', 'Artralgia', 'Intervalo PR prolongado no ECG', 'Reagentes de fase aguda elevados (VHS, PCR, leucocitose)']
-- **diagnostico paciente novo**: 2 critérios maiores OU 1 maior + 2 menores, associados a evidência de infecção estreptocócica (ASLO elevado ou em ascensão); coreia isolada já é diagnóstica de FR, sem necessidade de outros critérios
-- **diagnostico paciente com crd previa**: 1 critério maior OU 2 menores, associados a evidência de infecção estreptocócica
-- **fonte**: WHO/Federal Ministry of Health
+A diretriz da Organização Mundial da Saúde cobre prevenção primária,
+diagnóstico de febre reumática (FR) e cardiopatia reumática (CR), detecção
+ecocardiográfica e profilaxia antibiótica secundária. Ela usa **GRADE**
+(recomendação forte ou condicional e certeza da evidência), não Classe
+I–III/Nível A–C.
 
-## Manejo agudo
-- **anti-inflamatório — correção importante em 30/07/2026**: a diretriz OMS 2024 **não faz recomendação a favor nem contra** o uso de anti-inflamatórios (AAS, AINE, imunoglobulina intravenosa ou corticosteroide) na FR aguda — texto literal: *"WHO does not recommend either for or against the use of anti-inflammatory agents for children, adolescents and adults diagnosed with RF to prevent the progression to RHD"*, por incapacidade do grupo de desenvolvimento da diretriz de formular recomendação com a evidência disponível. As doses abaixo (AAS 75 mg/kg/dia, prednisolona 2 mg/kg/dia) **não são recomendação da OMS** — são prática clínica comum em protocolo nacional (o "Federal Ministry of Health" da fonte original), mantidas aqui como referência de dose usual, não como recomendação com grau de evidência.
-  - AAS 75 mg/kg/dia dividido a cada 6 horas após refeições; VHS a cada 2 semanas com desmame gradual (redução de 2 comprimidos por semana); em não resposta/intolerância, prednisolona 2 mg/kg/dia por 2 semanas, seguida de reintrodução de AAS (60 mg/kg/dia) por mais 2 semanas com desmame concomitante do corticosteroide
-- **antibiotico**: Uma dose de penicilina benzatina para tratamento, seguida de doses regulares para profilaxia secundária (intervalo abaixo, em "Profilaxia secundária")
-- **cardite com ic**: Furosemida 1-2 mg/kg/dia se houver insuficiência cardíaca; encaminhamento a cardiologista
-- **repouso**: Repouso no leito por 4 semanas
-- **fonte**: WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease, Geneva: WHO, 2024 — seção "Summary of recommendations", conferida diretamente em 30/07/2026 (texto integral, NCBI Bookshelf NBK609692); protocolo de dose de anti-inflamatório mantido do "Federal Ministry of Health" original, explicitamente não endossado pela OMS.
+Não é um protocolo completo de tratamento da cardite, insuficiência cardíaca,
+coreia, valvopatia estabelecida, endocardite ou internação. Esses temas não
+devem receber doses ou condutas atribuídas à OMS 2024 quando a recomendação
+oficial não as formulou.
 
-## Profilaxia secundaria
-- **duracao sem cardite**: Até os 25 anos de idade
-- **duracao com cardite**: Por toda a vida
-- **via preferencial**: penicilina G benzatina intramuscular é a abordagem de primeira linha recomendada pela OMS (recomendação forte, evidência de certeza moderada); penicilina oral é aceitável como alternativa quando a via IM não é possível (recomendação condicional, certeza moderada)
-- **esquema alergia penicilina**: Eritromicina: <7 anos, 250 mg 2x/dia por 10 dias; ≥7 anos, 500 mg 2x/dia por 10 dias — mantido durante toda a duração da profilaxia secundária
-- **teste de sensibilidade — corrigido em 30/07/2026, erro real na versão anterior**: a diretriz OMS 2024 diz o **oposto** do que este verbete trazia. Declaração de boa prática, texto literal: *"Penicillin allergy testing should not be used in patients who have no history of penicillin allergy and who are prescribed IM BPG for secondary prevention of RHD"* — teste de sensibilidade **não deve ser feito rotineiramente** em quem não tem história de alergia. Só em paciente com **história de alergia leve** à penicilina (sem anafilaxia, angioedema, Stevens-Johnson ou necrólise epidérmica tóxica prévias) uma **dose-teste de penicilina oral** pode ser considerada antes da injeção IM (recomendação condicional, certeza baixa) — não é teste intradérmico, e não é feito antes de cada dose, só na avaliação inicial desse subgrupo.
-- **dor da injeção**: anestésico local pode ser adicionado à solução injetável para reduzir a dor da aplicação de penicilina benzatina IM (recomendação condicional, certeza baixa) — medida de adesão, relevante porque dor recorrente é barreira conhecida ao cumprimento da profilaxia de longo prazo.
-- **fonte**: WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease, Geneva: WHO, 2024, seção "Summary of recommendations" — conferida diretamente contra o texto integral em 30/07/2026 (NCBI Bookshelf NBK609692).
+## Educação e prevenção primária
 
-## Profilaxia endocardite bacteriana
-Uma dose de amoxicilina 50 mg/kg, 1 hora antes de procedimentos com risco de bacteremia (ex.: procedimentos dentários), em pacientes com lesão valvar estabelecida
+- Profissionais de saúde devem oferecer educação baseada em evidências sobre
+  a relação entre infecções faríngeas e cutâneas potencialmente causadas por
+  estreptococo do grupo A e FR/CR, sobretudo em populações de risco moderado ou
+  alto (**condicional; certeza muito baixa**).
+- Crianças, adolescentes e adultos com dor de garganta e teste positivo para
+  estreptococo do grupo A devem receber antibiótico para prevenir FR/CR
+  (**forte; certeza moderada**).
+- Onde o risco de FR/CR é moderado ou alto e o teste não está disponível,
+  crianças e adolescentes com faringite clinicamente suspeita devem receber
+  antibiótico (**forte; certeza muito baixa**). A recomendação não inclui
+  adultos nesse cenário sem teste.
+- Penicilina intramuscular ou oral é a primeira escolha quando o teste é
+  positivo ou a faringite se enquadra no cenário clínico acima
+  (**condicional; certeza baixa**).
 
-## Vigilancia epidemiologica
-Notificação obrigatória ao programa nacional de controle de CR, além de rastreamento de contactantes domiciliares com faringite (tratamento com uma injeção de benzatina ou antibiótico oral por 10 dias)
+A OMS não conseguiu formular recomendação sobre uma regra clínica específica
+para diagnosticar faringite estreptocócica, nem a favor ou contra antibiótico
+para infecção de pele com a finalidade específica de prevenir FR/CR.
 
-## Educacao familiar
-Ênfase em manutenção da profilaxia regular, reconhecimento de que faringite pode levar a dano cardíaco grave, e importância de boa higiene dental na prevenção de complicações
+## Diagnóstico de febre reumática
 
-## Diretriz oms 2024 escopo
-Cobre três áreas: prevenção primária (identificação/tratamento de faringite estreptocócica e infecções de pele), prevenção secundária (profilaxia antibiótica de longo prazo, adesão, rastreamento precoce de CR) e manejo de FR aguda (anti-inflamatórios)
+A OMS recomenda usar os **critérios de Jones** em crianças, adolescentes e
+adultos com suspeita de FR (**forte; certeza baixa**). A contagem correta depende
+do risco epidemiológico da população, distingue primeiro episódio de recorrência
+e reconhece cardite subclínica ao Doppler. A árvore completa, com os limiares e
+as exceções da declaração AHA, está em
+[Fluxograma: febre reumática aguda — critérios de Jones revisados](fluxograma-febre-reumatica-aguda-criterios-de-jones-2015.md).
 
-## Criterios internacao
-Cardite com insuficiência cardíaca, coreia grave, necessidade de monitorização durante fase aguda
+## Ecocardiografia e rastreamento
 
-## Armadilhas clinicas
-Diagnosticar FR sem evidência de infecção estreptocócica prévia; interromper profilaxia secundária antes do prazo correto (25 anos sem cardite, vitalícia com cardite); **fazer teste de sensibilidade rotineiro antes de cada dose de penicilina benzatina em paciente sem história de alergia — é o oposto do que a OMS 2024 recomenda, e cria barreira desnecessária à adesão**; apresentar dose de AAS/corticosteroide como recomendação da OMS quando a diretriz explicitamente não recomenda a favor nem contra o uso de anti-inflamatório na FR aguda
+- Quando o ecocardiograma convencional não está disponível, ecocardiografia
+  portátil pode ser usada para diagnosticar cardite por FR e CR
+  (**forte; certeza muito baixa para cardite e moderada para CR**).
+- Em populações de risco moderado ou alto, rastreamento ecocardiográfico de
+  gestantes durante o pré-natal pode ser considerado
+  (**condicional; certeza muito baixa**).
+- Em populações de alta prevalência, rastreamento com aparelho convencional ou
+  portátil pode ser implementado entre 5 e 19 anos
+  (**forte; certeza alta**).
+
+## Profilaxia secundária
+
+- Pessoas com diagnóstico de FR ou CR devem receber profilaxia antibiótica para
+  prevenir recorrência (**forte; certeza moderada**).
+- Crianças e adolescentes que atingem os critérios ecocardiográficos mínimos de
+  CR no rastreamento devem receber profilaxia para reduzir progressão
+  (**forte; certeza moderada**). Em adultos a partir de 20 anos, a profilaxia
+  pode ser prescrita (**condicional; certeza muito baixa**).
+- Crianças e adolescentes com CR avançada devem receber profilaxia
+  (**forte; certeza muito baixa**). Em adultos a partir de 20 anos com doença
+  avançada, a decisão deve ser compartilhada
+  (**condicional; certeza muito baixa**).
+- Penicilina G benzatina intramuscular é a primeira escolha
+  (**forte; certeza moderada**); penicilina oral é alternativa quando a via IM
+  não pode ser usada (**condicional; certeza moderada**).
+- Teste de alergia à penicilina **não deve ser usado** em quem não tem história
+  de alergia e receberá penicilina G benzatina IM (declaração de boa prática).
+  Em alergia prévia leve, sem anafilaxia, angioedema, síndrome de Stevens–Johnson
+  ou necrólise epidérmica tóxica, uma dose-teste oral pode ser considerada antes
+  da via IM (**condicional; certeza baixa/muito baixa conforme o tipo de reação**).
+- Anestésico local pode ser adicionado à solução injetável para reduzir dor
+  (**condicional; certeza baixa**), e intervenções para adesão devem acompanhar a
+  prescrição (**forte; certeza baixa**).
+
+A síntese OMS não estabelece uma única duração ou um único intervalo de
+aplicação para todos os perfis. Esquemas e duração por risco estão separados,
+com fonte própria, em
+[Profilaxia secundária antibiótica na febre reumática](profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md).
+
+## Anti-inflamatórios na fase aguda
+
+O grupo elaborador **não conseguiu formular recomendação**. Portanto, a OMS
+2024 não recomenda a favor nem contra AAS, AINE, imunoglobulina intravenosa ou
+corticosteroide para impedir progressão de FR para CR. Isso não significa que
+todos esses fármacos sejam equivalentes ou contraindicados; significa que
+qualquer esquema sintomático deve vir de outra fonte explicitamente identificada,
+sem receber uma classe de recomendação inexistente da OMS.
+
+## Tudo com Tudo
+
+- [Fluxograma diagnóstico pelos critérios de Jones](fluxograma-febre-reumatica-aguda-criterios-de-jones-2015.md)
+- [Profilaxia secundária: esquema e duração por risco](profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco.md)
+- [Artrite na febre reumática: naproxeno como alternativa ao AAS](tratamento-da-artrite-na-febre-reumatica-aguda-naproxeno-como-alternativa-ao-aas.md)
+- [Artrite reativa pós-estreptocócica: diferencial com febre reumática](artrite-reativa-pos-estreptococica-psra-diagnostico-diferencial-com-febre-reumatica.md)
+- [Padrão valvar da cardiopatia reumática crônica](padrao-de-acometimento-valvar-mitral-versus-aortico-na-cardiopatia-reumatica-cronica-remedy.md)

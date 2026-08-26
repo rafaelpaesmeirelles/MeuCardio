@@ -3,8 +3,10 @@ title: "ESC 2023: diretriz de endocardite infecciosa"
 slug: esc-2023-diretriz-endocardite-infecciosa
 theme: "Endocardite"
 kind: diretriz
+summary: "Resumo canônico da diretriz ESC 2023 de endocardite infecciosa, conectado ao protocolo detalhado, fluxograma, critérios Duke-ISCVID, antimicrobianos, cirurgia e profilaxia."
 review_status: revisado
 source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."]
+review_note: "Conexões revisadas em 26/08/2026. Este arquivo permanece como resumo canônico da diretriz; o arquivo 'endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023' permanece como protocolo detalhado, evitando duas entradas em kind diretriz. Navegação bidirecional acrescentada para os módulos operacionais."
 legacy_source: "Documento novo. Diretriz oficial ESC/EHJ conferida em 08/08/2026."
 ---
 
@@ -52,3 +54,12 @@ Além do tratamento intravenoso hospitalar convencional, pacientes clinicamente 
 
 ## Mensagem prática
 A ESC 2023 desloca a endocardite de um modelo centrado apenas em hemocultura + ecocardiograma + antibiótico para uma estratégia de **equipe especializada, imagem multimodal, decisão cirúrgica precoce e seguimento estruturado**, especialmente em próteses, dispositivos e casos complicados.
+
+## Tudo com Tudo
+
+- [Protocolo detalhado de prevenção, diagnóstico e tratamento](endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023.md)
+- [Fluxograma de endocardite infecciosa](fluxograma-endocardite-infecciosa-esc-2023.md)
+- [Critérios diagnósticos Duke-ISCVID 2023](duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa.md)
+- [Esquemas antibióticos por agente](esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023.md)
+- [Indicações e timing cirúrgico](indicacoes-e-timing-cirurgico-na-endocardite-infecciosa.md)
+- [Profilaxia em procedimentos odontológicos](profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos.md)

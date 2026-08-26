@@ -56,14 +56,8 @@ quimioterapia antibiótica intensiva: o biofilme protege o inóculo bacteriano e
 sistema que fica em contato direto com a corrente sanguínea e a superfície endocárdica — **fonte:
 Marrie, Nelligan, Costerton, Circulation 1982 (PMID 7139907)**.
 
-Três mecanismos, hoje bem descritos na literatura de biofilme, tornam esse reservatório
+Dois mecanismos, hoje bem descritos na literatura de biofilme, tornam esse reservatório
 farmacologicamente inacessível:
-- **Penetração limitada e heterogênea do antibiótico através do biofilme.** A quantificação por
-  classe de fármaco mostra variação ampla — rifampicina penetra em taxas baixas (da ordem de 20% em
-  modelos de biofilme estafilocócico), e aminoglicosídeos têm penetração ainda menor e dependente da
-  cepa. `VERIFICAÇÃO HUMANA NECESSÁRIA` — a citação exata dos percentuais por classe de antibiótico
-  vem de revisão de biofilme geral, não específica de eletrodo cardíaco; usar como plausibilidade
-  mecanística, não como número a repetir em decisão clínica individual.
 - **Bactérias em estado de crescimento lento ou parado**, nas camadas mais profundas do biofilme por
   limitação de nutriente — a maioria dos antibióticos age sobre bactérias em replicação ativa, e
   células dormentes ficam toleragentes sem que exista resistência genética detectável no
@@ -169,9 +163,8 @@ não em ensaio randomizado — é:
   já estabelecido pela Heart Rhythm Society em 2010/2017.
 - O reimplante, quando indicado, deve ocorrer em **sítio contralateral** ao do sistema removido
   sempre que tecnicamente possível — recomendação de boas práticas presente no mesmo consenso, mas
-  sem número de estudo comparativo direto localizado nesta sessão. `VERIFICAÇÃO HUMANA NECESSÁRIA`
-  para a magnitude do benefício quantificado (redução de risco) do reimplante contralateral versus
-  ipsilateral, que não foi confirmada em fonte primária nesta pesquisa.
+  sem estudo comparativo direto que permita quantificar a magnitude do benefício do reimplante
+  contralateral em relação ao ipsilateral.
 - A decisão de **se** um novo dispositivo é necessário deve ser reavaliada de forma independente após
   o explante — parte dos pacientes deixa de ter indicação (por exemplo, marca-passo implantado para
   bradicardia transitória) e o reimplante automático "no mesmo modelo" sem reavaliar a indicação

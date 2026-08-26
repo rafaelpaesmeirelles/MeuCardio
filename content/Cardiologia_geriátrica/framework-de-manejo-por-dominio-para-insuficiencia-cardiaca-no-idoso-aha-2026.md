@@ -2,9 +2,10 @@
 title: "Framework de Manejo por Domínio para Insuficiência Cardíaca no Idoso: Scientific Statement da AHA 2026"
 slug: framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026
 theme: "Cardiologia geriátrica"
-kind: diretriz
+kind: documento
 review_status: revisado
 source_refs: ["Strategies for Optimizing Heart Failure Care in the Older Adult: A Scientific Statement From the American Heart Association. Circulation. Publicado online 18/06/2026. DOI: 10.1161/CIR.0000000000001437. PMID: 42312386."]
+review_note: "Classificação corrigida em 26/08/2026: a fonte primária se identifica como AHA Scientific Statement e propõe um framework de cuidado, sem classes/forças de recomendação de diretriz. Mantido como documento de consenso e conectado aos módulos clínicos locais."
 legacy_source: "Documento novo, escrito em 19/08/2026. Esta pasta cobre extensamente cenários clínicos específicos de IC no idoso (choque cardiogênico, anemia, apneia do sono, etc.), mas não tinha nenhum documento sobre framework GERAL e estruturado de otimização de cuidado de IC no muito idoso — peça que organiza o manejo em domínios, além das terapias farmacológicas individuais."
 ---
 
@@ -37,4 +38,8 @@ Serve como estrutura organizadora para quem já maneja os cenários clínicos es
 - **Aplicar os quatro domínios de forma genérica sem individualizar** — o documento propõe estrutura, mas a implementação exige avaliação individual em cada domínio
 - **Transformar o framework em prescrição automática** — ele organiza a avaliação; não substitui julgamento clínico, diretrizes terapêuticas nem decisão compartilhada
 
-Ver também: `comprometimento-cognitivo-e-demencia-como-modificador-de-decisao-cardiovascular.md`, `anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso.md` e `choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade.md`, todos nesta mesma pasta.
+## Tudo com Tudo
+
+- [Comprometimento cognitivo e demência como modificadores de decisão cardiovascular](comprometimento-cognitivo-e-demencia-como-modificador-de-decisao-cardiovascular.md)
+- [Anemia e deficiência de ferro na insuficiência cardíaca do idoso](anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso.md)
+- [Choque cardiogênico e suporte circulatório mecânico no idoso](choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade.md)
