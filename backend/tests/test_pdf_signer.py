@@ -131,7 +131,7 @@ def test_assinar_pdf_com_url_publica_usa_qr_e_permanece_integro():
 
 
 def test_assinar_pdf_multipagina_exibe_selo_em_todas_as_paginas_e_assina_uma_vez():
-    from pypdf import PdfReader
+    import fitz
     from pyhanko.pdf_utils.reader import PdfFileReader
     from pyhanko.sign.validation import validate_pdf_signature
 
@@ -153,16 +153,14 @@ def test_assinar_pdf_multipagina_exibe_selo_em_todas_as_paginas_e_assina_uma_vez
     assert status.intact is True
     assert status.valid is True
 
-    paginas = PdfReader(io.BytesIO(assinado)).pages
-    assert len(paginas) == 3
+    documento = fitz.open(stream=assinado, filetype="pdf")
+    assert len(documento) == 3
     # A página 1 contém o widget criptográfico. Nas páginas seguintes, a mesma
     # aparência é um XObject incluído no byte range assinado.
-    assert paginas[0].get("/Annots") is not None
-    for pagina in paginas[1:]:
-        recursos = pagina["/Resources"].get_object()
-        xobjects = recursos["/XObject"].get_object()
-        assert any(str(nome).startswith("/Stamp") for nome in xobjects)
-        assert "ASSINATURA DIGITAL ICP-BRASIL" in (pagina.extract_text() or "")
+    assert documento[0].first_widget is not None
+    for pagina in documento[1:]:
+        assert any(nome.startswith("Stamp") for _xref, nome, *_resto in pagina.get_xobjects())
+        assert "ASSINATURA DIGITAL ICP-BRASIL" in pagina.get_text()
 
 
 def test_assinar_pdf_embute_cadeia_e_usa_subfiltro_pades():
