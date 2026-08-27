@@ -53,6 +53,9 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
+        # Lote 5 de profundidade especializada de 27/08/2026 (base main já
+        # com lotes 1-4 mesclados e revisados): oito fichas já existentes,
+        # aprofundadas sem criar slug novo — ver review_note de cada uma.
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
