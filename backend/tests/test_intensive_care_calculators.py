@@ -16,6 +16,10 @@ def _calc_bomba():
     return INTENSIVE_CARE_CALCULATOR_REGISTRY["conferencia-bomba-infusao-uco"]
 
 
+def _calc_scai():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["estadiamento-scai-choque-cardiogenico"]
+
+
 def _dados(**mudancas):
     dados = {
         "sexo_biologico": "masculino",
@@ -38,6 +42,19 @@ def _dados_bomba(**mudancas):
         "velocidade_bomba_ml_h": 26.25,
         "tolerancia_percentual": "5",
         "contexto_choque_cardiogenico": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_scai(**mudancas):
+    dados = {
+        "em_risco_sem_instabilidade": False,
+        "instabilidade_sem_hipoperfusao": False,
+        "hipoperfusao_requer_intervencao": True,
+        "deterioracao_apos_intervencao": False,
+        "colapso_extremis": False,
+        "parada_com_risco_anoxico": False,
     }
     dados.update(mudancas)
     return dados
@@ -214,3 +231,112 @@ def test_conferencia_bomba_esta_registrada_no_tema_exato_tudo_com_tudo():
     assert calculadora.theme == "Terapia intensiva"
     assert calculadora.status == "implementada"
     assert calculadora.kind == "dose"
+
+
+@pytest.mark.parametrize(
+    "campo, estagio",
+    [
+        ("em_risco_sem_instabilidade", "A — em risco"),
+        ("instabilidade_sem_hipoperfusao", "B — choque iniciando"),
+        ("hipoperfusao_requer_intervencao", "C — choque clássico"),
+        ("deterioracao_apos_intervencao", "D — deteriorando"),
+        ("colapso_extremis", "E — extremis"),
+    ],
+)
+def test_scai_mapeia_padrao_clinico_predominante_de_a_a_e(campo, estagio):
+    dados = _dados_scai(hipoperfusao_requer_intervencao=False)
+    dados[campo] = True
+
+    resultado = _calc_scai().compute(dados)
+
+    assert resultado["estagio_sugerido"] == estagio
+    assert resultado["rotulo_para_documentacao"] == f"SCAI {estagio[0]}"
+
+
+def test_scai_usa_maior_gravidade_quando_mais_de_um_padrao_e_marcado():
+    resultado = _calc_scai().compute(
+        _dados_scai(
+            instabilidade_sem_hipoperfusao=True,
+            deterioracao_apos_intervencao=True,
+        )
+    )
+
+    assert resultado["estagio_sugerido"] == "D — deteriorando"
+
+
+def test_scai_modificador_a_exige_declaracao_de_risco_anoxico():
+    sem_modificador = _calc_scai().compute(_dados_scai())
+    com_modificador = _calc_scai().compute(
+        _dados_scai(parada_com_risco_anoxico=True)
+    )
+
+    assert sem_modificador["rotulo_para_documentacao"] == "SCAI C"
+    assert com_modificador["rotulo_para_documentacao"] == "SCAI C+A"
+    assert "potencial lesão cerebral anóxica" in com_modificador["modificador_a"]
+
+
+def test_scai_medidas_opcionais_nao_substituem_padrao_clinico():
+    with pytest.raises(ValueError, match="não pode ser inferido apenas por números"):
+        _calc_scai().compute(
+            _dados_scai(
+                hipoperfusao_requer_intervencao=False,
+                lactato_mmol_l=5,
+                pas_mmhg=80,
+            )
+        )
+
+
+def test_scai_sinaliza_discordancia_sem_promover_estagio_automaticamente():
+    resultado = _calc_scai().compute(
+        _dados_scai(
+            hipoperfusao_requer_intervencao=False,
+            instabilidade_sem_hipoperfusao=True,
+            lactato_mmol_l=9,
+            ph_arterial=7.1,
+        )
+    )
+
+    assert resultado["estagio_sugerido"] == "B — choque iniciando"
+    assert resultado["fora_da_faixa"] is True
+    assert "reavaliar antes de manter A/B" in resultado["alerta_de_consistencia"]
+    assert "avaliar o conjunto clínico para estágio E" in resultado["alerta_de_consistencia"]
+
+
+def test_scai_documenta_medidas_e_reavaliacao_seriada():
+    resultado = _calc_scai().compute(
+        _dados_scai(pas_mmhg=85, pam_mmhg=58, frequencia_cardiaca_bpm=110, lactato_mmol_l=3)
+    )
+
+    assert resultado["medidas_de_apoio"] == "PAS 85 mmHg, PAM 58 mmHg, FC 110 bpm, lactato 3 mmol/L"
+    assert "estágio inicial e máximo" in resultado["reavaliacao"]
+
+
+@pytest.mark.parametrize(
+    "mudanca, mensagem",
+    [
+        ({"lactato_mmol_l": "NaN"}, "valores numéricos finitos"),
+        ({"lactato_mmol_l": 31}, "lactato entre 0 e 30"),
+        ({"ph_arterial": 8}, "pH arterial entre"),
+        ({"pas_mmhg": -1}, "PAS deve estar entre 0 e 400"),
+        ({"frequencia_cardiaca_bpm": 351}, "frequência cardíaca deve estar entre 0 e 350"),
+    ],
+)
+def test_scai_rejeita_medidas_invalidas(mudanca, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_scai().compute(_dados_scai(**mudanca))
+
+
+def test_scai_esta_registrado_no_tema_e_expoe_numeros_opcionais():
+    calculadora = calculators.REGISTRY["estadiamento-scai-choque-cardiogenico"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "dose"
+    assert opcionais == {
+        "pas_mmhg",
+        "pam_mmhg",
+        "frequencia_cardiaca_bpm",
+        "lactato_mmol_l",
+        "ph_arterial",
+    }

@@ -45,6 +45,22 @@ REFERENCIAS_CONFERENCIA_INFUSAO = (
     "drugInfo.cfm?setid=6363e9b4-29df-4553-904d-a563e5adda6e."
 )
 
+REFERENCIAS_SCAI = (
+    "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update: A Review "
+    "and Incorporation of Validation Studies. J Soc Cardiovasc Angiogr Interv. "
+    "2022;1(1):100008. doi:10.1016/j.jscai.2021.100008. "
+    "https://www.scai.org/publications/clinical-documents/scai-shock-stages-"
+    "classification-expert-consensus-update-review-and; Kapur NK et al. Criteria for "
+    "Defining Stages of Cardiogenic Shock Severity. J Am Coll Cardiol. 2022;80:185-198. "
+    "doi:10.1016/j.jacc.2022.04.049. https://pubmed.ncbi.nlm.nih.gov/35835491/; "
+    "Sinha SS et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on "
+    "the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. "
+    "2025;85:1618-1641. doi:10.1016/j.jacc.2025.02.018; Ton VK et al. Serial Shock "
+    "Severity Assessment Within 72 Hours After Admission Predicts Hospital Mortality in "
+    "Cardiogenic Shock. J Am Coll Cardiol. 2024;84:123-136. "
+    "doi:10.1016/j.jacc.2024.04.069."
+)
+
 
 def _ventilacao_protetora(dados: dict) -> dict:
     sexo = dados["sexo_biologico"]
@@ -355,7 +371,202 @@ _CONFERENCIA_BOMBA = Calculator(
 )
 
 
+def _numero_opcional(dados: dict, nome: str) -> float | None:
+    bruto = dados.get(nome)
+    if bruto in (None, ""):
+        return None
+    valor = float(bruto)
+    if not math.isfinite(valor):
+        raise ValueError("Informe somente valores numéricos finitos.")
+    return valor
+
+
+def _estadiamento_scai(dados: dict) -> dict:
+    em_risco = bool(dados.get("em_risco_sem_instabilidade"))
+    instabilidade = bool(dados.get("instabilidade_sem_hipoperfusao"))
+    hipoperfusao = bool(dados.get("hipoperfusao_requer_intervencao"))
+    deterioracao = bool(dados.get("deterioracao_apos_intervencao"))
+    extremis = bool(dados.get("colapso_extremis"))
+    modificador_a = bool(dados.get("parada_com_risco_anoxico"))
+
+    if not any((em_risco, instabilidade, hipoperfusao, deterioracao, extremis)):
+        raise ValueError(
+            "Selecione ao menos um padrão clínico; o estágio não pode ser inferido apenas por números."
+        )
+
+    lactato = _numero_opcional(dados, "lactato_mmol_l")
+    ph = _numero_opcional(dados, "ph_arterial")
+    pas = _numero_opcional(dados, "pas_mmhg")
+    pam = _numero_opcional(dados, "pam_mmhg")
+    frequencia = _numero_opcional(dados, "frequencia_cardiaca_bpm")
+
+    if lactato is not None and not 0 <= lactato <= 30:
+        raise ValueError("Informe lactato entre 0 e 30 mmol/L.")
+    if ph is not None and not 6.5 <= ph <= 7.8:
+        raise ValueError("Informe pH arterial entre 6,50 e 7,80.")
+    for valor, nome, limite in (
+        (pas, "PAS", 400),
+        (pam, "PAM", 300),
+        (frequencia, "frequência cardíaca", 350),
+    ):
+        if valor is not None and not 0 <= valor <= limite:
+            raise ValueError(f"{nome} deve estar entre 0 e {limite}.")
+
+    if extremis:
+        estagio, nome_estagio = "E", "extremis"
+        criterio = "colapso circulatório refratário, pulso quase ausente ou RCP em curso"
+    elif deterioracao:
+        estagio, nome_estagio = "D", "deteriorando"
+        criterio = "hipoperfusão/instabilidade persistente após a intervenção inicial ou escalada de suporte"
+    elif hipoperfusao:
+        estagio, nome_estagio = "C", "choque clássico"
+        criterio = "hipoperfusão que requer intervenção para restaurar perfusão"
+    elif instabilidade:
+        estagio, nome_estagio = "B", "choque iniciando"
+        criterio = "hipotensão relativa ou taquicardia sem hipoperfusão"
+    else:
+        estagio, nome_estagio = "A", "em risco"
+        criterio = "risco de choque sem instabilidade ou hipoperfusão atuais"
+
+    inconsistencias: list[str] = []
+    if estagio in {"A", "B"} and lactato is not None and lactato > 2:
+        inconsistencias.append(
+            "lactato >2 mmol/L pode indicar hipoperfusão ou outra causa; reavaliar antes de manter A/B"
+        )
+    if estagio == "A" and (
+        (pas is not None and pas < 90)
+        or (pam is not None and pam < 60)
+        or (frequencia is not None and frequencia > 100)
+    ):
+        inconsistencias.append(
+            "sinais vitais informados sustentam instabilidade; revisar se o padrão B está presente"
+        )
+    if estagio != "E" and (
+        (lactato is not None and lactato > 8) or (ph is not None and ph < 7.2)
+    ):
+        inconsistencias.append(
+            "lactato >8 mmol/L ou pH <7,20 é marcador de gravidade extrema; avaliar o conjunto clínico para estágio E"
+        )
+    medidas = []
+    if pas is not None:
+        medidas.append(f"PAS {pas:g} mmHg")
+    if pam is not None:
+        medidas.append(f"PAM {pam:g} mmHg")
+    if frequencia is not None:
+        medidas.append(f"FC {frequencia:g} bpm")
+    if lactato is not None:
+        medidas.append(f"lactato {lactato:g} mmol/L")
+    if ph is not None:
+        medidas.append(f"pH {ph:g}")
+
+    rotulo = f"SCAI {estagio}{'+A' if modificador_a else ''}"
+    alerta = (
+        " | ".join(inconsistencias)
+        if inconsistencias
+        else "sem conflito explícito entre o padrão clínico selecionado e as medidas informadas"
+    )
+    return {
+        "estagio_sugerido": f"{estagio} — {nome_estagio}",
+        "rotulo_para_documentacao": rotulo,
+        "criterio_determinante": criterio,
+        "modificador_a": (
+            "aplicado — parada com potencial lesão cerebral anóxica"
+            if modificador_a
+            else "não aplicado"
+        ),
+        "medidas_de_apoio": ", ".join(medidas) if medidas else "não informadas",
+        "alerta_de_consistencia": alerta,
+        "reavaliacao": (
+            "Registrar horário e repetir o estágio após intervenção, mudança de suporte ou deterioração; "
+            "documentar estágio inicial e máximo."
+        ),
+        "fora_da_faixa": bool(inconsistencias),
+    }
+
+
+def _interpretar_scai(resultado: dict) -> str:
+    return (
+        f"{resultado['rotulo_para_documentacao']} — {resultado['estagio_sugerido']}. "
+        f"Critério determinante: {resultado['criterio_determinante']}. Modificador de parada: "
+        f"{resultado['modificador_a']}. Medidas de apoio: {resultado['medidas_de_apoio']}. "
+        f"Consistência: {resultado['alerta_de_consistencia']}. {resultado['reavaliacao']}"
+    )
+
+
+_ESTADIAMENTO_SCAI = Calculator(
+    slug="estadiamento-scai-choque-cardiogenico",
+    name="Choque cardiogênico — estadiamento SCAI e reavaliação seriada",
+    theme="Terapia intensiva",
+    purpose=(
+        "Organiza o padrão clínico em SCAI A–E, verifica coerência com medidas objetivas "
+        "opcionais e documenta o modificador de parada com risco anóxico."
+    ),
+    fields=[
+        Field(
+            "em_risco_sem_instabilidade",
+            "A — paciente em risco, sem instabilidade ou hipoperfusão atuais",
+            "boolean",
+        ),
+        Field(
+            "instabilidade_sem_hipoperfusao",
+            "B — hipotensão relativa ou taquicardia, ainda sem hipoperfusão",
+            "boolean",
+            help="A diferença decisiva entre B e C é a presença de hipoperfusão.",
+        ),
+        Field(
+            "hipoperfusao_requer_intervencao",
+            "C — hipoperfusão presente, requerendo intervenção para restaurar perfusão",
+            "boolean",
+        ),
+        Field(
+            "deterioracao_apos_intervencao",
+            "D — instabilidade/hipoperfusão persiste após intervenção inicial ou exige escalada",
+            "boolean",
+            help="O consenso original usa ausência de resposta após pelo menos 30 minutos de observação.",
+        ),
+        Field(
+            "colapso_extremis",
+            "E — colapso refratário, pulso quase ausente ou RCP em curso",
+            "boolean",
+        ),
+        Field(
+            "parada_com_risco_anoxico",
+            "Modificador +A — parada com potencial lesão cerebral anóxica",
+            "boolean",
+            help="Marcar quando não segue comandos ou há coma/GCS <9 após RCE; parada breve com recuperação neurológica não basta.",
+        ),
+        Field("pas_mmhg", "Pressão arterial sistólica", "number", "mmHg", min=0, max=400, required=False),
+        Field("pam_mmhg", "Pressão arterial média", "number", "mmHg", min=0, max=300, required=False),
+        Field(
+            "frequencia_cardiaca_bpm",
+            "Frequência cardíaca",
+            "number",
+            "bpm",
+            min=0,
+            max=350,
+            required=False,
+        ),
+        Field("lactato_mmol_l", "Lactato", "number", "mmol/L", min=0, max=30, required=False),
+        Field("ph_arterial", "pH arterial", "number", min=6.5, max=7.8, required=False),
+    ],
+    compute=_estadiamento_scai,
+    interpret=_interpretar_scai,
+    reference=REFERENCIAS_SCAI,
+    kind="dose",
+    limitations=[
+        "Assistente de documentação, não escore prognóstico nem indicação automática de vasoativo, revascularização ou suporte circulatório mecânico.",
+        "O SCAI 2022 é consenso multissocietário; seus critérios foram validados sobretudo em coortes observacionais, não em ensaio randomizado de estratégia terapêutica.",
+        "O padrão clínico predominante determina o estágio; lactato, pH e pressão isolados apenas apoiam ou sinalizam discordância e podem refletir outras causas.",
+        "O estágio é dinâmico. Registrar momento inicial, reavaliar após intervenções e mudanças clínicas e documentar o estágio máximo alcançado.",
+        "O modificador +A não significa qualquer parada: aplica-se quando há potencial lesão cerebral anóxica, como coma ou ausência de resposta a comandos após RCE.",
+        "Etiologia, fenótipo hemodinâmico, idade, fragilidade e falência não cardíaca modificam risco fora do eixo A–E e exigem avaliação separada.",
+        "A proposta SCAI 2026 em consulta pública não foi usada como padrão final; a ferramenta segue o consenso publicado e endossado de 2022, validado em 27/08/2026.",
+    ],
+)
+
+
 INTENSIVE_CARE_CALCULATOR_REGISTRY: dict[str, Calculator] = {
     _VENTILACAO_PROTETORA.slug: _VENTILACAO_PROTETORA,
     _CONFERENCIA_BOMBA.slug: _CONFERENCIA_BOMBA,
+    _ESTADIAMENTO_SCAI.slug: _ESTADIAMENTO_SCAI,
 }

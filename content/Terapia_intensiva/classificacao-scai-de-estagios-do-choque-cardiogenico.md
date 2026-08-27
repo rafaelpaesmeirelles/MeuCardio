@@ -4,7 +4,7 @@ slug: classificacao-scai-de-estagios-do-choque-cardiogenico
 theme: "Terapia intensiva"
 kind: protocolo
 review_status: revisado
-source_refs: ["SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329", "Criteria for Defining Stages of Cardiogenic Shock Severity · JACC · 2022 · 10.1016/j.jacc.2022.04.049", "2026 SCAI SHOCK Classification Expert Consensus Update · SCAI · 2026", "SCAI SHOCK Bedside Checklist 2022 — scai.org, endossado por ACC/ACEP/AHA/ESC-ACVC/ISHLT/SCCM/STS", "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022."]
+source_refs: ["SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329", "Criteria for Defining Stages of Cardiogenic Shock Severity · JACC · 2022 · 10.1016/j.jacc.2022.04.049", "Proposta 2026 SCAI SHOCK Classification Expert Consensus Update · consulta pública SCAI encerrada em 27/07/2026; não adotada aqui como padrão final · status revalidado em 27/08/2026", "SCAI SHOCK Bedside Checklist 2022 — scai.org, endossado por ACC/ACEP/AHA/ESC-ACVC/ISHLT/SCCM/STS", "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022. doi:10.1016/j.jscai.2021.100008."]
 legacy_source: "Fusão de dois documentos sobre a mesma classificação, na mesma pasta, com zero seções em comum entre 7 e 11: este e choque-cardiogenico-classificacao-scai-shock-complemento.md. O absorvido trazia dois defeitos de forma que o desqualificavam como base: dicionário de Python serializado vazado no corpo do texto, em vez de markdown, e uma referência a 'thai source' deixada dentro de um critério clínico. O conteúdo clínico dele foi preservado aqui."
 ---
 
@@ -38,7 +38,11 @@ Cada estágio combina exame físico, marcador bioquímico e hemodinâmica. Não 
 | **D** | Qualquer achado do C, sem melhora apesar do tratamento inicial | Lactato persistentemente > 2 e subindo, função renal e hepática piorando | Necessidade de doses crescentes ou de mais de um vasopressor, ou adição de dispositivo de suporte circulatório mecânico |
 | **E** | Inconsciente, quase sem pulso, colapso cardíaco, múltiplas desfibrilações | Lactato > 8 mmol/L, acidose grave (pH < 7,2) | Hipotensão profunda apesar de suporte hemodinâmico máximo; RCP em curso |
 
-**Modificador "A" (Arrest)**: parada cardíaca com risco de lesão cerebral anóxica — pode ser acrescentado a qualquer estágio (ex.: "C + A").
+**Modificador "+A" (Arrest)**: reservado à parada com potencial lesão cerebral
+anóxica — por exemplo, coma/GCS <9 ou ausência de resposta a comandos após RCE —
+e pode ser acrescentado ao estágio hemodinâmico (ex.: "C+A"). Uma desfibrilação
+breve, sem RCP relevante e com função neurológica normal, não basta para aplicar o
+modificador.
 
 Fonte: SCAI SHOCK Bedside Checklist 2022, documento endossado por ACC, ACEP, AHA, ESC/ACVC, ISHLT, SCCM e STS.
 
@@ -58,13 +62,21 @@ Estágio basal mais baixo foi associado a maior incidência de escalonamento de 
 Sistema simples e clinicamente aplicável ao longo de todo o espectro assistencial, desde provedores pré-hospitalares até equipe de terapia intensiva
 
 ## Atualizacao 2026
-Existe atualização de consenso de especialistas SCAI SHOCK 2026 em processo de comentário público, indicando refinamento contínuo do sistema — detalhes específicos das mudanças propostas
+A SCAI submeteu uma proposta de atualização 2026 a consulta pública, com prazo de
+comentários encerrado em 27 de julho de 2026. Na verificação de 27 de agosto de
+2026, ela ainda não constituía consenso final publicado/endossado; por isso este
+conteúdo e o assistente operacional permanecem ancorados na atualização
+multissocietária publicada em 2022.
 
 ## Limitacoes
 Sistema original careceu de critérios uniformes definindo cada estágio até a publicação de critérios formais objetivos em 2022; utilidade clínica e implicações prognósticas potenciais continuam sendo validadas em estudos adicionais
 
 ## Modificador A: parada cardiaca
-O sufixo **A** pode ser acrescentado a qualquer estágio — AA, BA, CA, DA, EA — quando há parada cardiorrespiratória associada, independentemente da duração. Episódio breve, rapidamente revertido e sem repercussão neurológica não altera necessariamente o estadiamento.
+O sufixo **+A** pode ser acrescentado ao estágio hemodinâmico quando a parada
+traz potencial lesão cerebral anóxica. O consenso 2022 propõe como marcadores
+práticos coma/GCS <9 ou ausência de resposta motora a comandos após RCE. Episódio
+breve, rapidamente revertido e com recuperação neurológica não recebe o
+modificador automaticamente.
 
 ## Relevancia prognostica
 A mortalidade cresce progressivamente de A para E. Os estágios D e E sinalizam necessidade de suporte circulatório mecânico avançado e pior prognóstico.

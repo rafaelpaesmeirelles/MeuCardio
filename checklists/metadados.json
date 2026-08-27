@@ -11075,7 +11075,7 @@
         "id": "chc-modificador-a-parada",
         "categoria": "avaliacao",
         "obrigatorio": false,
-        "texto": "Se houve parada cardiorrespiratória associada, o modificador 'A' (Arrest) foi acrescentado ao estágio SCAI (ex.: C+A), independentemente da duração do episódio",
+        "texto": "Se houve parada cardiorrespiratória com potencial lesão cerebral anóxica — como coma/GCS <9 ou ausência de resposta a comandos após RCE —, o modificador '+A' (Arrest) foi acrescentado ao estágio hemodinâmico. Parada breve com recuperação neurológica não recebe o modificador automaticamente",
         "origem_secao": "Modificador A: parada cardíaca"
       },
       {

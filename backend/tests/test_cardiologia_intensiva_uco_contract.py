@@ -1,10 +1,12 @@
 """Contrato auditável do cockpit de Cardiologia Intensiva e UCO."""
 
+import json
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = ROOT / "frontend" / "src"
+CONTENT = ROOT / "content" / "Terapia_intensiva"
 
 
 def _texto(caminho: str) -> str:
@@ -65,3 +67,29 @@ def test_formulario_generico_respeita_campos_numericos_opcionais():
 
     assert "f.required !== false" in pagina
     assert "(opcional)" in pagina
+
+
+def test_cockpit_expoe_estadiamento_scai_seriado():
+    pagina = _texto("pages/CardiologiaIntensiva.tsx")
+
+    assert '"estadiamento-scai-choque-cardiogenico"' in pagina
+    assert '/calculadoras/estadiamento-scai-choque-cardiogenico' in pagina
+    assert "modificador de parada e reavaliação seriada" in pagina
+
+
+def test_modificador_scai_a_foi_corrigido_no_documento_e_checklist():
+    documento = (CONTENT / "classificacao-scai-de-estagios-do-choque-cardiogenico.md").read_text(
+        encoding="utf-8"
+    )
+    checklists = json.loads((ROOT / "checklists" / "metadados.json").read_text(encoding="utf-8"))
+    registro = next(
+        item
+        for item in checklists
+        if item["slug"] == "reconhecimento-e-manejo-inicial-do-choque-cardiogenico"
+    )
+    item_parada = next(item for item in registro["itens"] if item["id"] == "chc-modificador-a-parada")
+
+    assert "coma/GCS <9 ou ausência de resposta a comandos após RCE" in documento
+    assert "ainda não constituía consenso final" in documento
+    assert "Parada breve com recuperação neurológica" in item_parada["texto"]
+    assert "independentemente da duração do episódio" not in item_parada["texto"]

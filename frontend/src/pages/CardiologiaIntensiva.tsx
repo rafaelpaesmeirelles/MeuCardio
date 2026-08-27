@@ -17,6 +17,7 @@ const CALCULADORAS_DIRETAS = new Set([
   "vasoativos-choque-cardiogenico-acc-2025",
   "ventilacao-protetora-uco",
   "conferencia-bomba-infusao-uco",
+  "estadiamento-scai-choque-cardiogenico",
 ]);
 
 type Documento = {
@@ -137,6 +138,7 @@ export default function CardiologiaIntensiva() {
         description="Atalhos diretos; nenhuma estação substitui protocolo local, conferência da bomba ou avaliação clínica."
       >
         <div className="cc-context-grid">
+          <ClinicalContextLink to="/calculadoras/estadiamento-scai-choque-cardiogenico" icon="emergencia" title="Estadiamento SCAI" detail="A–E, modificador de parada e reavaliação seriada" />
           <ClinicalContextLink to="/calculadoras/conferencia-bomba-infusao-uco" icon="check" title="Dupla conferência da bomba" detail="Dose prescrita × concentração × velocidade programada" />
           <ClinicalContextLink to="/calculadoras/ventilacao-protetora-uco" icon="calculadora" title="Ventilação protetora" detail="PBW, VT 4–8 mL/kg, platô e pressão de distensão" />
           <ClinicalContextLink to="/calculadoras/vasoativos-choque-cardiogenico-acc-2025" icon="calculadora" title="Vasoativos no choque" detail="Dose-alvo, concentração e conversão para mL/h" />
