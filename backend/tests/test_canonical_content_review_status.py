@@ -8,9 +8,10 @@ que deixe de estar revisado é despublicado.
 A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
-PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes Tudo com Tudo pendentes foram revisados em 27/08/2026. As allowlists
-ficam vazias: qualquer novo status diferente de `revisado` quebra o gate e
-exige decisão editorial explícita.
+PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes
+Tudo com Tudo pendentes foram revisados em 27/08/2026. As allowlists ficam
+vazias: qualquer novo status diferente de `revisado` quebra o gate e exige
+decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -18,6 +19,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import re
+
+from app.services.disease_manifest import load_disease_records
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
@@ -40,11 +43,20 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
+def _records(relative_path: str) -> list[dict]:
+    path = REPOSITORY_ROOT / relative_path
+    if relative_path == "doencas/metadados.json":
+        return load_disease_records(path)
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    assert isinstance(payload, list)
+    return payload
+
+
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
     invalidos: list[str] = []
     pendentes_encontrados: set[str] = set()
     for relative_path in MANIFESTS:
-        records = json.loads((REPOSITORY_ROOT / relative_path).read_text(encoding="utf-8"))
+        records = _records(relative_path)
         for record in records:
             status = record.get("review_status")
             identifier = record.get("slug") or record.get("title") or record.get("titulo")
@@ -78,7 +90,7 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
 def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
     conflitos: list[str] = []
     for relative_path in MANIFESTS:
-        records = json.loads((REPOSITORY_ROOT / relative_path).read_text(encoding="utf-8"))
+        records = _records(relative_path)
         for record in records:
             if record.get("review_status") != "revisado" and record.get("published") is True:
                 identifier = record.get("slug") or record.get("title") or record.get("titulo")
