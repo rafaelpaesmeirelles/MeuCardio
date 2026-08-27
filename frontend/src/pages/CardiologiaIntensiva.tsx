@@ -21,6 +21,7 @@ const CALCULADORAS_DIRETAS = new Set([
   "acidose-metabolica-winter-anion-gap-uco",
   "oxigenacao-pao2-fio2-sdra-uco",
   "lesao-renal-aguda-kdigo-uco",
+  "trajetoria-perfusao-lactato-uco",
 ]);
 
 type Documento = {
@@ -155,7 +156,7 @@ export default function CardiologiaIntensiva() {
 
       <div className="cc-metrics" aria-label="Cobertura da central intensiva">
         <ClinicalMetric label="Conteúdos publicados" value={(documentos ?? []).length} detail="Tema canônico Terapia intensiva" icon="conhecimento" />
-        <ClinicalMetric label="Calculadoras operacionais" value={calculadoras.length} detail="Ventilação, infusão e choque" icon="calculadora" />
+        <ClinicalMetric label="Calculadoras operacionais" value={calculadoras.length} detail="Ventilação, infusão, choque e perfusão" icon="calculadora" />
         <ClinicalMetric label="Checklists conectados" value={checklists.length} detail="Modelos publicados no mesmo tema" icon="check" />
       </div>
 
@@ -166,6 +167,7 @@ export default function CardiologiaIntensiva() {
       >
         <div className="cc-context-grid">
           <ClinicalContextLink to="/calculadoras/estadiamento-scai-choque-cardiogenico" icon="emergencia" title="Estadiamento SCAI" detail="A–E, modificador de parada e reavaliação seriada" />
+          <ClinicalContextLink to="/calculadoras/trajetoria-perfusao-lactato-uco" icon="calculadora" title="Perfusão e lactato seriado" detail="Trajetória multimodal sem meta cega de clearance" />
           <ClinicalContextLink to="/calculadoras/conferencia-bomba-infusao-uco" icon="check" title="Dupla conferência da bomba" detail="Dose prescrita × concentração × velocidade programada" />
           <ClinicalContextLink to="/calculadoras/ventilacao-protetora-uco" icon="calculadora" title="Ventilação protetora" detail="PBW, VT 4–8 mL/kg, platô e pressão de distensão" />
           <ClinicalContextLink to="/calculadoras/oxigenacao-pao2-fio2-sdra-uco" icon="calculadora" title="Oxigenação e SDRA" detail="PaO₂/FiO₂, suporte e gate de edema cardiogênico" />
