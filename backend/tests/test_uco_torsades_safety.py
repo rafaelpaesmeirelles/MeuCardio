@@ -66,6 +66,22 @@ def test_qtc_maior_500_com_pausa_gera_alerta_sem_diagnosticar_torsades():
     assert "sem TV polimórfica atual" in result["fenotipo"]
 
 
+def test_fator_reversivel_isolado_marca_fora_da_faixa():
+    result = CALC.compute(base(hipocalemia_documentada=True))
+    assert result["fora_da_faixa"] is True
+    assert result["fatores_reversiveis"] == [
+        "hipocalemia documentada — corrigir conforme protocolo e monitorização"
+    ]
+
+
+def test_sem_fenotipo_ou_fator_reversivel_nao_marca_fora_da_faixa():
+    result = CALC.compute(base())
+    assert result["fora_da_faixa"] is False
+    assert result["fatores_reversiveis"] == [
+        "nenhum fator reversível foi declarado; revisar eletrólitos, fármacos, isquemia e história familiar"
+    ]
+
+
 def test_nao_contem_dose_energia_ou_parametro_pacing():
     text = " ".join(CALC.limitations).casefold()
     for forbidden in ("mg/kg", "mcg/kg/min", "joule", "j/kg", "bpm de pacing"):
