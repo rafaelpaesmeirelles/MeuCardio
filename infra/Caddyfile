@@ -39,6 +39,26 @@
 		header Cache-Control "public, max-age=300"
 	}
 
+	# Instalador Windows é artefato de release grande e fica fora do Git, em
+	# volume persistente no host. O APK Android continua vindo do build web.
+	redir /downloads/corvia-os-windows.zip /downloads/corvia-os-windows.exe 308
+
+	handle /downloads/corvia-os-windows.exe {
+		root * /downloads
+		rewrite * /corvia-os-windows.exe
+		header Content-Disposition "attachment; filename=CorVIA-OS-Windows-Setup.exe"
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
+	handle /downloads/corvia-os-windows.exe.sha256 {
+		root * /downloads
+		rewrite * /corvia-os-windows.exe.sha256
+		header Content-Type "text/plain; charset=utf-8"
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
 	# Hash de conteúdo: é seguro manter imutável. Cada build gera URLs novas.
 	handle_path /assets/* {
 		root * /site/assets
