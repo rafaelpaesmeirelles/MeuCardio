@@ -38,8 +38,8 @@ def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' not in painel
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' in biblioteca
     assert "Conteúdos por área clínica" in biblioteca
-    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in guia
-    assert "conteúdos em {areaCount.collections} coleções" in guia
+    assert 'api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets' in guia
+    assert "diseaseFacets.areas.map" in guia
 
 
 def test_comunicacao_permanece_acionavel_no_shell_e_no_assistente_pessoal():

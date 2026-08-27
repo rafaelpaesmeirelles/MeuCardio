@@ -87,6 +87,31 @@ function labelOfSlug(value: string): string {
   return value.replaceAll("-", " ").replace(/^./, (letter) => letter.toUpperCase());
 }
 
+function labelArea(value: string): string {
+  const labels: Record<string, string> = {
+    geral: "Cardiologia do adulto",
+    cardiopediatria: "Cardiologia pediátrica e congênita",
+    cardiogeriatria: "Cardiogeriatria",
+    cardiooncologia: "Cardio-oncologia",
+    gravidez: "Cardiologia na gestação e puerpério",
+  };
+  return labels[value] || labelOfKey(value);
+}
+
+function labelCategory(value: string): string {
+  const labels: Record<string, string> = {
+    arritmia: "Arritmias",
+    cardiopatia_congenita: "Cardiopatias congênitas",
+    cardiologia_fetal: "Cardiologia fetal",
+    doenca_coronariana: "Doença coronariana",
+    hipertensao: "Hipertensão",
+    insuficiencia_cardiaca: "Insuficiência cardíaca",
+    tromboembolismo: "Tromboembolismo",
+    valvopatia: "Valvopatias",
+  };
+  return labels[value] || labelOfKey(value);
+}
+
 function ListBlock({ title, items, alert = false }: { title: string; items: unknown[]; alert?: boolean }) {
   if (!items?.length) return null;
   return (
@@ -169,7 +194,17 @@ export default function GuiaDoenca() {
 
   function updateAnswer(question: Question, value: unknown) {
     setAssessment(null);
-    setAnswers((previous) => ({ ...previous, [question.id]: value }));
+    setAnswers((previous) => {
+      const next = { ...previous };
+      if (value === undefined) delete next[question.id];
+      else next[question.id] = value;
+      return next;
+    });
+  }
+
+  function changeContext(next: "ambulatorio" | "emergencia") {
+    setAssessment(null);
+    setContext(next);
   }
 
   function toggleMultiselect(question: Question, value: string) {
@@ -196,7 +231,7 @@ export default function GuiaDoenca() {
 
   return (
     <>
-      <p className="eyebrow">{disease.area.replaceAll("_", " ")} · versão {disease.version}</p>
+      <p className="eyebrow">{labelArea(disease.area)} · {labelCategory(disease.category)} · versão {disease.version}</p>
       <h1>{disease.name}</h1>
       <p style={{ maxWidth: "78ch", color: "var(--texto-secundario)" }}>{disease.summary}</p>
       <div className="painel__temas" style={{ marginTop: "0.7rem" }}>
@@ -220,8 +255,8 @@ export default function GuiaDoenca() {
           <section className="cartao" style={{ marginTop: "1rem" }}>
             <h2>Contexto do atendimento</h2>
             <div className="painel__temas">
-              <button type="button" className="painel__tema" onClick={() => setContext("ambulatorio")} style={context === "ambulatorio" ? { borderColor: "var(--acento)" } : undefined}>Consultório / ambulatório</button>
-              <button type="button" className="painel__tema" onClick={() => setContext("emergencia")} style={context === "emergencia" ? { borderColor: "var(--acento)" } : undefined}>Emergência</button>
+              <button type="button" className="painel__tema" onClick={() => changeContext("ambulatorio")} style={context === "ambulatorio" ? { borderColor: "var(--acento)" } : undefined}>Consultório / ambulatório</button>
+              <button type="button" className="painel__tema" onClick={() => changeContext("emergencia")} style={context === "emergencia" ? { borderColor: "var(--acento)" } : undefined}>Emergência</button>
             </div>
           </section>
 
@@ -234,7 +269,7 @@ export default function GuiaDoenca() {
                     <strong>{question.label}{question.required ? " *" : ""}</strong>
                     {question.help && <span style={{ display: "block", fontSize: "0.8rem", color: "var(--texto-secundario)" }}>{question.help}</span>}
                     {question.type === "boolean" && (
-                      <select value={String(answers[question.id] ?? "")} onChange={(event) => updateAnswer(question, event.target.value === "true")} style={{ marginTop: "0.35rem" }}>
+                      <select value={String(answers[question.id] ?? "")} onChange={(event) => updateAnswer(question, event.target.value === "" ? undefined : event.target.value === "true")} style={{ marginTop: "0.35rem" }}>
                         <option value="">Selecione…</option>
                         <option value="true">Sim</option>
                         <option value="false">Não</option>
@@ -283,6 +318,7 @@ export default function GuiaDoenca() {
               <ListBlock title="Exames que podem ser considerados" items={assessment.suggested_tests} />
               <ListBlock title="Diagnósticos diferenciais" items={assessment.differentials} />
               <ListBlock title="Fluxo sugerido" items={assessment.recommended_flow} />
+              <ListBlock title="Orientações do assistente" items={assessment.messages} />
               <p style={{ marginTop: "1rem", fontSize: "0.82rem", color: "var(--texto-secundario)" }}>{assessment.disclaimer}</p>
             </section>
           )}

@@ -211,6 +211,10 @@ class _ItemTema:
 
 
 _PRODUTOR_BACKFILL = "tudo_com_tudo_v2"
+_ARQUIVO_RELACOES_EXPLICITAS = Path("/doencas/relacoes-explicitas.json")
+_ARQUIVO_RELACOES_EXPLICITAS_FALLBACK = (
+    Path(__file__).resolve().parents[3] / "doencas/relacoes-explicitas.json"
+)
 _ASSINATURAS_AUTOMATICAS_LEGADAS = {
     # campo: (verbo, tipos de origem, tipos de destino)
     "EvidenceRecord.document_slug": (
@@ -933,6 +937,138 @@ def _registrar_referencias_explicitas(
     return criadas, nao_resolvidas
 
 
+def _carregar_manifesto_relacoes_explicitas() -> list[dict]:
+    """Lê e valida o manifesto de arestas curadas doença -> coleção.
+
+    O manifesto é deliberadamente pequeno e estrito: ele não descobre nem
+    infere relações. Cada aresta declara os dois slugs, o verbo, a decisão de
+    revisão e sua proveniência. Erros de schema interrompem a reconciliação;
+    referências a conteúdo ausente/despublicado são relatadas pelo backfill e
+    não viram aresta pública.
+    """
+    caminho = (
+        _ARQUIVO_RELACOES_EXPLICITAS
+        if _ARQUIVO_RELACOES_EXPLICITAS.is_file()
+        else _ARQUIVO_RELACOES_EXPLICITAS_FALLBACK
+    )
+    try:
+        payload = json.loads(caminho.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        raise RuntimeError(
+            f"Manifesto de relações explícitas indisponível ou inválido: {caminho}"
+        ) from exc
+    if not isinstance(payload, list):
+        raise RuntimeError(f"Manifesto de relações explícitas deve ser lista: {caminho}")
+
+    campos_texto = (
+        "source_disease_slug", "target_type", "target_slug", "relation_type",
+        "review_status", "provenance_type", "confidence",
+    )
+    vistos: set[tuple[str, str, str, str]] = set()
+    for indice, item in enumerate(payload):
+        if not isinstance(item, dict):
+            raise RuntimeError(f"Relação explícita #{indice} não é objeto JSON.")
+        ausentes = [
+            campo for campo in campos_texto
+            if not isinstance(item.get(campo), str) or not item[campo].strip()
+        ]
+        if ausentes:
+            raise RuntimeError(
+                f"Relação explícita #{indice} tem campos ausentes/inválidos: {ausentes}"
+            )
+        if item["target_type"] not in TIPOS_ENTIDADE_PERMITIDOS - {"tema", "doenca"}:
+            raise RuntimeError(
+                f"Relação explícita #{indice}: target_type não permitido: "
+                f"{item['target_type']!r}"
+            )
+        if item["relation_type"] not in TIPOS_RELACAO_PERMITIDOS:
+            raise RuntimeError(
+                f"Relação explícita #{indice}: relation_type não permitido: "
+                f"{item['relation_type']!r}"
+            )
+        if item["review_status"] not in REVIEW_STATUS_RELACAO_PERMITIDOS:
+            raise RuntimeError(
+                f"Relação explícita #{indice}: review_status não permitido: "
+                f"{item['review_status']!r}"
+            )
+        if item["provenance_type"] not in TIPOS_PROVENIENCIA_PERMITIDOS:
+            raise RuntimeError(
+                f"Relação explícita #{indice}: provenance_type não permitido: "
+                f"{item['provenance_type']!r}"
+            )
+        if item["confidence"] not in NIVEIS_CONFIANCA_PERMITIDOS:
+            raise RuntimeError(
+                f"Relação explícita #{indice}: confidence não permitido: "
+                f"{item['confidence']!r}"
+            )
+        chave = (
+            item["source_disease_slug"], item["target_type"],
+            item["target_slug"], item["relation_type"],
+        )
+        if chave in vistos:
+            raise RuntimeError(f"Relação explícita duplicada: {chave!r}")
+        vistos.add(chave)
+    return payload
+
+
+def _registrar_relacoes_explicitas_de_doenca(
+    db: Session,
+    *,
+    lote: _LoteRelacoes,
+    entidades_por_slug: dict[tuple[str, str], KnowledgeEntity],
+    publicados_por_slug: set[tuple[str, str]],
+) -> tuple[int, list[dict]]:
+    """Importa somente arestas curadas cujos dois extremos estão publicados.
+
+    A checagem usa o inventário da rodada atual, e não apenas o status antigo
+    do nó. Isso evita uma janela de publicação quando a doença foi devolvida a
+    ``pendente_revisao`` no mesmo reconcile e seu nó ainda não foi arquivado.
+    A consulta do grafo já percorre entrada e saída, portanto uma aresta única
+    garante navegação bidirecional sem duplicar a afirmação clínica.
+    """
+    criadas = 0
+    nao_resolvidas: list[dict] = []
+    for item in _carregar_manifesto_relacoes_explicitas():
+        source_key = ("doenca", item["source_disease_slug"])
+        target_key = (item["target_type"], item["target_slug"])
+        extra_base = {
+            "campo": "doencas/relacoes-explicitas.json",
+            "origem_slug": item["source_disease_slug"],
+            "destino_slug": item["target_slug"],
+            "target_type": item["target_type"],
+            "review_note": item.get("review_note"),
+        }
+        if source_key not in publicados_por_slug:
+            nao_resolvidas.append({**extra_base, "motivo": "doenca_nao_publicada"})
+            continue
+        if target_key not in publicados_por_slug:
+            nao_resolvidas.append({**extra_base, "motivo": "destino_nao_publicado"})
+            continue
+        source = entidades_por_slug.get(source_key)
+        target = entidades_por_slug.get(target_key)
+        if source is None or target is None:
+            nao_resolvidas.append({**extra_base, "motivo": "no_ativo_ausente"})
+            continue
+        criadas += _registrar_relacao_estruturada(
+            db,
+            source=source,
+            target=target,
+            relation_type=item["relation_type"],
+            relevance_score=float(item.get("relevance_score", 1.0)),
+            extra=extra_base,
+            lote=lote,
+            provenance_type=item["provenance_type"],
+            confidence=item["confidence"],
+            review_status=item["review_status"],
+            evidence_source=item.get("evidence_source")
+            or (
+                "doencas/relacoes-explicitas.json#"
+                f"{item['source_disease_slug']}:{item['target_type']}:{item['target_slug']}"
+            ),
+        )
+    return criadas, nao_resolvidas
+
+
 def _semear_conteudo_especializado(
     db: Session,
     *,
@@ -1394,6 +1530,36 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
             db, lote=lote,
         )
     )
+    db.flush()
+    entidades_por_slug = {
+        (entidade.entity_type, entidade.slug): entidade
+        for entidade in db.execute(
+            select(KnowledgeEntity).where(KnowledgeEntity.status == "ativo")
+        ).scalars()
+    }
+    publicados_por_slug = {
+        (item.tipo, item.slug) for item in itens_publicados
+    }
+    for tipo, ids in ids_especializados.items():
+        if not ids:
+            continue
+        publicados_por_slug.update(
+            (entidade.entity_type, entidade.slug)
+            for entidade in db.execute(
+                select(KnowledgeEntity).where(
+                    KnowledgeEntity.entity_type == tipo,
+                    KnowledgeEntity.canonical_id.in_(ids),
+                )
+            ).scalars()
+        )
+    relacoes_doenca_explicitas, relacoes_doenca_nao_resolvidas = (
+        _registrar_relacoes_explicitas_de_doenca(
+            db,
+            lote=lote,
+            entidades_por_slug=entidades_por_slug,
+            publicados_por_slug=publicados_por_slug,
+        )
+    )
     relacoes_automaticas_rejeitadas = _rejeitar_relacoes_automaticas_ausentes(lote)
     ids_especializados["tema"] = ids_publicados_tema
     for item in itens_publicados:
@@ -1415,6 +1581,9 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
         "amostra_referencias_nao_resolvidas": referencias_nao_resolvidas[:25],
         "entidades_especializadas_criadas": entidades_especializadas,
         "relacoes_estruturadas_especializadas_criadas": relacoes_especializadas,
+        "relacoes_doenca_explicitas_criadas": relacoes_doenca_explicitas,
+        "relacoes_doenca_explicitas_nao_resolvidas": len(relacoes_doenca_nao_resolvidas),
+        "amostra_relacoes_doenca_nao_resolvidas": relacoes_doenca_nao_resolvidas[:25],
         "relacoes_automaticas_rejeitadas": relacoes_automaticas_rejeitadas,
         "entidades_arquivadas": entidades_arquivadas + calculadoras_duplicadas_arquivadas,
         "calculadoras_duplicadas_arquivadas": calculadoras_duplicadas_arquivadas,

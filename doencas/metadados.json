@@ -6230,5 +6230,308 @@
     "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual.",
     "fonte_producao": "chatgpt",
     "version": 1
+  },
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "name": "Síndrome coronariana aguda",
+    "aliases": [
+      "SCA",
+      "infarto agudo do miocárdio",
+      "IAM",
+      "angina instável",
+      "IAM com supradesnivelamento de ST",
+      "IAM sem supradesnivelamento de ST",
+      "STEMI",
+      "NSTEMI"
+    ],
+    "area": "geral",
+    "category": "doenca_coronariana",
+    "subtype": "angina_instavel_iam_sem_supra_iam_com_supra",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 2,
+    "completeness": "completo",
+    "summary": "Síndrome clínica tempo-dependente que inclui angina instável, infarto sem supradesnivelamento de ST e infarto com supradesnivelamento de ST. A abordagem inicial integra sintomas, sinais vitais, ECG seriado e troponina cardíaca de alta sensibilidade; nenhum desses elementos isoladamente autoriza excluir o diagnóstico quando a suspeita permanece.",
+    "epidemiology": "A síndrome coronariana aguda permanece causa importante de morte e incapacidade cardiovascular. Este verbete não extrapola taxas internacionais para o Brasil. Lesão miocárdica é definida por troponina cardíaca acima do percentil 99 e é aguda quando há elevação e/ou queda; infarto requer lesão miocárdica aguda acompanhada de evidência clínica de isquemia.",
+    "presentation": [
+      "Dor, pressão, peso, aperto ou queimação torácica nova, prolongada, em repouso ou em padrão crescente",
+      "Irradiação para braço, ombro, pescoço, mandíbula, dorso ou epigástrio",
+      "Dispneia, sudorese, náusea, vômitos, palpitações, síncope ou fraqueza intensa podem acompanhar ou substituir a dor",
+      "Dor ou desconforto torácico permanece apresentação comum também nas mulheres; dispneia, náusea, fadiga e outros sintomas acompanhantes podem ser mais proeminentes. Em pessoas idosas ou frágeis, síncope, confusão ou queda podem acompanhar apresentações menos evidentes",
+      "Parada cardíaca, choque, edema pulmonar, arritmia grave ou complicação mecânica podem ser a apresentação inicial"
+    ],
+    "diagnostic_approach": {
+      "reconhecimento_inicial": [
+        "Tratar sintomas compatíveis como possível emergência e registrar horário de início, duração, persistência ou recorrência e momento da última crise; documentar separadamente episódios intermitentes",
+        "Realizar ECG de 12 derivações rapidamente e repetir quando o primeiro traçado não for diagnóstico e a suspeita persistir",
+        "Não aguardar troponina para ativar a via de reperfusão quando houver supradesnivelamento persistente de ST ou equivalente isquêmico reconhecido por equipe habilitada"
+      ],
+      "biomarcadores": [
+        "Concluir um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação somente quando o próprio algoritmo, o tempo desde o início e o limite específico do ensaio o permitirem",
+        "Interpretar valor absoluto e variação temporal no contexto de sintomas, ECG, tempo desde o início, função renal e diagnósticos alternativos",
+        "Troponina elevada identifica lesão miocárdica; infarto requer evidência de isquemia, e elevação isolada não define SCA tipo 1"
+      ],
+      "classificacao_e_risco": [
+        "Separar apresentação com supradesnivelamento persistente de ST ou equivalente, SCA sem supra e diagnósticos alternativos ameaçadores",
+        "Reconhecer risco muito alto por choque ou instabilidade, dor refratária, insuficiência cardíaca aguda isquêmica, arritmia ameaçadora, parada cardíaca, complicação mecânica ou alterações isquêmicas recorrentes",
+      "Usar escores validados apenas como complemento; eles não substituem avaliação clínica, ECG, algoritmo validado de troponina de alta sensibilidade nem julgamento sobre reperfusão"
+      ],
+      "limite_do_assistente": "O assistente organiza sinais de alarme e dados ausentes. Não interpreta traçados, não seleciona dose, não determina elegibilidade para fibrinólise ou intervenção e não recomenda alta automática."
+    },
+    "differentials": [
+      "Síndrome aórtica aguda",
+      "Embolia pulmonar",
+      "Pericardite ou miocardite",
+      "Pneumotórax",
+      "Takotsubo",
+      "Espasmo coronariano ou dissecção coronariana espontânea",
+      "Lesão miocárdica sem isquemia e infarto tipo 2",
+      "Dor musculoesquelética, gastrointestinal ou ansiedade somente após exclusão proporcional das causas graves"
+    ],
+    "tests": [
+      "ECG de 12 derivações precoce e seriado; derivações adicionais conforme território suspeito",
+      "Troponina cardíaca de alta sensibilidade em algoritmo validado, com pontos de corte específicos do ensaio local",
+      "Hemograma, creatinina, eletrólitos, glicemia e coagulação conforme contexto e terapia prevista"
+    ],
+    "red_flags": [
+      "Hipotensão, choque, alteração de consciência, extremidades frias ou oligúria",
+      "Dor persistente ou recorrente apesar do tratamento inicial",
+      "Supradesnivelamento persistente de ST ou equivalente isquêmico",
+      "Arritmia ameaçadora à vida ou parada cardíaca",
+      "Edema pulmonar ou insuficiência cardíaca aguda presumidamente isquêmica",
+      "Novo sopro, deterioração súbita ou suspeita de complicação mecânica",
+      "Dor súbita máxima, assimetria de pulsos, déficit neurológico ou hipoxemia que sugiram diagnóstico alternativo fatal"
+    ],
+    "ambulatory_flow": [
+      "Interromper avaliação eletiva diante de dor atual, equivalente anginoso novo ou qualquer sinal de alarme",
+      "Acionar o SAMU 192 para transporte monitorizado quando houver suspeita de evento agudo; não orientar a pessoa a dirigir",
+      "Não usar melhora espontânea, ECG inicial normal ou uma troponina isolada como justificativa para permanecer em fluxo ambulatorial",
+      "Se o padrão for inequivocamente crônico e estável, redirecionar ao verbete de síndrome coronariana crônica"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, sinais vitais, acesso venoso, monitorização e ECG de 12 derivações precoce",
+      "Ativar imediatamente a estratégia de reperfusão em apresentação com supra de ST ou equivalente reconhecido, conforme rede local",
+    "Na suspeita sem supra, concluir algoritmo validado de troponina de alta sensibilidade e classificar risco sem atrasar angiografia em risco muito alto",
+      "Administrar terapias antitrombóticas e anti-isquêmicas somente após avaliar diagnóstico, alergias, sangramento, anticoagulação, função renal, peso, idade e estratégia invasiva",
+      "Pesquisar e tratar choque, insuficiência cardíaca, arritmias, parada cardíaca e complicações mecânicas em ambiente apropriado",
+      "Reavaliar continuamente diagnósticos alternativos ameaçadores e evitar alta automatizada por escore isolado"
+    ],
+    "treatment_summary": "O tratamento é definido pelo fenótipo, tempo, estabilidade, anatomia, risco isquêmico e hemorrágico e contraindicações. Pode incluir antiagregação, anticoagulação, terapia anti-isquêmica, estatina de alta intensidade e revascularização. Na apresentação com supra de ST, a reperfusão não deve ser retardada; intervenção coronária percutânea primária é preferida quando disponível no tempo recomendado, e fibrinólise exige seleção protocolar rigorosa quando a intervenção oportuna não é possível. Na SCA sem supra, o momento da estratégia invasiva depende do risco. Doses e escolhas individuais permanecem no protocolo institucional e nos verbetes farmacológicos, nunca em regra automática deste assistente.",
+    "monitoring": [
+      "Dor, estado hemodinâmico, oxigenação, ritmo e alterações seriadas do ECG",
+      "Curva de troponina e sinais de reinfarto ou extensão da isquemia",
+      "Sangramento, hemoglobina, plaquetas e função renal durante terapia antitrombótica",
+      "Congestão, perfusão, função ventricular, arritmias e complicações mecânicas",
+      "Adesão, acesso, duração documentada da terapia antitrombótica e interações na transição do cuidado",
+      "LDL-C, tabagismo, pressão, diabetes, reabilitação cardíaca, vacinação e saúde mental após estabilização"
+    ],
+    "special_populations": [
+      "Pessoas idosas ou frágeis exigem avaliação de fragilidade, cognição, sangramento, função renal, mobilidade e objetivos; idade isolada não decide estratégia",
+      "Mulheres podem ter sintomas menos reconhecidos e maior proporção de SCAD ou MINOCA; ausência de dor típica não reduz automaticamente o risco",
+      "Gestação e puerpério exigem equipe cardio-obstétrica e consideração de SCAD, sem atrasar estabilização materna",
+      "Doença renal altera a interpretação da troponina e o risco de sangramento, mas não autoriza atribuir elevação crônica sem avaliar variação e isquemia",
+      "Câncer, trombocitopenia ou terapia cardiotóxica exigem coordenação cardio-oncológica e individualização antitrombótica",
+      "Uso de cocaína ou reação alérgica modifica mecanismos e terapias; não exclui doença aterotrombótica concomitante"
+    ],
+    "assistant_questions": [
+      {
+        "id": "current_or_recurrent_ischemic_symptoms",
+        "label": "Há dor ou equivalente isquêmico atual, persistente ou recorrente?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "nao", "label": "Não"},
+          {"value": "desconhecido", "label": "Desconhecido"}
+        ],
+        "section": "Sintomas"
+      },
+      {
+        "id": "hemodynamic_or_electrical_instability",
+        "label": "Há choque, hipotensão, edema pulmonar, arritmia ameaçadora, parada cardíaca ou suspeita de complicação mecânica?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "nao", "label": "Não"},
+          {"value": "desconhecido", "label": "Desconhecido"}
+        ],
+        "section": "Instabilidade"
+      },
+      {
+        "id": "st_elevation_or_equivalent",
+        "label": "Equipe habilitada identificou supradesnivelamento persistente de ST ou equivalente isquêmico?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "nao", "label": "Não"},
+          {"value": "nao_avaliado_suspeita_aguda", "label": "Ainda não avaliado, em suspeita aguda atual"},
+          {"value": "nao_aplicavel_sem_suspeita_aguda", "label": "Não aplicável: sem suspeita aguda atual"}
+        ],
+        "section": "ECG"
+      },
+      {
+        "id": "hs_troponin_pathway_completed",
+        "label": "Foi concluído um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação quando o próprio algoritmo o permitir?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "incompleto_suspeita_aguda", "label": "Não, em avaliação aguda atual"},
+          {"value": "nao_aplicavel_reperfusao", "label": "Não aplicável: via de reperfusão já ativada"},
+          {"value": "nao_aplicavel_sem_suspeita_aguda", "label": "Não aplicável: sem suspeita aguda atual"}
+        ],
+        "section": "Biomarcadores"
+      },
+      {
+        "id": "lethal_alternative_red_flags",
+        "label": "Há sinais de síndrome aórtica, embolia pulmonar, pneumotórax ou outra causa imediatamente ameaçadora?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "nao", "label": "Não"},
+          {"value": "desconhecido", "label": "Desconhecido"}
+        ],
+        "section": "Diagnósticos alternativos"
+      },
+      {
+        "id": "bleeding_or_anticoagulation_risk_known",
+        "label": "Alergia, sangramento ativo/recente, anticoagulação, função renal, peso e idade foram verificados antes de terapia antitrombótica?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "incompleto_suspeita_aguda", "label": "Não, em suspeita aguda atual"},
+          {"value": "nao_aplicavel_sem_suspeita_aguda", "label": "Não aplicável: sem suspeita aguda atual"}
+        ],
+        "section": "Segurança terapêutica"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sca-instabilidade",
+        "priority": 100,
+        "when": {"all": [{"field": "hemodynamic_or_electrical_instability", "op": "eq", "value": "sim"}]},
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Instabilidade hemodinâmica, elétrica ou possível complicação mecânica"],
+          "emergency_flow": ["Acionar imediatamente equipe de emergência/hemodinâmica e suporte avançado conforme o fenótipo"],
+          "suggested_tests": ["Ecocardiograma à beira do leito quando houver instabilidade, insuficiência cardíaca ou suspeita de complicação mecânica"]
+        }
+      },
+      {
+        "id": "sca-supra-ou-equivalente",
+        "priority": 100,
+        "when": {"all": [{"field": "st_elevation_or_equivalent", "op": "eq", "value": "sim"}]},
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": ["Ativar via de reperfusão sem aguardar troponina; definir estratégia no protocolo regional por equipe habilitada"],
+          "messages": ["A regra não interpreta o ECG nem escolhe fibrinólise ou dose"],
+          "suggested_tests": ["Coronariografia invasiva urgente conforme apresentação, risco e estratégia definida pela equipe habilitada"]
+        }
+      },
+      {
+        "id": "sca-sintoma-ativo",
+        "priority": 95,
+        "when": {"all": [{"field": "current_or_recurrent_ischemic_symptoms", "op": "eq", "value": "sim"}]},
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": ["Manter monitorização, repetir ECG e conduzir avaliação urgente de SCA e diagnósticos ameaçadores"]
+        }
+      },
+      {
+        "id": "sca-ecg-nao-avaliado",
+        "priority": 90,
+        "when": {"all": [{"field": "st_elevation_or_equivalent", "op": "eq", "value": "nao_avaliado_suspeita_aguda"}]},
+        "add": {
+          "risk": "emergencia",
+          "missing_information": ["ECG ainda não interpretado por equipe habilitada"],
+          "suggested_tests": ["Obter e interpretar ECG de 12 derivações imediatamente"]
+        }
+      },
+      {
+        "id": "sca-troponina-seriada-incompleta",
+        "priority": 80,
+        "when": {"all": [{"field": "hs_troponin_pathway_completed", "op": "eq", "value": "incompleto_suspeita_aguda"}]},
+        "add": {
+          "risk": "urgente",
+          "missing_information": ["Algoritmo diagnóstico de troponina de alta sensibilidade incompleto na suspeita aguda"],
+          "messages": ["Uma amostra isolada só apoia descarte quando satisfaz integralmente um algoritmo validado, incluindo tempo desde o início e limite específico do ensaio"],
+          "suggested_tests": ["Completar algoritmo validado de troponina de alta sensibilidade para o ensaio local"]
+        }
+      },
+      {
+        "id": "sca-alternativa-letal",
+        "priority": 100,
+        "when": {"all": [{"field": "lethal_alternative_red_flags", "op": "eq", "value": "sim"}]},
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Possível diagnóstico alternativo imediatamente ameaçador"],
+          "emergency_flow": ["Investigar em paralelo a causa alternativa sem atrasar estabilização"],
+          "suggested_tests": ["Selecionar imagem dirigida para aorta, pulmão ou miocárdio conforme a hipótese alternativa e a estabilidade"]
+        }
+      },
+      {
+        "id": "sca-seguranca-antitrombotica-incompleta",
+        "priority": 85,
+        "when": {"all": [{"field": "bleeding_or_anticoagulation_risk_known", "op": "eq", "value": "incompleto_suspeita_aguda"}]},
+        "add": {
+          "risk": "urgente",
+          "missing_information": ["Dados de segurança para terapia antitrombótica não verificados"],
+          "messages": ["Não sugerir fármaco ou dose antes de verificar sangramento, anticoagulação, alergia, função renal, peso e idade"]
+        }
+      },
+      {
+        "id": "sca-dados-criticos-desconhecidos",
+        "priority": 90,
+        "when": {
+          "any": [
+            {"field": "current_or_recurrent_ischemic_symptoms", "op": "eq", "value": "desconhecido"},
+            {"field": "hemodynamic_or_electrical_instability", "op": "eq", "value": "desconhecido"},
+            {"field": "lethal_alternative_red_flags", "op": "eq", "value": "desconhecido"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": ["Um ou mais dados críticos de segurança permanecem desconhecidos"],
+          "messages": ["Não autorizar baixa prioridade ou alta enquanto dados críticos estiverem desconhecidos"]
+        }
+      }
+    ],
+    "tags": [
+      "síndrome coronariana aguda",
+      "angina instável",
+      "NSTEMI",
+      "STEMI",
+      "troponina",
+      "reperfusão",
+      "choque cardiogênico",
+      "DAPT"
+    ],
+    "source_refs": [
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151:e771-e862. DOI: 10.1161/CIR.0000000000001309; consultar também as correções oficiais DOI: 10.1161/CIR.0000000000001328, 10.1161/CIR.0000000000001346 e 10.1161/CIR.0000000000001397."
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/guidelines-statements/2025-accahaacepnaemspscai-guideline-for-the-management-of-patients-with-acutecir0000000000001309",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001328",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001346",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001397"
+    ],
+    "related_document_slugs": [
+      "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+      "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+      "fluxograma-sindrome-coronariana-aguda-esc-2023",
+      "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+      "fluxograma-iamcsst-estrategia-de-reperfusao-icp-primaria-vs-fibrinolise-esc-2023",
+      "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+      "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023"
+    ],
+    "patient_material_slug": "doenca-coronariana-e-infarto",
+    "review_status": "pendente_revisao",
+    "review_note": "Rascunho produzido por agentes em 27/08/2026 a partir da diretriz primária oficial ACC/AHA 2025 e das três correções oficiais conhecidas. Exige revisão clínica humana antes da publicação. As regras foram revisadas para atuar somente em suspeita aguda explícita, não interpretam ECG, não calculam dose, não selecionam reperfusão e não autorizam alta. Documentos ESC preexistentes permanecem apenas como navegação clínica; qualquer transformação da diretriz ESC em software depende de licença formal.",
+    "fonte_producao": "chatgpt",
+    "version": 1
   }
 ]
