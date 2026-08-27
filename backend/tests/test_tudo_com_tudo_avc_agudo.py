@@ -20,7 +20,7 @@ def _por_slug(relative_path: str) -> dict[str, dict]:
     return {item["slug"]: item for item in payload}
 
 
-def test_lote_avc_preserva_revisao_humana_e_atribuicao():
+def test_lote_avc_esta_revisado_sem_publicacao_antecipada():
     manifests = {
         "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
         "doencas/metadados.json": {"acidente-vascular-cerebral-agudo"},
@@ -40,13 +40,13 @@ def test_lote_avc_preserva_revisao_humana_e_atribuicao():
     for path, slugs in manifests.items():
         items = _por_slug(path)
         for slug in slugs:
-            assert items[slug]["review_status"] == "pendente_revisao"
+            assert items[slug]["review_status"] == "revisado"
             assert items[slug]["fonte_producao"] == "chatgpt"
             assert items[slug].get("published") is not True
 
     for name in (f"{DOCUMENTO}.md", f"{FLUXOGRAMA}.md"):
         text = (ROOT / "content/Geral" / name).read_text(encoding="utf-8")
-        assert "review_status: pendente_revisao" in text
+        assert "review_status: revisado" in text
         assert "fonte_producao: chatgpt" in text
 
     assert "geral" in DISEASE_AREAS
@@ -155,6 +155,17 @@ def test_lote_avc_usa_recomendacoes_primarias_com_classe_e_nivel_exatos():
         )
     )
 
+
+
+def test_fluxograma_nao_exige_confirmacao_radiologica_precoce_de_isquemia():
+    protocolo = (ROOT / "content/Geral" / f"{DOCUMENTO}.md").read_text(encoding="utf-8")
+    fluxograma = (ROOT / "content/Geral" / f"{FLUXOGRAMA}.md").read_text(encoding="utf-8")
+
+    assert "apresentações posteriores" not in protocolo
+    assert "circulação posterior" in protocolo
+    assert "AVC isquêmico confirmado" not in fluxograma
+    assert "hipótese clínica" in fluxograma
+    assert "não equivale a exigir confirmação radiológica" in fluxograma
 
 def test_triagem_avc_aciona_emergencia_mesmo_se_sintomas_melhoraram():
     triagem = _por_slug("triagem-sintomas/metadados.json")[

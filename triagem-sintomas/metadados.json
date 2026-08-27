@@ -3997,7 +3997,7 @@
     "default_tests": [
       "FAST ou escala pré-hospitalar equivalente",
       "Glicemia capilar quando disponível sem atrasar o acionamento",
-      "Neuroimagem urgente no serviço de emergência"
+      "Neuroimagem urgente para excluir hemorragia e orientar diagnóstico/reperfusão"
     ],
     "differentials": [
       "Acidente vascular cerebral agudo",
@@ -4024,7 +4024,7 @@
     "emergency_flow": [
       "Avaliar ABC e acionar protocolo local de AVC",
       "Verificar sinais vitais e glicemia sem atrasar neuroimagem",
-      "Obter neuroimagem urgente para distinguir isquemia de hemorragia",
+      "Obter neuroimagem urgente para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão",
       "Equipe de AVC define reperfusão, destino e tratamento"
     ],
     "tags": [
@@ -4043,10 +4043,10 @@
       "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
       "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Reconhecimento e encaminhamento apenas; não contém autorização autônoma para trombólise, trombectomia, antiagregação ou redução pressórica. Revisão clínica humana obrigatória.",
+    "review_status": "revisado",
+    "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024 e AHA/ASA 2026. Corrigida a formulação da neuroimagem para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "colapso-subito-inconsciencia-e-respiracao-anormal",

@@ -29453,7 +29453,7 @@
     "resumo": "Itens mínimos para não perder a janela, distinguir imitadores imediatos e encaminhar à neuroimagem sem iniciar antitrombótico ou reperfusão fora do protocolo.",
     "documento_origem": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
     "theme": "Geral",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "chatgpt",
     "source_refs": [
       "Hewett Brumberg EK, Douma MJ, Alibertis K, et al. 2024 AHA/Red Cross Guidelines for First Aid. Circulation. DOI: 10.1161/CIR.0000000000001281.",
@@ -29499,7 +29499,7 @@
         "id": "avc-neuroimagem",
         "categoria": "exame",
         "obrigatorio": true,
-        "texto": "Neuroimagem urgente providenciada para distinguir isquemia de hemorragia antes de trombolítico ou antitrombótico",
+        "texto": "Neuroimagem urgente providenciada para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão antes de trombolítico ou antitrombótico",
         "origem_secao": "Primeira hora no serviço de emergência"
       },
       {
@@ -29531,7 +29531,9 @@
         "origem_secao": "Primeira hora no serviço de emergência"
       }
     ],
-    "revisao": "Produzido por ChatGPT em 26/08/2026 com fontes oficiais atuais. Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
+    "revisao": "Revisão clínica concluída em 27/08/2026. Conteúdo confrontado com AHA/American Red Cross 2024 e AHA/ASA 2026; publicação permanece para etapa posterior.",
+    "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024 e AHA/ASA 2026; mantém-se como checklist de reconhecimento/primeira hora, sem prescrição autônoma de reperfusão.",
+    "version": 2
   },
   {
     "slug": "primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda",

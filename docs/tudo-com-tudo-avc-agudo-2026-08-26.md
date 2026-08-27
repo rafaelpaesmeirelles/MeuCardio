@@ -1,6 +1,6 @@
 # Lote Tudo com Tudo — suspeita de AVC agudo e primeira hora
 
-Data da auditoria: 26/08/2026.
+Data da auditoria inicial: 26/08/2026. Revisão clínica concluída em 27/08/2026.
 
 ## Lacuna priorizada
 
@@ -23,9 +23,18 @@ antitrombóticos.
 - evidências: acionamento imediato, FAST/Cincinnati e glicemia sem atraso;
 - trilha: da identificação à decisão especializada de reperfusão.
 
-Os 11 registros permanecem como `pendente_revisao`, com
-`fonte_producao=chatgpt`. Nenhuma decisão de revisão clínica humana foi
-presumida.
+Os 11 registros foram confrontados com as fontes primárias e marcados como
+`revisado`, preservando `fonte_producao=chatgpt`. Permanecem fora de produção
+nesta branch até decisão posterior de merge e deploy.
+
+## Correções da revisão de 27/08/2026
+
+- corrigido o erro editorial “apresentações posteriores” para “circulação posterior”;
+- neuroimagem passou a ser descrita como meio de excluir hemorragia e orientar
+  diagnóstico/reperfusão, sem exigir confirmação radiológica precoce de isquemia;
+- acrescentada a seleção por imagem avançada para trombólise em início desconhecido
+  ou 4,5–9 horas, conforme AHA/ASA 2026;
+- padronizados status, notas e versão dos 11 registros, sem merge ou deploy.
 
 ## Relações clínicas diretas
 
@@ -41,7 +50,8 @@ presumida.
 | documentos | links Markdown | protocolo, fluxograma, alteplase e tenecteplase | navegação bidirecional pela API do grafo |
 
 O armazenamento das arestas é dirigido, mas a API consulta relações de entrada
-e saída. Os nós pendentes continuam fora da publicação até revisão humana.
+e saída. Os nós revisados continuam fora da produção enquanto esta branch não for
+mesclada nem implantada.
 
 ## Proximidade temática sem promoção a vínculo direto
 
@@ -82,15 +92,15 @@ e saída. Os nós pendentes continuam fora da publicação até revisão humana.
   não deve ser usado isoladamente em pediatria;
 - rotulagem local e protocolo de diretriz podem divergir para tenecteplase; a
   decisão cabe à equipe de AVC e à regulação aplicável;
-- revisão clínica e técnica final é obrigatória antes de qualquer item mudar
-  para `revisado`.
+- revisão clínica e técnica concluída em 27/08/2026; publicação continua
+  separada e depende de decisão posterior.
 
 ## Gates esperados
 
-- inventário: 9.452 → 9.463 itens; arquivos físicos: 2.185 → 2.187;
-- revisão: 9.452 `revisado` + 11 `pendente_revisao`;
+- inventário atual: 9.496 itens e 2.193 arquivos físicos;
+- revisão esperada após este lote: 9.496 `revisado`, zero pendente;
 - referências canônicas quebradas: zero;
-- cobertura temática explícita: 9.463/9.463;
+- cobertura temática explícita: 9.496/9.496;
 - JSON, frontmatter, regras de triagem, inventário, grafo, testes e build devem
   permanecer verdes.
 

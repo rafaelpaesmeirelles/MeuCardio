@@ -15311,7 +15311,7 @@
     "tests": [
       "Escala de reconhecimento pré-hospitalar como FAST",
       "Glicemia capilar sem atrasar o acionamento",
-      "Tomografia ou ressonância de crânio urgente conforme protocolo",
+      "Neuroimagem urgente para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão",
       "Imagem vascular e demais exames conforme hipótese e elegibilidade terapêutica"
     ],
     "red_flags": [
@@ -15328,11 +15328,11 @@
     ],
     "emergency_flow": [
       "ABC, sinais vitais, glicemia e ativação do protocolo de AVC",
-      "Neuroimagem urgente para distinguir isquemia de hemorragia",
+      "Neuroimagem urgente para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão",
       "Avaliar reperfusão e destino em equipe especializada",
       "Tratar imitadores e complicações sem atrasar o fluxo neurovascular"
     ],
-    "diagnostic_approach": "A suspeita é clínica; a classificação entre AVC isquêmico, hemorragia e imitadores depende de neuroimagem e avaliação especializada. FAST ajuda a reconhecer, mas não exclui todas as apresentações.",
+    "diagnostic_approach": "A suspeita é clínica; a neuroimagem urgente é necessária para excluir hemorragia e identificar achados que orientem o diagnóstico e a reperfusão. FAST ajuda a reconhecer, mas não exclui todas as apresentações, especialmente as da circulação posterior.",
     "treatment_summary": "Tratamento depende do subtipo, tempo, imagem, déficit incapacitante, contraindicações e capacidade local. Alteplase ou tenecteplase e terapia endovascular são opções apenas para pacientes selecionados por protocolo de AVC.",
     "monitoring": [
       "Estado neurológico e sinais vitais",
@@ -15438,10 +15438,10 @@
       "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
       "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Conteúdo novo produzido por ChatGPT, restrito a reconhecimento, primeira hora e critérios de segurança gerais; exige revisão clínica humana antes da publicação.",
+    "review_status": "revisado",
+    "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024, AHA/ASA 2026 e Ministério da Saúde. Corrigida a formulação para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão.",
     "fonte_producao": "chatgpt",
-    "version": 1,
+    "version": 2,
     "related_document_slugs": [
       "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
       "fluxograma-suspeita-de-avc-agudo-primeira-hora"

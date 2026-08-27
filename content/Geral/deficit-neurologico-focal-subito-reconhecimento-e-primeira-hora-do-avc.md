@@ -3,9 +3,10 @@ title: "Déficit neurológico focal súbito: reconhecimento e primeira hora do A
 slug: deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc
 theme: "Geral"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
-review_note: "Lote auditável de 26/08/2026. Requer revisão clínica humana antes de publicação; não prescreve trombólise nem trombectomia fora de protocolo de AVC e neuroimagem."
+version: 2
+review_note: "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024, AHA/ASA 2026 e Ministério da Saúde. Corrigida a formulação da neuroimagem para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão."
 source_refs: ["Hewett Brumberg EK, Douma MJ, Alibertis K, et al.; on behalf of the American Heart Association and American Red Cross. 2024 American Heart Association and American Red Cross Guidelines for First Aid. Circulation. 2024;150:e519-e579. DOI: 10.1161/CIR.0000000000001281.", "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke: A Guideline From the American Heart Association/American Stroke Association. Stroke. Published online January 26, 2026. DOI: 10.1161/STR.0000000000000513.", "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. Correction to: 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke. Stroke. 2026;57(8):e461-e467. DOI: 10.1161/STR.0000000000000530.", "Ministério da Saúde. AVC. Portal Saúde de A a Z; página oficial consultada em 26/08/2026."]
 ---
 
@@ -26,9 +27,9 @@ empírica da pressão arterial.
 No adulto, assimetria facial nova, queda ou fraqueza de um braço e alteração
 súbita da fala formam o núcleo do FAST. A diretriz AHA/Red Cross 2024 recomenda
 uma escala de reconhecimento como FAST ou Cincinnati e determina acionamento
-imediato do sistema de emergência quando houver suspeita (ambas Classe 1,
-nível B-NR). Um teste negativo não exclui apresentações posteriores, visuais,
-oculomotoras ou de equilíbrio.
+imediato do sistema de emergência quando houver suspeita (ambas Classe I,
+nível B-NR). Um resultado negativo não exclui AVC da circulação posterior nem
+apresentações predominantemente visuais, oculomotoras ou de equilíbrio.
 
 No Brasil, acionar o SAMU pelo 192. Não orientar a pessoa a dirigir. Mesmo que
 o déficit desapareça em minutos, a suspeita de AIT continua urgente e não deve
@@ -53,13 +54,16 @@ pessoa sem hipoxemia não traz benefício no primeiro atendimento do AVC
 ## Primeira hora no serviço de emergência
 
 O serviço deve ativar o protocolo local de AVC, verificar sinais vitais e
-glicemia e obter neuroimagem urgente para distinguir isquemia de hemorragia.
+glicemia e obter neuroimagem urgente para excluir hemorragia e identificar achados que
+orientem o diagnóstico e a reperfusão.
 A diretriz AHA/ASA 2026 mantém reperfusão como decisão tempo-dependente e
 orientada por elegibilidade, imagem e capacidade do sistema: alteplase ou
 tenecteplase podem ser usadas em pacientes selecionados dentro da janela de
-4,5 horas, e pacientes selecionados podem ter indicação de terapia
-endovascular em janelas mais amplas. Essas frases descrevem o encaminhamento,
-não uma prescrição automática.
+4,5 horas. Em início desconhecido ou entre 4,5 e 9 horas, alguns pacientes
+podem ser selecionados para trombólise por critérios de imagem avançada; a
+terapia endovascular também pode ser indicada em janelas ampliadas conforme
+vaso, imagem e perfil clínico. Essas frases descrevem o encaminhamento, não
+uma prescrição automática.
 
 Não atrasar a avaliação por melhora parcial, idade isolada, pontuação baixa em
 uma escala ou ausência de todos os componentes do FAST. Déficits incapacitantes

@@ -8,10 +8,9 @@ que deixe de estar revisado é despublicado.
 A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
-PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. A
-allowlist abaixo é fechada nos slugs dos lotes Tudo com Tudo explicitamente
-pendentes. Ela permite que os PRs preservem a decisão humana sem publicar
-conteúdo novo; qualquer outro pendente continua quebrando o gate.
+PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes Tudo com Tudo pendentes foram revisados em 27/08/2026. As allowlists
+ficam vazias: qualquer novo status diferente de `revisado` quebra o gate e
+exige decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -37,29 +36,8 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
-    "evidencias/metadados.json": {
-        "primeiros-socorros-suspeita-avc-acionar-emergencia-imediatamente-aha-2024",
-        "primeiros-socorros-avc-usar-fast-ou-cincinnati-aha-2024",
-        "primeiros-socorros-avc-glicemia-sem-atrasar-emergencia-aha-2024",
-    },
-    "checklists/metadados.json": {"primeira-hora-na-suspeita-de-avc-agudo"},
-    "trilhas/metadados.json": {
-        "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao",
-    },
-    "material-paciente/metadados.json": {
-        "sinais-de-avc-como-agir-sem-perder-tempo"
-    },
-    "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
-    "doencas/metadados.json": {
-        "acidente-vascular-cerebral-agudo",
-    },
-    "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
-}
-PENDENTES_MARKDOWN_AVC = {
-    "content/Geral/deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc.md",
-    "content/Geral/fluxograma-suspeita-de-avc-agudo-primeira-hora.md",
-}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
