@@ -20,7 +20,7 @@ const BASE: Secao[] = [
     icone: "clinica",
     itens: [
       { to: "/assistente", rotulo: "Assistente", icone: "assistente" },
-      { to: "/doencas", rotulo: "Doenças e condições", icone: "doencas" },
+      { to: "/doencas", rotulo: "Guia de Doenças", icone: "doencas" },
       { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
       { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
       { to: "/medicamentos", rotulo: "Medicamentos", icone: "medicamento" },
@@ -89,7 +89,7 @@ const BASE: Secao[] = [
 const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone: NomeIcone }> = [
   { prefixo: "/medicamentos", titulo: "Medicamentos", detalhe: "Farmacologia e segurança", icone: "medicamento" },
   { prefixo: "/interacoes", titulo: "Interações", detalhe: "Segurança medicamentosa", icone: "medicamento" },
-  { prefixo: "/doencas", titulo: "Doenças e condições", detalhe: "Consulta clínica", icone: "doencas" },
+  { prefixo: "/doencas", titulo: "Guia de Doenças", detalhe: "Consulta clínica", icone: "doencas" },
   { prefixo: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e decisão", icone: "calculadora" },
   { prefixo: "/diretrizes", titulo: "Diretrizes", detalhe: "Recomendações e atualização", icone: "evidencia" },
   { prefixo: "/evidencias", titulo: "Evidências", detalhe: "Síntese científica", icone: "evidencia" },
@@ -182,7 +182,7 @@ function Intelligence({ pathname }: { pathname: string }) {
     };
     if (pathname.startsWith("/doencas") || pathname.startsWith("/triagem-sintomas")) return {
       titulo: "Inteligência clínica",
-      texto: "Navegue da condição para diretrizes, fármacos, escores e exames.",
+      texto: "Navegue da doença para diretrizes, fármacos, escores e exames.",
       links: [["/diretrizes", "Ver diretrizes", "evidencia"], ["/calculadoras", "Abrir escores", "calculadora"], ["/medicamentos", "Explorar fármacos", "medicamento"]] as [string, string, NomeIcone][],
     };
     if (pathname.startsWith("/evidencias") || pathname.startsWith("/estudos") || pathname.startsWith("/diretrizes")) return {
@@ -193,7 +193,7 @@ function Intelligence({ pathname }: { pathname: string }) {
     if (pathname.startsWith("/exames") || pathname.startsWith("/galeria")) return {
       titulo: "Inteligência diagnóstica",
       texto: "Relacione achados, critérios, condições e próximos passos.",
-      links: [["/doencas", "Condições relacionadas", "doencas"], ["/calculadoras", "Critérios e escores", "calculadora"], ["/assistente", "Analisar contexto", "assistente"]] as [string, string, NomeIcone][],
+      links: [["/doencas", "Doenças relacionadas", "doencas"], ["/calculadoras", "Critérios e escores", "calculadora"], ["/assistente", "Analisar contexto", "assistente"]] as [string, string, NomeIcone][],
     };
     return {
       titulo: "CorVIA Intelligence",

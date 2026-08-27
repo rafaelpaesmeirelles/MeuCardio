@@ -126,7 +126,7 @@ export default function Calculadoras() {
 
       <ClinicalSection eyebrow="Contexto" title="Depois do cálculo">
         <div className="cc-context-grid">
-          <ClinicalContextLink to="/doencas" icon="doencas" title="Condições" detail="Interpretar o resultado no quadro clínico" />
+          <ClinicalContextLink to="/doencas" icon="doencas" title="Guia de Doenças" detail="Interpretar o resultado no quadro clínico" />
           <ClinicalContextLink to="/evidencias" icon="evidencia" title="Evidências" detail="Rever indicação e limitações" />
           <ClinicalContextLink to="/documentos" icon="documento" title="Documentos" detail="Levar o resultado para a ação" />
         </div>

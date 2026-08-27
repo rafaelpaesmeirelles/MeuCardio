@@ -59,7 +59,7 @@ const ACOES: AcaoRapida[] = [
 const MODULOS: ModuloGrupo[] = [
   {
     title: "Clínica & Decisão", tone: "cyan", icon: "clinica", items: [
-      { to: "/doencas", label: "Condições", icon: "doencas" },
+      { to: "/doencas", label: "Guia de Doenças", icon: "doencas" },
       { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
       { to: "/exames", label: "Exames", icon: "clinica" },
       { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },

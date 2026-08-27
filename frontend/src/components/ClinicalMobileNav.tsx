@@ -9,7 +9,7 @@ type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolea
 type MobileSection = { title: string; items: LinkItem[] };
 
 const CLINICA_DECISAO: LinkItem[] = [
-  { to: "/doencas", label: "Condições", icon: "doencas" },
+  { to: "/doencas", label: "Guia de Doenças", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },

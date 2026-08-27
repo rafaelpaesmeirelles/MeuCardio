@@ -171,7 +171,7 @@ export default function Exames() {
       <ClinicalSection eyebrow="Conhecimento conectado" title="Do exame à decisão">
         <div className="cc-context-grid">
           <ClinicalContextLink to="/documentos" icon="documento" title="Solicitar exames" detail="Transformar decisão em pedido" />
-          <ClinicalContextLink to="/doencas" icon="doencas" title="Condições" detail="Interpretar dentro da doença" />
+          <ClinicalContextLink to="/doencas" icon="doencas" title="Guia de Doenças" detail="Interpretar dentro da doença" />
           <ClinicalContextLink to="/evidencias" icon="evidencia" title="Evidências" detail="Recomendações de uso" />
         </div>
       </ClinicalSection>

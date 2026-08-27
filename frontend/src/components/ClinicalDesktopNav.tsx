@@ -9,7 +9,7 @@ type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean
 type NavSection = { title: string; items: NavItem[] };
 
 const CLINICA_DECISAO: NavItem[] = [
-  { to: "/doencas", label: "Condições", icon: "doencas" },
+  { to: "/doencas", label: "Guia de Doenças", icon: "doencas" },
   { to: "/medicamentos", label: "Medicamentos", icon: "medicamento" },
   { to: "/exames", label: "Exames", icon: "clinica" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
