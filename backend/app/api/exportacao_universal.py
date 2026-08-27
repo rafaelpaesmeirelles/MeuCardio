@@ -25,6 +25,9 @@ from app.services.email_signature import montar_assinatura_html, montar_corpo_co
 from app.services.exportacao_conteudo import TIPOS_EXPORTAVEIS, catalogo, gerar_pdf, resolver_conteudo
 from app.services.exportacao_office import gerar_docx, gerar_pptx
 from app.services.mail360 import Mail360Error
+from app.services.professional_profile import document_identity
+from app.services.assinatura.provedor import obter_provedor
+from app.services.assinatura.verificacao_pdf import verificar as verificar_assinatura_pdf
 
 router = APIRouter(prefix="/api/exportar", tags=["exportação"])
 _EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
@@ -56,6 +59,7 @@ class PedidoExportacao(BaseModel):
     incluir_dados_assinante: bool = False
     titulo: str | None = Field(default=None, max_length=180)
     formato: str = Field(default="pdf")
+    assinar_digitalmente: bool = False
 
     @field_validator("formato")
     @classmethod
@@ -117,6 +121,7 @@ class ArquivoGerado(BaseModel):
     itens: list[dict]
     formato: str
     media_type: str
+    assinado_digitalmente: bool = False
 
 
 def _arquivo(nome: str, formato: str) -> str:
@@ -126,6 +131,15 @@ def _arquivo(nome: str, formato: str) -> str:
 
 
 def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerado:
+    if dados.assinar_digitalmente and dados.formato != "pdf":
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                "A assinatura digital qualificada está disponível somente para PDF. "
+                "PowerPoint e Word permanecem editáveis e não recebem uma imagem que simule assinatura."
+            ),
+        )
+
     uf = (user.council_state or "").strip().upper() or None
     resolvidos = []
     ausentes = []
@@ -158,6 +172,37 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
+    assinado_digitalmente = False
+    if dados.assinar_digitalmente:
+        provedor = obter_provedor("A1_ARQUIVO", db=db, user=user)
+        disponivel, motivo = provedor.disponivel()
+        if not disponivel:
+            raise HTTPException(status_code=409, detail=motivo or "Certificado A1 indisponível.")
+
+        assinatura = provedor.assinar(
+            conteudo,
+            document_identity(user),
+            {"tipo": "exportação de conteúdo CorVIA"},
+        )
+        if assinatura.estado != "assinado" or assinatura.pdf is None:
+            raise HTTPException(
+                status_code=502,
+                detail=assinatura.motivo or "O certificado não concluiu a assinatura digital.",
+            )
+
+        verificacao = verificar_assinatura_pdf(assinatura.pdf)
+        if not verificacao or not (
+            verificacao.intacta
+            and verificacao.estrutura_valida
+            and verificacao.cobre_documento_inteiro
+        ):
+            raise HTTPException(
+                status_code=502,
+                detail="A assinatura foi interrompida porque a verificação criptográfica final não foi aprovada.",
+            )
+        conteudo = assinatura.pdf
+        assinado_digitalmente = True
+
     titulo = (dados.titulo or (resolvidos[0].titulo if len(resolvidos) == 1 else "Seleção de conteúdo CorVIA")).strip()
     return ArquivoGerado(
         nome=_arquivo(titulo, dados.formato),
@@ -171,6 +216,7 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
             "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
             "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         }[dados.formato],
+        assinado_digitalmente=assinado_digitalmente,
     )
 
 
@@ -238,6 +284,7 @@ def exportar_conteudo(
             "incluir_dados_assinante": dados.incluir_dados_assinante,
             "bytes": len(arquivo.conteudo),
             "formato": arquivo.formato,
+            "assinado_digitalmente": arquivo.assinado_digitalmente,
         },
     ))
     db.commit()
@@ -324,6 +371,7 @@ def enviar_conteudo_por_email(
             "incluir_dados_assinante": dados.incluir_dados_assinante,
             "bytes": len(arquivo.conteudo),
             "formato": arquivo.formato,
+            "assinado_digitalmente": arquivo.assinado_digitalmente,
             "anexo_file_id": anexo.file_id,
             "com_cc": bool(dados.cc),
             "com_cco": bool(dados.cco),

@@ -13,6 +13,11 @@ type CatalogItem = {
 };
 type CatalogResponse = { total: number; itens: CatalogItem[]; tipos: string[] };
 type MailStatus = { disponivel: boolean; motivo: string | null; email_address: string | null };
+type CertificadoA1Status = {
+  conectado: boolean;
+  titular_cn?: string;
+  valido_ate?: string;
+};
 type EnvioResponse = {
   enviado: boolean;
   remetente: string;
@@ -72,6 +77,8 @@ export default function ExportarConteudo() {
   const [titulo, setTitulo] = useState("");
   const [incluirDados, setIncluirDados] = useState(false);
   const [formato, setFormato] = useState<FormatoExportacao>("pdf");
+  const [assinarDigitalmente, setAssinarDigitalmente] = useState(false);
+  const [certificadoA1, setCertificadoA1] = useState<CertificadoA1Status | null>(null);
   const [gerando, setGerando] = useState(false);
   const [mail, setMail] = useState<MailStatus | null>(null);
   const [para, setPara] = useState("");
@@ -89,6 +96,12 @@ export default function ExportarConteudo() {
       motivo: "Não foi possível confirmar o CorVIA Mail agora.",
       email_address: null,
     }));
+  }, []);
+
+  useEffect(() => {
+    api.get<CertificadoA1Status>("/assinatura/certificado-a1")
+      .then(setCertificadoA1)
+      .catch(() => setCertificadoA1({ conectado: false }));
   }, []);
 
   useEffect(() => {
@@ -126,7 +139,14 @@ export default function ExportarConteudo() {
     incluir_dados_assinante: incluirDados,
     titulo: titulo.trim() || null,
     formato,
-  }), [selecionados, incluirDados, titulo, formato]);
+    assinar_digitalmente: formato === "pdf" && assinarDigitalmente,
+  }), [selecionados, incluirDados, titulo, formato, assinarDigitalmente]);
+
+  function escolherFormato(novoFormato: FormatoExportacao) {
+    setFormato(novoFormato);
+    if (novoFormato !== "pdf") setAssinarDigitalmente(false);
+    setEnvio(null);
+  }
 
   function adicionar(item: CatalogItem) {
     setSelecionados((atuais) => chavesSelecionadas.has(chave(item)) ? atuais : [...atuais, item]);
@@ -262,18 +282,47 @@ export default function ExportarConteudo() {
           <div style={{ display: "grid", gap: 8 }}>
             {(Object.entries(FORMATOS) as [FormatoExportacao, typeof FORMATOS[FormatoExportacao]][]).map(([id, opcao]) => (
               <label key={id} style={{ display: "flex", gap: 9, alignItems: "flex-start", fontWeight: 400 }}>
-                <input type="radio" name="formato-exportacao" checked={formato === id} onChange={() => setFormato(id)} />
+                <input type="radio" name="formato-exportacao" checked={formato === id} onChange={() => escolherFormato(id)} />
                 <span><strong>{opcao.nome}</strong><br /><span className="dado">{opcao.descricao}</span></span>
               </label>
             ))}
           </div>
         </fieldset>
+        <div className="cartao" style={{ marginTop: 12, padding: "0.8rem" }}>
+          <label style={{ display: "flex", gap: 9, alignItems: "flex-start", fontWeight: 400 }}>
+            <input
+              type="checkbox"
+              checked={assinarDigitalmente}
+              onChange={(e) => setAssinarDigitalmente(e.target.checked)}
+              disabled={formato !== "pdf" || certificadoA1?.conectado !== true}
+            />
+            <span>
+              <strong>Assinar digitalmente com meu certificado A1</strong><br />
+              <span className="dado">A assinatura PAdES cobre o PDF inteiro e exibe o selo visual de assinatura em todas as páginas.</span>
+            </span>
+          </label>
+          {formato !== "pdf" ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Assinatura digital disponível para PDF. PowerPoint e Word continuam editáveis.
+            </p>
+          ) : certificadoA1 === null ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>Verificando seu certificado A1…</p>
+          ) : certificadoA1.conectado ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Certificado conectado{certificadoA1.titular_cn ? `: ${certificadoA1.titular_cn}` : ""}.
+            </p>
+          ) : (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Para usar esta opção, <Link to="/minha-conta">conecte seu certificado A1 em Minha Conta</Link>.
+            </p>
+          )}
+        </div>
         <label style={{ display: "flex", gap: 9, alignItems: "flex-start", marginTop: 12, fontWeight: 400 }}>
           <input type="checkbox" checked={incluirDados} onChange={(e) => setIncluirDados(e.target.checked)} />
           <span><strong>Incluir meus dados profissionais</strong><br /><span className="dado">Nome, conselho/RQE, especialidade e identificação profissional configurada na sua conta.</span></span>
         </label>
         <button className="botao botao--acao" type="button" onClick={baixar} disabled={!selecionados.length || gerando} style={{ marginTop: 14 }}>
-          {gerando ? "Gerando arquivo…" : `Gerar e baixar ${FORMATOS[formato].nome}`}
+          {gerando ? "Gerando arquivo…" : `Gerar e baixar ${FORMATOS[formato].nome}${assinarDigitalmente ? " assinado" : ""}`}
         </button>
       </section>
 
@@ -286,7 +335,7 @@ export default function ExportarConteudo() {
           </div>
         ) : (
           <>
-            <p className="dado">O arquivo em {FORMATOS[formato].nome} será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
+            <p className="dado">O arquivo em {FORMATOS[formato].nome}{assinarDigitalmente ? " assinado digitalmente" : ""} será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, marginTop: 10, minWidth: 0 }}>
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Para</strong><input type="email" value={para} onChange={(e) => setPara(e.target.value)} placeholder="destinatario@exemplo.com" /></label>
               <label style={{ minWidth: 0 }}><strong>CC (opcional)</strong><input type="email" value={cc} onChange={(e) => setCc(e.target.value)} /></label>
