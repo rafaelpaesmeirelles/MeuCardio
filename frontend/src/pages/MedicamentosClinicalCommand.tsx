@@ -246,7 +246,7 @@ function DetalheMedicamento({ drug, onClose }: { drug: Insight; onClose: () => v
           <ClinicalContextLink to="/evidencias" icon="evidencia" title="Evidências" detail="Recomendações relacionadas" />
           <ClinicalContextLink to="/estudos" icon="evidencia" title="Estudos" detail="Literatura original" />
           <ClinicalContextLink to="/receituario" icon="prescricao" title="Prescrição" detail="Levar para uma ação clínica" />
-          <ClinicalContextLink to="/doencas" icon="doencas" title="Condições" detail="Contexto de uso" />
+          <ClinicalContextLink to="/doencas" icon="doencas" title="Guia de Doenças" detail="Contexto de uso" />
           <ClinicalContextLink to="/assistente" icon="assistente" title="Assistente Clínica" detail="Discutir o contexto" />
         </div>
       </ClinicalSection>

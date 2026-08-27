@@ -26,24 +26,41 @@ type Response = {
   has_more: boolean;
 };
 
-type AreaCount = {
-  id: string;
-  count: number;
-  collections: number;
-};
-
-type AreaCountsResponse = { areas: AreaCount[] };
+type DiseaseFacet = { id: string; count: number };
+type DiseaseFacetsResponse = { areas: DiseaseFacet[]; categories: DiseaseFacet[] };
 
 type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pediatrica" | "oncologia" | "gestacao" | "outros";
 
-const AREAS = [
-  ["", "Todas as áreas"],
-  ["geral", "Cardiologia do adulto"],
-  ["cardiopediatria", "Cardiopediatria"],
-  ["cardiogeriatria", "Cardiogeriatria"],
-  ["cardiooncologia", "Cardio-oncologia"],
-  ["gravidez", "Cardiologia na gravidez"],
-] as const;
+const AREA_LABELS: Record<string, string> = {
+  geral: "Cardiologia do adulto",
+  cardiopediatria: "Cardiologia pediátrica e congênita",
+  cardiogeriatria: "Cardiogeriatria",
+  cardiooncologia: "Cardio-oncologia",
+  gravidez: "Cardiologia na gestação e puerpério",
+};
+
+const CATEGORY_LABELS: Record<string, string> = {
+  arritmia: "Arritmias",
+  antitromboticos: "Antitrombóticos",
+  aortopatia: "Aortopatias",
+  cardiomiopatia: "Cardiomiopatias",
+  cardiopatia_adquirida: "Cardiopatias adquiridas",
+  cardiopatia_congenita: "Cardiopatias congênitas",
+  cardiologia_fetal: "Cardiologia fetal",
+  circulacao_pulmonar: "Circulação e hipertensão pulmonar",
+  doenca_coronariana: "Doença coronariana",
+  doenca_inflamatoria: "Doenças inflamatórias",
+  doenca_miocardica: "Doenças do miocárdio",
+  doenca_prevalente: "Doenças prevalentes",
+  hipertensao: "Hipertensão",
+  hipertensao_na_gestacao: "Hipertensão na gestação",
+  insuficiencia_cardiaca: "Insuficiência cardíaca",
+  pericardio: "Doenças do pericárdio",
+  prevencao: "Prevenção cardiovascular",
+  tromboembolismo: "Tromboembolismo",
+  valvopatia: "Valvopatias",
+  valvopatia_e_anticoagulacao: "Valvopatias e anticoagulação",
+};
 
 const TAB_LABELS: Record<Tab, string> = {
   catalogo: "Catálogo",
@@ -57,17 +74,12 @@ const TAB_LABELS: Record<Tab, string> = {
   outros: "Outros",
 };
 
-const AREAS_ASSISTENTE = [
-  { area: "cardiopediatria", areaId: "pediatrica", titulo: "Cardiologia pediátrica", texto: "Infância e adolescência, com assistentes clínicos estruturados.", tab: "pediatrica" as Tab },
-  { area: "cardiopediatria", areaId: "congenita", titulo: "Cardiopatias congênitas", texto: "Anatomia, fisiologia, apresentação e seguimento.", tab: "congenitas" as Tab },
-  { area: "cardiopediatria", areaId: "fetal", titulo: "Cardiologia fetal", texto: "Rastreamento, diagnóstico e planejamento perinatal.", tab: "fetal" as Tab },
-  { area: "cardiooncologia", areaId: "cardiooncologia", titulo: "Cardio-Oncologia", texto: "Risco, cardiotoxicidade, monitorização e sobrevivência.", tab: "oncologia" as Tab },
-  { area: "gravidez", areaId: "gestacao", titulo: "Gestação e puerpério", texto: "Gravidez, parto, puerpério e amamentação.", tab: "gestacao" as Tab },
-  { area: "cardiogeriatria", areaId: "geriatria", titulo: "Outras áreas da Cardiologia", texto: "Cardio-Geriatria e acesso a todas as demais coleções cardiológicas.", tab: "outros" as Tab },
-];
-
 function labelArea(area: string) {
-  return AREAS.find(([value]) => value === area)?.[1] ?? area;
+  return AREA_LABELS[area] ?? area.replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
+}
+
+function labelCategory(category: string) {
+  return CATEGORY_LABELS[category] ?? category.replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
 }
 
 function labelCyanosis(value?: string | null) {
@@ -81,6 +93,7 @@ export default function GuiaDoencas() {
   const tab = (params.get("tab") as Tab) || "catalogo";
   const [q, setQ] = useState(params.get("q") || "");
   const [area, setArea] = useState(params.get("area") || "");
+  const [category, setCategory] = useState(params.get("category") || "");
   const [cyanosis, setCyanosis] = useState(params.get("cyanosis") || "");
   const [items, setItems] = useState<Disease[]>([]);
   const [page, setPage] = useState(1);
@@ -88,18 +101,19 @@ export default function GuiaDoencas() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [areaCounts, setAreaCounts] = useState<AreaCount[]>([]);
+  const [diseaseFacets, setDiseaseFacets] = useState<DiseaseFacetsResponse>({ areas: [], categories: [] });
 
   useEffect(() => {
-    api.get<AreaCountsResponse>("/library/area-counts")
-      .then((response) => setAreaCounts(response.areas))
-      .catch(() => setAreaCounts([]));
+    api.get<DiseaseFacetsResponse>("/specialty-guides/disease-facets")
+      .then(setDiseaseFacets)
+      .catch(() => setDiseaseFacets({ areas: [], categories: [] }));
   }, []);
 
   const filters = useMemo(() => {
     const result: Record<string, string> = { page_size: "60", page: String(page) };
     if (q.trim()) result.q = q.trim();
     if (area) result.area = area;
+    if (category) result.category = category;
     if (tab === "assistentes") result.assistant_only = "true";
     if (tab === "congenitas") result.category = "cardiopatia_congenita";
     if (tab === "fetal") result.category = "cardiologia_fetal";
@@ -109,7 +123,7 @@ export default function GuiaDoencas() {
     if (tab === "outros") result.area = "cardiogeriatria";
     if (cyanosis && tab === "congenitas") result.cyanosis_class = cyanosis;
     return result;
-  }, [q, area, tab, cyanosis, page]);
+  }, [q, area, category, tab, cyanosis, page]);
 
   useEffect(() => {
     let active = true;
@@ -132,6 +146,7 @@ export default function GuiaDoencas() {
     setPage(1);
     setItems([]);
     setCyanosis("");
+    setCategory("");
     if (!["catalogo", "assistentes"].includes(next)) setArea("");
     const nextParams = new URLSearchParams();
     nextParams.set("tab", next);
@@ -140,11 +155,20 @@ export default function GuiaDoencas() {
     setParams(nextParams);
   }
 
-  function abrirAssistentesDaArea(areaSelecionada: string) {
+  function abrirArea(areaSelecionada: string) {
     setPage(1);
     setItems([]);
     setArea(areaSelecionada);
-    setParams({ tab: "assistentes", area: areaSelecionada });
+    setCategory("");
+    setParams({ tab: "catalogo", area: areaSelecionada });
+  }
+
+  function abrirCategoria(categorySelecionada: string) {
+    setPage(1);
+    setItems([]);
+    setArea("");
+    setCategory(categorySelecionada);
+    setParams({ tab: "catalogo", category: categorySelecionada });
   }
 
   function updateSearch(value: string) {
@@ -183,28 +207,28 @@ export default function GuiaDoencas() {
           <div className="guia-areas__topo">
             <div>
               <p className="eyebrow">Navegação especializada</p>
-              <h2 id="assistentes-areas-titulo">Escolha a área da Cardiologia</h2>
+              <h2 id="assistentes-areas-titulo">Áreas disponíveis no Guia de Doenças</h2>
             </div>
-            <p>Entre diretamente nos assistentes estruturados da área ou consulte todo o acervo relacionado.</p>
+            <p>São exibidas somente áreas que possuem verbetes publicados; a contagem vem diretamente do catálogo.</p>
           </div>
           <div className="guia-areas__grade">
-            {AREAS_ASSISTENTE.map((item) => {
-              const areaCount = areaCounts.find((candidate) => candidate.id === item.areaId);
-              return (
-                <article className="cartao guia-area" key={item.titulo}>
-                  <span className="guia-area__marca" aria-hidden="true">{item.titulo.slice(0, 2).toUpperCase()}</span>
-                  <div>
-                    <h3>{item.titulo}</h3><p>{item.texto}</p>
-                    {areaCount && <small>{areaCount.count.toLocaleString("pt-BR")} conteúdos em {areaCount.collections} coleções</small>}
-                  </div>
-                  {item.tab === "outros" ? (
-                    <button className="botao botao--secundario" type="button" onClick={() => changeTab("outros")}>Explorar áreas</button>
-                  ) : (
-                    <button className="botao botao--secundario" type="button" onClick={() => abrirAssistentesDaArea(item.area)}>Abrir assistentes</button>
-                  )}
-                </article>
-              );
-            })}
+            {diseaseFacets.areas.map((item) => (
+              <article className="cartao guia-area" key={item.id}>
+                <span className="guia-area__marca" aria-hidden="true">{labelArea(item.id).slice(0, 2).toUpperCase()}</span>
+                <div><h3>{labelArea(item.id)}</h3><p>{item.count.toLocaleString("pt-BR")} verbetes publicados.</p></div>
+                <button className="botao botao--secundario" type="button" onClick={() => abrirArea(item.id)}>Abrir área</button>
+              </article>
+            ))}
+          </div>
+          <div className="guia-areas__topo" style={{ marginTop: "1rem" }}>
+            <div><p className="eyebrow">Subáreas e grupos clínicos</p><h2>Todos os grupos com conteúdo</h2></div>
+          </div>
+          <div className="painel__temas">
+            {diseaseFacets.categories.map((item) => (
+              <button className="painel__tema" type="button" key={item.id} onClick={() => abrirCategoria(item.id)}>
+                {labelCategory(item.id)} ({item.count.toLocaleString("pt-BR")})
+              </button>
+            ))}
           </div>
         </section>
       )}
@@ -232,13 +256,25 @@ export default function GuiaDoencas() {
             />
           </label>}
           <label>
-            <strong>Área</strong>
+            <strong>População / contexto</strong>
             <select
               value={area}
               onChange={(event) => { setArea(event.target.value); setPage(1); setItems([]); }}
               style={{ marginTop: "0.35rem" }}
             >
-              {AREAS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+              <option value="">Todos</option>
+              {diseaseFacets.areas.map((item) => <option key={item.id} value={item.id}>{labelArea(item.id)} ({item.count})</option>)}
+            </select>
+          </label>
+          <label>
+            <strong>Área clínica</strong>
+            <select
+              value={category}
+              onChange={(event) => { setCategory(event.target.value); setPage(1); setItems([]); }}
+              style={{ marginTop: "0.35rem" }}
+            >
+              <option value="">Todas</option>
+              {diseaseFacets.categories.map((item) => <option key={item.id} value={item.id}>{labelCategory(item.id)} ({item.count})</option>)}
             </select>
           </label>
         </div>

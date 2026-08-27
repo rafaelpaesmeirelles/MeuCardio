@@ -73,7 +73,7 @@ def test_lote_adulto_tem_profundidade_clinica_e_decisao_humana_preservada():
         disease = diseases[slug]
         assert disease["area"] == "geral"
         assert disease["completeness"] == "completo"
-        assert disease["review_status"] == "pendente_revisao"
+        assert disease["review_status"] == "revisado"
         assert disease["fonte_producao"] == "chatgpt"
         assert disease["review_note"]
         assert len(disease["summary"]) >= 180

@@ -106,6 +106,33 @@ def list_areas(db: Session = Depends(get_db)):
     return [{"area": area, "count": int(count)} for area, count in rows]
 
 
+@router.get("/disease-facets")
+def list_disease_facets(db: Session = Depends(get_db)):
+    """Áreas e grupos clínicos que possuem ao menos um verbete publicado."""
+    areas = (
+        db.query(SpecialtyDisease.area, func.count(SpecialtyDisease.id))
+        .filter(SpecialtyDisease.published.is_(True))
+        .group_by(SpecialtyDisease.area)
+        .order_by(SpecialtyDisease.area)
+        .all()
+    )
+    categories = (
+        db.query(SpecialtyDisease.category, func.count(SpecialtyDisease.id))
+        .filter(SpecialtyDisease.published.is_(True))
+        .group_by(SpecialtyDisease.category)
+        .order_by(SpecialtyDisease.category)
+        .all()
+    )
+    return {
+        "areas": [{"id": area, "count": int(count)} for area, count in areas],
+        "categories": [
+            {"id": category, "count": int(count)}
+            for category, count in categories
+            if category
+        ],
+    }
+
+
 @router.get("/diseases")
 def list_diseases(
     q: str | None = Query(None, max_length=160),
