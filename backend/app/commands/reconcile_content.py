@@ -48,13 +48,13 @@ BLOCKING_DIAGNOSTIC_KEYS = frozenset({
 })
 
 FRONTS: dict[str, dict[str, Any]] = {
-    "documentos": {"path": settings.content_dir, "model": Document, "minimum": 1077, "loader": None},
+    "documentos": {"path": settings.content_dir, "model": Document, "minimum": 1079, "loader": None},
     "galeria": {"path": "/galeria/metadados.json", "model": GalleryImage, "minimum": 236, "loader": "carregar_galeria"},
     "exames": {"path": "/exames/metadados.json", "model": LabTest, "minimum": 244, "loader": "carregar_exames"},
-    "evidencias": {"path": "/evidencias/metadados.json", "model": EvidenceRecord, "minimum": 1776, "loader": "carregar_evidencias"},
+    "evidencias": {"path": "/evidencias/metadados.json", "model": EvidenceRecord, "minimum": 1779, "loader": "carregar_evidencias"},
     "estudos": {"path": "/estudos/metadados.json", "model": ScientificStudy, "minimum": 383, "loader": "carregar_estudos"},
     "medicamentos": {"path": "/medicamentos/metadados.json", "model": Drug, "minimum": 114, "loader": "carregar_drugs"},
-    "checklists": {"path": "/checklists/metadados.json", "model": DischargeChecklist, "minimum": 23, "loader": "carregar_checklists"},
+    "checklists": {"path": "/checklists/metadados.json", "model": DischargeChecklist, "minimum": 24, "loader": "carregar_checklists"},
     # `casos_clinicos` precisa vir ANTES de `trilhas`: uma etapa de trilha
     # pode referenciar `item_type: "caso_clinico"` (`carregar_trilhas._existe`),
     # e a validação de referência consulta o banco, não o JSON de origem —
@@ -66,19 +66,19 @@ FRONTS: dict[str, dict[str, Any]] = {
     # erro sempre existiam em `casos-clinicos/metadados.json`, só ainda não
     # tinham chegado ao banco nesta ordem antiga.
     "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
-    "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 469, "loader": "carregar_trilhas"},
-    "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 27, "loader": "carregar_material_paciente"},
+    "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 470, "loader": "carregar_trilhas"},
+    "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 28, "loader": "carregar_material_paciente"},
     "emergencia": {"path": "/emergencia/metadados.json", "model": EmergencyProtocol, "minimum": 31, "loader": "carregar_emergencia"},
     "doencas_especializadas": {
         "path": "/doencas/metadados.json",
         "model": SpecialtyDisease,
-        "minimum": 87,
+        "minimum": 88,
         "loader": "carregar_doencas_especializadas",
     },
     "triagem_sintomas": {
         "path": "/triagem-sintomas/metadados.json",
         "model": SymptomTriageGuide,
-        "minimum": 12,
+        "minimum": 13,
         "loader": "carregar_triagem_sintomas",
     },
 }

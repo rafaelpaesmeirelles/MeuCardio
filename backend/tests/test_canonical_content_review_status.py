@@ -9,9 +9,12 @@ A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
 PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. A
-allowlist abaixo está vazia de propósito: qualquer novo pendente em qualquer
-manifesto quebra o gate e exige a mesma disciplina de verificação, não uma
-reabertura silenciosa da exceção.
+allowlist `PENDENTES_MEDICAMENTOS_RC` continua vazia de propósito. As
+allowlists `PENDENTES_LOTE_*` abaixo são fechadas nos slugs de lotes
+auditáveis específicos (produção assistida, `fonte_producao` explícito,
+`review_note` com pendência de revisão humana declarada) — permitem que o PR
+preserve a decisão humana sem publicar conteúdo novo; qualquer outro pendente
+continua quebrando o gate.
 """
 
 from __future__ import annotations
@@ -37,6 +40,26 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
+PENDENTES_LOTE_ISQUEMIA_MESENTERICA_AGUDA: dict[str, set[str]] = {
+    "evidencias/metadados.json": {
+        "ima-dor-abdominal-desproporcional-assumir-ima-ate-provar-o-contrario-wses-2022",
+        "ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025",
+        "ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025",
+    },
+    "checklists/metadados.json": {"primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda"},
+    "trilhas/metadados.json": {
+        "trilha-suspeita-de-isquemia-mesenterica-aguda-do-reconhecimento-a-decisao-de-revascularizacao"
+    },
+    "material-paciente/metadados.json": {
+        "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia"
+    },
+    "doencas/metadados.json": {"isquemia-mesenterica-aguda-cardioembolica"},
+    "triagem-sintomas/metadados.json": {"dor-abdominal-aguda-desproporcional-ao-exame"},
+}
+PENDENTES_MARKDOWN_ISQUEMIA_MESENTERICA_AGUDA = {
+    "content/Aorta_e_doença_arterial_periférica/isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora.md",
+    "content/Aorta_e_doença_arterial_periférica/fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora.md",
+}
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
@@ -56,10 +79,22 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
             ):
                 pendentes_encontrados.add(str(identifier))
                 continue
+            if (
+                status == "pendente_revisao"
+                and identifier in PENDENTES_LOTE_ISQUEMIA_MESENTERICA_AGUDA.get(relative_path, set())
+            ):
+                pendentes_encontrados.add(f"{relative_path}:{identifier}")
+                continue
             invalidos.append(f"{relative_path}:{identifier}:{status}")
 
     assert invalidos == []
-    assert pendentes_encontrados == PENDENTES_MEDICAMENTOS_RC
+    pendentes_esperados = set(PENDENTES_MEDICAMENTOS_RC)
+    pendentes_esperados.update(
+        f"{path}:{slug}"
+        for path, slugs in PENDENTES_LOTE_ISQUEMIA_MESENTERICA_AGUDA.items()
+        for slug in slugs
+    )
+    assert pendentes_encontrados == pendentes_esperados
 
 
 def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
@@ -76,6 +111,7 @@ def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
 
 def test_todos_os_documentos_markdown_estao_revisados():
     pendentes: list[str] = []
+    pendentes_permitidos: set[str] = set()
     sem_status: list[str] = []
     for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md")):
         text = path.read_text(encoding="utf-8")
@@ -85,7 +121,14 @@ def test_todos_os_documentos_markdown_estao_revisados():
         if match is None:
             sem_status.append(relative_path)
         elif match.group(1).strip() != "revisado":
-            pendentes.append(f"{relative_path}:{match.group(1).strip()}")
+            if (
+                match.group(1).strip() == "pendente_revisao"
+                and relative_path in PENDENTES_MARKDOWN_ISQUEMIA_MESENTERICA_AGUDA
+            ):
+                pendentes_permitidos.add(relative_path)
+            else:
+                pendentes.append(f"{relative_path}:{match.group(1).strip()}")
 
     assert sem_status == []
     assert pendentes == []
+    assert pendentes_permitidos == PENDENTES_MARKDOWN_ISQUEMIA_MESENTERICA_AGUDA

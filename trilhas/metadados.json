@@ -23674,5 +23674,64 @@
         "por_que": "Dá lastro de consenso de especialistas ao posicionamento sobre avaliação periódica de saúde em para-atletas descrito na etapa anterior, fechando a trilha com a referência que sustenta a prática recomendada."
       }
     ]
+  },
+  {
+    "slug": "trilha-suspeita-de-isquemia-mesenterica-aguda-do-reconhecimento-a-decisao-de-revascularizacao",
+    "titulo": "Suspeita de isquemia mesentérica aguda: do reconhecimento à decisão de revascularização",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Reconhecer a dor abdominal desproporcional ao exame como possível isquemia mesentérica aguda, entender por que a angiotomografia não pode esperar, diferenciar o que está formalmente graduado na anticoagulação e chegar à decisão especializada entre revascularização endovascular e cirurgia aberta, sem virar prescrição autônoma.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "claude",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+        "por_que": "Define a porta de entrada (dor desproporcional mais fator de risco cardioembólico), a urgência da angiotomografia e a diferença de grau de recomendação da heparina entre as etiologias."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+        "por_que": "Transforma os mesmos passos em árvore operacional, separando peritonite (cirurgia direta), oclusão arterial, NOMI e trombose venosa mesentérica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "ima-dor-abdominal-desproporcional-assumir-ima-ate-provar-o-contrario-wses-2022",
+        "por_que": "Ancora o reconhecimento clínico em recomendação forte da WSES 2022, evidência 1C."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025",
+        "por_que": "Ancora a angiotomografia sem atraso em recomendação Classe I, Nível B da ESVS 2025."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025",
+        "por_que": "Ancora a preferência por revascularização endovascular em recomendação Classe IIa, Nível B da ESVS 2025, quando há expertise disponível."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda",
+        "por_que": "Converte o protocolo em itens verificáveis antes de qualquer decisão de revascularização."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "heparina-nao-fracionada",
+        "por_que": "Liga a decisão de anticoagulação ao verbete farmacológico já existente no acervo, preservando a distinção feita no documento: recomendação graduada para trombose venosa mesentérica e coadjuvante em NOMI, não uma indicação formal generalizada na forma arterial."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "isquemia-mesenterica-cronica-diagnostico-e-tratamento-svs-2021",
+        "por_que": "É a continuidade direta da mesma doença vascular após a fase aguda — investigação etiológica e manejo eletivo de quem sobrevive ao evento ou tem doença aterosclerótica subjacente, documento já publicado e revisado neste acervo."
+      }
+    ]
   }
 ]
