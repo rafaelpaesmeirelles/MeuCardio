@@ -40,3 +40,19 @@ def test_mobile_media_query_supports_legacy_ios_listener():
     assert 'typeof window.matchMedia === "function"' in personalizer
     assert 'typeof media.addListener === "function"' in personalizer
     assert "media.addListener(atualizar)" in personalizer
+
+
+def test_optional_home_personalizer_never_blocks_authentication_gates():
+    main = _read("frontend/src/main.tsx")
+    app = _read("frontend/src/App.tsx")
+
+    # O aprimoramento não pode montar antes de sabermos quem está entrando.
+    assert "HomeQuickActionsPersonalizer" not in main
+
+    # Contas normais, convidadas, investidoras e administradoras atravessam
+    # os mesmos gates antes que o recurso opcional da home seja instanciado.
+    personalizer = app.index("<HomeQuickActionsPersonalizer />")
+    assert app.index("if (!usuario)") < personalizer
+    assert app.index("usuario.profile_completion_required") < personalizer
+    assert app.index("usuario.kyc_required") < personalizer
+    assert app.index("usuario.onboarding_pendente") < personalizer

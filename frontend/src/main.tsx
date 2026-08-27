@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import AppErrorBoundary from "./components/AppErrorBoundary";
-import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import { AuthProvider } from "./lib/auth";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
@@ -124,7 +123,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <AppErrorBoundary>
       <BrowserRouter>
         <AuthProvider>
-          <HomeQuickActionsPersonalizer />
           <App />
         </AuthProvider>
       </BrowserRouter>
