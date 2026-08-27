@@ -10363,29 +10363,489 @@
     "name": "Atresia pulmonar",
     "aliases": [
       "atresia da valva pulmonar",
-      "pulmonary atresia"
+      "atresia pulmonar com septo ventricular íntegro",
+      "PA/IVS",
+      "atresia pulmonar com comunicação interventricular",
+      "PA/VSD"
     ],
     "area": "cardiopediatria",
     "category": "cardiopatia_congenita",
     "subtype": "obstrucao_critica_direita",
     "cyanosis_class": "cianotica",
     "prevalence_rank": 17,
-    "completeness": "basico",
-    "summary": "Cardiopatia congênita crítica sem continuidade efetiva pela valva pulmonar, com anatomia ventricular e coronariana determinantes para o planejamento especializado.",
+    "completeness": "completo",
+    "summary": "Atresia pulmonar é uma cardiopatia congênita crítica sem continuidade efetiva entre o ventrículo direito e a artéria pulmonar. O rótulo reúne dois fenótipos profundamente diferentes. Na atresia pulmonar com septo ventricular íntegro (PA/IVS), o ventrículo direito e a valva tricúspide têm graus variáveis de hipoplasia; sinusoides, fístulas e estenoses/atresias coronarianas podem tornar a perfusão miocárdica dependente da pressão do VD. Na atresia pulmonar com comunicação interventricular (PA/VSD), considerada parte do espectro da tetralogia de Fallot, o planejamento depende das artérias pulmonares nativas, do canal arterial e de colaterais aortopulmonares maiores (MAPCAs). Ambas costumam produzir cianose neonatal e fluxo pulmonar dependente de canal ou colaterais, mas a estratégia definitiva não é intercambiável. PA/IVS exige definição coronariana antes de descomprimir o VD; PA/VSD/MAPCAs exige mapa de suprimento de cada segmento pulmonar. O cuidado inicial preserva fluxo pulmonar e perfusão até intervenção em centro congênito. As rotas biventricular, um-e-meio ventrículo, univentricular, unifocalização/reparo ou transplante são decisões anatômico-fisiológicas especializadas. Sobreviventes necessitam seguimento vitalício por reintervenções, conduítes/shunts, cianose, arritmia, disfunção ventricular e isquemia.",
+    "epidemiology": "PA/IVS corresponde a menos de 1% das cardiopatias congênitas em séries populacionais e apresenta grande heterogeneidade do VD, tricúspide e circulação coronariana. Coortes multicêntricas contemporâneas confirmam que parte dos pacientes alcança circulação biventricular, enquanto outros seguem rota um-e-meio ou univentricular, com elevada carga de cateterismos e reintervenções. A presença de circulação coronariana dependente do VD é determinante de risco porque uma queda abrupta da pressão ventricular pode comprometer perfusão coronariana. PA/VSD pode variar de artérias pulmonares confluentes supridas por canal até ausência/hipoplasia grave do leito central com múltiplas MAPCAs. Essa anatomia explica a diversidade entre reparo precoce, reabilitação das artérias pulmonares e unifocalização. Estenose progressiva de MAPCAs pode causar hipoperfusão de segmentos, enquanto segmentos não protegidos podem desenvolver doença vascular por pressão sistêmica. PA/VSD associa-se a arco aórtico direito e deleção 22q11.2 com frequência suficiente para justificar avaliação genética dirigida. Em ambos os fenótipos, diagnóstico fetal e nascimento em centro congênito reduzem atraso de estabilização, mas não eliminam risco anatômico.",
+    "presentation": [
+      "Cianose central e dessaturação que pioram com o fechamento do canal arterial",
+      "Taquipneia, dificuldade alimentar, letargia ou irritabilidade no neonato",
+      "Hipoxemia grave, acidose, choque ou parada quando o fluxo pulmonar cai criticamente",
+      "Sopro discreto ou ausente na obstrução completa; sopro contínuo quando há canal/MAPCAs",
+      "Segunda bulha única e impulso do VD variável conforme anatomia",
+      "PA/IVS: tricúspide pequena, VD hipoplásico ou suprassistêmico e regurgitação tricúspide",
+      "PA/IVS com dependência coronariana: isquemia, disfunção ventricular, arritmia ou colapso após descompressão inadequada",
+      "PA/VSD: cianose variável conforme canal, artérias pulmonares nativas e MAPCAs",
+      "PA/VSD/MAPCAs: assimetria de perfusão pulmonar, hemoptise ou insuficiência cardíaca por hiperfluxo segmentar",
+      "Apresentação tardia: policitemia, baqueteamento, dispneia, abscesso cerebral, arritmia ou falência ventricular"
+    ],
+    "diagnostic_approach": {
+      "primeira_divisao": "Confirmar imediatamente se o septo ventricular é íntegro ou se há CIV ampla. Essa divisão antecede qualquer algoritmo. Em PA/IVS, medir tricúspide/VD, identificar atresia membranosa versus muscular, infundíbulo, sinusoides e sinais de dependência coronariana. Em PA/VSD, mapear artérias pulmonares nativas, confluência, canal, arco aórtico e todo suprimento segmentar por MAPCAs.",
+      "coronarias_paivs": "O ecocardiograma pode mostrar conexões ventriculocoronarianas e fluxo anormal, mas não exclui estenose/atresia coronariana. Cateterismo com ventriculografia e coronariografia é frequentemente necessário antes de descompressão do VD. Circulação coronariana dependente do VD significa que parte do miocárdio depende de pressão no VD por obstrução proximal coronariana; descompressão pode produzir roubo, isquemia e morte. O assistente nunca deve inferir segurança de perfuração/valvotomia apenas pelo tamanho da tricúspide.",
+      "mapa_pavsd": "Ecocardiograma define intracardíaco e artérias centrais, porém TC, RM e/ou angiografia são necessárias para origem, curso, estenose, comunicação dupla e território de cada MAPCA. O objetivo é um mapa segmentar: quais segmentos recebem artéria pulmonar nativa, MAPCA ou ambos. A decisão de unifocalização, reabilitação e fechamento da CIV depende da possibilidade de construir leito pulmonar de baixa resistência, não de um único diâmetro.",
+      "avaliacao_associada": "Documentar comunicação interatrial, canal arterial, função biventricular, tricúspide, arco, retorno venoso e outras lesões. Em PA/VSD, oferecer avaliação para 22q11.2 e aconselhamento genético conforme fenótipo. Diagnóstico fetal deve acionar planejamento de parto em centro capaz de manter fluxo pulmonar, realizar cateterismo e cirurgia neonatal."
+    },
+    "differentials": [
+      "Estenose pulmonar crítica com orifício valvar residual",
+      "Atresia tricúspide",
+      "Tetralogia de Fallot crítica sem atresia completa",
+      "Transposição das grandes artérias com estenose/atresia pulmonar",
+      "Anomalia de Ebstein grave com atresia pulmonar funcional",
+      "Hipertensão pulmonar persistente do recém-nascido",
+      "Atresia pulmonar funcional por baixo débito ou hipertensão pulmonar neonatal",
+      "Tronco arterial comum com anatomia confundida em exame limitado",
+      "Atresia pulmonar com ventrículo único/heterotaxia",
+      "Doença pulmonar ou sepse neonatal como explicação isolada da hipoxemia"
+    ],
+    "tests": [
+      "Ecocardiograma neonatal completo com anatomia segmentar, septo, tricúspide, VD e fluxo pulmonar",
+      "Doppler do canal arterial, artérias pulmonares, comunicação interatrial e regurgitação tricúspide",
+      "Busca ecocardiográfica de sinusoides e conexões ventriculocoronarianas em PA/IVS",
+      "Oximetria contínua, gasometria, lactato, glicemia e perfusão na descompensação",
+      "ECG para sobrecarga, isquemia, condução e linha de base arrítmica",
+      "Radiografia de tórax para vascularidade pulmonar e diagnósticos diferenciais",
+      "Cateterismo com ventriculografia/coronariografia antes de descompressão quando PA/IVS",
+      "Angiotomografia para artérias nativas, canal e mapa de MAPCAs em PA/VSD",
+      "RM cardíaca quando estabilidade e pergunta permitirem quantificar volumes, fluxo e anatomia",
+      "Angiografia segmentar/hemodinâmica quando necessária ao planejamento de unifocalização",
+      "Avaliação genética para deleção 22q11.2 e outras síndromes em PA/VSD/fenótipo associado",
+      "Ecocardiografia fetal e avaliação seriada do VD/tricúspide quando diagnóstico pré-natal",
+      "Hemograma, função renal/hepática e coagulação antes de intervenção conforme contexto",
+      "RM/TC, teste funcional e monitorização de ritmo no seguimento do adolescente/adulto"
+    ],
+    "red_flags": [
+      "Cianose progressiva ou dessaturação com fechamento ductal",
+      "Choque, acidose crescente, oligúria, alteração do sensório ou lactato elevado",
+      "Apneia ou hipotensão durante terapia de manutenção ductal",
+      "Comunicação interatrial restritiva em PA/IVS com pressão direita crítica",
+      "Suspeita de circulação coronariana dependente do VD antes de descompressão",
+      "Isquemia, disfunção do VE ou arritmia após redução da pressão do VD",
+      "Artérias pulmonares descontínuas/ausentes ou MAPCAs com estenoses múltiplas",
+      "Hiperfluxo segmentar, hemoptise ou hipertensão pulmonar em PA/VSD/MAPCAs",
+      "Trombose/obstrução de shunt, stent ductal ou conduíte com queda abrupta da saturação",
+      "Cianose tardia com policitemia sintomática, evento neurológico ou abscesso cerebral"
+    ],
+    "treatment_summary": "A prioridade neonatal é reconhecer fluxo pulmonar ducto-dependente, manter oxigenação e perfusão e transferir para centro congênito. Prostaglandina para preservar o canal é uma ponte frequente, administrada com monitorização e preparo para apneia/hipotensão; o assistente não deve gerar dose. A saturação-alvo e ventilação dependem de balanço sistêmico-pulmonar e não devem ser normalizadas agressivamente sem compreender a fisiologia. Em PA/IVS, a rota é definida por valva tricúspide, tamanho/partes do VD, tipo de atresia e anatomia coronariana. Em anatomia favorável e sem dependência coronariana, pode-se estabelecer fluxo anterógrado por perfuração/valvotomia por cateter ou cirurgia, às vezes com fonte adicional de fluxo. VD limítrofe pode exigir estratégia um-e-meio; VD muito hipoplásico ou circulação coronariana dependente favorece via univentricular ou transplante selecionado. Descompressão do VD sem excluir dependência coronariana é potencialmente fatal. Em PA/VSD, garantir fluxo inicial por canal/stent, shunt ou conduíte é apenas parte da estratégia. Mapear e reunir as fontes segmentares, preservar/reabilitar artérias pulmonares nativas e construir circuito de baixa resistência orientam unifocalização e eventual fechamento da CIV com conduíte VD-AP. O momento e estágio variam entre centros e anatomias; o assistente não deve escolher técnica. MAPCAs com dupla irrigação e estenoses requerem decisões segmentares, e fechar a CIV sem leito pulmonar adequado pode impor pressão sistêmica ao VD. Depois de qualquer rota, a carga de reintervenção é alta: shunts/stents podem trombosar ou ficar pequenos; conduítes e artérias podem estenosar; insuficiência pulmonar, cianose residual, arritmia, disfunção ventricular e isquemia coronariana exigem vigilância. Adultos com PA/IVS reparada/paliada devem ser acompanhados em ACHD; a diretriz 2025 reforça imagem biventricular e avaliação de isquemia quando houver conexões coronarianas/dependência prévia. Gravidez e esporte exigem estratificação individual.",
+    "ambulatory_flow": [
+      "Separar PA/IVS de PA/VSD antes de qualquer decisão",
+      "Confirmar fonte atual de fluxo pulmonar e risco de dependência ductal",
+      "Em PA/IVS, quantificar tricúspide, partes do VD e regurgitação",
+      "Definir anatomia coronariana antes de qualquer descompressão do VD",
+      "Em PA/VSD, construir mapa de artérias nativas, canal, MAPCAs e segmentos",
+      "Oferecer genética/22q11.2 quando indicado",
+      "Discutir rota biventricular, um-e-meio, univentricular ou unifocalização em equipe",
+      "Vigiar saturação, crescimento, shunt/stent/conduíte e equilíbrio de fluxos",
+      "Rastrear isquemia, disfunção ventricular e arritmia ao longo da vida",
+      "Planejar reintervenção antes de obstrução crítica de fonte pulmonar",
+      "Fazer transição estruturada para ACHD e aconselhamento reprodutivo",
+      "Individualizar exercício, antitrombose e profilaxia de endocardite conforme anatomia/material"
+    ],
+    "emergency_flow": [
+      "Suspeitar de queda de fluxo pulmonar diante de cianose/choque neonatal ou dessaturação abrupta",
+      "Acionar UTI neonatal, cardiologia intervencionista, cirurgia congênita e transporte especializado",
+      "Monitorizar saturação, pressão, perfusão, gasometria, lactato e diurese",
+      "Preservar patência ductal conforme protocolo especializado e antecipar suporte de via aérea",
+      "Obter ecocardiograma urgente para fonte pulmonar, septo, VD e lesões associadas",
+      "Não realizar/desaconselhar descompressão do VD até excluir dependência coronariana em PA/IVS",
+      "Na queda súbita pós-paliação, investigar trombose/obstrução de shunt, stent ou conduíte",
+      "Transferir para intervenção emergencial sem atrasar por exames que não mudem estabilização"
+    ],
+    "monitoring": [
+      "Saturação, cianose, crescimento, alimentação e capacidade funcional",
+      "Patência e gradiente de canal/stent, shunt ou conduíte",
+      "Tamanho, pressão e função do VD e tricúspide em PA/IVS",
+      "Função do VE e sinais clínicos/ECG/imagem de isquemia coronariana",
+      "Artérias pulmonares nativas, MAPCAs e perfusão segmentar em PA/VSD",
+      "Pressões pulmonares e resistência antes de fechamento da CIV",
+      "Insuficiência pulmonar e tricúspide, volumes e função biventricular",
+      "Arritmias por ECG/Holter e sintomas de síncope/palpitação",
+      "Hemograma e complicações da cianose crônica quando persistente",
+      "RM/TC e teste de exercício no seguimento quando mudarem conduta",
+      "Neurodesenvolvimento, nutrição e efeitos de hospitalizações repetidas",
+      "Transição, saúde bucal, gestação e planejamento de reintervenção"
+    ],
+    "special_populations": [
+      "PA/IVS com circulação coronariana dependente do VD: não descomprimir sem estratégia especializada",
+      "PA/IVS com VD limítrofe: decisão entre biventricular, um-e-meio e univentricular",
+      "PA/VSD com MAPCAs: mapa segmentar e centro experiente em unifocalização",
+      "PA/VSD com deleção 22q11.2: integrar imunidade, cálcio, via aérea e genética",
+      "Prematuro/baixo peso: equilibrar fragilidade com dependência de fluxo",
+      "Heterotaxia/ventrículo único: anatomia venosa e esplênica modificam o plano",
+      "Pós-Fontan: seguir complicações sistêmicas da circulação univentricular",
+      "Adultos reparados/paliados: ACHD, isquemia, cianose, conduítes e arritmia",
+      "Gestação: risco depende de cianose, função, Fontan, HP e material protético",
+      "Atletas: liberação baseada em fisiologia residual, isquemia e ritmo"
+    ],
+    "assistant_questions": [
+      {
+        "id": "ap_faixa_etaria",
+        "label": "Qual é a faixa etária?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "neonato",
+            "label": "Neonato"
+          },
+          {
+            "value": "lactente_crianca",
+            "label": "Lactente ou criança"
+          },
+          {
+            "value": "adolescente_adulto",
+            "label": "Adolescente ou adulto"
+          }
+        ]
+      },
+      {
+        "id": "ap_fenotipo",
+        "label": "Qual é o fenótipo anatômico?",
+        "type": "select",
+        "required": true,
+        "section": "Anatomia",
+        "options": [
+          {
+            "value": "paivs",
+            "label": "Atresia com septo íntegro"
+          },
+          {
+            "value": "pavsd",
+            "label": "Atresia com CIV"
+          },
+          {
+            "value": "incerto",
+            "label": "Ainda incerto"
+          }
+        ]
+      },
+      {
+        "id": "ap_instavel",
+        "label": "Há cianose progressiva, choque, acidose ou baixo débito?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "ap_fluxo_dependente",
+        "label": "O fluxo pulmonar é ducto/shunt/stent/conduíte-dependente?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fisiologia"
+      },
+      {
+        "id": "ap_coronaria_definida",
+        "label": "Em PA/IVS, a anatomia coronariana e a dependência do VD foram definidas?",
+        "type": "boolean",
+        "section": "Coronárias"
+      },
+      {
+        "id": "ap_descompressao_planejada",
+        "label": "Há proposta de descompressão do VD?",
+        "type": "boolean",
+        "section": "Intervenção"
+      },
+      {
+        "id": "ap_mapcas_mapeadas",
+        "label": "Em PA/VSD, artérias nativas e MAPCAs foram mapeadas por segmento?",
+        "type": "boolean",
+        "section": "Vasculatura pulmonar"
+      },
+      {
+        "id": "ap_paliacao_obstrucao",
+        "label": "Há suspeita de obstrução/trombose da fonte de fluxo pulmonar?",
+        "type": "boolean",
+        "section": "Pós-intervenção"
+      },
+      {
+        "id": "ap_isquemia",
+        "label": "Há dor, alteração de ST, disfunção do VE, arritmia ou suspeita de isquemia?",
+        "type": "boolean",
+        "section": "Coronárias"
+      },
+      {
+        "id": "ap_genetica_22q11",
+        "label": "Em PA/VSD, avaliação para 22q11.2 foi considerada?",
+        "type": "boolean",
+        "section": "Genética"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ap-neonato-instavel",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "ap_faixa_etaria",
+              "op": "eq",
+              "value": "neonato"
+            },
+            {
+              "field": "ap_instavel",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível perda crítica de fluxo pulmonar em atresia pulmonar"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para UTI neonatal/centro congênito e preservar fluxo pulmonar conforme protocolo especializado."
+          ]
+        }
+      },
+      {
+        "id": "ap-fluxo-dependente-instavel",
+        "priority": 99,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fluxo_dependente",
+              "op": "truthy"
+            },
+            {
+              "field": "ap_instavel",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Investigar fechamento ductal ou obstrução/trombose da fonte de fluxo; não aguardar avaliação ambulatorial."
+          ]
+        }
+      },
+      {
+        "id": "ap-paivs-descompressao-sem-coronaria",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fenotipo",
+              "op": "eq",
+              "value": "paivs"
+            },
+            {
+              "field": "ap_descompressao_planejada",
+              "op": "truthy"
+            },
+            {
+              "field": "ap_coronaria_definida",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Descompressão proposta sem exclusão de circulação coronariana dependente do VD"
+          ],
+          "messages": [
+            "Suspender decisão automática e definir coronárias/dependência do VD em centro especializado."
+          ]
+        }
+      },
+      {
+        "id": "ap-isquemia",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "ap_isquemia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Possível isquemia associada à anatomia coronariana da PA/IVS"
+          ],
+          "suggested_tests": [
+            "Avaliação urgente de ECG, função ventricular e anatomia/perfusão coronariana no centro ACHD/congênito."
+          ]
+        }
+      },
+      {
+        "id": "ap-obstrucao-paliacao",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "ap_paliacao_obstrucao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita de obstrução/trombose de shunt, stent ou conduíte pulmonar"
+          ],
+          "emergency_flow": [
+            "Acionar hemodinâmica/cirurgia congênita imediatamente e restaurar fluxo conforme protocolo do centro."
+          ]
+        }
+      },
+      {
+        "id": "ap-pavsd-sem-mapa",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fenotipo",
+              "op": "eq",
+              "value": "pavsd"
+            },
+            {
+              "field": "ap_mapcas_mapeadas",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Mapa segmentar de artérias pulmonares nativas e MAPCAs"
+          ],
+          "messages": [
+            "Não escolher unifocalização, shunt ou fechamento da CIV sem definir o leito pulmonar."
+          ]
+        }
+      },
+      {
+        "id": "ap-fenotipo-incerto",
+        "priority": 86,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fenotipo",
+              "op": "eq",
+              "value": "incerto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Definição de septo íntegro versus CIV e anatomia associada"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma congênito urgente e imagem adicional conforme estabilidade."
+          ]
+        }
+      },
+      {
+        "id": "ap-paivs-sem-coronaria",
+        "priority": 84,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fenotipo",
+              "op": "eq",
+              "value": "paivs"
+            },
+            {
+              "field": "ap_coronaria_definida",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Anatomia coronariana e presença de circulação dependente do VD"
+          ],
+          "suggested_tests": [
+            "Avaliação hemodinâmica/coronariográfica antes de decisão de descompressão."
+          ]
+        }
+      },
+      {
+        "id": "ap-genetica-pavsd",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "ap_fenotipo",
+              "op": "eq",
+              "value": "pavsd"
+            },
+            {
+              "field": "ap_genetica_22q11",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Considerar aconselhamento e teste para deleção 22q11.2 conforme fenótipo e protocolo local."
+          ]
+        }
+      },
+      {
+        "id": "ap-transicao-adulto",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "ap_faixa_etaria",
+              "op": "eq",
+              "value": "adolescente_adulto"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Manter acompanhamento ACHD com imagem, avaliação de isquemia, ritmo, cianose e fontes de fluxo pulmonar."
+          ]
+        }
+      }
+    ],
     "tags": [
       "atresia pulmonar",
-      "cianose",
-      "neonato"
+      "PA/IVS",
+      "PA/VSD",
+      "circulação coronariana dependente do VD",
+      "MAPCAs",
+      "canal arterial",
+      "unifocalização",
+      "cardiopatia congênita crítica"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "Gurvitz M et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87:822-976. doi:10.1016/j.jacc.2025.09.006",
+      "Giglia TM et al. Diagnosis and management of right ventricle-dependent coronary circulation in PA/IVS. Circulation. 1992;86:1516-1528. doi:10.1161/01.CIR.86.5.1516",
+      "Petit CJ et al. Outcomes After Decompression of the Right Ventricle in Infants With PA/IVS. Circ Cardiovasc Interv. 2017;10:e004428. doi:10.1161/CIRCINTERVENTIONS.116.004428",
+      "Iliopoulos I et al. PA/IVS: Midterm Outcomes From a Multicenter Cohort. Pediatr Cardiol. 2024;45:847-857.",
+      "Mainwaring RD et al. Surgical Algorithm and Results for PA/VSD/MAPCAs. J Thorac Cardiovasc Surg. 2018.",
+      "Adamson GT et al. Angiographic Anatomy of MAPCAs and Implications for Surgical Repair. J Am Heart Assoc. 2020;9:e017981. doi:10.1161/JAHA.120.017981",
+      "Jaggers J et al. Expert consensus document on management of congenital heart disease requiring neonatal intervention. J Thorac Cardiovasc Surg. 2025."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://www.jacc.org/doi/10.1016/j.jacc.2025.09.006",
+      "https://www.ahajournals.org/doi/10.1161/01.CIR.86.5.1516",
+      "https://www.ahajournals.org/doi/10.1161/CIRCINTERVENTIONS.116.004428",
+      "https://pubmed.ncbi.nlm.nih.gov/37882967/",
+      "https://www.ahajournals.org/doi/10.1161/JAHA.120.017981",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9030555/",
+      "https://www.jtcvs.org/article/S0022-5223(25)00286-7/abstract"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026, separando PA/IVS de PA/VSD/MAPCAs e incorporando ACHD 2025, coortes multicêntricas e literatura de dependência coronariana/unifocalização. Exige revisão humana por cardiologia intervencionista/cirurgia pediátrica antes de publicação; manutenção ductal, coronariografia, descompressão do VD, estratégia uni/biventricular, mapa segmentar, unifocalização e antitrombose devem ser individualizados.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
     "related_document_slugs": [
       "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica"
     ],

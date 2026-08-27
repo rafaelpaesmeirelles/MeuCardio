@@ -370,5 +370,65 @@
     "relevance_score": 1.0,
     "evidence_source": "2025 ACC/AHA ACHD Guideline, section 4.1.4",
     "review_note": "Vínculo direto: decisão de reparo e suspeita de obstrução requerem centro congênito especializado."
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "checklist",
+    "target_slug": "conduta-inicial-na-cianose-central-com-suspeita-de-cardiopatia-congenita-critica-no-recem-nascido",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC/AHA ACHD 2025; PA/IVS section",
+    "review_note": "Vínculo direto: atresia pulmonar é causa de cianose neonatal por fluxo pulmonar crítico."
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-recem-nascido-cianotico",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC/AHA ACHD 2025; PA/IVS section",
+    "review_note": "Vínculo direto: apresentação típica é o recém-nascido cianótico ducto-dependente."
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-ventriculo-unico-e-fontan",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "Petit et al. Circ Cardiovasc Interv 2017",
+    "review_note": "Vínculo direto: PA/IVS com VD inadequado ou dependência coronariana pode seguir rota univentricular/Fontan."
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-via-de-saida-direita-do-norwood-neonatal-ao-adulto",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "Mainwaring et al.; PA/VSD/MAPCAs surgical literature",
+    "review_note": "Vínculo direto: reconstrução e manutenção da via VD-artéria pulmonar são centrais na rota biventricular."
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-triagem-para-centro-terciario",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC/AHA ACHD 2025",
+    "review_note": "Vínculo direto: anatomia coronariana, MAPCAs e estratégia cirúrgica exigem centro congênito terciário."
   }
 ]
