@@ -29532,5 +29532,77 @@
       }
     ],
     "revisao": "Produzido por ChatGPT em 26/08/2026 com fontes oficiais atuais. Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
+  },
+  {
+    "slug": "primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda",
+    "condicao": "Primeira hora na suspeita de isquemia mesentérica aguda",
+    "resumo": "Itens mínimos para reconhecer dor abdominal desproporcional como isquemia mesentérica aguda, acionar angiotomografia sem atraso e não confundir gradação de heparina entre as etiologias.",
+    "documento_origem": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "claude",
+    "source_refs": [
+      "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+      "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642."
+    ],
+    "itens": [
+      {
+        "id": "ima-dor-desproporcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor abdominal intensa desproporcional ao exame físico assumida como isquemia mesentérica aguda até prova em contrário",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-fator-de-risco-cardioembolico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fator de risco cardioembólico pesquisado: fibrilação atrial, infarto recente, valvopatia/endocardite, disfunção de VE, embolia prévia",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-nao-espera-laboratorio",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Encaminhamento à angiotomografia não atrasado à espera de lactato, D-dímero ou leucograma",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-cta-solicitada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiotomografia de abdome com contraste em fases arterial e venosa solicitada sem atraso, mencionando a suspeita de isquemia mesentérica na requisição",
+        "origem_secao": "Angiotomografia sem atraso"
+      },
+      {
+        "id": "ima-peritonite-cirurgia-direta",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de sinais de peritonite, laparotomia/laparoscopia acionada sem aguardar o exame de imagem",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-heparina-por-etiologia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação com heparina tratada como recomendação graduada apenas para trombose de veia mesentérica e como coadjuvante de vasodilatador em isquemia não oclusiva — não generalizada para a forma arterial sem contexto da equipe assistente",
+        "origem_secao": "Anticoagulação: o que está graduado e o que não está"
+      },
+      {
+        "id": "ima-expertise-endovascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de expertise em revascularização endovascular verificada; transferência a centro com serviço 24/7 considerada quando ausente",
+        "origem_secao": "Revascularização: endovascular como primeira linha, com nuance recente"
+      },
+      {
+        "id": "ima-comunicacao-cardiologia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Cardiologia comunicada quando houver fonte cardioembólica identificada, sem atrasar o exame ou a cirurgia",
+        "origem_secao": "Por que a cardiologia precisa reconhecer isto"
+      }
+    ],
+    "revisao": "Produzido por Claude em 27/08/2026 com fontes primárias atuais (WSES 2022, ESVS 2025). Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
   }
 ]

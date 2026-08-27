@@ -51358,5 +51358,67 @@
     "review_status": "pendente_revisao",
     "fonte_producao": "chatgpt",
     "published": false
+  },
+  {
+    "slug": "ima-dor-abdominal-desproporcional-assumir-ima-ate-provar-o-contrario-wses-2022",
+    "statement": "Dor abdominal intensa desproporcional aos achados do exame físico deve ser assumida como isquemia mesentérica aguda até prova em contrário.",
+    "recommendation_class": "Recomendação forte",
+    "evidence_level": "1C (evidência de baixa qualidade)",
+    "society": "World Society of Emergency Surgery (WSES)",
+    "year": 2022,
+    "guideline_title": "Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery",
+    "reference": "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857. Recomendação 1.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "isquemia mesentérica aguda",
+      "dor abdominal",
+      "sinal clínico",
+      "emergência"
+    ],
+    "document_slug": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "claude",
+    "published": false
+  },
+  {
+    "slug": "ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025",
+    "statement": "Angiotomografia urgente com contraste em fases arterial e venosa, com cortes de até 1 mm, é recomendada em todo paciente com suspeita de isquemia mesentérica aguda, independentemente da função renal.",
+    "recommendation_class": "Classe I",
+    "evidence_level": "Nível B",
+    "society": "European Society for Vascular Surgery (ESVS)",
+    "year": 2025,
+    "guideline_title": "ESVS 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins",
+    "reference": "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642. Recomendação 33.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "isquemia mesentérica aguda",
+      "angiotomografia",
+      "diagnóstico",
+      "emergência"
+    ],
+    "document_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "claude",
+    "published": false
+  },
+  {
+    "slug": "ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025",
+    "statement": "Revascularização endovascular deve ser considerada como terapia de primeira linha em pacientes com isquemia mesentérica aguda por oclusão trombótica ou embólica da artéria mesentérica superior, quando há expertise disponível.",
+    "recommendation_class": "Classe IIa",
+    "evidence_level": "Nível B",
+    "society": "European Society for Vascular Surgery (ESVS)",
+    "year": 2025,
+    "guideline_title": "ESVS 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins",
+    "reference": "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642. Recomendação 37.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "isquemia mesentérica aguda",
+      "revascularização endovascular",
+      "tratamento"
+    ],
+    "document_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "claude",
+    "published": false
   }
 ]

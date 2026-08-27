@@ -4375,5 +4375,200 @@
     "review_status": "pendente_revisao",
     "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O reconhecimento segue AHA 2025 Classe I, Nível C-LD: adulto inconsciente/não responsivo com respiração ausente ou anormal deve ser presumido em parada; leigo não checa pulso e profissional limita a avaliação a 10 segundos. As ações leigas não incluem fármacos nem procedimentos avançados.",
     "version": 1
+  },
+  {
+    "slug": "dor-abdominal-aguda-desproporcional-ao-exame",
+    "name": "Dor abdominal aguda desproporcional ao exame",
+    "aliases": [
+      "dor abdominal desproporcional",
+      "suspeita de isquemia mesentérica aguda",
+      "abdome vascular agudo"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem tempo-dependente para dor abdominal aguda intensa com exame físico pouco alterado em paciente com fator de risco cardiovascular — reconhecer isquemia mesentérica aguda, acionar angiotomografia sem atraso e não aguardar sinais tardios de peritonite para agir.",
+    "questions": [
+      {
+        "id": "pain_disproportionate_to_exam",
+        "label": "A dor abdominal é intensa e desproporcional aos achados do exame físico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "cardioembolic_risk_factor",
+        "label": "Há fibrilação atrial, infarto do miocárdio recente, valvopatia/endocardite, disfunção de VE com FE baixa ou embolia arterial prévia?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fator de risco"
+      },
+      {
+        "id": "peritonitis_signs",
+        "label": "Há sinais de peritonite (irritação peritoneal, defesa, sepse abdominal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "critically_ill_on_vasopressor",
+        "label": "O paciente está criticamente enfermo, em vasopressor ou com baixo débito?",
+        "type": "boolean",
+        "section": "Contexto"
+      },
+      {
+        "id": "cta_requested",
+        "label": "A angiotomografia de abdome já foi solicitada, mencionando a suspeita de isquemia mesentérica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      }
+    ],
+    "rules": [
+      {
+        "id": "dor-desproporcional",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pain_disproportionate_to_exam",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor abdominal desproporcional ao exame deve ser assumida como isquemia mesentérica aguda até prova em contrário"
+          ],
+          "emergency_flow": [
+            "Solicitar angiotomografia de abdome com contraste em fases arterial e venosa, sem atraso"
+          ]
+        }
+      },
+      {
+        "id": "peritonite-cirurgia-sem-esperar-exame",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "peritonitis_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Peritonite indica necrose intestinal já estabelecida"
+          ],
+          "emergency_flow": [
+            "Ressuscitação, antibiótico de amplo espectro e laparotomia/laparoscopia sem aguardar angiotomografia"
+          ]
+        }
+      },
+      {
+        "id": "fator-de-risco-cardioembolico",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "cardioembolic_risk_factor",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Fonte cardioembólica presente: comunicar cardiologia e equipe de revascularização, sem atrasar o exame"
+          ]
+        }
+      },
+      {
+        "id": "nomi-em-paciente-critico",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "critically_ill_on_vasopressor",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Isquemia mesentérica não oclusiva (NOMI)"
+          ],
+          "messages": [
+            "Considerar NOMI se houver baixo débito ou vasopressor; não é indicação para adiar a angiotomografia"
+          ]
+        }
+      },
+      {
+        "id": "exame-nao-solicitado",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "cta_requested",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Solicitar angiotomografia agora; mencionar a suspeita de isquemia mesentérica na requisição"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm",
+      "Lactato, leucograma e D-dímero como reforço de suspeita, sem valor de exclusão isolado"
+    ],
+    "differentials": [
+      "Isquemia mesentérica aguda de origem cardioembólica",
+      "Isquemia mesentérica não oclusiva",
+      "Trombose de veia mesentérica",
+      "Outra causa de abdome agudo"
+    ],
+    "red_flags": [
+      "Dor abdominal intensa desproporcional ao exame",
+      "Fibrilação atrial, infarto recente, valvopatia ou embolia prévia",
+      "Sinais de peritonite",
+      "Paciente crítico em vasopressor com dor/distensão abdominal"
+    ],
+    "ambulatory_flow": [
+      "Interromper avaliação eletiva diante de dor desproporcional com fator de risco cardiovascular",
+      "Encaminhar para angiotomografia de emergência sem atraso",
+      "Não aguardar exame laboratorial para decidir a urgência do encaminhamento"
+    ],
+    "emergency_flow": [
+      "ABC, sinais vitais e ressuscitação volêmica",
+      "Angiotomografia de abdome sem atraso, mencionando a suspeita na requisição",
+      "Peritonite: laparotomia/laparoscopia sem aguardar o exame",
+      "Comunicar cardiologia se houver fonte cardioembólica"
+    ],
+    "tags": [
+      "isquemia mesentérica aguda",
+      "dor abdominal",
+      "fibrilação atrial",
+      "embolia",
+      "emergência"
+    ],
+    "source_refs": [
+      "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+      "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642."
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
+      "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Reconhecimento e encaminhamento apenas; não contém protocolo cirúrgico/intervencionista completo. Produção científica assistida (Claude, 27/08/2026); pendente de revisão clínica humana antes de publicação.",
+    "fonte_producao": "claude",
+    "version": 1
   }
 ]

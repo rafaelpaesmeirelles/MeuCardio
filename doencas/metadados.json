@@ -6942,5 +6942,154 @@
       "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2"
     ],
     "patient_material_slug": "colapso-subito-como-reconhecer-parada-e-usar-o-dea"
+  },
+  {
+    "slug": "isquemia-mesenterica-aguda-cardioembolica",
+    "name": "Isquemia mesentérica aguda de origem cardioembólica",
+    "aliases": [
+      "embolia arterial mesentérica",
+      "IMA embólica",
+      "infarto intestinal embólico"
+    ],
+    "area": "cardiogeriatria",
+    "category": "emergencia_vascular",
+    "subtype": "embolia_arterial_mesenterica",
+    "prevalence_rank": 3,
+    "completeness": "intermediario",
+    "summary": "Emergência vascular tempo-dependente em que um êmbolo de origem cardíaca — fibrilação atrial, trombo mural pós-infarto, valvopatia ou disfunção de VE — oclui a artéria mesentérica superior; reconhecimento pela dor desproporcional ao exame e diferenciação urgente por angiotomografia definem o desfecho.",
+    "epidemiology": "A incidência de isquemia mesentérica aguda cresce exponencialmente com a idade: em maiores de 75 anos é causa mais prevalente de abdome agudo que apendicite, e a incidência aos 80 anos é cerca de dez vezes a dos 60 anos (WSES 2022). A fração embólica varia por série: 40-50% na revisão do NEJM (Clair & Beach, 2016) e na WSES 2017; a WSES 2022 registra queda recente para cerca de 25% em séries mais novas, atribuída em parte ao maior uso de anticoagulação na fibrilação atrial. A ESVS 2025 encontrou fibrilação atrial em 32,2% de todos os pacientes com isquemia mesentérica aguda (qualquer etiologia); a WSES cita que cerca de metade dos pacientes com a forma embólica especificamente têm fibrilação atrial. Numa coorte finlandesa de isquemia mesentérica embólica (Kärkkäinen 2021), 72% tinham fibrilação atrial e a idade média era 79 anos — dado de uma coorte, não extrapolado como universal.",
+    "presentation": [
+      "Dor abdominal aguda e intensa, desproporcional aos achados do exame físico",
+      "Esvaziamento intestinal — vômito, diarreia — no início do quadro",
+      "Sinais tardios (distensão, defesa, sepse) já indicam necrose intestinal estabelecida",
+      "Fator de risco cardioembólico presente: fibrilação atrial, infarto recente com trombo mural, doença da valva mitral, endocardite, disfunção de ventrículo esquerdo com fração de ejeção baixa, embolia arterial prévia"
+    ],
+    "differentials": [
+      "Isquemia mesentérica não oclusiva",
+      "Trombose de veia mesentérica",
+      "Trombose arterial mesentérica sobre estenose aterosclerótica prévia",
+      "Outra causa de abdome agudo (colecistite, pancreatite, perfuração)"
+    ],
+    "tests": [
+      "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm, independentemente da função renal (ESVS 2025)",
+      "Lactato, leucograma e D-dímero como reforço de suspeita, sem valor de exclusão isolado",
+      "Eletrocardiograma e avaliação de fonte cardioembólica após estabilização, não antes"
+    ],
+    "red_flags": [
+      "Dor abdominal desproporcional ao exame em paciente com fator de risco cardiovascular",
+      "Sinais de peritonite",
+      "Paciente crítico com dor/distensão abdominal em vasopressor",
+      "Fibrilação atrial não anticoagulada com dor abdominal súbita"
+    ],
+    "ambulatory_flow": [
+      "Interromper avaliação eletiva diante de dor abdominal desproporcional com fator de risco cardiovascular",
+      "Encaminhar imediatamente à emergência para angiotomografia",
+      "Não aguardar exame laboratorial para decidir a urgência do encaminhamento"
+    ],
+    "emergency_flow": [
+      "Ressuscitação volêmica e correção de distúrbio eletrolítico",
+      "Angiotomografia sem atraso, mencionando a suspeita na requisição",
+      "Peritonite: laparotomia/laparoscopia sem aguardar o exame",
+      "Oclusão arterial confirmada: decisão de revascularização endovascular ou aberta pela equipe especializada"
+    ],
+    "diagnostic_approach": "A suspeita é clínica (dor desproporcional mais fator de risco); a angiotomografia com protocolo arterial e venoso é o exame que diferencia embolia, trombose arterial, isquemia não oclusiva e trombose venosa mesentérica, e orienta a conduta em cada uma.",
+    "treatment_summary": "Revascularização endovascular é considerada terapia de primeira linha em oclusão trombótica ou embólica de artéria mesentérica superior quando há expertise disponível (ESVS 2025, Classe IIa); cirurgia aberta permanece opção quando não há expertise endovascular ou há sinais de infarto intestinal exigindo ressecção. A anticoagulação com heparina tem grau de recomendação formal apenas para a trombose de veia mesentérica (Classe I) e como coadjuvante de vasodilatador na isquemia não oclusiva (Classe IIb) — não há recomendação graduada equivalente para heparinização imediata na forma arterial embólica/trombótica, que fica a critério da equipe assistente conforme o contexto pré-operatório.",
+    "monitoring": [
+      "Sinais vitais e diurese durante a ressuscitação",
+      "Reavaliação da viabilidade intestinal após revascularização (second-look, geralmente em 24-48h quando indicado)",
+      "Vigilância por imagem e anticoagulação de longo prazo após revascularização (ESVS 2025)"
+    ],
+    "special_populations": [
+      "Idosos concentram a maior parte dos casos; a incidência cresce exponencialmente com a idade e a mortalidade e a morbidade perioperatória são maiores nessa faixa etária, sem que isso justifique retardar a investigação",
+      "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica é o cenário de maior atenção cardiológica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "pain_disproportionate",
+        "label": "A dor abdominal é desproporcional ao exame físico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "cardioembolic_source",
+        "label": "Há fonte cardioembólica conhecida (fibrilação atrial, infarto recente, valvopatia, disfunção de VE)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fator de risco"
+      },
+      {
+        "id": "cta_done",
+        "label": "A angiotomografia já foi realizada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "suspeita-ima",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pain_disproportionate",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Angiotomografia sem atraso; comunicar suspeita de isquemia mesentérica na requisição"
+          ]
+        }
+      },
+      {
+        "id": "exame-pendente",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "cta_done",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Solicitar angiotomografia agora, independentemente da função renal"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "isquemia mesentérica aguda",
+      "embolia",
+      "fibrilação atrial",
+      "abdome vascular agudo",
+      "cardiogeriatria"
+    ],
+    "source_refs": [
+      "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+      "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642.",
+      "Clair DG, Beach JM. Mesenteric Ischemia. New England Journal of Medicine. 2016;374(10):959-968. DOI: 10.1056/NEJMra1503884. PMID: 26962730.",
+      "Kärkkäinen JM. Acute Mesenteric Ischemia: A Challenge for the Acute Care Surgeon. Scandinavian Journal of Surgery. 2021;110(2):150-158. DOI: 10.1177/14574969211007590. PMID: 33866891."
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
+      "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf",
+      "https://www.nejm.org/doi/full/10.1056/NEJMra1503884",
+      "https://journals.sagepub.com/doi/full/10.1177/14574969211007590"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Conteúdo novo produzido por Claude, restrito a reconhecimento, diferenciação diagnóstica e primeira hora; exige revisão clínica humana antes da publicação. Não substitui o protocolo cirúrgico/intervencionista institucional.",
+    "fonte_producao": "claude",
+    "version": 1,
+    "related_document_slugs": [
+      "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+      "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora"
+    ],
+    "patient_material_slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia"
   }
 ]
