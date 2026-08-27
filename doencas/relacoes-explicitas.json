@@ -238,5 +238,41 @@
     "relevance_score": 1.0,
     "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:trilha:trilha-cardiopatia-congenita-hipertensao-pulmonar-associada-e-fechamento-por-dispositivo",
     "review_note": "Vínculo clínico direto: trilha aborda o subgrupo pediátrico com shunt, hemodinâmica limítrofe e decisão de fechamento sem usar RVPi isoladamente."
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC AVSD Clinical Practice Algorithm 2026",
+    "review_note": "Vínculo clínico direto: DSAV completo pode produzir insuficiência cardíaca e hipertensão pulmonar na infância."
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-triagem-para-centro-terciario",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC AVSD Clinical Practice Algorithm 2026",
+    "review_note": "Vínculo clínico direto: definição anatômica, reparo e reintervenção do DSAV pertencem ao cuidado congênito especializado."
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "checklist",
+    "target_slug": "elegibilidade-esportiva-na-crianca-e-no-adolescente-com-cardiopatia-congenita-por-lesao",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "ACC AVSD Clinical Practice Algorithm 2026",
+    "review_note": "Vínculo clínico direto: atividade esportiva após DSAV depende de lesões residuais, função, pressão pulmonar e arritmia."
   }
 ]

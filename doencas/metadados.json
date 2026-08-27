@@ -8820,29 +8820,484 @@
     "name": "Defeito do septo atrioventricular",
     "aliases": [
       "DSAV",
-      "canal atrioventricular"
+      "canal atrioventricular",
+      "defeito do canal atrioventricular",
+      "defeito do coxim endocárdico"
     ],
     "area": "cardiopediatria",
     "category": "cardiopatia_congenita",
     "subtype": "juncoes_atrioventriculares",
     "cyanosis_class": "acianotica",
     "prevalence_rank": 13,
-    "completeness": "basico",
-    "summary": "Espectro de defeitos das junções atrioventriculares que exige descrição anatômica, avaliação valvar e acompanhamento antes e depois da correção.",
+    "completeness": "completo",
+    "summary": "O defeito do septo atrioventricular (DSAV) é um espectro de malformações da junção atrioventricular, com comunicação interatrial tipo ostium primum, possível comunicação interventricular de via de entrada e anormalidades da valva atrioventricular comum. A descrição precisa do subtipo — completo, intermediário, transicional, parcial ou desbalanceado — é mais útil que o rótulo isolado, porque define a fisiologia, o momento do reparo e a possibilidade de correção biventricular. O DSAV completo costuma produzir hiperfluxo pulmonar e insuficiência cardíaca nos primeiros meses, enquanto formas parciais podem se apresentar mais tarde por insuficiência da valva AV esquerda, dilatação de câmaras direitas ou arritmia. A associação com trissomia 21 é forte e exige cuidado integrado, mas não substitui a análise anatômica individual. O ecocardiograma pediátrico é central para diagnóstico e seguimento; cateterismo é reservado para dúvidas hemodinâmicas, suspeita de doença vascular pulmonar ou anatomia não esclarecida. A maioria requer reparo cirúrgico e acompanhamento congênito por toda a vida, pois insuficiência valvar esquerda, shunt residual, obstrução da via de saída do ventrículo esquerdo, arritmias e disfunção ventricular podem surgir ou progredir após uma correção inicialmente satisfatória.",
+    "epidemiology": "O DSAV representa uma parcela relevante das cardiopatias congênitas e é particularmente enriquecido na síndrome de Down. A relação é bidirecionalmente importante: cardiopatia congênita ocorre em cerca de 40–50% das crianças com síndrome de Down segundo a AAP, e o DSAV é uma das lesões clássicas desse grupo. Nem todo DSAV ocorre em trissomia 21, e formas desbalanceadas podem coexistir com heterotaxia, obstruções de via de saída e outras anomalias complexas. A história natural depende do tamanho do componente ventricular, do grau de insuficiência da valva AV, do equilíbrio entre os ventrículos e da resistência vascular pulmonar. No DSAV completo balanceado, a queda fisiológica da resistência pulmonar após o nascimento aumenta o shunt esquerda-direita, frequentemente revelando taquipneia, dificuldade alimentar e falha de crescimento nas primeiras semanas ou meses. A exposição prolongada a hiperfluxo e pressão pulmonar pode acelerar doença vascular pulmonar, especialmente quando coexistem síndrome de Down, doença pulmonar, obstrução de via aérea ou aspiração. Resultados cirúrgicos contemporâneos são geralmente bons, mas a necessidade de reintervenção não é rara: a orientação ACC de 2026 cita aproximadamente 10–25%, sobretudo por insuficiência residual da valva AV esquerda e obstrução da via de saída do VE. Registros e séries cirúrgicas são a principal base de evidência; anatomia complexa, baixo peso, prematuridade e doença pulmonar modificam o risco e limitam generalizações.",
+    "presentation": [
+      "Taquipneia, sudorese, pausas ou fadiga durante mamadas após a queda da resistência vascular pulmonar",
+      "Baixo ganho ponderal, dificuldade alimentar e infecções respiratórias recorrentes",
+      "Sinais de hiperfluxo e insuficiência cardíaca: precórdio hiperdinâmico, hepatomegalia e congestão",
+      "Sopro sistólico por insuficiência da valva AV e/ou aumento de fluxo pulmonar; ausência de sopro intenso não exclui lesão grande",
+      "Desdobramento fixo de segunda bulha e sinais de sobrecarga direita nas formas com fisiologia predominantemente atrial",
+      "Forma parcial ou transicional assintomática por anos, detectada por sopro, ECG ou ecocardiograma",
+      "Intolerância ao esforço, palpitações ou arritmia em adolescentes e adultos não reparados ou com lesões residuais",
+      "Cianose sugere hipertensão pulmonar avançada, shunt direita-esquerda, DSAV desbalanceado ou lesão associada",
+      "Edema, ascite e falência ventricular em apresentação tardia ou pós-operatória complexa",
+      "Diagnóstico pré-natal por ecocardiografia fetal, sobretudo em feto com suspeita de aneuploidia ou desproporção ventricular"
+    ],
+    "diagnostic_approach": {
+      "classificacao_anatomica": "Descrever junção AV comum, número de orifícios valvares, extensão dos componentes atrial e ventricular, inserções cordais, grau de insuficiência/estenose de cada componente valvar e equilíbrio ventricular. DSAV completo combina ostium primum, CIV de entrada e anel AV comum; intermediário mantém grande componente ventricular com dois orifícios; transicional tem componente ventricular pequeno/restrito; parcial tem ostium primum e fenda/zona de aposição da valva AV esquerda sem shunt ventricular significativo. DSAV desbalanceado exige quantificar hipoplasia ventricular e possíveis obstruções antes de discutir estratégia uni ou biventricular.",
+      "ecocardiograma": "O ecocardiograma transtorácico deve confirmar anatomia segmentar, conexões venosas, shunts e direção do fluxo; estimar pressão pulmonar; medir câmaras e função biventricular; caracterizar mecanismo e gravidade da insuficiência valvar; e pesquisar obstrução subaórtica/via de saída do VE. A avaliação seriada deve comparar tendências, não apenas um gradiente ou grau de regurgitação isolado. Eco 3D, transesofágico, TC ou RM podem responder perguntas anatômicas selecionadas e apoiar planejamento cirúrgico, sem substituir a integração clínica.",
+      "hemodinamica": "Cateterismo não é obrigatório para o lactente típico com anatomia e indicação cirúrgica claras. É útil quando há apresentação tardia, saturação baixa, pressão pulmonar elevada desproporcional, dúvida de operabilidade, discordância entre dados, shunt residual complexo ou necessidade de intervenção. Medir saturações, Qp:Qs, pressão de oclusão e resistência vascular pulmonar indexada em centro congênito; nenhuma resposta vasodilatadora isolada transforma automaticamente um paciente em candidato à correção.",
+      "avaliacao_associada": "Confirmar ou oferecer avaliação genética quando houver síndrome de Down suspeita, outras anomalias, heterotaxia ou padrão familiar. Em síndrome de Down, integrar vias aéreas, apneia, aspiração, função tireoidiana, audição, nutrição e vulnerabilidade pulmonar ao planejamento perioperatório. ECG auxilia na documentação de eixo superior, atraso de condução e arritmias; radiografia e biomarcadores são adjuntos, não definem anatomia."
+    },
+    "differentials": [
+      "Comunicação interatrial ostium secundum com dilatação direita",
+      "Comunicação interventricular ampla com hiperfluxo pulmonar",
+      "Insuficiência mitral congênita isolada ou fenda da valva mitral sem junção AV comum",
+      "Ventrículo único funcional com defeito de entrada ou DSAV desbalanceado",
+      "Retorno venoso pulmonar anômalo parcial ou total",
+      "Tronco arterial comum ou janela aortopulmonar com hiperfluxo precoce",
+      "Persistência do canal arterial hemodinamicamente significativa",
+      "Cor triatriatum ou estenose de veias pulmonares com hipertensão pulmonar",
+      "Cardiomiopatia ou miocardite causando insuficiência cardíaca no lactente",
+      "Doença pulmonar, aspiração ou obstrução de via aérea como causa predominante de taquipneia"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico pediátrico completo com análise segmentar e da junção AV",
+      "Doppler colorido/espectral para shunts, insuficiência ou estenose valvar e gradiente da via de saída do VE",
+      "ECG de 12 derivações para eixo, condução AV, sobrecarga e linha de base arrítmica",
+      "Oximetria em repouso e durante alimentação ou esforço quando pertinente",
+      "Radiografia de tórax se houver sintomas respiratórios, suspeita de congestão ou diagnóstico diferencial",
+      "Hemograma, eletrólitos e função renal/hepática antes de terapia ou cirurgia conforme contexto",
+      "Avaliação nutricional e curva de crescimento em toda criança sintomática",
+      "Teste cromossômico/avaliação genética com aconselhamento quando síndrome ou anomalias associadas forem suspeitas",
+      "Polissonografia e avaliação de via aérea/aspiração dirigidas, especialmente na síndrome de Down",
+      "Eco transesofágico ou 3D para mecanismo valvar e planejamento quando a pergunta não for resolvida pelo exame padrão",
+      "RM cardíaca ou TC em anatomia extracardíaca, volumes, shunts ou obstruções selecionados",
+      "Cateterismo cardíaco para hemodinâmica e operabilidade quando clinicamente indicado",
+      "Holter ou monitor de eventos diante de palpitação, síncope, bradicardia ou arritmia documentada",
+      "Teste cardiopulmonar de exercício em paciente maior estável para avaliação funcional individualizada"
+    ],
+    "red_flags": [
+      "Taquipneia progressiva, esforço respiratório, dificuldade alimentar ou falha de crescimento no lactente",
+      "Hipotensão, alteração do sensório, extremidades frias, oligúria ou sinais de baixo débito",
+      "Cianose nova, dessaturação persistente ou shunt com inversão de fluxo",
+      "Hipertensão pulmonar importante, especialmente em criança mais velha ainda não reparada",
+      "Insuficiência grave da valva AV esquerda com dilatação ou disfunção ventricular",
+      "Obstrução relevante ou progressiva da via de saída do VE",
+      "DSAV desbalanceado, hipoplasia ventricular ou anatomia que torna incerta a estratégia biventricular",
+      "Arritmia sustentada, bloqueio AV avançado, síncope ou morte súbita abortada",
+      "Endocardite suspeita: febre persistente com bacteremia, novo sopro ou fenômenos embólicos",
+      "Piora rápida após cirurgia com baixo débito, sangramento, bloqueio, crise pulmonar ou regurgitação valvar importante"
+    ],
+    "treatment_summary": "O tratamento definitivo é cirúrgico na maioria dos pacientes e deve ser planejado por equipe de cardiopatia congênita. A orientação clínica ACC atualizada em 2026 distingue a fisiologia: DSAV completo ou intermediário, com shunt ventricular hemodinamicamente significativo, costuma ser reparado na primeira infância, tipicamente entre 3 e 6 meses, antecipando-se quando insuficiência cardíaca, crescimento inadequado ou controle clínico ruim tornam a espera insegura. Formas parciais ou transicionais, predominantemente atriais e sem insuficiência valvar importante, geralmente são reparadas mais tarde, nos primeiros anos, após avaliação de repercussão. Essas janelas não são datas automáticas: prematuridade, peso, síndrome genética, doença pulmonar, anatomia valvar e experiência do centro alteram a decisão. Diurético, suporte nutricional e, em casos selecionados, modulação de pós-carga podem estabilizar congestão e permitir crescimento, mas não fecham o defeito nem devem adiar correção necessária. Não inserir dose pelo assistente. Em suspeita de doença vascular pulmonar ou apresentação tardia, avaliar operabilidade em centro congênito/HP antes do fechamento; fisiologia de Eisenmenger contraindica fechamento do shunt. O reparo busca fechar os componentes septais preservando condução e reconstruir a valva AV com competência e sem estenose, além de tratar lesões associadas. DSAV desbalanceado exige decisão individual entre reparo biventricular, estratégia univentricular ou alternativas, apoiada em anatomia, volumes, função e discussão familiar. Após o reparo, vigilância é vitalícia. Segundo o ACC, 10–25% podem precisar de reintervenção, sobretudo por insuficiência da valva AV esquerda e obstrução da via de saída do VE; shunt residual, estenose valvar, disfunção ventricular, hipertensão pulmonar e arritmia também devem ser rastreados. Uma lesão residual significativa ou sintomática requer discussão em centro especializado, não decisão automática por limiar único. Em adultos, seguir equipe de cardiopatia congênita e avaliar hipertensão pulmonar em DSAV não reparado ou com shunt residual; gestação demanda aconselhamento pré-concepcional baseado em função ventricular, valva, pressão pulmonar, arritmia e medicações. Atividade física é individualizada após avaliação hemodinâmica. Profilaxia antibiótica de endocardite não é indicada para todo DSAV: restringe-se às condições de maior risco definidas por diretriz, como período inicial após reparo com material protético ou defeito residual adjacente; higiene oral regular é central.",
+    "ambulatory_flow": [
+      "Confirmar subtipo anatômico, equilíbrio ventricular e lesões associadas antes de definir a rota",
+      "Documentar sintomas de congestão, alimentação, crescimento, saturação e exame cardiovascular",
+      "Comparar ecocardiogramas para shunts, valva AV esquerda, função ventricular, pressão pulmonar e via de saída do VE",
+      "Encaminhar cedo ao cirurgião congênito no DSAV completo/intermediário, sem aguardar falha clínica avançada",
+      "Otimizar nutrição e controlar congestão enquanto se organiza o reparo, com prescrição individual",
+      "Em apresentação tardia ou pressão pulmonar elevada, discutir cateterismo e operabilidade no centro especializado",
+      "Após correção, manter seguimento congênito vitalício mesmo se assintomático",
+      "Pesquisar insuficiência valvar esquerda, obstrução subaórtica, shunt residual, disfunção e arritmia em cada fase",
+      "Integrar seguimento da síndrome de Down, sono, via aérea, aspiração e tireoide quando aplicável",
+      "Revisar critérios individualizados de atividade física, saúde bucal e profilaxia de endocardite",
+      "Planejar transição estruturada da cardiologia pediátrica para cardiopatia congênita do adulto",
+      "Oferecer aconselhamento reprodutivo e genético antes da gestação"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, monitorização, acesso, saturação, perfusão e glicemia em lactente descompensado",
+      "Tratar hipóxia, acidose, infecção, anemia, arritmia e distúrbios de volume que elevem demanda ou resistência pulmonar",
+      "Diferenciar congestão por hiperfluxo de doença pulmonar ou obstrução venosa antes de escalonar terapia",
+      "Acionar cardiologia pediátrica/UTI e cirurgia congênita se baixo débito, edema pulmonar ou falha de tratamento",
+      "Na crise de hipertensão pulmonar, preservar pressão sistêmica e perfusão do VD e seguir protocolo especializado",
+      "Não iniciar vasodilatador pulmonar empírico sem excluir fisiologia pós-capilar/venosa e definir o contexto",
+      "Após cirurgia, investigar imediatamente bloqueio AV, tamponamento, regurgitação grave, shunt residual e obstrução",
+      "Transferir precocemente para centro congênito quando anatomia, operabilidade ou suporte avançado forem necessários"
+    ],
+    "monitoring": [
+      "Crescimento, alimentação, frequência respiratória, classe funcional e internações",
+      "Saturação e sinais de cianose ou hipertensão pulmonar",
+      "Ecocardiograma seriado com valva AV esquerda e via de saída do VE explicitamente descritas",
+      "Função e dimensões biventriculares e repercussão de shunt residual",
+      "ECG e sintomas de bradicardia, palpitação ou síncope; Holter quando indicado",
+      "Pressão pulmonar estimada e necessidade de hemodinâmica invasiva se houver discordância",
+      "Função renal, eletrólitos e efeitos adversos durante terapia para congestão",
+      "Sono, via aérea, aspiração, tireoide e nutrição na síndrome de Down",
+      "Capacidade funcional e orientação de exercício em adolescentes/adultos",
+      "Saúde bucal e elegibilidade correta para profilaxia de endocardite",
+      "Plano de transição, contracepção/gestação e adesão na adolescência",
+      "Necessidade de reintervenção por tendência clínica e anatômica, não por uma medida isolada"
+    ],
+    "special_populations": [
+      "Síndrome de Down: rastrear cardiopatia ao nascimento e integrar pulmão, via aérea, aspiração, sono, tireoide e nutrição",
+      "Prematuros ou baixo peso: equilibrar risco operatório com dano do hiperfluxo e falha de crescimento",
+      "DSAV desbalanceado: avaliação morfológica avançada e decisão uni versus biventricular em centro experiente",
+      "Heterotaxia: pesquisar retornos venosos, posição cardíaca, função esplênica e outras anomalias",
+      "Hipertensão pulmonar: definir componente pré/pós-capilar e operabilidade antes de fechamento tardio",
+      "Eisenmenger: não fechar o defeito; manter cuidado especializado e planejamento reprodutivo",
+      "Pós-operatório: risco de insuficiência valvar esquerda, obstrução da via de saída e bloqueio AV",
+      "Adolescentes/adultos: transição para cardiopatia congênita do adulto e vigilância de arritmia",
+      "Gestação: estratificar valva, ventrículos, pressão pulmonar e arritmia antes da concepção",
+      "Atletas: liberar por fisiologia residual e risco arrítmico, não apenas pelo rótulo de DSAV reparado"
+    ],
+    "assistant_questions": [
+      {
+        "id": "dsav_faixa_etaria",
+        "label": "Qual é a faixa etária?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "lactente",
+            "label": "Lactente"
+          },
+          {
+            "value": "crianca",
+            "label": "Criança"
+          },
+          {
+            "value": "adolescente_adulto",
+            "label": "Adolescente ou adulto"
+          }
+        ]
+      },
+      {
+        "id": "dsav_reparado",
+        "label": "O DSAV já foi reparado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Anatomia"
+      },
+      {
+        "id": "dsav_subtipo",
+        "label": "Qual é o subtipo anatômico predominante?",
+        "type": "select",
+        "required": true,
+        "section": "Anatomia",
+        "options": [
+          {
+            "value": "completo_intermediario",
+            "label": "Completo ou intermediário"
+          },
+          {
+            "value": "parcial_transicional",
+            "label": "Parcial ou transicional"
+          },
+          {
+            "value": "desbalanceado",
+            "label": "Desbalanceado"
+          },
+          {
+            "value": "incerto",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "dsav_instavel",
+        "label": "Há baixo débito, hipoxemia importante ou desconforto respiratório grave?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "dsav_falha_crescimento",
+        "label": "Há dificuldade alimentar, congestão ou falha de crescimento?",
+        "type": "boolean",
+        "section": "Repercussão"
+      },
+      {
+        "id": "dsav_hp_tardia",
+        "label": "Há suspeita de hipertensão pulmonar ou apresentação tardia sem reparo?",
+        "type": "boolean",
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "dsav_lesao_residual",
+        "label": "Há insuficiência valvar importante, shunt residual, obstrução do VE ou disfunção?",
+        "type": "boolean",
+        "section": "Pós-operatório"
+      },
+      {
+        "id": "dsav_arritmia",
+        "label": "Há síncope, palpitação, bradicardia ou arritmia documentada?",
+        "type": "boolean",
+        "section": "Ritmo"
+      },
+      {
+        "id": "dsav_down",
+        "label": "Há síndrome de Down confirmada ou suspeita?",
+        "type": "boolean",
+        "section": "Condições associadas"
+      },
+      {
+        "id": "dsav_eco_recente",
+        "label": "Há ecocardiograma congênito recente com valva, ventrículos e pressão pulmonar?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "dsav-instabilidade",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_instavel",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível descompensação cardiopulmonar em paciente com DSAV"
+          ],
+          "emergency_flow": [
+            "Encaminhar para atendimento hospitalar imediato com cardiologia pediátrica/UTI e avaliação da fisiologia antes de terapia dirigida."
+          ]
+        }
+      },
+      {
+        "id": "dsav-completo-sintomatico",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_reparado",
+              "op": "falsy"
+            },
+            {
+              "field": "dsav_subtipo",
+              "op": "eq",
+              "value": "completo_intermediario"
+            },
+            {
+              "field": "dsav_falha_crescimento",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Antecipar avaliação em cirurgia congênita; tratamento clínico é ponte e não deve adiar reparo necessário."
+          ],
+          "ambulatory_flow": [
+            "Organizar avaliação cirúrgica e suporte nutricional/congestivo individualizado."
+          ]
+        }
+      },
+      {
+        "id": "dsav-hp-apresentacao-tardia",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_reparado",
+              "op": "falsy"
+            },
+            {
+              "field": "dsav_hp_tardia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Possível doença vascular pulmonar em DSAV não reparado"
+          ],
+          "messages": [
+            "Não recomendar fechamento automático; discutir hemodinâmica e operabilidade em centro congênito/HP."
+          ],
+          "suggested_tests": [
+            "Avaliação especializada para cateterismo com fluxos e resistência vascular pulmonar indexada, se o benefício superar o risco."
+          ]
+        }
+      },
+      {
+        "id": "dsav-lesao-residual",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_reparado",
+              "op": "truthy"
+            },
+            {
+              "field": "dsav_lesao_residual",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Lesão residual pós-DSAV com potencial de reintervenção"
+          ],
+          "ambulatory_flow": [
+            "Rever em centro congênito mecanismo valvar, via de saída, shunt e função ventricular antes de decidir reintervenção."
+          ]
+        }
+      },
+      {
+        "id": "dsav-arritmia",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_arritmia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Sintoma ou achado compatível com arritmia/bloqueio em cardiopatia congênita"
+          ],
+          "suggested_tests": [
+            "ECG e monitorização ambulatorial dirigidos; síncope ou instabilidade exigem avaliação urgente."
+          ]
+        }
+      },
+      {
+        "id": "dsav-desbalanceado",
+        "priority": 86,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_subtipo",
+              "op": "eq",
+              "value": "desbalanceado"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "A estratégia uni ou biventricular não pode ser inferida pelo assistente; requer centro congênito, imagem avançada e discussão multidisciplinar."
+          ]
+        }
+      },
+      {
+        "id": "dsav-anatomia-incerta",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_subtipo",
+              "op": "eq",
+              "value": "incerto"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Classificação anatômica do DSAV e equilíbrio ventricular"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma completo por equipe de cardiopatia congênita."
+          ]
+        }
+      },
+      {
+        "id": "dsav-sem-eco",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_eco_recente",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Ecocardiograma recente com valva AV, via de saída, função e pressão pulmonar"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico em serviço congênito."
+          ]
+        }
+      },
+      {
+        "id": "dsav-sindrome-down",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_down",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Integrar avaliação de sono/via aérea, aspiração, tireoide, nutrição e seguimento pediátrico da síndrome de Down."
+          ],
+          "messages": [
+            "A síndrome de Down modifica o cuidado associado, mas o momento cirúrgico continua dependente da anatomia e fisiologia individuais."
+          ]
+        }
+      },
+      {
+        "id": "dsav-transicao-adulto",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "dsav_faixa_etaria",
+              "op": "eq",
+              "value": "adolescente_adulto"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Garantir seguimento em cardiopatia congênita do adulto, transição estruturada e aconselhamento reprodutivo."
+          ]
+        }
+      }
+    ],
     "tags": [
       "DSAV",
-      "canal AV",
-      "trisomia 21"
+      "canal atrioventricular",
+      "cardiopatia congênita",
+      "síndrome de Down",
+      "valva atrioventricular esquerda",
+      "hipertensão pulmonar",
+      "cirurgia cardíaca pediátrica",
+      "transição congênita"
     ],
     "source_refs": [
-      "ACC Pediatric and Congenital Cardiology Clinical Practice Algorithms"
+      "Jayaram NM et al. Clinical Practice Algorithm for Follow-Up of Repaired and Unrepaired Atrioventricular Septal Defects. ACC Expert Analysis. Atualizado em 26 ago 2026.",
+      "Sachdeva R et al. Outpatient management of isolated left-to-right shunt lesions in pediatric patients: 2026 ACC concise clinical guidance. J Am Coll Cardiol. 2026. doi:10.1016/j.jacc.2025.11.020",
+      "Bull MJ et al. Health Supervision for Children and Adolescents With Down Syndrome. Pediatrics. 2022;149:e2022057010. doi:10.1542/peds.2022-057010",
+      "Gurvitz M et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2026;153:e601-e799. doi:10.1161/CIR.0000000000001402",
+      "Baumgartner H et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42:563-645. doi:10.1093/eurheartj/ehaa554",
+      "Abman SH et al. Pediatric Pulmonary Hypertension: Guidelines From the AHA and ATS. Circulation. 2015;132:2037-2099. PMID 26534956",
+      "Wilson WR et al. Prevention of Viridans Group Streptococcal Infective Endocarditis. Circulation. 2021;143:e963-e978. doi:10.1161/CIR.0000000000000969"
     ],
     "source_urls": [
-      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"
+      "https://www.acc.org/latest-in-cardiology/articles/2025/02/03/12/17/clinical-practice-algorithm-for-the-follow-up-of-repaired-and-unrepaired-atrioventricular-septal-defects",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2025.11.020",
+      "https://publications.aap.org/pediatrics/article/149/5/e2022057010/186778/Health-Supervision-for-Children-and-Adolescents",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001402",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/adult-congenital-heart-disease/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000329",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000969"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026 com a orientação clínica ACC para DSAV atualizada em 26/08/2026, AAP para síndrome de Down, diretrizes de cardiopatia congênita do adulto e hipertensão pulmonar. Exige revisão humana por cardiologia/cirurgia cardíaca pediátrica antes de publicação; anatomia, operabilidade, timing cirúrgico, terapias, profilaxia de endocardite e decisões reprodutivas devem ser confirmados no contexto individual e local.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
     "related_document_slugs": [
       "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico"
     ],
