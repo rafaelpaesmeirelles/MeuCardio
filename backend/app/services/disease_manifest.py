@@ -69,6 +69,26 @@ def _merge_by_id(items: Any, updates: dict[str, dict[str, Any]], *, label: str) 
         by_id[identifier].update(copy.deepcopy(patch))
 
 
+def _add_by_id(items: Any, additions: Any, *, label: str) -> None:
+    if not isinstance(items, list):
+        raise ValueError(f"{label}: coleção alvo não é lista")
+    if not isinstance(additions, list):
+        raise ValueError(f"{label}: adições devem ser lista")
+    existing = {
+        str(item.get("id"))
+        for item in items
+        if isinstance(item, dict) and item.get("id") is not None
+    }
+    for item in additions:
+        if not isinstance(item, dict) or not str(item.get("id") or "").strip():
+            raise ValueError(f"{label}: toda adição deve ser objeto com id")
+        identifier = str(item["id"])
+        if identifier in existing:
+            raise ValueError(f"{label}: id duplicado na adição: {identifier}")
+        items.append(copy.deepcopy(item))
+        existing.add(identifier)
+
+
 def _apply_corrections(
     records_by_slug: dict[str, dict[str, Any]],
     base_manifest: Path,
@@ -115,6 +135,14 @@ def _apply_corrections(
                 if not isinstance(question_updates, dict):
                     raise ValueError(f"{path}:{slug}: assistant_questions deve ser objeto por id")
                 _merge_by_id(record.get("assistant_questions"), question_updates, label=f"{path}:{slug}:assistant_questions")
+
+            rule_additions = correction.get("assistant_rules_add") or []
+            if rule_additions:
+                _add_by_id(record.get("assistant_rules"), rule_additions, label=f"{path}:{slug}:assistant_rules_add")
+
+            question_additions = correction.get("assistant_questions_add") or []
+            if question_additions:
+                _add_by_id(record.get("assistant_questions"), question_additions, label=f"{path}:{slug}:assistant_questions_add")
 
 
 def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
