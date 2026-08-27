@@ -5884,39 +5884,79 @@
       {
         "id": "has-lesao-aguda",
         "priority": 100,
-        "when": {"all": [{"field": "acute_target_injury", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "acute_target_injury",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível emergência hipertensiva ou outro evento cardiovascular agudo"],
-          "emergency_flow": ["Avaliar imediatamente lesão aguda de órgão-alvo e tratar pelo protocolo específico"]
+          "red_flags": [
+            "Possível emergência hipertensiva ou outro evento cardiovascular agudo"
+          ],
+          "emergency_flow": [
+            "Avaliar imediatamente lesão aguda de órgão-alvo e tratar pelo protocolo específico"
+          ]
         }
       },
       {
         "id": "has-medida-nao-confirmada",
         "priority": 30,
-        "when": {"all": [{"field": "measurement_confirmed", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "measurement_confirmed",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
           "risk": "rotina",
-          "messages": ["A medida isolada ainda precisa de confirmação padronizada, salvo contexto de urgência"],
-          "suggested_tests": ["Repetir pressão com técnica adequada e considerar MRPA ou MAPA"]
+          "messages": [
+            "A medida isolada ainda precisa de confirmação padronizada, salvo contexto de urgência"
+          ],
+          "suggested_tests": [
+            "Repetir pressão com técnica adequada e considerar MRPA ou MAPA"
+          ]
         }
       },
       {
         "id": "has-gestacao-puerperio",
         "priority": 90,
-        "when": {"all": [{"field": "pregnant_postpartum", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pregnant_postpartum",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["Aplicar protocolo obstétrico e revisar segurança dos anti-hipertensivos"]
+          "messages": [
+            "Aplicar protocolo obstétrico e revisar segurança dos anti-hipertensivos"
+          ]
         }
       },
       {
         "id": "has-causa-secundaria",
         "priority": 50,
-        "when": {"all": [{"field": "secondary_cause_clues", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "secondary_cause_clues",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "suggested_tests": ["Investigar causa secundária de forma dirigida após excluir pseudorresistência"]
+          "suggested_tests": [
+            "Investigar causa secundária de forma dirigida após excluir pseudorresistência"
+          ]
         }
       }
     ],
@@ -6071,38 +6111,78 @@
       {
         "id": "fa-instabilidade",
         "priority": 100,
-        "when": {"all": [{"field": "unstable", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "unstable",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Tratar instabilidade e seguir protocolo de cardioversão elétrica sincronizada"]
+          "emergency_flow": [
+            "Tratar instabilidade e seguir protocolo de cardioversão elétrica sincronizada"
+          ]
         }
       },
       {
         "id": "fa-deficit-focal",
         "priority": 100,
-        "when": {"all": [{"field": "focal_deficit", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "focal_deficit",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível AVC ou embolia sistêmica"],
-          "emergency_flow": ["Ativar protocolo de AVC ou avaliação vascular emergencial"]
+          "red_flags": [
+            "Possível AVC ou embolia sistêmica"
+          ],
+          "emergency_flow": [
+            "Ativar protocolo de AVC ou avaliação vascular emergencial"
+          ]
         }
       },
       {
         "id": "fa-sem-tracado",
         "priority": 40,
-        "when": {"all": [{"field": "ecg_confirmed", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "ecg_confirmed",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["O diagnóstico clínico precisa de confirmação eletrocardiográfica"],
-          "suggested_tests": ["Obter ECG ou monitorização interpretável"]
+          "messages": [
+            "O diagnóstico clínico precisa de confirmação eletrocardiográfica"
+          ],
+          "suggested_tests": [
+            "Obter ECG ou monitorização interpretável"
+          ]
         }
       },
       {
         "id": "fa-anticoagulacao-documentar",
         "priority": 30,
-        "when": {"all": [{"field": "anticoagulant", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulant",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Documentar fármaco, dose, última tomada, adesão, função renal e sangramento"]
+          "messages": [
+            "Documentar fármaco, dose, última tomada, adesão, função renal e sangramento"
+          ]
         }
       }
     ],
@@ -6265,38 +6345,78 @@
       {
         "id": "ic-hipoperfusao",
         "priority": 100,
-        "when": {"all": [{"field": "hypoperfusion", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "hypoperfusion",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível choque cardiogênico ou hipoperfusão"],
-          "emergency_flow": ["Monitorizar, investigar causa e acionar equipe de choque/terapia intensiva"]
+          "red_flags": [
+            "Possível choque cardiogênico ou hipoperfusão"
+          ],
+          "emergency_flow": [
+            "Monitorizar, investigar causa e acionar equipe de choque/terapia intensiva"
+          ]
         }
       },
       {
         "id": "ic-edema-pulmonar",
         "priority": 100,
-        "when": {"all": [{"field": "pulmonary_edema", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pulmonary_edema",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Tratar insuficiência respiratória e congestão aguda em ambiente monitorizado"]
+          "emergency_flow": [
+            "Tratar insuficiência respiratória e congestão aguda em ambiente monitorizado"
+          ]
         }
       },
       {
         "id": "ic-nao-confirmada",
         "priority": 30,
-        "when": {"all": [{"field": "objective_evidence", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "objective_evidence",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Sintomas isolados não confirmam insuficiência cardíaca"],
-          "suggested_tests": ["Integrar peptídeo natriurético e ecocardiograma conforme probabilidade clínica"]
+          "messages": [
+            "Sintomas isolados não confirmam insuficiência cardíaca"
+          ],
+          "suggested_tests": [
+            "Integrar peptídeo natriurético e ecocardiograma conforme probabilidade clínica"
+          ]
         }
       },
       {
         "id": "ic-avancada",
         "priority": 80,
-        "when": {"all": [{"field": "recurrent_admissions", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_admissions",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "urgente",
-          "messages": ["Considerar avaliação precoce por equipe de insuficiência cardíaca avançada"]
+          "messages": [
+            "Considerar avaliação precoce por equipe de insuficiência cardíaca avançada"
+          ]
         }
       }
     ],
@@ -6456,38 +6576,78 @@
       {
         "id": "scc-padrao-instavel",
         "priority": 100,
-        "when": {"all": [{"field": "pattern_changed", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pattern_changed",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível síndrome coronariana aguda"],
-          "emergency_flow": ["Migrar para protocolo de dor torácica aguda com ECG e troponina"]
+          "red_flags": [
+            "Possível síndrome coronariana aguda"
+          ],
+          "emergency_flow": [
+            "Migrar para protocolo de dor torácica aguda com ECG e troponina"
+          ]
         }
       },
       {
         "id": "scc-instabilidade",
         "priority": 100,
-        "when": {"all": [{"field": "instability", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "instability",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Avaliar e tratar instabilidade em ambiente monitorizado"]
+          "emergency_flow": [
+            "Avaliar e tratar instabilidade em ambiente monitorizado"
+          ]
         }
       },
       {
         "id": "scc-nao-documentada",
         "priority": 30,
-        "when": {"all": [{"field": "known_cad", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "known_cad",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Selecionar investigação proporcional à probabilidade; sintomas isolados não confirmam DAC"],
-          "suggested_tests": ["Escolher teste anatômico ou funcional conforme probabilidade e contexto"]
+          "messages": [
+            "Selecionar investigação proporcional à probabilidade; sintomas isolados não confirmam DAC"
+          ],
+          "suggested_tests": [
+            "Escolher teste anatômico ou funcional conforme probabilidade e contexto"
+          ]
         }
       },
       {
         "id": "scc-refrataria",
         "priority": 70,
-        "when": {"all": [{"field": "refractory_symptoms", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "refractory_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["Revisar mecanismo, adesão e anatomia; discutir revascularização quando houver indicação"]
+          "messages": [
+            "Revisar mecanismo, adesão e anatomia; discutir revascularização quando houver indicação"
+          ]
         }
       }
     ],
@@ -6516,5 +6676,271 @@
     "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual.",
     "fonte_producao": "chatgpt",
     "version": 1
+  },
+  {
+    "slug": "parada-cardiorrespiratoria-e-morte-subita-abortada",
+    "name": "Parada cardiorrespiratória",
+    "aliases": [
+      "parada cardíaca",
+      "PCR no adulto",
+      "morte súbita recuperada",
+      "retorno da circulação após parada"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "colapso_circulatorio",
+    "prevalence_rank": 1,
+    "completeness": "completo",
+    "summary": "Cessação abrupta da circulação efetiva, reconhecida clinicamente por ausência de resposta e respiração normal, com pulso ausente ou não definitivamente palpável em até 10 segundos pelo profissional. A sobrevida depende do reconhecimento, acionamento do sistema de emergência, RCP de alta qualidade e desfibrilação precoce, seguidos por cuidado pós-parada e investigação da causa.",
+    "epidemiology": "A parada cardiorrespiratória extra-hospitalar permanece evento de alta letalidade. A AHA estima aproximadamente 356 mil adultos tratados anualmente pelo serviço de emergência nos Estados Unidos, com grande variação regional e baixa sobrevida global. O dado deve ser usado para dimensionar o problema, não para predizer o caso individual; resultados locais dependem da cadeia de sobrevivência.",
+    "presentation": [
+      "Colapso súbito com ausência de resposta",
+      "Respiração ausente ou anormal, incluindo gasping, suspiros isolados e roncos lentos",
+      "Ausência de pulso ou pulso não definitivamente palpável em até 10 segundos pelo profissional",
+      "Movimentos breves semelhantes a convulsão no início da parada",
+      "Pródromos possíveis: dor torácica, dispneia, palpitação ou síncope, embora a parada possa ser a primeira manifestação"
+    ],
+    "diagnostic_approach": {
+      "reconhecimento_imediato": [
+        "Leigo: ausência de resposta mais respiração ausente/anormal é suficiente para presumir parada; não checar pulso",
+        "Profissional: avaliar respiração e pulso simultaneamente por no máximo 10 segundos",
+        "Gasping não é respiração normal e não deve atrasar compressões"
+      ],
+      "durante_ressuscitacao": [
+        "Identificar ritmo chocável ou não chocável no desfibrilador/DEA",
+        "Procurar causas reversíveis em paralelo, sem interromper RCP",
+        "Usar capnografia quando via aérea avançada estiver instalada e o recurso estiver disponível"
+      ],
+      "apos_retorno_da_circulacao": [
+        "Estabilizar oxigenação, ventilação e hemodinâmica",
+        "Obter ECG de 12 derivações e investigar etiologia cardíaca e não cardíaca",
+        "Evitar neuroprognóstico prematuro e usar avaliação multimodal no momento apropriado"
+      ]
+    },
+    "differentials": [
+      "Parada respiratória com pulso",
+      "Síncope",
+      "Crise convulsiva",
+      "Obstrução grave de via aérea",
+      "Intoxicação ou overdose",
+      "Hipoglicemia ou coma metabólico",
+      "Choque profundo com pulso dificilmente palpável"
+    ],
+    "tests": [
+      "Reconhecimento clínico imediato; nenhum exame deve atrasar RCP e desfibrilação",
+      "Ritmo no desfibrilador/DEA",
+      "Capnografia durante RCP quando disponível e aplicável",
+      "ECG de 12 derivações após retorno da circulação",
+      "Eletrólitos, gasometria, glicemia, troponina e exames dirigidos à causa após estabilização",
+      "Imagem cardíaca, coronariana, neurológica ou vascular conforme contexto, sem abordagem indiscriminada"
+    ],
+    "red_flags": [
+      "Inconsciência ou ausência de resposta",
+      "Respiração ausente ou anormal/gasping",
+      "Pulso ausente ou incerto em até 10 segundos para profissional",
+      "Colapso durante exercício, dor torácica ou palpitação",
+      "Recorrência de arritmia, choque ou instabilidade após retorno da circulação"
+    ],
+    "ambulatory_flow": [
+      "Parada suspeita não tem fluxo ambulatorial: acionar emergência e iniciar a cadeia de sobrevivência",
+      "Após sobrevivência e alta, organizar investigação etiológica, reabilitação física/cognitiva e suporte emocional",
+      "Reavaliar indicação de CDI e outras estratégias de prevenção secundária conforme causa e reversibilidade",
+      "Orientar familiares sobre sinais de recorrência, plano de emergência e rastreio familiar quando houver suspeita hereditária"
+    ],
+    "emergency_flow": [
+      "Reconhecer ausência de resposta e respiração anormal, ativar o 192 e iniciar compressões",
+      "Aplicar DEA/desfibrilador o mais cedo possível e minimizar pausas",
+      "Seguir o protocolo Parada cardiorrespiratória para ritmo, RCP de alta qualidade e causas reversíveis",
+      "Após retorno da circulação, avançar ao protocolo pós-parada, incluindo controle de temperatura/febre e avaliação coronariana individualizada",
+      "Não oferecer prognóstico neurológico definitivo precocemente nem com base em um único achado"
+    ],
+    "treatment_summary": "O tratamento começa antes do diagnóstico etiológico definitivo: ativação do sistema de emergência, compressões imediatas e DEA. Profissionais avançam para RCP de alta qualidade, desfibrilação quando indicada, fármacos e tratamento das causas reversíveis conforme protocolo. Após retorno da circulação, o cuidado integrado busca prevenir nova parada, limitar lesão cerebral e identificar a causa.",
+    "monitoring": [
+      "Qualidade e continuidade das compressões durante RCP",
+      "Ritmo, resposta à desfibrilação e retorno da circulação",
+      "Oxigenação, ventilação, pressão arterial e temperatura após retorno",
+      "Recorrência de arritmia ou choque",
+      "Evolução neurológica com avaliação multimodal e sem sedativos confundidores",
+      "Necessidades físicas, cognitivas e emocionais do sobrevivente e da família"
+    ],
+    "special_populations": [
+      "Criança: algoritmo pediátrico e ventilação têm importância maior nas causas asfíxicas",
+      "Gestação: deslocamento uterino, estratégia obstétrica e protocolo específico sem interromper RCP de alta qualidade",
+      "Afogamento, asfixia ou overdose: ventilação e tratamento da causa assumem prioridade adicional",
+      "Trauma: controlar hemorragia e tratar causas traumáticas em paralelo ao algoritmo",
+      "Pessoa com diretiva antecipada válida ou sinais inequívocos de morte irreversível: aplicar normas éticas e legais do serviço"
+    ],
+    "assistant_questions": [
+      {
+        "id": "unresponsive",
+        "label": "A pessoa está inconsciente ou não responde quando chamada e tocada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "abnormal_breathing",
+        "label": "A respiração está ausente ou anormal, com gasping, suspiros ou roncos lentos?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "pulse_status",
+        "label": "Para profissional: o pulso foi definitivamente palpado em até 10 segundos?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "lay_or_not_checked",
+            "label": "Leigo ou não checado"
+          },
+          {
+            "value": "definite",
+            "label": "Pulso definitivamente presente"
+          },
+          {
+            "value": "absent_or_uncertain",
+            "label": "Ausente ou incerto"
+          }
+        ],
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "ems_and_aed",
+        "label": "O 192 foi acionado e um DEA foi solicitado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      },
+      {
+        "id": "rosc",
+        "label": "Houve retorno de circulação com pulso e sinais de vida?",
+        "type": "boolean",
+        "section": "Evolução"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "presumir-parada",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "unresponsive",
+              "op": "truthy"
+            },
+            {
+              "field": "abnormal_breathing",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Ausência de resposta com respiração ausente ou anormal deve ser tratada como parada até prova em contrário"
+          ],
+          "emergency_flow": [
+            "Acionar emergência, iniciar compressões e aplicar DEA assim que disponível"
+          ]
+        }
+      },
+      {
+        "id": "pulso-ausente-ou-incerto",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pulse_status",
+              "op": "eq",
+              "value": "absent_or_uncertain"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Iniciar RCP sem prolongar nova checagem de pulso e conectar desfibrilador"
+          ]
+        }
+      },
+      {
+        "id": "cadeia-ainda-incompleta",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "ems_and_aed",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "missing_information": [
+            "Acionamento do 192 e acesso ao DEA"
+          ],
+          "emergency_flow": [
+            "Usar telefone em viva-voz e delegar a busca do DEA sem interromper compressões"
+          ]
+        }
+      },
+      {
+        "id": "pos-retorno-circulacao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "rosc",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Retorno da circulação muda a fase, mas não encerra a emergência"
+          ],
+          "suggested_tests": [
+            "ECG de 12 derivações e investigação etiológica dirigida após estabilização"
+          ],
+          "emergency_flow": [
+            "Iniciar cuidado pós-parada e prevenir recorrência"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "parada cardiorrespiratória",
+      "morte súbita",
+      "RCP",
+      "DEA",
+      "gasping",
+      "retorno da circulação",
+      "cuidado pós-parada"
+    ],
+    "source_refs": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001378.",
+      "Wigginton JG, Perman SM, Elmer J, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001376.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203."
+    ],
+    "source_urls": [
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/systems-of-care",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376",
+      "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O conteúdo separa reconhecimento leigo, reconhecimento profissional e cuidado pós-retorno, preserva as recomendações AHA 2025 com classe/nível quando aplicáveis e remete doses e intervenções avançadas ao protocolo existente.",
+    "version": 1,
+    "related_document_slugs": [
+      "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+      "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
+      "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2"
+    ],
+    "patient_material_slug": "colapso-subito-como-reconhecer-parada-e-usar-o-dea"
   }
 ]
