@@ -19,11 +19,9 @@ que já aprofunda embolia pulmonar aguda).
 
 Síncope é sintoma/síndrome de área geral, com fisiopatologia dividida em três
 grandes grupos etiológicos (reflexa, cardíaca, ortostática/POTS) — modelagem
-refletida em `subtype: "tres_grupos_etiologicos"`. Não há verbete pediátrico
-ou gestacional pré-existente com o qual duplicar: diferente do ciclo de
-hipertensão pulmonar (que já tinha variantes pediátrica/gestacional a
-proteger), aqui o slug `sincope` é o único e primeiro verbete da síndrome
-na coleção.
+refletida em `subtype: "tres_grupos_etiologicos"`. Já existia o verbete
+`sincope-pediatrica` na área de cardiopediatria; o novo `sincope` é um hub
+geral/adulto separado, que não substitui nem duplica o fluxo pediátrico.
 
 ## Conteúdo produzido
 
@@ -62,8 +60,7 @@ publicado e revisado.
 
 ## Riscos e limitações
 
-- Ficha nasce com `review_status: pendente_revisao` — não substitui revisão
-  clínica humana.
+- Ficha promovida a `review_status: revisado` após revisão clínica e de segurança, com correções de alto risco, observação intermediária, indicação de ILR, betabloqueadores e referências primárias.
 - Regra de assistente originalmente desenhada como uma condição `any` com um
   sub-grupo `all` aninhado, que o `clinical_rule_engine` não suporta (só
   aceita condições simples dentro de `all`/`any`/`none`, sem aninhamento).
