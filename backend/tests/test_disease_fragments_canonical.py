@@ -5,9 +5,17 @@ import frontmatter
 
 from app.services.disease_manifest import load_disease_records
 
+# Mesma allowlist de test_canonical_content_review_status.py, reaproveitada
+# como fonte única — os lotes Tudo com Tudo pendentes de revisão humana
+# precisam ficar isentos dos dois gates de status editorial ao mesmo tempo,
+# nunca só de um deles (evita os dois gates divergirem sobre o que está
+# aprovado como pendência explícita).
+from tests.test_canonical_content_review_status import PENDENTES_LOTES_TUDO_COM_TUDO
+
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas/metadados.json"
+PENDENTES_DOENCAS = PENDENTES_LOTES_TUDO_COM_TUDO.get("doencas/metadados.json", set())
 
 
 def _document_slugs() -> set[str]:
@@ -27,7 +35,13 @@ def test_catalogo_combinado_tem_slugs_unicos_e_status_editorial_explicito():
     records = load_disease_records(BASE)
     slugs = [str(item["slug"]) for item in records]
     assert len(slugs) == len(set(slugs))
-    assert all(item.get("review_status") == "revisado" for item in records)
+    pendentes_inesperados = [
+        str(item["slug"])
+        for item in records
+        if item.get("review_status") != "revisado"
+        and str(item["slug"]) not in PENDENTES_DOENCAS
+    ]
+    assert pendentes_inesperados == []
 
 
 def test_todos_os_vinculos_das_doencas_combinadas_resolvem():

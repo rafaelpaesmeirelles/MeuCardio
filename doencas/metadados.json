@@ -3458,21 +3458,73 @@
     ],
     "source_refs": [
       "Atualização das Diretrizes em Cardiogeriatria da SBC, 2019",
-      "AHA statements on older adults and cardiovascular care"
+      "AHA statements on older adults and cardiovascular care",
+      "Ricci F, De Caterina R, Fedorowski A. Orthostatic Hypotension: Epidemiology, Prognosis, and Treatment. J Am Coll Cardiol. 2015;66(7):848-860. PMID: 26271068.",
+      "Ceccofiglio A, Mussi C, Rafanelli M, Rivasi G, Bo M, Mossello E, Martone AM, Abete P, Ungar A. Increasing Prevalence of Orthostatic Hypotension as a Cause of Syncope With Advancing Age and Multimorbidity. J Am Med Dir Assoc. 2019;20(5):586-588. PMID: 30926410.",
+      "Hamrefors V, Härstedt M, Holmberg A, Rogmark C, Sutton R, Melander O, Fedorowski A. Orthostatic Hypotension and Elevated Resting Heart Rate Predict Low-Energy Fractures in the Population: The Malmö Preventive Project. PLoS One. 2016;11(4):e0154249. PMID: 27124658.",
+      "Rivasi G, Rafanelli M, Mossello E, Brignole M, Ungar A. Drug-Related Orthostatic Hypotension: Beyond Anti-Hypertensive Medications. Drugs Aging. 2020;37(10):725-738. PMID: 32894454.",
+      "Fanciulli A, Jordan J, Biaggioni I, et al. Consensus statement on the definition of neurogenic supine hypertension in cardiovascular autonomic failure. Clin Auton Res. 2018;28(4):355-362. PMID: 29766366.",
+      "Biaggioni I, Freeman R, Mathias CJ, Low P, Hewitt LA, Kaufmann H; Droxidopa 302 Investigators. Randomized withdrawal study of patients with symptomatic neurogenic orthostatic hypotension responsive to droxidopa. Hypertension. 2015;65(1):101-107. PMID: 25350981.",
+      "Low PA, Gilden JL, Freeman R, Sheng KN, McElligott MA; Midodrine Study Group. Efficacy of Midodrine vs Placebo in Neurogenic Orthostatic Hypotension. JAMA. 1997;277(13):1046-1051. PMID: 9091692.",
+      "van Dijk N, Quartieri F, Blanc JJ, et al; PC-Trial Investigators. Effectiveness of physical counterpressure maneuvers in preventing vasovagal syncope. J Am Coll Cardiol. 2006;48(8):1652-1657. PMID: 17045903.",
+      "Ishikawa J, Toba A, Futami S, Harada K. Postprandial Hypotension-Methods for the Evaluation and Management. Geriatr Gerontol Int. 2026;26(4):e70456. PMID: 41918339.",
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. PMID: 29562304."
     ],
     "source_urls": [
       "https://abccardiol.org/article/atualizacao-das-diretrizes-em-cardiogeriatria-da-sociedade-brasileira-de-cardiologia-2019/",
-      "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit"
+      "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit",
+      "https://pubmed.ncbi.nlm.nih.gov/26271068/",
+      "https://pubmed.ncbi.nlm.nih.gov/30926410/",
+      "https://pubmed.ncbi.nlm.nih.gov/27124658/",
+      "https://pubmed.ncbi.nlm.nih.gov/32894454/",
+      "https://pubmed.ncbi.nlm.nih.gov/29766366/",
+      "https://pubmed.ncbi.nlm.nih.gov/25350981/",
+      "https://pubmed.ncbi.nlm.nih.gov/9091692/",
+      "https://pubmed.ncbi.nlm.nih.gov/17045903/",
+      "https://pubmed.ncbi.nlm.nih.gov/41918339/",
+      "https://pubmed.ncbi.nlm.nih.gov/29562304/"
     ],
-    "review_status": "revisado",
-    "review_note": "Critérios numéricos devem ser conferidos na versão vigente do protocolo utilizado.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (3º da série, após doenca-coronariana-idoso/PR #603 e valva-aortica-bicuspide-pediatrica/PR #604) — APROFUNDAMENTO PONTUAL: diferente dos dois anteriores, esta ficha já tinha presentation/differentials/tests/red_flags/ambulatory_flow/emergency_flow/assistant_questions/assistant_rules substantivos e revisados; preservados sem alteração. Adicionados apenas os 4 campos ausentes: epidemiology, treatment_summary, monitoring, special_populations. related_document_slugs expandido de 3 para 14 (11 novos), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. 6 dos 11 novos documentos são compartilhados com a ficha sincope, já publicada (fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado, fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial, fluxograma-sincope-idoso-investigacao-diferenciada, sincope-classificacao-etiologica-em-tres-grandes-grupos, sincope-diagnostico-e-manejo-esc-2018) e com risco-quedas-cardiogeriatria (sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram). Adicionalmente, 2 dos 3 documentos JÁ EXISTENTES antes deste lote também são compartilhados — hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial (também em sincope) e hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo (também em risco-quedas-cardiogeriatria), identificados pelo teste dedicado, não pelos agentes de pesquisa (eles não tocaram nos 3 originais). Todos mantidos por serem genuína e centralmente também sobre hipotensão ortostática (seção dedicada, não menção de passagem), mesmo padrão de pertencimento múltiplo já usado em ciclos anteriores. Nenhuma dose de fármaco citada (midodrina, fludrocortisona e droxidopa mencionadas apenas por nome de classe, sem posologia).",
+    "version": 2,
     "related_document_slugs": [
       "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
       "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
-      "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo"
+      "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo",
+      "fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado",
+      "sincope-no-idoso-diferencial-ampliado-e-a-fronteira-do-inexplicado",
+      "fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024",
+      "fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial",
+      "sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram",
+      "fluxograma-sincope-idoso-investigacao-diferenciada",
+      "neuropatia-autonomica-cardiaca-diabetica-manifestacoes-testes-de-ewing-e-valor-prognostico",
+      "fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida",
+      "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+      "sincope-diagnostico-e-manejo-esc-2018",
+      "fluxograma-investigacao-neuropatia-autonomica-cardiovascular-diabetico"
     ],
-    "patient_material_slug": "tontura-ao-levantar-hipotensao-ortostatica-e-pots"
+    "patient_material_slug": "tontura-ao-levantar-hipotensao-ortostatica-e-pots",
+    "fonte_producao": "claude",
+    "epidemiology": "A hipotensão ortostática (HO) é um achado frequente e subdiagnosticado no envelhecimento, com prevalência fortemente dependente da idade: estudos populacionais mostram taxas em torno de 5% em adultos abaixo de 50 anos, subindo para cerca de 20 a 30% em pessoas acima de 70 anos, e alcançando valores ainda mais altos — frequentemente acima de 50% — em idosos institucionalizados, especialmente naqueles com múltiplas comorbidades, fragilidade e polifarmácia. A prevalência cresce de forma consistente com o número de doenças crônicas associadas (hipertensão arterial, diabetes, doença renal crônica, insuficiência cardíaca) e com o número de medicamentos em uso, sobretudo anti-hipertensivos, diuréticos, antidepressivos e antipsicóticos, que se somam à perda idade-relacionada da complacência arterial, do barorreflexo e da resposta vasoconstritora simpática. A HO está associada de forma independente a maior risco de quedas, fraturas de baixo impacto, síncope, comprometimento cognitivo e aumento da mortalidade, incluindo maior incidência de infarto do miocárdio, acidente vascular cerebral, insuficiência cardíaca e fibrilação atrial, mesmo quando o quadro é pouco sintomático ou assintomático. Em um subgrupo relevante de idosos, a HO não decorre apenas de fatores hemodinâmicos ou farmacológicos, mas constitui marcador clínico de disautonomia subjacente, presente em condições como doença de Parkinson e outras sinucleinopatias, neuropatia autonômica diabética e amiloidose com comprometimento autonômico — situações em que a HO tende a ser mais grave, persistente e associada a hipertensão supina concomitante, exigindo investigação etiológica dirigida quando a apresentação foge do padrão habitual de HO por causas reversíveis.",
+    "treatment_summary": "O tratamento da hipotensão ortostática (HO) no idoso inicia-se por medidas não farmacológicas, que constituem a primeira linha para a maioria dos pacientes. As manobras de contrapressão física (cruzar as pernas com contração da musculatura, agachar, tensionar glúteos e abdome) reduzem o represamento venoso e elevam a pressão arterial de forma rápida quando aplicadas ao primeiro sintoma. A elevação da cabeceira da cama (posição semi-Fowler) durante o sono reduz a natriurese noturna e atenua a hipotensão matinal, além de mitigar a hipertensão supina associada. O uso de compressão elástica em membros inferiores e, quando tolerado, faixa abdominal, reduz o acúmulo venoso esplâncnico e nos membros. A ingestão adequada de líquidos e, em pacientes sem contraindicação cardiovascular ou renal, o aumento moderado da ingesta de sal ajudam a expandir o volume circulante; a ingestão rápida de água antes de posições de risco (levantar, tomar banho) pode produzir efeito pressor transitório útil. A técnica de levantar em etapas — permanecer sentado à beira do leito antes de assumir a posição ortostática, evitando mudanças posturais bruscas — reduz o risco de queda por hipotensão inicial. Em paralelo às medidas comportamentais, deve-se revisar sistematicamente a lista de medicamentos, priorizando a desprescrição ou redução de fármacos com maior contribuição para a HO: diuréticos, alfabloqueadores, nitratos e outros vasodilatadores, seguidos por anti-hipertensivos de outras classes, antidepressivos tricíclicos e antipsicóticos com efeito alfabloqueador, sempre pesando o risco de descompensação da condição de base tratada por esses fármacos. Quando as medidas não farmacológicas e o ajuste medicamentoso são insuficientes e os sintomas persistem e comprometem a funcionalidade, considera-se tratamento farmacológico de segunda linha, incluindo agentes vasoconstritores de ação periférica como a midodrina, mineralocorticoides como a fludrocortisona (com atenção ao risco de hipertensão supina, edema e hipocalemia) e, em casos de disautonomia neurogênica confirmada, a droxidopa como precursor sintético de norepinefrina — sempre sob indicação individualizada, sem posologia padronizada aqui descrita, e com reavaliação da resposta clínica. A hipotensão pós-prandial, comum em idosos e frequentemente associada à disautonomia, deve ser abordada com refeições menores e mais fracionadas, redução do teor de carboidratos de rápida absorção, ingestão de água antes das refeições e evitação de decúbito ou posição ortostática prolongada imediatamente após comer. Um desafio terapêutico particular ocorre quando a HO coexiste com hipertensão supina — comum na disautonomia neurogênica —, pois medidas e fármacos que corrigem a queda pressórica ao levantar podem agravar a elevação pressórica em decúbito, aumentando risco cardiovascular noturno; a conduta nesses casos busca equilíbrio individualizado, priorizando a prevenção de quedas e sintomas incapacitantes sobre a normalização estrita da pressão supina, com estratégias como elevar a cabeceira, evitar a última dose de agentes pressores próxima ao horário de deitar e considerar anti-hipertensivos de curta duração à noite apenas quando a hipertensão supina for pronunciada. Em todos os casos, a resposta terapêutica e os efeitos adversos — hipertensão supina, edema, hipocalemia, piora de sintomas urinários ou cefaleia — devem ser reavaliados periodicamente, ajustando o plano conforme a tolerância, a funcionalidade e os objetivos de cuidado do paciente idoso.",
+    "monitoring": [
+      "Reavaliação periódica da pressão arterial em decúbito e ortostatismo (1 e 3 minutos), inclusive em paciente assintomático já tratado",
+      "Vigilância de sintomas de hipotensão supina paradoxal e de hipertensão supina em quem usa midodrina ou fludrocortisona",
+      "Reforço e checagem de adesão às medidas não farmacológicas (hidratação, sal quando não contraindicado, manobras de contrapressão, cabeceira elevada, meias/cinta compressiva)",
+      "Revisão medicamentosa periódica, priorizando identificar e ajustar fármacos com efeito ortostático (diuréticos, alfabloqueadores, nitratos, antidepressivos tricíclicos, antipsicóticos, dopaminérgicos) antes de intensificar tratamento farmacológico específico",
+      "Monitorização de eletrólitos (potássio) e função renal, além de sinais de edema e insuficiência cardíaca, em quem está em uso de fludrocortisona",
+      "Rastreio ativo e sistemático de quedas recorrentes e near-falls, com avaliação multifatorial de risco (marcha, força, visão, cognição, ambiente domiciliar) quando presentes",
+      "MAPA periódica para detectar hipertensão noturna e variabilidade pressórica excessiva em quem tem falência autonômica documentada"
+    ],
+    "special_populations": [
+      "Idoso com doença de Parkinson ou outro parkinsonismo: disautonomia primária, HO frequentemente grave e com resposta cronotrópica embotada, maior risco de queda e de HO neurogênica refratária",
+      "Idoso diabético com neuropatia autonômica cardiovascular: HO é manifestação tardia de denervação simpática, costuma coexistir com taquicardia fixa de repouso e exige bateria de testes de Ewing para caracterização",
+      "Idoso com amiloidose cardíaca: disautonomia grave e frequentemente refratária, com fisiologia restritiva que limita expansão volêmica e torna o manejo farmacológico da HO particularmente delicado",
+      "Idoso com hipertensão supina concomitante: dilema terapêutico entre tratar a HO sintomática e evitar agravar a pressão deitada, exigindo medidas escalonadas (cabeceira elevada, ajuste de horário de midodrina, evitar fludrocortisona)",
+      "Idoso institucionalizado com múltiplas quedas recorrentes: maior prevalência de HO (mais de 50% em enfermaria geriátrica), necessidade de avaliação multifatorial de risco de queda associada à investigação postural",
+      "Idoso com demência ou comprometimento cognitivo: dificuldade de relatar sintomas de intolerância ortostática, maior dependência de medida objetiva de pressão em ortostatismo e de observação por cuidador",
+      "Hipotensão pós-prandial em idoso frágil: coexiste com a HO clássica no mesmo paciente, pode exigir monitorização ambulatorial da pressão arterial para ser identificada e tem manejo próprio (fracionamento de refeições, redução de carboidrato simples)"
+    ]
   },
   {
     "slug": "fragilidade-pre-procedimento-cardiovascular",

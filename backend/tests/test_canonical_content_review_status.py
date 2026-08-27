@@ -39,7 +39,16 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento pontual Tudo com Tudo de 28/08/2026: ficha
+        # hipotensao-ortostatica-no-idoso já tinha a maior parte do
+        # conteúdo clínico; adicionados epidemiology, treatment_summary,
+        # monitoring, special_populations e 11 related_document_slugs
+        # novos (3 -> 14) — ver review_note.
+        "hipotensao-ortostatica-no-idoso",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
