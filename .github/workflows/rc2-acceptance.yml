@@ -309,7 +309,7 @@ jobs:
               await page.screenshot({ path: path.join(out, 'desktop-medication-command.png'), fullPage: false });
 
               await page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
-              await page.getByText('Montar o PDF').waitFor({ state: 'visible', timeout: 15000 });
+              await page.getByRole('button', { name: 'Gerar e baixar PDF' }).waitFor({ state: 'visible', timeout: 15000 });
               await page.waitForTimeout(700);
               await page.screenshot({ path: path.join(out, 'desktop-content-export.png'), fullPage: false });
             }
@@ -345,7 +345,7 @@ jobs:
 
             if (selected?.slug) {
               await mobile.page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
-              await mobile.page.getByText('Montar o PDF').waitFor({ state: 'visible', timeout: 15000 });
+              await mobile.page.getByRole('button', { name: 'Gerar e baixar PDF' }).waitFor({ state: 'visible', timeout: 15000 });
               await mobile.page.waitForTimeout(700);
               const exportState = await mobile.page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
               if (exportState.scrollWidth > exportState.width + 16) fail(`/exportar mobile: overflow horizontal ${exportState.scrollWidth} > ${exportState.width}`);
