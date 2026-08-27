@@ -104,7 +104,7 @@ class DocumentoProfissional(Documento):
         self.abrir_pagina(com_cabecalho=False)
         self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
 
-        altura_corvia = self._logo(self.margem, self.altura - 40, 132)
+        altura_corvia = self._logo(self.margem, self.altura - 40, 180)
         base_corvia = self.altura - 40 - altura_corvia
         base_profissional = self.identidade_primeira_pagina()
         self.y = min(base_corvia, base_profissional) - 26
@@ -191,7 +191,6 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
     documento.capa_profissional(
         material.titulo,
         material.subtitulo or "",
-        etiqueta="Material para o paciente",
     )
 
     for secao in (material.secoes or []):
