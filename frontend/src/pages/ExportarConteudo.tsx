@@ -13,6 +13,11 @@ type CatalogItem = {
 };
 type CatalogResponse = { total: number; itens: CatalogItem[]; tipos: string[] };
 type MailStatus = { disponivel: boolean; motivo: string | null; email_address: string | null };
+type CertificadoA1Status = {
+  conectado: boolean;
+  titular_cn?: string;
+  valido_ate?: string;
+};
 type EnvioResponse = {
   enviado: boolean;
   remetente: string;
@@ -20,6 +25,13 @@ type EnvioResponse = {
   assunto: string;
   arquivo: string;
   message_id: string | null;
+};
+type FormatoExportacao = "pdf" | "pptx" | "docx";
+
+const FORMATOS: Record<FormatoExportacao, { nome: string; descricao: string }> = {
+  pdf: { nome: "PDF", descricao: "Diagramação fechada para leitura e compartilhamento." },
+  pptx: { nome: "PowerPoint editável (.pptx)", descricao: "Slides nativos para aula, reunião ou round." },
+  docx: { nome: "Word editável (.docx)", descricao: "Documento nativo para revisar, adaptar e complementar." },
 };
 
 const ROTULOS: Record<string, string> = {
@@ -64,6 +76,9 @@ export default function ExportarConteudo() {
   const [selecionados, setSelecionados] = useState<CatalogItem[]>([]);
   const [titulo, setTitulo] = useState("");
   const [incluirDados, setIncluirDados] = useState(false);
+  const [formato, setFormato] = useState<FormatoExportacao>("pdf");
+  const [assinarDigitalmente, setAssinarDigitalmente] = useState(false);
+  const [certificadoA1, setCertificadoA1] = useState<CertificadoA1Status | null>(null);
   const [gerando, setGerando] = useState(false);
   const [mail, setMail] = useState<MailStatus | null>(null);
   const [para, setPara] = useState("");
@@ -81,6 +96,12 @@ export default function ExportarConteudo() {
       motivo: "Não foi possível confirmar o CorVIA Mail agora.",
       email_address: null,
     }));
+  }, []);
+
+  useEffect(() => {
+    api.get<CertificadoA1Status>("/assinatura/certificado-a1")
+      .then(setCertificadoA1)
+      .catch(() => setCertificadoA1({ conectado: false }));
   }, []);
 
   useEffect(() => {
@@ -117,7 +138,15 @@ export default function ExportarConteudo() {
     itens: selecionados.map((item) => ({ tipo: item.tipo, slug: item.slug })),
     incluir_dados_assinante: incluirDados,
     titulo: titulo.trim() || null,
-  }), [selecionados, incluirDados, titulo]);
+    formato,
+    assinar_digitalmente: formato === "pdf" && assinarDigitalmente,
+  }), [selecionados, incluirDados, titulo, formato, assinarDigitalmente]);
+
+  function escolherFormato(novoFormato: FormatoExportacao) {
+    setFormato(novoFormato);
+    if (novoFormato !== "pdf") setAssinarDigitalmente(false);
+    setEnvio(null);
+  }
 
   function adicionar(item: CatalogItem) {
     setSelecionados((atuais) => chavesSelecionadas.has(chave(item)) ? atuais : [...atuais, item]);
@@ -145,9 +174,9 @@ export default function ExportarConteudo() {
     setErro("");
     try {
       const blob = await api.blobPost("/exportar/conteudo", payload);
-      download(blob, titulo.trim() ? `${titulo.trim().replace(/[^\p{L}\p{N}]+/gu, "-").toLowerCase()}.pdf` : "conteudo-corvia.pdf");
+      download(blob, titulo.trim() ? `${titulo.trim().replace(/[^\p{L}\p{N}]+/gu, "-").toLowerCase()}.${formato}` : `conteudo-corvia.${formato}`);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível gerar o PDF.");
+      setErro(e instanceof ApiError ? e.message : "Não foi possível gerar o arquivo.");
     } finally {
       setGerando(false);
     }
@@ -169,7 +198,7 @@ export default function ExportarConteudo() {
       });
       setEnvio(resposta);
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o PDF pelo CorVIA Mail.");
+      setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o arquivo pelo CorVIA Mail.");
     } finally {
       setEnviando(false);
     }
@@ -180,7 +209,7 @@ export default function ExportarConteudo() {
       <p className="eyebrow">Produção clínica e científica</p>
       <h1>Exportar conteúdo</h1>
       <p className="subtitulo" style={{ maxWidth: "76ch" }}>
-        Monte um único PDF com qualquer combinação de conteúdos publicados do CorVIA. A ordem abaixo é a ordem do arquivo.
+        Monte um arquivo em PDF, PowerPoint ou Word com qualquer combinação de conteúdos publicados do CorVIA. A ordem abaixo é a ordem do arquivo.
         Você pode gerar só com a marca CorVIA ou acrescentar sua identificação profissional.
       </p>
 
@@ -225,9 +254,9 @@ export default function ExportarConteudo() {
       </section>
 
       <section className="cartao" style={{ marginTop: "1rem", minWidth: 0 }}>
-        <p className="eyebrow">2 · Montar o PDF</p>
+        <p className="eyebrow">2 · Montar e escolher o formato</p>
         {!selecionados.length ? (
-          <p className="dado">Adicione um ou mais conteúdos. O PDF pode misturar medicamento, guideline, evidência, estudo, exame, checklist, timeline e outras áreas.</p>
+          <p className="dado">Adicione um ou mais conteúdos. O arquivo pode misturar medicamento, guideline, evidência, estudo, exame, checklist, timeline e outras áreas.</p>
         ) : (
           <ol style={{ listStyle: "none", padding: 0, margin: "0.7rem 0", display: "grid", gap: 7, minWidth: 0 }}>
             {selecionados.map((item, index) => (
@@ -245,15 +274,55 @@ export default function ExportarConteudo() {
         )}
 
         <label style={{ display: "block", marginTop: 10, minWidth: 0 }}>
-          <strong>Título do PDF (opcional)</strong>
+          <strong>Título do arquivo (opcional)</strong>
           <input value={titulo} onChange={(e) => setTitulo(e.target.value.slice(0, 180))} placeholder={selecionados.length > 1 ? "Ex.: Atualização em insuficiência cardíaca" : "Usar título do conteúdo"} />
         </label>
+        <fieldset style={{ border: 0, padding: 0, margin: "14px 0 0" }}>
+          <legend style={{ fontWeight: 700, marginBottom: 7 }}>Formato</legend>
+          <div style={{ display: "grid", gap: 8 }}>
+            {(Object.entries(FORMATOS) as [FormatoExportacao, typeof FORMATOS[FormatoExportacao]][]).map(([id, opcao]) => (
+              <label key={id} style={{ display: "flex", gap: 9, alignItems: "flex-start", fontWeight: 400 }}>
+                <input type="radio" name="formato-exportacao" checked={formato === id} onChange={() => escolherFormato(id)} />
+                <span><strong>{opcao.nome}</strong><br /><span className="dado">{opcao.descricao}</span></span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+        <div className="cartao" style={{ marginTop: 12, padding: "0.8rem" }}>
+          <label style={{ display: "flex", gap: 9, alignItems: "flex-start", fontWeight: 400 }}>
+            <input
+              type="checkbox"
+              checked={assinarDigitalmente}
+              onChange={(e) => setAssinarDigitalmente(e.target.checked)}
+              disabled={formato !== "pdf" || certificadoA1?.conectado !== true}
+            />
+            <span>
+              <strong>Assinar digitalmente com meu certificado A1</strong><br />
+              <span className="dado">A assinatura PAdES cobre o PDF inteiro e exibe o selo visual de assinatura em todas as páginas.</span>
+            </span>
+          </label>
+          {formato !== "pdf" ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Assinatura digital disponível para PDF. PowerPoint e Word continuam editáveis.
+            </p>
+          ) : certificadoA1 === null ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>Verificando seu certificado A1…</p>
+          ) : certificadoA1.conectado ? (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Certificado conectado{certificadoA1.titular_cn ? `: ${certificadoA1.titular_cn}` : ""}.
+            </p>
+          ) : (
+            <p className="dado" style={{ margin: "0.55rem 0 0 26px" }}>
+              Para usar esta opção, <Link to="/minha-conta">conecte seu certificado A1 em Minha Conta</Link>.
+            </p>
+          )}
+        </div>
         <label style={{ display: "flex", gap: 9, alignItems: "flex-start", marginTop: 12, fontWeight: 400 }}>
           <input type="checkbox" checked={incluirDados} onChange={(e) => setIncluirDados(e.target.checked)} />
           <span><strong>Incluir meus dados profissionais</strong><br /><span className="dado">Nome, conselho/RQE, especialidade e identificação profissional configurada na sua conta.</span></span>
         </label>
         <button className="botao botao--acao" type="button" onClick={baixar} disabled={!selecionados.length || gerando} style={{ marginTop: 14 }}>
-          {gerando ? "Gerando PDF…" : "Gerar e baixar PDF"}
+          {gerando ? "Gerando arquivo…" : `Gerar e baixar ${FORMATOS[formato].nome}${assinarDigitalmente ? " assinado" : ""}`}
         </button>
       </section>
 
@@ -266,16 +335,16 @@ export default function ExportarConteudo() {
           </div>
         ) : (
           <>
-            <p className="dado">O PDF será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
+            <p className="dado">O arquivo em {FORMATOS[formato].nome}{assinarDigitalmente ? " assinado digitalmente" : ""} será regenerado e enviado como anexo pela sua caixa <strong>{mail.email_address}</strong>, sem exigir download prévio. Se sua assinatura profissional de e-mail estiver ativa, ela será incluída normalmente.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, marginTop: 10, minWidth: 0 }}>
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Para</strong><input type="email" value={para} onChange={(e) => setPara(e.target.value)} placeholder="destinatario@exemplo.com" /></label>
               <label style={{ minWidth: 0 }}><strong>CC (opcional)</strong><input type="email" value={cc} onChange={(e) => setCc(e.target.value)} /></label>
               <label style={{ minWidth: 0 }}><strong>CCO (opcional)</strong><input type="email" value={cco} onChange={(e) => setCco(e.target.value)} /></label>
-              <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Assunto (opcional)</strong><input value={assunto} onChange={(e) => setAssunto(e.target.value.slice(0, 240))} placeholder="O CorVIA sugere o título do PDF" /></label>
+              <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Assunto (opcional)</strong><input value={assunto} onChange={(e) => setAssunto(e.target.value.slice(0, 240))} placeholder="O CorVIA sugere o título do arquivo" /></label>
               <label style={{ gridColumn: "1 / -1", minWidth: 0 }}><strong>Mensagem</strong><textarea rows={4} value={mensagem} onChange={(e) => setMensagem(e.target.value.slice(0, 5000))} /></label>
             </div>
             <button className="botao botao--acao" type="button" onClick={enviarEmail} disabled={!selecionados.length || !para.trim() || enviando} style={{ marginTop: 14 }}>
-              {enviando ? "Gerando e enviando…" : "Gerar PDF e enviar pelo CorVIA Mail"}
+              {enviando ? "Gerando e enviando…" : `Gerar ${FORMATOS[formato].nome} e enviar pelo CorVIA Mail`}
             </button>
             {envio?.enviado && (
               <div className="cartao" style={{ marginTop: 12, overflowWrap: "anywhere" }}>
@@ -288,7 +357,7 @@ export default function ExportarConteudo() {
       </section>
 
       <p className="dado" style={{ marginTop: "1rem" }}>
-        A exportação não cria conteúdo novo: o servidor lê novamente cada item publicado no momento do clique. Se algum item for retirado de publicação, o CorVIA interrompe o arquivo inteiro em vez de gerar um PDF parcial sem avisar.
+        A exportação não cria conteúdo novo: o servidor lê novamente cada item publicado no momento do clique. Se algum item for retirado de publicação, o CorVIA interrompe o arquivo inteiro em vez de gerar um arquivo parcial sem avisar.
       </p>
     </div>
   );

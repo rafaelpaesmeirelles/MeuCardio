@@ -1,22 +1,35 @@
-"""Exportação universal: conteúdo canônico → PDF → download ou CorVIA Mail.
+"""Exportação universal: conteúdo canônico → PDF/PPTX/DOCX ou CorVIA Mail.
 
 Os testes usam um documento clínico mínimo publicado e não dependem do corpus
 carregado no banco de teste. A rota é exercitada de ponta a ponta com a mesma
 dependência global de assinatura principal usada em produção.
 """
+import datetime
+from io import BytesIO
+
 import pytest
+from cryptography import x509
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.primitives.serialization import pkcs12
+from cryptography.x509.oid import NameOID
+from docx import Document as WordDocument
+from pptx import Presentation
 from sqlalchemy import text
 
+from app.core.config import settings
 from app.models.content import Document
 from app.models.email_account import EmailAccount
 from app.models.subscription import Subscription
+from app.services.assinatura import certificado_a1
 
 
 PREFIXO = "teste-exportacao-universal-"
 
 
 @pytest.fixture(autouse=True)
-def _limpar_documentos_teste(db):
+def _ambiente_exportacao(db, tmp_path, monkeypatch):
+    monkeypatch.setattr(settings, "certificados_dir", str(tmp_path / "certificados"))
     db.execute(text("DELETE FROM documents WHERE slug LIKE :prefixo"), {"prefixo": f"{PREFIXO}%"})
     db.commit()
     yield
@@ -42,6 +55,29 @@ def _ativar_corvia_mail(db, user, endereco: str):
         status="ativa",
     ))
     db.commit()
+
+
+def _gerar_pfx(*, senha: str = "senha123") -> bytes:
+    chave = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+    nome = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "DR EXPORTADOR:12345678900")])
+    agora = datetime.datetime.now(datetime.timezone.utc)
+    certificado = (
+        x509.CertificateBuilder()
+        .subject_name(nome)
+        .issuer_name(nome)
+        .public_key(chave.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(agora - datetime.timedelta(days=1))
+        .not_valid_after(agora + datetime.timedelta(days=365))
+        .sign(chave, hashes.SHA256())
+    )
+    return pkcs12.serialize_key_and_certificates(
+        name=b"exportacao-teste",
+        key=chave,
+        cert=certificado,
+        cas=None,
+        encryption_algorithm=serialization.BestAvailableEncryption(senha.encode()),
+    )
 
 
 def _documento(db, sufixo: str, *, publicado: bool = True) -> Document:
@@ -87,6 +123,146 @@ class TestCatalogoEPdf:
         assert resposta.headers["content-type"].startswith("application/pdf")
         assert resposta.content.startswith(b"%PDF")
         assert len(resposta.content) > 1000
+
+    @pytest.mark.parametrize(
+        ("formato", "content_type"),
+        [
+            ("pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"),
+            ("docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"),
+        ],
+    )
+    def test_exporta_formato_office_nativo_editavel(
+        self, client, db, criar_usuario, formato, content_type,
+    ):
+        user, token = criar_usuario(email=f"exportador-{formato}@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, formato)
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "incluir_dados_assinante": True,
+                "formato": formato,
+            },
+        )
+
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.headers["content-type"] == content_type
+        assert resposta.headers["content-disposition"].endswith(f'.{formato}"')
+        assert resposta.content[:2] == b"PK"
+
+        if formato == "pptx":
+            arquivo = Presentation(BytesIO(resposta.content))
+            texto = "\n".join(
+                shape.text_frame.text
+                for slide in arquivo.slides
+                for shape in slide.shapes
+                if shape.has_text_frame
+            )
+            assert len(arquivo.slides) >= 5
+        else:
+            arquivo = WordDocument(BytesIO(resposta.content))
+            texto = "\n".join(paragrafo.text for paragrafo in arquivo.paragraphs)
+            assert arquivo.sections
+
+        assert "Insuficiência cardíaca" in texto
+        assert "Texto clínico publicado" in texto
+        assert "Diretriz de teste 2026" in texto
+        assert "não cria nem atualiza recomendações clínicas" in texto
+
+    def test_formato_invalido_e_rejeitado(self, client, db, criar_usuario):
+        user, token = criar_usuario(email="exportador-invalido@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, "invalido")
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "formato": "txt",
+            },
+        )
+        assert resposta.status_code == 422
+
+    def test_pdf_assinado_cobre_arquivo_e_exibe_selo_em_todas_as_paginas(
+        self, client, db, criar_usuario,
+    ):
+        import fitz
+        from pyhanko.pdf_utils.reader import PdfFileReader
+        from pyhanko.sign.validation import validate_pdf_signature
+
+        user, token = criar_usuario(email="exportador-assinado@teste.local")
+        _assinatura_principal(db, user)
+        certificado_a1.salvar(db, user, _gerar_pfx(), "senha123", None)
+        db.commit()
+        documentos = [_documento(db, f"assinado-{indice}") for indice in range(1, 7)]
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug} for doc in documentos],
+                "incluir_dados_assinante": True,
+                "formato": "pdf",
+                "assinar_digitalmente": True,
+            },
+        )
+
+        assert resposta.status_code == 200, resposta.text
+        leitor = PdfFileReader(BytesIO(resposta.content))
+        assert len(leitor.embedded_signatures) == 1
+        status = validate_pdf_signature(leitor.embedded_signatures[0])
+        assert status.intact is True
+        assert status.valid is True
+
+        documento = fitz.open(stream=resposta.content, filetype="pdf")
+        assert len(documento) >= 2
+        assert documento[0].first_widget is not None
+        for pagina in documento[1:]:
+            assert any(nome.startswith("Stamp") for _xref, nome, *_resto in pagina.get_xobjects())
+            assert "ASSINATURA DIGITAL ICP-BRASIL" in pagina.get_text()
+
+    def test_assinatura_pdf_falha_fechada_sem_certificado(self, client, db, criar_usuario):
+        user, token = criar_usuario(email="exportador-sem-certificado@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, "sem-certificado")
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "formato": "pdf",
+                "assinar_digitalmente": True,
+            },
+        )
+
+        assert resposta.status_code == 409, resposta.text
+        assert "certificado A1" in resposta.text
+
+    @pytest.mark.parametrize("formato", ["pptx", "docx"])
+    def test_nao_simula_assinatura_em_formato_office(
+        self, client, db, criar_usuario, formato,
+    ):
+        user, token = criar_usuario(email=f"exportador-assinatura-{formato}@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, f"assinatura-{formato}")
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "formato": formato,
+                "assinar_digitalmente": True,
+            },
+        )
+
+        assert resposta.status_code == 422, resposta.text
+        assert "somente para PDF" in resposta.text
 
     def test_fail_closed_quando_item_nao_esta_publicado(self, client, db, criar_usuario):
         user, token = criar_usuario(email="exportador-retido@teste.local")

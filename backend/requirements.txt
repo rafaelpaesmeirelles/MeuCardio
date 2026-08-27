@@ -46,3 +46,6 @@ jinja2==3.1.6
 # PDF já existente — pedido do Rafael para o assinante poder modificar os
 # slides antes de projetar. Formato .pptx nativo (não é PDF disfarçado).
 python-pptx==1.0.2
+# Exportação universal em Word editável. O DOCX é OOXML nativo e preserva
+# títulos, listas, referências e proveniência para edição pelo assinante.
+python-docx==1.2.0
