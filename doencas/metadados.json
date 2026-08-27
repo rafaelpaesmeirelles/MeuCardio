@@ -1434,19 +1434,22 @@
         "id": "hypercyanotic_crisis_signs",
         "label": "Há piora súbita e importante da cianose, com taquipneia/hiperpneia, agitação e redução do sopro de estenose pulmonar, sugestiva de crise hipercianótica em curso?",
         "type": "boolean",
-        "section": "Crise aguda"
+        "section": "Crise aguda",
+        "required": true
       },
       {
         "id": "crisis_refractory",
         "label": "A crise hipercianótica persiste apesar de posição joelho-peito, oxigênio e correção de hipovolemia iniciais?",
         "type": "boolean",
-        "section": "Crise aguda"
+        "section": "Crise aguda",
+        "required": true
       },
       {
         "id": "pulse_lost",
         "label": "Houve perda de pulso durante a crise?",
         "type": "boolean",
-        "section": "Crise aguda"
+        "section": "Crise aguda",
+        "required": true
       },
       {
         "id": "syncope_adult",
@@ -1658,9 +1661,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/33853363/",
       "https://pubmed.ncbi.nlm.nih.gov/9652610/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos em formato resumido; os campos novos/expandidos exigem nova revisão clínica humana antes de qualquer republicação como revisado. Fatos-chave conferidos contra fonte primária nesta sessão via WebFetch: Bailliard & Anderson (Orphanet J Rare Dis 2009, PMID 19144126, texto integral) e Slouha et al. (Cureus 2023, PMID 38156158, texto integral); demais PMIDs reaproveitados de documentos já publicados e revisados nesta mesma base. Nenhuma dose de fármaco foi incluída ou alterada nos campos novos.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos em formato resumido; os campos novos/expandidos exigem nova revisão clínica humana antes de qualquer republicação como revisado. Fatos-chave conferidos contra fonte primária nesta sessão via WebFetch: Bailliard & Anderson (Orphanet J Rare Dis 2009, PMID 19144126, texto integral) e Slouha et al. (Cureus 2023, PMID 38156158, texto integral); demais PMIDs reaproveitados de documentos já publicados e revisados nesta mesma base. Nenhuma dose de fármaco foi incluída ou alterada nos campos novos. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "fonte_producao": "claude",
     "related_document_slugs": [
       "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
@@ -1903,6 +1906,31 @@
         }
       },
       {
+        "id": "falencia-vd-sistemico-sintomatica",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "systemic_rv_failure_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais de falência do ventrículo direito sistêmico (dispneia, fadiga ou edema)"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação do ventrículo direito sistêmico e da regurgitação tricúspide sistêmica",
+            "ECG e monitorização ambulatorial conforme sintomas"
+          ],
+          "messages": [
+            "Encaminhar prontamente a centro de cardiopatia congênita do adulto para avaliação de insuficiência cardíaca, arritmia e anatomia do reparo, independentemente de o tipo de reparo ter sido informado no formulário."
+          ]
+        }
+      },
+      {
         "id": "switch-atrial-historico-ou-cctga-vigilancia-vd-sistemico",
         "priority": 60,
         "when": {
@@ -1975,9 +2003,9 @@
       "https://doi.org/10.1093/eurheartj/ehad511",
       "https://pubmed.ncbi.nlm.nih.gov/38006998/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, lote 4 de condições especializadas. A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado. A diretriz ACC/AHA 2018/2019 de cardiopatia congênita do adulto (Stout et al., PMID 30586767) foi citada mas seu texto integral ficou bloqueado nesta sessão (HTTP 403 em ahajournals.org e acc.org, sem PMCID no Europe PMC); as afirmações sobre ccTGA/VD sistêmico dependem do documento irmão desta base já verificado em sessão anterior — VERIFICAÇÃO HUMANA NECESSÁRIA para conferir texto/classe de recomendação exatos da diretriz Stout 2019 especificamente sobre TGA/switch atrial e arterial.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026, lote 4 de condições especializadas. A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado. A diretriz ACC/AHA 2018/2019 de cardiopatia congênita do adulto (Stout et al., PMID 30586767) foi citada mas seu texto integral ficou bloqueado nesta sessão (HTTP 403 em ahajournals.org e acc.org, sem PMCID no Europe PMC); as afirmações sobre ccTGA/VD sistêmico dependem do documento irmão desta base já verificado em sessão anterior — VERIFICAÇÃO HUMANA NECESSÁRIA para conferir texto/classe de recomendação exatos da diretriz Stout 2019 especificamente sobre TGA/switch atrial e arterial. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "fonte_producao": "claude",
     "related_document_slugs": [
       "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
@@ -2914,10 +2942,10 @@
       "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
       "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, sem tocar o verbete geral 'insuficiencia-cardiaca' (área geral, produzido por outro agente) nem repetir seu conteúdo de fisiopatologia/classificação por fração de ejeção — foco exclusivo no que muda no idoso: sequenciamento e ritmo dos quatro pilares em fragilidade, ajuste renal, hipotensão/queda, cognição, polifarmácia e suporte social/cuidador. Nenhum novo dado numérico de dose específica foi incluído. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls, related_document_slugs (novo). patient_material_slug não incluído: nenhum material do paciente específico de IC no idoso foi localizado no acervo. Exige revisão clínica humana antes de qualquer republicação como revisado.",
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026, sem tocar o verbete geral 'insuficiencia-cardiaca' (área geral, produzido por outro agente) nem repetir seu conteúdo de fisiopatologia/classificação por fração de ejeção — foco exclusivo no que muda no idoso: sequenciamento e ritmo dos quatro pilares em fragilidade, ajuste renal, hipotensão/queda, cognição, polifarmácia e suporte social/cuidador. Nenhum novo dado numérico de dose específica foi incluído. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls, related_document_slugs (novo). patient_material_slug não incluído: nenhum material do paciente específico de IC no idoso foi localizado no acervo. Exige revisão clínica humana antes de qualquer republicação como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
     "fonte_producao": "claude",
-    "version": 2
+    "version": 3
   },
   {
     "slug": "fibrilacao-atrial-no-idoso",
@@ -3277,9 +3305,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/36335915/",
       "https://pubmed.ncbi.nlm.nih.gov/34469766/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas), empilhada sobre o registro anterior (completeness intermediário, sem related_document_slugs nem patient_material_slug). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado. Escopo mantido estritamente ao que muda no manejo da FA por causa da idade — o verbete adulto geral fibrilacao-atrial (área geral) não foi tocado. HAS-BLED tratado, conforme ESC 2024, como ferramenta para identificar fatores de sangramento modificáveis, não como critério para negar anticoagulação.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas), empilhada sobre o registro anterior (completeness intermediário, sem related_document_slugs nem patient_material_slug). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado. Escopo mantido estritamente ao que muda no manejo da FA por causa da idade — o verbete adulto geral fibrilacao-atrial (área geral) não foi tocado. HAS-BLED tratado, conforme ESC 2024, como ferramenta para identificar fatores de sangramento modificáveis, não como critério para negar anticoagulação. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "fonte_producao": "claude",
     "related_document_slugs": [
       "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
@@ -3662,6 +3690,12 @@
         ]
       },
       {
+        "id": "lvef_decline_ge10_to_40_49",
+        "label": "A FEVE caiu pelo menos 10 pontos percentuais em relação ao basal e encontra-se entre 40% e 49%?",
+        "type": "boolean",
+        "section": "Exames"
+      },
+      {
         "id": "gls_drop_significant",
         "label": "Houve queda relativa do strain longitudinal global (GLS) maior que 15% em relação ao basal?",
         "type": "boolean",
@@ -3699,6 +3733,11 @@
         "when": {
           "all": [
             {
+              "field": "phase",
+              "op": "eq",
+              "value": "during"
+            },
+            {
               "field": "hf_symptoms",
               "op": "truthy"
             },
@@ -3712,10 +3751,44 @@
         "add": {
           "risk": "emergencia",
           "red_flags": [
-            "Insuficiência cardíaca sintomática com FEVE abaixo de 40% em paciente recebendo ou tendo recebido antraciclina"
+            "Insuficiência cardíaca sintomática com FEVE abaixo de 40% durante tratamento ativo com antraciclina"
           ],
           "emergency_flow": [
             "Suspender a antraciclina e iniciar terapia de insuficiência cardíaca imediatamente; comunicar oncologia e cardio-oncologia para decisão conjunta de reintrodução"
+          ]
+        }
+      },
+      {
+        "id": "ic-sintomatica-fora-de-tratamento-ativo",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "phase",
+              "op": "in",
+              "value": [
+                "baseline",
+                "survivor"
+              ]
+            },
+            {
+              "field": "hf_symptoms",
+              "op": "truthy"
+            },
+            {
+              "field": "lvef_band",
+              "op": "eq",
+              "value": "lt40"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Insuficiência cardíaca sintomática com FEVE abaixo de 40% antes do primeiro ciclo ou após o término da antraciclina"
+          ],
+          "emergency_flow": [
+            "Avaliar e tratar insuficiência cardíaca de forma imediata, esclarecer etiologia e comunicar cardio-oncologia; não emitir instrução de suspender ou reintroduzir antraciclina quando não há tratamento ativo."
           ]
         }
       },
@@ -3773,6 +3846,69 @@
           "risk": "prioritario",
           "messages": [
             "Padrão compatível com CTRCD leve assintomática (FEVE preservada com queda relevante de GLS) — considerar continuar a antraciclina com IECA/BRA e/ou betabloqueador associados e monitorização a cada 1-2 ciclos"
+          ]
+        }
+      },
+      {
+        "id": "ctrcd-moderada-assintomatica-durante-tratamento",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "phase",
+              "op": "eq",
+              "value": "during"
+            },
+            {
+              "field": "hf_symptoms",
+              "op": "falsy"
+            },
+            {
+              "field": "lvef_band",
+              "op": "eq",
+              "value": "40_49"
+            },
+            {
+              "field": "lvef_decline_ge10_to_40_49",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Queda da FEVE de pelo menos 10 pontos para 40–49% durante antraciclina, compatível com CTRCD moderada assintomática"
+          ],
+          "messages": [
+            "Interromper temporariamente a antraciclina, iniciar/otimizar terapia de insuficiência cardíaca e discutir reintrodução em equipe multidisciplinar com monitorização próxima."
+          ]
+        }
+      },
+      {
+        "id": "feve-40-49-durante-tratamento-esclarecer-queda",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "phase",
+              "op": "eq",
+              "value": "during"
+            },
+            {
+              "field": "hf_symptoms",
+              "op": "falsy"
+            },
+            {
+              "field": "lvef_band",
+              "op": "eq",
+              "value": "40_49"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "FEVE entre 40% e 49% durante antraciclina nunca deve ser classificada como ausência de alarme: comparar com a FEVE basal, confirmar a magnitude da queda e encaminhar à cardio-oncologia para classificar CTRCD e decidir continuidade."
           ]
         }
       },
@@ -3838,6 +3974,11 @@
             {
               "field": "gls_drop_significant",
               "op": "falsy"
+            },
+            {
+              "field": "lvef_band",
+              "op": "eq",
+              "value": "ge50"
             }
           ]
         },
@@ -3886,9 +4027,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/40104841/",
       "https://pubmed.ncbi.nlm.nih.gov/20850381/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4), a partir do acervo Cardio-oncologia e conferida contra fonte primária. Cronogramas e limiares numéricos devem ser configurados segundo protocolo institucional licenciado e risco individual; pendente revisão médica humana antes de qualquer republicação como revisado.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4), a partir do acervo Cardio-oncologia e conferida contra fonte primária. Cronogramas e limiares numéricos devem ser configurados segundo protocolo institucional licenciado e risco individual; pendente revisão médica humana antes de qualquer republicação como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "related_document_slugs": [
       "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
       "cardioprotecao-primaria-e-vigilancia-por-strain-prada-overcome-e-succour",
@@ -4214,9 +4355,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/41532506/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC11860070/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, a partir dos ~26 documentos de Cardio-oncologia sobre miocardite por inibidor de checkpoint já existentes no acervo e verificação externa de incidência/mortalidade/doses via PMC (PMC11860070). A revisão anterior (completeness intermediário) cobria apenas os campos básicos. Pendente revisão médica humana antes de republicar como revisado.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026, a partir dos ~26 documentos de Cardio-oncologia sobre miocardite por inibidor de checkpoint já existentes no acervo e verificação externa de incidência/mortalidade/doses via PMC (PMC11860070). A revisão anterior (completeness intermediário) cobria apenas os campos básicos. Pendente revisão médica humana antes de republicar como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "patient_material_slug": "miocardite-por-imunoterapia-sinais-de-alerta",
     "related_document_slugs": [
       "miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
@@ -4600,7 +4741,8 @@
       "Dall'Asta A, D'Antonio F, Saccone G, et al. Cardiovascular events following pregnancy complicated by pre-eclampsia with emphasis on comparison between early- and late-onset forms. Ultrasound Obstet Gynecol. 2021;57(5):698-709. PMID: 32484256.",
       "Koopmans CM, Bijlenga D, Groen H, et al.; HYPITAT study group. Induction of labour versus expectant monitoring for gestational hypertension or mild pre-eclampsia after 36 weeks' gestation (HYPITAT). Lancet. 2009;374(9694):979-988. PMID: 19656558.",
       "National Institute for Health and Care Excellence. Hypertension in pregnancy: diagnosis and management. NICE guideline NG133. 2019 (atualizada 2023).",
-      "Altman D, Carroli G, Duley L, et al.; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial. Lancet. 2002;359(9321):1877-1890. PMID: 12057549."
+      "Altman D, Carroli G, Duley L, et al.; Magpie Trial Collaboration Group. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial. Lancet. 2002;359(9321):1877-1890. PMID: 12057549.",
+      "American College of Obstetricians and Gynecologists. Gestational Hypertension and Preeclampsia: ACOG Practice Bulletin No. 222. Obstet Gynecol. 2020;135(6):e237-e260."
     ],
     "source_urls": [
       "https://academic.oup.com/eurheartj/article/46/43/4462/8234487",
@@ -4616,9 +4758,9 @@
       "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
       "https://pubmed.ncbi.nlm.nih.gov/12057549/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições profundas (lote 4). A ficha anterior cobria apenas os campos básicos (completeness intermediário); os campos novos exigem revisão clínica humana antes de qualquer republicação como revisado. Não foi localizado material de paciente dedicado a este slug — o único existente (pre-eclampsia-o-que-isso-significa-para-seu-coracao-depois-do-parto) já está associado à doença hipertensao-gestacional; patient_material_slug deixado de fora para não duplicar essa associação.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições profundas (lote 4). A ficha anterior cobria apenas os campos básicos (completeness intermediário); os campos novos exigem revisão clínica humana antes de qualquer republicação como revisado. Não foi localizado material de paciente dedicado a este slug — o único existente (pre-eclampsia-o-que-isso-significa-para-seu-coracao-depois-do-parto) já está associado à doença hipertensao-gestacional; patient_material_slug deixado de fora para não duplicar essa associação. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "fonte_producao": "claude",
     "epidemiology": "Pré-eclâmpsia complica cerca de 3% das gestações no mundo, dentro de um universo mais amplo de aproximadamente 7% de gestações com algum distúrbio hipertensivo (ESC 2025, Seção 12.3). É a segunda causa mais comum de complicação médica grave na gestação, atrás apenas da hemorragia pós-parto, e permanece entre as principais causas de morte materna no mundo. A distribuição por fenótipo não é uniforme: a forma tardia (início a partir de 34 semanas) responde por cerca de 80% dos casos e se associa a fatores maternos constitucionais (obesidade, síndrome metabólica) sobre placenta relativamente preservada; a forma precoce (início antes de 34 semanas), minoritária, decorre de má placentação e carrega maior morbimortalidade materna e fetal, incluindo maior frequência de restrição de crescimento fetal (Redman, Staff, Roberts, Am J Obstet Gynecol. 2022;226(2S):S907-S927, PMID 33546842). O impacto não termina no parto: metanálise de 22 estudos com mais de 6,4 milhões de mulheres mostrou risco relativo de insuficiência cardíaca de 4,19, de doença coronariana de 2,50, de morte cardiovascular de 2,21 e de AVC de 1,81 em quem teve pré-eclâmpsia (Wu et al., Circ Cardiovasc Qual Outcomes. 2017;10(2):e003497, PMID 28228456), achado confirmado de forma independente por metanálise de 25 estudos com quase 3,5 milhões de mulheres, com magnitude semelhante (Bellamy et al., BMJ. 2007;335(7627):974, PMID 17975258) — a convergência entre as duas, com uma década de distância entre elas, é o que sustenta a solidez do achado, não um estudo isolado.",
     "presentation": [
@@ -4630,7 +4772,7 @@
       "Na forma precoce (<34 semanas), maior resistência vascular materna, débito cardíaco reduzido e notching bilateral de artéria uterina mais frequente; na forma tardia (≥34 semanas, ~80% dos casos), perfil hemodinâmico oposto, mais ligado a obesidade e síndrome metabólica (Valensise et al., PMID 18824660)",
       "Pode não haver sintoma algum até a aferição de rotina da pressão arterial em consulta pré-natal"
     ],
-    "diagnostic_approach": "A ESC 2025 (Tabela 14, Seção 12.3.1.1) define pré-eclâmpsia como hipertensão gestacional (início a partir de 20 semanas) complicada por início recente de pelo menos um dos seguintes: proteinúria (0,3 g ou mais em urina de 24h, relação proteína/creatinina ≥30 mg/mmol ou relação albumina/creatinina ≥8 mg/mmol); lesão renal aguda (creatinina ≥90 µmol/L / 1 mg/dL); disfunção hepática (ALT/AST >40 UI/L, com ou sem dor epigástrica ou em hipocôndrio direito); complicação neurológica (eclâmpsia, alteração do estado mental, cegueira, AVC, clônus, cefaleia intensa, escotomas persistentes); complicação hematológica (plaquetas <150.000/µL, CIVD, hemólise); ou disfunção uteroplacentária (restrição de crescimento fetal, Doppler de artéria umbilical anormal, óbito fetal). Ou seja, a proteinúria deixou de ser exigência obrigatória: qualquer uma dessas disfunções fecha o diagnóstico mesmo na ausência dela. A síndrome HELLP (hemólise, plaquetopenia, transaminases elevadas) é considerada uma variante da própria pré-eclâmpsia, não uma entidade à parte (ESC 2025). Quando a suspeita clínica persiste apesar de exames de rotina inconclusivos, a razão sFlt-1/PlGF orienta a decisão: valor ≥85, ou PlGF isolado <12 pg/mL, é compatível com o diagnóstico; valor <38 exclui pré-eclâmpsia nos 7 dias seguintes, com valor preditivo negativo de 99,3% no estudo PROGNOSIS (Zeisler et al., N Engl J Med. 2016;374(1):13-22, PMID 26735990). O ensaio PARROT mostrou que revelar o resultado do PlGF ao clínico assistente reduz o tempo mediano até a confirmação diagnóstica de 4,1 para 1,9 dia (Duhig et al., Lancet. 2019;393(10183):1807-1818, PMID 30948284).",
+    "diagnostic_approach": "A ESC 2025 (Tabela 14, Seção 12.3.1.1) define pré-eclâmpsia como hipertensão gestacional (início a partir de 20 semanas) complicada por início recente de pelo menos um dos seguintes: proteinúria (0,3 g ou mais em urina de 24h, relação proteína/creatinina ≥30 mg/mmol ou relação albumina/creatinina ≥8 mg/mmol); lesão renal aguda (creatinina ≥90 µmol/L / 1 mg/dL); disfunção hepática (ALT/AST >40 UI/L, com ou sem dor epigástrica ou em hipocôndrio direito); complicação neurológica (eclâmpsia, alteração do estado mental, cegueira, AVC, clônus, cefaleia intensa, escotomas persistentes); complicação hematológica (plaquetas <150.000/µL, CIVD, hemólise); ou disfunção uteroplacentária (restrição de crescimento fetal, Doppler de artéria umbilical anormal, óbito fetal). Ou seja, a proteinúria deixou de ser exigência obrigatória: qualquer uma dessas disfunções fecha o diagnóstico mesmo na ausência dela. A síndrome HELLP (hemólise, plaquetopenia, transaminases elevadas) é considerada uma variante da própria pré-eclâmpsia, não uma entidade à parte (ESC 2025). Quando a suspeita clínica persiste apesar de exames de rotina inconclusivos, a razão sFlt-1/PlGF pode ser usada como teste adjuvante, sempre condicionada à idade gestacional, ao ensaio empregado e aos critérios clínicos. No estudo PROGNOSIS, razão ≤38 teve valor preditivo negativo de 99,3% para excluir pré-eclâmpsia na semana seguinte; resultado elevado tem valor preditivo positivo limitado e não confirma o diagnóstico isoladamente, nem existe corte universal de rule-in aplicável a todas as idades gestacionais e plataformas (Zeisler et al., N Engl J Med. 2016;374(1):13-22, PMID 26735990). O ensaio PARROT mostrou que revelar o resultado do PlGF ao clínico assistente reduz o tempo mediano até a confirmação diagnóstica de 4,1 para 1,9 dia (Duhig et al., Lancet. 2019;393(10183):1807-1818, PMID 30948284).",
     "differentials": [
       "Hipertensão crônica (isolada ou com pré-eclâmpsia sobreposta) — precede a gestação ou é diagnosticada antes de 20 semanas",
       "Síndrome HELLP como espectro/complicação da própria pré-eclâmpsia, não entidade separada",
@@ -4670,11 +4812,11 @@
       "Reconhecer pré-eclâmpsia com características graves (PAS ≥160 ou PAD ≥110 mmHg, ou qualquer hipertensão com complicação neurológica, hematológica, hepática, renal ou cardiovascular) como indicação de internação imediata",
       "Diante de convulsão (eclâmpsia) ou sinais de iminência (cefaleia intensa refratária, distúrbio visual, hiperreflexia/clônus), iniciar sulfato de magnésio para prevenção ou tratamento da convulsão, sem aguardar confirmação laboratorial completa — princípio terapêutico; dose e regime seguem protocolo obstétrico institucional",
       "Tratar a hipertensão grave imediatamente com anti-hipertensivo IV/oral conforme protocolo (labetalol, nifedipino ou hidralazina)",
-      "Antecipar o parto quando há características graves, independentemente do controle pressórico isolado, após estabilização materna",
+      "Definir o momento do parto após estabilização: em geral, indicar a partir de 34 semanas nas formas com características graves; antes de 34 semanas, admitir manejo expectante apenas em paciente materna e fetalmente estável, em centro terciário e sem contraindicação, interrompendo imediatamente diante de deterioração materna ou fetal",
       "Investigar e tratar complicações associadas — edema pulmonar, síndrome HELLP, CIVD, lesão renal aguda",
       "Manter monitorização materna e fetal contínua até estabilização e definição do momento/via do parto"
     ],
-    "treatment_summary": "O tratamento da pré-eclâmpsia se organiza em três eixos, sem substituir a decisão obstétrica especializada. Primeiro, o controle pressórico: hipertensão não grave (140/90 a 159/109 mmHg) é tratada com anti-hipertensivo oral considerado seguro na gestação (labetalol, nifedipino de liberação prolongada ou metildopa), com alvo abaixo de 140/90 mmHg sem levar a diastólica abaixo de 80 mmHg; hipertensão grave (PAS ≥160 ou PAD ≥110 mmHg) exige tratamento imediato em ambiente hospitalar. Segundo, a prevenção e o tratamento da eclâmpsia: pré-eclâmpsia com características graves — hipertensão grave com ou sem proteinúria, ou qualquer grau de hipertensão com complicação neurológica, hematológica, cardiovascular, hepática ou renal — é manejada com infusão de sulfato de magnésio, cujo objetivo é prevenir a primeira convulsão ou tratar a convulsão já instalada na eclâmpsia estabelecida; este documento registra o princípio terapêutico, não a dose, que segue protocolo obstétrico institucional (Magpie Trial, PMID 12057549; NICE NG133). Terceiro, e o único tratamento que resolve a doença de base: a antecipação do parto. Na pré-eclâmpsia sem características graves, o parto é recomendado por volta de 37 semanas; com características graves, a antecipação é indicada independentemente da idade gestacional, após estabilização materna. O ensaio HYPITAT mostrou que induzir o parto a termo ou próximo do termo (36-41 semanas) na hipertensão gestacional ou pré-eclâmpsia leve reduz em cerca de um terço o risco de progressão para forma grave (RR 0,71, IC95% 0,59-0,86) em comparação com conduta expectante (PMID 19656558). A profilaxia com aspirina em baixa dose, iniciada precocemente (da 12ª à 36ª/37ª semana) em gestantes de risco alto ou moderado, reduz a incidência de pré-eclâmpsia — este documento registra apenas o princípio preventivo; a dose específica está descrita em documento próprio de aspirina no acervo. Nenhuma medida farmacológica isolada cura a pré-eclâmpsia: o parto é o tratamento definitivo, e toda a farmacoterapia visa ganhar tempo com segurança materna e fetal até que ele seja possível ou necessário.",
+    "treatment_summary": "O tratamento da pré-eclâmpsia se organiza em três eixos, sem substituir a decisão obstétrica especializada. Primeiro, o controle pressórico: hipertensão não grave (140/90 a 159/109 mmHg) é tratada com anti-hipertensivo oral considerado seguro na gestação (labetalol, nifedipino de liberação prolongada ou metildopa), com alvo abaixo de 140/90 mmHg sem levar a diastólica abaixo de 80 mmHg; hipertensão grave (PAS ≥160 ou PAD ≥110 mmHg) exige tratamento imediato em ambiente hospitalar. Segundo, a prevenção e o tratamento da eclâmpsia: pré-eclâmpsia com características graves — hipertensão grave com ou sem proteinúria, ou qualquer grau de hipertensão com complicação neurológica, hematológica, cardiovascular, hepática ou renal — é manejada com infusão de sulfato de magnésio, cujo objetivo é prevenir a primeira convulsão ou tratar a convulsão já instalada na eclâmpsia estabelecida; este documento registra o princípio terapêutico, não a dose, que segue protocolo obstétrico institucional (Magpie Trial, PMID 12057549; NICE NG133). Terceiro, e o único tratamento que resolve a doença de base: a antecipação do parto. Na pré-eclâmpsia sem características graves, o parto é recomendado por volta de 37 semanas. Com características graves a partir de 34 semanas, recomenda-se parto após estabilização materna; antes de 34 semanas, pacientes materna e fetalmente estáveis podem, em casos cuidadosamente selecionados, seguir manejo expectante em centro terciário com vigilância intensiva. Deterioração materna ou fetal, eclâmpsia, edema pulmonar, hipertensão grave não controlada, HELLP progressiva ou sofrimento fetal impõem interrupção após estabilização, sem prolongamento apenas para completar corticoide. O ensaio HYPITAT mostrou que induzir o parto a termo ou próximo do termo (36-41 semanas) na hipertensão gestacional ou pré-eclâmpsia leve reduz em cerca de um terço o risco de progressão para forma grave (RR 0,71, IC95% 0,59-0,86) em comparação com conduta expectante (PMID 19656558). A profilaxia com aspirina em baixa dose, iniciada precocemente (da 12ª à 36ª/37ª semana) em gestantes de risco alto ou moderado, reduz a incidência de pré-eclâmpsia — este documento registra apenas o princípio preventivo; a dose específica está descrita em documento próprio de aspirina no acervo. Nenhuma medida farmacológica isolada cura a pré-eclâmpsia: o parto é o tratamento definitivo, e toda a farmacoterapia visa ganhar tempo com segurança materna e fetal até que ele seja possível ou necessário.",
     "monitoring": [
       "PA seriada — a cada 48 horas ou mais frequente se internada; ambulatorial 1 a 2 vezes por semana se sem características graves",
       "Proteinúria e exames laboratoriais (hemograma, plaquetas, função hepática e renal) periódicos, mais frequentes na forma grave",
@@ -4704,6 +4846,13 @@
         "type": "boolean",
         "required": true,
         "section": "Iminência de eclâmpsia"
+      },
+      {
+        "id": "new_hypertension_after_20w",
+        "label": "Há hipertensão de início após 20 semanas (PA ≥140/90 mmHg confirmada conforme protocolo obstétrico)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Critério diagnóstico"
       },
       {
         "id": "lab_abnormal",
@@ -4777,6 +4926,10 @@
         "when": {
           "all": [
             {
+              "field": "new_hypertension_after_20w",
+              "op": "truthy"
+            },
+            {
               "field": "fetal_compromise",
               "op": "truthy"
             }
@@ -4785,7 +4938,7 @@
         "add": {
           "risk": "prioritario",
           "messages": [
-            "Disfunção uteroplacentária (restrição de crescimento, Doppler alterado ou óbito fetal) é, isoladamente, critério diagnóstico de pré-eclâmpsia mesmo sem proteinúria — encaminhar para avaliação obstétrica de alto risco"
+            "Hipertensão de início após 20 semanas associada a disfunção uteroplacentária pode preencher critério de pré-eclâmpsia mesmo sem proteinúria; confirmar o conjunto clínico e encaminhar à obstetrícia de alto risco."
           ]
         }
       },
@@ -4861,9 +5014,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/11372007/",
       "https://pubmed.ncbi.nlm.nih.gov/24814494/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas), com pesquisa cruzada no acervo (26 documentos em content/Gravidez/ e content/Cardiomiopatias/ sobre PPCM) e verificação em fonte primária. O corte temporal 'até 5 meses pós-parto' segue a definição clássica consolidada pelo grupo de trabalho ESC/HFA e é apresentado de forma hedged (não confirmado palavra por palavra na diretriz de 2025 nesta sessão). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada por Claude em 27/08/2026 (lote 4 de condições especializadas), com pesquisa cruzada no acervo (26 documentos em content/Gravidez/ e content/Cardiomiopatias/ sobre PPCM) e verificação em fonte primária. O corte temporal 'até 5 meses pós-parto' segue a definição clássica consolidada pelo grupo de trabalho ESC/HFA e é apresentado de forma hedged (não confirmado palavra por palavra na diretriz de 2025 nesta sessão). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos exigem nova revisão clínica humana antes de qualquer republicação como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026; bloqueios factuais e regras determinísticas corrigidos antes da publicação.",
+    "version": 3,
     "fonte_producao": "claude",
     "epidemiology": "A cardiomiopatia periparto (PPCM) é incomum em termos populacionais absolutos, mas é a causa mais frequente de cardiomiopatia identificada em internações por parto nos Estados Unidos, respondendo por 45,6% de todos os diagnósticos de cardiomiopatia associados a esse cenário — à frente da cardiomiopatia dilatada isolada e da hipertrófica — segundo coorte de internações de 2005 a 2020 (Satti DI et al., Curr Probl Cardiol 2024, PMID 39299364). Nessa mesma coorte, a PPCM teve os piores desfechos entre os subtipos de cardiomiopatia identificados na internação de parto: mortalidade intra-hospitalar de 1,7%, insuficiência cardíaca aguda em 17%, choque cardiogênico em 3,4%, parada cardíaca em 3,1%, pré-eclâmpsia associada em 14,2% e trabalho de parto prematuro em 11%. A 2025 ESC Guidelines identifica como fatores de risco pré-eclâmpsia, gestação múltipla, idade materna avançada e ascendência africana (De Backer J et al., Eur Heart J 2025, PMID 40878294). A contribuição genética é relevante — até 20% dos casos segundo o position statement da Heart Failure Association da ESC (Bauersachs J et al., Eur J Heart Fail 2019, PMID 31243866), com variantes truncantes raras identificadas em 15% de 172 mulheres com PPCM numa coorte dedicada, majoritariamente no gene TTN (10% das pacientes vs. 1,4% da população de referência) (Ware JS et al., N Engl J Med 2016, PMID 26735901). Numa coorte americana de referência com 100 pacientes, a FEVE média ao diagnóstico foi de 28±9%, e 42% apresentaram melhora da função ventricular ao longo de um seguimento médio de 33±21 meses (Pillarisetti J et al., J Am Coll Cardiol 2014, PMID 24814494).",
     "presentation": [
