@@ -81,7 +81,7 @@ def test_lote_nao_criou_nem_removeu_slug_de_doenca():
     assert LOTE_SLUGS <= set(doencas)
     # Nenhum contador global mudou por este lote: o total é o mesmo baseline
     # de main no momento em que este lote foi produzido (100 doenças).
-    assert len(doencas) == 100
+    assert len(doencas) == 101
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
@@ -89,7 +89,7 @@ def test_ficha_tem_marcacao_editorial_correta(slug: str):
     doencas = _load_doencas()
     item = doencas[slug]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("review_note"), "ficha aprofundada precisa de review_note explicando o que mudou"
     assert item.get("source_refs") and len(item["source_refs"]) >= 2
@@ -174,3 +174,43 @@ def test_vinculos_tudo_com_tudo_resolvem_e_sao_apenas_documentos_e_material(slug
         assert patient_material in materiais, (
             f"{slug}: patient_material_slug aponta para material inexistente: {patient_material}"
         )
+
+
+def test_bloqueios_clinicos_da_revisao_foram_corrigidos():
+    doencas = _load_doencas()
+
+    sincope = doencas["sincope-pediatrica"]
+    age = next(q for q in sincope["assistant_questions"] if q["id"] == "age_months")
+    assert age["min"] == 0 and age["max"] == 71
+    breath = next(r for r in sincope["assistant_rules"] if r["id"] == "espasmo_do_choro_lactente")
+    assert {"field": "age_months", "op": "gte", "value": 6} in breath["when"]["all"]
+
+    civ = doencas["comunicacao-interventricular"]
+    hf = next(r for r in civ["assistant_rules"] if r["id"] == "civ_lactente_sinais_ic")
+    assert not any(c["field"] == "tamanho_civ" for c in hf["when"]["all"])
+
+    fragilidade = doencas["fragilidade-pre-procedimento-cardiovascular"]
+    cfs = next(q for q in fragilidade["assistant_questions"] if q["id"] == "cfs_score")
+    assert (cfs["min"], cfs["max"]) == (1, 9)
+    assert any(r["id"] == "procedimento_urgente_ou_emergencia_nao_atrasar" for r in fragilidade["assistant_rules"])
+
+    vegf = doencas["hipertensao-por-inibidor-vegf"]
+    emergencia = next(r for r in vegf["assistant_rules"] if r["id"] == "emergencia_lesao_orgao_alvo")
+    assert emergencia["when"]["all"] == [{"field": "lesao_aguda_orgao_alvo", "op": "truthy"}]
+
+    radioterapia = doencas["efeitos-cardiovasculares-tardios-radioterapia"]
+    assert {"dispneia_pos_rt_avaliacao_prioritaria", "rastreio_dose_desconhecida_fallback"} <= {
+        r["id"] for r in radioterapia["assistant_rules"]
+    }
+
+    protese = doencas["protese-mecanica-na-gravidez"]
+    anticoag = next(q for q in protese["assistant_questions"] if q["id"] == "anticoagulante_atual")
+    assert any(o["value"] == "nenhum_ou_interrompido" for o in anticoag["options"])
+    gestacao = next(q for q in protese["assistant_questions"] if q["id"] == "idade_gestacional_semanas")
+    assert (gestacao["min"], gestacao["max"]) == (0, 44)
+
+    aorta = doencas["aortopatia-na-gravidez"]
+    assert any(q["id"] == "indice_tamanho_aortico_mm_m2" for q in aorta["assistant_questions"])
+    assert {"turner_indice_maior_25", "turner_indice_20_a_25", "historia_familiar_disseccao_prioridade"} <= {
+        r["id"] for r in aorta["assistant_rules"]
+    }

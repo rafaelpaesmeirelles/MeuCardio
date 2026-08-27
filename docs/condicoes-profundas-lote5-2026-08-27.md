@@ -65,3 +65,8 @@ Farmacologia/Calculadoras/Exames.
 Branch `claude/condicoes-profundas-lote5-20260827`, base `main` (lotes
 anteriores já mesclados, portanto sem empilhamento). Sem merge, deploy ou
 publicação automática.
+
+
+## Revisão clínica dirigida pelo Codex
+
+Em 27/08/2026, os oito registros foram revisados e marcados como revisados após correção dos bloqueios de segurança: faixa etária do espasmo do choro, escalonamento da CIV sintomática, limites da CFS, procedimentos urgentes, lesão aguda de órgão-alvo sob anti-VEGF, dispneia e dose radioterápica desconhecida, anticoagulação da prótese mecânica e estratificação indexada da aorta na síndrome de Turner.

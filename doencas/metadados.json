@@ -1112,6 +1112,14 @@
         ]
       },
       {
+        "id": "age_months",
+        "label": "Idade exata em meses (necessária quando lactente/pré-escolar)",
+        "type": "number",
+        "min": 0,
+        "max": 71,
+        "section": "Perfil"
+      },
+      {
         "id": "during_exercise_or_swimming",
         "label": "O episódio ocorreu durante exercício físico ou natação (não apenas depois)?",
         "type": "boolean",
@@ -1364,6 +1372,16 @@
             {
               "field": "abnormal_ecg",
               "op": "falsy"
+            },
+            {
+              "field": "age_months",
+              "op": "gte",
+              "value": 6
+            },
+            {
+              "field": "age_months",
+              "op": "lt",
+              "value": 72
             }
           ]
         },
@@ -1427,9 +1445,9 @@
       "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
     ],
     "patient_material_slug": "sincope-pediatrica",
-    "review_status": "pendente_revisao",
-    "review_note": "Versão 2, produzida por Claude em 27/08/2026, com foco pediátrico-específico para não duplicar o hub geral de síncope do adulto (verbete 'sincope', ainda em PR aberto, não referenciado aqui por não existir como arquivo confirmado em content/). Ampliação sobre a v1: adicionada seção de espasmo do choro (breath-holding spell) como diferencial de lactente/pré-escolar, com prevalência e tipos verificados em Leung AKC et al. 2019 (PMID 30421679) e a distinção com evento LQTS-desencadeado em Robinson JA et al. 2015 (PMID 25916402, 4,3% dos pacientes com QT longo tinham espasmo do choro, todos no genótipo LQT1); dados de epidemiologia populacional de Driscoll DJ et al. 1997 (PMID 9120157) e de causas cardíacas de Massin MM et al. 2007 (PMID 17326062); genótipo-gatilho específico (LQT1-exercício/natação, LQT2-estímulo auditivo, LQT3-sono) de Schwartz PJ et al. 2001 (PMID 11136691) e Wilde AA et al. 1999 (PMID 9973011), já verificados e citados em documento irmão desta mesma plataforma (síndrome do QT longo pediátrica); conteúdo de CPVT, cardiomiopatia arritmogênica pediátrica e Brugada febril integrado a partir dos documentos já publicados e revisados desta base (não duplicados, apenas sintetizados no nível apropriado para uma ficha de sintoma). Todas as afirmações numéricas foram conferidas em PMID/DOI reais via PubMed E-utilities (esearch/esummary/efetch) nesta sessão ou já constavam verificadas em documentos irmãos do repositório, citados com a mesma referência primária. Limitação de acesso: não foi possível obter o texto completo pago de Massin et al. 2007 e Driscoll et al. 1997 (apenas abstract via PubMed), nem confirmar recomendação pediátrica com Classe/Nível de evidência específica para restrição esportiva por genótipo de QT longo na diretriz ESC 2022 original (bloqueio de acesso Oxford Academic), lacuna já registrada no documento irmão sobre QT longo pediátrico e não resolvida nesta sessão. Nenhuma dose de fármaco foi incluída em campo novo, conforme regra da base. Campos ambulatory_flow, emergency_flow, tests, red_flags, presentation, differentials, monitoring e special_populations expandidos para atingir profundidade mínima exigida pelo gate automatizado; assistant_questions e assistant_rules reformulados para focar nos eixos pediátricos específicos (esforço/natação, decúbito/sono, estímulo auditivo, espasmo do choro em lactente, história familiar), mantendo compatibilidade com o motor determinístico (grupos when flat, sem aninhamento).",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Versão 2, produzida por Claude em 27/08/2026, com foco pediátrico-específico para não duplicar o hub geral de síncope do adulto (verbete 'sincope', ainda em PR aberto, não referenciado aqui por não existir como arquivo confirmado em content/). Ampliação sobre a v1: adicionada seção de espasmo do choro (breath-holding spell) como diferencial de lactente/pré-escolar, com prevalência e tipos verificados em Leung AKC et al. 2019 (PMID 30421679) e a distinção com evento LQTS-desencadeado em Robinson JA et al. 2015 (PMID 25916402, 4,3% dos pacientes com QT longo tinham espasmo do choro, todos no genótipo LQT1); dados de epidemiologia populacional de Driscoll DJ et al. 1997 (PMID 9120157) e de causas cardíacas de Massin MM et al. 2007 (PMID 17326062); genótipo-gatilho específico (LQT1-exercício/natação, LQT2-estímulo auditivo, LQT3-sono) de Schwartz PJ et al. 2001 (PMID 11136691) e Wilde AA et al. 1999 (PMID 9973011), já verificados e citados em documento irmão desta mesma plataforma (síndrome do QT longo pediátrica); conteúdo de CPVT, cardiomiopatia arritmogênica pediátrica e Brugada febril integrado a partir dos documentos já publicados e revisados desta base (não duplicados, apenas sintetizados no nível apropriado para uma ficha de sintoma). Todas as afirmações numéricas foram conferidas em PMID/DOI reais via PubMed E-utilities (esearch/esummary/efetch) nesta sessão ou já constavam verificadas em documentos irmãos do repositório, citados com a mesma referência primária. Limitação de acesso: não foi possível obter o texto completo pago de Massin et al. 2007 e Driscoll et al. 1997 (apenas abstract via PubMed), nem confirmar recomendação pediátrica com Classe/Nível de evidência específica para restrição esportiva por genótipo de QT longo na diretriz ESC 2022 original (bloqueio de acesso Oxford Academic), lacuna já registrada no documento irmão sobre QT longo pediátrico e não resolvida nesta sessão. Nenhuma dose de fármaco foi incluída em campo novo, conforme regra da base. Campos ambulatory_flow, emergency_flow, tests, red_flags, presentation, differentials, monitoring e special_populations expandidos para atingir profundidade mínima exigida pelo gate automatizado; assistant_questions e assistant_rules reformulados para focar nos eixos pediátricos específicos (esforço/natação, decúbito/sono, estímulo auditivo, espasmo do choro em lactente, história familiar), mantendo compatibilidade com o motor determinístico (grupos when flat, sem aninhamento). Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -1598,31 +1616,26 @@
         }
       },
       {
-        "id": "civ_lactente_grande_sinais_ic",
+        "id": "civ_lactente_sinais_ic",
         "priority": 85,
         "when": {
           "all": [
             {
               "field": "sinais_insuficiencia_cardiaca",
               "op": "truthy"
-            },
-            {
-              "field": "tamanho_civ",
-              "op": "eq",
-              "value": "grande_nao_restritiva"
             }
           ]
         },
         "add": {
           "risk": "urgente",
           "red_flags": [
-            "Insuficiência cardíaca em lactente com CIV grande não restritiva"
+            "Sinais de insuficiência cardíaca em lactente com CIV, independentemente da classificação ecocardiográfica já disponível"
           ],
           "suggested_tests": [
             "Ecocardiograma com avaliação de repercussão hemodinâmica e pressão pulmonar estimada"
           ],
           "ambulatory_flow": [
-            "Encaminhar para avaliação de cirurgia cardíaca pediátrica quanto ao momento do fechamento"
+            "Encaminhar com urgência à cardiologia pediátrica para definir repercussão hemodinâmica e necessidade/momento do fechamento"
           ]
         }
       },
@@ -1755,9 +1768,9 @@
       "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico"
     ],
     "patient_material_slug": "civ-e-cia-buraquinho-no-coracao-do-bebe",
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada de 'intermediário' para 'completo'. Verificado nesta sessão via WebFetch: (1) texto integral do PMC11607469 (Rao PS, Rev Cardiovasc Med 2024) para classificação anatômica, história natural/taxas de fechamento espontâneo por tipo e tamanho, achados clínicos, exames complementares, definição Doppler de CIV restritiva vs. não restritiva, momento de fechamento cirúrgico/percutâneo e complicações; (2) texto integral do PMC9181776 (Vicent L et al., pediatric IE review) confirmando lesões de câmaras esquerdas como fator de risco de endocardite em criança. Reaproveitadas, por já estarem auditadas com PMID/DOI conferidos em documentos publicados e revisados desta mesma base: as tabelas de recomendação de fechamento de CIV no adulto por resistência vascular pulmonar (ESC 2020, PMID 32860028) e as categorias de risco de profilaxia antibiótica de endocardite (AHA 2007 PMID 17446442, reafirmado 2021 PMID 33853363), e a classificação em 7 tipos da CIV perimembranosa (JACC Asia 2026, PMID 42412691). Limitações de acesso nesta sessão: WebSearch indisponível (orçamento da sessão esgotado antes desta tarefa); tentativa de WebFetch ao texto integral do ESC 2020 (academic.oup.com) retornou apenas índice de tabelas sem os números; Circulation (ahajournals.org) bloqueado por Cloudflare 403 para as duas diretrizes AHA de endocardite — para essas duas diretrizes, os números reproduzidos aqui vêm de citação já auditada no acervo, não de reconferência direta do texto integral nesta sessão. Nenhuma dose de fármaco foi incluída. related_document_slugs e patient_material_slug confirmados como arquivos reais existentes em content/ e material-paciente/metadados.json, com menção explícita ao tema.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada de 'intermediário' para 'completo'. Verificado nesta sessão via WebFetch: (1) texto integral do PMC11607469 (Rao PS, Rev Cardiovasc Med 2024) para classificação anatômica, história natural/taxas de fechamento espontâneo por tipo e tamanho, achados clínicos, exames complementares, definição Doppler de CIV restritiva vs. não restritiva, momento de fechamento cirúrgico/percutâneo e complicações; (2) texto integral do PMC9181776 (Vicent L et al., pediatric IE review) confirmando lesões de câmaras esquerdas como fator de risco de endocardite em criança. Reaproveitadas, por já estarem auditadas com PMID/DOI conferidos em documentos publicados e revisados desta mesma base: as tabelas de recomendação de fechamento de CIV no adulto por resistência vascular pulmonar (ESC 2020, PMID 32860028) e as categorias de risco de profilaxia antibiótica de endocardite (AHA 2007 PMID 17446442, reafirmado 2021 PMID 33853363), e a classificação em 7 tipos da CIV perimembranosa (JACC Asia 2026, PMID 42412691). Limitações de acesso nesta sessão: WebSearch indisponível (orçamento da sessão esgotado antes desta tarefa); tentativa de WebFetch ao texto integral do ESC 2020 (academic.oup.com) retornou apenas índice de tabelas sem os números; Circulation (ahajournals.org) bloqueado por Cloudflare 403 para as duas diretrizes AHA de endocardite — para essas duas diretrizes, os números reproduzidos aqui vêm de citação já auditada no acervo, não de reconferência direta do texto integral nesta sessão. Nenhuma dose de fármaco foi incluída. related_document_slugs e patient_material_slug confirmados como arquivos reais existentes em content/ e material-paciente/metadados.json, com menção explícita ao tema. Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -2186,9 +2199,9 @@
       "hipertensao-arterial-sistemica-na-crianca-e-no-adolescente-diagnostico-por-percentil-causas-secundarias-e-tratamento-aap-2017"
     ],
     "patient_material_slug": "coarctacao-da-aorta-o-estreitamento-na-arteria-principal-do-bebe",
-    "review_status": "pendente_revisao",
-    "review_note": "Aprofundamento de intermediário para completo. Fontes primárias verificadas diretamente nesta sessão (texto integral via PMC): Doshi & Chikkabyrappa, Cureus 2018, PMID 30761242 (epidemiologia geral, critérios de gradiente/intervenção, técnicas de correção, sobrevida, hipertensão residual 25-68%); Raza et al., Diagnostics 2023, PMID 37443581 (faixa de BAV 25-85%, mecanismo e taxa de aneurisma tardio 8-11%, recoarctação 30-59%, aneurisma intracraniano ~10%, modalidades de imagem, ecocardiografia fetal). Salciccioli & Zachariah, Hypertension 2023, PMID 37476999, foi identificado e teve o abstract confirmado via PubMed E-utilities nesta sessão, mas o texto integral segue bloqueado por Cloudflare em ahajournals.org — os fatos atribuídos a essa fonte (classes de anti-hipertensivo, manejo de recoarctação por stent, seguimento vitalício) vêm de segunda mão, do documento já revisado 'seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto.md' desta plataforma, declarado explicitamente em source_refs. Pelo mesmo motivo de transparência, os dados de síndrome de Turner (Gravholt et al. 2024, PMID 38748847) e da gestação (Ramlakhan et al./ROPAC 2020, PMID 33122301), assim como a bula do Prostin VR Pediatric, foram reaproveitados de documentos já revisados desta plataforma, não relidos nesta sessão — declarado em cada entrada de source_refs. Divergências numéricas entre fontes (associação com valva bicúspide 45-62% vs. 25-85%; prevalência de coarctação em Turner 18% vs. 4-15%; hipertensão residual 25-68% vs. 25-62%) foram registradas de forma transparente, sem tentativa de reconciliação artificial. related_document_slugs confirmados por grep como arquivos .md reais em content/, todos com menção direta e explícita a coarctação de aorta. patient_material_slug escolhido como o material específico e dedicado a coarctação isolada, e não o material conjunto com tetralogia de Fallot, porque este registro cobre o espectro completo da coarctação isolada da vida neonatal à adulta. Nenhuma dose de fármaco foi incluída em nenhum campo novo.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Aprofundamento de intermediário para completo. Fontes primárias verificadas diretamente nesta sessão (texto integral via PMC): Doshi & Chikkabyrappa, Cureus 2018, PMID 30761242 (epidemiologia geral, critérios de gradiente/intervenção, técnicas de correção, sobrevida, hipertensão residual 25-68%); Raza et al., Diagnostics 2023, PMID 37443581 (faixa de BAV 25-85%, mecanismo e taxa de aneurisma tardio 8-11%, recoarctação 30-59%, aneurisma intracraniano ~10%, modalidades de imagem, ecocardiografia fetal). Salciccioli & Zachariah, Hypertension 2023, PMID 37476999, foi identificado e teve o abstract confirmado via PubMed E-utilities nesta sessão, mas o texto integral segue bloqueado por Cloudflare em ahajournals.org — os fatos atribuídos a essa fonte (classes de anti-hipertensivo, manejo de recoarctação por stent, seguimento vitalício) vêm de segunda mão, do documento já revisado 'seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto.md' desta plataforma, declarado explicitamente em source_refs. Pelo mesmo motivo de transparência, os dados de síndrome de Turner (Gravholt et al. 2024, PMID 38748847) e da gestação (Ramlakhan et al./ROPAC 2020, PMID 33122301), assim como a bula do Prostin VR Pediatric, foram reaproveitados de documentos já revisados desta plataforma, não relidos nesta sessão — declarado em cada entrada de source_refs. Divergências numéricas entre fontes (associação com valva bicúspide 45-62% vs. 25-85%; prevalência de coarctação em Turner 18% vs. 4-15%; hipertensão residual 25-68% vs. 25-62%) foram registradas de forma transparente, sem tentativa de reconciliação artificial. related_document_slugs confirmados por grep como arquivos .md reais em content/, todos com menção direta e explícita a coarctação de aorta. patient_material_slug escolhido como o material específico e dedicado a coarctação isolada, e não o material conjunto com tetralogia de Fallot, porque este registro cobre o espectro completo da coarctação isolada da vida neonatal à adulta. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -3553,7 +3566,9 @@
         "id": "cfs_score",
         "label": "Qual a pontuação na Clinical Frailty Scale (1 a 9)?",
         "type": "number",
-        "section": "Rastreio de fragilidade"
+        "section": "Rastreio de fragilidade",
+        "min": 1,
+        "max": 9
       },
       {
         "id": "gait_speed_reduced",
@@ -3645,6 +3660,31 @@
           ],
           "messages": [
             "Fragilidade não deve, isoladamente, contraindicar tratamento de urgência ou emergência. Reavaliar risco-benefício de intervenção estrutural com o heart team após a estabilização."
+          ]
+        }
+      },
+      {
+        "id": "procedimento_urgente_ou_emergencia_nao_atrasar",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "procedure_urgency",
+              "op": "in",
+              "value": [
+                "urgente",
+                "emergencia"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "emergency_flow": [
+            "Não atrasar procedimento salvador urgente ou de emergência para completar avaliação de fragilidade; realizar estabilização e avaliação proporcional em paralelo quando possível"
+          ],
+          "messages": [
+            "A fragilidade informa prognóstico e planejamento, mas não deve isoladamente atrasar intervenção salvadora."
           ]
         }
       },
@@ -3830,9 +3870,9 @@
       "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao"
     ],
     "patient_material_slug": "fragilidade-e-o-coracao-a-idade-sozinha-nao-decide-o-tratamento",
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada de 'intermediario' para 'completo'. Adicionados: instrumentos de rastreio com respaldo primário (Clinical Frailty Scale — Rockwood 2005, PMID 16129869; fenótipo de Fried 2001, PMID 11253156; Essential Frailty Toolset derivado do estudo FRAILTY-AVR — Afilalo 2017, PMID 28693934, incluindo prevalência de fragilidade de 26-68% conforme instrumento); impacto quantificado em desfechos pós-cirurgia cardíaca/TAVI a partir de metanálise de 2026 (Zhang et al., PMID 42026505: mortalidade RR 3,63-3,84, delirium OR 2,08, AVC OR 2,81, FA OR 1,30, além de LOS/UTI, IRA, infecção e reinternação aumentados); otimização pré-procedimento (pré-habilitação, com dados de ensaio piloto randomizado 2026, PMID 41860247, que mostrou melhora funcional sem redução de tempo de internação; correção de anemia/desnutrição; desprescrição); papel do heart team e decisão compartilhada, ancorados nas diretrizes ACC/AHA 2020 (PMID 33332150), ESC/EACTS 2021 (PMID 34453165) e SBC 2024 (DOI 10.36660/abc.20240590, com classes de recomendação IIa-B e IIa-C para rastreio de fragilidade). Expandidos presentation, differentials, tests, red_flags, ambulatory_flow, emergency_flow e adicionados monitoring e special_populations, todos acima do mínimo exigido. Adicionadas assistant_questions/assistant_rules determinísticas, com regra de prioridade 95 para não atrasar tratamento salvador em descompensação aguda. related_document_slugs conferidos por grep direto em content/**/*.md (7 documentos com menção substantiva a fragilidade cardiovascular pré-procedimento). patient_material_slug conferido em material-paciente/metadados.json. Limitações de acesso: o acesso direto ao texto integral de pubmed.ncbi.nlm.nih.gov e do texto completo dos guidelines Otto 2021/Vahanian 2022 foi bloqueado (paywall/consentimento de cookies); os dados desses documentos foram confirmados via API da Europe PMC (metadados/abstract) e, para o guideline SBC 2024, via redirecionamento do DOI ao texto no site da Arq Bras Cardiol (abccardiol.org), que confirmou título e autoria mas não permitiu extrair o texto integral da seção de fragilidade — a classificação de recomendação IIa-B/IIa-C para essa diretriz foi reaproveitada de citação já verificada em conteúdo existente no repositório (content/Perioperatório/fragilidade-no-idoso-avaliacao-pre-operatoria-sbc-2024.md), não checada diretamente no PDF original nesta sessão. Cota de WebSearch da sessão foi esgotada durante a pesquisa; toda a pesquisa complementar foi feita via WebFetch (Europe PMC REST API e redirecionamento de DOI).",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada de 'intermediario' para 'completo'. Adicionados: instrumentos de rastreio com respaldo primário (Clinical Frailty Scale — Rockwood 2005, PMID 16129869; fenótipo de Fried 2001, PMID 11253156; Essential Frailty Toolset derivado do estudo FRAILTY-AVR — Afilalo 2017, PMID 28693934, incluindo prevalência de fragilidade de 26-68% conforme instrumento); impacto quantificado em desfechos pós-cirurgia cardíaca/TAVI a partir de metanálise de 2026 (Zhang et al., PMID 42026505: mortalidade RR 3,63-3,84, delirium OR 2,08, AVC OR 2,81, FA OR 1,30, além de LOS/UTI, IRA, infecção e reinternação aumentados); otimização pré-procedimento (pré-habilitação, com dados de ensaio piloto randomizado 2026, PMID 41860247, que mostrou melhora funcional sem redução de tempo de internação; correção de anemia/desnutrição; desprescrição); papel do heart team e decisão compartilhada, ancorados nas diretrizes ACC/AHA 2020 (PMID 33332150), ESC/EACTS 2021 (PMID 34453165) e SBC 2024 (DOI 10.36660/abc.20240590, com classes de recomendação IIa-B e IIa-C para rastreio de fragilidade). Expandidos presentation, differentials, tests, red_flags, ambulatory_flow, emergency_flow e adicionados monitoring e special_populations, todos acima do mínimo exigido. Adicionadas assistant_questions/assistant_rules determinísticas, com regra de prioridade 95 para não atrasar tratamento salvador em descompensação aguda. related_document_slugs conferidos por grep direto em content/**/*.md (7 documentos com menção substantiva a fragilidade cardiovascular pré-procedimento). patient_material_slug conferido em material-paciente/metadados.json. Limitações de acesso: o acesso direto ao texto integral de pubmed.ncbi.nlm.nih.gov e do texto completo dos guidelines Otto 2021/Vahanian 2022 foi bloqueado (paywall/consentimento de cookies); os dados desses documentos foram confirmados via API da Europe PMC (metadados/abstract) e, para o guideline SBC 2024, via redirecionamento do DOI ao texto no site da Arq Bras Cardiol (abccardiol.org), que confirmou título e autoria mas não permitiu extrair o texto integral da seção de fragilidade — a classificação de recomendação IIa-B/IIa-C para essa diretriz foi reaproveitada de citação já verificada em conteúdo existente no repositório (content/Perioperatório/fragilidade-no-idoso-avaliacao-pre-operatoria-sbc-2024.md), não checada diretamente no PDF original nesta sessão. Cota de WebSearch da sessão foi esgotada durante a pesquisa; toda a pesquisa complementar foi feita via WebFetch (Europe PMC REST API e redirecionamento de DOI). Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -5715,54 +5755,23 @@
     ],
     "assistant_rules": [
       {
-        "id": "emergencia_lesao_pas",
+        "id": "emergencia_lesao_orgao_alvo",
         "priority": 95,
         "when": {
           "all": [
             {
               "field": "lesao_aguda_orgao_alvo",
               "op": "truthy"
-            },
-            {
-              "field": "pas_atual",
-              "op": "gte",
-              "value": 180
             }
           ]
         },
         "add": {
           "risk": "emergencia",
           "red_flags": [
-            "Emergência hipertensiva com lesão aguda de órgão-alvo sob inibidor de VEGF/TKI"
+            "Lesão aguda de órgão-alvo sob inibidor de VEGF/TKI: emergência hipertensiva ou outra emergência cardiovascular/neurológica deve ser avaliada sem depender de PAS 180 ou PAD 110 mmHg"
           ],
           "emergency_flow": [
-            "Pausar imediatamente o inibidor de VEGF/TKI causal e iniciar protocolo padrão de emergência hipertensiva com anti-hipertensivo intravenoso sob monitorização contínua"
-          ]
-        }
-      },
-      {
-        "id": "emergencia_lesao_pad",
-        "priority": 95,
-        "when": {
-          "all": [
-            {
-              "field": "lesao_aguda_orgao_alvo",
-              "op": "truthy"
-            },
-            {
-              "field": "pad_atual",
-              "op": "gte",
-              "value": 110
-            }
-          ]
-        },
-        "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Emergência hipertensiva com lesão aguda de órgão-alvo sob inibidor de VEGF/TKI"
-          ],
-          "emergency_flow": [
-            "Pausar imediatamente o inibidor de VEGF/TKI causal e iniciar protocolo padrão de emergência hipertensiva com anti-hipertensivo intravenoso sob monitorização contínua"
+            "Avaliação hospitalar imediata, monitorização e manejo da lesão de órgão-alvo; discutir pausa do inibidor de VEGF/TKI com oncologia e cardio-oncologia sem atrasar o cuidado emergencial"
           ]
         }
       },
@@ -5982,9 +5991,9 @@
       "insuficiencia-cardiaca-e-disfuncao-de-ve-por-inibidores-de-vegfr-sunitinibe-e-classe"
     ],
     "patient_material_slug": "pressao-alta-durante-tratamento-oncologico-inibidores-de-vegf",
-    "review_status": "pendente_revisao",
-    "review_note": "Aprofundamento completo do registro anterior (completeness=intermediario, v1). Adicionados: mecanismo (redução de óxido nítrico endotelial e rarefação capilar pela inibição da via do VEGF), incidência de classe (metanálise de 77 ECR/27.353 pacientes — Li & Gu 2018, PMID 30327999; coorte pivotal de sunitinibe — Chu et al. 2007, PMID 18083403; metanálise de bevacizumabe — Chitkara et al. 2023, PMID 38069531; estudo de derivação de risco tromboembólico arterial — Scappaticci et al. 2007, PMID 17686822), o paradoxo da hipertensão como biomarcador de eficácia antitumoral no carcinoma renal metastático sob sunitinibe (Rini et al. 2011, PMID 21527770, com ressalva explícita de que isso NÃO justifica deixar a pressão sem tratamento), limiares e frequência de monitorização pressórica da ESC 2022 (PMID 36017568, Seção 6.5/Tabela de Recomendação 33), critério de pausa da terapia oncológica (PAS ≥180 ou PAD ≥110 mmHg) versus tratamento anti-hipertensivo agressivo mantendo o tratamento, orientação para evitar verapamil/diltiazem por interação farmacológica com vários VEGF-TKI (sem citar dose), risco de hipotensão de rebote após suspensão da terapia oncológica (Cohen et al., AHA Scientific Statement, Hypertension 2023, PMID 36621810), e mecanismo/perfil/manejo agudo do PRES como red flag grave da classe (Tlemsani et al. 2011, PMID 22090260; Fischer & Schmutzhard 2017, PMID 28054130; bula do bevacizumabe via DailyMed, incidência <0,5% e janela de início de 16h a 1 ano). Todos os PMIDs foram conferidos nesta sessão via NCBI eutils (esummary) contra título/periódico/ano/autor, e o texto da seção de PRES da bula do bevacizumabe foi confirmado por leitura direta do DailyMed. Os limiares pressóricos específicos da ESC 2022 (180/110 para pausa, 160/100 para acelerar tratamento, diário domiciliar diário nos primeiros meses) foram reaproveitados de um documento já revisado nesta mesma base (hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md, review_status=revisado, com nota de revisão citando explicitamente Seção 6.5 e Tabela de Recomendação 33) — a existência dessas seção/tabela na diretriz foi corroborada por acesso direto à página do periódico (Oxford Academic/Eur Heart J), mas o texto literal da tabela está atrás de paywall/figura e não pôde ser recitado palavra por palavra nesta sessão; nenhum valor numérico foi alterado em relação à extração já revisada. Limitação adicional: a cota de buscas web (WebSearch) desta sessão se esgotou após as primeiras verificações, restringindo checagens adicionais a WebFetch direto em PubMed/DailyMed/Oxford Academic. Nenhuma dose de fármaco foi incluída. related_document_slugs e patient_material_slug foram confirmados como arquivos reais existentes no repositório, com menção explícita ao tema.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Aprofundamento completo do registro anterior (completeness=intermediario, v1). Adicionados: mecanismo (redução de óxido nítrico endotelial e rarefação capilar pela inibição da via do VEGF), incidência de classe (metanálise de 77 ECR/27.353 pacientes — Li & Gu 2018, PMID 30327999; coorte pivotal de sunitinibe — Chu et al. 2007, PMID 18083403; metanálise de bevacizumabe — Chitkara et al. 2023, PMID 38069531; estudo de derivação de risco tromboembólico arterial — Scappaticci et al. 2007, PMID 17686822), o paradoxo da hipertensão como biomarcador de eficácia antitumoral no carcinoma renal metastático sob sunitinibe (Rini et al. 2011, PMID 21527770, com ressalva explícita de que isso NÃO justifica deixar a pressão sem tratamento), limiares e frequência de monitorização pressórica da ESC 2022 (PMID 36017568, Seção 6.5/Tabela de Recomendação 33), critério de pausa da terapia oncológica (PAS ≥180 ou PAD ≥110 mmHg) versus tratamento anti-hipertensivo agressivo mantendo o tratamento, orientação para evitar verapamil/diltiazem por interação farmacológica com vários VEGF-TKI (sem citar dose), risco de hipotensão de rebote após suspensão da terapia oncológica (Cohen et al., AHA Scientific Statement, Hypertension 2023, PMID 36621810), e mecanismo/perfil/manejo agudo do PRES como red flag grave da classe (Tlemsani et al. 2011, PMID 22090260; Fischer & Schmutzhard 2017, PMID 28054130; bula do bevacizumabe via DailyMed, incidência <0,5% e janela de início de 16h a 1 ano). Todos os PMIDs foram conferidos nesta sessão via NCBI eutils (esummary) contra título/periódico/ano/autor, e o texto da seção de PRES da bula do bevacizumabe foi confirmado por leitura direta do DailyMed. Os limiares pressóricos específicos da ESC 2022 (180/110 para pausa, 160/100 para acelerar tratamento, diário domiciliar diário nos primeiros meses) foram reaproveitados de um documento já revisado nesta mesma base (hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md, review_status=revisado, com nota de revisão citando explicitamente Seção 6.5 e Tabela de Recomendação 33) — a existência dessas seção/tabela na diretriz foi corroborada por acesso direto à página do periódico (Oxford Academic/Eur Heart J), mas o texto literal da tabela está atrás de paywall/figura e não pôde ser recitado palavra por palavra nesta sessão; nenhum valor numérico foi alterado em relação à extração já revisada. Limitação adicional: a cota de buscas web (WebSearch) desta sessão se esgotou após as primeiras verificações, restringindo checagens adicionais a WebFetch direto em PubMed/DailyMed/Oxford Academic. Nenhuma dose de fármaco foi incluída. related_document_slugs e patient_material_slug foram confirmados como arquivos reais existentes no repositório, com menção explícita ao tema. Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -6196,6 +6205,38 @@
         }
       },
       {
+        "id": "dispneia_pos_rt_avaliacao_prioritaria",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "historia_radioterapia_toracica",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "dispneia"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Insuficiência cardíaca por disfunção miocárdica actínica",
+            "Doença valvar actínica",
+            "Doença pericárdica constritiva ou derrame pericárdico"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico com avaliação estrutural, valvar e de função ventricular"
+          ],
+          "messages": [
+            "Dispneia nova ou progressiva após radioterapia torácica requer avaliação cardiovascular acelerada, sem aguardar o próximo rastreio de rotina."
+          ]
+        }
+      },
+      {
         "id": "congestao_sistemica_pos_rt",
         "priority": 60,
         "when": {
@@ -6294,6 +6335,41 @@
           ],
           "ambulatory_flow": [
             "Agendar ecocardiograma de rastreio e considerar avaliação de doença arterial coronariana conforme risco individual"
+          ]
+        }
+      },
+      {
+        "id": "rastreio_dose_desconhecida_fallback",
+        "priority": 48,
+        "when": {
+          "all": [
+            {
+              "field": "dose_media_coracao",
+              "op": "eq",
+              "value": "desconhecida"
+            },
+            {
+              "field": "anos_desde_fim_radioterapia",
+              "op": "gte",
+              "value": 5
+            },
+            {
+              "field": "ecocardiograma_rastreio_realizado",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Dose média cardíaca indisponível; recuperar plano dosimétrico quando possível"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico de rastreio"
+          ],
+          "messages": [
+            "Na ausência da dose cardíaca, usar abordagem conservadora baseada na latência, campo irradiado, sintomas, quimioterapia cardiotóxica e fatores de risco."
           ]
         }
       },
@@ -6439,9 +6515,9 @@
       "risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia",
       "cardiotoxicidade-por-antraciclina-na-crianca-com-cancer-vigilancia-e-estratificacao-de-risco"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Aprofundamento completo em 27/08/2026 (fonte_producao=claude), elevando completeness de intermediario para completo. Reescritos com dados quantitativos verificados: epidemiology, presentation, differentials, tests, red_flags, ambulatory_flow, emergency_flow, monitoring, special_populations, diagnostic_approach e treatment_summary, além de assistant_questions/assistant_rules novos (motor determinístico). Fontes lidas em texto integral nesta sessão via WebFetch direto (PMC/PubMed): Quintero-Martinez et al. J Clin Med 2021 (PMID 35011887, revisão geral de RICD) e Varvara et al. J Cardiovasc Dev Dis 2025 (PMID 41590828, revisão específica de valvopatia actínica, fonte do padrão fibrocalcificante que poupa pontas/comissuras e envolve base/raiz aórtica/cortina mitroaórtica, e dos dados dose-volume); e Jimenez Chaparro et al. Cureus 2026 (PMID 42395202, relato de caso de BAV total actínico com 39 anos de latência, usado para mecanismo e latência extrema da doença de condução). Demais números (dose-resposta coronariana de van Nimwegen JAMA Intern Med 2015/J Clin Oncol 2016, Darby NEJM 2013, estratificação de risco pediátrico de Armenian/IGHG Lancet Oncol 2015, protocolos de rastreio de Oliva/FIL e van Dalen/IGHG 2021, Mulrooney BMJ 2009, Ryan/AHA Circulation 2025) foram reaproveitados de documentos já existentes neste mesmo repositório, cada um com PMID conferível e nota de verificação prévia contra texto integral por outro pesquisador nesta base. Limitações declaradas: o texto integral da diretriz ESC 2022 de cardio-oncologia (eurheartj/ehac244) e do NEJM 2013 (Darby et al.) ficaram bloqueados por paywall/bloqueio de cookies nesta sessão — os números desses dois estudos vieram da extração já verificada em texto integral por outro pesquisador, presente nos documentos locais 'protecao-cardiaca-na-radioterapia-de-mama-esquerda...' e 'fluxograma-doenca-pericardica-actinica-radioterapia'. O orçamento de WebSearch da sessão esgotou-se durante a pesquisa; contornado com WebFetch direto sobre URLs conhecidas de PMC/PubMed, sem prejuízo à cobertura. Nenhuma dose de fármaco foi incluída em campo novo (limiares de antraciclina descritos qualitativamente, não em mg/m²). related_document_slugs limitado a arquivos .md confirmados por grep no repositório, com menção direta e explícita ao tema no corpo do texto. patient_material_slug omitido por não haver material de paciente específico sobre efeitos tardios de radioterapia (apenas material genérico de cardio-oncologia).",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Aprofundamento completo em 27/08/2026 (fonte_producao=claude), elevando completeness de intermediario para completo. Reescritos com dados quantitativos verificados: epidemiology, presentation, differentials, tests, red_flags, ambulatory_flow, emergency_flow, monitoring, special_populations, diagnostic_approach e treatment_summary, além de assistant_questions/assistant_rules novos (motor determinístico). Fontes lidas em texto integral nesta sessão via WebFetch direto (PMC/PubMed): Quintero-Martinez et al. J Clin Med 2021 (PMID 35011887, revisão geral de RICD) e Varvara et al. J Cardiovasc Dev Dis 2025 (PMID 41590828, revisão específica de valvopatia actínica, fonte do padrão fibrocalcificante que poupa pontas/comissuras e envolve base/raiz aórtica/cortina mitroaórtica, e dos dados dose-volume); e Jimenez Chaparro et al. Cureus 2026 (PMID 42395202, relato de caso de BAV total actínico com 39 anos de latência, usado para mecanismo e latência extrema da doença de condução). Demais números (dose-resposta coronariana de van Nimwegen JAMA Intern Med 2015/J Clin Oncol 2016, Darby NEJM 2013, estratificação de risco pediátrico de Armenian/IGHG Lancet Oncol 2015, protocolos de rastreio de Oliva/FIL e van Dalen/IGHG 2021, Mulrooney BMJ 2009, Ryan/AHA Circulation 2025) foram reaproveitados de documentos já existentes neste mesmo repositório, cada um com PMID conferível e nota de verificação prévia contra texto integral por outro pesquisador nesta base. Limitações declaradas: o texto integral da diretriz ESC 2022 de cardio-oncologia (eurheartj/ehac244) e do NEJM 2013 (Darby et al.) ficaram bloqueados por paywall/bloqueio de cookies nesta sessão — os números desses dois estudos vieram da extração já verificada em texto integral por outro pesquisador, presente nos documentos locais 'protecao-cardiaca-na-radioterapia-de-mama-esquerda...' e 'fluxograma-doenca-pericardica-actinica-radioterapia'. O orçamento de WebSearch da sessão esgotou-se durante a pesquisa; contornado com WebFetch direto sobre URLs conhecidas de PMC/PubMed, sem prejuízo à cobertura. Nenhuma dose de fármaco foi incluída em campo novo (limiares de antraciclina descritos qualitativamente, não em mg/m²). related_document_slugs limitado a arquivos .md confirmados por grep no repositório, com menção direta e explícita ao tema no corpo do texto. patient_material_slug omitido por não haver material de paciente específico sobre efeitos tardios de radioterapia (apenas material genérico de cardio-oncologia). Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude",
     "diagnostic_approach": "A abordagem diagnóstica da doença cardíaca induzida por radiação (RICD) começa pelo reconhecimento ativo da exposição — perguntar sobre radioterapia torácica prévia, já que o paciente frequentemente não relaciona espontaneamente sintomas atuais a um tratamento oncológico distante décadas no passado — e pela estratificação de risco combinando dose média estimada ao coração, volume cardíaco irradiado, quimioterapia cardiotóxica concomitante e fatores de risco cardiovascular tradicionais (Quintero-Martinez et al., J Clin Med 2021, PMID 35011887).\n\nO ecocardiograma transtorácico com Doppler e strain longitudinal global é o exame de primeira linha, usado tanto na vigilância programada assintomática quanto na investigação de qualquer sintoma novo: avalia função sistólica e diastólica, morfologia valvar (o padrão fibrocalcificante actínico difuso, que poupa pontas e comissuras e envolve preferencialmente a base dos folhetos, o anel anterior, a raiz aórtica e a cortina mitroaórtica — distinto do padrão degenerativo senil, que predomina no anel posterior mitral) e sinais indiretos de doença pericárdica (Varvara et al., J Cardiovasc Dev Dis 2025, PMID 41590828).\n\nQuando a suspeita é de constrição pericárdica versus cardiomiopatia restritiva por fibrose miocárdica — duas entidades de apresentação clínica semelhante (congestão sistêmica, sinal de Kussmaul) mas condução terapêutica distinta —, a ressonância cardíaca com realce tardio de gadolínio caracteriza espessamento pericárdico, edema e fibrose miocárdica com resolução anatômica superior à do ecocardiograma isolado; quando a dúvida hemodinâmica persiste, o cateterismo cardíaco direito e esquerdo com estudo hemodinâmico biventricular simultâneo é o padrão de referência para diferenciar as duas fisiologias (von Kemp & Cosyns, Curr Cardiol Rep 2023, PMID 37584875). Um documento local desta base sobre pericardite/constrição actínica sinaliza explicitamente que critérios hemodinâmicos específicos de constrição pós-radiação ainda carecem de detalhamento próprio na literatura de acesso aberto revisada até agora, recomendando cautela antes de aplicar sem ressalva os critérios gerais de constrição a esse subgrupo.\n\nPara rastreio de doença coronariana actínica em sobrevivente assintomático, a angiotomografia de coronárias e o escore de cálcio coronariano têm papel estabelecido em sobreviventes de linfoma de Hodgkin irradiados no mediastino, tendo identificado doença obstrutiva significativa em 11-20% de pacientes assintomáticos em coortes de rastreio (Daniëls et al., Ann Oncol 2014, PMID 24692582; Küpeli et al., J Clin Oncol 2010, PMID 20038721) — mas um escore de cálcio igual a zero não afasta doença coronariana radioinduzida (Andersen et al., Am J Cardiol 2010, PMID 20102909). Teste de esforço convencional ou imagem de estresse não invasiva (ecocardiograma de estresse, cintilografia) complementam a investigação quando há sintoma sugestivo de isquemia ou eletrocardiograma basal alterado que limita a interpretação do teste de esforço simples. Biomarcadores (peptídeo natriurético, troponina) auxiliam a triagem de disfunção miocárdica subclínica, mas nenhuma das fontes revisadas nesta sessão recomenda seu uso isolado como estratégia de rastreio — devem sempre ser interpretados em conjunto com a imagem cardíaca.",
     "treatment_summary": "Não existe tratamento farmacológico específico capaz de reverter a fibrose actínica já estabelecida no coração; por isso, o eixo central do manejo da RICD é o controle agressivo e contínuo dos fatores de risco cardiovascular tradicionais (hipertensão, diabetes, dislipidemia, tabagismo, obesidade, sedentarismo) — recomendação explicitamente reforçada tanto pela revisão geral de RICD (Quintero-Martinez et al., J Clin Med 2021, PMID 35011887, que recomenda rastreio desses fatores com mudança de estilo de vida e/ou tratamento apropriado) quanto pelos protocolos de rastreio pós-radioterapia mediastinal em linfoma de Hodgkin (Oliva et al./Fondazione Italiana Linfomi, Cancers 2021, PMID 35008222; van Dalen et al./IGHG, Eur J Cancer 2021, PMID 34450551), nos quais o manejo do fator de risco modificável é classificado como recomendação forte e não controversa, mesmo nos pontos em que o rastreio por imagem ainda é debatido entre as fontes.\n\nAlém do controle de risco, o manejo se organiza pela manifestação estrutural dominante. Na doença coronariana actínica, o tratamento segue o protocolo padrão de síndrome coronariana aguda/doença arterial coronariana crônica; a decisão entre revascularização percutânea e cirurgia de revascularização miocárdica deve considerar que a fibrose e a calcificação mediastinal pós-radioterapia tornam a cirurgia cardíaca tecnicamente mais difícil e mais arriscada nesse grupo — em uma coorte de 261 pacientes irradiados que precisaram de nova esternotomia, a mortalidade operatória foi de 17%, contra 3,7% em cirurgia cardíaca de primeira vez na mesma população com radioterapia mediastinal prévia (dado citado em Varvara et al., J Cardiovasc Dev Dis 2025, PMID 41590828). Essa elevação de risco cirúrgico costuma pesar a favor de estratégias percutâneas quando tecnicamente viáveis, mas a decisão é sempre individualizada por equipe multidisciplinar.\n\nNa valvopatia actínica grave sintomática, os critérios de indicação de intervenção (sintoma, gravidade hemodinâmica, disfunção ventricular) são os mesmos da valvopatia degenerativa, mas o risco cirúrgico é maior e frequentemente subestimado pelos escores de risco cirúrgico convencionais (STS-PROM, EuroSCORE II) nessa população, pela combinação de calcificação extensa da aorta ('aorta em porcelana'), fibrose pulmonar actínica e mediastino hostil (Varvara et al. 2025, PMID 41590828). Isso costuma deslocar a escolha para técnicas transcateter em pacientes elegíveis: em uma coorte citada por essa mesma revisão comparando implante valvar aórtico transcateter (TAVI) e troca cirúrgica (SAVR) especificamente em pacientes com radioterapia mediastinal prévia, a mortalidade em 30 dias foi de 1,8% com TAVI contra 9,1% com SAVR, sem acidente vascular cerebral incapacitante no grupo TAVI contra 3,6% no grupo SAVR, e menor incidência de fibrilação atrial pós-procedimento com TAVI (3,6% contra 32,7%); a taxa de implante de marca-passo foi semelhante entre as duas técnicas — números reproduzidos da revisão secundária de Varvara et al. 2025 (PMID 41590828), que cita um estudo de Zhang et al. não lido diretamente nesta sessão, portanto não confirmados contra a publicação primária. Na valva mitral, o reparo cirúrgico teve taxa de disfunção recorrente de 32% em uma série de 22 pacientes irradiados, e a substituição cirúrgica mostrou sobrevida em 5 anos de apenas 55%, contra 95% em cirurgia por doença mitral degenerativa não actínica, segundo a mesma revisão — reforçando o risco cirúrgico elevado específico dessa população, com a mesma ressalva de fonte primária não lida diretamente.\n\nA pericardite aguda tardia actínica é tratada como pericardite de outras etiologias; a constrição pericárdica sintomática e refratária pode exigir pericardiectomia, procedimento que a literatura descreve qualitativamente como de maior risco perioperatório nesse contexto, por causa da fibrose actínica concomitante do miocárdio e de estruturas adjacentes (von Kemp & Cosyns, Curr Cardiol Rep 2023, PMID 37584875) — sem que esta sessão tenha conseguido verificar um número específico de mortalidade cirúrgica para pericardiectomia pós-radiação; isso fica registrado aqui como limitação explícita, não como dado inventado. A indicação cirúrgica deve ponderar a contribuição relativa de cardiomiopatia, coronariopatia e valvopatia concomitantes antes da decisão.\n\nBloqueio atrioventricular de alto grau sintomático de origem actínica segue a indicação convencional de marca-passo definitivo. O mecanismo descrito na literatura é dano à microvasculatura que nutre o sistema de condução, com inflamação crônica e substituição fibrótica progressiva ao longo de décadas — processo ilustrado por um relato de caso de bloqueio atrioventricular total actínico surgindo 39 anos após a exposição (Jimenez Chaparro et al., Cureus 2026, PMID 42395202).\n\nA prevenção primária, quando ainda há oportunidade — no próprio planejamento da radioterapia —, concentra-se em reduzir a dose cardíaca na origem, com técnicas modernas de planejamento e entrega (por exemplo, inspiração profunda sustentada na irradiação de mama esquerda), já documentadas em outro registro desta base como capazes de reduzir de forma consistente a dose média e máxima ao coração e à artéria descendente anterior. Quando há quimioterapia cardiotóxica concomitante, a cardioproteção farmacológica dirigida a essa quimioterapia e a vigilância combinada (radioterapia associada a quimioterapia) devem ser consideradas em conjunto pela equipe assistente, tema já registrado em documento específico desta base — sem reprodução de dose de fármaco aqui."
@@ -7368,6 +7444,10 @@
           {
             "value": "combinacao_hbpm_avk",
             "label": "Combinação HBPM + antagonista de vitamina K (sequencial)"
+          },
+          {
+            "value": "nenhum_ou_interrompido",
+            "label": "Nenhum anticoagulante ou anticoagulação interrompida"
           }
         ]
       },
@@ -7429,7 +7509,9 @@
         "id": "idade_gestacional_semanas",
         "label": "Idade gestacional atual, em semanas?",
         "type": "number",
-        "section": "parto_e_planejamento"
+        "section": "parto_e_planejamento",
+        "min": 0,
+        "max": 44
       },
       {
         "id": "trabalho_de_parto_iniciado",
@@ -7445,6 +7527,31 @@
       }
     ],
     "assistant_rules": [
+      {
+        "id": "emergencia_sem_anticoagulacao",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulante_atual",
+              "op": "eq",
+              "value": "nenhum_ou_interrompido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Prótese mecânica na gestação sem anticoagulação efetiva ou com anticoagulação interrompida"
+          ],
+          "emergency_flow": [
+            "Avaliação hospitalar imediata e ativação do Pregnancy Heart Team/equipe valvar para restaurar anticoagulação segura conforme contexto materno, fetal e hemorrágico"
+          ],
+          "messages": [
+            "Não reiniciar, trocar ou ajustar anticoagulante por conta própria; o risco de trombose protética exige decisão urgente especializada."
+          ]
+        }
+      },
       {
         "id": "emergencia_trombose_protese_suspeita",
         "priority": 95,
@@ -7522,6 +7629,44 @@
           ],
           "emergency_flow": [
             "Avaliação hospitalar imediata para quantificar o sangramento e reavaliar a anticoagulação"
+          ]
+        }
+      },
+      {
+        "id": "avk_semanas_6_a_12_exposicao_fetal",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulante_atual",
+              "op": "in",
+              "value": [
+                "antagonista_vitamina_k",
+                "combinacao_hbpm_avk"
+              ]
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 6
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "lte",
+              "value": 12
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Exposição a antagonista da vitamina K entre 6 e 12 semanas exige reavaliação individualizada do risco fetal e materno"
+          ],
+          "ambulatory_flow": [
+            "Acionar Pregnancy Heart Team com urgência para decisão compartilhada do esquema anticoagulante"
+          ],
+          "messages": [
+            "Não interromper nem substituir abruptamente o anticoagulante: mudanças sem cobertura adequada aumentam o risco materno de trombose da prótese."
           ]
         }
       },
@@ -7676,9 +7821,9 @@
       "anticoagulantes-na-gestacao-e-lactacao-o-que-diz-a-bula-registrada"
     ],
     "patient_material_slug": "valvula-mecanica-e-gravidez-anticoagulante-e-sinais-de-alerta",
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada de 'intermediario' para 'completo' em 27/08/2026. Todas as afirmações numéricas foram verificadas por WebFetch em fonte primária com PMID/DOI real: ROPAC original (van Hagen 2015, PMID 26100109), ROPAC III (van der Zande 2025, PMID 40237423, texto completo em acesso aberto via PMC — PMC13016632), metanálise de Steinberg et al. 2017 (JACC, PMID 28571631), estudo clássico de Vitale et al. 1999 sobre dose-dependência do risco fetal com varfarina (JACC, PMID 10334435), revisão de Bai et al. 2022 sobre alvos de monitorização de anti-Xa (Medicine, PMID 36596070, PMC9803450) e RE-ALIGN (Eikelboom 2013, PMID 23991661). LIMITAÇÃO DE ACESSO: o texto integral do capítulo 12.5.3.2.3 da diretriz 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy (PMID 40878294) — que traz a tabela/figura específica de manejo de anticoagulante por estágio da gestação em prótese mecânica — está atrás de paywall; só foram acessíveis o abstract, as legendas de tabelas/figuras e trechos qualitativos. Por isso, os números de trade-off entre estratégias (dose-dependência de varfarina, metas de monitorização de anti-Xa, comparação HBPM vs. antagonista de vitamina K por trimestre) foram fundamentados em estudos originais e em revisão da literatura com PMID/DOI verificados, e não copiados diretamente do texto da diretriz 2025. Nenhuma dose de fármaco foi incluída em nenhum campo, apenas alvos laboratoriais (INR, anti-Xa) tratados como metas de monitorização, não como posologia.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada de 'intermediario' para 'completo' em 27/08/2026. Todas as afirmações numéricas foram verificadas por WebFetch em fonte primária com PMID/DOI real: ROPAC original (van Hagen 2015, PMID 26100109), ROPAC III (van der Zande 2025, PMID 40237423, texto completo em acesso aberto via PMC — PMC13016632), metanálise de Steinberg et al. 2017 (JACC, PMID 28571631), estudo clássico de Vitale et al. 1999 sobre dose-dependência do risco fetal com varfarina (JACC, PMID 10334435), revisão de Bai et al. 2022 sobre alvos de monitorização de anti-Xa (Medicine, PMID 36596070, PMC9803450) e RE-ALIGN (Eikelboom 2013, PMID 23991661). LIMITAÇÃO DE ACESSO: o texto integral do capítulo 12.5.3.2.3 da diretriz 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy (PMID 40878294) — que traz a tabela/figura específica de manejo de anticoagulante por estágio da gestação em prótese mecânica — está atrás de paywall; só foram acessíveis o abstract, as legendas de tabelas/figuras e trechos qualitativos. Por isso, os números de trade-off entre estratégias (dose-dependência de varfarina, metas de monitorização de anti-Xa, comparação HBPM vs. antagonista de vitamina K por trimestre) foram fundamentados em estudos originais e em revisão da literatura com PMID/DOI verificados, e não copiados diretamente do texto da diretriz 2025. Nenhuma dose de fármaco foi incluída em nenhum campo, apenas alvos laboratoriais (INR, anti-Xa) tratados como metas de monitorização, não como posologia. Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
@@ -7862,6 +8007,14 @@
         "section": "exames"
       },
       {
+        "id": "indice_tamanho_aortico_mm_m2",
+        "label": "Índice de tamanho aórtico (mm/m²), especialmente na síndrome de Turner",
+        "type": "number",
+        "min": 0,
+        "max": 60,
+        "section": "exames"
+      },
+      {
         "id": "crescimento_aortico_rapido",
         "label": "Crescimento aórtico ≥3 mm/ano documentado em exames seriados?",
         "type": "boolean",
@@ -7943,6 +8096,36 @@
         }
       },
       {
+        "id": "turner_indice_maior_25",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "sindrome_aortica_conhecida",
+              "op": "eq",
+              "value": "turner"
+            },
+            {
+              "field": "indice_tamanho_aortico_mm_m2",
+              "op": "gt",
+              "value": 25
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síndrome de Turner com índice de tamanho aórtico superior a 25 mm/m²: risco aórtico muito elevado"
+          ],
+          "suggested_tests": [
+            "Imagem aórtica completa e seriada em centro especializado"
+          ],
+          "messages": [
+            "Necessária avaliação imediata por Pregnancy Heart Team; o risco em Turner deve ser indexado à superfície corporal."
+          ]
+        }
+      },
+      {
         "id": "ehlers_danlos_vascular_alto_risco",
         "priority": 90,
         "when": {
@@ -7970,6 +8153,11 @@
         "when": {
           "all": [
             {
+              "field": "sindrome_aortica_conhecida",
+              "op": "neq",
+              "value": "turner"
+            },
+            {
               "field": "diametro_aortico_mm",
               "op": "gte",
               "value": 45
@@ -7988,10 +8176,68 @@
         }
       },
       {
+        "id": "turner_indice_20_a_25",
+        "priority": 76,
+        "when": {
+          "all": [
+            {
+              "field": "sindrome_aortica_conhecida",
+              "op": "eq",
+              "value": "turner"
+            },
+            {
+              "field": "indice_tamanho_aortico_mm_m2",
+              "op": "gte",
+              "value": 20
+            },
+            {
+              "field": "indice_tamanho_aortico_mm_m2",
+              "op": "lte",
+              "value": 25
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Síndrome de Turner com índice de tamanho aórtico entre 20 e 25 mm/m² requer estratificação especializada e consideração de fatores adicionais"
+          ],
+          "suggested_tests": [
+            "Imagem aórtica seriada e avaliação de valva bicúspide/coarctação"
+          ]
+        }
+      },
+      {
+        "id": "historia_familiar_disseccao_prioridade",
+        "priority": 74,
+        "when": {
+          "all": [
+            {
+              "field": "historia_familiar_disseccao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "História familiar de dissecção ou morte súbita aórtica aumenta o risco mesmo abaixo de limiares isolados de diâmetro"
+          ],
+          "ambulatory_flow": [
+            "Avaliação prioritária por equipe de aortopatia/Pregnancy Heart Team e revisão de imagem e histórico familiar"
+          ]
+        }
+      },
+      {
         "id": "diametro_risco_intermediario",
         "priority": 65,
         "when": {
           "all": [
+            {
+              "field": "sindrome_aortica_conhecida",
+              "op": "neq",
+              "value": "turner"
+            },
             {
               "field": "diametro_aortico_mm",
               "op": "gte",
@@ -8121,6 +8367,16 @@
               "field": "dor_toracica_dorsal_subita",
               "op": "eq",
               "value": false
+            },
+            {
+              "field": "deficit_pulso_ou_neurologico",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "historia_familiar_disseccao",
+              "op": "eq",
+              "value": false
             }
           ]
         },
@@ -8132,9 +8388,9 @@
         }
       }
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada de intermediario para completo em 27/08/2026. Verificado nesta sessão via WebFetch/Europe PMC: Chalk et al. (Obstet Med 2026, PMID 40687619, PMCID PMC12274210, texto integral em acesso aberto) — fonte da Tabela 1 com limiares de diâmetro aórtico por síndrome (Marfan, Loeys-Dietz, Ehlers-Danlos vascular, valva bicúspide, Turner), intervalos de vigilância ecocardiográfica e mecanismo hemodinâmico/hormonal do risco de dissecção na gestação; Donnelly et al. 2012 (PMID 22789886) e Kuperstein et al. 2017 (PMID 27788933), resumos conferidos via Europe PMC, para os dados numéricos de risco em Marfan por diâmetro; Peters et al./ROPAC III (PMID 42005011) para Ehlers-Danlos vascular; Meccanici et al. 2023 (PMID 36688313) para incidência de dissecção em Turner. Limitação de acesso: a busca web (WebSearch) desta sessão esgotou a cota disponível, restringindo a pesquisa a WebFetch em URLs conhecidas; a seção 8 ('Pregnancy in Patients With Aortopathy') da diretriz ACC/AHA 2022 de doença aórtica (PMID 36322642, PMCID PMC9876736) não foi renderizada por completo pela ferramenta de fetch (documento truncado antes da seção 8), de modo que as tabelas de recomendação graduadas (COR/LOE) dessa diretriz não puderam ser citadas diretamente — os limiares numéricos usados neste registro vêm de Chalk et al. 2026 e dos estudos de coorte específicos de Marfan/Turner/Ehlers-Danlos vascular citados acima. related_document_slugs e patient_material_slug confirmados como arquivos reais existentes em content/ e material-paciente/metadados.json desta base, com menção direta ao tema. Nenhuma dose de fármaco foi incluída.",
-    "version": 2,
+    "review_status": "revisado",
+    "review_note": "Ficha aprofundada de intermediario para completo em 27/08/2026. Verificado nesta sessão via WebFetch/Europe PMC: Chalk et al. (Obstet Med 2026, PMID 40687619, PMCID PMC12274210, texto integral em acesso aberto) — fonte da Tabela 1 com limiares de diâmetro aórtico por síndrome (Marfan, Loeys-Dietz, Ehlers-Danlos vascular, valva bicúspide, Turner), intervalos de vigilância ecocardiográfica e mecanismo hemodinâmico/hormonal do risco de dissecção na gestação; Donnelly et al. 2012 (PMID 22789886) e Kuperstein et al. 2017 (PMID 27788933), resumos conferidos via Europe PMC, para os dados numéricos de risco em Marfan por diâmetro; Peters et al./ROPAC III (PMID 42005011) para Ehlers-Danlos vascular; Meccanici et al. 2023 (PMID 36688313) para incidência de dissecção em Turner. Limitação de acesso: a busca web (WebSearch) desta sessão esgotou a cota disponível, restringindo a pesquisa a WebFetch em URLs conhecidas; a seção 8 ('Pregnancy in Patients With Aortopathy') da diretriz ACC/AHA 2022 de doença aórtica (PMID 36322642, PMCID PMC9876736) não foi renderizada por completo pela ferramenta de fetch (documento truncado antes da seção 8), de modo que as tabelas de recomendação graduadas (COR/LOE) dessa diretriz não puderam ser citadas diretamente — os limiares numéricos usados neste registro vêm de Chalk et al. 2026 e dos estudos de coorte específicos de Marfan/Turner/Ehlers-Danlos vascular citados acima. related_document_slugs e patient_material_slug confirmados como arquivos reais existentes em content/ e material-paciente/metadados.json desta base, com menção direta ao tema. Nenhuma dose de fármaco foi incluída. Revisão clínica dirigida pelo Codex em 27/08/2026: bloqueios de segurança corrigidos e regras determinísticas validadas.",
+    "version": 3,
     "fonte_producao": "claude"
   },
   {
