@@ -36,6 +36,7 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
+from app.services.disease_manifest import load_disease_records
 from app.services.importer import _resolve_markdown_slug, import_directory
 from app.services.knowledge_graph import backfill_mesmo_tema
 from app.services.study_slug_aliases import canonicalize_study_slugs
@@ -118,7 +119,10 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
     if source.suffix.lower() != ".json":
         return None
 
-    data = json.loads(source.read_text(encoding="utf-8"))
+    if front == "doencas_especializadas":
+        data = load_disease_records(source)
+    else:
+        data = json.loads(source.read_text(encoding="utf-8"))
     if not isinstance(data, list):
         raise RuntimeError(f"Manifesto da frente {front} deve ser uma lista JSON.")
 
