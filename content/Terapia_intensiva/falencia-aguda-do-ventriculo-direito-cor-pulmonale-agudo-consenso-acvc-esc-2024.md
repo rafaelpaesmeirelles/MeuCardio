@@ -79,6 +79,7 @@ No cor pulmonale agudo: **restringir fluido, noradrenalina como vasopressor de p
 
 ## Tudo com Tudo
 
+- [Calculadora de oxigenação, PaO₂/FiO₂ e gates para SDRA](/calculadoras/oxigenacao-pao2-fio2-sdra-uco) — vínculo clínico direto: SDRA pode aumentar agudamente a pós-carga do VD; a P/F não substitui imagem, causa nem avaliação cardiogênica.
 - [Classificação SCAI dos estágios do choque cardiogênico](classificacao-scai-de-estagios-do-choque-cardiogenico.md)
 - [Cateter de artéria pulmonar no choque cardiogênico](cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional.md)
 - [ECMO venoarterial no choque cardiogênico do infarto](ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais.md)

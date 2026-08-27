@@ -23769,5 +23769,47 @@
       }
     ],
     "revisao": "Lote produzido e referenciado em 27/08/2026; conteúdo e sequência permanecem pendentes de revisão clínica humana antes da publicação."
+  },
+  {
+    "slug": "trilha-uco-oxigenacao-pao2-fio2-e-sdra",
+    "titulo": "UCO: oxigenação, PaO₂/FiO₂ e critérios de SDRA",
+    "tema": "Terapia intensiva",
+    "objetivo": "Calcular a razão PaO₂/FiO₂ com dados simultâneos, aplicar os gates da definição global sem emitir diagnóstico automático e diferenciar explicitamente SDRA de edema cardiogênico ou sobrecarga volêmica na Unidade Coronariana.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco",
+        "por_que": "Define simultaneidade, fórmula, categorias global e intubada, critérios clínicos/de imagem e o gate cardiogênico antes de qualquer classificação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "oxigenacao-pao2-fio2-sdra-uco",
+        "por_que": "Executa a aritmética P/F e exige suporte, causa, tempo, imagem e origem do edema, sem selecionar tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "ventilacao-protetora-uco",
+        "por_que": "Conecta o reconhecimento à conferência de peso predito, volume corrente e pressões, mantendo parâmetros e decisão clínica fora da automação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+        "por_que": "Explicita a relação direta entre SDRA, aumento de pós-carga do ventrículo direito e custo hemodinâmico da ventilação."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap",
+        "por_que": "Fecha com o diferencial cardiogênico: hipoxemia e opacidades bilaterais não autorizam rotular SDRA quando insuficiência cardíaca/sobrecarga explicam primariamente o edema."
+      }
+    ],
+    "revisao": "Lote produzido e referenciado em 27/08/2026; conteúdo, gates e sequência permanecem pendentes de revisão clínica humana antes da publicação."
   }
 ]

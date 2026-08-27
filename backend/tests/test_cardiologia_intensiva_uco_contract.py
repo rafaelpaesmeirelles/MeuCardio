@@ -85,6 +85,14 @@ def test_cockpit_expoe_acidose_metabolica_com_escopo_explicito():
     assert "Winter, ânion gap e correção opcional por albumina" in pagina
 
 
+def test_cockpit_expoe_oxigenacao_com_gate_cardiogenico():
+    pagina = _texto("pages/CardiologiaIntensiva.tsx")
+
+    assert '"oxigenacao-pao2-fio2-sdra-uco"' in pagina
+    assert '/calculadoras/oxigenacao-pao2-fio2-sdra-uco' in pagina
+    assert "PaO₂/FiO₂, suporte e gate de edema cardiogênico" in pagina
+
+
 def test_auditoria_descobre_calculadoras_de_registros_modulares():
     auditoria = (ROOT / "scripts" / "audit_tudo_com_tudo.py").read_text(encoding="utf-8")
 
@@ -115,6 +123,34 @@ def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
     assert any(
         etapa["item_type"] == "calculadora"
         and etapa["item_slug"] == "acidose-metabolica-winter-anion-gap-uco"
+        for etapa in trilha["etapas"]
+    )
+
+
+def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
+    slug = "oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco"
+    documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
+    edema = (
+        CONTENT
+        / "ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap.md"
+    ).read_text(encoding="utf-8")
+    vd = (
+        CONTENT
+        / "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md"
+    ).read_text(encoding="utf-8")
+    trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
+    trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-oxigenacao-pao2-fio2-e-sdra")
+
+    assert "review_status: pendente_revisao" in documento
+    assert "Vínculo clínico direto" in documento
+    assert "Vínculo diferencial explícito" in documento
+    assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in edema
+    assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in vd
+    assert "\\[" not in documento
+    assert trilha["review_status"] == "pendente_revisao"
+    assert any(
+        etapa["item_type"] == "calculadora"
+        and etapa["item_slug"] == "oxigenacao-pao2-fio2-sdra-uco"
         for etapa in trilha["etapas"]
     )
 

@@ -72,6 +72,17 @@ REFERENCIAS_ACIDOSE_METABOLICA = (
     "critical-care/clinical-education/abgs.php."
 )
 
+REFERENCIAS_OXIGENACAO_SDRA = (
+    "Matthay MA et al. A New Global Definition of Acute Respiratory Distress "
+    "Syndrome. Am J Respir Crit Care Med. 2024;209:37-47. "
+    "doi:10.1164/rccm.202303-0558WS. PMID:37487152; ARDS Definition Task Force. "
+    "Acute respiratory distress syndrome: the Berlin Definition. JAMA. "
+    "2012;307:2526-2533. doi:10.1001/jama.2012.5669. PMID:22797452; Qadir N "
+    "et al. An Update on Management of Adult Patients with ARDS: An Official ATS "
+    "Clinical Practice Guideline. Am J Respir Crit Care Med. 2024;209:24-36. "
+    "doi:10.1164/rccm.202311-2011ST. PMID:38032683."
+)
+
 
 def _ventilacao_protetora(dados: dict) -> dict:
     sexo = dados["sexo_biologico"]
@@ -772,9 +783,231 @@ _ACIDOSE_METABOLICA = Calculator(
 )
 
 
+def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
+    pao2 = float(dados["pao2_mmhg"])
+    fio2_percentual = float(dados["fio2_percentual"])
+    suporte = dados["suporte_respiratorio"]
+    peep = _numero_opcional(dados, "peep_cpap_cmh2o")
+    fluxo = _numero_opcional(dados, "fluxo_cnaf_l_min")
+
+    if not all(math.isfinite(valor) for valor in (pao2, fio2_percentual)):
+        raise ValueError("Informe somente valores numéricos finitos.")
+    if not 20 <= pao2 <= 800:
+        raise ValueError("Informe PaO₂ entre 20 e 800 mmHg.")
+    if not 21 <= fio2_percentual <= 100:
+        raise ValueError("Informe FiO₂ entre 21% e 100%.")
+    if suporte not in {"invasiva", "vni_cpap", "cnaf", "oxigenio_convencional"}:
+        raise ValueError("Selecione um suporte respiratório válido.")
+    if peep is not None and not 0 <= peep <= 30:
+        raise ValueError("Informe PEEP/CPAP entre 0 e 30 cmH₂O.")
+    if fluxo is not None and not 0 <= fluxo <= 100:
+        raise ValueError("Informe fluxo da CNAF entre 0 e 100 L/min.")
+
+    relacao_pf = pao2 / (fio2_percentual / 100)
+    if relacao_pf > 300:
+        faixa_pf = ">300 mmHg — não preenche o limiar de hipoxemia da definição global"
+    elif relacao_pf > 200:
+        faixa_pf = "200–300 mmHg — faixa leve apenas na categoria intubada"
+    elif relacao_pf > 100:
+        faixa_pf = "100–200 mmHg — faixa moderada apenas na categoria intubada"
+    else:
+        faixa_pf = "≤100 mmHg — faixa grave apenas na categoria intubada"
+
+    if suporte == "invasiva":
+        categoria = "intubada"
+        suporte_ok = peep is not None and peep >= 5
+        detalhe_suporte = (
+            f"ventilação invasiva com PEEP {peep:g} cmH₂O"
+            if peep is not None
+            else "ventilação invasiva sem PEEP informada"
+        )
+        gate_suporte = "PEEP ≥5 cmH₂O"
+    elif suporte == "vni_cpap":
+        categoria = "não intubada"
+        suporte_ok = peep is not None and peep >= 5
+        detalhe_suporte = (
+            f"VNI/CPAP com pressão expiratória {peep:g} cmH₂O"
+            if peep is not None
+            else "VNI/CPAP sem pressão expiratória informada"
+        )
+        gate_suporte = "pressão expiratória ≥5 cmH₂O"
+    elif suporte == "cnaf":
+        categoria = "não intubada"
+        suporte_ok = fluxo is not None and fluxo >= 30
+        detalhe_suporte = (
+            f"CNAF com fluxo {fluxo:g} L/min"
+            if fluxo is not None
+            else "CNAF sem fluxo informado"
+        )
+        gate_suporte = "fluxo ≥30 L/min"
+    else:
+        categoria = "fora das categorias de suporte em ambiente com recursos"
+        suporte_ok = False
+        detalhe_suporte = "oxigênio convencional/baixo fluxo"
+        gate_suporte = "CNAF ≥30 L/min, VNI/CPAP ≥5 cmH₂O ou ventilação invasiva com PEEP ≥5 cmH₂O"
+
+    criterios = {
+        "fator predisponente agudo": bool(dados.get("fator_predisponente_agudo")),
+        "início ou piora em até 1 semana": bool(dados.get("inicio_ate_uma_semana")),
+        "opacidades bilaterais compatíveis": bool(dados.get("opacidades_bilaterais")),
+        "edema não primariamente cardiogênico/sobrecarga": bool(
+            dados.get("edema_nao_primariamente_cardiogenico")
+        ),
+        "hipoxemia não primariamente por atelectasia": bool(
+            dados.get("hipoxemia_nao_primariamente_atelectasia")
+        ),
+    }
+    ausentes = [nome for nome, confirmado in criterios.items() if not confirmado]
+    hipoxemia_ok = relacao_pf <= 300
+
+    if not hipoxemia_ok:
+        status = (
+            "NÃO PREENCHE O LIMIAR DE OXIGENAÇÃO: a razão P/F é maior que 300 mmHg. "
+            "Isso não exclui outra causa de insuficiência respiratória."
+        )
+    elif not suporte_ok:
+        status = (
+            f"GATE DE SUPORTE NÃO PREENCHIDO: {detalhe_suporte}; para esta categoria, "
+            f"a definição global requer {gate_suporte}. Não classificar SDRA por esta ferramenta."
+        )
+    elif ausentes:
+        status = (
+            "CRITÉRIOS CLÍNICOS/DE IMAGEM INCOMPLETOS: oxigenação e suporte atingem o "
+            "limiar, mas faltam confirmações explícitas: " + "; ".join(ausentes) + "."
+        )
+    else:
+        status = (
+            f"CONJUNTO DECLARADO COMPATÍVEL COM OS CRITÉRIOS OPERACIONAIS DA CATEGORIA "
+            f"{categoria.upper()}. Isto não é diagnóstico automático: confirme causa, imagem, "
+            "hemodinâmica, simultaneidade PaO₂/FiO₂ e evolução à beira leito."
+        )
+
+    alerta_cardiogenico = (
+        "Gate cardiogênico confirmado: o edema foi declarado como não exclusiva ou "
+        "primariamente explicado por insuficiência cardíaca/sobrecarga. SDRA e edema "
+        "cardiogênico podem coexistir; documente o raciocínio."
+        if criterios["edema não primariamente cardiogênico/sobrecarga"]
+        else "BLOQUEIO CARDIOGÊNICO: não foi confirmado que insuficiência cardíaca/sobrecarga "
+        "deixam de ser a explicação exclusiva ou principal. Não rotular SDRA."
+    )
+
+    return {
+        "relacao_pao2_fio2_mmhg": round(relacao_pf, 1),
+        "faixa_da_relacao_pf": faixa_pf,
+        "suporte_avaliado": detalhe_suporte,
+        "categoria_global_avaliada": categoria,
+        "status_dos_criterios": status,
+        "alerta_edema_cardiogenico": alerta_cardiogenico,
+        "criterios_ausentes": ausentes or "nenhum entre os campos declarados",
+        "fora_da_faixa": not (hipoxemia_ok and suporte_ok and not ausentes),
+    }
+
+
+def _interpretar_oxigenacao_sdra(resultado: dict) -> str:
+    return (
+        f"Razão PaO₂/FiO₂ = {resultado['relacao_pao2_fio2_mmhg']} mmHg. "
+        f"{resultado['faixa_da_relacao_pf']}. Suporte: {resultado['suporte_avaliado']}. "
+        f"{resultado['status_dos_criterios']} {resultado['alerta_edema_cardiogenico']}"
+    )
+
+
+_OXIGENACAO_SDRA = Calculator(
+    slug="oxigenacao-pao2-fio2-sdra-uco",
+    name="Oxigenação na UCO — PaO₂/FiO₂ e gates para SDRA",
+    theme="Terapia intensiva",
+    purpose=(
+        "Calcula a razão PaO₂/FiO₂ e confere, sem diagnosticar automaticamente, os gates "
+        "de suporte, tempo, fator predisponente, imagem e origem não primariamente cardiogênica."
+    ),
+    fields=[
+        Field("pao2_mmhg", "PaO₂ arterial", "number", "mmHg", min=20, max=800),
+        Field(
+            "fio2_percentual",
+            "FiO₂ no mesmo momento da gasometria",
+            "number",
+            "%",
+            min=21,
+            max=100,
+            help="Informe percentual, por exemplo 40 para FiO₂ 0,40; não use 0,40.",
+        ),
+        Field(
+            "suporte_respiratorio",
+            "Suporte respiratório no momento da PaO₂",
+            "select",
+            options=[
+                {"value": "invasiva", "label": "Ventilação mecânica invasiva"},
+                {"value": "vni_cpap", "label": "VNI ou CPAP"},
+                {"value": "cnaf", "label": "Cânula nasal de alto fluxo (CNAF)"},
+                {"value": "oxigenio_convencional", "label": "Oxigênio convencional/baixo fluxo"},
+            ],
+        ),
+        Field(
+            "peep_cpap_cmh2o",
+            "PEEP ou pressão expiratória da VNI/CPAP",
+            "number",
+            "cmH₂O",
+            min=0,
+            max=30,
+            required=False,
+            help="Obrigatória para avaliar ventilação invasiva, VNI ou CPAP; não é usada para CNAF.",
+        ),
+        Field(
+            "fluxo_cnaf_l_min",
+            "Fluxo total da CNAF",
+            "number",
+            "L/min",
+            min=0,
+            max=100,
+            required=False,
+            help="Obrigatório para avaliar CNAF; a definição global usa o limiar de 30 L/min.",
+        ),
+        Field(
+            "fator_predisponente_agudo",
+            "Há fator predisponente agudo documentado (ex.: pneumonia, sepse, aspiração, trauma, transfusão ou choque)",
+            "boolean",
+        ),
+        Field(
+            "inicio_ate_uma_semana",
+            "Insuficiência respiratória iniciou ou piorou em até 1 semana do fator/sintomas",
+            "boolean",
+        ),
+        Field(
+            "opacidades_bilaterais",
+            "Imagem mostra opacidades bilaterais não explicadas por derrame, atelectasia ou massa",
+            "boolean",
+            help="Radiografia/TC; a definição global também admite ultrassom por operador treinado.",
+        ),
+        Field(
+            "edema_nao_primariamente_cardiogenico",
+            "Edema não é exclusiva ou primariamente explicado por insuficiência cardíaca/sobrecarga",
+            "boolean",
+            help="Gate obrigatório na UCO; SDRA e edema cardiogênico podem coexistir.",
+        ),
+        Field(
+            "hipoxemia_nao_primariamente_atelectasia",
+            "Hipoxemia/troca gasosa não é primariamente explicada por atelectasia",
+            "boolean",
+        ),
+    ],
+    compute=_avaliacao_oxigenacao_sdra,
+    interpret=_interpretar_oxigenacao_sdra,
+    reference=REFERENCIAS_OXIGENACAO_SDRA,
+    kind="assessment",
+    limitations=[
+        "A razão P/F isolada não diagnostica SDRA e pode variar com FiO₂, PEEP, recrutamento, posição e momento da coleta.",
+        "PaO₂ e FiO₂ precisam representar o mesmo momento. FiO₂ estimada em oxigênio convencional/baixo fluxo é imprecisa; por segurança, essa modalidade não preenche o gate de suporte em ambiente com recursos.",
+        "As faixas leve, moderada e grave são exibidas somente como faixas da razão e pertencem à categoria intubada da definição global; não graduam automaticamente o paciente não intubado.",
+        "Insuficiência cardíaca e sobrecarga volêmica precisam de avaliação objetiva quando a origem do edema não está clara. SDRA pode coexistir com edema cardiogênico, mas a relação não deve ser presumida.",
+        "A ferramenta não seleciona FiO₂, PEEP, modo ventilatório, prona, bloqueio neuromuscular ou ECMO; condutas dependem de avaliação clínica e protocolo local.",
+        "A categoria modificada para ambientes com recursos limitados não é automatizada aqui, porque seu contexto e disponibilidade diagnóstica exigem julgamento próprio.",
+    ],
+)
+
+
 INTENSIVE_CARE_CALCULATOR_REGISTRY: dict[str, Calculator] = {
     _VENTILACAO_PROTETORA.slug: _VENTILACAO_PROTETORA,
     _CONFERENCIA_BOMBA.slug: _CONFERENCIA_BOMBA,
     _ESTADIAMENTO_SCAI.slug: _ESTADIAMENTO_SCAI,
     _ACIDOSE_METABOLICA.slug: _ACIDOSE_METABOLICA,
+    _OXIGENACAO_SDRA.slug: _OXIGENACAO_SDRA,
 }

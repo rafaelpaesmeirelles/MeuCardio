@@ -24,6 +24,10 @@ def _calc_acidose():
     return INTENSIVE_CARE_CALCULATOR_REGISTRY["acidose-metabolica-winter-anion-gap-uco"]
 
 
+def _calc_oxigenacao():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["oxigenacao-pao2-fio2-sdra-uco"]
+
+
 def _dados(**mudancas):
     dados = {
         "sexo_biologico": "masculino",
@@ -73,6 +77,22 @@ def _dados_acidose(**mudancas):
         "cloro_meq_l": 104,
         "albumina_referencia_g_dl": 4.0,
         "referencia_ag_sem_potassio_confirmada": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_oxigenacao(**mudancas):
+    dados = {
+        "pao2_mmhg": 80,
+        "fio2_percentual": 40,
+        "suporte_respiratorio": "invasiva",
+        "peep_cpap_cmh2o": 8,
+        "fator_predisponente_agudo": True,
+        "inicio_ate_uma_semana": True,
+        "opacidades_bilaterais": True,
+        "edema_nao_primariamente_cardiogenico": True,
+        "hipoxemia_nao_primariamente_atelectasia": True,
     }
     dados.update(mudancas)
     return dados
@@ -442,3 +462,114 @@ def test_acidose_esta_registrada_com_resultado_estruturado_e_campos_opcionais():
     assert calculadora.status == "implementada"
     assert calculadora.kind == "assessment"
     assert opcionais == {"albumina_g_dl", "limite_superior_ag_meq_l"}
+
+
+def test_oxigenacao_calcula_pf_e_classifica_faixa_intubada_sem_diagnostico_automatico():
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao())
+
+    assert resultado["relacao_pao2_fio2_mmhg"] == 200.0
+    assert "100–200 mmHg" in resultado["faixa_da_relacao_pf"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+    assert "Isto não é diagnóstico automático" in resultado["status_dos_criterios"]
+    assert resultado["fora_da_faixa"] is False
+
+
+def test_oxigenacao_inclui_limites_exatos_pf_300_peep_5_e_cnaf_30():
+    invasiva = _calc_oxigenacao().compute(
+        _dados_oxigenacao(pao2_mmhg=90, fio2_percentual=30, peep_cpap_cmh2o=5)
+    )
+    cnaf = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            pao2_mmhg=90,
+            fio2_percentual=30,
+            suporte_respiratorio="cnaf",
+            peep_cpap_cmh2o=None,
+            fluxo_cnaf_l_min=30,
+        )
+    )
+
+    assert invasiva["relacao_pao2_fio2_mmhg"] == 300.0
+    assert "200–300 mmHg" in invasiva["faixa_da_relacao_pf"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in invasiva["status_dos_criterios"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in cnaf["status_dos_criterios"]
+
+
+def test_oxigenacao_bloqueia_rotulo_quando_origem_cardiogenica_nao_foi_excluida():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(edema_nao_primariamente_cardiogenico=False)
+    )
+
+    assert "edema não primariamente cardiogênico/sobrecarga" in resultado["criterios_ausentes"]
+    assert "BLOQUEIO CARDIOGÊNICO" in resultado["alerta_edema_cardiogenico"]
+    assert "CRITÉRIOS CLÍNICOS/DE IMAGEM INCOMPLETOS" in resultado["status_dos_criterios"]
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "suporte,mudancas,trecho",
+    [
+        ("cnaf", {"fluxo_cnaf_l_min": 30}, "CNAF com fluxo 30 L/min"),
+        ("vni_cpap", {"peep_cpap_cmh2o": 5}, "VNI/CPAP com pressão expiratória 5 cmH₂O"),
+    ],
+)
+def test_oxigenacao_aceita_suporte_nao_intubado_da_definicao_global(
+    suporte, mudancas, trecho
+):
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(suporte_respiratorio=suporte, **mudancas)
+    )
+
+    assert resultado["categoria_global_avaliada"] == "não intubada"
+    assert resultado["suporte_avaliado"] == trecho
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+    assert "faixa moderada apenas na categoria intubada" in resultado["faixa_da_relacao_pf"]
+
+
+@pytest.mark.parametrize(
+    "mudancas,trecho",
+    [
+        ({"peep_cpap_cmh2o": 4}, "GATE DE SUPORTE NÃO PREENCHIDO"),
+        (
+            {"suporte_respiratorio": "cnaf", "peep_cpap_cmh2o": None, "fluxo_cnaf_l_min": 29},
+            "fluxo ≥30 L/min",
+        ),
+        (
+            {"suporte_respiratorio": "oxigenio_convencional", "peep_cpap_cmh2o": None},
+            "oxigênio convencional/baixo fluxo",
+        ),
+        ({"pao2_mmhg": 130}, "NÃO PREENCHE O LIMIAR DE OXIGENAÇÃO"),
+    ],
+)
+def test_oxigenacao_aplica_gates_sem_forcar_classificacao(mudancas, trecho):
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+    texto = f"{resultado['status_dos_criterios']} {resultado['suporte_avaliado']}"
+    assert trecho in texto
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "mudancas,mensagem",
+    [
+        ({"pao2_mmhg": "NaN"}, "valores numéricos finitos"),
+        ({"fio2_percentual": 0.4}, "FiO₂ entre 21% e 100%"),
+        ({"peep_cpap_cmh2o": 31}, "PEEP/CPAP entre 0 e 30"),
+        (
+            {"suporte_respiratorio": "cnaf", "peep_cpap_cmh2o": None, "fluxo_cnaf_l_min": 101},
+            "fluxo da CNAF entre 0 e 100",
+        ),
+    ],
+)
+def test_oxigenacao_rejeita_entradas_invalidas(mudancas, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+
+def test_oxigenacao_esta_registrada_com_gates_opcionais_e_kind_assessment():
+    calculadora = calculators.REGISTRY["oxigenacao-pao2-fio2-sdra-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {"peep_cpap_cmh2o", "fluxo_cnaf_l_min"}
