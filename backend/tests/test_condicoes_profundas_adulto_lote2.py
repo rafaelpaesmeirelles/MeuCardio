@@ -51,9 +51,17 @@ def test_sca_adulta_tem_profundidade_e_decisao_humana_preservada():
     assert disease["area"] == "geral"
     assert disease["category"] == "doenca_coronariana"
     assert disease["completeness"] == "completo"
-    assert disease["review_status"] == "pendente_revisao"
+    # O estado editorial pode evoluir de pendente para revisado sem alterar o
+    # contrato clínico desta ficha. Pendências autorizadas são fiscalizadas
+    # nominalmente pelo gate canônico de review_status.
+    assert disease["review_status"] in {"pendente_revisao", "revisado"}
     assert disease["fonte_producao"] == "chatgpt"
-    assert "revisão clínica humana" in disease["review_note"]
+    review_note = disease["review_note"].casefold()
+    # A formulação editorial pode mudar, mas publicação clínica não pode perder
+    # a decisão humana explícita. A redação atual registra revisão assistida e
+    # autorização final pelo responsável médico.
+    assert "publicação autorizada" in review_note
+    assert "responsável médico" in review_note
     assert len(disease["summary"]) >= 180
     assert len(disease["epidemiology"]) >= 120
     assert len(disease["treatment_summary"]) >= 300

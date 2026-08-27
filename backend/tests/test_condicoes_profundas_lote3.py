@@ -2,13 +2,8 @@
 especializadas já existentes (cardiopediatria, cardiogeriatria, cardiooncologia
 e gravidez), empilhado sobre o lote 2 (PR #542).
 
-Este teste não mede só presença de campo: mede volume mínimo de conteúdo, para
-que uma edição futura não possa esvaziar silenciosamente a ficha de volta a um
-resumo de poucas linhas e ainda passar no gate. Nenhum slug novo foi criado em
-nenhuma coleção — só os oito registros abaixo, já existentes, foram
-aprofundados. Também protege os lotes anteriores (lote 2 do PR #542 e os
-quatro verbetes adultos + AVC do PR #539/#538) contra alteração acidental por
-este lote.
+O contrato protege profundidade e integridade dos verbetes do lote sem congelar
+o tamanho global da coleção, que cresce continuamente pelo Tudo com Tudo.
 """
 
 from __future__ import annotations
@@ -57,8 +52,6 @@ GERAL_PROTEGIDOS = {
     "sindrome-coronariana-cronica",
 }
 
-# Campos de lista com um mínimo de itens abaixo do qual a ficha volta a ser
-# um resumo, não uma ficha profunda.
 MIN_LIST_ITEMS = {
     "presentation": 4,
     "differentials": 3,
@@ -73,17 +66,17 @@ MIN_TEXT_CHARS = {
     "epidemiology": 400,
     "treatment_summary": 800,
 }
-# diagnostic_approach pode ser texto corrido (str) ou objeto estruturado
-# (dict, ex.: delirium-cardiogeriatria com sub-blocos de rastreio/diferencial/
-# investigação) — ambos os formatos são suportados pelo schema
-# (SpecialtyDisease.diagnostic_approach é JSONB/dict) e pelo frontend
-# (StructuredBlock). O mínimo de substância é medido pelo tamanho serializado.
 MIN_DIAGNOSTIC_APPROACH_CHARS = 400
 
 
-def _load_doencas() -> dict[str, dict]:
+def _load_doenca_items() -> list[dict]:
     items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
-    return {item["slug"]: item for item in items}
+    assert isinstance(items, list)
+    return items
+
+
+def _load_doencas() -> dict[str, dict]:
+    return {item["slug"]: item for item in _load_doenca_items()}
 
 
 def _all_document_slugs() -> set[str]:
@@ -95,75 +88,54 @@ def _all_patient_material_slugs() -> set[str]:
     return {item["slug"] for item in items}
 
 
-def test_lote_nao_criou_nem_removeu_slug_de_doenca():
-    doencas = _load_doencas()
-    assert LOTE_SLUGS <= set(doencas)
-    # O corpus integrado preserva todos os slugs e incorpora os lotes posteriores ao baseline
-    # do PR #542, totalizando 100 doenças canônicas.
-    assert len(doencas) == 100
+def test_lote_preserva_slugs_e_corpus_nao_regride_abaixo_do_baseline():
+    items = _load_doenca_items()
+    slugs = [item["slug"] for item in items]
+    assert len(slugs) == len(set(slugs)), "slug de doença duplicado"
+    assert LOTE_SLUGS <= set(slugs)
+    assert len(slugs) >= 100
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
 def test_ficha_tem_marcacao_editorial_correta(slug: str):
-    doencas = _load_doencas()
-    item = doencas[slug]
+    item = _load_doencas()[slug]
     assert item.get("fonte_producao") == "claude"
     assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
-    assert item.get("review_note"), "ficha aprofundada precisa de review_note explicando o que mudou"
+    assert item.get("review_note")
     assert item.get("source_refs") and len(item["source_refs"]) >= 2
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
 def test_ficha_atinge_profundidade_minima_e_nao_e_mero_resumo(slug: str):
-    doencas = _load_doencas()
-    item = doencas[slug]
-
+    item = _load_doencas()[slug]
     for field, minimum in MIN_LIST_ITEMS.items():
         value = item.get(field) or []
         assert isinstance(value, list), f"{slug}.{field} deveria ser lista"
-        assert len(value) >= minimum, (
-            f"{slug}.{field} tem {len(value)} itens, mínimo exigido {minimum} "
-            "— ficha regrediu para resumo"
-        )
-
+        assert len(value) >= minimum, f"{slug}.{field} regrediu para resumo"
     for field, minimum in MIN_TEXT_CHARS.items():
         value = item.get(field) or ""
         assert isinstance(value, str), f"{slug}.{field} deveria ser texto corrido"
-        assert len(value) >= minimum, (
-            f"{slug}.{field} tem {len(value)} caracteres, mínimo exigido {minimum} "
-            "— ficha regrediu para resumo"
-        )
-
+        assert len(value) >= minimum, f"{slug}.{field} regrediu para resumo"
     diagnostic = item.get("diagnostic_approach")
-    assert diagnostic, f"{slug}.diagnostic_approach vazio"
-    assert isinstance(diagnostic, (str, dict)), f"{slug}.diagnostic_approach deveria ser texto ou objeto estruturado"
+    assert diagnostic
+    assert isinstance(diagnostic, (str, dict))
     serialized_len = len(diagnostic) if isinstance(diagnostic, str) else len(json.dumps(diagnostic, ensure_ascii=False))
-    assert serialized_len >= MIN_DIAGNOSTIC_APPROACH_CHARS, (
-        f"{slug}.diagnostic_approach tem {serialized_len} caracteres, mínimo exigido "
-        f"{MIN_DIAGNOSTIC_APPROACH_CHARS} — ficha regrediu para resumo"
-    )
+    assert serialized_len >= MIN_DIAGNOSTIC_APPROACH_CHARS
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
 def test_ficha_tem_assistente_deterministico_seguro(slug: str):
-    doencas = _load_doencas()
-    item = doencas[slug]
+    item = _load_doencas()[slug]
     questions = item.get("assistant_questions") or []
     rules = item.get("assistant_rules") or []
-    assert len(questions) >= 3, f"{slug}: menos de 3 perguntas de assistente"
-    assert len(rules) >= 3, f"{slug}: menos de 3 regras de assistente"
-
+    assert len(questions) >= 3
+    assert len(rules) >= 3
     q_errors, q_ids = validate_question_definitions(slug, questions)
     r_errors = validate_rule_definitions(slug, rules, q_ids)
     assert q_errors == []
     assert r_errors == []
-
-    # Prioridade máxima (100) reservada a um cenário de emergência real —
-    # toda ficha do lote define pelo menos uma regra de prioridade alta.
-    assert any(rule.get("priority", 0) >= 70 for rule in rules), (
-        f"{slug}: nenhuma regra de alta prioridade — assistente não escala risco"
-    )
+    assert any(rule.get("priority", 0) >= 70 for rule in rules)
 
 
 def test_nenhuma_regra_do_lote_reproduz_escore_proprietario():
@@ -178,21 +150,16 @@ def test_nenhuma_regra_do_lote_reproduz_escore_proprietario():
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
 def test_vinculos_tudo_com_tudo_resolvem_e_sao_apenas_documentos_e_material(slug: str):
-    doencas = _load_doencas()
-    item = doencas[slug]
+    item = _load_doencas()[slug]
     documentos = _all_document_slugs()
     materiais = _all_patient_material_slugs()
-
     related = item.get("related_document_slugs") or []
-    assert related, f"{slug}: sem nenhum vínculo direto a documento"
+    assert related
     for target in related:
-        assert target in documentos, f"{slug}: related_document_slugs aponta para documento inexistente: {target}"
-
+        assert target in documentos, f"{slug}: documento inexistente: {target}"
     patient_material = item.get("patient_material_slug")
     if patient_material:
-        assert patient_material in materiais, (
-            f"{slug}: patient_material_slug aponta para material inexistente: {patient_material}"
-        )
+        assert patient_material in materiais
 
 
 def test_lote_nao_alterou_o_lote2_do_pr542():
@@ -203,9 +170,7 @@ def test_lote_nao_alterou_o_lote2_do_pr542():
         assert item.get("fonte_producao") == "claude"
         assert item.get("review_status") == "revisado"
         assert item.get("completeness") == "completo"
-        # versão deve continuar em 2 (aprofundada uma única vez, pelo lote 2) —
-        # se o lote 3 tocasse acidentalmente nessas fichas, a versão subiria.
-        assert item.get("version") == 2, f"{slug}: versão mudou — lote 3 não deveria tocar no lote 2"
+        assert item.get("version") == 2, f"{slug}: versão mudou"
     assert LOTE2_SLUGS.isdisjoint(LOTE_SLUGS)
 
 

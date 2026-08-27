@@ -24,6 +24,7 @@ from app.services.clinical_rule_engine import (
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DOENCAS_PATH = REPOSITORY_ROOT / "doencas/metadados.json"
+VALID_REVIEW_STATUSES = {"revisado", "pendente_revisao"}
 
 LOTE_SLUGS = {
     "canalopatias-pediatricas",
@@ -36,8 +37,6 @@ LOTE_SLUGS = {
     "valvopatias-na-gravidez",
 }
 
-# Campos de lista com um mínimo de itens abaixo do qual a ficha volta a ser
-# um resumo, não uma ficha profunda.
 MIN_LIST_ITEMS = {
     "presentation": 4,
     "differentials": 4,
@@ -55,9 +54,14 @@ MIN_TEXT_CHARS = {
 }
 
 
-def _load_doencas() -> dict[str, dict]:
+def _load_doenca_items() -> list[dict]:
     items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
-    return {item["slug"]: item for item in items}
+    assert isinstance(items, list)
+    return items
+
+
+def _load_doencas() -> dict[str, dict]:
+    return {item["slug"]: item for item in _load_doenca_items()}
 
 
 def _all_document_slugs() -> set[str]:
@@ -69,12 +73,14 @@ def _all_patient_material_slugs() -> set[str]:
     return {item["slug"] for item in items}
 
 
-def test_lote_nao_criou_nem_removeu_slug_de_doenca():
-    doencas = _load_doencas()
-    assert LOTE_SLUGS <= set(doencas)
-    # Nenhum contador global mudou: o total de doenças é o mesmo do baseline
-    # do PR #539 (87 originais + AVC do #538 + 4 do #539).
-    assert len(doencas) == 92
+def test_lote_preserva_slugs_e_corpus_nao_regride_abaixo_do_baseline():
+    items = _load_doenca_items()
+    slugs = [item["slug"] for item in items]
+    assert len(slugs) == len(set(slugs)), "slug de doença duplicado"
+    assert LOTE_SLUGS <= set(slugs)
+    # 92 é o piso certificado quando este lote foi criado; lotes posteriores
+    # podem adicionar doenças sem invalidar o contrato histórico.
+    assert len(slugs) >= 92
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
@@ -82,7 +88,7 @@ def test_ficha_tem_marcacao_editorial_correta(slug: str):
     doencas = _load_doencas()
     item = doencas[slug]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") in VALID_REVIEW_STATUSES
     assert item.get("completeness") == "completo"
     assert item.get("review_note"), "ficha aprofundada precisa de review_note explicando o que mudou"
     assert item.get("source_refs") and len(item["source_refs"]) >= 2
@@ -123,9 +129,6 @@ def test_ficha_tem_assistente_deterministico_seguro(slug: str):
     r_errors = validate_rule_definitions(slug, rules, q_ids)
     assert q_errors == []
     assert r_errors == []
-
-    # Prioridade máxima (100) reservada a um cenário de emergência real —
-    # toda ficha do lote define pelo menos uma regra de prioridade alta.
     assert any(rule.get("priority", 0) >= 70 for rule in rules), (
         f"{slug}: nenhuma regra de alta prioridade — assistente não escala risco"
     )
