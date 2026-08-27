@@ -53,6 +53,18 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
+        # Lote 4 de profundidade especializada de 27/08/2026 (empilhado sobre
+        # o lote 3, PR #551, já revisado e mesclado em main): oito fichas já
+        # existentes, aprofundadas sem criar slug novo — ver review_note de
+        # cada uma.
+        "insuficiencia-cardiaca-no-idoso",
+        "pre-eclampsia-e-risco-cardiovascular",
+        "cardiomiopatia-periparto",
+        "fibrilacao-atrial-no-idoso",
+        "cardiotoxicidade-por-antraciclinas",
+        "miocardite-por-inibidor-checkpoint",
+        "tetralogia-de-fallot",
+        "transposicao-das-grandes-arterias",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
