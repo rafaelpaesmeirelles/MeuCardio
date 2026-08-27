@@ -9308,29 +9308,510 @@
     "name": "Estenose pulmonar congênita",
     "aliases": [
       "estenose valvar pulmonar",
-      "EP pulmonar"
+      "estenose pulmonar isolada",
+      "EP congênita"
     ],
     "area": "cardiopediatria",
     "category": "cardiopatia_congenita",
     "subtype": "obstrucao_via_saida_direita",
     "cyanosis_class": "acianotica",
     "prevalence_rank": 14,
-    "completeness": "basico",
-    "summary": "Obstrução da via de saída direita, geralmente valvar, cuja gravidade e evolução orientam a necessidade de vigilância ou intervenção especializada.",
+    "completeness": "completo",
+    "summary": "A estenose pulmonar congênita é uma obstrução da via de saída do ventrículo direito, mais frequentemente no nível da valva pulmonar. A forma valvar isolada costuma resultar de fusão comissural e abertura em domo; valva displásica, anel hipoplásico, obstrução subvalvar, supravalvar ou de ramos pulmonares exigem outra estratégia. A gravidade deve integrar anatomia, velocidade/gradiente Doppler, função e pressão do ventrículo direito, sintomas, idade e fluxo; um número isolado não define intervenção. Lesões leves após a primeira infância geralmente evoluem de modo favorável, mas lactentes com obstrução maior que leve podem progredir rapidamente e precisam de vigilância estreita. Estenose crítica neonatal pode ser ducto-dependente e é emergência distinta do seguimento ambulatorial. Quando a valva é adequada, a valvoplastia pulmonar por balão é a intervenção preferida para obstrução moderada/grave sintomática ou hemodinamicamente relevante; valva muito displásica, anel pequeno ou obstrução multinível pode requerer cirurgia. O seguimento continua após alívio porque estenose residual, insuficiência pulmonar, dilatação/disfunção do VD e redução da capacidade funcional podem emergir ao longo da vida.",
+    "epidemiology": "A estenose valvar pulmonar isolada corresponde a cerca de 7–12% das cardiopatias congênitas segundo o algoritmo ACC. A apresentação varia do neonato crítico ao adulto assintomático com sopro. A evolução é fortemente dependente da idade e da gravidade: a progressão é mais provável nas primeiras semanas e meses, motivo pelo qual o ACC recomenda controle clínico próximo em lactentes com lesão acima de leve; crianças maiores com estenose leve podem ser acompanhadas com intervalos de 2–3 anos e nem sempre necessitam ecocardiograma em toda visita. A estenose pulmonar, frequentemente com valva displásica, é a anomalia cardíaca mais comum da síndrome de Noonan e ocorre em aproximadamente 25–71% das pessoas afetadas segundo GeneReviews; o fenótipo sindrômico também pode incluir cardiomiopatia hipertrófica e distúrbios hemorrágicos relevantes ao procedimento. Formas periféricas ou de ramos associam-se a outros contextos, como síndrome de Alagille, e não devem ser misturadas automaticamente ao algoritmo de valva isolada. A valvoplastia por balão transformou o prognóstico da forma valvar típica, mas pode deixar insuficiência pulmonar progressiva. A evidência pediátrica inclui coortes, registros de cateterismo e consenso, com variação entre centros nos limiares de intervenção; por isso a indicação exige correlação anatômico-fisiológica.",
+    "presentation": [
+      "Sopro sistólico ejetivo no foco pulmonar, clique de ejeção e desdobramento amplo da segunda bulha",
+      "Forma leve assintomática detectada em exame de rotina",
+      "Dispneia, fadiga, dor torácica ou menor capacidade ao esforço na obstrução moderada/grave",
+      "Síncope ou pré-síncope ao esforço em obstrução importante, marcador de avaliação urgente",
+      "Hepatomegalia, edema e sinais de falência direita em doença avançada",
+      "Cianose no neonato com estenose crítica, fluxo pulmonar ducto-dependente ou comunicação direita-esquerda",
+      "Taquipneia, dificuldade alimentar e baixo débito no recém-nascido crítico",
+      "Hipertrofia do VD e alterações de repolarização no ECG proporcionalmente à gravidade",
+      "Palpitações ou arritmia em pacientes com sobrecarga direita ou após intervenção",
+      "Insuficiência pulmonar residual assintomática por anos, depois associada a dilatação do VD ou redução funcional"
+    ],
+    "diagnostic_approach": {
+      "anatomia": "Confirmar se a obstrução é valvar isolada e distinguir valva em domo de valva displásica, anel hipoplásico, componente infundibular, supravalvar ou de ramos. Pesquisar comunicação interatrial, tetralogia de Fallot, displasia tricúspide e outras lesões. O algoritmo ACC de estenose isolada não se aplica diretamente a estenose crítica ducto-dependente, obstrução multinível, ramos pulmonares ou gravidez.",
+      "gravidade_ecocardiografica": "O ACC usa velocidade de pico Doppler abaixo de 3 m/s (gradiente de pico abaixo de 36 mmHg) para leve, 3–4 m/s (36–64 mmHg) para moderada e acima de 4 m/s (acima de 64 mmHg) para grave. Esses limites descrevem gravidade, não são gatilhos automáticos. Rever alinhamento do Doppler, fluxo, sedação, gradiente médio, pressão/função do VD, insuficiência tricúspide e anatomia. Em baixo débito, um gradiente aparentemente menor pode subestimar doença grave.",
+      "avaliacao_complementar": "ECG e ecocardiograma são a base. RM é útil após intervenção para quantificar insuficiência pulmonar, volumes e função do VD quando o eco é limitado ou a decisão depende de remodelamento. Teste cardiopulmonar documenta capacidade em pacientes maiores. Cateterismo é terapêutico na maioria dos candidatos à valvoplastia e pode esclarecer discordância hemodinâmica; não deve ser usado apenas por rotina.",
+      "genetica": "Suspeitar síndrome de Noonan/RASopatia quando houver fácies típica, baixa estatura, tórax largo, pescoço alado, atraso, linfedema, sangramento ou cardiomiopatia hipertrófica. Avaliação genética modifica aconselhamento e planejamento sistêmico; em Noonan, valva displásica e doença supravalvar podem reduzir a eficácia do balão."
+    },
+    "differentials": [
+      "Sopro inocente de fluxo pulmonar",
+      "Estenose infundibular ou ventrículo direito de dupla câmara",
+      "Estenose supravalvar ou de ramos pulmonares",
+      "Tetralogia de Fallot e outras cardiopatias com obstrução da via de saída direita",
+      "Atresia pulmonar com septo íntegro no neonato cianótico",
+      "Hipertensão pulmonar com sobrecarga do VD sem obstrução valvar",
+      "Insuficiência tricúspide com sopro sistólico",
+      "Comunicação interatrial com hiperfluxo pulmonar",
+      "Cardiomiopatia hipertrófica com obstrução do VD em RASopatia",
+      "Obstrução adquirida por massa, carcinoide ou sequela cirúrgica em apresentação atípica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com anatomia valvar, anel e níveis de obstrução",
+      "Doppler contínuo alinhado para velocidade de pico, gradiente de pico e gradiente médio",
+      "Avaliação de pressão, hipertrofia, tamanho e função do ventrículo direito",
+      "Quantificação de insuficiência pulmonar e tricúspide, sobretudo após intervenção",
+      "ECG de 12 derivações para sobrecarga direita, condução e arritmia",
+      "Oximetria; saturações pré/pós-ductais no neonato quando pertinente",
+      "Radiografia de tórax em sintomas, cardiomegalia ou diagnóstico diferencial",
+      "RM cardíaca para volumes/função do VD e fração regurgitante quando indicada",
+      "Teste cardiopulmonar de exercício em paciente cooperativo com sintomas ou decisão funcional",
+      "Holter diante de palpitações, síncope ou arritmia documentada",
+      "Cateterismo com possibilidade de valvoplastia em indicação especializada",
+      "Avaliação genética para síndrome de Noonan/RASopatia quando o fenótipo sugerir",
+      "Hemograma, coagulação e avaliação sistêmica dirigidos antes de procedimento, especialmente em Noonan",
+      "Ecocardiograma fetal e planejamento neonatal se houver obstrução importante pré-natal"
+    ],
+    "red_flags": [
+      "Cianose ou hipoxemia no recém-nascido, sugerindo fluxo pulmonar ducto-dependente",
+      "Choque, baixo débito, acidose, alteração do sensório ou oligúria",
+      "Síncope, dor torácica ou dispneia importante ao esforço",
+      "Disfunção do VD, regurgitação tricúspide importante ou pressão suprassistêmica",
+      "Gradiente baixo em contexto de baixo fluxo e anatomia criticamente estreita",
+      "Progressão rápida da obstrução em lactente",
+      "Valva displásica, anel hipoplásico ou obstrução em múltiplos níveis",
+      "Insuficiência pulmonar moderada/importante com dilatação ou queda da função do VD",
+      "Arritmia sustentada ou síncope após intervenção",
+      "Sangramento anormal ou suspeita de coagulopatia em síndrome de Noonan antes de procedimento"
+    ],
+    "treatment_summary": "A conduta depende da idade, anatomia, sintomas e repercussão sobre o VD. Estenose leve em criança maior costuma exigir apenas seguimento infrequente; no lactente, mesmo lesão acima de leve merece controle próximo porque pode progredir nos primeiros meses. Estenose crítica neonatal com cianose, baixo débito ou dependência ductal é emergência em centro congênito: estabilização, manutenção de fluxo pulmonar quando indicada e intervenção não devem esperar o calendário ambulatorial. Na estenose valvar típica com anatomia favorável, a valvoplastia pulmonar por balão é o tratamento preferido para obstrução moderada/grave sintomática ou com repercussão importante. O ACC observa que 40 mmHg de gradiente instantâneo Doppler é limiar razoável para considerar intervenção em orientação de cateterismo pediátrico, mas muitos pacientes assintomáticos nessa faixa podem ser acompanhados de perto; portanto, o assistente não deve converter esse número em ordem automática. Integrar gradiente, função/pressão do VD, sintomas, idade, progressão e anatomia. Cirurgia é considerada quando valva displásica responde mal ao balão, há anel muito pequeno, obstrução sub/supravalvar relevante, insuficiência pulmonar que exige reparo ou lesões associadas. Após intervenção, identificar a lesão dominante: estenose residual/reestenose ou insuficiência pulmonar. Ambas exigem vigilância longitudinal. Em adultos com insuficiência pulmonar moderada ou maior, a diretriz ACC/AHA 2025 recomenda RM para anatomia, quantificação e volumes/função do VD; substituição valvar é indicada quando há sintomas atribuíveis e deve ser discutida também diante de disfunção ou dilatação progressiva do VD, queda funcional ou regurgitação tricúspide relevante. Isso não autoriza um limiar volumétrico universal gerado pelo assistente. Atividade física é individualizada por gravidade, sintomas, ritmo e resposta ao esforço. Gestação geralmente é bem tolerada se a obstrução for leve e o VD normal, mas estenose importante, insuficiência residual e disfunção exigem avaliação pré-concepcional. Profilaxia de endocardite não é rotineira para estenose pulmonar isolada; aplicar apenas critérios atuais de alto risco e reforçar saúde oral.",
+    "ambulatory_flow": [
+      "Confirmar nível da obstrução e se o algoritmo de valva pulmonar isolada é aplicável",
+      "Classificar gravidade por Doppler e integrar gradiente médio, fluxo, pressão e função do VD",
+      "Em lactente com lesão acima de leve, abreviar reavaliação porque a progressão precoce é mais provável",
+      "Em criança maior com lesão leve estável, usar seguimento infrequente sem eco obrigatório em toda visita",
+      "Documentar sintomas, síncope, crescimento, saturação e tolerância ao esforço",
+      "Discutir valvoplastia em centro congênito quando houver sintomas ou repercussão moderada/grave",
+      "Não transformar gradiente isolado em indicação automática de procedimento",
+      "Pesquisar RASopatia/Noonan e distúrbio hemorrágico quando o fenótipo sugerir",
+      "Após intervenção, comparar estenose e insuficiência pulmonar residuais e o remodelamento do VD",
+      "Usar RM e teste de esforço quando mudarem a decisão em adolescente/adulto",
+      "Individualizar esporte, gestação e transição para cardiopatia congênita do adulto",
+      "Reencaminhar para intervenção se houver progressão, sintomas, disfunção do VD ou queda funcional"
+    ],
+    "emergency_flow": [
+      "No neonato cianótico, avaliar ABC, perfusão, saturações pré/pós-ductais e acidose",
+      "Acionar imediatamente UTI neonatal, cardiologia intervencionista e cirurgia congênita",
+      "Considerar fisiologia ducto-dependente e manter o fluxo pulmonar conforme protocolo neonatal do centro",
+      "Obter ecocardiograma urgente para diferenciar estenose crítica, atresia pulmonar e lesões associadas",
+      "Evitar atrasar transferência por tentativa de completar investigação eletiva",
+      "Em síncope/baixo débito na criança maior, monitorizar ritmo e avaliar função/pressão do VD",
+      "Tratar hipóxia, acidose, arritmia e distúrbios de volume sem reduzir abruptamente a pré-carga do VD",
+      "Preparar cateterismo/intervenção com suporte cirúrgico conforme anatomia e condição clínica"
+    ],
+    "monitoring": [
+      "Sintomas, crescimento, síncope, dor e capacidade ao esforço",
+      "Saturação e sinais de falência direita",
+      "Velocidade e gradientes Doppler comparados em série",
+      "Pressão, hipertrofia e função do VD",
+      "Anatomia do anel, valva e níveis sub/supravalvares",
+      "Insuficiência pulmonar e tricúspide após intervenção",
+      "Volumes e função do VD por RM quando indicado",
+      "Capacidade funcional por teste de esforço em paciente cooperativo",
+      "Ritmo por ECG e monitor ambulatorial se sintomático",
+      "Progressão em lactentes com intervalo de controle individualizado",
+      "Manifestações sistêmicas e sangramento na síndrome de Noonan",
+      "Transição, atividade esportiva, contracepção e planejamento gestacional"
+    ],
+    "special_populations": [
+      "Neonato com estenose crítica: emergência ducto-dependente fora do algoritmo ambulatorial",
+      "Lactentes: maior probabilidade de progressão rápida e necessidade de seguimento curto",
+      "Síndrome de Noonan/RASopatia: valva displásica, possível cardiomiopatia e risco hemorrágico",
+      "Estenose de ramos/Alagille: anatomia e estratégia diferentes da valva isolada",
+      "Obstrução multinível: requer imagem e planejamento intervencionista/cirúrgico específicos",
+      "Pós-valvoplastia: insuficiência pulmonar pode tornar-se a lesão dominante",
+      "Atletas: elegibilidade baseada em gravidade, função do VD, sintomas e arritmia",
+      "Adultos: manter cuidado congênito e quantificar insuficiência/VD por RM quando necessário",
+      "Gestação: avaliação pré-concepcional se obstrução ou insuficiência moderada/importante",
+      "Baixo débito: gradiente Doppler pode subestimar a gravidade anatômica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "epc_faixa_etaria",
+        "label": "Qual é a faixa etária?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "neonato",
+            "label": "Neonato"
+          },
+          {
+            "value": "lactente",
+            "label": "Lactente"
+          },
+          {
+            "value": "crianca",
+            "label": "Criança"
+          },
+          {
+            "value": "adolescente_adulto",
+            "label": "Adolescente ou adulto"
+          }
+        ]
+      },
+      {
+        "id": "epc_instavel_cianose",
+        "label": "Há cianose, baixo débito ou desconforto grave?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "epc_nivel",
+        "label": "A obstrução é valvar isolada?",
+        "type": "select",
+        "required": true,
+        "section": "Anatomia",
+        "options": [
+          {
+            "value": "valvar_isolada",
+            "label": "Valvar isolada"
+          },
+          {
+            "value": "multinivel_ramos",
+            "label": "Multinível ou ramos"
+          },
+          {
+            "value": "incerta",
+            "label": "Ainda incerta"
+          }
+        ]
+      },
+      {
+        "id": "epc_gravidade",
+        "label": "Qual é a gravidade ecocardiográfica integrada?",
+        "type": "select",
+        "required": true,
+        "section": "Ecocardiograma",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "incerta",
+            "label": "Incerta/baixo fluxo"
+          }
+        ]
+      },
+      {
+        "id": "epc_sintomas",
+        "label": "Há dispneia, dor, síncope ou limitação atribuível?",
+        "type": "boolean",
+        "section": "Sintomas"
+      },
+      {
+        "id": "epc_progressao",
+        "label": "Houve progressão do gradiente ou repercussão do VD?",
+        "type": "boolean",
+        "section": "Evolução"
+      },
+      {
+        "id": "epc_intervencao_previa",
+        "label": "Já houve valvoplastia ou cirurgia pulmonar?",
+        "type": "boolean",
+        "required": true,
+        "section": "Histórico"
+      },
+      {
+        "id": "epc_ip_residual",
+        "label": "Há insuficiência pulmonar moderada/importante com dilatação ou disfunção do VD?",
+        "type": "boolean",
+        "section": "Pós-intervenção"
+      },
+      {
+        "id": "epc_noonan",
+        "label": "Há fenótipo de síndrome de Noonan/RASopatia ou valva displásica?",
+        "type": "boolean",
+        "section": "Genética"
+      },
+      {
+        "id": "epc_eco_recente",
+        "label": "Há ecocardiograma recente com anatomia e função do VD?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "epc-neonato-instavel",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "epc_faixa_etaria",
+              "op": "eq",
+              "value": "neonato"
+            },
+            {
+              "field": "epc_instavel_cianose",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível estenose pulmonar crítica com fluxo ducto-dependente"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para UTI neonatal e centro congênito; estabilizar e preservar fluxo pulmonar conforme protocolo local."
+          ]
+        }
+      },
+      {
+        "id": "epc-instabilidade-nao-neonatal",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "epc_instavel_cianose",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Comprometimento cardiopulmonar em obstrução da via de saída direita"
+          ],
+          "emergency_flow": [
+            "Avaliação hospitalar imediata com monitorização, ecocardiograma e equipe congênita."
+          ]
+        }
+      },
+      {
+        "id": "epc-grave-sintomatica",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "epc_gravidade",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "epc_sintomas",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Discutir intervenção no centro congênito; o assistente não deve escolher balão, cirurgia ou parâmetros técnicos automaticamente."
+          ]
+        }
+      },
+      {
+        "id": "epc-moderada-progressiva",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "epc_gravidade",
+              "op": "eq",
+              "value": "moderada"
+            },
+            {
+              "field": "epc_progressao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "ambulatory_flow": [
+            "Antecipar revisão especializada e integrar sintomas, VD e anatomia antes de decidir intervenção."
+          ]
+        }
+      },
+      {
+        "id": "epc-lactente-acima-leve",
+        "priority": 86,
+        "when": {
+          "all": [
+            {
+              "field": "epc_faixa_etaria",
+              "op": "eq",
+              "value": "lactente"
+            },
+            {
+              "field": "epc_gravidade",
+              "op": "in",
+              "value": [
+                "moderada",
+                "grave"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Lactentes com estenose acima de leve podem progredir nas primeiras semanas/meses e precisam de intervalo curto individualizado."
+          ]
+        }
+      },
+      {
+        "id": "epc-pos-intervencao-ip",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "epc_intervencao_previa",
+              "op": "truthy"
+            },
+            {
+              "field": "epc_ip_residual",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Insuficiência pulmonar residual com repercussão sobre o VD"
+          ],
+          "suggested_tests": [
+            "Quantificar insuficiência, volumes e função do VD; considerar RM e teste funcional conforme idade e contexto."
+          ]
+        }
+      },
+      {
+        "id": "epc-anatomia-nao-isolada",
+        "priority": 84,
+        "when": {
+          "all": [
+            {
+              "field": "epc_nivel",
+              "op": "in",
+              "value": [
+                "multinivel_ramos",
+                "incerta"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Definição anatômica dos níveis de obstrução"
+          ],
+          "messages": [
+            "Não aplicar mecanicamente o algoritmo de valva pulmonar isolada."
+          ]
+        }
+      },
+      {
+        "id": "epc-sem-eco",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "epc_eco_recente",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Ecocardiograma recente com anatomia, gradientes e função do VD"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico em serviço de cardiopatia congênita."
+          ]
+        }
+      },
+      {
+        "id": "epc-gravidade-incerta-baixo-fluxo",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "epc_gravidade",
+              "op": "eq",
+              "value": "incerta"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Gradiente pode subestimar obstrução em baixo fluxo; integrar anatomia, função e hemodinâmica."
+          ]
+        }
+      },
+      {
+        "id": "epc-noonan",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "epc_noonan",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Encaminhar para avaliação genética/RASopatia e revisar cardiomiopatia, coagulação e manifestações sistêmicas antes de procedimento."
+          ],
+          "messages": [
+            "Valva displásica e obstrução supravalvar podem modificar a resposta à valvoplastia."
+          ]
+        }
+      }
+    ],
     "tags": [
       "estenose pulmonar",
       "valva pulmonar",
-      "congênita"
+      "obstrução da via de saída direita",
+      "valvoplastia por balão",
+      "ventrículo direito",
+      "insuficiência pulmonar",
+      "síndrome de Noonan",
+      "cardiopatia congênita"
     ],
     "source_refs": [
-      "ACC Clinical Practice Algorithm for Pulmonary Stenosis"
+      "Co-Vu J et al. Clinical Practice Algorithm for the Follow-Up of Pulmonary Stenosis Pre- and Post-Intervention. ACC Expert Analysis. 2023.",
+      "Gurvitz M et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2026. doi:10.1161/CIR.0000000000001402",
+      "Morray BH, McElhinney DB. Semilunar valve interventions for congenital heart disease. J Am Coll Cardiol. 2021;77:71-79.",
+      "Feltes TF et al. Indications for cardiac catheterization and intervention in pediatric cardiac disease. Circulation. 2011;123:2607-2652. doi:10.1161/CIR.0b013e31821b1f10",
+      "Sachdeva R et al. 2020 Appropriate Use Criteria for Multimodality Imaging During Follow-Up of Congenital Heart Disease. J Am Coll Cardiol. 2020;75:657-703.",
+      "Roberts AE. Noonan Syndrome. GeneReviews. Atualizado em 2025. NCBI Bookshelf NBK1124."
     ],
     "source_urls": [
-      "https://www.acc.org/latest-in-cardiology/articles/2023/05/16/10/31/clinical-practice-algorithm-for-the-follow-up-of-pulmonary-stenosis-pre-and-post-intervention"
+      "https://www.acc.org/latest-in-cardiology/articles/2023/05/16/10/31/clinical-practice-algorithm-for-the-follow-up-of-pulmonary-stenosis-pre-and-post-intervention",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001402",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2020.11.042",
+      "https://www.ahajournals.org/doi/10.1161/cir.0b013e31821b1f10",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2019.10.002",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1124/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026 com algoritmo ACC de estenose pulmonar, diretriz ACHD 2025, recomendações de cateterismo/imagem e GeneReviews para síndrome de Noonan. Exige revisão humana por cardiologia pediátrica/intervencionista antes de publicação; gradientes, intervalos, indicação e técnica de intervenção, manejo neonatal, RM e reintervenção devem ser individualizados.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
+    "related_document_slugs": [
+      "estenose-pulmonar-valvar-isolada-na-crianca-gravidade-por-doppler-e-criterios-de-valvoplastia-por-balao",
+      "obstrucao-da-via-de-saida-do-ventriculo-direito-estenose-pulmonar-esc-2020",
+      "fluxograma-estenose-pulmonar-obstrucao-via-saida-vd-indicacao-intervencao-esc-2020"
+    ]
   },
   {
     "slug": "valva-aortica-bicuspide-pediatrica",
