@@ -12905,5 +12905,370 @@
     "review_note": "Rascunho estruturado em 27/08/2026 com a diretriz AHA/ACC 2026, sua correção formal de 14/07/2026 e a diretriz brasileira SBPT 2025 sob CC BY 4.0. Requer revisão clínica humana e jurídica antes da publicação, especialmente das categorias A–E, critérios de alta, anticoagulação em populações especiais, contraindicações a reperfusão e comportamento combinado das regras. Conteúdo ESC e fluxogramas derivados foram excluídos deste verbete até licença formal. Nenhuma regra prescreve dose ou terapia avançada automaticamente.",
     "fonte_producao": "chatgpt",
     "version": 1
+  },
+  {
+    "slug": "endocardite-infecciosa",
+    "name": "Endocardite infecciosa",
+    "aliases": [
+      "endocardite bacteriana",
+      "infective endocarditis",
+      "EI"
+    ],
+    "area": "geral",
+    "category": "cardiopatia_adquirida",
+    "subtype": "infecciosa",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 6,
+    "completeness": "completo",
+    "summary": "Infecção da superfície endocárdica — valva nativa, prótese valvar ou dispositivo cardíaco eletrônico — com mortalidade hospitalar elevada, decisão cirúrgica complexa e forte dependência do timing entre antibiótico, controle de foco e cirurgia.",
+    "epidemiology": "A endocardite infecciosa (EI) tem incidência global estimada em 13,8 casos por 100.000 pessoas-ano (dados de carga global de doença de 2019, citados na diretriz ESC 2023 — Delgado V, Ajmone Marsan N, de Waha S, et al. Eur Heart J. 2023;44(39):3948-4042, DOI 10.1093/eurheartj/ehad193, PMID 37622656), com cerca de 66.300 mortes atribuídas à doença naquele ano. O registro europeu EURO-ENDO, com 3.116 pacientes adultos em 156 centros de 40 países e referenciado pela própria diretriz ESC, documentou mortalidade hospitalar de 17,1% (532/3.116 pacientes; Habib G et al., Eur Heart J. 2019;40(39):3222-3232, PMID 31504413); nesse registro a endocardite de válvula nativa correspondeu a 56,6% dos casos, a de válvula protética a 30,1% e a relacionada a dispositivo cardíaco eletrônico a 9,9%, e a mortalidade da endocardite protética é cerca do dobro da de válvula nativa, conforme a diretriz ESC 2023. Os principais fatores predisponentes documentados foram endocardite prévia (8,8% da coorte EURO-ENDO), válvula protética implantada cirurgicamente ou por via transcateter, dispositivo cardíaco eletrônico implantável, uso de droga injetável (6,9%, associado a acometimento predominante de válvulas direitas) e cardiopatia congênita, cuja incidência de EI é 27 a 44 vezes maior que na população geral segundo a mesma diretriz. Estudos hospitalares contemporâneos fora da Europa relatam mortalidade hospitalar na faixa de 15% a 30%, compatível com os números do registro europeu. Especificamente após implante valvar aórtico transcateter (TAVI), um registro internacional de 47 centros (Regueiro A et al., JAMA 2016;316(10):1083-1092) documentou incidência de 1,1% por pessoa-ano (250 casos em 20.006 pacientes), idade mediana 80 anos, tempo mediano entre o TAVI e a endocardite de 5,3 meses, mortalidade intra-hospitalar de 36% e em 2 anos de 66,7%, com cirurgia realizada em apenas 14,8% dos casos — dado sinalizado no acervo como carecendo de atualização frente à evolução das próteses transcateter desde 2015.",
+    "presentation": [
+      "Febre persistente ou recorrente, presente na grande maioria dos casos, muitas vezes com calafrios e sudorese — sintoma mais comum, por vezes se apresentando como febre de origem obscura quando hemoculturas iniciais são negativas ou o exame físico é pouco elucidativo",
+      "Sopro cardíaco novo ou modificação de sopro preexistente, refletindo disfunção valvar por destruição do folheto ou regurgitação nova",
+      "Forma aguda, mais associada a Staphylococcus aureus: evolução em dias, com toxemia, febre alta e potencial deterioração hemodinâmica rápida por destruição valvar",
+      "Forma subaguda, mais associada a estreptococos orais e a enterococos: evolução em semanas a poucos meses, com fadiga, perda de peso, sudorese noturna, artralgia/mialgia e mal-estar inespecífico — quadro frequentemente rotulado inicialmente como febre de origem obscura",
+      "Fenômenos vasculares por embolização séptica: êmbolo arterial sistêmico (incluindo AVC isquêmico), infarto pulmonar séptico (mais comum em acometimento de válvulas direitas, por exemplo em uso de droga injetável), abscesso esplênico ou cerebral, aneurisma micótico, hemorragia intracraniana, hemorragia conjuntival, lesões de Janeway e púrpura purulenta — critérios menores de Duke-ISCVID 2023",
+      "Fenômenos imunológicos: glomerulonefrite por imunocomplexos, nódulos de Osler, manchas de Roth e fator reumatoide positivo — também critérios menores de Duke-ISCVID 2023",
+      "Sinais de insuficiência cardíaca de início recente por destruição valvar (regurgitação grave nova), achado de gravidade que muda a urgência de investigação e conduta",
+      "Manifestações extracardíacas de embolização a distância ou de foco associado, incluindo dor lombar/sinais de espondilodiscite (critério menor vascular reconhecido na versão ESC 2023, ausente na versão ISCVID 2023 paralela)"
+    ],
+    "diagnostic_approach": "O diagnóstico segue a estrutura de contagem dos critérios Duke-ISCVID 2023 (Fowler VG Jr, Durack DT, Selton-Suty C, et al. Clin Infect Dis. 2023;77(4):518-526, DOI 10.1093/cid/ciad271, PMID 37138445), que preserva a classificação clássica em Definida, Possível ou Rejeitada, mas amplia o que conta em cada critério frente ao Duke modificado de 2000. Os critérios maiores agora incluem, além dos microbiológicos clássicos (hemoculturas positivas para organismo típico em 2 ou mais amostras, ou organismo não típico em 3 ou mais), a detecção de ácido nucleico ou sorologia de fase I para Coxiella burnetii, Bartonella spp. e Tropheryma whipplei; achados de imagem — vegetação, abscesso, pseudoaneurisma, fístula ou deiscência protética nova ao ecocardiograma OU à tomografia computadorizada cardíaca (nova como critério maior em 2023); atividade metabólica anormal ao PET-CT com 18F-FDG em válvula nativa ou protética ou em dispositivo; e, também novo em 2023, a inspeção cirúrgica direta compatível com EI, usada quando imagem e confirmação histológica/microbiológica não estão disponíveis. Classifica-se como Definida com 2 critérios maiores, ou 1 maior mais 3 menores, ou 5 menores; Possível com 1 maior mais 1-2 menores, ou 3-4 menores isolados; Rejeitada quando há diagnóstico alternativo firme ou resolução completa do quadro com 4 dias ou menos de antibiótico. O ecocardiograma transtorácico (ETT) é o exame inicial em toda suspeita, mas o transesofágico (ETE) passou a Classe I na ESC 2023 (antes IIa) para praticamente todo caso suspeito, inclusive com ETT positivo — a exceção é EI isolada de válvula nativa direita com ETT de boa qualidade e achado inequívoco. Quando o ETE é inconclusivo ou inviável, a TC cardíaca é indicada, sobretudo para complicações perivalvares e periprotéticas; ela não é automática para todo caso, por exemplo não é indicada apenas por isolamento de S. aureus ou por acometimento tricúspide isolado. O PET-CT com 18F-FDG tem papel ampliado principalmente em prótese valvar e dispositivo implantado, e no estudo TEPvENDO mudou a conduta em aproximadamente 40% dos pacientes com suspeita de EI (IC95% 32-48%), sendo mais útil quando o ecocardiograma é inconclusivo ou o caso permanece classificado como possível pelos critérios de Duke (Duval X et al., PMID 32488236).",
+    "differentials": [
+      "Endocardite trombótica não bacteriana (NBTE, incluindo endocardite de Libman-Sacks e endocardite marântica) — vegetação valvar estéril associada a lúpus eritematoso sistêmico, síndrome antifosfolípide ou câncer, sem infecção; o ecocardiograma transesofágico é superior ao transtorácico para diferenciar (sensibilidade do ETT de apenas 63% nesse contexto, conforme ESC 2023, seção 12.12)",
+      "Febre de origem obscura de outra etiologia (infecciosa, neoplásica ou autoimune), sem acometimento valvar, quando hemoculturas seriadas e imagem cardíaca são repetidamente negativas",
+      "Embolia séptica a partir de outro foco primário (abscesso odontogênico, infecção de cateter, espondilodiscite piogênica primária) sem endocardite associada",
+      "Excrescências de Lambl, fibroelastoma papilar ou outras massas/tumores intracardíacos benignos, que podem mimetizar vegetação ao ecocardiograma",
+      "Febre reumática aguda com valvulite, em contexto epidemiológico compatível",
+      "Mixoma atrial ou outro tumor cardíaco primário com fenômenos embólicos associados"
+    ],
+    "tests": [
+      "Hemoculturas seriadas (pelo menos 3 conjuntos, de sítios de punção distintos, antes de iniciar antibiótico) — finalidade: identificar o agente e sua suscetibilidade, base do critério microbiológico maior; limitação: até 30% dos casos cursam com hemocultura negativa, principalmente por exposição prévia a antibiótico ou organismo fastidioso (DeSimone DC, Garrigos ZE, Marx GE, et al. J Am Heart Assoc. 2025;14(8):e040218, PMID 40094211)",
+      "Ecocardiograma transtorácico (ETT) — finalidade: exame inicial em toda suspeita, de fácil acesso; limitação: sensibilidade reduzida para vegetações pequenas, prótese valvar e complicações perivalvares",
+      "Ecocardiograma transesofágico (ETE) — finalidade: Classe I na ESC 2023 para praticamente todo caso suspeito, mesmo com ETT positivo; maior sensibilidade para vegetação, abscesso e complicação perianular; limitação: semi-invasivo, ainda pode ser inconclusivo em prótese ou dispositivo, e deve ser repetido em 5-7 dias se a suspeita clínica persistir com exame inicial negativo",
+      "Tomografia computadorizada cardíaca — finalidade: indicada quando o ETE é inconclusivo ou inviável, principalmente para complicações perivalvares/periprotéticas (abscesso, pseudoaneurisma); limitação: não indicada automaticamente para todo caso — por exemplo, isolamento de S. aureus ou acometimento tricúspide isolado não bastam por si só",
+      "PET-CT com 18F-FDG — finalidade: critério maior de imagem em Duke-ISCVID 2023, papel ampliado sobretudo em prótese valvar e dispositivo cardíaco implantado, pode identificar foco extracardíaco de infecção/embolização; mudou a conduta em cerca de 40% dos casos suspeitos no estudo TEPvENDO (Duval X et al., PMID 32488236); limitação: falso-positivo por inflamação pós-operatória recente ou material protético, interpretação exige preparo dietético e experiência do centro, e a sensibilidade cai após exposição prévia a antibiótico",
+      "Sorologia e PCR dirigidos para organismos fastidiosos (Coxiella burnetii IgG fase I, Bartonella spp., Tropheryma whipplei) — finalidade: identificar o agente em endocardite com hemocultura negativa, quando a anamnese epidemiológica sugere exposição específica; limitação: exige suspeita clínica direcionada, e raros casos de Coxiella ficam abaixo do limiar sorológico habitual de IgG fase I > 1:800",
+      "Sequenciamento de DNA microbiano livre no plasma (mcfDNA) — finalidade: ferramenta adjunta quando hemocultura e sorologia dirigida não elucidam o agente, sobretudo após antibiótico prévio (identificou patógeno em 60,6% dos casos de EI versus 39,4% pela microbiologia convencional, numa coorte de 141 pacientes; Shishido AA, et al. Open Forum Infect Dis. 2025, PMID 40046887); limitação: não é específico para infecção valvar — 28,6% de detecção clinicamente insignificante entre pacientes com EI rejeitada; não substitui hemocultura nem os critérios diagnósticos formais"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca aguda por destruição valvar (regurgitação grave nova) — sinal de gravidade que muda a urgência da investigação e da discussão com a equipe de endocardite",
+      "Abscesso perianular, pseudoaneurisma ou bloqueio atrioventricular novo — sinal de extensão perivalvar da infecção, indicando TC cardíaca e avaliação urgente pela equipe multidisciplinar",
+      "Embolia sistêmica ou AVC, sobretudo recorrente — muda o timing da imagem cerebral e a discussão de conduta em caráter de urgência",
+      "Vegetação grande (≥10 mm) associada a outro achado de risco embólico — reclassifica a gravidade e acelera a decisão da equipe de endocardite",
+      "Instabilidade hemodinâmica ou choque séptico — exige investigação e decisão em caráter de emergência, não eletivo",
+      "Endocardite relacionada a dispositivo cardíaco eletrônico classificada como definida — sinaliza a necessidade de avaliação urgente para remoção do sistema"
+    ],
+    "treatment_summary": "O tratamento da endocardite infecciosa combina antibioticoterapia prolongada, decisão cirúrgica precoce quando indicada e, em subgrupo selecionado, transição para via oral. A diretriz ESC 2023 (Delgado V, Ajmone Marsan N, de Waha S, et al. Eur Heart J. 2023;44(39):3948-4042, DOI 10.1093/eurheartj/ehad193, PMID 37622656) estrutura o antibiótico em duas fases: fase 1, sempre hospitalar, com 2 semanas de terapia parenteral — janela em que devem ocorrer a cirurgia indicada, a remoção de material infectado e a drenagem de abscesso; fase 2, em paciente selecionado e estável, por via oral ou parenteral ambulatorial (OPAT), completando a duração total. Como princípio geral, a duração soma 4 semanas em valva nativa e 6 semanas em prótese valvar, variando conforme o organismo — estreptococos orais sensíveis podem ter esquema curto de 2 semanas em valva nativa não complicada com função renal normal, enquanto estafilococo resistente à meticilina e endocardite protética exigem esquemas mais longos, com rifampicina acrescida somente após 3-5 dias de terapia eficaz e depuração da bacteremia. O detalhamento de fármaco e dose por agente (estreptococos, estafilococos sensíveis/resistentes à meticilina, enterococos e esquema empírico) está no documento 'Esquemas antibióticos na endocardite infecciosa por agente (ESC 2023)' já existente no acervo, e não é repetido aqui. A cirurgia precoce tem três indicações formais: insuficiência cardíaca refratária por destruição valvar, infecção não controlada (abscesso, pseudoaneurisma, fístula, persistência de febre/bacteremia apesar de antibiótico adequado) e prevenção de embolia séptica. A novidade central de 2023 foi elevar a cirurgia urgente (3-5 dias) para vegetação ≥10 mm associada a outra indicação cirúrgica à Classe I — Nível B quando há evento embólico prévio, Nível C quando associada a disfunção valvar grave — permanecendo Classe IIb a cirurgia por vegetação isolada ≥10 mm em posição aórtica ou mitral, sem disfunção grave e sem embolia prévia, em paciente de baixo risco cirúrgico. O timing após acidente vascular cerebral segue a Seção 10.4: após ataque isquêmico transitório, cirurgia sem atraso (Classe I, Nível B); após qualquer AVC estabelecido, cirurgia sem atraso quando há indicação (IC, infecção não controlada, risco embólico alto), desde que o coma esteja ausente e hemorragia cerebral já tenha sido excluída por TC/RM (Classe I, Nível B) — a condição decisiva não é o tipo de evento, é a exclusão de sangramento e a ausência de coma. Após hemorragia intracraniana, adiar a cirurgia por mais de 1 mês deve ser considerado (Classe IIa, Nível C), exceto se o paciente estiver clinicamente instável, quando cirurgia urgente/emergencial deve ser considerada ponderando o risco de piora neurológica (Classe IIa, Nível C). O estudo POET (Pries-Heje MM et al., seguimento de 5 anos em NEJM 2022;386(6):601-602, PMID 35139280) sustenta a transição parcial para antibiótico oral após estabilização clínica em paciente adulto com endocardite esquerda por estreptococo, Enterococcus faecalis, S. aureus ou estafilococo coagulase-negativo, já com pelo menos 10 dias de antibiótico intravenoso e estável. NÃO se aplica a instabilidade hemodinâmica, infecção não controlada, abscesso/perivalvulite sem estratégia definida, endocardite de câmaras direitas, agentes fora dos listados, baixa adesão/absorção gastrointestinal duvidosa ou impossibilidade de montar esquema oral com biodisponibilidade e atividade adequadas ao agente.",
+    "monitoring": [
+      "Hemoculturas de controle para confirmar esterilização em 48-72h após início do antibiótico adequado; positividade persistente sinaliza infecção não controlada e reforça indicação cirúrgica.",
+      "Função renal seriada (creatinina/clearance) pelo risco de nefrotoxicidade de aminoglicosídeo e vancomicina, com ajuste de dose e dosagem de nível sérico quando aplicável — detalhamento de dose por agente no documento de esquemas antibióticos do acervo, não repetido aqui.",
+      "Marcadores inflamatórios (PCR, leucograma) e curva térmica como indicadores indiretos de resposta terapêutica e de persistência de foco infeccioso.",
+      "Ecocardiograma seriado (transtorácico e, quando indicado, transesofágico) para monitorar tamanho/mobilidade da vegetação, função valvar e surgimento de complicação perianular (abscesso, pseudoaneurisma, bloqueio atrioventricular novo).",
+      "Vigilância clínica para sinais de embolia sistêmica ou pulmonar durante todo o tratamento, com reavaliação periódica da indicação cirúrgica pela equipe de endocardite conforme a evolução.",
+      "Em paciente com dispositivo cardíaco eletrônico implantado, exigir culturas negativas sustentadas antes do reimplante — mais de 72h sem vegetação, mais de 2 semanas se houver vegetação — conforme protocolo específico já registrado no acervo."
+    ],
+    "ambulatory_flow": [
+      "Após completar a fase hospitalar (2 semanas de antibiótico parenteral, decisão cirúrgica e controle de foco), avaliar elegibilidade para a fase 2 ambulatorial: transição para antibiótico oral (critérios POET) ou terapia parenteral ambulatorial (OPAT) em paciente estável, sem infecção não controlada e sem indicação cirúrgica pendente.",
+      "Seguimento clínico estruturado em consulta ambulatorial com a equipe de endocardite (endocarditis team), reavaliando sinais de insuficiência cardíaca, febre recorrente e sinais embólicos, até completar a duração total do antibiótico definida por agente (ver esquemas por agente no acervo).",
+      "Ecocardiograma transtorácico de controle ao final do tratamento, estabelecendo nova linha de base de função valvar e vegetação residual, com repetição durante o seguimento se houver dúvida sobre resposta terapêutica.",
+      "Profilaxia antibiótica em dose única antes de procedimento odontológico de risco (manipulação gengival/periapical ou perfuração de mucosa) apenas em paciente com condição cardiovascular de alto risco (prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida, dispositivo de assistência ventricular) — não é indicação automática para todo paciente submetido a procedimento odontológico.",
+      "Em procedimento não odontológico de alto risco (endoscopia, cistoscopia, biópsia de próstata, procedimento dermatológico) em paciente cardiovascular de alto risco, profilaxia é Classe IIb — decisão individualizada, não rotina; a medida preventiva central é ambiente asséptico e tratamento de infecção ativa antes do procedimento eletivo.",
+      "Orientação sobre sinais de alarme para retorno não programado (febre recorrente, novo sopro, sinais de embolia sistêmica) e reforço de saúde bucal como medida preventiva geral."
+    ],
+    "emergency_flow": [
+      "Reconhecer insuficiência cardíaca aguda por destruição valvar (regurgitação grave nova, edema agudo de pulmão, choque cardiogênico) como indicação de cirurgia emergencial/urgente, independentemente da duração de antibiótico já administrada.",
+      "Diante de bloqueio atrioventricular novo em endocardite aórtica, tratá-lo como sinal de provável abscesso/pseudoaneurisma perianular — não apenas problema elétrico isolado — e investigar com ecocardiograma transesofágico e, se inconclusivo, tomografia cardíaca, comunicando a equipe de endocardite.",
+      "Diante de embolia séptica (AVC, isquemia de membro, infarto esplênico/renal) com vegetação grande e risco embólico persistente, aplicar a indicação cirúrgica por prevenção de embolia; se o evento foi AVC, aplicar o algoritmo específico de timing pós-AVC (Seção 10.4 ESC 2023 — coma ausente e hemorragia excluída por imagem) antes de definir o momento da cirurgia, e não administrar trombolítico (Classe III, Nível C).",
+      "Acionar a equipe de endocardite (endocarditis team) multidisciplinar — cardiologia, cirurgia cardíaca, infectologia, imagem — assim que houver suspeita de instabilidade ou complicação aguda, alinhado ao gatilho já registrado no fluxo de emergência do acervo (febre + sopro novo/piora de sopro, sinais de IC aguda por destruição valvar, êmbolo séptico, vegetação grande com risco embólico).",
+      "Suspender antiagregante ou anticoagulante em vigência de sangramento maior, incluindo hemorragia intracraniana (Classe I, Nível C), e manter hemoculturas seriadas e reavaliação hemodinâmica frequente enquanto a equipe multidisciplinar define o momento cirúrgico (emergencial <24h, urgente 3-5 dias, ou durante a mesma internação)."
+    ],
+    "special_populations": [
+      "Válvula protética (precoce vs. tardia): a distinção existe por perfil microbiológico, não por valor prognóstico do tempo em si — a própria diretriz reconhece isso. Cirurgia é recomendada (Classe I, Nível C) para endocardite protética precoce, definida na tabela de recomendação cirúrgica formal como dentro de 6 meses da cirurgia valvar (ESC 2023, Recommendation Table 19) — atenção: a seção de epidemiologia da mesma diretriz usa corte de 1 ano, inconsistência registrada no próprio documento fonte. Endocardite protética tardia não complicada e não estafilocócica pode ser manejada conservadoramente, com seguimento próximo. Um estudo de coorte de 2024 (Papadimitriou-Olivgeris et al., Lausanne/Zurique, 302 episódios) não encontrou diferença estatisticamente significativa de mortalidade em 1 ano entre precoce e tardia (21% vs. 32%, p=0,126), questionando o corte automático por tempo da diretriz.",
+      "Pós-TAVI: incidência de 1,1% por pessoa-ano (250 casos em 20.006 pacientes), idade mediana 80 anos, tempo mediano entre TAVI e endocardite de 5,3 meses — mais precoce que o padrão típico de endocardite protética cirúrgica tardia (Regueiro A et al., JAMA 2016;316(10):1083-1092, registro internacional de 47 centros). Mortalidade intra-hospitalar de 36% e mortalidade em 2 anos de 66,7%; cirurgia foi realizada em apenas 14,8% dos casos. Perfil microbiológico difere da valva nativa comunitária: predominam enterococo (24,6%) e S. aureus (23,3%), não estreptococo viridans, o que deve orientar a antibioticoterapia empírica. Dados do registro são de até outubro de 2015 e podem estar desatualizados frente à evolução das próteses transcateter.",
+      "Usuário de drogas injetáveis (PWID): endocardite tricúspide em PWID responde por cerca de um terço de toda endocardite de câmaras direitas nos EUA, mas metade dos casos também acomete câmaras esquerdas — não é sinônimo de doença tricúspide isolada. Cerca de 90% dos casos de câmaras direitas são tratados só com terapia médica, sem cirurgia; os critérios cirúrgicos usados são os mesmos padrão da base, sem modificação específica para PWID, mas há cautela adicional pela alta taxa de recaída de uso de substância (uso persiste em até 70% após a cirurgia; causa de óbito mais comum pós-cirúrgico é recaída/reinfecção, cerca de 55%, não complicação cirúrgica). Tratar o transtorno por uso de substância (terapia medicamentosa para transtorno por uso de opioide — buprenorfina/metadona, iniciada ainda na internação) é parte do tratamento da endocardite, não encaminhamento acessório; equipe multidisciplinar dedicada reduziu o tempo até consulta de medicina da dependência de 3,8 para 1,0 dia (Paras ML et al., Massachusetts General Hospital, 2023).",
+      "Dispositivo cardíaco implantável (CIED): a remoção do dispositivo é a pedra angular do manejo efetivo da endocardite associada a CIED, mas na prática é feita numa minoria dos casos; mortalidade sem remoção é 10,6% contra 6,8% em quem o removeu. Os critérios Duke-ISCVID 2023 passaram a incluir a presença de CIED como novo critério menor de predisposição, reconhecendo-o formalmente como fator de risco distinto. A diferenciação entre endocardite de dispositivo (envolvimento do eletrodo/valva) e infecção de bolsa isolada (sem endocardite) não está descrita com critério explícito nas fontes revisadas nesta produção e permanece como lacuna a verificar em fonte adicional.",
+      "Endocardite fúngica: mais rara e mais letal, com indicação cirúrgica quase sempre presente. Em Candida, cirurgia em valva nativa é recomendada dentro de uma semana e ainda mais precoce em prótese valvar; em Aspergillus, cirurgia precoce combinada com antifúngico (voriconazol ou anfotericina B lipídica) é a abordagem padrão, podendo exigir antifúngico por toda a vida após a troca valvar. Duração do tratamento é bem mais longa que no caso geral: indução de 6-8 semanas em valva nativa e até 1 ano em prótese, seguida de terapia supressiva de 1-2 anos quando a cirurgia não é realizada.",
+      "Recidiva (relapso vs. reinfecção): relapso é causado pelo mesmo microrganismo do episódio anterior e exige busca ativa de foco infeccioso persistente (material protético residual, abscesso não drenado, tratamento inadequado) — a pergunta clínica correta passa a ser por que a infecção não foi erradicada, não apenas repetir o mesmo esquema. Reinfecção é causada por microrganismo diferente, tipicamente após mais de 6 meses, e se comporta como evento novo e independente, direcionando a investigação para o fator de risco de base (prótese, uso de droga injetável, porta de entrada recorrente, dispositivo) em vez de falha terapêutica prévia. A distinção reabre ou não a avaliação cirúrgica com viés de suspeita elevado para foco residual.",
+      "Gravidez/puerpério: o princípio central é não reduzir a intensidade diagnóstica ou terapêutica materna por causa da gestação; a gestação modifica a escolha do antimicrobiano (segurança materno-fetal, idade gestacional) e o planejamento de cirurgia/parto, mas as indicações maternas clássicas de cirurgia (IC por disfunção valvar, infecção não controlada, abscesso, alto risco embólico) permanecem válidas e não devem ser adiadas por causa da gravidez. Quando cirurgia é necessária, a decisão é individualizada entre equipe de endocardite e equipe de cardiopatia na gravidez, avaliando viabilidade fetal e possibilidade de parto antes da cirurgia; não há idade gestacional que determine automaticamente a ordem. No puerpério, aplicam-se os critérios maternos usuais, ajustando apenas compatibilidade do antimicrobiano com a lactação.",
+      "Cardiopatia congênita: profilaxia antibiótica específica aplica-se apenas a três subcategorias, não a qualquer cardiopatia congênita — cianótica não reparada (incluindo shunts/condutos paliativos, indicação permanente enquanto não reparada); reparada com material protético/dispositivo, apenas nos primeiros 6 meses após o procedimento (tempo de endotelização); e reparada com defeito residual adjacente a patch/dispositivo, indicação sem prazo, enquanto o defeito existir. A diretriz de referência restringiu deliberadamente o alvo — de maior risco de desenvolver endocardite para maior risco de desfecho adverso se a endocardite ocorrer — e deixou de recomendar profilaxia para qualquer outra forma de cardiopatia congênita fora dessas três subcategorias."
+    ],
+    "assistant_questions": [
+      {
+        "id": "fever_new_or_worsening_murmur",
+        "label": "Há febre associada a sopro cardíaco novo ou piora de sopro preexistente?",
+        "type": "boolean",
+        "required": true,
+        "section": "Apresentação"
+      },
+      {
+        "id": "acute_heart_failure_signs",
+        "label": "Há sinais de insuficiência cardíaca aguda (dispneia importante, edema agudo de pulmão, choque) associados?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "new_av_block_or_perianular_signs",
+        "label": "Há bloqueio atrioventricular novo ou sinais sugestivos de abscesso/pseudoaneurisma perianular?",
+        "type": "boolean",
+        "required": true,
+        "section": "Complicações"
+      },
+      {
+        "id": "embolic_event",
+        "label": "Houve evento embólico (AVC, isquemia de membro, êmbolo esplênico/renal, embolia pulmonar séptica)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Complicações"
+      },
+      {
+        "id": "large_vegetation",
+        "label": "O ecocardiograma mostrou vegetação grande (≥10 mm)?",
+        "type": "boolean",
+        "section": "Exames"
+      },
+      {
+        "id": "risk_profile",
+        "label": "Qual o principal fator predisponente do paciente?",
+        "type": "select",
+        "section": "História",
+        "options": [
+          {
+            "value": "protese_valvar",
+            "label": "Válvula protética (cirúrgica ou TAVI)"
+          },
+          {
+            "value": "dispositivo_cardiaco",
+            "label": "Dispositivo cardíaco eletrônico (marca-passo/CDI)"
+          },
+          {
+            "value": "droga_injetavel",
+            "label": "Uso de droga injetável"
+          },
+          {
+            "value": "cardiopatia_congenita",
+            "label": "Cardiopatia congênita"
+          },
+          {
+            "value": "endocardite_previa",
+            "label": "Endocardite prévia"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum fator predisponente conhecido"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ic-aguda-por-destruicao-valvar",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_heart_failure_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Insuficiência cardíaca aguda por destruição valvar em endocardite infecciosa"
+          ],
+          "emergency_flow": [
+            "Indicação de cirurgia emergencial/urgente independentemente da duração de antibiótico já administrada; acionar a equipe de endocardite imediatamente"
+          ]
+        }
+      },
+      {
+        "id": "bloqueio-av-ou-abscesso-perianular",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "new_av_block_or_perianular_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bloqueio atrioventricular novo ou sinal sugestivo de abscesso/pseudoaneurisma perianular"
+          ],
+          "emergency_flow": [
+            "Investigar com ecocardiograma transesofágico e, se inconclusivo, tomografia cardíaca; comunicar a equipe de endocardite — não tratar como problema elétrico isolado"
+          ]
+        }
+      },
+      {
+        "id": "evento-embolico",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "embolic_event",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Evento embólico associado à endocardite infecciosa"
+          ],
+          "emergency_flow": [
+            "Se o evento foi AVC, aplicar o algoritmo de timing cirúrgico pós-AVC (coma ausente e hemorragia excluída por imagem) antes de definir o momento da cirurgia; não administrar trombolítico"
+          ]
+        }
+      },
+      {
+        "id": "vegetacao-grande",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "large_vegetation",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Vegetação ≥10 mm reclassifica a gravidade e acelera a decisão cirúrgica pela equipe de endocardite, sobretudo se associada a outro achado de risco"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-basal-sem-complicacao",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "fever_new_or_worsening_murmur",
+              "op": "truthy"
+            },
+            {
+              "field": "acute_heart_failure_signs",
+              "op": "falsy"
+            },
+            {
+              "field": "new_av_block_or_perianular_signs",
+              "op": "falsy"
+            },
+            {
+              "field": "embolic_event",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Hemoculturas seriadas (3 conjuntos, sítios distintos, antes do antibiótico)",
+            "Ecocardiograma transtorácico seguido de transesofágico"
+          ],
+          "messages": [
+            "Suspeita de endocardite sem sinal de complicação aguda ainda exige investigação estruturada com critérios Duke-ISCVID 2023 — não aguardar agravamento para iniciar hemoculturas e ecocardiograma"
+          ]
+        }
+      },
+      {
+        "id": "perfil-de-risco-orienta-microbiologia",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "risk_profile",
+              "op": "in",
+              "value": [
+                "protese_valvar",
+                "dispositivo_cardiaco",
+                "droga_injetavel"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Prótese valvar, dispositivo cardíaco ou uso de droga injetável mudam o perfil microbiológico esperado (menos estreptococo viridans, mais estafilococo/enterococo) — considerar isso na escolha do esquema empírico até resultado de cultura"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "endocardite infecciosa",
+      "Duke-ISCVID 2023",
+      "ESC 2023",
+      "válvula protética",
+      "TAVI",
+      "dispositivo cardíaco eletrônico",
+      "usuário de droga injetável",
+      "cirurgia cardíaca",
+      "hemocultura negativa",
+      "equipe de endocardite"
+    ],
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.",
+      "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445.",
+      "Habib G, Erba PA, Iung B, et al.; EURO-ENDO Investigators. Clinical presentation, aetiology and outcome of infective endocarditis. Results of the ESC-EORP EURO-ENDO (European infective endocarditis) registry. Eur Heart J. 2019;40(39):3222-3232. DOI: 10.1093/eurheartj/ehz620. PMID: 31504413.",
+      "Pries-Heje MM, Wiingaard C, Ihlemann N, et al. Five-Year Outcomes of the Partial Oral Treatment of Endocarditis (POET) Trial. N Engl J Med. 2022;386(6):601-602. DOI: 10.1056/NEJMc2114046. PMID: 35139280.",
+      "Duval X, Iung B, Klein I, et al. Effect of early cerebral magnetic resonance imaging on clinical decisions in infective endocarditis: a prospective study (TEPvENDO/AEPEI). PMID: 32488236.",
+      "DeSimone DC, Garrigos ZE, Marx GE, et al. Approach to Diagnosis of Blood Culture-Negative Infective Endocarditis. J Am Heart Assoc. 2025;14(8):e040218. PMID: 40094211.",
+      "Shishido AA, et al. Microbial Cell-Free DNA Sequencing in the Diagnosis of Infective Endocarditis. Open Forum Infect Dis. 2025. PMID: 40046887.",
+      "Regueiro A, Linke A, Latib A, et al. Association Between Transcatheter Aortic Valve Replacement and Subsequent Infective Endocarditis and In-Hospital Death. JAMA. 2016;316(10):1083-1092. PMID: 27529557.",
+      "Papadimitriou-Olivgeris M, et al. Early versus late prosthetic valve endocarditis: outcomes in a Swiss cohort (Lausanne/Zurich, 302 episodes). 2024.",
+      "de Waha S, et al. Right-sided infective endocarditis and injection drug use — características e desfechos. 2026.",
+      "Paras ML, et al. Multidisciplinary approach to substance use disorder treatment in infective endocarditis. Massachusetts General Hospital. 2023.",
+      "American Heart Association. Cardiac implantable electronic device infection: scientific statement (endocardite de dispositivo, remoção como pedra angular do tratamento). 2026."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehad193",
+      "https://doi.org/10.1093/cid/ciad271",
+      "https://doi.org/10.1093/eurheartj/ehz620",
+      "https://doi.org/10.1056/NEJMc2114046",
+      "https://pubmed.ncbi.nlm.nih.gov/32488236/",
+      "https://pubmed.ncbi.nlm.nih.gov/40094211/",
+      "https://pubmed.ncbi.nlm.nih.gov/40046887/",
+      "https://pubmed.ncbi.nlm.nih.gov/27529557/"
+    ],
+    "related_document_slugs": [
+      "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+      "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+      "fluxograma-endocardite-duke-iscvid-2023-aplicacao-dos-criterios",
+      "esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023",
+      "fluxograma-endocardite-antibioticoterapia-por-agente-etiologico-esc-2023",
+      "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+      "timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023",
+      "fluxograma-endocardite-timing-cirurgico-apos-avc-esc-2023",
+      "fluxograma-endocardite-timing-cirurgico-vegetacao-grande-risco-embolico-esc-2023",
+      "poet-5-anos-antibiotico-oral-parcial-endocardite",
+      "antiagregacao-e-anticoagulacao-na-endocardite-infecciosa",
+      "complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo",
+      "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
+      "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-nao-odontologicos",
+      "fluxograma-endocardite-profilaxia-antibiotica-procedimento-odontologico-invasivo-esc-2023",
+      "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+      "dna-microbiano-livre-no-plasma-na-endocardite-com-culturas-negativas",
+      "tepvendo-pet-ct-corpo-inteiro-endocardite",
+      "endocardite-trombotica-nao-bacteriana-nbte-diagnostico-e-manejo",
+      "endocardite-protetica-precoce-versus-tardia-esc-2023",
+      "endocardite-infecciosa-apos-implante-valvar-aortico-transcateter-tavi-registro-internacional",
+      "endocardite-em-usuario-de-drogas-injetaveis-manejo-integrado-e-equipe-multidisciplinar",
+      "endocardite-infecciosa-de-camaras-direitas-e-aspiracao-mecanica-percutanea-aha-2026",
+      "endocardite-fungica-e-criterios-duke-iscvid-2023-para-endocardite-de-dispositivo",
+      "recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao",
+      "aneurisma-micotico-intracraniano-na-endocardite-infecciosa-rastreamento-e-manejo",
+      "endocardite-infecciosa-na-gestacao-e-puerperio",
+      "fluxograma-endocardite-infecciosa-na-gestacao-e-puerperio"
+    ],
+    "patient_material_slug": "endocardite-infecciosa-o-que-esperar-do-diagnostico-e-do-tratamento",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de Endocardite Infecciosa adulta (área geral) — coleção doencas/metadados.json tinha até então só endocardite-pediatrica. O conteúdo foi sintetizado a partir de ~31 documentos já publicados e revisados em content/Endocardite/ (diretriz ESC 2023, critérios Duke-ISCVID 2023, subpopulações), com verificação direta dos fatos-chave contra as fontes primárias (PMID/DOI) nesta sessão — não apenas paráfrase do acervo secundário. Nenhum documento, checklist, trilha ou material ao paciente novo foi criado: o lote apenas conecta este novo hub a conteúdo já existente e já revisado via related_document_slugs (documentos narrativos) e patient_material_slug (1 material já publicado sobre endocardite adulta). Doses de antibiótico específicas por agente foram deliberadamente omitidas do treatment_summary e delegadas ao documento já existente 'Esquemas antibióticos na endocardite infecciosa por agente (ESC 2023)', citado por nome. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
+    "version": 1,
+    "fonte_producao": "claude"
   }
 ]
