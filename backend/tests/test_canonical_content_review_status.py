@@ -53,6 +53,12 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
+        # Tudo com Tudo 27/08/2026: novo verbete-hub de hipertensao pulmonar
+        # adulta (area geral), conectando 60 documentos ja publicados e
+        # revisados em content/Hipertensao_pulmonar/ que ficavam sem hub
+        # central em doencas/. Nenhum documento/checklist/trilha/material
+        # novo foi criado.
+        "hipertensao-pulmonar",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }

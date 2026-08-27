@@ -5598,39 +5598,79 @@
       {
         "id": "has-lesao-aguda",
         "priority": 100,
-        "when": {"all": [{"field": "acute_target_injury", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "acute_target_injury",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível emergência hipertensiva ou outro evento cardiovascular agudo"],
-          "emergency_flow": ["Avaliar imediatamente lesão aguda de órgão-alvo e tratar pelo protocolo específico"]
+          "red_flags": [
+            "Possível emergência hipertensiva ou outro evento cardiovascular agudo"
+          ],
+          "emergency_flow": [
+            "Avaliar imediatamente lesão aguda de órgão-alvo e tratar pelo protocolo específico"
+          ]
         }
       },
       {
         "id": "has-medida-nao-confirmada",
         "priority": 30,
-        "when": {"all": [{"field": "measurement_confirmed", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "measurement_confirmed",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
           "risk": "rotina",
-          "messages": ["A medida isolada ainda precisa de confirmação padronizada, salvo contexto de urgência"],
-          "suggested_tests": ["Repetir pressão com técnica adequada e considerar MRPA ou MAPA"]
+          "messages": [
+            "A medida isolada ainda precisa de confirmação padronizada, salvo contexto de urgência"
+          ],
+          "suggested_tests": [
+            "Repetir pressão com técnica adequada e considerar MRPA ou MAPA"
+          ]
         }
       },
       {
         "id": "has-gestacao-puerperio",
         "priority": 90,
-        "when": {"all": [{"field": "pregnant_postpartum", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pregnant_postpartum",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["Aplicar protocolo obstétrico e revisar segurança dos anti-hipertensivos"]
+          "messages": [
+            "Aplicar protocolo obstétrico e revisar segurança dos anti-hipertensivos"
+          ]
         }
       },
       {
         "id": "has-causa-secundaria",
         "priority": 50,
-        "when": {"all": [{"field": "secondary_cause_clues", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "secondary_cause_clues",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "suggested_tests": ["Investigar causa secundária de forma dirigida após excluir pseudorresistência"]
+          "suggested_tests": [
+            "Investigar causa secundária de forma dirigida após excluir pseudorresistência"
+          ]
         }
       }
     ],
@@ -5785,38 +5825,78 @@
       {
         "id": "fa-instabilidade",
         "priority": 100,
-        "when": {"all": [{"field": "unstable", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "unstable",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Tratar instabilidade e seguir protocolo de cardioversão elétrica sincronizada"]
+          "emergency_flow": [
+            "Tratar instabilidade e seguir protocolo de cardioversão elétrica sincronizada"
+          ]
         }
       },
       {
         "id": "fa-deficit-focal",
         "priority": 100,
-        "when": {"all": [{"field": "focal_deficit", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "focal_deficit",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível AVC ou embolia sistêmica"],
-          "emergency_flow": ["Ativar protocolo de AVC ou avaliação vascular emergencial"]
+          "red_flags": [
+            "Possível AVC ou embolia sistêmica"
+          ],
+          "emergency_flow": [
+            "Ativar protocolo de AVC ou avaliação vascular emergencial"
+          ]
         }
       },
       {
         "id": "fa-sem-tracado",
         "priority": 40,
-        "when": {"all": [{"field": "ecg_confirmed", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "ecg_confirmed",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["O diagnóstico clínico precisa de confirmação eletrocardiográfica"],
-          "suggested_tests": ["Obter ECG ou monitorização interpretável"]
+          "messages": [
+            "O diagnóstico clínico precisa de confirmação eletrocardiográfica"
+          ],
+          "suggested_tests": [
+            "Obter ECG ou monitorização interpretável"
+          ]
         }
       },
       {
         "id": "fa-anticoagulacao-documentar",
         "priority": 30,
-        "when": {"all": [{"field": "anticoagulant", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulant",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Documentar fármaco, dose, última tomada, adesão, função renal e sangramento"]
+          "messages": [
+            "Documentar fármaco, dose, última tomada, adesão, função renal e sangramento"
+          ]
         }
       }
     ],
@@ -5979,38 +6059,78 @@
       {
         "id": "ic-hipoperfusao",
         "priority": 100,
-        "when": {"all": [{"field": "hypoperfusion", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "hypoperfusion",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível choque cardiogênico ou hipoperfusão"],
-          "emergency_flow": ["Monitorizar, investigar causa e acionar equipe de choque/terapia intensiva"]
+          "red_flags": [
+            "Possível choque cardiogênico ou hipoperfusão"
+          ],
+          "emergency_flow": [
+            "Monitorizar, investigar causa e acionar equipe de choque/terapia intensiva"
+          ]
         }
       },
       {
         "id": "ic-edema-pulmonar",
         "priority": 100,
-        "when": {"all": [{"field": "pulmonary_edema", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pulmonary_edema",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Tratar insuficiência respiratória e congestão aguda em ambiente monitorizado"]
+          "emergency_flow": [
+            "Tratar insuficiência respiratória e congestão aguda em ambiente monitorizado"
+          ]
         }
       },
       {
         "id": "ic-nao-confirmada",
         "priority": 30,
-        "when": {"all": [{"field": "objective_evidence", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "objective_evidence",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Sintomas isolados não confirmam insuficiência cardíaca"],
-          "suggested_tests": ["Integrar peptídeo natriurético e ecocardiograma conforme probabilidade clínica"]
+          "messages": [
+            "Sintomas isolados não confirmam insuficiência cardíaca"
+          ],
+          "suggested_tests": [
+            "Integrar peptídeo natriurético e ecocardiograma conforme probabilidade clínica"
+          ]
         }
       },
       {
         "id": "ic-avancada",
         "priority": 80,
-        "when": {"all": [{"field": "recurrent_admissions", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_admissions",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "urgente",
-          "messages": ["Considerar avaliação precoce por equipe de insuficiência cardíaca avançada"]
+          "messages": [
+            "Considerar avaliação precoce por equipe de insuficiência cardíaca avançada"
+          ]
         }
       }
     ],
@@ -6170,38 +6290,78 @@
       {
         "id": "scc-padrao-instavel",
         "priority": 100,
-        "when": {"all": [{"field": "pattern_changed", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "pattern_changed",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Possível síndrome coronariana aguda"],
-          "emergency_flow": ["Migrar para protocolo de dor torácica aguda com ECG e troponina"]
+          "red_flags": [
+            "Possível síndrome coronariana aguda"
+          ],
+          "emergency_flow": [
+            "Migrar para protocolo de dor torácica aguda com ECG e troponina"
+          ]
         }
       },
       {
         "id": "scc-instabilidade",
         "priority": 100,
-        "when": {"all": [{"field": "instability", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "instability",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "emergency_flow": ["Avaliar e tratar instabilidade em ambiente monitorizado"]
+          "emergency_flow": [
+            "Avaliar e tratar instabilidade em ambiente monitorizado"
+          ]
         }
       },
       {
         "id": "scc-nao-documentada",
         "priority": 30,
-        "when": {"all": [{"field": "known_cad", "op": "falsy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "known_cad",
+              "op": "falsy"
+            }
+          ]
+        },
         "add": {
-          "messages": ["Selecionar investigação proporcional à probabilidade; sintomas isolados não confirmam DAC"],
-          "suggested_tests": ["Escolher teste anatômico ou funcional conforme probabilidade e contexto"]
+          "messages": [
+            "Selecionar investigação proporcional à probabilidade; sintomas isolados não confirmam DAC"
+          ],
+          "suggested_tests": [
+            "Escolher teste anatômico ou funcional conforme probabilidade e contexto"
+          ]
         }
       },
       {
         "id": "scc-refrataria",
         "priority": 70,
-        "when": {"all": [{"field": "refractory_symptoms", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "refractory_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["Revisar mecanismo, adesão e anatomia; discutir revascularização quando houver indicação"]
+          "messages": [
+            "Revisar mecanismo, adesão e anatomia; discutir revascularização quando houver indicação"
+          ]
         }
       }
     ],
@@ -6229,6 +6389,389 @@
     "review_status": "revisado",
     "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual.",
     "fonte_producao": "chatgpt",
+    "version": 1
+  },
+  {
+    "slug": "hipertensao-pulmonar",
+    "name": "Hipertensão pulmonar",
+    "aliases": [
+      "HP",
+      "hipertensão arterial pulmonar",
+      "HAP"
+    ],
+    "area": "geral",
+    "category": "circulacao_pulmonar",
+    "subtype": "cinco_grupos_esc_ers_2022",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 8,
+    "completeness": "completo",
+    "fonte_producao": "claude",
+    "summary": "Elevação da pressão arterial pulmonar (PAPm > 20 mmHg) por causas diversas classificadas em 5 grupos (ESC/ERS 2022) — desde a hipertensão arterial pulmonar idiopática/hereditária até formas secundárias a doença cardíaca esquerda, pulmonar, tromboembólica crônica ou multifatorial — com via diagnóstica e tratamento fundamentalmente distintos por grupo.",
+    "epidemiology": "A hipertensão pulmonar (HP) tem prevalência estimada em cerca de 1% da população global, chegando a até 10% em pessoas acima de 65 anos, com aproximadamente 80% dos casos concentrados em países em desenvolvimento (Hoeper MM et al., Lancet Respir Med. 2016;4(4):306-322, PMID 26975810). Já a hipertensão arterial pulmonar (grupo 1) é doença órfã: o registro francês estimou prevalência de 15,0 casos por milhão de adultos e incidência de 2,4 casos por milhão de adultos ao ano, com 75% dos pacientes já em classe funcional III ou IV no momento do diagnóstico — evidência direta de atraso diagnóstico sistemático (Humbert M et al., Am J Respir Crit Care Med. 2006;173(9):1023-1030, PMID 16456139). A sobrevida mudou de forma acentuada com a terapia específica: no registro histórico do NIH, anterior às drogas modernas para HAP, a sobrevida mediana era de apenas 2,8 anos, com sobrevida em 1 ano de 68% (D'Alonzo GE et al., Ann Intern Med. 1991;115(5):343-349, PMID 1863023); já em coorte contemporânea sob terapia moderna, a sobrevida em 1, 2 e 3 anos nos casos incidentes foi de 85,7%, 69,6% e 54,9%, respectivamente (Humbert M et al., Circulation. 2010;122(2):156-163, PMID 20585011) — um ganho expressivo de sobrevida precoce, ainda que a doença permaneça progressiva e sem cura na maioria dos grupos.",
+    "presentation": [
+      "Dispneia progressiva aos esforços — sintoma mais comum e geralmente o mais precoce, muitas vezes inespecífico e atribuído a descondicionamento ou sedentarismo, o que contribui para o atraso diagnóstico",
+      "Fadiga desproporcional ao nível de esforço",
+      "Síncope ou pré-síncope de esforço — sinal de gravidade, sugere queda do débito cardíaco durante o exercício e maior risco de morte súbita",
+      "Dor torácica atípica, por isquemia relativa do ventrículo direito hipertrofiado e sobrecarregado",
+      "Palpitações",
+      "Edema de membros inferiores",
+      "Distensão abdominal/ascite e turgência jugular — sinais de falência de ventrículo direito já estabelecida, geralmente doença avançada"
+    ],
+    "diagnostic_approach": "A diretriz ESC/ERS 2022 (Humbert M et al., Eur Heart J. 2022;43(38):3618-3731, DOI 10.1093/eurheartj/ehac237, PMID 36017548) redefiniu o limiar hemodinâmico: hipertensão pulmonar passa a ser definida por pressão arterial pulmonar média (PAPm) acima de 20 mmHg em repouso ao cateterismo direito, reduzida do corte histórico de 25 mmHg. A classificação clínica mantém cinco grupos: grupo 1, hipertensão arterial pulmonar (HAP) — doença vascular pulmonar predominante, idiopática, hereditária ou associada a droga/toxina, doença do tecido conjuntivo, HIV, hipertensão portal, cardiopatia congênita ou esquistossomose; grupo 2, por doença cardíaca esquerda — a causa mais prevalente de HP na prática geral; grupo 3, por doença pulmonar ou hipóxia; grupo 4, por obstrução arterial pulmonar, principalmente hipertensão pulmonar tromboembólica crônica (CTEPH), único grupo com tratamento potencialmente curativo; e grupo 5, multifatorial ou de mecanismo incerto. A via diagnóstica é sequencial: suspeita clínica pelo médico de primeiro contato, ecocardiograma transtorácico de triagem que atribui probabilidade de HP (baixa, intermediária ou alta), investigação e exclusão preferencial das causas mais prováveis — doença cardíaca esquerda (grupo 2) e doença pulmonar (grupo 3) —, e só então cateterismo cardíaco direito confirmatório em centro especializado, que mede PAPm, pressão de oclusão capilar pulmonar (POCP) e resistência vascular pulmonar (RVP) para classificar o subtipo hemodinâmico (pré-capilar, pós-capilar isolada ou combinada). Nessa etapa, alguns critérios ajudam a atribuir o grupo etiológico correto antes de tratar como HAP idiopática: POCP elevada (>15 mmHg) num paciente com disfunção de VE ou valvopatia aponta grupo 2; DPOC/doença pulmonar intersticial conhecida com padrão pré-capilar ao cateterismo (indistinguível numericamente do grupo 1) aponta grupo 3, sendo o contexto clínico-funcional, não o cateterismo isolado, que separa os dois; cintilografia de ventilação-perfusão com defeitos de perfusão em mosaico persistentes após anticoagulação aponta grupo 4/CTEPH (cintilografia normal tem alto valor para afastar CTEPH, mas suspeita clínica mantida não deve ser descartada só por um exame de menor sensibilidade); e doença hematológica/sistêmica sem as causas acima aponta grupo 5, sempre com confirmação hemodinâmica antes de atribuir achado ecocardiográfico a essa causa. O teste de vasorreatividade aguda é restrito a HAP idiopática, hereditária ou induzida por droga/toxina, virgem de tratamento, pelo critério de Sitbon — queda de PAPm de pelo menos 10 mmHg até valor absoluto igual ou inferior a 40 mmHg, com débito cardíaco mantido ou aumentado (Sitbon O et al., Circulation. 2005;111(23):3105-3111, PMID 15939821) —, com resposta positiva em apenas 12,6% dos testados. O NT-proBNP funciona como biomarcador de estratificação de risco e de resposta ao tratamento, mas não substitui a avaliação multiparamétrica de risco nem a confirmação hemodinâmica pelo cateterismo.",
+    "differentials": [
+      "Tromboembolismo pulmonar crônico não diagnosticado (CTEPD/CTEPH) — pode mimetizar HAP idiopática se a cintilografia V/Q e a angiotomografia não forem realizadas para excluí-lo",
+      "DPOC ou doença pulmonar intersticial isolada sem hipertensão pulmonar verdadeira associada — dispneia atribuída inteiramente à doença de base sem checar a hemodinâmica pulmonar",
+      "Insuficiência cardíaca com fração de ejeção preservada (ICFEp) — causa mais prevalente de HP na prática geral (grupo 2), frequentemente confundida com HAP idiopática se a probabilidade pré-teste de doença cardíaca esquerda não for considerada",
+      "Cardiopatia valvar esquerda não corrigida ou subdiagnosticada, gerando hipertensão pulmonar pós-capilar",
+      "Causas de dispneia não cardiopulmonar — anemia, descondicionamento físico, obesidade, distúrbios da tireoide",
+      "Doença veno-oclusiva pulmonar/hemangiomatose capilar pulmonar — mimetiza HAP idiopática ao cateterismo (5-10% dos casos inicialmente classificados como HAP idiopática), mas com risco de edema pulmonar grave sob teste de vasorreatividade ou vasodilatador específico sem cautela"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico de triagem — finalidade: atribui probabilidade de HP pela velocidade de regurgitação tricúspide e sinais indiretos de sobrecarga do VD; limitação: não diagnostica hipertensão pulmonar, e a PSAP estimada por Doppler pode divergir do valor invasivo em até quase 40 mmHg em qualquer direção",
+      "Cateterismo cardíaco direito — finalidade: exame confirmatório obrigatório, mede PAPm, POCP e RVP; limitação: complicação grave em 1,1% e mortalidade de 0,055% em centros experientes, sensível a erro técnico de medida",
+      "Teste de vasorreatividade aguda — finalidade: realizado durante o mesmo cateterismo, restrito a HAP idiopática/hereditária/por droga virgem de tratamento, identifica candidato a bloqueador de canal de cálcio em altas doses; limitação: resposta aguda positiva em apenas 12,6% e resposta sustentada em 6,8% dos testados",
+      "NT-proBNP — finalidade: biomarcador de estratificação de risco e de resposta terapêutica, queda de cerca de 48% associada a menor piora clínica; limitação: não é ponto de corte terapêutico rígido nem substitui a avaliação multiparamétrica",
+      "Teste de caminhada de 6 minutos — finalidade: mede capacidade funcional e compõe a estratificação de risco junto com classe funcional e biomarcador; limitação: pode ser limitado por comorbidades musculoesqueléticas não relacionadas à HP",
+      "Angiotomografia de tórax e cintilografia pulmonar de ventilação/perfusão — finalidade: necessárias para excluir hipertensão pulmonar tromboembólica crônica (grupo 4) antes de assumir HAP idiopática; limitação: a cintilografia V/Q tem maior sensibilidade que a angioTC para doença tromboembólica distal, mas exige interpretação especializada"
+    ],
+    "red_flags": [
+      "Síncope de esforço — sugere baixo débito cardíaco ao esforço e maior risco de morte súbita",
+      "Sinais de falência de ventrículo direito já estabelecida — ascite, edema periférico importante, turgência jugular",
+      "Classe funcional OMS/NYHA III ou IV no diagnóstico — presente em 75% dos pacientes no registro francês, marcador de doença já avançada",
+      "Marcadores hemodinâmicos de gravidade ao cateterismo — pressão de átrio direito ≥20 mmHg, índice cardíaco <2,0 L/min/m², volume sistólico indexado <31 mL/m² e RVP ≥12 UW",
+      "Teste de caminhada de 6 minutos muito reduzido, refletindo baixa reserva funcional",
+      "NT-proBNP elevado e sem queda relevante sob tratamento"
+    ],
+    "treatment_summary": "O tratamento farmacológico específico da hipertensão arterial pulmonar (HAP, grupo 1) segue o princípio de terapia combinada guiada pela estratificação de risco, e não uma decisão única tomada no momento do diagnóstico (Humbert M et al., 2022 ESC/ERS Guidelines, PMID 36017548). Ao diagnóstico, o paciente é classificado em um modelo de três estratos de risco (baixo, intermediário ou alto, conforme a mortalidade estimada em 1 ano) que determina a intensidade inicial do tratamento: paciente de risco baixo ou intermediário sem comprometimento hemodinâmico grave inicia terapia combinada oral dupla, associando um antagonista do receptor de endotelina (ERA) a um inibidor da fosfodiesterase-5 ou, alternativamente, a um estimulador da guanilato-ciclase solúvel (sGC) — via que não deve ser combinada ao inibidor de PDE5 na mesma via do óxido nítrico. O paciente de risco alto ao diagnóstico, ou de risco intermediário com comprometimento hemodinâmico grave, inicia terapia combinada tripla, somando a essas duas classes um fármaco da via da prostaciclina — prostanoide parenteral (intravenoso ou subcutâneo) ou, em casos selecionados, agonista oral do receptor de prostaciclina —, com encaminhamento a centro de referência em HAP. Essas quatro famílias farmacológicas — ERA, inibidor de PDE5/estimulador de sGC, via da prostaciclina e, mais recentemente, o modulador da via de ativina/fatores de diferenciação de crescimento (sotatercepte, aprovado em 2024, add-on sobre terapia de base já otimizada, confirmado pelos ensaios STELLAR/ZENITH/HYPERION) — compõem o arsenal atual da HAP. A reavaliação de risco é periódica, a cada 3-6 meses, usando um modelo de quatro estratos apoiado em classe funcional, teste de caminhada de 6 minutos e NT-proBNP — se o paciente permanece fora do risco baixo, a conduta é escalonar, não apenas manter o esquema. A anticoagulação oral não é rotina universal na HAP do grupo 1: evidência conflitante entre registros contemporâneos (COMPERA sugere benefício restrito à HAP idiopática; REVEAL não confirma benefício e sugere sinal de dano na HAP associada à esclerose sistêmica) — decisão individualizada, não estendida por analogia a outras etiologias. Na doença refratária, a septostomia atrial por balão alivia agudamente a sobrecarga do VD às custas de dessaturação sistêmica (papel paliativo, não curativo); o transplante pulmonar/cardiopulmonar é a medida de resgate definitiva. Fora do grupo 1, o manejo é fundamentalmente diferente: no grupo 2 (doença cardíaca esquerda), a estratégia primária é otimizar a cardiopatia/valvopatia de base — o ensaio SIOVAC mostrou que sildenafila em HP persistente após correção valvar piorou o desfecho clínico e aumentou internação por IC, dano direto que torna a terapia específica de HAP contraindicação relativa de rotina nesse grupo. No grupo 3 (doença pulmonar/hipóxia), a prioridade é tratar a pneumopatia de base; vasodilatadores não seletivos podem piorar a relação ventilação-perfusão e a hipoxemia (ensaio RISE-IIP interrompido por excesso de mortalidade com riociguate em HP-DPI) — a exceção estreita é o treprostinil inalado (ensaio INCREASE, ganho funcional em HP associada a doença pulmonar intersticial), recomendação Classe IIb restrita a caso grave e individualizado, nunca conduta padrão. No grupo 4 (CTEPH), a endarterectomia pulmonar é o único tratamento potencialmente curativo, com mortalidade operatória em torno de 2% em centros de expertise; cerca de 60% dos pacientes são classificados como operáveis na Europa e no Canadá, restando cerca de 40% inoperáveis, para os quais riociguate e/ou angioplastia pulmonar por balão são as opções estabelecidas, também usadas na doença residual/recorrente pós-cirurgia. O grupo 5 reúne causas de mecanismo não esclarecido/multifatorial, sem terapia vasodilatadora específica com benefício estabelecido — o tratamento é dirigido à causa de base, sempre com confirmação hemodinâmica por cateterismo antes de qualquer decisão terapêutica.",
+    "ambulatory_flow": [
+      "Encaminhamento e acompanhamento em centro de referência em hipertensão pulmonar, idealmente multidisciplinar, para confirmação diagnóstica, escolha da terapia inicial guiada por risco e ajuste de via de administração",
+      "Reavaliação periódica da estratificação de risco a cada 3 a 6 meses, combinando classe funcional da OMS, teste de caminhada de 6 minutos e NT-proBNP, para decidir manutenção ou escalonamento da terapia combinada",
+      "Vacinação anual contra influenza e vacinação contra pneumococo, dado o risco de descompensação de ventrículo direito em infecção respiratória",
+      "Contracepção eficaz obrigatória em mulher em idade fértil com HAP, com orientação de que a gravidez é contraindicação de alto risco e exige aconselhamento reprodutivo estruturado (ver ficha própria de hipertensão pulmonar na gravidez para o manejo específico da gestante)",
+      "Reabilitação física supervisionada e estruturada como complemento à terapia farmacológica",
+      "Avaliação e tratamento de comorbidades e causas secundárias potencialmente tratáveis (apneia obstrutiva do sono, disfunção tireoidiana, deficiência de ferro/anemia) em paralelo à terapia específica",
+      "Estratificação de risco perioperatório antes de qualquer cirurgia não cardíaca eletiva: mortalidade perioperatória de 3,5% em cirurgia eletiva na HAP, saltando para 15% em cirurgia de urgência — classificar o grupo de HP, otimizar antes da cirurgia eletiva e ajustar a vigilância pós-operatória ao risco"
+    ],
+    "emergency_flow": [
+      "Reconhecimento precoce de falência aguda de ventrículo direito/crise de HP: hipotensão, síncope/pré-síncope, sinais de baixo débito (extremidades frias, oligúria, confusão) e sinais de falência de VD (turgência jugular, refluxo hepatojugular, terceira bulha direita) em paciente com HP conhecida ou nova suspeita",
+      "Não expandir volume nem reduzir pré-carga de forma agressiva por reflexo diante da hipotensão: no VD com pós-carga aguda elevada, diurético ou vasodilatador sistêmico sem suporte hemodinâmico pode colapsar ainda mais a pré-carga e o débito cardíaco",
+      "Suporte hemodinâmico guiado: noradrenalina como vasopressor de primeira linha para sustentar a perfusão coronariana do VD; inotrópico reservado ao baixo débito e interrompido assim que possível — seguir o protocolo já existente no acervo para 'falência aguda de ventrículo direito' (emergencia/metadados.json, consenso ACVC/ESC 2024), sem duplicar orientação de ventilação mecânica/PEEP/manejo de volume",
+      "Investigar e tratar o gatilho precipitante da descompensação aguda: infecção, arritmia, embolia pulmonar nova, falha ou interrupção da terapia específica de HP em uso crônico, ou progressão da doença de base",
+      "Avaliação precoce de suporte circulatório mecânico (ECMO venoarterial, dispositivo de assistência ao VD) em centro especializado quando há refratariedade ao suporte farmacológico, decisão de heart team/centro de referência"
+    ],
+    "monitoring": [
+      "Classe funcional da OMS seriada em cada consulta de seguimento",
+      "Teste de caminhada de 6 minutos seriado, para acompanhar capacidade de exercício e alimentar a reavaliação de risco",
+      "NT-proBNP seriado, biomarcador de resposta terapêutica",
+      "Ecocardiograma de reavaliação periódica, para monitorar função e dimensões do ventrículo direito ao longo do seguimento",
+      "Reavaliação formal do estrato de risco a cada consulta de seguimento, tipicamente a cada 3 a 6 meses, decidindo objetivamente se a terapia deve ser mantida ou escalonada",
+      "Hemograma seriado em paciente em uso de sotatercepte, pelo risco de aumento de hemoglobina e trombocitopenia identificado nos ensaios STELLAR, ZENITH e HYPERION",
+      "Cateterismo cardíaco direito de reavaliação em situações selecionadas (dúvida sobre resposta hemodinâmica, decisão de escalonamento para prostaciclina parenteral, ou avaliação pré-transplante), não como rotina sistemática em todo retorno"
+    ],
+    "special_populations": [
+      "HAP hereditária por mutação em BMPR2 (herança autossômica dominante) tem penetrância incompleta e dependente do sexo — risco de expressar a doença ao longo da vida de aproximadamente 14% nos homens e 42% nas mulheres. BMPR2 responde por cerca de 75% dos casos de HAP hereditária, mas portadores têm hemodinâmica mais grave ao diagnóstico e pior sobrevida (HR 1,42 para morte ou transplante) mesmo após ajuste por gravidade basal. O rastreio familiar inclui teste molecular dirigido a parentes de primeiro grau quando a variante é conhecida, e ecocardiograma seriado — mas se o parente testa negativo para a mutação familiar conhecida, seu risco volta ao da população geral.",
+      "A esclerose sistêmica é a causa mais frequente de HAP associada a doença do tecido conjuntivo e a de pior prognóstico: sobrevida em 3 anos de 56% com HAP confirmada contra 94% sem HAP na mesma doença de base. Tem algoritmo de rastreio dedicado — o DETECT, validado em pacientes com esclerose sistêmica há mais de 3 anos e DLCO predita <60% —, que reduz o diagnóstico perdido de 29% para 4% frente ao algoritmo geral, à custa de mais encaminhamentos a cateterismo.",
+      "A esquistossomose é uma das causas mais frequentes de HAP no Brasil — estimativa de pelo menos 60 mil pessoas com HAP associada a esquistossomose no país. O mecanismo depende do desvio portossistêmico da hipertensão portal, que permite a ovos do parasita escapar do filtro hepático e embolizar a circulação pulmonar — só ocorre na forma hepatoesplênica, nunca na intestinal isolada. É subdiagnosticada por ausência de programa de rastreio nas áreas endêmicas; equações de prognóstico derivadas de HAP idiopática subestimam a sobrevida real nessa população.",
+      "A prevalência de HAP associada ao HIV não caiu com a terapia antirretroviral combinada — ainda 100 a 1.000 vezes maior que a HAP idiopática na população geral, sugerindo mecanismo inflamatório/imunológico que a supressão virológica não reverte. A coexistência com esquema antirretroviral potencializado por ritonavir gera interação farmacocinética relevante: ritonavir é inibidor potente de CYP3A4, via metabólica de sildenafila/tadalafila/riociguate, elevando a AUC da sildenafila em até 11 vezes — exige redução de dose inicial e monitorização, não contraindicação da classe.",
+      "A HAP induzida por drogas e toxinas (grupo 1.3) é a única categoria do grupo 1 potencialmente reversível com a suspensão do agente causador. Anorexígenos derivados da fenfluramina têm associação dose-tempo dependente bem estabelecida; metanfetamina causa forma grave e progressiva, com mais que o dobro do risco de piora clínica ou óbito frente à HAP idiopática — não deve ser lida como forma 'mais leve' por ter causa identificável. O dasatinibe é o exemplo mais bem documentado de reversibilidade parcial: melhora clínica/hemodinâmica em 4 meses na maioria dos casos após suspensão, mas sem normalização completa e com mortalidade relevante no seguimento.",
+      "Hipertensão portopulmonar exige, por cateterismo, PAPm >25mmHg com POCP <15mmHg e RVP >240 dinas·s/cm⁻⁵ na presença de hipertensão portal documentada. A gravidade por PAPm determina elegibilidade a transplante hepático: leve não impede, moderada permite se houver resposta a vasodilatador, grave geralmente contraindica embora não seja mais contraindicação absoluta com resposta vasodilatadora e função de VD preservada.",
+      "A HP associada à sarcoidose (SAPH) não é entidade única — nasce de mecanismos combinados e variáveis entre pacientes (fibrose parenquimatosa com vasoconstrição hipóxica, compressão extrínseca por linfonodomegalia, vasculopatia granulomatosa direta, disfunção de VE por sarcoidose cardíaca), e é a proporção de cada mecanismo — não um protocolo único — que decide se um vasodilatador específico de HAP ajuda, é inócuo ou faz mal. A prevalência salta de 6,4% na população geral de sarcoidose para 62,3% na doença pulmonar avançada.",
+      "Além da síndrome de Eisenmenger, a HAP associada a cardiopatia congênita tem mais três subgrupos com condutas distintas: shunt sistêmico-pulmonar ainda presente (fechamento tardio pode ser considerado se a RVP ainda estiver normal ou próxima); defeito coincidente pequeno demais para explicar a HP (tratado como HAP idiopática); e HAP que aparece ou persiste após correção cirúrgica prévia (também tratada como HAP idiopática) — este último subgrupo é o mais fácil de perder de vista: prevalência de 5,7% no registro CONCOR, subindo até 35% nos pacientes mais idosos.",
+      "A síndrome de Eisenmenger é a apresentação mais avançada de HAP associada a cardiopatia congênita. O BREATHE-5 (bosentana) respondeu ao receio de que o vasodilatador pioraria a hipoxemia — a oximetria sistêmica não piorou, com ganho de RVP, PAPm e capacidade de exercício. Já o MAESTRO (macitentana, coorte mais leve) foi negativo no desfecho primário e mostrou queda de hemoglobina ≥2g/dL em 36% dos pacientes, relevante numa população que depende de poliglobulia compensatória — nenhum ensaio randomizado demonstrou ganho de sobrevida nessa síndrome.",
+      "A doença veno-oclusiva pulmonar (PVOD) responde por 5-10% dos casos inicialmente classificados como HAP idiopática e é o diagnóstico diferencial mais crítico do grupo 1: compartilha prognóstico ruim e um risco que a HAP idiopática não tem — edema pulmonar grave, por vezes fatal, ao iniciar terapia vasodilatadora específica sem cautela. Suspeita-se por perfil clínico distinto e pela tríade tomográfica (vidro fosco centrolobular, espessamento de septos, linfonodomegalia mediastinal); terapia vasodilatadora pode ser usada como ponte para transplante sob estratégia deliberadamente cautelosa (dose baixa, titulação lenta, diurético em dose alta).",
+      "Cirurgia não cardíaca em paciente com HP pode precipitar falência aguda de VD, e a HP não constava explicitamente nos algoritmos gerais de risco perioperatório até recentemente. Em coorte de HAP, mortalidade perioperatória de 3,5% em cirurgia eletiva, saltando para 15% em cirurgia de urgência; em HP em geral, mortalidade de 7% e morbidade de 42%. A estratificação proposta segue cinco etapas: classificar o grupo de HP, avaliar risco pré-operatório, otimizar antes da cirurgia eletiva, proteger o VD no intraoperatório e ajustar a vigilância pós-operatória ao risco — sem escore único validado."
+    ],
+    "assistant_questions": [
+      {
+        "id": "acute_rv_failure_signs",
+        "label": "Há sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica (hipotensão, síncope, baixo débito)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "functional_class",
+        "label": "Classe funcional da OMS/NYHA atual",
+        "type": "select",
+        "required": true,
+        "section": "Estratificação",
+        "options": [
+          {
+            "value": "I_II",
+            "label": "I ou II"
+          },
+          {
+            "value": "III",
+            "label": "III"
+          },
+          {
+            "value": "IV",
+            "label": "IV"
+          }
+        ]
+      },
+      {
+        "id": "suspected_group",
+        "label": "Qual grupo etiológico é mais provável (se já investigado)?",
+        "type": "select",
+        "required": true,
+        "section": "Classificação",
+        "options": [
+          {
+            "value": "grupo1_hap",
+            "label": "Grupo 1 — HAP (idiopática, hereditária, associada)"
+          },
+          {
+            "value": "grupo2_cardiaca_esquerda",
+            "label": "Grupo 2 — doença cardíaca esquerda"
+          },
+          {
+            "value": "grupo3_pulmonar",
+            "label": "Grupo 3 — doença pulmonar/hipóxia"
+          },
+          {
+            "value": "grupo4_cteph",
+            "label": "Grupo 4 — CTEPH/tromboembólica crônica"
+          },
+          {
+            "value": "grupo5_outra",
+            "label": "Grupo 5 — multifatorial/outra"
+          },
+          {
+            "value": "nao_classificado",
+            "label": "Ainda não classificado"
+          }
+        ]
+      },
+      {
+        "id": "pvod_suspected",
+        "label": "Há suspeita de doença veno-oclusiva pulmonar (PVOD) — perfil clínico atípico, tríade tomográfica sugestiva?",
+        "type": "boolean",
+        "section": "Red flags"
+      },
+      {
+        "id": "elective_noncardiac_surgery",
+        "label": "Há cirurgia não cardíaca eletiva planejada?",
+        "type": "boolean",
+        "section": "Perioperatório"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "falencia-aguda-de-vd",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_rv_failure_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica em paciente com hipertensão pulmonar"
+          ],
+          "emergency_flow": [
+            "Não expandir volume nem reduzir pré-carga agressivamente; suporte hemodinâmico guiado com noradrenalina como vasopressor de primeira linha; seguir protocolo de falência aguda de ventrículo direito já existente no acervo; investigar gatilho precipitante"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-de-pvod",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "pvod_suspected",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de doença veno-oclusiva pulmonar — risco de edema pulmonar grave com vasodilatador específico sem cautela"
+          ],
+          "messages": [
+            "Não iniciar terapia vasodilatadora específica de HAP sem avaliação em centro especializado; se indicada, deve ser feita com dose baixa, titulação lenta e diurético em dose alta, como ponte cautelosa para transplante"
+          ]
+        }
+      },
+      {
+        "id": "classe-funcional-avancada",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "functional_class",
+              "op": "in",
+              "value": [
+                "III",
+                "IV"
+              ]
+            },
+            {
+              "field": "acute_rv_failure_signs",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Classe funcional III ou IV indica doença avançada — encaminhar a centro de referência em hipertensão pulmonar para reavaliação de risco e possível escalonamento terapêutico"
+          ]
+        }
+      },
+      {
+        "id": "grupo-2-ou-3-cautela-com-vasodilatador",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_group",
+              "op": "in",
+              "value": [
+                "grupo2_cardiaca_esquerda",
+                "grupo3_pulmonar"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Vasodilatador específico de HAP não é indicado de rotina nos grupos 2 e 3 — priorizar tratamento da doença cardíaca esquerda ou pulmonar de base; a exceção é decisão individualizada em centro especializado, não conduta padrão"
+          ]
+        }
+      },
+      {
+        "id": "cirurgia-nao-cardiaca-eletiva",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "elective_noncardiac_surgery",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Cirurgia não cardíaca eletiva em paciente com hipertensão pulmonar exige estratificação de risco perioperatório prévia (classificar grupo de HP, avaliar risco, otimizar antes do procedimento) — mortalidade perioperatória sobe de 3,5% em cirurgia eletiva para 15% em cirurgia de urgência na HAP"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "hipertensão pulmonar",
+      "HAP",
+      "ESC/ERS 2022",
+      "cateterismo cardíaco direito",
+      "CTEPH",
+      "sotatercepte",
+      "REVEAL 2.0",
+      "cinco grupos",
+      "circulação pulmonar",
+      "falência de ventrículo direito"
+    ],
+    "source_refs": [
+      "Humbert M, Kovacs G, Hoeper MM, et al.; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548.",
+      "Hoeper MM, Humbert M, Souza R, et al. A global view of pulmonary hypertension. Lancet Respir Med. 2016;4(4):306-322. PMID: 26975810.",
+      "Humbert M, Sitbon O, Chaouat A, et al. Pulmonary arterial hypertension in France: results from a national registry. Am J Respir Crit Care Med. 2006;173(9):1023-1030. PMID: 16456139.",
+      "D'Alonzo GE, Barst RJ, Ayres SM, et al. Survival in patients with primary pulmonary hypertension. Ann Intern Med. 1991;115(5):343-349. PMID: 1863023.",
+      "Humbert M, Sitbon O, Yaïci A, et al. Survival in incident and prevalent cohorts of patients with pulmonary arterial hypertension. Circulation. 2010;122(2):156-163. PMID: 20585011.",
+      "Sitbon O, Humbert M, Jaïs X, et al. Long-term response to calcium channel blockers in idiopathic pulmonary arterial hypertension. Circulation. 2005;111(23):3105-3111. PMID: 15939821.",
+      "Bermejo J, Yotti R, García-Orta R, et al. Sildenafil for improving outcomes in patients with corrected valvular heart disease and persistent pulmonary hypertension (SIOVAC). Eur Heart J. 2018;39(15):1255-1264. PMID: 29281101.",
+      "Waxman A, Restrepo-Jaramillo R, Thenappan T, et al. Inhaled Treprostinil in Pulmonary Hypertension Due to Interstitial Lung Disease (INCREASE). N Engl J Med. 2021;384(4):325-334. PMID: 33440084.",
+      "Kim NH, Delcroix M, Jais X, et al. Chronic thromboembolic pulmonary hypertension. Eur Respir J. 2024;64(4):2401294. PMID: 39209473.",
+      "Coghlan JG, Denton CP, Grünig E, et al. Evidence-based detection of pulmonary arterial hypertension in systemic sclerosis: the DETECT study. Ann Rheum Dis. 2014;73(7):1340-1349. PMID 23687283.",
+      "Sitbon O, Lascoux-Combe C, Delfraissy JF, et al. Prevalence of HIV-related pulmonary arterial hypertension in the current antiretroviral therapy era. Am J Respir Crit Care Med. 2008;177(1):108-113. PMID 17932378.",
+      "Zamanian RT, Hedlin H, Greuenwald P, et al. Features and Outcomes of Methamphetamine-Associated Pulmonary Arterial Hypertension. Am J Respir Crit Care Med. 2018;197(6):788-800. PMID 28934596.",
+      "Montani D, Bergot E, Günther S, et al. Pulmonary arterial hypertension in patients treated by dasatinib. Circulation. 2012;125(17):2128-2137. PMID 22451584.",
+      "Galiè N, Beghetti M, Gatzoulis MA, et al. Bosentan therapy in patients with Eisenmenger syndrome (BREATHE-5). Circulation. 2006;114(1):48-54. PMID 16801459.",
+      "Gatzoulis MA, Landzberg M, Beghetti M, et al. Evaluation of Macitentan in Patients With Eisenmenger Syndrome (MAESTRO). Circulation. 2019;139(1):51-63. PMID 30586694.",
+      "Montani D, Achouh L, Dorfmüller P, et al. Pulmonary veno-occlusive disease: clinical, functional, radiologic, and hemodynamic characteristics. Eur Respir J. 2009;33(1):189-200. PMID 19118230.",
+      "Rajagopal S, Ruetzler K, Ghadimi K, et al. Evaluation and Management of Pulmonary Hypertension in Noncardiac Surgery: A Scientific Statement From the American Heart Association. Circulation. 2023;147(21):1653-1679. PMID 36924225.",
+      "van Riel ACMJ, Schuuring MJ, van Hessen ID, et al. Contemporary prevalence of pulmonary arterial hypertension in adult congenital heart disease. Int J Cardiol. 2014;174(2):299-305. PMID 24794056."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehac237",
+      "https://pubmed.ncbi.nlm.nih.gov/26975810/",
+      "https://pubmed.ncbi.nlm.nih.gov/16456139/",
+      "https://pubmed.ncbi.nlm.nih.gov/1863023/",
+      "https://pubmed.ncbi.nlm.nih.gov/20585011/",
+      "https://pubmed.ncbi.nlm.nih.gov/15939821/",
+      "https://pubmed.ncbi.nlm.nih.gov/29281101/",
+      "https://pubmed.ncbi.nlm.nih.gov/33440084/",
+      "https://pubmed.ncbi.nlm.nih.gov/39209473/"
+    ],
+    "related_document_slugs": [
+      "a-due-macitentan-tadalafila-combinacao-em-comprimido-unico",
+      "angioplastia-pulmonar-por-balao-na-cteph-inoperavel-race-e-mr-bpa",
+      "anticoagulacao-na-hipertensao-arterial-pulmonar-idiopatica-compera-versus-reveal",
+      "cadence-sotatercept-na-hipertensao-pulmonar-combinada-associada-a-icfep",
+      "cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca",
+      "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+      "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+      "denervacao-da-arteria-pulmonar-padn-metanalise-2026",
+      "diretriz-brasileira-de-hipertensao-pulmonar-2026-grade",
+      "doenca-veno-oclusiva-pulmonar-pvod-diagnostico-diferencial-e-risco-de-edema-com-vasodilatador",
+      "ecocardiograma-na-triagem-da-hap-sinais-e-limites-de-acuracia",
+      "epoprostenol-intravenoso-na-hap-grave-o-ensaio-de-barst-1996-e-a-sobrevida-em-longo-prazo",
+      "escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap",
+      "esra-riociguat-na-doenca-vascular-pulmonar-precoce",
+      "estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar",
+      "fluxograma-classificacao-hipertensao-pulmonar-cinco-grupos-esc-ers-2022",
+      "fluxograma-cteph-operabilidade-bpa-riociguate",
+      "fluxograma-hap-estratificacao-risco-terapia-combinada-inicial",
+      "fluxograma-hipertensao-pulmonar-cirurgia-nao-cardiaca-aha-2023",
+      "fluxograma-hipertensao-pulmonar-diagnostico-esc-ers-2022",
+      "fluxograma-rastreio-hipertensao-pulmonar-esclerose-sistemica-detect",
+      "fluxograma-vasorreatividade-aguda-hap-idiopatica-bloqueador-canal-calcio",
+      "fonce-htap-reabilitacao-supervisionada-hipertensao-arterial-pulmonar-2026",
+      "griphon-extensao-aberta-sobrevida-de-longo-prazo-com-selexipague",
+      "hipertensao-arterial-pulmonar-associada-a-cardiopatia-congenita-alem-da-sindrome-de-eisenmenger",
+      "hipertensao-arterial-pulmonar-associada-a-esclerose-sistemica-algoritmo-detect",
+      "hipertensao-arterial-pulmonar-associada-a-esquistossomose-epidemiologia-e-prognostico-no-brasil",
+      "hipertensao-arterial-pulmonar-associada-a-esquistossomose-mecanismo-fisiopatologico-e-subdiagnostico",
+      "hipertensao-arterial-pulmonar-associada-ao-hiv-prevalencia-na-era-da-terapia-antirretroviral",
+      "hipertensao-arterial-pulmonar-hereditaria-bmpr2-penetrancia-e-rastreio-familiar",
+      "hipertensao-arterial-pulmonar-induzida-por-drogas-e-toxinas-anorexigenos-metanfetamina-e-dasatinibe",
+      "hipertensao-portopulmonar-criterios-diagnosticos-e-elegibilidade-para-transplante-hepatico",
+      "hipertensao-pulmonar-associada-a-sarcoidose-mecanismos-multiplos-e-tratamento-individualizado",
+      "hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022",
+      "hipertensao-pulmonar-do-grupo-3-dpoc-e-dpi-criterios-prognostico-e-risco-do-vasodilatador-especifico",
+      "hipertensao-pulmonar-do-grupo-5-hematologica-anemia-falciforme-e-mielofibrose",
+      "hipertensao-pulmonar-e-cirurgia-nao-cardiaca-risco-perioperatorio-e-estratificacao",
+      "hipertensao-pulmonar-por-doenca-respiratoria-do-sono-e-hipoventilacao-grupo-3",
+      "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+      "hyperion-sotatercept-hap-primeiro-ano-diagnostico",
+      "interacao-entre-antirretrovirais-e-vasodilatadores-especificos-da-hap-inibidores-de-protease-e-cyp3a4",
+      "macitentana-na-cteph-inoperavel-o-ensaio-merit-1-e-sua-retratacao-republicacao",
+      "monoterapia-na-hap-a-base-de-evidencia-breathe-1-super-1-e-early",
+      "nt-probnp-diferenca-minima-importante-pah-ph-ild-2026",
+      "qualidade-de-vida-na-hap-o-instrumento-camphor",
+      "ralinepague-agonista-oral-do-receptor-de-prostaciclina-o-programa-advance",
+      "riociguate-na-hap-e-na-cteph-os-ensaios-patent-1-e-chest-1",
+      "rodatristat-etil-inibidor-de-tph1-elevate-2-ensaio-negativo",
+      "septostomia-atrial-por-balao-na-hap-grave-refrataria-sandoval-1998-e-a-metanalise-de-khan-2019",
+      "seralutinib-inibidor-de-quinase-inalado-na-hap-torrey",
+      "sildenafila-na-hipertensao-pulmonar-do-grupo-2-o-ensaio-siovac",
+      "sindrome-de-eisenmenger-breathe-5-maestro-e-o-que-a-terapia-especifica-entrega",
+      "sotatercepte-o-ensaio-de-fase-3-stellar",
+      "soteria-sotatercept-seguranca-longo-prazo-hap",
+      "terapia-tripla-inicial-versus-dupla-na-hap-o-ensaio-triton",
+      "teste-de-vasorreatividade-aguda-e-hipertensao-pulmonar-dos-grupos-2-e-3",
+      "teste-de-vasorreatividade-aguda-na-hap-idiopatica-e-hereditaria-o-criterio-de-sitbon",
+      "treinamento-fisico-e-respiratorio-na-hap-grave-o-ensaio-de-mereles-2006",
+      "treprostinil-inalado-na-hipertensao-pulmonar-do-grupo-3-o-ensaio-increase",
+      "zenith-sotatercept-hap-alto-risco-morte"
+    ],
+    "patient_material_slug": "hipertensao-pulmonar",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central da hipertensão pulmonar adulta (área geral) — terceiro ciclo Tudo com Tudo do dia (após endocardite infecciosa, PR #553, e pericardite, PR #554). Coleção doencas/metadados.json não tinha nenhum verbete geral adulto para HP (só hipertensao-pulmonar-pediatrica e hipertensao-pulmonar-gravidez, escopos distintos, não duplicados aqui). Conteúdo sintetizado a partir de 60 documentos já publicados e revisados em content/Hipertensão_pulmonar/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 4 agentes de pesquisa independentes nesta sessão. Uma correção factual foi identificada e aplicada durante a síntese: a taxa de operabilidade cirúrgica em CTEPH é de aproximadamente 60% (não 40% como uma fonte secundária inicial sugeria) — corrigida com base em Kim NH et al., Eur Respir J 2024, PMID 39209473. Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente. Doses de fármacos específicas foram deliberadamente omitidas do treatment_summary — apenas classe farmacológica e princípio terapêutico. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
     "version": 1
   }
 ]
