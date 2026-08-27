@@ -76,7 +76,7 @@ def test_marcacao_editorial_correta():
     assert item.get("area") == "geral"
     assert item.get("review_note")
     assert item.get("source_refs") and len(item["source_refs"]) >= 5
-    assert item.get("version") == 1
+    assert item.get("version") == 2
 
 
 def test_profundidade_minima_e_nao_e_resumo():
