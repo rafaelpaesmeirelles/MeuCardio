@@ -15,6 +15,7 @@ const CLINICA_DECISAO: LinkItem[] = [
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
   { to: "/interacoes", label: "Interações medicamentosas", icon: "medicamento" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
+  { to: "/cardiologia-intensiva", label: "Cardiologia Intensiva & UCO", icon: "clinica" },
   { to: "/checklists", label: "Checklists", icon: "check" },
   { to: "/triagem-sintomas", label: "Triagem", icon: "triagem" },
   { to: "/condicoes", label: "Condições especiais", icon: "check" },

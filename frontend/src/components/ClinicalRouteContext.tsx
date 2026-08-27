@@ -34,6 +34,7 @@ const ROUTES: Array<[string, string]> = [
 
   // Ferramentas de decisão/consulta
   ["/calculadoras", "ferramentas"],
+  ["/cardiologia-intensiva", "ferramentas"],
   ["/checklists", "ferramentas"],
   ["/fluxogramas", "ferramentas"],
   ["/triagem-sintomas", "ferramentas"],

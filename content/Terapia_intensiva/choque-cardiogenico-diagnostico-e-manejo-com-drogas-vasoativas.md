@@ -72,3 +72,7 @@ Diagnóstico de choque cardiogênico por si só constitui indicação de interna
 ## Armadilhas clinicas
 
 Retardar reconhecimento de sinais precoces de choque cardiogênico; não considerar suporte circulatório mecânico em tempo oportuno antes de deterioração hemodinâmica extrema
+
+## Tudo com Tudo — função renal aguda
+
+- [Calculadora de lesão renal aguda KDIGO na UCO](/calculadoras/lesao-renal-aguda-kdigo-uco) — vínculo clínico direto: oligúria integra hipoperfusão e a função renal altera risco e manejo, mas o estágio KDIGO não prova baixo débito nem seleciona automaticamente fluido, diurético ou vasoativo.

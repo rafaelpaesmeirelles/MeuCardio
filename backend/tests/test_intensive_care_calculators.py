@@ -1,0 +1,779 @@
+"""Testes puros da central de Cardiologia Intensiva e UCO."""
+
+import math
+
+import pytest
+
+from app.services import calculators
+from app.services.intensive_care_calculators import INTENSIVE_CARE_CALCULATOR_REGISTRY
+
+
+def _calc():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["ventilacao-protetora-uco"]
+
+
+def _calc_bomba():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["conferencia-bomba-infusao-uco"]
+
+
+def _calc_scai():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["estadiamento-scai-choque-cardiogenico"]
+
+
+def _calc_acidose():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["acidose-metabolica-winter-anion-gap-uco"]
+
+
+def _calc_oxigenacao():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["oxigenacao-pao2-fio2-sdra-uco"]
+
+
+def _calc_lra():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["lesao-renal-aguda-kdigo-uco"]
+
+
+def _dados(**mudancas):
+    dados = {
+        "sexo_biologico": "masculino",
+        "altura_cm": 170,
+        "volume_corrente_ml": 400,
+        "pressao_plato_cmh2o": 25,
+        "peep_total_cmh2o": 10,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_bomba(**mudancas):
+    dados = {
+        "agente": "norepinefrina",
+        "peso_kg": 70,
+        "dose_pretendida": 0.1,
+        "quantidade_soluto": 4,
+        "volume_total_ml": 250,
+        "velocidade_bomba_ml_h": 26.25,
+        "tolerancia_percentual": "5",
+        "contexto_choque_cardiogenico": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_scai(**mudancas):
+    dados = {
+        "em_risco_sem_instabilidade": False,
+        "instabilidade_sem_hipoperfusao": False,
+        "hipoperfusao_requer_intervencao": True,
+        "deterioracao_apos_intervencao": False,
+        "colapso_extremis": False,
+        "parada_com_risco_anoxico": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_acidose(**mudancas):
+    dados = {
+        "ph": 7.25,
+        "paco2_mmhg": 26,
+        "bicarbonato_meq_l": 12,
+        "sodio_meq_l": 140,
+        "cloro_meq_l": 104,
+        "albumina_referencia_g_dl": 4.0,
+        "referencia_ag_sem_potassio_confirmada": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_oxigenacao(**mudancas):
+    dados = {
+        "pao2_mmhg": 80,
+        "fio2_percentual": 40,
+        "suporte_respiratorio": "invasiva",
+        "peep_cpap_cmh2o": 8,
+        "altitude_maior_1000m": False,
+        "fator_predisponente_agudo": True,
+        "inicio_ate_uma_semana_do_fator": True,
+        "inicio_ate_uma_semana_dos_sintomas": False,
+        "opacidades_bilaterais": True,
+        "edema_nao_primariamente_cardiogenico": True,
+        "hipoxemia_nao_primariamente_atelectasia": True,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_lra(**mudancas):
+    dados = {
+        "creatinina_atual_mg_dl": 1.8,
+        "creatinina_baseline_confiavel": True,
+        "creatinina_baseline_mg_dl": 1.0,
+        "intervalo_creatinina_baseline": "mais_48h_ate_7d",
+        "peso_kg": 70,
+        "volume_urina_ml": 420,
+        "duracao_coleta_urina_horas": 12,
+        "anuria_12h_confirmada": False,
+        "trr_aguda_iniciada": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def test_homem_170_cm_calcula_peso_predito_volume_e_pressao_distensao():
+    resultado = _calc().compute(_dados())
+
+    assert resultado["peso_predito_kg"] == 66.02
+    assert resultado["vt_referencia_6_ml_kg"] == 396.1
+    assert resultado["faixa_vt_4_a_8_ml_kg"] == "264.1–528.1 mL"
+    assert resultado["vt_atual_ml_kg"] == 6.06
+    assert resultado["pressao_distensao_cmh2o"] == 15.0
+    assert resultado["fora_da_faixa"] is False
+
+
+def test_mulher_usa_constante_especifica_da_equacao_ardsnet():
+    resultado = _calc().compute(_dados(sexo_biologico="feminino", altura_cm=160))
+
+    assert resultado["peso_predito_kg"] == 52.42
+    assert resultado["vt_referencia_6_ml_kg"] == 314.5
+
+
+def test_volume_e_plato_altos_geram_alertas_sem_prescrever_peep():
+    resultado = _calc().compute(
+        _dados(volume_corrente_ml=700, pressao_plato_cmh2o=32, peep_total_cmh2o=12)
+    )
+
+    assert resultado["fora_da_faixa"] is True
+    assert "acima de 8" in resultado["alerta_volume"]
+    assert "≥30" in resultado["alerta_plato"]
+    assert resultado["pressao_distensao_cmh2o"] == 20.0
+
+
+def test_plato_menor_que_peep_e_rejeitada():
+    with pytest.raises(ValueError, match="platô não pode ser menor"):
+        _calc().compute(_dados(pressao_plato_cmh2o=8, peep_total_cmh2o=10))
+
+
+def test_calculadora_esta_registrada_no_tema_exato_tudo_com_tudo():
+    calculadora = calculators.REGISTRY["ventilacao-protetora-uco"]
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "dose"
+
+
+def test_conferencia_reversa_norepinefrina_fecha_dose_e_velocidade():
+    resultado = _calc_bomba().compute(_dados_bomba())
+
+    assert resultado["concentracao_calculada"] == "16.00 mcg/mL"
+    assert resultado["dose_entregue_calculada"] == 0.1
+    assert resultado["velocidade_esperada_ml_h"] == 26.25
+    assert resultado["desvio_percentual_absoluto"] == 0
+    assert resultado["fora_da_faixa"] is False
+
+
+def test_conferencia_calcula_agente_ponderal_e_nao_ponderal():
+    dobutamina = _calc_bomba().compute(
+        _dados_bomba(
+            agente="dobutamina",
+            peso_kg=80,
+            dose_pretendida=2.083333,
+            quantidade_soluto=250,
+            volume_total_ml=250,
+            velocidade_bomba_ml_h=10,
+        )
+    )
+    nitroglicerina = _calc_bomba().compute(
+        _dados_bomba(
+            agente="nitroglicerina",
+            dose_pretendida=50,
+            quantidade_soluto=50,
+            volume_total_ml=250,
+            velocidade_bomba_ml_h=15,
+        )
+    )
+
+    assert dobutamina["dose_entregue_calculada"] == 2.083333
+    assert nitroglicerina["dose_entregue_calculada"] == 50
+
+
+def test_vasopressina_usa_unidades_por_minuto_sem_dividir_pelo_peso():
+    resultado = _calc_bomba().compute(
+        _dados_bomba(
+            agente="vasopressina",
+            peso_kg=1,
+            dose_pretendida=0.03,
+            quantidade_soluto=20,
+            volume_total_ml=100,
+            velocidade_bomba_ml_h=9,
+        )
+    )
+
+    assert resultado["concentracao_calculada"] == "0.2000 U/mL"
+    assert resultado["dose_entregue_calculada"] == 0.03
+    assert resultado["unidade_dose"] == "U/min"
+
+
+def test_peso_pode_ser_omitido_em_agente_nao_ponderal():
+    dados = _dados_bomba(
+        agente="vasopressina",
+        dose_pretendida=0.03,
+        quantidade_soluto=20,
+        volume_total_ml=100,
+        velocidade_bomba_ml_h=9,
+    )
+    dados.pop("peso_kg")
+
+    resultado = _calc_bomba().compute(dados)
+
+    assert resultado["dose_entregue_calculada"] == 0.03
+
+
+def test_divergencia_operacional_gera_gate_mesmo_sem_faixa_terapeutica():
+    resultado = _calc_bomba().compute(
+        _dados_bomba(velocidade_bomba_ml_h=30, tolerancia_percentual="5")
+    )
+
+    assert resultado["desvio_percentual_absoluto"] == 14.29
+    assert resultado["fora_da_faixa"] is True
+    assert "DIVERGÊNCIA" in resultado["status_conferencia"]
+    assert "não avaliada" in resultado["alerta_contextual"]
+
+
+def test_limite_exato_da_tolerancia_nao_diverge_por_erro_binario():
+    resultado = _calc_bomba().compute(
+        _dados_bomba(velocidade_bomba_ml_h=24.9375, tolerancia_percentual="5")
+    )
+
+    assert math.isclose(resultado["dose_entregue_calculada"], 0.095)
+    assert resultado["desvio_percentual_absoluto"] == 5.0
+    assert resultado["fora_da_faixa"] is False
+
+
+def test_faixa_acc_so_e_aplicada_quando_contexto_e_declarado():
+    sem_contexto = _calc_bomba().compute(
+        _dados_bomba(dose_pretendida=1.2, velocidade_bomba_ml_h=315)
+    )
+    com_contexto = _calc_bomba().compute(
+        _dados_bomba(
+            dose_pretendida=1.2,
+            velocidade_bomba_ml_h=315,
+            contexto_choque_cardiogenico=True,
+        )
+    )
+
+    assert sem_contexto["fora_da_faixa"] is False
+    assert "não aplicada" in sem_contexto["faixa_acc_2025"]
+    assert com_contexto["fora_da_faixa"] is True
+    assert "fora da faixa contextual" in com_contexto["alerta_contextual"]
+
+
+@pytest.mark.parametrize(
+    "mudanca, mensagem",
+    [
+        ({"quantidade_soluto": 0}, "devem ser positivos"),
+        ({"volume_total_ml": 0}, "devem ser positivos"),
+        ({"velocidade_bomba_ml_h": -1}, "não pode ser negativa"),
+        ({"tolerancia_percentual": "3"}, "2%, 5% ou 10%"),
+        ({"peso_kg": 0}, "peso entre 1 e 400"),
+        ({"dose_pretendida": "NaN"}, "valores numéricos finitos"),
+        ({"quantidade_soluto": "Infinity"}, "valores numéricos finitos"),
+    ],
+)
+def test_conferencia_rejeita_entradas_invalidas(mudanca, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_bomba().compute(_dados_bomba(**mudanca))
+
+
+def test_conferencia_bomba_esta_registrada_no_tema_exato_tudo_com_tudo():
+    calculadora = calculators.REGISTRY["conferencia-bomba-infusao-uco"]
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "dose"
+
+
+@pytest.mark.parametrize(
+    "campo, estagio",
+    [
+        ("em_risco_sem_instabilidade", "A — em risco"),
+        ("instabilidade_sem_hipoperfusao", "B — choque iniciando"),
+        ("hipoperfusao_requer_intervencao", "C — choque clássico"),
+        ("deterioracao_apos_intervencao", "D — deteriorando"),
+        ("colapso_extremis", "E — extremis"),
+    ],
+)
+def test_scai_mapeia_padrao_clinico_predominante_de_a_a_e(campo, estagio):
+    dados = _dados_scai(hipoperfusao_requer_intervencao=False)
+    dados[campo] = True
+
+    resultado = _calc_scai().compute(dados)
+
+    assert resultado["estagio_sugerido"] == estagio
+    assert resultado["rotulo_para_documentacao"] == f"SCAI {estagio[0]}"
+
+
+def test_scai_usa_maior_gravidade_quando_mais_de_um_padrao_e_marcado():
+    resultado = _calc_scai().compute(
+        _dados_scai(
+            instabilidade_sem_hipoperfusao=True,
+            deterioracao_apos_intervencao=True,
+        )
+    )
+
+    assert resultado["estagio_sugerido"] == "D — deteriorando"
+
+
+def test_scai_modificador_a_exige_declaracao_de_risco_anoxico():
+    sem_modificador = _calc_scai().compute(_dados_scai())
+    com_modificador = _calc_scai().compute(
+        _dados_scai(parada_com_risco_anoxico=True)
+    )
+
+    assert sem_modificador["rotulo_para_documentacao"] == "SCAI C"
+    assert com_modificador["rotulo_para_documentacao"] == "SCAI C+A"
+    assert "potencial lesão cerebral anóxica" in com_modificador["modificador_a"]
+
+
+def test_scai_medidas_opcionais_nao_substituem_padrao_clinico():
+    with pytest.raises(ValueError, match="não pode ser inferido apenas por números"):
+        _calc_scai().compute(
+            _dados_scai(
+                hipoperfusao_requer_intervencao=False,
+                lactato_mmol_l=5,
+                pas_mmhg=80,
+            )
+        )
+
+
+def test_scai_sinaliza_discordancia_sem_promover_estagio_automaticamente():
+    resultado = _calc_scai().compute(
+        _dados_scai(
+            hipoperfusao_requer_intervencao=False,
+            instabilidade_sem_hipoperfusao=True,
+            lactato_mmol_l=9,
+            ph_arterial=7.1,
+        )
+    )
+
+    assert resultado["estagio_sugerido"] == "B — choque iniciando"
+    assert resultado["fora_da_faixa"] is True
+    assert "reavaliar antes de manter A/B" in resultado["alerta_de_consistencia"]
+    assert "avaliar o conjunto clínico para estágio E" in resultado["alerta_de_consistencia"]
+
+
+def test_scai_documenta_medidas_e_reavaliacao_seriada():
+    resultado = _calc_scai().compute(
+        _dados_scai(pas_mmhg=85, pam_mmhg=58, frequencia_cardiaca_bpm=110, lactato_mmol_l=3)
+    )
+
+    assert resultado["medidas_de_apoio"] == "PAS 85 mmHg, PAM 58 mmHg, FC 110 bpm, lactato 3 mmol/L"
+    assert "estágio inicial e máximo" in resultado["reavaliacao"]
+
+
+@pytest.mark.parametrize(
+    "mudanca, mensagem",
+    [
+        ({"lactato_mmol_l": "NaN"}, "valores numéricos finitos"),
+        ({"lactato_mmol_l": 31}, "lactato entre 0 e 30"),
+        ({"ph_arterial": 8}, "pH arterial entre"),
+        ({"pas_mmhg": -1}, "PAS deve estar entre 0 e 400"),
+        ({"frequencia_cardiaca_bpm": 351}, "frequência cardíaca deve estar entre 0 e 350"),
+    ],
+)
+def test_scai_rejeita_medidas_invalidas(mudanca, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_scai().compute(_dados_scai(**mudanca))
+
+
+def test_scai_esta_registrado_no_tema_e_expoe_numeros_opcionais():
+    calculadora = calculators.REGISTRY["estadiamento-scai-choque-cardiogenico"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {
+        "pas_mmhg",
+        "pam_mmhg",
+        "frequencia_cardiaca_bpm",
+        "lactato_mmol_l",
+        "ph_arterial",
+    }
+
+
+def test_scai_c_exclui_hipoperfusao_resolvida_com_volume_isolado():
+    calculadora = calculators.REGISTRY["estadiamento-scai-choque-cardiogenico"]
+    campo_c = next(
+        campo for campo in calculadora.fields if campo.name == "hipoperfusao_requer_intervencao"
+    )
+    resultado = calculadora.compute(_dados_scai())
+
+    assert "além de volume isolado" in campo_c.label
+    assert "resolve apenas com reposição volêmica não preenche" in campo_c.help
+    assert "além de reposição volêmica isolada" in resultado["criterio_determinante"]
+
+
+def test_acidose_calcula_winter_e_anion_gap_sem_fabricar_diagnostico():
+    resultado = _calc_acidose().compute(_dados_acidose())
+
+    assert resultado["paco2_esperada_winter_mmhg"] == "24.0–28.0"
+    assert resultado["anion_gap_sem_potassio_meq_l"] == 24.0
+    assert "compatível com a compensação esperada" in resultado["avaliacao_da_compensacao"]
+    assert "não exclui outro distúrbio misto" in resultado["avaliacao_da_compensacao"]
+    assert resultado["fora_da_faixa"] is False
+
+
+@pytest.mark.parametrize(
+    "paco2, trecho",
+    [
+        (20, "considerar alcalose respiratória associada"),
+        (35, "considerar acidose respiratória associada"),
+    ],
+)
+def test_acidose_sinaliza_paco2_discordante_sem_diagnosticar(paco2, trecho):
+    resultado = _calc_acidose().compute(_dados_acidose(paco2_mmhg=paco2))
+
+    assert trecho in resultado["avaliacao_da_compensacao"]
+    assert "confirmar amostra, tempo e contexto clínico" in resultado["avaliacao_da_compensacao"]
+    assert resultado["fora_da_faixa"] is True
+
+
+def test_acidose_corrige_anion_gap_por_albumina_e_usa_referencia_local():
+    resultado = _calc_acidose().compute(
+        _dados_acidose(
+            albumina_g_dl=2,
+            limite_superior_ag_meq_l=12,
+            referencia_ag_sem_potassio_confirmada=True,
+        )
+    )
+
+    assert resultado["anion_gap_corrigido_albumina_meq_l"] == 29.0
+    assert "acima do limite informado (12 mEq/L)" in resultado["comparacao_com_referencia_do_laboratorio"]
+
+
+def test_acidose_sem_limite_laboratorial_nao_impoe_corte_universal():
+    resultado = _calc_acidose().compute(_dados_acidose(albumina_g_dl=2))
+
+    assert "sem classificação automática" in resultado["comparacao_com_referencia_do_laboratorio"]
+
+
+@pytest.mark.parametrize(
+    "mudanca, mensagem",
+    [
+        ({"ph": "NaN"}, "valores numéricos finitos"),
+        ({"bicarbonato_meq_l": 25}, "aplica Winter somente à acidose metabólica"),
+        ({"albumina_g_dl": 0.2}, "albumina entre 0,5 e 6,0"),
+        ({"limite_superior_ag_meq_l": 41}, "limite superior do ânion gap"),
+        (
+            {"limite_superior_ag_meq_l": 12},
+            "corresponde ao ânion gap sem potássio",
+        ),
+    ],
+)
+def test_acidose_rejeita_entradas_fora_do_escopo(mudanca, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_acidose().compute(_dados_acidose(**mudanca))
+
+
+def test_acidose_esta_registrada_com_resultado_estruturado_e_campos_opcionais():
+    calculadora = calculators.REGISTRY["acidose-metabolica-winter-anion-gap-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {"albumina_g_dl", "limite_superior_ag_meq_l"}
+
+
+def test_oxigenacao_calcula_pf_e_classifica_faixa_intubada_sem_diagnostico_automatico():
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao())
+
+    assert resultado["relacao_pao2_fio2_mmhg"] == 200.0
+    assert "100–200 mmHg" in resultado["faixa_da_relacao_pf"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+    assert "Isto não é diagnóstico automático" in resultado["status_dos_criterios"]
+    assert resultado["fora_da_faixa"] is False
+
+
+def test_oxigenacao_inclui_limites_exatos_pf_300_peep_5_e_cnaf_30():
+    invasiva = _calc_oxigenacao().compute(
+        _dados_oxigenacao(pao2_mmhg=90, fio2_percentual=30, peep_cpap_cmh2o=5)
+    )
+    cnaf = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            pao2_mmhg=90,
+            fio2_percentual=30,
+            suporte_respiratorio="cnaf",
+            peep_cpap_cmh2o=None,
+            fluxo_cnaf_l_min=30,
+        )
+    )
+
+    assert invasiva["relacao_pao2_fio2_mmhg"] == 300.0
+    assert "200–300 mmHg" in invasiva["faixa_da_relacao_pf"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in invasiva["status_dos_criterios"]
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in cnaf["status_dos_criterios"]
+
+
+@pytest.mark.parametrize(
+    "mudancas",
+    [
+        {
+            "inicio_ate_uma_semana_do_fator": True,
+            "inicio_ate_uma_semana_dos_sintomas": False,
+        },
+        {
+            "inicio_ate_uma_semana_do_fator": False,
+            "inicio_ate_uma_semana_dos_sintomas": True,
+        },
+    ],
+)
+def test_oxigenacao_aceita_os_dois_marcos_temporais_alternativos(mudancas):
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+
+
+def test_oxigenacao_mantem_fator_predisponente_obrigatorio_mesmo_com_sintomas_recentes():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            fator_predisponente_agudo=False,
+            inicio_ate_uma_semana_do_fator=False,
+            inicio_ate_uma_semana_dos_sintomas=True,
+        )
+    )
+
+    assert "fator predisponente agudo" in resultado["criterios_ausentes"]
+    assert "CRITÉRIOS CLÍNICOS/DE IMAGEM INCOMPLETOS" in resultado["status_dos_criterios"]
+
+
+def test_oxigenacao_corrige_pf_acima_de_1000m_com_pressao_barometrica_local():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            pao2_mmhg=90,
+            fio2_percentual=30,
+            altitude_maior_1000m=True,
+            pressao_barometrica_mmhg=600,
+        )
+    )
+
+    assert resultado["relacao_pao2_fio2_observada_mmhg"] == 300.0
+    assert resultado["relacao_pao2_fio2_mmhg"] == 236.8
+    assert "pressão barométrica local de 600 mmHg" in resultado["correcao_altitude"]
+    assert "200–300 mmHg" in resultado["faixa_da_relacao_pf"]
+
+
+def test_oxigenacao_bloqueia_rotulo_quando_origem_cardiogenica_nao_foi_excluida():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(edema_nao_primariamente_cardiogenico=False)
+    )
+
+    assert "edema não primariamente cardiogênico/sobrecarga" in resultado["criterios_ausentes"]
+    assert "BLOQUEIO CARDIOGÊNICO" in resultado["alerta_edema_cardiogenico"]
+    assert "CRITÉRIOS CLÍNICOS/DE IMAGEM INCOMPLETOS" in resultado["status_dos_criterios"]
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "suporte,mudancas,trecho",
+    [
+        ("cnaf", {"fluxo_cnaf_l_min": 30}, "CNAF com fluxo 30 L/min"),
+        ("vni_cpap", {"peep_cpap_cmh2o": 5}, "VNI/CPAP com pressão expiratória 5 cmH₂O"),
+    ],
+)
+def test_oxigenacao_aceita_suporte_nao_intubado_da_definicao_global(
+    suporte, mudancas, trecho
+):
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(suporte_respiratorio=suporte, **mudancas)
+    )
+
+    assert resultado["categoria_global_avaliada"] == "não intubada"
+    assert resultado["suporte_avaliado"] == trecho
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+    assert "faixa moderada apenas na categoria intubada" in resultado["faixa_da_relacao_pf"]
+
+
+@pytest.mark.parametrize(
+    "mudancas,trecho",
+    [
+        ({"peep_cpap_cmh2o": 4}, "GATE DE SUPORTE NÃO PREENCHIDO"),
+        (
+            {"suporte_respiratorio": "cnaf", "peep_cpap_cmh2o": None, "fluxo_cnaf_l_min": 29},
+            "fluxo ≥30 L/min",
+        ),
+        (
+            {"suporte_respiratorio": "oxigenio_convencional", "peep_cpap_cmh2o": None},
+            "oxigênio convencional/baixo fluxo",
+        ),
+        ({"pao2_mmhg": 130}, "NÃO PREENCHE O LIMIAR DE OXIGENAÇÃO"),
+    ],
+)
+def test_oxigenacao_aplica_gates_sem_forcar_classificacao(mudancas, trecho):
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+    texto = f"{resultado['status_dos_criterios']} {resultado['suporte_avaliado']}"
+    assert trecho in texto
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "mudancas,mensagem",
+    [
+        ({"pao2_mmhg": "NaN"}, "valores numéricos finitos"),
+        ({"fio2_percentual": 0.4}, "FiO₂ entre 21% e 100%"),
+        ({"peep_cpap_cmh2o": 31}, "PEEP/CPAP entre 0 e 30"),
+        (
+            {"suporte_respiratorio": "cnaf", "peep_cpap_cmh2o": None, "fluxo_cnaf_l_min": 101},
+            "fluxo da CNAF entre 0 e 100",
+        ),
+        ({"pressao_barometrica_mmhg": 299}, "pressão barométrica local entre 300 e 760"),
+        (
+            {"altitude_maior_1000m": True},
+            "acima de 1.000 m, informe a pressão barométrica local",
+        ),
+    ],
+)
+def test_oxigenacao_rejeita_entradas_invalidas(mudancas, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+
+def test_oxigenacao_esta_registrada_com_gates_opcionais_e_kind_assessment():
+    calculadora = calculators.REGISTRY["oxigenacao-pao2-fio2-sdra-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {
+        "peep_cpap_cmh2o",
+        "fluxo_cnaf_l_min",
+        "pressao_barometrica_mmhg",
+    }
+
+
+def test_lra_estadia_pelo_componente_mais_grave_e_preserva_componentes():
+    resultado = _calc_lra().compute(_dados_lra())
+
+    assert resultado["estagio_kdigo"] == 1
+    assert "componente C1" in resultado["componente_creatinina"]
+    assert "componente U0" in resultado["componente_diurese"]
+    assert resultado["diurese_ml_kg_h"] == 0.5
+    assert resultado["fora_da_faixa"] is True
+
+
+def test_lra_inclui_aumento_exato_de_03_em_48h():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.3,
+            intervalo_creatinina_baseline="ate_48h",
+            peso_kg=None,
+            volume_urina_ml=None,
+            duracao_coleta_urina_horas=None,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 1
+    assert resultado["delta_creatinina_mg_dl"] == 0.3
+
+
+@pytest.mark.parametrize(
+    "mudancas,estagio",
+    [
+        ({"creatinina_atual_mg_dl": 2.0}, 2),
+        ({"creatinina_atual_mg_dl": 3.0}, 3),
+        ({"creatinina_atual_mg_dl": 4.1, "creatinina_baseline_mg_dl": 1.5}, 3),
+        ({"trr_aguda_iniciada": True}, 3),
+        ({"anuria_12h_confirmada": True, "volume_urina_ml": 0}, 3),
+    ],
+)
+def test_lra_aplica_gates_de_estagio_grave(mudancas, estagio):
+    resultado = _calc_lra().compute(_dados_lra(**mudancas))
+
+    assert resultado["estagio_kdigo"] == estagio
+
+
+def test_lra_diurese_abaixo_de_05_por_12h_define_estagio_2():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.0,
+            volume_urina_ml=419,
+            duracao_coleta_urina_horas=12,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 2
+    assert "componente U2" in resultado["componente_diurese"]
+
+
+def test_lra_diurese_abaixo_de_03_por_24h_define_estagio_3():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.0,
+            volume_urina_ml=487,
+            duracao_coleta_urina_horas=24,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 3
+    assert "componente U3" in resultado["componente_diurese"]
+
+
+def test_lra_nao_forca_estagio_com_baseline_fora_da_janela_e_diurese_incompleta():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            intervalo_creatinina_baseline="fora_7d_ou_incerto",
+            peso_kg=None,
+            volume_urina_ml=None,
+            duracao_coleta_urina_horas=None,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == "indeterminado"
+    assert "NÃO ESTADIÁVEL" in resultado["status"]
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "mudancas,mensagem",
+    [
+        ({"creatinina_atual_mg_dl": 0}, "creatinina atual entre 0,1 e 30"),
+        (
+            {"creatinina_baseline_confiavel": True, "creatinina_baseline_mg_dl": None},
+            "creatinina basal declarada como confiável",
+        ),
+        (
+            {"creatinina_baseline_confiavel": False},
+            "Marque a creatinina basal como confiável",
+        ),
+        (
+            {"volume_urina_ml": None},
+            "informe conjuntamente peso, volume urinário e duração",
+        ),
+        (
+            {"anuria_12h_confirmada": True},
+            "Anúria por 12 horas é incompatível",
+        ),
+    ],
+)
+def test_lra_rejeita_entradas_inconsistentes(mudancas, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_lra().compute(_dados_lra(**mudancas))
+
+
+def test_lra_esta_registrada_com_campos_opcionais_e_sem_prescrever_dialise():
+    calculadora = calculators.REGISTRY["lesao-renal-aguda-kdigo-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {
+        "creatinina_baseline_mg_dl",
+        "peso_kg",
+        "volume_urina_ml",
+        "duracao_coleta_urina_horas",
+    }
+    assert "não indica automaticamente" in " ".join(calculadora.limitations)

@@ -15,6 +15,11 @@ source_refs: [
 ]
 ---
 
+> **Ferramenta clínica relacionada:** a leitura da compensação respiratória e do
+> ânion gap pode ser estruturada na [calculadora de acidose metabólica da UCO](/calculadoras/acidose-metabolica-winter-anion-gap-uco).
+> O vínculo é direto para a avaliação ácido–base, mas a ferramenta não substitui
+> cetonas nem confirma cetoacidose.
+
 ## Por que este documento existe
 
 A cetoacidose diabética (CAD) associada a inibidores de SGLT2 (iSGLT2 — canagliflozina,

@@ -13,6 +13,7 @@ from .dose_calculators_fibrinoliticos_stemi_chatgpt import FIBRINOLITICOS_STEMI_
 from .dose_calculators_icfer_chatgpt import ICFER_DOSE_REGISTRY
 from .dose_calculators_mra_icfer_chatgpt import MRA_ICFER_DOSE_REGISTRY
 from .dose_calculators_pals2025_chatgpt import PALS_2025_DOSE_REGISTRY
+from .intensive_care_calculators import INTENSIVE_CARE_CALCULATOR_REGISTRY
 from .perioperative_calculators_frailty import FRAILTY_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
@@ -31,6 +32,7 @@ _CHATGPT_REGISTRIES = [
     ICFER_DOSE_REGISTRY,
     MRA_ICFER_DOSE_REGISTRY,
     PALS_2025_DOSE_REGISTRY,
+    INTENSIVE_CARE_CALCULATOR_REGISTRY,
     FRAILTY_PERIOPERATIVE_REGISTRY,
     GERIATRIC_PERIOPERATIVE_REGISTRY,
     MORTALITY_PERIOPERATIVE_REGISTRY,

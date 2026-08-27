@@ -23,6 +23,7 @@ const BASE: Secao[] = [
       { to: "/doencas", rotulo: "Guia de Doenças", icone: "doencas" },
       { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
       { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
+      { to: "/cardiologia-intensiva", rotulo: "Cardiologia Intensiva & UCO", icone: "clinica" },
       { to: "/medicamentos", rotulo: "Medicamentos", icone: "medicamento" },
       { to: "/interacoes", rotulo: "Interações", icone: "medicamento" },
       { to: "/fluxogramas", rotulo: "Fluxogramas", icone: "seta" },
@@ -87,6 +88,7 @@ const BASE: Secao[] = [
 ];
 
 const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone: NomeIcone }> = [
+  { prefixo: "/cardiologia-intensiva", titulo: "Cardiologia Intensiva & UCO", detalhe: "Cockpit assistencial", icone: "clinica" },
   { prefixo: "/medicamentos", titulo: "Medicamentos", detalhe: "Farmacologia e segurança", icone: "medicamento" },
   { prefixo: "/interacoes", titulo: "Interações", detalhe: "Segurança medicamentosa", icone: "medicamento" },
   { prefixo: "/doencas", titulo: "Guia de Doenças", detalhe: "Consulta clínica", icone: "doencas" },

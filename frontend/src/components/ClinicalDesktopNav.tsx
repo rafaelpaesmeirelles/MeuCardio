@@ -14,6 +14,7 @@ const CLINICA_DECISAO: NavItem[] = [
   { to: "/exames", label: "Exames", icon: "clinica" },
   { to: "/calculadoras", label: "Calculadoras", icon: "calculadora" },
   { to: "/emergencia", label: "Emergências", icon: "emergencia" },
+  { to: "/cardiologia-intensiva", label: "Cardiologia Intensiva & UCO", icon: "clinica" },
   { to: "/checklists", label: "Checklists", icon: "check" },
   { to: "/triagem-sintomas", label: "Triagem de sintomas", icon: "triagem" },
   { to: "/interacoes", label: "Interações medicamentosas", icon: "medicamento" },

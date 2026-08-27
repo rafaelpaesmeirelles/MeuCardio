@@ -44,6 +44,7 @@ Este documento reúne deliberadamente as duas fontes porque **elas não concorda
 - **Parâmetros usados no maior ensaio**, úteis como referência prática: CPAP 5 a 15 cmH₂O; NIPPV com pressão inspiratória de 8 a 20 cmH₂O e pressão expiratória de 4 a 10 cmH₂O.
 
 ## Armadilhas clínicas
+- **Confundir EAP cardiogênico com SDRA apenas por hipoxemia e opacidades bilaterais** — a [calculadora de oxigenação, PaO₂/FiO₂ e gates para SDRA](/calculadoras/oxigenacao-pao2-fio2-sdra-uco) trata essa relação como diagnóstico diferencial explícito: insuficiência cardíaca/sobrecarga não podem ser a explicação exclusiva ou principal para preencher os critérios globais, embora os fenótipos possam coexistir.
 - Afirmar que "a VNI reduz mortalidade no EAP cardiogênico" citando só a Cochrane — o maior ensaio individual do tema (3CPO) não reproduziu esse benefício, e a própria Cochrane classifica a evidência de mortalidade como de qualidade baixa. A afirmação correta e defensável é que a VNI acelera a melhora sintomática e metabólica, com efeito sobre mortalidade não confirmado no ensaio mais robusto.
 - Presumir que o BiPAP/NIPPV é superior ao CPAP por oferecer suporte inspiratório adicional — no 3CPO, o desfecho combinado morte ou intubação foi estatisticamente igual entre os dois modos (11,7% vs. 11,1%, p=0,81).
 - Tratar a VNI como substituto do diurético e do vasodilatador no EAP cardiogênico, em vez de terapia adjuvante — nenhuma das duas fontes testou VNI como monoterapia; nos dois ensaios, a VNI foi somada ao tratamento médico padrão.

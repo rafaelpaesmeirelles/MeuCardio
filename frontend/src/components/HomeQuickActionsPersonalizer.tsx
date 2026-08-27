@@ -13,6 +13,7 @@ const TODAS: Acao[] = [
   ["calculadoras", "/calculadoras", "Calculadoras", "calculadora", "amber"],
   ["interacoes", "/interacoes", "Interações", "medicamento", "violet"],
   ["emergencias", "/emergencia", "Emergências", "emergencia", "red"],
+  ["cardiologia-intensiva", "/cardiologia-intensiva", "Cardiologia Intensiva & UCO", "clinica", "cyan"],
   ["guidelines", "/diretrizes", "Guidelines", "conhecimento", "green"],
   ["corvia-ai", "/assistente", "CorVIA IA", "assistente", "blue"],
   ["documentos", "/documentos", "Documentos", "documento", "violet"],

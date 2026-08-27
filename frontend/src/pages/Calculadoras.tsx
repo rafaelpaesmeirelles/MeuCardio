@@ -60,7 +60,7 @@ export default function Calculadoras() {
   if (!lista) return <Carregando texto="Abrindo ferramentas clínicas…" />;
 
   const doses = filtradas.filter((c) => c.kind === "dose");
-  const escores = filtradas.filter((c) => c.kind !== "dose");
+  const avaliacoes = filtradas.filter((c) => c.kind !== "dose");
   const implementadas = lista.filter((c) => c.status === "implementada").length;
   const dosesPorArea = new Map<string, Calc[]>();
   for (const c of doses) {
@@ -120,8 +120,8 @@ export default function Calculadoras() {
         </ClinicalSection>
       )}
 
-      <ClinicalSection eyebrow="Escores clínicos" title="Estratificação e apoio à decisão">
-        {escores.length === 0 ? <ClinicalEmpty title="Nenhuma calculadora encontrada" description={busca ? `Sem resultado para “${busca.trim()}”.` : "Ajuste os filtros."} /> : <div className="cc-tool-grid">{escores.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>}
+      <ClinicalSection eyebrow="Escores e avaliações" title="Estratificação e apoio à decisão">
+        {avaliacoes.length === 0 ? <ClinicalEmpty title="Nenhuma calculadora encontrada" description={busca ? `Sem resultado para “${busca.trim()}”.` : "Ajuste os filtros."} /> : <div className="cc-tool-grid">{avaliacoes.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>}
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Contexto" title="Depois do cálculo">
