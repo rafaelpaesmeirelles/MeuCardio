@@ -57,6 +57,17 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
         "fibrilacao-atrial",
         "insuficiencia-cardiaca",
         "sindrome-coronariana-cronica",
+        # Lote de profundidade especializada de 27/08/2026 (empilhado sobre o
+        # lote de condições do adulto, PR #539): oito fichas já existentes,
+        # aprofundadas sem criar slug novo — ver review_note de cada uma.
+        "canalopatias-pediatricas",
+        "cardiomiopatias-pediatricas",
+        "anticoagulacao-idoso",
+        "amiloidose-cardiaca-idoso",
+        "cardiotoxicidade-anti-her2",
+        "doenca-pericardica-oncologia",
+        "hipertensao-cronica-gravidez",
+        "valvopatias-na-gravidez",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
