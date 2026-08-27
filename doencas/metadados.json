@@ -13270,5 +13270,339 @@
     "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de Endocardite Infecciosa adulta (área geral) — coleção doencas/metadados.json tinha até então só endocardite-pediatrica. O conteúdo foi sintetizado a partir de ~31 documentos já publicados e revisados em content/Endocardite/ (diretriz ESC 2023, critérios Duke-ISCVID 2023, subpopulações), com verificação direta dos fatos-chave contra as fontes primárias (PMID/DOI) nesta sessão — não apenas paráfrase do acervo secundário. Nenhum documento, checklist, trilha ou material ao paciente novo foi criado: o lote apenas conecta este novo hub a conteúdo já existente e já revisado via related_document_slugs (documentos narrativos) e patient_material_slug (1 material já publicado sobre endocardite adulta). Doses de antibiótico específicas por agente foram deliberadamente omitidas do treatment_summary e delegadas ao documento já existente 'Esquemas antibióticos na endocardite infecciosa por agente (ESC 2023)', citado por nome. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
     "version": 1,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "pericardite",
+    "name": "Pericardite aguda e doença pericárdica",
+    "aliases": [
+      "doença pericárdica",
+      "pericardite aguda",
+      "inflamação do pericárdio"
+    ],
+    "area": "geral",
+    "category": "pericardio",
+    "subtype": "inflamatoria_e_infecciosa",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 7,
+    "completeness": "completo",
+    "fonte_producao": "claude",
+    "summary": "Inflamação do pericárdio — idiopática/viral na maioria dos casos, mas com espectro amplo de causas e formas (recorrente, constritiva, purulenta, tuberculosa, urêmica, pós-infarto) e risco de tamponamento.",
+    "epidemiology": "A pericardite aguda é a causa mais comum de doença pericárdica sintomática e responde por cerca de 5% das apresentações de dor torácica aguda em pronto-socorro (Malik AA, Lloyd JW, Anavekar NS, Luis SA. Acute and Complicated Inflammatory Pericarditis: A Guide to Contemporary Practice. Mayo Clin Proc. 2024;99(5):795-811. DOI 10.1016/j.mayocp.2024.01.012. PMID 38702128). A incidência anual estimada em coorte populacional urbana no norte da Itália é de 27,7 casos por 100.000 pessoas-ano, com miocardite concomitante em cerca de 15% dos casos (mesma fonte); cerca de 3,3 por 100.000 pessoas-ano exigem internação, e a mortalidade hospitalar fica em torno de 1,1%, com infecção grave concomitante (pneumonia, sepse) como principal preditor de óbito — não a pericardite isoladamente. É cerca de duas vezes mais comum em homens, que tendem a ser mais jovens que as mulheres acometidas; a faixa etária mais citada é 20-50 anos. Em países desenvolvidos, mais de 80% dos casos são idiopáticos ou presumivelmente virais, e a tuberculose responde por menos de 5%; em países em desenvolvimento essa proporção se inverte, com a tuberculose como causa importante (Adler Y, Charron P, Imazio M, et al. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921-2964. PMID 26320112). Sem colchicina, entre 15% e 30% dos pacientes com primeiro episódio de pericardite idiopática desenvolvem recorrência ou doença incessante; o ensaio ICAP mostrou recorrência de 16,7% com colchicina associada versus 37,5% com terapia convencional isolada em 18 meses (Imazio M et al. A randomized trial of colchicine for acute pericarditis. N Engl J Med. 2013;369(16):1522-1528. PMID 23992557).",
+    "presentation": [
+      "Dor torácica aguda, tipicamente pleurítica e posicional — piora em decúbito dorsal e à inspiração profunda, melhora ao sentar e inclinar o tronco para frente —, presente em cerca de 80-90% dos casos (Adler Y et al., ESC 2015, PMID 26320112)",
+      "Atrito pericárdico à ausculta, som áspero/tipo arranhado, mais bem audível na borda esternal esquerda com o paciente inclinado para frente em apneia expiratória; presente em até um terço dos casos e pode desaparecer quando surge derrame significativo",
+      "Febre baixa (geralmente abaixo de 38°C na forma idiopática/viral não complicada); febre acima de 38°C é achado de alarme, associado a maior risco de etiologia não viral/não idiopática e de complicação",
+      "Dispneia leve, sobretudo quando há derrame pericárdico associado ou componente miocárdico (miopericardite)",
+      "Diferencial com dor isquêmica: na pericardite a dor costuma ser pleurítica, posicional e mais prolongada, ao contrário da dor anginosa tipicamente em aperto/opressiva, não posicional e desencadeada por esforço; irradiação para o trapézio (via nervo frênico) é relativamente específica de pericardite e incomum na isquemia",
+      "Pródromo viral inespecífico (febre baixa, mialgia, sintomas respiratórios ou gastrointestinais) nos dias anteriores, compatível com etiologia idiopática/viral presumida",
+      "Taquicardia sinusal leve a moderada, geralmente proporcional à febre/inflamação, sem os sinais de baixo débito que sugeririam tamponamento"
+    ],
+    "diagnostic_approach": "O diagnóstico de pericardite aguda é clínico e exige pelo menos 2 dos 4 critérios formais definidos pela diretriz ESC 2015 de doenças pericárdicas (Adler Y et al., Eur Heart J. 2015;36(42):2921-2964, PMID 26320112): (1) dor torácica pericárdica típica; (2) atrito pericárdico; (3) alteração eletrocardiográfica nova e difusa — supradesnivelamento de ST com concavidade para cima e/ou infradesnivelamento de PR; e (4) derrame pericárdico novo ou em piora. A diretriz ESC 2025 sobre síndromes inflamatórias miopericárdicas (IMPS) manteve esses quatro domínios como 'critérios adicionais' à apresentação clínica, somando a elevação de PCR como critério bioquímico e o edema/realce tardio pericárdico à ressonância cardíaca como critério de imagem — mais de um critério adicional classifica o quadro como definido, um único critério como possível, e nenhum como improvável (Schulz-Menger J et al., Eur Heart J. 2025;46(40):3952-4041, DOI 10.1093/eurheartj/ehaf192, PMID 40878297). O ECG é decisivo na diferenciação com infarto: o supradesnivelamento de ST na pericardite é difuso (não segue território coronariano), com concavidade para cima, sem imagem em espelho (exceto depressão recíproca em aVR e V1) e sem ondas Q — ao contrário do supra convexo, localizado e com alteração recíproca típico do IAM com supra de ST. O ecocardiograma é recomendado em todo paciente com suspeita (Classe I) para avaliar derrame, função ventricular e excluir tamponamento, mas pode ser completamente normal na pericardite seca. A PCR está tipicamente elevada e ajuda a confirmar o componente inflamatório e a monitorar resposta ao tratamento, embora PCR normal não exclua o diagnóstico nem impeça o uso de anti-IL-1 na doença recorrente. Deve-se suspeitar de miopericardite — predomínio pericárdico com envolvimento miocárdico associado — quando há elevação de troponina; como o pericárdio é eletricamente silencioso, qualquer alteração eletrocardiográfica além do padrão clássico de pericardite sugere inflamação miocárdica concomitante e obriga investigação dirigida (troponina seriada, avaliação de função ventricular, consideração de ressonância cardíaca).",
+    "differentials": [
+      "Síndrome coronariana aguda (IAM com ou sem supra de ST) — diferenciada por padrão de ECG (localizado/convexo com recíproca vs. difuso/côncavo sem recíproca), cinética de troponina, ecocardiograma com alteração segmentar de motilidade e, quando indicado, cinecoronariografia",
+      "Miocardite isolada (perimiocardite, com predomínio miocárdico) — troponina mais francamente elevada, disfunção ventricular ao ecocardiograma, achados de RM cardíaca pelos critérios de Lake Louise atualizados",
+      "Costocondrite/dor musculoesquelética da parede torácica — dor reprodutível à palpação, sem alteração eletrocardiográfica ou de biomarcadores, sem a relação posicional típica da pericardite",
+      "Embolia pulmonar — dor pleurítica também presente, mas com dispneia desproporcional, taquicardia, sinais de sobrecarga de VD; D-dímero e angiotomografia de tórax como exames dirigidos",
+      "Dissecção aguda de aorta — dor tipicamente lancinante/em rasgo, migratória, com assimetria de pulsos/pressão arterial entre membros; pode inclusive cursar com derrame pericárdico hemorrágico e tamponamento por extensão retrógrada, exigindo angiotomografia ou ecocardiograma transesofágico urgente",
+      "Pneumonia/pleurite — dor pleurítica associada a tosse, febre e achados focais ao exame pulmonar e à radiografia de tórax, sem os achados eletrocardiográficos difusos da pericardite",
+      "Refluxo gastroesofágico/espasmo esofágico — dor retroesternal que pode mimetizar pericardite, mas sem relação postural típica, sem atrito e sem alteração eletrocardiográfica ou de biomarcadores inflamatórios"
+    ],
+    "tests": [
+      "ECG seriado — finalidade: identificar o padrão evolutivo clássico (supra difuso côncavo, seguido de normalização e depois inversão de onda T) e diferenciar de IAM; limitação: alteração eletrocardiográfica presente em até 60% dos casos, não universal, e a repetição ao longo de dias a semanas é necessária porque o padrão evolui por estágios",
+      "Ecocardiograma transtorácico — finalidade: detectar e quantificar derrame pericárdico, avaliar função ventricular e sinais de tamponamento; recomendado em todo caso suspeito (Classe I, ESC 2025, PMID 40878297); limitação: pode ser completamente normal na pericardite seca sem derrame, não sendo exame confirmatório isolado do diagnóstico",
+      "PCR (proteína C reativa) — finalidade: confirmar componente inflamatório sistêmico, é um dos critérios adicionais da ESC 2025 e serve para monitorar resposta terapêutica e apoiar a decisão de anti-IL-1 na doença recorrente; limitação: inespecífica e PCR normal não exclui pericardite nem contraindica anti-IL-1 na recorrência com inflamação documentada por RM",
+      "Troponina — finalidade: rastrear envolvimento miocárdico associado (miopericardite) quando há suspeita clínica ou alteração eletrocardiográfica atípica para pericardite pura; limitação: elevada em 30-70% dos casos de pericardite mesmo sem repercussão prognóstica adversa (ao contrário da SCA), então elevação isolada não define gravidade nem substitui avaliação ecocardiográfica/RM",
+      "Radiografia de tórax — finalidade: avaliar silhueta cardíaca (aumento sugere derrame moderado/grande) e afastar diferenciais pulmonares (pneumonia, derrame pleural associado); limitação: pouco sensível para derrame pericárdico pequeno a moderado e não substitui o ecocardiograma",
+      "Ressonância magnética cardíaca — finalidade: documentar inflamação pericárdica (edema, realce tardio) quando há apenas 1 critério adicional ('pericardite possível') e diferenciar de envolvimento miocárdico concomitante, com recomendação Classe I, nível B nesse cenário (ESC 2025, PMID 40878297); limitação: disponibilidade limitada, custo, e não é exame de primeira linha na apresentação inicial não complicada"
+    ],
+    "red_flags": [
+      "Febre alta, acima de 38°C — HR 3,56 para complicação em análise multivariável (ESC 2025, PMID 40878297)",
+      "Início subagudo dos sintomas, em vez de agudo — HR 3,97",
+      "Derrame pericárdico importante (acima de 20 mm ao ecocardiograma) ou sinais de tamponamento cardíaco — HR 2,15 para o derrame grande; tamponamento exige avaliação/drenagem de emergência",
+      "Falha de resposta a AAS/AINE em dose plena após pelo menos 1 semana de tratamento — HR 2,50",
+      "Miopericardite — evidência de envolvimento miocárdico (troponina elevada, disfunção ventricular) associada ao quadro pericárdico",
+      "Imunossupressão de base",
+      "Uso de anticoagulante oral, pelo risco de sangramento intrapericárdico",
+      "Trauma torácico recente"
+    ],
+    "treatment_summary": "O tratamento da pericardite aguda idiopática/viral segue um princípio hierárquico estabelecido pela diretriz ESC 2015 de doenças pericárdicas (Adler Y et al., Eur Heart J. 2015;36(42):2921-2964, PMID 26320112) e mantido pela atualização ESC 2025 sobre síndromes inflamatórias miocárdicas e pericárdicas (Schulz-Menger J et al., Eur Heart J. 2025;46(40):3952-4041, PMID 40878297): a primeira linha combina um anti-inflamatório não esteroidal (aspirina em dose anti-inflamatória ou outro AINE) associado à colchicina desde o primeiro episódio, não mais reservada apenas à recorrência. A adição de colchicina ao AINE reduz a taxa de recorrência e acelera a resolução sintomática, conforme demonstrado pelos ensaios pivotais COPE, ICAP, CORP e CORE (Imazio M et al.); a dose e a duração exatas de AINE e colchicina, incluindo o ajuste por peso e função renal, devem seguir a bula/protocolo institucional e os documentos já publicados no acervo ('Pericardite Aguda: Diagnóstico, Tratamento e Prevenção de Recorrência' e 'Colchicina na Pericardite com Doença Renal Crônica'), não sendo repetidas aqui. O corticosteroide tem papel deliberadamente restrito: a diretriz reserva-o a duas situações — contraindicação ou falha do AINE, ou causa autoimune/reumática subjacente — porque seu uso como primeira linha favorece a cronificação e a dependência, aumentando o risco de recorrência (ESC 2015; mantido como Classe IIa na ESC 2025, sempre associado à colchicina, nunca em monoterapia, com desmame lento e nunca suspensão abrupta). Nos casos refratários ou com dependência de corticoide, a ESC 2025 posiciona os inibidores de IL-1 (anakinra, rilonacepte) antes do corticoide crônico, justamente para permitir sua retirada: o anakinra reduziu recorrência para 18,2% versus 90% com placebo em paciente resistente à colchicina e dependente de corticoide (ensaio AIRTRIP, Brucato A et al., JAMA 2016, PMID 27825009), e o rilonacepte reduziu o risco de recorrência com HR 0,04 versus placebo em população mais ampla, com resposta rápida (mediana de 5 dias até melhora da dor — ensaio RHAPSODY, Klein AL et al., NEJM 2021, PMID 33200890); mesmo após anos de controle, a suspensão do rilonacepte leva a recorrência em 82% dos pacientes, reforçando a leitura da forma refratária como doença autoinflamatória crônica, não um curso de tratamento fechado. A pericardiocentese ou drenagem cirúrgica é indicada em três cenários: tamponamento cardíaco (emergência); derrame moderado a grande sintomático refratário à terapia clínica; e suspeita de etiologia bacteriana, neoplásica ou tuberculosa, quando a punção tem finalidade diagnóstica além de terapêutica (ESC 2015; ESC 2025). A pericardiectomia é reservada à constrição permanente — quando não há inflamação ativa à imagem multimodal ou quando a terapia anti-inflamatória falha após 3 a 6 meses de tentativa adequada —, distinção que evita cirurgia de alto risco em constrição transitória potencialmente reversível com tratamento clínico (ESC 2025, Recommendation Table 24).",
+    "ambulatory_flow": [
+      "Seguimento clínico após o episódio agudo: reavaliação em 1-2 semanas do início do tratamento e depois periodicamente durante o desmame, para confirmar resposta e ajustar AINE/colchicina conforme sintomas e PCR",
+      "Reavaliação seriada de PCR para guiar o desmame: o ritmo de redução do AINE deve se basear na normalização da PCR e na resolução dos sintomas, e não em cronograma fixo; desmame precoce por melhora isolada do sintoma é causa evitável de 'falha' de tratamento",
+      "Retorno gradual à atividade física: restrição além da vida sedentária habitual até resolução dos sintomas e normalização de PCR, ECG e ecocardiograma em não atletas; em atletas, restrição mínima arbitrária de 3 meses do início do quadro, com retorno à competição somente após sintomas resolvidos e exames normalizados, estendida a pelo menos 6 meses quando há suspeita de envolvimento miocárdico associado",
+      "Orientação sobre recorrência: informar que ela ocorre em até 30% após o primeiro episódio, podendo chegar a cerca de 50% após a primeira recorrência, especialmente quando a colchicina não foi usada corretamente ou quando se empregou corticoide como primeira linha",
+      "Encaminhamento a cardiologia/especialista quando o quadro é refratário à terapia empírica, recorrente ou de etiologia pouco clara"
+    ],
+    "emergency_flow": [
+      "Reconhecimento clínico imediato: tríade de Beck (hipotensão, turgência jugular, bulhas abafadas), pulso paradoxal e dispneia devem disparar suspeita de tamponamento em qualquer paciente com derrame pericárdico conhecido ou pericardite aguda em evolução",
+      "Confirmação por ecocardiograma point-of-care: colapso diastólico de ventrículo direito (achado específico), colapso sistólico de átrio direito (achado sensível) e veia cava inferior pletórica não colapsável confirmam o diagnóstico antes da punção, exceto em paciente periparada, quando a punção não deve esperar imagem",
+      "Pericardiocentese de emergência guiada por eco, no maior e mais superficial bolsão, ressalvadas as causas em que a punção às cegas é contraindicada (dissecção de aorta, ruptura de parede livre pós-infarto, tamponamento pós-cirúrgico cardíaco), quando a via é a reabordagem cirúrgica",
+      "Coordenação com o protocolo de tamponamento já existente no acervo (emergencia/metadados.json: 'tamponamento-cardiaco' e 'tamponamento-cardiaco-pos-procedimento-cardiovascular'): este registro de pericardite aponta para aquele protocolo como via de emergência quando a pericardite evolui com tamponamento, sem repetir seu conteúdo",
+      "Investigação etiológica urgente quando há suspeita de causa purulenta, neoplásica ou tuberculosa: nesses cenários a pericardiocentese é diagnóstica além de terapêutica, com coleta imediata de material para citologia, microbiologia e testes dirigidos; suspeita purulenta exige drenagem e antibioticoterapia empírica imediatas, sem aguardar confirmação"
+    ],
+    "monitoring": [
+      "PCR seriada como guia de desmame do anti-inflamatório: a normalização da PCR, junto com a resolução dos sintomas, orienta o ritmo do desmame gradual de AINE e colchicina, mais do que um cronograma fixo",
+      "Ecocardiograma de controle para reavaliar volume do derrame e sinais de tamponamento incipiente, repetido conforme evolução clínica; em derrame moderado/grande estável e assintomático sob vigilância, reavaliação individualizada, em geral a cada 6 meses",
+      "Vigilância de recorrência: até 30% após o primeiro episódio, com taxa maior após a primeira recorrência (chegando a cerca de 50%), especialmente quando a colchicina não foi usada ou o corticoide foi empregado como primeira linha",
+      "Vigilância de sinais de evolução para constrição: interdependência ventricular ao Doppler e desvio do septo interventricular; nos casos com inflamação pericárdica ativa concomitante, ressonância com realce tardio pericárdico ajuda a diferenciar constrição transitória (potencialmente reversível com terapia anti-inflamatória) de constrição permanente, indicação de pericardiectomia após 3-6 meses de tentativa clínica sem sucesso",
+      "Monitorização de efeitos adversos e adesão à colchicina, cujos eventos gastrointestinais são a causa mais comum de descontinuação, com atenção especial ao ajuste em doença renal crônica"
+    ],
+    "special_populations": [
+      "Pericardite recorrente/refratária: quando colchicina + AINE + corticoide falham em paciente resistente à colchicina e dependente de corticoide (≥3 recorrências), o anakinra reduziu recorrência para 18,2% versus 90% com placebo (ensaio AIRTRIP, Brucato A et al., JAMA 2016, PMID 27825009). O rilonacepte, testado em população mais ampla de pericardite recorrente, reduziu o risco de recorrência com HR 0,04 versus placebo, com resposta rápida (mediana de 5 dias até melhora da dor) — ensaio RHAPSODY, Klein AL et al., NEJM 2021, PMID 33200890. Mesmo após anos de controle, a suspensão do rilonacepte leva a recorrência em 82% dos pacientes (mediana de 8 semanas), o que reforça a leitura da forma refratária como doença autoinflamatória crônica, e não um curso de tratamento fechado.",
+      "Pericardite constritiva: o diferencial com cardiomiopatia restritiva se apoia num gradiente contínuo da e′ medial ao Doppler tecidual (e′ > 8 cm/s constrição; e′ 6-8 cm/s fisiologia mista; e′ < 6 cm/s restritiva), com annulus reversus e espessura pericárdica > 3 mm como critérios de apoio — mas espessura normal NÃO exclui constrição (18% dos casos cirurgicamente confirmados) e nenhum achado isolado fecha diagnóstico. A ESC 2025 distingue constrição transitória (com inflamação ativa, potencialmente reversível com 3-6 meses de terapia anti-inflamatória, reversibilidade predita por realce tardio ≥3 mm) de constrição permanente (pericardiectomia).",
+      "Pericardite efusivo-constritiva: entidade híbrida em que drenar o derrame NÃO resolve o quadro hemodinâmico, porque a constrição está no próprio pericárdio visceral inflamado/espessado. O diagnóstico exige critério hemodinâmico obtido durante pericardiocentese com cateterismo simultâneo: falha da pressão atrial direita em cair ≥50% ou permanecer >10 mmHg após normalizar a pressão intrapericárdica. É especialmente relevante em contexto de tuberculose, onde a prevalência chega a até 50% em regiões endêmicas, contra 2,4-14,8% na população geral avaliada por doença pericárdica.",
+      "Pericardite purulenta bacteriana: rara hoje (<1% dos casos de pericardite) mas com mortalidade descrita entre 30% e 50% e uma das poucas formas em que anti-inflamatório isolado NÃO é suficiente — antibiótico empírico imediato e drenagem mecânica são obrigatórios, e a pericardiocentese é ao mesmo tempo diagnóstica (cultura/Gram) e terapêutica. Os números de mortalidade e de associação com pneumonia precedente (~93% dos casos) vêm de séries históricas convergentes na literatura secundária, tratados aqui como faixa estimada, não como dado fechado de um único estudo.",
+      "Pericardite tuberculosa: em contexto de alta carga de tuberculose, o diagnóstico provável se apoia em ADA pericárdico ≥40 U/L (presente em 75% dos casos) associado a exsudato linfocítico, já que a demonstração do bacilo nem sempre é possível; o tratamento acrescenta esquema padrão de 4 fármacos antituberculose por 6 meses, e a progressão para constrição crônica ocorre em 20-50% apesar de tratamento eficaz, contra menos de 1% na forma idiopática/pós-viral. O papel do corticoide adjuvante permanece incerto quanto à redução de mortalidade/constrição de forma geral, embora um estudo sul-africano de referência tenha mostrado redução de mortalidade de 11% para 4% com o esquema.",
+      "Pericardite urêmica/associada à diálise: não é 'mais uma causa' de pericardite — são duas entidades distintas pelo momento em relação ao início da diálise: urêmica dentro das primeiras 8 semanas (metabólitos tóxicos não depurados) versus associada à diálise após ≥8 semanas, ligada predominantemente a diálise inadequada, não à uremia em si. O padrão eletrocardiográfico clássico de pericardite é incomum nesses pacientes e sua ausência NÃO afasta o diagnóstico; o risco de tamponamento é muito maior (10-20% vs 3,1% na população não dialítica), o que baixa o limiar para pericardiocentese; e diálise diária intensiva por 10-14 dias é a intervenção com maior eficácia descrita (76-100%, a maioria das séries ~85%).",
+      "Pericardite pós-infarto: a forma precoce peri-infarto (dias 1-4, inflamação por contiguidade, ~3% dos IAM) e a síndrome de Dressler tardia (1-6 semanas, mecanismo autoimune, hoje <1% dos IAM na era de reperfusão) diferem sobretudo na escolha farmacológica de primeira linha — na janela precoce pós-STEMI evita-se AINE não seletivo e corticoide pelo risco teórico sobre a cicatrização miocárdica, preferindo AAS em dose anti-inflamatória, enquanto na síndrome de Dressler tardia o esquema padrão de AINE/colchicina/corticoide se aplica sem essa restrição.",
+      "Pericardite actínica/por radioterapia: manifesta-se em duas janelas temporais distintas — fase aguda (dias a meses) e fase crônica/tardia (meses a anos, incluindo constrição) — e continua sendo a complicação cardíaca mais comum da radioterapia torácica, mesmo com a incidência caindo de ~70% (técnicas antigas) para 6-30% (técnicas modernas); risco aumenta com dose cumulativa >30 Gy, fração diária >2 Gy, antraciclina concomitante em dose alta e radioterapia à esquerda. Este ponto cobre apenas a doença pericárdica actínica em si — o overlap com pericardite/derrame associado a terapia oncológica sistêmica já é tratado no verbete próprio `doenca-pericardica-oncologia` deste acervo e não é duplicado em detalhe aqui.",
+      "Derrame pericárdico crônico idiopático de grande volume: tem história natural distinta — mesmo estável e assintomático por anos (duração mediana até o diagnóstico de 3 anos na coorte de referência), tamponamento inesperado ocorreu em 29% (8/28) dos pacientes a qualquer momento. A pericardiocentese isolada resolveu definitivamente o derrame em apenas 8 de 24 pacientes drenados, com recorrência em 11/28 — ou seja, nem todo derrame crônico grande precisa de drenagem, mas a recorrência após pericardiocentese é o gatilho para considerar pericardiectomia.",
+      "Achados incidentais anatômicos (agenesia de pericárdio, cisto pericárdico): geralmente benignos e não devem ser confundidos com doença ativa, mas exigem reconhecimento correto para não gerar diagnóstico estrutural errado. Na agenesia congênita, contraintuitivamente a forma PARCIAL (mais rara) é a perigosa — risco de herniação/estrangulamento cardíaco e compressão coronariana —, enquanto a forma COMPLETA costuma ser benigna. O cisto pericárdico é achado incidental em ~75% dos casos, quase sempre no ângulo cardiofrênico direito, com manejo predominantemente conservador e vigilância por imagem seriada, não ressecção reflexa.",
+      "Miopericardite associada a vacina de mRNA: complicação rara e predominantemente autolimitada, concentrada em homem jovem, tipicamente 3-4 dias após a segunda dose, com maior incidência absoluta em meninos de 12-17 anos (22,0-35,9 por 100.000 após a 2ª dose); o dado central para a conversa clínica é que o risco de miocardite após a própria infecção por SARS-CoV-2 é consistentemente maior que após a vacina (1,8 a 115,2 vezes, a depender do grupo etário/sexo)."
+    ],
+    "assistant_questions": [
+      {
+        "id": "tamponade_signs",
+        "label": "Há sinais de tamponamento (hipotensão, turgência jugular, bulhas abafadas, pulso paradoxal) ou instabilidade hemodinâmica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "high_risk_features",
+        "label": "Há algum critério de alto risco: febre >38°C, início subagudo, derrame grande (>20mm), falha de resposta a AINE após 1 semana, ou suspeita de envolvimento miocárdico (troponina elevada)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "suspected_etiology",
+        "label": "Há suspeita de causa específica (purulenta bacteriana, tuberculosa, neoplásica, urêmica/diálise, pós-infarto)?",
+        "type": "select",
+        "required": true,
+        "section": "Etiologia",
+        "options": [
+          {
+            "value": "idiopatica_viral",
+            "label": "Idiopática/viral presumida (mais comum)"
+          },
+          {
+            "value": "purulenta",
+            "label": "Suspeita purulenta bacteriana"
+          },
+          {
+            "value": "tuberculosa",
+            "label": "Suspeita tuberculosa"
+          },
+          {
+            "value": "uremica_dialise",
+            "label": "Urêmica ou associada à diálise"
+          },
+          {
+            "value": "pos_infarto",
+            "label": "Pós-infarto (precoce ou Dressler)"
+          },
+          {
+            "value": "outra_ou_nao_definida",
+            "label": "Outra ou ainda não definida"
+          }
+        ]
+      },
+      {
+        "id": "recurrence_count",
+        "label": "Quantos episódios de pericardite o paciente já teve (incluindo o atual)?",
+        "type": "number",
+        "required": true,
+        "section": "História"
+      },
+      {
+        "id": "constriction_suspected",
+        "label": "Há suspeita clínica ou de imagem de pericardite constritiva (edema periférico, ascite, sinais de congestão sem disfunção sistólica evidente)?",
+        "type": "boolean",
+        "section": "Complicações"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sinais-de-tamponamento",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "tamponade_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de tamponamento cardíaco associados à pericardite"
+          ],
+          "emergency_flow": [
+            "Confirmar por ecocardiograma point-of-care e proceder a pericardiocentese de emergência guiada por eco; seguir protocolo de tamponamento cardíaco já existente no acervo"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-purulenta-ou-tuberculosa",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "in",
+              "value": [
+                "purulenta",
+                "tuberculosa"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de etiologia purulenta bacteriana ou tuberculosa"
+          ],
+          "emergency_flow": [
+            "Pericardiocentese diagnóstica e terapêutica; se suspeita purulenta, antibioticoterapia empírica imediata sem aguardar confirmação — anti-inflamatório isolado não é suficiente nessas etiologias"
+          ]
+        }
+      },
+      {
+        "id": "criterios-de-alto-risco-sem-tamponamento",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "high_risk_features",
+              "op": "truthy"
+            },
+            {
+              "field": "tamponade_signs",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Critério de alto risco presente (febre alta, início subagudo, derrame grande, falha de AINE ou suspeita de envolvimento miocárdico) — considerar internação para investigação e vigilância, mesmo sem sinais de tamponamento no momento"
+          ]
+        }
+      },
+      {
+        "id": "recorrencia-multipla",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "recurrence_count",
+              "op": "gte",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Três ou mais episódios sugerem doença recorrente/refratária — considerar avaliação para inibidor de IL-1 (anakinra/rilonacepte) antes de manter corticoide crônico, e reavaliar adesão à colchicina em episódios anteriores"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-de-constricao",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "constriction_suspected",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Pericardite constritiva versus cardiomiopatia restritiva"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com Doppler tecidual (e' medial)",
+            "Ressonância cardíaca com avaliação de realce tardio pericárdico"
+          ],
+          "messages": [
+            "Diferenciar constrição transitória (com inflamação ativa, potencialmente reversível com terapia anti-inflamatória) de constrição permanente antes de considerar pericardiectomia"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "pericardite",
+      "doença pericárdica",
+      "tamponamento cardíaco",
+      "colchicina",
+      "inibidor de IL-1",
+      "pericardite constritiva",
+      "pericardite recorrente",
+      "ESC 2025",
+      "IMPS",
+      "derrame pericárdico"
+    ],
+    "source_refs": [
+      "Adler Y, Charron P, Imazio M, et al.; ESC Scientific Document Group. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921-2964. DOI: 10.1093/eurheartj/ehv318. PMID: 26320112.",
+      "Schulz-Menger J, Collini V, Gröschel J, et al.; ESC Scientific Document Group. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Malik AA, Lloyd JW, Anavekar NS, Luis SA. Acute and Complicated Inflammatory Pericarditis: A Guide to Contemporary Practice. Mayo Clin Proc. 2024;99(5):795-811. DOI: 10.1016/j.mayocp.2024.01.012. PMID: 38702128.",
+      "Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis (ICAP). N Engl J Med. 2013;369(16):1522-1528. PMID: 23992557.",
+      "Brucato A, Imazio M, Gattorno M, et al. Effect of Anakinra on Recurrent Pericarditis Among Patients With Colchicine Resistance and Corticosteroid Dependence: The AIRTRIP Randomized Clinical Trial. JAMA. 2016;316(18):1906-1912. PMID: 27825009.",
+      "Klein AL, Imazio M, Cremer P, et al. Phase 3 Trial of Interleukin-1 Trap Rilonacept in Recurrent Pericarditis (RHAPSODY). N Engl J Med. 2021;384(1):31-41. PMID: 33200890.",
+      "Trotta L, et al. Recurrence after rilonacept discontinuation in recurrent pericarditis. J Am Heart Assoc. 2026. PMID: 42517437.",
+      "Klein AL, et al. Multimodality imaging for constrictive pericarditis vs. restrictive cardiomyopathy. JACC Cardiovasc Imaging. 2024. PMID: 39111992.",
+      "Feng D, et al. Transient constrictive pericarditis: reversibility predicted by delayed enhancement CMR. Circulation. 2011. PMID: 21969014.",
+      "El Harake L, et al. Effusive-constrictive pericarditis: diagnostic hemodynamic criteria. Curr Cardiol Rep. 2026;28(1):13. PMID: 41563547.",
+      "Krzelj K, et al. Tuberculous pericarditis: contemporary review. Curr Cardiol Rep. 2026. PMID: 41569368.",
+      "Peride I, et al. Uremic and dialysis-associated pericarditis. J Clin Med. 2025. PMID: 40943703.",
+      "Malik J, et al. Post-myocardial infarction pericarditis: early form and Dressler syndrome. Am Heart J Plus. 2021;12:100068. PMID: 38559602.",
+      "Quintero-Martinez JA, et al. Radiation-induced pericardial disease. J Clin Med. 2021. PMID: 35011887.",
+      "Sagristà-Sauleda J, Angel J, Permanyer-Miralda G, Soler-Soler J. Long-term follow-up of idiopathic chronic pericardial effusion. N Engl J Med. 1999;341(27):2054-2059. PMID: 10615077.",
+      "Groudeva V, et al. Congenital pericardial agenesis: complete versus partial. J Clin Med. 2026. PMID: 42279255.",
+      "Block JP, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination. MMWR Morb Mortal Wkly Rep. 2022;71:517-523.",
+      "Meisel P, et al. CRP/troponin ratio in differentiating myopericarditis from myocardial infarction. PLoS One. 2021. PMID 33886564."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehv318",
+      "https://doi.org/10.1093/eurheartj/ehaf192",
+      "https://doi.org/10.1016/j.mayocp.2024.01.012",
+      "https://pubmed.ncbi.nlm.nih.gov/23992557/",
+      "https://pubmed.ncbi.nlm.nih.gov/27825009/",
+      "https://pubmed.ncbi.nlm.nih.gov/33200890/",
+      "https://pubmed.ncbi.nlm.nih.gov/10615077/"
+    ],
+    "related_document_slugs": [
+      "agenesia-congenita-do-pericardio-completa-versus-parcial",
+      "cisto-pericardico-diagnostico-e-manejo",
+      "colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+      "derrame-pericardico-cronico-idiopatico-de-grande-volume-historia-natural-e-manejo",
+      "doenca-pericardica-induzida-por-radioterapia-pericardite-aguda-e-constricao-tardia",
+      "fluxograma-derrame-pericardico-diagnostico-diferencial-e-drenagem",
+      "fluxograma-doenca-pericardica-actinica-radioterapia",
+      "fluxograma-pericardite-aguda-esc-2025",
+      "fluxograma-pericardite-constritiva-versus-cardiomiopatia-restritiva",
+      "fluxograma-pericardite-recorrente-refrataria-escalonamento-terapeutico",
+      "fluxograma-tamponamento-cardiaco",
+      "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
+      "miopericardite-associada-a-vacina-de-mrna-contra-covid-19",
+      "pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia",
+      "pericardite-constritiva-e-tamponamento-criterios-numericos-por-imagem-2024",
+      "pericardite-efusivo-constritiva-criterios-hemodinamicos-e-manejo",
+      "pericardite-pos-infarto-forma-precoce-versus-sindrome-de-dressler-tardia",
+      "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+      "pericardite-tuberculosa-e-sindrome-pos-pericardiotomia",
+      "pericardite-uremica-e-associada-a-dialise-diagnostico-e-manejo",
+      "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+      "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo"
+    ],
+    "patient_material_slug": "pericardite-aguda",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central da doença pericárdica adulta (área geral) — coleção doencas/metadados.json não tinha nenhum verbete para pericardite/doença pericárdica geral (só doenca-pericardica-oncologia, escopo oncológico específico, não duplicado aqui). Conteúdo sintetizado a partir de 22 documentos já publicados e revisados em content/Pericárdio/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 3 agentes de pesquisa independentes nesta sessão — não apenas paráfrase do secundário. Escopo explicitamente exclui detalhamento de causa oncológica/actínica sistêmica (coberto no verbete próprio) e de miocardite isolada/sarcoidose cardíaca (tema irmão, não pericárdico). Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente e já revisado. Doses de AINE/colchicina/corticoide foram deliberadamente omitidas do treatment_summary e delegadas aos documentos já existentes no acervo. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
+    "version": 1
   }
 ]
