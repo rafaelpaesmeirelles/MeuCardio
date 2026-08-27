@@ -68,6 +68,17 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
         "doenca-pericardica-oncologia",
         "hipertensao-cronica-gravidez",
         "valvopatias-na-gravidez",
+        # Lote 3 de profundidade especializada de 27/08/2026 (empilhado sobre o
+        # lote 2, PR #542): oito fichas já existentes, aprofundadas sem criar
+        # slug novo — ver review_note de cada uma.
+        "delirium-cardiogeriatria",
+        "risco-quedas-cardiogeriatria",
+        "toxicidade-cardiovascular-car-t",
+        "fluoropirimidinas-isquemia",
+        "sindrome-coronariana-gravidez",
+        "tromboembolismo-gravidez",
+        "persistencia-canal-arterial",
+        "anomalia-ebstein",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
