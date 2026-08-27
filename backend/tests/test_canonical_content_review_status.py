@@ -46,9 +46,6 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "checklists/metadados.json": {"primeira-hora-na-suspeita-de-avc-agudo"},
     "trilhas/metadados.json": {
         "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao",
-        "trilha-uco-acidose-metabolica-compensacao-e-anion-gap",
-        "trilha-uco-oxigenacao-pao2-fio2-e-sdra",
-        "trilha-uco-lesao-renal-aguda-kdigo",
     },
     "material-paciente/metadados.json": {
         "sinais-de-avc-como-agir-sem-perder-tempo"
@@ -56,17 +53,12 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
-        "embolia-pulmonar-aguda",
-        "sindrome-coronariana-aguda",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
 PENDENTES_MARKDOWN_AVC = {
     "content/Geral/deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc.md",
     "content/Geral/fluxograma-suspeita-de-avc-agudo-primeira-hora.md",
-    "content/Terapia_intensiva/acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco.md",
-    "content/Terapia_intensiva/oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco.md",
-    "content/Terapia_intensiva/lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese.md",
 }
 
 

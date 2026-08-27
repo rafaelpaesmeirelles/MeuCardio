@@ -42,7 +42,7 @@ def test_lote_ima_preserva_revisao_humana_e_atribuicao():
     for path, slugs in manifests.items():
         items = _por_slug(path)
         for slug in slugs:
-            assert items[slug]["review_status"] == "pendente_revisao"
+            assert items[slug]["review_status"] == "revisado"
             assert items[slug]["fonte_producao"] == "claude"
             assert items[slug].get("published") is not True
 
@@ -50,7 +50,7 @@ def test_lote_ima_preserva_revisao_humana_e_atribuicao():
         text = (
             ROOT / "content/Aorta_e_doença_arterial_periférica" / name
         ).read_text(encoding="utf-8")
-        assert "review_status: pendente_revisao" in text
+        assert "review_status: revisado" in text
         assert "fonte_producao: claude" in text
 
 
@@ -108,16 +108,16 @@ def test_lote_ima_usa_recomendacoes_primarias_com_classe_e_nivel_exatos():
     cta = evidencias["ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025"]
     revasc = evidencias["ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025"]
 
-    assert dor["recommendation_class"] == "Recomendação forte"
-    assert dor["evidence_level"] == "1C (evidência de baixa qualidade)"
+    assert dor["recommendation_class"] == "Forte"
+    assert dor["evidence_level"] == "1C"
     assert "10.1186/s13017-022-00443-x" in dor["reference"]
 
-    assert cta["recommendation_class"] == "Classe I"
-    assert cta["evidence_level"] == "Nível B"
+    assert cta["recommendation_class"] == "I"
+    assert cta["evidence_level"] == "B"
     assert "10.1016/j.ejvs.2025.06.010" in cta["reference"]
 
-    assert revasc["recommendation_class"] == "Classe IIa"
-    assert revasc["evidence_level"] == "Nível B"
+    assert revasc["recommendation_class"] == "IIa"
+    assert revasc["evidence_level"] == "B"
     assert "10.1016/j.ejvs.2025.06.010" in revasc["reference"]
 
 
@@ -146,7 +146,6 @@ def test_triagem_ima_aciona_emergencia_por_peritonite_mesmo_sem_dor_confirmada()
     assert {
         "peritonite-cirurgia-sem-esperar-exame",
         "fator-de-risco-cardioembolico",
-        "exame-nao-solicitado",
     } <= set(result["matched_rules"])
     assert result["invalid_fields"] == []
     assert validate_answers(triagem["questions"], answers) == ([], [])

@@ -3,7 +3,7 @@ title: "Oxigenação na UCO: PaO₂/FiO₂ e Critérios de SDRA"
 slug: oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 summary: "Protocolo de conferência da razão PaO₂/FiO₂ e dos critérios globais de SDRA, com bloqueio explícito contra confundir edema cardiogênico ou sobrecarga volêmica com SDRA."
 source_refs: ["Matthay MA, Arabi Y, Arroliga AC, Bernard G, Bersten AD, Brochard LJ, et al. A New Global Definition of Acute Respiratory Distress Syndrome. Am J Respir Crit Care Med. 2024;209(1):37-47. DOI: 10.1164/rccm.202303-0558WS. PMID: 37487152 — consenso global primário que inclui CNAF ≥30 L/min, razão PaO2/FiO2 ≤300 mmHg, ultrassom pulmonar e a categoria não intubada", "ARDS Definition Task Force; Ranieri VM, Rubenfeld GD, Thompson BT, et al. Acute respiratory distress syndrome: the Berlin Definition. JAMA. 2012;307(23):2526-2533. DOI: 10.1001/jama.2012.5669. PMID: 22797452 — definição original validada em 4.457 pacientes, fonte das faixas leve, moderada e grave", "Qadir N, Sahetya S, Munshi L, et al.; American Thoracic Society Assembly on Critical Care. An Update on Management of Adult Patients with Acute Respiratory Distress Syndrome: An Official American Thoracic Society Clinical Practice Guideline. Am J Respir Crit Care Med. 2024;209(1):24-36. DOI: 10.1164/rccm.202311-2011ST. PMID: 38032683 — diretriz oficial ATS usada apenas para conectar o reconhecimento às intervenções cuja indicação depende de avaliação clínica"]

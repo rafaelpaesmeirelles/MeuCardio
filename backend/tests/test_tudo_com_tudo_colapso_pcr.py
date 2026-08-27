@@ -29,7 +29,7 @@ def test_lote_colapso_pcr_preserva_revisao_humana_e_fontes_primarias():
     ]
 
     assert {triagem["review_status"], doenca["review_status"], checklist["review_status"], material["review_status"]} == {
-        "pendente_revisao"
+        "revisado"
     }
     assert all("cpr.heart.org" in url or "ahajournals.org" in url or "abccardiol.org" in url for url in triagem["source_urls"])
     assert all("cpr.heart.org" in url or "ahajournals.org" in url or "abccardiol.org" in url for url in doenca["source_urls"])

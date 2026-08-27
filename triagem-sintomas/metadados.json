@@ -84,13 +84,21 @@
         "id": "large_bruise_or_internal_pain",
         "label": "Há hematoma grande/progressivo ou dor abdominal, lombar ou em flanco sem explicação?",
         "type": "boolean",
-        "section": "Sítio"
+        "section": "Sítio",
+        "required": true
       },
       {
         "id": "renal_liver_or_interaction",
         "label": "Há piora renal/hepática ou uso concomitante de antiagregante, AINE ou outro anticoagulante?",
         "type": "boolean",
         "section": "Modificadores"
+      },
+      {
+        "id": "major_bleed_objective",
+        "label": "Houve queda de hemoglobina ≥2 g/dL ou necessidade de transfusão de ≥2 unidades de concentrado de hemácias?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
       }
     ],
     "rules": [
@@ -216,7 +224,6 @@
           ]
         },
         "add": {
-          "risk": "urgente",
           "missing_information": [
             "Nome do anticoagulante, dose e horário da última administração"
           ],
@@ -243,6 +250,27 @@
           ],
           "suggested_tests": [
             "Creatinina, função hepática e conciliação completa de medicamentos"
+          ]
+        }
+      },
+      {
+        "id": "criterio-objetivo-sangramento-maior",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "major_bleed_objective",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Critério objetivo de sangramento maior: queda de hemoglobina ≥2 g/dL ou transfusão ≥2 unidades"
+          ],
+          "emergency_flow": [
+            "Acionar protocolo de sangramento maior, controle da fonte e avaliação de reversão específica"
           ]
         }
       }
@@ -305,8 +333,8 @@
       "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
     ],
     "review_status": "revisado",
-    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. A triagem usa os critérios ACC para reconhecer sangramento maior, não publica doses de reversores e direciona ao protocolo específico. Foi incorporada a comunicação FDA de 18/12/2025 para impedir recomendação automática de alfa-andexanete; situação regulatória e disponibilidade no Brasil devem ser conferidas no momento do uso.",
-    "version": 1
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
   },
   {
     "slug": "dor-toracica",
@@ -4263,6 +4291,22 @@
         "when": {
           "all": [
             {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
               "field": "emergency_activated",
               "op": "falsy"
             }
@@ -4283,6 +4327,22 @@
         "priority": 80,
         "when": {
           "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
             {
               "field": "aed_requested",
               "op": "falsy"
@@ -4372,9 +4432,9 @@
       "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/systems-of-care",
       "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O reconhecimento segue AHA 2025 Classe I, Nível C-LD: adulto inconsciente/não responsivo com respiração ausente ou anormal deve ser presumido em parada; leigo não checa pulso e profissional limita a avaliação a 10 segundos. As ações leigas não incluem fármacos nem procedimentos avançados.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
   },
   {
     "slug": "dor-abdominal-aguda-desproporcional-ao-exame",
@@ -4415,7 +4475,8 @@
         "id": "critically_ill_on_vasopressor",
         "label": "O paciente está criticamente enfermo, em vasopressor ou com baixo débito?",
         "type": "boolean",
-        "section": "Contexto"
+        "section": "Contexto",
+        "required": true
       },
       {
         "id": "cta_requested",
@@ -4502,6 +4563,10 @@
           ],
           "messages": [
             "Considerar NOMI se houver baixo débito ou vasopressor; não é indicação para adiar a angiotomografia"
+          ],
+          "risk": "emergencia",
+          "red_flags": [
+            "Paciente crítico em vasopressor/baixo débito com quadro abdominal: suspeitar isquemia mesentérica não oclusiva"
           ]
         }
       },
@@ -4513,6 +4578,22 @@
             {
               "field": "cta_requested",
               "op": "falsy"
+            },
+            {
+              "any": [
+                {
+                  "field": "pain_disproportionate_to_exam",
+                  "op": "truthy"
+                },
+                {
+                  "field": "peritonitis_signs",
+                  "op": "truthy"
+                },
+                {
+                  "field": "critically_ill_on_vasopressor",
+                  "op": "truthy"
+                }
+              ]
             }
           ]
         },
@@ -4566,9 +4647,9 @@
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
       "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Reconhecimento e encaminhamento apenas; não contém protocolo cirúrgico/intervencionista completo. Produção científica assistida (Claude, 27/08/2026); pendente de revisão clínica humana antes de publicação.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
-    "version": 1
+    "version": 2
   }
 ]

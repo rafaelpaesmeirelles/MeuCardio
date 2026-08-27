@@ -84,7 +84,7 @@ export default function Calculadora() {
       const iniciais: Record<string, unknown> = {};
       for (const f of c.fields) {
         if (f.type === "boolean") iniciais[f.name] = false;
-        if (f.type === "select") iniciais[f.name] = f.options[0]?.value;
+        if (f.type === "select") iniciais[f.name] = "";
       }
       setValores(iniciais);
     });
@@ -166,7 +166,7 @@ export default function Calculadora() {
   if (!calc) return <Carregando />;
 
   const faltando = calc.fields.some(
-    (f) => f.type === "number" && f.required !== false
+    (f) => f.required !== false && f.type !== "boolean"
       && (valores[f.name] === undefined || valores[f.name] === "")
   );
 
@@ -212,6 +212,7 @@ export default function Calculadora() {
                     setValores({ ...valores, [f.name]: opt?.value });
                   }}
                 >
+                  <option value="" disabled>Selecione…</option>
                   {f.options.map((o) => (
                     <option key={String(o.value)} value={String(o.value)}>{o.label}</option>
                   ))}

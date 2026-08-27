@@ -57,6 +57,19 @@ function grupoDoDocumento(documento: Documento): Grupo {
   return REGRAS_GRUPO.find(([, padrao]) => padrao.test(texto))?.[0] ?? "Outros cuidados intensivos";
 }
 
+async function carregarTodosDocumentos(): Promise<Documento[]> {
+  const itens: Documento[] = [];
+  let offset = 0;
+  while (true) {
+    const pagina = await api.get<PaginaDocumentos & { next_offset: number | null }>(
+      `/library/documents?theme=${encodeURIComponent(TEMA)}&limit=200&offset=${offset}`
+    );
+    itens.push(...pagina.items);
+    if (pagina.next_offset === null) return itens;
+    offset = pagina.next_offset;
+  }
+}
+
 function DocumentoCard({ documento }: { documento: Documento }) {
   return (
     <Link to={`/biblioteca/${documento.slug}`} className="cc-tool-card">
@@ -81,20 +94,31 @@ export default function CardiologiaIntensiva() {
   useEffect(() => {
     let ativo = true;
     setErro("");
-    Promise.all([
-      api.get<PaginaDocumentos>(`/library/documents?theme=${encodeURIComponent(TEMA)}&limit=200`),
+    Promise.allSettled([
+      carregarTodosDocumentos(),
       api.get<Calculadora[]>("/calculators"),
       api.get<Checklist[]>("/checklists"),
-    ])
-      .then(([pagina, catalogoCalculadoras, catalogoChecklists]) => {
-        if (!ativo) return;
-        setDocumentos(pagina.items);
-        setCalculadoras(catalogoCalculadoras.filter((item) => CALCULADORAS_DIRETAS.has(item.slug)));
-        setChecklists(catalogoChecklists.filter((item) => item.theme === TEMA));
-      })
-      .catch((causa) => {
-        if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível abrir a central intensiva.");
-      });
+    ]).then(([resultadoDocumentos, resultadoCalculadoras, resultadoChecklists]) => {
+      if (!ativo) return;
+      if (resultadoDocumentos.status === "rejected") {
+        setDocumentos([]);
+        setErro(resultadoDocumentos.reason instanceof Error
+          ? resultadoDocumentos.reason.message
+          : "Não foi possível abrir o acervo da central intensiva.");
+      } else {
+        setDocumentos(resultadoDocumentos.value);
+      }
+      setCalculadoras(
+        resultadoCalculadoras.status === "fulfilled"
+          ? resultadoCalculadoras.value.filter((item) => CALCULADORAS_DIRETAS.has(item.slug))
+          : []
+      );
+      setChecklists(
+        resultadoChecklists.status === "fulfilled"
+          ? resultadoChecklists.value.filter((item) => item.theme === TEMA)
+          : []
+      );
+    });
     return () => { ativo = false; };
   }, []);
 

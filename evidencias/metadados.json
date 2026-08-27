@@ -51362,8 +51362,8 @@
   {
     "slug": "ima-dor-abdominal-desproporcional-assumir-ima-ate-provar-o-contrario-wses-2022",
     "statement": "Dor abdominal intensa desproporcional aos achados do exame físico deve ser assumida como isquemia mesentérica aguda até prova em contrário.",
-    "recommendation_class": "Recomendação forte",
-    "evidence_level": "1C (evidência de baixa qualidade)",
+    "recommendation_class": "Forte",
+    "evidence_level": "1C",
     "society": "World Society of Emergency Surgery (WSES)",
     "year": 2022,
     "guideline_title": "Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery",
@@ -51376,15 +51376,16 @@
       "emergência"
     ],
     "document_slug": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "claude",
-    "published": false
+    "published": false,
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026."
   },
   {
     "slug": "ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025",
     "statement": "Angiotomografia urgente com contraste em fases arterial e venosa, com cortes de até 1 mm, é recomendada em todo paciente com suspeita de isquemia mesentérica aguda, independentemente da função renal.",
-    "recommendation_class": "Classe I",
-    "evidence_level": "Nível B",
+    "recommendation_class": "I",
+    "evidence_level": "B",
     "society": "European Society for Vascular Surgery (ESVS)",
     "year": 2025,
     "guideline_title": "ESVS 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins",
@@ -51397,15 +51398,16 @@
       "emergência"
     ],
     "document_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "claude",
-    "published": false
+    "published": false,
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026."
   },
   {
     "slug": "ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025",
     "statement": "Revascularização endovascular deve ser considerada como terapia de primeira linha em pacientes com isquemia mesentérica aguda por oclusão trombótica ou embólica da artéria mesentérica superior, quando há expertise disponível.",
-    "recommendation_class": "Classe IIa",
-    "evidence_level": "Nível B",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
     "society": "European Society for Vascular Surgery (ESVS)",
     "year": 2025,
     "guideline_title": "ESVS 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins",
@@ -51417,8 +51419,9 @@
       "tratamento"
     ],
     "document_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "claude",
-    "published": false
+    "published": false,
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026."
   }
 ]

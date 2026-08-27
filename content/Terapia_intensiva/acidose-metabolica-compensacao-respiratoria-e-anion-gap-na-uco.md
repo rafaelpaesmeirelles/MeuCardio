@@ -3,7 +3,7 @@ title: "Acidose Metabólica na UCO: Compensação Respiratória e Ânion Gap"
 slug: acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Albert MS, Dell RB, Winters RW. Quantitative displacement of acid-base equilibrium in metabolic acidosis. Ann Intern Med. 1967;66(2):312-322. DOI: 10.7326/0003-4819-66-2-312. PMID: 6016545 — estudo original que fundamenta a relação quantitativa entre bicarbonato e PaCO2 na acidose metabólica", "Figge J, Jabor A, Kazda A, Fencl V. Anion gap and hypoalbuminemia. Crit Care Med. 1998;26(11):1807-1810. DOI: 10.1097/00003246-199811000-00019. PMID: 9824071 — estudo observacional original: 9 controles e 152 pacientes críticos, 265 medidas; derivou correção de 0,25 mEq/L por g/L de albumina (2,5 por g/dL)", "American Thoracic Society. Interpretation of Arterial Blood Gases (ABGs). Clinical Education resource. Consultado em 27/08/2026 — recurso oficial da sociedade: abordagem em seis passos, pH, fórmula de Winter, ânion gap e limites da compensação. https://www.thoracic.org/professionals/clinical-resources/critical-care/clinical-education/abgs.php"]
 review_note: "Lote técnico produzido em 27/08/2026 a partir de dois estudos originais e do recurso educacional oficial da ATS. Fórmulas e limites foram conferidos nas fontes; publicação clínica permanece dependente de revisão humana."

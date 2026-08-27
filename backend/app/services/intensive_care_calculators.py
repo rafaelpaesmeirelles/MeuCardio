@@ -1112,7 +1112,10 @@ def _avaliacao_lra_kdigo(dados: dict) -> dict:
     ):
         relacao_creatinina = creatinina_atual / creatinina_baseline
         delta_creatinina = creatinina_atual - creatinina_baseline
-        aumento_03_em_48h = intervalo_baseline == "ate_48h" and delta_creatinina >= 0.3
+        aumento_03_em_48h = (
+            intervalo_baseline == "ate_48h"
+            and delta_creatinina >= 0.3 - 1e-9
+        )
         aumento_15_em_7d = relacao_creatinina >= 1.5
         lra_por_creatinina = aumento_03_em_48h or aumento_15_em_7d
 
@@ -1132,10 +1135,20 @@ def _avaliacao_lra_kdigo(dados: dict) -> dict:
     estagio_diurese: int | None = None
     diurese_ml_kg_h: float | None = None
     criterio_diurese = "não avaliável sem peso, volume e duração completos"
-    if anuria_12h:
+    anuria_inferida = (
+        volume_urina == 0
+        and duracao_urina is not None
+        and duracao_urina >= 12
+        and peso is not None
+    )
+    if anuria_12h or anuria_inferida:
         estagio_diurese = 3
         diurese_ml_kg_h = 0.0
-        criterio_diurese = "anúria confirmada por pelo menos 12 horas; componente U3"
+        criterio_diurese = (
+            "anúria confirmada por pelo menos 12 horas; componente U3"
+            if anuria_12h
+            else f"volume urinário zero por {duracao_urina:g} h; anúria inferida, componente U3"
+        )
     elif all(valor is not None for valor in dados_diurese):
         assert peso is not None and volume_urina is not None and duracao_urina is not None
         diurese_ml_kg_h = volume_urina / peso / duracao_urina
@@ -1157,7 +1170,18 @@ def _avaliacao_lra_kdigo(dados: dict) -> dict:
         )
 
     componentes = [x for x in (estagio_creatinina, estagio_diurese) if x is not None]
-    estagio_final = max([3 if trr_aguda else 0, *componentes]) if (componentes or trr_aguda) else None
+    componentes_positivos = [x for x in componentes if x > 0]
+    ambos_componentes_avaliados = (
+        estagio_creatinina is not None and estagio_diurese is not None
+    )
+    if trr_aguda:
+        estagio_final = 3
+    elif componentes_positivos:
+        estagio_final = max(componentes_positivos)
+    elif ambos_componentes_avaliados:
+        estagio_final = 0
+    else:
+        estagio_final = None
 
     if estagio_final is None:
         status = (

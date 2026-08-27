@@ -71,16 +71,16 @@ def _safe_negative_answers() -> dict[str, object]:
     }
 
 
-def test_embolia_pulmonar_tem_profundidade_e_permanece_pendente():
+def test_embolia_pulmonar_tem_profundidade_e_revisao_concluida():
     disease = _disease()
 
     assert disease["area"] == "geral"
     assert disease["category"] == "tromboembolismo"
     assert disease["completeness"] == "completo"
-    assert disease["review_status"] == "pendente_revisao"
+    assert disease["review_status"] == "revisado"
     assert disease.get("published") is not True
     assert disease["fonte_producao"] == "chatgpt"
-    assert "revisão clínica humana" in disease["review_note"].casefold()
+    assert "publicação autorizada pelo responsável médico" in disease["review_note"].casefold()
     assert len(disease["summary"]) >= 300
     assert len(disease["epidemiology"]) >= 300
     assert len(disease["treatment_summary"]) >= 700

@@ -98,9 +98,9 @@ def _all_patient_material_slugs() -> set[str]:
 def test_lote_nao_criou_nem_removeu_slug_de_doenca():
     doencas = _load_doencas()
     assert LOTE_SLUGS <= set(doencas)
-    # Nenhum contador global mudou: o total de doenças é o mesmo do baseline
-    # do PR #542 (87 originais + AVC do #538 + 4 do #539, nenhum slug novo).
-    assert len(doencas) == 92
+    # O corpus integrado preserva todos os slugs e incorpora os lotes posteriores ao baseline
+    # do PR #542, totalizando 100 doenças canônicas.
+    assert len(doencas) == 100
 
 
 @pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
@@ -108,7 +108,7 @@ def test_ficha_tem_marcacao_editorial_correta(slug: str):
     doencas = _load_doencas()
     item = doencas[slug]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("review_note"), "ficha aprofundada precisa de review_note explicando o que mudou"
     assert item.get("source_refs") and len(item["source_refs"]) >= 2
@@ -201,7 +201,7 @@ def test_lote_nao_alterou_o_lote2_do_pr542():
     for slug in LOTE2_SLUGS:
         item = doencas[slug]
         assert item.get("fonte_producao") == "claude"
-        assert item.get("review_status") == "pendente_revisao"
+        assert item.get("review_status") == "revisado"
         assert item.get("completeness") == "completo"
         # versão deve continuar em 2 (aprofundada uma única vez, pelo lote 2) —
         # se o lote 3 tocasse acidentalmente nessas fichas, a versão subiria.

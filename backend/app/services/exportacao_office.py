@@ -8,6 +8,7 @@ referências e proveniência como texto nativo editável.
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import math
 from io import BytesIO
 from typing import Any
 
@@ -45,7 +46,7 @@ BRANCO = RGBColor(0xFF, 0xFF, 0xFF)
 LARGURA = Inches(13.333)
 ALTURA = Inches(7.5)
 MARGEM = Inches(0.65)
-MAX_BLOCOS_SLIDE = 6
+MAX_LINHAS_SLIDE = 14
 
 
 def _titulo_exportacao(itens: list[ConteudoExportavel], titulo: str | None) -> str:
@@ -159,6 +160,27 @@ def _blocos_secao(paragrafos: list[str], itens: list[str], destaque: str | None)
     return blocos
 
 
+def _paginar_blocos_pptx(blocos: list[tuple[str, str]]) -> list[list[tuple[str, str]]]:
+    paginas: list[list[tuple[str, str]]] = []
+    atual: list[tuple[str, str]] = []
+    linhas_atuais = 0
+    for bloco in blocos:
+        tipo, texto = bloco
+        # A caixa útil comporta ~14 linhas a 18–19 pt. Itens têm recuo/bullet
+        # e usam um pouco menos de largura que parágrafos.
+        caracteres_por_linha = 72 if tipo == "item" else 78
+        linhas = max(1, math.ceil(len(texto) / caracteres_por_linha))
+        if atual and linhas_atuais + linhas > MAX_LINHAS_SLIDE:
+            paginas.append(atual)
+            atual = []
+            linhas_atuais = 0
+        atual.append(bloco)
+        linhas_atuais += linhas
+    if atual:
+        paginas.append(atual)
+    return paginas
+
+
 def gerar_pptx(
     itens: list[ConteudoExportavel],
     *,
@@ -191,7 +213,7 @@ def gerar_pptx(
             blocos = _blocos_secao(secao.paragrafos, secao.itens, secao.destaque)
             if not blocos:
                 continue
-            paginas = [blocos[i:i + MAX_BLOCOS_SLIDE] for i in range(0, len(blocos), MAX_BLOCOS_SLIDE)]
+            paginas = _paginar_blocos_pptx(blocos)
             for pagina, bloco in enumerate(paginas, start=1):
                 rotulo = secao.titulo if len(paginas) == 1 else f"{secao.titulo} ({pagina}/{len(paginas)})"
                 _slide_conteudo(prs, rotulo, bloco, rodape)

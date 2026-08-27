@@ -3,7 +3,7 @@ title: "Lesão Renal Aguda na UCO: Critérios KDIGO por Creatinina e Diurese"
 slug: lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 summary: "Protocolo adulto para reconhecer e estadiar lesão renal aguda pelos componentes de creatinina e diurese do KDIGO, mantendo separados diagnóstico, gravidade, etiologia e indicação de terapia renal substitutiva."
 source_refs: ["Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int Suppl. 2012;2(1):1-138 — diretriz oficial publicada e ainda listada pela KDIGO como a versão vigente em 27/08/2026; fonte dos critérios diagnósticos e estágios 1-3", "Priyanka P, Zarbock A, Izawa J, Gleason TG, Renfurm RW, Kellum JA. The impact of acute kidney injury by serum creatinine or urine output criteria on major adverse kidney events in cardiac surgery patients. J Thorac Cardiovasc Surg. 2021;162(1):143-151.e7. DOI: 10.1016/j.jtcvs.2019.11.137. PMID: 32033818 — estudo original de cirurgia cardíaca que avaliou separadamente os domínios de creatinina e diurese", "Katabi LJ, Pu X, Yilmaz HO, Jia Y, Leung S, Duncan AE. Prognostic Utility of KDIGO Urine Output Criteria After Cardiac Surgery. J Cardiothorac Vasc Anesth. 2021;35(10):2991-3000. DOI: 10.1053/j.jvca.2021.02.027. PMID: 33744114 — análise original que encontrou possível sobreclassificação pelo componente urinário isolado no pós-operatório cardíaco"]

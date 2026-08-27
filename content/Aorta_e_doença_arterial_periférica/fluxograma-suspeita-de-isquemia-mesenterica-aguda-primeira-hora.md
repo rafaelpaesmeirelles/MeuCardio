@@ -3,7 +3,7 @@ title: "Fluxograma: Suspeita de isquemia mesentérica aguda — primeira hora"
 slug: fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora
 theme: "Aorta e doença arterial periférica"
 kind: fluxograma
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: claude
 review_note: "Lote auditável de 27/08/2026. Requer revisão clínica humana antes de publicação. Árvore de decisão estrita (raiz única, um pai por nó, conduta só em folha), validada mecanicamente (mermaid.parse + validador de estrutura da casa)."
 source_refs: ["Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.", "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642."]
@@ -22,9 +22,7 @@ flowchart TD
 
   D1 -->|"Sim"| C1(["Ressuscitação volêmica,<br/>antibiótico de amplo espectro<br/>e laparotomia ou laparoscopia<br/>sem aguardar angiotomografia"])
 
-  D1 -->|"Não, suspeita de IMA<br/>mantida pela dor e pelo<br/>fator de risco"| P1["Angiotomografia de abdome<br/>com contraste em fases arterial<br/>e venosa, sem atraso"]
-
-  D1 -->|"Não, e suspeita de IMA<br/>é baixa"| C2(["Investigar diagnóstico<br/>alternativo; reavaliar com<br/>urgência se a dor persistir<br/>ou piorar"])
+  D1 -->|"Não"| P1["Angiotomografia de abdome<br/>com contraste em fases arterial<br/>e venosa, sem atraso"]
 
   P1 --> D2{"Achado da angiotomografia"}
 
@@ -43,7 +41,7 @@ flowchart TD
   D3 -->|"Não"| C8(["Revascularização cirúrgica<br/>aberta; considerar<br/>transferência a centro<br/>com serviço 24/7"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C4,C5,C6,C7,C8 conduta;
+  class C1,C3,C4,C5,C6,C7,C8 conduta;
 ```
 
 ## Notas de leitura da árvore

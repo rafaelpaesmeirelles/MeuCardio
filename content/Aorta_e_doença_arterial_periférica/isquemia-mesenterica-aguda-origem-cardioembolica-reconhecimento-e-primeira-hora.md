@@ -3,7 +3,7 @@ title: "Isquemia mesentérica aguda de origem cardioembólica: reconhecimento e 
 slug: isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora
 theme: "Aorta e doença arterial periférica"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: claude
 review_note: "Lote auditável de 27/08/2026. Requer revisão clínica humana antes de publicação. Recorte deliberadamente estreito: reconhecimento, diferenciação por angiotomografia e primeira hora — não substitui o protocolo cirúrgico/intervencionista completo nem a diretriz de isquemia mesentérica crônica já publicada neste acervo (isquemia-mesenterica-cronica-diagnostico-e-tratamento-svs-2021.md), cujo próprio review_note já excluía explicitamente a forma aguda do escopo."
 source_refs: ["Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.", "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642.", "Clair DG, Beach JM. Mesenteric Ischemia. New England Journal of Medicine. 2016;374(10):959-968. DOI: 10.1056/NEJMra1503884. PMID: 26962730.", "Kärkkäinen JM. Acute Mesenteric Ischemia: A Challenge for the Acute Care Surgeon. Scandinavian Journal of Surgery. 2021;110(2):150-158. DOI: 10.1177/14574969211007590. PMID: 33866891."]

@@ -128,6 +128,20 @@
         "label": "Há piora renal/hepática ou uso concomitante de antiagregante, AINE ou outro anticoagulante?",
         "type": "boolean",
         "section": "Modificadores"
+      },
+      {
+        "id": "deep_internal_bleeding",
+        "label": "Há hematoma grande/progressivo ou dor abdominal, lombar ou em flanco sem explicação, sugerindo sangramento profundo/retroperitoneal?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sítio"
+      },
+      {
+        "id": "major_bleed_objective",
+        "label": "Houve queda de hemoglobina ≥2 g/dL ou transfusão de ≥2 unidades de concentrado de hemácias relacionada ao evento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
       }
     ],
     "assistant_rules": [
@@ -224,7 +238,6 @@
           ]
         },
         "add": {
-          "risk": "urgente",
           "missing_information": [
             "Nome do anticoagulante, dose e horário da última tomada"
           ],
@@ -253,6 +266,48 @@
             "Creatinina, função hepática e conciliação completa de medicamentos"
           ]
         }
+      },
+      {
+        "id": "sangramento-profundo",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "deep_internal_bleeding",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de sangramento profundo ou retroperitoneal sob anticoagulação"
+          ],
+          "suggested_tests": [
+            "Hemograma e imagem dirigida ao sítio conforme estabilidade"
+          ]
+        }
+      },
+      {
+        "id": "criterio-objetivo-sangramento-maior",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "major_bleed_objective",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Queda de hemoglobina ≥2 g/dL ou transfusão ≥2 unidades caracteriza sangramento maior"
+          ],
+          "emergency_flow": [
+            "Tratar como sangramento maior, controlar a fonte e avaliar reversão conforme agente e última dose"
+          ]
+        }
       }
     ],
     "tags": [
@@ -276,10 +331,9 @@
       "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
     ],
     "review_status": "revisado",
-    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. Critérios de sangramento maior seguem o consenso ACC 2020; avaliação e reinício seguem ACC/AHA 2023 e ESC 2024. A entrada não publica doses de reversores e remete ao protocolo específico. A comunicação FDA de 18/12/2025 foi incorporada para evitar apresentar alfa-andexanete como escolha automática; a situação regulatória brasileira deve ser conferida no momento do uso.",
-    "version": 1,
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2,
     "related_document_slugs": [
-      "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
       "fluxograma-sangramento-maior-em-paciente-anticoagulado",
       "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach"
     ],
@@ -3297,8 +3351,8 @@
       "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000603",
       "https://www.acc.org/latest-in-cardiology/articles/2022/10/31/13/02/clinical-practice-algorithm-for-the-follow-up-of-unrepaired-and-repaired-pda"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "PCA isolado em recém-nascido a termo é incomum, da ordem de poucos casos por 1.000-2.000 nascidos vivos em séries observacionais. No recém-nascido pré-termo, a persistência do canal é inversamente proporcional à idade gestacional: a resposta constritora do tecido ductal é imatura quanto menor a idade gestacional, de modo que o canal permanece amplamente patente nos primeiros dias de vida na maior parte dos prematuros extremos (<28 semanas) e fecha espontaneamente com muito mais frequência a partir de aproximadamente 32 semanas (Ambalavanan N et al.; AAP Committee on Fetus and Newborn/Section on Cardiology and Cardiac Surgery. Pediatrics 2025, PMID 40288780). Não há, nas fontes consultadas nesta revisão, dado epidemiológico brasileiro específico; os números acima são de coortes internacionais e não devem ser extrapolados diretamente ao contexto local. Peso e idade gestacional ao nascimento seguem sendo, nas fontes revisadas, os principais determinantes da prevalência e da probabilidade de fechamento espontâneo.",
     "presentation": [
@@ -3834,8 +3888,8 @@
       "https://doi.org/10.1161/CIRCULATIONAHA.115.015839",
       "https://doi.org/10.1161/JAHA.120.016684"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A anomalia de Ebstein é lesão rara, e a base de evidência populacional mais robusta hoje disponível é um estudo binacional de registro (Dinamarca e Suécia), que identificou 794 pacientes diagnosticados entre 1930 e 2017, pareados com 7.940 controles da população geral por idade e sexo, com seguimento mediano de 33 anos (Eckerström F et al., J Am Heart Assoc 2024, PMID 39494589). Nessa coorte, 52,6% dos pacientes eram do sexo feminino, a idade mediana ao diagnóstico foi de 18,0 anos (variação de 0,5 a 40,6 anos) — refletindo diretamente o espectro amplo da doença, do diagnóstico neonatal ao achado tardio na vida adulta —, cerca de metade tinha anomalia de Ebstein isolada e 28% tinham comunicação interatrial associada. O risco de morbidade cardiovascular ao longo da vida é substancial e depende fortemente da complexidade anatômica: a incidência cumulativa de eventos maiores em 50 anos foi de 37% (IC95% 31-42%) na forma isolada contra 83% (IC95% 76-89%) na anatomia complexa associada, e o risco de insuficiência cardíaca foi cerca de 6 vezes maior na forma isolada (HR 6,9; IC95% 4,9-9,8) e mais de 40 vezes maior na forma complexa (HR 40,7; IC95% 22,5-73,4), sempre em comparação com controles pareados. A arritmia supraventricular é a complicação mais frequente e praticamente universal ao longo da vida: incidência cumulativa vitalícia de aproximadamente 70%, com HR global de 19,7 (IC95% 16,5-23,5) em relação a controles; pré-excitação ventricular teve incidência cumulativa vitalícia de aproximadamente 19%. A arritmia supraventricular, por sua vez, aumenta substancialmente o risco de acidente vascular cerebral isquêmico (HR 22,6; IC95% 11,1-45,9), com incidência cumulativa de AVC de 7% em 20 anos após o início da arritmia (Eckerström F et al., PMID 39494589). Não há, nas fontes verificadas nesta sessão, estimativa de incidência ao nascimento (casos por nascidos vivos) suficientemente robusta para citar como dado populacional de base — os números acima são de morbidade e história natural em coorte diagnosticada, não de incidência na população geral, e essa lacuna não deve ser preenchida por extrapolação. No extremo mais grave do espectro, a forma neonatal com shunt circular estabelecido concentra o maior risco agudo de óbito perinatal e neonatal precoce, mas os grandes estudos multicêntricos fetais/neonatais dessa faixa combinam anomalia de Ebstein com displasia tricúspide não-Ebstein sem quebra de desfecho por diagnóstico (Freud LR et al., Circulation 2015, PMID 26059011; J Am Heart Assoc 2020, PMID 33076749) — não devem ser lidos como taxa isolada de Ebstein; ver documento irmão desta base sobre Ebstein neonatal para o detalhamento desse extremo.",
     "presentation": [
@@ -4182,8 +4236,8 @@
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC9554382/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC12018878/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Não há dado epidemiológico brasileiro específico consultado nesta revisão; as taxas abaixo são internacionais (Europa, EUA, Japão, Sul/Sudeste Asiático) e não devem ser extrapoladas diretamente para o Brasil. Síndrome do QT longo: prevalência estimada em 1:2.500 nascidos vivos; os genótipos KCNQ1 (LQT1, 30-35%), KCNH2 (LQT2, 25-30%) e SCN5A (LQT3, 5-10%) respondem por 90% dos casos com variante identificada; morte é a primeira manifestação em 10-15% dos indivíduos que morrem por complicação da doença. Síndrome de Brugada: prevalência mundial de até 1:2.000 em áreas endêmicas do Sul/Sudeste Asiático, onde é a segunda causa de morte em homens com menos de 40 anos; a apresentação típica é no adulto (idade média de morte súbita ~40 anos); é rara na infância — estudo de rastreio eletrocardiográfico em massa no Japão encontrou prevalência de apenas 1:163.110 em crianças — e, quando aparece nessa faixa etária, febre é o gatilho mais característico; portadores pediátricos de variante em SCN5A somam 47-67% dos probandos diagnosticados na infância, proporção maior que no adulto (15-20% dos casos gerais, ~40% dos casos familiares). CPVT: prevalência estimada em 1:10.000 ou menos; início dos sintomas (tipicamente síncope) em média entre 7 e 12 anos; até 80% dos afetados têm um ou mais episódios sincopais e cerca de 30% têm ao menos uma parada cardíaca ao longo da vida; morte súbita pode ser a primeira manifestação em indivíduo previamente assintomático.",
     "presentation": [
@@ -4234,7 +4288,7 @@
       "Uso de medicamento que prolonga o QT ou bloqueia canal de sódio em paciente com diagnóstico ou suspeita de canalopatia"
     ],
     "diagnostic_approach": "Abordagem estruturada e sequencial: (1) história clínica dirigida ao evento índice — gatilho (esforço, emoção, despertar, febre, som), pródromo, duração, testemunha, recuperação — e revisão de toda a medicação em uso; (2) história familiar de três gerações, buscando síncope, morte súbita (idade e circunstância), diagnóstico prévio de canalopatia ou 'epilepsia' nunca confirmada; (3) ECG de 12 derivações basal, com medida cuidadosa do QTc e busca ativa de padrão de Brugada, incluindo derivações precordiais direitas em posição alta quando a suspeita persiste; (4) teste provocativo direcionado pela hipótese — ergométrico no QT longo e na CPVT, catecolamina exógena na CPVT quando o esforço não é viável, e bloqueador de canal de sódio na suspeita de Brugada com ECG basal não diagnóstico, sempre em serviço preparado para eventual arritmia induzida; (5) teste genético direcionado ao fenótipo — valor diagnóstico mais consistente no QT longo e na CPVT, mais limitado na Brugada; variante patogênica confirmada pode por si só estabelecer o diagnóstico, mesmo sem arritmia documentada; (6) ecocardiograma para excluir cardiopatia estrutural concomitante; (7) rastreio em cascata dos familiares de primeiro grau assim que houver caso-índice. Nenhuma etapa isolada (ECG, escore de pontuação clínica ou teste provocativo) deve ser interpretada fora do conjunto clínico completo, e a condução deve ser de especialista com experiência em canalopatias pediátricas.",
-    "treatment_summary": "O tratamento farmacológico de base nas três canalopatias é o betabloqueador não seletivo (nadolol ou propranolol descritos como preferíveis a agentes beta-1 seletivos), indicado no QT longo sintomático ou com QT prolongado documentado e, na CPVT, em todo paciente com diagnóstico clínico, como terapia de primeira linha. A dose exata depende de peso, idade e protocolo do serviço, e deve ser titulada por resposta clínica e por reavaliação eletrocardiográfica/ergométrica periódica ao longo do crescimento. Na CPVT, quando a arritmia não é controlada apenas com betabloqueador, flecainida pode ser adicionada; a denervação simpática cardíaca esquerda é opção para caso refratário ou com intolerância ao betabloqueador, mas evidência primária mostra que pode persistir risco relevante de evento arrítmico mesmo após o procedimento, não substituindo o CDI quando este é indicado. Na síndrome de Brugada, o pilar não farmacológico é evitar gatilhos: tratar febre agressivamente com antitérmico e evitar fármacos que possam induzir supradesnivelamento do ponto J/segmento ST nas precordiais direitas (antiarrítmicos de classe I como flecainida e propafenona, antidepressivos tricíclicos, alguns anti-histamínicos de primeira geração, entre outros) — consultar lista atualizada antes de qualquer nova prescrição, inclusive odontológica. Quinidina pode ser considerada em paciente com Brugada altamente sintomático ou em tempestade elétrica, com evidência pediátrica específica limitada. O CDI é indicado por critério de risco (sobrevivente de parada cardíaca, síncope ou arritmia ventricular sustentada documentada apesar de terapia otimizada, ou padrão espontâneo de alto risco por avaliação especializada) nas três condições, sempre associado à terapia farmacológica de base — na CPVT em particular, o choque do CDI pode desencadear nova descarga catecolaminérgica e perpetuar o ciclo arrítmico, reforçando a necessidade de terapia farmacológica robusta associada. A restrição de esporte competitivo é individualizada por especialista conforme subtipo, genótipo, gatilho identificado e controle de sintomas — não é uniforme para todo portador assintomático. Toda decisão terapêutica deve ser conduzida por cardiologista pediátrico/eletrofisiologista com experiência em canalopatias, com aconselhamento genético e rastreio familiar em paralelo.",
+    "treatment_summary": "No QT longo e na CPVT, o tratamento farmacológico de base é o betabloqueador não seletivo (nadolol ou propranolol descritos como preferíveis a agentes beta-1 seletivos), indicado no QT longo sintomático ou com QT prolongado documentado e, na CPVT, em todo paciente com diagnóstico clínico, como terapia de primeira linha. Na síndrome de Brugada, betabloqueador crônico não é terapia de base; o manejo se concentra em febre/gatilhos, estratificação de risco, quinidina em cenários selecionados e CDI quando indicado. A dose exata depende de peso, idade e protocolo do serviço, e deve ser titulada por resposta clínica e por reavaliação eletrocardiográfica/ergométrica periódica ao longo do crescimento. Na CPVT, quando a arritmia não é controlada apenas com betabloqueador, flecainida pode ser adicionada; a denervação simpática cardíaca esquerda é opção para caso refratário ou com intolerância ao betabloqueador, mas evidência primária mostra que pode persistir risco relevante de evento arrítmico mesmo após o procedimento, não substituindo o CDI quando este é indicado. Na síndrome de Brugada, o pilar não farmacológico é evitar gatilhos: tratar febre agressivamente com antitérmico e evitar fármacos que possam induzir supradesnivelamento do ponto J/segmento ST nas precordiais direitas (antiarrítmicos de classe I como flecainida e propafenona, antidepressivos tricíclicos, alguns anti-histamínicos de primeira geração, entre outros) — consultar lista atualizada antes de qualquer nova prescrição, inclusive odontológica. Quinidina pode ser considerada em paciente com Brugada altamente sintomático ou em tempestade elétrica, com evidência pediátrica específica limitada. O CDI é indicado por critério de risco (sobrevivente de parada cardíaca, síncope ou arritmia ventricular sustentada documentada apesar de terapia otimizada, ou padrão espontâneo de alto risco por avaliação especializada) nas três condições, sempre associado à terapia farmacológica de base — na CPVT em particular, o choque do CDI pode desencadear nova descarga catecolaminérgica e perpetuar o ciclo arrítmico, reforçando a necessidade de terapia farmacológica robusta associada. A restrição de esporte competitivo é individualizada por especialista conforme subtipo, genótipo, gatilho identificado e controle de sintomas — não é uniforme para todo portador assintomático. Toda decisão terapêutica deve ser conduzida por cardiologista pediátrico/eletrofisiologista com experiência em canalopatias, com aconselhamento genético e rastreio familiar em paralelo.",
     "monitoring": [
       "ECG seriado (QTc, padrão de Brugada, ectopia) em consulta de seguimento",
       "Reavaliação da dose de betabloqueador conforme crescimento/peso e resposta clínica",
@@ -4495,8 +4549,8 @@
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC12365339/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC9712025/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "related_document_slugs": [
       "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
@@ -5466,8 +5520,8 @@
       "https://doi.org/10.1503/cmaj.050051",
       "https://doi.org/10.1161/CIR.0000000000000741"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Queda é um evento sentinela extremamente comum no idoso cardiopata e, segundo a diretriz mundial mais atual sobre o tema, ocorre em cerca de 30% dos adultos acima de 65 anos a cada ano, com variação regional relatada de 15-34% (Montero-Odasso M, van der Velde N, Martin FC, et al.; Task Force on Global Guidelines for Falls in Older Adults. World guidelines for falls prevention and management for older adults: a global initiative. Age Ageing. 2022;51(9):afac205, PMID 36178003). Um ponto estrutural dessa diretriz, com peso direto sobre como esta ficha deve ser lida, é que a definição de queda adotada (Organização Mundial da Saúde) inclui explicitamente o evento sincopal — ou seja, a própria diretriz de quedas trata síncope como uma queda, não como categoria à parte, e recomenda formalmente (grau 1A) que 'a avaliação cardiovascular adicional para quedas inexplicadas seja a mesma que para síncope', reforçando de forma independente a mesma recomendação já presente na diretriz europeia de síncope (Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948, PMID 29562304). A magnitude da causa cardiovascular não reconhecida como origem de quedas 'inexplicadas' ou 'recorrentes' no idoso foi quantificada diretamente: em estudo prospectivo de emergência no Reino Unido com pacientes ≥50 anos, de 279 submetidos a massagem do seio carotídeo sob triagem estruturada, 65 (23%) tinham hipersensibilidade cardioinibitória do seio carotídeo — uma causa potencialmente tratável (Richardson DA, Bexton RS, Shaw FE, Kenny RA. Prevalence of cardioinhibitory carotid sinus hypersensitivity in patients 50 years or over presenting to the accident and emergency department with 'unexplained' or 'recurrent' falls. Pacing Clin Electrophysiol. 1997;20(3 Pt 2):820-823, PMID 9080518). O ensaio clínico randomizado subsequente do mesmo grupo (SAFE PACE) confirmou o valor terapêutico dessa causa identificada: implante de marca-passo de dupla câmara com programação de queda de frequência reduziu quedas subsequentes em 70% e síncope em 50% frente ao grupo controle não estimulado (Kenny RA, Richardson DA, Steen N, Bexton RS, Shaw FE, Bond J. Carotid sinus syndrome: a modifiable risk factor for nonaccidental falls in older adults (SAFE PACE). J Am Coll Cardiol. 2001;38(5):1491-1496, PMID 11691528). A consequência traumática da queda associada à síncope também tem magnitude mensurada em coortes de grande escala: coorte nacional dinamarquesa com 125.763 pacientes atendidos por síncope encontrou risco de lesão por queda 79% maior em 1 ano frente a controles pareados, com 19,1% das lesões sendo fratura de quadril (Numé AK, Carlson N, Gerds TA, et al. Risk of post-discharge fall-related injuries among adult patients with syncope: A nationwide cohort study. PLoS One. 2018;13(11):e0206936, PMID 30462687); coorte prospectiva sueca com 30.399 indivíduos e seguimento médio de 17,8 anos encontrou HR 1,20 para fratura incidente após síncope inexplicada e HR 1,42 após hipotensão ortostática documentada (Johansson M, Rogmark C, Sutton R, Fedorowski A, Hamrefors V. Risk of incident fractures in individuals hospitalised due to unexplained syncope and orthostatic hypotension. BMC Med. 2021;19(1):188, PMID 34446019). Hipotensão pós-prandial, causa cardiovascular de queda frequentemente não pesquisada, é igualmente prevalente: em 113 pacientes de asilo (idade média 78 anos), 96% tiveram alguma queda pressórica pós-prandial e 36% preencheram o critério formal de queda ≥20 mmHg (Vaitkevicius PV, Esserwein DM, Maynard AK, O'Connor FC, Fleg JL. Frequency and importance of postprandial blood pressure reduction in elderly nursing-home patients. Ann Intern Med. 1991;115(11):865-870, PMID 1952473), e uma metanálise de 7 estudos com 2.389 participantes associou hipotensão pós-prandial a risco relativo de 1,52 (IC95% 1,05-2,18) para o desfecho agregado de eventos cardiovasculares e mortalidade, com qualidade de evidência classificada pelos próprios autores como muito baixa (Jenkins DJA, Sahye-Pudaruth S, Khodabandehlou K, et al. Systematic review and meta-analysis examining the relationship between postprandial hypotension, cardiovascular events, and all-cause mortality. Am J Clin Nutr. 2022;116(3):663-671, PMID 35675216).",
     "presentation": [
@@ -5644,8 +5698,11 @@
           "all": [
             {
               "field": "fall_mechanical_explanation",
-              "op": "eq",
-              "value": "sem_explicacao"
+              "op": "in",
+              "value": [
+                "sem_explicacao",
+                "nao_sabe"
+              ]
             }
           ]
         },
@@ -5656,7 +5713,7 @@
             "Arritmia ou causa cardiovascular não identificada"
           ],
           "messages": [
-            "Queda sem explicação mecânica clara deve ser investigada com a mesma abordagem cardiovascular estruturada de uma síncope inexplicada, não presumida como queda mecânica apenas pela ausência de relato espontâneo de perda de consciência."
+            "Queda sem explicação clara, não testemunhada ou desconhecida deve ser investigada como possível síncope inexplicada, com história estruturada, ECG e ortostatismo."
           ]
         }
       },
@@ -5782,7 +5839,7 @@
     ],
     "source_urls": [
       "https://pubmed.ncbi.nlm.nih.gov/31813278/",
-      "https://www.sccm.org/clinical-resources/guidelines/guidelines/guidelines-for-the-prevention-and-management-of-pa",
+      "https://pubmed.ncbi.nlm.nih.gov/30113379/",
       "https://agsjournals.onlinelibrary.wiley.com/doi/10.1111/jgs.13281",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC4066613/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC3580690/",
@@ -5794,8 +5851,8 @@
       "https://pubmed.ncbi.nlm.nih.gov/32682483/",
       "https://pubmed.ncbi.nlm.nih.gov/10053175/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Delirium é a complicação neuropsiquiátrica aguda mais frequente em cardiogeriatria, tanto no pós-operatório de cirurgia cardíaca quanto na internação clínica cardiológica não cirúrgica, e é sistematicamente subdiagnosticado quando o rastreio não é estruturado. Em coorte de derivação de escore preditivo pré-operatório (Rudolph et al., Circulation 2009; PMID 19118253), delirium ocorreu em 52% dos pacientes com 60 anos ou mais submetidos a cirurgia cardíaca eletiva; em coorte independente com desfecho cognitivo prospectivo (Saczynski et al., NEJM 2012; PMID 22762316), a incidência foi de 46% (103/225). Metanálise dedicada a fatores de risco em cirurgia cardíaca (Chen et al., J Cardiothorac Surg 2021; PMID 33902644), reunindo 14 estudos e 13.286 pacientes, mostra incidência muito variável entre estudos (4,1% a 54,9%), refletindo sobretudo diferença de instrumento e frequência de rastreio, não inconsistência real do fenômeno; entre os fatores de risco identificados estão idade avançada (OR 1,06/ano), diabetes (OR 1,61), depressão pré-operatória (OR 3,29), comprometimento cognitivo leve pré-existente (OR 5,40), estenose carotídea (OR 1,72) e classe funcional NYHA III-IV (OR 1,89). Fora do contexto cirúrgico, em coorte prospectiva de 883 pacientes >65 anos internados por insuficiência cardíaca descompensada aguda e rastreados sistematicamente pelo Confusion Assessment Method, a prevalência de delirium foi de 17,1% — cerca de 1 em cada 6 internados (Uthamalingam et al., Am J Cardiol 2011; PMID 21757045). Essa prevalência prospectiva contrasta com apenas 0,71% relatada em metanálise baseada em dados administrativos/codificação de mais de 12,8 milhões de internações por insuficiência cardíaca (Niu et al., Front Cardiovasc Med 2023; PMID 37636295) — diferença que ilustra o quanto o delirium passa sem registro quando não há rastreio ativo estruturado, em vez de refletir menor ocorrência real. A declaração científica da American Heart Association sobre idosos na unidade de terapia intensiva cardiológica (Damluji et al., Circulation 2020;141(2):e6-e32; PMID 31813278) situa delirium, ao lado de comprometimento cognitivo, multimorbidade, polifarmácia e fragilidade, entre as síndromes geriátricas centrais que o ambiente de CICU — procedimentos, fármacos novos, sobrecarga sensorial, privação de sono, imobilização prolongada — tende a precipitar ou agravar, independentemente da qualidade do cuidado cardiovascular estrito.",
     "presentation": [
@@ -6123,8 +6180,8 @@
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7ea7e2c-ca54-4ecc-9fc7-bd3571b0ebc2",
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=481b7802-5093-43e7-bbd9-1532197eb6e6"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A decisão de anticoagular o idoso ganha peso epidemiológico duplo: a população-alvo é, por definição, multimórbida e polimedicada, e é sistematicamente sub-representada nos ensaios que embasam a dose padrão. Em beneficiários do Medicare (EUA) com doença isquêmica do coração, 48% têm 5 ou mais condições comórbidas, e estima-se que pacientes em uso de 10 ou mais medicamentos (hiperpolifarmácia) tenham mais de 90% de probabilidade de pelo menos uma interação medicamentosa clinicamente relevante (Damluji et al., AHA Scientific Statement, Circulation 2023). A prevalência de fragilidade sobe de 16% aos 65-69 anos para cerca de 22,2% aos 80-84 anos, maior em mulheres (mesma fonte). Os quatro ensaios pivotais que embasam o uso de anticoagulante oral direto (DOAC) em fibrilação atrial (ARISTOTLE, ROCKET-AF, RE-LY, ENGAGE AF-TIMI 48) sub-representam o paciente muito idoso e frágil; o ELDERCARE-AF (Okumura et al., NEJM 2020, PMID 32865374) é o único ensaio randomizado dedicado especificamente a pacientes ≥80 anos considerados não candidatos à dose padrão, com 984 participantes. Sem anticoagulação, a taxa de trombose cardioembólica/valvar em prótese mecânica de primeira geração é de 12%/ano (posição aórtica) a 22%/ano (posição mitral) — número que justifica por que a decisão em prótese valvar pesa tanto a expectativa de vida quanto a viabilidade real de anticoagulação de qualidade ao longo dos anos (2025 ESC/EACTS Guidelines for the management of valvular heart disease, PMID 40878295). A revisão STOPP/START versão 3 (2023) expandiu em 61,5% os critérios cardiovasculares (21 critérios STOPP) frente à versão 2, com itens explícitos sobre prescrição de anticoagulante em fibrilação atrial crônica com risco aumentado de sangramento (O'Mahony et al., Eur Geriatr Med 2023, PMID 37256475) — reflexo direto de que a checagem de adequação da anticoagulação no idoso é hoje parte formal de ferramentas de prescrição geriátrica, não julgamento isolado do cardiologista.",
     "presentation": [
@@ -6178,7 +6235,7 @@
       "Em queda com traumatismo craniano em paciente anticoagulado, mesmo sem sintoma inicial, manter limiar baixo para neuroimagem pelo risco de hemorragia intracraniana de instalação tardia",
       "Após hemostasia, reavaliar precocemente o reinício da anticoagulação — suspensão prolongada por precaução excessiva expõe a risco trombótico sem benefício adicional comprovado"
     ],
-    "treatment_summary": "A escolha entre DOAC e varfarina no idoso segue três critérios, nesta ordem: indicação, função renal, e risco de queda/sangramento. Prótese valvar mecânica exige varfarina como única classe validada — DOAC e dupla antiagregação são Classe III, Nível A nessa indicação (ESC/EACTS 2025, PMID 40878295); o alvo de INR varia de 2 a 4 conforme tipo e posição da prótese, não é um valor único. Fora de prótese mecânica, DOAC é preferível a varfarina no idoso com risco de queda — não pela quantidade total de sangramento, mas pelo tipo: no ARISTOTLE (Granger et al., NEJM 2011, PMID 21870978), AVC hemorrágico foi de 0,24%/ano com apixabana versus 0,47%/ano com varfarina (HR 0,51), e mortalidade por qualquer causa também foi menor (3,52% vs. 3,94%/ano). A coorte de Grymonprez et al. (2023) reforça esse padrão especificamente em quem já caiu: DOAC teve menos AVC/embolia sistêmica (HR 0,70), menos AVC isquêmico (HR 0,59) e menos mortalidade (HR 0,83) que varfarina nesse subgrupo, sem diferença significativa de sangramento maior. Ajuste de dose por função renal e idade depende do fármaco e não deve ser generalizado entre classes: a bula brasileira da apixabana reduz de 5mg para 2,5mg duas vezes ao dia quando presentes pelo menos 2 de 3 critérios (idade ≥80 anos, peso ≤60kg, creatinina sérica ≥1,5mg/dL), e não é recomendada com clearance de creatinina abaixo de 15mL/min nem em diálise; a dabigatrana tem eliminação predominantemente renal e a bula brasileira contraindica clearance abaixo de 30mL/min; a rivaroxabana reduz para 15mg/dia com clearance entre 15-49mL/min na FA e não é recomendada abaixo de 15mL/min; a varfarina não tem ajuste renal direto, mas exige controle de INR mais frequente pela maior variabilidade farmacocinética do idoso. Preencher apenas um critério isolado de redução (ex.: só a idade) não deve gerar subdose silenciosa. No paciente muito idoso (≥80 anos) considerado não candidato à dose padrão, o ELDERCARE-AF (Okumura et al., NEJM 2020, PMID 32865374) testou edoxabana 15mg uma vez ao dia contra placebo em 984 pacientes japoneses: AVC/embolia sistêmica de 2,3%/ano contra 6,7%/ano com placebo (HR 0,34), sem diferença significativa de sangramento maior nem de mortalidade — evidência direta de que 'não candidato à dose plena' deve levar a dose reduzida, não à ausência de anticoagulação. Qualquer dose não coberta explicitamente aqui deve ser conferida diretamente na bula vigente do fármaco antes de prescrever — este resumo não substitui a leitura da bula.",
+    "treatment_summary": "A escolha entre DOAC e varfarina no idoso segue três critérios, nesta ordem: indicação, função renal, e risco de queda/sangramento. Prótese valvar mecânica exige varfarina como única classe validada — DOAC e dupla antiagregação são Classe III, Nível A nessa indicação (ESC/EACTS 2025, PMID 40878295); o alvo de INR varia de 2 a 4 conforme tipo e posição da prótese, não é um valor único. Fora de prótese mecânica, DOAC é preferível a varfarina no idoso com risco de queda — não pela quantidade total de sangramento, mas pelo tipo: no ARISTOTLE (Granger et al., NEJM 2011, PMID 21870978), AVC hemorrágico foi de 0,24%/ano com apixabana versus 0,47%/ano com varfarina (HR 0,51), e mortalidade por qualquer causa também foi menor (3,52% vs. 3,94%/ano). A coorte de Grymonprez et al. (2023) reforça esse padrão especificamente em quem já caiu: DOAC teve menos AVC/embolia sistêmica (HR 0,70), menos AVC isquêmico (HR 0,59) e menos mortalidade (HR 0,83) que varfarina nesse subgrupo, sem diferença significativa de sangramento maior. Ajuste de dose por função renal e idade depende do fármaco e não deve ser generalizado entre classes: a bula brasileira da apixabana reduz de 5mg para 2,5mg duas vezes ao dia quando presentes pelo menos 2 de 3 critérios (idade ≥80 anos, peso ≤60kg, creatinina sérica ≥1,5mg/dL), e não é recomendada com clearance de creatinina abaixo de 15mL/min nem em diálise; a dabigatrana tem eliminação predominantemente renal e a bula brasileira contraindica clearance abaixo de 30mL/min; a rivaroxabana reduz para 15mg/dia com clearance entre 15-49mL/min na FA e não é recomendada abaixo de 15mL/min; a varfarina não tem ajuste renal direto, mas exige controle de INR mais frequente pela maior variabilidade farmacocinética do idoso. Preencher apenas um critério isolado de redução (ex.: só a idade) não deve gerar subdose silenciosa. No paciente muito idoso (≥80 anos) considerado não candidato à dose padrão, o ELDERCARE-AF (Okumura et al., NEJM 2020, PMID 32865374) testou edoxabana 15mg uma vez ao dia contra placebo em 984 pacientes japoneses: AVC/embolia sistêmica de 2,3%/ano contra 6,7%/ano com placebo (HR 0,34), sem diferença significativa de sangramento maior nem de mortalidade — evidência direta de que 'não candidato à dose plena' deve levar a dose reduzida, não à ausência de anticoagulação. Qualquer dose não coberta explicitamente aqui deve ser conferida diretamente na bula vigente do fármaco antes de prescrever — este resumo não substitui a leitura da bula. A edoxabana 15 mg do ELDERCARE-AF foi estudada em pacientes japoneses com 80 anos ou mais, não candidatos às doses aprovadas; não deve ser extrapolada como dose reduzida universal para idosos fora dessa população/indicação regulatória.",
     "monitoring": [
       "Reavaliação periódica de função renal e hepática, com frequência maior no muito idoso e em intercorrências agudas",
       "Hemograma periódico para detectar anemia insidiosa por sangramento oculto",
@@ -6618,8 +6675,8 @@
       "https://labeling.pfizer.com/ShowLabeling.aspx?id=11685",
       "https://doi.org/10.1056/NEJMoa2028631"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A amiloidose cardíaca por transtirretina (ATTR-CA) é hoje considerada a causa infiltrativa mais frequente de hipertrofia ventricular inexplicada e de ICFEp no idoso, e existe em duas formas com epidemiologia distinta: a forma selvagem (ATTRwt, também chamada senil), sem mutação genética, praticamente restrita a pacientes acima de 60 anos e com forte predomínio masculino (razão homem:mulher de aproximadamente 25-50:1); e a forma hereditária (ATTRv), autossômica dominante, com idade de início variável por mutação — antes dos 50 anos na V30M, após os 45 na T60A, em geral após os 65 na V122I (Ruberg & Berk, Circulation 2012, PMID 22949539). A V122I é a variante mais relevante em termos populacionais: cerca de 3-4% da população afro-americana nos EUA é heterozigota (~1,5 milhão de portadores), com fenótipo predominantemente cardíaco (Jacobson et al., NEJM 1997, PMID 9017939; Ruberg & Berk 2012). Em cenários clínicos específicos a prevalência de ATTR-CA é alta o bastante para justificar rastreamento sistemático: até 7-19% dos pacientes rotulados como ICFEp, cardiomiopatia hipertrófica ou estenose aórtica grave de baixo fluxo/baixo gradiente (sobretudo candidatos a TAVI) têm ATTR-CA subjacente (Garcia-Pavia et al., posicionamento do ESC Working Group, Eur Heart J 2021, PMID 33825853). Em série de autópsia de 109 pacientes com ICFEp sem amiloidose clinicamente aparente, depósito moderado/grave de transtirretina selvagem foi encontrado em 5% (80% homens) e depósito leve em outros 12%, com odds ratio de 3,8 (IC95% 1,5-11,3) em relação a controles ajustado por idade e sexo (Mohammed et al., JACC Heart Fail 2014, PMID 24720917) — ou seja, numa amostra não selecionada de ICFEp do idoso, cerca de 1 em 20 tinha amiloidose como causa estrutural primária. A amiloidose de cadeia leve (AL) é epidemiologicamente distinta — discrasia de plasmócitos, não ligada ao envelhecimento da transtirretina — e deve ser sempre excluída antes de se fechar o diagnóstico de ATTR, porque tratamento e prognóstico não têm nenhuma equivalência entre as duas formas.",
     "presentation": [
@@ -7008,8 +7065,8 @@
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2",
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17f85d17-ab71-4f5b-9fe3-0b8c822f69ff"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A cardiotoxicidade por terapia anti-HER2 (trastuzumabe, pertuzumabe, trastuzumabe-emtansina, trastuzumabe-deruxtecana) é a segunda causa mais relevante de disfunção cardíaca relacionada a tratamento oncológico, atrás das antraciclinas, e frequentemente ocorre em sequência a elas no câncer de mama HER2-positivo. O ensaio fundador que estabeleceu o benefício do trastuzumabe no câncer de mama metastático HER2-positivo (Slamon et al., NEJM 2001) também definiu seu principal risco: disfunção cardíaca classe III/IV da New York Heart Association em 27% dos pacientes que receberam trastuzumabe associado a antraciclina e ciclofosfamida (vs. 8% sem trastuzumabe) e em 13% dos que receberam trastuzumabe associado a paclitaxel (vs. 1% sem trastuzumabe) — achado que consolidou a recomendação de evitar a combinação concomitante de antraciclina e trastuzumabe. No cenário adjuvante, a análise conjunta dos ensaios NSABP B-31 e NCCTG N9831 (Romond et al., NEJM 2005) relatou incidência cumulativa em 3 anos de insuficiência cardíaca classe III/IV ou morte cardíaca de 4,1% e 2,9%, respectivamente, no grupo tratado com trastuzumabe. Fora do ambiente controlado de ensaio clínico, dados de base populacional (coorte SEER-Medicare, Chavez-MacGregor et al., J Clin Oncol 2013; idade mediana 71 anos) mostraram incidência de insuficiência cardíaca de 29,4% nas usuárias de trastuzumabe contra 18,9% nas não usuárias (HR 1,95; IC95% 1,75-2,17) — números maiores que os relatados nos ensaios pivotais, refletindo população mais idosa e com mais comorbidade na prática real. Ao contrário da cardiotoxicidade por antraciclina, tipicamente considerada mais cumulativa e menos reversível, a disfunção relacionada à terapia anti-HER2 é classicamente descrita como potencialmente reversível com a interrupção do fármaco e o tratamento da insuficiência cardíaca.",
     "presentation": [
@@ -7149,6 +7206,31 @@
         "label": "Há exposição prévia a antraciclina, radioterapia torácica prévia, cardiopatia prévia, ou fatores de risco cardiovascular (idade avançada, hipertensão, diabetes)?",
         "type": "boolean",
         "section": "História"
+      },
+      {
+        "id": "lvef_absolute_drop_pp",
+        "label": "Qual foi a queda absoluta da FEVE em relação ao basal?",
+        "type": "select",
+        "required": true,
+        "section": "Exames",
+        "options": [
+          {
+            "value": "lt10",
+            "label": "Menor que 10 pontos percentuais"
+          },
+          {
+            "value": "10_20",
+            "label": "10 a 20 pontos percentuais"
+          },
+          {
+            "value": "gt20",
+            "label": "Maior que 20 pontos percentuais"
+          },
+          {
+            "value": "unknown",
+            "label": "Não determinada"
+          }
+        ]
       }
     ],
     "assistant_rules": [
@@ -7186,6 +7268,13 @@
             {
               "field": "symptomatic_hf",
               "op": "falsy"
+            },
+            {
+              "field": "anti_her2_regimen",
+              "op": "not_in",
+              "value": [
+                "tdxd"
+              ]
             }
           ]
         },
@@ -7212,6 +7301,13 @@
             {
               "field": "symptomatic_hf",
               "op": "falsy"
+            },
+            {
+              "field": "anti_her2_regimen",
+              "op": "not_in",
+              "value": [
+                "tdxd"
+              ]
             }
           ]
         },
@@ -7277,6 +7373,101 @@
         "add": {
           "messages": [
             "Trastuzumabe-deruxtecana (T-DXd) soma um eixo pulmonar de vigilância ao cardíaco: investigar prontamente tosse, dispneia ou febre novas, pelo risco de doença pulmonar intersticial/pneumonite (alerta em quadro do rótulo)"
+          ]
+        }
+      },
+      {
+        "id": "tdxd-feve-40-45-queda-menor-10",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "anti_her2_regimen",
+              "op": "eq",
+              "value": "tdxd"
+            },
+            {
+              "field": "lvef_range",
+              "op": "eq",
+              "value": "40_49"
+            },
+            {
+              "field": "lvef_absolute_drop_pp",
+              "op": "eq",
+              "value": "lt10"
+            },
+            {
+              "field": "symptomatic_hf",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "T-DXd com FEVE 40–45% e queda <10 pontos: manter conforme rótulo e repetir FEVE em até 3 semanas; confirmar o valor exato dentro da faixa 40–49%."
+          ]
+        }
+      },
+      {
+        "id": "tdxd-interromper-por-feve-ou-queda",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "anti_her2_regimen",
+              "op": "eq",
+              "value": "tdxd"
+            },
+            {
+              "field": "symptomatic_hf",
+              "op": "falsy"
+            }
+          ],
+          "any": [
+            {
+              "field": "lvef_range",
+              "op": "eq",
+              "value": "lt40"
+            },
+            {
+              "field": "lvef_absolute_drop_pp",
+              "op": "in",
+              "value": [
+                "10_20",
+                "gt20"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "T-DXd: interromper e repetir FEVE em até 3 semanas conforme faixa e magnitude da queda; descontinuar se não houver recuperação nos critérios do rótulo."
+          ]
+        }
+      },
+      {
+        "id": "tdxd-dados-insuficientes",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "anti_her2_regimen",
+              "op": "eq",
+              "value": "tdxd"
+            },
+            {
+              "field": "lvef_absolute_drop_pp",
+              "op": "eq",
+              "value": "unknown"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Magnitude da queda absoluta de FEVE para aplicar o algoritmo específico do T-DXd"
           ]
         }
       }
@@ -7433,8 +7624,8 @@
       "https://pubmed.ncbi.nlm.nih.gov/30396850/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC12084922/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Fluoropirimidinas (5-fluorouracil intravenoso e sua pró-droga oral, capecitabina) são a segunda causa mais frequente de toxicidade cardiovascular relacionada a tratamento oncológico, atrás apenas das antraciclinas, segundo a diretriz ESC 2022 e o documento complementar da ESC CardioPractice sobre monitorização e tratamento de complicações cardiovasculares durante terapia antineoplásica, que relata incidência de cardiotoxicidade entre 1% e 19% dos pacientes expostos, variando conforme a definição usada e o esquema de administração. O mecanismo predominante da apresentação isquêmica aguda é toxicidade vascular com vasoespasmo coronariano e disfunção endotelial — distinto da doença aterosclerótica obstrutiva clássica —, descrito tanto pelo documento ESC CardioPractice quanto pelos rótulos oficiais (FDA/DailyMed) de 5-fluorouracila injetável e de capecitabina (Xeloda), que listam angina, infarto/isquemia miocárdica, arritmia, parada cardíaca e insuficiência cardíaca como eventos de cardiotoxicidade associados à classe, mais frequentes em pacientes com doença arterial coronariana prévia. Estudos de coorte originais dimensionam essa incidência de forma mais granular e, por vezes, discordante entre si, refletindo diferenças de definição, esquema de infusão e método de detecção. Em coorte retrospectiva de centro terciário único com 4.019 pacientes recebendo 5-fluorouracila entre 2009 e 2019 (Zafar A et al., JACC CardioOncol. 2021;3(1):101-109, PMID 33817666), a incidência de vasoespasmo coronariano — definido por dor torácica típica associada a alteração eletrocardiográfica e/ou elevação de biomarcador — foi de 2,16% (87 pacientes), com achado contraintuitivo: os pacientes acometidos eram mais jovens (58±13 vs. 64±13 anos; p=0,001) e tinham menos fatores de risco cardiovascular tradicionais (70,1% vs. 84,5%; p=0,007) do que os que não desenvolveram vasoespasmo, sem diferença de sobrevida livre de progressão ou mortalidade entre os grupos. Um estudo prospectivo com 644 pacientes (Kosmas C et al., J Cancer Res Clin Oncol. 2008;134(1):75-82, PMID 17636329) encontrou incidência global de cardiotoxicidade de 4,03% (26/644), com risco claramente dependente do esquema de infusão: 6,7% (14/209) com infusão contínua de 5-FU contra 2,3% (7/317) com os demais esquemas combinados. Em infusão contínua de 5-FU em altas doses (600-1.000 mg/m²/dia por 96-120 horas), estudo prospectivo com 367 pacientes (de Forni M et al., J Clin Oncol. 1992;10(11):1795-1801, PMID 1403060) relatou incidência de evento cardíaco de 7,6% (28 pacientes) e letalidade de 2,2% (5 óbitos), com sintomas surgindo tipicamente por volta do 3º dia de infusão. Para a capecitabina especificamente, coorte prospectiva com monitorização Holter e biomarcadores cardíacos em 81 pacientes no primeiro tratamento com o fármaco (Dyhl-Polk A et al., Acta Oncol. 2025;64:43089, PMID 40600575) detectou isquemia miocárdica ao Holter em 7% (6/81) — 5% silenciosa e 2% sintomática — e cardiotoxicidade sintomática global em 9% (7/81), incluindo angina instável (5%), dispneia com queda de fração de ejeção (1%) e parada cardíaca (1%). O padrão temporal de apresentação — sintomas surgindo durante ou logo após a infusão, frequentemente nos primeiros ciclos — é consistente entre as fontes e é a característica clínica mais útil para reconhecimento precoce.",
     "presentation": [
@@ -7693,8 +7884,8 @@
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b70606e-b99c-4272-a0f1-b5523cce0c59",
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e5365ff-cb2a-4b16-b2c7-e35c6bf2de13"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A terapia com células CAR-T (chimeric antigen receptor T-cell) é usada no tratamento da leucemia linfoblástica aguda e de linfomas agressivos de células B; a diretriz ESC 2022 de cardio-oncologia reconhece uma associação crescente entre a terapia CAR-T e toxicidade cardiovascular relacionada ao tratamento — incluindo disfunção ventricular esquerda, insuficiência cardíaca, arritmias cardíacas, derrame pericárdico, síndrome de takotsubo e parada cardíaca —, embora a incidência relatada seja variável entre estudos (Lyon AR et al., Eur Heart J 2022, PMID 36017568, Seção 5.5.15). A maioria das toxicidades cardiovasculares descritas está associada à ocorrência da síndrome de liberação de citocinas (SLC/CRS). Na mesma diretriz (Seção 6.1.4), as complicações cardiovasculares representam cerca de 20% dos eventos adversos relatados em pequenos estudos e séries de casos de adultos tratados com CAR-T, com alta taxa de mortalidade associada; entre essas complicações, arritmias respondem por 77,6% dos casos (incluindo prolongamento do QTc, arritmias ventriculares e fibrilação atrial), insuficiência cardíaca por 14,3%, e infarto do miocárdio e tromboembolismo venoso, juntos, por 0,5%. A taxa de letalidade global dos eventos adversos cardiovasculares e pulmonares associados ao CAR-T, nos estudos citados pela diretriz, foi de 30,9%.\n\nOs rótulos oficiais (FDA/DailyMed) dos dois produtos CAR-T anti-CD19 mais estabelecidos documentam a incidência de CRS por indicação. Para o tisagenlecleucel (KYMRIAH): CRS em 77% dos pacientes pediátricos/adultos jovens com leucemia linfoblástica aguda recidivada/refratária (grau ≥3 pelo sistema Penn em 48%), em 74% dos adultos com linfoma difuso de grandes células B recidivado/refratário (grau ≥3 em 23%) e em 53% dos adultos com linfoma folicular recidivado/refratário (todos grau 1-2). Para o axicabtagene ciloleucel (YESCARTA): CRS em 90% dos pacientes com linfoma não Hodgkin (grau ≥3 em 9%) e em 93% dos pacientes com linfoma difuso de grandes células B (grau ≥3 em 9%). Entre os pacientes com CRS, hipotensão foi relatada em até 69% (KYMRIAH, leucemia linfoblástica aguda pediátrica) e 45% (YESCARTA, linfoma difuso de grandes células B), e taquicardia em até 32% (YESCARTA) — as manifestações hemodinâmicas que constituem a ponte fisiopatológica entre a SLC e a repercussão cardiovascular descrita pela diretriz ESC.",
     "presentation": [
@@ -7875,9 +8066,12 @@
           ]
         },
         "add": {
-          "risk": "urgente",
+          "risk": "emergencia",
           "messages": [
             "CRS grau 3-4: internação em unidade de terapia intensiva, terapia anti-IL-6 e suporte de órgão conforme o protocolo de emergência específico"
+          ],
+          "emergency_flow": [
+            "Internar em unidade de terapia intensiva e tratar CRS/suporte de órgão conforme protocolo específico."
           ]
         }
       },
@@ -8193,8 +8387,8 @@
       "https://pubmed.ncbi.nlm.nih.gov/26320112/",
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC7539677/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Envolvimento pericárdico é achado relativamente comum no paciente oncológico, mas raramente é causado só pelo próprio tratamento: segundo a diretriz ESC 2022 de cardio-oncologia, o tratamento antineoplásico responde por menos de 30% dos casos de derrame pericárdico no paciente com câncer — proporção que tende a crescer com o uso cada vez mais amplo de inibidor de checkpoint imune (ICI). Derrame por metástase ou invasão direta (pulmão, esôfago, mama, neoplasia hematológica, ovário, melanoma) ou por obstrução linfonodal mediastinal costuma se associar a pior prognóstico, e o derrame de origem maligna corresponde a mais de 30% dos pacientes que se apresentam com tamponamento cardíaco — em geral com instalação mais lenta e derrame já maior ao diagnóstico do que o derrame não maligno. A pericardite aguda por radioterapia torácica tornou-se rara com as doses e técnicas atuais, mas a doença pericárdica actínica crônica pode surgir meses a décadas depois — a constrição é a manifestação tardia mais grave —, muitas vezes já fora do seguimento oncológico ativo. A incidência de complicação pericárdica tardia por ICI é considerada baixa, mas a pericardite associada a ICI tem início mediano em torno de 30 dias após a exposição e prognóstico pior, sobretudo quando há miocardite concomitante.",
     "presentation": [
@@ -8497,8 +8691,8 @@
       "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1e6c7ab-eefe-4089-b403-edeaab4f6e36",
       "https://www.saudedireta.com.br/catinc/drugs/bulas/adalat.pdf"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Hipertensão complica 5% a 15% das gestações em todo o mundo e é a segunda causa mais comum de complicação médica na gravidez, atrás apenas da hemorragia pós-parto, com tendência de aumento ligada à idade materna mais avançada e à obesidade (ESC 2025, Seção 12.3). Em uma coorte citada pela ESC 2024, cerca de 7% das gestações cursam com algum distúrbio hipertensivo, dos quais aproximadamente 3% são pré-eclâmpsia e cerca de 1% hipertensão crônica (pré-existente) — a hipertensão crônica responde por uma fração pequena, porém relevante, do total (ESC 2024, Seção 9.2.1). Cerca de 10% das gestantes com hipertensão crônica têm causa secundária identificável, estimada em 0,24% de todas as gestações; a causa secundária mais comum é a doença renal crônica. Hipertensão de início no primeiro trimestre, coincidindo com o pico de hCG, deve levantar suspeita de hiperaldosteronismo primário; feocromocitoma na gestação é raro (cerca de 0,002% das gestações), mas com morbidade alta quando não reconhecido (ESC 2024, Seção 9.2.4).",
     "presentation": [
@@ -8912,8 +9106,8 @@
       "https://pubmed.ncbi.nlm.nih.gov/40878294/",
       "https://pubmed.ncbi.nlm.nih.gov/40878295/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o lote de condições do adulto (PR #539). A revisão humana anterior (04/08/2026) cobria apenas os campos básicos já existentes; os campos novos listados abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "Doença valvar é uma das causas cardíacas mais relevantes de morbimortalidade materna, com peso particular em regiões onde a febre reumática ainda é prevalente — a estenose mitral reumática permanece a valvopatia mais associada à descompensação hemodinâmica na gestação. A ESC 2025 organiza o capítulo de valvopatia e gravidez (seção 12.5) distinguindo lesões estenóticas nativas, regurgitantes nativas e próteses (biológica e mecânica), cada uma com manejo específico antes da gestação, durante a gestação, no parto e no puerpério. Um estudo de coorte contemporâneo de prontuário eletrônico (Lau et al., Circulation 2025) mostrou que a prevalência de doença cardiovascular materna ajustada por idade subiu de 1% (2001) para 7% (2019), com aumento paralelo da incidência de complicação cardiovascular relacionada à gestação. No espectro específico de prótese mecânica, o registro ROPAC III (van der Zande et al., Eur Heart J 2025) documentou gestação sem complicações com nascido vivo em 54% das mulheres com prótese mecânica, contra 79% com prótese biológica — dado de aconselhamento pré-concepcional, não uma contraindicação; detalhamento na ficha 'Prótese valvar mecânica na gravidez'.",
     "presentation": [
@@ -9275,8 +9469,8 @@
       "https://pubmed.ncbi.nlm.nih.gov/34001675/",
       "https://pubmed.ncbi.nlm.nih.gov/27411842/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A síndrome coronariana aguda (SCA) é causa importante de morte materna em países desenvolvidos, respondendo por cerca de 20% das mortes cardiovasculares maternas; o risco de SCA é estimado em 3 a 4 vezes maior na gestante do que na mulher não gestante em idade reprodutiva, com mortalidade estimada em torno de 5% (ESC 2025, Seção 12.2.1.1). A SCA pode ocorrer em qualquer fase da gestação, mas é mais comum no terceiro trimestre ou no puerpério. Fatores de risco aterosclerótico clássicos também contam na gestante; fatores de risco adicionais específicos do período gravídico-puerperal incluem pré-eclâmpsia, trombofilia, transfusão, infecção pós-parto, multiparidade e hemorragia pós-parto — tratamento de fertilidade não mostrou aumentar o risco de SCA. Entre as causas de SCA na gestação/puerpério, a dissecção espontânea de artéria coronária (SCAD) é isoladamente a mais frequente, respondendo por 43% dos casos, seguida por lesão aterosclerótica (27%), embolia coronariana (17%) e vasoespasmo (2%) — este último associado ao uso de derivados do ergot para supressão da lactação ou tratamento de hemorragia pós-parto (ESC 2025, Seção 12.2.1.1). A SCAD associada à gestação afeta cerca de 1,81 por 100.000 gestações (Faden et al., Heart 2016, citado pela ESC 2025) e pode ocorrer a qualquer momento da gestação ou depois dela, mas mais de 70% dos casos ocorrem no início do puerpério, mais comumente na primeira semana pós-parto. O registro Mayo Clinic (Tweet et al., 2017) identificou 54 casos de P-SCAD entre 323 mulheres com SCAD (4 durante a gestação, 50 no pós-parto, dos quais 70% no primeiro mês pós-parto), com apresentação mais grave que o SCAD não gestacional — mais IAM com supra de ST (57% vs. 36%), mais acometimento de tronco de coronária esquerda ou multivaso (24% vs. 5% e 33% vs. 14%) e mais FEVE ≤35% na apresentação (26% vs. 10%) — mas sem diferença estatística na recorrência em 5 anos (10% vs. 23%; p=0,18). A coorte Kaiser Permanente (Chen et al., 2021; 22 P-SCAD vs. 285 não gestacional) confirmou o padrão de apresentação mais grave (mais dissecção proximal e multivaso, mais choque cardiogênico) e mostrou mais eventos cardiovasculares maiores no seguimento (50,0% vs. 26,0%), impulsionados por disfunção ventricular persistente — sem diferença em recorrência de SCAD ou morte cardiovascular entre os grupos.",
     "presentation": [
@@ -9394,16 +9588,12 @@
     ],
     "assistant_rules": [
       {
-        "id": "instabilidade-ou-supra-st",
+        "id": "instabilidade-ou-isquemia-persistente",
         "priority": 100,
         "when": {
-          "any": [
+          "all": [
             {
               "field": "hemodynamic_instability",
-              "op": "truthy"
-            },
-            {
-              "field": "st_elevation",
               "op": "truthy"
             }
           ]
@@ -9411,10 +9601,10 @@
         "add": {
           "risk": "emergencia",
           "red_flags": [
-            "Instabilidade hemodinâmica, choque, isquemia ativa/persistente ou supradesnivelamento de ST em gestante/puérpera com suspeita de SCA — indicação de avaliação e revascularização imediatas"
+            "Instabilidade hemodinâmica, choque ou isquemia ativa/persistente em gestante/puérpera com SCA ou SCAD."
           ],
           "emergency_flow": [
-            "Acionar avaliação cardiológica de emergência e Pregnancy Heart Team; seguir o protocolo de SCA/SCAD na gestação e puerpério já publicado no acervo, sem atrasar por reunião multidisciplinar"
+            "Acionar cardiologia de emergência e Pregnancy Heart Team; avaliar revascularização imediata conforme anatomia e estabilidade."
           ]
         }
       },
@@ -9500,6 +9690,28 @@
             "Investigar SCA com ECG, troponina de alta sensibilidade e ecocardiograma; não atribuir dor torácica na gestante/puérpera a ansiedade, refluxo ou causa musculoesquelética sem investigação completa"
           ]
         }
+      },
+      {
+        "id": "supra-st-sem-instabilidade",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "st_elevation",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Supradesnivelamento de ST exige diagnóstico e reperfusão emergentes na SCA aterotrombótica; se SCAD já estiver confirmada e a paciente estiver estável, não impõe PCI por si só — avaliar isquemia ativa, fluxo e anatomia."
+          ]
+        }
       }
     ],
     "related_document_slugs": [
@@ -9547,8 +9759,8 @@
       "https://academic.oup.com/eurheartj/article/41/4/543/5556136",
       "https://pubmed.ncbi.nlm.nih.gov/31504429/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Ficha aprofundada por Claude em 27/08/2026, empilhada sobre o PR #542 (lote 2 de condições especializadas). A revisão humana anterior cobria apenas os campos básicos já existentes; os campos novos abaixo exigem nova revisão clínica humana antes de qualquer republicação como revisado. Campos adicionados/expandidos: epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, ambulatory_flow, emergency_flow, treatment_summary, monitoring, special_populations, assistant_questions, assistant_rules, tags, source_refs, source_urls; related_document_slugs e patient_material_slug.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2,
     "epidemiology": "A gestação e o puerpério são reconhecidos pela ESC 2025 como período de risco tromboembólico aumentado em razão do estado de hipercoagulabilidade fisiológica da gravidez, e a diretriz recomenda que toda suspeita de tromboembolismo venoso (TEV) nessas fases receba avaliação diagnóstica formal imediata, sem que a gestação em si justifique postergar a investigação. A seção consultada da ESC 2025 não fornece, no trecho revisado nesta sessão, uma taxa de incidência populacional específica do TEV na gestação e no puerpério — esse dado quantificado não é reproduzido aqui para evitar número não verificado diretamente contra a fonte primária nesta sessão. O que a diretriz deixa explícito é o princípio organizador de toda a seção: dispneia, dor torácica, síncope, taquicardia ou hipoxemia na gestante ou puérpera não devem ser atribuídas à gestação sem antes excluir causas cardiovasculares graves, e o diagnóstico de TEP exige estratégia adaptada porque o D-dímero, marcador central da investigação na população geral, perde a interpretação padrão nesse período fisiológico.",
     "presentation": [
@@ -9634,13 +9846,15 @@
         "id": "pe_suspected",
         "label": "Há suspeita clínica de embolia pulmonar (dispneia súbita, dor torácica, taquicardia, hipoxemia)?",
         "type": "boolean",
-        "section": "Suspeita"
+        "section": "Suspeita",
+        "required": true
       },
       {
         "id": "dvt_signs",
         "label": "Há sinais de trombose venosa profunda (edema, dor ou empastamento unilateral de membro inferior)?",
         "type": "boolean",
-        "section": "Suspeita"
+        "section": "Suspeita",
+        "required": true
       },
       {
         "id": "hemodynamic_instability",
@@ -9716,12 +9930,12 @@
           ]
         },
         "add": {
-          "risk": "prioritario",
+          "risk": "urgente",
           "differentials": [
             "Considerar causa não trombótica de edema/dor assimétrica de membro (p.ex. compressão mecânica pelo útero gravídico), sem que isso atrase a ultrassonografia venosa"
           ],
           "messages": [
-            "Priorizar ultrassonografia venosa compressiva de membro inferior; achado positivo já estabelece indicação terapêutica e pode dispensar imagem torácica"
+            "Realizar ultrassonografia venosa compressiva com urgência no mesmo dia; achado positivo estabelece tratamento e pode dispensar imagem torácica."
           ]
         }
       },
@@ -10950,7 +11164,7 @@
     "subtype": "colapso_circulatorio",
     "prevalence_rank": 1,
     "completeness": "completo",
-    "summary": "Cessação abrupta da circulação efetiva, reconhecida clinicamente por ausência de resposta e respiração normal, com pulso ausente ou não definitivamente palpável em até 10 segundos pelo profissional. A sobrevida depende do reconhecimento, acionamento do sistema de emergência, RCP de alta qualidade e desfibrilação precoce, seguidos por cuidado pós-parada e investigação da causa.",
+    "summary": "Cessação abrupta da circulação efetiva, reconhecida clinicamente por ausência de resposta e ausência de respiração normal (respiração ausente ou anormal), com pulso ausente ou não definitivamente palpável em até 10 segundos pelo profissional. A sobrevida depende do reconhecimento, acionamento do sistema de emergência, RCP de alta qualidade e desfibrilação precoce, seguidos por cuidado pós-parada e investigação da causa.",
     "epidemiology": "A parada cardiorrespiratória extra-hospitalar permanece evento de alta letalidade. A AHA estima aproximadamente 356 mil adultos tratados anualmente pelo serviço de emergência nos Estados Unidos, com grande variação regional e baixa sobrevida global. O dado deve ser usado para dimensionar o problema, não para predizer o caso individual; resultados locais dependem da cadeia de sobrevivência.",
     "presentation": [
       "Colapso súbito com ausência de resposta",
@@ -11111,6 +11325,14 @@
         "when": {
           "all": [
             {
+              "field": "unresponsive",
+              "op": "truthy"
+            },
+            {
+              "field": "abnormal_breathing",
+              "op": "truthy"
+            },
+            {
               "field": "pulse_status",
               "op": "eq",
               "value": "absent_or_uncertain"
@@ -11129,6 +11351,14 @@
         "priority": 90,
         "when": {
           "all": [
+            {
+              "field": "unresponsive",
+              "op": "truthy"
+            },
+            {
+              "field": "abnormal_breathing",
+              "op": "truthy"
+            },
             {
               "field": "ems_and_aed",
               "op": "falsy"
@@ -11191,9 +11421,9 @@
       "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376",
       "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O conteúdo separa reconhecimento leigo, reconhecimento profissional e cuidado pós-retorno, preserva as recomendações AHA 2025 com classe/nível quando aplicáveis e remete doses e intervenções avançadas ao protocolo existente.",
-    "version": 1,
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2,
     "related_document_slugs": [
       "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
       "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
@@ -11310,6 +11540,10 @@
         "when": {
           "all": [
             {
+              "field": "pain_disproportionate",
+              "op": "truthy"
+            },
+            {
               "field": "cta_done",
               "op": "falsy"
             }
@@ -11341,10 +11575,10 @@
       "https://www.nejm.org/doi/full/10.1056/NEJMra1503884",
       "https://journals.sagepub.com/doi/full/10.1177/14574969211007590"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Conteúdo novo produzido por Claude, restrito a reconhecimento, diferenciação diagnóstica e primeira hora; exige revisão clínica humana antes da publicação. Não substitui o protocolo cirúrgico/intervencionista institucional.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
-    "version": 1,
+    "version": 2,
     "related_document_slugs": [
       "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
       "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora"
@@ -11815,10 +12049,10 @@
       "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023"
     ],
     "patient_material_slug": "doenca-coronariana-e-infarto",
-    "review_status": "pendente_revisao",
-    "review_note": "Rascunho produzido por agentes em 27/08/2026 a partir da diretriz primária oficial ACC/AHA 2025 e das três correções oficiais conhecidas. Exige revisão clínica humana antes da publicação. As regras foram revisadas para atuar somente em suspeita aguda explícita, não interpretam ECG, não calculam dose, não selecionam reperfusão e não autorizam alta. Documentos ESC preexistentes permanecem apenas como navegação clínica; qualquer transformação da diretriz ESC em software depende de licença formal.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "embolia-pulmonar-aguda",
@@ -12232,14 +12466,6 @@
         "when": {
           "all": [
             {
-              "field": "pe_diagnostic_status",
-              "op": "in",
-              "value": [
-                "confirmed",
-                "suspected_current"
-              ]
-            },
-            {
               "field": "pe_refractory_shock_or_cardiac_arrest",
               "op": "eq",
               "value": "sim"
@@ -12249,7 +12475,7 @@
         "add": {
           "risk": "emergencia",
           "red_flags": [
-            "Parada cardíaca ou choque cardiogênico refratário com TEP confirmado ou provável"
+            "Parada cardíaca ou choque cardiogênico refratário: emergência imediata; TEP é uma hipótese etiológica a confirmar sem atrasar ressuscitação."
           ],
           "emergency_flow": [
             "Iniciar ressuscitação segundo protocolo e acionar PERT ou equipe de reperfusão; esta regra não escolhe trombólise, cateter, cirurgia ou suporte mecânico"
@@ -12868,6 +13094,30 @@
             "Acionar via obstétrica e tromboembolismo sem atrasar imagem clinicamente necessária"
           ]
         }
+      },
+      {
+        "id": "ep-confirmado-assintomatico-incidental",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "pe_symptom_status",
+              "op": "eq",
+              "value": "asymptomatic"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "TEP confirmado incidental/assintomático ainda exige avaliação de anticoagulação, extensão, risco de recorrência e sangramento; ausência de sintomas não equivale a ausência de manejo."
+          ]
+        }
       }
     ],
     "tags": [
@@ -12901,10 +13151,10 @@
       "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade"
     ],
     "patient_material_slug": "embolia-pulmonar-o-que-aconteceu-com-meu-pulmao-e-o-que-esperar-da-recuperacao",
-    "review_status": "pendente_revisao",
-    "review_note": "Rascunho estruturado em 27/08/2026 com a diretriz AHA/ACC 2026, sua correção formal de 14/07/2026 e a diretriz brasileira SBPT 2025 sob CC BY 4.0. Requer revisão clínica humana e jurídica antes da publicação, especialmente das categorias A–E, critérios de alta, anticoagulação em populações especiais, contraindicações a reperfusão e comportamento combinado das regras. Conteúdo ESC e fluxogramas derivados foram excluídos deste verbete até licença formal. Nenhuma regra prescreve dose ou terapia avançada automaticamente.",
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "endocardite-infecciosa",
@@ -12921,7 +13171,7 @@
     "prevalence_rank": 6,
     "completeness": "completo",
     "summary": "Infecção da superfície endocárdica — valva nativa, prótese valvar ou dispositivo cardíaco eletrônico — com mortalidade hospitalar elevada, decisão cirúrgica complexa e forte dependência do timing entre antibiótico, controle de foco e cirurgia.",
-    "epidemiology": "A endocardite infecciosa (EI) tem incidência global estimada em 13,8 casos por 100.000 pessoas-ano (dados de carga global de doença de 2019, citados na diretriz ESC 2023 — Delgado V, Ajmone Marsan N, de Waha S, et al. Eur Heart J. 2023;44(39):3948-4042, DOI 10.1093/eurheartj/ehad193, PMID 37622656), com cerca de 66.300 mortes atribuídas à doença naquele ano. O registro europeu EURO-ENDO, com 3.116 pacientes adultos em 156 centros de 40 países e referenciado pela própria diretriz ESC, documentou mortalidade hospitalar de 17,1% (532/3.116 pacientes; Habib G et al., Eur Heart J. 2019;40(39):3222-3232, PMID 31504413); nesse registro a endocardite de válvula nativa correspondeu a 56,6% dos casos, a de válvula protética a 30,1% e a relacionada a dispositivo cardíaco eletrônico a 9,9%, e a mortalidade da endocardite protética é cerca do dobro da de válvula nativa, conforme a diretriz ESC 2023. Os principais fatores predisponentes documentados foram endocardite prévia (8,8% da coorte EURO-ENDO), válvula protética implantada cirurgicamente ou por via transcateter, dispositivo cardíaco eletrônico implantável, uso de droga injetável (6,9%, associado a acometimento predominante de válvulas direitas) e cardiopatia congênita, cuja incidência de EI é 27 a 44 vezes maior que na população geral segundo a mesma diretriz. Estudos hospitalares contemporâneos fora da Europa relatam mortalidade hospitalar na faixa de 15% a 30%, compatível com os números do registro europeu. Especificamente após implante valvar aórtico transcateter (TAVI), um registro internacional de 47 centros (Regueiro A et al., JAMA 2016;316(10):1083-1092) documentou incidência de 1,1% por pessoa-ano (250 casos em 20.006 pacientes), idade mediana 80 anos, tempo mediano entre o TAVI e a endocardite de 5,3 meses, mortalidade intra-hospitalar de 36% e em 2 anos de 66,7%, com cirurgia realizada em apenas 14,8% dos casos — dado sinalizado no acervo como carecendo de atualização frente à evolução das próteses transcateter desde 2015.",
+    "epidemiology": "A endocardite infecciosa (EI) tem incidência global estimada em 13,8 casos por 100.000 pessoas-ano (dados de carga global de doença de 2019, citados na diretriz ESC 2023 — Delgado V, Ajmone Marsan N, de Waha S, et al. Eur Heart J. 2023;44(39):3948-4042, DOI 10.1093/eurheartj/ehad193, PMID 37622656), com cerca de 66.300 mortes atribuídas à doença naquele ano. O registro europeu EURO-ENDO, com 3.116 pacientes adultos em 156 centros de 40 países e referenciado pela própria diretriz ESC, documentou mortalidade hospitalar de 17,1% (532/3.116 pacientes; Habib G et al., Eur Heart J. 2019;40(39):3222-3232, PMID 31504413); nesse registro a endocardite de válvula nativa correspondeu a 56,6% dos casos, a de válvula protética a 30,1% e a relacionada a dispositivo cardíaco eletrônico a 9,9%, e a mortalidade da endocardite protética é cerca do dobro da de válvula nativa, conforme a diretriz ESC 2023. Os principais fatores predisponentes documentados foram endocardite prévia (8,8% da coorte EURO-ENDO), válvula protética implantada cirurgicamente ou por via transcateter, dispositivo cardíaco eletrônico implantável, uso de droga injetável (6,9%, associado a acometimento predominante de válvulas direitas) e cardiopatia congênita, cuja incidência de EI é 27 a 44 vezes maior que na população geral segundo a mesma diretriz. Estudos hospitalares contemporâneos fora da Europa relatam mortalidade hospitalar na faixa de 15% a 30%, compatível com os números do registro europeu. Especificamente após implante valvar aórtico transcateter (TAVI), um registro internacional de 47 centros (Regueiro A et al., JAMA 2016;316(10):1083-1092, PMID 27623462 documentou incidência de 1,1% por pessoa-ano (250 casos em 20.006 pacientes), idade mediana 80 anos, tempo mediano entre o TAVI e a endocardite de 5,3 meses, mortalidade intra-hospitalar de 36% e em 2 anos de 66,7%, com cirurgia realizada em apenas 14,8% dos casos — dado sinalizado no acervo como carecendo de atualização frente à evolução das próteses transcateter desde 2015.",
     "presentation": [
       "Febre persistente ou recorrente, presente na grande maioria dos casos, muitas vezes com calafrios e sudorese — sintoma mais comum, por vezes se apresentando como febre de origem obscura quando hemoculturas iniciais são negativas ou o exame físico é pouco elucidativo",
       "Sopro cardíaco novo ou modificação de sopro preexistente, refletindo disfunção valvar por destruição do folheto ou regurgitação nova",
@@ -12932,7 +13182,7 @@
       "Sinais de insuficiência cardíaca de início recente por destruição valvar (regurgitação grave nova), achado de gravidade que muda a urgência de investigação e conduta",
       "Manifestações extracardíacas de embolização a distância ou de foco associado, incluindo dor lombar/sinais de espondilodiscite (critério menor vascular reconhecido na versão ESC 2023, ausente na versão ISCVID 2023 paralela)"
     ],
-    "diagnostic_approach": "O diagnóstico segue a estrutura de contagem dos critérios Duke-ISCVID 2023 (Fowler VG Jr, Durack DT, Selton-Suty C, et al. Clin Infect Dis. 2023;77(4):518-526, DOI 10.1093/cid/ciad271, PMID 37138445), que preserva a classificação clássica em Definida, Possível ou Rejeitada, mas amplia o que conta em cada critério frente ao Duke modificado de 2000. Os critérios maiores agora incluem, além dos microbiológicos clássicos (hemoculturas positivas para organismo típico em 2 ou mais amostras, ou organismo não típico em 3 ou mais), a detecção de ácido nucleico ou sorologia de fase I para Coxiella burnetii, Bartonella spp. e Tropheryma whipplei; achados de imagem — vegetação, abscesso, pseudoaneurisma, fístula ou deiscência protética nova ao ecocardiograma OU à tomografia computadorizada cardíaca (nova como critério maior em 2023); atividade metabólica anormal ao PET-CT com 18F-FDG em válvula nativa ou protética ou em dispositivo; e, também novo em 2023, a inspeção cirúrgica direta compatível com EI, usada quando imagem e confirmação histológica/microbiológica não estão disponíveis. Classifica-se como Definida com 2 critérios maiores, ou 1 maior mais 3 menores, ou 5 menores; Possível com 1 maior mais 1-2 menores, ou 3-4 menores isolados; Rejeitada quando há diagnóstico alternativo firme ou resolução completa do quadro com 4 dias ou menos de antibiótico. O ecocardiograma transtorácico (ETT) é o exame inicial em toda suspeita, mas o transesofágico (ETE) passou a Classe I na ESC 2023 (antes IIa) para praticamente todo caso suspeito, inclusive com ETT positivo — a exceção é EI isolada de válvula nativa direita com ETT de boa qualidade e achado inequívoco. Quando o ETE é inconclusivo ou inviável, a TC cardíaca é indicada, sobretudo para complicações perivalvares e periprotéticas; ela não é automática para todo caso, por exemplo não é indicada apenas por isolamento de S. aureus ou por acometimento tricúspide isolado. O PET-CT com 18F-FDG tem papel ampliado principalmente em prótese valvar e dispositivo implantado, e no estudo TEPvENDO mudou a conduta em aproximadamente 40% dos pacientes com suspeita de EI (IC95% 32-48%), sendo mais útil quando o ecocardiograma é inconclusivo ou o caso permanece classificado como possível pelos critérios de Duke (Duval X et al., PMID 32488236).",
+    "diagnostic_approach": "O diagnóstico segue a estrutura de contagem dos critérios Duke-ISCVID 2023 (Fowler VG Jr, Durack DT, Selton-Suty C, et al. Clin Infect Dis. 2023;77(4):518-526, DOI 10.1093/cid/ciad271, PMID 37138445), que preserva a classificação clássica em Definida, Possível ou Rejeitada, mas amplia o que conta em cada critério frente ao Duke modificado de 2000. Os critérios maiores agora incluem, além dos microbiológicos clássicos (hemoculturas positivas para organismo típico em 2 ou mais amostras, ou organismo não típico em 3 ou mais), a detecção de ácido nucleico ou sorologia de fase I para Coxiella burnetii, Bartonella spp. e Tropheryma whipplei; achados de imagem — vegetação, abscesso, pseudoaneurisma, fístula ou deiscência protética nova ao ecocardiograma OU à tomografia computadorizada cardíaca (nova como critério maior em 2023); atividade metabólica anormal ao PET-CT com 18F-FDG em válvula nativa, prótese implantada há pelo menos 3 meses ou dispositivo; e, também novo em 2023, a inspeção cirúrgica direta compatível com EI, usada quando imagem e confirmação histológica/microbiológica não estão disponíveis. Classifica-se como Definida com 2 critérios maiores, ou 1 maior mais 3 menores, ou 5 menores; Possível com 1 maior mais 1-2 menores, ou 3-4 menores isolados; Rejeitada quando há diagnóstico alternativo firme ou resolução completa do quadro com 4 dias ou menos de antibiótico. O ecocardiograma transtorácico (ETT) é o exame inicial em toda suspeita, mas o transesofágico (ETE) passou a Classe I na ESC 2023 (antes IIa) para praticamente todo caso suspeito, inclusive com ETT positivo — a exceção é EI isolada de válvula nativa direita com ETT de boa qualidade e achado inequívoco. Quando o ETE é inconclusivo ou inviável, a TC cardíaca é indicada, sobretudo para complicações perivalvares e periprotéticas; ela não é automática para todo caso, por exemplo não é indicada apenas por isolamento de S. aureus ou por acometimento tricúspide isolado. O PET-CT com 18F-FDG tem papel ampliado principalmente em prótese valvar e dispositivo implantado, e no estudo TEPvENDO mudou classificação diagnóstica e/ou conduta em 40% dos pacientes com suspeita de EI (PMID 32488236), sendo mais útil quando o ecocardiograma é inconclusivo ou o caso permanece classificado como possível pelos critérios de Duke (Duval X et al., PMID 32488236).",
     "differentials": [
       "Endocardite trombótica não bacteriana (NBTE, incluindo endocardite de Libman-Sacks e endocardite marântica) — vegetação valvar estéril associada a lúpus eritematoso sistêmico, síndrome antifosfolípide ou câncer, sem infecção; o ecocardiograma transesofágico é superior ao transtorácico para diferenciar (sensibilidade do ETT de apenas 63% nesse contexto, conforme ESC 2023, seção 12.12)",
       "Febre de origem obscura de outra etiologia (infecciosa, neoplásica ou autoimune), sem acometimento valvar, quando hemoculturas seriadas e imagem cardíaca são repetidamente negativas",
@@ -12994,8 +13244,15 @@
     ],
     "assistant_questions": [
       {
-        "id": "fever_new_or_worsening_murmur",
-        "label": "Há febre associada a sopro cardíaco novo ou piora de sopro preexistente?",
+        "id": "fever_or_bacteremia",
+        "label": "Há febre persistente ou bacteremia sem foco alternativo definido?",
+        "type": "boolean",
+        "required": true,
+        "section": "Apresentação"
+      },
+      {
+        "id": "new_or_worsening_murmur",
+        "label": "Há sopro cardíaco novo ou piora de sopro preexistente?",
         "type": "boolean",
         "required": true,
         "section": "Apresentação"
@@ -13146,22 +13403,14 @@
         "id": "suspeita-basal-sem-complicacao",
         "priority": 55,
         "when": {
-          "all": [
+          "any": [
             {
-              "field": "fever_new_or_worsening_murmur",
+              "field": "fever_or_bacteremia",
               "op": "truthy"
             },
             {
-              "field": "acute_heart_failure_signs",
-              "op": "falsy"
-            },
-            {
-              "field": "new_av_block_or_perianular_signs",
-              "op": "falsy"
-            },
-            {
-              "field": "embolic_event",
-              "op": "falsy"
+              "field": "new_or_worsening_murmur",
+              "op": "truthy"
             }
           ]
         },
@@ -13223,7 +13472,8 @@
       "Papadimitriou-Olivgeris M, et al. Early versus late prosthetic valve endocarditis: outcomes in a Swiss cohort (Lausanne/Zurich, 302 episodes). 2024.",
       "de Waha S, et al. Right-sided infective endocarditis and injection drug use — características e desfechos. 2026.",
       "Paras ML, et al. Multidisciplinary approach to substance use disorder treatment in infective endocarditis. Massachusetts General Hospital. 2023.",
-      "American Heart Association. Cardiac implantable electronic device infection: scientific statement (endocardite de dispositivo, remoção como pedra angular do tratamento). 2026."
+      "American Heart Association. Cardiac implantable electronic device infection: scientific statement (endocardite de dispositivo, remoção como pedra angular do tratamento). 2026.",
+      "Baddour LM, et al. Update on cardiovascular implantable electronic device infections and their prevention, diagnosis, and management. Circulation. 2024;149:e201-e216. DOI: 10.1161/CIR.0000000000001187. PMID: 38047353."
     ],
     "source_urls": [
       "https://doi.org/10.1093/eurheartj/ehad193",
@@ -13233,7 +13483,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/32488236/",
       "https://pubmed.ncbi.nlm.nih.gov/40094211/",
       "https://pubmed.ncbi.nlm.nih.gov/40046887/",
-      "https://pubmed.ncbi.nlm.nih.gov/27529557/"
+      "https://pubmed.ncbi.nlm.nih.gov/27529557/",
+      "https://pubmed.ncbi.nlm.nih.gov/27623462/",
+      "https://pubmed.ncbi.nlm.nih.gov/38047353/"
     ],
     "related_document_slugs": [
       "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
@@ -13266,9 +13518,9 @@
       "fluxograma-endocardite-infecciosa-na-gestacao-e-puerperio"
     ],
     "patient_material_slug": "endocardite-infecciosa-o-que-esperar-do-diagnostico-e-do-tratamento",
-    "review_status": "pendente_revisao",
-    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de Endocardite Infecciosa adulta (área geral) — coleção doencas/metadados.json tinha até então só endocardite-pediatrica. O conteúdo foi sintetizado a partir de ~31 documentos já publicados e revisados em content/Endocardite/ (diretriz ESC 2023, critérios Duke-ISCVID 2023, subpopulações), com verificação direta dos fatos-chave contra as fontes primárias (PMID/DOI) nesta sessão — não apenas paráfrase do acervo secundário. Nenhum documento, checklist, trilha ou material ao paciente novo foi criado: o lote apenas conecta este novo hub a conteúdo já existente e já revisado via related_document_slugs (documentos narrativos) e patient_material_slug (1 material já publicado sobre endocardite adulta). Doses de antibiótico específicas por agente foram deliberadamente omitidas do treatment_summary e delegadas ao documento já existente 'Esquemas antibióticos na endocardite infecciosa por agente (ESC 2023)', citado por nome. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
-    "version": 1,
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2,
     "fonte_producao": "claude"
   },
   {
@@ -13277,7 +13529,8 @@
     "aliases": [
       "doença pericárdica",
       "pericardite aguda",
-      "inflamação do pericárdio"
+      "inflamação do pericárdio",
+      "pericardite"
     ],
     "area": "geral",
     "category": "pericardio",
@@ -13403,6 +13656,10 @@
             "label": "Pós-infarto (precoce ou Dressler)"
           },
           {
+            "value": "neoplastica",
+            "label": "Neoplásica"
+          },
+          {
             "value": "outra_ou_nao_definida",
             "label": "Outra ou ainda não definida"
           }
@@ -13420,6 +13677,26 @@
         "label": "Há suspeita clínica ou de imagem de pericardite constritiva (edema periférico, ascite, sinais de congestão sem disfunção sistólica evidente)?",
         "type": "boolean",
         "section": "Complicações"
+      },
+      {
+        "id": "drainable_effusion",
+        "label": "Há derrame pericárdico drenável documentado por imagem?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem"
+      },
+      {
+        "id": "surgical_tamponade_cause",
+        "label": "Há suspeita de dissecção de aorta, ruptura de parede livre pós-infarto ou trauma penetrante como causa do tamponamento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "active_inflammation_or_steroid_dependence",
+        "label": "Na recorrência, há inflamação objetiva ativa e dependência/resistência a colchicina ou corticoide?",
+        "type": "boolean",
+        "section": "Recorrência"
       }
     ],
     "assistant_rules": [
@@ -13431,6 +13708,10 @@
             {
               "field": "tamponade_signs",
               "op": "truthy"
+            },
+            {
+              "field": "surgical_tamponade_cause",
+              "op": "falsy"
             }
           ]
         },
@@ -13451,11 +13732,8 @@
           "all": [
             {
               "field": "suspected_etiology",
-              "op": "in",
-              "value": [
-                "purulenta",
-                "tuberculosa"
-              ]
+              "op": "eq",
+              "value": "purulenta"
             }
           ]
         },
@@ -13485,9 +13763,12 @@
           ]
         },
         "add": {
-          "risk": "prioritario",
+          "risk": "urgente",
           "messages": [
             "Critério de alto risco presente (febre alta, início subagudo, derrame grande, falha de AINE ou suspeita de envolvimento miocárdico) — considerar internação para investigação e vigilância, mesmo sem sinais de tamponamento no momento"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação hospitalar/internação e investigação etiológica conforme o fator de alto risco."
           ]
         }
       },
@@ -13500,13 +13781,17 @@
               "field": "recurrence_count",
               "op": "gte",
               "value": 3
+            },
+            {
+              "field": "active_inflammation_or_steroid_dependence",
+              "op": "truthy"
             }
           ]
         },
         "add": {
           "risk": "prioritario",
           "messages": [
-            "Três ou mais episódios sugerem doença recorrente/refratária — considerar avaliação para inibidor de IL-1 (anakinra/rilonacepte) antes de manter corticoide crônico, e reavaliar adesão à colchicina em episódios anteriores"
+            "Recorrência múltipla com inflamação objetiva e dependência/resistência terapêutica: considerar inibidor de IL-1 em avaliação especializada; número de episódios isolado não basta."
           ]
         }
       },
@@ -13531,6 +13816,134 @@
           ],
           "messages": [
             "Diferenciar constrição transitória (com inflamação ativa, potencialmente reversível com terapia anti-inflamatória) de constrição permanente antes de considerar pericardiectomia"
+          ]
+        }
+      },
+      {
+        "id": "tamponamento-causa-cirurgica",
+        "priority": 110,
+        "when": {
+          "all": [
+            {
+              "field": "tamponade_signs",
+              "op": "truthy"
+            },
+            {
+              "field": "surgical_tamponade_cause",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Tamponamento com possível dissecção aórtica, ruptura de parede livre ou trauma penetrante."
+          ],
+          "emergency_flow": [
+            "Acionar cirurgia cardiovascular imediatamente; não encaminhar a drenagem percutânea rotineira sem estratégia cirúrgica."
+          ]
+        }
+      },
+      {
+        "id": "tuberculosa-com-derrame-drenavel",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "eq",
+              "value": "tuberculosa"
+            },
+            {
+              "field": "drainable_effusion",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "emergency_flow": [
+            "Realizar drenagem diagnóstica quando houver derrame drenável e enviar material para investigação microbiológica/histológica; iniciar tratamento específico conforme avaliação."
+          ]
+        }
+      },
+      {
+        "id": "tuberculosa-sem-derrame-drenavel",
+        "priority": 81,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "eq",
+              "value": "tuberculosa"
+            },
+            {
+              "field": "drainable_effusion",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Sem derrame drenável, não indicar pericardiocentese apenas pela hipótese de tuberculose; prosseguir investigação etiológica e tratamento específico."
+          ]
+        }
+      },
+      {
+        "id": "etiologia-uremica",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "eq",
+              "value": "uremica_dialise"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Pericardite urêmica/associada à diálise exige otimização dialítica e avaliação nefrocardiológica; anti-inflamatório isolado não substitui o tratamento da causa."
+          ]
+        }
+      },
+      {
+        "id": "etiologia-pos-infarto",
+        "priority": 79,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "eq",
+              "value": "pos_infarto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Pericardite pós-infarto exige excluir reinfarto, complicação mecânica e derrame/tamponamento antes de tratar como síndrome inflamatória."
+          ]
+        }
+      },
+      {
+        "id": "etiologia-neoplastica",
+        "priority": 77,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_etiology",
+              "op": "eq",
+              "value": "neoplastica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Suspeita neoplásica exige investigação citológica/histológica quando houver derrame acessível e plano conjunto com oncologia."
           ]
         }
       }
@@ -13601,9 +14014,9 @@
       "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo"
     ],
     "patient_material_slug": "pericardite-aguda",
-    "review_status": "pendente_revisao",
-    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central da doença pericárdica adulta (área geral) — coleção doencas/metadados.json não tinha nenhum verbete para pericardite/doença pericárdica geral (só doenca-pericardica-oncologia, escopo oncológico específico, não duplicado aqui). Conteúdo sintetizado a partir de 22 documentos já publicados e revisados em content/Pericárdio/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 3 agentes de pesquisa independentes nesta sessão — não apenas paráfrase do secundário. Escopo explicitamente exclui detalhamento de causa oncológica/actínica sistêmica (coberto no verbete próprio) e de miocardite isolada/sarcoidose cardíaca (tema irmão, não pericárdico). Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente e já revisado. Doses de AINE/colchicina/corticoide foram deliberadamente omitidas do treatment_summary e delegadas aos documentos já existentes no acervo. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
   },
   {
     "slug": "hipertensao-pulmonar",
@@ -13631,7 +14044,7 @@
       "Edema de membros inferiores",
       "Distensão abdominal/ascite e turgência jugular — sinais de falência de ventrículo direito já estabelecida, geralmente doença avançada"
     ],
-    "diagnostic_approach": "A diretriz ESC/ERS 2022 (Humbert M et al., Eur Heart J. 2022;43(38):3618-3731, DOI 10.1093/eurheartj/ehac237, PMID 36017548) redefiniu o limiar hemodinâmico: hipertensão pulmonar passa a ser definida por pressão arterial pulmonar média (PAPm) acima de 20 mmHg em repouso ao cateterismo direito, reduzida do corte histórico de 25 mmHg. A classificação clínica mantém cinco grupos: grupo 1, hipertensão arterial pulmonar (HAP) — doença vascular pulmonar predominante, idiopática, hereditária ou associada a droga/toxina, doença do tecido conjuntivo, HIV, hipertensão portal, cardiopatia congênita ou esquistossomose; grupo 2, por doença cardíaca esquerda — a causa mais prevalente de HP na prática geral; grupo 3, por doença pulmonar ou hipóxia; grupo 4, por obstrução arterial pulmonar, principalmente hipertensão pulmonar tromboembólica crônica (CTEPH), único grupo com tratamento potencialmente curativo; e grupo 5, multifatorial ou de mecanismo incerto. A via diagnóstica é sequencial: suspeita clínica pelo médico de primeiro contato, ecocardiograma transtorácico de triagem que atribui probabilidade de HP (baixa, intermediária ou alta), investigação e exclusão preferencial das causas mais prováveis — doença cardíaca esquerda (grupo 2) e doença pulmonar (grupo 3) —, e só então cateterismo cardíaco direito confirmatório em centro especializado, que mede PAPm, pressão de oclusão capilar pulmonar (POCP) e resistência vascular pulmonar (RVP) para classificar o subtipo hemodinâmico (pré-capilar, pós-capilar isolada ou combinada). Nessa etapa, alguns critérios ajudam a atribuir o grupo etiológico correto antes de tratar como HAP idiopática: POCP elevada (>15 mmHg) num paciente com disfunção de VE ou valvopatia aponta grupo 2; DPOC/doença pulmonar intersticial conhecida com padrão pré-capilar ao cateterismo (indistinguível numericamente do grupo 1) aponta grupo 3, sendo o contexto clínico-funcional, não o cateterismo isolado, que separa os dois; cintilografia de ventilação-perfusão com defeitos de perfusão em mosaico persistentes após anticoagulação aponta grupo 4/CTEPH (cintilografia normal tem alto valor para afastar CTEPH, mas suspeita clínica mantida não deve ser descartada só por um exame de menor sensibilidade); e doença hematológica/sistêmica sem as causas acima aponta grupo 5, sempre com confirmação hemodinâmica antes de atribuir achado ecocardiográfico a essa causa. O teste de vasorreatividade aguda é restrito a HAP idiopática, hereditária ou induzida por droga/toxina, virgem de tratamento, pelo critério de Sitbon — queda de PAPm de pelo menos 10 mmHg até valor absoluto igual ou inferior a 40 mmHg, com débito cardíaco mantido ou aumentado (Sitbon O et al., Circulation. 2005;111(23):3105-3111, PMID 15939821) —, com resposta positiva em apenas 12,6% dos testados. O NT-proBNP funciona como biomarcador de estratificação de risco e de resposta ao tratamento, mas não substitui a avaliação multiparamétrica de risco nem a confirmação hemodinâmica pelo cateterismo.",
+    "diagnostic_approach": "A diretriz ESC/ERS 2022 (Humbert M et al., Eur Heart J. 2022;43(38):3618-3731, DOI 10.1093/eurheartj/ehac237, PMID 36017548) redefiniu o limiar hemodinâmico: hipertensão pulmonar passa a ser definida por pressão arterial pulmonar média (PAPm) acima de 20 mmHg em repouso ao cateterismo direito, reduzida do corte histórico de 25 mmHg. A classificação clínica mantém cinco grupos: grupo 1, hipertensão arterial pulmonar (HAP) — doença vascular pulmonar predominante, idiopática, hereditária ou associada a droga/toxina, doença do tecido conjuntivo, HIV, hipertensão portal, cardiopatia congênita ou esquistossomose; grupo 2, por doença cardíaca esquerda — a causa mais prevalente de HP na prática geral; grupo 3, por doença pulmonar ou hipóxia; grupo 4, por obstrução arterial pulmonar, principalmente hipertensão pulmonar tromboembólica crônica (CTEPH), único grupo com tratamento potencialmente curativo; e grupo 5, multifatorial ou de mecanismo incerto. A via diagnóstica é sequencial: suspeita clínica pelo médico de primeiro contato, ecocardiograma transtorácico de triagem que atribui probabilidade de HP (baixa, intermediária ou alta), investigação e exclusão preferencial das causas mais prováveis — doença cardíaca esquerda (grupo 2) e doença pulmonar (grupo 3) —, e só então cateterismo cardíaco direito confirmatório em centro especializado, que mede PAPm, pressão de oclusão capilar pulmonar (POCP) e resistência vascular pulmonar (RVP); HP pré-capilar requer PAPm >20 mmHg, POCP ≤15 mmHg e RVP >2 unidades Wood (pré-capilar, pós-capilar isolada ou combinada). Nessa etapa, alguns critérios ajudam a atribuir o grupo etiológico correto antes de tratar como HAP idiopática: POCP elevada (>15 mmHg) num paciente com disfunção de VE ou valvopatia aponta grupo 2; DPOC/doença pulmonar intersticial conhecida com padrão pré-capilar ao cateterismo (indistinguível numericamente do grupo 1) aponta grupo 3, sendo o contexto clínico-funcional, não o cateterismo isolado, que separa os dois; cintilografia de ventilação-perfusão com defeitos de perfusão em mosaico persistentes após anticoagulação aponta grupo 4/CTEPH (cintilografia normal tem alto valor para afastar CTEPH, mas suspeita clínica mantida não deve ser descartada só por um exame de menor sensibilidade); e doença hematológica/sistêmica sem as causas acima aponta grupo 5, sempre com confirmação hemodinâmica antes de atribuir achado ecocardiográfico a essa causa. O teste de vasorreatividade aguda é restrito a HAP idiopática, hereditária ou induzida por droga/toxina, virgem de tratamento, pelo critério de Sitbon — queda de PAPm de pelo menos 10 mmHg até valor absoluto igual ou inferior a 40 mmHg, com débito cardíaco mantido ou aumentado (Sitbon O et al., Circulation. 2005;111(23):3105-3111, PMID 15939821) —, com resposta positiva em apenas 12,6% dos testados. O NT-proBNP funciona como biomarcador de estratificação de risco e de resposta ao tratamento, mas não substitui a avaliação multiparamétrica de risco nem a confirmação hemodinâmica pelo cateterismo.",
     "differentials": [
       "Tromboembolismo pulmonar crônico não diagnosticado (CTEPD/CTEPH) — pode mimetizar HAP idiopática se a cintilografia V/Q e a angiotomografia não forem realizadas para excluí-lo",
       "DPOC ou doença pulmonar intersticial isolada sem hipertensão pulmonar verdadeira associada — dispneia atribuída inteiramente à doença de base sem checar a hemodinâmica pulmonar",
@@ -13656,7 +14069,7 @@
       "Teste de caminhada de 6 minutos muito reduzido, refletindo baixa reserva funcional",
       "NT-proBNP elevado e sem queda relevante sob tratamento"
     ],
-    "treatment_summary": "O tratamento farmacológico específico da hipertensão arterial pulmonar (HAP, grupo 1) segue o princípio de terapia combinada guiada pela estratificação de risco, e não uma decisão única tomada no momento do diagnóstico (Humbert M et al., 2022 ESC/ERS Guidelines, PMID 36017548). Ao diagnóstico, o paciente é classificado em um modelo de três estratos de risco (baixo, intermediário ou alto, conforme a mortalidade estimada em 1 ano) que determina a intensidade inicial do tratamento: paciente de risco baixo ou intermediário sem comprometimento hemodinâmico grave inicia terapia combinada oral dupla, associando um antagonista do receptor de endotelina (ERA) a um inibidor da fosfodiesterase-5 ou, alternativamente, a um estimulador da guanilato-ciclase solúvel (sGC) — via que não deve ser combinada ao inibidor de PDE5 na mesma via do óxido nítrico. O paciente de risco alto ao diagnóstico, ou de risco intermediário com comprometimento hemodinâmico grave, inicia terapia combinada tripla, somando a essas duas classes um fármaco da via da prostaciclina — prostanoide parenteral (intravenoso ou subcutâneo) ou, em casos selecionados, agonista oral do receptor de prostaciclina —, com encaminhamento a centro de referência em HAP. Essas quatro famílias farmacológicas — ERA, inibidor de PDE5/estimulador de sGC, via da prostaciclina e, mais recentemente, o modulador da via de ativina/fatores de diferenciação de crescimento (sotatercepte, aprovado em 2024, add-on sobre terapia de base já otimizada, confirmado pelos ensaios STELLAR/ZENITH/HYPERION) — compõem o arsenal atual da HAP. A reavaliação de risco é periódica, a cada 3-6 meses, usando um modelo de quatro estratos apoiado em classe funcional, teste de caminhada de 6 minutos e NT-proBNP — se o paciente permanece fora do risco baixo, a conduta é escalonar, não apenas manter o esquema. A anticoagulação oral não é rotina universal na HAP do grupo 1: evidência conflitante entre registros contemporâneos (COMPERA sugere benefício restrito à HAP idiopática; REVEAL não confirma benefício e sugere sinal de dano na HAP associada à esclerose sistêmica) — decisão individualizada, não estendida por analogia a outras etiologias. Na doença refratária, a septostomia atrial por balão alivia agudamente a sobrecarga do VD às custas de dessaturação sistêmica (papel paliativo, não curativo); o transplante pulmonar/cardiopulmonar é a medida de resgate definitiva. Fora do grupo 1, o manejo é fundamentalmente diferente: no grupo 2 (doença cardíaca esquerda), a estratégia primária é otimizar a cardiopatia/valvopatia de base — o ensaio SIOVAC mostrou que sildenafila em HP persistente após correção valvar piorou o desfecho clínico e aumentou internação por IC, dano direto que torna a terapia específica de HAP contraindicação relativa de rotina nesse grupo. No grupo 3 (doença pulmonar/hipóxia), a prioridade é tratar a pneumopatia de base; vasodilatadores não seletivos podem piorar a relação ventilação-perfusão e a hipoxemia (ensaio RISE-IIP interrompido por excesso de mortalidade com riociguate em HP-DPI) — a exceção estreita é o treprostinil inalado (ensaio INCREASE, ganho funcional em HP associada a doença pulmonar intersticial), recomendação Classe IIb restrita a caso grave e individualizado, nunca conduta padrão. No grupo 4 (CTEPH), a endarterectomia pulmonar é o único tratamento potencialmente curativo, com mortalidade operatória em torno de 2% em centros de expertise; cerca de 60% dos pacientes são classificados como operáveis na Europa e no Canadá, restando cerca de 40% inoperáveis, para os quais riociguate e/ou angioplastia pulmonar por balão são as opções estabelecidas, também usadas na doença residual/recorrente pós-cirurgia. O grupo 5 reúne causas de mecanismo não esclarecido/multifatorial, sem terapia vasodilatadora específica com benefício estabelecido — o tratamento é dirigido à causa de base, sempre com confirmação hemodinâmica por cateterismo antes de qualquer decisão terapêutica.",
+    "treatment_summary": "O tratamento farmacológico específico da hipertensão arterial pulmonar (HAP, grupo 1) segue o princípio de terapia combinada guiada pela estratificação de risco, e não uma decisão única tomada no momento do diagnóstico (Humbert M et al., 2022 ESC/ERS Guidelines, PMID 36017548). Ao diagnóstico, o paciente é classificado em um modelo de três estratos de risco (baixo, intermediário ou alto, conforme a mortalidade estimada em 1 ano) que determina a intensidade inicial do tratamento: paciente de risco baixo ou intermediário sem comprometimento hemodinâmico grave inicia terapia combinada oral dupla, associando um antagonista do receptor de endotelina (ERA) a um inibidor da fosfodiesterase-5; ERA + riociguate não é combinação inicial dupla de rotina e fica restrita a decisão especializada — via que não deve ser combinada ao inibidor de PDE5 na mesma via do óxido nítrico. O paciente de risco alto ao diagnóstico, ou de risco intermediário com comprometimento hemodinâmico grave, inicia terapia combinada tripla, somando a essas duas classes um fármaco da via da prostaciclina — prostanoide parenteral (intravenoso ou subcutâneo); selexipague oral não substitui prostaciclina parenteral no paciente de alto risco —, com encaminhamento a centro de referência em HAP. Essas quatro famílias farmacológicas — ERA, inibidor de PDE5/estimulador de sGC, via da prostaciclina e, mais recentemente, o modulador da via de ativina/fatores de diferenciação de crescimento (sotatercepte, aprovado em 2024, add-on sobre terapia de base já otimizada, confirmado pelos ensaios STELLAR/ZENITH/HYPERION) — compõem o arsenal atual da HAP. A reavaliação de risco é periódica, a cada 3-6 meses, usando um modelo de quatro estratos apoiado em classe funcional, teste de caminhada de 6 minutos e NT-proBNP — se o paciente permanece fora do risco baixo, a conduta é escalonar, não apenas manter o esquema. A anticoagulação oral não é rotina universal na HAP do grupo 1: evidência conflitante entre registros contemporâneos (COMPERA sugere benefício restrito à HAP idiopática; REVEAL não confirma benefício e sugere sinal de dano na HAP associada à esclerose sistêmica) — decisão individualizada, não estendida por analogia a outras etiologias. Na doença refratária, a septostomia atrial por balão alivia agudamente a sobrecarga do VD às custas de dessaturação sistêmica (papel paliativo, não curativo); o transplante pulmonar/cardiopulmonar é a medida de resgate definitiva. Fora do grupo 1, o manejo é fundamentalmente diferente: no grupo 2 (doença cardíaca esquerda), a estratégia primária é otimizar a cardiopatia/valvopatia de base — o ensaio SIOVAC mostrou que sildenafila em HP persistente após correção valvar piorou o desfecho clínico e aumentou internação por IC, dano direto que torna a terapia específica de HAP contraindicação relativa de rotina nesse grupo. No grupo 3 (doença pulmonar/hipóxia), a prioridade é tratar a pneumopatia de base; vasodilatadores não seletivos podem piorar a relação ventilação-perfusão e a hipoxemia (ensaio RISE-IIP interrompido por excesso de mortalidade com riociguate em HP-DPI) — a exceção estreita é o treprostinil inalado (ensaio INCREASE, ganho funcional em HP associada a doença pulmonar intersticial), recomendação Classe IIb restrita a caso grave e individualizado, nunca conduta padrão. No grupo 4 (CTEPH), anticoagulação terapêutica é recomendada por toda a vida, salvo contraindicação individual; a endarterectomia pulmonar é o único tratamento potencialmente curativo, com mortalidade operatória em torno de 2% em centros de expertise; cerca de 60% dos pacientes são classificados como operáveis na Europa e no Canadá, restando cerca de 40% inoperáveis, para os quais riociguate e/ou angioplastia pulmonar por balão são as opções estabelecidas, também usadas na doença residual/recorrente pós-cirurgia. O grupo 5 reúne causas de mecanismo não esclarecido/multifatorial, sem terapia vasodilatadora específica com benefício estabelecido — o tratamento é dirigido à causa de base, sempre com confirmação hemodinâmica por cateterismo antes de qualquer decisão terapêutica.",
     "ambulatory_flow": [
       "Encaminhamento e acompanhamento em centro de referência em hipertensão pulmonar, idealmente multidisciplinar, para confirmação diagnóstica, escolha da terapia inicial guiada por risco e ajuste de via de administração",
       "Reavaliação periódica da estratificação de risco a cada 3 a 6 meses, combinando classe funcional da OMS, teste de caminhada de 6 minutos e NT-proBNP, para decidir manutenção ou escalonamento da terapia combinada",
@@ -13788,7 +14201,7 @@
             "Sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica em paciente com hipertensão pulmonar"
           ],
           "emergency_flow": [
-            "Não expandir volume nem reduzir pré-carga agressivamente; suporte hemodinâmico guiado com noradrenalina como vasopressor de primeira linha; seguir protocolo de falência aguda de ventrículo direito já existente no acervo; investigar gatilho precipitante"
+            "Seguir o protocolo de falência aguda do ventrículo direito já ligado a esta ficha; tratar gatilho, preservar perfusão e usar fluidos apenas em pequenos volumes guiados quando houver baixa pressão de enchimento direita — evitar expansão indiscriminada."
           ]
         }
       },
@@ -13809,7 +14222,7 @@
             "Suspeita de doença veno-oclusiva pulmonar — risco de edema pulmonar grave com vasodilatador específico sem cautela"
           ],
           "messages": [
-            "Não iniciar terapia vasodilatadora específica de HAP sem avaliação em centro especializado; se indicada, deve ser feita com dose baixa, titulação lenta e diurético em dose alta, como ponte cautelosa para transplante"
+            "Paciente estável com suspeita de PVOD: encaminhar urgentemente a centro especializado e evitar vasodilatador de HAP sem supervisão; o fluxo de choque só se aplica se houver instabilidade."
           ]
         }
       },
@@ -13981,11 +14394,12 @@
       "teste-de-vasorreatividade-aguda-na-hap-idiopatica-e-hereditaria-o-criterio-de-sitbon",
       "treinamento-fisico-e-respiratorio-na-hap-grave-o-ensaio-de-mereles-2006",
       "treprostinil-inalado-na-hipertensao-pulmonar-do-grupo-3-o-ensaio-increase",
-      "zenith-sotatercept-hap-alto-risco-morte"
+      "zenith-sotatercept-hap-alto-risco-morte",
+      "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024"
     ],
     "patient_material_slug": "hipertensao-pulmonar",
-    "review_status": "pendente_revisao",
-    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central da hipertensão pulmonar adulta (área geral) — terceiro ciclo Tudo com Tudo do dia (após endocardite infecciosa, PR #553, e pericardite, PR #554). Coleção doencas/metadados.json não tinha nenhum verbete geral adulto para HP (só hipertensao-pulmonar-pediatrica e hipertensao-pulmonar-gravidez, escopos distintos, não duplicados aqui). Conteúdo sintetizado a partir de 60 documentos já publicados e revisados em content/Hipertensão_pulmonar/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 4 agentes de pesquisa independentes nesta sessão. Uma correção factual foi identificada e aplicada durante a síntese: a taxa de operabilidade cirúrgica em CTEPH é de aproximadamente 60% (não 40% como uma fonte secundária inicial sugeria) — corrigida com base em Kim NH et al., Eur Respir J 2024, PMID 39209473. Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente. Doses de fármacos específicas foram deliberadamente omitidas do treatment_summary — apenas classe farmacológica e princípio terapêutico. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
   }
 ]

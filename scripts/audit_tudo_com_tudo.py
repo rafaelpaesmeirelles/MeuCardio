@@ -104,10 +104,10 @@ def audit() -> dict:
     for kind, items in manifests.items():
         if len(slugs[kind]) != len(items):
             raise ValueError(f"Slug duplicado no manifesto: {kind}")
-    slugs["documento"] = set(documents)
     slugs["fluxograma"] = {
         slug for slug, item in documents.items() if item.get("kind") == "fluxograma"
     }
+    slugs["documento"] = set(documents) - slugs["fluxograma"]
 
     # Calculadoras vivem em registro Python e não compõem os 9.452 itens.
     calculator_source = "\n".join(
@@ -186,25 +186,25 @@ def audit() -> dict:
         for target in LINK.findall(_markdown_without_code(document["body"])):
             target_slug = _link_slug(target)
             if target_slug:
-                add("Document.body_md.link", slug, target_slug, ("documento",))
+                add("Document.body_md.link", slug, target_slug, ("documento", "fluxograma"))
 
     for item in manifests["evidencia"]:
         if item.get("document_slug"):
-            add("EvidenceRecord.document_slug", item["slug"], item["document_slug"], ("documento",))
+            add("EvidenceRecord.document_slug", item["slug"], item["document_slug"], ("documento", "fluxograma"))
     for item in manifests["checklist"]:
         if item.get("documento_origem"):
-            add("DischargeChecklist.documento_origem", item["slug"], item["documento_origem"], ("documento",))
+            add("DischargeChecklist.documento_origem", item["slug"], item["documento_origem"], ("documento", "fluxograma"))
     for item in manifests["material_paciente"]:
         if item.get("documento_slug"):
-            add("PatientMaterial.documento_slug", item["slug"], item["documento_slug"], ("documento",))
+            add("PatientMaterial.documento_slug", item["slug"], item["documento_slug"], ("documento", "fluxograma"))
     for item in manifests["protocolo_emergencia"]:
         add("EmergencyProtocol.documento_slug", item["slug"], item["documento_slug"], ("documento",))
         if item.get("fluxograma_slug"):
-            add("EmergencyProtocol.fluxograma_slug", item["slug"], item["fluxograma_slug"], ("documento",))
+            add("EmergencyProtocol.fluxograma_slug", item["slug"], item["fluxograma_slug"], ("fluxograma",))
         for target in item.get("relacionados") or []:
             add("EmergencyProtocol.relacionados", item["slug"], target, ("documento", "protocolo_emergencia"))
     track_types = {
-        "documento": ("documento",), "estudo": ("estudo",),
+        "documento": ("documento", "fluxograma"), "estudo": ("estudo",),
         "medicamento": ("medicamento",), "checklist": ("checklist",),
         "caso_clinico": ("caso_clinico",), "evidencia": ("evidencia",),
         "calculadora": ("calculadora",),
@@ -215,7 +215,7 @@ def audit() -> dict:
             add("StudyTrack.etapas", item["slug"], step.get("item_slug", ""), allowed)
     for item in manifests["doenca"]:
         for target in item.get("related_document_slugs") or []:
-            add("SpecialtyDisease.related_document_slugs", item["slug"], target, ("documento",))
+            add("SpecialtyDisease.related_document_slugs", item["slug"], target, ("documento", "fluxograma"))
         if item.get("patient_material_slug"):
             add("SpecialtyDisease.patient_material_slug", item["slug"], item["patient_material_slug"], ("material_paciente",))
 
