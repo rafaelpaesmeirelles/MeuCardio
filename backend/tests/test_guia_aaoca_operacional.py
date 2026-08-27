@@ -11,9 +11,11 @@ def _document():
     return frontmatter.loads(DOC.read_text(encoding="utf-8"))
 
 
-def test_aaoca_permanece_pendente_e_fontes_sao_strings():
+def test_aaoca_esta_revisado_e_fontes_sao_strings():
     doc = _document()
-    assert doc.metadata["review_status"] == "pendente_revisao"
+    assert doc.metadata["review_status"] == "revisado"
+    assert "publicação autorizada" in doc.metadata["review_note"]
+    assert "responsável médico" in doc.metadata["review_note"]
     assert doc.metadata["fonte_producao"] == "chatgpt"
     assert doc.metadata["slug"] == "aaoca-origem-aortica-anomala-de-coronaria-risco-isquemia-e-decisao-operacional"
     assert len(doc.metadata["source_refs"]) >= 3
