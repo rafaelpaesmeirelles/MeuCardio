@@ -604,6 +604,7 @@ def _acidose_metabolica(dados: dict) -> dict:
 
     albumina = _numero_opcional(dados, "albumina_g_dl")
     limite_ag = _numero_opcional(dados, "limite_superior_ag_meq_l")
+    referencia_ag_sem_potassio = bool(dados.get("referencia_ag_sem_potassio_confirmada"))
     try:
         albumina_referencia = float(dados.get("albumina_referencia_g_dl", 4.0))
     except (TypeError, ValueError):
@@ -614,6 +615,10 @@ def _acidose_metabolica(dados: dict) -> dict:
         raise ValueError("Selecione albumina de referência de 4,0 ou 4,4 g/dL.")
     if limite_ag is not None and not 0 <= limite_ag <= 40:
         raise ValueError("Informe limite superior do ânion gap entre 0 e 40 mEq/L.")
+    if limite_ag is not None and not referencia_ag_sem_potassio:
+        raise ValueError(
+            "Confirme que o limite laboratorial informado corresponde ao ânion gap sem potássio."
+        )
 
     winter_central = 1.5 * bicarbonato + 8
     winter_inferior = winter_central - 2
@@ -737,13 +742,19 @@ _ACIDOSE_METABOLICA = Calculator(
         ),
         Field(
             "limite_superior_ag_meq_l",
-            "Limite superior do ânion gap no laboratório",
+            "Limite superior do ânion gap sem potássio no laboratório",
             "number",
             "mEq/L",
             min=0,
             max=40,
             required=False,
-            help="Opcional; evita impor um corte universal, que varia com método e inclusão de potássio.",
+            help="Opcional; use somente o intervalo do método Na − (Cl + HCO₃), sem potássio.",
+        ),
+        Field(
+            "referencia_ag_sem_potassio_confirmada",
+            "Confirmo que o limite informado é para ânion gap sem potássio",
+            "boolean",
+            help="Obrigatório quando um limite é informado; um intervalo com K não é comparável a este cálculo.",
         ),
     ],
     compute=_acidose_metabolica,

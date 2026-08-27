@@ -109,8 +109,8 @@ def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
     assert "review_status: pendente_revisao" in documento
     assert "Vínculo clínico direto" in documento
     assert "Proximidade temática, sem vínculo causal automático" in documento
-    assert f"{slug}.md" in mala
-    assert f"{slug}.md" in ceto
+    assert "/calculadoras/acidose-metabolica-winter-anion-gap-uco" in mala
+    assert "/calculadoras/acidose-metabolica-winter-anion-gap-uco" in ceto
     assert trilha["review_status"] == "pendente_revisao"
     assert any(
         etapa["item_type"] == "calculadora"

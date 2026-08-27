@@ -72,6 +72,7 @@ def _dados_acidose(**mudancas):
         "sodio_meq_l": 140,
         "cloro_meq_l": 104,
         "albumina_referencia_g_dl": 4.0,
+        "referencia_ag_sem_potassio_confirmada": False,
     }
     dados.update(mudancas)
     return dados
@@ -401,6 +402,7 @@ def test_acidose_corrige_anion_gap_por_albumina_e_usa_referencia_local():
         _dados_acidose(
             albumina_g_dl=2,
             limite_superior_ag_meq_l=12,
+            referencia_ag_sem_potassio_confirmada=True,
         )
     )
 
@@ -421,6 +423,10 @@ def test_acidose_sem_limite_laboratorial_nao_impoe_corte_universal():
         ({"bicarbonato_meq_l": 25}, "aplica Winter somente à acidose metabólica"),
         ({"albumina_g_dl": 0.2}, "albumina entre 0,5 e 6,0"),
         ({"limite_superior_ag_meq_l": 41}, "limite superior do ânion gap"),
+        (
+            {"limite_superior_ag_meq_l": 12},
+            "corresponde ao ânion gap sem potássio",
+        ),
     ],
 )
 def test_acidose_rejeita_entradas_fora_do_escopo(mudanca, mensagem):

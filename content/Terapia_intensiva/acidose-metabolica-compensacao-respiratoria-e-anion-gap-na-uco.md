@@ -49,9 +49,7 @@ diferença e não transforma pH isolado em diagnóstico etiológico.
 Para acidose metabólica, a relação de Albert, Dell e Winters é apresentada pela
 ATS como:
 
-\[
-PaCO_{2\ esperada} = 1{,}5 \times HCO_3^- + 8 \pm 2\;mmHg
-\]
+**PaCO₂ esperada (mmHg) = 1,5 × HCO₃⁻ + 8 ± 2.**
 
 Interpretação operacional:
 
@@ -67,14 +65,13 @@ discordância; o médico estabelece ou não o diagnóstico misto.
 
 ## Passo 3 — ânion gap sem potássio
 
-\[
-AG = Na^+ - (Cl^- + HCO_3^-)
-\]
+**AG sem potássio = Na⁺ − (Cl⁻ + HCO₃⁻).**
 
 A ferramenta não impõe um limite universal. Intervalos mudam com analisador,
 calibração e inclusão ou não de potássio. Por isso, o alerta de “elevado” só é
-gerado quando o usuário informa o limite superior do laboratório e confirma que
-o cálculo local é comparável ao AG sem potássio.
+gerado quando o usuário informa e confirma o limite superior do método
+laboratorial **sem potássio**. Intervalo que inclui K⁺ não é comparável a este
+cálculo e é bloqueado pela ferramenta.
 
 ## Passo 4 — correção opcional por albumina
 
@@ -82,10 +79,8 @@ No estudo original de Figge et al., 49% dos pacientes críticos tinham albumina
 abaixo de 20 g/L. Cada redução de 1 g/L fez o AG observado subestimar os ânions de
 gap em 0,25 mEq/L (r² = 0,94). Em g/dL, o fator é 2,5:
 
-\[
-AG_{corrigido} = AG_{observado} + 2{,}5 \times
-(albumina_{referência} - albumina_{observada})
-\]
+**AG corrigido = AG observado + 2,5 × (albumina de referência − albumina
+observada).**
 
 A ferramenta permite selecionar 4,0 ou 4,4 g/dL como referência, porque esse
 valor deve acompanhar o padrão usado pelo serviço. Corrigir o AG não identifica

@@ -16,8 +16,7 @@ source_refs: [
 ---
 
 > **Ferramenta clínica relacionada:** a leitura da compensação respiratória e do
-> ânion gap pode ser estruturada em [Acidose metabólica na UCO: compensação
-> respiratória e ânion gap](../Terapia_intensiva/acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco.md).
+> ânion gap pode ser estruturada na [calculadora de acidose metabólica da UCO](/calculadoras/acidose-metabolica-winter-anion-gap-uco).
 > O vínculo é direto para a avaliação ácido–base, mas a ferramenta não substitui
 > cetonas nem confirma cetoacidose.
 
