@@ -26711,7 +26711,7 @@
     "subtitulo": "Boca torta, braço fraco ou fala alterada exigem ligação imediata para o SAMU 192",
     "tema": "Geral",
     "documento_slug": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "chatgpt",
     "resumo": "Orientação para reconhecer sinais súbitos de AVC, registrar o horário e evitar atrasos ou medicações por conta própria.",
     "secoes": [
@@ -26726,7 +26726,7 @@
       {
         "titulo": "Ligue para o SAMU 192 imediatamente",
         "paragrafos": [
-          "Anote a última hora em que a pessoa estava normal e ligue para o SAMU 192. Não deixe a pessoa dirigir e não espere para ver se melhora.",
+          "Anote o último horário em que a pessoa estava sabidamente bem e ligue para o SAMU 192. Não deixe a pessoa dirigir e não espere para ver se melhora.",
           "Mesmo que o sintoma passe em poucos minutos, ainda pode ter sido um ataque isquêmico transitório, às vezes chamado de mini-AVC. Ele também precisa de avaliação urgente."
         ],
         "itens": []
@@ -26749,7 +26749,7 @@
       "Sintomas que melhoraram sozinhos: ainda assim ligue para o SAMU 192"
     ],
     "perguntas": [
-      "Qual foi a última hora em que a pessoa estava normal?",
+      "Qual foi o último horário em que a pessoa estava sabidamente bem?",
       "Ela usa anticoagulante? Qual e quando tomou a última dose?",
       "Os sintomas começaram acordada ou foram percebidos ao despertar?",
       "Houve convulsão, queda, trauma ou sangramento recente?"
@@ -26758,7 +26758,9 @@
       "Hewett Brumberg EK, Douma MJ, Alibertis K, et al. 2024 AHA/Red Cross Guidelines for First Aid. Circulation. DOI: 10.1161/CIR.0000000000001281.",
       "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 AHA/ASA Guideline for Acute Ischemic Stroke. Stroke. DOI: 10.1161/STR.0000000000000513; correction DOI: 10.1161/STR.0000000000000530.",
       "Ministério da Saúde. AVC. Portal Saúde de A a Z. Consultado em 26/08/2026."
-    ]
+    ],
+    "review_note": "Revisão clínica concluída em 27/08/2026: sinais de alerta, acionamento do SAMU 192 e proibição de medicação/via oral por conta própria conferidos.",
+    "version": 2
   },
   {
     "slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia",

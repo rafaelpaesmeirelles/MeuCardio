@@ -23681,7 +23681,7 @@
     "tema": "Geral",
     "objetivo": "Reconhecer o déficit focal súbito, preservar tempo e dados críticos, entender por que a neuroimagem precede antitrombóticos e chegar à decisão especializada sobre reperfusão sem transformar a trilha em prescrição autônoma.",
     "nivel": "intermediário",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "chatgpt",
     "etapas": [
       {
@@ -23732,7 +23732,9 @@
         "item_slug": "tenecteplase",
         "por_que": "Liga à alternativa aceita pela diretriz AHA/ASA 2026 na janela de 4,5 horas, preservando a diferença entre protocolo clínico e rotulagem local."
       }
-    ]
+    ],
+    "review_note": "Revisão clínica concluída em 27/08/2026: sequência, vínculos canônicos e limites de não prescrição conferidos.",
+    "version": 2
   },
   {
     "slug": "trilha-suspeita-de-isquemia-mesenterica-aguda-do-reconhecimento-a-decisao-de-revascularizacao",
