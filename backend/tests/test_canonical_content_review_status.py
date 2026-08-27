@@ -9,9 +9,9 @@ A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
 PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. A
-allowlist abaixo é fechada nos slugs do lote AVC de 26/08/2026. Ela permite que
-o PR preserve a decisão humana sem publicar conteúdo novo; qualquer outro
-pendente continua quebrando o gate.
+allowlist abaixo é fechada nos slugs dos lotes Tudo com Tudo explicitamente
+pendentes. Ela permite que os PRs preservem a decisão humana sem publicar
+conteúdo novo; qualquer outro pendente continua quebrando o gate.
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTE_AVC: dict[str, set[str]] = {
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "evidencias/metadados.json": {
         "primeiros-socorros-suspeita-avc-acionar-emergencia-imediatamente-aha-2024",
         "primeiros-socorros-avc-usar-fast-ou-cincinnati-aha-2024",
@@ -51,7 +51,13 @@ PENDENTES_LOTE_AVC: dict[str, set[str]] = {
         "sinais-de-avc-como-agir-sem-perder-tempo"
     },
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
-    "doencas/metadados.json": {"acidente-vascular-cerebral-agudo"},
+    "doencas/metadados.json": {
+        "acidente-vascular-cerebral-agudo",
+        "hipertensao-arterial-sistemica",
+        "fibrilacao-atrial",
+        "insuficiencia-cardiaca",
+        "sindrome-coronariana-cronica",
+    },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
 PENDENTES_MARKDOWN_AVC = {
@@ -79,7 +85,7 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
                 continue
             if (
                 status == "pendente_revisao"
-                and identifier in PENDENTES_LOTE_AVC.get(relative_path, set())
+                and identifier in PENDENTES_LOTES_TUDO_COM_TUDO.get(relative_path, set())
             ):
                 pendentes_encontrados.add(f"{relative_path}:{identifier}")
                 continue
@@ -89,7 +95,7 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
     pendentes_esperados = set(PENDENTES_MEDICAMENTOS_RC)
     pendentes_esperados.update(
         f"{path}:{slug}"
-        for path, slugs in PENDENTES_LOTE_AVC.items()
+        for path, slugs in PENDENTES_LOTES_TUDO_COM_TUDO.items()
         for slug in slugs
     )
     assert pendentes_encontrados == pendentes_esperados
