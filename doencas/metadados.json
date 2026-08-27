@@ -14442,7 +14442,7 @@
       "Pressão arterial em decúbito e teste de ortostatismo ativo (3 minutos em pé) — confirma hipotensão ortostática clássica; limitação: não captura a forma inicial (queda em menos de 15 segundos, exige medida contínua batimento a batimento) nem a tardia",
       "Tilt test — teste confirmatório quando a suspeita clínica já aponta para síncope reflexa ou tendência hipotensiva; limitação: não é teste de rastreio geral, resposta negativa não exclui síncope reflexa",
       "Monitor de eventos implantável (ILR) — indicado em síncope recorrente e inexplicada após avaliação inicial e tilt test não diagnósticos; rendimento diagnóstico de 55% contra 19% dos testes convencionais; limitação: não dá resposta imediata, depende da recorrência do evento durante a monitorização",
-      "Biomarcadores cardíacos (NT-proBNP e troponina) — usados para estratificação de risco, não para diagnóstico etiológico direto; troponina convencional tem alta especificidade (0,88) mas baixa sensibilidade (0,29); acrescentar NT-proBNP ao Canadian Syncope Risk Score não melhora significativamente a predição (Thiruganasambandamoorthy V et al., Ann Intern Med. 2020;172(10):648-655, PMID 32340039)",
+      "Biomarcadores cardíacos (troponina e peptídeos natriuréticos) — podem complementar a estratificação em pacientes selecionados quando há suspeita de causa cardíaca, mas não estabelecem isoladamente a etiologia da síncope nem substituem história, exame, ortostatismo e ECG; não solicitar de forma automática a todo episódio.",
       "Ecocardiograma — indicação seletiva (suspeita de cardiopatia estrutural, ECG anormal, síncope de esforço), não é exame de rotina em síncope",
       "Massagem do seio carotídeo monitorizada — em paciente maior de 40 anos, para confirmar síndrome do seio carotídeo quando reproduz os sintomas espontâneos com resposta cardioinibitória e/ou vasodepressora; limitação: exige checagem de contraindicações"
     ],
@@ -14455,7 +14455,7 @@
       "ECG anormal, conforme as características de alto risco maiores do consenso EUSEM 2024 (isquemia aguda, BAV Mobitz II ou de 3º grau, fibrilação atrial lenta com FC <40/min, bradicardia sinusal persistente <40/min, pausa sinusal >3 segundos, bloqueio de ramo, taquicardia ventricular, disfunção de marca-passo/CDI, padrão de Brugada tipo 1, QTc >460 ms)",
       "Cardiopatia estrutural conhecida (disfunção ventricular, cardiomiopatia, valvopatia grave)"
     ],
-    "treatment_summary": "O tratamento da síncope reflexa (vasovagal) recorrente segue uma hierarquia de degraus, não uma escolha entre opções equivalentes. A primeira linha, com a recomendação mais forte de toda a seção (Classe I, Nível B), é a educação do paciente sobre o caráter benigno da condição e o reconhecimento de gatilhos e situações desencadeantes — calor, ortostatismo prolongado, desidratação, jejum, ambientes lotados (ESC 2018, PMID 29562304). Em pacientes com pródromo reconhecível e idade abaixo de 60 anos, somam-se as manobras físicas de contrapressão isométrica (cruzar pernas, entrelaçar e puxar os braços), com redução de risco relativo de recorrência de 39% no PC-Trial citado pela diretriz (Classe IIa, Nível B). O papel do betabloqueador é restrito e dependente da idade: o ensaio POST original foi neutro na população geral (Sheldon et al., Circulation 2006, PMID 16505178), e a reanálise por faixa etária (Sheldon et al., 2012, PMID 22972872) sugere tendência de benefício apenas em pacientes com 42 anos ou mais, com tendência de piora em pacientes mais jovens — achado post hoc, não confirmatório, que não deve ser extrapolado como indicação ampla. Na forma cardioinibitória refratária às medidas não farmacológicas, a escalada terapêutica não é automática: cardioneuroablação e marca-passo definitivo (guiado por documentação de assistolia por monitor de eventos implantável, conforme o ISSUE-3, PMID 22565936) são alternativas com eficácia numericamente semelhante em comparação não randomizada, e a posição conjunta EHRA/HRS/APHRS/LAHRS 2024 (PMID 39082698) é explícita ao afirmar que recomendações fortes sobre cardioneuroablação não podem ser feitas — a indicação exige decisão compartilhada, informando ao paciente a taxa real de recorrência documentada em coorte contemporânea (44% em seguimento médio de 2,2 anos). Na hipotensão ortostática concomitante, o manejo é escalonado: revisão e retirada de fármacos hipotensores, correção de depleção de volume e, só depois, medidas posturais e físicas (Gibbons et al., 2017, PMID 28050656). Nenhuma dose de fármaco específica é afirmada aqui — apenas princípio terapêutico.",
+    "treatment_summary": "O tratamento da síncope reflexa (vasovagal) recorrente segue uma hierarquia de degraus, não uma escolha entre opções equivalentes. A primeira linha, com a recomendação mais forte de toda a seção (Classe I, Nível B), é a educação do paciente sobre o caráter benigno da condição e o reconhecimento de gatilhos e situações desencadeantes — calor, ortostatismo prolongado, desidratação, jejum, ambientes lotados (ESC 2018, PMID 29562304). Em pacientes com pródromo reconhecível e idade abaixo de 60 anos, somam-se as manobras físicas de contrapressão isométrica (cruzar pernas, entrelaçar e puxar os braços), com redução de risco relativo de recorrência de 39% no PC-Trial citado pela diretriz (Classe IIa, Nível B). Betabloqueadores não são indicados para prevenir recorrência de síncope reflexa (ESC 2018: Classe III, Nível A). O ensaio POST foi neutro na população geral (Sheldon et al., Circulation 2006, PMID 16505178), e a interação etária observada em análise post hoc (PMID 22972872) não constitui indicação terapêutica nem deve ser usada para recomendar betabloqueador a pacientes mais velhos. Na forma cardioinibitória refratária às medidas não farmacológicas, a escalada terapêutica não é automática: cardioneuroablação e marca-passo definitivo (guiado por documentação de assistolia por monitor de eventos implantável, conforme o ISSUE-3, PMID 22565936) são alternativas com eficácia numericamente semelhante em comparação não randomizada, e a posição conjunta EHRA/HRS/APHRS/LAHRS 2024 (PMID 39082698) é explícita ao afirmar que recomendações fortes sobre cardioneuroablação não podem ser feitas — a indicação exige decisão compartilhada, informando ao paciente a taxa real de recorrência documentada em coorte contemporânea (44% em seguimento médio de 2,2 anos). Na hipotensão ortostática concomitante, o manejo é escalonado: revisão e retirada de fármacos hipotensores, correção de depleção de volume e, só depois, medidas posturais e físicas (Gibbons et al., 2017, PMID 28050656). Nenhuma dose de fármaco específica é afirmada aqui — apenas princípio terapêutico.",
     "ambulatory_flow": [
       "Educação estruturada sobre reconhecimento precoce do pródromo e treinamento nas manobras físicas de contrapressão isométrica, com reforço em cada consulta de seguimento",
       "Revisão sistemática da lista de medicamentos em uso, com atenção a fármacos hipotensores e bradicardizantes que podem precipitar ou agravar hipotensão ortostática, priorizando IECA/BRA/bloqueador de cálcio quando o tratamento anti-hipertensivo for indispensável",
@@ -14469,7 +14469,7 @@
       "Marcadores de alto risco que exigem internação ou monitorização intensiva: síncope durante esforço físico ou em decúbito/sentado, ECG com característica maior de alto risco, cardiopatia estrutural ou coronariana grave conhecida, história familiar de morte súbita em idade jovem e palpitação súbita imediatamente antes do episódio",
       "Interrogação pronta de dispositivo cardíaco implantado (marca-passo ou cardiodesfibrilador) em todo paciente portador que apresente síncope",
       "Encaminhamento à unidade de síncope dedicada, quando disponível, para pacientes de risco intermediário — modelo que no ensaio SEEDS elevou o rendimento diagnóstico de 10% para 67% e reduziu a taxa de internação de 98% para 43%, sem diferença de mortalidade ou recorrência em 2 anos (Shen et al., Circulation 2004, PMID 15536093)",
-      "Investigação cardíaca urgente reservada aos critérios de alto risco; fora deles, seguimento ambulatorial é a rota apropriada",
+      "Na ausência de marcador inequívoco de alto risco, não presumir automaticamente baixo risco: pacientes sem perfil reflexo/ortostático claramente benigno devem permanecer em observação no pronto-socorro ou unidade de síncope para investigação dirigida; seguimento ambulatorial imediato é reservado ao perfil explicitamente de baixo risco.",
       "Alta direta do departamento de emergência para manejo ambulatorial quando há perfil claro de baixo risco: pródromo vasovagal típico, gatilho reflexo identificável, ausência de cardiopatia conhecida e exame físico/ECG normais"
     ],
     "monitoring": [
@@ -14518,10 +14518,45 @@
         "section": "História"
       },
       {
+        "id": "syncope_supine_or_seated",
+        "label": "A síncope ocorreu em decúbito ou enquanto o paciente estava sentado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "sudden_palpitations_before",
+        "label": "Houve palpitação súbita imediatamente antes da perda de consciência?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "family_history_young_scd",
+        "label": "Há história familiar de morte súbita cardíaca em idade jovem ou doença cardíaca hereditária conhecida?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
         "id": "situational_trigger",
         "label": "Há gatilho situacional claro (micção, defecação, tosse, dor, calor, emoção)?",
         "type": "boolean",
         "section": "Apresentação"
+      },
+      {
+        "id": "unexplained_after_initial_evaluation",
+        "label": "Após história, exame físico, pressão em ortostatismo e ECG, a síncope permanece sem explicação?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
+      },
+      {
+        "id": "initial_workup_non_diagnostic",
+        "label": "A investigação inicial dirigida e os testes não invasivos apropriados permaneceram não diagnósticos?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
       },
       {
         "id": "recurrence_count",
@@ -14558,10 +14593,6 @@
         "when": {
           "all": [
             {
-              "field": "syncope_during_exertion",
-              "op": "truthy"
-            },
-            {
               "field": "known_structural_heart_disease",
               "op": "truthy"
             }
@@ -14570,10 +14601,10 @@
         "add": {
           "risk": "emergencia",
           "red_flags": [
-            "Síncope de esforço em paciente com cardiopatia estrutural conhecida"
+            "Síncope em paciente com cardiopatia estrutural ou coronariana grave conhecida"
           ],
           "emergency_flow": [
-            "Internação/monitorização intensiva; investigação cardíaca urgente (ecocardiograma, monitorização contínua, avaliação por cardiologia) antes de qualquer decisão de alta"
+            "Manter monitorização e realizar avaliação cardíaca urgente antes de alta; a cardiopatia conhecida é marcador de alto risco independentemente de o episódio ter ocorrido durante esforço."
           ]
         }
       },
@@ -14602,6 +14633,35 @@
           ],
           "messages": [
             "Síncope de esforço exige investigação cardíaca dirigida (ecocardiograma, avaliação de cardiopatia estrutural) mesmo sem cardiopatia previamente conhecida"
+          ]
+        }
+      },
+      {
+        "id": "sincope-alto-risco-historia",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "syncope_supine_or_seated",
+              "op": "truthy"
+            },
+            {
+              "field": "sudden_palpitations_before",
+              "op": "truthy"
+            },
+            {
+              "field": "family_history_young_scd",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope em decúbito/sentado, palpitação súbita imediatamente antes do evento ou história familiar de morte súbita jovem"
+          ],
+          "emergency_flow": [
+            "Manter observação/monitorização e realizar investigação cardíaca dirigida antes de considerar alta, ajustando internação à avaliação global de risco."
           ]
         }
       },
@@ -14640,6 +14700,14 @@
               "field": "recurrence_count",
               "op": "gte",
               "value": 3
+            },
+            {
+              "field": "unexplained_after_initial_evaluation",
+              "op": "truthy"
+            },
+            {
+              "field": "initial_workup_non_diagnostic",
+              "op": "truthy"
             }
           ]
         },
@@ -14649,7 +14717,7 @@
             "Monitor de eventos implantável (ILR)"
           ],
           "messages": [
-            "Síncope recorrente (≥3 episódios) sem diagnóstico definido após avaliação inicial e tilt test é indicação para monitor de eventos implantável"
+            "Síncope recorrente e genuinamente inexplicada após avaliação inicial e investigação dirigida não diagnósticas pode justificar monitor de eventos implantável quando há probabilidade razoável de recorrência durante a vida útil do dispositivo; episódios reflexos/situacionais já explicados não preenchem esta regra."
           ]
         }
       },
@@ -14672,6 +14740,22 @@
             },
             {
               "field": "known_structural_heart_disease",
+              "op": "falsy"
+            },
+            {
+              "field": "syncope_during_exertion",
+              "op": "falsy"
+            },
+            {
+              "field": "syncope_supine_or_seated",
+              "op": "falsy"
+            },
+            {
+              "field": "sudden_palpitations_before",
+              "op": "falsy"
+            },
+            {
+              "field": "family_history_young_scd",
               "op": "falsy"
             }
           ]
@@ -14702,8 +14786,8 @@
       "Costantino G, Sun BC, Barbic F, et al. Syncope clinical management in the emergency department: a consensus from the first international workshop. Am J Med. 2014;127(11):1126.e13-25. DOI: 10.1016/j.amjmed.2014.05.022. PMID: 24862309.",
       "Sheldon RS, Morillo CA, Klingenheben T, et al. Age-dependent effect of beta-blockers in preventing vasovagal syncope (POST). Circ Arrhythm Electrophysiol. 2012;5(5):920-926. PMID: 22972872.",
       "Sheldon R, Connolly S, Rose S, et al. Prevention of Syncope Trial (POST): a randomized, placebo-controlled study of metoprolol in the prevention of vasovagal syncope. Circulation. 2006;113(9):1164-1170. PMID: 16505178.",
-      "Kus T, Ćoćkov T, et al. ISSUE-3 (International Study on Syncope of Uncertain Etiology 3): cardiac pacing in patients with severe recurrent reflex syncope and documented asystole. PMID: 22565936.",
-      "Vardas P, et al.; EHRA/HRS/APHRS/LAHRS 2024 joint consensus on cardioneuroablation. PMID: 39082698.",
+      "Brignole M, Menozzi C, Moya A, et al.; ISSUE-3 Investigators. Pacemaker therapy in patients with neurally mediated syncope and documented asystole: Third International Study on Syncope of Uncertain Etiology (ISSUE-3): a randomized trial. Circulation. 2012;125(21):2566-2571. DOI: 10.1161/CIRCULATIONAHA.111.082313. PMID: 22565936.",
+      "Aksu T, Brignole M, Calò L, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: a scientific statement of the EHRA of the ESC, HRS, APHRS and LAHRS. Europace. 2024;26:euae206. DOI: 10.1093/europace/euae206. PMID: 39082698.",
       "Shen WK, Decker WW, Smars PA, et al. Syncope Evaluation in the Emergency Department Study (SEEDS): a multidisciplinary approach. Circulation. 2004;110(24):3636-3645. PMID: 15536093.",
       "Thiruganasambandamoorthy V, Rowe BH, Sivilotti MLA, et al. Duration of Electrocardiographic Monitoring of Emergency Department Patients With Syncope. Ann Intern Med. 2020;172(10):648-655. PMID: 32340039.",
       "Gibbons CH, Schmidt P, Biaggioni I, et al. The recommendations of a consensus panel for the screening, diagnosis, and treatment of neurogenic orthostatic hypotension. J Neurol. 2017;264(8):1567-1582. PMID: 28050656.",
@@ -14756,8 +14840,8 @@
       "unidade-de-sincope-o-ensaio-seeds-e-o-racional-do-modelo-assistencial-dedicado"
     ],
     "patient_material_slug": "sincope-desmaio",
-    "review_status": "pendente_revisao",
-    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de síncope adulta (área geral) — quinto ciclo Tudo com Tudo do dia (após endocardite #553, pericardite #554, hipertensão pulmonar #555; Tromboembolismo Venoso descartado por sobreposição confirmada com PR #544 do Codex). Coleção doencas/metadados.json tinha apenas sincope-pediatrica (cardiopediatria), sem verbete geral adulto. Conteúdo sintetizado a partir de 30 documentos já publicados e revisados em content/Síncope/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 3 agentes de pesquisa independentes nesta sessão. Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente. Nenhuma dose de fármaco específica foi incluída. Pendente revisão clínica humana antes de qualquer republicação como revisado.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de síncope adulta (área geral) — quinto ciclo Tudo com Tudo do dia (após endocardite #553, pericardite #554, hipertensão pulmonar #555; Tromboembolismo Venoso descartado por sobreposição confirmada com PR #544 do Codex). Coleção doencas/metadados.json tinha apenas sincope-pediatrica (cardiopediatria), sem verbete geral adulto. Conteúdo sintetizado a partir de 30 documentos já publicados e revisados em content/Síncope/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 3 agentes de pesquisa independentes nesta sessão. Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente. Nenhuma dose de fármaco específica foi incluída. Pendente revisão clínica humana antes de qualquer republicação como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026: corrigidos alto risco, critérios de observação, indicação de ILR, betabloqueadores e referências primárias antes da publicação.",
+    "version": 2
   }
 ]
