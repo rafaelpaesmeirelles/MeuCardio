@@ -4578,22 +4578,20 @@
             {
               "field": "cta_requested",
               "op": "falsy"
+            }
+          ],
+          "any": [
+            {
+              "field": "pain_disproportionate_to_exam",
+              "op": "truthy"
             },
             {
-              "any": [
-                {
-                  "field": "pain_disproportionate_to_exam",
-                  "op": "truthy"
-                },
-                {
-                  "field": "peritonitis_signs",
-                  "op": "truthy"
-                },
-                {
-                  "field": "critically_ill_on_vasopressor",
-                  "op": "truthy"
-                }
-              ]
+              "field": "peritonitis_signs",
+              "op": "truthy"
+            },
+            {
+              "field": "critically_ill_on_vasopressor",
+              "op": "truthy"
             }
           ]
         },
