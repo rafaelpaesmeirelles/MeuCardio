@@ -178,5 +178,65 @@
     "relevance_score": 1.0,
     "evidence_source": "doencas/relacoes-explicitas.json#endocardite-pediatrica:trilha:trilha-endocardite-situacoes-especiais",
     "review_note": "Vínculo clínico direto: trilha reúne próteses, dispositivos, culturas negativas, fungos e complicações que também modificam o manejo pediátrico."
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "crise-de-hipertensao-pulmonar-pediatrica",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:protocolo_emergencia:crise-de-hipertensao-pulmonar-pediatrica",
+    "review_note": "Vínculo clínico direto: protocolo pediátrico específico para a complicação aguda de maior risco da doença-hub."
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "checklist",
+    "target_slug": "teste-de-vasorreatividade-aguda-avaliacao-e-conduta-pos-resultado",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:checklist:teste-de-vasorreatividade-aguda-avaliacao-e-conduta-pos-resultado",
+    "review_note": "Vínculo clínico direto: checklist organiza indicação, execução e interpretação do teste, com adaptação obrigatória ao peso, idade e objetivo pediátrico."
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "checklist",
+    "target_slug": "manejo-da-falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:checklist:manejo-da-falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo",
+    "review_note": "Vínculo clínico direto: checklist de estabilização da falência direita, a via fisiopatológica central da crise de HP; parâmetros e doses exigem protocolo pediátrico local."
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:trilha:trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
+    "review_note": "Vínculo clínico direto: trilha pediátrica dedicada à progressão de hipertensão pulmonar para disfunção e falência ventricular."
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-hipertensao-pulmonar-associada-e-fechamento-por-dispositivo",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#hipertensao-pulmonar-pediatrica:trilha:trilha-cardiopatia-congenita-hipertensao-pulmonar-associada-e-fechamento-por-dispositivo",
+    "review_note": "Vínculo clínico direto: trilha aborda o subgrupo pediátrico com shunt, hemodinâmica limítrofe e decisão de fechamento sem usar RVPi isoladamente."
   }
 ]

@@ -10916,32 +10916,511 @@
     "name": "Hipertensão pulmonar pediátrica",
     "aliases": [
       "HP pediátrica",
-      "hipertensão pulmonar na criança"
+      "hipertensão pulmonar na criança",
+      "hipertensão arterial pulmonar pediátrica",
+      "HAP pediátrica"
     ],
     "area": "cardiopediatria",
     "category": "circulacao_pulmonar",
     "subtype": "pediatrica",
     "prevalence_rank": 26,
-    "completeness": "basico",
-    "summary": "Síndrome hemodinâmica heterogênea que requer classificação etiológica, avaliação de cardiopatia congênita e seguimento em centro especializado.",
+    "completeness": "completo",
+    "summary": "A hipertensão pulmonar (HP) pediátrica é uma síndrome hemodinâmica heterogênea que pode surgir desde a transição neonatal até a adolescência e culminar em aumento da pós-carga, remodelamento e falência do ventrículo direito. O espectro infantil inclui hipertensão pulmonar persistente do recém-nascido, doença pulmonar do desenvolvimento e displasia broncopulmonar, cardiopatias congênitas com shunt, estenose de veias pulmonares, doenças genéticas e formas idiopática ou hereditária. A definição, a classificação e o tratamento não podem ser simplesmente importados do adulto: idade, superfície corporal, desenvolvimento pulmonar, fisiologia do shunt e comorbidades modificam a interpretação. Todo caso sustentado ou grave requer centro pediátrico especializado, fenotipagem etiológica, avaliação seriada do risco e integração entre cardiologia pediátrica, pneumologia/neonatologia, genética, intensivismo, hemodinâmica e cirurgia/transplante.",
+    "epidemiology": "A HP clinicamente sustentada é rara, mas registros centrados em serviços terciários subestimam formas transitórias e doenças pulmonares do desenvolvimento. A distribuição etiológica varia intensamente com a idade: no período neonatal predominam transição cardiopulmonar anormal, HP persistente do recém-nascido, prematuridade, hipoplasia pulmonar e cardiopatia; em lactentes, displasia broncopulmonar, estenose de veias pulmonares, síndromes genéticas e shunts congênitos assumem maior importância; em crianças maiores aparecem formas idiopática/hereditária e doenças sistêmicas. Cardiopatias congênitas representam parcela substancial da HAP pediátrica, e a síndrome de Down concentra múltiplos mecanismos — cardiopatia, doença pulmonar do desenvolvimento, obstrução de via aérea e aspiração. A força-tarefa pediátrica do 7º Simpósio Mundial ressalta que os dados terapêuticos continuam dependentes de registros, estudos farmacocinéticos e extrapolação de adultos, com poucos ensaios randomizados pediátricos e diferenças regulatórias entre países.",
+    "presentation": [
+      "Dispneia, taquipneia, fadiga, intolerância ao esforço ou menor participação em brincadeiras e atividades escolares",
+      "Síncope ou pré-síncope, especialmente ao esforço, marcador de risco elevado na HAP pediátrica",
+      "Dor torácica, palpitações, tontura ou dessaturação durante exercício",
+      "Cianose central, hipoxemia ou piora da saturação habitual em cardiopatia congênita",
+      "Baixo ganho ponderal, dificuldade para mamar, sudorese ou pausas durante alimentação em lactentes",
+      "Sinais de falência direita: hepatomegalia, edema, ascite, turgência jugular e baixo débito",
+      "Em prematuros com displasia broncopulmonar: dependência de oxigênio desproporcional, dificuldade de desmame ventilatório ou piora respiratória recorrente",
+      "Em neonatos: hipoxemia lábil, diferença pré/pós-ductal, choque ou insuficiência respiratória com fisiologia em rápida transformação",
+      "Crise de HP precipitada por infecção, dor, agitação, hipóxia, hipercapnia, acidose, anestesia, intubação ou interrupção de vasodilatador pulmonar",
+      "Apresentação silenciosa em estágios iniciais, com suspeita levantada por ecocardiograma, cardiopatia congênita, síndrome genética ou doença pulmonar"
+    ],
+    "diagnostic_approach": {
+      "definicao_hemodinamica": "Após os primeiros meses de vida, a força-tarefa pediátrica do 7º Simpósio Mundial aplica pressão arterial pulmonar média acima de 20 mmHg em repouso pelo cateterismo. Para HP pré-capilar em crianças, recomenda pressão de oclusão da artéria pulmonar até 15 mmHg e resistência vascular pulmonar indexada acima de 3 unidades Wood·m². A indexação é essencial no corpo pequeno; na transição para o adulto, a partir de superfície corporal aproximada de 1,5 m², relatar RVP e RVPi. Em prematuros, neonatos e menores de 3 meses, a transição pós-natal torna uma definição rígida menos confiável e a fisiologia deve ser caracterizada em série.",
+      "fenotipagem": "Não rotular como HAP idiopática antes de excluir cardiopatia congênita, doença cardíaca esquerda, estenose de veias pulmonares, doença pulmonar/hipóxia, doença tromboembólica, doença sistêmica/metabólica e causas do desenvolvimento. A história deve incluir gestação, prematuridade, ventilação e oxigênio, crescimento, infecções, aspiração, ronco/obstrução de via aérea, fármacos/toxinas, trombose, síndrome genética, cardiopatia e história familiar de HAP ou morte súbita.",
+      "imagem_e_testes": "Ecocardiograma transtorácico é a principal triagem e ferramenta seriada, mas não mede diretamente a RVP nem exclui HP quando o jato tricúspide é ausente. Avaliar anatomia, shunts, veias pulmonares, septo, pressão estimada, tamanho/função do VD, TAPSE, regurgitação tricúspide, derrame e repercussão sobre VE. Integrar ECG, radiografia, BNP/NT-proBNP, função pulmonar quando factível, oximetria, polissonografia, TC/RM, cintilografia V/Q e exames sistêmicos conforme o fenótipo, evitando um painel indiscriminado.",
+      "cateterismo_e_vasorreatividade": "Cateterismo cardíaco é o padrão de referência para confirmar e classificar HP, quantificar fluxos, RVPi, pressão de oclusão e anatomia, e deve preceder terapia específica quando o benefício superar o risco. Crianças menores de 1 ano, prematuras, em pior classe funcional, com grupo 3 ou suporte respiratório têm maior risco e precisam de centro experiente; estabilizar primeiro se o procedimento for inseguro. Teste de vasorreatividade aguda é dirigido principalmente à HAP idiopática/hereditária para identificar candidato excepcional a bloqueador de canal de cálcio, e não deve ser convertido em autorização automática para fechar shunt.",
+      "genetica": "Oferecer aconselhamento e teste genético quando houver HAP idiopática/hereditária, início precoce, história familiar, fenótipo sindrômico ou doença pulmonar do desenvolvimento. O espectro pediátrico inclui BMPR2, TBX4, SOX17, ACVRL1, ENG, KCNK3, ATP13A3 e genes do desenvolvimento pulmonar como FOXF1 e ABCA3; resultado negativo não exclui base genética e achados incidentais exigem aconselhamento."
+    },
+    "differentials": [
+      "Cardiopatia congênita sem doença vascular pulmonar fixa, com hiperfluxo e pressão pulmonar elevada",
+      "Doença cardíaca esquerda, disfunção diastólica ou obstrução mitral/aórtica causando HP pós-capilar",
+      "Estenose de veias pulmonares, cor triatriatum ou retorno venoso pulmonar anômalo obstruído",
+      "Hipertensão pulmonar persistente do recém-nascido e transição neonatal fisiológica/anormal",
+      "Displasia broncopulmonar, hipoplasia pulmonar, hérnia diafragmática e outras doenças pulmonares do desenvolvimento",
+      "Doença parenquimatosa, hipoventilação, apneia obstrutiva, aspiração recorrente ou doença neuromuscular",
+      "Tromboembolismo pulmonar ou obstrução de artéria pulmonar",
+      "Anemia grave, sepse, hipertireoidismo ou estado de alto débito que eleva pressão/fluxo pulmonar",
+      "Doença veno-oclusiva pulmonar ou hemangiomatose capilar, com risco de edema pulmonar sob vasodilatação",
+      "Dispneia por asma, descondicionamento, disautonomia ou doença sistêmica sem HP hemodinâmica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico pediátrico completo com anatomia, shunts, veias pulmonares, estimativa de pressão e avaliação multiparamétrica do VD",
+      "ECG e radiografia de tórax como linha de base e para diagnósticos diferenciais, sem sensibilidade suficiente para excluir HP",
+      "BNP ou NT-proBNP seriado, interpretado com idade, função renal, cardiopatia e tendência individual",
+      "Oximetria em repouso, alimentação e esforço; diferença pré/pós-ductal no neonato quando pertinente",
+      "Hemograma, eletrólitos, função renal/hepática, TSH e investigação sistêmica dirigida pelo fenótipo",
+      "Prova de função pulmonar e capacidade de difusão quando idade e desenvolvimento permitirem",
+      "Polissonografia ou avaliação de via aérea/aspiração se houver ronco, hipoventilação, síndrome de Down ou sintomas respiratórios",
+      "TC de alta resolução/angiotomografia ou RM para parênquima, artérias, veias pulmonares, cardiopatia e função do VD conforme a pergunta clínica",
+      "Cintilografia de ventilação-perfusão quando houver possibilidade de doença tromboembólica crônica, mesmo que rara",
+      "Cateterismo direito em centro pediátrico experiente para hemodinâmica completa, saturações, fluxos, RVP/RVPi e pressão de oclusão",
+      "Teste de vasorreatividade aguda no contexto apropriado, com critério e objetivo documentados antes do procedimento",
+      "Teste de caminhada de 6 minutos em crianças capazes, classe funcional adaptada à idade e avaliação objetiva de crescimento/atividade",
+      "Painel genético com aconselhamento pré e pós-teste em HAP idiopática/hereditária, início precoce ou fenótipo sindrômico"
+    ],
+    "red_flags": [
+      "Síncope de esforço, pré-síncope recorrente ou dor torácica associada a limitação progressiva",
+      "Hipotensão, alteração do sensório, extremidades frias, oligúria ou lactato crescente",
+      "Hipoxemia ou cianose abrupta, especialmente após agitação, procedimento, intubação ou aspiração de via aérea",
+      "Falência aguda do VD com hepatomegalia dolorosa, edema/ascite, baixo débito ou derrame pericárdico",
+      "Arritmia sustentada, bradicardia ou parada cardíaca em criança com HP",
+      "Interrupção, obstrução do acesso ou falha de bomba de prostanoide/vasodilatador contínuo",
+      "Piora rápida de classe funcional, falha de crescimento ou NT-proBNP em ascensão",
+      "Disfunção importante do VD, pressão atrial direita elevada ou pressão pulmonar próxima/superior à sistêmica",
+      "Edema pulmonar após início de vasodilatador, sugerindo doença venosa pulmonar ou componente pós-capilar",
+      "Infecção, acidose, hipercapnia, anemia ou desidratação/sobrecarga precipitando descompensação"
+    ],
+    "treatment_summary": "Tratar a causa e a fisiologia, não apenas a pressão estimada. Toda criança com HP sustentada, sintomática ou complexa deve ser acompanhada por centro especializado. Corrigir hipóxia, distúrbios ventilatórios, aspiração, infecção, anemia, nutrição, doença de via aérea e cardiopatia; imunizações e prevenção de infecção respiratória fazem parte do cuidado. Antes de terapia dirigida para HAP, confirmar fenótipo pré-capilar e excluir doença cardíaca esquerda, estenose de veias pulmonares e doença veno-oclusiva sempre que possível. Na HAP isolada, a força-tarefa do 7º Simpósio Mundial propõe estratégia guiada por risco: criança de menor risco geralmente recebe combinação oral inicial ou sequencial entre vias terapêuticas, enquanto alto risco exige prostanoide parenteral precoce, combinação rápida e discussão de transplante ou procedimento paliativo em centro experiente. Bloqueador de canal de cálcio em alta dose fica restrito à pequena parcela com HAP idiopática/hereditária, teste agudo positivo e resposta sustentada; nunca iniciar empiricamente em VD falho ou sem vasorreatividade. A escolha e dose de antagonista de endotelina, inibidor de PDE5, estimulador de guanilato ciclase ou prostaciclina dependem de idade, peso, aprovação regulatória, interações, função orgânica e experiência do centro; muitos usos são off-label. O STARTS-2 observou maior mortalidade no grupo de alta dose de sildenafila, impedindo a lógica de que dose maior seja automaticamente melhor. Sotatercepte e outros fármacos recentes de adultos não devem ser extrapolados rotineiramente para crianças sem dados e autorização específicos. Na HP associada a doença pulmonar do desenvolvimento, otimizar primeiro pulmão, oxigenação, ventilação, nutrição, refluxo/aspiração e via aérea; se houver fenótipo pré-capilar selecionado, a abordagem costuma começar cautelosamente com monoterapia e reavaliação seriada, pois benefício e dano de combinações são incertos e a HP pode regredir com o crescimento pulmonar. Na cardiopatia com shunt e RVP limítrofe, nenhuma medida isolada define operabilidade: RVPi abaixo de 4 WU·m² tende a favorecer fechamento, 4–8 é zona cinzenta multiparamétrica e acima de 8 sugere inoperabilidade; Eisenmenger não deve ter o shunt fechado. Crise de HP requer UTI pediátrica, remoção de gatilhos, preservação da pressão sistêmica/perfusão do VD, vasodilatação pulmonar inalatória especializada e consideração precoce de ECMO na refratariedade. Não interromper abruptamente terapia contínua.",
+    "ambulatory_flow": [
+      "Confirmar o grupo e o fenótipo hemodinâmico; evitar manter rótulo inespecífico de HP sem causa definida",
+      "Registrar classe funcional adaptada à idade, síncope, crescimento, saturação, atividade, sinais de VD e qualidade de vida em cada visita",
+      "Reavaliar serialmente NT-proBNP, ecocardiograma e resposta clínica; tendência é mais útil que valor isolado",
+      "Usar teste de caminhada de 6 minutos apenas quando desenvolvimento e cooperação permitirem, sem penalizar crianças pequenas",
+      "Revisar dose por peso, adesão, interações, efeitos adversos e acesso ao fármaco em toda consulta",
+      "Verificar continuidade de bomba/infusão, plano de contingência, estoque e treinamento familiar quando houver prostanoide contínuo",
+      "Atualizar avaliação de sono, via aérea, aspiração, nutrição, infecção respiratória e necessidade de oxigênio em doença pulmonar do desenvolvimento",
+      "Discutir exercício recreativo individualizado e supervisionado; evitar esforço competitivo extremo e atividade que provoque síncope",
+      "Oferecer aconselhamento genético e rastreamento familiar quando indicado",
+      "Planejar transição estruturada para centro de adultos e aconselhamento reprodutivo na adolescência",
+      "Reavaliar precocemente critérios de alto risco e necessidade de transplante/estratégia paliativa antes de falência terminal"
+    ],
+    "emergency_flow": [
+      "Suspeitar de crise diante de hipoxemia súbita, hipotensão, baixo débito, síncope/rebaixamento ou falência direita",
+      "Acionar UTI pediátrica, cardiologia/HP e suporte avançado; tratar hipóxia, hipercapnia, acidose, dor, agitação, anemia, infecção e arritmia",
+      "Preservar pressão arterial sistêmica e perfusão coronária do VD; individualizar volume, inotrópico e vasopressor conforme fisiologia",
+      "Usar vasodilatador pulmonar inalatório conforme protocolo e experiência do centro, evitando dose universal inferida pelo assistente",
+      "Restabelecer imediatamente terapia contínua interrompida quando apropriado e prevenir retirada abrupta/rebote",
+      "Tratar intubação e anestesia como procedimentos de alto risco, com equipe, drogas e suporte preparados antes da indução",
+      "Considerar ECMO antes da parada em HP refratária com baixo débito ou falência respiratória apesar de terapia otimizada",
+      "Na parada, seguir PALS e corrigir simultaneamente o aumento crítico da resistência vascular pulmonar"
+    ],
+    "monitoring": [
+      "Classe funcional, síncope, crescimento, desenvolvimento, frequência de internações e qualidade de vida",
+      "Saturação em repouso/alimentação/esforço e necessidade de oxigênio ou suporte ventilatório",
+      "BNP/NT-proBNP seriado e tendência individual",
+      "Ecocardiograma multiparamétrico: tamanho/função do VD, TAPSE, septo, regurgitação, derrame e anatomia",
+      "Teste de caminhada de 6 minutos ou alternativa adequada à idade, quando validamente executável",
+      "Hemograma, função renal/hepática, eletrólitos e monitorização específica de cada terapia",
+      "Cateterismo repetido quando a informação hemodinâmica mudar decisão, não por calendário automático",
+      "Complicações de acesso e segurança da bomba em prostanoide parenteral",
+      "Sono, via aérea, aspiração, nutrição e evolução pulmonar em prematuros/DBP",
+      "Risco multiparamétrico em cada mudança clínica ou terapêutica, com atenção a WHO-FC, TAPSE e NT-proBNP"
+    ],
+    "special_populations": [
+      "Neonatos e menores de 3 meses: fisiologia em transição, definição menos rígida e necessidade de avaliação eco-hemodinâmica seriada",
+      "Prematuros e displasia broncopulmonar: investigar doença pulmonar, veias pulmonares, shunts, aspiração e via aérea antes de atribuir tudo à HAP",
+      "Síndrome de Down: mecanismos frequentemente múltiplos, incluindo cardiopatia, hipoplasia pulmonar, apneia, aspiração e estenose venosa pulmonar",
+      "Cardiopatia congênita com shunt: operabilidade depende de idade, anatomia, saturação, fluxo, RVPi e resposta global; não usar corte isolado",
+      "Eisenmenger: manter via de descompressão, não fechar o defeito e organizar cuidado especializado ao longo da vida",
+      "Doença veno-oclusiva/estenose de veias pulmonares: risco de edema com vasodilatador e necessidade de imagem/hemodinâmica especializada",
+      "Doença genética ou familiar: aconselhamento, teste orientado e avaliação de familiares em risco",
+      "Adolescentes: adesão, transição, contracepção e risco gestacional devem ser discutidos de forma confidencial e antecipada",
+      "Procedimentos/anestesia: planejamento multidisciplinar, continuidade das terapias e prevenção de hipóxia, hipercapnia, acidose e hipotensão",
+      "HAP avançada: avaliar transplante, septostomia ou shunt de Potts em centro experiente antes de deterioração irreversível"
+    ],
+    "assistant_questions": [
+      {
+        "id": "hpp_faixa_etaria",
+        "label": "Qual é a faixa etária?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "neonato_menor_3m",
+            "label": "Neonato ou menor de 3 meses"
+          },
+          {
+            "value": "lactente",
+            "label": "Lactente"
+          },
+          {
+            "value": "crianca",
+            "label": "Criança"
+          },
+          {
+            "value": "adolescente",
+            "label": "Adolescente"
+          }
+        ]
+      },
+      {
+        "id": "hpp_instabilidade",
+        "label": "Há hipotensão, baixo débito, alteração do sensório, hipoxemia abrupta ou falência aguda do VD?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "hpp_sincope",
+        "label": "Há síncope ou pré-síncope, especialmente ao esforço?",
+        "type": "boolean",
+        "required": true,
+        "section": "Risco"
+      },
+      {
+        "id": "hpp_terapia_interrompida",
+        "label": "Houve interrupção, falha de bomba ou obstrução do acesso de terapia pulmonar contínua?",
+        "type": "boolean",
+        "section": "Tratamento"
+      },
+      {
+        "id": "hpp_fenotipo",
+        "label": "Qual é o fenótipo predominante conhecido?",
+        "type": "select",
+        "required": true,
+        "section": "Etiologia",
+        "options": [
+          {
+            "value": "hap_isolada",
+            "label": "HAP idiopática, hereditária ou associada"
+          },
+          {
+            "value": "cardiopatia_shunt",
+            "label": "Cardiopatia congênita com shunt"
+          },
+          {
+            "value": "pulmonar_desenvolvimento",
+            "label": "Doença pulmonar do desenvolvimento/DBP"
+          },
+          {
+            "value": "pos_capilar",
+            "label": "Doença cardíaca esquerda/pós-capilar"
+          },
+          {
+            "value": "incerto",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "hpp_ecocardiograma",
+        "label": "Há ecocardiograma pediátrico recente com anatomia e função do VD?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem"
+      },
+      {
+        "id": "hpp_cateterismo",
+        "label": "Há hemodinâmica por cateterismo suficiente para a decisão atual?",
+        "type": "boolean",
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "hpp_alto_risco",
+        "label": "Há WHO-FC III/IV, disfunção importante do VD, NT-proBNP crescente, falha de crescimento ou piora rápida?",
+        "type": "boolean",
+        "section": "Risco"
+      },
+      {
+        "id": "hpp_rvpi_shunt",
+        "label": "Em cardiopatia com shunt, qual é a faixa de RVPi?",
+        "type": "select",
+        "section": "Operabilidade",
+        "options": [
+          {
+            "value": "menor_4",
+            "label": "Menor que 4 WU·m²"
+          },
+          {
+            "value": "entre_4_8",
+            "label": "Entre 4 e 8 WU·m²"
+          },
+          {
+            "value": "maior_8",
+            "label": "Maior que 8 WU·m²"
+          },
+          {
+            "value": "nao_disponivel",
+            "label": "Não disponível ou não se aplica"
+          }
+        ]
+      },
+      {
+        "id": "hpp_genetica_indicada",
+        "label": "Há HAP idiopática/hereditária, início precoce, história familiar ou fenótipo sindrômico sem avaliação genética?",
+        "type": "boolean",
+        "section": "Genética"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "hpp-crise-instavel",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_instabilidade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível crise de hipertensão pulmonar com falência aguda do VD"
+          ],
+          "emergency_flow": [
+            "Encaminhar para atendimento hospitalar imediato com UTI pediátrica, equipe de HP, correção de gatilhos e suporte de VD/pressão sistêmica."
+          ]
+        }
+      },
+      {
+        "id": "hpp-terapia-continua-interrompida",
+        "priority": 99,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_terapia_interrompida",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Interrupção de terapia pulmonar contínua com risco de rebote e colapso"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente o serviço prescritor e restabelecer a terapia conforme o protocolo do centro; não improvisar dose ou concentração."
+          ]
+        }
+      },
+      {
+        "id": "hpp-sincope-alto-risco",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_sincope",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope/pré-síncope em HP pediátrica sugere baixo débito e maior risco"
+          ],
+          "ambulatory_flow": [
+            "Antecipar avaliação no centro de HP e suspender esforço desencadeante até reestratificação."
+          ]
+        }
+      },
+      {
+        "id": "hpp-alto-risco",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_alto_risco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Perfil pediátrico de alto risco ou deterioração longitudinal"
+          ],
+          "messages": [
+            "Discutir escalonamento especializado e avaliação precoce de transplante/procedimento paliativo; o assistente não deve escolher esquema ou dose automaticamente."
+          ]
+        }
+      },
+      {
+        "id": "hpp-sem-ecocardiograma",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_ecocardiograma",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Ecocardiograma pediátrico recente com anatomia e função do VD"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico completo em serviço com experiência pediátrica."
+          ]
+        }
+      },
+      {
+        "id": "hpp-fenotipo-incerto-sem-hemodinamica",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_fenotipo",
+              "op": "eq",
+              "value": "incerto"
+            },
+            {
+              "field": "hpp_cateterismo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Classificação etiológica e hemodinâmica suficiente para terapia dirigida"
+          ],
+          "messages": [
+            "Não iniciar vasodilatador específico apenas por pressão estimada no ecocardiograma; excluir causas pós-capilares, venosas e pulmonares."
+          ]
+        }
+      },
+      {
+        "id": "hpp-doenca-pulmonar-desenvolvimento",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_fenotipo",
+              "op": "eq",
+              "value": "pulmonar_desenvolvimento"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Reavaliar oxigenação, ventilação, via aérea, aspiração, parênquima, shunts e veias pulmonares."
+          ],
+          "messages": [
+            "Otimizar a doença pulmonar antes de escalonar terapia de HAP; combinações e doses não devem ser extrapoladas automaticamente."
+          ]
+        }
+      },
+      {
+        "id": "hpp-shunt-zona-cinzenta",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_fenotipo",
+              "op": "eq",
+              "value": "cardiopatia_shunt"
+            },
+            {
+              "field": "hpp_rvpi_shunt",
+              "op": "in",
+              "value": [
+                "entre_4_8",
+                "maior_8"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "RVPi limítrofe ou muito elevada em cardiopatia com shunt"
+          ],
+          "messages": [
+            "Não recomendar fechamento automático; decisão exige centro de cardiopatia congênita/HP, hemodinâmica e avaliação multiparamétrica."
+          ]
+        }
+      },
+      {
+        "id": "hpp-neonato-fisiologia-transicional",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_faixa_etaria",
+              "op": "eq",
+              "value": "neonato_menor_3m"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Em menores de 3 meses, interpretar pressão e resistência no contexto da transição cardiopulmonar; evitar aplicar mecanicamente definições da criança maior."
+          ],
+          "suggested_tests": [
+            "Avaliação ecocardiográfica seriada e fenotipagem neonatal dirigida."
+          ]
+        }
+      },
+      {
+        "id": "hpp-avaliacao-genetica",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "hpp_genetica_indicada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Aconselhamento e avaliação genética orientada ao fenótipo"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para genética cardiovascular/pediátrica com aconselhamento pré e pós-teste."
+          ]
+        }
+      }
+    ],
     "tags": [
       "hipertensão pulmonar",
       "circulação pulmonar",
-      "congênita"
+      "cardiopatia congênita",
+      "ventrículo direito",
+      "displasia broncopulmonar",
+      "cateterismo direito",
+      "vasorreatividade",
+      "genética"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Pulmonary Hypertension in Congenital Heart Disease"
+      "Ivy D et al. Embracing the challenges of neonatal and paediatric pulmonary hypertension. Eur Respir J. 2024;64:2401345. PMID 39209483; PMCID PMC11525338",
+      "Abman SH et al. Pediatric Pulmonary Hypertension: Guidelines From the AHA and ATS. Circulation. 2015;132:2037-2099. PMID 26534956",
+      "Humbert M et al. 2022 ESC/ERS Guidelines for pulmonary hypertension. Eur Respir J. 2023;61:2200879. PMID 36028254",
+      "Rosenzweig EB et al. Paediatric pulmonary arterial hypertension: updates on definition, classification, diagnostics and management. Eur Respir J. 2019;53:1801916. PMID 30545978",
+      "Lasa JJ et al. 2025 AHA/AAP Guidelines for Pediatric Advanced Life Support. Circulation. 2025;152:S479-S537. PMID 41122885",
+      "Barst RJ et al. STARTS-2: sildenafil survival in treatment-naive children with PAH. Circulation. 2014;129:1914-1923. PMID 24637559"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/Pulmonary-Hypertension-in-Congenital-Heart-Disease/commentary"
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11525338/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000329",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/pulmonary-hypertension/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6351335/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001368",
+      "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.113.005698"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026, incorporando a força-tarefa pediátrica do 7º Simpósio Mundial de HP (2024), ESC/ERS, AHA/ATS e PALS; exige revisão humana por cardiologia pediátrica/centro de hipertensão pulmonar antes de publicação. Definições neonatais, hemodinâmica, operabilidade de shunt, terapias off-label, doses e estratégias avançadas devem ser conferidas no contexto local.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
     "related_document_slugs": [
       "hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade",
       "crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
-      "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd"
+      "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+      "hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica",
+      "cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca",
+      "fluxograma-hipertensao-pulmonar-associada-a-cardiopatia-congenita-terapia-e-treat-and-repair-jcs-2022"
     ],
     "patient_material_slug": "hipertensao-pulmonar-pediatrica"
   },
