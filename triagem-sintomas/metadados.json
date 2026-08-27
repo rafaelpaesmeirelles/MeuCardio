@@ -1,5 +1,314 @@
 [
   {
+    "slug": "sangramento-em-paciente-anticoagulado",
+    "name": "Sangramento em paciente anticoagulado",
+    "aliases": [
+      "hemorragia usando anticoagulante",
+      "sangue nas fezes ou urina com anticoagulante",
+      "hematoma em uso de DOAC",
+      "sangramento com varfarina"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "cardiooncologia",
+      "gravidez"
+    ],
+    "summary": "Triagem inicial de qualquer sangramento em pessoa que usa anticoagulante para reconhecer imediatamente local crítico, instabilidade, perda sanguínea relevante ou sangramento persistente, identificar a exposição e encaminhar ao protocolo de emergência sem indicar reversor para eventos não maiores.",
+    "questions": [
+      {
+        "id": "anticoagulant",
+        "label": "Qual anticoagulante está em uso?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "vka",
+            "label": "Varfarina ou outro antagonista da vitamina K"
+          },
+          {
+            "value": "dabigatran",
+            "label": "Dabigatrana"
+          },
+          {
+            "value": "factor_xa",
+            "label": "Apixabana, rivaroxabana ou edoxabana"
+          },
+          {
+            "value": "heparin",
+            "label": "Heparina ou heparina de baixo peso molecular"
+          },
+          {
+            "value": "other_or_unknown",
+            "label": "Outro ou não sabe informar"
+          }
+        ],
+        "section": "Exposição"
+      },
+      {
+        "id": "last_dose_known",
+        "label": "A dose e o horário da última administração são conhecidos?",
+        "type": "boolean",
+        "required": true,
+        "section": "Exposição"
+      },
+      {
+        "id": "bleeding_active",
+        "label": "O sangramento está ativo, recidivando ou não cede com compressão local adequada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "critical_or_neurologic",
+        "label": "Há cefaleia súbita intensa, déficit neurológico, alteração da consciência, trauma craniano ou suspeita de sangramento em local crítico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "hemodynamic_instability",
+        "label": "Há síncope, hipotensão, taquicardia, dispneia, dor torácica, palidez intensa ou outro sinal de hipoperfusão?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "gi_gu_pulmonary",
+        "label": "Há vômito com sangue, melena, sangue vivo nas fezes, hematúria macroscópica ou hemoptise?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sítio"
+      },
+      {
+        "id": "large_bruise_or_internal_pain",
+        "label": "Há hematoma grande/progressivo ou dor abdominal, lombar ou em flanco sem explicação?",
+        "type": "boolean",
+        "section": "Sítio"
+      },
+      {
+        "id": "renal_liver_or_interaction",
+        "label": "Há piora renal/hepática ou uso concomitante de antiagregante, AINE ou outro anticoagulante?",
+        "type": "boolean",
+        "section": "Modificadores"
+      }
+    ],
+    "rules": [
+      {
+        "id": "local-critico-ou-neurologico",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "critical_or_neurologic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível hemorragia intracraniana ou em outro local crítico sob anticoagulação"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente; não aguardar evolução domiciliar nem teste específico para iniciar avaliação e controle da fonte"
+          ]
+        }
+      },
+      {
+        "id": "instabilidade-hemodinamica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hemodynamic_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade ou hipoperfusão torna o sangramento potencialmente ameaçador à vida"
+          ],
+          "emergency_flow": [
+            "Avaliar ABC, monitorizar, obter acesso venoso, controlar a fonte e acionar o protocolo de sangramento maior"
+          ]
+        }
+      },
+      {
+        "id": "sangramento-interno-visivel",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "gi_gu_pulmonary",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinal de sangramento digestivo, urinário ou pulmonar clinicamente relevante"
+          ],
+          "suggested_tests": [
+            "Hemograma, função renal/hepática, tipagem e investigação dirigida ao sítio"
+          ]
+        }
+      },
+      {
+        "id": "sangramento-oculto-ou-hematoma-progressivo",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "large_bruise_or_internal_pain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hematoma progressivo ou dor interna pode representar sangramento profundo/retroperitoneal"
+          ],
+          "suggested_tests": [
+            "Hemograma e imagem dirigida conforme exame clínico e estabilidade"
+          ]
+        }
+      },
+      {
+        "id": "persistente-ou-recorrente",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "bleeding_active",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Sangramento persistente ou recorrente requer avaliação da fonte e da exposição anticoagulante"
+          ],
+          "messages": [
+            "Reversor não é automático; a decisão depende de gravidade, agente, última dose e resposta ao controle inicial"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulante-ou-dose-desconhecida",
+        "priority": 75,
+        "when": {
+          "any": [
+            {
+              "field": "anticoagulant",
+              "op": "eq",
+              "value": "other_or_unknown"
+            },
+            {
+              "field": "last_dose_known",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Nome do anticoagulante, dose e horário da última administração"
+          ],
+          "messages": [
+            "Confirmar embalagem, receita, prontuário ou cuidador; não improvisar antídoto cruzado"
+          ]
+        }
+      },
+      {
+        "id": "acumulo-ou-interacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "renal_liver_or_interaction",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção renal/hepática ou associação antitrombótica pode prolongar exposição e aumentar risco"
+          ],
+          "suggested_tests": [
+            "Creatinina, função hepática e conciliação completa de medicamentos"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Sinais vitais seriados, perfusão e estado neurológico",
+      "Hemograma, creatinina e função hepática quando houver sangramento clinicamente relevante",
+      "INR em uso de varfarina/antagonista da vitamina K",
+      "Tipagem e prova de compatibilidade quando houver suspeita de perda importante",
+      "Ensaio específico do anticoagulante somente quando disponível e sem atrasar estabilização/controle da fonte"
+    ],
+    "differentials": [
+      "Sangramento relacionado a anticoagulante",
+      "Lesão anatômica com sangramento não causada pelo anticoagulante",
+      "Coagulopatia por hepatopatia ou coagulação intravascular disseminada",
+      "Trombocitopenia ou disfunção plaquetária",
+      "Anemia sem sangramento ativo"
+    ],
+    "red_flags": [
+      "Instabilidade, síncope ou hipoperfusão",
+      "Cefaleia súbita, déficit neurológico, alteração de consciência ou trauma craniano",
+      "Hematêmese, melena, hematoquezia importante ou hemoptise",
+      "Hematoma grande/progressivo ou suspeita de sangramento interno",
+      "Sangramento persistente ou não controlado",
+      "Queda de hemoglobina de pelo menos 2 g/dL ou necessidade de pelo menos 2 unidades de hemácias"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar local, início, persistência e volume aparente do sangramento",
+      "Confirmar anticoagulante, dose, última tomada, função renal/hepática e combinações que alteram hemostasia",
+      "Aplicar compressão local quando apropriado e orientar avaliação rápida se o sangramento persistir ou recidivar",
+      "Não usar reversor na maioria dos sangramentos não maiores e não interromper definitivamente anticoagulação sem reavaliar a indicação",
+      "Corrigir fonte tratável e fatores modificáveis, com plano explícito de retorno"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC e monitorizar enquanto a fonte é identificada e controlada",
+      "Interromper temporariamente o anticoagulante no sangramento maior e registrar agente, dose e horário",
+      "Acionar o protocolo Sangramento maior em paciente anticoagulado para reversão seletiva por classe",
+      "Não atrasar imagem/endoscopia/intervenção necessária para controle da fonte",
+      "Após hemostasia, definir reinício conforme sítio, causa, indicação trombótica e risco de recorrência"
+    ],
+    "tags": [
+      "sangramento",
+      "anticoagulante",
+      "hemorragia",
+      "DOAC",
+      "varfarina",
+      "reversão",
+      "emergência"
+    ],
+    "source_refs": [
+      "Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. J Am Coll Cardiol. 2020;76(5):594-622. DOI: 10.1016/j.jacc.2020.04.053. PMID: 32680646.",
+      "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149:e1-e156. DOI: 10.1161/CIR.0000000000001193.",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176.",
+      "US Food and Drug Administration. Update on the Safety of Andexxa. FDA Safety Communication, 18/12/2025."
+    ],
+    "source_urls": [
+      "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2020/07/10/11/26/2020-ACC-Expert-Consensus-Decision-Pathway-on-Bleeding",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193",
+      "https://academic.oup.com/eurheartj/article/45/36/3314/7738779",
+      "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. A triagem usa os critérios ACC para reconhecer sangramento maior, não publica doses de reversores e direciona ao protocolo específico. Foi incorporada a comunicação FDA de 18/12/2025 para impedir recomendação automática de alfa-andexanete; situação regulatória e disponibilidade no Brasil devem ser conferidas no momento do uso.",
+    "version": 1
+  },
+  {
     "slug": "dor-toracica",
     "name": "Dor torácica",
     "aliases": [
