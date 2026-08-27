@@ -130,5 +130,53 @@
     "relevance_score": 1.0,
     "evidence_source": "doencas/relacoes-explicitas.json#febre-reumatica-cardite:trilha:trilha-febre-reumatica-cardite-aguda-grave-a-decisao-cirurgica",
     "review_note": "Vínculo clínico direto: trilha dedicada ao fenótipo grave da cardite reumática e à decisão de intervenção valvar."
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "checklist",
+    "target_slug": "investigacao-de-endocardite-com-hemocultura-negativa",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#endocardite-pediatrica:checklist:investigacao-de-endocardite-com-hemocultura-negativa",
+    "review_note": "Vínculo clínico direto: checklist aplicável quando a criança mantém quadro compatível sem isolamento microbiológico, especialmente após antibiótico prévio."
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-timing-de-cirurgia-na-endocardite-complicada",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#endocardite-pediatrica:checklist:indicacao-e-timing-de-cirurgia-na-endocardite-complicada",
+    "review_note": "Vínculo clínico direto: checklist organiza insuficiência cardíaca, infecção não controlada e prevenção de embolia, com adaptação obrigatória à anatomia e à evidência pediátrica."
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#endocardite-pediatrica:trilha:trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico",
+    "review_note": "Vínculo clínico direto: trilha cobre o percurso da suspeita microbiológica e ecocardiográfica à discussão cirúrgica da mesma síndrome."
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-situacoes-especiais",
+    "relation_type": "associated_with",
+    "review_status": "pendente_revisao",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#endocardite-pediatrica:trilha:trilha-endocardite-situacoes-especiais",
+    "review_note": "Vínculo clínico direto: trilha reúne próteses, dispositivos, culturas negativas, fungos e complicações que também modificam o manejo pediátrico."
   }
 ]

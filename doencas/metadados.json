@@ -10169,10 +10169,22 @@
         "required": true,
         "section": "Contexto",
         "options": [
-          {"value": "suspeita_aguda", "label": "Suspeita de episódio agudo"},
-          {"value": "recorrencia", "label": "Possível recorrência"},
-          {"value": "doenca_cronica", "label": "Doença reumática crônica"},
-          {"value": "seguimento_profilaxia", "label": "Seguimento da profilaxia"}
+          {
+            "value": "suspeita_aguda",
+            "label": "Suspeita de episódio agudo"
+          },
+          {
+            "value": "recorrencia",
+            "label": "Possível recorrência"
+          },
+          {
+            "value": "doenca_cronica",
+            "label": "Doença reumática crônica"
+          },
+          {
+            "value": "seguimento_profilaxia",
+            "label": "Seguimento da profilaxia"
+          }
         ]
       },
       {
@@ -10182,9 +10194,18 @@
         "required": true,
         "section": "Epidemiologia",
         "options": [
-          {"value": "sim", "label": "Sim"},
-          {"value": "nao", "label": "Não"},
-          {"value": "incerto", "label": "Incerto"}
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "incerto",
+            "label": "Incerto"
+          }
         ]
       },
       {
@@ -10238,42 +10259,88 @@
       {
         "id": "fra-cardite-instavel",
         "priority": 100,
-        "when": {"all": [{"field": "fra_instabilidade", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_instabilidade",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Instabilidade ou insuficiência cardíaca grave em possível cardite reumática"],
-          "emergency_flow": ["Encaminhar para atendimento hospitalar imediato, monitorização, ecocardiograma urgente e avaliação cardiológica/cirúrgica precoce."]
+          "red_flags": [
+            "Instabilidade ou insuficiência cardíaca grave em possível cardite reumática"
+          ],
+          "emergency_flow": [
+            "Encaminhar para atendimento hospitalar imediato, monitorização, ecocardiograma urgente e avaliação cardiológica/cirúrgica precoce."
+          ]
         }
       },
       {
         "id": "fra-excluir-infeccao-invasiva",
         "priority": 95,
-        "when": {"all": [{"field": "fra_febre_persistente_toxemia", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_febre_persistente_toxemia",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "urgente",
-          "differentials": ["Endocardite infecciosa ou outra infecção invasiva"],
-          "suggested_tests": ["Hemoculturas antes do antibiótico quando clinicamente possível, sem atrasar tratamento na instabilidade"],
-          "messages": ["Não atribuir febre persistente/toxemia automaticamente à FRA nem iniciar imunossupressão antes de excluir infecção invasiva."]
+          "differentials": [
+            "Endocardite infecciosa ou outra infecção invasiva"
+          ],
+          "suggested_tests": [
+            "Hemoculturas antes do antibiótico quando clinicamente possível, sem atrasar tratamento na instabilidade"
+          ],
+          "messages": [
+            "Não atribuir febre persistente/toxemia automaticamente à FRA nem iniciar imunossupressão antes de excluir infecção invasiva."
+          ]
         }
       },
       {
         "id": "fra-excluir-artrite-septica",
         "priority": 94,
-        "when": {"all": [{"field": "fra_monoartrite_febril", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_monoartrite_febril",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "urgente",
-          "differentials": ["Artrite séptica"],
-          "messages": ["Monoartrite febril dolorosa exige exclusão urgente de artrite séptica antes de ser contabilizada como manifestação reumática."]
+          "differentials": [
+            "Artrite séptica"
+          ],
+          "messages": [
+            "Monoartrite febril dolorosa exige exclusão urgente de artrite séptica antes de ser contabilizada como manifestação reumática."
+          ]
         }
       },
       {
         "id": "fra-coreia-com-risco",
         "priority": 85,
-        "when": {"all": [{"field": "fra_coreia_grave", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_coreia_grave",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "urgente",
-          "red_flags": ["Coreia com disfagia, quedas, risco de trauma ou comprometimento psiquiátrico grave"],
-          "ambulatory_flow": ["Organizar avaliação neurológica/psiquiátrica e ambiente protegido; considerar internação conforme segurança e suporte familiar."]
+          "red_flags": [
+            "Coreia com disfagia, quedas, risco de trauma ou comprometimento psiquiátrico grave"
+          ],
+          "ambulatory_flow": [
+            "Organizar avaliação neurológica/psiquiátrica e ambiente protegido; considerar internação conforme segurança e suporte familiar."
+          ]
         }
       },
       {
@@ -10281,41 +10348,85 @@
         "priority": 80,
         "when": {
           "all": [
-            {"field": "fra_contexto", "op": "in", "value": ["suspeita_aguda", "recorrencia"]},
-            {"field": "fra_ecocardiograma_realizado", "op": "falsy"}
+            {
+              "field": "fra_contexto",
+              "op": "in",
+              "value": [
+                "suspeita_aguda",
+                "recorrencia"
+              ]
+            },
+            {
+              "field": "fra_ecocardiograma_realizado",
+              "op": "falsy"
+            }
           ]
         },
         "add": {
           "risk": "prioritario",
-          "missing_information": ["Ecocardiograma com Doppler para cardite clínica ou subclínica"],
-          "suggested_tests": ["Ecocardiograma transtorácico com Doppler, mesmo se a ausculta for normal"]
+          "missing_information": [
+            "Ecocardiograma com Doppler para cardite clínica ou subclínica"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico com Doppler, mesmo se a ausculta for normal"
+          ]
         }
       },
       {
         "id": "fra-risco-populacional-incerto",
         "priority": 60,
-        "when": {"all": [{"field": "fra_risco_populacional", "op": "eq", "value": "incerto"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_risco_populacional",
+              "op": "eq",
+              "value": "incerto"
+            }
+          ]
+        },
         "add": {
-          "missing_information": ["Estrato epidemiológico necessário para aplicar corretamente os critérios de Jones"],
-          "messages": ["Revisar residência/exposição, aglomeração, vulnerabilidade, história pessoal e familiar antes de aplicar cortes de baixo risco."]
+          "missing_information": [
+            "Estrato epidemiológico necessário para aplicar corretamente os critérios de Jones"
+          ],
+          "messages": [
+            "Revisar residência/exposição, aglomeração, vulnerabilidade, história pessoal e familiar antes de aplicar cortes de baixo risco."
+          ]
         }
       },
       {
         "id": "fra-profilaxia-atrasada",
         "priority": 55,
-        "when": {"all": [{"field": "fra_profilaxia_atrasada", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_profilaxia_atrasada",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "ambulatory_flow": ["Reconstruir calendário de aplicações, conferir dose/peso/intervalo, tratar barreiras de adesão e reavaliar gravidade valvar antes de modificar o esquema."]
+          "ambulatory_flow": [
+            "Reconstruir calendário de aplicações, conferir dose/peso/intervalo, tratar barreiras de adesão e reavaliar gravidade valvar antes de modificar o esquema."
+          ]
         }
       },
       {
         "id": "fra-gestacao-valvopatia",
         "priority": 50,
-        "when": {"all": [{"field": "fra_gestacao", "op": "truthy"}]},
+        "when": {
+          "all": [
+            {
+              "field": "fra_gestacao",
+              "op": "truthy"
+            }
+          ]
+        },
         "add": {
           "risk": "prioritario",
-          "messages": ["Doença valvar reumática na gestação ou no planejamento gestacional exige estratificação especializada e plano multidisciplinar antes da descompensação."]
+          "messages": [
+            "Doença valvar reumática na gestação ou no planejamento gestacional exige estratificação especializada e plano multidisciplinar antes da descompensação."
+          ]
         }
       }
     ],
@@ -10365,32 +10476,440 @@
     "name": "Endocardite infecciosa pediátrica",
     "aliases": [
       "endocardite na criança",
+      "endocardite em crianças e adolescentes",
       "EI pediátrica"
     ],
     "area": "cardiopediatria",
     "category": "cardiopatia_adquirida",
     "subtype": "infecciosa",
     "prevalence_rank": 25,
-    "completeness": "basico",
-    "summary": "Infecção endovascular rara e grave, com risco relacionado a cardiopatias, próteses, dispositivos, bacteremia e contexto clínico.",
+    "completeness": "completo",
+    "summary": "A endocardite infecciosa pediátrica é uma infecção endovascular rara, potencialmente fatal, que acomete valvas, endocárdio, próteses, materiais implantados ou dispositivos intracardíacos. Cardiopatia congênita, cirurgia cardíaca prévia, prótese ou material protético, cateter venoso central e bacteremia por Staphylococcus aureus aumentam a probabilidade, mas a ausência de cardiopatia conhecida não exclui o diagnóstico. Febre persistente associada a sopro novo, insuficiência cardíaca, bacteremia, fenômenos embólicos, sinais neurológicos ou alterações ecocardiográficas exige investigação coordenada. A evidência pediátrica é limitada e parte do manejo deriva de estudos em adultos; por isso, diagnóstico, antimicrobianos, monitorização e decisão cirúrgica devem ser individualizados por cardiologia pediátrica, infectologia pediátrica, microbiologia, imagem e cirurgia cardíaca.",
+    "epidemiology": "A incidência publicada é baixa, aproximadamente 0,43 a 0,69 caso por 100.000 crianças-ano em revisões contemporâneas, mas varia conforme definição, rede de referência e população estudada. A sobrevida melhor de crianças com cardiopatias congênitas complexas e o uso crescente de próteses, patches, conduítes, dispositivos e acessos vasculares mudaram o perfil de risco. Cardiopatia congênita é o substrato predisponente mais frequente; no entanto, endocardite por Staphylococcus aureus pode ocorrer em coração previamente considerado normal. Streptococcus do grupo viridans permanece relacionado à cavidade oral, enquanto estafilococos ganham importância em assistência à saúde, cateteres e material protético. Hemoculturas podem ser negativas, especialmente após antibiótico, em cerca de 5% a 7% das séries pediátricas históricas; organismos fastidiosos e fungos devem ser considerados conforme exposição. Como ensaios pediátricos são escassos, números de complicação e eficácia terapêutica carregam incerteza e não devem ser extrapolados mecanicamente de adultos.",
+    "presentation": [
+      "Febre persistente ou recorrente, calafrios, sudorese, fadiga, inapetência, perda ponderal ou redução do desempenho escolar",
+      "Sopro novo ou mudança de sopro prévio, lembrando que ausência de sopro não exclui endocardite",
+      "Taquicardia, dispneia, hepatomegalia, edema, intolerância ao esforço ou sinais de insuficiência cardíaca por disfunção valvar",
+      "Bacteremia persistente, sobretudo por Staphylococcus aureus, estreptococos do grupo viridans ou Enterococcus, sem foco alternativo convincente",
+      "Fenômenos embólicos ou vasculares: déficit neurológico focal, dor abdominal ou em flanco, isquemia de membro, embolia pulmonar em endocardite direita ou lesões cutâneas",
+      "Manifestações imunológicas, como hematúria/glomerulonefrite, fator reumatoide, nódulos de Osler ou manchas de Roth, menos constantes em crianças",
+      "Em lactentes: irritabilidade, dificuldade alimentar, baixo ganho ponderal, instabilidade térmica, desconforto respiratório ou sepse sem localização",
+      "Em portadores de cardiopatia congênita, prótese, conduíte ou dispositivo: febre sem foco, deterioração hemodinâmica, alteração de gradiente ou disfunção do material",
+      "Dor musculoesquelética ou lombar persistente, que pode sinalizar foco metastático ou complicação infecciosa"
+    ],
+    "diagnostic_approach": {
+      "suspeita_inicial": "Estimar a probabilidade antes de interpretar exames: cardiopatia congênita, operação cardíaca, prótese, dispositivo, cateter central, assistência à saúde, procedimento invasivo, saúde bucal, infecção cutânea e antibiótico recente modificam o risco. Aplicar os critérios Duke-ISCVID 2023 como estrutura diagnóstica, reconhecendo que o desempenho e alguns critérios de imagem/microbiologia foram derivados predominantemente de adultos e não substituem julgamento especializado em crianças.",
+      "microbiologia": "Em criança hemodinamicamente estável, colher três conjuntos de hemoculturas de punções separadas antes do antimicrobiano, com volume adequado ao peso e ao volume sanguíneo total; volume insuficiente reduz sensibilidade. Não atrasar antimicrobiano e suporte em choque ou sepse. Identificar antibióticos prévios, tempo de positividade e persistência da bacteremia. Se culturas forem negativas, revisar exposição a Coxiella burnetii, Bartonella spp., fungos e outros agentes fastidiosos e considerar sorologia e testes moleculares em sangue ou tecido valvar conforme epidemiologia e microbiologia.",
+      "imagem": "O ecocardiograma transtorácico é o exame inicial na maioria das crianças e deve avaliar vegetação, abscesso, perfuração, nova regurgitação, obstrução, disfunção ventricular e próteses/dispositivos. Ecocardiograma transesofágico é indicado quando a janela é inadequada, há prótese ou dispositivo, suspeita de complicação perivalvar ou alta probabilidade com exame transtorácico negativo/inconclusivo. Um exame negativo precoce não exclui doença; repetir ecocardiografia e usar tomografia cardíaca, PET/CT ou outra imagem apenas quando a questão clínica e a experiência do centro justificarem, considerando radiação, anestesia e menor validação pediátrica.",
+      "classificacao_equipe": "Classificar como endocardite definitiva, possível ou rejeitada pelos critérios vigentes, mas tratar discordâncias entre clínica, microbiologia e imagem em equipe de endocardite. Documentar lado, valva ou dispositivo, agente, sensibilidade, presença de prótese, insuficiência cardíaca, infecção não controlada, embolização e complicações neurológicas, pois esses elementos determinam estratégia e urgência."
+    },
+    "differentials": [
+      "Bacteremia ou sepse com foco extracardíaco e sem evidência endovascular",
+      "Miocardite, pericardite ou síndrome inflamatória multissistêmica pediátrica",
+      "Febre reumática aguda com cardite, sobretudo quando há sopro e marcadores inflamatórios elevados",
+      "Trombo ou material protético não infectado simulando vegetação",
+      "Endocardite trombótica não bacteriana em doença autoimune, neoplasia ou estado protrombótico",
+      "Infecção de cateter venoso central sem extensão intracardíaca",
+      "Doença de Kawasaki, vasculite ou doença autoimune sistêmica",
+      "Osteomielite, artrite séptica, abscesso profundo ou outra infecção metastática",
+      "Tumores intracardíacos, strands valvares e variantes anatômicas ao ecocardiograma"
+    ],
+    "tests": [
+      "Três conjuntos de hemoculturas antes do antibiótico quando o estado clínico permitir, usando volume pediátrico adequado e locais separados",
+      "Identificação e antibiograma do agente, com hemoculturas seriadas até documentar depuração da bacteremia conforme o protocolo da equipe",
+      "Ecocardiograma transtorácico completo como imagem inicial na maioria das crianças",
+      "Ecocardiograma transesofágico para prótese/dispositivo, janela limitada, complicação perivalvar ou alta suspeita com TTE negativo/inconclusivo",
+      "Hemograma, PCR/VHS, função renal, hepática e eletrólitos para gravidade, diagnóstico diferencial e segurança terapêutica; marcadores inflamatórios não confirmam nem excluem isoladamente",
+      "Urina tipo I e função renal quando houver hematúria, glomerulonefrite, embolia renal ou exposição a fármacos nefrotóxicos",
+      "ECG seriado se houver suspeita de extensão perivalvar; novo bloqueio atrioventricular é sinal de alarme",
+      "Sorologias e testes moleculares dirigidos em endocardite com culturas negativas, definidos por exposição e epidemiologia, sem painéis indiscriminados",
+      "Imagem cerebral, abdominal, pulmonar ou osteoarticular guiada por sintomas e pelo território da endocardite, antes de decisões que elevem risco hemorrágico",
+      "Cultura, histopatologia e teste molecular de tecido valvar ou material removido quando houver cirurgia"
+    ],
+    "red_flags": [
+      "Choque, hipotensão, perfusão ruim, alteração do sensório ou insuficiência cardíaca aguda",
+      "Nova regurgitação valvar importante, edema pulmonar, obstrução de prótese/conduíte ou disfunção ventricular progressiva",
+      "Bacteremia persistente, febre sem resposta, abscesso, fístula, pseudoaneurisma ou vegetação em progressão apesar de terapia adequada",
+      "Novo bloqueio atrioventricular ou outro distúrbio de condução, sugerindo extensão perivalvar",
+      "Déficit neurológico focal, convulsão, meningismo, cefaleia súbita ou rebaixamento de consciência",
+      "Embolização recorrente, vegetação grande e móvel ou foco metastático em órgão vital",
+      "Infecção fúngica, organismo multirresistente ou material protético/dispositivo infectado",
+      "Hemoptise, hipoxemia ou embolia pulmonar séptica em possível endocardite direita",
+      "Deterioração renal, citopenia ou toxicidade medicamentosa durante tratamento prolongado"
+    ],
+    "treatment_summary": "Acionar precocemente equipe com cardiologia pediátrica, infectologia pediátrica, microbiologia, imagem e cirurgia cardíaca. Após hemoculturas, iniciar terapia empírica intravenosa quando a probabilidade e a gravidade justificarem; a seleção depende de valva nativa versus prótese/dispositivo, aquisição comunitária versus associada à saúde, antibiótico prévio, epidemiologia local, alergias, função renal e risco de MRSA. Em choque, não atrasar tratamento para completar investigação. Assim que o agente e a sensibilidade forem conhecidos, estreitar para esquema bactericida dirigido, com dose por peso, função renal, maturidade, concentração sérica quando indicada e interações. A duração é habitualmente prolongada, muitas vezes 4 a 6 semanas, mas começa e termina conforme agente, material, controle do foco, cirurgia e protocolo especializado; não aplicar um prazo único. Evidência de transição oral parcial vem principalmente de adultos selecionados e não estabelece segurança rotineira em crianças. Avaliar cirurgia sem aguardar falha terminal quando houver insuficiência cardíaca por disfunção valvar, infecção não controlada, abscesso/fístula/bloqueio, fungo ou agente difícil, prótese/dispositivo comprometido, bacteremia persistente ou risco embólico relevante. Complicação neurológica exige decisão conjunta sobre imagem, anticoagulação e timing cirúrgico; trombólise intravenosa não deve ser usada automaticamente em AVC associado à endocardite. Remover cateter ou material infectado quando indicado e tratar focos metastáticos. Na alta, documentar cura microbiológica/clínica, plano de monitorização, saúde bucal, condições cardíacas de alto risco e eventual profilaxia odontológica; a AHA não recomenda mais clindamicina como alternativa de profilaxia.",
+    "ambulatory_flow": [
+      "Confirmar que o paciente está clinicamente estável, com bacteremia depurada e plano antimicrobiano definido pela infectologia pediátrica antes de considerar cuidado fora do hospital",
+      "Registrar agente, sensibilidades, primeiro dia efetivo, esquema, acesso vascular, dose atual por peso, monitorização laboratorial e data prevista de reavaliação",
+      "Acompanhar febre, sinais de insuficiência cardíaca, novos sopros, fenômenos embólicos, complicações do cateter e toxicidade medicamentosa",
+      "Repetir ecocardiograma conforme achados basais, evolução e presença de prótese/dispositivo; não usar vegetação residual isolada como prova de infecção ativa",
+      "Garantir revisão odontológica e orientação de higiene oral, pele, feridas, piercings e procura precoce por febre sem foco",
+      "Definir explicitamente se o paciente pertence ao grupo cardíaco de maior risco que pode receber profilaxia em procedimentos odontológicos elegíveis",
+      "Não prescrever profilaxia para todo sopro ou toda cardiopatia congênita e não usar clindamicina como alternativa rotineira segundo a AHA",
+      "Após concluir terapia, organizar seguimento cardiológico para função valvar/ventricular, recorrência, próteses e necessidade de intervenção",
+      "Assegurar transição coordenada para cardiologia do adulto em adolescentes com cardiopatia congênita ou sequela valvar"
+    ],
+    "emergency_flow": [
+      "Choque, sepse ou insuficiência cardíaca aguda: atendimento hospitalar imediato, suporte ABC, acesso, culturas sem atraso indevido e antimicrobiano empírico urgente",
+      "Realizar ecocardiograma urgente e envolver cardiologia pediátrica, infectologia e cirurgia cardíaca precocemente quando houver disfunção valvar, prótese, dispositivo ou instabilidade",
+      "Novo bloqueio atrioventricular: monitorização contínua e investigação urgente de abscesso ou extensão perivalvar",
+      "Déficit neurológico, convulsão ou cefaleia súbita: neuroimagem emergente e discussão neurocardíaca antes de anticoagulação, trombólise ou cirurgia",
+      "Bacteremia persistente ou fungemia: revisar susceptibilidade, dose, acesso, foco metastático e necessidade de controle cirúrgico do foco",
+      "Embolização recorrente ou vegetação de alto risco: avaliação cirúrgica urgente individualizada, equilibrando benefício embólico e risco neurológico",
+      "Não adiar suporte e antibiótico no paciente instável para obter o número ideal de culturas ou completar critérios diagnósticos"
+    ],
+    "monitoring": [
+      "Hemoculturas seriadas até depuração conforme agente e protocolo especializado",
+      "Temperatura, perfusão, frequência cardíaca, pressão, diurese, peso e sinais de insuficiência cardíaca",
+      "Hemograma, função renal/hepática, eletrólitos e níveis séricos de antimicrobianos quando aplicável",
+      "ECG/telemetria diante de distúrbio de condução, abscesso ou instabilidade",
+      "Ecocardiografia seriada orientada pela evolução, sem repetir por calendário rígido quando não muda conduta",
+      "Avaliação dirigida para embolia, aneurisma infeccioso, glomerulonefrite e focos osteoarticulares ou viscerais",
+      "Acesso venoso, adesão e segurança do tratamento parenteral ambulatorial quando excepcionalmente utilizado",
+      "Avaliação pós-tratamento de sequela valvar, função ventricular, recorrência e necessidade de profilaxia odontológica"
+    ],
+    "special_populations": [
+      "Lactentes podem apresentar sepse e sinais inespecíficos; volumes de hemocultura e farmacocinética exigem protocolo por peso e idade",
+      "Cardiopatia congênita complexa, circulação univentricular, shunts, conduítes e material protético alteram anatomia, microbiologia, imagem e estratégia cirúrgica",
+      "Prótese valvar ou dispositivo intracardíaco reduz a sensibilidade do TTE e aumenta a necessidade de TEE e imagem multimodal especializada",
+      "Crianças imunocomprometidas, em nutrição parenteral ou com cateter central têm maior risco de estafilococos, fungos e infecção associada à saúde",
+      "Doença renal modifica dose e toxicidade de antimicrobianos e pode representar complicação imune ou embólica da própria endocardite",
+      "AVC, hemorragia intracraniana ou aneurisma infeccioso exigem coordenação entre neurologia, infectologia e cirurgia para timing e antitrombóticos",
+      "Adolescentes precisam de avaliação confidencial de uso de drogas injetáveis, piercings, tatuagens, saúde sexual e barreiras de adesão sem estigma",
+      "Alergia a betalactâmico deve ser caracterizada; cefalosporina não é alternativa apropriada em história de anafilaxia, angioedema ou urticária imediata à penicilina"
+    ],
+    "assistant_questions": [
+      {
+        "id": "eip_instabilidade",
+        "label": "Há choque, hipotensão, perfusão ruim, alteração do sensório ou insuficiência cardíaca aguda?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "eip_hemoculturas_colhidas",
+        "label": "Foram colhidas hemoculturas adequadas antes do antibiótico, quando o estado clínico permitiu?",
+        "type": "boolean",
+        "required": true,
+        "section": "Microbiologia"
+      },
+      {
+        "id": "eip_bacteremia_persistente",
+        "label": "Há bacteremia ou fungemia persistente apesar de terapia considerada adequada?",
+        "type": "boolean",
+        "section": "Controle da infecção"
+      },
+      {
+        "id": "eip_neurologico",
+        "label": "Há déficit neurológico focal, convulsão, cefaleia súbita, meningismo ou rebaixamento de consciência?",
+        "type": "boolean",
+        "required": true,
+        "section": "Complicações"
+      },
+      {
+        "id": "eip_bloqueio_novo",
+        "label": "Há novo bloqueio atrioventricular ou distúrbio de condução?",
+        "type": "boolean",
+        "section": "Complicações"
+      },
+      {
+        "id": "eip_protese_dispositivo",
+        "label": "Há prótese, conduíte, patch ou dispositivo intracardíaco?",
+        "type": "boolean",
+        "required": true,
+        "section": "Anatomia"
+      },
+      {
+        "id": "eip_tte_resultado",
+        "label": "Qual é o resultado do ecocardiograma transtorácico?",
+        "type": "select",
+        "required": true,
+        "section": "Imagem",
+        "options": [
+          {
+            "value": "positivo",
+            "label": "Compatível com endocardite"
+          },
+          {
+            "value": "negativo",
+            "label": "Negativo"
+          },
+          {
+            "value": "inconclusivo",
+            "label": "Inconclusivo ou janela limitada"
+          },
+          {
+            "value": "nao_realizado",
+            "label": "Não realizado"
+          }
+        ]
+      },
+      {
+        "id": "eip_suspeita_alta",
+        "label": "A probabilidade clínica permanece alta apesar de imagem negativa ou inconclusiva?",
+        "type": "boolean",
+        "section": "Probabilidade"
+      },
+      {
+        "id": "eip_culturas_negativas",
+        "label": "As hemoculturas permanecem negativas em quadro compatível?",
+        "type": "boolean",
+        "section": "Microbiologia"
+      },
+      {
+        "id": "eip_complicacao_cirurgica",
+        "label": "Há insuficiência valvar grave, abscesso, fístula, infecção não controlada, embolização recorrente ou material infectado?",
+        "type": "boolean",
+        "section": "Cirurgia"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "eip-instabilidade",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "eip_instabilidade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica ou insuficiência cardíaca aguda em possível endocardite"
+          ],
+          "emergency_flow": [
+            "Encaminhar para atendimento hospitalar imediato, suporte, culturas sem atraso indevido, antimicrobiano urgente e equipe de endocardite/cirurgia cardíaca."
+          ]
+        }
+      },
+      {
+        "id": "eip-evento-neurologico",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "eip_neurologico",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível complicação neurológica embólica, hemorrágica ou infecciosa"
+          ],
+          "emergency_flow": [
+            "Realizar neuroimagem emergente e avaliação multidisciplinar; não indicar trombólise ou anticoagulação automaticamente."
+          ]
+        }
+      },
+      {
+        "id": "eip-bloqueio-perivalvar",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "eip_bloqueio_novo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Novo distúrbio de condução pode indicar extensão perivalvar"
+          ],
+          "suggested_tests": [
+            "ECG/telemetria e imagem urgente para abscesso ou extensão perivalvar"
+          ],
+          "ambulatory_flow": [
+            "Acionar imediatamente cardiologia e cirurgia cardíaca; não manter apenas seguimento ambulatorial."
+          ]
+        }
+      },
+      {
+        "id": "eip-infeccao-nao-controlada",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "eip_bacteremia_persistente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Bacteremia ou fungemia persistente sugere infecção não controlada"
+          ],
+          "suggested_tests": [
+            "Revisar culturas, sensibilidade, níveis/doses, acesso, foco metastático e controle cirúrgico"
+          ],
+          "messages": [
+            "Não prolongar ou trocar antimicrobiano de forma automática sem revisar agente, foco e necessidade de cirurgia."
+          ]
+        }
+      },
+      {
+        "id": "eip-sem-culturas",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "eip_instabilidade",
+              "op": "falsy"
+            },
+            {
+              "field": "eip_hemoculturas_colhidas",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Hemoculturas adequadas antes de antimicrobiano"
+          ],
+          "suggested_tests": [
+            "Colher três conjuntos com volume pediátrico adequado e punções separadas antes do antibiótico, se a criança permanecer estável."
+          ]
+        }
+      },
+      {
+        "id": "eip-protese-ou-alta-suspeita",
+        "priority": 85,
+        "when": {
+          "any": [
+            {
+              "field": "eip_protese_dispositivo",
+              "op": "truthy"
+            },
+            {
+              "field": "eip_suspeita_alta",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Considerar ecocardiograma transesofágico e imagem complementar em centro experiente conforme anatomia e pergunta clínica"
+          ],
+          "messages": [
+            "TTE negativo isolado não exclui endocardite em prótese/dispositivo ou quando a suspeita clínica permanece alta."
+          ]
+        }
+      },
+      {
+        "id": "eip-tte-ausente-ou-inconclusivo",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "eip_tte_resultado",
+              "op": "in",
+              "value": [
+                "inconclusivo",
+                "nao_realizado"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Imagem cardíaca diagnóstica adequada"
+          ],
+          "suggested_tests": [
+            "Obter ou completar ecocardiograma sem atrasar estabilização e terapia da criança grave."
+          ]
+        }
+      },
+      {
+        "id": "eip-cultura-negativa",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "eip_culturas_negativas",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Endocardite com hemoculturas negativas após antibiótico ou por organismo fastidioso"
+          ],
+          "suggested_tests": [
+            "Revisar antibiótico prévio e exposições; direcionar sorologia e testes moleculares com infectologia/microbiologia."
+          ]
+        }
+      },
+      {
+        "id": "eip-avaliacao-cirurgica",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "eip_complicacao_cirurgica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Critério potencial de intervenção por insuficiência cardíaca, infecção não controlada ou prevenção de embolia"
+          ],
+          "ambulatory_flow": [
+            "Discutir imediatamente em equipe de endocardite e cirurgia cardíaca; não aguardar falha terminal para avaliação."
+          ]
+        }
+      }
+    ],
     "tags": [
       "endocardite",
       "febre",
-      "hemocultura"
+      "hemocultura",
+      "cardiopatia congênita",
+      "ecocardiograma",
+      "antimicrobiano",
+      "cirurgia cardíaca pediátrica"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "Baltimore RS et al. Infective Endocarditis in Childhood: 2015 Update. Circulation. 2015;132:1487-1515. PMID 26373317",
+      "Vicent L et al. Pediatric Infective Endocarditis: A Literature Review. J Clin Med. 2022;11:3217. PMID 35683606",
+      "ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44:3948-4042",
+      "Fowler VG Jr et al. 2023 Duke-ISCVID Criteria for Infective Endocarditis. Clin Infect Dis. 2023;77:518-526",
+      "Wilson WR et al. Prevention of Viridans Group Streptococcal Infective Endocarditis. Circulation. 2021;143:e963-e978",
+      "JCS 2026 Guideline on Prevention and Treatment of Infective Endocarditis"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://www.ahajournals.org/doi/10.1161/cir.0000000000000298",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9181776/",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/endocarditis/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10681650/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000969",
+      "https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_html/-char/en"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026 com fontes primárias e diretrizes; exige revisão humana por cardiologia pediátrica e infectologia antes de publicação. Posologia, estratégia empírica, critérios de cirurgia e extrapolações de adultos devem ser conferidos no contexto local.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
     "related_document_slugs": [
-      "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento"
+      "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento",
+      "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+      "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+      "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+      "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+      "profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021"
     ],
-    "patient_material_slug": "endocardite-pediatrica"
+    "patient_material_slug": "endocardite-infecciosa-o-que-esperar-do-diagnostico-e-do-tratamento"
   },
   {
     "slug": "hipertensao-pulmonar-pediatrica",
