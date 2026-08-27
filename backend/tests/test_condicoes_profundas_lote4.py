@@ -91,7 +91,7 @@ def test_ficha_tem_marcacao_editorial_correta(slug: str):
     doencas = _load_doencas()
     item = doencas[slug]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("review_note"), "ficha aprofundada precisa de review_note explicando o que mudou"
     assert item.get("source_refs") and len(item["source_refs"]) >= 2
@@ -176,3 +176,26 @@ def test_vinculos_tudo_com_tudo_resolvem_e_sao_apenas_documentos_e_material(slug
         assert patient_material in materiais, (
             f"{slug}: patient_material_slug aponta para material inexistente: {patient_material}"
         )
+
+
+def test_bloqueios_clinicos_da_revisao_foram_corrigidos():
+    doencas = _load_doencas()
+
+    tof = doencas["tetralogia-de-fallot"]
+    required = {q["id"] for q in tof["assistant_questions"] if q.get("required")}
+    assert {"hypercyanotic_crisis_signs", "crisis_refractory", "pulse_lost"} <= required
+
+    pe = doencas["pre-eclampsia-e-risco-cardiovascular"]
+    assert "não confirma o diagnóstico isoladamente" in pe["diagnostic_approach"]
+    assert "manejo expectante" in pe["treatment_summary"]
+    fetal = next(r for r in pe["assistant_rules"] if r["id"] == "disfuncao-uteroplacentaria")
+    assert any(c.get("field") == "new_hypertension_after_20w" for c in fetal["when"]["all"])
+
+    anth = doencas["cardiotoxicidade-por-antraciclinas"]
+    active = next(r for r in anth["assistant_rules"] if r["id"] == "emergencia-ic-sintomatica-feve-baixa")
+    assert any(c.get("field") == "phase" and c.get("value") == "during" for c in active["when"]["all"])
+    no_alarm = next(r for r in anth["assistant_rules"] if r["id"] == "sem-sinais-de-alarme")
+    assert any(c.get("field") == "lvef_band" and c.get("value") == "ge50" for c in no_alarm["when"]["all"])
+
+    tga = doencas["transposicao-das-grandes-arterias"]
+    assert any(r["id"] == "falencia-vd-sistemico-sintomatica" for r in tga["assistant_rules"])
