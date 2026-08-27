@@ -50,6 +50,6 @@ jobs:
               audit = json.load(stream)
           assert audit["total_items"] == 9496, audit["total_items"]
           assert audit["review_status"] == {"revisado": 9496}, audit["review_status"]
-          assert audit["topic_coverage"]["covered"] == 9469, audit["topic_coverage"]
+          assert audit["topic_coverage"]["covered"] == 9496, audit["topic_coverage"]
           assert audit["broken_references"] == [], audit["broken_references"][:10]
           PY
