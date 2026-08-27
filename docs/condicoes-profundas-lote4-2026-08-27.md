@@ -60,8 +60,7 @@ específico o suficiente para não duplicar/confundir com registros vizinhos.
   anterior desta mesma base — **verificação humana pendente** deste ponto
   específico.
 - Nenhuma dose de fármaco foi incluída ou alterada em nenhum campo novo.
-- Todas as oito fichas permanecem `review_status: pendente_revisao` —
-  aprofundamento editorial não substitui revisão clínica humana.
+- As oito fichas foram promovidas a `review_status: revisado` após revisão clínica e de segurança dirigida. Foram corrigidos os bloqueios de pré-eclâmpsia, cardiotoxicidade por antraciclina, crise hipercianótica e falência do ventrículo direito sistêmico antes da publicação.
 
 ## Gates
 
