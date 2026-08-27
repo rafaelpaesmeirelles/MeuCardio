@@ -9,9 +9,9 @@ A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
 PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes
-Tudo com Tudo previamente pendentes foram revisados em 27/08/2026. Novos
-Markdown científicos podem entrar apenas por allowlist nominal e temporária,
-sem ganhar status de publicado até revisão editorial explícita.
+Tudo com Tudo previamente pendentes foram revisados em 27/08/2026. As allowlists
+ficam vazias: qualquer novo status diferente de `revisado` quebra o gate e exige
+decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -38,9 +38,7 @@ MANIFESTS = (
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
-PENDENTES_MARKDOWN: set[str] = {
-    "content/Cardiopatias_congênitas/aaoca-origem-aortica-anomala-de-coronaria-risco-isquemia-e-decisao-operacional.md",
-}
+PENDENTES_MARKDOWN: set[str] = set()
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
