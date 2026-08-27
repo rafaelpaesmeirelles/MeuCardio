@@ -3452,5 +3452,263 @@
     "review_status": "revisado",
     "review_note": "Triagem construída inteiramente a partir de dois documentos já publicados e verificados desta pasta (diagnóstico por ITB/WIfI e classificação de Rutherford para isquemia aguda) — nenhuma fonte nova consultada nesta entrada. Não reproduz escala proprietária; encaminha para classificação/estadiamento detalhados nos documentos de origem.",
     "version": 1
+  },
+  {
+    "slug": "deficit-neurologico-focal-subito",
+    "name": "Déficit neurológico focal súbito",
+    "aliases": [
+      "boca torta",
+      "fraqueza de um lado",
+      "fala enrolada",
+      "suspeita de AVC",
+      "mini-AVC"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "gravidez",
+      "cardiooncologia"
+    ],
+    "summary": "Triagem tempo-dependente para reconhecer possível AVC ou AIT, acionar imediatamente o sistema de emergência e preservar horário de início, glicemia e informações de segurança sem iniciar antitrombótico antes da neuroimagem.",
+    "questions": [
+      {
+        "id": "new_face_arm_speech_deficit",
+        "label": "Há assimetria facial nova, fraqueza/queda de um braço ou alteração súbita da fala?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento FAST"
+      },
+      {
+        "id": "other_sudden_focal_deficit",
+        "label": "Há perda visual, visão dupla, dormência/fraqueza focal, desequilíbrio intenso ou outro déficit neurológico súbito?",
+        "type": "boolean",
+        "required": true,
+        "section": "Apresentações além do FAST"
+      },
+      {
+        "id": "symptoms_resolved",
+        "label": "Os sintomas melhoraram ou desapareceram desde o início?",
+        "type": "boolean",
+        "required": true,
+        "section": "Evolução"
+      },
+      {
+        "id": "last_known_well_known",
+        "label": "É conhecido o último horário em que a pessoa estava sem o déficit?",
+        "type": "boolean",
+        "required": true,
+        "section": "Tempo"
+      },
+      {
+        "id": "glucose_low",
+        "label": "Se a glicemia foi medida sem atrasar o chamado, ela está baixa pelo protocolo local?",
+        "type": "boolean",
+        "section": "Imitadores"
+      },
+      {
+        "id": "anticoagulant_or_bleeding",
+        "label": "Há uso de anticoagulante, sangramento recente ou história de hemorragia intracraniana?",
+        "type": "boolean",
+        "section": "Segurança"
+      },
+      {
+        "id": "emergency_activated",
+        "label": "O sistema de emergência já foi acionado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      }
+    ],
+    "rules": [
+      {
+        "id": "fast-positivo",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "new_face_arm_speech_deficit",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "FAST positivo: suspeita de AVC agudo"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente o SAMU 192; não orientar transporte dirigindo por conta própria"
+          ]
+        }
+      },
+      {
+        "id": "deficit-focal-fora-fast",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "other_sudden_focal_deficit",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Déficit neurológico focal súbito pode representar AVC mesmo sem FAST completo"
+          ],
+          "emergency_flow": [
+            "Manter alerta de AVC e avaliação emergencial"
+          ]
+        }
+      },
+      {
+        "id": "ait-nao-e-alta",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "symptoms_resolved",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Melhora transitória não exclui AIT nem autoriza aguardar consulta eletiva"
+          ]
+        }
+      },
+      {
+        "id": "horario-desconhecido",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "last_known_well_known",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Horário desconhecido ou AVC ao despertar não elimina avaliação de reperfusão; registrar a última vez sabidamente bem"
+          ]
+        }
+      },
+      {
+        "id": "hipoglicemia",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "glucose_low",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "differentials": [
+            "Hipoglicemia"
+          ],
+          "emergency_flow": [
+            "Corrigir hipoglicemia por protocolo sem encerrar o alerta de AVC se o déficit focal persistir"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulante-ou-sangramento",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulant_or_bleeding",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "red_flags": [
+            "Anticoagulação ou sangramento muda a avaliação de hemorragia e elegibilidade terapêutica"
+          ],
+          "emergency_flow": [
+            "Informar nome do anticoagulante e horário da última dose à regulação e à equipe de AVC"
+          ]
+        }
+      },
+      {
+        "id": "socorro-nao-acionado",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "emergency_activated",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Acionar o sistema de emergência agora; a medição de glicemia não deve atrasar o chamado"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "FAST ou escala pré-hospitalar equivalente",
+      "Glicemia capilar quando disponível sem atrasar o acionamento",
+      "Neuroimagem urgente no serviço de emergência"
+    ],
+    "differentials": [
+      "Acidente vascular cerebral agudo",
+      "Ataque isquêmico transitório",
+      "Hipoglicemia",
+      "Crise epiléptica com déficit pós-ictal",
+      "Enxaqueca com aura",
+      "Paralisia facial periférica"
+    ],
+    "red_flags": [
+      "Assimetria facial, fraqueza de braço ou fala alterada",
+      "Déficit focal súbito mesmo que transitório",
+      "Alteração de consciência",
+      "Cefaleia súbita intensa",
+      "Convulsão no início",
+      "Uso de anticoagulante"
+    ],
+    "ambulatory_flow": [
+      "Interromper a avaliação eletiva diante de déficit focal súbito",
+      "Registrar última vez sabidamente bem",
+      "Acionar imediatamente o sistema de emergência",
+      "Não administrar antitrombótico antes da neuroimagem"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC e acionar protocolo local de AVC",
+      "Verificar sinais vitais e glicemia sem atrasar neuroimagem",
+      "Obter neuroimagem urgente para distinguir isquemia de hemorragia",
+      "Equipe de AVC define reperfusão, destino e tratamento"
+    ],
+    "tags": [
+      "AVC",
+      "AIT",
+      "FAST",
+      "déficit focal",
+      "SAMU 192"
+    ],
+    "source_refs": [
+      "Hewett Brumberg EK, Douma MJ, Alibertis K, et al. 2024 American Heart Association and American Red Cross Guidelines for First Aid. Circulation. 2024;150:e519-e579. DOI: 10.1161/CIR.0000000000001281.",
+      "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke. Stroke. DOI: 10.1161/STR.0000000000000513; correction DOI: 10.1161/STR.0000000000000530."
+    ],
+    "source_urls": [
+      "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines",
+      "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
+      "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Reconhecimento e encaminhamento apenas; não contém autorização autônoma para trombólise, trombectomia, antiagregação ou redução pressórica. Revisão clínica humana obrigatória.",
+    "fonte_producao": "chatgpt",
+    "version": 1
   }
 ]

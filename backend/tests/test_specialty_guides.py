@@ -37,12 +37,12 @@ def test_specialty_catalog_has_all_areas_and_canonical_minimum():
     items = _load(DISEASES_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 87
+    assert len(items) >= 88
     assert len(slugs) == len(set(slugs))
     assert {item["area"] for item in items} == {
-        "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
+        "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
-    assert FRONTS["doencas_especializadas"]["minimum"] == 87
+    assert FRONTS["doencas_especializadas"]["minimum"] == 88
     assert all(item.get("summary") for item in items)
     assert {item.get("review_status") for item in items} <= {
         "revisado", "pendente_revisao", "lacuna_declarada",
@@ -77,7 +77,7 @@ def test_assistants_exist_in_every_specialty_without_protected_score_replication
     assistants = [item for item in items if item.get("assistant_questions")]
 
     assert {item["area"] for item in assistants} == {
-        "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
+        "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
     serialized_rules = json.dumps(
         [item.get("assistant_rules", []) for item in assistants],
@@ -91,9 +91,9 @@ def test_triage_manifest_has_two_flows_and_special_populations():
     items = _load(TRIAGE_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 12
+    assert len(items) >= 15
     assert len(slugs) == len(set(slugs))
-    assert FRONTS["triagem_sintomas"]["minimum"] == 12
+    assert FRONTS["triagem_sintomas"]["minimum"] == 15
     assert all(item.get("questions") for item in items)
     assert all(item.get("rules") for item in items)
     assert all(item.get("ambulatory_flow") for item in items)

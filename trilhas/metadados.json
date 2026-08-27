@@ -23674,5 +23674,64 @@
         "por_que": "Dá lastro de consenso de especialistas ao posicionamento sobre avaliação periódica de saúde em para-atletas descrito na etapa anterior, fechando a trilha com a referência que sustenta a prática recomendada."
       }
     ]
+  },
+  {
+    "slug": "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao",
+    "titulo": "Suspeita de AVC: da identificação à decisão de reperfusão",
+    "tema": "Geral",
+    "objetivo": "Reconhecer o déficit focal súbito, preservar tempo e dados críticos, entender por que a neuroimagem precede antitrombóticos e chegar à decisão especializada sobre reperfusão sem transformar a trilha em prescrição autônoma.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+        "por_que": "Define a porta de entrada, o último horário bem, a glicemia sem atraso e o limite entre reconhecimento seguro e prescrição especializada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-suspeita-de-avc-agudo-primeira-hora",
+        "por_que": "Transforma os mesmos passos em árvore operacional e mantém explícito que neuroimagem separa isquemia de hemorragia."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "primeiros-socorros-suspeita-avc-acionar-emergencia-imediatamente-aha-2024",
+        "por_que": "Ancora o acionamento imediato em recomendação Classe I, nível B-NR, sem depender de proximidade textual."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "primeiros-socorros-avc-usar-fast-ou-cincinnati-aha-2024",
+        "por_que": "Ancora o instrumento de reconhecimento em recomendação Classe I, nível B-NR."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "primeira-hora-na-suspeita-de-avc-agudo",
+        "por_que": "Converte o protocolo em gates verificáveis antes de qualquer decisão de reperfusão."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "ecass-iii-alteplase-janela-estendida-avc-isquemico",
+        "por_que": "É o ensaio original já presente no corpus que sustenta a janela de alteplase de 3 a 4,5 horas em pacientes selecionados."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "alteplase",
+        "por_que": "Liga a decisão de reperfusão ao verbete farmacológico existente, sem autorizar uso antes de neuroimagem e checagem de critérios."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "tenecteplase",
+        "por_que": "Liga à alternativa aceita pela diretriz AHA/ASA 2026 na janela de 4,5 horas, preservando a diferença entre protocolo clínico e rotulagem local."
+      }
+    ]
   }
 ]

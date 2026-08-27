@@ -36,8 +36,8 @@ jobs:
       - name: Enforce scientific corpus baseline
         run: >-
           python scripts/content_inventory.py
-          --minimum-records 9452
-          --minimum-files 2185
+          --minimum-records 9463
+          --minimum-files 2187
           --strict
 
       - name: Audit canonical Tudo com Tudo references
@@ -48,8 +48,11 @@ jobs:
 
           with open("tudo-com-tudo-audit.json", encoding="utf-8") as stream:
               audit = json.load(stream)
-          assert audit["total_items"] == 9452, audit["total_items"]
-          assert audit["review_status"] == {"revisado": 9452}, audit["review_status"]
-          assert audit["topic_coverage"]["covered"] == 9452, audit["topic_coverage"]
+          assert audit["total_items"] == 9463, audit["total_items"]
+          assert audit["review_status"] == {
+              "pendente_revisao": 11,
+              "revisado": 9452,
+          }, audit["review_status"]
+          assert audit["topic_coverage"]["covered"] == 9463, audit["topic_coverage"]
           assert audit["broken_references"] == [], audit["broken_references"][:10]
           PY
