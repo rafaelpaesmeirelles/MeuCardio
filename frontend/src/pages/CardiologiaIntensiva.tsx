@@ -21,6 +21,8 @@ const CALCULADORAS_DIRETAS = new Set([
   "acidose-metabolica-winter-anion-gap-uco",
   "oxigenacao-pao2-fio2-sdra-uco",
   "lesao-renal-aguda-kdigo-uco",
+  "brash-reconhecimento-padrao-uco",
+  "hipercalemia-seguranca-uco",
 ]);
 
 type Documento = {
@@ -155,7 +157,7 @@ export default function CardiologiaIntensiva() {
 
       <div className="cc-metrics" aria-label="Cobertura da central intensiva">
         <ClinicalMetric label="Conteúdos publicados" value={(documentos ?? []).length} detail="Tema canônico Terapia intensiva" icon="conhecimento" />
-        <ClinicalMetric label="Calculadoras operacionais" value={calculadoras.length} detail="Ventilação, infusão e choque" icon="calculadora" />
+        <ClinicalMetric label="Calculadoras operacionais" value={calculadoras.length} detail="Ventilação, infusão, choque e segurança metabólica" icon="calculadora" />
         <ClinicalMetric label="Checklists conectados" value={checklists.length} detail="Modelos publicados no mesmo tema" icon="check" />
       </div>
 
@@ -171,6 +173,8 @@ export default function CardiologiaIntensiva() {
           <ClinicalContextLink to="/calculadoras/oxigenacao-pao2-fio2-sdra-uco" icon="calculadora" title="Oxigenação e SDRA" detail="PaO₂/FiO₂, suporte e gate de edema cardiogênico" />
           <ClinicalContextLink to="/calculadoras/acidose-metabolica-winter-anion-gap-uco" icon="calculadora" title="Acidose metabólica" detail="Winter, ânion gap e correção opcional por albumina" />
           <ClinicalContextLink to="/calculadoras/lesao-renal-aguda-kdigo-uco" icon="calculadora" title="Lesão renal aguda" detail="KDIGO por creatinina, diurese e componente mais grave" />
+          <ClinicalContextLink to="/calculadoras/hipercalemia-seguranca-uco" icon="calculadora" title="Hipercalemia" detail="Gravidade, amostra, ECG, parada e monitorização sem prescrição automática" />
+          <ClinicalContextLink to="/calculadoras/brash-reconhecimento-padrao-uco" icon="emergencia" title="Padrão BRASH" detail="Bradicardia, rim, bloqueio nodal, choque e potássio sem escore diagnóstico" />
           <ClinicalContextLink to="/calculadoras/vasoativos-choque-cardiogenico-acc-2025" icon="calculadora" title="Vasoativos no choque" detail="Dose-alvo, concentração e conversão para mL/h" />
           <ClinicalContextLink to="/calculadoras/infusao-continua-peso" icon="medicamento" title="Central de infusões" detail="Vasopressores, inotrópicos, vasodilatadores e sedação" />
           <ClinicalContextLink to="/emergencia" icon="emergencia" title="Emergência cardiovascular" detail="Protocolos de risco imediato e fluxos críticos" />

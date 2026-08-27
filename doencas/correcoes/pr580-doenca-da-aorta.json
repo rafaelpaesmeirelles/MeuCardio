@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "doenca-da-aorta",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Verbete-hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão técnica e científica dirigida concluída em 27/08/2026: corrigidos intervalos de vigilância do AAA conforme sexo/diâmetro, linguagem de TTE para vigilância distal, algoritmo ADD-RS/D-dímero, regra de dor isolada, especificidade da regra de instabilidade, interpretação do crescimento torácico e incerteza dos dados de EVAR em nonagenários. Publicação autorizada pelo responsável médico nesta sessão."
+    },
+    "replace": [
+      {
+        "old": "3,0-3,9 cm: reavaliação a cada 2-3 anos",
+        "new": "3,0-3,9 cm: ultrassonografia a cada 3 anos"
+      },
+      {
+        "old": "4,0-4,4 cm: reavaliação a cada 1-2 anos",
+        "new": "40-<45 mm em mulheres e 40-<50 mm em homens: ultrassonografia anual"
+      },
+      {
+        "old": "4,5 cm até o limiar de reparo: reavaliação a cada 6-12 meses",
+        "new": "45-50 mm em mulheres e 50-55 mm em homens: ultrassonografia a cada 6 meses"
+      },
+      {
+        "old": "formalmente contraindicado (Classe III) como método isolado de vigilância",
+        "new": "não recomendado (Classe III) como método isolado de vigilância"
+      },
+      {
+        "old": "TTE é contraindicado para vigilância de arco, aorta ascendente distal e descendente",
+        "new": "TTE não é recomendado como método isolado para vigilância de arco, aorta ascendente distal e descendente"
+      },
+      {
+        "old": "ADD-RS 0-1 e estável: dosar D-dímero — se ≥500 ng/mL FEU, prosseguir para angiotomografia; abaixo desse valor, risco considerado muito baixo e a imagem pode ser dispensada, investigando diagnóstico alternativo",
+        "new": "ADD-RS <2 e paciente estável: realizar avaliação multiparamétrica, integrando ECG, radiografia/laboratório, D-dímero e POCUS quando disponível. D-dímero <500 ng/mL FEU não deve funcionar como gate isolado de exclusão; se a avaliação mantiver suspeita ou o D-dímero estiver elevado, prosseguir para angiotomografia"
+      },
+      {
+        "old": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada — calcular ADD-RS, associar D-dímero se baixo risco, e obter angio-TC sincronizada ao ECG do pescoço à pelve como exame de primeira linha",
+        "new": "Dor torácica, dorsal ou abdominal de início súbito e de alto risco — calcular ADD-RS. ADD-RS ≥2 ou instabilidade direciona imagem aórtica imediata; ADD-RS <2 exige avaliação multiparamétrica antes de decidir angio-TC"
+      },
+      {
+        "old": "Crescimento documentado do aneurisma ≥1,0 cm em 12 meses na aorta abdominal, ou ≥3-5 mm/ano na aorta torácica — indicação de reparo independente do diâmetro absoluto atingido",
+        "new": "Crescimento documentado do aneurisma abdominal ≥1,0 cm em 12 meses exige reavaliação para reparo; na aorta torácica, crescimento ≥3 mm/ano é fator de alto risco que exige reimagem mais estreita e reavaliação conjunta de diâmetro, etiologia e demais fatores — não é indicação cirúrgica universal isolada em qualquer diâmetro"
+      }
+    ],
+    "assistant_rules": {
+      "aorta-suspeita-dissecacao-aguda": {
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dor lancinante/rasgante de início súbito é característica de alto risco e exige estratificação imediata para síndrome aórtica aguda"
+          ],
+          "emergency_flow": [
+            "Calcular ADD-RS sem inferir indicação de angio-TC apenas pela dor isolada. Se ADD-RS ≥2 ou houver instabilidade, obter imagem aórtica imediata; se ADD-RS <2 e estável, integrar avaliação multiparamétrica e D-dímero antes da decisão de TC"
+          ],
+          "suggested_tests": [
+            "ADD-RS e avaliação multiparamétrica; D-dímero quando ADD-RS <2 e paciente estável"
+          ]
+        }
+      },
+      "aorta-instabilidade-ruptura": {
+        "when": {
+          "all": [
+            {"field": "instability_shock", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "sudden_tearing_pain", "op": "truthy"},
+            {"field": "known_aneurysm_surveillance", "op": "truthy"},
+            {"field": "pulsatile_abdominal_mass", "op": "truthy"}
+          ]
+        }
+      },
+      "aorta-nonagenario-decisao-reparo": {
+        "add": {
+          "messages": [
+            "Idade isolada não contraindica reparo eletivo (EVAR); decidir por fragilidade, anatomia, expectativa de vida e probabilidade de retorno ao domicílio em decisão compartilhada"
+          ],
+          "supporting": [
+            "Em nonagenários selecionados para EVAR eletivo, um estudo ajustado não detectou associação independente entre idade ≥90 anos e mortalidade em 30 dias; o intervalo de confiança foi amplo e não demonstra equivalência de mortalidade com pacientes mais jovens. Maior risco de destino não domiciliar e complicações deve integrar a decisão."
+          ]
+        }
+      }
+    }
+  }
+]
