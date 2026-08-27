@@ -30,6 +30,7 @@ export default function Apresentacao() {
   const [tema, setTema] = useState("");
   const [selecionado, setSelecionado] = useState<Documento | null>(null);
   const [anotacao, setAnotacao] = useState("");
+  const [formato, setFormato] = useState<"pdf" | "pptx">("pdf");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
   const [tentativa, setTentativa] = useState(0);
@@ -63,9 +64,9 @@ export default function Apresentacao() {
     try {
       const blob = await api.blobPost(
         `/biblioteca/${selecionado.slug}/apresentacao`,
-        { anotacao: anotacao.trim() },
+        { anotacao: anotacao.trim(), formato },
       );
-      baixar(blob, `${selecionado.slug}-apresentacao.pdf`);
+      baixar(blob, `${selecionado.slug}-apresentacao.${formato}`);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível gerar a apresentação.");
     } finally {
@@ -81,8 +82,9 @@ export default function Apresentacao() {
       <p className="eyebrow">Aula e round</p>
       <h1>Modo Apresentação</h1>
       <p style={{ color: "var(--texto-secundario)", maxWidth: "68ch" }}>
-        Escolha um documento ou fluxograma publicado e gere um PDF em paisagem,
-        com a marca Corvia, seus dados profissionais e sua logo cadastrada.
+        Escolha um documento ou fluxograma publicado e gere uma apresentação em
+        PDF pronto para projetar ou PowerPoint editável, com a marca Corvia,
+        seus dados profissionais e sua logo cadastrada.
       </p>
 
       <div className="grade grade--2" style={{ alignItems: "start", marginTop: "1rem" }}>
@@ -154,6 +156,18 @@ export default function Apresentacao() {
               </p>
               {selecionado.summary && <p>{selecionado.summary}</p>}
 
+              <fieldset style={{ border: 0, padding: 0, margin: "0.8rem 0" }}>
+                <legend style={{ fontWeight: 700, marginBottom: "0.45rem" }}>Formato do arquivo</legend>
+                <label style={{ display: "flex", alignItems: "flex-start", gap: 9, fontWeight: 400, marginBottom: "0.45rem" }}>
+                  <input type="radio" name="formato-apresentacao-pagina" checked={formato === "pdf"} onChange={() => setFormato("pdf")} />
+                  <span><strong>PDF</strong><br /><span className="dado">Pronto para projetar, com diagramação fechada.</span></span>
+                </label>
+                <label style={{ display: "flex", alignItems: "flex-start", gap: 9, fontWeight: 400 }}>
+                  <input type="radio" name="formato-apresentacao-pagina" checked={formato === "pptx"} onChange={() => setFormato("pptx")} />
+                  <span><strong>PowerPoint editável (.pptx)</strong><br /><span className="dado">Permite reorganizar, cortar e complementar os slides.</span></span>
+                </label>
+              </fieldset>
+
               <label htmlFor="anotacao-apresentacao" style={{ marginTop: "0.8rem" }}>
                 Anotação do apresentador (opcional)
               </label>
@@ -171,7 +185,7 @@ export default function Apresentacao() {
 
               {erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
               <button className="botao" style={{ width: "100%", marginTop: "0.9rem" }} onClick={gerar} disabled={gerando}>
-                {gerando ? "Gerando PDF…" : "Gerar apresentação em PDF"}
+                {gerando ? "Gerando arquivo…" : formato === "pptx" ? "Gerar PowerPoint editável" : "Gerar apresentação em PDF"}
               </button>
             </>
           )}

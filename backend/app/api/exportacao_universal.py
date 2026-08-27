@@ -1,10 +1,10 @@
-"""Exportação universal e montagem de PDF do CorVIA.
+"""Exportação universal em PDF, PowerPoint e Word do CorVIA.
 
 A API recebe apenas identificadores de objetos canônicos. O texto exportado é
 resolvido novamente no servidor a partir do conteúdo publicado; nunca recebe
 HTML/prosa clínica do cliente. Isso mantém a mesma barreira editorial da UI.
 
-Assinantes com CorVIA Mail ativo também podem enviar o PDF diretamente pela
+Assinantes com CorVIA Mail ativo também podem enviar o arquivo diretamente pela
 própria caixa nativa. A checagem do add-on e da caixa é feita no servidor; o
 botão do frontend é apenas conveniência visual, nunca controle de acesso.
 """
@@ -23,6 +23,7 @@ from app.models.audit import AuditLog
 from app.services import anexo_email_proprio, mail360
 from app.services.email_signature import montar_assinatura_html, montar_corpo_com_assinatura
 from app.services.exportacao_conteudo import TIPOS_EXPORTAVEIS, catalogo, gerar_pdf, resolver_conteudo
+from app.services.exportacao_office import gerar_docx, gerar_pptx
 from app.services.mail360 import Mail360Error
 
 router = APIRouter(prefix="/api/exportar", tags=["exportação"])
@@ -54,6 +55,15 @@ class PedidoExportacao(BaseModel):
     itens: list[ItemExportacao] = Field(min_length=1, max_length=50)
     incluir_dados_assinante: bool = False
     titulo: str | None = Field(default=None, max_length=180)
+    formato: str = Field(default="pdf")
+
+    @field_validator("formato")
+    @classmethod
+    def formato_valido(cls, valor: str) -> str:
+        valor = (valor or "pdf").strip().lower()
+        if valor not in {"pdf", "pptx", "docx"}:
+            raise ValueError("Formato inválido. Use 'pdf', 'pptx' ou 'docx'.")
+        return valor
 
     @field_validator("itens")
     @classmethod
@@ -105,12 +115,14 @@ class ArquivoGerado(BaseModel):
     conteudo: bytes
     quantidade: int
     itens: list[dict]
+    formato: str
+    media_type: str
 
 
-def _arquivo(nome: str) -> str:
+def _arquivo(nome: str, formato: str) -> str:
     valor = unicodedata.normalize("NFKD", nome).encode("ascii", "ignore").decode()
     valor = re.sub(r"[^A-Za-z0-9]+", "-", valor).strip("-").lower()[:90]
-    return f"{valor or 'conteudo-corvia'}.pdf"
+    return f"{valor or 'conteudo-corvia'}.{formato}"
 
 
 def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerado:
@@ -126,7 +138,7 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
 
     # Fail closed: não gera um arquivo parcial silenciosamente. Se o usuário
     # selecionou 8 itens e um foi despublicado entre a seleção e o clique,
-    # precisa saber; omitir esse item sem aviso faria o PDF parecer completo.
+    # precisa saber; omitir esse item sem aviso faria o arquivo parecer completo.
     if ausentes:
         raise HTTPException(
             status_code=409,
@@ -137,9 +149,9 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
         )
 
     try:
-        conteudo = gerar_pdf(
-            resolvidos,
-            user=user,
+        geradores = {"pdf": gerar_pdf, "pptx": gerar_pptx, "docx": gerar_docx}
+        conteudo = geradores[dados.formato](
+            resolvidos, user=user,
             incluir_dados_assinante=dados.incluir_dados_assinante,
             titulo=dados.titulo,
         )
@@ -148,11 +160,17 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
 
     titulo = (dados.titulo or (resolvidos[0].titulo if len(resolvidos) == 1 else "Seleção de conteúdo CorVIA")).strip()
     return ArquivoGerado(
-        nome=_arquivo(titulo),
+        nome=_arquivo(titulo, dados.formato),
         titulo=titulo,
         conteudo=conteudo,
         quantidade=len(resolvidos),
         itens=[{"tipo": item.tipo, "slug": item.slug} for item in resolvidos],
+        formato=dados.formato,
+        media_type={
+            "pdf": "application/pdf",
+            "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        }[dados.formato],
     )
 
 
@@ -181,7 +199,7 @@ def disponibilidade_corvia_mail(
     A exportação usa a sessão principal do CorVIA e pode enviar diretamente
     apenas pela caixa nativa do próprio usuário. A senha/sessão específica da
     caixa continua necessária para abrir e navegar no cliente de e-mail, mas
-    não para anexar/enviar um PDF que o próprio backend acabou de gerar.
+    não para anexar/enviar um arquivo que o próprio backend acabou de gerar.
     """
     if getattr(user, "investidor", False):
         return {"disponivel": False, "motivo": "Recurso indisponível no modo investidor.", "email_address": None}
@@ -219,12 +237,13 @@ def exportar_conteudo(
             "itens": arquivo.itens,
             "incluir_dados_assinante": dados.incluir_dados_assinante,
             "bytes": len(arquivo.conteudo),
+            "formato": arquivo.formato,
         },
     ))
     db.commit()
     return Response(
         content=arquivo.conteudo,
-        media_type="application/pdf",
+        media_type=arquivo.media_type,
         headers={"Content-Disposition": f'attachment; filename="{arquivo.nome}"'},
     )
 
@@ -235,9 +254,9 @@ def enviar_conteudo_por_email(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    """Gera e envia o mesmo PDF diretamente pela caixa nativa CorVIA Mail.
+    """Gera e envia o formato escolhido diretamente pela caixa nativa CorVIA Mail.
 
-    O PDF é regenerado no servidor no momento do envio. Portanto não existe um
+    O arquivo é regenerado no servidor no momento do envio. Portanto não existe um
     caminho em que o cliente possa trocar o binário por outro arquivo ou mandar
     conteúdo clínico arbitrário sob a identidade do CorVIA.
     """
@@ -261,7 +280,7 @@ def enviar_conteudo_por_email(
 
     arquivo = _gerar_do_pedido(dados, db, user)
     if len(arquivo.conteudo) > 15 * 1024 * 1024:
-        raise HTTPException(status_code=413, detail="O PDF gerado excede o limite de 15 MB para anexos do CorVIA Mail.")
+        raise HTTPException(status_code=413, detail="O arquivo gerado excede o limite de 15 MB para anexos do CorVIA Mail.")
 
     try:
         anexo = anexo_email_proprio.preparar(
@@ -293,7 +312,7 @@ def enviar_conteudo_por_email(
 
     # Não persiste endereço do destinatário em claro no audit log. O provedor
     # de e-mail já registra a mensagem na caixa do titular; para auditoria do
-    # produto basta saber que houve envio, quais objetos originaram o PDF e o
+    # produto basta saber que houve envio, quais objetos originaram o arquivo e o
     # tamanho do arquivo.
     db.add(AuditLog(
         user_id=user.id,
@@ -304,6 +323,7 @@ def enviar_conteudo_por_email(
             "itens": arquivo.itens,
             "incluir_dados_assinante": dados.incluir_dados_assinante,
             "bytes": len(arquivo.conteudo),
+            "formato": arquivo.formato,
             "anexo_file_id": anexo.file_id,
             "com_cc": bool(dados.cc),
             "com_cco": bool(dados.cco),

@@ -1,10 +1,14 @@
-"""Exportação universal: conteúdo canônico → PDF → download ou CorVIA Mail.
+"""Exportação universal: conteúdo canônico → PDF/PPTX/DOCX ou CorVIA Mail.
 
 Os testes usam um documento clínico mínimo publicado e não dependem do corpus
 carregado no banco de teste. A rota é exercitada de ponta a ponta com a mesma
 dependência global de assinatura principal usada em produção.
 """
+from io import BytesIO
+
 import pytest
+from docx import Document as WordDocument
+from pptx import Presentation
 from sqlalchemy import text
 
 from app.models.content import Document
@@ -87,6 +91,69 @@ class TestCatalogoEPdf:
         assert resposta.headers["content-type"].startswith("application/pdf")
         assert resposta.content.startswith(b"%PDF")
         assert len(resposta.content) > 1000
+
+    @pytest.mark.parametrize(
+        ("formato", "content_type"),
+        [
+            ("pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"),
+            ("docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"),
+        ],
+    )
+    def test_exporta_formato_office_nativo_editavel(
+        self, client, db, criar_usuario, formato, content_type,
+    ):
+        user, token = criar_usuario(email=f"exportador-{formato}@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, formato)
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "incluir_dados_assinante": True,
+                "formato": formato,
+            },
+        )
+
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.headers["content-type"] == content_type
+        assert resposta.headers["content-disposition"].endswith(f'.{formato}"')
+        assert resposta.content[:2] == b"PK"
+
+        if formato == "pptx":
+            arquivo = Presentation(BytesIO(resposta.content))
+            texto = "\n".join(
+                shape.text_frame.text
+                for slide in arquivo.slides
+                for shape in slide.shapes
+                if shape.has_text_frame
+            )
+            assert len(arquivo.slides) >= 5
+        else:
+            arquivo = WordDocument(BytesIO(resposta.content))
+            texto = "\n".join(paragrafo.text for paragrafo in arquivo.paragraphs)
+            assert arquivo.sections
+
+        assert "Insuficiência cardíaca" in texto
+        assert "Texto clínico publicado" in texto
+        assert "Diretriz de teste 2026" in texto
+        assert "não cria nem atualiza recomendações clínicas" in texto
+
+    def test_formato_invalido_e_rejeitado(self, client, db, criar_usuario):
+        user, token = criar_usuario(email="exportador-invalido@teste.local")
+        _assinatura_principal(db, user)
+        doc = _documento(db, "invalido")
+
+        resposta = client.post(
+            "/api/exportar/conteudo",
+            headers=_headers(token),
+            json={
+                "itens": [{"tipo": "documento", "slug": doc.slug}],
+                "formato": "txt",
+            },
+        )
+        assert resposta.status_code == 422
 
     def test_fail_closed_quando_item_nao_esta_publicado(self, client, db, criar_usuario):
         user, token = criar_usuario(email="exportador-retido@teste.local")
