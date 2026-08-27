@@ -75,12 +75,12 @@ def test_slug_e_genuinamente_novo():
 def test_marcacao_editorial_correta():
     item = _load_doencas()[NOVO_SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "geral"
     assert item.get("review_note")
     assert item.get("source_refs") and len(item["source_refs"]) >= 5
-    assert item.get("version") == 1
+    assert item.get("version") == 2
 
 
 def test_profundidade_minima_e_nao_e_resumo():
@@ -161,3 +161,26 @@ def test_nao_duplica_escopo_de_gravidez_tavi_idoso_fragilidade_ou_endocardite():
     item = _load_doencas()[NOVO_SLUG]
     related = set(item.get("related_document_slugs") or [])
     assert "estenose-mitral-e-aortica-na-gravidez" not in related
+
+
+def test_bloqueios_clinicos_e_editoriais_da_revisao_foram_corrigidos():
+    item = _load_doencas()[NOVO_SLUG]
+    serializado = json.dumps(item, ensure_ascii=False).casefold()
+
+    assert item["category"] == "valvopatia"
+    assert item["review_status"] == "revisado"
+    assert item["version"] == 2
+    assert "dobutamina não é o exame-padrão desse fenótipo" in item["diagnostic_approach"]["estenose_aortica"]
+    assert "baixo fluxo/baixo gradiente com feve preservada; formalmente" not in serializado
+
+    regras = {r["id"]: r for r in item["assistant_rules"]}
+    assert {"protese_biologica_janela_3_meses_posicao_ausente",
+            "bioprotese_aortica_menor_3_meses",
+            "bioprotese_mitral_tricuspide_menor_3_meses",
+            "planejamento_gestacional_escolha_protese",
+            "idade_menor_60_escolha_compartilhada",
+            "idade_60_ou_mais_escolha_compartilhada"} <= set(regras)
+    assert {"field": "protese_posicao", "op": "missing"} in regras[
+        "protese_biologica_janela_3_meses_posicao_ausente"
+    ]["when"]["all"]
+    assert "aproximadamente a cada 6 meses" in item["monitoring"][0]

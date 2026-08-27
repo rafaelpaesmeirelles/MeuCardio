@@ -53,9 +53,6 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
-        # Hub Tudo com Tudo de valvopatias, 27/08/2026 (PR próprio, base main):
-        # slug novo, ver review_note.
-        "valvopatias",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }

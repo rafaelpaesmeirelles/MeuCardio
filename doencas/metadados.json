@@ -20068,7 +20068,7 @@
       "doença valvar"
     ],
     "area": "geral",
-    "category": "doenca_valvar",
+    "category": "valvopatia",
     "subtype": "multiplas_lesoes",
     "prevalence_rank": 5,
     "completeness": "completo",
@@ -20087,10 +20087,10 @@
     ],
     "diagnostic_approach": {
       "geral": "O ecocardiograma transtorácico (ETT) é o exame de primeira linha para diagnóstico, gravidade e prognóstico em todas as valvopatias, complementado por história e exame físico minuciosos. Ressonância magnética cardíaca, tomografia computadorizada, fluoroscopia e biomarcadores fornecem informação adicional em pacientes selecionados. Teste de esforço deve ser amplamente usado em pacientes assintomáticos para desmascarar limitação funcional não percebida. A decisão terapêutica, sobretudo na fronteira entre vigilância e intervenção, deve envolver o Heart Team multidisciplinar (cardiologia clínica, intervencionista, cirurgia cardíaca) em Centros de Valva Cardíaca de volume adequado — recomendação Classe I em toda a diretriz ESC/EACTS 2021/2025.",
-      "estenose_aortica": "Critérios ecocardiográficos de gravidade (ESC/EACTS 2021, mantidos em 2025): velocidade de pico transvalvar ≥4,0 m/s, gradiente médio ≥40 mmHg, área valvar <1,0 cm² e área indexada <0,6 cm²/m². Discordância entre esses parâmetros ocorre em 20-30% dos casos, tipicamente área <1 cm² com gradiente <40 mmHg — decidir intervenção só por gradiente/velocidade, sem a área valvar, é armadilha reconhecida. Dois subtipos de baixo fluxo/baixo gradiente (área ≤1 cm², gradiente médio <40 mmHg, volume sistólico indexado ≤35 mL/m²) exigem investigação à parte — com FEVE reduzida (<50%) ou preservada (≥50%), esta última exigindo ecocardiograma sob estresse com dobutamina ou escore de cálcio por tomografia para diferenciar estenose verdadeira de pseudoestenose antes de indicar intervenção.",
+      "estenose_aortica": "Critérios ecocardiográficos de gravidade (ESC/EACTS 2021, mantidos em 2025): velocidade de pico transvalvar ≥4,0 m/s, gradiente médio ≥40 mmHg, área valvar <1,0 cm² e área indexada <0,6 cm²/m². Discordância entre esses parâmetros ocorre em 20-30% dos casos, tipicamente área <1 cm² com gradiente <40 mmHg — decidir intervenção só por gradiente/velocidade, sem a área valvar, é armadilha reconhecida. Dois subtipos de baixo fluxo/baixo gradiente (área ≤1 cm², gradiente médio <40 mmHg, volume sistólico indexado ≤35 mL/m²) exigem investigação à parte. Com FEVE reduzida (<50%), o ecocardiograma de baixa dose com dobutamina avalia reserva de fluxo e ajuda a distinguir estenose verdadeiramente grave de pseudoestenose. Com FEVE preservada (≥50%), a confirmação deve integrar medidas ecocardiográficas em repouso, condições de fluxo e pressão, morfologia valvar e escore de cálcio valvar por tomografia quando a discordância persistir; dobutamina não é o exame-padrão desse fenótipo.",
       "regurgitacao_aortica": "Critérios combinam achados qualitativos (morfologia valvar anormal, jato de cor amplo, fluxo reverso holodiastólico na aorta descendente com velocidade >20 cm/s), semiquantitativos (vena contracta >6 mm, tempo de meia-pressão <200 ms) e quantitativos (EROA ≥30 mm², volume regurgitante ≥60 mL/batimento, dilatação de VE). Não há corte numérico próprio da diretriz de valvopatia para regurgitação aórtica aguda — a avaliação remete às diretrizes específicas de endocardite infecciosa e de síndrome aórtica aguda/dissecção.",
       "estenose_mitral": "Área valvar mitral (AVM) ≤1,5 cm² por planimetria 2D (método mais usado) define gravidade clínica na forma reumática; ecocardiografia 3D e transesofágica agregam valor. O escore de morfologia valvar de Wilkins (4 componentes — mobilidade, espessamento, calcificação do folheto e do aparato subvalvular, 1 a 4 pontos cada, total 4-16) prediz sucesso de comissurotomia mitral percutânea: escore ≤8 é favorável, >8 é critério de anatomia desfavorável junto com calcificação Cormier grupo 3 e insuficiência tricúspide grave. Ecocardiograma transesofágico é obrigatório antes de comissurotomia percutânea para excluir trombo em átrio esquerdo. Na forma degenerativa por calcificação do anel mitral (MAC), a avaliação por ETT é limitada por sombra acústica da calcificação, exigindo ETE liberal e tomografia cardíaca sincronizada ao ECG para planejamento de intervenção, já que não há fusão comissural a tratar por via percutânea.",
-      "ecocardiograma_sob_estresse": "Indicações específicas por lesão (Diretriz Brasileira de Ergometria, SBC 2024): na estenose mitral, discordância sintoma-gravidade com área >1,5 cm² (Classe I); assintomático com área <1 cm² (IIa); na estenose aórtica moderada/acentuada assintomática (IIa) e para diferenciar estenose verdadeira de pseudoestenose em baixo fluxo/baixo gradiente com FE preservada (IIb); na regurgitação aórtica/mitral grave assintomática, para avaliar sintomas induzidos por esforço (IIa). Duas contraindicações formais Classe III: não realizar em estenose aórtica grave SINTOMÁTICA (o sintoma já define conduta), e não usar o método para QUANTIFICAR regurgitação aórtica (ele avalia sintoma e capacidade funcional, não o grau da regurgitação). Em prótese valvar, indicado quando o gradiente transprotético em repouso está na faixa intermediária (aórtica 20-40 mmHg, mitral 5-10 mmHg) para avaliar incompatibilidade paciente-prótese.",
+      "ecocardiograma_sob_estresse": "Indicações específicas por lesão (Diretriz Brasileira de Ergometria, SBC 2024): na estenose mitral, discordância sintoma-gravidade com área >1,5 cm² (Classe I); assintomático com área <1 cm² (IIa); na estenose aórtica moderada/acentuada assintomática (IIa) e, com dobutamina em baixa dose, para diferenciar estenose verdadeira de pseudoestenose em baixo fluxo/baixo gradiente com FEVE reduzida; na regurgitação aórtica/mitral grave assintomática, para avaliar sintomas induzidos por esforço (IIa). Duas contraindicações formais Classe III: não realizar em estenose aórtica grave SINTOMÁTICA (o sintoma já define conduta), e não usar o método para QUANTIFICAR regurgitação aórtica (ele avalia sintoma e capacidade funcional, não o grau da regurgitação). Em prótese valvar, indicado quando o gradiente transprotético em repouso está na faixa intermediária (aórtica 20-40 mmHg, mitral 5-10 mmHg) para avaliar incompatibilidade paciente-prótese.",
       "angiotomografia_cardiaca": "Essencial no planejamento de TAVI (medidas do anel, padrão de calcificação da zona de implante, risco de obstrução coronária, via de acesso) e na avaliação de calcificação anular mitral; a diretriz 2025 detalha 'anatomia adequada' para TAVI transfemoral como a combinação desses fatores anatômicos com viabilidade de acesso.",
       "cateterismo_e_outros": "Cateterismo cardíaco é indicado quando o ecocardiograma é inconclusivo ou discordante da clínica, para avaliação hemodinâmica invasiva e coronariografia pré-operatória. Cinefluoroscopia avalia mobilidade de folheto/disco em suspeita de trombose de prótese mecânica, distinguindo obstrução de disfunção estrutural. Biomarcadores (peptídeo natriurético) apoiam a decisão de intervenção precoce em estenose aórtica assintomática grave quando marcadamente elevados sem outra causa, mas não substituem avaliação anatômica.",
       "disfuncao_de_biopotese_varc3": "A classificação VARC-3 (Généreux P et al., JACC 2021) separa disfunção de bioprótese em três categorias com implicações terapêuticas distintas: (1) deterioração estrutural da valva (SVD) — alteração morfológica irreversível do folheto, geralmente por calcificação/degeneração progressiva; (2) disfunção não estrutural — regurgitação paravalvular e mismatch paciente-prótese; (3) trombose e endocardite — potencialmente reversíveis com tratamento clínico. Tratar as três como equivalentes ('a prótese falhou') sem diferenciar o mecanismo leva a decisão terapêutica incorreta. Para bioprótese aórtica cirúrgica degenerada, o implante transcateter dentro da bioprótese existente (valve-in-valve) é opção validada pelo registro internacional VIVID (Dvir D et al., JAMA 2014), com sobrevida em 1 ano de 83,2%, pior quando a bioprótese original era pequena (mismatch prévio) e quando o modo de falha era estenose."
@@ -20102,13 +20102,13 @@
       "Insuficiência cardíaca com fração de ejeção preservada sem doença valvar estrutural relevante — dispneia de esforço sem lesão valvar significativa ao ecocardiograma.",
       "Sopros funcionais/inocentes de alto débito — anemia, gestação, febre, tireotoxicose — podem gerar sopro sistólico sem doença valvar estrutural subjacente.",
       "Cardiomiopatias infiltrativas/restritivas (amiloidose cardíaca) — sinais de congestão sistêmica e espessamento valvar podem mimetizar valvopatia direita ou estenose aórtica de baixo fluxo/baixo gradiente com FE preservada.",
-      "Pseudoestenose aórtica (baixo fluxo/baixo gradiente com FEVE preservada) versus estenose aórtica verdadeiramente grave — distinção que muda a conduta, feita por ecocardiograma sob estresse com dobutamina ou escore de cálcio, já que a pseudoestenose não se beneficia de troca valvar.",
+      "Pseudoestenose aórtica versus estenose aórtica verdadeiramente grave no baixo fluxo/baixo gradiente — com FEVE reduzida, a dobutamina em baixa dose avalia reserva de fluxo; com FEVE preservada, a distinção depende da integração dos parâmetros em repouso e do escore de cálcio por tomografia quando necessário. A pseudoestenose não se beneficia de troca valvar.",
       "Doença cardíaca carcinoide — causa sistêmica rara de valvopatia predominantemente direita (tricúspide/pulmonar), que deve ser suspeitada em paciente com flushing, diarreia ou tumor neuroendócrino conhecido antes de rotular a insuficiência tricúspide como primária isolada."
     ],
     "tests": [
       "Ecocardiograma transtorácico (ETT): exame de primeira linha para diagnóstico, quantificação de gravidade e seguimento em todas as valvopatias; limitado por janela acústica inadequada (obesidade, DPOC) e por sombra acústica em calcificação anular mitral grave, que compromete a confiabilidade da planimetria da área valvar.",
       "Ecocardiograma transesofágico (ETE): indicado quando o ETT é inconclusivo, obrigatório antes de comissurotomia mitral percutânea (exclusão de trombo em átrio esquerdo) e em planejamento/guia de procedimentos estruturais (fechamento de leak paravalvular, TEER); é semi-invasivo e geralmente requer sedação.",
-      "Ecocardiograma sob estresse (exercício ou dobutamina): útil para desmascarar sintomas em paciente 'assintomático' com valvopatia grave e para diferenciar estenose aórtica verdadeira de pseudoestenose em baixo fluxo/baixo gradiente com FE preservada; formalmente contraindicado (Classe III) em estenose aórtica grave já sintomática e não deve ser usado para quantificar regurgitação aórtica.",
+      "Ecocardiograma sob estresse (exercício ou dobutamina): útil para desmascarar sintomas em paciente 'assintomático' com valvopatia grave e, quando a FEVE está reduzida, para diferenciar estenose aórtica verdadeiramente grave de pseudoestenose em baixo fluxo/baixo gradiente; na FEVE preservada, usar avaliação integrada em repouso e tomografia com escore de cálcio quando necessário; formalmente contraindicado (Classe III) em estenose aórtica grave já sintomática e não deve ser usado para quantificar regurgitação aórtica.",
       "Angiotomografia cardíaca (TC com sincronismo ECG): essencial no planejamento de TAVI (dimensões do anel, padrão e extensão de calcificação, risco de obstrução coronária, via de acesso) e na caracterização de calcificação anular mitral; limitada por necessidade de função renal preservada e exposição a contraste iodado e radiação.",
       "Cateterismo cardíaco: indicado quando há discordância entre ecocardiograma e quadro clínico, para avaliação hemodinâmica invasiva direta e para coronariografia pré-operatória em candidatos a cirurgia valvar; é invasivo, com risco vascular e de embolização em valva estenótica calcificada.",
       "Cinefluoroscopia: útil na suspeita de trombose ou pannus em prótese mecânica, avaliando diretamente a mobilidade do folheto/disco protético; não diferencia por si só trombo de pannus, papel que cabe à tomografia cardíaca.",
@@ -20149,7 +20149,7 @@
       "Critérios formais de internação em valvopatia grave: descompensação hemodinâmica ou choque cardiogênico, edema agudo de pulmão, síncope de esforço em estenose aórtica grave sintomática, endocardite com repercussão hemodinâmica, e disfunção protética aguda (trombose ou deiscência) — a estenose aórtica grave assintomática isolada, por si só, não é critério de internação."
     ],
     "monitoring": [
-      "Ecocardiograma seriado por lesão e gravidade: grave assintomática a cada 6 meses (estenose aórtica) ou anual (demais lesões graves assintomáticas conforme critério específico), moderada anual a cada 2 anos, leve a cada 2-3 anos.",
+      "Ecocardiograma seriado por lesão e gravidade: estenose aórtica grave assintomática em geral a cada 6 meses; regurgitação mitral primária grave assintomática com função ventricular preservada requer avaliação clínica e ecocardiográfica aproximadamente a cada 6 meses; as demais lesões devem seguir intervalos específicos da valva, gravidade, função ventricular e evolução clínica, com antecipação diante de sintomas.",
       "Monitorização de INR ao longo da vida para todo portador de prótese mecânica, com faixa-alvo individualizada conforme tipo e posição da prótese e presença de fator pró-trombótico adicional — sem substituição por anticoagulante direto nem por dupla antiagregação.",
       "Vigilância de disfunção de bioprótese pela classificação VARC-3, distinguindo deterioração estrutural (irreversível, mecanismo predominante de estenose/regurgitação progressiva), disfunção não estrutural (regurgitação paravalvular, mismatch paciente-prótese) e trombose/endocardite (potencialmente reversíveis com tratamento clínico) — a distinção muda a conduta diante de bioprótese com gradiente elevado ou nova regurgitação.",
       "Reavaliação anual da prótese valvar, mecânica ou biológica, com ecocardiograma antecipado diante de qualquer sintoma cardíaco novo, independentemente do tempo desde o implante.",
@@ -20380,7 +20380,9 @@
         "id": "idade",
         "label": "Idade do paciente, em anos",
         "type": "number",
-        "section": "Fatores decisórios de prótese"
+        "section": "Fatores decisórios de prótese",
+        "min": 0,
+        "max": 120
       }
     ],
     "assistant_rules": [
@@ -20449,40 +20451,6 @@
         }
       },
       {
-        "id": "dispneia_subita_em_protese_mecanica",
-        "priority": 90,
-        "when": {
-          "all": [
-            {
-              "field": "protese_mecanica_presente",
-              "op": "truthy"
-            },
-            {
-              "field": "dispneia_subita",
-              "op": "truthy"
-            }
-          ]
-        },
-        "add": {
-          "risk": "urgente",
-          "red_flags": [
-            "Dispneia súbita ou recente em portador de prótese valvar mecânica"
-          ],
-          "suggested_tests": [
-            "Ecocardiograma transtorácico e transesofágico urgentes",
-            "Cinefluoroscopia ou tomografia cardíaca quando disponível, para diferenciar trombo de pannus"
-          ],
-          "differentials": [
-            "Trombose de prótese valvar mecânica",
-            "Endocardite protética com disfunção aguda",
-            "Descompensação de insuficiência cardíaca por outra causa"
-          ],
-          "messages": [
-            "Dispneia recente em portador de prótese mecânica deve ser prontamente investigada como possível trombose valvar."
-          ]
-        }
-      },
-      {
         "id": "sincope_em_estenose_aortica_grave",
         "priority": 95,
         "when": {
@@ -20516,6 +20484,66 @@
           ],
           "messages": [
             "Síncope reclassifica a estenose aórtica grave como sintomática e indica avaliação para intervenção sem demora."
+          ]
+        }
+      },
+      {
+        "id": "edema_agudo_pulmao",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_edema_agudo_pulmao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de edema agudo de pulmão em paciente valvopata"
+          ],
+          "emergency_flow": [
+            "Estabilização respiratória e hemodinâmica imediata em ambiente de emergência",
+            "Ecocardiograma urgente para identificar o mecanismo, seja regurgitação aguda grave, disfunção protética aguda ou descompensação da lesão valvar de base",
+            "Avaliação para intervenção valvar não eletiva conforme a causa identificada"
+          ],
+          "messages": [
+            "Edema agudo de pulmão em valvopatia grave é critério de internação, não indicação de seguimento ambulatorial."
+          ]
+        }
+      },
+      {
+        "id": "dispneia_subita_em_protese_mecanica",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "protese_mecanica_presente",
+              "op": "truthy"
+            },
+            {
+              "field": "dispneia_subita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dispneia súbita ou recente em portador de prótese valvar mecânica"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico e transesofágico urgentes",
+            "Cinefluoroscopia ou tomografia cardíaca quando disponível, para diferenciar trombo de pannus"
+          ],
+          "differentials": [
+            "Trombose de prótese valvar mecânica",
+            "Endocardite protética com disfunção aguda",
+            "Descompensação de insuficiência cardíaca por outra causa"
+          ],
+          "messages": [
+            "Dispneia recente em portador de prótese mecânica deve ser prontamente investigada como possível trombose valvar."
           ]
         }
       },
@@ -20561,6 +20589,32 @@
         }
       },
       {
+        "id": "suspeita_endocardite_protese",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_endocardite_em_protese",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita clínica de endocardite infecciosa sobre prótese valvar"
+          ],
+          "emergency_flow": [
+            "Hemoculturas seriadas antes de iniciar antibiótico",
+            "Ecocardiograma transesofágico, mais sensível que o transtorácico para avaliar prótese, buscando vegetação, abscesso ou deiscência",
+            "Avaliação conjunta com Heart Team e infectologia para definir tratamento clínico versus cirúrgico"
+          ],
+          "messages": [
+            "Febre em portador de prótese valvar deve ser investigada como endocardite protética até prova em contrário."
+          ]
+        }
+      },
+      {
         "id": "dispneia_esforco_em_estenose_aortica_grave",
         "priority": 80,
         "when": {
@@ -20596,59 +20650,109 @@
         }
       },
       {
-        "id": "edema_agudo_pulmao",
-        "priority": 95,
+        "id": "estenose_aortica_assintomatica_criterio_precoce",
+        "priority": 70,
         "when": {
           "all": [
             {
-              "field": "sinais_edema_agudo_pulmao",
-              "op": "truthy"
+              "field": "lesao_valvar_principal",
+              "op": "eq",
+              "value": "estenose_aortica"
+            },
+            {
+              "field": "gravidade_lesao",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "criterios_intervencao_precoce_ea",
+              "op": "contains",
+              "value": "teste_esforco_anormal"
             }
           ]
         },
         "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Sinais de edema agudo de pulmão em paciente valvopata"
+          "risk": "prioritario",
+          "supporting": [
+            "Teste ergométrico anormal, com sintoma limitante, queda de pressão arterial ou resposta anormal ao esforço, reclassifica a estenose aórtica grave como sintomática na prática, mesmo sem queixa espontânea"
           ],
-          "emergency_flow": [
-            "Estabilização respiratória e hemodinâmica imediata em ambiente de emergência",
-            "Ecocardiograma urgente para identificar o mecanismo, seja regurgitação aguda grave, disfunção protética aguda ou descompensação da lesão valvar de base",
-            "Avaliação para intervenção valvar não eletiva conforme a causa identificada"
-          ],
-          "messages": [
-            "Edema agudo de pulmão em valvopatia grave é critério de internação, não indicação de seguimento ambulatorial."
+          "ambulatory_flow": [
+            "Encaminhamento ao Heart Team para avaliação de intervenção, já que o teste desmascarou sintoma"
           ]
         }
       },
       {
-        "id": "suspeita_endocardite_protese",
-        "priority": 90,
+        "id": "bioprotese_mitral_tricuspide_menor_3_meses",
+        "priority": 44,
         "when": {
           "all": [
             {
-              "field": "suspeita_endocardite_em_protese",
+              "field": "protese_biologica_presente",
               "op": "truthy"
+            },
+            {
+              "field": "tempo_implante_bioprotese_menor_3_meses",
+              "op": "truthy"
+            },
+            {
+              "field": "protese_posicao",
+              "op": "in",
+              "value": [
+                "mitral",
+                "tricuspide",
+                "pulmonar"
+              ]
             }
           ]
         },
         "add": {
-          "risk": "emergencia",
-          "red_flags": [
-            "Suspeita clínica de endocardite infecciosa sobre prótese valvar"
+          "risk": "rotina",
+          "supporting": [
+            "Bioprótese mitral ou direita nos primeiros 3 meses requer avaliação específica da posição, ritmo, risco tromboembólico e sangramento"
           ],
-          "emergency_flow": [
-            "Hemoculturas seriadas antes de iniciar antibiótico",
-            "Ecocardiograma transesofágico, mais sensível que o transtorácico para avaliar prótese, buscando vegetação, abscesso ou deiscência",
-            "Avaliação conjunta com Heart Team e infectologia para definir tratamento clínico versus cirúrgico"
+          "ambulatory_flow": [
+            "Revisar precocemente com a equipe valvar o plano antitrombótico e antecipar imagem diante de sintomas ou alteração hemodinâmica"
           ],
           "messages": [
-            "Febre em portador de prótese valvar deve ser investigada como endocardite protética até prova em contrário."
+            "A posição foi considerada; não iniciar, interromper ou trocar terapia antitrombótica sem avaliação clínica individualizada."
           ]
         }
       },
       {
-        "id": "protese_biologica_janela_3_meses",
+        "id": "bioprotese_aortica_menor_3_meses",
+        "priority": 42,
+        "when": {
+          "all": [
+            {
+              "field": "protese_biologica_presente",
+              "op": "truthy"
+            },
+            {
+              "field": "tempo_implante_bioprotese_menor_3_meses",
+              "op": "truthy"
+            },
+            {
+              "field": "protese_posicao",
+              "op": "eq",
+              "value": "aortica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Bioprótese aórtica nos primeiros 3 meses: estratégia antitrombótica transitória depende do tipo de implante, risco tromboembólico e risco hemorrágico"
+          ],
+          "ambulatory_flow": [
+            "Confirmar com a equipe valvar o plano antitrombótico documentado para a posição aórtica e antecipar ecocardiograma se surgirem sintomas"
+          ],
+          "messages": [
+            "A posição foi considerada; a regra não substitui decisão individualizada nem prescreve automaticamente anticoagulante ou antiagregante."
+          ]
+        }
+      },
+      {
+        "id": "protese_biologica_janela_3_meses_posicao_ausente",
         "priority": 40,
         "when": {
           "all": [
@@ -20659,6 +20763,10 @@
             {
               "field": "tempo_implante_bioprotese_menor_3_meses",
               "op": "truthy"
+            },
+            {
+              "field": "protese_posicao",
+              "op": "missing"
             }
           ]
         },
@@ -20667,10 +20775,37 @@
             "Os primeiros 3 meses após implante de bioprótese são a janela de maior risco trombótico, antes da endotelização completa dos folhetos"
           ],
           "missing_information": [
-            "Posição da bioprótese, aórtica versus mitral/tricúspide, que determina a estratégia antitrombótica transitória recomendada"
+            "Posição da bioprótese não informada; a posição aórtica versus mitral/tricúspide altera a avaliação antitrombótica transitória"
           ],
           "ambulatory_flow": [
             "Avaliação clínica da bioprótese deve ser antecipada diante de qualquer novo sintoma cardíaco, mesmo dentro da janela inicial de maior risco"
+          ],
+          "messages": [
+            "A janela inicial requer avaliação individualizada; não iniciar, suspender ou escolher antitrombótico sem considerar posição, ritmo, sangramento e indicação do implante."
+          ]
+        }
+      },
+      {
+        "id": "planejamento_gestacional_escolha_protese",
+        "priority": 38,
+        "when": {
+          "all": [
+            {
+              "field": "planejamento_gestacional",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Aconselhamento pré-concepcional documentado e discussão dos riscos maternos, fetais e de anticoagulação"
+          ],
+          "ambulatory_flow": [
+            "Realizar decisão compartilhada antes de eventual implante com Heart Team e Pregnancy Heart Team"
+          ],
+          "messages": [
+            "Planejamento gestacional influencia a escolha da prótese, mas não determina sozinho prótese mecânica ou biológica."
           ]
         }
       },
@@ -20704,34 +20839,40 @@
         }
       },
       {
-        "id": "estenose_aortica_assintomatica_criterio_precoce",
-        "priority": 70,
+        "id": "idade_menor_60_escolha_compartilhada",
+        "priority": 18,
         "when": {
           "all": [
             {
-              "field": "lesao_valvar_principal",
-              "op": "eq",
-              "value": "estenose_aortica"
-            },
-            {
-              "field": "gravidade_lesao",
-              "op": "eq",
-              "value": "grave"
-            },
-            {
-              "field": "criterios_intervencao_precoce_ea",
-              "op": "contains",
-              "value": "teste_esforco_anormal"
+              "field": "idade",
+              "op": "lt",
+              "value": 60
             }
           ]
         },
         "add": {
-          "risk": "prioritario",
-          "supporting": [
-            "Teste ergométrico anormal, com sintoma limitante, queda de pressão arterial ou resposta anormal ao esforço, reclassifica a estenose aórtica grave como sintomática na prática, mesmo sem queixa espontânea"
-          ],
-          "ambulatory_flow": [
-            "Encaminhamento ao Heart Team para avaliação de intervenção, já que o teste desmascarou sintoma"
+          "risk": "informativo",
+          "messages": [
+            "Em pessoas mais jovens, discutir durabilidade, risco de reintervenção, anticoagulação ao longo da vida, sangramento, preferências e possibilidade de gestação; a idade isolada não define a prótese."
+          ]
+        }
+      },
+      {
+        "id": "idade_60_ou_mais_escolha_compartilhada",
+        "priority": 17,
+        "when": {
+          "all": [
+            {
+              "field": "idade",
+              "op": "gte",
+              "value": 60
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "A partir de 60 anos, integrar expectativa de vida, durabilidade, risco de reintervenção, anticoagulação, sangramento e preferência; não há escolha automática baseada apenas na idade."
           ]
         }
       },
@@ -20854,9 +20995,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/38896581/",
       "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo.",
-    "version": 1,
+    "review_status": "revisado",
+    "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: cinco bloqueios corrigidos, taxonomia normalizada e regras validadas.",
+    "version": 2,
     "fonte_producao": "claude"
   }
 ]

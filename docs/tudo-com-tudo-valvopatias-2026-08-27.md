@@ -80,3 +80,8 @@ Branch `claude/tudo-com-tudo-lacuna-5-20260827`, base `main` (ciclo
 independente, não empilhado). Rebaseado sobre o main atual em 27/08/2026,
 após main avançar com a mesclagem dos PRs #559 (lote 4) e #560 (síncope).
 Sem merge, deploy ou publicação automática.
+
+
+## Revisão clínica dirigida pelo Codex
+
+Em 27/08/2026, o hub foi revisado e marcado como revisado após corrigir o uso da dobutamina no baixo fluxo/baixo gradiente, considerar a posição da bioprótese, consumir planejamento gestacional e idade em decisão compartilhada, ajustar o seguimento da regurgitação mitral primária grave e normalizar a categoria valvopatia.
