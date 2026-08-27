@@ -20999,5 +20999,376 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: cinco bloqueios corrigidos, taxonomia normalizada e regras validadas.",
     "version": 2,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "doenca-arterial-periferica-de-membros",
+    "name": "Doença arterial periférica de membros",
+    "aliases": [
+      "DAP",
+      "claudicação intermitente",
+      "isquemia crítica de membro",
+      "CLTI",
+      "isquemia aguda de membro"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Doença arterial periférica (DAP) de membros — predominantemente aterosclerótica, compartilhando fatores de risco com doença coronariana e cerebrovascular. Espectro clínico de quatro fenótipos (ACC/AHA 2024): assintomática, sintomática crônica (claudicação), isquemia crônica ameaçadora do membro (CLTI, com dor em repouso e/ou perda tecidual) e isquemia aguda de membro (ALI, emergência vascular). Diagnóstico por índice tornozelo-braço (ITB), com armadilhas em diabetes/DRC (calcificação arterial falseando o resultado). Isquemia aguda estratificada pela classificação de Rutherford. Inclui a doença de Buerger (tromboangiite obliterante), forma inflamatória não aterosclerótica em jovens tabagistas. Tratamento por exercício supervisionado e controle de risco na claudicação; revascularização individualizada por anatomia na CLTI (BASIL-2 vs. BEST-CLI); terapia antitrombótica pós-revascularização (VOYAGER-PAD). Escopo restrito a DAP de membros — doença da aorta isolada fica para hub futuro.",
+    "epidemiology": "A doença arterial periférica (DAP) de membros inferiores é predominantemente aterosclerótica e compartilha fatores de risco com a doença coronariana e cerebrovascular — tabagismo, diabetes, hipertensão, dislipidemia e idade avançada —, sendo o tabagismo o fator modificável mais fortemente associado à progressão e à necessidade de revascularização. A ACC/AHA 2024 organiza a apresentação em quatro fenótipos clínicos: DAP assintomática (ausência de queixa não implica capacidade funcional preservada), DAP sintomática crônica (claudicação típica ou sintomas atípicos de membro ao esforço), isquemia crônica ameaçadora do membro (CLTI, com dor isquêmica em repouso e/ou perda tecidual) e isquemia aguda de membro (ALI, emergência vascular com sinais/sintomas de duração inferior a 2 semanas). O índice tornozelo-braço (ITB) de repouso, teste fisiológico de primeira linha, tem sensibilidade de 68%-84% e especificidade de 84%-99% para o diagnóstico segundo a ESC 2024; diabetes e doença renal crônica podem calcificar a parede arterial e gerar artérias não compressíveis (ITB >1,40), falseando o resultado para cima. A ALI tem causas heterogêneas — embolia arterial (frequentemente de origem cardíaca: fibrilação atrial, trombo intracardíaco, valvopatia/endocardite), trombose sobre DAP prévia, trombose de stent/enxerto, aneurisma (incluindo o de artéria poplítea, o aneurisma periférico mais comum), dissecção, trauma/acesso vascular e estados pró-trombóticos. A doença de Buerger (tromboangiite obliterante), forma inflamatória não aterosclerótica que acomete artérias de pequeno/médio calibre, tipicamente afeta adultos jovens de 20 a 50 anos, com relação homem:mulher de aproximadamente 3:1 — proporção que vem caindo com o aumento do tabagismo feminino — e depende do tabagismo como condição essencial da atividade da doença, não apenas fator de risco: entre pacientes que continuam fumando, cerca de 43% necessitam de amputação em seguimento médio de 7,6 anos, contra remissão relatada em quem atinge abstinência completa de nicotina. Critérios de alto risco isquêmico da ESC 2024 incluem amputação prévia, CLTI, revascularização prévia, insuficiência cardíaca, diabetes, doença poliarterial e taxa de filtração glomerular estimada abaixo de 60 mL/min/1,73 m².",
+    "presentation": [
+      "Claudicação intermitente — dor, peso, fadiga ou fraqueza em membro inferior reproduzida por caminhada/esforço, com melhora ao repouso e localização coerente com território arterial",
+      "Dor isquêmica em repouso, tipicamente noturna ou agravada pela elevação do membro e aliviada ao pendurar a perna para fora da cama — sugere isquemia crônica ameaçadora do membro (CLTI)",
+      "Úlcera que não cicatriza ou gangrena de extremidade, perda tecidual atribuível à doença arterial (CLTI)",
+      "Isquemia aguda de membro com os \"6 Ps\": dor de início súbito (pain), palidez (pallor), pulso ausente/reduzido (pulselessness), membro frio (poikilothermia), alteração sensitiva (paresthesia) e déficit motor/paralisia (paralysis) — nenhum conjunto completo é obrigatório para suspeitar",
+      "Achado incidental de índice tornozelo-braço (ITB) alterado (≤0,90 ou >1,40/não compressível) em pessoa assintomática ou com sintomas atípicos, muitas vezes detectado durante rastreamento de risco cardiovascular",
+      "Pulsos diminuídos ou ausentes, sopro arterial em trajeto vascular e alterações tróficas de pele/fâneros ao exame vascular, mesmo sem queixa espontânea referida",
+      "Fenômeno de Raynaud, ulceração digital e flebite superficial migratória em adulto jovem tabagista — conjunto sugestivo de doença de Buerger",
+      "Massa pulsátil poplítea, achado de aneurisma de artéria poplítea muitas vezes assintomático até complicar com trombose, embolização distal ou ruptura"
+    ],
+    "diagnostic_approach": {
+      "indice_tornozelo_braco": {
+        "indicacao": "Com história ou exame físico sugestivos de DAP, o ITB de repouso é recomendado para estabelecer o diagnóstico (ACC/AHA 2024, Classe I, B-NR; ESC 2024 confirma sensibilidade 68%-84% e especificidade 84%-99%).",
+        "categorias": [
+          "≤0,90: anormal — confirma DAP",
+          "0,91–0,99: limítrofe",
+          "1,00–1,40: normal",
+          ">1,40: não compressível — não deve ser lido como \"normal\""
+        ],
+        "itb_normal_ou_limitrofe_com_sintomas": "Se os sintomas de esforço permanecem sugestivos apesar de ITB de repouso >0,90 e ≤1,40, realizar ITB pós-exercício em esteira (Classe I, B-NR) — não encerrar a investigação apenas porque o ITB de repouso foi normal.",
+        "itb_nao_compressivel": "ITB >1,40 exige pressão do hálux/índice hálux-braço (TBI) com formas de onda (Classe I, B-NR); TBI ≤0,70 é considerado anormal. Relevante sobretudo em diabetes e doença renal crônica, que calcificam a parede arterial e elevam artificialmente a pressão no tornozelo.",
+        "quando_pedir_imagem_anatomica": "Duplex, angio-TC, angio-RM ou angiografia invasiva não são exames de primeira linha para toda claudicação; ganham indicação quando a claudicação permanece funcionalmente limitante apesar de tratamento orientado por guideline e exercício estruturado com revascularização sendo considerada (Classe I, B-NR), quando há CLTI e é preciso planejar revascularização (Classe I, B-NR), ou quando a fisiologia é inconclusiva apesar de suspeita clínica (Classe IIb, C-EO)."
+      },
+      "classificacao_rutherford_isquemia_aguda": {
+        "definicao": "Na ALI, a classificação de Rutherford organiza risco de viabilidade do membro e orienta urgência da revascularização — não escolhe sozinha a técnica (endovascular, cirúrgica ou híbrida).",
+        "categorias": [
+          "I — viável: sensibilidade e força preservadas, Doppler arterial e venoso audíveis; há tempo relativo para definir anatomia/estratégia sem perder vigilância clínica",
+          "IIa — marginalmente ameaçado: perda sensitiva mínima (tipicamente artelhos), força preservada, Doppler arterial frequentemente inaudível e venoso audível; salvável se tratado prontamente",
+          "IIb — imediatamente ameaçado: perda sensitiva além dos artelhos, fraqueza leve/moderada, Doppler arterial inaudível e venoso audível; exige revascularização imediata sem atraso por investigação extensa",
+          "III — irreversível/não salvável: anestesia profunda, paralisia/rigidez, Doppler arterial e venoso inaudíveis; revascularizar tecido inviável causa dano sem benefício de salvamento"
+        ],
+        "conduta_associada": "Avaliação emergencial de viabilidade não depende de duplex, angio-TC ou angio-RM (Classe I, C-LD); Doppler contínuo à beira do leito auxilia a classificação. Heparina não fracionada sistêmica é recomendada ao diagnóstico salvo contraindicação (Classe I, C-EO), com nível de evidência baseado em prática consolidada, não em ensaio randomizado direto."
+      },
+      "estratificacao_clti": {
+        "avaliacao_de_perfusao_distal": "Além do ITB, é razoável usar medidas de perfusão distal na suspeita de CLTI: pressão do hálux/TBI com formas de onda, TcPO2 e/ou pressão de perfusão cutânea (Classe IIa, B-NR).",
+        "wifi": "O sistema WIfI (Wound, Ischemia and foot Infection) organiza gravidade e risco do membro, mas não deve ser convertido em regra automática do tipo \"estágio X = técnica Y\"; a escolha entre estratégia endovascular, cirúrgica ou híbrida depende de anatomia, conduit, risco operatório, possibilidade de cicatrização e expertise local.",
+        "manejo_associado": "Avaliação vascular rápida, controle de infecção e cuidado de ferida, descarga de pressão quando pertinente, otimização sistêmica e imagem anatômica para planejar revascularização quando factível."
+      },
+      "investigacao_doenca_de_buerger": {
+        "perfil_clinico": "Suspeitar em adulto jovem (20-50 anos) tabagista com claudicação distal (pé, perna, braço ou mão), dor isquêmica em repouso progressiva, fenômeno de Raynaud, ulceração digital e — achado relativamente característico quando presente — flebite superficial migratória (até 16% dos casos).",
+        "achado_angiografico": "Oclusões segmentares não ateroscleróticas de artérias de pequeno/médio calibre, com colaterais em padrão \"saca-rolha\" (corkscrew) contornando as oclusões, e pulsos proximais tipicamente preservados — o que ajuda a diferenciar de aterosclerose difusa.",
+        "armadilha": "Não tratar como aterosclerose precoce um jovem tabagista com claudicação distal e pulsos proximais preservados; o diagnóstico é predominantemente clínico e angiográfico, por exclusão de outras causas de oclusão arterial segmentar (embolia, estados pró-trombóticos, vasculites de médio/grande vaso)."
+      }
+    },
+    "differentials": [
+      "Radiculopatia lombar ou estenose de canal espinal (pseudoclaudicação neurogênica) — dor que piora com postura/ortostatismo, nem sempre estritamente ligada ao esforço, e frequentemente alivia com flexão da coluna, não apenas com repouso simples",
+      "Doença musculoesquelética (osteoartrite de quadril/joelho, síndrome compartimental crônica de esforço) — dor relacionada a esforço sem correlação com território arterial nem com ITB alterado",
+      "Neuropatia periférica, sobretudo diabética — pode coexistir com DAP, mascarar dor isquêmica em repouso ou mimetizá-la, exigindo avaliação vascular associada",
+      "Doença venosa crônica ou trombose venosa profunda — edema e dor que tipicamente pioram com ortostatismo e melhoram com elevação do membro, padrão oposto ao da dor arterial",
+      "Vasculites de médio/grande vaso (arterite de Takayasu, arterite de células gigantes) e displasia fibromuscular — diferenciais de DAP não aterosclerótica, distintos também da doença de Buerger pelo perfil demográfico e território acometido",
+      "Trombose ou embolização a partir de aneurisma de artéria poplítea — pode mimetizar isquemia aguda de membro de causa puramente aterosclerótica ou cardioembólica; a massa pulsátil poplítea, quando presente, é a pista diferencial"
+    ],
+    "tests": [
+      "ITB de repouso — teste fisiológico de primeira linha (sensibilidade 68%-84%, especificidade 84%-99% para DAP), mas ITB normal em repouso não exclui DAP sintomática induzida por esforço, e diabetes/doença renal crônica podem falsear o valor para cima (artéria não compressível, >1,40)",
+      "ITB pós-exercício em esteira — documenta desempenho funcional, tempo até o início do sintoma e resposta ao tratamento quando o ITB de repouso é normal/limítrofe; depende de capacidade de caminhar do paciente e não está disponível em todo serviço",
+      "Pressão do hálux/índice hálux-braço (TBI) com formas de onda — necessário quando ITB >1,40 (TBI ≤0,70 é anormal); ainda é teste fisiológico indireto e não substitui mapeamento anatômico quando revascularização é discutida",
+      "Doppler arterial e venoso à beira do leito — na suspeita de ALI, permite classificar viabilidade (Rutherford) sem esperar imagem avançada, mas é operador-dependente e não define a etiologia do evento",
+      "TcPO2 e/ou pressão de perfusão cutânea — complementam a estratificação de CLTI ao lado do ITB/TBI, mas têm variabilidade técnica relevante e disponibilidade limitada fora de centros especializados",
+      "Duplex, angio-TC, angio-RM ou angiografia invasiva — mapeiam anatomia arterial, mas não são exames de primeira linha para toda claudicação; só mudam a conduta quando revascularização já está sendo considerada, há CLTI a planejar, ou a fisiologia permanece inconclusiva apesar de suspeita clínica",
+      "Angiografia com colaterais em padrão \"saca-rolha\" (corkscrew) — sugere doença de Buerger, mas é achado de apoio: não confirma o diagnóstico isoladamente sem o contexto clínico (idade jovem, tabagismo, ausência de fatores ateroscleróticos clássicos)"
+    ],
+    "red_flags": [
+      "Início súbito de dor, palidez, membro frio, pulso ausente/reduzido, parestesia ou déficit motor — suspeitar isquemia aguda de membro (ALI) e acionar avaliação vascular emergencial, sem aguardar ITB pós-exercício ou investigação ambulatorial",
+      "Déficit sensitivo progressivo e, sobretudo, fraqueza/paralisia motora — sinalizam ameaça imediata à viabilidade do membro (Rutherford IIb) e exigem revascularização sem atraso por investigação extensa",
+      "Anestesia profunda, paralisia/rigidez e ausência de sinal arterial e venoso ao Doppler — sugerem membro irreversível/não salvável (Rutherford III); revascularizar tecido inviável causa dano sem benefício de salvamento",
+      "Dor isquêmica em repouso, ferida que não cicatriza ou gangrena — configuram CLTI, com risco real de perda de membro, e exigem avaliação vascular rápida e multidisciplinar",
+      "Flebite superficial migratória associada a ulceração digital em adulto jovem tabagista — sugerem doença de Buerger, cujo prognóstico depende de cessação absoluta do tabagismo (mesmo 1-2 cigarros/dia perpetuam a atividade da doença)",
+      "Após revascularização de isquemia grave: sinais de síndrome compartimental, rabdomiólise/mioglobinúria, hipercalemia, acidose ou lesão renal aguda — vigilância obrigatória na fase de reperfusão",
+      "Massa pulsátil poplítea associada a embolização distal aguda ou trombose súbita — aneurisma de artéria poplítea complicado, fonte de ALI que pode passar despercebida se não pesquisada ativamente"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico e fenótipo: caracterizar padrão de dor, distância de claudicação, presença de úlcera ou gangrena e medir índice tornozelo-braquial (ITB) para diferenciar claudicação intermitente de CLTI antes de definir a via de cuidado",
+      "Iniciar exercício supervisionado e programa estruturado de cessação de tabagismo como primeira linha para claudicação intermitente, junto com controle intensivo de fatores de risco cardiovascular",
+      "Prescrever terapia antitrombótica como classe terapêutica para prevenção de eventos cardiovasculares e de membro, avaliando de forma individualizada a associação de uma segunda via de inibição conforme perfil de risco isquêmico e hemorrágico",
+      "Encaminhar com prioridade à cirurgia vascular pacientes com CLTI (dor em repouso, úlcera que não cicatriza, gangrena) para definição anatômica e discussão de estratégia de revascularização — bypass ou endovascular — individualizada por conduíte disponível, território anatômico e risco cirúrgico",
+      "Evitar selecionar dispositivo farmacológico recoberto com paclitaxel para revascularização com base apenas na expectativa de menor restenose angiográfica; discutir totalidade da evidência de eficácia e segurança com o paciente",
+      "Definir e manter terapia antitrombótica pós-revascularização — período de maior risco trombótico local — com reavaliação periódica de adesão, sangramento e eventos de membro",
+      "Reforçar cuidado multidisciplinar da ferida em pacientes com perda tecidual, incluindo controle de infecção, glicemia e nutrição, em conjunto com a equipe de revascularização",
+      "Rastrear e tratar doença aterosclerótica em outros territórios (coronariano, cerebrovascular), dado o risco cardiovascular sistêmico compartilhado pela DAP"
+    ],
+    "emergency_flow": [
+      "Reconhecer isquemia aguda de membro diante de instalação súbita (tipicamente inferior a duas semanas) de dor, palidez, ausência de pulso, frialdade, parestesia e/ou paralisia (os '6 P's'), com déficit sensitivo progressivo e fraqueza motora como sinais de maior ameaça à viabilidade",
+      "Acionar avaliação vascular emergencial imediatamente diante de suspeita de isquemia aguda, sem aguardar confirmação por exame de imagem — a decisão inicial de viabilidade e o acionamento não devem ser atrasados por duplex, angio-TC ou angio-RM",
+      "Classificar o membro pela Rutherford (I a III) para definir tempo disponível e urgência: viável (I), marginalmente ameaçado (IIa), imediatamente ameaçado (IIb) exigindo revascularização sem atraso, ou irreversível/não salvável (III)",
+      "Iniciar anticoagulação sistêmica precocemente, como classe terapêutica, na ausência de contraindicação, enquanto a estratégia definitiva de revascularização é organizada",
+      "Encaminhar membro salvável (Rutherford I, IIa ou IIb) para revascularização de urgência — endovascular, cirúrgica ou híbrida conforme mecanismo, anatomia e tempo de isquemia — priorizando a reperfusão sobre investigação etiológica extensa",
+      "Não revascularizar membro não salvável (Rutherford III com necrose e paralisia estabelecidas); definir manejo cirúrgico, controle de dor e infecção, e objetivos de cuidado",
+      "Após reperfusão, vigiar ativamente síndrome compartimental, rabdomiólise/mioglobinúria, hipercalemia, acidose e lesão renal aguda em ambiente monitorizado",
+      "Investigar a causa (fonte cardioembólica, trombose sobre DAP prévia, trombose de stent ou enxerto) assim que a ameaça imediata estiver controlada, sem atrasar a reperfusão inicial"
+    ],
+    "treatment_summary": "O manejo da doença arterial periférica (DAP) de membros se organiza em três cenários clínicos distintos — claudicação intermitente, isquemia crônica ameaçadora do membro (CLTI) e isquemia aguda de membro —, cada um com objetivos e urgência diferentes, sob a base comum de controle intensivo de fatores de risco cardiovascular (tabagismo, dislipidemia, hipertensão, diabetes) e prevenção de eventos sistêmicos.\n\nNa claudicação intermitente, a primeira linha terapêutica é o exercício supervisionado, com evidência consistente de melhora da distância de marcha e da qualidade de vida, associado a programa estruturado de cessação de tabagismo e otimização de fatores de risco. Terapia antitrombótica com antiplaquetário, como classe terapêutica, é indicada para prevenção de eventos cardiovasculares; em pacientes selecionados com DAP estável (sem revascularização recente obrigatória), o ensaio COMPASS demonstrou que associar um inibidor do fator Xa em dose vascular baixa ao antiplaquetário reduz o composto de morte cardiovascular, infarto ou AVC, além de eventos adversos maiores de membro, à custa de aumento de sangramento maior — a decisão de associar essa segunda via de inibição exige balanço individual entre risco isquêmico e hemorrágico, e não deve ser automática. Revascularização na claudicação é reservada a sintomas limitantes apesar de tratamento clínico otimizado e reabilitação, com escolha de técnica guiada por anatomia. Dispositivos farmacológicos recobertos com paclitaxel usados na revascularização endovascular da claudicação não demonstraram, no SWEDEPAD 2, melhora de qualidade de vida nem redução sustentada de reintervenção em comparação a dispositivos não recobertos, e houve sinal de maior mortalidade em cinco anos que não persistiu no seguimento mais longo — a escolha desses dispositivos não deve se apoiar apenas na expectativa de menor restenose angiográfica.\n\nNa CLTI (dor isquêmica em repouso, úlcera que não cicatriza ou gangrena), a indicação de revascularização é a regra quando há anatomia favorável e o objetivo é salvar o membro. A escolha entre estratégia cirúrgica (bypass) e endovascular passou a ser anatômica, não dogmática: o BEST-CLI mostrou que, havendo segmento único adequado de veia safena magna e bom candidato cirúrgico, bypass reduziu eventos adversos maiores de membro ou morte em comparação a terapia endovascular; sem conduíte venoso ideal, essa vantagem não foi demonstrada. Já o BASIL-2, em população que especificamente necessitava revascularização infrapoplítea, encontrou melhor sobrevida livre de amputação com estratégia endovascular-first — resultado impulsionado principalmente por maior mortalidade no grupo bypass, e não por diferença isolada em amputações. Os dois ensaios não são contraditórios: respondem perguntas diferentes em populações diferentes, e a decisão deve ser individualizada por território anatômico, qualidade de conduíte, risco cirúrgico e experiência do centro vascular. Assim como na claudicação, dispositivos com paclitaxel na CLTI (SWEDEPAD 1) não reduziram amputação maior nem mortalidade em comparação a dispositivos não recobertos, mesmo em população de alto risco — reforçando que salvamento de membro depende de múltiplos determinantes além da patência angiográfica: anatomia, leito distal, infecção, extensão de perda tecidual e cuidado multidisciplinar da ferida.\n\nApós revascularização de membro inferior por DAP, o período subsequente concentra o maior risco trombótico local. O VOYAGER PAD demonstrou que associar um inibidor do fator Xa em dose vascular baixa ao antiplaquetário reduz o composto de isquemia aguda de membro, amputação maior, infarto, AVC isquêmico ou morte cardiovascular, com benefício concentrado especificamente na redução de isquemia aguda de membro e início precoce já nos primeiros trinta dias — à custa de maior sangramento maior pelo critério ISTH. Uma subanálise contemporânea mostrou que pacientes com revascularização prévia constituem fenótipo de risco muito alto para novos eventos de membro, com sinal de benefício relativo particularmente pronunciado da estratégia antitrombótica combinada nesse subgrupo, sem excesso significativo de sangramento maior pelo critério TIMI atribuível à história de revascularização — achado de subgrupo que refina risco, mas não substitui a indicação global do ensaio original. Em nenhum desses cenários a terapia antitrombótica combinada equivale a anticoagulação plena: trata-se de classe farmacológica associada em dose vascular específica, e a decisão de associá-la sempre exige avaliação individual de risco hemorrágico.\n\nA isquemia aguda de membro é emergência vascular verdadeira, definida por instalação súbita (tipicamente inferior a duas semanas) de sinais e sintomas de hipoperfusão — os clássicos '6 P's' (dor, palidez, ausência de pulso, frialdade, parestesia e paralisia), sendo déficit sensitivo progressivo e fraqueza motora os sinais de maior ameaça à viabilidade. A avaliação de viabilidade pela classificação de Rutherford (I a III) não deve depender de exame de imagem obrigatório e não pode atrasar o acionamento de equipe vascular. Na ausência de contraindicação, anticoagulação sistêmica é iniciada precocemente como classe terapêutica, sem aguardar investigação etiológica completa. Em membro salvável, revascularização — endovascular, cirúrgica ou híbrida, conforme mecanismo, anatomia, classe de Rutherford e tempo de isquemia — é indicada para prevenir amputação, e a escolha da técnica não deve atrasar a reperfusão por investigação de imagem prolongada; em membro não salvável (Rutherford III estabelecido), revascularizar tecido inviável pode causar dano sistêmico sem benefício de salvamento. Após reperfusão, vigilância de síndrome compartimental, rabdomiólise, hipercalemia, acidose e lesão renal aguda é mandatória, assim como a investigação etiológica (fonte cardioembólica, trombose sobre DAP prévia, trombose de stent ou enxerto) para prevenir recorrência e guiar a terapia antitrombótica de manutenção.",
+    "monitoring": [
+      "Distância de claudicação, limitação funcional e qualidade de vida em resposta ao exercício supervisionado e ao tratamento clínico",
+      "Fatores de risco cardiovascular: tabagismo, pressão arterial, LDL-colesterol, controle glicêmico e adesão à terapia antitrombótica e demais medicações de prevenção secundária",
+      "Sinais de progressão para CLTI: nova dor em repouso, úlcera que não cicatriza ou gangrena, exigindo reavaliação hemodinâmica (ITB) e encaminhamento vascular",
+      "Patência do enxerto ou do território revascularizado e sinais de reestenose ou trombose, com reavaliação clínica e vascular periódica no período pós-revascularização",
+      "Risco hemorrágico e sinais de sangramento em pacientes em terapia antitrombótica combinada, especialmente no período de maior intensificação pós-revascularização",
+      "Cicatrização de feridas, sinais de infecção e evolução de perda tecidual em pacientes com histórico de CLTI ou revascularização",
+      "Eventos cardiovasculares sistêmicos (infarto, AVC) e eventos de membro (isquemia aguda, amputação) ao longo do seguimento, dado o risco compartilhado entre o território periférico e outros leitos vasculares"
+    ],
+    "special_populations": [
+      "Diabético com neuropatia periférica: a neuropatia sensitiva mascara a claudicação clássica (a dor isquêmica pode simplesmente não ser percebida) e a doença costuma ter distribuição mais distal e infrapoplítea, favorecendo apresentação direta como isquemia crítica sem sintoma de alarme prévio; a esclerose da média arterial (Mönckeberg), comum nesse grupo, pode falsear o índice tornozelo-braquial (ITB) para valores normais ou até elevados (>1,40), exigindo índice dedo-braquial ou outra modalidade de confirmação — ver o rastreio dedicado de DAP silenciosa no diabético (documento próprio do hub de Diabetes e cardiologia, não duplicado aqui).",
+      "Tabagista ativo: fator de risco modificável mais fortemente associado ao desenvolvimento e à progressão da doença arterial periférica, e a pior desfecho de revascularização (menor patência de enxerto/stent, maior taxa de amputação e mortalidade); a cessação do tabagismo é a intervenção isolada de maior impacto e deve ser reabordada em toda consulta, não apenas no diagnóstico inicial.",
+      "Doença de Buerger (tromboangiite obliterante) em homem jovem tabagista, tipicamente com menos de 45 anos: isquemia distal de pequenos e médios vasos (dedos de mãos e pés, tromboflebite superficial migratória), em geral sem os fatores de risco ateroscleróticos clássicos além do tabagismo; abstinência total e completa de qualquer forma de tabaco/nicotina — incluindo formas sem combustão — é a única intervenção comprovadamente capaz de deter a progressão e evitar amputação.",
+      "Doença renal crônica avançada ou em diálise: alta prevalência de calcificação arterial medial, que eleva artificialmente o ITB e pode mascarar doença arterial periférica hemodinamicamente significativa (ITB falsamente normal ou incompressível); sobreposição com doença coronariana e cerebrovascular é a regra, e a decisão de revascularização precisa equilibrar o risco de sangramento e de infecção relacionado ao acesso vascular para diálise com o risco de perda de membro.",
+      "Idoso com múltiplas comorbidades vasculares: rigidez arterial pode manter o ITB falsamente normal mesmo diante de doença hemodinamicamente relevante, e apresentações atípicas (sem claudicação clássica, por limitação de mobilidade basal que mascara o sintoma de esforço) são frequentes; idade cronológica isolada não deve, por si só, adiar revascularização em isquemia crônica ameaçadora de membro (CLTI) com indicação clara, mas a decisão exige avaliação de fragilidade e de expectativa de vida funcional, não apenas de idade.",
+      "Paciente oncológico em uso de inibidor de tirosina-quinase BCR-ABL de segunda/terceira geração (nilotinibe, ponatinibe) para leucemia mieloide crônica ou leucemia linfoblástica aguda Filadélfia-positiva: risco aumentado de doença arterial periférica de novo ou de isquemia aguda de membro induzida pela droga — o evento oclusivo arterial mais comum nesse contexto —, exigindo rastreio de ITB antes e durante o tratamento e decisão compartilhada entre cardio-oncologia e hematologia sobre continuidade, troca ou suspensão da terapia."
+    ],
+    "assistant_questions": [
+      {
+        "id": "acute_ischemia_signs",
+        "label": "Há dor súbita em repouso, palidez, ausência de pulso, frialdade ou déficit sensitivo/motor de instalação recente, sugestivos de isquemia aguda de membro?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "limiting_claudication",
+        "label": "Há claudicação intermitente que limita a atividade habitual apesar de tratamento clínico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas"
+      },
+      {
+        "id": "ulcer_or_gangrene",
+        "label": "Há úlcera que não cicatriza ou gangrena no membro?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas"
+      },
+      {
+        "id": "abi_measured",
+        "label": "O índice tornozelo-braquial (ITB) já foi medido?",
+        "type": "select",
+        "required": false,
+        "section": "Diagnóstico",
+        "options": [
+          {
+            "value": "sim_alterado",
+            "label": "Sim, alterado/compatível com DAP"
+          },
+          {
+            "value": "sim_normal",
+            "label": "Sim, normal"
+          },
+          {
+            "value": "nao_realizado",
+            "label": "Não foi realizado"
+          }
+        ]
+      },
+      {
+        "id": "prior_revascularization",
+        "label": "Há história de revascularização prévia de membro inferior (cirúrgica ou endovascular)?",
+        "type": "boolean",
+        "required": true,
+        "section": "História"
+      },
+      {
+        "id": "active_smoking",
+        "label": "O paciente é tabagista ativo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fatores de risco"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "dap-membros-isquemia-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_ischemia_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível isquemia aguda de membro — emergência vascular"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação vascular emergencial imediatamente e classificar por Rutherford; não aguardar exame de imagem para iniciar conduta"
+          ],
+          "messages": [
+            "Isquemia aguda de membro exige avaliação de viabilidade sem atraso — reperfusão precoce é prioridade sobre investigação etiológica extensa"
+          ]
+        }
+      },
+      {
+        "id": "dap-membros-ameacado-ulcera-gangrena",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "ulcer_or_gangrene",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Possível isquemia crônica ameaçadora do membro (CLTI)"
+          ],
+          "suggested_tests": [
+            "Medir ITB e avaliar hemodinâmica de membro; definir anatomia arterial por imagem"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar com prioridade à cirurgia vascular para avaliação de revascularização"
+          ]
+        }
+      },
+      {
+        "id": "dap-membros-claudicacao-limitante",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "limiting_claudication",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Confirmar diagnóstico com ITB, se ainda não realizado"
+          ],
+          "ambulatory_flow": [
+            "Iniciar exercício supervisionado e otimizar controle de fatores de risco antes de considerar revascularização eletiva"
+          ]
+        }
+      },
+      {
+        "id": "dap-membros-itb-nao-realizado",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "abi_measured",
+              "op": "eq",
+              "value": "nao_realizado"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Medir índice tornozelo-braquial (ITB) para confirmar e estratificar a gravidade da DAP"
+          ],
+          "missing_information": [
+            "ITB não documentado"
+          ]
+        }
+      },
+      {
+        "id": "dap-membros-revascularizacao-previa",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "prior_revascularization",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Revascularização prévia identifica fenótipo de risco muito alto para novos eventos de membro; reforçar terapia antitrombótica e vigiar sinais de reestenose ou trombose do segmento revascularizado"
+          ]
+        }
+      },
+      {
+        "id": "dap-membros-tabagismo-ativo",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "active_smoking",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Tabagismo ativo agrava a progressão da DAP e o risco de amputação; priorizar programa estruturado de cessação"
+          ],
+          "supporting": [
+            "Tabagismo ativo"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "doença arterial periférica",
+      "DAP",
+      "claudicação intermitente",
+      "isquemia crítica de membro",
+      "CLTI",
+      "doença de Buerger",
+      "isquemia aguda de membro"
+    ],
+    "source_refs": [
+      "Gornik HL, Aronow HD, Goodney PP, et al. 2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS Guideline for the Management of Lower Extremity Peripheral Artery Disease. Circulation. 2024;149(24):e1313-e1410. DOI: 10.1161/CIR.0000000000001251. PMID: 38743805.",
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722.",
+      "Qaja E, Muco E, Hashmi MF. Buerger Disease. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado fevereiro 2023. NBK430858. PMID: 28613608.",
+      "Farber A, Angle N, Avgerinos E, et al. The Society for Vascular Surgery clinical practice guidelines on popliteal artery aneurysms. J Vasc Surg. 2022;75(1S):109S-120S. DOI: 10.1016/j.jvs.2021.04.040. PMID: 34023430.",
+      "Joshi D, Gupta Y, Ganai B, Mortensen C. Endovascular versus open repair of asymptomatic popliteal artery aneurysm. Cochrane Database Syst Rev. 2019;12(12):CD010149. DOI: 10.1002/14651858.CD010149.pub3. PMID: 31868929.",
+      "Antonello M, Frigatti P, Battocchio P, et al. Open repair versus endovascular treatment for asymptomatic popliteal artery aneurysm: results of a prospective randomized study. J Vasc Surg. 2005;42(2):185-93. DOI: 10.1016/j.jvs.2005.04.049. PMID: 16102611."
+    ],
+    "source_urls": [
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001251",
+      "https://academic.oup.com/eurheartj/article/45/36/3538/7738955",
+      "https://www.ncbi.nlm.nih.gov/books/NBK430858/",
+      "https://www.jvascsurg.org/article/S0741-5214(21)01288-4/fulltext",
+      "https://doi.org/10.1002/14651858.CD010149.pub3",
+      "https://www.jvascsurg.org/article/S0741-5214(05)00668-X/fulltext"
+    ],
+    "related_document_slugs": [
+      "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+      "doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024",
+      "fluxograma-doenca-arterial-periferica-diagnostico-esc-2024",
+      "isquemia-aguda-de-membro-classificacao-de-rutherford-e-conduta",
+      "fluxograma-isquemia-aguda-de-membro-rutherford-2024",
+      "fluxograma-dor-membro-claudicacao-clti-isquemia-aguda",
+      "basil-2-bypass-endovascular-infrapopliteo-clti",
+      "best-cli-bypass-endovascular-isquemia-cronica-ameacadora-membro",
+      "fluxograma-clti-revascularizacao-basil-2-best-cli",
+      "swedepad-1-paclitaxel-isquemia-cronica-ameacadora-membro",
+      "swedepad-2-paclitaxel-claudicacao-intermitente",
+      "aneurisma-de-arteria-poplitea-reparo-aberto-versus-endovascular",
+      "doenca-de-buerger-tromboangiite-obliterante-diagnostico-e-manejo",
+      "terapia-antitrombotica-na-doenca-arterial-periferica-compass-e-voyager-pad",
+      "voyager-pad-rivaroxabana-aspirina-pos-revascularizacao",
+      "voyager-pad-revascularizacao-previa-risco-e-beneficio-rivaroxabana-2026",
+      "rastreamento-vascular-multimodal-e-mortalidade-por-sexo-o-programa-viborg-2026",
+      "doenca-arterial-periferica-e-claudicacao-no-muito-idoso",
+      "doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023",
+      "stride-semaglutida-e-capacidade-de-marcha-na-doenca-arterial-periferica-do-diabetes-tipo-2",
+      "nilotinibe-doenca-arterial-obstrutiva-periferica-e-eventos-cardiovasculares-enestnd-10-anos",
+      "ponatinibe-eventos-oclusivos-arteriais-reanalise-independente-do-pace",
+      "isquemia-aguda-de-membro-e-doenca-arterial-por-nilotinibe-ou-ponatinibe",
+      "fluxograma-isquemia-aguda-de-membro-e-doenca-arterial-por-nilotinibe-ou-ponatinibe"
+    ],
+    "patient_material_slug": "dor-nas-pernas-ao-caminhar-doenca-arterial-periferica",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo primeiro ciclo do dia. Nenhum verbete geral de doença arterial periférica (DAP) de membros existia previamente no corpus. Escopo deliberadamente restrito a DAP de membros (claudicação, CLTI, isquemia aguda de membro, doença de Buerger) — doença da aorta isolada (aneurisma torácico/abdominal, dissecção) fica para um hub futuro separado, dado que a pasta content/Aorta_e_doença_arterial_periférica/ reúne temas heterogêneos demais para um único hub coerente. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 6 referências citadas (diretriz ACC/AHA 2024 PMID 38743805, diretriz ESC 2024 PMID 39210722, revisão de doença de Buerger PMID 28613608, diretrizes SVS de aneurisma poplíteo PMID 34023430, revisão Cochrane PMID 31868929, estudo randomizado PMID 16102611). Descoberta relevante na montagem: o documento 'voYager-pad-revascularizacao-previa-risco-e-beneficio-rivaroxabana-2026.md' tem nome de arquivo com 'Y' maiúsculo mas slug de frontmatter em minúsculas ('voyager-pad-...') — o agente de pesquisa 3 corretamente usou o slug do frontmatter (mesma resolução usada por scripts/audit_tudo_com_tudo.py), e o teste dedicado deste hub foi ajustado para resolver documentos por slug de frontmatter (com fallback a nome de arquivo), replicando a lógica do script de auditoria, em vez de assumir que nome de arquivo e slug sempre coincidem. related_document_slugs conta com 24 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames — 16 de content/Aorta_e_doença_arterial_periférica/ e 8 de outras pastas (Cardio-oncologia: risco de DAP/isquemia aguda por nilotinibe/ponatinibe; Cardiologia geriátrica; Diabetes e cardiologia). O documento de rastreio de DAP silenciosa no diabético já usado no hub diabetes-mellitus-tipo-2 foi deliberadamente NÃO duplicado aqui — apenas citado textualmente em special_populations. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum PR aberto que toca doencas/metadados.json cria o slug doenca-arterial-periferica-de-membros. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
   }
 ]
