@@ -90,6 +90,13 @@ def test_cockpit_expoe_oxigenacao_com_gate_cardiogenico():
 
     assert '"oxigenacao-pao2-fio2-sdra-uco"' in pagina
     assert '/calculadoras/oxigenacao-pao2-fio2-sdra-uco' in pagina
+
+
+def test_cockpit_expoe_lra_kdigo_sem_prescricao_automatica():
+    pagina = _texto("pages/CardiologiaIntensiva.tsx")
+
+    assert '"lesao-renal-aguda-kdigo-uco"' in pagina
+    assert '/calculadoras/lesao-renal-aguda-kdigo-uco' in pagina
     assert "PaO₂/FiO₂, suporte e gate de edema cardiogênico" in pagina
 
 
@@ -154,6 +161,36 @@ def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
     assert any(
         etapa["item_type"] == "calculadora"
         and etapa["item_slug"] == "oxigenacao-pao2-fio2-sdra-uco"
+        for etapa in trilha["etapas"]
+    )
+
+
+def test_lote_lra_preserva_componentes_revisao_humana_e_backlinks_diretos():
+    slug = "lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese"
+    documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
+    choque = (CONTENT / "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas.md").read_text(
+        encoding="utf-8"
+    )
+    vd = (
+        CONTENT
+        / "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md"
+    ).read_text(encoding="utf-8")
+    acidose = (
+        CONTENT / "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco.md"
+    ).read_text(encoding="utf-8")
+    trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
+    trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-lesao-renal-aguda-kdigo")
+
+    assert "review_status: pendente_revisao" in documento
+    assert "C1/U2 → estágio 2" in documento
+    assert "rascunho KDIGO 2026" in documento
+    assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in choque
+    assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in vd
+    assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in acidose
+    assert trilha["review_status"] == "pendente_revisao"
+    assert any(
+        etapa["item_type"] == "calculadora"
+        and etapa["item_slug"] == "lesao-renal-aguda-kdigo-uco"
         for etapa in trilha["etapas"]
     )
 

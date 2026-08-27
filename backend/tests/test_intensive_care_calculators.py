@@ -28,6 +28,10 @@ def _calc_oxigenacao():
     return INTENSIVE_CARE_CALCULATOR_REGISTRY["oxigenacao-pao2-fio2-sdra-uco"]
 
 
+def _calc_lra():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["lesao-renal-aguda-kdigo-uco"]
+
+
 def _dados(**mudancas):
     dados = {
         "sexo_biologico": "masculino",
@@ -95,6 +99,22 @@ def _dados_oxigenacao(**mudancas):
         "opacidades_bilaterais": True,
         "edema_nao_primariamente_cardiogenico": True,
         "hipoxemia_nao_primariamente_atelectasia": True,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_lra(**mudancas):
+    dados = {
+        "creatinina_atual_mg_dl": 1.8,
+        "creatinina_baseline_confiavel": True,
+        "creatinina_baseline_mg_dl": 1.0,
+        "intervalo_creatinina_baseline": "mais_48h_ate_7d",
+        "peso_kg": 70,
+        "volume_urina_ml": 420,
+        "duracao_coleta_urina_horas": 12,
+        "anuria_12h_confirmada": False,
+        "trr_aguda_iniciada": False,
     }
     dados.update(mudancas)
     return dados
@@ -632,3 +652,128 @@ def test_oxigenacao_esta_registrada_com_gates_opcionais_e_kind_assessment():
         "fluxo_cnaf_l_min",
         "pressao_barometrica_mmhg",
     }
+
+
+def test_lra_estadia_pelo_componente_mais_grave_e_preserva_componentes():
+    resultado = _calc_lra().compute(_dados_lra())
+
+    assert resultado["estagio_kdigo"] == 1
+    assert "componente C1" in resultado["componente_creatinina"]
+    assert "componente U0" in resultado["componente_diurese"]
+    assert resultado["diurese_ml_kg_h"] == 0.5
+    assert resultado["fora_da_faixa"] is True
+
+
+def test_lra_inclui_aumento_exato_de_03_em_48h():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.3,
+            intervalo_creatinina_baseline="ate_48h",
+            peso_kg=None,
+            volume_urina_ml=None,
+            duracao_coleta_urina_horas=None,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 1
+    assert resultado["delta_creatinina_mg_dl"] == 0.3
+
+
+@pytest.mark.parametrize(
+    "mudancas,estagio",
+    [
+        ({"creatinina_atual_mg_dl": 2.0}, 2),
+        ({"creatinina_atual_mg_dl": 3.0}, 3),
+        ({"creatinina_atual_mg_dl": 4.1, "creatinina_baseline_mg_dl": 1.5}, 3),
+        ({"trr_aguda_iniciada": True}, 3),
+        ({"anuria_12h_confirmada": True, "volume_urina_ml": 0}, 3),
+    ],
+)
+def test_lra_aplica_gates_de_estagio_grave(mudancas, estagio):
+    resultado = _calc_lra().compute(_dados_lra(**mudancas))
+
+    assert resultado["estagio_kdigo"] == estagio
+
+
+def test_lra_diurese_abaixo_de_05_por_12h_define_estagio_2():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.0,
+            volume_urina_ml=419,
+            duracao_coleta_urina_horas=12,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 2
+    assert "componente U2" in resultado["componente_diurese"]
+
+
+def test_lra_diurese_abaixo_de_03_por_24h_define_estagio_3():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            creatinina_atual_mg_dl=1.0,
+            volume_urina_ml=487,
+            duracao_coleta_urina_horas=24,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == 3
+    assert "componente U3" in resultado["componente_diurese"]
+
+
+def test_lra_nao_forca_estagio_com_baseline_fora_da_janela_e_diurese_incompleta():
+    resultado = _calc_lra().compute(
+        _dados_lra(
+            intervalo_creatinina_baseline="fora_7d_ou_incerto",
+            peso_kg=None,
+            volume_urina_ml=None,
+            duracao_coleta_urina_horas=None,
+        )
+    )
+
+    assert resultado["estagio_kdigo"] == "indeterminado"
+    assert "NÃO ESTADIÁVEL" in resultado["status"]
+    assert resultado["fora_da_faixa"] is True
+
+
+@pytest.mark.parametrize(
+    "mudancas,mensagem",
+    [
+        ({"creatinina_atual_mg_dl": 0}, "creatinina atual entre 0,1 e 30"),
+        (
+            {"creatinina_baseline_confiavel": True, "creatinina_baseline_mg_dl": None},
+            "creatinina basal declarada como confiável",
+        ),
+        (
+            {"creatinina_baseline_confiavel": False},
+            "Marque a creatinina basal como confiável",
+        ),
+        (
+            {"volume_urina_ml": None},
+            "informe conjuntamente peso, volume urinário e duração",
+        ),
+        (
+            {"anuria_12h_confirmada": True},
+            "Anúria por 12 horas é incompatível",
+        ),
+    ],
+)
+def test_lra_rejeita_entradas_inconsistentes(mudancas, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_lra().compute(_dados_lra(**mudancas))
+
+
+def test_lra_esta_registrada_com_campos_opcionais_e_sem_prescrever_dialise():
+    calculadora = calculators.REGISTRY["lesao-renal-aguda-kdigo-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {
+        "creatinina_baseline_mg_dl",
+        "peso_kg",
+        "volume_urina_ml",
+        "duracao_coleta_urina_horas",
+    }
+    assert "não indica automaticamente" in " ".join(calculadora.limitations)

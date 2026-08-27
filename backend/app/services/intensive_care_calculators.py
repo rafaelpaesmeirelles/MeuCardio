@@ -83,6 +83,14 @@ REFERENCIAS_OXIGENACAO_SDRA = (
     "doi:10.1164/rccm.202311-2011ST. PMID:38032683."
 )
 
+REFERENCIAS_LRA_KDIGO = (
+    "Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work "
+    "Group. KDIGO Clinical Practice Guideline for Acute Kidney Injury. Kidney Int "
+    "Suppl. 2012;2:1-138. https://kdigo.org/wp-content/uploads/2016/10/"
+    "KDIGO-2012-AKI-Guideline-English.pdf. A atualização KDIGO 2026 permanecia "
+    "em revisão pública em 2026-08-27 e não foi usada como fonte normativa."
+)
+
 
 def _ventilacao_protetora(dados: dict) -> dict:
     sexo = dados["sexo_biologico"]
@@ -1054,10 +1062,231 @@ _OXIGENACAO_SDRA = Calculator(
 )
 
 
+def _avaliacao_lra_kdigo(dados: dict) -> dict:
+    creatinina_atual = float(dados["creatinina_atual_mg_dl"])
+    baseline_confiavel = bool(dados.get("creatinina_baseline_confiavel"))
+    creatinina_baseline = _numero_opcional(dados, "creatinina_baseline_mg_dl")
+    intervalo_baseline = dados["intervalo_creatinina_baseline"]
+    peso = _numero_opcional(dados, "peso_kg")
+    volume_urina = _numero_opcional(dados, "volume_urina_ml")
+    duracao_urina = _numero_opcional(dados, "duracao_coleta_urina_horas")
+    anuria_12h = bool(dados.get("anuria_12h_confirmada"))
+    trr_aguda = bool(dados.get("trr_aguda_iniciada"))
+
+    if not math.isfinite(creatinina_atual) or not 0.1 <= creatinina_atual <= 30:
+        raise ValueError("Informe creatinina atual entre 0,1 e 30 mg/dL.")
+    if intervalo_baseline not in {"ate_48h", "mais_48h_ate_7d", "fora_7d_ou_incerto"}:
+        raise ValueError("Selecione uma janela válida para a creatinina basal.")
+    if baseline_confiavel and creatinina_baseline is None:
+        raise ValueError("Informe a creatinina basal declarada como confiável.")
+    if not baseline_confiavel and creatinina_baseline is not None:
+        raise ValueError("Marque a creatinina basal como confiável antes de usá-la.")
+    if creatinina_baseline is not None and not 0.1 <= creatinina_baseline <= 30:
+        raise ValueError("Informe creatinina basal entre 0,1 e 30 mg/dL.")
+    if peso is not None and not 20 <= peso <= 300:
+        raise ValueError("Informe peso entre 20 e 300 kg.")
+    if volume_urina is not None and not 0 <= volume_urina <= 100_000:
+        raise ValueError("Informe volume urinário entre 0 e 100.000 mL.")
+    if duracao_urina is not None and not 1 <= duracao_urina <= 168:
+        raise ValueError("Informe duração da coleta urinária entre 1 e 168 horas.")
+
+    dados_diurese = (peso, volume_urina, duracao_urina)
+    if any(valor is not None for valor in dados_diurese) and not all(
+        valor is not None for valor in dados_diurese
+    ):
+        raise ValueError(
+            "Para avaliar diurese, informe conjuntamente peso, volume urinário e duração da coleta."
+        )
+    if anuria_12h and volume_urina not in {None, 0}:
+        raise ValueError("Anúria por 12 horas é incompatível com volume urinário positivo no período.")
+
+    estagio_creatinina: int | None = None
+    relacao_creatinina: float | None = None
+    delta_creatinina: float | None = None
+    criterio_creatinina = "não avaliável sem basal confiável dentro da janela de até 7 dias"
+
+    if (
+        baseline_confiavel
+        and creatinina_baseline is not None
+        and intervalo_baseline != "fora_7d_ou_incerto"
+    ):
+        relacao_creatinina = creatinina_atual / creatinina_baseline
+        delta_creatinina = creatinina_atual - creatinina_baseline
+        aumento_03_em_48h = intervalo_baseline == "ate_48h" and delta_creatinina >= 0.3
+        aumento_15_em_7d = relacao_creatinina >= 1.5
+        lra_por_creatinina = aumento_03_em_48h or aumento_15_em_7d
+
+        if relacao_creatinina >= 3 or (creatinina_atual >= 4 and lra_por_creatinina):
+            estagio_creatinina = 3
+        elif relacao_creatinina >= 2:
+            estagio_creatinina = 2
+        elif lra_por_creatinina:
+            estagio_creatinina = 1
+        else:
+            estagio_creatinina = 0
+        criterio_creatinina = (
+            f"Δ {delta_creatinina:+.2f} mg/dL; {relacao_creatinina:.2f}× o basal; "
+            f"componente C{estagio_creatinina}"
+        )
+
+    estagio_diurese: int | None = None
+    diurese_ml_kg_h: float | None = None
+    criterio_diurese = "não avaliável sem peso, volume e duração completos"
+    if anuria_12h:
+        estagio_diurese = 3
+        diurese_ml_kg_h = 0.0
+        criterio_diurese = "anúria confirmada por pelo menos 12 horas; componente U3"
+    elif all(valor is not None for valor in dados_diurese):
+        assert peso is not None and volume_urina is not None and duracao_urina is not None
+        diurese_ml_kg_h = volume_urina / peso / duracao_urina
+        if duracao_urina >= 24 and diurese_ml_kg_h < 0.3:
+            estagio_diurese = 3
+        elif duracao_urina >= 12 and diurese_ml_kg_h < 0.5:
+            estagio_diurese = 2
+        elif duracao_urina >= 6 and diurese_ml_kg_h < 0.5:
+            estagio_diurese = 1
+        elif duracao_urina >= 6:
+            estagio_diurese = 0
+        criterio_diurese = (
+            f"{diurese_ml_kg_h:.3f} mL/kg/h por {duracao_urina:g} h; "
+            + (
+                f"componente U{estagio_diurese}"
+                if estagio_diurese is not None
+                else "janela menor que 6 h, ainda insuficiente para estadiar"
+            )
+        )
+
+    componentes = [x for x in (estagio_creatinina, estagio_diurese) if x is not None]
+    estagio_final = max([3 if trr_aguda else 0, *componentes]) if (componentes or trr_aguda) else None
+
+    if estagio_final is None:
+        status = (
+            "NÃO ESTADIÁVEL: faltam dados válidos de creatinina ou diurese. "
+            "Não interpretar ausência de estágio como ausência de lesão renal."
+        )
+    elif estagio_final == 0:
+        status = (
+            "CRITÉRIOS KDIGO NÃO PREENCHIDOS NOS DADOS INFORMADOS. Isso não exclui lesão renal "
+            "estrutural, alteração posterior, erro de basal ou outra causa de oligúria."
+        )
+    else:
+        origem = []
+        if trr_aguda:
+            origem.append("TRR aguda")
+        if estagio_creatinina == estagio_final:
+            origem.append("creatinina")
+        if estagio_diurese == estagio_final:
+            origem.append("diurese")
+        status = (
+            f"DADOS COMPATÍVEIS COM LRA KDIGO ESTÁGIO {estagio_final} por "
+            f"{' e '.join(origem)}. Estadiar pelo componente mais grave não determina etiologia, "
+            "volume, indicação de diálise nem ajuste medicamentoso automático."
+        )
+
+    return {
+        "estagio_kdigo": estagio_final if estagio_final is not None else "indeterminado",
+        "componente_creatinina": criterio_creatinina,
+        "componente_diurese": criterio_diurese,
+        "relacao_creatinina_baseline": (
+            round(relacao_creatinina, 2) if relacao_creatinina is not None else "não calculada"
+        ),
+        "delta_creatinina_mg_dl": (
+            round(delta_creatinina, 2) if delta_creatinina is not None else "não calculada"
+        ),
+        "diurese_ml_kg_h": (
+            round(diurese_ml_kg_h, 3) if diurese_ml_kg_h is not None else "não calculada"
+        ),
+        "status": status,
+        "fora_da_faixa": estagio_final is None or estagio_final > 0,
+    }
+
+
+def _interpretar_lra_kdigo(resultado: dict) -> str:
+    return (
+        f"Estágio KDIGO: {resultado['estagio_kdigo']}. "
+        f"Creatinina: {resultado['componente_creatinina']}. "
+        f"Diurese: {resultado['componente_diurese']}. {resultado['status']}"
+    )
+
+
+_LRA_KDIGO = Calculator(
+    slug="lesao-renal-aguda-kdigo-uco",
+    name="Lesão renal aguda na UCO — critérios KDIGO",
+    theme="Terapia intensiva",
+    purpose=(
+        "Confere os componentes de creatinina e diurese da definição KDIGO de lesão renal "
+        "aguda e informa o estágio mais grave, sem inferir causa ou indicar diálise."
+    ),
+    fields=[
+        Field("creatinina_atual_mg_dl", "Creatinina sérica atual", "number", "mg/dL", min=0.1, max=30),
+        Field(
+            "creatinina_baseline_confiavel",
+            "Há creatinina basal confiável e comparável",
+            "boolean",
+            help="Não estime um basal para forçar o estágio; use valor e janela documentados.",
+        ),
+        Field(
+            "creatinina_baseline_mg_dl",
+            "Creatinina sérica basal",
+            "number",
+            "mg/dL",
+            min=0.1,
+            max=30,
+            required=False,
+        ),
+        Field(
+            "intervalo_creatinina_baseline",
+            "Janela entre o basal e a creatinina atual",
+            "select",
+            options=[
+                {"value": "ate_48h", "label": "Até 48 horas"},
+                {"value": "mais_48h_ate_7d", "label": "Mais de 48 horas e até 7 dias"},
+                {"value": "fora_7d_ou_incerto", "label": "Mais de 7 dias ou intervalo incerto"},
+            ],
+        ),
+        Field("peso_kg", "Peso usado para normalizar a diurese", "number", "kg", min=20, max=300, required=False),
+        Field("volume_urina_ml", "Volume urinário acumulado", "number", "mL", min=0, max=100000, required=False),
+        Field(
+            "duracao_coleta_urina_horas",
+            "Duração contínua da coleta urinária",
+            "number",
+            "h",
+            min=1,
+            max=168,
+            required=False,
+        ),
+        Field(
+            "anuria_12h_confirmada",
+            "Anúria confirmada por pelo menos 12 horas",
+            "boolean",
+        ),
+        Field(
+            "trr_aguda_iniciada",
+            "Terapia renal substitutiva iniciada por este evento agudo",
+            "boolean",
+            help="Não marque para diálise crônica prévia; TRR aguda é critério de estágio 3.",
+        ),
+    ],
+    compute=_avaliacao_lra_kdigo,
+    interpret=_interpretar_lra_kdigo,
+    reference=REFERENCIAS_LRA_KDIGO,
+    kind="assessment",
+    limitations=[
+        "A calculadora é para adultos e não implementa os critérios pediátricos de queda da TFG.",
+        "Creatinina é marcador tardio, depende de produção e diluição e pode ser enganosa em baixa massa muscular, sobrecarga volêmica e mudança rápida de função renal.",
+        "Diurese exige período contínuo e medida confiável; obstrução do cateter, perdas não registradas e peso inadequado alteram o estágio.",
+        "Use o componente mais grave, mas registre C e U separadamente. O estágio não define etiologia nem substitui exame de urina, imagem, revisão hemodinâmica e de nefrotóxicos.",
+        "A classificação não indica automaticamente fluido, diurético, suspensão de fármaco ou terapia renal substitutiva.",
+        "O KDIGO 2026 disponível em 27/08/2026 era rascunho para revisão pública e não foi usado como norma clínica neste lote.",
+    ],
+)
+
+
 INTENSIVE_CARE_CALCULATOR_REGISTRY: dict[str, Calculator] = {
     _VENTILACAO_PROTETORA.slug: _VENTILACAO_PROTETORA,
     _CONFERENCIA_BOMBA.slug: _CONFERENCIA_BOMBA,
     _ESTADIAMENTO_SCAI.slug: _ESTADIAMENTO_SCAI,
     _ACIDOSE_METABOLICA.slug: _ACIDOSE_METABOLICA,
     _OXIGENACAO_SDRA.slug: _OXIGENACAO_SDRA,
+    _LRA_KDIGO.slug: _LRA_KDIGO,
 }

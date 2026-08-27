@@ -113,6 +113,7 @@ O exemplo confirma a aritmética, não define a causa nem uma conduta terapêuti
 
 - [Acidose lática associada à metformina](acidose-latica-associada-a-metformina-mala-no-paciente-critico-cardiovascular.md): quadro de UTI no qual pH, compensação e AG fazem parte da avaliação, sem substituir lactato e critérios do EXTRIP.
 - [Cetoacidose euglicêmica associada a iSGLT2](../Diabetes_e_cardiologia/cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md): acidose metabólica com AG pode ocorrer sem hiperglicemia marcada; a calculadora não substitui cetonas.
+- [Calculadora de lesão renal aguda KDIGO na UCO](/calculadoras/lesao-renal-aguda-kdigo-uco): LRA pode contribuir para retenção de ácidos; creatinina e diurese respondem à lesão renal, enquanto Winter e AG respondem ao distúrbio ácido-base.
 
 ### Proximidade temática, sem vínculo causal automático
 

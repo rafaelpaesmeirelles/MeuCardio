@@ -20,6 +20,7 @@ const CALCULADORAS_DIRETAS = new Set([
   "estadiamento-scai-choque-cardiogenico",
   "acidose-metabolica-winter-anion-gap-uco",
   "oxigenacao-pao2-fio2-sdra-uco",
+  "lesao-renal-aguda-kdigo-uco",
 ]);
 
 type Documento = {
@@ -145,6 +146,7 @@ export default function CardiologiaIntensiva() {
           <ClinicalContextLink to="/calculadoras/ventilacao-protetora-uco" icon="calculadora" title="Ventilação protetora" detail="PBW, VT 4–8 mL/kg, platô e pressão de distensão" />
           <ClinicalContextLink to="/calculadoras/oxigenacao-pao2-fio2-sdra-uco" icon="calculadora" title="Oxigenação e SDRA" detail="PaO₂/FiO₂, suporte e gate de edema cardiogênico" />
           <ClinicalContextLink to="/calculadoras/acidose-metabolica-winter-anion-gap-uco" icon="calculadora" title="Acidose metabólica" detail="Winter, ânion gap e correção opcional por albumina" />
+          <ClinicalContextLink to="/calculadoras/lesao-renal-aguda-kdigo-uco" icon="calculadora" title="Lesão renal aguda" detail="KDIGO por creatinina, diurese e componente mais grave" />
           <ClinicalContextLink to="/calculadoras/vasoativos-choque-cardiogenico-acc-2025" icon="calculadora" title="Vasoativos no choque" detail="Dose-alvo, concentração e conversão para mL/h" />
           <ClinicalContextLink to="/calculadoras/infusao-continua-peso" icon="medicamento" title="Central de infusões" detail="Vasopressores, inotrópicos, vasodilatadores e sedação" />
           <ClinicalContextLink to="/emergencia" icon="emergencia" title="Emergência cardiovascular" detail="Protocolos de risco imediato e fluxos críticos" />
