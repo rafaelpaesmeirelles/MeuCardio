@@ -18,6 +18,7 @@ const CALCULADORAS_DIRETAS = new Set([
   "ventilacao-protetora-uco",
   "conferencia-bomba-infusao-uco",
   "estadiamento-scai-choque-cardiogenico",
+  "acidose-metabolica-winter-anion-gap-uco",
 ]);
 
 type Documento = {
@@ -141,6 +142,7 @@ export default function CardiologiaIntensiva() {
           <ClinicalContextLink to="/calculadoras/estadiamento-scai-choque-cardiogenico" icon="emergencia" title="Estadiamento SCAI" detail="A–E, modificador de parada e reavaliação seriada" />
           <ClinicalContextLink to="/calculadoras/conferencia-bomba-infusao-uco" icon="check" title="Dupla conferência da bomba" detail="Dose prescrita × concentração × velocidade programada" />
           <ClinicalContextLink to="/calculadoras/ventilacao-protetora-uco" icon="calculadora" title="Ventilação protetora" detail="PBW, VT 4–8 mL/kg, platô e pressão de distensão" />
+          <ClinicalContextLink to="/calculadoras/acidose-metabolica-winter-anion-gap-uco" icon="calculadora" title="Acidose metabólica" detail="Winter, ânion gap e correção opcional por albumina" />
           <ClinicalContextLink to="/calculadoras/vasoativos-choque-cardiogenico-acc-2025" icon="calculadora" title="Vasoativos no choque" detail="Dose-alvo, concentração e conversão para mL/h" />
           <ClinicalContextLink to="/calculadoras/infusao-continua-peso" icon="medicamento" title="Central de infusões" detail="Vasopressores, inotrópicos, vasodilatadores e sedação" />
           <ClinicalContextLink to="/emergencia" icon="emergencia" title="Emergência cardiovascular" detail="Protocolos de risco imediato e fluxos críticos" />

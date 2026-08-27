@@ -61,6 +61,17 @@ REFERENCIAS_SCAI = (
     "doi:10.1016/j.jacc.2024.04.069."
 )
 
+REFERENCIAS_ACIDOSE_METABOLICA = (
+    "Albert MS, Dell RB, Winters RW. Quantitative displacement of acid-base equilibrium "
+    "in metabolic acidosis. Ann Intern Med. 1967;66:312-322. "
+    "doi:10.7326/0003-4819-66-2-312. PMID:6016545; Figge J, Jabor A, Kazda A, "
+    "Fencl V. Anion gap and hypoalbuminemia. Crit Care Med. 1998;26:1807-1810. "
+    "doi:10.1097/00003246-199811000-00019. PMID:9824071; American Thoracic Society. "
+    "Interpretation of Arterial Blood Gases (ABGs), clinical education resource, "
+    "consulted 2026-08-27. https://www.thoracic.org/professionals/clinical-resources/"
+    "critical-care/clinical-education/abgs.php."
+)
+
 
 def _ventilacao_protetora(dados: dict) -> dict:
     sexo = dados["sexo_biologico"]
@@ -569,8 +580,190 @@ _ESTADIAMENTO_SCAI = Calculator(
 )
 
 
+def _acidose_metabolica(dados: dict) -> dict:
+    nomes = ("ph", "paco2_mmhg", "bicarbonato_meq_l", "sodio_meq_l", "cloro_meq_l")
+    try:
+        ph, paco2, bicarbonato, sodio, cloro = (float(dados[nome]) for nome in nomes)
+    except (KeyError, TypeError, ValueError):
+        raise ValueError("Informe pH, PaCO₂, bicarbonato, sódio e cloro.") from None
+
+    if not all(math.isfinite(valor) for valor in (ph, paco2, bicarbonato, sodio, cloro)):
+        raise ValueError("Informe somente valores numéricos finitos.")
+    if not 6.5 <= ph <= 7.8:
+        raise ValueError("Informe pH entre 6,50 e 7,80.")
+    if not 5 <= paco2 <= 150:
+        raise ValueError("Informe PaCO₂ entre 5 e 150 mmHg.")
+    if not 1 <= bicarbonato <= 24:
+        raise ValueError(
+            "Esta ferramenta aplica Winter somente à acidose metabólica: informe bicarbonato entre 1 e 24 mEq/L."
+        )
+    if not 80 <= sodio <= 200:
+        raise ValueError("Informe sódio entre 80 e 200 mEq/L.")
+    if not 40 <= cloro <= 180:
+        raise ValueError("Informe cloro entre 40 e 180 mEq/L.")
+
+    albumina = _numero_opcional(dados, "albumina_g_dl")
+    limite_ag = _numero_opcional(dados, "limite_superior_ag_meq_l")
+    try:
+        albumina_referencia = float(dados.get("albumina_referencia_g_dl", 4.0))
+    except (TypeError, ValueError):
+        raise ValueError("Selecione albumina de referência de 4,0 ou 4,4 g/dL.") from None
+    if albumina is not None and not 0.5 <= albumina <= 6:
+        raise ValueError("Informe albumina entre 0,5 e 6,0 g/dL.")
+    if albumina_referencia not in {4.0, 4.4}:
+        raise ValueError("Selecione albumina de referência de 4,0 ou 4,4 g/dL.")
+    if limite_ag is not None and not 0 <= limite_ag <= 40:
+        raise ValueError("Informe limite superior do ânion gap entre 0 e 40 mEq/L.")
+
+    winter_central = 1.5 * bicarbonato + 8
+    winter_inferior = winter_central - 2
+    winter_superior = winter_central + 2
+    if paco2 < winter_inferior:
+        compensacao = (
+            "PaCO₂ abaixo da faixa esperada: considerar alcalose respiratória associada, "
+            "após confirmar amostra, tempo e contexto clínico"
+        )
+        discordante = True
+    elif paco2 > winter_superior:
+        compensacao = (
+            "PaCO₂ acima da faixa esperada: considerar acidose respiratória associada, "
+            "após confirmar amostra, tempo e contexto clínico"
+        )
+        discordante = True
+    else:
+        compensacao = (
+            "PaCO₂ compatível com a compensação esperada pela fórmula de Winter; "
+            "isso não exclui outro distúrbio misto"
+        )
+        discordante = False
+
+    if ph < 7.35:
+        estado_ph = "acidemia (pH <7,35)"
+    elif ph > 7.45:
+        estado_ph = "alcalemia (pH >7,45); revisar distúrbio misto antes de interpretar"
+    else:
+        estado_ph = "pH entre 7,35 e 7,45; faixa normal não exclui distúrbio misto"
+
+    anion_gap = sodio - (cloro + bicarbonato)
+    anion_gap_corrigido: float | str
+    if albumina is None:
+        anion_gap_corrigido = "não calculado — albumina não informada"
+        ag_para_comparar = anion_gap
+        rotulo_ag = "ânion gap observado"
+    else:
+        anion_gap_corrigido = round(
+            anion_gap + 2.5 * (albumina_referencia - albumina), 1
+        )
+        ag_para_comparar = float(anion_gap_corrigido)
+        rotulo_ag = "ânion gap corrigido por albumina"
+
+    if limite_ag is None:
+        comparacao_ag = (
+            f"{rotulo_ag} sem classificação automática — compare com o intervalo do laboratório "
+            "e confirme se o método inclui potássio"
+        )
+        ag_elevado = False
+    elif ag_para_comparar > limite_ag:
+        comparacao_ag = (
+            f"{rotulo_ag} acima do limite informado ({limite_ag:g} mEq/L); investigar ânions "
+            "não medidos no contexto clínico"
+        )
+        ag_elevado = True
+    else:
+        comparacao_ag = (
+            f"{rotulo_ag} não excede o limite informado ({limite_ag:g} mEq/L); isso não exclui "
+            "acidose nem causa mista"
+        )
+        ag_elevado = False
+
+    return {
+        "estado_do_ph": estado_ph,
+        "paco2_esperada_winter_mmhg": f"{winter_inferior:.1f}–{winter_superior:.1f}",
+        "paco2_observada_mmhg": round(paco2, 1),
+        "avaliacao_da_compensacao": compensacao,
+        "anion_gap_sem_potassio_meq_l": round(anion_gap, 1),
+        "anion_gap_corrigido_albumina_meq_l": anion_gap_corrigido,
+        "comparacao_com_referencia_do_laboratorio": comparacao_ag,
+        "fora_da_faixa": discordante or ag_elevado,
+    }
+
+
+def _interpretar_acidose_metabolica(resultado: dict) -> str:
+    return (
+        f"{resultado['estado_do_ph']}. PaCO₂ esperada por Winter: "
+        f"{resultado['paco2_esperada_winter_mmhg']} mmHg; observada: "
+        f"{resultado['paco2_observada_mmhg']} mmHg. "
+        f"{resultado['avaliacao_da_compensacao']}. Ânion gap sem K: "
+        f"{resultado['anion_gap_sem_potassio_meq_l']} mEq/L; corrigido por albumina: "
+        f"{resultado['anion_gap_corrigido_albumina_meq_l']}. "
+        f"{resultado['comparacao_com_referencia_do_laboratorio']}."
+    )
+
+
+_ACIDOSE_METABOLICA = Calculator(
+    slug="acidose-metabolica-winter-anion-gap-uco",
+    name="Acidose metabólica — Winter e ânion gap corrigido",
+    theme="Terapia intensiva",
+    purpose=(
+        "Em acidose metabólica clinicamente estabelecida, calcula a faixa esperada de PaCO₂ "
+        "pela fórmula de Winter e o ânion gap sem potássio, com correção opcional por albumina."
+    ),
+    fields=[
+        Field("ph", "pH da gasometria", "number", min=6.5, max=7.8),
+        Field("paco2_mmhg", "PaCO₂ observada", "number", "mmHg", min=5, max=150),
+        Field("bicarbonato_meq_l", "Bicarbonato", "number", "mEq/L", min=1, max=24),
+        Field("sodio_meq_l", "Sódio", "number", "mEq/L", min=80, max=200),
+        Field("cloro_meq_l", "Cloro", "number", "mEq/L", min=40, max=180),
+        Field(
+            "albumina_g_dl",
+            "Albumina sérica",
+            "number",
+            "g/dL",
+            min=0.5,
+            max=6,
+            required=False,
+            help="Opcional; quando informada, corrige o ânion gap pelo fator de Figge (2,5 mEq/L por 1 g/dL).",
+        ),
+        Field(
+            "albumina_referencia_g_dl",
+            "Albumina de referência usada pelo serviço",
+            "select",
+            "g/dL",
+            options=[
+                {"value": 4.0, "label": "4,0 g/dL"},
+                {"value": 4.4, "label": "4,4 g/dL"},
+            ],
+            help="A correção usa referência menos albumina observada; confirme o valor adotado localmente.",
+        ),
+        Field(
+            "limite_superior_ag_meq_l",
+            "Limite superior do ânion gap no laboratório",
+            "number",
+            "mEq/L",
+            min=0,
+            max=40,
+            required=False,
+            help="Opcional; evita impor um corte universal, que varia com método e inclusão de potássio.",
+        ),
+    ],
+    compute=_acidose_metabolica,
+    interpret=_interpretar_acidose_metabolica,
+    reference=REFERENCIAS_ACIDOSE_METABOLICA,
+    kind="assessment",
+    limitations=[
+        "Use somente quando a acidose metabólica estiver clinicamente estabelecida; a ferramenta não define o distúrbio primário a partir de um único número.",
+        "Compensação esperada não é diagnóstico. PaCO₂ fora da faixa apenas sinaliza que distúrbio respiratório associado, erro pré-analítico, diferença temporal ou mudança ventilatória devem ser considerados.",
+        "Use eletrólitos e albumina obtidos no mesmo momento da gasometria sempre que possível; diferenças de amostra e tempo podem produzir relações artificiais.",
+        "O ânion gap é calculado sem potássio. Intervalos variam por analisador; a classificação automática só ocorre quando o usuário informa o limite superior do próprio laboratório.",
+        "A correção de Figge ajusta o efeito da albumina, mas não identifica o ânion não medido nem substitui lactato, cetonas, função renal, toxicologia e avaliação da causa.",
+        "Ventilação mecânica, dor, sepse, gestação, hepatopatia e intoxicações podem modificar a PaCO₂; correlacione com o momento clínico e parâmetros ventilatórios.",
+    ],
+)
+
+
 INTENSIVE_CARE_CALCULATOR_REGISTRY: dict[str, Calculator] = {
     _VENTILACAO_PROTETORA.slug: _VENTILACAO_PROTETORA,
     _CONFERENCIA_BOMBA.slug: _CONFERENCIA_BOMBA,
     _ESTADIAMENTO_SCAI.slug: _ESTADIAMENTO_SCAI,
+    _ACIDOSE_METABOLICA.slug: _ACIDOSE_METABOLICA,
 }

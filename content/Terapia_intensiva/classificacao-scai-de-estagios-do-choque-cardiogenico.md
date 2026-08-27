@@ -46,6 +46,12 @@ modificador.
 
 Fonte: SCAI SHOCK Bedside Checklist 2022, documento endossado por ACC, ACEP, AHA, ESC/ACVC, ISHLT, SCCM e STS.
 
+**Proximidade temática, não regra de estadiamento:** quando houver acidose
+metabólica já estabelecida, a [avaliação de compensação respiratória e ânion gap
+na UCO](acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco.md) pode
+organizar a gasometria. Seu resultado não define estágio SCAI nem a etiologia do
+choque; mantém-se apenas como apoio contextual ao pH registrado no estágio.
+
 ## Validacao criterios objetivos
 Estudo subsequente (2022) desenvolveu critérios formais objetivos para cada estágio, usando parâmetros de pressão arterial sistólica, nível de lactato, alanina transaminase (ALT) e pH sistêmico, associados de forma significativa à mortalidade em coorte de 3.455 pacientes (registro CS Working Group, 2016-2021)
 

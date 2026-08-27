@@ -77,6 +77,48 @@ def test_cockpit_expoe_estadiamento_scai_seriado():
     assert "modificador de parada e reavaliação seriada" in pagina
 
 
+def test_cockpit_expoe_acidose_metabolica_com_escopo_explicito():
+    pagina = _texto("pages/CardiologiaIntensiva.tsx")
+
+    assert '"acidose-metabolica-winter-anion-gap-uco"' in pagina
+    assert '/calculadoras/acidose-metabolica-winter-anion-gap-uco' in pagina
+    assert "Winter, ânion gap e correção opcional por albumina" in pagina
+
+
+def test_auditoria_descobre_calculadoras_de_registros_modulares():
+    auditoria = (ROOT / "scripts" / "audit_tudo_com_tudo.py").read_text(encoding="utf-8")
+
+    assert 'glob("*calculators*.py")' in auditoria
+
+
+def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
+    slug = "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco"
+    documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
+    mala = (CONTENT / "acidose-latica-associada-a-metformina-mala-no-paciente-critico-cardiovascular.md").read_text(
+        encoding="utf-8"
+    )
+    ceto = (
+        ROOT
+        / "content"
+        / "Diabetes_e_cardiologia"
+        / "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2.md"
+    ).read_text(encoding="utf-8")
+    trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
+    trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-acidose-metabolica-compensacao-e-anion-gap")
+
+    assert "review_status: pendente_revisao" in documento
+    assert "Vínculo clínico direto" in documento
+    assert "Proximidade temática, sem vínculo causal automático" in documento
+    assert f"{slug}.md" in mala
+    assert f"{slug}.md" in ceto
+    assert trilha["review_status"] == "pendente_revisao"
+    assert any(
+        etapa["item_type"] == "calculadora"
+        and etapa["item_slug"] == "acidose-metabolica-winter-anion-gap-uco"
+        for etapa in trilha["etapas"]
+    )
+
+
 def test_modificador_scai_a_foi_corrigido_no_documento_e_checklist():
     documento = (CONTENT / "classificacao-scai-de-estagios-do-choque-cardiogenico.md").read_text(
         encoding="utf-8"

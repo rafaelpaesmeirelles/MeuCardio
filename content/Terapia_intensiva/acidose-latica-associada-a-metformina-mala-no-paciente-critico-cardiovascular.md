@@ -47,6 +47,10 @@ O tratamento deve ser **mantido até lactato < 3 mmol/L e pH > 7,35** (ambos 1D)
 - **Hemodiálise intermitente é a modalidade preferida quando disponível**; TRSC é alternativa aceitável, inclusive para ciclos de repetição
 - **A mortalidade de 50% que consta em textos mais antigos reflete a era pré-diálise de rotina e o reconhecimento tardio** — as séries mais recentes giram em torno de 25% (Kajbaf & Lalau) a 36% (Blumenberg et al.), e parte desse óbito é atribuível à doença crítica de base, não à MALA isoladamente
 
+Para estruturar a compensação respiratória e o ânion gap sem transformar a
+fórmula em diagnóstico automático, ver [Acidose metabólica na UCO: compensação
+respiratória e ânion gap](acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco.md).
+
 ## Armadilhas clínicas
 - **Tratar todo choque em usuário de metformina como MALA** — a maioria dos usuários crônicos em choque tem lactato elevado pela hipoperfusão de base, não pela droga; a suspeita de MALA pede desproporção entre a gravidade metabólica e o quadro hemodinâmico
 - **Adiar a diálise esperando confirmação laboratorial de nível sérico de metformina** — a dosagem raramente está disponível a tempo, e o EXTRIP baseia a indicação em pH, lactato e quadro clínico, não em nível sérico do fármaco

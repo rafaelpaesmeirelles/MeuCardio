@@ -98,10 +98,7 @@ def audit() -> dict:
     # Calculadoras vivem em registro Python e não compõem os 9.452 itens.
     calculator_source = "\n".join(
         path.read_text(encoding="utf-8")
-        for path in (
-            ROOT / "backend/app/services/calculators.py",
-            ROOT / "backend/app/services/dose_calculators.py",
-        )
+        for path in sorted((ROOT / "backend/app/services").glob("*calculators*.py"))
     )
     slugs["calculadora"] = set(re.findall(r'\bslug\s*=\s*["\']([^"\']+)', calculator_source))
 

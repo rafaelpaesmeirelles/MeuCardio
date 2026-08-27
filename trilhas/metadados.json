@@ -23733,5 +23733,41 @@
         "por_que": "Liga à alternativa aceita pela diretriz AHA/ASA 2026 na janela de 4,5 horas, preservando a diferença entre protocolo clínico e rotulagem local."
       }
     ]
+  },
+  {
+    "slug": "trilha-uco-acidose-metabolica-compensacao-e-anion-gap",
+    "titulo": "UCO: acidose metabólica, compensação respiratória e ânion gap",
+    "tema": "Terapia intensiva",
+    "objetivo": "Aplicar a fórmula de Winter e o ânion gap corrigido por albumina como conferências matemáticas, reconhecer discordâncias que pedem investigação de distúrbio misto e conectar o raciocínio a MALA e cetoacidose euglicêmica sem transformar resultado calculado em diagnóstico automático.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco",
+        "por_que": "Define escopo, fórmulas, condições de uso, fontes primárias e gates antes de interpretar qualquer resultado."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "acidose-metabolica-winter-anion-gap-uco",
+        "por_que": "Executa a aritmética rastreável, usa o limite do laboratório e mantém a linguagem de hipótese clínica em vez de emitir diagnóstico misto."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "acidose-latica-associada-a-metformina-mala-no-paciente-critico-cardiovascular",
+        "por_que": "Aplica o raciocínio a uma causa relevante na UCO, preservando lactato, função renal e critérios do EXTRIP como avaliações próprias."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2",
+        "por_que": "Fecha com a armadilha em que glicemia pouco elevada não exclui acidose com ânion gap; cetonas continuam obrigatórias para confirmar a etiologia."
+      }
+    ],
+    "revisao": "Lote produzido e referenciado em 27/08/2026; conteúdo e sequência permanecem pendentes de revisão clínica humana antes da publicação."
   }
 ]

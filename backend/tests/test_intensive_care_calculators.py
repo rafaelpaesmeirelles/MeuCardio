@@ -20,6 +20,10 @@ def _calc_scai():
     return INTENSIVE_CARE_CALCULATOR_REGISTRY["estadiamento-scai-choque-cardiogenico"]
 
 
+def _calc_acidose():
+    return INTENSIVE_CARE_CALCULATOR_REGISTRY["acidose-metabolica-winter-anion-gap-uco"]
+
+
 def _dados(**mudancas):
     dados = {
         "sexo_biologico": "masculino",
@@ -55,6 +59,19 @@ def _dados_scai(**mudancas):
         "deterioracao_apos_intervencao": False,
         "colapso_extremis": False,
         "parada_com_risco_anoxico": False,
+    }
+    dados.update(mudancas)
+    return dados
+
+
+def _dados_acidose(**mudancas):
+    dados = {
+        "ph": 7.25,
+        "paco2_mmhg": 26,
+        "bicarbonato_meq_l": 12,
+        "sodio_meq_l": 140,
+        "cloro_meq_l": 104,
+        "albumina_referencia_g_dl": 4.0,
     }
     dados.update(mudancas)
     return dados
@@ -352,3 +369,70 @@ def test_scai_c_exclui_hipoperfusao_resolvida_com_volume_isolado():
     assert "além de volume isolado" in campo_c.label
     assert "resolve apenas com reposição volêmica não preenche" in campo_c.help
     assert "além de reposição volêmica isolada" in resultado["criterio_determinante"]
+
+
+def test_acidose_calcula_winter_e_anion_gap_sem_fabricar_diagnostico():
+    resultado = _calc_acidose().compute(_dados_acidose())
+
+    assert resultado["paco2_esperada_winter_mmhg"] == "24.0–28.0"
+    assert resultado["anion_gap_sem_potassio_meq_l"] == 24.0
+    assert "compatível com a compensação esperada" in resultado["avaliacao_da_compensacao"]
+    assert "não exclui outro distúrbio misto" in resultado["avaliacao_da_compensacao"]
+    assert resultado["fora_da_faixa"] is False
+
+
+@pytest.mark.parametrize(
+    "paco2, trecho",
+    [
+        (20, "considerar alcalose respiratória associada"),
+        (35, "considerar acidose respiratória associada"),
+    ],
+)
+def test_acidose_sinaliza_paco2_discordante_sem_diagnosticar(paco2, trecho):
+    resultado = _calc_acidose().compute(_dados_acidose(paco2_mmhg=paco2))
+
+    assert trecho in resultado["avaliacao_da_compensacao"]
+    assert "confirmar amostra, tempo e contexto clínico" in resultado["avaliacao_da_compensacao"]
+    assert resultado["fora_da_faixa"] is True
+
+
+def test_acidose_corrige_anion_gap_por_albumina_e_usa_referencia_local():
+    resultado = _calc_acidose().compute(
+        _dados_acidose(
+            albumina_g_dl=2,
+            limite_superior_ag_meq_l=12,
+        )
+    )
+
+    assert resultado["anion_gap_corrigido_albumina_meq_l"] == 29.0
+    assert "acima do limite informado (12 mEq/L)" in resultado["comparacao_com_referencia_do_laboratorio"]
+
+
+def test_acidose_sem_limite_laboratorial_nao_impoe_corte_universal():
+    resultado = _calc_acidose().compute(_dados_acidose(albumina_g_dl=2))
+
+    assert "sem classificação automática" in resultado["comparacao_com_referencia_do_laboratorio"]
+
+
+@pytest.mark.parametrize(
+    "mudanca, mensagem",
+    [
+        ({"ph": "NaN"}, "valores numéricos finitos"),
+        ({"bicarbonato_meq_l": 25}, "aplica Winter somente à acidose metabólica"),
+        ({"albumina_g_dl": 0.2}, "albumina entre 0,5 e 6,0"),
+        ({"limite_superior_ag_meq_l": 41}, "limite superior do ânion gap"),
+    ],
+)
+def test_acidose_rejeita_entradas_fora_do_escopo(mudanca, mensagem):
+    with pytest.raises(ValueError, match=mensagem):
+        _calc_acidose().compute(_dados_acidose(**mudanca))
+
+
+def test_acidose_esta_registrada_com_resultado_estruturado_e_campos_opcionais():
+    calculadora = calculators.REGISTRY["acidose-metabolica-winter-anion-gap-uco"]
+    opcionais = {campo.name for campo in calculadora.fields if not campo.required}
+
+    assert calculadora.theme == "Terapia intensiva"
+    assert calculadora.status == "implementada"
+    assert calculadora.kind == "assessment"
+    assert opcionais == {"albumina_g_dl", "limite_superior_ag_meq_l"}
