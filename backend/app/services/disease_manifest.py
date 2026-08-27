@@ -89,6 +89,24 @@ def _add_by_id(items: Any, additions: Any, *, label: str) -> None:
         existing.add(identifier)
 
 
+def _append_unique(record: dict[str, Any], append_values: Any, *, label: str) -> None:
+    if not isinstance(append_values, dict):
+        raise ValueError(f"{label}: append deve ser objeto")
+    for field, values in append_values.items():
+        if not isinstance(values, list):
+            raise ValueError(f"{label}:{field}: append exige lista")
+        target = record.get(field)
+        if target is None:
+            target = []
+            record[field] = target
+        if not isinstance(target, list):
+            raise ValueError(f"{label}:{field}: campo alvo não é lista")
+        for value in values:
+            copied = copy.deepcopy(value)
+            if copied not in target:
+                target.append(copied)
+
+
 def _apply_corrections(
     records_by_slug: dict[str, dict[str, Any]],
     base_manifest: Path,
@@ -106,6 +124,10 @@ def _apply_corrections(
                 raise ValueError(f"{path}:{slug}: set deve ser objeto")
             for key, value in set_values.items():
                 record[key] = copy.deepcopy(value)
+
+            append_values = correction.get("append") or {}
+            if append_values:
+                _append_unique(record, append_values, label=f"{path}:{slug}")
 
             replacements = correction.get("replace") or []
             if not isinstance(replacements, list):
