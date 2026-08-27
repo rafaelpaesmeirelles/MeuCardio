@@ -12,6 +12,7 @@ from app.services.clinical_rule_engine import (
     validate_question_definitions,
     validate_rule_definitions,
 )
+from app.services.disease_manifest import load_disease_records
 
 CAMPOS = {
     "slug", "name", "aliases", "area", "category", "subtype", "cyanosis_class",
@@ -35,10 +36,10 @@ def _valid_url(value: str) -> bool:
 
 
 def carregar(caminho_json: str) -> dict:
-    with open(caminho_json, encoding="utf-8") as arquivo:
-        items = json.load(arquivo)
-    if not isinstance(items, list):
-        return {"erros": ["O manifesto deve ser uma lista JSON."]}
+    try:
+        items = load_disease_records(caminho_json)
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
+        return {"erros": [str(exc)]}
 
     db = SessionLocal()
     novos = atualizados = 0
