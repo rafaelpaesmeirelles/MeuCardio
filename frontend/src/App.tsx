@@ -30,6 +30,7 @@ const Documento = lazy(() => import("./pages/Documento"));
 const Busca = lazy(() => import("./pages/Busca"));
 const Calculadoras = lazy(() => import("./pages/Calculadoras"));
 const Calculadora = lazy(() => import("./pages/Calculadora"));
+const CardiologiaIntensiva = lazy(() => import("./pages/CardiologiaIntensiva"));
 const Medicamentos = lazy(() => import("./pages/MedicamentosClinicalCommand"));
 const Interacoes = lazy(() => import("./pages/Interacoes"));
 const Condicoes = lazy(() => import("./pages/Condicoes"));
@@ -151,6 +152,7 @@ export default function App() {
           <Route path="busca" element={<Busca />} />
           <Route path="calculadoras" element={<Calculadoras />} />
           <Route path="calculadoras/:slug" element={<Calculadora />} />
+          <Route path="cardiologia-intensiva" element={<CardiologiaIntensiva />} />
           <Route path="medicamentos" element={<Medicamentos />} />
           <Route path="interacoes" element={<Interacoes />} />
           <Route path="condicoes" element={<Condicoes />} />

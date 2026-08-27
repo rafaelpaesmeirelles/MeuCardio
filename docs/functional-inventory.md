@@ -1,6 +1,6 @@
 # Inventário funcional da Corvia
 
-Data da auditoria: 3 de agosto de 2026.
+Data da auditoria inicial: 3 de agosto de 2026. Atualizado em 27 de agosto de 2026.
 
 ## Escopo da certificação
 
@@ -28,6 +28,9 @@ superfície é adicionada sem revisão explícita do inventário.
 - Biblioteca científica, documentos, fluxogramas, diretrizes e galeria;
 - evidências, estudos, exames, medicamentos, interações, guias por doença e triagem por sintomas;
 - calculadoras e escores clínicos;
+- cockpit de Cardiologia Intensiva e Unidade Coronariana, com acesso ao corpus
+  publicado, checklists, emergência, infusões, vasoativos e cálculo de ventilação
+  protetora baseado em peso corporal predito;
 - trilhas de estudo, casos clínicos, cursos parceiros e checklists;
 - material para pacientes e envio associado;
 - Round hospitalar e assistente clínico com IA/RAG;
