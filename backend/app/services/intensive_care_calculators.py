@@ -1,14 +1,15 @@
 """Calculadoras operacionais para Cardiologia Intensiva e Unidade Coronariana.
 
-O primeiro instrumento deste módulo calcula peso corporal predito e parâmetros
-de ventilação protetora. Ele deliberadamente não sugere modo ventilatório nem
-prescreve PEEP: essas decisões dependem da fisiologia e da avaliação à beira
-leito.
+Os instrumentos deste módulo fazem conferências matemáticas rastreáveis. Eles
+deliberadamente não prescrevem parâmetros, fármacos ou diluições institucionais:
+essas decisões dependem da fisiologia, da formulação disponível e da avaliação
+à beira leito.
 """
 
 from __future__ import annotations
 
 from .calculators import Calculator, Field
+from .dose_calculators_choque_cardiogenico2025_chatgpt import AGENTES
 
 
 FONTE_PRODUCAO = "chatgpt"
@@ -25,6 +26,21 @@ REFERENCIAS_VENTILACAO = (
     "2024;69:1042-1054. PMID:39048148; Ferreira JC et al. Brazilian guidelines for "
     "mechanical ventilation 2024. Crit Care Sci. 2025;37:e20250242en. "
     "doi:10.62675/2965-2774.20250242-en."
+)
+
+REFERENCIAS_CONFERENCIA_INFUSAO = (
+    "Institute for Safe Medication Practices (ISMP). Guidelines for Optimizing Safe "
+    "Implementation and Use of Smart Infusion Pumps. 2020. "
+    "https://www.ismp.org/system/files?file=resources%2F2020-10%2FISMP176C-"
+    "Smart+Infusion+Pumps-100620.pdf; ISMP. List of High-Alert Medications in Acute Care "
+    "Settings. 2024. https://www.ismp.org/Tools/institutionalhighAlert.asp; Sinha SS et al. "
+    "2025 Concise Clinical "
+    "Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of "
+    "Cardiogenic Shock. J Am Coll Cardiol. 2025;85:1618-1641. "
+    "doi:10.1016/j.jacc.2025.02.018. https://www.jacc.org/doi/10.1016/j.jacc.2025.02.018; "
+    "DailyMed. Norepinephrine Bitartrate in Sodium Chloride Injection, prescribing "
+    "information, consulted 2026-08-27. https://dailymed.nlm.nih.gov/dailymed/"
+    "drugInfo.cfm?setid=6363e9b4-29df-4553-904d-a563e5adda6e."
 )
 
 
@@ -150,6 +166,182 @@ _VENTILACAO_PROTETORA = Calculator(
 )
 
 
+def _conferencia_bomba(dados: dict) -> dict:
+    chave = dados["agente"]
+    if chave not in AGENTES:
+        raise ValueError("Selecione um agente disponível para conferência.")
+
+    agente = AGENTES[chave]
+    peso = float(dados["peso_kg"])
+    dose_pretendida = float(dados["dose_pretendida"])
+    quantidade = float(dados["quantidade_soluto"])
+    volume = float(dados["volume_total_ml"])
+    velocidade = float(dados["velocidade_bomba_ml_h"])
+    tolerancia = float(dados["tolerancia_percentual"])
+    contexto_acc = bool(dados.get("contexto_choque_cardiogenico"))
+
+    if dose_pretendida <= 0 or quantidade <= 0 or volume <= 0 or velocidade < 0:
+        raise ValueError(
+            "Dose pretendida, quantidade e volume devem ser positivos; a velocidade não pode ser negativa."
+        )
+    if tolerancia not in {2.0, 5.0, 10.0}:
+        raise ValueError("Selecione tolerância operacional de 2%, 5% ou 10%.")
+    if agente["unidade"] == "mcg/kg/min" and not 1 <= peso <= 400:
+        raise ValueError("Informe peso entre 1 e 400 kg para doses ponderais.")
+
+    if agente["unidade"] == "U/min":
+        concentracao_numerica = quantidade / volume
+        dose_entregue = concentracao_numerica * velocidade / 60
+        velocidade_esperada = dose_pretendida * 60 / concentracao_numerica
+        concentracao = f"{concentracao_numerica:.4f} U/mL"
+    else:
+        concentracao_numerica = quantidade * 1000 / volume
+        if agente["unidade"] == "mcg/kg/min":
+            dose_entregue = concentracao_numerica * velocidade / 60 / peso
+            velocidade_esperada = dose_pretendida * peso * 60 / concentracao_numerica
+        else:
+            dose_entregue = concentracao_numerica * velocidade / 60
+            velocidade_esperada = dose_pretendida * 60 / concentracao_numerica
+        concentracao = f"{concentracao_numerica:.2f} mcg/mL"
+
+    desvio = abs(dose_entregue - dose_pretendida) / dose_pretendida * 100
+    conferencia_ok = desvio <= tolerancia
+    fora_acc = contexto_acc and not agente["min"] <= dose_entregue <= agente["max"]
+
+    status = (
+        "CONFERÊNCIA MATEMÁTICA DENTRO DA TOLERÂNCIA"
+        if conferencia_ok
+        else "DIVERGÊNCIA — PAUSAR E RECONFERIR PRESCRIÇÃO, SOLUÇÃO E BOMBA"
+    )
+    faixa_acc = (
+        f"{agente['min']}–{agente['max']} {agente['unidade']}"
+        if contexto_acc
+        else "não aplicada — contexto de choque cardiogênico não selecionado"
+    )
+    alerta_acc = (
+        "Dose calculada fora da faixa contextual da Tabela 2 do ACC 2025."
+        if fora_acc
+        else (
+            "Dose calculada dentro da faixa contextual da Tabela 2 do ACC 2025."
+            if contexto_acc
+            else "Faixa terapêutica não avaliada; a tolerância escolhida compara apenas números."
+        )
+    )
+
+    return {
+        "status_conferencia": status,
+        "agente": agente["nome"],
+        "concentracao_calculada": concentracao,
+        "dose_pretendida": round(dose_pretendida, 6),
+        "dose_entregue_calculada": round(dose_entregue, 6),
+        "unidade_dose": agente["unidade"],
+        "velocidade_programada_ml_h": round(velocidade, 3),
+        "velocidade_esperada_ml_h": round(velocidade_esperada, 3),
+        "desvio_percentual_absoluto": round(desvio, 2),
+        "tolerancia_operacional_percentual": tolerancia,
+        "faixa_acc_2025": faixa_acc,
+        "alerta_contextual": alerta_acc,
+        "fora_da_faixa": (not conferencia_ok) or fora_acc,
+    }
+
+
+def _interpretar_conferencia_bomba(resultado: dict) -> str:
+    return (
+        f"{resultado['status_conferencia']}. {resultado['agente']}: a bomba a "
+        f"{resultado['velocidade_programada_ml_h']} mL/h, na concentração calculada de "
+        f"{resultado['concentracao_calculada']}, entrega "
+        f"{resultado['dose_entregue_calculada']} {resultado['unidade_dose']}; a dose "
+        f"pretendida é {resultado['dose_pretendida']} {resultado['unidade_dose']}. "
+        f"Desvio absoluto {resultado['desvio_percentual_absoluto']}% (tolerância operacional "
+        f"selecionada {resultado['tolerancia_operacional_percentual']}%). Velocidade "
+        f"matematicamente esperada: {resultado['velocidade_esperada_ml_h']} mL/h. "
+        f"{resultado['alerta_contextual']}"
+    )
+
+
+_CONFERENCIA_BOMBA = Calculator(
+    slug="conferencia-bomba-infusao-uco",
+    name="Dupla conferência da bomba — dose entregue versus prescrita",
+    theme="Terapia intensiva",
+    purpose=(
+        "Recalcula a dose efetivamente entregue a partir da quantidade preparada, volume e "
+        "velocidade da bomba, comparando-a com a dose pretendida em uma etapa independente."
+    ),
+    fields=[
+        Field(
+            "agente",
+            "Agente",
+            "select",
+            options=[
+                {"value": chave, "label": f"{item['nome']} — {item['unidade']}"}
+                for chave, item in AGENTES.items()
+            ],
+            help="Confirme o agente no rótulo da solução, na prescrição e no canal da bomba.",
+        ),
+        Field(
+            "peso_kg",
+            "Peso documentado",
+            "number",
+            "kg",
+            min=1,
+            max=400,
+            help="Usado somente quando a unidade do agente é mcg/kg/min.",
+        ),
+        Field(
+            "dose_pretendida",
+            "Dose pretendida/prescrita",
+            "number",
+            help="Use a unidade exibida junto ao agente; não transcreva a velocidade em mL/h.",
+        ),
+        Field(
+            "quantidade_soluto",
+            "Quantidade total do fármaco na solução",
+            "number",
+            "mg ou U",
+            help="Informe mg para agentes em mcg; somente para vasopressina informe unidades (U).",
+        ),
+        Field("volume_total_ml", "Volume total da solução", "number", "mL", min=0.1),
+        Field(
+            "velocidade_bomba_ml_h",
+            "Velocidade programada na bomba",
+            "number",
+            "mL/h",
+            min=0,
+        ),
+        Field(
+            "tolerancia_percentual",
+            "Tolerância operacional para a comparação",
+            "select",
+            options=[
+                {"value": "5", "label": "5% — conferência padrão"},
+                {"value": "2", "label": "2% — conferência estrita"},
+                {"value": "10", "label": "10% — somente se protocolo local permitir"},
+            ],
+            help="Não é margem terapêutica: define apenas quando a ferramenta sinaliza divergência matemática.",
+        ),
+        Field(
+            "contexto_choque_cardiogenico",
+            "Aplicar também faixa contextual do ACC 2025 para choque cardiogênico",
+            "boolean",
+            help="Não marque para outros fenótipos; as faixas do consenso não são universais.",
+        ),
+    ],
+    compute=_conferencia_bomba,
+    interpret=_interpretar_conferencia_bomba,
+    reference=REFERENCIAS_CONFERENCIA_INFUSAO,
+    kind="dose",
+    limitations=[
+        "A conferência só é independente se os dados forem obtidos novamente da prescrição, do rótulo da solução e da bomba, sem copiar o resultado de outro cálculo.",
+        "Tolerância operacional não é margem terapêutica. Mesmo dentro da tolerância, confirme paciente, fármaco, concentração, dose, canal, linha e resposta clínica.",
+        "Não verifica identidade, diluente, compatibilidade, estabilidade, validade, via/acesso, volume residual, peso desatualizado ou biblioteca de limites da bomba inteligente.",
+        "Não fornece diluição padrão: apresentações prontas e concentrações variam por produto e instituição; valide bula, farmácia e protocolo local.",
+        "As faixas de dose do ACC 2025 são exibidas somente quando o usuário declara contexto de choque cardiogênico; não são limites universais nem substituem titulação hemodinâmica.",
+        "Dupla conferência manual seletiva não substitui código de barras, biblioteca de redução de erros de dose, integração bomba-prontuário e outras barreiras sistêmicas.",
+    ],
+)
+
+
 INTENSIVE_CARE_CALCULATOR_REGISTRY: dict[str, Calculator] = {
     _VENTILACAO_PROTETORA.slug: _VENTILACAO_PROTETORA,
+    _CONFERENCIA_BOMBA.slug: _CONFERENCIA_BOMBA,
 }

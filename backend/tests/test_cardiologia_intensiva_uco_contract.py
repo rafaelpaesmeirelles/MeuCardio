@@ -49,3 +49,12 @@ def test_cockpit_preserva_gates_humanos_e_nao_promete_prescricao_automatica():
     assert "nenhuma estação substitui protocolo local" in pagina
     assert "ainda não há prescrição automática de antibióticos" in pagina
     assert "decisão final preservada pelo médico" in pagina
+
+
+def test_cockpit_expoe_dupla_conferencia_sem_confundir_com_prescricao():
+    pagina = _texto("pages/CardiologiaIntensiva.tsx")
+
+    assert '"conferencia-bomba-infusao-uco"' in pagina
+    assert '/calculadoras/conferencia-bomba-infusao-uco' in pagina
+    assert "Dose prescrita × concentração × velocidade programada" in pagina
+    assert "Concentração, compatibilidade" in pagina

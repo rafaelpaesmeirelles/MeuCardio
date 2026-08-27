@@ -16,6 +16,7 @@ const CALCULADORAS_DIRETAS = new Set([
   "infusao-continua-peso",
   "vasoativos-choque-cardiogenico-acc-2025",
   "ventilacao-protetora-uco",
+  "conferencia-bomba-infusao-uco",
 ]);
 
 type Documento = {
@@ -136,6 +137,7 @@ export default function CardiologiaIntensiva() {
         description="Atalhos diretos; nenhuma estação substitui protocolo local, conferência da bomba ou avaliação clínica."
       >
         <div className="cc-context-grid">
+          <ClinicalContextLink to="/calculadoras/conferencia-bomba-infusao-uco" icon="check" title="Dupla conferência da bomba" detail="Dose prescrita × concentração × velocidade programada" />
           <ClinicalContextLink to="/calculadoras/ventilacao-protetora-uco" icon="calculadora" title="Ventilação protetora" detail="PBW, VT 4–8 mL/kg, platô e pressão de distensão" />
           <ClinicalContextLink to="/calculadoras/vasoativos-choque-cardiogenico-acc-2025" icon="calculadora" title="Vasoativos no choque" detail="Dose-alvo, concentração e conversão para mL/h" />
           <ClinicalContextLink to="/calculadoras/infusao-continua-peso" icon="medicamento" title="Central de infusões" detail="Vasopressores, inotrópicos, vasodilatadores e sedação" />
