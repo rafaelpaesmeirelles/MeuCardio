@@ -2,8 +2,8 @@
 (área geral) em doencas/metadados.json.
 
 Quarto ciclo independente do dia (após endocardite infecciosa PR #553,
-pericardite PR #554 e hipertensão pulmonar PR #555). A coleção não tinha
-nenhum verbete de síncope; o lote não cria nenhum documento, checklist,
+pericardite PR #554 e hipertensão pulmonar PR #555). A coleção não tinha verbete geral/adulto de síncope; já existia o irmão
+pediátrico `sincope-pediatrica`, preservado por este lote; o lote não cria nenhum documento, checklist,
 trilha ou material novo — conecta o novo verbete a 30 itens já publicados e
 revisados em content/Síncope/ (ESC 2018, EHRA/HRS/APHRS/LAHRS 2024, EuSEM
 2024, ensaio SEEDS e demais fontes primárias já presentes no corpus).
@@ -62,16 +62,16 @@ def _all_patient_material_slugs() -> set[str]:
 def test_slug_e_genuinamente_novo():
     doencas = _load_doencas()
     assert NOVO_SLUG in doencas
-    # Antes deste lote não havia nenhum verbete de síncope na coleção —
-    # diferente do hub de hipertensão pulmonar, que já tinha as variantes
-    # pediátrica/gestacional. Aqui não há slug irmão pré-existente a proteger.
+    # Antes deste lote não havia verbete geral/adulto; o registro pediátrico
+    # preexistente deve continuar preservado e separado.
+    assert "sincope-pediatrica" in doencas
     assert len(doencas) == 101
 
 
 def test_marcacao_editorial_correta():
     item = _load_doencas()[NOVO_SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "geral"
     assert item.get("review_note")
@@ -154,3 +154,25 @@ def test_nao_reproduz_escore_de_risco_cardiovascular_proprietario_em_nenhum_camp
     blob = json.dumps(item, ensure_ascii=False).casefold()
     assert "mwho" not in blob
     assert "hfa-icos" not in blob
+
+
+def test_bloqueios_clinicos_da_revisao_foram_corrigidos():
+    item = _load_doencas()[NOVO_SLUG]
+    rules = {r["id"]: r for r in item["assistant_rules"]}
+    questions = {q["id"]: q for q in item["assistant_questions"]}
+
+    assert rules["sincope-alto-risco-cardiaco-esforco-estrutural"]["when"] == {
+        "all": [{"field": "known_structural_heart_disease", "op": "truthy"}]
+    }
+    low_fields = {c["field"] for c in rules["sincope-situacional-baixo-risco"]["when"]["all"]}
+    assert "syncope_during_exertion" in low_fields
+    assert {"syncope_supine_or_seated", "sudden_palpitations_before", "family_history_young_scd"} <= set(questions)
+
+    ilr_fields = {c["field"] for c in rules["sincope-recorrente-inexplicada"]["when"]["all"]}
+    assert {"unexplained_after_initial_evaluation", "initial_workup_non_diagnostic"} <= ilr_fields
+
+    assert "não são indicados" in item["treatment_summary"]
+    assert "baixo risco" in item["emergency_flow"][-2]
+    refs = " ".join(item["source_refs"])
+    assert "Brignole M, Menozzi C" in refs
+    assert "Aksu T, Brignole M" in refs
