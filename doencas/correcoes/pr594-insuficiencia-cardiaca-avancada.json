@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca-avancada",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: regras de trombose de LVAD e rejeição condicionadas ao dispositivo/transplante correspondente, perguntas de segurança tornadas obrigatórias, interpretação de TCPE submáximo corrigida, hospitalizações recorrentes tratadas como sinal de alerta e estabilização preservada em suspeita de rejeição. Fontes primárias MOMENTUM 3 e DECIDE-LVAD acrescentadas. Publicação autorizada pelo responsável médico em 27/08/2026."
+    },
+    "append": {
+      "source_refs": [
+        "Mehra MR, Uriel N, Naka Y, et al; MOMENTUM 3 Investigators. A Fully Magnetically Levitated Left Ventricular Assist Device — Final Report. N Engl J Med. 2019;380(17):1618-1627. DOI: 10.1056/NEJMoa1900486. PMID: 30883052.",
+        "Allen LA, McIlvennan CK, Thompson JS, et al. Effectiveness of an Intervention Supporting Shared Decision Making for Destination Therapy Left Ventricular Assist Device: The DECIDE-LVAD Randomized Clinical Trial. JAMA Intern Med. 2018;178(4):520-529. DOI: 10.1001/jamainternmed.2017.8713. PMID: 29482225."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30883052/",
+        "https://pubmed.ncbi.nlm.nih.gov/29482225/"
+      ]
+    },
+    "replace": [
+      {
+        "old": "um teste submáximo subestima a gravidade real",
+        "new": "um teste submáximo reduz o VO2 pico medido e pode fazer a limitação funcional parecer mais grave do que a capacidade verdadeira; não aplicar os cortes de teste máximo quando o esforço não for adequado"
+      },
+      {
+        "old": "Hospitalizações recorrentes por IC apesar de tratamento otimizado — sinal de estágio D",
+        "new": "Hospitalizações recorrentes por IC apesar de tratamento otimizado — sinal de alerta para possível estágio D, que exige confirmar refratariedade, terapia máxima tolerada e contexto clínico"
+      },
+      {
+        "old": "a biópsia endomiocárdica não deve ser adiada mesmo em paciente que vinha em programa de vigilância não invasiva",
+        "new": "a estabilização hemodinâmica e o contato com o centro transplantador têm prioridade; a biópsia endomiocárdica deve ser obtida tão cedo quanto viável em paralelo ao suporte, sem atrasar medidas de estabilização"
+      }
+    ],
+    "assistant_questions": {
+      "lvad_alarm_or_hemolysis": {"required": true},
+      "suspected_rejection_signs": {"required": true}
+    },
+    "assistant_rules": {
+      "ica-avancada-lvad-trombose": {
+        "when": {
+          "all": [
+            {"field": "lvad_carrier", "op": "truthy"},
+            {"field": "lvad_alarm_or_hemolysis", "op": "truthy"}
+          ]
+        }
+      },
+      "ica-avancada-suspeita-rejeicao": {
+        "when": {
+          "all": [
+            {"field": "heart_transplant_recipient", "op": "truthy"},
+            {"field": "suspected_rejection_signs", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Possível rejeição aguda pós-transplante cardíaco"],
+          "emergency_flow": ["Contato imediato com o centro transplantador e manejo em ambiente monitorizado/UTI conforme instabilidade; fornecer suporte hemodinâmico e obter biópsia endomiocárdica tão cedo quanto viável em paralelo, sem atrasar estabilização."]
+        }
+      },
+      "ica-avancada-hospitalizacoes-recorrentes": {
+        "add": {
+          "risk": "prioritario",
+          "red_flags": ["Hospitalizações recorrentes por IC apesar de tratamento otimizado — sinal de alerta para possível estágio D, não diagnóstico isolado"],
+          "ambulatory_flow": ["Encaminhar a centro de IC avançada para confirmar estágio, otimização máxima tolerada e elegibilidade a transplante/LVAD/cuidado paliativo integrado."]
+        }
+      }
+    }
+  }
+]
