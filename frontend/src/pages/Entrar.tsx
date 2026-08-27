@@ -68,6 +68,22 @@ function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
   return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
 }
 
+function MarcaAndroid() {
+  return (
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path fill="currentColor" d="m7.1 6.55-1.3-2.26a.5.5 0 0 1 .87-.5l1.32 2.3A8.1 8.1 0 0 1 12 5.05c1.45 0 2.82.38 4.01 1.04l1.32-2.3a.5.5 0 0 1 .87.5l-1.3 2.26A7.42 7.42 0 0 1 20 12H4a7.42 7.42 0 0 1 3.1-5.45ZM8 9.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm8 0A.75.75 0 1 0 16 8a.75.75 0 0 0 0 1.5ZM4 13h16v6a2 2 0 0 1-2 2h-1v1.25a.75.75 0 0 1-1.5 0V21h-7v1.25a.75.75 0 0 1-1.5 0V21H6a2 2 0 0 1-2-2v-6Z" />
+    </svg>
+  );
+}
+
+function MarcaWindows() {
+  return (
+    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+      <path fill="currentColor" d="M2 3.4 10.7 2v9.3H2V3.4Zm9.7-1.55L22 0v11.3H11.7V1.85ZM2 12.3h8.7v9.3L2 20.2v-7.9Zm9.7 0H22V24l-10.3-1.85V12.3Z" />
+    </svg>
+  );
+}
+
 export default function Entrar() {
   const { entrar } = useAuth();
   const [params] = useSearchParams();
@@ -162,6 +178,21 @@ export default function Entrar() {
             </button>
           </form>
           <div className="prehome-card__actions">
+            <a className="prehome-android-download" href="/downloads/corvia-os-android.apk" download>
+              <span className="prehome-android-download__icon"><MarcaAndroid /></span>
+              <span><strong>Baixar app para Android</strong><small>Versão de testes · APK assinado</small></span>
+              <Icone nome="seta" aria-hidden="true" />
+            </a>
+            <a
+              className="prehome-windows-download"
+              href="/downloads/corvia-os-windows.exe"
+              download="CorVIA-OS-Windows-Setup.exe"
+              aria-label="Baixar instalador EXE do CorVIA OS para Windows 10 ou 11"
+            >
+              <span className="prehome-windows-download__icon"><MarcaWindows /></span>
+              <span><strong>Baixar instalador para Windows</strong><small>Arquivo .EXE · Windows 10/11</small></span>
+              <Icone nome="seta" aria-hidden="true" />
+            </a>
             {(providersAtivos.length > 0 || carregandoProviders) && <div className="prehome-divider">ou entre com sua conta</div>}
             {providersAtivos.length > 0 && (
               <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 5)}`} aria-label="Entrar com conta externa">
