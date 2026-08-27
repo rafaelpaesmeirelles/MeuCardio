@@ -36,7 +36,19 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote 6 de profundidade especializada de 27/08/2026 (base main já
+        # com os lotes 1-5 e os hubs Tudo com Tudo anteriores mesclados e
+        # revisados): cinco fichas já existentes, aprofundadas sem criar
+        # slug novo — ver review_note de cada uma.
+        "taquicardia-supraventricular-fetal",
+        "sindrome-coracao-esquerdo-hipoplasico-fetal",
+        "arritmias-na-gravidez",
+        "comunicacao-interatrial",
+        "isquemia-mesenterica-aguda-cardioembolica",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

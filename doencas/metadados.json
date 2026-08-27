@@ -2906,124 +2906,642 @@
     "name": "Taquicardia supraventricular fetal",
     "aliases": [
       "TSV fetal",
-      "taquiarritmia fetal"
+      "taquiarritmia fetal",
+      "taquicardia por reentrada atrioventricular fetal"
     ],
     "area": "cardiopediatria",
     "category": "cardiologia_fetal",
     "subtype": "arritmia_fetal",
     "prevalence_rank": 9,
-    "completeness": "intermediario",
-    "summary": "Taquiarritmia fetal sustentada capaz de causar insuficiência cardíaca e hidropisia, exigindo avaliação do mecanismo, frequência, duração e repercussão.",
+    "completeness": "completo",
+    "summary": "Taquiarritmia fetal sustentada — mais comumente por reentrada em via acessória tipo Wolff-Parkinson-White (TRAV) ou por flutter atrial — capaz de evoluir para insuficiência cardíaca e hidropisia fetal quando não tratada; diagnóstico e escolha do tratamento transplacentário de primeira linha dependem da caracterização ecocardiográfica do mecanismo e da presença de hidropisia.",
+    "epidemiology": "A taquicardia supraventricular (TSV) fetal é, ao lado do flutter atrial fetal, a taquiarritmia fetal sustentada mais comum que motiva encaminhamento a cardiologia fetal, caracterizada por frequência ventricular tipicamente acima de 220 bpm de origem atrial. Entre as taquiarritmias supraventriculares fetais, a taquicardia por reentrada atrioventricular (TRAV) mediada por via acessória — o mesmo substrato da síndrome de Wolff-Parkinson-White — responde por aproximadamente 70-75% dos casos, com condução 1:1, enquanto o flutter atrial fetal, uma taquicardia macrorreentrante com frequência atrial de aproximadamente 300-500 bpm e condução AV fixa (mais comumente 2:1 ou 3:1), responde pelos 25-30% restantes (Tsokkou S et al., J Pers Med 2025, PMID 40863402). A hidropisia fetal não imune complica cerca de 10% dos casos de TSV sustentada e é o determinante mais forte de pior prognóstico: em uma coorte multicêntrica não randomizada de 159 encaminhamentos consecutivos (75 fetos com TSV e 36 com flutter atrial), a falha terapêutica esteve associada a arritmia incessante e à presença de hidropisia, com mortalidade global relacionada à arritmia de 5% (Jaeggi ET et al., Circulation 2011, PMID 21931080). Em outra coorte multicêntrica com abordagem farmacológica escalonada, a taxa de sucesso na resolução da TSV foi de 89,8%, com eventos adversos fetais em 24% dos casos e dois óbitos (4,1%) atribuídos a hidropisia refratária, não a toxicidade medicamentosa (Tsokkou S et al., PMID 40863402, citando a coorte de Miyoshi et al.).",
     "presentation": [
-      "Frequência fetal persistentemente elevada",
-      "Disfunção ventricular",
-      "Regurgitação atrioventricular",
-      "Hidropisia"
+      "Frequência cardíaca fetal sustentada acima de 220 bpm identificada em ausculta obstétrica de rotina, cardiotocografia ou ultrassom obstétrico",
+      "Taquicardia por reentrada atrioventricular (TRAV) com condução 1:1 — mecanismo mais comum, responsável por aproximadamente 70-75% dos casos (Tsokkou S et al., PMID 40863402)",
+      "Flutter atrial fetal, com frequência atrial de aproximadamente 300-500 bpm e condução AV fixa (mais comumente 2:1 ou 3:1) — segunda causa mais frequente, cerca de 25-30% dos casos",
+      "Disfunção ventricular e regurgitação atrioventricular ao ecocardiograma fetal quando a taquicardia é sustentada",
+      "Hidropisia fetal (derrame pericárdico, ascite, derrame pleural, edema subcutâneo generalizado, polidrâmnio) em cerca de 10% dos casos de TSV sustentada não controlada (Tsokkou S et al., PMID 40863402)",
+      "Síndrome do espelho materno (mirror syndrome) — edema, hipertensão e proteinúria maternos refletindo hidropisia fetal grave — achado raro, porém potencialmente grave",
+      "Intervalo AV corrigido por idade gestacional com z-score ≤ -2, compatível com pré-excitação subjacente tipo Wolff-Parkinson-White (Tsokkou S et al., PMID 40863402)"
     ],
     "differentials": [
-      "Flutter atrial",
-      "Taquicardia sinusal",
-      "Taquicardia ventricular fetal"
+      "Flutter atrial fetal — taquicardia macrorreentrante com frequência atrial própria e condução AV fixa, mecanismo distinto da TRAV e com racional terapêutico parcialmente distinto",
+      "Taquicardia sinusal fetal — secundária a estresse fetal, febre/infecção materna (corioamnionite), tireotoxicose materna ou uso de agentes betamiméticos; geralmente frequência ventricular menos extrema e variabilidade preservada",
+      "Taquicardia ventricular fetal — rara, com dissociação atrioventricular ao invés da relação 1:1 típica da TRAV",
+      "Taquicardia atrial ectópica ou taquicardia juncional — mecanismos automáticos identificados pelo intervalo ventriculoatrial (VA) longo ao Doppler pulsado, em vez do VA curto característico da TRAV clássica (Tsokkou S et al., PMID 40863402)",
+      "Extrassístoles atriais bloqueadas com salvas curtas de TSV — achado transitório de irregularidade do ritmo fetal, distinto de taquicardia sustentada; ver documento desta base sobre extrassístoles fetais para o critério diferencial"
     ],
     "tests": [
-      "Ecocardiograma fetal com relação atrioventricular",
-      "Avaliação de função ventricular, hidropisia e anatomia",
-      "Monitorização materna antes e durante terapia transplacentária"
+      "Ecocardiograma fetal com modo-M: mede o intervalo mecânico entre a contração da parede atrial e a ventricular (análogo ao intervalo PR), permitindo diferenciar mecanismos; limitação — depende de janela acústica adequada e de operador experiente",
+      "Doppler pulsado com técnica veia cava superior-aorta ascendente (SVC-AA): mede os intervalos atrioventricular (AV) e ventriculoatrial (VA) com precisão mesmo em frequências acima de 200 bpm — VA curto sugere TRAV, VA longo sugere mecanismo automático (Tsokkou S et al., PMID 40863402)",
+      "Avaliação da relação atrioventricular e da condução (1:1 na TRAV; condução fixa variável no flutter atrial) para classificar o mecanismo antes de escolher o fármaco",
+      "Avaliação de função ventricular e de regurgitação atrioventricular ao ecocardiograma fetal, marcadores de repercussão hemodinâmica da taquicardia sustentada",
+      "Rastreio sistemático de hidropisia fetal (derrame pericárdico, ascite, derrame pleural, espessura do escalpo, polidrâmnio) — presente ou ausente, muda a escolha do fármaco de primeira linha",
+      "Avaliação materna basal antes de iniciar terapia transplacentária: eletrocardiograma, eletrólitos e, conforme o fármaco escolhido, função tireoidiana e hepática",
+      "Ecocardiograma fetal seriado durante o tratamento, para documentar resposta terapêutica (reversão a ritmo sinusal ou controle de frequência), função ventricular e evolução da hidropisia"
     ],
     "red_flags": [
-      "Hidropisia",
-      "Disfunção ventricular",
-      "Taquicardia sustentada",
-      "Comprometimento materno pelo tratamento"
+      "Hidropisia fetal estabelecida ou em progressão",
+      "Taquicardia incessante ou refratária ao fármaco de primeira linha",
+      "Disfunção ventricular ou regurgitação atrioventricular significativa ao ecocardiograma fetal",
+      "Síndrome do espelho materno (edema, hipertensão, proteinúria refletindo hidropisia fetal)",
+      "Sinais de proarritmia ou toxicidade materna durante o tratamento (alteração significativa de intervalo PR, duração de QRS ou QTc, sintomas maternos)",
+      "Deterioração do quadro fetal (função ventricular, hidropisia, perfil biofísico) apesar de tratamento otimizado"
     ],
     "ambulatory_flow": [
-      "Encaminhar para cardiologia fetal",
-      "Definir necessidade de tratamento e frequência de monitorização",
-      "Planejar parto e avaliação neonatal"
+      "Encaminhamento a cardiologia fetal/medicina fetal assim que a taquicardia sustentada é identificada, para caracterização do mecanismo por ecocardiograma fetal com modo-M e Doppler pulsado antes de iniciar qualquer tratamento",
+      "Definição do fármaco transplacentário inicial conforme presença ou ausência de hidropisia, sempre por equipe especializada e protocolo institucional — não como esquema fixo aplicado sem essa avaliação",
+      "Monitorização materna estruturada durante todo o tratamento: eletrocardiograma seriado, níveis séricos do fármaco e eletrólitos, com periodicidade definida pela equipe responsável",
+      "Ecocardiograma fetal seriado para acompanhar resposta terapêutica, função ventricular e evolução de hidropisia, com frequência individualizada por gravidade e estabilidade do caso",
+      "Planejamento antecipado do parto (local, momento, via de parto e equipe neonatal) conforme resposta ao tratamento e idade gestacional, revisado a cada consulta de seguimento"
     ],
     "emergency_flow": [
-      "Hidropisia ou deterioração fetal requer discussão urgente multidisciplinar"
+      "Hidropisia fetal estabelecida ou em progressão: discussão multidisciplinar urgente entre cardiologia fetal, medicina fetal e obstetrícia — a hidropisia reduz a eficácia da digoxina transplacentária e é o principal preditor de desfecho fetal adverso",
+      "Taquicardia incessante ou refratária ao fármaco de primeira linha: escalonamento farmacológico especializado (segunda linha ou terapia de resgate) sob monitorização materna e fetal intensificada, em centro com cardiologia fetal",
+      "Sinais de proarritmia ou toxicidade materna durante o tratamento (alteração significativa de PR, QRS ou QTc, sintomas maternos): reavaliação imediata do esquema pela equipe responsável, com possível ajuste ou suspensão do fármaco",
+      "Deterioração do quadro fetal apesar de tratamento otimizado, com idade gestacional igual ou superior a 34 semanas: considerar antecipação do parto como alternativa à escalada farmacológica adicional, em vez de insistir indefinidamente na via transplacentária (Cui X et al., Int J Womens Health 2025, PMID 40657427)",
+      "Hidropisia refratária à terapia transplacentária padrão: avaliação em centro de referência para vias alternativas de administração (por exemplo, injeção fetal direta), reservada a centros especializados"
+    ],
+    "diagnostic_approach": "O diagnóstico e a caracterização do mecanismo da TSV fetal dependem inteiramente da ecocardiografia fetal — a ausculta obstétrica ou a cardiotocografia identificam que a frequência está elevada, mas não diferenciam TRAV de flutter atrial, taquicardia atrial ectópica ou taquicardia juncional, e essa diferenciação é o que orienta a escolha do fármaco. A ferramenta central é a combinação de modo-M (que mede o intervalo mecânico entre a contração atrial e a ventricular, análogo ao intervalo PR) com Doppler pulsado, captando simultaneamente o influxo e o efluxo em um único vaso — a técnica descrita como veia cava superior-aorta ascendente (SVC-AA) permite medir com precisão os intervalos atrioventricular (AV) e ventriculoatrial (VA) mesmo em frequências acima de 200 bpm. Um intervalo VA curto (menor que o AV) é compatível com TRAV por via acessória, enquanto um intervalo VA longo (maior que o AV) sugere mecanismo automático, como taquicardia atrial ectópica ou juncional — distinção com implicação terapêutica direta, já que o sotalol tem racional farmacológico mais favorável nesse subgrupo de intervalo VA longo. Quando o intervalo AV corrigido para a idade gestacional apresenta z-score ≤ -2, isso é compatível com pré-excitação subjacente tipo Wolff-Parkinson-White (Tsokkou S et al., J Pers Med 2025, PMID 40863402). O mesmo exame documenta função ventricular, presença e extensão de regurgitação atrioventricular, e rastreia sistematicamente os sinais de hidropisia — derrame pericárdico, ascite, derrame pleural, espessura do escalpo e polidrâmnio — além de descartar cardiopatia estrutural associada, achado que também influencia a escolha terapêutica (Bravo-Valenzuela NJ et al., Ann Pediatr Cardiol 2018, PMID 29922012; Strasburger JF et al., J Clin Pharmacol 2022, PMID 36106782).",
+    "treatment_summary": "O tratamento de primeira linha da TSV fetal sustentada e hemodinamicamente significativa é farmacológico transplacentário: a gestante recebe o antiarrítmico por via oral (ou endovenosa em hidropisia grave), e o fármaco atravessa a placenta para agir diretamente no feto, evitando os riscos de um procedimento invasivo fetal direto. Em feto sem hidropisia, a digoxina é historicamente a primeira escolha, com nível sérico materno mantido numa faixa mais alta que a usada fora da gestação (pelo aumento da taxa de filtração glomerular na gravidez) e eficácia de conversão estimada entre aproximadamente 55% e 70% dos casos (Tsokkou S et al., J Pers Med 2025, PMID 40863402). Quando o feto já está hidrópico, a eficácia da digoxina cai para cerca de 30-40%, porque o edema placentário compromete sua passagem transplacentária — é por isso que, nesse cenário, a flecainida passa a ser preferida: sua transferência placentária permanece elevada mesmo com edema presente (ao contrário da digoxina), e sua eficácia de conversão se mantém em torno de 80-90% no feto sem hidropisia e 70-80% no feto hidrópico — diferença bem menor entre os dois grupos do que a observada com digoxina (Tsokkou S et al., PMID 40863402). O sotalol, betabloqueador não cardiosseletivo com propriedades de classe III, é opção de segunda linha, com eficácia geral em torno de 65-75% e nicho de eficácia particularmente alta (relatada em até 100% em séries pequenas) em taquicardias com intervalo ventriculoatrial longo (mecanismo automático); é contraindicado em asma grave ou doença pulmonar obstrutiva grave. A amiodarona é reservada como terapia de resgate para casos refratários às demais opções, com eficácia de aproximadamente 50-60% e dados limitados, já que sua passagem transplacentária é a mais pobre entre os quatro fármacos (razão de concentração feto-materna de 0,1 a 0,28) — o que também limita seu uso como primeira escolha em hidropisia grave, mesmo sendo, por vezes, a única opção restante em arritmia incessante refratária (Tsokkou S et al., PMID 40863402). Uma metanálise (Alsaied et al., citada em Tsokkou S et al., PMID 40863402) mostrou flecainida superior à digoxina na conversão da TSV (odds ratio 0,773; IC95% 0,605-0,987), com essa superioridade se acentuando no subgrupo hidrópico (odds ratio 0,412; IC95% 0,268-0,632). O estudo multicêntrico não randomizado de Jaeggi et al. (Circulation 2011, PMID 21931080), que comparou os três fármacos de primeira/segunda linha em 159 encaminhamentos consecutivos (75 fetos com TSV, 36 com flutter atrial), mostrou flecainida e digoxina superiores ao sotalol na conversão da TSV para ritmo normal, com falha terapêutica associada a arritmia incessante e hidropisia — não à escolha isolada do fármaco — e mortalidade relacionada à arritmia de 5%, sem eventos adversos maternos graves relacionados ao fármaco. Nenhum dos três fármacos de primeira linha demonstrou superioridade uniforme e absoluta para todo o espectro de TSV por reentrada (Strasburger JF et al., J Clin Pharmacol 2022, PMID 36106782), o que reforça a necessidade de a escolha ser individualizada por equipe de cardiologia fetal/medicina fetal, considerando mecanismo, presença de hidropisia e resposta terapêutica seriada — nunca como esquema fixo aplicado sem essa avaliação especializada. A decisão sobre momento e via de parto acompanha essa mesma lógica de individualização: antes de 34 semanas, prioriza-se manter a gestação sob terapia transplacentária e vigilância ecocardiográfica contínua, pelo risco elevado de morbimortalidade associado à prematuridade; a partir de 34 semanas, a antecipação do parto passa a ser considerada diante de falha terapêutica ou hidropisia persistente. A via vaginal não é contraindicada pela arritmia isolada bem controlada, mas as indicações de cesárea podem ser apropriadamente ampliadas quando o feto apresenta hidropisia ou disfunção cardíaca não resolvida (Cui X et al., Int J Womens Health 2025, PMID 40657427).",
+    "monitoring": [
+      "Eletrocardiograma materno seriado, com atenção ao fármaco em uso: intervalo PR sob digoxina, duração do QRS sob flecainida, e intervalo QTc sob sotalol ou amiodarona — vigilância direta do risco de proarritmia materna (Tsokkou S et al., PMID 40863402)",
+      "Nível sérico materno do fármaco em uso, com faixa-alvo definida pela equipe de cardiologia/medicina fetal conforme o antiarrítmico escolhido, reavaliado após cada ajuste",
+      "Eletrólitos maternos (potássio, magnésio, cálcio) — distúrbios eletrolíticos potencializam o risco de proarritmia sob digoxina e demais antiarrítmicos",
+      "Pressão arterial materna e avaliação pulmonar quando sotalol está em uso, pelo perfil de betabloqueio não cardiosseletivo",
+      "Função tireoidiana e função hepática maternas quando amiodarona é utilizada como terapia de resgate",
+      "Ecocardiograma fetal seriado para confirmar resposta terapêutica (reversão a ritmo sinusal ou controle de frequência ventricular), monitorar função ventricular e acompanhar resolução ou progressão de hidropisia"
+    ],
+    "special_populations": [
+      "Feto hidrópico: eficácia reduzida da digoxina pela menor passagem transplacentária no edema placentário, com preferência por flecainida como primeira escolha nesse subgrupo (Tsokkou S et al., PMID 40863402)",
+      "Idade gestacional menor que 34 semanas: prioriza-se a terapia farmacológica transplacentária com vigilância ecocardiográfica seriada, evitando antecipação do parto sempre que a resposta ao tratamento permitir, pelo risco elevado de morbimortalidade da prematuridade (Cui X et al., PMID 40657427)",
+      "Idade gestacional igual ou superior a 34 semanas com falha terapêutica ou hidropisia persistente: a antecipação do parto passa a ser considerada como alternativa à escalada farmacológica, decisão compartilhada entre cardiologia fetal, medicina fetal e obstetrícia",
+      "Gestante com asma grave ou doença pulmonar obstrutiva grave: contraindicação ao sotalol pelo perfil de betabloqueio não cardiosseletivo, exigindo escolha alternativa de fármaco",
+      "Taquicardia com intervalo ventriculoatrial longo (mecanismo automático, não TRAV clássica): racional farmacológico distinto, com sotalol mostrando eficácia particularmente alta nesse subgrupo em séries pequenas (Tsokkou S et al., PMID 40863402)"
+    ],
+    "assistant_questions": [
+      {
+        "id": "gestational_age_weeks",
+        "label": "Idade gestacional atual (semanas)",
+        "type": "number",
+        "required": true,
+        "section": "Dados básicos"
+      },
+      {
+        "id": "hydrops_present",
+        "label": "Há hidropisia fetal (derrame pericárdico, ascite, derrame pleural ou edema subcutâneo) ao ecocardiograma?",
+        "type": "boolean",
+        "required": true,
+        "section": "Avaliação fetal"
+      },
+      {
+        "id": "arrhythmia_mechanism",
+        "label": "Mecanismo identificado ao ecocardiograma fetal",
+        "type": "select",
+        "section": "Avaliação fetal",
+        "options": [
+          {
+            "value": "trav",
+            "label": "Taquicardia por reentrada atrioventricular (via acessória)"
+          },
+          {
+            "value": "flutter",
+            "label": "Flutter atrial"
+          },
+          {
+            "value": "outro_automatico",
+            "label": "Mecanismo automático (intervalo VA longo)"
+          },
+          {
+            "value": "nao_definido",
+            "label": "Não definido/aguardando avaliação especializada"
+          }
+        ]
+      },
+      {
+        "id": "refractory_to_first_line",
+        "label": "A arritmia é incessante ou refratária ao fármaco de primeira linha já iniciado?",
+        "type": "boolean",
+        "section": "Tratamento"
+      },
+      {
+        "id": "maternal_proarrhythmia_signs",
+        "label": "Há sinais de proarritmia ou toxicidade materna durante o tratamento (alteração de PR/QRS/QTc, sintomas maternos)?",
+        "type": "boolean",
+        "section": "Monitorização materna"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "hidropisia-fetal-estabelecida",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "hydrops_present",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal estabelecida em taquicardia supraventricular fetal"
+          ],
+          "emergency_flow": [
+            "Discussão multidisciplinar urgente entre cardiologia fetal, medicina fetal e obstetrícia — a hidropisia reduz a eficácia da digoxina transplacentária e é o principal preditor de desfecho fetal adverso"
+          ],
+          "messages": [
+            "Hidropisia fetal muda a escolha do fármaco de primeira linha e a urgência do tratamento; não deve ser conduzida como TSV fetal não complicada"
+          ]
+        }
+      },
+      {
+        "id": "taquicardia-refrataria-primeira-linha",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "refractory_to_first_line",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Taquicardia supraventricular fetal incessante ou refratária ao fármaco de primeira linha"
+          ],
+          "emergency_flow": [
+            "Escalonamento farmacológico especializado (segunda linha ou terapia de resgate) sob monitorização materna e fetal intensificada, em centro com cardiologia fetal"
+          ]
+        }
+      },
+      {
+        "id": "sinais-proarritmia-materna",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "maternal_proarrhythmia_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais de proarritmia ou toxicidade materna durante tratamento transplacentário"
+          ],
+          "emergency_flow": [
+            "Reavaliação imediata do esquema terapêutico pela equipe responsável, com possível ajuste ou suspensão do fármaco"
+          ]
+        }
+      },
+      {
+        "id": "parto-idade-gestacional-avancada-refrataria",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "gestational_age_weeks",
+              "op": "gte",
+              "value": 34
+            },
+            {
+              "field": "refractory_to_first_line",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "A partir de 34 semanas, com falha terapêutica, a antecipação do parto passa a ser considerada como alternativa à escalada farmacológica adicional"
+          ]
+        }
+      },
+      {
+        "id": "parto-idade-gestacional-avancada-hidropisia",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "gestational_age_weeks",
+              "op": "gte",
+              "value": 34
+            },
+            {
+              "field": "hydrops_present",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "A partir de 34 semanas, com hidropisia persistente, a antecipação do parto passa a ser considerada mesmo sob tratamento farmacológico em curso"
+          ]
+        }
+      },
+      {
+        "id": "mecanismo-automatico-va-longo",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "arrhythmia_mechanism",
+              "op": "eq",
+              "value": "outro_automatico"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Considerar taquicardia atrial ectópica ou juncional (mecanismo automático) diante de intervalo ventriculoatrial longo — racional farmacológico distinto da TRAV clássica, com nicho de resposta ao sotalol"
+          ]
+        }
+      }
     ],
     "tags": [
       "fetal",
       "arritmia",
       "TSV",
-      "hidropisia"
+      "hidropisia",
+      "flutter atrial fetal",
+      "Wolff-Parkinson-White",
+      "ecocardiograma fetal",
+      "digoxina",
+      "flecainida",
+      "sotalol",
+      "tratamento transplacentário"
     ],
     "source_refs": [
-      "Diretriz Brasileira de Cardiologia Fetal, 2019"
+      "Tsokkou S, Konstantinidis I, Anastasiou V, et al. Fetal Supraventricular Tachycardia: What Do We Know up to This Day? J Pers Med. 2025;15(8):341. DOI: 10.3390/jpm15080341. PMID: 40863402. PMCID: PMC12387273.",
+      "Jaeggi ET, Carvalho JS, De Groot E, Api O, Clur SA, Rammeloo L, McCrindle BW, Ryan G, Manlhiot C, Blom NA. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol: results of a nonrandomized multicenter study. Circulation. 2011;124(16):1747-1754. DOI: 10.1161/CIRCULATIONAHA.111.026120. PMID: 21931080.",
+      "Strasburger JF, Eckstein G, Butler M, Noffke P, Wacker-Gussmann A. Fetal Arrhythmia Diagnosis and Pharmacologic Management. J Clin Pharmacol. 2022;62(Suppl 1):S53-S66. DOI: 10.1002/jcph.2129. PMID: 36106782. PMCID: PMC9543141.",
+      "Bravo-Valenzuela NJ, Rocha LA, Machado Nardozza LM, Araujo Júnior E. Fetal cardiac arrhythmias: Current evidence. Ann Pediatr Cardiol. 2018;11(2):148-163. DOI: 10.4103/apc.APC_134_17. PMID: 29922012. PMCID: PMC5963229.",
+      "Cui X, Ji N, Sun H, Jamal H. The Treatment of Fetal Supraventricular Tachycardia: A Case Report and Literature Review. Int J Womens Health. 2025. PMID: 40657427. PMCID: PMC12255262.",
+      "Pedra SRFF, Zielinsky P, et al. Diretriz Brasileira de Cardiologia Fetal – 2019. Arq Bras Cardiol. 2019;112(5):600-648. DOI: 10.5935/abc.20190075."
     ],
     "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12387273/",
+      "https://doi.org/10.1161/CIRCULATIONAHA.111.026120",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9543141/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5963229/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12255262/",
       "https://abccardiol.org/article/diretriz-brasileira-de-cardiologia-fetal-2019/"
     ],
-    "review_status": "revisado",
-    "review_note": "Terapia fetal deve ser conduzida por equipe especializada e protocolo materno-fetal.",
-    "version": 1,
     "related_document_slugs": [
-      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario",
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento",
+      "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
     ],
-    "patient_material_slug": "taquicardia-supraventricular-fetal"
+    "patient_material_slug": "taquicardia-supraventricular-fetal",
+    "review_status": "pendente_revisao",
+    "review_note": "Atualização de intermediário para completo (27/08/2026). Fontes primárias verificadas nesta sessão via WebFetch/Europe PMC: Tsokkou S et al., J Pers Med 2025 (PMID 40863402, PMCID PMC12387273, texto integral) — mecanismos (TRAV ~70-75% vs flutter ~25-30%), técnica diagnóstica SVC-AA/intervalos AV-VA, critério de z-score para WPW, eficácia comparativa dos quatro fármacos, meta-análise de Alsaied et al. e coorte de Miyoshi et al.; Jaeggi ET et al., Circulation 2011 (PMID 21931080) — estudo multicêntrico clássico digoxina/flecainida/sotalol, hidropisia e arritmia incessante como preditores de falha; Strasburger JF et al., J Clin Pharmacol 2022 (PMID 36106782, PMCID PMC9543141); Bravo-Valenzuela NJ et al., Ann Pediatr Cardiol 2018 (PMID 29922012, PMCID PMC5963229); Cui X et al., Int J Womens Health 2025 (PMID 40657427, PMCID PMC12255262) — lógica de momento/via de parto por idade gestacional. Limitação de acesso: o texto integral da Diretriz Brasileira de Cardiologia Fetal 2019 (DOI 10.5935/abc.20190075) não pôde ser reaberto nesta sessão (bloqueio automatizado do SciELO, HTTP 403); a referência foi mantida do registro anterior apenas como citação de diretriz nacional, sem novas afirmações factuais extraídas dela nesta atualização — se o gate exigir verificação de conteúdo específico dessa diretriz, ela precisa ser reaberta manualmente. O AHA Scientific Statement de Donofrio et al. 2014 (Circulation, PMID 24763516) foi buscado mas não pôde ser acessado nesta sessão (bloqueio de PubMed/AHA Journals) e não foi citado. Nenhuma dose farmacológica foi incluída em campo novo, conforme regra da base. related_document_slugs confirmados por grep em content/**/*.md desta base, com menção direta ao tema (não por proximidade temática); patient_material_slug conferido em material-paciente/metadados.json (slug idêntico, já existente e revisado).",
+    "version": 2,
+    "fonte_producao": "claude"
   },
   {
     "slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
     "name": "Síndrome do coração esquerdo hipoplásico — diagnóstico fetal",
     "aliases": [
       "SCEH fetal",
-      "HLHS fetal"
+      "HLHS fetal",
+      "Síndrome de hipoplasia do ventrículo esquerdo",
+      "Coração esquerdo hipoplásico"
     ],
     "area": "cardiopediatria",
     "category": "cardiologia_fetal",
     "subtype": "fisiologia_univentricular",
+    "cyanosis_class": "cianotica",
     "prevalence_rank": 10,
-    "completeness": "intermediario",
-    "summary": "Espectro de hipoplasia das estruturas esquerdas com circulação sistêmica dependente do canal arterial após o nascimento.",
+    "completeness": "completo",
+    "summary": "Espectro de hipoplasia grave das estruturas cardíacas esquerdas (ventrículo esquerdo, valva mitral e/ou aórtica atrésicas ou gravemente estenóticas, aorta ascendente hipoplásica), com circulação sistêmica inteiramente dependente do ventrículo direito via canal arterial após o nascimento. Diagnóstico predominantemente pré-natal, ao ecocardiograma fetal do rastreio morfológico de segundo trimestre; manejo depende de aconselhamento parental sobre três vias possíveis (cirurgia paliativa estagiada, transplante cardíaco neonatal primário ou cuidados paliativos/compassivos) e de vigilância do septo atrial, cuja restrição grave é emergência neonatal.",
+    "epidemiology": "A síndrome do coração esquerdo hipoplásico (SCEH/HLHS) é incomum, com incidência estimada entre 0,1 e 0,25 por 1.000 nascidos vivos (Bokhari et al., World J Cardiol 2025, PMID 40161566), mas seu impacto é desproporcional ao número absoluto de casos: é uma das cardiopatias congênitas críticas mais letais quando não tratada e uma causa reconhecida de óbito intrauterino, chegando a ser responsabilizada, segundo a mesma revisão (citando Allan et al., sem PMID do estudo primário conferido nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para essa cifra específica), por até 5% das mortes fetais espontâneas atribuídas a cardiopatia estrutural. A taxa de detecção pré-natal varia amplamente conforme a estrutura do sistema de rastreio de cada país — descrita na mesma fonte entre 12% e 75% dos casos identificados antes do nascimento —, refletindo cobertura e qualidade do ultrassom morfológico populacional, não uma limitação intrínseca da ecocardiografia fetal em si. Entre as gestações com diagnóstico pré-natal confirmado, a taxa de interrupção voluntária da gravidez também varia, na mesma fonte, entre 12% e 48% conforme o país e o contexto legal/cultural. As fontes consultadas nesta sessão não estabelecem predileção de sexo relevante.",
+    "diagnostic_approach": "O diagnóstico da SCEH é predominantemente pré-natal e se apoia na ecocardiografia fetal segmentar, habitualmente realizada entre a 18ª e a 22ª semana de gestação — janela do rastreio morfológico de segundo trimestre em que a SCEH costuma ser uma das cardiopatias mais facilmente reconhecíveis, por produzir assimetria grosseira e óbvia entre os ventrículos já na janela de quatro câmaras, associada a hipoplasia ou atresia da(s) valva(s) mitral e/ou aórtica ao Doppler colorido (Moscatelli et al., J Cardiovasc Dev Dis 2025, PMID 41002628). A vista dos três vasos e traqueia complementa a avaliação, permitindo identificar hipoplasia ou atresia de aorta ascendente e do arco, com padrão de fluxo retrógrado característico. Em centros com expertise, achados sugestivos já podem surgir no rastreio de primeiro trimestre (11-14 semanas); uma revisão sistemática com meta-análise de 45 estudos (306.872 fetos) mostrou sensibilidade agrupada de 55,80% (IC95% 45,87-65,50%) para cardiopatias maiores em geral nesse período em população não selecionada, e 67,74% (IC95% 55,25-79,06%) em população de alto risco — números não específicos de SCEH, mas que situam o primeiro trimestre como complemento, não substituto, do rastreio de segundo trimestre (Karim et al., Ultrasound Obstet Gynecol 2022, PMID 34369613). Componente essencial e frequentemente subvalorizado do exame é a avaliação dedicada do septo interatrial e do fluxo nas veias pulmonares: um padrão de fluxo em vaivém ou com reversão diastólica proeminente sinaliza septo atrial restritivo ou íntegro, achado de altíssimo risco presente em 6%-11% dos fetos com SCEH e associado a mortalidade que se aproxima de 100% sem intervenção planejada quando o septo é íntegro (Bokhari et al., World J Cardiol 2025, PMID 40161566). Confirmado o diagnóstico, o fluxo de cuidado inclui obrigatoriamente cariótipo/estudo genético, pesquisa de anomalias extracardíacas e encaminhamento para aconselhamento multidisciplinar em centro de referência, com reavaliações ecocardiográficas seriadas até o parto para reclassificar septo atrial e canal arterial e ajustar o plano de nascimento.",
     "presentation": [
-      "Hipoplasia ventricular esquerda",
-      "Atresia ou estenose mitral/aórtica",
-      "Alteração do fluxo no arco e forame oval"
+      "Assimetria ventricular grave na janela de quatro câmaras do ecocardiograma fetal, com ventrículo esquerdo hipoplásico e ventrículo direito dilatado/dominante",
+      "Atresia ou estenose importante da valva mitral, com fluxo transmitral ausente ou muito reduzido ao Doppler",
+      "Atresia ou estenose importante da valva aórtica, com fluxo anterógrado ausente ou mínimo na via de saída esquerda",
+      "Hipoplasia de aorta ascendente e do arco aórtico, com fluxo retrógrado característico na vista de três vasos-traqueia",
+      "Fluxo anormal nas veias pulmonares (padrão de vaivém ou reversão diastólica proeminente), marcador indireto de septo atrial restritivo ou íntegro",
+      "Abaulamento do septo interatrial e, em subgrupo de alto risco, ausência de comunicação interatrial efetiva",
+      "Achados associados possíveis em casos extremos: hidropisia fetal e disfunção miocárdica, sobretudo quando o septo atrial é gravemente restritivo"
     ],
     "differentials": [
-      "Estenose aórtica crítica com evolução",
-      "Ventrículo esquerdo limítrofe",
-      "Dupla via de saída com obstrução esquerda"
+      "Estenose aórtica crítica com ventrículo esquerdo ainda de tamanho limítrofe/evolutivo — potencial candidato a via biventricular ou a valvuloplastia aórtica fetal antes da hipoplasia se completar",
+      "Ventrículo esquerdo 'limítrofe' (borderline) sem atresia franca das valvas — decisão entre via biventricular e univentricular",
+      "Coarctação de aorta crítica ou interrupção do arco aórtico com hipoplasia secundária leve de ventrículo esquerdo (não é SCEH verdadeira; o VE tende a ser normal ou apenas discretamente reduzido)",
+      "Complexo de Shone (múltiplos níveis de obstrução do coração esquerdo) em sua forma mais grave",
+      "Dupla via de saída de ventrículo direito com atresia ou obstrução mitral e ventrículo esquerdo hipoplásico",
+      "Defeito do septo atrioventricular não balanceado com dominância do ventrículo direito e hipoplasia secundária do esquerdo",
+      "Cor triatriatum sinistrum grave — mimetiza obstrução/restrição de fluxo do lado esquerdo, é raro"
     ],
     "tests": [
-      "Ecocardiograma fetal segmentar",
-      "Avaliação do septo atrial e arco",
-      "Pesquisa de anomalias extracardíacas e aconselhamento genético conforme caso"
+      "Ecocardiograma fetal segmentar completo — exame de eleição, idealmente entre 18 e 22 semanas, com achados sugestivos possíveis já entre 11 e 14 semanas em centros com expertise",
+      "Avaliação dedicada da janela de quatro câmaras e da vista de três vasos-traqueia (3VTV) para caracterizar hipoplasia de arco e aorta ascendente",
+      "Doppler colorido e pulsado das valvas mitral e aórtica para classificar atresia versus estenose grave",
+      "Doppler do fluxo das veias pulmonares para rastrear septo atrial restritivo/íntegro (padrão de vaivém, reversão diastólica proeminente)",
+      "Cariótipo/microarray e pesquisa sistemática de anomalias extracardíacas associadas, com aconselhamento genético",
+      "Ecocardiogramas fetais seriados ao longo da gestação para reclassificar septo atrial, canal arterial e função ventricular",
+      "Ecocardiograma neonatal confirmatório imediato ao nascer, para orientar necessidade de septostomia atrial de urgência antes da cirurgia"
     ],
     "red_flags": [
-      "Restrição importante do forame oval",
-      "Hidropisia",
-      "Sinais de instabilidade esperada ao nascimento"
+      "Septo atrial íntegro ou gravemente restritivo — mortalidade se aproxima de 100% sem intervenção planejada; presente em 6%-11% dos fetos com SCEH",
+      "Padrão Doppler de veias pulmonares em vaivém ou com reversão diastólica proeminente",
+      "Hidropisia fetal",
+      "Disfunção miocárdica franca ou regurgitação tricúspide moderada a grave — pode reclassificar a criança como candidata a transplante em vez de via cirúrgica estagiada",
+      "Restrição ou fechamento precoce do canal arterial identificado no terceiro trimestre",
+      "Anomalias extracardíacas graves ou trissomia 18 associada — limita a elegibilidade cirúrgica",
+      "Plano de parto fora de centro terciário com cirurgia cardíaca pediátrica e PGE1 imediatamente disponíveis"
     ],
     "ambulatory_flow": [
-      "Aconselhamento multidisciplinar",
-      "Planejamento do parto em centro com cardiologia e cirurgia pediátrica",
-      "Definição antecipada de objetivos e opções terapêuticas"
+      "Encaminhamento imediato para ecocardiograma fetal detalhado em centro de referência assim que houver suspeita no rastreio morfológico",
+      "Aconselhamento multidisciplinar estruturado (cardiologia pediátrica/fetal, cirurgia cardíaca, neonatologia, obstetrícia de alto risco e, quando disponível, cuidados paliativos/bioética), apresentando de forma honesta as três vias terapêuticas possíveis",
+      "Investigação de anomalias associadas: cariótipo/microarray, pesquisa de anomalias extracardíacas, com reavaliação ecocardiográfica seriada para reclassificar o septo atrial ao longo da gestação",
+      "Definição antecipada e documentada do plano de parto: local (centro terciário com cirurgia cardíaca pediátrica e UTI neonatal disponíveis), via de parto e protocolo de estabilização imediata com PGE1 já preparado",
+      "Reavaliação ecocardiográfica no terceiro trimestre focada em septo atrial e canal arterial, para readequar o plano de nascimento quando necessário (por exemplo, parto programado com hemodinâmica disponível se septo muito restritivo)",
+      "Discussão documentada e respeitosa da opção de cuidados paliativos/compassivos como escolha legítima da família, sem coerção em qualquer direção"
     ],
     "emergency_flow": [
-      "Após o nascimento, cardiopatia ducto-dependente requer estabilização imediata por equipe neonatal"
+      "Ao nascimento, iniciar infusão contínua de prostaglandina E1 para manter a permeabilidade do canal arterial assim que houver suspeita ou confirmação diagnóstica, sem aguardar estabilidade clínica aparente",
+      "Monitorização contínua de saturação e sinais de baixo débito sistêmico, com manejo cuidadoso do balanço circulatório sistêmico-pulmonar: evitar hiperóxia e hiperventilação, que reduzem a resistência vascular pulmonar e desviam fluxo do circuito sistêmico para o pulmonar",
+      "Ecocardiograma neonatal urgente para reclassificar septo atrial e canal arterial e definir necessidade imediata de septostomia",
+      "Septostomia atrial de urgência (habitualmente por balão via cateter, técnica variável por instituição) quando o forame oval é restritivo ou íntegro — verdadeira emergência neonatal, indicada independentemente de sintomas evidentes ao nascer",
+      "Suporte hemodinâmico e ventilatório com FiO2 controlada e hipercarbia permissiva quando necessário, já que redução de FiO2 e aumento de CO2 inspirado reduzem agudamente a saturação, mas apenas a hipercarbia melhora a entrega sistêmica e cerebral de oxigênio",
+      "Acionamento da equipe cirúrgica para o Estágio I (Norwood ou variante híbrida) assim que houver estabilização inicial"
+    ],
+    "treatment_summary": "O tratamento da SCEH começa, na prática, ainda no período pré-natal, com o aconselhamento estruturado dos pais sobre três vias possíveis — nenhuma delas 'a única certa' — e continua, ao nascimento, com manutenção imediata da permeabilidade do canal arterial por infusão contínua de prostaglandina E1 (PGE1), pois a circulação sistêmica inteira depende desse fluxo até (e além) da primeira cirurgia.\n\n1) Cirurgia paliativa estagiada (Norwood → Glenn → Fontan). É a via mais adotada. O Estágio I (Norwood, ou variante híbrida) é realizado nas primeiras semanas de vida; dados da Society of Thoracic Surgeons mostram sobrevida hospitalar subindo de 68,6% (2002) para 81,4% (2009), com séries recentes grandes relatando 74%-93%, e uma revisão de 2025 cita variação mais ampla de 47%-85% entre estudos (Feinstein et al., J Am Coll Cardiol 2012, PMID 22192720; Bokhari et al., World J Cardiol 2025, PMID 40161566). O ensaio randomizado SVR Trial (555 neonatos) comparou as duas técnicas de fluxo pulmonar do Estágio I — conduto ventrículo direito-artéria pulmonar (Sano) versus fístula de Blalock-Taussig modificada — com morte ou transplante em 12 meses de 26% versus 36% (p=0,01), diferença que deixou de ser significativa em seguimento mais longo. O período entre a alta do Estágio I e o Estágio II é o de maior risco de toda a via — mortalidade interestágio publicada de 2% a 16% —, mas programas estruturados de monitorização domiciliar (peso, saturação, contato frequente com a equipe) elevam a sobrevida até o Estágio II para 98%. O Estágio II (Glenn bidirecional), tipicamente entre 4 e 6 meses, tem mortalidade hospitalar virtualmente zero e sobrevida em 1 ano acima de 95%. O Estágio III (Fontan) completa a via entre 2 e 5 anos, conforme indicação fisiológica individual, não calendário fixo. No conjunto, a sobrevida em 5 anos historicamente variou entre 50% e 69%, mas a expectativa atual é que cerca de 70% dos recém-nascidos com SCEH hoje atinjam a idade adulta.\n\n2) Transplante cardíaco neonatal primário. Opção limitada pela escassez de doadores neonatais: a mortalidade em lista de espera para lactentes é a mais alta entre todos os receptores de órgão sólido nos EUA (17%) e vem aumentando ao longo das últimas duas décadas; por isso, com tempos de espera de vários meses e resultados aceitáveis da via cirúrgica estagiada, o transplante primário é hoje raramente oferecido, ficando reservado sobretudo a neonatos com disfunção grave de ventrículo direito e/ou regurgitação tricúspide moderada a grave. Sobrevida pós-transplante de 80%-85% em 30 dias, 75% em 1 ano, 65% em 5 anos e 60% em 10 anos.\n\n3) Cuidados paliativos/compassivos. Reconhecidos na literatura como opção legítima diante da complexidade e da mortalidade cumulativa da via cirúrgica, sobretudo quando há anatomia cardíaca desfavorável, trissomia 18 ou prematuridade extrema associadas — a decisão cabe à família, informada de forma honesta sobre as três vias, sem coerção em qualquer direção.\n\nManejo pré-operatório do balanço circulatório. Antes da cirurgia, o desafio central é equilibrar o fluxo sistêmico e o pulmonar (Qp:Qs), que competem pelo mesmo débito do ventrículo único via canal arterial: hiperóxia e hiperventilação reduzem a resistência vascular pulmonar e desviam fluxo do circuito sistêmico para o pulmonar, agravando o baixo débito sistêmico — por isso a estratégia consagrada evita FiO2 elevada e busca hipercarbia permissiva controlada quando necessário, já que tanto a redução de FiO2 quanto o aumento de CO2 inspirado reduzem agudamente a saturação, mas apenas a hipercarbia melhora a entrega sistêmica e cerebral de oxigênio (Feinstein et al., J Am Coll Cardiol 2012, PMID 22192720). Quando o septo atrial é restritivo ou íntegro, a saída do fluxo pulmonar fica comprometida e a criança pode entrar em colapso circulatório já nas primeiras horas de vida — cenário que exige septostomia atrial de urgência, independentemente da presença de sintomas evidentes ao nascer.",
+    "monitoring": [
+      "Ecocardiogramas fetais seriados (frequência definida pelo centro, tipicamente a cada 2-4 semanas) para acompanhar progressão anatômica, função ventricular direita, septo atrial e canal arterial",
+      "Avaliação de crescimento fetal e bem-estar por Doppler obstétrico — restrição de crescimento pode alterar o plano de parto",
+      "No período neonatal pré-Estágio I e no pré-operatório do Estágio II, monitorização hospitalar de saturação, lactato, função renal e sinais de baixo débito",
+      "Programa estruturado de monitorização domiciliar interestágio (peso diário, saturação, sinais de alerta, contato frequente com a equipe) entre o Estágio I e o Estágio II — associado a elevação da sobrevida até o Estágio II para 98%",
+      "Seguimento cardiológico pediátrico de longo prazo após o Fontan (função ventricular, arritmia, enteropatia perdedora de proteína, função hepática e renal), conforme diretriz da American Heart Association sobre circulação de Fontan já referenciada no documento deste guia sobre ventrículo único e estadiamento de Fontan"
+    ],
+    "special_populations": [
+      "Gestações com septo atrial íntegro ou gravemente restritivo — subgrupo de altíssimo risco, candidato a avaliação para septostomia atrial fetal em centros especializados (técnica ainda não amplamente disponível)",
+      "Fetos com trissomia 18 ou outras anomalias cromossômicas/extracardíacas graves associadas — alteram a elegibilidade cirúrgica e reforçam a necessidade de discutir cuidados paliativos como opção",
+      "Recém-nascidos prematuros extremos ou com peso muito baixo ao nascer — maior risco perioperatório, podem exigir adiamento planejado do Estágio I",
+      "Candidatos a transplante cardíaco neonatal primário (disfunção grave de ventrículo direito e/ou regurgitação tricúspide moderada a grave) — via limitada pela escassez de doadores neonatais e por mortalidade elevada em lista de espera",
+      "Famílias que optam por cuidados de conforto/compassivos — necessidade de suporte estruturado de cuidados paliativos perinatais, sem prejuízo assistencial ou de acompanhamento por essa escolha"
+    ],
+    "assistant_questions": [
+      {
+        "id": "septo_atrial_status",
+        "label": "Como está o septo atrial ao ecocardiograma fetal mais recente?",
+        "type": "select",
+        "required": true,
+        "section": "Avaliação ecocardiográfica",
+        "options": [
+          {
+            "value": "sem_restricao",
+            "label": "Sem restrição (fluxo interatrial livre)"
+          },
+          {
+            "value": "restritivo",
+            "label": "Restritivo (fluxo interatrial reduzido)"
+          },
+          {
+            "value": "integro",
+            "label": "Íntegro ou praticamente íntegro (sem comunicação efetiva)"
+          }
+        ]
+      },
+      {
+        "id": "via_terapeutica_escolhida",
+        "label": "Qual via terapêutica foi discutida ou escolhida pela família?",
+        "type": "select",
+        "section": "Aconselhamento parental",
+        "options": [
+          {
+            "value": "cirurgia_estagiada",
+            "label": "Cirurgia paliativa estagiada (Norwood/Glenn/Fontan)"
+          },
+          {
+            "value": "transplante",
+            "label": "Transplante cardíaco neonatal primário"
+          },
+          {
+            "value": "cuidados_paliativos",
+            "label": "Cuidados paliativos/compassivos"
+          },
+          {
+            "value": "em_discussao",
+            "label": "Ainda em discussão/aconselhamento"
+          }
+        ]
+      },
+      {
+        "id": "parto_planejado_centro_terciario",
+        "label": "O parto está planejado em centro terciário com cirurgia cardíaca pediátrica e PGE1 imediatamente disponíveis?",
+        "type": "boolean",
+        "required": true,
+        "section": "Planejamento do parto"
+      },
+      {
+        "id": "idade_gestacional_diagnostico",
+        "label": "Idade gestacional (em semanas) no momento do diagnóstico",
+        "type": "number",
+        "section": "Avaliação ecocardiográfica"
+      },
+      {
+        "id": "sinais_hidropisia",
+        "label": "Há sinais de hidropisia fetal?",
+        "type": "boolean",
+        "section": "Avaliação ecocardiográfica"
+      },
+      {
+        "id": "anomalias_extracardiacas",
+        "label": "Foram identificadas anomalias extracardíacas ou cromossômicas associadas?",
+        "type": "boolean",
+        "section": "Investigação associada"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "septo_atrial_integro_emergencia",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "septo_atrial_status",
+              "op": "eq",
+              "value": "integro"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Septo atrial íntegro/gravemente restritivo em SCEH — mortalidade se aproxima de 100% sem intervenção; emergência neonatal verdadeira"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente equipe de hemodinâmica/cirurgia para septostomia atrial de urgência ao nascimento, independentemente de estabilidade clínica aparente"
+          ],
+          "messages": [
+            "Septo atrial íntegro em SCEH exige plano de parto em centro com hemodinâmica/sala híbrida disponível e comunicação antecipada com as equipes neonatal e cirúrgica."
+          ]
+        }
+      },
+      {
+        "id": "septo_atrial_restritivo_alerta",
+        "priority": 75,
+        "when": {
+          "any": [
+            {
+              "field": "septo_atrial_status",
+              "op": "eq",
+              "value": "restritivo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Septo atrial restritivo em SCEH — risco aumentado de instabilidade hemodinâmica neonatal imediata"
+          ],
+          "emergency_flow": [
+            "Ecocardiograma neonatal imediato ao nascer para reclassificar o septo atrial e decidir necessidade de septostomia"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma neonatal urgente"
+          ]
+        }
+      },
+      {
+        "id": "parto_fora_centro_terciario",
+        "priority": 80,
+        "when": {
+          "any": [
+            {
+              "field": "parto_planejado_centro_terciario",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Plano de parto fora de centro com cirurgia cardíaca pediátrica — risco de colapso circulatório neonatal sem suporte imediato"
+          ],
+          "missing_information": [
+            "Confirmar transferência para centro terciário antes do parto ou plano formal de transporte neonatal de emergência com PGE1 em curso"
+          ],
+          "messages": [
+            "Cardiopatia ducto-dependente exige nascimento em centro com cardiologia/cirurgia pediátrica e PGE1 disponíveis de imediato; parto fora desse contexto é um fator de risco evitável."
+          ]
+        }
+      },
+      {
+        "id": "hidropisia_presente",
+        "priority": 85,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_hidropisia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal em SCEH — sinal de descompensação fetal avançada"
+          ],
+          "messages": [
+            "Hidropisia associada a SCEH indica descompensação fetal grave; requer avaliação urgente em centro de referência em cardiologia fetal e discussão antecipada do plano perinatal."
+          ]
+        }
+      },
+      {
+        "id": "via_paliativos_apoio",
+        "priority": 40,
+        "when": {
+          "any": [
+            {
+              "field": "via_terapeutica_escolhida",
+              "op": "eq",
+              "value": "cuidados_paliativos"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Cuidados paliativos/compassivos são reconhecidos na literatura como opção terapêutica legítima diante da complexidade e mortalidade cumulativa da via cirúrgica"
+          ],
+          "missing_information": [
+            "Confirmar encaminhamento a equipe de cuidados paliativos perinatais estruturada"
+          ]
+        }
+      },
+      {
+        "id": "anomalias_extracardiacas_presente",
+        "priority": 50,
+        "when": {
+          "any": [
+            {
+              "field": "anomalias_extracardiacas",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Cariótipo/microarray e avaliação genética completa, se ainda não realizados"
+          ],
+          "differentials": [
+            "Trissomia 18 e outras síndromes associadas a SCEH devem ser investigadas antes de definir elegibilidade cirúrgica"
+          ]
+        }
+      }
     ],
     "tags": [
       "fetal",
       "HLHS",
+      "SCEH",
       "ducto-dependente",
-      "univentricular"
+      "univentricular",
+      "septo-atrial-restritivo",
+      "norwood",
+      "aconselhamento-perinatal",
+      "cardiologia-fetal"
     ],
     "source_refs": [
-      "Diretriz Brasileira de Cardiologia Fetal, 2019"
+      "Bokhari SFH, Faizan Sattar SM, Mehboob U, Umais M, Ahmad M, Malik A, Bakht D, Iqbal A, Dost W. Advancements in prenatal diagnosis and management of hypoplastic left heart syndrome: A multidisciplinary approach and future directions. World J Cardiol. 2025;17(3):103668. DOI: 10.4330/wjc.v17.i3.103668. PMID: 40161566. PMCID: PMC11947948.",
+      "Moscatelli S, Sabatino J, Leo I, Borrelli N, Avesani M, Di Salvo G, Montanaro C, Pergola V, Motta R, Ielapi J, Di Costanzo A, De Sarro R, Guglielmi G, Cattapan I, Gaudieri G, Luedke L, Perrone MA. Multimodal Imaging from Fetal to Adult Life: A Comprehensive Approach to Hypoplastic Left Heart Syndrome (HLHS). J Cardiovasc Dev Dis. 2025;12(9):349. DOI: 10.3390/jcdd12090349. PMID: 41002628. PMCID: PMC12470689.",
+      "Feinstein JA, Benson DW, Dubin AM, et al. Hypoplastic left heart syndrome: current considerations and expectations. J Am Coll Cardiol. 2012;59(1 Suppl):S1-42. DOI: 10.1016/j.jacc.2011.09.022. PMID: 22192720. PMCID: PMC6110391.",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-2242. DOI: 10.1161/01.cir.0000437597.44550.5d. PMID: 24763516.",
+      "Karim JN, Bradburn E, Roberts N, Papageorghiou AT; ACCEPTS study. First-trimester ultrasound detection of fetal heart anomalies: systematic review and meta-analysis. Ultrasound Obstet Gynecol. 2022;59(1):11-25. DOI: 10.1002/uog.23740. PMID: 34369613. PMCID: PMC9305869.",
+      "Diretriz Brasileira de Cardiologia Fetal – 2019. Arq Bras Cardiol. 2019;112(5):600-648. DOI: 10.5935/abc.20190075."
     ],
     "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11947948/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12470689/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6110391/",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9305869/",
       "https://abccardiol.org/article/diretriz-brasileira-de-cardiologia-fetal-2019/"
     ],
-    "review_status": "revisado",
-    "review_note": "Conteúdo para organização do cuidado e planejamento perinatal.",
-    "version": 1,
     "related_document_slugs": [
-      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+      "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+      "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+      "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial",
+      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional",
+      "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais"
     ],
-    "patient_material_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal"
+    "patient_material_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
+    "review_status": "pendente_revisao",
+    "review_note": "Ficha aprofundada de 'intermediario' para 'completo' nesta sessão. Fontes primárias verificadas via WebFetch (PMC/Europe PMC/PubMed E-utilities): Bokhari et al., World J Cardiol 2025 (PMID 40161566, PMCID PMC11947948, texto integral aberto lido por completo) e Moscatelli et al., J Cardiovasc Dev Dis 2025 (PMID 41002628, PMCID PMC12470689, texto integral aberto lido por completo) — fontes centrais de diagnóstico pré-natal, septo atrial restritivo/íntegro e vias terapêuticas; Feinstein et al., J Am Coll Cardiol 2012 (PMID 22192720, PMCID PMC6110391, texto integral aberto), já usado e verificado no documento deste guia sobre ventrículo único/Fontan, reutilizado aqui para sobrevida por estágio cirúrgico e manejo do balanço circulatório pré-operatório; Donofrio et al., Circulation 2014 (PMID 24763516) — texto integral não está em acesso aberto, dados vêm do abstract estruturado completo obtido via PubMed E-utilities nesta sessão; Karim et al., Ultrasound Obstet Gynecol 2022 (PMID 34369613, PMCID PMC9305869, texto integral aberto) para sensibilidade de rastreio de primeiro trimestre (dado de cardiopatias maiores em geral, não específico de SCEH, e explicitamente identificado como tal no texto). Mantida a Diretriz Brasileira de Cardiologia Fetal 2019 já citada na versão anterior, com página de acesso reconferida. Limitações declaradas: (1) o documento científico da AHA (Donofrio 2014) não está em acesso aberto, então seus dados vêm apenas do abstract estruturado; (2) a cifra de 'até 5% das mortes fetais espontâneas atribuídas a SCEH' e o estudo de Jacquemyn sobre mortalidade por fase pós-híbrido/Estágio 2/Fontan, ambos citados dentro da revisão de Bokhari et al. 2025, não foram conferidos nos artigos primários originais nesta sessão (sem PMID individual verificado) — sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do documento; (3) o orçamento de WebSearch desta sessão se esgotou durante a pesquisa, e toda a busca subsequente foi feita por WebFetch direto em PubMed/PMC/Europe PMC, o que pode ter deixado de capturar fontes adicionais que uma busca ampla encontraria. related_document_slugs revalidados por grep no checkout local de content/**/*.md, confirmando menção explícita ao tema (não apenas proximidade temática) em cada um dos 6 documentos linkados; patient_material_slug confirmado como existente em material-paciente/metadados.json. Nenhuma dose de fármaco foi incluída em campo novo, conforme exigido.",
+    "version": 2,
+    "fonte_producao": "claude"
   },
   {
     "slug": "polifarmacia-e-desprecricao-cardiovascular",
@@ -8398,130 +8916,820 @@
     "name": "Arritmias na gravidez",
     "aliases": [
       "taquicardia na gestante",
-      "palpitações na gravidez"
+      "palpitações na gravidez",
+      "TSV na gestação",
+      "fibrilação atrial na gestação",
+      "arritmia no puerpério"
     ],
     "area": "gravidez",
     "category": "arritmia",
     "subtype": "gestacao",
     "prevalence_rank": 6,
-    "completeness": "intermediario",
-    "summary": "Palpitações e arritmias durante a gestação exigem distinção entre alterações fisiológicas, taquicardias sustentadas e ritmos associados a instabilidade ou cardiopatia.",
+    "completeness": "completo",
+    "summary": "Palpitações e arritmias durante a gestação exigem distinguir achados fisiológicos muito comuns (taquicardia sinusal, extrassístoles) de taquicardia supraventricular paroxística (a arritmia sustentada mais frequente na gestação), fibrilação/flutter atrial e arritmia ventricular — esta última um sinal de alarme para cardiomiopatia periparto ou canalopatia não diagnosticada.",
+    "epidemiology": "Palpitações são extremamente comuns na gestação e a grande maioria corresponde a taquicardia sinusal fisiológica e extrassístoles isoladas, refletindo o aumento de cerca de 30-50% no débito cardíaco e no volume sanguíneo circulante, a taquicardia basal relativa e a maior sensibilidade adrenérgica e hormonal do período gestacional; esses achados não configuram doença e não devem ser sobreinvestigados na ausência de sinais de alarme. Entre as arritmias sustentadas verdadeiras, a taquicardia supraventricular paroxística (TSV) é a mais comum na gestação: uma coorte contemporânea baseada em mais de 1.500 hospitais (Epic Cosmos, gestações entre 2021 e 2024) identificou 29.638 gestações com TSV contra 8.642 com fibrilação/flutter atrial (FA/AFL), entre mais de 5,3 milhões de gestações sem arritmia documentada, confirmando que a TSV supera a FA/flutter em frequência absoluta nesse período (Wilkie et al., Am J Cardiol 2026; PMID 41999846). A FA/flutter de início na gestação é rara em termos absolutos, mas com incidência crescente: coorte administrativa americana mostrou aumento de 111% entre 2000 e 2012 (de 18 para 35 por 100.000 internações relacionadas à gestação; média de 27/100.000) (Vaidya et al., Circulation 2017; PMID 28154000), enquanto dado populacional independente da Kaiser Permanente encontrou prevalência de 59,3 por 100.000 gestações (Lee et al., J Am Heart Assoc 2016; PMID 27076563). O risco de FA/flutter aumenta de forma expressiva na presença de cardiopatia estrutural associada. Arritmia ventricular sustentada é incomum e, quando ocorre, deve ser tratada como sinal de alarme para cardiomiopatia periparto ou canalopatia não diagnosticada previamente. Em mulheres com síndrome do QT longo hereditária já conhecida, o risco de evento arrítmico não está concentrado na gestação, e sim no pós-parto, sobretudo nos primeiros nove meses (Rashba et al., Circulation 1998, PMID 9490239; Seth et al., JACC 2007, PMID 17349890).",
     "presentation": [
       "Palpitações",
-      "Tontura ou síncope",
+      "Sensação de irregularidade do ritmo (\"coração falhando\")",
+      "Tontura ou pré-síncope",
+      "Síncope",
       "Dispneia",
-      "Taquicardia sustentada"
+      "Dor torácica associada à arritmia",
+      "Taquicardia sustentada percebida como \"coração disparado\""
     ],
+    "diagnostic_approach": "A abordagem diagnóstica começa por documentar o ritmo durante o sintoma sempre que possível: ECG de 12 derivações no momento da palpitação é o exame mais informativo e, quando os episódios são paroxísticos e intermitentes, Holter ou monitor de eventos prolongam a janela de captura. Anamnese e exame físico devem buscar precipitantes e causas secundárias tratáveis — anemia, disfunção tireoidiana (inclusive hipertireoidismo transitório do início da gestação), cafeína/estimulantes, ansiedade e pré-eclâmpsia/HELLP — antes de rotular a arritmia como primária. Extrassístoles isoladas e taquicardia sinusal com ECG normal, sem sinais de alarme, não exigem investigação extensa adicional: a conduta é tranquilizar e reavaliar se o padrão mudar. Diante de taquicardia sustentada de QRS estreito e regular, a suspeita recai sobre TSV por reentrada (AVNRT/AVRT); QRS estreito irregular sugere FA/flutter com resposta ventricular variável. Ecocardiograma transtorácico é indicado quando há suspeita de cardiopatia estrutural, arritmia sustentada, sinais de alarme ou fatores de risco para cardiomiopatia periparto, avaliando função biventricular, valvas e trombo intracavitário. Diante de arritmia ventricular documentada — extrassístole ventricular frequente sintomática, taquicardia ventricular ou fibrilação ventricular —, a investigação deve necessariamente incluir ecocardiograma para FEVE (triagem de cardiomiopatia periparto) e avaliação para canalopatia primária (ECG de repouso com medida cuidadosa do QTc, padrão de Brugada, história familiar de morte súbita/síncope inexplicada, e encaminhamento para avaliação genética/eletrofisiológica especializada quando disponível).",
     "differentials": [
-      "Taquicardia sinusal fisiológica",
+      "Taquicardia sinusal fisiológica da gestação",
       "Anemia",
-      "Tireotoxicose",
-      "Taquicardia supraventricular",
-      "Arritmia ventricular"
+      "Tireotoxicose (inclusive hipertireoidismo transitório gestacional)",
+      "Ansiedade/transtorno de pânico",
+      "Taquicardia supraventricular paroxística",
+      "Fibrilação ou flutter atrial",
+      "Arritmia ventricular associada a cardiomiopatia periparto ou canalopatia",
+      "Tromboembolismo pulmonar"
     ],
     "tests": [
-      "ECG",
-      "Hemograma, eletrólitos e tireoide conforme contexto",
-      "Holter/evento",
-      "Ecocardiograma quando indicado"
+      "ECG de 12 derivações no momento do sintoma",
+      "Holter ou monitor de eventos",
+      "Hemograma",
+      "Eletrólitos",
+      "TSH/T4 livre",
+      "Ecocardiograma transtorácico quando há suspeita estrutural, arritmia sustentada ou red flags",
+      "ECG de repouso com medida do QTc (rastreio de canalopatia)",
+      "Peptídeo natriurético/troponina quando há suspeita de cardiomiopatia periparto"
     ],
     "red_flags": [
-      "Instabilidade",
+      "Instabilidade hemodinâmica (hipotensão, choque, alteração de consciência)",
       "Síncope",
-      "Arritmia ventricular",
-      "Cardiopatia estrutural",
-      "Taquicardia persistente com insuficiência cardíaca"
+      "Arritmia ventricular sustentada",
+      "Sinais de cardiomiopatia periparto (dispneia progressiva, ortopneia, edema pulmonar, nova disfunção ventricular)",
+      "Cardiopatia estrutural conhecida",
+      "História familiar de morte súbita ou canalopatia",
+      "Taquicardia persistente com sinais de insuficiência cardíaca",
+      "Dor torácica associada à arritmia"
     ],
     "ambulatory_flow": [
-      "Documentar ritmo",
-      "Buscar precipitantes",
-      "Escolher tratamento compatível com gestação e lactação"
+      "Documentar o ritmo com ECG/Holter durante o sintoma",
+      "Investigar causas secundárias tratáveis (anemia, tireoide, cafeína, pré-eclâmpsia)",
+      "Tranquilizar e não sobreinvestigar extrassístoles/taquicardia sinusal isoladas sem sinais de alarme",
+      "Encaminhar para avaliação cardio-obstétrica estruturada diante de red flags ou arritmia sustentada",
+      "Escolher terapia antiarrítmica crônica compatível com gestação e lactação quando necessária",
+      "Considerar Pregnancy Heart Team em cardiopatia estrutural ou arritmia complexa"
     ],
     "emergency_flow": [
-      "Tratar instabilidade elétrica conforme protocolo",
-      "Coordenar cardiologia, obstetrícia e anestesia"
+      "Avaliar estabilidade hemodinâmica imediatamente",
+      "Se instável: cardioversão elétrica sincronizada em qualquer trimestre, com a mesma energia usada em não gestantes e monitorização fetal quando viável",
+      "Se TSV estável de QRS estreito regular: manobras vagais e, na falha, adenosina intravenosa (segura na gestação)",
+      "Se FA/flutter estável: definir estratégia de controle de ritmo/frequência conforme cardiopatia estrutural, sem uso de anticoagulante oral direto",
+      "Se arritmia ventricular sustentada ou parada cardiorrespiratória: desfibrilação/RCP sem atraso por preocupação fetal, seguida de investigação para cardiomiopatia periparto ou canalopatia",
+      "Coordenar cardiologia, obstetrícia e anestesia em toda intervenção aguda"
+    ],
+    "treatment_summary": "A gestação aumenta a frequência e a percepção de arritmias por múltiplos mecanismos concomitantes: expansão do volume sanguíneo e do débito cardíaco (aumento de cerca de 30-50% ao longo da gestação), taquicardia sinusal basal relativa, maior tônus e sensibilidade adrenérgica, alterações hormonais (estrogênio, progesterona) que modificam a condução e a excitabilidade miocárdica, e distensão das câmaras atriais que facilita ectopia e circuitos de reentrada. Extrassístoles isoladas e taquicardia sinusal são achados esperados e benignos que não devem levar a investigação ou tratamento agressivo na ausência de sinais de alarme — a conduta é tranquilizar, afastar causas secundárias simples (anemia, tireoide, cafeína) e reavaliar apenas se o padrão mudar.\n\nA TSV paroxística é a arritmia sustentada mais comum na gestação. No episódio agudo, com a paciente hemodinamicamente estável e QRS estreito regular, a sequência é: manobras vagais (incluindo Valsalva modificada) primeiro e, na falha, adenosina intravenosa — a adenosina é considerada segura na gestação, com meia-vida ultracurta que limita a exposição fetal, sem necessidade de citar dose neste documento. Se a adenosina não reverter o ritmo ou o mecanismo não for compatível com reentrada nodal/atrioventricular, betabloqueador beta-1 seletivo intravenoso (evitando atenolol) ou verapamil intravenoso são opções conforme o quadro clínico.\n\nFA e flutter atrial são menos comuns que a TSV na gestação, mas ganham relevância quando há cardiopatia estrutural associada, situação em que o risco de recorrência e de complicações aumenta. A decisão de anticoagulação na FA/flutter da gestante segue lógica própria e distinta da paciente não gestante: deve ser individualizada por trimestre, risco tromboembólico e risco hemorrágico/obstétrico, com preferência por heparina de baixo peso molecular ou antagonista de vitamina K conforme o cenário — anticoagulantes orais diretos são contraindicados na gestação.\n\nArritmia ventricular sustentada ou instabilidade por qualquer arritmia é sinal de alarme e deve motivar investigação para cardiomiopatia periparto (nova disfunção ventricular, tipicamente no fim da gestação ou no puerpério) ou canalopatia primária não diagnosticada previamente (síndrome do QT longo, Brugada, taquicardia ventricular polimórfica catecolaminérgica), nunca ser atribuída de forma automática a ansiedade ou a alterações fisiológicas do período.\n\nQuanto à segurança de antiarrítmicos por classe, sem citar doses: betabloqueadores beta-1 seletivos (exceto atenolol, evitado) são geralmente considerados de primeira linha e compatíveis com a gestação; flecainida e propafenona são aceitáveis para controle de ritmo em corações estruturalmente normais; sotalol requer cautela e acompanhamento; verapamil e diltiazem são opções de segunda linha, com cautela reforçada no início da gestação; digoxina é opção de segunda linha para controle de frequência; amiodarona é reservada para arritmias refratárias ou que ameacem a vida, sem alternativa mais segura, pelo risco de disfunção tireoidiana fetal e restrição de crescimento; anticoagulantes orais diretos são contraindicados.\n\nA cardioversão elétrica sincronizada é considerada segura em qualquer trimestre da gestação quando indicada, com as mesmas energias usadas em pacientes não gestantes (não há redução de energia por causa da gravidez) e monitorização da frequência cardíaca fetal quando o feto é viável.\n\nA ablação por cateter é reservada a casos refratários ao tratamento farmacológico ou com arritmia mal tolerada, e idealmente adiada para depois do parto sempre que a condição clínica permitir; quando o procedimento é inadiável, técnicas de minimização de exposição à radiação ionizante — mapeamento eletroanatômico e protocolos de fluoroscopia reduzida ou zero — devem ser priorizadas.",
+    "monitoring": [
+      "Monitorização da frequência cardíaca fetal durante e após tratamento agudo de arritmia materna",
+      "Reavaliação seriada de FEVE por ecocardiograma quando cardiomiopatia periparto é suspeitada ou confirmada",
+      "Seguimento de eletrólitos e função tireoidiana quando causa secundária foi identificada",
+      "Vigilância pós-parto reforçada em síndrome do QT longo, com risco de evento arrítmico concentrado nos primeiros meses após o parto",
+      "Continuidade de betabloqueador/antiarrítmico eficaz no puerpério quando já indicado (ex. CPVT), sem suspender apenas por ter passado o parto",
+      "Monitorização neonatal quando há uso materno crônico de antiarrítmico que atravessa a placenta ou é excretado no leite"
+    ],
+    "special_populations": [
+      "Cardiopatia estrutural conhecida: maior risco de FA/flutter e de recorrência de arritmia ao longo da gestação",
+      "Cardiomiopatia periparto: arritmia ventricular pode ser sinal de descompensação; considerar Pregnancy Heart Team e suporte circulatório mecânico temporário em choque refratário",
+      "Canalopatias (QT longo, Brugada, CPVT): risco de evento concentrado no pós-parto na síndrome do QT longo, e gatilho adrenérgico proeminente na CPVT, exigindo manutenção do betabloqueador durante gestação e puerpério",
+      "FA crônica com cardiomiopatia dilatada pré-existente: anticoagulação com heparina de baixo peso molecular ou antagonista de vitamina K conforme risco tromboembólico, com DOAC contraindicado",
+      "Puerpério: janela de maior risco para descompensação de cardiomiopatia periparto e para eventos arrítmicos em canalopatias; manter terapia eficaz e reforçar vigilância"
+    ],
+    "assistant_questions": [
+      {
+        "id": "tipo_arritmia_documentada",
+        "label": "Qual arritmia foi documentada no ECG/Holter?",
+        "type": "select",
+        "required": true,
+        "section": "diagnostico",
+        "options": [
+          {
+            "value": "extrassistoles_taqui_sinusal",
+            "label": "Extrassístoles ou taquicardia sinusal isoladas"
+          },
+          {
+            "value": "tsv_paroxistica",
+            "label": "Taquicardia supraventricular paroxística (TSV)"
+          },
+          {
+            "value": "fa_flutter",
+            "label": "Fibrilação ou flutter atrial"
+          },
+          {
+            "value": "arritmia_ventricular",
+            "label": "Arritmia ventricular (TV/TVNS/TV polimórfica)"
+          },
+          {
+            "value": "nao_documentada",
+            "label": "Ainda não documentada"
+          }
+        ]
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "label": "Há sinais de instabilidade hemodinâmica (hipotensão, síncope, dor torácica importante, dispneia importante, alteração de consciência)?",
+        "type": "boolean",
+        "required": true,
+        "section": "triagem"
+      },
+      {
+        "id": "cardiopatia_estrutural_conhecida",
+        "label": "A gestante tem cardiopatia estrutural ou cardiomiopatia conhecida?",
+        "type": "boolean",
+        "section": "historia"
+      },
+      {
+        "id": "sinais_sugestivos_ppcm",
+        "label": "Há sinais sugestivos de cardiomiopatia periparto (dispneia progressiva, ortopneia, edema pulmonar, nova disfunção ventricular)?",
+        "type": "boolean",
+        "section": "triagem"
+      },
+      {
+        "id": "trimestre_gestacional",
+        "label": "Em qual fase da gestação/puerpério a paciente está?",
+        "type": "select",
+        "section": "contexto",
+        "options": [
+          {
+            "value": "primeiro_trimestre",
+            "label": "Primeiro trimestre"
+          },
+          {
+            "value": "segundo_trimestre",
+            "label": "Segundo trimestre"
+          },
+          {
+            "value": "terceiro_trimestre",
+            "label": "Terceiro trimestre"
+          },
+          {
+            "value": "puerperio",
+            "label": "Puerpério (até 12 meses pós-parto)"
+          }
+        ]
+      },
+      {
+        "id": "historia_familiar_morte_subita",
+        "label": "Há história familiar de morte súbita, síncope inexplicada ou canalopatia (QT longo, Brugada, CPVT)?",
+        "type": "boolean",
+        "section": "historia"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rule_instabilidade_emergencia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica associada a arritmia materna"
+          ],
+          "emergency_flow": [
+            "Cardioversão elétrica sincronizada imediata, independentemente do trimestre, com monitorização fetal quando viável"
+          ],
+          "messages": [
+            "Instabilidade hemodinâmica em gestante com arritmia é emergência: não atrasar cardioversão elétrica por receio do choque."
+          ]
+        }
+      },
+      {
+        "id": "rule_arritmia_ventricular_alerta",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia_documentada",
+              "op": "eq",
+              "value": "arritmia_ventricular"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Arritmia ventricular sustentada em gestante/puérpera"
+          ],
+          "differentials": [
+            "Cardiomiopatia periparto",
+            "Canalopatia não diagnosticada (QT longo, Brugada, CPVT)"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma urgente (FEVE)",
+            "ECG de repouso com medida do QTc",
+            "Avaliação eletrofisiológica/genética quando disponível"
+          ],
+          "messages": [
+            "Arritmia ventricular na gestação/puerpério deve ser tratada como sinal de alerta para cardiomiopatia periparto ou canalopatia até investigação completa."
+          ]
+        }
+      },
+      {
+        "id": "rule_ppcm_suspeita",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_sugestivos_ppcm",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais sugestivos de cardiomiopatia periparto"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma urgente",
+            "Peptídeo natriurético/troponina"
+          ],
+          "messages": [
+            "Dispneia progressiva, ortopneia ou edema pulmonar no fim da gestação/puerpério não devem ser atribuídos apenas a alterações fisiológicas: investigar cardiomiopatia periparto."
+          ]
+        }
+      },
+      {
+        "id": "rule_fa_flutter_anticoagulacao",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia_documentada",
+              "op": "eq",
+              "value": "fa_flutter"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Duração da FA/flutter e fatores de risco tromboembólico para decidir anticoagulação"
+          ],
+          "messages": [
+            "A decisão de anticoagulação na FA/flutter da gestante segue lógica própria, individualizada por trimestre e risco: heparina de baixo peso molecular ou antagonista de vitamina K são preferidos; anticoagulantes orais diretos são contraindicados na gestação."
+          ]
+        }
+      },
+      {
+        "id": "rule_tsv_estavel_manejo",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia_documentada",
+              "op": "eq",
+              "value": "tsv_paroxistica"
+            },
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "emergency_flow": [
+            "Tentar manobras vagais e, se não houver reversão, adenosina intravenosa (considerada segura na gestação)"
+          ],
+          "messages": [
+            "TSV estável na gestação: manobras vagais primeiro, depois adenosina; evitar atenolol no algoritmo agudo gestacional."
+          ]
+        }
+      },
+      {
+        "id": "rule_extrassistoles_benignas",
+        "priority": 10,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia_documentada",
+              "op": "eq",
+              "value": "extrassistoles_taqui_sinusal"
+            },
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Extrassístoles isoladas e taquicardia sinusal são achados fisiológicos muito comuns na gestação e não exigem investigação extensa na ausência de sinais de alarme."
+          ]
+        }
+      },
+      {
+        "id": "rule_canalopatia_historia_familiar",
+        "priority": 30,
+        "when": {
+          "any": [
+            {
+              "field": "historia_familiar_morte_subita",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "ECG de repouso com medida do QTc",
+            "Avaliação genética/familiar estruturada"
+          ],
+          "messages": [
+            "História familiar de morte súbita ou canalopatia exige avaliação eletrocardiográfica (QTc) e encaminhamento estruturado; em síndrome do QT longo, o risco de evento arrítmico concentra-se no pós-parto, não na gestação — vigilância deve ser reforçada nos primeiros meses após o parto."
+          ]
+        }
+      }
     ],
     "tags": [
       "gravidez",
       "palpitação",
       "taquicardia",
-      "ECG"
+      "ECG",
+      "fibrilação atrial",
+      "TSV",
+      "cardiomiopatia periparto",
+      "canalopatia",
+      "cardioversão",
+      "adenosina",
+      "ablação por cateter",
+      "puerpério"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "De Backer J, Haugaa KH, Hasselberg NE, et al.; ESC Scientific Document Group. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294. Seção 12.4 (arritmias).",
+      "2023 HRS expert consensus statement on the management of arrhythmias during pregnancy. Heart Rhythm. 2023.",
+      "Lucà F, et al. The Challenge of Managing Atrial Fibrillation during Pregnancy. Rev Cardiovasc Med. 2023;24(10):279. PMID: 39077579.",
+      "Vaidya VR, Akhter MW, Bhave PD, et al. Burden of Arrhythmia in Pregnancy. Circulation. 2017;135(6):619-621. PMID: 28154000.",
+      "Lee MS, Chen W, Zhang Z, et al. Atrial Fibrillation and Atrial Flutter in Pregnant Women-A Population-Based Study. J Am Heart Assoc. 2016;5(4):e003182. PMID: 27076563.",
+      "Wilkie G, Takillapati S, Alhuarrat MAD, et al. Cardiac and Perinatal Outcomes Among Pregnancies With Maternal Cardiac Arrhythmias. Am J Cardiol. 2026;270:17-21. PMID: 41999846. DOI: 10.1016/j.amjcard.2026.04.013.",
+      "Rashba EJ, Zareba W, Moss AJ, et al. Influence of pregnancy on the risk for cardiac events in patients with hereditary long QT syndrome. Circulation. 1998;97(5):451-456. PMID: 9490239.",
+      "Seth R, Moss AJ, McNitt S, et al. Long QT syndrome and pregnancy. J Am Coll Cardiol. 2007;49(10):1092-1098. PMID: 17349890."
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/",
+      "https://academic.oup.com/eurheartj/article/46/43/4462/8248443",
+      "https://www.heartrhythmjournal.com/article/S1547-5271(23)02246-4/fulltext",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11273119/",
+      "https://pubmed.ncbi.nlm.nih.gov/28154000/",
+      "https://pubmed.ncbi.nlm.nih.gov/27076563/",
+      "https://pubmed.ncbi.nlm.nih.gov/41999846/",
+      "https://pubmed.ncbi.nlm.nih.gov/9490239/",
+      "https://pubmed.ncbi.nlm.nih.gov/17349890/"
     ],
-    "review_status": "revisado",
-    "review_note": "O verbete não prescreve antiarrítmico automaticamente.",
-    "version": 1
+    "related_document_slugs": [
+      "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+      "fibrilacao-atrial-de-inicio-na-gestacao-incidencia-causas-e-controle-agudo",
+      "fibrilacao-atrial-cronica-e-cardiomiopatia-dilatada-pre-existente-na-gestacao",
+      "cardiomiopatia-periparto-descompensada-e-choque-no-puerperio-esc-2025",
+      "taquicardia-ventricular-polimorfica-catecolaminergica-na-gestacao-e-puerperio",
+      "sindrome-do-qt-longo-na-gestacao-risco-concentrado-no-pos-parto",
+      "arritmias-maternas-desfechos-cardiacos-perinatais-epic-cosmos-2026"
+    ],
+    "patient_material_slug": "arritmia-na-gravidez-remedios-seguros-para-o-coracao",
+    "review_status": "pendente_revisao",
+    "review_note": "Ficha aprofundada de intermediario para completo (v1 -> v2). Verificação feita por WebFetch direto no texto integral das 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy (Eur Heart J 2025;46(43):4462-4568, DOI 10.1093/eurheartj/ehaf193, PMID 40878294) em academic.oup.com, confirmando: extrassístoles/taquicardia sinusal como achados fisiológicos benignos; manobras vagais seguidas de adenosina (segura na gestação) para TSV estável; anticoagulação de FA/flutter individualizada por trimestre e risco, distinta da paciente não gestante; arritmia ventricular sustentada como gatilho para investigar cardiomiopatia periparto/canalopatia; cardioversão elétrica segura em qualquer trimestre com monitorização fetal; ablação por cateter idealmente adiada para o pós-parto, com minimização de radiação quando inadiável. Complementarmente, verificação por WebFetch de revisão sobre FA na gestação (PMC11273119, Rev Cardiovasc Med 2023, PMID 39077579) confirmou classificação de segurança de antiarrítmicos por classe e a limitação de que o escore CHA2DS2-VASc não é validado em gestantes. Dados de epidemiologia (incidência de TSV vs. FA/flutter, incidência de FA de início gestacional, risco pós-parto na síndrome do QT longo) foram extraídos de artigos com PMID/DOI já citados em documentos irmãos revisados deste mesmo repositório (Wilkie et al. Am J Cardiol 2026 PMID 41999846; Vaidya et al. Circulation 2017 PMID 28154000; Lee et al. J Am Heart Assoc 2016 PMID 27076563; Rashba et al. Circulation 1998 PMID 9490239; Seth et al. JACC 2007 PMID 17349890) e cruzados com os PMIDs informados nesses documentos — não foi possível abrir o texto completo de cada um desses artigos individualmente nesta sessão (limitação de acesso: PMC de alguns artigos retornou 403 ou Europe PMC não expôs o texto integral via fetch), então os números numéricos citados aqui replicam os já verificados/publicados nos documentos irmãos revisados do próprio Corvia, não sendo uma nova extração primária desses PDFs. Nenhuma dose de fármaco foi incluída, conforme exigido. related_document_slugs foram confirmados como arquivos .md reais em content/Gravidez, todos citando explicitamente arritmia materna. patient_material_slug confirmado em material-paciente/metadados.json.",
+    "version": 2,
+    "fonte_producao": "claude"
   },
   {
     "slug": "comunicacao-interatrial",
     "name": "Comunicação interatrial",
     "aliases": [
       "CIA",
-      "defeito do septo atrial"
+      "defeito do septo atrial",
+      "atrial septal defect",
+      "ASD"
     ],
     "area": "cardiopediatria",
     "category": "cardiopatia_congenita",
     "subtype": "shunt_esquerda_direita",
     "cyanosis_class": "acianotica",
     "prevalence_rank": 11,
-    "completeness": "intermediario",
-    "summary": "Defeito do septo atrial cujo impacto depende do tipo anatômico, magnitude do shunt, repercussão de câmaras direitas e condições associadas.",
+    "completeness": "completo",
+    "summary": "Defeito do septo atrial cuja repercussão depende do tipo anatômico (ostium secundum, o mais comum e o único fechado rotineiramente por cateter; ostium primum, seio venoso e seio coronário, tipicamente cirúrgicos), do tamanho do shunt e das lesões associadas. É muito mais tolerada hemodinamicamente do que a comunicação interventricular: a maioria das crianças permanece assintomática por décadas, e o diagnóstico no adulto não operado frequentemente surge por arritmia atrial ou sinal de sobrecarga de câmaras direitas, não por sintoma na infância.",
+    "epidemiology": "A CIA responde por cerca de 9% a 13% de todas as cardiopatias congênitas (Rao PS, Diagnostics 2022, PMID 35741304), sendo o tipo ostium secundum o mais frequente. O ostium primum é uma forma parcial de defeito do septo atrioventricular, associada a fenda de valva mitral. O tipo seio venoso associa-se com frequência a drenagem anômala parcial de veias pulmonares direitas. O tipo seio coronário (coração sem teto do seio coronário) é o mais raro, respondendo por menos de 1% de todas as CIA, e mais da metade dos casos (tipo 1A de Raghib) associa-se a veia cava superior esquerda persistente com ausência de seio coronário (Slingerland A et al., Trends Cardiovasc Med 2025, PMID 40194568). É essencial diferenciar CIA verdadeira de forame oval patente (FOP): o FOP é um remanescente da circulação fetal com mecanismo de válvula, presente em cerca de 24% da população geral em estudos de autópsia (24,2%, IC combinando 7.747 corações) e é achado muito mais comum que qualquer tipo de CIA verdadeira (Koutroulou I et al., Front Neurol 2020, PMID 32411074) — a distinção importa porque o FOP isolado não causa sobrecarga crônica de câmaras direitas nem costuma indicar fechamento pelos mesmos critérios hemodinâmicos da CIA.",
     "presentation": [
-      "Frequentemente assintomática na infância",
-      "Sopro sistólico e desdobramento fixo de segunda bulha ao exame",
-      "Dispneia aos esforços ou infecção respiratória de repetição em defeito maior",
-      "No adulto não diagnosticado previamente, pode surgir com arritmia atrial, dispneia ou sinal de sobrecarga de câmaras direitas"
+      "Frequentemente assintomática na infância, com achado incidental de sopro em consulta de rotina",
+      "Sopro sistólico ejetivo em foco pulmonar com desdobramento fixo de segunda bulha ao exame",
+      "Dispneia aos esforços, sudorese ou infecção respiratória de repetição, mais raras que na comunicação interventricular e mais associadas a defeito maior",
+      "Intolerância progressiva ao esforço na adolescência ou vida adulta, à medida que o shunt acumula repercussão",
+      "No adulto não diagnosticado previamente, pode se manifestar primeiro como arritmia atrial (fibrilação ou flutter atrial) sem sintoma cardíaco prévio conhecido",
+      "Sinal de sobrecarga ou insuficiência de câmaras direitas no adulto de diagnóstico tardio",
+      "Raramente, evento embólico sistêmico (AVC, isquemia de membro) como manifestação inicial de shunt significativo com embolia paradoxal"
     ],
     "differentials": [
-      "Forame oval patente",
-      "Outro shunt esquerda-direita (comunicação interventricular, persistência do canal arterial)",
+      "Forame oval patente (mecanismo de válvula, sem sobrecarga crônica de câmaras direitas, achado em cerca de um quarto da população geral)",
+      "Outro shunt esquerda-direita: comunicação interventricular ou persistência do canal arterial",
       "Sopro inocente da infância",
-      "Outra causa de dilatação de câmaras direitas"
+      "Drenagem venosa pulmonar anômala parcial sem defeito septal associado",
+      "Outra causa de dilatação de câmaras direitas: hipertensão pulmonar de outra etiologia, insuficiência tricúspide primária",
+      "Defeito do septo atrioventricular (quando o achado é CIA tipo ostium primum, deve-se investigar valva atrioventricular associada)"
     ],
     "tests": [
-      "Ecocardiograma transtorácico para tipo anatômico, tamanho e repercussão",
-      "Ecocardiograma transesofágico ou tridimensional quando se planeja fechamento percutâneo",
-      "Avaliação de pressão pulmonar",
-      "ECG e avaliação de arritmia atrial, sobretudo no adulto"
+      "Ecocardiograma transtorácico para definir tipo anatômico, tamanho, direção do shunt e repercussão de câmaras direitas",
+      "Ecocardiograma transesofágico ou tridimensional quando se planeja fechamento percutâneo, obrigatório para caracterizar tipo seio venoso",
+      "Eletrocardiograma para padrão de sobrecarga de câmaras direitas e rastreio de arritmia atrial, sobretudo no adulto",
+      "Ressonância cardíaca para quantificar Qp:Qs, avaliar volume de ventrículo direito e caracterizar seio venoso ou drenagem anômala associada",
+      "Cateterismo cardíaco direito para medida invasiva da resistência vascular pulmonar em unidades Wood, obrigatório quando há sinal não invasivo de pressão pulmonar elevada",
+      "Teste de esforço com oximetria para rastrear dessaturação ao esforço antes de decisão de fechamento",
+      "Tomografia cardíaca como alternativa de imagem anatômica, particularmente útil na drenagem venosa pulmonar anômala associada"
     ],
     "red_flags": [
-      "Sinal de hipertensão pulmonar avançada ou síndrome de Eisenmenger",
-      "Arritmia atrial sustentada",
+      "Sinal de hipertensão pulmonar avançada ou fisiologia de Eisenmenger",
+      "Dessaturação ao esforço documentada, contraindicação ao fechamento na diretriz atual",
+      "Arritmia atrial sustentada (fibrilação ou flutter) em paciente com CIA não corrigida",
       "Sinal de insuficiência cardíaca direita",
-      "Evento embólico paradoxal sugestivo de shunt significativo"
+      "Evento embólico paradoxal sugestivo de shunt significativo: déficit neurológico focal agudo, isquemia de membro ou dor torácica isquêmica",
+      "Cianose ou baqueteamento digital, sugerindo Eisenmenger já estabelecido"
     ],
     "ambulatory_flow": [
-      "Definir tipo anatômico e repercussão hemodinâmica por imagem",
-      "Avaliar a necessidade e a via de fechamento (percutâneo ou cirúrgico) conforme anatomia e repercussão",
-      "Acompanhar crescimento e desenvolvimento de criança com defeito pequeno sem indicação imediata de fechamento",
-      "Rastrear hipertensão pulmonar e arritmia no seguimento de adulto não operado"
+      "Definir tipo anatômico e repercussão hemodinâmica por ecocardiograma, complementado por ressonância quando necessário",
+      "Aplicar critérios de fechamento: Qp:Qs, sobrecarga de câmaras direitas e sintomas, decidindo entre dispositivo por cateter (primeira escolha no ostium secundum com bordas adequadas) e cirurgia (obrigatória nos demais tipos anatômicos ou anatomia desfavorável)",
+      "Acompanhar crescimento e desenvolvimento de criança com defeito pequeno sem indicação imediata de fechamento, com ecocardiogramas seriados",
+      "Rastrear hipertensão pulmonar e arritmia atrial no seguimento de adulto não operado ou de diagnóstico tardio",
+      "Esclarecer que a maioria dos casos de CIA isolada, reparada ou não, sem defeito residual, não tem indicação de profilaxia antibiótica de endocardite conforme diretriz atual",
+      "Encaminhar para centro especializado em cardiopatia congênita do adulto na transição da cardiologia pediátrica"
     ],
     "emergency_flow": [
-      "Avaliar descompensação de insuficiência cardíaca direita ou arritmia aguda conforme protocolo",
-      "Considerar shunt significativo como causa de evento embólico paradoxal",
-      "Investigar hipertensão pulmonar grave antes de qualquer procedimento eletivo"
+      "Avaliar descompensação de insuficiência cardíaca direita ou arritmia atrial aguda conforme protocolo específico",
+      "Considerar shunt interatrial significativo (CIA ou FOP) como causa de embolia paradoxal em paciente com déficit neurológico focal agudo, isquemia de membro ou infarto sem outra etiologia identificada, e acionar avaliação urgente com ecocardiograma transesofágico",
+      "Investigar hipertensão pulmonar grave e dessaturação ao esforço antes de qualquer procedimento eletivo de fechamento",
+      "Não atrasar estabilização do paciente instável para caracterização anatômica completa; contatar centro de cardiopatia congênita do adulto sem atraso"
+    ],
+    "treatment_summary": "O tratamento da CIA depende do tipo anatômico, da repercussão hemodinâmica e da resistência vascular pulmonar. A diretriz ESC 2020 organiza a decisão em torno da sobrecarga de volume de câmaras direitas e do Qp:Qs acima de 1,5: com resistência vascular pulmonar abaixo de 3 unidades Wood, o fechamento é recomendado independentemente de sintomas (Classe I); entre 3 e menos de 5 unidades Wood, deve ser considerado (Classe IIa); a partir de 5 unidades Wood que persiste apesar de tratamento dirigido, fisiologia de Eisenmenger estabelecida ou dessaturação ao esforço, o fechamento é contraindicado (Classe III) — fechar nesse cenário pode ser perigoso, pois o defeito funciona como válvula de escape que protege o coração esquerdo. Sinal não invasivo de pressão pulmonar elevada exige medida invasiva da resistência antes de qualquer decisão. Quando indicado, o fechamento por dispositivo via cateter é o método de escolha para CIA tipo ostium secundum com bordas (rimas) tecidualmente adequadas — rima inferior a 4 mm é geralmente considerada desfavorável, embora o limite não seja absoluto; defeito menor que 15 mm, relação defeito/comprimento do septo atrial menor que 0,35 e rima superior maior que 0,75 do tamanho do defeito favorecem o sucesso do implante. O dispositivo não deve ultrapassar 1,5 vez o diâmetro do defeito, para reduzir risco de erosão. Os demais tipos anatômicos — ostium primum, seio venoso e seio coronário — não são tratados por dispositivo e exigem fechamento cirúrgico; o mesmo vale para ostium secundum com anatomia desfavorável (rima póstero-inferior ausente, defeitos múltiplos ou muito grandes). Após o fechamento, seguimento de longo prazo é indicado pelo risco de arritmia atrial nova (mais elevado após correção cirúrgica de seio venoso, com risco relativo relatado de cerca de 4,9 vezes, e de disfunção do nó sinusal, bloqueio atrioventricular ou necessidade de marca-passo, com risco relativo de cerca de 11,3, em coorte nacional finlandesa de 182 pacientes operados) e por eventos raros como erosão de dispositivo. A profilaxia antibiótica de endocardite não é recomendada rotineiramente para CIA isolada, reparada ou não, sem defeito residual — indicação diferente da usada há décadas atrás; ela se aplica apenas quando há material protético não endotelizado (primeiros 6 meses após dispositivo ou patch) ou defeito residual persistente junto ao sítio do reparo.",
+    "monitoring": [
+      "Ecocardiogramas seriados para acompanhar tamanho do defeito e das câmaras direitas em criança com CIA pequena não fechada, com intervalo individualizado conforme tamanho inicial e idade gestacional ao nascimento",
+      "Vigilância pós-fechamento por dispositivo para shunt residual e, mais raramente, erosão do dispositivo, sobretudo quando houve sobredimensionamento",
+      "Eletrocardiograma e Holter para rastrear arritmia atrial nova, disfunção do nó sinusal ou bloqueio atrioventricular, particularmente após correção cirúrgica de defeito tipo seio venoso",
+      "Reavaliação periódica da pressão pulmonar em adulto operado tardiamente ou com resistência vascular pulmonar limítrofe antes do fechamento",
+      "Acompanhamento de crescimento e desenvolvimento em criança com defeito ainda sem indicação de fechamento"
+    ],
+    "special_populations": [
+      "Recém-nascido pré-termo: taxa de fechamento espontâneo mais baixa e necessidade de intervenção maior do que em recém-nascido a termo com defeito de tamanho equivalente, exigindo vigilância ecocardiográfica mais próxima",
+      "Síndrome de Down: quando a CIA se apresenta como ostium primum no contexto de defeito do septo atrioventricular, há risco aumentado e mais precoce de doença vascular pulmonar, o que antecipa a janela de indicação cirúrgica",
+      "Gestação: a tolerância à gestação depende da ausência de hipertensão pulmonar; hipertensão pulmonar pré-capilar confirmada é contraindicação reconhecida à gravidez em cardiopatia congênita",
+      "Adulto de diagnóstico tardio (inclusive idoso): candidato a fechamento por dispositivo quando anatomia favorável mesmo em idade avançada; quando não candidato a dispositivo, o risco cirúrgico deve ser ponderado individualmente contra o benefício",
+      "Síndrome de Turner: rastreamento de drenagem venosa pulmonar anômala parcial associada é relevante nessa população, dada maior prevalência descrita"
+    ],
+    "diagnostic_approach": {
+      "classificacao_anatomica": [
+        "Ostium secundum: o tipo mais comum, na região da fossa oval; único com fechamento espontâneo relevante e o único tratado rotineiramente por dispositivo via cateter",
+        "Ostium primum: forma parcial de defeito do septo atrioventricular, associada a fenda de valva mitral; sempre cirúrgico",
+        "Seio venoso (superior, mais comum, ou inferior): frequentemente associado a drenagem anômala parcial de veias pulmonares direitas; diagnóstico costuma exigir ecocardiograma transesofágico, ressonância ou tomografia; sempre cirúrgico",
+        "Seio coronário (coração sem teto do seio coronário): o mais raro, menos de 1% das CIA; associado com frequência a veia cava superior esquerda persistente; predominantemente cirúrgico, com papel emergente e ainda pequeno para fechamento por dispositivo em casos selecionados"
+      ],
+      "avaliacao_da_repercussao": [
+        "Sobrecarga de volume de câmaras direitas ao ecocardiograma (dilatação de átrio e ventrículo direitos, movimento septal paradoxal ou retificado) é o achado central que orienta a indicação de fechamento",
+        "Qp:Qs acima de 1,5 é o corte usado nas tabelas de recomendação de intervenção",
+        "Sinal não invasivo de pressão pulmonar elevada (PAP sistólica calculada acima de 40 mmHg ou sinais indiretos) obriga medida invasiva da resistência vascular pulmonar antes de decidir fechar"
+      ],
+      "diferenciacao_de_fop": "Forame oval patente é achado normal, presente em cerca de um quarto da população geral em estudos de autópsia, com mecanismo de válvula que não gera shunt crônico obrigatório nem sobrecarga estrutural das câmaras direitas — diferente da CIA verdadeira, que é um defeito estrutural fixo do septo. A confusão entre os dois leva a aplicar critérios de fechamento e risco de embolia paradoxal de forma incorreta.",
+      "limite": "A caracterização anatômica completa por imagem (ecocardiograma transtorácico, transesofágico e, quando necessário, ressonância ou tomografia) é indispensável antes de qualquer decisão de fechamento; a classificação por tipo anatômico isolada não substitui a avaliação hemodinâmica invasiva quando há sinal de hipertensão pulmonar."
+    },
+    "assistant_questions": [
+      {
+        "id": "tipo_anatomico",
+        "label": "Qual é o tipo anatômico da CIA?",
+        "type": "select",
+        "required": true,
+        "section": "Anatomia",
+        "options": [
+          {
+            "value": "ostium_secundum",
+            "label": "Ostium secundum"
+          },
+          {
+            "value": "ostium_primum",
+            "label": "Ostium primum"
+          },
+          {
+            "value": "seio_venoso",
+            "label": "Seio venoso"
+          },
+          {
+            "value": "seio_coronario",
+            "label": "Seio coronário"
+          },
+          {
+            "value": "nao_definido",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "sobrecarga_direita",
+        "label": "Há sobrecarga de volume de átrio direito e/ou ventrículo direito ao ecocardiograma?",
+        "type": "boolean",
+        "required": true,
+        "section": "Repercussão"
+      },
+      {
+        "id": "sinal_hp_nao_invasivo",
+        "label": "Há sinal não invasivo de pressão pulmonar elevada (PAP sistólica estimada acima de 40 mmHg ou sinais indiretos)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "dessaturacao_esforco",
+        "label": "Há dessaturação ao esforço documentada em teste cardiopulmonar ou oximetria de esforço?",
+        "type": "boolean",
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "arritmia_atrial",
+        "label": "Há arritmia atrial nova ou sustentada (fibrilação ou flutter atrial)?",
+        "type": "boolean",
+        "section": "Clínica"
+      },
+      {
+        "id": "evento_embolico_agudo",
+        "label": "Há déficit neurológico focal agudo, dor torácica de origem isquêmica ou isquemia aguda de membro sugerindo evento embólico sistêmico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Emergência"
+      },
+      {
+        "id": "faixa_etaria",
+        "label": "Faixa etária do paciente",
+        "type": "select",
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "neonato_pretermo",
+            "label": "Recém-nascido pré-termo"
+          },
+          {
+            "value": "neonato_termo",
+            "label": "Recém-nascido a termo"
+          },
+          {
+            "value": "lactente_crianca",
+            "label": "Lactente ou criança"
+          },
+          {
+            "value": "adolescente_adulto",
+            "label": "Adolescente ou adulto"
+          }
+        ]
+      },
+      {
+        "id": "gestante_ou_planejando",
+        "label": "A paciente está grávida ou planejando engravidar?",
+        "type": "boolean",
+        "section": "Contexto"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "embolia-paradoxal-evento-agudo",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "evento_embolico_agudo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível embolia paradoxal com déficit neurológico focal, isquemia de membro ou dor torácica isquêmica aguda em paciente com CIA ou forame oval patente"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para avaliação de emergência; investigar fonte embólica sistêmica e considerar ecocardiograma transesofágico urgente para confirmar shunt e trombo em trânsito"
+          ]
+        }
+      },
+      {
+        "id": "sinal-hp-nao-invasivo",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "sinal_hp_nao_invasivo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinal não invasivo de pressão pulmonar elevada exige confirmação invasiva antes de qualquer decisão de fechamento"
+          ],
+          "suggested_tests": [
+            "Cateterismo cardíaco direito para medida invasiva da resistência vascular pulmonar em unidades Wood"
+          ]
+        }
+      },
+      {
+        "id": "dessaturacao-esforco-contraindicacao",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "dessaturacao_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dessaturação ao esforço documentada é sinal de alerta para contraindicação ao fechamento sem avaliação hemodinâmica invasiva completa"
+          ],
+          "missing_information": [
+            "Resultado de cateterismo cardíaco direito com resistência vascular pulmonar"
+          ]
+        }
+      },
+      {
+        "id": "sobrecarga-direita-indicacao-fechamento",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "sobrecarga_direita",
+              "op": "truthy"
+            },
+            {
+              "field": "sinal_hp_nao_invasivo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Sobrecarga de câmaras direitas, sem sinal de hipertensão pulmonar, é critério de indicação de fechamento independentemente de sintomas"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação especializada da via de fechamento (dispositivo ou cirurgia) conforme tipo anatômico e anatomia das bordas"
+          ]
+        }
+      },
+      {
+        "id": "arritmia-atrial-rastreio",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_atrial",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Arritmia atrial pode ser a primeira manifestação de CIA não diagnosticada previamente no adulto"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma para rastrear CIA e sobrecarga de câmaras direitas em contexto de arritmia atrial nova"
+          ]
+        }
+      },
+      {
+        "id": "gestante-avaliar-hp",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "gestante_ou_planejando",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Gravidez em cardiopatia congênita exige avaliação de hipertensão pulmonar antes de qualquer orientação; hipertensão pulmonar pré-capilar confirmada é contraindicação reconhecida à gestação"
+          ],
+          "missing_information": [
+            "Confirmação da ausência de hipertensão pulmonar antes de orientar risco gestacional"
+          ]
+        }
+      },
+      {
+        "id": "tipo-anatomico-nao-secundum",
+        "priority": 50,
+        "when": {
+          "any": [
+            {
+              "field": "tipo_anatomico",
+              "op": "in",
+              "value": [
+                "ostium_primum",
+                "seio_venoso",
+                "seio_coronario"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Tipo anatômico diferente do ostium secundum geralmente exige fechamento cirúrgico, não por dispositivo via cateter"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação cirúrgica em centro especializado em cardiopatia congênita"
+          ]
+        }
+      },
+      {
+        "id": "pretermo-vigilancia-proxima",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "faixa_etaria",
+              "op": "eq",
+              "value": "neonato_pretermo"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Recém-nascido pré-termo tem taxa de fechamento espontâneo mais baixa e maior necessidade de intervenção do que o a termo, mesmo com defeito de tamanho equivalente"
+          ],
+          "ambulatory_flow": [
+            "Programar vigilância ecocardiográfica mais próxima do que a de recém-nascido a termo com defeito de tamanho semelhante"
+          ]
+        }
+      }
     ],
     "tags": [
       "CIA",
       "septo atrial",
-      "congênita"
+      "congênita",
+      "ostium secundum",
+      "seio venoso",
+      "forame oval patente",
+      "embolia paradoxal",
+      "fechamento percutâneo"
     ],
     "source_refs": [
-      "ACC Pediatric and Congenital Cardiology Clinical Practice Algorithms",
-      "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease"
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2019;73(12):e81-e192. PMID: 30121240.",
+      "Rao PS. Role of Echocardiography in the Diagnosis and Interventional Management of Atrial Septal Defects. Diagnostics (Basel). 2022;12(6):1494. DOI: 10.3390/diagnostics12061494. PMID: 35741304. PMCID: PMC9222141.",
+      "Heidari N, Kumaran K, Pagano JJ, Hornberger LK. Natural History of Secundum ASD in Preterm and Term Neonates: A Comparative Study. Pediatr Cardiol. 2024;45(4):710-721. DOI: 10.1007/s00246-023-03403-7. PMID: 38366300.",
+      "Azhari N, Shihata MS, Al-Fatani A. Spontaneous closure of atrial septal defects within the oval fossa. Cardiol Young. 2004;14(2):148-155. DOI: 10.1017/S1047951104002069. PMID: 15691403.",
+      "Alnasser S, Lee D, Austin PC, et al. Long term outcomes among adults post transcatheter atrial septal defect closure: Systematic review and meta-analysis. Int J Cardiol. 2018;270:126-132. DOI: 10.1016/j.ijcard.2018.06.076. PMID: 30054146.",
+      "Muroke V, Jalanko M, Haukka J, et al. Outcome of transcatheter atrial septal defect closure in a nationwide cohort. Ann Med. 2023;55(1):615-623. DOI: 10.1080/07853890.2023.2178669. PMID: 36786506.",
+      "Muroke V, Jalanko M, Haukka J, et al. Long-term outcome after surgical correction of sinus venosus defect in a nationwide register-based cohort study. Int J Cardiol. 2024;395:131433. DOI: 10.1016/j.ijcard.2023.131433. PMID: 37827284.",
+      "Slingerland A, Moolla M, John K, Dennett L, Nagendran J, Mathew A. Invasive management of unroofed coronary sinus: A systematic review. Trends Cardiovasc Med. 2025;35(6):394-403. DOI: 10.1016/j.tcm.2025.03.006. PMID: 40194568.",
+      "Koutroulou I, Tsivgoulis G, Tsalikakis D, Karacostas D, Grigoriadis N, Karapanayiotides T. Epidemiology of Patent Foramen Ovale in General Population and in Stroke Patients: A Narrative Review. Front Neurol. 2020;11:281. DOI: 10.3389/fneur.2020.00281. PMID: 32411074.",
+      "Wilson W, Taubert KA, Gewitz M, et al; American Heart Association. Prevention of infective endocarditis: guidelines from the American Heart Association. Circulation. 2007;116(15):1736-1754. DOI: 10.1161/CIRCULATIONAHA.106.183095. PMID: 17446442.",
+      "Wilson WR, Gewitz M, Lockhart PB, et al; American Heart Association. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. DOI: 10.1161/CIR.0000000000000969. PMID: 33853363.",
+      "Stephens EH, Mongé MC, Eltayeb O, et al. Evolution and Current Results of a Unified Strategy for Sinus Venosus Surgery. Ann Thorac Surg. 2021;111(3):980-986. DOI: 10.1016/j.athoracsur.2020.03.113. PMID: 32437676."
     ],
     "source_urls": [
-      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms",
-      "https://pubmed.ncbi.nlm.nih.gov/30121240/"
+      "https://pubmed.ncbi.nlm.nih.gov/32860028/",
+      "https://pubmed.ncbi.nlm.nih.gov/30121240/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9222141/",
+      "https://pubmed.ncbi.nlm.nih.gov/38366300/",
+      "https://pubmed.ncbi.nlm.nih.gov/15691403/",
+      "https://pubmed.ncbi.nlm.nih.gov/30054146/",
+      "https://pubmed.ncbi.nlm.nih.gov/36786506/",
+      "https://pubmed.ncbi.nlm.nih.gov/37827284/",
+      "https://pubmed.ncbi.nlm.nih.gov/40194568/",
+      "https://pubmed.ncbi.nlm.nih.gov/32411074/",
+      "https://pubmed.ncbi.nlm.nih.gov/17446442/",
+      "https://pubmed.ncbi.nlm.nih.gov/33853363/",
+      "https://pubmed.ncbi.nlm.nih.gov/32437676/"
     ],
-    "review_status": "revisado",
-    "review_note": "Aprofundado de básico para intermediário em 12/08/2026, com fonte adicional conferida via PubMed. Conteúdo qualitativo e descritivo, sujeito a julgamento clínico individual.",
-    "version": 2
+    "related_document_slugs": [
+      "civ-e-cia-na-crianca-historia-natural-e-criterios-de-fechamento",
+      "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+      "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
+      "embolia-paradoxal-iminente-trombo-em-transito-no-forame-oval-patente",
+      "profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021",
+      "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico",
+      "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020"
+    ],
+    "patient_material_slug": "civ-e-cia-buraquinho-no-coracao-do-bebe",
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundado de intermediário para completo em 27/08/2026. Cobertos: classificação anatômica dos quatro tipos (ostium secundum, ostium primum, seio venoso, seio coronário) com prevalências relativas; história natural (muito mais tolerada que a CIV, frequente diagnóstico tardio no adulto por arritmia ou sobrecarga direita); critérios de fechamento por Qp:Qs, sobrecarga de câmaras direitas e resistência vascular pulmonar (ESC 2020); fechamento percutâneo por dispositivo (ostium secundum com bordas adequadas) versus cirúrgico (demais tipos); diferenciação entre CIA verdadeira e forame oval patente e risco de embolia paradoxal; indicação atual (restrita) de profilaxia antibiótica de endocardite. Reaproveitados o documento conjunto e o material para pais e responsáveis já publicados na base para CIV (lote5, PR #562), confirmados como recursos genuinamente compartilhados entre as duas condições, com conteúdo clínico desta ficha escrito especificamente para CIA. Limitações de acesso desta sessão: o orçamento de buscas web (WebSearch) já estava esgotado ao início da tarefa, então toda verificação foi feita via WebFetch direto em PubMed, PMC e E-utilities; o texto integral da diretriz ESC 2020 (academic.oup.com) e do AHA/ACC 2018 (paywall/formato bibliográfico) não abriu diretamente nesta sessão — os números da ESC 2020 foram conferidos cruzando com o fluxograma já revisado desta própria base que cita a mesma diretriz (mesmo DOI/PMID), e a citação do AHA/ACC 2018 foi mantida apenas como referência bibliográfica, sem uso para nenhuma alegação numérica nova.",
+    "version": 3,
+    "fonte_producao": "claude"
   },
   {
     "slug": "persistencia-canal-arterial",
@@ -16659,53 +17867,71 @@
     "category": "emergencia_vascular",
     "subtype": "embolia_arterial_mesenterica",
     "prevalence_rank": 3,
-    "completeness": "intermediario",
-    "summary": "Emergência vascular tempo-dependente em que um êmbolo de origem cardíaca — fibrilação atrial, trombo mural pós-infarto, valvopatia ou disfunção de VE — oclui a artéria mesentérica superior; reconhecimento pela dor desproporcional ao exame e diferenciação urgente por angiotomografia definem o desfecho.",
-    "epidemiology": "A incidência de isquemia mesentérica aguda cresce exponencialmente com a idade: em maiores de 75 anos é causa mais prevalente de abdome agudo que apendicite, e a incidência aos 80 anos é cerca de dez vezes a dos 60 anos (WSES 2022). A fração embólica varia por série: 40-50% na revisão do NEJM (Clair & Beach, 2016) e na WSES 2017; a WSES 2022 registra queda recente para cerca de 25% em séries mais novas, atribuída em parte ao maior uso de anticoagulação na fibrilação atrial. A ESVS 2025 encontrou fibrilação atrial em 32,2% de todos os pacientes com isquemia mesentérica aguda (qualquer etiologia); a WSES cita que cerca de metade dos pacientes com a forma embólica especificamente têm fibrilação atrial. Numa coorte finlandesa de isquemia mesentérica embólica (Kärkkäinen 2021), 72% tinham fibrilação atrial e a idade média era 79 anos — dado de uma coorte, não extrapolado como universal.",
+    "completeness": "completo",
+    "summary": "Emergência vascular tempo-dependente em que um êmbolo de origem cardíaca — fibrilação atrial, trombo mural pós-infarto, valvopatia ou disfunção de VE — oclui a artéria mesentérica superior; reconhecimento pela dor desproporcional ao exame, diferenciação urgente por angiotomografia e revascularização sem atraso definem o desfecho, já que o tempo até o diagnóstico e o tratamento é o principal fator modificável de uma mortalidade que permanece elevada mesmo hoje.",
+    "epidemiology": "A incidência de isquemia mesentérica aguda cresce exponencialmente com a idade: em maiores de 75 anos é causa mais prevalente de abdome agudo que apendicite, e a incidência aos 80 anos é cerca de dez vezes a dos 60 anos (WSES 2022). A fração embólica varia por série: 40-50% na revisão do NEJM (Clair & Beach, 2016) e na WSES 2017; a WSES 2022 registra queda recente para cerca de 25% em séries mais novas, atribuída em parte ao maior uso de anticoagulação na fibrilação atrial. A ESVS 2025 encontrou fibrilação atrial em 32,2% de todos os pacientes com isquemia mesentérica aguda (qualquer etiologia); a WSES cita que cerca de metade dos pacientes com a forma embólica especificamente têm fibrilação atrial. Numa coorte finlandesa de isquemia mesentérica embólica (Kärkkäinen 2021), 72% tinham fibrilação atrial e a idade média era 79 anos — dado de uma coorte, não extrapolado como universal. A mortalidade histórica descrita pela WSES 2022 varia de 30% a 70% conforme o atraso diagnóstico, permanecendo uma das emergências abdominais mais letais mesmo em centros com angiotomografia e revascularização endovascular disponíveis.",
     "presentation": [
-      "Dor abdominal aguda e intensa, desproporcional aos achados do exame físico",
-      "Esvaziamento intestinal — vômito, diarreia — no início do quadro",
-      "Sinais tardios (distensão, defesa, sepse) já indicam necrose intestinal estabelecida",
-      "Fator de risco cardioembólico presente: fibrilação atrial, infarto recente com trombo mural, doença da valva mitral, endocardite, disfunção de ventrículo esquerdo com fração de ejeção baixa, embolia arterial prévia"
+      "Dor abdominal aguda e intensa, desproporcional aos achados do exame físico — o achado mais sensível e o mais frequentemente subvalorizado, responsável pelo atraso diagnóstico quando ignorado",
+      "Início súbito, muitas vezes descrito como 'em explosão', tipicamente periumbilical ou em mesogástrio antes de se tornar difuso — diferente do início insidioso da isquemia mesentérica crônica",
+      "Esvaziamento intestinal reflexo no início do quadro — vômito, diarreia, por vezes hiperperistaltismo à ausculta",
+      "Fator de risco cardioembólico presente: fibrilação atrial (fonte mais comum), trombo mural de ventrículo esquerdo após infarto do miocárdio recente, doença ou prótese da valva mitral, endocardite infecciosa, disfunção sistólica de ventrículo esquerdo com fração de ejeção reduzida, ou embolia arterial sistêmica prévia (isquemia de membro, AVC embólico)",
+      "Sinais tardios — distensão abdominal, defesa, rigidez, sinais de irritação peritoneal, febre, instabilidade hemodinâmica — já indicam necrose transmural estabelecida; sua ausência nas primeiras horas não afasta o diagnóstico",
+      "Lactato em ascensão, leucocitose e acidose metabólica são achados tardios de necrose já instalada, não sinais precoces a serem aguardados para suspeitar do quadro"
     ],
     "differentials": [
-      "Isquemia mesentérica não oclusiva",
-      "Trombose de veia mesentérica",
-      "Trombose arterial mesentérica sobre estenose aterosclerótica prévia",
-      "Outra causa de abdome agudo (colecistite, pancreatite, perfuração)"
+      "Isquemia mesentérica não oclusiva (NOMI) — vasoconstrição difusa em paciente crítico, em vasopressor ou com baixo débito, sem oclusão focal à angiotomografia",
+      "Trombose de veia mesentérica — instalação mais insidiosa, geralmente associada a hipercoagulabilidade, cirrose ou neoplasia; tratada com anticoagulação como primeira linha, sem revascularização",
+      "Trombose arterial mesentérica sobre estenose aterosclerótica prévia — frequentemente com história de dor pós-prandial (angina mesentérica) antecedendo o evento agudo",
+      "Outra causa de abdome agudo (colecistite aguda, pancreatite aguda, perfuração de víscera oca, obstrução intestinal, apendicite)",
+      "Síndrome aórtica aguda ou aneurisma de aorta abdominal com comprometimento de ramos viscerais"
     ],
     "tests": [
-      "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm, independentemente da função renal (ESVS 2025)",
-      "Lactato, leucograma e D-dímero como reforço de suspeita, sem valor de exclusão isolado",
-      "Eletrocardiograma e avaliação de fonte cardioembólica após estabilização, não antes"
+      "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm, independentemente da função renal — exame de escolha (ESVS 2025, Classe I, Nível B); não aguardar exames laboratoriais para solicitá-la",
+      "Mencionar explicitamente a suspeita de isquemia mesentérica aguda na requisição do exame, pois o protocolo de aquisição muda com essa informação (ESVS 2025, Classe I, Nível C)",
+      "Lactato sérico, leucograma e D-dímero — reforçam a suspeita quando elevados, mas nenhum exame laboratorial isolado tem acurácia suficiente para confirmar ou excluir isquemia intestinal (WSES 2022); não devem atrasar a indicação de imagem",
+      "Eletrocardiograma para documentar fibrilação atrial, e ecocardiograma (transtorácico ou transesofágico) para avaliação de fonte cardioembólica — realizados após a angiotomografia e a estabilização inicial, nunca antes",
+      "Radiografia simples de abdome não é recomendada para avaliar isquemia mesentérica aguda (WSES 2022) — não deve ser usada como etapa diagnóstica",
+      "Angiografia mesentérica por cateter, hoje reservada para quando a revascularização endovascular já é a conduta planejada (diagnóstico e tratamento no mesmo tempo), não como exame de triagem inicial"
     ],
     "red_flags": [
-      "Dor abdominal desproporcional ao exame em paciente com fator de risco cardiovascular",
-      "Sinais de peritonite",
-      "Paciente crítico com dor/distensão abdominal em vasopressor",
-      "Fibrilação atrial não anticoagulada com dor abdominal súbita"
+      "Dor abdominal desproporcional ao exame físico em paciente com fator de risco cardioembólico (fibrilação atrial, infarto recente, valvopatia, endocardite, embolia prévia)",
+      "Sinais de peritonite (defesa, irritação peritoneal, sepse abdominal) — indicação de laparotomia/laparoscopia sem aguardar angiotomografia",
+      "Paciente crítico com dor ou distensão abdominal em uso de vasopressor — risco de isquemia mesentérica não oclusiva associada",
+      "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica e dor abdominal súbita",
+      "Atraso maior que 48 horas entre início dos sintomas e intervenção — associado a mortalidade perioperatória significativamente maior (Chamseddine et al., J Vasc Surg, 2026)",
+      "Instabilidade hemodinâmica, acidose metabólica ou lactato em ascensão em paciente com dor abdominal aguda — sinaliza necrose intestinal já estabelecida"
     ],
     "ambulatory_flow": [
-      "Interromper avaliação eletiva diante de dor abdominal desproporcional com fator de risco cardiovascular",
-      "Encaminhar imediatamente à emergência para angiotomografia",
-      "Não aguardar exame laboratorial para decidir a urgência do encaminhamento"
+      "Interromper qualquer avaliação eletiva diante de dor abdominal desproporcional ao exame em paciente com fator de risco cardioembólico",
+      "Encaminhar imediatamente à emergência para angiotomografia — não é quadro para observação ambulatorial ou reavaliação em 24-48h",
+      "Não aguardar exame laboratorial (lactato, hemograma) para decidir a urgência do encaminhamento",
+      "Registrar e comunicar explicitamente o fator de risco cardioembólico conhecido (fibrilação atrial, prótese valvar, infarto recente) na referência à emergência, pois isso orienta a prioridade da investigação",
+      "Orientar o paciente ou cuidador a não usar analgésico ou antiespasmódico por conta própria antes da avaliação, o que pode mascarar a evolução do quadro"
     ],
     "emergency_flow": [
-      "Ressuscitação volêmica e correção de distúrbio eletrolítico",
-      "Angiotomografia sem atraso, mencionando a suspeita na requisição",
-      "Peritonite: laparotomia/laparoscopia sem aguardar o exame",
-      "Oclusão arterial confirmada: decisão de revascularização endovascular ou aberta pela equipe especializada"
+      "Ressuscitação volêmica e correção de distúrbio hidroeletrolítico e ácido-básico",
+      "Angiotomografia de abdome sem atraso, com a suspeita clínica explicitada na requisição, independentemente da função renal",
+      "Sinais de peritonite: ressuscitação, antibiótico de amplo espectro e laparotomia ou laparoscopia sem aguardar a angiotomografia",
+      "Oclusão arterial confirmada sem sinais de infarto: decisão entre revascularização endovascular (primeira opção quando há expertise disponível) e cirurgia aberta pela equipe vascular/cirúrgica, com transferência a centro com serviço 24/7 quando não há expertise local",
+      "Sinais de infarto intestinal ou perfuração à angiotomografia, em qualquer etiologia: laparotomia ou laparoscopia sem aguardar mais exames, com ressecção do segmento necrótico e avaliação de second-look em 24-48h quando a viabilidade do intestino remanescente é incerta",
+      "Trombose de veia mesentérica confirmada: anticoagulação com heparina como primeira linha, geralmente sem cirurgia",
+      "Isquemia não oclusiva confirmada (vasoconstrição difusa, sem oclusão focal): corrigir a causa do baixo fluxo, revisar vasoconstritor evitável e considerar vasodilatador intra-arterial sob heparinização protetora"
     ],
-    "diagnostic_approach": "A suspeita é clínica (dor desproporcional mais fator de risco); a angiotomografia com protocolo arterial e venoso é o exame que diferencia embolia, trombose arterial, isquemia não oclusiva e trombose venosa mesentérica, e orienta a conduta em cada uma.",
-    "treatment_summary": "Revascularização endovascular é considerada terapia de primeira linha em oclusão trombótica ou embólica de artéria mesentérica superior quando há expertise disponível (ESVS 2025, Classe IIa); cirurgia aberta permanece opção quando não há expertise endovascular ou há sinais de infarto intestinal exigindo ressecção. A anticoagulação com heparina tem grau de recomendação formal apenas para a trombose de veia mesentérica (Classe I) e como coadjuvante de vasodilatador na isquemia não oclusiva (Classe IIb) — não há recomendação graduada equivalente para heparinização imediata na forma arterial embólica/trombótica, que fica a critério da equipe assistente conforme o contexto pré-operatório.",
+    "diagnostic_approach": "A suspeita de isquemia mesentérica aguda cardioembólica é primariamente clínica: dor abdominal aguda, intensa e desproporcional ao exame físico, em paciente com fonte cardioembólica conhecida (fibrilação atrial, trombo mural pós-infarto, valvopatia, endocardite, disfunção de ventrículo esquerdo) deve ser assumida como isquemia mesentérica aguda até prova em contrário (WSES 2022, recomendação forte, evidência de baixa qualidade, 1C). Sinais tardios — distensão, defesa, sepse — já indicam necrose intestinal estabelecida e não devem ser esperados para iniciar a investigação; da mesma forma, não há exame laboratorial (lactato, leucograma, D-dímero) suficientemente acurado para confirmar ou excluir o quadro, e a angiotomografia não deve aguardar esses resultados. Diante de sinais de peritonite, a conduta é cirúrgica imediata, sem aguardar imagem. Na ausência de peritonite, a angiotomografia de abdome com contraste em fases arterial e venosa, com cortes de até 1 mm e independentemente da função renal (ESVS 2025, Classe I, Nível B), é o exame que diferencia as quatro etiologias com condutas distintas: oclusão arterial (embólica ou trombótica), isquemia mesentérica não oclusiva, trombose de veia mesentérica, e sinais de infarto intestinal ou perfuração já estabelecidos — esta última indicando cirurgia imediata independentemente da causa de base. Mencionar explicitamente a suspeita clínica na requisição do exame é recomendado (ESVS 2025, Classe I, Nível C), pois altera o protocolo de aquisição. Cada 6 horas de atraso na realização da angiotomografia associa-se a piora progressiva da mortalidade (WSES 2022), o que torna a velocidade da investigação, e não apenas sua acurácia, parte central da conduta diagnóstica.",
+    "treatment_summary": "O tratamento da isquemia mesentérica aguda cardioembólica combina revascularização, controle da fonte embólica e, quando há necrose já estabelecida, cirurgia ressectiva. Para oclusão arterial (embólica ou trombótica) da artéria mesentérica superior, a revascularização endovascular é considerada terapia de primeira linha quando há expertise disponível (ESVS 2025, Classe IIa, Nível B; WSES 2022 classifica a mesma conduta como recomendação forte, evidência de baixa qualidade, 1C — grau de força diferente entre as duas diretrizes, ambas na mesma direção). A ESVS 2025 recomenda tratar esses pacientes em centros com serviço multidisciplinar 24/7 e experiência em revascularização aberta e endovascular (Classe I, Nível C), com transferência quando não há expertise local; recomenda ainda considerar revascularização antes da ressecção intestinal, sempre que possível (Classe IIa, Nível C). Cirurgia aberta permanece a opção quando não há expertise endovascular disponível ou quando já existem sinais de infarto intestinal exigindo ressecção do segmento necrótico. A anticoagulação com heparina tem grau de recomendação formal e concordante entre as duas diretrizes apenas para a trombose de veia mesentérica, como terapia de primeira linha (ESVS 2025, Classe I, Nível C; WSES 2022, recomendação forte, qualidade moderada, 1B), e como coadjuvante de vasodilatador intra-arterial na isquemia não oclusiva (ESVS 2025, Classe IIb, Nível C). Para a forma arterial embólica/trombótica especificamente, nenhuma das duas diretrizes atuais atribui classe/nível a uma recomendação de heparinização imediata à suspeita; a WSES 2022 descreve anticoagulação plena antes do procedimento cirúrgico em texto de corpo e no algoritmo, sem grau formal — a decisão fica com a equipe assistente, conforme o contexto pré-operatório e o risco de sangramento. Quando há necrose intestinal já estabelecida, a ressecção do segmento não viável é indicada, com decisão de anastomose primária versus ostomia e de second-look laparotomy (reavaliação em 24-48h, WSES 2022, recomendação forte, evidência de baixa qualidade, 1B) guiada pela incerteza sobre a viabilidade do intestino remanescente após a revascularização. Mesmo com tratamento atual, a mortalidade permanece elevada — na faixa de 50% quando não tratada, caindo para cerca de 42% com revascularização versus 62% sem ela em uma série citada pela WSES 2022 — e o principal fator modificável é o tempo até o diagnóstico e a revascularização: uma coorte recente de 92 pacientes mostrou mortalidade perioperatória de 39% quando a intervenção ocorreu mais de 48 horas após o início dos sintomas, contra 14% quando ocorreu dentro desse prazo (Chamseddine et al., J Vasc Surg, 2026). Após a fase aguda, a investigação e o tratamento da fonte cardioembólica (fibrilação atrial, trombo de VE, valvopatia) e a definição de anticoagulação de longo prazo completam o manejo.",
     "monitoring": [
-      "Sinais vitais e diurese durante a ressuscitação",
-      "Reavaliação da viabilidade intestinal após revascularização (second-look, geralmente em 24-48h quando indicado)",
-      "Vigilância por imagem e anticoagulação de longo prazo após revascularização (ESVS 2025)"
+      "Sinais vitais, diurese e perfusão durante a ressuscitação e no perioperatório",
+      "Reavaliação da viabilidade intestinal por second-look laparotomy, geralmente em 24-48h, quando há dúvida sobre a viabilidade do intestino remanescente após revascularização e/ou ressecção (WSES 2022, recomendação forte, evidência de baixa qualidade, 1B)",
+      "Vigilância clínica e laboratorial (lactato, acidose, leucograma seriados) para sinais de isquemia recorrente ou progressão após revascularização",
+      "Investigação e tratamento da fonte cardioembólica após a estabilização (ecocardiograma, Holter) e definição de anticoagulação de longo prazo (ESVS 2025)",
+      "Seguimento por imagem (angiotomografia ou angio-RM) para avaliar a patência do vaso revascularizado, conforme protocolo institucional"
     ],
     "special_populations": [
-      "Idosos concentram a maior parte dos casos; a incidência cresce exponencialmente com a idade e a mortalidade e a morbidade perioperatória são maiores nessa faixa etária, sem que isso justifique retardar a investigação",
-      "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica é o cenário de maior atenção cardiológica"
+      "Idosos concentram a maior parte dos casos — a incidência cresce exponencialmente com a idade, e a mortalidade e a morbidade perioperatória são maiores nessa faixa etária, o que não justifica retardar a investigação nem reduzir a agressividade diagnóstica",
+      "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica é o cenário de maior atenção cardiológica — reforça a probabilidade pré-teste, mas a decisão de investigar não depende de confirmar a fibrilação atrial antes",
+      "Pacientes com infarto do miocárdio recente e trombo mural documentado, ou disfunção de ventrículo esquerdo com fração de ejeção reduzida — fonte emboligênica reconhecida, atenção redobrada a dor abdominal nova nesse contexto pós-infarto",
+      "Pacientes críticos em vasopressor ou com baixo débito cardíaco — maior risco de isquemia mesentérica não oclusiva associada, diagnóstico diferencial que exige a mesma urgência de imagem",
+      "Pacientes com prótese valvar mecânica, endocardite infecciosa ativa ou doença valvar mitral — fontes emboligênicas adicionais reconhecidas pelas diretrizes"
     ],
     "assistant_questions": [
       {
@@ -16723,29 +17949,132 @@
         "section": "Fator de risco"
       },
       {
+        "id": "peritoneal_signs",
+        "label": "Há sinais de peritonite (defesa, irritação peritoneal, sepse abdominal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "hours_since_symptom_onset",
+        "label": "Quantas horas se passaram desde o início da dor?",
+        "type": "number",
+        "required": false,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "vasopressor_use",
+        "label": "O paciente está em uso de vasopressor ou tem baixo débito cardíaco?",
+        "type": "boolean",
+        "required": false,
+        "section": "Contexto clínico"
+      },
+      {
         "id": "cta_done",
         "label": "A angiotomografia já foi realizada?",
         "type": "boolean",
         "required": true,
         "section": "Investigação"
+      },
+      {
+        "id": "ct_finding",
+        "label": "Qual foi o achado principal da angiotomografia?",
+        "type": "select",
+        "required": false,
+        "section": "Investigação",
+        "options": [
+          {
+            "value": "oclusao_arterial",
+            "label": "Oclusão arterial (êmbolo ou trombose)"
+          },
+          {
+            "value": "nomi",
+            "label": "Vasoconstrição difusa sem oclusão focal (isquemia não oclusiva)"
+          },
+          {
+            "value": "trombose_venosa",
+            "label": "Trombose de veia mesentérica"
+          },
+          {
+            "value": "infarto_perfuracao",
+            "label": "Sinais de infarto intestinal ou perfuração"
+          },
+          {
+            "value": "normal_outro",
+            "label": "Normal ou outro achado"
+          }
+        ]
       }
     ],
     "assistant_rules": [
       {
-        "id": "suspeita-ima",
+        "id": "emergencia-dor-desproporcional-fator-cardioembolico",
         "priority": 100,
         "when": {
           "all": [
             {
               "field": "pain_disproportionate",
               "op": "truthy"
+            },
+            {
+              "field": "cardioembolic_source",
+              "op": "truthy"
             }
           ]
         },
         "add": {
           "risk": "emergencia",
+          "red_flags": [
+            "Dor abdominal desproporcional ao exame físico com fonte cardioembólica conhecida — assumir isquemia mesentérica aguda até prova em contrário"
+          ],
           "emergency_flow": [
-            "Angiotomografia sem atraso; comunicar suspeita de isquemia mesentérica na requisição"
+            "Angiotomografia de abdome com contraste em fases arterial e venosa sem atraso, com a suspeita explicitada na requisição, independentemente da função renal"
+          ],
+          "suggested_tests": [
+            "Angiotomografia de abdome com contraste (fases arterial e venosa)"
+          ]
+        }
+      },
+      {
+        "id": "peritonite-cirurgia-imediata",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "peritoneal_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de peritonite em paciente com suspeita de isquemia mesentérica aguda"
+          ],
+          "emergency_flow": [
+            "Ressuscitação volêmica, antibiótico de amplo espectro e laparotomia ou laparoscopia sem aguardar angiotomografia"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-mesmo-sem-fonte-conhecida",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "pain_disproportionate",
+              "op": "truthy"
+            },
+            {
+              "field": "cardioembolic_source",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Dor abdominal desproporcional ao exame deve ser assumida como isquemia mesentérica aguda até prova em contrário, mesmo sem fonte cardioembólica identificada (WSES 2022)."
           ]
         }
       },
@@ -16766,7 +18095,113 @@
         },
         "add": {
           "messages": [
-            "Solicitar angiotomografia agora, independentemente da função renal"
+            "Solicitar angiotomografia agora, independentemente da função renal e sem aguardar exames laboratoriais."
+          ]
+        }
+      },
+      {
+        "id": "ct-oclusao-arterial-revascularizacao",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "ct_finding",
+              "op": "eq",
+              "value": "oclusao_arterial"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Definir com a equipe vascular/cirúrgica entre revascularização endovascular (primeira opção quando há expertise disponível) e cirurgia aberta"
+          ],
+          "suggested_tests": [
+            "Avaliação de fonte cardioembólica (ecocardiograma) após estabilização"
+          ]
+        }
+      },
+      {
+        "id": "ct-sinais-infarto-perfuracao",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "ct_finding",
+              "op": "eq",
+              "value": "infarto_perfuracao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Laparotomia ou laparoscopia sem aguardar mais exames; considerar second-look em 24-48h se a viabilidade do intestino remanescente for incerta"
+          ]
+        }
+      },
+      {
+        "id": "ct-trombose-venosa",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "ct_finding",
+              "op": "eq",
+              "value": "trombose_venosa"
+            }
+          ]
+        },
+        "add": {
+          "emergency_flow": [
+            "Iniciar anticoagulação com heparina como terapia de primeira linha; geralmente sem indicação cirúrgica"
+          ],
+          "differentials": [
+            "Trombose de veia mesentérica confirmada por imagem"
+          ]
+        }
+      },
+      {
+        "id": "vasopressor-considerar-nomi",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "vasopressor_use",
+              "op": "truthy"
+            },
+            {
+              "field": "ct_finding",
+              "op": "eq",
+              "value": "nomi"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Isquemia mesentérica não oclusiva confirmada por vasoconstrição difusa em paciente crítico/vasopressor"
+          ],
+          "supporting": [
+            "Uso de vasopressor e achado de vasoconstrição difusa sem oclusão focal apoiam isquemia mesentérica não oclusiva"
+          ]
+        }
+      },
+      {
+        "id": "atraso-mais-48h",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "hours_since_symptom_onset",
+              "op": "gt",
+              "value": 48
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Mais de 48 horas entre início dos sintomas e intervenção associam-se a mortalidade perioperatória significativamente maior; priorizar revascularização sem mais atraso."
           ]
         }
       }
@@ -16782,23 +18217,26 @@
       "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
       "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642.",
       "Clair DG, Beach JM. Mesenteric Ischemia. New England Journal of Medicine. 2016;374(10):959-968. DOI: 10.1056/NEJMra1503884. PMID: 26962730.",
-      "Kärkkäinen JM. Acute Mesenteric Ischemia: A Challenge for the Acute Care Surgeon. Scandinavian Journal of Surgery. 2021;110(2):150-158. DOI: 10.1177/14574969211007590. PMID: 33866891."
+      "Kärkkäinen JM. Acute Mesenteric Ischemia: A Challenge for the Acute Care Surgeon. Scandinavian Journal of Surgery. 2021;110(2):150-158. DOI: 10.1177/14574969211007590. PMID: 33866891.",
+      "Chamseddine H, Halabi M, Hamdan H, Kabbani L, Johnson JL, Falvo A, et al. The impact of intervention timing, etiology, and revascularization strategy on acute mesenteric ischemia outcomes. Journal of Vascular Surgery. 2026;83(3):718-728.e4. DOI: 10.1016/j.jvs.2025.11.013. PMID: 41242625."
     ],
     "source_urls": [
       "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
       "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf",
       "https://www.nejm.org/doi/full/10.1056/NEJMra1503884",
-      "https://journals.sagepub.com/doi/full/10.1177/14574969211007590"
+      "https://journals.sagepub.com/doi/full/10.1177/14574969211007590",
+      "https://doi.org/10.1016/j.jvs.2025.11.013"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
-    "fonte_producao": "claude",
-    "version": 2,
     "related_document_slugs": [
       "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
-      "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora"
+      "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+      "trombose-de-veia-esplancnica-quando-e-como-anticoagular-com-ou-sem-cirrose"
     ],
-    "patient_material_slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia"
+    "patient_material_slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia",
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento de completeness intermediario para completo (v2 -> v3). Adicionadas: dimensão temporal explícita (assistant_questions/rules sobre horas desde o início dos sintomas e achado de angiotomografia), profundidade em presentation/differentials/tests/red_flags/ambulatory_flow/emergency_flow/monitoring/special_populations, diagnostic_approach e treatment_summary expandidos com as classes/níveis de recomendação já verificados em ciclo anterior (ESVS 2025 e WSES 2022, fontes preexistentes revisadas e reutilizadas). Nova fonte primária adicionada e verificada nesta rodada via PMID/DOI: Chamseddine et al., J Vasc Surg 2026 (PMID 41242625) — coorte de 92 pacientes mostrando mortalidade perioperatória de 39% (intervenção >48h após início dos sintomas) vs 14% (<=48h), usada para sustentar 'tempo até diagnóstico/revascularização é o principal modificador de mortalidade'. Também verificados via WebFetch do texto integral da WSES 2022 (PMC9580452): mortalidade com revascularização 42% vs 62% sem revascularização, mortalidade endovascular 24,9% vs cirurgia aberta 39,3% (dado da National Inpatient Sample 2005-2009 citado pela WSES), e second-look laparotomy recomendada em 24-48h (recomendação forte, evidência de baixa qualidade, 1B). Limitação de acesso: o PDF completo da ESVS 2025 (EJVES) não pôde ser extraído em texto legível nesta sessão (bloqueio de scraping do Elsevier/ScienceDirect); os trechos da ESVS 2025 citados aqui (classes/níveis de recomendação) foram reutilizados do documento irmão já revisado e aprovado neste acervo (isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora.md), não re-verificados diretamente contra o PDF nesta rodada. related_document_slugs conferido por grep em content/**/*.md: adicionado 'trombose-de-veia-esplancnica-quando-e-como-anticoagular-com-ou-sem-cirrose.md', que cobre explicitamente a trombose de veia mesentérica citada como diferencial. Nenhuma dose de fármaco incluída; nenhum escore proprietário citado. Pendente validação clínica humana antes de nova publicação.",
+    "fonte_producao": "claude",
+    "version": 3
   },
   {
     "slug": "sindrome-coronariana-aguda",
