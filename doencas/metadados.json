@@ -9852,6 +9852,8 @@
     "aliases": [
       "RVPAT",
       "RVPAP",
+      "TAPVC",
+      "PAPVC",
       "drenagem anômala de veias pulmonares"
     ],
     "area": "cardiopediatria",
@@ -9859,22 +9861,496 @@
     "subtype": "conexoes_venosas",
     "cyanosis_class": "cianotica",
     "prevalence_rank": 16,
-    "completeness": "basico",
-    "summary": "Conexão anômala de veias pulmonares, total ou parcial, com risco e apresentação determinados pela anatomia, obstrução e repercussão hemodinâmica.",
+    "completeness": "completo",
+    "summary": "O retorno venoso pulmonar anômalo é um espectro no qual uma ou todas as veias pulmonares conectam-se à circulação venosa sistêmica ou ao átrio direito em vez do átrio esquerdo. No retorno total (RVPAT/TAPVC), todo o sangue pulmonar retorna ao lado direito e a sobrevivência depende de comunicação interatrial; a presença e o local de obstrução venosa determinam a urgência. RVPAT obstruído provoca edema pulmonar, hipoxemia e choque neonatal e exige correção cirúrgica emergencial. No retorno parcial (RVPAP/PAPVC), uma ou mais veias são anômalas e a fisiologia é de shunt esquerda-direita semelhante à comunicação interatrial; sintomas e dilatação do ventrículo direito dependem do número/território das veias, defeito associado e resistência pulmonar. A síndrome da cimitarra é um fenótipo específico que pode associar hipoplasia pulmonar, dextroposição e colaterais sistêmicas. Ecocardiograma é a primeira avaliação, mas todas as veias devem ser rastreadas; TC ou RM frequentemente são necessárias para mapa anatômico, quantificação de Qp:Qs e planejamento. Após reparo, vigilância é vitalícia por risco de obstrução venosa recorrente, shunt residual, arritmia e hipertensão pulmonar.",
+    "epidemiology": "RVPAT é uma cardiopatia congênita rara, responsável por cerca de 1–3% das cardiopatias em séries clássicas, e apresenta-se sobretudo no período neonatal ou na primeira infância. A drenagem pode ser supracardíaca, cardíaca, infracardíaca ou mista; obstrução é particularmente frequente em trajetos infracardíacos, mas pode ocorrer em qualquer conexão. Sem mistura interatrial suficiente, a circulação é inviável. A era cirúrgica reduziu intensamente a mortalidade, porém estudos multicêntricos mostram que obstrução venosa pré-operatória, baixo peso, anatomia mista/complexa e obstrução pós-operatória continuam associados a pior resultado. RVPAP é mais comum que RVPAT e pode permanecer assintomático até a infância tardia ou vida adulta. A variante clássica conecta veias pulmonares direitas à veia cava superior e frequentemente acompanha defeito do seio venoso; uma veia superior esquerda pode drenar à veia inominada. O impacto não é proporcional apenas ao número de veias: território drenado, defeito interatrial e complacência ventricular modificam Qp:Qs e sobrecarga direita. A diretriz ACC/AHA 2025 para adultos formaliza RM para anatomia, volumes do VD e shunt, e desencoraja cirurgia quando Qp:Qs é menor que 1,5 e o VD é normal ou pouco aumentado.",
+    "presentation": [
+      "RVPAT obstruído: cianose intensa, taquipneia, retrações, hipoxemia refratária e edema pulmonar nas primeiras horas/dias",
+      "Choque, acidose, oligúria e baixo débito no neonato com obstrução crítica",
+      "RVPAT não obstruído: cianose mais discreta, hiperfluxo, dificuldade alimentar, sudorese e falha de crescimento",
+      "Sopro pouco expressivo apesar de doença grave no RVPAT obstruído",
+      "Desdobramento fixo de segunda bulha e sopro de hiperfluxo no RVPAP com shunt relevante",
+      "RVPAP assintomático detectado por dilatação direita, sopro ou imagem incidental",
+      "Dispneia, fadiga, palpitação ou menor capacidade funcional na criança maior/adulto",
+      "Arritmia atrial e sinais de falência direita na apresentação tardia",
+      "Hemoptise, infecções pulmonares recorrentes ou assimetria pulmonar na síndrome da cimitarra",
+      "Hipertensão pulmonar em shunt tardio, obstrução venosa ou doença pulmonar associada"
+    ],
+    "diagnostic_approach": {
+      "classificacao_anatomica": "Definir se o retorno é total ou parcial e mapear cada veia pulmonar, confluência, trajeto, sítio de conexão, comprimento e local de qualquer estreitamento. No RVPAT, classificar supracardíaco, cardíaco, infracardíaco ou misto; documentar comunicação interatrial e lesões associadas. No RVPAP, descrever território drenado, defeito do seio venoso/CIA, veia cava e síndrome da cimitarra. Heterotaxia e ventrículo único tornam a anatomia e o risco distintos.",
+      "ecocardiograma": "É o exame inicial e deve procurar ativamente as conexões das quatro veias, fluxo na confluência/veia vertical, gradiente e padrão Doppler, tamanho da comunicação interatrial, direção do shunt, câmaras direitas, função, pressão pulmonar e sinais de obstrução. No neonato instável, ausência de visualização não exclui o diagnóstico; edema pulmonar com coração não muito aumentado e hipertensão pulmonar deve elevar a suspeita.",
+      "imagem_transversal": "TC angiográfica fornece mapa rápido e alta resolução espacial; RM evita radiação e quantifica Qp:Qs, volumes e função do VD, sendo particularmente útil no RVPAP e seguimento do adulto. Escolher conforme estabilidade, idade, necessidade de sedação, função renal e pergunta clínica. Imagem não deve atrasar cirurgia no RVPAT obstruído quando eco e quadro são suficientes.",
+      "hemodinamica": "Cateterismo raramente é necessário antes do reparo emergencial de RVPAT e pode atrasar tratamento. No RVPAP tardio ou com suspeita de hipertensão pulmonar, pode quantificar pressões, Qp:Qs, resistência vascular e colaterais quando a informação muda a indicação. A diretriz adulta 2025 recomenda integrar sintomas/capacidade, sobrecarga do VD e Qp:Qs; Qp:Qs isolado não substitui a avaliação completa."
+    },
+    "differentials": [
+      "Hipertensão pulmonar persistente do recém-nascido",
+      "Pneumonia, sepse ou síndrome do desconforto respiratório neonatal",
+      "Atresia pulmonar ou estenose pulmonar crítica",
+      "Transposição das grandes artérias com mistura restritiva",
+      "Cor triatriatum ou estenose congênita das veias pulmonares",
+      "Hipoplasia do coração esquerdo e outras cardiopatias críticas",
+      "Comunicação interatrial isolada com sobrecarga direita",
+      "Drenagem venosa sistêmica anômala confundida com veia pulmonar",
+      "Hipertensão pulmonar por doença pulmonar ou tromboembólica em adulto",
+      "Síndrome da cimitarra versus sequestração pulmonar e colateral sistêmica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico pediátrico completo com rastreamento de todas as veias pulmonares",
+      "Doppler colorido/espectral da confluência, veia vertical e anastomose pós-operatória",
+      "Avaliação da comunicação interatrial, shunt, tamanho/função do VD e pressão pulmonar",
+      "Oximetria contínua e gasometria/lactato no neonato instável",
+      "Radiografia de tórax para edema pulmonar, vascularidade e diagnóstico diferencial",
+      "ECG para sobrecarga direita e arritmias em pacientes maiores",
+      "Angiotomografia para mapa rápido e detalhado das conexões venosas",
+      "RM cardíaca para anatomia, Qp:Qs, volumes e função do VD quando apropriado",
+      "Cateterismo hemodinâmico em RVPAP tardio ou hipertensão pulmonar quando mudar a decisão",
+      "Teste cardiopulmonar de exercício no adolescente/adulto com discrepância sintoma-hemodinâmica",
+      "Holter diante de palpitação, síncope ou arritmia atrial",
+      "Avaliação de heterotaxia, função esplênica e anomalias associadas quando o fenótipo sugerir",
+      "Ultrassom/TC e avaliação de colaterais sistêmicas na síndrome da cimitarra",
+      "Eco fetal e planejamento do parto/transferência quando a anomalia for suspeita no pré-natal"
+    ],
+    "red_flags": [
+      "Neonato cianótico com hipoxemia, edema pulmonar e coração pouco aumentado",
+      "Choque, acidose crescente, hipotensão, oligúria ou alteração do sensório",
+      "Fluxo acelerado/turbulento em confluência ou veia vertical com sinais de obstrução",
+      "Comunicação interatrial restritiva no RVPAT",
+      "Hipertensão pulmonar grave ou falência aguda do VD",
+      "Piora após intubação ou manobra que reduza retorno/preload em circulação crítica",
+      "Obstrução venosa pulmonar pós-operatória nova ou progressiva",
+      "Hemoptise, infecções recorrentes ou colaterais sistêmicas importantes na cimitarra",
+      "Arritmia atrial sustentada ou síncope em paciente tardio/reparado",
+      "RVPAP com dilatação/disfunção progressiva do VD ou redução objetiva da capacidade"
+    ],
+    "treatment_summary": "RVPAT é uma lesão cirúrgica. Quando há obstrução, hipoxemia grave, edema pulmonar ou baixo débito, a correção é emergencial e a investigação adicional não deve atrasar transferência e cirurgia. A estabilização ocorre em UTI neonatal/congênita, com suporte de oxigenação, ventilação e perfusão individualizado; não presumir que terapia usada em hipertensão pulmonar persistente corrigirá uma obstrução mecânica. Vasodilatação pulmonar sem reconhecer obstrução venosa pode piorar edema, e doses não devem ser geradas pelo assistente. O reparo conecta a confluência venosa ao átrio esquerdo e trata a comunicação interatrial conforme a estratégia; anatomia mista, heterotaxia ou obstrução difusa podem exigir técnicas especializadas. RVPAT não obstruído também requer correção, em momento precoce definido pelo centro, antes de hiperfluxo e doença vascular. Após cirurgia, rastrear obstrução da anastomose/veias, pois sua recorrência é causa relevante de reintervenção e mortalidade tardia; piora respiratória ou hipertensão pulmonar não deve ser atribuída automaticamente a doença pulmonar. No RVPAP, a decisão é eletiva e fisiológica. Crianças com shunt significativo e sobrecarga do VD geralmente são reparadas, especialmente quando há CIA do seio venoso. Para adultos, a diretriz ACC/AHA 2025 recomenda reparo quando há sintomas ou capacidade reduzida, sobrecarga volumétrica do VD e Qp:Qs pelo menos 1,5; em assintomáticos, cirurgia é razoável se houver Qp:Qs pelo menos 1,5 junto de sobrecarga grave/progressiva do VD, disfunção, hipertensão pulmonar invasiva ou intolerância objetiva. Cirurgia não é indicada quando Qp:Qs é menor que 1,5 e o VD é normal ou apenas discretamente aumentado, na ausência de outra indicação. Esses critérios não devem ser extrapolados mecanicamente para lactentes ou anatomia complexa. Avaliar resistência pulmonar e risco de reparo em apresentação tardia. Na síndrome da cimitarra, integrar magnitude do shunt, obstrução, hipoplasia pulmonar, colaterais sistêmicas e sintomas; embolização, redirecionamento cirúrgico ou observação dependem do fenótipo. Após qualquer reparo, manter seguimento congênito vitalício, imagem do trajeto venoso, função do VD, pressão pulmonar e arritmias.",
+    "ambulatory_flow": [
+      "Definir total versus parcial e mapear individualmente as veias pulmonares",
+      "Registrar presença/local de obstrução, comunicação interatrial e lesões associadas",
+      "No RVPAT, organizar avaliação cirúrgica precoce mesmo sem obstrução",
+      "No RVPAP, quantificar Qp:Qs e sobrecarga do VD por eco/RM quando necessário",
+      "Correlacionar sintomas e capacidade funcional com anatomia e repercussão",
+      "Pesquisar defeito do seio venoso quando veias direitas drenam à cava superior",
+      "Avaliar pressão pulmonar e indicar cateterismo apenas se mudar a decisão",
+      "Na cimitarra, mapear hipoplasia pulmonar, colaterais e obstrução",
+      "Após reparo, vigiar estenose venosa, shunt residual, VD, pressão pulmonar e ritmo",
+      "Usar TC/RM diante de dispneia pós-reparo para excluir obstrução ou shunt residual",
+      "Planejar transição para cardiopatia congênita do adulto e aconselhamento reprodutivo",
+      "Individualizar esporte e seguimento conforme hemodinâmica e arritmia"
+    ],
+    "emergency_flow": [
+      "Suspeitar de RVPAT obstruído em neonato com cianose, edema pulmonar e hipoxemia desproporcional",
+      "Acionar UTI neonatal, cardiologia, cirurgia congênita e transporte especializado imediatamente",
+      "Monitorizar perfusão, pressão, saturação, gasometria, lactato e diurese",
+      "Obter ecocardiograma urgente sem atrasar transferência para completar exames eletivos",
+      "Sustentar oxigenação/ventilação e pressão sistêmica com estratégia individual do centro",
+      "Evitar tratar obstrução venosa mecânica como hipertensão pulmonar isolada",
+      "Preparar correção cirúrgica emergencial se obstrução, choque ou hipoxemia grave",
+      "No pós-operatório com piora, excluir prontamente obstrução venosa recorrente, shunt residual e falência do VD"
+    ],
+    "monitoring": [
+      "Saturação, frequência respiratória, crescimento e capacidade funcional",
+      "Mapa e patência de cada veia pulmonar e da anastomose",
+      "Velocidade/padrão Doppler e sinais indiretos de obstrução",
+      "Tamanho e função do VD e magnitude de shunt residual",
+      "Pressão pulmonar e sinais de doença vascular",
+      "Qp:Qs por RM ou hemodinâmica quando relevante",
+      "ECG, palpitação e arritmias atriais tardias",
+      "Teste de exercício em adolescente/adulto quando indicado",
+      "Infecções, hemoptise, colaterais e perfusão pulmonar na cimitarra",
+      "Evolução após reparo, com vigilância intensificada no período de maior risco de reobstrução",
+      "Saúde oral e profilaxia de endocardite apenas conforme critérios de alto risco",
+      "Transição, gestação, adesão e acesso ao centro congênito"
+    ],
+    "special_populations": [
+      "Neonato com RVPAT obstruído: emergência cirúrgica",
+      "RVPAT não obstruído: correção precoce e vigilância de hiperfluxo",
+      "RVPAP assintomático com pequeno shunt: observação seriada pode ser apropriada",
+      "Defeito do seio venoso: pesquisar e reparar conexão venosa associada",
+      "Síndrome da cimitarra: considerar pulmão direito, colaterais e obstrução",
+      "Heterotaxia/ventrículo único: anatomia complexa e maior risco de obstrução",
+      "Pós-operatório: reobstrução venosa pode ser silenciosa ou simular doença pulmonar",
+      "Adultos: RM para anatomia, Qp:Qs, VD e vigilância de hipertensão pulmonar",
+      "Gestação: estratificar shunt, VD, pressão pulmonar e obstrução antes da concepção",
+      "Doença pulmonar concomitante: não atribuir toda hipoxemia sem confirmar patência venosa"
+    ],
+    "assistant_questions": [
+      {
+        "id": "rvpa_faixa_etaria",
+        "label": "Qual é a faixa etária?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "neonato",
+            "label": "Neonato"
+          },
+          {
+            "value": "lactente_crianca",
+            "label": "Lactente ou criança"
+          },
+          {
+            "value": "adolescente_adulto",
+            "label": "Adolescente ou adulto"
+          }
+        ]
+      },
+      {
+        "id": "rvpa_tipo",
+        "label": "O retorno anômalo é total ou parcial?",
+        "type": "select",
+        "required": true,
+        "section": "Anatomia",
+        "options": [
+          {
+            "value": "total",
+            "label": "Total"
+          },
+          {
+            "value": "parcial",
+            "label": "Parcial"
+          },
+          {
+            "value": "incerto",
+            "label": "Ainda incerto"
+          }
+        ]
+      },
+      {
+        "id": "rvpa_instavel",
+        "label": "Há hipoxemia grave, edema pulmonar, choque ou acidose?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "rvpa_obstrucao",
+        "label": "Há obstrução venosa pulmonar suspeita ou confirmada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Anatomia"
+      },
+      {
+        "id": "rvpa_reparado",
+        "label": "O retorno venoso já foi reparado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Histórico"
+      },
+      {
+        "id": "rvpa_sintomas",
+        "label": "Há dispneia, fadiga, palpitação ou capacidade reduzida?",
+        "type": "boolean",
+        "section": "Repercussão"
+      },
+      {
+        "id": "rvpa_rv_sobrecarga",
+        "label": "Há sobrecarga, dilatação ou disfunção progressiva do VD?",
+        "type": "boolean",
+        "section": "Repercussão"
+      },
+      {
+        "id": "rvpa_qpqs",
+        "label": "Qual é a faixa de Qp:Qs disponível?",
+        "type": "select",
+        "section": "Hemodinâmica",
+        "options": [
+          {
+            "value": "menor_1_5",
+            "label": "Menor que 1,5"
+          },
+          {
+            "value": "maior_igual_1_5",
+            "label": "Maior ou igual a 1,5"
+          },
+          {
+            "value": "indisponivel",
+            "label": "Indisponível/não se aplica"
+          }
+        ]
+      },
+      {
+        "id": "rvpa_hp",
+        "label": "Há hipertensão pulmonar ou dúvida de operabilidade?",
+        "type": "boolean",
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "rvpa_imagem_completa",
+        "label": "Todas as veias e possíveis estreitamentos foram mapeados?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rvpa-total-obstruido-instavel",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_tipo",
+              "op": "eq",
+              "value": "total"
+            },
+            {
+              "field": "rvpa_obstrucao",
+              "op": "truthy"
+            },
+            {
+              "field": "rvpa_instavel",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "RVPAT obstruído com comprometimento cardiopulmonar"
+          ],
+          "emergency_flow": [
+            "Acionar transferência e correção cirúrgica emergencial em centro congênito; exames adicionais não devem atrasar o tratamento."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-instabilidade",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_instavel",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Avaliação hospitalar imediata com ecocardiograma e equipe congênita."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-total-sem-reparo",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_tipo",
+              "op": "eq",
+              "value": "total"
+            },
+            {
+              "field": "rvpa_reparado",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "RVPAT requer avaliação cirúrgica precoce mesmo sem obstrução; o assistente não deve sugerir observação indefinida."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-reobstrucao-pos-reparo",
+        "priority": 93,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_reparado",
+              "op": "truthy"
+            },
+            {
+              "field": "rvpa_obstrucao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Possível obstrução venosa recorrente após reparo"
+          ],
+          "suggested_tests": [
+            "Imagem urgente da anastomose e de cada veia pulmonar em centro congênito."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-parcial-sintomatico-shunt",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_tipo",
+              "op": "eq",
+              "value": "parcial"
+            },
+            {
+              "field": "rvpa_sintomas",
+              "op": "truthy"
+            },
+            {
+              "field": "rvpa_rv_sobrecarga",
+              "op": "truthy"
+            },
+            {
+              "field": "rvpa_qpqs",
+              "op": "eq",
+              "value": "maior_igual_1_5"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Em adulto, esse perfil atende critérios para discutir reparo cirúrgico; confirmar anatomia e risco no centro ACHD."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-parcial-pequeno-sem-rv",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_tipo",
+              "op": "eq",
+              "value": "parcial"
+            },
+            {
+              "field": "rvpa_qpqs",
+              "op": "eq",
+              "value": "menor_1_5"
+            },
+            {
+              "field": "rvpa_rv_sobrecarga",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Na ausência de outra indicação, a diretriz adulta não apoia reparo apenas pelo achado anatômico; manter vigilância individualizada."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-hipertensao-pulmonar",
+        "priority": 86,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_hp",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Não recomendar reparo automático; avaliar hemodinâmica e operabilidade em centro congênito/HP."
+          ],
+          "suggested_tests": [
+            "Cateterismo se a hemodinâmica invasiva mudar a decisão e o benefício superar o risco."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-mapa-incompleto",
+        "priority": 84,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_imagem_completa",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Mapa de todas as conexões e possíveis estreitamentos venosos pulmonares"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma congênito e TC/RM conforme estabilidade e pergunta clínica."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-tipo-incerto",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_tipo",
+              "op": "eq",
+              "value": "incerto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Definição entre retorno total, parcial e anatomia mista"
+          ],
+          "messages": [
+            "Não inferir fisiologia ou urgência sem mapear as conexões venosas."
+          ]
+        }
+      },
+      {
+        "id": "rvpa-transicao-adulto",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "rvpa_faixa_etaria",
+              "op": "eq",
+              "value": "adolescente_adulto"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Garantir seguimento ACHD, imagem seriada do VD/veias e aconselhamento reprodutivo."
+          ]
+        }
+      }
+    ],
     "tags": [
       "RVPAT",
       "RVPAP",
-      "veias pulmonares"
+      "veias pulmonares",
+      "cardiopatia congênita cianótica",
+      "obstrução venosa pulmonar",
+      "síndrome da cimitarra",
+      "Qp:Qs",
+      "cirurgia cardíaca pediátrica"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "Gurvitz M et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87:822-976. doi:10.1016/j.jacc.2025.09.006",
+      "Stout KK et al. 2018 AHA/ACC Guideline for Adults With Congenital Heart Disease. Circulation. 2019;139:e698-e800. doi:10.1161/CIR.0000000000000603",
+      "Baumgartner H et al. 2020 ESC Guidelines for adult congenital heart disease. Eur Heart J. 2021;42:563-645. doi:10.1093/eurheartj/ehaa554",
+      "Shi G et al. Total Anomalous Pulmonary Venous Connection: The Current Management Strategies in a Pediatric Cohort of 768 Patients. Circulation. 2017;135:48-58. doi:10.1161/CIRCULATIONAHA.116.023889",
+      "Seale AN et al. Total anomalous pulmonary venous connection: morphology and outcome from an international population-based study. Circulation. 2010;122:2718-2726. doi:10.1161/CIRCULATIONAHA.110.940825",
+      "Sachdeva R et al. 2020 Appropriate Use Criteria for Multimodality Imaging During Follow-Up of Congenital Heart Disease. J Am Coll Cardiol. 2020;75:657-703. doi:10.1016/j.jacc.2019.10.002"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://www.jacc.org/doi/10.1016/j.jacc.2025.09.006",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000603",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/adult-congenital-heart-disease/",
+      "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.116.023889",
+      "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.110.940825",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2019.10.002"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026 com diretriz ACHD 2025, diretrizes ACC/AHA/ESC e coortes multicêntricas de RVPAT. Exige revisão humana por cardiologia/cirurgia pediátrica e ACHD antes de publicação; anatomia, obstrução, estabilização neonatal, timing/técnica cirúrgica, Qp:Qs, resistência pulmonar e reintervenção devem ser confirmados individualmente.",
+    "version": 2,
+    "fonte_producao": "chatgpt",
     "related_document_slugs": [
       "retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
       "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
