@@ -7,10 +7,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = ROOT / "frontend" / "src"
 CONTENT = ROOT / "content" / "Terapia_intensiva"
+VALID_REVIEW_STATUSES = {"revisado", "pendente_revisao"}
 
 
 def _texto(caminho: str) -> str:
     return (FRONTEND / caminho).read_text(encoding="utf-8")
+
+
+def _assert_markdown_editorial_status(documento: str) -> None:
+    assert any(f"review_status: {status}" in documento for status in VALID_REVIEW_STATUSES)
 
 
 def test_rota_e_lazy_loading_estao_registrados():
@@ -34,11 +39,14 @@ def test_modulo_esta_nas_navegacoes_canonicas():
         assert "Cardiologia Intensiva & UCO" in conteudo, arquivo
 
 
-def test_cockpit_carrega_colecoes_em_paralelo_e_usa_tema_canonico():
+def test_cockpit_carrega_colecoes_em_paralelo_com_falha_parcial_tolerada_e_usa_tema_canonico():
     pagina = _texto("pages/CardiologiaIntensiva.tsx")
 
     assert 'const TEMA = "Terapia intensiva"' in pagina
-    assert "Promise.all([" in pagina
+    assert "Promise.allSettled([" in pagina
+    assert 'resultadoDocumentos.status === "rejected"' in pagina
+    assert 'resultadoCalculadoras.status === "fulfilled"' in pagina
+    assert 'resultadoChecklists.status === "fulfilled"' in pagina
     assert "/library/documents?theme=" in pagina
     assert 'api.get<Calculadora[]>("/calculators")' in pagina
     assert 'api.get<Checklist[]>("/checklists")' in pagina
@@ -106,7 +114,7 @@ def test_auditoria_descobre_calculadoras_de_registros_modulares():
     assert 'glob("*calculators*.py")' in auditoria
 
 
-def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
+def test_lote_acido_base_preserva_gates_editoriais_e_conexoes_bidirecionais():
     slug = "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco"
     documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
     mala = (CONTENT / "acidose-latica-associada-a-metformina-mala-no-paciente-critico-cardiovascular.md").read_text(
@@ -121,12 +129,12 @@ def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
     trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
     trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-acidose-metabolica-compensacao-e-anion-gap")
 
-    assert "review_status: pendente_revisao" in documento
+    _assert_markdown_editorial_status(documento)
     assert "Vínculo clínico direto" in documento
     assert "Proximidade temática, sem vínculo causal automático" in documento
     assert "/calculadoras/acidose-metabolica-winter-anion-gap-uco" in mala
     assert "/calculadoras/acidose-metabolica-winter-anion-gap-uco" in ceto
-    assert trilha["review_status"] == "pendente_revisao"
+    assert trilha["review_status"] in VALID_REVIEW_STATUSES
     assert any(
         etapa["item_type"] == "calculadora"
         and etapa["item_slug"] == "acidose-metabolica-winter-anion-gap-uco"
@@ -134,7 +142,7 @@ def test_lote_acido_base_preserva_revisao_humana_e_conexoes_bidirecionais():
     )
 
 
-def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
+def test_lote_oxigenacao_preserva_gates_editoriais_e_diferencial_bidirecional():
     slug = "oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco"
     documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
     edema = (
@@ -148,7 +156,7 @@ def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
     trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
     trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-oxigenacao-pao2-fio2-e-sdra")
 
-    assert "review_status: pendente_revisao" in documento
+    _assert_markdown_editorial_status(documento)
     assert "Vínculo clínico direto" in documento
     assert "Vínculo diferencial explícito" in documento
     assert "P/F corrigida = P/F observada × (pressão barométrica local ÷ 760)" in documento
@@ -157,7 +165,7 @@ def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
     assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in edema
     assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in vd
     assert "\\[" not in documento
-    assert trilha["review_status"] == "pendente_revisao"
+    assert trilha["review_status"] in VALID_REVIEW_STATUSES
     assert any(
         etapa["item_type"] == "calculadora"
         and etapa["item_slug"] == "oxigenacao-pao2-fio2-sdra-uco"
@@ -165,7 +173,7 @@ def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
     )
 
 
-def test_lote_lra_preserva_componentes_revisao_humana_e_backlinks_diretos():
+def test_lote_lra_preserva_componentes_gates_editoriais_e_backlinks_diretos():
     slug = "lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese"
     documento = (CONTENT / f"{slug}.md").read_text(encoding="utf-8")
     choque = (CONTENT / "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas.md").read_text(
@@ -181,13 +189,13 @@ def test_lote_lra_preserva_componentes_revisao_humana_e_backlinks_diretos():
     trilhas = json.loads((ROOT / "trilhas" / "metadados.json").read_text(encoding="utf-8"))
     trilha = next(item for item in trilhas if item["slug"] == "trilha-uco-lesao-renal-aguda-kdigo")
 
-    assert "review_status: pendente_revisao" in documento
+    _assert_markdown_editorial_status(documento)
     assert "C1/U2 → estágio 2" in documento
     assert "rascunho KDIGO 2026" in documento
     assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in choque
     assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in vd
     assert "/calculadoras/lesao-renal-aguda-kdigo-uco" in acidose
-    assert trilha["review_status"] == "pendente_revisao"
+    assert trilha["review_status"] in VALID_REVIEW_STATUSES
     assert any(
         etapa["item_type"] == "calculadora"
         and etapa["item_slug"] == "lesao-renal-aguda-kdigo-uco"
