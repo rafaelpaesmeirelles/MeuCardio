@@ -36,7 +36,16 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete-hub Tudo com Tudo de Arritmias ventriculares e morte
+        # súbita cardíaca (geral), criado em 27/08/2026: slug novo, sem
+        # sobreposição com canalopatias-cardiacas-hereditarias,
+        # taquicardia-supraventricular ou parada-cardiorrespiratoria-e-
+        # morte-subita-abortada — ver review_note.
+        "arritmias-ventriculares-e-morte-subita-cardiaca",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

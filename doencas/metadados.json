@@ -20999,5 +20999,495 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: cinco bloqueios corrigidos, taxonomia normalizada e regras validadas.",
     "version": 2,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "arritmias-ventriculares-e-morte-subita-cardiaca",
+    "name": "Arritmias ventriculares e morte súbita cardíaca",
+    "aliases": [
+      "TV",
+      "taquicardia ventricular",
+      "morte súbita cardíaca",
+      "cardiomiopatia arritmogênica",
+      "torsades de pointes"
+    ],
+    "area": "geral",
+    "category": "arritmia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Arritmias ventriculares do adulto e morte súbita cardíaca — taquicardia ventricular (TV) idiopática (trato de saída, fascicular de Belhassen, reentrada de ramo) em coração estruturalmente normal, TV na cardiopatia estrutural (isquêmica, chagásica, não isquêmica), cardiomiopatia arritmogênica de ventrículo direito, ritmo idioventricular acelerado (RIVA) como diferencial benigno, e torsades de pointes/QT longo adquirido. Diagnóstico por diferencial de taquicardia de QRS largo (ESC 2019), critérios de Padua 2020 para cardiomiopatia arritmogênica, e escore de Tisdale para torsades. Tratamento por ablação por cateter como primeira linha nas formas idiopáticas, ablação epicárdica em cardiopatia chagásica, e o princípio CAST/SWORD — suprimir extrassístole sem tratar a causa de base pode ser prejudicial. Distinto de canalopatias hereditárias primárias (QT longo congênito, Brugada, CPVT) e de taquicardia supraventricular, ambos com hub próprio.",
+    "epidemiology": "As arritmias ventriculares abrangem um espectro amplo, da extrassístole ventricular (PVC) isolada e assintomática à taquicardia ventricular (TV) sustentada e à morte súbita cardíaca (MSC). A MSC responde por fração substancial da mortalidade cardiovascular, e a sobrevida após parada cardíaca extra-hospitalar permanece baixa apesar dos avanços em reanimação — o que levou a diretriz ESC 2022 a dar, pela primeira vez, recomendação Classe I ao treinamento comunitário em suporte básico de vida (incluindo escolares) e à disponibilidade de desfibrilador externo automático de acesso público em locais de maior probabilidade de parada cardíaca. A cardiopatia isquêmica é o substrato estrutural mais frequente de TV sustentada e MSC, mas a fração de ejeção do ventrículo esquerdo (FEVE) deixou de ser, na ESC 2022, o preditor dominante isolado de risco: variáveis clínicas, genéticas e de imagem — sobretudo realce tardio à ressonância magnética cardíaca — ganharam peso próprio, em especial na cardiomiopatia dilatada/hipocinética não dilatada de etiologia hereditária, sarcoidose cardíaca, doenças infiltrativas e distúrbios neuromusculares. Em regiões endêmicas da América Latina, a cardiomiopatia chagásica crônica é causa relevante de TV com cicatriz, com substrato caracteristicamente epicárdico (área de cicatriz maior no epicárdio que no endocárdio em mapeamento sistemático) que exige acesso e ablação combinados endo/epicárdicos na maioria dos procedimentos, ao contrário do padrão predominantemente subendocárdico da cardiopatia isquêmica. Entre as TVs sem cardiopatia estrutural (idiopáticas), a origem no trato de saída — sobretudo do ventrículo direito — é a mais comum, seguida pela taquicardia fascicular verapamil-sensível (Belhassen, cerca de 94% de forma posterior esquerda); ambas têm prognóstico geralmente benigno e ablação por cateter elevada a terapia de primeira linha pela ESC 2022. A cardiomiopatia arritmogênica (antes chamada displasia/cardiomiopatia arritmogênica do ventrículo direito) é causa reconhecida e frequentemente subdiagnosticada de MSC relacionada ao esforço em jovens e atletas, cuja primeira manifestação costuma ser a própria arritmia ventricular maligna. O ritmo idioventricular acelerado (RIVA) é achado eletrocardiográfico comum na fase de reperfusão do infarto agudo — descrito em cerca de um terço dos pacientes nas primeiras 24 horas pós-angioplastia primária em série observacional unicêntrica —, em geral benigno e autolimitado, mas também ocorre fora do contexto isquêmico. A extrassistolia ventricular frequente é achado comum em Holter de 24 horas na população geral e, na maioria das vezes, benigna; um subgrupo, porém, desenvolve cardiomiopatia induzida por PVC, reconhecível por um corte de carga que orienta investigação ativa e potencial indicação de ablação.",
+    "presentation": [
+      "Palpitação sustentada, em salvas ou isolada, associada a extrassistolia ventricular frequente identificada em ECG ou monitorização — pode ser o único sintoma, mesmo com carga arrítmica relevante",
+      "Síncope inexplicada ou pré-síncope, sobretudo de esforço, sem pródromo típico vasovagal — sinal de alarme para taquicardia ventricular sustentada, canalopatia ou cardiomiopatia arritmogênica de base",
+      "Parada cardiorrespiratória abortada ou morte súbita recuperada como primeira manifestação clínica, especialmente quando há cardiopatia estrutural não diagnosticada, cardiomiopatia arritmogênica ou canalopatia hereditária não reconhecida",
+      "Achado incidental, em paciente assintomático, de extrassistolia ventricular frequente ou taquicardia ventricular não sustentada em Holter de 24 horas ou ECG de rotina",
+      "Sintomas de insuficiência cardíaca de início recente ou piora inexplicada da função ventricular, que podem representar cardiomiopatia induzida por extrassístole ventricular frequente ou por taquicardia incessante, não cardiopatia primária de outra etiologia",
+      "Choques apropriados recorrentes de cardiodesfibrilador implantável ou quadro de tempestade elétrica (múltiplos episódios de TV/FV ou terapias apropriadas em curto intervalo) em paciente já portador de dispositivo",
+      "Achado de ritmo idioventricular acelerado — em geral assintomático ou com queda pressórica transitória — no contexto de reperfusão coronariana após síndrome coronariana aguda ou angioplastia primária",
+      "Palpitação, mal-estar ou síncope em paciente com QT longo conhecido, distúrbio eletrolítico ou uso recente de fármaco pró-arrítmico, levantando suspeita de torsades de pointes",
+      "Taquicardia de QRS largo regular, hemodinamicamente tolerada, em paciente jovem sem cardiopatia estrutural aparente — apresentação clássica, e armadilha diagnóstica frequente, da taquicardia ventricular idiopática do trato de saída ou fascicular"
+    ],
+    "diagnostic_approach": {
+      "diferencial_de_taquicardia_de_qrs_largo_esc_2019": "Toda taquicardia de QRS largo é tratada como taquicardia ventricular até prova em contrário — essa regra decide a conduta antes de existir diagnóstico. Instabilidade hemodinâmica indica cardioversão elétrica sincronizada imediata; se a morfologia é polimórfica e o episódio está sustentado, o tratamento é choque NÃO sincronizado imediato (a sincronização não é confiável porque o QRS muda de morfologia batimento a batimento), sem atrasar por eletrólitos ou fármaco. No paciente estável, a sequência é ECG de 12 derivações durante a taquicardia, manobra vagal, e adenosina apenas quando a taquicardia é regular e monomórfica e não há pré-excitação no ECG de repouso (na pré-excitação a adenosina deve ser evitada, pelo risco de acelerar a condução pela via acessória). Antiarrítmico intravenoso (procainamida preferencialmente, com amiodarona como alternativa, segundo o ensaio PROCAMIO) é considerado antes de cardioversão elétrica quando a taquicardia é tolerada. Verapamil e diltiazem são formalmente contraindicados em taquicardia de QRS largo de etiologia incerta, pelo risco de deterioração hemodinâmica grave caso o ritmo seja ventricular. Critérios eletrocardiográficos clássicos de TV — dissociação atrioventricular, batimentos de captura e de fusão, concordância precordial — não mudam a conduta imediata (na dúvida trata-se como TV) e servem ao diagnóstico definitivo e ao tratamento de longo prazo, não à decisão de emergência.",
+      "reconhecimento_de_riva_versus_tv_verdadeira": "O ritmo idioventricular acelerado (RIVA) é um ritmo ventricular ectópico com frequência entre 50 e 110 bpm — 'acelerado' em relação ao ritmo idioventricular de escape (<50 bpm), não em relação à frequência sinusal normal — hemodinamicamente estável na maioria dos casos, clássico da fase de reperfusão do infarto agudo, mas também descrito em intoxicação digitálica, hipotermia, síndrome renocardíaca e ausência de cardiopatia estrutural. Distingue-se da TV verdadeira por: frequência tipicamente abaixo de 110-120 bpm; início e término graduais ('warm-up'/'cool-down'), em vez do início abrupto da TV; batimentos de fusão entre o complexo sinusal e o ectópico; dissociação atrioventricular sem repercussão hemodinâmica relevante na maioria das séries; e um teste comportamental característico — a manobra vagal, ao desacelerar o nó sinusal, tende a fazer o RIVA emergir, o inverso do esperado numa TV verdadeira, cujo mecanismo não depende da relação de corrida com o ritmo sinusal. Como marcador de reperfusão, o RIVA tem valor preditivo positivo alto quando presente, mas sensibilidade baixa — sua ausência não descarta reperfusão bem-sucedida — e não deve ser usado como prova isolada do estado da artéria. A conduta padrão é não tratar o RIVA isolado e hemodinamicamente tolerado; antiarrítmico é reservado a casos raros, persistentes e sintomáticos.",
+      "avaliacao_de_extrassistole_ventricular_frequente_e_risco_de_cardiomiopatia_induzida": "A avaliação inicial de PVC frequente inclui história, exame físico, ECG de 12 derivações em ritmo sinusal e ecocardiograma transtorácico. Sem disfunção de VE, quantifica-se a carga de PVC em Holter de 24 horas: carga acima de 24% é o corte que melhor discrimina função de VE preservada de comprometida (sensibilidade 79%, especificidade 78%, área sob a curva 0,89), mas cardiomiopatia reversível já foi documentada a partir de carga de 10% — por isso o intervalo entre 10% e 24% já justifica estratificação de risco por ressonância cardíaca e monitorização mais próxima, não tranquilização simples. O padrão de acoplamento também importa: PVC interpolada (inserida entre dois batimentos sinusais sem pausa compensatória) é fator de risco adicional para cardiomiopatia, independente da carga isolada. Quando há disfunção de VE, a investigação inclui excluir outras causas de cardiomiopatia e caracterizar o substrato por ressonância cardíaca; a indicação de ablação por cateter é Classe I quando a cardiomiopatia é suspeita de ser causada por PVC frequente e predominantemente monomórfica e o antiarrítmico já se mostrou ineficaz, não tolerado ou não preferido pelo paciente para uso prolongado, e cai para Classe IIa quando há doença estrutural cardíaca de base e a PVC é apenas suspeita de contribuir para a cardiomiopatia, não a causa isolada.",
+      "diagnostico_de_torsades_de_pointes_qt_longo_adquirido_e_escore_de_tisdale": "Torsades de pointes (TdP) é TV polimórfica associada a QT corrigido prolongado no ritmo basal, com frequência dependência de pausa/bradicardia; distingue-se da TV polimórfica com QT não prolongado, cuja causa mais comum no contexto agudo é isquêmica. As duas formas, quando sustentadas, exigem o mesmo tratamento elétrico imediato — choque não sincronizado, mesmo com pulso — mas divergem na prevenção de recorrência: magnésio intravenoso pode ser considerado apenas nas recorrências associadas a QT longo/TdP, e não é recomendado de rotina quando o QT é normal. QTc acima de 500 ms, sobretudo com bradicardia associada, marca maior risco. O escore de Tisdale foi desenvolvido e validado para predizer prolongamento de QTc (definido como QTc >500 ms ou aumento >60 ms do basal) em paciente hospitalizado — soma pontos por idade avançada, sexo feminino, uso de diurético de alça, hipocalemia, QTc de admissão elevado, infarto agudo, sepse, insuficiência cardíaca e uso de fármaco(s) prolongador(es) de QTc, com estratos de risco baixo/moderado/alto associados a incidências crescentes de QTc prolongado. É importante reconhecer que o escore não foi validado como preditor de torsades de pointes, não diagnostica a arritmia e não orienta o tratamento do evento agudo — sua aplicação correta é identificar, na admissão hospitalar, quem tem maior risco de desenvolver QT longo e merece monitorização eletrocardiográfica mais atenta.",
+      "estratificacao_etiologica_e_estrutural": "Diante de TV sustentada ou MSC abortada, a investigação etiológica organiza a conduta de longo prazo: ecocardiograma e ressonância cardíaca com realce tardio para cardiopatia estrutural isquêmica (substrato subendocárdico, seguindo o território coronariano) versus não isquêmica/chagásica (substrato tipicamente epicárdico, mais extenso e mais denso que o endocárdico em mapeamento sistemático); aplicação dos critérios da Task Force revisada de 2010 e, quando o fenótipo é predominante ou exclusivamente de ventrículo esquerdo, dos Critérios de Padua 2020 para cardiomiopatia arritmogênica; e reconhecimento do padrão eletrocardiográfico e comportamento clínico das formas idiopáticas — trato de saída (morfologia de bloqueio de ramo esquerdo com eixo inferior), fascicular/Belhassen (morfologia de bloqueio de ramo direito, responsiva a verapamil, frequentemente confundida com taquicardia supraventricular aberrante) e reentrada de ramo (diagnóstico de estudo eletrofisiológico, com intervalo HV basal alargado como substrato). Rastreio genético e familiar é indicado em sobreviventes de MSC e em suspeita de cardiomiopatia arritmogênica ou canalopatia hereditária."
+    },
+    "differentials": [
+      "Taquicardia supraventricular com condução aberrante ou bloqueio de ramo preexistente — mimetiza taquicardia de QRS largo; por segurança, é tratada como TV até que o diagnóstico esteja seguramente estabelecido",
+      "Taquicardia antidrômica ou fibrilação atrial pré-excitada em síndrome de Wolff-Parkinson-White — QRS largo por condução pela via acessória, com contraindicação específica a fármacos bloqueadores do nó AV",
+      "Canalopatia hereditária primária (síndrome do QT longo congênito, síndrome de Brugada, taquicardia ventricular polimórfica catecolaminérgica) como diferencial etiológico quando a arritmia ventricular ocorre em coração estruturalmente normal e sem gatilho adquirido identificável — entidades com hub clínico próprio, não cobertas em profundidade aqui",
+      "Ritmo idioventricular acelerado — ritmo ventricular ectópico benigno e autolimitado, frequentemente confundido com TV verdadeira pela morfologia de QRS largo, mas distinto por frequência, comportamento e resposta à manobra vagal",
+      "Intoxicação digitálica — pode produzir extrassistolia ventricular, RIVA, TV bidirecional ou outras arritmias ventriculares por mecanismo tóxico distinto, exigindo abordagem terapêutica específica",
+      "Hipercalemia grave — alargamento de QRS e ritmos de escape que podem simular taquicardia ventricular ou bloqueio de condução, corrigível pelo tratamento do distúrbio eletrolítico de base",
+      "Artefato de monitorização ou de eletrodo — pode mimetizar taquicardia ventricular polimórfica ou salvas de extrassistolia no monitor contínuo, sobretudo em ambiente de terapia intensiva; a conduta de segurança ainda assim é investigar com traçado completo antes de descartar"
+    ],
+    "tests": [
+      "ECG de 12 derivações durante o episódio de taquicardia — permite aplicar critérios de dissociação atrioventricular, batimentos de captura/fusão e concordância precordial; limitação: nenhum critério isolado tem sensibilidade e especificidade perfeitas, e a ausência de critérios clássicos não exclui TV, por isso a regra prática permanece tratar como TV na dúvida",
+      "Holter de 24 a 48 horas com quantificação da carga de extrassístole ventricular — orienta a decisão de investigar cardiomiopatia induzida (corte de referência acima de 24%, com casos reversíveis já descritos a partir de 10%); limitação: a carga tem variabilidade dia a dia e não substitui a avaliação de função ventricular por imagem",
+      "Ecocardiograma transtorácico — avalia FEVE, dimensões e alterações estruturais regionais de ventrículo direito e esquerdo; limitação: pode ser normal em fase inicial de cardiomiopatia induzida por PVC ou no fenótipo predominantemente de ventrículo direito leve da cardiomiopatia arritmogênica, exigindo reavaliação seriada",
+      "Ressonância magnética cardíaca com realce tardio — caracteriza fibrose/substrato cicatricial, distingue padrão subendocárdico (isquêmico) de padrão predominantemente epicárdico/médio-parietal (não isquêmico/chagásico) e contribui para os Critérios de Padua 2020; limitação: disponibilidade limitada em muitos serviços, contraindicações relativas (dispositivos antigos não condicionais, claustrofobia) e necessidade de comparação a nomogramas específicos do método, não a um valor numérico único",
+      "Estudo eletrofisiológico invasivo — necessário para diagnosticar taquicardia ventricular por reentrada de ramo (demonstração de que a ativação do sistema His-Purkinje precede e determina a ativação ventricular) e para guiar ablação nas formas fascicular, de trato de saída e por cicatriz; limitação: procedimento invasivo, não indicado como triagem inicial de rotina",
+      "Escore de Tisdale aplicado à admissão hospitalar — estratifica risco de prolongamento de QTc em paciente internado; limitação: validado em unidade de cuidado cardíaco de centro único, não é escore de probabilidade de torsades de pointes nem orienta o tratamento do evento agudo, e não deve ser extrapolado sem crítica para ambulatório ou pediatria",
+      "Manobra vagal à beira do leito (compressão do seio carotídeo ou elevação de pernas em decúbito) como teste diagnóstico informal — ajuda a diferenciar RIVA (que tende a emergir com a manobra) de TV verdadeira e a reverter algumas taquicardias supraventriculares; limitação: não substitui o traçado eletrocardiográfico completo nem afasta TV com segurança quando negativa"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica durante taquicardia de QRS largo (hipotensão, choque, congestão pulmonar aguda, isquemia atribuível à arritmia) — indica cardioversão elétrica sincronizada imediata, sem aguardar diagnóstico definitivo",
+      "Taquicardia ventricular polimórfica sustentada — indica choque elétrico NÃO sincronizado imediato, independentemente de haver pulso palpável, sem atraso para sincronização, coleta de eletrólitos ou administração de magnésio",
+      "QTc acima de 500 ms, sobretudo associado a bradicardia — marcador de risco elevado para torsades de pointes",
+      "Síncope inexplicada, principalmente de esforço ou sem pródromo, em paciente com cardiopatia estrutural conhecida, ECG sugestivo de canalopatia ou cardiomiopatia arritmogênica, ou história familiar de morte súbita",
+      "Tempestade elétrica — múltiplos episódios de TV/FV ou terapias apropriadas de CDI em curto intervalo — exige investigação ativa de gatilho, suporte especializado e reavaliação de terapia antiarrítmica e do dispositivo",
+      "Disfunção ventricular nova ou progressiva associada a carga elevada de extrassístole ventricular, sem outra causa de cardiomiopatia identificada — sinaliza cardiomiopatia induzida por PVC potencialmente reversível com tratamento direcionado",
+      "Morte súbita ou síncope inexplicada em parente de primeiro grau com menos de 35 anos — indicação de rastreio familiar em cascata para cardiomiopatia arritmogênica ou canalopatia hereditária",
+      "Taquicardia irregular de QRS largo em paciente com pré-excitação (Wolff-Parkinson-White) — risco de degeneração para fibrilação ventricular por condução acelerada pela via acessória; fármacos bloqueadores do nó atrioventricular são contraindicados nesse cenário"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar o tipo de arritmia ventricular (idiopática vs. associada a cardiopatia estrutural) antes de definir a via de tratamento eletiva",
+      "Investigar e documentar cardiopatia estrutural de base com ecocardiograma e, quando indicado, imagem avançada, antes de encaminhar para ablação",
+      "Encaminhar para ablação por cateter as formas idiopáticas sintomáticas do trato de saída, fasciculares ou por reentrada de ramo, sem reservar o procedimento apenas para falha de fármaco",
+      "Discutir ablação de TV em centro especializado quando houver cardiopatia estrutural com TV recorrente, considerando também o momento do encaminhamento e não só a indicação",
+      "Revisar todos os fármacos em uso para identificar e retirar agentes QT-prolongadores evitáveis, sobretudo em quem já teve QT longo ou torsades",
+      "Reavaliar indicação de cardiodesfibrilador implantável conforme etiologia, função ventricular e risco de morte súbita, de forma independente do controle da arritmia",
+      "Considerar radioablação estereotáxica apenas após esgotar ou excluir candidatura à ablação por cateter, comunicando ao paciente que a evidência comparativa entre as duas ainda é limitada",
+      "Evitar iniciar antiarrítmico apenas para suprimir extrassístole assintomática sem tratar a doença de base ou avaliar a necessidade real de intervenção"
+    ],
+    "emergency_flow": [
+      "Na TV polimórfica sustentada com ou sem pulso, aplicar choque não sincronizado imediato, sem atrasar para checar eletrólitos ou administrar magnésio",
+      "Na torsades de pointes recorrente, corrigir hipocalemia, hipomagnesemia e hipocalcemia e suspender fármacos QT-prolongadores em paralelo à estabilização elétrica",
+      "Na tempestade elétrica (múltiplos episódios de TV/FV ou choques apropriados do CDI em curto intervalo), tratar em ambiente monitorizado, buscando e corrigindo gatilho isquêmico, eletrolítico, farmacológico ou de programação de dispositivo",
+      "Na TV sustentada monomórfica com instabilidade hemodinâmica, priorizar cardioversão/desfibrilação conforme protocolo, sem aguardar caracterização completa da cardiopatia de base",
+      "Considerar overdrive pacing ou isoproterenol em infusão titulada, sob supervisão especializada, para torsades recorrente e pausa-dependente refratária às medidas iniciais",
+      "Encaminhar para avaliação de ablação em centro especializado, incluindo acesso epicárdico quando aplicável, quem mantém TV recorrente ou tempestade elétrica apesar de otimização inicial"
+    ],
+    "treatment_summary": "O tratamento das arritmias ventriculares e da morte súbita cardíaca separa duas urgências distintas: a torsades de pointes/TV polimórfica aguda, que exige ação imediata em ambiente monitorizado, e a TV monomórfica recorrente, cuja solução definitiva é cada vez mais um procedimento e não um fármaco crônico. Na torsades de pointes com instabilidade, o choque não sincronizado imediato precede qualquer manobra farmacológica, porque a morfologia variável do QRS torna a sincronização com a onda R pouco confiável. Em paralelo, corrige-se o substrato reversível: hipocalemia, hipomagnesemia e hipocalcemia, e retirada de fármacos que prolongam o QT sempre que clinicamente possível — antiarrítmicos de classe IA e III, alguns macrolídeos, antipsicóticos, antieméticos e outras classes QT-prolongadoras entram nessa revisão, sem que a dose de nenhum deles seja o ponto central da decisão, e sim a suspensão ou substituição do agente causal. O sulfato de magnésio intravenoso tem papel sobretudo na prevenção de recorrência associada a QT longo, com evidência baseada principalmente em séries de casos; overdrive pacing ou isoproterenol em infusão titulada, sob supervisão especializada, são reservados para a forma recorrente e pausa-dependente do QT longo adquirido. A TV polimórfica com QT normal segue outro caminho: tratar a causa, tipicamente isquemia, sem magnésio de rotina. Para a TV monomórfica idiopática — trato de saída, fascicular de Belhassen ou por reentrada de ramo —, a ablação por cateter tem alta taxa de sucesso e hoje é terapia de primeira linha nas formas sintomáticas em coração estruturalmente normal, com resultado curativo em boa parte dos casos e, na reentrada de ramo, cura eletrofisiológica ao interromper um único alvo. Quando há cardiopatia estrutural de base — isquêmica, chagásica ou não isquêmica —, a ablação de TV é opção estabelecida em centro especializado, ampliando-se cada vez mais também como estratégia inicial e não só como resgate após falha de antiarrítmico ou choque de CDI; na cardiomiopatia chagásica e em outras cardiomiopatias não isquêmicas, o substrato costuma exigir também acesso epicárdico, planejado desde o início e não como plano B. A radioablação cardíaca estereotáxica é uma opção não invasiva emergente para TV refratária, reservada a quem já esgotou ou não é mais candidato à ablação por cateter, com evidência ainda limitada a séries pequenas e um primeiro ensaio randomizado interrompido precocemente que não confirma superioridade sobre a reablação convencional. Um princípio atravessa todas essas decisões e não deve ser esquecido: suprimir a extrassístole ventricular farmacologicamente, sem tratar a causa de base, pode ser prejudicial. O CAST mostrou que antiarrítmicos de classe IC, mesmo suprimindo eficazmente a ectopia pós-infarto, aumentaram a mortalidade; o SWORD repetiu a lição com um bloqueador puro de canal de potássio. A extrassístole é marcador de risco, não o próprio risco, e tratá-la como alvo terapêutico isolado — sem abordar isquemia, função ventricular ou a indicação de dispositivo — pode fazer mais mal do que bem.",
+    "monitoring": [
+      "Recorrência de TV sustentada, tempestade elétrica ou choques apropriados do CDI",
+      "QTc seriado e eletrólitos (potássio, magnésio, cálcio) em quem usa fármaco QT-prolongador ou já teve torsades",
+      "Função ventricular esquerda, sobretudo em carga alta de extrassistolia, pelo risco de cardiomiopatia induzida por ectopia",
+      "Adesão à retirada de fármacos QT-prolongadores evitáveis e reavaliação de interações medicamentosas ao longo do seguimento",
+      "Resultado e recorrência após ablação por cateter, incluindo necessidade de novo procedimento nas formas com cicatriz",
+      "Necessidade de dispositivo (marca-passo ou CDI) após ablação de alvos que dependem do sistema de condução, como a reentrada de ramo",
+      "Qualidade de vida, sintomas e impacto psicológico em sobreviventes de morte súbita ou tempestade elétrica"
+    ],
+    "special_populations": [
+      "Cardiomiopatia arritmogênica de ventrículo direito (ou biventricular) com indicação de restrição de exercício: volume e intensidade de treino aceleram a progressão do substrato fibrogorduroso e o risco arrítmico de forma dose-dependente, independentemente do genótipo identificado; a restrição de exercício de alta intensidade é parte central do tratamento — não apenas uma recomendação genérica de cuidado — e a decisão sobre retorno ao esporte competitivo deve ser compartilhada, documentada e reavaliada periodicamente.",
+      "Cardiopatia chagásica crônica com taquicardia ventricular sustentada: a estratificação de risco de morte súbita usa o Escore de Rassi combinado à fração de ejeção do ventrículo esquerdo e à presença de TV não sustentada no Holter, com critérios de indicação de CDI que seguem diretriz brasileira específica (DCEI 2023) — distintos dos validados para cardiomiopatia isquêmica ou não isquêmica de outras etiologias; a ablação costuma exigir acesso epicárdico pelo substrato predominantemente subepicárdico da doença de Chagas.",
+      "Atleta com extrassistolia ventricular frequente: a maioria dos casos é benigna e não deve gerar restrição automática, mas carga elevada de extrassístoles — sobretudo com origem fora da via de saída típica, acoplamento curto ou formas polimórficas — exige investigação para cardiomiopatia induzida por extrassístole ou cardiomiopatia arritmogênica subjacente antes de liberar para esporte competitivo; suspensão temporária do treino de alta intensidade com reavaliação do Holter integra o próprio algoritmo diagnóstico, não apenas o manejo definitivo.",
+      "Mulher com QT longo adquirido: o risco de torsades de pointes é maior em mulheres do que em homens para o mesmo fármaco ou o mesmo grau de distúrbio eletrolítico, sobretudo na fase periovulatória/lútea e após a menopausa; hipocalemia e hipomagnesemia concomitantes amplificam esse risco sexo-específico, e a estratificação à beira do leito (por exemplo, com o escore de Tisdale) deve considerar o sexo feminino como fator de risco independente antes de introduzir ou manter qualquer fármaco com potencial de prolongar o QT.",
+      "Gestante ou puérpera com cardiomiopatia estrutural e risco de arritmia ventricular (chagásica, arritmogênica de ventrículo direito ou não compactada): o puerpério concentra risco arrítmico aumentado por sobrecarga hemodinâmica residual, labilidade autonômica e, com frequência, suspensão inadvertida do betabloqueador durante a amamentação; o seguimento cardiológico deve se intensificar nas primeiras semanas pós-parto, não se encerrar no parto.",
+      "Paciente com CDI e tempestade elétrica (três ou mais choques apropriados em 24 horas): configura emergência que exige internação, otimização do tratamento antiarrítmico de base, investigação de isquemia ou descompensação como gatilho reversível e, quando refratária, encaminhamento para ablação de TV ou radioablação estereotáxica; o impacto psicológico dos choques recorrentes (ansiedade antecipatória, evitação de atividade física) deve ser ativamente rastreado e tratado, não apenas o componente elétrico."
+    ],
+    "assistant_questions": [
+      {
+        "id": "prior_syncope_or_cardiac_arrest",
+        "label": "Há história de síncope inexplicada ou parada cardíaca prévia relacionada a arritmia ventricular?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "current_hemodynamic_instability",
+        "label": "Há instabilidade hemodinâmica associada ao episódio atual de arritmia ventricular?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "electrical_storm",
+        "label": "Há tempestade elétrica (múltiplos episódios de TV/FV ou choques apropriados do CDI em curto intervalo)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "sustained_vt_pattern",
+        "label": "Qual o padrão de TV sustentada já documentado neste paciente?",
+        "type": "select",
+        "required": true,
+        "section": "Caracterização",
+        "options": [
+          {
+            "value": "nenhuma_documentada",
+            "label": "Nenhuma TV sustentada documentada"
+          },
+          {
+            "value": "monomorfica_coracao_normal",
+            "label": "Monomórfica, coração estruturalmente normal"
+          },
+          {
+            "value": "monomorfica_cardiopatia_estrutural",
+            "label": "Monomórfica, com cardiopatia estrutural conhecida"
+          },
+          {
+            "value": "polimorfica_torsades",
+            "label": "Polimórfica, associada a QT longo (torsades de pointes)"
+          },
+          {
+            "value": "polimorfica_qt_normal",
+            "label": "Polimórfica, com QT normal"
+          }
+        ]
+      },
+      {
+        "id": "known_structural_heart_disease",
+        "label": "Há cardiopatia estrutural de base conhecida?",
+        "type": "select",
+        "required": true,
+        "section": "Caracterização",
+        "options": [
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma identificada até o momento"
+          },
+          {
+            "value": "isquemica",
+            "label": "Cardiopatia isquêmica"
+          },
+          {
+            "value": "chagasica",
+            "label": "Cardiomiopatia chagásica"
+          },
+          {
+            "value": "nao_isquemica_outra",
+            "label": "Cardiomiopatia não isquêmica de outra etiologia"
+          },
+          {
+            "value": "nao_investigada",
+            "label": "Ainda não investigada"
+          }
+        ]
+      },
+      {
+        "id": "documented_pvc_burden",
+        "label": "Há carga de extrassistolia ventricular documentada em Holter ou monitorização prolongada?",
+        "type": "select",
+        "required": true,
+        "section": "Caracterização",
+        "options": [
+          {
+            "value": "nao_quantificada",
+            "label": "Não quantificada"
+          },
+          {
+            "value": "baixa",
+            "label": "Baixa carga"
+          },
+          {
+            "value": "alta",
+            "label": "Alta carga, com potencial de cardiomiopatia induzida"
+          }
+        ]
+      },
+      {
+        "id": "qt_prolonging_drug_use",
+        "label": "O paciente está em uso de fármaco(s) da classe de agentes que prolongam o intervalo QT?",
+        "type": "boolean",
+        "required": true,
+        "section": "Farmacoterapia"
+      },
+      {
+        "id": "asymptomatic_pvc_only",
+        "label": "O achado é extrassistolia ventricular assintomática ou levemente sintomática, sem TV sustentada documentada?",
+        "type": "boolean",
+        "section": "Caracterização"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "avc-tv-instavel-ou-torsades",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "current_hemodynamic_instability",
+              "op": "truthy"
+            },
+            {
+              "field": "sustained_vt_pattern",
+              "op": "eq",
+              "value": "polimorfica_torsades"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "TV polimórfica sustentada ou instabilidade hemodinâmica exige choque não sincronizado imediato"
+          ],
+          "emergency_flow": [
+            "Aplicar choque não sincronizado imediato sem atrasar para checar eletrólitos ou administrar magnésio"
+          ]
+        }
+      },
+      {
+        "id": "avc-tempestade-eletrica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "electrical_storm",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Tempestade elétrica com múltiplos episódios de TV/FV ou choques apropriados em curto intervalo"
+          ],
+          "emergency_flow": [
+            "Tratar em ambiente monitorizado e buscar gatilho isquêmico, eletrolítico, farmacológico ou de dispositivo"
+          ],
+          "suggested_tests": [
+            "ECG, eletrólitos e avaliação de isquemia como parte da busca ativa por gatilho"
+          ]
+        }
+      },
+      {
+        "id": "avc-parada-ou-sincope-previa",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "prior_syncope_or_cardiac_arrest",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Síncope inexplicada ou parada cardíaca prévia associada a arritmia ventricular"
+          ],
+          "differentials": [
+            "Causa estrutural, isquêmica ou canalopatia como origem da arritmia ventricular"
+          ],
+          "suggested_tests": [
+            "Investigação etiológica dirigida e avaliação de indicação de cardiodesfibrilador implantável"
+          ]
+        }
+      },
+      {
+        "id": "avc-tv-estrutural-recorrente",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "sustained_vt_pattern",
+              "op": "eq",
+              "value": "monomorfica_cardiopatia_estrutural"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Discutir ablação de TV em centro especializado, incluindo possibilidade de acesso epicárdico conforme etiologia"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação de ablação de TV em centro especializado, considerando o momento do encaminhamento e não só a falha de antiarrítmico"
+          ]
+        }
+      },
+      {
+        "id": "avc-chagasica-substrato-epicardico",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "known_structural_heart_disease",
+              "op": "eq",
+              "value": "chagasica"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Antecipar no planejamento a possibilidade de acesso epicárdico, dado o predomínio de substrato epicárdico na cardiomiopatia chagásica"
+          ]
+        }
+      },
+      {
+        "id": "avc-qt-prolongador-em-uso",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "qt_prolonging_drug_use",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Uso de fármaco QT-prolongador em paciente com risco de arritmia ventricular"
+          ],
+          "missing_information": [
+            "QTc atual e eletrólitos (potássio, magnésio, cálcio)"
+          ],
+          "messages": [
+            "Revisar a necessidade do fármaco QT-prolongador e considerar substituição ou suspensão quando clinicamente possível"
+          ]
+        }
+      },
+      {
+        "id": "avc-tv-idiopatica-primeira-linha",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "sustained_vt_pattern",
+              "op": "eq",
+              "value": "monomorfica_coracao_normal"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Considerar ablação por cateter como terapia de primeira linha, não apenas após falha de antiarrítmico"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para ablação por cateter da forma idiopática identificada (trato de saída, fascicular ou reentrada de ramo)"
+          ]
+        }
+      },
+      {
+        "id": "avc-extrassistolia-assintomatica-sem-supressao-isolada",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "asymptomatic_pvc_only",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Extrassistolia ventricular assintomática pós-infarto não é indicação de antiarrítmico apenas para suprimir a arritmia"
+          ],
+          "messages": [
+            "Avaliar carga de extrassistolia e função ventricular antes de qualquer decisão terapêutica; não tratar a ectopia isoladamente como alvo"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "taquicardia ventricular",
+      "morte súbita cardíaca",
+      "cardiomiopatia arritmogênica",
+      "torsades de pointes",
+      "ablação de TV",
+      "CAST",
+      "SWORD"
+    ],
+    "source_refs": [
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572",
+      "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884",
+      "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425",
+      "Ortiz M, Martín A, Arribas F, et al. Randomized comparison of intravenous procainamide vs. intravenous amiodarone for the acute treatment of tolerated wide QRS tachycardia: the PROCAMIO study. Eur Heart J. 2017;38(17):1329-1335. PMID: 27354046",
+      "Sapp JL, Wells GA, Parkash R, et al. Ventricular Tachycardia Ablation versus Escalation of Antiarrhythmic Drugs. N Engl J Med. 2016;375(2):111-121. DOI: 10.1056/NEJMoa1513614. PMID: 27149033",
+      "Sapp JL, Tang ASL, Parkash R, et al. Catheter Ablation or Antiarrhythmic Drugs for Ventricular Tachycardia. N Engl J Med. 2025;392(8):737-747. DOI: 10.1056/NEJMoa2409501. PMID: 39555820",
+      "Arenal Á, Ávila P, Jiménez-Candil J, et al. Substrate Ablation vs Antiarrhythmic Drug Therapy for Symptomatic Ventricular Tachycardia. J Am Coll Cardiol. 2022;79(15):1441-1453. DOI: 10.1016/j.jacc.2022.01.050. PMID: 35422240",
+      "Della Bella P, Baratto F, Vergara P, et al. Does Timing of Ventricular Tachycardia Ablation Affect Prognosis in Patients With an Implantable Cardioverter Defibrillator? Results From the Multicenter Randomized PARTITA Trial. Circulation. 2022;145(25):1829-1838. DOI: 10.1161/CIRCULATIONAHA.122.059598. PMID: 35369700",
+      "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. DOI: 10.1016/j.hrthm.2010.03.036. PMID: 20348027",
+      "Olgun H, Yokokawa M, Baman T, et al. The role of interpolation in PVC-induced cardiomyopathy. Heart Rhythm. 2011;8(7):1046-1049. DOI: 10.1016/j.hrthm.2011.02.034. PMID: 21376837",
+      "Cronin EM, Bogun FM, Maury P, et al. 2019 HRS/EHRA/APHRS/LAHRS expert consensus statement on catheter ablation of ventricular arrhythmias: Executive summary. J Arrhythm. 2020;36(1):1-58. DOI: 10.1002/joa3.12264. PMID: 32071620",
+      "Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032",
+      "Gangwani MK, Nagalli S. Idioventricular Rhythm. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026. PMID: 32119407",
+      "Six AJ, Louwerenburg JH, Kingma JH, Robles de Medina EO, van Hemel NM. Predictive value of ventricular arrhythmias for patency of the infarct-related coronary artery after thrombolytic therapy. Br Heart J. 1991;66(2):143-146. DOI: 10.1136/hrt.66.2.143. PMID: 1883665",
+      "Cardiac Arrhythmia Suppression Trial (CAST) Investigators. Preliminary report: effect of encainide and flecainide on mortality in a randomized trial of arrhythmia suppression after myocardial infarction. N Engl J Med. 1989;321(6):406-412. DOI: 10.1056/NEJM198908103210629. PMID: 2473403",
+      "Waldo AL, Camm AJ, deRuyter H, et al. Effect of d-sotalol on mortality in patients with left ventricular dysfunction after recent and remote myocardial infarction (SWORD). Lancet. 1996;348(9019):7-12. DOI: 10.1016/s0140-6736(96)02149-6. PMID: 8691967",
+      "Nogami A, Naito S, Tada H, et al. Demonstration of diastolic and presystolic Purkinje potentials as critical potentials in a macroreentry circuit of verapamil-sensitive idiopathic left ventricular tachycardia. J Am Coll Cardiol. 2000;36(3):811-823. DOI: 10.1016/s0735-1097(00)00780-4. PMID: 10987604",
+      "Creta A, Chow AW, Sporton S, et al. Catheter ablation for fascicular ventricular tachycardia: A systematic review. Int J Cardiol. 2019;276:136-148. DOI: 10.1016/j.ijcard.2018.10.080. PMID: 30463682",
+      "Amadis MR, Higa S, Lin CY, et al. Reappraisal of the clinical and anatomic characteristics of idiopathic outflow tract ventricular arrhythmias with an R wave pattern break in precordial lead. Int J Cardiol Heart Vasc. 2025;58:101664. DOI: 10.1016/j.ijcha.2025.101664. PMID: 40213414",
+      "Blanck Z, Dhala A, Deshpande S, et al. Bundle branch reentrant ventricular tachycardia: cumulative experience in 48 patients. J Cardiovasc Electrophysiol. 1993;4(3):253-262. DOI: 10.1111/j.1540-8167.1993.tb01228.x. PMID: 8269297",
+      "Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: proposed modification of the Task Force Criteria. Eur Heart J. 2010;31(7):806-814. DOI: 10.1093/eurheartj/ehq025. PMID: 20172912",
+      "Corrado D, Perazzolo Marra M, Zorzi A, et al. Diagnosis of arrhythmogenic cardiomyopathy: The Padua criteria. Int J Cardiol. 2020;319:106-114. DOI: 10.1016/j.ijcard.2020.06.005. PMID: 32561223",
+      "Soto-Becerra R, Bazan V, Bautista W, et al. Ventricular Tachycardia in the Setting of Chagasic Cardiomyopathy: Use of Voltage Mapping to Characterize Endoepicardial Nonischemic Scar Distribution. Circ Arrhythm Electrophysiol. 2017;10(11):e004950. DOI: 10.1161/CIRCEP.116.004950. PMID: 29133379"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://pubmed.ncbi.nlm.nih.gov/41122884/",
+      "https://pubmed.ncbi.nlm.nih.gov/31504425/",
+      "https://pubmed.ncbi.nlm.nih.gov/27354046/",
+      "https://pubmed.ncbi.nlm.nih.gov/27149033/",
+      "https://pubmed.ncbi.nlm.nih.gov/39555820/",
+      "https://pubmed.ncbi.nlm.nih.gov/35422240/",
+      "https://pubmed.ncbi.nlm.nih.gov/35369700/",
+      "https://pubmed.ncbi.nlm.nih.gov/20348027/",
+      "https://pubmed.ncbi.nlm.nih.gov/21376837/",
+      "https://pubmed.ncbi.nlm.nih.gov/32071620/",
+      "https://pubmed.ncbi.nlm.nih.gov/23716032/",
+      "https://pubmed.ncbi.nlm.nih.gov/32119407/",
+      "https://pubmed.ncbi.nlm.nih.gov/1883665/",
+      "https://pubmed.ncbi.nlm.nih.gov/2473403/",
+      "https://pubmed.ncbi.nlm.nih.gov/8691967/",
+      "https://pubmed.ncbi.nlm.nih.gov/10987604/",
+      "https://pubmed.ncbi.nlm.nih.gov/30463682/",
+      "https://pubmed.ncbi.nlm.nih.gov/40213414/",
+      "https://pubmed.ncbi.nlm.nih.gov/8269297/",
+      "https://pubmed.ncbi.nlm.nih.gov/20172912/",
+      "https://pubmed.ncbi.nlm.nih.gov/32561223/",
+      "https://pubmed.ncbi.nlm.nih.gov/29133379/"
+    ],
+    "related_document_slugs": [
+      "ablacao-de-taquicardia-ventricular-na-cardiopatia-isquemica-quando-encaminhar",
+      "ablacao-epicardica-de-taquicardia-ventricular-na-cardiomiopatia-chagasica-e-nao-isquemica",
+      "ablacao-por-campo-pulsado-em-taquicardia-ventricular-e-extrassistole-idiopatica",
+      "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
+      "calculadora-de-risco-da-cardiomiopatia-arritmogenica-desempenho-por-genotipo",
+      "extrassistole-ventricular-frequente-e-cardiomiopatia-induzida-carga-que-preve-disfuncao",
+      "fluxograma-arritmia-ventricular-e-morte-subita",
+      "fluxograma-extrassistole-ventricular-frequente-cardiomiopatia-induzida-e-indicacao-de-ablacao",
+      "fluxograma-taquicardia-de-qrs-largo-esc-2019",
+      "fluxograma-torsades-de-pointes-e-qt-longo-adquirido",
+      "radioablacao-cardiaca-estereotaxica-star-para-taquicardia-ventricular-refrataria",
+      "restricao-de-exercicio-na-cardiomiopatia-arritmogenica-de-ventriculo-direito-dose-resposta-e-mecanismo",
+      "ritmo-idioventricular-acelerado-riva-significado-clinico-e-diagnostico-diferencial-com-tv",
+      "suprimir-extrassistole-nao-e-tratar-o-paciente-cast-e-sword",
+      "taquicardia-ventricular-fascicular-belhassen-diagnostico-resposta-ao-verapamil-e-ablacao",
+      "taquicardia-ventricular-idiopatica-do-trato-de-saida-diagnostico-e-ablacao",
+      "taquicardia-ventricular-por-reentrada-de-ramo-diagnostico-ablacao-do-ramo-direito-e-resultado",
+      "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+      "cardiomiopatia-arritmogenica-criterios-de-padua-2020-e-task-force-revisada-de-2010",
+      "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+      "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi",
+      "cdi-extravascular-ev-icd-estudo-pivotal-e-seguimento-de-longo-prazo",
+      "morte-subita-cardiaca-no-atleta-triagem-causas-arritmogenicas-e-eletrofisiologia-esportiva",
+      "extrassistoles-e-arritmias-ventriculares-no-atleta",
+      "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+      "decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — vigésimo ciclo do dia. Nenhum verbete geral de arritmias ventriculares e morte súbita cardíaca existia previamente no corpus — content/Arritmias/ tinha 54 documentos, apenas 1 coberto, e após somar as adições pendentes dos hubs em PR aberto taquicardia-supraventricular (PR #581) e canalopatias-cardiacas-hereditarias (PR #585), sobrava um cluster coerente de arritmias ventriculares/cardiomiopatia arritmogênica/morte súbita sem nenhum verbete. Cobre TV idiopática (trato de saída, fascicular, reentrada de ramo), TV na cardiopatia estrutural (isquêmica, chagásica, não isquêmica), cardiomiopatia arritmogênica de ventrículo direito, RIVA, torsades de pointes/QT longo adquirido e o princípio CAST/SWORD. NÃO cobre canalopatias hereditárias primárias nem TSV (hubs próprios). Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 23 referências citadas (diretriz ESC 2022 de arritmia ventricular/morte súbita, diretriz ESC 2019 de taquicardia de QRS largo, critérios de Padua 2020 para cardiomiopatia arritmogênica, CAST, SWORD, entre outras). related_document_slugs conta com 26 documentos — 18 do núcleo pré-selecionado mais 9 encontrados por busca ampla (cardiomiopatia arritmogênica critérios de Padua, CDI fundamentos, escore de Rassi/Chagas, CDI extravascular, morte súbita/extrassistolia/cardiomiopatia arritmogênica no atleta, decisão compartilhada de retorno ao esporte), menos 1 documento (parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019) removido na montagem por já pertencer integralmente ao hub existente parada-cardiorrespiratoria-e-morte-subita-abortada, sobreposição não detectada pelo agente de pesquisa. Todos os 26 documentos finais verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames, e sem sobreposição com os hubs canalopatias-cardiacas-hereditarias e taquicardia-supraventricular (PRs abertos, verificado lendo os related_document_slugs completos de ambos). Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos PRs abertos cria o slug arritmias-ventriculares-e-morte-subita-cardiaca. Nenhuma dose de fármaco foi incluída em nenhum campo. Nenhum material de paciente genuinamente geral sobre arritmia ventricular/morte súbita foi encontrado (patient_material_slug: null). Estrutura de perguntas e regras validada com o motor de regras real (clinical_rule_engine) antes da montagem. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
   }
 ]
