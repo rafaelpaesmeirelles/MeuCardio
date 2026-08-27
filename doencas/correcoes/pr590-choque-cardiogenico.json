@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "choque-cardiogenico",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica dirigida concluída em 27/08/2026: corrigidos choque normotensivo, separação de complicação mecânica pós-IAM, escalonamento seletivo de tMCS conforme suporte já instalado/fenótipo, otimização de preload na falência de VD e linguagem de vasopressores; fontes terapêuticas primárias acrescentadas. Publicação autorizada pelo responsável médico em 27/08/2026."
+    },
+    "append": {
+      "source_refs": [
+        "Mathew R, Di Santo P, Jung RG, et al. Milrinone as Compared with Dobutamine in the Treatment of Cardiogenic Shock (DOREMI). N Engl J Med. 2021;385:516-525. DOI: 10.1056/NEJMoa2026845. PMID: 34347952.",
+        "Thiele H, Zeymer U, Neumann FJ, et al. Intraaortic Balloon Support for Myocardial Infarction with Cardiogenic Shock (IABP-SHOCK II). N Engl J Med. 2012;367:1287-1296. DOI: 10.1056/NEJMoa1208410. PMID: 22920912.",
+        "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock (DanGer-Shock). N Engl J Med. 2024;390:1382-1393. DOI: 10.1056/NEJMoa2312572. PMID: 38587239.",
+        "Thiele H, Zeymer U, Akin I, et al. Extracorporeal Life Support in Infarct-Related Cardiogenic Shock (ECLS-SHOCK). N Engl J Med. 2023;389:1286-1297. DOI: 10.1056/NEJMoa2307227. PMID: 37634145.",
+        "Combes A, et al. Levosimendan to Facilitate Weaning From VA-ECMO in Cardiogenic Shock (LEVOECMO). JAMA. 2026;335:60-69. DOI: 10.1001/jama.2025.19843. PMID: 41324946."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34347952/",
+        "https://pubmed.ncbi.nlm.nih.gov/22920912/",
+        "https://pubmed.ncbi.nlm.nih.gov/38587239/",
+        "https://pubmed.ncbi.nlm.nih.gov/37634145/",
+        "https://pubmed.ncbi.nlm.nih.gov/41324946/"
+      ]
+    },
+    "replace": [
+      {
+        "old": "Hipotensão arterial sistêmica (PAS < 90 mmHg, PAM < 60 mmHg ou queda > 30 mmHg em relação à pressão basal), muitas vezes já sob suporte vasoativo no momento da avaliação",
+        "new": "Hipotensão pode estar presente, mas sua ausência não exclui choque cardiogênico: hipoperfusão pode persistir com pressão preservada ou mantida por suporte vasoativo; interpretar pressão e perfusão separadamente."
+      },
+      {
+        "old": "com padrão hemodinâmico e resposta a volume opostos ao choque cardiogênico esquerdo — reconhecer essa etiologia muda a conduta de forma contraintuitiva (restringir, não expandir, volume)",
+        "new": "com padrão hemodinâmico distinto do choque cardiogênico esquerdo — reconhecer essa etiologia exige otimizar preload de forma individualizada, evitando tanto expansão reflexa quanto restrição reflexa sem avaliar congestão e pressões de enchimento"
+      },
+      {
+        "old": "Sinais de falência de ventrículo direito associada (turgência jugular marcada, hepatomegalia dolorosa, sinal de Kussmaul) — muda a conduta de forma contraintuitiva (restringir volume) e pode indicar componente misto ou obstrutivo concomitante",
+        "new": "Sinais de falência de ventrículo direito associada (turgência jugular marcada, hepatomegalia dolorosa, sinal de Kussmaul) — exigem avaliação de congestão e preload; não autorizam expansão nem restrição de volume por reflexo e podem indicar componente misto ou obstrutivo concomitante"
+      },
+      {
+        "old": "O suporte circulatório mecânico é indicado de forma escalonada conforme o estágio SCAI (A a E) e a resposta à otimização volêmica e farmacológica inicial",
+        "new": "O suporte circulatório mecânico temporário deve ser considerado seletivamente conforme etiologia, fenótipo hemodinâmico, estágio e trajetória SCAI, resposta ao tratamento inicial, suporte já instalado e objetivo terapêutico; o estágio SCAI isolado não seleciona dispositivo"
+      },
+      {
+        "old": "Em vasoplegia refratária à noradrenalina, vasopressina é o vasopressor adjuvante de segunda linha preferido.",
+        "new": "Em vasoplegia refratária, um vasopressor não catecolaminérgico como vasopressina pode ser considerado como adjuvante conforme fenótipo, resposta e protocolo da unidade; não há hierarquia universal que a torne segunda linha obrigatória em todo choque misto."
+      }
+    ],
+    "assistant_questions": {
+      "hypoperfusion_signs": {
+        "label": "Há sinais de hipoperfusão tecidual (extremidades frias, oligúria, alteração do estado mental ou lactato elevado), independentemente da pressão arterial?"
+      },
+      "shock_etiology": {
+        "options": [
+          {"value": "isquemica_iam", "label": "Isquêmica — infarto agudo do miocárdio sem complicação mecânica identificada"},
+          {"value": "complicacao_mecanica_pos_iam", "label": "Complicação mecânica pós-IAM (CIV, insuficiência mitral aguda/papilar, ruptura de parede livre ou outra)"},
+          {"value": "nao_isquemica", "label": "Não isquêmica (miocardiopatia, miocardite, valvopatia, arritmia)"},
+          {"value": "pos_cardiotomia", "label": "Pós-cirurgia cardíaca (pós-cardiotomia)"},
+          {"value": "indeterminada", "label": "Indeterminada/em investigação"}
+        ]
+      }
+    },
+    "assistant_rules": {
+      "choque-cardiogenico-refratario-deterioracao": {
+        "when": {
+          "all": [
+            {"field": "deterioration_despite_support", "op": "truthy"},
+            {"field": "current_mcs", "op": "eq", "value": "nenhum"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Choque cardiogênico refratário — deterioração hemodinâmica apesar de suporte inicial"],
+          "emergency_flow": [
+            "Acionar imediatamente o shock team e reavaliar etiologia, fenótipo, perfusão, congestão, VD/VE e resposta ao suporte inicial.",
+            "Discutir suporte circulatório mecânico temporário de forma seletiva conforme etiologia, fenótipo, estágio/trajetória SCAI, anatomia, contraindicações e objetivo terapêutico; não selecionar dispositivo pelo estágio SCAI isolado."
+          ],
+          "messages": ["Evitar escalada indefinida de catecolaminas sem reavaliação estruturada da fisiologia e da estratégia de suporte."]
+        }
+      },
+      "choque-cardiogenico-pos-cardiotomia": {
+        "when": {
+          "all": [
+            {"field": "shock_etiology", "op": "eq", "value": "pos_cardiotomia"}
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "choque-cardiogenico-complicacao-mecanica-pos-iam",
+        "priority": 92,
+        "when": {
+          "all": [
+            {"field": "shock_etiology", "op": "eq", "value": "complicacao_mecanica_pos_iam"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Suspeita/diagnóstico de complicação mecânica pós-IAM em contexto de choque"],
+          "suggested_tests": ["Ecocardiograma urgente direcionado a CIV, insuficiência mitral aguda, ruptura de parede livre/tamponamento e função ventricular"],
+          "emergency_flow": ["Acionar imediatamente equipe de choque e cirurgia cardíaca/heart team estrutural; estabilização e definição anatômica ocorrem em paralelo, sem reduzir o caso a uma regra de revascularização coronariana isolada."]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-deterioracao-em-mcs",
+        "priority": 96,
+        "when": {
+          "all": [
+            {"field": "deterioration_despite_support", "op": "truthy"},
+            {"field": "current_mcs", "op": "neq", "value": "nenhum"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Deterioração apesar de suporte circulatório mecânico já instalado"],
+          "emergency_flow": [
+            "Acionar shock team e avaliar imediatamente adequação/posição/fluxo do suporte atual, complicações do dispositivo, falência de VD/VE, pós-carga, congestão, causa não tratada e sinais de futilidade ou necessidade de estratégia diferente.",
+            "Não recomendar automaticamente adicionar IABP, Impella ou ECMO quando um ou mais desses suportes já estão em uso; qualquer mudança de configuração/dispositivo exige decisão especializada baseada no fenótipo e no objetivo do suporte."
+          ]
+        }
+      }
+    ]
+  }
+]
