@@ -9,7 +9,7 @@ from .dose_calculators_diuretico_icaguda_chatgpt import DIURETICO_IC_AGUDA_DOSE_
 from .dose_calculators_doac_brasil_chatgpt import DOAC_BRASIL_DOSE_REGISTRY
 from .dose_calculators_enoxaparina_sca_chatgpt import ENOXAPARINA_SCA_DOSE_REGISTRY
 from .dose_calculators_entresto_brasil_chatgpt import ENTRESTO_BRASIL_DOSE_REGISTRY
-from .dose_calculators_fibrinoliticos_stemi_chatgpt import FIBRINOLITICOS_STEMI_2025_DOSE_REGISTRY
+from .dose_calculators_fibrinoliticos_stemi_chatgpt import FIBRINOLITICOS_STEMI_DOSE_REGISTRY
 from .dose_calculators_icfer_chatgpt import ICFER_DOSE_REGISTRY
 from .dose_calculators_mra_icfer_chatgpt import MRA_ICFER_DOSE_REGISTRY
 from .dose_calculators_pals2025_chatgpt import PALS_2025_DOSE_REGISTRY
@@ -29,7 +29,7 @@ _CHATGPT_REGISTRIES = [
     DOAC_BRASIL_DOSE_REGISTRY,
     ENOXAPARINA_SCA_DOSE_REGISTRY,
     ENTRESTO_BRASIL_DOSE_REGISTRY,
-    FIBRINOLITICOS_STEMI_2025_DOSE_REGISTRY,
+    FIBRINOLITICOS_STEMI_DOSE_REGISTRY,
     ICFER_DOSE_REGISTRY,
     MRA_ICFER_DOSE_REGISTRY,
     PALS_2025_DOSE_REGISTRY,
