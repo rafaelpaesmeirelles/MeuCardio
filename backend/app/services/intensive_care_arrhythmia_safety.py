@@ -62,6 +62,9 @@ def _avaliar_torsades(dados: dict) -> dict:
 
     qtc_alto_risco = qtc is not None and qtc > 500
     contexto_qt_longo = qt_longo_conhecido or qtc_alto_risco
+    tem_fator_reversivel = any(
+        (hipocalemia, hipomagnesemia, farmaco_qt, bradicardia_pausa, isquemia)
+    )
 
     if tv_polimorfica and sustentada:
         prioridade = (
@@ -152,7 +155,7 @@ def _avaliar_torsades(dados: dict) -> dict:
         "fatores_reversiveis": reversiveis,
         "estrategia_frequencia": frequencia,
         "qtc_alto_risco": qtc_alto_risco,
-        "fora_da_faixa": tv_polimorfica or contexto_qt_longo or bool(reversiveis[:-1]),
+        "fora_da_faixa": tv_polimorfica or contexto_qt_longo or tem_fator_reversivel,
     }
 
 
