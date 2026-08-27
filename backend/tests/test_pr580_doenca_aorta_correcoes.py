@@ -12,6 +12,30 @@ def _disease():
     return next(item for item in load_disease_records(MANIFEST) if item["slug"] == "doenca-da-aorta")
 
 
+def _answers(**overrides):
+    answers = {
+        "sudden_tearing_pain": False,
+        "instability_shock": False,
+        "pulsatile_abdominal_mass": False,
+        "known_aneurysm_surveillance": False,
+        "family_history_ctd": False,
+        "age_range": "menor_70",
+        "comorbidity_relevant": ["nenhuma_relevante"],
+    }
+    answers.update(overrides)
+    return answers
+
+
+def _evaluate(**overrides):
+    disease = _disease()
+    return evaluate_rules(
+        questions=disease["assistant_questions"],
+        rules=disease["assistant_rules"],
+        answers=_answers(**overrides),
+        context="emergencia",
+    )
+
+
 def test_aorta_esta_revisada_e_vigilancia_aaa_e_sexo_especifica():
     disease = _disease()
     text = " ".join(disease["diagnostic_approach"]["rastreamento_e_vigilancia_do_aneurisma_de_aorta_abdominal"])
@@ -38,22 +62,35 @@ def test_aorta_d_dimero_nao_e_gate_isolado_de_exclusao():
 
 
 def test_dor_isolada_nao_dispara_angio_tc_automatica():
-    disease = _disease()
-    answers = {
-        "sudden_tearing_pain": True,
-        "instability_shock": False,
-        "pulsatile_abdominal_mass": False,
-        "known_aneurysm_surveillance": False,
-        "family_history_ctd": False,
-        "age_range": "menor_70",
-        "comorbidity_relevant": ["nenhuma_relevante"],
-    }
-    result = evaluate_rules(
-        questions=disease["assistant_questions"],
-        rules=disease["assistant_rules"],
-        answers=answers,
-        context="emergencia",
-    )
+    result = _evaluate(sudden_tearing_pain=True)
     assert result["risk"] == "urgente"
     joined = " ".join(result.get("emergency_flow") or [])
     assert "não inferir indicação de angio-TC apenas pela dor isolada" in joined
+
+
+def test_instabilidade_isolada_nao_e_rotulada_como_ruptura_aortica():
+    result = _evaluate(instability_shock=True)
+    assert "aorta-instabilidade-ruptura" not in result["matched_rules"]
+    joined = " ".join(result.get("emergency_flow") or []).casefold()
+    assert "acionar cirurgia vascular/cardiovascular" not in joined
+
+
+def test_instabilidade_com_evidencia_aortica_corrobora_fluxo_especifico():
+    result = _evaluate(instability_shock=True, known_aneurysm_surveillance=True)
+    assert "aorta-instabilidade-ruptura" in result["matched_rules"]
+    assert result["risk"] == "emergencia"
+
+
+def test_crescimento_toracico_e_fator_de_risco_nao_indicacao_universal():
+    disease = _disease()
+    blob = str(disease).casefold()
+    assert "não é indicação cirúrgica universal isolada" in blob
+    assert "≥3-5 mm/ano na aorta torácica — indicação de reparo independente" not in blob
+
+
+def test_nonagenario_preserva_incerteza_e_nao_declara_equivalencia():
+    result = _evaluate(age_range="90_ou_mais")
+    supporting = " ".join(result["supporting"]).casefold()
+    assert "não detectou associação independente" in supporting
+    assert "não demonstra equivalência" in supporting
+    assert "mortalidade em 30 dias comparável" not in supporting
