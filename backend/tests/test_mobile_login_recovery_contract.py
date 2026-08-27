@@ -37,4 +37,6 @@ def test_mobile_media_query_supports_legacy_ios_listener():
     personalizer = _read("frontend/src/components/HomeQuickActionsPersonalizer.tsx")
 
     assert 'typeof media.addEventListener === "function"' in personalizer
+    assert 'typeof window.matchMedia === "function"' in personalizer
+    assert 'typeof media.addListener === "function"' in personalizer
     assert "media.addListener(atualizar)" in personalizer

@@ -32,6 +32,14 @@ const PADRAO_MOBILE = [
   "ecg-ia", "prescrever", "solicitar-exames", "tudo-com-tudo",
 ];
 
+function telaDesktop() {
+  // A personalização é um aprimoramento da home, nunca um requisito de
+  // autenticação. WebViews/Safari que não implementam matchMedia por completo
+  // devem continuar no layout móvel em vez de derrubar toda a aplicação.
+  return typeof window.matchMedia === "function"
+    && window.matchMedia("(min-width:901px)").matches;
+}
+
 function ordenarAlfabeticamente(ids: string[]) {
   return [...ids].sort((a, b) =>
     (POR_ID.get(a)?.[2] ?? a).localeCompare(POR_ID.get(b)?.[2] ?? b, "pt-BR", { sensitivity: "base" })
@@ -50,13 +58,13 @@ function normalizar(valor: unknown, desktop: boolean) {
 export default function HomeQuickActionsPersonalizer() {
   const { pathname } = useLocation();
   const { usuario } = useAuth();
-  const [desktop, setDesktop] = useState(() => matchMedia("(min-width:901px)").matches);
+  const [desktop, setDesktop] = useState(telaDesktop);
   const [alvos, setAlvos] = useState<{ a: HTMLElement; h: HTMLElement } | null>(null);
   const [selecionadas, setSelecionadas] = useState<string[]>(() =>
-    matchMedia("(min-width:901px)").matches ? PADRAO_DESKTOP : PADRAO_MOBILE
+    telaDesktop() ? PADRAO_DESKTOP : PADRAO_MOBILE
   );
   const [rascunho, setRascunho] = useState<string[]>(() =>
-    matchMedia("(min-width:901px)").matches ? PADRAO_DESKTOP : PADRAO_MOBILE
+    telaDesktop() ? PADRAO_DESKTOP : PADRAO_MOBILE
   );
   const [aberto, setAberto] = useState(false);
   const chave = usuario?.id
@@ -68,7 +76,8 @@ export default function HomeQuickActionsPersonalizer() {
     : rascunho.length >= 4 && rascunho.length % 4 === 0;
 
   useEffect(() => {
-    const media = matchMedia("(min-width:901px)"), atualizar = () => setDesktop(media.matches);
+    if (typeof window.matchMedia !== "function") return;
+    const media = window.matchMedia("(min-width:901px)"), atualizar = () => setDesktop(media.matches);
     // iOS/iPadOS antigos expõem MediaQueryList.addListener, mas não
     // addEventListener. Uma exceção neste efeito desmontava a raiz logo após
     // o login do primeiro acesso.
@@ -76,8 +85,10 @@ export default function HomeQuickActionsPersonalizer() {
       media.addEventListener("change", atualizar);
       return () => media.removeEventListener("change", atualizar);
     }
-    media.addListener(atualizar);
-    return () => media.removeListener(atualizar);
+    if (typeof media.addListener === "function") {
+      media.addListener(atualizar);
+      return () => media.removeListener(atualizar);
+    }
   }, []);
 
   useEffect(() => {
