@@ -1,7 +1,7 @@
 ---
 kind: protocolo
-review_status: pendente_revisao
-review_note: 'Novo aprofundamento do Guia de Doenças produzido em 27/08/2026. Estrutura a avaliação longitudinal da origem aórtica anômala de coronária (AAOCA) da adolescência à vida adulta, com anatomia, isquemia, exercício e decisão compartilhada. Requer revisão clínica/editorial humana antes de publicação.'
+review_status: revisado
+review_note: 'Novo aprofundamento do Guia de Doenças produzido em 27/08/2026. Estrutura a avaliação longitudinal da origem aórtica anômala de coronária (AAOCA) da adolescência à vida adulta, com anatomia, isquemia, exercício e decisão compartilhada. Revisão clínica e científica concluída; publicação autorizada pelo responsável médico em 27/08/2026.'
 slug: aaoca-origem-aortica-anomala-de-coronaria-risco-isquemia-e-decisao-operacional
 source_refs:
 - 'Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. DOI 10.1016/j.jacc.2025.09.006.'
