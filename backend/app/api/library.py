@@ -56,7 +56,7 @@ CATALOG_FRONTS = (
     ("checklists", "Checklists", "/checklists", DischargeChecklist),
     ("material_paciente", "Material para pacientes", "/material-paciente", PatientMaterial),
     ("emergencia", "Protocolos de emergência", "/emergencia", EmergencyProtocol),
-    ("doencas_especializadas", "Guias por doença", "/guias-doencas", SpecialtyDisease),
+    ("doencas_especializadas", "Guia de Doenças", "/doencas", SpecialtyDisease),
     ("triagem_sintomas", "Triagem por sintomas", "/triagem-sintomas", SymptomTriageGuide),
 )
 

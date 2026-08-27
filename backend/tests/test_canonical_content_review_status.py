@@ -45,7 +45,7 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     },
     "checklists/metadados.json": {"primeira-hora-na-suspeita-de-avc-agudo"},
     "trilhas/metadados.json": {
-        "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao"
+        "trilha-suspeita-de-avc-da-identificacao-a-decisao-de-reperfusao",
     },
     "material-paciente/metadados.json": {
         "sinais-de-avc-como-agir-sem-perder-tempo"

@@ -22,13 +22,14 @@ import GrafoRelacionados from "../components/GrafoRelacionados";
  */
 
 const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
+const RESULTADOS_ESTRUTURADOS = new Set(["dose", "assessment"]);
 
 type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 
 type Campo = {
   name: string; label: string; type: string; unit: string | null;
   options: { value: string | number; label: string }[];
-  min: number | null; max: number | null; help: string | null;
+  min: number | null; max: number | null; help: string | null; required: boolean;
 };
 type Calc = {
   slug: string; name: string; theme: string; purpose: string; kind: string;
@@ -83,7 +84,7 @@ export default function Calculadora() {
       const iniciais: Record<string, unknown> = {};
       for (const f of c.fields) {
         if (f.type === "boolean") iniciais[f.name] = false;
-        if (f.type === "select") iniciais[f.name] = f.options[0]?.value;
+        if (f.type === "select") iniciais[f.name] = "";
       }
       setValores(iniciais);
     });
@@ -165,7 +166,8 @@ export default function Calculadora() {
   if (!calc) return <Carregando />;
 
   const faltando = calc.fields.some(
-    (f) => f.type === "number" && (valores[f.name] === undefined || valores[f.name] === "")
+    (f) => f.required !== false && f.type !== "boolean"
+      && (valores[f.name] === undefined || valores[f.name] === "")
   );
 
   return (
@@ -210,6 +212,7 @@ export default function Calculadora() {
                     setValores({ ...valores, [f.name]: opt?.value });
                   }}
                 >
+                  <option value="" disabled>Selecione…</option>
                   {f.options.map((o) => (
                     <option key={String(o.value)} value={String(o.value)}>{o.label}</option>
                   ))}
@@ -218,7 +221,7 @@ export default function Calculadora() {
             ) : (
               <>
                 <label htmlFor={f.name}>
-                  {f.label} {f.unit && <span className="eyebrow">({f.unit})</span>}
+                  {f.label} {f.required === false && <span className="eyebrow">(opcional)</span>} {f.unit && <span className="eyebrow">({f.unit})</span>}
                 </label>
                 <input
                   id={f.name}
@@ -240,11 +243,10 @@ export default function Calculadora() {
 
       {erro && <div style={{ marginTop: "1rem" }}><Erro mensagem={erro} /></div>}
 
-      {saida && calc.kind === "dose" && (
-        // Calculadora de DOSE: a resposta principal é a frase de interpretação
-        // (tem unidade, contexto e aviso de faixa embutidos) — não um número
-        // isolado. Um resultado de dose não cabe no formato "número grande +
-        // /máximo" pensado para escore. Ver `dose_calculators.py` (backend).
+      {saida && RESULTADOS_ESTRUTURADOS.has(calc.kind) && (
+        // Doses e avaliações estruturadas têm vários achados relevantes: a
+        // resposta principal é a interpretação em prosa, não o primeiro valor
+        // isolado no formato visual reservado aos escores numéricos.
         <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
           {saida.interpretation && (
@@ -268,7 +270,7 @@ export default function Calculadora() {
         </div>
       )}
 
-      {saida && calc.kind !== "dose" && (
+      {saida && !RESULTADOS_ESTRUTURADOS.has(calc.kind) && (
         <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
           <p className="dado" style={{ fontSize: "2.4rem", margin: "0.2rem 0", color: "var(--acento)" }}>

@@ -1,5 +1,342 @@
 [
   {
+    "slug": "sangramento-em-paciente-anticoagulado",
+    "name": "Sangramento em paciente anticoagulado",
+    "aliases": [
+      "hemorragia usando anticoagulante",
+      "sangue nas fezes ou urina com anticoagulante",
+      "hematoma em uso de DOAC",
+      "sangramento com varfarina"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "cardiooncologia",
+      "gravidez"
+    ],
+    "summary": "Triagem inicial de qualquer sangramento em pessoa que usa anticoagulante para reconhecer imediatamente local crítico, instabilidade, perda sanguínea relevante ou sangramento persistente, identificar a exposição e encaminhar ao protocolo de emergência sem indicar reversor para eventos não maiores.",
+    "questions": [
+      {
+        "id": "anticoagulant",
+        "label": "Qual anticoagulante está em uso?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "vka",
+            "label": "Varfarina ou outro antagonista da vitamina K"
+          },
+          {
+            "value": "dabigatran",
+            "label": "Dabigatrana"
+          },
+          {
+            "value": "factor_xa",
+            "label": "Apixabana, rivaroxabana ou edoxabana"
+          },
+          {
+            "value": "heparin",
+            "label": "Heparina ou heparina de baixo peso molecular"
+          },
+          {
+            "value": "other_or_unknown",
+            "label": "Outro ou não sabe informar"
+          }
+        ],
+        "section": "Exposição"
+      },
+      {
+        "id": "last_dose_known",
+        "label": "A dose e o horário da última administração são conhecidos?",
+        "type": "boolean",
+        "required": true,
+        "section": "Exposição"
+      },
+      {
+        "id": "bleeding_active",
+        "label": "O sangramento está ativo, recidivando ou não cede com compressão local adequada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "critical_or_neurologic",
+        "label": "Há cefaleia súbita intensa, déficit neurológico, alteração da consciência, trauma craniano ou suspeita de sangramento em local crítico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "hemodynamic_instability",
+        "label": "Há síncope, hipotensão, taquicardia, dispneia, dor torácica, palidez intensa ou outro sinal de hipoperfusão?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "gi_gu_pulmonary",
+        "label": "Há vômito com sangue, melena, sangue vivo nas fezes, hematúria macroscópica ou hemoptise?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sítio"
+      },
+      {
+        "id": "large_bruise_or_internal_pain",
+        "label": "Há hematoma grande/progressivo ou dor abdominal, lombar ou em flanco sem explicação?",
+        "type": "boolean",
+        "section": "Sítio",
+        "required": true
+      },
+      {
+        "id": "renal_liver_or_interaction",
+        "label": "Há piora renal/hepática ou uso concomitante de antiagregante, AINE ou outro anticoagulante?",
+        "type": "boolean",
+        "section": "Modificadores"
+      },
+      {
+        "id": "major_bleed_objective",
+        "label": "Houve queda de hemoglobina ≥2 g/dL ou necessidade de transfusão de ≥2 unidades de concentrado de hemácias?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      }
+    ],
+    "rules": [
+      {
+        "id": "local-critico-ou-neurologico",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "critical_or_neurologic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível hemorragia intracraniana ou em outro local crítico sob anticoagulação"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente; não aguardar evolução domiciliar nem teste específico para iniciar avaliação e controle da fonte"
+          ]
+        }
+      },
+      {
+        "id": "instabilidade-hemodinamica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hemodynamic_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade ou hipoperfusão torna o sangramento potencialmente ameaçador à vida"
+          ],
+          "emergency_flow": [
+            "Avaliar ABC, monitorizar, obter acesso venoso, controlar a fonte e acionar o protocolo de sangramento maior"
+          ]
+        }
+      },
+      {
+        "id": "sangramento-interno-visivel",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "gi_gu_pulmonary",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinal de sangramento digestivo, urinário ou pulmonar clinicamente relevante"
+          ],
+          "suggested_tests": [
+            "Hemograma, função renal/hepática, tipagem e investigação dirigida ao sítio"
+          ]
+        }
+      },
+      {
+        "id": "sangramento-oculto-ou-hematoma-progressivo",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "large_bruise_or_internal_pain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hematoma progressivo ou dor interna pode representar sangramento profundo/retroperitoneal"
+          ],
+          "suggested_tests": [
+            "Hemograma e imagem dirigida conforme exame clínico e estabilidade"
+          ]
+        }
+      },
+      {
+        "id": "persistente-ou-recorrente",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "bleeding_active",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Sangramento persistente ou recorrente requer avaliação da fonte e da exposição anticoagulante"
+          ],
+          "messages": [
+            "Reversor não é automático; a decisão depende de gravidade, agente, última dose e resposta ao controle inicial"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulante-ou-dose-desconhecida",
+        "priority": 75,
+        "when": {
+          "any": [
+            {
+              "field": "anticoagulant",
+              "op": "eq",
+              "value": "other_or_unknown"
+            },
+            {
+              "field": "last_dose_known",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Nome do anticoagulante, dose e horário da última administração"
+          ],
+          "messages": [
+            "Confirmar embalagem, receita, prontuário ou cuidador; não improvisar antídoto cruzado"
+          ]
+        }
+      },
+      {
+        "id": "acumulo-ou-interacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "renal_liver_or_interaction",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção renal/hepática ou associação antitrombótica pode prolongar exposição e aumentar risco"
+          ],
+          "suggested_tests": [
+            "Creatinina, função hepática e conciliação completa de medicamentos"
+          ]
+        }
+      },
+      {
+        "id": "criterio-objetivo-sangramento-maior",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "major_bleed_objective",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Critério objetivo de sangramento maior: queda de hemoglobina ≥2 g/dL ou transfusão ≥2 unidades"
+          ],
+          "emergency_flow": [
+            "Acionar protocolo de sangramento maior, controle da fonte e avaliação de reversão específica"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Sinais vitais seriados, perfusão e estado neurológico",
+      "Hemograma, creatinina e função hepática quando houver sangramento clinicamente relevante",
+      "INR em uso de varfarina/antagonista da vitamina K",
+      "Tipagem e prova de compatibilidade quando houver suspeita de perda importante",
+      "Ensaio específico do anticoagulante somente quando disponível e sem atrasar estabilização/controle da fonte"
+    ],
+    "differentials": [
+      "Sangramento relacionado a anticoagulante",
+      "Lesão anatômica com sangramento não causada pelo anticoagulante",
+      "Coagulopatia por hepatopatia ou coagulação intravascular disseminada",
+      "Trombocitopenia ou disfunção plaquetária",
+      "Anemia sem sangramento ativo"
+    ],
+    "red_flags": [
+      "Instabilidade, síncope ou hipoperfusão",
+      "Cefaleia súbita, déficit neurológico, alteração de consciência ou trauma craniano",
+      "Hematêmese, melena, hematoquezia importante ou hemoptise",
+      "Hematoma grande/progressivo ou suspeita de sangramento interno",
+      "Sangramento persistente ou não controlado",
+      "Queda de hemoglobina de pelo menos 2 g/dL ou necessidade de pelo menos 2 unidades de hemácias"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar local, início, persistência e volume aparente do sangramento",
+      "Confirmar anticoagulante, dose, última tomada, função renal/hepática e combinações que alteram hemostasia",
+      "Aplicar compressão local quando apropriado e orientar avaliação rápida se o sangramento persistir ou recidivar",
+      "Não usar reversor na maioria dos sangramentos não maiores e não interromper definitivamente anticoagulação sem reavaliar a indicação",
+      "Corrigir fonte tratável e fatores modificáveis, com plano explícito de retorno"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC e monitorizar enquanto a fonte é identificada e controlada",
+      "Interromper temporariamente o anticoagulante no sangramento maior e registrar agente, dose e horário",
+      "Acionar o protocolo Sangramento maior em paciente anticoagulado para reversão seletiva por classe",
+      "Não atrasar imagem/endoscopia/intervenção necessária para controle da fonte",
+      "Após hemostasia, definir reinício conforme sítio, causa, indicação trombótica e risco de recorrência"
+    ],
+    "tags": [
+      "sangramento",
+      "anticoagulante",
+      "hemorragia",
+      "DOAC",
+      "varfarina",
+      "reversão",
+      "emergência"
+    ],
+    "source_refs": [
+      "Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. J Am Coll Cardiol. 2020;76(5):594-622. DOI: 10.1016/j.jacc.2020.04.053. PMID: 32680646.",
+      "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149:e1-e156. DOI: 10.1161/CIR.0000000000001193.",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176.",
+      "US Food and Drug Administration. Update on the Safety of Andexxa. FDA Safety Communication, 18/12/2025."
+    ],
+    "source_urls": [
+      "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2020/07/10/11/26/2020-ACC-Expert-Consensus-Decision-Pathway-on-Bleeding",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193",
+      "https://academic.oup.com/eurheartj/article/45/36/3314/7738779",
+      "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
+  },
+  {
     "slug": "dor-toracica",
     "name": "Dor torácica",
     "aliases": [
@@ -3710,5 +4047,609 @@
     "review_note": "Reconhecimento e encaminhamento apenas; não contém autorização autônoma para trombólise, trombectomia, antiagregação ou redução pressórica. Revisão clínica humana obrigatória.",
     "fonte_producao": "chatgpt",
     "version": 1
+  },
+  {
+    "slug": "colapso-subito-inconsciencia-e-respiracao-anormal",
+    "name": "Colapso súbito, inconsciência e respiração anormal",
+    "aliases": [
+      "pessoa caída e não responde",
+      "desmaio com gasping",
+      "respiração agônica após colapso",
+      "suspeita de parada cardíaca"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria",
+      "cardiooncologia",
+      "gravidez"
+    ],
+    "summary": "Triagem de máxima prioridade para reconhecer possível parada cardiorrespiratória em adulto inconsciente ou não responsivo com respiração ausente ou anormal, inclusive gasping, ativar imediatamente o serviço de emergência, iniciar compressões e obter um DEA sem atrasos por tentativa prolongada de diagnóstico.",
+    "questions": [
+      {
+        "id": "scene_safe",
+        "label": "O local é seguro para aproximar-se e iniciar o atendimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "adult_patient",
+        "label": "A pessoa é adulta ou tem aparência de adulto?",
+        "type": "boolean",
+        "required": true,
+        "section": "Pessoa"
+      },
+      {
+        "id": "responsive",
+        "label": "A pessoa responde quando é chamada e tocada nos ombros?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "breathing_normally",
+        "label": "A pessoa respira normalmente, sem suspiros isolados, roncos lentos ou gasping?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "definite_pulse_professional",
+        "label": "Se você é profissional de saúde: há pulso definitivamente palpável em até 10 segundos?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "not_assessed_lay",
+            "label": "Não sou profissional ou não avaliei pulso"
+          },
+          {
+            "value": "definite_pulse",
+            "label": "Pulso definitivamente presente"
+          },
+          {
+            "value": "no_definite_pulse",
+            "label": "Pulso ausente ou incerto em até 10 segundos"
+          }
+        ],
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "emergency_activated",
+        "label": "O serviço de emergência já foi acionado pelo 192 ou pelo número local, preferencialmente em viva-voz?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      },
+      {
+        "id": "aed_requested",
+        "label": "Alguém foi buscar um desfibrilador externo automático (DEA), se houver um acessível?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      },
+      {
+        "id": "special_cause",
+        "label": "Há contexto de afogamento, asfixia, overdose/opioide, trauma, gestação ou outra causa especial?",
+        "type": "boolean",
+        "section": "Contexto"
+      }
+    ],
+    "rules": [
+      {
+        "id": "cena-insegura",
+        "priority": 110,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Risco para o socorrista impede aproximação segura"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente o serviço de emergência e só aproximar-se quando a cena estiver segura"
+          ]
+        }
+      },
+      {
+        "id": "possivel-parada-leigo",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "not_assessed_lay"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Adulto não responsivo com respiração ausente ou anormal: presumir parada cardiorrespiratória"
+          ],
+          "emergency_flow": [
+            "Acionar o 192 em viva-voz, iniciar imediatamente compressões no centro do tórax e usar o DEA assim que disponível"
+          ]
+        }
+      },
+      {
+        "id": "possivel-parada-profissional",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "no_definite_pulse"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Pulso ausente ou não definitivamente palpável em até 10 segundos"
+          ],
+          "emergency_flow": [
+            "Iniciar RCP pelo protocolo adulto, conectar desfibrilador/DEA e minimizar interrupções"
+          ]
+        }
+      },
+      {
+        "id": "respiracao-anormal-nao-e-respiracao-normal",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Gasping, suspiros isolados, roncos lentos ou respiração irregular não excluem parada e não devem atrasar compressões"
+          ]
+        }
+      },
+      {
+        "id": "pulso-com-apneia-profissional",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "definite_pulse_professional",
+              "op": "eq",
+              "value": "definite_pulse"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Parada respiratória ou ventilação ineficaz com pulso presente"
+          ],
+          "emergency_flow": [
+            "Fornecer ventilação de resgate conforme treinamento, reavaliar pulso e seguir o protocolo de suporte básico/avançado"
+          ]
+        }
+      },
+      {
+        "id": "socorro-ainda-nao-acionado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "emergency_activated",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "missing_information": [
+            "Localização exata e acionamento do serviço de emergência"
+          ],
+          "emergency_flow": [
+            "Acionar o 192 ou o número local imediatamente, usando viva-voz para receber instruções sem interromper a resposta"
+          ]
+        }
+      },
+      {
+        "id": "dea-ainda-nao-solicitado",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "scene_safe",
+              "op": "truthy"
+            },
+            {
+              "field": "adult_patient",
+              "op": "truthy"
+            },
+            {
+              "field": "responsive",
+              "op": "falsy"
+            },
+            {
+              "field": "breathing_normally",
+              "op": "falsy"
+            },
+            {
+              "field": "aed_requested",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Pedir que outra pessoa busque o DEA sem interromper compressões; ligar e seguir os comandos assim que chegar"
+          ]
+        }
+      },
+      {
+        "id": "causa-especial",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "special_cause",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Afogamento, asfixia, opioide, trauma e gestação exigem adaptações específicas sem atrasar a cadeia básica de sobrevivência"
+          ],
+          "messages": [
+            "Informar o contexto ao regulador do 192 e seguir as instruções específicas do protocolo"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Na resposta leiga, não solicitar exames nem prolongar avaliação: reconhecer ausência de resposta e respiração anormal",
+      "Para profissional, checar pulso simultaneamente à respiração por no máximo 10 segundos",
+      "Após retorno da circulação, ECG de 12 derivações e investigação dirigida da causa sem atrasar estabilização",
+      "Glicemia, eletrólitos, gasometria e imagem apenas no ambiente profissional conforme causa e estado clínico"
+    ],
+    "differentials": [
+      "Parada cardiorrespiratória",
+      "Parada respiratória com pulso",
+      "Síncope com recuperação espontânea",
+      "Crise convulsiva ou período pós-ictal",
+      "Obstrução grave de via aérea",
+      "Intoxicação ou overdose",
+      "Hipoglicemia ou outra causa metabólica de inconsciência"
+    ],
+    "red_flags": [
+      "Ausência de resposta",
+      "Respiração ausente, gasping, suspiros isolados ou roncos lentos e irregulares",
+      "Pulso ausente ou incerto em até 10 segundos para profissional de saúde",
+      "Colapso súbito durante esforço",
+      "Movimentos breves semelhantes a convulsão acompanhados de inconsciência e respiração anormal"
+    ],
+    "ambulatory_flow": [
+      "Esta apresentação não é ambulatorial enquanto a pessoa permanecer não responsiva ou sem respiração normal",
+      "Se houve recuperação completa antes da avaliação, tratar como síncope/colapso de alto risco e investigar a causa, sem reclassificar retrospectivamente gasping como respiração normal",
+      "Sobrevivente de parada requer investigação etiológica, prevenção secundária e plano de recuperação"
+    ],
+    "emergency_flow": [
+      "Confirmar segurança da cena e testar resposta rapidamente",
+      "Se adulto não responde e não respira normalmente, presumir parada, acionar o 192 e iniciar compressões",
+      "Leigo não deve perder tempo procurando pulso; profissional limita a checagem a 10 segundos",
+      "Solicitar DEA, ligá-lo e seguir os comandos, mantendo compressões até análise/choque",
+      "Usar o protocolo Parada cardiorrespiratória para RCP de alta qualidade, desfibrilação e causas reversíveis",
+      "Após retorno da circulação, avançar ao protocolo de cuidado pós-parada e investigação da etiologia"
+    ],
+    "tags": [
+      "colapso súbito",
+      "parada cardiorrespiratória",
+      "gasping",
+      "RCP",
+      "DEA",
+      "morte súbita",
+      "emergência"
+    ],
+    "source_refs": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001378.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203."
+    ],
+    "source_urls": [
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support",
+      "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/systems-of-care",
+      "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "version": 2
+  },
+  {
+    "slug": "dor-abdominal-aguda-desproporcional-ao-exame",
+    "name": "Dor abdominal aguda desproporcional ao exame",
+    "aliases": [
+      "dor abdominal desproporcional",
+      "suspeita de isquemia mesentérica aguda",
+      "abdome vascular agudo"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem tempo-dependente para dor abdominal aguda intensa com exame físico pouco alterado em paciente com fator de risco cardiovascular — reconhecer isquemia mesentérica aguda, acionar angiotomografia sem atraso e não aguardar sinais tardios de peritonite para agir.",
+    "questions": [
+      {
+        "id": "pain_disproportionate_to_exam",
+        "label": "A dor abdominal é intensa e desproporcional aos achados do exame físico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "cardioembolic_risk_factor",
+        "label": "Há fibrilação atrial, infarto do miocárdio recente, valvopatia/endocardite, disfunção de VE com FE baixa ou embolia arterial prévia?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fator de risco"
+      },
+      {
+        "id": "peritonitis_signs",
+        "label": "Há sinais de peritonite (irritação peritoneal, defesa, sepse abdominal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "critically_ill_on_vasopressor",
+        "label": "O paciente está criticamente enfermo, em vasopressor ou com baixo débito?",
+        "type": "boolean",
+        "section": "Contexto",
+        "required": true
+      },
+      {
+        "id": "cta_requested",
+        "label": "A angiotomografia de abdome já foi solicitada, mencionando a suspeita de isquemia mesentérica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Resposta"
+      }
+    ],
+    "rules": [
+      {
+        "id": "dor-desproporcional",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pain_disproportionate_to_exam",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor abdominal desproporcional ao exame deve ser assumida como isquemia mesentérica aguda até prova em contrário"
+          ],
+          "emergency_flow": [
+            "Solicitar angiotomografia de abdome com contraste em fases arterial e venosa, sem atraso"
+          ]
+        }
+      },
+      {
+        "id": "peritonite-cirurgia-sem-esperar-exame",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "peritonitis_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Peritonite indica necrose intestinal já estabelecida"
+          ],
+          "emergency_flow": [
+            "Ressuscitação, antibiótico de amplo espectro e laparotomia/laparoscopia sem aguardar angiotomografia"
+          ]
+        }
+      },
+      {
+        "id": "fator-de-risco-cardioembolico",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "cardioembolic_risk_factor",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Fonte cardioembólica presente: comunicar cardiologia e equipe de revascularização, sem atrasar o exame"
+          ]
+        }
+      },
+      {
+        "id": "nomi-em-paciente-critico",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "critically_ill_on_vasopressor",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Isquemia mesentérica não oclusiva (NOMI)"
+          ],
+          "messages": [
+            "Considerar NOMI se houver baixo débito ou vasopressor; não é indicação para adiar a angiotomografia"
+          ],
+          "risk": "emergencia",
+          "red_flags": [
+            "Paciente crítico em vasopressor/baixo débito com quadro abdominal: suspeitar isquemia mesentérica não oclusiva"
+          ]
+        }
+      },
+      {
+        "id": "exame-nao-solicitado",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "cta_requested",
+              "op": "falsy"
+            },
+            {
+              "any": [
+                {
+                  "field": "pain_disproportionate_to_exam",
+                  "op": "truthy"
+                },
+                {
+                  "field": "peritonitis_signs",
+                  "op": "truthy"
+                },
+                {
+                  "field": "critically_ill_on_vasopressor",
+                  "op": "truthy"
+                }
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Solicitar angiotomografia agora; mencionar a suspeita de isquemia mesentérica na requisição"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm",
+      "Lactato, leucograma e D-dímero como reforço de suspeita, sem valor de exclusão isolado"
+    ],
+    "differentials": [
+      "Isquemia mesentérica aguda de origem cardioembólica",
+      "Isquemia mesentérica não oclusiva",
+      "Trombose de veia mesentérica",
+      "Outra causa de abdome agudo"
+    ],
+    "red_flags": [
+      "Dor abdominal intensa desproporcional ao exame",
+      "Fibrilação atrial, infarto recente, valvopatia ou embolia prévia",
+      "Sinais de peritonite",
+      "Paciente crítico em vasopressor com dor/distensão abdominal"
+    ],
+    "ambulatory_flow": [
+      "Interromper avaliação eletiva diante de dor desproporcional com fator de risco cardiovascular",
+      "Encaminhar para angiotomografia de emergência sem atraso",
+      "Não aguardar exame laboratorial para decidir a urgência do encaminhamento"
+    ],
+    "emergency_flow": [
+      "ABC, sinais vitais e ressuscitação volêmica",
+      "Angiotomografia de abdome sem atraso, mencionando a suspeita na requisição",
+      "Peritonite: laparotomia/laparoscopia sem aguardar o exame",
+      "Comunicar cardiologia se houver fonte cardioembólica"
+    ],
+    "tags": [
+      "isquemia mesentérica aguda",
+      "dor abdominal",
+      "fibrilação atrial",
+      "embolia",
+      "emergência"
+    ],
+    "source_refs": [
+      "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+      "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642."
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
+      "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "fonte_producao": "claude",
+    "version": 2
   }
 ]

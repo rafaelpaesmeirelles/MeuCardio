@@ -31,6 +31,10 @@ type DiseaseFacetsResponse = { areas: DiseaseFacet[]; categories: DiseaseFacet[]
 
 type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pediatrica" | "oncologia" | "gestacao" | "outros";
 
+const TABS = new Set<Tab>(["catalogo", "assistentes", "areas", "congenitas", "fetal", "pediatrica", "oncologia", "gestacao", "outros"]);
+const SEARCH_TABS = new Set<Tab>(["catalogo", "assistentes", "congenitas", "fetal"]);
+const GENERAL_FILTER_TABS = new Set<Tab>(["catalogo", "assistentes"]);
+
 const AREA_LABELS: Record<string, string> = {
   geral: "Cardiologia do adulto",
   cardiopediatria: "Cardiologia pediátrica e congênita",
@@ -90,7 +94,9 @@ function labelCyanosis(value?: string | null) {
 
 export default function GuiaDoencas() {
   const [params, setParams] = useSearchParams();
-  const tab = (params.get("tab") as Tab) || "catalogo";
+  const requestedTab = params.get("tab") as Tab | null;
+  const tab: Tab = requestedTab && TABS.has(requestedTab) ? requestedTab : "catalogo";
+  const serializedParams = params.toString();
   const [q, setQ] = useState(params.get("q") || "");
   const [area, setArea] = useState(params.get("area") || "");
   const [category, setCategory] = useState(params.get("category") || "");
@@ -104,16 +110,42 @@ export default function GuiaDoencas() {
   const [diseaseFacets, setDiseaseFacets] = useState<DiseaseFacetsResponse>({ areas: [], categories: [] });
 
   useEffect(() => {
-    api.get<DiseaseFacetsResponse>("/specialty-guides/disease-facets")
+    setQ(params.get("q") || "");
+    setArea(params.get("area") || "");
+    setCategory(params.get("category") || "");
+    setCyanosis(params.get("cyanosis") || "");
+    setPage(1);
+    setItems([]);
+  }, [serializedParams]);
+
+  useEffect(() => {
+    const nextParams = new URLSearchParams(params);
+    if (!SEARCH_TABS.has(tab)) nextParams.delete("q");
+    if (!GENERAL_FILTER_TABS.has(tab)) {
+      nextParams.delete("area");
+      nextParams.delete("category");
+    }
+    if (tab !== "congenitas") nextParams.delete("cyanosis");
+    if (nextParams.toString() !== serializedParams) {
+      setParams(nextParams, { replace: true });
+    }
+  }, [serializedParams, setParams, tab]);
+
+  useEffect(() => {
+    const facetParams = new URLSearchParams();
+    if (GENERAL_FILTER_TABS.has(tab) && area) facetParams.set("area", area);
+    if (GENERAL_FILTER_TABS.has(tab) && category) facetParams.set("category", category);
+    const search = facetParams.toString();
+    api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets${search ? `?${search}` : ""}`)
       .then(setDiseaseFacets)
       .catch(() => setDiseaseFacets({ areas: [], categories: [] }));
-  }, []);
+  }, [area, category, tab]);
 
   const filters = useMemo(() => {
     const result: Record<string, string> = { page_size: "60", page: String(page) };
-    if (q.trim()) result.q = q.trim();
-    if (area) result.area = area;
-    if (category) result.category = category;
+    if (SEARCH_TABS.has(tab) && q.trim()) result.q = q.trim();
+    if (GENERAL_FILTER_TABS.has(tab) && area) result.area = area;
+    if (GENERAL_FILTER_TABS.has(tab) && category) result.category = category;
     if (tab === "assistentes") result.assistant_only = "true";
     if (tab === "congenitas") result.category = "cardiopatia_congenita";
     if (tab === "fetal") result.category = "cardiologia_fetal";
@@ -150,8 +182,32 @@ export default function GuiaDoencas() {
     if (!["catalogo", "assistentes"].includes(next)) setArea("");
     const nextParams = new URLSearchParams();
     nextParams.set("tab", next);
-    if (q.trim()) nextParams.set("q", q.trim());
-    if (["catalogo", "assistentes"].includes(next) && area) nextParams.set("area", area);
+    if (SEARCH_TABS.has(next) && q.trim()) nextParams.set("q", q.trim());
+    if (GENERAL_FILTER_TABS.has(next) && GENERAL_FILTER_TABS.has(tab)) {
+      if (area) nextParams.set("area", area);
+      if (category) nextParams.set("category", category);
+    }
+    setParams(nextParams);
+  }
+
+  function updateUrlFilter(key: "q" | "area" | "category" | "cyanosis", value: string, replace = false) {
+    const nextParams = new URLSearchParams(params);
+    nextParams.set("tab", tab);
+    if (value.trim()) nextParams.set(key, value.trim());
+    else nextParams.delete(key);
+    setParams(nextParams, { replace });
+  }
+
+  function updateAreaFilter(value: string) {
+    setArea(value);
+    setCategory("");
+    setPage(1);
+    setItems([]);
+    const nextParams = new URLSearchParams(params);
+    nextParams.set("tab", tab);
+    if (value) nextParams.set("area", value);
+    else nextParams.delete("area");
+    nextParams.delete("category");
     setParams(nextParams);
   }
 
@@ -175,6 +231,7 @@ export default function GuiaDoencas() {
     setQ(value);
     setPage(1);
     setItems([]);
+    updateUrlFilter("q", value, true);
   }
 
   return (
@@ -244,9 +301,9 @@ export default function GuiaDoencas() {
         </section>
       )}
 
-      {tab !== "areas" && <section className="cartao" style={{ marginTop: "1rem" }}>
+      {(SEARCH_TABS.has(tab) || GENERAL_FILTER_TABS.has(tab) || tab === "congenitas") && <section className="cartao" style={{ marginTop: "1rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 15rem), 1fr))", gap: "0.7rem" }}>
-          {!["pediatrica", "oncologia", "gestacao", "outros"].includes(tab) && <label>
+          {SEARCH_TABS.has(tab) && <label>
             <strong>Pesquisar</strong>
             <input
               value={q}
@@ -255,28 +312,28 @@ export default function GuiaDoencas() {
               style={{ marginTop: "0.35rem" }}
             />
           </label>}
-          <label>
+          {GENERAL_FILTER_TABS.has(tab) && <label>
             <strong>População / contexto</strong>
             <select
               value={area}
-              onChange={(event) => { setArea(event.target.value); setPage(1); setItems([]); }}
+              onChange={(event) => updateAreaFilter(event.target.value)}
               style={{ marginTop: "0.35rem" }}
             >
               <option value="">Todos</option>
               {diseaseFacets.areas.map((item) => <option key={item.id} value={item.id}>{labelArea(item.id)} ({item.count})</option>)}
             </select>
-          </label>
-          <label>
+          </label>}
+          {GENERAL_FILTER_TABS.has(tab) && <label>
             <strong>Área clínica</strong>
             <select
               value={category}
-              onChange={(event) => { setCategory(event.target.value); setPage(1); setItems([]); }}
+              onChange={(event) => { setCategory(event.target.value); setPage(1); setItems([]); updateUrlFilter("category", event.target.value); }}
               style={{ marginTop: "0.35rem" }}
             >
               <option value="">Todas</option>
               {diseaseFacets.categories.map((item) => <option key={item.id} value={item.id}>{labelCategory(item.id)} ({item.count})</option>)}
             </select>
-          </label>
+          </label>}
         </div>
 
         {tab === "congenitas" && (
@@ -286,7 +343,7 @@ export default function GuiaDoencas() {
                 key={value || "todas"}
                 type="button"
                 className="painel__tema"
-                onClick={() => { setCyanosis(value); setPage(1); setItems([]); }}
+                onClick={() => { setCyanosis(value); setPage(1); setItems([]); updateUrlFilter("cyanosis", value); }}
                 style={cyanosis === value ? { borderColor: "var(--acento)" } : undefined}
               >
                 {value ? labelCyanosis(value) : "Todas"}

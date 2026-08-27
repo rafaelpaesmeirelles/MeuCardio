@@ -1,5 +1,91 @@
 [
   {
+    "slug": "resposta-imediata-ao-colapso-subito-e-suspeita-de-parada-no-adulto",
+    "condicao": "Resposta imediata ao colapso súbito e suspeita de parada no adulto",
+    "resumo": "Checklist de execução para reconhecer parada cardiorrespiratória sem confundir gasping com respiração normal, ativar a resposta, iniciar RCP e aplicar o DEA/desfibrilador com o mínimo de interrupção.",
+    "documento_origem": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Kleinman ME, Goldberger ZD, Rea T, et al. Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001369.",
+      "Dezfulian C, Lavonas EJ, Magid DJ, et al. Part 4: Systems of Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2). DOI: 10.1161/CIR.0000000000001378.",
+      "Quilici AP, Timerman S, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663."
+    ],
+    "itens": [
+      {
+        "id": "pcr-cena-segura",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Segurança da cena confirmada antes da aproximação",
+        "origem_secao": "Reconhecimento da parada e início da resposta"
+      },
+      {
+        "id": "pcr-resposta-respiracao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Responsividade e respiração avaliadas rapidamente; gasping, suspiros isolados ou roncos lentos não foram classificados como respiração normal",
+        "origem_secao": "AHA 2025 — Recognition of Cardiac Arrest"
+      },
+      {
+        "id": "pcr-pulso-profissional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se profissional de saúde, pulso avaliado por no máximo 10 segundos; se ausente ou incerto, RCP iniciada sem prolongar a checagem",
+        "origem_secao": "AHA 2025 — Recognition of Cardiac Arrest"
+      },
+      {
+        "id": "pcr-acionamento",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Sistema de emergência acionado imediatamente, com localização exata informada e telefone em viva-voz quando possível",
+        "origem_secao": "AHA 2025 — Initiation of Resuscitation"
+      },
+      {
+        "id": "pcr-compressoes",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Compressões iniciadas imediatamente no centro do tórax e mantidas com profundidade e frequência adequadas, retorno completo e mínima interrupção",
+        "origem_secao": "RCP de alta qualidade — os números que definem a compressão"
+      },
+      {
+        "id": "pcr-dea",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "DEA/desfibrilador solicitado e aplicado assim que disponível, seguindo comandos e retomando compressões sem demora após análise ou choque",
+        "origem_secao": "Desfibrilação: o nível de energia"
+      },
+      {
+        "id": "pcr-revezamento",
+        "categoria": "equipe",
+        "obrigatorio": false,
+        "texto": "Quando há mais de um socorrista, funções delegadas e compressor revezado antes de perda perceptível de qualidade",
+        "origem_secao": "RCP de alta qualidade — os números que definem a compressão"
+      },
+      {
+        "id": "pcr-ritmo-causas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No ambiente profissional, ritmo classificado e causas reversíveis pesquisadas/tratadas em paralelo, sem pausas desnecessárias",
+        "origem_secao": "Ritmo chocável; Ritmo não chocável; Causas reversíveis"
+      },
+      {
+        "id": "pcr-pos-rosc",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Após retorno da circulação, cuidado pós-parada iniciado e investigação etiológica organizada; prognóstico neurológico não declarado precocemente por achado isolado",
+        "origem_secao": "Depois do retorno da circulação espontânea"
+      },
+      {
+        "id": "pcr-debriefing",
+        "categoria": "qualidade",
+        "obrigatorio": false,
+        "texto": "Tempos críticos, qualidade da RCP, uso do DEA e barreiras do sistema registrados para debriefing e melhoria",
+        "origem_secao": "AHA 2025 — Systems of Care and Quality Management"
+      }
+    ],
+    "revisao": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O checklist atualiza o reconhecimento e a ativação para AHA 2025 e reutiliza o protocolo canônico SBC existente para a execução avançada."
+  },
+  {
     "slug": "acompanhamento-apos-tavi-ou-savr-na-estenose-aortica-grave",
     "condicao": "Acompanhamento após TAVI ou SAVR por estenose aórtica grave",
     "resumo": "O que checar antes da alta e no primeiro seguimento após substituição valvar aórtica (transcateter ou cirúrgica), incluindo a janela de maior risco trombótico da bioprótese e a mudança de corte etário da diretriz 2025.",
@@ -387,8 +473,8 @@
         "id": "cs-scai-estagio",
         "categoria": "seguimento",
         "obrigatorio": true,
-        "texto": "Estágio SCAI (A-E) documentado no momento de maior gravidade e reavaliado ao longo da internação, com o modificador A registrado se houve parada cardiorrespiratória associada",
-        "origem_secao": "Classificação SCAI — Trajetória clínica / Modificador A: parada cardíaca"
+        "texto": "Estágio SCAI (A-E) documentado no momento de maior gravidade e reavaliado ao longo da internação; modificador +A registrado somente quando a parada esteve associada a potencial lesão cerebral anóxica (coma/GCS <9 ou ausência de resposta a comandos após RCE), não por qualquer parada breve com recuperação neurológica",
+        "origem_secao": "Classificação SCAI — Trajetória clínica / Modificador +A: potencial lesão cerebral anóxica após parada"
       },
       {
         "id": "cs-vasoativo-desmame",
@@ -11075,7 +11161,7 @@
         "id": "chc-modificador-a-parada",
         "categoria": "avaliacao",
         "obrigatorio": false,
-        "texto": "Se houve parada cardiorrespiratória associada, o modificador 'A' (Arrest) foi acrescentado ao estágio SCAI (ex.: C+A), independentemente da duração do episódio",
+        "texto": "Se houve parada cardiorrespiratória com potencial lesão cerebral anóxica — como coma/GCS <9 ou ausência de resposta a comandos após RCE —, o modificador '+A' (Arrest) foi acrescentado ao estágio hemodinâmico. Parada breve com recuperação neurológica não recebe o modificador automaticamente",
         "origem_secao": "Modificador A: parada cardíaca"
       },
       {
@@ -29446,5 +29532,77 @@
       }
     ],
     "revisao": "Produzido por ChatGPT em 26/08/2026 com fontes oficiais atuais. Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
+  },
+  {
+    "slug": "primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda",
+    "condicao": "Primeira hora na suspeita de isquemia mesentérica aguda",
+    "resumo": "Itens mínimos para reconhecer dor abdominal desproporcional como isquemia mesentérica aguda, acionar angiotomografia sem atraso e não confundir gradação de heparina entre as etiologias.",
+    "documento_origem": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "fonte_producao": "claude",
+    "source_refs": [
+      "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+      "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642."
+    ],
+    "itens": [
+      {
+        "id": "ima-dor-desproporcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor abdominal intensa desproporcional ao exame físico assumida como isquemia mesentérica aguda até prova em contrário",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-fator-de-risco-cardioembolico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fator de risco cardioembólico pesquisado: fibrilação atrial, infarto recente, valvopatia/endocardite, disfunção de VE, embolia prévia",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-nao-espera-laboratorio",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Encaminhamento à angiotomografia não atrasado à espera de lactato, D-dímero ou leucograma",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-cta-solicitada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiotomografia de abdome com contraste em fases arterial e venosa solicitada sem atraso, mencionando a suspeita de isquemia mesentérica na requisição",
+        "origem_secao": "Angiotomografia sem atraso"
+      },
+      {
+        "id": "ima-peritonite-cirurgia-direta",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Diante de sinais de peritonite, laparotomia/laparoscopia acionada sem aguardar o exame de imagem",
+        "origem_secao": "Reconhecimento clínico"
+      },
+      {
+        "id": "ima-heparina-por-etiologia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação com heparina tratada como recomendação graduada apenas para trombose de veia mesentérica e como coadjuvante de vasodilatador em isquemia não oclusiva — não generalizada para a forma arterial sem contexto da equipe assistente",
+        "origem_secao": "Anticoagulação: o que está graduado e o que não está"
+      },
+      {
+        "id": "ima-expertise-endovascular",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Disponibilidade de expertise em revascularização endovascular verificada; transferência a centro com serviço 24/7 considerada quando ausente",
+        "origem_secao": "Revascularização: endovascular como primeira linha, com nuance recente"
+      },
+      {
+        "id": "ima-comunicacao-cardiologia",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Cardiologia comunicada quando houver fonte cardioembólica identificada, sem atrasar o exame ou a cirurgia",
+        "origem_secao": "Por que a cardiologia precisa reconhecer isto"
+      }
+    ],
+    "revisao": "Produzido por Claude em 27/08/2026 com fontes primárias atuais (WSES 2022, ESVS 2025). Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
   }
 ]

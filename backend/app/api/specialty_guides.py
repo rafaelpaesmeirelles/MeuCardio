@@ -1,3 +1,4 @@
+import unicodedata
 from typing import Any, Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -10,6 +11,60 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.services.clinical_rule_engine import evaluate_rules, validate_answers
 
 router = APIRouter(prefix="/api/specialty-guides", tags=["guias especializados"])
+
+
+_ACCENTED_SEARCH_CHARS = "áàâãäéèêëíìîïóòôõöúùûüçñýÿ"
+_PLAIN_SEARCH_CHARS = "aaaaaeeeeiiiiooooouuuucnyy"
+
+
+def _normalize_search_term(value: str) -> str:
+    """Normaliza a entrada sem depender da extensão PostgreSQL ``unaccent``."""
+    decomposed = unicodedata.normalize("NFKD", value)
+    without_accents = "".join(
+        character for character in decomposed
+        if not unicodedata.combining(character)
+    )
+    return " ".join(
+        without_accents.casefold().replace("-", " ").replace("_", " ").split()
+    )
+
+
+def _normalized_search_column(column):
+    """Expressão portável dentro do PostgreSQL base, sem extensões opcionais."""
+    normalized = func.translate(
+        func.lower(cast(column, Text)),
+        _ACCENTED_SEARCH_CHARS,
+        _PLAIN_SEARCH_CHARS,
+    )
+    return func.replace(func.replace(normalized, "-", " "), "_", " ")
+
+
+def _escaped_like_term(value: str) -> str:
+    normalized = _normalize_search_term(value)
+    escaped = normalized.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+    return f"%{escaped}%"
+
+
+def _disease_search_predicate(value: str):
+    term = _escaped_like_term(value)
+    return or_(*(
+        _normalized_search_column(column).like(term, escape="\\")
+        for column in (
+            SpecialtyDisease.slug,
+            SpecialtyDisease.name,
+            SpecialtyDisease.summary,
+            SpecialtyDisease.epidemiology,
+            SpecialtyDisease.category,
+            SpecialtyDisease.subtype,
+            SpecialtyDisease.aliases,
+            SpecialtyDisease.tags,
+            SpecialtyDisease.presentation,
+            SpecialtyDisease.diagnostic_approach,
+            SpecialtyDisease.differentials,
+            SpecialtyDisease.tests,
+            SpecialtyDisease.red_flags,
+        )
+    ))
 
 
 class AssessmentPayload(BaseModel):
@@ -107,18 +162,38 @@ def list_areas(db: Session = Depends(get_db)):
 
 
 @router.get("/disease-facets")
-def list_disease_facets(db: Session = Depends(get_db)):
-    """Áreas e grupos clínicos que possuem ao menos um verbete publicado."""
+def list_disease_facets(
+    area: str | None = Query(None, max_length=60),
+    category: str | None = Query(None, max_length=100),
+    db: Session = Depends(get_db),
+):
+    """Facetas publicadas e condicionais para combinações sempre acionáveis.
+
+    Cada lado é restringido pelo outro: ao selecionar uma população/contexto,
+    só retornamos grupos clínicos que possuem conteúdo nessa área; ao selecionar
+    um grupo, só retornamos áreas que contêm esse grupo.
+    """
+    area_query = db.query(
+        SpecialtyDisease.area,
+        func.count(SpecialtyDisease.id),
+    ).filter(SpecialtyDisease.published.is_(True))
+    if category:
+        area_query = area_query.filter(SpecialtyDisease.category == category)
     areas = (
-        db.query(SpecialtyDisease.area, func.count(SpecialtyDisease.id))
-        .filter(SpecialtyDisease.published.is_(True))
+        area_query
         .group_by(SpecialtyDisease.area)
         .order_by(SpecialtyDisease.area)
         .all()
     )
+
+    category_query = db.query(
+        SpecialtyDisease.category,
+        func.count(SpecialtyDisease.id),
+    ).filter(SpecialtyDisease.published.is_(True))
+    if area:
+        category_query = category_query.filter(SpecialtyDisease.area == area)
     categories = (
-        db.query(SpecialtyDisease.category, func.count(SpecialtyDisease.id))
-        .filter(SpecialtyDisease.published.is_(True))
+        category_query
         .group_by(SpecialtyDisease.category)
         .order_by(SpecialtyDisease.category)
         .all()
@@ -157,15 +232,7 @@ def list_diseases(
     if assistant_only:
         query = query.filter(cast(SpecialtyDisease.assistant_questions, Text) != "[]")
     if q and q.strip():
-        term = f"%{q.strip()}%"
-        query = query.filter(or_(
-            SpecialtyDisease.name.ilike(term),
-            SpecialtyDisease.summary.ilike(term),
-            SpecialtyDisease.category.ilike(term),
-            SpecialtyDisease.subtype.ilike(term),
-            cast(SpecialtyDisease.aliases, Text).ilike(term),
-            cast(SpecialtyDisease.tags, Text).ilike(term),
-        ))
+        query = query.filter(_disease_search_predicate(q))
 
     total = query.count()
     items = (
@@ -215,14 +282,22 @@ def assess_disease(slug: str, payload: AssessmentPayload, db: Session = Depends(
             status_code=422,
             detail={"erro": "Respostas inválidas.", "campos": invalid},
         )
+    if missing:
+        raise HTTPException(
+            status_code=422,
+            detail={"erro": "Respostas obrigatórias ausentes.", "campos": missing},
+        )
     result = evaluate_rules(
         questions=item.assistant_questions or [],
         rules=item.assistant_rules or [],
         answers=payload.answers,
-        base_tests=item.tests or [],
+        # Exames e fluxos do verbete são conteúdo educacional de referência.
+        # O assessment só deve rotular como sugestão o que uma regra explícita
+        # adicionou para as respostas atuais.
+        base_tests=[],
         base_differentials=item.differentials or [],
-        base_ambulatory_flow=item.ambulatory_flow or [],
-        base_emergency_flow=item.emergency_flow or [],
+        base_ambulatory_flow=[],
+        base_emergency_flow=[],
         context=payload.context,
     )
     result.update({

@@ -23733,5 +23733,184 @@
         "por_que": "Liga à alternativa aceita pela diretriz AHA/ASA 2026 na janela de 4,5 horas, preservando a diferença entre protocolo clínico e rotulagem local."
       }
     ]
+  },
+  {
+    "slug": "trilha-suspeita-de-isquemia-mesenterica-aguda-do-reconhecimento-a-decisao-de-revascularizacao",
+    "titulo": "Suspeita de isquemia mesentérica aguda: do reconhecimento à decisão de revascularização",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Reconhecer a dor abdominal desproporcional ao exame como possível isquemia mesentérica aguda, entender por que a angiotomografia não pode esperar, diferenciar o que está formalmente graduado na anticoagulação e chegar à decisão especializada entre revascularização endovascular e cirurgia aberta, sem virar prescrição autônoma.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "fonte_producao": "claude",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+        "por_que": "Define a porta de entrada (dor desproporcional mais fator de risco cardioembólico), a urgência da angiotomografia e a diferença de grau de recomendação da heparina entre as etiologias."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+        "por_que": "Transforma os mesmos passos em árvore operacional, separando peritonite (cirurgia direta), oclusão arterial, NOMI e trombose venosa mesentérica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "ima-dor-abdominal-desproporcional-assumir-ima-ate-provar-o-contrario-wses-2022",
+        "por_que": "Ancora o reconhecimento clínico em recomendação forte da WSES 2022, evidência 1C."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "ima-angiotomografia-urgente-independente-da-funcao-renal-esvs-2025",
+        "por_que": "Ancora a angiotomografia sem atraso em recomendação Classe I, Nível B da ESVS 2025."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "ima-revascularizacao-endovascular-primeira-linha-oclusao-arterial-esvs-2025",
+        "por_que": "Ancora a preferência por revascularização endovascular em recomendação Classe IIa, Nível B da ESVS 2025, quando há expertise disponível."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "primeira-hora-na-suspeita-de-isquemia-mesenterica-aguda",
+        "por_que": "Converte o protocolo em itens verificáveis antes de qualquer decisão de revascularização."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "heparina-nao-fracionada",
+        "por_que": "Liga a decisão de anticoagulação ao verbete farmacológico já existente no acervo, preservando a distinção feita no documento: recomendação graduada para trombose venosa mesentérica e coadjuvante em NOMI, não uma indicação formal generalizada na forma arterial."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "isquemia-mesenterica-cronica-diagnostico-e-tratamento-svs-2021",
+        "por_que": "É a continuidade direta da mesma doença vascular após a fase aguda — investigação etiológica e manejo eletivo de quem sobrevive ao evento ou tem doença aterosclerótica subjacente, documento já publicado e revisado neste acervo."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-uco-acidose-metabolica-compensacao-e-anion-gap",
+    "titulo": "UCO: acidose metabólica, compensação respiratória e ânion gap",
+    "tema": "Terapia intensiva",
+    "objetivo": "Aplicar a fórmula de Winter e o ânion gap corrigido por albumina como conferências matemáticas, reconhecer discordâncias que pedem investigação de distúrbio misto e conectar o raciocínio a MALA e cetoacidose euglicêmica sem transformar resultado calculado em diagnóstico automático.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "acidose-metabolica-compensacao-respiratoria-e-anion-gap-na-uco",
+        "por_que": "Define escopo, fórmulas, condições de uso, fontes primárias e gates antes de interpretar qualquer resultado."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "acidose-metabolica-winter-anion-gap-uco",
+        "por_que": "Executa a aritmética rastreável, usa o limite do laboratório e mantém a linguagem de hipótese clínica em vez de emitir diagnóstico misto."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "acidose-latica-associada-a-metformina-mala-no-paciente-critico-cardiovascular",
+        "por_que": "Aplica o raciocínio a uma causa relevante na UCO, preservando lactato, função renal e critérios do EXTRIP como avaliações próprias."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2",
+        "por_que": "Fecha com a armadilha em que glicemia pouco elevada não exclui acidose com ânion gap; cetonas continuam obrigatórias para confirmar a etiologia."
+      }
+    ],
+    "revisao": "Lote produzido e referenciado em 27/08/2026; conteúdo e sequência permanecem pendentes de revisão clínica humana antes da publicação."
+  },
+  {
+    "slug": "trilha-uco-oxigenacao-pao2-fio2-e-sdra",
+    "titulo": "UCO: oxigenação, PaO₂/FiO₂ e critérios de SDRA",
+    "tema": "Terapia intensiva",
+    "objetivo": "Calcular a razão PaO₂/FiO₂ com dados simultâneos, aplicar os gates da definição global sem emitir diagnóstico automático e diferenciar explicitamente SDRA de edema cardiogênico ou sobrecarga volêmica na Unidade Coronariana.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "oxigenacao-pao2-fio2-e-criterios-de-sdra-na-uco",
+        "por_que": "Define simultaneidade, fórmula, categorias global e intubada, critérios clínicos/de imagem e o gate cardiogênico antes de qualquer classificação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "oxigenacao-pao2-fio2-sdra-uco",
+        "por_que": "Executa a aritmética P/F e exige suporte, causa, tempo, imagem e origem do edema, sem selecionar tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "ventilacao-protetora-uco",
+        "por_que": "Conecta o reconhecimento à conferência de peso predito, volume corrente e pressões, mantendo parâmetros e decisão clínica fora da automação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+        "por_que": "Explicita a relação direta entre SDRA, aumento de pós-carga do ventrículo direito e custo hemodinâmico da ventilação."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap",
+        "por_que": "Fecha com o diferencial cardiogênico: hipoxemia e opacidades bilaterais não autorizam rotular SDRA quando insuficiência cardíaca/sobrecarga explicam primariamente o edema."
+      }
+    ],
+    "revisao": "Lote produzido e referenciado em 27/08/2026; conteúdo, gates e sequência permanecem pendentes de revisão clínica humana antes da publicação."
+  },
+  {
+    "slug": "trilha-uco-lesao-renal-aguda-kdigo",
+    "titulo": "UCO: lesão renal aguda por creatinina e diurese",
+    "tema": "Terapia intensiva",
+    "objetivo": "Reconhecer e estadiar LRA pelos componentes KDIGO de creatinina e diurese, preservar discordâncias C/U e conectar o estágio à avaliação hemodinâmica e ácido-base sem automatizar fluido, diurético, ajuste de fármaco ou terapia renal substitutiva.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "fonte_producao": "chatgpt",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese",
+        "por_que": "Define as janelas, os componentes C/U, as limitações do basal e da coleta e a separação entre estágio, etiologia e tratamento."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "lesao-renal-aguda-kdigo-uco",
+        "por_que": "Executa razão, delta e diurese normalizada, informa cada componente e escolhe o estágio mais grave sem prescrever conduta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+        "por_que": "Conecta oligúria e lesão renal à hipoperfusão e ao ajuste de suporte, sem assumir que toda oligúria decorre de baixo débito."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+        "por_que": "Acrescenta a via congestiva da disfunção renal e impede transformar oligúria em indicação automática de expansão volêmica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "calculadora",
+        "item_slug": "acidose-metabolica-winter-anion-gap-uco",
+        "por_que": "Fecha com a conferência ácido-base quando retenção de ácidos é parte do fenótipo, preservando que Winter e ânion gap não diagnosticam LRA."
+      }
+    ],
+    "revisao": "Lote produzido em 27/08/2026 com a diretriz KDIGO publicada de 2012 e estudos originais de cirurgia cardíaca; o rascunho KDIGO 2026 foi explicitamente excluído como norma. Conteúdo e sequência permanecem pendentes de revisão clínica humana."
   }
 ]
