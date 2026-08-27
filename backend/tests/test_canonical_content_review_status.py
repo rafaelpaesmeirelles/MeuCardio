@@ -8,9 +8,10 @@ que deixe de estar revisado é despublicado.
 A exceção estreita usada durante a RC de lançamento (dez medicamentos
 conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
 validação científica completa dos dez contra fonte primária (bula/rótulo/
-PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes Tudo com Tudo pendentes foram revisados em 27/08/2026. As allowlists
-ficam vazias: qualquer novo status diferente de `revisado` quebra o gate e
-exige decisão editorial explícita.
+PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes
+Tudo com Tudo previamente pendentes foram revisados em 27/08/2026. As allowlists
+ficam vazias: qualquer novo status diferente de `revisado` quebra o gate e exige
+decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -37,7 +38,7 @@ MANIFESTS = (
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
-PENDENTES_MARKDOWN_AVC: set[str] = set()
+PENDENTES_MARKDOWN: set[str] = set()
 
 
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
@@ -101,7 +102,7 @@ def test_todos_os_documentos_markdown_estao_revisados():
         elif match.group(1).strip() != "revisado":
             if (
                 match.group(1).strip() == "pendente_revisao"
-                and relative_path in PENDENTES_MARKDOWN_AVC
+                and relative_path in PENDENTES_MARKDOWN
             ):
                 pendentes_permitidos.add(relative_path)
             else:
@@ -109,4 +110,4 @@ def test_todos_os_documentos_markdown_estao_revisados():
 
     assert sem_status == []
     assert pendentes == []
-    assert pendentes_permitidos == PENDENTES_MARKDOWN_AVC
+    assert pendentes_permitidos == PENDENTES_MARKDOWN
