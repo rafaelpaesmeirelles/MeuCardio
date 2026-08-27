@@ -4,8 +4,8 @@ review_status: pendente_revisao
 review_note: 'Novo nó longitudinal produzido em 27/08/2026. Estrutura a transição de cardiopatias conotruncais da cardiologia pediátrica para ACHD sem substituir recomendações específicas por lesão. Requer revisão clínica/editorial humana antes de publicação.'
 slug: transicao-conotruncal-pediatria-para-achd-dossie-clinico-operacional
 source_refs:
-- Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2026;153:e115-e251. DOI 10.1161/CIR.0000000000001402.
-- John AS, Jackson JL, Moons P, et al. Advances in Managing Transition to Adulthood for Adolescents With Congenital Heart Disease: A Practical Approach to Transition Program Design. J Am Heart Assoc. 2022;11:e025278. DOI 10.1161/JAHA.122.025278. PMID 35297271.
+- 'Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2026;153:e115-e251. DOI 10.1161/CIR.0000000000001402.'
+- 'John AS, Jackson JL, Moons P, et al. Advances in Managing Transition to Adulthood for Adolescents With Congenital Heart Disease: A Practical Approach to Transition Program Design. J Am Heart Assoc. 2022;11:e025278. DOI 10.1161/JAHA.122.025278. PMID 35297271.'
 theme: Cardiopatias congênitas
 fonte_producao: chatgpt
 title: 'Transição das cardiopatias conotruncais da pediatria para ACHD: dossiê clínico-operacional'
