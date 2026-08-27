@@ -43,7 +43,7 @@ def _contagens_no_minimo() -> dict[type, int]:
 
 
 def test_baseline_do_catalogo_nao_diverge_do_reconciliador():
-    assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 5_052
+    assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 5_054
     assert set(MODELS_BY_KEY) == set(RECONCILIATION_FRONTS)
 
 
@@ -66,7 +66,7 @@ def test_catalogo_soma_as_treze_frentes_e_expõe_baselines():
     assert len(resposta["fronts"]) == 13
     assert resposta["total"] == SCIENTIFIC_CORPUS_MINIMUM
     assert resposta["inventory_total"] == SCIENTIFIC_CORPUS_MINIMUM
-    assert resposta["expected_minimum"] == 5_052
+    assert resposta["expected_minimum"] == 5_054
     assert resposta["physical_files_expected"] == 1_329
     assert resposta["integrity_ok"] is True
     assert resposta["missing"] == 0
@@ -81,7 +81,7 @@ def test_excedente_em_uma_frente_nao_mascara_deficit_em_outra():
 
     resposta = catalog(db=_SessaoFalsa(contagens), _=object())
 
-    # O agregado ainda é 5.052, mas emergência está abaixo do mínimo próprio.
+    # O agregado ainda é 5.053, mas emergência está abaixo do mínimo próprio.
     assert resposta["total"] == SCIENTIFIC_CORPUS_MINIMUM
     assert resposta["integrity_ok"] is False
     assert resposta["missing"] == 1

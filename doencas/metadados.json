@@ -11350,5 +11350,1560 @@
       "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora"
     ],
     "patient_material_slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia"
+  },
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "name": "Síndrome coronariana aguda",
+    "aliases": [
+      "SCA",
+      "infarto agudo do miocárdio",
+      "IAM",
+      "angina instável",
+      "IAM com supradesnivelamento de ST",
+      "IAM sem supradesnivelamento de ST",
+      "STEMI",
+      "NSTEMI"
+    ],
+    "area": "geral",
+    "category": "doenca_coronariana",
+    "subtype": "angina_instavel_iam_sem_supra_iam_com_supra",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 2,
+    "completeness": "completo",
+    "summary": "Síndrome clínica tempo-dependente que inclui angina instável, infarto sem supradesnivelamento de ST e infarto com supradesnivelamento de ST. A abordagem inicial integra sintomas, sinais vitais, ECG seriado e troponina cardíaca de alta sensibilidade; nenhum desses elementos isoladamente autoriza excluir o diagnóstico quando a suspeita permanece.",
+    "epidemiology": "A síndrome coronariana aguda permanece causa importante de morte e incapacidade cardiovascular. Este verbete não extrapola taxas internacionais para o Brasil. Lesão miocárdica é definida por troponina cardíaca acima do percentil 99 e é aguda quando há elevação e/ou queda; infarto requer lesão miocárdica aguda acompanhada de evidência clínica de isquemia.",
+    "presentation": [
+      "Dor, pressão, peso, aperto ou queimação torácica nova, prolongada, em repouso ou em padrão crescente",
+      "Irradiação para braço, ombro, pescoço, mandíbula, dorso ou epigástrio",
+      "Dispneia, sudorese, náusea, vômitos, palpitações, síncope ou fraqueza intensa podem acompanhar ou substituir a dor",
+      "Dor ou desconforto torácico permanece apresentação comum também nas mulheres; dispneia, náusea, fadiga e outros sintomas acompanhantes podem ser mais proeminentes. Em pessoas idosas ou frágeis, síncope, confusão ou queda podem acompanhar apresentações menos evidentes",
+      "Parada cardíaca, choque, edema pulmonar, arritmia grave ou complicação mecânica podem ser a apresentação inicial"
+    ],
+    "diagnostic_approach": {
+      "reconhecimento_inicial": [
+        "Tratar sintomas compatíveis como possível emergência e registrar horário de início, duração, persistência ou recorrência e momento da última crise; documentar separadamente episódios intermitentes",
+        "Realizar ECG de 12 derivações rapidamente e repetir quando o primeiro traçado não for diagnóstico e a suspeita persistir",
+        "Não aguardar troponina para ativar a via de reperfusão quando houver supradesnivelamento persistente de ST ou equivalente isquêmico reconhecido por equipe habilitada"
+      ],
+      "biomarcadores": [
+        "Concluir um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação somente quando o próprio algoritmo, o tempo desde o início e o limite específico do ensaio o permitirem",
+        "Interpretar valor absoluto e variação temporal no contexto de sintomas, ECG, tempo desde o início, função renal e diagnósticos alternativos",
+        "Troponina elevada identifica lesão miocárdica; infarto requer evidência de isquemia, e elevação isolada não define SCA tipo 1"
+      ],
+      "classificacao_e_risco": [
+        "Separar apresentação com supradesnivelamento persistente de ST ou equivalente, SCA sem supra e diagnósticos alternativos ameaçadores",
+        "Reconhecer risco muito alto por choque ou instabilidade, dor refratária, insuficiência cardíaca aguda isquêmica, arritmia ameaçadora, parada cardíaca, complicação mecânica ou alterações isquêmicas recorrentes",
+        "Usar escores validados apenas como complemento; eles não substituem avaliação clínica, ECG, algoritmo validado de troponina de alta sensibilidade nem julgamento sobre reperfusão"
+      ],
+      "limite_do_assistente": "O assistente organiza sinais de alarme e dados ausentes. Não interpreta traçados, não seleciona dose, não determina elegibilidade para fibrinólise ou intervenção e não recomenda alta automática."
+    },
+    "differentials": [
+      "Síndrome aórtica aguda",
+      "Embolia pulmonar",
+      "Pericardite ou miocardite",
+      "Pneumotórax",
+      "Takotsubo",
+      "Espasmo coronariano ou dissecção coronariana espontânea",
+      "Lesão miocárdica sem isquemia e infarto tipo 2",
+      "Dor musculoesquelética, gastrointestinal ou ansiedade somente após exclusão proporcional das causas graves"
+    ],
+    "tests": [
+      "ECG de 12 derivações precoce e seriado; derivações adicionais conforme território suspeito",
+      "Troponina cardíaca de alta sensibilidade em algoritmo validado, com pontos de corte específicos do ensaio local",
+      "Hemograma, creatinina, eletrólitos, glicemia e coagulação conforme contexto e terapia prevista"
+    ],
+    "red_flags": [
+      "Hipotensão, choque, alteração de consciência, extremidades frias ou oligúria",
+      "Dor persistente ou recorrente apesar do tratamento inicial",
+      "Supradesnivelamento persistente de ST ou equivalente isquêmico",
+      "Arritmia ameaçadora à vida ou parada cardíaca",
+      "Edema pulmonar ou insuficiência cardíaca aguda presumidamente isquêmica",
+      "Novo sopro, deterioração súbita ou suspeita de complicação mecânica",
+      "Dor súbita máxima, assimetria de pulsos, déficit neurológico ou hipoxemia que sugiram diagnóstico alternativo fatal"
+    ],
+    "ambulatory_flow": [
+      "Interromper avaliação eletiva diante de dor atual, equivalente anginoso novo ou qualquer sinal de alarme",
+      "Acionar o SAMU 192 para transporte monitorizado quando houver suspeita de evento agudo; não orientar a pessoa a dirigir",
+      "Não usar melhora espontânea, ECG inicial normal ou uma troponina isolada como justificativa para permanecer em fluxo ambulatorial",
+      "Se o padrão for inequivocamente crônico e estável, redirecionar ao verbete de síndrome coronariana crônica"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, sinais vitais, acesso venoso, monitorização e ECG de 12 derivações precoce",
+      "Ativar imediatamente a estratégia de reperfusão em apresentação com supra de ST ou equivalente reconhecido, conforme rede local",
+      "Na suspeita sem supra, concluir algoritmo validado de troponina de alta sensibilidade e classificar risco sem atrasar angiografia em risco muito alto",
+      "Administrar terapias antitrombóticas e anti-isquêmicas somente após avaliar diagnóstico, alergias, sangramento, anticoagulação, função renal, peso, idade e estratégia invasiva",
+      "Pesquisar e tratar choque, insuficiência cardíaca, arritmias, parada cardíaca e complicações mecânicas em ambiente apropriado",
+      "Reavaliar continuamente diagnósticos alternativos ameaçadores e evitar alta automatizada por escore isolado"
+    ],
+    "treatment_summary": "O tratamento é definido pelo fenótipo, tempo, estabilidade, anatomia, risco isquêmico e hemorrágico e contraindicações. Pode incluir antiagregação, anticoagulação, terapia anti-isquêmica, estatina de alta intensidade e revascularização. Na apresentação com supra de ST, a reperfusão não deve ser retardada; intervenção coronária percutânea primária é preferida quando disponível no tempo recomendado, e fibrinólise exige seleção protocolar rigorosa quando a intervenção oportuna não é possível. Na SCA sem supra, o momento da estratégia invasiva depende do risco. Doses e escolhas individuais permanecem no protocolo institucional e nos verbetes farmacológicos, nunca em regra automática deste assistente.",
+    "monitoring": [
+      "Dor, estado hemodinâmico, oxigenação, ritmo e alterações seriadas do ECG",
+      "Curva de troponina e sinais de reinfarto ou extensão da isquemia",
+      "Sangramento, hemoglobina, plaquetas e função renal durante terapia antitrombótica",
+      "Congestão, perfusão, função ventricular, arritmias e complicações mecânicas",
+      "Adesão, acesso, duração documentada da terapia antitrombótica e interações na transição do cuidado",
+      "LDL-C, tabagismo, pressão, diabetes, reabilitação cardíaca, vacinação e saúde mental após estabilização"
+    ],
+    "special_populations": [
+      "Pessoas idosas ou frágeis exigem avaliação de fragilidade, cognição, sangramento, função renal, mobilidade e objetivos; idade isolada não decide estratégia",
+      "Mulheres podem ter sintomas menos reconhecidos e maior proporção de SCAD ou MINOCA; ausência de dor típica não reduz automaticamente o risco",
+      "Gestação e puerpério exigem equipe cardio-obstétrica e consideração de SCAD, sem atrasar estabilização materna",
+      "Doença renal altera a interpretação da troponina e o risco de sangramento, mas não autoriza atribuir elevação crônica sem avaliar variação e isquemia",
+      "Câncer, trombocitopenia ou terapia cardiotóxica exigem coordenação cardio-oncológica e individualização antitrombótica",
+      "Uso de cocaína ou reação alérgica modifica mecanismos e terapias; não exclui doença aterotrombótica concomitante"
+    ],
+    "assistant_questions": [
+      {
+        "id": "current_or_recurrent_ischemic_symptoms",
+        "label": "Há dor ou equivalente isquêmico atual, persistente ou recorrente?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Sintomas"
+      },
+      {
+        "id": "hemodynamic_or_electrical_instability",
+        "label": "Há choque, hipotensão, edema pulmonar, arritmia ameaçadora, parada cardíaca ou suspeita de complicação mecânica?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Instabilidade"
+      },
+      {
+        "id": "st_elevation_or_equivalent",
+        "label": "Equipe habilitada identificou supradesnivelamento persistente de ST ou equivalente isquêmico?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "nao_avaliado_suspeita_aguda",
+            "label": "Ainda não avaliado, em suspeita aguda atual"
+          },
+          {
+            "value": "nao_aplicavel_sem_suspeita_aguda",
+            "label": "Não aplicável: sem suspeita aguda atual"
+          }
+        ],
+        "section": "ECG"
+      },
+      {
+        "id": "hs_troponin_pathway_completed",
+        "label": "Foi concluído um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação quando o próprio algoritmo o permitir?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "incompleto_suspeita_aguda",
+            "label": "Não, em avaliação aguda atual"
+          },
+          {
+            "value": "nao_aplicavel_reperfusao",
+            "label": "Não aplicável: via de reperfusão já ativada"
+          },
+          {
+            "value": "nao_aplicavel_sem_suspeita_aguda",
+            "label": "Não aplicável: sem suspeita aguda atual"
+          }
+        ],
+        "section": "Biomarcadores"
+      },
+      {
+        "id": "lethal_alternative_red_flags",
+        "label": "Há sinais de síndrome aórtica, embolia pulmonar, pneumotórax ou outra causa imediatamente ameaçadora?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Diagnósticos alternativos"
+      },
+      {
+        "id": "bleeding_or_anticoagulation_risk_known",
+        "label": "Alergia, sangramento ativo/recente, anticoagulação, função renal, peso e idade foram verificados antes de terapia antitrombótica?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "incompleto_suspeita_aguda",
+            "label": "Não, em suspeita aguda atual"
+          },
+          {
+            "value": "nao_aplicavel_sem_suspeita_aguda",
+            "label": "Não aplicável: sem suspeita aguda atual"
+          }
+        ],
+        "section": "Segurança terapêutica"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sca-instabilidade",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hemodynamic_or_electrical_instability",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica, elétrica ou possível complicação mecânica"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente equipe de emergência/hemodinâmica e suporte avançado conforme o fenótipo"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma à beira do leito quando houver instabilidade, insuficiência cardíaca ou suspeita de complicação mecânica"
+          ]
+        }
+      },
+      {
+        "id": "sca-supra-ou-equivalente",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "st_elevation_or_equivalent",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Ativar via de reperfusão sem aguardar troponina; definir estratégia no protocolo regional por equipe habilitada"
+          ],
+          "messages": [
+            "A regra não interpreta o ECG nem escolhe fibrinólise ou dose"
+          ],
+          "suggested_tests": [
+            "Coronariografia invasiva urgente conforme apresentação, risco e estratégia definida pela equipe habilitada"
+          ]
+        }
+      },
+      {
+        "id": "sca-sintoma-ativo",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "current_or_recurrent_ischemic_symptoms",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Manter monitorização, repetir ECG e conduzir avaliação urgente de SCA e diagnósticos ameaçadores"
+          ]
+        }
+      },
+      {
+        "id": "sca-ecg-nao-avaliado",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "st_elevation_or_equivalent",
+              "op": "eq",
+              "value": "nao_avaliado_suspeita_aguda"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "missing_information": [
+            "ECG ainda não interpretado por equipe habilitada"
+          ],
+          "suggested_tests": [
+            "Obter e interpretar ECG de 12 derivações imediatamente"
+          ]
+        }
+      },
+      {
+        "id": "sca-troponina-seriada-incompleta",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hs_troponin_pathway_completed",
+              "op": "eq",
+              "value": "incompleto_suspeita_aguda"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Algoritmo diagnóstico de troponina de alta sensibilidade incompleto na suspeita aguda"
+          ],
+          "messages": [
+            "Uma amostra isolada só apoia descarte quando satisfaz integralmente um algoritmo validado, incluindo tempo desde o início e limite específico do ensaio"
+          ],
+          "suggested_tests": [
+            "Completar algoritmo validado de troponina de alta sensibilidade para o ensaio local"
+          ]
+        }
+      },
+      {
+        "id": "sca-alternativa-letal",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "lethal_alternative_red_flags",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível diagnóstico alternativo imediatamente ameaçador"
+          ],
+          "emergency_flow": [
+            "Investigar em paralelo a causa alternativa sem atrasar estabilização"
+          ],
+          "suggested_tests": [
+            "Selecionar imagem dirigida para aorta, pulmão ou miocárdio conforme a hipótese alternativa e a estabilidade"
+          ]
+        }
+      },
+      {
+        "id": "sca-seguranca-antitrombotica-incompleta",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "bleeding_or_anticoagulation_risk_known",
+              "op": "eq",
+              "value": "incompleto_suspeita_aguda"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Dados de segurança para terapia antitrombótica não verificados"
+          ],
+          "messages": [
+            "Não sugerir fármaco ou dose antes de verificar sangramento, anticoagulação, alergia, função renal, peso e idade"
+          ]
+        }
+      },
+      {
+        "id": "sca-dados-criticos-desconhecidos",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "current_or_recurrent_ischemic_symptoms",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "hemodynamic_or_electrical_instability",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "lethal_alternative_red_flags",
+              "op": "eq",
+              "value": "desconhecido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Um ou mais dados críticos de segurança permanecem desconhecidos"
+          ],
+          "messages": [
+            "Não autorizar baixa prioridade ou alta enquanto dados críticos estiverem desconhecidos"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "síndrome coronariana aguda",
+      "angina instável",
+      "NSTEMI",
+      "STEMI",
+      "troponina",
+      "reperfusão",
+      "choque cardiogênico",
+      "DAPT"
+    ],
+    "source_refs": [
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151:e771-e862. DOI: 10.1161/CIR.0000000000001309; consultar também as correções oficiais DOI: 10.1161/CIR.0000000000001328, 10.1161/CIR.0000000000001346 e 10.1161/CIR.0000000000001397."
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/guidelines-statements/2025-accahaacepnaemspscai-guideline-for-the-management-of-patients-with-acutecir0000000000001309",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001328",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001346",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001397"
+    ],
+    "related_document_slugs": [
+      "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+      "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+      "fluxograma-sindrome-coronariana-aguda-esc-2023",
+      "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+      "fluxograma-iamcsst-estrategia-de-reperfusao-icp-primaria-vs-fibrinolise-esc-2023",
+      "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+      "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023"
+    ],
+    "patient_material_slug": "doenca-coronariana-e-infarto",
+    "review_status": "pendente_revisao",
+    "review_note": "Rascunho produzido por agentes em 27/08/2026 a partir da diretriz primária oficial ACC/AHA 2025 e das três correções oficiais conhecidas. Exige revisão clínica humana antes da publicação. As regras foram revisadas para atuar somente em suspeita aguda explícita, não interpretam ECG, não calculam dose, não selecionam reperfusão e não autorizam alta. Documentos ESC preexistentes permanecem apenas como navegação clínica; qualquer transformação da diretriz ESC em software depende de licença formal.",
+    "fonte_producao": "chatgpt",
+    "version": 1
+  },
+  {
+    "slug": "embolia-pulmonar-aguda",
+    "name": "Embolia pulmonar aguda",
+    "aliases": [
+      "Embolia pulmonar"
+    ],
+    "area": "geral",
+    "category": "tromboembolismo",
+    "subtype": "tromboembolismo_arterial_pulmonar_agudo",
+    "prevalence_rank": 6,
+    "completeness": "completo",
+    "summary": "Obstrução aguda de uma ou mais artérias pulmonares, em geral por trombo originado no sistema venoso profundo, com apresentação que varia de achado assintomático a insuficiência respiratória, falência do ventrículo direito, choque obstrutivo e parada cardíaca. A prioridade é reconhecer instabilidade, confirmar ou excluir o diagnóstico por uma estratégia proporcional à probabilidade clínica e iniciar tratamento e estratificação sem atrasos evitáveis. Este verbete aplica-se a adultos com 18 anos ou mais e não deve ser extrapolado para pediatria.",
+    "epidemiology": "A embolia pulmonar integra o espectro do tromboembolismo venoso e é causa relevante de hospitalização, recorrência, sangramento relacionado ao tratamento e morte evitável. O risco aumenta com cirurgia, hospitalização, imobilidade, trauma, câncer, gestação/puerpério, estrogênio, trombofilias, idade e eventos prévios; uma parcela ocorre sem fator reversível maior identificável. A diretriz multissocietária AHA/ACC de 2026 introduziu categorias clínicas A–E para organizar gravidade, local de cuidado e terapias avançadas.",
+    "presentation": [
+      "Dispneia de início súbito ou progressivo, dor torácica pleurítica, taquicardia, hipoxemia ou queda da tolerância ao esforço",
+      "Síncope, pré-síncope, hipotensão, alteração do estado mental ou choque podem indicar falência cardiopulmonar",
+      "Hemoptise, febre baixa ou sinais de infarto pulmonar podem ocorrer, mas não são necessários para o diagnóstico",
+      "Dor ou edema unilateral de membro inferior podem sugerir trombose venosa profunda associada",
+      "TEP pode ser assintomático e identificado incidentalmente; ausência de sintomas não elimina necessidade de classificação e plano",
+      "ECG, radiografia de tórax e gasometria podem ser inespecíficos e não excluem TEP isoladamente"
+    ],
+    "diagnostic_approach": {
+      "primeira_decisao": [
+        "Avaliar imediatamente estabilidade hemodinâmica e respiratória; parada, choque, hipotensão persistente, hipoperfusão ou falência respiratória mudam a ordem dos exames e o local de cuidado",
+        "Pesquisar diagnósticos alternativos fatais em paralelo, especialmente síndrome coronariana aguda, síndrome aórtica aguda, pneumotórax, tamponamento, sepse e hemorragia",
+        "Estimar probabilidade pré-teste com julgamento clínico estruturado ou escore validado antes de interpretar D-dímero"
+      ],
+      "paciente_estavel": [
+        "Em probabilidade muito baixa, PERC pode evitar D-dímero somente dentro de estratégia validada e após avaliação clínica apropriada",
+        "Em probabilidade baixa ou intermediária, usar D-dímero de alta sensibilidade dentro de algoritmo validado; resultado negativo aplicável pode excluir TEP sem imagem",
+        "Usar corte de D-dímero ajustado pela idade em pessoas acima de 50 anos quando o algoritmo e o ensaio forem compatíveis",
+        "Em probabilidade alta ou D-dímero positivo, realizar angiotomografia de artérias pulmonares; não usar D-dímero para afastar TEP quando a probabilidade pré-teste é alta",
+        "Usar cintilografia ventilação/perfusão quando a angiotomografia for contraindicada ou não apropriada e interpretar resultados não diagnósticos no contexto clínico",
+        "Ultrassonografia venosa com trombose proximal pode confirmar tromboembolismo venoso em cenários selecionados, mas exame negativo não exclui TEP"
+      ],
+      "paciente_instavel": [
+        "Se a angiotomografia for imediatamente viável e segura, priorizar confirmação rápida sem atrasar suporte",
+        "Se transporte ou angiotomografia forem inviáveis, usar ecocardiografia/POCUS à beira do leito para procurar disfunção de ventrículo direito e diagnósticos alternativos; achado de VD isolado não é específico",
+        "Integrar contexto, imagem disponível e risco de sangramento em decisão multidisciplinar sobre reperfusão; não transformar um sinal isolado em indicação automática"
+      ],
+      "apos_confirmacao": [
+        "Aplicar a categoria clínica AHA/ACC 2026 de maior gravidade presente e reavaliá-la se houver deterioração",
+        "A e B representam TEP assintomático ou sintomático de baixa gravidade; C inclui gravidade clínica elevada com ou sem alteração de VD/biomarcadores; D, falência cardiopulmonar incipiente; E, falência cardiopulmonar estabelecida",
+        "Combinar hemodinâmica, necessidade respiratória, escore clínico, função do ventrículo direito, troponina/peptídeo natriurético e risco de sangramento; a classificação auxilia, mas não substitui julgamento clínico ou decisão multidisciplinar"
+      ]
+    },
+    "differentials": [
+      "Síndrome coronariana aguda",
+      "Síndrome aórtica aguda",
+      "Pneumotórax",
+      "Tamponamento cardíaco",
+      "Pneumonia ou sepse",
+      "Insuficiência cardíaca aguda",
+      "Crise de asma ou exacerbação de DPOC",
+      "Pericardite ou miocardite",
+      "Arritmia",
+      "Ansiedade ou hiperventilação somente após exclusão proporcional de causas orgânicas"
+    ],
+    "tests": [
+      "Probabilidade pré-teste estruturada por Wells, Genebra ou estratégia institucional validada",
+      "D-dímero em probabilidade baixa ou intermediária, com corte validado e ajuste por idade quando aplicável",
+      "Angiotomografia de artérias pulmonares como imagem padrão em paciente elegível",
+      "Cintilografia ventilação/perfusão quando contraste iodado ou angiotomografia não forem apropriados",
+      "Ultrassonografia venosa compressiva quando houver sinais de TVP ou quando possa evitar imagem torácica em cenário selecionado",
+      "ECG, radiografia de tórax, hemograma, função renal, eletrólitos, testes hepáticos e coagulação para diagnósticos alternativos e segurança terapêutica",
+      "Troponina e BNP/NT-proBNP para prognóstico após diagnóstico ou forte suspeita; não para confirmar TEP isoladamente",
+      "Ecocardiograma para função de ventrículo direito e diagnóstico diferencial, prioritariamente em instabilidade ou na estratificação do TEP confirmado",
+      "Gasometria conforme necessidade clínica e lactato nas categorias clínicas C–E para estratificação prognóstica; valores normais não excluem TEP"
+    ],
+    "red_flags": [
+      "Parada cardíaca, choque, pressão sistólica persistentemente baixa ou necessidade de vasopressor",
+      "Hipotensão transitória/recorrente com lactato elevado, oligúria, lesão renal isquêmica ou alteração do estado mental",
+      "Hipoxemia grave, esforço respiratório crescente ou necessidade rapidamente progressiva de oxigênio/suporte ventilatório",
+      "Síncope com instabilidade, dor torácica e sinais de sobrecarga aguda de ventrículo direito",
+      "Deterioração durante anticoagulação, especialmente em paciente com disfunção de VD e biomarcadores elevados",
+      "Sangramento ativo maior ou contraindicação relevante à anticoagulação/reperfusão"
+    ],
+    "ambulatory_flow": [
+      "Considerar manejo fora do hospital apenas após TEP confirmado, estabilidade, baixa gravidade clínica, ausência de disfunção de VD/biomarcadores preocupantes e checklist de exclusão ambulatorial",
+      "Garantir anticoagulante apropriado, acesso ao medicamento, compreensão da prescrição, avaliação de interações e risco de sangramento",
+      "Confirmar suporte domiciliar, possibilidade de retorno rápido e seguimento estruturado; sPESI 0 isoladamente não autoriza alta",
+      "Realizar contato ou consulta em até uma semana após a alta para revisar adesão, sangramento e recuperação",
+      "Reavaliar até três meses para definir duração e investigar sintomas persistentes",
+      "Em todas as consultas por pelo menos um ano, perguntar sobre dispneia, limitação funcional e queda de capacidade de exercício para detectar doença tromboembólica pulmonar crônica ou outra sequela"
+    ],
+    "emergency_flow": [
+      "Estabilizar via aérea, oxigenação, ventilação e circulação; em categorias C–E, evitar quando possível sedação profunda e ventilação mecânica, que podem precipitar colapso hemodinâmico",
+      "Classificar imediatamente a categoria AHA/ACC de maior gravidade e atualizar se houver deterioração",
+      "Anticoagulação empírica antes da imagem pode ser benéfica quando a imagem está atrasada ou indisponível, há suspeita de categoria C2 ou superior e o risco hemorrágico é baixo; não iniciar automaticamente apenas por suspeita inespecífica",
+      "Acionar equipe de resposta a TEP/PERT ou equipe multidisciplinar em categorias D/E ou quando múltiplas estratégias avançadas forem plausíveis",
+      "Terapias avançadas — trombólise sistêmica, trombólise por cateter, trombectomia mecânica ou embolectomia cirúrgica — são razoáveis em E1 e podem ser consideradas em D1–D2 segundo AHA/ACC 2026; categoria C isolada não é indicação automática",
+      "Se trombólise for contraindicada ou falhar, discutir alternativa por cateter ou cirurgia conforme anatomia, risco, experiência e disponibilidade",
+      "Não colocar filtro de veia cava rotineiramente; reservá-lo a indicação específica, como impossibilidade real de anticoagular, após avaliação clínica"
+    ],
+    "treatment_summary": "Anticoagulação é o tratamento central do TEP confirmado, salvo contraindicação. Quando terapia parenteral inicial for necessária, preferir heparina de baixo peso molecular à heparina não fracionada em pacientes elegíveis. Se uma circunstância individual limitar HBPM, documentar a justificativa e seguir protocolo; instabilidade isolada não deve ser convertida por este verbete em preferência automática por HNF. Em elegíveis à via oral, DOAC é preferido a antagonista da vitamina K, mas gestação/lactação, função renal, interações, síndrome antifosfolípide e cenários específicos impedem automatização. Na SBPT 2025, tratamento domiciliar de baixo risco é recomendação condicional com evidência muito baixa; DOAC no câncer é condicional com evidência baixa; evitar trombólise sistêmica rotineira no risco intermediário-alto é condicional com evidência moderada; e trombólise no alto risco é condicional com evidência muito baixa. A fase inicial dura em geral 3–6 meses; extensão é recomendada após primeiro TEP sem fator reversível maior ou com fator persistente, equilibrando recorrência, sangramento e preferência. Terapia avançada é reservada à falência cardiopulmonar ou deterioração selecionada; disfunção de VD ou biomarcador isolados não autorizam trombólise de rotina. Doses e escolha do agente dependem de peso, função renal/hepática, gestação, câncer, interações e estratégia de reperfusão e não devem ser inferidas por este verbete.",
+    "monitoring": [
+      "Pressão, frequência cardíaca, oxigenação, perfusão, diurese e necessidade de suporte durante a fase aguda",
+      "Função do ventrículo direito e biomarcadores quando alteram estratificação ou diante de deterioração",
+      "Hemograma, função renal/hepática e sinais de sangramento conforme anticoagulante e contexto",
+      "Adesão, interações, dose correta, acesso e compreensão do anticoagulante em cada transição de cuidado",
+      "Risco de recorrência e de sangramento antes de decidir anticoagulação estendida e periodicamente durante o uso",
+      "Dispneia, limitação funcional, qualidade de vida, ansiedade/depressão e sinais de doença tromboembólica pulmonar crônica por pelo menos um ano"
+    ],
+    "special_populations": [
+      "Gestação, puerpério e lactação exigem algoritmo diagnóstico e anticoagulação específicos; DOAC não deve ser escolhido automaticamente nesses contextos",
+      "Câncer ativo exige ponderar tipo e sítio tumoral, sangramento gastrointestinal/geniturinário, interações e plaquetas",
+      "Insuficiência renal grave modifica escolha e dose do anticoagulante e a estratégia de imagem",
+      "Síndrome antifosfolípide, especialmente triplo-positiva, requer orientação específica e não deve seguir automaticamente a preferência geral por DOAC",
+      "Idosos e frágeis têm maior risco absoluto de TEP e sangramento; idade isolada não substitui avaliação de gravidade e objetivos",
+      "Obesidade extrema ou baixo peso exigem confirmar evidência, dose e monitorização do agente escolhido",
+      "TEP subsegmentar isolado exige confirmar qualidade da imagem e pesquisar TVP proximal. Vigilância sem anticoagulação só pode ser considerada por protocolo em pessoa cuidadosamente selecionada, com baixo risco de recorrência e seguimento confiável; este verbete não decide vigilância automaticamente",
+      "TEP incidental deve ser classificado e tratado conforme contexto; assintomático não significa irrelevante"
+    ],
+    "assistant_questions": [
+      {
+        "id": "pe_diagnostic_status",
+        "label": "Qual é o estado diagnóstico atual para embolia pulmonar?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "confirmed",
+            "label": "TEP confirmado por imagem ou estratégia diagnóstica validada"
+          },
+          {
+            "value": "suspected_current",
+            "label": "Suspeita aguda atual ainda não confirmada"
+          },
+          {
+            "value": "not_current_suspicion",
+            "label": "Sem suspeita aguda atual"
+          },
+          {
+            "value": "unknown",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Diagnóstico"
+      },
+      {
+        "id": "pe_symptom_status",
+        "label": "No TEP confirmado, há sintomas atribuíveis ao evento agudo?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "symptomatic",
+            "label": "Sintomático"
+          },
+          {
+            "value": "asymptomatic",
+            "label": "Assintomático ou incidental"
+          },
+          {
+            "value": "not_applicable",
+            "label": "Não aplicável: TEP não confirmado"
+          },
+          {
+            "value": "unknown",
+            "label": "Não determinado"
+          }
+        ],
+        "section": "Gravidade"
+      },
+      {
+        "id": "pe_refractory_shock_or_cardiac_arrest",
+        "label": "Há choque cardiogênico refratário ou parada cardíaca?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "pe_persistent_hypotension_with_shock",
+        "label": "Há hipotensão recorrente ou persistente com choque cardiogênico, sem choque refratário ou parada?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "pe_transient_hypotension_without_hypoperfusion",
+        "label": "Há hipotensão transitória sem hipoperfusão persistente ou disfunção de órgão?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "pe_normotensive_hypoperfusion",
+        "label": "Há hipoperfusão ou disfunção de órgão atribuível ao TEP apesar de pressão preservada?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "severe_respiratory_compromise",
+        "label": "Há hipoxemia grave, esforço respiratório crescente ou necessidade progressiva de suporte?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "spesi_score",
+        "label": "sPESI já calculado, se o TEP está confirmado e não há instabilidade",
+        "type": "number",
+        "min": 0,
+        "max": 6,
+        "unit": "pontos",
+        "section": "Gravidade"
+      },
+      {
+        "id": "rv_dysfunction",
+        "label": "Há disfunção de ventrículo direito em ecocardiograma ou angiotomografia?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Não avaliado ou desconhecido"
+          }
+        ],
+        "section": "Gravidade"
+      },
+      {
+        "id": "cardiac_biomarker_elevated",
+        "label": "Há troponina ou peptídeo natriurético elevado no contexto do TEP?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Não avaliado ou desconhecido"
+          }
+        ],
+        "section": "Gravidade"
+      },
+      {
+        "id": "active_major_bleeding",
+        "label": "Há sangramento maior ativo?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "anticoagulation_contraindicated",
+        "label": "Existe contraindicação atual relevante à anticoagulação?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Segurança"
+      },
+      {
+        "id": "pregnant_or_postpartum",
+        "label": "Há gestação, puerpério ou lactação?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ],
+        "section": "Populações especiais"
+      },
+      {
+        "id": "outpatient_barrier",
+        "label": "Há comorbidade descompensada, risco de sangramento, dor/hipoxemia relevante ou barreira de acesso, adesão e seguimento que torne alta precoce insegura?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Não avaliado ou desconhecido"
+          }
+        ],
+        "section": "Destino"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ep-categoria-e2-parada-ou-choque-refratario",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Parada cardíaca ou choque cardiogênico refratário com TEP confirmado ou provável"
+          ],
+          "emergency_flow": [
+            "Iniciar ressuscitação segundo protocolo e acionar PERT ou equipe de reperfusão; esta regra não escolhe trombólise, cateter, cirurgia ou suporte mecânico"
+          ],
+          "messages": [
+            "Classificação E2 depende de TEP como causa provável; suporte e reperfusão exigem decisão individualizada"
+          ]
+        }
+      },
+      {
+        "id": "ep-categoria-e1-hipotensao-com-choque",
+        "priority": 99,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hipotensão recorrente ou persistente com choque cardiogênico"
+          ],
+          "emergency_flow": [
+            "Acionar PERT ou equipe multidisciplinar e avaliar urgentemente suporte e reperfusão"
+          ],
+          "messages": [
+            "Terapias avançadas podem ser razoáveis, mas a técnica exige avaliação de contraindicações, anatomia, risco hemorrágico, experiência e disponibilidade"
+          ]
+        }
+      },
+      {
+        "id": "ep-categoria-d1-hipotensao-transitoria",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_transient_hypotension_without_hypoperfusion",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hipotensão transitória compatível com falência cardiopulmonar incipiente"
+          ],
+          "emergency_flow": [
+            "Monitorização intensiva, reclassificação seriada e discussão multidisciplinar de terapia avançada"
+          ],
+          "messages": [
+            "Terapias avançadas podem ser consideradas em D1–D2, mas não são automáticas"
+          ]
+        }
+      },
+      {
+        "id": "ep-categoria-d2-hipoperfusao-normotensa",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_normotensive_hypoperfusion",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hipoperfusão ou disfunção de órgão apesar de pressão preservada"
+          ],
+          "emergency_flow": [
+            "Monitorização intensiva, lactato, reclassificação seriada e discussão multidisciplinar de terapia avançada"
+          ],
+          "messages": [
+            "Terapias avançadas podem ser consideradas em falência incipiente, mas não são automáticas"
+          ]
+        }
+      },
+      {
+        "id": "ep-comprometimento-respiratorio",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "severe_respiratory_compromise",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Comprometimento respiratório proeminente exige suporte e reavaliação imediata da categoria clínica"
+          ],
+          "emergency_flow": [
+            "Otimizar oxigenação/ventilação com cautela hemodinâmica e procurar deterioração de ventrículo direito"
+          ]
+        }
+      },
+      {
+        "id": "ep-sangramento-maior",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "active_major_bleeding",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sangramento maior ativo altera imediatamente o balanço de anticoagulação e reperfusão"
+          ],
+          "emergency_flow": [
+            "Tratar o sangramento, identificar última dose/agente e discutir estratégia do TEP com equipe experiente"
+          ]
+        }
+      },
+      {
+        "id": "ep-anticoagulacao-contraindicada",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "anticoagulation_contraindicated",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Contraindicação à anticoagulação exige confirmação do motivo e plano alternativo; filtro de veia cava não é automático"
+          ],
+          "emergency_flow": [
+            "Discutir precocemente com equipe multidisciplinar a estratégia temporária e quando anticoagular com segurança"
+          ]
+        }
+      },
+      {
+        "id": "ep-suspeita-atual-investigacao",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "suspected_current"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Confirmação ou exclusão por estratégia diagnóstica aguda proporcional à probabilidade pré-teste"
+          ],
+          "emergency_flow": [
+            "Concluir avaliação presencial no mesmo dia; em instabilidade, seguir via de emergência sem atrasar suporte"
+          ],
+          "suggested_tests": [
+            "Aplicar estratégia validada de probabilidade pré-teste, D-dímero e imagem conforme o risco"
+          ]
+        }
+      },
+      {
+        "id": "ep-estado-diagnostico-desconhecido",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "unknown"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Estado diagnóstico atual do TEP"
+          ],
+          "messages": [
+            "Não classificar gravidade ou decidir tratamento/alta sem estabelecer se há TEP confirmado, suspeita atual ou ausência de suspeita"
+          ]
+        }
+      },
+      {
+        "id": "ep-dados-criticos-desconhecidos",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            }
+          ],
+          "any": [
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "pe_transient_hypotension_without_hypoperfusion",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "pe_normotensive_hypoperfusion",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "severe_respiratory_compromise",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "active_major_bleeding",
+              "op": "eq",
+              "value": "desconhecido"
+            },
+            {
+              "field": "anticoagulation_contraindicated",
+              "op": "eq",
+              "value": "desconhecido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Um ou mais dados críticos de falência cardiopulmonar, respiração ou segurança terapêutica"
+          ],
+          "messages": [
+            "Não classificar como baixo risco nem decidir alta até resolver os dados críticos ausentes"
+          ]
+        }
+      },
+      {
+        "id": "ep-categoria-c-hospitalizacao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "pe_symptom_status",
+              "op": "eq",
+              "value": "symptomatic"
+            },
+            {
+              "field": "spesi_score",
+              "op": "gte",
+              "value": 1
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_transient_hypotension_without_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_normotensive_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "TEP sintomático com escore clínico elevado exige hospitalização, independentemente de VD ou biomarcadores"
+          ],
+          "emergency_flow": [
+            "Hospitalizar, anticoagular se seguro e monitorizar ativamente para deterioração"
+          ],
+          "messages": [
+            "Categoria C isolada não autoriza terapia avançada automática"
+          ]
+        }
+      },
+      {
+        "id": "ep-gravidade-nao-calculada",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "pe_symptom_status",
+              "op": "eq",
+              "value": "symptomatic"
+            },
+            {
+              "field": "spesi_score",
+              "op": "missing"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "sPESI/PESI ou escore de gravidade validado"
+          ],
+          "emergency_flow": [
+            "Não decidir alta precoce até completar a estratificação"
+          ]
+        }
+      },
+      {
+        "id": "ep-categoria-c3",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "pe_symptom_status",
+              "op": "eq",
+              "value": "symptomatic"
+            },
+            {
+              "field": "spesi_score",
+              "op": "gte",
+              "value": 1
+            },
+            {
+              "field": "rv_dysfunction",
+              "op": "eq",
+              "value": "sim"
+            },
+            {
+              "field": "cardiac_biomarker_elevated",
+              "op": "eq",
+              "value": "sim"
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_transient_hypotension_without_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_normotensive_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Gravidade clínica elevada com disfunção de VD e biomarcador positivo é compatível com categoria C3"
+          ],
+          "emergency_flow": [
+            "Hospitalizar, anticoagular se seguro e monitorizar ativamente para deterioração"
+          ],
+          "messages": [
+            "Categoria C isolada não autoriza trombólise ou trombectomia de rotina"
+          ]
+        }
+      },
+      {
+        "id": "ep-baixa-gravidade-nao-basta-para-alta",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "pe_symptom_status",
+              "op": "eq",
+              "value": "symptomatic"
+            },
+            {
+              "field": "spesi_score",
+              "op": "eq",
+              "value": 0
+            },
+            {
+              "field": "pe_refractory_shock_or_cardiac_arrest",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_persistent_hypotension_with_shock",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_transient_hypotension_without_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pe_normotensive_hypoperfusion",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "severe_respiratory_compromise",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "rv_dysfunction",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "cardiac_biomarker_elevated",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "active_major_bleeding",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "anticoagulation_contraindicated",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "outpatient_barrier",
+              "op": "eq",
+              "value": "nao"
+            },
+            {
+              "field": "pregnant_or_postpartum",
+              "op": "eq",
+              "value": "nao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "O conjunto identifica apenas candidato à avaliação de alta precoce; não é autorização de alta. Confirmar critérios Hestia/locais, anticoagulação, acesso, adesão e retorno"
+          ],
+          "ambulatory_flow": [
+            "Confirmar todos os critérios de elegibilidade e organizar contato em até uma semana antes da alta"
+          ]
+        }
+      },
+      {
+        "id": "ep-barreira-a-alta",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "eq",
+              "value": "confirmed"
+            },
+            {
+              "field": "outpatient_barrier",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Uma barreira clínica ou social torna insegura a alta precoce mesmo com escore de mortalidade baixo"
+          ],
+          "emergency_flow": [
+            "Não realizar alta precoce; manter observação ou hospitalização até resolver ou acomodar a barreira clínica/social"
+          ]
+        }
+      },
+      {
+        "id": "ep-gestacao-puerperio",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "pe_diagnostic_status",
+              "op": "in",
+              "value": [
+                "confirmed",
+                "suspected_current"
+              ]
+            },
+            {
+              "field": "pregnant_or_postpartum",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Gestação/puerpério exige algoritmo e anticoagulação próprios; DOAC não deve ser escolhido por esta regra"
+          ],
+          "emergency_flow": [
+            "Acionar via obstétrica e tromboembolismo sem atrasar imagem clinicamente necessária"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "embolia pulmonar",
+      "tromboembolismo venoso",
+      "TEP agudo",
+      "dispneia",
+      "choque obstrutivo",
+      "disfunção do ventrículo direito",
+      "D-dímero",
+      "angiotomografia pulmonar",
+      "anticoagulação",
+      "trombólise",
+      "PERT"
+    ],
+    "source_refs": [
+      "Creager MA, Barnes GD, Giri J, et al. 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;153(12):e977-e1051. DOI: 10.1161/CIR.0000000000001415. PMID: 41712677.",
+      "Correction to: 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults. Circulation. 2026;154(2):e24. DOI: 10.1161/CIR.0000000000001462. PMID: 42441758.",
+      "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism: official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. CC BY 4.0; conteúdo parafraseado com atribuição e indicação de adaptação."
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/guidelines-statements/2026-ahaaccaccpchestscaishmsirsvmsvn-guideline-for-the-evaluation-andcir0000000000001415",
+      "https://doi.org/10.1161/CIR.0000000000001415",
+      "https://doi.org/10.1161/CIR.0000000000001462",
+      "https://jbp.org.br/details/4090/en-US/brazilian-guidelines-for-the-pharmacological-treatment-of-pulmonary-embolism--official-document-of-the-brazilian-thoracic-association-based-on-the-gra",
+      "https://doi.org/10.36416/1806-3756/e20240314",
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "related_document_slugs": [
+      "aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas",
+      "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade"
+    ],
+    "patient_material_slug": "embolia-pulmonar-o-que-aconteceu-com-meu-pulmao-e-o-que-esperar-da-recuperacao",
+    "review_status": "pendente_revisao",
+    "review_note": "Rascunho estruturado em 27/08/2026 com a diretriz AHA/ACC 2026, sua correção formal de 14/07/2026 e a diretriz brasileira SBPT 2025 sob CC BY 4.0. Requer revisão clínica humana e jurídica antes da publicação, especialmente das categorias A–E, critérios de alta, anticoagulação em populações especiais, contraindicações a reperfusão e comportamento combinado das regras. Conteúdo ESC e fluxogramas derivados foram excluídos deste verbete até licença formal. Nenhuma regra prescreve dose ou terapia avançada automaticamente.",
+    "fonte_producao": "chatgpt",
+    "version": 1
   }
 ]

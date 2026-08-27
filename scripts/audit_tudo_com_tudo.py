@@ -18,6 +18,20 @@ LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)")
 CODE_BLOCK = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
 INLINE_CODE = re.compile(r"`[^`\n]*`")
 URL_SCHEME = re.compile(r"^[a-z][a-z0-9+.-]*:", re.IGNORECASE)
+EXPLICIT_RELATION_TYPES = {
+    "treats", "indicated_for", "contraindicated_in", "contraindicated_with",
+    "interacts_with", "monitor_with", "diagnosed_by", "supported_by",
+    "studied_in", "recommended_by", "associated_with", "causes", "may_cause",
+    "alternative_to", "belongs_to_class", "used_in_case", "mentioned_in",
+    "patient_education_for", "differential_for", "same_theme", "belongs_to_topic",
+    "derived_from", "uses_flowchart", "contains",
+}
+EXPLICIT_PROVENANCE_TYPES = {
+    "editorial", "structured_metadata", "imported", "derived",
+    "ai_suggested", "clinical_context",
+}
+EXPLICIT_CONFIDENCE_LEVELS = {"explicit", "derived", "ai_suggested"}
+EXPLICIT_REVIEW_STATUSES = {"revisado", "pendente_revisao", "rejeitado"}
 
 
 def _frontmatter(path: Path) -> tuple[dict[str, str], str]:
@@ -116,6 +130,61 @@ def audit() -> dict:
             stats[field]["broken"] += 1
             broken.append({"field": field, "source": source, "target": target})
 
+    explicit_relations = json.loads(
+        (ROOT / "doencas/relacoes-explicitas.json").read_text(encoding="utf-8")
+    )
+    if not isinstance(explicit_relations, list):
+        raise ValueError("doencas/relacoes-explicitas.json não é uma lista")
+    explicit_keys: set[tuple[str, str, str, str]] = set()
+    for index, relation in enumerate(explicit_relations):
+        if not isinstance(relation, dict):
+            raise ValueError(f"Relação explícita #{index} não é objeto")
+        required = (
+            "source_disease_slug", "target_type", "target_slug", "relation_type",
+            "review_status", "provenance_type", "confidence",
+        )
+        missing = [
+            field for field in required
+            if not isinstance(relation.get(field), str) or not relation[field].strip()
+        ]
+        if missing:
+            raise ValueError(f"Relação explícita #{index} inválida: {missing}")
+        target_type = relation["target_type"]
+        if target_type not in slugs or target_type in {"doenca", "documento"}:
+            # Documento tem subtipagem documento/fluxograma; exigir o tipo
+            # exato evita que um fluxograma seja declarado como documento.
+            if target_type != "documento":
+                raise ValueError(
+                    f"Relação explícita #{index}: target_type inválido: {target_type}"
+                )
+        if relation["relation_type"] not in EXPLICIT_RELATION_TYPES:
+            raise ValueError(f"Relação explícita #{index}: relation_type inválido")
+        if relation["provenance_type"] not in EXPLICIT_PROVENANCE_TYPES:
+            raise ValueError(f"Relação explícita #{index}: provenance_type inválido")
+        if relation["confidence"] not in EXPLICIT_CONFIDENCE_LEVELS:
+            raise ValueError(f"Relação explícita #{index}: confidence inválido")
+        if relation["review_status"] not in EXPLICIT_REVIEW_STATUSES:
+            raise ValueError(f"Relação explícita #{index}: review_status inválido")
+        key = (
+            relation["source_disease_slug"], target_type,
+            relation["target_slug"], relation["relation_type"],
+        )
+        if key in explicit_keys:
+            raise ValueError(f"Relação explícita duplicada: {key}")
+        explicit_keys.add(key)
+        add(
+            "ExplicitDiseaseRelation.source_disease_slug",
+            f"relacao-explicita:{index}",
+            relation["source_disease_slug"],
+            ("doenca",),
+        )
+        add(
+            "ExplicitDiseaseRelation.target_slug",
+            relation["source_disease_slug"],
+            relation["target_slug"],
+            (target_type,),
+        )
+
     for slug, document in documents.items():
         for target in LINK.findall(_markdown_without_code(document["body"])):
             target_slug = _link_slug(target)
@@ -204,6 +273,15 @@ def audit() -> dict:
         "review_status": dict(review_counts),
         "references": {field: dict(counts) for field, counts in sorted(stats.items())},
         "broken_references": broken,
+        "explicit_disease_relations": {
+            "total": len(explicit_relations),
+            "by_review_status": dict(Counter(
+                relation["review_status"] for relation in explicit_relations
+            )),
+            "by_provenance_type": dict(Counter(
+                relation["provenance_type"] for relation in explicit_relations
+            )),
+        },
         "exact_unambiguous_triage_differentials": exact_differentials,
         "topic_coverage": {
             "covered": direct_topic + diseases_with_topic + triages_with_topic,
