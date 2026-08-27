@@ -10063,6 +10063,10 @@
     "slug": "febre-reumatica-cardite",
     "name": "Febre reumática e cardite",
     "aliases": [
+      "febre reumática aguda",
+      "FRA",
+      "doença cardíaca reumática",
+      "cardiopatia reumática",
       "doença reumática pediátrica",
       "cardite reumática"
     ],
@@ -10070,26 +10074,291 @@
     "category": "cardiopatia_adquirida",
     "subtype": "inflamatoria",
     "prevalence_rank": 24,
-    "completeness": "basico",
-    "summary": "Doença inflamatória pós-estreptocócica com potencial comprometimento cardíaco agudo e valvar crônico, relevante em contextos de maior prevalência.",
+    "completeness": "completo",
+    "summary": "A febre reumática aguda (FRA) é uma síndrome inflamatória imune tardia após infecção por Streptococcus pyogenes do grupo A, mais comum entre 5 e 14 anos, que pode acometer articulações, coração, sistema nervoso central, pele e tecido subcutâneo. A cardite pode ser clínica ou exclusivamente ecocardiográfica e compromete sobretudo as valvas mitral e aórtica. Recorrências evitáveis acumulam dano valvar e podem evoluir para doença cardíaca reumática crônica, insuficiência cardíaca, fibrilação atrial, embolia e necessidade de intervenção valvar. O cuidado integra diagnóstico pelos critérios de Jones ajustados ao risco populacional, ecocardiograma Doppler em todo caso suspeito, erradicação estreptocócica, tratamento das manifestações e profilaxia secundária prolongada.",
+    "epidemiology": "A FRA e a doença cardíaca reumática concentram-se em países de baixa e média renda e em comunidades marginalizadas, com pico do primeiro episódio de FRA na infância e adolescência e diagnóstico da valvopatia crônica frequentemente na vida adulta jovem. A OMS destaca que a doença é prevenível, mas segue associada a incapacidade e morte prematura. A frequência de cardite no primeiro episódio varia amplamente entre séries (aproximadamente 30% a 82% no guideline australiano), e a manifestação cardíaca pode surgir na apresentação ou nas semanas seguintes. O risco individual aumenta com exposição em área endêmica, aglomeração domiciliar, barreiras de acesso à atenção primária e história pessoal ou familiar de FRA/doença reumática. No Brasil, a heterogeneidade epidemiológica exige julgamento clínico e impede classificar automaticamente todo o país como população de baixo risco.",
+    "presentation": [
+      "Poliartrite muito dolorosa, em geral assimétrica e migratória, predominando em grandes articulações; monoartrite ou poliartralgia podem contar como manifestação maior em população de risco moderado/alto",
+      "Cardite clínica com taquicardia desproporcional, sopro novo de regurgitação mitral e/ou aórtica, cardiomegalia, pericardite ou insuficiência cardíaca",
+      "Cardite subclínica: valvulite patológica ao Doppler sem sopro audível; por isso, ausculta normal não exclui acometimento cardíaco",
+      "Coreia de Sydenham com movimentos irregulares, fraqueza, alterações de escrita ou desempenho escolar, labilidade emocional e desaparecimento dos movimentos durante o sono",
+      "Febre e elevação de marcadores inflamatórios, com cortes diferentes conforme o risco epidemiológico",
+      "Eritema marginado, manifestação rara e altamente específica, potencialmente difícil de reconhecer em pele mais pigmentada",
+      "Nódulos subcutâneos, raros e fortemente associados à cardite",
+      "Na doença cardíaca reumática crônica: dispneia, redução de capacidade funcional, palpitações/fibrilação atrial, hemoptise, congestão e eventos embólicos conforme a lesão valvar"
+    ],
+    "diagnostic_approach": {
+      "suspeita_inicial": "Definir primeiro se o paciente pertence a população de baixo risco ou de risco moderado/alto. Episódio inicial definitivo requer duas manifestações maiores ou uma maior mais duas menores, sempre com evidência de infecção estreptocócica precedente; recorrência documentada também pode ser diagnosticada com três manifestações menores mais evidência estreptocócica. Coreia isolada e cardite indolente são exceções em que a evidência microbiológica pode ter desaparecido.",
+      "criterios_por_risco": "Em risco moderado/alto, monoartrite asséptica ou poliartralgia podem ser manifestações maiores, febre a partir de 38 °C e VHS a partir de 30 mm/h podem contar como menores. Em baixo risco, exige-se poliartrite como manifestação maior, febre a partir de 38,5 °C e VHS a partir de 60 mm/h como menores. PCR a partir de 3 mg/dL (30 mg/L) e PR prolongado ajustado à idade são menores nos dois estratos. A mesma manifestação articular não pode ser contada simultaneamente como critério maior e menor.",
+      "infeccao_estreptococica": "Documentar infecção antecedente por elevação ou ascensão de ASLO e/ou anti-DNase B, cultura de orofaringe positiva, teste rápido de antígeno ou teste molecular positivo. Uma sorologia isolada negativa não exclui infecção prévia; títulos devem ser interpretados conforme idade, momento da coleta e limite superior local.",
+      "avaliacao_cardiaca": "Realizar ecocardiograma transtorácico com Doppler em todo caso suspeito ou confirmado, mesmo sem sopro e também na coreia isolada, procurando regurgitação mitral/aórtica patológica e critérios morfológicos. Fazer ECG de 12 derivações; se houver PR prolongado, repetir em 1 e 2 semanas e, se persistente, em 1 e 2 meses. Na doença crônica ou em rastreamento, aplicar critérios ecocardiográficos WHF 2023, que separam critérios de triagem dos confirmatórios e exigem exclusão de etiologias não reumáticas.",
+      "reavaliacao": "Se a suspeita permanece alta e os critérios ainda não estão completos, reexaminar clínica, ECG, marcadores inflamatórios e ecocardiograma durante a evolução, pois a cardite pode surgir posteriormente. Rotular como FRA provável/possível implica plano explícito de reavaliação, e não diagnóstico definitivo por exclusão."
+    },
+    "differentials": [
+      "Artrite reativa pós-estreptocócica — latência, padrão articular, resposta a anti-inflamatório e ausência dos demais critérios de Jones ajudam na distinção",
+      "Artrite séptica ou osteomielite — monoartrite febril exige exclusão urgente antes de atribuir o quadro à FRA",
+      "Endocardite infecciosa — febre, sopro, fenômenos embólicos e hemoculturas; colher culturas antes do antibiótico se houver febre e possibilidade clínica",
+      "Doença de Kawasaki e síndrome inflamatória multissistêmica pediátrica — febre prolongada, manifestações mucocutâneas e acometimento coronariano",
+      "Miocardite ou pericardite de outra etiologia — disfunção ventricular e elevação de troponina desproporcionais à valvulite favorecem outro mecanismo",
+      "Artrite idiopática juvenil, lúpus e outras doenças reumatológicas",
+      "Leucemia ou outras doenças hematológicas em criança com febre, dor osteoarticular e alterações do hemograma",
+      "Tiques, distonia, epilepsia e outras causas de movimentos anormais no diagnóstico diferencial da coreia de Sydenham",
+      "Regurgitação mitral ou aórtica congênita/degenerativa — não classificar como reumática sem padrão morfológico e contexto compatíveis"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler: obrigatório em toda suspeita/diagnóstico de FRA para detectar cardite clínica ou subclínica e estabelecer a linha de base valvar",
+      "ECG de 12 derivações: avalia PR prolongado e bloqueios de maior grau; PR varia com a idade e sua normalização seriada pode reforçar o diagnóstico",
+      "ASLO e anti-DNase B: documentam resposta imune a infecção estreptocócica precedente; usar em conjunto e considerar coleta pareada quando a primeira amostra é inconclusiva",
+      "Teste rápido de antígeno ou molecular e cultura de orofaringe: úteis para infecção estreptocócica atual, embora frequentemente já negativos quando a FRA se manifesta",
+      "VHS e PCR: contam como um único domínio inflamatório menor e são inespecíficos; aplicar os cortes do estrato epidemiológico correto",
+      "Hemograma, função renal e hepática: não confirmam FRA, mas apoiam diagnóstico diferencial e segurança do tratamento",
+      "Hemoculturas antes do antibiótico quando houver febre e possibilidade de endocardite, bacteremia ou artrite séptica",
+      "Radiografia de tórax e peptídeos natriuréticos quando há suspeita de insuficiência cardíaca; não substituem o ecocardiograma",
+      "Ecocardiograma seriado: define evolução da cardite e o estágio da doença cardíaca reumática; o intervalo depende da gravidade valvar e do risco clínico"
+    ],
+    "red_flags": [
+      "Dispneia em repouso, edema agudo de pulmão, hipotensão, oligúria ou sinais de baixo débito — suspeitar de cardite grave/insuficiência cardíaca",
+      "Regurgitação mitral ou aórtica importante com dilatação ventricular, queda de função sistólica ou progressão rápida",
+      "Bloqueio atrioventricular de segundo ou terceiro grau, bradicardia sintomática ou síncope",
+      "Febre persistente, toxemia, hemoculturas positivas ou fenômenos embólicos — reconsiderar endocardite infecciosa antes de imunossupressão",
+      "Monoartrite febril com incapacidade de mobilizar a articulação — excluir artrite séptica urgentemente",
+      "Coreia com risco de queda, incapacidade de alimentar-se, autoagressão, sintomas psiquiátricos graves ou perda funcional importante",
+      "Recorrência durante profilaxia secundária — verificar adesão, intervalo, dose, peso e exposição antes de concluir falha farmacológica"
+    ],
+    "treatment_summary": "Todo episódio suspeito deve ter erradicação do estreptococo do grupo A conforme protocolo local, independentemente de a cultura ainda estar positiva. A benzilpenicilina benzatina intramuscular em dose única é a estratégia preferencial quando não há contraindicação; alternativas dependem do tipo e da gravidade da alergia. Enquanto o diagnóstico está incerto, usar analgesia que não masque a evolução e adiar AAS/AINE quando isso for clinicamente seguro. Após confirmação, naproxeno, ibuprofeno ou AAS podem controlar artrite/artralgia; o tratamento anti-inflamatório melhora sintomas, mas não possui evidência robusta de prevenir dano valvar. Cardite com insuficiência cardíaca exige diurético e terapia de suporte individualizada, avaliação cardiológica e vigilância intensiva; corticosteroide ou outra imunomodulação ficam reservados a casos selecionados, reconhecendo a baixa certeza de benefício modificador de doença. Cardite fulminante com regurgitação valvar grave e insuficiência cardíaca refratária requer discussão cirúrgica urgente, mesmo na fase inflamatória ativa. Coreia moderada/grave pode necessitar terapia sintomática neurológica e suporte escolar/familiar. Após o episódio, instituir profilaxia secundária, preferencialmente com benzilpenicilina benzatina IM em intervalo de 3 ou 4 semanas definido pela diretriz local e pelo risco: o esquema de 3 semanas é recomendado em população de incidência particularmente alta e considerado diante de recorrência apesar de adesão ao esquema de 4 semanas. A duração é estratificada por certeza diagnóstica, presença e gravidade da cardite/doença valvar, idade, tempo desde a última crise e risco de nova exposição — não usar duração única para todos.",
+    "ambulatory_flow": [
+      "Confirmar a categoria diagnóstica e documentar se o caso foi inicial, recorrente, definitivo, provável ou possível",
+      "Registrar o estrato epidemiológico usado para aplicar os critérios de Jones, evitando presumir baixo risco sem dados locais",
+      "Iniciar e acompanhar profilaxia secundária com registro de cada aplicação, faltas, reações, peso e adequação do intervalo",
+      "Definir a duração da profilaxia pela gravidade valvar e pelo risco individual, com reavaliação especializada antes de suspender",
+      "Programar ecocardiograma seriado conforme o estágio WHF e a gravidade da doença valvar, antecipando o exame se surgirem sintomas",
+      "Avaliar saúde bucal, vacinação, barreiras sociais, acesso ao serviço e estratégias para reduzir dor e abandono da penicilina",
+      "Na doença cardíaca reumática crônica, rastrear fibrilação atrial, insuficiência cardíaca, hipertensão pulmonar, tromboembolismo e indicação de intervenção valvar",
+      "Garantir transição estruturada da cardiologia pediátrica para a do adulto e aconselhamento pré-concepcional para adolescentes e mulheres com lesão valvar"
+    ],
+    "emergency_flow": [
+      "Cardite com instabilidade, edema agudo de pulmão ou baixo débito: monitorização contínua, ecocardiograma urgente, suporte ventilatório/hemodinâmico e cardiologia/cirurgia cardíaca precoces",
+      "Antes do antibiótico, colher hemoculturas se houver febre e possibilidade de endocardite ou bacteremia, sem atrasar tratamento em paciente instável",
+      "Evitar expansão volêmica indiscriminada na insuficiência valvar aguda com congestão; individualizar diurético, vasodilatador e inotrópico conforme pressão e perfusão",
+      "Regurgitação mitral/aórtica grave com insuficiência cardíaca refratária: discutir cirurgia valvar urgente mesmo na fase ativa",
+      "Bloqueio atrioventricular avançado ou síncope: telemetria, correção de distúrbios reversíveis e avaliação de estimulação temporária se houver repercussão",
+      "Coreia grave com risco de trauma, disfagia ou descompensação psiquiátrica: ambiente protegido, avaliação neurológica/psiquiátrica e suporte nutricional",
+      "Monoartrite febril ou toxemia: tratar como possível artrite séptica/sepsis até exclusão adequada"
+    ],
+    "monitoring": [
+      "Registro nominal e rastreável de cada dose de profilaxia secundária e busca ativa após atraso",
+      "Ecocardiograma seriado conforme gravidade valvar, estágio WHF, idade e história de cirurgia",
+      "ECG repetido quando PR prolongado ou bloqueio estiver presente durante a fase aguda",
+      "Peso, tolerabilidade, reações alérgicas e adequação da dose/intervalo da penicilina benzatina",
+      "Sintomas de insuficiência cardíaca, capacidade funcional, ritmo cardíaco e sinais de embolia na doença crônica",
+      "Avaliação periódica da adesão, dor da injeção, acesso, estigma, escola/trabalho e outros determinantes de abandono"
+    ],
+    "special_populations": [
+      "Crianças de 5 a 14 anos concentram a maior incidência de primeiro episódio; em menores, apresentações atípicas exigem diferencial amplo",
+      "Populações em contexto endêmico, aglomeração ou vulnerabilidade social devem ser avaliadas com a régua de risco moderado/alto quando compatível com a epidemiologia local",
+      "Coreia pode aparecer tardiamente e isolada, quando títulos estreptocócicos e marcadores inflamatórios já normalizaram; ecocardiograma continua obrigatório",
+      "Gestantes com doença cardíaca reumática precisam de estratificação pré-concepcional e seguimento multidisciplinar; estenose mitral pode descompensar com o aumento de volume e frequência cardíaca",
+      "Após cirurgia ou intervenção valvar, a profilaxia secundária não é automaticamente encerrada: recorrência inflamatória ainda pode lesar valvas nativas ou reparadas",
+      "Alergia à penicilina deve ser caracterizada como imediata grave ou não grave; rótulo impreciso aumenta uso de alternativas menos eficazes e deve ser reavaliado quando possível"
+    ],
+    "assistant_questions": [
+      {
+        "id": "fra_contexto",
+        "label": "Qual é o contexto clínico atual?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {"value": "suspeita_aguda", "label": "Suspeita de episódio agudo"},
+          {"value": "recorrencia", "label": "Possível recorrência"},
+          {"value": "doenca_cronica", "label": "Doença reumática crônica"},
+          {"value": "seguimento_profilaxia", "label": "Seguimento da profilaxia"}
+        ]
+      },
+      {
+        "id": "fra_risco_populacional",
+        "label": "O paciente pertence a população de risco moderado/alto ou tem vulnerabilidade/exposição compatível?",
+        "type": "select",
+        "required": true,
+        "section": "Epidemiologia",
+        "options": [
+          {"value": "sim", "label": "Sim"},
+          {"value": "nao", "label": "Não"},
+          {"value": "incerto", "label": "Incerto"}
+        ]
+      },
+      {
+        "id": "fra_instabilidade",
+        "label": "Há hipotensão, baixo débito, edema agudo de pulmão ou insuficiência cardíaca grave?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "fra_febre_persistente_toxemia",
+        "label": "Há febre persistente, toxemia, bacteremia, fenômeno embólico ou forte suspeita de infecção invasiva?",
+        "type": "boolean",
+        "required": true,
+        "section": "Diagnósticos perigosos"
+      },
+      {
+        "id": "fra_monoartrite_febril",
+        "label": "Há monoartrite febril com limitação intensa do movimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Diagnósticos perigosos"
+      },
+      {
+        "id": "fra_coreia_grave",
+        "label": "A coreia causa disfagia, quedas, incapacidade funcional ou sintomas psiquiátricos graves?",
+        "type": "boolean",
+        "section": "Neurológico"
+      },
+      {
+        "id": "fra_ecocardiograma_realizado",
+        "label": "Foi realizado ecocardiograma Doppler nesta avaliação?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
+      },
+      {
+        "id": "fra_profilaxia_atrasada",
+        "label": "A profilaxia secundária está atrasada ou houve recorrência apesar das aplicações?",
+        "type": "boolean",
+        "section": "Prevenção secundária"
+      },
+      {
+        "id": "fra_gestacao",
+        "label": "Há gestação atual ou planejamento gestacional com doença valvar reumática?",
+        "type": "boolean",
+        "section": "Populações especiais"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "fra-cardite-instavel",
+        "priority": 100,
+        "when": {"all": [{"field": "fra_instabilidade", "op": "truthy"}]},
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Instabilidade ou insuficiência cardíaca grave em possível cardite reumática"],
+          "emergency_flow": ["Encaminhar para atendimento hospitalar imediato, monitorização, ecocardiograma urgente e avaliação cardiológica/cirúrgica precoce."]
+        }
+      },
+      {
+        "id": "fra-excluir-infeccao-invasiva",
+        "priority": 95,
+        "when": {"all": [{"field": "fra_febre_persistente_toxemia", "op": "truthy"}]},
+        "add": {
+          "risk": "urgente",
+          "differentials": ["Endocardite infecciosa ou outra infecção invasiva"],
+          "suggested_tests": ["Hemoculturas antes do antibiótico quando clinicamente possível, sem atrasar tratamento na instabilidade"],
+          "messages": ["Não atribuir febre persistente/toxemia automaticamente à FRA nem iniciar imunossupressão antes de excluir infecção invasiva."]
+        }
+      },
+      {
+        "id": "fra-excluir-artrite-septica",
+        "priority": 94,
+        "when": {"all": [{"field": "fra_monoartrite_febril", "op": "truthy"}]},
+        "add": {
+          "risk": "urgente",
+          "differentials": ["Artrite séptica"],
+          "messages": ["Monoartrite febril dolorosa exige exclusão urgente de artrite séptica antes de ser contabilizada como manifestação reumática."]
+        }
+      },
+      {
+        "id": "fra-coreia-com-risco",
+        "priority": 85,
+        "when": {"all": [{"field": "fra_coreia_grave", "op": "truthy"}]},
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Coreia com disfagia, quedas, risco de trauma ou comprometimento psiquiátrico grave"],
+          "ambulatory_flow": ["Organizar avaliação neurológica/psiquiátrica e ambiente protegido; considerar internação conforme segurança e suporte familiar."]
+        }
+      },
+      {
+        "id": "fra-suspeita-sem-eco",
+        "priority": 80,
+        "when": {
+          "all": [
+            {"field": "fra_contexto", "op": "in", "value": ["suspeita_aguda", "recorrencia"]},
+            {"field": "fra_ecocardiograma_realizado", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": ["Ecocardiograma com Doppler para cardite clínica ou subclínica"],
+          "suggested_tests": ["Ecocardiograma transtorácico com Doppler, mesmo se a ausculta for normal"]
+        }
+      },
+      {
+        "id": "fra-risco-populacional-incerto",
+        "priority": 60,
+        "when": {"all": [{"field": "fra_risco_populacional", "op": "eq", "value": "incerto"}]},
+        "add": {
+          "missing_information": ["Estrato epidemiológico necessário para aplicar corretamente os critérios de Jones"],
+          "messages": ["Revisar residência/exposição, aglomeração, vulnerabilidade, história pessoal e familiar antes de aplicar cortes de baixo risco."]
+        }
+      },
+      {
+        "id": "fra-profilaxia-atrasada",
+        "priority": 55,
+        "when": {"all": [{"field": "fra_profilaxia_atrasada", "op": "truthy"}]},
+        "add": {
+          "risk": "prioritario",
+          "ambulatory_flow": ["Reconstruir calendário de aplicações, conferir dose/peso/intervalo, tratar barreiras de adesão e reavaliar gravidade valvar antes de modificar o esquema."]
+        }
+      },
+      {
+        "id": "fra-gestacao-valvopatia",
+        "priority": 50,
+        "when": {"all": [{"field": "fra_gestacao", "op": "truthy"}]},
+        "add": {
+          "risk": "prioritario",
+          "messages": ["Doença valvar reumática na gestação ou no planejamento gestacional exige estratificação especializada e plano multidisciplinar antes da descompensação."]
+        }
+      }
+    ],
     "tags": [
       "febre reumática",
+      "febre reumática aguda",
       "cardite",
-      "valvopatia"
+      "cardite subclínica",
+      "doença cardíaca reumática",
+      "critérios de Jones",
+      "WHF 2023",
+      "profilaxia secundária",
+      "penicilina benzatina",
+      "valvopatia mitral",
+      "coreia de Sydenham"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO; 2024. ISBN 978-92-4-010007-7.",
+      "Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease. Edition 3.3. RHDAustralia, Menzies School of Health Research; August 2025.",
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771.",
+      "Rwebembera J, Marangou J, Mwita JC, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024;21:250-263. DOI: 10.1038/s41569-023-00940-9.",
+      "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. PMID: 35830116."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://www.who.int/publications/i/item/9789240100077",
+      "https://rhdaustralia.org.au/arf-rhd-guidelines/",
+      "https://pubmed.ncbi.nlm.nih.gov/25908771/",
+      "https://doi.org/10.1038/s41569-023-00940-9",
+      "https://pubmed.ncbi.nlm.nih.gov/35830116/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Versão 1 revisada em 04/08/2026. Expansão v2 produzida em 27/08/2026 a partir de fontes primárias e diretrizes atuais; exige revisão humana antes de publicação, especialmente para adaptação dos estratos epidemiológicos e esquemas ao contexto brasileiro.",
+    "version": 2,
     "related_document_slugs": [
-      "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda"
+      "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda",
+      "febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo",
+      "cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022",
+      "fluxograma-febre-reumatica-aguda-criterios-de-jones-2015",
+      "fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema",
+      "fluxograma-cardiopatia-reumatica-subclinica-estadiamento-whf-2023"
     ],
-    "patient_material_slug": "cardite-reumatica-quando-a-febre-reumatica-atinge-o-coracao"
+    "patient_material_slug": "febre-reumatica-e-cardiopatia-reumatica",
+    "fonte_producao": "chatgpt"
   },
   {
     "slug": "endocardite-pediatrica",
