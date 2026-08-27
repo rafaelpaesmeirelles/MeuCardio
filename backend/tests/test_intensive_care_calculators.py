@@ -1,5 +1,7 @@
 """Testes puros da central de Cardiologia Intensiva e UCO."""
 
+import math
+
 import pytest
 
 from app.services import calculators
@@ -135,6 +137,21 @@ def test_vasopressina_usa_unidades_por_minuto_sem_dividir_pelo_peso():
     assert resultado["unidade_dose"] == "U/min"
 
 
+def test_peso_pode_ser_omitido_em_agente_nao_ponderal():
+    dados = _dados_bomba(
+        agente="vasopressina",
+        dose_pretendida=0.03,
+        quantidade_soluto=20,
+        volume_total_ml=100,
+        velocidade_bomba_ml_h=9,
+    )
+    dados.pop("peso_kg")
+
+    resultado = _calc_bomba().compute(dados)
+
+    assert resultado["dose_entregue_calculada"] == 0.03
+
+
 def test_divergencia_operacional_gera_gate_mesmo_sem_faixa_terapeutica():
     resultado = _calc_bomba().compute(
         _dados_bomba(velocidade_bomba_ml_h=30, tolerancia_percentual="5")
@@ -144,6 +161,16 @@ def test_divergencia_operacional_gera_gate_mesmo_sem_faixa_terapeutica():
     assert resultado["fora_da_faixa"] is True
     assert "DIVERGÊNCIA" in resultado["status_conferencia"]
     assert "não avaliada" in resultado["alerta_contextual"]
+
+
+def test_limite_exato_da_tolerancia_nao_diverge_por_erro_binario():
+    resultado = _calc_bomba().compute(
+        _dados_bomba(velocidade_bomba_ml_h=24.9375, tolerancia_percentual="5")
+    )
+
+    assert math.isclose(resultado["dose_entregue_calculada"], 0.095)
+    assert resultado["desvio_percentual_absoluto"] == 5.0
+    assert resultado["fora_da_faixa"] is False
 
 
 def test_faixa_acc_so_e_aplicada_quando_contexto_e_declarado():
@@ -172,6 +199,8 @@ def test_faixa_acc_so_e_aplicada_quando_contexto_e_declarado():
         ({"velocidade_bomba_ml_h": -1}, "não pode ser negativa"),
         ({"tolerancia_percentual": "3"}, "2%, 5% ou 10%"),
         ({"peso_kg": 0}, "peso entre 1 e 400"),
+        ({"dose_pretendida": "NaN"}, "valores numéricos finitos"),
+        ({"quantidade_soluto": "Infinity"}, "valores numéricos finitos"),
     ],
 )
 def test_conferencia_rejeita_entradas_invalidas(mudanca, mensagem):

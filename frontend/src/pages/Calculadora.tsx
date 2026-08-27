@@ -28,7 +28,7 @@ type Provedor = { codigo: string; nome: string; nivel: string; familia: string; 
 type Campo = {
   name: string; label: string; type: string; unit: string | null;
   options: { value: string | number; label: string }[];
-  min: number | null; max: number | null; help: string | null;
+  min: number | null; max: number | null; help: string | null; required: boolean;
 };
 type Calc = {
   slug: string; name: string; theme: string; purpose: string; kind: string;
@@ -165,7 +165,8 @@ export default function Calculadora() {
   if (!calc) return <Carregando />;
 
   const faltando = calc.fields.some(
-    (f) => f.type === "number" && (valores[f.name] === undefined || valores[f.name] === "")
+    (f) => f.type === "number" && f.required !== false
+      && (valores[f.name] === undefined || valores[f.name] === "")
   );
 
   return (
@@ -218,7 +219,7 @@ export default function Calculadora() {
             ) : (
               <>
                 <label htmlFor={f.name}>
-                  {f.label} {f.unit && <span className="eyebrow">({f.unit})</span>}
+                  {f.label} {f.required === false && <span className="eyebrow">(opcional)</span>} {f.unit && <span className="eyebrow">({f.unit})</span>}
                 </label>
                 <input
                   id={f.name}

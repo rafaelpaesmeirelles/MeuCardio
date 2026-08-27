@@ -58,3 +58,10 @@ def test_cockpit_expoe_dupla_conferencia_sem_confundir_com_prescricao():
     assert '/calculadoras/conferencia-bomba-infusao-uco' in pagina
     assert "Dose prescrita × concentração × velocidade programada" in pagina
     assert "Concentração, compatibilidade" in pagina
+
+
+def test_formulario_generico_respeita_campos_numericos_opcionais():
+    pagina = _texto("pages/Calculadora.tsx")
+
+    assert "f.required !== false" in pagina
+    assert "(opcional)" in pagina

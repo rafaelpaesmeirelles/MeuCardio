@@ -19,6 +19,7 @@ class Field:
     min: float | None = None
     max: float | None = None
     help: str | None = None
+    required: bool = True
 
 
 @dataclass

@@ -8,6 +8,8 @@ essas decisões dependem da fisiologia, da formulação disponível e da avalia�
 
 from __future__ import annotations
 
+import math
+
 from .calculators import Calculator, Field
 from .dose_calculators_choque_cardiogenico2025_chatgpt import AGENTES
 
@@ -172,7 +174,6 @@ def _conferencia_bomba(dados: dict) -> dict:
         raise ValueError("Selecione um agente disponível para conferência.")
 
     agente = AGENTES[chave]
-    peso = float(dados["peso_kg"])
     dose_pretendida = float(dados["dose_pretendida"])
     quantidade = float(dados["quantidade_soluto"])
     volume = float(dados["volume_total_ml"])
@@ -180,14 +181,23 @@ def _conferencia_bomba(dados: dict) -> dict:
     tolerancia = float(dados["tolerancia_percentual"])
     contexto_acc = bool(dados.get("contexto_choque_cardiogenico"))
 
+    entradas_numericas = [dose_pretendida, quantidade, volume, velocidade, tolerancia]
+    if not all(math.isfinite(valor) for valor in entradas_numericas):
+        raise ValueError("Informe somente valores numéricos finitos.")
     if dose_pretendida <= 0 or quantidade <= 0 or volume <= 0 or velocidade < 0:
         raise ValueError(
             "Dose pretendida, quantidade e volume devem ser positivos; a velocidade não pode ser negativa."
         )
     if tolerancia not in {2.0, 5.0, 10.0}:
         raise ValueError("Selecione tolerância operacional de 2%, 5% ou 10%.")
-    if agente["unidade"] == "mcg/kg/min" and not 1 <= peso <= 400:
-        raise ValueError("Informe peso entre 1 e 400 kg para doses ponderais.")
+    peso: float | None = None
+    if agente["unidade"] == "mcg/kg/min":
+        try:
+            peso = float(dados["peso_kg"])
+        except (KeyError, TypeError, ValueError):
+            raise ValueError("Informe peso entre 1 e 400 kg para doses ponderais.") from None
+        if not math.isfinite(peso) or not 1 <= peso <= 400:
+            raise ValueError("Informe peso entre 1 e 400 kg para doses ponderais.")
 
     if agente["unidade"] == "U/min":
         concentracao_numerica = quantidade / volume
@@ -197,6 +207,7 @@ def _conferencia_bomba(dados: dict) -> dict:
     else:
         concentracao_numerica = quantidade * 1000 / volume
         if agente["unidade"] == "mcg/kg/min":
+            assert peso is not None
             dose_entregue = concentracao_numerica * velocidade / 60 / peso
             velocidade_esperada = dose_pretendida * peso * 60 / concentracao_numerica
         else:
@@ -205,7 +216,9 @@ def _conferencia_bomba(dados: dict) -> dict:
         concentracao = f"{concentracao_numerica:.2f} mcg/mL"
 
     desvio = abs(dose_entregue - dose_pretendida) / dose_pretendida * 100
-    conferencia_ok = desvio <= tolerancia
+    conferencia_ok = desvio <= tolerancia or math.isclose(
+        desvio, tolerancia, rel_tol=1e-12, abs_tol=1e-12
+    )
     fora_acc = contexto_acc and not agente["min"] <= dose_entregue <= agente["max"]
 
     status = (
@@ -286,6 +299,7 @@ _CONFERENCIA_BOMBA = Calculator(
             min=1,
             max=400,
             help="Usado somente quando a unidade do agente é mcg/kg/min.",
+            required=False,
         ),
         Field(
             "dose_pretendida",
