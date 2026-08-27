@@ -53,6 +53,11 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "emergencia/metadados.json": {"suspeita-de-avc-agudo"},
     "doencas/metadados.json": {
         "acidente-vascular-cerebral-agudo",
+        # Tudo com Tudo 27/08/2026: novo verbete-hub de endocardite infecciosa
+        # adulta (área geral), conectando ~28 documentos já publicados e
+        # revisados em content/Endocardite/ que ficavam sem hub central em
+        # doencas/. Nenhum documento/checklist/trilha/material novo foi criado.
+        "endocardite-infecciosa",
     },
     "triagem-sintomas/metadados.json": {"deficit-neurologico-focal-subito"},
 }
