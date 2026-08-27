@@ -16628,5 +16628,447 @@
     "review_status": "revisado",
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "version": 2
+  },
+  {
+    "slug": "sincope",
+    "name": "Síncope",
+    "aliases": [
+      "desmaio",
+      "perda transitória de consciência",
+      "TLOC"
+    ],
+    "area": "geral",
+    "category": "sintoma_e_sindrome",
+    "subtype": "tres_grupos_etiologicos",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 9,
+    "completeness": "completo",
+    "fonte_producao": "claude",
+    "summary": "Perda transitória de consciência por hipoperfusão cerebral global, de início rápido e recuperação espontânea completa — reflexa na maioria dos casos, mas com a síncope cardíaca concentrando a maior mortalidade apesar de ser a menos frequente.",
+    "epidemiology": "Síncope é queixa extremamente comum: estima-se que entre cerca de 35% e metade da população geral experimente ao menos um episódio sincopal em algum momento da vida, com incidência de primeiro episódio em distribuição bimodal característica — muito alta entre 10 e 30 anos, torna-se incomum por volta dos 40 anos, e volta a subir de forma acentuada após os 65 anos (ESC 2018, Web Practical Instructions, Eur Heart J. 2018;39(21):e43-e80). Corresponde a cerca de 1-3,5% das visitas a departamentos de emergência e a 2-5% das internações relacionadas a perda transitória de consciência em séries internacionais. Entre os três grandes grupos etiológicos, a síncope reflexa (neuromediada) é disparadamente a mais frequente em qualquer cenário assistencial e em qualquer faixa etária, respondendo por cerca de metade dos casos; segue-se a hipotensão ortostática, mais prevalente no idoso, no polimedicado e no paciente com disautonomia; e por último a síncope cardíaca, responsável por uma minoria dos casos na população geral (em torno de 10%), mas concentrando a maior mortalidade e o maior risco de morte súbita — o que a torna prioridade diagnóstica mesmo sendo a menos frequente (Brignole M et al., Eur Heart J. 2018;39(21):1883-1948, PMID 29562304, Tabela 3). No idoso, a proporção de causa cardíaca e ortostática cresce e a apresentação se torna mais atípica.",
+    "presentation": [
+      "Pródromo autonômico (tontura, sudorese fria, palidez, visão turva, náusea) precedendo a perda de consciência é típico da síncope reflexa/vasovagal",
+      "Ausência de pródromo, com início súbito e sem aviso, é sinal de alarme e aumenta a suspeita de causa cardíaca arrítmica",
+      "Relação clara com a mudança de decúbito para a posição ortostática, com melhora ao deitar, sugere síncope por hipotensão ortostática",
+      "Gatilho situacional específico e reprodutível — micção, defecação, tosse, deglutição, dor, calor, emoção — aponta para síncope situacional/reflexa",
+      "Síncope durante o esforço físico (no auge do esforço) é sinal de alarme para causa cardíaca estrutural ou arrítmica, distinto da síncope pós-esforço, tipicamente reflexa e de bom prognóstico",
+      "Palpitação súbita imediatamente antes da perda de consciência sugere taquiarritmia como causa",
+      "Recuperação espontânea, completa e relativamente rápida da consciência (segundos a poucos minutos), sem necessidade de intervenção, é o critério que define e distingue a síncope verdadeira de outras causas de perda de consciência"
+    ],
+    "diagnostic_approach": "Os três grandes grupos etiológicos: a síncope reflexa (neuromediada) — subtipos vasovagal, situacional e síndrome do seio carotídeo — é mediada por resposta neural inapropriada com vasodilatação e/ou bradicardia, geralmente com pródromo e gatilho identificável, e é a causa mais comum em qualquer idade; a síncope por hipotensão ortostática decorre de falha em manter a pressão arterial ao assumir a posição em pé, por fármaco vasoativo (causa mais comum), depleção de volume ou falência autonômica primária/secundária; a síncope cardíaca, por arritmia (bradi ou taquiarritmia, disfunção de dispositivo) ou por doença estrutural/cardiopulmonar (estenose aórtica, cardiomiopatia hipertrófica, mixoma atrial, tamponamento, embolia pulmonar, dissecção aórtica), é a menos frequente mas a de maior risco (Brignole M et al., PMID 29562304, Tabela 3). A avaliação inicial — história clínica completa, exame físico com pressão arterial em decúbito e em ortostatismo, e eletrocardiograma de 12 derivações — é etapa obrigatória em todo paciente com perda transitória de consciência e deve ser cumprida antes de qualquer exame complementar direcionado; sozinha já define o diagnóstico em parte relevante dos casos e orienta toda a estratificação de risco subsequente (ESC 2018, seção 4.1). Crise epiléptica deve ser suspeitada quando há aura estereotipada, mioclonia com 20-100 contrações síncronas e simétricas que começam junto da perda de consciência, mordedura lateral da língua, duração de minutos e confusão pós-ictal prolongada com amnésia — em contraste com a mioclonia breve e assíncrona que só começa após a perda de consciência e a recuperação em segundos típicas da síncope verdadeira (ESC 2018, Tabela 10). Regras de decisão clínica (San Francisco Syncope Rule, Canadian Syncope Risk Score, EGSYS) auxiliam a estratificação de risco no pronto-socorro, mas nenhuma superou o julgamento clínico experiente em metanálise de dados individuais de pacientes (Costantino G et al., Am J Med. 2014;127(11):1126.e13-25, PMID 24862309) e não devem ser usadas de forma isolada ou automática. O tilt test é indicado como teste confirmatório quando a suspeita clínica já aponta para síncope reflexa ou tendência hipotensiva, não como rastreio geral; o monitor de eventos implantável é reservado para síncope recorrente e inexplicada, após avaliação inicial e tilt test não diagnósticos, sobretudo quando os episódios são esparsos e imprevisíveis — rendimento diagnóstico de 55% contra apenas 19% dos testes convencionais (ESC 2018).",
+    "differentials": [
+      "Crise epiléptica generalizada (tônico-clônica) — mioclonia prolongada e simétrica desde o início do evento, confusão pós-ictal de minutos; a assistolia ictal (bradicardia/assistolia em 0,3-0,5% das crises parciais complexas) pode mimetizar síncope cardíaca",
+      "Pseudossíncope psicogênica — episódios frequentes, duração de minutos a horas (mediana 44s vs. 20s na vasovagal), olhos frequentemente fechados durante o evento (97% vs. 7%), sem alteração hemodinâmica documentada no tilt test",
+      "Queda mecânica sem perda de consciência — paciente lembra do evento, sem amnésia nem inconsciência real",
+      "Hipoglicemia — duração muito mais longa que a síncope, com rebaixamento progressivo em vez de perda abrupta, e recuperação lenta após correção glicêmica",
+      "Acidente isquêmico transitório vertebrobasilar — quase sempre acompanhado de sinais neurológicos focais; raramente causa perda de consciência verdadeira isolada",
+      "Cataplexia — queda com paralisia flácida desencadeada por emoção forte, sem perda de consciência nem amnésia"
+    ],
+    "tests": [
+      "ECG de 12 derivações — parte obrigatória da avaliação inicial, busca características de alto risco (consenso EUSEM 2024); limitação: normal na maioria dos episódios reflexos, não exclui causa arrítmica paroxística",
+      "Pressão arterial em decúbito e teste de ortostatismo ativo (3 minutos em pé) — confirma hipotensão ortostática clássica; limitação: não captura a forma inicial (queda em menos de 15 segundos, exige medida contínua batimento a batimento) nem a tardia",
+      "Tilt test — teste confirmatório quando a suspeita clínica já aponta para síncope reflexa ou tendência hipotensiva; limitação: não é teste de rastreio geral, resposta negativa não exclui síncope reflexa",
+      "Monitor de eventos implantável (ILR) — indicado em síncope recorrente e inexplicada após avaliação inicial e tilt test não diagnósticos; rendimento diagnóstico de 55% contra 19% dos testes convencionais; limitação: não dá resposta imediata, depende da recorrência do evento durante a monitorização",
+      "Biomarcadores cardíacos (troponina e peptídeos natriuréticos) — podem complementar a estratificação em pacientes selecionados quando há suspeita de causa cardíaca, mas não estabelecem isoladamente a etiologia da síncope nem substituem história, exame, ortostatismo e ECG; não solicitar de forma automática a todo episódio.",
+      "Ecocardiograma — indicação seletiva (suspeita de cardiopatia estrutural, ECG anormal, síncope de esforço), não é exame de rotina em síncope",
+      "Massagem do seio carotídeo monitorizada — em paciente maior de 40 anos, para confirmar síndrome do seio carotídeo quando reproduz os sintomas espontâneos com resposta cardioinibitória e/ou vasodepressora; limitação: exige checagem de contraindicações"
+    ],
+    "red_flags": [
+      "Síncope durante o esforço físico (e não pós-esforço) — sugere causa cardíaca estrutural ou arrítmica",
+      "Ausência de pródromo, com início súbito e sem aviso",
+      "Síncope em decúbito ou sentado — posição em que hipotensão ortostática é improvável como mecanismo",
+      "Palpitação súbita imediatamente antes do episódio",
+      "História familiar de morte súbita cardíaca em idade jovem, ou canalopatia/cardiomiopatia hereditária conhecida na família",
+      "ECG anormal, conforme as características de alto risco maiores do consenso EUSEM 2024 (isquemia aguda, BAV Mobitz II ou de 3º grau, fibrilação atrial lenta com FC <40/min, bradicardia sinusal persistente <40/min, pausa sinusal >3 segundos, bloqueio de ramo, taquicardia ventricular, disfunção de marca-passo/CDI, padrão de Brugada tipo 1, QTc >460 ms)",
+      "Cardiopatia estrutural conhecida (disfunção ventricular, cardiomiopatia, valvopatia grave)"
+    ],
+    "treatment_summary": "O tratamento da síncope reflexa (vasovagal) recorrente segue uma hierarquia de degraus, não uma escolha entre opções equivalentes. A primeira linha, com a recomendação mais forte de toda a seção (Classe I, Nível B), é a educação do paciente sobre o caráter benigno da condição e o reconhecimento de gatilhos e situações desencadeantes — calor, ortostatismo prolongado, desidratação, jejum, ambientes lotados (ESC 2018, PMID 29562304). Em pacientes com pródromo reconhecível e idade abaixo de 60 anos, somam-se as manobras físicas de contrapressão isométrica (cruzar pernas, entrelaçar e puxar os braços), com redução de risco relativo de recorrência de 39% no PC-Trial citado pela diretriz (Classe IIa, Nível B). Betabloqueadores não são indicados para prevenir recorrência de síncope reflexa (ESC 2018: Classe III, Nível A). O ensaio POST foi neutro na população geral (Sheldon et al., Circulation 2006, PMID 16505178), e a interação etária observada em análise post hoc (PMID 22972872) não constitui indicação terapêutica nem deve ser usada para recomendar betabloqueador a pacientes mais velhos. Na forma cardioinibitória refratária às medidas não farmacológicas, a escalada terapêutica não é automática: cardioneuroablação e marca-passo definitivo (guiado por documentação de assistolia por monitor de eventos implantável, conforme o ISSUE-3, PMID 22565936) são alternativas com eficácia numericamente semelhante em comparação não randomizada, e a posição conjunta EHRA/HRS/APHRS/LAHRS 2024 (PMID 39082698) é explícita ao afirmar que recomendações fortes sobre cardioneuroablação não podem ser feitas — a indicação exige decisão compartilhada, informando ao paciente a taxa real de recorrência documentada em coorte contemporânea (44% em seguimento médio de 2,2 anos). Na hipotensão ortostática concomitante, o manejo é escalonado: revisão e retirada de fármacos hipotensores, correção de depleção de volume e, só depois, medidas posturais e físicas (Gibbons et al., 2017, PMID 28050656). Nenhuma dose de fármaco específica é afirmada aqui — apenas princípio terapêutico.",
+    "ambulatory_flow": [
+      "Educação estruturada sobre reconhecimento precoce do pródromo e treinamento nas manobras físicas de contrapressão isométrica, com reforço em cada consulta de seguimento",
+      "Revisão sistemática da lista de medicamentos em uso, com atenção a fármacos hipotensores e bradicardizantes que podem precipitar ou agravar hipotensão ortostática, priorizando IECA/BRA/bloqueador de cálcio quando o tratamento anti-hipertensivo for indispensável",
+      "Orientação sobre hidratação adequada e ingestão de sal (quando não houver contraindicação por hipertensão, insuficiência cardíaca ou doença renal) e sobre evitar gatilhos situacionais",
+      "Encaminhamento a tilt test ou a monitor de eventos implantável (ILR) conforme a recorrência dos episódios e a incerteza diagnóstica, especialmente quando se cogita marca-passo guiado por documentação de assistolia espontânea (critérios do ISSUE-3: idade ≥40 anos, ≥3 episódios em 2 anos, assistolia ≥3 s com síncope ou ≥6 s sem síncope)",
+      "Discussão compartilhada e encaminhamento a centro especializado quando a síncope reflexa cardioinibitória permanece refratária às medidas não farmacológicas, apresentando ao paciente as alternativas de marca-passo e cardioneuroablação com suas evidências e limitações",
+      "Avaliação de restrições ocupacionais, incluindo direção veicular, conforme o risco de recorrência e o tipo de síncope identificado"
+    ],
+    "emergency_flow": [
+      "Estratificação inicial de alto versus baixo risco na chegada: história clínica dirigida, exame físico, aferição de pressão arterial supina e em pé, e ECG de 12 derivações com interpretação especializada em até 10 minutos do registro do paciente",
+      "Marcadores de alto risco que exigem internação ou monitorização intensiva: síncope durante esforço físico ou em decúbito/sentado, ECG com característica maior de alto risco, cardiopatia estrutural ou coronariana grave conhecida, história familiar de morte súbita em idade jovem e palpitação súbita imediatamente antes do episódio",
+      "Interrogação pronta de dispositivo cardíaco implantado (marca-passo ou cardiodesfibrilador) em todo paciente portador que apresente síncope",
+      "Encaminhamento à unidade de síncope dedicada, quando disponível, para pacientes de risco intermediário — modelo que no ensaio SEEDS elevou o rendimento diagnóstico de 10% para 67% e reduziu a taxa de internação de 98% para 43%, sem diferença de mortalidade ou recorrência em 2 anos (Shen et al., Circulation 2004, PMID 15536093)",
+      "Na ausência de marcador inequívoco de alto risco, não presumir automaticamente baixo risco: pacientes sem perfil reflexo/ortostático claramente benigno devem permanecer em observação no pronto-socorro ou unidade de síncope para investigação dirigida; seguimento ambulatorial imediato é reservado ao perfil explicitamente de baixo risco.",
+      "Alta direta do departamento de emergência para manejo ambulatorial quando há perfil claro de baixo risco: pródromo vasovagal típico, gatilho reflexo identificável, ausência de cardiopatia conhecida e exame físico/ECG normais"
+    ],
+    "monitoring": [
+      "Reavaliação periódica da frequência de recorrência dos episódios e do impacto funcional/qualidade de vida, servindo de gatilho para intensificar ou escalonar o tratamento",
+      "ECG seriado, Holter ou monitor de eventos conforme a suspeita de mecanismo arrítmico, incluindo reavaliação após ajuste de medicação bradicardizante",
+      "Reavaliação da pressão arterial em ortostatismo após retirada de fármaco hipotensor ou instituição de medidas posturais",
+      "Ecocardiograma seriado nos pacientes em que cardiopatia estrutural foi identificada na avaliação inicial",
+      "Reavaliação da necessidade de marca-passo definitivo após período de observação inicial e documentação de assistolia por monitor de eventos implantável",
+      "Seguimento estruturado pós-cardioneuroablação com ECG, Holter e testes autonômicos nos meses seguintes, com seguimento estendido de 3 a 5 anos recomendado (taxa de recorrência de 44% em seguimento médio de 2,2 anos observada em coorte contemporânea)"
+    ],
+    "special_populations": [
+      "Síncope no idoso: a premissa de que o paciente lembra ter perdido a consciência frequentemente não se sustenta — amnésia retrógrada e ausência de testemunha tornam a distinção entre queda mecânica e síncope verdadeira muitas vezes impossível apenas pela história. A ESC 2018 recomenda investigar queda inexplicada com o mesmo rigor de síncope inexplicada; as causas mais prevalentes são hipotensão ortostática, hipersensibilidade do seio carotídeo, síncope neuromediada e arritmias, com diagnóstico definitivo em mais de 90% dos casos quando se segue abordagem estruturada.",
+      "Hipersensibilidade do seio carotídeo no idoso: causa tratável e subdiagnosticada, responsável por quase 30% da síncope inexplicada em idosos e presente em 14% dos residentes de instituições de longa permanência. Diagnóstico por massagem do seio carotídeo monitorizada (subtipos cardioinibitório ~70%, vasodepressor ~10%, misto ~20%) muda diretamente a conduta de direção veicular: motorista particular pode ser liberado se o risco anual de incapacitação súbita for <22%, enquanto o comercial exige risco <1%.",
+      "Síncope no atleta: por ocorrer em população com maior prevalência relativa de doença cardíaca estrutural/elétrica grave predisponente a morte súbita, todo atleta com síncope exige investigação cardíaca focada antes de liberação para retorno ao esporte. O diagnóstico diferencial mais estreito inclui a pseudossíncope psicogênica, distinguível clinicamente por duração maior, olhos fechados durante o episódio e maior ausência de pródromo relatado.",
+      "Síncope situacional: reúne gatilhos com mecanismos distintos entre si, o que muda a conduta por subtipo — miccional e defecatória por manobra de Valsalva, tussígena por reflexo vasodepressor-bradicárdico neuralmente mediado (tratamento exige eliminar a causa da tosse), e de deglutição por reflexo vagovagal gastrointestinal-cardíaco. Em coorte de 3.140 pacientes avaliados por tilt test, 354 (11,3%) tiveram síncope situacional, sendo miccional o gatilho mais comum (50,85%) (Zou R et al., Am J Emerg Med 2020;38(7):1419-1423, PMID 31843331).",
+      "Síncope inexplicada recorrente: quando a avaliação inicial e a estratificação de risco não fecham o diagnóstico, o monitor de eventos implantável entra como indicação Classe I Nível A — precocemente, sem exigir tilt test prévio, em pacientes sem critérios de alto risco com recorrência esperada dentro da vida útil do dispositivo. Meta-análise de 5 ensaios (660 pacientes) mostrou aumento de 3,7 vezes (IC95% 2,7-5,0) na probabilidade relativa de diagnóstico com estratégia inicial de monitor implantável versus convencional.",
+      "Síncope e risco de fratura por queda: consequência traumática direta que reforça a necessidade de investigação mesmo em episódio aparentemente benigno. Coorte dinamarquesa (Numé et al., PLoS One 2018, PMID 30462687; 125.763 pacientes) mostrou risco 79% maior de lesão por queda em 1 ano, com 19,1% das lesões sendo fratura de quadril. Coorte sueca prospectiva (Johansson et al., BMC Med 2021, PMID 34446019) mostrou HR 1,20 para fratura incidente após síncope inexplicada hospitalizada e HR 1,42 após hipotensão ortostática documentada."
+    ],
+    "assistant_questions": [
+      {
+        "id": "syncope_during_exertion",
+        "label": "A síncope ocorreu durante o esforço físico (não logo após)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "no_prodrome",
+        "label": "Houve ausência de pródromo (início súbito, sem aviso)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Apresentação"
+      },
+      {
+        "id": "ecg_high_risk",
+        "label": "O ECG mostrou alguma característica de alto risco (bloqueio AV avançado, taquicardia ventricular, QTc prolongado, padrão de Brugada, bradicardia significativa)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Exames"
+      },
+      {
+        "id": "known_structural_heart_disease",
+        "label": "Há cardiopatia estrutural ou coronariana grave conhecida?",
+        "type": "boolean",
+        "required": true,
+        "section": "História"
+      },
+      {
+        "id": "syncope_supine_or_seated",
+        "label": "A síncope ocorreu em decúbito ou enquanto o paciente estava sentado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "sudden_palpitations_before",
+        "label": "Houve palpitação súbita imediatamente antes da perda de consciência?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "family_history_young_scd",
+        "label": "Há história familiar de morte súbita cardíaca em idade jovem ou doença cardíaca hereditária conhecida?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "situational_trigger",
+        "label": "Há gatilho situacional claro (micção, defecação, tosse, dor, calor, emoção)?",
+        "type": "boolean",
+        "section": "Apresentação"
+      },
+      {
+        "id": "unexplained_after_initial_evaluation",
+        "label": "Após história, exame físico, pressão em ortostatismo e ECG, a síncope permanece sem explicação?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
+      },
+      {
+        "id": "initial_workup_non_diagnostic",
+        "label": "A investigação inicial dirigida e os testes não invasivos apropriados permaneceram não diagnósticos?",
+        "type": "boolean",
+        "required": true,
+        "section": "Investigação"
+      },
+      {
+        "id": "recurrence_count",
+        "label": "Quantos episódios de síncope o paciente já teve?",
+        "type": "number",
+        "section": "História"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sincope-alto-risco-cardiaco-ecg",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_high_risk",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "ECG com característica de alto risco na síncope"
+          ],
+          "emergency_flow": [
+            "Internação/monitorização intensiva; investigação cardíaca urgente (ecocardiograma, monitorização contínua, avaliação por cardiologia) antes de qualquer decisão de alta"
+          ]
+        }
+      },
+      {
+        "id": "sincope-alto-risco-cardiaco-esforco-estrutural",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "known_structural_heart_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síncope em paciente com cardiopatia estrutural ou coronariana grave conhecida"
+          ],
+          "emergency_flow": [
+            "Manter monitorização e realizar avaliação cardíaca urgente antes de alta; a cardiopatia conhecida é marcador de alto risco independentemente de o episódio ter ocorrido durante esforço."
+          ]
+        }
+      },
+      {
+        "id": "sincope-esforco-sem-cardiopatia-conhecida",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "syncope_during_exertion",
+              "op": "truthy"
+            },
+            {
+              "field": "ecg_high_risk",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope durante o esforço físico"
+          ],
+          "differentials": [
+            "Causa cardíaca estrutural ou arrítmica não ainda identificada"
+          ],
+          "messages": [
+            "Síncope de esforço exige investigação cardíaca dirigida (ecocardiograma, avaliação de cardiopatia estrutural) mesmo sem cardiopatia previamente conhecida"
+          ]
+        }
+      },
+      {
+        "id": "sincope-alto-risco-historia",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "syncope_supine_or_seated",
+              "op": "truthy"
+            },
+            {
+              "field": "sudden_palpitations_before",
+              "op": "truthy"
+            },
+            {
+              "field": "family_history_young_scd",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope em decúbito/sentado, palpitação súbita imediatamente antes do evento ou história familiar de morte súbita jovem"
+          ],
+          "emergency_flow": [
+            "Manter observação/monitorização e realizar investigação cardíaca dirigida antes de considerar alta, ajustando internação à avaliação global de risco."
+          ]
+        }
+      },
+      {
+        "id": "sincope-sem-prodromo",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "no_prodrome",
+              "op": "truthy"
+            },
+            {
+              "field": "ecg_high_risk",
+              "op": "falsy"
+            },
+            {
+              "field": "syncope_during_exertion",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Ausência de pródromo aumenta a suspeita de causa cardíaca arrítmica — avaliação inicial completa (história, exame, PA em ortostatismo, ECG) antes de atribuir a episódio reflexo benigno"
+          ]
+        }
+      },
+      {
+        "id": "sincope-recorrente-inexplicada",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "recurrence_count",
+              "op": "gte",
+              "value": 3
+            },
+            {
+              "field": "unexplained_after_initial_evaluation",
+              "op": "truthy"
+            },
+            {
+              "field": "initial_workup_non_diagnostic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Monitor de eventos implantável (ILR)"
+          ],
+          "messages": [
+            "Síncope recorrente e genuinamente inexplicada após avaliação inicial e investigação dirigida não diagnósticas pode justificar monitor de eventos implantável quando há probabilidade razoável de recorrência durante a vida útil do dispositivo; episódios reflexos/situacionais já explicados não preenchem esta regra."
+          ]
+        }
+      },
+      {
+        "id": "sincope-situacional-baixo-risco",
+        "priority": 15,
+        "when": {
+          "all": [
+            {
+              "field": "situational_trigger",
+              "op": "truthy"
+            },
+            {
+              "field": "ecg_high_risk",
+              "op": "falsy"
+            },
+            {
+              "field": "no_prodrome",
+              "op": "falsy"
+            },
+            {
+              "field": "known_structural_heart_disease",
+              "op": "falsy"
+            },
+            {
+              "field": "syncope_during_exertion",
+              "op": "falsy"
+            },
+            {
+              "field": "syncope_supine_or_seated",
+              "op": "falsy"
+            },
+            {
+              "field": "sudden_palpitations_before",
+              "op": "falsy"
+            },
+            {
+              "field": "family_history_young_scd",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Perfil de baixo risco (gatilho situacional claro, sem red flags): orientação educativa e manejo ambulatorial, sem necessidade de investigação cardíaca urgente"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "síncope",
+      "desmaio",
+      "ESC 2018",
+      "hipotensão ortostática",
+      "cardioneuroablação",
+      "monitor de eventos implantável",
+      "tilt test",
+      "unidade de síncope",
+      "seio carotídeo",
+      "queda no idoso"
+    ],
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304.",
+      "Brignole M, et al. 2018 ESC Guidelines for the diagnosis and management of syncope: Web Practical Instructions. Eur Heart J. 2018;39(21):e43-e80.",
+      "Costantino G, Sun BC, Barbic F, et al. Syncope clinical management in the emergency department: a consensus from the first international workshop. Am J Med. 2014;127(11):1126.e13-25. DOI: 10.1016/j.amjmed.2014.05.022. PMID: 24862309.",
+      "Sheldon RS, Morillo CA, Klingenheben T, et al. Age-dependent effect of beta-blockers in preventing vasovagal syncope (POST). Circ Arrhythm Electrophysiol. 2012;5(5):920-926. PMID: 22972872.",
+      "Sheldon R, Connolly S, Rose S, et al. Prevention of Syncope Trial (POST): a randomized, placebo-controlled study of metoprolol in the prevention of vasovagal syncope. Circulation. 2006;113(9):1164-1170. PMID: 16505178.",
+      "Brignole M, Menozzi C, Moya A, et al.; ISSUE-3 Investigators. Pacemaker therapy in patients with neurally mediated syncope and documented asystole: Third International Study on Syncope of Uncertain Etiology (ISSUE-3): a randomized trial. Circulation. 2012;125(21):2566-2571. DOI: 10.1161/CIRCULATIONAHA.111.082313. PMID: 22565936.",
+      "Aksu T, Brignole M, Calò L, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: a scientific statement of the EHRA of the ESC, HRS, APHRS and LAHRS. Europace. 2024;26:euae206. DOI: 10.1093/europace/euae206. PMID: 39082698.",
+      "Shen WK, Decker WW, Smars PA, et al. Syncope Evaluation in the Emergency Department Study (SEEDS): a multidisciplinary approach. Circulation. 2004;110(24):3636-3645. PMID: 15536093.",
+      "Thiruganasambandamoorthy V, Rowe BH, Sivilotti MLA, et al. Duration of Electrocardiographic Monitoring of Emergency Department Patients With Syncope. Ann Intern Med. 2020;172(10):648-655. PMID: 32340039.",
+      "Gibbons CH, Schmidt P, Biaggioni I, et al. The recommendations of a consensus panel for the screening, diagnosis, and treatment of neurogenic orthostatic hypotension. J Neurol. 2017;264(8):1567-1582. PMID: 28050656.",
+      "Zou R, Wang S, Li F, et al. Utility of the head-up tilt test in evaluating situational syncope. Am J Emerg Med. 2020;38(7):1419-1423. PMID: 31843331.",
+      "Numé AK, Carlson N, Gerds TA, et al. Risk of post-discharge fall-related injuries among adult patients with syncope. PLoS One. 2018;13(11):e0206936. PMID: 30462687.",
+      "Johansson M, Rogmark C, Sutton R, Fedorowski A, Hamrefors V. Risk of incident fractures in individuals hospitalised due to unexplained syncope and orthostatic hypotension. BMC Med. 2021;19(1):188. PMID: 34446019."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehy037",
+      "https://pubmed.ncbi.nlm.nih.gov/24862309/",
+      "https://pubmed.ncbi.nlm.nih.gov/22972872/",
+      "https://pubmed.ncbi.nlm.nih.gov/16505178/",
+      "https://pubmed.ncbi.nlm.nih.gov/15536093/",
+      "https://pubmed.ncbi.nlm.nih.gov/32340039/",
+      "https://pubmed.ncbi.nlm.nih.gov/28050656/",
+      "https://pubmed.ncbi.nlm.nih.gov/31843331/",
+      "https://pubmed.ncbi.nlm.nih.gov/30462687/",
+      "https://pubmed.ncbi.nlm.nih.gov/34446019/"
+    ],
+    "related_document_slugs": [
+      "betabloqueador-na-sincope-vasovagal-efeito-dependente-da-idade-post-i-e-ii",
+      "biomarcadores-cardiacos-nt-probnp-e-troponina-na-estratificacao-de-risco-da-sincope",
+      "cardioneuroablacao-na-sincope-reflexa-posicao-conjunta-ehra-hrs-aphrs-lahrs-2024",
+      "escore-romeo-quando-pedir-ecocardiograma-no-idoso-com-sincope-na-emergencia",
+      "estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope",
+      "fluxograma-cardioneuroablacao-sincope-vasovagal-cardioinibitoria-refrataria",
+      "fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado",
+      "fluxograma-sincope-avaliacao-inicial-esc-2018",
+      "fluxograma-sincope-criterios-de-alto-risco-emergencia-esc-2018-eusem-2024",
+      "fluxograma-sincope-idoso-investigacao-diferenciada",
+      "fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel",
+      "fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial",
+      "fluxograma-sincope-situacional-diferencial-e-conduta-por-gatilho",
+      "hipersensibilidade-do-seio-carotideo-no-idoso-e-restricoes-de-direcao-veicular",
+      "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+      "marca-passo-empirico-na-sincope-reflexa-cardioinibitoria-issue-3",
+      "marca-passo-versus-cardioneuroablacao-na-sincope-vasovagal-cardioinibitoria-e-o-algoritmo-de-estimulacao-cls-versus-rdr",
+      "marcadores-fisiologicos-de-denervacao-eficaz-na-cardioneuroablacao",
+      "regras-de-decisao-clinica-na-sincope-de-emergencia-sfsr-csrs-egsys-comparadas",
+      "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+      "sincope-diagnostico-e-manejo-esc-2018",
+      "sincope-durante-o-esforco-versus-sincope-pos-esforco-por-que-o-momento-muda-tudo",
+      "sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram",
+      "sincope-na-emergencia-criterios-de-alto-risco-do-ecg-eusem-2024",
+      "sincope-no-atleta-e-pseudossincope-psicogenica-diagnostico-diferencial",
+      "sincope-no-idoso-armadilhas-diagnosticas-e-diferencial-com-queda-inexplicada",
+      "sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+      "sincope-versus-crise-epileptica-diagnostico-diferencial-e-assistolia-ictal-esc-2018",
+      "tratamento-da-sincope-vasovagal-recorrente-medidas-nao-farmacologicas-e-farmacos",
+      "unidade-de-sincope-o-ensaio-seeds-e-o-racional-do-modelo-assistencial-dedicado"
+    ],
+    "patient_material_slug": "sincope-desmaio",
+    "review_status": "revisado",
+    "review_note": "Verbete NOVO criado por Claude em 27/08/2026, como hub central de síncope adulta (área geral) — quinto ciclo Tudo com Tudo do dia (após endocardite #553, pericardite #554, hipertensão pulmonar #555; Tromboembolismo Venoso descartado por sobreposição confirmada com PR #544 do Codex). Coleção doencas/metadados.json tinha apenas sincope-pediatrica (cardiopediatria), sem verbete geral adulto. Conteúdo sintetizado a partir de 30 documentos já publicados e revisados em content/Síncope/, com verificação direta dos fatos-chave contra fonte primária (PMID/DOI) por 3 agentes de pesquisa independentes nesta sessão. Nenhum documento, checklist, trilha ou material novo foi criado — o lote conecta este novo hub a conteúdo já existente. Nenhuma dose de fármaco específica foi incluída. Pendente revisão clínica humana antes de qualquer republicação como revisado. Revisão clínica e de segurança concluída por Codex em 27/08/2026: corrigidos alto risco, critérios de observação, indicação de ILR, betabloqueadores e referências primárias antes da publicação.",
+    "version": 2
   }
 ]
