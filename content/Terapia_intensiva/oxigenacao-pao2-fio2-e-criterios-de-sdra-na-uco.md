@@ -53,6 +53,13 @@ Converta FiO₂ percentual para fração antes da divisão:
 Exemplo: PaO₂ 80 mmHg em FiO₂ 40% corresponde a **80 ÷ 0,40 = 200
 mmHg**. O formulário recebe **40**, e não 0,40, para reduzir erro de unidade.
 
+Acima de 1.000 m, a definição global corrige o índice pela pressão barométrica:
+
+**P/F corrigida = P/F observada × (pressão barométrica local ÷ 760).**
+
+Os limiares usam a P/F corrigida. A pressão local precisa ser documentada; a
+ferramenta não a infere pelo nome da cidade nem pela altitude aproximada.
+
 ## Critérios que se aplicam a todas as categorias globais
 
 Todos os itens abaixo precisam ser sustentados pelo caso; a calculadora não os
@@ -60,8 +67,11 @@ infere a partir da P/F:
 
 - fator predisponente agudo, como pneumonia, infecção extrapulmonar, aspiração,
   trauma, transfusão, queimadura ou choque;
-- início ou piora da insuficiência respiratória hipoxêmica em até uma semana do
-  fator predisponente ou de sintomas respiratórios novos/em piora;
+- fator e cronologia são gates separados: além do fator predisponente, o início
+  ou a piora da insuficiência respiratória hipoxêmica deve ocorrer em até uma
+  semana **do fator** ou em até uma semana de **sintomas respiratórios novos ou
+  em piora**. Esses são marcos temporais alternativos, mas nenhum deles elimina
+  a exigência independente do fator agudo;
 - opacidades bilaterais em radiografia ou tomografia, ou perda bilateral de
   aeração em ultrassom realizado por operador treinado, não explicadas por
   derrame, atelectasia ou massa;
@@ -94,7 +104,10 @@ P/F igual a 300 preenche o critério; maior que 300, não.
 
 ## Sequência segura de uso
 
-1. confirme que PaO₂, FiO₂ e suporte representam o mesmo momento;
+1. confirme que PaO₂, FiO₂ e suporte representam o mesmo momento; para fins de
+   classificação, registre a medida em repouso e, quando clinicamente possível,
+   pelo menos 30 minutos após mudança de posição, FiO₂ ou fluxo, sem atrasar
+   estabilização urgente;
 2. calcule a P/F e registre a modalidade, a PEEP ou o fluxo;
 3. confirme individualmente fator predisponente, tempo e imagem;
 4. avalie objetivamente congestão, função cardíaca e sobrecarga quando a origem
@@ -146,6 +159,9 @@ ser avaliados separadamente.
 
 - usar FiO₂ 40 como fração ou 0,40 como percentual, produzindo erro de cem vezes;
 - combinar PaO₂ anterior com FiO₂ ou PEEP posterior;
+- ignorar a correção barométrica acima de 1.000 m ou estimar pressão pela cidade;
+- tratar o marco temporal alternativo dos sintomas como dispensa do fator
+  predisponente agudo, que continua obrigatório;
 - chamar P/F baixa de SDRA sem fator predisponente, tempo e imagem compatíveis;
 - classificar edema cardiogênico como SDRA apenas porque há opacidades bilaterais;
 - excluir SDRA apenas porque há insuficiência cardíaca — coexistência é possível,

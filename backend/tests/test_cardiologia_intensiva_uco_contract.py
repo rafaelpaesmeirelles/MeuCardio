@@ -144,6 +144,9 @@ def test_lote_oxigenacao_preserva_revisao_humana_e_diferencial_bidirecional():
     assert "review_status: pendente_revisao" in documento
     assert "Vínculo clínico direto" in documento
     assert "Vínculo diferencial explícito" in documento
+    assert "P/F corrigida = P/F observada × (pressão barométrica local ÷ 760)" in documento
+    assert "marcos temporais alternativos" in documento
+    assert "nenhum deles elimina" in documento
     assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in edema
     assert "/calculadoras/oxigenacao-pao2-fio2-sdra-uco" in vd
     assert "\\[" not in documento

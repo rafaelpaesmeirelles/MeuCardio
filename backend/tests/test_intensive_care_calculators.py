@@ -88,8 +88,10 @@ def _dados_oxigenacao(**mudancas):
         "fio2_percentual": 40,
         "suporte_respiratorio": "invasiva",
         "peep_cpap_cmh2o": 8,
+        "altitude_maior_1000m": False,
         "fator_predisponente_agudo": True,
-        "inicio_ate_uma_semana": True,
+        "inicio_ate_uma_semana_do_fator": True,
+        "inicio_ate_uma_semana_dos_sintomas": False,
         "opacidades_bilaterais": True,
         "edema_nao_primariamente_cardiogenico": True,
         "hipoxemia_nao_primariamente_atelectasia": True,
@@ -494,6 +496,54 @@ def test_oxigenacao_inclui_limites_exatos_pf_300_peep_5_e_cnaf_30():
     assert "CONJUNTO DECLARADO COMPATÍVEL" in cnaf["status_dos_criterios"]
 
 
+@pytest.mark.parametrize(
+    "mudancas",
+    [
+        {
+            "inicio_ate_uma_semana_do_fator": True,
+            "inicio_ate_uma_semana_dos_sintomas": False,
+        },
+        {
+            "inicio_ate_uma_semana_do_fator": False,
+            "inicio_ate_uma_semana_dos_sintomas": True,
+        },
+    ],
+)
+def test_oxigenacao_aceita_os_dois_marcos_temporais_alternativos(mudancas):
+    resultado = _calc_oxigenacao().compute(_dados_oxigenacao(**mudancas))
+
+    assert "CONJUNTO DECLARADO COMPATÍVEL" in resultado["status_dos_criterios"]
+
+
+def test_oxigenacao_mantem_fator_predisponente_obrigatorio_mesmo_com_sintomas_recentes():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            fator_predisponente_agudo=False,
+            inicio_ate_uma_semana_do_fator=False,
+            inicio_ate_uma_semana_dos_sintomas=True,
+        )
+    )
+
+    assert "fator predisponente agudo" in resultado["criterios_ausentes"]
+    assert "CRITÉRIOS CLÍNICOS/DE IMAGEM INCOMPLETOS" in resultado["status_dos_criterios"]
+
+
+def test_oxigenacao_corrige_pf_acima_de_1000m_com_pressao_barometrica_local():
+    resultado = _calc_oxigenacao().compute(
+        _dados_oxigenacao(
+            pao2_mmhg=90,
+            fio2_percentual=30,
+            altitude_maior_1000m=True,
+            pressao_barometrica_mmhg=600,
+        )
+    )
+
+    assert resultado["relacao_pao2_fio2_observada_mmhg"] == 300.0
+    assert resultado["relacao_pao2_fio2_mmhg"] == 236.8
+    assert "pressão barométrica local de 600 mmHg" in resultado["correcao_altitude"]
+    assert "200–300 mmHg" in resultado["faixa_da_relacao_pf"]
+
+
 def test_oxigenacao_bloqueia_rotulo_quando_origem_cardiogenica_nao_foi_excluida():
     resultado = _calc_oxigenacao().compute(
         _dados_oxigenacao(edema_nao_primariamente_cardiogenico=False)
@@ -558,6 +608,11 @@ def test_oxigenacao_aplica_gates_sem_forcar_classificacao(mudancas, trecho):
             {"suporte_respiratorio": "cnaf", "peep_cpap_cmh2o": None, "fluxo_cnaf_l_min": 101},
             "fluxo da CNAF entre 0 e 100",
         ),
+        ({"pressao_barometrica_mmhg": 299}, "pressão barométrica local entre 300 e 760"),
+        (
+            {"altitude_maior_1000m": True},
+            "acima de 1.000 m, informe a pressão barométrica local",
+        ),
     ],
 )
 def test_oxigenacao_rejeita_entradas_invalidas(mudancas, mensagem):
@@ -572,4 +627,8 @@ def test_oxigenacao_esta_registrada_com_gates_opcionais_e_kind_assessment():
     assert calculadora.theme == "Terapia intensiva"
     assert calculadora.status == "implementada"
     assert calculadora.kind == "assessment"
-    assert opcionais == {"peep_cpap_cmh2o", "fluxo_cnaf_l_min"}
+    assert opcionais == {
+        "peep_cpap_cmh2o",
+        "fluxo_cnaf_l_min",
+        "pressao_barometrica_mmhg",
+    }

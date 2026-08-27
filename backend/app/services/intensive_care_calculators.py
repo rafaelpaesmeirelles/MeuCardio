@@ -789,6 +789,8 @@ def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
     suporte = dados["suporte_respiratorio"]
     peep = _numero_opcional(dados, "peep_cpap_cmh2o")
     fluxo = _numero_opcional(dados, "fluxo_cnaf_l_min")
+    altitude_maior_1000m = bool(dados.get("altitude_maior_1000m"))
+    pressao_barometrica = _numero_opcional(dados, "pressao_barometrica_mmhg")
 
     if not all(math.isfinite(valor) for valor in (pao2, fio2_percentual)):
         raise ValueError("Informe somente valores numéricos finitos.")
@@ -802,8 +804,20 @@ def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
         raise ValueError("Informe PEEP/CPAP entre 0 e 30 cmH₂O.")
     if fluxo is not None and not 0 <= fluxo <= 100:
         raise ValueError("Informe fluxo da CNAF entre 0 e 100 L/min.")
+    if pressao_barometrica is not None and not 300 <= pressao_barometrica <= 760:
+        raise ValueError("Informe pressão barométrica local entre 300 e 760 mmHg.")
+    if altitude_maior_1000m and pressao_barometrica is None:
+        raise ValueError(
+            "Em altitude acima de 1.000 m, informe a pressão barométrica local para corrigir a razão P/F."
+        )
 
-    relacao_pf = pao2 / (fio2_percentual / 100)
+    relacao_pf_observada = pao2 / (fio2_percentual / 100)
+    fator_correcao_altitude = (
+        pressao_barometrica / 760
+        if altitude_maior_1000m and pressao_barometrica is not None
+        else 1.0
+    )
+    relacao_pf = relacao_pf_observada * fator_correcao_altitude
     if relacao_pf > 300:
         faixa_pf = ">300 mmHg — não preenche o limiar de hipoxemia da definição global"
     elif relacao_pf > 200:
@@ -846,9 +860,13 @@ def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
         detalhe_suporte = "oxigênio convencional/baixo fluxo"
         gate_suporte = "CNAF ≥30 L/min, VNI/CPAP ≥5 cmH₂O ou ventilação invasiva com PEEP ≥5 cmH₂O"
 
+    inicio_ate_uma_semana = bool(
+        dados.get("inicio_ate_uma_semana_do_fator")
+        or dados.get("inicio_ate_uma_semana_dos_sintomas")
+    )
     criterios = {
         "fator predisponente agudo": bool(dados.get("fator_predisponente_agudo")),
-        "início ou piora em até 1 semana": bool(dados.get("inicio_ate_uma_semana")),
+        "início ou piora em até 1 semana do fator ou de sintomas respiratórios": inicio_ate_uma_semana,
         "opacidades bilaterais compatíveis": bool(dados.get("opacidades_bilaterais")),
         "edema não primariamente cardiogênico/sobrecarga": bool(
             dados.get("edema_nao_primariamente_cardiogenico")
@@ -892,7 +910,14 @@ def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
     )
 
     return {
+        "relacao_pao2_fio2_observada_mmhg": round(relacao_pf_observada, 1),
         "relacao_pao2_fio2_mmhg": round(relacao_pf, 1),
+        "correcao_altitude": (
+            f"aplicada com pressão barométrica local de {pressao_barometrica:g} mmHg "
+            f"(fator {fator_correcao_altitude:.3f})"
+            if altitude_maior_1000m and pressao_barometrica is not None
+            else "não aplicada (altitude até 1.000 m)"
+        ),
         "faixa_da_relacao_pf": faixa_pf,
         "suporte_avaliado": detalhe_suporte,
         "categoria_global_avaliada": categoria,
@@ -905,7 +930,9 @@ def _avaliacao_oxigenacao_sdra(dados: dict) -> dict:
 
 def _interpretar_oxigenacao_sdra(resultado: dict) -> str:
     return (
-        f"Razão PaO₂/FiO₂ = {resultado['relacao_pao2_fio2_mmhg']} mmHg. "
+        f"Razão PaO₂/FiO₂ usada nos limiares = {resultado['relacao_pao2_fio2_mmhg']} mmHg "
+        f"(observada: {resultado['relacao_pao2_fio2_observada_mmhg']} mmHg; "
+        f"correção de altitude {resultado['correcao_altitude']}). "
         f"{resultado['faixa_da_relacao_pf']}. Suporte: {resultado['suporte_avaliado']}. "
         f"{resultado['status_dos_criterios']} {resultado['alerta_edema_cardiogenico']}"
     )
@@ -962,13 +989,34 @@ _OXIGENACAO_SDRA = Calculator(
             help="Obrigatório para avaliar CNAF; a definição global usa o limiar de 30 L/min.",
         ),
         Field(
+            "altitude_maior_1000m",
+            "A medida foi obtida acima de 1.000 m de altitude",
+            "boolean",
+            help="Acima de 1.000 m, a definição global requer correção pela pressão barométrica local.",
+        ),
+        Field(
+            "pressao_barometrica_mmhg",
+            "Pressão barométrica local",
+            "number",
+            "mmHg",
+            min=300,
+            max=760,
+            required=False,
+            help="Obrigatória apenas acima de 1.000 m; use medição ou fonte local documentada, não estimativa pela cidade.",
+        ),
+        Field(
             "fator_predisponente_agudo",
             "Há fator predisponente agudo documentado (ex.: pneumonia, sepse, aspiração, trauma, transfusão ou choque)",
             "boolean",
         ),
         Field(
-            "inicio_ate_uma_semana",
-            "Insuficiência respiratória iniciou ou piorou em até 1 semana do fator/sintomas",
+            "inicio_ate_uma_semana_do_fator",
+            "Início ou piora em até 1 semana do fator predisponente",
+            "boolean",
+        ),
+        Field(
+            "inicio_ate_uma_semana_dos_sintomas",
+            "Início ou piora em até 1 semana de sintomas respiratórios novos ou em piora",
             "boolean",
         ),
         Field(
@@ -995,6 +1043,8 @@ _OXIGENACAO_SDRA = Calculator(
     kind="assessment",
     limitations=[
         "A razão P/F isolada não diagnostica SDRA e pode variar com FiO₂, PEEP, recrutamento, posição e momento da coleta.",
+        "Para classificação, registre a medida em repouso e, quando clinicamente possível, após pelo menos 30 minutos sem mudança de posição, FiO₂ ou fluxo; isso nunca deve atrasar estabilização urgente.",
+        "Acima de 1.000 m, os limiares usam P/F corrigida = P/F observada × (pressão barométrica local/760). Pressão incorreta pode mudar artificialmente a categoria.",
         "PaO₂ e FiO₂ precisam representar o mesmo momento. FiO₂ estimada em oxigênio convencional/baixo fluxo é imprecisa; por segurança, essa modalidade não preenche o gate de suporte em ambiente com recursos.",
         "As faixas leve, moderada e grave são exibidas somente como faixas da razão e pertencem à categoria intubada da definição global; não graduam automaticamente o paciente não intubado.",
         "Insuficiência cardíaca e sobrecarga volêmica precisam de avaliação objetiva quando a origem do edema não está clara. SDRA pode coexistir com edema cardiogênico, mas a relação não deve ser presumida.",
