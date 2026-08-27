@@ -36,7 +36,13 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete-hub Tudo com Tudo de Dislipidemia (geral), criado em 27/08/2026:
+        # slug novo, sem sobreposição com dislipidemias-pediatricas — ver review_note.
+        "dislipidemia",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
