@@ -282,14 +282,22 @@ def assess_disease(slug: str, payload: AssessmentPayload, db: Session = Depends(
             status_code=422,
             detail={"erro": "Respostas inválidas.", "campos": invalid},
         )
+    if missing:
+        raise HTTPException(
+            status_code=422,
+            detail={"erro": "Respostas obrigatórias ausentes.", "campos": missing},
+        )
     result = evaluate_rules(
         questions=item.assistant_questions or [],
         rules=item.assistant_rules or [],
         answers=payload.answers,
-        base_tests=item.tests or [],
+        # Exames e fluxos do verbete são conteúdo educacional de referência.
+        # O assessment só deve rotular como sugestão o que uma regra explícita
+        # adicionou para as respostas atuais.
+        base_tests=[],
         base_differentials=item.differentials or [],
-        base_ambulatory_flow=item.ambulatory_flow or [],
-        base_emergency_flow=item.emergency_flow or [],
+        base_ambulatory_flow=[],
+        base_emergency_flow=[],
         context=payload.context,
     )
     result.update({

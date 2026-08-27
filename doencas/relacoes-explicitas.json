@@ -34,5 +34,53 @@
     "relevance_score": 1.0,
     "evidence_source": "doencas/relacoes-explicitas.json#sindrome-coronariana-aguda:trilha:trilha-sindrome-coronariana-aguda",
     "review_note": "Vínculo clínico direto: trilha educacional dedicada à síndrome coronariana aguda."
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "tromboembolismo-pulmonar",
+    "relation_type": "associated_with",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#embolia-pulmonar-aguda:protocolo_emergencia:tromboembolismo-pulmonar",
+    "review_note": "Vínculo clínico direto: protocolo de emergência específico do tromboembolismo pulmonar agudo; a doença permanece pendente e impede publicação da aresta."
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "target_type": "checklist",
+    "target_slug": "alta-pos-tromboembolismo-venoso-agudo",
+    "relation_type": "associated_with",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#embolia-pulmonar-aguda:checklist:alta-pos-tromboembolismo-venoso-agudo",
+    "review_note": "Vínculo clínico direto: checklist de alta após TVP/TEP baseado na diretriz brasileira SBPT 2025."
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "target_type": "checklist",
+    "target_slug": "criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco",
+    "relation_type": "associated_with",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#embolia-pulmonar-aguda:checklist:criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco",
+    "review_note": "Vínculo clínico direto: seleção de baixo risco para tratamento ambulatorial sustentada pelos estudos Aujesky e Hestia."
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "target_type": "trilha",
+    "target_slug": "trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco",
+    "relation_type": "associated_with",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#embolia-pulmonar-aguda:trilha:trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco",
+    "review_note": "Vínculo clínico direto: trilha dedicada ao escalonamento do TEP de risco intermediário-alto, preservando incerteza terapêutica."
   }
 ]
