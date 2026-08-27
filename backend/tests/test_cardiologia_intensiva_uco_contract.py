@@ -88,8 +88,22 @@ def test_modificador_scai_a_foi_corrigido_no_documento_e_checklist():
         if item["slug"] == "reconhecimento-e-manejo-inicial-do-choque-cardiogenico"
     )
     item_parada = next(item for item in registro["itens"] if item["id"] == "chc-modificador-a-parada")
+    alta = next(item for item in checklists if item["slug"] == "alta-pos-choque-cardiogenico")
+    item_alta = next(item for item in alta["itens"] if item["id"] == "cs-scai-estagio")
 
     assert "coma/GCS <9 ou ausência de resposta a comandos após RCE" in documento
     assert "ainda não constituía consenso final" in documento
     assert "Parada breve com recuperação neurológica" in item_parada["texto"]
     assert "independentemente da duração do episódio" not in item_parada["texto"]
+    assert "potencial lesão cerebral anóxica" in item_alta["texto"]
+    assert "não por qualquer parada breve" in item_alta["texto"]
+
+
+def test_avaliacao_estruturada_nao_e_catalogada_como_dose():
+    detalhe = _texto("pages/Calculadora.tsx")
+    catalogo = _texto("pages/Calculadoras.tsx")
+
+    assert 'new Set(["dose", "assessment"])' in detalhe
+    assert 'c.kind === "dose"' in catalogo
+    assert 'c.kind !== "dose"' in catalogo
+    assert "Escores e avaliações" in catalogo

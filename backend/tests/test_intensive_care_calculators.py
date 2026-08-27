@@ -332,7 +332,7 @@ def test_scai_esta_registrado_no_tema_e_expoe_numeros_opcionais():
 
     assert calculadora.theme == "Terapia intensiva"
     assert calculadora.status == "implementada"
-    assert calculadora.kind == "dose"
+    assert calculadora.kind == "assessment"
     assert opcionais == {
         "pas_mmhg",
         "pam_mmhg",
@@ -340,3 +340,15 @@ def test_scai_esta_registrado_no_tema_e_expoe_numeros_opcionais():
         "lactato_mmol_l",
         "ph_arterial",
     }
+
+
+def test_scai_c_exclui_hipoperfusao_resolvida_com_volume_isolado():
+    calculadora = calculators.REGISTRY["estadiamento-scai-choque-cardiogenico"]
+    campo_c = next(
+        campo for campo in calculadora.fields if campo.name == "hipoperfusao_requer_intervencao"
+    )
+    resultado = calculadora.compute(_dados_scai())
+
+    assert "além de volume isolado" in campo_c.label
+    assert "resolve apenas com reposição volêmica não preenche" in campo_c.help
+    assert "além de reposição volêmica isolada" in resultado["criterio_determinante"]

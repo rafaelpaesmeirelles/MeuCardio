@@ -34,12 +34,10 @@ class Calculator:
     compute: Callable[[dict], dict] | None = None
     limitations: list[str] = field(default_factory=list)
     status: str = "implementada"
-    # "escore": resultado é um número/classificação só (score/max, egfr etc.) —
-    # o frontend mostra esse valor em destaque, como sempre fez. "dose": o
-    # resultado é uma dose/taxa (às vezes mais de um número, às vezes com
-    # texto no meio, ex. nome do fármaco) — o frontend mostra a interpretação
-    # em prosa como resposta principal, não um único número gigante. Ver
-    # `dose_calculators.py`, pedido do Rafael em 07/08/2026.
+    # "escore": resultado é um número/classificação só (score/max, egfr etc.).
+    # "dose": dose/taxa, agrupada no catálogo de dose e infusão. "assessment":
+    # avaliação estruturada com múltiplos achados em prosa, fora do catálogo de
+    # doses. O frontend renderiza "dose" e "assessment" como resultado composto.
     kind: str = "escore"
 
 

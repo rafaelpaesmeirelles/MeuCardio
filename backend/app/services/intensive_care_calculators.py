@@ -420,7 +420,10 @@ def _estadiamento_scai(dados: dict) -> dict:
         criterio = "hipoperfusão/instabilidade persistente após a intervenção inicial ou escalada de suporte"
     elif hipoperfusao:
         estagio, nome_estagio = "C", "choque clássico"
-        criterio = "hipoperfusão que requer intervenção para restaurar perfusão"
+        criterio = (
+            "hipoperfusão que requer intervenção farmacológica ou mecânica para restaurar "
+            "perfusão, além de reposição volêmica isolada"
+        )
     elif instabilidade:
         estagio, nome_estagio = "B", "choque iniciando"
         criterio = "hipotensão relativa ou taquicardia sem hipoperfusão"
@@ -515,8 +518,9 @@ _ESTADIAMENTO_SCAI = Calculator(
         ),
         Field(
             "hipoperfusao_requer_intervencao",
-            "C — hipoperfusão presente, requerendo intervenção para restaurar perfusão",
+            "C — hipoperfusão requer intervenção farmacológica ou mecânica além de volume isolado",
             "boolean",
+            help="Hipoperfusão que resolve apenas com reposição volêmica não preenche este critério de estágio C.",
         ),
         Field(
             "deterioracao_apos_intervencao",
@@ -552,7 +556,7 @@ _ESTADIAMENTO_SCAI = Calculator(
     compute=_estadiamento_scai,
     interpret=_interpretar_scai,
     reference=REFERENCIAS_SCAI,
-    kind="dose",
+    kind="assessment",
     limitations=[
         "Assistente de documentação, não escore prognóstico nem indicação automática de vasoativo, revascularização ou suporte circulatório mecânico.",
         "O SCAI 2022 é consenso multissocietário; seus critérios foram validados sobretudo em coortes observacionais, não em ensaio randomizado de estratégia terapêutica.",

@@ -387,8 +387,8 @@
         "id": "cs-scai-estagio",
         "categoria": "seguimento",
         "obrigatorio": true,
-        "texto": "Estágio SCAI (A-E) documentado no momento de maior gravidade e reavaliado ao longo da internação, com o modificador A registrado se houve parada cardiorrespiratória associada",
-        "origem_secao": "Classificação SCAI — Trajetória clínica / Modificador A: parada cardíaca"
+        "texto": "Estágio SCAI (A-E) documentado no momento de maior gravidade e reavaliado ao longo da internação; modificador +A registrado somente quando a parada esteve associada a potencial lesão cerebral anóxica (coma/GCS <9 ou ausência de resposta a comandos após RCE), não por qualquer parada breve com recuperação neurológica",
+        "origem_secao": "Classificação SCAI — Trajetória clínica / Modificador +A: potencial lesão cerebral anóxica após parada"
       },
       {
         "id": "cs-vasoativo-desmame",

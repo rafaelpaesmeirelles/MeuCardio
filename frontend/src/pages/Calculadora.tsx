@@ -22,6 +22,7 @@ import GrafoRelacionados from "../components/GrafoRelacionados";
  */
 
 const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
+const RESULTADOS_ESTRUTURADOS = new Set(["dose", "assessment"]);
 
 type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 
@@ -241,11 +242,10 @@ export default function Calculadora() {
 
       {erro && <div style={{ marginTop: "1rem" }}><Erro mensagem={erro} /></div>}
 
-      {saida && calc.kind === "dose" && (
-        // Calculadora de DOSE: a resposta principal é a frase de interpretação
-        // (tem unidade, contexto e aviso de faixa embutidos) — não um número
-        // isolado. Um resultado de dose não cabe no formato "número grande +
-        // /máximo" pensado para escore. Ver `dose_calculators.py` (backend).
+      {saida && RESULTADOS_ESTRUTURADOS.has(calc.kind) && (
+        // Doses e avaliações estruturadas têm vários achados relevantes: a
+        // resposta principal é a interpretação em prosa, não o primeiro valor
+        // isolado no formato visual reservado aos escores numéricos.
         <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
           {saida.interpretation && (
@@ -269,7 +269,7 @@ export default function Calculadora() {
         </div>
       )}
 
-      {saida && calc.kind !== "dose" && (
+      {saida && !RESULTADOS_ESTRUTURADOS.has(calc.kind) && (
         <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
           <p className="dado" style={{ fontSize: "2.4rem", margin: "0.2rem 0", color: "var(--acento)" }}>
