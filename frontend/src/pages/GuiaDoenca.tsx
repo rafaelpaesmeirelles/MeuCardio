@@ -30,7 +30,7 @@ type Disease = {
   summary: string;
   epidemiology?: string | null;
   presentation: unknown[];
-  diagnostic_approach: Record<string, unknown>;
+  diagnostic_approach: unknown;
   differentials: unknown[];
   tests: unknown[];
   red_flags: unknown[];
@@ -42,6 +42,8 @@ type Disease = {
   assistant_questions: Question[];
   source_refs: string[];
   source_urls: string[];
+  related_document_slugs: string[];
+  patient_material_slug?: string | null;
   review_status: string;
   review_note?: string | null;
   version: number;
@@ -70,12 +72,54 @@ function textOf(value: unknown): string {
   return String(value ?? "");
 }
 
+function labelOfKey(value: string): string {
+  const labels: Record<string, string> = {
+    confirmacao: "Confirmação diagnóstica",
+    avaliacao_inicial: "Avaliação inicial",
+    estratificacao: "Estratificação",
+    etiologia: "Etiologia e fatores associados",
+    fenotipo: "Fenótipo clínico",
+  };
+  return labels[value] || value.replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
+}
+
+function labelOfSlug(value: string): string {
+  return value.replaceAll("-", " ").replace(/^./, (letter) => letter.toUpperCase());
+}
+
 function ListBlock({ title, items, alert = false }: { title: string; items: unknown[]; alert?: boolean }) {
   if (!items?.length) return null;
   return (
     <section className={`cartao ${alert ? "painel__funcao--destaque" : ""}`} style={{ marginTop: "0.8rem" }}>
       <h2>{title}</h2>
       <ul>{items.map((item, index) => <li key={index}>{textOf(item)}</li>)}</ul>
+    </section>
+  );
+}
+
+function StructuredBlock({ title, value }: { title: string; value: unknown }) {
+  if (!value || (Array.isArray(value) && value.length === 0)) return null;
+  if (typeof value === "string") {
+    return <section className="cartao" style={{ marginTop: "0.8rem" }}><h2>{title}</h2><p>{value}</p></section>;
+  }
+  if (Array.isArray(value)) return <ListBlock title={title} items={value} />;
+  if (typeof value !== "object") return null;
+
+  const entries = Object.entries(value as Record<string, unknown>);
+  if (!entries.length) return null;
+  return (
+    <section className="cartao" style={{ marginTop: "0.8rem" }}>
+      <h2>{title}</h2>
+      <div style={{ display: "grid", gap: "0.75rem" }}>
+        {entries.map(([key, item]) => (
+          <div key={key}>
+            <h3 style={{ marginBottom: "0.3rem" }}>{labelOfKey(key)}</h3>
+            {Array.isArray(item)
+              ? <ul>{item.map((entry, index) => <li key={index}>{textOf(entry)}</li>)}</ul>
+              : <p>{textOf(item)}</p>}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
@@ -248,6 +292,7 @@ export default function GuiaDoenca() {
           {disease.epidemiology && <section className="cartao" style={{ marginTop: "1rem" }}><h2>Epidemiologia e relevância</h2><p>{disease.epidemiology}</p></section>}
           <ListBlock title="Apresentação clínica" items={disease.presentation} />
           <ListBlock title="Red flags" items={disease.red_flags} alert />
+          <StructuredBlock title="Abordagem diagnóstica" value={disease.diagnostic_approach} />
           <ListBlock title="Exames" items={disease.tests} />
           <ListBlock title="Diagnósticos diferenciais" items={disease.differentials} />
           <ListBlock title="Fluxo ambulatorial" items={disease.ambulatory_flow} />
@@ -256,6 +301,24 @@ export default function GuiaDoenca() {
           <ListBlock title="Monitorização e seguimento" items={disease.monitoring} />
           <ListBlock title="Populações e situações especiais" items={disease.special_populations} />
         </>
+      )}
+
+      {(disease.related_document_slugs.length > 0 || disease.patient_material_slug) && (
+        <section className="cartao" style={{ marginTop: "1rem" }}>
+          <h2>Conteúdo diretamente relacionado</h2>
+          <div className="painel__temas">
+            {disease.related_document_slugs.map((documentSlug) => (
+              <Link className="painel__tema" key={documentSlug} to={`/biblioteca/${documentSlug}`}>
+                {labelOfSlug(documentSlug)}
+              </Link>
+            ))}
+            {disease.patient_material_slug && (
+              <Link className="painel__tema" to={`/material-paciente/${disease.patient_material_slug}`}>
+                Material ao paciente: {labelOfSlug(disease.patient_material_slug)}
+              </Link>
+            )}
+          </div>
+        </section>
       )}
 
       <GrafoRelacionados entityType="doenca" slug={disease.slug} />

@@ -37,12 +37,12 @@ def test_specialty_catalog_has_all_areas_and_canonical_minimum():
     items = _load(DISEASES_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 88
+    assert len(items) >= 92
     assert len(slugs) == len(set(slugs))
     assert {item["area"] for item in items} == {
         "geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
-    assert FRONTS["doencas_especializadas"]["minimum"] == 88
+    assert FRONTS["doencas_especializadas"]["minimum"] == 92
     assert all(item.get("summary") for item in items)
     assert {item.get("review_status") for item in items} <= {
         "revisado", "pendente_revisao", "lacuna_declarada",

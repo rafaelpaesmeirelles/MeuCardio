@@ -38,6 +38,7 @@ type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pedi
 
 const AREAS = [
   ["", "Todas as áreas"],
+  ["geral", "Cardiologia do adulto"],
   ["cardiopediatria", "Cardiopediatria"],
   ["cardiogeriatria", "Cardiogeriatria"],
   ["cardiooncologia", "Cardio-oncologia"],
