@@ -10489,7 +10489,7 @@
     "category": "cardiologia_fetal",
     "subtype": "arco_aortico",
     "prevalence_rank": 37,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Suspeita pré-natal desafiadora que requer avaliação seriada do arco, fluxos, proporções cardíacas e planejamento neonatal proporcional ao risco.",
     "tags": [
       "coarctação fetal",
@@ -10497,18 +10497,489 @@
       "planejamento neonatal"
     ],
     "source_refs": [
-      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram"
+      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram",
+      "Moon-Grady AJ, Donofrio MT, Gelehrter S, et al. Guidelines and Recommendations for Performance of the Fetal Echocardiogram: An Update from the American Society of Echocardiography. J Am Soc Echocardiogr. 2023;36(7):679-723. PMID: 37227365",
+      "Matsui H, Mellander M, Roughton M, Jicinska H, Gardiner HM. Morphological and physiological predictors of fetal aortic coarctation. Circulation. 2008;118(18):1793-1801. PMID: 18852365",
+      "Familiari A, Morlando M, Khalil A, et al. Risk Factors for Coarctation of the Aorta on Prenatal Ultrasound: A Systematic Review and Meta-Analysis. Circulation. 2017;135(8):772-785. PMID: 28034902",
+      "Hornberger LK, Sahn DJ, Kleinman CS, Copel JA, Reed KL. Antenatal diagnosis of coarctation of the aorta: a multicenter experience. J Am Coll Cardiol. 1994;23(2):417-423. PMID: 8294696",
+      "Head CE, Jowett VC, Sharland GK, Simpson JM. Timing of presentation and postnatal outcome of infants suspected of having coarctation of the aorta during fetal life. Heart. 2005;91(8):1070-1074. PMID: 16020599",
+      "Pasquini L, Mellander M, Seale A, et al. Z-scores of the fetal aortic isthmus and duct: an aid to assessing arch hypoplasia. Ultrasound Obstet Gynecol. 2007;29(6):628-633. PMID: 17476706",
+      "Tuo G, et al. Fetal aortic coarctation: A combination of third-trimester echocardiographic parameters to improve the prediction of postnatal outcome. Front Pediatr. 2022;10:866994. PMID: 36299692",
+      "Wang HH, et al. A clinical prediction model to estimate the risk for coarctation of the aorta: From fetal to newborn life. J Obstet Gynaecol Res. 2022;48(9):2304-2313. PMID: 35754096"
     ],
     "source_urls": [
-      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"
+      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/37227365/",
+      "https://pubmed.ncbi.nlm.nih.gov/18852365/",
+      "https://pubmed.ncbi.nlm.nih.gov/28034902/",
+      "https://pubmed.ncbi.nlm.nih.gov/8294696/",
+      "https://pubmed.ncbi.nlm.nih.gov/16020599/",
+      "https://pubmed.ncbi.nlm.nih.gov/17476706/",
+      "https://pubmed.ncbi.nlm.nih.gov/36299692/",
+      "https://pubmed.ncbi.nlm.nih.gov/35754096/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (21º lote de conteúdo do dia, quinto do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630, bloqueio-atrioventricular-fetal/PR #631, hidropisia-fetal-cardiovascular/PR #632 e flutter-atrial-fetal/PR #633): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos, mas zero campos clínicos. Adicionados epidemiology (taxa de falso-positivo do diagnóstico pré-natal 40-60%, natureza ducto-dependente), presentation (10 formas), diagnostic_approach (5 subtópicos: critérios ecocardiográficos seriados, avaliação de fluxo istmo/ducto, diferenciação de hipoplasia de VE limítrofe, investigação genética, limitações/taxa de falso-positivo), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (12), assistant_rules (9). related_document_slugs expandido de 1 para 4 (união com o original, sem duplicar) — todos verificados quanto a menção explícita a coarctação no texto. patient_material_slug original preservado. Overlap extenso mas legítimo com coarctacao-da-aorta (adulto), aortopatia-na-gravidez e valva-aortica-bicuspide-pediatrica/PR #604 — documentado. Nenhuma dose de fármaco em nenhum campo — fármaco citado apenas por nome (prostaglandina E1). Todos os PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem; 2 correções feitas nesse processo: autor incorreto na referência ASE 2023 (corrigido para Moon-Grady AJ, mesmo autor já usado corretamente em indicacoes-ecocardiograma-fetal/PR #630) e 2 referências entregues pelo agente sem nome de autor (Tuo G et al. e Wang HH et al., ambos completados após verificação).",
+    "version": 2,
     "related_document_slugs": [
-      "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual"
+      "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual",
+      "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio",
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+      "coarctacao-de-aorta-reparada-e-gestacao-desfechos-do-ropac"
     ],
-    "patient_material_slug": "coarctacao-aorta-fetal"
+    "patient_material_slug": "coarctacao-aorta-fetal",
+    "epidemiology": "A coarctação da aorta é uma das cardiopatias congênitas mais difíceis de diagnosticar com precisão no período pré-natal, pois seu espectro anatômico se sobrepõe a variações normais do arco aórtico fetal, sobretudo antes de 24-28 semanas de gestação. Estudos multicêntricos mostram taxas de falso-positivo elevadas na suspeita ecográfica pré-natal, frequentemente situadas entre 40% e 60%, já que o diagnóstico definitivo só pode ser confirmado após o nascimento, quando o fechamento do canal arterial revela, ou não, a obstrução real do istmo. Isso ocorre porque, durante a vida fetal, o fluxo pelo canal arterial mantém a perfusão da aorta descendente e pode mascarar ou mimetizar um estreitamento ístmico. A coarctação integra o grupo das cardiopatias congênitas ducto-dependentes do arco aórtico, nas quais a permeabilidade do canal arterial é essencial para a perfusão sistêmica logo após o nascimento; sua obstrução progressiva ao fechar pode levar a colapso circulatório neonatal grave. Por isso, o diagnóstico pré-natal correto, mesmo com suas limitações, tem importância central: permite planejar o parto em centro terciário com suporte de cardiologia pediátrica, orientar a manutenção precoce da permeabilidade ductal com prostaglandina E1 logo após o nascimento e reduzir a morbimortalidade associada ao diagnóstico tardio, particularmente em recém-nascidos que recebem alta hospitalar antes do fechamento do canal arterial.",
+    "presentation": [
+      "Assimetria ventricular direita/esquerda (VD maior que VE) identificada no ultrassom morfológico de segundo trimestre, achado inicial mais comum que motiva encaminhamento para ecocardiografia fetal",
+      "Arco aórtico de calibre reduzido ou hipoplásico à ecocardiografia fetal direcionada, com relação istmo/ducto arterioso diminuída",
+      "Fluxo reverso (retrógrado) no istmo aórtico ao Doppler colorido e pulsado, sinal de maior especificidade para obstrução significativa",
+      "Coarctação associada a comunicação interventricular (CIV), configurando forma anatômica mais complexa e com maior risco de arco hipoplásico",
+      "Suspeita de coarctação em feto com síndrome de Turner (cariótipo 45,X), população com risco aumentado de cardiopatias do lado esquerdo",
+      "Coarctação isolada, com arco de tamanho limítrofe e sem outras malformações, versus coarctação associada a hipoplasia de ventrículo esquerdo limítrofe",
+      "Achado incidental de assimetria de câmaras ou de vasos da base em rastreio obstétrico de rotina, sem fator de risco prévio identificado",
+      "Gestante com fator de risco para cardiopatia congênita (história familiar, diabetes pré-gestacional, exposição a teratógenos) encaminhada para ecocardiograma fetal direcionado",
+      "Translucência nucal aumentada no primeiro trimestre como marcador de rastreio precoce para cardiopatia do arco aórtico, incluindo a coarctação",
+      "Dúvida diagnóstica persistente em exames seriados ao longo da gestação, com necessidade de reavaliação em terceiro trimestre para refinar a probabilidade de coarctação verdadeira"
+    ],
+    "diagnostic_approach": {
+      "criterios_ecocardiograficos_seriados": "A avaliação ecocardiográfica fetal seriada utiliza a relação entre os diâmetros dos ventrículos direito e esquerdo (VD/VE) no plano de quatro câmaras, considerando-se suspeita quando essa relação está aumentada, além da medida direta do diâmetro do istmo aórtico e do arco transverso, comparados a curvas de referência (escores-Z) para a idade gestacional. Exames repetidos entre o segundo e o terceiro trimestre são recomendados, pois a desproporção ventricular e a hipoplasia do arco podem se tornar mais evidentes, ou, ao contrário, se resolver ao longo da gestação, conforme preconizado pelas diretrizes de 2023 da American Society of Echocardiography para realização do ecocardiograma fetal.",
+      "avaliacao_fluxo_istmo_ducto": "O Doppler colorido e pulsado do istmo aórtico e do canal arterial é essencial na avaliação seriada: fluxo anterógrado normal ao longo de toda a sístole é tranquilizador, enquanto fluxo reverso ou bidirecional no istmo, especialmente quando persistente em exames seriados, aumenta significativamente a probabilidade de coarctação pós-natal verdadeira. A relação entre o diâmetro do istmo aórtico e o diâmetro do canal arterial auxilia a diferenciar hipoplasia relativa de obstrução anatômica real.",
+      "diferenciacao_hipoplasia_ve_limitrofe": "Quando a coarctação se associa a ventrículo esquerdo de tamanho limítrofe, é fundamental diferenciar hipoplasia de ventrículo esquerdo limítrofe, que pode evoluir para fisiologia univentricular, de coarctação isolada com ventrículo esquerdo estruturalmente normal. Essa distinção envolve avaliação do tamanho da valva mitral e da valva aórtica, da função sistólica do ventrículo esquerdo e da presença de fluxo anterógrado adequado através da via de saída esquerda, com impacto direto na estratégia cirúrgica, biventricular versus univentricular.",
+      "investigacao_genetica": "Diante de suspeita de coarctação fetal, recomenda-se investigação de síndromes genéticas associadas, particularmente síndrome de Turner (cariótipo 45,X) em fetos do sexo feminino, além de rastreio para outras aneuploidias e microdeleções por meio de cariótipo fetal e/ou microarray cromossômico, já que cardiopatias do lado esquerdo, incluindo a coarctação, têm associação bem descrita com anomalias cromossômicas e síndromes genéticas.",
+      "limitacoes_taxa_falso_positivo": "O diagnóstico pré-natal de coarctação tem limitação intrínseca relevante: séries multicêntricas mostram que uma proporção substancial dos fetos com suspeita ecográfica não apresenta coarctação confirmada após o nascimento, pois o istmo aórtico fetal é fisiologicamente mais estreito que a aorta ascendente e a aorta descendente, mesmo em corações estruturalmente normais. Por isso, a observação do recém-nascido até o fechamento do canal arterial, associada a escores de predição pós-natal que combinam múltiplos parâmetros ecográficos seriados, é a estratégia recomendada para reduzir intervenções desnecessárias sem comprometer a segurança do neonato."
+    },
+    "differentials": [
+      "Hipoplasia de ventrículo esquerdo limítrofe versus coarctação isolada",
+      "Interrupção do arco aórtico",
+      "Pseudocoarctação da aorta",
+      "Arco aórtico normal com viés de imagem (estreitamento aparente por ângulo de insonação subótimo)",
+      "Redistribuição funcional de fluxo em outras cardiopatias (estenose aórtica crítica, hipoplasia de ventrículo esquerdo primária) mimetizando coarctação",
+      "Variantes anatômicas do arco aórtico (arco duplo, artéria subclávia direita aberrante) sem obstrução verdadeira"
+    ],
+    "tests": [
+      "Ecocardiografia fetal direcionada (nível II) com Doppler colorido e pulsado do arco aórtico e do istmo",
+      "Ecocardiografia fetal seriada em terceiro trimestre para reavaliação da relação VD/VE e do arco transverso",
+      "Cariótipo fetal por amniocentese ou biópsia de vilo corial",
+      "Microarray cromossômico (CMA) para investigação de microdeleções/microduplicações associadas",
+      "Ultrassom morfológico obstétrico de rotina (rastreio de segundo trimestre)",
+      "Medida da translucência nucal no rastreio de primeiro trimestre",
+      "Ecocardiograma neonatal pós-natal, padrão de referência para confirmação diagnóstica após o fechamento do canal arterial",
+      "Aplicação de escores de predição pós-natal que combinam parâmetros ecográficos seriados (relação VD/VE, diâmetro do istmo, fluxo no istmo)"
+    ],
+    "red_flags": [
+      "Fluxo retrógrado importante e persistente no arco aórtico/istmo em exames seriados",
+      "Comunicação interatrial (CIA) restritiva associada",
+      "Hipoplasia importante de ventrículo esquerdo",
+      "Relação VD/VE marcadamente aumentada e progressiva em exames seriados",
+      "Arco transverso com escore-Z muito reduzido para a idade gestacional",
+      "Associação com CIV extensa e desvio de fluxo predominante através do forame oval",
+      "Cariótipo fetal compatível com síndrome de Turner",
+      "Sinais de insuficiência cardíaca fetal, como hidropisia ou disfunção ventricular"
+    ],
+    "treatment_summary": "A coarctação da aorta grave é uma cardiopatia congênita cuja obstrução ao fluxo sanguíneo sistêmico permanece compensada durante toda a vida fetal, pois o canal arterial pérvio garante perfusão adequada da aorta descendente e da circulação sistêmica independentemente do grau de estreitamento ístmico. Por essa razão, a lesão é classificada como ducto-dependente: sua repercussão hemodinâmica só se torna clinicamente manifesta após o nascimento, quando o fechamento fisiológico do canal arterial retira essa via alternativa de fluxo e expõe a obstrução, podendo evoluir rapidamente para choque cardiogênico, acidose metabólica e insuficiência de múltiplos órgãos nas primeiras horas ou dias de vida. Não há indicação de qualquer intervenção intraútero para a suspeita de coarctação da aorta; o manejo pré-natal é essencialmente expectante, com acompanhamento ecocardiográfico seriado. O valor central do diagnóstico pré-natal está no planejamento cuidadoso do nascimento: o parto deve ser programado em centro terciário com suporte cardiológico neonatal e equipe de cirurgia cardíaca pediátrica disponíveis, evitando o risco de deterioração hemodinâmica grave em unidades sem recursos para diagnóstico e correção imediatos. Em todo recém-nascido com suspeita pré-natal de coarctação, recomenda-se início precoce, já na sala de parto ou logo após, de infusão contínua de prostaglandina E1, com o objetivo de manter o canal arterial pérvio até que a avaliação ecocardiográfica neonatal confirme ou exclua definitivamente o diagnóstico; a suspensão da prostaglandina só deve ocorrer após exclusão segura da obstrução. Confirmada a coarctação, o tratamento definitivo é cirúrgico, com correção da obstrução aórtica realizada em momento oportuno conforme a gravidade e a estabilidade clínica do recém-nascido. Diante do achado pré-natal, é fundamental investigar condições associadas, em particular a síndrome de Turner nos fetos femininos e outras anomalias cromossômicas ou síndromes genéticas, além de pesquisa detalhada de malformações cardíacas e extracardíacas associadas, já que a coarctação frequentemente se associa a válvula aórtica bivalvulada e a outras lesões do lado esquerdo do coração. Por fim, o aconselhamento parental deve ser claro quanto às limitações do diagnóstico ecocardiográfico fetal: a coarctação da aorta apresenta taxa relevante de falso-positivo, e uma parcela significativa dos casos suspeitos no pré-natal não se confirma após avaliação neonatal detalhada, o que não deve reduzir a importância do planejamento do parto em centro apropriado, mas deve ser comunicado com clareza para manejar as expectativas da família.",
+    "ambulatory_flow": [
+      "Confirmar a suspeita diagnóstica com ecocardiografia fetal detalhada realizada por especialista em cardiologia fetal",
+      "Realizar avaliação morfológica completa do arco aórtico, istmo, canal arterial e proporção entre as câmaras cardíacas",
+      "Solicitar investigação de anomalias associadas, incluindo cariótipo ou microarray, com atenção à pesquisa de síndrome de Turner",
+      "Programar ecocardiografia fetal seriada, com intensificação da frequência ao longo do terceiro trimestre",
+      "Realizar discussão multidisciplinar entre cardiologia fetal, obstetrícia, neonatologia e cirurgia cardíaca pediátrica",
+      "Fornecer aconselhamento aos pais sobre prognóstico, história natural e a taxa relevante de falso-positivo do diagnóstico pré-natal",
+      "Planejar o parto em centro terciário com suporte cardiológico neonatal e cirurgia cardíaca pediátrica disponíveis",
+      "Documentar plano de parto com protocolo de início precoce de infusão de prostaglandina E1 ao nascimento em caso de suspeita mantida",
+      "Encaminhar para avaliação genética e aconselhamento genético quando indicado",
+      "Garantir ecocardiograma neonatal confirmatório nas primeiras horas de vida como etapa final do seguimento"
+    ],
+    "emergency_flow": [
+      "Identificar recém-nascido com suspeita pré-natal de coarctação nascido fora de centro com suporte cardiológico neonatal e acionar transporte imediato para centro terciário",
+      "Reconhecer sinais de choque cardiogênico ductal-dependente: palidez, má perfusão periférica, pulsos femorais diminuídos ou ausentes, diferencial de pressão entre membros superiores e inferiores, taquipneia e hepatomegalia",
+      "Iniciar infusão de prostaglandina E1 diante de suspeita clínica, sem aguardar confirmação ecocardiográfica",
+      "Instituir monitorização contínua de saturação pré e pós-ductal, frequência cardíaca e pressão arterial",
+      "Oferecer suporte hemodinâmico e corrigir acidose metabólica conforme necessário",
+      "Solicitar ecocardiograma urgente para confirmação diagnóstica e definição da anatomia da obstrução",
+      "Contatar imediatamente a equipe de cirurgia cardíaca pediátrica para definição do momento da correção",
+      "Manter vigilância contínua de sinais de fechamento do canal arterial, mesmo em vigência de infusão de prostaglandina"
+    ],
+    "monitoring": [
+      "Ecocardiografia fetal seriada a cada quatro semanas até 28 semanas de gestação",
+      "Ecocardiografia fetal quinzenal a partir de 28 a 30 semanas de gestação",
+      "Ecocardiografia fetal semanal a partir de 34 a 36 semanas, ou com frequência ajustada conforme os achados",
+      "Avaliação seriada da proporção entre ventrículo direito e esquerdo e do diâmetro do istmo aórtico",
+      "Vigilância de sinais de hipoplasia do arco aórtico e de crescimento ventricular discrepante",
+      "Acompanhamento do crescimento fetal e do Doppler obstétrico de rotina",
+      "Reavaliação multidisciplinar a cada consulta, com atualização do plano de parto",
+      "Ecocardiograma neonatal confirmatório logo após o nascimento"
+    ],
+    "assistant_questions": [
+      {
+        "id": "gestational_age_weeks",
+        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "type": "number"
+      },
+      {
+        "id": "suspected_coarctation_confirmed",
+        "text": "A suspeita de coarctação da aorta foi confirmada por ecocardiografia fetal especializada?",
+        "type": "boolean"
+      },
+      {
+        "id": "ventricular_disproportion",
+        "text": "Há desproporção entre ventrículo direito e esquerdo (ventrículo direito maior) na ecocardiografia fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "isthmus_diameter_reduced",
+        "text": "O diâmetro do istmo aórtico está reduzido para a idade gestacional?",
+        "type": "boolean"
+      },
+      {
+        "id": "associated_cardiac_anomalies",
+        "text": "Quais anomalias cardíacas associadas foram identificadas na avaliação fetal?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "valvula_aortica_bivalvulada",
+            "label": "Válvula aórtica bivalvulada"
+          },
+          {
+            "value": "comunicacao_interventricular",
+            "label": "Comunicação interventricular"
+          },
+          {
+            "value": "estenose_mitral",
+            "label": "Estenose mitral"
+          },
+          {
+            "value": "hipoplasia_arco",
+            "label": "Hipoplasia do arco aórtico"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma anomalia associada identificada"
+          }
+        ]
+      },
+      {
+        "id": "karyotype_status",
+        "text": "Qual o status da investigação cromossômica ou genética?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizada",
+            "label": "Não realizada"
+          },
+          {
+            "value": "em_andamento",
+            "label": "Em andamento"
+          },
+          {
+            "value": "normal",
+            "label": "Resultado normal"
+          },
+          {
+            "value": "alterada_turner",
+            "label": "Alterada, compatível com síndrome de Turner"
+          },
+          {
+            "value": "alterada_outra",
+            "label": "Alterada, outra anomalia"
+          }
+        ]
+      },
+      {
+        "id": "delivery_center_has_cardiac_support",
+        "text": "O parto está planejado em centro com suporte cardiológico neonatal e cirurgia cardíaca pediátrica disponíveis?",
+        "type": "boolean"
+      },
+      {
+        "id": "birth_occurred",
+        "text": "O nascimento já ocorreu?",
+        "type": "boolean"
+      },
+      {
+        "id": "neonate_shock_signs",
+        "text": "O recém-nascido apresenta sinais de choque cardiogênico ductal-dependente, como pulsos diminuídos, má perfusão ou diferencial de pressão entre membros?",
+        "type": "boolean"
+      },
+      {
+        "id": "prostaglandin_started",
+        "text": "A infusão de prostaglandina E1 já foi iniciada?",
+        "type": "boolean"
+      },
+      {
+        "id": "neonatal_echo_confirmatory",
+        "text": "Qual o resultado do ecocardiograma neonatal confirmatório?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizado",
+            "label": "Ainda não realizado"
+          },
+          {
+            "value": "confirma_coarctacao",
+            "label": "Confirma a coarctação"
+          },
+          {
+            "value": "exclui_coarctacao",
+            "label": "Exclui a coarctação"
+          },
+          {
+            "value": "inconclusivo",
+            "label": "Inconclusivo"
+          }
+        ]
+      },
+      {
+        "id": "femoral_pulses",
+        "text": "Como estão os pulsos femorais ao exame do recém-nascido?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normais",
+            "label": "Normais"
+          },
+          {
+            "value": "diminuidos",
+            "label": "Diminuídos"
+          },
+          {
+            "value": "ausentes",
+            "label": "Ausentes"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Ainda não avaliado"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rn_choque_parto_sem_suporte",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "neonate_shock_signs",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "delivery_center_has_cardiac_support",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Recém-nascido com suspeita pré-natal de coarctação, sinais de choque ductal-dependente e nascimento fora de centro com suporte cardiológico"
+          ],
+          "emergency_flow": [
+            "Acionar transporte emergencial para centro terciário e iniciar infusão de prostaglandina E1 imediatamente, sem aguardar confirmação diagnóstica"
+          ]
+        }
+      },
+      {
+        "id": "rn_choque_apos_nascimento",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "birth_occurred",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "neonate_shock_signs",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de choque cardiogênico ductal-dependente ao fechamento do canal arterial"
+          ],
+          "emergency_flow": [
+            "Iniciar prostaglandina E1 imediatamente, monitorizar saturação pré e pós-ductal e solicitar ecocardiograma urgente"
+          ]
+        }
+      },
+      {
+        "id": "suspeita_confirmada_sem_centro_adequado",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_coarctation_confirmed",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "delivery_center_has_cardiac_support",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Definição e transferência do plano de parto para centro terciário com suporte cardiológico neonatal e cirurgia cardíaca pediátrica"
+          ]
+        }
+      },
+      {
+        "id": "achados_sugestivos_intensificar_seguimento",
+        "priority": 70,
+        "when": {
+          "any": [
+            {
+              "field": "ventricular_disproportion",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "isthmus_diameter_reduced",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada com intervalo semanal até o nascimento"
+          ]
+        }
+      },
+      {
+        "id": "investigacao_genetica_pendente",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_coarctation_confirmed",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "karyotype_status",
+              "op": "eq",
+              "value": "nao_realizada"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Cariótipo ou microarray fetal com investigação dirigida de síndrome de Turner"
+          ]
+        }
+      },
+      {
+        "id": "terceiro_trimestre_avancado",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "gestational_age_weeks",
+              "op": "gte",
+              "value": 34
+            },
+            {
+              "field": "suspected_coarctation_confirmed",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Confirmar e reforçar o plano de parto em centro com suporte cardiológico neonatal, com intensificação da vigilância ecocardiográfica semanal"
+          ]
+        }
+      },
+      {
+        "id": "confirmacao_neonatal_sem_prostaglandina",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "birth_occurred",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "prostaglandin_started",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "neonatal_echo_confirmatory",
+              "op": "eq",
+              "value": "confirma_coarctacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Coarctação confirmada sem infusão de prostaglandina E1 em curso"
+          ]
+        }
+      },
+      {
+        "id": "diagnostico_excluido_apos_nascimento",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "neonatal_echo_confirmatory",
+              "op": "eq",
+              "value": "exclui_coarctacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Diagnóstico pré-natal não confirmado; informar aos pais sobre a taxa relevante de falso-positivo e orientar suspensão da prostaglandina conforme avaliação da equipe assistente"
+          ]
+        }
+      },
+      {
+        "id": "pulsos_femorais_alterados",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "femoral_pulses",
+              "op": "in",
+              "value": [
+                "diminuidos",
+                "ausentes"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Pulsos femorais diminuídos ou ausentes ao exame neonatal, sugestivos de obstrução aórtica"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com suspeita de coarctação da aorta associada a comunicação interventricular na avaliação ecocardiográfica fetal, exigindo caracterização morfológica conjunta do arco e do septo interventricular, já que a presença do defeito muda o algoritmo de seguimento seriado e o planejamento do parto.",
+      "Feto com síndrome de Turner (cariótipo confirmado ou suspeito por translucência nucal aumentada e higroma cístico) e suspeita ecocardiográfica de coarctação da aorta, associação bem descrita na literatura, o que reforça a indicação de cariotipagem fetal e de vigilância cardiovascular ampliada, não restrita à lesão isolada do arco.",
+      "Feto com hipoplasia de ventrículo esquerdo limítrofe, configurando zona cinzenta diagnóstica em que a decisão entre via univentricular e biventricular não pode ser fechada em um único exame, dependendo de avaliação ecocardiográfica seriada ao longo da gestação para reclassificação do tamanho e da função das câmaras esquerdas.",
+      "Recém-nascido com suspeita pré-natal de coarctação não confirmada após o nascimento, situação de falso-positivo que exige equilíbrio entre o risco de manter tratamento desnecessário voltado à permeabilidade ductal e o risco de suspender precocemente a vigilância em um recém-nascido que ainda pode desenvolver coarctação clinicamente relevante à medida que o canal arterial se fecha.",
+      "Recém-nascido com coarctação da aorta confirmada no período neonatal, aguardando correção cirúrgica, com necessidade de monitorização hemodinâmica contínua e de manutenção da perviedade ductal até a intervenção.",
+      "Gestante orientada, a partir do diagnóstico ecocardiográfico fetal de suspeita de coarctação, sobre a necessidade de planejamento do parto em centro terciário com suporte de cardiologia pediátrica e cirurgia cardíaca neonatal disponíveis, dada a possibilidade de descompensação hemodinâmica rápida do recém-nascido no fechamento do canal arterial."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "tetralogia-fallot-fetal",
