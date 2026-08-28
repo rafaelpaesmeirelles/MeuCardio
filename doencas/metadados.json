@@ -10702,12 +10702,12 @@
     "assistant_questions": [
       {
         "id": "diagnostico_pre_natal_confirmado",
-        "text": "Há suspeita ou diagnóstico de RVPAT confirmado no período pré-natal?",
+        "label": "Há suspeita ou diagnóstico de RVPAT confirmado no período pré-natal?",
         "type": "boolean"
       },
       {
         "id": "tipo_anatomico_rvpat",
-        "text": "Qual o tipo anatômico do RVPAT identificado ou suspeitado?",
+        "label": "Qual o tipo anatômico do RVPAT identificado ou suspeitado?",
         "type": "select",
         "options": [
           {
@@ -10734,17 +10734,17 @@
       },
       {
         "id": "suspeita_obstrucao_venosa",
-        "text": "Há sinais ecocardiográficos sugestivos de obstrução ao fluxo venoso pulmonar?",
+        "label": "Há sinais ecocardiográficos sugestivos de obstrução ao fluxo venoso pulmonar?",
         "type": "boolean"
       },
       {
         "id": "idade_gestacional_diagnostico",
-        "text": "Qual a idade gestacional, em semanas, no momento da suspeita ou diagnóstico?",
+        "label": "Qual a idade gestacional, em semanas, no momento da suspeita ou diagnóstico?",
         "type": "number"
       },
       {
         "id": "local_planejado_parto",
-        "text": "O parto está planejado para qual tipo de serviço?",
+        "label": "O parto está planejado para qual tipo de serviço?",
         "type": "select",
         "options": [
           {
@@ -10763,22 +10763,22 @@
       },
       {
         "id": "sinais_pos_natais_cianose_desconforto",
-        "text": "O recém-nascido apresenta cianose e/ou desconforto respiratório grave?",
+        "label": "O recém-nascido apresenta cianose e/ou desconforto respiratório grave?",
         "type": "boolean"
       },
       {
         "id": "uso_prostaglandina_iniciado",
-        "text": "A infusão de prostaglandina E1 já foi iniciada ou está sendo considerada?",
+        "label": "A infusão de prostaglandina E1 já foi iniciada ou está sendo considerada?",
         "type": "boolean"
       },
       {
         "id": "ecocardiograma_fetal_normal_mas_suspeita_clinica",
-        "text": "O ecocardiograma fetal foi relatado como normal, apesar de haver suspeita clínica de RVPAT?",
+        "label": "O ecocardiograma fetal foi relatado como normal, apesar de haver suspeita clínica de RVPAT?",
         "type": "boolean"
       },
       {
         "id": "anomalias_associadas",
-        "text": "Há anomalias associadas identificadas?",
+        "label": "Há anomalias associadas identificadas?",
         "type": "multiselect",
         "options": [
           {
@@ -10801,7 +10801,7 @@
       },
       {
         "id": "via_parto_planejada",
-        "text": "Qual a via de parto planejada?",
+        "label": "Qual a via de parto planejada?",
         "type": "select",
         "options": [
           {
@@ -10820,12 +10820,12 @@
       },
       {
         "id": "disponibilidade_cirurgia_cardiaca_24h",
-        "text": "O serviço de nascimento conta com equipe de cirurgia cardíaca neonatal disponível 24 horas por dia?",
+        "label": "O serviço de nascimento conta com equipe de cirurgia cardíaca neonatal disponível 24 horas por dia?",
         "type": "boolean"
       },
       {
         "id": "idade_pos_natal_horas",
-        "text": "Qual a idade pós-natal atual, em horas, do recém-nascido?",
+        "label": "Qual a idade pós-natal atual, em horas, do recém-nascido?",
         "type": "number"
       }
     ],
