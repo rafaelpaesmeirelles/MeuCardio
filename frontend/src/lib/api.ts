@@ -328,4 +328,5 @@ export type Usuario = {
   convidado: boolean;
   investidor: boolean;
   socio: boolean;
+  product_access: boolean;
 };

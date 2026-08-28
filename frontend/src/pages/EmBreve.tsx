@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { useAuth } from "../lib/auth";
 
 export default function EmBreve() {
+  const { usuario } = useAuth();
+
+  // Esta página é somente o destino comercial enquanto novas assinaturas
+  // estão pausadas. Convidado, investidor, sócio ou assinante com acesso
+  // vigente nunca deve ficar preso aqui.
+  if (usuario?.product_access) return <Navigate to="/" replace />;
+
   return (
     <main
       style={{
