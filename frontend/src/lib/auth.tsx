@@ -8,7 +8,7 @@ type Estado = {
   carregando: boolean;
   entrar: (email: string, senha: string, permanecerConectado?: boolean) => Promise<void>;
   sair: () => Promise<void>;
-  recarregar: () => void;
+  recarregar: () => Promise<void>;
 };
 
 const Ctx = createContext<Estado | null>(null);
@@ -61,8 +61,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUsuario(null);
   }
 
-  function recarregar() {
-    api.get<Usuario>("/auth/me").then(setUsuario).catch(() => setUsuario(null));
+  async function recarregar() {
+    try {
+      setUsuario(await api.get<Usuario>("/auth/me"));
+    } catch {
+      setUsuario(null);
+    }
   }
 
   return (
