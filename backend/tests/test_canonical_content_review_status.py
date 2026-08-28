@@ -39,7 +39,13 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Hub Tudo com Tudo de cardiomiopatias, 27/08/2026 (PR próprio, base
+        # main): slug novo, ver review_note.
+        "cardiomiopatias",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

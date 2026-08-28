@@ -33602,5 +33602,595 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: cinco bloqueios corrigidos, taxonomia normalizada e regras validadas.",
     "version": 2,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "cardiomiopatias",
+    "name": "Cardiomiopatias",
+    "aliases": [
+      "doença do músculo cardíaco",
+      "cardiomyopathy",
+      "miocardiopatias"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "multiplos_fenotipos",
+    "prevalence_rank": 9,
+    "completeness": "completo",
+    "summary": "Espectro de doenças primárias do músculo cardíaco — hipertrófica (CMH), dilatada (CMD), arritmogênica (ACM), restritiva/amiloide, e formas específicas como Takotsubo, cardiomiopatia chagásica, doença de Fabry e taquicardiomiopatia. A diretriz ESC 2023 organiza a investigação por fenótipo primeiro, etiologia depois, com avaliação sistemática de risco de morte súbita, teste genético dirigido e rastreamento familiar em cascata transversais a todos os subtipos.",
+    "epidemiology": "A cardiomiopatia hipertrófica (CMH) é a cardiopatia genética mais prevalente, classicamente estimada em cerca de 1:500 na população geral — número que, segundo revisão dedicada à prevalência da doença, sustentou-se por cerca de 20 anos, com evidência crescente de que a ocorrência real é ainda maior à medida que rastreio ecocardiográfico e genético se ampliam (Semsarian C, Ingles J, Maron MS, Maron BJ. New perspectives on the prevalence of hypertrophic cardiomyopathy. J Am Coll Cardiol. 2015;65(12):1249-1254. PMID 25814232). A cardiomiopatia dilatada (CMD) tem prevalência clinicamente relevante, mas historicamente menos precisa do que a da CMH — a própria diretriz ESC 2023 reorganizou a definição fenotípica da CMD, exigindo exclusão sistemática de causas secundárias (doença arterial coronariana, hipertensão, valvopatia, cardiopatia congênita) antes de assumir CMD primária, o que dificulta comparação direta entre estimativas históricas e contemporâneas (Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID 37622657). A cardiomiopatia arritmogênica (ACM, antiga CAVD/ARVC) é mais rara na população geral, mas desproporcionalmente relevante como causa de morte súbita arrítmica em jovens e atletas, por acometer o substrato elétrico de forma precoce ou desproporcional ao grau de disfunção estrutural. A amiloidose cardíaca por transtirretina (ATTR-CA) — forma selvagem (ATTRwt, predominantemente em homens idosos) e forma hereditária (ATTRv) — é historicamente subdiagnosticada; em populações rastreadas ativamente por hipertrofia ventricular esquerda inexplicada, insuficiência cardíaca com fração de ejeção preservada ou estenose aórtica grave candidata a TAVI, a prevalência de ATTR-CA chega a 7-19%, número que reflete rastreio dirigido a cenários de alta suspeita, não prevalência populacional geral (Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. PMID 33825853; algoritmo de rastreio validado em Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. PMID 27143678). A cardiomiopatia de Takotsubo acomete predominantemente mulheres na pós-menopausa após estresse físico ou emocional agudo: no Registro Internacional InterTAK (1.750 pacientes, 26 centros na Europa e EUA), 89,8% dos casos ocorreram em mulheres, idade média 66,8 anos, com desencadeante físico (36,0%) mais frequente que emocional (27,7%) — contrariando a impressão popular de 'síndrome do coração partido' predominantemente emocional — e 28,5% dos casos sem gatilho identificável (Templin C, Ghadri JR, Diekmann J, et al.; InterTAK Cooperation. Clinical Features and Outcomes of Takotsubo (Stress) Cardiomyopathy. N Engl J Med. 2015;373(10):929-938. PMID 26332547). A cardiomiopatia chagásica é relevante em regiões endêmicas da América Latina, incluindo o Brasil; a via de transmissão predominante mudou nas últimas décadas — em série de casos da Amazônia brasileira, a transmissão oral (68,4%) hoje supera amplamente a via vetorial clássica (5,9%), associada a surtos por alimento ou bebida contaminados, inclusive fora de áreas classicamente endêmicas. A diretriz ESC 2023 trouxe uma reclassificação fenotípica com impacto epidemiológico direto e citável: a antiga 'não compactação ventricular esquerda' (LVNC) deixou de ser tratada como cardiomiopatia própria e passou a ser reconhecida como traço fenotípico ('hipertrabeculação'), substituída pela nova categoria NDLVC (cardiomiopatia ventricular esquerda não dilatada) — para a qual a própria diretriz declara prevalência e incidência 'a determinar', diferente de CMH, CMD, ACM e cardiomiopatia restritiva, que já têm estimativa numérica publicada; e a cardiomiopatia de Takotsubo deixou de ser classificada como cardiomiopatia primária, justamente por seu caráter tipicamente transitório e reversível, não por menor relevância clínica.",
+    "presentation": [
+      "Cardiomiopatia hipertrófica (CMH): dispneia aos esforços, síncope ou pré-síncope de esforço, angina; em jovens e atletas, a morte súbita cardíaca pode ser a primeira manifestação da doença, o que justifica estratificação de risco desde o diagnóstico, não apenas no seguimento tardio.",
+      "Cardiomiopatia dilatada (CMD): sinais e sintomas progressivos de insuficiência cardíaca sistólica — dispneia, ortopneia, edema, fadiga, intolerância ao esforço —, com frequência sem etiologia evidente na apresentação inicial, o que torna a investigação etiológica sistemática (isquêmica, tóxica, taquicardia-induzida, periparto, chagásica, inflamatória, genética) parte central do primeiro atendimento.",
+      "Cardiomiopatia arritmogênica (ACM): arritmia ventricular e morte súbita cardíaca desproporcionais ao grau de disfunção ventricular, tipicamente em jovens e atletas; palpitação, síncope e parada cardíaca abortada podem preceder qualquer sinal clínico de insuficiência cardíaca.",
+      "Amiloidose cardíaca (ATTR-CA): insuficiência cardíaca com fração de ejeção preservada em paciente idoso, com frequência precedida por anos de sinais extracardíacos sugestivos — síndrome do túnel do carpo bilateral, ruptura espontânea do tendão do bíceps, estenose de canal lombar, polineuropatia — tratados isoladamente antes de o quadro cardíaco ser reconhecido como parte da mesma doença sistêmica.",
+      "Cardiomiopatia de Takotsubo: dor torácica aguda e/ou dispneia após estresse físico ou emocional intenso, mimetizando síndrome coronariana aguda, com troponina elevada, alterações eletrocardiográficas e disfunção ventricular regional transitória — tipicamente em mulher na pós-menopausa, e sem desencadeante identificável em quase um terço dos casos.",
+      "Cardiomiopatia chagásica crônica: espectro que vai da forma indeterminada assintomática até insuficiência cardíaca avançada, distúrbios de condução (bloqueio atrioventricular, bloqueio de ramo direito com bloqueio divisional anterossuperior), arritmia ventricular e complicação tromboembólica (aneurisma apical, trombo de ventrículo esquerdo, AVC cardioembólico).",
+      "Doença de Chagas aguda: quadro infeccioso inespecífico (febre, mialgia, edema de face, artralgia), com sinais de insuficiência cardíaca em 26% a 58% dos casos, mas com risco de morte concentrado sobretudo em derrame pericárdico importante e tamponamento cardíaco, não em disfunção sistólica franca.",
+      "Taquicardiomiopatia: quadro de insuficiência cardíaca que se instala junto com taquiarritmia sustentada ou recorrente (mais comumente fibrilação atrial com resposta ventricular não controlada), com frequência confundido com cardiomiopatia dilatada idiopática até que a recuperação da função ventricular após controle da arritmia confirme retrospectivamente o diagnóstico."
+    ],
+    "diagnostic_approach": {
+      "geral": "A ESC 2023 organiza a investigação por fenótipo primeiro, etiologia depois: reconhecido o padrão morfofuncional (hipertrofia, dilatação, disfunção arritmogênica, restrição), a etapa seguinte é excluir sistematicamente causas secundárias (doença coronariana, hipertensão, valvopatia, cardiopatia congênita) antes de perseguir etiologia primária, seguida de caracterização por imagem multimodal, teste genético dirigido por fenótipo e história familiar, e avaliação formal de risco de morte súbita — com rastreamento familiar em cascata e aconselhamento genético estruturado valendo transversalmente a qualquer fenótipo hereditário confirmado.",
+      "ecocardiograma_e_ressonancia": "O ecocardiograma transtorácico é o exame inicial em todos os fenótipos (2D e Doppler em repouso, Valsalva e, se necessário, esforço, para detectar obstrução dinâmica da via de saída do VE). A ressonância cardíaca com realce tardio de gadolínio e mapeamento T1/T2 tem papel central na caracterização tecidual: é superior para hipertrofia apical/anterolateral, aneurismas e trombos; o padrão de realce tardio auxilia o diagnóstico diferencial entre etiologias (padrão médio-parietal na CMH sarcomérica; subepicárdico basal-ínfero-lateral na Fabry; padrão subepicárdico em 'anel' associado a variantes em desmoplakina/FLNC/PLN, versus padrão mais heterogêneo com TTN, LMNA, DMD ou RBM20 na categoria NDLVC); T1 nativo elevado sugere amiloidose e T1 nativo baixo sugere Fabry (com risco de pseudonormalização em área já fibrótica). Realce tardio extenso (≥15%) e FEVE <50% entram formalmente na estratificação de risco de morte súbita da CMH mesmo em escore de risco baixo.",
+      "cardiomiopatia_hipertrofica": "Critério diagnóstico: espessura de parede do VE ≥15 mm em qualquer segmento, não explicada por condição de sobrecarga (≥13 mm em parente de primeiro grau de caso confirmado, pela maior probabilidade pré-teste). Após confirmação do fenótipo, investigar ativamente red flags de fenocópia (amiloidose, Fabry, Danon, Pompe, PRKAG2, ataxia de Friedreich, RASopatias), cada uma com achado de imagem e conduta próprios — algumas com tratamento etiológico específico disponível, o que muda o racional da investigação de 'classificar melhor a hipertrofia' para 'abrir porta terapêutica'.",
+      "cardiomiopatia_dilatada": "Uma vez reconhecido o fenótipo (VE dilatado com disfunção sistólica), a ESC 2023 exige exclusão sistemática de causa secundária antes de investigar etiologia primária; segue-se, em ordem, a busca por causas adquiridas potencialmente reversíveis (tóxica, taquicardia-induzida, periparto, chagásica com trombo tratável, miocardítica) antes da hipótese genética/familiar ou CMD idiopática — a reversibilidade muda prognóstico e urgência de conduta de forma mais imediata que a etiologia genética isolada.",
+      "cardiomiopatia_arritmogenica": "Diagnóstico baseado nos Critérios de Padua (2020), incorporando disfunção de ventrículo direito, achados de biópsia endomiocárdica quando realizada, defeitos de repolarização/condução, arritmias e história familiar; a ESC 2023 amplia o espectro para reconhecer também formas de ventrículo esquerdo (ALVC) e 'left-dominant ARVC', hoje sob o guarda-chuva de NDLVC quando o VE é predominantemente afetado.",
+      "amiloidose_cardiaca": "Algoritmo não invasivo: cintilografia com traçador ósseo (SPECT obrigatório para distinguir captação miocárdica de captação do pool sanguíneo) solicitada em conjunto com as três provas de proteína monoclonal (eletroforese com imunofixação sérica e urinária, relação de cadeias leves livres). Se as três provas de clonalidade forem normais, captação miocárdica grau 2 ou 3 (graduação de Perugini) estabelece ATTR-CA sem biópsia, com especificidade e VPP de 100%; se qualquer prova estiver alterada, mesmo com captação grau 2-3, o diagnóstico não pode ser fechado por cintilografia — captação nesse grau ocorre em mais de 10% dos pacientes com amiloidose AL — e exige histologia com tipagem, em geral por biópsia endomiocárdica, com encaminhamento ao hematologista. Confirmada a ATTR, sequenciamento do gene TTR distingue forma selvagem (ATTRwt, sem rastreamento familiar) de hereditária (ATTRv, com teste em cascata aos familiares).",
+      "biopsia_endomiocardica": "Reservada a cenários em que o algoritmo não invasivo não fecha diagnóstico (amiloidose com clonalidade presente), miocardite de alto risco ou refratária ao tratamento convencional (para subtipo histológico e pesquisa de genoma viral — miocardite de células gigantes e sarcoidose cardíaca mudam completamente conduta e risco arrítmico), e suspeita de reativação de doença de Chagas pós-transplante cardíaco (rotineira mesmo sem suspeita clínica, dado que reativação ocorre em 19,6% a 45% dos casos).",
+      "avaliacao_risco_morte_subita": "Na CMH, o HCM Risk-SCD é a ferramenta central obrigatória (Classe IB) para estimar risco em 5 anos a partir de idade, espessura máxima de parede, diâmetro de átrio esquerdo, gradiente de via de saída, história familiar de morte súbita, TVNS e síncope inexplicada — CDI deve ser considerado com risco ≥6%, pode ser considerado entre 4-6%, e mesmo <4% permite considerar CDI se houver realce tardio extenso (≥15%) ou FEVE <50% (O'Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020. PMID 24126876). Na CMD/NDLVC não isquêmica, a decisão deixou de se apoiar apenas em FEVE ≤35% (critério Classe IIa na diretriz europeia, Classe I na americana/japonesa, divergência que nasce do estudo DANISH); variante patogênica em LMNA usa calculadora de risco dedicada (LMNA-risk-VTA), e variantes em FLNC ou PLN p.Arg14del encaminham a estratificação multiparamétrica individualizada em centro especializado, sem indicação automática de CDI só pelo genótipo."
+    },
+    "differentials": [
+      "Hipertensão arterial sistêmica como causa de hipertrofia ventricular esquerda concêntrica, versus cardiomiopatia hipertrófica genética/sarcomérica — história de hipertensão de longa data, hipertrofia menos assimétrica e ausência de red flags de fenocópia (SAM, alteração de strain apical, achados extracardíacos) apontam para causa secundária.",
+      "Doença arterial coronariana como causa de disfunção sistólica e dilatação ventricular, versus cardiomiopatia dilatada primária — a exclusão sistemática de DAC é etapa formal antes de assumir CMD primária na ESC 2023, não um item entre outros na investigação.",
+      "Cardiomiopatia de Takotsubo versus síndrome coronariana aguda verdadeira — quadro clínico, ECG e troponina podem ser indistinguíveis na apresentação; o InterTAK mostrou taxas de complicação intra-hospitalar grave (choque, morte) estatisticamente semelhantes entre os dois grupos, o que afasta a percepção de que Takotsubo é sempre mais benigno; a distinção definitiva depende de imagem (ausência de doença coronariana obstrutiva, disfunção regional que não respeita território coronariano).",
+      "Amiloidose cardíaca versus cardiomiopatia hipertrófica sarcomérica e outras fenocópias de hipertrofia (doença de Fabry, Danon, Pompe, PRKAG2) — T1 nativo (elevado na amiloidose, baixo na Fabry), padrão de realce tardio, strain com padrão apical sparing e achados extracardíacos orientam o diferencial.",
+      "Cardiomiopatia restritiva não amiloide (fibrose endomiocárdica/síndrome hipereosinofílica) versus amiloidose cardíaca — mesma fisiologia restritiva ao ecocardiograma, mecanismo e tratamento completamente diferentes; eosinofilia no hemograma com diferencial redireciona a investigação antes de assumir amiloidose e pedir cintilografia.",
+      "Taquicardiomiopatia versus cardiomiopatia dilatada idiopática com arritmia incidental — nenhum exame único separa as duas hipóteses na apresentação inicial; cronicidade/magnitude da taquiarritmia e grau de dilatação menos avançado do que o esperado pela duração do quadro pesam a favor de taquicardiomiopatia, mas a confirmação é retrospectiva, pela recuperação da função após controle da arritmia.",
+      "Cardiomiopatia chagásica versus outras causas de cardiomiopatia dilatada em paciente de área endêmica — sorologia positiva não substitui a busca ativa de aneurisma apical e trombo de VE, que concentram o risco embólico real (63,3% do efeito do aneurisma sobre AVC cardioembólico é mediado pelo trombo, não direto).",
+      "NDLVC versus cardiomiopatia dilatada clássica e cardiomiopatia arritmogênica de ventrículo esquerdo — categoria fenotípica nova da ESC 2023 para doença miocárdica documentada (cicatriz/substituição gordurosa não isquêmica, ou hipocinesia global sem cicatriz) que não preenche critérios formais de nenhuma das duas entidades clássicas.",
+      "Cardiomiopatia arritmogênica versus miocardite com arritmia ventricular — ambas podem cursar com arritmia ventricular desproporcional; biópsia endomiocárdica e critérios de Padua/Task Force ajudam a diferenciar substrato fibro-adiposo crônico de processo inflamatório agudo."
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico: exame inicial de escolha em todos os fenótipos — espessura parietal, função sistólica/diastólica, obstrução dinâmica da via de saída do VE (com Valsalva e, se necessário, esforço), padrão de enchimento restritivo e tamanho atrial; limitação: caracterização tecidual limitada, não distingue com segurança etiologias infiltrativas de hipertrofia sarcomérica sem achados indiretos (septo interatrial espessado, aspecto em vidro fosco).",
+      "Ressonância cardíaca com mapeamento T1/T2 e realce tardio de gadolínio: caracterização tecidual central para diagnóstico diferencial entre etiologias e para estratificação de risco (realce tardio extenso ≥15% na CMH); limitação: não substitui teste genético nem biópsia quando a tipagem exata do amiloide (AL vs. ATTR) permanece em aberto, e contraindicações (dispositivo incompatível, claustrofobia, disfunção renal grave) restringem seu uso em parte dos pacientes.",
+      "Teste genético em painel dirigido por fenótipo e história familiar, com aconselhamento genético estruturado antes e depois: indicado no caso índice de fenótipo de alta probabilidade diagnóstica; limitação central é a variante de significado incerto (VUS), que não deve ser usada para rastreamento em cascata — parentes seguem rastreamento clínico, não genético; testar genes de evidência fraca em fenótipo indefinido não esclarece diagnóstico e ainda gera VUS que produzem ansiedade e decisão clínica equivocada.",
+      "Cintilografia com traçador ósseo (99mTc-PYP/DPD/HMDP) com SPECT: permite diagnóstico não invasivo de amiloidose cardíaca por transtirretina, mas só quando associada à exclusão de proteína monoclonal; captação grau 2-3 sem gamopatia monoclonal tem especificidade e VPP de 100% para ATTR; limitação: captação grau 2-3 também ocorre em mais de 10% dos pacientes com amiloidose AL, então a cintilografia isolada nunca fecha diagnóstico sem afastar clonalidade, e a relação de cadeias leves livres tem faixa de normalidade diferente conforme o ensaio e a função renal, podendo gerar falso positivo de clonalidade em doença renal crônica se lida pela faixa errada.",
+      "Biomarcadores (BNP/NT-proBNP, troponina de alta sensibilidade): apoiam diagnóstico e estratificação em praticamente todos os fenótipos (elevação desproporcional sugere amiloidose; troponina persistente entra nos critérios de risco intermediário/alto na miocardite); limitação: nenhum é específico o bastante para fechar diagnóstico etiológico isoladamente.",
+      "Biópsia endomiocárdica: indicada quando o algoritmo não invasivo de amiloidose não fecha diagnóstico, na miocardite de alto risco/refratária (subtipo histológico e genoma viral) e na suspeita de reativação de Chagas pós-transplante; limitação: procedimento invasivo, com sensibilidade reduzida por erro de amostragem em doença de distribuição não homogênea.",
+      "Holter de 24-48h e teste ergométrico para avaliação de risco arrítmico: quantificam TVNS e carga de extrassistolia ventricular, entrando em escores de risco (HCM Risk-SCD) e em critérios de estratificação para CDI em CMD/NDLVC; limitação: carga de extrassístoles acima de 24% do total de batimentos é o corte de melhor discriminação para disfunção de VE, mas cardiomiopatia reversível já foi descrita a partir de carga de 10%, o que impede usar 24% como ponto de corte 'seguro' isolado.",
+      "Calculadoras de risco de morte súbita validadas por fenótipo/genótipo (HCM Risk-SCD para CMH, capacidade discriminativa moderada — estatística c ~0,70-0,74; LMNA-risk-VTA para CMD com mutação LMNA, índice C 0,776; modelo de risco de ARVC, índice C 0,77): nenhum modelo substitui o julgamento clínico isolado, e ESC 2023/2022 divergem em pontos específicos das diretrizes americana e japonesa (ex. classe de recomendação para CDI de prevenção primária em CMD não isquêmica é IIa na europeia e I na americana/japonesa)."
+    ],
+    "red_flags": [
+      "Síncope de esforço inexplicada em paciente jovem, sobretudo não neurocardiogênica — entra formalmente na estratificação de risco de morte súbita da CMH e da CMD/NDLVC.",
+      "História familiar de morte súbita cardíaca precoce (parente de primeiro grau, em geral <40 anos) — critério maior de risco na CMH e gatilho para investigação genética e rastreamento em cascata familiar em qualquer fenótipo de cardiomiopatia.",
+      "Arritmia ventricular sustentada, tempestade elétrica ou parada cardíaca abortada como primeira manifestação — típico da cardiomiopatia arritmogênica, mas também critério de prevenção secundária de CDI em qualquer cardiomiopatia.",
+      "Sinais de insuficiência cardíaca refratária apesar de terapia otimizada, ou descompensação aguda — critério de internação e de escalonamento terapêutico (incluindo avaliação para dispositivo ou transplante) em qualquer fenótipo.",
+      "Achados extracardíacos sugestivos de amiloidose sistêmica — síndrome do túnel do carpo bilateral (sobretudo prévia ao quadro cardíaco), ruptura espontânea de tendão do bíceps, estenose de canal lombar, polineuropatia, disautonomia, macroglossia, equimoses cutâneas — em paciente idoso com hipertrofia ventricular ou IC com fração de ejeção preservada.",
+      "Baixa voltagem do QRS desproporcional à espessura de parede ao ECG, padrão de pseudoinfarto, distúrbio de condução atrioventricular ou aspecto granular brilhante ('sparkling') ao ecocardiograma — sinais de alerta cardíacos para amiloidose cardíaca.",
+      "Bloqueio atrioventricular avançado, arritmia ventricular maligna, síncope, parada cardíaca ou choque cardiogênico na apresentação de miocardite aguda — definem alto risco e indicação de internação e biópsia endomiocárdica imediatas.",
+      "Doença neurológica ou psiquiátrica aguda concomitante em paciente com quadro sugestivo de Takotsubo — preditor independente de complicação intra-hospitalar no registro InterTAK, não achado incidental a ser ignorado.",
+      "Aneurisma apical e/ou trombo de ventrículo esquerdo em paciente com cardiomiopatia chagásica — o trombo concentra a maior parte do risco de AVC cardioembólico e muda diretamente a decisão de anticoagulação."
+    ],
+    "treatment_summary": "O tratamento das cardiomiopatias segue lógica dirigida ao fenótipo e, cada vez mais, ao mecanismo molecular subjacente. Na cardiomiopatia hipertrófica (CMH) obstrutiva, a primeira linha histórica continua sendo betabloqueador não vasodilatador ou, na intolerância, bloqueador de canal de cálcio não diidropiridínico, com disopiramida como adjuvante em casos refratários; a novidade terapêutica mais relevante da última década é a classe dos inibidores de miosina cardíaca — mavacamten e, mais recentemente, aficamten —, que atuam diretamente sobre a hipercontratilidade sarcomérica, reduzindo o gradiente dinâmico da via de saída do ventrículo esquerdo e a necessidade de terapia invasiva em parte dos pacientes; exigem monitorização ecocardiográfica seriada da fração de ejeção pelo risco de disfunção sistólica excessiva. Para os pacientes que permanecem sintomáticos (classe funcional III-IV) apesar de terapia farmacológica otimizada, a redução septal invasiva — miectomia cirúrgica ou ablação alcoólica septal — continua indicada. A avaliação do risco de morte súbita e a indicação de cardiodesfibrilador implantável (CDI) seguem escore de risco validado pela diretriz vigente, que integra espessura parietal, diâmetro atrial esquerdo, gradiente de via de saída, história familiar de morte súbita, taquicardia ventricular não sustentada e síncope inexplicada, com reavaliação periódica ao longo do seguimento.\n\nNa cardiomiopatia dilatada (CMD), o tratamento farmacológico segue os pilares já validados para insuficiência cardíaca com fração de ejeção reduzida, associado a investigação etiológica sistemática — genética (incluindo genes de alto risco arrítmico), infecciosa (Chagas), tóxica e taquiarrítmica. Nesse último ponto, é essencial diferenciar cardiomiopatia dilatada primária de taquicardiomiopatia induzida por arritmia sustentada ou recorrente (fibrilação atrial com resposta ventricular não controlada, extrassistolia ventricular de alta carga), condição potencialmente reversível com controle de frequência, controle de ritmo ou ablação da arritmia causadora. O danicamtiv, ativador de miosina cardíaca com mecanismo oposto ao dos inibidores usados na CMH, é medicação em investigação (ensaio de fase 2) para cardiomiopatia dilatada de causa sarcomérica, sem indicação clínica estabelecida até o momento. A indicação de CDI e de terapia de ressincronização cardíaca segue critérios de risco que combinam fração de ejeção, classe funcional, tempo de otimização terapêutica e, quando aplicável, genótipo de alto risco arrítmico.\n\nNa cardiomiopatia arritmogênica (ACM/ARVC), a medida terapêutica central é a restrição de exercício físico competitivo de alta intensidade, que reduz a progressão da doença e o risco de arritmia maligna; a indicação de CDI segue estratificação de risco arrítmico específica da doença, e o manejo farmacológico combina inibição do sistema renina-angiotensina, betabloqueador e antiarrítmicos para controle de arritmia atrial e ventricular.\n\nNa amiloidose cardíaca, a conduta depende do subtipo: a amiloidose de cadeia leve (AL) exige tratamento oncohematológico dirigido à discrasia de plasmócitos, enquanto a amiloidose por transtirretina (ATTR), hereditária ou do tipo selvagem, é tratada com terapia estabilizadora do tetrâmero de transtirretina — tafamidis, com redução de mortalidade e de hospitalização cardiovascular demonstrada no ATTR-ACT, e acoramidis, opção mais recente com dados de extensão aberta de longo prazo sustentando o benefício de início precoce do tratamento. Não há ensaio direto comparando as duas moléculas.\n\nNa cardiomiopatia de Takotsubo, o tratamento na fase aguda é predominantemente de suporte, com atenção especial para evitar agonistas beta-adrenérgicos pelo mecanismo catecolaminérgico subjacente, e investigação ativa do gatilho físico, emocional ou de doença neurológica/psiquiátrica concomitante. A função ventricular se recupera espontaneamente na maioria dos casos, mas a mortalidade e a taxa de complicação intra-hospitalar não são desprezíveis e, em registros comparativos, aproximam-se das observadas na síndrome coronariana aguda.\n\nNa doença de Chagas, o tratamento etiológico com benznidazol ou nifurtimox (sem posologia definida aqui) é indicado na fase aguda ou reagudizada e na fase indeterminada recente, sobretudo em pacientes mais jovens e sem lesão orgânica estabelecida; a cardiomiopatia chagásica crônica já estabelecida segue o tratamento padrão de insuficiência cardíaca, com atenção adicional ao risco tromboembólico associado a aneurisma apical e trombo de ventrículo esquerdo, e ao risco arrítmico específico da doença.\n\nNa doença de Fabry com acometimento cardíaco, o tratamento etiológico específico — terapia de reposição enzimática ou chaperona farmacológica oral, sem posologia definida aqui — deve ser iniciado precocemente, já que a eficácia é limitada quando o dano orgânico já está estabelecido; o rastreio ativo do acometimento cardíaco orienta o momento de início do tratamento.",
+    "ambulatory_flow": [
+      "Consulta cardiológica estruturada após diagnóstico ou suspeita de cardiomiopatia, com definição do fenótipo antes de organizar o seguimento de longo prazo",
+      "Ecocardiograma seriado (intervalo definido pelo fenótipo e pela estabilidade clínica) para reavaliação de espessura parietal, fração de ejeção, gradiente de via de saída do VE e função diastólica",
+      "Ressonância cardíaca seriada quando indicada para caracterização tecidual (realce tardio, mapeamento T1/T2), sobretudo em cardiomiopatia dilatada, arritmogênica e amiloide",
+      "Reavaliação periódica de risco de morte súbita e de indicação de cardiodesfibrilador implantável, integrando dados clínicos, de imagem e, quando disponíveis, genéticos",
+      "Aconselhamento genético estruturado para o paciente índice e familiares, incluindo educação sobre padrão de herança e suporte psicossocial, independentemente de o teste genético estar sendo considerado no momento",
+      "Rastreamento familiar em cascata (clínico e genético) de parentes de primeiro grau quando há mutação patogênica identificada ou suspeita de cardiomiopatia hereditária",
+      "Reforço e reavaliação periódica de restrição de exercício físico competitivo de alta intensidade em cardiomiopatia arritmogênica e em outros fenótipos de risco arrítmico elevado",
+      "Seguimento de tolerância e resposta a terapia dirigida por fenótipo (inibidor de miosina cardíaca, terapia estabilizadora de transtirretina, terapia guiada por diretriz de insuficiência cardíaca), com monitorização de segurança específica de cada classe",
+      "Reavaliação de classe funcional NYHA e de qualidade de vida a cada consulta, com ajuste terapêutico conforme a resposta"
+    ],
+    "emergency_flow": [
+      "Arritmia ventricular sustentada ou morte súbita abortada em paciente com cardiomiopatia conhecida ou suspeita: acionamento imediato de emergência, monitorização cardíaca contínua e avaliação urgente de eletrofisiologia/CDI de prevenção secundária",
+      "Descompensação aguda de insuficiência cardíaca: avaliação em pronto-socorro com ECG, biomarcadores, radiografia de tórax e ecocardiograma; estabilização hemodinâmica e investigação ativa do gatilho da descompensação (arritmia, infecção, má adesão, progressão da doença de base)",
+      "Suspeita de Takotsubo com dor torácica aguda: conduzir inicialmente como possível síndrome coronariana aguda até exclusão formal (ECG seriado, troponina seriada, avaliação coronariana), evitando agonistas beta-adrenérgicos enquanto o mecanismo catecolaminérgico não for descartado",
+      "Síncope de esforço em paciente com cardiomiopatia hipertrófica conhecida ou suspeita: avaliação em pronto-socorro com ecocardiograma para excluir obstrução dinâmica grave da via de saída do VE e arritmia associada, antes de liberar para seguimento ambulatorial",
+      "Em qualquer um dos cenários acima, documentar e comunicar claramente à equipe assistente o fenótipo de cardiomiopatia de base, quando já conhecido, para orientar a conduta de emergência"
+    ],
+    "monitoring": [
+      "Ecocardiograma seriado em intervalo definido pelo fenótipo, mais frequente em fase de titulação de terapia dirigida ou logo após evento agudo",
+      "Ressonância cardíaca seriada para reavaliação de realce tardio e caracterização tecidual quando clinicamente indicado",
+      "Holter de 24 a 48 horas periódico para reavaliação de carga arrítmica e de risco de morte súbita",
+      "Reestratificação periódica de risco de morte súbita e de indicação de CDI, sobretudo após mudança de classe funcional, novo evento clínico ou identificação de variante genética de alto risco",
+      "Rastreamento familiar em cascata (clínico e genético) mantido ativo enquanto houver parentes de primeiro grau não avaliados",
+      "Monitorização de segurança específica de terapia dirigida por fenótipo (por exemplo, reavaliação seriada da fração de ejeção em uso de inibidor de miosina cardíaca)"
+    ],
+    "assistant_questions": [
+      {
+        "id": "cardiomiopatia_principal_conhecida_ou_suspeita",
+        "label": "Qual cardiomiopatia principal é conhecida ou suspeita?",
+        "type": "select",
+        "required": true,
+        "section": "Identificação",
+        "options": [
+          {
+            "value": "cmh_obstrutiva",
+            "label": "Cardiomiopatia hipertrófica obstrutiva"
+          },
+          {
+            "value": "cmh_nao_obstrutiva",
+            "label": "Cardiomiopatia hipertrófica não obstrutiva"
+          },
+          {
+            "value": "cmd",
+            "label": "Cardiomiopatia dilatada"
+          },
+          {
+            "value": "acm_arvc",
+            "label": "Cardiomiopatia arritmogênica (ACM/ARVC)"
+          },
+          {
+            "value": "amiloidose_attr",
+            "label": "Amiloidose cardíaca por transtirretina (ATTR)"
+          },
+          {
+            "value": "amiloidose_al",
+            "label": "Amiloidose cardíaca de cadeia leve (AL)"
+          },
+          {
+            "value": "takotsubo",
+            "label": "Cardiomiopatia de Takotsubo"
+          },
+          {
+            "value": "chagas",
+            "label": "Cardiomiopatia chagásica"
+          },
+          {
+            "value": "fabry",
+            "label": "Doença de Fabry com acometimento cardíaco"
+          },
+          {
+            "value": "nao_determinada",
+            "label": "Não determinada / em investigação"
+          }
+        ]
+      },
+      {
+        "id": "sincope_esforco",
+        "label": "Houve síncope relacionada a esforço físico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas de alarme"
+      },
+      {
+        "id": "arritmia_ventricular_sustentada_ou_morte_subita_abortada",
+        "label": "Houve arritmia ventricular sustentada ou morte súbita abortada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sintomas de alarme"
+      },
+      {
+        "id": "historia_familiar_morte_subita",
+        "label": "Há história familiar de morte súbita cardíaca em parente de primeiro grau?",
+        "type": "boolean",
+        "section": "História familiar"
+      },
+      {
+        "id": "sinais_descompensacao_aguda_ic",
+        "label": "Há sinais de descompensação aguda de insuficiência cardíaca (dispneia em repouso, ortopneia, edema progressivo, congestão)?",
+        "type": "boolean",
+        "section": "Sintomas de alarme"
+      },
+      {
+        "id": "suspeita_takotsubo_dor_toracica_aguda",
+        "label": "Há suspeita de Takotsubo com dor torácica aguda atual?",
+        "type": "boolean",
+        "section": "Sintomas de alarme"
+      },
+      {
+        "id": "classe_funcional_nyha",
+        "label": "Classe funcional NYHA atual",
+        "type": "select",
+        "section": "Avaliação funcional",
+        "options": [
+          {
+            "value": "I",
+            "label": "NYHA I"
+          },
+          {
+            "value": "II",
+            "label": "NYHA II"
+          },
+          {
+            "value": "III",
+            "label": "NYHA III"
+          },
+          {
+            "value": "IV",
+            "label": "NYHA IV"
+          }
+        ]
+      },
+      {
+        "id": "exercicio_competitivo_alta_intensidade",
+        "label": "O paciente pratica exercício físico competitivo de alta intensidade?",
+        "type": "boolean",
+        "section": "Estilo de vida"
+      },
+      {
+        "id": "mutacao_genetica_patogenica_identificada",
+        "label": "Há mutação genética patogênica identificada em teste já realizado?",
+        "type": "boolean",
+        "section": "Genética"
+      },
+      {
+        "id": "gradiente_via_saida_ve_mmhg",
+        "label": "Gradiente de via de saída do VE mais recente (mmHg), se conhecido",
+        "type": "number",
+        "section": "Avaliação funcional"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rule_va_sustentada_ou_morte_subita_abortada",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "arritmia_ventricular_sustentada_ou_morte_subita_abortada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Arritmia ventricular sustentada ou morte súbita abortada em paciente com cardiomiopatia conhecida ou suspeita"
+          ],
+          "emergency_flow": [
+            "Acionar emergência médica imediata e monitorização cardíaca contínua",
+            "Avaliação eletrofisiológica e de cardiodesfibrilador implantável (CDI) em caráter de urgência",
+            "Investigar e corrigir causas reversíveis de arritmia (distúrbio eletrolítico, isquemia, efeito pró-arrítmico de fármaco)"
+          ],
+          "messages": [
+            "Arritmia ventricular sustentada ou morte súbita abortada exige avaliação emergencial e discussão de CDI de prevenção secundária."
+          ]
+        }
+      },
+      {
+        "id": "rule_takotsubo_dor_toracica",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "suspeita_takotsubo_dor_toracica_aguda",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor torácica aguda com suspeita de Takotsubo — diferenciar de síndrome coronariana aguda verdadeira antes de assumir o diagnóstico"
+          ],
+          "emergency_flow": [
+            "Tratar inicialmente como possível síndrome coronariana aguda até exclusão formal (ECG seriado, troponina seriada, avaliação coronariana)",
+            "Ecocardiograma à beira-leito para avaliação do padrão de contração ventricular",
+            "Evitar agonistas beta-adrenérgicos enquanto o mecanismo catecolaminérgico não for descartado"
+          ],
+          "differentials": [
+            "Síndrome coronariana aguda verdadeira",
+            "Miocardite aguda"
+          ]
+        }
+      },
+      {
+        "id": "rule_descompensacao_aguda_ic",
+        "priority": 92,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_descompensacao_aguda_ic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de descompensação aguda de insuficiência cardíaca em paciente com cardiomiopatia"
+          ],
+          "emergency_flow": [
+            "Avaliação em pronto-socorro com exame físico, ECG, radiografia de tórax, biomarcadores e ecocardiograma",
+            "Estabilização hemodinâmica e terapia de descongestão guiada por sinais de congestão",
+            "Investigar gatilho de descompensação (arritmia, infecção, má adesão, progressão da doença de base)"
+          ]
+        }
+      },
+      {
+        "id": "rule_sincope_esforco_cmh",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "sincope_esforco",
+              "op": "truthy"
+            },
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "in",
+              "value": [
+                "cmh_obstrutiva",
+                "cmh_nao_obstrutiva",
+                "nao_determinada"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope de esforço em paciente com cardiomiopatia hipertrófica conhecida ou suspeita"
+          ],
+          "emergency_flow": [
+            "Avaliação em pronto-socorro com ECG e ecocardiograma para excluir obstrução dinâmica grave da via de saída do VE e arritmia associada"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com manobras provocativas",
+            "Holter de 24 a 48 horas"
+          ]
+        }
+      },
+      {
+        "id": "rule_historia_familiar_morte_subita",
+        "priority": 65,
+        "when": {
+          "any": [
+            {
+              "field": "historia_familiar_morte_subita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "História familiar de morte súbita cardíaca reforça a indicação de investigação genética e de estratificação de risco"
+          ],
+          "suggested_tests": [
+            "Aconselhamento genético e teste genético direcionado ao fenótipo"
+          ],
+          "ambulatory_flow": [
+            "Rastreamento familiar em cascata para parentes de primeiro grau"
+          ],
+          "missing_information": [
+            "Confirmar grau de parentesco, idade e circunstância do óbito familiar por morte súbita"
+          ]
+        }
+      },
+      {
+        "id": "rule_exercicio_competitivo_acm",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "eq",
+              "value": "acm_arvc"
+            },
+            {
+              "field": "exercicio_competitivo_alta_intensidade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Exercício competitivo de alta intensidade em paciente com cardiomiopatia arritmogênica confirmada"
+          ],
+          "messages": [
+            "Restrição de exercício físico competitivo de alta intensidade é medida central no manejo da cardiomiopatia arritmogênica, reduzindo progressão da doença e risco arrítmico."
+          ],
+          "ambulatory_flow": [
+            "Reavaliação de risco arrítmico e discussão de restrição esportiva com equipe de cardiologia do esporte"
+          ]
+        }
+      },
+      {
+        "id": "rule_mutacao_genetica_cascata",
+        "priority": 50,
+        "when": {
+          "any": [
+            {
+              "field": "mutacao_genetica_patogenica_identificada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Mutação genética patogênica identificada indica rastreamento familiar em cascata"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar parentes de primeiro grau para aconselhamento genético e teste em cascata"
+          ],
+          "missing_information": [
+            "Confirmar quais parentes já foram testados e os resultados disponíveis"
+          ]
+        }
+      },
+      {
+        "id": "rule_cmh_obstrutiva_tratamento",
+        "priority": 40,
+        "when": {
+          "any": [
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "eq",
+              "value": "cmh_obstrutiva"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Cardiomiopatia hipertrófica obstrutiva confirmada — considerar inibidor de miosina cardíaca associado a betabloqueador ou bloqueador de canal de cálcio, conforme classe de recomendação vigente"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação de gradiente de via de saída do VE em repouso e com manobra provocativa"
+          ],
+          "ambulatory_flow": [
+            "Reavaliação periódica de gradiente de via de saída do VE e de risco de morte súbita"
+          ]
+        }
+      },
+      {
+        "id": "rule_amiloidose_attr_tratamento",
+        "priority": 40,
+        "when": {
+          "any": [
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "eq",
+              "value": "amiloidose_attr"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Amiloidose cardíaca por transtirretina confirmada — terapia estabilizadora do tetrâmero de transtirretina indicada"
+          ],
+          "suggested_tests": [
+            "Cintilografia óssea com traçador para amiloide combinada a triagem de proteína monoclonal"
+          ],
+          "differentials": [
+            "Amiloidose de cadeia leve (AL) — exige tratamento oncohematológico dirigido, não estabilizador de transtirretina"
+          ]
+        }
+      },
+      {
+        "id": "rule_chagas_tratamento_etiologico",
+        "priority": 40,
+        "when": {
+          "any": [
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "eq",
+              "value": "chagas"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Cardiomiopatia chagásica — avaliar indicação de tratamento etiológico tripanocida conforme fase da doença e idade"
+          ],
+          "suggested_tests": [
+            "Sorologia para Chagas (dois testes de princípios distintos)",
+            "Avaliação de aneurisma apical e trombo de ventrículo esquerdo ao ecocardiograma"
+          ],
+          "ambulatory_flow": [
+            "Seguimento de risco tromboembólico e arrítmico específico da cardiomiopatia chagásica"
+          ]
+        }
+      },
+      {
+        "id": "rule_cardiomiopatia_nao_determinada",
+        "priority": 10,
+        "when": {
+          "any": [
+            {
+              "field": "cardiomiopatia_principal_conhecida_ou_suspeita",
+              "op": "eq",
+              "value": "nao_determinada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Fenótipo de cardiomiopatia ainda não definido — completar investigação etiológica (ecocardiograma, ressonância, avaliação genética conforme indicação)"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico",
+            "Ressonância cardíaca com avaliação de realce tardio"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com cardiomiopatia periparto — ver ficha-irmã 'cardiomiopatia-periparto' para diagnóstico, recuperação e manejo específico; este hub aponta, não duplica.",
+      "Criança/adolescente com cardiomiopatia — ver ficha-irmã 'cardiomiopatias-pediatricas' para etiologia genética versus adquirida, apresentação por faixa etária e transplante; este hub aponta, não duplica.",
+      "Idoso com amiloidose cardíaca por transtirretina selvagem (ATTRwt) — ver ficha-irmã 'amiloidose-cardiaca-idoso' para o quadro de HFpEF mascarado por 'cardiopatia hipertensiva'; este hub aponta, não duplica.",
+      "Atleta competitivo com cardiomiopatia hipertrófica (CMH) ou cardiomiopatia arritmogênica (ACM/ARVC) suspeitada ou confirmada — elegibilidade esportiva é decisão de alto impacto que exige estratificação de risco individualizada e decisão compartilhada, não contraindicação automática.",
+      "Paciente com doença de Chagas em região endêmica — rastreio sorológico, investigação de aneurisma apical/trombo de VE e risco tromboembólico e arritmogênico associados à cardiomiopatia chagásica crônica.",
+      "Familiar de primeiro grau assintomático de paciente índice com cardiomiopatia geneticamente confirmada — candidato a rastreio em cascata clínico e genético, com implicações para triagem seriada e aconselhamento reprodutivo."
+    ],
+    "related_document_slugs": [
+      "acoramidis-extensao-aberta-de-54-meses-do-attribute-cm",
+      "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+      "aneurisma-apical-trombo-de-ve-e-avc-cardioembolico-na-cardiomiopatia-chagasica",
+      "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+      "cardiomiopatia-de-takotsubo-o-registro-internacional-e-o-que-a-diferencia-da-sindrome-coronariana-aguda",
+      "cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023",
+      "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+      "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+      "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+      "cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo",
+      "danicamtiv-ativador-de-miosina-cardiaca-na-cardiomiopatia-dilatada-fase-2",
+      "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+      "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+      "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
+      "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+      "fluxograma-cardiomiopatia-dilatada-investigacao-etiologica",
+      "fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi",
+      "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+      "fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita",
+      "fluxograma-miocardite-aguda-esc-2025",
+      "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+      "massas-cardiacas-e-pericardicas-caracterizacao-por-tc-e-ressonancia-sbc-2024",
+      "miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022",
+      "reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia",
+      "tafamidis-treatment-for-patients-with-transthyretin-amyloid-cardiomyopathy-attr-act",
+      "taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade",
+      "tratamento-etiologico-da-doenca-de-chagas-cronica-benznidazol-e-nifurtimox",
+      "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+      "amiloidose-cardiaca-por-transtirretina-selvagem-attrwt-no-idoso",
+      "cardiomiopatia-arritmogenica-criterios-de-padua-2020-e-task-force-revisada-de-2010",
+      "cardiomiopatia-hipertrofica-exercicio-esporte-competitivo",
+      "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi"
+    ],
+    "tags": [
+      "cardiomiopatia",
+      "CMH",
+      "CMD",
+      "cardiomiopatia arritmogênica",
+      "amiloidose cardíaca",
+      "Takotsubo",
+      "Chagas",
+      "morte súbita",
+      "CDI",
+      "teste genético",
+      "ESC 2023"
+    ],
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657.",
+      "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho-Filho OR, Colafranceschi AS, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415.",
+      "Semsarian C, Ingles J, Maron MS, Maron BJ. New perspectives on the prevalence of hypertrophic cardiomyopathy. J Am Coll Cardiol. 2015;65(12):1249-1254. DOI: 10.1016/j.jacc.2015.01.019. PMID: 25814232.",
+      "O'Mahony C, Jichi F, Pavlou M, Monserrat L, Anastasakis A, Rapezzi C, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020. DOI: 10.1093/eurheartj/eht439. PMID: 24126876.",
+      "Templin C, Ghadri JR, Diekmann J, et al.; InterTAK Cooperation. Clinical Features and Outcomes of Takotsubo (Stress) Cardiomyopathy. N Engl J Med. 2015;373(10):929-938. DOI: 10.1056/NEJMoa1406761. PMID: 26332547.",
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI: 10.1161/CIRCULATIONAHA.116.021612. PMID: 27143678.",
+      "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. DOI: 10.1093/eurheartj/ehab072. PMID: 33825853.",
+      "Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929.",
+      "Olivotto I, Oreziak A, Barriales-Villa R, et al. Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM). Lancet. 2020;396(10253):759-769. DOI: 10.1016/S0140-6736(20)31792-X. PMID: 32871100.",
+      "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy (SEQUOIA-HCM). N Engl J Med. 2024;390(20):1849-1861. DOI: 10.1056/NEJMoa2401424. PMID: 38739079."
+    ],
+    "source_urls": [
+      "https://academic.oup.com/eurheartj/article/44/37/3503/7246608",
+      "https://www.scielo.br/j/abc/a/ZCS9yyxrVK8H7qgFTbn9rvH/?lang=pt",
+      "https://pubmed.ncbi.nlm.nih.gov/25814232/",
+      "https://pubmed.ncbi.nlm.nih.gov/24126876/",
+      "https://pubmed.ncbi.nlm.nih.gov/26332547/",
+      "https://pubmed.ncbi.nlm.nih.gov/27143678/",
+      "https://pubmed.ncbi.nlm.nih.gov/33825853/",
+      "https://pubmed.ncbi.nlm.nih.gov/30145929/",
+      "https://pubmed.ncbi.nlm.nih.gov/32871100/",
+      "https://pubmed.ncbi.nlm.nih.gov/38739079/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, sexto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555, síncope PR #560 e valvopatias PR #563). Nenhum verbete-hub geral de cardiomiopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (cardiomiopatia-periparto, cardiomiopatias-pediatricas, amiloidose-cardiaca-idoso). Conecta 32 documentos já publicados e revisados: 27 de content/Cardiomiopatias/ mais 5 de outras pastas (cardiopediatria, cardiogeriatria, arritmias, esporte, dispositivos) com menção direta e explícita ao tema, sem duplicar o escopo específico dos três verbetes-irmãos de subpopulação, citados em special_populations como texto, nunca como related_document_slugs. Fontes primárias verificadas nesta sessão: diretriz ESC 2023 de cardiomiopatias (primeira diretriz abrangente do tema, PMID 37622657), diretriz brasileira 2024 de CMH, HCM Risk-SCD (O'Mahony 2014, PMID 24126876), registro InterTAK de Takotsubo (Templin 2015, PMID 26332547), algoritmo não invasivo de amiloidose ATTR (Gillmore 2016, PMID 27143678; Garcia-Pavia 2021, PMID 33825853), ATTR-ACT/tafamidis (Maurer 2018, PMID 30145929), e ensaios de inibidores de miosina cardíaca EXPLORER-HCM/SEQUOIA-HCM (mavacamten/aficamten). Nenhuma dose de fármaco foi incluída em nenhum campo novo.",
+    "version": 1,
+    "fonte_producao": "claude"
   }
 ]
