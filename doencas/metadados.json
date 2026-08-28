@@ -10612,27 +10612,27 @@
     "assistant_questions": [
       {
         "id": "gestational_age_weeks",
-        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "label": "Qual a idade gestacional atual, em semanas completas?",
         "type": "number"
       },
       {
         "id": "suspected_coarctation_confirmed",
-        "text": "A suspeita de coarctação da aorta foi confirmada por ecocardiografia fetal especializada?",
+        "label": "A suspeita de coarctação da aorta foi confirmada por ecocardiografia fetal especializada?",
         "type": "boolean"
       },
       {
         "id": "ventricular_disproportion",
-        "text": "Há desproporção entre ventrículo direito e esquerdo (ventrículo direito maior) na ecocardiografia fetal?",
+        "label": "Há desproporção entre ventrículo direito e esquerdo (ventrículo direito maior) na ecocardiografia fetal?",
         "type": "boolean"
       },
       {
         "id": "isthmus_diameter_reduced",
-        "text": "O diâmetro do istmo aórtico está reduzido para a idade gestacional?",
+        "label": "O diâmetro do istmo aórtico está reduzido para a idade gestacional?",
         "type": "boolean"
       },
       {
         "id": "associated_cardiac_anomalies",
-        "text": "Quais anomalias cardíacas associadas foram identificadas na avaliação fetal?",
+        "label": "Quais anomalias cardíacas associadas foram identificadas na avaliação fetal?",
         "type": "multiselect",
         "options": [
           {
@@ -10659,7 +10659,7 @@
       },
       {
         "id": "karyotype_status",
-        "text": "Qual o status da investigação cromossômica ou genética?",
+        "label": "Qual o status da investigação cromossômica ou genética?",
         "type": "select",
         "options": [
           {
@@ -10686,27 +10686,27 @@
       },
       {
         "id": "delivery_center_has_cardiac_support",
-        "text": "O parto está planejado em centro com suporte cardiológico neonatal e cirurgia cardíaca pediátrica disponíveis?",
+        "label": "O parto está planejado em centro com suporte cardiológico neonatal e cirurgia cardíaca pediátrica disponíveis?",
         "type": "boolean"
       },
       {
         "id": "birth_occurred",
-        "text": "O nascimento já ocorreu?",
+        "label": "O nascimento já ocorreu?",
         "type": "boolean"
       },
       {
         "id": "neonate_shock_signs",
-        "text": "O recém-nascido apresenta sinais de choque cardiogênico ductal-dependente, como pulsos diminuídos, má perfusão ou diferencial de pressão entre membros?",
+        "label": "O recém-nascido apresenta sinais de choque cardiogênico ductal-dependente, como pulsos diminuídos, má perfusão ou diferencial de pressão entre membros?",
         "type": "boolean"
       },
       {
         "id": "prostaglandin_started",
-        "text": "A infusão de prostaglandina E1 já foi iniciada?",
+        "label": "A infusão de prostaglandina E1 já foi iniciada?",
         "type": "boolean"
       },
       {
         "id": "neonatal_echo_confirmatory",
-        "text": "Qual o resultado do ecocardiograma neonatal confirmatório?",
+        "label": "Qual o resultado do ecocardiograma neonatal confirmatório?",
         "type": "select",
         "options": [
           {
@@ -10729,7 +10729,7 @@
       },
       {
         "id": "femoral_pulses",
-        "text": "Como estão os pulsos femorais ao exame do recém-nascido?",
+        "label": "Como estão os pulsos femorais ao exame do recém-nascido?",
         "type": "select",
         "options": [
           {
