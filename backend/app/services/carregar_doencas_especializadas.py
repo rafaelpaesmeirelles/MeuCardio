@@ -35,6 +35,25 @@ def _valid_url(value: str) -> bool:
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
+def _normalize_prevalence_rank(item: dict, *, slug: str) -> str | None:
+    """Normaliza o rank sem converter dado inválido nem gravar NULL no banco.
+
+    ``null`` significa ausência de recatalogação: a chave é removida. Em update,
+    isso preserva o valor existente; em insert, permite o default 999 do modelo.
+    """
+    prevalence_rank = item.get("prevalence_rank")
+    if prevalence_rank is None:
+        item.pop("prevalence_rank", None)
+        return None
+    if (
+        isinstance(prevalence_rank, bool)
+        or not isinstance(prevalence_rank, int)
+        or prevalence_rank < 1
+    ):
+        return f"{slug}: prevalence_rank deve ser inteiro positivo ou null"
+    return None
+
+
 def carregar(caminho_json: str) -> dict:
     try:
         items = load_disease_records(caminho_json)
@@ -68,6 +87,12 @@ def carregar(caminho_json: str) -> dict:
             if item.get("review_status", "pendente_revisao") not in REVIEW:
                 erros.append(f"{slug}: review_status inválido")
                 continue
+
+            rank_error = _normalize_prevalence_rank(item, slug=slug)
+            if rank_error:
+                erros.append(rank_error)
+                continue
+
             urls = item.get("source_urls") or []
             if any(not isinstance(url, str) or not _valid_url(url) for url in urls):
                 erros.append(f"{slug}: source_urls contém URL inválida")
