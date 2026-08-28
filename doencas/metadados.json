@@ -12707,7 +12707,7 @@
     "category": "terapia_alvo",
     "subtype": "bcr_abl",
     "prevalence_rank": 7,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Avaliação de risco vascular, metabólico, pressórico e arrítmico em pacientes expostos a inibidores BCR-ABL, considerando diferenças entre agentes.",
     "tags": [
       "BCR-ABL",
@@ -12715,14 +12715,580 @@
       "risco vascular"
     ],
     "source_refs": [
-      "2022 ESC Guidelines on Cardio-Oncology"
+      "2022 ESC Guidelines on Cardio-Oncology",
+      "Lyon AR et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. PMID: 36017575.",
+      "Cortes JE et al. A phase 2 trial of ponatinib in Philadelphia chromosome-positive leukemias. N Engl J Med. 2013;369(19):1783-1796. PMID: 24180494.",
+      "Cortes JE et al. Ponatinib efficacy and safety in Philadelphia chromosome-positive leukemia: final 5-year results of the phase 2 PACE trial. Blood. 2018;132(4):393-404. PMID: 29567798.",
+      "Kim TD et al. Peripheral artery occlusive disease in chronic phase chronic myeloid leukemia patients treated with nilotinib or imatinib. Leukemia. 2013;27(6):1316-1321. PMID: 23459449.",
+      "Montani D et al. Pulmonary arterial hypertension in patients treated by dasatinib. Circulation. 2012;125(17):2128-2137. PMID: 22451584.",
+      "Quintás-Cardama A et al. Pleural effusion in patients with chronic myelogenous leukemia treated with dasatinib after imatinib failure. J Clin Oncol. 2007;25(25):3908-3914. PMID: 17761974.",
+      "Saglio G et al. Nilotinib versus imatinib for newly diagnosed chronic myeloid leukemia. N Engl J Med. 2010;362(24):2251-2259. PMID: 20525993.",
+      "Kerkelä R et al. Cardiotoxicity of the cancer therapeutic agent imatinib mesylate. Nat Med. 2006;12(8):908-916. PMID: 16862153.",
+      "Valent P et al. Vascular safety issues in CML patients treated with BCR/ABL1 kinase inhibitors. Blood. 2015;125(6):901-906. PMID: 25525119."
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017575/",
+      "https://pubmed.ncbi.nlm.nih.gov/24180494/",
+      "https://pubmed.ncbi.nlm.nih.gov/29567798/",
+      "https://pubmed.ncbi.nlm.nih.gov/23459449/",
+      "https://pubmed.ncbi.nlm.nih.gov/22451584/",
+      "https://pubmed.ncbi.nlm.nih.gov/17761974/",
+      "https://pubmed.ncbi.nlm.nih.gov/20525993/",
+      "https://pubmed.ncbi.nlm.nih.gov/16862153/",
+      "https://pubmed.ncbi.nlm.nih.gov/25525119/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (13º lote de conteúdo do dia): ficha tinha apenas summary/tags/1 source_ref de catalogação, zero related_document_slugs, sem patient_material_slug. Adicionados epidemiology, presentation, diagnostic_approach (avaliação basal, ECG/QTc seriado, ecocardiograma, rastreio de doença arterial periférica, avaliação de hipertensão pulmonar, monitorização pressórica), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (14), assistant_rules (11); related_document_slugs criado com 6 itens, todos verificados individual e programaticamente quanto a menção explícita a BCR-ABL/aos 5 fármacos (imatinibe, dasatinibe, nilotinibe, bosutinibe, ponatinibe) no texto; patient_material_slug preenchido com material já existente e diretamente correspondente. Nenhuma dose de fármaco em nenhum campo; classes terapêuticas e nomes de fármacos citados sem posologia. Nenhuma sobreposição de related_document_slugs detectada com outras fichas do corpus.",
+    "version": 2,
+    "epidemiology": "A toxicidade cardiovascular dos inibidores de tirosina-quinase (TKI) direcionados a BCR-ABL, usados no tratamento da leucemia mieloide crônica, não é uniforme entre os agentes da classe, refletindo diferenças de seletividade e de inibição de alvos off-target vasculares. O imatinibe, primeiro TKI aprovado para a doença, apresenta o perfil cardiovascular mais favorável do grupo, com incidência de disfunção ventricular clinicamente relevante considerada baixa em coortes de vida real, embora estudos pré-clínicos iniciais tenham levantado hipótese de cardiotoxicidade direta em cardiomiócitos. O dasatinibe associa-se de forma característica a hipertensão pulmonar pré-capilar, descrita em registros de farmacovigilância com prevalência estimada em torno de meio por cento dos pacientes expostos em uso prolongado, além de derrame pleural, relatado em proporção relevante dos pacientes em séries de seguimento. O nilotinibe carrega risco aumentado de doença arterial obstrutiva periférica e de eventos arteriais oclusivos em geral, com estudos retrospectivos comparativos mostrando taxas de doença arterial periférica substancialmente maiores do que com imatinibe em uso prolongado, além de prolongamento do intervalo QTc de padrão dose-dependente. O ponatinibe, TKI de terceira geração desenvolvido para superar a mutação T315I, apresenta o maior risco cardiovascular de toda a classe: no estudo PACE, eventos arteriais oclusivos cardíacos, cerebrovasculares e periféricos ocorreram de forma cumulativa e crescente ao longo do tempo de exposição, o que motivou alertas regulatórios e a exigência de estratificação de risco cardiovascular basal antes do início da terapia e durante o seguimento. O bosutinibe apresenta perfil intermediário, com relatos de derrame pleural e eventos cardiovasculares em magnitude menor que dasatinibe e ponatinibe, porém ainda superior ao imatinibe.",
+    "presentation": [
+      "Eventos arteriais oclusivos periféricos (doença arterial obstrutiva periférica, isquemia aguda ou crônica de membros), mais associados a ponatinibe e nilotinibe",
+      "Eventos arteriais oclusivos coronarianos (síndrome coronariana aguda, infarto do miocárdio), mais associados a ponatinibe",
+      "Eventos arteriais oclusivos cerebrovasculares (acidente vascular cerebral isquêmico, ataque isquêmico transitório), mais associados a ponatinibe",
+      "Hipertensão arterial sistêmica de início recente ou agravamento durante o tratamento, especialmente com ponatinibe e nilotinibe",
+      "Hipertensão pulmonar pré-capilar, associação característica do dasatinibe, potencialmente reversível após suspensão",
+      "Prolongamento do intervalo QTc, associação característica do nilotinibe, com risco de arritmia ventricular maligna",
+      "Derrame pleural, associação característica do dasatinibe",
+      "Derrame pericárdico",
+      "Insuficiência cardíaca e disfunção ventricular esquerda",
+      "Arritmias ventriculares e supraventriculares",
+      "Tromboembolismo venoso"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_pre_tratamento_estratificacao_risco": "Estratificação de risco cardiovascular basal antes do início de qualquer TKI BCR-ABL, considerando fatores de risco tradicionais (hipertensão arterial, diabetes, dislipidemia, tabagismo), história pessoal de doença arterial periférica, coronariana ou cerebrovascular prévia, e uso concomitante de fármacos que prolongam o intervalo QT. A escolha do agente deve ponderar o perfil de risco individual, evitando preferencialmente ponatinibe e nilotinibe em pacientes de alto risco vascular basal quando houver alternativa terapêutica de eficácia equivalente.",
+      "ecg_seriado_e_qtc": "Eletrocardiograma basal antes do início do tratamento e monitorização seriada do intervalo QTc corrigido ao longo do seguimento, com atenção especial em usuários de nilotinibe pelo seu potencial de prolongamento dose-dependente. Deve-se investigar e corrigir distúrbios eletrolíticos (hipocalemia, hipomagnesemia) e revisar interações medicamentosas com outros fármacos QT-prolongadores antes de cada reavaliação.",
+      "ecocardiograma": "Ecocardiograma transtorácico basal e reavaliações periódicas para avaliação de função sistólica ventricular esquerda, estimativa da pressão sistólica de artéria pulmonar e pesquisa de derrame pericárdico. Achados sugestivos de hipertensão pulmonar, disfunção ventricular nova ou derrame significativo devem direcionar investigação adicional e reavaliação da manutenção do TKI em uso.",
+      "rastreio_doenca_arterial_periferica": "Pesquisa clínica de pulsos periféricos, sintomas de claudicação intermitente e sinais de isquemia de extremidades em cada consulta de seguimento, particularmente em usuários de nilotinibe e ponatinibe. Cálculo do índice tornozelo-braquial em pacientes com fatores de risco vascular associados e complementação com Doppler arterial de membros nos casos sintomáticos.",
+      "avaliacao_hipertensao_pulmonar": "Investigação ativa de dispneia progressiva, sinais de sobrecarga de câmaras cardíacas direitas ao exame físico e ao ecocardiograma em usuários de dasatinibe. Quando há suspeita ecocardiográfica de hipertensão pulmonar, indica-se cateterismo cardíaco direito para confirmação diagnóstica; a suspensão do fármaco costuma resultar em melhora hemodinâmica progressiva.",
+      "monitorizacao_pressao_arterial": "Aferição da pressão arterial em toda consulta de seguimento durante o uso de TKI BCR-ABL, com atenção redobrada para ponatinibe e nilotinibe, agentes mais associados a hipertensão arterial de início recente ou de difícil controle."
+    },
+    "differentials": [
+      "Outras causas de hipertensão pulmonar não relacionadas ao TKI (doença tromboembólica pulmonar crônica, doença do tecido conjuntivo, cardiopatia esquerda, doença pulmonar hipóxica crônica)",
+      "Outras causas de doença arterial periférica independentes da terapia (aterosclerose por fatores de risco tradicionais, vasculite, tromboangeíte obliterante)",
+      "Outras causas de intervalo QT longo não relacionadas ao nilotinibe (síndrome do QT longo congênita, distúrbios eletrolíticos, outros fármacos QT-prolongadores, disfunção tireoidiana)",
+      "Outras causas de derrame pleural ou pericárdico (infecção, neoplasia primária ou metastática, insuficiência cardíaca de outra etiologia, doença autoimune)",
+      "Outras causas de síndrome coronariana aguda ou acidente vascular cerebral isquêmico (aterosclerose convencional por fatores de risco tradicionais, fibrilação atrial não relacionada ao TKI, estados de hipercoagulabilidade associados à própria neoplasia)",
+      "Progressão ou recidiva da leucemia mieloide crônica com manifestações sistêmicas que podem mimetizar toxicidade cardiovascular"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações com cálculo do intervalo QTc",
+      "Ecocardiograma transtorácico com avaliação de função ventricular e estimativa de pressão pulmonar",
+      "Índice tornozelo-braquial",
+      "Doppler arterial de membros inferiores e superiores",
+      "Cateterismo cardíaco direito, quando houver suspeita de hipertensão pulmonar",
+      "Perfil lipídico e avaliação glicêmica",
+      "Eletrólitos séricos (potássio, magnésio, cálcio)",
+      "Peptídeo natriurético tipo B (BNP ou NT-proBNP)",
+      "Angiotomografia ou angiografia diante de suspeita de evento arterial oclusivo"
+    ],
+    "red_flags": [
+      "Dor torácica súbita sugestiva de síndrome coronariana aguda",
+      "Déficit neurológico focal agudo sugestivo de acidente vascular cerebral",
+      "Claudicação nova ou piora abrupta, ou dor, palidez e frialdade de extremidade sugestivas de isquemia arterial aguda de membro",
+      "Dispneia progressiva com sinais de sobrecarga de câmaras cardíacas direitas",
+      "Síncope ou palpitações associadas a intervalo QTc marcadamente prolongado",
+      "Hipertensão arterial grave ou refratária de início recente",
+      "Derrame pleural ou pericárdico volumoso ou com repercussão hemodinâmica",
+      "Sinais de insuficiência cardíaca descompensada (edema, ortopneia, estertores pulmonares)"
+    ],
+    "treatment_summary": "O manejo da cardiotoxicidade associada aos inibidores de tirosina-quinase BCR-ABL (imatinibe, dasatinibe, nilotinibe, bosutinibe e ponatinibe) inicia-se antes da primeira administração, com estratificação de risco cardiovascular basal. Essa avaliação pré-tratamento deve incluir história clínica dirigida para hipertensão arterial, diabetes mellitus, dislipidemia, tabagismo, obesidade, doença arterial periférica prévia, doença coronariana ou cerebrovascular prévia e história familiar de eventos vasculares precoces, além de eletrocardiograma basal com cálculo do intervalo QT corrigido (QTc), aferição da pressão arterial, perfil lipídico e perfil glicêmico. Pacientes com risco cardiovascular intermediário, alto ou muito alto, ou com antecedente de doença arterial periférica, merecem atenção redobrada, especialmente quando a indicação recai sobre ponatinibe e, em menor grau, nilotinibe, ambos associados a maior incidência de eventos arteriais oclusivos.\n\nDurante o tratamento, a monitorização cardiovascular deve ser sistemática e longitudinal: eletrocardiograma seriado com reavaliação do QTc (particularmente relevante para dasatinibe e nilotinibe, e diante de uso concomitante de outros fármacos prolongadores do intervalo QT ou distúrbios eletrolíticos), aferição periódica da pressão arterial (bosutinibe e ponatinibe têm sido associados a hipertensão arterial de início ou piora), reavaliação periódica de perfil lipídico e glicêmico, e avaliação clínica ativa e objetiva de doença arterial periférica (pulsos, claudicação, índice tornozelo-braço quando indicado), sobretudo em uso prolongado de ponatinibe. Também deve-se atentar para sinais e sintomas sugestivos de hipertensão pulmonar, notadamente associada ao dasatinibe, como dispneia progressiva, edema de membros inferiores e sinais de disfunção de ventrículo direito.\n\nO manejo dos fatores de risco cardiovascular modificáveis segue os princípios gerais de prevenção cardiovascular, com controle pressórico por meio de classes anti-hipertensivas apropriadas ao perfil do paciente, uso de estatinas quando indicado pelo perfil lipídico e risco global, orientação para cessação de tabagismo, controle glicêmico e incentivo à atividade física e adequação de peso corporal. O uso de antiagregantes plaquetários pode ser considerado em contexto de doença aterosclerótica estabelecida ou evento vascular prévio, sempre pesando o risco hemorrágico associado.\n\nDiante de evento vascular oclusivo agudo (arterial periférico, coronariano ou cerebrovascular), hipertensão arterial grave e refratária, ou quadro sugestivo de hipertensão pulmonar, a conduta exige avaliação cardiológica ou de cardio-oncologia em caráter prioritário ou emergencial, com discussão conjunta entre a equipe de hemato-oncologia responsável pelo tratamento da leucemia mieloide crônica e a cardio-oncologia sobre a necessidade de suspensão temporária ou definitiva do TKI em uso e eventual substituição por outro inibidor de perfil de toxicidade cardiovascular distinto, sempre ponderando o controle da doença hematológica de base. Essa decisão compartilhada é central: o cardiologista ou cardio-oncologista não decide isoladamente a troca do TKI, mas fornece a avaliação de risco-benefício cardiovascular que subsidia a decisão conjunta com a hemato-oncologia, considerando resposta molecular ou citogenética à terapia vigente, alternativas terapêuticas disponíveis e gravidade do evento cardiovascular. O seguimento longitudinal conjunto entre as duas especialidades é recomendado durante toda a duração do tratamento com TKI.",
+    "ambulatory_flow": [
+      "Avaliação clínica pré-tratamento com história dirigida a fatores de risco cardiovascular e antecedentes vasculares",
+      "Eletrocardiograma basal com cálculo do QTc, aferição de pressão arterial, perfil lipídico e perfil glicêmico antes do início do TKI",
+      "Escolha compartilhada do TKI considerando perfil de toxicidade cardiovascular versus resposta hematológica esperada",
+      "Reavaliação clínica e eletrocardiográfica em intervalos regulares após início do TKI, com foco em QTc e pressão arterial",
+      "Reavaliação periódica de perfil lipídico e glicêmico durante o seguimento",
+      "Avaliação clínica objetiva de doença arterial periférica (pulsos, claudicação) em cada retorno, sobretudo com ponatinibe",
+      "Controle ativo de fatores de risco cardiovascular modificáveis (pressão arterial, dislipidemia, tabagismo, glicemia, peso)",
+      "Encaminhamento a cardiologia ou cardio-oncologia diante de alterações de QTc, hipertensão de difícil controle ou sinais sugestivos de doença arterial periférica",
+      "Discussão conjunta hemato-oncologia e cardio-oncologia sobre continuidade, ajuste ou troca do TKI quando surgir toxicidade cardiovascular",
+      "Seguimento longitudinal conjunto entre hemato-oncologia e cardio-oncologia durante toda a duração do tratamento"
+    ],
+    "emergency_flow": [
+      "Reconhecimento imediato de sinais de evento vascular oclusivo agudo (dor torácica, déficit neurológico focal, dor ou palidez de membro)",
+      "Encaminhamento emergencial para avaliação hospitalar com suspensão temporária do TKI até esclarecimento diagnóstico",
+      "Eletrocardiograma imediato diante de síncope, palpitações ou suspeita de arritmia, com avaliação de QTc",
+      "Investigação e correção de distúrbios eletrolíticos e revisão de fármacos concomitantes prolongadores de QT em caso de QTc muito prolongado",
+      "Avaliação emergencial diante de dispneia aguda ou progressiva com suspeita de hipertensão pulmonar ou disfunção de ventrículo direito",
+      "Acionamento conjunto de cardiologia/cardio-oncologia e hemato-oncologia para decisão sobre suspensão ou troca do TKI em vigência de evento cardiovascular grave",
+      "Estabilização hemodinâmica e monitorização contínua em ambiente de emergência para eventos vasculares oclusivos ou arritmias graves",
+      "Reavaliação estruturada pós-evento para definição de reintrodução, troca de TKI ou contraindicação definitiva à classe"
+    ],
+    "monitoring": [
+      "Eletrocardiograma seriado com cálculo do intervalo QT corrigido (QTc)",
+      "Aferição periódica da pressão arterial em cada consulta",
+      "Perfil lipídico periódico",
+      "Perfil glicêmico periódico",
+      "Avaliação clínica seriada de doença arterial periférica (pulsos, claudicação, índice tornozelo-braço quando indicado)",
+      "Vigilância ativa de sinais e sintomas sugestivos de hipertensão pulmonar (dispneia progressiva, edema de membros inferiores)",
+      "Revisão periódica de fármacos concomitantes com potencial de prolongar o intervalo QT",
+      "Reavaliação periódica do risco cardiovascular global e ajuste do plano de prevenção"
+    ],
+    "assistant_questions": [
+      {
+        "id": "tki_atual",
+        "text": "Qual o inibidor BCR-ABL (TKI) em uso atualmente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "imatinibe",
+            "label": "Imatinibe"
+          },
+          {
+            "value": "dasatinibe",
+            "label": "Dasatinibe"
+          },
+          {
+            "value": "nilotinibe",
+            "label": "Nilotinibe"
+          },
+          {
+            "value": "bosutinibe",
+            "label": "Bosutinibe"
+          },
+          {
+            "value": "ponatinibe",
+            "label": "Ponatinibe"
+          }
+        ]
+      },
+      {
+        "id": "risco_cv_basal",
+        "text": "Qual a estratificação de risco cardiovascular basal do paciente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "baixo",
+            "label": "Baixo"
+          },
+          {
+            "value": "intermediario",
+            "label": "Intermediário"
+          },
+          {
+            "value": "alto",
+            "label": "Alto"
+          },
+          {
+            "value": "muito_alto",
+            "label": "Muito alto"
+          }
+        ]
+      },
+      {
+        "id": "fatores_risco_cv",
+        "text": "Quais fatores de risco cardiovascular estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "hipertensao",
+            "label": "Hipertensão arterial"
+          },
+          {
+            "value": "diabetes",
+            "label": "Diabetes mellitus"
+          },
+          {
+            "value": "dislipidemia",
+            "label": "Dislipidemia"
+          },
+          {
+            "value": "tabagismo",
+            "label": "Tabagismo"
+          },
+          {
+            "value": "obesidade",
+            "label": "Obesidade"
+          },
+          {
+            "value": "doenca_arterial_periferica_previa",
+            "label": "Doença arterial periférica prévia"
+          },
+          {
+            "value": "doenca_coronariana_previa",
+            "label": "Doença coronariana ou cerebrovascular prévia"
+          },
+          {
+            "value": "historia_familiar",
+            "label": "História familiar de evento vascular precoce"
+          }
+        ]
+      },
+      {
+        "id": "qtc_basal_prolongado",
+        "text": "O QTc basal (pré-tratamento) está prolongado?",
+        "type": "boolean"
+      },
+      {
+        "id": "qtc_valor_ms",
+        "text": "Qual o valor do QTc atual, em milissegundos?",
+        "type": "number"
+      },
+      {
+        "id": "evento_vascular_oclusivo_agudo",
+        "text": "Há sinais ou sintomas de evento vascular oclusivo agudo (dor torácica, déficit neurológico focal, isquemia de membro)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_hipertensao_pulmonar",
+        "text": "Há dispneia progressiva, edema de membros inferiores ou outros sinais sugestivos de hipertensão pulmonar?",
+        "type": "boolean"
+      },
+      {
+        "id": "pressao_arterial_elevada",
+        "text": "Há pressão arterial elevada de difícil controle no seguimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "pas_valor",
+        "text": "Qual o valor da pressão arterial sistólica mais recente (mmHg)?",
+        "type": "number"
+      },
+      {
+        "id": "claudicacao_nova_ou_piora",
+        "text": "Há claudicação nova ou piora de claudicação prévia?",
+        "type": "boolean"
+      },
+      {
+        "id": "sincope_ou_arritmia",
+        "text": "Houve episódio de síncope ou arritmia documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_medicamentos_prolongadores_qt_concomitante",
+        "text": "O paciente usa concomitantemente outro(s) medicamento(s) prolongador(es) do intervalo QT?",
+        "type": "boolean"
+      },
+      {
+        "id": "tempo_uso_tki_meses",
+        "text": "Há quantos meses o paciente está em uso do TKI atual?",
+        "type": "number"
+      },
+      {
+        "id": "avaliacao_cardio_oncologia_realizada",
+        "text": "Foi realizada avaliação por cardiologia ou cardio-oncologia neste ciclo de seguimento?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "evento_vascular_oclusivo_emergencia",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "evento_vascular_oclusivo_agudo",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita de evento vascular oclusivo agudo em uso de TKI BCR-ABL"
+          ],
+          "emergency_flow": [
+            "Encaminhamento imediato para avaliação hospitalar de emergência",
+            "Suspensão temporária do TKI até esclarecimento diagnóstico"
+          ],
+          "messages": [
+            "Evento vascular oclusivo agudo requer avaliação emergencial imediata e discussão conjunta com hemato-oncologia sobre suspensão do TKI"
+          ]
+        }
+      },
+      {
+        "id": "qtc_muito_prolongado_emergencia",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "qtc_valor_ms",
+              "op": "gte",
+              "value": 500
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "QTc muito prolongado (500 ms ou mais)"
+          ],
+          "emergency_flow": [
+            "Eletrocardiograma imediato e monitorização de ritmo",
+            "Correção de distúrbios eletrolíticos e revisão de fármacos concomitantes prolongadores de QT"
+          ],
+          "suggested_tests": [
+            "Eletrólitos séricos (potássio, magnésio, cálcio)",
+            "Eletrocardiograma seriado"
+          ]
+        }
+      },
+      {
+        "id": "dispneia_hipertensao_pulmonar_emergencia",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_hipertensao_pulmonar",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais sugestivos de hipertensão pulmonar aguda associada a TKI"
+          ],
+          "emergency_flow": [
+            "Avaliação emergencial com ecocardiograma para investigação de disfunção de ventrículo direito e hipertensão pulmonar"
+          ],
+          "differentials": [
+            "Hipertensão pulmonar induzida por TKI",
+            "Tromboembolismo pulmonar",
+            "Insuficiência cardíaca descompensada"
+          ]
+        }
+      },
+      {
+        "id": "sincope_arritmia_urgente",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "sincope_ou_arritmia",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope ou arritmia documentada em uso de TKI BCR-ABL"
+          ],
+          "emergency_flow": [
+            "Eletrocardiograma imediato com avaliação do QTc",
+            "Monitorização de ritmo cardíaco"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Eletrólitos séricos"
+          ]
+        }
+      },
+      {
+        "id": "qtc_basal_e_qt_concomitante_urgente",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "qtc_basal_prolongado",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "uso_medicamentos_prolongadores_qt_concomitante",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "QTc basal prolongado associado a uso concomitante de fármaco prolongador de QT"
+          ],
+          "supporting": [
+            "Risco aumentado de arritmia ventricular por efeito aditivo sobre o intervalo QT"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma com cálculo de QTc",
+            "Revisão da lista de medicamentos em uso"
+          ]
+        }
+      },
+      {
+        "id": "claudicacao_nova_urgente",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "claudicacao_nova_ou_piora",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Claudicação nova ou em piora, possível doença arterial periférica relacionada a TKI"
+          ],
+          "suggested_tests": [
+            "Índice tornozelo-braço",
+            "Avaliação vascular especializada"
+          ]
+        }
+      },
+      {
+        "id": "ponatinibe_risco_alto_prioritario",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "tki_atual",
+              "op": "eq",
+              "value": "ponatinibe"
+            },
+            {
+              "field": "risco_cv_basal",
+              "op": "in",
+              "value": [
+                "alto",
+                "muito_alto"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Ponatinibe em paciente com risco cardiovascular basal alto ou muito alto: maior probabilidade de evento arterial oclusivo"
+          ],
+          "ambulatory_flow": [
+            "Encaminhamento a cardio-oncologia para avaliação conjunta antes da manutenção do ponatinibe"
+          ],
+          "suggested_tests": [
+            "Índice tornozelo-braço",
+            "Perfil lipídico e glicêmico atualizados"
+          ]
+        }
+      },
+      {
+        "id": "pressao_arterial_elevada_prioritario",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "pressao_arterial_elevada",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "pas_valor",
+              "op": "gte",
+              "value": 160
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Hipertensão arterial de difícil controle em uso de TKI"
+          ],
+          "ambulatory_flow": [
+            "Encaminhamento a cardiologia para otimização do controle pressórico"
+          ],
+          "suggested_tests": [
+            "Monitorização ambulatorial da pressão arterial"
+          ]
+        }
+      },
+      {
+        "id": "doenca_arterial_periferica_previa_prioritario",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "fatores_risco_cv",
+              "op": "contains",
+              "value": "doenca_arterial_periferica_previa"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Antecedente de doença arterial periférica aumenta o risco de evento vascular sob TKI de perfil pró-trombótico"
+          ],
+          "suggested_tests": [
+            "Índice tornozelo-braço basal e periódico"
+          ]
+        }
+      },
+      {
+        "id": "avaliacao_cardio_oncologia_pendente",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "avaliacao_cardio_oncologia_realizada",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Avaliação por cardiologia ou cardio-oncologia não realizada neste ciclo de seguimento"
+          ],
+          "ambulatory_flow": [
+            "Agendar avaliação de cardio-oncologia para seguimento longitudinal conjunto"
+          ]
+        }
+      },
+      {
+        "id": "seguimento_baixo_risco_rotina",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "risco_cv_basal",
+              "op": "eq",
+              "value": "baixo"
+            },
+            {
+              "field": "evento_vascular_oclusivo_agudo",
+              "op": "falsy",
+              "value": true
+            },
+            {
+              "field": "sincope_ou_arritmia",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Paciente de baixo risco cardiovascular basal sem eventos identificados no seguimento atual"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Pacientes com doença arterial periférica ou doença arterial coronariana prévia exigem avaliação vascular basal antes de iniciar ponatinibe ou nilotinibe, os dois inibidores de BCR-ABL com maior sinal de eventos oclusivos arteriais (infarto do miocárdio, acidente vascular cerebral isquêmico e isquemia de membro); nesses pacientes, a escolha do inibidor de tirosina-quinase deve pesar o risco vascular adicional contra o benefício hematológico, com rastreio vascular mais frequente (índice tornozelo-braço, revisão de fatores de risco cardiovascular modificáveis) durante todo o tratamento.",
+      "Pacientes com síndrome do QT longo congênito conhecida, história familiar de morte súbita cardíaca em jovens, ou fatores de risco adquiridos para prolongamento do intervalo QT (hipocalemia, hipomagnesemia, uso concomitante de outros fármacos que prolongam QT) demandam cautela redobrada com nilotinibe, que carrega alerta de agência regulatória por casos de morte súbita cardíaca relacionados a prolongamento do QT; recomenda-se eletrocardiograma basal com cálculo do intervalo QT corrigido, correção de distúrbios eletrolíticos antes do início do fármaco, e reavaliação eletrocardiográfica programada durante o tratamento.",
+      "Pacientes com hipertensão pulmonar prévia, ou com fatores de risco para hipertensão pulmonar (doença pulmonar estrutural, cardiopatia esquerda com repercussão pulmonar, história de tromboembolismo pulmonar crônico), devem ser avaliados com cautela antes do início de dasatinibe, o inibidor de BCR-ABL com sinal mais consistente de hipertensão arterial pulmonar pré-capilar; sintomas novos de dispneia, síncope ou sinais de falência de ventrículo direito durante o uso de dasatinibe justificam investigação ecocardiográfica dirigida e suspensão do fármaco se a hipertensão pulmonar for confirmada, já que a reversibilidade parcial ou completa após a suspensão é descrita na maioria dos casos.",
+      "Pacientes idosos com múltiplas comorbidades cardiovasculares (hipertensão arterial sistêmica, diabetes, dislipidemia, doença arterial coronariana ou periférica estabelecida) somam ao tratamento com inibidores de BCR-ABL um risco cardiovascular de base já elevado, o que torna a escolha do agente e a intensidade da vigilância cardiovascular decisões individualizadas; nesse grupo, a otimização de fatores de risco modificáveis (controle pressórico, perfil lipídico, cessação de tabagismo) deve acompanhar o início e a manutenção do tratamento oncológico com a mesma prioridade dada ao controle da leucemia.",
+      "Pacientes que precisam trocar de inibidor de BCR-ABL por toxicidade cardiovascular (evento arterial oclusivo, hipertensão pulmonar, prolongamento significativo do QT) exigem decisão compartilhada entre hemato-oncologia e cardio-oncologia, pesando a resposta molecular obtida com o agente atual, o perfil de toxicidade cardiovascular específico de cada alternativa e a urgência oncológica da troca; essa decisão deve ser documentada em conjunto, com plano explícito de vigilância cardiovascular reforçada nas primeiras semanas após a troca de fármaco.",
+      "Pacientes em uso prolongado de inibidor de BCR-ABL, por vários anos, incluindo aqueles em remissão molecular profunda e estável, precisam de reavaliação periódica do risco cardiovascular ao longo do tratamento, e não apenas na fase inicial, porque parte da toxicidade vascular arterial associada a nilotinibe e ponatinibe é cumulativa e só se torna plenamente aparente com seguimento longo; essa reavaliação inclui revisão de fatores de risco cardiovascular, exame clínico vascular dirigido e, quando indicado clinicamente, exames complementares de rastreio vascular subclínico."
+    ],
+    "related_document_slugs": [
+      "nilotinibe-doenca-arterial-obstrutiva-periferica-e-eventos-cardiovasculares-enestnd-10-anos",
+      "ponatinibe-eventos-oclusivos-arteriais-reanalise-independente-do-pace",
+      "hipertensao-pulmonar-arterial-induzida-por-dasatinibe",
+      "hipertensao-pulmonar-por-bosutinibe-e-ponatinibe-comparacao-de-risco-entre-inibidores-de-bcr-abl",
+      "isquemia-aguda-de-membro-e-doenca-arterial-por-nilotinibe-ou-ponatinibe",
+      "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao"
+    ],
+    "patient_material_slug": "cardiotoxicidade-bcr-abl",
+    "fonte_producao": "claude"
   },
   {
     "slug": "cardiotoxicidade-inibidor-proteassoma",
