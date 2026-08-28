@@ -999,9 +999,17 @@
     "source_urls": [
       "https://professional.heart.org/en/science-news/diagnosis-and-management-of-myocarditis-in-children"
     ],
-    "review_status": "revisado",
-    "review_note": "Estratificação original baseada em sinais de gravidade; não substitui critérios de ressonância ou biópsia.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Fechamento de lacuna Tudo com Tudo de 28/08/2026 (30º lote de conteúdo do dia, quarto desta natureza após doenca-de-kawasaki/PR #642, estenose-aortica-tavi-idoso/PR #643 e trombose-associada-cancer/PR #644): ficha já estava completeness=completo, com todo o conteúdo clínico integral e review_status=revisado, mas related_document_slugs e patient_material_slug estavam None. Não houve nenhuma alteração de conteúdo clínico já existente. Adicionados 4 related_document_slugs, todos confirmados por leitura real com contagem de menções centrais ao tema no texto (documento-hub de diagnóstico/suporte/ECMO, miocardite fulminante/choque cardiogênico + fluxograma, miocardite pós-vacina de mRNA em adolescentes). Colisão suspeita com PR #568 (verbete-hub de Miocardite geral) descartada via gh pr diff — 0 ocorrências do slug exato miocardite-pediatrica no diff. Candidatos com menção apenas tangencial (mis-c-com-disfuncao-miocardica-e-choque, cardiomiopatia-pediatrica-dilatada-e-hipertrofica, insuficiencia-cardiaca-pediatrica) descartados por 1-2 menções de passagem. patient_material_slug definido para o material educativo geral sobre miocardite já existente. version 1 → 2. review_status volta a pendente_revisao por prudência editorial (alteração de campo estrutural em ficha publicada), mesmo sem mudança de conteúdo clínico.",
+    "version": 2,
+    "related_document_slugs": [
+      "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",
+      "miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+      "fluxograma-miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+      "miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual"
+    ],
+    "patient_material_slug": "miocardite-inflamacao-do-musculo-do-coracao-e-recuperacao",
+    "fonte_producao": "claude"
   },
   {
     "slug": "sincope-pediatrica",
