@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "tetralogia-fallot-fetal",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "transposicao-grandes-arterias-fetal",
+    "set": {
+      "review_status": "revisado"
+    },
+    "replace": [
+      {
+        "old": "Toda forma de d-TGA é ducto-dependente para a mistura de sangue oxigenado e não oxigenado, já que nessa anomalia a aorta emerge do ventrículo direito e a artéria pulmonar emerge do ventrículo esquerdo, gerando duas circulações em paralelo; a sobrevida imediata depende de comunicações que permitam essa mistura, sobretudo o canal arterial e o forame oval.",
+        "new": "Na d-TGA, a sobrevida neonatal depende de mistura intercirculatória adequada entre as circulações paralelas, sobretudo em nível atrial e também pelo canal arterial; a necessidade de suporte ductal varia conforme a fisiologia e a adequação dessas comunicações."
+      },
+      {
+        "old": "Por isso, ao nascimento está indicado o início imediato de infusão contínua de prostaglandina E1 para manter o canal arterial pérvio até que a estratégia terapêutica definitiva esteja estabelecida, independentemente da gravidade clínica aparente nas primeiras horas.",
+        "new": "Ao nascimento, deve-se avaliar imediatamente a adequação da mistura, a oxigenação e a perfusão; prostaglandina E1 é frequentemente utilizada para manter a patência ductal quando necessária à estabilização, mas sua necessidade e duração devem ser guiadas pela fisiologia e pela anatomia das comunicações, sem regra universal independente do estado clínico."
+      },
+      {
+        "old": "Início imediato de infusão contínua de prostaglandina E1 para manter ou reabrir o canal arterial",
+        "new": "Avaliar e iniciar prostaglandina E1 quando necessária para manter ou reabrir a patência ductal e favorecer a mistura, com reavaliação fisiológica contínua"
+      }
+    ],
+    "assistant_rules": {
+      "pge1_nao_iniciada_emergencia": {
+        "when": {
+          "all": [
+            {
+              "field": "infusao_prostaglandina_iniciada",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "sinais_hipoxemia_grave",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Hipoxemia grave com d-TGA exige avaliação imediata da mistura intercirculatória; considerar prostaglandina E1 para suporte ductal quando indicada e avaliar septostomia atrial conforme a anatomia e a resposta clínica."
+          ],
+          "red_flags": [
+            "Hipoxemia grave sem estratégia de manutenção da mistura intercirculatória confirmada"
+          ]
+        }
+      },
+      "canal_arterial_fechando_risco": {
+        "when": {
+          "all": [
+            {
+              "field": "canal_arterial_patente",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "sinais_hipoxemia_grave",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hipoxemia grave associada a fechamento ductal em d-TGA"
+          ],
+          "messages": [
+            "Reavaliar imediatamente a mistura intercirculatória e considerar prostaglandina E1 e/ou septostomia atrial conforme a fisiologia e a anatomia."
+          ]
+        }
+      }
+    }
+  },
+  {
+    "slug": "retorno-venoso-pulmonar-anomalo-fetal",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "fisiologia-ventriculo-unico",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "taquicardia-supraventricular-fetal",
+    "set": {
+      "review_status": "revisado"
+    },
+    "replace": [
+      {
+        "old": "Entre os antiarrítmicos mais utilizados nesse contexto estão a digoxina, a flecainida e o sotalol, isolados ou em associação, conforme o tipo de arritmia, a resposta observada e o perfil materno. A eficácia desses fármacos não é uniforme entre os diferentes mecanismos de taquiarritmia: para a TSV por reentrada, flecainida e digoxina tendem a apresentar taxas de conversão mais altas, enquanto para o flutter atrial as taxas de conversão a ritmo sinusal costumam ser menores, exigindo por vezes associação de fármacos ou reavaliação da estratégia terapêutica.",
+        "new": "A escolha deve seguir o mecanismo e a presença de hidropisia. O statement AHA 2024 prioriza flecainida como primeira linha para TSV fetal sem hidropisia e flecainida associada à digoxina quando há hidropisia; para flutter atrial fetal, sotalol é a primeira linha sem hidropisia e sotalol associado à digoxina quando há hidropisia. Falha de conversão exige reavaliação especializada e escalonamento conforme resposta e segurança materno-fetal."
+      }
+    ]
+  },
+  {
+    "slug": "doenca-de-kawasaki",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "estenose-aortica-tavi-idoso",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "trombose-associada-cancer",
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "miocardite-pediatrica",
+    "set": {
+      "review_status": "revisado"
+    }
+  }
+]
