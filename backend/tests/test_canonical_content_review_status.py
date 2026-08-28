@@ -39,7 +39,16 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # hipertensao-arterial-pediatrica ganhou diagnostic_approach,
+        # special_populations e related_document_slugs (ausentes), além
+        # de epidemiology/presentation/treatment_summary expandidos —
+        # ver review_note.
+        "hipertensao-arterial-pediatrica",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
