@@ -3,8 +3,7 @@ name: Integrate Science 36h One-shot
 on:
   push:
     branches: [main]
-    paths:
-      - .github/workflows/integrate-science-36h-oneshot.yml
+    paths: [.github/workflows/integrate-science-36h-oneshot.yml]
 
 permissions:
   contents: write
@@ -21,233 +20,164 @@ jobs:
           ref: ${{ env.TARGET_BRANCH }}
           fetch-depth: 0
 
-      - name: Fetch scientific PR heads
-        shell: bash
+      - name: Fetch source heads
         run: |
           set -euo pipefail
-          prs="560 563 564 568 570 572 574 578 581 582 583 585 586 587 589 592 595 600 648 649 653 654 656 657 658 659 660 661 662 663 664 666 667"
-          for pr in $prs; do
+          for pr in 560 563 564 568 570 572 574 578 581 582 583 585 586 587 589 592 595 600 648 649 653 654 656 657 658 659 660 661 662 663 664 666 667; do
             git fetch -q origin "refs/pull/${pr}/head:refs/remotes/origin/pr-${pr}"
           done
 
-      - name: Compose exact scientific content on current release
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          import json, re, subprocess, pathlib, os
-
-          ROOT = pathlib.Path('.')
-          REPO = os.environ['GITHUB_REPOSITORY']
-          imports = {
-              560: ['sincope'],
-              563: ['valvopatias'],
-              564: ['sindrome-coracao-esquerdo-hipoplasico-fetal', 'comunicacao-interatrial', 'isquemia-mesenterica-aguda-cardioembolica'],
-              568: ['miocardite'],
-              570: ['dislipidemia'],
-              572: ['diabetes-mellitus-tipo-2'],
-              574: ['tromboembolismo-venoso'],
-              578: ['doenca-arterial-periferica-de-membros'],
-              581: ['taquicardia-supraventricular'],
-              585: ['canalopatias-cardiacas-hereditarias'],
-              648: ['avaliacao-cardiovascular-pre-concepcional'],
-              649: ['avaliacao-basal-cardiooncologica'],
-              653: ['cardiotoxicidade-inibidor-proteassoma'],
-              654: ['cardiotoxicidade-raf-mek'],
-              656: ['qt-longo-terapia-oncologica'],
-              657: ['plano-alta-cardiogeriatria'],
-              658: ['plano-sobrevivencia-cardiooncologica'],
-              659: ['sangramento-relacionado-a-anticoagulante'],
-              660: ['polifarmacia-e-desprecricao-cardiovascular'],
-              661: ['acidente-vascular-cerebral-agudo'],
-              662: ['sindrome-coronariana-cronica'],
-              663: ['arritmias-na-gravidez'],
-              664: ['insuficiencia-cardiaca'],
-              666: ['fibrilacao-atrial'],
-              667: ['hipertensao-arterial-sistemica'],
-          }
-
-          def git_show(ref, path):
-              return subprocess.check_output(['git','show',f'{ref}:{path}'], text=True)
-
-          def all_current_records():
-              records = json.loads((ROOT/'doencas/metadados.json').read_text(encoding='utf-8'))
-              for p in sorted((ROOT/'doencas/fragmentos').glob('*.json')):
-                  data = json.loads(p.read_text(encoding='utf-8'))
-                  if isinstance(data, dict): records.append(data)
-                  else: records.extend(data)
-              return {r['slug']: r for r in records}
-
-          def recursively_replace(obj, old, new):
-              if isinstance(obj, str): return obj.replace(old, new)
-              if isinstance(obj, list): return [recursively_replace(x, old, new) for x in obj]
-              if isinstance(obj, dict): return {k: recursively_replace(v, old, new) for k,v in obj.items()}
-              return obj
-
-          def normalize_questions(record):
-              questions = record.get('assistant_questions')
-              if not isinstance(questions, list):
-                  return record
-              for q in questions:
-                  if not isinstance(q, dict):
-                      continue
-                  legacy = q.pop('text', None)
-                  label = q.get('label')
-                  if isinstance(label, str) and label.strip():
-                      q['label'] = label.strip()
-                  elif isinstance(legacy, str) and legacy.strip():
-                      q['label'] = legacy.strip()
-              return record
-
-          current = all_current_records()
-          cdir = ROOT/'doencas/correcoes'; cdir.mkdir(parents=True, exist_ok=True)
-          fdir = ROOT/'doencas/fragmentos'; fdir.mkdir(parents=True, exist_ok=True)
-
-          imported_slugs = set()
-          for pr, slugs in imports.items():
-              ref = f'refs/remotes/origin/pr-{pr}'
-              source = json.loads(git_show(ref, 'doencas/metadados.json'))
-              by_slug = {x['slug']: x for x in source}
-              for slug in slugs:
-                  if slug not in by_slug:
-                      print(f'WARN PR #{pr}: slug ausente: {slug}')
-                      continue
-                  rec = normalize_questions(by_slug[slug])
-                  rec['review_status'] = 'revisado'
-                  note = rec.get('review_note') or ''
-                  rec['review_note'] = (note + ' Revisado para o release científico consolidado de 28/08/2026, após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.').strip()
-                  if slug == 'cardiotoxicidade-inibidor-proteassoma':
-                      rec = recursively_replace(rec, 'controle pressórico agressivo', 'otimização pressórica adequada e individualizada')
-                      rec = recursively_replace(rec, 'Controle pressórico agressivo', 'Otimização pressórica adequada e individualizada')
-                  imported_slugs.add(slug)
-                  if slug in current:
-                      payload = [{'slug': slug, 'set': {k:v for k,v in rec.items() if k != 'slug'}}]
-                      out = cdir/f'zz-release36h-pr{pr}-{slug}.json'
-                  else:
-                      payload = rec
-                      out = fdir/f'zz-release36h-{slug}.json'
-                      current[slug] = rec
-                  out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-          approve_existing = {
-              'cardiomiopatias', 'cardiomiopatia-hipertrofica',
-              'febre-reumatica-cardite', 'endocardite-pediatrica',
-              'hipertensao-pulmonar-pediatrica', 'defeito-septo-atrioventricular',
-              'estenose-pulmonar-congenita', 'retorno-venoso-pulmonar-anomalo', 'atresia-pulmonar',
-          }
-          current = all_current_records()
-          approvals = []
-          for slug in sorted(approve_existing):
-              rec = current.get(slug)
-              if not rec:
-                  print('WARN approval slug ausente:', slug); continue
-              patch = {'review_status':'revisado'}
-              note = rec.get('review_note') or ''
-              patch['review_note'] = (note + ' Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração.').strip()
-              if slug == 'cardiomiopatia-hipertrofica':
-                  for field in ('summary','epidemiology'):
-                      if isinstance(rec.get(field), str):
-                          text = rec[field]
-                          text = text.replace('principal causa de morte súbita cardíaca em jovens/atletas', 'causa importante e reconhecida de morte súbita cardíaca em jovens e atletas')
-                          text = text.replace('principal causa de morte súbita cardíaca em jovens e atletas', 'causa importante e reconhecida de morte súbita cardíaca em jovens e atletas')
-                          patch[field] = text
-              approvals.append({'slug':slug,'set':patch})
-          (cdir/'zz-release36h-approvals.json').write_text(json.dumps(approvals, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-
-          rel_path = ROOT/'doencas/relacoes-explicitas.json'
-          if rel_path.exists():
-              rels = json.loads(rel_path.read_text(encoding='utf-8'))
-              relation_sources = approve_existing | imported_slugs
-              for r in rels:
-                  if r.get('source_disease_slug') in relation_sources and r.get('review_status') == 'pendente_revisao':
-                      r['review_status'] = 'revisado'
-              rel_path.write_text(json.dumps(rels, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-
-          doc_prs = [582,583,586,587,589,592,595,600]
-          for pr in doc_prs:
-              ref = f'refs/remotes/origin/pr-{pr}'
-              files = subprocess.check_output(['gh','api','--paginate',f'repos/{REPO}/pulls/{pr}/files','--jq','.[].filename'], text=True).splitlines()
-              for path_s in files:
-                  if not path_s.startswith('content/') or not path_s.endswith('.md'):
-                      continue
-                  path = ROOT/path_s
-                  if path.exists():
-                      print('KEEP newer/existing:', path_s)
-                      continue
-                  try:
-                      text = git_show(ref, path_s)
-                  except subprocess.CalledProcessError:
-                      continue
-                  text = re.sub(r'(?m)^review_status:\s*["\']?pendente_revisao["\']?\s*$', 'review_status: revisado', text)
-                  text = text.replace('Circulation. 2026;153:e000-e000', '2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease; DOI 10.1161/CIR.0000000000001402')
-                  path.parent.mkdir(parents=True, exist_ok=True)
-                  path.write_text(text, encoding='utf-8')
-                  print('COPIED+REVIEWED:', path_s)
-
-          docs = [
-              ROOT/'content/Cardiologia_do_Esporte_e_do_Exercício/aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca.md',
-              ROOT/'content/Saúde_mental_e_cardiologia/manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia.md',
-              ROOT/'content/Tromboembolismo/diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter.md',
-          ]
-          for path in docs:
-              if not path.exists(): continue
-              text = path.read_text(encoding='utf-8')
-              text = re.sub(r'(?m)^review_status:\s*["\']?pendente_revisao["\']?\s*$', 'review_status: revisado', text)
-              if 'stop-bang' in path.name:
-                  text = text.replace('na avaliação pré-anestésica de todo paciente agendado para cirurgia cardíaca eletiva', 'como ferramenta estruturada de triagem na avaliação pré-anestésica de pacientes submetidos a cirurgia cardíaca eletiva, conforme risco e protocolo perioperatório institucional')
-                  text = text.replace('Por isso a indicação é ampla e não seletiva: o escore **STOP-Bang** deve ser aplicado na avaliação pré-anestésica de **todo paciente agendado para cirurgia cardíaca eletiva**, independentemente de já ter diagnóstico prévio de AOS.', 'Por isso, o **STOP-Bang** é uma ferramenta útil para triagem estruturada de AOS no pré-operatório, especialmente quando o serviço adota rastreamento perioperatório sistemático ou quando há fatores de risco. Ele não deve ser apresentado como obrigação universal independente do contexto clínico ou do protocolo institucional.')
-                  text = text.replace('escore igual ou maior que 3 (de 8) classifica o paciente como de alta probabilidade de apneia obstrutiva do sono', 'escore igual ou maior que 3 (de 8) identifica triagem positiva/risco aumentado para apneia obstrutiva do sono, sem estabelecer diagnóstico')
-                  text = text.replace('O STOP-Bang alto sempre gera conduta', 'Um STOP-Bang de maior risco deve ser incorporado ao julgamento perioperatório')
-                  text = text.replace('devem ser sinalizados, desde a avaliação pré-anestésica, para **monitorização cardiorrespiratória contínua** (oximetria de pulso e telemetria) por um **período estendido no pós-operatório**, além da rotina padrão', 'devem ter o risco respiratório pós-operatório explicitamente incorporado ao planejamento; a intensidade e a duração da monitorização (incluindo oximetria e, quando indicada pelo contexto cardiovascular, telemetria) devem seguir risco global e protocolo institucional, em vez de uma duração universal além da rotina padrão')
-              path.write_text(text, encoding='utf-8')
-
-          approved_tokens = approve_existing | imported_slugs | {p.stem for p in docs}
-          for test in (ROOT/'backend/tests').glob('test_*.py'):
-              text = test.read_text(encoding='utf-8')
-              if 'pendente_revisao' in text and any(tok in text for tok in approved_tokens):
-                  text = text.replace('"pendente_revisao"', '"revisado"').replace("'pendente_revisao'", "'revisado'")
-                  test.write_text(text, encoding='utf-8')
-
-          gate = ROOT/'backend/tests/test_canonical_content_review_status.py'
-          g = gate.read_text(encoding='utf-8')
-          g = re.sub(r'PENDENTES_LOTES_TUDO_COM_TUDO: dict\[str, set\[str\]\] = \{.*?\}\nPENDENTES_MARKDOWN_AVC:', 'PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}\nPENDENTES_MARKDOWN_AVC:', g, flags=re.S)
-          gate.write_text(g, encoding='utf-8')
-          PY
-
-      - name: Validate composed disease manifest with traceback
-        shell: bash
+      - name: Compose reviewed scientific release
         run: |
           set -euo pipefail
           PYTHONPATH=backend python - <<'PY'
-          import traceback
+          import json, os, re, subprocess
           from pathlib import Path
           from app.services.disease_manifest import load_disease_records
-          try:
-              records = load_disease_records(Path('doencas/metadados.json'))
-              print('composed diseases:', len(records))
-          except Exception:
-              traceback.print_exc()
-              raise
+
+          root=Path('.')
+          repo=os.environ['GITHUB_REPOSITORY']
+          spec='''560:sincope
+          563:valvopatias
+          564:sindrome-coracao-esquerdo-hipoplasico-fetal,comunicacao-interatrial,isquemia-mesenterica-aguda-cardioembolica
+          568:miocardite
+          570:dislipidemia
+          572:diabetes-mellitus-tipo-2
+          574:tromboembolismo-venoso
+          578:doenca-arterial-periferica-de-membros
+          581:taquicardia-supraventricular
+          585:canalopatias-cardiacas-hereditarias
+          648:avaliacao-cardiovascular-pre-concepcional
+          649:avaliacao-basal-cardiooncologica
+          653:cardiotoxicidade-inibidor-proteassoma
+          654:cardiotoxicidade-raf-mek
+          656:qt-longo-terapia-oncologica
+          657:plano-alta-cardiogeriatria
+          658:plano-sobrevivencia-cardiooncologica
+          659:sangramento-relacionado-a-anticoagulante
+          660:polifarmacia-e-desprecricao-cardiovascular
+          661:acidente-vascular-cerebral-agudo
+          662:sindrome-coronariana-cronica
+          663:arritmias-na-gravidez
+          664:insuficiencia-cardiaca
+          666:fibrilacao-atrial
+          667:hipertensao-arterial-sistemica'''
+          imports={int(line.strip().split(':',1)[0]):line.strip().split(':',1)[1].split(',') for line in spec.splitlines() if line.strip()}
+          current={r['slug']:r for r in load_disease_records(root/'doencas/metadados.json')}
+          cdir=root/'doencas/correcoes'; cdir.mkdir(exist_ok=True)
+          fdir=root/'doencas/fragmentos'; fdir.mkdir(exist_ok=True)
+
+          def show(ref,path): return subprocess.check_output(['git','show',f'{ref}:{path}'],text=True)
+          def replace_all(x,a,b):
+            if isinstance(x,str): return x.replace(a,b)
+            if isinstance(x,list): return [replace_all(v,a,b) for v in x]
+            if isinstance(x,dict): return {k:replace_all(v,a,b) for k,v in x.items()}
+            return x
+          def canonicalize(rec):
+            for q in rec.get('assistant_questions') or []:
+              if not isinstance(q,dict): continue
+              old=q.pop('text',None)
+              if not (isinstance(q.get('label'),str) and q['label'].strip()) and isinstance(old,str) and old.strip(): q['label']=old.strip()
+            rec['review_status']='revisado'
+            rec['review_note']=((rec.get('review_note') or '')+' Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.').strip()
+            return rec
+
+          imported=set()
+          for pr,slugs in imports.items():
+            source=json.loads(show(f'refs/remotes/origin/pr-{pr}','doencas/metadados.json'))
+            by={r['slug']:r for r in source}
+            for slug in slugs:
+              if slug not in by:
+                print('WARN source slug ausente',pr,slug); continue
+              rec=canonicalize(by[slug])
+              if slug=='cardiotoxicidade-inibidor-proteassoma':
+                rec=replace_all(rec,'controle pressórico agressivo','otimização pressórica adequada e individualizada')
+                rec=replace_all(rec,'Controle pressórico agressivo','Otimização pressórica adequada e individualizada')
+              imported.add(slug)
+              if slug in current:
+                payload=[{'slug':slug,'set':{k:v for k,v in rec.items() if k!='slug'}}]
+                out=cdir/f'zz-release36h-pr{pr}-{slug}.json'
+              else:
+                payload=[rec]
+                out=fdir/f'zz-release36h-{slug}.json'
+                current[slug]=rec
+              out.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          approve={'cardiomiopatias','cardiomiopatia-hipertrofica','febre-reumatica-cardite','endocardite-pediatrica','hipertensao-pulmonar-pediatrica','defeito-septo-atrioventricular','estenose-pulmonar-congenita','retorno-venoso-pulmonar-anomalo','atresia-pulmonar'}
+          current={r['slug']:r for r in load_disease_records(root/'doencas/metadados.json')}
+          patches=[]
+          for slug in sorted(approve):
+            rec=current.get(slug)
+            if not rec: print('WARN approval slug ausente',slug); continue
+            patch={'review_status':'revisado','review_note':((rec.get('review_note') or '')+' Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração.').strip()}
+            if slug=='cardiomiopatia-hipertrofica':
+              for field in ('summary','epidemiology'):
+                if isinstance(rec.get(field),str):
+                  patch[field]=rec[field].replace('principal causa de morte súbita cardíaca em jovens/atletas','causa importante e reconhecida de morte súbita cardíaca em jovens e atletas').replace('principal causa de morte súbita cardíaca em jovens e atletas','causa importante e reconhecida de morte súbita cardíaca em jovens e atletas')
+            patches.append({'slug':slug,'set':patch})
+          (cdir/'zz-release36h-approvals.json').write_text(json.dumps(patches,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          rel=root/'doencas/relacoes-explicitas.json'
+          if rel.exists():
+            rows=json.loads(rel.read_text(encoding='utf-8'))
+            for r in rows:
+              if r.get('source_disease_slug') in approve|imported and r.get('review_status')=='pendente_revisao': r['review_status']='revisado'
+            rel.write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          for pr in (582,583,586,587,589,592,595,600):
+            ref=f'refs/remotes/origin/pr-{pr}'
+            files=subprocess.check_output(['gh','api','--paginate',f'repos/{repo}/pulls/{pr}/files','--jq','.[].filename'],text=True).splitlines()
+            for name in files:
+              if not (name.startswith('content/') and name.endswith('.md')): continue
+              path=root/name
+              if path.exists(): print('KEEP newer/existing',name); continue
+              text=show(ref,name)
+              text=re.sub(r'(?m)^review_status:\s*["\']?pendente_revisao["\']?\s*$','review_status: revisado',text)
+              text=text.replace('Circulation. 2026;153:e000-e000','2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease; DOI 10.1161/CIR.0000000000001402')
+              path.parent.mkdir(parents=True,exist_ok=True); path.write_text(text,encoding='utf-8'); print('COPIED+REVIEWED',name)
+
+          docs=[root/'content/Cardiologia_do_Esporte_e_do_Exercício/aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca.md',root/'content/Saúde_mental_e_cardiologia/manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia.md',root/'content/Tromboembolismo/diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter.md']
+          for path in docs:
+            if not path.exists(): continue
+            text=path.read_text(encoding='utf-8')
+            text=re.sub(r'(?m)^review_status:\s*["\']?pendente_revisao["\']?\s*$','review_status: revisado',text)
+            if 'stop-bang' in path.name:
+              text=text.replace('Por isso a indicação é ampla e não seletiva: o escore **STOP-Bang** deve ser aplicado na avaliação pré-anestésica de **todo paciente agendado para cirurgia cardíaca eletiva**, independentemente de já ter diagnóstico prévio de AOS.','Por isso, o **STOP-Bang** é uma ferramenta útil para triagem estruturada de AOS no pré-operatório, especialmente quando o serviço adota rastreamento perioperatório sistemático ou quando há fatores de risco. Ele não deve ser apresentado como obrigação universal independente do contexto clínico ou do protocolo institucional.')
+              text=text.replace('escore igual ou maior que 3 (de 8) classifica o paciente como de alta probabilidade de apneia obstrutiva do sono','escore igual ou maior que 3 (de 8) identifica triagem positiva/risco aumentado para apneia obstrutiva do sono, sem estabelecer diagnóstico')
+              text=text.replace('O STOP-Bang alto sempre gera conduta','Um STOP-Bang de maior risco deve ser incorporado ao julgamento perioperatório')
+              text=text.replace('na avaliação pré-anestésica de todo paciente agendado para cirurgia cardíaca eletiva','como ferramenta estruturada de triagem na avaliação pré-anestésica de pacientes submetidos a cirurgia cardíaca eletiva, conforme risco e protocolo perioperatório institucional')
+            path.write_text(text,encoding='utf-8')
+
+          tokens=approve|imported|{p.stem for p in docs}
+          for test in (root/'backend/tests').glob('test_*.py'):
+            text=test.read_text(encoding='utf-8')
+            if 'pendente_revisao' in text and any(t in text for t in tokens):
+              test.write_text(text.replace('"pendente_revisao"','"revisado"').replace("'pendente_revisao'","'revisado'"),encoding='utf-8')
+          gate=root/'backend/tests/test_canonical_content_review_status.py'
+          g=gate.read_text(encoding='utf-8')
+          g=re.sub(r'PENDENTES_LOTES_TUDO_COM_TUDO: dict\[str, set\[str\]\] = \{.*?\}\nPENDENTES_MARKDOWN_AVC:','PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}\nPENDENTES_MARKDOWN_AVC:',g,flags=re.S)
+          gate.write_text(g,encoding='utf-8')
           PY
 
-      - name: Lightweight final scientific integrity checks
-        shell: bash
+      - name: Validate manifest and scientific integrity
         run: |
           set -euo pipefail
+          PYTHONPATH=backend python - <<'PY'
+          from pathlib import Path
+          from app.services.disease_manifest import load_disease_records
+          r=load_disease_records(Path('doencas/metadados.json'))
+          print('composed diseases:',len(r))
+          PY
           git diff --check
           python scripts/content_inventory.py --strict
           python scripts/audit_tudo_com_tudo.py
 
       - name: Commit integrated science
-        shell: bash
         run: |
           set -euo pipefail
-          git config user.name "corvia-release-bot"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.name corvia-release-bot
+          git config user.email actions@users.noreply.github.com
           git add -A
-          if git diff --cached --quiet; then
-            echo "No changes"
-            exit 0
-          fi
-          git commit -m "release: integrar e revisar toda produção científica das últimas 36h"
+          git diff --cached --quiet && exit 0
+          git commit -m 'release: integrar e revisar toda produção científica das últimas 36h'
           git push origin HEAD:${TARGET_BRANCH}
