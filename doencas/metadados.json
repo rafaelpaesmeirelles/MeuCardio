@@ -10675,22 +10675,22 @@
     "assistant_questions": [
       {
         "id": "septo_interventricular_integro",
-        "text": "O septo interventricular é íntegro, sem comunicação interventricular associada?",
+        "label": "O septo interventricular é íntegro, sem comunicação interventricular associada?",
         "type": "boolean"
       },
       {
         "id": "forame_oval_restritivo",
-        "text": "O forame oval apresenta-se restritivo à avaliação ecocardiográfica?",
+        "label": "O forame oval apresenta-se restritivo à avaliação ecocardiográfica?",
         "type": "boolean"
       },
       {
         "id": "canal_arterial_patente",
-        "text": "O canal arterial está patente na avaliação mais recente?",
+        "label": "O canal arterial está patente na avaliação mais recente?",
         "type": "boolean"
       },
       {
         "id": "local_parto_planejado",
-        "text": "Qual o local planejado para o parto?",
+        "label": "Qual o local planejado para o parto?",
         "type": "select",
         "options": [
           {
@@ -10709,12 +10709,12 @@
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Qual a idade gestacional atual, em semanas?",
+        "label": "Qual a idade gestacional atual, em semanas?",
         "type": "number"
       },
       {
         "id": "anomalias_associadas",
-        "text": "Há anomalias associadas identificadas?",
+        "label": "Há anomalias associadas identificadas?",
         "type": "multiselect",
         "options": [
           {
@@ -10737,32 +10737,32 @@
       },
       {
         "id": "saturacao_o2_neonatal",
-        "text": "Qual a saturação de oxigênio do recém-nascido no momento da avaliação, em porcentagem?",
+        "label": "Qual a saturação de oxigênio do recém-nascido no momento da avaliação, em porcentagem?",
         "type": "number"
       },
       {
         "id": "infusao_prostaglandina_iniciada",
-        "text": "A infusão de prostaglandina E1 já foi iniciada?",
+        "label": "A infusão de prostaglandina E1 já foi iniciada?",
         "type": "boolean"
       },
       {
         "id": "sinais_hipoxemia_grave",
-        "text": "Há sinais clínicos de hipoxemia grave refratária?",
+        "label": "Há sinais clínicos de hipoxemia grave refratária?",
         "type": "boolean"
       },
       {
         "id": "necessidade_septostomia_avaliada",
-        "text": "A necessidade de septostomia atrial com balão já foi avaliada pela equipe de hemodinâmica pediátrica?",
+        "label": "A necessidade de septostomia atrial com balão já foi avaliada pela equipe de hemodinâmica pediátrica?",
         "type": "boolean"
       },
       {
         "id": "transferencia_necessaria",
-        "text": "É necessária transferência para centro terciário com suporte cardiológico pediátrico?",
+        "label": "É necessária transferência para centro terciário com suporte cardiológico pediátrico?",
         "type": "boolean"
       },
       {
         "id": "tipo_tga_anatomico",
-        "text": "Qual o tipo anatômico de transposição das grandes artérias identificado?",
+        "label": "Qual o tipo anatômico de transposição das grandes artérias identificado?",
         "type": "select",
         "options": [
           {
