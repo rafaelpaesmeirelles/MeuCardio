@@ -13073,7 +13073,7 @@
     "category": "cardiologia_fetal",
     "subtype": "rastreamento_e_indicacoes",
     "prevalence_rank": 31,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Organização das indicações maternas, fetais e familiares para ecocardiografia fetal, sempre integrada à qualidade do rastreamento obstétrico local.",
     "tags": [
       "eco fetal",
@@ -13081,18 +13081,556 @@
       "pré-natal"
     ],
     "source_refs": [
-      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram"
+      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram",
+      "Moon-Grady AJ, Donofrio MT, Gelehrter S, et al. Guidelines and Recommendations for Performance of the Fetal Echocardiogram: An Update from the American Society of Echocardiography. J Am Soc Echocardiogr. 2023;36(7):679-723. PMID: 37227365",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516",
+      "Carvalho JS, Allan LD, Chaoui R, et al. ISUOG Practice Guidelines (updated): sonographic screening examination of the fetal heart. Ultrasound Obstet Gynecol. 2013;41(3):348-359. PMID: 23460196",
+      "Hyett J, Perdu M, Sharland G, Snijders R, Nicolaides KH. Using fetal nuchal translucency to screen for major congenital cardiac defects at 10-14 weeks of gestation: population based cohort study. BMJ. 1999;318(7176):81-85. PMID: 9880278",
+      "Sotiriadis A, Papatheodorou S, Eleftheriades M, Makrydimas G. Nuchal translucency and major congenital heart defects in fetuses with normal karyotype: a meta-analysis. Ultrasound Obstet Gynecol. 2013;42(4):383-389. PMID: 23606595",
+      "Quartermain MD, Pasquali SK, Hill KD, et al. Variation in prenatal diagnosis of congenital heart disease in infants. Pediatrics. 2015;136(2):e378-e385. PMID: 26216324"
     ],
     "source_urls": [
-      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"
+      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/37227365/",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/23460196/",
+      "https://pubmed.ncbi.nlm.nih.gov/9880278/",
+      "https://pubmed.ncbi.nlm.nih.gov/23606595/",
+      "https://pubmed.ncbi.nlm.nih.gov/26216324/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (17º lote de conteúdo do dia, primeiro fora do cluster de gravidez pós-parto — área cardiopediatria/cardiologia fetal): ficha tinha apenas summary/tags/1 source_ref de catalogação, 1 related_document_slug e patient_material_slug já preenchido. Ficha framework/protocolo de triagem (indicações para ecocardiograma fetal direcionado), não doença única — presentation/differentials reinterpretados como categorias de indicação/distinções conceituais, mesmo padrão já usado em avaliacao-multidimensional-cardiogeriatrica/PR #613, cuidados-paliativos-cardiovasculares/PR #615 e plano-parto-cardiopatia-materna/PR #626. Adicionados epidemiology, presentation (17 categorias de indicação: 7 maternas, 7 fetais, 3 familiares/genéticas), diagnostic_approach (6 subtópicos), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (14), assistant_rules (12). related_document_slugs expandido de 1 para 3 (união com o original, sem duplicar) — busca exaustiva encontrou apenas 3 documentos narrativos que tratam explicitamente de indicação/realização do exame (não fichas de doença fetal específica, que foram deliberadamente excluídas por não serem 'documentos' no sentido da regra Tudo com Tudo). patient_material_slug original preservado. Overlap com tetralogia-de-fallot (2 documentos) — legítimo. Nenhuma dose de fármaco em nenhum campo. Corrigida na montagem: uma assistant_rule do agente da Parte 2 usava a chave 'monitoring' em 'add' (não permitida) — o conteúdo foi preservado, movido para a chave 'supporting'.",
+    "version": 2,
     "related_document_slugs": [
-      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
+      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado",
+      "ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito",
+      "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018"
     ],
-    "patient_material_slug": "indicacoes-ecocardiograma-fetal"
+    "patient_material_slug": "indicacoes-ecocardiograma-fetal",
+    "epidemiology": "A cardiopatia congênita é a malformação estrutural mais comum ao nascimento, com prevalência estimada entre 6 e 12 casos por 1.000 nascidos vivos na população geral, variação que depende do rigor diagnóstico adotado e da inclusão de lesões leves, como pequenas comunicações interventriculares musculares. Em subgrupos de risco — gestantes com diabetes pré-gestacional, doença do tecido conjuntivo com anticorpos anti-Ro/SSA e anti-La/SSB positivos, exposição a teratógenos cardíacos conhecidos, cardiopatia congênita materna prévia, ou achados fetais como translucência nucal aumentada, arritmia detectada ou hidropisia — essa prevalência pode ultrapassar 2% a 5%, configurando risco várias vezes superior ao basal populacional. O ultrassom morfológico obstétrico de rotina, realizado entre 18 e 24 semanas, tem sensibilidade limitada para cardiopatia congênita complexa, com taxas de detecção historicamente variando entre 30% e 60% conforme a experiência do examinador, o protocolo de imagem empregado e a inclusão sistemática da avaliação das vias de saída ventriculares. O ecocardiograma fetal direcionado, realizado por examinador experiente com protocolo segmentar completo — incluindo vias de saída, arcos aórtico e ductal, veias sistêmicas e pulmonares, ritmo e função miocárdica — apresenta acurácia substancialmente maior e constitui o exame de escolha sempre que houver indicação materna, fetal ou familiar específica, conforme recomendado pelas 2023 ASE Guidelines for Performance of the Fetal Echocardiogram.",
+    "presentation": [
+      "Indicação materna: diabetes pré-gestacional (tipo 1 ou tipo 2), com risco aumentado de cardiopatia estrutural e de cardiomiopatia hipertrófica fetal associada a controle glicêmico inadequado no início da gestação",
+      "Indicação materna: doença do tecido conjuntivo com anticorpos anti-Ro/SSA e anti-La/SSB positivos, com risco de bloqueio atrioventricular fetal e de cardiomiopatia/miocardite associada ao lúpus neonatal",
+      "Indicação materna: exposição a teratógenos cardíacos conhecidos, incluindo determinados anticonvulsivantes, lítio e derivados do ácido retinoico, com associação estabelecida a defeitos cardíacos estruturais",
+      "Indicação materna: cardiopatia congênita materna, com risco de recorrência na prole superior ao da população geral, variável conforme a lesão específica da mãe",
+      "Indicação materna: infecção com potencial cardiotrópico no início da gestação (por exemplo, rubéola no primeiro trimestre), associada a defeitos estruturais e a miocardite fetal",
+      "Indicação materna: concepção por fertilização in vitro ou outras técnicas de reprodução assistida, associada na literatura a maior risco de cardiopatia congênita fetal",
+      "Indicação materna: obesidade materna grave, reconhecida como fator de risco independente e como limitante técnico adicional para a janela acústica do exame",
+      "Indicação fetal: suspeita de anomalia cardíaca estrutural na ultrassonografia morfológica de rotina, a indicação mais direta e frequente para encaminhamento ao ecocardiograma direcionado",
+      "Indicação fetal: arritmia detectada — taquiarritmia sustentada, bradicardia persistente ou irregularidade de ritmo identificada em ausculta ou ultrassom obstétrico",
+      "Indicação fetal: translucência nucal aumentada no primeiro trimestre (acima do percentil 99 ou igual/superior a 3,5 mm), independentemente do resultado do cariótipo ou do microarray",
+      "Indicação fetal: hidropisia fetal não imune, com necessidade de excluir causa cardíaca estrutural, arrítmica ou funcional antes de investigar outras etiologias",
+      "Indicação fetal: gestação múltipla monocoriônica, com risco aumentado de cardiopatia estrutural e de alterações funcionais cardíacas relacionadas à síndrome de transfusão feto-fetal",
+      "Indicação fetal: anomalia extracardíaca identificada ao ultrassom morfológico (por exemplo, onfalocele, anomalia renal ou alteração do sistema nervoso central), com associação frequente a defeitos cardíacos",
+      "Indicação fetal: restrição de crescimento fetal precoce e grave, cenário em que se recomenda avaliação cardíaca estrutural e funcional dirigida",
+      "Indicação familiar/genética: cardiopatia congênita em gestação anterior ou em parente de primeiro grau (irmão, pai ou mãe), com risco de recorrência acima do basal populacional",
+      "Indicação familiar/genética: síndrome genética associada a cardiopatia congênita suspeitada ou confirmada, como síndrome de Down, deleção 22q11.2, síndrome de Noonan ou síndrome de Turner",
+      "Indicação familiar/genética: cariótipo fetal ou estudo de microarray cromossômico alterado, mesmo na ausência de anomalia cardíaca visível ao ultrassom morfológico"
+    ],
+    "diagnostic_approach": {
+      "indicacoes_maternas_detalhadas": "As indicações maternas reúnem condições que alteram o ambiente metabólico, imunológico ou farmacológico da gestação e que, por associação epidemiológica consistente, elevam o risco de cardiopatia estrutural, cardiomiopatia ou distúrbio de condução fetal. Diabetes pré-gestacional é a indicação materna mais prevalente, com risco proporcional ao grau de controle glicêmico periconcepcional. Doença do tecido conjuntivo com anticorpos anti-Ro/SSA e anti-La/SSB positivos exige vigilância seriada pelo risco de bloqueio atrioventricular, que pode evoluir de forma abrupta. Exposição a teratógenos cardíacos conhecidos e cardiopatia congênita materna prévia completam o grupo de indicações maternas mais consolidadas nas diretrizes de referência.",
+      "indicacoes_fetais_detalhadas": "As indicações fetais decorrem de achados identificados durante a própria vigilância obstétrica da gestação em curso: suspeita de anomalia cardíaca ao ultrassom morfológico, arritmia detectada, translucência nucal aumentada no primeiro trimestre, hidropisia não imune, gestação múltipla monocoriônica, anomalia extracardíaca associada e restrição de crescimento grave. Esses achados funcionam como marcadores de maior probabilidade pré-teste para cardiopatia estrutural ou funcional e justificam encaminhamento para exame direcionado, independentemente de o rastreamento de rotina ter sido reportado como normal.",
+      "indicacoes_familiares_geneticas_detalhadas": "Indicações familiares e genéticas incluem história de cardiopatia congênita em gestação prévia ou em parente de primeiro grau, e síndromes genéticas com associação cardíaca bem descrita, como trissomia do 21, deleção 22q11.2, síndrome de Noonan e síndrome de Turner. A recorrência familiar de cardiopatia congênita é maior que o risco basal populacional, com magnitude variável conforme o tipo de lesão índice e o grau de parentesco, o que justifica ecocardiograma fetal direcionado mesmo sem outro achado adicional na gestação atual.",
+      "janela_gestacional_ideal": "O ecocardiograma fetal direcionado é classicamente realizado entre 18 e 22 semanas de gestação, período que combina janela acústica adequada e maturidade estrutural suficiente para avaliação segmentar completa. Em gestações de alto risco ou quando há suspeita já no primeiro trimestre (por exemplo, translucência nucal muito aumentada), uma avaliação cardíaca precoce entre 13 e 16 semanas pode ser considerada, sempre com recomendação de reavaliação no segundo trimestre para confirmação e detalhamento, dado que estruturas cardíacas pequenas nessa fase limitam a sensibilidade do exame precoce isolado.",
+      "diferenca_rastreamento_vs_direcionado": "O ultrassom morfológico obstétrico de rotina inclui uma avaliação cardíaca básica, geralmente limitada aos quatro planos padrão de câmaras e, quando possível, às vias de saída, sendo realizado por profissional de obstetrícia geral como parte de um exame amplo de anatomia fetal. Já o ecocardiograma fetal direcionado é um exame dedicado, realizado por examinador com treinamento específico em cardiologia fetal, com protocolo segmentar completo que abrange conexões venoatriais, atrioventriculares e ventrículo-arteriais, arcos aórtico e ductal, septo interventricular, avaliação do ritmo e da função miocárdica. Essa diferença de profundidade e de expertise explica a acurácia substancialmente maior do exame direcionado para detecção de cardiopatia congênita complexa.",
+      "seguimento_e_periodicidade": "Quando o ecocardiograma fetal direcionado inicial é normal mas a indicação de base persiste como fator de risco contínuo — como diabetes materna mal controlada ou anticorpos anti-Ro/anti-La positivos — recomenda-se seguimento seriado ao longo da gestação, com periodicidade individualizada conforme o risco específico, para captar lesões de instalação tardia, como cardiomiopatia hipertrófica ou bloqueio atrioventricular progressivo."
+    },
+    "differentials": [
+      "Ultrassom morfológico obstétrico de rotina (avaliação cardíaca básica, dentro de um exame amplo de anatomia fetal) versus ecocardiograma fetal direcionado (exame dedicado, com protocolo segmentar completo e maior acurácia diagnóstica)",
+      "Indicação de rastreamento populacional (exame básico oferecido a toda gestante) versus indicação diagnóstica individual (exame direcionado motivado por fator de risco materno, fetal ou familiar específico)",
+      "Translucência nucal aumentada com cariótipo e microarray normais (risco residual de cardiopatia estrutural isolada, que ainda justifica ecocardiograma fetal direcionado) versus translucência nucal aumentada com cariótipo ou microarray alterados (risco combinado de aneuploidia e de cardiopatia estrutural associada)",
+      "Arritmia fetal transitória e benigna, como extrassístoles isoladas sem repercussão hemodinâmica, versus arritmia fetal sustentada com repercussão hemodinâmica, como taquicardia supraventricular sustentada ou bloqueio atrioventricular completo, que exige seguimento direcionado e potencial intervenção",
+      "Hidropisia fetal de causa cardíaca (estrutural, arrítmica ou funcional) versus hidropisia fetal de causa não cardíaca (anemia fetal, infecção congênita, alteração linfática ou síndrome genética), distinção que orienta a sequência de investigação complementar",
+      "Cardiopatia congênita isolada versus cardiopatia congênita associada a síndrome genética ou a anomalia extracardíaca, distinção que muda o aconselhamento pré-natal e a investigação genética recomendada",
+      "Ecocardiograma fetal de avaliação única versus ecocardiograma fetal seriado, este último indicado quando há risco de progressão da lesão ao longo da gestação, como em estenoses valvares evolutivas ou cardiomiopatias associadas a exposição materna contínua"
+    ],
+    "tests": [
+      "Cariótipo fetal por amniocentese ou vilocorial, quando há suspeita de aneuploidia associada",
+      "Microarray cromossômico (CMA), com maior resolução que o cariótipo para microdeleções e microduplicações associadas a cardiopatia",
+      "Ultrassom morfológico obstétrico detalhado, para avaliação de anomalias extracardíacas associadas",
+      "Ressonância magnética fetal, útil em casos selecionados de anomalia estrutural extracardíaca associada ou de janela acústica limitada",
+      "Ecocardiograma fetal seriado, para seguimento de lesões com potencial de progressão ao longo da gestação",
+      "Doppler de artérias uterinas e da artéria umbilical, na avaliação de restrição de crescimento fetal associada",
+      "Sorologia ou pesquisa de anticorpos anti-Ro/SSA e anti-La/SSB maternos, quando há suspeita de bloqueio atrioventricular ou de cardiomiopatia associada a doença autoimune",
+      "Painel de investigação de infecções congênitas, quando há hidropisia fetal ou achados sugestivos de etiologia infecciosa",
+      "Monitorização do ritmo cardíaco fetal e avaliação neonatal do ritmo ao nascimento, quando arritmia fetal foi identificada durante a gestação"
+    ],
+    "red_flags": [
+      "Bloqueio atrioventricular completo fetal detectado, com risco de descompensação hemodinâmica e necessidade de vigilância intensiva",
+      "Taquiarritmia fetal sustentada acompanhada de sinais de hidropisia, configurando emergência de avaliação e manejo direcionado",
+      "Hidropisia fetal não imune de causa ainda indeterminada, exigindo investigação cardíaca urgente entre as etiologias possíveis",
+      "Anomalia cardíaca estrutural complexa suspeitada ao ultrassom de rastreamento, como discrepância importante entre as câmaras cardíacas ou via de saída ventricular única",
+      "Derrame pericárdico fetal significativo, achado que pode sinalizar disfunção miocárdica ou processo inflamatório subjacente",
+      "Disfunção miocárdica ou sinais de cardiomiopatia fetal em gestante com anticorpos anti-Ro/SSA e anti-La/SSB positivos",
+      "Translucência nucal muito aumentada, várias vezes acima da mediana para a idade gestacional, mesmo com cariótipo normal",
+      "Cardiomegalia fetal progressiva identificada em avaliações seriadas, sugerindo sobrecarga ou disfunção cardíaca evolutiva"
+    ],
+    "treatment_summary": "O ecocardiograma fetal direcionado deve ser indicado sempre que existir fator de risco materno, fetal ou familiar para cardiopatia congênita, não substituindo o rastreamento obstétrico de rotina, mas complementando-o quando há suspeita específica. Entre as indicações maternas destacam-se diabetes pré-gestacional ou diabetes gestacional mal controlado, doenças autoimunes com positividade para anti-Ro/SSA e anti-La/SSB (risco de bloqueio atrioventricular fetal), exposição a medicações com potencial cardiotóxico fetal, infecções congênitas confirmadas ou suspeitas, fertilização in vitro, obesidade materna importante e história familiar de cardiopatia congênita em gestação anterior ou em um dos genitores. As indicações fetais incluem translucência nucal aumentada no primeiro trimestre, suspeita de anomalia cardíaca à ultrassonografia morfológica de rotina, arritmia fetal detectada na ausculta ou no exame obstétrico, presença de anomalias extracardíacas, marcadores de cromossomopatia, gestação múltipla monocoriônica (pelo risco de síndrome de transfusão feto-fetal) e restrição de crescimento fetal precoce e grave. A janela gestacional ideal para o exame morfológico cardíaco direcionado situa-se entre 18 e 24 semanas, período em que a visualização das estruturas cardíacas é mais completa; em gestações de alto risco, uma avaliação precoce por via transvaginal entre 11 e 14 semanas pode ser realizada como triagem inicial, sempre com reavaliação confirmatória posterior. O exame deve ser realizado por profissional com treinamento específico em cardiologia fetal, seja um cardiologista fetal dedicado, seja um ecografista obstétrico com capacitação reconhecida e experiência documentada em ecocardiografia fetal, pois a acurácia diagnóstica depende diretamente da qualificação do examinador. Diante da confirmação de cardiopatia congênita fetal, a conduta envolve aconselhamento multidisciplinar imediato, reunindo obstetra, cardiologista fetal ou pediátrico, neonatologista e, quando pertinente, geneticista, para discutir prognóstico, opções terapêuticas pós-natais e expectativas familiares. O encaminhamento a um centro de referência em cardiologia fetal e pediátrica é essencial para definição de seguimento seriado, planejamento antecipado do parto (via, momento e local, considerando a necessidade de suporte cardiológico neonatal imediato) e, quando indicado, orientação sobre intervenções intrauterinas em situações selecionadas. A investigação genética, incluindo cariótipo fetal e estudo de microarray cromossômico, deve ser sistematicamente considerada diante de qualquer achado estrutural cardíaco, dada a associação frequente entre cardiopatias congênitas e cromossomopatias, como trissomias e síndromes de deleção. É fundamental reforçar que o rastreamento obstétrico de rotina, mesmo quando realizado com boa técnica, tem sensibilidade limitada para detecção de cardiopatias e não substitui o ecocardiograma fetal direcionado quando existe indicação específica baseada em fatores de risco maternos, fetais ou familiares reconhecidos.",
+    "ambulatory_flow": [
+      "Identificar fatores de risco maternos, fetais ou familiares para cardiopatia congênita durante o pré-natal",
+      "Registrar história obstétrica pregressa, história familiar de cardiopatia e comorbidades maternas relevantes",
+      "Solicitar encaminhamento formal para ecocardiograma fetal direcionado com especialista qualificado",
+      "Agendar o exame preferencialmente entre 18 e 24 semanas de gestação, ou avaliação transvaginal precoce entre 11 e 14 semanas em casos de alto risco",
+      "Realizar o ecocardiograma fetal com avaliação sistemática das quatro câmaras, vias de saída, arcos e ritmo cardíaco",
+      "Emitir laudo detalhado descrevendo achados estruturais, funcionais e de ritmo, com classificação de gravidade quando aplicável",
+      "Discutir resultado normal com a gestante e reforçar seguimento obstétrico habitual, sem necessidade de reavaliação adicional na ausência de novos fatores de risco",
+      "Em caso de achado anormal, encaminhar a centro de referência em cardiologia fetal para aconselhamento multidisciplinar",
+      "Considerar investigação genética complementar (cariótipo fetal, microarray) diante de achado estrutural cardíaco",
+      "Planejar seguimento ecocardiográfico seriado e definir estratégia de parto em conjunto com equipe de neonatologia"
+    ],
+    "emergency_flow": [
+      "Reconhecer hidropisia fetal de início recente identificada ao exame como situação de risco imediato",
+      "Reconhecer arritmia fetal com repercussão hemodinâmica, incluindo bloqueio atrioventricular total com frequência ventricular baixa",
+      "Encaminhar imediatamente a gestante a centro terciário com suporte de cardiologia fetal e neonatologia disponível",
+      "Realizar avaliação ecocardiográfica detalhada de urgência para caracterizar o achado estrutural ou de ritmo",
+      "Acionar equipe multidisciplinar (obstetrícia de alto risco, cardiologia fetal, neonatologia) para discussão conjunta do caso",
+      "Definir necessidade de vigilância intensiva e antecipação do planejamento do parto quando houver cardiopatia estrutural grave incompatível com estabilidade pós-natal sem intervenção precoce",
+      "Orientar a família sobre gravidade, prognóstico estimado e opções de conduta, incluindo eventual necessidade de terapia intrauterina em centros especializados",
+      "Programar parto em local com suporte cardiológico e cirúrgico pediátrico imediato disponível quando indicado"
+    ],
+    "monitoring": [
+      "Seguimento ecocardiográfico seriado conforme gravidade e tipo de achado identificado",
+      "Monitorização do ritmo cardíaco fetal em gestantes com anti-Ro/SSA e anti-La/SSB positivos",
+      "Avaliação seriada de sinais de hidropisia fetal em casos de arritmia ou disfunção cardíaca",
+      "Acompanhamento do crescimento fetal e do volume de líquido amniótico ao longo da gestação",
+      "Reavaliação funcional cardíaca fetal em intervalos definidos pela equipe de cardiologia fetal",
+      "Vigilância materna de sinais de descompensação em gestações de alto risco associadas a cardiopatia fetal",
+      "Coordenação entre obstetrícia, cardiologia fetal e neonatologia para planejamento do parto e cuidado pós-natal imediato",
+      "Seguimento pós-natal cardiológico precoce do recém-nascido diagnosticado com cardiopatia congênita"
+    ],
+    "assistant_questions": [
+      {
+        "id": "history_diabetes_pregestacional",
+        "text": "A gestante possui diabetes pré-gestacional ou diabetes gestacional mal controlado?",
+        "type": "boolean"
+      },
+      {
+        "id": "anti_ro_la_positive",
+        "text": "A gestante apresenta positividade para anti-Ro/SSA ou anti-La/SSB?",
+        "type": "boolean"
+      },
+      {
+        "id": "previous_child_chd",
+        "text": "Houve cardiopatia congênita em gestação anterior?",
+        "type": "boolean"
+      },
+      {
+        "id": "family_history_chd",
+        "text": "Existe história familiar de cardiopatia congênita em um dos genitores?",
+        "type": "boolean"
+      },
+      {
+        "id": "nuchal_translucency_increased",
+        "text": "A translucência nucal do primeiro trimestre está aumentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "morphology_scan_cardiac_suspicion",
+        "text": "Há suspeita de anomalia cardíaca na ultrassonografia morfológica de rotina?",
+        "type": "boolean"
+      },
+      {
+        "id": "fetal_arrhythmia_detected",
+        "text": "Foi detectada arritmia fetal no exame obstétrico?",
+        "type": "boolean"
+      },
+      {
+        "id": "arrhythmia_type",
+        "text": "Qual o tipo de arritmia fetal identificada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "bradicardia",
+            "label": "Bradicardia"
+          },
+          {
+            "value": "taquicardia",
+            "label": "Taquicardia"
+          },
+          {
+            "value": "extrassistolia",
+            "label": "Extrassistolia"
+          },
+          {
+            "value": "bloqueio_av_total",
+            "label": "Bloqueio atrioventricular total"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável"
+          }
+        ]
+      },
+      {
+        "id": "hydrops_present",
+        "text": "Há hidropisia fetal detectada ao exame de imagem?",
+        "type": "boolean"
+      },
+      {
+        "id": "gestational_age_weeks",
+        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "type": "number"
+      },
+      {
+        "id": "teratogenic_medication_exposure",
+        "text": "Houve exposição materna a medicação com potencial cardiotóxico fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "monochorionic_twin_pregnancy",
+        "text": "Trata-se de gestação múltipla monocoriônica?",
+        "type": "boolean"
+      },
+      {
+        "id": "extracardiac_anomaly_detected",
+        "text": "Foi detectada alguma anomalia extracardíaca associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "karyotype_performed",
+        "text": "O cariótipo ou estudo genético fetal foi realizado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "pendente",
+            "label": "Pendente"
+          }
+        ]
+      },
+      {
+        "id": "structural_heart_defect_severity",
+        "text": "Qual a gravidade do defeito cardíaco estrutural identificado, se houver?",
+        "type": "select",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "hidropisia_fetal_nova_emergencia",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "hydrops_present",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal de início recente"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente a centro terciário com cardiologia fetal e neonatologia disponível"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal detalhado de urgência",
+            "Avaliação Doppler fetal"
+          ]
+        }
+      },
+      {
+        "id": "bloqueio_av_total_emergencia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "fetal_arrhythmia_detected",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "bloqueio_av_total"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bloqueio atrioventricular total com risco de repercussão hemodinâmica"
+          ],
+          "emergency_flow": [
+            "Acionar cardiologia fetal para avaliação imediata de frequência e função ventricular"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal com avaliação de ritmo e função"
+          ]
+        }
+      },
+      {
+        "id": "cardiopatia_estrutural_grave",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "structural_heart_defect_severity",
+              "op": "eq",
+              "value": "grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cardiopatia estrutural grave com necessidade de planejamento imediato de parto"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar a centro de referência em cardiologia fetal e pediátrica para planejamento conjunto"
+          ],
+          "emergency_flow": [
+            "Definir local e momento do parto com suporte cardiológico e neonatal imediato"
+          ]
+        }
+      },
+      {
+        "id": "suspeita_morfologica_cardiaca",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "morphology_scan_cardiac_suspicion",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Suspeita de anomalia cardíaca na ultrassonografia morfológica de rotina"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar com prioridade para ecocardiograma fetal direcionado"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal direcionado com especialista qualificado"
+          ]
+        }
+      },
+      {
+        "id": "anti_ro_la_bloqueio_av",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "anti_ro_la_positive",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Positividade para anti-Ro/SSA ou anti-La/SSB com risco de bloqueio atrioventricular fetal"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal seriado a partir de 16 semanas"
+          ]
+        }
+      },
+      {
+        "id": "translucencia_nucal_aumentada",
+        "priority": 68,
+        "when": {
+          "all": [
+            {
+              "field": "nuchal_translucency_increased",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Translucência nucal aumentada no primeiro trimestre"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal direcionado entre 18 e 24 semanas",
+            "Avaliação genética complementar"
+          ]
+        }
+      },
+      {
+        "id": "historia_familiar_ou_previa_cardiopatia",
+        "priority": 65,
+        "when": {
+          "any": [
+            {
+              "field": "previous_child_chd",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "family_history_chd",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "História familiar ou pregressa de cardiopatia congênita"
+          ],
+          "ambulatory_flow": [
+            "Indicar ecocardiograma fetal direcionado independentemente do rastreamento obstétrico de rotina"
+          ]
+        }
+      },
+      {
+        "id": "diabetes_materna_indicacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "history_diabetes_pregestacional",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Diabetes pré-gestacional ou gestacional mal controlado"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal direcionado entre 18 e 24 semanas"
+          ]
+        }
+      },
+      {
+        "id": "exposicao_teratogenica_cardiaca",
+        "priority": 58,
+        "when": {
+          "all": [
+            {
+              "field": "teratogenic_medication_exposure",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Exposição materna a medicação com potencial cardiotóxico fetal"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal direcionado"
+          ]
+        }
+      },
+      {
+        "id": "achado_estrutural_investigar_cariotipo",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "extracardiac_anomaly_detected",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "karyotype_performed",
+              "op": "eq",
+              "value": "nao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Estudo genético (cariótipo ou microarray) não realizado diante de achado estrutural associado"
+          ],
+          "suggested_tests": [
+            "Cariótipo fetal",
+            "Microarray cromossômico"
+          ]
+        }
+      },
+      {
+        "id": "gestacao_monocorionica_rastreio",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "monochorionic_twin_pregnancy",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Gestação múltipla monocoriônica com risco de síndrome de transfusão feto-fetal, requer seguimento ecocardiográfico seriado ao longo da gestação"
+          ]
+        }
+      },
+      {
+        "id": "idade_gestacional_precoce_janela",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "gestational_age_weeks",
+              "op": "lt",
+              "value": 18
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "missing_information": [
+            "Idade gestacional ainda anterior à janela ideal de 18 a 24 semanas para o exame morfológico cardíaco direcionado"
+          ],
+          "ambulatory_flow": [
+            "Considerar avaliação transvaginal precoce entre 11 e 14 semanas se alto risco, com reavaliação confirmatória entre 18 e 24 semanas"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com diabetes pré-gestacional: a hiperglicemia materna no período periconcepcional e no primeiro trimestre está associada a maior risco de cardiopatia congênita fetal, o que justifica avaliação cardíaca fetal direcionada independentemente de outros achados no rastreamento de rotina.",
+      "Gestante com doença do tecido conjuntivo e anticorpos anti-Ro/SSA ou anti-La/SSB positivos: esses anticorpos podem atravessar a placenta e lesar o sistema de condução cardíaco fetal, com risco de bloqueio atrioventricular fetal que evolui de forma silenciosa e pode ser irreversível uma vez estabelecido no grau completo, justificando ecocardiograma fetal seriado ao longo da janela de maior risco da gestação.",
+      "Gestante com cardiopatia congênita própria: a recorrência da lesão cardíaca na prole é claramente superior ao risco basal da população geral, com magnitude que varia conforme a lesão específica e conforme é a mãe ou o pai o portador, o que sustenta a indicação de ecocardiograma fetal direcionado mesmo na ausência de outros marcadores de risco.",
+      "Gestação múltipla monocoriônica: a comunicação vascular placentária compartilhada entre os fetos cria risco de sobrecarga hemodinâmica e remodelamento cardíaco relacionado à transfusão feto-fetal, o que justifica avaliação cardíaca fetal estruturada como parte da vigilância dessa gestação de alto risco.",
+      "Gestante com exposição a teratógeno conhecido no período relevante da organogênese cardíaca: a exposição documentada a um agente com potencial teratogênico cardíaco reconhecido é indicação para avaliação cardíaca fetal direcionada, independentemente de a translucência nucal ou o rastreamento do primeiro trimestre estarem normais.",
+      "Feto com translucência nucal aumentada ou outro marcador genético de risco identificado no rastreamento do primeiro trimestre: esse achado se associa a maior prevalência de cardiopatia estrutural mesmo quando o cariótipo fetal é normal, o que por si só justifica o encaminhamento para ecocardiograma fetal direcionado, complementar e não substituto do rastreamento anatômico de rotina."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "bloqueio-atrioventricular-fetal",
