@@ -72,15 +72,18 @@ ALLOWED_ADD_KEYS = {
 }
 
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
-    "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",  # sincope-pediatrica, canalopatias-pediatricas
-    "taquicardia-ventricular-polimorfica-catecolaminergica-cpvt-na-crianca-e-adolescente-genetica-diagnostico-e-tratamento",  # sincope-pediatrica, canalopatias-pediatricas
-    "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",  # sincope-pediatrica, canalopatias-pediatricas
-    "cardiomiopatia-arritmogenica-na-crianca-penetrancia-idade-dependente-rastreio-familiar-e-restricao-de-exercicio",  # sincope-pediatrica, cardiomiopatias-pediatricas
-    "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",  # taquicardia-supraventricular-fetal, bloqueio-atrioventricular-fetal, flutter-atrial-fetal, hidropisia-fetal-cardiovascular
-    "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno",  # extrassistoles-fetais
-    "sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",  # canalopatias-pediatricas
-    "fluxograma-sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",  # canalopatias-pediatricas
-    "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",  # canalopatias-pediatricas
+    "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
+    "taquicardia-ventricular-polimorfica-catecolaminergica-cpvt-na-crianca-e-adolescente-genetica-diagnostico-e-tratamento",
+    "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
+    "cardiomiopatia-arritmogenica-na-crianca-penetrancia-idade-dependente-rastreio-familiar-e-restricao-de-exercicio",
+    "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+    "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno",
+    "sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",
+    "fluxograma-sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",
+    "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+    "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",
+    "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",
+    "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",
 }
 
 
@@ -130,24 +133,19 @@ def test_catalogacao_original_preservada():
 
 def test_profundidade_minima_e_nao_e_resumo():
     item = _load_doencas()[SLUG]
-
     for field, minimum in MIN_LIST_ITEMS.items():
         value = item.get(field) or []
         assert isinstance(value, list), f"{field} deveria ser lista"
         assert len(value) >= minimum, f"{field} tem {len(value)} itens, mínimo {minimum}"
-
     for field, minimum in MIN_TEXT_CHARS.items():
         value = item.get(field) or ""
         assert isinstance(value, str), f"{field} deveria ser texto corrido"
         assert len(value) >= minimum, f"{field} tem {len(value)} caracteres, mínimo {minimum}"
-
     diagnostic = item.get("diagnostic_approach")
     assert diagnostic, "diagnostic_approach vazio"
     assert isinstance(diagnostic, (str, dict)), "diagnostic_approach deveria ser texto ou objeto estruturado"
     serialized_len = len(diagnostic) if isinstance(diagnostic, str) else len(json.dumps(diagnostic, ensure_ascii=False))
-    assert serialized_len >= MIN_DIAGNOSTIC_APPROACH_CHARS, (
-        f"diagnostic_approach tem {serialized_len} caracteres, mínimo {MIN_DIAGNOSTIC_APPROACH_CHARS}"
-    )
+    assert serialized_len >= MIN_DIAGNOSTIC_APPROACH_CHARS
 
 
 def test_assistente_deterministico_seguro():
@@ -156,17 +154,14 @@ def test_assistente_deterministico_seguro():
     rules = item.get("assistant_rules") or []
     assert len(questions) >= 3
     assert len(rules) >= 3
-
     q_errors, q_ids = validate_question_definitions(SLUG, questions)
     r_errors = validate_rule_definitions(SLUG, rules, q_ids)
     assert q_errors == []
     assert r_errors == []
     assert any(rule.get("priority", 0) >= 70 for rule in rules)
-
     for rule in rules:
         bad = set(rule.get("add", {}).keys()) - ALLOWED_ADD_KEYS
         assert not bad, f"regra {rule['id']} usa chaves não permitidas em add: {bad}"
-
     serialized = json.dumps(rules, ensure_ascii=False).casefold()
     assert "mwho" not in serialized
     assert "hfa-icos" not in serialized
@@ -183,26 +178,16 @@ def test_nenhuma_dose_de_farmaco_nem_energia_de_choque():
 def test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos():
     item = _load_doencas()[SLUG]
     documentos = _all_document_paths()
-
     related = item.get("related_document_slugs") or []
     assert len(related) >= 20, "hub deveria conectar um volume grande de documentos"
-
     nao_resolvidos = [slug for slug in related if slug not in documentos]
-    assert nao_resolvidos == [], f"related_document_slugs aponta para documento inexistente: {nao_resolvidos}"
-
-    fora_de_escopo = [
-        slug for slug in related
-        if any(pasta in str(documentos[slug]) for pasta in PASTAS_NAO_DOCUMENTO)
-    ]
-    assert fora_de_escopo == [], f"related_document_slugs aponta para fora do escopo permitido: {fora_de_escopo}"
-
-    assert len(related) == len(set(related)), "related_document_slugs contém duplicatas"
+    assert nao_resolvidos == []
+    fora_de_escopo = [slug for slug in related if any(pasta in str(documentos[slug]) for pasta in PASTAS_NAO_DOCUMENTO)]
+    assert fora_de_escopo == []
+    assert len(related) == len(set(related))
 
 
 def test_related_document_slugs_sao_todos_sobre_arritmia():
-    """Vínculo direto: aceita termos de arritmia em sentido amplo (bradi/
-    taquiarritmia, bloqueio AV, flutter, extrassístole, canalopatias
-    associadas) — evita link por proximidade temática pura."""
     item = _load_doencas()[SLUG]
     documentos = _all_document_paths()
     termos = (
@@ -212,35 +197,25 @@ def test_related_document_slugs_sao_todos_sobre_arritmia():
     )
     for slug in item.get("related_document_slugs") or []:
         texto = documentos[slug].read_text(encoding="utf-8", errors="replace").casefold()
-        assert any(t in texto for t in termos), (
-            f"{slug}: documento vinculado não menciona arritmia/bradi-taquiarritmia no texto"
-        )
+        assert any(t in texto for t in termos)
 
 
 def test_documentos_compartilhados_sao_os_esperados_e_documentados():
     item = _load_doencas()[SLUG]
     doencas = _load_doencas()
     related = set(item.get("related_document_slugs") or [])
-
     compartilhados_encontrados = set()
     for outro_slug, outro_item in doencas.items():
         if outro_slug == SLUG:
             continue
-        outros_related = set(outro_item.get("related_document_slugs") or [])
-        compartilhados_encontrados |= (related & outros_related)
-
+        compartilhados_encontrados |= (related & set(outro_item.get("related_document_slugs") or []))
     inesperados = compartilhados_encontrados - DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS
-    assert inesperados == set(), (
-        f"sobreposição não documentada com outra ficha: {inesperados}"
-    )
+    assert inesperados == set(), f"sobreposição não documentada com outra ficha: {inesperados}"
 
 
 def test_patient_material_slug_resolve():
     item = _load_doencas()[SLUG]
     material = item.get("patient_material_slug")
     assert material == "arritmias-pediatricas"
-    materiais = {
-        x["slug"]
-        for x in json.loads((REPOSITORY_ROOT / "material-paciente/metadados.json").read_text(encoding="utf-8"))
-    }
-    assert material in materiais, f"patient_material_slug aponta para material inexistente: {material}"
+    materiais = {x["slug"] for x in json.loads((REPOSITORY_ROOT / "material-paciente/metadados.json").read_text(encoding="utf-8"))}
+    assert material in materiais
