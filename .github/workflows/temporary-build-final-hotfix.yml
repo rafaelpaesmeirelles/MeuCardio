@@ -1,0 +1,67 @@
+name: Temporary build final release hotfix
+on:
+  push:
+    branches: [hotfix/final-release-corrections-20260828]
+    paths: [.github/workflows/temporary-build-final-hotfix.yml]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - name: Port only final corrected release files
+        run: |
+          set -euo pipefail
+          git fetch origin release/all-pending-20260828
+          git checkout origin/release/all-pending-20260828 -- \
+            backend/app/services/disease_manifest.py \
+            backend/tests/test_aprofundamento_arritmias_pediatricas.py \
+            backend/tests/test_aprofundamento_avaliacao_multidimensional_cardiogeriatrica.py \
+            backend/tests/test_aprofundamento_bloqueio_atrioventricular_fetal.py \
+            backend/tests/test_aprofundamento_cardiopatia_congenita_gravidez.py \
+            backend/tests/test_aprofundamento_dor_toracica_pediatrica.py \
+            backend/tests/test_aprofundamento_fisiologia_ventriculo_unico.py \
+            backend/tests/test_aprofundamento_flutter_atrial_fetal.py \
+            backend/tests/test_aprofundamento_hipertensao_arterial_pediatrica.py \
+            backend/tests/test_aprofundamento_hipotensao_ortostatica_no_idoso.py \
+            backend/tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py \
+            backend/tests/test_aprofundamento_plano_parto_cardiopatia_materna.py \
+            backend/tests/test_aprofundamento_taquicardia_supraventricular_fetal.py \
+            backend/tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py \
+            backend/tests/test_vinculo_tudo_com_tudo_miocardite_pediatrica.py \
+            scripts/feature_inventory.py \
+            docs/release-20260828-certificacao.md
+
+          rm -f .github/workflows/temporary-build-final-hotfix.yml
+
+          python -m py_compile backend/app/services/disease_manifest.py scripts/feature_inventory.py
+          python scripts/feature_inventory.py
+          python - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('dm', 'backend/app/services/disease_manifest.py')
+          module = importlib.util.module_from_spec(spec)
+          assert spec and spec.loader
+          spec.loader.exec_module(module)
+          records = module.load_disease_records('doencas/metadados.json')
+          assert len(records) == 109, len(records)
+          bad = []
+          total = 0
+          for record in records:
+              for q in record.get('assistant_questions') or []:
+                  total += 1
+                  if not isinstance(q, dict) or not str(q.get('label') or '').strip() or 'text' in q:
+                      bad.append((record.get('slug'), q.get('id') if isinstance(q, dict) else '?'))
+          assert not bad, bad[:20]
+          print(f'Assistant schema canonicalized: {total} questions; 0 legacy text keys.')
+          PY
+          git diff --check
+
+          changed="$(git status --short | wc -l | tr -d ' ')"
+          test "$changed" -ge 17
+          git config user.name 'CorVIA Release Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'fix(release): portar correções finais sobre main atual'
+          git push origin HEAD:hotfix/final-release-corrections-20260828
