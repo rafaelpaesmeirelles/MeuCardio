@@ -16,14 +16,21 @@
     gap: 8px;
   }
 
-  /* esquerda: logo (só o mark no telefone — o box herdado tem width fixa de
-     36px e o wordmark textual vazava dele, ficando por baixo da busca central) */
+  /* esquerda: marca CorVIA. A camada anterior cria o wordmark via ::after;
+     portanto o contêiner não pode continuar preso ao box de 36px nem usar
+     overflow:hidden, senão o próprio wordmark é cortado. */
   .clinical-os .cos-topbar__mobile-brand {
     order: 0;
     flex: 0 0 auto;
-    justify-content: center;
-    overflow: hidden;
+    width: auto;
+    min-width: 36px;
+    max-width: none;
+    height: 36px;
+    padding: 0 .28rem;
+    justify-content: flex-start;
+    overflow: visible;
   }
+  .clinical-os .cos-topbar__mobile-brand::after { white-space: nowrap; }
   .clinical-os .cos-topbar__mobile-brand span { display: none; }
 
   /* centro: barra de busca (reexibida; o canonical a escondia) */
