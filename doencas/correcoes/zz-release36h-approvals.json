@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "atresia-pulmonar",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026, separando PA/IVS de PA/VSD/MAPCAs e incorporando ACHD 2025, coortes multicêntricas e literatura de dependência coronariana/unifocalização. Exige revisão humana por cardiologia intervencionista/cirurgia pediátrica antes de publicação; manutenção ductal, coronariografia, descompressão do VD, estratégia uni/biventricular, mapa segmentar, unifocalização e antitrombose devem ser individualizados. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Verbete novo criado em 28/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente e não tinha ficha própria em doencas/metadados.json, apesar de corpus rico e já existente em content/Cardiomiopatias/ (diretriz brasileira 2024, versão completa ESC 2023, terapia com inibidores de miosina, aficamten FOREST-HCM/SEQUOIA-HCM, fluxograma ESC 2023, investigação genética familiar). Os 6 related_document_slugs foram verificados individualmente por leitura direta do documento completo. 8 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug confirmado por correspondência exata em material-paciente/metadados.json. category='cardiomiopatia' segue a mesma convenção adotada de forma independente por outra frente de produção (PR #565, verbete-hub geral 'cardiomiopatias', ainda não mergeada) — nomes de slug distintos, sem colisão técnica. prevalence_rank deixado null por não pertencer ao hub fechado de doenças de altíssima prevalência em área 'geral' (ranks 1-9); CMH é doença rara (~1:500). Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração.",
+      "summary": "Cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente, caracterizada por hipertrofia ventricular esquerda inexplicada por outra causa de sobrecarga, geralmente por variantes patogênicas em genes sarcoméricos de herança autossômica dominante. A fisiopatologia central envolve obstrução dinâmica da via de saída do ventrículo esquerdo por movimento sistólico anterior da valva mitral, disfunção diastólica e, em subgrupo de risco, arritmias ventriculares malignas. O diagnóstico integra ecocardiograma, ressonância magnética cardíaca e teste genético com aconselhamento e rastreamento familiar em cascata, enquanto o manejo combina estratificação de risco de morte súbita pelo HCM Risk-SCD com uma escada terapêutica que vai de betabloqueador a inibidores de miosina cardíaca (mavacamten, aficamten), redução septal invasiva (miectomia ou ablação alcoólica) e cardioversor-desfibrilador implantável.",
+      "epidemiology": "A cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente, com prevalência populacional estimada em cerca de 1 em cada 500 indivíduos adultos, embora estudos mais recentes com critérios de imagem mais sensíveis sugiram números ainda maiores em algumas populações. Na maioria dos casos com causa identificada, o padrão de herança é autossômico dominante, decorrente de variantes patogênicas em genes que codificam proteínas do sarcômero cardíaco (mais frequentemente MYH7 e MYBPC3); um gene causal é identificado em cerca de 40 a 60% dos pacientes, proporção maior entre jovens com história familiar positiva. A penetrância é incompleta e variável: portadores da mesma variante patogênica numa mesma família podem apresentar graus muito diferentes de hipertrofia, idade de início e gravidade clínica, e alguns permanecem assintomáticos a vida toda enquanto outros desenvolvem obstrução grave, insuficiência cardíaca ou arritmias ventriculares malignas ainda jovens. A cardiomiopatia hipertrófica é reconhecida como a principal causa de morte súbita cardíaca em atletas jovens e em indivíduos com menos de 35 anos em geral, o que torna o rastreamento familiar em cascata e a estratificação de risco elementos centrais do manejo, não apenas etapas complementares ao diagnóstico morfológico."
+    }
+  },
+  {
+    "slug": "cardiomiopatias",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, sexto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555, síncope PR #560 e valvopatias PR #563). Nenhum verbete-hub geral de cardiomiopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (cardiomiopatia-periparto, cardiomiopatias-pediatricas, amiloidose-cardiaca-idoso). Conecta 32 documentos já publicados e revisados: 27 de content/Cardiomiopatias/ mais 5 de outras pastas (cardiopediatria, cardiogeriatria, arritmias, esporte, dispositivos) com menção direta e explícita ao tema, sem duplicar o escopo específico dos três verbetes-irmãos de subpopulação, citados em special_populations como texto, nunca como related_document_slugs. Fontes primárias verificadas nesta sessão: diretriz ESC 2023 de cardiomiopatias (primeira diretriz abrangente do tema, PMID 37622657), diretriz brasileira 2024 de CMH, HCM Risk-SCD (O'Mahony 2014, PMID 24126876), registro InterTAK de Takotsubo (Templin 2015, PMID 26332547), algoritmo não invasivo de amiloidose ATTR (Gillmore 2016, PMID 27143678; Garcia-Pavia 2021, PMID 33825853), ATTR-ACT/tafamidis (Maurer 2018, PMID 30145929), e ensaios de inibidores de miosina cardíaca EXPLORER-HCM/SEQUOIA-HCM (mavacamten/aficamten). Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "defeito-septo-atrioventricular",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026 com a orientação clínica ACC para DSAV atualizada em 26/08/2026, AAP para síndrome de Down, diretrizes de cardiopatia congênita do adulto e hipertensão pulmonar. Exige revisão humana por cardiologia/cirurgia cardíaca pediátrica antes de publicação; anatomia, operabilidade, timing cirúrgico, terapias, profilaxia de endocardite e decisões reprodutivas devem ser confirmados no contexto individual e local. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "endocardite-pediatrica",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026 com fontes primárias e diretrizes; exige revisão humana por cardiologia pediátrica e infectologia antes de publicação. Posologia, estratégia empírica, critérios de cirurgia e extrapolações de adultos devem ser conferidos no contexto local. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "estenose-pulmonar-congenita",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026 com algoritmo ACC de estenose pulmonar, diretriz ACHD 2025, recomendações de cateterismo/imagem e GeneReviews para síndrome de Noonan. Exige revisão humana por cardiologia pediátrica/intervencionista antes de publicação; gradientes, intervalos, indicação e técnica de intervenção, manejo neonatal, RM e reintervenção devem ser individualizados. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "febre-reumatica-cardite",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Versão 1 revisada em 04/08/2026. Expansão v2 produzida em 27/08/2026 a partir de fontes primárias e diretrizes atuais; exige revisão humana antes de publicação, especialmente para adaptação dos estratos epidemiológicos e esquemas ao contexto brasileiro. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "hipertensao-pulmonar-pediatrica",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026, incorporando a força-tarefa pediátrica do 7º Simpósio Mundial de HP (2024), ESC/ERS, AHA/ATS e PALS; exige revisão humana por cardiologia pediátrica/centro de hipertensão pulmonar antes de publicação. Definições neonatais, hemodinâmica, operabilidade de shunt, terapias off-label, doses e estratégias avançadas devem ser conferidas no contexto local. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  },
+  {
+    "slug": "retorno-venoso-pulmonar-anomalo",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Aprofundamento produzido por IA em 27/08/2026 com diretriz ACHD 2025, diretrizes ACC/AHA/ESC e coortes multicêntricas de RVPAT. Exige revisão humana por cardiologia/cirurgia pediátrica e ACHD antes de publicação; anatomia, obstrução, estabilização neonatal, timing/técnica cirúrgica, Qp:Qs, resistência pulmonar e reintervenção devem ser confirmados individualmente. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração. Revisado para o release científico consolidado de 28/08/2026; publicação autorizada pelo responsável médico após revisão de segurança e integração."
+    }
+  }
+]

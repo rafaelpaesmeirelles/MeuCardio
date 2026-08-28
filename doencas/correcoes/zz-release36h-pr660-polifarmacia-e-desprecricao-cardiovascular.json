@@ -1,0 +1,248 @@
+[
+  {
+    "slug": "polifarmacia-e-desprecricao-cardiovascular",
+    "set": {
+      "name": "Polifarmácia e desprescrição cardiovascular",
+      "aliases": [
+        "revisão de medicamentos no idoso",
+        "desprescrição"
+      ],
+      "area": "cardiogeriatria",
+      "category": "sindrome_geriatrica",
+      "subtype": "medicamentos",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Revisão estruturada de múltiplos medicamentos para reduzir eventos adversos, cascatas de prescrição e carga terapêutica, preservando tratamentos com benefício relevante.",
+      "presentation": [
+        "Cinco ou mais medicamentos crônicos",
+        "Hipotensão, quedas, sangramento, bradicardia ou alteração cognitiva",
+        "Baixa adesão por complexidade"
+      ],
+      "differentials": [
+        "Progressão da doença de base",
+        "Interação medicamentosa",
+        "Síndrome de abstinência",
+        "Erro de conciliação"
+      ],
+      "tests": [
+        "Conciliação completa incluindo medicamentos sem prescrição",
+        "Função renal, eletrólitos, pressão e frequência conforme regime",
+        "Revisão de interações e indicação atual"
+      ],
+      "red_flags": [
+        "Sangramento",
+        "Hipoglicemia",
+        "Bradicardia sintomática",
+        "Hipotensão com queda",
+        "Delirium agudo",
+        "Duplicidade de anticoagulação"
+      ],
+      "ambulatory_flow": [
+        "Definir o que importa ao paciente",
+        "Confirmar indicação, benefício, risco e tempo para benefício",
+        "Priorizar um medicamento por vez",
+        "Planejar redução e monitorização"
+      ],
+      "emergency_flow": [
+        "Tratar evento adverso agudo",
+        "Suspender temporariamente somente quando clinicamente indicado",
+        "Reconciliar antes da alta"
+      ],
+      "treatment_summary": "Desprescrição é intervenção supervisionada, não retirada indiscriminada. Deve considerar prognóstico, objetivos, risco de rebote, necessidade de desmame e plano de seguimento.",
+      "monitoring": [
+        "Sintomas de retirada ou recorrência",
+        "Pressão e frequência",
+        "Peso e congestão",
+        "Função renal e eletrólitos",
+        "Adesão e qualidade de vida"
+      ],
+      "assistant_questions": [
+        {
+          "id": "medication_count",
+          "label": "Número de medicamentos crônicos",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 50,
+          "section": "Carga terapêutica"
+        },
+        {
+          "id": "recent_fall",
+          "label": "Houve queda, síncope ou hipotensão recente?",
+          "type": "boolean",
+          "required": true,
+          "section": "Eventos adversos"
+        },
+        {
+          "id": "bleeding",
+          "label": "Há sangramento atual ou recente?",
+          "type": "boolean",
+          "required": true,
+          "section": "Eventos adversos"
+        },
+        {
+          "id": "bradycardia",
+          "label": "Há bradicardia sintomática?",
+          "type": "boolean",
+          "section": "Eventos adversos"
+        },
+        {
+          "id": "renal_decline",
+          "label": "Houve piora renal ou distúrbio eletrolítico?",
+          "type": "boolean",
+          "section": "Monitorização"
+        },
+        {
+          "id": "goals_changed",
+          "label": "Os objetivos de cuidado ou prognóstico mudaram?",
+          "type": "boolean",
+          "section": "Objetivos"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "sangramento",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "bleeding",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sangramento em paciente com possível terapia antitrombótica exige avaliação imediata"
+            ],
+            "emergency_flow": [
+              "Identificar fármacos, última dose, gravidade e necessidade de reversão conforme protocolo"
+            ]
+          }
+        },
+        {
+          "id": "quedas",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "recent_fall",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Queda ou hipotensão pode estar relacionada à carga medicamentosa"
+            ],
+            "suggested_tests": [
+              "Pressão ortostática e revisão de diuréticos, vasodilatadores e cronotrópicos negativos"
+            ]
+          }
+        },
+        {
+          "id": "bradicardia",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "bradycardia",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Bradicardia sintomática requer ECG e revisão imediata de medicamentos"
+            ]
+          }
+        },
+        {
+          "id": "renal",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "renal_decline",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Creatinina, potássio, sódio e revisão de doses por função renal"
+            ]
+          }
+        },
+        {
+          "id": "hiperpolifarmacia",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "medication_count",
+                "op": "gte",
+                "value": 10
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Hiperpolifarmácia aumenta complexidade e risco de eventos adversos"
+            ],
+            "ambulatory_flow": [
+              "Realizar revisão estruturada com paciente, cuidador e prescritores"
+            ]
+          }
+        },
+        {
+          "id": "objetivos",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "goals_changed",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Reavaliar tempo para benefício e alinhamento de cada tratamento com os objetivos atuais"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "idoso",
+        "polifarmácia",
+        "desprescrição",
+        "quedas",
+        "interações"
+      ],
+      "source_refs": [
+        "AHA Scientific Statement: Deprescribing in Patients with Cardiovascular Disease Experiencing Polypharmacy, 2026",
+        "Atualização das Diretrizes em Cardiogeriatria da SBC, 2019"
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/science-news/deprescribing-in-patients-with-cardiovascular-disease-experiencing-polypharmacy",
+        "https://abccardiol.org/article/atualizacao-das-diretrizes-em-cardiogeriatria-da-sociedade-brasileira-de-cardiologia-2019/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Não recomenda retirada automática; toda mudança exige confirmação e plano de monitorização. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 3 related_document_slugs (consenso científico AHA 2026 de desprescrição cardiovascular, fluxograma de desprescrição no idoso/fim de vida, polifarmácia anti-hipertensiva e adesão), levando o total de 1 para 4. Cada um verificado por leitura direta do documento. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "related_document_slugs": [
+        "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+        "desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia-consenso-cientifico-aha-2026",
+        "fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida",
+        "polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter"
+      ],
+      "patient_material_slug": "quantos-remedios-sao-demais-polifarmacia-no-idoso-cardiopata"
+    }
+  }
+]

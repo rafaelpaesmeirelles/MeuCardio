@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "fibrilacao-atrial",
+    "set": {
+      "name": "Fibrilação atrial",
+      "aliases": [
+        "FA",
+        "atrial fibrillation"
+      ],
+      "area": "geral",
+      "category": "arritmia_supraventricular",
+      "subtype": "fibrilacao_atrial_clinica",
+      "prevalence_rank": 2,
+      "completeness": "completo",
+      "summary": "Arritmia supraventricular sustentada com ativação atrial desorganizada, cujo cuidado exige confirmação eletrocardiográfica, prevenção de tromboembolismo, controle de sintomas por frequência ou ritmo, manejo de comorbidades e reavaliação dinâmica.",
+      "epidemiology": "A prevalência aumenta com a idade e com hipertensão, insuficiência cardíaca, obesidade, apneia do sono, diabetes e doença valvar. O risco clínico varia ao longo do tempo, justificando reavaliação periódica em vez de decisão única e permanente.",
+      "presentation": [
+        "Palpitações, pulso irregular, fadiga, intolerância ao esforço, dispneia ou desconforto torácico",
+        "Pode se apresentar por insuficiência cardíaca, síncope, embolia sistêmica ou AVC",
+        "Pode ser assintomática e detectada em ECG, monitorização ou dispositivo",
+        "Início e duração percebidos pelo paciente não determinam com segurança a duração real do episódio",
+        "Resposta ventricular rápida pode precipitar isquemia, hipotensão ou congestão em pessoas vulneráveis"
+      ],
+      "diagnostic_approach": {
+        "confirmacao": [
+          "Exigir documentação eletrocardiográfica interpretável do ritmo antes de firmar fibrilação atrial clínica",
+          "Caracterizar padrão temporal, carga arrítmica quando disponível, sintomas e relação entre sintomas e ritmo",
+          "Distinguir artefato, extrassístoles, flutter e outras taquiarritmias"
+        ],
+        "avaliacao_inicial": [
+          "Avaliar estabilidade hemodinâmica, insuficiência cardíaca, isquemia e déficit neurológico",
+          "Documentar função renal, hemograma, eletrólitos, tireoide, função ventricular e doença estrutural conforme contexto",
+          "Revisar álcool, apneia do sono, obesidade, hipertensão, diabetes, atividade física extrema, infecção e medicamentos"
+        ],
+        "estratificacao": [
+          "Estimar risco tromboembólico com escore validado e identificar situações que modificam a estratégia, como valva mecânica ou estenose mitral reumática",
+          "Avaliar fatores modificáveis de sangramento sem usar escore hemorrágico isoladamente para negar anticoagulação indicada",
+          "Decidir controle de frequência e/ou ritmo de acordo com sintomas, duração, remodelamento, comorbidades e preferência"
+        ],
+        "fenotipo": "Organizar o plano segundo AF-CARE: comorbidades e fatores de risco, prevenção de AVC, redução de sintomas por frequência/ritmo e avaliação/reavaliação contínua."
+      },
+      "differentials": [
+        "Flutter atrial",
+        "Taquicardia atrial focal ou multifocal",
+        "Taquicardia supraventricular por reentrada",
+        "Extrassístoles atriais frequentes",
+        "Taquicardia sinusal com artefato",
+        "Arritmia ventricular irregular em contexto específico"
+      ],
+      "tests": [
+        "ECG de 12 derivações ou traçado eletrocardiográfico interpretável que documente o ritmo",
+        "Monitorização ambulatorial quando sintomas são intermitentes ou para quantificar frequência/carga em questão clínica definida",
+        "Ecocardiograma transtorácico para estrutura, função ventricular, átrios e valvopatias",
+        "Hemograma, creatinina/clearance apropriado, eletrólitos e função tireoidiana conforme contexto",
+        "Investigação de apneia do sono e outros fatores associados quando clinicamente indicada",
+        "Imagem adicional ou ecocardiograma transesofágico conforme estratégia de cardioversão, ablação ou suspeita estrutural"
+      ],
+      "red_flags": [
+        "Hipotensão, choque, edema agudo de pulmão ou isquemia atribuível à arritmia",
+        "Déficit neurológico focal ou suspeita de embolia sistêmica",
+        "Síncope, dor torácica persistente ou insuficiência cardíaca aguda",
+        "Pré-excitação com taquicardia irregular e QRS largo",
+        "Sangramento maior em uso de anticoagulante"
+      ],
+      "ambulatory_flow": [
+        "Confirmar FA em traçado e caracterizar sintomas, padrão e comorbidades",
+        "Aplicar AF-CARE, começando por fatores de risco e prevenção tromboembólica",
+        "Escolher estratégia de frequência, ritmo ou combinação por decisão compartilhada",
+        "Revisar indicação, dose, adesão e interações do anticoagulante conforme função renal, idade, peso e situação valvar",
+        "Reavaliar sintomas, ritmo, risco tromboembólico e sangramento em mudanças clínicas e periodicamente"
+      ],
+      "emergency_flow": [
+        "Avaliar estabilidade, ABC, ECG, acesso venoso e causas precipitantes",
+        "Na instabilidade atribuível à FA, seguir protocolo de cardioversão elétrica sincronizada",
+        "Na pessoa estável, controlar frequência ou ritmo conforme contexto sem ignorar duração incerta e risco tromboembólico",
+        "Investigar síndrome coronariana, insuficiência cardíaca, infecção, distúrbios metabólicos e tireotoxicose quando sugeridos",
+        "Déficit focal ativa protocolo de AVC; sangramento maior ativa protocolo de hemorragia e reversão específica"
+      ],
+      "treatment_summary": "O manejo contemporâneo segue AF-CARE: tratar comorbidades e fatores de risco; prevenir AVC com anticoagulação quando indicada; reduzir sintomas com controle de frequência, controle de ritmo, cardioversão ou ablação em pessoas selecionadas; e reavaliar o plano dinamicamente. A escolha do anticoagulante e da dose depende de situação valvar, função renal, idade, peso, interações e acesso. Nenhuma decisão deve ser tomada apenas pelo nome da arritmia ou por um escore isolado.",
+      "monitoring": [
+        "Sintomas, capacidade funcional, frequência e documentação do ritmo",
+        "Adesão, sangramento, hemograma, função renal e interações durante anticoagulação",
+        "Função ventricular quando houver taquicardiomiopatia, insuficiência cardíaca ou mudança clínica",
+        "Pressão, peso, álcool, apneia do sono, diabetes e outros fatores modificáveis",
+        "Recorrência após cardioversão ou ablação sem presumir que ausência de sintomas equivale a ausência de FA"
+      ],
+      "special_populations": [
+        "Valva mecânica e estenose mitral reumática exigem estratégia antitrombótica específica",
+        "Gestação requer equipe cardio-obstétrica e revisão de fármacos, anticoagulação e cardioversão",
+        "Idosos frágeis precisam de avaliação de cognição, adesão, quedas, função renal e objetivos, sem negar anticoagulação apenas por idade",
+        "Atletas necessitam discutir carga de exercício, sintomas e estratégia de ritmo individualmente",
+        "Doença renal, câncer e sangramento prévio exigem reavaliação frequente de benefício, risco e dose"
+      ],
+      "assistant_questions": [
+        {
+          "id": "ecg_confirmed",
+          "label": "Há traçado eletrocardiográfico interpretável confirmando fibrilação atrial?",
+          "type": "boolean",
+          "required": true,
+          "section": "Confirmação"
+        },
+        {
+          "id": "unstable",
+          "label": "Há hipotensão, choque, isquemia persistente ou edema pulmonar atribuível à arritmia?",
+          "type": "boolean",
+          "required": true,
+          "section": "Estabilidade"
+        },
+        {
+          "id": "focal_deficit",
+          "label": "Há déficit neurológico focal súbito ou suspeita de embolia sistêmica?",
+          "type": "boolean",
+          "required": true,
+          "section": "Complicações"
+        },
+        {
+          "id": "anticoagulant",
+          "label": "A pessoa usa anticoagulante?",
+          "type": "boolean",
+          "required": true,
+          "section": "Prevenção de AVC"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "fa-instabilidade",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "unstable",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Tratar instabilidade e seguir protocolo de cardioversão elétrica sincronizada"
+            ]
+          }
+        },
+        {
+          "id": "fa-deficit-focal",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "focal_deficit",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível AVC ou embolia sistêmica"
+            ],
+            "emergency_flow": [
+              "Ativar protocolo de AVC ou avaliação vascular emergencial"
+            ]
+          }
+        },
+        {
+          "id": "fa-sem-tracado",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "ecg_confirmed",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "O diagnóstico clínico precisa de confirmação eletrocardiográfica"
+            ],
+            "suggested_tests": [
+              "Obter ECG ou monitorização interpretável"
+            ]
+          }
+        },
+        {
+          "id": "fa-anticoagulacao-documentar",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "anticoagulant",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Documentar fármaco, dose, última tomada, adesão, função renal e sangramento"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "fibrilação atrial",
+        "AF-CARE",
+        "anticoagulação",
+        "controle de ritmo",
+        "controle de frequência",
+        "AVC"
+      ],
+      "source_refs": [
+        "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45:3314-3414. DOI: 10.1093/eurheartj/ehae176.",
+        "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/atrial-fibrillation/",
+        "https://doi.org/10.36660/abc.20250618"
+      ],
+      "related_document_slugs": [
+        "esc-2024-diretriz-fibrilacao-atrial-af-care",
+        "diretriz-brasileira-de-fibrilacao-atrial-2025-sbc-sobrac",
+        "fluxograma-fibrilacao-atrial-af-care-esc-2024",
+        "controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af",
+        "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica"
+      ],
+      "patient_material_slug": "fibrilacao-atrial",
+      "review_status": "revisado",
+      "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e SBC/SOBRAC 2025 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo (enriquecimento) 28/08/2026: adicionados 2 related_document_slugs (controle de ritmo vs. frequência AFFIRM/EAST-AFNET4/CASTLE-AF, ablação por cateter indicações e técnica), levando o total de 3 para 5. Um terceiro candidato proposto pelo agente (cha2ds2-va) foi descartado por resolver para content/Calculadoras, fora do escopo permitido. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "chatgpt",
+      "version": 2
+    }
+  }
+]

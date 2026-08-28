@@ -1,0 +1,462 @@
+[
+  {
+    "slug": "dislipidemia",
+    "set": {
+      "name": "Dislipidemia",
+      "aliases": [
+        "hipercolesterolemia",
+        "LDL elevado",
+        "colesterol alto",
+        "hipertrigliceridemia",
+        "dislipidemias"
+      ],
+      "area": "geral",
+      "category": "prevencao_cardiovascular",
+      "subtype": null,
+      "cyanosis_class": null,
+      "prevalence_rank": null,
+      "completeness": "completo",
+      "summary": "Elevação de LDL-colesterol e/ou outras lipoproteínas aterogênicas (não-HDL-C, apolipoproteína B, lipoproteína(a)) e/ou hipertrigliceridemia — fator de risco cardiovascular modificável mais prevalente e com relação causal estabelecida por evidência epidemiológica, genética e de ensaios clínicos com estatina. Inclui a hipercolesterolemia familiar (heterozigota, ~1:200-250; homozigota, rara e grave), diagnosticada pelo escore Dutch Lipid Clinic Network, e a hipertrigliceridemia grave, que carrega risco duplo — aterosclerótico e de pancreatite aguda. Manejo orientado por estratificação de risco cardiovascular global (SCORE2/PREVENT-ASCVD) e metas de LDL-C conforme a categoria de risco, com rastreamento de Lp(a) recomendado ao menos uma vez na vida. A monitorização rotineira de transaminases em cronograma fixo foi abandonada desde a revisão de segurança da FDA de 2012.",
+      "epidemiology": "A dislipidemia — elevação de LDL-colesterol e/ou de outras lipoproteínas aterogênicas (não-HDL-C, apolipoproteína B, lipoproteína(a)) e/ou hipertrigliceridemia — é um dos fatores de risco modificáveis mais prevalentes e mais fortemente associados a doença aterosclerótica cardiovascular do adulto, com relação causal estabelecida por décadas de evidência epidemiológica, genética (randomização mendeliana) e de ensaios clínicos randomizados com estatina. A hipercolesterolemia familiar heterozigota, causa monogênica mais comum de LDL-C muito elevado desde o nascimento, tem prevalência estimada em cerca de 1 em 200 a 1 em 250 na população geral, sendo amplamente subdiagnosticada e subtratada apesar de critérios diagnósticos clínicos bem estabelecidos (escore Dutch Lipid Clinic Network); a forma homozigota é rara, com elevação marcante de LDL-C desde o nascimento e alto risco de doença coronariana já na infância/adolescência quando não tratada — dado epidemiológico relevante ao adulto que a procura hoje, ainda que o manejo pediátrico específico seja tratado em hub próprio. A lipoproteína(a) é determinada em mais de 90% por variabilidade genética no locus LPA, com níveis já estabelecidos por volta dos 5 anos de idade e estáveis ao longo de toda a vida adulta — a prevalência de Lp(a) elevada (acima do corte de risco) é estimada em torno de 20% da população, com distribuição que varia de forma importante por ancestralidade (mediana muito mais alta em pessoas de ascendência negra que em pessoas de ascendência branca, segundo dados do UK Biobank citados no consenso EAS 2022). A hipertrigliceridemia grave, embora menos prevalente que a hipercolesterolemia isolada, carrega risco duplo — cardiovascular aterosclerótico e pancreatite aguda —, sendo este último desfecho mensurável em gradiente de risco já a partir de níveis moderados de triglicerídeo em coortes populacionais de base ampla, muito antes do limiar em que o tratamento farmacológico dirigido é formalmente indicado. Ferramentas de estimativa de risco cardiovascular em 10 anos (SCORE2/SCORE2-OP na Europa; PREVENT-ASCVD nos Estados Unidos) substituíram escores mais antigos (SCORE, Pooled Cohort Equations) nas atualizações mais recentes das diretrizes, refletindo reconhecimento crescente de que o risco aterogênico do adulto não se resume ao LDL-C isolado.",
+      "presentation": [
+        "Assintomático na maioria dos casos — achado em rastreamento laboratorial de rotina (perfil lipídico), sem sinais físicos identificáveis no exame.",
+        "Xantoma tendíneo (tendão calcâneo, extensores dos dedos) — sinal sugestivo de hipercolesterolemia familiar, mais frequente quando o LDL-C está muito elevado há muito tempo.",
+        "Arco corneano antes dos 45 anos — sinal de exame físico que soma pontos no escore Dutch Lipid Clinic Network para hipercolesterolemia familiar.",
+        "Xantelasma palpebral — pode ocorrer em dislipidemia, mas também em pessoas com perfil lipídico normal; sinal isolado de baixa especificidade.",
+        "Xantoma eruptivo (pápulas amarelas em nádegas, dorso, superfícies extensoras) e lipemia retinalis — sinais de hipertrigliceridemia grave ou síndrome de quilomicronemia.",
+        "Dor abdominal em andar superior, náusea e vômito — apresentação de pancreatite aguda como complicação de hipertrigliceridemia grave.",
+        "Evento aterosclerótico já estabelecido (infarto do miocárdio, AVC isquêmico, doença arterial periférica) como primeira manifestação clínica em paciente não previamente rastreado.",
+        "História familiar de doença coronariana prematura (homens abaixo de 55 anos, mulheres abaixo de 60 anos) ou de LDL-C muito elevado em parentes de primeiro grau — motivo de suspeita clínica e de rastreamento em cascata."
+      ],
+      "diagnostic_approach": {
+        "avaliacao_risco_global": "Em adultos sem doença aterosclerótica já estabelecida, sem diabetes com lesão de órgão-alvo, sem doença renal crônica grave e sem hipercolesterolemia familiar — condições que já classificam diretamente como alto ou muito alto risco, dispensando cálculo de escore —, estimar o risco cardiovascular em 10 anos com calculadora atual: SCORE2 (abaixo de 70 anos) ou SCORE2-OP (70 anos ou mais) nas diretrizes europeias ESC/EAS 2025, ou PREVENT-ASCVD (30 a 79 anos, com estimativa em 10 e 30 anos) na diretriz norte-americana ACC/AHA 2026, que substituiu as antigas Pooled Cohort Equations. A categoria de risco resultante (baixo, moderado, alto, muito alto) define a meta de LDL-C a perseguir. Modificadores de risco — Lp(a) elevada, proteína C-reativa de alta sensibilidade persistentemente elevada, escore de cálcio coronariano elevado, ultrassom de carótida/femoral com placa, história familiar de doença cardiovascular precoce — podem reclassificar para categoria mais alta um paciente de risco limítrofe pelo escore isolado. O escore de cálcio coronariano tem papel de reclassificação seletiva quando a decisão terapêutica permanece incerta após avaliação inicial, mais estabelecido em homens a partir de 40 anos e mulheres a partir de 45 anos — não é rastreamento indiscriminado da população geral.",
+        "perfil_lipidico_completo": "O lipidograma padrão inclui colesterol total, LDL-C, HDL-C e triglicerídeos; amostra sem jejum tem valor prognóstico ao menos equivalente para rastreamento geral e pode ser usada na maioria dos pacientes, mas o LDL-C calculado exige cautela em diabetes, síndrome metabólica ou hipertrigliceridemia, e a fórmula de Friedewald não deve ser usada com triglicerídeos acima de 400 mg/dL — as diretrizes mais recentes passaram a preferir as equações Martin/Hopkins ou Sampson/NIH para estimar LDL-C. O não-HDL-colesterol (colesterol total menos HDL-C) e a apolipoproteína B são metas secundárias úteis quando o LDL-C isolado não conta toda a história — hipertrigliceridemia, diabetes, síndrome metabólica ou LDL-C já muito baixo em tratamento —, e a ApoB é particularmente útil para revelar risco residual quando há discordância entre LDL-C aparentemente controlado e a carga real de partículas aterogênicas. A lipoproteína(a) deve ser dosada ao menos uma vez na vida de todo adulto — é geneticamente determinada, estável ao longo da vida, e repetir a dosagem não melhora a predição de risco, salvo exceções pontuais (doença renal ou hepática, infecção aguda no momento da coleta); valores elevados reclassificam o risco e justificam intensificar o tratamento dos demais fatores modificáveis, ainda que não exista hoje terapia específica aprovada dirigida à própria Lp(a) com desfecho cardiovascular comprovado.",
+        "hipercolesterolemia_familiar": "Suspeitar de hipercolesterolemia familiar (HF) diante de LDL-C sem tratamento muito elevado (adultos com 190 mg/dL ou mais), doença arterial coronariana prematura (homens abaixo de 55 anos, mulheres abaixo de 60 anos), xantoma tendíneo, arco corneano precoce, ou parente de primeiro grau com doença cardiovascular precoce ou LDL-C muito alto. O critério diagnóstico mais usado é o escore Dutch Lipid Clinic Network (DLCN), que soma apenas a maior pontuação de cada um de cinco grupos (história familiar, história clínica, exame físico, LDL-C sem tratamento, análise de DNA) — pontuação total acima de 8 define HF definitiva, 6 a 8 define HF provável, 3 a 5 define HF possível, 2 ou menos define HF improvável. O diagnóstico é clínico; a confirmação por análise de DNA reforça, mas sua ausência não afasta o diagnóstico quando o quadro clínico é característico. Critérios sugestivos da forma homozigota (rara) incluem LDL-C sem tratamento acima de 400 mg/dL, xantoma cutâneo/tendíneo antes dos 10 anos, ou LDL-C compatível com HF heterozigota em ambos os pais — nesse cenário o fenótipo tem prioridade sobre resultado genético discordante. Uma vez identificado o caso índice, o rastreamento em cascata dos familiares de primeiro grau é parte obrigatória do manejo, não um extra opcional.",
+        "hipertrigliceridemia_grave_e_risco_de_pancreatite": "Hipertrigliceridemia grave (triglicerídeos de 500 mg/dL ou mais, especialmente 1.000 mg/dL ou mais) carrega risco de pancreatite aguda por lesão direta do parênquima pancreático pelo excesso de quilomícrons circulantes, mecanismo distinto do risco cardiovascular aterosclerótico. A síndrome de quilomicronemia plenamente manifesta (xantoma eruptivo, lipemia retinalis, pancreatite) tipicamente ocorre acima de 1.500 mg/dL. Uma coorte populacional dinamarquesa de mais de 116 mil pessoas mostrou que o risco relativo de pancreatite aguda já se eleva de forma mensurável a partir de 177 mg/dL, com gradiente dose-resposta estatisticamente robusto — achado que não equivale a indicação de tratamento farmacológico dirigido, reservado a faixas muito mais altas, mas que reforça a importância de investigar e corrigir causas secundárias (diabetes descompensado, consumo de álcool, hipotireoidismo, fármacos, síndrome nefrótica, gestação) em qualquer grau de elevação persistente. Diante de triglicerídeo muito elevado refratário à correção da causa secundária e à dieta, ou suspeita de síndrome de quilomicronemia familiar por deficiência de lipase lipoproteica, a avaliação em centro especializado em lipidologia é indicada.",
+        "monitorizacao_de_seguranca_e_hepatotoxicidade": "A monitorização rotineira e programada de transaminases (ALT/AST) em intervalos fixos durante o tratamento hipolipemiante deixou de ser recomendação de bula desde a revisão da FDA em 2012 — lesão hepática grave por estatina é evento raro e imprevisível, da ordem de 1 a 2 casos por 100 mil a 2 por milhão de pacientes-ano conforme a fonte, e a dosagem seriada de rotina não demonstrou eficácia em detectá-la ou preveni-la. A conduta atual é dosagem basal antes do início do tratamento e, depois, apenas quando clinicamente indicado — não em cronograma fixo. Elevação leve e assintomática de transaminases, achado incidental, não é gatilho automático de suspensão do tratamento; deve ser contextualizada quanto a magnitude, tendência e causa concorrente. Investigação ativa com enzimas hepáticas é indicada diante de sinais de disfunção hepática sintomática — icterícia, fadiga ou mal-estar persistente e inexplicado, dor em hipocôndrio direito, colúria/acolia, náusea persistente. Doença hepática ativa ou descompensada é contraindicação real ao início de estatina; doença hepática crônica compensada e estável, incluindo esteato-hepatite não alcoólica sem descompensação, não é contraindicação categórica."
+      },
+      "differentials": [
+        "Hipotireoidismo — eleva LDL-C e pode simular ou agravar dislipidemia primária; rastrear TSH diante de elevação nova ou desproporcional de LDL-C.",
+        "Síndrome nefrótica — hipoalbuminemia e proteinúria maciça cursam com hipercolesterolemia e hipertrigliceridemia secundárias.",
+        "Diabetes mellitus descompensado e síndrome metabólica — hipertrigliceridemia secundária ao mau controle glicêmico, que melhora parcialmente com o controle da glicemia.",
+        "Colestase e doença hepática obstrutiva — elevam colesterol total e LDL-C por retenção biliar.",
+        "Consumo excessivo de álcool — causa clássica e frequentemente reversível de hipertrigliceridemia secundária.",
+        "Fármacos que elevam lipídios (estrogênio oral, tamoxifeno, corticoide, retinoide, inibidor de protease) — causa secundária de hipertrigliceridemia a excluir antes de escalonar o tratamento.",
+        "Síndrome de quilomicronemia familiar (deficiência de lipase lipoproteica) — causa genética rara de hipertrigliceridemia grave refratária, diferencial da hipertrigliceridemia secundária comum.",
+        "Gestação — hipertrigliceridemia fisiológica do terceiro trimestre, diferencial a considerar antes de rotular a elevação como patológica."
+      ],
+      "tests": [
+        "Perfil lipídico (colesterol total, LDL-C, HDL-C, triglicerídeos) — amostra sem jejum tem valor prognóstico ao menos equivalente para rastreamento geral na maioria dos casos; jejum permanece indicado quando o triglicerídeo está muito elevado ou o LDL-C é calculado pela fórmula de Friedewald, que não deve ser usada com TG acima de 400 mg/dL.",
+        "LDL-C calculado pelas equações Martin/Hopkins ou Sampson/NIH, hoje preferidas à fórmula de Friedewald — permanece impreciso em hipertrigliceridemia importante, cenário em que LDL-C medido diretamente ou não-HDL-C/ApoB são mais confiáveis.",
+        "Apolipoproteína B — útil quando há discordância entre LDL-C e a carga real de partículas aterogênicas (triglicerídeos acima de 200 mg/dL, diabetes, LDL-C já abaixo de 70 mg/dL apesar de tratamento); não substitui o LDL-C como meta primária na maioria das diretrizes.",
+        "Lipoproteína(a) — dosagem única na vida adulta, não seriada, salvo doença renal ou hepática ou infecção aguda que alteram o valor de forma transitória; a conversão entre mg/dL e nmol/L não é exata, pois o tamanho da isoforma de apolipoproteína(a) varia entre indivíduos.",
+        "Escore Dutch Lipid Clinic Network e análise de DNA — o DLCN é a ferramenta clínica validada para hipercolesterolemia familiar heterozigota; a análise de DNA reforça o diagnóstico, mas a ausência de mutação identificada não afasta o diagnóstico clínico.",
+        "Escore de cálcio coronariano — reclassifica risco em pacientes de risco intermediário ou incerto; não deve ser usado como rastreamento indiscriminado da população geral, e um escore zero não dispensa o tratamento de outros fatores de risco maiores já presentes.",
+        "TSH, para rastreio de causa secundária — hipotireoidismo é causa reversível de dislipidemia e deve ser descartado antes de rotular a dislipidemia como primária.",
+        "Enzimas hepáticas (transaminases) — dosagem basal antes de iniciar hipolipemiante; não deve ser repetida em cronograma fixo em paciente assintomático, apenas quando clinicamente indicado, já que a elevação isolada e assintomática tem baixo valor preditivo para lesão hepática grave."
+      ],
+      "red_flags": [
+        "Triglicerídeos de 1.000 mg/dL ou mais, ou sinais de síndrome de quilomicronemia (xantoma eruptivo, lipemia retinalis) — risco iminente de pancreatite aguda, exige conduta dirigida imediata.",
+        "Dor abdominal em andar superior associada a náusea e vômito em paciente com hipertrigliceridemia grave conhecida — suspeitar de pancreatite aguda em curso e indicar avaliação de emergência.",
+        "LDL-C sem tratamento de 190 mg/dL ou mais em adulto, ou 400 mg/dL ou mais (sugestivo de forma homozigota) — alto risco aterosclerótico ao longo da vida; investigar hipercolesterolemia familiar e causas secundárias.",
+        "Doença arterial coronariana ou evento cerebrovascular antes dos 55 anos (homens) ou 60 anos (mulheres) — sugere hipercolesterolemia familiar ou outra dislipidemia genética, com indicação de rastreamento em cascata familiar.",
+        "Segundo evento cardiovascular em até 2 anos do primeiro, já em uso de estatina em dose máxima tolerada — risco extremo, meta de LDL-C mais agressiva (abaixo de 40 mg/dL) deve ser considerada.",
+        "Xantoma tendíneo, ou xantoma cutâneo/tendíneo antes dos 10 anos de idade — sinal físico de hipercolesterolemia familiar avançada; no segundo caso, sugestivo da forma homozigota.",
+        "Icterícia, colúria/acolia, dor em hipocôndrio direito ou mal-estar persistente em paciente em uso de estatina — sinais de disfunção hepática sintomática que justificam investigação e possível suspensão do fármaco, diferente da elevação assintomática isolada de transaminases.",
+        "LDL-C muito elevado em ambos os pais de um paciente com suspeita de hipercolesterolemia familiar — sugere forma homozigota, quadro grave que exige encaminhamento a centro especializado em lipidologia."
+      ],
+      "ambulatory_flow": [
+        "Confirmar o perfil lipídico completo (colesterol total, LDL-C, HDL-C, triglicerídeos e, quando disponível, ApoB) e classificar o risco cardiovascular global antes de definir a meta terapêutica.",
+        "Dosar lipoproteína(a) ao menos uma vez na vida em todo adulto, para reclassificar risco quando elevada.",
+        "Aplicar o escore da Dutch Lipid Clinic Network diante de suspeita de hipercolesterolemia familiar (LDL-C muito elevado, xantoma tendíneo, arco corneano precoce ou história familiar de doença aterosclerótica prematura), com rastreamento em cascata de familiares de 1º grau se confirmada.",
+        "Iniciar estatina como classe de primeira linha, reavaliando o perfil lipídico em 4 a 12 semanas para checar a resposta e ajustar a intensidade.",
+        "Associar ezetimiba quando a meta de LDL-C não for atingida com estatina em dose máxima tolerada; considerar inibidor de PCSK9 ou ácido bempedoico se a meta persistir não atingida, sobretudo em risco alto ou muito alto.",
+        "Investigar e corrigir causa secundária de hipertrigliceridemia (diabetes descompensado, álcool, hipotireoidismo, fármacos hipertrigliceridemiantes, síndrome nefrótica) antes de escalonar terapia farmacológica específica.",
+        "Diante de intolerância a estatina, aplicar protocolo estruturado de suspensão e reexposição (geralmente com ao menos três estatinas diferentes) antes de declarar intolerância à classe inteira.",
+        "Discutir planejamento reprodutivo com toda mulher em idade fértil em uso de estatina, dado que a bula restringe o uso a quem tem contracepção eficaz e gravidez altamente improvável.",
+        "Encaminhar a especialista em lipidologia os casos de hipercolesterolemia familiar homozigota, hipertrigliceridemia refratária com suspeita de causa genética, ou meta de LDL-C não atingida apesar de terapia combinada em dose máxima tolerada."
+      ],
+      "emergency_flow": [
+        "Diante de dor abdominal em andar superior associada a náusea/vômito e lipase ou amilase 3x ou mais o limite superior da normalidade em paciente com hipertrigliceridemia grave, internar para manejo de pancreatite aguda (jejum, hidratação intravenosa vigorosa) e considerar plasmaférese terapêutica ou insulina associada a heparina em infusão contínua em centro com experiência.",
+        "Diante de dor torácica aguda, dispneia súbita ou outro sinal de instabilidade em paciente com dislipidemia grave não tratada, migrar imediatamente para o protocolo de síndrome coronariana aguda (ECG, troponina seriada), sem tentar ajustar terapia hipolipemiante nesse momento.",
+        "Triglicerídeos de 1.500 mg/dL ou mais, com xantoma eruptivo ou lipemia retinalis, configuram síndrome de quilomicronemia manifesta — tratar como risco iminente de pancreatite mesmo sem sintoma abdominal atual, com dieta de restrição rigorosa de gordura e reavaliação em curto prazo.",
+        "Suspeita de rabdomiólise por estatina (CK muito elevada, mialgia intensa, urina escura) exige suspensão imediata do fármaco e avaliação de função renal, sem reintrodução posterior se a rabdomiólise for confirmada.",
+        "Sinais de disfunção hepática aguda (icterícia, dor em hipocôndrio direito, colúria/acolia, mal-estar persistente) em uso de estatina exigem investigação com enzimas hepáticas e suspensão até esclarecimento — não é achado para conduta ambulatorial de rotina."
+      ],
+      "treatment_summary": "O tratamento da dislipidemia no adulto parte da estratificação do risco cardiovascular global, não do valor isolado de LDL-C. Pacientes com doença aterosclerótica já estabelecida, diabetes com lesão de órgão-alvo, doença renal crônica avançada ou hipercolesterolemia familiar são classificados diretamente como alto ou muito alto risco, dispensando o cálculo de escore. Para os demais adultos, o risco em 10 anos é estimado por escore validado (SCORE2/SCORE2-OP na diretriz europeia; PREVENT-ASCVD na diretriz americana, que substituiu as antigas Pooled Cohort Equations), com metas de LDL-C escalonadas por categoria: risco baixo, menor que 116 mg/dL; risco moderado, menor que 100 mg/dL; alto risco, menor que 70 mg/dL e redução de 50% ou mais do valor basal; risco muito alto, menor que 55 mg/dL e redução de 50% ou mais; risco extremo (evento cardiovascular recorrente em até 2 anos apesar de estatina em dose máxima tolerada), menor que 40 mg/dL. O não-HDL-colesterol (meta cerca de 30 mg/dL acima da meta de LDL-C) e a apolipoproteína B são ferramentas de refinamento, particularmente úteis quando há discordância entre LDL-C e a carga de partículas aterogênicas — triglicerídeos acima de 200 mg/dL, diabetes, ou LDL-C já baixo sem meta secundária atingida. A lipoproteína(a) deve ser dosada ao menos uma vez na vida em todo adulto, independentemente da decisão inicial de tratar: não muda a meta de LDL-C, mas reclassifica risco quando elevada e reforça a intensificação de fatores modificáveis.\n\nA estatina é a classe de primeira linha para a grande maioria dos pacientes, com benefício de desfecho cardiovascular consolidado por décadas de ensaios. Quando a meta não é atingida com estatina em dose máxima tolerada, a ezetimiba é a primeira classe a associar, com benefício de desfecho demonstrado em população pós-síndrome coronariana aguda. Persistindo a meta não atingida — sobretudo em risco alto ou muito alto —, os inibidores de PCSK9 (anticorpos monoclonais ou, por mecanismo de RNA de interferência, a inclisirana) reduzem LDL-C de forma acentuada e têm benefício de desfecho cardiovascular comprovado tanto em doença aterosclerótica estável quanto após síndrome coronariana aguda; a inclisirana, especificamente, tem até o momento apenas desfecho de redução de LDL-C validado em ensaio, sem desfecho cardiovascular maior publicado. O ácido bempedoico é opção de escalonamento, com benefício de desfecho cardiovascular demonstrado especificamente na população intolerante a estatina. Não existe piso de segurança demonstrado para o LDL-C: análises de segurança de longo prazo não mostraram sinal de dano em níveis muito baixos (da ordem de 20 a 30 mg/dL), incluindo desfechos neurocognitivos e hormonais, dentro do período já estudado (até cerca de 6 a 8 anos) — o que não deve ser lido como ausência de qualquer piso, apenas como ausência de piso demonstrado no intervalo já estudado.\n\nA suspeita de hipercolesterolemia familiar deve ser levantada diante de LDL-C muito elevado (adultos acima de 190 mg/dL), doença aterosclerótica prematura (homens com menos de 55 anos, mulheres com menos de 60 anos) pessoal ou em parente de primeiro grau, xantoma tendíneo, arco corneano precoce, ou história familiar de LDL-C muito elevado — o critério operacional mais usado é o escore da Dutch Lipid Clinic Network, que classifica a probabilidade diagnóstica em definitiva, provável, possível ou improvável pela soma ponderada de história familiar, história clínica, exame físico, LDL-C basal e análise genética. Confirmado o diagnóstico, o rastreamento em cascata dos familiares de primeiro grau é recomendado, e a meta de LDL-C é mais rigorosa (alto ou muito alto risco, conforme a presença de doença estabelecida ou fator de risco adicional). A forma homozigota, rara e grave, exige acompanhamento em centro especializado.\n\nA hipertrigliceridemia grave (triglicerídeos de 500 mg/dL ou mais, e sobretudo acima de 1.000 mg/dL) coloca a prevenção de pancreatite aguda como objetivo terapêutico distinto do objetivo aterosclerótico — a estatina isolada não é suficiente para essa finalidade. A conduta inclui correção de causa secundária (diabetes descompensado, álcool, hipotireoidismo, fármacos hipertrigliceridemiantes, síndrome nefrótica, gestação), dieta com restrição de gordura, e associação de fibrato e/ou ácido graxo ômega-3 prescrito quando o triglicerídeo permanece elevado após essas medidas — o icosapente etílico isolado (EPA puro) tem benefício cardiovascular demonstrado especificamente na faixa de triglicerídeos moderadamente elevados associada a estatina, enquanto formulações combinadas de EPA e DHA não mostraram o mesmo benefício. Na hipertrigliceridemia refratária grave ou na suspeita de síndrome de quilomicronemia familiar, inibidores de ApoC-III (por mecanismo de RNA de interferência ou de oligonucleotídeo antissenso) reduziram triglicerídeos de forma acentuada e diminuíram o risco de pancreatite aguda em ensaios randomizados recentes — sem, até o momento, desfecho cardiovascular maior publicado — e esses casos devem ser encaminhados a centro especializado em lipidologia para avaliação genética.\n\nA intolerância a estatina não deve ser declarada após um único relato de sintoma muscular: o protocolo estruturado envolve estratificação por creatina quinase, suspensão e reexposição documentadas, geralmente testando ao menos três estatinas diferentes (fármaco, dose ou esquema intermitente) antes de considerar o paciente intolerante à classe inteira — ensaios cegos mostram que boa parte do sintoma atribuído à estatina reproduz-se igualmente sob placebo (efeito nocebo). Elevação assintomática de transaminases não é, isoladamente, motivo de suspensão nem de monitorização rotineira programada; a investigação hepática é dirigida por sintomas de disfunção hepática, e a real contraindicação é doença hepática ativa ou descompensada, não uma alteração leve e isolada de enzimas. Confirmada a intolerância, a meta de LDL não é abandonada: combina-se a dose máxima tolerada de estatina com terapia não estatínica.\n\nMulheres em idade fértil merecem atenção específica antes mesmo da gestação: a estatina é contraindicada na gravidez e na lactação, e a bula recomenda uso apenas quando a gravidez for altamente improvável e houver contracepção eficaz. Ezetimiba e inibidores de PCSK9 restringem-se por ausência de dado de segurança, não por dano demonstrado, mas em associação com estatina a restrição mais forte prevalece. Planejamento de gravidez indica suspensão de estatina previamente à concepção, com reinício após o término da amamentação, exceto em risco cardiovascular muito alto, em que a reintrodução individualizada no terceiro trimestre pode ser considerada.\n\nO encaminhamento a especialista em lipidologia é indicado diante de hipercolesterolemia familiar (sobretudo a forma homozigota), hipertrigliceridemia grave refratária às medidas de primeira linha ou com suspeita de causa genética, intolerância a estatina após protocolo estruturado sem resposta às alternativas não estatínicas, meta de LDL-C não atingida apesar de terapia combinada em dose máxima tolerada, e qualquer suspeita de causa monogênica rara de dislipidemia.",
+      "monitoring": [
+        "Reavaliar o perfil lipídico (LDL-C, não-HDL-colesterol, triglicerídeos) em 4 a 12 semanas após início ou ajuste de terapia hipolipemiante, e depois periodicamente conforme estabilidade da meta.",
+        "Não solicitar transaminases em intervalo fixo programado em paciente assintomático em uso de estatina — dosar apenas na avaliação basal pré-tratamento e depois se houver indicação clínica específica.",
+        "Monitorizar CK apenas diante de sintoma muscular ou conforme protocolo de reexposição em paciente com intolerância a estatina suspeita ou confirmada, não como rotina em paciente assintomático.",
+        "Reavaliar triglicerídeos em 4 a 12 semanas após correção de causa secundária e intervenção dietética em hipertrigliceridemia grave, para decidir sobre indicação de fibrato ou ômega-3 prescrito.",
+        "Acompanhar glicemia em paciente em uso de inibidor de ApoC-III do tipo siRNA, pelo risco de hiperglicemia em quem já tem pré-diabetes ou diabetes.",
+        "Acompanhar transaminases e plaquetas em paciente em uso de inibidor de ApoC-III do tipo oligonucleotídeo antissenso, pelo risco de elevação de enzimas hepáticas e trombocitopenia.",
+        "Reforçar o rastreamento em cascata de familiares de 1º grau após confirmação de hipercolesterolemia familiar, e reavaliar periodicamente adesão e meta de LDL-C ao longo da vida, dado o caráter genético e permanente da condição."
+      ],
+      "special_populations": [
+        "Idoso e muito idoso (≥75 anos)",
+        "Mulher em idade fértil, gestação e lactação",
+        "Hipercolesterolemia familiar homozigota (HoFH)",
+        "Doença renal crônica",
+        "Diabetes mellitus e síndrome metabólica"
+      ],
+      "assistant_questions": [
+        {
+          "id": "pancreatitis_risk_severe_tg",
+          "label": "Triglicerídeos atuais estão em 500 mg/dL ou mais (especialmente 1.000 mg/dL ou mais), com risco de pancreatite aguda?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "acute_pancreatitis_now",
+          "label": "Há dor abdominal em andar superior, náusea/vômito e lipase ou amilase 3x ou mais o limite superior da normalidade, sugerindo pancreatite aguda em curso?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "acute_coronary_symptoms_now",
+          "label": "Há dor torácica aguda, dispneia súbita ou outro sinal sugestivo de síndrome coronariana aguda neste momento?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "familial_hypercholesterolemia_criteria",
+          "label": "Há critérios sugestivos de hipercolesterolemia familiar (LDL-C muito elevado, xantoma tendíneo, arco corneano precoce, doença aterosclerótica prematura pessoal ou familiar, ou parente de 1º grau com LDL-C muito alto)?",
+          "type": "multiselect",
+          "section": "Hipercolesterolemia familiar",
+          "options": [
+            {
+              "value": "ldl_muito_elevado",
+              "label": "LDL-C 190 mg/dL ou mais, sem tratamento"
+            },
+            {
+              "value": "xantoma_tendineo",
+              "label": "Xantoma tendíneo (pessoal ou familiar)"
+            },
+            {
+              "value": "arco_corneano_precoce",
+              "label": "Arco corneano antes dos 45 anos"
+            },
+            {
+              "value": "dac_prematura_pessoal",
+              "label": "Doença aterosclerótica prematura pessoal (homem <55 anos, mulher <60 anos)"
+            },
+            {
+              "value": "historia_familiar_forte",
+              "label": "Parente de 1º grau com doença aterosclerótica prematura ou LDL-C muito elevado"
+            },
+            {
+              "value": "nenhum",
+              "label": "Nenhum critério identificado"
+            }
+          ]
+        },
+        {
+          "id": "cardiovascular_risk_established",
+          "label": "O risco cardiovascular global já está estabelecido (doença aterosclerótica prévia, diabetes com lesão de órgão-alvo, doença renal crônica avançada ou hipercolesterolemia familiar) ou ainda precisa ser calculado por escore?",
+          "type": "select",
+          "required": true,
+          "section": "Estratificação de risco",
+          "options": [
+            {
+              "value": "ja_estabelecido",
+              "label": "Risco já estabelecido (alto ou muito alto, sem necessidade de escore)"
+            },
+            {
+              "value": "a_calcular",
+              "label": "Risco ainda precisa ser calculado por escore (SCORE2/PREVENT-ASCVD)"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Não avaliado até o momento"
+            }
+          ]
+        },
+        {
+          "id": "statin_intolerance_suspected",
+          "label": "Há suspeita ou confirmação de intolerância a estatina (sintoma muscular, elevação de CK ou de transaminases atribuída à estatina)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Intolerância a estatina"
+        },
+        {
+          "id": "current_lipid_panel_known",
+          "label": "O LDL-C, não-HDL-colesterol e/ou ApoB atuais são conhecidos?",
+          "type": "boolean",
+          "section": "Perfil lipídico"
+        },
+        {
+          "id": "lpa_measured_ever",
+          "label": "A lipoproteína(a) [Lp(a)] já foi dosada alguma vez na vida deste paciente?",
+          "type": "boolean",
+          "section": "Perfil lipídico"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "disl-pancreatite-aguda-em-curso",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "acute_pancreatitis_now",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível pancreatite aguda por hipertrigliceridemia grave"
+            ],
+            "emergency_flow": [
+              "Internar para jejum, hidratação intravenosa vigorosa e manejo de pancreatite aguda; considerar plasmaférese terapêutica ou insulina associada a heparina em infusão contínua em centro com experiência"
+            ]
+          }
+        },
+        {
+          "id": "disl-sindrome-coronariana-aguda-suspeita",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "acute_coronary_symptoms_now",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível síndrome coronariana aguda em paciente com dislipidemia"
+            ],
+            "emergency_flow": [
+              "Migrar imediatamente para protocolo de dor torácica aguda com ECG e troponina seriada"
+            ]
+          }
+        },
+        {
+          "id": "disl-hipertrigliceridemia-grave-risco-pancreatite",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "pancreatitis_risk_severe_tg",
+                "op": "truthy"
+              },
+              {
+                "field": "acute_pancreatitis_now",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Triglicerídeos em faixa grave (500 mg/dL ou mais, sobretudo 1.000 mg/dL ou mais): investigar causa secundária, iniciar dieta pobre em gordura e considerar fibrato e/ou ômega-3 prescrito dirigido à prevenção de pancreatite"
+            ],
+            "suggested_tests": [
+              "Repetir perfil lipídico após correção de causa secundária e dieta, em 4 a 12 semanas"
+            ]
+          }
+        },
+        {
+          "id": "disl-suspeita-hipercolesterolemia-familiar",
+          "priority": 60,
+          "when": {
+            "any": [
+              {
+                "field": "familial_hypercholesterolemia_criteria",
+                "op": "contains",
+                "value": "ldl_muito_elevado"
+              },
+              {
+                "field": "familial_hypercholesterolemia_criteria",
+                "op": "contains",
+                "value": "xantoma_tendineo"
+              },
+              {
+                "field": "familial_hypercholesterolemia_criteria",
+                "op": "contains",
+                "value": "historia_familiar_forte"
+              },
+              {
+                "field": "familial_hypercholesterolemia_criteria",
+                "op": "contains",
+                "value": "dac_prematura_pessoal"
+              },
+              {
+                "field": "familial_hypercholesterolemia_criteria",
+                "op": "contains",
+                "value": "arco_corneano_precoce"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Aplicar o escore da Dutch Lipid Clinic Network para estimar a probabilidade diagnóstica de hipercolesterolemia familiar"
+            ],
+            "suggested_tests": [
+              "Calcular escore de Dutch Lipid Clinic Network; considerar análise genética e rastreamento em cascata de familiares de 1º grau"
+            ]
+          }
+        },
+        {
+          "id": "disl-intolerancia-a-estatina-suspeita",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "statin_intolerance_suspected",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "Não declarar intolerância definitiva após um único relato: aplicar protocolo estruturado de suspensão e reexposição, com estratificação por CK, antes de abandonar a classe"
+            ],
+            "suggested_tests": [
+              "Dosar CK basal e conforme sintoma; reavaliar transaminases apenas se houver sinal clínico de disfunção hepática"
+            ]
+          }
+        },
+        {
+          "id": "disl-risco-cardiovascular-ja-estabelecido",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "cardiovascular_risk_established",
+                "op": "eq",
+                "value": "ja_estabelecido"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "Risco cardiovascular já classificado como alto ou muito alto, sem necessidade de escore; aplicar diretamente a meta de LDL-C correspondente"
+            ]
+          }
+        },
+        {
+          "id": "disl-perfil-lipidico-desconhecido",
+          "priority": 25,
+          "when": {
+            "all": [
+              {
+                "field": "current_lipid_panel_known",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "missing_information": [
+              "LDL-C, não-HDL-colesterol e ApoB atuais não informados — necessários para definir meta e decisão de escalonamento"
+            ],
+            "suggested_tests": [
+              "Solicitar perfil lipídico completo, com ApoB quando disponível"
+            ]
+          }
+        },
+        {
+          "id": "disl-lpa-nao-dosada",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "lpa_measured_ever",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "suggested_tests": [
+              "Dosar lipoproteína(a) ao menos uma vez na vida — reclassifica risco quando elevada e não se altera de forma relevante ao longo do tempo"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "dislipidemia",
+        "colesterol",
+        "LDL",
+        "triglicerídeos",
+        "hipercolesterolemia familiar",
+        "lipoproteína(a)",
+        "estatina",
+        "prevenção cardiovascular"
+      ],
+      "source_refs": [
+        "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289.",
+        "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+        "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624-2757. DOI: 10.1016/j.jacc.2025.11.016. PMID: 41824590.",
+        "Nordestgaard BG, Chapman MJ, Humphries SE, et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: guidance for clinicians to prevent coronary heart disease: consensus statement of the European Atherosclerosis Society. Eur Heart J. 2013;34(45):3478-3490. DOI: 10.1093/eurheartj/eht273. PMID: 23956253.",
+        "Cuchel M, Raal FJ, Hegele RA, et al. 2023 Update on European Atherosclerosis Society Consensus Statement on Homozygous Familial Hypercholesterolaemia: new treatments and clinical guidance. Eur Heart J. 2023;44(25):2277-2291. DOI: 10.1093/eurheartj/ehad197. PMID: 37130090.",
+        "Kronenberg F, Mora S, Stroes ESG, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785.",
+        "Kamstrup PR, Tybjærg-Hansen A, Steffensen R, Nordestgaard BG. Genetically elevated lipoprotein(a) and increased risk of myocardial infarction. JAMA. 2009;301(22):2331-2339. DOI: 10.1001/jama.2009.801. PMID: 19509380.",
+        "Virani SS, Morris PB, Agarwala A, et al. 2021 ACC Expert Consensus Decision Pathway on the Management of ASCVD Risk Reduction in Patients With Persistent Hypertriglyceridemia. J Am Coll Cardiol. 2021;78(9):960-993. DOI: 10.1016/j.jacc.2021.06.011. PMID: 34332805.",
+        "Pedersen SB, Langsted A, Nordestgaard BG. Nonfasting Mild-to-Moderate Hypertriglyceridemia and Risk of Acute Pancreatitis. JAMA Intern Med. 2016;176(12):1834-1842. DOI: 10.1001/jamainternmed.2016.6875. PMID: 27820614.",
+        "Ridker PM, Danielson E, Fonseca FA, et al; JUPITER Study Group. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N Engl J Med. 2008;359(21):2195-2207. DOI: 10.1056/NEJMoa0807646. PMID: 18997196.",
+        "Björnsson ES. Hepatotoxicity of statins and other lipid-lowering agents. Liver Int. 2017;37(2):173-178. DOI: 10.1111/liv.13308. PMID: 27860156.",
+        "FDA Drug Safety Communication. Important Safety Label Changes to Cholesterol-Lowering Statin Drugs. 28/02/2012."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40878289/",
+        "https://pubmed.ncbi.nlm.nih.gov/31504418/",
+        "https://pubmed.ncbi.nlm.nih.gov/41824590/",
+        "https://pubmed.ncbi.nlm.nih.gov/23956253/",
+        "https://pubmed.ncbi.nlm.nih.gov/37130090/",
+        "https://pubmed.ncbi.nlm.nih.gov/36036785/",
+        "https://pubmed.ncbi.nlm.nih.gov/19509380/",
+        "https://pubmed.ncbi.nlm.nih.gov/34332805/",
+        "https://pubmed.ncbi.nlm.nih.gov/27820614/",
+        "https://pubmed.ncbi.nlm.nih.gov/18997196/",
+        "https://pubmed.ncbi.nlm.nih.gov/27860156/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-important-safety-label-changes-cholesterol-lowering-statin-drugs"
+      ],
+      "related_document_slugs": [
+        "acc-aha-2026-diretriz-dislipidemia-prevent-lpa-apob-e-metas-ldl",
+        "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "dislipidemias-avaliacao-de-risco-e-manejo-atualizacao-focada-2025",
+        "dislipidemias-diagnostico-estratificacao-e-tratamento-esceas-2019",
+        "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
+        "fluxograma-estatina-em-prevencao-primaria-decisao-de-tratar-acc-aha-2026",
+        "fluxograma-hipercolesterolemia-familiar-diagnostico-dlcn-e-manejo-esc-eas-2025",
+        "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+        "fluxograma-hipertrigliceridemia-grave-manejo-e-prevencao-de-pancreatite",
+        "hipertrigliceridemia-e-risco-de-pancreatite-aguda-a-coorte-de-copenhague-e-o-limiar-de-tratamento",
+        "fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+        "intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+        "inibidores-de-pcsk9-e-desfecho-cardiovascular-fourier-e-odyssey-outcomes",
+        "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+        "lipoproteina-a-evidencia-de-causalidade-genetica-dos-estudos-de-copenhague",
+        "hepatotoxicidade-por-estatina-o-fim-da-monitorizacao-rotineira-de-transaminases-e-quando-checar-de-verdade",
+        "hipolipemiantes-na-mulher-em-idade-fertil-gestacao-e-lactacao",
+        "evinacumabe-inibidor-de-angptl3-na-hipercolesterolemia-familiar-homozigota-o-ensaio-elipse-hofh",
+        "sintomas-musculares-associados-a-estatina-o-efeito-nocebo-statinwise",
+        "miopatia-necrotizante-autoimune-associada-a-estatina-anti-hmgcr",
+        "hipolipemiantes-nao-estatinicos-improve-it-clear-outcomes-e-o-limite-do-orion",
+        "icosapent-etila-reduce-it-e-o-fracasso-do-omega-3-combinado-strength",
+        "estatina-e-diabetes-de-novo-o-tamanho-real-do-risco-sattar-e-preiss",
+        "inibicao-de-apoc3-plozasiran-e-olezarsen-na-hipertrigliceridemia-grave-e-quilomicronemia",
+        "estatina-em-prevencao-primaria-no-muito-idoso-o-que-prosper-e-a-metanalise-ctt-mostram",
+        "estatina-na-gestacao-a-revisao-da-fda-de-2021-e-onde-a-cautela-clinica-diverge-dela",
+        "sapphire-ldl-intervencao-digital-e-controle-de-ldl-em-ascvd"
+      ],
+      "patient_material_slug": "colesterol-alto-e-prevencao-cardiovascular",
+      "review_status": "revisado",
+      "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — oitavo ciclo do dia. Nenhum verbete geral de dislipidemia do adulto existia previamente no corpus — apenas o hub pediátrico (dislipidemias-pediatricas), preservado sem duplicação de escopo. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários em content/Prevenção_e_lipídios/ antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 12 referências citadas (diretriz ESC/EAS 2025 focused update, diretriz ESC/EAS 2019, diretriz ACC/AHA 2026, consenso EAS de hipercolesterolemia familiar 2013, consenso EAS de HF homozigota 2023, consenso EAS de Lp(a) 2022, estudo de Kamstrup et al. sobre Lp(a) e infarto, consenso ACC de hipertrigliceridemia persistente 2021, coorte dinamarquesa de pancreatite aguda, JUPITER, revisão sobre hepatotoxicidade de estatina, e comunicado de segurança da FDA de 2012 sobre monitorização de transaminases). related_document_slugs inicialmente incluía 9 documentos de content/Farmacologia/ (monografias de fármacos individuais) propostos pelo agente de pesquisa 3 — removidos na montagem por estarem fora do escopo permitido de conexão Tudo com Tudo (related_document_slugs deve apontar apenas para documentos narrativos, nunca para Farmacologia/Calculadoras/Exames); ficaram 27 conexões válidas, todas confirmadas com menção central e explícita ao tema. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos PRs abertos (claude/* ou codex/*) que tocam doencas/metadados.json cria o slug dislipidemia. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao). Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 1,
+      "fonte_producao": "claude"
+    }
+  }
+]

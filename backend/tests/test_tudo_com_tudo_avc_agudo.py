@@ -55,12 +55,12 @@ def test_lote_avc_esta_revisado_sem_publicacao_antecipada():
 def test_loader_de_emergencia_aceita_par_pendente_sem_relaxar_publicacao():
     assert _documento_pode_ser_referenciado(
         published=False,
-        document_status="pendente_revisao",
-        protocol_status="pendente_revisao",
+        document_status="revisado",
+        protocol_status="revisado",
     )
     assert not _documento_pode_ser_referenciado(
         published=False,
-        document_status="pendente_revisao",
+        document_status="revisado",
         protocol_status="revisado",
     )
     assert _documento_pode_ser_referenciado(

@@ -1,0 +1,345 @@
+[
+  {
+    "slug": "sangramento-relacionado-a-anticoagulante",
+    "set": {
+      "name": "Sangramento relacionado a anticoagulante",
+      "aliases": [
+        "hemorragia em uso de anticoagulante",
+        "sangramento sob anticoagulação",
+        "hemorragia associada a DOAC ou varfarina"
+      ],
+      "area": "geral",
+      "category": "seguranca_antitrombotica",
+      "subtype": "evento_hemorragico",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Evento hemorrágico em pessoa exposta a anticoagulante, cuja gravidade depende do sítio, da repercussão hemodinâmica e hematológica, da persistência do sangramento e da necessidade de intervenção. A avaliação inicial identifica o fármaco, a última dose, a função renal, outros antitrombóticos e a fonte do sangramento; reversor não é indicado rotineiramente para sangramento não maior.",
+      "epidemiology": "Sangramento é uma das principais complicações da anticoagulação oral. A diretriz ACC/AHA/ACCP/HRS de fibrilação atrial de 2023 estima que cerca de 2% a 4% dos pacientes em anticoagulante oral apresentam sangramento maior que exige intervenção. O risco individual varia conforme idade, função renal e hepática, anemia, hipertensão, história de sangramento, associação com antiagregante ou anti-inflamatório e indicação da anticoagulação.",
+      "presentation": [
+        "Sangramento externo persistente, epistaxe ou sangramento gengival",
+        "Hematêmese, melena, hematoquezia ou hematúria",
+        "Cefaleia súbita intensa, déficit neurológico, alteração de consciência ou trauma craniano",
+        "Dor abdominal, lombar ou em flanco com suspeita de sangramento interno",
+        "Dispneia, hemoptise, dor torácica, palidez, sudorese, síncope ou hipotensão",
+        "Equimoses extensas ou queda inexplicada de hemoglobina"
+      ],
+      "diagnostic_approach": {
+        "primeiros_dados": [
+          "Identificar nome do anticoagulante, dose e horário da última tomada",
+          "Localizar a fonte e classificar gravidade antes de discutir reversão",
+          "Registrar antiagregantes, anti-inflamatórios, álcool e outros fármacos que alterem hemostasia",
+          "Verificar função renal e hepática, porque depuração reduzida pode prolongar exposição"
+        ],
+        "criterios_de_sangramento_maior": [
+          "Sangramento em local crítico",
+          "Instabilidade hemodinâmica",
+          "Queda de hemoglobina de pelo menos 2 g/dL",
+          "Necessidade de transfusão de pelo menos 2 unidades de concentrado de hemácias"
+        ],
+        "limite": "A triagem pode reconhecer sinais de alto risco, mas parte da classificação depende de exame físico, hemograma seriado, imagem e resposta ao controle da fonte."
+      },
+      "differentials": [
+        "Sangramento por lesão anatômica não relacionado causalmente ao anticoagulante",
+        "Coagulopatia por hepatopatia ou coagulação intravascular disseminada",
+        "Trombocitopenia ou disfunção plaquetária",
+        "Anemia sem sangramento ativo",
+        "Pigmentação de fezes ou urina sem hemorragia"
+      ],
+      "tests": [
+        "Sinais vitais seriados, perfusão e avaliação do estado mental",
+        "Hemograma, tipagem e prova de compatibilidade quando houver suspeita de sangramento relevante",
+        "Creatinina, função hepática e eletrólitos",
+        "INR em uso de antagonista da vitamina K",
+        "Tempo de trombina diluído ou ensaio anti-fator Xa calibrado, quando disponível e pertinente ao agente",
+        "Imagem ou endoscopia dirigida ao sítio suspeito sem atrasar estabilização e controle da fonte"
+      ],
+      "red_flags": [
+        "Instabilidade hemodinâmica, síncope ou hipoperfusão",
+        "Déficit neurológico, cefaleia súbita intensa, alteração de consciência ou trauma craniano",
+        "Hematêmese, melena volumosa, hematoquezia importante ou hemoptise",
+        "Sangramento persistente ou não controlado",
+        "Suspeita de local crítico: intracraniano, espinal, pericárdico, retroperitoneal, intraocular ou intramuscular com síndrome compartimental",
+        "Queda de hemoglobina de pelo menos 2 g/dL ou necessidade de pelo menos 2 unidades de hemácias"
+      ],
+      "ambulatory_flow": [
+        "Distinguir sangramento menor autolimitado de evento persistente, recorrente ou com sinal de alarme",
+        "Não administrar reversor para a maioria dos sangramentos não maiores",
+        "Não suspender definitivamente o anticoagulante por conta própria; revisar indicação, dose, função renal, interações e fonte tratável",
+        "Orientar retorno imediato se o sangramento aumentar, recidivar ou surgir sintoma neurológico/hemodinâmico"
+      ],
+      "emergency_flow": [
+        "Avaliar ABC, obter acesso venoso, monitorizar e controlar a fonte simultaneamente",
+        "Interromper temporariamente o anticoagulante no sangramento maior e registrar agente, dose e última exposição",
+        "Acionar o protocolo específico de reversão apenas em sangramento ameaçador à vida ou maior que não responde às medidas iniciais",
+        "Considerar a situação regulatória e a disponibilidade local de cada reversor; não improvisar antídoto cruzado",
+        "Planejar reintrodução da anticoagulação após hemostasia conforme sítio, causa, indicação trombótica e risco de recorrência"
+      ],
+      "treatment_summary": "O tratamento combina estabilização, controle rápido da fonte, suspensão temporária quando indicada e reversão seletiva conforme o anticoagulante e a gravidade. A reversão específica ou com concentrado de complexo protrombínico não é resposta automática a qualquer sangramento. Depois da hemostasia, a indicação e o momento de retomar anticoagulação devem ser reavaliados, pois a interrupção prolongada aumenta risco tromboembólico.",
+      "monitoring": [
+        "Sinais vitais, perfusão, diurese e estado neurológico",
+        "Hemoglobina e evolução do sítio de sangramento",
+        "Função renal e hepática",
+        "Eventos trombóticos após reversão ou interrupção",
+        "Correção da causa e dos fatores modificáveis antes da alta"
+      ],
+      "special_populations": [
+        "Idoso ou pessoa frágil: maior probabilidade de queda, disfunção renal, polifarmácia e apresentação atípica",
+        "Gestação: abordagem multidisciplinar e escolha de reversão compatível com agente, fase gestacional e risco materno-fetal",
+        "Câncer: integrar trombocitopenia, sítio tumoral, terapia oncológica e alto risco trombótico concorrente",
+        "Prótese valvar mecânica ou tromboembolismo recente: risco trombótico elevado torna especialmente crítica a decisão de reinício"
+      ],
+      "assistant_questions": [
+        {
+          "id": "active_or_recurrent",
+          "label": "O sangramento está ativo, recorrente ou não cede com compressão local adequada?",
+          "type": "boolean",
+          "required": true,
+          "section": "Gravidade"
+        },
+        {
+          "id": "critical_site_or_neuro",
+          "label": "Há cefaleia súbita intensa, déficit neurológico, alteração de consciência, trauma craniano ou suspeita de sangramento em local crítico?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "hemodynamic_signs",
+          "label": "Há síncope, hipotensão, taquicardia, dispneia, palidez intensa ou outro sinal de hipoperfusão?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "visible_internal_bleeding",
+          "label": "Há hematêmese, melena, hematoquezia importante, hematúria macroscópica ou hemoptise?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sítio"
+        },
+        {
+          "id": "agent_known",
+          "label": "O nome do anticoagulante, a dose e o horário da última tomada são conhecidos?",
+          "type": "boolean",
+          "required": true,
+          "section": "Exposição"
+        },
+        {
+          "id": "renal_decline_or_interaction",
+          "label": "Há piora renal/hepática ou uso concomitante de antiagregante, AINE ou outro anticoagulante?",
+          "type": "boolean",
+          "section": "Modificadores"
+        },
+        {
+          "id": "deep_internal_bleeding",
+          "label": "Há hematoma grande/progressivo ou dor abdominal, lombar ou em flanco sem explicação, sugerindo sangramento profundo/retroperitoneal?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sítio"
+        },
+        {
+          "id": "major_bleed_objective",
+          "label": "Houve queda de hemoglobina ≥2 g/dL ou transfusão de ≥2 unidades de concentrado de hemácias relacionada ao evento?",
+          "type": "boolean",
+          "required": true,
+          "section": "Gravidade"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "local-critico-neurologico",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "critical_site_or_neuro",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível hemorragia intracraniana ou em outro local crítico sob anticoagulação"
+            ],
+            "emergency_flow": [
+              "Encaminhar imediatamente; não aguardar evolução domiciliar nem resultado de teste específico para iniciar avaliação"
+            ]
+          }
+        },
+        {
+          "id": "instabilidade",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "hemodynamic_signs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sinais de instabilidade ou hipoperfusão tornam o sangramento potencialmente ameaçador à vida"
+            ],
+            "emergency_flow": [
+              "Estabilizar, controlar a fonte e acionar protocolo de hemorragia/reversão conforme o agente"
+            ]
+          }
+        },
+        {
+          "id": "sangramento-interno-visivel",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "visible_internal_bleeding",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sinal de sangramento digestivo, urinário ou pulmonar clinicamente relevante"
+            ],
+            "suggested_tests": [
+              "Hemograma, função renal/hepática, tipagem e investigação dirigida ao sítio"
+            ]
+          }
+        },
+        {
+          "id": "persistente-recorrente",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "active_or_recurrent",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Sangramento persistente ou recorrente necessita avaliação da fonte e da exposição anticoagulante"
+            ]
+          }
+        },
+        {
+          "id": "exposicao-desconhecida",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "agent_known",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Nome do anticoagulante, dose e horário da última tomada"
+            ],
+            "messages": [
+              "Exposição desconhecida impede escolher reversão com segurança; confirmar embalagem, receita, prontuário ou cuidador"
+            ]
+          }
+        },
+        {
+          "id": "acumulo-ou-interacao",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "renal_decline_or_interaction",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Disfunção renal/hepática ou combinação antitrombótica pode prolongar exposição e aumentar risco hemorrágico"
+            ],
+            "suggested_tests": [
+              "Creatinina, função hepática e conciliação completa de medicamentos"
+            ]
+          }
+        },
+        {
+          "id": "sangramento-profundo",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "deep_internal_bleeding",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Suspeita de sangramento profundo ou retroperitoneal sob anticoagulação"
+            ],
+            "suggested_tests": [
+              "Hemograma e imagem dirigida ao sítio conforme estabilidade"
+            ]
+          }
+        },
+        {
+          "id": "criterio-objetivo-sangramento-maior",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "major_bleed_objective",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Queda de hemoglobina ≥2 g/dL ou transfusão ≥2 unidades caracteriza sangramento maior"
+            ],
+            "emergency_flow": [
+              "Tratar como sangramento maior, controlar a fonte e avaliar reversão conforme agente e última dose"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "anticoagulante",
+        "sangramento",
+        "hemorragia",
+        "DOAC",
+        "varfarina",
+        "reversão"
+      ],
+      "source_refs": [
+        "Tomaselli GF, Mahaffey KW, Cuker A, et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. J Am Coll Cardiol. 2020;76(5):594-622. DOI: 10.1016/j.jacc.2020.04.053. PMID: 32680646.",
+        "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. 2024;149:e1-e156. DOI: 10.1161/CIR.0000000000001193.",
+        "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176.",
+        "US Food and Drug Administration. Update on the Safety of Andexxa. FDA Safety Communication, 18/12/2025."
+      ],
+      "source_urls": [
+        "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2020/07/10/11/26/2020-ACC-Expert-Consensus-Decision-Pathway-on-Bleeding",
+        "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001193",
+        "https://academic.oup.com/eurheartj/article/45/36/3314/7738779",
+        "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. | Lote vincular Tudo com Tudo 28/08/2026: adicionado 1 related_document_slug (reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa, ANNEXA-4/RE-VERSE AD), levando o total de 2 para 3 (piso mínimo da regra). Três candidatos adicionais propostos pelo agente de pesquisa (fluxograma e monografias de idarucizumabe/protamina) foram descartados por resolverem para content/Farmacologia, pasta explicitamente fora do escopo permitido pela regra Tudo com Tudo — verificação feita por mim, corrigindo proposta inicial do agente. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 3,
+      "related_document_slugs": [
+        "fluxograma-sangramento-maior-em-paciente-anticoagulado",
+        "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+        "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa"
+      ],
+      "patient_material_slug": "sangramento-em-quem-usa-anticoagulante-existe-remedio-para-reverter"
+    }
+  }
+]

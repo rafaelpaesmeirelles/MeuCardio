@@ -1,0 +1,342 @@
+[
+  {
+    "slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
+    "set": {
+      "name": "Síndrome do coração esquerdo hipoplásico — diagnóstico fetal",
+      "aliases": [
+        "SCEH fetal",
+        "HLHS fetal",
+        "Síndrome de hipoplasia do ventrículo esquerdo",
+        "Coração esquerdo hipoplásico"
+      ],
+      "area": "cardiopediatria",
+      "category": "cardiologia_fetal",
+      "subtype": "fisiologia_univentricular",
+      "cyanosis_class": "cianotica",
+      "prevalence_rank": 10,
+      "completeness": "completo",
+      "summary": "Espectro de hipoplasia grave das estruturas cardíacas esquerdas (ventrículo esquerdo, valva mitral e/ou aórtica atrésicas ou gravemente estenóticas, aorta ascendente hipoplásica), com circulação sistêmica inteiramente dependente do ventrículo direito via canal arterial após o nascimento. Diagnóstico predominantemente pré-natal, ao ecocardiograma fetal do rastreio morfológico de segundo trimestre; manejo depende de aconselhamento parental sobre três vias possíveis (cirurgia paliativa estagiada, transplante cardíaco neonatal primário ou cuidados paliativos/compassivos) e de vigilância do septo atrial, cuja restrição grave é emergência neonatal.",
+      "epidemiology": "A síndrome do coração esquerdo hipoplásico (SCEH/HLHS) é incomum, com incidência estimada entre 0,1 e 0,25 por 1.000 nascidos vivos (Bokhari et al., World J Cardiol 2025, PMID 40161566), mas seu impacto é desproporcional ao número absoluto de casos: é uma das cardiopatias congênitas críticas mais letais quando não tratada e uma causa reconhecida de óbito intrauterino, chegando a ser responsabilizada, segundo a mesma revisão (citando Allan et al., sem PMID do estudo primário conferido nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA para essa cifra específica), por até 5% das mortes fetais espontâneas atribuídas a cardiopatia estrutural. A taxa de detecção pré-natal varia amplamente conforme a estrutura do sistema de rastreio de cada país — descrita na mesma fonte entre 12% e 75% dos casos identificados antes do nascimento —, refletindo cobertura e qualidade do ultrassom morfológico populacional, não uma limitação intrínseca da ecocardiografia fetal em si. Entre as gestações com diagnóstico pré-natal confirmado, a taxa de interrupção voluntária da gravidez também varia, na mesma fonte, entre 12% e 48% conforme o país e o contexto legal/cultural. As fontes consultadas nesta sessão não estabelecem predileção de sexo relevante.",
+      "diagnostic_approach": "O diagnóstico da SCEH é predominantemente pré-natal e se apoia na ecocardiografia fetal segmentar, habitualmente realizada entre a 18ª e a 22ª semana de gestação — janela do rastreio morfológico de segundo trimestre em que a SCEH costuma ser uma das cardiopatias mais facilmente reconhecíveis, por produzir assimetria grosseira e óbvia entre os ventrículos já na janela de quatro câmaras, associada a hipoplasia ou atresia da(s) valva(s) mitral e/ou aórtica ao Doppler colorido (Moscatelli et al., J Cardiovasc Dev Dis 2025, PMID 41002628). A vista dos três vasos e traqueia complementa a avaliação, permitindo identificar hipoplasia ou atresia de aorta ascendente e do arco, com padrão de fluxo retrógrado característico. Em centros com expertise, achados sugestivos já podem surgir no rastreio de primeiro trimestre (11-14 semanas); uma revisão sistemática com meta-análise de 45 estudos (306.872 fetos) mostrou sensibilidade agrupada de 55,80% (IC95% 45,87-65,50%) para cardiopatias maiores em geral nesse período em população não selecionada, e 67,74% (IC95% 55,25-79,06%) em população de alto risco — números não específicos de SCEH, mas que situam o primeiro trimestre como complemento, não substituto, do rastreio de segundo trimestre (Karim et al., Ultrasound Obstet Gynecol 2022, PMID 34369613). Componente essencial e frequentemente subvalorizado do exame é a avaliação dedicada do septo interatrial e do fluxo nas veias pulmonares: um padrão de fluxo em vaivém ou com reversão diastólica proeminente sinaliza septo atrial restritivo ou íntegro, achado de altíssimo risco presente em 6%-11% dos fetos com SCEH e associado a mortalidade que se aproxima de 100% sem intervenção planejada quando o septo é íntegro (Bokhari et al., World J Cardiol 2025, PMID 40161566). Confirmado o diagnóstico, o fluxo de cuidado inclui obrigatoriamente cariótipo/estudo genético, pesquisa de anomalias extracardíacas e encaminhamento para aconselhamento multidisciplinar em centro de referência, com reavaliações ecocardiográficas seriadas até o parto para reclassificar septo atrial e canal arterial e ajustar o plano de nascimento.",
+      "presentation": [
+        "Assimetria ventricular grave na janela de quatro câmaras do ecocardiograma fetal, com ventrículo esquerdo hipoplásico e ventrículo direito dilatado/dominante",
+        "Atresia ou estenose importante da valva mitral, com fluxo transmitral ausente ou muito reduzido ao Doppler",
+        "Atresia ou estenose importante da valva aórtica, com fluxo anterógrado ausente ou mínimo na via de saída esquerda",
+        "Hipoplasia de aorta ascendente e do arco aórtico, com fluxo retrógrado característico na vista de três vasos-traqueia",
+        "Fluxo anormal nas veias pulmonares (padrão de vaivém ou reversão diastólica proeminente), marcador indireto de septo atrial restritivo ou íntegro",
+        "Abaulamento do septo interatrial e, em subgrupo de alto risco, ausência de comunicação interatrial efetiva",
+        "Achados associados possíveis em casos extremos: hidropisia fetal e disfunção miocárdica, sobretudo quando o septo atrial é gravemente restritivo"
+      ],
+      "differentials": [
+        "Estenose aórtica crítica com ventrículo esquerdo ainda de tamanho limítrofe/evolutivo — potencial candidato a via biventricular ou a valvuloplastia aórtica fetal antes da hipoplasia se completar",
+        "Ventrículo esquerdo 'limítrofe' (borderline) sem atresia franca das valvas — decisão entre via biventricular e univentricular",
+        "Coarctação de aorta crítica ou interrupção do arco aórtico com hipoplasia secundária leve de ventrículo esquerdo (não é SCEH verdadeira; o VE tende a ser normal ou apenas discretamente reduzido)",
+        "Complexo de Shone (múltiplos níveis de obstrução do coração esquerdo) em sua forma mais grave",
+        "Dupla via de saída de ventrículo direito com atresia ou obstrução mitral e ventrículo esquerdo hipoplásico",
+        "Defeito do septo atrioventricular não balanceado com dominância do ventrículo direito e hipoplasia secundária do esquerdo",
+        "Cor triatriatum sinistrum grave — mimetiza obstrução/restrição de fluxo do lado esquerdo, é raro"
+      ],
+      "tests": [
+        "Ecocardiograma fetal segmentar completo — exame de eleição, idealmente entre 18 e 22 semanas, com achados sugestivos possíveis já entre 11 e 14 semanas em centros com expertise",
+        "Avaliação dedicada da janela de quatro câmaras e da vista de três vasos-traqueia (3VTV) para caracterizar hipoplasia de arco e aorta ascendente",
+        "Doppler colorido e pulsado das valvas mitral e aórtica para classificar atresia versus estenose grave",
+        "Doppler do fluxo das veias pulmonares para rastrear septo atrial restritivo/íntegro (padrão de vaivém, reversão diastólica proeminente)",
+        "Cariótipo/microarray e pesquisa sistemática de anomalias extracardíacas associadas, com aconselhamento genético",
+        "Ecocardiogramas fetais seriados ao longo da gestação para reclassificar septo atrial, canal arterial e função ventricular",
+        "Ecocardiograma neonatal confirmatório imediato ao nascer, para orientar necessidade de septostomia atrial de urgência antes da cirurgia"
+      ],
+      "red_flags": [
+        "Septo atrial íntegro ou gravemente restritivo — mortalidade se aproxima de 100% sem intervenção planejada; presente em 6%-11% dos fetos com SCEH",
+        "Padrão Doppler de veias pulmonares em vaivém ou com reversão diastólica proeminente",
+        "Hidropisia fetal",
+        "Disfunção miocárdica franca ou regurgitação tricúspide moderada a grave — pode reclassificar a criança como candidata a transplante em vez de via cirúrgica estagiada",
+        "Restrição ou fechamento precoce do canal arterial identificado no terceiro trimestre",
+        "Anomalias extracardíacas graves ou trissomia 18 associada — limita a elegibilidade cirúrgica",
+        "Plano de parto fora de centro terciário com cirurgia cardíaca pediátrica e PGE1 imediatamente disponíveis"
+      ],
+      "ambulatory_flow": [
+        "Encaminhamento imediato para ecocardiograma fetal detalhado em centro de referência assim que houver suspeita no rastreio morfológico",
+        "Aconselhamento multidisciplinar estruturado (cardiologia pediátrica/fetal, cirurgia cardíaca, neonatologia, obstetrícia de alto risco e, quando disponível, cuidados paliativos/bioética), apresentando de forma honesta as três vias terapêuticas possíveis",
+        "Investigação de anomalias associadas: cariótipo/microarray, pesquisa de anomalias extracardíacas, com reavaliação ecocardiográfica seriada para reclassificar o septo atrial ao longo da gestação",
+        "Definição antecipada e documentada do plano de parto: local (centro terciário com cirurgia cardíaca pediátrica e UTI neonatal disponíveis), via de parto e protocolo de estabilização imediata com PGE1 já preparado",
+        "Reavaliação ecocardiográfica no terceiro trimestre focada em septo atrial e canal arterial, para readequar o plano de nascimento quando necessário (por exemplo, parto programado com hemodinâmica disponível se septo muito restritivo)",
+        "Discussão documentada e respeitosa da opção de cuidados paliativos/compassivos como escolha legítima da família, sem coerção em qualquer direção"
+      ],
+      "emergency_flow": [
+        "Ao nascimento, iniciar infusão contínua de prostaglandina E1 para manter a permeabilidade do canal arterial assim que houver suspeita ou confirmação diagnóstica, sem aguardar estabilidade clínica aparente",
+        "Monitorização contínua de saturação e sinais de baixo débito sistêmico, com manejo cuidadoso do balanço circulatório sistêmico-pulmonar: evitar hiperóxia e hiperventilação, que reduzem a resistência vascular pulmonar e desviam fluxo do circuito sistêmico para o pulmonar",
+        "Ecocardiograma neonatal urgente para reclassificar septo atrial e canal arterial e definir necessidade imediata de septostomia",
+        "Septostomia atrial de urgência (habitualmente por balão via cateter, técnica variável por instituição) quando o forame oval é restritivo ou íntegro — verdadeira emergência neonatal, indicada independentemente de sintomas evidentes ao nascer",
+        "Suporte hemodinâmico e ventilatório com FiO2 controlada e hipercarbia permissiva quando necessário, já que redução de FiO2 e aumento de CO2 inspirado reduzem agudamente a saturação, mas apenas a hipercarbia melhora a entrega sistêmica e cerebral de oxigênio",
+        "Acionamento da equipe cirúrgica para o Estágio I (Norwood ou variante híbrida) assim que houver estabilização inicial"
+      ],
+      "treatment_summary": "O tratamento da SCEH começa, na prática, ainda no período pré-natal, com o aconselhamento estruturado dos pais sobre três vias possíveis — nenhuma delas 'a única certa' — e continua, ao nascimento, com manutenção imediata da permeabilidade do canal arterial por infusão contínua de prostaglandina E1 (PGE1), pois a circulação sistêmica inteira depende desse fluxo até (e além) da primeira cirurgia.\n\n1) Cirurgia paliativa estagiada (Norwood → Glenn → Fontan). É a via mais adotada. O Estágio I (Norwood, ou variante híbrida) é realizado nas primeiras semanas de vida; dados da Society of Thoracic Surgeons mostram sobrevida hospitalar subindo de 68,6% (2002) para 81,4% (2009), com séries recentes grandes relatando 74%-93%, e uma revisão de 2025 cita variação mais ampla de 47%-85% entre estudos (Feinstein et al., J Am Coll Cardiol 2012, PMID 22192720; Bokhari et al., World J Cardiol 2025, PMID 40161566). O ensaio randomizado SVR Trial (555 neonatos) comparou as duas técnicas de fluxo pulmonar do Estágio I — conduto ventrículo direito-artéria pulmonar (Sano) versus fístula de Blalock-Taussig modificada — com morte ou transplante em 12 meses de 26% versus 36% (p=0,01), diferença que deixou de ser significativa em seguimento mais longo. O período entre a alta do Estágio I e o Estágio II é o de maior risco de toda a via — mortalidade interestágio publicada de 2% a 16% —, mas programas estruturados de monitorização domiciliar (peso, saturação, contato frequente com a equipe) elevam a sobrevida até o Estágio II para 98%. O Estágio II (Glenn bidirecional), tipicamente entre 4 e 6 meses, tem mortalidade hospitalar virtualmente zero e sobrevida em 1 ano acima de 95%. O Estágio III (Fontan) completa a via entre 2 e 5 anos, conforme indicação fisiológica individual, não calendário fixo. No conjunto, a sobrevida em 5 anos historicamente variou entre 50% e 69%, mas a expectativa atual é que cerca de 70% dos recém-nascidos com SCEH hoje atinjam a idade adulta.\n\n2) Transplante cardíaco neonatal primário. Opção limitada pela escassez de doadores neonatais: a mortalidade em lista de espera para lactentes é a mais alta entre todos os receptores de órgão sólido nos EUA (17%) e vem aumentando ao longo das últimas duas décadas; por isso, com tempos de espera de vários meses e resultados aceitáveis da via cirúrgica estagiada, o transplante primário é hoje raramente oferecido, ficando reservado sobretudo a neonatos com disfunção grave de ventrículo direito e/ou regurgitação tricúspide moderada a grave. Sobrevida pós-transplante de 80%-85% em 30 dias, 75% em 1 ano, 65% em 5 anos e 60% em 10 anos.\n\n3) Cuidados paliativos/compassivos. Reconhecidos na literatura como opção legítima diante da complexidade e da mortalidade cumulativa da via cirúrgica, sobretudo quando há anatomia cardíaca desfavorável, trissomia 18 ou prematuridade extrema associadas — a decisão cabe à família, informada de forma honesta sobre as três vias, sem coerção em qualquer direção.\n\nManejo pré-operatório do balanço circulatório. Antes da cirurgia, o desafio central é equilibrar o fluxo sistêmico e o pulmonar (Qp:Qs), que competem pelo mesmo débito do ventrículo único via canal arterial: hiperóxia e hiperventilação reduzem a resistência vascular pulmonar e desviam fluxo do circuito sistêmico para o pulmonar, agravando o baixo débito sistêmico — por isso a estratégia consagrada evita FiO2 elevada e busca hipercarbia permissiva controlada quando necessário, já que tanto a redução de FiO2 quanto o aumento de CO2 inspirado reduzem agudamente a saturação, mas apenas a hipercarbia melhora a entrega sistêmica e cerebral de oxigênio (Feinstein et al., J Am Coll Cardiol 2012, PMID 22192720). Quando o septo atrial é restritivo ou íntegro, a saída do fluxo pulmonar fica comprometida e a criança pode entrar em colapso circulatório já nas primeiras horas de vida — cenário que exige septostomia atrial de urgência, independentemente da presença de sintomas evidentes ao nascer.",
+      "monitoring": [
+        "Ecocardiogramas fetais seriados (frequência definida pelo centro, tipicamente a cada 2-4 semanas) para acompanhar progressão anatômica, função ventricular direita, septo atrial e canal arterial",
+        "Avaliação de crescimento fetal e bem-estar por Doppler obstétrico — restrição de crescimento pode alterar o plano de parto",
+        "No período neonatal pré-Estágio I e no pré-operatório do Estágio II, monitorização hospitalar de saturação, lactato, função renal e sinais de baixo débito",
+        "Programa estruturado de monitorização domiciliar interestágio (peso diário, saturação, sinais de alerta, contato frequente com a equipe) entre o Estágio I e o Estágio II — associado a elevação da sobrevida até o Estágio II para 98%",
+        "Seguimento cardiológico pediátrico de longo prazo após o Fontan (função ventricular, arritmia, enteropatia perdedora de proteína, função hepática e renal), conforme diretriz da American Heart Association sobre circulação de Fontan já referenciada no documento deste guia sobre ventrículo único e estadiamento de Fontan"
+      ],
+      "special_populations": [
+        "Gestações com septo atrial íntegro ou gravemente restritivo — subgrupo de altíssimo risco, candidato a avaliação para septostomia atrial fetal em centros especializados (técnica ainda não amplamente disponível)",
+        "Fetos com trissomia 18 ou outras anomalias cromossômicas/extracardíacas graves associadas — alteram a elegibilidade cirúrgica e reforçam a necessidade de discutir cuidados paliativos como opção",
+        "Recém-nascidos prematuros extremos ou com peso muito baixo ao nascer — maior risco perioperatório, podem exigir adiamento planejado do Estágio I",
+        "Candidatos a transplante cardíaco neonatal primário (disfunção grave de ventrículo direito e/ou regurgitação tricúspide moderada a grave) — via limitada pela escassez de doadores neonatais e por mortalidade elevada em lista de espera",
+        "Famílias que optam por cuidados de conforto/compassivos — necessidade de suporte estruturado de cuidados paliativos perinatais, sem prejuízo assistencial ou de acompanhamento por essa escolha"
+      ],
+      "assistant_questions": [
+        {
+          "id": "septo_atrial_status",
+          "label": "Como está o septo atrial ao ecocardiograma fetal mais recente?",
+          "type": "select",
+          "required": true,
+          "section": "Avaliação ecocardiográfica",
+          "options": [
+            {
+              "value": "sem_restricao",
+              "label": "Sem restrição (fluxo interatrial livre)"
+            },
+            {
+              "value": "restritivo",
+              "label": "Restritivo (fluxo interatrial reduzido)"
+            },
+            {
+              "value": "integro",
+              "label": "Íntegro ou praticamente íntegro (sem comunicação efetiva)"
+            }
+          ]
+        },
+        {
+          "id": "via_terapeutica_escolhida",
+          "label": "Qual via terapêutica foi discutida ou escolhida pela família?",
+          "type": "select",
+          "section": "Aconselhamento parental",
+          "options": [
+            {
+              "value": "cirurgia_estagiada",
+              "label": "Cirurgia paliativa estagiada (Norwood/Glenn/Fontan)"
+            },
+            {
+              "value": "transplante",
+              "label": "Transplante cardíaco neonatal primário"
+            },
+            {
+              "value": "cuidados_paliativos",
+              "label": "Cuidados paliativos/compassivos"
+            },
+            {
+              "value": "em_discussao",
+              "label": "Ainda em discussão/aconselhamento"
+            }
+          ]
+        },
+        {
+          "id": "parto_planejado_centro_terciario",
+          "label": "O parto está planejado em centro terciário com cirurgia cardíaca pediátrica e PGE1 imediatamente disponíveis?",
+          "type": "boolean",
+          "required": true,
+          "section": "Planejamento do parto"
+        },
+        {
+          "id": "idade_gestacional_diagnostico",
+          "label": "Idade gestacional (em semanas) no momento do diagnóstico",
+          "type": "number",
+          "section": "Avaliação ecocardiográfica"
+        },
+        {
+          "id": "sinais_hidropisia",
+          "label": "Há sinais de hidropisia fetal?",
+          "type": "boolean",
+          "section": "Avaliação ecocardiográfica"
+        },
+        {
+          "id": "anomalias_extracardiacas",
+          "label": "Foram identificadas anomalias extracardíacas ou cromossômicas associadas?",
+          "type": "boolean",
+          "section": "Investigação associada"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "septo_atrial_integro_emergencia",
+          "priority": 95,
+          "when": {
+            "any": [
+              {
+                "field": "septo_atrial_status",
+                "op": "eq",
+                "value": "integro"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Septo atrial íntegro/gravemente restritivo em SCEH — mortalidade se aproxima de 100% sem intervenção; emergência neonatal verdadeira"
+            ],
+            "emergency_flow": [
+              "Acionar imediatamente equipe de hemodinâmica/cirurgia para septostomia atrial de urgência ao nascimento, independentemente de estabilidade clínica aparente"
+            ],
+            "messages": [
+              "Septo atrial íntegro em SCEH exige plano de parto em centro com hemodinâmica/sala híbrida disponível e comunicação antecipada com as equipes neonatal e cirúrgica."
+            ]
+          }
+        },
+        {
+          "id": "septo_atrial_restritivo_alerta",
+          "priority": 75,
+          "when": {
+            "any": [
+              {
+                "field": "septo_atrial_status",
+                "op": "eq",
+                "value": "restritivo"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Septo atrial restritivo em SCEH — risco aumentado de instabilidade hemodinâmica neonatal imediata"
+            ],
+            "emergency_flow": [
+              "Ecocardiograma neonatal imediato ao nascer para reclassificar o septo atrial e decidir necessidade de septostomia"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma neonatal urgente"
+            ]
+          }
+        },
+        {
+          "id": "parto_fora_centro_terciario",
+          "priority": 80,
+          "when": {
+            "any": [
+              {
+                "field": "parto_planejado_centro_terciario",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Plano de parto fora de centro com cirurgia cardíaca pediátrica — risco de colapso circulatório neonatal sem suporte imediato"
+            ],
+            "missing_information": [
+              "Confirmar transferência para centro terciário antes do parto ou plano formal de transporte neonatal de emergência com PGE1 em curso"
+            ],
+            "messages": [
+              "Cardiopatia ducto-dependente exige nascimento em centro com cardiologia/cirurgia pediátrica e PGE1 disponíveis de imediato; parto fora desse contexto é um fator de risco evitável."
+            ]
+          }
+        },
+        {
+          "id": "hidropisia_presente",
+          "priority": 85,
+          "when": {
+            "any": [
+              {
+                "field": "sinais_hidropisia",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Hidropisia fetal em SCEH — sinal de descompensação fetal avançada"
+            ],
+            "messages": [
+              "Hidropisia associada a SCEH indica descompensação fetal grave; requer avaliação urgente em centro de referência em cardiologia fetal e discussão antecipada do plano perinatal."
+            ]
+          }
+        },
+        {
+          "id": "via_paliativos_apoio",
+          "priority": 40,
+          "when": {
+            "any": [
+              {
+                "field": "via_terapeutica_escolhida",
+                "op": "eq",
+                "value": "cuidados_paliativos"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Cuidados paliativos/compassivos são reconhecidos na literatura como opção terapêutica legítima diante da complexidade e mortalidade cumulativa da via cirúrgica"
+            ],
+            "missing_information": [
+              "Confirmar encaminhamento a equipe de cuidados paliativos perinatais estruturada"
+            ]
+          }
+        },
+        {
+          "id": "anomalias_extracardiacas_presente",
+          "priority": 50,
+          "when": {
+            "any": [
+              {
+                "field": "anomalias_extracardiacas",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Cariótipo/microarray e avaliação genética completa, se ainda não realizados"
+            ],
+            "differentials": [
+              "Trissomia 18 e outras síndromes associadas a SCEH devem ser investigadas antes de definir elegibilidade cirúrgica"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "fetal",
+        "HLHS",
+        "SCEH",
+        "ducto-dependente",
+        "univentricular",
+        "septo-atrial-restritivo",
+        "norwood",
+        "aconselhamento-perinatal",
+        "cardiologia-fetal"
+      ],
+      "source_refs": [
+        "Bokhari SFH, Faizan Sattar SM, Mehboob U, Umais M, Ahmad M, Malik A, Bakht D, Iqbal A, Dost W. Advancements in prenatal diagnosis and management of hypoplastic left heart syndrome: A multidisciplinary approach and future directions. World J Cardiol. 2025;17(3):103668. DOI: 10.4330/wjc.v17.i3.103668. PMID: 40161566. PMCID: PMC11947948.",
+        "Moscatelli S, Sabatino J, Leo I, Borrelli N, Avesani M, Di Salvo G, Montanaro C, Pergola V, Motta R, Ielapi J, Di Costanzo A, De Sarro R, Guglielmi G, Cattapan I, Gaudieri G, Luedke L, Perrone MA. Multimodal Imaging from Fetal to Adult Life: A Comprehensive Approach to Hypoplastic Left Heart Syndrome (HLHS). J Cardiovasc Dev Dis. 2025;12(9):349. DOI: 10.3390/jcdd12090349. PMID: 41002628. PMCID: PMC12470689.",
+        "Feinstein JA, Benson DW, Dubin AM, et al. Hypoplastic left heart syndrome: current considerations and expectations. J Am Coll Cardiol. 2012;59(1 Suppl):S1-42. DOI: 10.1016/j.jacc.2011.09.022. PMID: 22192720. PMCID: PMC6110391.",
+        "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-2242. DOI: 10.1161/01.cir.0000437597.44550.5d. PMID: 24763516.",
+        "Karim JN, Bradburn E, Roberts N, Papageorghiou AT; ACCEPTS study. First-trimester ultrasound detection of fetal heart anomalies: systematic review and meta-analysis. Ultrasound Obstet Gynecol. 2022;59(1):11-25. DOI: 10.1002/uog.23740. PMID: 34369613. PMCID: PMC9305869.",
+        "Diretriz Brasileira de Cardiologia Fetal – 2019. Arq Bras Cardiol. 2019;112(5):600-648. DOI: 10.5935/abc.20190075."
+      ],
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11947948/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12470689/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6110391/",
+        "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9305869/",
+        "https://abccardiol.org/article/diretriz-brasileira-de-cardiologia-fetal-2019/"
+      ],
+      "related_document_slugs": [
+        "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+        "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+        "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+        "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial",
+        "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional",
+        "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais"
+      ],
+      "patient_material_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
+      "review_status": "revisado",
+      "review_note": "Ficha aprofundada de 'intermediario' para 'completo' nesta sessão. Fontes primárias verificadas via WebFetch (PMC/Europe PMC/PubMed E-utilities): Bokhari et al., World J Cardiol 2025 (PMID 40161566, PMCID PMC11947948, texto integral aberto lido por completo) e Moscatelli et al., J Cardiovasc Dev Dis 2025 (PMID 41002628, PMCID PMC12470689, texto integral aberto lido por completo) — fontes centrais de diagnóstico pré-natal, septo atrial restritivo/íntegro e vias terapêuticas; Feinstein et al., J Am Coll Cardiol 2012 (PMID 22192720, PMCID PMC6110391, texto integral aberto), já usado e verificado no documento deste guia sobre ventrículo único/Fontan, reutilizado aqui para sobrevida por estágio cirúrgico e manejo do balanço circulatório pré-operatório; Donofrio et al., Circulation 2014 (PMID 24763516) — texto integral não está em acesso aberto, dados vêm do abstract estruturado completo obtido via PubMed E-utilities nesta sessão; Karim et al., Ultrasound Obstet Gynecol 2022 (PMID 34369613, PMCID PMC9305869, texto integral aberto) para sensibilidade de rastreio de primeiro trimestre (dado de cardiopatias maiores em geral, não específico de SCEH, e explicitamente identificado como tal no texto). Mantida a Diretriz Brasileira de Cardiologia Fetal 2019 já citada na versão anterior, com página de acesso reconferida. Limitações declaradas: (1) o documento científico da AHA (Donofrio 2014) não está em acesso aberto, então seus dados vêm apenas do abstract estruturado; (2) a cifra de 'até 5% das mortes fetais espontâneas atribuídas a SCEH' e o estudo de Jacquemyn sobre mortalidade por fase pós-híbrido/Estágio 2/Fontan, ambos citados dentro da revisão de Bokhari et al. 2025, não foram conferidos nos artigos primários originais nesta sessão (sem PMID individual verificado) — sinalizados como VERIFICAÇÃO HUMANA NECESSÁRIA no corpo do documento; (3) o orçamento de WebSearch desta sessão se esgotou durante a pesquisa, e toda a busca subsequente foi feita por WebFetch direto em PubMed/PMC/Europe PMC, o que pode ter deixado de capturar fontes adicionais que uma busca ampla encontraria. related_document_slugs revalidados por grep no checkout local de content/**/*.md, confirmando menção explícita ao tema (não apenas proximidade temática) em cada um dos 6 documentos linkados; patient_material_slug confirmado como existente em material-paciente/metadados.json. Nenhuma dose de fármaco foi incluída em campo novo, conforme exigido. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "fonte_producao": "claude"
+    }
+  }
+]

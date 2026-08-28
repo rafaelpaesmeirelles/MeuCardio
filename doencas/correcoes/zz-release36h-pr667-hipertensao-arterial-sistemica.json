@@ -1,0 +1,234 @@
+[
+  {
+    "slug": "hipertensao-arterial-sistemica",
+    "set": {
+      "name": "Hipertensão arterial sistêmica",
+      "aliases": [
+        "HAS",
+        "hipertensão arterial",
+        "pressão alta"
+      ],
+      "area": "geral",
+      "category": "prevencao_e_risco",
+      "subtype": "pressao_arterial_elevada_persistente",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Condição crônica definida por pressão arterial persistentemente elevada, confirmada com técnica adequada e, quando possível, medidas fora do consultório; seu manejo integra risco cardiovascular global, lesão de órgão-alvo, causas secundárias e preferências da pessoa.",
+      "epidemiology": "É um dos principais fatores modificáveis de risco cardiovascular e frequentemente permanece assintomática. O verbete evita extrapolar prevalências internacionais para o Brasil e prioriza o impacto clínico estabelecido pela diretriz AHA/ACC de 2025.",
+      "presentation": [
+        "Geralmente assintomática, inclusive em níveis que já aumentam risco cardiovascular",
+        "Cefaleia, tontura e epistaxe são inespecíficas e não confirmam nem excluem hipertensão",
+        "Pode ser identificada por medida oportunística, automedida residencial ou monitorização ambulatorial",
+        "Lesão crônica pode se manifestar como doença coronariana, insuficiência cardíaca, doença renal, doença arterial periférica ou evento cerebrovascular",
+        "Elevação acentuada com sintomas neurológicos, dor torácica, dispneia ou lesão renal exige avaliar emergência hipertensiva e diagnósticos alternativos"
+      ],
+      "diagnostic_approach": {
+        "confirmacao": [
+          "Padronizar preparo, posição, repouso, tamanho do manguito e dispositivo validado; repetir medidas e usar a média apropriada",
+          "Confirmar persistência em ocasiões distintas e incorporar MRPA ou MAPA quando disponível, sobretudo diante de suspeita de efeito do avental branco ou hipertensão mascarada",
+          "Não diagnosticar nem ajustar tratamento crônico a partir de uma única medida isolada sem contexto, salvo necessidade de avaliação aguda"
+        ],
+        "avaliacao_inicial": [
+          "Documentar risco cardiovascular, tabagismo, diabetes, dislipidemia, doença renal e eventos cardiovasculares prévios",
+          "Pesquisar lesão de órgão-alvo e revisar medicamentos, substâncias e adesão",
+          "Comparar pulsos e pressão entre membros quando houver suspeita vascular ou de coarctação"
+        ],
+        "etiologia": [
+          "Suspeitar causa secundária em início abrupto, idade atípica, resistência aparente, hipocalemia, doença renal, apneia do sono ou sinais endócrinos",
+          "Antes de rotular hipertensão resistente, confirmar técnica, adesão, efeito do avental branco e interferentes farmacológicos"
+        ],
+        "estratificacao": "A intensidade do tratamento depende do nível pressórico confirmado, risco cardiovascular, comorbidades, tolerabilidade e decisão compartilhada. A diretriz AHA/ACC de 2025 adota meta geral abaixo de 130/80 mmHg para adultos, com individualização em situações específicas."
+      },
+      "differentials": [
+        "Erro de técnica ou manguito inadequado",
+        "Efeito do avental branco",
+        "Hipertensão mascarada",
+        "Elevação transitória por dor, ansiedade, abstinência ou substâncias",
+        "Hipertensão secundária renal, renovascular, endócrina, respiratória do sono ou medicamentosa",
+        "Pseudohipertensão ou rigidez arterial acentuada em contexto selecionado"
+      ],
+      "tests": [
+        "Medidas padronizadas em consultório e, conforme disponibilidade e indicação, MRPA ou MAPA",
+        "Creatinina com estimativa de função renal, sódio, potássio e exame de urina/albuminúria conforme protocolo",
+        "Glicemia ou hemoglobina glicada e perfil lipídico para estratificação de risco",
+        "ECG para hipertrofia, arritmia, isquemia prévia ou distúrbio de condução",
+        "Ecocardiograma quando o resultado puder esclarecer lesão de órgão-alvo, sintomas ou suspeita estrutural",
+        "Investigação dirigida de causas secundárias, sem painel indiscriminado"
+      ],
+      "red_flags": [
+        "Elevação importante da pressão com déficit neurológico, alteração de consciência ou convulsão",
+        "Dor torácica, dispneia, edema agudo de pulmão ou sinais de síndrome aórtica aguda",
+        "Oligúria, lesão renal aguda, hemólise ou alteração visual aguda",
+        "Gestação ou puerpério com hipertensão e sintomas sugestivos de pré-eclâmpsia",
+        "Hipotensão, choque ou deterioração clínica após uso de anti-hipertensivo"
+      ],
+      "ambulatory_flow": [
+        "Confirmar qualidade e padrão das medidas antes de classificar",
+        "Estimar risco cardiovascular e procurar comorbidades, lesão de órgão-alvo e causas secundárias quando indicadas",
+        "Definir plano compartilhado de estilo de vida e terapia farmacológica conforme risco e nível pressórico",
+        "Revisar adesão, acesso, efeitos adversos e medidas residenciais em intervalos compatíveis com a intensidade do ajuste",
+        "Simplificar o regime e coordenar cuidado multiprofissional quando isso melhorar controle e segurança"
+      ],
+      "emergency_flow": [
+        "Priorizar ABC, sinais vitais repetidos e avaliação imediata de lesão aguda de órgão-alvo",
+        "Investigar de forma dirigida síndrome coronariana, edema pulmonar, AVC, encefalopatia, síndrome aórtica, eclâmpsia ou lesão renal conforme apresentação",
+        "Distinguir elevação assintomática de emergência hipertensiva; o valor isolado não define lesão aguda",
+        "Quando houver emergência hipertensiva, monitorizar e reduzir a pressão de maneira controlada conforme o órgão acometido e protocolo específico",
+        "Evitar normalização rápida e não monitorizada da pressão em pessoa sem indicação específica"
+      ],
+      "treatment_summary": "O tratamento combina intervenções de estilo de vida, redução de risco cardiovascular e fármacos de primeira linha selecionados conforme comorbidades, função renal, eletrólitos, gestação, tolerabilidade e acesso. A meta geral proposta pela diretriz AHA/ACC de 2025 é inferior a 130/80 mmHg, mas o plano deve ser individualizado. Hipertensão resistente exige primeiro excluir pseudorresistência e revisar adesão e interferentes antes de ampliar investigação ou tratamento.",
+      "monitoring": [
+        "Pressão em consultório e medidas residenciais com técnica documentada",
+        "Sintomas de hipotensão, quedas, adesão e barreiras de acesso",
+        "Creatinina e potássio após início ou ajuste de fármacos que afetam sistema renina-angiotensina, mineralocorticoides ou diuréticos",
+        "Controle de diabetes, lipídios, tabagismo, peso, atividade física e sono",
+        "Progressão ou regressão de lesão de órgão-alvo e eventos cardiovasculares"
+      ],
+      "special_populations": [
+        "Gestação, intenção reprodutiva e puerpério exigem metas, fármacos e sinais de alarme específicos",
+        "Idosos frágeis, pessoas institucionalizadas ou com expectativa de vida limitada requerem avaliação de ortostatismo, quedas e objetivos individualizados",
+        "Doença renal crônica exige atenção a albuminúria, função renal, potássio e proteção renal",
+        "Atletas podem necessitar confirmação fora do consultório e revisão de substâncias ergogênicas",
+        "Pessoas negras apresentam maior carga populacional de hipertensão, mas decisões individuais não devem substituir avaliação clínica por raça como proxy biológica"
+      ],
+      "assistant_questions": [
+        {
+          "id": "measurement_confirmed",
+          "label": "A elevação foi confirmada com técnica adequada e medidas repetidas ou fora do consultório?",
+          "type": "boolean",
+          "required": true,
+          "section": "Confirmação"
+        },
+        {
+          "id": "acute_target_injury",
+          "label": "Há déficit neurológico, alteração de consciência, dor torácica, dispneia, edema pulmonar, oligúria ou alteração visual aguda?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "pregnant_postpartum",
+          "label": "A pessoa está gestante ou no puerpério?",
+          "type": "boolean",
+          "required": true,
+          "section": "Situações especiais"
+        },
+        {
+          "id": "secondary_cause_clues",
+          "label": "Há início abrupto, hipocalemia, doença renal, apneia do sono, resistência aparente ou sinais de causa secundária?",
+          "type": "boolean",
+          "section": "Etiologia"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "has-lesao-aguda",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "acute_target_injury",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível emergência hipertensiva ou outro evento cardiovascular agudo"
+            ],
+            "emergency_flow": [
+              "Avaliar imediatamente lesão aguda de órgão-alvo e tratar pelo protocolo específico"
+            ]
+          }
+        },
+        {
+          "id": "has-medida-nao-confirmada",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "measurement_confirmed",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "A medida isolada ainda precisa de confirmação padronizada, salvo contexto de urgência"
+            ],
+            "suggested_tests": [
+              "Repetir pressão com técnica adequada e considerar MRPA ou MAPA"
+            ]
+          }
+        },
+        {
+          "id": "has-gestacao-puerperio",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "pregnant_postpartum",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Aplicar protocolo obstétrico e revisar segurança dos anti-hipertensivos"
+            ]
+          }
+        },
+        {
+          "id": "has-causa-secundaria",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "secondary_cause_clues",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Investigar causa secundária de forma dirigida após excluir pseudorresistência"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "hipertensão",
+        "pressão arterial",
+        "MAPA",
+        "MRPA",
+        "risco cardiovascular",
+        "órgão-alvo"
+      ],
+      "source_refs": [
+        "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. Circulation. 2025;152:e114-e218. DOI: 10.1161/CIR.0000000000001356."
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline",
+        "https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+      ],
+      "related_document_slugs": [
+        "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
+        "hipertensao-arterial-classificacao-diagnostico-metas",
+        "fluxograma-hipertensao-arterial-esc-2024",
+        "escolha-do-anti-hipertensivo-de-primeira-linha-allhat-ascot-bpla-e-accomplish",
+        "fluxograma-hipertensao-escalonamento-farmacologico-combinacao-inicial-aos-tres-passos-esc-2024",
+        "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "hipertensao-do-jaleco-branco-e-mascarada-mapa-mrpa-prevalencia-e-decisao-terapeutica"
+      ],
+      "patient_material_slug": "hipertensao-arterial",
+      "review_status": "revisado",
+      "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretriz primária atual e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo (enriquecimento) 28/08/2026: adicionados 4 related_document_slugs (escolha de anti-hipertensivo de primeira linha, escalonamento farmacológico em 3 passos ESC 2024, pseudorresistência vs. resistência verdadeira, MAPA/MRPA e jaleco branco/mascarada), levando o total de 3 para 7. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "chatgpt",
+      "version": 2
+    }
+  }
+]

@@ -1,0 +1,525 @@
+[
+  {
+    "slug": "arritmias-na-gravidez",
+    "set": {
+      "name": "Arritmias na gravidez",
+      "aliases": [
+        "taquicardia na gestante",
+        "palpitações na gravidez"
+      ],
+      "area": "gravidez",
+      "category": "arritmia",
+      "subtype": "gestacao",
+      "prevalence_rank": 6,
+      "completeness": "completo",
+      "summary": "Palpitações e arritmias durante a gestação exigem distinção entre alterações fisiológicas, taquicardias sustentadas e ritmos associados a instabilidade ou cardiopatia.",
+      "presentation": [
+        "Palpitações súbitas, referidas como coração disparado ou batendo forte",
+        "Sensação de falhas ou saltos no ritmo cardíaco, sugestiva de extrassístoles",
+        "Início e término abruptos de taquicardia com frequência regular, sugestivo de taquicardia supraventricular paroxística",
+        "Tontura ou sensação de pré-síncope durante o episódio de palpitação",
+        "Síncope associada a taquiarritmia sustentada",
+        "Dispneia desproporcional ao esforço habitual esperado para a gestação",
+        "Dor ou desconforto torácico concomitante ao episódio de arritmia",
+        "Ansiedade ou mal-estar geral acompanhando as palpitações",
+        "Fadiga persistente em quadros de arritmia incessante ou muito frequente",
+        "Episódios desencadeados por esforço físico, estresse emocional, mudança de posição ou ingestão de cafeína e estimulantes",
+        "Percepção de pulso irregular ou irregularmente irregular, sugestiva de fibrilação atrial",
+        "Redução percebida da movimentação fetal durante episódio prolongado de instabilidade materna"
+      ],
+      "differentials": [
+        "Taquicardia sinusal fisiológica da gestação",
+        "Ansiedade e transtorno do pânico",
+        "Hipertireoidismo e tireotoxicose",
+        "Anemia gestacional",
+        "Embolia pulmonar, com taquicardia associada a dispneia e dor torácica",
+        "Cardiomiopatia periparto",
+        "Feocromocitoma, causa rara de palpitações paroxísticas associadas a hipertensão",
+        "Uso de substâncias estimulantes ou quadro de abstinência de cafeína"
+      ],
+      "tests": [
+        "Eletrocardiograma de 12 derivações",
+        "Holter de 24 a 48 horas ou monitor de eventos ambulatorial",
+        "Ecocardiograma transtorácico",
+        "Hemograma completo",
+        "Avaliação da função tireoidiana (TSH e T4 livre)",
+        "Eletrólitos séricos (potássio, magnésio, cálcio)",
+        "Aferição de pressão arterial e frequência cardíaca em diferentes posições",
+        "Monitorização da frequência cardíaca fetal (cardiotocografia) durante episódios sintomáticos"
+      ],
+      "red_flags": [
+        "Hipotensão arterial ou choque durante episódio de taquiarritmia",
+        "Síncope associada à arritmia",
+        "Dor torácica sugestiva de isquemia associada ao episódio arrítmico",
+        "Dispneia súbita ou sinais de edema agudo de pulmão",
+        "Alteração do nível de consciência",
+        "Padrão não tranquilizador na cardiotocografia (sofrimento fetal agudo) durante ou após episódio de arritmia materna",
+        "Arritmia ventricular sustentada ou instabilidade elétrica, como taquicardia ventricular sustentada ou fibrilação ventricular",
+        "Frequência cardíaca fetal persistentemente anormal, taquicárdica ou bradicárdica, coincidente com a arritmia materna",
+        "Sinais de baixo débito cardíaco materno, como extremidades frias, tempo de enchimento capilar prolongado ou oligúria"
+      ],
+      "ambulatory_flow": [
+        "Confirmar o diagnóstico da arritmia por ECG de 12 derivações e, quando disponível, Holter de 24 horas",
+        "Investigar fatores desencadeantes reversíveis, como anemia, distúrbios tireoidianos, distúrbios eletrolíticos, uso de estimulantes e ansiedade",
+        "Solicitar ecocardiograma para avaliar cardiopatia estrutural subjacente",
+        "Orientar manobras vagais como primeira linha em taquicardia supraventricular paroxística sintomática e hemodinamicamente estável",
+        "Encaminhar para avaliação conjunta com cardiologia obstétrica em todos os casos de arritmia sintomática, recorrente ou de início recente",
+        "Considerar terapia antiarrítmica com agente de perfil de segurança gestacional favorecido apenas quando medidas conservadoras forem insuficientes, sob supervisão especializada",
+        "Programar reavaliação clínica seriada com monitorização de sintomas e frequência cardíaca ao longo da gestação",
+        "Elaborar plano de parto individualizado, definindo local de assistência, necessidade de monitorização eletrocardiográfica intraparto e via de parto conforme indicação obstétrica",
+        "Orientar sinais de alarme que exigem procura imediata de serviço de emergência",
+        "Planejar seguimento cardiológico no puerpério, período de maior risco de recorrência arrítmica"
+      ],
+      "emergency_flow": [
+        "Avaliar estabilidade hemodinâmica materna e fetal imediatamente à chegada",
+        "Realizar ECG de 12 derivações e instituir monitorização cardíaca contínua",
+        "Indicar cardioversão elétrica sincronizada imediata em arritmia sustentada com instabilidade hemodinâmica, independentemente da idade gestacional",
+        "Realizar monitorização da frequência cardíaca fetal antes e após a cardioversão, quando houver viabilidade fetal",
+        "Corrigir distúrbios eletrolíticos e fatores desencadeantes agudos de forma concomitante",
+        "Acionar avaliação conjunta de cardiologia e obstetrícia para definição de conduta e necessidade de internação em ambiente monitorado",
+        "Considerar antecipação do parto apenas quando a instabilidade materna ou fetal persistir apesar do tratamento otimizado da arritmia"
+      ],
+      "tags": [
+        "gravidez",
+        "palpitação",
+        "taquicardia",
+        "ECG"
+      ],
+      "source_refs": [
+        "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+        "Adamson DL, Nelson-Piercy C. Managing palpitations and arrhythmias during pregnancy. Heart. 2007. PMID 18003696",
+        "Silversides CK, et al. Recurrence rates of arrhythmias during pregnancy in women with previous tachyarrhythmia and impact on fetal and neonatal outcomes. Am J Cardiol. 2006. PMID 16616027",
+        "Enriquez AD, Economy KE, Tedrow UB. Contemporary management of arrhythmias during pregnancy. Circ Arrhythm Electrophysiol. 2014. PMID 25336366",
+        "Li JM, et al. Frequency and outcome of arrhythmias complicating admission during pregnancy: experience from a high-volume and ethnically-diverse obstetric service. Clin Cardiol. 2008. PMID 19006111",
+        "Joglar JA, Page RL. Management of arrhythmia syndromes during pregnancy. Curr Opin Cardiol. 2014. PMID 24300567",
+        "Regitz-Zagrosek V, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018. PMID 30165544",
+        "Page RL, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016. PMID 26399663"
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/",
+        "https://pubmed.ncbi.nlm.nih.gov/18003696/",
+        "https://pubmed.ncbi.nlm.nih.gov/16616027/",
+        "https://pubmed.ncbi.nlm.nih.gov/25336366/",
+        "https://pubmed.ncbi.nlm.nih.gov/19006111/",
+        "https://pubmed.ncbi.nlm.nih.gov/24300567/",
+        "https://pubmed.ncbi.nlm.nih.gov/30165544/",
+        "https://pubmed.ncbi.nlm.nih.gov/26399663/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo em 28/08/2026: ficha estava completeness=intermediario, zero related_document_slugs, passou a completo com epidemiologia, abordagem diagnóstica, condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico (13 perguntas, 10 regras). Os 7 related_document_slugs foram encontrados do zero e cada um verificado por leitura direta do documento completo, confirmando centralidade ao tema de arritmia na gestação/puerpério. patient_material_slug confirmado por correspondência direta em material-paciente/metadados.json. 7 PMIDs verificados individualmente via NCBI e-utils antes da montagem. Nenhuma dose de fármaco em nenhum campo. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "epidemiology": "Palpitações são uma das queixas cardiovasculares mais comuns na gestação, relatadas por parcela expressiva das gestantes, e na grande maioria dos casos correspondem a extrassístoles supraventriculares ou ventriculares isoladas, sem repercussão hemodinâmica relevante. Arritmias sustentadas, sobretudo a taquicardia supraventricular paroxística, são menos frequentes, mas a gestação constitui período de maior vulnerabilidade eletrofisiológica: mulheres com história prévia de taquiarritmia apresentam recorrência aumentada durante a gravidez, e episódios de novo também surgem em mulheres sem diagnóstico prévio. O risco materno-fetal é substancialmente maior quando há cardiopatia estrutural ou congênita subjacente, situação em que arritmias ventriculares e fibrilação/flutter atrial assumem maior relevância clínica. As alterações fisiológicas da gestação favorecem o surgimento de arritmias: expansão do volume sanguíneo circulante e do débito cardíaco, elevação progressiva da frequência cardíaca basal, aumento da sensibilidade a catecolaminas e do tônus adrenérgico, além de mudanças hormonais (estrogênio, progesterona) que alteram propriedades eletrofisiológicas do miocárdio e o limiar arritmogênico. Fatores mecânicos, como o deslocamento cardíaco pelo útero gravídico, somam-se a gatilhos reversíveis frequentes na gestação, como disfunção tireoidiana, anemia e consumo de cafeína ou estimulantes, explicando por que as arritmias tendem a se manifestar ou se agravar principalmente no segundo e terceiro trimestres e no periparto.",
+      "diagnostic_approach": {
+        "avaliacao_inicial": "Anamnese detalhada caracterizando início, duração, frequência, regularidade e forma de término dos episódios, fatores desencadeantes e sintomas associados como síncope, dor torácica ou dispneia, além de história cardiológica pregressa, cardiopatia congênita, cirurgia cardíaca prévia e uso de substâncias estimulantes. O exame físico deve incluir aferição de frequência cardíaca e pressão arterial, ausculta cardíaca à procura de sopros ou irregularidade de ritmo, e busca ativa de sinais de descompensação, como estase jugular, edema e crepitações pulmonares.",
+        "eletrocardiograma": "O eletrocardiograma de 12 derivações em repouso é o exame inicial obrigatório em toda gestante com palpitações ou suspeita de arritmia, permitindo caracterizar o ritmo basal, identificar sinais de pré-excitação por via acessória, avaliar o intervalo QT, detectar bloqueios de condução e sinais indiretos de cardiopatia estrutural. Idealmente, deve-se tentar obter um traçado também durante o episódio sintomático.",
+        "monitorizacao_ambulatorial": "A monitorização ambulatorial prolongada, por Holter de 24 a 48 horas, monitor de eventos ou looper externo, é indicada quando os episódios são intermitentes e o eletrocardiograma de repouso é inconclusivo, permitindo correlacionar os sintomas relatados com o ritmo cardíaco registrado e quantificar a carga de extrassístoles ou episódios de taquiarritmia.",
+        "ecocardiograma": "O ecocardiograma transtorácico deve ser realizado em toda gestante com arritmia significativa, recorrente ou de diagnóstico novo, para excluir cardiopatia estrutural ou congênita não diagnosticada previamente, avaliar função ventricular, dimensões de câmaras cardíacas e valvopatias, uma vez que a presença de cardiopatia estrutural modifica substancialmente o risco materno-fetal e a conduta terapêutica.",
+        "avaliacao_de_gatilhos_e_causas_secundarias": "Investigação de causas secundárias e gatilhos reversíveis frequentes na gestação, incluindo avaliação da função tireoidiana para rastrear hipertireoidismo, hemograma completo para investigar anemia, eletrólitos séricos como potássio, magnésio e cálcio, e revisão detalhada do consumo de cafeína, estimulantes, descongestionantes e outras substâncias que possam precipitar ou agravar arritmias.",
+        "avaliacao_fetal": "Avaliação obstétrica concomitante, com monitorização da frequência cardíaca fetal e do bem-estar fetal, especialmente durante episódios de instabilidade hemodinâmica materna ou arritmia sustentada, dado o risco de hipoperfusão placentária transitória associado a esses eventos."
+      },
+      "treatment_summary": "O manejo das arritmias na gravidez exige equilíbrio entre a segurança materna e a segurança fetal, priorizando sempre que possível medidas conservadoras antes da introdução de terapia farmacológica. Alterações fisiológicas da gestação — aumento do volume plasmático, elevação da frequência cardíaca basal, mudanças na sensibilidade autonômica e no metabolismo hepático — aumentam a propensão a arritmias e modificam a farmacocinética dos antiarrítmicos, tornando a avaliação individualizada essencial. Em gestantes com extrassístoles isoladas, taquicardia sinusal reativa ou arritmias assintomáticas sem repercussão hemodinâmica, a conduta inicial é conservadora: correção de fatores desencadeantes (anemia, hipertireoidismo, uso de estimulantes, distúrbios eletrolíticos, ansiedade), manobras vagais para taquicardias supraventriculares paroxísticas e reavaliação clínica seriada. Quando há necessidade de terapia farmacológica, a escolha do antiarrítmico deve privilegiar agentes com perfil de segurança gestacional mais bem estabelecido, evitando fármacos com maior potencial teratogênico ou de toxicidade fetal, e reservando agentes de categorias menos estudadas para situações refratárias, sob supervisão conjunta de cardiologia obstétrica; doses específicas não são tratadas neste documento e devem ser definidas pela equipe assistente conforme protocolo institucional. A cardioversão elétrica sincronizada é considerada segura durante toda a gestação, incluindo o primeiro trimestre, pois a corrente elétrica direcionada ao coração materno não atinge de forma significativa o feto, sendo a intervenção de escolha em arritmias sustentadas com instabilidade hemodinâmica materna, independentemente da idade gestacional, com monitorização fetal antes e após o procedimento sempre que houver viabilidade fetal. Arritmias ventriculares sustentadas, sinais de insuficiência cardíaca, síncope ou instabilidade hemodinâmica configuram emergência obstétrica e cardiológica, exigindo estabilização imediata e avaliação para cardioversão ou terapia farmacológica intravenosa em ambiente monitorado. Toda gestante com arritmia recorrente, sintomática ou de início recente deve ser encaminhada para avaliação conjunta com cardiologia obstétrica, incluindo estratificação de risco estrutural por ecocardiograma, investigação de causas secundárias e planejamento do acompanhamento pré-natal, do trabalho de parto e do puerpério, período de reconhecida maior instabilidade elétrica. A decisão terapêutica deve sempre considerar o trimestre gestacional, a presença de cardiopatia estrutural subjacente, a repercussão hemodinâmica materna e fetal, e a necessidade de profilaxia em gestações subsequentes ou durante o trabalho de parto, com plano de parto individualizado e discussão multidisciplinar envolvendo obstetrícia, cardiologia e anestesiologia, garantindo continuidade do cuidado até a reavaliação puerperal.",
+      "monitoring": [
+        "Frequência cardíaca e ritmo materno em cada consulta pré-natal",
+        "Frequência cardíaca fetal e vitalidade fetal em gestantes com arritmia sintomática ou recorrente",
+        "ECG seriado conforme indicação clínica ou após início e ajuste de terapia antiarrítmica",
+        "Ecocardiograma de acompanhamento em gestantes com cardiopatia estrutural associada",
+        "Sintomas de palpitação, dispneia, síncope ou pré-síncope a cada consulta",
+        "Eletrólitos e função tireoidiana quando houver suspeita de causa secundária",
+        "Monitorização eletrocardiográfica contínua durante o trabalho de parto em gestantes de maior risco arrítmico",
+        "Reavaliação cardiológica no puerpério, período de maior instabilidade elétrica"
+      ],
+      "assistant_questions": [
+        {
+          "id": "arritmia_confirmada_ecg",
+          "label": "A arritmia foi confirmada por ECG de 12 derivações?",
+          "type": "boolean"
+        },
+        {
+          "id": "tipo_arritmia",
+          "label": "Qual o tipo de arritmia identificada?",
+          "type": "select",
+          "options": [
+            {
+              "value": "taquicardia_supraventricular",
+              "label": "Taquicardia supraventricular"
+            },
+            {
+              "value": "taquicardia_ventricular",
+              "label": "Taquicardia ventricular"
+            },
+            {
+              "value": "extrassistoles_isoladas",
+              "label": "Extrassístoles isoladas"
+            },
+            {
+              "value": "fibrilacao_atrial",
+              "label": "Fibrilação atrial"
+            },
+            {
+              "value": "flutter_atrial",
+              "label": "Flutter atrial"
+            },
+            {
+              "value": "bradiarritmia",
+              "label": "Bradiarritmia"
+            },
+            {
+              "value": "outra",
+              "label": "Outra"
+            }
+          ]
+        },
+        {
+          "id": "sintomas_associados",
+          "label": "Quais sintomas a gestante apresenta?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "palpitacao",
+              "label": "Palpitação"
+            },
+            {
+              "value": "dispneia",
+              "label": "Dispneia"
+            },
+            {
+              "value": "dor_toracica",
+              "label": "Dor torácica"
+            },
+            {
+              "value": "sincope",
+              "label": "Síncope"
+            },
+            {
+              "value": "pre_sincope",
+              "label": "Pré-síncope"
+            },
+            {
+              "value": "assintomatica",
+              "label": "Assintomática"
+            }
+          ]
+        },
+        {
+          "id": "instabilidade_hemodinamica",
+          "label": "Há sinais de instabilidade hemodinâmica materna (hipotensão, hipoperfusão, choque)?",
+          "type": "boolean"
+        },
+        {
+          "id": "cardiopatia_estrutural",
+          "label": "Há cardiopatia estrutural conhecida ou suspeita?",
+          "type": "boolean"
+        },
+        {
+          "id": "idade_gestacional_semanas",
+          "label": "Qual a idade gestacional atual, em semanas?",
+          "type": "number"
+        },
+        {
+          "id": "fator_desencadeante_identificado",
+          "label": "Foi identificado fator desencadeante reversível (anemia, distúrbio tireoidiano, distúrbio eletrolítico, estimulantes, ansiedade)?",
+          "type": "boolean"
+        },
+        {
+          "id": "resposta_manobra_vagal",
+          "label": "Houve resposta às manobras vagais?",
+          "type": "select",
+          "options": [
+            {
+              "value": "respondeu",
+              "label": "Respondeu"
+            },
+            {
+              "value": "nao_respondeu",
+              "label": "Não respondeu"
+            },
+            {
+              "value": "nao_tentado",
+              "label": "Não tentado"
+            }
+          ]
+        },
+        {
+          "id": "uso_antiarritmico_atual",
+          "label": "A gestante está em uso de terapia antiarrítmica?",
+          "type": "boolean"
+        },
+        {
+          "id": "vitalidade_fetal_avaliada",
+          "label": "A vitalidade fetal foi avaliada durante o episódio de arritmia?",
+          "type": "boolean"
+        },
+        {
+          "id": "avaliacao_cardiologia_obstetrica",
+          "label": "Já houve avaliação conjunta com cardiologia obstétrica?",
+          "type": "boolean"
+        },
+        {
+          "id": "recorrencia_arritmia",
+          "label": "A arritmia é recorrente ao longo da gestação?",
+          "type": "boolean"
+        },
+        {
+          "id": "plano_parto_definido",
+          "label": "Há plano de parto individualizado definido para monitorização intraparto?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "instabilidade_hemodinamica_emergencia",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "instabilidade_hemodinamica",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Instabilidade hemodinâmica materna associada a arritmia"
+            ],
+            "emergency_flow": [
+              "Indicar cardioversão elétrica sincronizada imediata, independentemente da idade gestacional"
+            ],
+            "messages": [
+              "Arritmia com instabilidade hemodinâmica materna configura emergência clínica; a cardioversão elétrica é segura em qualquer idade gestacional."
+            ]
+          }
+        },
+        {
+          "id": "taquicardia_ventricular_urgente",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_arritmia",
+                "op": "eq",
+                "value": "taquicardia_ventricular"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Taquicardia ventricular na gestação"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma",
+              "Eletrólitos séricos"
+            ],
+            "differentials": [
+              "Cardiomiopatia periparto",
+              "Canalopatia hereditária",
+              "Distúrbio eletrolítico agudo"
+            ]
+          }
+        },
+        {
+          "id": "sincope_associada_prioritario",
+          "priority": 85,
+          "when": {
+            "any": [
+              {
+                "field": "sintomas_associados",
+                "op": "contains",
+                "value": "sincope"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Síncope associada a episódio de arritmia"
+            ],
+            "suggested_tests": [
+              "ECG de 12 derivações",
+              "Monitorização cardíaca contínua"
+            ]
+          }
+        },
+        {
+          "id": "cardiopatia_estrutural_prioritario",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "cardiopatia_estrutural",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Cardiopatia estrutural subjacente aumenta o risco de descompensação arrítmica na gestação"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma"
+            ]
+          }
+        },
+        {
+          "id": "tsv_refrataria_manobra_vagal",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_arritmia",
+                "op": "eq",
+                "value": "taquicardia_supraventricular"
+              },
+              {
+                "field": "resposta_manobra_vagal",
+                "op": "eq",
+                "value": "nao_respondeu"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "ambulatory_flow": [
+              "Considerar terapia antiarrítmica com agente de perfil de segurança gestacional favorecido sob supervisão de cardiologia obstétrica"
+            ],
+            "emergency_flow": [
+              "Reavaliar necessidade de cardioversão elétrica se houver repercussão hemodinâmica"
+            ]
+          }
+        },
+        {
+          "id": "sem_avaliacao_cardiologia_obstetrica",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "avaliacao_cardiologia_obstetrica",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Avaliação conjunta com cardiologia obstétrica"
+            ],
+            "messages": [
+              "Encaminhar para avaliação conjunta com cardiologia obstétrica para estratificação de risco e definição terapêutica."
+            ]
+          }
+        },
+        {
+          "id": "fator_desencadeante_nao_investigado",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "fator_desencadeante_identificado",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Investigação de fatores desencadeantes reversíveis"
+            ],
+            "suggested_tests": [
+              "Hemograma",
+              "Perfil tireoidiano",
+              "Eletrólitos séricos"
+            ]
+          }
+        },
+        {
+          "id": "instabilidade_sem_avaliacao_fetal",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "instabilidade_hemodinamica",
+                "op": "truthy"
+              },
+              {
+                "field": "vitalidade_fetal_avaliada",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "red_flags": [
+              "Vitalidade fetal não avaliada em contexto de instabilidade materna"
+            ],
+            "emergency_flow": [
+              "Realizar monitorização da frequência cardíaca fetal antes e após a intervenção"
+            ]
+          }
+        },
+        {
+          "id": "recorrencia_ambulatorial",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "recorrencia_arritmia",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Arritmia recorrente ao longo da gestação aumenta a necessidade de acompanhamento seriado"
+            ],
+            "ambulatory_flow": [
+              "Intensificar reavaliação clínica seriada com monitorização de sintomas e frequência cardíaca"
+            ]
+          }
+        },
+        {
+          "id": "plano_parto_pendente_termo_proximo",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "plano_parto_definido",
+                "op": "falsy"
+              },
+              {
+                "field": "idade_gestacional_semanas",
+                "op": "gte",
+                "value": 32
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Plano de parto individualizado para monitorização intraparto"
+            ],
+            "messages": [
+              "Elaborar plano de parto individualizado com definição de monitorização eletrocardiográfica intraparto antes do termo."
+            ]
+          }
+        }
+      ],
+      "special_populations": [
+        "Gestante com taquicardia supraventricular paroxística recorrente",
+        "Gestante com cardiopatia estrutural prévia e arritmia",
+        "Gestante com fibrilação atrial de início na gestação",
+        "Gestante com extrassístoles frequentes e sintomáticas",
+        "Gestante com arritmia ventricular e necessidade de investigação de cardiopatia estrutural/canalopatia",
+        "Puérpera com arritmia peri-parto"
+      ],
+      "related_document_slugs": [
+        "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+        "fibrilacao-atrial-de-inicio-na-gestacao-incidencia-causas-e-controle-agudo",
+        "bradicardia-sintomatica-e-bloqueio-av-de-alto-grau-na-gestacao",
+        "taquicardia-ventricular-polimorfica-catecolaminergica-na-gestacao-e-puerperio",
+        "sindrome-do-qt-longo-e-risco-arritmico-no-puerperio",
+        "arritmias-maternas-desfechos-cardiacos-perinatais-epic-cosmos-2026",
+        "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao"
+      ],
+      "patient_material_slug": "arritmia-na-gravidez-remedios-seguros-para-o-coracao",
+      "fonte_producao": "claude"
+    }
+  }
+]

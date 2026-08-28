@@ -20,7 +20,7 @@ def _all_document_paths():
  return result
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
- i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="pendente_revisao"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("version")==2
+ i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="revisado"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("version")==2
 def test_catalogacao_e_conteudo_clinico_preexistente_preservados():
  i=_load_doencas()[SLUG]; assert i.get("name")=="Miocardite pediátrica"; assert "miocardite na criança" in (i.get("aliases") or []); assert i.get("category")=="doenca_miocardica"; assert i.get("prevalence_rank")==3; assert i.get("treatment_summary"); assert len(i.get("assistant_rules") or [])>=4
 def test_vinculos_tudo_com_tudo_resolvem_e_sao_documentos_narrativos():

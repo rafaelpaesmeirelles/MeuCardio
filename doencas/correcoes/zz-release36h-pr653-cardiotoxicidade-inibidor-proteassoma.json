@@ -1,0 +1,503 @@
+[
+  {
+    "slug": "cardiotoxicidade-inibidor-proteassoma",
+    "set": {
+      "name": "Toxicidade cardiovascular por inibidores de proteassoma",
+      "aliases": [
+        "carfilzomibe e coração",
+        "proteassoma cardiotoxicidade"
+      ],
+      "area": "cardiooncologia",
+      "category": "terapia_alvo",
+      "subtype": "proteassoma",
+      "prevalence_rank": 8,
+      "completeness": "completo",
+      "summary": "Monitorização de insuficiência cardíaca, pressão e eventos vasculares em contexto de inibidores de proteassoma e mieloma múltiplo.",
+      "tags": [
+        "proteassoma",
+        "carfilzomibe",
+        "mieloma",
+        "insuficiência cardíaca"
+      ],
+      "source_refs": [
+        "2022 ESC Guidelines on Cardio-Oncology",
+        "Waxman AJ, et al. Carfilzomib-Associated Cardiovascular Adverse Events: A Systematic Review and Meta-analysis. JAMA Oncol. 2018 Mar 8;4(3):e174519. PMID: 29285538.",
+        "Lyon AR, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022 Nov 1;43(41):4229-4361. PMID: 36017568.",
+        "Cornell RF, et al. Prospective Study of Cardiac Events During Proteasome Inhibitor Therapy for Relapsed Multiple Myeloma. J Clin Oncol. 2019 Aug 1;37(22):1946-1955. PMID: 31188726.",
+        "Chari A, et al. Analysis of carfilzomib cardiovascular safety profile across relapsed and/or refractory multiple myeloma clinical trials. Blood Adv. 2018 Jul 10;2(13):1633-1644. PMID: 29991494.",
+        "Georgiopoulos G, et al. Cardiovascular Toxicity of Proteasome Inhibitors: Underlying Mechanisms and Management Strategies. JACC CardioOncol. 2023 Feb;5(1):1-21. PMID: 36875897.",
+        "Bringhen S, et al. Prevention, monitoring and treatment of cardiovascular adverse events in myeloma patients receiving carfilzomib. J Intern Med. 2019 Jul;286(1):63-74. PMID: 30725503.",
+        "Bringhen S, et al. Cardiovascular adverse events in modern myeloma therapy – Incidence and risks. Haematologica. 2018 Sep;103(9):1422-1432. PMID: 30049825."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+        "https://pubmed.ncbi.nlm.nih.gov/29285538/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017568/",
+        "https://pubmed.ncbi.nlm.nih.gov/31188726/",
+        "https://pubmed.ncbi.nlm.nih.gov/29991494/",
+        "https://pubmed.ncbi.nlm.nih.gov/36875897/",
+        "https://pubmed.ncbi.nlm.nih.gov/30725503/",
+        "https://pubmed.ncbi.nlm.nih.gov/30049825/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (37º lote de conteúdo do dia): ficha estava completeness=basico, só catalogação (1 source_ref: ESC 2022), zero campos clínicos. Nota de transparência: esta ficha esteve bloqueada o dia todo por suspeita de colisão com a PR #551 aberta; reavaliação confirmou que o escopo real da PR #551 mudou (não toca mais este slug), liberando-a. Adicionados epidemiology (CVAE 18,1%/8,2% com carfilzomibe vs. bortezomibe menos cardiotóxico, mecanismo de disfunção endotelial), presentation (10), diagnostic_approach (3 subtópicos: avaliação basal, monitorização durante o tratamento, diferenciação de causa renal vs. cardíaca), differentials, tests, red_flags, treatment_summary (controle pressórico pré-ciclo como medida central, sem doses, decisão compartilhada com hematologia sobre manter/pausar/trocar terapia, diferença de risco carfilzomibe vs. bortezomibe, alerta contra suspensão desnecessária de tratamento oncológico eficaz), ambulatory_flow, emergency_flow, monitoring, special_populations (6), assistant_questions (13), assistant_rules (9, priority 95-96 para hipertensão grave/IC aguda/evento isquêmico). related_document_slugs adicionado do zero para 4 — um 5º candidato (amiloidose-cardiaca-por-cadeia-leve-al-e-o-ensaio-andromeda-daratumumabe) foi descartado durante a montagem: o trecho citado pelo agente de pesquisa era, na verdade, uma seção de 'Armadilhas' do próprio documento avisando explicitamente para não confundir os dois temas — negação de conexão, não uma conexão válida, mesmo padrão já identificado hoje em outros ciclos. Nenhuma dose de fármaco em nenhum campo. Todos os 7 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "epidemiology": "Os inibidores de proteassoma revolucionaram o tratamento do mieloma múltiplo, mas diferem marcadamente em seu perfil de toxicidade cardiovascular. O carfilzomibe, inibidor de segunda geração administrado por via intravenosa e com ligação irreversível ao proteassoma, associa-se a uma incidência de eventos cardiovasculares adversos (CVAE) de qualquer grau em torno de 18,1%, com eventos de grau igual ou superior a 3 em aproximadamente 8,2% dos pacientes, segundo metanálises de ensaios clínicos que reuniram estudos de fase 2 e 3. Esse perfil contrasta com o bortezomibe, inibidor de primeira geração e de ligação reversível, cuja toxicidade cardiovascular é consideravelmente menor, embora às custas de maior neurotoxicidade periférica. O mecanismo proposto para a cardiotoxicidade associada ao carfilzomibe envolve disfunção endotelial com redução da biodisponibilidade de óxido nítrico, ativação de vias de estresse oxidativo e um possível efeito citotóxico direto sobre cardiomiócitos, com comprometimento da função contrátil e do metabolismo energético mitocondrial. Por esse motivo, a avaliação cardiovascular basal antes do início da terapia — incluindo história de doença cardiovascular prévia, controle pressórico, função renal e, quando indicado, avaliação ecocardiográfica e de biomarcadores — é fundamental para estratificar risco, otimizar comorbidades pré-existentes e permitir uma monitorização direcionada ao longo de todo o tratamento.",
+      "presentation": [
+        "Hipertensão arterial de início recente ou piora de hipertensão pré-existente, frequentemente de difícil controle",
+        "Insuficiência cardíaca de início agudo ou subagudo, com dispneia e sinais de congestão",
+        "Dor torácica ou quadro compatível com síndrome coronariana aguda",
+        "Arritmias, incluindo fibrilação atrial de início recente",
+        "Eventos tromboembólicos venosos ou arteriais",
+        "Eventos vasculares diversos, como isquemia digital, hipertensão pulmonar ou microangiopatia trombótica",
+        "Dispneia aos esforços ou ortopneia sem outra causa evidente",
+        "Fadiga desproporcional ou intolerância progressiva ao exercício",
+        "Edema periférico de início recente",
+        "Pode ser assintomático em fase inicial, identificado apenas por elevação de biomarcadores ou alteração da pressão arterial na monitorização de rotina"
+      ],
+      "diagnostic_approach": {
+        "avaliacao_basal_pre_terapia": "Antes de iniciar o carfilzomibe, recomenda-se avaliação cardiovascular estruturada, incluindo história clínica dirigida para doença cardiovascular prévia (hipertensão, insuficiência cardíaca, doença coronariana, arritmias, tromboembolismo), exame físico com aferição da pressão arterial, eletrocardiograma basal e avaliação laboratorial com função renal e eletrólitos. Em pacientes com fatores de risco cardiovascular relevantes, história cardiológica prévia ou biomarcadores alterados, indica-se ecocardiograma transtorácico basal com avaliação da fração de ejeção e, quando disponível, do strain longitudinal global, além de dosagem de peptídeos natriuréticos e troponina para estabelecer valores de referência individuais.",
+        "monitorizacao_durante_o_tratamento": "A pressão arterial deve ser aferida antes de cada infusão e monitorizada de forma seriada ao longo de todos os ciclos, já que a hipertensão pode surgir ou se agravar de forma aguda em relação temporal próxima às aplicações. Sintomas sugestivos de disfunção cardíaca (dispneia, edema, palpitações, dor torácica) devem ser ativamente questionados a cada visita. Biomarcadores como peptídeos natriuréticos e troponina, e reavaliação ecocardiográfica, são indicados diante de sintomas novos, elevação pressórica significativa ou em pacientes de alto risco basal, permitindo detecção precoce de disfunção subclínica.",
+        "diferenciacao_de_causa": "Como o mieloma múltiplo cursa frequentemente com comprometimento renal por nefropatia de cadeias leves, amiloidose ou hipercalcemia, é essencial diferenciar hipertensão e retenção hídrica de origem renal daquelas atribuíveis ao efeito direto do carfilzomibe sobre o endotélio e o miocárdio. Avaliação de função renal, proteinúria, cadeias leves livres e status volêmico ajuda nessa distinção, assim como a correlação temporal dos eventos com as infusões do fármaco e a resposta a ajustes de suporte."
+      },
+      "differentials": [
+        "Sobrecarga hídrica relacionada à hidratação periprocedimento ou a outras medicações concomitantes",
+        "Nefropatia relacionada ao mieloma (cadeias leves, hipercalcemia) causando hipertensão e retenção hídrica",
+        "Amiloidose cardíaca de cadeia leve concomitante",
+        "Cardiotoxicidade atribuível a outros agentes antimielomatosos prévios ou concomitantes",
+        "Doença coronariana aterosclerótica preexistente não relacionada à terapia atual",
+        "Hipertensão essencial descompensada por dor, ansiedade ou uso concomitante de corticosteroides",
+        "Síndrome de hiperviscosidade associada à doença de base"
+      ],
+      "tests": [
+        "Eletrocardiograma basal e seriado ao longo do tratamento",
+        "Ecocardiograma transtorácico com avaliação de fração de ejeção e strain longitudinal global",
+        "Dosagem de troponina",
+        "Dosagem de peptídeos natriuréticos (BNP ou NT-proBNP)",
+        "Função renal (creatinina, taxa de filtração glomerular estimada) e eletrólitos",
+        "Monitorização ambulatorial ou domiciliar da pressão arterial",
+        "Perfil lipídico e estratificação de risco cardiovascular basal",
+        "Avaliação de proteinúria e cadeias leves livres séricas/urinárias"
+      ],
+      "red_flags": [
+        "Hipertensão grave não controlada ou crise hipertensiva",
+        "Sinais de insuficiência cardíaca aguda (dispneia em repouso, ortopneia, estertores pulmonares, edema significativo)",
+        "Dor torácica sugestiva de síndrome coronariana aguda",
+        "Evento tromboembólico agudo (trombose venosa profunda ou tromboembolismo pulmonar)",
+        "Arritmia sintomática ou hemodinamicamente instável",
+        "Queda abrupta e significativa da fração de ejeção em relação ao basal",
+        "Sinais sugestivos de microangiopatia trombótica (anemia hemolítica, plaquetopenia, lesão renal aguda)"
+      ],
+      "treatment_summary": "O controle agressivo da pressão arterial antes de cada ciclo de inibidor de proteassoma constitui a medida preventiva central na cardio-oncologia desse grupo de fármacos, especialmente com carfilzomibe. Antes de cada aplicação, a pressão arterial deve ser aferida e otimizada, e o ciclo idealmente não deve ser iniciado com hipertensão não controlada, já que picos hipertensivos agudos, por vezes graves e refratários, estão diretamente associados ao efeito vasoativo do carfilzomibe e podem preceder eventos mais graves, como insuficiência cardíaca aguda, eventos isquêmicos e fenômenos tromboembólicos. Essa vigilância pré-ciclo deve ser sistemática, documentada e comunicada à equipe de hematologia/oncologia, permitindo ajuste terapêutico anti-hipertensivo sem detalhamento posológico neste registro, e reavaliação da meta pressórica a cada aplicação, não apenas no início do tratamento.\n\nQuando ocorre insuficiência cardíaca relacionada ao inibidor de proteassoma, de instalação tipicamente aguda a subaguda, o manejo segue os princípios gerais de terapia guiada por diretriz para insuficiência cardíaca, com otimização das classes terapêuticas recomendadas conforme o fenótipo funcional, sem que doses específicas sejam registradas nesta ficha. A resposta ao tratamento costuma ser favorável quando a insuficiência cardíaca é identificada precocemente e tratada de forma estruturada, o que reforça a importância de rastreio ativo de sinais e sintomas a cada consulta durante todo o tratamento oncológico, e não apenas na suspeita clínica tardia.\n\nUm ponto central do manejo cardio-oncológico é a decisão compartilhada entre cardiologia e hematologia/oncologia sobre continuar, pausar temporariamente, ajustar a via de administração ou trocar a linha terapêutica antioncológica diante de um evento cardiovascular. Essa avaliação de risco-benefício deve considerar a gravidade do evento cardiovascular, a resposta hematológica ao tratamento em curso, a disponibilidade e eficácia comparativa de alternativas terapêuticas, e a reversibilidade do quadro cardiovascular com tratamento cardiológico otimizado. Carfilzomibe e bortezomibe, ambos inibidores de proteassoma, apresentam perfis de risco cardiovascular distintos: carfilzomibe, de administração intravenosa, tem toxicidade cardiovascular consistentemente maior, com maior incidência de hipertensão (por vezes grave e refratária), insuficiência cardíaca, eventos isquêmicos e tromboembólicos, enquanto bortezomibe apresenta perfil cardiovascular mais favorável, ainda que não isento de risco. Essa diferença é relevante na decisão terapêutica compartilhada, podendo justificar, em casos selecionados, a consideração de troca de agente dentro da mesma classe.\n\nPor fim, é fundamental reforçar que a suspensão do tratamento oncológico eficaz não deve ocorrer de forma automática diante de eventos cardiovasculares manejáveis. Na maioria dos casos, o controle cardiovascular adequado permite a manutenção do tratamento antineoplásico, que costuma ser altamente eficaz e necessário para o controle da doença hematológica de base. A decisão de pausar ou suspender definitivamente a terapia deve ser reservada a situações de real gravidade cardiovascular, refratariedade ao tratamento otimizado, ou risco de vida iminente, sempre em diálogo estruturado e documentado com a equipe de hematologia/oncologia, evitando tanto a exposição desnecessária a risco cardiovascular quanto a privação injustificada de tratamento oncológico eficaz.",
+      "ambulatory_flow": [
+        "Aferição da pressão arterial em toda consulta pré-ciclo, com registro estruturado antes da liberação para infusão do inibidor de proteassoma.",
+        "Avaliação basal de risco cardiovascular antes do início do inibidor de proteassoma, incluindo história de hipertensão, doença coronariana e insuficiência cardíaca prévia.",
+        "Otimização do controle pressórico ambulatorial em conjunto com a hematologia/oncologia antes de cada ciclo, sem suspender o tratamento oncológico de forma automática.",
+        "Rastreio ativo de sintomas sugestivos de insuficiência cardíaca (dispneia, ortopneia, edema, ganho de peso) em cada consulta durante todo o tratamento.",
+        "Solicitação de exames complementares (ecocardiograma, biomarcadores) quando houver sinais ou sintomas cardiovasculares novos, mesmo leves.",
+        "Comunicação estruturada e documentada com a equipe de hematologia/oncologia sobre o risco cardiovascular identificado, incluindo recomendação explícita sobre continuidade do tratamento.",
+        "Reavaliação da função cardíaca e da resposta ao tratamento anti-hipertensivo antes de cada novo ciclo.",
+        "Discussão multidisciplinar sobre troca de inibidor de proteassoma (carfilzomibe para bortezomibe) em casos de toxicidade cardiovascular recorrente ou de difícil controle.",
+        "Orientação ao paciente sobre sinais de alarme que exigem contato imediato com a equipe entre os ciclos.",
+        "Registro evolutivo do perfil pressórico e dos sintomas cardiovasculares ao longo de todo o tratamento, não apenas no início."
+      ],
+      "emergency_flow": [
+        "Atendimento imediato para hipertensão grave associada ao inibidor de proteassoma, com estabilização pressórica em ambiente de urgência.",
+        "Avaliação emergencial de insuficiência cardíaca aguda com sinais de congestão ou baixo débito, incluindo exames de imagem e biomarcadores conforme protocolo institucional.",
+        "Investigação imediata de evento isquêmico agudo em paciente em uso de carfilzomibe com dor torácica ou alterações eletrocardiográficas.",
+        "Suspensão temporária da infusão do inibidor de proteassoma diante de instabilidade cardiovascular aguda, com comunicação imediata à hematologia/oncologia.",
+        "Avaliação de eventos tromboembólicos agudos (trombose venosa, embolia pulmonar) em paciente com dispneia ou dor torácica de início súbito durante o tratamento.",
+        "Internação para monitorização contínua e tratamento guiado por diretriz em casos de insuficiência cardíaca aguda ou instabilidade hemodinâmica.",
+        "Reavaliação cardiológica urgente antes de qualquer decisão sobre reintrodução do inibidor de proteassoma após evento agudo."
+      ],
+      "monitoring": [
+        "Aferição da pressão arterial imediatamente antes de cada ciclo de inibidor de proteassoma.",
+        "Monitorização domiciliar da pressão arterial entre os ciclos, quando indicada pelo risco cardiovascular basal.",
+        "Vigilância ativa de sinais e sintomas de insuficiência cardíaca em cada consulta (dispneia, edema, ganho de peso, ortopneia).",
+        "Dosagem de biomarcadores cardíacos (peptídeos natriuréticos, troponina) quando houver sintomas novos ou suspeita clínica de disfunção cardíaca.",
+        "Avaliação periódica da função cardíaca por método de imagem em pacientes de maior risco cardiovascular basal.",
+        "Revisão do eletrocardiograma em casos de sintomas sugestivos de isquemia ou arritmia durante o tratamento.",
+        "Acompanhamento longitudinal do perfil de risco cardiovascular ao longo de todos os ciclos, não apenas na avaliação basal."
+      ],
+      "assistant_questions": [
+        {
+          "id": "pressao_arterial_pre_ciclo_controlada",
+          "label": "A pressão arterial está controlada antes do ciclo atual de inibidor de proteassoma?",
+          "type": "boolean"
+        },
+        {
+          "id": "agente_inibidor_proteassoma",
+          "label": "Qual inibidor de proteassoma está em uso?",
+          "type": "select",
+          "options": [
+            {
+              "value": "carfilzomibe",
+              "label": "Carfilzomibe"
+            },
+            {
+              "value": "bortezomibe",
+              "label": "Bortezomibe"
+            },
+            {
+              "value": "outro",
+              "label": "Outro"
+            }
+          ]
+        },
+        {
+          "id": "pa_sistolica_atual",
+          "label": "Qual o valor da pressão arterial sistólica atual (mmHg)?",
+          "type": "number"
+        },
+        {
+          "id": "pa_diastolica_atual",
+          "label": "Qual o valor da pressão arterial diastólica atual (mmHg)?",
+          "type": "number"
+        },
+        {
+          "id": "sintomas_insuficiencia_cardiaca",
+          "label": "O paciente apresenta sintomas sugestivos de insuficiência cardíaca (dispneia, edema, ortopneia)?",
+          "type": "boolean"
+        },
+        {
+          "id": "historico_cardiovascular_previo",
+          "label": "Quais condições cardiovasculares prévias o paciente apresenta?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "hipertensao",
+              "label": "Hipertensão"
+            },
+            {
+              "value": "doenca_coronariana",
+              "label": "Doença coronariana"
+            },
+            {
+              "value": "insuficiencia_cardiaca_previa",
+              "label": "Insuficiência cardíaca prévia"
+            },
+            {
+              "value": "arritmia",
+              "label": "Arritmia"
+            },
+            {
+              "value": "tromboembolismo_previo",
+              "label": "Tromboembolismo prévio"
+            },
+            {
+              "value": "nenhuma",
+              "label": "Nenhuma"
+            }
+          ]
+        },
+        {
+          "id": "hipertensao_refrataria",
+          "label": "A hipertensão é refratária ao tratamento anti-hipertensivo otimizado?",
+          "type": "boolean"
+        },
+        {
+          "id": "dor_toracica_ou_sinais_isquemia",
+          "label": "Há dor torácica ou sinais sugestivos de evento isquêmico agudo?",
+          "type": "boolean"
+        },
+        {
+          "id": "numero_ciclos_realizados",
+          "label": "Quantos ciclos do inibidor de proteassoma já foram realizados?",
+          "type": "number"
+        },
+        {
+          "id": "decisao_conjunta_hematologia",
+          "label": "Já houve comunicação estruturada com a hematologia/oncologia sobre o risco cardiovascular identificado?",
+          "type": "boolean"
+        },
+        {
+          "id": "conduta_proposta_tratamento_oncologico",
+          "label": "Qual a conduta proposta em relação ao tratamento oncológico?",
+          "type": "select",
+          "options": [
+            {
+              "value": "manter",
+              "label": "Manter"
+            },
+            {
+              "value": "pausar_temporariamente",
+              "label": "Pausar temporariamente"
+            },
+            {
+              "value": "trocar_agente",
+              "label": "Trocar agente"
+            },
+            {
+              "value": "suspender_definitivamente",
+              "label": "Suspender definitivamente"
+            }
+          ]
+        },
+        {
+          "id": "sinais_congestao_exame_fisico",
+          "label": "Há sinais de congestão ao exame físico (estase jugular, edema, crepitações)?",
+          "type": "boolean"
+        },
+        {
+          "id": "biomarcadores_cardiacos_solicitados",
+          "label": "Biomarcadores cardíacos foram solicitados nesta avaliação?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "rule_hipertensao_grave_urgente",
+          "priority": 95,
+          "when": {
+            "any": [
+              {
+                "field": "pa_sistolica_atual",
+                "op": "gte",
+                "value": 180
+              },
+              {
+                "field": "pa_diastolica_atual",
+                "op": "gte",
+                "value": 120
+              },
+              {
+                "field": "hipertensao_refrataria",
+                "op": "truthy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Hipertensão grave associada a inibidor de proteassoma"
+            ],
+            "emergency_flow": [
+              "Encaminhar para avaliação emergencial de crise hipertensiva antes de qualquer nova infusão"
+            ],
+            "messages": [
+              "Pressão arterial gravemente elevada exige estabilização antes de prosseguir com o ciclo."
+            ]
+          }
+        },
+        {
+          "id": "rule_sinais_ic_aguda",
+          "priority": 92,
+          "when": {
+            "any": [
+              {
+                "field": "sintomas_insuficiencia_cardiaca",
+                "op": "truthy",
+                "value": true
+              },
+              {
+                "field": "sinais_congestao_exame_fisico",
+                "op": "truthy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sinais de insuficiência cardíaca aguda em uso de inibidor de proteassoma"
+            ],
+            "emergency_flow": [
+              "Avaliação emergencial de insuficiência cardíaca aguda com biomarcadores e imagem"
+            ],
+            "suggested_tests": [
+              "peptídeo natriurético",
+              "ecocardiograma"
+            ]
+          }
+        },
+        {
+          "id": "rule_evento_isquemico_suspeito",
+          "priority": 96,
+          "when": {
+            "all": [
+              {
+                "field": "dor_toracica_ou_sinais_isquemia",
+                "op": "truthy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Suspeita de síndrome coronariana aguda durante tratamento com inibidor de proteassoma"
+            ],
+            "emergency_flow": [
+              "Investigação imediata de evento isquêmico agudo com eletrocardiograma e biomarcadores"
+            ],
+            "suggested_tests": [
+              "eletrocardiograma",
+              "troponina"
+            ]
+          }
+        },
+        {
+          "id": "rule_carfilzomibe_maior_risco",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "agente_inibidor_proteassoma",
+                "op": "eq",
+                "value": "carfilzomibe"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Uso de carfilzomibe, associado a maior toxicidade cardiovascular que bortezomibe"
+            ],
+            "ambulatory_flow": [
+              "Reforçar controle pressórico rigoroso antes de cada ciclo de carfilzomibe"
+            ]
+          }
+        },
+        {
+          "id": "rule_pa_nao_controlada_pre_ciclo",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "pressao_arterial_pre_ciclo_controlada",
+                "op": "falsy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Pressão arterial não controlada antes do ciclo de inibidor de proteassoma"
+            ],
+            "missing_information": [
+              "Otimização do controle pressórico antes de liberar o ciclo"
+            ],
+            "ambulatory_flow": [
+              "Adiar ou reavaliar o ciclo até controle pressórico adequado, conforme decisão conjunta com a hematologia"
+            ]
+          }
+        },
+        {
+          "id": "rule_historico_cardiovascular_previo",
+          "priority": 55,
+          "when": {
+            "any": [
+              {
+                "field": "historico_cardiovascular_previo",
+                "op": "contains",
+                "value": "doenca_coronariana"
+              },
+              {
+                "field": "historico_cardiovascular_previo",
+                "op": "contains",
+                "value": "insuficiencia_cardiaca_previa"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Histórico cardiovascular prévio aumenta o risco de toxicidade cardíaca por inibidor de proteassoma"
+            ],
+            "suggested_tests": [
+              "ecocardiograma basal"
+            ]
+          }
+        },
+        {
+          "id": "rule_sem_comunicacao_hematologia",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "decisao_conjunta_hematologia",
+                "op": "falsy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Comunicação estruturada com a hematologia/oncologia sobre o risco cardiovascular identificado"
+            ],
+            "messages": [
+              "Recomenda-se contato documentado com a equipe de hematologia/oncologia antes de decisões sobre o tratamento oncológico."
+            ]
+          }
+        },
+        {
+          "id": "rule_suspensao_sem_necessidade",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "conduta_proposta_tratamento_oncologico",
+                "op": "eq",
+                "value": "suspender_definitivamente"
+              },
+              {
+                "field": "sintomas_insuficiencia_cardiaca",
+                "op": "falsy",
+                "value": true
+              },
+              {
+                "field": "dor_toracica_ou_sinais_isquemia",
+                "op": "falsy",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "opposing": [
+              "Suspensão definitiva do tratamento oncológico sem evidência de evento cardiovascular grave"
+            ],
+            "messages": [
+              "Reavaliar a necessidade real de suspensão definitiva; eventos cardiovasculares manejáveis geralmente permitem manutenção do tratamento oncológico eficaz."
+            ]
+          }
+        },
+        {
+          "id": "rule_bortezomibe_perfil_favoravel",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "agente_inibidor_proteassoma",
+                "op": "eq",
+                "value": "bortezomibe"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Bortezomibe apresenta perfil de toxicidade cardiovascular mais favorável que carfilzomibe, ainda que não isento de risco"
+            ]
+          }
+        }
+      ],
+      "special_populations": [
+        "Paciente com hipertensão prévia mal controlada iniciando carfilzomibe",
+        "Paciente idoso com múltiplas comorbidades cardiovasculares candidato a inibidor de proteassoma",
+        "Paciente que desenvolve insuficiência cardíaca durante o tratamento — decisão de continuar ou pausar a terapia",
+        "Paciente com evento isquêmico ou tromboembólico durante o tratamento",
+        "Paciente trocado de carfilzomibe para bortezomibe por toxicidade cardiovascular",
+        "Paciente assintomático com hipertensão de início recente ao iniciar o tratamento"
+      ],
+      "related_document_slugs": [
+        "carfilzomibe-cardiotoxicidade-em-mieloma-multiplo",
+        "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
+        "hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia",
+        "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao"
+      ],
+      "fonte_producao": "claude"
+    }
+  }
+]

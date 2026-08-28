@@ -1,0 +1,177 @@
+[
+  {
+    "slug": "acidente-vascular-cerebral-agudo",
+    "set": {
+      "name": "Acidente vascular cerebral agudo",
+      "aliases": [
+        "AVC agudo",
+        "derrame cerebral",
+        "stroke agudo"
+      ],
+      "area": "geral",
+      "category": "emergencia_neurovascular",
+      "subtype": "deficit_neurologico_focal_subito",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Síndrome neurológica tempo-dependente causada por isquemia ou hemorragia cerebral; o reconhecimento pré-hospitalar deve acionar imediatamente o sistema de emergência, e o subtipo só pode ser definido com avaliação e neuroimagem.",
+      "epidemiology": "Evento de alta morbimortalidade. Este verbete não extrapola estatísticas internacionais para o Brasil; prioriza a natureza tempo-dependente definida nas diretrizes oficiais.",
+      "presentation": [
+        "Assimetria facial, fraqueza de braço ou alteração da fala",
+        "Perda visual, visão dupla, desequilíbrio ou outro déficit focal súbito",
+        "Sintomas podem regredir transitoriamente no AIT",
+        "Hemorragia pode cursar com cefaleia súbita, vômitos ou rebaixamento de consciência"
+      ],
+      "differentials": [
+        "Hipoglicemia",
+        "Crise epiléptica com déficit pós-ictal",
+        "Enxaqueca com aura",
+        "Paralisia facial periférica",
+        "Distúrbio metabólico ou tóxico"
+      ],
+      "tests": [
+        "Escala de reconhecimento pré-hospitalar como FAST",
+        "Glicemia capilar sem atrasar o acionamento",
+        "Neuroimagem urgente para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão",
+        "Imagem vascular e demais exames conforme hipótese e elegibilidade terapêutica"
+      ],
+      "red_flags": [
+        "Qualquer déficit neurológico focal súbito",
+        "Sintoma transitório compatível com AIT",
+        "Alteração de consciência, convulsão ou cefaleia súbita intensa",
+        "Uso de anticoagulante ou sangramento recente"
+      ],
+      "ambulatory_flow": [
+        "Interromper atendimento eletivo",
+        "Registrar última vez sabidamente bem",
+        "Acionar o SAMU 192",
+        "Não administrar antitrombótico antes da neuroimagem"
+      ],
+      "emergency_flow": [
+        "ABC, sinais vitais, glicemia e ativação do protocolo de AVC",
+        "Neuroimagem urgente para excluir hemorragia e identificar achados que orientem diagnóstico e reperfusão",
+        "Avaliar reperfusão e destino em equipe especializada",
+        "Tratar imitadores e complicações sem atrasar o fluxo neurovascular"
+      ],
+      "diagnostic_approach": "A suspeita é clínica; a neuroimagem urgente é necessária para excluir hemorragia e identificar achados que orientem o diagnóstico e a reperfusão. FAST ajuda a reconhecer, mas não exclui todas as apresentações, especialmente as da circulação posterior.",
+      "treatment_summary": "Tratamento depende do subtipo, tempo, imagem, déficit incapacitante, contraindicações e capacidade local. Alteplase ou tenecteplase e terapia endovascular são opções apenas para pacientes selecionados por protocolo de AVC.",
+      "monitoring": [
+        "Estado neurológico e sinais vitais",
+        "Glicemia e oxigenação conforme indicação",
+        "Complicações hemorrágicas ou progressão do déficit",
+        "Deglutição antes de ingestão oral"
+      ],
+      "special_populations": [
+        "Crianças têm apresentações mais amplas e FAST não deve ser usado isoladamente para exclusão",
+        "Gestação, câncer, anticoagulação e endocardite exigem avaliação específica sem atrasar o reconhecimento"
+      ],
+      "assistant_questions": [
+        {
+          "id": "sudden_focal_deficit",
+          "label": "Há déficit neurológico focal de início súbito?",
+          "type": "boolean",
+          "required": true,
+          "section": "Reconhecimento"
+        },
+        {
+          "id": "last_known_well",
+          "label": "O último horário sabidamente bem foi registrado?",
+          "type": "boolean",
+          "required": true,
+          "section": "Tempo"
+        },
+        {
+          "id": "ems_activated",
+          "label": "O sistema de emergência foi acionado?",
+          "type": "boolean",
+          "required": true,
+          "section": "Resposta"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "suspeita-avc",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "sudden_focal_deficit",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Acionar protocolo de AVC e neuroimagem urgente"
+            ]
+          }
+        },
+        {
+          "id": "tempo-nao-registrado",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "last_known_well",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Registrar a última vez sabidamente sem déficit; horário desconhecido não autoriza encerrar avaliação"
+            ]
+          }
+        },
+        {
+          "id": "socorro-nao-acionado",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "ems_activated",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Acionar imediatamente o SAMU 192"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "AVC",
+        "AIT",
+        "FAST",
+        "neuroimagem",
+        "reperfusão"
+      ],
+      "source_refs": [
+        "Hewett Brumberg EK, Douma MJ, Alibertis K, et al. 2024 AHA/Red Cross Guidelines for First Aid. Circulation. DOI: 10.1161/CIR.0000000000001281.",
+        "Prabhakaran S, Gonzalez NR, Zachrison KS, et al. 2026 AHA/ASA Guideline for Acute Ischemic Stroke. Stroke. DOI: 10.1161/STR.0000000000000513; correction DOI: 10.1161/STR.0000000000000530."
+      ],
+      "source_urls": [
+        "https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines",
+        "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
+        "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc"
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024, AHA/ASA 2026 e Ministério da Saúde. Corrigida a formulação para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 5 related_document_slugs focados na interseção cardiovascular do AVC (timing cirúrgico pós-AVC na endocardite, monitor implantável para FA pós-AVC criptogênico, anticoagulação empírica no ESUS, trombo de VE cardioembólico na Chagásica, dissecção de artéria cervical), levando o total de 2 para 7. Cada um verificado por leitura direta do documento. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "chatgpt",
+      "version": 3,
+      "related_document_slugs": [
+        "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+        "fluxograma-suspeita-de-avc-agudo-primeira-hora",
+        "timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023",
+        "monitor-cardiaco-implantavel-e-deteccao-de-fa-pos-avc-criptogenico-crystal-af",
+        "anticoagulacao-empirica-no-avc-criptogenico-sem-fa-documentada-navigate-esus-re-spect-esus-e-arcadia",
+        "aneurisma-apical-trombo-de-ve-e-avc-cardioembolico-na-cardiomiopatia-chagasica",
+        "disseccao-de-arteria-cervical-carotida-e-vertebral-diagnostico-e-antitrombotico-cadiss"
+      ],
+      "patient_material_slug": "sinais-de-avc-como-agir-sem-perder-tempo"
+    }
+  }
+]

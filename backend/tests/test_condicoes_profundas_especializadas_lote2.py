@@ -24,7 +24,7 @@ from app.services.clinical_rule_engine import (
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DOENCAS_PATH = REPOSITORY_ROOT / "doencas/metadados.json"
-VALID_REVIEW_STATUSES = {"revisado", "pendente_revisao"}
+VALID_REVIEW_STATUSES = {"revisado", "revisado"}
 
 LOTE_SLUGS = {
     "canalopatias-pediatricas",

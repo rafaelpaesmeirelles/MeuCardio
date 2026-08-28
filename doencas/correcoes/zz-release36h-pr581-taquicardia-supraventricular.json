@@ -1,0 +1,457 @@
+[
+  {
+    "slug": "taquicardia-supraventricular",
+    "set": {
+      "name": "Taquicardia supraventricular",
+      "aliases": [
+        "TSV",
+        "AVNRT",
+        "AVRT",
+        "WPW",
+        "Wolff-Parkinson-White",
+        "taquicardia paroxística supraventricular"
+      ],
+      "area": "geral",
+      "category": "arritmia",
+      "subtype": null,
+      "cyanosis_class": null,
+      "prevalence_rank": null,
+      "completeness": "completo",
+      "summary": "Taquicardia supraventricular (TSV) do adulto — grupo heterogêneo de mecanismos elétricos supra-hissianos: reentrada nodal atrioventricular (AVNRT, a forma mais comum), reentrada por via acessória (AVRT/WPW), reentrada sinoatrial (SANRT), automatismo atrial focal ou multifocal, e taquicardia juncional (JET, PJRT). Apresentação clássica: palpitação de início/término súbitos. Diagnóstico por diferencial de QRS estreito no ECG, manobras vagais e, quando indicado, estudo eletrofisiológico. WPW assintomático exige estratificação de risco de morte súbita (intervalo RR pré-excitado <250ms é o preditor mais forte). Fibrilação atrial pré-excitada é emergência com contraindicação a bloqueadores do nó AV. A diretriz ESC 2019 ampliou a ablação por cateter como primeira linha para a maioria dos subtipos, exceto taquicardia sinusal inapropriada e taquicardia atrial multifocal. Escopo do adulto — a forma fetal tem hub próprio.",
+      "epidemiology": "A taquicardia supraventricular (TSV) do adulto reúne um grupo heterogêneo de mecanismos elétricos supra-hissianos — reentrada nodal atrioventricular (AVNRT), reentrada por via acessória (AVRT/WPW), reentrada sinoatrial (SANRT), automatismo atrial focal ou multifocal, e taquicardia juncional (JET automática e PJRT recíproca permanente) — e não uma entidade epidemiológica única; a frequência real varia conforme o subtipo. AVNRT é a forma mais comum de TSV paroxística sustentada em adultos sem cardiopatia estrutural. A SANRT, subdiagnosticada por ter onda P praticamente indistinguível da sinusal, é encontrada em 2% a 17% dos pacientes encaminhados a estudo eletrofisiológico por TSV — 16,9% (11 de 65) na série original de Gomes et al. (1985, PMID 3964808) — e um substrato compatível está presente em 10% a 15% dos estudos eletrofisiológicos realizados por taquicardia atrial sintomática. A taquicardia atrial multifocal é incomum na população geral (0,05% a 0,32% dos eletrocardiogramas em internações hospitalares), mas aparece em até 60% dos pacientes com pneumopatia significativa, em 20% dos internados por insuficiência respiratória aguda e em 17% dos internados por DPOC, tipicamente por volta dos 70 anos de idade. O padrão eletrocardiográfico de pré-excitação (WPW) tem risco de morte súbita relatado entre 0% e 0,39% ao ano na literatura histórica, com estudo contemporâneo apontando cerca de 0,02% por paciente-ano; o preditor mais forte desse risco é o menor intervalo RR pré-excitado (<250 ms) durante fibrilação atrial, espontânea ou induzida em estudo eletrofisiológico. A ESC 2019, desenvolvida em colaboração com a Association for European Paediatric and Congenital Cardiology, ampliou de forma expressiva a recomendação de ablação por cateter como tratamento de primeira linha para a maioria dos subtipos de TSV do adulto, refletindo uma mudança na epidemiologia terapêutica da última década — com exceção explícita da taquicardia sinusal inapropriada e da taquicardia atrial multifocal, para as quais a ablação tem papel pequeno ou nulo.",
+      "presentation": [
+        "Palpitação de início e término súbitos, tipicamente regular, descrita como um interruptor que liga e desliga — achado mais discriminativo entre mecanismo reentrante e taquicardia sinusal",
+        "Poliúria durante ou logo após o término do episódio, por liberação de peptídeo natriurético atrial em resposta à distensão atrial durante a taquicardia",
+        "Síncope ou pré-síncope durante a crise, sobretudo com frequência ventricular muito alta ou início particularmente abrupto",
+        "Sinal do \"frog sign\" (sinal do sapo): pulsações venosas jugulares em canhão, visíveis no pescoço, por contração atrial contra a valva tricúspide fechada — mais característico da AVNRT típica",
+        "Achado incidental e assintomático em Holter, monitor de eventos prolongado ou ECG de rotina — inclui o padrão de pré-excitação tipo WPW descoberto sem história de palpitação, síncope ou taquicardia documentada",
+        "Dispneia, desconforto torácico ou tontura durante o episódio, sem necessariamente evoluir para síncope franca",
+        "Ansiedade ou sensação de morte iminente durante a crise, com frequência inicialmente rotulada como transtorno de pânico até a documentação eletrocardiográfica do episódio",
+        "Fadiga progressiva e queda de performance funcional em taquicardia incessante ou muito recorrente — sinal de alerta para cardiomiopatia induzida por taquicardia, mais do que sintoma isolado da própria arritmia"
+      ],
+      "diagnostic_approach": {
+        "diferencial_de_qrs_estreito_no_ecg_de_12_derivacoes": [
+          "Regularidade do ritmo: irregular sugere fibrilação atrial, flutter atrial com condução variável ou taquicardia atrial multifocal; regular sugere AVNRT, AVRT, SANRT, taquicardia atrial focal ou taquicardia juncional",
+          "Relação RP: RP curto (onda P escondida no QRS ou logo após ele, com pseudo-r' em V1 ou pseudo-S em II/III/aVF) sugere AVNRT típica (slow-fast); RP longo (onda P mais próxima do QRS seguinte do que do anterior) sugere taquicardia atrial, AVRT por via acessória decremental (PJRT) ou SANRT",
+          "Morfologia da onda P retrógrada: profundamente negativa em II, III e aVF associada a RP longo e comportamento incessante aponta para PJRT; onda P de morfologia praticamente idêntica à sinusal, com início e término abruptos, aponta para SANRT",
+          "Padrão de \"aquecimento\" na instalação e \"resfriamento\" antes do término sugere mecanismo automático (taquicardia atrial focal, taquicardia juncional ectópica) em vez de reentrante, cujo início e término costumam ser abruptos",
+          "Três ou mais morfologias distintas de onda P na mesma derivação, com linha isoelétrica entre elas e intervalos PP irregulares, definem a taquicardia atrial multifocal — critério eletrocardiográfico objetivo, não impressão clínica",
+          "Bloqueio atrioventricular que não interrompe a taquicardia (condução 1:1, 3:1 ou 4:1 variável sem terminar a arritmia) aponta para mecanismo atrial autônomo, independente do nó AV — ao contrário de AVNRT e AVRT, cujo circuito inclui o nó AV"
+        ],
+        "manobras_vagais_diagnosticas": [
+          "Massagem do seio carotídeo (unilateral, nunca bilateral simultânea, contraindicada se sopro carotídeo ou AVC recente) e manobra de Valsalva modificada, preferencialmente em decúbito dorsal com elevação das pernas, são a primeira etapa tanto terapêutica quanto diagnóstica em qualquer TSV de QRS estreito estável",
+          "Terminação abrupta da taquicardia com a manobra confirma mecanismo reentrante dependente do nó AV ou do próprio nó sinusal — resposta característica de AVNRT, AVRT e SANRT",
+          "Lentificação transitória sem terminação, revelando ondas P antes ocultas, sugere taquicardia atrial focal ou flutter atrial — o foco ectópico ou o circuito macrorreentrante persiste independente do bloqueio AV induzido",
+          "Ausência completa de resposta é menos específica, mas ocorre tipicamente na taquicardia sinusal inapropriada, em que a manobra vagal produz apenas lentificação gradual insuficiente para esclarecer o traçado — diferente da SANRT, que costuma responder de forma mais favorável",
+          "Adenosina intravenosa em bolus rápido é a extensão farmacológica da mesma lógica diagnóstica quando a manobra vagal é ineficaz ou o ECG durante a taquicardia é pouco claro, mas deve ser evitada se o ECG de repouso mostrar pré-excitação sugestiva de taquicardia pré-excitada, pelo risco de acelerar a condução pela via acessória"
+        ],
+        "criterios_de_wpw_pre_excitado_assintomatico": [
+          "Padrão eletrocardiográfico de pré-excitação: intervalo PR curto (menor que 120 ms), entalhe inicial do QRS (onda delta), QRS alargado (maior que 120 ms) e alterações secundárias de repolarização (segmento ST e onda T discordantes do vetor do QRS)",
+          "\"Assintomático\" define-se estritamente como o achado desse padrão em ECG de rotina, Holter ou triagem, sem qualquer história de palpitação, síncope ou taquicardia documentada — categoria distinta de WPW sintomático e de fibrilação atrial pré-excitada, que são emergências à parte",
+          "A pré-excitação pode ser intermitente (via acessória com período refratário mais longo, que desaparece em algumas derivações ou batimentos) ou permanente — a intermitência espontânea em ECG de repouso ou Holter é considerada, na literatura, marcador indireto de menor risco pela via acessória, embora não substitua a avaliação formal de risco"
+        ],
+        "avaliacao_de_risco_de_morte_subita_em_wpw": [
+          "Incidência de morte súbita relatada entre 0% e 0,39% ao ano na literatura histórica; estudo contemporâneo aponta cifra mais baixa, próxima de 0,02% por paciente-ano",
+          "Mecanismo: fibrilação atrial que degenera para fibrilação ventricular por condução preferencial e muito rápida pela via acessória, com resposta ventricular excessivamente alta",
+          "Preditor mais forte de risco: menor intervalo RR pré-excitado inferior a 250 ms durante fibrilação atrial, espontânea ou induzida em estudo eletrofisiológico",
+          "Abordagem histórica em crianças assintomáticas: estratificação por resultado de estudo eletrofisiológico para selecionar os pacientes de alto risco antes de indicar ablação profilática",
+          "Ensaio randomizado (Pappone et al., NEJM 2003, PMID 14602878) mostrou que a ablação profilática da via acessória reduz de forma marcante a frequência de eventos arrítmicos em pacientes assintomáticos de alto risco",
+          "Tendência atual: ablação por cateter como tratamento de primeira linha, em evolução, para o paciente assintomático de alto risco, com controle de arritmia em longo prazo e complicações mínimas nas séries publicadas"
+        ]
+      },
+      "differentials": [
+        "Fibrilação atrial — ritmo irregularmente irregular; pode ser confundida clinicamente com taquicardia atrial multifocal ou, à beira do leito, com SANRT mal diagnosticada como fibrilação atrial de resposta ventricular rápida",
+        "Flutter atrial típico ou atípico — ritmo regular (condução fixa) ou com condução AV variável, com hub próprio nesta biblioteca; entra no diferencial de QRS estreito regular e de QRS estreito irregular conforme o grau de bloqueio",
+        "Taquicardia sinusal fisiológica (resposta apropriada a febre, dor, hipovolemia, hipertireoidismo, anemia) e taquicardia sinusal inapropriada (automatismo sinusal aumentado sem causa reversível identificável) — ambas com onda P de morfologia sinusal e resposta apenas de lentificação gradual, não terminação, à manobra vagal",
+        "Taquicardia ventricular com condução aberrante ou bloqueio de ramo preexistente — diferencial obrigatório de qualquer taquicardia de QRS largo; na dúvida diagnóstica diante de QRS largo, a conduta correta é tratar como taquicardia ventricular até prova em contrário",
+        "Fibrilação atrial pré-excitada (via acessória manifesta) — ritmo irregular de QRS largo variável, mecanismo e conduta distintos tanto da fibrilação atrial comum quanto da TSV pré-excitada regular (AVRT ortodrômica)",
+        "Causas não arrítmicas de palpitação — ansiedade e transtorno de pânico, hipertireoidismo, anemia, hipoglicemia, uso de estimulantes ou cafeína em excesso — relevantes quando o episódio relatado não é documentado eletrocardiograficamente"
+      ],
+      "tests": [
+        "ECG de 12 derivações durante o episódio — o exame mais informativo para definir mecanismo, mas frequentemente indisponível porque o paroxismo já terminou quando o paciente chega ao pronto-socorro; sem o traçado durante a taquicardia, o diagnóstico de mecanismo específico permanece presuntivo",
+        "ECG basal fora de crise — pode revelar pré-excitação (WPW) ou bloqueio de ramo preexistente que muda a interpretação de um futuro QRS largo, mas um ECG basal normal não exclui via acessória oculta, que conduz apenas retrogradamente e por isso nunca aparece no ECG de superfície em ritmo sinusal",
+        "Holter de 24-48 horas ou monitor de eventos prolongado — útil para capturar episódios paroxísticos infrequentes e correlacionar sintoma com ritmo, mas a sensibilidade cai proporcionalmente à raridade dos episódios; um resultado negativo não exclui TSV paroxística pouco frequente",
+        "Manobra vagal com registro eletrocardiográfico contínuo — diagnóstica quando termina a taquicardia ou revela ondas P antes mascaradas, mas a ausência de resposta é inespecífica: pode refletir técnica inadequada da manobra, não necessariamente ausência de circuito reentrante",
+        "Adenosina intravenosa com registro contínuo — resposta menos previsível na taquicardia atrial focal automática (tende a não terminar a arritmia, apenas revelar ondas P dissociadas) do que na AVNRT ou na AVRT (terminação abrupta característica); contraindicada quando há suspeita de ritmo irregular associado a pré-excitação",
+        "Estudo eletrofisiológico invasivo — padrão-ouro para definir mecanismo e localização anatômica, indicado quando a ablação é considerada, mas é procedimento invasivo que depende de indução reprodutível da arritmia em laboratório e carrega risco variável (por exemplo, bloqueio atrioventricular) conforme o substrato-alvo, não um risco uniforme entre os subtipos de TSV",
+        "Ecocardiograma transtorácico — avalia cardiopatia estrutural associada e função ventricular, incluindo rastreio de cardiomiopatia induzida por taquicardia em episódios incessantes ou muito recorrentes, mas não estabelece por si só o mecanismo elétrico da TSV"
+      ],
+      "red_flags": [
+        "Instabilidade hemodinâmica durante o episódio — hipotensão, alteração aguda do estado mental, dor torácica isquêmica ou sinais de insuficiência cardíaca aguda/choque — indicação de cardioversão elétrica sincronizada imediata, sem tentativa farmacológica prévia",
+        "Fibrilação atrial pré-excitada (via acessória manifesta, ritmo irregular de QRS largo) — risco de degeneração para fibrilação ventricular; qualquer bloqueador do nó atrioventricular (adenosina, verapamil, diltiazem, betabloqueador, digoxina) e a amiodarona intravenosa devem ser evitados nesse cenário específico",
+        "Intervalo RR pré-excitado mínimo inferior a 250 ms durante fibrilação atrial, espontânea ou induzida em estudo eletrofisiológico — o preditor isolado mais forte de morte súbita descrito em pacientes com WPW",
+        "Taquicardia incessante — presente na maior parte do dia, por semanas a meses — pelo risco cumulativo de cardiomiopatia induzida por taquicardia, mesmo em paciente aparentemente estável e com sintomas percebidos como leves",
+        "Sinais de disfunção ventricular ou queda de fração de ejeção em paciente com taquicardia recorrente ou incessante ainda não investigada — deve levantar a suspeita de cardiomiopatia induzida por taquicardia até prova em contrário",
+        "Síncope durante o episódio, sobretudo em paciente com pré-excitação basal ou cardiopatia estrutural conhecida — eleva a suspeita de arritmia de maior risco e antecipa a indicação de estudo eletrofisiológico",
+        "Taquicardia de QRS largo de origem incerta — tratar como taquicardia ventricular até prova em contrário; usar bloqueador do nó AV de forma empírica é conduta perigosa se o ritmo real for taquicardia ventricular ou fibrilação atrial pré-excitada"
+      ],
+      "ambulatory_flow": [
+        "Caracterizar o episódio (início/término súbito, duração, frequência, gatilhos) e revisar o ECG basal em busca de pré-excitação antes de definir a via de investigação",
+        "Confirmar ou afastar diagnóstico de exclusão de taquicardia sinusal inapropriada investigando causas secundárias antes de rotular o quadro",
+        "Encaminhar para avaliação eletrofisiológica e discutir ablação por cateter como opção de primeira linha para a maioria dos subtipos de TSV recorrente sintomática",
+        "Em WPW assintomático com pré-excitação ao ECG, estratificar risco de morte súbita (estudo eletrofisiológico) para selecionar candidatos a ablação profilática da via acessória",
+        "Iniciar terapia farmacológica crônica por classe apropriada ao subtipo quando ablação não for desejada, factível ou indicada como primeira escolha",
+        "Em taquicardia sinusal inapropriada confirmada, considerar ivabradina como classe preferencial em vez de beta-bloqueador",
+        "Em taquicardia atrial multifocal, priorizar tratamento da doença pulmonar ou distúrbio de base sobre terapia antiarrítmica direta",
+        "Reavaliar recorrência, tolerância e qualidade de vida em seguimento periódico, ajustando entre observação, fármaco e ablação conforme evolução"
+      ],
+      "emergency_flow": [
+        "Avaliar instabilidade hemodinâmica (hipotensão, alteração aguda do estado mental, dor torácica, sinais de insuficiência cardíaca aguda ou choque) antes de qualquer manobra farmacológica",
+        "TSV com instabilidade hemodinâmica: cardioversão elétrica sincronizada imediata, sem tentar antes manobra vagal ou adenosina",
+        "TSV estável de QRS estreito regular: manobra vagal, depois adenosina intravenosa em bolus rápido e, se ineficaz, verapamil/diltiazem ou beta-bloqueador",
+        "Fibrilação atrial pré-excitada em WPW (QRS largo irregular): reconhecer o padrão e evitar todo bloqueador do nó AV (adenosina, verapamil, diltiazem, beta-bloqueador, digoxina) e amiodarona intravenosa, pelo risco de acelerar condução pela via acessória e precipitar fibrilação ventricular",
+        "Fibrilação atrial pré-excitada estável: usar antiarrítmico que atue na via acessória (ibutilida, procainamida, flecainida ou propafenona), reservando cardioversão elétrica para instabilidade ou falha do fármaco",
+        "Havendo qualquer dúvida diagnóstica diante de taquicardia de QRS largo, tratar como suspeita de taquicardia ventricular até prova em contrário"
+      ],
+      "treatment_summary": "O manejo da taquicardia supraventricular (TSV) do adulto se divide em reversão aguda do episódio e definição do tratamento de longo prazo, e as duas etapas seguem lógicas distintas. Na fase aguda, diante de taquicardia regular de QRS estreito e paciente estável, a primeira linha são as manobras vagais (massagem do seio carotídeo, manobra de Valsalva modificada com elevação das pernas), seguidas de adenosina intravenosa em bolus rápido quando a manobra vagal falha; verapamil/diltiazem ou beta-bloqueador entram como terceira etapa se as anteriores forem ineficazes. A adenosina deve ser evitada quando o ECG basal mostra pré-excitação sugestiva de via acessória manifesta e a taquicardia atual é irregular, cenário tratado à parte. Instabilidade hemodinâmica em qualquer momento indica cardioversão elétrica sincronizada imediata, sem tentar antes as etapas farmacológicas. Para o tratamento definitivo, a ablação por cateter é hoje classe terapêutica de primeira linha para a maioria dos subtipos de TSV, sempre discutida com o paciente frente a frente com a alternativa farmacológica crônica: na AVNRT, ablação da via lenta é a opção preferencial, com fármacos bloqueadores do nó AV (verapamil, diltiazem, beta-bloqueador) reservados a quem recusa o procedimento ou tem sintomas raros e leves; na AVRT/WPW, a mesma lógica se aplica à via acessória, e antiarrítmicos de classe Ic ficam como alternativa em casos selecionados sem cardiopatia estrutural; na taquicardia atrial focal, a ablação também é considerada tratamento de escolha, sobretudo em formas incessantes ou associadas a cardiomiopatia induzida por taquicardia, com beta-bloqueador ou bloqueador de canal de cálcio como opção farmacológica de manutenção. O paciente com WPW e pré-excitação ao ECG mas assintomático exige estratificação de risco de morte súbita, tipicamente com estudo eletrofisiológico, para identificar o subgrupo de alto risco (via acessória com período refratário curto) que se beneficia de ablação profilática da via acessória; a maioria permanece em observação clínica sem intervenção sistemática. A taquicardia sinusal inapropriada é diagnóstico de exclusão — só pode ser firmado depois de afastadas causas secundárias de taquicardia sinusal (anemia, tireotoxicose, gestação, descondicionamento, estimulantes, hipovolemia, febre) — e, uma vez confirmada, a ablação por cateter tem papel pequeno ou nulo; a classe terapêutica preferida é a ivabradina, inibidor seletivo da corrente If do nó sinusal, preferida ao beta-bloqueador porque este costuma ser mal tolerado ou ineficaz nessa população predominantemente jovem e feminina. Já a taquicardia atrial multifocal, tipicamente vista em pacientes idosos com pneumopatia grave (sobretudo DPOC descompensada), distúrbio eletrolítico ou toxicidade medicamentosa, tem como primeiro passo do manejo tratar a causa de base — hipoxemia, distúrbio hidroeletrolítico, toxicidade por digoxina ou teofilina —, reservando controle farmacológico de frequência (beta-bloqueador ou bloqueador de canal de cálcio, conforme presença de doença pulmonar) para quando a arritmia persiste com repercussão apesar do tratamento da doença de base; ablação e cardioversão não têm papel estabelecido nessa condição.",
+      "monitoring": [
+        "Frequência, duração, forma de início/término e gatilhos dos episódios de palpitação",
+        "Resposta a manobra vagal e a eventuais fármacos usados na reversão aguda, para orientar decisão terapêutica futura",
+        "Recorrência após ablação por cateter, incluindo eventual necessidade de reintervenção",
+        "Sinais de bloqueio atrioventricular ou necessidade de marca-passo definitivo após ablação em subtipos com risco (via lenta próxima ao nó AV, foco juncional automático)",
+        "Sinais de cardiomiopatia induzida por taquicardia em formas incessantes (função ventricular ao ecocardiograma)",
+        "Frequência cardíaca em repouso, em pé e em 24 horas em quem usa ivabradina para taquicardia sinusal inapropriada",
+        "Evolução da doença pulmonar ou distúrbio de base em taquicardia atrial multifocal, como indicador de controle da arritmia",
+        "Tolerância e efeitos adversos de beta-bloqueador, bloqueador de canal de cálcio ou antiarrítmico de classe Ic em uso crônico"
+      ],
+      "special_populations": [
+        "Gestante com TSV aguda: cardioversão elétrica sincronizada é a opção preferida em paciente instável (já usada com segurança na gestação); em paciente estável, manobra vagal ou adenosina — fármaco de escolha para AVNRT, com meia-vida ultracurta (<10 segundos) que minimiza exposição fetal, uso intravenoso considerado seguro e eficaz no segundo e terceiro trimestres, mas segurança ainda não bem estabelecida no primeiro trimestre; monitorizar a frequência cardíaca fetal durante a terapia antiarrítmica aguda pelo risco de bradicardia fetal após múltiplos antiarrítmicos; adenosina não é eficaz em fibrilação/flutter atrial, que exige estratégia própria",
+        "WPW assintomático em atleta competitivo ou jovem de alto risco: risco de morte súbita é baixo em termos absolutos (0,02% a 0,39% ao ano), mas o preditor mais forte é o menor intervalo RR pré-excitado <250 ms durante fibrilação atrial induzida em estudo eletrofisiológico — a estratificação por EEF para selecionar pacientes de alto risco, com ablação profilática da via acessória, é a tendência atual de primeira linha nesse subgrupo, já que a ablação reduz marcadamente a frequência de eventos arrítmicos com complicações mínimas; se o paciente desenvolver fibrilação atrial pré-excitada (QRS largo e irregular), bloqueadores do nó AV — adenosina, verapamil, diltiazem, betabloqueador, digoxina e também amiodarona intravenosa — são contraindicados por risco de precipitar fibrilação ventricular",
+        "Idoso com taquicardia atrial multifocal e DPOC de base: a TAM é tipicamente vista em idosos (média de 70 anos) com doença grave de base, mais comumente DPOC, e costuma ser assintomática e hemodinamicamente estável, mas sinaliza gravidade da doença subjacente — não da arritmia em si —, com mortalidade hospitalar descrita de 38% a 62% atribuída ao processo de base; o primeiro passo é tratar a causa (hipoxemia, distúrbio hidroeletrolítico — sobretudo hipopotassemia e hipomagnesemia —, toxicidade por digoxina ou teofilina), não terapia antiarrítmica direta; diretrizes atuais não sustentam anticoagulação rotineira nem cardioversão nessa arritmia, mesmo havendo evolução para FA/flutter em parcela dos pacientes; se persistir com repercussão hemodinâmica, magnésio intravenoso, betabloqueador ou verapamil são as intervenções com dado publicado",
+        "Criança e adolescente com TSV: é a taquiarritmia sustentada mais comum na infância — TRAV por via acessória predomina no lactente e TRNAV ganha proporção maior em crianças maiores/adolescentes, aproximando-se do padrão do adulto; manobra vagal de primeira linha é compressa de gelo na face no lactente (reflexo de mergulho) e Valsalva/agachamento no adolescente; adenosina é a droga de escolha após falha vagal, com dose pediátrica ponderal distinta da dose fixa do adulto, ajustada conforme protocolo pediátrico; cardioversão sincronizada no paciente instável, também com energia ajustada ao peso conforme protocolo pediátrico. Ver hub-irmão fetal 'Taquicardia supraventricular fetal' (slug taquicardia-supraventricular-fetal) para o manejo específico da TSV diagnosticada ainda intraútero, incluindo terapia transplacentária — população e documentos tratados separadamente ali, sem duplicação aqui",
+        "Puérpera/pós-parto e amamentação com TSV recorrente: decisão sobre terapia crônica de manutenção (antiarrítmico versus ablação definitiva) deve considerar compatibilidade com amamentação e o fato de que a ablação por cateter, quando indicada, é preferencialmente adiada para fora do período periparto imediato salvo recorrência incapacitante — extrapolação de princípio geral de manejo crônico de TSV combinado com as considerações de segurança medicamentosa na gestação já registradas para o mesmo fármaco (adenosina) usado na crise aguda"
+      ],
+      "assistant_questions": [
+        {
+          "id": "sudden_onset_offset",
+          "label": "A palpitação tem início e término súbitos, tipo \"liga/desliga\"?",
+          "type": "boolean",
+          "required": true,
+          "section": "Caracterização"
+        },
+        {
+          "id": "hemodynamic_instability",
+          "label": "Houve instabilidade hemodinâmica durante o episódio (hipotensão, síncope, dor torácica intensa, sinais de insuficiência cardíaca aguda)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "known_wpw_preexcitation",
+          "label": "Há Wolff-Parkinson-White ou pré-excitação conhecida ao ECG?",
+          "type": "boolean",
+          "required": true,
+          "section": "História"
+        },
+        {
+          "id": "episode_frequency",
+          "label": "Qual a frequência/recorrência dos episódios?",
+          "type": "select",
+          "required": true,
+          "section": "Caracterização",
+          "options": [
+            {
+              "value": "primeiro_episodio",
+              "label": "Primeiro episódio"
+            },
+            {
+              "value": "esporadico",
+              "label": "Esporádico (poucos episódios ao ano)"
+            },
+            {
+              "value": "recorrente",
+              "label": "Recorrente (mensal ou mais frequente)"
+            },
+            {
+              "value": "incessante",
+              "label": "Incessante/quase contínuo"
+            }
+          ]
+        },
+        {
+          "id": "vagal_maneuver_response",
+          "label": "Houve resposta a manobra vagal em episódio prévio (reversão ou lentificação transitória)?",
+          "type": "boolean",
+          "section": "História"
+        },
+        {
+          "id": "underlying_lung_disease",
+          "label": "Há doença pulmonar de base (ex.: DPOC descompensada) sugerindo taquicardia atrial multifocal?",
+          "type": "boolean",
+          "section": "Comorbidades"
+        },
+        {
+          "id": "current_ecg_pattern",
+          "label": "Qual o padrão do ECG atual durante o episódio (quando disponível)?",
+          "type": "select",
+          "section": "Diagnóstico",
+          "options": [
+            {
+              "value": "qrs_estreito_regular",
+              "label": "QRS estreito regular"
+            },
+            {
+              "value": "qrs_largo_irregular",
+              "label": "QRS largo irregular (suspeita de FA pré-excitada)"
+            },
+            {
+              "value": "irregular_multiplas_p",
+              "label": "Irregular com múltiplas morfologias de onda P"
+            },
+            {
+              "value": "nao_capturado",
+              "label": "Não capturado/indisponível"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "tsv-instabilidade-hemodinamica",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "hemodynamic_instability",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Taquicardia supraventricular com instabilidade hemodinâmica"
+            ],
+            "emergency_flow": [
+              "Cardioversão elétrica sincronizada imediata, sem tentar manobra vagal ou adenosina antes"
+            ]
+          }
+        },
+        {
+          "id": "tsv-fa-preexcitada-suspeita",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "known_wpw_preexcitation",
+                "op": "truthy"
+              },
+              {
+                "field": "current_ecg_pattern",
+                "op": "eq",
+                "value": "qrs_largo_irregular"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Suspeita de fibrilação atrial pré-excitada em WPW — risco de fibrilação ventricular"
+            ],
+            "emergency_flow": [
+              "Evitar todo bloqueador do nó AV (adenosina, verapamil, diltiazem, beta-bloqueador, digoxina) e amiodarona intravenosa",
+              "Se estável, usar antiarrítmico que atue na via acessória (ibutilida, procainamida, flecainida ou propafenona); se instável, cardioversão elétrica sincronizada"
+            ]
+          }
+        },
+        {
+          "id": "tsv-inicio-termino-subito",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "sudden_onset_offset",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Padrão de início e término súbitos é típico de TSV por reentrada (AVNRT, AVRT/WPW)"
+            ],
+            "differentials": [
+              "AVNRT",
+              "AVRT/WPW",
+              "Taquicardia atrial focal"
+            ]
+          }
+        },
+        {
+          "id": "tsv-resposta-manobra-vagal",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "vagal_maneuver_response",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Resposta a manobra vagal favorece mecanismo dependente do nó AV (AVNRT ou AVRT)"
+            ],
+            "ambulatory_flow": [
+              "Orientar repetição de manobra vagal (decúbito dorsal com elevação das pernas) como primeira conduta em episódio futuro, antes de procurar emergência"
+            ]
+          }
+        },
+        {
+          "id": "tsv-doenca-pulmonar-multifocal",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "underlying_lung_disease",
+                "op": "truthy"
+              },
+              {
+                "field": "current_ecg_pattern",
+                "op": "eq",
+                "value": "irregular_multiplas_p"
+              }
+            ]
+          },
+          "add": {
+            "differentials": [
+              "Taquicardia atrial multifocal"
+            ],
+            "messages": [
+              "Priorizar tratamento da doença pulmonar de base e distúrbios eletrolíticos sobre terapia antiarrítmica direta"
+            ],
+            "suggested_tests": [
+              "Gasometria arterial, eletrólitos (potássio, magnésio) e níveis de digoxina/teofilina quando em uso"
+            ]
+          }
+        },
+        {
+          "id": "tsv-wpw-assintomatico-estratificar",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "known_wpw_preexcitation",
+                "op": "truthy"
+              },
+              {
+                "field": "sudden_onset_offset",
+                "op": "falsy"
+              },
+              {
+                "field": "hemodynamic_instability",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "WPW com pré-excitação ao ECG e sem sintomas de taquicardia: encaminhar para estratificação de risco de morte súbita (estudo eletrofisiológico) antes de decidir sobre ablação profilática"
+            ],
+            "ambulatory_flow": [
+              "Discutir ablação profilática da via acessória em subgrupo de alto risco identificado na estratificação"
+            ]
+          }
+        },
+        {
+          "id": "tsv-episodios-recorrentes-ablacao",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "episode_frequency",
+                "op": "in",
+                "value": [
+                  "recorrente",
+                  "incessante"
+                ]
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "Episódios recorrentes ou incessantes: discutir ablação por cateter como opção de primeira linha frente à terapia farmacológica crônica"
+            ],
+            "ambulatory_flow": [
+              "Encaminhar para avaliação eletrofisiológica"
+            ]
+          }
+        },
+        {
+          "id": "tsv-incessante-cardiomiopatia",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "episode_frequency",
+                "op": "eq",
+                "value": "incessante"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Taquicardia incessante — risco de cardiomiopatia induzida por taquicardia"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma para avaliar função ventricular"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "taquicardia supraventricular",
+        "TSV",
+        "AVNRT",
+        "AVRT",
+        "WPW",
+        "Wolff-Parkinson-White",
+        "taquicardia atrial",
+        "ablação por cateter"
+      ],
+      "source_refs": [
+        "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425.",
+        "Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016;133(14):e506-e574. DOI: 10.1161/CIR.0000000000000311. PMID: 26399663.",
+        "Gomes JA, Hariman RJ, Kang PS, Chowdry IH. Sustained symptomatic sinus node reentrant tachycardia: incidence, clinical significance, electrophysiologic observations and the effects of antiarrhythmic agents. J Am Coll Cardiol. 1985;5(1):45-57. PMID: 3964808.",
+        "Bahar AR, Kathawa F, Le T, Farah A, Awadelkarim A, Minhas H, Afonso L. Sinoatrial nodal reentrant tachycardia: a case report and literature review. AME Case Rep. 2025;9:80. DOI: 10.21037/acr-24-262. PMID: 40761218.",
+        "Pappone C, Santinelli V, Rosanio S, et al. A randomized study of prophylactic catheter ablation in asymptomatic patients with the Wolff-Parkinson-White syndrome. N Engl J Med. 2003;349(19):1803-1811. PMID: 14602878.",
+        "Pereira AR, Briosa A, Miranda R, Almeida SS, Brandão L, Pereira H. Sudden Cardiac Death: The Most Feared but Potentially Preventable Presentation of Wolff-Parkinson-White Syndrome. Case Rep Cardiol. 2021. PMID: 34840830.",
+        "Chhabra L, Goyal A, Benham MD. Wolff-Parkinson-White Syndrome. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan–. PMID: 32119324.",
+        "Kistler PM, Roberts-Thomson KC, Haqqani HM, et al. P-wave morphology in focal atrial tachycardia: development of an algorithm to predict the anatomic site of origin. J Am Coll Cardiol. 2006;48(5):1010-1017. DOI: 10.1016/j.jacc.2006.03.058. PMID: 16949495.",
+        "Custer AM, Yelamanchili VS, Lappin SL. Multifocal Atrial Tachycardia. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan–. PMID: 29083603."
+      ],
+      "source_urls": [
+        "https://academic.oup.com/eurheartj/article/41/5/655/5556821",
+        "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000311",
+        "https://pubmed.ncbi.nlm.nih.gov/3964808/",
+        "https://pubmed.ncbi.nlm.nih.gov/40761218/",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa035345",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8616676/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK554437/",
+        "https://pubmed.ncbi.nlm.nih.gov/16949495/",
+        "https://pubmed.ncbi.nlm.nih.gov/29083603/"
+      ],
+      "related_document_slugs": [
+        "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+        "fluxograma-taquicardia-supraventricular-qrs-estreito-esc-2019",
+        "taquicardia-atrial-focal-diagnostico-morfologia-da-onda-p-manejo-e-ablacao-por-cateter",
+        "taquicardia-atrial-multifocal-causas-e-manejo",
+        "taquicardia-juncional-jet-e-pjrt-diagnostico-diferencial-e-ablacao-por-cateter",
+        "taquicardia-por-reentrada-nodal-avnrt-ablacao-versus-farmacos-e-escolha-da-energia",
+        "taquicardia-por-reentrada-sinoatrial-sanrt-diagnostico-diferencial-e-tratamento",
+        "taquicardia-sinusal-inapropriada-diagnostico-de-exclusao-e-tratamento-com-ivabradina",
+        "taquicardia-sinusal-inapropriada-e-ivabradina-o-ensaio-de-cappato",
+        "wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassistoles",
+        "fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+        "taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade"
+      ],
+      "patient_material_slug": "taquicardia-supraventricular-crise-o-que-fazer",
+      "review_status": "revisado",
+      "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo terceiro ciclo do dia. Nenhum verbete geral de taquicardia supraventricular (TSV) do adulto existia previamente no corpus — apenas o hub-irmão taquicardia-supraventricular-fetal (área cardiopediatria), preservado sem duplicação de escopo. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários em content/Arritmias/ antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 9 referências citadas (diretriz ESC 2019 de TSV PMID 31504425, diretriz ACC/AHA/HRS 2015 PMID 26399663, série original de SANRT de Gomes et al. PMID 3964808, revisão de caso de SANRT PMID 40761218, ensaio randomizado de Pappone et al. sobre ablação profilática em WPW assintomático PMID 14602878, revisão de morte súbita em WPW PMID 34840830, StatPearls de WPW PMID 32119324, algoritmo de morfologia de onda P em taquicardia atrial focal PMID 16949495, StatPearls de taquicardia atrial multifocal PMID 29083603). CORREÇÃO DE COMPLIANCE feita na montagem: o agente de pesquisa 3 inicialmente incluiu dose de adenosina em mg/kg e energia de cardioversão em J/kg para a população pediátrica em special_populations — removido e reescrito em termos qualitativos ('dose pediátrica ponderal distinta da dose fixa do adulto, ajustada conforme protocolo pediátrico') antes da montagem final, respeitando a proibição categórica de doses de fármaco em qualquer campo do corpus. related_document_slugs conta com 12 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames — 10 do núcleo direto de TSV mais 2 encontrados por busca ampla (fluxograma de palpitações e taquicardiomiopatia induzida por taquicardia). Um 11º candidato inicial (extrassístole supraventricular e risco de FA futura) foi deliberadamente excluído por ser sobre risco futuro de FA, não sobre TSV sustentada. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos 30 PRs abertos cria o slug taquicardia-supraventricular. Pendente apenas revisão humana final (review_status=pendente_revisao). Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 1,
+      "fonte_producao": "claude"
+    }
+  }
+]

@@ -58,7 +58,7 @@ def _all_document_paths() -> dict[str, Path]:
 
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
-    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="pendente_revisao"; assert item.get("completeness")=="completo"; assert item.get("area")=="gravidez"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
+    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="revisado"; assert item.get("completeness")=="completo"; assert item.get("area")=="gravidez"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
 def test_catalogacao_original_preservada():
     item=_load_doencas()[SLUG]; assert item.get("name")=="Cardiopatia congênita na gravidez"; assert "GUCH e gestação" in (item.get("aliases") or []); assert item.get("category")=="cardiopatia_congenita"; assert item.get("subtype")=="gestacao"; assert item.get("prevalence_rank")==10
 def test_profundidade_minima_e_nao_e_resumo():

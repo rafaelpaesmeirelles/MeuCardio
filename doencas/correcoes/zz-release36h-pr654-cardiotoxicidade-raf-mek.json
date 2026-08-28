@@ -1,0 +1,496 @@
+[
+  {
+    "slug": "cardiotoxicidade-raf-mek",
+    "set": {
+      "name": "Toxicidade cardiovascular por inibidores RAF/MEK",
+      "aliases": [
+        "MEK e coração",
+        "RAF cardiotoxicidade"
+      ],
+      "area": "cardiooncologia",
+      "category": "terapia_alvo",
+      "subtype": "raf_mek",
+      "prevalence_rank": 9,
+      "completeness": "completo",
+      "summary": "Vigilância de função ventricular, pressão e eventos vasculares durante terapias direcionadas à via RAF/MEK.",
+      "tags": [
+        "RAF",
+        "MEK",
+        "terapia-alvo",
+        "função ventricular"
+      ],
+      "source_refs": [
+        "2022 ESC Guidelines on Cardio-Oncology",
+        "Mincu RI, Mahabadi AA, Michel L, et al. Cardiovascular Adverse Events Associated With BRAF and MEK Inhibitors: A Systematic Review and Meta-analysis. JAMA Netw Open. 2019 Aug 2;2(8):e198890. PMID: 31397860.",
+        "Glen C, Adam S, McDowell K, et al. Cardiotoxicity of BRAF/MEK Inhibitors: A Longitudinal Study Incorporating Contemporary Definitions and Risk Scores. JACC CardioOncol. 2023 Oct;5(5):628-637. PMID: 37969652.",
+        "Garutti M, Bergnach M, Polesel J, et al. BRAF and MEK Inhibitors and Their Toxicities: A Meta-Analysis. Cancers (Basel). 2022 Dec 26;15(1). PMID: 36612138.",
+        "Force T, Kolaja KL. Cardiotoxicity of Kinase Inhibitors: The Prediction and Translation of Preclinical Models to Clinical Outcomes. Nat Rev Drug Discov. 2011 Feb;10(2):111-126. PMID: 21283106.",
+        "Banks M, Crowell K, Proctor A, et al. Cardiovascular Effects of the MEK Inhibitor, Trametinib: A Case Report, Literature Review, and Consideration of Mechanism. Cardiovasc Toxicol. 2017 Oct;17(4):487-493. PMID: 28861837.",
+        "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on Cardio-Oncology. Eur Heart J. 2022 Nov 1;43(41):4229-4361. PMID: 36017568."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+        "https://pubmed.ncbi.nlm.nih.gov/31397860/",
+        "https://pubmed.ncbi.nlm.nih.gov/37969652/",
+        "https://pubmed.ncbi.nlm.nih.gov/36612138/",
+        "https://pubmed.ncbi.nlm.nih.gov/21283106/",
+        "https://pubmed.ncbi.nlm.nih.gov/28861837/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017568/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (38º lote de conteúdo do dia): ficha estava completeness=basico, só catalogação (1 source_ref: ESC 2022), zero campos clínicos, mas já tinha 1 related_document_slug e patient_material_slug preenchidos. Nota de transparência: esta ficha esteve bloqueada o dia todo por suspeita de colisão com a PR #551 aberta; reavaliação confirmou que o escopo real da PR #551 mudou (não toca mais este slug), liberando-a. Adicionados epidemiology (disfunção ventricular 5-10%, hipertensão 15-30% com terapia combinada BRAF+MEK, mecanismo via RAS-RAF-MEK-ERK), presentation (10), diagnostic_approach (avaliação basal + monitorização seriada de FEVE/PA/QTc), differentials, tests, red_flags, treatment_summary (monitorização ecocardiográfica seriada como pilar central, reversibilidade geralmente favorável, sem doses, alerta contra suspensão automática de tratamento oncológico eficaz), ambulatory_flow, emergency_flow, monitoring, special_populations (6, incluindo nota explícita distinguindo o uso oncológico do uso off-label pediátrico em síndrome de Noonan), assistant_questions (12), assistant_rules (10, priority 90 para QTc prolongado). related_document_slugs expandido de 1 para 4 (união com o original, sem duplicar) — todos verificados quanto a menção explícita ao tema no texto. patient_material_slug original preservado. Nenhuma dose de fármaco em nenhum campo. Todos os 6 PMIDs de epidemiologia mais 1 PMID citado em special_populations (Wolf CM et al. 2025, uso pediátrico off-label na síndrome de Noonan) verificados individualmente via NCBI e-utils antes da montagem, tanto pelos agentes de pesquisa quanto de forma independente por mim — nenhuma correção necessária. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "related_document_slugs": [
+        "toxicidade-cardiovascular-dos-inibidores-de-braf-e-mek-disfuncao-ventricular-hipertensao-e-vigilancia",
+        "sindrome-de-noonan-na-crianca-espectro-cardiaco-genetica-ras-mapk-e-inibidores-de-mek-na-cardiomiopatia-hipertrofica",
+        "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao",
+        "interacao-entre-anticoagulantes-orais-diretos-e-terapia-antineoplasica-cyp3a4-p-gp"
+      ],
+      "patient_material_slug": "cardiotoxicidade-raf-mek",
+      "epidemiology": "A cardiotoxicidade dos inibidores de BRAF e MEK constitui evento adverso reconhecido no tratamento do melanoma metastático BRAF-mutado e de outros tumores sólidos que abrigam essa mutação driver, sendo a combinação dabrafenibe+trametinibe o esquema mais estudado em ensaios clínicos e coortes de vida real, com dados também disponíveis para vemurafenibe+cobimetinibe e encorafenibe+binimetinibe. Metanálises sistemáticas estimam incidência de disfunção ventricular esquerda (queda da fração de ejeção) em torno de 5 a 10% dos pacientes em uso de terapia combinada BRAF+MEK, enquanto hipertensão arterial nova ou com agravamento é relatada em até 15 a 30% dos casos, configurando o efeito cardiovascular mais frequente dessa classe terapêutica. O mecanismo proposto envolve a via RAS-RAF-MEK-ERK, que desempenha papel fisiológico central na sobrevivência, na hipertrofia adaptativa e na resposta ao estresse dos cardiomiócitos; a inibição farmacológica dessa via, embora terapeuticamente desejada no tecido tumoral, pode comprometer a homeostase cardíaca e favorecer apoptose de cardiomiócitos, disfunção mitocondrial e remodelamento ventricular. Estudos longitudinais com definições contemporâneas de cardiotoxicidade relacionada ao tratamento do câncer mostram que a maioria dos episódios de disfunção ventricular associados a esses agentes é assintomática, detectada em rastreamento ecocardiográfico seriado, e apresenta reversibilidade favorável após suspensão temporária ou redução de dose, com recuperação da fração de ejeção na maior parte dos pacientes, inclusive naqueles posteriormente reexpostos ao tratamento.",
+      "presentation": [
+        "Assintomático, com queda isolada da fração de ejeção do ventrículo esquerdo detectada em ecocardiograma de rotina",
+        "Dispneia aos esforços de início insidioso",
+        "Fadiga e redução da capacidade funcional",
+        "Edema de membros inferiores",
+        "Ortopneia e/ou dispneia paroxística noturna em casos mais avançados de disfunção ventricular",
+        "Elevação da pressão arterial, muitas vezes já nas primeiras semanas de tratamento",
+        "Cefaleia associada a picos hipertensivos",
+        "Palpitações",
+        "Síncope ou pré-síncope, sugestivas de arritmia relacionada a prolongamento de QT",
+        "Achados incidentais de prolongamento do intervalo QTc em eletrocardiograma de monitorização"
+      ],
+      "diagnostic_approach": "Avaliação basal, antes do início do tratamento: ecocardiograma transtorácico com determinação da fração de ejeção do ventrículo esquerdo, preferencialmente por método tridimensional ou Simpson biplanar, associado, quando disponível, à medida do strain longitudinal global, capaz de identificar disfunção subclínica antes de qualquer queda mensurável da fração de ejeção; aferição da pressão arterial em consultório, com atenção a hipertensão pré-existente não controlada, que deve ser otimizada antes do início da terapia combinada BRAF+MEK; eletrocardiograma de 12 derivações com cálculo do intervalo QTc, revisão de medicações concomitantes que também prolongam QT e dosagem de eletrólitos (potássio, magnésio, cálcio). Monitorização ecocardiográfica seriada: reavaliação da fração de ejeção em intervalos definidos por protocolo institucional ao longo do tratamento, com atenção a queda absoluta em relação ao valor basal, e repetição do strain longitudinal global quando disponível, por sua maior sensibilidade na detecção precoce de disfunção subclínica. Monitorização da pressão arterial: aferição em toda consulta e orientação para automedida domiciliar nas primeiras semanas de tratamento, período de maior risco de elevação pressórica; o tratamento anti-hipertensivo deve ser otimizado, sem necessidade rotineira de suspensão do inibidor, exceto em hipertensão grave ou refratária. Monitorização eletrocardiográfica seriada: repetição do ECG com cálculo de QTc após o início e a cada ajuste relevante de dose, com atenção redobrada a associações medicamentosas que prolongam QT e a distúrbios eletrolíticos, que devem ser corrigidos prontamente.",
+      "differentials": [
+        "Cardiomiopatia induzida por quimioterapia prévia (antraciclinas, agentes anti-HER2)",
+        "Miocardite relacionada a inibidor de checkpoint imunológico, em uso prévio ou concomitante",
+        "Cardiomiopatia de estresse (síndrome de takotsubo)",
+        "Doença arterial coronariana subjacente com isquemia miocárdica",
+        "Hipertensão arterial essencial preexistente ou secundária não relacionada ao fármaco",
+        "Progressão tumoral com envolvimento cardíaco ou pericárdico (metástase, derrame pericárdico)",
+        "Síndrome do QT longo congênito ou outras causas de prolongamento de QT, como distúrbio eletrolítico ou uso de outros fármacos"
+      ],
+      "tests": [
+        "Ecocardiograma transtorácico com avaliação da fração de ejeção e do strain longitudinal global",
+        "Eletrocardiograma de 12 derivações com cálculo do intervalo QTc",
+        "Dosagem de biomarcadores cardíacos: troponina e peptídeos natriuréticos (BNP ou NT-proBNP)",
+        "Eletrólitos séricos, incluindo potássio, magnésio e cálcio",
+        "Monitorização ambulatorial da pressão arterial (MAPA) ou automedida domiciliar da pressão arterial",
+        "Ressonância magnética cardíaca em casos selecionados de disfunção ventricular não esclarecida",
+        "Holter de 24 horas quando houver suspeita de arritmia"
+      ],
+      "red_flags": [
+        "Queda significativa da fração de ejeção do ventrículo esquerdo em relação ao valor basal",
+        "Fração de ejeção do ventrículo esquerdo abaixo de 50% de início recente",
+        "Prolongamento marcado do intervalo QTc, sobretudo em associação com outros fármacos que também prolongam QT",
+        "Síncope ou arritmia ventricular documentada",
+        "Hipertensão arterial grave ou crise hipertensiva",
+        "Sinais e sintomas de insuficiência cardíaca descompensada, como dispneia em repouso, edema e ortopneia",
+        "Dor torácica sugestiva de síndrome coronariana aguda"
+      ],
+      "treatment_summary": "A abordagem terapêutica da toxicidade cardiovascular associada aos inibidores de BRAF e MEK tem como pilar central a monitorização ecocardiográfica seriada da fração de ejeção do ventrículo esquerdo (FEVE), realizada antes do início da terapia-alvo (avaliação basal) e repetida em intervalos periódicos definidos em conjunto com a equipe de oncologia ao longo de todo o tratamento. Essa vigilância sistemática permite identificar precocemente quedas assintomáticas da função ventricular, muitas vezes antes do surgimento de sinais ou sintomas clínicos de insuficiência cardíaca, possibilitando intervenção oportuna. Um aspecto fundamental a ser comunicado à equipe assistencial e ao paciente é que a disfunção ventricular induzida por inibidores de BRAF/MEK apresenta, na maior parte dos casos, caráter reversível, respondendo favoravelmente a ajustes na terapia oncológica — como redução temporária da intensidade do tratamento ou suspensão transitória, sem que aqui se detalhem esquemas posológicos específicos, os quais permanecem de competência da oncologia. Essa reversibilidade favorece uma conduta que evita a suspensão automática e definitiva de uma terapia antineoplásica eficaz diante de uma queda de FEVE, priorizando-se estratégias graduais e reavaliação ecocardiográfica após a intervenção. A decisão sobre continuar, pausar temporariamente ou ajustar a terapia-alvo deve ser sempre compartilhada entre cardiologia (ou cardio-oncologia) e oncologia, ponderando o risco cardiovascular individual frente ao benefício oncológico da terapia em curso, a resposta tumoral obtida e a disponibilidade de alternativas terapêuticas. Paralelamente ao manejo da função ventricular, a hipertensão arterial — evento adverso cardiovascular frequente nessa classe de fármacos — deve ser conduzida segundo os princípios padrão de controle pressórico, com acompanhamento ambulatorial regular da pressão arterial e otimização terapêutica conforme metas estabelecidas, sem que isso implique necessariamente na interrupção do inibidor de BRAF/MEK. Outro ponto de atenção é o prolongamento do intervalo QT, que exige monitorização eletrocardiográfica basal e seriada, sendo particularmente relevante quando o paciente está em uso concomitante de outros fármacos com potencial de prolongar o QT, ou na presença de distúrbios eletrolíticos que aumentem esse risco. A integração entre cardiologia e oncologia, com comunicação estruturada e revisão conjunta dos achados de imagem, eletrocardiograma e sintomas, é o elemento que sustenta um manejo seguro e equilibrado, no qual a segurança cardiovascular do paciente é preservada sem comprometer, de forma desnecessária, a continuidade de um tratamento oncológico que pode ser determinante para o desfecho da doença de base.",
+      "ambulatory_flow": [
+        "Avaliação ecocardiográfica basal da FEVE antes do início do inibidor de BRAF/MEK",
+        "Reavaliação ecocardiográfica periódica da FEVE conforme cronograma definido em conjunto com a oncologia",
+        "Aferição da pressão arterial em toda consulta de acompanhamento oncológico",
+        "Eletrocardiograma basal para avaliação do intervalo QT antes do início da terapia",
+        "Eletrocardiograma seriado durante o tratamento, especialmente em uso concomitante de outros fármacos que prolongam o QT",
+        "Revisão da lista de medicações concomitantes com potencial de prolongar o QT ou interagir com o inibidor de BRAF/MEK",
+        "Avaliação de sinais e sintomas de insuficiência cardíaca a cada consulta (dispneia, edema, fadiga, ortopneia)",
+        "Discussão conjunta com a oncologia sobre continuidade, ajuste ou pausa temporária da terapia-alvo diante de alterações cardiovasculares",
+        "Dosagem periódica de eletrólitos (potássio, magnésio, cálcio) relevantes para o risco de prolongamento de QT",
+        "Encaminhamento a programa de cardio-oncologia para acompanhamento longitudinal compartilhado"
+      ],
+      "emergency_flow": [
+        "Avaliação imediata em sala de emergência diante de sintomas sugestivos de insuficiência cardíaca aguda (dispneia importante, ortopneia, edema pulmonar)",
+        "Eletrocardiograma imediato em caso de síncope, palpitações ou suspeita de arritmia ventricular associada a prolongamento de QT",
+        "Monitorização eletrocardiográfica contínua em pacientes com QT acentuadamente prolongado ou arritmia documentada",
+        "Correção emergencial de distúrbios eletrolíticos graves associados a risco de torsades de pointes",
+        "Suspensão temporária imediata do inibidor de BRAF/MEK diante de instabilidade cardiovascular aguda, com comunicação urgente à oncologia",
+        "Avaliação ecocardiográfica urgente diante de queda abrupta e sintomática da FEVE"
+      ],
+      "monitoring": [
+        "FEVE por ecocardiograma seriado (avaliação basal e reavaliações periódicas durante o tratamento)",
+        "Pressão arterial em todas as consultas e, quando indicado, monitorização domiciliar",
+        "Eletrocardiograma com cálculo do intervalo QT corrigido, basal e seriado",
+        "Eletrólitos séricos (potássio, magnésio, cálcio) periodicamente",
+        "Sinais e sintomas de insuficiência cardíaca a cada avaliação clínica",
+        "Revisão de interações medicamentosas com potencial de prolongar o QT",
+        "Função renal e hepática, quando relevante para decisões conjuntas com a oncologia"
+      ],
+      "assistant_questions": [
+        {
+          "id": "feve_basal_avaliada",
+          "label": "A FEVE basal foi avaliada antes do início do inibidor de BRAF/MEK?",
+          "type": "boolean"
+        },
+        {
+          "id": "feve_atual",
+          "label": "Qual o valor mais recente da FEVE (%)?",
+          "type": "number"
+        },
+        {
+          "id": "variacao_feve",
+          "label": "Houve queda da FEVE em relação ao valor basal?",
+          "type": "boolean"
+        },
+        {
+          "id": "sintomas_ic",
+          "label": "O paciente apresenta sinais ou sintomas sugestivos de insuficiência cardíaca?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "dispneia",
+              "label": "Dispneia"
+            },
+            {
+              "value": "edema",
+              "label": "Edema"
+            },
+            {
+              "value": "fadiga",
+              "label": "Fadiga"
+            },
+            {
+              "value": "ortopneia",
+              "label": "Ortopneia"
+            },
+            {
+              "value": "nenhum",
+              "label": "Nenhum"
+            }
+          ]
+        },
+        {
+          "id": "pressao_arterial_controlada",
+          "label": "A pressão arterial está controlada?",
+          "type": "boolean"
+        },
+        {
+          "id": "ecg_realizado",
+          "label": "Foi realizado eletrocardiograma para avaliação do intervalo QT?",
+          "type": "boolean"
+        },
+        {
+          "id": "qtc_valor",
+          "label": "Qual o valor do intervalo QT corrigido (QTc), em milissegundos?",
+          "type": "number"
+        },
+        {
+          "id": "uso_outros_qt",
+          "label": "O paciente utiliza outros fármacos com potencial de prolongar o QT?",
+          "type": "boolean"
+        },
+        {
+          "id": "disturbio_eletrolitico",
+          "label": "Há distúrbio eletrolítico (potássio, magnésio ou cálcio) documentado?",
+          "type": "boolean"
+        },
+        {
+          "id": "decisao_terapia",
+          "label": "Qual a conduta decidida em conjunto com a oncologia quanto à terapia-alvo?",
+          "type": "select",
+          "options": [
+            {
+              "value": "manter",
+              "label": "Manter terapia"
+            },
+            {
+              "value": "reduzir_temporariamente",
+              "label": "Reduzir temporariamente"
+            },
+            {
+              "value": "pausar_temporariamente",
+              "label": "Pausar temporariamente"
+            },
+            {
+              "value": "suspender_definitivamente",
+              "label": "Suspender definitivamente"
+            },
+            {
+              "value": "em_discussao",
+              "label": "Em discussão com a oncologia"
+            }
+          ]
+        },
+        {
+          "id": "tempo_desde_inicio",
+          "label": "Há quanto tempo o paciente está em uso do inibidor de BRAF/MEK?",
+          "type": "text"
+        },
+        {
+          "id": "classe_farmaco",
+          "label": "Qual classe de inibidor está em uso?",
+          "type": "select",
+          "options": [
+            {
+              "value": "braf",
+              "label": "Inibidor de BRAF isolado"
+            },
+            {
+              "value": "mek",
+              "label": "Inibidor de MEK isolado"
+            },
+            {
+              "value": "combinacao_braf_mek",
+              "label": "Combinação BRAF + MEK"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "rule_feve_basal_ausente",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "feve_basal_avaliada",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Avaliação ecocardiográfica basal da FEVE antes do início do inibidor de BRAF/MEK"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma transtorácico basal"
+            ]
+          }
+        },
+        {
+          "id": "rule_queda_feve",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "variacao_feve",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Queda da FEVE em relação ao valor basal durante uso de inibidor de BRAF/MEK"
+            ],
+            "supporting": [
+              "Disfunção ventricular associada a inibidor de BRAF/MEK, geralmente reversível com ajuste terapêutico"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma de reavaliação em intervalo curto"
+            ]
+          }
+        },
+        {
+          "id": "rule_ic_sintomatica",
+          "priority": 85,
+          "when": {
+            "any": [
+              {
+                "field": "sintomas_ic",
+                "op": "contains",
+                "value": "dispneia"
+              },
+              {
+                "field": "sintomas_ic",
+                "op": "contains",
+                "value": "edema"
+              },
+              {
+                "field": "sintomas_ic",
+                "op": "contains",
+                "value": "ortopneia"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sinais ou sintomas sugestivos de insuficiência cardíaca em paciente sob inibidor de BRAF/MEK"
+            ],
+            "emergency_flow": [
+              "Avaliação imediata em sala de emergência diante de sintomas sugestivos de insuficiência cardíaca aguda"
+            ]
+          }
+        },
+        {
+          "id": "rule_pa_descontrolada",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "pressao_arterial_controlada",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Hipertensão arterial associada a inibidor de BRAF/MEK sem controle pressórico adequado"
+            ],
+            "ambulatory_flow": [
+              "Otimização do controle pressórico com reavaliação em curto prazo"
+            ]
+          }
+        },
+        {
+          "id": "rule_qt_nao_avaliado",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "ecg_realizado",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Eletrocardiograma para avaliação do intervalo QT não realizado"
+            ],
+            "suggested_tests": [
+              "Eletrocardiograma de 12 derivações com cálculo do QTc"
+            ]
+          }
+        },
+        {
+          "id": "rule_qtc_prolongado",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "qtc_valor",
+                "op": "gte",
+                "value": 470
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Intervalo QT corrigido prolongado em paciente sob inibidor de BRAF/MEK"
+            ],
+            "emergency_flow": [
+              "Monitorização eletrocardiográfica contínua e correção de distúrbios eletrolíticos"
+            ]
+          }
+        },
+        {
+          "id": "rule_qt_combinacao",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "uso_outros_qt",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Uso concomitante de outros fármacos com potencial de prolongar o QT associado a inibidor de BRAF/MEK"
+            ],
+            "suggested_tests": [
+              "Eletrocardiograma seriado com monitorização mais frequente do QTc"
+            ]
+          }
+        },
+        {
+          "id": "rule_disturbio_eletrolitico",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "disturbio_eletrolitico",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Distúrbio eletrolítico documentado aumentando risco de prolongamento de QT e arritmia"
+            ],
+            "suggested_tests": [
+              "Dosagem de potássio, magnésio e cálcio séricos"
+            ]
+          }
+        },
+        {
+          "id": "rule_suspensao_definitiva_precoce",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "decisao_terapia",
+                "op": "eq",
+                "value": "suspender_definitivamente"
+              },
+              {
+                "field": "variacao_feve",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "opposing": [
+              "Disfunção ventricular por inibidor de BRAF/MEK é geralmente reversível e não exige suspensão automática definitiva da terapia oncológica eficaz"
+            ],
+            "messages": [
+              "Considerar reavaliação conjunta com a oncologia antes de suspensão definitiva, dada a reversibilidade habitual do quadro"
+            ]
+          }
+        },
+        {
+          "id": "rule_qtc_normal_sem_outros_riscos",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "ecg_realizado",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "qtc_valor",
+                "op": "lt",
+                "value": 470
+              },
+              {
+                "field": "uso_outros_qt",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Intervalo QT dentro da normalidade, sem uso concomitante de fármacos que prolongam o QT"
+            ]
+          }
+        }
+      ],
+      "special_populations": [
+        "Paciente iniciando combinação BRAF+MEK para melanoma metastático: exige avaliação basal de risco cardiovascular (pressão arterial e função ventricular, com NT-proBNP quando disponível) antes da primeira dose. A combinação concentra mais risco cardiovascular do que a monoterapia com inibidor de BRAF isolado, e o padrão temporal mostra que o risco de queda de fração de ejeção e de hipertensão se concentra nos primeiros meses de tratamento — período que exige vigilância mais próxima, não vigilância relaxada.",
+        "Paciente com fração de ejeção do ventrículo esquerdo basal limítrofe antes de iniciar o tratamento: a decisão sobre elegibilidade e sobre a intensidade da vigilância deve ser conjunta entre oncologia e cardiologia. Fração de ejeção basal limítrofe justifica reforço da vigilância, não necessariamente contraindicação ao tratamento.",
+        "Paciente que desenvolve queda de fração de ejeção durante o tratamento (decisão de reduzir, pausar ou suspender): a queda exige confirmação, classificação padronizada da disfunção cardíaca relacionada ao tratamento oncológico e decisão conjunta entre oncologia e cardiologia. Os estudos observacionais mostram reversibilidade frequente da queda de fração de ejeção, mas essa reversibilidade não define por si só quando manter, reduzir, pausar, reintroduzir ou suspender definitivamente o tratamento. Não se deve assumir que toda queda de fração de ejeção exige suspensão definitiva.",
+        "Paciente com hipertensão de difícil controle durante o tratamento: a aferição de pressão arterial deve fazer parte da vigilância de rotina; hipertensão de difícil controle não deve ser tratada como achado inesperado ou raro nessa classe.",
+        "Paciente em uso concomitante de outro fármaco com risco de prolongamento de QT: o risco de prolongamento de QT e arritmia não é uniforme entre os diferentes inibidores de BRAF e MEK. Eletrocardiograma, eletrólitos e interações medicamentosas devem ser avaliados conforme o agente específico, evitando tratar o risco de prolongamento de QT como efeito homogêneo de toda a classe.",
+        "Paciente pediátrico com síndrome de Noonan em uso de inibidor de MEK para cardiomiopatia hipertrófica (contexto genético distinto do uso oncológico): trata-se de indicação off-label/compassiva por variante germinativa da via RAS-MAPK, reservada a cardiomiopatia hipertrófica grave e refratária ao tratamento padrão — não de tratamento de tumor sólido. Esse uso não deve ser confundido com o perfil de cardiotoxicidade descrito no restante deste documento, que se refere ao uso oncológico da mesma classe farmacológica em população adulta com mutação somática."
+      ],
+      "fonte_producao": "claude"
+    }
+  }
+]
