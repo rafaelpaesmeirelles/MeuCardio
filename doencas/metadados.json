@@ -10228,7 +10228,7 @@
     "category": "sintoma_e_exame",
     "subtype": "dor_toracica",
     "prevalence_rank": 29,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Sintoma geralmente não cardíaco na infância, mas que exige busca ativa de sinais de alarme relacionados a esforço, síncope, exame, história familiar e doença sistêmica.",
     "tags": [
       "dor torácica",
@@ -10236,18 +10236,559 @@
       "pediatria"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "AHA Pediatric Cardiology scientific resources",
+      "Selbst SM, Ruddy RM, Clark BJ, Henretig FM, Santulli T Jr. Pediatric chest pain: a prospective study. Pediatrics. 1988;82(3):319-323. PMID: 3405660.",
+      "Massin MM, Bourguignont A, Coremans C, Comté L, Lepage P, Gérard P. Chest pain in pediatric patients presenting to an emergency department or to a cardiac clinic. Clin Pediatr (Phila). 2004;43(3):231-238. PMID: 15094947.",
+      "Saleeb SF, Li WY, Warren SZ, Lock JE. Effectiveness of screening for life-threatening chest pain in children. Pediatrics. 2011;128(5):e1062-e1068. PMID: 21987702.",
+      "Friedman KG, Kane DA, Rathod RH, et al. Management of pediatric chest pain using a standardized assessment and management plan. Pediatrics. 2011;128(2):239-245. PMID: 21746719.",
+      "Verghese GR, Friedman KG, Rathod RH, et al. Resource utilization reduction for evaluation of chest pain in pediatrics using a novel standardized clinical assessment and management plan (SCAMP). J Am Heart Assoc. 2012;1(2):e000198. PMID: 23130120.",
+      "Kane DA, Friedman KG, Fulton DR, Melchiono MW, Baffa JM, Saleeb SF. Needles in Hay II: detecting cardiac pathology by the pediatric chest pain standardized clinical assessment and management plan. Congenit Heart Dis. 2016;11(5):396-402. PMID: 26918410.",
+      "Selbst SM. Approach to the child with chest pain. Pediatr Clin North Am. 2010;57(6):1221-1234. PMID: 21111115.",
+      "Thull-Freedman J. Evaluation of chest pain in the pediatric patient. Med Clin North Am. 2010;94(2):327-347. PMID: 20380959.",
+      "Gokhale J, Selbst SM. Chest pain and chest wall deformity. Pediatr Clin North Am. 2009;56(1):49-65. PMID: 19135581.",
+      "Law YM, Lal AK, Chen S, et al. Diagnosis and management of myocarditis in children: a scientific statement from the American Heart Association. Circulation. 2021;144(6):e123-e135. PMID: 34229446."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology",
+      "https://pubmed.ncbi.nlm.nih.gov/3405660/",
+      "https://pubmed.ncbi.nlm.nih.gov/15094947/",
+      "https://pubmed.ncbi.nlm.nih.gov/21987702/",
+      "https://pubmed.ncbi.nlm.nih.gov/21746719/",
+      "https://pubmed.ncbi.nlm.nih.gov/23130120/",
+      "https://pubmed.ncbi.nlm.nih.gov/26918410/",
+      "https://pubmed.ncbi.nlm.nih.gov/21111115/",
+      "https://pubmed.ncbi.nlm.nih.gov/20380959/",
+      "https://pubmed.ncbi.nlm.nih.gov/19135581/",
+      "https://pubmed.ncbi.nlm.nih.gov/34229446/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (6º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608 e hipertensao-arterial-pediatrica/PR #609): ficha estava com apenas metadados de catalogação e 1 related_document_slug. Produzida epidemiologia (causa cardíaca em apenas 1-4% dos casos, séries de Selbst/Massin/Saleeb), apresentação (10 itens), abordagem diagnóstica estruturada em 5 subtópicos, 13 diferenciais por sistema, 8 exames, 12 sinais de alarme, tratamento (conduta expectante para causa musculoesquelética, investigação seletiva não universal, critérios objetivos de encaminhamento), fluxos ambulatorial/emergência, monitoramento, 7 populações especiais, assistente clínico determinístico (12 perguntas, 10 regras, priority até 95 para dor de esforço + síncope + história familiar de morte súbita) e 13 related_document_slugs (12 novos + o já existente), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. 5 dos documentos são compartilhados com fichas já publicadas — dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca (o já existente antes deste lote, também em sincope-pediatrica), sindrome-de-turner-na-crianca-... (também em coarctacao-da-aorta), isquemia-coronaria-aguda-apos-switch-arterial (também em transposicao-das-grandes-arterias), descompensacao-aguda-da-circulacao-de-fontan (também em fisiologia-ventriculo-unico), cardiomiopatia-restritiva-na-crianca-... (também em cardiomiopatias-pediatricas) — todos mantidos por serem genuína e centralmente relevantes também à dor torácica pediátrica (cada um discute dor torácica como achado/gatilho de investigação explícito). Nenhuma dose de fármaco citada.",
+    "version": 2,
     "related_document_slugs": [
-      "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
+      "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca",
+      "origem-aortica-anomala-de-coronaria-com-sincope-ou-isquemia-de-esforco",
+      "pericardite-aguda-na-crianca-e-no-adolescente-etiologia-diagnostico-e-tratamento",
+      "sindrome-pos-pericardiotomia-pediatrica-incidencia-diagnostico-e-tratamento",
+      "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",
+      "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+      "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",
+      "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio",
+      "cardiomiopatia-restritiva-na-crianca-e-no-adolescente-etiologia-genetica-diagnostico-diferencial-e-transplante-precoce",
+      "miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+      "miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual",
+      "isquemia-coronaria-aguda-apos-switch-arterial",
+      "descompensacao-aguda-da-circulacao-de-fontan"
     ],
-    "patient_material_slug": "dor-toracica-pediatrica"
+    "patient_material_slug": "dor-toracica-pediatrica",
+    "fonte_producao": "claude",
+    "epidemiology": "A dor torácica é um dos motivos mais frequentes de consulta em pronto-socorro pediátrico e a segunda causa mais comum de encaminhamento ambulatorial à cardiologia pediátrica, atrás apenas da investigação de sopros cardíacos. Estudos prospectivos em serviços de emergência pediátrica mostram que a dor torácica representa entre 0,3% e 6% de todos os atendimentos pediátricos em pronto-socorro. A distribuição etária mostra predomínio em escolares e adolescentes, com idade média de apresentação em torno de 12 a 13 anos, sendo incomum, embora não excepcional, em lactentes e pré-escolares. O dado epidemiológico central que orienta toda a investigação é que a causa cardíaca é raríssima: na série clássica de Selbst et al. (407 crianças, PMID 3405660), apenas cerca de 4% dos casos tiveram origem cardíaca, enquanto a causa musculoesquelética (sobretudo costocondrite) respondeu pela maior fração identificável, seguida de causas idiopáticas, respiratórias, gastrointestinais e psicogênicas (esta última mais prevalente em adolescentes com ansiedade ou estresse). Massin et al. (168 crianças, PMID 15094947) confirmaram prevalência de causa cardíaca de apenas 1%. Em coorte de mais de 3.700 crianças encaminhadas a clínica de cardiologia pediátrica por dor torácica e classificadas como não cardíacas, nenhuma teve morte de causa cardíaca em seguimento mediano de 4,6 anos (Saleeb et al., PMID 21987702), reforçando que, na ausência de sinais de alarme, o risco de doença cardíaca grave subjacente é extremamente baixo, o que justifica uma abordagem seletiva e não indiscriminada de exames complementares.",
+    "presentation": [
+      "Dor musculoesquelética (a etiologia mais comum): dor localizada, reprodutível à palpação da parede torácica ou das articulações costocondrais, geralmente unilateral, que piora com movimento, inspiração profunda ou palpação direta — padrão típico da costocondrite",
+      "Dor respiratória: associada a tosse, sibilância ou dispneia, frequentemente desencadeada por exercício em paciente com asma mal controlada, ou dor pleurítica associada a febre e sintomas respiratórios sugerindo pneumonia",
+      "Dor gastrointestinal/refluxo: dor em queimação retroesternal, com relação temporal à alimentação, piora em decúbito, podendo acompanhar-se de pirose ou regurgitação, mais comum em adolescentes com esofagite ou DRGE",
+      "Dor psicogênica: associada a ansiedade, estresse escolar ou familiar, crises de pânico ou hiperventilação, frequentemente acompanhada de sintomas somáticos como tontura e parestesia perioral; predomina em adolescentes",
+      "Dor de esforço sugestiva de causa cardíaca: dor que surge ou piora de forma consistente durante atividade física/exercício, sem relação com palpação da parede torácica, aliviada com o repouso",
+      "Dor torácica associada a síncope ou pré-síncope, especialmente quando ocorre durante ou imediatamente após esforço físico, exigindo investigação cardiológica prioritária",
+      "Dor pleurítica aguda com febre, que piora em decúbito dorsal e melhora ao sentar-se e inclinar-se para frente, associada a mal-estar geral, sugerindo pericardite ou miocardite",
+      "Dor torácica na crise vaso-oclusiva de anemia falciforme (síndrome torácica aguda): associada a febre, taquipneia, hipoxemia e infiltrado pulmonar em paciente com doença falciforme conhecida",
+      "Dor torácica associada a palpitações de início súbito, sugerindo arritmia (por exemplo, taquicardia supraventricular) como causa subjacente",
+      "Dor torácica pós-traumática, com história de trauma direto na parede torácica ou prática de esporte de contato, geralmente reprodutível à palpação da região afetada"
+    ],
+    "diagnostic_approach": {
+      "anamnese_dirigida": "Caracterizar a dor quanto a início, duração, localização, irradiação, fatores desencadeantes e de alívio. Pontos-chave: relação com esforço físico (dor que surge predominantemente ao exercício é bandeira vermelha, ao contrário da dor musculoesquelética, tipicamente em repouso ou reprodutível à palpação); presença de síncope, pré-síncope ou palpitações associadas; história pessoal de cardiopatia congênita, doença de Kawasaki prévia, cirurgia cardíaca ou uso de substâncias estimulantes/ilícitas. É fundamental investigar história familiar de morte súbita inexplicada antes dos 50 anos, cardiomiopatia hipertrófica ou dilatada, canalopatias (síndrome do QT longo, síndrome de Brugada), síndrome de Marfan ou outras doenças do tecido conjuntivo em parentes de primeiro grau.",
+      "exame_fisico_direcionado": "Inclui sinais vitais completos, palpação sistemática da parede torácica e das articulações costocondrais buscando reprodutibilidade da dor (fortemente sugestiva de causa musculoesquelética), ausculta cardíaca cuidadosa em busca de sopro patológico, atrito pericárdico, ritmo de galope ou irregularidade de ritmo, ausculta pulmonar completa, e avaliação de estigmas de síndrome de Marfan (envergadura maior que a estatura, aracnodactilia, deformidade de parede torácica, hiperextensibilidade articular).",
+      "indicacao_ecg": "O eletrocardiograma não deve ser solicitado de rotina em toda criança com dor torácica isolada e exame físico normal, mas é indicado de forma seletiva quando há dor de esforço, síncope, palpitações, sopro patológico, história familiar de morte súbita/cardiomiopatia/canalopatia, ou exame físico anormal. Protocolos padronizados de avaliação (SCAMP) demonstraram que essa abordagem seletiva reduz uso desnecessário de exames sem aumentar eventos adversos (Friedman et al., PMID 21746719; Verghese et al., PMID 23130120).",
+      "indicacao_ecocardiograma": "Assim como o ECG, o ecocardiograma transtorácico é reservado para pacientes com sinais de alarme, ECG alterado, sopro patológico, suspeita de miocardite/pericardite ou de origem anômala de coronária, ou história familiar relevante — não é exame de rastreamento universal para dor torácica pediátrica isolada, dado o rendimento diagnóstico muito baixo em população sem sinais de alarme (Kane et al., Needles in Hay II, PMID 26918410).",
+      "criterios_encaminhamento_cardiologia": "O encaminhamento ao cardiologista pediátrico está indicado diante de qualquer sinal de alarme (dor de esforço, síncope associada, sopro patológico, história familiar de morte súbita/cardiomiopatia/canalopatia, achados sugestivos de síndrome de Marfan, ECG alterado), ou quando a etiologia permanece incerta após avaliação clínica inicial completa. Na ausência desses achados, a probabilidade de doença cardíaca é extremamente baixa e o encaminhamento rotineiro não é necessário nem custo-efetivo."
+    },
+    "differentials": [
+      "Musculoesquelético: costocondrite (síndrome de Tietze quando há edema associado à articulação costocondral)",
+      "Musculoesquelético: trauma de parede torácica ou estiramento muscular",
+      "Respiratório: asma/broncoespasmo induzido por exercício",
+      "Respiratório: pneumonia com componente pleurítico",
+      "Respiratório: pneumotórax espontâneo (típico em adolescente magro, alto, do sexo masculino)",
+      "Gastrointestinal: doença do refluxo gastroesofágico/esofagite",
+      "Psicogênico: transtorno de ansiedade ou transtorno de pânico",
+      "Cardíaco: miocardite",
+      "Cardíaco: pericardite",
+      "Cardíaco: arritmia (por exemplo, taquicardia supraventricular)",
+      "Cardíaco: cardiomiopatia hipertrófica",
+      "Cardíaco: origem anômala de artéria coronária",
+      "Hematológico: síndrome torácica aguda em anemia falciforme (crise vaso-oclusiva pulmonar)"
+    ],
+    "tests": [
+      "Eletrocardiograma de repouso — indicação seletiva, reservado a pacientes com sinais de alarme (dor de esforço, síncope, palpitações, sopro, história familiar de risco)",
+      "Ecocardiograma transtorácico — indicação seletiva, para suspeita de doença cardíaca estrutural, miocardite/pericardite, origem anômala de coronária ou história familiar relevante",
+      "Radiografia de tórax — quando há sintomas respiratórios, febre, trauma ou suspeita de pneumotórax/pneumonia",
+      "Troponina sérica — quando há suspeita clínica de miocardite, pericardite ou lesão miocárdica aguda",
+      "Marcadores inflamatórios (PCR, VHS) — quando há suspeita de pericardite, miocardite ou doença inflamatória sistêmica",
+      "Teste ergométrico (teste de esforço) — dor reprodutivelmente desencadeada por exercício sem diagnóstico claro, ou avaliação de arritmia induzida por esforço",
+      "Monitorização ambulatorial do ritmo (Holter) — quando há palpitações associadas ou suspeita de arritmia intermitente",
+      "Endoscopia digestiva alta — reservada a casos de suspeita de causa esofágica refratária ao tratamento empírico"
+    ],
+    "red_flags": [
+      "Dor torácica desencadeada ou consistentemente associada ao esforço físico",
+      "Síncope ou pré-síncope associada à dor, especialmente durante ou imediatamente após exercício",
+      "História familiar de morte súbita cardíaca inexplicada antes dos 50 anos",
+      "História familiar de cardiomiopatia (hipertrófica ou dilatada), canalopatia (síndrome do QT longo, síndrome de Brugada) ou síndrome de Marfan",
+      "Sopro cardíaco patológico ao exame físico",
+      "Palpitações associadas à dor, principalmente de início súbito",
+      "Dor que desperta a criança durante o sono, associada a outros sintomas como síncope, palpitações ou dispneia",
+      "Febre associada a dor pleurítica que piora em decúbito dorsal e melhora ao sentar-se e inclinar-se para frente, sugerindo pericardite ou miocardite",
+      "Estigmas físicos de síndrome de Marfan (envergadura aumentada em relação à estatura, aracnodactilia, hiperextensibilidade articular)",
+      "História pessoal de cardiopatia congênita, doença de Kawasaki prévia ou cirurgia cardíaca",
+      "Dispneia desproporcional, cianose ou hipoxemia associadas à dor torácica",
+      "Dor torácica em paciente com anemia falciforme associada a febre e taquipneia, sugerindo síndrome torácica aguda"
+    ],
+    "treatment_summary": "A dor torácica é um dos motivos mais frequentes de consulta cardiológica pediátrica, mas na esmagadora maioria dos casos tem causa benigna e não cardíaca, sendo a etiologia musculoesquelética (costocondrite, síndrome de Tietze, trauma muscular, dor por esforço físico incomum, distensão de parede torácica) a mais prevalente, seguida por causas respiratórias (asma, tosse persistente, infecção de vias aéreas), gastrointestinais (refluxo gastroesofágico, esofagite) e psicogênicas (ansiedade, transtorno de pânico, hiperventilação), especialmente em adolescentes. Quando a dor é reprodutível à palpação da parede torácica, tem caráter pontual, piora com movimento ou posição, dura segundos a poucos minutos, não se relaciona a esforço físico e o exame cardiovascular é normal, a conduta é tranquilização ativa da criança e da família, orientação sobre a natureza autolimitada do quadro, medidas não farmacológicas (repouso relativo, calor local, ajuste temporário de atividade física) e reavaliação clínica em atenção primária caso os sintomas persistam além de poucas semanas ou se modifiquem em características. Não se recomenda investigação de rotina com eletrocardiograma ou ecocardiograma para todo paciente com dor torácica; esses exames devem ser solicitados de forma seletiva, guiados por sinais de alarme — dor desencadeada consistentemente por esforço físico, síncope ou pré-síncope associada, palpitações associadas, história familiar de morte súbita, cardiomiopatia ou canalopatia em parente de primeiro grau, doença de Kawasaki prévia, cardiopatia congênita conhecida ou cirurgia cardíaca prévia, uso de substâncias estimulantes, ou exame cardiovascular alterado (sopro novo, atrito pericárdico, sinais de insuficiência cardíaca) — ou por achados de história e exame sugestivos de causa cardíaca inflamatória (miocardite, pericardite) ou de causa pulmonar grave em contexto de risco. Nas causas respiratórias, o manejo inicial em atenção primária envolve o tratamento da condição de base, com reavaliação se não houver melhora. Nas causas gastrointestinais, orientação alimentar e postural, com encaminhamento se refratariedade aos ajustes iniciais. Nas causas psicogênicas, é fundamental investigar ativamente estressores, ansiedade e sintomas de pânico, validando o sintoma referido pela criança ou adolescente sem minimizá-lo, considerando encaminhamento para avaliação em saúde mental quando há impacto funcional significativo, recorrência frequente ou sofrimento importante. O encaminhamento urgente ao cardiologista pediátrico, ou avaliação direta em pronto-socorro, está indicado diante de dor torácica associada a síncope ou pré-síncope, dor desencadeada consistentemente por esforço físico, dor associada a palpitações com sinais de instabilidade, história familiar de morte súbita cardíaca em parente jovem, sinais sugestivos de miocardite ou pericardite (febre, dor pleurítica, atrito pericárdico), sinais de insuficiência cardíaca ou instabilidade hemodinâmica, exame com sopro novo ou alterado, ou suspeita de causa não cardíaca grave. O encaminhamento eletivo é reservado para dor recorrente sem sinais de alarme, mas com ansiedade familiar significativa, história pouco característica, ou necessidade de exclusão formal de causa estrutural para tranquilização definitiva da família. A comunicação com a família deve enfatizar, em linguagem acessível, que a esmagadora maioria dos casos de dor torácica pediátrica não tem origem cardíaca nem risco de vida, reduzindo ansiedade excessiva e a busca repetida por serviços de urgência, ao mesmo tempo em que se orienta objetivamente sobre quais sinais devem motivar reavaliação imediata.",
+    "ambulatory_flow": [
+      "Realizar anamnese detalhada: caracterização da dor (início, duração, relação com esforço físico, postura, palpação), sintomas associados (síncope, palpitações, febre, dispneia) e história familiar de morte súbita, cardiomiopatia ou canalopatia",
+      "Realizar exame físico completo, incluindo palpação sistemática da parede torácica, ausculta cardíaca e pulmonar, sinais vitais e busca de sinais de insuficiência cardíaca",
+      "Classificar o risco inicial conforme presença ou ausência de sinais de alarme identificados na anamnese e no exame físico",
+      "Quando a dor é reprodutível à palpação e o exame é normal, sem sinais de alarme, orientar tranquilização ativa e conduta expectante, sem solicitar exames complementares de rotina",
+      "Quando há sinais de alarme ou dúvida diagnóstica relevante, solicitar eletrocardiograma e, conforme suspeita clínica, radiografia de tórax ou exames laboratoriais direcionados",
+      "Encaminhar ao cardiologista pediátrico de forma urgente ou eletiva conforme os critérios de risco identificados",
+      "Fornecer orientação verbal e escrita à família sobre sinais de alarme que justificam retorno imediato ao serviço de saúde",
+      "Programar reavaliação em atenção primária em prazo definido caso os sintomas persistam ou se modifiquem"
+    ],
+    "emergency_flow": [
+      "Avaliar imediatamente sinais vitais e estabilidade hemodinâmica (via aérea, respiração, circulação)",
+      "Instituir monitorização cardíaca contínua e obter acesso venoso",
+      "Realizar eletrocardiograma de 12 derivações imediatamente",
+      "Solicitar interconsulta urgente com cardiologia pediátrica e considerar transferência para unidade com suporte cardiológico",
+      "Direcionar investigação complementar conforme suspeita clínica (radiografia de tórax, exames laboratoriais, ecocardiograma quando indicado)",
+      "Manter a criança em repouso, sob monitorização, evitando esforço físico até definição diagnóstica",
+      "Reavaliar de forma seriada o quadro clínico e a persistência ou evolução dos sinais de alarme"
+    ],
+    "monitoring": [
+      "Reavaliação clínica em atenção primária em 2 a 4 semanas para casos de dor persistente sem sinais de alarme",
+      "Acompanhamento cardiológico programado para os casos em que houve identificação de achado estrutural ou elétrico relevante",
+      "Reforço periódico da orientação familiar sobre sinais de alarme que exigem retorno imediato",
+      "Avaliação do impacto psicossocial e funcional do sintoma (absenteísmo escolar, restrição de atividades físicas) nas consultas de seguimento",
+      "Revisão da história familiar em cada retorno, especialmente se surgir novo caso de morte súbita ou cardiomiopatia na família",
+      "Encerramento do seguimento cardiológico quando a investigação for negativa e os sintomas resolverem, com orientação clara de retorno em caso de recorrência com padrão diferente"
+    ],
+    "assistant_questions": [
+      {
+        "id": "dor_esforco",
+        "text": "A dor torácica é desencadeada ou piora consistentemente com esforço físico?",
+        "type": "boolean"
+      },
+      {
+        "id": "sincope_associada",
+        "text": "Houve síncope ou pré-síncope associada ao episódio de dor torácica?",
+        "type": "boolean"
+      },
+      {
+        "id": "historia_familiar_morte_subita",
+        "text": "Há história familiar de morte súbita cardíaca, cardiomiopatia ou canalopatia em parente de primeiro grau?",
+        "type": "boolean"
+      },
+      {
+        "id": "palpitacoes_associadas",
+        "text": "Há palpitações associadas ao episódio de dor torácica?",
+        "type": "boolean"
+      },
+      {
+        "id": "dor_reprodutivel_palpacao",
+        "text": "A dor é reproduzida pela palpação da parede torácica?",
+        "type": "boolean"
+      },
+      {
+        "id": "exame_cardiovascular_alterado",
+        "text": "O exame cardiovascular apresenta sopro novo, atrito pericárdico ou sinais de insuficiência cardíaca?",
+        "type": "boolean"
+      },
+      {
+        "id": "febre_sintomas_infecciosos",
+        "text": "Há febre ou outros sintomas infecciosos associados, sugestivos de miocardite ou pericardite?",
+        "type": "boolean"
+      },
+      {
+        "id": "cardiopatia_estrutural_previa",
+        "text": "A criança tem cardiopatia congênita conhecida, cirurgia cardíaca prévia ou doença de Kawasaki prévia?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_substancias_estimulantes",
+        "text": "Há relato de uso de substâncias estimulantes (ex.: energéticos, drogas ilícitas)?",
+        "type": "boolean"
+      },
+      {
+        "id": "duracao_episodio",
+        "text": "Qual a duração típica de cada episódio de dor?",
+        "type": "select",
+        "options": [
+          {
+            "value": "segundos",
+            "label": "Segundos"
+          },
+          {
+            "value": "minutos",
+            "label": "Minutos"
+          },
+          {
+            "value": "horas",
+            "label": "Horas"
+          },
+          {
+            "value": "dias_ou_constante",
+            "label": "Dias ou constante"
+          }
+        ]
+      },
+      {
+        "id": "caracteristica_dor",
+        "text": "Como a criança ou adolescente descreve a dor?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "pontada",
+            "label": "Em pontada/fisgada"
+          },
+          {
+            "value": "opressiva",
+            "label": "Opressiva/aperto"
+          },
+          {
+            "value": "pleuritica",
+            "label": "Pleurítica (piora com respiração)"
+          },
+          {
+            "value": "queimacao",
+            "label": "Em queimação"
+          },
+          {
+            "value": "mal_caracterizada",
+            "label": "Mal caracterizada/vaga"
+          }
+        ]
+      },
+      {
+        "id": "idade_anos",
+        "text": "Qual a idade da criança ou adolescente, em anos?",
+        "type": "number"
+      },
+      {
+        "id": "ansiedade_estressores",
+        "text": "Há relato de ansiedade, estresse escolar/familiar ou sintomas de pânico associados aos episódios?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "r1_esforco_sincope_historia_familiar",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "dor_esforco",
+              "op": "truthy"
+            },
+            {
+              "field": "sincope_associada",
+              "op": "truthy"
+            },
+            {
+              "field": "historia_familiar_morte_subita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor torácica desencadeada por esforço físico",
+            "Síncope ou pré-síncope associada",
+            "História familiar de morte súbita cardíaca em parente de primeiro grau"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação de emergência imediata",
+            "Monitorização cardíaca contínua e eletrocardiograma de 12 derivações imediato",
+            "Interconsulta urgente com cardiologia pediátrica"
+          ],
+          "messages": [
+            "Combinação de dor de esforço, síncope e história familiar de morte súbita indica risco elevado de causa cardíaca grave (ex.: cardiomiopatia hipertrófica, canalopatia) e requer avaliação de emergência imediata."
+          ]
+        }
+      },
+      {
+        "id": "r2_esforco_sincope",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "dor_esforco",
+              "op": "truthy"
+            },
+            {
+              "field": "sincope_associada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dor torácica de esforço com síncope ou pré-síncope associada"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação de emergência",
+            "Realizar eletrocardiograma de 12 derivações"
+          ],
+          "differentials": [
+            "Cardiomiopatia hipertrófica",
+            "Arritmia induzida por esforço",
+            "Anomalia coronariana"
+          ]
+        }
+      },
+      {
+        "id": "r3_exame_cardiovascular_alterado",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "exame_cardiovascular_alterado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Exame cardiovascular alterado (sopro novo, atrito pericárdico ou sinais de insuficiência cardíaca)"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Ecocardiograma"
+          ],
+          "messages": [
+            "Achado ao exame cardiovascular altera a estratificação de risco e justifica avaliação cardiológica urgente."
+          ]
+        }
+      },
+      {
+        "id": "r4_suspeita_miopericardite",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "febre_sintomas_infecciosos",
+              "op": "truthy"
+            },
+            {
+              "field": "caracteristica_dor",
+              "op": "contains",
+              "value": "pleuritica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Miocardite",
+            "Pericardite"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Marcadores de lesão miocárdica",
+            "Ecocardiograma"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação cardiológica urgente com monitorização"
+          ]
+        }
+      },
+      {
+        "id": "r5_cardiopatia_previa",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "cardiopatia_estrutural_previa",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Cardiopatia congênita, cirurgia cardíaca prévia ou doença de Kawasaki prévia"
+          ],
+          "messages": [
+            "Antecedente cardiológico relevante justifica avaliação por cardiologia pediátrica mesmo sem sinais de alarme agudos."
+          ]
+        }
+      },
+      {
+        "id": "r6_substancias_estimulantes",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "uso_substancias_estimulantes",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Uso relatado de substâncias estimulantes"
+          ],
+          "differentials": [
+            "Dor torácica relacionada a estimulante (ex.: taquiarritmia, vasoespasmo)"
+          ]
+        }
+      },
+      {
+        "id": "r7_idade_muito_jovem",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "idade_anos",
+              "op": "lt",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Dor torácica é incomum e de difícil caracterização em crianças muito pequenas; ampliar anamnese e exame físico"
+          ],
+          "differentials": [
+            "Trauma não presenciado",
+            "Causa respiratória",
+            "Corpo estranho de vias aéreas"
+          ]
+        }
+      },
+      {
+        "id": "r8_ansiedade_sem_alarme",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "ansiedade_estressores",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "sincope_associada",
+              "op": "truthy"
+            },
+            {
+              "field": "dor_esforco",
+              "op": "truthy"
+            },
+            {
+              "field": "exame_cardiovascular_alterado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "Dor torácica psicogênica (ansiedade/transtorno de pânico)"
+          ],
+          "ambulatory_flow": [
+            "Investigar ativamente estressores e sintomas de ansiedade",
+            "Considerar encaminhamento para avaliação em saúde mental se houver impacto funcional"
+          ]
+        }
+      },
+      {
+        "id": "r9_musculoesqueletica_sem_alarme",
+        "priority": 10,
+        "when": {
+          "all": [
+            {
+              "field": "dor_reprodutivel_palpacao",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "sincope_associada",
+              "op": "truthy"
+            },
+            {
+              "field": "dor_esforco",
+              "op": "truthy"
+            },
+            {
+              "field": "exame_cardiovascular_alterado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "Dor torácica musculoesquelética (costocondrite/síndrome de Tietze)"
+          ],
+          "ambulatory_flow": [
+            "Tranquilização ativa da criança e da família",
+            "Orientar sobre caráter benigno e autolimitado",
+            "Não solicitar eletrocardiograma ou ecocardiograma de rotina"
+          ],
+          "messages": [
+            "Dor reprodutível à palpação, sem sinais de alarme, é altamente sugestiva de causa musculoesquelética e não requer investigação cardiológica de rotina."
+          ]
+        }
+      },
+      {
+        "id": "r10_episodio_breve_pontada_sem_alarme",
+        "priority": 5,
+        "when": {
+          "all": [
+            {
+              "field": "duracao_episodio",
+              "op": "eq",
+              "value": "segundos"
+            },
+            {
+              "field": "caracteristica_dor",
+              "op": "contains",
+              "value": "pontada"
+            }
+          ],
+          "none": [
+            {
+              "field": "sincope_associada",
+              "op": "truthy"
+            },
+            {
+              "field": "dor_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "differentials": [
+            "Dor torácica benigna idiopática/precordial catch (padrão de curta duração em pontada)"
+          ],
+          "messages": [
+            "Episódios de dor em pontada, de segundos de duração e sem sinais de alarme, são compatíveis com padrão benigno frequente na infância e adolescência."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Adolescente atleta com dor torácica de esforço: exigir triagem pré-participação estruturada (história dirigida — dor/pressão torácica aos esforços, síncope, dispneia desproporcional, palpitação relacionada a esforço; história familiar de morte súbita) e considerar restrição de exercício até definição diagnóstica, especialmente quando há suspeita de origem coronariana anômala.",
+      "Criança/adolescente com ansiedade ou transtorno de pânico e dor torácica recorrente: quadro funcional muito comum, mas diagnóstico de exclusão — investigar causa orgânica antes de atribuir a ansiedade, com atenção a comorbidade (a dor pode coexistir com causa cardíaca real) e a sintomas de hiperventilação/parestesia associados.",
+      "Criança com anemia falciforme e dor torácica: diferencial obrigatório com síndrome torácica aguda (emergência hematológica com infiltrado pulmonar, febre e hipoxemia, potencialmente fatal) além das causas cardíacas habituais — limiar baixo para investigação e suporte hospitalar imediato diante de dor torácica associada a febre, taquipneia ou dessaturação nessa população.",
+      "Adolescente com história familiar de morte súbita, cardiomiopatia ou canalopatia: dor torácica de esforço, síncope ou palpitação nesse contexto elevam muito a suspeita de doença estrutural/elétrica herdada e justificam avaliação cardiológica especializada com ECG, ecocardiograma e, quando indicado, teste genético — não podem ser tratados como dor torácica de baixo risco.",
+      "Criança/adolescente com estigmas de síndrome de Marfan (ou aortopatia genética correlata) e dor torácica: risco de dissecção/aneurisma de aorta — dor torácica, cervical, no ombro, dorso ou flanco, sobretudo de início súbito e intensa, deve motivar avaliação imediata de imagem aórtica, mesmo em idade jovem.",
+      "Paciente pediátrico oncológico em quimioterapia cardiotóxica com dor torácica: considerar cardiotoxicidade aguda, pericardite/derrame pericárdico, isquemia ou miocardiopatia induzida por tratamento como diferencial, além das causas habituais — limiar mais baixo para ECG/troponina/ecocardiograma nesse grupo.",
+      "Criança/adolescente com cardiopatia congênita complexa operada (ex.: circulação de Fontan, pós-switch arterial para transposição de grandes artérias) e dor torácica: diferencial amplia para trombose/tromboembolismo, isquemia coronariana pós-cirúrgica e arritmia associada à fisiologia residual — não deve ser tratada como dor musculoesquelética de baixo risco sem excluir essas causas específicas da cardiopatia de base."
+    ]
   },
   {
     "slug": "arritmias-pediatricas",
