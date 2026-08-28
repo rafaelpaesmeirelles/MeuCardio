@@ -10196,7 +10196,7 @@
     "category": "sintoma_e_exame",
     "subtype": "ausculta",
     "prevalence_rank": 28,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Achado auscultatório frequente que deve ser interpretado com idade, características do sopro, sintomas, pulsos, oximetria e exame cardiovascular completo.",
     "tags": [
       "sopro",
@@ -10204,18 +10204,585 @@
       "criança"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "AHA Pediatric Cardiology scientific resources",
+      "Frank JE, Jacobe KM. Evaluation and management of heart murmurs in children. Am Fam Physician. 2011;84(7):793-800. PMID: 22010618.",
+      "McCrindle BW, Shaffer KM, Kan JS, Zahka KG, Rowe SA, Kidd L. Cardinal clinical signs in the differentiation of heart murmurs in children. Arch Pediatr Adolesc Med. 1996;150(2):169-74. PMID: 8556121.",
+      "Pelech AN. The cardiac murmur. When to refer? Pediatr Clin North Am. 1998;45(1):107-22. PMID: 9491089.",
+      "Geggel RL. Conditions leading to pediatric cardiology consultation in a tertiary academic hospital. Pediatrics. 2004;114(4):e409-17. PMID: 15466065.",
+      "Yi MS, Kimball TR, Tsevat J, Mrus JM, Kotagal UR. Evaluation of heart murmurs in children: cost-effectiveness and practical implications. J Pediatr. 2002;141(4):504-11. PMID: 12378189.",
+      "Swenson JM, Fischer DR, Miller SA, Boyle GJ, Ettedgui JA, Beerman LB. Are chest radiographs and electrocardiograms still valuable in evaluating new pediatric patients with heart murmurs or chest pain? Pediatrics. 1997;99(1):1-3. PMID: 8989329.",
+      "Danford DA, Gumbiner CH, Martin AB, Fletcher SE. Effects of electrocardiography and chest radiography on the accuracy of preliminary diagnosis of common congenital cardiac defects. Pediatr Cardiol. 2000;21(4):334-40. PMID: 10865008.",
+      "Biancaniello T. Innocent murmurs. Circulation. 2005;111(3):e20-2. PMID: 15668345.",
+      "Shekhar R, Vanama G, John T, et al. Automated identification of innocent Still's murmur using a convolutional neural network. Front Pediatr. 2022;10:923956. PMID: 36210944.",
+      "Mahle WT, Newburger JW, Matherne GP, et al. Role of pulse oximetry in examining newborns for congenital heart disease: a scientific statement from the AHA and AAP. Pediatrics. 2009;124(2):823-36. PMID: 19581259."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology",
+      "https://pubmed.ncbi.nlm.nih.gov/22010618/",
+      "https://pubmed.ncbi.nlm.nih.gov/8556121/",
+      "https://pubmed.ncbi.nlm.nih.gov/9491089/",
+      "https://pubmed.ncbi.nlm.nih.gov/15466065/",
+      "https://pubmed.ncbi.nlm.nih.gov/12378189/",
+      "https://pubmed.ncbi.nlm.nih.gov/8989329/",
+      "https://pubmed.ncbi.nlm.nih.gov/10865008/",
+      "https://pubmed.ncbi.nlm.nih.gov/15668345/",
+      "https://pubmed.ncbi.nlm.nih.gov/36210944/",
+      "https://pubmed.ncbi.nlm.nih.gov/19581259/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (4º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604 e hipotensao-ortostatica-no-idoso/PR #606): ficha estava com apenas metadados de catalogação e 1 related_document_slug. Produzida epidemiologia, apresentação, abordagem diagnóstica estruturada em 4 subtópicos, 8 diferenciais, 8 exames, 9 sinais de alarme, tratamento, fluxos ambulatorial/emergência, monitoramento, 7 populações especiais, assistente clínico determinístico (12 perguntas, 9 regras) e 5 related_document_slugs (4 novos + o já existente), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. 2 candidatos propostos pelo agente de pesquisa foram REJEITADOS na montagem por não serem centralmente sobre sopro na infância: morte-subita-em-atletas-triagem-pre-participacao-e-o-debate-do-ecg-obrigatorio (sopro aparece só como 1 item de checklist de 12, o documento é sobre o debate do ECG obrigatório) e carga-global-febre-reumatica-desigualdade-brasil-2026 (discute sensibilidade da ausculta cardíaca para febre reumática/RHD, não usa a palavra 'sopro' nem discute semiologia de sopro na criança). 4 dos 5 documentos finais são compartilhados com outras fichas: coarctacao-de-aorta-na-crianca-... (também em coarctacao-da-aorta e coarctacao-aorta-fetal); triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso e cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial (também em tetralogia-de-fallot; o segundo também em transposicao-das-grandes-arterias) — todos mantidos por serem genuína e centralmente relevantes ao exame cardiovascular do recém-nascido também nesta ficha (achado semiológico/triagem associados a sopro). Catalogação original preservada. Nenhuma dose de fármaco citada.",
+    "version": 2,
     "related_document_slugs": [
-      "sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico"
+      "sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico",
+      "fluxograma-sopro-cardiaco-na-crianca-inocente-versus-patologico",
+      "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual",
+      "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+      "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"
     ],
-    "patient_material_slug": "sopros-na-infancia"
+    "patient_material_slug": "sopros-na-infancia",
+    "fonte_producao": "claude",
+    "epidemiology": "Sopros cardíacos são um dos achados mais comuns do exame pediátrico: séries de ausculta sistemática mostram que um sopro pode ser detectado em até 50-70% das crianças saudáveis em algum momento da infância, sobretudo entre 3 e 7 anos de idade e durante estados de débito cardíaco aumentado (febre, ansiedade, anemia, exercício, taquicardia). A esmagadora maioria desses sopros é inocente (funcional, sem substrato estrutural). Em séries de referência de cardiologia pediátrica, o sopro isolado é o motivo mais frequente de encaminhamento ambulatorial (cerca de 40% das consultas), mas cardiopatia estrutural é confirmada em apenas uma minoria dos casos avaliados (Geggel RL, Pediatrics 2004). Como a prevalência de cardiopatia congênita na população geral gira em torno de 8-12 por 1.000 nascidos vivos (aproximadamente 0,8-1,2%), a razão entre sopro inocente e sopro patológico é amplamente favorável ao primeiro, sendo estimada em diferentes séries como superior a 10:1 quando a triagem inicial é feita por pediatra geral, e ainda maior quando reavaliada por cardiologista pediátrico treinado (McCrindle BW et al., Arch Pediatr Adolesc Med 1996). A prevalência dos subtipos de sopro inocente varia conforme a faixa etária: no período neonatal predomina o sopro transitório de estenose pulmonar periférica fisiológica (regride tipicamente entre 3 e 6 meses de vida); em pré-escolares e escolares, o sopro de Still é o tipo inocente mais comum; em adolescentes predominam sopros de ejeção pulmonar e o hum venoso cervical. A acurácia da avaliação clínica isolada para diferenciar sopro inocente de patológico é alta quando realizada por cardiologista pediátrico experiente (sensibilidade e especificidade relatadas acima de 95% em séries como a de McCrindle et al., 1996), mas cai de forma relevante quando realizada por examinadores menos experientes, o que sustenta a adoção de critérios objetivos de encaminhamento e o uso seletivo do ecocardiograma.",
+    "presentation": [
+      "Sopro de Still: sistólico, musical/vibratório ('corda de violino'), curta duração, mesocardíaco ou entre borda esternal esquerda baixa e ápice, tipicamente mais intenso em decúbito dorsal e que atenua ou desaparece ao sentar, ficar em pé ou com manobra de Valsalva; mais comum em pré-escolares e escolares (2-7 anos), o tipo inocente mais frequente nessa faixa etária.",
+      "Sopro venoso cervical (hum venoso): contínuo, de baixa frequência, mais audível na região infraclavicular/cervical direita, varia com a rotação da cabeça e desaparece com compressão da veia jugular ipsilateral ou com o decúbito dorsal; comum em crianças de 3-6 anos, frequentemente confundido com sopro contínuo patológico se não testado com essas manobras.",
+      "Sopro de ejeção pulmonar fisiológico (sopro pulmonar inocente): sistólico ejetivo suave (grau 1-2/6), em borda esternal superior esquerda, sem irradiação relevante e sem frêmito; comum em crianças maiores, adolescentes e indivíduos magros ou com pectus.",
+      "Sopro de estenose pulmonar periférica fisiológica do recém-nascido/lactente jovem: sistólico suave, irradia simetricamente para ambas as axilas e dorso, relacionado à angulação relativa e ao menor calibre dos ramos pulmonares ao nascimento; típico até 3-6 meses de vida, quando regride espontaneamente.",
+      "Sopro carotídeo/supraclavicular inocente (sopro braquiocefálico): sistólico curto, audível sobre as carótidas ou fossas supraclaviculares, mais evidente em crianças e adolescentes; não se acompanha de sopro cardíaco de mesma intensidade nem de assimetria de pulsos.",
+      "Sopro holossistólico de comunicação interventricular (CIV): patológico, holossistólico, em barra, alta frequência, mais audível em borda esternal esquerda baixa; a intensidade tende a ser inversamente proporcional ao tamanho do defeito em CIVs pequenas (efeito Roger) e associa-se a frêmito em defeitos moderados.",
+      "Sopro contínuo em maquinaria da persistência do canal arterial (PCA): sistodiastólico contínuo, mais audível em região infraclavicular esquerda, clássico em prematuros mas presente também em recém-nascidos a termo e lactentes com PCA não restritiva.",
+      "Sopro sistólico ejetivo rude de estenose pulmonar valvar: em borda esternal superior esquerda, irradia para dorso, pode vir acompanhado de clique de ejeção pulmonar e frêmito quando moderada a grave.",
+      "Sopro sistólico suave em foco pulmonar por hiperfluxo em comunicação interatrial (CIA): discreto, facilmente confundido com sopro inocente, mas acompanhado de desdobramento fixo de segunda bulha (B2), achado semiológico chave para diferenciação.",
+      "Sopro sistólico de estenose aórtica valvar: ejetivo, rude, em borda esternal superior direita/mesocárdio, irradia para carótidas, associado a clique de ejeção protossistólico e, em graus mais importantes, a pulso de amplitude reduzida."
+    ],
+    "diagnostic_approach": {
+      "caracteristicas_semiologicas_discriminativas": "A diferenciação entre sopro inocente e patológico depende sistematicamente de: (1) intensidade — sopros inocentes raramente ultrapassam grau 2/6 e nunca se acompanham de frêmito, enquanto sopros ≥3/6 ou com frêmito sugerem substrato estrutural; (2) timbre — sopros inocentes são tipicamente musicais, vibratórios ou suaves (sopro de Still, ejeção pulmonar), enquanto sopros rudes, em barra ou de alta frequência sugerem CIV ou obstrução valvar; (3) momento do ciclo cardíaco — sopro sistólico ejetivo curto é compatível com inocente, mas sopro holossistólico, diastólico ou contínuo (fora do padrão típico do hum venoso) é sempre considerado patológico até prova em contrário; (4) irradiação — irradiação para dorso, axilas de forma assimétrica ou carótidas com clique associado aponta para lesão obstrutiva; (5) variação postural e com manobras — sopros inocentes tipicamente diminuem ou desaparecem em posição sentada/ortostática e com Valsalva, e o hum venoso desaparece com compressão jugular ou decúbito, enquanto sopros patológicos mantêm-se ou até se acentuam com essas manobras (McCrindle BW et al., 1996; Frank JE, Jacobe KM, 2011).",
+      "sinais_de_alarme_associados": "Cianose central, sudorese ou fadiga às mamadas/esforço, taquipneia persistente, hepatomegalia ou outros sinais de insuficiência cardíaca, pulsos femorais diminuídos/ausentes ou diferença de pressão arterial entre membros superiores e inferiores (coarctação de aorta), déficit de crescimento pondero-estatural, sopro diastólico ou holossistólico, segunda bulha anormal (fixa, única ou hiperfonética), e sopro já presente e persistente desde o nascimento aumentam substancialmente a probabilidade pré-teste de cardiopatia estrutural e justificam investigação e encaminhamento independentemente das características do próprio sopro.",
+      "indicacao_de_ecocardiograma": "O ecocardiograma transtorácico é o exame de escolha quando há qualquer sinal de alarme associado, sopro com características patológicas (holossistólico, diastólico, contínuo fora do padrão de hum venoso, grau ≥3/6, com frêmito), sopro em lactente jovem (menor confiabilidade da triagem clínica isolada nessa faixa etária), história familiar relevante de cardiopatia congênita, síndrome genética associada a cardiopatia (trissomia do 21, síndrome de Turner, Noonan, Williams, DiGeorge) ou dúvida diagnóstica após avaliação clínica cuidadosa; não é indicado de rotina para sopros com todas as características clássicas de inocência em criança assintomática, sendo o exame clínico seriado suficiente nesses casos (Yi MS et al., J Pediatr 2002; Swenson JM et al., Pediatrics 1997; Danford DA et al., Pediatr Cardiol 2000).",
+      "papel_do_pediatra_geral_vs_cardiologista_pediatrico": "O pediatra geral, com treinamento em ausculta dirigida e nas manobras posturais/dinâmicas descritas, é capaz de identificar corretamente a maioria dos sopros inocentes clássicos e conduzir observação clínica sem exames complementares; sopros com qualquer sinal de alarme, quaisquer dúvidas diagnósticas, sopros em recém-nascidos e lactentes jovens (nos quais a acurácia da triagem clínica isolada é menor) e sopros persistentes além do esperado para o subtipo inocente correspondente devem ser encaminhados ao cardiologista pediátrico para exame com ecocardiograma, seguindo o modelo de estratificação de risco recomendado em revisões da American Academy of Pediatrics e da prática cardiológica pediátrica atual (Pelech AN, Pediatr Clin North Am 1998; Geggel RL, Pediatrics 2004)."
+    },
+    "differentials": [
+      "Comunicação interventricular (CIV)",
+      "Persistência do canal arterial (PCA)",
+      "Estenose pulmonar valvar",
+      "Coarctação de aorta",
+      "Comunicação interatrial (CIA)",
+      "Estenose aórtica valvar",
+      "Tetralogia de Fallot (sopro sistólico associado a cianose progressiva)",
+      "Defeito do septo atrioventricular (canal atrioventricular)"
+    ],
+    "tests": [
+      "Anamnese dirigida: início do sopro (ao nascimento vs. detecção incidental), sintomas associados, história gestacional/perinatal, história familiar de cardiopatia congênita ou morte súbita",
+      "Exame físico completo com ausculta em múltiplas posições (decúbito dorsal, sentado, em pé) e manobras dinâmicas (Valsalva, compressão jugular)",
+      "Palpação e comparação de pulsos em quatro membros e aferição de pressão arterial em membro superior e inferior (rastreio de coarctação de aorta)",
+      "Oximetria de pulso pré e pós-ductal, especialmente no período neonatal, como triagem complementar para cardiopatia congênita crítica",
+      "Eletrocardiograma, quando há suspeita de hipertrofia de câmaras, arritmia associada ou sopro atípico, sem uso rotineiro em sopro claramente inocente",
+      "Radiografia de tórax, reservada para casos com sinais de alarme, sinais de insuficiência cardíaca ou dúvida diagnóstica, sem indicação rotineira em sopro inocente típico",
+      "Ecocardiograma transtorácico com Doppler, exame confirmatório de escolha diante de sopro patológico ou sinal de alarme associado",
+      "Encaminhamento a cardiologista pediátrico para reavaliação clínica e definição de conduta nos casos duvidosos ou de risco"
+    ],
+    "red_flags": [
+      "Cianose central ou dessaturação em oximetria de pulso",
+      "Sopro diastólico, holossistólico ou contínuo fora do padrão típico de hum venoso",
+      "Sopro de grau ≥3/6 e/ou presença de frêmito palpável",
+      "Pulsos femorais diminuídos ou ausentes, ou diferença significativa de pressão arterial entre membros superiores e inferiores",
+      "Sinais de insuficiência cardíaca: taquipneia persistente, sudorese ou fadiga às mamadas/esforço, hepatomegalia, má progressão ponderal",
+      "Segunda bulha anormal: desdobramento fixo, bulha única ou hiperfonética",
+      "Síndrome genética associada a cardiopatia congênita (trissomia do 21, Turner, Noonan, Williams, DiGeorge)",
+      "História familiar de cardiopatia congênita em parente de primeiro grau ou morte súbita cardíaca precoce na família",
+      "Sopro já presente e persistente desde o nascimento, especialmente em recém-nascido sintomático"
+    ],
+    "treatment_summary": "A conduta diante de um sopro cardíaco detectado em criança assintomática começa pela caracterização semiológica cuidadosa, pois a grande maioria dos sopros na faixa etária pediátrica (estimativas de até 50-70% das crianças em algum momento do crescimento) é inocente, ou seja, não reflete cardiopatia estrutural. O sopro inocente clássico (vibratório de Still, sopro pulmonar fisiológico da infância, zumbido venoso cervical ou sopro carotídeo) tem características objetivas que permitem conduta expectante sem necessidade de ecocardiograma: intensidade baixa (grau 1-2/6), timbre musical ou vibratório, curta duração sistólica ejetiva, ausência de irradiação relevante, sem click ou desdobramento fixo de segunda bulha, variação nítida com a posição (diminui ou desaparece com o ortostatismo, manobra de Valsalva ou rotação cervical no caso do zumbido venoso), criança com crescimento e desenvolvimento adequados, pulsos periféricos normais e simétricos, ausência de cianose, dispneia, sudorese às mamadas ou dificuldade de ganho ponderal. Nesse cenário, o pediatra pode reavaliar clinicamente nas consultas de puericultura subsequentes sem solicitar exame complementar nem restringir atividade física. A solicitação de ecocardiograma transtorácico está indicada quando há qualquer critério de alarme: sopro grau igual ou maior que 3/6, sopro diastólico, holossistólico ou contínuo fora do padrão de zumbido venoso, irradiação para dorso ou axilas, presença de click sistólico, segunda bulha fixa e amplamente desdobrada ou hiperfonética, sopro associado a sintomas (síncope, dor torácica ao esforço, cianose, taquipneia, hepatomegalia), pulsos femorais diminuídos ou ausentes, história familiar de cardiopatia congênita ou morte súbita precoce, síndromes genéticas associadas a cardiopatia (Down, Turner, Noonan, DiGeorge, William) ou dúvida diagnóstica do examinador, sobretudo em recém-nascidos, cuja transição circulatória torna a ausculta menos confiável nas primeiras 24-48 horas de vida. O encaminhamento ao cardiologista pediátrico deve ser feito em caráter de urgência quando o sopro se associa a cianose, sinais de insuficiência cardíaca no lactente (taquipneia, hepatomegalia, sudorese e pausas às mamadas, ganho ponderal inadequado, edema), pulsos femorais diminuídos ou ausentes (suspeita de coarctação de aorta) ou qualquer sinal de instabilidade hemodinâmica; nesses casos a criança deve ser avaliada e, se necessário, estabilizada antes de qualquer investigação ambulatorial. Fora desse contexto, o encaminhamento é eletivo, coordenado com a solicitação de ecocardiograma. A comunicação com a família é parte central da conduta: o termo popular 'sopro no coração' costuma gerar ansiedade desproporcional, e cabe ao profissional explicar, em linguagem acessível, que sopro é um achado ausculatório (um ruído gerado pelo fluxo sanguíneo) e não sinônimo de doença cardíaca, reforçando que a maioria dos sopros em crianças saudáveis é inocente, não limita atividade física nem esporte, não requer profilaxia antibiótica e tende a se tornar menos audível ou desaparecer com o crescimento torácico. Em toda consulta de puericultura subsequente a ausculta cardíaca deve ser repetida, documentando grau, foco e comportamento postural do sopro, e reavaliando sinais de alarme, crescimento pondero-estatural e desenvolvimento; qualquer mudança de características (aumento de intensidade, surgimento de novos achados associados) reabre a indicação de investigação complementar mesmo que o sopro tenha sido previamente classificado como inocente.",
+    "ambulatory_flow": [
+      "Realizar ausculta cardíaca sistemática em decúbito dorsal e em ortostatismo, comparando os quatro focos e a região cervical",
+      "Classificar o sopro quanto a intensidade (grau 1 a 6), momento do ciclo cardíaco, timbre, irradiação e comportamento com a mudança de posição",
+      "Verificar pulsos em quatro membros, perfusão periférica, presença de cianose e curva de crescimento pondero-estatural",
+      "Se o sopro for compatível com padrão inocente clássico e a criança estiver assintomática, orientar a família e agendar reavaliação na próxima consulta de puericultura, sem exame complementar",
+      "Se houver qualquer critério de alarme (grau maior ou igual a 3, sopro diastólico ou holossistólico, irradiação para dorso, click, sintomas associados), solicitar ecocardiograma transtorácico eletivo",
+      "Encaminhar ao cardiologista pediátrico em caráter eletivo quando houver indicação de ecocardiograma, história familiar de cardiopatia congênita/morte súbita ou síndrome genética associada",
+      "Registrar em prontuário a caracterização do sopro e orientar a família sobre o significado do achado, evitando o termo alarmista sem explicação",
+      "Reavaliar o sopro em todas as consultas de puericultura subsequentes, comparando com a caracterização prévia"
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de alarme em lactente com sopro: cianose, taquipneia, hepatomegalia, sudorese e pausas às mamadas, ganho ponderal inadequado ou letargia",
+      "Avaliar pulsos em quatro membros e aferir saturação de oxigênio em membro superior direito e em membro inferior, buscando diferencial sugestivo de cardiopatia ducto-dependente",
+      "Estabilizar a criança conforme necessidade clínica (suporte ventilatório e circulatório) e não postergar a avaliação por exames ambulatoriais de rotina",
+      "Acionar avaliação cardiológica pediátrica/neonatal de urgência e organizar transferência para serviço com suporte de cardiologia pediátrica quando a unidade de origem não dispuser de retaguarda",
+      "Solicitar ecocardiograma transtorácico em caráter de urgência assim que a criança estiver em condições de realizar o exame ou em ambiente que permita monitorização contínua"
+    ],
+    "monitoring": [
+      "Reavaliação da ausculta cardíaca em toda consulta de puericultura, com registro comparativo do grau e das características do sopro",
+      "Acompanhamento da curva de crescimento pondero-estatural e do desenvolvimento neuropsicomotor",
+      "Observação de sinais de alarme em cada consulta: cianose, dispneia, sudorese às mamadas, intolerância ao esforço, síncope",
+      "Verificação periódica de pulsos periféricos e pressão arterial em membros superiores e inferiores quando houver suspeita prévia de coarctação",
+      "Reforço da orientação à família sobre o caráter benigno do sopro inocente e sobre quando procurar atendimento (piora do padrão respiratório, cianose, recusa alimentar)",
+      "Reavaliação clínica programada após qualquer ecocardiograma normal, mantendo seguimento em puericultura sem necessidade de novo exame na ausência de mudança clínica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_crianca",
+        "text": "Qual a faixa etária da criança?",
+        "type": "select",
+        "options": [
+          {
+            "value": "recem_nascido",
+            "label": "Recém-nascido (menos de 28 dias)"
+          },
+          {
+            "value": "lactente",
+            "label": "Lactente (1 a 24 meses)"
+          },
+          {
+            "value": "pre_escolar_escolar",
+            "label": "Pré-escolar/escolar (2 a 10 anos)"
+          },
+          {
+            "value": "adolescente",
+            "label": "Adolescente (mais de 10 anos)"
+          }
+        ]
+      },
+      {
+        "id": "crianca_assintomatica",
+        "text": "A criança está assintomática, sem dispneia, cianose, sudorese às mamadas ou dificuldade de ganho de peso?",
+        "type": "boolean"
+      },
+      {
+        "id": "grau_sopro",
+        "text": "Qual o grau de intensidade do sopro (escala de Levine, 1 a 6)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "Grau 1"
+          },
+          {
+            "value": "2",
+            "label": "Grau 2"
+          },
+          {
+            "value": "3",
+            "label": "Grau 3"
+          },
+          {
+            "value": "4",
+            "label": "Grau 4"
+          },
+          {
+            "value": "5",
+            "label": "Grau 5"
+          },
+          {
+            "value": "6",
+            "label": "Grau 6"
+          }
+        ]
+      },
+      {
+        "id": "caracter_sopro",
+        "text": "Qual o caráter do sopro à ausculta?",
+        "type": "select",
+        "options": [
+          {
+            "value": "sistolico_ejetivo",
+            "label": "Sistólico ejetivo, curto, vibratório/musical"
+          },
+          {
+            "value": "holossistolico",
+            "label": "Holossistólico"
+          },
+          {
+            "value": "diastolico",
+            "label": "Diastólico"
+          },
+          {
+            "value": "continuo",
+            "label": "Contínuo (padrão de zumbido venoso)"
+          }
+        ]
+      },
+      {
+        "id": "muda_com_posicao",
+        "text": "O sopro diminui ou desaparece com a mudança de posição (ortostatismo, Valsalva ou rotação cervical)?",
+        "type": "boolean"
+      },
+      {
+        "id": "cianose",
+        "text": "Há cianose associada, central ou de extremidades?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_insuficiencia_cardiaca",
+        "text": "Há sinais de insuficiência cardíaca no lactente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "taquipneia",
+            "label": "Taquipneia"
+          },
+          {
+            "value": "hepatomegalia",
+            "label": "Hepatomegalia"
+          },
+          {
+            "value": "sudorese_mamadas",
+            "label": "Sudorese ou pausas às mamadas"
+          },
+          {
+            "value": "ganho_ponderal_inadequado",
+            "label": "Ganho ponderal inadequado"
+          },
+          {
+            "value": "edema",
+            "label": "Edema"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "pulsos_femorais",
+        "text": "Como estão os pulsos femorais e periféricos ao exame?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normais",
+            "label": "Normais e simétricos"
+          },
+          {
+            "value": "diminuidos_ausentes",
+            "label": "Diminuídos ou ausentes"
+          }
+        ]
+      },
+      {
+        "id": "historia_familiar_cardiopatia_congenita_morte_subita",
+        "text": "Há história familiar de cardiopatia congênita ou morte súbita precoce em parente de primeiro grau?",
+        "type": "boolean"
+      },
+      {
+        "id": "sindrome_genetica_associada",
+        "text": "A criança tem síndrome genética associada a maior risco de cardiopatia estrutural (Down, Turner, Noonan, DiGeorge, William, entre outras)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_esforco_sincope",
+        "text": "Há síncope, dor torácica ao esforço ou intolerância ao exercício?",
+        "type": "boolean"
+      },
+      {
+        "id": "crescimento_desenvolvimento_adequados",
+        "text": "O crescimento pondero-estatural e o desenvolvimento neuropsicomotor estão adequados para a idade?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sopro-cianose-emergencia",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "cianose",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sopro cardíaco associado a cianose"
+          ],
+          "emergency_flow": [
+            "Avaliar via aérea, ventilação e perfusão de forma imediata",
+            "Aferir saturação de oxigênio em membro superior direito e em membro inferior",
+            "Acionar avaliação cardiológica pediátrica/neonatal de urgência e organizar transferência para serviço com suporte especializado",
+            "Não postergar a estabilização por exames ambulatoriais de rotina"
+          ],
+          "messages": [
+            "Cianose associada a sopro cardíaco em criança sugere cardiopatia congênita crítica até prova em contrário."
+          ]
+        }
+      },
+      {
+        "id": "sopro-sinais-insuficiencia-cardiaca",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "contains",
+              "value": "taquipneia"
+            },
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "contains",
+              "value": "hepatomegalia"
+            },
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "contains",
+              "value": "sudorese_mamadas"
+            },
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "contains",
+              "value": "ganho_ponderal_inadequado"
+            },
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "contains",
+              "value": "edema"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais de insuficiência cardíaca associados a sopro em lactente"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico em caráter de urgência",
+            "Radiografia de tórax"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação cardiológica pediátrica de urgência",
+            "Monitorar sinais vitais e perfusão até a avaliação especializada"
+          ],
+          "messages": [
+            "Sinais de insuficiência cardíaca em lactente com sopro exigem avaliação cardiológica sem demora."
+          ]
+        }
+      },
+      {
+        "id": "sopro-pulsos-femorais-diminuidos",
+        "priority": 85,
+        "when": {
+          "any": [
+            {
+              "field": "pulsos_femorais",
+              "op": "eq",
+              "value": "diminuidos_ausentes"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Pulsos femorais diminuídos ou ausentes associados a sopro - suspeita de coarctação de aorta"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico em caráter de urgência",
+            "Aferição de pressão arterial em quatro membros"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação cardiológica pediátrica de urgência",
+            "Reavaliar perfusão e pulsos periodicamente até a avaliação especializada"
+          ]
+        }
+      },
+      {
+        "id": "sopro-caracteristicas-patologicas",
+        "priority": 60,
+        "when": {
+          "any": [
+            {
+              "field": "grau_sopro",
+              "op": "in",
+              "value": [
+                "4",
+                "5",
+                "6"
+              ]
+            },
+            {
+              "field": "caracter_sopro",
+              "op": "eq",
+              "value": "holossistolico"
+            },
+            {
+              "field": "caracter_sopro",
+              "op": "eq",
+              "value": "diastolico"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Comunicação interventricular",
+            "Insuficiência valvar",
+            "Estenose valvar"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico eletivo em até 2 a 4 semanas"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar ao cardiologista pediátrico coordenado com o resultado do ecocardiograma"
+          ]
+        }
+      },
+      {
+        "id": "sopro-historia-familiar-ou-sindrome",
+        "priority": 55,
+        "when": {
+          "any": [
+            {
+              "field": "historia_familiar_cardiopatia_congenita_morte_subita",
+              "op": "truthy"
+            },
+            {
+              "field": "sindrome_genetica_associada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Fator de risco pessoal ou familiar para cardiopatia congênita"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar ao cardiologista pediátrico em caráter eletivo prioritário"
+          ]
+        }
+      },
+      {
+        "id": "sopro-sintomas-esforco",
+        "priority": 50,
+        "when": {
+          "any": [
+            {
+              "field": "sintomas_esforco_sincope",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Síncope ou sintomas ao esforço associados a sopro"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico",
+            "Eletrocardiograma"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar ao cardiologista pediátrico antes da liberação para atividade física competitiva"
+          ]
+        }
+      },
+      {
+        "id": "sopro-recem-nascido-nao-caracterizado",
+        "priority": 40,
+        "when": {
+          "any": [
+            {
+              "field": "idade_crianca",
+              "op": "eq",
+              "value": "recem_nascido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Reavaliação clínica seriada durante a transição circulatória neonatal"
+          ],
+          "suggested_tests": [
+            "Reavaliação em 24 a 48 horas e ecocardiograma antes da alta se o sopro persistir ou houver dúvida diagnóstica"
+          ],
+          "messages": [
+            "A ausculta no recém-nascido é menos confiável nas primeiras horas de vida devido à transição circulatória."
+          ]
+        }
+      },
+      {
+        "id": "sopro-crescimento-inadequado",
+        "priority": 20,
+        "when": {
+          "any": [
+            {
+              "field": "crescimento_desenvolvimento_adequados",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Curva de crescimento pondero-estatural e avaliação de desenvolvimento neuropsicomotor detalhadas"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico se o sopro estiver associado a déficit de crescimento"
+          ]
+        }
+      },
+      {
+        "id": "sopro-inocente-classico",
+        "priority": 10,
+        "when": {
+          "all": [
+            {
+              "field": "crianca_assintomatica",
+              "op": "truthy"
+            },
+            {
+              "field": "muda_com_posicao",
+              "op": "truthy"
+            },
+            {
+              "field": "cianose",
+              "op": "falsy"
+            },
+            {
+              "field": "pulsos_femorais",
+              "op": "eq",
+              "value": "normais"
+            },
+            {
+              "field": "grau_sopro",
+              "op": "in",
+              "value": [
+                "1",
+                "2"
+              ]
+            },
+            {
+              "field": "caracter_sopro",
+              "op": "eq",
+              "value": "sistolico_ejetivo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "differentials": [
+            "Sopro inocente (vibratório de Still, sopro pulmonar fisiológico, zumbido venoso)"
+          ],
+          "ambulatory_flow": [
+            "Tranquilizar a família, sem necessidade de exame complementar nem restrição de atividade física",
+            "Reavaliar o sopro nas consultas de puericultura subsequentes"
+          ],
+          "messages": [
+            "Sopro compatível com padrão inocente clássico; conduta expectante com reavaliação em puericultura."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Recém-nascido nas primeiras 24-48h de vida: a resistência vascular pulmonar ainda está em queda acentuada nesse período, e sopros identificados na maternidade podem ser transitórios, refletindo o próprio fechamento funcional do canal arterial e a queda da pressão pulmonar — mas o recém-nascido é justamente o grupo com maior taxa de sopro verdadeiramente patológico e maior dificuldade de caracterização ao exame; avaliação por cardiologista pediátrico é preferível a solicitar ecocardiograma reflexamente, e cianose, má perfusão ou desconforto respiratório exigem avaliação emergencial imediata.",
+      "Lactente com sopro associado a falha de crescimento, sudorese ou dispneia às mamadas: esse conjunto de achados é sinal de alarme clássico que tira o caso da categoria de achado isolado, sugerindo shunt esquerdo-direito significativo ou outra cardiopatia estrutural — encaminhamento à cardiologia pediátrica não deve esperar reavaliação seriada.",
+      "Criança com síndrome genética associada a cardiopatia estrutural (Down, Turner, Noonan e correlatas): nesses pacientes a prevalência de cardiopatia congênita estrutural é muito mais alta que na população geral, então o limiar para investigação ecocardiográfica deve ser mais baixo mesmo diante de um sopro de características aparentemente benignas.",
+      "Adolescente atleta com sopro identificado na triagem pré-participação esportiva: o achado precisa ser diferenciado de adaptação fisiológica ao treinamento antes de liberar ou restringir a elegibilidade esportiva, e sinais associados (síncope de esforço, história familiar de morte súbita precoce) reforçam a necessidade de investigação.",
+      "Criança assintomática com sopro inocente clássico (sopro de Still, zumbido venoso, sopro pulmonar de fluxo) e ansiedade parental significativa: o desafio não é apenas semiológico, mas comunicacional — explicar por que o achado não indica doença, sem minimizar a preocupação da família nem gerar mais ansiedade com exames desnecessários.",
+      "Prematuro com sopro sugestivo de persistência do canal arterial (PCA): a prematuridade por si só é fator de risco para PCA sintomático, e a decisão entre conduta expectante, tratamento e fechamento por cateter ou cirurgia depende da repercussão hemodinâmica documentada ao ecocardiograma, não apenas da presença do sopro.",
+      "Criança com sopro que se acentua durante doença febril aguda: sopros inocentes tendem a ficar mais evidentes em estados hiperdinâmicos (febre, anemia, ansiedade) — a orientação é reavaliar o sopro fora da vigência da doença aguda antes de decidir sobre encaminhamento ou exame complementar."
+    ]
   },
   {
     "slug": "dor-toracica-pediatrica",
