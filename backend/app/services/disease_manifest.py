@@ -107,6 +107,38 @@ def _append_unique(record: dict[str, Any], append_values: Any, *, label: str) ->
                 target.append(copied)
 
 
+def _canonicalize_assistant_questions(record: dict[str, Any], *, slug: str) -> None:
+    """Converte o legado ``text`` para o contrato canônico ``label``.
+
+    A composição nunca expõe ambos os campos. Se um registro histórico trouxer
+    os dois com valores divergentes, a carga falha em vez de escolher um deles
+    silenciosamente. Isso mantém compatibilidade de leitura sem reabrir
+    allowlists editoriais nem enfraquecer o gate global.
+    """
+    questions = record.get("assistant_questions")
+    if questions is None:
+        return
+    if not isinstance(questions, list):
+        raise ValueError(f"{slug}: assistant_questions deve ser lista")
+    for index, question in enumerate(questions):
+        if not isinstance(question, dict):
+            raise ValueError(f"{slug}: assistant_questions[{index}] deve ser objeto")
+        if "text" not in question:
+            continue
+        legacy = question.pop("text")
+        current = question.get("label")
+        if current is not None and current != legacy:
+            raise ValueError(
+                f"{slug}: assistant_questions[{index}] possui text/label divergentes"
+            )
+        if current is None:
+            if not isinstance(legacy, str) or not legacy.strip():
+                raise ValueError(
+                    f"{slug}: assistant_questions[{index}].text legado não é string válida"
+                )
+            question["label"] = legacy
+
+
 def _apply_corrections(
     records_by_slug: dict[str, dict[str, Any]],
     base_manifest: Path,
@@ -200,4 +232,6 @@ def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
                 )
 
     _apply_corrections(by_slug, base)
+    for slug in ordered_slugs:
+        _canonicalize_assistant_questions(by_slug[slug], slug=slug)
     return [by_slug[slug] for slug in ordered_slugs]
