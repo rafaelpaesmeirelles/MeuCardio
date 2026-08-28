@@ -1,6 +1,6 @@
 name: Emergency deploy current main
 
-# Manual emergency trigger: privacy policy publication 2026-08-28
+# Manual emergency trigger: account deletion page publication 2026-08-28
 on:
   push:
     branches: [main]
