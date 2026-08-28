@@ -12268,12 +12268,12 @@
     "assistant_questions": [
       {
         "id": "idade_anos",
-        "text": "Qual a idade do paciente em anos?",
+        "label": "Qual a idade do paciente em anos?",
         "type": "number"
       },
       {
         "id": "apresentacao_clinica",
-        "text": "Qual a apresentacao clinica atual?",
+        "label": "Qual a apresentacao clinica atual?",
         "type": "select",
         "options": [
           {
@@ -12296,7 +12296,7 @@
       },
       {
         "id": "fragilidade_cfs",
-        "text": "Qual o grau de fragilidade pela Clinical Frailty Scale?",
+        "label": "Qual o grau de fragilidade pela Clinical Frailty Scale?",
         "type": "select",
         "options": [
           {
@@ -12323,17 +12323,17 @@
       },
       {
         "id": "instabilidade_hemodinamica",
-        "text": "Ha instabilidade hemodinamica, choque ou arritmia grave associada?",
+        "label": "Ha instabilidade hemodinamica, choque ou arritmia grave associada?",
         "type": "boolean"
       },
       {
         "id": "alto_risco_sangramento",
-        "text": "Paciente preenche criterio de alto risco de sangramento (ARC-HBR)?",
+        "label": "Paciente preenche criterio de alto risco de sangramento (ARC-HBR)?",
         "type": "boolean"
       },
       {
         "id": "funcao_renal",
-        "text": "Qual o estagio de funcao renal (DRC)?",
+        "label": "Qual o estagio de funcao renal (DRC)?",
         "type": "select",
         "options": [
           {
@@ -12352,12 +12352,12 @@
       },
       {
         "id": "anemia",
-        "text": "Ha anemia documentada?",
+        "label": "Ha anemia documentada?",
         "type": "boolean"
       },
       {
         "id": "objetivos_cuidado",
-        "text": "Qual o objetivo de cuidado predominante definido com o paciente/familia?",
+        "label": "Qual o objetivo de cuidado predominante definido com o paciente/familia?",
         "type": "select",
         "options": [
           {
@@ -12376,12 +12376,12 @@
       },
       {
         "id": "numero_medicamentos",
-        "text": "Quantos medicamentos de uso continuo o paciente utiliza?",
+        "label": "Quantos medicamentos de uso continuo o paciente utiliza?",
         "type": "number"
       },
       {
         "id": "capacidade_funcional",
-        "text": "Como esta a capacidade funcional/mobilidade atual?",
+        "label": "Como esta a capacidade funcional/mobilidade atual?",
         "type": "select",
         "options": [
           {
@@ -12400,7 +12400,7 @@
       },
       {
         "id": "comorbidades",
-        "text": "Quais comorbidades relevantes estao presentes?",
+        "label": "Quais comorbidades relevantes estao presentes?",
         "type": "multiselect",
         "options": [
           {
