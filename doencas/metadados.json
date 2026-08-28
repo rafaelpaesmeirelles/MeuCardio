@@ -10287,42 +10287,42 @@
     "assistant_questions": [
       {
         "id": "idade_anos",
-        "text": "Qual a idade do paciente, em anos?",
+        "label": "Qual a idade do paciente, em anos?",
         "type": "number"
       },
       {
         "id": "ldl_c_mg_dl",
-        "text": "Qual o valor mais recente de LDL-colesterol, em mg/dL?",
+        "label": "Qual o valor mais recente de LDL-colesterol, em mg/dL?",
         "type": "number"
       },
       {
         "id": "triglicerideos_mg_dl",
-        "text": "Qual o valor mais recente de triglicerídeos, em mg/dL?",
+        "label": "Qual o valor mais recente de triglicerídeos, em mg/dL?",
         "type": "number"
       },
       {
         "id": "tempo_mudanca_estilo_vida_meses",
-        "text": "Há quantos meses o paciente está em mudança terapêutica do estilo de vida (dieta e atividade física) de forma consistente?",
+        "label": "Há quantos meses o paciente está em mudança terapêutica do estilo de vida (dieta e atividade física) de forma consistente?",
         "type": "number"
       },
       {
         "id": "historico_familiar_ihd_precoce",
-        "text": "Há história familiar de doença arterial coronariana precoce (antes dos 55 anos em homens ou 65 anos em mulheres) em parentes de primeiro grau?",
+        "label": "Há história familiar de doença arterial coronariana precoce (antes dos 55 anos em homens ou 65 anos em mulheres) em parentes de primeiro grau?",
         "type": "boolean"
       },
       {
         "id": "suspeita_hf_homozigota",
-        "text": "Há suspeita clínica de hipercolesterolemia familiar homozigota (xantomas cutâneos ou tendíneos precoces, LDL-C extremamente elevado, ambos os pais com diagnóstico de hipercolesterolemia familiar)?",
+        "label": "Há suspeita clínica de hipercolesterolemia familiar homozigota (xantomas cutâneos ou tendíneos precoces, LDL-C extremamente elevado, ambos os pais com diagnóstico de hipercolesterolemia familiar)?",
         "type": "boolean"
       },
       {
         "id": "sintomas_pancreatite_aguda",
-        "text": "O paciente apresenta dor abdominal aguda intensa com suspeita de pancreatite?",
+        "label": "O paciente apresenta dor abdominal aguda intensa com suspeita de pancreatite?",
         "type": "boolean"
       },
       {
         "id": "causa_secundaria_identificada",
-        "text": "Foi identificada alguma causa secundária de dislipidemia?",
+        "label": "Foi identificada alguma causa secundária de dislipidemia?",
         "type": "select",
         "options": [
           {
@@ -10357,12 +10357,12 @@
       },
       {
         "id": "caso_indice_familiar_confirmado",
-        "text": "Este paciente é caso índice familiar com diagnóstico (clínico ou molecular) confirmado de hipercolesterolemia familiar?",
+        "label": "Este paciente é caso índice familiar com diagnóstico (clínico ou molecular) confirmado de hipercolesterolemia familiar?",
         "type": "boolean"
       },
       {
         "id": "rastreio_familiares_realizado",
-        "text": "Qual o status do rastreio em cascata dos familiares de primeiro grau (pais e irmãos)?",
+        "label": "Qual o status do rastreio em cascata dos familiares de primeiro grau (pais e irmãos)?",
         "type": "select",
         "options": [
           {
@@ -10381,7 +10381,7 @@
       },
       {
         "id": "fatores_risco_adicionais",
-        "text": "Quais fatores de risco cardiovascular adicionais estão presentes?",
+        "label": "Quais fatores de risco cardiovascular adicionais estão presentes?",
         "type": "multiselect",
         "options": [
           {
