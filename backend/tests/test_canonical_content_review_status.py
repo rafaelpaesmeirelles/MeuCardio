@@ -39,16 +39,7 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
-    "doencas/metadados.json": {
-        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
-        # dor-toracica-pediatrica passou de completeness=basico (só
-        # catalogação + 1 related_document_slug) para completo, com
-        # conteúdo clínico integral e 13 related_document_slugs — ver
-        # review_note.
-        "dor-toracica-pediatrica",
-    },
-}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
