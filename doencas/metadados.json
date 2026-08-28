@@ -10521,7 +10521,7 @@
     "category": "cardiologia_fetal",
     "subtype": "conotruncal",
     "prevalence_rank": 38,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Diagnóstico fetal de malformação conotruncal que deve descrever anatomia da via de saída, artérias pulmonares, arco e achados extracardíacos.",
     "tags": [
       "Fallot fetal",
@@ -10529,18 +10529,465 @@
       "diagnóstico pré-natal"
     ],
     "source_refs": [
-      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram"
+      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram",
+      "Moon-Grady AJ, Donofrio MT, Gelehrter S, et al. Guidelines and Recommendations for Performance of the Fetal Echocardiogram: An Update from the American Society of Echocardiography. J Am Soc Echocardiogr. 2023;36(7):679-723. PMID: 37227365.",
+      "Sharma R, Niederhoffer KY, Caluseriu O, Cooke CL, et al. Extra-cardiac diagnoses and postnatal outcomes of fetal tetralogy of Fallot. Prenat Diagn. 2022;42(2):260-266. PMID: 35060156.",
+      "Deng DP, Qian T, Liu YH, Wu ZS, et al. Prenatal diagnosis, management, and outcomes of fetuses with tetralogy of Fallot in China after prenatal counseling: a prospective cohort study. Front Pediatr. 2023;11:1172282. PMID: 37622084.",
+      "Chelliah A, Moon-Grady AJ, Peyvandi S, Chiu JS, et al. Contemporary Outcomes in Tetralogy of Fallot With Absent Pulmonary Valve After Fetal Diagnosis. J Am Heart Assoc. 2021;10(12):e019713. PMID: 34098741.",
+      "Issapour A, Dasgupta MN, Zhang A, Tacy TA, et al. Fetal Characteristics and Perinatal Outcomes in Tetralogy of Fallot Without a Ductus Arteriosus. Pediatr Cardiol. 2026;47(1):180-187. PMID: 39738673.",
+      "Putotto C, Pugnaloni F, Unolt M, Maiolo S, et al. 22q11.2 Deletion Syndrome: Impact of Genetics in the Treatment of Conotruncal Heart Defects. Children (Basel). 2022;9(6):772. PMID: 35740709.",
+      "Kanneganti A, Gosavi AT, Lim MXK, Li WLS, et al. Fetal congenital heart diseases: Diagnosis by anatomical scans, echocardiography and genetic tests. Ann Acad Med Singap. 2023;52(8):420-431. PMID: 38920167."
     ],
     "source_urls": [
-      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"
+      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/37227365/",
+      "https://pubmed.ncbi.nlm.nih.gov/35060156/",
+      "https://pubmed.ncbi.nlm.nih.gov/37622084/",
+      "https://pubmed.ncbi.nlm.nih.gov/34098741/",
+      "https://pubmed.ncbi.nlm.nih.gov/39738673/",
+      "https://pubmed.ncbi.nlm.nih.gov/35740709/",
+      "https://pubmed.ncbi.nlm.nih.gov/38920167/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (22º lote de conteúdo do dia, sexto do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630, bloqueio-atrioventricular-fetal/PR #631, hidropisia-fetal-cardiovascular/PR #632, flutter-atrial-fetal/PR #633 e coarctacao-aorta-fetal/PR #636): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos (o único vínculo original é majoritariamente sobre manejo pós-natal, não fetal), mas zero campos clínicos. Adicionados epidemiology (15-20% associados a deleção 22q11.2, taxas de detecção pré-natal melhoradas com avaliação sistemática das vias de saída), presentation (10 formas), diagnostic_approach (6 subtópicos: avaliação sistemática de vias de saída, calibre de artérias pulmonares, diferenciação de conotruncais, investigação genética 22q11.2, avaliação extracardíaca, seguimento seriado), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (12), assistant_rules (10). related_document_slugs expandido de 1 para 5 (união com o original, sem duplicar) — todos verificados quanto a menção explícita a Fallot no texto; o agente da Parte 3 documentou explicitamente 2 candidatos descartados por tratarem apenas de seguimento tardio no adulto operado, sem conexão com o período fetal/neonatal precoce. patient_material_slug original preservado. Overlap extenso mas legítimo com tetralogia-de-fallot (adulto), atresia-pulmonar, indicacoes-ecocardiograma-fetal/PR #630 e planejamento-parto-cardiopatia-fetal — documentado. Nenhuma dose de fármaco em nenhum campo — fármaco citado apenas por nome (prostaglandina E1). Todos os PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem — nenhuma correção necessária nesta rodada (diferente das duas rodadas anteriores).",
+    "version": 2,
     "related_document_slugs": [
-      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica"
+      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
+      "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica",
+      "crise-hipercianotica-na-tetralogia-de-fallot",
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento",
+      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
     ],
-    "patient_material_slug": "tetralogia-fallot-fetal"
+    "patient_material_slug": "tetralogia-fallot-fetal",
+    "epidemiology": "A tetralogia de Fallot é a cardiopatia congênita cianótica mais comum, respondendo por aproximadamente 5 a 7% de todas as cardiopatias congênitas e por cerca de 10% das cardiopatias congênitas críticas identificadas no período perinatal. Compreende quatro elementos anatômicos combinados a partir de um desvio anterossuperior do septo conal: comunicação interventricular perimembranosa com cavalgamento aórtico, obstrução da via de saída do ventrículo direito de grau variável, hipertrofia ventricular direita e cavalgamento da aorta sobre o septo interventricular. Historicamente, a detecção pré-natal foi subestimada quando o rastreio ecográfico se limitava ao plano de quatro câmaras, já que o septo interventricular e as vias de saída não são avaliados de forma adequada nesse plano isolado; a incorporação sistemática da avaliação das vias de saída ventriculares, recomendada pelas diretrizes de ecocardiografia fetal, elevou substancialmente as taxas de detecção pré-natal em centros de referência. Aproximadamente 15 a 20% dos casos de tetralogia de Fallot associam-se à microdeleção 22q11.2 (síndrome de DiGeorge ou velocardiofacial), proporção que se eleva nos casos com arco aórtico direito, atresia pulmonar associada ou anomalias extracardíacas concomitantes, o que reforça a indicação de investigação genética dirigida. O espectro de gravidade é amplo, variando desde a forma clássica com fluxo pulmonar anterógrado preservado (por vezes chamada de tetralogia de Fallot \"rosa\"), passando por graus progressivos de obstrução infundibular e valvar pulmonar, até a forma mais grave, com atresia pulmonar completa e circulação pulmonar dependente de colaterais aortopulmonares ou do canal arterial.",
+    "presentation": [
+      "Comunicação interventricular perimembranosa com cavalgamento aórtico, identificada no corte de eixo longo do ventrículo esquerdo e no plano de cinco câmaras",
+      "Obstrução da via de saída do ventrículo direito de grau variável, desde estenose infundibular leve até atresia pulmonar completa",
+      "Hipertrofia do ventrículo direito, achado mais evidente em fases avançadas da gestação",
+      "Artérias pulmonares (tronco e ramos) de calibre reduzido em relação à aorta ascendente, com hipoplasia progressiva conforme o grau de obstrução",
+      "Tetralogia de Fallot com atresia pulmonar associada — variante mais grave do espectro, com fluxo pulmonar dependente de canal arterial ou de colaterais aortopulmonares principais",
+      "Arco aórtico direito associado, presente em parcela relevante dos casos e associado a maior risco de deleção 22q11.2",
+      "Ducto arterioso tortuoso, hipoplásico ou ausente na forma com síndrome da valva pulmonar ausente, associada a dilatação aneurismática do tronco e dos ramos pulmonares",
+      "Achado incidental de discrepância de calibre entre os grandes vasos ou de desvio do septo conal em ultrassonografia morfológica de rotina, sem suspeita clínica prévia",
+      "Encaminhamento para ecocardiograma fetal por suspeita de deleção 22q11.2 em contexto familiar (genitor portador, irmão afetado) ou por achados extracardíacos sugestivos, como fenda palatina, hipoplasia tímica ou hipocalcemia",
+      "Discreta assimetria ventricular ou desalinhamento septal ao plano de quatro câmaras, motivando avaliação dedicada e cuidadosa das vias de saída"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_sistematica_vias_saida": "A avaliação ecocardiográfica sistemática deve incluir o plano de cinco câmaras, com identificação da comunicação interventricular perimembranosa e do grau de cavalgamento aórtico; o eixo longo da via de saída do ventrículo esquerdo, para confirmar a continuidade mitroaórtica e quantificar o cavalgamento; e o plano de vias de saída cruzadas (via de saída do ventrículo direito perpendicular à via de saída do ventrículo esquerdo), essencial para excluir dupla via de saída do ventrículo direito e para avaliar o calibre relativo da via pulmonar em relação à aorta.",
+      "calibre_arterias_pulmonares": "A mensuração seriada do diâmetro do anel valvar pulmonar, do tronco e dos ramos pulmonares, com comparação a curvas de normalidade por idade gestacional (escore z), permite identificar hipoplasia progressiva ao longo da gestação e estimar o risco de necessidade de intervenção neonatal precoce ou de circulação pulmonar dependente de canal arterial.",
+      "diferenciacao_conotruncais": "A diferenciação de outras cardiopatias conotruncais exige avaliação cuidadosa da relação espacial entre os grandes vasos, da origem das artérias coronárias e da presença de estenose subpulmonar isolada versus obstrução mista, distinguindo a tetralogia de Fallot de dupla via de saída do ventrículo direito, tronco arterial comum e transposição das grandes artérias com comunicação interventricular e estenose pulmonar.",
+      "investigacao_genetica_22q11": "Diante do diagnóstico ecocardiográfico de tetralogia de Fallot, recomenda-se investigação genética dirigida à microdeleção 22q11.2, por hibridização in situ fluorescente, análise cromossômica por microarranjo ou reação em cadeia da polimerase quantitativa, especialmente na presença de arco aórtico direito, atresia pulmonar associada, anomalias tímicas ou história familiar compatível com síndrome velocardiofacial.",
+      "avaliacao_extracardiaca": "A avaliação extracardíaca associada deve contemplar rastreio detalhado de anomalias renais, esqueléticas, do sistema nervoso central e de face/palato, além de avaliação do crescimento fetal, do volume de líquido amniótico e do timo fetal, cuja hipoplasia é sugestiva de deleção 22q11.2.",
+      "seguimento_ecocardiografico_seriado": "Recomenda-se seguimento ecocardiográfico seriado ao longo da gestação, com reavaliação periódica do grau de obstrução da via de saída do ventrículo direito e do crescimento das artérias pulmonares, dado o caráter potencialmente progressivo da lesão e sua relevância para o planejamento do parto e do cuidado neonatal imediato."
+    },
+    "differentials": [
+      "Dupla via de saída do ventrículo direito com comunicação interventricular subaórtica e estenose pulmonar",
+      "Atresia pulmonar com comunicação interventricular, considerada a forma mais grave do espectro da tetralogia de Fallot",
+      "Tronco arterial comum",
+      "Transposição das grandes artérias com comunicação interventricular e estenose pulmonar",
+      "Dupla via de saída do ventrículo direito com comunicação interventricular não relacionada (subpulmonar ou remota)",
+      "Estenose pulmonar valvar isolada com comunicação interventricular coexistente por lesão associada distinta"
+    ],
+    "tests": [
+      "Ecocardiograma fetal detalhado com Doppler colorido e pulsado",
+      "Ultrassonografia morfológica de segundo trimestre com avaliação dedicada das vias de saída cardíacas",
+      "Cariótipo fetal e/ou análise cromossômica por microarranjo",
+      "Hibridização in situ fluorescente (FISH) ou reação em cadeia da polimerase quantitativa para deleção 22q11.2",
+      "Ressonância magnética fetal para avaliação extracardíaca em casos selecionados",
+      "Ecocardiograma neonatal pós-natal para confirmação diagnóstica e planejamento cirúrgico",
+      "Avaliação seriada do crescimento das artérias pulmonares por ecocardiografia ao longo da gestação"
+    ],
+    "red_flags": [
+      "Atresia pulmonar associada, com circulação pulmonar dependente de canal arterial ou de colaterais aortopulmonares",
+      "Fluxo retrógrado (reverso) no canal arterial ou no arco aórtico",
+      "Hipoplasia significativa das artérias pulmonares (tronco e/ou ramos), com escore z acentuadamente reduzido",
+      "Síndrome da valva pulmonar ausente com regurgitação pulmonar grave e dilatação aneurismática do tronco pulmonar",
+      "Arco aórtico direito associado a deleção 22q11.2 confirmada, elevando o risco de anomalias extracardíacas",
+      "Ducto arterioso ausente, associado a compressão de vias aéreas e maior morbidade respiratória neonatal",
+      "Cavalgamento aórtico acentuado, aproximando-se do espectro anatômico de dupla via de saída do ventrículo direito",
+      "Restrição de crescimento fetal ou anomalias extracardíacas associadas, que agravam o prognóstico perinatal global"
+    ],
+    "treatment_summary": "Na tetralogia de Fallot fetal em sua forma clássica, não há indicação de intervenção intraútero; o manejo é predominantemente expectante, baseado em vigilância ecocardiográfica seriada e aconselhamento familiar ao longo da gestação. Diante do diagnóstico, recomenda-se investigação genética dirigida, incluindo cariótipo fetal, microarray cromossômico (CGH-array) e pesquisa específica de deleção 22q11.2 por FISH ou técnica equivalente, dada a forte associação da tetralogia de Fallot com essa microdeleção e seu impacto direto no aconselhamento genético, no prognóstico extracardíaco e no planejamento do seguimento pós-natal, inclusive imunológico e endocrinológico. A avaliação ecocardiográfica deve incluir mensuração seriada do diâmetro das artérias pulmonares (ramos direito e esquerdo) e do anel valvar pulmonar ao longo da gestação, pois o grau de hipoplasia das artérias pulmonares é um dos principais determinantes da estratégia cirúrgica pós-natal, influenciando a escolha entre correção primária precoce ou abordagem estagiada com shunt sistêmico-pulmonar. Recomenda-se também avaliação morfológica detalhada e sistemática de outros órgãos e sistemas, uma vez que a tetralogia de Fallot pode se associar a malformações extracardíacas, especialmente em contexto de síndromes genéticas. O planejamento do parto deve ocorrer em centro terciário com suporte integrado de cardiologia pediátrica, neonatologia e cirurgia cardíaca pediátrica disponíveis, sendo essa recomendação particularmente crítica nas formas mais graves do espectro, como a tetralogia de Fallot com atresia pulmonar (circulação pulmonar frequentemente dependente do canal arterial ou de colaterais aortopulmonares) e a forma com valva pulmonar ausente (risco de dilatação aneurismática dos ramos pulmonares com compressão extrínseca de vias aéreas, podendo cursar com desconforto respiratório grave já no período neonatal). No manejo neonatal imediato, deve-se avaliar a necessidade de manter a permeabilidade do canal arterial com infusão de prostaglandina E1 nas formas ducto-dependentes, garantindo fluxo pulmonar adequado até a intervenção cirúrgica ou intervencionista definitiva; já nos casos de valva pulmonar ausente com compressão significativa de via aérea, pode ser necessária intervenção cirúrgica precoce, por vezes em caráter de urgência. O aconselhamento parental deve abordar de forma clara o espectro de gravidade anatômica da tetralogia de Fallot, destacando que, na forma clássica, o prognóstico cirúrgico é geralmente favorável, com boas taxas de sobrevida e qualidade de vida após correção cirúrgica, ao mesmo tempo em que se contextualizam os riscos adicionais associados às formas mais complexas e à eventual coexistência de síndromes genéticas.",
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico de tetralogia de Fallot por ecocardiografia fetal detalhada, caracterizando a forma anatômica (clássica, com atresia pulmonar ou com valva pulmonar ausente)",
+      "Encaminhar para aconselhamento genético e oferecer investigação dirigida: cariótipo fetal, microarray cromossômico e pesquisa de deleção 22q11.2",
+      "Realizar avaliação morfológica fetal detalhada em busca de malformações extracardíacas associadas",
+      "Programar ecocardiografias fetais seriadas para acompanhar o crescimento das artérias pulmonares e do anel valvar pulmonar ao longo da gestação",
+      "Avaliar sinais de dilatação aneurismática dos ramos pulmonares e repercussão sobre a via aérea fetal, especialmente na forma com valva pulmonar ausente",
+      "Discutir com a família o espectro de gravidade da lesão, o prognóstico cirúrgico e a necessidade de seguimento em centro de referência",
+      "Planejar o local e a via de parto em centro terciário com suporte de cardiologia pediátrica e cirurgia cardíaca pediátrica disponíveis",
+      "Articular previamente com a equipe de neonatologia e cardiologia pediátrica a estratégia de estabilização ao nascimento, incluindo eventual necessidade de prostaglandina E1",
+      "Reavaliar periodicamente sinais de hidropisia fetal, polidrâmnio ou sofrimento fetal, particularmente nas formas graves",
+      "Programar avaliação cardiológica pediátrica e ecocardiograma neonatal precoce logo após o nascimento"
+    ],
+    "emergency_flow": [
+      "Reconhecer imediatamente recém-nascido com tetralogia de Fallot e cianose importante ao nascimento como situação de risco elevado",
+      "Garantir monitorização contínua de saturação de oxigênio e sinais vitais em ambiente com suporte de terapia intensiva neonatal",
+      "Nos casos de forma com atresia pulmonar e circulação pulmonar ducto-dependente, avaliar prontamente a necessidade de manter o canal arterial pérvio com prostaglandina E1",
+      "Nos casos de valva pulmonar ausente com desconforto respiratório por compressão de via aérea, acionar avaliação conjunta de cirurgia cardíaca pediátrica e otorrinolaringologia/via aérea de forma urgente",
+      "Considerar suporte ventilatório e, se necessário, intubação orotraqueal diante de desconforto respiratório grave por compressão extrínseca das vias aéreas",
+      "Acionar equipe de cirurgia cardíaca pediátrica para avaliação de intervenção precoce nas formas mais graves (atresia pulmonar ou valva pulmonar ausente sintomática)",
+      "Se o parto ocorrer fora de centro com suporte cardiológico e cirúrgico pediátrico adequados, providenciar transporte neonatal urgente para centro de referência",
+      "Reavaliar continuamente perfusão, saturação e estabilidade hemodinâmica durante toda a transferência ou preparo pré-operatório"
+    ],
+    "monitoring": [
+      "Ecocardiografia fetal seriada para acompanhamento do diâmetro das artérias pulmonares (ramo direito e ramo esquerdo) ao longo da gestação",
+      "Avaliação seriada do anel valvar pulmonar e da via de saída do ventrículo direito",
+      "Monitorização de sinais de dilatação progressiva dos ramos pulmonares na forma com valva pulmonar ausente",
+      "Vigilância de sinais indiretos de compressão de via aérea fetal, incluindo avaliação de líquido amniótico e sinais de sofrimento fetal",
+      "Acompanhamento do crescimento fetal global e da vitalidade fetal em consultas obstétricas de rotina",
+      "Reavaliação periódica de achados extracardíacos identificados na investigação morfológica",
+      "Seguimento dos resultados da investigação genética (cariótipo, microarray, deleção 22q11.2) e correlação com achados clínicos",
+      "Monitorização neonatal contínua de saturação de oxigênio e estabilidade hemodinâmica após o nascimento"
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_gestacional_diagnostico",
+        "text": "Qual a idade gestacional, em semanas, no momento do diagnóstico de tetralogia de Fallot?",
+        "type": "number"
+      },
+      {
+        "id": "forma_anatomica_fallot",
+        "text": "Qual a forma anatômica da tetralogia de Fallot identificada na ecocardiografia fetal?",
+        "type": "select",
+        "options": [
+          {
+            "value": "classica",
+            "label": "Forma clássica"
+          },
+          {
+            "value": "atresia_pulmonar",
+            "label": "Com atresia pulmonar"
+          },
+          {
+            "value": "valva_pulmonar_ausente",
+            "label": "Com valva pulmonar ausente"
+          }
+        ]
+      },
+      {
+        "id": "cariotipo_microarray_realizado",
+        "text": "Foi realizada investigação genética (cariótipo e/ou microarray cromossômico)?",
+        "type": "boolean"
+      },
+      {
+        "id": "resultado_del22q11",
+        "text": "Qual o resultado da pesquisa de deleção 22q11.2?",
+        "type": "select",
+        "options": [
+          {
+            "value": "positivo",
+            "label": "Positivo"
+          },
+          {
+            "value": "negativo",
+            "label": "Negativo"
+          },
+          {
+            "value": "pendente",
+            "label": "Pendente"
+          },
+          {
+            "value": "nao_realizado",
+            "label": "Não realizado"
+          }
+        ]
+      },
+      {
+        "id": "crescimento_arterias_pulmonares_adequado",
+        "text": "O crescimento seriado das artérias pulmonares está adequado para a idade gestacional?",
+        "type": "boolean"
+      },
+      {
+        "id": "malformacoes_extracardiacas_associadas",
+        "text": "Foram identificadas malformações extracardíacas associadas na avaliação morfológica?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_compressao_via_aerea_fetal",
+        "text": "Há sinais sugestivos de compressão de via aérea fetal (por exemplo, dilatação aneurismática de ramos pulmonares em valva pulmonar ausente)?",
+        "type": "boolean"
+      },
+      {
+        "id": "local_planejado_parto",
+        "text": "Qual o local planejado para o parto quanto ao suporte cardiológico e cirúrgico disponível?",
+        "type": "select",
+        "options": [
+          {
+            "value": "centro_terciario_com_cirurgia_cardiaca",
+            "label": "Centro terciário com cardiologia pediátrica e cirurgia cardíaca disponíveis"
+          },
+          {
+            "value": "centro_sem_suporte_cardiaco",
+            "label": "Centro sem suporte de cardiologia pediátrica/cirurgia cardíaca"
+          }
+        ]
+      },
+      {
+        "id": "saturacao_oxigenio_nascimento",
+        "text": "Qual a saturação de oxigênio do recém-nascido, em percentual, logo após o nascimento?",
+        "type": "number"
+      },
+      {
+        "id": "necessidade_prostaglandina_ao_nascer",
+        "text": "Há necessidade de manter o canal arterial pérvio com prostaglandina E1 ao nascimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "desconforto_respiratorio_neonatal",
+        "text": "O recém-nascido apresenta desconforto respiratório sugestivo de compressão de via aérea?",
+        "type": "boolean"
+      },
+      {
+        "id": "historico_familiar_cardiopatia_congenita",
+        "text": "Há história familiar de cardiopatia congênita ou de síndrome associada à deleção 22q11.2?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "valva_ausente_compressao_via_aerea_emergencia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "forma_anatomica_fallot",
+              "op": "eq",
+              "value": "valva_pulmonar_ausente"
+            },
+            {
+              "field": "sinais_compressao_via_aerea_fetal",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Valva pulmonar ausente com sinais de compressão de via aérea",
+            "Risco de insuficiência respiratória neonatal grave"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação conjunta urgente de cirurgia cardíaca pediátrica e suporte de via aérea ao nascimento"
+          ],
+          "messages": [
+            "Caso com risco elevado de comprometimento respiratório neonatal por compressão extrínseca das vias aéreas; recomenda-se parto em centro terciário com suporte cirúrgico imediato disponível."
+          ]
+        }
+      },
+      {
+        "id": "atresia_pulmonar_parto_local_inadequado",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "forma_anatomica_fallot",
+              "op": "eq",
+              "value": "atresia_pulmonar"
+            },
+            {
+              "field": "local_planejado_parto",
+              "op": "eq",
+              "value": "centro_sem_suporte_cardiaco"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Tetralogia de Fallot com atresia pulmonar e parto planejado fora de centro com suporte cardiológico/cirúrgico adequado"
+          ],
+          "missing_information": [
+            "Confirmação de transferência para centro terciário antes do parto"
+          ],
+          "emergency_flow": [
+            "Providenciar transferência urgente para centro com cardiologia pediátrica e cirurgia cardíaca antes do parto ou, se já nascido, transporte neonatal imediato"
+          ]
+        }
+      },
+      {
+        "id": "cianose_grave_ao_nascer",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "saturacao_oxigenio_nascimento",
+              "op": "lt",
+              "value": 80
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cianose grave ao nascimento com saturação de oxigênio abaixo de 80%"
+          ],
+          "emergency_flow": [
+            "Avaliar imediatamente necessidade de manter canal arterial pérvio e acionar equipe de cardiologia pediátrica/cirurgia cardíaca"
+          ]
+        }
+      },
+      {
+        "id": "atresia_pulmonar_risco_prioritario",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "forma_anatomica_fallot",
+              "op": "eq",
+              "value": "atresia_pulmonar"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada com avaliação detalhada de fontes de fluxo pulmonar (canal arterial e colaterais aortopulmonares)"
+          ],
+          "missing_information": [
+            "Definição de circulação pulmonar ducto-dependente versus dependente de colaterais aortopulmonares"
+          ]
+        }
+      },
+      {
+        "id": "necessidade_prostaglandina_prioritario",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "necessidade_prostaglandina_ao_nascer",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Forma ducto-dependente identificada; planejar manutenção da permeabilidade do canal arterial com prostaglandina E1 desde o nascimento até avaliação/intervenção definitiva."
+          ]
+        }
+      },
+      {
+        "id": "hipoplasia_arterias_pulmonares",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "crescimento_arterias_pulmonares_adequado",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Crescimento inadequado das artérias pulmonares ao longo da gestação"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada com mensuração dos ramos pulmonares para orientar estratégia cirúrgica pós-natal"
+          ]
+        }
+      },
+      {
+        "id": "del22q11_positiva",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "resultado_del22q11",
+              "op": "eq",
+              "value": "positivo"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Deleção 22q11.2 confirmada, compatível com associação conhecida à tetralogia de Fallot"
+          ],
+          "messages": [
+            "Encaminhar para seguimento multidisciplinar (imunológico, endocrinológico e de desenvolvimento) associado ao aconselhamento genético."
+          ]
+        }
+      },
+      {
+        "id": "investigacao_genetica_pendente",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "cariotipo_microarray_realizado",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Investigação genética (cariótipo, microarray e pesquisa de deleção 22q11.2) ainda não realizada"
+          ],
+          "suggested_tests": [
+            "Cariótipo fetal, microarray cromossômico e pesquisa dirigida de deleção 22q11.2"
+          ]
+        }
+      },
+      {
+        "id": "malformacoes_extracardiacas",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "malformacoes_extracardiacas_associadas",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Considerar síndrome genética associada diante de malformações extracardíacas concomitantes"
+          ],
+          "suggested_tests": [
+            "Avaliação morfológica fetal detalhada e discussão em equipe multidisciplinar de medicina fetal"
+          ]
+        }
+      },
+      {
+        "id": "forma_classica_prognostico_favoravel",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "forma_anatomica_fallot",
+              "op": "eq",
+              "value": "classica"
+            },
+            {
+              "field": "sinais_compressao_via_aerea_fetal",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Forma clássica sem sinais de gravidade adicional; manter vigilância seriada, aconselhamento e planejamento de parto em centro terciário, com prognóstico cirúrgico geralmente favorável."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com Tetralogia de Fallot e deleção 22q11.2 confirmada ou suspeita: diante de achados ecocardiográficos compatíveis, recomenda-se investigação genética dirigida (cariótipo e pesquisa de microdeleção 22q11.2), já que essa é a alteração cromossômica mais frequentemente associada à tetralogia de Fallot; a confirmação muda o aconselhamento familiar, a investigação de anomalias extracardíacas (palato, timo, paratireoides, trato urinário) e o planejamento do seguimento neonatal multidisciplinar.",
+      "Feto com Tetralogia de Fallot e atresia pulmonar associada: representa a forma mais grave do espectro anatômico da tetralogia, com via de saída do ventrículo direito completamente obliterada; o suprimento pulmonar costuma depender de canal arterial patente ou de colaterais aortopulmonares maiores, exigindo antecipação de fisiologia ducto-dependente, definição do padrão de artérias pulmonares ainda no pré-natal e planejamento de nascimento em centro com suporte neonatal imediato.",
+      "Feto com Tetralogia de Fallot e valva pulmonar ausente (síndrome da valva pulmonar ausente): a dilatação aneurismática das artérias pulmonares associada pode comprimir a via aérea fetal e neonatal, causando insuficiência respiratória grave ao nascimento; o achado pré-natal desse padrão orienta o planejamento de parto em centro terciário com equipe de vias aéreas neonatal disponível e discussão antecipada com cirurgia cardíaca pediátrica.",
+      "Feto com Tetralogia de Fallot e artérias pulmonares hipoplásicas: a avaliação seriada do tamanho e da confluência dos ramos pulmonares ao longo da gestação ajuda a antecipar se a criança será candidata a correção biventricular primária ou a estratégia estagiada com paliação inicial; essa informação é compartilhada com a equipe cirúrgica antes do nascimento para orientar o planejamento pós-natal.",
+      "Recém-nascido com Tetralogia de Fallot clássica (\"forma rosa\"), sem cianose importante ao nascimento: costuma permanecer clinicamente estável no período neonatal, com acompanhamento ambulatorial programado e correção cirúrgica eletiva planejada nos primeiros meses de vida, sem necessidade de intervenção de urgência, desde que monitorada quanto a sinais de piora da obstrução da via de saída do ventrículo direito.",
+      "Gestante orientada sobre necessidade de parto em centro terciário com suporte cardiológico neonatal: diante do diagnóstico fetal de tetralogia de Fallot, o planejamento do local, do momento e da via de parto deve envolver equipe obstétrica, cardiologia pediátrica e, quando indicado, cirurgia cardíaca, de modo a garantir avaliação clínica e ecocardiográfica imediatas após o nascimento e via de acesso rápida a suporte hemodinâmico e cirúrgico se necessário."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "transposicao-grandes-arterias-fetal",
