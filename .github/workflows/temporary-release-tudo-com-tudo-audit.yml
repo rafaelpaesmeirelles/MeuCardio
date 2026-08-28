@@ -1,0 +1,55 @@
+name: Temporary final Tudo com Tudo release audit
+on:
+  push:
+    branches: [release/all-pending-20260828]
+    paths: [.github/workflows/temporary-release-tudo-com-tudo-audit.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Canonical disease loader
+        run: |
+          PYTHONPATH=backend python - <<'PY'
+          from pathlib import Path
+          from app.services.disease_manifest import load_disease_records
+          records = load_disease_records(Path('doencas/metadados.json'))
+          slugs = [str(item['slug']) for item in records]
+          assert len(slugs) == len(set(slugs)), 'slugs de doença duplicados'
+          print('canonical_diseases=', len(records))
+          PY
+      - name: Strict corpus inventory
+        run: python scripts/content_inventory.py --minimum-records 9469 --minimum-files 2188 --strict
+      - name: Tudo com Tudo — zero broken references
+        run: |
+          python scripts/audit_tudo_com_tudo.py > /tmp/tudo-com-tudo.json
+          python - <<'PY'
+          import json
+          data = json.load(open('/tmp/tudo-com-tudo.json', encoding='utf-8'))
+          broken = data.get('broken_references') or []
+          print('total_items=', data.get('total_items'))
+          print('review_status=', data.get('review_status'))
+          print('explicit_disease_relations=', data.get('explicit_disease_relations'))
+          print('topic_coverage=', data.get('topic_coverage'))
+          print('broken_references=', len(broken))
+          if broken:
+              print(json.dumps(broken[:100], ensure_ascii=False, indent=2))
+              raise SystemExit('Tudo com Tudo falhou: existem referências quebradas')
+          PY
+      - name: Editorial status gate — no temporary allowlists
+        run: |
+          PYTHONPATH=backend python - <<'PY'
+          import runpy
+          ns = runpy.run_path('backend/tests/test_canonical_content_review_status.py')
+          assert ns['PENDENTES_MEDICAMENTOS_RC'] == set()
+          assert ns['PENDENTES_LOTES_TUDO_COM_TUDO'] == {}
+          assert ns['PENDENTES_MARKDOWN_AVC'] == set()
+          ns['test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc']()
+          ns['test_manifesto_nao_marca_como_publicado_um_registro_pendente']()
+          ns['test_todos_os_documentos_markdown_estao_revisados']()
+          print('editorial_gate=OK; temporary_allowlists=EMPTY')
+          PY
+      - name: Repository whitespace check
+        run: git diff --check HEAD^ HEAD
