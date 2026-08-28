@@ -39,16 +39,7 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
-    "doencas/metadados.json": {
-        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
-        # cardiotoxicidade-bcr-abl passou de completeness=basico (só
-        # catalogação, zero related_document_slugs) para completo, com
-        # conteúdo clínico integral e 6 related_document_slugs — ver
-        # review_note.
-        "cardiotoxicidade-bcr-abl",
-    },
-}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
