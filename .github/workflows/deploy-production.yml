@@ -137,7 +137,7 @@ jobs:
       SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
     steps:
-      - name: Deploy exact SHA
+      - name: Deploy exact SHA and publish signed Android 1.0.1 APK
         run: |
           set -euo pipefail
           : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
@@ -166,6 +166,31 @@ jobs:
             "$SSH_USER@$SSH_HOST" \
             "deploy $TARGET_SHA"
 
+          ssh \
+            -p "$SSH_PORT" \
+            -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes \
+            -o ConnectTimeout=20 \
+            -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" \
+            'set -euo pipefail; \
+             cd /opt/meucardio/frontend; \
+             test -f android/keystore.properties; \
+             npx cap sync android; \
+             cd android; \
+             JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH ./gradlew assembleRelease; \
+             test -s app/build/outputs/apk/release/app-release.apk; \
+             install -d -m 0755 /opt/meucardio/downloads; \
+             install -m 0644 app/build/outputs/apk/release/app-release.apk /opt/meucardio/downloads/corvia-os-android-1.0.1.apk; \
+             cp /opt/meucardio/downloads/corvia-os-android-1.0.1.apk /opt/meucardio/downloads/corvia-os-android.apk; \
+             cd /opt/meucardio/downloads; \
+             sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256; \
+             sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256'
+
       - name: Verify public production
         env:
           PUBLIC_URL: https://corvia.med.br
@@ -189,4 +214,6 @@ jobs:
           PY
           curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
-          echo "Production health and readiness confirmed."
+          curl --fail --silent --show-error --head "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk" > /dev/null
+          curl --fail --silent --show-error "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk.sha256" > /dev/null
+          echo "Production health, readiness and Android 1.0.1 download confirmed."
