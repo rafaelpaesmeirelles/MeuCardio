@@ -28729,13 +28729,16 @@
     ],
     "related_document_slugs": [
       "fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023",
-      "fluxograma-insuficiencia-cardiaca-aguda-descompensada"
+      "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+      "segunda-definicao-universal-insuficiencia-cardiaca-2026",
+      "estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc",
+      "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca"
     ],
     "patient_material_slug": "insuficiencia-cardiaca",
-    "review_status": "revisado",
-    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias AHA/ACC/HFSA 2022 e ESC 2023 e sujeito a julgamento clínico individual.",
+    "review_status": "pendente_revisao",
+    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias AHA/ACC/HFSA 2022 e ESC 2023 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 3 related_document_slugs (Segunda Definição Universal de IC 2026, comparativo de estadiamento AHA/ACC/HFSA vs ESC/SBC, atualização focada ESC 2023), levando o total de 2 para 5. Critério rigoroso aplicado: só hub geral/transversal da síndrome, não subtipos/fenótipos já cobertos por documentos próprios (ICFEr, ICFEp) para evitar diluir o vínculo.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "sindrome-coronariana-cronica",

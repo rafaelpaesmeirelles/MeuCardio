@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote vincular Tudo com Tudo de 28/08/2026: ficha já completa
+        # insuficiencia-cardiaca tinha apenas 2 related_document_slugs
+        # (abaixo do piso); 3 vínculos adicionados após verificação
+        # rigorosa (só hub geral, não subtipo) — ver review_note.
+        "insuficiencia-cardiaca",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
