@@ -10371,52 +10371,52 @@
     "assistant_questions": [
       {
         "id": "dor_esforco",
-        "text": "A dor torácica é desencadeada ou piora consistentemente com esforço físico?",
+        "label": "A dor torácica é desencadeada ou piora consistentemente com esforço físico?",
         "type": "boolean"
       },
       {
         "id": "sincope_associada",
-        "text": "Houve síncope ou pré-síncope associada ao episódio de dor torácica?",
+        "label": "Houve síncope ou pré-síncope associada ao episódio de dor torácica?",
         "type": "boolean"
       },
       {
         "id": "historia_familiar_morte_subita",
-        "text": "Há história familiar de morte súbita cardíaca, cardiomiopatia ou canalopatia em parente de primeiro grau?",
+        "label": "Há história familiar de morte súbita cardíaca, cardiomiopatia ou canalopatia em parente de primeiro grau?",
         "type": "boolean"
       },
       {
         "id": "palpitacoes_associadas",
-        "text": "Há palpitações associadas ao episódio de dor torácica?",
+        "label": "Há palpitações associadas ao episódio de dor torácica?",
         "type": "boolean"
       },
       {
         "id": "dor_reprodutivel_palpacao",
-        "text": "A dor é reproduzida pela palpação da parede torácica?",
+        "label": "A dor é reproduzida pela palpação da parede torácica?",
         "type": "boolean"
       },
       {
         "id": "exame_cardiovascular_alterado",
-        "text": "O exame cardiovascular apresenta sopro novo, atrito pericárdico ou sinais de insuficiência cardíaca?",
+        "label": "O exame cardiovascular apresenta sopro novo, atrito pericárdico ou sinais de insuficiência cardíaca?",
         "type": "boolean"
       },
       {
         "id": "febre_sintomas_infecciosos",
-        "text": "Há febre ou outros sintomas infecciosos associados, sugestivos de miocardite ou pericardite?",
+        "label": "Há febre ou outros sintomas infecciosos associados, sugestivos de miocardite ou pericardite?",
         "type": "boolean"
       },
       {
         "id": "cardiopatia_estrutural_previa",
-        "text": "A criança tem cardiopatia congênita conhecida, cirurgia cardíaca prévia ou doença de Kawasaki prévia?",
+        "label": "A criança tem cardiopatia congênita conhecida, cirurgia cardíaca prévia ou doença de Kawasaki prévia?",
         "type": "boolean"
       },
       {
         "id": "uso_substancias_estimulantes",
-        "text": "Há relato de uso de substâncias estimulantes (ex.: energéticos, drogas ilícitas)?",
+        "label": "Há relato de uso de substâncias estimulantes (ex.: energéticos, drogas ilícitas)?",
         "type": "boolean"
       },
       {
         "id": "duracao_episodio",
-        "text": "Qual a duração típica de cada episódio de dor?",
+        "label": "Qual a duração típica de cada episódio de dor?",
         "type": "select",
         "options": [
           {
@@ -10439,7 +10439,7 @@
       },
       {
         "id": "caracteristica_dor",
-        "text": "Como a criança ou adolescente descreve a dor?",
+        "label": "Como a criança ou adolescente descreve a dor?",
         "type": "multiselect",
         "options": [
           {
@@ -10466,12 +10466,12 @@
       },
       {
         "id": "idade_anos",
-        "text": "Qual a idade da criança ou adolescente, em anos?",
+        "label": "Qual a idade da criança ou adolescente, em anos?",
         "type": "number"
       },
       {
         "id": "ansiedade_estressores",
-        "text": "Há relato de ansiedade, estresse escolar/familiar ou sintomas de pânico associados aos episódios?",
+        "label": "Há relato de ansiedade, estresse escolar/familiar ou sintomas de pânico associados aos episódios?",
         "type": "boolean"
       }
     ],
