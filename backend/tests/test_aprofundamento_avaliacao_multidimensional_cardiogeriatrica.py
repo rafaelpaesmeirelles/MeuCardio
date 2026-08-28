@@ -73,6 +73,8 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
     # também em insuficiencia-cardiaca-no-idoso
     "framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026",
+    # também em hipertensão/fragilidade no idoso
+    "fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024",
 }
 
 
