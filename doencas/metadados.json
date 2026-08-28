@@ -15204,7 +15204,7 @@
     "category": "farmacologia",
     "subtype": "gestacao_lactacao",
     "prevalence_rank": 14,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Revisão individualizada de benefício materno, risco fetal ou neonatal, período gestacional, dose, alternativas e compatibilidade com lactação.",
     "tags": [
       "medicamentos",
@@ -15213,14 +15213,506 @@
       "segurança"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+      "De Backer J, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. PMID: 40878294",
+      "Cooper WO, et al. Major congenital malformations after first-trimester exposure to ACE inhibitors. N Engl J Med. 2006;354(23):2443-2451. PMID: 16760444",
+      "Bullo M, et al. Pregnancy outcome following exposure to angiotensin-converting enzyme inhibitors or angiotensin receptor antagonists: a systematic review. Hypertension. 2012;60(2):444-450. PMID: 22753220",
+      "D'Souza R, et al. Anticoagulation for pregnant women with mechanical heart valves: a systematic review and meta-analysis. Eur Heart J. 2017;38(19):1509-1516. PMID: 28329059",
+      "Lydakis C, Lip GY, Beevers M, Beevers DG. Atenolol and fetal growth in pregnancies complicated by hypertension. Am J Hypertens. 1999;12(6):541-547. PMID: 10371362",
+      "Bartalena L, Bogazzi F, Braverman LE, Martino E. Effects of amiodarone administration during pregnancy on neonatal thyroid function and subsequent neurodevelopment. J Endocrinol Invest. 2001;24(2):116-130. PMID: 11263469",
+      "Karalis DG, Hill AN, Clifton S, Wild RA. The risks of statin use in pregnancy: A systematic review. J Clin Lipidol. 2016;10(5):1081-1090. PMID: 27678424"
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+      "https://pubmed.ncbi.nlm.nih.gov/16760444/",
+      "https://pubmed.ncbi.nlm.nih.gov/22753220/",
+      "https://pubmed.ncbi.nlm.nih.gov/28329059/",
+      "https://pubmed.ncbi.nlm.nih.gov/10371362/",
+      "https://pubmed.ncbi.nlm.nih.gov/11263469/",
+      "https://pubmed.ncbi.nlm.nih.gov/27678424/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (14º lote de conteúdo do dia): ficha tinha apenas summary/tags/1 source_ref de catalogação, zero related_document_slugs, sem patient_material_slug. Ficha transversal (não é uma única doença, mas guia de decisão farmacológica cardiovascular na gestação/lactação). Adicionados epidemiology, presentation (11 cenários de decisão), diagnostic_approach (7 classes farmacológicas: inibidores do sistema renina-angiotensina, antagonistas de vitamina K/heparinas, beta-bloqueadores, diuréticos, amiodarona, estatinas, anticoagulantes orais diretos), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (13), assistant_rules (10). related_document_slugs criado com 7 itens (máximo permitido: 7), todos verificados individual e programaticamente quanto à resolução, ao escopo e à menção de classes/fármacos cardiovasculares específicos no texto. patient_material_slug preenchido com material já existente (slug idêntico ao da ficha, já vinculado a um dos documentos técnicos). Nenhuma dose de fármaco em nenhum campo — atenção redobrada por ser tema farmacológico, verificado programaticamente. 4 dos related_document_slugs compartilhados com outras fichas já publicadas (protese-mecanica-na-gravidez, hipertensao-cronica-gravidez, valvopatias-na-gravidez, tromboembolismo-gravidez) — overlap legítimo e esperado, dado o caráter transversal do tema farmacológico desta ficha, documentado no teste dedicado.",
+    "version": 2,
+    "epidemiology": "Cardiopatas gestantes, incluindo mulheres com cardiopatia congênita operada na infância que hoje chegam à idade fértil, frequentemente mantêm terapia cardiovascular crônica — anti-hipertensivos, anticoagulantes, antiarrítmicos ou diuréticos — que precisa ser reavaliada assim que a gestação é confirmada ou planejada. Existe lacuna estrutural de evidência: gestantes são sistematicamente excluídas de ensaios clínicos randomizados por razões éticas, de modo que grande parte do conhecimento sobre segurança de fármacos cardiovasculares na gravidez vem de registros observacionais, séries de casos, farmacovigilância retrospectiva e extrapolação de dados pré-clínicos, não de ensaios controlados. Isso mantém incerteza residual mesmo para classes amplamente prescritas. O princípio orientador é a decisão individualizada de risco-benefício: o risco de descompensação cardiovascular materna decorrente da suspensão abrupta de uma terapia eficaz precisa ser ponderado contra o risco teratogênico ou fetotóxico da exposição, considerando a classe farmacológica envolvida, o trimestre e a duração da exposição, e a existência de alternativas com perfil de segurança mais favorável. A mesma lógica de ponderação individualizada se aplica à lactação, período em que a compatibilidade de um fármaco pode diferir substancialmente da sua segurança durante a gestação.",
+    "presentation": [
+      "Gestante em uso crônico de inibidor da enzima conversora de angiotensina (IECA) ou bloqueador do receptor de angiotensina (BRA) para hipertensão que engravida e precisa de troca imediata de classe anti-hipertensiva",
+      "Gestante com prótese valvar mecânica em uso de varfarina, exigindo decisão sobre manter, reduzir ou transicionar para heparina ao longo dos trimestres",
+      "Necessidade de anticoagulação parenteral no período periparto em gestante com prótese valvar mecânica ou tromboembolismo venoso recente",
+      "Gestante em uso crônico de amiodarona para arritmia refratária, com necessidade de monitorização tireoidiana fetal e neonatal programada",
+      "Escolha do beta-bloqueador mais seguro para controle de frequência cardíaca ou pressão arterial ao longo da gestação",
+      "Gestante com insuficiência cardíaca crônica em uso de diurético, com dúvida sobre manter, ajustar ou suspender o tratamento",
+      "Gestante com dislipidemia familiar grave em uso de estatina antes da concepção, que engravida ou planeja engravidar",
+      "Definição do anti-hipertensivo de escolha diante de pré-eclâmpsia sobreposta a hipertensão crônica ou cardiopatia estrutural preexistente",
+      "Transição pré-concepcional de anticoagulante oral direto para heparina em mulher com fibrilação atrial ou tromboembolismo prévio",
+      "Puérpera lactante em uso de anti-hipertensivo, antiarrítmico ou anticoagulante que questiona a compatibilidade do fármaco com a amamentação",
+      "Exposição inadvertida a IECA/BRA não reconhecida antes da confirmação da gravidez, exigindo reclassificação de risco conforme o trimestre de exposição"
+    ],
+    "diagnostic_approach": {
+      "inibidores_do_sistema_renina_angiotensina": "IECA e bloqueadores do receptor de angiotensina II são contraindicados em todos os trimestres da gestação. O risco mais consistente e grave é a fetopatia por exposição no segundo e terceiro trimestres, caracterizada por disgenesia renal fetal, oligodrâmnio secundário à redução do débito urinário fetal, hipoplasia pulmonar, contraturas de membros e insuficiência renal neonatal; associação com malformações cardíacas e do sistema nervoso central após exposição isolada no primeiro trimestre é descrita, porém com evidência menos consistente. Diante de gestação confirmada ou planejada, a substituição por classe anti-hipertensiva compatível deve ocorrer o mais rápido possível; exposição inadvertida identificada apenas no momento do diagnóstico da gravidez exige avaliação ultrassonográfica seriada dirigida ao líquido amniótico e à função renal fetal, e não conduta alarmista isolada.",
+      "antagonistas_da_vitamina_k_e_heparinas": "Antagonistas da vitamina K atravessam a placenta e têm teratogenicidade dose-dependente, concentrada na janela de organogênese entre aproximadamente a sexta e a décima segunda semana, produzindo a embriopatia varfarínica (hipoplasia nasal, condrodisplasia punctata), além de risco de hemorragia fetal e sequelas do sistema nervoso central em exposições mais tardias. Em gestantes com prótese valvar mecânica, a troca indiscriminada para heparina não é isenta de risco: tanto a heparina não fracionada quanto a heparina de baixo peso molecular reduzem a exposição fetal ao fármaco, mas exigem ajuste rigoroso e monitorização laboratorial frequente, sob pena de trombose valvar — risco que se mostra maior quando a heparina é mal monitorada do que quando se mantém antagonista de vitamina K bem controlado. A escolha entre manter o antagonista de vitamina K, usar heparina não fracionada ou heparina de baixo peso molecular ao longo dos diferentes trimestres é individualizada, considerando o risco trombótico da prótese, a resposta anticoagulante prévia da paciente e a disponibilidade de monitorização laboratorial frequente.",
+      "beta_bloqueadores": "Os beta-bloqueadores não formam um grupo homogêneo quanto à segurança gestacional. Agentes como labetalol e metoprolol são preferidos por perfil mais favorável, enquanto o atenolol está associado a restrição de crescimento fetal e menor peso ao nascer quando o uso se inicia precocemente na gestação, o que o torna opção de segunda linha ou fármaco a ser evitado quando alternativas estão disponíveis. Efeitos de classe incluem bradicardia neonatal transitória e hipoglicemia neonatal, que justificam observação clínica do recém-nascido nas primeiras horas de vida, mas isoladamente não contraindicam o uso quando a classe é clinicamente necessária para controle de arritmia, hipertensão ou proteção hemodinâmica em cardiopatia estrutural materna.",
+      "diureticos": "Diuréticos, sobretudo os de alça e os tiazídicos, são usados com cautela na gestação pelo potencial de reduzir o volume plasmático circulante, que já está fisiologicamente expandido na gravidez normal e é relevante para a perfusão uteroplacentária adequada. Não constituem primeira escolha para tratar hipertensão gestacional isolada, mas podem ser mantidos em gestantes com insuficiência cardíaca crônica e sobrecarga de volume sintomática, quando o benefício do controle da congestão materna supera o risco teórico de hipoperfusão placentária associado à contração de volume. Diuréticos poupadores de potássio com ação antimineralocorticoide têm dados de segurança mais limitados nesse contexto e uso mais restrito.",
+      "amiodarona": "A amiodarona atravessa a placenta e tem alto teor de iodo em sua estrutura, o que a torna o antiarrítmico com maior risco de disfunção tireoidiana fetal e neonatal, incluindo hipotireoidismo transitório, bócio fetal e, mais raramente, hipertireoidismo. O risco de disfunção tireoidiana aumenta com a duração cumulativa da exposição ao longo da gestação, não se restringindo a um trimestre específico, o que reforça a necessidade de reservar a amiodarona para arritmias refratárias a alternativas mais seguras e de instituir monitorização sistemática da função tireoidiana fetal e neonatal sempre que o uso for clinicamente inevitável.",
+      "estatinas": "As estatinas foram reclassificadas em anos recentes: agências regulatórias retiraram a contraindicação absoluta antes atribuída à classe, reconhecendo que os dados originais de teratogenicidade eram limitados e possivelmente confundidos pela dislipidemia materna subjacente e por outras comorbidades associadas. Ainda assim, a controvérsia persiste: revisões sistemáticas recentes não confirmam aumento consistente de malformações maiores associado à exposição gestacional, mas o conjunto de evidências de segurança segue menos robusto do que o de outras classes cardiovasculares mais estudadas na gravidez, e a suspensão eletiva ao engravidar continua sendo a conduta predominante, exceto em dislipidemias familiares graves nas quais o risco cardiovascular materno decorrente da suspensão for considerado elevado.",
+      "anticoagulantes_orais_diretos": "Os anticoagulantes orais diretos, incluindo inibidores do fator Xa e da trombina, não têm segurança gestacional estabelecida, e os dados disponíveis em humanos permanecem insuficientes para sustentar seu uso durante a gravidez. A recomendação padrão é a transição pré-concepcional planejada para heparina ou antagonista de vitamina K conforme a indicação clínica de base; quando a gestação é identificada em vigência do uso corrente do fármaco, a troca deve ser realizada precocemente, com aconselhamento antecipado sempre que possível em mulheres em idade fértil que dependem dessa classe para anticoagulação crônica."
+    },
+    "differentials": [
+      "Contraindicação absoluta em qualquer contexto clínico (ex.: IECA/BRA em qualquer trimestre) versus contraindicação relativa, dependente da ausência de alternativa terapêutica e da gravidade da condição materna (ex.: amiodarona em arritmia refratária)",
+      "Risco predominante no primeiro trimestre, ligado à janela de organogênese (ex.: embriopatia por antagonista de vitamina K), versus risco predominante no segundo e terceiro trimestres (ex.: fetopatia por IECA/BRA, restrição de crescimento associada a atenolol)",
+      "Compatibilidade com a lactação versus segurança durante a gestação — são avaliações distintas; um fármaco pode ser contraindicado na gravidez e compatível na amamentação, ou apresentar o padrão inverso",
+      "Risco teratogênico estrutural, isto é, malformação anatômica, versus risco fetotóxico funcional, isto é, disfunção de órgão fetal sem malformação estrutural associada (ex.: disfunção renal ou tireoidiana fetal)",
+      "Decisão de manutenção crônica planejada de um fármaco versus manejo de exposição inadvertida já ocorrida antes do diagnóstico da gravidez, que demanda investigação dirigida retrospectiva em vez de conduta alarmista imediata",
+      "Risco absoluto atribuível ao fármaco versus risco relativo de descompensação cardiovascular materna decorrente da suspensão — a decisão de trocar ou suspender deve comparar os dois riscos, nunca avaliar o fármaco isoladamente"
+    ],
+    "tests": [
+      "Ultrassom morfológico direcionado, com avaliação anatômica detalhada nas janelas gestacionais apropriadas",
+      "Avaliação ultrassonográfica seriada do volume de líquido amniótico e da função renal fetal em exposição a IECA/BRA no segundo ou terceiro trimestre",
+      "Avaliação da função tireoidiana fetal e neonatal em gestantes ou puérperas em uso de amiodarona",
+      "Monitorização laboratorial de INR em gestantes mantidas com antagonista de vitamina K",
+      "Monitorização de atividade anti-fator Xa em gestantes em uso de heparina de baixo peso molecular, especialmente na presença de prótese valvar mecânica",
+      "Ecocardiograma fetal direcionado, com avaliação de ritmo e função cardíaca, em uso materno de antiarrítmicos",
+      "Ultrassom seriado de crescimento fetal (biometria) em gestante mantida em beta-bloqueador, particularmente atenolol",
+      "Avaliação clínica neonatal para bradicardia e hipoglicemia transitórias após exposição materna a beta-bloqueador"
+    ],
+    "red_flags": [
+      "Uso inadvertido de IECA/BRA não reconhecido até o segundo ou terceiro trimestre da gestação",
+      "Oligodrâmnio de início no segundo ou terceiro trimestre em gestante exposta a IECA/BRA",
+      "INR fora da faixa terapêutica-alvo em gestante com prótese valvar mecânica em uso de antagonista de vitamina K",
+      "Sinais de restrição de crescimento fetal em gestante mantida em atenolol",
+      "Bócio fetal ou alteração de frequência cardíaca fetal sugestiva de disfunção tireoidiana em uso materno de amiodarona",
+      "Sangramento vaginal ou sinais de coagulopatia fetal/neonatal próximo ao parto em gestante em uso de antagonista de vitamina K",
+      "Suspensão abrupta e não planejada de terapia cardiovascular crônica materna, com risco de descompensação hemodinâmica",
+      "Uso de anticoagulante oral direto não reconhecido em gestação recém-confirmada, sem transição oportuna para heparina"
+    ],
+    "treatment_summary": "O manejo farmacológico cardiovascular na gestação e na lactação exige decisão individualizada de risco-benefício, ponderando o risco da doença materna não tratada contra o risco de exposição fetal ou do lactente a cada classe de fármaco. Como princípio geral, a escolha terapêutica deve privilegiar classes com maior tempo de uso documentado e perfil de segurança mais bem estabelecido, revisando toda a farmacoterapia idealmente antes da concepção.\n\nOs inibidores do sistema renina-angiotensina — inibidores da enzima conversora de angiotensina (IECA), bloqueadores do receptor de angiotensina (BRA) e o inibidor direto de renina — são considerados contraindicados na gestação em todos os trimestres, pela associação com disfunção renal fetal, oligoidrâmnio, hipoplasia pulmonar e óbito fetal; a exposição em qualquer fase, inclusive além do primeiro trimestre, justifica suspensão e substituição imediatas. Os antagonistas de vitamina K também demandam cautela redobrada, sobretudo no primeiro trimestre, período de maior risco de embriopatia; quando o uso é imprescindível, como em prótese valvar mecânica, a decisão sobre manter o antagonista de vitamina K ou transicionar para heparina deve ser individualizada e compartilhada.\n\nMulheres em idade fértil em uso dessas classes contraindicadas devem ter troca planejada pré-concepcional, estabilizando o novo esquema antes da suspensão da contracepção. Em portadoras de prótese valvar mecânica, o manejo da anticoagulação exige plano estruturado de transição entre varfarina e heparina conforme o trimestre gestacional, com atenção especial ao período periparto, quando o risco de complicações trombóticas e hemorrágicas é maior e a conduta exige coordenação estreita entre equipe obstétrica e de hemostasia.\n\nEntre os beta-bloqueadores, há preferência por opções com perfil mais favorável em relação ao atenolol, que foi associado a restrição de crescimento fetal e por isso deve ser evitado quando alternativas estão disponíveis. Diuréticos podem ser mantidos com uso cauteloso quando já indicados previamente, evitando início na gestação salvo indicação específica. A amiodarona deve ser reservada a arritmias refratárias a outras opções terapêuticas, dado o risco de disfunção tireoidiana fetal e neonatal, exigindo monitorização tireoidiana intensificada quando seu uso for indispensável. As estatinas, historicamente contraindicadas de forma categórica na gestação, tiveram essa posição reavaliada por agências regulatórias recentes, que reconheceram populações específicas — como hipercolesterolemia familiar de alto risco — em que o benefício pode superar o risco, tornando a decisão também individualizada e não mais automática.\n\nPor fim, a compatibilidade de cada fármaco cardiovascular com a amamentação deve ser avaliada separadamente da segurança na gestação: nem todo medicamento seguro durante a gravidez é compatível com a lactação, e o inverso também é verdadeiro, de modo que a reavaliação pós-parto de toda a farmacoterapia é etapa obrigatória do cuidado.",
+    "ambulatory_flow": [
+      "Aconselhamento pré-concepcional para todas as mulheres em idade fértil em uso de fármacos cardiovasculares, com revisão completa da lista de medicamentos",
+      "Identificação de classes contraindicadas (IECA, BRA, inibidor direto de renina) e planejamento de troca antes da concepção",
+      "Ajuste e estabilização do esquema terapêutico com a classe substituta antes da suspensão da contracepção",
+      "Confirmação da gestação e reavaliação imediata de toda a farmacoterapia cardiovascular em uso",
+      "Para portadoras de prótese valvar mecânica, planejamento conjunto com equipe de hemostasia e cardiologia para transição entre anticoagulantes conforme o trimestre",
+      "Acompanhamento seriado de pressão arterial materna, função renal e crescimento fetal ao longo da gestação",
+      "Reavaliação da necessidade e da classe de beta-bloqueador, priorizando opções com perfil mais favorável e evitando atenolol",
+      "Revisão da indicação de amiodarona, reservando-a a arritmias refratárias e intensificando a monitorização tireoidiana materno-fetal",
+      "Planejamento do parto considerando o risco periparto aumentado da anticoagulação em prótese valvar mecânica",
+      "Reavaliação pós-parto de toda a farmacoterapia, com avaliação separada e específica da compatibilidade de cada fármaco com a amamentação",
+      "Orientação e acompanhamento clínico do lactente quando a mãe estiver em uso de fármacos cardiovasculares durante a amamentação"
+    ],
+    "emergency_flow": [
+      "Identificação de uso inadvertido de IECA, BRA ou inibidor direto de renina em gestação já em curso: suspensão imediata do fármaco e troca por classe compatível",
+      "Avaliação urgente de função renal fetal e volume de líquido amniótico após exposição a inibidor do sistema renina-angiotensina",
+      "Em prótese valvar mecânica com INR fora da faixa-alvo, ajuste imediato da anticoagulação e avaliação do risco trombótico versus hemorrágico",
+      "Avaliação emergencial de sinais de toxicidade fetal por amiodarona, como bradicardia fetal e alterações tireoidianas, com interconsulta especializada",
+      "Manejo periparto da anticoagulação em portadora de prótese valvar mecânica, com transição planejada para minimizar risco hemorrágico e trombótico ao redor do parto",
+      "Encaminhamento urgente a serviço de referência em cardiologia obstétrica diante de instabilidade hemodinâmica materna relacionada a ajuste ou suspensão de fármaco cardiovascular",
+      "Reavaliação emergencial da amamentação em uso materno de fármaco de segurança incerta na lactação, com decisão compartilhada sobre suspensão temporária"
+    ],
+    "monitoring": [
+      "Função renal materna (creatinina e ureia) em uso de fármacos com potencial impacto renal",
+      "Pressão arterial materna seriada",
+      "Crescimento fetal por ultrassonografia seriada (biometria)",
+      "Volume de líquido amniótico",
+      "INR seriado em pacientes com prótese valvar mecânica em uso de antagonista de vitamina K",
+      "Função tireoidiana materna e neonatal em uso de amiodarona",
+      "Frequência cardíaca fetal",
+      "Perfil lipídico materno quando em uso de estatina",
+      "Avaliação clínica do lactente quanto a sonolência, ganho ponderal e frequência cardíaca durante amamentação com fármacos cardiovasculares"
+    ],
+    "assistant_questions": [
+      {
+        "id": "gestacao_confirmada",
+        "text": "A gestação está confirmada ou há suspeita de gestação?",
+        "type": "boolean"
+      },
+      {
+        "id": "trimestre_atual",
+        "text": "Qual o trimestre gestacional atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "primeiro",
+            "label": "Primeiro trimestre"
+          },
+          {
+            "value": "segundo",
+            "label": "Segundo trimestre"
+          },
+          {
+            "value": "terceiro",
+            "label": "Terceiro trimestre"
+          }
+        ]
+      },
+      {
+        "id": "uso_atual_ieca_bra",
+        "text": "Há uso atual ou recente de IECA, BRA ou inibidor direto de renina?",
+        "type": "boolean"
+      },
+      {
+        "id": "protese_valvar_mecanica",
+        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "type": "boolean"
+      },
+      {
+        "id": "inr_dentro_alvo",
+        "text": "O INR está dentro da faixa-alvo terapêutica?",
+        "type": "boolean"
+      },
+      {
+        "id": "classe_farmaco_atual",
+        "text": "Quais classes de fármacos cardiovasculares estão em uso atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "ieca_bra_idr",
+            "label": "IECA, BRA ou inibidor direto de renina"
+          },
+          {
+            "value": "beta_bloqueador",
+            "label": "Beta-bloqueador"
+          },
+          {
+            "value": "diuretico",
+            "label": "Diurético"
+          },
+          {
+            "value": "amiodarona",
+            "label": "Amiodarona"
+          },
+          {
+            "value": "estatina",
+            "label": "Estatina"
+          },
+          {
+            "value": "vka",
+            "label": "Antagonista de vitamina K"
+          },
+          {
+            "value": "heparina",
+            "label": "Heparina"
+          },
+          {
+            "value": "bloqueador_canal_calcio",
+            "label": "Bloqueador de canal de cálcio"
+          }
+        ]
+      },
+      {
+        "id": "planejamento_gestacional",
+        "text": "A paciente está em planejamento pré-concepcional?",
+        "type": "boolean"
+      },
+      {
+        "id": "amamentando",
+        "text": "A paciente está amamentando atualmente?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_sugestivos_toxicidade_fetal",
+        "text": "Há sinais sugestivos de toxicidade fetal, como bradicardia fetal ou alteração de crescimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "atenolol_em_uso",
+        "text": "Há uso de atenolol especificamente?",
+        "type": "boolean"
+      },
+      {
+        "id": "numero_semanas_gestacionais",
+        "text": "Qual a idade gestacional em semanas?",
+        "type": "number"
+      },
+      {
+        "id": "funcao_tireoidiana_alterada",
+        "text": "Foram identificadas alterações na função tireoidiana materna ou fetal?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "alerta_ieca_bra_gestacao",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "uso_atual_ieca_bra",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "gestacao_confirmada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Uso confirmado de IECA, BRA ou inibidor direto de renina em gestação em curso"
+          ],
+          "messages": [
+            "Suspender imediatamente o inibidor do sistema renina-angiotensina e substituir por classe compatível com a gestação"
+          ],
+          "suggested_tests": [
+            "Ultrassonografia obstétrica para avaliação de função renal fetal e volume de líquido amniótico"
+          ]
+        }
+      },
+      {
+        "id": "inr_fora_alvo_protese",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "protese_valvar_mecanica",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "inr_dentro_alvo",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "INR fora da faixa-alvo em portadora de prótese valvar mecânica"
+          ],
+          "messages": [
+            "Reavaliar imediatamente o esquema de anticoagulação e o risco trombótico versus hemorrágico"
+          ]
+        }
+      },
+      {
+        "id": "sinais_toxicidade_fetal_amiodarona",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_sugestivos_toxicidade_fetal",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "amiodarona"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais sugestivos de toxicidade fetal em uso materno de amiodarona"
+          ],
+          "suggested_tests": [
+            "Avaliação de função tireoidiana materna e fetal"
+          ]
+        }
+      },
+      {
+        "id": "vka_primeiro_trimestre",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "vka"
+            },
+            {
+              "field": "trimestre_atual",
+              "op": "eq",
+              "value": "primeiro"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Uso de antagonista de vitamina K no primeiro trimestre"
+          ],
+          "messages": [
+            "Avaliar, de forma individualizada e compartilhada, manutenção do antagonista de vitamina K versus transição para heparina"
+          ]
+        }
+      },
+      {
+        "id": "amiodarona_uso_gestacao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "amiodarona"
+            },
+            {
+              "field": "gestacao_confirmada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Confirmar que a indicação de amiodarona é restrita a arritmia refratária a outras opções e intensificar monitorização tireoidiana"
+          ],
+          "suggested_tests": [
+            "Função tireoidiana materna periódica"
+          ]
+        }
+      },
+      {
+        "id": "atenolol_alerta_crescimento",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "atenolol_em_uso",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "gestacao_confirmada",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Considerar troca do atenolol por beta-bloqueador com perfil mais favorável, pelo risco de restrição de crescimento fetal"
+          ],
+          "suggested_tests": [
+            "Ultrassonografia obstétrica para avaliação de crescimento fetal"
+          ]
+        }
+      },
+      {
+        "id": "planejamento_pre_concepcional_troca",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "planejamento_gestacional",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "ieca_bra_idr"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Planejar troca pré-concepcional do inibidor do sistema renina-angiotensina antes da suspensão da contracepção"
+          ],
+          "ambulatory_flow": [
+            "Estabilizar esquema terapêutico substituto antes de tentar engravidar"
+          ]
+        }
+      },
+      {
+        "id": "estatina_gestacao_reavaliacao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "estatina"
+            },
+            {
+              "field": "gestacao_confirmada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Reavaliar individualmente a manutenção da estatina, considerando a reavaliação regulatória recente da contraindicação categórica na gestação"
+          ]
+        }
+      },
+      {
+        "id": "diuretico_uso_cauteloso",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "classe_farmaco_atual",
+              "op": "contains",
+              "value": "diuretico"
+            },
+            {
+              "field": "gestacao_confirmada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Manter diurético com uso cauteloso apenas quando já indicado previamente, evitando início na gestação sem indicação específica"
+          ]
+        }
+      },
+      {
+        "id": "lactacao_avaliacao_separada",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "amamentando",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Avaliar a compatibilidade de cada fármaco cardiovascular com a amamentação separadamente da segurança avaliada na gestação"
+          ],
+          "missing_information": [
+            "Lista atualizada de todos os fármacos cardiovasculares em uso durante a amamentação"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com prótese valvar mecânica em anticoagulação crônica configura a situação de mais alto risco trombótico e hemorrágico da cardiopatia na gravidez, e a decisão sobre o regime anticoagulante deve ser tomada em conjunto pela paciente e por uma equipe multidisciplinar de cardiopatia e gravidez antes mesmo da concepção, sempre que possível. Nenhuma das três estratégias disponíveis — anticoagulante oral antagonista da vitamina K ao longo de toda a gestação, heparina de baixo peso molecular ajustada por dose ao longo de toda a gestação, ou terapia sequencial com heparina no primeiro trimestre seguida de antagonista da vitamina K no segundo e terceiro trimestres — elimina o risco: o antagonista da vitamina K reduz o risco de trombose valvar e de desfecho materno adverso, enquanto a heparina reduz o risco fetal, e a escolha exige pesar esse compromisso caso a caso, considerando função protética, sítio valvar, histórico de trombose prévia e adesão. Monitorização laboratorial frequente é indispensável independentemente da estratégia escolhida, e qualquer sinal de dispneia nova, mudança no clique protético, síncope ou fenômeno embólico exige investigação ecocardiográfica imediata. Essa paciente está na faixa de risco cardiovascular mais elevada das classificações de risco materno na gravidez adotadas pelas diretrizes internacionais, o que justifica acompanhamento em centro de referência com equipe de cardiopatia e gravidez estruturada.",
+      "Gestante com hipertensão arterial crônica em uso de inibidor da enzima conversora de angiotensina ou de bloqueador do receptor de angiotensina que engravida de forma inadvertida deve ter o medicamento suspenso e substituído assim que a gravidez for reconhecida, sem exceção descrita na rotulagem registrada dessas classes: a bula é explícita ao afirmar que o uso no segundo e no terceiro trimestres pode prejudicar o desenvolvimento fetal e, em casos graves, causar a morte do feto, por mecanismo relacionado à redução da perfusão renal fetal e a oligoidrâmnio. A troca deve ser feita em contato direto com o prescritor no mesmo dia em que a gravidez é confirmada, e a paciente nunca deve interromper o anti-hipertensivo por conta própria sem substituição simultânea por uma classe considerada compatível com a gestação, pelo risco de descompensação pressórica abrupta. Quando a exposição já ocorreu no primeiro trimestre antes do diagnóstico da gravidez, o seguimento obstétrico passa a incluir vigilância ultrassonográfica fetal direcionada para função renal e volume de líquido amniótico, com decisão conjunta entre obstetrícia e cardiologia.",
+      "Gestante com arritmia refratária em uso de amiodarona representa um cenário de exceção dentro do manejo de arritmias na gravidez, porque as diretrizes atuais não recomendam o uso rotineiro desse antiarrítmico durante a gestação: a amiodarona é reservada a arritmias refratárias a outras terapias ou que ameacem a vida materna, quando não existe alternativa mais segura disponível. O motivo é o perfil de efeito fetal adverso bem documentado, que inclui hipotireoidismo fetal e restrição de crescimento, atribuído tanto à molécula quanto à sua alta carga de iodo. Quando o uso é indispensável por risco de vida, a gestante precisa de acompanhamento conjunto entre cardiologia e obstetrícia, com vigilância da função tireoidiana fetal e do crescimento fetal ao longo de toda a gestação, e a decisão de manter, ajustar ou suspender o fármaco deve ser reavaliada continuamente à luz do controle da arritmia versus a exposição fetal acumulada. Substituir a amiodarona por uma alternativa de perfil mais favorável deve sempre ser considerado antes de aceitar seu uso prolongado, e essa reavaliação cabe a uma equipe experiente em cardiopatia e gravidez.",
+      "Gestante com dislipidemia familiar grave em uso de estatina que engravida coloca em tensão duas informações que raramente aparecem juntas: a rotulagem registrada no Brasil continua a contraindicar a estatina na gravidez, enquanto a revisão de bula americana de 2021 removeu a contraindicação formal para um grupo seleto de mulheres com risco cardiovascular muito alto, como as portadoras de hipercolesterolemia familiar homozigótica ou de doença cardiovascular aterosclerótica já estabelecida. Essa divergência não autoriza a manutenção do medicamento por conta própria: a orientação vigente no Brasil segue sendo a suspensão da estatina assim que a gravidez é confirmada para a grande maioria das gestantes, e a eventual manutenção ou reintrodução em um subgrupo de risco muito alto é decisão individualizada, tomada em conjunto por cardiologia, obstetrícia e, quando disponível, especialista em lipídios — nunca decisão isolada da paciente. Fora desse subgrupo restrito, a recomendação prática permanece a suspensão do medicamento durante a gestação, com plano de reintrodução reavaliado no puerpério e atenção redobrada porque a mesma restrição também alcança a amamentação.",
+      "Puérpera amamentando em uso de anti-hipertensivo ou de anticoagulante exige avaliação fármaco a fármaco, porque a orientação de compatibilidade com a amamentação não acompanha necessariamente a orientação de compatibilidade com a gestação, havendo divergências registradas em bula que merecem atenção explícita da equipe. Entre os anticoagulantes, a varfarina e a heparina de baixo peso molecular têm perfil geralmente considerado mais favorável à amamentação por baixa passagem para o leite, enquanto os anticoagulantes orais diretos têm rotulagem mais restritiva, incluindo casos em que a bula coloca a decisão como uma escolha binária entre interromper a amamentação ou descontinuar o fármaco. Entre os anti-hipertensivos, algumas classes seguras na gestação passam a exigir cautela adicional no puerpério em lactantes, e a orientação sobre inibidor da enzima conversora de angiotensina, bloqueador do receptor de angiotensina e diurético poupador de potássio no contexto pós-parto e de amamentação deve ser revista caso a caso, sem presumir que a mesma restrição da gestação se aplica automaticamente ao aleitamento, nem o oposto. Essa reavaliação farmacológica deve ocorrer antes da alta hospitalar, com registro claro do que pode ser mantido, do que precisa ser trocado e do que exige decisão compartilhada com a paciente sobre continuar ou não a amamentação.",
+      "Gestante com insuficiência cardíaca em uso de diurético é conduzida com o entendimento de que o diurético trata a congestão sem modificar por si só o curso da doença de base, e seu uso deve ser reservado a sintomas congestivos persistentes, com atenção à perfusão placentária, porque a redução excessiva do volume circulante pode comprometer o fluxo uteroplacentário. A escolha entre manter, iniciar ou ajustar o diurético ao longo da gestação depende do quadro de congestão, da função renal e da idade gestacional, e essa decisão não deve ser padronizada nem extrapolada do protocolo de insuficiência cardíaca fora da gravidez, dado que classes amplamente usadas fora da gestação — inibidor da enzima conversora de angiotensina, bloqueador do receptor de angiotensina, antagonista do receptor mineralocorticoide de uso mais recente e inibidor do cotransportador sódio-glicose tipo 2 — não têm indicação na gestação e precisam ser substituídas por alternativas compatíveis. No pós-parto, especialmente em quem amamenta, a reintrodução da terapia completa de insuficiência cardíaca deve ser reavaliada fármaco a fármaco, porque a compatibilidade com a amamentação não é uniforme dentro dessas classes, e o diurético pode voltar a ser necessário na redistribuição volêmica do puerpério, com monitorização próxima nesse período de maior risco."
+    ],
+    "related_document_slugs": [
+      "ropac-iii-anticoagulacao-em-protese-valvar-mecanica-na-gestacao-dados-atualizados-de-risco",
+      "trombose-de-protese-valvar-mecanica-na-gestacao",
+      "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
+      "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+      "estatina-na-gestacao-a-revisao-da-fda-de-2021-e-onde-a-cautela-clinica-diverge-dela",
+      "hipolipemiantes-na-mulher-em-idade-fertil-gestacao-e-lactacao",
+      "anticoagulantes-na-gestacao-e-lactacao-o-que-diz-a-bula-registrada"
+    ],
+    "patient_material_slug": "medicamentos-cardiovasculares-gestacao-lactacao",
+    "fonte_producao": "claude"
   },
   {
     "slug": "plano-parto-cardiopatia-materna",
