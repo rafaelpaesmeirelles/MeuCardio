@@ -39,7 +39,14 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete-hub Tudo com Tudo de Doença arterial periférica de
+        # membros (geral), criado em 27/08/2026: slug novo, escopo
+        # restrito a DAP de membros — ver review_note.
+        "doenca-arterial-periferica-de-membros",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
