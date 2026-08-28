@@ -9500,7 +9500,7 @@
     "assistant_questions": [
       {
         "id": "estagio_cirurgico_atual",
-        "text": "Em qual estágio da via cirúrgica univentricular o paciente se encontra?",
+        "label": "Em qual estágio da via cirúrgica univentricular o paciente se encontra?",
         "type": "select",
         "options": [
           {
@@ -9523,32 +9523,32 @@
       },
       {
         "id": "tempo_desde_fontan_anos",
-        "text": "Quantos anos se passaram desde a cirurgia de Fontan?",
+        "label": "Quantos anos se passaram desde a cirurgia de Fontan?",
         "type": "number"
       },
       {
         "id": "saturacao_atual",
-        "text": "Qual a saturação periférica de oxigênio atual, em porcentagem?",
+        "label": "Qual a saturação periférica de oxigênio atual, em porcentagem?",
         "type": "number"
       },
       {
         "id": "sinais_cianose_progressiva",
-        "text": "Há cianose progressiva ou queda em relação à saturação basal do paciente?",
+        "label": "Há cianose progressiva ou queda em relação à saturação basal do paciente?",
         "type": "boolean"
       },
       {
         "id": "edema_ascite_novo",
-        "text": "Há edema periférico ou ascite de início recente?",
+        "label": "Há edema periférico ou ascite de início recente?",
         "type": "boolean"
       },
       {
         "id": "arritmia_nova",
-        "text": "Foi identificada arritmia atrial nova ou sintomática?",
+        "label": "Foi identificada arritmia atrial nova ou sintomática?",
         "type": "boolean"
       },
       {
         "id": "sintomas_atuais",
-        "text": "Quais sintomas o paciente apresenta atualmente?",
+        "label": "Quais sintomas o paciente apresenta atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -9587,17 +9587,17 @@
       },
       {
         "id": "enteropatia_perdedora_proteina_conhecida",
-        "text": "Há diagnóstico prévio de enteropatia perdedora de proteína?",
+        "label": "Há diagnóstico prévio de enteropatia perdedora de proteína?",
         "type": "boolean"
       },
       {
         "id": "bronquite_plastica_previa",
-        "text": "Há história prévia de bronquite plástica?",
+        "label": "Há história prévia de bronquite plástica?",
         "type": "boolean"
       },
       {
         "id": "hepatopatia_estagio",
-        "text": "Qual o estágio conhecido de acometimento hepático associado ao Fontan?",
+        "label": "Qual o estágio conhecido de acometimento hepático associado ao Fontan?",
         "type": "select",
         "options": [
           {
@@ -9624,17 +9624,17 @@
       },
       {
         "id": "uso_anticoagulante_antiagregante",
-        "text": "O paciente está em uso de anticoagulante ou antiagregante?",
+        "label": "O paciente está em uso de anticoagulante ou antiagregante?",
         "type": "boolean"
       },
       {
         "id": "seguimento_achd_ativo",
-        "text": "O paciente está em seguimento ativo com centro especializado em cardiopatia congênita do adulto (ACHD)?",
+        "label": "O paciente está em seguimento ativo com centro especializado em cardiopatia congênita do adulto (ACHD)?",
         "type": "boolean"
       },
       {
         "id": "classe_funcional",
-        "text": "Qual a classe funcional atual (NYHA)?",
+        "label": "Qual a classe funcional atual (NYHA)?",
         "type": "select",
         "options": [
           {
@@ -9657,7 +9657,7 @@
       },
       {
         "id": "acesso_centro_especializado",
-        "text": "Há acesso a centro terciário com expertise em falência de Fontan ou ACHD?",
+        "label": "Há acesso a centro terciário com expertise em falência de Fontan ou ACHD?",
         "type": "boolean"
       }
     ],
