@@ -21,9 +21,10 @@ def _rule(hub, rule_id):
 
 def test_ic_avancada_revisada_e_autorizada():
     hub = _hub()
+    note = hub["review_note"].casefold()
     assert hub["review_status"] == "revisado"
-    assert "publicação autorizada" in hub["review_note"]
-    assert "responsável médico" in hub["review_note"]
+    assert "publicação autorizada" in note
+    assert "responsável médico" in note
 
 
 def test_gates_de_lvad_e_transplante_exigem_contexto_correto():
