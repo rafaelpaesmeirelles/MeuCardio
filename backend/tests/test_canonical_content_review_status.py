@@ -39,15 +39,14 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
-PENDENTES_MARKDOWN_AVC: set[str] = {
-    # 3 documentos novos escritos em 28/08/2026 para preencher lacunas de
-    # documento_origem em checklists já publicados sem fonte narrativa —
-    # ver review_note de cada um.
-    "content/Cardiologia_do_Esporte_e_do_Exercício/aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca.md",
-    "content/Saúde_mental_e_cardiologia/manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia.md",
-    "content/Tromboembolismo/diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter.md",
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Hub Tudo com Tudo de cardiomiopatias, 27/08/2026 (PR próprio, base
+        # main): slug novo, ver review_note.
+        "cardiomiopatias",
+    },
 }
+PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
 def _records(relative_path: str) -> list[dict]:
