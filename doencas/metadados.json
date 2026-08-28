@@ -20118,9 +20118,20 @@
       "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/",
       "https://pubmed.ncbi.nlm.nih.gov/33332149/"
     ],
-    "review_status": "revisado",
-    "review_note": "Aprofundado de básico para completo em 12/08/2026, com fontes internacionais adicionais conferidas via PubMed. Conteúdo permanece qualitativo e descritivo — nenhum corte numérico específico (idade, gradiente, PA em mmHg, escore) é fabricado aqui; onde a decisão depende de valor de corte, a orientação é usar a diretriz e as calculadoras validadas da plataforma. Sujeito a julgamento clínico individual.",
-    "version": 2
+    "review_status": "pendente_revisao",
+    "review_note": "Fechamento de lacuna Tudo com Tudo de 28/08/2026 (28º lote de conteúdo do dia, segundo desta natureza após doenca-de-kawasaki/PR #642): ficha já estava completeness=completo, com todo o conteúdo clínico integral e review_status=revisado, mas related_document_slugs e patient_material_slug estavam None — violação pontual da regra Tudo com Tudo (3-7 vínculos obrigatórios). Não houve nenhuma alteração de conteúdo clínico já existente. Adicionados 7 related_document_slugs, todos confirmados por leitura real com contagem de menções centrais ao tema no texto (documento-hub sobre TAVI/futilidade no idoso frágil, bloqueio AV pós-TAVI + fluxograma, obstrução coronária aguda pós-TAVI + fluxograma, estenose aórtica descompensada/choque no idoso + fluxograma). patient_material_slug definido para o material educativo já existente sobre TAVI. version 2 → 3. review_status volta a pendente_revisao por prudência editorial (alteração de campo estrutural em ficha publicada), mesmo sem mudança de conteúdo clínico.",
+    "version": 3,
+    "related_document_slugs": [
+      "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+      "bloqueio-av-e-disturbio-de-conducao-apos-tavi",
+      "fluxograma-bloqueio-av-e-disturbio-de-conducao-apos-tavi",
+      "obstrucao-coronaria-aguda-apos-tavi",
+      "fluxograma-obstrucao-coronaria-aguda-apos-tavi",
+      "estenose-aortica-grave-descompensada-e-choque-no-idoso",
+      "fluxograma-estenose-aortica-grave-descompensada-e-choque-no-idoso"
+    ],
+    "patient_material_slug": "o-que-esperar-da-troca-de-valvula-por-cateter-tavi",
+    "fonte_producao": "claude"
   },
   {
     "slug": "amiloidose-cardiaca-idoso",
