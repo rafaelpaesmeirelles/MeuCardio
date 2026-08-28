@@ -77,6 +77,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "sincope-classificacao-etiologica-em-tres-grandes-grupos",
     "sincope-diagnostico-e-manejo-esc-2018",
     "sincope-e-risco-de-fratura-por-queda-o-que-os-estudos-de-coorte-mostram",
+    "fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

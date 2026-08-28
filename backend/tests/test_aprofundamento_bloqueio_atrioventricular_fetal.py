@@ -91,6 +91,8 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
     # também em extrassistoles-fetais
     "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno",
+    "bloqueio-av-congenito-completo-no-recem-nascido",  # overlap legítimo no corpus consolidado 28/08/2026
+    "ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

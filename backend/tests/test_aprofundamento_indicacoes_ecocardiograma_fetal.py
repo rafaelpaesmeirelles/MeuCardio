@@ -93,6 +93,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # também em tetralogia-de-fallot
     "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado",
     "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018",
+    "ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

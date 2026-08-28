@@ -39,7 +39,11 @@ PASTAS_NAO_DOCUMENTO = ("Farmacologia", "Calculadoras", "Exames")
 
 TERMOS_TEMA = ("miocardite",)
 
-DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS: set[str] = set()
+DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS: set[str] = {
+    "miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+    "miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual",
+    "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",
+}
 
 
 def _load_doencas() -> dict[str, dict]:

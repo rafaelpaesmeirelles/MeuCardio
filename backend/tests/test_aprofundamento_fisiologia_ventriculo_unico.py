@@ -80,6 +80,9 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
     # também em atresia-tricuspide
     "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+    "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",  # overlap legítimo no corpus consolidado 28/08/2026
+    "descompensacao-aguda-da-circulacao-de-fontan",  # overlap legítimo no corpus consolidado 28/08/2026
+    "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

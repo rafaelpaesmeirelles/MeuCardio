@@ -81,6 +81,9 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",  # canalopatias-pediatricas
     "fluxograma-sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",  # canalopatias-pediatricas
     "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",  # canalopatias-pediatricas
+    "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",  # overlap legítimo no corpus consolidado 28/08/2026
+    "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",  # overlap legítimo no corpus consolidado 28/08/2026
+    "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

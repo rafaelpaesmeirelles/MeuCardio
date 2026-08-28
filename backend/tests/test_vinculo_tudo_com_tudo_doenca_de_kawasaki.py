@@ -40,6 +40,7 @@ TERMOS_TEMA = ("kawasaki",)
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # também em dor-toracica-pediatrica (documento-hub daquela própria ficha)
     "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca",
+    "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 
