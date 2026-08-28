@@ -1,0 +1,161 @@
+"""Contrato de profundidade real do lote 6 de 27/08/2026 — cinco fichas
+especializadas já existentes (cardiopediatria e cardiogeriatria), produzido
+a partir do main atual (já com os lotes 1-5 e os hubs Tudo com Tudo
+anteriores mesclados e revisados).
+
+Este teste não mede só presença de campo: mede volume mínimo de conteúdo,
+para que uma edição futura não possa esvaziar silenciosamente a ficha de
+volta a um resumo de poucas linhas e ainda passar no gate. Nenhum slug novo
+foi criado em nenhuma coleção — só os cinco registros abaixo, já existentes,
+foram aprofundados.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+from app.services.clinical_rule_engine import (
+    validate_question_definitions,
+    validate_rule_definitions,
+)
+
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+DOENCAS_PATH = REPOSITORY_ROOT / "doencas/metadados.json"
+
+LOTE_SLUGS = {
+    "taquicardia-supraventricular-fetal",
+    "sindrome-coracao-esquerdo-hipoplasico-fetal",
+    "arritmias-na-gravidez",
+    "comunicacao-interatrial",
+    "isquemia-mesenterica-aguda-cardioembolica",
+}
+
+MIN_LIST_ITEMS = {
+    "presentation": 4,
+    "differentials": 3,
+    "tests": 4,
+    "red_flags": 4,
+    "ambulatory_flow": 3,
+    "emergency_flow": 3,
+    "monitoring": 4,
+    "special_populations": 3,
+}
+MIN_TEXT_CHARS = {
+    "epidemiology": 400,
+    "treatment_summary": 800,
+}
+MIN_DIAGNOSTIC_APPROACH_CHARS = 400
+
+
+def _load_doencas() -> dict[str, dict]:
+    items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))
+    return {item["slug"]: item for item in items}
+
+
+def _all_document_slugs() -> set[str]:
+    return {p.stem for p in (REPOSITORY_ROOT / "content").rglob("*.md")}
+
+
+def _all_patient_material_slugs() -> set[str]:
+    items = json.loads((REPOSITORY_ROOT / "material-paciente/metadados.json").read_text(encoding="utf-8"))
+    return {item["slug"] for item in items}
+
+
+def test_lote_nao_criou_nem_removeu_slug_de_doenca():
+    doencas = _load_doencas()
+    assert LOTE_SLUGS <= set(doencas)
+    assert len(doencas) == 102
+
+
+@pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
+def test_ficha_tem_marcacao_editorial_correta(slug: str):
+    doencas = _load_doencas()
+    item = doencas[slug]
+    assert item.get("fonte_producao") == "claude"
+    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("completeness") == "completo"
+    assert item.get("review_note")
+    assert item.get("source_refs") and len(item["source_refs"]) >= 2
+
+
+@pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
+def test_ficha_atinge_profundidade_minima_e_nao_e_mero_resumo(slug: str):
+    doencas = _load_doencas()
+    item = doencas[slug]
+
+    for field, minimum in MIN_LIST_ITEMS.items():
+        value = item.get(field) or []
+        assert isinstance(value, list), f"{slug}.{field} deveria ser lista"
+        assert len(value) >= minimum, (
+            f"{slug}.{field} tem {len(value)} itens, mínimo exigido {minimum} "
+            "— ficha regrediu para resumo"
+        )
+
+    for field, minimum in MIN_TEXT_CHARS.items():
+        value = item.get(field) or ""
+        assert isinstance(value, str), f"{slug}.{field} deveria ser texto corrido"
+        assert len(value) >= minimum, (
+            f"{slug}.{field} tem {len(value)} caracteres, mínimo exigido {minimum} "
+            "— ficha regrediu para resumo"
+        )
+
+    diagnostic = item.get("diagnostic_approach")
+    assert diagnostic, f"{slug}.diagnostic_approach vazio"
+    assert isinstance(diagnostic, (str, dict)), f"{slug}.diagnostic_approach deveria ser texto ou objeto estruturado"
+    serialized_len = len(diagnostic) if isinstance(diagnostic, str) else len(json.dumps(diagnostic, ensure_ascii=False))
+    assert serialized_len >= MIN_DIAGNOSTIC_APPROACH_CHARS, (
+        f"{slug}.diagnostic_approach tem {serialized_len} caracteres, mínimo exigido "
+        f"{MIN_DIAGNOSTIC_APPROACH_CHARS} — ficha regrediu para resumo"
+    )
+
+
+@pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
+def test_ficha_tem_assistente_deterministico_seguro(slug: str):
+    doencas = _load_doencas()
+    item = doencas[slug]
+    questions = item.get("assistant_questions") or []
+    rules = item.get("assistant_rules") or []
+    assert len(questions) >= 3, f"{slug}: menos de 3 perguntas de assistente"
+    assert len(rules) >= 3, f"{slug}: menos de 3 regras de assistente"
+
+    q_errors, q_ids = validate_question_definitions(slug, questions)
+    r_errors = validate_rule_definitions(slug, rules, q_ids)
+    assert q_errors == []
+    assert r_errors == []
+
+    assert any(rule.get("priority", 0) >= 70 for rule in rules), (
+        f"{slug}: nenhuma regra de alta prioridade — assistente não escala risco"
+    )
+
+
+def test_nenhuma_regra_do_lote_reproduz_escore_proprietario():
+    doencas = _load_doencas()
+    serialized = json.dumps(
+        [doencas[slug].get("assistant_rules", []) for slug in LOTE_SLUGS],
+        ensure_ascii=False,
+    ).casefold()
+    assert "mwho" not in serialized
+    assert "hfa-icos" not in serialized
+
+
+@pytest.mark.parametrize("slug", sorted(LOTE_SLUGS))
+def test_vinculos_tudo_com_tudo_resolvem_e_sao_apenas_documentos_e_material(slug: str):
+    doencas = _load_doencas()
+    item = doencas[slug]
+    documentos = _all_document_slugs()
+    materiais = _all_patient_material_slugs()
+
+    related = item.get("related_document_slugs") or []
+    assert related, f"{slug}: sem nenhum vínculo direto a documento"
+    for target in related:
+        assert target in documentos, f"{slug}: related_document_slugs aponta para documento inexistente: {target}"
+
+    patient_material = item.get("patient_material_slug")
+    if patient_material:
+        assert patient_material in materiais, (
+            f"{slug}: patient_material_slug aponta para material inexistente: {patient_material}"
+        )
