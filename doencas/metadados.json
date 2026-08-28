@@ -12303,42 +12303,42 @@
     "assistant_questions": [
       {
         "id": "sintomas_refratarios_apesar_otimizacao",
-        "text": "Há sintomas (dispneia, dor, fadiga) refratários apesar de otimização da terapia cardiovascular direcionada por diretriz?",
+        "label": "Há sintomas (dispneia, dor, fadiga) refratários apesar de otimização da terapia cardiovascular direcionada por diretriz?",
         "type": "boolean"
       },
       {
         "id": "possui_cdi",
-        "text": "O paciente possui cardioversor-desfibrilador implantável (CDI)?",
+        "label": "O paciente possui cardioversor-desfibrilador implantável (CDI)?",
         "type": "boolean"
       },
       {
         "id": "dependente_marcapasso",
-        "text": "O paciente é dependente de ritmo do marca-passo (ausência de ritmo próprio estável)?",
+        "label": "O paciente é dependente de ritmo do marca-passo (ausência de ritmo próprio estável)?",
         "type": "boolean"
       },
       {
         "id": "discussao_desativacao_dispositivo_feita",
-        "text": "Já houve discussão estruturada e documentada sobre desativação de choques do CDI ou do suporte de marca-passo?",
+        "label": "Já houve discussão estruturada e documentada sobre desativação de choques do CDI ou do suporte de marca-passo?",
         "type": "boolean"
       },
       {
         "id": "internacoes_ultimos_6_meses",
-        "text": "Quantas internações por descompensação cardiovascular o paciente teve nos últimos 6 meses?",
+        "label": "Quantas internações por descompensação cardiovascular o paciente teve nos últimos 6 meses?",
         "type": "number"
       },
       {
         "id": "uso_inotropico_continuo",
-        "text": "O paciente está em uso de inotrópico endovenoso contínuo como estratégia paliativa?",
+        "label": "O paciente está em uso de inotrópico endovenoso contínuo como estratégia paliativa?",
         "type": "boolean"
       },
       {
         "id": "diretivas_antecipadas_registradas",
-        "text": "Existem diretivas antecipadas de vontade formalmente registradas em prontuário?",
+        "label": "Existem diretivas antecipadas de vontade formalmente registradas em prontuário?",
         "type": "boolean"
       },
       {
         "id": "objetivo_cuidado_atual",
-        "text": "Qual o objetivo de cuidado atualmente definido com o paciente e a família?",
+        "label": "Qual o objetivo de cuidado atualmente definido com o paciente e a família?",
         "type": "select",
         "options": [
           {
@@ -12357,7 +12357,7 @@
       },
       {
         "id": "sintomas_presentes",
-        "text": "Quais sintomas estão presentes atualmente?",
+        "label": "Quais sintomas estão presentes atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -12392,17 +12392,17 @@
       },
       {
         "id": "cuidador_sobrecarga_sinais",
-        "text": "Há sinais de sobrecarga física/emocional no cuidador principal (esgotamento, luto antecipatório não elaborado)?",
+        "label": "Há sinais de sobrecarga física/emocional no cuidador principal (esgotamento, luto antecipatório não elaborado)?",
         "type": "boolean"
       },
       {
         "id": "encaminhado_paliativo_especializado",
-        "text": "O paciente já foi encaminhado para equipe de cuidados paliativos especializada?",
+        "label": "O paciente já foi encaminhado para equipe de cuidados paliativos especializada?",
         "type": "boolean"
       },
       {
         "id": "prognostico_estimado",
-        "text": "Qual a estimativa de prognóstico atual, conforme julgamento clínico da equipe?",
+        "label": "Qual a estimativa de prognóstico atual, conforme julgamento clínico da equipe?",
         "type": "select",
         "options": [
           {
