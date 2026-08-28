@@ -12828,7 +12828,7 @@
     "assistant_questions": [
       {
         "id": "tki_atual",
-        "text": "Qual o inibidor BCR-ABL (TKI) em uso atualmente?",
+        "label": "Qual o inibidor BCR-ABL (TKI) em uso atualmente?",
         "type": "select",
         "options": [
           {
@@ -12855,7 +12855,7 @@
       },
       {
         "id": "risco_cv_basal",
-        "text": "Qual a estratificação de risco cardiovascular basal do paciente?",
+        "label": "Qual a estratificação de risco cardiovascular basal do paciente?",
         "type": "select",
         "options": [
           {
@@ -12878,7 +12878,7 @@
       },
       {
         "id": "fatores_risco_cv",
-        "text": "Quais fatores de risco cardiovascular estão presentes?",
+        "label": "Quais fatores de risco cardiovascular estão presentes?",
         "type": "multiselect",
         "options": [
           {
@@ -12917,57 +12917,57 @@
       },
       {
         "id": "qtc_basal_prolongado",
-        "text": "O QTc basal (pré-tratamento) está prolongado?",
+        "label": "O QTc basal (pré-tratamento) está prolongado?",
         "type": "boolean"
       },
       {
         "id": "qtc_valor_ms",
-        "text": "Qual o valor do QTc atual, em milissegundos?",
+        "label": "Qual o valor do QTc atual, em milissegundos?",
         "type": "number"
       },
       {
         "id": "evento_vascular_oclusivo_agudo",
-        "text": "Há sinais ou sintomas de evento vascular oclusivo agudo (dor torácica, déficit neurológico focal, isquemia de membro)?",
+        "label": "Há sinais ou sintomas de evento vascular oclusivo agudo (dor torácica, déficit neurológico focal, isquemia de membro)?",
         "type": "boolean"
       },
       {
         "id": "sintomas_hipertensao_pulmonar",
-        "text": "Há dispneia progressiva, edema de membros inferiores ou outros sinais sugestivos de hipertensão pulmonar?",
+        "label": "Há dispneia progressiva, edema de membros inferiores ou outros sinais sugestivos de hipertensão pulmonar?",
         "type": "boolean"
       },
       {
         "id": "pressao_arterial_elevada",
-        "text": "Há pressão arterial elevada de difícil controle no seguimento?",
+        "label": "Há pressão arterial elevada de difícil controle no seguimento?",
         "type": "boolean"
       },
       {
         "id": "pas_valor",
-        "text": "Qual o valor da pressão arterial sistólica mais recente (mmHg)?",
+        "label": "Qual o valor da pressão arterial sistólica mais recente (mmHg)?",
         "type": "number"
       },
       {
         "id": "claudicacao_nova_ou_piora",
-        "text": "Há claudicação nova ou piora de claudicação prévia?",
+        "label": "Há claudicação nova ou piora de claudicação prévia?",
         "type": "boolean"
       },
       {
         "id": "sincope_ou_arritmia",
-        "text": "Houve episódio de síncope ou arritmia documentada?",
+        "label": "Houve episódio de síncope ou arritmia documentada?",
         "type": "boolean"
       },
       {
         "id": "uso_medicamentos_prolongadores_qt_concomitante",
-        "text": "O paciente usa concomitantemente outro(s) medicamento(s) prolongador(es) do intervalo QT?",
+        "label": "O paciente usa concomitantemente outro(s) medicamento(s) prolongador(es) do intervalo QT?",
         "type": "boolean"
       },
       {
         "id": "tempo_uso_tki_meses",
-        "text": "Há quantos meses o paciente está em uso do TKI atual?",
+        "label": "Há quantos meses o paciente está em uso do TKI atual?",
         "type": "number"
       },
       {
         "id": "avaliacao_cardio_oncologia_realizada",
-        "text": "Foi realizada avaliação por cardiologia ou cardio-oncologia neste ciclo de seguimento?",
+        "label": "Foi realizada avaliação por cardiologia ou cardio-oncologia neste ciclo de seguimento?",
         "type": "boolean"
       }
     ],
