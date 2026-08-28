@@ -40,7 +40,25 @@
 	}
 
 	# Instalador Windows é artefato de release grande e fica fora do Git, em
-	# volume persistente no host. O APK Android continua vindo do build web.
+	# volume persistente no host. O APK Android usa o mesmo volume para nunca
+	# cair no fallback HTML da SPA quando o frontend for reconstruído.
+	handle /downloads/corvia-os-android.apk {
+		root * /downloads
+		rewrite * /corvia-os-android.apk
+		header Content-Type "application/vnd.android.package-archive"
+		header Content-Disposition "attachment; filename=CorVIA-OS-Android.apk"
+		header Cache-Control "no-store"
+		file_server
+	}
+
+	handle /downloads/corvia-os-android.apk.sha256 {
+		root * /downloads
+		rewrite * /corvia-os-android.apk.sha256
+		header Content-Type "text/plain; charset=utf-8"
+		header Cache-Control "no-store"
+		file_server
+	}
+
 	redir /downloads/corvia-os-windows.zip /downloads/corvia-os-windows.exe 308
 
 	handle /downloads/corvia-os-windows.exe {
