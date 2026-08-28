@@ -1,0 +1,28 @@
+name: Temporary prepare fetal content for consolidated release
+on:
+  push:
+    branches: [claude/aprofundar-hidropisia-fetal-cardiovascular-20260828]
+    paths: [.github/workflows/temporary-prepare-fetal-release.yml]
+permissions: {contents: write}
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - run: |
+          git fetch origin release/all-pending-20260828
+          grep -R "12860870" doencas/metadados.json docs backend/tests && { echo 'PMID incorreto ainda presente'; exit 1; } || true
+          grep -q "12860871" doencas/metadados.json || { echo 'PMID corrigido ausente'; exit 1; }
+          git checkout origin/release/all-pending-20260828 -- backend/tests/test_canonical_content_review_status.py backend/tests/test_disease_fragments_canonical.py
+          mkdir -p doencas/correcoes
+          cat > doencas/correcoes/release-approve-20260828-hidropisia-fetal-cardiovascular.json <<'EOF'
+          [{"slug":"hidropisia-fetal-cardiovascular","set":{"review_status":"revisado","review_note":"Aprofundamento Tudo com Tudo de cardiologia fetal produzido pelo Claude; PMID de Krapp et al. conferido e corrigido para 12860871. Publicação explicitamente autorizada pelo responsável médico em 28/08/2026 para o release consolidado após validação dos gates, vínculos e regras determinísticas. Mantém necessidade de julgamento clínico individual."}}]
+          EOF
+          git rm .github/workflows/temporary-prepare-fetal-release.yml
+          git diff --check
+          git config user.name 'CorVIA Release Bot'; git config user.email 'actions@users.noreply.github.com'
+          git add backend/tests
+          git add -f doencas/correcoes/release-approve-20260828-hidropisia-fetal-cardiovascular.json
+          git commit -m 'review(science): preparar hidropisia fetal cardiovascular para release'
+          git push origin HEAD:claude/aprofundar-hidropisia-fetal-cardiovascular-20260828
