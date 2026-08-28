@@ -35,6 +35,25 @@ def _valid_url(value: str) -> bool:
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
+def _normalize_prevalence_rank(item: dict, *, slug: str) -> str | None:
+    """Normaliza o rank sem converter dado inválido nem gravar NULL no banco.
+
+    ``null`` significa ausência de recatalogação: a chave é removida. Em update,
+    isso preserva o valor existente; em insert, permite o default 999 do modelo.
+    """
+    prevalence_rank = item.get("prevalence_rank")
+    if prevalence_rank is None:
+        item.pop("prevalence_rank", None)
+        return None
+    if (
+        isinstance(prevalence_rank, bool)
+        or not isinstance(prevalence_rank, int)
+        or prevalence_rank < 1
+    ):
+        return f"{slug}: prevalence_rank deve ser inteiro positivo ou null"
+    return None
+
+
 def carregar(caminho_json: str) -> dict:
     try:
         items = load_disease_records(caminho_json)
@@ -69,13 +88,9 @@ def carregar(caminho_json: str) -> dict:
                 erros.append(f"{slug}: review_status inválido")
                 continue
 
-            prevalence_rank = item.get("prevalence_rank")
-            if prevalence_rank is not None and (
-                isinstance(prevalence_rank, bool)
-                or not isinstance(prevalence_rank, int)
-                or prevalence_rank < 1
-            ):
-                erros.append(f"{slug}: prevalence_rank deve ser inteiro positivo ou null")
+            rank_error = _normalize_prevalence_rank(item, slug=slug)
+            if rank_error:
+                erros.append(rank_error)
                 continue
 
             urls = item.get("source_urls") or []
@@ -98,16 +113,6 @@ def carregar(caminho_json: str) -> dict:
                 continue
 
             existing = db.query(SpecialtyDisease).filter(SpecialtyDisease.slug == slug).first()
-
-            # ``prevalence_rank`` é NOT NULL no banco e possui default 999 no
-            # modelo. Manifestos incrementais podem declarar explicitamente
-            # ``null`` quando não pretendem recatalogar prevalência. Nesse caso
-            # o loader deve preservar o valor já publicado; para registros novos,
-            # omitir a chave permite que o default do modelo seja aplicado.
-            # Nunca convertemos silenciosamente um rank inválido em 999.
-            if item.get("prevalence_rank") is None:
-                item.pop("prevalence_rank", None)
-
             if existing:
                 for field, value in item.items():
                     setattr(existing, field, value)
