@@ -64,14 +64,17 @@ def test_aorta_d_dimero_nao_e_gate_isolado_de_exclusao():
 def test_dor_isolada_nao_dispara_angio_tc_automatica():
     result = _evaluate(sudden_tearing_pain=True)
     assert result["risk"] == "urgente"
-    joined = " ".join(result.get("emergency_flow") or [])
-    assert "não inferir indicação de angio-TC apenas pela dor isolada" in joined
+    joined = " ".join(result.get("emergency_flow") or []).casefold()
+    assert "não inferir indicação de angio-tc apenas pela dor isolada" in joined
 
 
-def test_instabilidade_isolada_nao_e_rotulada_como_ruptura_aortica():
+def test_instabilidade_isolada_permanece_emergencia_sem_rotular_ruptura_aortica():
     result = _evaluate(instability_shock=True)
     assert "aorta-instabilidade-ruptura" not in result["matched_rules"]
+    assert "aorta-instabilidade-generica-sem-evidencia-especifica" in result["matched_rules"]
+    assert result["risk"] == "emergencia"
     joined = " ".join(result.get("emergency_flow") or []).casefold()
+    assert "sem inferir ruptura" in joined or "não inferir ruptura" in joined
     assert "acionar cirurgia vascular/cardiovascular" not in joined
 
 
