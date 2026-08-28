@@ -43,7 +43,7 @@
 	# explícitas impedem que um arquivo ausente caia no fallback da SPA e seja
 	# baixado como index.html com extensão .apk/.exe.
 	handle /downloads/corvia-os-android.apk {
-		root * /android-downloads
+		root * /downloads
 		rewrite * /corvia-os-android.apk
 		header Content-Type "application/vnd.android.package-archive"
 		header Content-Disposition "attachment; filename=CorVIA-OS-Android.apk"
@@ -52,7 +52,7 @@
 	}
 
 	handle /downloads/corvia-os-android.apk.sha256 {
-		root * /android-downloads
+		root * /downloads
 		rewrite * /corvia-os-android.apk.sha256
 		header Content-Type "text/plain; charset=utf-8"
 		header Cache-Control "public, max-age=3600"
