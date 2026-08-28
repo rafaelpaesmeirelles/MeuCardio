@@ -13427,7 +13427,7 @@
     "category": "avaliacao_global",
     "subtype": "multidimensional",
     "prevalence_rank": 6,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Integra função, cognição, humor, nutrição, medicamentos, suporte social, metas e vulnerabilidades à avaliação cardiovascular convencional.",
     "tags": [
       "idoso",
@@ -13436,20 +13436,589 @@
       "cognição"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit"
+      "AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit",
+      "Rich MW, Chyun DA, Skolnick AH, et al. Knowledge Gaps in Cardiovascular Care of the Older Adult Population: A Scientific Statement From the American Heart Association, American College of Cardiology, and American Geriatrics Society. Circulation. 2016;133(21):2103-2122. PMID: 27067230.",
+      "Damluji AA, Forman DE, van Diepen S, et al. Older Adults in the Cardiac Intensive Care Unit: Factoring Geriatric Syndromes in the Management, Prognosis, and Process of Care. Circulation. 2020;141(2):e6-e32. PMID: 31813278.",
+      "Damluji AA, Forman DE, Wang TY, et al. Management of Acute Coronary Syndrome in the Older Adult Population. Circulation. 2023;147(3):e32-e62. PMID: 36503287.",
+      "Chin K, Jones R, Lester E, Hegarty A, Thielemans L, Schiff R. Comprehensive geriatric assessment, and related interventions, to improve outcomes for older patients undergoing transcatheter aortic valve implantation (TAVI): a systematic review. Eur Geriatr Med. 2024;15(6):1615-1630. PMID: 39327412.",
+      "Brunetti E, Lucà F, Presta R, et al. A Comprehensive Geriatric Workup and Frailty Assessment in Older Patients with Severe Aortic Stenosis. J Clin Med. 2024;13(14):4169. PMID: 39064209.",
+      "de la Rubia-Molina C, Cubides-Novoa AF, Madrid-López MT, et al. Geriatric assessment and results of transcatheter aortic valve implantation. Med Clin (Barc). 2025;164(12):106936. PMID: 40222322.",
+      "Kempton H, Hall R, Hungerford SL, Hayward CS, Muller DWM. Frailty and transcatheter valve intervention: A narrative review. Catheter Cardiovasc Interv. 2024;104(1):155-166. PMID: 38819861.",
+      "Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. J Gerontol A Biol Sci Med Sci. 2001;56(3):M146-M156. PMID: 11253156.",
+      "Rockwood K, Song X, MacKnight C, et al. A global clinical measure of fitness and frailty in elderly people. CMAJ. 2005;173(5):489-495. PMID: 16129869.",
+      "Afilalo J, Eisenberg MJ, Morin JF, et al. Gait speed as an incremental predictor of mortality and major morbidity in elderly patients undergoing cardiac surgery. J Am Coll Cardiol. 2010;56(20):1668-1676. PMID: 21050978.",
+      "Nasreddine ZS, Phillips NA, Bédirian V, et al. The Montreal Cognitive Assessment, MoCA: a brief screening tool for mild cognitive impairment. J Am Geriatr Soc. 2005;53(4):695-699. PMID: 15817019.",
+      "O'Mahony D, O'Sullivan D, Byrne S, O'Connor MN, Ryan C, Gallagher P. STOPP/START criteria for potentially inappropriate prescribing in older people: version 2. Age Ageing. 2015;44(2):213-218. PMID: 25324330."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary"
+      "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary",
+      "https://pubmed.ncbi.nlm.nih.gov/27067230/",
+      "https://pubmed.ncbi.nlm.nih.gov/31813278/",
+      "https://pubmed.ncbi.nlm.nih.gov/36503287/",
+      "https://pubmed.ncbi.nlm.nih.gov/39327412/",
+      "https://pubmed.ncbi.nlm.nih.gov/39064209/",
+      "https://pubmed.ncbi.nlm.nih.gov/40222322/",
+      "https://pubmed.ncbi.nlm.nih.gov/38819861/",
+      "https://pubmed.ncbi.nlm.nih.gov/11253156/",
+      "https://pubmed.ncbi.nlm.nih.gov/16129869/",
+      "https://pubmed.ncbi.nlm.nih.gov/21050978/",
+      "https://pubmed.ncbi.nlm.nih.gov/15817019/",
+      "https://pubmed.ncbi.nlm.nih.gov/25324330/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (9º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608, hipertensao-arterial-pediatrica/PR #609, dor-toracica-pediatrica/PR #610, dislipidemias-pediatricas/PR #611, arritmias-pediatricas/PR #612): ficha estava com apenas metadados de catalogação e 3 related_document_slugs. Diferente de uma doença, esta ficha é um FRAMEWORK de avaliação geriátrica ampla (CGA) aplicado à decisão cardiovascular no idoso — produzida epidemiologia (prevalência de fragilidade em candidatos a TAVI, evidência de que impressão clínica subjetiva subestima fragilidade vs. avaliação estruturada), apresentação (10 cenários de decisão, não sintomas), abordagem diagnóstica estruturada em 7 subtópicos (rastreio de fragilidade, avaliação cognitiva, humor, nutrição, polifarmácia STOPP/START, suporte social, integração em decisão compartilhada), 8 armadilhas de avaliação (não diagnósticos diferenciais clássicos), 10 instrumentos/escalas, 7 red flags, tratamento (interpretação graduada de fragilidade leve/moderada/grave, envolvimento de Heart Team geriátrico, articulação com cuidados paliativos), fluxos ambulatorial/emergência, monitoramento, 7 populações especiais, assistente clínico determinístico (13 perguntas, 10 regras, priority 92 para fragilidade grave + sobrevida <6 meses) e 5 related_document_slugs (2 novos + os 3 já existentes) — teto deliberadamente abaixo de 7 por decisão de qualidade sobre quantidade: vários candidatos fortes sobre fragilidade isolada já estão saturados nas fichas fragilidade-pre-procedimento-cardiovascular e anticoagulacao-idoso, e esta ficha é especificamente sobre avaliação MULTIDIMENSIONAL (múltiplos domínios), não fragilidade física isolada. 2 dos 5 documentos são compartilhados com outras fichas já publicadas (estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade, também em fragilidade-pre-procedimento-cardiovascular e valvopatias; framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026, também em insuficiencia-cardiaca-no-idoso) — mantidos por serem genuína e centralmente relevantes também à avaliação multidimensional. Nenhuma dose de fármaco citada.",
+    "version": 2,
     "related_document_slugs": [
       "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
       "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
-      "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca"
+      "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca",
+      "fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024",
+      "framework-de-manejo-por-dominio-para-insuficiencia-cardiaca-no-idoso-aha-2026"
     ],
-    "patient_material_slug": "escala-de-fragilidade-e-o-cuidado-do-seu-coracao"
+    "patient_material_slug": "escala-de-fragilidade-e-o-cuidado-do-seu-coracao",
+    "fonte_producao": "claude",
+    "epidemiology": "A fragilidade e o comprometimento multidimensional são altamente prevalentes em idosos com doença cardiovascular grave candidatos a procedimentos de alto risco. Revisões sistemáticas sobre TAVI relatam frequência relevante de fragilidade entre os candidatos avaliados por instrumentos padronizados, com sobreposição frequente entre comprometimento físico, cognitivo, nutricional e social no mesmo paciente (Chin K et al., Eur Geriatr Med 2024; Brunetti E et al., J Clin Med 2024). A idade cronológica isolada tem desempenho discriminativo limitado: pacientes da mesma faixa etária apresentam trajetórias de recuperação e risco procedural muito distintas conforme o grau de fragilidade, e a avaliação por impressão clínica subjetiva ('eyeballing') subestima sistematicamente a carga de fragilidade em comparação à avaliação geriátrica estruturada, levando a decisões inadequadas em ambas as direções — negação de tratamento eficaz a idosos robustos ou indicação de procedimentos de alto risco a idosos com fragilidade grave não reconhecida. A American Heart Association formalizou essa lacuna em declarações científicas dedicadas ao cuidado cardiovascular do idoso, recomendando incorporação sistemática de síndromes geriátricas — fragilidade, sarcopenia, comprometimento cognitivo, depressão, desnutrição, polifarmácia e fragilidade do suporte social — ao processo decisório, e não apenas variáveis fisiológicas de risco cardíaco tradicionais (Rich MW et al., Circulation 2016; Damluji AA et al., Circulation 2020; Damluji AA et al., Circulation 2023). Estudos em candidatos a TAVI demonstram que a incorporação da avaliação geriátrica ampla (CGA) à decisão do heart team melhora a estratificação de mortalidade, readmissão hospitalar, declínio funcional e institucionalização após o procedimento, superando modelos baseados apenas em escores de risco cirúrgico convencionais (de la Rubia-Molina C et al., Med Clin Barc 2025; Kempton H et al., Catheter Cardiovasc Interv 2024). A velocidade de marcha isolada já se mostrou preditor incremental robusto de mortalidade e morbidade maior após cirurgia cardíaca em coortes multicêntricas (Afilalo J et al., J Am Coll Cardiol 2010; Afilalo J et al., JAMA Cardiol 2016), reforçando que a avaliação funcional agrega informação prognóstica além da idade e dos escores tradicionais.",
+    "presentation": [
+      "Idoso com estenose aórtica grave sintomática avaliado para TAVI, em que a decisão entre tratamento intervencionista e cuidado paliativo depende do grau de fragilidade e da probabilidade de ganho funcional real após o implante.",
+      "Idoso candidato a cirurgia cardíaca aberta (revascularização ou troca valvar) com múltiplas comorbidades, em que a escolha entre abordagem cirúrgica aberta e percutânea/minimamente invasiva é orientada pela reserva funcional, e não apenas por escores como EuroSCORE II ou STS.",
+      "Decisão sobre implante de terapia de ressincronização cardíaca ou cardiodesfibrilador em idoso frágil, em que a expectativa de vida e a probabilidade de resposta clínica precisam ser ponderadas contra o risco do procedimento e a carga de manutenção do dispositivo.",
+      "Definição da intensidade da anticoagulação e da escolha do antitrombótico em idoso com fibrilação atrial e histórico de quedas recorrentes, em que a avaliação de mobilidade e risco de queda influencia diretamente a decisão terapêutica.",
+      "Idoso com insuficiência cardíaca avançada considerado para dispositivo de assistência ventricular ou transplante, em que suporte social, cognição e estado nutricional são determinantes centrais de elegibilidade.",
+      "Planejamento pré-operatório de cirurgia não cardíaca em idoso cardiopata, em que a avaliação multidimensional orienta o manejo perioperatório de risco de delirium, descompensação funcional e necessidade de reabilitação.",
+      "Reavaliação de metas de cuidado em idoso cardiopata após evento agudo (síndrome coronariana aguda, choque cardiogênico), em que a trajetória funcional prévia e as preferências do paciente orientam a intensidade das intervenções subsequentes.",
+      "Decisão sobre local de cuidado pós-procedimento (domicílio, reabilitação, instituição de longa permanência) em idoso submetido a intervenção cardiovascular, guiada pela avaliação de suporte social e função basal.",
+      "Ajuste do plano farmacológico cardiovascular em idoso polimedicado com prescrições de múltiplos especialistas, em que a revisão estruturada de polifarmácia precede procedimentos eletivos de alto risco.",
+      "Indicação e prescrição de reabilitação cardíaca em idoso frágil, em que a avaliação funcional basal determina a intensidade e o formato do programa proposto."
+    ],
+    "diagnostic_approach": {
+      "rastreio_de_fragilidade": "O rastreio inicial de fragilidade usa instrumentos breves e validados — o fenótipo de fragilidade de Fried (lentidão de marcha, fraqueza de preensão, exaustão autorreferida, baixa atividade física e perda de peso não intencional; Fried LP et al., 2001), a Clinical Frailty Scale de Rockwood (escala visual de 9 categorias baseada em julgamento clínico global de mobilidade e independência; Rockwood K et al., 2005) e o questionário FRAIL (cinco itens autorreferidos: fadiga, resistência, deambulação, comorbidades, perda de peso; Morley JE et al., 2012). A velocidade de marcha isolada (teste de 5 metros) é preditor incremental robusto de mortalidade e morbidade maior após cirurgia cardíaca e deve ser incorporada rotineiramente à triagem pré-procedimento (Afilalo J et al., 2010; 2016). Esses instrumentos identificam candidatos que necessitam avaliação multidimensional completa, mas não a substituem.",
+      "avaliacao_cognitiva_breve": "Testes breves como o MoCA (Montreal Cognitive Assessment, sensível para comprometimento cognitivo leve; Nasreddine ZS et al., 2005) e o Mini-Exame do Estado Mental (MEEM) rastreiam memória, função executiva e orientação, domínios relevantes para capacidade de consentimento informado, adesão a esquemas terapêuticos complexos pós-procedimento e risco de delirium perioperatório. Comprometimento cognitivo não reconhecido antes de TAVI ou cirurgia cardíaca associa-se a maior risco de delirium pós-operatório e pior recuperação funcional.",
+      "rastreio_de_depressao": "A Escala de Depressão Geriátrica (GDS, Yesavage JA et al., 1982) rastreia sintomas depressivos frequentemente subdiagnosticados em idosos cardiopatas, associados a pior adesão terapêutica, menor engajamento em reabilitação e pior desfecho pós-procedimento.",
+      "avaliacao_nutricional": "A Mini Avaliação Nutricional (MNA) rastreia desnutrição e risco nutricional, fatores associados a cicatrização prejudicada, maior tempo de internação e complicações infecciosas pós-procedimento (Vellas B et al., 2006); deve incluir também avaliação de sarcopenia, frequentemente coexistente mas conceitualmente distinta da fragilidade física global.",
+      "revisao_de_polifarmacia": "A revisão estruturada de polifarmácia usa os critérios STOPP/START versão 2 para identificar prescrições potencialmente inapropriadas e omissões terapêuticas relevantes em idosos (O'Mahony D et al., 2015), etapa essencial antes de procedimentos de alto risco que frequentemente acrescentam novos fármacos ao esquema já complexo do paciente.",
+      "avaliacao_de_suporte_social_e_funcao": "A avaliação de suporte social e de função nas atividades básicas e instrumentais de vida diária determina a viabilidade dos cuidados pós-procedimento, a adesão à reabilitação e o risco de institucionalização; ausência de cuidador ou rede de apoio é determinante prático tão relevante quanto variáveis biológicas na decisão sobre intervenções de alto risco.",
+      "integracao_em_decisao_compartilhada": "A American Heart Association recomenda que fragilidade física, cognição, humor, nutrição, polifarmácia e suporte social sejam integrados — não interpretados isoladamente — em discussão de heart team multidisciplinar, culminando em decisão compartilhada que pondere expectativa de vida, probabilidade de benefício funcional e preferências explícitas do paciente, conforme framework detalhado nas declarações científicas sobre cuidado cardiovascular do idoso (Rich MW et al., 2016; Damluji AA et al., 2020; 2023)."
+    },
+    "differentials": [
+      "Confundir fragilidade física global com sarcopenia isolada, tratando perda de massa muscular como sinônimo do fenótipo de fragilidade multidimensional, o que deixa de investigar outros domínios comprometidos (cognição, humor, suporte social).",
+      "Subestimar o risco por impressão clínica subjetiva ('paciente parece bem') sem aplicar instrumento estruturado — abordagem sistematicamente menos acurada que a avaliação geriátrica formal na predição de desfechos pós-procedimento.",
+      "Deixar de rastrear cognição por limitação de tempo na consulta, atribuindo esquecimento ou lentidão de raciocínio exclusivamente à idade avançada sem investigar comprometimento cognitivo relevante para a decisão.",
+      "Atribuir fadiga, dispneia aos mínimos esforços ou quedas a 'processo normal do envelhecimento' sem investigar causas reversíveis (anemia, hipotireoidismo, deficiência nutricional, depressão, efeito adverso de polifarmácia).",
+      "Avaliar apenas um domínio isolado (por exemplo, só a marcha) e generalizar esse resultado como representativo do estado geral do paciente, ignorando a natureza multidimensional da fragilidade.",
+      "Aplicar escores de risco cirúrgico tradicionais como substitutos da avaliação geriátrica, quando esses escores não capturam adequadamente cognição, suporte social ou estado funcional basal.",
+      "Não envolver a família/cuidador nem explicitar metas de cuidado do próprio paciente, tomando decisões de alto risco apenas com critérios técnicos sem checar se o desfecho esperado é aceitável para o paciente.",
+      "Presumir que fragilidade é contraindicação absoluta ao procedimento, quando parte relevante dos pacientes com fragilidade leve a moderada se beneficia do tratamento — a avaliação deve calibrar risco, não simplesmente excluir."
+    ],
+    "tests": [
+      "Clinical Frailty Scale (Rockwood)",
+      "Fenótipo de fragilidade de Fried (velocidade de marcha, força de preensão, exaustão, atividade física, perda de peso)",
+      "Teste de velocidade de marcha (percurso de 5 metros)",
+      "Questionário FRAIL",
+      "MoCA (Montreal Cognitive Assessment)",
+      "Mini-Exame do Estado Mental (MEEM)",
+      "Escala de Depressão Geriátrica (GDS)",
+      "Mini Avaliação Nutricional (MNA)",
+      "Critérios STOPP/START versão 2",
+      "Avaliação de atividades básicas e instrumentais de vida diária (Katz/Lawton)"
+    ],
+    "red_flags": [
+      "Fragilidade grave (Clinical Frailty Scale elevada ou fenótipo de Fried com múltiplos critérios positivos) — reconsiderar indicação de procedimento eletivo de alto risco ou discutir cuidado paliativo compartilhado.",
+      "Comprometimento cognitivo moderado a grave não reconhecido previamente — risco elevado de delirium pós-procedimento e comprometimento da capacidade de consentimento informado e de adesão a tratamento complexo.",
+      "Ausência de suporte social/cuidador estruturado para os cuidados pós-procedimento — risco de readmissão, complicações não detectadas precocemente e institucionalização.",
+      "Desnutrição ou risco nutricional identificado na avaliação nutricional — associado a cicatrização prejudicada, infecção e maior mortalidade perioperatória, exigindo otimização antes de procedimento eletivo quando possível.",
+      "Múltiplas quedas recentes ou instabilidade de marcha — sinaliza fragilidade física relevante e risco aumentado de sangramento/trauma sob anticoagulação, exigindo reavaliação da estratégia antitrombótica.",
+      "Depressão significativa não tratada — associada a menor adesão terapêutica e pior desfecho funcional pós-procedimento.",
+      "Polifarmácia com múltiplas prescrições inapropriadas identificadas pelos critérios STOPP — risco aumentado de interação medicamentosa e eventos adversos no período periprocedimento."
+    ],
+    "treatment_summary": "A avaliação multidimensional em cardiogeriatria deve ser incorporada sistematicamente à decisão pré-procedimento sempre que um paciente idoso for candidato a intervenção cardiovascular de alto risco — TAVI, revascularização cirúrgica ou percutânea complexa, implante de dispositivo eletrônico ou cirurgia não cardíaca de grande porte —, independentemente da idade cronológica isolada, que não deve ser utilizada como critério de exclusão ou de indicação. O rastreio de fragilidade (por exemplo, Clinical Frailty Scale, fenótipo de Fried ou instrumentos compostos validados para pacientes valvares, como o Essential Frailty Toolset) deve ser realizado rotineiramente em candidatos com 70 anos ou mais, ou mais precocemente diante de sinais clínicos de vulnerabilidade — perda de peso não intencional, redução de velocidade de marcha, quedas recorrentes, dependência funcional emergente ou acúmulo de múltiplas comorbidades. A interpretação do grau de fragilidade deve ser graduada, não binária: fragilidade leve ou pré-fragilidade, isoladamente, não contraindica um procedimento de alto risco e não deve, por si só, justificar recusa de tratamento efetivo — o paciente frágil leve costuma se beneficiar da intervenção, com trajetória de recuperação favorável quando associada a plano de pré-habilitação e reabilitação estruturada. Fragilidade moderada exige reavaliação cuidadosa da relação risco-benefício, otimização pré-procedimento dos domínios modificáveis (nutrição, força muscular, controle de comorbidades) e planejamento antecipado de reabilitação. Fragilidade grave, sobretudo quando envolve comprometimento simultâneo de múltiplos domínios (cognição, nutrição, mobilidade, suporte social), deve motivar reavaliação formal do risco-benefício, consideração de vias terapêuticas menos invasivas quando disponíveis, e nunca deve ser conduzida sem discussão multidisciplinar. A equipe geriátrica, integrada ao Heart Team, deve ser envolvida formalmente sempre que houver fragilidade moderada a grave, discordância entre a impressão clínica e os escores objetivos, comprometimento cognitivo que possa afetar o consentimento informado, ou quando a expectativa de sobrevida e a qualidade de vida esperada pós-procedimento forem incertas. Os achados de cada domínio devem ser traduzidos em plano de reabilitação pós-procedimento individualizado: comprometimento cognitivo orienta simplificação dos esquemas terapêuticos e envolvimento ativo de cuidador; desnutrição ou sarcopenia orienta intervenção nutricional pré e pós-procedimento associada a fisioterapia precoce; suporte social inadequado orienta planejamento antecipado de alta e articulação com rede de apoio antes do procedimento; polifarmácia orienta revisão estruturada e desprescrição de medicamentos de risco. A comunicação de risco com a família deve incorporar explicitamente o grau de fragilidade, apresentando não apenas mortalidade e complicações do procedimento, mas também a probabilidade de recuperação funcional, o risco de declínio funcional permanente e o tempo estimado de reabilitação, evitando decisões baseadas exclusivamente em escores de risco cirúrgico tradicionais, que não capturam a dimensão da fragilidade. Quando fragilidade avançada coexiste com múltiplas comorbidades graves e a expectativa de benefício funcional é marginal ou a sobrevida esperada é limitada, a discussão deve se articular precocemente com cuidados paliativos, alinhando objetivos de cuidado, preferências do paciente e diretivas antecipadas de vontade — sem que isso signifique abandono terapêutico, já que cuidados paliativos podem coexistir com tratamento cardiovascular ativo focado em conforto, funcionalidade e qualidade de vida.",
+    "ambulatory_flow": [
+      "Identificar o candidato elegível para rastreio de fragilidade na consulta de indicação do procedimento (idade ≥70 anos ou sinais clínicos de vulnerabilidade)",
+      "Aplicar instrumento de rastreio de fragilidade validado (Clinical Frailty Scale, fenótipo de Fried ou Essential Frailty Toolset)",
+      "Avaliar sistematicamente os domínios complementares: cognição, estado nutricional, mobilidade e força, suporte social e funcional, e polifarmácia",
+      "Classificar o grau de fragilidade (ausente/pré-frágil, leve, moderada, grave) e correlacionar com o risco cirúrgico calculado por escore tradicional",
+      "Discutir o caso em Heart Team multidisciplinar com participação de geriatra sempre que houver fragilidade moderada/grave ou achados discordantes entre domínios",
+      "Elaborar plano de otimização pré-procedimento nos domínios modificáveis (nutrição, pré-habilitação física, revisão de polifarmácia)",
+      "Comunicar risco-benefício ao paciente e à família incorporando explicitamente o grau de fragilidade e a expectativa funcional, registrando objetivos de cuidado",
+      "Planejar reabilitação pós-procedimento individualizada conforme os domínios comprometidos e agendar reavaliação estruturada em seguimento"
+    ],
+    "emergency_flow": [
+      "Aplicar triagem rápida de fragilidade à beira-leito (por exemplo, Clinical Frailty Scale por impressão clínica ou relato de familiar) mesmo sem tempo hábil para avaliação completa",
+      "Verificar rapidamente dependência funcional prévia e cognição basal com familiar ou cuidador para contextualizar a decisão urgente",
+      "Considerar fragilidade grave identificada na triagem rápida como sinalizador para envolver precocemente equipe multidisciplinar (geriatria e, se pertinente, cuidados paliativos) na decisão de intervenção emergencial",
+      "Registrar e, quando possível, obter emergencialmente com a família os objetivos de cuidado e preferências prévias do paciente antes de decisões de alto risco"
+    ],
+    "monitoring": [
+      "Reavaliar o grau de fragilidade e os domínios comprometidos em intervalos definidos após o procedimento (por exemplo, 30 dias e 6 a 12 meses)",
+      "Monitorar a recuperação funcional (atividades de vida diária, velocidade de marcha) comparando-a à linha de base pré-procedimento",
+      "Reavaliar periodicamente o estado cognitivo, especialmente em pacientes que apresentaram delirium peri-procedimento",
+      "Reavaliar o estado nutricional e a necessidade de suporte nutricional continuado ao longo do seguimento",
+      "Revisar periodicamente a lista de medicamentos em uso para ajuste contínuo da polifarmácia",
+      "Reavaliar o suporte social e a adequação da rede de apoio ao longo do seguimento ambulatorial",
+      "Revisitar objetivos de cuidado e diretivas antecipadas de vontade em cada reavaliação relevante, especialmente após intercorrências clínicas"
+    ],
+    "assistant_questions": [
+      {
+        "id": "q_idade",
+        "text": "Qual a idade do paciente, em anos?",
+        "type": "number"
+      },
+      {
+        "id": "q_procedimento_alto_risco",
+        "text": "Qual procedimento cardiovascular de alto risco está sendo considerado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "tavi",
+            "label": "TAVI (implante valvar aórtico transcateter)"
+          },
+          {
+            "value": "revascularizacao_percutanea",
+            "label": "Revascularização percutânea (ICP)"
+          },
+          {
+            "value": "revascularizacao_cirurgica",
+            "label": "Revascularização cirúrgica (CRM)"
+          },
+          {
+            "value": "dispositivo",
+            "label": "Implante de dispositivo eletrônico cardíaco"
+          },
+          {
+            "value": "cirurgia_nao_cardiaca_alto_risco",
+            "label": "Cirurgia não cardíaca de alto risco"
+          },
+          {
+            "value": "outro",
+            "label": "Outro procedimento cardiovascular de alto risco"
+          }
+        ]
+      },
+      {
+        "id": "q_fragilidade_rastreio_realizado",
+        "text": "O rastreio formal de fragilidade foi realizado (ex.: Clinical Frailty Scale, Fried, Essential Frailty Toolset)?",
+        "type": "boolean"
+      },
+      {
+        "id": "q_grau_fragilidade",
+        "text": "Qual o grau de fragilidade identificado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhuma_prefragil",
+            "label": "Ausente ou pré-fragilidade"
+          },
+          {
+            "value": "leve",
+            "label": "Fragilidade leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Fragilidade moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Fragilidade grave"
+          }
+        ]
+      },
+      {
+        "id": "q_forca_preensao_reduzida",
+        "text": "A força de preensão manual (dinamometria) está reduzida para idade e sexo?",
+        "type": "boolean"
+      },
+      {
+        "id": "q_cognicao_alterada",
+        "text": "O rastreio cognitivo (ex.: Mini-Cog, MoCA) sugere comprometimento cognitivo?",
+        "type": "boolean"
+      },
+      {
+        "id": "q_estado_nutricional",
+        "text": "Qual o estado nutricional do paciente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "eutrofia",
+            "label": "Eutrofia"
+          },
+          {
+            "value": "risco_desnutricao",
+            "label": "Risco de desnutrição"
+          },
+          {
+            "value": "desnutricao",
+            "label": "Desnutrição estabelecida"
+          }
+        ]
+      },
+      {
+        "id": "q_suporte_social",
+        "text": "Como se caracteriza o suporte social e funcional do paciente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "adequado",
+            "label": "Suporte social adequado"
+          },
+          {
+            "value": "parcial",
+            "label": "Suporte social parcial"
+          },
+          {
+            "value": "inadequado",
+            "label": "Suporte social inadequado ou ausente"
+          }
+        ]
+      },
+      {
+        "id": "q_polifarmacia",
+        "text": "Quantos medicamentos de uso contínuo o paciente utiliza atualmente?",
+        "type": "number"
+      },
+      {
+        "id": "q_dependencia_avd",
+        "text": "Qual o grau de dependência do paciente em atividades de vida diária (AVDs)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "independente",
+            "label": "Independente para AVDs"
+          },
+          {
+            "value": "dependencia_parcial",
+            "label": "Dependência parcial"
+          },
+          {
+            "value": "dependencia_total",
+            "label": "Dependência total"
+          }
+        ]
+      },
+      {
+        "id": "q_objetivos_cuidado_discutidos",
+        "text": "Os objetivos de cuidado e/ou diretivas antecipadas de vontade foram discutidos com o paciente e a família?",
+        "type": "boolean"
+      },
+      {
+        "id": "q_heart_team_multidisciplinar",
+        "text": "O caso foi discutido em Heart Team multidisciplinar com participação de geriatra?",
+        "type": "boolean"
+      },
+      {
+        "id": "q_estimativa_sobrevida",
+        "text": "Qual a expectativa de sobrevida estimada, considerando comorbidades e fragilidade?",
+        "type": "select",
+        "options": [
+          {
+            "value": "maior_1_ano",
+            "label": "Maior que 1 ano"
+          },
+          {
+            "value": "6_a_12_meses",
+            "label": "Entre 6 e 12 meses"
+          },
+          {
+            "value": "menor_6_meses",
+            "label": "Menor que 6 meses"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "r_fragilidade_grave_procedimento_alto_risco_sem_heart_team",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "q_grau_fragilidade",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "q_procedimento_alto_risco",
+              "op": "in",
+              "value": [
+                "tavi",
+                "revascularizacao_cirurgica",
+                "revascularizacao_percutanea",
+                "dispositivo",
+                "cirurgia_nao_cardiaca_alto_risco"
+              ]
+            },
+            {
+              "field": "q_heart_team_multidisciplinar",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Fragilidade grave identificada sem discussão formal em Heart Team antes de procedimento cardiovascular de alto risco"
+          ],
+          "missing_information": [
+            "Discussão multidisciplinar com geriatria",
+            "Avaliação geriátrica ampla documentada"
+          ],
+          "suggested_tests": [
+            "Avaliação geriátrica ampla (cognição, nutrição, mobilidade, suporte social)"
+          ],
+          "messages": [
+            "Encaminhar o caso para discussão em Heart Team com participação de geriatra antes da decisão final sobre o procedimento"
+          ]
+        }
+      },
+      {
+        "id": "r_fragilidade_leve_nao_contraindica",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "q_grau_fragilidade",
+              "op": "eq",
+              "value": "leve"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Fragilidade leve isoladamente não contraindica procedimento cardiovascular de alto risco"
+          ],
+          "messages": [
+            "Prosseguir com avaliação padrão de risco-benefício; considerar plano de pré-habilitação antes do procedimento"
+          ]
+        }
+      },
+      {
+        "id": "r_idade_avancada_sem_rastreio_fragilidade",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "q_idade",
+              "op": "gte",
+              "value": 70
+            },
+            {
+              "field": "q_fragilidade_rastreio_realizado",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Rastreio formal de fragilidade não realizado"
+          ],
+          "suggested_tests": [
+            "Aplicar instrumento validado de rastreio de fragilidade (Clinical Frailty Scale, Fried ou Essential Frailty Toolset)"
+          ],
+          "messages": [
+            "Idade cronológica isolada não deve orientar a decisão; realizar rastreio de fragilidade antes de definir a conduta"
+          ]
+        }
+      },
+      {
+        "id": "r_cognicao_alterada_sem_objetivos_cuidado",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "q_cognicao_alterada",
+              "op": "truthy"
+            },
+            {
+              "field": "q_objetivos_cuidado_discutidos",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "red_flags": [
+            "Comprometimento cognitivo identificado sem discussão de objetivos de cuidado com paciente e família"
+          ],
+          "missing_information": [
+            "Discussão documentada de objetivos de cuidado e avaliação de capacidade decisória"
+          ],
+          "messages": [
+            "Envolver familiar ou responsável legal na discussão de objetivos de cuidado e avaliar capacidade de consentimento"
+          ]
+        }
+      },
+      {
+        "id": "r_desnutricao_fragilidade_moderada_grave",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "q_estado_nutricional",
+              "op": "in",
+              "value": [
+                "risco_desnutricao",
+                "desnutricao"
+              ]
+            },
+            {
+              "field": "q_grau_fragilidade",
+              "op": "in",
+              "value": [
+                "moderada",
+                "grave"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Avaliação nutricional formal e otimização pré-procedimento"
+          ],
+          "supporting": [
+            "Desnutrição associada a fragilidade moderada/grave aumenta o risco de complicações e prolonga a recuperação funcional"
+          ],
+          "messages": [
+            "Iniciar intervenção nutricional estruturada antes do procedimento sempre que a urgência clínica permitir"
+          ]
+        }
+      },
+      {
+        "id": "r_suporte_social_inadequado",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "q_suporte_social",
+              "op": "eq",
+              "value": "inadequado"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Plano de alta e rede de suporte social não estruturados"
+          ],
+          "messages": [
+            "Articular assistência social e planejamento antecipado de alta antes do procedimento, sobretudo se houver fragilidade moderada ou grave"
+          ]
+        }
+      },
+      {
+        "id": "r_polifarmacia_elevada",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "q_polifarmacia",
+              "op": "gte",
+              "value": 10
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Revisão farmacêutica estruturada para redução de polifarmácia"
+          ],
+          "messages": [
+            "Considerar revisão e desprescrição de medicamentos de alto risco antes de procedimento eletivo"
+          ]
+        }
+      },
+      {
+        "id": "r_dependencia_total_sobrevida_limitada_alto_risco",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "q_dependencia_avd",
+              "op": "eq",
+              "value": "dependencia_total"
+            },
+            {
+              "field": "q_estimativa_sobrevida",
+              "op": "eq",
+              "value": "menor_6_meses"
+            },
+            {
+              "field": "q_procedimento_alto_risco",
+              "op": "exists"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Dependência total em atividades de vida diária associada a expectativa de sobrevida limitada em candidato a procedimento de alto risco"
+          ],
+          "differentials": [
+            "Benefício funcional marginal do procedimento cardiovascular proposto"
+          ],
+          "messages": [
+            "Considerar articulação com cuidados paliativos e revisão de objetivos de cuidado antes de prosseguir com intervenção de alto risco"
+          ]
+        }
+      },
+      {
+        "id": "r_fragilidade_grave_sobrevida_limitada",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "q_grau_fragilidade",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "q_estimativa_sobrevida",
+              "op": "eq",
+              "value": "menor_6_meses"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Fragilidade grave associada a expectativa de sobrevida menor que 6 meses"
+          ],
+          "messages": [
+            "Priorizar discussão de cuidados paliativos e alinhamento de objetivos de cuidado com paciente e família antes de qualquer decisão sobre procedimento de alto risco"
+          ]
+        }
+      },
+      {
+        "id": "r_heart_team_realizado_fragilidade_moderada_prosseguir",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "q_grau_fragilidade",
+              "op": "eq",
+              "value": "moderada"
+            },
+            {
+              "field": "q_heart_team_multidisciplinar",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Fragilidade moderada já discutida em Heart Team multidisciplinar, com decisão compartilhada documentada"
+          ],
+          "messages": [
+            "Prosseguir conforme plano definido em Heart Team, com plano de reabilitação estruturado no pós-procedimento"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Idoso muito idoso (≥85 anos) candidato a TAVI: a avaliação multidimensional substitui a idade cronológica isolada como critério de decisão — combina fragilidade formal (não pelo 'eyeball test'), função cognitiva basal, estado nutricional, suporte social para reabilitação pós-procedimento e metas de cuidado, porque nessa faixa etária o STS-PROM e o EuroSCORE II subestimam sistematicamente o risco real quando aplicados isoladamente.",
+      "Idoso com comprometimento cognitivo leve não diagnosticado antes de procedimento de alto risco: rastreio cognitivo breve (ex.: Mini-Cog) deveria ser rotina pré-procedimento, já que déficit não reconhecido compromete capacidade de consentimento informado, adesão a regime terapêutico complexo pós-alta e reconhecimento precoce de delirium pós-operatório.",
+      "Idoso desnutrido/sarcopênico candidato a cirurgia cardíaca: a avaliação nutricional (peso, albumina, força de preensão, massa muscular) integra a avaliação multidimensional porque desnutrição e sarcopenia são preditores independentes de complicação pós-operatória, tempo de internação prolongado e mortalidade — abrindo janela para pré-habilitação nutricional e fisioterapêutica quando o tempo cirúrgico permite.",
+      "Idoso frágil com múltiplas quedas candidato a anticoagulação: a decisão sobre anticoagulante deve incorporar risco de queda dentro da avaliação multidimensional — função, marcha, ambiente domiciliar e suporte para administração da medicação —, já que o risco de sangramento por queda isolada raramente supera o benefício de prevenção de AVC em fibrilação atrial, mas a via de administração e o nível de monitorização podem mudar.",
+      "Idoso vivendo sozinho sem suporte social adequado para reabilitação pós-procedimento: o domínio social da avaliação multidimensional (rede de apoio, condições domiciliares, acesso a transporte e a serviço social) determina viabilidade de alta segura e de reabilitação cardíaca ambulatorial — isolamento social não identificado antes do procedimento é causa evitável de reinternação e de descompensação funcional pós-alta.",
+      "Idoso com múltiplas comorbidades e expectativa de vida limitada, em que a avaliação multidimensional orienta decisão entre intervenção e cuidados paliativos: quando fragilidade grave coexiste com comprometimento cognitivo avançado, dependência funcional basal e múltiplas comorbidades desfavoráveis, a avaliação ampla — não um único domínio isolado — é o que sustenta a discussão estruturada de objetivos de cuidado com paciente e família antes da decisão, distinguindo futilidade de niilismo terapêutico.",
+      "Idoso hospitalizado por descompensação aguda (ex.: síndrome coronariana aguda ou insuficiência cardíaca) sem avaliação geriátrica prévia registrada: a internação aguda é, na prática, a primeira oportunidade de rastreio multidimensional para muitos idosos — triagem de delirium, função, cognição e suporte social durante a internação clínica identifica vulnerabilidades que mudam o plano de alta e a indicação de reabilitação, mesmo quando nenhum procedimento eletivo está em jogo."
+    ]
   },
   {
     "slug": "risco-quedas-cardiogeriatria",
