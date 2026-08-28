@@ -21,9 +21,10 @@ def _rule(hub, rule_id):
 
 def test_achd_revisado_e_autorizado():
     hub = _hub()
+    note = hub["review_note"].casefold()
     assert hub["review_status"] == "revisado"
-    assert "publicação autorizada" in hub["review_note"]
-    assert "responsável médico" in hub["review_note"]
+    assert "publicação autorizada" in note
+    assert "responsável médico" in note
 
 
 def test_cianose_e_eisenmenger_sao_estados_separados():
@@ -44,13 +45,26 @@ def test_fontan_reconhece_dispneia_ou_congestao():
     assert values == {"dispneia_nova", "edema_ascite"}
 
 
-def test_hemoptise_e_gestacao_eisenmenger_têm_fluxos_proprios():
+def test_hemoptise_tem_fluxo_geral_e_eisenmenger_mais_especifico():
     hub = _hub()
     options = {item["value"] for item in _question(hub, "decompensation_symptoms")["options"]}
     assert "hemoptise" in options
+
+    generic = _rule(hub, "achd-hemoptise-geral-sem-eisenmenger")
+    assert generic["add"]["risk"] == "urgente"
+    assert any(item["value"] == "hemoptise" for item in generic["when"]["all"])
+    assert any(item["field"] == "eisenmenger_documented" for item in generic["when"]["none"])
+
     hemoptysis = _rule(hub, "achd-eisenmenger-hemoptise")
     assert hemoptysis["add"]["risk"] == "emergencia"
     assert "não iniciar, manter ou intensificar anticoagulação de forma automática" in " ".join(hemoptysis["add"]["emergency_flow"])
+
+
+def test_gestacao_eisenmenger_nao_pode_ser_omitida():
+    hub = _hub()
+    pregnancy_status = _question(hub, "pregnancy_status")
+    assert pregnancy_status["required"] is True
+    assert "nao_aplicavel" in {item["value"] for item in pregnancy_status["options"]}
 
     current_pregnancy = _rule(hub, "achd-eisenmenger-gestacao-atual")
     assert current_pregnancy["add"]["risk"] == "urgente"
