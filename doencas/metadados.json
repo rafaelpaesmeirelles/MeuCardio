@@ -10410,12 +10410,12 @@
     "assistant_questions": [
       {
         "id": "hemodynamic_instability",
-        "text": "A criança apresenta sinais de instabilidade hemodinâmica (hipotensão, má perfusão, alteração aguda de consciência, sinais de choque)?",
+        "label": "A criança apresenta sinais de instabilidade hemodinâmica (hipotensão, má perfusão, alteração aguda de consciência, sinais de choque)?",
         "type": "boolean"
       },
       {
         "id": "arrhythmia_type",
-        "text": "Qual o tipo de arritmia identificada?",
+        "label": "Qual o tipo de arritmia identificada?",
         "type": "select",
         "options": [
           {
@@ -10442,12 +10442,12 @@
       },
       {
         "id": "heart_rate_bpm",
-        "text": "Qual a frequência cardíaca atual (bpm)?",
+        "label": "Qual a frequência cardíaca atual (bpm)?",
         "type": "number"
       },
       {
         "id": "qrs_width",
-        "text": "O QRS observado no traçado é estreito ou largo?",
+        "label": "O QRS observado no traçado é estreito ou largo?",
         "type": "select",
         "options": [
           {
@@ -10466,17 +10466,17 @@
       },
       {
         "id": "vagal_maneuver_attempted",
-        "text": "Alguma manobra vagal já foi tentada nesta criança?",
+        "label": "Alguma manobra vagal já foi tentada nesta criança?",
         "type": "boolean"
       },
       {
         "id": "postoperative_context",
-        "text": "O quadro ocorreu no pós-operatório recente de cirurgia cardíaca (até 72 horas)?",
+        "label": "O quadro ocorreu no pós-operatório recente de cirurgia cardíaca (até 72 horas)?",
         "type": "boolean"
       },
       {
         "id": "symptoms_present",
-        "text": "Quais sintomas a criança apresenta atualmente?",
+        "label": "Quais sintomas a criança apresenta atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -10507,22 +10507,22 @@
       },
       {
         "id": "weight_kg",
-        "text": "Qual o peso atual da criança, em quilogramas?",
+        "label": "Qual o peso atual da criança, em quilogramas?",
         "type": "number"
       },
       {
         "id": "structural_heart_disease",
-        "text": "Há cardiopatia congênita ou estrutural associada?",
+        "label": "Há cardiopatia congênita ou estrutural associada?",
         "type": "boolean"
       },
       {
         "id": "recurrent_episodes",
-        "text": "Os episódios de arritmia são recorrentes ou incessantes apesar do tratamento clínico?",
+        "label": "Os episódios de arritmia são recorrentes ou incessantes apesar do tratamento clínico?",
         "type": "boolean"
       },
       {
         "id": "family_history_scd",
-        "text": "Há história familiar de morte súbita precoce ou canalopatia conhecida?",
+        "label": "Há história familiar de morte súbita precoce ou canalopatia conhecida?",
         "type": "boolean"
       }
     ],
