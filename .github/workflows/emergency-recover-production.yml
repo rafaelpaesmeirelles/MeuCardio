@@ -1,0 +1,72 @@
+name: Emergency recover production traffic
+
+on:
+  push:
+    branches:
+      - ops/emergency-recover-production-20260828
+
+permissions:
+  contents: read
+
+concurrency:
+  group: corvia-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    name: Restart restored production services
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: production
+    env:
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+    steps:
+      - name: Restart backend and public proxy without reconciliation
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          SSH_PORT="${SSH_PORT:-22}"
+
+          ssh_dir="$RUNNER_TEMP/corvia-recovery-ssh"
+          install -m 0700 -d "$ssh_dir"
+          trap 'rm -rf "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
+
+          ssh \
+            -p "$SSH_PORT" \
+            -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes \
+            -o ConnectTimeout=20 \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" \
+            'set -euo pipefail; \
+             cd /opt/meucardio; \
+             docker compose -f docker-compose.prod.yml up -d backend frontend-build caddy agenda-sync; \
+             for i in $(seq 1 30); do \
+               if docker compose -f docker-compose.prod.yml exec -T backend python -c "import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/ready\", timeout=2).read()" >/dev/null 2>&1; then \
+                 break; \
+               fi; \
+               sleep 2; \
+             done; \
+             docker compose -f docker-compose.prod.yml exec -T backend python -c "import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/ready\", timeout=3).read()" >/dev/null; \
+             docker compose -f docker-compose.prod.yml ps backend caddy db redis agenda-sync'
+
+      - name: Verify public API is reachable again
+        env:
+          PUBLIC_URL: https://corvia.med.br
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --retry 12 --retry-all-errors --retry-delay 5 "$PUBLIC_URL/api/health" > /dev/null
+          curl --fail --silent --show-error --retry 12 --retry-all-errors --retry-delay 5 "$PUBLIC_URL/api/ready" > /dev/null
+          echo "CorVIA public API restored."
