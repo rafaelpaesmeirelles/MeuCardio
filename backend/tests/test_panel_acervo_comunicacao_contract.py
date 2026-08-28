@@ -25,7 +25,9 @@ def test_painel_usa_catalogo_canonico_em_vez_de_somar_temas():
     assert "temas?.reduce" not in fonte
     # O copy da prancha canônica mudou, mas a métrica continua vindo do
     # catálogo transversal único — este é o contrato que importa.
-    assert "conteúdos clínicos disponíveis" in fonte
+    assert "conteúdos únicos publicados" in fonte
+    assert "(catalogo?.published_total ?? catalogo?.total ?? 9452) - 9452" in fonte
+    assert "aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam" in fonte
 
 
 def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca():

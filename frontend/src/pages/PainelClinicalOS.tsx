@@ -510,7 +510,7 @@ export default function PainelClinicalOS() {
           <div className="ccc-intelligence-list">
             <Link to="/diretrizes"><span><Icone nome="evidencia" /></span><strong>{atualizacoes.length || "—"}</strong><p>atualizações científicas nas últimas 24 horas</p></Link>
             <Link to="/diretrizes"><span><Icone nome="conhecimento" /></span><strong>{atualizacoes[0] ? "1" : "—"}</strong><p>{atualizacoes[0]?.title || "Guideline nova"}</p></Link>
-            <Link to="/biblioteca"><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos clínicos disponíveis</p></Link>
+            <Link to="/biblioteca" title="O total conta registros canônicos únicos; aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam o mesmo conteúdo."><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos únicos publicados · +{Math.max((catalogo?.published_total ?? catalogo?.total ?? 9452) - 9452, 0)} novos desde 26/08</p></Link>
             <Link to={contextos[0]?.path || "/busca"}><span><Icone nome={contextos[0]?.icone || "busca"} /></span><strong>↻</strong><p>Continuar: {contextos[0]?.titulo || "última pesquisa"}</p></Link>
           </div>
           <Link to="/busca" className="ccc-intelligence-graph"><span>◎</span><span><strong>Explorar relações</strong><small>Tudo com Tudo</small></span><Icone nome="seta" /></Link>
