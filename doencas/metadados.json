@@ -10360,7 +10360,7 @@
     "category": "cardiologia_fetal",
     "subtype": "taquiarritmia",
     "prevalence_rank": 33,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Taquiarritmia atrial fetal cujo impacto depende da condução ventricular, duração, função cardíaca e presença de hidropisia.",
     "tags": [
       "flutter fetal",
@@ -10368,18 +10368,488 @@
       "hidropisia"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"
+      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516",
+      "Krapp M, Kohl T, Simpson JM, Sharland GK, Katalinic A, Gembruch U. Review of diagnosis, treatment, and outcome of fetal atrial flutter compared with supraventricular tachycardia. Heart. 2003;89(8):913-917. PMID: 12860871",
+      "Lisowski LA, Verheijen PM, Benatar AA, Soyeur DJ, Stoutenbeek P, Brenner JI, Kleinman CS, Meijboom EJ. Atrial flutter in the perinatal age group: diagnosis, management and outcome. J Am Coll Cardiol. 2000;35(3):771-777. PMID: 10716482",
+      "Oudijk MA, Michon MM, Kleinman CS, Kapusta L, Stoutenbeek P, Visser GH, Meijboom EJ. Sotalol in the treatment of fetal dysrhythmias. Circulation. 2000;101(23):2721-2726. PMID: 10851210",
+      "Jaeggi ET, Carvalho JS, De Groot E, Api O, Clur SA, Rammeloo L, McCrindle BW, Ryan G, Manlhiot C, Blom NA. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol: results of a nonrandomized multicenter study. Circulation. 2011;124(16):1747-1754. PMID: 21931080",
+      "Simpson JM, Sharland GK. Fetal tachycardias: management and outcome of 127 consecutive cases. Heart. 1998;79(6):576-581. PMID: 10078084",
+      "van Engelen AD, Weijtens O, Brenner JI, Kleinman CS, Copel JA, Stoutenbeek P, Meijboom EJ. Management outcome and follow-up of fetal tachycardia. J Am Coll Cardiol. 1994;24(5):1371-1375. PMID: 7930263"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"
+      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/12860871/",
+      "https://pubmed.ncbi.nlm.nih.gov/10716482/",
+      "https://pubmed.ncbi.nlm.nih.gov/10851210/",
+      "https://pubmed.ncbi.nlm.nih.gov/21931080/",
+      "https://pubmed.ncbi.nlm.nih.gov/10078084/",
+      "https://pubmed.ncbi.nlm.nih.gov/7930263/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (20º lote de conteúdo do dia, quarto do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630, bloqueio-atrioventricular-fetal/PR #631 e hidropisia-fetal-cardiovascular/PR #632): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos, mas zero campos clínicos. Adicionados epidemiology (segunda taquiarritmia fetal mais comum, tipicamente 3º trimestre, sucesso de cardioversão transplacentária 80-90%), presentation (10 formas de apresentação), diagnostic_approach (5 subtópicos: caracterização ecocardiográfica do ritmo, diferenciação de TSV, avaliação de repercussão hemodinâmica/hidropisia, escolha do primeiro agente conforme hidropisia, seguimento pós-cardioversão), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (12), assistant_rules (10). related_document_slugs expandido de 1 para 3 (união com o original, sem duplicar) — todos verificados quanto a menção explícita a flutter atrial no texto. patient_material_slug original preservado. Overlap com 3 fichas irmãs do cluster fetal já aprofundadas hoje (taquicardia-supraventricular-fetal, bloqueio-atrioventricular-fetal/PR #631, hidropisia-fetal-cardiovascular/PR #632) — documentado. Nenhuma dose de fármaco em nenhum campo — fármacos citados apenas por nome (digoxina, sotalol, flecainida, amiodarona). Correção de citação: durante a verificação dos PMIDs desta rodada, foi descoberto que o PMID usado para a referência de Krapp et al. no lote anterior (hidropisia-fetal-cardiovascular/PR #632) estava incorreto — corrigido separadamente naquele PR (commit próprio) após confirmação via NCBI e-utils; o PMID correto (12860871) já é usado diretamente neste lote.",
+    "version": 2,
     "related_document_slugs": [
-      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",
+      "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario"
     ],
-    "patient_material_slug": "flutter-atrial-fetal"
+    "patient_material_slug": "flutter-atrial-fetal",
+    "epidemiology": "O flutter atrial fetal é a segunda taquiarritmia fetal mais frequente, superado apenas pela taquicardia supraventricular (TSV) por reentrada, e corresponde a uma parcela minoritária, porém clinicamente relevante, do conjunto de taquiarritmias fetais diagnosticadas em centros de referência em cardiologia fetal. Ao contrário da TSV, que costuma se manifestar mais precocemente, ainda no segundo trimestre, o flutter atrial fetal é tipicamente identificado mais tardiamente na gestação, com pico de diagnóstico no terceiro trimestre, próximo ao termo. Eletrofisiologicamente, o flutter atrial resulta de um circuito de macrorreentrada intra-atrial, gerando frequência atrial caracteristicamente elevada, em geral entre 300 e 500 batimentos por minuto, com bloqueio atrioventricular funcional e condução ventricular variável — mais comumente na razão 2:1, podendo também ocorrer condução 1:1, 3:1 ou variável ao longo do mesmo exame. Quando a frequência ventricular resultante permanece sustentadamente elevada, o risco de descompensação hemodinâmica aumenta, podendo evoluir para hidropisia fetal por baixo débito cardíaco e insuficiência cardíaca de alto débito relativa. O tratamento farmacológico transplacentário, isolado ou combinado, alcança taxas de sucesso de cardioversão em torno de 80 a 90% dos casos, sendo a digoxina historicamente o agente de primeira linha em fetos não hidrópicos, com sotalol e flecainida figurando como alternativas ou associações em casos refratários ou com hidropisia já estabelecida.",
+    "presentation": [
+      "Flutter atrial com condução 2:1 assintomático, detectado como achado incidental em ausculta obstétrica de rotina",
+      "Flutter atrial com condução variável e frequência ventricular sustentadamente elevada, associado a sinais precoces de comprometimento hemodinâmico",
+      "Flutter atrial associado a hidropisia fetal por baixo débito cardíaco, com derrame pericárdico, ascite, derrame pleural e edema subcutâneo",
+      "Flutter atrial associado a cardiopatia estrutural congênita subjacente (por exemplo, anomalia de Ebstein, defeitos do septo atrial ou canal atrioventricular)",
+      "Flutter atrial persistente e refratário à primeira linha de tratamento transplacentário, exigindo associação de múltiplos agentes antiarrítmicos",
+      "Flutter atrial neonatal pós-natal em recém-nascido previamente tratado in utero, com recorrência do ritmo após o nascimento",
+      "Achado incidental em ultrassom obstétrico de rotina, sem sintomas maternos, com irregularidade do ritmo cardíaco fetal notada pelo obstetra",
+      "Flutter atrial identificado em contexto de vigilância intensificada por gestação de alto risco ou história familiar de arritmia",
+      "Flutter atrial de início próximo ao termo, motivando decisão entre indução do parto e cardioversão farmacológica ou elétrica pós-natal imediata",
+      "Flutter atrial com conversão espontânea intermitente para ritmo sinusal, identificada em reavaliações ecocardiográficas seriadas"
+    ],
+    "diagnostic_approach": {
+      "caracterizacao_ecocardiografica_do_ritmo": "A caracterização do flutter atrial fetal depende de ecocardiografia fetal detalhada com registro simultâneo da atividade mecânica atrial e ventricular, classicamente por Doppler pulsado com amostra posicionada de modo a captar simultaneamente o influxo mitral (ou tricúspide) e o efluxo aórtico (ou pulmonar), ou por modo M cursando a parede atrial e a parede ventricular. Esse registro permite identificar a frequência atrial elevada (tipicamente 300 a 500 bpm) e determinar a razão de condução atrioventricular (mais frequentemente 2:1, podendo ser 3:1, 4:1 ou variável), elemento central tanto para o diagnóstico diferencial quanto para o cálculo da frequência ventricular efetiva.",
+      "diferenciacao_de_taquicardia_supraventricular": "A distinção entre flutter atrial e TSV apoia-se no mecanismo eletrofisiológico subjacente: o flutter decorre de um circuito de macrorreentrada confinado ao átrio, com frequência atrial muito superior à ventricular e relação de condução AV fixa ou variável, enquanto a TSV mais comum em fetos resulta de reentrada atrioventricular por via acessória, com condução 1:1 e intervalo VA curto. A presença de bloqueio AV funcional com frequências atriais muito altas (acima de 300 bpm) e condução 2:1 favorece fortemente o diagnóstico de flutter em detrimento de TSV.",
+      "avaliacao_de_repercussao_hemodinamica_e_hidropisia": "Toda gestação com flutter atrial fetal deve ser avaliada quanto a sinais de repercussão hemodinâmica, incluindo pesquisa sistemática de hidropisia (derrame pericárdico, ascite, derrame pleural, edema subcutâneo), avaliação da função ventricular (fração de encurtamento, regurgitação atrioventricular) e interrogação do Doppler venoso (ducto venoso, veia umbilical) para sinais indiretos de elevação da pressão venosa central. A presença de hidropisia estabelecida altera diretamente a escolha terapêutica e o prognóstico.",
+      "escolha_do_primeiro_agente_transplacentario_conforme_hidropisia": "Em fetos sem hidropisia, a digoxina isolada costuma ser considerada agente inicial pela experiência acumulada e perfil de segurança materno-fetal, enquanto em fetos hidrópicos a absorção transplacentária da digoxina é reduzida, favorecendo o uso inicial de sotalol ou a associação de digoxina com sotalol ou flecainida, conforme protocolos de centros de referência e disponibilidade local. A escolha também considera a função cardíaca materna, contraindicações a cada classe de antiarrítmico e a resposta observada nos primeiros dias de tratamento.",
+      "seguimento_pos_cardioversao_e_risco_de_recorrencia": "Após a cardioversão farmacológica, o seguimento ecocardiográfico seriado é indicado para confirmar a manutenção do ritmo sinusal, monitorar sinais de recorrência do flutter e ajustar a terapia de manutenção transplacentária até o parto. O risco de recorrência intraútero e no período neonatal imediato justifica reavaliação eletrocardiográfica e, quando indicado, monitorização cardíaca contínua do recém-nascido nas primeiras horas a dias de vida, já que episódios de flutter atrial neonatal podem recorrer mesmo após controle adequado in utero."
+    },
+    "differentials": [
+      "Taquicardia supraventricular por reentrada atrioventricular via acessória",
+      "Taquicardia atrial ectópica (foco automático)",
+      "Taquicardia juncional ectópica",
+      "Bradicardia com bigeminismo atrial bloqueado, confundida com irregularidade do ritmo",
+      "Fibrilação atrial fetal",
+      "Extrassistolia atrial frequente não conduzida, simulando irregularidade da frequência cardíaca fetal"
+    ],
+    "tests": [
+      "Ecocardiografia fetal com modo M e Doppler pulsado simultâneo da atividade atrial e ventricular",
+      "Doppler colorido e avaliação do fluxo transvalvar atrioventricular e das vias de saída ventriculares",
+      "Avaliação do Doppler venoso (ducto venoso e veia umbilical) para triagem de comprometimento hemodinâmico",
+      "Ultrassonografia obstétrica seriada para avaliação de hidropisia, volume de líquido amniótico e crescimento fetal",
+      "Eletrocardiograma e monitorização cardíaca materna antes e durante o tratamento antiarrítmico transplacentário",
+      "Dosagem sérica materna de eletrólitos e avaliação da função renal e hepática para monitorização de segurança do tratamento",
+      "Eletrocardiograma e ecocardiograma neonatal pós-natal para confirmação diagnóstica e orientação terapêutica após o nascimento",
+      "Avaliação anatômica cardíaca detalhada para exclusão de cardiopatia estrutural associada"
+    ],
+    "red_flags": [
+      "Frequência ventricular sustentadamente elevada apesar de tratamento transplacentário em curso",
+      "Sinais ecocardiográficos de hidropisia fetal (ascite, derrame pericárdico, derrame pleural, edema subcutâneo)",
+      "Disfunção ventricular ou sinais de baixo débito cardíaco, incluindo redução da fração de encurtamento e regurgitação atrioventricular significativa",
+      "Alterações do Doppler venoso sugestivas de descompensação hemodinâmica, como fluxo reverso no ducto venoso ou pulsações na veia umbilical",
+      "Ausência de resposta à primeira linha de tratamento transplacentário após intervalo adequado de observação clínica",
+      "Presença de cardiopatia estrutural associada, que modifica prognóstico e resposta ao tratamento",
+      "Redução do volume de líquido amniótico ou sinais de restrição de crescimento fetal associados",
+      "Persistência de condução ventricular rápida (1:1) com deterioração clínica materna ou fetal"
+    ],
+    "treatment_summary": "O diagnóstico de flutter atrial fetal deve ser confirmado por ecocardiografia fetal com Doppler mecânico, correlacionando o sinal atrial, tipicamente em frequência muito elevada, com a resposta ventricular, que costuma apresentar bloqueio atrioventricular funcional em razão fixa de dois para um ou variável, gerando frequência ventricular elevada porém inferior à frequência atrial. Antes de iniciar qualquer terapia transplacentária, é obrigatória a avaliação sistemática de hidropisia fetal, incluindo derrame pericárdico, derrame pleural, ascite, edema subcutâneo e placentomegalia, além da avaliação da função ventricular global por ecocardiografia, pois esses achados determinam tanto a urgência da intervenção quanto a escolha do agente antiarrítmico de primeira linha. Em feto sem hidropisia e com função ventricular preservada, a digoxina transplacentária é o agente de primeira linha, por seu perfil de segurança materno-fetal historicamente estabelecido e por sua passagem placentária adequada quando não há comprometimento da perfusão da placenta. Em feto hidrópico, a absorção transplacentária da digoxina é reconhecidamente comprometida pelo edema placentário e pela disfunção da própria placenta, de modo que sotalol isolado ou a associação de sotalol com digoxina passam a ser a estratégia preferencial, buscando maior eficácia de conversão nesse cenário clinicamente mais grave; flecainida e amiodarona permanecem como opções de segunda linha em situações selecionadas. Durante todo o tratamento, a monitorização materna é indispensável e inclui eletrocardiograma materno seriado para avaliação do intervalo QTc e de sinais de pró-arritmia, vigilância clínica de sintomas sugestivos de toxicidade e, quando disponível, dosagem de níveis séricos maternos do fármaco em uso, sempre sem qualquer referência a esquema posológico neste registro clínico. A resposta esperada ao tratamento antiarrítmico transplacentário costuma se manifestar ao longo de dias a poucas semanas, com redução progressiva da frequência ventricular fetal, melhora ou resolução dos sinais de hidropisia quando presentes, e reversão para ritmo sinusal em parcela relevante dos casos tratados precocemente. A ausência de resposta após período adequado de tratamento caracteriza flutter refratário. Diante de flutter refratário, a conduta inclui reavaliação da adesão e da absorção do agente em uso, troca para outro agente de primeira ou segunda linha, associação de dois ou mais antiarrítmicos, reavaliação seriada da função ventricular e do grau de hidropisia, e, em casos de deterioração hemodinâmica fetal progressiva ou de proximidade da viabilidade extrauterina, discussão multidisciplinar sobre antecipação eletiva do parto como via de resolução definitiva da arritmia. Do ponto de vista pediátrico e neonatal, deve-se antecipar a possibilidade de recorrência do flutter atrial no período pós-natal, sobretudo nas primeiras semanas de vida, com necessidade frequente de manutenção de tratamento antiarrítmico no recém-nascido e de monitorização eletrocardiográfica contínua nos primeiros dias após o nascimento. Por esse motivo, o planejamento do parto deve priorizar centro terciário com suporte de cardiologia pediátrica e neonatologia disponíveis de forma imediata, incluindo acesso a desfibrilação e a manejo farmacológico antiarrítmico neonatal, garantindo transição segura entre o controle transplacentário intraútero e o controle direto do ritmo cardíaco do recém-nascido.",
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico de flutter atrial fetal por ecocardiografia fetal com Doppler mecânico, documentando frequência atrial, frequência ventricular e razão de condução atrioventricular",
+      "Avaliar de forma sistemática sinais de hidropisia fetal, incluindo derrame pericárdico, derrame pleural, ascite e edema subcutâneo",
+      "Avaliar a função ventricular fetal global antes de definir o agente antiarrítmico de primeira linha",
+      "Encaminhar a gestante para acompanhamento em centro de referência em cardiologia fetal",
+      "Iniciar agente antiarrítmico transplacentário conforme presença ou ausência de hidropisia, com escolha de digoxina em feto sem hidropisia e sotalol ou combinação em feto hidrópico",
+      "Realizar eletrocardiograma materno seriado e vigilância clínica de sinais de toxicidade durante o tratamento antiarrítmico",
+      "Repetir ecocardiografia fetal em intervalos programados para reavaliar frequência ventricular, função cardíaca e evolução da hidropisia",
+      "Reavaliar resposta terapêutica em prazo definido e, na ausência de resposta, considerar troca ou associação de agentes antiarrítmicos",
+      "Planejar via e local do parto em centro terciário com suporte imediato de cardiologia pediátrica e neonatologia",
+      "Orientar a família sobre a possibilidade de recorrência do flutter no período neonatal e a necessidade de monitorização após o nascimento"
+    ],
+    "emergency_flow": [
+      "Reconhecer flutter atrial fetal com hidropisia de início recente como achado que exige avaliação e conduta em caráter de urgência",
+      "Confirmar imediatamente por ecocardiografia fetal a frequência ventricular sustentada e o grau de comprometimento da função ventricular",
+      "Internar a gestante para monitorização materno-fetal contínua e início ou ajuste do tratamento antiarrítmico transplacentário sob supervisão",
+      "Realizar eletrocardiograma materno antes e durante o tratamento para triagem de contraindicações e detecção precoce de pró-arritmia",
+      "Envolver equipe multidisciplinar de cardiologia fetal, obstetrícia de alto risco e neonatologia diante de flutter refratário com frequência ventricular sustentada muito elevada",
+      "Reavaliar em curto intervalo a resposta ao tratamento instituído, considerando troca de agente ou associação de antiarrítmicos em caso de resposta insuficiente",
+      "Discutir antecipação do parto em centro com suporte cardiológico neonatal imediato diante de deterioração hemodinâmica fetal progressiva ou refratariedade grave",
+      "Preparar equipe neonatal para eventual necessidade de cardioversão ou tratamento antiarrítmico do recém-nascido logo após o nascimento"
+    ],
+    "monitoring": [
+      "Ecocardiografia fetal seriada com Doppler mecânico para acompanhar frequência atrial, frequência ventricular e razão de condução atrioventricular",
+      "Avaliação seriada de sinais de hidropisia fetal, incluindo derrames cavitários e edema subcutâneo",
+      "Avaliação seriada da função ventricular fetal ao longo do tratamento",
+      "Eletrocardiograma materno seriado para monitorização do intervalo QTc e detecção de sinais de pró-arritmia",
+      "Vigilância clínica materna de sintomas sugestivos de toxicidade relacionada ao tratamento antiarrítmico",
+      "Dosagem de níveis séricos maternos do agente antiarrítmico em uso, quando disponível",
+      "Perfil biofísico fetal e avaliação do bem-estar fetal durante o período de tratamento",
+      "Monitorização eletrocardiográfica contínua do recém-nascido nos primeiros dias após o nascimento, com vigilância de recorrência do flutter atrial"
+    ],
+    "assistant_questions": [
+      {
+        "id": "hidropisia_fetal_presente",
+        "text": "Há sinais de hidropisia fetal (derrame pericárdico, derrame pleural, ascite ou edema subcutâneo)?",
+        "type": "boolean"
+      },
+      {
+        "id": "frequencia_atrial_fetal_bpm",
+        "text": "Qual a frequência atrial fetal estimada, em batimentos por minuto?",
+        "type": "number"
+      },
+      {
+        "id": "frequencia_ventricular_fetal_bpm",
+        "text": "Qual a frequência ventricular fetal sustentada, em batimentos por minuto?",
+        "type": "number"
+      },
+      {
+        "id": "razao_conducao_atrioventricular",
+        "text": "Qual a razão de condução atrioventricular observada ao Doppler mecânico?",
+        "type": "select",
+        "options": [
+          {
+            "value": "dois_para_um",
+            "label": "2:1"
+          },
+          {
+            "value": "um_para_um",
+            "label": "1:1"
+          },
+          {
+            "value": "variavel",
+            "label": "Variável"
+          }
+        ]
+      },
+      {
+        "id": "funcao_ventricular_fetal",
+        "text": "Como está a função ventricular fetal na avaliação ecocardiográfica atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "disfuncao_leve",
+            "label": "Disfunção leve"
+          },
+          {
+            "value": "disfuncao_moderada_grave",
+            "label": "Disfunção moderada a grave"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "text": "Qual a idade gestacional atual, em semanas?",
+        "type": "number"
+      },
+      {
+        "id": "agente_transplacentario_em_uso",
+        "text": "Qual agente antiarrítmico transplacentário está atualmente em uso, se houver?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhum",
+            "label": "Nenhum"
+          },
+          {
+            "value": "digoxina",
+            "label": "Digoxina"
+          },
+          {
+            "value": "sotalol",
+            "label": "Sotalol"
+          },
+          {
+            "value": "combinacao_sotalol_digoxina",
+            "label": "Combinação de sotalol e digoxina"
+          },
+          {
+            "value": "flecainida",
+            "label": "Flecainida"
+          },
+          {
+            "value": "amiodarona",
+            "label": "Amiodarona"
+          }
+        ]
+      },
+      {
+        "id": "resposta_ao_tratamento",
+        "text": "Como está a resposta ao tratamento antiarrítmico instituído?",
+        "type": "select",
+        "options": [
+          {
+            "value": "controle_total",
+            "label": "Controle total, ritmo sinusal"
+          },
+          {
+            "value": "controle_parcial",
+            "label": "Controle parcial"
+          },
+          {
+            "value": "refratario",
+            "label": "Refratário, sem resposta adequada"
+          },
+          {
+            "value": "sem_avaliacao",
+            "label": "Ainda sem avaliação de resposta"
+          }
+        ]
+      },
+      {
+        "id": "eletrocardiograma_materno_alterado",
+        "text": "O eletrocardiograma materno apresenta alteração significativa (por exemplo, prolongamento do intervalo QTc)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_maternos_toxicidade",
+        "text": "Há sinais clínicos maternos sugestivos de toxicidade relacionada ao antiarrítmico em uso?",
+        "type": "boolean"
+      },
+      {
+        "id": "parto_planejado_centro_terciario",
+        "text": "O parto está planejado em centro terciário com suporte imediato de cardiologia pediátrica e neonatologia?",
+        "type": "boolean"
+      },
+      {
+        "id": "semanas_de_tratamento_decorridas",
+        "text": "Quantas semanas se passaram desde o início do tratamento antiarrítmico transplacentário?",
+        "type": "number"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "hidropisia_refratario_frequencia_muito_elevada",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "hidropisia_fetal_presente",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "resposta_ao_tratamento",
+              "op": "eq",
+              "value": "refratario"
+            },
+            {
+              "field": "frequencia_ventricular_fetal_bpm",
+              "op": "gte",
+              "value": 220
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal associada a flutter refratário com frequência ventricular sustentada muito elevada"
+          ],
+          "emergency_flow": [
+            "Internar imediatamente para monitorização materno-fetal contínua e reavaliação urgente do esquema antiarrítmico"
+          ],
+          "messages": [
+            "Quadro compatível com flutter atrial fetal refratário e hidrópico de alto risco; indicar avaliação multidisciplinar imediata em centro terciário"
+          ]
+        }
+      },
+      {
+        "id": "hidropisia_presente_escolha_agente",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hidropisia_fetal_presente",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Hidropisia fetal compromete a absorção transplacentária da digoxina, favorecendo sotalol isolado ou associado"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal com Doppler mecânico seriada",
+            "Perfil biofísico fetal"
+          ]
+        }
+      },
+      {
+        "id": "sem_hidropisia_digoxina_primeira_linha",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "hidropisia_fetal_presente",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Ausência de hidropisia favorece digoxina transplacentária como agente de primeira linha"
+          ]
+        }
+      },
+      {
+        "id": "eletrocardiograma_materno_alterado_pro_arritmia",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "eletrocardiograma_materno_alterado",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Alteração do eletrocardiograma materno sugestiva de pró-arritmia durante tratamento antiarrítmico"
+          ],
+          "missing_information": [
+            "Reavaliação cardiológica materna com eletrocardiograma seriado"
+          ]
+        }
+      },
+      {
+        "id": "sinais_toxicidade_materna",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_maternos_toxicidade",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais clínicos maternos sugestivos de toxicidade ao agente antiarrítmico em uso"
+          ]
+        }
+      },
+      {
+        "id": "refratario_sem_hidropisia",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_ao_tratamento",
+              "op": "eq",
+              "value": "refratario"
+            },
+            {
+              "field": "hidropisia_fetal_presente",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Flutter refratário sem hidropisia justifica reavaliação de agente e possível associação de antiarrítmicos"
+          ],
+          "differentials": [
+            "Absorção placentária inadequada do agente em uso",
+            "Diagnóstico alternativo de taquiarritmia fetal reentrante"
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_ventricular_moderada_grave",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_ventricular_fetal",
+              "op": "eq",
+              "value": "disfuncao_moderada_grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Disfunção ventricular fetal moderada a grave associada a flutter atrial"
+          ],
+          "emergency_flow": [
+            "Priorizar reavaliação ecocardiográfica e discussão sobre antecipação do parto conforme viabilidade"
+          ]
+        }
+      },
+      {
+        "id": "sem_resposta_avaliada_dados_incompletos",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_ao_tratamento",
+              "op": "eq",
+              "value": "sem_avaliacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "missing_information": [
+            "Ecocardiografia fetal de reavaliação para definir resposta ao tratamento instituído"
+          ]
+        }
+      },
+      {
+        "id": "parto_nao_planejado_centro_terciario",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "parto_planejado_centro_terciario",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Definição de centro terciário com suporte de cardiologia pediátrica e neonatologia para o parto"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar planejamento do parto para centro com suporte cardiológico neonatal imediato"
+          ]
+        }
+      },
+      {
+        "id": "razao_conducao_um_para_um_alerta",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "razao_conducao_atrioventricular",
+              "op": "eq",
+              "value": "um_para_um"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Condução atrioventricular 1:1 associada a frequência ventricular muito elevada e maior risco hemodinâmico"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com flutter atrial e hidropisia: representa o cenário de maior risco entre as taquiarritmias fetais, pois a hidropisia reflete insuficiência cardíaca fetal já instalada e está associada a maior mortalidade perinatal. O tratamento transplacentário é desafiado pela própria hidropisia, já que o edema placentário e a ascite fetal comprometem a absorção e a distribuição do fármaco administrado à gestante, reduzindo a concentração efetiva que alcança a circulação fetal e tornando a resposta terapêutica mais lenta e menos previsível do que em fetos não hidrópicos; nesses casos, via de administração alternativa (intramuscular ou intraperitoneal fetal, quando indicada por equipe de medicina fetal) e monitorização mais intensiva costumam ser consideradas.",
+      "Feto com flutter atrial e cardiopatia estrutural associada: a presença de cardiopatia congênita concomitante altera tanto a tolerância hemodinâmica à taquiarritmia quanto a resposta esperada ao tratamento transplacentário, exigindo avaliação ecocardiográfica fetal detalhada para caracterizar a anatomia cardíaca antes de definir a estratégia terapêutica e o momento e local do parto, em conjunto com cardiologia fetal.",
+      "Feto com flutter atrial diagnosticado próximo ao termo: nessa faixa gestacional, a decisão entre iniciar tratamento farmacológico transplacentário in utero ou antecipar o parto para realizar cardioversão diretamente no recém-nascido depende da maturidade pulmonar fetal, da estabilidade hemodinâmica do feto e da estrutura assistencial neonatal disponível, sendo discutida de forma individualizada entre medicina fetal, cardiologia fetal e neonatologia.",
+      "Recém-nascido com flutter atrial persistente ou recorrente após tratamento transplacentário: parte dos fetos tratados no período intraútero mantém a arritmia ou apresenta recorrência já no período neonatal, situação que demanda reavaliação eletrocardiográfica e ecocardiográfica pós-natal e conduta específica de cardiologia pediátrica para o manejo do flutter atrial fora do ambiente fetal, distinta da lógica farmacológica transplacentária usada durante a gestação.",
+      "Gestante em uso de tratamento transplacentário para flutter atrial fetal: a mãe é, na prática, a via de administração do tratamento e está sujeita aos efeitos sistêmicos e à toxicidade potencial do fármaco utilizado, o que torna obrigatória a monitorização materna clínica, eletrocardiográfica e laboratorial ao longo de todo o período de tratamento, em regime idealmente hospitalar na fase de início.",
+      "Feto com flutter atrial refratário à primeira linha de tratamento transplacentário: quando não há resposta ao esquema farmacológico inicial, a equipe de medicina fetal e cardiologia fetal precisa reavaliar o diagnóstico, considerar associação ou substituição de fármacos de segunda linha e ponderar o balanço entre manter a gestação para prosseguir o tratamento in utero e antecipar o parto, especialmente diante de sinais de deterioração hemodinâmica fetal."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "extrassistoles-fetais",
