@@ -10577,12 +10577,12 @@
     "assistant_questions": [
       {
         "id": "idade_gestacional_diagnostico",
-        "text": "Qual a idade gestacional no diagnóstico da hidropisia fetal (em semanas)?",
+        "label": "Qual a idade gestacional no diagnóstico da hidropisia fetal (em semanas)?",
         "type": "number"
       },
       {
         "id": "etiologia_identificada",
-        "text": "Qual a etiologia identificada para a hidropisia fetal?",
+        "label": "Qual a etiologia identificada para a hidropisia fetal?",
         "type": "select",
         "options": [
           {
@@ -10617,12 +10617,12 @@
       },
       {
         "id": "taquiarritmia_presente",
-        "text": "Há taquiarritmia fetal presente?",
+        "label": "Há taquiarritmia fetal presente?",
         "type": "boolean"
       },
       {
         "id": "tipo_arritmia",
-        "text": "Qual o tipo de arritmia fetal identificada?",
+        "label": "Qual o tipo de arritmia fetal identificada?",
         "type": "select",
         "options": [
           {
@@ -10649,12 +10649,12 @@
       },
       {
         "id": "doppler_arteria_cerebral_media_alterado",
-        "text": "O Doppler de artéria cerebral média está alterado, sugerindo anemia fetal?",
+        "label": "O Doppler de artéria cerebral média está alterado, sugerindo anemia fetal?",
         "type": "boolean"
       },
       {
         "id": "sorologias_infecciosas_solicitadas",
-        "text": "Quais sorologias infecciosas maternas foram solicitadas?",
+        "label": "Quais sorologias infecciosas maternas foram solicitadas?",
         "type": "multiselect",
         "options": [
           {
@@ -10681,22 +10681,22 @@
       },
       {
         "id": "cariotipo_microarray_realizado",
-        "text": "O cariótipo ou microarray fetal foi realizado?",
+        "label": "O cariótipo ou microarray fetal foi realizado?",
         "type": "boolean"
       },
       {
         "id": "derrame_cavitario_volumoso",
-        "text": "Há derrame cavitário volumoso (pleural, pericárdico ou ascítico) com repercussão fetal?",
+        "label": "Há derrame cavitário volumoso (pleural, pericárdico ou ascítico) com repercussão fetal?",
         "type": "boolean"
       },
       {
         "id": "sinais_sindrome_espelho_materna",
-        "text": "A gestante apresenta sinais sugestivos de síndrome em espelho materna?",
+        "label": "A gestante apresenta sinais sugestivos de síndrome em espelho materna?",
         "type": "boolean"
       },
       {
         "id": "resposta_ao_tratamento",
-        "text": "Qual a resposta ao tratamento etiológico instituído?",
+        "label": "Qual a resposta ao tratamento etiológico instituído?",
         "type": "select",
         "options": [
           {
@@ -10719,12 +10719,12 @@
       },
       {
         "id": "idade_gestacional_atual",
-        "text": "Qual a idade gestacional atual (em semanas)?",
+        "label": "Qual a idade gestacional atual (em semanas)?",
         "type": "number"
       },
       {
         "id": "via_parto_planejada",
-        "text": "Qual a via de parto planejada?",
+        "label": "Qual a via de parto planejada?",
         "type": "select",
         "options": [
           {
@@ -10743,7 +10743,7 @@
       },
       {
         "id": "suporte_neonatal_disponivel",
-        "text": "Há suporte neonatal intensivo imediato disponível no local do parto?",
+        "label": "Há suporte neonatal intensivo imediato disponível no local do parto?",
         "type": "boolean"
       }
     ],
