@@ -139,10 +139,12 @@
 }
 
 
-/* Product stabilization 2026-08-20: prescription and form controls must remain legible. */
+/* Product stabilization 2026-08-20: preserve legibility without imposing a
+   global layout. Width belongs to each component/form; the final contrast
+   contract only prevents overflow and keeps the box model predictable. */
 .clinical-os input:not([type="checkbox"]):not([type="radio"]),
 .clinical-os select,
-.clinical-os textarea { width:100%; min-width:0; box-sizing:border-box; }
+.clinical-os textarea { max-width:100%; min-width:0; box-sizing:border-box; }
 .clinical-os .grade > *, .clinical-os [class*="grid"] > * { min-width:0; }
 .clinical-os .prescricao-selecao {
   background:linear-gradient(145deg,#0d2534,#0a1b28)!important;
