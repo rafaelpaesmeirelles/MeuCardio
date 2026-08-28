@@ -1,0 +1,26 @@
+name: Temporary find editorial pending
+on:
+  push:
+    branches: [release/all-pending-20260828]
+    paths: [.github/workflows/temporary-find-editorial-pending.yml]
+permissions:
+  contents: read
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          PYTHONPATH=backend python - <<'PY'
+          import json
+          from pathlib import Path
+          from app.services.disease_manifest import load_disease_records
+          paths = ['galeria','exames','evidencias','estudos','medicamentos','checklists','trilhas','material-paciente','emergencia','casos-clinicos','triagem-sintomas']
+          for name in paths:
+              for item in json.loads(Path(name,'metadados.json').read_text(encoding='utf-8')):
+                  if item.get('review_status') != 'revisado':
+                      print('PENDING', name, item.get('slug') or item.get('title') or item.get('titulo'), item.get('review_status'), item.get('published'))
+          for item in load_disease_records(Path('doencas/metadados.json')):
+              if item.get('review_status') != 'revisado':
+                  print('PENDING doencas', item.get('slug'), item.get('review_status'), item.get('published'))
+          PY
