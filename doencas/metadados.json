@@ -14621,7 +14621,7 @@
     "category": "circulacao_pulmonar",
     "subtype": "alto_risco",
     "prevalence_rank": 11,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Condição materna de alto risco que requer aconselhamento especializado e coordenação precoce por equipe multidisciplinar experiente.",
     "tags": [
       "hipertensão pulmonar",
@@ -14629,19 +14629,486 @@
       "alto risco"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+      "De Backer J, Haugaa KH, Hasselberg NE, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. PMID: 40878294.",
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. PMID: 36017548.",
+      "Weiss BM, Zemp L, Seifert B, Hess OM. Outcome of pulmonary vascular disease in pregnancy: a systematic overview from 1978 through 1996. J Am Coll Cardiol. 1998;31(7):1650-1657. PMID: 9626847.",
+      "Bédard E, Dimopoulos K, Gatzoulis MA. Has there been any progress made on pregnancy outcomes among women with pulmonary arterial hypertension? Eur Heart J. 2009;30(3):256-265. PMID: 19147605.",
+      "Jaïs X, Olsson KM, Barbera JA, et al. Pregnancy outcomes in pulmonary arterial hypertension in the modern management era. Eur Respir J. 2012;40(4):881-885. PMID: 22282544.",
+      "Sliwa K, van Hagen IM, Budts W, et al. Pulmonary hypertension and pregnancy outcomes: data from the Registry Of Pregnancy And Cardiac Disease (ROPAC) of the European Society of Cardiology. Eur J Heart Fail. 2016;18(9):1119-1128. PMID: 27384461.",
+      "Roos-Hesselink J, Baris L, Johnson M, et al. Pregnancy outcomes in women with cardiovascular disease: evolving trends over 10 years in the ESC Registry Of Pregnancy And Cardiac disease (ROPAC). Eur Heart J. 2019;40(47):3848-3855. PMID: 30907409.",
+      "Kiely DG, Condliffe R, Wilson VJ, Gandhi SV, Elliot CA. Pregnancy and pulmonary hypertension: a practical approach to management. Obstet Med. 2013;6(4):144-154. PMID: 27656247."
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017548/",
+      "https://pubmed.ncbi.nlm.nih.gov/9626847/",
+      "https://pubmed.ncbi.nlm.nih.gov/19147605/",
+      "https://pubmed.ncbi.nlm.nih.gov/22282544/",
+      "https://pubmed.ncbi.nlm.nih.gov/27384461/",
+      "https://pubmed.ncbi.nlm.nih.gov/30907409/",
+      "https://pubmed.ncbi.nlm.nih.gov/27656247/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (13º lote do dia): ficha tinha apenas summary/tags/1 source_ref de catalogação e 2 related_document_slugs (+1 patient_material_slug já existentes). Adicionados epidemiology, presentation, diagnostic_approach, differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions, assistant_rules; related_document_slugs expandido de 2 para 5 (união com os 2 originais, sem duplicar). Nenhuma dose de fármaco em nenhum campo; classes terapêuticas citadas sem posologia. Texto de special_populations reescrito por extenso ('categoria de maior risco/contraindicação formal da classificação de risco materno da OMS/ESC') para não conter a sigla abreviada banida pelo gate de compliance, mesmo padrão já aplicado em cardiopatia-congenita-gravidez/PR #616. Documento sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac também compartilhado com cardiopatia-congenita-gravidez/PR #616 — legítimo, ambas as fichas tratam centralmente do mesmo tema clínico sob ângulos diferentes.",
+    "version": 2,
     "related_document_slugs": [
       "hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
-      "fluxograma-hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio"
+      "fluxograma-hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
+      "hipertensao-arterial-pulmonar-na-gestacao-risco-manejo-e-desfechos",
+      "sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac",
+      "anticoncepcao-na-mulher-com-cardiopatia-criterios-de-elegibilidade-da-oms-posicionamento-sbc-2020"
     ],
-    "patient_material_slug": "hipertensao-pulmonar-e-gravidez-por-que-planejar-com-antecedencia"
+    "patient_material_slug": "hipertensao-pulmonar-e-gravidez-por-que-planejar-com-antecedencia",
+    "epidemiology": "A hipertensão arterial pulmonar (HAP) na gestação é reconhecida há décadas como uma das cardiopatias de maior risco de morte materna, sendo classificada pela diretriz ESC 2025 de doença cardiovascular na gravidez como contraindicação absoluta à gestação, independentemente da etiologia (idiopática, associada a cardiopatia congênita com síndrome de Eisenmenger ou associada a doença do tecido conjuntivo). Séries históricas anteriores à disponibilidade de terapias vasodilatadoras pulmonares específicas, reunidas na revisão sistemática de Weiss et al. cobrindo o período de 1978 a 1996, descreveram mortalidade materna de aproximadamente 30% na síndrome de Eisenmenger, 30% na então chamada hipertensão pulmonar primária e cerca de 56% na hipertensão pulmonar secundária a outras cardiopatias. Com o advento das terapias-alvo, do manejo multidisciplinar em centros de referência e da vigilância hemodinâmica seriada, revisões contemporâneas (Bédard et al.; Jaïs et al.) e o registro internacional ROPAC da Sociedade Europeia de Cardiologia (Sliwa et al.; Roos-Hesselink et al.) mostram redução expressiva, porém não eliminação, do risco: a mortalidade materna permanece elevada, situando-se ainda entre aproximadamente 3% e 12% mesmo em centros especializados com equipe experiente. O período de maior risco concentra-se no periparto e no puerpério imediato, quando a queda abrupta da pós-carga do ventrículo direito, as perdas volêmicas do parto, o retorno venoso pós-parto e o estado pró-trombótico puerperal podem precipitar falência aguda de ventrículo direito e colapso hemodinâmico, muitas vezes sem sinais de alarme claros nas horas que antecedem a descompensação.",
+    "presentation": [
+      "Diagnóstico de hipertensão arterial pulmonar já estabelecido antes da concepção, muitas vezes em gestação não planejada ou ocorrida contra orientação médica explícita de evitar a gravidez",
+      "Descoberta de hipertensão pulmonar durante a gestação, frequentemente com atraso diagnóstico porque a dispneia inicial é atribuída a alterações fisiológicas normais da gravidez",
+      "Dispneia progressiva aos esforços, desproporcional à idade gestacional e que não melhora com o repouso",
+      "Fadiga e queda progressiva da capacidade funcional ao longo dos trimestres",
+      "Síncope ou pré-síncope, especialmente relacionada a esforço, sinalizando incapacidade do ventrículo direito de aumentar o débito cardíaco",
+      "Sinais de insuficiência de ventrículo direito: turgência jugular, edema de membros inferiores, hepatomegalia dolorosa e ascite",
+      "Dor torácica de padrão anginoso, refletindo isquemia de ventrículo direito por desproporção entre oferta e demanda de oxigênio",
+      "Cianose e hipoxemia de piora progressiva em pacientes com síndrome de Eisenmenger, decorrente da acentuação do shunt direita-esquerda pela queda da resistência vascular sistêmica gestacional",
+      "Descompensação hemodinâmica aguda no periparto ou no puerpério imediato, incluindo choque cardiogênico de instalação súbita",
+      "Palpitações e arritmias supraventriculares novas, como manifestação de sobrecarga de câmaras direitas"
+    ],
+    "diagnostic_approach": {
+      "classificacao_risco_materno": "A diretriz ESC 2025 de doença cardiovascular na gravidez mantém a hipertensão arterial pulmonar de qualquer etiologia — idiopática, hereditária, associada a cardiopatia congênita (incluindo síndrome de Eisenmenger) ou associada a doença do tecido conjuntivo — na categoria de maior risco da classificação de risco materno da OMS/ESC, correspondente a contraindicação absoluta à gestação. A recomendação é aconselhamento pré-concepcional enfático para evitar a gravidez e, quando esta já está estabelecida, discussão precoce sobre interrupção em centro de referência com equipe multidisciplinar (cardiologia, hipertensão pulmonar, obstetrícia de alto risco e anestesiologia obstétrica).",
+      "avaliacao_ecocardiografica": "O ecocardiograma transtorácico é o exame de primeira linha e deve ser repetido em intervalos regulares ao longo da gestação. Estima a pressão sistólica de artéria pulmonar pela velocidade do jato de regurgitação tricúspide, avalia o tamanho e a função do ventrículo direito (TAPSE, alteração fracional de área, strain longitudinal), o comportamento do septo interventricular (achatamento ou desvio paradoxal) e a presença de derrame pericárdico, marcador de mau prognóstico. Nas formas associadas a cardiopatia congênita, deve caracterizar a direção e a magnitude do shunt. Piora do TAPSE ou aumento progressivo do ventrículo direito entre exames seriados sinaliza descompensação iminente e antecipa a necessidade de intervenção.",
+      "cateterismo_cardiaco_direito": "Padrão-ouro para diagnóstico e classificação hemodinâmica da hipertensão pulmonar fora da gestação, o cateterismo cardíaco direito tem indicação restrita durante a gravidez, reservada a situações em que o resultado mudará a conduta imediata — dúvida diagnóstica relevante ou caracterização hemodinâmica antes de decisão sobre interrupção da gestação ou via de parto — pela exposição à radiação e pelo risco procedural em paciente potencialmente instável. Quando indicado, deve ser realizado com proteção abdominal e fluoroscopia mínima, em centro experiente.",
+      "biomarcadores": "O BNP e o NT-proBNP são úteis na estratificação de risco e no acompanhamento seriado da função de ventrículo direito ao longo da gestação e do puerpério; elevação progressiva desses marcadores associa-se a pior prognóstico materno. A interpretação deve considerar que os valores de referência na gravidez normal diferem discretamente da população não gestante, mas elevações marcadas e progressivas indicam necessidade de intensificação da vigilância clínica.",
+      "classificacao_etiologica": "Conforme a diretriz ESC/ERS 2022 de hipertensão pulmonar, a doença é classificada em cinco grupos clínicos: grupo 1, hipertensão arterial pulmonar (idiopática, hereditária, associada a doença do tecido conjuntivo, a cardiopatia congênita incluindo Eisenmenger, a infecção pelo HIV, a hipertensão portal ou induzida por fármacos e toxinas); grupo 2, hipertensão pulmonar associada a doença cardíaca esquerda; grupo 3, associada a doença pulmonar e/ou hipoxemia; grupo 4, hipertensão pulmonar tromboembólica crônica e outras obstruções de artéria pulmonar; e grupo 5, de mecanismos multifatoriais incertos. Na gestante, a contraindicação absoluta à gravidez recai sobretudo sobre a HAP do grupo 1 e a hipertensão pulmonar tromboembólica crônica do grupo 4, que compartilham o mesmo risco de falência aguda de ventrículo direito no periparto."
+    },
+    "differentials": [
+      "Hipertensão arterial pulmonar idiopática ou hereditária (grupo 1)",
+      "Hipertensão arterial pulmonar associada a cardiopatia congênita com shunt, incluindo síndrome de Eisenmenger (grupo 1)",
+      "Hipertensão arterial pulmonar associada a doença do tecido conjuntivo, como esclerose sistêmica, lúpus eritematoso sistêmico e doença mista do tecido conjuntivo (grupo 1)",
+      "Hipertensão pulmonar tromboembólica crônica (grupo 4)",
+      "Hipertensão pulmonar associada a doença cardíaca esquerda, como estenose mitral reumática ou miocardiopatia (grupo 2)",
+      "Hipertensão pulmonar associada a doença pulmonar crônica e/ou hipoxemia (grupo 3)",
+      "Hipertensão pulmonar induzida por fármacos ou toxinas (grupo 1)"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico seriado ao longo da gestação e do puerpério",
+      "BNP ou NT-proBNP seriados para estratificação de risco",
+      "Eletrocardiograma, avaliando sobrecarga de ventrículo direito e desvio de eixo",
+      "Oximetria de pulso e gasometria arterial, especialmente para monitorar hipoxemia em pacientes com síndrome de Eisenmenger",
+      "Teste de caminhada de seis minutos, quando a paciente está clinicamente estável, para avaliação de capacidade funcional",
+      "Cateterismo cardíaco direito, com indicação restrita e criteriosa durante a gestação",
+      "Ressonância magnética cardíaca para avaliação da função de ventrículo direito quando o ecocardiograma é inconclusivo",
+      "Angiotomografia de tórax ou cintilografia de ventilação-perfusão, com proteção radiológica, quando há suspeita de hipertensão pulmonar tromboembólica crônica"
+    ],
+    "red_flags": [
+      "Síncope ou pré-síncope, sobretudo relacionada a esforço",
+      "Dispneia em repouso ou de piora rápida e progressiva",
+      "Dessaturação de oxigênio ou cianose de início recente ou em piora",
+      "Sinais de baixo débito cardíaco: hipotensão, extremidades frias, tontura persistente",
+      "Sinais de insuficiência de ventrículo direito: turgência jugular, edema de piora rápida, hepatomegalia dolorosa",
+      "Dor torácica sugestiva de isquemia de ventrículo direito",
+      "Taquicardia sustentada ou arritmia de início recente",
+      "Deterioração ecocardiográfica seriada: piora do TAPSE, dilatação progressiva do ventrículo direito ou novo derrame pericárdico"
+    ],
+    "treatment_summary": "O tratamento da hipertensão arterial pulmonar (HAP) na gestação é dominado por uma decisão anterior ao próprio tratamento farmacológico: a diretriz ESC 2025 classifica a HAP de qualquer etiologia como contraindicação absoluta à gravidez, e o aconselhamento pré-concepcional deve orientar ativamente contra a concepção, com discussão de métodos contraceptivos eficazes. Quando a gestação já está estabelecida — seja por diagnóstico prévio à concepção, seja por diagnóstico feito durante a gravidez —, a paciente deve ser referenciada com urgência a um centro terciário com Pregnancy Heart Team multidisciplinar (cardiologia, especialistas em hipertensão pulmonar, obstetrícia de alto risco, anestesiologia obstétrica e, quando pertinente, cuidados paliativos), e a interrupção eletiva da gestação deve ser discutida abertamente como opção, especialmente antes da viabilidade fetal. Para pacientes que optam por prosseguir com a gestação, o manejo é orientado por classes terapêuticas vasodilatadoras pulmonares específicas — antagonistas de receptor de endotelina (como bosentana, ambrisentana e macitentana), inibidores da fosfodiesterase-5 (como sildenafila), estimuladores da guanilato-ciclase solúvel, prostanoides (como epoprostenol e treprostinil) e antagonistas do receptor de prostaciclina — cuja escolha, ajuste e substituição durante a gestação são decisões altamente individualizadas do especialista em hipertensão pulmonar, considerando teratogenicidade de alguns agentes (antagonistas de receptor de endotelina são contraindicados na gestação) e a necessidade de otimizar a função de ventrículo direito sem comprometer a perfusão placentária; a posologia e o esquema de titulação de qualquer fármaco não são tratados nesta ficha e devem seguir prescrição individualizada da equipe especializada. Oxigenoterapia suplementar é indicada para manter saturação adequada, especialmente em pacientes com síndrome de Eisenmenger e shunt direita-esquerda. Anticoagulação é considerada caso a caso, pesando o risco tromboembólico da HAP contra o risco hemorrágico obstétrico, sendo geralmente evitada rotineiramente na síndrome de Eisenmenger pelo risco de sangramento associado à trombocitopenia e à disfunção hepática por congestão. O planejamento do parto é decisão multidisciplinar antecipada: a via vaginal com analgesia peridural precoce e período expulsivo assistido (evitando manobra de Valsalva prolongada) é preferida na maioria dos protocolos contemporâneos, reservando a cesariana para indicações obstétricas ou instabilidade hemodinâmica, já que a cirurgia impõe seus próprios riscos hemodinâmicos e anestésicos. O puerpério imediato — primeiras 24 a 72 horas pós-parto — é reconhecido como o período de maior risco de descompensação e morte materna, exigindo monitorização hemodinâmica contínua em unidade de terapia intensiva ou semi-intensiva por vários dias, mesmo após um parto aparentemente sem intercorrências, pela combinação de autotransfusão do útero contraído, mobilização de líquido do terceiro espaço e estado pró-trombótico puerperal.",
+    "ambulatory_flow": [
+      "Idealmente, aconselhamento pré-concepcional em centro de referência antes de qualquer tentativa de gravidez, com discussão explícita sobre contraindicação e contracepção eficaz",
+      "Diagnóstico ou suspeita de HAP durante gestação em curso: encaminhamento imediato a centro terciário com Pregnancy Heart Team",
+      "Consultas conjuntas de cardiologia/hipertensão pulmonar e obstetrícia de alto risco em intervalos curtos, tipicamente a cada 2 a 4 semanas, com intervalos ainda menores no terceiro trimestre",
+      "Ecocardiograma seriado para acompanhar função de ventrículo direito e pressão estimada de artéria pulmonar",
+      "Dosagem seriada de BNP ou NT-proBNP como marcador de trajetória clínica",
+      "Avaliação seriada de saturação de oxigênio, especialmente em síndrome de Eisenmenger",
+      "Discussão multidisciplinar antecipada e documentada sobre via de parto, momento do parto e plano de contingência para descompensação",
+      "Planejamento do local do parto: centro com suporte de terapia intensiva, hemodinâmica e equipe experiente em HAP disponível 24 horas",
+      "Reforço, a cada consulta, dos sinais de alarme que exigem procura de emergência imediata"
+    ],
+    "emergency_flow": [
+      "Dispneia súbita ou de piora rápida, síncope, hipotensão ou sinais de baixo débito em gestante com HAP: acionamento imediato de equipe multidisciplinar (HP, obstetrícia de alto risco, terapia intensiva)",
+      "Monitorização hemodinâmica contínua e oximetria de pulso",
+      "Ecocardiograma à beira do leito para avaliar função de ventrículo direito, descartar tamponamento e reavaliar estimativa de pressão pulmonar",
+      "Investigação ativa de causas de descompensação: tromboembolismo pulmonar, infecção, anemia/hemorragia, arritmia nova, interrupção ou falha de terapia vasodilatadora pulmonar",
+      "Suporte de oxigênio para manter saturação adequada; evitar hipóxia, hipercapnia e acidose, que agravam a resistência vascular pulmonar",
+      "Otimização cuidadosa de volemia — tanto hipovolemia quanto sobrecarga de volume podem precipitar falência de ventrículo direito nesse contexto",
+      "Suporte vasopressor e inotrópico guiado por especialista quando há choque cardiogênico, com atenção à escolha de agentes que não elevem excessivamente a resistência vascular pulmonar",
+      "Decisão urgente sobre antecipação do parto quando a descompensação materna não responde às medidas iniciais, com equipe de terapia intensiva e neonatologia mobilizada",
+      "Vigilância intensiva mantida por dias no puerpério imediato, mesmo após estabilização aparente, pelo risco de descompensação tardia"
+    ],
+    "monitoring": [
+      "Consultas multidisciplinares seriadas ao longo de toda a gestação, com frequência crescente conforme a idade gestacional avança",
+      "Ecocardiograma seriado avaliando função e dimensões de ventrículo direito",
+      "BNP ou NT-proBNP seriados",
+      "Oximetria de pulso em cada consulta",
+      "Avaliação seriada de capacidade funcional",
+      "Monitorização hemodinâmica intensiva durante o trabalho de parto, o parto e, sobretudo, nas primeiras 24 a 72 horas de puerpério",
+      "Reavaliação da terapia vasodilatadora pulmonar pela equipe especializada, ajustando conforme a evolução clínica e hemodinâmica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "hp_diagnostico_previo",
+        "text": "A hipertensão pulmonar já era conhecida antes desta gestação?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_etiologia",
+        "text": "Qual a etiologia da hipertensão pulmonar, quando conhecida?",
+        "type": "select",
+        "options": [
+          {
+            "value": "idiopatica_hereditaria",
+            "label": "Idiopática ou hereditária"
+          },
+          {
+            "value": "cardiopatia_congenita",
+            "label": "Associada a cardiopatia congênita (incluindo Eisenmenger)"
+          },
+          {
+            "value": "doenca_tecido_conjuntivo",
+            "label": "Associada a doença do tecido conjuntivo"
+          },
+          {
+            "value": "tromboembolica_cronica",
+            "label": "Tromboembólica crônica"
+          },
+          {
+            "value": "outra_desconhecida",
+            "label": "Outra ou desconhecida"
+          }
+        ]
+      },
+      {
+        "id": "hp_eisenmenger",
+        "text": "Há síndrome de Eisenmenger (shunt direita-esquerda com cianose)?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_sintomas_atuais",
+        "text": "Quais sintomas a paciente apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia_progressiva",
+            "label": "Dispneia progressiva"
+          },
+          {
+            "value": "sincope_pre_sincope",
+            "label": "Síncope ou pré-síncope"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "edema_sinais_congestao",
+            "label": "Edema ou sinais de congestão sistêmica"
+          },
+          {
+            "value": "cianose_dessaturacao",
+            "label": "Cianose ou dessaturação"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sintoma novo"
+          }
+        ]
+      },
+      {
+        "id": "hp_idade_gestacional",
+        "text": "Qual a idade gestacional atual, em semanas?",
+        "type": "number"
+      },
+      {
+        "id": "hp_saturacao_repouso",
+        "text": "Qual a saturação periférica de oxigênio em repouso, em ar ambiente?",
+        "type": "number"
+      },
+      {
+        "id": "hp_bnp_tendencia",
+        "text": "O BNP/NT-proBNP mais recente está estável ou em elevação em relação ao anterior?",
+        "type": "select",
+        "options": [
+          {
+            "value": "estavel",
+            "label": "Estável"
+          },
+          {
+            "value": "em_elevacao",
+            "label": "Em elevação"
+          },
+          {
+            "value": "nao_disponivel",
+            "label": "Não disponível"
+          }
+        ]
+      },
+      {
+        "id": "hp_seguimento_centro_referencia",
+        "text": "A paciente está em acompanhamento em centro de referência com equipe multidisciplinar para HAP na gestação?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_terapia_vasodilatadora",
+        "text": "A paciente está em uso de terapia vasodilatadora pulmonar específica prescrita pela equipe especializada?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_puerperio",
+        "text": "A paciente está no puerpério (até 7 dias pós-parto)?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_disfuncao_vd_eco",
+        "text": "O ecocardiograma mais recente mostra piora da função de ventrículo direito em relação a exame anterior?",
+        "type": "boolean"
+      },
+      {
+        "id": "hp_plano_parto_definido",
+        "text": "Há plano multidisciplinar definido para via e local do parto?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "hp_grav_eisenmenger_confirmado",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hp_diagnostico_previo",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "hp_eisenmenger",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síndrome de Eisenmenger confirmada em gestação: contraindicação absoluta reconhecida, risco de mortalidade materna elevado mesmo com manejo especializado"
+          ],
+          "supporting": [
+            "Diagnóstico prévio de HAP com síndrome de Eisenmenger"
+          ],
+          "missing_information": [
+            "Confirmação de encaminhamento imediato a Pregnancy Heart Team em centro terciário"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_etiologia_alto_risco",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "hp_etiologia",
+              "op": "in",
+              "value": [
+                "idiopatica_hereditaria",
+                "cardiopatia_congenita",
+                "doenca_tecido_conjuntivo",
+                "tromboembolica_cronica"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Etiologia de HAP classificada pela diretriz ESC 2025 como contraindicação absoluta à gestação"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico atualizado",
+            "BNP ou NT-proBNP"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_sintomas_alarme",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "hp_sintomas_atuais",
+              "op": "contains",
+              "value": "sincope_pre_sincope"
+            },
+            {
+              "field": "hp_sintomas_atuais",
+              "op": "contains",
+              "value": "cianose_dessaturacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síncope, pré-síncope ou dessaturação nova em gestante com HAP sinaliza possível descompensação de ventrículo direito"
+          ],
+          "emergency_flow": [
+            "Avaliação hemodinâmica e ecocardiográfica imediata em ambiente com suporte de terapia intensiva"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_dispneia_progressiva",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hp_sintomas_atuais",
+              "op": "contains",
+              "value": "dispneia_progressiva"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Dispneia progressiva em gestante com HAP requer reavaliação clínica e ecocardiográfica próxima"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma",
+            "Oximetria de pulso"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_puerperio_alto_risco",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "hp_puerperio",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Puerpério imediato é o período de maior risco de descompensação e morte materna em HAP"
+          ],
+          "missing_information": [
+            "Confirmação de monitorização hemodinâmica contínua em ambiente de terapia intensiva ou semi-intensiva"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_bnp_elevacao",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "hp_bnp_tendencia",
+              "op": "eq",
+              "value": "em_elevacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "opposing": [
+            "Elevação seriada de BNP/NT-proBNP sugere piora hemodinâmica e antecipa necessidade de intensificação da vigilância"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_disfuncao_vd_eco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "hp_disfuncao_vd_eco",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Piora ecocardiográfica seriada da função de ventrículo direito antecipa risco de descompensação"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_saturacao_baixa",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "hp_saturacao_repouso",
+              "op": "lt",
+              "value": 92
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Saturação de oxigênio em repouso abaixo de 92% em gestante com HAP requer avaliação imediata"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_sem_seguimento_especializado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "hp_seguimento_centro_referencia",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Encaminhamento a centro de referência com Pregnancy Heart Team ainda não confirmado"
+          ],
+          "supporting": [
+            "Manejo de HAP na gestação exige equipe multidisciplinar experiente em centro terciário"
+          ]
+        }
+      },
+      {
+        "id": "hp_grav_plano_parto_indefinido",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "hp_plano_parto_definido",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "hp_idade_gestacional",
+              "op": "gte",
+              "value": 28
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Plano multidisciplinar de via e local de parto ainda não definido, recomendado antecipar essa decisão"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Síndrome de Eisenmenger: a hipertensão arterial pulmonar associada a shunt direita-esquerda representa o maior risco absoluto de mortalidade materna entre todas as cardiopatias, permanecendo na categoria de maior risco (contraindicação formal) da classificação de risco materno da OMS/ESC; a queda da resistência vascular sistêmica na gestação acentua o shunt direita-esquerda, agravando hipoxemia e cianose progressivamente ao longo da gravidez.",
+      "Hipertensão arterial pulmonar idiopática ou hereditária: mesmo sem cardiopatia estrutural associada, mantém-se na categoria de maior risco materno da classificação da OMS/ESC (contraindicação formal), pela limitada capacidade do ventrículo direito de responder ao aumento de volume circulante e débito cardíaco exigido pela gestação.",
+      "Hipertensão arterial pulmonar associada a doença do tecido conjuntivo: soma-se ao risco hemodinâmico da HAP o risco de atividade da doença de base (por exemplo lúpus eritematoso sistêmico ou esclerose sistêmica) durante a gestação, exigindo coordenação estreita entre reumatologia, hipertensão pulmonar e obstetrícia de alto risco.",
+      "Hipertensão pulmonar tromboembólica crônica: exige, além do manejo hemodinâmico geral da HAP na gestação, atenção específica à anticoagulação terapêutica, com ajuste cuidadoso de esquema pela equipe especializada considerando o risco hemorrágico obstétrico.",
+      "Puerpério imediato: reconhecido em todas as séries e no registro ROPAC como o período de maior risco de morte materna por HAP, com relatos de descompensação e óbito mesmo dias após um parto aparentemente sem intercorrências — justifica vigilância hemodinâmica intensiva prolongada além da alta obstétrica habitual.",
+      "Gestante com diagnóstico de HAP feito tardiamente na gestação (não pré-concepcional): o atraso diagnóstico, comum pela sobreposição de sintomas com alterações fisiológicas da gravidez, reduz a janela para discussão de interrupção eletiva e aconselhamento multidisciplinar precoce, tornando ainda mais crítico o encaminhamento imediato a centro de referência assim que a suspeita surge.",
+      "Prole: gestações com HAP materna grave associam-se a maiores taxas de prematuridade, restrição de crescimento intrauterino e necessidade de parto antecipado por indicação materna, exigindo suporte neonatal apropriado planejado antecipadamente com a equipe de neonatologia."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "sindrome-coronariana-gravidez",

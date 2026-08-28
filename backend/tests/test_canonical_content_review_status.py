@@ -39,7 +39,17 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # hipertensao-pulmonar-gravidez passou de completeness=basico
+        # (só catalogação + 2 related_document_slugs + 1
+        # patient_material_slug) para completo, com conteúdo clínico
+        # integral e related_document_slugs expandido para 5 — ver
+        # review_note.
+        "hipertensao-pulmonar-gravidez",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
