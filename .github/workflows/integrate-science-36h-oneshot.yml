@@ -39,10 +39,6 @@ jobs:
 
           ROOT = pathlib.Path('.')
           REPO = os.environ['GITHUB_REPOSITORY']
-
-          # Only the latest/non-superseded disease record for each topic is imported.
-          # Earlier corrected fetal TGA/SVT and the canonical release hubs already in
-          # the target branch are deliberately not overwritten.
           imports = {
               560: ['sincope'],
               563: ['valvopatias'],
@@ -88,6 +84,21 @@ jobs:
               if isinstance(obj, dict): return {k: recursively_replace(v, old, new) for k,v in obj.items()}
               return obj
 
+          def normalize_questions(record):
+              questions = record.get('assistant_questions')
+              if not isinstance(questions, list):
+                  return record
+              for q in questions:
+                  if not isinstance(q, dict):
+                      continue
+                  legacy = q.pop('text', None)
+                  label = q.get('label')
+                  if isinstance(label, str) and label.strip():
+                      q['label'] = label.strip()
+                  elif isinstance(legacy, str) and legacy.strip():
+                      q['label'] = legacy.strip()
+              return record
+
           current = all_current_records()
           cdir = ROOT/'doencas/correcoes'; cdir.mkdir(parents=True, exist_ok=True)
           fdir = ROOT/'doencas/fragmentos'; fdir.mkdir(parents=True, exist_ok=True)
@@ -101,8 +112,7 @@ jobs:
                   if slug not in by_slug:
                       print(f'WARN PR #{pr}: slug ausente: {slug}')
                       continue
-                  rec = by_slug[slug]
-                  # Final medical/editorial approval for this release.
+                  rec = normalize_questions(by_slug[slug])
                   rec['review_status'] = 'revisado'
                   note = rec.get('review_note') or ''
                   rec['review_note'] = (note + ' Revisado para o release científico consolidado de 28/08/2026, após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.').strip()
@@ -119,12 +129,11 @@ jobs:
                       current[slug] = rec
                   out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Promote records already integrated through cumulative/canonical branches.
           approve_existing = {
               'cardiomiopatias', 'cardiomiopatia-hipertrofica',
               'febre-reumatica-cardite', 'endocardite-pediatrica',
               'hipertensao-pulmonar-pediatrica', 'defeito-septo-atrioventricular',
-              'estenose-pulmonar', 'retorno-venoso-pulmonar-anomalo', 'atresia-pulmonar',
+              'estenose-pulmonar-congenita', 'retorno-venoso-pulmonar-anomalo', 'atresia-pulmonar',
           }
           current = all_current_records()
           approvals = []
@@ -145,7 +154,6 @@ jobs:
               approvals.append({'slug':slug,'set':patch})
           (cdir/'zz-release36h-approvals.json').write_text(json.dumps(approvals, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 
-          # Explicit relations introduced by the cumulative pediatric chain are approved.
           rel_path = ROOT/'doencas/relacoes-explicitas.json'
           if rel_path.exists():
               rels = json.loads(rel_path.read_text(encoding='utf-8'))
@@ -155,14 +163,10 @@ jobs:
                       r['review_status'] = 'revisado'
               rel_path.write_text(json.dumps(rels, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 
-          # Copy every NEW narrative scientific document from the older, still-open
-          # 36h PRs without overwriting a newer/corrected version already in release.
           doc_prs = [582,583,586,587,589,592,595,600]
           for pr in doc_prs:
               ref = f'refs/remotes/origin/pr-{pr}'
-              files = subprocess.check_output([
-                  'gh','api','--paginate',f'repos/{REPO}/pulls/{pr}/files','--jq','.[].filename'
-              ], text=True).splitlines()
+              files = subprocess.check_output(['gh','api','--paginate',f'repos/{REPO}/pulls/{pr}/files','--jq','.[].filename'], text=True).splitlines()
               for path_s in files:
                   if not path_s.startswith('content/') or not path_s.endswith('.md'):
                       continue
@@ -180,7 +184,6 @@ jobs:
                   path.write_text(text, encoding='utf-8')
                   print('COPIED+REVIEWED:', path_s)
 
-          # Review/correct the 3 newly written checklist-source documents already merged.
           docs = [
               ROOT/'content/Cardiologia_do_Esporte_e_do_Exercício/aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca.md',
               ROOT/'content/Saúde_mental_e_cardiologia/manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia.md',
@@ -198,8 +201,6 @@ jobs:
                   text = text.replace('devem ser sinalizados, desde a avaliação pré-anestésica, para **monitorização cardiorrespiratória contínua** (oximetria de pulso e telemetria) por um **período estendido no pós-operatório**, além da rotina padrão', 'devem ter o risco respiratório pós-operatório explicitamente incorporado ao planejamento; a intensidade e a duração da monitorização (incluindo oximetria e, quando indicada pelo contexto cardiovascular, telemetria) devem seguir risco global e protocolo institucional, em vez de uma duração universal além da rotina padrão')
               path.write_text(text, encoding='utf-8')
 
-          # Tests merged from source PRs must reflect the final editorial state, not the
-          # pre-review staging state. This changes only the expected status, not science.
           approved_tokens = approve_existing | imported_slugs | {p.stem for p in docs}
           for test in (ROOT/'backend/tests').glob('test_*.py'):
               text = test.read_text(encoding='utf-8')
@@ -207,12 +208,26 @@ jobs:
                   text = text.replace('"pendente_revisao"', '"revisado"').replace("'pendente_revisao'", "'revisado'")
                   test.write_text(text, encoding='utf-8')
 
-          # Close the temporary editorial exception: final release must have no pending
-          # scientific item among the content being published.
           gate = ROOT/'backend/tests/test_canonical_content_review_status.py'
           g = gate.read_text(encoding='utf-8')
           g = re.sub(r'PENDENTES_LOTES_TUDO_COM_TUDO: dict\[str, set\[str\]\] = \{.*?\}\nPENDENTES_MARKDOWN_AVC:', 'PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}\nPENDENTES_MARKDOWN_AVC:', g, flags=re.S)
           gate.write_text(g, encoding='utf-8')
+          PY
+
+      - name: Validate composed disease manifest with traceback
+        shell: bash
+        run: |
+          set -euo pipefail
+          PYTHONPATH=backend python - <<'PY'
+          import traceback
+          from pathlib import Path
+          from app.services.disease_manifest import load_disease_records
+          try:
+              records = load_disease_records(Path('doencas/metadados.json'))
+              print('composed diseases:', len(records))
+          except Exception:
+              traceback.print_exc()
+              raise
           PY
 
       - name: Lightweight final scientific integrity checks
