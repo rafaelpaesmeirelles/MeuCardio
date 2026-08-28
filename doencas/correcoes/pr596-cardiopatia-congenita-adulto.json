@@ -1,0 +1,195 @@
+[
+  {
+    "slug": "cardiopatia-congenita-do-adulto",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: cianose crônica separada de síndrome de Eisenmenger documentada, gestação atual e pré-concepção em Eisenmenger corrigidas, hemoptise incorporada, congestão Fontan reconhecida, complexidade anatômica separada de estágio fisiológico e biópsia hepática em Fontan restringida a uso seletivo. Publicação autorizada pelo responsável médico em 27/08/2026."
+    },
+    "append": {
+      "source_refs": [
+        "De Backer J, Haugaa KH, Hasselberg NE, et al; ESC Scientific Document Group. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294."
+      ],
+      "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/40878294/"]
+    },
+    "replace": [
+      {
+        "old": "biópsia hepática permanece padrão-ouro para estadiamento em casos de dúvida",
+        "new": "biópsia hepática não é método de vigilância rotineira; considerar seletivamente com hepatologia quando o resultado puder alterar decisão clínica, especialmente avaliação para transplante"
+      },
+      {
+        "old": "o que faz da biópsia o padrão-ouro para estadiamento quando há dúvida diagnóstica",
+        "new": "por isso nenhum teste isolado substitui avaliação hepatológica; a biópsia é seletiva quando o resultado puder mudar manejo, não rotina de vigilância"
+      },
+      {
+        "old": "síndrome de Eisenmenger, na qual a gestação é contraindicação absoluta/relativa por mortalidade materna elevada",
+        "new": "síndrome de Eisenmenger, na qual a gestação é formalmente contraindicada devido ao risco materno extremo"
+      },
+      {
+        "old": "síndrome de Eisenmenger é situação de alto risco/contraindicação relativa à gestação",
+        "new": "síndrome de Eisenmenger é condição em que a gestação é formalmente contraindicada; aconselhamento pré-concepcional deve explicitar o risco materno e evitar gestação"
+      }
+    ],
+    "assistant_questions": {
+      "cyanosis_eisenmenger": {
+        "label": "Há cianose/hipoxemia crônica documentada?"
+      },
+      "pregnancy_status": {
+        "required": true
+      },
+      "lesion_complexity": {
+        "label": "Qual a complexidade anatômica da cardiopatia congênita?",
+        "options": [
+          {"value": "simples", "label": "Complexidade anatômica simples"},
+          {"value": "moderada", "label": "Complexidade anatômica moderada"},
+          {"value": "grande_complexidade", "label": "Grande complexidade anatômica"},
+          {"value": "nao_avaliado", "label": "Não avaliada/desconhecida"}
+        ]
+      },
+      "decompensation_symptoms": {
+        "options": [
+          {"value": "cianose_piora", "label": "Piora aguda de cianose/dessaturação em relação ao basal"},
+          {"value": "dispneia_nova", "label": "Dispneia nova ou progressiva"},
+          {"value": "sincope", "label": "Síncope ou pré-síncope"},
+          {"value": "edema_ascite", "label": "Piora de edema, ascite ou derrames"},
+          {"value": "hemoptise", "label": "Hemoptise"},
+          {"value": "palpitacoes_sustentadas", "label": "Palpitações sustentadas/suspeita de arritmia"},
+          {"value": "dor_toracica", "label": "Dor torácica"}
+        ]
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "eisenmenger_documented",
+        "label": "Há síndrome de Eisenmenger documentada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fisiologia"
+      }
+    ],
+    "assistant_rules": {
+      "achd-eisenmenger-crise-cianotica": {
+        "when": {
+          "all": [
+            {"field": "eisenmenger_documented", "op": "truthy"},
+            {"field": "decompensation_symptoms", "op": "contains", "value": "cianose_piora"}
+          ]
+        }
+      },
+      "achd-fontan-descompensacao-aguda": {
+        "when": {
+          "all": [{"field": "fontan_circulation", "op": "truthy"}],
+          "any": [
+            {"field": "decompensation_symptoms", "op": "contains", "value": "dispneia_nova"},
+            {"field": "decompensation_symptoms", "op": "contains", "value": "edema_ascite"}
+          ]
+        }
+      },
+      "achd-sincope-alto-risco": {
+        "priority": 75,
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Síncope/pré-síncope em adulto com cardiopatia congênita requer avaliação estruturada; o grau de emergência depende da anatomia/fisiologia, esforço, arritmia e repercussão hemodinâmica"],
+          "emergency_flow": ["Avaliar em ambiente apropriado com ECG e investigação de arritmia/obstrução/baixo débito; fisiologias de alto risco recebem escalonamento emergencial por regra específica."]
+        }
+      },
+      "achd-gravidez-alto-risco": {
+        "when": {
+          "all": [
+            {"field": "eisenmenger_documented", "op": "truthy"},
+            {"field": "pregnancy_status", "op": "eq", "value": "planejamento_gestacional"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Síndrome de Eisenmenger com planejamento gestacional — risco materno extremo"],
+          "messages": ["Gestação em síndrome de Eisenmenger é formalmente contraindicada; encaminhar para aconselhamento pré-concepcional com equipe ACHD/Pregnancy Heart Team e discutir alternativas reprodutivas seguras."]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "achd-eisenmenger-gestacao-atual",
+        "priority": 98,
+        "when": {
+          "all": [
+            {"field": "eisenmenger_documented", "op": "truthy"},
+            {"field": "pregnancy_status", "op": "eq", "value": "gestante_atual"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Gestação em curso em paciente com síndrome de Eisenmenger — risco materno-fetal extremo"],
+          "messages": ["Acionar com urgência cardiologia ACHD e Pregnancy Heart Team/obstetrícia de alto risco. Discutir prognóstico materno-fetal e opções de manejo, inclusive interrupção da gestação quando apropriado, de forma individualizada e conforme legislação/valores da paciente."],
+          "ambulatory_flow": ["Não conduzir como gestação cardiológica de rotina; organizar seguimento em centro terciário com experiência em hipertensão pulmonar/ACHD e gestação de alto risco."]
+        }
+      },
+      {
+        "id": "achd-eisenmenger-hemoptise",
+        "priority": 99,
+        "when": {
+          "all": [
+            {"field": "eisenmenger_documented", "op": "truthy"},
+            {"field": "decompensation_symptoms", "op": "contains", "value": "hemoptise"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Hemoptise em síndrome de Eisenmenger"],
+          "emergency_flow": ["Avaliar com urgência causa e gravidade do sangramento em ambiente monitorizado/centro ACHD-HAP; reavaliar risco trombótico versus hemorrágico e não iniciar, manter ou intensificar anticoagulação de forma automática."],
+          "messages": ["Hemoptise muda materialmente a avaliação de anticoagulação e não pode ser representada apenas como piora inespecífica de cianose."]
+        }
+      },
+      {
+        "id": "achd-hemoptise-geral-sem-eisenmenger",
+        "priority": 90,
+        "when": {
+          "all": [
+            {"field": "decompensation_symptoms", "op": "contains", "value": "hemoptise"}
+          ],
+          "none": [
+            {"field": "eisenmenger_documented", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Hemoptise em adulto com cardiopatia congênita requer avaliação urgente mesmo sem síndrome de Eisenmenger documentada"],
+          "emergency_flow": ["Avaliar gravidade e fonte do sangramento, saturação/estado hemodinâmico e fisiologia congênita subjacente; considerar causas vasculares pulmonares, colaterais aortopulmonares, tromboembolismo, infecção e outras etiologias conforme anatomia. Escalonar para emergência se sangramento significativo, hipoxemia, instabilidade ou recorrência."],
+          "messages": ["Não iniciar, manter ou intensificar anticoagulação de forma automática durante hemoptise sem reavaliar indicação e balanço trombótico-hemorrágico."]
+        }
+      },
+      {
+        "id": "achd-cianose-cronica-piora-sem-eisenmenger",
+        "priority": 88,
+        "when": {
+          "all": [
+            {"field": "cyanosis_eisenmenger", "op": "truthy"},
+            {"field": "decompensation_symptoms", "op": "contains", "value": "cianose_piora"}
+          ],
+          "none": [{"field": "eisenmenger_documented", "op": "truthy"}]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Piora aguda da cianose/hipoxemia em ACHD sem Eisenmenger documentado"],
+          "messages": ["Investigar a fisiologia específica (Fontan, shunt residual, obstrução, arritmia, tromboembolismo, infecção ou outra causa); não aplicar automaticamente o fluxo de Eisenmenger."]
+        }
+      },
+      {
+        "id": "achd-sincope-fisiologia-alto-risco",
+        "priority": 96,
+        "when": {
+          "all": [{"field": "decompensation_symptoms", "op": "contains", "value": "sincope"}],
+          "any": [
+            {"field": "fontan_circulation", "op": "truthy"},
+            {"field": "eisenmenger_documented", "op": "truthy"},
+            {"field": "lesion_complexity", "op": "in", "value": ["moderada", "grande_complexidade"]}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Síncope em fisiologia ACHD de moderada/grande complexidade, Fontan ou Eisenmenger"],
+          "emergency_flow": ["Avaliar em ambiente monitorizado e investigar arritmia maligna, obstrução, baixo débito e deterioração hemodinâmica com envolvimento precoce de centro ACHD."]
+        }
+      }
+    ]
+  }
+]

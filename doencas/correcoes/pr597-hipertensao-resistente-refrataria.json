@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "hipertensao-resistente-e-refrataria",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: emergência hipertensiva condicionada a PA acentuadamente elevada + lesão aguda de órgão-alvo, resistência confirmada condicionada à exclusão de pseudorresistência, refratariedade condicionada a PA persistente não controlada, amilorida separada de MRA; não substituir MRA por amilorida ou eplerenona quando a limitação for hiperpotassemia/disfunção renal, e exigir segurança por K/TFGe antes de sugerir poupadores de potássio; ativação de barorreflexo retirada do uso rotineiro. Status regulatório do baxdrostat atualizado com fonte FDA 2026. Publicação autorizada pelo responsável médico em 27/08/2026."
+    },
+    "append": {
+      "source_refs": [
+        "McEvoy JW, McCarthy CP, Bruno RM, et al; ESC Scientific Document Group. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+        "U.S. Food and Drug Administration. BAXFENDY (baxdrostat) tablets, prescribing information. Initial U.S. Approval: 2026. NDA 219878."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39210715/",
+        "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/219878Orig1s000lbl.pdf"
+      ]
+    },
+    "replace": [
+      {
+        "old": "terapia por dispositivo (denervação renal por radiofrequência ou ultrassom, ativação de barorreflexo) em casos refratários selecionados",
+        "new": "terapia intervencionista por denervação renal em pacientes selecionados após confirmação de resistência verdadeira; outras neuromodulações, como ativação de barorreflexo, não são recomendadas rotineiramente"
+      },
+      {
+        "old": "Alternativa ao antagonista mineralocorticoide quando não tolerado ou contraindicado: diurético poupador de potássio da classe da amilorida, com eficácia comparável demonstrada em ensaio randomizado direto — limitação prática relevante no Brasil pela disponibilidade apenas em combinação fixa de baixa dose com outro diurético.",
+        "new": "Amilorida tem evidência de redução pressórica em hipertensão resistente, mas não é antagonista do receptor mineralocorticoide e não deve ser usada como substituto reflexo quando o MRA é evitado por hiperpotassemia ou disfunção renal, pois também é poupadora de potássio. Eplerenona pode ser alternativa à espironolactona por efeitos antiandrogênicos apenas se potássio e função renal permitirem."
+      },
+      {
+        "old": "Se hipercalemia ou taxa de filtração glomerular reduzida contraindicarem o antagonista mineralocorticoide, considerar amilorida ou eplerenona como alternativa dentro da mesma classe terapêutica",
+        "new": "Se hiperpotassemia ou função renal limitarem o antagonista mineralocorticoide, não substituir automaticamente por eplerenona ou amilorida; revisar diurético, causas secundárias, outras classes e estratégia especializada conforme K/TFGe. Se a limitação da espironolactona for apenas efeito antiandrogênico e K/TFGe permitirem, eplerenona pode ser considerada"
+      },
+      {
+        "old": "monitorar potássio e função renal periodicamente, com cautela adicional quando a taxa de filtração glomerular já está reduzida e o potássio já elevado.",
+        "new": "monitorar potássio e função renal periodicamente; eplerenona deve ser usada apenas se K/TFGe permitirem e não deve ser usada diante de hiperpotassemia clinicamente relevante."
+      },
+      {
+        "old": "Quando o antagonista mineralocorticoide não pode ser usado com segurança (função renal reduzida ou risco de hipercalemia), a amilorida ou a eplerenona são alternativas dentro da mesma lógica terapêutica.",
+        "new": "Quando o antagonista mineralocorticoide não pode ser usado com segurança por função renal reduzida ou risco de hipercalemia, não substituir automaticamente por amilorida ou eplerenona, pois ambas podem perpetuar o risco de hiperpotassemia; selecionar alternativa não poupadora de potássio conforme o contexto clínico e revisão especializada."
+      },
+      {
+        "old": "Discutir intervenções adicionais (denervação renal por radiofrequência ou por ultrassom, ativação de barorreflexo, inibidor da aldosterona sintase quando disponível) como opções complementares, não substitutas, da otimização farmacológica",
+        "new": "Em centro especializado, discutir denervação renal apenas em hipertensão verdadeira e não controlada após avaliação multidisciplinar e decisão compartilhada; considerar terapias farmacológicas adicionais conforme disponibilidade/indicação. Ativação de barorreflexo e outras neuromodulações não são recomendadas rotineiramente para hipertensão"
+      },
+      {
+        "old": "A ativação do barorreflexo por estimulação elétrica do seio carotídeo é uma opção adicional para casos selecionados de hipertensão resistente refratária ao tratamento farmacológico otimizado",
+        "new": "A ativação do barorreflexo por estimulação elétrica do seio carotídeo permanece estratégia investigacional/não rotineira para hipertensão; a ESC 2024 recomenda contra o uso rotineiro de outras terapias por dispositivo fora da denervação renal até haver evidência suficiente de segurança e eficácia"
+      }
+    ],
+    "assistant_questions": {
+      "includes_mra": {
+        "label": "O esquema atual inclui antagonista do receptor mineralocorticoide (espironolactona ou eplerenona)?"
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "chronic_bp_control",
+        "label": "Fora da situação aguda, a pressão permanece acima da meta apesar do esquema atual?",
+        "type": "select",
+        "required": true,
+        "section": "Confirmação diagnóstica",
+        "options": [
+          {"value": "nao_controlada", "label": "Sim, permanece não controlada"},
+          {"value": "controlada", "label": "Não, está controlada"},
+          {"value": "nao_avaliado", "label": "Não avaliado/incerto"}
+        ]
+      },
+      {
+        "id": "mra_safety_status",
+        "label": "Potássio e função renal foram revistos para decidir se um MRA pode ser usado com segurança?",
+        "type": "select",
+        "required": true,
+        "section": "Segurança farmacológica",
+        "options": [
+          {"value": "adequado", "label": "Sim; K e função renal permitem considerar MRA"},
+          {"value": "limitacao_hipercalemia_renal", "label": "Há hiperpotassemia e/ou limitação renal relevante"},
+          {"value": "nao_avaliado", "label": "Ainda não avaliados"}
+        ]
+      },
+      {
+        "id": "includes_amiloride",
+        "label": "O esquema atual inclui amilorida?",
+        "type": "boolean",
+        "required": true,
+        "section": "Esquema terapêutico"
+      }
+    ],
+    "assistant_rules": {
+      "har-emergencia-lesao-orgao-alvo": {
+        "when": {
+          "all": [
+            {"field": "hypertensive_crisis_now", "op": "truthy"},
+            {"field": "acute_target_organ_symptoms", "op": "truthy"}
+          ]
+        }
+      },
+      "har-urgencia-sem-lesao-orgao-alvo": {
+        "add": {
+          "risk": "urgente",
+          "messages": ["PA acentuadamente elevada sem sinais de lesão aguda de órgão-alvo: confirmar medidas/técnica, procurar gatilhos, ajustar tratamento oral quando apropriado e organizar reavaliação precoce; evitar redução abrupta apenas pelo número pressórico."]
+        }
+      },
+      "har-resistencia-confirmada-sem-mra": {
+        "when": {
+          "all": [
+            {"field": "antihypertensive_class_count", "op": "gte", "value": 3},
+            {"field": "includes_diuretic", "op": "truthy"},
+            {"field": "includes_mra", "op": "falsy"},
+            {"field": "out_of_office_confirmation", "op": "eq", "value": "mapa_confirma_elevada"},
+            {"field": "adherence_confirmed", "op": "eq", "value": "adesao_confirmada"},
+            {"field": "bp_measurement_technique", "op": "eq", "value": "tecnica_confirmada_adequada"},
+            {"field": "mra_safety_status", "op": "eq", "value": "adequado"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": ["Hipertensão resistente confirmada fora do consultório, com técnica e adesão verificadas, diurético no esquema e sem MRA"],
+          "messages": ["Considerar antagonista do receptor mineralocorticoide como quarta droga preferencial quando potássio e função renal permitirem, com monitorização apropriada."]
+        }
+      },
+      "har-refrataria-cinco-classes": {
+        "when": {
+          "all": [
+            {"field": "antihypertensive_class_count", "op": "gte", "value": 5},
+            {"field": "includes_mra", "op": "truthy"},
+            {"field": "chronic_bp_control", "op": "eq", "value": "nao_controlada"},
+            {"field": "out_of_office_confirmation", "op": "eq", "value": "mapa_confirma_elevada"},
+            {"field": "adherence_confirmed", "op": "eq", "value": "adesao_confirmada"},
+            {"field": "bp_measurement_technique", "op": "eq", "value": "tecnica_confirmada_adequada"},
+            {"field": "secondary_cause_investigated", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": ["Hipertensão refratária possível: PA não controlada apesar de cinco ou mais classes, incluindo MRA, após confirmação fora do consultório e exclusão de pseudorresistência"],
+          "messages": ["Encaminhar/manter em centro especializado para revisar causas secundárias, adesão, volume, fármacos e opções adicionais. Denervação renal pode ser discutida apenas em candidatos selecionados após avaliação multidisciplinar e decisão compartilhada; ativação de barorreflexo não é terapia rotineira."]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "har-mra-seguranca-nao-avaliada",
+        "priority": 68,
+        "when": {
+          "all": [
+            {"field": "antihypertensive_class_count", "op": "gte", "value": 3},
+            {"field": "includes_mra", "op": "falsy"},
+            {"field": "mra_safety_status", "op": "eq", "value": "nao_avaliado"}
+          ]
+        },
+        "add": {
+          "missing_information": ["Potássio e função renal ainda não foram revistos para decidir segurança de MRA"],
+          "suggested_tests": ["Revisar potássio sérico e função renal/TFGe antes de sugerir antagonista do receptor mineralocorticoide"]
+        }
+      },
+      {
+        "id": "har-mra-limitado-por-potassio-ou-rim",
+        "priority": 72,
+        "when": {
+          "all": [
+            {"field": "includes_mra", "op": "falsy"},
+            {"field": "mra_safety_status", "op": "eq", "value": "limitacao_hipercalemia_renal"}
+          ]
+        },
+        "add": {
+          "red_flags": ["Hiperpotassemia e/ou disfunção renal limitam uso de MRA/poupadores de potássio"],
+          "messages": ["Não substituir automaticamente espironolactona por eplerenona ou amilorida neste contexto; ambas podem perpetuar risco de hiperpotassemia. Reavaliar estratégia diurética, causas secundárias e outras classes com especialista."]
+        }
+      }
+    ]
+  }
+]
