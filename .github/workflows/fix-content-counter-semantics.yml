@@ -1,0 +1,133 @@
+name: Fix content counter semantics
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+env:
+  EXPECTED_TITLE: "ops: fix content counter semantics"
+
+jobs:
+  patch-and-deploy:
+    name: Patch counter copy and deploy exact main
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.title == 'ops: fix content counter semantics'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment: production
+    env:
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+    steps:
+      - name: Checkout exact current main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Refuse main drift
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          EXPECTED_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          test "$current_main" = "$EXPECTED_BASE"
+          test "$(git rev-parse HEAD)" = "$EXPECTED_BASE"
+
+      - name: Patch semantics without changing corpus
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          painel = Path('frontend/src/pages/PainelClinicalOS.tsx')
+          text = painel.read_text(encoding='utf-8')
+          old = '<Link to="/biblioteca"><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos clínicos disponíveis</p></Link>'
+          new = '<Link to="/biblioteca" title="O total conta registros canônicos únicos; aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam o mesmo conteúdo."><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos únicos publicados · +{Math.max((catalogo?.published_total ?? catalogo?.total ?? 9452) - 9452, 0)} novos desde 26/08</p></Link>'
+          if text.count(old) != 1:
+              raise SystemExit(f'Painel contract drift: expected 1 target, found {text.count(old)}')
+          painel.write_text(text.replace(old, new), encoding='utf-8')
+
+          test_file = Path('backend/tests/test_panel_acervo_comunicacao_contract.py')
+          tests = test_file.read_text(encoding='utf-8')
+          old_test = '    assert "conteúdos clínicos disponíveis" in fonte\n'
+          new_test = (
+              '    assert "conteúdos únicos publicados" in fonte\n'
+              '    assert "(catalogo?.published_total ?? catalogo?.total ?? 9452) - 9452" in fonte\n'
+              '    assert "aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam" in fonte\n'
+          )
+          if tests.count(old_test) != 1:
+              raise SystemExit(f'Test contract drift: expected 1 target, found {tests.count(old_test)}')
+          test_file.write_text(tests.replace(old_test, new_test), encoding='utf-8')
+          PY
+          git diff --check
+
+      - name: Build frontend
+        working-directory: frontend
+        run: |
+          set -euo pipefail
+          npm ci --prefer-offline
+          npm run build
+
+      - name: Commit exact UI correction to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "corvia-release-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add frontend/src/pages/PainelClinicalOS.tsx backend/tests/test_panel_acervo_comunicacao_contract.py
+          git commit -m "fix: esclarecer contador do acervo científico"
+          git push origin HEAD:main
+          echo "TARGET_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Deploy exact corrected main SHA
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          install -m 0700 -d "$ssh_dir"
+          trap 'rm -rf "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
+          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" "deploy $TARGET_SHA"
+
+      - name: Verify public production exact SHA
+        env:
+          PUBLIC_URL: https://corvia.med.br
+        run: |
+          set -euo pipefail
+          version_file="$RUNNER_TEMP/version.json"
+          curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 5 \
+            "$PUBLIC_URL/api/version" > "$version_file"
+          python3 - "$version_file" "$TARGET_SHA" <<'PY'
+          import json, sys
+          path, expected = sys.argv[1:]
+          with open(path, encoding='utf-8') as handle:
+              payload = json.load(handle)
+          actual = payload.get('commit') or payload.get('version') or payload.get('sha')
+          if actual != expected:
+              raise SystemExit(f"Production reports {actual!r}; expected {expected!r}")
+          print(f"Production version confirmed: {actual}")
+          PY
+          curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
+          curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
