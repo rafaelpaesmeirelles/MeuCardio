@@ -22332,7 +22332,7 @@
     "category": "seguimento",
     "subtype": "pos_parto",
     "prevalence_rank": 16,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Continuidade após o parto para reavaliar hemodinâmica, sintomas, pressão, medicações, anticoagulação, cardiomiopatia e risco cardiovascular futuro.",
     "tags": [
       "pós-parto",
@@ -22341,14 +22341,583 @@
       "risco futuro"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+      "De Backer J et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. PMID: 40878294",
+      "Bellamy L et al. Pre-eclampsia and risk of cardiovascular disease and cancer in later life: systematic review and meta-analysis. BMJ. 2007;335(7627):974. PMID: 17975258",
+      "McNamara DM et al. Clinical Outcomes for Peripartum Cardiomyopathy in North America: Results of the IPAC Study. J Am Coll Cardiol. 2015;66(8):905-914. PMID: 26293760",
+      "Wu P et al. Preeclampsia and Future Cardiovascular Health: A Systematic Review and Meta-Analysis. Circ Cardiovasc Qual Outcomes. 2017;10(2):e003497. PMID: 28228456",
+      "American College of Obstetricians and Gynecologists. ACOG Committee Opinion No. 736: Optimizing Postpartum Care. Obstet Gynecol. 2018;131(5):e140-e150. PMID: 29683911",
+      "Grandi SM et al. Cardiovascular Disease-Related Morbidity and Mortality in Women With a History of Pregnancy Complications. Circulation. 2019;139(8):1069-1079. PMID: 30779636",
+      "Zeng N et al. Maternal glucose levels and future risk of developing cardiovascular disease: a systematic review and meta-analysis. BMJ Open. 2023;13(5):e069251. PMID: 37130662"
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+      "https://pubmed.ncbi.nlm.nih.gov/17975258/",
+      "https://pubmed.ncbi.nlm.nih.gov/26293760/",
+      "https://pubmed.ncbi.nlm.nih.gov/28228456/",
+      "https://pubmed.ncbi.nlm.nih.gov/29683911/",
+      "https://pubmed.ncbi.nlm.nih.gov/30779636/",
+      "https://pubmed.ncbi.nlm.nih.gov/37130662/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (16º e último lote de conteúdo do dia, fecha o cluster de gravidez pós-parto junto com medicamentos-cardiovasculares-gestacao-lactacao/PR #625 e plano-parto-cardiopatia-materna/PR #626): ficha tinha apenas summary/tags/1 source_ref de catalogação, zero related_document_slugs, sem patient_material_slug. Adicionados epidemiology, presentation (11 cenários), diagnostic_approach (6 subtópicos: reavaliação cardíaca precoce pós-parto, reavaliação de cardiomiopatia periparto, seguimento de pré-eclâmpsia/hipertensão gestacional, transição de anticoagulação em prótese mecânica, rastreio metabólico após diabetes gestacional, encaminhamento a atenção primária/cardiologia), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (13), assistant_rules (10). related_document_slugs criado com 7 itens (máximo permitido: 7), todos verificados quanto a menção explícita a pós-parto/puerpério/risco cardiovascular de longo prazo. patient_material_slug preenchido com material já existente, derivado do documento técnico mais central da lista. 3 dos related_document_slugs compartilhados com fichas já publicadas (pre-eclampsia-e-risco-cardiovascular, cardiomiopatia-periparto, hipertensao-gestacional) — overlap legítimo e esperado, documentos genuinamente centrais também sob a ótica de seguimento de longo prazo. Nenhuma dose de fármaco em nenhum campo.",
+    "version": 2,
+    "epidemiology": "O período pós-parto, sobretudo as primeiras semanas após o parto, constitui uma janela de risco cardiovascular elevado. A reabsorção do volume plasmático expandido durante a gestação, a mobilização de líquido do compartimento extravascular para o intravascular e a persistência de um estado pró-trombótico e pró-inflamatório aumentam a sobrecarga hemodinâmica e o risco de eventos tromboembólicos, descompensação de insuficiência cardíaca e crises hipertensivas, justamente no momento em que a vigilância clínica tende a diminuir após a alta da maternidade. As complicações hipertensivas da gestação, como a pré-eclâmpsia e a hipertensão gestacional, não se resolvem apenas com o término da gravidez: constituem marcadores robustos de risco cardiovascular de longo prazo, associando-se a risco pelo menos duas vezes maior de doença cardiovascular futura, incluindo hipertensão arterial crônica, doença coronariana, insuficiência cardíaca e acidente vascular cerebral ao longo da vida. De modo semelhante, o diabetes mellitus gestacional sinaliza risco metabólico e cardiovascular futuro, com maior incidência subsequente de diabetes tipo 2 e de eventos cardiovasculares. Apesar dessa evidência consolidada, existe uma lacuna assistencial importante: parcela substancial das puérperas não retorna para avaliação cardiovascular estruturada após o parto, perdendo a oportunidade de rastreio precoce, orientação sobre estilo de vida e prevenção primária de doença cardiovascular ao longo da vida.",
+    "presentation": [
+      "Puérpera com cardiomiopatia periparto em reavaliação seriada da função ventricular esquerda",
+      "Puérpera com pré-eclâmpsia na gestação atual, sem hipertensão crônica prévia conhecida, para estratificação de risco cardiovascular futuro",
+      "Puérpera com prótese valvar mecânica retomando esquema de anticoagulação plena após a janela de maior risco hemorrágico do parto",
+      "Puérpera com hipertensão gestacional sem normalização completa da pressão arterial nas primeiras semanas pós-parto",
+      "Puérpera cardiopata retomando ou ajustando terapia cardiovascular compatível com a amamentação",
+      "Mulher com diagnóstico de diabetes mellitus gestacional encaminhada para rastreio metabólico e cardiovascular futuro",
+      "Puérpera com dispneia, edema ou palpitações persistentes no pós-parto tardio, levantando suspeita de descompensação cardíaca não resolvida",
+      "Transição de cuidado da equipe obstétrica para a cardiologia ou atenção primária após a alta da maternidade",
+      "Mulher com histórico de cardiopatia gestacional ou de complicação hipertensiva da gestação buscando aconselhamento sobre risco em gestação futura",
+      "Puérpera com cardiomiopatia periparto sem recuperação completa da função ventricular após 6 a 12 meses, avaliada para terapia crônica de insuficiência cardíaca",
+      "Puérpera assintomática com antecedente de pré-eclâmpsia grave ou de início precoce, encaminhada a programa estruturado de prevenção cardiovascular"
+    ],
+    "diagnostic_approach": {
+      "reavaliacao_cardiaca_precoce_pos_parto": "A consulta de reavaliação cardiovascular precoce, idealmente na janela de até 6 semanas após o parto, permite reavaliar sintomas, pressão arterial, volemia e, quando indicado, a função ventricular em puérperas com cardiopatia conhecida. É também o momento de rever medicações usadas na gestação, ajustar terapia para o puerpério e a amamentação, e identificar sinais precoces de descompensação que podem passar despercebidos na alta hospitalar.",
+      "reavaliacao_cardiomiopatia_periparto": "Na cardiomiopatia periparto, a recuperação da função ventricular é frequente, mas pode ser tardia: parte relevante das pacientes só normaliza ou melhora significativamente a fração de ejeção entre 6 e 12 meses após o diagnóstico. Por isso, a reavaliação ecocardiográfica deve ser seriada, e decisões sobre suspensão de terapia de insuficiência cardíaca ou sobre segurança de gestação futura devem aguardar a estabilização desse período, evitando conclusões precoces de recuperação completa.",
+      "seguimento_pre_eclampsia_hipertensao_gestacional": "Mulheres com pré-eclâmpsia ou hipertensão gestacional carregam risco cardiovascular de longo prazo que ultrapassa o puerpério imediato. O seguimento deve incluir aferição estruturada da pressão arterial nas primeiras semanas, verificação de resolução completa até cerca de 12 semanas pós-parto e, quando a hipertensão persiste, investigação de hipertensão crônica desmascarada pela gestação. Além disso, recomenda-se rastreio cardiovascular anual a médio e longo prazo, dada a associação consistente com hipertensão crônica, doença coronariana e acidente vascular cerebral futuros.",
+      "transicao_anticoagulacao_protese_mecanica": "Em puérperas com prótese valvar mecânica, o retorno à anticoagulação plena no pós-parto exige equilíbrio entre o risco trombótico da prótese e o risco hemorrágico do puerpério, com transição cuidadosa entre estratégias parenterais e orais conforme o momento do parto, o tipo de parto e a presença de sangramento. A decisão deve ser compartilhada entre cardiologia e obstetrícia, com reavaliação clínica próxima nos primeiros dias e semanas após o parto.",
+      "rastreio_metabolico_diabetes_gestacional": "Mulheres com diabetes mellitus gestacional devem ser encaminhadas para rastreio de diabetes tipo 2 e de outros fatores de risco cardiovascular após o parto, já que esse antecedente sinaliza risco metabólico e cardiovascular que persiste além da gestação. A avaliação inclui reclassificação glicêmica no pós-parto e reforço de orientações sobre estilo de vida, peso e atividade física.",
+      "encaminhamento_atencao_primaria_cardiologia": "A transição de cuidado da maternidade para a atenção primária ou a cardiologia é um ponto crítico do seguimento: puérperas de risco cardiovascular elevado devem sair da maternidade com plano explícito de reavaliação, incluindo data de retorno, responsável pelo acompanhamento e critérios de alarme para procura precoce de atendimento, reduzindo a lacuna de seguimento observada nessa população."
+    },
+    "differentials": [
+      "Sintomas fisiológicos normais do puerpério, como fadiga e dispneia leve aos esforços, versus sinais de descompensação cardíaca, como ortopneia, dispneia paroxística noturna e edema progressivo",
+      "Hipertensão gestacional que se resolve completamente após o parto versus hipertensão crônica desmascarada pela gestação, que persiste além de cerca de 12 semanas pós-parto",
+      "Cardiomiopatia periparto em recuperação, com melhora progressiva da fração de ejeção, versus cardiomiopatia periparto persistente, com disfunção ventricular residual significativa",
+      "Pré-eclâmpsia pós-parto de início tardio, surgindo até 6 semanas após o parto, versus hipertensão essencial que apenas coincide temporalmente com o puerpério",
+      "Dispneia de causa cardíaca, como insuficiência cardíaca ou cardiomiopatia periparto, versus tromboembolismo venoso ou embolia pulmonar do puerpério",
+      "Cefaleia pós-parto benigna, de padrão tensional ou pós-punção dural, versus cefaleia associada a pré-eclâmpsia pós-parto ou eclâmpsia tardia, com risco de acidente vascular cerebral"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico seriado para reavaliação da função ventricular",
+      "Medida estruturada da pressão arterial, em consulta presencial e/ou por monitorização domiciliar, nas primeiras semanas e meses pós-parto",
+      "Dosagem de peptídeo natriurético (BNP ou NT-proBNP) na investigação de sintomas sugestivos de descompensação cardíaca",
+      "Glicemia de jejum e/ou teste oral de tolerância à glicose para rastreio de diabetes tipo 2 após diabetes gestacional",
+      "Perfil lipídico e avaliação de fatores de risco cardiovascular tradicionais, incluindo peso, circunferência abdominal e tabagismo",
+      "Avaliação de função renal e proteinúria em mulheres com antecedente de pré-eclâmpsia",
+      "Eletrocardiograma de repouso na avaliação de arritmias ou sinais de sobrecarga cardíaca",
+      "Consulta de reavaliação cardiovascular estruturada, idealmente entre 6 e 12 semanas pós-parto, com repetição anual nos grupos de maior risco"
+    ],
+    "red_flags": [
+      "Dispneia progressiva, ortopneia ou dispneia paroxística noturna no puerpério",
+      "Edema de piora rápida ou ganho de peso abrupto após a alta da maternidade",
+      "Pressão arterial persistentemente elevada ou de difícil controle além de cerca de 12 semanas pós-parto",
+      "Cefaleia intensa, distúrbios visuais ou dor epigástrica sugestivos de pré-eclâmpsia pós-parto tardia",
+      "Dor torácica, palpitações sustentadas ou síncope no puerpério",
+      "Sinais de trombose venosa profunda ou sintomas sugestivos de embolia pulmonar",
+      "Fração de ejeção que não melhora ou piora nas reavaliações seriadas de cardiomiopatia periparto",
+      "Sangramento anormal ou sinais de complicação trombótica durante a transição de anticoagulação em prótese valvar mecânica"
+    ],
+    "treatment_summary": "O seguimento cardiovascular pós-parto estrutura-se como continuidade obrigatória do cuidado iniciado na gestação, com uma consulta de reavaliação cardiovascular idealmente agendada dentro da janela de seis semanas após o parto — período em que ocorrem as principais readaptações hemodinâmicas do puerpério e no qual se concentra o maior risco de descompensação em mulheres com cardiopatia prévia ou complicações gestacionais. Essa consulta deve incluir revisão sistemática de sintomas (dispneia, ortopneia, edema, palpitações), aferição da pressão arterial, exame cardiovascular completo e definição do plano de reavaliação de imagem quando indicado.\n\nEm mulheres com diagnóstico de cardiomiopatia periparto, a reavaliação da função ventricular é elemento central do seguimento: a recuperação da fração de ejeção pode ocorrer de forma tardia, estendendo-se por até seis a doze meses após o parto, o que torna necessário o acompanhamento ecocardiográfico seriado antes de se concluir por disfunção persistente ou por normalização. A manutenção ou ajuste de terapia para insuficiência cardíaca — incluindo betabloqueadores, inibidores da enzima conversora de angiotensina ou bloqueadores do receptor de angiotensina conforme compatibilidade com amamentação, e diuréticos quando necessário para controle de congestão — deve ser reavaliada a cada consulta, com atenção à evolução clínica e ecocardiográfica.\n\nPara puérperas com prótese valvar mecânica, o puerpério representa período de risco simultaneamente trombótico e hemorrágico elevado, exigindo retomada cuidadosa e individualizada da anticoagulação plena, com transição entre heparina e anticoagulante oral (varfarina) conduzida em conjunto com a equipe de cardiologia, considerando o tipo de parto, o risco de sangramento puerperal e a compatibilidade da varfarina com a amamentação, que é geralmente considerada segura nessa fase.\n\nA reconciliação medicamentosa completa é etapa obrigatória, revisando cada classe terapêutica quanto à compatibilidade com a amamentação — evitando-se, por exemplo, estatinas nesse período — e ajustando anti-hipertensivos para opções com perfil de segurança mais estabelecido, como metildopa, nifedipino ou labetalol, quando aplicável.\n\nMulheres com histórico de pré-eclâmpsia ou hipertensão gestacional necessitam seguimento estruturado de longo prazo, pois essas condições configuram marcador estabelecido de risco cardiovascular futuro — e não um evento isolado e autolimitado — associando-se a maior incidência de hipertensão crônica, doença coronariana e insuficiência cardíaca ao longo da vida. O plano deve incluir aferições periódicas de pressão arterial, reavaliação de fatores de risco metabólico e orientação sobre estilo de vida cardioprotetor. De forma análoga, mulheres com diabetes gestacional devem ser encaminhadas para rastreio metabólico pós-parto, incluindo reavaliação glicêmica, dado o risco aumentado de progressão para diabetes tipo 2 e síndrome metabólica.\n\nA transição organizada do cuidado da equipe obstétrica para a cardiologia e para a atenção primária deve ser explícita, com relatório de alta contendo diagnósticos, intercorrências, medicações em uso e plano de seguimento, evitando lacunas assistenciais no período pós-parto tardio, quando o risco cardiovascular permanece elevado, mas a vigilância clínica tende a se reduzir.\n\nPor fim, o aconselhamento reprodutivo deve ser incorporado ao seguimento, discutindo com a paciente o risco cardiovascular estimado para uma gestação futura, a necessidade de otimização clínica pré-concepcional e, quando pertinente, a revisão de métodos contraceptivos compatíveis com a condição cardiovascular de base.",
+    "ambulatory_flow": [
+      "Agendar consulta de reavaliação cardiovascular estruturada dentro da janela de seis semanas pós-parto",
+      "Revisar história obstétrica e cardiovascular da gestação, incluindo intercorrências e medicações em uso na alta",
+      "Realizar exame físico direcionado, com aferição da pressão arterial e avaliação de sinais de congestão",
+      "Solicitar ecocardiograma de reavaliação em mulheres com cardiomiopatia periparto ou cardiopatia estrutural prévia",
+      "Ajustar anticoagulação em puérperas com prótese valvar mecânica, em conjunto com a equipe de cardiologia",
+      "Realizar reconciliação medicamentosa completa, considerando compatibilidade de cada fármaco com a amamentação",
+      "Encaminhar para rastreio metabólico pós-parto em mulheres com diabetes gestacional prévio",
+      "Programar seguimento de longo prazo de pressão arterial em mulheres com pré-eclâmpsia ou hipertensão gestacional prévia",
+      "Formalizar a transição de cuidado da equipe obstétrica para cardiologia e atenção primária, com relatório de alta detalhado",
+      "Repetir ecocardiograma seriado em cardiomiopatia periparto até definição de recuperação da função ventricular ou disfunção persistente",
+      "Realizar aconselhamento reprodutivo sobre risco cardiovascular em gestação futura e opções contraceptivas compatíveis"
+    ],
+    "emergency_flow": [
+      "Identificar sinais de descompensação cardíaca tardia no puerpério, como dispneia progressiva, ortopneia e edema de piora rápida",
+      "Reconhecer cardiomiopatia periparto não diagnosticada previamente em puérpera com dispneia e sinais de congestão",
+      "Avaliar crise hipertensiva puerperal com cefaleia intensa, alterações visuais ou dor abdominal em quadrante superior",
+      "Encaminhar para avaliação hospitalar imediata em caso de suspeita de eclâmpsia ou síndrome HELLP no puerpério",
+      "Investigar dor torácica ou palpitações associadas a instabilidade hemodinâmica em puérpera cardiopata",
+      "Avaliar sinais de complicação trombótica ou hemorrágica em usuária de anticoagulação por prótese valvar mecânica",
+      "Encaminhar com urgência casos de suspeita de disfunção ventricular grave com sinais de baixo débito cardíaco"
+    ],
+    "monitoring": [
+      "Pressão arterial em consultas seriadas do puerpério e do seguimento de longo prazo",
+      "Fração de ejeção do ventrículo esquerdo por ecocardiograma seriado em cardiomiopatia periparto",
+      "Sintomas de insuficiência cardíaca (dispneia, ortopneia, edema, fadiga) a cada consulta",
+      "Parâmetros de anticoagulação em puérperas com prótese valvar mecânica",
+      "Perfil glicêmico em mulheres com diabetes gestacional prévio",
+      "Perfil lipídico e fatores de risco metabólico em mulheres com complicação hipertensiva da gestação",
+      "Peso corporal e sinais de retenção hídrica no pós-parto",
+      "Adesão e compatibilidade das medicações em uso com a amamentação"
+    ],
+    "assistant_questions": [
+      {
+        "id": "tempo_desde_parto_semanas",
+        "text": "Quantas semanas se passaram desde o parto?",
+        "type": "number"
+      },
+      {
+        "id": "diagnostico_cardiomiopatia_periparto",
+        "text": "A paciente tem diagnóstico de cardiomiopatia periparto?",
+        "type": "boolean"
+      },
+      {
+        "id": "fracao_ejecao_atual",
+        "text": "Qual a faixa de fração de ejeção na última avaliação?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal (maior ou igual a 55%)"
+          },
+          {
+            "value": "levemente_reduzida",
+            "label": "Levemente reduzida"
+          },
+          {
+            "value": "moderadamente_reduzida",
+            "label": "Moderadamente reduzida"
+          },
+          {
+            "value": "muito_reduzida",
+            "label": "Muito reduzida"
+          },
+          {
+            "value": "nao_avaliada",
+            "label": "Não avaliada"
+          }
+        ]
+      },
+      {
+        "id": "presenca_protese_valvar_mecanica",
+        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "type": "boolean"
+      },
+      {
+        "id": "anticoagulacao_atual",
+        "text": "Qual o esquema de anticoagulação atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma anticoagulação em uso"
+          },
+          {
+            "value": "heparina",
+            "label": "Heparina"
+          },
+          {
+            "value": "varfarina",
+            "label": "Varfarina"
+          },
+          {
+            "value": "outro",
+            "label": "Outro esquema"
+          }
+        ]
+      },
+      {
+        "id": "hipertensao_gestacional_previa",
+        "text": "A paciente teve hipertensão gestacional na gestação atual ou em gestação prévia?",
+        "type": "boolean"
+      },
+      {
+        "id": "pre_eclampsia_previa",
+        "text": "A paciente teve pré-eclâmpsia na gestação atual ou em gestação prévia?",
+        "type": "boolean"
+      },
+      {
+        "id": "diabetes_gestacional_previo",
+        "text": "A paciente teve diagnóstico de diabetes gestacional?",
+        "type": "boolean"
+      },
+      {
+        "id": "amamentando_atualmente",
+        "text": "A paciente está amamentando atualmente?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_atuais",
+        "text": "Quais sintomas a paciente apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia",
+            "label": "Dispneia"
+          },
+          {
+            "value": "ortopneia",
+            "label": "Ortopneia"
+          },
+          {
+            "value": "edema",
+            "label": "Edema"
+          },
+          {
+            "value": "palpitacoes",
+            "label": "Palpitações"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sintoma"
+          }
+        ]
+      },
+      {
+        "id": "pressao_arterial_atual",
+        "text": "Qual a classificação da pressão arterial atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "elevada",
+            "label": "Elevada"
+          },
+          {
+            "value": "hipertensao_estagio1",
+            "label": "Hipertensão estágio 1"
+          },
+          {
+            "value": "hipertensao_estagio2",
+            "label": "Hipertensão estágio 2"
+          },
+          {
+            "value": "crise",
+            "label": "Crise hipertensiva"
+          }
+        ]
+      },
+      {
+        "id": "realizou_ecocardiograma_pos_parto",
+        "text": "A paciente já realizou ecocardiograma de reavaliação pós-parto?",
+        "type": "boolean"
+      },
+      {
+        "id": "rastreio_metabolico_realizado",
+        "text": "O rastreio metabólico pós-parto já foi realizado?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_alarme_puerperio",
+        "text": "A paciente apresenta algum sinal de alarme no puerpério?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "cefaleia_intensa",
+            "label": "Cefaleia intensa"
+          },
+          {
+            "value": "alteracoes_visuais",
+            "label": "Alterações visuais"
+          },
+          {
+            "value": "dor_abdominal",
+            "label": "Dor abdominal em quadrante superior"
+          },
+          {
+            "value": "sangramento_anormal",
+            "label": "Sangramento anormal"
+          },
+          {
+            "value": "febre",
+            "label": "Febre"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal de alarme"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "alerta_sinais_descompensacao_puerperio",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "dispneia"
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "ortopneia"
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "edema"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de descompensação cardíaca tardia no puerpério"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para avaliação de insuficiência cardíaca aguda no puerpério"
+          ]
+        }
+      },
+      {
+        "id": "cardiomiopatia_periparto_disfuncao_grave",
+        "priority": 93,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_cardiomiopatia_periparto",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "fracao_ejecao_atual",
+              "op": "in",
+              "value": [
+                "muito_reduzida",
+                "moderadamente_reduzida"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Cardiomiopatia periparto com disfunção ventricular persistente"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma seriado",
+            "Peptídeo natriurético (BNP ou NT-proBNP)"
+          ]
+        }
+      },
+      {
+        "id": "protese_valvar_sem_anticoagulacao",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "presenca_protese_valvar_mecanica",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "anticoagulacao_atual",
+              "op": "eq",
+              "value": "nenhuma"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Prótese valvar mecânica sem anticoagulação vigente no puerpério"
+          ],
+          "emergency_flow": [
+            "Encaminhar com urgência para reavaliação e retomada de anticoagulação"
+          ]
+        }
+      },
+      {
+        "id": "pressao_arterial_critica_puerperio",
+        "priority": 91,
+        "when": {
+          "all": [
+            {
+              "field": "pressao_arterial_atual",
+              "op": "eq",
+              "value": "crise"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Crise hipertensiva no puerpério"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para avaliação de crise hipertensiva puerperal e risco de eclâmpsia"
+          ]
+        }
+      },
+      {
+        "id": "sinais_alarme_puerperio_presentes",
+        "priority": 88,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_alarme_puerperio",
+              "op": "contains",
+              "value": "cefaleia_intensa"
+            },
+            {
+              "field": "sinais_alarme_puerperio",
+              "op": "contains",
+              "value": "alteracoes_visuais"
+            },
+            {
+              "field": "sinais_alarme_puerperio",
+              "op": "contains",
+              "value": "dor_abdominal"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinais de alarme sugestivos de complicação hipertensiva pós-parto"
+          ],
+          "suggested_tests": [
+            "Pressão arterial",
+            "Proteinúria",
+            "Exames laboratoriais para síndrome HELLP"
+          ]
+        }
+      },
+      {
+        "id": "janela_seis_semanas_reavaliacao_pendente",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_cardiomiopatia_periparto",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "realizou_ecocardiograma_pos_parto",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Ecocardiograma de reavaliação da função ventricular pós-parto"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma"
+          ]
+        }
+      },
+      {
+        "id": "pre_eclampsia_seguimento_cv_longo_prazo",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "pre_eclampsia_previa",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Histórico de pré-eclâmpsia como marcador de risco cardiovascular futuro"
+          ],
+          "ambulatory_flow": [
+            "Incluir seguimento de longo prazo de pressão arterial e perfil metabólico"
+          ]
+        }
+      },
+      {
+        "id": "hipertensao_gestacional_sem_pre_eclampsia",
+        "priority": 38,
+        "when": {
+          "all": [
+            {
+              "field": "hipertensao_gestacional_previa",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "pre_eclampsia_previa",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Hipertensão gestacional prévia associada a risco cardiovascular futuro aumentado"
+          ]
+        }
+      },
+      {
+        "id": "diabetes_gestacional_rastreio_metabolico",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "diabetes_gestacional_previo",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "rastreio_metabolico_realizado",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Rastreio metabólico pós-parto pendente"
+          ],
+          "suggested_tests": [
+            "Glicemia de jejum ou teste oral de tolerância à glicose"
+          ]
+        }
+      },
+      {
+        "id": "reconciliacao_medicamentosa_amamentacao",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "amamentando_atualmente",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "missing_information": [
+            "Confirmação de compatibilidade de todas as medicações em uso com a amamentação"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Puérpera com cardiomiopatia periparto em reavaliação de recuperação de função ventricular: o acompanhamento deve incluir avaliação seriada da fração de ejeção do ventrículo esquerdo ao longo dos meses seguintes ao parto, já que a recuperação costuma ser parcial ou completa, mas frequentemente tardia — decisões sobre terapia otimizada e eventual indicação de dispositivo devem aguardar esse período de reavaliação antes de serem consideradas definitivas.",
+      "Puérpera com pré-eclâmpsia ou hipertensão gestacional: mesmo após a resolução do quadro agudo, essa mulher carrega risco cardiovascular elevado por décadas, com magnitude de risco que é maior nos primeiros anos e declina, mas não desaparece, ao longo do tempo — o seguimento estruturado deve incluir reavaliação de pressão arterial, perfil metabólico e reforço de hábitos de vida, com transição planejada da vigilância obstétrica para o acompanhamento cardiovascular de longo prazo.",
+      "Puérpera com prótese valvar mecânica retomando anticoagulação plena: o período pós-parto exige atenção redobrada à transição do esquema de anticoagulação utilizado na gestação para o regime de manutenção, com monitorização clínica e laboratorial próxima, orientação sobre sinais de alerta hemorrágico e trombótico, e reconciliação cuidadosa considerando amamentação e retorno às atividades habituais.",
+      "Mulher com diabetes gestacional: o diabetes gestacional funciona como marcador de risco cardiometabólico futuro mesmo em quem não progride para diabetes tipo 2 após a gestação, o que justifica rastreio estruturado de glicemia e de risco cardiovascular no pós-parto e nos anos seguintes, não apenas monitorização glicêmica isolada.",
+      "Puérpera cardiopata amamentando: a decisão sobre manutenção, ajuste ou substituição de medicações cardiovasculares no puerpério deve considerar simultaneamente a paciente e o lactente, com reconciliação medicamentosa cuidadosa entre o que foi utilizado na gestação e o que é compatível com a amamentação.",
+      "Mulher que planeja gestação futura após complicação cardiovascular na gestação anterior: o aconselhamento pré-concepcional para uma próxima gestação deve incorporar o status de recuperação funcional alcançado após o evento índice, os preditores conhecidos de recuperação, e a estratificação de risco específica para uma nova gravidez com base nesse desfecho."
+    ],
+    "related_document_slugs": [
+      "acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano",
+      "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
+      "duracao-da-pre-eclampsia-como-preditor-de-risco-cardiovascular-de-longo-prazo",
+      "fluxograma-rastreio-pos-parto-risco-cardiovascular-diabetes-gestacional",
+      "diabetes-gestacional-e-risco-cardiovascular-materno-de-longo-prazo",
+      "preditores-de-recuperacao-ventricular-e-aconselhamento-pre-concepcional-na-cardiomiopatia-periparto",
+      "cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo"
+    ],
+    "patient_material_slug": "cuidado-do-coracao-no-primeiro-ano-depois-do-parto",
+    "fonte_producao": "claude"
   },
   {
     "slug": "acidente-vascular-cerebral-agudo",
