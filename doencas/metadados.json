@@ -15350,7 +15350,7 @@
     "assistant_questions": [
       {
         "id": "classificacao_risco_materno",
-        "text": "Qual a classificação de risco materno da OMS/ESC atribuída à gestante?",
+        "label": "Qual a classificação de risco materno da OMS/ESC atribuída à gestante?",
         "type": "select",
         "options": [
           {
@@ -15373,17 +15373,17 @@
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "label": "Qual a idade gestacional atual, em semanas completas?",
         "type": "number"
       },
       {
         "id": "plano_parto_documentado",
-        "text": "Existe plano de parto multidisciplinar documentado em prontuário?",
+        "label": "Existe plano de parto multidisciplinar documentado em prontuário?",
         "type": "boolean"
       },
       {
         "id": "local_parto_definido",
-        "text": "Qual o local planejado para o parto?",
+        "label": "Qual o local planejado para o parto?",
         "type": "select",
         "options": [
           {
@@ -15402,7 +15402,7 @@
       },
       {
         "id": "via_parto_planejada",
-        "text": "Qual a via de parto planejada?",
+        "label": "Qual a via de parto planejada?",
         "type": "select",
         "options": [
           {
@@ -15421,12 +15421,12 @@
       },
       {
         "id": "anticoagulacao_uso",
-        "text": "A gestante está em uso de anticoagulação?",
+        "label": "A gestante está em uso de anticoagulação?",
         "type": "boolean"
       },
       {
         "id": "tipo_anticoagulante",
-        "text": "Qual o tipo de anticoagulante em uso?",
+        "label": "Qual o tipo de anticoagulante em uso?",
         "type": "select",
         "options": [
           {
@@ -15449,17 +15449,17 @@
       },
       {
         "id": "hipertensao_pulmonar_grave",
-        "text": "A gestante apresenta hipertensão pulmonar grave?",
+        "label": "A gestante apresenta hipertensão pulmonar grave?",
         "type": "boolean"
       },
       {
         "id": "risco_dissecao_aortica",
-        "text": "Há dissecção aórtica atual ou risco elevado de dissecção (aortopatia conhecida)?",
+        "label": "Há dissecção aórtica atual ou risco elevado de dissecção (aortopatia conhecida)?",
         "type": "boolean"
       },
       {
         "id": "sinais_descompensacao_atual",
-        "text": "Quais sinais de descompensação estão presentes atualmente?",
+        "label": "Quais sinais de descompensação estão presentes atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -15490,17 +15490,17 @@
       },
       {
         "id": "equipe_multidisciplinar_reunida",
-        "text": "A reunião multidisciplinar do Pregnancy Heart Team já ocorreu para esta gestação?",
+        "label": "A reunião multidisciplinar do Pregnancy Heart Team já ocorreu para esta gestação?",
         "type": "boolean"
       },
       {
         "id": "trabalho_parto_em_curso",
-        "text": "A gestante está atualmente em trabalho de parto?",
+        "label": "A gestante está atualmente em trabalho de parto?",
         "type": "boolean"
       },
       {
         "id": "capacidade_funcional_nyha",
-        "text": "Qual a classe funcional atual (NYHA)?",
+        "label": "Qual a classe funcional atual (NYHA)?",
         "type": "select",
         "options": [
           {
