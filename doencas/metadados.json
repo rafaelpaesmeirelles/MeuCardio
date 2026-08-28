@@ -10781,12 +10781,12 @@
     "assistant_questions": [
       {
         "id": "q_idade",
-        "text": "Qual a idade do paciente, em anos?",
+        "label": "Qual a idade do paciente, em anos?",
         "type": "number"
       },
       {
         "id": "q_procedimento_alto_risco",
-        "text": "Qual procedimento cardiovascular de alto risco está sendo considerado?",
+        "label": "Qual procedimento cardiovascular de alto risco está sendo considerado?",
         "type": "select",
         "options": [
           {
@@ -10817,12 +10817,12 @@
       },
       {
         "id": "q_fragilidade_rastreio_realizado",
-        "text": "O rastreio formal de fragilidade foi realizado (ex.: Clinical Frailty Scale, Fried, Essential Frailty Toolset)?",
+        "label": "O rastreio formal de fragilidade foi realizado (ex.: Clinical Frailty Scale, Fried, Essential Frailty Toolset)?",
         "type": "boolean"
       },
       {
         "id": "q_grau_fragilidade",
-        "text": "Qual o grau de fragilidade identificado?",
+        "label": "Qual o grau de fragilidade identificado?",
         "type": "select",
         "options": [
           {
@@ -10845,17 +10845,17 @@
       },
       {
         "id": "q_forca_preensao_reduzida",
-        "text": "A força de preensão manual (dinamometria) está reduzida para idade e sexo?",
+        "label": "A força de preensão manual (dinamometria) está reduzida para idade e sexo?",
         "type": "boolean"
       },
       {
         "id": "q_cognicao_alterada",
-        "text": "O rastreio cognitivo (ex.: Mini-Cog, MoCA) sugere comprometimento cognitivo?",
+        "label": "O rastreio cognitivo (ex.: Mini-Cog, MoCA) sugere comprometimento cognitivo?",
         "type": "boolean"
       },
       {
         "id": "q_estado_nutricional",
-        "text": "Qual o estado nutricional do paciente?",
+        "label": "Qual o estado nutricional do paciente?",
         "type": "select",
         "options": [
           {
@@ -10874,7 +10874,7 @@
       },
       {
         "id": "q_suporte_social",
-        "text": "Como se caracteriza o suporte social e funcional do paciente?",
+        "label": "Como se caracteriza o suporte social e funcional do paciente?",
         "type": "select",
         "options": [
           {
@@ -10893,12 +10893,12 @@
       },
       {
         "id": "q_polifarmacia",
-        "text": "Quantos medicamentos de uso contínuo o paciente utiliza atualmente?",
+        "label": "Quantos medicamentos de uso contínuo o paciente utiliza atualmente?",
         "type": "number"
       },
       {
         "id": "q_dependencia_avd",
-        "text": "Qual o grau de dependência do paciente em atividades de vida diária (AVDs)?",
+        "label": "Qual o grau de dependência do paciente em atividades de vida diária (AVDs)?",
         "type": "select",
         "options": [
           {
@@ -10917,17 +10917,17 @@
       },
       {
         "id": "q_objetivos_cuidado_discutidos",
-        "text": "Os objetivos de cuidado e/ou diretivas antecipadas de vontade foram discutidos com o paciente e a família?",
+        "label": "Os objetivos de cuidado e/ou diretivas antecipadas de vontade foram discutidos com o paciente e a família?",
         "type": "boolean"
       },
       {
         "id": "q_heart_team_multidisciplinar",
-        "text": "O caso foi discutido em Heart Team multidisciplinar com participação de geriatra?",
+        "label": "O caso foi discutido em Heart Team multidisciplinar com participação de geriatra?",
         "type": "boolean"
       },
       {
         "id": "q_estimativa_sobrevida",
-        "text": "Qual a expectativa de sobrevida estimada, considerando comorbidades e fragilidade?",
+        "label": "Qual a expectativa de sobrevida estimada, considerando comorbidades e fragilidade?",
         "type": "select",
         "options": [
           {
