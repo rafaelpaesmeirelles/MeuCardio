@@ -684,7 +684,8 @@
     "generic_name": "Benazepril (cloridrato)",
     "brand_names": [
       "Lotensin",
-      "Lotensin H (combinado com HCTZ)"
+      "Lotensin H (combinado com HCTZ)",
+      "Bhena — Biolab Sanus Farmacêutica Ltda"
     ],
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA)",
     "mechanism": "Pró-fármaco hidrolisado em benazeprilato ativo; inibição do sistema renina-angiotensina-aldosterona",
@@ -743,7 +744,9 @@
     "presentations": [
       "Comprimido revestido 5 mg, 10 mg e 20 mg (referência internacional; concentrações comercializadas no Brasil confirmadas nesta sessão: 5 mg e 10 mg)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "Bhena® (cloridrato de benazepril), Biolab Sanus Farmacêutica Ltda, comprimido revestido, 5 mg e 10 mg, embalagens com 30 e 90 comprimidos, registro M.S. 1.0974.0293 (bula profissional aprovada pela Anvisa em 12/2025). Fonte: ConsultaRemedios (consultaremedios.com.br/bhena/bula), Bula.Gratis (bula.gratis/biolab_sanus_farmaceutica_ltda/1/bhena/profissional), BulasMed (bulas.med.br, bula 1413295), Farmaindex (farmaindex.com/bulas/bhena/4785) — duas ou mais fontes convergentes. Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "bisoprolol-hemifumarato",
@@ -1321,10 +1324,14 @@
     "bp_evidence_source": "Metanálise Cochrane de bloqueadores duais alfa/beta na hipertensão primária (Wong GWK, Laugerotte A, Wright JM. Blood pressure lowering efficacy of dual alpha and beta blockers for primary hypertension. Cochrane Database Syst Rev. 2015 Aug 26;2015(8):CD007449, PMID 26306578): para carvedilol especificamente, redução de -4 mmHg (IC95% -6 a -2) na sistólica e -3 mmHg (IC95% -4 a -2) na diastólica, comparado a placebo (evidência classificada pelos autores como de baixa qualidade). Para o conjunto dos bloqueadores duais (carvedilol + labetalol), a redução combinada foi de -6/-4 mmHg, com queda de 5 bpm na frequência cardíaca — efeito hipotensor menor que o de betabloqueadores não seletivos, beta-1 seletivos, agonistas parciais, tiazídicos ou inibidores do SRAA, conforme os próprios autores destacam. Valores registrados nos campos `sbp_reduction_mmhg`/`dbp_reduction_mmhg` (-4,0/-3,0) são os do carvedilol isolado, não a média combinada com labetalol. Abstract lido diretamente via PubMed E-utilities (efetch) em 11/08/2026 — texto confirmado linha a linha contra o documento primário, não mais resultado sintetizado de busca / DOI não acessado diretamente (Wiley bloqueou o acesso nesta sessão).",
     "brand_names": [
       "Coreg / Coreg CR (nome comercial internacional, GSK) — confirmado via DailyMed nesta sessão (WebSearch, 10/08/2026)",
-      "Divelol"
+      "Divelol",
+      "Carvedilat — EMS Sigma Pharma Ltda",
+      "Corediol — Abbott Laboratórios do Brasil Ltda"
     ],
     "commercial_presentations": [
-      "Divelol® (carvedilol) — Laboratórios Baldacci Ltda.: comprimidos de 3,125 mg (embalagem com 60 comprimidos), 6,25 mg (embalagem com 60 comprimidos), 12,5 mg (embalagem com 60 comprimidos) e 25 mg (embalagens com 14, 30 ou 60 comprimidos). **fonte**: bulas do paciente/profissional hospedadas em lbaldacci.com.br (site oficial do laboratório) e réplicas convergentes em Panvel, Drogaria São Paulo, Drogarias Pacheco, Drogal, ConsultaRemedios e Farmaindex — consultado via WebSearch em 20/08/2026."
+      "Divelol® (carvedilol) — Laboratórios Baldacci Ltda.: comprimidos de 3,125 mg (embalagem com 60 comprimidos), 6,25 mg (embalagem com 60 comprimidos), 12,5 mg (embalagem com 60 comprimidos) e 25 mg (embalagens com 14, 30 ou 60 comprimidos). **fonte**: bulas do paciente/profissional hospedadas em lbaldacci.com.br (site oficial do laboratório) e réplicas convergentes em Panvel, Drogaria São Paulo, Drogarias Pacheco, Drogal, ConsultaRemedios e Farmaindex — consultado via WebSearch em 20/08/2026.",
+      "Carvedilat® (carvedilol), EMS Sigma Pharma Ltda, comprimidos de 6,25 mg, 12,5 mg e 25 mg, embalagens com 15, 30, 60, 80 ou 90 comprimidos, conforme a dosagem. Fonte: MedicinaNET (bula.medicinanet.com.br/bula/1197/carvedilat.htm), site oficial EMS (ems.com.br/medicamentos/carvedilol), ConsultaRemedios (consultaremedios.com.br/carvedilat/bula), Drogaria São Paulo (múltiplas dosagens listadas), CliqueFarma. Data da busca: 21/08/2026.",
+      "Corediol® (carvedilol), Abbott Laboratórios do Brasil Ltda, comprimidos de 3,125 mg, 6,25 mg e 12,5 mg. Fonte: ConsultaRemedios (consultaremedios.com.br/corediol/bula), Saúde Direta (saudedireta.com.br/catinc/drugs/bulas/corediol.pdf) — duas fontes convergentes. NOTA: não foi possível confirmar com segurança se a apresentação de 25 mg também é comercializada sob esta marca (as fontes consultadas listam só até 12,5 mg) — VERIFICAÇÃO HUMANA NECESSÁRIA para essa dosagem específica. Data da busca: 21/08/2026."
     ]
   },
   {
@@ -1819,11 +1826,15 @@
     ],
     "commercial_presentations": [
       "Digoxina Teuto® (genérico), comprimido de 0,25 mg, embalagem com 30 comprimidos. Fonte: WebSearch, 20/08/2026 (Drogarias Pacheco); registro ANVISA específico não conferido.",
-      "Digoxina Elixir Prati-Donaduzzi® (genérico), 0,05 mg/mL, frasco de 60 mL. Fonte: WebSearch, 20/08/2026 (Farmadelivery, Drogaria São Paulo, CliqueFarma). Esclarece o que a entrada já cadastrada citava vagamente como 'genéricos de diversos fabricantes (ex. Prati-Donaduzzi)': é a forma ELIXIR (líquida), não um comprimido de 0,25 mg — não foi encontrado comprimido de Prati-Donaduzzi para digoxina nesta busca."
+      "Digoxina Elixir Prati-Donaduzzi® (genérico), 0,05 mg/mL, frasco de 60 mL. Fonte: WebSearch, 20/08/2026 (Farmadelivery, Drogaria São Paulo, CliqueFarma). Esclarece o que a entrada já cadastrada citava vagamente como 'genéricos de diversos fabricantes (ex. Prati-Donaduzzi)': é a forma ELIXIR (líquida), não um comprimido de 0,25 mg — não foi encontrado comprimido de Prati-Donaduzzi para digoxina nesta busca.",
+      "Cardcor® (digoxina), Laboratório Teuto Brasileiro S/A, comprimido 0,25 mg, embalagens com 20 e 30 comprimidos. Fonte: BulaRemédio (bularemedio.com.br/lista-de-medicamento/1081084), ConsultaRemedios (consultaremedios.com.br/cardcor/bula), Farmafy (farmafy.com.br/p/22143), MedicinaNET (bula.medicinanet.com.br/bula/1180/cardcor.htm), Farmaindex. Data da busca: 21/08/2026.",
+      "Neo Digoxin® (digoxina), Brainfarma Indústria Química e Farmacêutica S.A. (grupo Hypera), comprimido 0,25 mg, caixa com 24 comprimidos. Fonte: ConsultaRemedios (consultaremedios.com.br/neo-digoxin/bula), DrConsulta (drconsulta.com/conteudo/neo-digoxin-bula), Drogaria Moderna, Santa Lúcia Drogarias. Data da busca: 21/08/2026."
     ],
     "brand_names": [
       "Digoxina Pharlab",
-      "Digoxina (Genérico) — Teuto"
+      "Digoxina (Genérico) — Teuto",
+      "Cardcor — Laboratório Teuto Brasileiro S/A",
+      "Neo Digoxin — Brainfarma Indústria Química e Farmacêutica S.A."
     ]
   },
   {
@@ -2344,7 +2355,8 @@
       "Comprimido revestido 60 mg (80,8 mg de tosilato de edoxabana monoidratado)"
     ],
     "commercial_presentations": [
-      "Roteas® (edoxabana, tosilato monoidratado), Daiichi Sankyo Brasil Farmacêutica Ltda. (comercializado/distribuído também sob a marca do laboratório Aché, ache.com.br), registro ANVISA nº 1045401860030 (válido até 01/05/2029). Comprimidos revestidos de 15 mg (embalagem com 14 comprimidos) e de 30 mg/60 mg (embalagens com 14 ou 30 comprimidos). Indicação: redução de risco de AVC/embolismo sistêmico na FA não valvar; tratamento e prevenção de recorrência de TVP/TEP — mesmas indicações já cadastradas para Lixiana®, mesmo princípio ativo, segunda marca comercial no Brasil. Fonte: ache.com.br, smerp.com.br (consulta de registro ANVISA), drogasil.com.br, farmaindex.com. WebSearch 20/08/2026."
+      "Roteas® (edoxabana, tosilato monoidratado), Daiichi Sankyo Brasil Farmacêutica Ltda. (comercializado/distribuído também sob a marca do laboratório Aché, ache.com.br), registro ANVISA nº 1045401860030 (válido até 01/05/2029). Comprimidos revestidos de 15 mg (embalagem com 14 comprimidos) e de 30 mg/60 mg (embalagens com 14 ou 30 comprimidos). Indicação: redução de risco de AVC/embolismo sistêmico na FA não valvar; tratamento e prevenção de recorrência de TVP/TEP — mesmas indicações já cadastradas para Lixiana®, mesmo princípio ativo, segunda marca comercial no Brasil. Fonte: ache.com.br, smerp.com.br (consulta de registro ANVISA), drogasil.com.br, farmaindex.com. WebSearch 20/08/2026.",
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia nova além das já cadastradas (Lixiana, Roteas, ambas Daiichi Sankyo Brasil). Foi encontrado um terceiro produto — tosilato de edoxabana monoidratado da Althaia S.A. Indústria Farmacêutica, comprimidos revestidos de 30 mg e 60 mg, registro M.S. 1.3517.0091 —, mas é explicitamente rotulado e vendido como GENÉRICO sob a denominação DCB + nome do laboratório fabricante ('Tosilato de Edoxabana Monoidratado ... Genérico Althaia'), não sob nome de fantasia, e por isso não se qualifica como `brand_names` pela regra deste projeto. Fontes consultadas: Panorama Farmacêutico (panoramafarmaceutico.com.br/althaia-apresenta-tosilato-de-edoxabana-generico), Extrafarma, Preço Popular, Drogal, InfoSUS, Equivalentes.com.br, bula oficial da Althaia (bulas-ecommerce.s3.sa-east-1.amazonaws.com/bula_edoxabana_...pdf). Data da busca: 21/08/2026."
     ]
   },
   {
@@ -5201,12 +5213,14 @@
     "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "brand_names": [
       "Benicar ODT",
-      "Olmetec"
+      "Olmetec",
+      "Hipoxomil — Nova Química Farmacêutica S.A."
     ],
     "commercial_presentations": [
       "Benicar ODT® (Daiichi Sankyo), comprimido orodispersível de 40 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026.",
       "Olmetec® 20mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026.",
-      "Olmetec® 40mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026."
+      "Olmetec® 40mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026.",
+      "Hipoxomil® (olmesartana medoxomila), Nova Química Farmacêutica S.A., comprimido revestido 20 mg e 40 mg; existe também a combinação Hipoxomil HCT (com hidroclorotiazida). Fonte: ConsultaRemedios (consultaremedios.com.br/hipoxomil/bula e /hipoxomil-hct/bula), Bula.Gratis (bula.gratis/nova_quimica_farmaceutica_s_a/1/hipoxomil/profissional), Farmaindex, CatálogoFarma (catalogofarma.com/bula/72593791000111/hipoxomil). Data da busca: 21/08/2026."
     ]
   },
   {
@@ -6153,7 +6167,8 @@
       "Neparvis® (sacubitril valsartana sódica hidratada) 50 mg — comprimido revestido, embalagem com 28 unidades (Novartis Biociências S.A.). Fonte: bula profissional Novartis (bulas-ecommerce.s3.sa-east-1.amazonaws.com/NEPARVIS_...), WebSearch 21/08/2026.",
       "Neparvis® 100 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A.). Fonte: mesma bula acima, WebSearch 21/08/2026.",
       "Neparvis® 200 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A., registro MS confirmado em ficha de produto — ex. 1006811890036 para a apresentação de 200 mg). Fonte: bula profissional Novartis + ficha de produto (biolabeco.com.br/produto/neparvis-200mg-60-comprimidos/), WebSearch 21/08/2026.",
-      "Nota: Neparvis® é a mesma molécula do Entresto® (sacubitril/valsartana sódica hidratada), registrada também pela Novartis Biociências S.A. sob nome comercial distinto — usada, entre outros canais, na dispensação pelo Componente Especializado da Assistência Farmacêutica (CEAF/SUS) para insuficiência cardíaca com fração de ejeção reduzida. Apresentação/marca genuinamente adicional (bula própria, registro ANVISA próprio), não duplicata do mesmo registro do Entresto."
+      "Nota: Neparvis® é a mesma molécula do Entresto® (sacubitril/valsartana sódica hidratada), registrada também pela Novartis Biociências S.A. sob nome comercial distinto — usada, entre outros canais, na dispensação pelo Componente Especializado da Assistência Farmacêutica (CEAF/SUS) para insuficiência cardíaca com fração de ejeção reduzida. Apresentação/marca genuinamente adicional (bula própria, registro ANVISA próprio), não duplicata do mesmo registro do Entresto.",
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia nova além das já cadastradas (Entresto e Neparvis, ambas Novartis Biociências S.A.). Não foi localizado nenhum genérico ou similar registrado na ANVISA sob outra marca no Brasil até a data desta busca — a molécula ainda está sob proteção patentária/exclusividade no país (nos EUA, o primeiro genérico do Entresto só chegou ao mercado em julho de 2025, e não há indício de lançamento equivalente no Brasil). Fontes consultadas: Bula Profissional Novartis (portal.novartis.com.br, pro.novartis.com), ConsultaRemedios (consultaremedios.com.br/sacubitril-valsartana/bula e /entresto/bula), Guia Farmacêutico HSL (guiafarmaceutico.hsl.org.br/sacubitril-valsartana), InfoSUS, GoodRx (sobre o genérico americano). Data da busca: 21/08/2026."
     ]
   },
   {
@@ -6646,7 +6661,9 @@
     "presentations": [
       "Cápsula mole 20 mg (tafamidis meglumina; embalagens com 30 ou 120 cápsulas)"
     ],
-    "commercial_presentations": []
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial): busca negativa para marca de fantasia nova além das já cadastradas (Vyndaqel e Vyndamax, ambas Pfizer). Não foi localizado genérico registrado no Brasil — a molécula segue sob proteção patentária (nos EUA, pedidos de ANDA para genérico de tafamidis só começaram a ser protocolados junto ao FDA a partir de junho de 2023 e permanecem em litígio/sob patente até a data desta busca, sem indicação de situação diferente no Brasil). Fontes consultadas: Drugs.com (tafamidis, Vyndamax), DrugBank, Davis's Drug Guide, bula brasileira da Vyndaqel hospedada por distribuidor (4bio.com.br/wp-content/uploads/2019/06/Vyndaqel-1251.pdf). Data da busca: 21/08/2026."
+    ]
   },
   {
     "slug": "telmisartana",
