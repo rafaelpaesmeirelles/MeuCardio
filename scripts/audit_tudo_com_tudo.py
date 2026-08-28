@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Auditoria reprodutível das relações do corpus Tudo com Tudo.
 
-Lê os 9.452 itens versionados, valida referências por slug e mede a cobertura
+Lê os itens versionados, valida referências por slug e mede a cobertura
 taxonômica sem acessar dados de paciente nem alterar banco/conteúdo.
 """
 from __future__ import annotations
@@ -10,10 +10,15 @@ from collections import Counter, defaultdict
 import json
 from pathlib import Path
 import re
+import sys
 import unicodedata
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "backend"))
+
+from app.services.disease_manifest import load_disease_records  # noqa: E402
+
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)")
 CODE_BLOCK = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
 INLINE_CODE = re.compile(r"`[^`\n]*`")
@@ -71,6 +76,8 @@ def _markdown_without_code(body: str) -> str:
 
 
 def _load(name: str) -> list[dict]:
+    if name == "doencas":
+        return load_disease_records(ROOT / "doencas" / "metadados.json")
     payload = json.loads((ROOT / name / "metadados.json").read_text(encoding="utf-8"))
     if not isinstance(payload, list):
         raise ValueError(f"{name}/metadados.json não é uma lista")
@@ -109,7 +116,7 @@ def audit() -> dict:
     }
     slugs["documento"] = set(documents) - slugs["fluxograma"]
 
-    # Calculadoras vivem em registro Python e não compõem os 9.452 itens.
+    # Calculadoras vivem em registro Python e não compõem os itens do corpus.
     calculator_source = "\n".join(
         path.read_text(encoding="utf-8")
         for path in sorted((ROOT / "backend/app/services").glob("*calculators*.py"))

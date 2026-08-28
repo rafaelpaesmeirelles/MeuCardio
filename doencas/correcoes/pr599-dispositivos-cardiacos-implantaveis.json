@@ -1,0 +1,193 @@
+[
+  {
+    "slug": "dispositivos-cardiacos-implantaveis",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: tempestade elétrica/múltiplos choques reclassificados, choque apropriado único incorporado, infecção sistêmica condicionada ao contexto microbiológico e hardware exposto/purulento separado de sinais locais inespecíficos, falha de lead de choque identificada, RM em sistema não condicional condicionada a fatores de maior risco e Rassi corrigido como escore prognóstico não indicativo isolado de CDI. DANISH e estudo original de Rassi acrescentados. Publicação autorizada pelo responsável médico em 27/08/2026."
+    },
+    "append": {
+      "source_refs": [
+        "Køber L, Thune JJ, Nielsen JC, et al; DANISH Investigators. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011.",
+        "Rassi A Jr, Rassi A, Little WC, et al. Development and Validation of a Risk Score for Predicting Death in Chagas' Heart Disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/27571011/",
+        "https://pubmed.ncbi.nlm.nih.gov/16928995/"
+      ]
+    },
+    "replace": [
+      {
+        "old": "Doença de Chagas crônica com indicação de CDI — estratificação de risco de morte súbita por escore próprio (Rassi), distinto dos critérios de fração de ejeção usados na cardiomiopatia isquêmica/não isquêmica, refletindo o padrão arritmogênico peculiar da cardiopatia chagásica (aneurisma apical, fibrose extensa, TV sustentada mesmo com função ventricular preservada)",
+        "new": "Doença de Chagas crônica — o escore de Rassi estima risco de mortalidade global e não constitui critério isolado para implante de CDI. A decisão de CDI deve considerar prevenção secundária, arritmias ventriculares documentadas, função ventricular, síncope, substrato cicatricial e recomendações específicas para cardiopatia chagásica"
+      }
+    ],
+    "assistant_questions": {
+      "systemic_infection_signs": {
+        "label": "Há febre, calafrios ou outros sinais sistêmicos de possível infecção?"
+      },
+      "device_mri_conditional": {"required": true}
+    },
+    "assistant_questions_add": [
+      {
+        "id": "cied_hardware_exposed_or_purulent",
+        "label": "Há exposição/erosão do gerador ou eletrodo, drenagem purulenta ou deiscência com comunicação com o sistema?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "cied_bacteremia_without_other_source",
+        "label": "Há bacteremia documentada/persistente sem outro foco convincente ou alta suspeita microbiológica de infecção do CIED?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "shock_lead_involved_or_suspected",
+        "label": "Em CDI/TRC-D, há suspeita de que a disfunção envolva o eletrodo/circuito de choque ou possa comprometer detecção/terapia de desfibrilação?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "mri_high_risk_lead_context",
+        "label": "Para a RM há lead abandonado, fraturado, epicárdico, integridade duvidosa ou outro contexto fora do protocolo legado habitual (incluindo necessidade de 3 T)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Planejamento"
+      }
+    ],
+    "assistant_rules": {
+      "cied-infeccao-sistemica-suspeita": {
+        "when": {
+          "all": [
+            {"field": "cied_bacteremia_without_other_source", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Bacteremia documentada/persistente sem outro foco ou alta suspeita microbiológica em portador de CIED é compatível com possível infecção sistêmica de CIED/endocardite de eletrodo, mesmo sem febre atual"],
+          "emergency_flow": ["Colher hemoculturas antes do antibiótico quando a condição permitir, avaliar foco alternativo e envolver rapidamente equipe de infecção/extração de CIED; ausência de febre/calafrios não neutraliza bacteremia persistente sem outro foco."]
+        }
+      },
+      "cied-erosao-bolsa-infeccao-local": {
+        "when": {
+          "all": [{"field": "cied_hardware_exposed_or_purulent", "op": "truthy"}]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Exposição/erosão do hardware ou drenagem purulenta compatível com infecção definida do sistema"],
+          "emergency_flow": ["Encaminhar prontamente para equipe experiente em infecção/extração de CIED; hardware exposto ou comunicação purulenta com o sistema não deve ser tratado como problema cutâneo isolado."],
+          "suggested_tests": ["Hemoculturas antes de antibiótico quando clinicamente possível e avaliação de extensão sistêmica/endovascular conforme contexto"]
+        }
+      },
+      "cdi-multiplos-choques-apropriados": {
+        "priority": 98,
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Múltiplos choques apropriados recentes — possível tempestade elétrica"],
+          "emergency_flow": ["Avaliar em ambiente monitorizado com capacidade imediata de desfibrilação externa; interrogar o dispositivo, confirmar terapias apropriadas e investigar isquemia, distúrbios eletrolíticos, insuficiência cardíaca e outros gatilhos reversíveis."]
+        }
+      },
+      "cied-disfuncao-eletrodo-nao-dependente": {
+        "when": {
+          "all": [
+            {"field": "lead_dysfunction_signs", "op": "truthy"},
+            {"field": "pacing_dependent", "op": "falsy"},
+            {"field": "shock_lead_involved_or_suspected", "op": "falsy"}
+          ]
+        }
+      },
+      "cied-rm-nao-condicional": {
+        "when": {
+          "all": [
+            {"field": "mri_needed", "op": "truthy"},
+            {"field": "device_mri_conditional", "op": "eq", "value": "nao_condicional"},
+            {"field": "mri_high_risk_lead_context", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "messages": ["RM em sistema não condicional pode ser viável em centro com protocolo estruturado após identificação completa do gerador/leads, interrogação, programação e monitorização; não aprovar nem negar automaticamente fora desse protocolo."],
+          "suggested_tests": ["Interrogação e programação pré-exame pela equipe de eletrofisiologia, monitorização durante o exame e reinterrogação pós-exame"]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "cied-sinais-sistemicos-sem-bacteremia-documentada",
+        "priority": 70,
+        "when": {
+          "all": [
+            {"field": "systemic_infection_signs", "op": "truthy"},
+            {"field": "cied_bacteremia_without_other_source", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": ["Febre/calafrios em portador de CIED exigem avaliação de fonte, hemoculturas quando indicadas e inspeção do sistema, mas não confirmam infecção de CIED isoladamente."],
+          "suggested_tests": ["Avaliar foco infeccioso alternativo e colher hemoculturas antes de antibiótico quando apropriado"]
+        }
+      },
+      {
+        "id": "cied-sinais-locais-inespecificos-sem-hardware-exposto",
+        "priority": 65,
+        "when": {
+          "all": [
+            {"field": "pocket_local_signs", "op": "truthy"},
+            {"field": "cied_hardware_exposed_or_purulent", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": ["Eritema/calor/dor local sem exposição ou pus requer avaliação presencial e correlação com tempo de implante, hematoma, cicatrização superficial e sinais sistêmicos; não rotular automaticamente como infecção profunda do CIED."]
+        }
+      },
+      {
+        "id": "cdi-choque-unico-apropriado",
+        "priority": 72,
+        "when": {
+          "all": [{"field": "icd_shock_history", "op": "eq", "value": "unico_apropriado"}]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Choque apropriado recente do CDI — evento ventricular tratado pelo dispositivo"],
+          "messages": ["Realizar avaliação clínica e interrogação do dispositivo em prazo curto para confirmar episódio, procurar causa reversível e revisar carga arrítmica/terapia; não tratar como equivalente a ausência de choque."]
+        }
+      },
+      {
+        "id": "cied-disfuncao-lead-choque",
+        "priority": 92,
+        "when": {
+          "all": [
+            {"field": "lead_dysfunction_signs", "op": "truthy"},
+            {"field": "shock_lead_involved_or_suspected", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "device_type", "op": "eq", "value": "cdi"},
+            {"field": "device_type", "op": "eq", "value": "trc_d"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Possível falha de eletrodo/circuito de choque com risco de terapia inapropriada ou perda de proteção de desfibrilação"],
+          "emergency_flow": ["Interrogar o dispositivo prontamente e envolver eletrofisiologia para avaliar oversensing, impedância, integridade do lead e necessidade de reprogramação/revisão; escalonar para emergência se houver choques recorrentes, síncope, arritmia ou instabilidade."]
+        }
+      },
+      {
+        "id": "cied-rm-contexto-lead-alto-risco",
+        "priority": 60,
+        "when": {
+          "all": [
+            {"field": "mri_needed", "op": "truthy"},
+            {"field": "mri_high_risk_lead_context", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": ["Caracterizar completamente leads abandonados/fraturados/epicárdicos, integridade do sistema, campo magnético planejado e protocolo institucional antes da RM"],
+          "messages": ["Este cenário está fora da mensagem genérica de RM em dispositivo legado; exigir avaliação individual por eletrofisiologia e radiologia com experiência em CIED antes de decidir realizar ou contraindicar o exame."]
+        }
+      }
+    ]
+  }
+]

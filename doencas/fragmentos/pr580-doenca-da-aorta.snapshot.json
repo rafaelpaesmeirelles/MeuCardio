@@ -1,0 +1,399 @@
+[
+  {
+    "slug": "doenca-da-aorta",
+    "name": "Doença da aorta",
+    "aliases": [
+      "aneurisma de aorta",
+      "síndrome aórtica aguda",
+      "dissecção de aorta",
+      "AAA",
+      "aneurisma de aorta torácica"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Doença da aorta do adulto — aneurisma degenerativo (torácico e abdominal), de curso crônico e predominantemente assintomático, e síndrome aórtica aguda (dissecção, hematoma intramural, úlcera aterosclerótica penetrante), de instalação súbita e alta letalidade precoce. Indicação de reparo eletivo do aneurisma depende de diâmetro E etiologia — cortes distintos para aorta tricúspide, valva bicúspide, Marfan, Loeys-Dietz/ACTA2. Diagnóstico da síndrome aórtica aguda por escore ADD-RS + D-dímero + angiotomografia sincronizada ao ECG. Tipo A (Stanford) é emergência cirúrgica; tipo B tratado clinicamente salvo complicação. Inclui arterite de Takayasu e de células gigantes como causas de aortite não degenerativa. Escopo restrito à doença isolada do adulto fora da gestação — aortopatia na gravidez tem hub próprio.",
+    "epidemiology": "A doença da aorta reúne dois polos epidemiológicos distintos: o aneurisma degenerativo (torácico e abdominal), de curso crônico e predominantemente assintomático, e a síndrome aórtica aguda (dissecção, hematoma intramural, úlcera aterosclerótica penetrante), de instalação súbita e alta letalidade precoce. O aneurisma de aorta abdominal (AAA) tem prevalência global estimada em torno de 0,9% em adultos, concentrada em homens acima de 65 anos, tabagistas ou ex-tabagistas e portadores de história familiar de AAA — a prevalência é várias vezes maior no sexo masculino e cresce com a idade, o que sustenta o rastreamento por ultrassonografia dirigido a esse subgrupo (Song et al., Ann Surg 2023, PMID 36177847). O aneurisma de aorta torácica é menos prevalente e etiologicamente mais heterogêneo — degenerativo/aterosclerótico, valva aórtica bicúspide (associada a 20-30% dos aneurismas de raiz) e síndromes genéticas do tecido conjuntivo (Marfan, Loeys-Dietz, gene ACTA2) —, com curso predominantemente assintomático até a dissecção ou até achado incidental em exame de imagem solicitado por outro motivo (Bossone & Eagle, Nat Rev Cardiol 2021, PMID 33353985). A incidência de dissecção aórtica aguda em estudos populacionais fica na faixa de poucos casos por 100.000 pessoas-ano, superando em alguns desenhos a incidência de ruptura de aneurisma degenerativo na mesma população (Clouse et al., Mayo Clin Proc 2004, PMID 14959911), com incidência descrita como estável ao longo do tempo em coorte escandinava mais recente (Acosta & Gottsäter, Scand Cardiovasc J 2019, PMID 31290700). A dissecção tipo A tem mortalidade que aumenta cerca de 1% a cada hora sem correção cirúrgica, em torno de 60% com manejo apenas clínico contra cerca de 25% com cirurgia; hipertensão arterial sistêmica é o principal fator de risco modificável em ambos os polos da doença. Arterite de Takayasu e arterite de células gigantes são causas menos frequentes, porém clinicamente relevantes, de aortite não degenerativa — a primeira acomete predominantemente mulheres jovens, a segunda indivíduos acima de 50 anos (Maz et al., Arthritis Rheumatol 2021, PMID 34235884).",
+    "presentation": [
+      "Aneurisma assintomático, achado incidental em exame de imagem solicitado por outro motivo (radiografia de tórax, tomografia, ultrassonografia abdominal) — forma de apresentação mais comum do aneurisma degenerativo, torácico ou abdominal",
+      "Dor torácica ou dorsal súbita, de intensidade máxima já no início, de caráter lancinante ou rasgante, com ou sem irradiação para o abdome — apresentação clássica da síndrome aórtica aguda (dissecção, hematoma intramural, úlcera penetrante)",
+      "Massa pulsátil abdominal, por vezes dolorosa à palpação, em aneurisma de aorta abdominal de grande diâmetro",
+      "Sinais de compressão de estruturas adjacentes por aneurisma torácico volumoso — rouquidão por compressão do nervo laríngeo recorrente, disfagia por compressão esofágica, dispneia ou estridor por compressão traqueobrônquica, síndrome da veia cava superior",
+      "Ruptura com choque hemorrágico — hipotensão súbita, síncope e dor abdominal ou lombar intensa associada a massa pulsátil em aneurisma abdominal roto; ou choque obstrutivo/tamponamento em dissecção tipo A rota para o pericárdio",
+      "Assimetria de pulsos ou diferencial de pressão arterial entre membros, sinal de má perfusão por dissecção acometendo um ramo aórtico",
+      "Sopro de insuficiência aórtica de início agudo associado a dor torácica, sugerindo dissecção proximal com acometimento da raiz/valva",
+      "Déficit neurológico focal agudo associado a dor torácica, sinalizando má perfusão de ramo supra-aórtico ou de artérias espinhais na síndrome aórtica aguda"
+    ],
+    "diagnostic_approach": {
+      "rastreamento_e_vigilancia_do_aneurisma_de_aorta_abdominal": [
+        "Ultrassonografia abdominal para rastreamento em população de risco (homem tabagista ou ex-tabagista, história familiar de AAA); diâmetro infrarrenal máximo define a faixa de vigilância",
+        "3,0-3,9 cm: reavaliação a cada 2-3 anos",
+        "4,0-4,4 cm: reavaliação a cada 1-2 anos",
+        "4,5 cm até o limiar de reparo: reavaliação a cada 6-12 meses",
+        "Risco anual de ruptura próximo de 0% na faixa de 3,0-3,9 cm, em torno de 1% na faixa de 4,0-4,9 cm e crescente de forma acentuada a partir de 5,0 cm, gradiente que fundamenta o encurtamento progressivo do intervalo de vigilância"
+      ],
+      "cortes_de_diametro_do_aneurisma_toracico_por_etiologia_esc_2024": [
+        "Regra prévia a qualquer corte numérico: identificado aneurisma torácico em qualquer segmento, avaliar a aorta inteira e a valva aórtica na linha de base e no seguimento — 20-30% dos aneurismas de raiz ocorrem em portador de valva bicúspide",
+        "Ascendente tubular, valva tricúspide, sem doença genética: corte cirúrgico ≥55 mm (ou >52 mm em centro experiente e baixo risco); pode ser considerado a partir de 50 mm havendo fator de risco adicional (crescimento ≥3 mm/ano, hipertensão resistente, estatura baixa, fenótipo de raiz, comprimento aórtico >11 cm, idade <50 anos ou desejo de gestação)",
+        "Valva bicúspide, fenótipo ascendente: mesmo corte da tricúspide (≥55 mm, ou >52 mm em centro experiente)",
+        "Valva bicúspide, fenótipo de raiz: corte mais baixo, ≥50 mm",
+        "Síndrome de Marfan, raiz: ≥50 mm (ou ≥45 mm com fator de risco adicional)",
+        "Síndrome de Loeys-Dietz e doença por gene ACTA2, raiz: ≥45 mm, ajustável por gene — dissecção pode ocorrer com diâmetros ainda menores nessas duas condições",
+        "Aorta descendente sem doença hereditária: ≥55 mm; toracoabdominal degenerativo: ≥60 mm (ou ≥55 mm se alto risco anatômico em centro experiente)",
+        "Ecocardiograma transtorácico é método inicial válido para raiz/ascendente, mas formalmente contraindicado (Classe III) como método isolado de vigilância de ascendente distal, arco e descendente — ali o método obrigatório é TC ou RM"
+      ],
+      "diagnostico_da_sindrome_aortica_aguda": [
+        "Calcular o escore ADD-RS, que soma quantas de três categorias têm ao menos um item presente: condições predisponentes de alto risco, características de dor de alto risco, achados de exame físico de alto risco",
+        "Instabilidade hemodinâmica ou ADD-RS 2-3: angiotomografia sincronizada ao ECG, do pescoço à pelve, imediatamente, sem aguardar D-dímero",
+        "ADD-RS 0-1 e estável: dosar D-dímero — se ≥500 ng/mL FEU, prosseguir para angiotomografia; abaixo desse valor, risco considerado muito baixo e a imagem pode ser dispensada, investigando diagnóstico alternativo",
+        "Classificação TEM (tipo de síndrome — dissecção, hematoma intramural ou úlcera aterosclerótica penetrante; localização da porta de entrada; presença de má perfusão) organiza prognóstico e conduta, complementando a classificação anatômica de Stanford (tipo A acomete a ascendente; tipo B, a descendente)",
+        "Tipo A é emergência cirúrgica — mortalidade aumenta cerca de 1%/hora sem correção; ecocardiograma transesofágico guia o perioperatório e detecta complicação precoce",
+        "Tipo B: distinguir complicado (má perfusão, ruptura, dor refratária ou hipertensão refratária, expansão) de não complicado — a forma complicada direciona a reparo endovascular na fase aguda quando a anatomia é favorável"
+      ],
+      "limite_do_assistente": "O assistente organiza sinais de alarme, dados ausentes e sugestão de exames; não interpreta a angiotomografia, não define o corte cirúrgico individualizado nem substitui a avaliação compartilhada entre cardiologia, cirurgia vascular/cardíaca e, quando aplicável, genética clínica."
+    },
+    "differentials": [
+      "Síndrome coronariana aguda — principal diferencial de dor torácica súbita e intensa; ECG e troponina de alta sensibilidade orientam, mas a dissecção pode cursar com infarto concomitante por acometimento coronariano, armadilha que atrasa o reconhecimento",
+      "Embolia pulmonar aguda — dor torácica e dispneia súbitas, compartilha o achado de D-dímero elevado com a síndrome aórtica aguda",
+      "Arterite de Takayasu e arterite de células gigantes (aortite não degenerativa/inflamatória) — vasculites de grandes vasos que produzem estenose, aneurisma e, mais raramente, dissecção da aorta por mecanismo distinto do degenerativo, com perfil demográfico próprio (mulheres jovens na Takayasu, indivíduos acima de 50 anos na células gigantes) e marcadores inflamatórios tipicamente elevados",
+      "Cólica renal/nefrolitíase e outras causas de dor lombar aguda — diferencial de dor lombar do AAA sintomático ou roto, sobretudo quando não se palpa massa pulsátil",
+      "Isquemia mesentérica aguda — pode coexistir como complicação de má perfusão na dissecção ou ser diagnóstico concorrente em dor abdominal aguda com choque",
+      "Pericardite aguda ou tamponamento cardíaco de outra etiologia — dor torácica que piora ao decúbito e atrito pericárdico, mas o tamponamento também pode ser a forma de apresentação de dissecção tipo A rota para o pericárdio",
+      "Dor musculoesquelética, costocondrite ou espasmo esofágico — diferenciais de dor torácica de baixo risco quando o ADD-RS é baixo"
+    ],
+    "tests": [
+      "Angiotomografia de aorta sincronizada ao ECG, do pescoço à pelve — exame de primeira linha para síndrome aórtica aguda; limitação: expõe a radiação e contraste iodado, e sua realização não deve postergar a estabilização hemodinâmica nem a decisão cirúrgica em paciente instável",
+      "Ecocardiograma transtorácico (TTE) — método inicial válido para avaliação de raiz e aorta ascendente; limitação: formalmente contraindicado (Classe III) como método isolado de vigilância de ascendente distal, arco e descendente, onde subestima o diâmetro real e não substitui TC/RM",
+      "Ecocardiograma transesofágico (ETE) — útil na instabilidade hemodinâmica e no intraoperatório de dissecção tipo A; limitação: exige sedação/manejo de via aérea em paciente já instável e depende de operador experiente",
+      "Ultrassonografia abdominal — método de rastreamento e seguimento do aneurisma de aorta abdominal, de baixo custo e sem radiação; limitação: qualidade prejudicada por gás intestinal ou obesidade, e não avalia a aorta torácica",
+      "D-dímero — usado em conjunto com o escore ADD-RS para triar quem precisa de imagem em suspeita de baixo risco; limitação: não é exame diagnóstico isolado, tem especificidade baixa, e um resultado negativo não afasta dissecção em paciente de alto risco clínico (ADD-RS 2-3)",
+      "Angiorressonância (angio-RM) — alternativa sem radiação e sem contraste iodado para seguimento seriado, sobretudo em paciente jovem com doença hereditária; limitação: menor disponibilidade em cenário de emergência e tempo de aquisição mais longo, o que restringe seu uso no paciente instável",
+      "Escore de risco de detecção de dissecção aórtica (ADD-RS) — organiza a probabilidade pré-teste combinando condições predisponentes, características da dor e achados de exame; limitação: isoladamente, com corte acima de zero, é muito sensível mas pouco específico, encaminhando a maioria dos pacientes à tomografia, e por isso precisa ser combinado ao D-dímero para discriminar melhor o risco"
+    ],
+    "red_flags": [
+      "Dor torácica, dorsal ou abdominal de início súbito, intensidade máxima já no início, de caráter lancinante ou em facada/rasgando — padrão distinto da dor em crescendo da síndrome coronariana aguda",
+      "Assimetria de pulsos ou de pressão arterial entre membros, ou entre membros superiores e inferiores",
+      "Sopro novo de insuficiência aórtica associado a dor torácica aguda",
+      "Hipotensão, choque ou síncope em paciente com dor torácica/abdominal aguda ou aneurisma conhecido — sinaliza ruptura ou tamponamento",
+      "Déficit neurológico focal agudo associado a dor torácica — sugere má perfusão de ramo supra-aórtico",
+      "Massa abdominal pulsátil dolorosa de aparecimento ou piora súbita — sinal de expansão ou ruptura iminente de aneurisma de aorta abdominal",
+      "Crescimento documentado do aneurisma ≥1,0 cm em 12 meses na aorta abdominal, ou ≥3-5 mm/ano na aorta torácica — indicação de reparo independente do diâmetro absoluto atingido",
+      "Dor persistente ou refratária ao tratamento clínico em dissecção tipo B previamente considerada não complicada — sinaliza complicação (má perfusão, expansão, hipertensão refratária) e muda a conduta para reparo"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o segmento acometido, a etiologia (degenerativa, valva aórtica bicúspide, síndrome genética como Marfan/Loeys-Dietz/ACTA2) e o diâmetro atual, pois o corte de indicação cirúrgica muda com a etiologia e não só com o tamanho",
+      "Avaliar a aorta inteira e a valva aórtica na linha de base e no seguimento diante de qualquer aneurisma torácico identificado",
+      "Definir o intervalo de reimagem por local, diâmetro e taxa de crescimento — TC/RM obrigatórios para arco, aorta ascendente distal e descendente; ecocardiograma aceito apenas para raiz e ascendente proximal",
+      "Levantar história familiar de três gerações para doença aórtica hereditária, morte súbita inexplicada e aneurisma periférico/intracraniano, encaminhando aconselhamento genético e rastreamento em cascata quando indicado",
+      "Discutir indicação de reparo eletivo por diâmetro, etiologia ou crescimento rápido, e escolher entre EVAR/TEVAR, endoprótese ramificada e cirurgia aberta por anatomia, comorbidade e expectativa de vida — sem excluir reparo por idade cronológica isolada, inclusive em nonagenário",
+      "Programar reabilitação e retorno gradual à atividade física após dissecção estável, com programa individualizado e monitorado, atento à resposta pressórica ao esforço",
+      "Otimizar controle de pressão arterial e fatores de risco cardiovascular em toda pessoa com aneurisma ou história de síndrome aórtica aguda, independentemente da indicação de reparo"
+    ],
+    "emergency_flow": [
+      "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada — calcular ADD-RS, associar D-dímero se baixo risco, e obter angio-TC sincronizada ao ECG do pescoço à pelve como exame de primeira linha",
+      "Ruptura de aneurisma com choque ou instabilidade hemodinâmica — estabilizar em ambiente monitorizado e acionar reparo emergencial (aberto ou endovascular conforme anatomia e estabilidade) sem atraso por exames não essenciais",
+      "Síndrome aórtica aguda tipo A (acometimento de aorta ascendente) confirmada — cirurgia aberta emergencial, com ecocardiograma transesofágico guiando o perioperatório e detectando complicação precoce",
+      "Síndrome aórtica aguda tipo B complicada — má perfusão, ruptura, dor refratária, hipertensão refratária ou expansão — reparo endovascular na fase aguda se anatomia favorável, com cirurgia aberta como alternativa",
+      "Iniciar controle de pressão arterial e frequência cardíaca (classe betabloqueadora intravenosa como primeira linha, vasodilatador intravenoso associado se necessário) assim que a suspeita for levantada, em paralelo à investigação de imagem, buscando a menor pressão sistólica compatível com perfusão de órgão-alvo"
+    ],
+    "treatment_summary": "O tratamento da doença da aorta se organiza em dois eixos que raramente se sobrepõem no tempo: o manejo eletivo do aneurisma assintomático em seguimento e o manejo emergencial da síndrome aórtica aguda. No aneurisma, a indicação de reparo depende do diâmetro E da etiologia — não existe um único corte universal. Para aorta ascendente tricúspide sem doença genética, o limiar clássico é diâmetro máximo ≥55 mm; o mesmo corte se aplica ao fenótipo ascendente da valva aórtica bicúspide, mas no fenótipo de raiz da bicúspide o corte cai para ≥50 mm — mesmo patamar da síndrome de Marfan em raiz, que pode antecipar para ≥45 mm na presença de fator de risco adicional. Síndromes genéticas mais graves, como Loeys-Dietz e doença por gene ACTA2, indicam reparo a partir de ≥45 mm, ajustável por gene. Quando o paciente já vai ao centro cirúrgico para troca valvar aórtica por outro motivo, o corte de ≥45 mm se aplica para operar a aorta no mesmo tempo cirúrgico — não porque o risco intrínseco da aorta mudou, mas porque a janela cirúrgica já está aberta. Mesmo sem síndrome genética e sem valva bicúspide, a substituição pode ser considerada já a partir de 50 mm quando há fatores de risco adicionais (crescimento acelerado, hipertensão resistente, estatura baixa, fenótipo de raiz, aorta longa, idade jovem ou desejo de gestação), porque a maioria das dissecções agudas tipo A ocorre com aorta abaixo do corte clássico de 55 mm. Na aorta descendente e toracoabdominal os cortes são maiores — ≥55 mm na descendente sem doença hereditária e ≥60 mm no aneurisma toracoabdominal degenerativo, podendo antecipar para ≥55 mm em centro experiente com características de alto risco. No aneurisma de aorta abdominal infrarrenal, o limiar de reparo eletivo padrão é ≥5,5 cm em homens e ≥5,0 cm em mulheres, com indicação também para crescimento rápido (≥1,0 cm em um ano) mesmo abaixo do corte; abaixo do limiar, o risco cirúrgico supera o risco de ruptura e a vigilância por imagem é a conduta.\n\nDefinida a indicação de reparo, a escolha entre reparo endovascular (EVAR na aorta abdominal, TEVAR na torácica) e cirurgia aberta depende de anatomia, expectativa de vida e doença do tecido conjuntivo — quando a anatomia permite, o reparo endovascular é preferido por menor morbimortalidade perioperatória, reservando a via aberta para anatomia desfavorável ou doença do tecido conjuntivo com expectativa de vida além de curto prazo. A idade cronológica isolada, incluindo o paciente nonagenário (≥90 anos), não deve ser motivo para negar EVAR eletivo: dado de registro cirúrgico ajustado mostrou ausência de associação independente entre condição de nonagenário e mortalidade em 30 dias ou a maioria das complicações maiores — o chamado mito da exclusão por idade. O que efetivamente muda com a idade avançada é o desfecho funcional: nonagenários têm maior chance de alta sem retorno ao domicílio e maior taxa de complicação infecciosa, achados que devem entrar na decisão compartilhada tanto quanto a sobrevida. Esse dado se refere a EVAR eletivo em aneurisma não roto — não se extrapola para reparo aberto nem para aneurisma roto, cenários de risco perioperatório muito mais alto. Para aneurisma pararrenal (sem colo infrarrenal seguro) e toracoabdominal extensão IV, quando a anatomia impede EVAR convencional e a cirurgia aberta carrega risco elevado, a endoprótese ramificada de prateleira (quatro ramos, sem fabricação sob medida) é opção validada, com alto sucesso técnico e mortalidade relacionada à lesão baixa em 30 dias, ao custo de uma taxa não desprezível de eventos adversos maiores — incluindo risco medular/neurológico — e de patência de ramo renal inferior à dos ramos viscerais superiores, o que exige seguimento por imagem estruturado e discussão explícita do risco de reintervenção antes do procedimento.\n\nNa síndrome aórtica aguda, a conduta se divide por acometimento da aorta ascendente. Tipo A (Stanford), com acometimento ascendente, é emergência cirúrgica — reparo aberto, guiado por ecocardiograma transesofágico perioperatório para orientar a estratégia e detectar complicação precoce; a mortalidade aumenta progressivamente a cada hora sem cirurgia. Tipo B, sem acometimento ascendente, é tratado clinicamente quando não complicado, com controle rigoroso de pressão arterial; quando complicado — má perfusão, ruptura, dor refratária, hipertensão refratária ou expansão — o reparo endovascular na fase aguda é preferido quando a anatomia é favorável, com cirurgia aberta como alternativa. A mesma lógica territorial vale para hematoma intramural (tipo B complicado com indicação de reparo endovascular torácico) e úlcera aterosclerótica penetrante (cirurgia se tipo A, tratamento endovascular se tipo B). Em qualquer síndrome aórtica aguda, o controle inicial de pressão arterial e frequência cardíaca é prioridade terapêutica independente da via de reparo definitiva: a classe de escolha é o betabloqueador intravenoso, associando vasodilatador intravenoso quando o controle pressórico permanece inadequado apenas com betabloqueio — sempre buscando a menor pressão sistólica compatível com perfusão de órgão-alvo e frequência cardíaca controlada, sem que a escolha da classe substitua a definição de dose e via pelo médico assistente à beira do leito.\n\nApós dissecção aórtica estável, meses após o evento agudo, a ideia de sedentarismo protetor automático não deve ser a conduta padrão: evidência piloto randomizada mostrou viabilidade de programa de exercício moderado, individualizado e monitorado, sem sinal de dano grave (sem morte, reoperação aórtica ou dissecção recorrente na amostra estudada), mas com hipertensão ao esforço em parcela relevante dos participantes, exigindo ajuste de intensidade — a leitura correta é evidência de viabilidade e ausência de sinal óbvio de dano, não prova definitiva de segurança irrestrita, e não se estende a exercício vigoroso, à fase aguda, a síndromes genéticas de alto risco (Marfan, Loeys-Dietz) nem a aneurisma rapidamente progressivo sem avaliação individual.",
+    "monitoring": [
+      "Diâmetro aórtico seriado por TC ou RM, no intervalo definido por segmento, diâmetro atual e taxa de crescimento — TTE é contraindicado para vigilância de arco, aorta ascendente distal e descendente",
+      "Pressão arterial e frequência cardíaca, com meta de controle rigoroso em toda pessoa com aneurisma ou história de dissecção",
+      "Sinais de alarme para nova síndrome aórtica aguda — dor torácica/dorsal nova ou recorrente, síncope, déficit de pulso ou neurológico focal",
+      "Resposta pressórica ao esforço durante programa de exercício pós-dissecção, com ajuste de intensidade diante de hipertensão induzida pelo esforço",
+      "Patência de ramos-alvo e presença de endoleak em seguimento pós-EVAR, TEVAR ou endoprótese ramificada",
+      "Função renal, sobretudo após exposição a contraste iodado repetida e após reparo com ramo renal",
+      "Adesão a controle de fatores de risco cardiovascular (tabagismo, LDL-C, diabetes) e a programa de reabilitação/exercício monitorado"
+    ],
+    "special_populations": [
+      "Gestante com aortopatia predisponente (síndrome de Marfan, Loeys-Dietz, Ehlers-Danlos vascular, valva aórtica bicúspide com dilatação ou síndrome de Turner) — a gestação é o período de maior risco de dissecção aórtica nessas condições; estratificação pré-concepcional, vigilância ecocardiográfica seriada e planejamento multidisciplinar da via de parto são abordados em profundidade no hub-irmão 'Aortopatia na gravidez' (slug aortopatia-na-gravidez), para onde este verbete remete sem duplicar seus documentos.",
+      "Portador de válvula aórtica bicúspide — aortopatia associada com padrão de dilatação distinto da etiologia degenerativa/aterosclerótica, exigindo vigilância de imagem da raiz e aorta ascendente independentemente do grau de disfunção valvar, com limiares de reparo cirúrgico próprios quando associada a cirurgia valvar.",
+      "Idoso/nonagenário candidato a reparo endovascular de aneurisma de aorta (EVAR) — a idade cronológica isolada não deve excluir o reparo; a decisão depende de anatomia favorável, expectativa de vida funcional e avaliação de fragilidade, não apenas do número de anos.",
+      "Pessoa com história familiar de aneurisma ou dissecção de aorta (aneurisma/dissecção torácica familiar não sindrômica) — candidata a rastreamento de imagem em parentes de primeiro grau e a limiares de reparo mais conservadores do que os da população geral, mesmo sem síndrome genética identificada.",
+      "Adulto não gestante com síndrome de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular — vigilância de imagem seriada de toda a aorta (não só a raiz), limiares de reparo cirúrgico mais baixos e mais conservadores do que na aortopatia degenerativa, e triagem de familiares de primeiro grau."
+    ],
+    "assistant_questions": [
+      {
+        "id": "sudden_tearing_pain",
+        "label": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "instability_shock",
+        "label": "Há hipotensão, síncope, choque, déficit de pulso entre membros ou déficit neurológico focal associado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "pulsatile_abdominal_mass",
+        "label": "Massa abdominal pulsátil ao exame físico?",
+        "type": "boolean",
+        "section": "Apresentação"
+      },
+      {
+        "id": "known_aneurysm_surveillance",
+        "label": "Há aneurisma de aorta já conhecido e em seguimento por imagem?",
+        "type": "boolean",
+        "section": "História"
+      },
+      {
+        "id": "family_history_ctd",
+        "label": "História familiar de aneurisma ou dissecção de aorta, morte súbita inexplicada, ou doença do tecido conjuntivo (Marfan, Loeys-Dietz, valva aórtica bicúspide)?",
+        "type": "boolean",
+        "section": "História"
+      },
+      {
+        "id": "age_range",
+        "label": "Faixa etária do paciente",
+        "type": "select",
+        "required": true,
+        "section": "Perfil",
+        "options": [
+          {
+            "value": "menor_70",
+            "label": "Menor que 70 anos"
+          },
+          {
+            "value": "70_a_89",
+            "label": "70 a 89 anos"
+          },
+          {
+            "value": "90_ou_mais",
+            "label": "90 anos ou mais (nonagenário)"
+          }
+        ]
+      },
+      {
+        "id": "comorbidity_relevant",
+        "label": "Comorbidades relevantes para a decisão de reparo",
+        "type": "multiselect",
+        "section": "Perfil",
+        "options": [
+          {
+            "value": "fragilidade_dependencia_funcional",
+            "label": "Fragilidade ou dependência funcional"
+          },
+          {
+            "value": "doenca_renal_cronica",
+            "label": "Doença renal crônica"
+          },
+          {
+            "value": "dpoc_grave",
+            "label": "DPOC grave"
+          },
+          {
+            "value": "expectativa_vida_limitada",
+            "label": "Expectativa de vida limitada"
+          },
+          {
+            "value": "nenhuma_relevante",
+            "label": "Nenhuma relevante"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "aorta-suspeita-dissecacao-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sudden_tearing_pain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor lancinante/rasgante de início súbito sugestiva de síndrome aórtica aguda"
+          ],
+          "emergency_flow": [
+            "Calcular ADD-RS e obter angio-TC sincronizada ao ECG do pescoço à pelve sem atraso"
+          ],
+          "suggested_tests": [
+            "Angiotomografia de aorta sincronizada ao ECG (pescoço à pelve)"
+          ]
+        }
+      },
+      {
+        "id": "aorta-instabilidade-ruptura",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "instability_shock",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de choque, ruptura de aneurisma ou má perfusão em síndrome aórtica aguda"
+          ],
+          "emergency_flow": [
+            "Estabilizar em ambiente monitorizado e acionar cirurgia vascular/cardiovascular imediatamente, sem aguardar exames adicionais além do essencial"
+          ]
+        }
+      },
+      {
+        "id": "aorta-massa-pulsatil-isolada",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "pulsatile_abdominal_mass",
+              "op": "truthy"
+            },
+            {
+              "field": "instability_shock",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Ultrassonografia abdominal ou angiotomografia para caracterizar aneurisma e diâmetro"
+          ],
+          "differentials": [
+            "Aneurisma de aorta abdominal não roto ou em expansão"
+          ]
+        }
+      },
+      {
+        "id": "aorta-historia-familiar-hereditaria",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "family_history_ctd",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "História familiar de aneurisma/dissecção de aorta ou doença do tecido conjuntivo aumenta a probabilidade pré-teste de síndrome aórtica hereditária"
+          ],
+          "suggested_tests": [
+            "Avaliar a aorta inteira na linha de base; considerar aconselhamento genético e rastreamento em cascata de parentes de primeiro grau"
+          ]
+        }
+      },
+      {
+        "id": "aorta-seguimento-conhecido",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "known_aneurysm_surveillance",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Confirmar diâmetro mais recente, etiologia e intervalo de seguimento por imagem indicados"
+          ],
+          "missing_information": [
+            "Diâmetro e taxa de crescimento no último exame de imagem"
+          ]
+        }
+      },
+      {
+        "id": "aorta-nonagenario-decisao-reparo",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "age_range",
+              "op": "eq",
+              "value": "90_ou_mais"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Idade isolada não contraindica reparo eletivo (EVAR); decidir por fragilidade, anatomia e expectativa de retorno ao domicílio em decisão compartilhada"
+          ],
+          "supporting": [
+            "Nonagenário apropriadamente selecionado pode ser submetido a EVAR eletivo com mortalidade em 30 dias comparável à de pacientes mais jovens, mas com maior risco de alta sem destino domiciliar e de complicação infecciosa"
+          ]
+        }
+      },
+      {
+        "id": "aorta-comorbidade-fragilidade",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "comorbidity_relevant",
+              "op": "contains",
+              "value": "fragilidade_dependencia_funcional"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Fragilidade relevante para a decisão de reparo eletivo — avaliar caso a caso, sem excluir automaticamente pela idade ou pela fragilidade isolada"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "doença da aorta",
+      "aneurisma de aorta",
+      "síndrome aórtica aguda",
+      "dissecção aórtica",
+      "AAA",
+      "EVAR",
+      "TEVAR"
+    ],
+    "source_refs": [
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722.",
+      "Bossone E, Eagle KA. Epidemiology and management of aortic disease: aortic aneurysms and acute aortic syndromes. Nat Rev Cardiol. 2021;18(5):331-348. DOI: 10.1038/s41569-020-00472-6. PMID: 33353985.",
+      "Song P, He Y, Adeloye D, et al; Global Health Epidemiology Research Group (GHERG). The Global and Regional Prevalence of Abdominal Aortic Aneurysms: A Systematic Review and Modeling Analysis. Ann Surg. 2023;277(6):912-919. DOI: 10.1097/SLA.0000000000005716. PMID: 36177847. PMCID: PMC10174099.",
+      "Clouse WD, et al. Acute aortic dissection: population-based incidence compared with degenerative aortic aneurysm rupture. Mayo Clin Proc. 2004;79(2):176-180. PMID: 14959911.",
+      "Acosta S, Gottsäter A. Stable population-based incidence of acute type A and B aortic dissection. Scand Cardiovasc J. 2019;53(5):274-279. DOI: 10.1080/14017431.2019.1642509. PMID: 31290700.",
+      "Ren S, et al. Diagnostic accuracy of the aortic dissection detection risk score alone or with D-dimer for acute aortic syndromes: systematic review and meta-analysis. PLoS One. 2024;19(6):e0304401. DOI: 10.1371/journal.pone.0304401. PMID: 38905181.",
+      "Maz M, Chung SA, Abril A, et al. 2021 American College of Rheumatology/Vasculitis Foundation Guideline for the Management of Giant Cell Arteritis and Takayasu Arteritis. Arthritis Rheumatol. 2021;73(8):1349-1365. DOI: 10.1002/art.41774. PMID: 34235884. PMCID: PMC12344528."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39210722/",
+      "https://pubmed.ncbi.nlm.nih.gov/33353985/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10174099/",
+      "https://pubmed.ncbi.nlm.nih.gov/14959911/",
+      "https://pubmed.ncbi.nlm.nih.gov/31290700/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11192411/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12344528/"
+    ],
+    "related_document_slugs": [
+      "aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo",
+      "fluxograma-aneurisma-de-aorta-abdominal-seguimento-e-indicacao-de-reparo",
+      "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+      "fluxograma-aneurisma-de-aorta-toracica-cortes-por-etiologia-esc-2024",
+      "tambe-endoprotese-ramificada-off-the-shelf-para-aneurisma-toracoabdominal-e-pararrenal",
+      "sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo",
+      "fluxograma-sindrome-aortica-aguda-esc-2024",
+      "exercicio-moderado-domiciliar-apos-disseccao-aortica-rct-multicentrico-2026",
+      "reparo-endovascular-de-aneurisma-de-aorta-abdominal-no-nonagenario-evar-e-o-mito-da-exclusao-por-idade",
+      "rastreamento-vascular-multimodal-e-mortalidade-por-sexo-o-programa-viborg-2026",
+      "arterite-de-takayasu-e-arterite-de-celulas-gigantes-vasculite-de-grandes-vasos"
+    ],
+    "patient_material_slug": "aneurisma-de-aorta",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo segundo ciclo do dia. Nenhum verbete geral de doença da aorta (aneurisma/síndrome aórtica aguda) existia previamente no corpus. Escopo restrito a doença da aorta isolada do adulto fora da gestação — o hub-irmão aortopatia-na-gravidez cobre a gestante com aortopatia predisponente, e nenhum de seus 7 related_document_slugs foi duplicado aqui. content/Aorta_e_doença_arterial_periférica/ tinha 34 documentos, dos quais 17 já consumidos pelo hub doenca-arterial-periferica-de-membros (PR #578, cujo próprio review_note reservava explicitamente 'doença da aorta isolada' para este ciclo futuro) — os 11 remanescentes (mais 1 de Cardiologia_geriátrica) formam este hub. Um candidato inicialmente mais forte por volume absoluto (febre reumática, 24 documentos) foi descartado num ciclo anterior por colisão com o PR #567 (Codex); este ciclo seguiu para o próximo candidato coerente disponível. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 7 referências citadas (diretriz ESC 2024 PMID 39210722, revisão de epidemiologia de doença aórtica PMID 33353985, revisão sistemática de prevalência global de AAA PMID 36177847, estudo populacional de incidência de dissecção PMID 14959911, coorte escandinava PMID 31290700, metanálise de acurácia diagnóstica do ADD-RS PMID 38905181, diretriz ACR/VF de arterite de células gigantes e Takayasu PMID 34235884). related_document_slugs conta com 11 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames. O documento 'rastreamento-vascular-multimodal-e-mortalidade-por-sexo-o-programa-viborg-2026' está deliberadamente vinculado também ao hub doenca-arterial-periferica-de-membros (PR #578) — inclusão dupla legítima, pois o programa VIBORG discute rastreamento de AAA e de DAP de membros de forma igualmente central, verificado via leitura direta do texto. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum PR aberto que toca doencas/metadados.json cria o slug doenca-da-aorta. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

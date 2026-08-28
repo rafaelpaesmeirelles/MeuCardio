@@ -1,0 +1,456 @@
+[
+  {
+    "slug": "choque-cardiogenico",
+    "name": "Choque cardiogênico",
+    "aliases": [
+      "choque cardiogênico agudo",
+      "SCAI shock stage",
+      "estágios SCAI",
+      "falência de bomba"
+    ],
+    "area": "geral",
+    "category": "emergencia_cardiovascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Estado agudo de baixo débito cardíaco com hipoperfusão tecidual, distinto da síndrome crônica de insuficiência cardíaca. Etiologias: isquêmica pós-IAM, não isquêmica, pós-cardiotomia/pós-CEC, falência de ventrículo direito associada. Diagnóstico por critérios clínicos (hipotensão + hipoperfusão) e hemodinâmicos (índice cardíaco reduzido, pressão de oclusão elevada) quando monitorização invasiva disponível, estratificado pela classificação SCAI de estágios A a E. Tratamento por droga vasoativa/inotrópica escolhida por fenótipo hemodinâmico (vasopressor se hipotensão predominante, inotrópico se baixo débito), com escalonamento programado de suporte circulatório mecânico temporário (balão intra-aórtico, Impella, ECMO-VA) conforme estágio SCAI e resposta inicial — cada dispositivo com evidência randomizada própria e trade-offs distintos (DanGer Shock, ECLS-SHOCK, IABP-SHOCK II). Inclui choque misto com componente vasodilatador e desmame programado de suporte mecânico.",
+    "epidemiology": "O choque cardiogênico (CC) é síndrome de baixo débito com hipoperfusão tecidual e mortalidade hospitalar historicamente entre 30% e 50%, permanecendo uma das condições de maior letalidade da cardiologia aguda apesar dos avanços em suporte circulatório mecânico (Chioncel O et al., Eur J Heart Fail 2020, position statement HFA/ESC, PMID 32469155). Embora o infarto agudo do miocárdio com supradesnivelamento do segmento ST seja a causa isquêmica classicamente estudada, registros contemporâneos de unidades coronarianas avançadas mostram que a insuficiência cardíaca descompensada responde por parcela igual ou maior dos casos: na coorte de validação dos critérios objetivos SCAI (Kapur NK et al., J Am Coll Cardiol 2022, PMID 35835491; registro Cardiogenic Shock Working Group, 2016-2021, 3.455 pacientes), 52% dos casos tiveram etiologia de insuficiência cardíaca e 32% infarto do miocárdio, com mortalidade geral de 35% e gradiente acentuado por estágio de gravidade alcançado. O registro Critical Care Cardiology Trials Network (Berg DD et al., Circ Cardiovasc Qual Outcomes 2019, PMID 30879324; 16 UTIs coronarianas avançadas norte-americanas, 3.049 admissões consecutivas) encontrou choque clínico em 22% das admissões, com distribuição de 66% cardiogênico puro, 20% misto (componente cardiogênico e vasodilatador simultâneos), 7% distributivo e 3% hipovolêmico isolados — o que situa o choque misto como a segunda apresentação mais frequente nesse ambiente, atrás apenas do cardiogênico puro, com tempo de internação e escore SOFA mais altos que o choque cardiogênico sem componente misto. A forma pós-cardiotomia/pós-circulação extracorpórea, etiologia não isquêmica distinta, tem incidência muito variável conforme a definição aplicada (1,5% a 91% em revisão sistemática de 262 definições) e caiu de 9,1% para 2,4% entre 1990 e 2009 em coorte de revascularização miocárdica isolada, refletindo evolução de proteção miocárdica e cuidado perioperatório, com reoperação, fração de ejeção muito reduzida, cirurgia de emergência e choque cardiogênico pré-operatório como preditores independentes mais fortes (Algarni KD et al., Ann Thorac Surg 2011, PMID 21939957; Schoonen A et al., Front Cardiovasc Med 2022, PMID 36247457).",
+    "presentation": [
+      "Hipotensão arterial sistêmica (PAS < 90 mmHg, PAM < 60 mmHg ou queda > 30 mmHg em relação à pressão basal), muitas vezes já sob suporte vasoativo no momento da avaliação",
+      "Extremidades frias, pele mosqueada ou livedo reticular e pulsos distais finos, refletindo vasoconstrição compensatória e baixo débito periférico — achado que se inverte (extremidades quentes) quando há componente vasodilatador sobreposto",
+      "Oligúria (diurese < 30 mL/h) por hipoperfusão renal, habitualmente acompanhada de piora aguda da função renal",
+      "Alteração aguda do sensório — confusão, sonolência ou agitação — por hipoperfusão cerebral, sinal de gravidade incorporado aos critérios de estágio SCAI C e superiores",
+      "Edema pulmonar e estertores por congestão retrógrada, compatíveis com o fenótipo hemodinâmico mais comum ('frio e úmido'), embora exista subgrupo sem congestão evidente ('frio e seco')",
+      "Lactato sérico elevado (> 2 mmol/L), marcador bioquímico de hipoperfusão tecidual incorporado formalmente aos critérios de estágio SCAI a partir do estágio C, com corte > 8 mmol/L no estágio E",
+      "Turgência jugular elevada e outros sinais de sobrecarga de volume/congestão venosa, presentes já a partir do estágio B",
+      "Taquicardia sinusal compensatória ou arritmia associada à instabilidade hemodinâmica",
+      "Nos estágios mais avançados (D e E), colapso cardiovascular, parada cardiorrespiratória em curso ou necessidade de múltiplos dispositivos de suporte circulatório mecânico associados a manobras de reanimação"
+    ],
+    "diagnostic_approach": {
+      "criterios_hemodinamicos_e_clinicos": "O choque cardiogênico é definido como estado de baixo débito cardíaco levando a hipoperfusão tecidual, na presença de volume intravascular adequado ou elevado — o que o distingue fisiopatologicamente do choque hipovolêmico (Chioncel O et al., Eur J Heart Fail 2020, PMID 32469155). Clinicamente, o diagnóstico combina hipotensão sustentada (ou necessidade de suporte farmacológico/mecânico para manter pressão) com sinais de hipoperfusão de órgão-alvo: extremidades frias, alteração do sensório, oligúria e lactato elevado. Quando há monitorização hemodinâmica invasiva disponível, os critérios se tornam objetivos: índice cardíaco reduzido (classicamente < 2,2 L/min/m²) associado a pressão de oclusão da artéria pulmonar elevada (> 15 mmHg), o que novamente separa o padrão cardiogênico do hipovolêmico (débito baixo com pressão de enchimento baixa) e do distributivo/séptico puro (débito normal ou alto com resistência vascular sistêmica baixa). A checklist oficial SCAI SHOCK 2022 formaliza esses critérios combinando exame físico, marcador bioquímico (lactato, função renal, transaminases) e hemodinâmica em cada estágio, sem exigir que todos os itens de uma linha estejam presentes simultaneamente — a classificação usa o padrão predominante (Naidu SS et al., J Soc Cardiovasc Angiogr Interv 2022, PMID 39130139).",
+      "classificacao_scai_estagios_a_e": "A classificação SCAI organiza o choque cardiogênico em cinco estágios de gravidade crescente (Baran DA et al., Catheter Cardiovasc Interv 2019, PMID 31104355; critérios numéricos formalizados por Naidu SS et al., PMID 39130139, e validados em coorte multicêntrica por Kapur NK et al., J Am Coll Cardiol 2022, PMID 35835491). Estágio A ('em risco'): paciente sem sinais ou sintomas de choque, mas com condição predisponente (infarto extenso, insuficiência cardíaca descompensada prévia). Estágio B ('início'): instabilidade hemodinâmica relativa (hipotensão ou taquicardia) sem hipoperfusão — a presença de hipoperfusão é exatamente o que diferencia B de C. Estágio C ('clássico'): hipoperfusão estabelecida, exigindo intervenção inicial além de reposição volêmica. Estágio D ('em deterioração'): ausência de resposta ao conjunto inicial de intervenções após pelo menos 30 minutos de observação, com necessidade de doses crescentes ou combinação de vasoativos, ou adição de suporte circulatório mecânico. Estágio E ('extremo'): colapso cardiovascular, tipicamente com parada cardíaca em curso ou suporte circulatório mecânico múltiplo associado a manobras de reanimação, lactato > 8 mmol/L e acidose grave (pH < 7,2). O modificador '+A' (Arrest) é acrescentado ao estágio hemodinâmico quando há potencial lesão cerebral anóxica após parada (coma/GCS < 9 ou ausência de resposta motora a comandos após retorno da circulação espontânea) — uma desfibrilação breve, sem RCP relevante e com função neurológica normal, não basta para aplicar o modificador. A mortalidade cresce progressivamente de A para E, e o estágio não é um rótulo fixo atribuído na admissão: reavaliação frequente é o eixo do manejo, já que estágio basal mais baixo se associa a maior chance de escalonamento e a trajetória entre reavaliações — não a leitura isolada — orienta escalonar ou desescalonar suporte.",
+      "diferenciacao_choque_misto_vasodilatador_concomitante": "Choque misto é a coexistência, no mesmo paciente, de débito cardíaco insuficiente e resistência vascular sistêmica (RVS) inapropriadamente baixa — dois mecanismos que a mesma droga vasoativa não resolve isoladamente (van Diepen S et al., Circulation 2024, PMID 39466889). A revisão de Jentzer JC et al. (JACC Adv 2024, PMID 39720581) propõe três padrões: choque cardiogênico-vasodilatador (falência de bomba primária que se complica secundariamente com vasodilatação inapropriada), choque vasodilatador-cardiogênico (padrão inverso, tipicamente a partir de sepse) e choque misto primário (um único insulto sistêmico gera os dois mecanismos simultaneamente, como na síndrome pós-parada cardiorrespiratória ou pós-cardiotomia). No registro CCCTN, o choque misto correspondeu a 20% de todo choque em UTI coronariana avançada — a segunda causa mais comum, atrás apenas do cardiogênico puro — com internação mais longa e escore SOFA mais alto (Berg DD et al., PMID 30879324). Em coorte dedicada de choque cardiogênico inicialmente puro, 24,5% evoluíram para choque misto em mediana de 120 horas, com mortalidade hospitalar quase dobrada frente a quem permaneceu puramente cardiogênico (53,1% vs. 27,8%; razão de chances ajustada 3,00) — achado de estudo único, de dois centros, com definição própria de choque misto ainda não padronizada externamente (Baldetti L et al., Circ Heart Fail 2024, PMID 38979611). Mesmo excluindo sepse concomitante, a vasodilatação isolada dentro do choque cardiogênico já é fator de risco independente de morte, de forma dose-dependente com a queda de RVS e com a dose de norepinefrina-equivalente necessária (Chavez MA et al., Circ Heart Fail 2024, PMID 39051115). Uma RVS 'normal' sob vasopressor pode mascarar vasodilatação inapropriada que, sem a droga, seria evidente — armadilha central na diferenciação à beira do leito.",
+      "papel_cateter_arteria_pulmonar": "O cateter de artéria pulmonar (CAP) é citado como padrão de referência para diagnosticar choque misto, por permitir medida simultânea de índice cardíaco e RVS (RVS < 700 dinas·s·cm⁻⁵ sugere vasodilatação; Jentzer JC et al., PMID 39720581). A evidência sobre seu uso rotineiro, porém, é divergente por desenho de estudo: o único ensaio randomizado relevante, ESCAPE (Binanay C et al., JAMA 2005, PMID 16204662; 433 pacientes com insuficiência cardíaca grave descompensada, não choque cardiogênico franco), não mostrou diferença de desfecho primário nem de mortalidade ao acrescentar o CAP à avaliação clínica, com mais eventos adversos no grupo do cateter (21,9% vs. 11,5%). Já uma metanálise recente de estudos observacionais e de registro em choque cardiogênico (Ortega-Hernández JA et al., Shock 2026, PMID 41894663; 14 estudos, 789.553 pacientes) associou uso do CAP a menor mortalidade (OR 0,70; IC95% 0,63-0,78), mas com heterogeneidade acima de 90% no desfecho principal e viés de publicação documentado — divergência explicada por confusão por indicação: quem recebe CAP costuma já estar em centro com programa de choque e via de escalonamento para suporte circulatório mecânico, o que reduz mortalidade independentemente da medida em si. Na prática, o uso é defensável quando a informação hemodinâmica vai efetivamente mudar uma decisão específica — distinguir fenótipo (congesto vs. seco, falência de ventrículo direito vs. esquerdo), titular vasoativo com alvo definido, ou decidir e monitorizar suporte circulatório mecânico — e não como rotina desacompanhada de uma pergunta clínica definida."
+    },
+    "differentials": [
+      "Choque séptico/distributivo: débito cardíaco normal ou alto com resistência vascular sistêmica baixa e extremidades tipicamente quentes; pode coexistir com disfunção miocárdica induzida pela sepse, compondo choque misto de padrão vasodilatador-cardiogênico",
+      "Choque hipovolêmico: débito cardíaco baixo associado a pressões de enchimento baixas (ao contrário do padrão cardiogênico, em que a pressão de enchimento é normal ou elevada), por perda de volume intravascular (hemorragia, desidratação, terceiro espaço)",
+      "Choque obstrutivo, incluindo tamponamento cardíaco: obstrução mecânica ao enchimento ou ao esvaziamento ventricular (tamponamento, pneumotórax hipertensivo, embolia pulmonar maciça) — hemodinamicamente pode simular baixo débito cardiogênico, mas a causa é extrínseca à contratilidade miocárdica e exige descompressão/desobstrução, não suporte inotrópico",
+      "Choque misto (componente cardiogênico e vasodilatador simultâneos): segunda apresentação mais frequente em UTI coronariana avançada, atrás apenas do cardiogênico puro; a titulação de droga vasoativa precisa separar os dois alvos — inotrópico para débito, vasopressor para pressão — em vez de escalonar uma única classe",
+      "Falência isolada de ventrículo direito (cor pulmonale agudo): baixo débito por sobrecarga aguda de pós-carga do VD (embolia pulmonar, SDRA, isquemia de VD), com padrão hemodinâmico e resposta a volume opostos ao choque cardiogênico esquerdo — reconhecer essa etiologia muda a conduta de forma contraintuitiva (restringir, não expandir, volume)"
+    ],
+    "tests": [
+      "Ecocardiograma à beira do leito (POCUS): caracteriza rapidamente função ventricular, valvopatia, derrame pericárdico e padrão VD vs. VE, mas função sistólica anormal não é necessária nem suficiente para confirmar débito cardíaco reduzido — não substitui avaliação hemodinâmica direta quando a decisão depende de RVS ou de índice cardíaco medido",
+      "Lactato sérico seriado: marcador de hipoperfusão e prognóstico incorporado aos critérios de estágio SCAI, mas inespecífico — não distingue por si só entre os fenótipos cardiogênico, séptico e misto, nem entre causas de hipoperfusão",
+      "Cateter de artéria pulmonar: referência para medir índice cardíaco, resistência vascular sistêmica e pressões de enchimento simultaneamente, mas o único ensaio randomizado disponível (ESCAPE) foi neutro numa população de insuficiência cardíaca descompensada (não choque cardiogênico franco), e os dados favoráveis específicos de choque cardiogênico são observacionais, com heterogeneidade alta e sujeitos a confusão por indicação",
+      "Biomarcadores (BNP/NT-proBNP, troponina, função renal e hepática seriadas): ajudam a estimar gravidade e etiologia, mas são inespecíficos — elevam-se em múltiplas condições concomitantes (sepse, disfunção renal prévia) e não têm ponto de corte único validado para diagnóstico de choque",
+      "Escores de predição pré-hospitalar, como o EARLY SHOCK (C-estatística 0,87 para prever choque cardiogênico intra-hospitalar no IAMCST): boa discriminação, mas validação externa ainda pendente, derivado de um único sistema de saúde, e não se aplica a quem já está em choque estabelecido — prediz quem vai chocar, não classifica gravidade de quem já está em choque",
+      "Gasometria arterial/venosa central e saturação venosa de oxigênio: refletem extração tecidual de oxigênio e reforçam a suspeita de hipoperfusão, mas isoladamente não diferenciam o fenótipo hemodinâmico do choque nem substituem a medida direta de débito e resistência vascular quando essa informação for necessária para a decisão terapêutica"
+    ],
+    "red_flags": [
+      "Progressão para estágio SCAI D (deterioração apesar de intervenção inicial otimizada por pelo menos 30 minutos) ou E (colapso hemodinâmico, parada cardíaca em curso)",
+      "Lactato > 8 mmol/L associado a acidose grave (pH < 7,2) — critério bioquímico do estágio SCAI E",
+      "Necessidade de doses crescentes ou de mais de um vasopressor, ou adição de suporte circulatório mecânico — critério que já define, por si, escalonamento para estágio D",
+      "Sinais de falência de ventrículo direito associada (turgência jugular marcada, hepatomegalia dolorosa, sinal de Kussmaul) — muda a conduta de forma contraintuitiva (restringir volume) e pode indicar componente misto ou obstrutivo concomitante",
+      "Evidência de componente vasodilatador sobreposto (resistência vascular sistêmica baixa, extremidades quentes com hipotensão, necessidade crescente de vasopressor) — sinaliza choque misto, marcador independente de maior mortalidade dentro do choque cardiogênico",
+      "Parada cardiorrespiratória com coma ou ausência de resposta motora a comandos após retorno da circulação espontânea — aciona o modificador '+A' do SCAI e sinaliza pior prognóstico neurológico",
+      "Ausência de melhora hemodinâmica após pelo menos 30 minutos de intervenção inicial — critério temporal formal que define a transição para estágio D, não apenas impressão clínica subjetiva"
+    ],
+    "ambulatory_flow": [
+      "Reavaliar função ventricular e etiologia definitiva em consulta precoce após a alta, com ecocardiograma para reclassificar fração de ejeção e orientar terapia de insuficiência cardíaca",
+      "Confirmar que o dispositivo de suporte mecânico foi integralmente removido e que o sítio de acesso vascular cicatrizou sem sinais de infecção, pseudoaneurisma ou isquemia residual de membro",
+      "Iniciar ou otimizar terapia medicamentosa de insuficiência cardíaca com fração de ejeção reduzida quando a disfunção ventricular persistir após a fase aguda",
+      "Investigar e tratar a etiologia de base que causou o choque (revascularização pendente, doença valvar, miocardite, arritmia) para reduzir o risco de recorrência",
+      "Avaliar necessidade de reabilitação cardiovascular e recondicionamento físico, particularmente em quem recebeu suporte de médio prazo com período prolongado de mobilidade reduzida",
+      "Rastrear sequelas de hipoperfusão em outros órgãos (função renal, hepática, neurológica/cognitiva) que podem persistir após a resolução do choque",
+      "Discutir prognóstico, risco de recorrência e, quando aplicável, indicação de dispositivo de assistência ventricular durável ou avaliação para transplante cardíaco em quem não recuperou função ventricular suficiente"
+    ],
+    "emergency_flow": [
+      "Reconhecer o padrão clínico de choque cardiogênico — hipotensão persistente com sinais de hipoperfusão tecidual (extremidades frias, oligúria, alteração do estado mental, lactato elevado) na presença de disfunção cardíaca primária — e admitir em unidade de terapia intensiva cardiológica com monitorização hemodinâmica",
+      "Iniciar droga vasoativa/inotrópica pela classe adequada ao fenótipo hemodinâmico (vasopressor se hipotensão predominante, inotrópico se baixo débito com pressão preservada), sem adiar a avaliação de suporte circulatório mecânico apenas escalonando dose indefinidamente",
+      "Investigar e tratar a causa precipitante com urgência proporcional (coronariografia e revascularização precoce se etiologia isquêmica; ecocardiograma para complicação mecânica, disfunção valvar aguda ou tamponamento)",
+      "Escalonar para suporte circulatório mecânico (balão intra-aórtico, Impella ou ECMO-VA, conforme estágio SCAI, etiologia e disponibilidade) diante de deterioração hemodinâmica apesar de suporte vasoativo já otimizado, com finalidade declarada do suporte definida antes do implante",
+      "Acionar equipe multidisciplinar de choque cardiogênico (shock team) para decisão compartilhada de escalonamento, sobretudo quando houver falência de ventrículo direito associada ou necessidade de mais de um dispositivo combinado",
+      "Reavaliar continuamente sinais de complicação do suporte instalado (sangramento, isquemia de membro, hemólise, infecção) e não perder o momento de considerar desescalonamento ou, inversamente, escalonamento adicional"
+    ],
+    "treatment_summary": "O tratamento do choque cardiogênico combina otimização de volume, escolha racional de droga vasoativa por classe farmacológica e, nos casos refratários, escalonamento programado de suporte circulatório mecânico temporário, sempre com finalidade declarada e plano de desmame estabelecido desde o início. A escolha da droga vasoativa/inotrópica segue o fenótipo hemodinâmico, não um algoritmo único: quando há hipotensão associada, a noradrenalina — vasopressor de perfil predominantemente alfa-adrenérgico, com propriedade inotrópica modesta — é o vasopressor de primeira escolha, porque inotrópico isolado nesse cenário pode agravar a hipotensão. Quando o problema predominante é baixo débito com pressão relativamente preservada, um inotrópico/inodilatador é a classe preferida: dobutamina (agonista beta-1 de ação rápida e meia-vida curta, titulável pelo índice cardíaco) ou milrinona (inibidor de fosfodiesterase-3 que age independentemente do receptor beta, atraente em paciente já em uso de betabloqueador ou com resistência vascular pulmonar elevada, exigindo cautela em disfunção renal). O único ensaio randomizado duplo-cego que comparou diretamente milrinona e dobutamina (DOREMI) não encontrou diferença em desfecho composto de morte, parada cardíaca, necessidade de suporte mecânico ou diálise — a escolha entre as duas continua sendo guiada pelo raciocínio fisiológico, não por evidência de superioridade de uma sobre a outra. Vasopressina pode ser adjuvante quando a noradrenalina se aproxima de dose alta sem atingir a meta pressórica, reduzindo a necessidade de catecolamina sem ação em receptor adrenérgico.\n\nO suporte circulatório mecânico é indicado de forma escalonada conforme o estágio SCAI (A a E) e a resposta à otimização volêmica e farmacológica inicial: sinais de necessidade de escalonamento incluem suporte inotrópico prolongado além de 48 horas, escore vasoativo-inotrópico elevado, pressões de enchimento persistentemente altas, congestão pulmonar e piora de marcadores de perfusão orgânica como o lactato. O balão intra-aórtico é o dispositivo mais simples e disponível, produz incremento apenas modesto de débito cardíaco, e o ensaio randomizado dedicado (IABP-SHOCK II) não demonstrou redução de mortalidade em 30 dias nem em 12 meses no choque cardiogênico pós-infarto em revascularização precoce — por isso hoje é considerado sobretudo em choque de etiologia não isquêmica, em estágio inicial, como ponte a suporte de maior porte, ou em complicação mecânica do infarto, não como terapia rotineira de escalonamento; os desfechos de segurança não diferiram do grupo controle, portanto a limitação é ausência de eficácia, não excesso de risco. Os dispositivos percutâneos de fluxo ventrículo esquerdo-para-aorta (classe Impella) oferecem suporte hemodinâmico mais robusto: no choque cardiogênico do infarto com supradesnivelamento de ST, o ensaio DanGer Shock mostrou redução de mortalidade em 180 dias frente a cuidado padrão, às custas de aumento expressivo de eventos adversos graves (sangramento, isquemia de membro, hemólise, falha do dispositivo, piora de regurgitação aórtica) e de necessidade de terapia renal substitutiva — trade-off que precisa ser discutido explicitamente e não deve ser extrapolado para choque cardiogênico de outra etiologia. Existe também uma classe de dispositivo de fluxo axial de implante cirúrgico, indicada para suporte de médio prazo (semanas) com o paciente mobilizado e deambulando, usada como ponte para decisão, recuperação, transplante ou dispositivo de assistência ventricular durável, sem ensaio randomizado dedicado até o momento — a evidência disponível é de registro multicêntrico. O ECMO venoarterial oferece suporte circulatório e respiratório completo; no choque cardiogênico do infarto com circulação espontânea, o uso precoce e rotineiro não demonstrou redução de mortalidade em três ensaios randomizados e numa metanálise de dados individuais, com aumento consistente de sangramento maior e complicação vascular periférica — a estratégia de reservar o dispositivo para quem deteriora apesar de terapia otimizada (resgate) não se mostrou inferior à implantação imediata, e é a leitura mais coerente com o conjunto da evidência nessa etiologia. Contraindicações relativas a ponderar na escolha entre dispositivos incluem doença arterial periférica grave e distúrbio de coagulação não corrigido (acesso vascular de calibre maior), disfunção de ventrículo direito não tratada (suporte isolado de ventrículo esquerdo não sustenta o VD) e ausência de finalidade clínica declarada — instalar qualquer dispositivo sem plano de desmame ou critério de futilidade é armadilha citada de forma recorrente na literatura. Quando ECMO-VA é combinada a uma estratégia de descarga do ventrículo esquerdo (por aumentar a pós-carga do VE), dado observacional recente sugere menor mortalidade hospitalar com a classe Impella do que com balão intra-aórtico como dispositivo de descarga, à custa de maior tempo de suporte e de internação — achado de coorte com ajuste por escore de propensão, não de ensaio randomizado, que não deve ser lido como prova de superioridade.\n\nNo choque misto, com componente cardiogênico e vasodilatador simultâneos, a titulação de droga vasoativa deve ser separada: inotrópico ajustado ao alvo de débito cardíaco, vasopressor ajustado ao alvo de pressão arterial média, evitando escalonar uma única classe de droga na tentativa de resolver os dois problemas ao mesmo tempo. Inodilatadores (dobutamina, milrinona) podem desencadear ou agravar a hipotensão vasodilatadora nesse fenótipo; quando isso ocorre, considerar troca ou adição de um inoconstritor. Em vasoplegia refratária à noradrenalina, vasopressina é o vasopressor adjuvante de segunda linha preferido.\n\nO desmame de suporte circulatório mecânico exige estabilidade hemodinâmica sem suporte inotrópico ou vasopressor relevante, pressões de enchimento baixas, função de órgão-alvo restaurada e a causa primária do choque efetivamente tratada; o protocolo consiste em reduzir gradualmente o suporte do dispositivo com reavaliação hemodinâmica contínua a cada etapa. Levosimendana usada especificamente para facilitar o desmame de ECMO-VA não demonstrou, no único ensaio randomizado duplo-cego dedicado a essa pergunta, aumento na taxa de desmame bem-sucedido, com sinal de mais arritmia ventricular — não sustentando essa prática como rotina. Se o desmame falhar, as opções — transplante cardíaco, dispositivo de assistência ventricular de longa permanência ou cuidado paliativo — precisam ser antecipadas antes do momento da falha, não improvisadas nele.",
+    "monitoring": [
+      "Pressão arterial média, débito urinário, nível de consciência e lactato seriado como marcadores de perfusão tecidual",
+      "Escore vasoativo-inotrópico e tempo de exposição a droga vasoativa/inotrópica, sinalizando necessidade de suporte mecânico quando prolongado além de 48 horas",
+      "Função de ventrículo direito por ecocardiograma seriado, especialmente sob suporte circulatório mecânico que descarrega apenas o ventrículo esquerdo",
+      "Sinais de complicação do dispositivo de suporte mecânico — sangramento, isquemia de membro, hemólise, infecção de sítio de acesso, falha mecânica",
+      "Função renal e necessidade de terapia renal substitutiva, marcador relevante de gravidade e de efeito adverso de alguns dispositivos",
+      "Resistência vascular sistêmica e resposta pressórica ao vasopressor, para identificar componente vasodilatador sobreposto (choque misto) mesmo quando a pressão arterial parece controlada",
+      "Critérios objetivos de desescalonamento ou de falha de desmame a cada tentativa de redução de suporte mecânico"
+    ],
+    "special_populations": [
+      "Choque cardiogênico pós-cirurgia cardíaca com circulação extracorpórea (síndrome de baixo débito cardíaco pós-CEC) — quadro com fisiopatologia distinta do choque isquêmico primário (atordoamento miocárdico transitório, resposta inflamatória sistêmica à CEC, vasoplegia associada), janela de reversibilidade potencial maior, e limiares específicos para reintervenção cirúrgica versus suporte farmacológico/mecânico temporário no pós-operatório imediato.",
+      "Falência aguda de ventrículo direito / cor pulmonale agudo associado — fenótipo com manejo hemodinâmico frequentemente oposto ao do choque predominantemente esquerdo (cautela com volume, suporte de pressão de perfusão coronariana direita, vasodilatação pulmonar seletiva, e escolha de suporte circulatório mecânico compatível com falência de VD, como ECMO VA ou dispositivos de suporte direito dedicados), exigindo reconhecimento precoce para não replicar cegamente algoritmos desenhados para choque de ventrículo esquerdo.",
+      "Choque cardiogênico não isquêmico versus isquêmico — a maior parte dos ensaios randomizados centrais da área (IABP-SHOCK II, CULPRIT-SHOCK, ECLS-SHOCK, DanGer-Shock) foi conduzida em população predominantemente isquêmica/pós-IAM; extrapolar suas conclusões de suporte circulatório mecânico para choque não isquêmico depende de dados observacionais de registro sujeitos a viés de indicação (pacientes mais graves recebendo mais suporte, confundindo a associação entre dispositivo e desfecho), o que exige leitura cautelosa antes de aplicar a mesma estratégia terapêutica aos dois fenótipos.",
+      "Idoso e paciente com múltiplas comorbidades candidato a suporte circulatório mecânico — a decisão de BIA, Impella ou ECMO no choque cardiogênico costuma ser tomada sob pressão de tempo, com dados incompletos sobre fragilidade prévia; idade cronológica isolada não deveria excluir automaticamente o suporte mecânico, mas fragilidade combinada à idade avançada associa-se a mortalidade substancialmente maior — e, paradoxalmente, dados observacionais mostram que esse subgrupo mais frágil recebe suporte mecânico com menor frequência, não maior.",
+      "Gestante e puérpera com choque cardiogênico periparto — quando o choque cardiogênico surge no contexto de cardiomiopatia periparto (PPCM), a abordagem farmacológica e o momento de escalonamento para suporte circulatório mecânico devem ser integrados ao cuidado obstétrico e à decisão sobre parto; para a fisiopatologia, o diagnóstico diferencial gestacional e o manejo específico desse cenário, ver o hub geral de Cardiomiopatia periparto (slug cardiomiopatia-periparto), que já cobre o choque cardiogênico nesse contexto sem necessidade de duplicação aqui."
+    ],
+    "assistant_questions": [
+      {
+        "id": "hypoperfusion_signs",
+        "label": "Há hipotensão associada a sinais de hipoperfusão tecidual (extremidades frias, oligúria, alteração do estado mental, lactato elevado)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "shock_etiology",
+        "label": "Qual a etiologia predominante do choque cardiogênico?",
+        "type": "select",
+        "required": true,
+        "section": "Etiologia",
+        "options": [
+          {
+            "value": "isquemica_iam",
+            "label": "Isquêmica (infarto agudo do miocárdio ou complicação mecânica do infarto)"
+          },
+          {
+            "value": "nao_isquemica",
+            "label": "Não isquêmica (miocardiopatia, miocardite, valvopatia, arritmia)"
+          },
+          {
+            "value": "pos_cardiotomia",
+            "label": "Pós-cirurgia cardíaca (pós-cardiotomia)"
+          },
+          {
+            "value": "indeterminada",
+            "label": "Indeterminada/em investigação"
+          }
+        ]
+      },
+      {
+        "id": "current_vasoactive_support",
+        "label": "Há uso atual de droga vasoativa/inotrópica?",
+        "type": "select",
+        "required": true,
+        "section": "Suporte atual",
+        "options": [
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma"
+          },
+          {
+            "value": "uma_droga",
+            "label": "Uma droga vasoativa/inotrópica"
+          },
+          {
+            "value": "duas_ou_mais_drogas",
+            "label": "Duas ou mais drogas vasoativas/inotrópicas combinadas"
+          }
+        ]
+      },
+      {
+        "id": "current_mcs",
+        "label": "Há uso atual de suporte circulatório mecânico?",
+        "type": "select",
+        "required": true,
+        "section": "Suporte atual",
+        "options": [
+          {
+            "value": "nenhum",
+            "label": "Nenhum"
+          },
+          {
+            "value": "balao_intra_aortico",
+            "label": "Balão intra-aórtico"
+          },
+          {
+            "value": "impella_percutaneo",
+            "label": "Dispositivo percutâneo de fluxo (Impella de curto prazo)"
+          },
+          {
+            "value": "impella_medio_prazo",
+            "label": "Dispositivo de fluxo de implante cirúrgico (suporte de médio prazo)"
+          },
+          {
+            "value": "ecmo_va",
+            "label": "ECMO venoarterial"
+          },
+          {
+            "value": "combinacao_de_dispositivos",
+            "label": "Combinação de mais de um dispositivo"
+          }
+        ]
+      },
+      {
+        "id": "rv_failure_signs",
+        "label": "Há sinais de falência de ventrículo direito associada (turgência jugular, hepatomegalia, disfunção de VD ao ecocardiograma)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fenótipo"
+      },
+      {
+        "id": "post_cardiac_surgery",
+        "label": "O choque ocorreu no contexto pós-cirurgia cardíaca (pós-cardiotomia)?",
+        "type": "boolean",
+        "section": "Contexto"
+      },
+      {
+        "id": "deterioration_despite_support",
+        "label": "Há deterioração hemodinâmica apesar de suporte vasoativo e/ou mecânico já otimizado (choque refratário)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "weaning_in_progress",
+        "label": "Está em curso tentativa de desmame de suporte circulatório mecânico?",
+        "type": "boolean",
+        "section": "Desmame"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "choque-cardiogenico-hipoperfusao-ativa",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hypoperfusion_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque cardiogênico com hipoperfusão tecidual ativa"
+          ],
+          "emergency_flow": [
+            "Iniciar droga vasoativa/inotrópica pela classe conforme fenótipo hemodinâmico e admitir em unidade de terapia intensiva cardiológica com monitorização hemodinâmica"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-refratario-deterioracao",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "deterioration_despite_support",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque cardiogênico refratário — deterioração hemodinâmica apesar de suporte inicial"
+          ],
+          "emergency_flow": [
+            "Escalonar suporte circulatório mecânico (balão intra-aórtico, Impella ou ECMO-VA conforme estágio SCAI, etiologia e disponibilidade) e definir finalidade declarada do suporte",
+            "Acionar equipe multidisciplinar de choque cardiogênico (shock team) para decisão de escalonamento"
+          ],
+          "messages": [
+            "Reavaliar classe de droga vasoativa e considerar antecipar suporte mecânico antes de deterioração hemodinâmica extrema"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-etiologia-isquemica",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "shock_etiology",
+              "op": "eq",
+              "value": "isquemica_iam"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Coronariografia urgente para avaliar revascularização precoce"
+          ],
+          "messages": [
+            "Em etiologia isquêmica, revascularização precoce é determinante de desfecho no choque cardiogênico"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-falencia-vd",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "rv_failure_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "red_flags": [
+            "Sinais de falência de ventrículo direito associada ao choque cardiogênico"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação dedicada de função de ventrículo direito"
+          ],
+          "messages": [
+            "Distinguir falência primária de VD (considerar suporte dedicado de VD ou ECMO-VA com estratégia de descarga do VE) de falência secundária por sobrecarga do VE não descarregado"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-pos-cardiotomia",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "post_cardiac_surgery",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Choque misto (componente vasodilatador pós-circulação extracorpórea)",
+            "Tamponamento pericárdico pós-operatório"
+          ],
+          "messages": [
+            "Considerar choque misto primário no pós-cardiotomia — titular vasopressor e inotrópico separadamente, por alvo de pressão e de débito"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-ja-em-suporte-mecanico",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "current_mcs",
+              "op": "neq",
+              "value": "nenhum"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Finalidade declarada do suporte mecânico (ponte para decisão, recuperação, transplante ou dispositivo definitivo)"
+          ],
+          "messages": [
+            "Monitorizar sinais de complicação do dispositivo (sangramento, isquemia de membro, hemólise, infecção de sítio de acesso) e critérios objetivos para escalonamento ou desmame"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-mais-de-uma-droga",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "current_vasoactive_support",
+              "op": "eq",
+              "value": "duas_ou_mais_drogas"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Combinação de duas ou mais drogas vasoativas/inotrópicas sugere choque mais grave ou refratário — reavaliar necessidade de suporte circulatório mecânico"
+          ]
+        }
+      },
+      {
+        "id": "choque-cardiogenico-desmame-em-curso",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "weaning_in_progress",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Plano estabelecido caso o desmame falhe (transplante cardíaco, dispositivo de assistência ventricular de longa permanência ou cuidado paliativo)"
+          ],
+          "messages": [
+            "Reavaliar hemodinâmica a cada etapa de redução do suporte mecânico, com critérios pré-definidos para retomar escalonamento se houver falha de desmame"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "choque cardiogênico",
+      "SCAI",
+      "suporte circulatório mecânico",
+      "ECMO-VA",
+      "Impella",
+      "balão intra-aórtico",
+      "drogas vasoativas"
+    ],
+    "source_refs": [
+      "Chioncel O, Parissis J, Mebazaa A, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock - a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. DOI: 10.1002/ejhf.1922. PMID: 32469155.",
+      "Baran DA, Grines CL, Bailey S, et al. SCAI clinical expert consensus statement on the classification of cardiogenic shock. Catheter Cardiovasc Interv. 2019;94(1):29-37. DOI: 10.1002/ccd.28329. PMID: 31104355.",
+      "Naidu SS, Baran DA, Fang JC, et al. SCAI SHOCK Stage Classification Expert Consensus Update: A Review and Incorporation of Validation Studies. J Soc Cardiovasc Angiogr Interv. 2022;1(1):100008. DOI: 10.1016/j.jscai.2021.100008. PMID: 39130139.",
+      "Kapur NK, Kanwar M, Sinha SS, et al. Criteria for Defining Stages of Cardiogenic Shock Severity. J Am Coll Cardiol. 2022;80(3):185-198. DOI: 10.1016/j.jacc.2022.04.049. PMID: 35835491.",
+      "van Diepen S, Pöss J, Senaratne JM, Gage A, Morrow DA. Mixed Cardiogenic Shock: A Proposal for Standardized Classification, a Hemodynamic Definition, and Framework for Management. Circulation. 2024;150(18):1459-1468. DOI: 10.1161/CIRCULATIONAHA.124.069508. PMID: 39466889.",
+      "Jentzer JC, Berg DD, Chonde MD, et al. Mixed Cardiogenic-Vasodilatory Shock: Current Insights and Future Directions. JACC Adv. 2024;4(1):101432. DOI: 10.1016/j.jacadv.2024.101432. PMID: 39720581.",
+      "Berg DD, Bohula EA, van Diepen S, et al. Epidemiology of Shock in Contemporary Cardiac Intensive Care Units. Circ Cardiovasc Qual Outcomes. 2019;12(3):e005618. DOI: 10.1161/CIRCOUTCOMES.119.005618. PMID: 30879324.",
+      "Baldetti L, Gallone G, Filiberti G, et al. Mixed Shock Complicating Cardiogenic Shock: Frequency, Predictors, and Clinical Outcomes. Circ Heart Fail. 2024;17(7):e011404. DOI: 10.1161/CIRCHEARTFAILURE.123.011404. PMID: 38979611.",
+      "Chavez MA, Anderson M, Kyriakopoulos CP, et al. Pathophysiologic Vasodilation in Cardiogenic Shock and Its Impact on Mortality. Circ Heart Fail. 2024;17(9):e011827. DOI: 10.1161/CIRCHEARTFAILURE.124.011827. PMID: 39051115.",
+      "Binanay C, Califf RM, Hasselblad V, et al; ESCAPE Investigators and ESCAPE Study Coordinators. Evaluation study of congestive heart failure and pulmonary artery catheterization effectiveness: the ESCAPE trial. JAMA. 2005;294(13):1625-1633. DOI: 10.1001/jama.294.13.1625. PMID: 16204662.",
+      "Ortega-Hernández JA, Chacon-Lozsan FJ, Baldetti L, et al. Pulmonary Artery Catheter Monitoring in Cardiogenic Shock: A Systematic Review and Meta-Analysis. Shock. 2026;65(4):648-659. DOI: 10.1097/SHK.0000000000002784. PMID: 41894663.",
+      "Yang C, Lee T, Kochan A, et al. Prehospital Prediction of Cardiogenic Shock Among Patients With ST-Segment-Elevation Myocardial Infarction: The EARLY SHOCK Score. J Am Heart Assoc. 2025;14(19):e040681. DOI: 10.1161/JAHA.124.040681. PMID: 40792594.",
+      "Arrigo M, Price S, Baran DA, et al. Diagnosis and treatment of right ventricular failure secondary to acutely increased right ventricular afterload (acute cor pulmonale): a clinical consensus statement of the Association for Acute CardioVascular Care (ACVC) of the European Society of Cardiology. Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312. DOI: 10.1093/ehjacc/zuad157. PMID: 38135288.",
+      "Algarni KD, Maganti M, Yau TM. Predictors of low cardiac output syndrome after isolated coronary artery bypass surgery: trends over 20 years. Ann Thorac Surg. 2011;92(5):1678-1684. DOI: 10.1016/j.athoracsur.2011.06.017. PMID: 21939957.",
+      "Schoonen A, van Klei WA, van Wolfswinkel L, van Loon K. Definitions of low cardiac output syndrome after cardiac surgery and their effect on the incidence of intraoperative LCOS: a literature review and cohort study. Front Cardiovasc Med. 2022;9:926957. DOI: 10.3389/fcvm.2022.926957. PMID: 36247457.",
+      "Pérez Vela JL, Morales Vidal JR, González Torija A, et al. Clinical management of postcardiotomy shock in adults. Med Intensiva (Engl Ed). 2022;46(6):312-325. DOI: 10.1016/j.medine.2022.04.014. PMID: 35570187."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/32469155/",
+      "https://pubmed.ncbi.nlm.nih.gov/31104355/",
+      "https://pubmed.ncbi.nlm.nih.gov/39130139/",
+      "https://pubmed.ncbi.nlm.nih.gov/35835491/",
+      "https://pubmed.ncbi.nlm.nih.gov/39466889/",
+      "https://pubmed.ncbi.nlm.nih.gov/39720581/",
+      "https://pubmed.ncbi.nlm.nih.gov/30879324/",
+      "https://pubmed.ncbi.nlm.nih.gov/38979611/",
+      "https://pubmed.ncbi.nlm.nih.gov/39051115/",
+      "https://pubmed.ncbi.nlm.nih.gov/16204662/",
+      "https://pubmed.ncbi.nlm.nih.gov/41894663/",
+      "https://pubmed.ncbi.nlm.nih.gov/40792594/",
+      "https://pubmed.ncbi.nlm.nih.gov/38135288/",
+      "https://pubmed.ncbi.nlm.nih.gov/21939957/",
+      "https://pubmed.ncbi.nlm.nih.gov/36247457/",
+      "https://pubmed.ncbi.nlm.nih.gov/35570187/"
+    ],
+    "related_document_slugs": [
+      "balao-intra-aortico-no-choque-cardiogenico-o-ensaio-iabp-shock-ii",
+      "cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional",
+      "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+      "choque-cardiogenico-fisiopatologia-e-manejo",
+      "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+      "choque-misto-componente-cardiogenico-e-vasodilatador-simultaneos-titulacao-dupla",
+      "classificacao-scai-de-estagios-do-choque-cardiogenico",
+      "ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais",
+      "escore-early-shock-predicao-pre-hospitalar-de-choque-cardiogenico-no-iamcst",
+      "fluxograma-choque-cardiogenico-estagios-scai",
+      "impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock",
+      "impella-versus-balao-intra-aortico-como-estrategia-de-descarga-ventricular-esquerda-durante-ecmo-va",
+      "levoecmo-levosimendana-para-desmame-de-ecmo-va-no-choque-cardiogenico",
+      "milrinona-versus-dobutamina-no-choque-cardiogenico-o-ensaio-doremi",
+      "suporte-circulatorio-mecanico-no-choque-cardiogenico-nao-isquemico-dados-de-registro-e-o-risco-de-confusao-por-indicacao",
+      "impella-55-suporte-circulatorio-de-medio-prazo-implante-cirurgico-e-deambulacao",
+      "sindrome-de-baixo-debito-cardiaco-pos-cirurgia-cardiaca-com-cec",
+      "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "culprit-shock-pci-lesao-culpada-choque-cardiogenico",
+      "choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade",
+      "istaroxime-inotropo-lusitropo-de-mecanismo-duplo-no-choque-cardiogenico-precoce-programa-seismic"
+    ],
+    "patient_material_slug": "choque-cardiogenico-orientacao-a-familia",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo quinto ciclo do dia. Nenhum verbete geral de choque cardiogênico existia previamente no corpus — entidade clínica distinta da síndrome crônica coberta pelo hub insuficiencia-cardiaca já existente, com estadiamento SCAI e algoritmo terapêutico próprios (ESC/AHA/SCAI). Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários em content/Terapia_intensiva/ antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 16 referências citadas. Nenhuma dose de fármaco nem parâmetro numérico de titulação de dispositivo (fluxo de ECMO/Impella) foi incluída em nenhum campo — verificado programaticamente por varredura de padrões; o único valor numérico com unidade de fluxo encontrado (índice cardíaco <2,2 L/min/m²) é critério hemodinâmico diagnóstico clássico de choque cardiogênico, não dose de fármaco nem parâmetro de ajuste de dispositivo, e foi mantido por ser conteúdo diagnóstico legítimo, análogo a outros limiares clínicos (QTc, ITB) usados em hubs anteriores. related_document_slugs conta com 21 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames — 18 do núcleo pré-selecionado mais 3 encontrados por busca ampla (estratégia de revascularização CULPRIT-SHOCK, choque cardiogênico no idoso/fragilidade, istaroxima no programa SEISMIC). O hub existente cardiomiopatia-periparto (choque cardiogênico periparto) não foi duplicado — apenas referenciado textualmente em special_populations. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos PRs abertos cria o slug choque-cardiogenico (o único achado, um id de regra interna 'choque-cardiogenico-fase-aguda' dentro do hub de Miocardite em PR aberto, não é um slug SpecialtyDisease concorrente). Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

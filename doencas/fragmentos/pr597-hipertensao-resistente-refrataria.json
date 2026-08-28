@@ -1,0 +1,562 @@
+[
+  {
+    "slug": "hipertensao-resistente-e-refrataria",
+    "name": "Hipertensão resistente e refratária",
+    "aliases": [
+      "HAR",
+      "hipertensão resistente",
+      "hipertensão refratária",
+      "denervação renal"
+    ],
+    "area": "geral",
+    "category": "hipertensao",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Hipertensão resistente (pressão não controlada apesar de 3+ classes em dose otimizada incluindo diurético, ou controlada com 4+ classes) e refratária (não controlada apesar de 5+ classes incluindo antagonista mineralocorticoide). Cerca de metade dos rótulos iniciais de 'resistente' não resistem à confirmação metodológica — pseudorresistência por erro de técnica, má adesão ou efeito do avental branco (MAPA/MRPA) deve ser excluída antes de qualquer escalonamento. Investigação de causa secundária (hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono) segue a exclusão de pseudorresistência. Escalonamento farmacológico com antagonista mineralocorticoide (espironolactona, ensaio PATHWAY-2) como quarta droga preferencial, inibidores da aldosterona sintase como classe emergente (baxdrostat, lorundrostat), e terapia por dispositivo (denervação renal por radiofrequência ou ultrassom, ativação de barorreflexo) em casos refratários selecionados. Distinto do hub geral de hipertensão arterial sistêmica, que cobre classificação/diagnóstico/metas gerais.",
+    "epidemiology": "A prevalência de hipertensão resistente (HR) entre hipertensos varia amplamente conforme o cenário clínico, a técnica de aferição, a confirmação de adesão e a meta pressórica adotada, situando-se entre 6% e 18% em estudos populacionais. Uma metanálise ampla estimou 10,3% de HR verdadeira (IC95% 7,6-13,2%) e proporção semelhante, 10,3% (IC95% 6,0-15,5%), de hipertensão pseudorresistente — ou seja, aproximadamente metade dos rótulos iniciais de \"resistente\" não resiste à confirmação metodológica. No Brasil, o estudo multicêntrico ReHOT encontrou prevalência de 11,7% de HR. Entre os pacientes com HR confirmada, a hipertensão refratária (HRf) — definida por falta de controle apesar de cinco ou mais classes de anti-hipertensivos, incluindo antagonista do receptor mineralocorticoide e diurético tiazídico-símile de ação prolongada — acomete de 3,6% a 17,6%, variação que reflete a própria evolução do critério diagnóstico nos últimos anos. Dados de registro de MAPA mostram que, entre pacientes rotulados como resistentes pela pressão de consultório, cerca de 37,5% têm pressão ambulatorial normal (efeito do avental branco), e estudos com triagem toxicológica de urina identificam não adesão objetivamente comprovada em mais da metade dos pacientes referenciados por suspeita de HR — não aderência que se mostrou cerca de duas vezes mais frequente como causa de mau controle do que qualquer causa secundária de hipertensão identificada na mesma coorte. A investigação de apneia obstrutiva do sono é recomendada rotineiramente em HR verdadeira, dada prevalência descrita de até 80% nessa população. HR verdadeira concentra desproporcionalmente indivíduos de ascendência africana, obesos e com maior ingestão de sal, achado atribuído à hiperatividade do sistema renina-angiotensina-aldosterona característica dessa fase, fisiopatologia distinta da hiperatividade simpática predominante na hipertensão refratária.",
+    "presentation": [
+      "Pressão arterial de consultório acima da meta apesar do uso de três ou mais classes de anti-hipertensivos sinérgicas em doses otimizadas, incluindo diurético, por pelo menos 30 a 60 dias",
+      "Pressão controlada, mas somente às custas de quatro ou mais classes de anti-hipertensivos associadas",
+      "Progressão de lesão de órgão-alvo — hipertrofia ventricular esquerda, albuminúria, queda da taxa de filtração glomerular, rigidez aórtica ou doença carotídea — apesar de esquema terapêutico aparentemente adequado",
+      "Frequência cardíaca elevada e outros sinais de hiperatividade simpática em paciente já sob dupla terapia diurética potente, sugerindo transição para hipertensão refratária",
+      "Hipopotassemia espontânea ou desproporcional à dose de diurético, sugerindo hiperaldosteronismo primário como causa secundária ainda não investigada",
+      "Ronco, sonolência diurna excessiva e pausas respiratórias testemunhadas durante o sono, sugerindo apneia obstrutiva do sono não diagnosticada — presente em proporção elevada dos pacientes com HR",
+      "Discordância entre pressão de consultório persistentemente elevada e pressão domiciliar referida como normal, levantando suspeita de efeito do avental branco ainda não excluído por MAPA/MRPA",
+      "Relato de uso irregular ou parcial da medicação, trocas recentes de esquema sem confirmação por MAPA/MRPA, ou histórico de múltiplas mudanças de fármacos sem reavaliação estruturada de adesão"
+    ],
+    "diagnostic_approach": {
+      "definicao_operacional": [
+        "Hipertensão resistente (HR): pressão de consultório acima da meta apesar do uso concomitante de três ou mais classes de anti-hipertensivos com mecanismos complementares, incluindo diurético, todas em doses máximas recomendadas ou toleradas, por pelo menos 30 a 60 dias — ou pressão controlada às custas de quatro ou mais classes.",
+        "Hipertensão refratária (HRf): subgrupo de HR verdadeira que permanece não controlado apesar de cinco ou mais classes, preferencialmente incluindo antagonista do receptor mineralocorticoide e diurético tiazídico-símile de ação prolongada; mecanisticamente menos dependente de volume e mais associada a hiperatividade simpática do que a HR.",
+        "O rótulo \"resistente\" só deve ser aplicado depois de excluir pseudorresistência, que responde por cerca de metade dos casos inicialmente identificados: erro de técnica de aferição, inércia terapêutica, não adesão e efeito do avental branco."
+      ],
+      "exclusao_de_pseudorresistencia": [
+        "Técnica de aferição: reaferir com manguito adequado à circunferência do braço, paciente sentado com apoio de costas e braço na altura do coração, em repouso e sem conversa, com média de pelo menos duas medidas — revisão sistemática de 328 estudos identificou 29 fontes de erro técnico, 27 delas com efeito direcional significativo, com desvios que isoladamente já alcançam a faixa de pressão não controlada.",
+        "Adesão: investigar ativamente, não apenas perguntar — contagem de comprimidos, registro de reabastecimento em farmácia, questionários validados e, quando disponível, triagem toxicológica de urina; em coorte com dosagem objetiva, mais da metade dos pacientes referenciados por HR apresentava não adesão comprovada, na maioria parcial e não percebida pelo próprio paciente.",
+        "Efeito do avental branco: MAPA (preferencial, por fornecer aferições noturnas) ou MRPA são obrigatórias antes de confirmar HR verdadeira — em registro espanhol com mais de 8 mil pacientes rotulados como resistentes pela pressão de consultório, apenas cerca de dois terços foram confirmados por MAPA, e o restante tinha pressão ambulatorial normal.",
+        "Revisão do esquema: confirmar que as três classes centrais (bloqueador do sistema renina-angiotensina, bloqueador de canal de cálcio di-hidropiridínico de ação prolongada e diurético ajustado à função renal) estão de fato em uso otimizado, e rastrear interferentes que elevam a pressão (anti-inflamatórios, descongestionantes, corticoide, contraceptivo oral, alcaçuz/regaliz)."
+      ],
+      "investigacao_de_causa_secundaria": [
+        "Só após excluir pseudorresistência: hiperaldosteronismo primário (relação aldosterona-renina), doença renovascular e apneia obstrutiva do sono — esta última recomendada rotineiramente pela alta prevalência descrita na população com HR.",
+        "Avaliação sistemática de lesão de órgão-alvo subclínica (índice tornozelo-braço, rigidez aórtica, hipertrofia ventricular esquerda, albuminúria, doença carotídea) e de doença cardiovascular/renal estabelecida, além de fatores de risco associados (idade, história familiar, obesidade central, tabagismo, alterações glicêmicas e lipídicas)."
+      ],
+      "escalonamento_ate_refratariedade": [
+        "Confirmação diagnóstica: terapia tripla otimizada mantida por 30 a 60 dias, reavaliada por MAPA/MRPA — só então se confirma HR verdadeira.",
+        "Quarto fármaco: antagonista do receptor mineralocorticoide (espironolactona ou, em caso de efeitos hormonais indesejados, eplerenona, com potência anti-hipertensiva menor), racional pela hiperatividade do sistema renina-angiotensina-aldosterona típica dessa fase; monitorar potássio e função renal periodicamente, com cautela adicional quando a taxa de filtração glomerular já está reduzida e o potássio já elevado.",
+        "Alternativa ao antagonista mineralocorticoide quando não tolerado ou contraindicado: diurético poupador de potássio da classe da amilorida, com eficácia comparável demonstrada em ensaio randomizado direto — limitação prática relevante no Brasil pela disponibilidade apenas em combinação fixa de baixa dose com outro diurético.",
+        "Se a pressão permanecer acima da meta com quatro classes (já incluindo bloqueio duplo com diurético e antagonista mineralocorticoide), a fisiopatologia predominante passa a ser hiperatividade simpática, não mais volume: quinto fármaco é agente simpatolítico — agonista alfa central, alfabloqueador ou betabloqueador de perfil vasodilatador — caracterizando hipertensão refratária quando o não controle persiste com cinco ou mais classes."
+      ],
+      "limite": "A distinção fisiopatológica entre HR (volume-dependente) e HRf (simpático-dependente) orienta a escolha mecanística do próximo fármaco, mas a decisão final depende de reavaliação individualizada, ciclos frequentes de avaliação-intervenção-reavaliação e, idealmente, manejo em centro especializado com equipe multidisciplinar."
+    },
+    "differentials": [
+      "Pseudorresistência por erro de técnica de aferição — manguito inadequado, ausência de repouso prévio, postura incorreta — que isoladamente pode empurrar a leitura para a faixa de não controlado",
+      "Hipertensão do avental branco em paciente já tratado — pressão de consultório elevada com pressão ambulatorial (MAPA/MRPA) normal, presente em cerca de um terço dos rotulados como resistentes pela pressão de consultório",
+      "Não adesão medicamentosa parcial ou total, frequentemente não percebida pelo próprio paciente como \"não tomar o remédio\" — causa mais subestimada de pseudorresistência",
+      "Inércia terapêutica — esquema não otimizado (subdose, combinação inadequada, atraso na reavaliação de metas) mimetizando resistência verdadeira",
+      "Hipertensão secundária específica não investigada — hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono — que exige tratamento dirigido à causa, não apenas escalonamento de classes",
+      "Elevação pressórica por interferentes farmacológicos ou substâncias (anti-inflamatórios não esteroidais, descongestionantes, corticoides, contraceptivos orais, alcaçuz/regaliz) sobreposta a esquema anti-hipertensivo adequado"
+    ],
+    "tests": [
+      "MAPA (monitorização ambulatorial da pressão arterial) — método preferencial para confirmar HR verdadeira e fornece aferições noturnas relevantes para prognóstico; exige disponibilidade e tolerância do paciente ao uso do aparelho por 24 horas, e sua indisponibilidade não deve impedir a investigação, pois a MRPA é alternativa aceitável",
+      "MRPA (automedida residencial da pressão arterial) — alternativa à MAPA quando esta não está disponível; depende de técnica adequada do paciente e de aparelho validado, e não captura o padrão de descenso noturno que a MAPA fornece",
+      "Triagem toxicológica de urina ou dosagem sérica dos anti-hipertensivos prescritos — método mais objetivo para confirmar adesão, mas pouco disponível na prática clínica de rotina e não distingue não adesão parcial e crônica de um esquecimento pontual isolado",
+      "Relação aldosterona-renina para rastreio de hiperaldosteronismo primário — deve ser solicitada apenas após excluir pseudorresistência, pois antagonistas do receptor mineralocorticoide, diuréticos e outros anti-hipertensivos interferem no resultado e podem exigir ajuste prévio do esquema para interpretação confiável",
+      "Polissonografia ou poligrafia residencial para apneia obstrutiva do sono — recomendada rotineiramente em HR pela prevalência elevada nessa população, mas a triagem clínica isolada por escalas de sonolência tem sensibilidade limitada e não substitui o exame quando a suspeita é alta",
+      "Potássio sérico e taxa de filtração glomerular estimada — essenciais antes e durante o uso de antagonista do receptor mineralocorticoide como quarta droga, mas uma medida isolada não substitui monitorização seriada, já que a hiperpotassemia pode surgir semanas após o início ou ajuste do esquema",
+      "Avaliação de lesão de órgão-alvo subclínica (índice tornozelo-braço, ecocardiograma para hipertrofia ventricular esquerda, albuminúria, ultrassom de carótidas) — orienta estratificação de risco, mas resultado normal não exclui HR verdadeira nem dispensa investigação de causa secundária quando há outros sinais de alarme"
+    ],
+    "red_flags": [
+      "Hipopotassemia espontânea ou desproporcional à dose de diurético, sugerindo hiperaldosteronismo primário não investigado",
+      "Início abrupto ou agravamento rápido da pressão em paciente previamente controlado, sugerindo causa secundária nova (renovascular, endócrina) em vez de simples progressão da HR",
+      "Lesão de órgão-alvo progredindo (piora de função renal, nova hipertrofia ventricular esquerda, albuminúria crescente) apesar de esquema terapêutico aparentemente otimizado",
+      "Hiperpotassemia ou queda aguda da taxa de filtração glomerular após início de antagonista do receptor mineralocorticoide, exigindo ajuste ou substituição do fármaco",
+      "Assimetria de pulsos ou de pressão entre membros, sopro abdominal, ou piora de função renal após introdução de bloqueador do sistema renina-angiotensina, sugerindo doença renovascular",
+      "Sonolência diurna excessiva, ronco alto e pausas respiratórias testemunhadas, sugerindo apneia obstrutiva do sono não diagnosticada, associada a pior controle pressórico nessa população",
+      "Pressão gravemente elevada associada a sintomas neurológicos, dor torácica, dispneia ou sinais de lesão aguda de órgão-alvo, caracterizando emergência hipertensiva e exigindo manejo imediato, não apenas escalonamento ambulatorial de classes"
+    ],
+    "ambulatory_flow": [
+      "Confirmar hipertensão resistente verdadeira antes de escalonar: reaferir com técnica padronizada, confirmar adesão medicamentosa e excluir efeito do avental branco por MAPA (preferencial) ou MRPA",
+      "Investigar causa secundária (hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono) e avaliar lesão de órgão-alvo após confirmar resistência verdadeira",
+      "Otimizar as três classes de base (bloqueador do sistema renina-angiotensina, bloqueador de canal de cálcio di-hidropiridínico de ação prolongada e diurético tiazídico/similar) em dose máxima tolerada antes de acrescentar a quarta droga",
+      "Acrescentar antagonista mineralocorticoide (classe da espironolactona) como quarta droga preferencial quando função renal e potássio permitirem, com reavaliação de pressão e laboratório em 4-8 semanas",
+      "Se hipercalemia ou taxa de filtração glomerular reduzida contraindicarem o antagonista mineralocorticoide, considerar amilorida ou eplerenona como alternativa dentro da mesma classe terapêutica",
+      "Se a pressão permanecer acima da meta com quatro classes otimizadas, caracterizar hipertensão refratária, acrescentar simpatolítico e encaminhar a centro especializado",
+      "Discutir intervenções adicionais (denervação renal por radiofrequência ou por ultrassom, ativação de barorreflexo, inibidor da aldosterona sintase quando disponível) como opções complementares, não substitutas, da otimização farmacológica",
+      "Reforçar adesão, simplificação posológica com combinações de dose fixa e mudança de estilo de vida em toda consulta de reavaliação"
+    ],
+    "emergency_flow": [
+      "Em paciente com hipertensão resistente ou refratária conhecida que se apresenta com pressão muito elevada, avaliar primeiro sinais e sintomas agudos de lesão de órgão-alvo (dor torácica, dispneia, déficit neurológico focal, alteração visual, dor abdominal, alteração do estado mental), independentemente do rótulo ambulatorial prévio de resistência",
+      "Se houver lesão aguda de órgão-alvo, tratar como emergência hipertensiva em ambiente monitorizado, com redução controlada e gradual da pressão conforme o órgão acometido — este verbete crônico não deve orientar a conduta aguda",
+      "Se não houver lesão aguda de órgão-alvo apesar de pressão muito elevada, tratar como urgência hipertensiva: ajustar medicação oral e reavaliar em intervalo curto, sem reduzir a pressão de forma abrupta",
+      "Não atribuir automaticamente a crise hipertensiva à hipertensão resistente de base sem investigar gatilho agudo (não adesão recente, dor, ansiedade, uso de substâncias, causa secundária descompensada)",
+      "Revisar o esquema anti-hipertensivo, a adesão recente e a presença de causa secundária não tratada após a estabilização, antes de qualquer decisão sobre escalonamento crônico ou procedimento intervencionista"
+    ],
+    "treatment_summary": "O primeiro passo do tratamento não é farmacológico: é excluir pseudorresistência antes de qualquer escalonamento. Cerca de metade dos pacientes rotulados como resistentes pela pressão de consultório deixam de sê-lo depois de corrigir a técnica de aferição, confirmar adesão medicamentosa (relato dirigido, contagem de comprimidos ou resposta à dose) e excluir efeito do avental branco por MAPA (preferencial) ou MRPA — em registro de MAPA com milhares de pacientes, mais de um terço dos rotulados como resistentes pela pressão de consultório tinham monitorização normal fora dele. Só depois dessa exclusão, com hipertensão resistente verdadeira confirmada, investiga-se causa secundária (hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono) e se avalia lesão de órgão-alvo, antes de escalonar terapia.\n\nCom o paciente já em três classes em dose otimizada — bloqueador do sistema renina-angiotensina, bloqueador de canal de cálcio di-hidropiridínico de ação prolongada e diurético tiazídico/similar —, a quarta droga preferencial é um antagonista mineralocorticoide, classe representada pela espironolactona, com evidência randomizada, duplo-cega e cruzada do ensaio PATHWAY-2: em 335 pacientes, a espironolactona foi superior a placebo, betabloqueador e alfabloqueador na redução da pressão sistólica domiciliar, com resultado consistente em toda a distribuição de renina plasmática basal, embora o ganho relativo seja maior na porção baixa da distribuição — achado compatível com a hipótese de que a retenção de sódio tem papel central na hipertensão resistente. Quando o antagonista mineralocorticoide não pode ser usado com segurança (função renal reduzida ou risco de hipercalemia), a amilorida ou a eplerenona são alternativas dentro da mesma lógica terapêutica. Se a pressão permanecer acima da meta com o antagonista mineralocorticoide em dose otimizada, define-se hipertensão refratária (cinco ou mais classes), e a etapa seguinte é acrescentar um simpatolítico e encaminhar a centro especializado para considerar intervenção adicional.\n\nUma classe emergente atua no mesmo eixo hormonal por outro mecanismo: os inibidores da aldosterona sintase reduzem a síntese de aldosterona a montante, em vez de bloquear o receptor mineralocorticoide a jusante. O baxdrostat teve eficácia demonstrada em ensaio de fase 2 e confirmada em ensaio de fase 3 de maior porte, com redução sustentada também avaliada por MAPA de 24 horas e aprovação regulatória nos Estados Unidos como terapia adjuvante — não como monoterapia de primeira linha. O lorundrostat, segundo representante da classe, tem evidência de fase 2 (avaliada por MAPA) e de fase 3 (avaliada por pressão de consultório, em amostra superior a mil participantes), ainda sem aprovação regulatória até o momento. Ambos exigem monitorização de potássio e função renal, e nenhum tem ainda ensaio de desfecho cardiovascular duro nem posição estabelecida em diretriz de sociedade — a evidência disponível é de redução pressórica, não de redução de eventos.\n\nComo opção intervencionista adicional, quando o controle farmacológico permanece insuficiente apesar de esquema otimizado incluindo antagonista mineralocorticoide, a denervação renal por cateter é um tipo de procedimento com indicação em hipertensão resistente verdadeira, já excluída a pseudorresistência. Duas tecnologias de entrega de energia têm programas de ensaio controlados por procedimento simulado: a denervação por radiofrequência, cujo primeiro ensaio de grande porte com esse controle rigoroso (SYMPLICITY HTN-3) foi negativo para o desfecho primário, enquanto o ensaio subsequente com desenho e critérios diferentes (SPYRAL HTN-ON MED) mostrou redução pressórica significativa; e a denervação por ultrassom, cujo programa de ensaios (RADIANCE-HTN SOLO, RADIANCE II e RADIANCE-HTN TRIO) mostrou redução consistente da pressão ambulatorial frente a procedimento simulado em diferentes populações, com aprovação regulatória americana como terapia adjuvante. A recomendação de sociedades para denervação renal permanece de força limitada (classe IIb, \"pode ser considerada\"), refletindo essa evidência mista, e o procedimento não deve substituir a otimização farmacológica nem ser indicado antes de excluir má adesão e causa secundária.\n\nA ativação do barorreflexo por estimulação elétrica do seio carotídeo é uma opção adicional para casos selecionados de hipertensão resistente refratária ao tratamento farmacológico otimizado, com mecanismo distinto — redução do tônus simpático central por via aferente barorreflexa, em vez de denervação simpática renal. A evidência pivotal desse tipo de dispositivo mostrou resultado misto, com efeito pressórico demonstrado enquanto o dispositivo está ativo, mas risco relevante de lesão nervosa relacionada ao implante cirúrgico de primeira geração; a situação regulatória para hipertensão nos Estados Unidos é de aprovação limitada, distinta da aprovação ampla que dispositivos dessa mesma família têm hoje para insuficiência cardíaca. Em toda a sequência — antagonista mineralocorticoide, inibidor da aldosterona sintase, denervação renal ou ativação de barorreflexo —, a decisão terapêutica deve ser individualizada, compartilhada e revista clinicamente, sem pular as etapas de exclusão de pseudorresistência e investigação de causa secundária.",
+    "monitoring": [
+      "Pressão arterial fora do consultório (MAPA ou MRPA), não apenas medida de consultório, para confirmar controle real ao longo do escalonamento terapêutico",
+      "Potássio sérico e função renal em 4 semanas após iniciar ou titular antagonista mineralocorticoide ou inibidor da aldosterona sintase, e periodicamente após estabilização",
+      "Sódio sérico quando em uso de inibidor da aldosterona sintase, pelo risco documentado de hiponatremia além da hipercalemia",
+      "Adesão medicamentosa em toda consulta, com simplificação posológica quando identificada baixa adesão",
+      "Sinais e sintomas de lesão de órgão-alvo (cardíaca, renal, cerebrovascular, retiniana) ao longo do seguimento",
+      "Efeitos adversos específicos de classe: hiperpotassemia e insuficiência adrenal com inibidores da aldosterona sintase, efeitos antiandrogênicos com espironolactona, e complicações do sítio de implante ou funcionamento do dispositivo em pacientes com denervação renal ou ativação de barorreflexo"
+    ],
+    "special_populations": [
+      "Idoso com hipertensão resistente: antes de acrescentar um quarto fármaco, reavaliar risco de hipotensão ortostática e de queda — a meta pode precisar ser relaxada (ver HYVET, meta de 150/80 mmHg no octogenário) em vez de intensificada por padronização; espironolactona exige atenção redobrada a hipercalemia quando há função renal já reduzida, comum nessa faixa etária",
+      "Doença renal crônica avançada (estágios 3b-5) com hipertensão resistente: maior prevalência de hiperaldosteronismo e de sobrecarga de volume como mecanismos perpetuadores, mas espironolactona e inibidores da aldosterona sintase carregam risco de hipercalemia significativamente maior nessa população — monitorização de potássio e função renal mais frequente, com estudo dedicado a baxdrostat em DRC com albuminúria por esse motivo específico",
+      "Gestante ou puérpera com hipertensão resistente: manejo específico de metas, fármacos permitidos e vigilância de pré-eclâmpsia sobreposta foge do escopo deste hub — ver hub dedicado hipertensao-cronica-gravidez",
+      "Apneia obstrutiva do sono: causa secundária tratável e frequentemente subdiagnosticada em quem tem hipertensão resistente; rastreio ativo é recomendado, mas o efeito pressórico do CPAP isolado costuma ser modesto (poucos mmHg) e não substitui a otimização farmacológica nem a investigação de outras causas secundárias",
+      "Obesidade e síndrome metabólica: fator perpetuador central por retenção de sódio e ativação do eixo renina-angiotensina-aldosterona, o que explica por que a espironolactona (que age diretamente nesse mecanismo) foi o fármaco de melhor desempenho como quarta droga no PATHWAY-2; perda de peso estruturada deve ser parte explícita do plano, não apenas recomendação genérica de estilo de vida"
+    ],
+    "assistant_questions": [
+      {
+        "id": "antihypertensive_class_count",
+        "label": "Quantas classes de anti-hipertensivos o paciente usa atualmente, em dose otimizada?",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 10,
+        "unit": "classes",
+        "section": "Esquema terapêutico"
+      },
+      {
+        "id": "includes_diuretic",
+        "label": "O esquema atual inclui diurético (tiazídico/similar ou de alça)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Esquema terapêutico"
+      },
+      {
+        "id": "includes_mra",
+        "label": "O esquema atual inclui antagonista mineralocorticoide (espironolactona, eplerenona) ou amilorida?",
+        "type": "boolean",
+        "required": true,
+        "section": "Esquema terapêutico"
+      },
+      {
+        "id": "bp_measurement_technique",
+        "label": "A técnica de aferição da pressão arterial foi confirmada como padronizada (manguito adequado, repouso, média de medidas)?",
+        "type": "select",
+        "required": true,
+        "section": "Confirmação diagnóstica",
+        "options": [
+          {
+            "value": "tecnica_confirmada_adequada",
+            "label": "Sim, técnica confirmada adequada"
+          },
+          {
+            "value": "tecnica_nao_confirmada",
+            "label": "Não, técnica não confirmada ou inadequada"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Não avaliado"
+          }
+        ]
+      },
+      {
+        "id": "out_of_office_confirmation",
+        "label": "Já foi realizada MAPA ou MRPA para confirmar a elevação da pressão fora do consultório?",
+        "type": "select",
+        "required": true,
+        "section": "Confirmação diagnóstica",
+        "options": [
+          {
+            "value": "mapa_confirma_elevada",
+            "label": "Sim, MAPA/MRPA confirma pressão elevada"
+          },
+          {
+            "value": "mapa_normal_avental_branco",
+            "label": "Sim, MAPA/MRPA normal (sugere efeito do avental branco)"
+          },
+          {
+            "value": "nao_realizado",
+            "label": "Não foi realizado"
+          }
+        ]
+      },
+      {
+        "id": "adherence_confirmed",
+        "label": "A adesão medicamentosa foi avaliada?",
+        "type": "select",
+        "required": true,
+        "section": "Confirmação diagnóstica",
+        "options": [
+          {
+            "value": "adesao_confirmada",
+            "label": "Adesão confirmada (relato dirigido, contagem de comprimidos ou resposta à dose)"
+          },
+          {
+            "value": "adesao_duvidosa_ou_inadequada",
+            "label": "Adesão duvidosa ou inadequada"
+          },
+          {
+            "value": "nao_avaliada",
+            "label": "Não avaliada"
+          }
+        ]
+      },
+      {
+        "id": "secondary_cause_investigated",
+        "label": "Já foi realizada investigação de causa secundária (hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono)?",
+        "type": "boolean",
+        "required": false,
+        "section": "Investigação"
+      },
+      {
+        "id": "device_therapy_used",
+        "label": "O paciente já utiliza ou está sendo considerado para denervação renal ou outro dispositivo para hipertensão?",
+        "type": "select",
+        "required": false,
+        "section": "Intervenções",
+        "options": [
+          {
+            "value": "nenhum",
+            "label": "Nenhum, apenas tratamento farmacológico"
+          },
+          {
+            "value": "denervacao_renal_realizada",
+            "label": "Denervação renal já realizada"
+          },
+          {
+            "value": "denervacao_renal_em_consideracao",
+            "label": "Denervação renal em consideração ou encaminhado"
+          },
+          {
+            "value": "ativacao_barorreflexo",
+            "label": "Ativação de barorreflexo (dispositivo implantado)"
+          }
+        ]
+      },
+      {
+        "id": "acute_target_organ_symptoms",
+        "label": "Há sinais ou sintomas agudos de lesão de órgão-alvo (dor torácica, dispneia, déficit neurológico, alteração visual, dor abdominal, alteração do estado mental)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "hypertensive_crisis_now",
+        "label": "Há elevação acentuada da pressão arterial agora, neste atendimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "har-emergencia-lesao-orgao-alvo",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "acute_target_organ_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais agudos de lesão de órgão-alvo em paciente com pressão arterial muito elevada"
+          ],
+          "emergency_flow": [
+            "Tratar como emergência hipertensiva em ambiente monitorizado, com redução controlada da pressão conforme o órgão acometido, independentemente do rótulo ambulatorial de hipertensão resistente"
+          ]
+        }
+      },
+      {
+        "id": "har-urgencia-sem-lesao-orgao-alvo",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "hypertensive_crisis_now",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "acute_target_organ_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Elevação acentuada sem lesão aguda de órgão-alvo: tratar como urgência hipertensiva, ajustar medicação oral e reavaliar em intervalo curto, sem redução abrupta da pressão"
+          ]
+        }
+      },
+      {
+        "id": "har-poucas-classes-nao-confirma-resistencia",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "antihypertensive_class_count",
+              "op": "lt",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Menos de três classes em uso não caracteriza hipertensão resistente; otimizar o esquema de base antes de considerar escalonamento adicional"
+          ],
+          "missing_information": [
+            "Confirmar doses otimizadas das classes atuais antes de rotular como resistente"
+          ]
+        }
+      },
+      {
+        "id": "har-sem-diuretico-otimizar-antes",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "includes_diuretic",
+              "op": "falsy"
+            },
+            {
+              "field": "antihypertensive_class_count",
+              "op": "gte",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Esquema com três ou mais classes sem diurético não preenche a definição de hipertensão resistente: incluir diurético tiazídico/similar em dose otimizada antes de escalonar"
+          ],
+          "suggested_tests": [
+            "Reavaliar necessidade de diurético tiazídico/similar em dose otimizada"
+          ]
+        }
+      },
+      {
+        "id": "har-tecnica-nao-confirmada",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "bp_measurement_technique",
+              "op": "neq",
+              "value": "tecnica_confirmada_adequada"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Confirmar técnica de aferição padronizada antes de qualquer escalonamento: erro de técnica pode simular resistência"
+          ],
+          "missing_information": [
+            "Técnica de aferição da pressão arterial ainda não confirmada como adequada"
+          ]
+        }
+      },
+      {
+        "id": "har-avental-branco",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "out_of_office_confirmation",
+              "op": "eq",
+              "value": "mapa_normal_avental_branco"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "MAPA/MRPA normal sugere efeito do avental branco, não hipertensão resistente verdadeira"
+          ],
+          "messages": [
+            "Não classificar como hipertensão resistente: manter esquema atual, reforçar seguimento clínico e repetir MAPA/MRPA periodicamente"
+          ]
+        }
+      },
+      {
+        "id": "har-mapa-nao-realizado",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "out_of_office_confirmation",
+              "op": "eq",
+              "value": "nao_realizado"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Solicitar MAPA (preferencial) ou MRPA para confirmar elevação pressórica fora do consultório antes de rotular hipertensão resistente"
+          ],
+          "missing_information": [
+            "Confirmação de pressão elevada fora do consultório ainda pendente"
+          ]
+        }
+      },
+      {
+        "id": "har-adesao-duvidosa",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "adherence_confirmed",
+              "op": "eq",
+              "value": "adesao_duvidosa_ou_inadequada"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Adesão duvidosa ou inadequada é causa comum de pseudorresistência"
+          ],
+          "messages": [
+            "Investigar causas de baixa adesão, simplificar o esquema com combinações de dose fixa e reforçar adesão antes de escalonar terapia"
+          ]
+        }
+      },
+      {
+        "id": "har-resistencia-confirmada-sem-mra",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "antihypertensive_class_count",
+              "op": "gte",
+              "value": 3
+            },
+            {
+              "field": "includes_diuretic",
+              "op": "truthy"
+            },
+            {
+              "field": "includes_mra",
+              "op": "falsy"
+            },
+            {
+              "field": "out_of_office_confirmation",
+              "op": "eq",
+              "value": "mapa_confirma_elevada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Hipertensão resistente confirmada por MAPA/MRPA sem antagonista mineralocorticoide no esquema"
+          ],
+          "messages": [
+            "Considerar antagonista mineralocorticoide (classe da espironolactona) como quarta droga preferencial, se função renal e potássio permitirem"
+          ]
+        }
+      },
+      {
+        "id": "har-refrataria-cinco-classes",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "antihypertensive_class_count",
+              "op": "gte",
+              "value": 5
+            },
+            {
+              "field": "includes_mra",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Hipertensão refratária (cinco ou mais classes, incluindo antagonista mineralocorticoide)"
+          ],
+          "messages": [
+            "Encaminhar a centro especializado para reinvestigar causa secundária e considerar intervenções adicionais, como denervação renal, ativação de barorreflexo ou inibidor da aldosterona sintase quando disponível"
+          ]
+        }
+      },
+      {
+        "id": "har-causa-secundaria-nao-investigada",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "secondary_cause_investigated",
+              "op": "falsy"
+            },
+            {
+              "field": "antihypertensive_class_count",
+              "op": "gte",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Investigar causa secundária: hiperaldosteronismo primário, doença renovascular e apneia obstrutiva do sono"
+          ],
+          "missing_information": [
+            "Investigação de causa secundária ainda não realizada"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "hipertensão resistente",
+      "hipertensão refratária",
+      "denervação renal",
+      "espironolactona",
+      "inibidor da aldosterona sintase",
+      "pseudorresistência",
+      "MAPA"
+    ],
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179.",
+      "Carey RM, Calhoun DA, Bakris GL, Brook RD, Daugherty SL, Dennison-Himmelfarb CR, Egan BM, Flack JM, Gidding SS, Judd E, Lackland DT, Laffer CL, Newton-Cheh C, Smith SM, Taler SJ, Textor SC, Turan TN, White WB. Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association. Hypertension. 2018;72(5):e53-e90. DOI: 10.1161/HYP.0000000000000084. PMID: 30354828.",
+      "de la Sierra A, Segura J, Banegas JR, Gorostidi M, de la Cruz JJ, Armario P, Oliveras A, Ruilope LM. Clinical features of 8295 patients with resistant hypertension classified on the basis of ambulatory blood pressure monitoring. Hypertension. 2011;57(5):898-902. DOI: 10.1161/HYPERTENSIONAHA.110.168948. PMID: 21444835.",
+      "Jung O, Gechter JL, Wunder C, Paulke A, Bartel C, Geiger H, Toennes SW. Resistant hypertension? Assessment of adherence by toxicological urine analysis. J Hypertens. 2013;31(4):766-774. DOI: 10.1097/HJH.0b013e32835e2286. PMID: 23337469.",
+      "Kallioinen N, Hill A, Horswill MS, Ward HE, Watson MO. Sources of inaccuracy in the measurement of adult patients' resting blood pressure in clinical settings: a systematic review. J Hypertens. 2017;35(3):421-441. DOI: 10.1097/HJH.0000000000001197. PMID: 27977471.",
+      "Williams B, MacDonald TM, Morant S, Webb DJ, Sever P, McInnes G, Ford I, Cruickshank JK, Caulfield MJ, Salsbury J, Mackenzie I, Padmanabhan S, Brown MJ; British Hypertension Society's PATHWAY Studies Group. Spironolactone versus placebo, bisoprolol, and doxazosin to determine the optimal treatment for drug-resistant hypertension (PATHWAY-2): a randomised, double-blind, crossover trial. Lancet. 2015;386(10008):2059-2068. DOI: 10.1016/S0140-6736(15)00257-3. PMID: 26414968."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/41294179/",
+      "https://pubmed.ncbi.nlm.nih.gov/30354828/",
+      "https://pubmed.ncbi.nlm.nih.gov/21444835/",
+      "https://pubmed.ncbi.nlm.nih.gov/23337469/",
+      "https://pubmed.ncbi.nlm.nih.gov/27977471/",
+      "https://pubmed.ncbi.nlm.nih.gov/26414968/"
+    ],
+    "related_document_slugs": [
+      "bax24-baxdrostat-na-hipertensao-resistente-por-mapa-24h",
+      "baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn",
+      "denervacao-renal-na-hipertensao-resistente-symplicity-htn-3-e-spyral-htn-on-med",
+      "denervacao-renal-por-ultrassom-o-ensaio-radiance-htn-solo-e-a-aprovacao-da-fda",
+      "denervacao-renal-por-ultrassom-o-ensaio-radiance-htn-trio",
+      "desnervacao-renal-na-ausencia-de-medicacao-o-spyral-htn-off-med-pivotal-lancet-2020",
+      "desnervacao-renal-por-radiofrequencia-em-uso-de-medicacao-o-spyral-htn-on-med-pivotal-jacc-2023",
+      "diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+      "durabilidade-da-denervacao-renal-na-hipertensao-resistente-coorte-real-world-30-meses",
+      "fluxograma-hipertensao-resistente-quarta-droga",
+      "hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+      "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+      "lorundrostat-segundo-inibidor-da-aldosterona-sintase-advance-htn-e-launch-htn",
+      "radiance-ii-denervacao-renal-por-ultrassom-na-hipertensao",
+      "terapia-de-ativacao-do-barorreflexo-na-hipertensao-resistente-o-rheos-pivotal-trial",
+      "xxb750-agonista-npr1-na-hipertensao-resistente-alvo-biologico-sem-reducao-de-pa",
+      "apneia-obstrutiva-do-sono-e-hipertensao-quanto-o-cpap-realmente-baixa-a-pressao",
+      "baxdrostat-na-doenca-renal-cronica-com-albuminuria-ensaio-dedicado"
+    ],
+    "patient_material_slug": "minha-pressao-nao-baixa-mesmo-com-os-remedios-certos",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo oitavo ciclo do dia. Nenhum verbete geral de hipertensão resistente e refratária existia previamente no corpus — o hub geral hipertensao-arterial-sistemica já existente cobre apenas classificação/diagnóstico/metas gerais, tratando resistência em uma única frase de resumo. Este hub cobre o recorte de gravidade/refratariedade: definição operacional (3+ classes não controlada, ou 4+ controlada), exclusão de pseudorresistência, investigação de causa secundária, e escalonamento até refratariedade (5+ classes) com farmacologia (antagonista mineralocorticoide, inibidores da aldosterona sintase) e terapia por dispositivo (denervação renal, ativação de barorreflexo). Nenhum dos 3 documentos já vinculados ao hub geral foi duplicado aqui — verificação programática dedicada. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 6 referências citadas (Diretriz Brasileira de Hipertensão 2025 PMID 41294179, AHA Scientific Statement PMID 30354828, de la Sierra et al. PMID 21444835, Jung et al. PMID 23337469, Kallioinen et al. PMID 27977471, ensaio PATHWAY-2 PMID 26414968). related_document_slugs conta com 18 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames — 16 do núcleo pré-selecionado mais 2 encontrados por busca ampla (apneia obstrutiva do sono como causa secundária tratável, baxdrostat em DRC com albuminúria). Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos 12 PRs abertos cria o slug hipertensao-resistente-e-refrataria. Nenhuma dose de fármaco nem parâmetro de titulação de dispositivo foi incluída em nenhum campo — verificado programaticamente. Chaves de 'add' do assistente e a estrutura de regras foram validadas com o motor de regras real (clinical_rule_engine) antes da montagem, incluindo um campo de pergunta tipo 'number' e uma regra combinando 'all' e 'none' no mesmo nível — ambos confirmados válidos pelo validador. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

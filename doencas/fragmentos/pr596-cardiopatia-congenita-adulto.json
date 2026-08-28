@@ -1,0 +1,464 @@
+[
+  {
+    "slug": "cardiopatia-congenita-do-adulto",
+    "name": "Cardiopatia congênita do adulto (ACHD)",
+    "aliases": [
+      "ACHD",
+      "GUCH",
+      "Grown-Up Congenital Heart disease",
+      "cardiopatia congênita no adulto"
+    ],
+    "area": "geral",
+    "category": "cardiopatia_congenita",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Adulto com cardiopatia congênita (ACHD/GUCH) — população em franca expansão demográfica, hoje superando em número as crianças com CC, graças ao sucesso do reparo cirúrgico pediátrico. Cobre o que é transversal a qualquer lesão congênita no adulto: classificação de complexidade (simples/moderada/grande) como determinante da frequência de seguimento, síndrome de Eisenmenger e cianose crônica (fisiologia adaptada que exige investigação de gatilho antes de qualquer intervenção reflexa), circulação de Fontan no adulto (tromboprofilaxia, enteropatia perdedora de proteína, hepatopatia associada), arritmia em substrato cirúrgico antigo, reintervenção transcateter (TPVR, TEER de valva atrioventricular), gravidez/contracepção de alto risco, exercício estruturado e saúde mental como comorbidade transversal. Não substitui os hubs lesão-específicos já existentes (CIA, CIV, Fallot, coarctação, TGA, Ebstein etc.) — cobre o que é comum a toda a população adulta com CC.",
+    "epidemiology": "A cardiopatia congênita do adulto (ACHD, do inglês \"adult congenital heart disease\", também chamada GUCH — \"grown-up congenital heart disease\") reflete uma inversão demográfica histórica: graças ao sucesso do reparo cirúrgico pediátrico das últimas décadas, hoje há mais adultos do que crianças vivendo com cardiopatia congênita nos países com acesso amplo a cirurgia cardíaca infantil. Estudo populacional de base administrativa mostrou que, entre 2000 e 2010, a prevalência de cardiopatia congênita cresceu mais rápido entre adultos do que entre crianças, e que a fração adulta da população total com cardiopatia congênita já é maioria (Marelli AJ et al., Circulation 2014). Essa mudança transformou o perfil da doença: o problema deixou de ser primariamente sobrevida na infância e passou a ser manejo vitalício de sequelas anatômicas, hemodinâmicas e elétricas em adultos que envelhecem com um coração operado, paliado ou nunca diagnosticado. A população de ACHD é heterogênea por definição — inclui desde lesões simples (por exemplo comunicação interatrial pequena, isolada) até fisiologias univentriculares paliadas por cirurgia de Fontan, cianose crônica por síndrome de Eisenmenger e transposição das grandes artérias corrigida por switch atrial ou arterial décadas atrás — e essa heterogeneidade é o motivo pelo qual a diretriz ESC 2020 e a diretriz ACC/AHA 2025 organizam o cuidado por classificação de complexidade anatômica (leve, moderada, grave) em vez de por um protocolo único. Um subgrupo relevante e frequentemente subestimado é o de adultos com lesão congênita leve nunca diagnosticada na infância, que se apresenta pela primeira vez já na vida adulta como achado incidental ou como sintoma inespecífico. Outro subgrupo crescente é o de sobreviventes de cirurgia complexa na infância (Fallot, transposição, univentricular/Fontan) que hoje chegam à quarta, quinta e sexta décadas de vida carregando sequelas tardias — regurgitação pulmonar crônica, falência de ventrículo direito sistêmico, arritmia em substrato cirúrgico antigo, doença hepática associada a Fontan — que não existiam como problema clínico relevante quando essas cirurgias foram desenhadas. A diretriz ACC/AHA 2025 formaliza o reconhecimento da ACHD como condição de seguimento vitalício, multissistêmica, com desafios específicos da vida adulta (gravidez, saúde mental, exercício, comorbidades adquiridas) que se somam à doença cardíaca estrutural de base, e recomenda acompanhamento rotineiro em centros especializados de ACHD, especialmente para doença anatômica ou fisiologicamente moderada a complexa.",
+    "presentation": [
+      "achado incidental de sopro, lesão residual ou defeito congênito leve nunca diagnosticado na infância, identificado em exame de rotina ou investigação de sintoma inespecífico na vida adulta;",
+      "descompensação tardia — dispneia, intolerância ao exercício ou sinais de insuficiência cardíaca — décadas após reparo cirúrgico pediátrico considerado bem-sucedido, tipicamente por sobrecarga crônica de volume ou pressão sobre um ventrículo (por exemplo regurgitação pulmonar crônica pós-Fallot ou falência de ventrículo direito sistêmico pós-switch atrial);",
+      "cianose progressiva e intolerância ao esforço em paciente com síndrome de Eisenmenger, refletindo shunt sistêmico-pulmonar congênito não corrigido que evoluiu para hipertensão arterial pulmonar grave com inversão do fluxo;",
+      "arritmia nova ou recorrente em paciente com cirurgia cardíaca prévia — taquicardia intra-atrial reentrante (IART) sobre cicatriz atrial, arritmia atrial ou ventricular em switch atrial (Mustard/Senning) ou taquiarritmia tardia pós-Fallot —, muitas vezes o primeiro sinal clínico de deterioração hemodinâmica subjacente;",
+      "sinais e sintomas de falência da circulação de Fontan no adulto — edema, ascite, intolerância ao exercício, icterícia ou achados laboratoriais de doença hepática associada a Fontan (FALD), incluindo, em casos avançados, enteropatia perdedora de proteína com diarreia, edema e hipoalbuminemia;",
+      "hipertensão arterial sistêmica de difícil controle ou hipertensão induzida por exercício em adulto com coarctação de aorta reparada, levantando suspeita de recoarctação ou de arteriopatia sistêmica residual mesmo com reparo anatomicamente satisfatório;",
+      "gestante ou candidata a gestação com cardiopatia congênita de base, exigindo estratificação de risco pré-concepcional específica conforme anatomia, função ventricular, pressão pulmonar e histórico obstétrico prévio;",
+      "sintomas relacionados a comorbidades da vida adulta sobrepostas à cardiopatia congênita de base — doença arterial coronariana adquirida, disfunção renal, sintomas de saúde mental (ansiedade, depressão, PTSD) — que exigem diferenciar deterioração da lesão congênita de doença adquirida concomitante;",
+      "síncope ou pré-síncope em paciente cianótico ou com fisiologia de Fontan, que deve ser tratada como possível sinal de arritmia maligna ou falência hemodinâmica aguda, e não atribuída de forma automática à cianose basal."
+    ],
+    "diagnostic_approach": {
+      "classificacao_de_complexidade": "A avaliação de todo adulto com cardiopatia congênita começa por classificar a lesão de base em leve, moderada ou grave, conforme a diretriz ESC 2020 — classificação que substituiu esquemas anteriores menos padronizados e que é, ela própria, o principal determinante da frequência de seguimento recomendada e da necessidade de cuidado exclusivo, compartilhado ou apenas ocasional em centro especializado de ACHD. A diretriz ESC 2020 recomenda que todo adulto com cardiopatia congênita seja avaliado ao menos uma vez em centro especializado — inclusive no momento de transição da cardiologia pediátrica para a adulta — para essa decisão de nível de cuidado; complexidade anatômica isolada não basta para definir a frequência de seguimento sem essa avaliação formal. A diretriz ACC/AHA 2025 reforça que doença anatômica ou fisiologicamente moderada/complexa exige envolvimento de cardiologista de ACHD inclusive para orientação sobre qualquer procedimento cardíaco ou não cardíaco, anestesia e manejo pós-procedimento.",
+      "avaliacao_da_sindrome_de_eisenmenger": "Em paciente com shunt sistêmico-pulmonar congênito não corrigido e sinais de hipertensão pulmonar avançada, a avaliação deve caracterizar o grau de cianose crônica, a eritrocitose secundária adaptativa (hematócrito, ferro/ferritina), a função de ventrículo direito e a presença de sinais de descompensação aguda em relação ao basal do paciente — mudança em relação ao basal individual importa mais do que um valor isolado de saturação. A avaliação deve reconhecer a cianose como distúrbio multissistêmico, não apenas cardiovascular, com atenção à hemostasia (risco simultâneo de trombose e sangramento), à função renal e hepática e a sinais de hiperviscosidade sintomática — hematócrito acima de 65% isoladamente não constitui indicação de flebotomia. Ecocardiograma é o exame inicial para função de VD, direção e magnitude do shunt, derrame pericárdico e causas mecânicas de deterioração; investigação direcionada de infecção, desidratação, anemia/deficiência de ferro, arritmia e tromboembolismo pulmonar completa a avaliação em qualquer piora aguda.",
+      "avaliacao_da_circulacao_de_fontan_no_adulto": "A avaliação do adulto com circulação de Fontan é vigilância multissistêmica programada, não avaliação cardíaca isolada. A diretriz ACC/AHA 2025 recomenda avaliação anual por imagem e laboratório e ao menos uma avaliação com hepatologista, dado o risco de doença hepática associada a Fontan (FALD) — fibrose hepática é quase universal em longo prazo e cirrose afeta aproximadamente 43% dos pacientes 30 anos após a cirurgia. É importante reconhecer que biomarcadores e imagem padrão (incluindo elastografia) frequentemente subestimam a gravidade da FALD, pois a medida de rigidez hepática é confundida pela congestão venosa crônica — biópsia hepática permanece padrão-ouro para estadiamento em casos de dúvida. Quando há suspeita de enteropatia perdedora de proteína (diarreia, edema, hipoalbuminemia), a investigação após a confirmação laboratorial inclui ecocardiograma, ressonância cardiovascular, tomografia ou cateterismo cardíaco para avaliar pressão do circuito de Fontan, resistência vascular pulmonar e débito cardíaco, em busca de causas potencialmente reversíveis de falência da circulação de Fontan.",
+      "teste_cardiopulmonar_de_exercicio_em_achd": "O teste cardiopulmonar de exercício (TCPE) é a ferramenta central para quantificar capacidade funcional em ACHD, porque a interpretação de suas variáveis não é a mesma do adulto sem cardiopatia congênita — a SpO2 normal, por exemplo, só se aplica acima de 92% quando não há shunt cardíaco conhecido, e a inclinação VE/VCO2 acima de 30 sinaliza ineficiência ventilatória associada a fração de ejeção reduzida ou a shunt direita-esquerda. Pico de VO2 abaixo de 80-85% do predito é a variável mais estudada e mais usada de aptidão cardiorrespiratória nessa população, mas um achado contraintuitivo relevante é que mesmo lesões ditas 'não complicadas' — comunicação interatrial e interventricular, corrigidas ou não — costumam ter pico de VO2 anormalmente baixo, que declina com a idade mais rápido do que em controles; 'defeito simples' ou 'defeito corrigido' não autorizam presumir capacidade funcional normal. Na circulação de Fontan e na transposição pós-switch atrial, o valor do TCPE está sobretudo na série temporal — diretrizes internacionais recomendam repetição a cada 1 a 3 anos como vigilância de rotina, e é a tendência ao longo do tempo, não um exame isolado, que orienta decisão clínica sobre insuficiência cardíaca, arritmia e avaliação para transplante."
+    },
+    "differentials": [
+      "descompensação de insuficiência cardíaca por causa adquirida (isquêmica, hipertensiva, valvar degenerativa) sobreposta à cardiopatia congênita de base, que deve ser diferenciada de deterioração da lesão congênita propriamente dita antes de se atribuir todo sintoma novo ao substrato cirúrgico antigo;",
+      "hipertensão pulmonar de outras etiologias (grupo 1 idiopática/hereditária, grupo 2 associada a doença de câmaras esquerdas, grupo 3 associada a doença pulmonar/hipóxia, grupo 4 tromboembólica crônica) em paciente sem shunt residual detectável, que deve ser distinguida da hipertensão pulmonar associada a shunt congênito (síndrome de Eisenmenger) porque o manejo e o prognóstico diferem;",
+      "arritmia primária sem substrato cirúrgico (por exemplo fibrilação atrial relacionada a hipertensão ou obesidade) versus arritmia dependente de cicatriz cirúrgica ou de sobrecarga hemodinâmica residual — a distinção orienta se a ablação deve mirar um istmo anatômico específico do reparo prévio;",
+      "doença hepática de outra etiologia (viral, metabólica, alcoólica, autoimune) em paciente com Fontan e alterações laboratoriais hepáticas, que precisa ser diferenciada da doença hepática associada a Fontan (congestiva, hemodinâmica) antes de se atribuir toda alteração hepática à circulação de Fontan;",
+      "outras causas de enteropatia perdedora de proteína e de hipoalbuminemia (doença celíaca, doença inflamatória intestinal, síndrome nefrótica, insuficiência hepática de outra causa) em paciente com Fontan e edema/diarreia, que devem ser consideradas antes de atribuir o quadro exclusivamente à fisiologia de Fontan;",
+      "descondicionamento físico e causas pulmonares ou musculares isoladas de intolerância ao exercício, que devem ser consideradas antes de atribuir todo pico de VO2 reduzido no TCPE apenas ao coração — a própria literatura de referência reconhece que a redução costuma ser combinação de causas cardíacas, pulmonares e musculares."
+    ],
+    "tests": [
+      "ecocardiograma transtorácico — modalidade de primeira linha para função ventricular, shunts residuais, valvas e derrame, mas limitado pela janela acústica em pacientes com cirurgia cardíaca prévia e reparo complexo, e insuficiente isoladamente para quantificar com precisão volumes de ventrículo direito em anatomias complexas ou fisiologia de Fontan;",
+      "ressonância magnética cardíaca — referência para quantificação volumétrica e funcional detalhada, especialmente de ventrículo direito e via de saída pulmonar (por exemplo para definir o volume diastólico final do VD que orienta timing de troca valvar pulmonar pós-Fallot), mas de acesso limitado, sensível a artefatos de dispositivos metálicos implantados e não substitui avaliação hemodinâmica invasiva quando esta é necessária;",
+      "teste cardiopulmonar de exercício (TCPE) — quantifica capacidade funcional e orienta prognóstico e indicação de intervenção, mas exige interpretação específica para ACHD (por exemplo o corte de SpO2 normal só vale para quem não tem shunt conhecido) e, na circulação de Fontan, seu valor está na série ao longo do tempo (1 a 3 anos) e não em um único exame isolado;",
+      "cateterismo cardíaco direito com estudo hemodinâmico — necessário para confirmar e quantificar hipertensão pulmonar, calcular resistência vascular pulmonar e avaliar reversibilidade antes de decisões terapêuticas maiores (por exemplo elegibilidade a reparo de defeito ou a terapia vasodilatadora pulmonar em Eisenmenger), mas é invasivo e deve envolver, sempre que possível, centro experiente em cardiopatia congênita do adulto;",
+      "avaliação hepática dirigida (elastografia, imagem, e em casos selecionados biópsia hepática) na circulação de Fontan — biomarcadores e elastografia padrão frequentemente subestimam a gravidade da doença hepática associada a Fontan porque a rigidez hepática medida é confundida pela congestão venosa crônica, o que faz da biópsia o padrão-ouro para estadiamento quando há dúvida diagnóstica;",
+      "estudo eletrofisiológico com ablação em arritmia atrial pós-cirúrgica (por exemplo IART) — taxa de sucesso agudo de 87,4% quando toda arritmia indutível é sistematicamente tratada, com recorrência em 12 meses de 22,9% nesse cenário contra 77,7% quando arritmia indutível remanescente não é tratada; a limitação prática é que a decisão de mapear e ablar toda arritmia indutível, e não só a clinicamente documentada, exige eletrofisiologista com experiência específica em substrato de cardiopatia congênita;",
+      "hemograma completo com hematócrito, ferritina e função renal/hepática no paciente cianótico — essencial para diferenciar eritrocitose adaptativa de hiperviscosidade sintomática verdadeira, mas hematócrito elevado isolado, sem sintomas e sem excluir desidratação ou deficiência de ferro, não constitui indicação de flebotomia e pode levar a intervenção prejudicial se interpretado de forma automática."
+    ],
+    "red_flags": [
+      "piora súbita da cianose ou da SpO2 em relação ao basal individual do paciente — valor absoluto de saturação importa menos que a mudança em relação ao padrão habitual daquele paciente;",
+      "síncope ou pré-síncope em paciente com cardiopatia congênita cianótica ou com fisiologia de Fontan, que deve ser investigada como possível arritmia maligna ou falência hemodinâmica aguda, e não atribuída por padrão à cianose crônica basal;",
+      "hemoptise em paciente com síndrome de Eisenmenger — muda radicalmente a decisão sobre anticoagulação e exige avaliação urgente antes de qualquer decisão de anticoagular;",
+      "sinais de falência de ventrículo direito sistêmico ou de falência da circulação de Fontan (edema/congestão rapidamente progressivos, ascite, hipotensão/baixo débito) em paciente com switch atrial prévio ou Fontan, que sinalizam descompensação potencialmente grave e exigem contato imediato com centro especializado em ACHD;",
+      "nova arritmia em paciente com cirurgia cardíaca congênita prévia — mesmo aparentemente bem tolerada, pode ser o primeiro sinal de deterioração hemodinâmica subjacente ou evoluir rapidamente para instabilidade em fisiologias frágeis como Eisenmenger ou Fontan;",
+      "febre ou sinal de infecção com deterioração hemodinâmica em paciente com prótese valvar pulmonar ou material protético — deve levantar suspeita de endocardite, inclusive diante de disfunção aguda ou subaguda de prótese pulmonar biológica sem outra causa evidente;",
+      "gestação não planejada ou em curso em mulher com cardiopatia congênita de base sem estratificação de risco prévia — exige encaminhamento multidisciplinar urgente, pois o manejo depende de anatomia, função ventricular, pressão pulmonar, arritmias e histórico obstétrico."
+    ],
+    "ambulatory_flow": [
+      "Definir a complexidade anatômica e fisiológica da lesão de base (classificação em estágios) para determinar a frequência e o local do seguimento — lesão simples pode ser acompanhada localmente, moderada/grande complexidade exige centro especializado em ACHD",
+      "Reavaliação estruturada periódica em centro ACHD com ecocardiograma, avaliação funcional e, quando indicado, ressonância cardíaca ou cateterismo, conforme a lesão de base",
+      "Rastrear e discutir tromboprofilaxia individualizada em paciente com circulação de Fontan, considerando idade, tempo de cirurgia, arritmia atrial concomitante, função hepática e preferência quanto à monitorização",
+      "Avaliar indicação de reintervenção transcateter (por exemplo TPVR para disfunção de via de saída do ventrículo direito, ou reparo borda-a-borda de valva atrioventricular) versus cirurgia convencional, de forma individualizada e multidisciplinar, conforme anatomia e risco operatório",
+      "Encaminhar para aconselhamento pré-concepcional toda mulher em idade fértil com ACHD, com classificação de risco gestacional específica antes de qualquer tentativa de gravidez, e orientar contracepção adequada evitando estrogênio em alto risco trombótico",
+      "Considerar reabilitação por exercício estruturado e supervisionado, individualizando intensidade (incluindo treino intervalado de alta intensidade em pacientes estáveis e bem selecionados) conforme lesão, função ventricular e estabilidade clínica",
+      "Integrar seguimento eletrofisiológico dedicado quando houver substrato arrítmico ligado a cirurgia prévia, cicatrizes, conduítes ou circulação univentricular, com equipe com competência específica em ACHD"
+    ],
+    "emergency_flow": [
+      "Em piora aguda de síndrome de Eisenmenger/cianose crônica, investigar hiperviscosidade sintomática, desidratação, infecção, arritmia, trombose e sangramento antes de qualquer conduta reflexa — não flebotomizar, oxigenar continuamente nem anticoagular de forma automática",
+      "Em taquiarritmia ou bradiarritmia com instabilidade em paciente com cirurgia cardíaca congênita prévia (patches, conduítes, cicatrizes), tratar como emergência elétrica e acionar eletrofisiologia com experiência em ACHD, pois cardioversão/estimulação podem exigir planejamento específico pela anatomia",
+      "Em descompensação aguda da circulação de Fontan (hipoxemia nova, baixo débito, congestão, choque), priorizar retorno venoso, manter resistência vascular pulmonar baixa, investigar obstrução do circuito e arritmia como precipitantes, e usar ventilação com pressão positiva com cautela",
+      "Diante de qualquer descompensação aguda em ACHD, contatar precocemente centro especializado em cardiopatia congênita do adulto e evitar extrapolar protocolos de insuficiência cardíaca biventricular convencional",
+      "Garantir linha intravenosa com filtro de ar (prevenção de embolia paradoxal) em todo paciente cianótico/com shunt direita-esquerda em ambiente de emergência",
+      "Em choque refratário apesar de correção de gatilhos, discutir precocemente suporte circulatório mecânico/transplante em centro com expertise em cardiopatia congênita complexa"
+    ],
+    "treatment_summary": "O tratamento do adulto com cardiopatia congênita (ACHD) é organizado pela complexidade anatômica e fisiológica da lesão de base, não por um protocolo único: pacientes com lesão simples podem ter seguimento compartilhado com cardiologia geral, enquanto lesões de complexidade moderada ou grande exigem seguimento estruturado e longitudinal em centro especializado em ACHD, com reavaliação periódica por imagem (ecocardiograma, ressonância cardíaca quando indicada) e equipe multidisciplinar — incluindo eletrofisiologia com competência específica em substrato congênito, já que anatomia, cirurgia prévia e estratégia de acesso devem ser tratadas como uma única decisão clínica nesses pacientes.\n\nNa síndrome de Eisenmenger, a descompensação aguda deve ser abordada evitando condutas reflexas: hematócrito elevado, dessaturação e risco trombótico fazem parte de uma fisiologia adaptada, e nenhum desses achados isoladamente indica flebotomia, oxigenoterapia contínua ou anticoagulação automática — a investigação deve procurar ativamente desidratação, infecção, arritmia, trombose e sangramento como gatilhos reais antes de qualquer intervenção, e o manejo deve ocorrer em centro com experiência em hipertensão pulmonar associada a cardiopatia congênita. Terapia específica para hipertensão pulmonar (antagonistas do receptor de endotelina, inibidores da fosfodiesterase-5, análogos de prostaciclina) tem papel estabelecido no Eisenmenger sintomático crônico, mas a resposta varia entre fármacos da mesma classe, reforçando a necessidade de acompanhamento especializado.\n\nNa circulação de Fontan, a tromboprofilaxia é recomendada como estratégia de redução de eventos tromboembólicos — evidência de meta-análise em rede mostra que anticoagulante oral direto, varfarina e ácido acetilsalicílico reduzem evento tromboembólico de forma expressiva frente a nenhuma profilaxia, sem diferença de segurança clara entre as três classes; a escolha da classe terapêutica (sem definição de dose neste verbete) deve considerar idade, tempo de cirurgia, arritmia atrial concomitante, função hepática e necessidade de monitorização, sendo individualizada em centro especializado.\n\nReintervenções transcateter ganharam espaço como alternativa à cirurgia convencional em subgrupos selecionados: a implantação transcateter de valva pulmonar (TPVR) é opção para disfunção de via de saída do ventrículo direito, com menor morbidade hospitalar descrita em comparação à cirurgia em dados observacionais recentes, sem diferença de mortalidade demonstrada e sem substituir a decisão anatômica individualizada; o reparo transcateter borda-a-borda (TEER) de valva atrioventricular é opção emergente para regurgitação valvar em paciente de alto risco cirúrgico (reoperação, disfunção ventricular, fragilidade hemodinâmica da circulação de Fontan), sempre com seleção por equipe multidisciplinar com expertise estrutural em ACHD — nenhum parâmetro técnico de procedimento é definido neste verbete, que trata apenas do tipo de intervenção e da indicação geral.\n\nReabilitação por exercício estruturado e supervisionado deve ser considerada em pacientes clinicamente estáveis, com evidência recente sustentando que tanto treinamento contínuo moderado quanto treinamento intervalado de alta intensidade podem melhorar capacidade funcional sem sinal de remodelamento cardíaco adverso em amostras pequenas e bem selecionadas — a prescrição deve ser individualizada pela lesão, função ventricular, presença de hipertensão pulmonar, arritmia e saturação, e não generalizada para todo o espectro de ACHD.\n\nAconselhamento reprodutivo integra o seguimento de toda mulher em idade fértil com ACHD, com avaliação pré-concepcional específica e classificação de risco gestacional guiando a decisão sobre gravidez e contracepção, incluindo contraindicação a métodos com estrogênio em contextos de alto risco trombótico.",
+    "monitoring": [
+      "Saturação periférica e hematócrito/viscosidade em paciente cianótico, comparando sempre com o basal individual, não com valor de referência da população geral",
+      "Ritmo e substrato elétrico (ECG, Holter quando indicado) para detecção precoce de arritmia atrial ou ventricular ligada a cicatriz cirúrgica ou circulação univentricular",
+      "Função ventricular e valvar por ecocardiograma seriado, com intervalo definido pela complexidade da lesão, não por calendário fixo em paciente estável",
+      "Sinais de falência de Fontan: edema, ascite, derrames, função hepática e enteropatia perdedora de proteína no seguimento de longo prazo",
+      "Capacidade funcional e tolerância ao exercício (teste cardiopulmonar quando indicado) para orientar prescrição de reabilitação e detectar deterioração",
+      "Status quanto a gravidez, contracepção e planejamento reprodutivo em toda mulher em idade fértil, reavaliando classificação de risco a cada mudança clínica relevante",
+      "Classe funcional da OMS e sinais de hipertensão arterial pulmonar associada em pacientes com shunt residual não fechado"
+    ],
+    "special_populations": [
+      "Gestante com cardiopatia congênita de alto risco — em especial síndrome de Eisenmenger, na qual a gestação é contraindicação absoluta/relativa por mortalidade materna elevada; exige aconselhamento pré-concepcional, estratificação de risco gestacional cardiovascular estruturada e manejo compartilhado com centro de referência em ACHD.",
+      "Portador de circulação de Fontan em risco de enteropatia perdedora de proteína, disfunção hepática (hepatopatia associada a Fontan) e falência tardia da circulação — necessita vigilância vitalícia mesmo estável clinicamente, incluindo tromboprofilaxia específica.",
+      "Adulto com cardiopatia congênita nunca diagnosticada na infância ou perdido de seguimento após a transição do cuidado pediátrico — inclui lesões simples reconhecidas tardiamente e pacientes que abandonaram o acompanhamento especializado na adolescência/início da vida adulta.",
+      "Atleta ou paciente fisicamente ativo com cardiopatia congênita reparada — decisão de exercício e elegibilidade esportiva individualizada por lesão, função ventricular, arritmia e presença de hipertensão pulmonar, com teste cardiopulmonar de exercício orientando a prescrição.",
+      "Saúde mental como comorbidade transversal em ACHD — ansiedade, depressão e sofrimento psicológico relacionado à doença crônica desde a infância, com prevalência maior que na população geral e impacto documentado em adesão e desfechos, exigindo rastreio e intervenção estruturada (ex.: mindfulness digital)."
+    ],
+    "assistant_questions": [
+      {
+        "id": "known_congenital_lesion",
+        "label": "Há diagnóstico conhecido de cardiopatia congênita de base?",
+        "type": "boolean",
+        "required": true,
+        "section": "História"
+      },
+      {
+        "id": "lesion_complexity",
+        "label": "Qual a complexidade anatômica da lesão congênita, pela classificação em estágios?",
+        "type": "select",
+        "required": true,
+        "section": "História",
+        "options": [
+          {
+            "value": "simples",
+            "label": "Simples (estágio I)"
+          },
+          {
+            "value": "moderada",
+            "label": "Complexidade moderada (estágio II)"
+          },
+          {
+            "value": "grande_complexidade",
+            "label": "Grande complexidade (estágio III)"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Não avaliado/desconhecido"
+          }
+        ]
+      },
+      {
+        "id": "cyanosis_eisenmenger",
+        "label": "Há cianose/hipoxemia crônica ou síndrome de Eisenmenger documentada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fisiologia"
+      },
+      {
+        "id": "fontan_circulation",
+        "label": "O paciente tem circulação de Fontan (fisiologia univentricular)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fisiologia"
+      },
+      {
+        "id": "pregnancy_status",
+        "label": "Qual a situação quanto a gravidez, desejo gestacional ou contracepção?",
+        "type": "select",
+        "section": "Saúde reprodutiva",
+        "options": [
+          {
+            "value": "gestante_atual",
+            "label": "Gestante no momento"
+          },
+          {
+            "value": "planejamento_gestacional",
+            "label": "Planejamento gestacional/pré-concepcional"
+          },
+          {
+            "value": "contracepcao",
+            "label": "Uso ou definição de método contraceptivo"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável"
+          }
+        ]
+      },
+      {
+        "id": "decompensation_symptoms",
+        "label": "Quais sintomas de possível descompensação estão presentes?",
+        "type": "multiselect",
+        "section": "Segurança",
+        "options": [
+          {
+            "value": "cianose_piora",
+            "label": "Piora aguda de cianose/dessaturação em relação ao basal"
+          },
+          {
+            "value": "dispneia_nova",
+            "label": "Dispneia nova ou progressiva"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope ou pré-síncope"
+          },
+          {
+            "value": "edema_ascite",
+            "label": "Piora de edema, ascite ou derrames"
+          },
+          {
+            "value": "palpitacoes_sustentadas",
+            "label": "Palpitações sustentadas/suspeita de arritmia"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          }
+        ]
+      },
+      {
+        "id": "prior_cardiac_surgery",
+        "label": "Há histórico de cirurgia cardíaca congênita prévia (patch, conduíte, correção)?",
+        "type": "boolean",
+        "section": "História"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "achd-eisenmenger-crise-cianotica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "cyanosis_eisenmenger",
+              "op": "truthy"
+            },
+            {
+              "field": "decompensation_symptoms",
+              "op": "contains",
+              "value": "cianose_piora"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível crise cianótica/descompensação aguda de síndrome de Eisenmenger"
+          ],
+          "emergency_flow": [
+            "Investigar hiperviscosidade sintomática, desidratação, infecção, arritmia, trombose e sangramento antes de qualquer conduta reflexa; não flebotomizar, oxigenar continuamente nem anticoagular de forma automática"
+          ]
+        }
+      },
+      {
+        "id": "achd-fontan-descompensacao-aguda",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "fontan_circulation",
+              "op": "truthy"
+            },
+            {
+              "field": "decompensation_symptoms",
+              "op": "contains",
+              "value": "dispneia_nova"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível descompensação aguda da circulação de Fontan"
+          ],
+          "emergency_flow": [
+            "Priorizar retorno venoso, manter resistência vascular pulmonar baixa, investigar obstrução do circuito de Fontan e arritmia como precipitantes, e usar ventilação com pressão positiva com cautela"
+          ]
+        }
+      },
+      {
+        "id": "achd-sincope-alto-risco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "decompensation_symptoms",
+              "op": "contains",
+              "value": "sincope"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síncope em cardiopatia congênita do adulto — investigar arritmia maligna e obstrução hemodinâmica"
+          ],
+          "emergency_flow": [
+            "Avaliar em ambiente monitorizado com ECG e investigação de arritmia grave, obstrução do circuito e baixo débito antes de liberar o paciente"
+          ]
+        }
+      },
+      {
+        "id": "achd-arritmia-substrato-cirurgico",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "prior_cardiac_surgery",
+              "op": "truthy"
+            },
+            {
+              "field": "decompensation_symptoms",
+              "op": "contains",
+              "value": "palpitacoes_sustentadas"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de arritmia sustentada em substrato cirúrgico congênito prévio"
+          ],
+          "emergency_flow": [
+            "Tratar como emergência elétrica potencial e acionar eletrofisiologia com experiência em ACHD, considerando cicatrizes, conduítes e acessos vasculares alterados no planejamento"
+          ]
+        }
+      },
+      {
+        "id": "achd-gravidez-alto-risco",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "cyanosis_eisenmenger",
+              "op": "truthy"
+            },
+            {
+              "field": "pregnancy_status",
+              "op": "eq",
+              "value": "planejamento_gestacional"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Cianose/Eisenmenger com planejamento gestacional — alto risco materno-fetal"
+          ],
+          "messages": [
+            "Encaminhar para aconselhamento pré-concepcional com cardiologista de ACHD antes de qualquer tentativa de gravidez; síndrome de Eisenmenger é situação de alto risco/contraindicação relativa à gestação"
+          ]
+        }
+      },
+      {
+        "id": "achd-fontan-tromboprofilaxia",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "fontan_circulation",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Considerar tromboprofilaxia individualizada (classe terapêutica a definir em centro especializado, sem dose padronizada aqui) avaliando risco tromboembólico e de sangramento, tempo de cirurgia e arritmia atrial concomitante"
+          ],
+          "missing_information": [
+            "Classe de tromboprofilaxia em uso e motivo da escolha, quando aplicável"
+          ]
+        }
+      },
+      {
+        "id": "achd-complexidade-grande-seguimento",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "lesion_complexity",
+              "op": "eq",
+              "value": "grande_complexidade"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Manter seguimento estruturado em centro especializado em cardiopatia congênita do adulto, com reavaliação periódica multidisciplinar"
+          ],
+          "ambulatory_flow": [
+            "Priorizar encaminhamento/manutenção em centro ACHD dada a grande complexidade anatômica da lesão"
+          ]
+        }
+      },
+      {
+        "id": "achd-contracepcao-estrogenio",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "cyanosis_eisenmenger",
+              "op": "truthy"
+            },
+            {
+              "field": "pregnancy_status",
+              "op": "eq",
+              "value": "contracepcao"
+            }
+          ]
+        },
+        "add": {
+          "red_flags": [
+            "Contracepção com estrogênio é potencialmente prejudicial em alto risco tromboembólico (cianose, Fontan, HAP, prótese mecânica)"
+          ],
+          "messages": [
+            "Discutir método contraceptivo sem estrogênio; aconselhamento individualizado com cardiologista de ACHD"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiopatia congênita do adulto",
+      "ACHD",
+      "GUCH",
+      "síndrome de Eisenmenger",
+      "circulação de Fontan",
+      "cianose crônica",
+      "transição de cuidado"
+    ],
+    "source_refs": [
+      "Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. DOI: 10.1016/j.jacc.2025.09.006. PMID: 41411480.",
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al.; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Marelli AJ, Ionescu-Ittu R, Mackie AS, Guo L, Dendukuri N, Kaouache M. Lifetime prevalence of congenital heart disease in the general population from 2000 to 2010. Circulation. 2014;130(9):749-756. DOI: 10.1161/CIRCULATIONAHA.113.008396. PMID: 24944314.",
+      "Cifra B, Cordina RL, Gauthier N, Murphy LC, et al. Cardiopulmonary Exercise Test Interpretation Across the Lifespan in Congenital Heart Disease: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(4):e038200. DOI: 10.1161/JAHA.124.038200. PMID: 39782908.",
+      "Galiè N, Beghetti M, Gatzoulis MA, et al. Bosentan therapy in patients with Eisenmenger syndrome: a multicenter, double-blind, randomized, placebo-controlled study (BREATHE-5). Circulation. 2006;114(1):48-54. DOI: 10.1161/CIRCULATIONAHA.106.630715. PMID: 16801459.",
+      "Gatzoulis MA, Landzberg MJ, Beghetti M, et al. Evaluation of Macitentan in Patients With Eisenmenger Syndrome (MAESTRO). Circulation. 2019;139(1):51-63. DOI: 10.1161/CIRCULATIONAHA.118.033575. PMID: 30586694.",
+      "Emamaullee J, Zaidi AN, Schiano T, et al. Fontan-Associated Liver Disease: Screening, Management, and Transplant Considerations. Circulation. 2020;142(6):591-604. DOI: 10.1161/CIRCULATIONAHA.120.045597. PMID: 32776846.",
+      "Broberg CS, van Dissel A, Minnier J, et al. Long-Term Outcomes After Atrial Switch Operation for Transposition of the Great Arteries. J Am Coll Cardiol. 2022;80(10):951-963. DOI: 10.1016/j.jacc.2022.06.020. PMID: 36049802.",
+      "Khairy P, Clair M, Fernandes SM, et al. Cardiovascular outcomes after the arterial switch operation for D-transposition of the great arteries. Circulation. 2013;127(3):331-339. DOI: 10.1161/CIRCULATIONAHA.112.135046. PMID: 23239839."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/41411480/",
+      "https://pubmed.ncbi.nlm.nih.gov/32860028/",
+      "https://pubmed.ncbi.nlm.nih.gov/24944314/",
+      "https://pubmed.ncbi.nlm.nih.gov/39782908/",
+      "https://pubmed.ncbi.nlm.nih.gov/16801459/",
+      "https://pubmed.ncbi.nlm.nih.gov/30586694/",
+      "https://pubmed.ncbi.nlm.nih.gov/32776846/",
+      "https://pubmed.ncbi.nlm.nih.gov/36049802/",
+      "https://pubmed.ncbi.nlm.nih.gov/23239839/"
+    ],
+    "related_document_slugs": [
+      "acc-aha-2025-diretriz-adultos-cardiopatia-congenita",
+      "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+      "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto",
+      "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+      "descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+      "fluxograma-descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+      "embrace-mindfulness-virtual-saude-mental-em-adultos-com-cardiopatia-congenita",
+      "estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada",
+      "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018",
+      "hiit-versus-treino-continuo-moderado-em-adultos-com-cardiopatia-congenita",
+      "hrs-isachd-paces-eletrofisiologia-em-adultos-com-cardiopatia-congenita-2026",
+      "profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021",
+      "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+      "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+      "tromboprofilaxia-na-circulacao-de-fontan",
+      "transposicao-corrigida-congenitamente-cctga-ventriculo-direito-sistemico-esc-2020",
+      "reparo-transcateter-borda-a-borda-teer-de-valva-atrioventricular-em-cardiopatia-congenita-do-adulto",
+      "anel-vascular-duplo-arco-aortico-e-sling-de-arteria-pulmonar-diagnostico-tardio-no-adulto",
+      "cor-triatriatum-sinister-no-adulto-diagnostico-e-reparo-cirurgico",
+      "persistencia-do-canal-arterial-no-adulto-criterios-hemodinamicos-de-fechamento-esc-2020",
+      "retorno-venoso-pulmonar-anomalo-papvr-tapvr-no-adulto",
+      "tpvr-versus-cirurgia-reposicao-valvar-pulmonar-adultos-chd-2026",
+      "melody-10-anos-valva-pulmonar-transcateter",
+      "fluxograma-hipertensao-pulmonar-associada-a-cardiopatia-congenita-terapia-e-treat-and-repair-jcs-2022",
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024"
+    ],
+    "patient_material_slug": "cardiopatia-congenita-no-adulto",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo sétimo ciclo do dia. Nenhum verbete geral de cardiopatia congênita do adulto (ACHD/GUCH) existia previamente no corpus — os hubs congênitos existentes são todos lesão-específicos (comunicacao-interatrial, comunicacao-interventricular, tetralogia-de-fallot, coarctacao-da-aorta, transposicao-das-grandes-arterias, anomalia-ebstein, tronco-arterial-comum, atresia-pulmonar, atresia-tricuspide) ou fetais/pediátricos. Este hub cobre o que é transversal a QUALQUER adulto com CC — complexidade da lesão como determinante de risco, síndrome de Eisenmenger, circulação de Fontan no adulto, arritmia em substrato cirúrgico, gravidez/contracepção, exercício, saúde mental — e não substitui os hubs lesão-específicos. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 9 referências citadas (diretrizes ACC/AHA 2025 e ESC 2020, entre outras) — incluindo Marelli et al. 2014 (PMID 24944314), buscada pelo agente de epidemiologia para sustentar a inversão demográfica citada apenas qualitativamente nos documentos-fonte. related_document_slugs conta com 25 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames. Três documentos originalmente candidatos ('no adulto' de CIA/CIV) foram excluídos por sobreposição real já reivindicada pelo hub lesão-específico comunicacao-interventricular. Dois documentos permanecem como inclusão dupla legítima e documentada com hubs-irmãos: 'valva-aortica-bicuspide-e-aortopatia-associada-esc-2024' (já em aortopatia-na-gravidez e valva-aortica-bicuspide-pediatrica — terceira inclusão dupla deste padrão, junto dos casos já estabelecidos VIBORG e canalopatias) e 'descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica' (já em comunicacao-interventricular — identificado na montagem, não pelo agente de pesquisa; mantido por ser documento central e transversal sobre Eisenmenger, tema com seção e regras próprias neste hub). Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos PRs abertos cria o slug cardiopatia-congenita-do-adulto. Nenhuma dose de fármaco nem parâmetro de titulação foi incluída em nenhum campo; chaves de 'add' do assistente verificadas contra a lista permitida antes da montagem. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

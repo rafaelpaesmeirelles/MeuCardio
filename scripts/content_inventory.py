@@ -17,6 +17,9 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "backend"))
+
+from app.services.disease_manifest import load_disease_records  # noqa: E402
 
 SOURCES: dict[str, dict[str, str]] = {
     "documentos": {"directory": "content", "kind": "markdown"},
@@ -148,8 +151,11 @@ def inventory() -> dict[str, Any]:
             continue
 
         try:
-            payload = json.loads(manifest.read_text(encoding="utf-8"))
-        except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+            if name == "doencas_especializadas":
+                payload: Any = load_disease_records(manifest)
+            else:
+                payload = json.loads(manifest.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
             invalid.append(f"{manifest.relative_to(ROOT)}: {type(exc).__name__}")
             fronts[name] = result
             continue

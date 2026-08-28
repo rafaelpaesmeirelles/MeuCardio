@@ -15,6 +15,7 @@ from .dose_calculators_mra_icfer_chatgpt import MRA_ICFER_DOSE_REGISTRY
 from .dose_calculators_pals2025_chatgpt import PALS_2025_DOSE_REGISTRY
 from .intensive_care_brash_safety import INTENSIVE_CARE_BRASH_SAFETY_REGISTRY
 from .intensive_care_calculators import INTENSIVE_CARE_CALCULATOR_REGISTRY
+from .intensive_care_hyperkalemia_safety import INTENSIVE_CARE_HYPERKALEMIA_SAFETY_REGISTRY
 from .perioperative_calculators_frailty import FRAILTY_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
@@ -35,6 +36,7 @@ _CHATGPT_REGISTRIES = [
     PALS_2025_DOSE_REGISTRY,
     INTENSIVE_CARE_BRASH_SAFETY_REGISTRY,
     INTENSIVE_CARE_CALCULATOR_REGISTRY,
+    INTENSIVE_CARE_HYPERKALEMIA_SAFETY_REGISTRY,
     FRAILTY_PERIOPERATIVE_REGISTRY,
     GERIATRIC_PERIOPERATIVE_REGISTRY,
     MORTALITY_PERIOPERATIVE_REGISTRY,

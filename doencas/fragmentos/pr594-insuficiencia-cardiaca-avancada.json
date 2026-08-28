@@ -1,0 +1,384 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca-avancada",
+    "name": "Insuficiência cardíaca avançada (estágio D)",
+    "aliases": [
+      "IC avançada",
+      "IC estágio D",
+      "IC refratária",
+      "LVAD",
+      "dispositivo de assistência ventricular",
+      "transplante cardíaco"
+    ],
+    "area": "geral",
+    "category": "insuficiencia_cardiaca",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Insuficiência cardíaca avançada/refratária (estágio D ACC/AHA, INTERMACS) — quando terapia clínica otimizada não é mais suficiente. Sinais de alerta: hospitalizações recorrentes, intolerância à terapia guiada por diretriz, inotrópico ambulatorial contínuo, caquexia cardíaca. Distinto do hub geral de insuficiência cardíaca (fenótipos agudo/crônico com terapia otimizada ainda eficaz). Cobre critérios de encaminhamento precoce a centro especializado, teste cardiopulmonar de exercício na seleção de candidatos, dispositivo de assistência ventricular esquerda (LVAD) como ponte ou terapia de destino com decisão compartilhada estruturada, seleção e vigilância de rejeição pós-transplante cardíaco (biópsia seriada, vigilância não invasiva em baixo risco), e cuidado paliativo integrado desde o encaminhamento — não como alternativa excludente às terapias de substituição.",
+    "epidemiology": "A insuficiência cardíaca (IC) avançada, ou estágio D na classificação ACC/AHA, corresponde ao extremo mais grave do espectro da síndrome: sintomas persistentes ou progressivos e disfunção ventricular apesar de terapia otimizada e maximamente tolerada para o fenótipo (ICFEr, ICFEi ou ICFEp), com necessidade recorrente de intervenção hospitalar ou suporte circulatório (Truby LK, Rogers JG. JACC Heart Fail. 2020;8(7):523-536, PMID 32535126). Não existe um número único e amplamente replicado de prevalência populacional desse estágio dentro do universo total de pacientes com IC crônica — a caracterização quantitativa mais robusta e verificável vem dos registros das duas terapias de substituição. Do lado do suporte mecânico, o 16º Relatório Anual do Intermacs (Society of Thoracic Surgeons) documentou 28.029 implantes de dispositivo de assistência ventricular esquerda de fluxo contínuo (LVAD) nos Estados Unidos entre 2015 e 2024, com sobrevida em 1, 5 e 7 anos de 85,9%, 60,2% e 51,8% para o dispositivo totalmente levitado magneticamente — mas com volume nacional de implantes estagnado nos últimos anos, apesar da expansão de elegibilidade a pacientes mais idosos (Nayak A et al. Ann Thorac Surg. 2026;121(1):15-38, PMID 41177301). Do lado do transplante cardíaco, o relatório especial do Registro ISHLT documentou 97.140 receptores adultos transplantados entre 1992 e 2017, com sobrevida mediana do enxerto de 11,3 anos na coorte inteira e tendência de melhora a cada era sucessiva de transplante — 12,1 anos entre os transplantados de 2001 a 2009 (Singh TP et al. J Heart Lung Transplant. 2023;42(10):1321-1333, PMID 37549773). A oferta de órgãos permanece o principal fator limitante estrutural da via de transplante, o que sustenta o crescimento relativo do LVAD como terapia de destino em candidatos elegíveis a ambas as vias, e reforça por que o encaminhamento precoce ao centro especializado de IC avançada — antes que disfunção renal, hepática ou nutricional comprometa a elegibilidade — é o determinante prognóstico mais modificável nesse estágio da doença.",
+    "presentation": [
+      "Sintomas de IC persistentes ou progressivos (dispneia, ortopneia, fadiga) apesar de terapia farmacológica dos quatro pilares em dose máxima tolerada e otimização de dispositivo, quando indicado",
+      "Hospitalizações recorrentes por descompensação de IC apesar de tratamento ambulatorial otimizado — múltiplas internações no último ano",
+      "Necessidade crescente de diurético para controle de congestão, refletindo perda de resposta à dose ambulatorial habitual",
+      "Intolerância à terapia guiada por diretriz por hipotensão sintomática, disfunção renal progressiva ou distúrbio eletrolítico, limitando a titulação dos quatro pilares farmacológicos",
+      "Hipoperfusão persistente de órgãos-alvo (extremidades frias, sonolência, piora de função hepática ou renal) mesmo em repouso ou com atividade mínima",
+      "Caquexia cardíaca — perda de peso não intencional e de massa muscular, refletindo estado catabólico avançado",
+      "Necessidade de suporte inotrópico intravenoso ambulatorial, contínuo ou intermitente, para manter perfusão ou aliviar sintomas refratários",
+      "Classe funcional NYHA III-IV persistente, com incapacidade de realizar atividades básicas sem sintomas limitantes",
+      "Necessidade de suporte circulatório mecânico temporário (balão intra-aórtico, ECMO, dispositivo percutâneo) durante episódio agudo, sinalizando fragilidade hemodinâmica de base"
+    ],
+    "diagnostic_approach": {
+      "criterios_intermacs_e_estagio_d": "O estágio D (IC avançada) segue a definição consolidada pela Segunda Definição Universal de IC (Walsh MN et al., J Am Coll Cardiol. 2026, PMID 42370864): sintomas graves e persistentes que interferem significativamente na vida diária apesar de terapia guiada por diretriz otimizada, com hospitalizações recorrentes. A classificação INTERMACS (perfis 1 a 7, do choque cardiogênico 'crash and burn' ao NYHA III avançado ambulatorial) estratifica a gravidade hemodinâmica e a urgência dentro desse estágio, orientando o momento e o tipo de suporte circulatório mecânico. É importante para o raciocínio diagnóstico distinguir duas decisões que o perfil INTERMACS informa de modo desigual: nas diretrizes formais de listagem para transplante cardíaco da ISHLT (2016 e sua sucessora de 2024), a classificação INTERMACS não é usada como critério de listagem ou de priorização na fila — a única aplicação formal e graduada encontrada nessas diretrizes (Classe IIb, Nível C-LD) é para escolher, dentro da decisão de suporte mecânico, entre LVAD isolado e BiVAD/coração artificial total em perfil INTERMACS 1-2 associado a falência de ventrículo direito proibitiva.",
+      "teste_cardiopulmonar_de_exercicio_na_selecao_para_transplante": "O teste cardiopulmonar de exercício (TCPE) refina, mas não substitui, a avaliação de candidatura a transplante. O corte de VO2 pico depende do uso de betabloqueador: ≤12 mL/kg/min em vigência de betabloqueador (Peterson LR et al., J Heart Lung Transplant. 2003;22(10):1141-1148, PMID 14550824) ou ≤14 mL/kg/min sem betabloqueador (corte clássico de Mancini DM et al., Circulation. 1991;83(3):778-786, PMID 1999029) — ambos mantidos, sem recalibração para a terapia farmacológica quádrupla contemporânea, na diretriz vigente da ISHLT (Peled Y et al., J Heart Lung Transplant. 2024;43(10):1529-1628.e54, PMID 39115488). Um teste só é considerado máximo, e portanto interpretável pelo VO2 pico, quando a razão de troca respiratória (RER) é maior que 1,05. Em teste submáximo, ou quando há dúvida sobre a validade do esforço, a inclinação VE/VCO2 (classificação ventilatória de Arena R et al., Circulation. 2007;115(18):2410-2417, PMID 17452607) complementa a avaliação por não depender de esforço máximo verdadeiro. Listar um paciente com base somente no VO2 pico é formalmente contraindicado pela diretriz (Classe III).",
+      "avaliacao_de_discordancia_prognostica": "A avaliação de candidatos a terapia avançada deve incluir a comparação explícita entre a expectativa de sobrevida relatada pelo próprio paciente e a estimativa objetiva de risco (modelo validado somado a julgamento clínico) — técnica Ask-Tell-Ask nomeada pela declaração científica da American Heart Association (Allen LA et al., Circulation. 2012;125(15):1928-1952, PMID 22392529). O otimismo discordante (índice de estimativa, expectativa do paciente dividida pela sobrevida estimada pelo modelo, ≥1,5) esteve presente em 33,1% de uma coorte ambulatorial de IC e associou-se a quase o dobro de mortalidade em 2 anos (HR ajustado 1,98), sem que essa diferença fosse explicada por menor acesso a transplante ou dispositivo de assistência ventricular (Cascino TM et al., JAMA Netw Open. 2026;9(3):e260328, PMID 41774443). Na prática, isso significa que a decisão de terapia avançada deve se apoiar na avaliação objetiva de risco, e não no otimismo relatado pelo paciente, com essa diferença explicitada na conversa antes de decidir.",
+      "escores_de_risco_e_avaliacao_hemodinamica": "Na zona de ambiguidade do VO2 pico (entre 12 e 14 mL/kg/min), escores prognósticos multivariados — Heart Failure Survival Score (HFSS), Seattle Heart Failure Model (SHFM, sobrevida estimada em 1 ano <80% como corte razoável), além de MAGGIC e MECKI citados na diretriz de 2024 — têm valor discriminatório adicional, mas listar com base somente em escore prognóstico também é formalmente contraindicado (Classe III). O cateterismo cardíaco direito é obrigatório antes da listagem e periodicamente depois, com teste de vasorreatividade indicado quando a pressão sistólica de artéria pulmonar é ≥50 mmHg associada a gradiente transpulmonar ≥15 ou resistência vascular pulmonar >3 unidades Wood; a diretriz não define um corte numérico único de resistência vascular pulmonar como contraindicação absoluta em adultos, tratando hipertensão pulmonar refratária como contraindicação relativa avaliada pela resposta a vasodilatador e otimização hemodinâmica em internação, reavaliada após LVAD quando a terapia médica isolada falha em normalizar a hemodinâmica."
+    },
+    "differentials": [
+      "IC crônica ainda em estágios A-C, responsiva a otimização adicional de terapia — distinguir ajuste de dose ainda possível de refratariedade genuína antes de rotular como estágio D",
+      "Descompensação aguda por fator precipitante tratável (arritmia não controlada, isquemia aguda, infecção, não adesão a diurético ou à restrição de sódio), que mimetiza IC avançada mas responde à correção do gatilho, sem indicar progressão irreversível da doença",
+      "Cardiomiopatia infiltrativa não diagnosticada (amiloidose cardíaca, entre outras), cursando com intolerância hemodinâmica própria da doença de base — hipotensão e disfunção renal atribuídas por engano à progressão de uma IC comum, quando o mecanismo é outro",
+      "Hipertensão pulmonar de outra etiologia (doença pulmonar, tromboembólica crônica) com disfunção de ventrículo direito predominante, que pode simular sintomas refratários de IC esquerda avançada mas segue via diagnóstica e terapêutica distinta",
+      "Causas não cardíacas de dispneia e edema refratários (doença renal crônica avançada, hipoalbuminemia, doença hepática) coexistentes, perpetuando congestão sem representar necessariamente falência de bomba em estágio terminal",
+      "Pseudorrefratariedade por inércia terapêutica — dose de terapia guiada por diretriz nunca de fato titulada à dose-alvo por falta de reavaliação, não por intolerância genuína comprovada"
+    ],
+    "tests": [
+      "Teste cardiopulmonar de exercício (VO2 pico e VE/VCO2 slope): refina a seleção para transplante, mas depende de esforço voluntário verdadeiramente máximo (RER >1,05) — um teste submáximo subestima a gravidade real; o VE/VCO2 slope não depende do esforço máximo, mas tem corte próprio (>35) e nível de evidência mais fraco (Classe IIb) que o VO2 pico",
+      "Cateterismo cardíaco direito com teste de vasorreatividade: obrigatório antes da listagem para medir pressões de enchimento, gradiente transpulmonar e resistência vascular pulmonar — mas a diretriz ISHLT não define um corte absoluto único de resistência vascular pulmonar como contraindicação formal em adultos, e a reversibilidade da hipertensão pulmonar só é avaliada pela resposta a vasodilatador e otimização hemodinâmica em internação, não por um número isolado",
+      "Escores prognósticos multivariados (Seattle Heart Failure Model, Heart Failure Survival Score, MAGGIC, MECKI): úteis sobretudo na zona cinzenta de VO2 pico (12-14 mL/kg/min) — mas a diretriz proíbe explicitamente listar com base somente em escore prognóstico (Classe III), pois nenhum modelo isolado captura toda a heterogeneidade clínica individual",
+      "Classificação INTERMACS (perfis 1-7): estratifica urgência e gravidade hemodinâmica e orienta o tipo de suporte mecânico (LVAD isolado vs. BiVAD/coração artificial total em perfil 1-2 com falência de ventrículo direito proibitiva) — mas não é, nem na diretriz de 2016 nem na de 2024, critério formal de listagem para transplante cardíaco, confusão comum na prática clínica",
+      "Biópsia endomiocárdica seriada pós-transplante: padrão histórico para graduar rejeição celular aguda (0R-3R) — procedimento invasivo, com risco de perfuração cardíaca, arritmia, lesão valvar e variabilidade interobservador na leitura histopatológica",
+      "Perfil de expressão gênica de vigilância (AlloMap): não inferior à biópsia de rotina em pacientes de baixo risco entre 6 meses e 5 anos pós-transplante, reduzindo o número de biópsias realizadas por paciente-ano (ensaio IMAGE) — mas não validado para os primeiros 6 meses pós-transplante nem para pacientes de alto risco imunológico, e não substitui a biópsia diagnóstica diante de suspeita clínica",
+      "DNA livre derivado do doador (dd-cfDNA, AlloSure): alto valor preditivo negativo para excluir rejeição ativa em vigilância de rotina de baixo risco — mas sensibilidade moderada no corte de referência, o que significa que um resultado negativo isolado não exclui com segurança rejeição em paciente sintomático; a evidência disponível (estudo D-OAR) é observacional, sem ensaio randomizado de desfecho clínico duro equivalente ao do perfil de expressão gênica"
+    ],
+    "red_flags": [
+      "Duas ou mais hospitalizações por IC descompensada em 12 meses apesar de terapia guiada por diretriz otimizada e adesão confirmada",
+      "Necessidade de reduzir ou suspender qualquer um dos quatro pilares farmacológicos por hipotensão sintomática ou piora de função renal, impedindo a titulação para a dose-alvo",
+      "Uso de inotrópico intravenoso, contínuo ou intermitente, para manter sintomas ou perfusão controlados fora do ambiente hospitalar",
+      "Necessidade de suporte circulatório mecânico temporário durante qualquer episódio de descompensação aguda",
+      "Piora progressiva de função renal ou hepática atribuída a baixo débito cardíaco crônico, sem outra causa identificada",
+      "Caquexia cardíaca ou perda de peso não intencional progressiva",
+      "Hipoperfusão persistente em repouso (extremidades frias, confusão, redução de diurese) mesmo entre episódios de descompensação franca",
+      "Otimismo discordante do paciente sobre o próprio prognóstico (expectativa de sobrevida muito acima da estimativa objetiva) — associado a quase o dobro de mortalidade em 2 anos e independente de menor acesso a terapia avançada, o que o torna sinal de alerta para reforçar comunicação e reavaliar elegibilidade, não motivo para adiar a discussão"
+    ],
+    "ambulatory_flow": [
+      "Reconhecer sinais de alerta de estágio D em paciente já sob tratamento otimizado e máximo tolerado para o fenótipo de IC — hospitalizações recorrentes, diurético crescente, intolerância por hipotensão ou disfunção renal, hipoperfusão persistente, caquexia cardíaca ou NYHA III-IV persistente — e encaminhar a centro de IC avançada sem adiar por otimização ambulatorial adicional",
+      "Não usar o teste cardiopulmonar de exercício como pré-requisito obrigatório para iniciar o encaminhamento — ele refina a seleção formal do candidato a transplante e/ou LVAD no centro especializado, mas o encaminhamento em si não depende dele",
+      "Encaminhar mesmo diante de possível barreira a transplante ou LVAD (neoplasia ativa, disfunção grave de outro órgão, fragilidade, barreira psicossocial ou de adesão) para que o centro especializado avalie reversibilidade e elegibilidade a cada estratégia",
+      "Conduzir a conversa sobre LVAD de terapia de destino com ferramenta estruturada de decisão compartilhada, incluindo o cuidador como corresponsável e o cuidado paliativo como opção explícita ao lado do dispositivo, e revisitar a decisão ao longo do seguimento",
+      "Encaminhar para avaliação de cuidado paliativo concomitante à investigação de transplante cardíaco e LVAD, e não apenas quando essas opções forem consideradas esgotadas",
+      "Em portador de LVAD ambulatorial, manter seguimento estruturado do sítio de saída do cabo percutâneo, sinais de infecção e sinais sugestivos de disfunção de bomba",
+      "Em receptor de transplante cardíaco, seguir o cronograma de vigilância de rejeição definido pelo centro transplantador, com possível transição a vigilância não invasiva em paciente de baixo risco e assintomático além dos primeiros meses"
+    ],
+    "emergency_flow": [
+      "Paciente com LVAD e descompensação aguda (dispneia súbita, hipotensão, alarme do controlador do dispositivo) — contato imediato com o centro implantador ou equipe de suporte circulatório mecânico de plantão, sem tentar ajustar parâmetros do dispositivo fora do protocolo do centro",
+      "Suspeita de trombose de bomba do LVAD (alarme de potência elevada persistente, sinais de hemólise como urina escura, queda de hemoglobina) — tratar como emergência com contato imediato ao centro de LVAD, pois pode exigir investigação e conduta especializada urgente, incluindo possível troca de dispositivo",
+      "Suspeita de rejeição aguda pós-transplante (piora clínica súbita, disfunção nova do enxerto ao ecocardiograma, sinais de baixo débito) — contato imediato com o centro transplantador; a biópsia endomiocárdica não deve ser adiada mesmo em paciente que vinha em programa de vigilância não invasiva",
+      "Nunca atribuir automaticamente sintomas de baixo débito ou choque em portador de LVAD ou em transplantado cardíaco a causa não cardíaca sem contato prévio com o centro especializado responsável",
+      "AVC ou sangramento maior em portador de LVAD — avaliar risco trombótico versus hemorrágico e acionar imediatamente o centro especializado, pois o manejo de anticoagulação nesse contexto é especializado",
+      "Sinais sistêmicos de infecção (febre, calafrio, instabilidade) associados a sinais locais no trajeto do cabo percutâneo do LVAD — tratar como emergência com envolvimento do centro implantador pelo risco de infecção de bomba"
+    ],
+    "treatment_summary": "O reconhecimento do estágio D — IC avançada refratária à terapia otimizada — deve disparar encaminhamento precoce a um centro especializado, e não esperar o esgotamento de todas as opções ambulatoriais. Sinais de alerta incluem hospitalizações recorrentes por IC apesar de tratamento guiado por diretriz e máximo tolerado para o fenótipo de FEVE, necessidade crescente de diurético, intolerância à terapia por hipotensão ou disfunção renal, hipoperfusão persistente, caquexia cardíaca ou classe funcional NYHA III-IV persistente. Paciente já em inotrópico intravenoso contínuo, suporte circulatório mecânico temporário ou com internações repetidas nos últimos 12 meses deve ser encaminhado com urgência, sem adiar por otimização ambulatorial adicional. O teste cardiopulmonar de exercício apoia a seleção formal de candidatos a transplante e/ou LVAD quando o teste é máximo, mas não é pré-requisito para iniciar o encaminhamento nem decide isoladamente a listagem; possíveis barreiras (neoplasia ativa, disfunção grave de outro órgão, fragilidade, barreira psicossocial) não excluem o encaminhamento — cabe ao centro especializado avaliar reversibilidade e elegibilidade a cada estratégia, e uma barreira ao transplante não torna o paciente automaticamente elegível a LVAD como terapia de destino.\n\nQuando há indicação de LVAD, a classe de dispositivo de fluxo centrífugo com levitação magnética total é hoje o padrão, tendo substituído a classe de fluxo axial com mancal mecânico depois que um grande ensaio pivotal demonstrou maior sobrevida livre de AVC incapacitante e reoperação, com redução acentuada de troca de bomba relacionada a trombose — benefício mantido numa coorte de acesso continuado mais grave que a do ensaio original. A escolha entre LVAD como ponte para transplante e como terapia de destino depende de elegibilidade a transplante, idade, comorbidade e preferência do paciente, e é decisão do centro especializado. Quando a indicação é terapia de destino, trata-se de uma escolha sensível à preferência entre dois futuros incertos — não a aceitação de uma trajetória única — e deve ser conduzida com ferramenta estruturada de decisão compartilhada (material informativo e vídeo, com treinamento do clínico), que melhora o conhecimento objetivo do paciente e a concordância entre valores declarados e escolha de tratamento; deve incluir o cuidador como corresponsável na decisão, apresentar o tratamento clínico otimizado sem o dispositivo — com cuidado paliativo integrado — como alternativa legítima e não como “desistência”, e ser revisitada ao longo do seguimento, não fechada numa única consulta.\n\nA seleção para transplante cardíaco combina teste cardiopulmonar de exercício, cateterismo cardíaco direito com avaliação de reversibilidade de hipertensão pulmonar quando indicado, e escores prognósticos em zona de ambiguidade do teste de exercício — nenhum critério isolado basta para listar. Etiologia valvar, isquêmica, congênita ou restritiva; suporte com ECMO ou ventilação mecânica no momento do transplante; idade extrema do receptor; disfunção renal; idade avançada do doador; e tempo de isquemia prolongado associam-se a maior risco de perda do enxerto. A sobrevida mediana do enxerto ultrapassa uma década nas séries contemporâneas de registro e melhora a cada era de transplante analisada.\n\nNo seguimento pós-transplante, a biópsia endomiocárdica seriada continua o padrão de vigilância de rejeição nos primeiros meses. Em receptor de baixo risco imunológico e assintomático, além desse período inicial, a vigilância pode ser espaçada com apoio de perfil de expressão gênica de células mononucleares do sangue periférico (alto valor preditivo negativo, indicado para excluir rejeição) ou de DNA livre derivado do doador circulante — nenhum dos dois substitui a biópsia diagnóstica diante de suspeita clínica de rejeição, disfunção de enxerto de causa indeterminada, ou em paciente de alto risco imunológico.\n\nO cuidado paliativo deve ser integrado desde o encaminhamento, concomitante à investigação de transplante e LVAD, e não como alternativa excludente a essas terapias. Intervenções estruturadas de cuidado paliativo e de comunicação de prognóstico melhoram qualidade de vida, sintomas depressivos e ansiosos, bem-estar espiritual e a compreensão do prognóstico pelo paciente — sem piorar o bem-estar psicológico ao abordar a expectativa de vida —, ainda que sem efeito demonstrado sobre sobrevida ou taxa de reinternação; o formato presencial e interdisciplinar mostrou benefício mais consistente que uma intervenção remota isolada em população com qualidade de vida basal já razoável.",
+    "monitoring": [
+      "Sinais e sintomas de descompensação, capacidade funcional e tolerância à terapia guiada por diretriz em paciente já encaminhado ou em fila para transplante e/ou LVAD",
+      "Função renal, eletrólitos, peso e necessidade de diurético ao longo do seguimento",
+      "Em portador de LVAD: aspecto do sítio de saída do cabo percutâneo, sinais de infecção, sinais de hemólise e alarmes do controlador, conforme protocolo do centro implantador",
+      "Em receptor de transplante: cumprimento do cronograma de biópsia endomiocárdica seriada, com possível espaçamento por vigilância não invasiva em paciente de baixo risco imunológico e assintomático além dos primeiros meses pós-transplante",
+      "Sinais clínicos e ecocardiográficos de rejeição, disfunção do enxerto e infecção oportunista relacionada à imunossupressão",
+      "Qualidade de vida, sintomas depressivos e ansiosos, e compreensão prognóstica do paciente, com atenção à concordância entre valores declarados e a conduta em curso, sobretudo após decisão de LVAD de terapia de destino",
+      "Engajamento e resposta à equipe de cuidados paliativos quando o cuidado concomitante estiver em curso"
+    ],
+    "special_populations": [
+      "Candidato a transplante cardíaco com sensibilização imunológica prévia (PRA elevado): gestações prévias, transfusões, suporte circulatório mecânico anterior ou cirurgia cardíaca prévia aumentam o painel de anticorpos reativos (PRA) e o risco de rejeição mediada por anticorpos; exige prova cruzada virtual, estratégias de dessensibilização e, por vezes, tempo de espera em lista prolongado — deve ser diferenciado do candidato não sensibilizado na aconselhamento sobre prognóstico de fila.",
+      "Portador de LVAD em cuidado paliativo com discussão de desativação do dispositivo: ao contrário de um marcapasso, desligar um LVAD provoca morte em minutos a horas, o que levanta questões éticas e legais específicas (não é eutanásia, é retirada de suporte); requer planejamento antecipado de cuidados formal, envolvimento de equipe de cuidados paliativos e clareza sobre quem pode solicitar a desativação e em que circunstâncias.",
+      "Idoso candidato a terapias avançadas (LVAD/transplante) — critérios de seleção além da idade cronológica: fragilidade, reserva cognitiva, suporte social e comorbidades (função renal, hepática, doença cerebrovascular) pesam mais que a idade isolada na elegibilidade; a maioria dos programas usa limites de idade como um entre vários critérios, não como corte automático, e a decisão deve ser individualizada com avaliação multidisciplinar formal.",
+      "Criança/adolescente com insuficiência cardíaca avançada: etiologia predominante é cardiomiopatia (dilatada, não compactada) ou cardiopatia congênita paliada em falência de circulação de Fontan, com considerações próprias de suporte circulatório mecânico pediátrico, alocação em lista de transplante infantil e transição de cuidado para a vida adulta; não duplica hub pediátrico dedicado — remeter à literatura e a fichas específicas de cardiologia pediátrica quando disponíveis, evitando extrapolar diretamente critérios e desfechos de adultos.",
+      "Comunicação de prognóstico e decisão compartilhada como componente obrigatório do cuidado, não um extra: a trajetória oscilante da IC avançada (declínio pontuado por internações das quais o paciente costuma se recuperar, até uma da qual não se recupera) dificulta identificar o momento certo da conversa; documentar incerteza prognóstica de forma honesta, alinhar expectativas do paciente ao prognóstico real e formalizar decisões antecipadas (reanimação, desativação de dispositivo, limites de terapia) devem ocorrer antes da crise, não durante ela.",
+      "Paciente com insuficiência cardíaca avançada de etiologia oncológica (cardiotoxicidade refratária) com câncer avançado concomitante: colisão entre prognóstico oncológico terminal e IC refratária induzida pelo próprio tratamento antineoplásico exige comunicação de prognóstico duplo e coordenação entre equipes de cardio-oncologia e cuidados paliativos, cenário não coberto pelas diretrizes usuais de cada especialidade isoladamente."
+    ],
+    "assistant_questions": [
+      {
+        "id": "refractory_symptoms_optimized",
+        "label": "Os sintomas (NYHA III-IV) persistem apesar de tratamento otimizado e máximo tolerado para o fenótipo de IC?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estágio D"
+      },
+      {
+        "id": "recurrent_hf_hospitalizations",
+        "label": "Houve hospitalização recorrente por IC nos últimos 12 meses?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estágio D"
+      },
+      {
+        "id": "gdmt_intolerance",
+        "label": "Há intolerância à terapia guiada por diretriz por hipotensão, disfunção renal ou distúrbio eletrolítico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estágio D"
+      },
+      {
+        "id": "ambulatory_inotrope",
+        "label": "O paciente está em uso de inotrópico intravenoso ambulatorial contínuo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estágio D"
+      },
+      {
+        "id": "lvad_carrier",
+        "label": "O paciente é portador de dispositivo de assistência ventricular esquerda (LVAD)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Dispositivo e transplante"
+      },
+      {
+        "id": "heart_transplant_recipient",
+        "label": "O paciente é receptor de transplante cardíaco?",
+        "type": "boolean",
+        "required": true,
+        "section": "Dispositivo e transplante"
+      },
+      {
+        "id": "lvad_alarm_or_hemolysis",
+        "label": "Há alarme do controlador do LVAD, sinais de hemólise (urina escura) ou queda inexplicada de hemoglobina?",
+        "type": "boolean",
+        "required": false,
+        "section": "Segurança"
+      },
+      {
+        "id": "suspected_rejection_signs",
+        "label": "Há sinais sugestivos de rejeição (piora clínica súbita, disfunção nova do enxerto, sinais de baixo débito)?",
+        "type": "boolean",
+        "required": false,
+        "section": "Segurança"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ica-avancada-lvad-trombose",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "lvad_alarm_or_hemolysis",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível trombose de bomba do LVAD"
+          ],
+          "emergency_flow": [
+            "Contato imediato com o centro implantador de LVAD; não ajustar parâmetros do dispositivo fora do protocolo do centro"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-suspeita-rejeicao",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_rejection_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível rejeição aguda pós-transplante cardíaco"
+          ],
+          "emergency_flow": [
+            "Contato imediato com o centro transplantador; a biópsia endomiocárdica não deve ser adiada mesmo em paciente em vigilância não invasiva"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-inotropico-ambulatorial",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "ambulatory_inotrope",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Uso de inotrópico intravenoso ambulatorial contínuo — critério direto de encaminhamento urgente a centro de IC avançada"
+          ],
+          "messages": [
+            "Encaminhamento urgente a centro de IC avançada para avaliação de transplante cardíaco e/ou LVAD, sem adiar por otimização ambulatorial adicional"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-hospitalizacoes-recorrentes",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_hf_hospitalizations",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Hospitalizações recorrentes por IC apesar de tratamento otimizado — sinal de estágio D"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar a centro de IC avançada para avaliação de transplante cardíaco e/ou LVAD"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-sintomas-refratarios",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "refractory_symptoms_optimized",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Sinal de alerta de estágio D — considerar encaminhamento a centro de IC avançada para avaliação de transplante cardíaco e/ou LVAD"
+          ],
+          "suggested_tests": [
+            "Teste cardiopulmonar de exercício em centro de IC avançada, quando indicado pelo especialista"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-intolerancia-gdmt",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "gdmt_intolerance",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Reavaliar a terapia otimizada e discutir encaminhamento a centro de IC avançada diante de intolerância persistente"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-portador-lvad-rotina",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "lvad_carrier",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Manter seguimento estruturado do sítio de saída do cabo percutâneo e vigilância de infecção e hemólise conforme protocolo do centro implantador"
+          ]
+        }
+      },
+      {
+        "id": "ica-avancada-transplantado-vigilancia",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "heart_transplant_recipient",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Seguir o cronograma de vigilância de rejeição do centro transplantador; considerar vigilância não invasiva em paciente de baixo risco, assintomático, além dos primeiros meses pós-transplante"
+          ],
+          "suggested_tests": [
+            "Perfil de expressão gênica ou DNA livre derivado do doador conforme risco imunológico e tempo pós-transplante, a critério do centro transplantador"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "insuficiência cardíaca avançada",
+      "estágio D",
+      "LVAD",
+      "transplante cardíaco",
+      "cuidado paliativo",
+      "decisão compartilhada",
+      "INTERMACS"
+    ],
+    "source_refs": [
+      "Mancini DM, Eisen H, Kussmaul W, Mull R, Edmunds LH Jr, Wilson JR. Value of peak exercise oxygen consumption for optimal timing of cardiac transplantation in ambulatory patients with heart failure. Circulation. 1991;83(3):778-786. DOI: 10.1161/01.cir.83.3.778. PMID: 1999029",
+      "Peterson LR, Schechtman KB, Ewald GA, Geltman EM, de las Fuentes L, Meyer T, Krekeler P, Moore ML, Rogers JG. Timing of cardiac transplantation in patients with heart failure receiving beta-adrenergic blockers. J Heart Lung Transplant. 2003;22(10):1141-1148. DOI: 10.1016/s1053-2498(02)01225-1. PMID: 14550824",
+      "Arena R, Myers J, Abella J, Peberdy MA, Bensimhon D, Chase P, Guazzi M. Development of a ventilatory classification system in patients with heart failure. Circulation. 2007;115(18):2410-2417. DOI: 10.1161/CIRCULATIONAHA.107.686576. PMID: 17452607",
+      "Peled Y, Ducharme A, Kittleson MM, et al.; International Society for Heart and Lung Transplantation. International Society for Heart and Lung Transplantation Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488",
+      "Mehra MR, Canter CE, Hannan MM, Semigran MJ, Uber PA, Baran DA, Danziger-Isakov L, Kirklin JK, Kirk R, Kushwaha SS, Lund LH, Potena L, Ross HJ, Taylor DO, Verschuuren EAM, Zuckermann A; International Society for Heart Lung Transplantation. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+      "Singh TP, Cherikh WS, Hsich E, Lewis A, Perch M, Kian S, Hayes D Jr, Potena L, Stehlik J, Zuckermann A, Cogswell R; International Society for Heart and Lung Transplantation. Graft survival in primary thoracic organ transplant recipients: A special report from the International Thoracic Organ Transplant Registry of the International Society for Heart and Lung Transplantation. J Heart Lung Transplant. 2023;42(10):1321-1333. DOI: 10.1016/j.healun.2023.07.017. PMID: 37549773",
+      "Pham MX, Teuteberg JJ, Kfoury AG, Starling RC, Deng MC, Cappola TP, Kao A, Anderson AS, Cotts WG, Ewald GA, Baran DA, Bogaev RC, Elashoff B, Baron H, Yee J, Valantine HA; IMAGE Study Group. Gene-expression profiling for rejection surveillance after cardiac transplantation. N Engl J Med. 2010;362(20):1890-1900. DOI: 10.1056/NEJMoa0912965. PMID: 20413602",
+      "Khush KK, Patel J, Pinney S, Kao A, Alharethi R, DePasquale E, Ewald G, Berman P, Kanwar M, Hiller D, Yee JP, Woodward RN, Hall S, Kobashigawa J. Noninvasive detection of graft injury after heart transplant using donor-derived cell-free DNA: a prospective multicenter study. Am J Transplant. 2019;19(10):2889-2899. DOI: 10.1111/ajt.15339. PMID: 30835940",
+      "Allen LA, Stevenson LW, Grady KL, et al. Decision making in advanced heart failure: a scientific statement from the American Heart Association. Circulation. 2012;125(15):1928-1952. DOI: 10.1161/CIR.0b013e31824f2173. PMID: 22392529",
+      "Cascino TM, Herron G, Richards B, et al. Understanding of Prognosis and Estimation of Mortality in Ambulatory Patients With Heart Failure. JAMA Netw Open. 2026;9(3):e260328. DOI: 10.1001/jamanetworkopen.2026.0328. PMID: 41774443",
+      "Walsh MN, Kober L, Sliwa K, et al.; Joint AHA/ACC/ESC/WHF Task Force. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). J Am Coll Cardiol. 2026. DOI: 10.1016/j.jacc.2026.05.036. PMID: 42370864",
+      "Truby LK, Rogers JG. Advanced Heart Failure: Epidemiology, Diagnosis, and Therapeutic Approaches. JACC Heart Fail. 2020;8(7):523-536. DOI: 10.1016/j.jchf.2020.01.014. PMID: 32535126",
+      "Nayak A, et al.; Society of Thoracic Surgeons Intermacs. The Society of Thoracic Surgeons Intermacs 2025 Annual Report: Focus on Outcomes in Older Adults. Ann Thorac Surg. 2026;121(1):15-38. DOI: 10.1016/j.athoracsur.2025.10.005. PMID: 41177301"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/1999029/",
+      "https://pubmed.ncbi.nlm.nih.gov/14550824/",
+      "https://pubmed.ncbi.nlm.nih.gov/17452607/",
+      "https://pubmed.ncbi.nlm.nih.gov/39115488/",
+      "https://pubmed.ncbi.nlm.nih.gov/26776864/",
+      "https://pubmed.ncbi.nlm.nih.gov/37549773/",
+      "https://pubmed.ncbi.nlm.nih.gov/20413602/",
+      "https://pubmed.ncbi.nlm.nih.gov/30835940/",
+      "https://pubmed.ncbi.nlm.nih.gov/22392529/",
+      "https://pubmed.ncbi.nlm.nih.gov/41774443/",
+      "https://pubmed.ncbi.nlm.nih.gov/42370864/",
+      "https://pubmed.ncbi.nlm.nih.gov/32535126/",
+      "https://pubmed.ncbi.nlm.nih.gov/41177301/"
+    ],
+    "related_document_slugs": [
+      "fluxograma-encaminhamento-ic-avancada-lvad-transplante",
+      "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
+      "lvad-de-fluxo-centrifugo-versus-axial-o-ensaio-momentum-3",
+      "teste-cardiopulmonar-de-exercicio-na-selecao-do-candidato-a-transplante-cardiaco-vo2-pico-e-o-efeito-do-betabloqueador",
+      "transplante-cardiaco-sobrevida-do-enxerto-retransplante-e-fatores-de-risco-registro-ishlt",
+      "vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-perfil-de-expressao-genica-e-dd-cfdna",
+      "cuidado-paliativo-e-comunicacao-de-prognostico-na-ic-avancada-pal-hf-enable-chf-pc-e-swap-hf",
+      "decisao-compartilhada-para-lvad-de-terapia-de-destino-o-ensaio-decide-lvad",
+      "fluxograma-discordancia-prognostica-na-ic-avancada",
+      "protocolo-spikes-de-mas-noticias-aplicado-a-ic-avancada-cdi-e-prognostico-pos-iam",
+      "fluxograma-avaliacao-psicossocial-sipat-na-candidatura-ao-lvad",
+      "comunicacao-de-incerteza-prognostica-na-insuficiencia-cardiaca-avancada",
+      "estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc",
+      "ativacao-comportamental-versus-antidepressivo-na-depressao-do-paciente-com-insuficiencia-cardiaca-avancada",
+      "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
+      "cuidados-paliativos-e-comunicacao-de-prognostico-duplo-na-ic-avancada-por-cardiotoxicidade",
+      "castle-htx-ablacao-na-fa-com-insuficiencia-cardiaca-terminal"
+    ],
+    "patient_material_slug": "transplante-cardiaco",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo sexto ciclo do dia. Nenhum verbete geral de insuficiência cardíaca avançada (estágio D) existia previamente no corpus — o hub geral insuficiencia-cardiaca já existente cobre apenas 2 fluxogramas de fenótipo agudo/crônico, sem tratar do estágio refratário/terapias de substituição. Este hub cobre critérios de encaminhamento, LVAD (ponte e terapia de destino), seleção e vigilância pós-transplante cardíaco, e cuidado paliativo integrado. Nenhum dos 2 documentos já vinculados ao hub geral foi duplicado aqui — verificação programática dedicada. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 13 referências citadas — incluindo 2 referências adicionais buscadas e verificadas pelo agente de epidemiologia por não haver dado direto de prevalência de estágio D nos documentos-fonte inicialmente lidos (Truby & Rogers 2020 PMID 32535126; 16º Relatório Anual do Intermacs, Nayak et al. 2026 PMID 41177301). Nenhuma dose de fármaco nem parâmetro numérico de ajuste de dispositivo foi incluída em nenhum campo — verificado programaticamente, aplicando a lição do ciclo anterior de choque cardiogênico. As regras do assistente usam apenas chaves permitidas em 'add' (nenhuma regra usou 'monitoring' incorretamente desta vez — verificado antes da montagem). related_document_slugs conta com 17 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames — 11 do núcleo pré-selecionado mais 6 encontrados por busca ampla (comunicação de incerteza prognóstica, estadiamento AHA/ACC/HFSA vs. ESC/SBC, depressão em IC avançada, cuidados paliativos no muito idoso, prognóstico duplo por cardiotoxicidade oncológica, CASTLE-HTx). Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum dos 292 PRs abertos cria o slug insuficiencia-cardiaca-avancada. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

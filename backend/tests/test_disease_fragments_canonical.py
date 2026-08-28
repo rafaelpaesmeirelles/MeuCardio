@@ -5,9 +5,16 @@ import frontmatter
 
 from app.services.disease_manifest import load_disease_records
 
+# Mesma allowlist de test_canonical_content_review_status.py, reaproveitada
+# como fonte única — evita duas allowlists divergentes sobre o que está
+# aprovado como pendência explícita. Correção aplicada pela primeira vez
+# em 28/08/2026 (PR #606), com decisão explícita do Rafael.
+from tests.test_canonical_content_review_status import PENDENTES_LOTES_TUDO_COM_TUDO
+
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas/metadados.json"
+PENDENTES_DOENCAS = PENDENTES_LOTES_TUDO_COM_TUDO.get("doencas/metadados.json", set())
 
 
 def _document_slugs() -> set[str]:
@@ -27,7 +34,13 @@ def test_catalogo_combinado_tem_slugs_unicos_e_status_editorial_explicito():
     records = load_disease_records(BASE)
     slugs = [str(item["slug"]) for item in records]
     assert len(slugs) == len(set(slugs))
-    assert all(item.get("review_status") == "revisado" for item in records)
+    pendentes_inesperados = [
+        str(item["slug"])
+        for item in records
+        if item.get("review_status") != "revisado"
+        and str(item["slug"]) not in PENDENTES_DOENCAS
+    ]
+    assert pendentes_inesperados == []
 
 
 def test_todos_os_vinculos_das_doencas_combinadas_resolvem():

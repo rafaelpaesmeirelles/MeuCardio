@@ -117,7 +117,13 @@ for (const path of await listarArquivos(dist.pathname)) {
 // gerar 2897751 B de precache, 8023 B acima do teto anterior (0,28%), mantendo
 // entrypoint, gzip, divisão por rotas e limite individual de chunks dentro dos
 // contratos. O novo teto deixa ~2,2 KiB de margem e continua estreito.
-const maxPrecacheBytes = 2832 * 1024;
+//
+// Ajustado de 2832 KB para 2844 KB em 28/08/2026: o release consolidado com a
+// rota de exclusão de conta, proteção de acesso móvel e conteúdo da madrugada
+// gera 2911186 B de precache, 11218 B acima do teto anterior. O novo limite
+// deixa apenas ~1 KiB de margem; entrypoint, gzip, code splitting e teto de
+// chunk opcional permanecem inalterados.
+const maxPrecacheBytes = 2844 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
