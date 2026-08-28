@@ -19013,7 +19013,7 @@
     "category": "cardiopatia_congenita",
     "subtype": "gestacao",
     "prevalence_rank": 10,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Gestação em paciente com cardiopatia congênita reparada ou não, exigindo avaliação anatômica, funcional, arrítmica, obstétrica e de intervenções prévias.",
     "tags": [
       "cardiopatia congênita",
@@ -19021,14 +19021,594 @@
       "Pregnancy Heart Team"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+      "De Backer J, Haugaa KH, Hasselberg NE, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. PMID: 40878294.",
+      "Regitz-Zagrosek V, Roos-Hesselink JW, Bauersachs J, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. PMID: 30165544.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2019;139(14):e637-e697. PMID: 30586768.",
+      "Roos-Hesselink JW, Ruys TP, Stein JI, et al. Outcome of pregnancy in patients with structural or ischaemic heart disease: results of a registry of the European Society of Cardiology. Eur Heart J. 2013;34(9):657-665. PMID: 22968232.",
+      "Ruys TP, Roos-Hesselink JW, Hall R, et al. Heart failure in pregnant women with cardiac disease: data from the ROPAC. Heart. 2014;100(3):231-238. PMID: 24293523.",
+      "Silversides CK, Grewal J, Mason J, et al. Pregnancy Outcomes in Women With Heart Disease: The CARPREG II Study. J Am Coll Cardiol. 2018;71(21):2419-2430. PMID: 29793631.",
+      "Drenthen W, Boersma E, Balci A, et al. Predictors of pregnancy complications in women with congenital heart disease. Eur Heart J. 2010;31(17):2124-2132. PMID: 20584777.",
+      "Balci A, Sollie-Szarynska KM, van der Bijl AG, et al. Prospective validation and assessment of cardiovascular and offspring risk models for pregnant women with congenital heart disease. Heart. 2014;100(17):1373-1381. PMID: 25034822.",
+      "Benziger CP, Stout K, Zaragoza-Macias E, et al. Projected growth of the adult congenital heart disease population in the United States to 2050. Popul Health Metr. 2015;13:29. PMID: 26472940.",
+      "Rychik J, Atz AM, Celermajer DS, et al. Evaluation and Management of the Child and Adult With Fontan Circulation. Circulation. 2019;140(6):e234-e284. PMID: 31256636.",
+      "Burn J, Brennan P, Little J, et al. Recurrence risks in offspring of adults with major heart defects. Lancet. 1998;351(9099):311-316. PMID: 9652610.",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and treatment of fetal cardiac disease. Circulation. 2014;129(21):2183-2242. PMID: 24763516."
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+      "https://pubmed.ncbi.nlm.nih.gov/30165544/",
+      "https://pubmed.ncbi.nlm.nih.gov/30586768/",
+      "https://pubmed.ncbi.nlm.nih.gov/22968232/",
+      "https://pubmed.ncbi.nlm.nih.gov/24293523/",
+      "https://pubmed.ncbi.nlm.nih.gov/29793631/",
+      "https://pubmed.ncbi.nlm.nih.gov/20584777/",
+      "https://pubmed.ncbi.nlm.nih.gov/25034822/",
+      "https://pubmed.ncbi.nlm.nih.gov/26472940/",
+      "https://pubmed.ncbi.nlm.nih.gov/31256636/",
+      "https://pubmed.ncbi.nlm.nih.gov/9652610/",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (11º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608, hipertensao-arterial-pediatrica/PR #609, dor-toracica-pediatrica/PR #610, dislipidemias-pediatricas/PR #611, arritmias-pediatricas/PR #612, avaliacao-multidimensional-cardiogeriatrica/PR #613, cuidados-paliativos-cardiovasculares/PR #615): ficha estava com apenas metadados de catalogação, zero related_document_slugs e sem patient_material_slug. Produzida epidemiologia (CC é hoje a causa mais comum de cardiopatia estrutural na gravidez em países desenvolvidos, dados ROPAC), apresentação (9 itens por tipo de lesão), abordagem diagnóstica estruturada em 6 subtópicos (avaliação pré-concepcional, classificação de risco materno da OMS/ESC, escores CARPREG II/ZAHARA, ecocardiograma seriado, ressonância cardíaca, risco de recorrência na prole/ecocardiograma fetal), 7 categorias de estratificação de risco, 8 exames, 8 sinais de alarme, tratamento (aconselhamento pré-concepcional, Pregnancy Heart Team, via de parto individualizada, puerpério de alto risco, contraindicações absolutas), fluxos ambulatorial/emergência, monitoramento, 6 populações especiais, assistente clínico determinístico (12 perguntas, 11 regras, priority 95 para Eisenmenger/HP grave) e 7 related_document_slugs, todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. 4 dos 7 documentos são compartilhados com outras fichas já publicadas (gravidez-e-contracepcao-...-ahaacc-2018 e risco-de-recorrencia-...-ecocardiograma-fetal-direcionado, também em tetralogia-de-fallot; risco-de-recorrencia-...-tambem em indicacoes-ecocardiograma-fetal; coarctacao-de-aorta-reparada-e-gestacao-do-ropac, também em coarctacao-da-aorta e aortopatia-na-gravidez) — todos mantidos por serem genuína e centralmente relevantes também aqui. Corrigido na montagem: texto de special_populations reescrito para remover a substring 'mwho' ('mWHO IV'/'mWHO 2.0' na fonte original) — reescrito por extenso como 'classificação de risco materno da OMS/ESC', mesmo precedente já aplicado em cardiopatia-congenita-do-adulto/PR #596; o único uso de 'mwho' que permanece é dentro do slug do documento sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv em related_document_slugs, não em texto autoral, e o gate real (test_specialty_guides.py) só verifica assistant_rules. Nenhuma dose de fármaco citada.",
+    "version": 2,
+    "fonte_producao": "claude",
+    "epidemiology": "A cardiopatia congênita (CC) tornou-se a causa mais comum de doença cardíaca estrutural na gravidez em países desenvolvidos, ultrapassando a doença cardíaca reumática graças ao avanço da cirurgia pediátrica e ao consequente crescimento da população de adultos com cardiopatia congênita (ACHD) em idade fértil. Modelos de projeção nos Estados Unidos estimam crescimento contínuo dessa população ao longo das próximas décadas, à medida que coortes operadas na infância envelhecem e engravidam (Benziger CP et al., 2015). No registro europeu ROPAC (Registry of Pregnancy and Cardiac Disease), pacientes com cardiopatia congênita corresponderam à maior fração da população estudada entre as diferentes coortes publicadas, tornando-a o subgrupo mais numeroso entre gestantes cardiopatas incluídas (Roos-Hesselink JW et al., 2013; Ruys TP et al., 2014). Embora a maioria das gestações em lesões simples reparadas transcorra sem complicações maiores, uma minoria com lesões complexas — hipertensão pulmonar associada, circulação de Fontan, ventrículo único, coarctação residual ou disfunção ventricular sistêmica — concentra a maior parte da morbimortalidade materna e fetal registrada nas coortes internacionais, o que justifica estratificação individualizada de risco desde o período pré-concepcional.",
+    "presentation": [
+      "Comunicação interatrial (CIA) ou interventricular (CIV) pequena e restritiva, geralmente assintomática durante a gestação, com boa tolerância hemodinâmica ao aumento fisiológico do volume plasmático",
+      "Coarctação de aorta reparada na infância cursando com hipertensão arterial sistêmica residual, aumento do risco de dissecção aórtica e necessidade de vigilância pressórica rigorosa ao longo do pré-natal",
+      "Tetralogia de Fallot reparada, frequentemente com insuficiência pulmonar residual, dilatação de ventrículo direito e risco aumentado de arritmias atriais ou ventriculares durante a gestação e o puerpério",
+      "Circulação de Fontan (paliação univentricular), com risco elevado de eventos tromboembólicos, arritmias atriais, baixo débito cardíaco e necessidade de manejo multidisciplinar em centro de referência",
+      "Síndrome de Eisenmenger, configurando contraindicação absoluta à gravidez pelo risco de mortalidade materna, exigindo aconselhamento pré-concepcional enfático sobre contracepção",
+      "Estenose valvar pulmonar residual ou estenose aórtica congênita associada a valva aórtica bicúspide, com sobrecarga de pressão ventricular que pode se manifestar clinicamente pela primeira vez na gestação",
+      "Transposição das grandes artérias corrigida cirurgicamente (switch atrial ou arterial), com risco de disfunção do ventrículo sistêmico e arritmias",
+      "Cardiopatias congênitas cianóticas não corrigidas ou parcialmente paliadas, com risco de hipoxemia materna progressiva, restrição de crescimento fetal e perda gestacional recorrente",
+      "Anomalia de Ebstein com graus variáveis de regurgitação tricúspide, arritmias supraventriculares e, quando há comunicação interatrial associada, risco de embolia paradoxal"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_pre_concepcional": "A avaliação pré-concepcional é idealmente realizada antes da concepção, em consulta conjunta entre cardiologista com experiência em cardiopatia congênita do adulto e obstetra, permitindo estratificar risco, revisar medicações potencialmente teratogênicas, planejar via de parto e discutir contracepção quando a gestação for contraindicada, conforme recomendado pela diretriz ESC 2025 de doença cardiovascular na gravidez.",
+      "classificacao_risco_materno": "A estratificação de risco materno utiliza a classificação modificada da Organização Mundial da Saúde, que categoriza a cardiopatia em classes de risco crescente — do mínimo, equivalente à população geral, até a contraindicação absoluta à gravidez, como na síndrome de Eisenmenger e na hipertensão pulmonar grave — orientando a frequência de acompanhamento e o local do parto.",
+      "escores_preditivos": "Os escores CARPREG II e ZAHARA complementam a classificação de risco ao quantificar numericamente a probabilidade de eventos cardíacos maternos: o CARPREG II (Silversides CK et al., 2018) incorpora preditores gerais e específicos de cardiopatia estrutural, enquanto o ZAHARA (Drenthen W et al., 2010, validado prospectivamente por Balci A et al., 2014) foi desenvolvido especificamente na população de cardiopatia congênita.",
+      "avaliacao_ecocardiografica_seriada": "O ecocardiograma transtorácico seriado, tipicamente a cada trimestre e com maior frequência em lesões de risco moderado a alto, é o exame de primeira linha para monitorar função ventricular, pressão pulmonar estimada e gradientes valvares ao longo da gestação.",
+      "ressonancia_cardiaca": "A ressonância cardíaca sem contraste com gadolínio pode ser indicada quando a janela ecocardiográfica é inadequada ou há necessidade de quantificação precisa de volumes ventriculares e do diâmetro aórtico, particularmente em cardiopatias complexas ou aortopatias associadas.",
+      "risco_recorrencia_e_ecocardiograma_fetal": "O risco de recorrência de cardiopatia congênita na prole de mães afetadas é significativamente maior que na população geral (Burn J et al., 1998), justificando ecocardiograma fetal direcionado, recomendado pela diretriz da American Heart Association sobre diagnóstico de cardiopatia fetal (Donofrio MT et al., 2014) e reforçado pela diretriz ESC 2025."
+    },
+    "differentials": [
+      "Lesão simples de baixo risco (ex.: CIA pequena isolada, valva aórtica bicúspide sem estenose) versus lesão complexa de alto risco (ex.: Fontan, ventrículo único, cardiopatia cianótica) — determina intensidade de vigilância e local do parto",
+      "Cardiopatia corrigida cirurgicamente versus não corrigida ou paliada — lesões residuais pós-operatórias, como regurgitação valvar e disfunção ventricular, modificam substancialmente o risco mesmo após correção anatômica",
+      "Presença versus ausência de hipertensão pulmonar associada — hipertensão pulmonar grave, isolada ou como parte da síndrome de Eisenmenger, muda toda a conduta e configura contraindicação absoluta à gravidez",
+      "Função ventricular sistêmica preservada versus disfunção ventricular — disfunção ventricular prévia é um dos principais preditores de descompensação clínica na gestação",
+      "Presença versus ausência de arritmia significativa prévia — histórico de arritmia sustentada eleva o risco de evento cardíaco na gestação e influencia a escolha do local do parto e da monitorização",
+      "Dilatação aórtica associada (ex.: valva aórtica bicúspide, coarctação, síndromes de aortopatia) versus ausência de aortopatia — risco de dissecção aórtica exige vigilância de imagem seriada e pode contraindicar parto vaginal",
+      "Classe funcional e saturação periférica de oxigênio basal preservadas versus cianose materna — saturação abaixo de valores críticos associa-se a piores desfechos fetais e maior risco materno"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico seriado ao longo dos trimestres",
+      "Eletrocardiograma de 12 derivações",
+      "Oximetria de pulso (saturação periférica de oxigênio)",
+      "Ressonância cardíaca sem contraste com gadolínio, quando indicada",
+      "Dosagem de peptídeo natriurético (BNP ou NT-proBNP)",
+      "Teste cardiopulmonar de esforço ou teste de caminhada no período pré-concepcional, quando aplicável",
+      "Ecocardiograma fetal direcionado",
+      "Monitorização ambulatorial do ritmo (Holter de 24 horas) em pacientes sintomáticas ou com histórico arritmogênico"
+    ],
+    "red_flags": [
+      "Piora da classe funcional ao longo da gestação",
+      "Dispneia progressiva, ortopneia ou dispneia paroxística noturna sugestivas de insuficiência cardíaca descompensada",
+      "Palpitações sustentadas, síncope ou pré-síncope sugestivas de arritmia hemodinamicamente significativa",
+      "Queda da saturação periférica de oxigênio em paciente com cardiopatia cianótica, sugerindo descompensação da síndrome de Eisenmenger",
+      "Sinais de hipertensão pulmonar em evolução, como dispneia desproporcional e sinais de insuficiência de ventrículo direito",
+      "Dor torácica sugestiva de dissecção aórtica em paciente com aortopatia associada",
+      "Restrição de crescimento fetal ou sofrimento fetal, frequentemente associados a baixo débito cardíaco materno crônico",
+      "Edema pulmonar agudo ou necessidade de suporte de oxigênio suplementar"
+    ],
+    "treatment_summary": "O manejo da gestante com cardiopatia congênita começa, idealmente, antes da concepção. O aconselhamento pré-concepcional deve incluir avaliação de risco individualizada (uso da classificação de risco materno da OMS/ESC), revisão anatômica e funcional detalhada da lesão (ecocardiograma, avaliação de capacidade funcional, ressonância cardíaca quando necessário) e otimização de lesões residuais — correção cirúrgica ou intervenção percutânea de defeitos relevantes antes de tentar engravidar sempre que possível. Nesse momento também se discute risco de recorrência de cardiopatia congênita na prole e, quando a gestação é contraindicada (por exemplo, síndrome de Eisenmenger, hipertensão pulmonar grave, disfunção ventricular sistêmica grave ou dilatação aórtica importante em síndromes conectivas associadas), deve-se orientar métodos contraceptivos seguros e, quando pertinente, definitivos. Confirmada a gestação, o seguimento deve ocorrer em um Pregnancy Heart Team multidisciplinar, reunindo cardiologia, obstetrícia de alto risco e anestesiologia, com frequência de consultas e exames de imagem ajustada à classe de risco, mais intensiva nas lesões complexas ou nas pacientes sintomáticas. A definição da via de parto é individualizada: a maioria das gestantes com cardiopatia congênita pode ter parto vaginal, reservando-se a cesárea para indicações obstétricas habituais ou para situações cardíacas específicas, como instabilidade hemodinâmica aguda, dilatação aórtica significativa, hipertensão pulmonar grave/síndrome de Eisenmenger ou uso de anticoagulante oral próximo ao termo. Em lesões de maior risco, recomenda-se abreviar a segunda fase do trabalho de parto com auxílio instrumental (fórceps ou vácuo-extrator) para reduzir o esforço expulsivo materno. Profilaxia de endocardite infecciosa no momento do parto é reservada às categorias de mais alto risco (cardiopatia cianótica não corrigida, material protético cardíaco recente, endocardite prévia, entre outras definidas em diretriz), não sendo rotina universal. O puerpério imediato — sobretudo as primeiras 24 a 72 horas — representa o período de maior risco hemodinâmico, por autotransfusão de volume, mobilização de líquido extravascular e alterações rápidas de pré-carga e pós-carga, exigindo vigilância clínica intensificada, muitas vezes em ambiente de terapia intensiva ou unidade semi-intensiva nas pacientes de risco intermediário a alto. Do ponto de vista farmacológico, classes terapêuticas são empregadas conforme a condição de base, sempre sem especificação de posologia neste conteúdo: betabloqueadores podem ser indicados para controle de frequência cardíaca ou arritmia em lesões como tetralogia de Fallot corrigida ou aortopatias associadas a síndromes conectivas; anticoagulantes são indicados em portadoras de valva mecânica, fibrilação atrial, circulação de Fontan ou outras condições trombogênicas, exigindo planejamento cuidadoso da transição entre agentes ao longo da gestação e no periparto, sob coordenação do Pregnancy Heart Team. Constituem contraindicação absoluta à gestação a síndrome de Eisenmenger, a hipertensão pulmonar arterial grave de qualquer etiologia e a disfunção ventricular sistêmica grave, situações associadas a mortalidade materna substancialmente elevada e que devem ser identificadas e comunicadas já na fase de aconselhamento pré-concepcional.",
+    "ambulatory_flow": [
+      "Consulta pré-concepcional conjunta com cardiologia e obstetrícia de alto risco para estratificação de risco pela classificação de risco materno da OMS/ESC.",
+      "Avaliação anatômica e funcional detalhada da lesão (ecocardiograma, avaliação de capacidade funcional, ressonância cardíaca se indicada) para definir lesão residual antes da concepção.",
+      "Otimização pré-concepcional de lesões residuais relevantes (correção cirúrgica ou percutânea) quando indicada, antes de autorizar tentativa de gestação.",
+      "Aconselhamento sobre risco de recorrência de cardiopatia congênita na prole e orientação de contracepção segura quando a gestação for contraindicada.",
+      "Encaminhamento ao Pregnancy Heart Team assim que a gestação for confirmada, com definição do centro de referência para todo o pré-natal.",
+      "Consultas seriadas com reavaliação clínica e ecocardiográfica, com periodicidade ajustada à classe de risco (mais frequente nas lesões complexas).",
+      "Elaboração de plano de parto multidisciplinar no terceiro trimestre, definindo via de parto, local do parto, estratégia de analgesia/anestesia e necessidade de suporte de terapia intensiva.",
+      "Reavaliação cardiológica pós-parto tardia (em torno de 6 meses) para reclassificar função ventricular e lesão residual e revisar contracepção futura."
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de alarme de descompensação (dispneia progressiva, dessaturação, arritmia sintomática, dor torácica, síncope ou edema pulmonar) em gestante ou puérpera com cardiopatia congênita.",
+      "Monitorização contínua de oximetria, pressão arterial, frequência cardíaca e ECG, com posicionamento em decúbito lateral esquerdo e oxigenoterapia suplementar se hipoxemia.",
+      "Acionamento imediato do Pregnancy Heart Team (cardiologia, obstetrícia, anestesiologia e terapia intensiva) com transferência para unidade com suporte de UTI/UTI cardíaca.",
+      "Ecocardiograma à beira-leito para avaliar função ventricular, sinais agudos de hipertensão pulmonar, derrame pericárdico ou outra causa estrutural de instabilidade.",
+      "Tratamento direcionado à causa identificada (classes terapêuticas conforme indicação clínica, sem posologia definida neste fluxo), evitando decúbito dorsal supino prolongado.",
+      "Definição conjunta, entre cardiologia e obstetrícia, da necessidade de antecipação do parto por indicação materna em caso de instabilidade hemodinâmica refratária.",
+      "Manutenção de vigilância intensiva no puerpério imediato (24 a 72 horas), período de maior risco de descompensação hemodinâmica tardia."
+    ],
+    "monitoring": [
+      "Ecocardiograma seriado ao longo da gestação, com frequência ajustada à classe de risco materno.",
+      "Avaliação sistemática da classe funcional (NYHA) em cada consulta de pré-natal.",
+      "Monitorização de saturação periférica de oxigênio em lesões cianóticas.",
+      "Vigilância de arritmias por eletrocardiograma e, quando sintomática, Holter.",
+      "Vigilância hemodinâmica intensificada nas primeiras 24 a 72 horas do puerpério.",
+      "Controle clínico de sinais de congestão (peso, edema, dispneia) e função renal em pacientes em uso de diuréticos ou anticoagulantes.",
+      "Reavaliação cardiológica pós-parto tardia para reclassificação de função ventricular e planejamento de contracepção futura."
+    ],
+    "assistant_questions": [
+      {
+        "id": "lesao_base",
+        "text": "Qual é a lesão cardíaca congênita de base?",
+        "type": "select",
+        "options": [
+          {
+            "value": "civ",
+            "label": "Comunicação interventricular"
+          },
+          {
+            "value": "cia",
+            "label": "Comunicação interatrial"
+          },
+          {
+            "value": "pca",
+            "label": "Persistência do canal arterial"
+          },
+          {
+            "value": "tetralogia_fallot_corrigida",
+            "label": "Tetralogia de Fallot corrigida"
+          },
+          {
+            "value": "coarctacao_aorta",
+            "label": "Coarctação da aorta"
+          },
+          {
+            "value": "transposicao_grandes_arterias_corrigida",
+            "label": "Transposição das grandes artérias corrigida"
+          },
+          {
+            "value": "circulacao_fontan",
+            "label": "Circulação de Fontan"
+          },
+          {
+            "value": "anomalia_ebstein",
+            "label": "Anomalia de Ebstein"
+          },
+          {
+            "value": "valvopatia_congenita",
+            "label": "Valvopatia congênita"
+          },
+          {
+            "value": "outra",
+            "label": "Outra lesão"
+          }
+        ]
+      },
+      {
+        "id": "eisenmenger_ou_hp_grave",
+        "text": "Há síndrome de Eisenmenger ou hipertensão pulmonar arterial grave confirmada?",
+        "type": "boolean"
+      },
+      {
+        "id": "disfuncao_ventricular_grave",
+        "text": "Há disfunção ventricular sistêmica grave (fração de ejeção reduzida importante ou classe funcional NYHA III/IV)?",
+        "type": "boolean"
+      },
+      {
+        "id": "classe_risco_oms_esc",
+        "text": "Qual a classe de risco materno pela classificação de risco materno da OMS/ESC?",
+        "type": "select",
+        "options": [
+          {
+            "value": "I",
+            "label": "Classe I"
+          },
+          {
+            "value": "II",
+            "label": "Classe II"
+          },
+          {
+            "value": "II_III",
+            "label": "Classe II-III"
+          },
+          {
+            "value": "III",
+            "label": "Classe III"
+          },
+          {
+            "value": "IV",
+            "label": "Classe IV"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "text": "Idade gestacional atual, em semanas.",
+        "type": "number"
+      },
+      {
+        "id": "sinais_descompensacao_aguda",
+        "text": "Quais sinais de descompensação aguda estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia_progressiva",
+            "label": "Dispneia progressiva"
+          },
+          {
+            "value": "dessaturacao",
+            "label": "Dessaturação"
+          },
+          {
+            "value": "arritmia_sintomatica",
+            "label": "Arritmia sintomática"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope"
+          },
+          {
+            "value": "edema_pulmonar",
+            "label": "Edema pulmonar"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "uso_anticoagulante",
+        "text": "A paciente está em uso de anticoagulante?",
+        "type": "boolean"
+      },
+      {
+        "id": "valva_mecanica",
+        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "type": "boolean"
+      },
+      {
+        "id": "planejamento_gestacional",
+        "text": "Em que fase do cuidado a paciente se encontra?",
+        "type": "select",
+        "options": [
+          {
+            "value": "pre_concepcional",
+            "label": "Aconselhamento pré-concepcional"
+          },
+          {
+            "value": "gestacao_em_curso",
+            "label": "Gestação em curso"
+          },
+          {
+            "value": "puerperio",
+            "label": "Puerpério"
+          }
+        ]
+      },
+      {
+        "id": "via_parto_planejada",
+        "text": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Parto vaginal"
+          },
+          {
+            "value": "cesarea_indicacao_obstetrica",
+            "label": "Cesárea por indicação obstétrica"
+          },
+          {
+            "value": "cesarea_indicacao_cardiaca",
+            "label": "Cesárea por indicação cardíaca"
+          },
+          {
+            "value": "indefinida",
+            "label": "Ainda indefinida"
+          }
+        ]
+      },
+      {
+        "id": "risco_endocardite_alto",
+        "text": "A paciente se enquadra em categoria de alto risco para endocardite infecciosa (cardiopatia cianótica não corrigida, material protético cardíaco recente ou endocardite prévia)?",
+        "type": "boolean"
+      },
+      {
+        "id": "periodo_puerperal_horas",
+        "text": "Se puérpera, quantas horas se passaram desde o parto?",
+        "type": "number"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "eisenmenger_contraindicacao_absoluta",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "eisenmenger_ou_hp_grave",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síndrome de Eisenmenger ou hipertensão pulmonar arterial grave: contraindicação absoluta à gestação, com risco de mortalidade materna muito elevado."
+          ],
+          "messages": [
+            "Acionar imediatamente o Pregnancy Heart Team; discutir individualmente manejo de altíssimo risco e via de parto com toda a equipe multidisciplinar."
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_ventricular_grave_contraindicacao",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "disfuncao_ventricular_grave",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Disfunção ventricular sistêmica grave: contraindicação absoluta à gestação, com risco elevado de descompensação e mortalidade materna."
+          ],
+          "messages": [
+            "Encaminhar com urgência ao Pregnancy Heart Team para definição conjunta de conduta."
+          ]
+        }
+      },
+      {
+        "id": "sinais_alarme_descompensacao_aguda",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "dispneia_progressiva"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "dessaturacao"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "arritmia_sintomatica"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "edema_pulmonar"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "sincope"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de descompensação hemodinâmica aguda em gestante/puérpera com cardiopatia congênita."
+          ],
+          "emergency_flow": [
+            "Monitorização contínua, oxigenoterapia se hipoxemia e acionamento imediato do Pregnancy Heart Team com transferência para unidade com suporte de UTI/UTI cardíaca."
+          ]
+        }
+      },
+      {
+        "id": "puerperio_precoce_alto_risco",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "periodo_puerperal_horas",
+              "op": "lte",
+              "value": 72
+            },
+            {
+              "field": "classe_risco_oms_esc",
+              "op": "in",
+              "value": [
+                "III",
+                "IV"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Puerpério imediato em paciente de classe de risco materno III/IV: período de maior risco hemodinâmico (24-72h pós-parto)."
+          ],
+          "messages": [
+            "Manter vigilância hemodinâmica intensificada e considerar monitorização em unidade semi-intensiva/intensiva."
+          ]
+        }
+      },
+      {
+        "id": "classe_oms_esc_III_IV_seguimento_intensivo",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "classe_risco_oms_esc",
+              "op": "in",
+              "value": [
+                "III",
+                "IV"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Classe de risco materno III/IV exige seguimento multidisciplinar mais intensivo ao longo da gestação."
+          ],
+          "ambulatory_flow": [
+            "Aumentar frequência de consultas e ecocardiogramas seriados no Pregnancy Heart Team conforme classe de risco elevada."
+          ]
+        }
+      },
+      {
+        "id": "parto_vaginal_alto_risco_segunda_fase",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "via_parto_planejada",
+              "op": "eq",
+              "value": "vaginal"
+            },
+            {
+              "field": "classe_risco_oms_esc",
+              "op": "in",
+              "value": [
+                "III",
+                "IV"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Parto vaginal planejado em paciente de alto risco: considerar abreviação da segunda fase com auxílio instrumental para reduzir esforço expulsivo."
+          ],
+          "messages": [
+            "Definir com anestesiologia e obstetrícia estratégia de analgesia e possível parto vaginal assistido (fórceps/vácuo-extrator)."
+          ]
+        }
+      },
+      {
+        "id": "valva_mecanica_anticoagulacao",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "valva_mecanica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Prótese valvar mecânica exige plano de anticoagulação individualizado ao longo da gestação, definido pelo Pregnancy Heart Team (classe terapêutica, sem posologia)."
+          ],
+          "missing_information": [
+            "Confirmar qual classe de anticoagulante está em uso e estratégia planejada para transição periparto."
+          ]
+        }
+      },
+      {
+        "id": "uso_anticoagulante_atencao_parto",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "uso_anticoagulante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Uso de anticoagulante requer coordenação antecipada da transição de classe terapêutica no periparto com o Pregnancy Heart Team."
+          ],
+          "messages": [
+            "Planejar via e momento do parto considerando o esquema de anticoagulação vigente, sem definição de posologia neste fluxo."
+          ]
+        }
+      },
+      {
+        "id": "risco_endocardite_profilaxia",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "risco_endocardite_alto",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Paciente em categoria de alto risco para endocardite infecciosa; avaliar indicação de profilaxia no momento do parto conforme critérios específicos da lesão."
+          ],
+          "suggested_tests": [
+            "Revisão de história de material protético cardíaco e de endocardite prévia junto ao Pregnancy Heart Team."
+          ]
+        }
+      },
+      {
+        "id": "pre_concepcional_otimizacao",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "planejamento_gestacional",
+              "op": "eq",
+              "value": "pre_concepcional"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "Priorizar avaliação anatômica/funcional completa e otimização de lesão residual antes de autorizar tentativa de gestação."
+          ],
+          "messages": [
+            "Discutir risco individualizado pela classificação de risco materno da OMS/ESC e, se gestação contraindicada, orientar contracepção segura."
+          ]
+        }
+      },
+      {
+        "id": "lesao_nao_especificada_dados_faltantes",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_base",
+              "op": "eq",
+              "value": "outra"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Especificar a lesão anatômica exata, status de correção cirúrgica prévia e lesão residual atual."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com síndrome de Eisenmenger (contraindicação absoluta, classe de risco materno IV da classificação da OMS/ESC): a resistência vascular pulmonar é fixa enquanto a resistência vascular sistêmica cai fisiologicamente ao longo da gestação — essa assimetria agrava o shunt direita-esquerda e pode precipitar colapso circulatório mesmo com queda pressórica mínima; policitemia compensatória cria risco simultâneo de trombose e sangramento. Mortalidade materna histórica de 30-50% (até 65% em cesariana), com maior risco no periparto e nas primeiras semanas pós-parto (70% dos óbitos entre o 2º e o 30º dia pós-parto). Aconselhamento pré-concepcional com contracepção eficaz é a intervenção de maior impacto; quando a gestação ocorre apesar da contraindicação, parto vaginal com analgesia peridural é preferido a cesárea.",
+      "Gestante com fisiologia de Fontan (risco tromboembólico e de baixo débito): ausência de ventrículo subpulmonar torna o débito cardíaco dependente de pré-carga e de baixa resistência vascular pulmonar, exatamente os dois parâmetros desafiados pela gestação. Meta-análise de 2025 (400 mulheres, 1.260 gestações): arritmia supraventricular materna 6,59%, insuficiência cardíaca 3,71%, nenhum óbito materno registrado, mas parto pré-termo em 57,31% e mortalidade neonatal 4,38%; revisão de 2018 mostrou taxa de nascido vivo de apenas 45% do total de concepções. Anticoagulação individualizada, com monitorização mensal quando aplicável; parto vaginal planejado preferido, com anestesia peridural em doses incrementais lentas para evitar queda abrupta de pré-carga.",
+      "Gestante com coarctação de aorta reparada (hipertensão residual, risco de dissecção): no maior estudo prospectivo dedicado (ROPAC, 303 gestações), não houve nenhuma morte materna nem dissecção aórtica, mas evento cardíaco maior ocorreu em 4,3% (dominado por insuficiência cardíaca, 3,3%) e distúrbios hipertensivos em 5,3%, associados ao uso de medicação cardíaca prévia à gestação; controle pressórico rigoroso é recomendado. Coarctação não reparada teve taxa de cesárea desproporcional (71,4% vs. 47,3% na reparada) sem respaldo em diretriz, já que a via vaginal continua preferencial mesmo nessa lesão.",
+      "Gestante com tetralogia de Fallot reparada (risco arrítmico, disfunção de VD): coorte chinesa unicêntrica (31 gestações) mostrou desfechos obstétricos e neonatais melhores no grupo corrigido cirurgicamente que no não corrigido (sem óbito fetal/neonatal no grupo reparado). Coorte nacional norueguesa (80 mulheres com Fallot reparada) encontrou arritmia ventricular em 21% das mulheres, fortemente concentrada nas que já haviam engravidado (94% dos casos de arritmia vs. 6% em nuligestas; razão de chances 12,9), sugerindo a gestação como marcador ou gatilho de vulnerabilidade arrítmica em VD já sobrecarregado por regurgitação pulmonar crônica pós-reparo.",
+      "Gestante com valva aórtica bicúspide e aortopatia associada (risco de dissecção): a classificação de risco materno da OMS/ESC (versão 2.0) considera dilatação aórtica igual ou superior a 50 mm em valva bicúspide como classe IV (contraindicação), limiar mais alto que os 45 mm usados na síndrome de Marfan. No substudy ROPAC de coarctação, mulheres com valva bicúspide concomitante (40,6% da coorte) tinham mais dilatação aórtica pré-gestacional e mais estenose aórtica que as sem valva bicúspide, mas sem diferença de evento cardíaco maior nem nenhum caso de dissecção nessa amostra específica. Dor torácica ou dorsal abrupta nessa paciente não deve ser atribuída automaticamente a estenose aórtica de base — exige investigação ativa de síndrome aórtica aguda.",
+      "Prole com risco de recorrência de cardiopatia congênita (indicação de ecocardiograma fetal direcionado): coorte britânica clássica mostrou recorrência de 4,1% na prole direta de adultos operados de cardiopatia congênita maior (contra 2,1% em irmãos); registro dinamarquês de base populacional (mais de 2,3 milhões de nascimentos) mostrou risco relativo de 5,39 quando a mãe é a afetada contra 3,04 quando é o pai (razão materno:paterno 1,82), com magnitude variável por lesão (defeito do septo atrioventricular com padrão mais mendeliano; tetralogia de Fallot poligênica; transposição das grandes artérias predominantemente esporádica). Ecocardiograma fetal direcionado (18-22 semanas) é indicado sempre que a mãe ou o pai tiver cardiopatia congênita."
+    ],
+    "related_document_slugs": [
+      "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018",
+      "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",
+      "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",
+      "sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac",
+      "escores-de-risco-materno-carpreg-carpreg-ii-e-zahara",
+      "coarctacao-de-aorta-reparada-e-gestacao-desfechos-do-ropac",
+      "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado"
+    ],
+    "patient_material_slug": "gravidez-e-cardiopatia-congenita-o-que-saber"
   },
   {
     "slug": "hipertensao-pulmonar-gravidez",
