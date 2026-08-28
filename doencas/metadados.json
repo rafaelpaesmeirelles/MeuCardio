@@ -12143,7 +12143,7 @@
     "category": "doenca_coronariana",
     "subtype": "multimorbidade",
     "prevalence_rank": 13,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Doença coronariana em contexto de multimorbidade e apresentações atípicas, exigindo equilíbrio entre benefício, risco, função, sintomas e objetivos de cuidado.",
     "tags": [
       "coronariopatia",
@@ -12152,14 +12152,594 @@
       "decisão compartilhada"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Patient-Centered Adult Cardiovascular Care"
+      "AHA Scientific Statement: Patient-Centered Adult Cardiovascular Care",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. European Heart Journal. 2023.",
+      "Knuuti J, Wijns W, Saraste A, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes. European Heart Journal. 2020.",
+      "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021.",
+      "Tegn N, Abdelnoor M, Aaberge L, et al. Invasive versus conservative strategy in patients aged 80 years or older with non-ST-elevation myocardial infarction or unstable angina pectoris (After Eighty study). The Lancet. 2016.",
+      "Kunadian V, Wilkinson C, Alsanjari O, et al. (SENIOR-RITA Investigators). Invasive Treatment Strategy for Older Patients with Myocardial Infarction. New England Journal of Medicine. 2024.",
+      "Alexander KP, Newby LK, Cannon CP, et al. Acute coronary care in the elderly, part I: Non-ST-segment-elevation acute coronary syndromes. Circulation. 2007.",
+      "Alexander KP, Newby LK, Armstrong PW, et al. Acute coronary care in the elderly, part II: ST-segment-elevation myocardial infarction. Circulation. 2007.",
+      "Canto JG, Shlipak MG, Rogers WJ, et al. Prevalence, clinical characteristics, and mortality among patients with myocardial infarction presenting without chest pain. JAMA. 2000.",
+      "Afilalo J, Alexander KP, Mack MJ, et al. Frailty assessment in the cardiovascular care of older adults. Journal of the American College of Cardiology. 2014.",
+      "Twerenbold R, Badertscher P, Boeddinghaus J, et al. 0/1-Hour Triage Algorithm for Myocardial Infarction in Patients With Renal Dysfunction. Circulation. 2018."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/Patient-Centered-Adult-Cardiovascular-Care/commentary"
+      "https://professional.heart.org/en/science-news/Patient-Centered-Adult-Cardiovascular-Care/commentary",
+      "https://doi.org/10.1093/eurheartj/ehad191",
+      "https://doi.org/10.1093/eurheartj/ehz425",
+      "https://doi.org/10.1161/CIR.0000000000001029",
+      "https://doi.org/10.1016/S0140-6736(15)01166-6",
+      "https://doi.org/10.1056/NEJMoa2407791",
+      "https://doi.org/10.1161/CIRCULATIONAHA.107.182615",
+      "https://doi.org/10.1161/CIRCULATIONAHA.107.182616",
+      "https://doi.org/10.1001/jama.283.24.3223",
+      "https://doi.org/10.1016/j.jacc.2013.09.070",
+      "https://doi.org/10.1161/CIRCULATIONAHA.117.028901"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha estava com apenas metadados de catalogação (nenhum campo clínico). Produzida epidemiologia, apresentação, abordagem diagnóstica estruturada, diferenciais, exames, sinais de alarme, tratamento, fluxos ambulatorial/emergência, monitoramento, populações especiais, assistente clínico determinístico (11 perguntas, 10 regras) e 19 related_document_slugs, todos verificados individualmente fora de Farmacologia/Calculadoras/Exames (2 dos 21 propostos pelo agente de pesquisa — sintomas-prodromicos-e-agudos-de-infarto-em-mulheres-o-que-perguntar-na-anamnese e limiar-de-transfusao-no-cardiopata-mint-reality-e-trics-iii — foram removidos na montagem por não mencionarem população idosa/geriátrica no próprio texto, apesar de tratarem de DAC/infarto em geral). Dois documentos (fragilidade-como-modificador-de-decisao-cardiovascular e reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao) também pertencem a related_document_slugs de outras fichas (fragilidade-pre-procedimento-cardiovascular, anticoagulacao-idoso, plano-alta-cardiogeriatria) — mantidos aqui por serem genuína e centralmente sobre DAC no idoso, não apenas por proximidade temática (pertencimento múltiplo legítimo, mesmo padrão já usado nos hubs 'doença da aorta' e 'cardiopatia congênita do adulto'). Nenhum documento novo foi criado; não muda review_status de nenhum outro registro. Corrigido na montagem: operador 'includes' (inexistente no motor de regras) trocado por 'contains' na regra demencia_avancada_ou_neoplasia_ativa. Escopo deliberadamente restrito ao eixo cardiovascular geriátrico — não duplica conteúdo genérico já coberto pelos hubs sindrome-coronariana-aguda/sindrome-coronariana-cronica.",
+    "version": 2,
+    "fonte_producao": "claude",
+    "epidemiology": "A doenca arterial coronariana (DAC) e a principal causa de morte em pessoas com 75 anos ou mais nos paises ocidentais, e sua prevalencia cresce de forma continua com a idade: estudos de base populacional mostram DAC sintomatica ou documentada em cerca de 20 a 30% dos indivíduos acima de 80 anos, com aterosclerose coronariana subclinica presente na quase totalidade dos octogenarios em series de autopsia. Nos registros de sindrome coronariana aguda (SCA), pacientes com 75 anos ou mais respondem por 30 a 40% das internacoes por infarto agudo do miocardio, porem concentram a maior parte da mortalidade hospitalar e em um ano, refletindo maior carga de multimorbidade (diabetes, doenca renal cronica, fibrilacao atrial, doenca arterial periferica) e de fragilidade. A fragilidade, presente em 20 a 50% dos idosos internados por SCA a depender do instrumento usado, e um preditor independente de mortalidade, sangramento e desfechos funcionais adversos, superior em muitos estudos ao escore de risco isquemico isolado. Um achado central para o raciocinio diagnostico geriatrico e a alta frequencia de apresentacao atipica: series contemporaneas mostram que 20 a 30% dos idosos com infarto agudo do miocardio chegam sem dor toracica, e essa proporcao ultrapassa 40% acima dos 85 anos, sendo a dispneia sua principal equivalente anginosa, seguida por confusao mental aguda/delirium, sincope, fraqueza generalizada, quase-sincope e descompensacao de insuficiencia cardiaca previa. A auto atribuicao dos sintomas a 'envelhecimento normal' ou a comorbidades cronicas, associada a neuropatia autonomica, disfuncao cognitiva e limiar de dor alterado, retarda a procura por atendimento e a realizacao de eletrocardiograma, o que contribui para menor uso de terapia de reperfusao e maior mortalidade ajustada nessa faixa etaria em comparacao com adultos mais jovens com apresentacao classica.",
+    "presentation": [
+      "Dor toracica tipica em aperto ou peso, irradiada para membro superior esquerdo ou mandibula (presente em menos da metade dos casos acima de 85 anos)",
+      "Dispneia isolada ou desproporcional ao esforco, como equivalente anginoso mais frequente no idoso",
+      "Delirium ou confusao mental aguda como manifestacao isolada de isquemia miocardica",
+      "Sincope ou pre-sincope sem dor associada",
+      "Fraqueza generalizada, prostracao ou queda funcional aguda sem causa mecanica evidente",
+      "Descompensacao aguda de insuficiencia cardiaca previamente compensada (edema, ortopneia, estertores)",
+      "Nausea, vomitos ou dor epigastrica isolada, mimetizando quadro digestivo",
+      "Ausencia completa de sintomas (isquemia silenciosa), mais comum em diabeticos idosos e em pacientes com deficit cognitivo",
+      "Piora aguda de estado funcional basal (declinio da mobilidade ou da capacidade de autocuidado) sem queixa cardiovascular espontanea",
+      "Palpitacoes ou arritmia de inicio recente (fibrilacao atrial nova) como manifestacao de isquemia subjacente"
+    ],
+    "diagnostic_approach": {
+      "eletrocardiograma_e_troponina": "O eletrocardiograma de 12 derivacoes continua sendo o primeiro exame na avaliacao de suspeita de SCA no idoso, mas alteracoes basais (bloqueio de ramo esquerdo previo, hipertrofia ventricular esquerda, marca-passo, sobrecarga por fibrilacao atrial cronica) sao mais prevalentes nessa populacao e reduzem a sensibilidade e a especificidade do tracado para diagnostico de isquemia aguda, tornando fundamental a comparacao com eletrocardiogramas previos quando disponiveis. A troponina cardiaca de alta sensibilidade deve ser dosada de forma seriada segundo os algoritmos 0/1h ou 0/2h preconizados pela ESC, porem sua interpretacao no idoso exige cautela: valores basais de troponina tendem a ser mais elevados com o avancar da idade mesmo na ausencia de isquemia aguda, tanto por hipertrofia e fibrose miocardica subclinicas quanto pela reducao da taxa de filtracao glomerular, que diminui o clearance renal do biomarcador. Em pacientes com disfuncao renal (frequente acima dos 75 anos), os limiares de corte padrao perdem especificidade, e algoritmos de descarte validados especificamente para essa populacao (com pontos de corte ajustados e maior peso na variacao delta seriada do que no valor isolado) devem ser preferidos a um unico valor de admissao para evitar excesso de resultados falso-positivos e investigacoes invasivas desnecessarias.",
+      "estratificacao_de_risco_isquemico_e_hemorragico": "Escores validados de risco isquemico (GRACE) e de risco hemorragico (CRUSADE, escore ARC-HBR) devem ser aplicados de forma sistematica no idoso, pois essa populacao concentra simultaneamente maior risco isquemico (pela extensao e complexidade da doenca coronariana, frequentemente multiarterial e calcificada) e maior risco de sangramento (por funcao renal reduzida, anemia basal, uso de multiplos antitromboticos e maior fragilidade vascular), o que exige balanceamento individualizado da estrategia antitrombotica e da via de acesso vascular, com preferencia por acesso radial quando tecnicamente viavel.",
+      "fragilidade_na_decisao_diagnostica": "A avaliacao sistematica de fragilidade (por instrumentos como o fenotipo de Fried, o Clinical Frailty Scale ou escalas especificas validadas em cardiologia) deve compor a decisao diagnostica e terapeutica ao lado da idade cronologica isolada, pois pacientes frageis tem maior risco de complicacoes com estrategias invasivas mas tambem podem se beneficiar de revascularizacao quando a fragilidade e leve a moderada; a avaliacao geriatrica ampliada (cognicao, mobilidade, estado nutricional, suporte social, expectativa de vida e objetivos do paciente) deve orientar a intensidade da investigacao complementar, evitando tanto a subinvestigacao por vies etario quanto a investigacao futil em pacientes com expectativa de vida muito limitada.",
+      "angiografia_versus_estrategia_conservadora": "As diretrizes atuais da ESC (2023, SCA) e da ACC/AHA nao estabelecem limite de idade para estrategia invasiva, recomendando que a decisao seja guiada por risco isquemico, fragilidade, comorbidades, expectativa de vida e preferencia do paciente, dentro de um processo de decisao compartilhada. Ensaios clinicos randomizados especificos em muito idosos sustentam essa recomendacao: o estudo After Eighty demonstrou reducao do desfecho composto de infarto, necessidade de revascularizacao urgente, acidente vascular cerebral e morte com estrategia invasiva precoce em pacientes com 80 anos ou mais com NSTEMI/angina instavel, sem excesso relevante de sangramento maior; o estudo SENIOR-RITA, em pacientes idosos com NSTEMI (incluindo frageis), mostrou reducao de eventos isquemicos com estrategia invasiva rotineira em comparacao com tratamento conservador, sem aumento de mortalidade por todas as causas nem de sangramento maior no seguimento. A estrategia puramente conservadora (tratamento clinico otimizado sem angiografia) permanece indicada nos casos de fragilidade avancada, multimorbidade grave, demencia importante ou expectativa de vida muito limitada, sempre pactuada em decisao compartilhada com o paciente e a familia."
+    },
+    "differentials": [
+      "Estenose aortica grave (sintomas de dor toracica, dispneia e sincope se sobrepoem aos da DAC no idoso)",
+      "Tromboembolismo pulmonar agudo (dispneia subita, dor toracica pleuritica, elevacao de troponina por sobrecarga de ventriculo direito)",
+      "Cardiomiopatia de takotsubo (elevacao de troponina e alteracoes eletrocardiograficas mimetizando SCA, mais comum em mulheres idosas apos estresse fisico ou emocional)",
+      "Miocardite aguda (elevacao de troponina sem doenca coronariana obstrutiva, diagnostico diferencial de MINOCA)",
+      "Anemia sintomatica ou crise hipertensiva grave (isquemia miocardica secundaria por desbalanco de oferta e demanda, tipo 2 de infarto)",
+      "Descompensacao de insuficiencia cardiaca de outra etiologia (dispneia e edema sem evento coronariano agudo subjacente)",
+      "Dissecção aguda de aorta (dor toracica ou dorsal, pode cursar com alteracoes eletrocardiograficas e elevacao discreta de troponina)",
+      "Pneumonia ou exacerbacao de doenca pulmonar obstrutiva cronica (dispneia e desconforto toracico em paciente idoso com comorbidade respiratoria)",
+      "Sepse e infeccao sistemica (elevacao de troponina por injuria miocardica tipo 2 e taquicardia, com ou sem foco pulmonar/urinario)",
+      "Fibrilacao atrial de alta resposta ventricular isolada (palpitacoes, dispneia e elevacao discreta de troponina por demanda, sem SCA subjacente)"
+    ],
+    "tests": [
+      "Eletrocardiograma seriado de 12 derivacoes, comparado com tracados previos quando disponiveis, dada a maior prevalencia de alteracoes basais (BRE, HVE, ritmo de marca-passo) no idoso",
+      "Troponina cardiaca de alta sensibilidade seriada (protocolo 0/1h ou 0/2h), com interpretacao ajustada para funcao renal e uso preferencial da variacao delta em vez do valor isolado",
+      "Funcao renal (creatinina e taxa de filtracao glomerular estimada) para calibrar interpretacao da troponina e ajustar dose de antitromboticos e contraste iodado",
+      "Ecocardiograma transtoracico para avaliar funcao ventricular, descartar estenose aortica grave e identificar padrao sugestivo de takotsubo ou outras cardiomiopatias",
+      "Hemograma completo para rastrear anemia como causa de isquemia tipo 2 ou como fator de risco hemorragico antes de estrategia invasiva",
+      "Avaliacao de fragilidade estruturada (Clinical Frailty Scale, fenotipo de Fried ou instrumento equivalente validado) como parte da estratificacao diagnostica e da decisao terapeutica",
+      "Angiotomografia de torax quando ha suspeita concomitante de tromboembolismo pulmonar ou dissecção de aorta como diagnostico diferencial",
+      "Cateterismo cardiaco (coronariografia) diagnostico quando indicado por estratificacao de risco isquemico, ponderado pelo risco hemorragico e pela fragilidade do paciente",
+      "Avaliacao cognitiva basal (rastreio de delirium e de deficit cognitivo previo) para contextualizar sintomas atipicos e orientar capacidade de decisao compartilhada"
+    ],
+    "red_flags": [
+      "Dispneia subita ou desproporcional em idoso sem diagnostico respiratorio claro, tratada como possivel equivalente anginoso ate prova em contrario",
+      "Delirium ou confusao mental de inicio agudo em paciente com fatores de risco cardiovascular, sem foco infeccioso ou metabolico evidente",
+      "Sincope ou quase-sincope associada a alteracoes eletrocardiograficas novas ou elevacao de troponina",
+      "Instabilidade hemodinamica (hipotensao, taquicardia persistente, hipoperfusao periferica) em paciente idoso com suspeita de SCA",
+      "Elevacao progressiva e significativa de troponina em dosagens seriadas, mesmo sem dor toracica referida",
+      "Piora funcional aguda inexplicada (queda de mobilidade, incapacidade subita de realizar atividades basicas) em idoso com doenca coronariana conhecida",
+      "Sinais de insuficiencia cardiaca aguda (dispneia, estertores, turgencia jugular) de instalacao subita sem causa alternativa evidente",
+      "Novo bloqueio de ramo esquerdo ou alteracoes dinamicas do segmento ST em eletrocardiogramas seriados"
+    ],
+    "treatment_summary": "O manejo da doenca coronariana no idoso e no muito idoso exige integrar a gravidade anatomica da doenca coronariana a avaliacao sistematica de fragilidade, multimorbidade, capacidade funcional, cognicao e objetivos de cuidado, e nao apenas o escore anatomico isolado. Em sindrome coronariana aguda sem supradesnivel de ST, estudos como After Eighty (Tegn et al., Lancet 2016), MOSCA-FRAIL, SENIOR-RITA (Kunadian et al., NEJM 2024) e o FIRE trial (Biscaglia et al., NEJM 2023) mostram que uma estrategia invasiva precoce, quando bem indicada, reduz eventos isquemicos recorrentes mesmo em octogenarios e em pacientes frageis, mas o beneficio absoluto diminui e o risco de sangramento e complicacoes vasculares aumenta conforme a fragilidade se acentua; por isso a decisao entre angioplastia coronaria, cirurgia de revascularizacao miocardica e terapia clinica otimizada deve ser feita por Heart Team considerando complexidade anatomica, expectativa de vida, capacidade de reabilitacao e preferencia do paciente, reservando estrategia guiada por fisiologia e stents de segunda geracao com plataformas de liberacao rapida de terapia antiplaquetaria em pacientes com alto risco hemorragico. Na dupla antiagregacao plaquetaria, a duracao deve ser individualizada por escores de risco hemorragico como o criterio ARC-HBR e o PRECISE-DAPT, favorecendo regimes abreviados apos intervencao coronaria percutanea em idosos de alto risco de sangramento, com transicao precoce para monoterapia com inibidor do receptor P2Y12, conforme evidencia dos estudos MASTER DAPT (Valgimigli et al., NEJM 2021) e TWILIGHT; a escolha do inibidor P2Y12 tambem deve ser individualizada, com o estudo POPular AGE (Gimbel et al., Lancet 2020) demonstrando que clopidogrel reduz sangramento sem aumentar eventos isquemicos comparado a agentes mais potentes em pacientes com 70 anos ou mais, que costumam ter maior fragilidade, baixo peso e disfuncao renal — sem citar posologia especifica, a decisao de intensidade e tempo do bloqueio plaquetario deve ser reavaliada em cada consulta. A reabilitacao cardiaca precisa ser adaptada a fragilidade, com avaliacao funcional previa por instrumentos como Short Physical Performance Battery, forca de preensao e velocidade de marcha, priorizando programas multicomponentes (exercicio aerobico e resistido de baixa a moderada intensidade, treino de equilibrio, orientacao nutricional e estimulo cognitivo), com opcoes domiciliares ou hibridas/tele-reabilitacao para pacientes com barreiras de deslocamento. O manejo de comorbidades e central: na doenca renal cronica, minimizar volume de contraste, ajustar terapia e vigiar piora de funcao renal apos procedimentos; a anemia deve ser investigada e corrigida antes de decisoes de revascularizacao sempre que possivel, pois eleva risco hemorragico e isquemico; a polifarmacia exige revisao sistematica com criterios STOPP/START e desprescricao de medicamentos de beneficio marginal ou risco de interacao. Por fim, a decisao compartilhada deve incorporar avaliacao geriatrica ampla, discussao explicita sobre expectativa de vida, qualidade de vida e objetivos de cuidado, com integracao precoce de cuidados paliativos concomitantes a terapia cardiologica quando ha multimorbidade avancada, fragilidade grave ou doenca coronariana refrataria, evitando tanto o sub quanto o sobretratamento invasivo nessa populacao.",
+    "ambulatory_flow": [
+      "Consulta inicial com historia clinica completa, avaliacao de sintomas anginosos/equivalentes e revisao de comorbidades e medicamentos em uso.",
+      "Rastreio sistematico de fragilidade (escala de fragilidade clinica), capacidade funcional, cognicao e risco de quedas.",
+      "Estratificacao de risco cardiovascular e de sangramento com escores validados (ex.: ARC-HBR, PRECISE-DAPT) antes de definir estrategia terapeutica.",
+      "Exames complementares dirigidos: eletrocardiograma, avaliacao de funcao renal, hemograma para rastreio de anemia e teste de isquemia ou angiotomografia conforme probabilidade pre-teste.",
+      "Discussao em Heart Team ou com cardiologia intervencionista quando ha indicacao potencial de revascularizacao, definindo objetivos de cuidado junto ao paciente e familia.",
+      "Otimizacao de terapia clinica e ajuste individualizado de antiagregacao plaquetaria conforme risco isquemico e hemorragico.",
+      "Encaminhamento a programa de reabilitacao cardiaca adaptado a fragilidade, com reavaliacao funcional periodica.",
+      "Revisao periodica de polifarmacia e desprescricao, com reavaliacao de comorbidades (doenca renal cronica, anemia, diabetes) a cada retorno.",
+      "Reavaliacao clinica programada (geralmente a cada 3 a 6 meses) com reforco de decisao compartilhada e, se indicado, articulacao com cuidados paliativos."
+    ],
+    "emergency_flow": [
+      "Triagem imediata com eletrocardiograma em ate 10 minutos diante de dor toracica ou equivalente anginoso em paciente idoso, considerando apresentacoes atipicas (dispneia, confusao, sincope).",
+      "Estabilizacao hemodinamica e monitorizacao continua, com avaliacao rapida de fragilidade e comorbidades relevantes para orientar intensidade terapeutica.",
+      "Ativacao de via de sindrome coronariana aguda com supradesnivel de ST para reperfusao imediata (angioplastia primaria preferencial) sem retardo por idade isolada.",
+      "Em sindrome coronariana aguda sem supradesnivel, estratificacao de risco isquemico e hemorragico para definir estrategia invasiva precoce versus conservadora, envolvendo Heart Team quando ha fragilidade significativa.",
+      "Investigacao e correcao de fatores agravantes (anemia, disfuncao renal aguda, arritmias, descompensacao de comorbidades) antes ou em paralelo a decisao de revascularizacao.",
+      "Discussao objetiva e precoce com paciente e familia sobre riscos, beneficios esperados e objetivos de cuidado, especialmente em muito idosos frageis ou com doenca avancada.",
+      "Definicao de terapia antiplaquetaria adequada ao risco de sangramento antes de qualquer procedimento invasivo, evitando escolha automatica de agentes mais potentes.",
+      "Planejamento de alta com transicao segura para seguimento ambulatorial, reabilitacao cardiaca e revisao medicamentosa estruturada."
+    ],
+    "monitoring": [
+      "Reavaliacao periodica de sintomas anginosos, capacidade funcional e ocorrencia de eventos adversos (sangramento, quedas, hospitalizacoes).",
+      "Monitoramento seriado da funcao renal, especialmente apos uso de contraste ou ajuste de terapia cardiovascular.",
+      "Controle de hemoglobina para deteccao precoce de anemia e investigacao de causas quando presente.",
+      "Reavaliacao continua do risco hemorragico e isquemico para ajuste da duracao e intensidade da dupla antiagregacao plaquetaria ao longo do tempo.",
+      "Revisao estruturada de polifarmacia em cada consulta, com aplicacao de criterios STOPP/START e desprescricao quando indicado.",
+      "Reavaliacao periodica de fragilidade, cognicao e risco de quedas para adaptar metas terapeuticas e intensidade da reabilitacao.",
+      "Acompanhamento de adesao ao programa de reabilitacao cardiaca e progresso funcional.",
+      "Revisao periodica de objetivos de cuidado e, quando aplicavel, articulacao continua com equipe de cuidados paliativos."
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_anos",
+        "text": "Qual a idade do paciente em anos?",
+        "type": "number"
+      },
+      {
+        "id": "apresentacao_clinica",
+        "text": "Qual a apresentacao clinica atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "dac_cronica_estavel",
+            "label": "Doenca coronariana cronica estavel"
+          },
+          {
+            "value": "sca_sem_supra",
+            "label": "Sindrome coronariana aguda sem supradesnivel de ST"
+          },
+          {
+            "value": "sca_com_supra",
+            "label": "Sindrome coronariana aguda com supradesnivel de ST"
+          },
+          {
+            "value": "angina_refrataria",
+            "label": "Angina refrataria a terapia otimizada"
+          }
+        ]
+      },
+      {
+        "id": "fragilidade_cfs",
+        "text": "Qual o grau de fragilidade pela Clinical Frailty Scale?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vigoroso_1_3",
+            "label": "Vigoroso a bem (CFS 1-3)"
+          },
+          {
+            "value": "vulneravel_4",
+            "label": "Vulneravel (CFS 4)"
+          },
+          {
+            "value": "levemente_fragil_5",
+            "label": "Levemente fragil (CFS 5)"
+          },
+          {
+            "value": "moderadamente_fragil_6",
+            "label": "Moderadamente fragil (CFS 6)"
+          },
+          {
+            "value": "gravemente_fragil_7_9",
+            "label": "Gravemente fragil a terminal (CFS 7-9)"
+          }
+        ]
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "text": "Ha instabilidade hemodinamica, choque ou arritmia grave associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "alto_risco_sangramento",
+        "text": "Paciente preenche criterio de alto risco de sangramento (ARC-HBR)?",
+        "type": "boolean"
+      },
+      {
+        "id": "funcao_renal",
+        "text": "Qual o estagio de funcao renal (DRC)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal_leve",
+            "label": "Normal ou disfuncao leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Disfuncao renal moderada"
+          },
+          {
+            "value": "grave_dialise",
+            "label": "Disfuncao renal grave ou dialise"
+          }
+        ]
+      },
+      {
+        "id": "anemia",
+        "text": "Ha anemia documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "objetivos_cuidado",
+        "text": "Qual o objetivo de cuidado predominante definido com o paciente/familia?",
+        "type": "select",
+        "options": [
+          {
+            "value": "prolongar_vida_funcao",
+            "label": "Prolongar vida com preservacao de funcao"
+          },
+          {
+            "value": "conforto_paliativo",
+            "label": "Priorizar conforto e cuidados paliativos"
+          },
+          {
+            "value": "indefinido",
+            "label": "Ainda nao discutido/indefinido"
+          }
+        ]
+      },
+      {
+        "id": "numero_medicamentos",
+        "text": "Quantos medicamentos de uso continuo o paciente utiliza?",
+        "type": "number"
+      },
+      {
+        "id": "capacidade_funcional",
+        "text": "Como esta a capacidade funcional/mobilidade atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "independente",
+            "label": "Independente para atividades basicas e instrumentais"
+          },
+          {
+            "value": "dependencia_parcial",
+            "label": "Dependencia parcial"
+          },
+          {
+            "value": "dependencia_total",
+            "label": "Dependencia total/acamado"
+          }
+        ]
+      },
+      {
+        "id": "comorbidades",
+        "text": "Quais comorbidades relevantes estao presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "drc",
+            "label": "Doenca renal cronica"
+          },
+          {
+            "value": "diabetes",
+            "label": "Diabetes mellitus"
+          },
+          {
+            "value": "demencia_avancada",
+            "label": "Demencia avancada"
+          },
+          {
+            "value": "neoplasia_ativa",
+            "label": "Neoplasia ativa"
+          },
+          {
+            "value": "dpoc",
+            "label": "Doenca pulmonar obstrutiva cronica"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma relevante"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sca_supra_instavel_emergencia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "apresentacao_clinica",
+              "op": "eq",
+              "value": "sca_com_supra"
+            },
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "SCA com supradesnivel de ST e instabilidade hemodinamica em paciente idoso"
+          ],
+          "emergency_flow": [
+            "Acionar via de reperfusao imediata e Heart Team para definicao de estrategia mais rapida possivel, independente da idade isolada."
+          ],
+          "messages": [
+            "Priorizar estabilizacao e reperfusao imediata; nao adiar decisao por idade cronologica isolada."
+          ]
+        }
+      },
+      {
+        "id": "sca_fragil_idoso_prioritario",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "apresentacao_clinica",
+              "op": "eq",
+              "value": "sca_sem_supra"
+            },
+            {
+              "field": "fragilidade_cfs",
+              "op": "in",
+              "value": [
+                "moderadamente_fragil_6",
+                "gravemente_fragil_7_9"
+              ]
+            },
+            {
+              "field": "idade_anos",
+              "op": "gte",
+              "value": 80
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Considerar estrategia guiada por avaliacao funcional/fisiologica em vez de anatomica isolada em muito idoso fragil (evidencia tipo FIRE trial)."
+          ],
+          "missing_information": [
+            "Avaliacao geriatrica ampliada e discussao de objetivos de cuidado antes de definir estrategia invasiva."
+          ],
+          "messages": [
+            "Envolver Heart Team e equipe geriatrica para balancear beneficio isquemico e risco de complicacoes em paciente fragil."
+          ]
+        }
+      },
+      {
+        "id": "alto_risco_sangramento_dapt_curta",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "alto_risco_sangramento",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Favorecer duracao abreviada de dupla antiagregacao plaquetaria com transicao precoce para monoterapia em paciente de alto risco hemorragico."
+          ],
+          "opposing": [
+            "Evitar inibidores P2Y12 de maior potencia quando ha alto risco hemorragico associado."
+          ],
+          "missing_information": [
+            "Confirmar calculo formal de escore de risco hemorragico (ARC-HBR/PRECISE-DAPT)."
+          ]
+        }
+      },
+      {
+        "id": "anemia_investigar",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "anemia",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Investigar causa da anemia (ferropenia, sangramento oculto, doenca renal) antes de decisao de revascularizacao eletiva."
+          ],
+          "suggested_tests": [
+            "Hemograma completo, ferritina e saturacao de transferrina, pesquisa de sangue oculto nas fezes conforme contexto clinico."
+          ],
+          "opposing": [
+            "Adiar procedimentos eletivos ate correcao ou esclarecimento da anemia quando clinicamente viavel."
+          ]
+        }
+      },
+      {
+        "id": "drc_grave_contraste",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_renal",
+              "op": "eq",
+              "value": "grave_dialise"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Minimizar volume de contraste iodado e preferir estrategias que reduzam risco de nefropatia induzida por contraste."
+          ],
+          "suggested_tests": [
+            "Reavaliacao de funcao renal antes e apos qualquer procedimento com contraste."
+          ],
+          "missing_information": [
+            "Discussao nefrologica conjunta quando ha doenca renal cronica avancada ou dialise."
+          ]
+        }
+      },
+      {
+        "id": "objetivo_conforto_paliativo",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "objetivos_cuidado",
+              "op": "eq",
+              "value": "conforto_paliativo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "opposing": [
+            "Reconsiderar indicacao de revascularizacao invasiva quando o objetivo prioritario e conforto."
+          ],
+          "supporting": [
+            "Priorizar terapia clinica otimizada para controle sintomatico e integracao com cuidados paliativos."
+          ],
+          "messages": [
+            "Alinhar plano terapeutico explicitamente com objetivos de conforto ja definidos pelo paciente/familia."
+          ]
+        }
+      },
+      {
+        "id": "polifarmacia_revisao",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "numero_medicamentos",
+              "op": "gte",
+              "value": 10
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Revisao estruturada de polifarmacia com criterios STOPP/START e avaliacao de interacoes medicamentosas."
+          ],
+          "messages": [
+            "Sinalizar polifarmacia significativa para revisao periodica e desprescricao quando aplicavel."
+          ]
+        }
+      },
+      {
+        "id": "dependencia_funcional_reabilitacao",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "apresentacao_clinica",
+              "op": "eq",
+              "value": "dac_cronica_estavel"
+            },
+            {
+              "field": "capacidade_funcional",
+              "op": "in",
+              "value": [
+                "dependencia_parcial",
+                "dependencia_total"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Encaminhar para reabilitacao cardiaca adaptada a fragilidade, com avaliacao funcional previa e programa multicomponente domiciliar ou hibrido."
+          ],
+          "missing_information": [
+            "Avaliacao funcional formal (forca de preensao, velocidade de marcha) antes de definir intensidade do programa."
+          ]
+        }
+      },
+      {
+        "id": "sca_sem_supra_estavel_baixa_fragilidade",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "apresentacao_clinica",
+              "op": "eq",
+              "value": "sca_sem_supra"
+            },
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "fragilidade_cfs",
+              "op": "in",
+              "value": [
+                "vigoroso_1_3",
+                "vulneravel_4"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Considerar estrategia invasiva precoce, ja que beneficio isquemico costuma superar risco em idosos com baixa fragilidade (evidencia tipo SENIOR-RITA)."
+          ]
+        }
+      },
+      {
+        "id": "demencia_avancada_ou_neoplasia_ativa",
+        "priority": 70,
+        "when": {
+          "any": [
+            {
+              "field": "comorbidades",
+              "op": "contains",
+              "value": "demencia_avancada"
+            },
+            {
+              "field": "comorbidades",
+              "op": "contains",
+              "value": "neoplasia_ativa"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Ponderar cautelosamente indicacao de revascularizacao invasiva diante de demencia avancada ou neoplasia ativa com prognostico limitado."
+          ],
+          "missing_information": [
+            "Discussao explicita de objetivos de cuidado e prognostico global antes de procedimentos invasivos eletivos."
+          ],
+          "messages": [
+            "Considerar avaliacao conjunta com cuidados paliativos e equipe geriatrica."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Paciente muito idoso (≥85 anos) com múltiplas comorbidades: Estratégia invasiva vs. conservadora não tem resposta uniforme acima dos 80 anos — After Eighty (80+, NSTEMI/angina instável) favoreceu invasiva, mas SENIOR-RITA (75+, incluindo 32% frágeis) foi neutro no desfecho primário, com sinal de possível dano nos mais frágeis. Idade cronológica isolada não deve decidir; comorbidade acumulada e objetivos de cuidado pesam mais que o número da idade.",
+      "Fragilidade avançada com expectativa de vida limitada: A fragilidade correlaciona-se com anatomia coronariana mais complexa, e na análise secundária do SENIOR-RITA por fragilidade (critérios de Fried) o efeito pontual da estratégia invasiva se inverteu no subgrupo frágil, com sinal de dano nos níveis mais altos de fragilidade. Choque cardiogênico por IAM em paciente frágil tem mortalidade intra-hospitalar cerca do dobro e recebe suporte circulatório mecânico/revascularização com menor frequência apesar do maior risco.",
+      "Doença renal crônica concomitante: Combinação frequente com fragilidade e polifarmácia no muito idoso com DAC; exige cautela redobrada com volume de contraste em cateterismo e ajuste individualizado da estratégia antitrombótica.",
+      "Demência ou déficit cognitivo e decisão compartilhada: Comprometimento cognitivo, ao lado de delirium, fragilidade, multimorbidade e polifarmácia, compõe o quadro de complexidade geriátrica que pode tornar a estratégia invasiva de benefício marginal quando associada a risco procedimental elevado — capacidade decisória e adesão a regime antiplaquetário/antianginoso complexo dependem de função cognitiva preservada.",
+      "Polifarmácia e risco de interação medicamentosa: O esquema pós-SCA (antiagregação dupla, estatina, betabloqueador, IECA/BRA) somado a comorbidades típicas do muito idoso ultrapassa rapidamente o limiar de risco relevante de cascata de prescrição, exigindo revisão estruturada periódica.",
+      "Mulher idosa — apresentação atípica e subdiagnóstico: Mulheres com infarto chegam ao hospital mais tarde que homens, em parte porque sintomas prodrômicos não são interpretados como sinal cardíaco quando a anamnese se limita a perguntar sobre dor no peito — dispneia, síncope e confusão súbita são apresentações válidas que não devem ser descartadas pela idade ou pelo sexo.",
+      "Paciente institucionalizado (instituição de longa permanência): Combina tipicamente fragilidade avançada, comprometimento cognitivo e polifarmácia — os três modificadores que mais alteram a relação risco-benefício de estratégia invasiva e de antiagregação prolongada no muito idoso; a decisão deve envolver cuidador/equipe da instituição, não só o paciente isoladamente.",
+      "Contexto de cuidados paliativos e fim de vida: Quando fragilidade grave, multimorbidade e risco procedimental elevado se somam, entra o conceito formal de futilidade — não como sinônimo de não fazer nada, mas como critério explícito de decisão que prioriza controle de sintomas (angina refratária) sobre revascularização quando o benefício esperado é marginal ou o tempo até o benefício excede a expectativa de vida."
+    ],
+    "related_document_slugs": [
+      "angina-refrataria-no-muito-idoso-revascularizacao-versus-terapia-medica-otimizada-o-ensaio-time",
+      "doenca-coronariana-multiarterial-no-muito-idoso-cabg-versus-pci-e-o-cruzamento-entre-risco-precoce-e-beneficio-tardio",
+      "sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita",
+      "terapia-antiplaquetaria-dupla-no-muito-idoso-apos-sindrome-coronariana-aguda-escolha-e-duracao-popular-age-e-senior",
+      "fire-revascularizacao-completa-guiada-por-fisiologia-em-idosos-com-iam",
+      "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao",
+      "consultor-leigo-versus-enfermeira-de-pratica-avancada-apos-infarto-em-idoso-sem-parceiro",
+      "sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+      "fluxograma-sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+      "choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade",
+      "estatina-em-prevencao-primaria-no-muito-idoso-o-que-prosper-e-a-metanalise-ctt-mostram",
+      "estatina-no-idoso-o-ensaio-prosper-e-o-sinal-de-cancer-nao-confirmado",
+      "metas-terapeuticas-cardiovasculares-no-muito-idoso",
+      "fragilidade-como-modificador-de-decisao-cardiovascular",
+      "diretriz-brasileira-de-hipertensao-2025-metas-em-doenca-coronariana-diabetes-e-insuficiencia-cardiaca-capitulo-8",
+      "apneia-obstrutiva-do-sono-no-idoso-cardiopata-prevalencia-risco-modificado-pela-idade-e-limites-do-cpap",
+      "disfuncao-eretil-como-marcador-precoce-de-risco-cardiovascular-e-a-modificacao-do-efeito-pela-idade",
+      "isolamento-social-e-solidao-como-fatores-de-risco-cardiovascular-no-idoso",
+      "vacinacao-contra-influenza-como-prevencao-cardiovascular-no-idoso"
+    ],
+    "patient_material_slug": "doenca-coronariana-e-infarto"
   },
   {
     "slug": "cuidados-paliativos-cardiovasculares",
