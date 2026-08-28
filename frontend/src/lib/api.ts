@@ -317,6 +317,7 @@ export type Usuario = {
   workplace_notes: string | null;
   include_workplace_on_documents: boolean;
   profile_completion_required: boolean;
+  profile_completion_missing_fields?: string[];
   boas_vindas_pendente: boolean;
   assinatura_metodo_preferido: string | null;
   kyc_required: boolean;

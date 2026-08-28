@@ -159,7 +159,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
   const [dados, setDados] = useState({
     full_name: perfil.full_name ?? "",
     profession: perfil.profession ?? "",
-    council_name: perfil.council_name ?? "CRM",
+    council_name: perfil.council_name?.toUpperCase() === "OUTRO" ? "Outro" : (perfil.council_name ?? "CRM"),
     council_number: perfil.council_number ?? "",
     council_state: perfil.council_state ?? "",
     // Só usados quando council_name === "Outro" (08/08/2026) — mesmo padrão
@@ -207,9 +207,28 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
 
   const ehOutro = dados.council_name === "Outro";
   const valido = dados.full_name.trim().split(/\s+/).length >= 2;
+  const pendentesLocais = perfil.investidor ? [] : [
+    ...(!valido ? ["Nome completo"] : []),
+    ...(!dados.profession.trim() ? ["Profissão"] : []),
+    ...(!dados.council_name.trim() ? ["Conselho de classe"] : []),
+    ...(!dados.council_number.trim() ? ["Número no conselho"] : []),
+    ...(ehOutro
+      ? [
+          ...(!dados.council_name_other.trim() ? ["Nome do conselho"] : []),
+          ...(!dados.council_state_other.trim() ? ["Estado/região do conselho"] : []),
+        ]
+      : !dados.council_state ? ["UF do conselho"] : []),
+    ...(perfil.convidado && precisaCpf && !cpf.trim() ? ["CPF"] : []),
+    ...(perfil.convidado && precisaNascimento && !nascimento ? ["Data de nascimento"] : []),
+  ];
 
   async function salvar() {
     setErro("");
+    if (perfil.profile_completion_required && pendentesLocais.length > 0) {
+      setOk(false);
+      setErro(`Para continuar, preencha: ${pendentesLocais.join(", ")}.`);
+      return;
+    }
     setSalvando(true);
     try {
       const atualizado = await api.patch<Usuario>("/auth/me", {
@@ -243,7 +262,15 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         birth_date: precisaNascimento && nascimento ? nascimento : undefined,
       });
       aoSalvar(atualizado);
-      setOk(true);
+      if (atualizado.profile_completion_required) {
+        setOk(false);
+        const pendentes = atualizado.profile_completion_missing_fields ?? [];
+        setErro(pendentes.length > 0
+          ? `Os dados foram salvos, mas ainda falta: ${pendentes.join(", ")}.`
+          : "Os dados foram salvos, mas o perfil ainda precisa ser concluído.");
+      } else {
+        setOk(true);
+      }
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível salvar seus dados.");
     } finally {
@@ -252,8 +279,17 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
   }
 
   return (
-    <div className="cartao">
+    <div className="cartao" id="dados-pessoais">
       <h2 style={{ marginTop: 0 }}>Dados pessoais</h2>
+
+      {perfil.profile_completion_required && pendentesLocais.length > 0 && (
+        <div role="status" style={{ borderLeft: "3px solid var(--alerta)", paddingLeft: "0.8rem", marginBottom: "1rem" }}>
+          <strong>Falta preencher para liberar o acesso:</strong>
+          <p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)" }}>
+            {pendentesLocais.join(", ")}.
+          </p>
+        </div>
+      )}
 
       <label htmlFor="conta-nome">Nome completo</label>
       <input id="conta-nome" value={dados.full_name} onChange={(e) => set("full_name", e.target.value)} />
@@ -405,7 +441,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
       {ok && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>Dados salvos.</p>}
 
       <button className="botao" style={{ marginTop: "0.8rem" }} onClick={salvar} disabled={!valido || salvando}>
-        {salvando ? "Salvando…" : "Salvar dados"}
+        {salvando ? "Salvando…" : perfil.profile_completion_required ? "Salvar e continuar" : "Salvar dados"}
       </button>
     </div>
   );
@@ -1131,6 +1167,7 @@ export default function MinhaConta() {
   }, []);
 
   if (!perfil) return <div className="pagina"><h1>Minha conta</h1><p>Carregando…</p></div>;
+  const camposPendentes = perfil.profile_completion_missing_fields ?? [];
 
   async function encerrarSessao() {
     setSaindo(true);
@@ -1153,7 +1190,16 @@ export default function MinhaConta() {
       {perfil.profile_completion_required && (
         <div className="cartao" role="status" style={{ borderLeft: "4px solid var(--destaque)" }}>
           <strong>Complete seus dados pessoais e profissionais para continuar.</strong>
-          <p style={{ marginBottom: 0 }}>A senha atual continuará válida; não é necessário alterá-la.</p>
+          {camposPendentes.length > 0 && (
+            <p style={{ margin: "0.4rem 0" }}>
+              Falta: {camposPendentes.join(", ")}.
+            </p>
+          )}
+          <p style={{ margin: "0.4rem 0" }}>A senha atual continuará válida; não é necessário alterá-la.</p>
+          <button type="button" className="botao" style={{ marginTop: "0.4rem" }}
+                  onClick={() => document.getElementById("dados-pessoais")?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+            Ir aos campos pendentes
+          </button>
         </div>
       )}
 
@@ -1185,9 +1231,12 @@ export default function MinhaConta() {
         <PreferenciaAssinaturaEmail revisaoCertificado={revisaoCertificado} />
         <DadosPessoais
           perfil={perfil}
-          aoSalvar={(u) => {
+          aoSalvar={async (u) => {
             setPerfil(u);
-            recarregar();
+            await recarregar();
+            if (!u.profile_completion_required) {
+              navigate("/", { replace: true });
+            }
           }}
         />
         <TrocarSenha />

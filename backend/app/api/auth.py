@@ -127,6 +127,12 @@ def _perfil(db: Session, user: User) -> dict:
     from app.services.entitlement import eh_socio
 
     nome_conselho_exibicao, estado_conselho_exibicao = council_display(user)
+    # Nunca reabre automaticamente perfis legados que já foram liberados.
+    # O cálculo serve para explicar um gate ainda ativo e, principalmente,
+    # para derrubar um ``True`` obsoleto quando os dados já estão completos.
+    campos_pendentes = (
+        _campos_pendentes_perfil(user) if user.profile_completion_required else []
+    )
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
         "role": user.role, "specialty": user.specialty,
@@ -162,9 +168,11 @@ def _perfil(db: Session, user: User) -> dict:
         "instagram_handle": user.instagram_handle,
         "instagram_photo_url": user.instagram_photo_url,
         **profile_payload(user),
-        # Investidor nunca abre gate de perfil, mesmo se a conta convertida
-        # carregar dados legados/parciais ou um valor antigo persistido.
-        "profile_completion_required": False if user.investidor else user.profile_completion_required,
+        # Calculado a partir dos dados atuais, em vez de confiar apenas no
+        # booleano legado persistido. Assim uma conta já completa não fica
+        # presa se foi editada pelo admin ou criada por um fluxo antigo.
+        "profile_completion_required": bool(campos_pendentes),
+        "profile_completion_missing_fields": campos_pendentes,
         "boas_vindas_pendente": user.boas_vindas_pendente,
         "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
         "kyc_required": _kyc_required(db, user),
@@ -332,6 +340,43 @@ def _dados_pessoais_completos(user: User) -> bool:
     return bool(_nome_real(user) and (user.cpf or "").strip() and user.birth_date)
 
 
+def _campos_pendentes_perfil(user: User) -> list[str]:
+    """Campos que ainda impedem a conclusão do perfil, já em linguagem de UI.
+
+    Esta é a fonte única para o gate e para a mensagem mostrada ao titular.
+    Antes, o cliente aceitava o envio parcial e exibia "Dados salvos", mas o
+    booleano permanecia verdadeiro sem explicar o motivo do bloqueio.
+    """
+    if user.investidor:
+        return []
+
+    pendentes: list[str] = []
+    if not _nome_real(user):
+        pendentes.append("Nome completo")
+    if not (user.profession or "").strip():
+        pendentes.append("Profissão")
+    if not (user.council_name or "").strip():
+        pendentes.append("Conselho de classe")
+    if not (user.council_number or "").strip():
+        pendentes.append("Número no conselho")
+
+    eh_outro = (user.council_name or "").strip().upper() == "OUTRO"
+    if eh_outro:
+        if not (user.council_name_other or "").strip():
+            pendentes.append("Nome do conselho")
+        if not (user.council_state_other or "").strip():
+            pendentes.append("Estado/região do conselho")
+    elif not (user.council_state or "").strip():
+        pendentes.append("UF do conselho")
+
+    if user.convidado:
+        if not (user.cpf or "").strip():
+            pendentes.append("CPF")
+        if not user.birth_date:
+            pendentes.append("Data de nascimento")
+    return pendentes
+
+
 def _perfil_completo(user: User) -> bool:
     """Dispatcher do gate de perfil por tipo de conta.
 
@@ -340,11 +385,7 @@ def _perfil_completo(user: User) -> bool:
     - Convidado: dados pessoais E profissionais.
     - Assinante normal: preserva a regra profissional histórica.
     """
-    if user.investidor:
-        return True
-    if user.convidado:
-        return _dados_pessoais_completos(user) and _perfil_profissional_completo(user)
-    return _perfil_profissional_completo(user)
+    return not _campos_pendentes_perfil(user)
 
 
 @router.patch("/me")

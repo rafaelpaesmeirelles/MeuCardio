@@ -23,6 +23,7 @@ atualizar_me com preenchimento único de CPF/data de nascimento),
 `app/services/kyc/verificacao.py` (submeter, listar_pendentes).
 """
 import io
+from datetime import date
 from unittest.mock import patch
 
 import pytest
@@ -476,6 +477,53 @@ class TestPerfilCompletoPorTipoDeConta:
             profession="Cardiologista", council_name="CRM", council_number="123456", council_state="SP",
         )
         assert _perfil_completo(u) is False  # falta cpf/data de nascimento
+
+    def test_resposta_explica_pendente_e_libera_quando_todos_os_dados_chegam(self, client, db, admin):
+        _, token_admin = admin
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
+                    headers=_headers(token_admin))
+        criado = db.query(User).filter(User.email == "novo@teste.local").first()
+        token_criado = _token_para(criado)
+
+        antes = client.get("/api/auth/me", headers=_headers(token_criado))
+        assert antes.status_code == 200, antes.text
+        assert "Data de nascimento" in antes.json()["profile_completion_missing_fields"]
+
+        resposta = client.patch(
+            "/api/auth/me",
+            json={
+                "full_name": "Novo Titular da Silva",
+                "profession": "Médico",
+                "council_name": "CRM",
+                "council_number": "123456",
+                "council_state": "SP",
+                "cpf": "39053344705",
+                "birth_date": "1980-01-01",
+            },
+            headers=_headers(token_criado),
+        )
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.json()["profile_completion_required"] is False
+        assert resposta.json()["profile_completion_missing_fields"] == []
+
+    def test_flag_legado_true_nao_prende_perfil_que_ja_esta_completo(self, client, db, admin):
+        _, token_admin = admin
+        client.post("/api/admin/users", json={**CAMPOS_MINIMOS, "tipo_acesso": "convidado"},
+                    headers=_headers(token_admin))
+        criado = db.query(User).filter(User.email == "novo@teste.local").first()
+        criado.profession = "Médico"
+        criado.council_name = "CRM"
+        criado.council_number = "123456"
+        criado.council_state = "SP"
+        criado.cpf = "39053344705"
+        criado.birth_date = date(1980, 1, 1)
+        criado.profile_completion_required = True
+        db.commit()
+
+        resposta = client.get("/api/auth/me", headers=_headers(_token_para(criado)))
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.json()["profile_completion_required"] is False
+        assert resposta.json()["profile_completion_missing_fields"] == []
 
 
 # ------------------------------------------------------- CPF/NASCIMENTO ÚNICO --

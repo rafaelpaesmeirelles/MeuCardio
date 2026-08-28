@@ -343,8 +343,11 @@ def atualizar_usuario(
     alvo.is_active = dados.is_active
     alvo.convidado = dados.tipo_acesso == "convidado"
     alvo.investidor = dados.tipo_acesso == "investidor"
-    if alvo.investidor:
-        alvo.profile_completion_required = False
+    # Recalcula também para contas normais/convidadas. Antes, uma edição
+    # administrativa podia preencher todos os campos e deixar o booleano
+    # legado preso em ``True`` indefinidamente.
+    from app.api.auth import _perfil_completo
+    alvo.profile_completion_required = not _perfil_completo(alvo)
 
     db.add(AuditLog(
         user_id=admin.id,
