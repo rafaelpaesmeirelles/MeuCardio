@@ -10423,42 +10423,42 @@
     "assistant_questions": [
       {
         "id": "history_diabetes_pregestacional",
-        "text": "A gestante possui diabetes pré-gestacional ou diabetes gestacional mal controlado?",
+        "label": "A gestante possui diabetes pré-gestacional ou diabetes gestacional mal controlado?",
         "type": "boolean"
       },
       {
         "id": "anti_ro_la_positive",
-        "text": "A gestante apresenta positividade para anti-Ro/SSA ou anti-La/SSB?",
+        "label": "A gestante apresenta positividade para anti-Ro/SSA ou anti-La/SSB?",
         "type": "boolean"
       },
       {
         "id": "previous_child_chd",
-        "text": "Houve cardiopatia congênita em gestação anterior?",
+        "label": "Houve cardiopatia congênita em gestação anterior?",
         "type": "boolean"
       },
       {
         "id": "family_history_chd",
-        "text": "Existe história familiar de cardiopatia congênita em um dos genitores?",
+        "label": "Existe história familiar de cardiopatia congênita em um dos genitores?",
         "type": "boolean"
       },
       {
         "id": "nuchal_translucency_increased",
-        "text": "A translucência nucal do primeiro trimestre está aumentada?",
+        "label": "A translucência nucal do primeiro trimestre está aumentada?",
         "type": "boolean"
       },
       {
         "id": "morphology_scan_cardiac_suspicion",
-        "text": "Há suspeita de anomalia cardíaca na ultrassonografia morfológica de rotina?",
+        "label": "Há suspeita de anomalia cardíaca na ultrassonografia morfológica de rotina?",
         "type": "boolean"
       },
       {
         "id": "fetal_arrhythmia_detected",
-        "text": "Foi detectada arritmia fetal no exame obstétrico?",
+        "label": "Foi detectada arritmia fetal no exame obstétrico?",
         "type": "boolean"
       },
       {
         "id": "arrhythmia_type",
-        "text": "Qual o tipo de arritmia fetal identificada?",
+        "label": "Qual o tipo de arritmia fetal identificada?",
         "type": "select",
         "options": [
           {
@@ -10485,32 +10485,32 @@
       },
       {
         "id": "hydrops_present",
-        "text": "Há hidropisia fetal detectada ao exame de imagem?",
+        "label": "Há hidropisia fetal detectada ao exame de imagem?",
         "type": "boolean"
       },
       {
         "id": "gestational_age_weeks",
-        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "label": "Qual a idade gestacional atual, em semanas completas?",
         "type": "number"
       },
       {
         "id": "teratogenic_medication_exposure",
-        "text": "Houve exposição materna a medicação com potencial cardiotóxico fetal?",
+        "label": "Houve exposição materna a medicação com potencial cardiotóxico fetal?",
         "type": "boolean"
       },
       {
         "id": "monochorionic_twin_pregnancy",
-        "text": "Trata-se de gestação múltipla monocoriônica?",
+        "label": "Trata-se de gestação múltipla monocoriônica?",
         "type": "boolean"
       },
       {
         "id": "extracardiac_anomaly_detected",
-        "text": "Foi detectada alguma anomalia extracardíaca associada?",
+        "label": "Foi detectada alguma anomalia extracardíaca associada?",
         "type": "boolean"
       },
       {
         "id": "karyotype_performed",
-        "text": "O cariótipo ou estudo genético fetal foi realizado?",
+        "label": "O cariótipo ou estudo genético fetal foi realizado?",
         "type": "select",
         "options": [
           {
@@ -10529,7 +10529,7 @@
       },
       {
         "id": "structural_heart_defect_severity",
-        "text": "Qual a gravidade do defeito cardíaco estrutural identificado, se houver?",
+        "label": "Qual a gravidade do defeito cardíaco estrutural identificado, se houver?",
         "type": "select",
         "options": [
           {
