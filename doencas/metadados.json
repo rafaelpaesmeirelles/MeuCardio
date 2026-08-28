@@ -848,9 +848,20 @@
     "source_urls": [
       "https://professional.heart.org/en/science-news/update-on-diagnosis-and-management-of-kawasaki-disease"
     ],
-    "review_status": "revisado",
-    "review_note": "Não reproduz tabelas protegidas; escores-z devem ser calculados por fórmula validada e licenciável.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Fechamento de lacuna Tudo com Tudo de 28/08/2026 (27º lote de conteúdo do dia): ficha já estava completeness=completo, com todo o conteúdo clínico integral (epidemiology, diagnostic_approach, treatment_summary, assistant_questions/rules) e review_status=revisado, mas related_document_slugs e patient_material_slug estavam None — violação pontual da regra Tudo com Tudo (3-7 vínculos obrigatórios), descoberta ao auditar fichas completo com 0 related_document_slugs no corpus (7 encontradas). Não houve nenhuma alteração de conteúdo clínico já existente. Adicionados 7 related_document_slugs, todos confirmados por leitura real com contagem de menções centrais ao tema no texto (documento-hub próprio da doença, síndrome do choque de Kawasaki + fluxograma, trombose coronária/aneurisma de Kawasaki + fluxograma, diagnóstico diferencial com febre reumática, e dor torácica pediátrica — que cita explicitamente história pessoal de Kawasaki como sinal de alarme e referencia de volta os dois documentos centrais desta ficha). patient_material_slug definido para o material educativo já existente e correspondente. version 1 → 2. review_status volta a pendente_revisao por prudência editorial (alteração de campo estrutural em ficha publicada), mesmo sem mudança de conteúdo clínico.",
+    "version": 2,
+    "related_document_slugs": [
+      "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+      "sindrome-do-choque-da-doenca-de-kawasaki",
+      "fluxograma-sindrome-do-choque-da-doenca-de-kawasaki",
+      "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+      "fluxograma-trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+      "febre-reumatica-aguda-versus-doenca-de-kawasaki-diagnostico-diferencial",
+      "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca"
+    ],
+    "patient_material_slug": "doenca-de-kawasaki-o-que-os-pais-precisam-saber",
+    "fonte_producao": "claude"
   },
   {
     "slug": "miocardite-pediatrica",
