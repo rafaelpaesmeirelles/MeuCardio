@@ -7,10 +7,10 @@ Nota sobre verificação de citações: todos os 8 PMIDs desta rodada foram
 verificados individualmente via NCBI e-utils antes da montagem — nenhuma
 correção foi necessária.
 
-Nota sobre category: 'cardiomiopatia' segue a mesma convenção adotada de
-forma independente por outra frente de produção (PR #565, verbete-hub
-geral 'cardiomiopatias', ainda não mergeada) — nomes de slug distintos,
-sem colisão técnica.
+Nota sobre category: 'cardiomiopatia' segue a mesma convenção do hub geral
+'cardiomiopatias' integrado pelo PR #565. Os slugs são distintos e o release
+consolidado documenta a sobreposição intencional dos documentos nucleares de
+CMH entre o verbete específico e o hub de cardiomiopatias.
 """
 
 from __future__ import annotations
@@ -61,6 +61,15 @@ ALLOWED_ADD_KEYS = {
 }
 
 TERMOS_TEMA = ("hipertróf", "hipertrofia", "cmh", "sarcômero", "sarcomer")
+
+EXPECTED_SHARED_WITH_CARDIOMYOPATHY_HUB = {
+    "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+    "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+    "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+    "fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita",
+    "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+    "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+}
 
 
 def _load_doencas() -> dict[str, dict]:
@@ -194,20 +203,29 @@ def test_related_document_slugs_mencionam_tema():
         )
 
 
-def test_sem_sobreposicao_nao_documentada_com_outra_ficha():
+def test_sobreposicao_com_hub_cardiomiopatias_e_explicitamente_documentada():
     doencas = _load_doencas()
     item = doencas[SLUG]
     related = set(item.get("related_document_slugs") or [])
+    hub = doencas["cardiomiopatias"]
+    hub_related = set(hub.get("related_document_slugs") or [])
 
-    compartilhados_encontrados = set()
+    compartilhados_com_hub = related & hub_related
+    assert compartilhados_com_hub == EXPECTED_SHARED_WITH_CARDIOMYOPATHY_HUB
+
+    # A duplicação é aceitável somente entre o verbete específico e seu hub.
+    # Qualquer nova sobreposição com outra ficha continua quebrando o gate.
+    compartilhados_com_outras_fichas = set()
     for outro_slug, outro_item in doencas.items():
-        if outro_slug == SLUG:
+        if outro_slug in {SLUG, "cardiomiopatias"}:
             continue
-        outros_related = set(outro_item.get("related_document_slugs") or [])
-        compartilhados_encontrados |= (related & outros_related)
+        compartilhados_com_outras_fichas |= (
+            related & set(outro_item.get("related_document_slugs") or [])
+        )
 
-    assert compartilhados_encontrados == set(), (
-        f"sobreposição não documentada com outra ficha: {compartilhados_encontrados}"
+    assert compartilhados_com_outras_fichas == set(), (
+        "sobreposição não documentada fora do hub cardiomiopatias: "
+        f"{compartilhados_com_outras_fichas}"
     )
 
 
@@ -223,7 +241,4 @@ def test_patient_material_slug_resolve():
 
 
 def test_slug_nao_colide_com_verbete_hub_cardiomiopatias_geral():
-    # PR #565 (não mergeada) cria um slug distinto "cardiomiopatias" (hub geral,
-    # multiplos_fenotipos) — este verbete é "cardiomiopatia-hipertrofica" (subtipo
-    # específico). Garantir que continuam sendo slugs diferentes.
     assert SLUG != "cardiomiopatias"
