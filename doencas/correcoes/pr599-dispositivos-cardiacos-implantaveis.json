@@ -61,14 +61,13 @@
       "cied-infeccao-sistemica-suspeita": {
         "when": {
           "all": [
-            {"field": "systemic_infection_signs", "op": "truthy"},
             {"field": "cied_bacteremia_without_other_source", "op": "truthy"}
           ]
         },
         "add": {
           "risk": "emergencia",
-          "red_flags": ["Sinais sistêmicos + bacteremia/alta suspeita microbiológica compatíveis com possível infecção sistêmica de CIED/endocardite de eletrodo"],
-          "emergency_flow": ["Colher hemoculturas antes do antibiótico quando a condição permitir, avaliar foco alternativo e envolver rapidamente equipe de infecção/extração de CIED; não concluir infecção do dispositivo apenas por febre isolada."]
+          "red_flags": ["Bacteremia documentada/persistente sem outro foco ou alta suspeita microbiológica em portador de CIED é compatível com possível infecção sistêmica de CIED/endocardite de eletrodo, mesmo sem febre atual"],
+          "emergency_flow": ["Colher hemoculturas antes do antibiótico quando a condição permitir, avaliar foco alternativo e envolver rapidamente equipe de infecção/extração de CIED; ausência de febre/calafrios não neutraliza bacteremia persistente sem outro foco."]
         }
       },
       "cied-erosao-bolsa-infeccao-local": {
