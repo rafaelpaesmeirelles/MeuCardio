@@ -14715,7 +14715,7 @@
     "assistant_questions": [
       {
         "id": "lesao_base",
-        "text": "Qual é a lesão cardíaca congênita de base?",
+        "label": "Qual é a lesão cardíaca congênita de base?",
         "type": "select",
         "options": [
           {
@@ -14762,17 +14762,17 @@
       },
       {
         "id": "eisenmenger_ou_hp_grave",
-        "text": "Há síndrome de Eisenmenger ou hipertensão pulmonar arterial grave confirmada?",
+        "label": "Há síndrome de Eisenmenger ou hipertensão pulmonar arterial grave confirmada?",
         "type": "boolean"
       },
       {
         "id": "disfuncao_ventricular_grave",
-        "text": "Há disfunção ventricular sistêmica grave (fração de ejeção reduzida importante ou classe funcional NYHA III/IV)?",
+        "label": "Há disfunção ventricular sistêmica grave (fração de ejeção reduzida importante ou classe funcional NYHA III/IV)?",
         "type": "boolean"
       },
       {
         "id": "classe_risco_oms_esc",
-        "text": "Qual a classe de risco materno pela classificação de risco materno da OMS/ESC?",
+        "label": "Qual a classe de risco materno pela classificação de risco materno da OMS/ESC?",
         "type": "select",
         "options": [
           {
@@ -14799,12 +14799,12 @@
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Idade gestacional atual, em semanas.",
+        "label": "Idade gestacional atual, em semanas.",
         "type": "number"
       },
       {
         "id": "sinais_descompensacao_aguda",
-        "text": "Quais sinais de descompensação aguda estão presentes?",
+        "label": "Quais sinais de descompensação aguda estão presentes?",
         "type": "multiselect",
         "options": [
           {
@@ -14839,17 +14839,17 @@
       },
       {
         "id": "uso_anticoagulante",
-        "text": "A paciente está em uso de anticoagulante?",
+        "label": "A paciente está em uso de anticoagulante?",
         "type": "boolean"
       },
       {
         "id": "valva_mecanica",
-        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "label": "A paciente é portadora de prótese valvar mecânica?",
         "type": "boolean"
       },
       {
         "id": "planejamento_gestacional",
-        "text": "Em que fase do cuidado a paciente se encontra?",
+        "label": "Em que fase do cuidado a paciente se encontra?",
         "type": "select",
         "options": [
           {
@@ -14868,7 +14868,7 @@
       },
       {
         "id": "via_parto_planejada",
-        "text": "Qual a via de parto planejada?",
+        "label": "Qual a via de parto planejada?",
         "type": "select",
         "options": [
           {
@@ -14891,12 +14891,12 @@
       },
       {
         "id": "risco_endocardite_alto",
-        "text": "A paciente se enquadra em categoria de alto risco para endocardite infecciosa (cardiopatia cianótica não corrigida, material protético cardíaco recente ou endocardite prévia)?",
+        "label": "A paciente se enquadra em categoria de alto risco para endocardite infecciosa (cardiopatia cianótica não corrigida, material protético cardíaco recente ou endocardite prévia)?",
         "type": "boolean"
       },
       {
         "id": "periodo_puerperal_horas",
-        "text": "Se puérpera, quantas horas se passaram desde o parto?",
+        "label": "Se puérpera, quantas horas se passaram desde o parto?",
         "type": "number"
       }
     ],
