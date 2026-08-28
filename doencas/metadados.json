@@ -33602,5 +33602,425 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, quinto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555 e síncope PR #560). Nenhum verbete-hub geral de valvopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (valvopatias-na-gravidez, estenose-aortica-tavi-idoso e amiloidose-cardiaca-idoso no idoso, e defeitos congênitos específicos em cardiopediatria). Conecta 39 documentos já publicados e revisados em content/Valvopatias/ (37) mais 2 documentos de content/Cardiologia_geriátrica/ e 1 de content/Febre_reumática/ e 1 de content/Gravidez/ com menção direta e explícita a valvopatia, sem duplicar o escopo específico de valvopatias-na-gravidez, estenose-aortica-tavi-idoso, fragilidade-pre-procedimento-cardiovascular ou endocardite-infecciosa (referenciados como verbetes-irmãos em special_populations, não como related_document_slugs, para não confundir vínculo direto com proximidade temática entre doenças). Fontes primárias verificadas nesta sessão: diretriz ESC/EACTS de valvopatia (2021, PMID 34453165; atualização 2025, PMID 40878295; corrigendum 2026, PMID 42452857), estudos de carga epidemiológica (Nkomo 2006 PMID 16980116; Yadgir/GBD 2020 PMID 32223336; Chen/GBD reumática 2020 PMID 33110570), ensaios de intervenção estrutural (PARTNER 2/3, Evolut Low Risk, COAPT, MITRA-FR, EVEREST II, TRILUMINATE, TRISCEND II) e classificação VARC-3 (Généreux 2021, PMID 33888385). patient_material_slug omitido: não há, em material-paciente/metadados.json, um material verdadeiramente geral sobre doença valvar — todos os candidatos são específicos a uma lesão ou procedimento isolado (ex. estenose-aortica-e-troca-de-valva, o-que-esperar-da-troca-de-valvula-por-cateter-tavi); recomenda-se avaliar a criação de um material geral em ciclo futuro. Nenhuma dose de fármaco foi incluída em nenhum campo novo. Revisão clínica dirigida pelo Codex em 27/08/2026: cinco bloqueios corrigidos, taxonomia normalizada e regras validadas.",
     "version": 2,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "diabetes-mellitus-tipo-2",
+    "name": "Diabetes mellitus tipo 2 e risco cardiovascular",
+    "aliases": [
+      "DM2 e coração",
+      "diabetes e doença cardiovascular",
+      "diabetes tipo 2"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Diabetes mellitus tipo 2 é o principal multiplicador de risco cardiovascular na prática clínica adulta, com risco de eventos coronarianos, mortalidade cardiovascular e morte súbita cardíaca 2 a 4 vezes maior que em não diabéticos. Doença cardiovascular aterosclerótica e insuficiência cardíaca são a principal causa de morte e hospitalização no diabetes tipo 2. A estratificação de risco atual usa ferramentas específicas do diabetes (SCORE2-Diabetes, estratificação própria da SBD 2025) em vez de calculadoras de risco cardiovascular genéricas, e a escolha de classe terapêutica prioriza o benefício cardiovascular/renal comprovado em ensaios dedicados (inibidores de SGLT2, agonistas de GLP-1) independentemente do controle glicêmico isolado. Cobre também complicações cardiovasculares específicas — cardiomiopatia diabética e neuropatia autonômica cardíaca — e a síndrome cardiovascular-renal-metabólica (CKM), reconhecida em diretriz conjunta a partir de 2026. Escopo restrito ao risco/desfecho cardiovascular — não é verbete de manejo endocrinológico primário de glicemia.",
+    "epidemiology": "Diabetes mellitus tipo 2 é o principal multiplicador de risco cardiovascular na prática clínica adulta: entre 2 e 4 vezes mais eventos coronarianos, mortalidade cardiovascular 2 a 4 vezes maior e risco de morte súbita cardíaca aumentado de 2 a 4 vezes em relação a quem não tem diabetes, especialmente após infarto do miocárdio. Doença cardiovascular aterosclerótica e insuficiência cardíaca são a principal causa de morte e de hospitalização em diabetes tipo 2, superando complicações microvasculares em impacto populacional. O rastreamento é bidirecional: entre 10% e 47% dos pacientes que se apresentam com evento cardiovascular agudo têm diabetes não diagnosticado previamente, o que justifica investigar diabetes sistematicamente em todo paciente com doença cardiovascular, assim como investigar doença cardiovascular e doença renal crônica em todo paciente com diabetes. A partir da diretriz ESC 2023, a estratificação deixou de se apoiar em calculadoras de risco cardiovascular geral — o SCORE2-Diabetes incorpora variáveis específicas do diabetes (idade ao diagnóstico, HbA1c, TFGe) além dos fatores convencionais, classificando o paciente em risco baixo, moderado, alto ou muito alto; a Sociedade Brasileira de Diabetes (2025) vai além e recomenda explicitamente não usar calculadoras tradicionais (Framingham, SCORE2, PCE) em diabetes tipo 2, por imprecisão nessa população, propondo estratificação própria por idade e estratificadores clínicos, na qual idade isolada (homem ≥50 anos, mulher ≥56 anos) já desloca o paciente para a categoria de alto risco mesmo sem nenhum outro fator. Complicações cardiovasculares específicas do diabetes — cardiomiopatia diabética (disfunção miocárdica independente de doença coronariana e hipertensão, com prevalência subestimada porque a fração de ejeção costuma permanecer preservada nos estágios iniciais) e neuropatia autonômica cardíaca (lesão das fibras autonômicas cardiovasculares associada a mortalidade até 3,45 vezes maior quando dois ou mais testes de Ewing estão alterados) — ampliam esse risco por vias que escapam da avaliação cardiovascular tradicional centrada em placa aterosclerótica. A partir de 2026, a síndrome cardiovascular-renal-metabólica (CKM), reconhecida na diretriz conjunta AHA/ACC/ADA/ASN, formaliza que diabetes, obesidade, doença renal crônica e doença cardiovascular compartilham mecanismos fisiopatológicos e devem ser avaliados e tratados como um continuum único, e não como comorbidades isoladas em silos assistenciais.",
+    "presentation": [
+      "Frequentemente assintomático do ponto de vista cardiovascular por anos — a estratificação de risco e o rastreamento sistemático precedem qualquer sintoma, e não devem depender dele",
+      "Isquemia miocárdica silenciosa: dor torácica ausente ou atípica mesmo diante de defeito de perfusão moderado a grande, atribuída em parte à neuropatia autonômica cardíaca que reduz a percepção de dor isquêmica",
+      "Dispneia aos esforços ou intolerância ao exercício como equivalente anginoso, particularmente relevante quando há cardiomiopatia diabética ou neuropatia autonômica com incompetência cronotrópica associada",
+      "Sinais e sintomas de insuficiência cardíaca (dispneia, edema, fadiga, ortopneia) que podem ser a primeira manifestação cardiovascular clinicamente evidente, inclusive com fração de ejeção preservada",
+      "Sintomas de disautonomia cardiovascular: tontura postural, síncope ou pré-síncope, taquicardia de repouso fixa e não responsiva a estímulos fisiológicos, intolerância ortostática",
+      "Sinais periféricos de doença vascular associada — sopro carotídeo, claudicação, doença arterial periférica — que devem disparar investigação cardiovascular dirigida mesmo sem sintoma cardíaco típico",
+      "Fibrilação atrial de início em idade mais jovem que a população geral, justificando rastreamento oportunístico por palpação de pulso ou ECG a partir dos 65 anos, e antes disso quando há fatores de risco associados",
+      "Achado incidental de alteração eletrocardiográfica sugestiva (por exemplo onda Q) em paciente sem relato de evento coronariano prévio, compatível com infarto silencioso"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial_obrigatoria": "Todo paciente com diabetes tipo 2 deve ser avaliado, na consulta inicial e periodicamente, quanto à presença de doença cardiovascular estabelecida e de dano de órgão-alvo grave — definido por TFG estimada, relação albumina/creatinina urinária (UACR) ou doença microvascular em pelo menos três sítios diferentes (por exemplo microalbuminúria associada a retinopatia e neuropatia). Essa avaliação determina diretamente a via terapêutica: presença de doença aterosclerótica estabelecida ou de insuficiência cardíaca dispensa o cálculo de escore de risco e indica terapia cardioprotetora direta.",
+      "estratificacao_de_risco": "Na ausência de doença cardiovascular estabelecida e de lesão grave de órgão-alvo, o risco em 10 anos é estimado pelo SCORE2-Diabetes (ESC 2023), que combina fatores convencionais (idade, tabagismo, pressão arterial sistólica, colesterol total e HDL) com variáveis específicas do diabetes (idade ao diagnóstico, HbA1c, TFGe), classificando o paciente em baixo (<5%), moderado (5% a <10%), alto (10% a <20%) ou muito alto risco (≥20%). A diretriz da Sociedade Brasileira de Diabetes (2025) propõe alternativa própria, por categorias de taxa anualizada de eventos (baixo ~1%, intermediário 1-2%, alto 2-3%, muito alto >3%) definidas por idade e por estratificadores de alto risco (EAR) e de muito alto risco (EMAR) — explicitamente sem uso de calculadoras de risco tradicionais, por imprecisão reconhecida em diabetes tipo 2. A partir de 2026, o arcabouço CKM (AHA/ACC/ADA/ASN) integra risco cardiovascular, renal e metabólico num estadiamento 0 a 4 e nas equações PREVENT (risco em 10 e 30 anos), reconhecendo tanto progressão quanto possibilidade de regressão de estágio.",
+      "avaliacao_renal_obrigatoria": "Toda pessoa com diabetes tipo 2 deve ter TFGe e UACR avaliadas de forma regular e conjunta — a albuminúria pode sinalizar risco cardiovascular e renal relevante mesmo quando a filtração glomerular ainda está relativamente preservada, e a combinação dos dois marcadores (não a creatinina isolada) é o que orienta tanto o estadiamento CKM quanto a indicação de terapias nefro e cardioprotetoras.",
+      "rastreio_de_doenca_coronariana_assintomatica": "As diretrizes atuais (ADA, ESC 2023/2024, diretriz americana de doença coronariana crônica 2023) convergem contra o rastreio sistemático de isquemia silenciosa no diabético tipo 2 assintomático — posição sustentada pelo ensaio randomizado DIAD (1.123 pacientes, HR 0,88 para morte cardíaca/infarto não fatal com cintilografia de perfusão vs. não rastrear), no qual o exame estratificou risco de verdade (HR 6,3 para defeito moderado/grande) mas com valor preditivo positivo de apenas 12%, insuficiente para mover o desfecho populacional. Escore de cálcio coronário por tomografia sem contraste pode ser considerado (ESC/EAS 2025, Classe IIa Nível B) como refinamento de risco em subgrupos selecionados de risco muito alto (doença arterial periférica, proteinúria, TFGe <30, hipertrofia ventricular esquerda, retinopatia ou múltiplos fatores de risco maiores) quando o resultado plausivelmente mudaria a conduta terapêutica, e não como estratégia de rastreio indiscriminado. Investigação dirigida por sintoma atípico, sinal de doença vascular associada ou alteração eletrocardiográfica sugestiva é conceitualmente distinta do rastreio sistemático e permanece indicada.",
+      "avaliacao_de_neuropatia_autonomica_cardiaca": "Rastreio de sintomas e sinais de disautonomia (hipotensão ortostática, taquicardia de repouso fixa, tontura postural, saciedade precoce, alteração da sudorese) indicado a partir do diagnóstico em diabetes tipo 2, com reavaliação ao menos anual (ADA Standards of Care 2026, Recomendação 12.19, nível de evidência E). Quando o rastreio clínico é positivo, a confirmação diagnóstica usa a bateria de testes de Ewing (variação da frequência cardíaca com respiração profunda, razão de Valsalva, razão 30:15 postural e resposta pressórica ao ortostatismo e ao handgrip), estratificando em neuropatia autonômica precoce (um teste cardiovagal alterado), definida (dois ou mais testes cardiovagais alterados) ou grave (dois ou mais testes associados a hipotensão ortostática) pelo Consenso de Toronto.",
+      "avaliacao_de_cardiomiopatia_diabetica": "Suspeitar em paciente diabético com sintomas ou sinais de disfunção cardíaca sem doença arterial coronariana ou hipertensão que os explique. Como os parâmetros ecocardiográficos convencionais (fração de ejeção) costumam permanecer normais nos estágios iniciais, a ecocardiografia com speckle tracking e medida do strain longitudinal global é o método mais sensível para detecção precoce, revelando disfunção subclínica mesmo com fração de ejeção preservada; diretrizes padronizadas específicas de rastreamento sistemático por imagem ainda são escassas."
+    },
+    "differentials": [
+      "Doença cardiovascular aterosclerótica de causa não diabética (dislipidemia primária, tabagismo, hipertensão isolada) — relevante porque a presença de diabetes não deve levar a atribuir automaticamente todo achado cardiovascular ao diabetes, nem a deixar de investigar outros fatores de risco tratáveis",
+      "Cardiomiopatia de outra etiologia (isquêmica, hipertensiva, valvar, infiltrativa, alcoólica) — a cardiomiopatia diabética é diagnóstico de exclusão dessas causas mais comuns de disfunção miocárdica, especialmente quando a fração de ejeção já está reduzida",
+      "Neuropatia autonômica de outra causa (amiloidose, doença de Parkinson e outras sinucleinopatias, uremia avançada, efeito medicamentoso) — deve ser excluída antes de atribuir hipotensão ortostática ou taquicardia de repouso à neuropatia autonômica cardíaca diabética",
+      "Hipotensão ortostática por causa mais comum que a neuropatia autonômica — depleção volêmica, efeito de anti-hipertensivo, insuficiência adrenal — a serem descartadas antes do diagnóstico de neuropatia autonômica cardíaca",
+      "Arritmia e alteração do intervalo QT por causa distinta da hipoglicemia ou da neuropatia autonômica — distúrbio eletrolítico, efeito medicamentoso pró-arrítmico, canalopatia congênita — especialmente relevante ao interpretar os três primeiros testes de Ewing, cujo resultado pode ser confundido por fibrilação atrial ou por fármacos cronotrópicos (betabloqueador, ivabradina)",
+      "Insuficiência cardíaca de fração de ejeção reduzida por doença arterial coronariana estabelecida versus cardiomiopatia diabética não isquêmica — distinção que muda a investigação (necessidade de excluir isquemia) ainda que a terapia farmacológica de base seja convergente"
+    ],
+    "tests": [
+      "SCORE2-Diabetes: calculadora validada para estimar risco cardiovascular fatal/não fatal em 10 anos especificamente em diabetes tipo 2 sem doença aterosclerótica estabelecida nem lesão grave de órgão-alvo; limitação — não se aplica a quem já tem DCV estabelecida ou dano de órgão-alvo grave, população que já está automaticamente em risco muito alto por definição",
+      "HbA1c e TFGe seriadas: compõem tanto a estratificação de risco (SCORE2-Diabetes) quanto o estadiamento CKM; limitação — refletem controle metabólico e função renal, não substituem avaliação cardiovascular direta nem UACR para avaliação renal completa",
+      "Relação albumina/creatinina urinária (UACR): necessária em conjunto com a TFGe para avaliação renal completa; limitação — pode estar elevada por causas transitórias (exercício, febre, infecção urinária), exigindo confirmação antes de assumir dano renal crônico estabelecido",
+      "Cintilografia de perfusão miocárdica com estresse ou outro teste funcional/anatômico de isquemia: tem alto poder discriminativo entre quem tem e quem não tem defeito de perfusão relevante (HR 6,3 para defeito moderado/grande no DIAD), mas limitação central — valor preditivo positivo de apenas 12% na população assintomática de risco basal baixo, e o rastreio sistemático não reduziu infarto ou morte cardíaca nesse cenário; reservar para sintoma atípico, sinal de doença vascular associada ou alteração eletrocardiográfica sugestiva, não para rastreio indiscriminado do assintomático",
+      "Escore de cálcio coronário (Agatston) por tomografia computadorizada sem contraste: refinamento de risco em subgrupo de muito alto risco ou perto do limiar de decisão terapêutica (ESC/EAS 2025, Classe IIa Nível B); limitação — a interpretação por faixa (0 / 1-99 / 100-299 / ≥300) vem de literatura de prevenção cardiovascular geral extrapolada ao diabético, não de ensaio randomizado dedicado a essa população, e um escore elevado não determina automaticamente indicação de revascularização",
+      "Ecocardiografia com speckle tracking e strain longitudinal global: parâmetro mais sensível para detecção precoce de cardiomiopatia diabética, alterado mesmo com fração de ejeção preservada; limitação — ainda não há diretriz padronizada específica sobre frequência e critério de rastreamento sistemático por essa técnica na população diabética assintomática",
+      "Bateria de testes de Ewing (variação da FC com respiração profunda, razão de Valsalva, razão 30:15, resposta pressórica ao ortostatismo e ao handgrip): padrão para confirmar neuropatia autonômica cardíaca quando o rastreio clínico anual é positivo; limitação — os três testes que dependem da variação da FC podem ser confundidos por fibrilação atrial ou por fármacos cronotrópicos, exigindo exclusão desses fatores antes de atribuir o achado à neuropatia autonômica",
+      "ECG de repouso e rastreio oportunístico de fibrilação atrial por palpação de pulso ou ECG: indicado sistematicamente a partir dos 65 anos (Classe I, ESC 2023) e considerado antes disso na presença de fatores de risco associados; limitação — ECG isolado tem baixa sensibilidade para isquemia silenciosa e não substitui investigação dirigida quando há sintoma ou sinal de alarme"
+    ],
+    "red_flags": [
+      "Doença cardiovascular aterosclerótica já estabelecida (coronariana, cerebrovascular ou arterial periférica) — define automaticamente risco muito alto e indicação de terapia cardioprotetora direta, independentemente do controle glicêmico",
+      "Sinais ou sintomas de insuficiência cardíaca em qualquer consulta de rotina — investigação sistemática recomendada em toda consulta clínica do paciente diabético, dado o risco elevado e frequentemente subdiagnosticado de IC nessa população",
+      "Neuropatia autonômica cardíaca grave (dois ou mais testes de Ewing alterados associados a hipotensão ortostática) — associada a risco de mortalidade em 5 anos aproximadamente 5 vezes maior, e a risco somado de arritmia quando coexiste uso de insulina/sulfonilureia ou hipoglicemia grave, pelo prolongamento do QTc",
+      "Taquicardia de repouso fixa e não responsiva a estímulos fisiológicos — achado tardio na história natural da neuropatia autonômica cardíaca, sinalizando denervação avançada e maior risco de morte súbita",
+      "Sintoma cardíaco atípico, sopro carotídeo, antecedente de AIT/AVC, claudicação ou onda Q ao ECG em paciente considerado assintomático — indicação de investigação cardiovascular dirigida, não de rastreio de rotina",
+      "Dano de órgão-alvo grave (TFGe reduzida, UACR elevada ou doença microvascular em três ou mais sítios) — reclassifica o paciente para risco muito alto independentemente do escore calculado, e antecipa a indicação de terapia com benefício cardiovascular e renal comprovado",
+      "Hipoglicemia grave recorrente em paciente com neuropatia autonômica cardíaca conhecida — combinação que soma risco arrítmico pelo prolongamento do QTc, exigindo individualização de meta glicêmica e priorização de fármacos com baixo risco de hipoglicemia"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico de diabetes tipo 2 e classificar o risco cardiovascular associado, distinguindo doença aterosclerótica já estabelecida, insuficiência cardíaca, doença renal crônica ou apenas fatores de risco isolados",
+      "Priorizar, na escolha da classe terapêutica, o benefício cardiovascular e renal já demonstrado em ensaios dedicados — inibidor de SGLT2 e/ou agonista do receptor de GLP-1 — independentemente do valor de hemoglobina glicada",
+      "Individualizar a meta de hemoglobina glicada pelo tempo de doença, pela expectativa de vida e pelo risco de hipoglicemia, evitando metas muito rígidas no diabético de longa data com doença cardiovascular já estabelecida",
+      "Considerar metformina como classe complementar de controle glicêmico mesmo na insuficiência cardíaca crônica e estável, reservando cautela para o estado agudo de hipóxia, hipoperfusão ou instabilidade hemodinâmica",
+      "Rastrear sintomas de neuropatia autonômica cardíaca e de hipoglicemia despercebida, sobretudo em quem já usa insulina ou sulfonilureia",
+      "Planejar com antecedência a suspensão perioperatória do inibidor de SGLT2 antes de qualquer cirurgia ou procedimento invasivo eletivo com jejum programado",
+      "Encaminhar para avaliação conjunta de cardiologia e endocrinologia quando houver insuficiência cardíaca, doença renal crônica associada, doença coronariana multiarterial ou dúvida sobre a combinação de classes terapêuticas cardioprotetoras"
+    ],
+    "emergency_flow": [
+      "Diante de sintomas compatíveis com acidose (náusea, vômitos, dor abdominal, taquipneia, mal-estar) em paciente usando inibidor de SGLT2, dosar cetonas e gasometria/bicarbonato independentemente do valor da glicemia capilar — glicemia normal não afasta cetoacidose euglicêmica",
+      "Em síndrome coronariana aguda com hiperglicemia de estresse, tratar a instabilidade coronariana pelo protocolo específico de dor torácica aguda, sem atribuir os sintomas à hiperglicemia isoladamente nem adiar a investigação isquêmica",
+      "Em hipoglicemia grave com sintomas sugestivos de arritmia (palpitação, síncope ou alteração de consciência), tratar a hipoglicemia imediatamente e obter eletrocardiograma para avaliar prolongamento do intervalo QT",
+      "No perioperatório de cirurgia de urgência sem suspensão prévia do inibidor de SGLT2, manter monitorização diária de cetonas capilares mesmo com glicemia normal até a alimentação e a hidratação orais normalizarem",
+      "Em cuidado crítico ou cirurgia cardíaca, manter o controle glicêmico dentro da faixa recomendada para paciente crítico, evitando tanto a hiperglicemia franca quanto metas muito rígidas associadas a maior risco de hipoglicemia grave e de mortalidade"
+    ],
+    "treatment_summary": "No paciente adulto com diabetes mellitus tipo 2, a escolha de tratamento deixou de ser guiada apenas pelo controle glicêmico e passou a priorizar, em primeira linha, o desfecho cardiovascular e renal que cada classe terapêutica demonstrou reduzir em ensaios dedicados, independentemente do valor de hemoglobina glicada. Os inibidores de SGLT2 (iSGLT2), testados no EMPA-REG OUTCOME (população predominantemente com doença cardiovascular aterosclerótica já estabelecida) e no DECLARE-TIMI 58 (população mais ampla, majoritariamente sem doença estabelecida), mostraram efeito consistente e reprodutível sobre um desfecho específico — a redução de hospitalização por insuficiência cardíaca — mesmo em cenários em que a redução de eventos cardiovasculares maiores (MACE) não atingiu significância estatística, como ocorreu no DECLARE. Essa classe terapêutica é hoje indicada no diabético tipo 2 com insuficiência cardíaca de qualquer fração de ejeção, doença aterosclerótica estabelecida ou doença renal crônica, independentemente do controle glicêmico. Os agonistas do receptor de GLP-1, testados no LEADER, no SUSTAIN-6 e no REWIND, reduziram de forma consistente o composto de morte cardiovascular, infarto não fatal e AVC não fatal, com magnitude de efeito semelhante entre os três ensaios; o REWIND, com critério de entrada mais amplo, incluindo pacientes com apenas fatores de risco cardiovascular e sem evento prévio, sustenta o uso dessa classe também em prevenção mais primária dentro do diabetes tipo 2. Nenhum dos ensaios comparou diretamente as moléculas entre si, e a semelhança de efeito entre elas não deve ser lida como equivalência comprovada. Uma metanálise em rede recente mostrou que associar as duas classes terapêuticas reduz, de forma estatisticamente significativa, a hospitalização por insuficiência cardíaca além do que cada classe isolada oferece, mas não demonstrou, com significância estatística, redução adicional de eventos cardiovasculares maiores ou de eventos renais maiores sobre a monoterapia — a decisão de combinar as duas classes segue apoiada primariamente no benefício já demonstrado de cada uma isoladamente contra placebo, não numa prova direta de superioridade da combinação. A metformina, historicamente evitada em insuficiência cardíaca por temor de acidose láctica, tem hoje evidência de segurança e de benefício potencial nesse cenário: metanálise recente de ensaios clínicos randomizados mostrou associação com menor mortalidade geral e cardiovascular em diabetes tipo 2 com insuficiência cardíaca crônica, e diretrizes atuais recomendam considerá-la como classe terapêutica de controle glicêmico complementar na insuficiência cardíaca crônica e estável, com função renal preservada ou moderadamente reduzida — a ressalva histórica de acidose láctica concentra-se no estado agudo, com hipóxia, hipoperfusão ou instabilidade hemodinâmica, e não na insuficiência cardíaca crônica compensada. Quanto ao controle glicêmico intensivo em si, os ensaios ACCORD, ADVANCE e VADT, conduzidos em diabéticos de longa data já com fatores de risco cardiovascular estabelecidos, não mostraram redução de eventos cardiovasculares maiores com metas de hemoglobina glicada muito baixas, e o ACCORD foi interrompido precocemente por excesso de mortalidade no grupo submetido a controle intensivo, à custa de mais hipoglicemia grave. O seguimento de dez anos do UKPDS, em diabéticos recém-diagnosticados, mostrou que o benefício de controle glicêmico precoce e sustentado sobre infarto e mortalidade pode levar cerca de uma década para se manifestar — o chamado efeito legado —, mesmo depois que a diferença de hemoglobina glicada entre os grupos originais já havia desaparecido. A leitura conjunta desses ensaios orienta a não perseguir metas glicêmicas muito rígidas no diabético de longa data com doença cardiovascular já estabelecida, individualizando o alvo pelo tempo de doença, pela expectativa de vida e pelo risco de hipoglicemia, e reservando metas mais intensivas para quem está no início da doença e tem horizonte de vida compatível com o tempo necessário para o benefício aparecer. No manejo perioperatório, os inibidores de SGLT2 exigem suspensão programada antes de cirurgia eletiva ou procedimento invasivo com jejum, pelo risco de cetoacidose diabética euglicêmica — quadro que cursa com glicemia normal ou apenas discretamente elevada e por isso escapa da suspeita clínica habitual —, com reintrodução somente quando a ingesta oral tiver retornado ao padrão basal e a doença aguda intercorrente estiver resolvida; em cirurgia de urgência, sem tempo hábil para suspensão programada, mantém-se vigilância clínica ativa com monitorização de cetonas mesmo diante de glicemia normal. O paciente adulto com diabetes tipo 2 e doença cardiovascular estabelecida ou de alto risco cardiovascular — sobretudo diante de insuficiência cardíaca, doença renal crônica associada, necessidade de revascularização multiarterial, hipoglicemias graves recorrentes ou dúvida sobre a escolha e a associação de classes terapêuticas com benefício cardiovascular comprovado — deve ser acompanhado em conjunto por cardiologia e endocrinologia, com decisão compartilhada sobre metas glicêmicas, escolha e combinação de classes terapêuticas e manejo perioperatório.",
+    "monitoring": [
+      "Hemoglobina glicada com meta individualizada pelo tempo de doença, comorbidades cardiovasculares e risco de hipoglicemia",
+      "Função renal estimada e potássio, sobretudo ao iniciar ou ajustar inibidor de SGLT2, metformina ou associação com finerenona",
+      "Sinais e sintomas de insuficiência cardíaca, incluindo peso, edema e capacidade funcional, no diabético em uso de classes terapêuticas cardioprotetoras",
+      "Frequência e gravidade de episódios de hipoglicemia, incluindo hipoglicemia despercebida e sintomas noturnos",
+      "Rastreio de neuropatia autonômica cardíaca e de isquemia miocárdica silenciosa em diabéticos de maior risco cardiovascular",
+      "Adesão e tolerância às classes terapêuticas com benefício cardiovascular comprovado, incluindo efeitos gastrointestinais do agonista de GLP-1 e infecção genital do inibidor de SGLT2"
+    ],
+    "special_populations": [
+      "Diabetes tipo 1 de longa duração: calcificação coronariana acelerada mesmo com bom controle glicêmico (coortes CACTI e DCCT/EDIC), exigindo reclassificação de risco cardiovascular independente da idade cronológica",
+      "Diabetes tipo 1 de início precoce: registros suecos mostram que quanto menor a idade de diagnóstico, maior o excesso de risco cardiovascular e mortalidade ao longo da vida em relação a não diabéticos",
+      "Diabetes gestacional: risco cardiovascular materno de longo prazo elevado mesmo após normalização da glicemia no pós-parto, com necessidade de rastreio cardiovascular estruturado nos anos seguintes",
+      "Diabetes tipo 2 de início precoce (jovem adulto): fenótipo mais agressivo, com aceleração do risco cardiovascular e maior carga cumulativa de exposição à hiperglicemia e a fatores de risco associados",
+      "Idoso com diabetes tipo 2 e polifarmácia: necessidade de individualizar metas glicêmicas e pressóricas, considerar risco de hipoglicemia e interações medicamentosas, e priorizar fármacos com benefício cardiovascular e renal comprovado",
+      "Doença renal crônica diabética: síndrome cardiovascular-renal-metabólica (CKM) com risco cardiovascular amplificado pela perda de função renal, exigindo terapia combinada (iSGLT2, finerenona, bloqueio do SRAA) e monitorização renal estreita"
+    ],
+    "assistant_questions": [
+      {
+        "id": "acidosis_symptoms_on_sglt2",
+        "label": "Há náusea, vômitos, dor abdominal, taquipneia ou mal-estar desproporcional em paciente usando inibidor de SGLT2?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "acute_coronary_symptoms",
+        "label": "Há dor torácica aguda, nova ou em repouso, associada a hiperglicemia?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "established_ascvd",
+        "label": "Há doença cardiovascular aterosclerótica já estabelecida (infarto, AVC, doença arterial periférica ou revascularização prévia)?",
+        "type": "boolean",
+        "required": true,
+        "section": "História cardiovascular"
+      },
+      {
+        "id": "heart_failure",
+        "label": "Há insuficiência cardíaca associada, de qualquer fração de ejeção?",
+        "type": "boolean",
+        "required": true,
+        "section": "Comorbidades"
+      },
+      {
+        "id": "ckd_associated",
+        "label": "Há doença renal crônica associada (albuminúria ou taxa de filtração glomerular estimada reduzida)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Comorbidades"
+      },
+      {
+        "id": "current_cv_protective_therapy",
+        "label": "O paciente já usa alguma destas classes com benefício cardiovascular comprovado?",
+        "type": "multiselect",
+        "required": true,
+        "section": "Tratamento atual",
+        "options": [
+          {
+            "value": "isglt2",
+            "label": "Inibidor de SGLT2"
+          },
+          {
+            "value": "glp1_ra",
+            "label": "Agonista do receptor de GLP-1"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma das duas"
+          }
+        ]
+      },
+      {
+        "id": "scheduled_surgery_on_sglt2",
+        "label": "Há cirurgia ou procedimento invasivo programado enquanto o paciente está em uso de inibidor de SGLT2?",
+        "type": "boolean",
+        "required": true,
+        "section": "Perioperatório"
+      },
+      {
+        "id": "autonomic_neuropathy_symptoms",
+        "label": "Há sintomas sugestivos de neuropatia autonômica cardíaca, como intolerância ortostática, taquicardia de repouso fixa ou hipotensão postural?",
+        "type": "boolean",
+        "required": false,
+        "section": "Neuropatia autonômica"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "dmt2cv-cad-euglicemica-suspeita",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acidosis_symptoms_on_sglt2",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível cetoacidose diabética euglicêmica associada a inibidor de SGLT2"
+          ],
+          "suggested_tests": [
+            "Cetonas em sangue ou urina e gasometria/bicarbonato, independentemente do valor da glicemia capilar"
+          ],
+          "emergency_flow": [
+            "Investigar e tratar como possível cetoacidose euglicêmica mesmo com glicemia normal ou pouco elevada; a glicemia normal não afasta o diagnóstico"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-sca-hiperglicemia-estresse",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_coronary_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível síndrome coronariana aguda com hiperglicemia de estresse"
+          ],
+          "emergency_flow": [
+            "Migrar imediatamente para protocolo de dor torácica aguda com eletrocardiograma e troponina seriada, sem atribuir os sintomas à hiperglicemia isoladamente"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-cirurgia-programada-isglt2",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "scheduled_surgery_on_sglt2",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Risco de cetoacidose euglicêmica perioperatória associada a inibidor de SGLT2"
+          ],
+          "ambulatory_flow": [
+            "Planejar a suspensão do inibidor de SGLT2 com antecedência adequada antes do procedimento e monitorizar cetonas no perioperatório"
+          ],
+          "messages": [
+            "Suspender o inibidor de SGLT2 antes de cirurgia programada e reintroduzi-lo apenas após retomada da ingesta oral basal e resolução de doença aguda intercorrente"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-ic-associada",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "heart_failure",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Insuficiência cardíaca associada favorece indicação de inibidor de SGLT2 como classe terapêutica cardioprotetora, independentemente do controle glicêmico"
+          ],
+          "messages": [
+            "Priorizar inibidor de SGLT2 como classe terapêutica pelo benefício consistente sobre hospitalização por insuficiência cardíaca"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-drc-associada",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "ckd_associated",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Doença renal crônica associada favorece indicação de classe terapêutica com benefício renal comprovado"
+          ],
+          "messages": [
+            "Avaliar a taxa de filtração glomerular estimada para definir elegibilidade ao inibidor de SGLT2; considerar agonista de GLP-1 quando a função renal não permitir seu início"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-ascvd-estabelecida",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "established_ascvd",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Doença cardiovascular aterosclerótica estabelecida é indicação para classe terapêutica com benefício cardiovascular comprovado"
+          ],
+          "messages": [
+            "Priorizar classe terapêutica com redução de eventos cardiovasculares maiores demonstrada em ensaio dedicado (inibidor de SGLT2 e/ou agonista de GLP-1)"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-sem-terapia-protetora",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "current_cv_protective_therapy",
+              "op": "contains",
+              "value": "nenhuma"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Classe terapêutica com benefício cardiovascular comprovado ainda não iniciada"
+          ],
+          "messages": [
+            "Reavaliar a introdução de inibidor de SGLT2 e/ou agonista de GLP-1 conforme a condição predominante do paciente"
+          ]
+        }
+      },
+      {
+        "id": "dmt2cv-neuropatia-autonomica",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "autonomic_neuropathy_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Testes padronizados de variação da frequência cardíaca para neuropatia autonômica cardíaca"
+          ],
+          "messages": [
+            "Neuropatia autonômica cardíaca é marcador de risco cardiovascular aumentado; considerar rastreio de isquemia silenciosa quando associada a outros fatores de risco"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "diabetes mellitus tipo 2",
+      "risco cardiovascular",
+      "iSGLT2",
+      "GLP-1",
+      "cardiomiopatia diabética",
+      "neuropatia autonômica cardíaca",
+      "síndrome cardiovascular-renal-metabólica"
+    ],
+    "source_refs": [
+      "Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663.",
+      "American Diabetes Association Professional Practice Committee. 10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes-2026. Diabetes Care. 2026;49(Suppl 1):S216-S245. DOI: 10.2337/dc26-S010. PMID: 41358899.",
+      "Ndumele CE, Rodriguez F, Dixon DL, et al. 2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome. J Am Coll Cardiol. 2026;87(22S):e1889-e2007. DOI: 10.1016/j.jacc.2026.03.056. PMID: 42265997.",
+      "Sociedade Brasileira de Diabetes. Diretriz da Sociedade Brasileira de Diabetes — Edição 2025, capítulo Manejo do Risco Cardiovascular: Dislipidemia. DOI: 10.29327/5660187.",
+      "Gogan A, Potre O, Avram V-F, Andor M, Caruntu F, Timar B. Cardiac Autonomic Neuropathy in Diabetes Mellitus: Pathogenesis, Epidemiology, Diagnosis and Clinical Implications: A Narrative Review. J Clin Med. 2025;14(3):671. DOI: 10.3390/jcm14030671. PMID: 39941342.",
+      "Maser RE, Mitchell BD, Vinik AI, Freeman R. The association between cardiovascular autonomic neuropathy and mortality in individuals with diabetes: a meta-analysis. Diabetes Care. 2003;26(6):1895-1901. PMID: 12766130.",
+      "Pop-Busui R, Boulton AJM, Feldman EL, et al. Diabetic Neuropathy: A Position Statement by the American Diabetes Association. Diabetes Care. 2017;40(1):136-154. PMID: 27999003.",
+      "Young LH, Wackers FJT, Chyun DA, et al; DIAD Investigators. Cardiac outcomes after screening for asymptomatic coronary artery disease in patients with type 2 diabetes: the DIAD study: a randomized controlled trial. JAMA. 2009;301(15):1547-1555. DOI: 10.1001/jama.2009.476. PMID: 19366774.",
+      "Santilli F, Blaha MJ, Ricci F, Simeone P. Hunting for a coronary artery disease diagnosis in asymptomatic patients with diabetes mellitus: if, how and when. Cardiovasc Diabetol. 2025;24(1):418. DOI: 10.1186/s12933-025-02966-4. PMID: 41185007.",
+      "Capes SE, Hunt D, Malmberg K, Gerstein HC. Stress hyperglycaemia and increased risk of death after myocardial infarction in patients with and without diabetes: a systematic overview. Lancet. 2000;355(9206):773-778. PMID: 10711923.",
+      "Huang K, Luo X, Liao B, Li G, Feng J. Insights into SGLT2 inhibitor treatment of diabetic cardiomyopathy: focus on the mechanisms. Cardiovasc Diabetol. 2023;22:86. DOI: 10.1186/s12933-023-01816-5. PMID: 37055837."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37622663/",
+      "https://pubmed.ncbi.nlm.nih.gov/41358899/",
+      "https://pubmed.ncbi.nlm.nih.gov/42265997/",
+      "https://diretriz.diabetes.org.br/",
+      "https://pubmed.ncbi.nlm.nih.gov/39941342/",
+      "https://pubmed.ncbi.nlm.nih.gov/12766130/",
+      "https://pubmed.ncbi.nlm.nih.gov/27999003/",
+      "https://pubmed.ncbi.nlm.nih.gov/19366774/",
+      "https://pubmed.ncbi.nlm.nih.gov/41185007/",
+      "https://pubmed.ncbi.nlm.nih.gov/10711923/",
+      "https://cardiab.biomedcentral.com/articles/10.1186/s12933-023-01816-5"
+    ],
+    "related_document_slugs": [
+      "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+      "ada-standards-of-care-2026-capitulo-10-doenca-cardiovascular-e-manejo-de-risco",
+      "estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025",
+      "aha-acc-ada-asn-2026-sindrome-cardiovascular-renal-metabolica-ckm",
+      "fluxograma-diabetes-e-doenca-cardiovascular-esc-2023",
+      "fluxograma-escolha-isglt2-glp1-diabetico-doenca-cardiovascular",
+      "fluxograma-rastreio-doenca-coronariana-assintomatica-diabetes-tipo-2-escore-calcio",
+      "fluxograma-investigacao-neuropatia-autonomica-cardiovascular-diabetico",
+      "fluxograma-rastreio-pos-parto-risco-cardiovascular-diabetes-gestacional",
+      "fluxograma-manejo-perioperatorio-de-isglt2-no-diabetico-cardiopata",
+      "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+      "nem-todo-isglt2-e-igual-vertis-cv-e-a-linagliptina-em-carolina-e-carmelina",
+      "inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney",
+      "agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind",
+      "nem-todo-agonista-de-glp-1-e-igual-elixa-exscel-e-harmony-outcomes",
+      "semaglutida-oral-e-tirzepatida-em-desfecho-cardiovascular-soul-pioneer-6-e-surpass-cvot",
+      "inibidores-da-dpp-4-e-seguranca-cardiovascular-savor-timi-53-examine-e-tecos",
+      "insulina-degludeca-e-seguranca-cardiovascular-o-ensaio-devote",
+      "insulina-glargina-e-desfechos-cardiovasculares-no-pre-diabetes-o-ensaio-origin",
+      "controle-glicemico-intensivo-e-desfecho-cardiovascular-no-diabetes-tipo-2-accord-advance-e-vadt",
+      "cardiomiopatia-diabetica-rastreamento-por-strain-e-tratamento",
+      "neuropatia-autonomica-cardiaca-diabetica-manifestacoes-testes-de-ewing-e-valor-prognostico",
+      "hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes",
+      "rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad",
+      "diabetes-tipo-1-de-longa-duracao-e-calcificacao-coronariana-cacti-e-dcct-edic",
+      "diabetes-tipo-1-e-risco-cardiovascular-idade-de-inicio-e-registro-sueco",
+      "diabetes-gestacional-e-risco-cardiovascular-materno-de-longo-prazo",
+      "diabetes-tipo-2-de-inicio-precoce-e-aceleracao-do-risco-cardiovascular",
+      "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
+      "nefroprotecao-com-bloqueio-do-sraa-na-nefropatia-diabetica-renaal-idnt-e-o-limite-do-ontarget",
+      "revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom",
+      "doenca-arterial-periferica-no-pe-diabetico-diretriz-iwgdf-esvs-svs-2023",
+      "metformina-na-insuficiencia-cardiaca-seguranca-e-beneficio",
+      "perder-peso-reduz-evento-cardiovascular-look-ahead-surmount-1-e-o-contraste-com-o-select"
+    ],
+    "patient_material_slug": "diabetes-e-o-coracao",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — nono ciclo do dia. Nenhum verbete geral de diabetes mellitus e risco cardiovascular existia previamente no corpus, apesar de content/Diabetes_e_cardiologia/ reunir 63 documentos narrativos dedicados ao tema. Escopo deliberadamente restrito ao risco/desfecho cardiovascular do diabetes tipo 2 — não é um verbete de endocrinologia geral sobre manejo primário de glicemia. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 11 referências citadas (diretriz ESC 2023 de doença cardiovascular no diabetes PMID 37622663, ADA Standards of Care 2026 PMID 41358899, diretriz conjunta AHA/ACC/ADA/ASN de síndrome cardiovascular-renal-metabólica PMID 42265997, diretriz SBD 2025, revisão sobre neuropatia autonômica cardíaca PMID 39941342, metanálise de Maser et al. sobre mortalidade e neuropatia autonômica PMID 12766130, posicionamento ADA sobre neuropatia diabética PMID 27999003, ensaio DIAD PMID 19366774, revisão sobre rastreio de DAC assintomática PMID 41185007, estudo de Capes et al. sobre hiperglicemia de estresse PMID 10711923, e revisão mecanística de iSGLT2 em cardiomiopatia diabética PMID 37055837 — este último corrigido pelo agente após constatar que o documento-fonte citava a referência sem PMID). related_document_slugs conta com 34 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum PR aberto que toca doencas/metadados.json cria o slug diabetes-mellitus-tipo-2; os PRs #443 e #437 relacionados a diabetes tocam apenas material-paciente/checklists, não doencas/metadados.json. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
   }
 ]
