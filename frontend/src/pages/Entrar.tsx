@@ -178,9 +178,13 @@ export default function Entrar() {
             </button>
           </form>
           <div className="prehome-card__actions">
-            <a className="prehome-android-download" href="/downloads/corvia-os-android.apk" download>
+            <a
+              className="prehome-android-download"
+              href="/downloads/corvia-os-android-1.0.1.apk"
+              download="CorVIA-OS-Android-1.0.1.apk"
+            >
               <span className="prehome-android-download__icon"><MarcaAndroid /></span>
-              <span><strong>Baixar app para Android</strong><small>Versão de testes · APK assinado</small></span>
+              <span><strong>Baixar app para Android</strong><small>Versão 1.0.1 · APK assinado</small></span>
               <Icone nome="seta" aria-hidden="true" />
             </a>
             <a
