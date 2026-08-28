@@ -94,6 +94,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
     # também em hidropisia-fetal-cardiovascular (PR #632)
     "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario",
+    "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

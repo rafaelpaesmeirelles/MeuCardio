@@ -69,6 +69,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual",
     # também em coarctacao-da-aorta
     "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio",
+    "obesidade-infantil-e-risco-cardiovascular-hipertensao-dislipidemia-aterogenica-e-dano-subclinico-em-orgao-alvo",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

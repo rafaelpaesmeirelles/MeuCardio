@@ -84,6 +84,9 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "risco-de-recorrencia-de-cardiopatia-congenita-na-prole-e-ecocardiograma-fetal-direcionado",
     # também em coarctacao-da-aorta e aortopatia-na-gravidez
     "coarctacao-de-aorta-reparada-e-gestacao-desfechos-do-ropac",
+    "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",  # overlap legítimo no corpus consolidado 28/08/2026
+    "sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac",  # overlap legítimo no corpus consolidado 28/08/2026
+    "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 
