@@ -31,7 +31,16 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # avaliacao-basal-cardiooncologica estava rotulada
+        # completeness=completo mas rasa (sem epidemiology/diagnostic_
+        # approach/treatment_summary/monitoring/related_document_slugs)
+        # — ver review_note.
+        "avaliacao-basal-cardiooncologica",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
