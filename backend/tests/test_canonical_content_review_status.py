@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote vincular Tudo com Tudo (enriquecimento) de 28/08/2026: ficha
+        # já completa fibrilacao-atrial tinha só 3 related_document_slugs
+        # (piso técnico, mas rasa frente ao corpus); 2 vínculos adicionados
+        # após verificação — ver review_note.
+        "fibrilacao-atrial",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

@@ -28496,13 +28496,15 @@
     "related_document_slugs": [
       "esc-2024-diretriz-fibrilacao-atrial-af-care",
       "diretriz-brasileira-de-fibrilacao-atrial-2025-sbc-sobrac",
-      "fluxograma-fibrilacao-atrial-af-care-esc-2024"
+      "fluxograma-fibrilacao-atrial-af-care-esc-2024",
+      "controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af",
+      "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica"
     ],
     "patient_material_slug": "fibrilacao-atrial",
-    "review_status": "revisado",
-    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e SBC/SOBRAC 2025 e sujeito a julgamento clínico individual.",
+    "review_status": "pendente_revisao",
+    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e SBC/SOBRAC 2025 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo (enriquecimento) 28/08/2026: adicionados 2 related_document_slugs (controle de ritmo vs. frequência AFFIRM/EAST-AFNET4/CASTLE-AF, ablação por cateter indicações e técnica), levando o total de 3 para 5. Um terceiro candidato proposto pelo agente (cha2ds2-va) foi descartado por resolver para content/Calculadoras, fora do escopo permitido.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "insuficiencia-cardiaca",
