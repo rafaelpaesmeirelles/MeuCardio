@@ -132,7 +132,12 @@ export default function App() {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 
-  if (usuario.onboarding_pendente && location.pathname !== "/tour") {
+  if (
+    usuario.onboarding_pendente &&
+    !usuario.profile_completion_required &&
+    !usuario.kyc_required &&
+    location.pathname !== "/tour"
+  ) {
     return <Navigate to="/tour" replace />;
   }
 
