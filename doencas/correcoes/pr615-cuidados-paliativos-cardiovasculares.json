@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "cuidados-paliativos-cardiovasculares",
+    "set": {
+      "review_note": "Lote produzido pelo Claude em 28/08/2026. Revisão técnica dirigida corrigiu interpretação do ENABLE CHF-PC, segurança analgésica em insuficiência cardíaca, linguagem de terapias CIED, critérios de hospice e inferência prognóstica. Permanece pendente de revisão editorial final."
+    },
+    "replace": [
+      {
+        "old": "O ensaio ENABLE CHF-PC (Bakitas et al., 2020, JAMA Internal Medicine), conduzido por telessaúde ambulatorial, confirmou melhora sustentada de qualidade de vida e humor com intervenção paliativa precoce concomitante ao cuidado cardiológico usual, reforçando a viabilidade de modelos de baixo custo e ampla escala.",
+        "new": "O ensaio ENABLE CHF-PC (Bakitas et al., 2020, JAMA Internal Medicine), conduzido por telessaúde ambulatorial, não demonstrou diferença estatisticamente significativa entre os grupos em qualidade de vida ou humor no desfecho principal de 16 semanas; seus achados apoiam a viabilidade operacional da intervenção, mas não autorizam afirmar benefício comprovado nesses desfechos."
+      },
+      {
+        "old": "dor, tratada com escalonamento analgésico envolvendo anti-inflamatórios (com cautela pelo risco nefro e cardiotóxico), opioides e adjuvantes neuromoduladores",
+        "new": "dor, tratada conforme mecanismo e contexto clínico; em insuficiência cardíaca, AINE sistêmico deve ser evitado sempre que possível por risco de retenção hidrossalina, piora renal e descompensação, priorizando alternativas analgésicas apropriadas"
+      },
+      {
+        "old": "Sintoma refratário grave associado a múltiplas internações recentes e uso de inotrópico contínuo sugere trajetória de fim de vida não reconhecida — indicação de avaliação paliativa especializada em caráter prioritário.",
+        "new": "Sintoma refratário grave associado a múltiplas internações recentes e uso de inotrópico contínuo identifica doença cardiovascular avançada com alta necessidade paliativa — indicação de avaliação paliativa especializada prioritária e revisão de prognóstico, elegibilidade para terapias avançadas e objetivos de cuidado, sem rotular automaticamente a trajetória clínica."
+      },
+      {
+        "old": "Três ou mais internações em 6 meses sem encaminhamento a cuidados paliativos especializados — trajetória compatível com critérios de elegibilidade para hospice.",
+        "new": "Três ou mais internações em 6 meses sem avaliação paliativa especializada constituem forte gatilho para revisão prognóstica, necessidades paliativas e eventual avaliação de elegibilidade para hospice; o número de internações isoladamente não estabelece elegibilidade."
+      },
+      {
+        "old": "Padrão de internações recorrentes é critério reconhecido de encaminhamento para hospice em doença cardiovascular avançada.",
+        "new": "Internações recorrentes são marcador de gravidade e fator de suporte para avaliação de necessidades paliativas e prognóstico; elegibilidade para hospice exige contexto clínico e prognóstico global, não uma contagem isolada de internações."
+      }
+    ]
+  }
+]
