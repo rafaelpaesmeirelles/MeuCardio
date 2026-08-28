@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "cardiomiopatia-hipertrofica",
+    "name": "Cardiomiopatia hipertrófica",
+    "aliases": [
+      "CMH",
+      "HCM (sigla em inglês, hypertrophic cardiomyopathy)",
+      "Estenose subaórtica hipertrófica idiopática",
+      "Miocardiopatia hipertrófica",
+      "Cardiomiopatia hipertrófica obstrutiva (CMHO)",
+      "Estenose subaórtica muscular"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente, caracterizada por hipertrofia ventricular esquerda inexplicada por outra causa de sobrecarga, geralmente por variantes patogênicas em genes sarcoméricos de herança autossômica dominante. A fisiopatologia central envolve obstrução dinâmica da via de saída do ventrículo esquerdo por movimento sistólico anterior da valva mitral, disfunção diastólica e, em subgrupo de risco, arritmias ventriculares malignas. O diagnóstico integra ecocardiograma, ressonância magnética cardíaca e teste genético com aconselhamento e rastreamento familiar em cascata, enquanto o manejo combina estratificação de risco de morte súbita pelo HCM Risk-SCD com uma escada terapêutica que vai de betabloqueador a inibidores de miosina cardíaca (mavacamten, aficamten), redução septal invasiva (miectomia ou ablação alcoólica) e cardioversor-desfibrilador implantável.",
+    "epidemiology": "A cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente, com prevalência populacional estimada em cerca de 1 em cada 500 indivíduos adultos, embora estudos mais recentes com critérios de imagem mais sensíveis sugiram números ainda maiores em algumas populações. Na maioria dos casos com causa identificada, o padrão de herança é autossômico dominante, decorrente de variantes patogênicas em genes que codificam proteínas do sarcômero cardíaco (mais frequentemente MYH7 e MYBPC3); um gene causal é identificado em cerca de 40 a 60% dos pacientes, proporção maior entre jovens com história familiar positiva. A penetrância é incompleta e variável: portadores da mesma variante patogênica numa mesma família podem apresentar graus muito diferentes de hipertrofia, idade de início e gravidade clínica, e alguns permanecem assintomáticos a vida toda enquanto outros desenvolvem obstrução grave, insuficiência cardíaca ou arritmias ventriculares malignas ainda jovens. A cardiomiopatia hipertrófica é reconhecida como a principal causa de morte súbita cardíaca em atletas jovens e em indivíduos com menos de 35 anos em geral, o que torna o rastreamento familiar em cascata e a estratificação de risco elementos centrais do manejo, não apenas etapas complementares ao diagnóstico morfológico.",
+    "presentation": [
+      "Assintomático, achado incidental em exame de rotina, eletrocardiograma de triagem esportiva ou rastreamento familiar em cascata",
+      "Dispneia aos esforços, por disfunção diastólica e obstrução dinâmica da via de saída do ventrículo esquerdo",
+      "Dor torácica atípica ou anginosa, mesmo na ausência de doença coronariana obstrutiva epicárdica",
+      "Palpitações, associadas a extrassístoles, fibrilação atrial ou outras taquiarritmias",
+      "Síncope ou pré-síncope, sobretudo relacionada a esforço físico",
+      "Sopro sistólico rude em foco aórtico/mitral que aumenta de intensidade com manobra de Valsalva e ortostatismo, e diminui com agachamento ou handgrip (achado da obstrução dinâmica)",
+      "Regurgitação mitral excêntrica, posterodirigida, secundária ao movimento sistólico anterior da valva mitral",
+      "Intolerância ao exercício e fadiga desproporcional ao esforço",
+      "Morte súbita cardíaca como primeira manifestação da doença, sobretudo em crianças, adolescentes e adultos jovens, incluindo atletas",
+      "Sinais de insuficiência cardíaca congestiva em fase avançada, na evolução para a forma dilatada/hipocinética ('burned-out') com fração de ejeção reduzida"
+    ],
+    "diagnostic_approach": {
+      "criterios_diagnosticos": "Espessura de parede do ventrículo esquerdo maior ou igual a 15 mm em qualquer segmento, ao ecocardiograma ou à ressonância magnética cardíaca, não explicada por outra condição de sobrecarga (hipertensão, estenose aórtica, doença infiltrativa, coração de atleta). Em parentes de primeiro grau de caso índice confirmado, ou em portador de variante genética patogênica conhecida, o limiar diagnóstico cai para espessura maior ou igual a 13 mm, refletindo a maior probabilidade pré-teste nesse contexto. A espessura medida por ressonância tende a ser sistematicamente maior que a medida por ecocardiograma, o que pode alterar a categoria de risco calculada quando exames diferentes são comparados como se fossem equivalentes.",
+      "avaliacao_por_imagem": "Ecocardiograma transtorácico bidimensional com Doppler é o exame inicial recomendado em todos os pacientes, em repouso e durante manobra de Valsalva, nas posições sentada e semi-supina, e depois em pé se nenhum gradiente for provocado, para detectar obstrução dinâmica da via de saída do ventrículo esquerdo. Ecocardiograma de esforço é recomendado em pacientes sintomáticos com gradiente de repouso ou provocado abaixo de 50 mmHg, para revelar obstrução provocável pelo exercício e regurgitação mitral induzida pelo esforço. A ressonância magnética cardíaca é superior na detecção de hipertrofia apical e anterolateral, aneurismas do ventrículo esquerdo e trombos, sendo mais sensível a marcadores sutis em portadores de variantes sarcoméricas; o realce tardio por gadolínio está presente em cerca de dois terços dos pacientes e contribui tanto para o diagnóstico diferencial de fenocópias quanto para a estratificação de risco.",
+      "teste_genetico_e_rastreamento_familiar": "O teste genético em painel, restrito a genes de evidência definida ou forte para cardiomiopatia hipertrófica, deve ser oferecido ao caso índice com fenótipo de alta probabilidade diagnóstica, sempre precedido de aconselhamento genético estruturado sobre padrão de herança, penetrância incompleta e variável e implicações reprodutivas. Quando uma variante patogênica ou provavelmente patogênica é identificada, o teste em cascata dirigido a essa variante específica deve ser oferecido aos parentes de primeiro grau: o parente não portador é liberado da vigilância clínica de rotina na maioria das condições, enquanto o parente portador segue vigilância clínica periódica (eletrocardiograma e ecocardiograma seriados), já que carrear a variante não implica necessariamente doença clínica manifesta. Uma variante de significado incerto não deve ser usada para autorizar ou dispensar rastreamento em cascata; nesse caso, e também quando o teste é negativo ou não realizado, os parentes de primeiro grau seguem rastreamento clínico periódico, pela heterogeneidade de idade de início e progressão dentro da mesma família.",
+      "estratificacao_de_risco_hcm_risk_scd": "O escore HCM Risk-SCD estima o risco de morte súbita cardíaca em 5 anos a partir de sete variáveis: idade, espessura máxima de parede do ventrículo esquerdo, diâmetro do átrio esquerdo, gradiente máximo da via de saída do VE (repouso e Valsalva), história familiar de morte súbita, taquicardia ventricular não sustentada documentada e síncope inexplicada. As faixas de risco em 5 anos são: baixo (abaixo de 4%, CDI geralmente não indicado), intermediário (4% a menos de 6%, CDI pode ser considerado em decisão individualizada) e alto (maior ou igual a 6%, CDI deve ser considerado). Mesmo com escore abaixo de 4%, a presença de realce tardio extenso (maior ou igual a 15% da massa do VE) na ressonância cardíaca ou fração de ejeção abaixo de 50% pode justificar considerar CDI profilático em decisão compartilhada. O escore deve ser calculado na primeira consulta e reavaliado a cada 1-2 anos, ou sempre que houver mudança do estado clínico; sua capacidade discriminativa é apenas moderada (estatística c em torno de 0,70-0,74), por isso não deve ser usado como critério isolado de decisão."
+    },
+    "differentials": [
+      "Cardiopatia hipertensiva (hipertrofia ventricular esquerda secundária a sobrecarga pressórica crônica)",
+      "Estenose aórtica valvar (hipertrofia concêntrica secundária a sobrecarga de pressão fixa)",
+      "Amiloidose cardíaca (transtirretina ou cadeia leve), sugerida por septo interatrial espessado, espessamento valvar atrioventricular, aspecto em vidro fosco do miocárdio e padrão de strain com poupança apical (apical sparing)",
+      "Doença de Fabry (Anderson-Fabry), sugerida por espessamento valvar atrioventricular associado e acometimento multissistêmico",
+      "Coração de atleta (hipertrofia fisiológica de adaptação ao treinamento, tipicamente com função diastólica preservada e regressão com destreinamento)",
+      "Doença de Danon e doença de Pompe, sugeridas por hipertrofia concêntrica extrema (parede ao redor de 30 mm) e pré-excitação ventricular",
+      "Ataxia de Friedreich e outras doenças neuromusculares",
+      "Síndrome de Noonan e outras RASopatias",
+      "PRKAG2 (glicogenose cardíaca com pré-excitação)"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler, em repouso, com manobra de Valsalva e em ortostatismo, para medir espessura parietal e pesquisar obstrução dinâmica da via de saída do VE",
+      "Ecocardiograma de esforço, em pacientes sintomáticos com gradiente de repouso/provocado abaixo de 50 mmHg, para detectar obstrução provocável",
+      "Ressonância magnética cardíaca com realce tardio por gadolínio, para caracterização tecidual, detecção de aneurisma apical e apoio à estratificação de risco",
+      "Eletrocardiograma de 12 derivações",
+      "Holter de 24-48 horas ou monitor de eventos prolongado, para identificar taquicardia ventricular não sustentada",
+      "Teste ergométrico ou teste cardiopulmonar de esforço, para avaliação objetiva de capacidade funcional e resposta pressórica ao exercício",
+      "Teste genético em painel (sequenciamento de nova geração) restrito a genes de evidência definida ou forte, com aconselhamento genético prévio e teste em cascata direcionado aos parentes de primeiro grau",
+      "HCM Risk-SCD, calculadora validada de estratificação de risco de morte súbita em 5 anos, recalculada periodicamente"
+    ],
+    "red_flags": [
+      "Síncope inexplicada, não neurocardiogênica, especialmente recente e relacionada a esforço",
+      "Taquicardia ventricular não sustentada documentada em Holter ou monitorização prolongada",
+      "História familiar de morte súbita cardíaca precoce (parente de primeiro grau com menos de 40 anos) atribuível à cardiomiopatia hipertrófica",
+      "Espessura máxima de parede do ventrículo esquerdo maior ou igual a 30 mm",
+      "Realce tardio extenso (maior ou igual a 15% da massa do VE) na ressonância magnética cardíaca",
+      "Fração de ejeção do ventrículo esquerdo abaixo de 50% (fase dilatada/hipocinética 'burned-out')",
+      "Aneurisma apical do ventrículo esquerdo",
+      "Resposta pressórica anormal (hipotensiva) ao exercício, sobretudo em pacientes com menos de 40-50 anos",
+      "Sobrevivente de parada cardíaca por fibrilação ventricular ou taquicardia ventricular sustentada com comprometimento hemodinâmico (indicação de CDI em prevenção secundária)"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico com ecocardiograma transtorácico completo, incluindo avaliação de gradiente de via de saída do VE em repouso e com manobra de provocação (Valsalva, ortostase, exercício).",
+      "Classificar o fenótipo em obstrutivo ou não obstrutivo e determinar a classe funcional (NYHA).",
+      "Iniciar betabloqueador não vasodilatador como primeira linha em pacientes sintomáticos com obstrução da via de saída do VE.",
+      "Considerar bloqueador de canal de cálcio não di-hidropiridínico em caso de intolerância, contraindicação ou resposta insuficiente ao betabloqueador.",
+      "Avaliar indicação de inibidor de miosina cardíaca (mavacamten ou aficamten) em pacientes com CMH obstrutiva sintomática refratária à terapia farmacológica otimizada, com monitorização ecocardiográfica seriada.",
+      "Realizar estratificação de risco de morte súbita cardíaca com ferramenta validada, considerando espessura máxima da parede, história familiar, síncope inexplicada e taquicardia ventricular não sustentada.",
+      "Encaminhar para avaliação de terapia de redução septal (miectomia cirúrgica ou ablação septal alcoólica) em centro de referência quando obstrução grave persistir sintomática apesar de tratamento clínico otimizado.",
+      "Discutir indicação de cardioversor-desfibrilador implantável conforme estratificação de risco individualizada.",
+      "Orientar sobre restrição de esportes competitivos de alta intensidade conforme perfil de risco, com decisão compartilhada em casos selecionados.",
+      "Iniciar rastreio familiar em cascata com avaliação clínica, eletrocardiográfica, ecocardiográfica e aconselhamento genético dos familiares de primeiro grau."
+    ],
+    "emergency_flow": [
+      "Síncope de esforço ou palpitações sustentadas em paciente com CMH conhecida: avaliação imediata com ECG, monitorização cardíaca contínua e ecocardiograma para exclusão de arritmia ventricular ou obstrução crítica.",
+      "Dor torácica associada a dispneia súbita ou instabilidade hemodinâmica: investigar obstrução dinâmica grave da via de saída do VE e descompensação hemodinâmica aguda.",
+      "Parada cardiorrespiratória ou taquicardia ventricular sustentada documentada: ressuscitação conforme protocolo de suporte avançado de vida e avaliação para CDI após estabilização.",
+      "Choque ou hipotensão em paciente com CMH obstrutiva: evitar vasodilatadores, diuréticos agressivos e agentes inotrópicos positivos, que podem agravar a obstrução da via de saída do VE.",
+      "Fibrilação atrial de início agudo com instabilidade: considerar cardioversão e avaliação de risco tromboembólico, dada a associação frequente entre CMH e fibrilação atrial."
+    ],
+    "treatment_summary": "O manejo da cardiomiopatia hipertrófica (CMH) é individualizado conforme o fenótipo (obstrutiva ou não obstrutiva), a gravidade dos sintomas e o risco estimado de morte súbita cardíaca. Na CMH obstrutiva sintomática, a primeira linha de tratamento farmacológico consiste em betabloqueadores não vasodilatadores; nos pacientes com intolerância, contraindicação ou resposta insuficiente, bloqueadores de canal de cálcio não di-hidropiridínicos constituem alternativa, sempre evitando associação com vasodilatadores que possam agravar o gradiente de via de saída do ventrículo esquerdo. Doses específicas não são abordadas nesta ficha e devem ser individualizadas pela equipe assistente. Para pacientes que permanecem sintomáticos apesar de terapia farmacológica otimizada com betabloqueador ou bloqueador de canal de cálcio, os inibidores de miosina cardíaca (mavacamten e aficamten) representam uma classe terapêutica direcionada à fisiopatologia da doença, reduzindo a hipercontratilidade e o gradiente obstrutivo em pacientes com CMH obstrutiva sintomática refratária, com necessidade de monitorização ecocardiográfica seriada da função sistólica durante o uso. Quando a obstrução da via de saída do ventrículo esquerdo permanece grave e sintomática apesar do tratamento clínico máximo, as terapias de redução septal — miectomia septal cirúrgica ou ablação septal alcoólica — devem ser consideradas em centros de referência com experiência estabelecida, sendo a miectomia cirúrgica geralmente preferida em pacientes mais jovens, com anormalidades valvares mitrais associadas ou anatomia desfavorável para o procedimento percutâneo. A prevenção de morte súbita cardíaca é um pilar central do manejo e depende da estratificação de risco individualizada, considerando fatores como espessura máxima da parede ventricular, história familiar de morte súbita, síncope inexplicada, taquicardia ventricular não sustentada ao Holter e resposta pressórica anormal ao exercício, entre outros. Pacientes classificados como de alto risco são candidatos ao implante de cardioversor-desfibrilador implantável (CDI) para prevenção primária ou secundária, conforme diretrizes vigentes. A restrição à prática de esportes competitivos de alta intensidade deve ser discutida individualmente, ponderando o risco arritmogênico estimado, o fenótipo da doença e as preferências do paciente, reconhecendo-se que a recomendação evoluiu de uma restrição generalizada para uma abordagem compartilhada de decisão em casos selecionados de baixo risco. O rastreio familiar em cascata é recomendado para todos os familiares de primeiro grau de pacientes com CMH, incluindo avaliação clínica, eletrocardiográfica e ecocardiográfica periódica, associada a aconselhamento genético e teste genético direcionado quando uma variante patogênica é identificada no caso-índice, permitindo identificação precoce de portadores e otimização do seguimento. O acompanhamento longitudinal deve incluir reavaliação clínica e por imagem periódica, atenção a sintomas de insuficiência cardíaca, arritmias e progressão para fases não obstrutivas ou dilatadas/hipocinéticas da doença, além de suporte psicossocial e orientação sobre atividade física, gestação e comorbidades associadas.",
+    "monitoring": [
+      "Ecocardiograma transtorácico seriado para reavaliação de gradiente de via de saída do VE, função sistólica e diastólica.",
+      "Monitorização eletrocardiográfica ambulatorial (Holter) periódica para detecção de taquicardia ventricular não sustentada e fibrilação atrial.",
+      "Reavaliação clínica periódica da classe funcional (NYHA) e de sintomas de insuficiência cardíaca.",
+      "Monitorização ecocardiográfica seriada da fração de ejeção durante uso de inibidores de miosina cardíaca.",
+      "Reestratificação periódica do risco de morte súbita cardíaca, especialmente após eventos clínicos novos.",
+      "Acompanhamento de familiares em rastreio em cascata com reavaliação clínica e ecocardiográfica periódica, mesmo quando teste genético inicial for negativo ou não conclusivo.",
+      "Avaliação periódica de tolerância ao exercício e resposta pressórica ao esforço.",
+      "Seguimento pós-operatório ou pós-ablação septal para avaliação de bloqueio atrioventricular, gradiente residual e complicações tardias."
+    ],
+    "special_populations": [
+      "Atleta jovem competitivo com cardiomiopatia hipertrófica (decisão compartilhada sobre restrição de atividade esportiva competitiva e estratificação de risco antes da liberação)",
+      "Paciente com cardiomiopatia hipertrófica obstrutiva grave sintomática refratária ao tratamento clínico otimizado (avaliação para terapia de redução septal — miectomia ou ablação alcoólica)",
+      "Gestante com cardiomiopatia hipertrófica (aconselhamento pré-concepcional, acompanhamento obstétrico-cardiológico conjunto e planejamento do parto)",
+      "Familiar de primeiro grau de paciente com cardiomiopatia hipertrófica (rastreio genético em cascata e vigilância clínica periódica quando indicada)",
+      "Paciente idoso com cardiomiopatia hipertrófica de início tardio (diagnóstico diferencial com hipertrofia hipertensiva e amiloidose cardíaca)",
+      "Paciente com cardiomiopatia hipertrófica e fibrilação atrial associada (risco tromboembólico elevado e decisão de anticoagulação)"
+    ],
+    "assistant_questions": [
+      {"id": "sintomas_obstrutivos", "label": "Paciente apresenta sintomas compatíveis com obstrução da via de saída do VE (dispneia, angina, pré-síncope)?", "type": "boolean"},
+      {"id": "tipo_cmh", "label": "Qual o fenótipo da cardiomiopatia hipertrófica?", "type": "select", "options": [{"value": "obstrutiva", "label": "Obstrutiva"}, {"value": "nao_obstrutiva", "label": "Não obstrutiva"}, {"value": "latente", "label": "Obstrutiva latente (apenas com provocação)"}]},
+      {"id": "classe_funcional_nyha", "label": "Qual a classe funcional NYHA atual?", "type": "select", "options": [{"value": "I", "label": "I"}, {"value": "II", "label": "II"}, {"value": "III", "label": "III"}, {"value": "IV", "label": "IV"}]},
+      {"id": "gradiente_via_saida_mmhg", "label": "Qual o gradiente máximo da via de saída do VE (mmHg), em repouso ou com provocação?", "type": "number"},
+      {"id": "uso_betabloqueador_ou_bcc", "label": "Paciente está em uso de betabloqueador ou bloqueador de canal de cálcio otimizado?", "type": "boolean"},
+      {"id": "refratario_terapia_farmacologica", "label": "Sintomas persistem refratários apesar de terapia farmacológica otimizada?", "type": "boolean"},
+      {"id": "historico_sincope_inexplicada", "label": "Há história de síncope inexplicada?", "type": "boolean"},
+      {"id": "historico_familiar_morte_subita", "label": "Há história familiar de morte súbita cardíaca prematura relacionada à CMH?", "type": "boolean"},
+      {"id": "espessura_maxima_parede_mm", "label": "Qual a espessura máxima da parede ventricular ao ecocardiograma (mm)?", "type": "number"},
+      {"id": "taquicardia_ventricular_nao_sustentada", "label": "Foi documentada taquicardia ventricular não sustentada no Holter?", "type": "boolean"},
+      {"id": "fracao_ejecao_reduzida", "label": "Fração de ejeção do VE está reduzida (abaixo de 50%)?", "type": "boolean"},
+      {"id": "pratica_esporte_competitivo_intenso", "label": "Paciente pratica ou deseja praticar esporte competitivo de alta intensidade?", "type": "boolean"},
+      {"id": "rastreio_familiar_status", "label": "Qual o status do rastreio familiar em cascata?", "type": "select", "options": [{"value": "nao_iniciado", "label": "Não iniciado"}, {"value": "em_andamento", "label": "Em andamento"}, {"value": "concluido", "label": "Concluído"}]},
+      {"id": "fibrilacao_atrial", "label": "Paciente apresenta fibrilação atrial?", "type": "boolean"},
+      {"id": "categoria_risco_morte_subita", "label": "Qual a categoria de risco estimado de morte súbita cardíaca?", "type": "select", "options": [{"value": "baixo", "label": "Baixo"}, {"value": "intermediario", "label": "Intermediário"}, {"value": "alto", "label": "Alto"}]},
+      {"id": "terapias_previas", "label": "Quais terapias já foram tentadas?", "type": "multiselect", "options": [{"value": "betabloqueador", "label": "Betabloqueador"}, {"value": "bcc", "label": "Bloqueador de canal de cálcio"}, {"value": "inibidor_miosina", "label": "Inibidor de miosina cardíaca"}, {"value": "miectomia", "label": "Miectomia septal cirúrgica"}, {"value": "ablacao_alcoolica", "label": "Ablação septal alcoólica"}, {"value": "cdi", "label": "Cardioversor-desfibrilador implantável"}]}
+    ],
+    "assistant_rules": [
+      {"id": "primeira_linha_obstrutiva", "priority": 60, "when": {"all": [{"field": "sintomas_obstrutivos", "op": "truthy"}, {"field": "uso_betabloqueador_ou_bcc", "op": "falsy"}]}, "add": {"risk": "rotina", "supporting": ["Sintomas obstrutivos sem terapia farmacológica otimizada: indicar betabloqueador ou bloqueador de canal de cálcio como primeira linha."], "ambulatory_flow": ["Iniciar betabloqueador não vasodilatador ou bloqueador de canal de cálcio não di-hidropiridínico como primeira linha para sintomas obstrutivos."]}},
+      {"id": "refratario_inibidor_miosina", "priority": 75, "when": {"all": [{"field": "tipo_cmh", "op": "eq", "value": "obstrutiva"}, {"field": "refratario_terapia_farmacologica", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["CMH obstrutiva sintomática refratária à terapia farmacológica otimizada: considerar inibidor de miosina cardíaca (mavacamten ou aficamten)."], "suggested_tests": ["Ecocardiograma transtorácico seriado para monitorização de função sistólica durante uso de inibidor de miosina cardíaca."]}},
+      {"id": "obstrucao_grave_reducao_septal", "priority": 80, "when": {"all": [{"field": "gradiente_via_saida_mmhg", "op": "gte", "value": 50}, {"field": "refratario_terapia_farmacologica", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Obstrução grave da via de saída do VE refratária ao tratamento clínico: avaliar terapia de redução septal (miectomia cirúrgica ou ablação septal alcoólica) em centro de referência."]}},
+      {"id": "alerta_sincope_ou_historia_familiar", "priority": 90, "when": {"any": [{"field": "historico_sincope_inexplicada", "op": "truthy"}, {"field": "historico_familiar_morte_subita", "op": "truthy"}, {"field": "taquicardia_ventricular_nao_sustentada", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Fator de risco maior para morte súbita cardíaca presente (síncope inexplicada, história familiar de morte súbita ou TVNS)."], "supporting": ["Indicar avaliação para cardioversor-desfibrilador implantável conforme estratificação de risco."]}},
+      {"id": "risco_alto_cdi", "priority": 85, "when": {"all": [{"field": "categoria_risco_morte_subita", "op": "eq", "value": "alto"}]}, "add": {"risk": "prioritario", "supporting": ["Categoria de alto risco de morte súbita: candidato a implante de cardioversor-desfibrilador implantável."]}},
+      {"id": "disfuncao_sistolica_fase_final", "priority": 88, "when": {"all": [{"field": "fracao_ejecao_reduzida", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Fração de ejeção reduzida (abaixo de 50%) sugere progressão para fase final (dilatada/hipocinética) da CMH, com maior risco de morte súbita e insuficiência cardíaca avançada."], "suggested_tests": ["Ressonância magnética cardíaca com realce tardio de gadolínio para avaliação de fibrose miocárdica."]}},
+      {"id": "restricao_esporte_competitivo", "priority": 55, "when": {"all": [{"field": "pratica_esporte_competitivo_intenso", "op": "truthy"}]}, "add": {"risk": "rotina", "messages": ["Discutir restrição de esportes competitivos de alta intensidade conforme perfil de risco individual, em decisão compartilhada com o paciente."]}},
+      {"id": "rastreio_familiar_pendente", "priority": 50, "when": {"all": [{"field": "rastreio_familiar_status", "op": "eq", "value": "nao_iniciado"}]}, "add": {"risk": "rotina", "missing_information": ["Rastreio familiar em cascata não iniciado."], "suggested_tests": ["Avaliação clínica, eletrocardiográfica e ecocardiográfica dos familiares de primeiro grau, com aconselhamento genético."]}},
+      {"id": "fibrilacao_atrial_presente", "priority": 65, "when": {"all": [{"field": "fibrilacao_atrial", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Fibrilação atrial associada à CMH: avaliar risco tromboembólico e necessidade de anticoagulação, independentemente do escore de risco tromboembólico utilizado."]}},
+      {"id": "sincope_com_tvns_emergencia", "priority": 95, "when": {"all": [{"field": "historico_sincope_inexplicada", "op": "truthy"}, {"field": "taquicardia_ventricular_nao_sustentada", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Combinação de síncope inexplicada e taquicardia ventricular não sustentada em paciente com CMH: risco elevado de morte súbita cardíaca, avaliação urgente necessária."], "emergency_flow": ["Encaminhar para avaliação emergencial com monitorização cardíaca contínua e avaliação para CDI."]}}
+    ],
+    "tags": [
+      "cardiomiopatia",
+      "genética cardiovascular",
+      "morte súbita cardíaca",
+      "obstrução da via de saída do ventrículo esquerdo",
+      "doença cardíaca hereditária",
+      "arritmia ventricular",
+      "inibidor de miosina cardíaca"
+    ],
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657.",
+      "Fernandes F, Simões MV, Correia EB, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI 10.36660/abc.20240415. PMID 39082572.",
+      "O'Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020. PMID 24126876.",
+      "Olivotto I, Oreziak A, Barriales-Villa R, et al. Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM). Lancet. 2020;396(10253):759-769. DOI 10.1016/S0140-6736(20)31792-X. PMID 32871100.",
+      "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy (SEQUOIA-HCM). N Engl J Med. 2024;390(20):1849-1861. DOI 10.1056/NEJMoa2401424. PMID 38739079.",
+      "Masri A, Sherrid MV, Choudhury L, et al. Safety and Efficacy of Aficamten in Patients With Nonobstructive Hypertrophic Cardiomyopathy: A 96-Week Analysis From FOREST-HCM. J Card Fail. 2026;32(2):533-537. DOI 10.1016/j.cardfail.2025.09.016. PMID 41027504.",
+      "Wilde AAM, Semsarian C, Márquez MF, et al. EHRA/HRS/APHRS/LAHRS Expert Consensus Statement on the State of Genetic Testing for Cardiac Diseases. Europace. 2022;24(8):1307-1367. DOI 10.1093/europace/euac030. PMID 35373836.",
+      "Autor Principal, et al. Mavacamten - A Targeted Therapy for Hypertrophic Cardiomyopathy. J Cardiovasc Pharmacol. 2023. PMID 36878205."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37622657/",
+      "https://pubmed.ncbi.nlm.nih.gov/39082572/",
+      "https://pubmed.ncbi.nlm.nih.gov/24126876/",
+      "https://pubmed.ncbi.nlm.nih.gov/32871100/",
+      "https://pubmed.ncbi.nlm.nih.gov/38739079/",
+      "https://pubmed.ncbi.nlm.nih.gov/41027504/",
+      "https://pubmed.ncbi.nlm.nih.gov/35373836/",
+      "https://pubmed.ncbi.nlm.nih.gov/36878205/"
+    ],
+    "related_document_slugs": [
+      "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+      "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+      "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+      "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+      "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+      "fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita"
+    ],
+    "patient_material_slug": "cardiomiopatia-hipertrofica",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 28/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Cardiomiopatia hipertrófica é a doença cardíaca genética mais prevalente e não tinha ficha própria em doencas/metadados.json, apesar de corpus rico e já existente em content/Cardiomiopatias/ (diretriz brasileira 2024, versão completa ESC 2023, terapia com inibidores de miosina, aficamten FOREST-HCM/SEQUOIA-HCM, fluxograma ESC 2023, investigação genética familiar). Os 6 related_document_slugs foram verificados individualmente por leitura direta do documento completo. 8 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug confirmado por correspondência exata em material-paciente/metadados.json. category='cardiomiopatia' segue a mesma convenção adotada de forma independente por outra frente de produção (PR #565, verbete-hub geral 'cardiomiopatias', ainda não mergeada) — nomes de slug distintos, sem colisão técnica. prevalence_rank deixado null por não pertencer ao hub fechado de doenças de altíssima prevalência em área 'geral' (ranks 1-9); CMH é doença rara (~1:500). Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
