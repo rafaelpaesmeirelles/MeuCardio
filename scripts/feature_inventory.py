@@ -34,7 +34,7 @@ EXPECTED_APP_ROUTES = {
     "/checklists", "/checklists/:slug", "/checklists/alta/:id",
     "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
     "/round", "/prontuario", "/ecg-ia", "/exames-ia", "/agenda", "/documentos", "/exportar", "/avaliacao-preoperatoria", "/receituario", "/assinatura",
-    "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
+    "/minha-conta", "/excluir-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
     "/tour", "/em-breve", "/verificacao-identidade",

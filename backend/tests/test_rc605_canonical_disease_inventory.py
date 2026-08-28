@@ -6,6 +6,7 @@ from app.services.disease_manifest import load_disease_records
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas" / "metadados.json"
+CANONICAL_DISEASE_COUNT = 109
 
 
 def _load_script(name: str, path: Path):
@@ -16,11 +17,11 @@ def _load_script(name: str, path: Path):
     return module
 
 
-def test_catalogo_canonico_tem_108_doencas_incluindo_fragmentos():
+def test_catalogo_canonico_tem_109_doencas_incluindo_fragmentos():
     records = load_disease_records(BASE)
-    assert len(records) == 108
+    assert len(records) == CANONICAL_DISEASE_COUNT
     slugs = {item["slug"] for item in records}
-    assert len(slugs) == 108
+    assert len(slugs) == CANONICAL_DISEASE_COUNT
     for expected in (
         "doenca-da-aorta",
         "choque-cardiogenico",
@@ -35,11 +36,11 @@ def test_catalogo_canonico_tem_108_doencas_incluindo_fragmentos():
 def test_auditoria_carrega_catalogo_canonico_e_nao_so_manifesto_base():
     audit_module = _load_script("audit_tudo_com_tudo_rc605", ROOT / "scripts" / "audit_tudo_com_tudo.py")
     records = audit_module._load("doencas")
-    assert len(records) == 108
+    assert len(records) == CANONICAL_DISEASE_COUNT
 
 
 def test_inventario_conta_catalogo_canonico_com_fragmentos():
     inventory_module = _load_script("content_inventory_rc605", ROOT / "scripts" / "content_inventory.py")
     result = inventory_module.inventory()
-    assert result["fronts"]["doencas_especializadas"]["records"] == 108
+    assert result["fronts"]["doencas_especializadas"]["records"] == CANONICAL_DISEASE_COUNT
     assert result["fronts"]["doencas_especializadas"]["duplicate_keys"] == []
