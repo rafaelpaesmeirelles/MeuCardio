@@ -39,7 +39,16 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # hidropisia-fetal-cardiovascular passou de completeness=basico
+        # (só catalogação, 2 related_document_slugs) para completo, com
+        # conteúdo clínico integral e 5 related_document_slugs — ver
+        # review_note.
+        "hidropisia-fetal-cardiovascular",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

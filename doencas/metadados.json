@@ -10456,7 +10456,7 @@
     "category": "cardiologia_fetal",
     "subtype": "insuficiencia_cardiaca_fetal",
     "prevalence_rank": 36,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Síndrome fetal grave que demanda investigação rápida de arritmia, anemia, cardiopatia estrutural, disfunção e causas não cardíacas.",
     "tags": [
       "hidropisia",
@@ -10464,19 +10464,506 @@
       "alto risco"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"
+      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516.",
+      "Bellini C, Hennekam RC, Fulcheri E, et al. Etiology of nonimmune hydrops fetalis: a systematic review. Am J Med Genet A. 2009;149A(4):844-851. PMID: 19295897.",
+      "Bellini C, Donarini G, Paladini D, et al. Etiology of nonimmune hydrops fetalis: An update. Am J Med Genet A. 2015;167A(5):1082-1088. PMID: 25712632.",
+      "Braun T, Brauer M, Fuchs I, et al. Mirror syndrome: a systematic review of fetal associated conditions, maternal presentation and perinatal outcome. Fetal Diagn Ther. 2010;27(4):191-203. PMID: 20389054.",
+      "Jaeggi ET, Carvalho JS, De Groot E, et al. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol: results of a nonrandomized multicenter study. Circulation. 2011;124(16):1747-1754. PMID: 21969012.",
+      "Jaeggi ET, Hamilton RM, Silverman ED, Zamora SA, Hornberger LK. Outcome of children with fetal, neonatal or childhood diagnosis of isolated congenital atrioventricular block. J Am Coll Cardiol. 2002;39(1):130-137. PMID: 11755298.",
+      "Krapp M, Kohl T, Simpson JM, Sharland GK, Katalinic A, Gembruch U. Review of diagnosis, treatment, and outcome of fetal atrial flutter compared with supraventricular tachycardia. Heart. 2003;89(8):913-917. PMID: 12860870."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"
+      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/19295897/",
+      "https://pubmed.ncbi.nlm.nih.gov/25712632/",
+      "https://pubmed.ncbi.nlm.nih.gov/20389054/",
+      "https://pubmed.ncbi.nlm.nih.gov/21969012/",
+      "https://pubmed.ncbi.nlm.nih.gov/11755298/",
+      "https://pubmed.ncbi.nlm.nih.gov/12860870/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (19º lote de conteúdo do dia, terceiro do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630 e bloqueio-atrioventricular-fetal/PR #631): ficha já tinha patient_material_slug e 2 related_document_slugs preenchidos, mas zero campos clínicos. Adicionados epidemiology (incidência geral, proporção de causas cardiovasculares ~20-25% dos casos não imunes), presentation (10 etiologias/formas de apresentação), diagnostic_approach (5 subtópicos: avaliação ecocardiográfica sistemática, exclusão de causas não cardiovasculares, avaliação de gravidade/progressão, avaliação materna para síndrome em espelho, indicação de intervenção fetal urgente), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (13), assistant_rules (10). related_document_slugs expandido de 2 para 5 (união com os originais, sem duplicar) — todos verificados quanto a menção explícita a hidropisia no texto. patient_material_slug original preservado. 6 documentos compartilhados com fichas irmãs do cluster fetal (algumas já aprofundadas hoje — bloqueio-atrioventricular-fetal/PR #631 —, outras ainda não — taquicardia-supraventricular-fetal, sindrome-coracao-esquerdo-hipoplasico-fetal, anomalia-ebstein, flutter-atrial-fetal, tumores-cardiacos-fetais) — overlap pré-existente e/ou legítimo, documentado. Nenhuma dose de fármaco em nenhum campo — fármacos citados apenas por nome (digoxina, flecainida, sotalol, dexametasona).",
+    "version": 2,
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
-      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional"
+      "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional",
+      "bloqueio-av-congenito-completo-no-recem-nascido",
+      "tumores-cardiacos-fetais-rabdomioma-e-diagnostico-diferencial-de-massa-cardiaca-intrautero",
+      "anomalia-de-ebstein-neonatal-estratificacao-de-risco-e-manejo-do-shunt-circular"
     ],
-    "patient_material_slug": "hidropisia-fetal-cardiovascular"
+    "patient_material_slug": "hidropisia-fetal-cardiovascular",
+    "epidemiology": "A hidropisia fetal é definida pelo acúmulo anormal de líquido em pelo menos dois compartimentos fetais distintos — ascite, derrame pleural, derrame pericárdico e/ou edema subcutâneo generalizado —, distinguindo-se do derrame isolado em uma única cavidade. Sua incidência global é estimada entre 1 em 1.500 e 1 em 3.800 gestações. Historicamente, a isoimunização Rh (doença hemolítica perinatal) respondia pela maioria dos casos; com a profilaxia com imunoglobulina anti-D, as causas imunes tornaram-se minoritárias, e hoje a hidropisia fetal não imune (HFNI) corresponde à grande maioria dos casos diagnosticados. Dentro do espectro não imune, revisões sistemáticas atribuem cerca de 20 a 25% dos casos a etiologia cardiovascular — incluindo taquiarritmias e bradiarritmias sustentadas, cardiopatias estruturais com sobrecarga volumétrica e disfunção miocárdica primária —, tornando-se a causa cardiovascular um dos principais subgrupos etiológicos, ao lado de anomalias cromossômicas, síndromes genéticas, infecções congênitas e malformações linfáticas. A hidropisia fetal não tratada carrega mortalidade perinatal elevada, historicamente superior a 50%, variando conforme a etiologia de base, a idade gestacional ao diagnóstico e a disponibilidade de terapia intrauterina dirigida à causa.",
+    "presentation": [
+      "Taquiarritmia sustentada — taquicardia supraventricular reentrante por via acessória ou reentrada nodal",
+      "Flutter atrial fetal sustentado",
+      "Bradiarritmia por bloqueio atrioventricular completo, frequentemente associado a anticorpos anti-Ro/SSA maternos",
+      "Cardiopatia estrutural complexa com sobrecarga volumétrica crônica (ex.: insuficiência valvar grave, ausência de válvula pulmonar, canal atrioventricular com regurgitação importante)",
+      "Disfunção miocárdica/cardiomiopatia fetal (dilatada, restritiva ou secundária a miocardite)",
+      "Tumor cardíaco fetal obstrutivo (rabdomioma extenso, teratoma intrapericárdico)",
+      "Estenose valvar crítica (aórtica ou pulmonar) com falência ventricular secundária",
+      "Fístula arteriovenosa de alto débito (ex.: malformação da veia de Galeno, corioangioma placentário extenso, teratoma sacrococcígeo hipervascularizado)",
+      "Restrição ou fechamento prematuro do forame oval em cardiopatia esquerda (ex.: síndrome de coração esquerdo hipoplásico com septo interatrial restritivo)",
+      "Constrição ou fechamento precoce do canal arterial com sobrecarga ventricular direita aguda"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_ecocardiografica_sistematica": "Ecocardiografia fetal detalhada e sistemática, avaliando ritmo (modo M e Doppler pulsado atrioventricular), anatomia estrutural completa (câmaras, valvas, conexões venosas e arteriais) e função miocárdica biventricular (encurtamento fracional, índice de performance miocárdica, Doppler venoso do ducto venoso e veias hepáticas), permitindo identificar taquiarritmia, bradiarritmia, cardiopatia estrutural, disfunção miocárdica ou lesão obstrutiva causadora da hidropisia.",
+      "exclusao_causas_nao_cardiovasculares": "Exclusão sistemática de causas não cardiovasculares antes de atribuir a hidropisia a etiologia cardíaca: Doppler de artéria cerebral média para rastreio de anemia fetal grave (aloimunização, parvovírus B19, hemorragia feto-materna), sorologias e PCR para infecção congênita, cariótipo/microarray para aneuploidia e síndromes genéticas (ex.: síndrome de Turner, síndrome de Noonan), e avaliação torácica dirigida para quilotórax primário e malformações linfáticas.",
+      "avaliacao_gravidade_progressao": "Avaliação seriada da gravidade e da velocidade de progressão por meio de ultrassonografias repetidas, quantificando o volume de líquido em cada compartimento, o perfil cardiovascular fetal (cardiovascular profile score) e o Doppler venoso (ducto venoso, veias hepáticas), pois a progressão rápida em dias sinaliza pior prognóstico e maior urgência de intervenção.",
+      "avaliacao_materna_sindrome_espelho": "Avaliação materna dirigida ao rastreio da síndrome em espelho (síndrome de Ballantyne), quadro que reflete o estado edemaciado fetal-placentário na mãe, com edema generalizado, hipertensão, proteinúria e hemodiluição, podendo mimetizar pré-eclâmpsia grave; seu reconhecimento é essencial, pois pode exigir antecipação do parto independentemente da resposta fetal ao tratamento.",
+      "indicacao_intervencao_fetal_urgente": "Definição da indicação de intervenção fetal urgente conforme a etiologia identificada: terapia farmacológica transplacentária para taquiarritmia sustentada com hidropisia, consideração de suporte de ritmo em bloqueio atrioventricular completo com comprometimento hemodinâmico grave, pericardiocentese ou derivação toracoamniótica em derrames volumosos por tumor obstrutivo, e planejamento de parto em centro terciário quando a hidropisia for refratária ao tratamento instituído."
+    },
+    "differentials": [
+      "Anemia fetal grave (aloimunização Rh, infecção por parvovírus B19, hemorragia feto-materna)",
+      "Infecção congênita (parvovírus B19, citomegalovírus, toxoplasmose, sífilis)",
+      "Aneuploidia e síndromes genéticas (síndrome de Turner, trissomias 21/18/13, síndrome de Noonan)",
+      "Malformação ou displasia linfática primária (linfangiectasia pulmonar congênita, displasia linfática associada à síndrome de Noonan)",
+      "Quilotórax fetal primário",
+      "Tumor fetal não cardíaco (teratoma sacrococcígeo, neuroblastoma congênito, corioangioma placentário volumoso)",
+      "Síndrome de transfusão feto-fetal em gestação gemelar monocoriônica"
+    ],
+    "tests": [
+      "Ecocardiografia fetal detalhada com modo M, Doppler pulsado e Doppler colorido, para avaliação de ritmo, estrutura e função",
+      "Doppler de artéria cerebral média (pico de velocidade sistólica) para triagem de anemia fetal",
+      "Ultrassonografia morfológica detalhada para quantificar líquido em cada compartimento e rastrear malformações associadas",
+      "Cariótipo fetal e/ou estudo cromossômico por microarray, obtido por amniocentese ou cordocentese",
+      "Sorologias maternas e PCR para infecções congênitas (parvovírus B19, citomegalovírus, toxoplasmose, sífilis)",
+      "Teste de Kleihauer-Betke materno para rastreio de hemorragia feto-materna",
+      "Perfil cardiovascular fetal (cardiovascular profile score) e Doppler venoso do ducto venoso",
+      "Avaliação materna clínica e laboratorial (pressão arterial, proteinúria, hemodiluição) para rastreio de síndrome em espelho"
+    ],
+    "red_flags": [
+      "Progressão rápida do acúmulo de líquido em intervalo de dias",
+      "Sinais de síndrome em espelho materna (edema generalizado, hipertensão, proteinúria)",
+      "Disfunção ventricular importante ou fluxo reverso/ausente no ducto venoso",
+      "Taquiarritmia sustentada e incessante, refratária à terapia transplacentária instituída",
+      "Bloqueio atrioventricular completo com frequência ventricular muito baixa e comprometimento hemodinâmico",
+      "Derrame pericárdico volumoso com sinais ecocardiográficos de tamponamento",
+      "Idade gestacional precoce ao diagnóstico, associada a pior prognóstico",
+      "Anasarca generalizada associada a polidrâmnio grave"
+    ],
+    "treatment_summary": "A hidropisia fetal de possível causa cardiovascular exige investigação etiológica rápida e sistemática, pois a causa determina diretamente a conduta terapêutica e o prognóstico. O primeiro passo é o ecocardiograma fetal detalhado, realizado por profissional experiente, para avaliar estrutura cardíaca, função ventricular, presença de arritmias, derrame pericárdico e sinais de insuficiência cardíaca fetal. Concomitantemente, deve-se realizar o Doppler de artéria cerebral média para rastrear anemia fetal grave, uma causa frequente e tratável de hidropisia não imune. A investigação laboratorial materna inclui sorologias infecciosas (parvovírus B19, citomegalovírus, toxoplasmose, sífilis) e pesquisa de aloimunização eritrocitária. Quando disponível e pertinente, indica-se cariótipo ou microarray fetal por amniocentese ou cordocentese, sobretudo diante de malformações associadas ou hidropisia sem causa cardiovascular evidente.\n\nO tratamento é direcionado à causa identificada. Em taquiarritmias fetais sustentadas, como taquicardia supraventricular ou flutter atrial, emprega-se cardioversão farmacológica transplacentária, com fármacos como digoxina, flecainida ou sotalol, conforme o tipo de arritmia e a resposta observada em ecocardiogramas seriados, sempre sem detalhar posologia neste registro. No bloqueio atrioventricular incompleto ou em contexto de miocardite associada a anticorpos maternos anti-Ro/La, considera-se corticosteroide transplacentário, como dexametasona, buscando reduzir a progressão do bloqueio e a inflamação miocárdica. Na anemia fetal grave confirmada pelo Doppler, a transfusão intrauterina é o tratamento de escolha e pode ser repetida conforme a cinética hematológica fetal. Derrame cavitário volumoso (pleural, pericárdico ou ascítico) que comprometa a função cardiopulmonar fetal pode exigir drenagem guiada por ultrassonografia.\n\nParalelamente ao manejo fetal, é obrigatória a avaliação materna para síndrome em espelho, condição em que a mãe desenvolve quadro semelhante à pré-eclâmpsia — hipertensão, proteinúria, edema e hemoconcentração — como espelho do edema fetal. A síndrome em espelho confirmada contraindica a conduta expectante prolongada e frequentemente impõe a antecipação do parto, independentemente da resposta fetal ao tratamento.\n\nA decisão sobre continuidade da gestação versus antecipação do parto deve ser compartilhada com a família, considerando a resposta ao tratamento etiológico, a idade gestacional, a maturidade pulmonar fetal e as condições maternas. O parto deve ser planejado em centro terciário com suporte neonatal intensivo imediato disponível, incluindo equipe capacitada para reanimação avançada, drenagem de derrames ao nascimento quando necessário e suporte hemodinâmico precoce. O prognóstico é altamente variável e depende fundamentalmente da etiologia subjacente, da idade gestacional ao diagnóstico e da resposta ao tratamento instituído, sendo mais favorável nas causas tratáveis, como arritmias responsivas e anemia corrigida, e reservado nas cardiopatias estruturais graves ou nos casos associados a síndrome em espelho materna refratária.",
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico de hidropisia fetal por ultrassonografia obstétrica, identificando ao menos duas coleções anômalas de líquido (ascite, derrame pleural, derrame pericárdico, edema subcutâneo).",
+      "Encaminhar para centro de referência em medicina fetal para ecocardiograma fetal detalhado e avaliação estrutural e funcional cardíaca.",
+      "Realizar Doppler de artéria cerebral média seriado para rastreamento de anemia fetal grave.",
+      "Solicitar sorologias infecciosas maternas (parvovírus B19, citomegalovírus, toxoplasmose, sífilis) e pesquisa de aloimunização eritrocitária.",
+      "Discutir e oferecer cariótipo ou microarray fetal por amniocentese ou cordocentese quando pertinente.",
+      "Avaliar a gestante clinicamente e laboratorialmente para sinais de síndrome em espelho (pressão arterial, proteinúria, exames laboratoriais maternos).",
+      "Iniciar tratamento direcionado à causa identificada (cardioversão transplacentária, corticosteroide transplacentário, transfusão intrauterina) conforme o achado etiológico.",
+      "Realizar ecocardiogramas fetais seriados para monitorar a resposta ao tratamento e a evolução da hidropisia.",
+      "Discutir com a família, em decisão compartilhada, a continuidade da gestação versus antecipação do parto conforme resposta clínica e idade gestacional.",
+      "Planejar o local e a via de parto em centro terciário com suporte neonatal intensivo imediato disponível."
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de piora rápida da hidropisia fetal (aumento súbito de derrames, edema generalizado progressivo, sinais de descompensação cardíaca fetal) e encaminhar imediatamente para avaliação em centro terciário.",
+      "Avaliar a gestante com urgência para síndrome em espelho diante de hipertensão de início súbito, edema materno importante, proteinúria ou hemoconcentração associados à piora fetal.",
+      "Confirmar síndrome em espelho materna e discutir antecipação do parto, pois a condição contraindica a conduta expectante prolongada.",
+      "Em taquiarritmia fetal refratária ao tratamento farmacológico transplacentário, reavaliar o esquema terapêutico em conjunto com cardiologia fetal e considerar antecipação do parto conforme a idade gestacional.",
+      "Em bloqueio atrioventricular completo com sinais de baixo débito cardíaco fetal, mobilizar equipe multidisciplinar para decisão urgente entre otimização farmacológica e interrupção da gestação.",
+      "Em derrame cavitário volumoso com sofrimento respiratório ou cardiovascular fetal iminente, proceder à drenagem guiada por ultrassonografia em caráter de urgência.",
+      "Acionar equipe neonatal para preparo antecipado de reanimação avançada, incluindo possível drenagem de derrames ao nascimento, diante de parto iminente por hidropisia fetal grave."
+    ],
+    "monitoring": [
+      "Ecocardiograma fetal seriado para avaliação de função cardíaca, ritmo e presença de derrame pericárdico.",
+      "Doppler de artéria cerebral média seriado para rastreamento de anemia fetal.",
+      "Ultrassonografia obstétrica seriada para quantificação de líquido amniótico e das coleções líquidas fetais (ascite, derrames pleural e pericárdico, edema subcutâneo).",
+      "Perfil biofísico fetal e cardiotocografia conforme idade gestacional e viabilidade.",
+      "Monitorização materna de pressão arterial, proteinúria e sinais clínicos de síndrome em espelho a cada consulta.",
+      "Exames laboratoriais maternos seriados (hemograma, função renal, ácido úrico, enzimas hepáticas) diante de suspeita de síndrome em espelho.",
+      "Avaliação seriada da resposta ao tratamento etiológico instituído (arritmia, anemia, bloqueio atrioventricular) por ecocardiograma e Doppler."
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_gestacional_diagnostico",
+        "text": "Qual a idade gestacional no diagnóstico da hidropisia fetal (em semanas)?",
+        "type": "number"
+      },
+      {
+        "id": "etiologia_identificada",
+        "text": "Qual a etiologia identificada para a hidropisia fetal?",
+        "type": "select",
+        "options": [
+          {
+            "value": "cardiaca_estrutural",
+            "label": "Cardiopatia estrutural"
+          },
+          {
+            "value": "arritmia",
+            "label": "Arritmia fetal"
+          },
+          {
+            "value": "anemia_fetal",
+            "label": "Anemia fetal"
+          },
+          {
+            "value": "infecciosa",
+            "label": "Causa infecciosa"
+          },
+          {
+            "value": "cromossomica",
+            "label": "Causa cromossômica"
+          },
+          {
+            "value": "idiopatica",
+            "label": "Idiopática / não identificada"
+          },
+          {
+            "value": "outra",
+            "label": "Outra causa"
+          }
+        ]
+      },
+      {
+        "id": "taquiarritmia_presente",
+        "text": "Há taquiarritmia fetal presente?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_arritmia",
+        "text": "Qual o tipo de arritmia fetal identificada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "taquicardia_supraventricular",
+            "label": "Taquicardia supraventricular"
+          },
+          {
+            "value": "flutter_atrial",
+            "label": "Flutter atrial"
+          },
+          {
+            "value": "bloqueio_atrioventricular_completo",
+            "label": "Bloqueio atrioventricular completo"
+          },
+          {
+            "value": "bloqueio_atrioventricular_incompleto",
+            "label": "Bloqueio atrioventricular incompleto"
+          },
+          {
+            "value": "outra",
+            "label": "Outra arritmia"
+          }
+        ]
+      },
+      {
+        "id": "doppler_arteria_cerebral_media_alterado",
+        "text": "O Doppler de artéria cerebral média está alterado, sugerindo anemia fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "sorologias_infecciosas_solicitadas",
+        "text": "Quais sorologias infecciosas maternas foram solicitadas?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "parvovirus_b19",
+            "label": "Parvovírus B19"
+          },
+          {
+            "value": "citomegalovirus",
+            "label": "Citomegalovírus"
+          },
+          {
+            "value": "toxoplasmose",
+            "label": "Toxoplasmose"
+          },
+          {
+            "value": "sifilis",
+            "label": "Sífilis"
+          },
+          {
+            "value": "outras",
+            "label": "Outras"
+          }
+        ]
+      },
+      {
+        "id": "cariotipo_microarray_realizado",
+        "text": "O cariótipo ou microarray fetal foi realizado?",
+        "type": "boolean"
+      },
+      {
+        "id": "derrame_cavitario_volumoso",
+        "text": "Há derrame cavitário volumoso (pleural, pericárdico ou ascítico) com repercussão fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_sindrome_espelho_materna",
+        "text": "A gestante apresenta sinais sugestivos de síndrome em espelho materna?",
+        "type": "boolean"
+      },
+      {
+        "id": "resposta_ao_tratamento",
+        "text": "Qual a resposta ao tratamento etiológico instituído?",
+        "type": "select",
+        "options": [
+          {
+            "value": "resposta_completa",
+            "label": "Resposta completa"
+          },
+          {
+            "value": "resposta_parcial",
+            "label": "Resposta parcial"
+          },
+          {
+            "value": "sem_resposta",
+            "label": "Sem resposta"
+          },
+          {
+            "value": "piora",
+            "label": "Piora do quadro"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_atual",
+        "text": "Qual a idade gestacional atual (em semanas)?",
+        "type": "number"
+      },
+      {
+        "id": "via_parto_planejada",
+        "text": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Vaginal"
+          },
+          {
+            "value": "cesarea",
+            "label": "Cesárea"
+          },
+          {
+            "value": "a_definir",
+            "label": "A definir"
+          }
+        ]
+      },
+      {
+        "id": "suporte_neonatal_disponivel",
+        "text": "Há suporte neonatal intensivo imediato disponível no local do parto?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "sindrome_espelho_materna_confirmada",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_sindrome_espelho_materna",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síndrome em espelho materna confirmada — contraindica conduta expectante prolongada"
+          ],
+          "messages": [
+            "Discutir antecipação do parto com equipe multidisciplinar diante de síndrome em espelho materna."
+          ]
+        }
+      },
+      {
+        "id": "taquiarritmia_refrataria_tratamento",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "taquiarritmia_presente",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "resposta_ao_tratamento",
+              "op": "eq",
+              "value": "sem_resposta"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Taquiarritmia fetal refratária ao tratamento farmacológico transplacentário"
+          ],
+          "messages": [
+            "Reavaliar esquema terapêutico com cardiologia fetal e considerar antecipação do parto."
+          ]
+        }
+      },
+      {
+        "id": "bloqueio_atrioventricular_completo_rule",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia",
+              "op": "eq",
+              "value": "bloqueio_atrioventricular_completo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Bloqueio atrioventricular completo com risco de baixo débito cardíaco fetal"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma fetal seriado com avaliação de função ventricular"
+          ]
+        }
+      },
+      {
+        "id": "anemia_fetal_doppler_alterado",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "doppler_arteria_cerebral_media_alterado",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Doppler de artéria cerebral média seriado",
+            "Avaliação para transfusão intrauterina"
+          ]
+        }
+      },
+      {
+        "id": "derrame_cavitario_volumoso_rule",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "derrame_cavitario_volumoso",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Derrame cavitário volumoso com potencial repercussão cardiopulmonar fetal"
+          ]
+        }
+      },
+      {
+        "id": "suporte_neonatal_indisponivel",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "suporte_neonatal_disponivel",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "red_flags": [
+            "Suporte neonatal intensivo imediato não disponível no local planejado para o parto"
+          ],
+          "messages": [
+            "Referenciar o parto para centro terciário com suporte neonatal intensivo imediato."
+          ]
+        }
+      },
+      {
+        "id": "sorologias_incompletas",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "sorologias_infecciosas_solicitadas",
+              "op": "missing"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Sorologias infecciosas maternas ainda não solicitadas"
+          ]
+        }
+      },
+      {
+        "id": "cariotipo_nao_realizado",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "cariotipo_microarray_realizado",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Cariótipo ou microarray fetal ainda não realizado"
+          ]
+        }
+      },
+      {
+        "id": "etiologia_idiopatica_rule",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "etiologia_identificada",
+              "op": "eq",
+              "value": "idiopatica"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Considerar causas não cardiovasculares de hidropisia fetal (linfática, metabólica, tumoral)"
+          ],
+          "missing_information": [
+            "Investigação etiológica ainda incompleta ou inconclusiva"
+          ]
+        }
+      },
+      {
+        "id": "resposta_completa_tratamento",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_ao_tratamento",
+              "op": "eq",
+              "value": "resposta_completa"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Manter seguimento ambulatorial com ecocardiogramas fetais seriados de controle."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com hidropisia secundária a taquiarritmia sustentada (taquicardia supraventricular ou flutter atrial): quadro potencialmente reversível com cardioversão transplacentária, mas a presença de hidropisia no momento do diagnóstico altera a escolha do primeiro agente terapêutico, pela absorção placentária comprometida pelo próprio edema placentário; a resposta ao tratamento costuma ser mais lenta e exige monitorização fetal seriada até a reversão do quadro.",
+      "Feto com hidropisia secundária a bloqueio atrioventricular completo: a hidropisia fetal prévia é um dos principais fatores de risco descritos para mau prognóstico nessa condição, sobretudo quando associada a frequência ventricular muito baixa ou a cardiopatia estrutural concomitante; a conduta exige avaliação conjunta de cardiologia fetal e reumatologia materna quando há suspeita de etiologia autoimune, além de planejamento antecipado para eventual necessidade de suporte de ritmo no período neonatal.",
+      "Feto com hidropisia secundária a cardiopatia estrutural complexa (por exemplo, anomalia de Ebstein grave com disfunção ventricular): prognóstico mais reservado, com risco elevado de óbito intrauterino e de descompensação grave no período neonatal; a decisão sobre via de parto, local de nascimento e necessidade de suporte imediato deve ser definida antecipadamente em centro com estrutura de terapia intensiva neonatal e cirurgia cardíaca pediátrica disponíveis.",
+      "Feto com hidropisia secundária a tumor cardíaco obstrutivo (massa intracavitária causando obstrução de via de entrada ou de saída ventricular): a hidropisia costuma sinalizar comprometimento hemodinâmico significativo pela combinação de obstrução mecânica, arritmia associada e/ou derrame pericárdico; a conduta depende do mecanismo predominante identificado à ecocardiografia fetal seriada e pode envolver terapia transplacentária dirigida ou acompanhamento em centro de referência para eventual intervenção.",
+      "Gestante com síndrome em espelho (mirror syndrome): quadro materno que reflete o comprometimento fetal, caracterizado por edema, hipertensão e proteinúria maternos concomitantes à hidropisia fetal; exige vigilância simultânea da saúde materna e fetal, pois pode evoluir rapidamente e, em alguns casos, condicionar a via e o momento do parto independentemente da evolução do tratamento fetal.",
+      "Gestação com hidropisia próxima ao limite de viabilidade: cenário que impõe decisão compartilhada entre a equipe de medicina fetal, neonatologia e a família sobre antecipação do parto versus manejo conservador, ponderando o risco de deterioração fetal progressiva contra os riscos da prematuridade extrema; a discussão deve ser documentada de forma clara, incluindo o plano de conduta em caso de piora aguda do quadro."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "coarctacao-aorta-fetal",
