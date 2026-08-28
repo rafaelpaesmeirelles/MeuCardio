@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 50
     environment: production
     env:
-      TARGET_SHA: ed4b63171148da782c43a5d6beca61799ed3e803
+      TARGET_SHA: c41c293bd1a3a588191cad49d91d517205cdea55
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -42,18 +42,32 @@ jobs:
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
 
-          ssh \
-            -p "$SSH_PORT" \
-            -i "$ssh_dir/deploy_key" \
-            -o BatchMode=yes \
-            -o ConnectTimeout=20 \
-            -o IdentitiesOnly=yes \
-            -o ServerAliveInterval=30 \
-            -o ServerAliveCountMax=10 \
-            -o StrictHostKeyChecking=yes \
-            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
-            "$SSH_USER@$SSH_HOST" \
-            "deploy $TARGET_SHA"
+          deploy_once() {
+            ssh \
+              -p "$SSH_PORT" \
+              -i "$ssh_dir/deploy_key" \
+              -o BatchMode=yes \
+              -o ConnectTimeout=20 \
+              -o IdentitiesOnly=yes \
+              -o ServerAliveInterval=30 \
+              -o ServerAliveCountMax=10 \
+              -o StrictHostKeyChecking=yes \
+              -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+              "$SSH_USER@$SSH_HOST" \
+              "deploy $TARGET_SHA"
+          }
+
+          # A primeira conexão pode usar o entrypoint antigo que estava no
+          # checkout antes do merge do bootstrap. Mesmo se ela abortar na
+          # guarda de migrations, o forced-command já faz fast-forward para
+          # TARGET_SHA. A segunda conexão então inicia com o entrypoint novo.
+          if deploy_once; then
+            echo "Production deploy completed on first recovery pass."
+          else
+            echo "First recovery pass updated the server checkout; retrying with recovery entrypoint."
+            sleep 2
+            deploy_once
+          fi
 
       - name: Verify public API is reachable again
         env:
