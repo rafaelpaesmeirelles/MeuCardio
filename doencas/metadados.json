@@ -10327,7 +10327,7 @@
     "category": "cardiologia_fetal",
     "subtype": "bradiarritmia",
     "prevalence_rank": 32,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Bradiarritmia fetal que requer definição do grau, associação estrutural, exposição a autoanticorpos e repercussão hemodinâmica.",
     "tags": [
       "BAV fetal",
@@ -10335,19 +10335,578 @@
       "autoanticorpos"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"
+      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516.",
+      "Friedman DM, Kim MY, Copel JA, et al. Utility of cardiac monitoring in fetuses at risk for congenital heart block: the PR Interval and Dexamethasone Evaluation (PRIDE) prospective study. Circulation. 2008;117(4):485-493. PMID: 18195175.",
+      "Jaeggi ET, Fouron JC, Silverman ED, Ryan G, Smallhorn J, Hornberger LK. Transplacental fetal treatment improves the outcome of prenatally diagnosed complete atrioventricular block without structural heart disease. Circulation. 2004;110(12):1542-1548. PMID: 15353508.",
+      "Jaeggi E, Laskin C, Hamilton R, Kingdom J, Silverman E. The importance of the level of maternal anti-Ro/SSA antibodies as a prognostic marker of the development of cardiac neonatal lupus erythematosus: a prospective study of 186 antibody-exposed fetuses and infants. J Am Coll Cardiol. 2010;55(24):2778-2784. PMID: 20538173.",
+      "Izmirly PM, Costedoat-Chalumeau N, Pisoni CN, et al. Maternal use of hydroxychloroquine is associated with a reduced risk of recurrent anti-SSA/Ro-antibody-associated cardiac manifestations of neonatal lupus. Circulation. 2012;126(1):76-82. PMID: 22626746.",
+      "Izmirly PM, Saxena A, Kim MY, et al. Maternal and fetal factors associated with mortality and morbidity in a multi-racial/ethnic registry of anti-SSA/Ro-associated cardiac neonatal lupus. Circulation. 2011;124(18):1927-1935. PMID: 21969015.",
+      "Buyon JP, Hiebert R, Copel J, et al. Autoimmune-associated congenital heart block: demographics, mortality, morbidity and recurrence rates obtained from a national neonatal lupus registry. J Am Coll Cardiol. 1998;31(7):1658-1666. PMID: 9626848.",
+      "Brito-Zerón P, Izmirly PM, Ramos-Casals M, Buyon JP, Khamashta MA. The clinical spectrum of autoimmune congenital heart block. Nat Rev Rheumatol. 2015;11(5):301-312. PMID: 25800217."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"
+      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/18195175/",
+      "https://pubmed.ncbi.nlm.nih.gov/15353508/",
+      "https://pubmed.ncbi.nlm.nih.gov/20538173/",
+      "https://pubmed.ncbi.nlm.nih.gov/22626746/",
+      "https://pubmed.ncbi.nlm.nih.gov/21969015/",
+      "https://pubmed.ncbi.nlm.nih.gov/9626848/",
+      "https://pubmed.ncbi.nlm.nih.gov/25800217/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (18º lote de conteúdo do dia, segundo do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630): ficha já tinha patient_material_slug e 2 related_document_slugs preenchidos, mas zero campos clínicos. Adicionados epidemiology, presentation (11 formas de apresentação), diagnostic_approach (6 subtópicos: determinação do grau de bloqueio por Doppler mecânico, sorologia materna anti-Ro/anti-La, avaliação de cardiopatia estrutural associada/isomerismo, avaliação hemodinâmica e hidropisia, vigilância seriada em gestante anti-Ro positiva, monitoramento de resposta terapêutica), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (14), assistant_rules (11). related_document_slugs expandido de 2 para 4 (união com os originais, sem duplicar) — todos verificados quanto a menção explícita a bloqueio atrioventricular/bloqueio cardíaco congênito/anti-Ro no texto. patient_material_slug original preservado. 4 documentos compartilhados com fichas irmãs do cluster fetal ainda não aprofundadas hoje (taquicardia-supraventricular-fetal, flutter-atrial-fetal, extrassistoles-fetais, hidropisia-fetal-cardiovascular) — overlap pré-existente e legítimo, não introduzido por este lote. Nenhuma dose de fármaco em nenhum campo — fármacos citados apenas por nome (dexametasona, imunoglobulina intravenosa, hidroxicloroquina, beta-agonista).",
+    "version": 2,
     "related_document_slugs": [
       "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
-      "bloqueio-av-congenito-completo-no-recem-nascido"
+      "bloqueio-av-congenito-completo-no-recem-nascido",
+      "ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito",
+      "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
     ],
-    "patient_material_slug": "gravidez-com-anticorpo-anti-ro-ssa-vigilancia-do-coracao-do-bebe"
+    "patient_material_slug": "gravidez-com-anticorpo-anti-ro-ssa-vigilancia-do-coracao-do-bebe",
+    "epidemiology": "O bloqueio atrioventricular (BAV) fetal completo é a manifestação cardíaca mais grave do lúpus neonatal e está fortemente associado à passagem transplacentária de autoanticorpos maternos anti-Ro/SSA e, com menor frequência isolada, anti-La/SSB. Em gestantes soropositivas para anti-Ro/SSA, o risco de BAV congênito na primeira gestação afetada é de aproximadamente 1% a 2%. Esse risco se eleva de forma expressiva em gestações subsequentes após o nascimento de uma criança com BAV ou lúpus neonatal cardíaco, com taxas de recorrência relatadas em torno de 12% a 18% em registros multicêntricos, o que justifica vigilância ecocardiográfica seriada rigorosa nessas gestações. O período de maior risco de instalação do bloqueio situa-se entre a 18ª e a 24ª semana de gestação, coincidindo com o pico de transferência transplacentária de imunoglobulina G materna. A mortalidade perinatal associada ao BAV completo fetal é substancial, principalmente quando há hidropisia fetal secundária a baixo débito cardíaco, cenário em que a mortalidade pode alcançar de 15% a 30%. Já o BAV fetal associado a cardiopatia estrutural — em especial defeitos de lateralidade como isomerismo atrial esquerdo (síndrome da poliesplenia) — é relativamente raro em comparação à forma autoimune, porém tende a cursar com bloqueio irreversível, disfunção do nó sinusal e prognóstico global mais reservado, exigindo diferenciação cuidadosa em relação ao BAV autoimune.",
+    "presentation": [
+      "Bradicardia fetal persistente detectada incidentalmente em consulta de pré-natal de rotina (ausculta ou ultrassonografia obstétrica)",
+      "BAV de primeiro grau (prolongamento do intervalo mecânico PR, geralmente assintomático e potencialmente reversível com tratamento precoce)",
+      "BAV de segundo grau (bloqueio intermitente, padrão tipo Mobitz I ou II, com risco de progressão para bloqueio completo)",
+      "BAV de terceiro grau/completo (dissociação atrioventricular total, frequência ventricular fixa e baixa, em geral irreversível)",
+      "Associação com cardiopatia estrutural em contexto de isomerismo/heterotaxia (isomerismo atrial esquerdo, defeitos septais, anomalias de veias sistêmicas ou pulmonares)",
+      "Hidropisia fetal secundária a baixo débito cardíaco e insuficiência cardíaca congestiva (ascite, derrame pleural, derrame pericárdico, edema subcutâneo)",
+      "Cardiomiopatia ou miocardite associada a lúpus neonatal, com disfunção miocárdica difusa e, por vezes, fibroelastose endocárdica",
+      "Disfunção ventricular sistólica com sinais ecocardiográficos de baixo débito (redução da fração de encurtamento, dilatação de câmaras cardíacas)",
+      "Derrame pericárdico isolado como achado precoce, por vezes antecedendo a instalação do bloqueio completo",
+      "Dilatação atrial e insuficiência valvar atrioventricular secundárias à dissociação AV",
+      "Achado incidental de sorologia materna anti-Ro/SSA e anti-La/SSB positivas em gestante previamente assintomática, levando à triagem cardíaca fetal seriada"
+    ],
+    "diagnostic_approach": {
+      "determinacao_grau_bloqueio": "A determinação do grau de bloqueio é feita por ecocardiografia fetal com Doppler mecânico simultâneo (registro concomitante do fluxo de via de entrada mitral e via de saída aórtica) ou modo M, avaliando a relação temporal entre contração atrial e ventricular. Esse método permite diferenciar BAV de primeiro grau (prolongamento do intervalo mecânico PR), segundo grau (condução intermitente, Mobitz I ou II) e terceiro grau/completo (dissociação atrioventricular total), já que o eletrocardiograma fetal direto não é viável na prática clínica rotineira.",
+      "sorologia_materna": "Dosagem de anticorpos anti-Ro/SSA (incluindo frações anti-Ro52 e anti-Ro60) e anti-La/SSB maternos é essencial para confirmar a etiologia autoimune, mesmo em gestantes assintomáticas ou sem diagnóstico prévio de doença reumatológica. Títulos elevados de anti-Ro/SSA, particularmente anti-Ro52, têm sido associados a maior risco de desenvolvimento e de gravidade do bloqueio.",
+      "avaliacao_cardiopatia_estrutural": "Ecocardiografia fetal detalhada deve excluir cardiopatia estrutural associada, com atenção específica a sinais de isomerismo/heterotaxia (situs visceral, posição do estômago, drenagem de veias sistêmicas e pulmonares, morfologia atrial e esplênica), pois o BAV nesse contexto tem etiologia, história natural e prognóstico distintos do BAV de origem autoimune.",
+      "avaliacao_hemodinamica_hidropisia": "Avaliação sistemática de repercussão hemodinâmica inclui pesquisa de hidropisia fetal (derrame pericárdico, derrame pleural, ascite, edema subcutâneo), estimativa da função ventricular (fração de encurtamento, índice de performance miocárdica) e Doppler venoso (ducto venoso, veia umbilical) para identificar sinais precoces de descompensação cardíaca.",
+      "vigilancia_seriada_anti_ro_positiva": "Em gestantes anti-Ro/anti-La positivas sem BAV ao diagnóstico inicial, recomenda-se ecocardiografia fetal seriada com Doppler mecânico, conforme protocolos de vigilância como o proposto por Friedman et al., tipicamente com periodicidade semanal entre aproximadamente a 16ª–18ª e a 26ª semana de gestação, período de maior risco de instalação do bloqueio, já que a progressão de grau leve para bloqueio completo pode ocorrer em intervalo de dias.",
+      "monitoramento_resposta_terapeutica": "Após instituição de terapia transplacentária (dexametasona, imunoglobulina intravenosa, beta-agonista, conforme o caso), realiza-se monitoramento ecocardiográfico seriado da frequência ventricular, da função miocárdica e da regressão de sinais de hidropisia, para avaliar resposta e ajustar a conduta obstétrica."
+    },
+    "differentials": [
+      "Bigeminismo atrial bloqueado (extrassístoles atriais bloqueadas simulando bradicardia, com irregularidade de ritmo característica)",
+      "Ectopia atrial bloqueada não relacionada a autoanticorpos maternos (extrassistolia atrial não conduzida de causa não imune)",
+      "BAV associado a cardiopatia estrutural (isomerismo/heterotaxia) versus BAV autoimune por anti-Ro/SSA e anti-La/SSB",
+      "BAV de primeiro ou segundo grau (potencialmente reversível) versus BAV de terceiro grau/completo (geralmente irreversível)",
+      "Bradicardia sinusal fetal secundária a sofrimento fetal agudo ou hipóxia",
+      "Taquiarritmia com bloqueio funcional (por exemplo, flutter atrial com condução 2:1) confundida com bradicardia sustentada",
+      "Canalopatia fetal, como síndrome do QT longo, associada a bradicardia e arritmias ventriculares"
+    ],
+    "tests": [
+      "Ecocardiografia fetal com Doppler mecânico seriado (registro simultâneo de via de entrada e via de saída, ou modo M)",
+      "Sorologia materna para anticorpos anti-Ro/SSA (Ro52 e Ro60) e anti-La/SSB",
+      "Avaliação anatômica fetal detalhada para rastreio de isomerismo/heterotaxia e cardiopatia estrutural associada",
+      "Ultrassonografia obstétrica seriada para pesquisa de sinais de hidropisia fetal",
+      "Doppler venoso fetal (ducto venoso, veia umbilical) para avaliação de repercussão hemodinâmica",
+      "Avaliação da função ventricular fetal (índice de performance miocárdica, fração de encurtamento)",
+      "Painel de autoanticorpos maternos ampliado (fator antinuclear, anti-Sm, anti-RNP) para triagem de doença autoimune materna subjacente",
+      "Ecocardiografia e eletrocardiograma pós-natais para confirmação diagnóstica e caracterização definitiva do bloqueio"
+    ],
+    "red_flags": [
+      "Frequência ventricular fetal muito baixa (tipicamente abaixo de 55 batimentos por minuto)",
+      "Hidropisia fetal (derrame pericárdico, derrame pleural, ascite, edema subcutâneo)",
+      "Disfunção ventricular sistólica significativa à ecocardiografia fetal",
+      "Derrame pericárdico isolado, mesmo na ausência de hidropisia franca",
+      "Associação com cardiopatia estrutural complexa, especialmente isomerismo/heterotaxia",
+      "Progressão rápida de bloqueio de primeiro ou segundo grau para bloqueio completo",
+      "Doppler venoso alterado (fluxo reverso em ducto venoso, pulsatilidade aumentada da veia umbilical)",
+      "Sinais de fibroelastose endocárdica ou miocardite associada ao lúpus neonatal"
+    ],
+    "treatment_summary": "O bloqueio atrioventricular (BAV) fetal é uma bradiarritmia associada à passagem transplacentária de autoanticorpos maternos anti-Ro/SSA e anti-La/SSB, que provocam inflamação e fibrose do sistema de condução cardíaco fetal, tipicamente entre a décima sexta e a vigésima sexta semana de gestação. Gestantes com sorologia positiva para anti-Ro/SSA e/ou anti-La/SSB devem ser incluídas em protocolo de vigilância seriada por ecocardiografia fetal com Doppler mecânico, com avaliação do intervalo atrioventricular (intervalo PR mecânico) em intervalos semanais durante a janela de maior risco de conversão, geralmente entre a décima oitava e a vigésima quarta semana, podendo-se espaçar para avaliações quinzenais fora desse período crítico até o termo. O reconhecimento precoce da progressão do bloqueio é fundamental: o bloqueio de primeiro grau (prolongamento do intervalo atrioventricular) e o bloqueio de segundo grau (condução intermitente) representam estágios potencialmente reversíveis, nos quais a instituição de corticosteroide fluorinado transplacentário, como a dexametasona, pode interromper a progressão inflamatória e, em alguns casos, restaurar a condução normal. Já o bloqueio atrioventricular de terceiro grau (completo), caracterizado por dissociação atrioventricular total, é considerado geralmente irreversível, refletindo lesão fibrótica estabelecida do nó atrioventricular; nesses casos, o uso de corticosteroide tem papel limitado, sendo reservado sobretudo ao controle de sinais associados de miocardite ou disfunção ventricular concomitante. Em gestantes de alto risco, especialmente aquelas com gestação anterior complicada por BAV fetal, a imunoglobulina intravenosa e a hidroxicloroquina profilática têm sido empregadas com o objetivo de reduzir a incidência de bloqueio completo, por meio de modulação da resposta inflamatória materna e da passagem transplacentária de autoanticorpos. Quando há frequência ventricular muito baixa, com repercussão hemodinâmica fetal evidenciada por sinais de baixo débito, pode-se considerar o uso de beta-agonista para elevar a frequência ventricular e melhorar o débito cardíaco fetal até a viabilidade e o momento adequado do parto. A avaliação seriada da função ventricular (sistólica e diastólica) e a pesquisa ativa de sinais de hidropisia fetal — derrame pericárdico, ascite, derrame pleural, edema subcutâneo — constituem marcadores centrais de gravidade e determinam a intensidade da vigilância e a urgência de eventuais intervenções. O planejamento do parto deve considerar a via, o momento e, sobretudo, o local do nascimento, priorizando-se centro terciário com suporte neonatal especializado, incluindo cardiologia pediátrica e disponibilidade de marcapasso temporário e definitivo, uma vez que grande parte dos recém-nascidos com bloqueio atrioventricular completo necessitará de implante de marcapasso definitivo já no período neonatal precoce, seja por bradicardia sintomática, seja por repercussão hemodinâmica ou disfunção ventricular persistente após o nascimento.",
+    "ambulatory_flow": [
+      "Confirmar sorologia materna anti-Ro/SSA e anti-La/SSB e registrar títulos quando disponíveis",
+      "Iniciar ecocardiografia fetal com Doppler mecânico seriado a partir de dezesseis semanas em gestantes soropositivas",
+      "Realizar avaliação semanal do intervalo atrioventricular durante a janela de maior risco, entre dezoito e vinte e quatro semanas",
+      "Espaçar para avaliação quinzenal fora da janela de maior risco, mantendo vigilância até o termo",
+      "Classificar o grau de bloqueio atrioventricular a cada avaliação (ausente, primeiro grau, segundo grau ou terceiro grau completo)",
+      "Avaliar função ventricular sistólica e diastólica fetal em cada exame",
+      "Rastrear sinais de hidropisia fetal (derrame pericárdico, ascite, derrame pleural, edema subcutâneo) a cada avaliação",
+      "Discutir instituição de corticosteroide fluorinado transplacentário diante de bloqueio incompleto recém-detectado",
+      "Avaliar indicação de imunoglobulina intravenosa e de hidroxicloroquina profilática em gestantes de alto risco",
+      "Planejar via, momento e local do parto, priorizando centro terciário com suporte neonatal e cardiologia pediátrica",
+      "Articular avaliação neonatal precoce com equipe de eletrofisiologia pediátrica para eventual marcapasso definitivo"
+    ],
+    "emergency_flow": [
+      "Frequência ventricular fetal muito baixa com sinais de repercussão hemodinâmica: encaminhar imediatamente para avaliação em centro terciário",
+      "Hidropisia fetal de início recente: internar para monitorização intensiva e antecipar avaliação de função ventricular",
+      "Disfunção ventricular progressiva: reavaliar corticosteroide e discutir antecipação do parto conforme idade gestacional",
+      "Bloqueio atrioventricular completo com frequência ventricular muito baixa: considerar uso de beta-agonista e monitorização contínua",
+      "Sinais de baixo débito fetal (derrame pericárdico progressivo, ascite, edema subcutâneo): acionar equipe multidisciplinar de obstetrícia, cardiologia fetal e neonatologia",
+      "Deterioração hemodinâmica fetal próxima à viabilidade: definir via e momento do parto em conjunto com neonatologia e cardiologia pediátrica",
+      "Preparar equipe neonatal para eventual necessidade de marcapasso temporário ou definitivo imediatamente após o nascimento"
+    ],
+    "monitoring": [
+      "Ecocardiografia fetal com Doppler mecânico seriado (intervalo atrioventricular)",
+      "Frequência cardíaca/ventricular fetal a cada avaliação",
+      "Função ventricular sistólica e diastólica fetal",
+      "Pesquisa de derrame pericárdico e derrame pleural",
+      "Pesquisa de ascite e edema subcutâneo compatíveis com hidropisia",
+      "Título de anticorpos anti-Ro/SSA e anti-La/SSB quando clinicamente indicado",
+      "Crescimento fetal e volume de líquido amniótico",
+      "Avaliação seriada do ritmo cardíaco neonatal após o nascimento"
+    ],
+    "assistant_questions": [
+      {
+        "id": "anti_ro_ssa_positivo",
+        "text": "A gestante possui sorologia positiva para anti-Ro/SSA?",
+        "type": "boolean"
+      },
+      {
+        "id": "anti_la_ssb_positivo",
+        "text": "A gestante possui sorologia positiva para anti-La/SSB?",
+        "type": "boolean"
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "text": "Qual a idade gestacional atual, em semanas?",
+        "type": "number"
+      },
+      {
+        "id": "grau_bloqueio_av",
+        "text": "Qual o grau de bloqueio atrioventricular identificado no ecocardiograma fetal mais recente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ausente",
+            "label": "Ausente / ritmo sinusal normal"
+          },
+          {
+            "value": "primeiro_grau",
+            "label": "Primeiro grau"
+          },
+          {
+            "value": "segundo_grau",
+            "label": "Segundo grau"
+          },
+          {
+            "value": "terceiro_grau_completo",
+            "label": "Terceiro grau (completo)"
+          }
+        ]
+      },
+      {
+        "id": "frequencia_cardiaca_fetal_bpm",
+        "text": "Qual a frequência ventricular fetal atual, em batimentos por minuto?",
+        "type": "number"
+      },
+      {
+        "id": "disfuncao_ventricular",
+        "text": "Há disfunção ventricular fetal (sistólica ou diastólica) documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "hidropisia_fetal",
+        "text": "Há sinais de hidropisia fetal (derrame pericárdico, ascite, derrame pleural ou edema subcutâneo)?",
+        "type": "boolean"
+      },
+      {
+        "id": "corticosteroide_transplacentario_em_uso",
+        "text": "A gestante está em uso de corticosteroide fluorinado transplacentário (dexametasona)?",
+        "type": "boolean"
+      },
+      {
+        "id": "imunoglobulina_intravenosa_em_uso",
+        "text": "A gestante está em uso de imunoglobulina intravenosa?",
+        "type": "boolean"
+      },
+      {
+        "id": "hidroxicloroquina_profilatica_em_uso",
+        "text": "A gestante está em uso de hidroxicloroquina profilática?",
+        "type": "boolean"
+      },
+      {
+        "id": "gestacao_anterior_com_bav",
+        "text": "Há história de gestação anterior complicada por bloqueio atrioventricular fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_repercussao_hemodinamica",
+        "text": "Quais sinais de repercussão hemodinâmica estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "derrame_pericardico",
+            "label": "Derrame pericárdico"
+          },
+          {
+            "value": "ascite",
+            "label": "Ascite"
+          },
+          {
+            "value": "derrame_pleural",
+            "label": "Derrame pleural"
+          },
+          {
+            "value": "edema_subcutaneo",
+            "label": "Edema subcutâneo"
+          },
+          {
+            "value": "disfuncao_ventricular",
+            "label": "Disfunção ventricular"
+          },
+          {
+            "value": "hidropisia_generalizada",
+            "label": "Hidropisia generalizada"
+          }
+        ]
+      },
+      {
+        "id": "via_parto_planejada",
+        "text": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Vaginal"
+          },
+          {
+            "value": "cesarea",
+            "label": "Cesárea"
+          },
+          {
+            "value": "a_definir",
+            "label": "A definir"
+          }
+        ]
+      },
+      {
+        "id": "local_parto_suporte_neonatal_marcapasso",
+        "text": "O parto está planejado em centro com suporte neonatal e disponibilidade de marcapasso?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "bav_completo_fc_muito_baixa_hidropisia",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "grau_bloqueio_av",
+              "op": "eq",
+              "value": "terceiro_grau_completo"
+            },
+            {
+              "field": "frequencia_cardiaca_fetal_bpm",
+              "op": "lt",
+              "value": 55
+            },
+            {
+              "field": "hidropisia_fetal",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Bloqueio atrioventricular completo com frequência ventricular muito baixa e hidropisia fetal"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para centro terciário com suporte de cardiologia fetal e neonatologia"
+          ]
+        }
+      },
+      {
+        "id": "hidropisia_com_disfuncao_ventricular",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "hidropisia_fetal",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "disfuncao_ventricular",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal associada a disfunção ventricular progressiva"
+          ],
+          "emergency_flow": [
+            "Internar para monitorização intensiva e reavaliar antecipação do parto"
+          ]
+        }
+      },
+      {
+        "id": "bav_completo_disfuncao_sem_hidropisia",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "grau_bloqueio_av",
+              "op": "eq",
+              "value": "terceiro_grau_completo"
+            },
+            {
+              "field": "disfuncao_ventricular",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "hidropisia_fetal",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Bloqueio atrioventricular completo com disfunção ventricular, sem hidropisia estabelecida"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada com avaliação detalhada de função ventricular"
+          ]
+        }
+      },
+      {
+        "id": "sinais_hemodinamicos_ascite_ou_derrame",
+        "priority": 88,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_repercussao_hemodinamica",
+              "op": "contains",
+              "value": "ascite"
+            },
+            {
+              "field": "sinais_repercussao_hemodinamica",
+              "op": "contains",
+              "value": "derrame_pericardico"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinal isolado de repercussão hemodinâmica fetal (ascite ou derrame pericárdico)"
+          ],
+          "emergency_flow": [
+            "Acionar equipe multidisciplinar de obstetrícia, cardiologia fetal e neonatologia"
+          ]
+        }
+      },
+      {
+        "id": "bloqueio_incompleto_sem_corticosteroide",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "grau_bloqueio_av",
+              "op": "in",
+              "value": [
+                "primeiro_grau",
+                "segundo_grau"
+              ]
+            },
+            {
+              "field": "corticosteroide_transplacentario_em_uso",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Bloqueio atrioventricular incompleto recém-detectado, ainda dentro da janela de potencial reversibilidade com corticosteroide fluorinado transplacentário"
+          ],
+          "ambulatory_flow": [
+            "Discutir com equipe de cardiologia fetal a instituição de dexametasona transplacentária"
+          ]
+        }
+      },
+      {
+        "id": "gestacao_anterior_bav_sem_profilaxia",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "gestacao_anterior_com_bav",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "hidroxicloroquina_profilatica_em_uso",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Gestação anterior complicada por bloqueio atrioventricular fetal, sem hidroxicloroquina profilática instituída"
+          ],
+          "missing_information": [
+            "Avaliação de indicação de hidroxicloroquina profilática e imunoglobulina intravenosa"
+          ]
+        }
+      },
+      {
+        "id": "janela_maior_risco_vigilancia_semanal",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "anti_ro_ssa_positivo",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 16
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "lte",
+              "value": 26
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Ecocardiografia fetal com Doppler mecânico seriado, periodicidade semanal"
+          ],
+          "ambulatory_flow": [
+            "Manter vigilância semanal durante a janela de maior risco de conversão do bloqueio"
+          ]
+        }
+      },
+      {
+        "id": "bav_completo_estavel_planejar_parto",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "grau_bloqueio_av",
+              "op": "eq",
+              "value": "terceiro_grau_completo"
+            },
+            {
+              "field": "hidropisia_fetal",
+              "op": "falsy",
+              "value": true
+            },
+            {
+              "field": "disfuncao_ventricular",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "Planejar parto em centro terciário com suporte neonatal e disponibilidade de marcapasso definitivo"
+          ],
+          "supporting": [
+            "Bloqueio atrioventricular completo hemodinamicamente estável, sem disfunção ventricular ou hidropisia"
+          ]
+        }
+      },
+      {
+        "id": "local_parto_sem_suporte_marcapasso",
+        "priority": 58,
+        "when": {
+          "all": [
+            {
+              "field": "grau_bloqueio_av",
+              "op": "eq",
+              "value": "terceiro_grau_completo"
+            },
+            {
+              "field": "local_parto_suporte_neonatal_marcapasso",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Confirmação de local de parto com suporte neonatal e disponibilidade de marcapasso temporário/definitivo"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para referência de parto em centro terciário com cardiologia pediátrica"
+          ]
+        }
+      },
+      {
+        "id": "sorologia_positiva_grau_nao_classificado",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "anti_ro_ssa_positivo",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "grau_bloqueio_av",
+              "op": "missing"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "missing_information": [
+            "Grau de bloqueio atrioventricular ainda não classificado por ecocardiografia fetal"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal com Doppler mecânico para avaliação do intervalo atrioventricular"
+          ]
+        }
+      },
+      {
+        "id": "sorologia_positiva_ritmo_normal",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "anti_ro_ssa_positivo",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "grau_bloqueio_av",
+              "op": "eq",
+              "value": "ausente"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "ambulatory_flow": [
+            "Manter vigilância seriada por Doppler mecânico, dado risco de conversão para bloqueio ao longo da gestação"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com anticorpo anti-Ro/SSA e/ou anti-La/SSB positivo, mas cujo feto ainda não desenvolveu bloqueio atrioventricular: exige vigilância ecocardiográfica seriada durante a janela de maior risco de instalação do bloqueio, já que o bloqueio completo, uma vez estabelecido, costuma ser irreversível — o valor da vigilância está em detectar precocemente graus intermediários potencialmente reversíveis, não em prevenir o bloqueio completo em si.",
+      "Gestante com diagnóstico prévio de lúpus eritematoso sistêmico ou síndrome de Sjögren (primária ou associada a outra doença do tecido conjuntivo), mesmo assintomática do ponto de vista cardíaco materno: a doença autoimune de base não muda o mecanismo fisiopatológico do bloqueio fetal, mas reforça a indicação de rastreamento do anticorpo anti-Ro/SSA e anti-La/SSB e de vigilância cardiológica fetal estruturada ao longo da gestação.",
+      "Gestante com gestação anterior afetada por bloqueio atrioventricular congênito (completo ou associado a outra manifestação de lúpus neonatal): carrega risco de recorrência substancialmente maior do que a gestante anti-Ro/SSA positiva sem filho previamente afetado, o que justifica protocolo de vigilância mais intensivo e maior antecipação do início do acompanhamento seriado.",
+      "Feto com bloqueio atrioventricular de primeiro ou segundo grau identificado na vigilância ecocardiográfica: representa uma janela de potencial reversibilidade que deixa de existir uma vez instalado o bloqueio completo, o que torna essa fase o momento crítico para intensificação da frequência dos exames e para decisão compartilhada entre cardiologia fetal, obstetrícia e reumatologia/imunologia materna sobre a estratégia de conduta.",
+      "Feto com bloqueio atrioventricular completo associado a hidropisia (secundária à insuficiência cardíaca fetal): configura o cenário de maior gravidade e maior risco de óbito intrauterino, exigindo acompanhamento em centro de referência em cardiologia fetal com capacidade de manejo intensivo materno-fetal e discussão antecipada sobre via e momento do parto.",
+      "Feto com bloqueio atrioventricular associado a cardiopatia estrutural congênita — particularmente isomerismo atrial (síndromes de heterotaxia) ou discordância atrioventricular — na ausência de anticorpos maternos anti-Ro/SSA e anti-La/SSB: representa mecanismo não autoimune, geralmente ligado à anatomia cardíaca de base, com prognóstico tipicamente pior e conduta que depende primariamente do tratamento da cardiopatia estrutural associada, distinta da vigilância e conduta usadas no bloqueio de mecanismo autoimune."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "flutter-atrial-fetal",
