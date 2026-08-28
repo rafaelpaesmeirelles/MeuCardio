@@ -28960,13 +28960,18 @@
     ],
     "related_document_slugs": [
       "aha-acc-2023-diretriz-doenca-coronariana-cronica",
-      "fluxograma-sindrome-coronariana-cronica-esc-2024"
+      "fluxograma-sindrome-coronariana-cronica-esc-2024",
+      "orbita-2-pci-versus-placebo-angina-estavel",
+      "fluxograma-angina-estavel-refrataria-manejo-escalonado",
+      "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+      "ischemia-estrategia-invasiva-vs-conservadora-na-dac-estavel",
+      "avaliacao-funcional-da-lesao-coronariana-ffr-e-ifr-o-ensaio-fame-2-e-o-define-flair"
     ],
     "patient_material_slug": "vivendo-com-doenca-coronariana-cronica-o-que-realmente-importa",
-    "review_status": "revisado",
-    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual.",
+    "review_status": "pendente_revisao",
+    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 5 related_document_slugs (ORBITA-2, fluxograma de angina refratária, ANOCA/INOCA ESC 2024, ISCHEMIA, avaliação funcional FFR/iFR), levando o total de 2 para 7. Cada um verificado por leitura direta do documento.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "parada-cardiorrespiratoria-e-morte-subita-abortada",
