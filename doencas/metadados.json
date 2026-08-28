@@ -10480,22 +10480,22 @@
     "assistant_questions": [
       {
         "id": "hidropisia_fetal_presente",
-        "text": "Há sinais de hidropisia fetal (derrame pericárdico, derrame pleural, ascite ou edema subcutâneo)?",
+        "label": "Há sinais de hidropisia fetal (derrame pericárdico, derrame pleural, ascite ou edema subcutâneo)?",
         "type": "boolean"
       },
       {
         "id": "frequencia_atrial_fetal_bpm",
-        "text": "Qual a frequência atrial fetal estimada, em batimentos por minuto?",
+        "label": "Qual a frequência atrial fetal estimada, em batimentos por minuto?",
         "type": "number"
       },
       {
         "id": "frequencia_ventricular_fetal_bpm",
-        "text": "Qual a frequência ventricular fetal sustentada, em batimentos por minuto?",
+        "label": "Qual a frequência ventricular fetal sustentada, em batimentos por minuto?",
         "type": "number"
       },
       {
         "id": "razao_conducao_atrioventricular",
-        "text": "Qual a razão de condução atrioventricular observada ao Doppler mecânico?",
+        "label": "Qual a razão de condução atrioventricular observada ao Doppler mecânico?",
         "type": "select",
         "options": [
           {
@@ -10514,7 +10514,7 @@
       },
       {
         "id": "funcao_ventricular_fetal",
-        "text": "Como está a função ventricular fetal na avaliação ecocardiográfica atual?",
+        "label": "Como está a função ventricular fetal na avaliação ecocardiográfica atual?",
         "type": "select",
         "options": [
           {
@@ -10533,12 +10533,12 @@
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Qual a idade gestacional atual, em semanas?",
+        "label": "Qual a idade gestacional atual, em semanas?",
         "type": "number"
       },
       {
         "id": "agente_transplacentario_em_uso",
-        "text": "Qual agente antiarrítmico transplacentário está atualmente em uso, se houver?",
+        "label": "Qual agente antiarrítmico transplacentário está atualmente em uso, se houver?",
         "type": "select",
         "options": [
           {
@@ -10569,7 +10569,7 @@
       },
       {
         "id": "resposta_ao_tratamento",
-        "text": "Como está a resposta ao tratamento antiarrítmico instituído?",
+        "label": "Como está a resposta ao tratamento antiarrítmico instituído?",
         "type": "select",
         "options": [
           {
@@ -10592,22 +10592,22 @@
       },
       {
         "id": "eletrocardiograma_materno_alterado",
-        "text": "O eletrocardiograma materno apresenta alteração significativa (por exemplo, prolongamento do intervalo QTc)?",
+        "label": "O eletrocardiograma materno apresenta alteração significativa (por exemplo, prolongamento do intervalo QTc)?",
         "type": "boolean"
       },
       {
         "id": "sinais_maternos_toxicidade",
-        "text": "Há sinais clínicos maternos sugestivos de toxicidade relacionada ao antiarrítmico em uso?",
+        "label": "Há sinais clínicos maternos sugestivos de toxicidade relacionada ao antiarrítmico em uso?",
         "type": "boolean"
       },
       {
         "id": "parto_planejado_centro_terciario",
-        "text": "O parto está planejado em centro terciário com suporte imediato de cardiologia pediátrica e neonatologia?",
+        "label": "O parto está planejado em centro terciário com suporte imediato de cardiologia pediátrica e neonatologia?",
         "type": "boolean"
       },
       {
         "id": "semanas_de_tratamento_decorridas",
-        "text": "Quantas semanas se passaram desde o início do tratamento antiarrítmico transplacentário?",
+        "label": "Quantas semanas se passaram desde o início do tratamento antiarrítmico transplacentário?",
         "type": "number"
       }
     ],
