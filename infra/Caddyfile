@@ -39,8 +39,26 @@
 		header Cache-Control "public, max-age=300"
 	}
 
-	# Instalador Windows é artefato de release grande e fica fora do Git, em
-	# volume persistente no host. O APK Android continua vindo do build web.
+	# Artefatos nativos ficam fora do volume efêmero do frontend. Rotas
+	# explícitas impedem que um arquivo ausente caia no fallback da SPA e seja
+	# baixado como index.html com extensão .apk/.exe.
+	handle /downloads/corvia-os-android.apk {
+		root * /android-downloads
+		rewrite * /corvia-os-android.apk
+		header Content-Type "application/vnd.android.package-archive"
+		header Content-Disposition "attachment; filename=CorVIA-OS-Android.apk"
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
+	handle /downloads/corvia-os-android.apk.sha256 {
+		root * /android-downloads
+		rewrite * /corvia-os-android.apk.sha256
+		header Content-Type "text/plain; charset=utf-8"
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
 	redir /downloads/corvia-os-windows.zip /downloads/corvia-os-windows.exe 308
 
 	handle /downloads/corvia-os-windows.exe {
