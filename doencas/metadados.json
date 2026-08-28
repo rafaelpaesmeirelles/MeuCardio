@@ -8889,7 +8889,7 @@
     "subtype": "valva_e_aorta",
     "cyanosis_class": "acianotica",
     "prevalence_rank": 15,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Anomalia congênita da valva aórtica que requer avaliação da função valvar, dimensões da aorta e agregação familiar ao longo da vida.",
     "tags": [
       "valva aórtica bicúspide",
@@ -8897,17 +8897,549 @@
       "pediatria"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "AHA Pediatric Cardiology scientific resources",
+      "Siu SC, Silversides CK. Bicuspid aortic valve disease. J Am Coll Cardiol. 2010;55(25):2789-2800. PMID: 20579534.",
+      "Huntington K, Hunter AG, Chan KL. A prospective study to assess the frequency of familial clustering of congenital bicuspid aortic valve. J Am Coll Cardiol. 1997;30(7):1809-1812. PMID: 9385911.",
+      "Cripe L, Andelfinger G, Martin LJ, Shooner K, Benson DW. Bicuspid aortic valve is heritable. J Am Coll Cardiol. 2004;44(1):138-143. PMID: 15234422.",
+      "Fernandes SM, Sanders SP, Khairy P, et al. Morphology of bicuspid aortic valve in children and adolescents. J Am Coll Cardiol. 2004;44(8):1648-1651. PMID: 15489098.",
+      "Michelena HI, Della Corte A, Evangelista A, et al. International consensus statement on nomenclature and classification of the congenital bicuspid aortic valve and its aortopathy. J Thorac Cardiovasc Surg. 2021;162(3):e383-e414. PMID: 34304896.",
+      "Pettersen MD, Du W, Skeens ME, Humes RA. Regression equations for calculation of z scores of cardiac structures in a large cohort of healthy infants, children, and adolescents. J Am Soc Echocardiogr. 2008;21(8):922-934. PMID: 18406572.",
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID: 39210722.",
+      "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. PMID: 33332150.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2019;139(14):e698-e800. PMID: 30586767.",
+      "Hu F, et al., Wang X. Cardiovascular phenotypes of children and adolescents with Turner syndrome from a single-center cohort study. Orphanet J Rare Dis. 2025;20(1):629. PMID: 41466305.",
+      "Álvarez-Nava F, et al., Skakkebæk A. The impact of karyotype on congenital heart diseases in Turner syndrome: a systematic review and meta-analysis. Am J Med Genet C Semin Med Genet. 2025;199(2):93-106. PMID: 40557696."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology",
+      "https://pubmed.ncbi.nlm.nih.gov/20579534/",
+      "https://pubmed.ncbi.nlm.nih.gov/9385911/",
+      "https://pubmed.ncbi.nlm.nih.gov/15234422/",
+      "https://pubmed.ncbi.nlm.nih.gov/15489098/",
+      "https://pubmed.ncbi.nlm.nih.gov/34304896/",
+      "https://pubmed.ncbi.nlm.nih.gov/18406572/",
+      "https://pubmed.ncbi.nlm.nih.gov/39210722/",
+      "https://pubmed.ncbi.nlm.nih.gov/33332150/",
+      "https://pubmed.ncbi.nlm.nih.gov/30586767/",
+      "https://pubmed.ncbi.nlm.nih.gov/41466305/",
+      "https://pubmed.ncbi.nlm.nih.gov/40557696/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (2º da série, após doenca-coronariana-idoso/PR #603): ficha estava com apenas metadados de catalogação e 1 related_document_slug. Produzida epidemiologia, apresentação, abordagem diagnóstica estruturada, diferenciais, exames, sinais de alarme, tratamento, fluxos ambulatorial/emergência, monitoramento, 7 populações especiais, assistente clínico determinístico (12 perguntas, 10 regras) e 9 related_document_slugs (8 novos + o já existente), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. 5 documentos sao compartilhados com outras fichas: valva-aortica-bicuspide-e-aortopatia-associada-esc-2024 e coarctacao-de-aorta-reparada-e-gestacao-desfechos-do-ropac (tambem em aortopatia-na-gravidez, PR aberto); coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual e sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio (tambem em coarctacao-da-aorta, publicada); estenose-aortica-grave-sintomatica-na-gestacao (tambem em valvopatias-na-gravidez, publicada). Todos mantidos por serem genuina e centralmente sobre VAB, mesmo padrao de pertencimento multiplo ja usado nos hubs de doenca da aorta e cardiopatia congenita do adulto. Um dos documentos legitimos (classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025) contém 'mwho' no próprio slug — não é violação de compliance: o gate real do repositório (test_specialty_guides.py) restringe a checagem da substring banida 'mwho' a assistant_rules, não ao registro inteiro, e este slug não aparece em assistant_rules. Catalogação original (name/aliases/area/category/subtype/cyanosis_class/prevalence_rank) preservada sem alteração.",
+    "version": 2,
     "patient_material_slug": "valvula-aortica-bicuspide-o-que-significa-esse-diagnostico",
     "related_document_slugs": [
-      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024"
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+      "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual",
+      "estenose-aortica-valvar-isolada-na-crianca-apresentacao-por-idade-e-criterios-de-valvoplastia-por-balao",
+      "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio",
+      "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+      "doenca-valvar-elegibilidade-esportiva-no-atleta",
+      "estenose-aortica-grave-sintomatica-na-gestacao",
+      "coarctacao-de-aorta-reparada-e-gestacao-desfechos-do-ropac",
+      "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025"
+    ],
+    "fonte_producao": "claude",
+    "epidemiology": "A valva aórtica bicúspide (VAB) é a cardiopatia congênita mais prevalente, presente em 0,5-2% dos nascidos vivos, com nítido predomínio no sexo masculino (razão aproximada de 2-4:1) (Siu & Silversides, 2010, PMID 20579534). Trata-se de doença com forte componente genético: estudos de rastreio ecocardiográfico sistemático em parentes de primeiro grau de portadores de VAB documentaram a anomalia em 9,1% dos familiares testados (17/186 indivíduos) (Huntington et al., 1997, PMID 9385911) e em até 24% em coortes multigeracionais (74/309 indivíduos), com estimativa de herdabilidade de 89% para a VAB isolada — padrão compatível com herança autossômica dominante de penetrância reduzida e expressividade variável (Cripe et al., 2004, PMID 15234422). Essa agregação familiar fundamenta o rastreio ecocardiográfico dos parentes de primeiro grau de toda criança com VAB. A VAB coexiste com a coartação de aorta em proporção elevada — presente em até 50-85% das crianças com coartação —, por compartilharem a mesma via de desenvolvimento do trato de saída do ventrículo esquerdo, o que torna obrigatória a busca ativa de uma pela outra (Michelena et al., 2021, PMID 34304896). Entre meninas com síndrome de Turner, a VAB é a cardiopatia congênita mais frequente, com prevalência de 11,2% (12/107) em coorte pediátrica contemporânea, associada a coartação de aorta em 8,4% (Hu et al., 2025, PMID 41466305); metanálise recente mostra risco de VAB de 2 a 3 vezes maior no cariótipo 45,X em comparação a variantes em mosaico ou isocromossomo Xq (Álvarez-Nava et al., 2025, PMID 40557696), o que fundamenta a recomendação de cariotipagem em toda menina com VAB e de ecocardiograma em toda paciente com síndrome de Turner recém-diagnosticada.",
+    "presentation": [
+      "Recém-nascido ou lactente assintomático: VAB isolada sem disfunção significativa, identificada como achado incidental em ecocardiograma solicitado por outro motivo (ex.: sopro leve, triagem por história familiar).",
+      "Neonato com estenose aórtica crítica associada a VAB: taquipneia, dificuldade alimentar, pulsos finos e sinais de baixo débito sistêmico, podendo configurar quadro dependente de canal arterial.",
+      "Lactente ou pré-escolar com VAB e coartação de aorta associada: hipertensão de membros superiores, pulsos femorais diminuídos ou ausentes e diferencial pressórico entre membros.",
+      "Criança em idade escolar assintomática com sopro sistólico ejetivo detectado em consulta de rotina — cenário mais comum de suspeita diagnóstica nessa faixa etária.",
+      "Click sistólico ejetivo audível logo após a primeira bulha, no foco aórtico, com pouca variação respiratória — achado semiológico característico da VAB mesmo na ausência de estenose relevante.",
+      "Sopro sistólico em ejeção, rude, em foco aórtico, com irradiação para fúrcula esternal e carótidas, cuja intensidade se correlaciona de forma imperfeita com o grau de estenose valvar.",
+      "Sopro diastólico aspirativo em borda esternal esquerda baixa, sugestivo de insuficiência aórtica associada, mais frequente em adolescentes do que em crianças pequenas.",
+      "Adolescente com VAB e estenose moderada a grave: dispneia aos esforços, dor torácica ou síncope de esforço — sinais que impõem avaliação e estratificação de risco antes da liberação esportiva.",
+      "Menina encaminhada para ecocardiograma de rastreio no momento do diagnóstico de síndrome de Turner, frequentemente assintomática do ponto de vista cardiovascular.",
+      "Criança ou adolescente assintomático identificado por rastreio ecocardiográfico familiar após diagnóstico de VAB em parente de primeiro grau (pai, mãe ou irmão)."
+    ],
+    "diagnostic_approach": {
+      "ecocardiograma_transtoracico": "O ecocardiograma transtorácico é o exame de primeira linha e método diagnóstico de escolha para VAB na criança, permitindo caracterizar a morfologia valvar (fusão de cúspides direita-esquerda, direita-não coronariana ou valva sem rafe, conforme a classificação do consenso internacional de Michelena et al., 2021, PMID 34304896), quantificar o gradiente sistólico de pico e médio pela via contínua e avaliar a presença e o grau de insuficiência aórtica associada. Os gradientes devem ser reinterpretados seriadamente ao longo do crescimento, pois variam com o débito cardíaco e a idade.",
+      "avaliacao_da_aorta_ascendente": "As dimensões da raiz aórtica e da aorta ascendente devem ser medidas em planos padronizados e expressas como escore Z ajustado à superfície corporal, e não em valor absoluto, dado o crescimento somático da criança; as equações de referência pediátricas mais utilizadas são as de Pettersen et al. (2008, PMID 18406572). Escore Z acima de 2 indica dilatação e determina intervalo de seguimento mais curto, conforme a adaptação pediátrica dos critérios de aortopatia associada à VAB (Mazzolai et al., 2024, PMID 39210722; Michelena et al., 2021, PMID 34304896).",
+      "rastreio_de_coartacao_associada": "Toda criança com VAB deve ter a aorta torácica descendente e o istmo aórtico ativamente pesquisados ao ecocardiograma (padrão de fluxo diastólico persistente/serrilhado ao Doppler pulsado na aorta abdominal), além de aferição de pressão arterial e palpação de pulsos em quatro membros em toda consulta, dada a alta prevalência de coartação associada; achados suspeitos ou janela acústica inadequada indicam angiotomografia ou angiorressonância complementar.",
+      "ressonancia_magnetica_cardiaca": "A ressonância magnética cardíaca está indicada quando a janela ecocardiográfica é insuficiente para caracterizar a aorta torácica por completo (particularmente em adolescentes maiores e no pós-operatório), quando há suspeita de coartação ou anomalia de arco aórtico não totalmente esclarecida pelo ecocardiograma, e para quantificação seriada de dimensões aórticas em pacientes com dilatação progressiva (Stout et al., 2018, PMID 30586767; Mazzolai et al., 2024, PMID 39210722).",
+      "rastreio_familiar": "Pela heritabilidade elevada da VAB — herdabilidade estimada em 89% e prevalência de 9,1% a 24% entre parentes de primeiro grau sistematicamente rastreados por ecocardiograma (Huntington et al., 1997, PMID 9385911; Cripe et al., 2004, PMID 15234422) —, o consenso internacional de nomenclatura e classificação da VAB recomenda ecocardiograma de rastreio em pais, irmãos e filhos de todo indivíduo com VAB e/ou aortopatia associada (Michelena et al., 2021, PMID 34304896).",
+      "rastreio_na_sindrome_de_turner": "Toda menina com diagnóstico de síndrome de Turner deve realizar ecocardiograma no momento do diagnóstico cromossômico, dada a prevalência de VAB de 11,2% e de coartação de aorta de 8,4% em coortes pediátricas contemporâneas, com risco significativamente maior no cariótipo 45,X em comparação a variantes em mosaico (Hu et al., 2025, PMID 41466305; Álvarez-Nava et al., 2025, PMID 40557696); reciprocamente, toda menina com VAB associada a coartação de aorta ou fenótipo sugestivo deve ser investigada quanto a cariótipo compatível com síndrome de Turner."
+    },
+    "differentials": [
+      "Valva aórtica unicúspide (unicomissural) — forma mais grave do espectro, tipicamente com estenose crítica já no período neonatal.",
+      "Valva aórtica tricúspide displásica (displasia mixomatosa) — cúspides espessadas e redundantes, com três comissuras verdadeiras identificáveis ao ecocardiograma.",
+      "Estenose subaórtica fixa (membrana ou rodete fibromuscular subvalvar) — gradiente originado abaixo do plano valvar, com valva aórtica tricúspide e estruturalmente normal.",
+      "Estenose aórtica supravalvar, isolada ou no contexto da síndrome de Williams-Beuren — estreitamento na junção sinotubular, frequentemente associado a estenoses de ramos pulmonares periféricos.",
+      "Valva aórtica quadricúspide — anomalia rara, com predomínio de insuficiência sobre estenose valvar.",
+      "Cardiomiopatia hipertrófica obstrutiva, com gradiente dinâmico na via de saída do ventrículo esquerdo que pode mimetizar o sopro ejetivo aórtico da VAB.",
+      "Sopro inocente/funcional da infância (sopro de Still) — ausência de click ejetivo, variação com a posição do paciente e valva estruturalmente normal ao ecocardiograma."
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler colorido e contínuo — exame de escolha inicial e de seguimento, para morfologia valvar, gradientes, função ventricular e dimensões aórticas indexadas à superfície corporal.",
+      "Aferição de pressão arterial nos quatro membros e palpação de pulsos periféricos — rastreio clínico de coartação de aorta associada em toda consulta.",
+      "Cariótipo — indicado em toda menina com VAB, isolada ou associada a coartação de aorta, para investigar síndrome de Turner.",
+      "Ressonância magnética cardíaca com angiografia — avaliação detalhada da aorta torácica quando a janela ecocardiográfica é limitada ou há suspeita de anomalia de arco não esclarecida.",
+      "Angiotomografia de aorta — alternativa à ressonância quando há contraindicação ou necessidade de avaliação mais rápida.",
+      "Ecocardiograma de rastreio em parentes de primeiro grau (pais e irmãos) do paciente índice, dada a agregação familiar documentada da VAB.",
+      "Teste ergométrico (teste de esforço) em adolescentes com VAB e estenose de grau moderado, para avaliar resposta pressórica e capacidade funcional antes da liberação para esportes competitivos.",
+      "Eletrocardiograma — avaliação complementar de sobrecarga ventricular esquerda em estenose mais significativa, sem substituir o ecocardiograma."
+    ],
+    "red_flags": [
+      "Neonato com sinais de estenose aórtica crítica: taquipneia, hipoperfusão, pulsos finos e choque cardiogênico — emergência que exige avaliação e intervenção imediatas.",
+      "Síncope ou pré-síncope aos esforços em criança ou adolescente com VAB conhecida, sugerindo obstrução hemodinamicamente significativa.",
+      "Dor torácica aos esforços em adolescente com VAB, especialmente associada a alterações eletrocardiográficas de sobrecarga ventricular esquerda.",
+      "Crescimento acelerado do diâmetro da aorta ascendente entre exames seriados (mudança de categoria de escore Z), independentemente do valor absoluto medido.",
+      "Diferencial pressórico significativo entre membros superiores e inferiores, ou assimetria de pulsos, sugerindo coartação de aorta não diagnosticada ou recoarctação pós-operatória.",
+      "Assimetria de pressão arterial entre os membros superiores, sugerindo anomalia de arco aórtico ou subclávia aberrante associada.",
+      "Sopro diastólico novo ou em piora progressiva, sugerindo insuficiência aórtica em evolução.",
+      "Disfunção sistólica ou dilatação progressiva do ventrículo esquerdo ao ecocardiograma seriado, indicando descompensação por sobrecarga de pressão ou volume."
+    ],
+    "treatment_summary": "O manejo da valva aórtica bicúspide (VAB) na infância é fundamentalmente conservador e centrado em vigilância ecocardiográfica seriada, reservando intervenção percutânea ou cirúrgica para estenose, insuficiência ou dilatação da aorta ascendente que atinjam critérios de gravidade. Ao diagnóstico, o ecocardiograma transtorácico deve caracterizar a morfologia valvar (fusão de cúspides, rafe), quantificar o gradiente transvalvar (pico e médio), graduar eventual insuficiência associada, avaliar função e massa do ventrículo esquerdo, e medir os diâmetros do anel, seios de Valsalva, junção sinotubular e aorta ascendente indexados por superfície corporal (z-score), já que a aortopatia associada à VAB é um componente essencial da doença e não uma complicação incidental. O intervalo de reavaliação é definido pela gravidade: estenose/insuficiência leves permitem seguimento anual; formas moderadas justificam reavaliação a cada 6 a 12 meses; formas graves ou com aorta em crescimento rápido requerem intervalos de 3 a 6 meses ou menores, a critério da equipe. No neonato com estenose aórtica crítica ductus-dependente, a valvoplastia por balão é a intervenção de primeira linha, precedida de estabilização com manutenção da permeabilidade do canal arterial e suporte hemodinâmico; em lactentes e crianças maiores com estenose grave sintomática, disfunção ventricular ou resposta anormal ao teste ergométrico, a valvoplastia por balão também é considerada, mas tende a gerar ou agravar insuficiência aórtica, que passa a ditar o seguimento subsequente. Quando a intervenção percutânea não é factível ou já se esgotou seu benefício, a correção cirúrgica é indicada: plástica valvar (comissurotomia, reparo de cúspide) é preferida em lactentes e crianças pequenas quando a anatomia permite; o procedimento de Ross (autoenxerto pulmonar) é a opção preferencial em crianças e adolescentes em crescimento por evitar anticoagulação e acompanhar o crescimento somático, embora exponha o paciente a reoperação tardia sobre o homoenxerto pulmonar; a substituição por prótese mecânica é reservada a adolescentes próximos do tamanho adulto quando reparo ou Ross não são viáveis, com o ônus de anticoagulação vitalícia. A aorta ascendente dilatada associada à VAB deve ser acompanhada com a mesma seriedade da valva: crescimento acelerado, diâmetro desproporcional à idade/superfície corporal ou história familiar de dissecção reforçam indicação de imagem complementar (angiotomografia ou angiorressonância) e eventual correção cirúrgica combinada. A orientação de atividade física é individualizada e reavaliada a cada consulta: formas leves com função ventricular e aorta normais permitem prática irrestrita, incluindo esporte competitivo, com reavaliação periódica; formas moderadas a graves, sintomáticas, com disfunção ventricular, teste ergométrico alterado ou aorta dilatada demandam restrição de esportes de alta intensidade estática/dinâmica e avaliação cardiológica prévia à liberação, sendo reavaliadas após qualquer intervenção. Por fim, a transição estruturada para cardiologia de adulto com cardiopatia congênita (ACHD) deve ser iniciada já na adolescência, com educação do paciente sobre a natureza vitalícia da doença, necessidade de seguimento contínuo mesmo após intervenção, rastreamento familiar de primeiro grau (a VAB tem padrão de herança reconhecido) e transferência formal de cuidado para serviço especializado em torno dos 18 a 21 anos, evitando lacunas de seguimento nesse período de maior risco de perda de vínculo assistencial.",
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico e classificar a gravidade (leve, moderada, grave, crítica) por ecodopplercardiograma, com gradiente valvar, morfologia, grau de insuficiência e diâmetros da raiz/aorta ascendente indexados por z-score.",
+      "Definir o intervalo de reavaliação ecocardiográfica conforme a gravidade: anual na forma leve; 6 a 12 meses na moderada; 3 a 6 meses ou menor na grave/crítica.",
+      "Avaliar sintomas, capacidade funcional e, em crianças maiores/adolescentes com estenose moderada-grave, realizar teste ergométrico para triagem de resposta hemodinâmica anormal.",
+      "Encaminhar para avaliação de intervenção percutânea (valvoplastia por balão) ou cirúrgica (plástica, Ross, substituição) quando critérios de gravidade, sintomas ou disfunção ventricular forem atingidos.",
+      "Acompanhar seriadamente o diâmetro da aorta ascendente/raiz aórtica, complementando com angiorressonância ou angiotomografia quando a janela ecocardiográfica for insuficiente ou o diâmetro estiver limítrofe.",
+      "Orientar restrição ou liberação de atividade física e esporte competitivo conforme estratificação de risco, reavaliando a cada consulta e após qualquer intervenção.",
+      "Iniciar processo estruturado de transição para serviço de cardiologia de adulto com cardiopatia congênita (ACHD) a partir da adolescência, com transferência formal ao final desse período.",
+      "Rastrear parentes de primeiro grau com ecocardiograma, dado o padrão de herança reconhecido da valva aórtica bicúspide."
+    ],
+    "emergency_flow": [
+      "Neonato com estenose aórtica crítica e choque cardiogênico ductus-dependente: manter permeabilidade do canal arterial, oferecer suporte hemodinâmico/ventilatório e acionar em caráter de emergência a equipe de hemodinâmica pediátrica para valvoplastia por balão.",
+      "Lactente ou criança com sinais de baixo débito (má perfusão, oligúria, taquicardia, hepatomegalia) associados a estenose grave: internar, estabilizar e priorizar avaliação urgente para intervenção.",
+      "Adolescente com síncope de esforço ou dor torácica associada a estenose aórtica moderada-grave: monitorização eletrocardiográfica contínua, restrição imediata de esforço físico e avaliação cardiológica urgente com ecocardiograma e, quando estável, teste ergométrico.",
+      "Suspeita de dissecção ou ruptura de aorta ascendente dilatada (dor torácica súbita, intensa, migratória, com assimetria de pulsos): estabilizar hemodinamicamente, solicitar angiotomografia/angiorressonância de aorta em caráter de emergência e acionar cirurgia cardiovascular.",
+      "Suspeita de endocardite infecciosa em valva nativa ou prótese (febre persistente, novo sopro, fenômenos embólicos): coletar hemoculturas seriadas, realizar ecocardiograma transtorácico/transesofágico e iniciar investigação conforme protocolo institucional.",
+      "Arritmia sintomática (síncope, pré-síncope) em paciente com VAB e disfunção ventricular: monitorização contínua, eletrocardiograma e avaliação de necessidade de internação."
+    ],
+    "monitoring": [
+      "Ecocardiograma seriado com intervalo ajustado à gravidade (leve: anual; moderada: 6-12 meses; grave/crítica: 3-6 meses ou menor).",
+      "Medida seriada do diâmetro da aorta ascendente/raiz aórtica com z-score indexado à superfície corporal, atentando à taxa de crescimento.",
+      "Avaliação da função e das dimensões do ventrículo esquerdo em cada consulta.",
+      "Teste ergométrico periódico em crianças maiores e adolescentes com estenose moderada-grave.",
+      "Reavaliação da liberação/restrição de atividade física e esporte competitivo a cada consulta e após qualquer intervenção.",
+      "Rastreamento ecocardiográfico de parentes de primeiro grau.",
+      "Acompanhamento do crescimento estatuponderal e desenvolvimento em lactentes pós-intervenção.",
+      "Planejamento e execução da transição estruturada para serviço de ACHD ao final da adolescência."
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_apresentacao",
+        "text": "Qual a faixa etária de apresentação/avaliação atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "neonato",
+            "label": "Neonato"
+          },
+          {
+            "value": "lactente",
+            "label": "Lactente"
+          },
+          {
+            "value": "crianca",
+            "label": "Criança"
+          },
+          {
+            "value": "adolescente",
+            "label": "Adolescente"
+          }
+        ]
+      },
+      {
+        "id": "gravidade_estenose",
+        "text": "Qual a gravidade da estenose valvar aórtica ao ecocardiograma?",
+        "type": "select",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "critica",
+            "label": "Crítica"
+          }
+        ]
+      },
+      {
+        "id": "gravidade_insuficiencia",
+        "text": "Qual a gravidade da insuficiência aórtica associada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ausente_leve",
+            "label": "Ausente ou leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "importante",
+            "label": "Importante"
+          }
+        ]
+      },
+      {
+        "id": "funcao_ventricular_esquerda",
+        "text": "Qual o estado da função sistólica do ventrículo esquerdo?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "disfuncao_leve",
+            "label": "Disfunção leve"
+          },
+          {
+            "value": "disfuncao_moderada_grave",
+            "label": "Disfunção moderada a grave"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_atuais",
+        "text": "Quais sintomas o paciente apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia_esforco",
+            "label": "Dispneia aos esforços"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "fadiga",
+            "label": "Fadiga"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sintoma"
+          }
+        ]
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "text": "Há sinais de instabilidade hemodinâmica ou choque cardiogênico?",
+        "type": "boolean"
+      },
+      {
+        "id": "ducto_arterioso_dependente",
+        "text": "O quadro é ductus-dependente (necessidade de canal arterial pérvio para perfusão sistêmica)?",
+        "type": "boolean"
+      },
+      {
+        "id": "teste_ergometrico_alterado",
+        "text": "O teste ergométrico mostrou resposta hemodinâmica anormal (queda de PA, infradesnível de ST significativo, arritmia)?",
+        "type": "boolean"
+      },
+      {
+        "id": "diametro_aorta_ascendente_zscore",
+        "text": "Qual o z-score do diâmetro da aorta ascendente/raiz aórtica indexado à superfície corporal?",
+        "type": "number"
+      },
+      {
+        "id": "pratica_esporte_competitivo",
+        "text": "O paciente pratica ou pretende praticar esporte competitivo?",
+        "type": "boolean"
+      },
+      {
+        "id": "historico_familiar_dissecao_aorta",
+        "text": "Há história familiar de dissecção de aorta ou aneurisma aórtico precoce?",
+        "type": "boolean"
+      },
+      {
+        "id": "idade_anos",
+        "text": "Qual a idade do paciente em anos completos?",
+        "type": "number"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rn_estenose_critica",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "idade_apresentacao",
+              "op": "eq",
+              "value": "neonato"
+            },
+            {
+              "field": "gravidade_estenose",
+              "op": "eq",
+              "value": "critica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Neonato com estenose aórtica crítica: risco de choque cardiogênico ductus-dependente"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma urgente",
+            "Avaliação por hemodinâmica pediátrica"
+          ],
+          "emergency_flow": [
+            "Manter permeabilidade do canal arterial e acionar valvoplastia por balão em caráter de emergência"
+          ]
+        }
+      },
+      {
+        "id": "instabilidade_ou_ducto_dependente",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "truthy"
+            },
+            {
+              "field": "ducto_arterioso_dependente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de instabilidade hemodinâmica ou dependência ductal"
+          ],
+          "emergency_flow": [
+            "Estabilização hemodinâmica/ventilatória imediata e acionamento de equipe de emergência cardiológica"
+          ]
+        }
+      },
+      {
+        "id": "sincope_ou_dor_toracica_adolescente",
+        "priority": 80,
+        "when": {
+          "any": [
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "sincope"
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "dor_toracica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope ou dor torácica em paciente com valva aórtica bicúspide"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Ecocardiograma",
+            "Teste ergométrico quando estável"
+          ],
+          "emergency_flow": [
+            "Monitorização eletrocardiográfica contínua e restrição imediata de esforço físico"
+          ]
+        }
+      },
+      {
+        "id": "insuficiencia_importante_disfuncao",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_insuficiencia",
+              "op": "eq",
+              "value": "importante"
+            },
+            {
+              "field": "funcao_ventricular_esquerda",
+              "op": "neq",
+              "value": "normal"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Insuficiência aórtica importante com repercussão na função ventricular sugere indicação cirúrgica (plástica valvar, Ross ou substituição)"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação detalhada de volumes e função de VE"
+          ]
+        }
+      },
+      {
+        "id": "estenose_grave_disfuncao_ve",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_estenose",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "funcao_ventricular_esquerda",
+              "op": "in",
+              "value": [
+                "disfuncao_leve",
+                "disfuncao_moderada_grave"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Estenose aórtica grave com disfunção ventricular reforça indicação de intervenção (percutânea ou cirúrgica)"
+          ],
+          "suggested_tests": [
+            "Encaminhamento para avaliação de intervenção valvar"
+          ]
+        }
+      },
+      {
+        "id": "teste_ergometrico_alterado_moderada_grave",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "teste_ergometrico_alterado",
+              "op": "truthy"
+            },
+            {
+              "field": "gravidade_estenose",
+              "op": "in",
+              "value": [
+                "moderada",
+                "grave"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Resposta hemodinâmica anormal ao esforço em estenose moderada-grave indica reavaliação para intervenção"
+          ],
+          "suggested_tests": [
+            "Reavaliação cardiológica com discussão de intervenção"
+          ]
+        }
+      },
+      {
+        "id": "aorta_dilatada_zscore",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "diametro_aorta_ascendente_zscore",
+              "op": "gte",
+              "value": 4
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Aorta ascendente dilatada (z-score elevado) requer vigilância estreita e avaliação de risco cirúrgico"
+          ],
+          "suggested_tests": [
+            "Angiotomografia ou angiorressonância de aorta"
+          ]
+        }
+      },
+      {
+        "id": "historico_familiar_dissecao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "historico_familiar_dissecao_aorta",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "História familiar de dissecção/aneurisma aórtico reforça necessidade de rastreamento familiar e vigilância mais estrita da aorta"
+          ],
+          "missing_information": [
+            "Detalhamento da história familiar de aortopatia (grau de parentesco, idade do evento)"
+          ]
+        }
+      },
+      {
+        "id": "esporte_competitivo_gravidade",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "pratica_esporte_competitivo",
+              "op": "truthy"
+            },
+            {
+              "field": "gravidade_estenose",
+              "op": "in",
+              "value": [
+                "moderada",
+                "grave",
+                "critica"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Prática de esporte competitivo com estenose moderada a crítica requer avaliação cardiológica prévia à liberação e possível restrição de modalidades de alta intensidade estática/dinâmica"
+          ]
+        }
+      },
+      {
+        "id": "inicio_transicao_achd",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "idade_anos",
+              "op": "gte",
+              "value": 16
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Idade compatível com início do processo estruturado de transição para cardiologia de adulto com cardiopatia congênita (ACHD)"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Neonato com estenose aórtica crítica ductus-dependente: Na VAB neonatal grave, a obstrução pode ser suficiente para tornar a perfusão sistêmica dependente de fluxo pelo canal arterial. À medida que o canal fecha nos primeiros dias de vida, instala-se choque cardiogênico, acidose e colapso circulatório. A morfologia valvar nessa apresentação costuma ser displásica (folhetos espessados e imóveis, não só comissuras fundidas), tornando a resposta a valvoplastia por balão menos previsível do que na criança maior com VAB simples. Manejo inicial: infusão de prostaglandina para manter o canal patente, com monitorização respiratória contínua pelo risco de apneia, seguida de valvoplastia por balão (preferida) ou valvotomia cirúrgica.",
+      "Criança com síndrome de Turner — rastreio cardiovascular estruturado: A VAB é o achado cardiovascular isolado mais característico da síndrome de Turner, presente em cerca de um quarto das pacientes em coortes dedicadas, e coexiste com frequência com coartação de aorta. Há uma arteriopatia aórtica própria da síndrome, com risco de dissecção que exige indexação do diâmetro aórtico ao tamanho corporal (índice de tamanho aórtico) em vez de diâmetro absoluto. Diante de qualquer menina com Turner, mesmo sem sopro, está indicado rastreio ecocardiográfico estruturado, com reavaliação de imagem antes de decisões como indução puberal com estrogênio.",
+      "Criança ou adolescente com coarctação de aorta associada: VAB e coarctação de aorta se buscam mutuamente: a VAB está associada a coarctação em até 50-85% dos casos de coarctação, frequência alta o suficiente para que o diagnóstico de uma justifique investigação ativa da outra. No recém-nascido, a coarctação crítica com fechamento do canal produz choque cardiogênico e exige manejo de emergência. Na criança maior, o achado costuma ser hipertensão de membros superiores com gradiente braço-perna significativo. Coarctação de aorta não corrigida é preditor de resultado subótimo de valvoplastia aórtica por balão.",
+      "Parente de primeiro grau assintomático — rastreio familiar: A VAB tem agregação familiar reconhecida, com herdabilidade estimada em 89%. Teste genético dedicado não é indicado para VAB isolada (reservado a características sindrômicas ou história familiar de doença aórtica), mas o rastreamento por ecocardiograma transtorácico dos parentes de primeiro grau é recomendado sempre que o probando tem fenótipo de raiz e/ou regurgitação aórtica isolada associada, e deve ser considerado para parentes de qualquer portador de VAB, mesmo sem essas características.",
+      "Adolescente atleta — decisão de elegibilidade esportiva: Quando não há disfunção valvar (estenose ou regurgitação) nem aortopatia associada, a elegibilidade esportiva do adolescente com VAB isolada segue a mesma orientação de uma valva estruturalmente normal. Quando há estenose ou regurgitação, aplicam-se os cortes de gravidade valvar padrão; quando há dilatação da aorta ascendente, aplica-se a estratificação de risco de aortopatia. Avaliar valva e aorta como dois eixos independentes antes de liberar ou restringir esporte competitivo.",
+      "Adolescente em transição para cardiologia de cardiopatia congênita do adulto: A VAB é uma condição vitalícia: a criança que sai da infância sem disfunção valvar relevante carrega, ainda assim, risco de aortopatia progressiva que só se manifesta plenamente na vida adulta. Os critérios de intervenção cirúrgica sobre a aorta variam por fenótipo e por fatores de risco adicionais (idade jovem, estatura baixa, hipertensão não controlada, coarctação associada, história familiar de evento aórtico agudo), o que torna a transição de cuidado um momento crítico para garantir vigilância de imagem contínua ao longo da vida.",
+      "Gestante jovem com VAB — planejamento pré-concepcional: O planejamento pré-concepcional deve mapear valva e aorta antes da gestação: dilatação aórtica grave associada à VAB coloca a gestação em classe de risco muito elevado, com recomendação de decisão compartilhada sobre a condução da gravidez. Em mulher jovem, estenose aórtica sintomática na gestação frequentemente decorre de VAB, e dor torácica ou dorsal abrupta não deve ser atribuída automaticamente à estenose — é preciso excluir síndrome aórtica aguda, sobretudo se há dilatação aórtica conhecida."
     ]
   },
   {
