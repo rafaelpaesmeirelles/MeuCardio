@@ -15379,17 +15379,17 @@
     "assistant_questions": [
       {
         "id": "tempo_desde_parto_semanas",
-        "text": "Quantas semanas se passaram desde o parto?",
+        "label": "Quantas semanas se passaram desde o parto?",
         "type": "number"
       },
       {
         "id": "diagnostico_cardiomiopatia_periparto",
-        "text": "A paciente tem diagnóstico de cardiomiopatia periparto?",
+        "label": "A paciente tem diagnóstico de cardiomiopatia periparto?",
         "type": "boolean"
       },
       {
         "id": "fracao_ejecao_atual",
-        "text": "Qual a faixa de fração de ejeção na última avaliação?",
+        "label": "Qual a faixa de fração de ejeção na última avaliação?",
         "type": "select",
         "options": [
           {
@@ -15416,12 +15416,12 @@
       },
       {
         "id": "presenca_protese_valvar_mecanica",
-        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "label": "A paciente é portadora de prótese valvar mecânica?",
         "type": "boolean"
       },
       {
         "id": "anticoagulacao_atual",
-        "text": "Qual o esquema de anticoagulação atual?",
+        "label": "Qual o esquema de anticoagulação atual?",
         "type": "select",
         "options": [
           {
@@ -15444,27 +15444,27 @@
       },
       {
         "id": "hipertensao_gestacional_previa",
-        "text": "A paciente teve hipertensão gestacional na gestação atual ou em gestação prévia?",
+        "label": "A paciente teve hipertensão gestacional na gestação atual ou em gestação prévia?",
         "type": "boolean"
       },
       {
         "id": "pre_eclampsia_previa",
-        "text": "A paciente teve pré-eclâmpsia na gestação atual ou em gestação prévia?",
+        "label": "A paciente teve pré-eclâmpsia na gestação atual ou em gestação prévia?",
         "type": "boolean"
       },
       {
         "id": "diabetes_gestacional_previo",
-        "text": "A paciente teve diagnóstico de diabetes gestacional?",
+        "label": "A paciente teve diagnóstico de diabetes gestacional?",
         "type": "boolean"
       },
       {
         "id": "amamentando_atualmente",
-        "text": "A paciente está amamentando atualmente?",
+        "label": "A paciente está amamentando atualmente?",
         "type": "boolean"
       },
       {
         "id": "sintomas_atuais",
-        "text": "Quais sintomas a paciente apresenta atualmente?",
+        "label": "Quais sintomas a paciente apresenta atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -15495,7 +15495,7 @@
       },
       {
         "id": "pressao_arterial_atual",
-        "text": "Qual a classificação da pressão arterial atual?",
+        "label": "Qual a classificação da pressão arterial atual?",
         "type": "select",
         "options": [
           {
@@ -15522,17 +15522,17 @@
       },
       {
         "id": "realizou_ecocardiograma_pos_parto",
-        "text": "A paciente já realizou ecocardiograma de reavaliação pós-parto?",
+        "label": "A paciente já realizou ecocardiograma de reavaliação pós-parto?",
         "type": "boolean"
       },
       {
         "id": "rastreio_metabolico_realizado",
-        "text": "O rastreio metabólico pós-parto já foi realizado?",
+        "label": "O rastreio metabólico pós-parto já foi realizado?",
         "type": "boolean"
       },
       {
         "id": "sinais_alarme_puerperio",
-        "text": "A paciente apresenta algum sinal de alarme no puerpério?",
+        "label": "A paciente apresenta algum sinal de alarme no puerpério?",
         "type": "multiselect",
         "options": [
           {
