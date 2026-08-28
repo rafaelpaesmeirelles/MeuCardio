@@ -1,6 +1,10 @@
 /* CorVIA Clinical OS — full viewport fidelity */
 .clinical-os .conteudo.cos-content{width:100%;min-width:0;max-width:none;margin:0}
-.clinical-os .cos-content>:not(.credito):not(.credito--compacto){width:100%;max-width:none;margin-inline:0}
+/* O shell ocupa todo o viewport, mas páginas internas preservam o ritmo
+   canônico definido pelo Clinical Command Center. Forçar qualquer filho
+   direto a max-width:none esticava formulários, cards e grids além do layout
+   aprovado. Home continua deliberadamente full-width. */
+.clinical-os .cos-content>:not(.cos-home):not(.credito):not(.credito--compacto){width:min(100%,1240px);max-width:1240px;margin-inline:auto}
 .clinical-os .cos-home{width:100%;max-width:none;margin-inline:0}
 .clinical-os .cos-content article>p,.clinical-os .cos-content article>ul,.clinical-os .cos-content article>ol,.clinical-os .cos-content article>blockquote{max-width:82ch}
 @media(min-width:1440px){.clinical-os .cos-content{padding-inline:clamp(1.25rem,1.55vw,2rem)}}
