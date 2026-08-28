@@ -3,7 +3,7 @@
     "slug": "hipertensao-resistente-e-refrataria",
     "set": {
       "review_status": "revisado",
-      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: emergência hipertensiva condicionada a PA acentuadamente elevada + lesão aguda de órgão-alvo, resistência confirmada condicionada à exclusão de pseudorresistência, refratariedade condicionada a PA persistente não controlada, amilorida separada de MRA, segurança por K/TFGe exigida antes de sugerir MRA e ativação de barorreflexo retirada do uso rotineiro. Status regulatório do baxdrostat atualizado com fonte FDA 2026. Publicação autorizada pelo responsável médico em 27/08/2026."
+      "review_note": "Hub Tudo com Tudo originalmente produzido pelo Claude em 27/08/2026. Revisão clínica e científica concluída em 27/08/2026: emergência hipertensiva condicionada a PA acentuadamente elevada + lesão aguda de órgão-alvo, resistência confirmada condicionada à exclusão de pseudorresistência, refratariedade condicionada a PA persistente não controlada, amilorida separada de MRA; não substituir MRA por amilorida ou eplerenona quando a limitação for hiperpotassemia/disfunção renal, e exigir segurança por K/TFGe antes de sugerir poupadores de potássio; ativação de barorreflexo retirada do uso rotineiro. Status regulatório do baxdrostat atualizado com fonte FDA 2026. Publicação autorizada pelo responsável médico em 27/08/2026."
     },
     "append": {
       "source_refs": [
@@ -27,6 +27,14 @@
       {
         "old": "Se hipercalemia ou taxa de filtração glomerular reduzida contraindicarem o antagonista mineralocorticoide, considerar amilorida ou eplerenona como alternativa dentro da mesma classe terapêutica",
         "new": "Se hiperpotassemia ou função renal limitarem o antagonista mineralocorticoide, não substituir automaticamente por eplerenona ou amilorida; revisar diurético, causas secundárias, outras classes e estratégia especializada conforme K/TFGe. Se a limitação da espironolactona for apenas efeito antiandrogênico e K/TFGe permitirem, eplerenona pode ser considerada"
+      },
+      {
+        "old": "monitorar potássio e função renal periodicamente, com cautela adicional quando a taxa de filtração glomerular já está reduzida e o potássio já elevado.",
+        "new": "monitorar potássio e função renal periodicamente; eplerenona deve ser usada apenas se K/TFGe permitirem e não deve ser usada diante de hiperpotassemia clinicamente relevante."
+      },
+      {
+        "old": "Quando o antagonista mineralocorticoide não pode ser usado com segurança (função renal reduzida ou risco de hipercalemia), a amilorida ou a eplerenona são alternativas dentro da mesma lógica terapêutica.",
+        "new": "Quando o antagonista mineralocorticoide não pode ser usado com segurança por função renal reduzida ou risco de hipercalemia, não substituir automaticamente por amilorida ou eplerenona, pois ambas podem perpetuar o risco de hiperpotassemia; selecionar alternativa não poupadora de potássio conforme o contexto clínico e revisão especializada."
       },
       {
         "old": "Discutir intervenções adicionais (denervação renal por radiofrequência ou por ultrassom, ativação de barorreflexo, inibidor da aldosterona sintase quando disponível) como opções complementares, não substitutas, da otimização farmacológica",
