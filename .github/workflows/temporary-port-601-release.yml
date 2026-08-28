@@ -1,0 +1,49 @@
+name: Temporary port PR601 to canonical disease fragment
+on:
+  push:
+    branches: [claude/tudo-com-tudo-lacuna-20-20260827]
+    paths: [.github/workflows/temporary-port-601-release.yml]
+permissions: {contents: write}
+jobs:
+  port:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - name: Convert manifest append to canonical fragment
+        run: |
+          git fetch origin release/all-pending-20260828
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          slug = 'arritmias-ventriculares-e-morte-subita-cardiaca'
+          path = Path('doencas/metadados.json')
+          items = json.loads(path.read_text(encoding='utf-8'))
+          matches = [item for item in items if item.get('slug') == slug]
+          if len(matches) != 1:
+              raise SystemExit(f'Esperado 1 registro {slug}; encontrados {len(matches)}')
+          Path('doencas/fragmentos').mkdir(parents=True, exist_ok=True)
+          Path(f'doencas/fragmentos/{slug}.json').write_text(
+              json.dumps(matches, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          PY
+          git checkout origin/release/all-pending-20260828 -- doencas/metadados.json backend/tests/test_canonical_content_review_status.py
+          mkdir -p doencas/correcoes
+          cat > doencas/correcoes/release-approve-20260828-arritmias-ventriculares-e-morte-subita-cardiaca.json <<'EOF'
+          [
+            {
+              "slug": "arritmias-ventriculares-e-morte-subita-cardiaca",
+              "set": {
+                "review_status": "revisado",
+                "review_note": "Verbete-hub Tudo com Tudo produzido pelo Claude em 27/08/2026, portado para fragmento canônico e publicação explicitamente autorizada pelo responsável médico em 28/08/2026 para o release consolidado. Mantidas as 26 conexões verificadas, fontes primárias e regras determinísticas; exige julgamento clínico individual."
+              }
+            }
+          ]
+          EOF
+          git rm .github/workflows/temporary-port-601-release.yml
+          git diff --check
+          git config user.name 'CorVIA Release Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add doencas backend/tests/test_canonical_content_review_status.py .github/workflows/temporary-port-601-release.yml || true
+          git commit -m 'review(science): portar arritmias ventriculares para fragmento canônico'
+          git push origin HEAD:claude/tudo-com-tudo-lacuna-20-20260827
