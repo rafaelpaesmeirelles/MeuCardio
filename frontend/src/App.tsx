@@ -2,6 +2,8 @@ import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
+import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
+import OptionalFeatureBoundary from "./components/OptionalFeatureBoundary";
 import { useAuth } from "./lib/auth";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
@@ -142,8 +144,16 @@ export default function App() {
   }
 
   return (
-    <RotasSuspensas>
-      <Routes>
+    <>
+      {/* Recurso opcional da home: só é montado depois de autenticação,
+          perfil, KYC e primeiro acesso. Assim nenhuma incompatibilidade do
+          personalizador pode bloquear login ou cadastro de qualquer tipo de
+          conta atual ou futura. */}
+      <OptionalFeatureBoundary nome="personalização da página inicial">
+        <HomeQuickActionsPersonalizer />
+      </OptionalFeatureBoundary>
+      <RotasSuspensas>
+        <Routes>
         <Route element={<Shell />}>
           <Route index element={<Painel />} />
           <Route path="apresentacao" element={<Apresentacao />} />
@@ -215,7 +225,8 @@ export default function App() {
         <Route path="/tour" element={<Tour />} />
         <Route path="/em-breve" element={<EmBreve />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </RotasSuspensas>
+        </Routes>
+      </RotasSuspensas>
+    </>
   );
 }

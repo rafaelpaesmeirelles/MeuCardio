@@ -43,11 +43,15 @@ export default class AppErrorBoundary extends Component<Props, State> {
     if (!this.state.falhou) return this.props.children;
 
     return (
-      <main className="app-recovery" role="alert">
-        <section className="app-recovery__card">
+      <main
+        className="app-recovery"
+        role="alert"
+        style={{ color: "#eefafb", background: "#071b24", minHeight: "100vh" }}
+      >
+        <section className="app-recovery__card" style={{ background: "#0b2632" }}>
           <p className="eyebrow">Recuperação segura</p>
-          <h1>Não foi possível abrir esta tela.</h1>
-          <p>Sua sessão foi preservada. Atualize os arquivos do CorVIA e tente novamente.</p>
+          <h1 style={{ color: "#eefafb" }}>Não foi possível abrir esta tela.</h1>
+          <p style={{ color: "#a9c4ca" }}>Sua sessão foi preservada. Atualize os arquivos do CorVIA e tente novamente.</p>
           <button type="button" className="botao" onClick={() => void recuperarAplicacao()}>
             Atualizar e continuar
           </button>
