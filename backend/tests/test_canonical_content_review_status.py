@@ -39,15 +39,7 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
-    "doencas/metadados.json": {
-        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
-        # doenca-coronariana-idoso passou de completeness=basico (só
-        # catalogação) para completo, com conteúdo clínico integral e 21
-        # related_document_slugs — ver review_note.
-        "doenca-coronariana-idoso",
-    },
-}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
