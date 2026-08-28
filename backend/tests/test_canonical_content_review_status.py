@@ -41,9 +41,7 @@ MANIFESTS = (
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
     "doencas/metadados.json": {
-        # Verbete novo criado em 28/08/2026 via doencas/fragmentos/
-        # cardiomiopatia-hipertrofica.json — doença cardíaca genética mais
-        # prevalente, sem ficha própria até então — ver review_note.
+        "cardiomiopatias",
         "cardiomiopatia-hipertrofica",
     },
 }
