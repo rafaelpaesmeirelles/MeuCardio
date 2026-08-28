@@ -10320,7 +10320,7 @@
     "assistant_questions": [
       {
         "id": "idade_crianca",
-        "text": "Qual a faixa etária da criança?",
+        "label": "Qual a faixa etária da criança?",
         "type": "select",
         "options": [
           {
@@ -10343,12 +10343,12 @@
       },
       {
         "id": "crianca_assintomatica",
-        "text": "A criança está assintomática, sem dispneia, cianose, sudorese às mamadas ou dificuldade de ganho de peso?",
+        "label": "A criança está assintomática, sem dispneia, cianose, sudorese às mamadas ou dificuldade de ganho de peso?",
         "type": "boolean"
       },
       {
         "id": "grau_sopro",
-        "text": "Qual o grau de intensidade do sopro (escala de Levine, 1 a 6)?",
+        "label": "Qual o grau de intensidade do sopro (escala de Levine, 1 a 6)?",
         "type": "select",
         "options": [
           {
@@ -10379,7 +10379,7 @@
       },
       {
         "id": "caracter_sopro",
-        "text": "Qual o caráter do sopro à ausculta?",
+        "label": "Qual o caráter do sopro à ausculta?",
         "type": "select",
         "options": [
           {
@@ -10402,17 +10402,17 @@
       },
       {
         "id": "muda_com_posicao",
-        "text": "O sopro diminui ou desaparece com a mudança de posição (ortostatismo, Valsalva ou rotação cervical)?",
+        "label": "O sopro diminui ou desaparece com a mudança de posição (ortostatismo, Valsalva ou rotação cervical)?",
         "type": "boolean"
       },
       {
         "id": "cianose",
-        "text": "Há cianose associada, central ou de extremidades?",
+        "label": "Há cianose associada, central ou de extremidades?",
         "type": "boolean"
       },
       {
         "id": "sinais_insuficiencia_cardiaca",
-        "text": "Há sinais de insuficiência cardíaca no lactente?",
+        "label": "Há sinais de insuficiência cardíaca no lactente?",
         "type": "multiselect",
         "options": [
           {
@@ -10443,7 +10443,7 @@
       },
       {
         "id": "pulsos_femorais",
-        "text": "Como estão os pulsos femorais e periféricos ao exame?",
+        "label": "Como estão os pulsos femorais e periféricos ao exame?",
         "type": "select",
         "options": [
           {
@@ -10458,22 +10458,22 @@
       },
       {
         "id": "historia_familiar_cardiopatia_congenita_morte_subita",
-        "text": "Há história familiar de cardiopatia congênita ou morte súbita precoce em parente de primeiro grau?",
+        "label": "Há história familiar de cardiopatia congênita ou morte súbita precoce em parente de primeiro grau?",
         "type": "boolean"
       },
       {
         "id": "sindrome_genetica_associada",
-        "text": "A criança tem síndrome genética associada a maior risco de cardiopatia estrutural (Down, Turner, Noonan, DiGeorge, William, entre outras)?",
+        "label": "A criança tem síndrome genética associada a maior risco de cardiopatia estrutural (Down, Turner, Noonan, DiGeorge, William, entre outras)?",
         "type": "boolean"
       },
       {
         "id": "sintomas_esforco_sincope",
-        "text": "Há síncope, dor torácica ao esforço ou intolerância ao exercício?",
+        "label": "Há síncope, dor torácica ao esforço ou intolerância ao exercício?",
         "type": "boolean"
       },
       {
         "id": "crescimento_desenvolvimento_adequados",
-        "text": "O crescimento pondero-estatural e o desenvolvimento neuropsicomotor estão adequados para a idade?",
+        "label": "O crescimento pondero-estatural e o desenvolvimento neuropsicomotor estão adequados para a idade?",
         "type": "boolean"
       }
     ],
