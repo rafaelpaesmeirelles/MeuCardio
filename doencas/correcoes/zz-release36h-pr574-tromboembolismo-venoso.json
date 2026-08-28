@@ -1,0 +1,522 @@
+[
+  {
+    "slug": "tromboembolismo-venoso",
+    "set": {
+      "name": "Tromboembolismo venoso",
+      "aliases": [
+        "TEV",
+        "trombose venosa profunda",
+        "TVP",
+        "trombose venosa"
+      ],
+      "area": "geral",
+      "category": "doenca_vascular",
+      "subtype": null,
+      "cyanosis_class": null,
+      "prevalence_rank": null,
+      "completeness": "completo",
+      "summary": "Espectro do tromboembolismo venoso além do TEP agudo (que tem hub próprio, embolia-pulmonar-aguda): trombose venosa profunda proximal e distal, trombose venosa de membro superior associada a cateter, trombose venosa superficial e síndrome pós-trombótica. Diagnóstico por escore de Wells, D-dímero e ultrassom de compressão. Tratamento por anticoagulação — DOAC como primeira linha na maioria dos pacientes, com exceções bem definidas (síndrome antifosfolípide, doença renal crônica grave/diálise, gestação, câncer ativo com risco de sangramento de mucosa). Duração determinada pela classificação em provocado versus não provocado, com o escore HERDOO2 orientando a decisão em mulheres. Cobre também populações especiais (câncer, obesidade extrema, gestação, DRC, paciente crítico), sítios incomuns (esplâncnica, cerebral), profilaxia, filtro de veia cava e reversão de anticoagulação em sangramento maior.",
+      "epidemiology": "O tromboembolismo venoso (TEV) do adulto abrange um espectro mais amplo que a TVP proximal de membro inferior e o TEP agudo, já cobertos em verbete próprio de reperfusão. A TVP distal isolada (trombo confinado às veias infrapoplíteas) é achado frequente com o uso rotineiro de ecodoppler de rastreio; sem anticoagulação, cerca de 16% recorrem e 11% progridem ao sistema proximal, risco que cai para a faixa de 4-7% (recorrência) e 2-7% (progressão) conforme a duração de tratamento escolhida, segundo metanálise de 53 estudos e 14.580 pacientes. A trombose associada a cateter venoso central é predominantemente assintomática e subdiagnosticada: a incidência clinicamente detectada gira em torno de 1-5% dos cateteres inseridos, mas sobe para 14-18% (e até 58% em subgrupos de PICC de triplo lúmen) quando há rastreio de imagem sistemático; esse mecanismo responde por cerca de 70% de toda TVP de membro superior, e PICC carrega risco cerca de três vezes maior que cateter venoso central convencional. A trombose venosa superficial de membro inferior, historicamente tratada como condição benigna e autolimitada, tem risco real de progressão para TVP/TEP quando o trombo mede 5 cm ou mais ou está próximo da junção safenofemoral/safenopoplítea. A síndrome pós-trombótica é a complicação crônica mais comum da TVP: incidência cumulativa de cerca de 25% em 2 anos e quase 30% em 5-8 anos após TVP proximal em coorte prospectiva de longo prazo, contra cerca de 17% (majoritariamente leve) após TVP distal isolada — a extensão anatômica do trombo inicial molda diretamente esse risco. Cerca de 5% dos pacientes com TEV não provocado recebem diagnóstico de câncer oculto no ano seguinte ao evento, prevalência sete vezes maior acima de 50 anos. Sítios incomuns — veia esplâncnica (porta, mesentérica, esplênica) e seios/veias venosas cerebrais — associam-se predominantemente a causa local ou sistêmica identificável (doença mieloproliferativa com mutação JAK2 V617F, neoplasia sólida, infecção/inflamação abdominal, cirrose com hipertensão portal, estados pró-trombóticos, gestação/puerpério, contracepção hormonal) e, no caso da trombose venosa cerebral, afetam desproporcionalmente adultos jovens e mulheres em idade reprodutiva.",
+      "presentation": [
+        "TVP proximal de membro inferior: dor, edema unilateral, empastamento de panturrilha, calor local, eventual cianose ou veias superficiais colaterais não varicosas",
+        "TVP distal isolada (infrapoplítea): sintomas mais discretos ou achado incidental em ecodoppler de rastreio, com risco de embolia pulmonar e de progressão proximal claramente menor que a TVP proximal",
+        "TVP de membro superior associada a cateter venoso central, PICC ou marca-passo/CDI: edema, dor e circulação colateral visível no braço, ombro ou base do pescoço ipsilateral ao dispositivo — a maioria dos casos é assintomática e só aparece em rastreio de imagem",
+        "Trombose venosa superficial: cordão palpável, doloroso e eritematoso ao longo do trajeto de uma veia superficial, tipicamente varicosa, no membro inferior",
+        "Síndrome pós-trombótica no membro que teve TVP: dor, cãibras, sensação de peso, parestesia, prurido, edema pré-tibial, induração da pele, hiperpigmentação, ectasia venosa e, no extremo, úlcera venosa",
+        "Sítios incomuns de trombose venosa: dor abdominal, distensão ou sinais de hipertensão portal na trombose de veia esplâncnica; cefaleia progressiva, papiledema, crise epiléptica, encefalopatia ou déficit neurológico focal na trombose venosa cerebral",
+        "TEV incidental identificado em exame de imagem pedido por outro motivo, mais comum em estadiamento oncológico, sem sintoma atribuível ao paciente",
+        "Sinais de TEP concomitante (dispneia súbita, dor torácica pleurítica, síncope, hipotensão) ou de embolia paradoxal iminente por trombo cruzando forame oval patente, quando o trombo venoso progride ou emboliza"
+      ],
+      "diagnostic_approach": {
+        "escore_de_wells_para_tvp": [
+          "Modelo clínico em duas versões — dois níveis (improvável ≤1 ponto, provável ≥2) ou três níveis (baixo <1, intermediário 1-2, alto >2) — somando +1 para câncer ativo, paralisia/paresia/imobilização gessada recente, acamado >3 dias ou cirurgia de grande porte nas últimas 12 semanas, dor ao longo do sistema venoso profundo, edema de toda a perna, aumento de panturrilha >3 cm, edema com cacifo, veias colaterais não varicosas e TVP prévia documentada, com -2 para diagnóstico alternativo pelo menos tão provável quanto TVP",
+          "Validado para primeiro episódio ambulatorial de membro inferior; TVP recorrente ipsilateral, gestação, membro superior e paciente internado têm prevalência e desempenho de teste diferentes e não devem seguir automaticamente o mesmo corte"
+        ],
+        "d_dimero": [
+          "Reservado à probabilidade clínica baixa/improvável, com ensaio de alta sensibilidade; D-dímero negativo nesse grupo exclui TVP sem necessidade de imagem",
+          "Um D-dímero positivo nunca diagnostica TVP isoladamente — apenas abre indicação de ultrassonografia; e não deve ser usado para excluir TVP em paciente de alta probabilidade clínica pré-teste, cenário de baixo valor preditivo negativo"
+        ],
+        "ultrassonografia_de_compressao": [
+          "Método de imagem de primeira linha, proximal ou de toda a perna, inclusive na gestação",
+          "Exame proximal negativo sem diagnóstico alternativo identificado, em paciente de alta probabilidade clínica: repetir em 1 semana antes de excluir TVP",
+          "Na TVP distal isolada sem sintomas graves nem fator de risco para extensão: vigilância seriada por ultrassonografia (tipicamente semanal por 2 semanas) é alternativa validada à anticoagulação imediata, anticoagulando apenas se houver progressão"
+        ],
+        "sitios_incomuns_e_investigacao_dirigida": [
+          "Trombose de veia esplâncnica: tomografia ou ressonância com fase venosa; rastrear mutação JAK2 V617F e neoplasia mieloproliferativa oculta, sobretudo quando classificada como não provocada",
+          "Trombose venosa cerebral: TC de crânio sem contraste isolada não exclui o diagnóstico — exige venografia por tomografia computadorizada (CTV) ou por ressonância magnética (MRV) para visualizar diretamente o sistema venoso",
+          "Investigação de trombofilia hereditária/adquirida e de neoplasia oculta além da investigação básica: reservada a TEV não provocado, sítio incomum, recorrência ou história familiar relevante — escores de predição de câncer oculto (RIETE, SOME) têm discriminação fraca (área sob a curva ROC de aproximadamente 0,56 a 0,59) e não substituem julgamento clínico guiado por idade e sintomas"
+        ]
+      },
+      "differentials": [
+        "Insuficiência venosa crônica, erisipela ou celulite (edema/eritema assimétrico de membro sem trombo confirmado à imagem)",
+        "Ruptura de cisto de Baker (edema e dor de panturrilha mimetizando TVP distal, distinguível por ultrassonografia)",
+        "Linfedema (edema depressível de instalação mais lenta, sem cordão venoso trombosado à imagem)",
+        "Trauma muscular, hematoma ou síndrome compartimental (dor e edema localizados, história de esforço ou trauma, sem trombo à ultrassonografia)",
+        "Síndrome do desfiladeiro torácico/síndrome de Paget-Schroetter (trombose venosa primária de esforço em jovem, por compressão extrínseca — manejo distinto da TVP de membro superior associada a cateter)",
+        "Tromboflebite séptica (sinais infecciosos francos — febre, calafrio, secreção purulenta no trajeto — distinta da trombose venosa superficial espontânea/varicosa)",
+        "Compressão extrínseca venosa por massa pélvica ou tumoral mimetizando TVP proximal unilateral"
+      ],
+      "tests": [
+        "Escore de Wells para TVP: instrumento validado para primeiro episódio ambulatorial de membro inferior; não deve ser aplicado sem ressalva a TVP recorrente ipsilateral, gestação, membro superior ou paciente internado, cenários com prevalência e desempenho de teste diferentes",
+        "D-dímero de alta sensibilidade: alto valor preditivo negativo apenas em probabilidade clínica baixa/improvável; perde especificidade em idosos, gestação, câncer ativo e pós-operatório recente, e um resultado positivo isolado nunca confirma o diagnóstico",
+        "Ultrassonografia de compressão (proximal ou de perna inteira): primeira linha de imagem, mas exame proximal único negativo em paciente de alta probabilidade exige repetição em 1 semana antes de excluir TVP, e a técnica é operador-dependente",
+        "Ultrassonografia seriada (vigilância) na TVP distal isolada de menor risco: só é estratégia de segurança válida se repetida nos intervalos programados do protocolo — vigilância sem reavaliação agendada não substitui a anticoagulação",
+        "Investigação de trombofilia hereditária/adquirida: não deve ser solicitada de rotina em todo TEV; indicada em sítio incomum, recorrência ou história familiar, e a interpretação de proteína C, proteína S e antitrombina pode ser confundida pela anticoagulação em curso e pelo próprio evento agudo",
+        "Rastreio de neoplasia oculta além da investigação básica (por exemplo, tomografia de abdome/pelve de rotina): não demonstrou reduzir mortalidade nem antecipar de forma clinicamente relevante o diagnóstico no maior ensaio randomizado disponível sobre o tema, e os escores de predição validados têm discriminação fraca",
+        "Venografia por tomografia computadorizada (CTV) ou por ressonância magnética (MRV) para trombose venosa cerebral: exame confirmatório necessário quando a suspeita persiste, pois TC ou RM cerebral convencionais sem fase venosa podem ser normais ou inespecíficas",
+        "Ecocardiograma (preferencialmente transesofágico) para suspeita de trombo em trânsito/embolia paradoxal iminente: achado raro, com variabilidade interobservador reconhecida na leitura de imagem, o que justifica segunda opinião antes de decisão terapêutica de alto risco"
+      ],
+      "red_flags": [
+        "Sinais de TEP concomitante (dispneia súbita, dor torácica pleurítica, síncope, hipotensão) em paciente com TVP confirmada ou suspeita",
+        "Trombo cruzando forame oval patente (embolia paradoxal iminente), com déficit neurológico focal ou isquemia de membro concomitante — cenário de mortalidade elevada na literatura agregada disponível",
+        "Trombose iliofemoral extensa com comprometimento da perfusão do membro (edema tenso, dor desproporcional, palidez ou cianose), sinal de possível evolução para gangrena venosa e indicação de avaliação vascular urgente",
+        "Cefaleia progressiva associada a papiledema, crise epiléptica ou rebaixamento do nível de consciência, sugerindo trombose venosa cerebral com hipertensão intracraniana e risco de herniação",
+        "Tromboflebite superficial recorrente ou migratória, sinal clássico associado a neoplasia oculta e que costuma justificar investigação oncológica dirigida",
+        "Sangramento maior ou sinais de hemorragia intracraniana em paciente anticoagulado para TEV — na trombose venosa cerebral, hemorragia associada ao próprio evento não é, por si só, contraindicação à anticoagulação",
+        "Deterioração hemodinâmica, hipotensão, oligúria ou alteração aguda do estado mental em paciente com trombo em câmaras cardíacas direitas (clot-in-transit), associado a mortalidade substancialmente maior que TEP isolado",
+        "Dor abdominal intensa, ascite de instalação aguda ou sangramento varicoso em trombose extensa (mais da metade do tronco) ou recente de veia esplâncnica, sinal de hipertensão portal aguda"
+      ],
+      "ambulatory_flow": [
+        "Classificar o TEV como provocado por fator transitório, provocado por fator persistente (como câncer ativo) ou não provocado, pois essa classificação direciona a decisão sobre duração da anticoagulação",
+        "Escolher a classe de anticoagulante conforme o contexto clínico: DOAC como padrão na maioria dos pacientes, HBPM na gestação e no câncer com mucosa luminal exposta ou interação medicamentosa relevante, varfarina na síndrome antifosfolípide e no clearance de creatinina muito reduzido",
+        "Ao final do curso inicial de anticoagulação, tomar uma decisão ativa entre suspender e estender, aplicando o escore HERDOO2 em mulheres com TEV não provocado e ponderando o risco de sangramento",
+        "Quando a decisão for estender a anticoagulação, preferir a dose reduzida do anticoagulante sobre a dose plena e sobre a aspirina, que não é uma alternativa equivalente",
+        "No câncer ativo, aplicar o escore de Khorana antes de iniciar quimioterapia para selecionar quem se beneficia de tromboprofilaxia primária, e manter a anticoagulação terapêutica por pelo menos seis meses, com preferência por dose reduzida na fase estendida",
+        "Rastrear e orientar sobre sinais de síndrome pós-trombótica (escore de Villalta) nas consultas de seguimento após TVP proximal, sem assumir que meia elástica de compressão rotineira previne o quadro",
+        "Reavaliar periodicamente, a cada consulta, a decisão de manter a anticoagulação estendida, já que risco de sangramento, adesão e preferência do paciente mudam ao longo do seguimento"
+      ],
+      "emergency_flow": [
+        "TVP proximal extensa (ilíofemoral), trombo flutuante ou risco de embolização: considerar internação, anticoagulação parenteral e avaliação para trombectomia ou trombólise dirigida por cateter em centro com suporte adequado",
+        "Sangramento maior em vigência de anticoagulação: interromper o fármaco causador, classificar a gravidade e iniciar reversão específica por classe sem aguardar confirmação adicional quando o sítio for intracraniano ou outro local crítico",
+        "Síndrome de veia cava superior ou trombose associada a cateter venoso central sintomática: avaliar anticoagulação terapêutica, decisão compartilhada sobre remoção ou manutenção do cateter e necessidade de intervenção endovascular",
+        "Suspeita de flegmasia cerúlea ou alba dolens com comprometimento da perfusão do membro: manejo de urgência com anticoagulação imediata e avaliação para trombólise ou trombectomia",
+        "TEV recorrente sob anticoagulação em dose terapêutica: confirmar por imagem comparada ao exame basal antes de escalonar tratamento, investigar adesão e condição protrombótica de base, evitando indicar filtro de veia cava inferior como resposta padrão"
+      ],
+      "treatment_summary": "A anticoagulação é o pilar do tratamento do tromboembolismo venoso (TEV) fora do contexto de reperfusão imediata do TEP agudo, que tem hub próprio (embolia-pulmonar-aguda). Na escolha entre classes terapêuticas, os anticoagulantes orais diretos (DOAC) são hoje a primeira linha na maioria dos pacientes: ensaios pivotais mostraram eficácia não inferior à varfarina, com sangramento igual ou menor. Há uma distinção de desenho relevante entre os DOAC: apixabana e rivaroxabana dispensam heparina prévia, com esquema oral desde o início; dabigatrana e edoxabana exigem uma fase parenteral prévia com heparina, e iniciar esses dois fármacos sem essa fase é usar esquema não testado nos ensaios que os validaram. Há exceções bem definidas que afastam do DOAC como escolha padrão: síndrome antifosfolípide, sobretudo no perfil triplo-positivo, em que a varfarina permanece a classe padrão; clearance de creatinina muito reduzido ou diálise, cenário sistematicamente excluído dos ensaios pivotais — toda a evidência disponível é observacional, sem ensaio randomizado dedicado, e a apixabana é a única com sinal favorável relativamente mais consistente, ainda de força baixa, sendo prudente não extrapolar esse sinal para dabigatrana e rivaroxabana; gestação, em que a heparina de baixo peso molecular (HBPM) é a classe preferida, DOAC não é recomendado e varfarina é contraindicada; na lactação, HBPM e varfarina são compatíveis e o DOAC deve ser evitado; e câncer ativo, em que HBPM e DOAC são ambos aceitáveis, mas tumor gastrointestinal ou geniturinário luminal não ressecado, alto risco de sangramento de mucosa, absorção comprometida ou interação medicamentosa relevante com o esquema antineoplásico favorecem HBPM. A duração da anticoagulação depende do caráter do evento: TEV provocado por fator transitório reversível costuma ter curso inicial limitado a poucos meses; TEV não provocado carrega risco de recorrência que justifica considerar extensão por tempo indefinido, decisão que passa pelo risco de sangramento, pelo sexo do paciente e, em mulheres, pelo escore HERDOO2, validado para identificar quem pode suspender a anticoagulação com segurança. Quando a decisão é estender, o anticoagulante em dose reduzida tem eficácia comparável à dose plena com menos sangramento não maior, e é preferível à aspirina, cujo efeito é modesto e inconsistente entre os ensaios que a testaram e não é equivalente ao anticoagulante. No câncer ativo, a duração mínima recomendada é de pelo menos seis meses, prolongada enquanto a doença permanecer ativa, e a fase estendida também favorece a dose reduzida, com eficácia preservada e menos sangramento clinicamente relevante. TEV recorrente durante anticoagulação em dose terapêutica (recorrência sob tratamento) exige, antes de qualquer escalonamento, confirmar o diagnóstico por imagem comparada ao exame basal, investigar adesão, absorção gastrointestinal e interação medicamentosa, e rastrear condição protrombótica de base, incluindo neoplasia oculta e síndrome antifosfolípide; a troca para HBPM ou seu escalonamento é conduta descrita principalmente para o cenário oncológico, com evidência de baixa força, e não deve ser extrapolada automaticamente para a população geral sem câncer. Em sangramento maior sob anticoagulação, a conduta é interromper o fármaco causador, classificar a gravidade e considerar reversão específica por classe — antagonista da vitamina K com vitamina K endovenosa associada a concentrado de complexo protrombínico, dabigatrana com seu agente reversor específico, inibidores do fator Xa com concentrado de complexo protrombínico como alternativa amplamente disponível, verificando a situação regulatória local do agente reversor específico para essa classe, dado o histórico recente de reavaliação de risco-benefício em algumas jurisdições; antiagregante associado não é suspenso automaticamente e deve ser individualizado com a equipe responsável, e a retomada da anticoagulação após hemostasia depende do sítio e da causa do sangramento, do controle definitivo da fonte e do risco de recorrência trombótica, sem prazo universal aplicável a todos os casos.",
+      "monitoring": [
+        "Função renal periódica, pois altera a elegibilidade e o esquema do DOAC ao longo de todo o tratamento",
+        "Sinais e sintomas de sangramento maior e não maior a cada consulta, com orientação estruturada ao paciente sobre quando procurar atendimento",
+        "Adesão ao anticoagulante, tolerância e surgimento de interações medicamentosas novas, especialmente inibidores ou indutores fortes de P-glicoproteína ou CYP3A4",
+        "Reavaliação periódica da indicação de anticoagulação estendida, revisando risco de sangramento, atividade do câncer quando presente e preferência do paciente",
+        "Sinais de síndrome pós-trombótica (escore de Villalta) nas consultas de seguimento após TVP proximal",
+        "Em quem usa varfarina, tempo na faixa terapêutica do INR como indicador de qualidade do controle",
+        "Contagem de plaquetas no câncer ativo em quimioterapia, pela interação direta com a escolha e a viabilidade do anticoagulante"
+      ],
+      "special_populations": [
+        "Gestação e puerpério: TEV é uma das principais causas de mortalidade materna direta; heparina de baixo peso molecular (HBPM) é o anticoagulante de escolha durante toda a gestação — varfarina é teratogênica e DOACs não têm segurança estabelecida (atravessam a placenta); na lactação, HBPM e varfarina são compatíveis, DOACs não são recomendados por falta de dados de segurança no lactente.",
+        "Câncer ativo (TEV associado a câncer): maior risco de recorrência e de sangramento que TEV não relacionado a câncer; HBPM e DOACs selecionados (com cautela em neoplasias gastrointestinais/urotelial por risco de sangramento) são as opções preferidas sobre varfarina; o escore de Khorana orienta estratificação de risco antes de terapia sistêmica, e a anticoagulação costuma ser estendida enquanto o câncer permanecer ativo.",
+        "Obesidade extrema / pós-cirurgia bariátrica: peso corporal muito elevado (IMC ≥ 40 ou peso ≥ 120 kg) e alterações farmacocinéticas após bypass gástrico (absorção reduzida, trânsito acelerado) podem comprometer a eficácia de doses fixas de DOAC; a ISTH orienta cautela e, em alguns cenários, dosagem de nível plasmático do DOAC ou preferência por HBPM/varfarina monitorada.",
+        "Doença renal crônica grave e diálise: a maioria dos DOACs foi pouco ou não estudada em clearance de creatinina muito baixo ou em diálise, exigindo ajuste de dose, escolha preferencial por varfarina monitorada ou uso off-label cauteloso de DOAC com evidência limitada; síndrome nefrótica acrescenta risco pró-trombótico proporcional à gravidade da proteinúria e à histologia (maior risco na nefropatia membranosa).",
+        "Paciente crítico em UTI: alto risco de TEV por imobilização, estados inflamatórios e cateteres venosos centrais, contrabalançado por risco de sangramento e instabilidade hemodinâmica que frequentemente contraindicam anticoagulação plena; a tromboprofilaxia farmacológica (heparina) é padrão salvo contraindicação, com ensaios como PROTECT e PREVENT orientando a escolha entre HNF e HBPM.",
+        "Trombofilia hereditária e síndrome antifosfolípide (SAF): trombofilias hereditárias (fator V Leiden, mutação da protrombina, deficiência de proteína C/S ou antitrombina) influenciam a decisão de duração da anticoagulação após evento não provocado; a SAF trombótica é uma contraindicação formal a DOACs, que se mostraram inferiores à varfarina nessa população, exigindo anticoagulação com antagonista de vitamina K.",
+        "Doença de veia cava/sítios incomuns em populações especiais (trombose esplâncnica com ou sem cirrose, trombose venosa cerebral): a presença de hepatopatia crônica ou de hemorragia intracraniana concomitante altera a relação risco-benefício da anticoagulação e exige manejo individualizado, muitas vezes divergente do algoritmo padrão de TEV de membros."
+      ],
+      "assistant_questions": [
+        {
+          "id": "bleeding_now",
+          "label": "Há sangramento maior ativo em vigência de anticoagulação (local crítico, instabilidade hemodinâmica, queda de hemoglobina de 2 g/dL ou mais, ou necessidade transfusional)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "extensive_proximal_dvt",
+          "label": "Há TVP proximal extensa (ilíofemoral), trombo flutuante ou sinais de comprometimento circulatório do membro com risco de embolização?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "breakthrough_on_anticoagulation",
+          "label": "Houve TEV novo, ou extensão inequívoca de trombo já conhecido, enquanto o paciente já estava em dose terapêutica de anticoagulante?",
+          "type": "boolean",
+          "section": "Segurança"
+        },
+        {
+          "id": "tev_classification",
+          "label": "O TEV é provocado por fator transitório, provocado por fator persistente (como câncer ativo) ou não provocado?",
+          "type": "select",
+          "required": true,
+          "section": "Classificação",
+          "options": [
+            {
+              "value": "provoked_transient",
+              "label": "Provocado por fator transitório reversível (cirurgia, imobilização, uso de estrogênio, trauma)"
+            },
+            {
+              "value": "provoked_persistent",
+              "label": "Provocado por fator persistente (câncer ativo ou outra condição que não cessa)"
+            },
+            {
+              "value": "unprovoked",
+              "label": "Não provocado, sem fator de risco identificável"
+            }
+          ]
+        },
+        {
+          "id": "active_cancer",
+          "label": "Há câncer ativo (diagnóstico recente, doença metastática, ou tratamento oncológico nos últimos 6 meses)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Populações especiais"
+        },
+        {
+          "id": "pregnancy_lactation_status",
+          "label": "A paciente está gestante ou lactante?",
+          "type": "select",
+          "required": true,
+          "section": "Populações especiais",
+          "options": [
+            {
+              "value": "pregnant",
+              "label": "Gestante"
+            },
+            {
+              "value": "lactating",
+              "label": "Lactante"
+            },
+            {
+              "value": "none",
+              "label": "Não se aplica"
+            }
+          ]
+        },
+        {
+          "id": "severe_ckd_dialysis",
+          "label": "Há doença renal crônica grave (taxa de filtração glomerular estimada abaixo de cerca de 30 mL/min/1,73m²) ou diálise?",
+          "type": "boolean",
+          "required": true,
+          "section": "Populações especiais"
+        },
+        {
+          "id": "post_thrombotic_signs",
+          "label": "Há sinais sugestivos de síndrome pós-trombótica no membro acometido (edema crônico, dor, hiperpigmentação, eczema ou claudicação venosa)?",
+          "type": "boolean",
+          "section": "Seguimento"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "tev-sangramento-maior",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "bleeding_now",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sangramento maior em vigência de anticoagulação"
+            ],
+            "emergency_flow": [
+              "Interromper o anticoagulante causador, classificar a gravidade do sangramento e identificar fármaco, última dose e função renal",
+              "Iniciar reversão específica por classe sem aguardar confirmação adicional quando o sítio for intracraniano ou outro local crítico"
+            ],
+            "messages": [
+              "Antiagregante associado não deve ser suspenso automaticamente; decisão individualizada com a equipe responsável"
+            ]
+          }
+        },
+        {
+          "id": "tev-tvp-extensa-embolizacao",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "extensive_proximal_dvt",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "TVP proximal extensa com risco de embolização"
+            ],
+            "emergency_flow": [
+              "Considerar internação, anticoagulação parenteral e avaliação para trombectomia ou trombólise dirigida por cateter em centro com suporte adequado",
+              "Investigar comprometimento circulatório do membro (flegmasia) e sinais concomitantes de embolia pulmonar"
+            ]
+          }
+        },
+        {
+          "id": "tev-gestante",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "pregnancy_lactation_status",
+                "op": "eq",
+                "value": "pregnant"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "HBPM é a classe preferida durante toda a gestação; DOAC não é recomendado e varfarina é contraindicada"
+            ]
+          }
+        },
+        {
+          "id": "tev-breakthrough",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "breakthrough_on_anticoagulation",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "differentials": [
+              "Trombo residual ou propagação inicial confundido com recorrência verdadeira"
+            ],
+            "missing_information": [
+              "Comparação com imagem basal anterior",
+              "Confirmação de adesão e, quando disponível, nível plasmático do fármaco",
+              "Investigação de interação medicamentosa e de absorção gastrointestinal comprometida",
+              "Rastreio de condição protrombótica de base, incluindo neoplasia oculta e síndrome antifosfolípide"
+            ],
+            "messages": [
+              "Escalonamento de dose de HBPM é conduta descrita principalmente para o cenário oncológico, com evidência de baixa força; não extrapolar automaticamente para a população geral",
+              "Evitar filtro de veia cava inferior como resposta padrão à recorrência sob anticoagulação"
+            ]
+          }
+        },
+        {
+          "id": "tev-cancer-ativo",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "active_cancer",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Câncer ativo é fator de risco forte para TEV e para recorrência sob anticoagulação"
+            ],
+            "messages": [
+              "Preferir HBPM ou DOAC por pelo menos 6 meses, prolongado enquanto o câncer permanecer ativo; considerar HBPM se houver tumor gastrointestinal ou geniturinário luminal não ressecado, alto risco de sangramento, absorção comprometida ou interação medicamentosa relevante",
+              "Na fase estendida, a dose reduzida do anticoagulante preserva eficácia com menos sangramento clinicamente relevante"
+            ],
+            "suggested_tests": [
+              "Aplicar o escore de Khorana antes de iniciar quimioterapia para decidir tromboprofilaxia primária, em quem ainda não tem TEV diagnosticado"
+            ]
+          }
+        },
+        {
+          "id": "tev-drc-dialise",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "severe_ckd_dialysis",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Não há ensaio clínico randomizado dedicado a comparar DOAC com varfarina no TEV com doença renal crônica grave ou diálise; toda a evidência disponível é observacional",
+              "A apixabana tem o sinal mais consistente entre os DOAC nesse cenário, ainda de força baixa; evitar extrapolar esse sinal para dabigatrana e rivaroxabana",
+              "Decisão individualizada, documentada e, quando possível, discutida com nefrologia"
+            ],
+            "missing_information": [
+              "Taxa de filtração glomerular estimada atualizada e modalidade dialítica"
+            ]
+          }
+        },
+        {
+          "id": "tev-lactante",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "pregnancy_lactation_status",
+                "op": "eq",
+                "value": "lactating"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "HBPM ou varfarina são compatíveis com a lactação; evitar DOAC durante a amamentação"
+            ]
+          }
+        },
+        {
+          "id": "tev-nao-provocado-duracao",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "tev_classification",
+                "op": "eq",
+                "value": "unprovoked"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "Ao fim do curso inicial, decidir ativamente entre suspender e estender a anticoagulação; considerar o escore HERDOO2 em mulheres e o risco de sangramento"
+            ],
+            "suggested_tests": [
+              "Reavaliar a necessidade de D-dímero em uso de anticoagulante para aplicação do HERDOO2 em mulheres"
+            ]
+          }
+        },
+        {
+          "id": "tev-sindrome-pos-trombotica",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "post_thrombotic_signs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "differentials": [
+              "Síndrome pós-trombótica"
+            ],
+            "suggested_tests": [
+              "Aplicar o escore de Villalta para graduar síndrome pós-trombótica"
+            ],
+            "messages": [
+              "Meia elástica de compressão não previne síndrome pós-trombótica quando iniciada de rotina após TVP; individualizar o uso para controle de sintomas"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "tromboembolismo venoso",
+        "TEV",
+        "trombose venosa profunda",
+        "TVP",
+        "síndrome pós-trombótica",
+        "anticoagulação",
+        "trombofilia"
+      ],
+      "source_refs": [
+        "Wells PS, Anderson DR, Rodger M, Forgie M, Kearon C, Dreyer J, Kovacs G, Mitchell M, Lewandowski B, Kovacs MJ. Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. N Engl J Med. 2003;349(13):1227-1235. DOI: 10.1056/NEJMoa023153. PMID: 14507948.",
+        "Lim W, Le Gal G, Bates SM, Righini M, Haramati LB, Lang E, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism. Blood Adv. 2018;2(22):3226-3256. DOI: 10.1182/bloodadvances.2018024828. PMID: 30482764.",
+        "Stevens SM, Woller SC, Baumann Kreuziger L, Bounameaux H, Doerschug K, Geersing GJ, et al. Antithrombotic Therapy for VTE Disease: Second Update of the CHEST Guideline and Expert Panel Report. Chest. 2021;160(6):e545-e608. DOI: 10.1016/j.chest.2021.07.055. PMID: 34352278.",
+        "Guarascio M, Valeriani E, Girardi L, Candeloro M, Pannunzio A, Palumbo IM, Di Nisio M, Ageno W. Anticoagulant treatment for isolated distal deep vein thrombosis: a systematic review and meta-analysis. Haematologica. 2025;110(10):2332-2342. DOI: 10.3324/haematol.2024.286963. PMID: 40400471.",
+        "Ogihara Y, Yamada N, Izumi D, et al; ISE CALF DVT Study Investigators. Exploratory rivaroxaban trial for isolated calf deep vein thrombosis with a risk factor of thrombosis extension: an open-label, multicenter, randomized controlled trial. Res Pract Thromb Haemost. 2024;8(5):102515. DOI: 10.1016/j.rpth.2024.102515. PMID: 39188889.",
+        "Kearon C, Akl EA, Ornelas J, Blaivas A, Jimenez D, Bounameaux H, et al. Antithrombotic Therapy for VTE Disease: CHEST Guideline and Expert Panel Report. Chest. 2016;149(2):315-352. DOI: 10.1016/j.chest.2015.11.026. PMID: 26867832.",
+        "Decousus H, Prandoni P, Mismetti P, Bauersachs RM, Boda Z, Brenner B, et al; CALISTO Study Group. Fondaparinux for the treatment of superficial-vein thrombosis in the legs. N Engl J Med. 2010;363(13):1222-1232. DOI: 10.1056/NEJMoa0912072. PMID: 20860504.",
+        "Kakkos SK, Gohel M, Baekgaard N, Bauersachs R, Bellmunt-Montoya S, Black SA, et al. Editor's Choice — European Society for Vascular Surgery (ESVS) 2021 Clinical Practice Guidelines on the Management of Venous Thrombosis. Eur J Vasc Endovasc Surg. 2021;61(1):9-82. DOI: 10.1016/j.ejvs.2020.09.023. PMID: 33334670.",
+        "Kahn SR, Partsch H, Vedantham S, Prandoni P, Kearon C; Subcommittee on Control of Anticoagulation of the SSC of the ISTH. Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization. J Thromb Haemost. 2009;7(5):879-883. DOI: 10.1111/j.1538-7836.2009.03294.x. PMID: 19175497.",
+        "Turner BRH, Thapar A, Jasionowska S, Javed A, Machin M, Lawton R, Gwozdz AM, Davies AH. Systematic Review and Meta-Analysis of the Pooled Rate of Post-Thrombotic Syndrome After Isolated Distal Deep Venous Thrombosis. Eur J Vasc Endovasc Surg. 2023;65(2):291-297. DOI: 10.1016/j.ejvs.2022.10.018. PMID: 36257568.",
+        "Shao J, Zhou Q, Jin F, Reissfelder C, Sigl M, Yagublu V, Keese M. A Systematic Review and Bayesian Network Meta-Analysis on the Effect of Different Anticoagulants on the Prophylaxis of Post-Thrombotic Syndrome after Deep Venous Thrombosis. J Clin Med. 2023;12(23):7450. DOI: 10.3390/jcm12237450. PMID: 38068502.",
+        "Prandoni P, Villalta S, Bagatella P, Rossi L, Marchiori A, Piccioli A, et al. The clinical course of deep-vein thrombosis. Prospective long-term follow-up of 528 symptomatic patients. Haematologica. 1997;82(4):423-428. PMID: 9299855.",
+        "Gloviczki ML, Stoughton J, Puggioni A, Gloviczki P, Raffetto JD. Utility of venoactive compounds in post-thrombotic syndrome: A systematic review. J Vasc Surg Venous Lymphat Disord. 2025;13(4):102228. DOI: 10.1016/j.jvsv.2025.102228. PMID: 40101859.",
+        "Baumann Kreuziger L, Jaffray J, Carrier M. Epidemiology, diagnosis, prevention and treatment of catheter-related thrombosis in children and adults. Thromb Res. 2017;157:64-71. DOI: 10.1016/j.thromres.2017.07.002. PMID: 28710972.",
+        "Girardi L, Di Nisio M, Candeloro M, Valeriani E, Ageno W. Catheter-related deep vein thrombosis: Where are we at and where are we going? Updates and ongoing unmet clinical needs. Eur J Clin Invest. 2025;55(1):e14311. DOI: 10.1111/eci.14311. PMID: 39262322.",
+        "Citla Sridhar D, Abou-Ismail MY, Ahuja SP. Central venous catheter-related thrombosis in children and adults. Thromb Res. 2020;187:103-112. DOI: 10.1016/j.thromres.2020.01.017. PMID: 31981840.",
+        "Parienti JJ, Mongardon N, Mégarbane B, et al; 3SITES Study Group. Intravascular Complications of Central Venous Catheterization by Insertion Site. N Engl J Med. 2015;373(13):1220-1229. DOI: 10.1056/NEJMoa1500964. PMID: 26398070.",
+        "van Es N, Le Gal G, Otten HM, Robin P, Piccioli A, Lecumberri R, et al. Screening for Occult Cancer in Patients With Unprovoked Venous Thromboembolism: A Systematic Review and Meta-analysis of Individual Patient Data. Ann Intern Med. 2017;167(6):410-417. DOI: 10.7326/M17-0868. PMID: 28828492.",
+        "Mulder FI, Carrier M, van Doormaal F, Robin P, Otten HM, Salaun PY, et al. Risk scores for occult cancer in patients with unprovoked venous thromboembolism: Results from an individual patient data meta-analysis. J Thromb Haemost. 2020;18(10):2622-2628. DOI: 10.1111/jth.15001. PMID: 32654348.",
+        "Carrier M, Lazo-Langner A, Shivakumar S, Tagalakis V, Zarychanski R, Solymoss S, et al; SOME Investigators. Screening for Occult Cancer in Unprovoked Venous Thromboembolism. N Engl J Med. 2015;373(8):697-704. DOI: 10.1056/NEJMoa1506623. PMID: 26095467.",
+        "Myers PO, Bounameaux H, Panos A, Lerch R, Kalangos A. Impending paradoxical embolism: systematic review of prognostic factors and treatment. Chest. 2010;137(1):164-170. DOI: 10.1378/chest.09-0961. PMID: 19592472.",
+        "Garvey S, Dudzinski DM, Giordano N, Torrey J, Zheng H, Kabrhel C. Pulmonary embolism with clot in transit: An analysis of risk factors and outcomes. Thromb Res. 2020;187:139-147. DOI: 10.1016/j.thromres.2020.01.006. PMID: 31991381.",
+        "Ageno W, Beyer Westendorf J, Contino L, Bucherini E, Sartori MT, Senzolo M, et al. Rivaroxaban for the treatment of noncirrhotic splanchnic vein thrombosis: an interventional prospective cohort study. Blood Adv. 2022;6(12):3569-3578. DOI: 10.1182/bloodadvances.2022007397. PMID: 35439303.",
+        "De Gottardi A, Trebicka J, Klinger C, Plessier A, Seijo S, Terziroli B, et al; VALDIG Investigators. Antithrombotic treatment with direct-acting oral anticoagulants in patients with splanchnic vein thrombosis and cirrhosis. Liver Int. 2017;37(5):694-699. DOI: 10.1111/liv.13285. PMID: 27778440.",
+        "de Franchis R, Bosch J, Garcia-Tsao G, Reiberger T, Ripoll C; Baveno VII Faculty. Baveno VII – Renewing consensus in portal hypertension. J Hepatol. 2022;76(4):959-974. DOI: 10.1016/j.jhep.2021.12.022. PMID: 35120736.",
+        "Saposnik G, Bushnell C, Coutinho JM, et al. Diagnosis and Management of Cerebral Venous Thrombosis: A Scientific Statement From the American Heart Association. Stroke. 2024;55(3):e77-e90. DOI: 10.1161/STR.0000000000000456. PMID: 38284265.",
+        "Ferro JM, Coutinho JM, Dentali F, et al; RE-SPECT CVT Study Group. Safety and Efficacy of Dabigatran Etexilate vs Dose-Adjusted Warfarin in Patients With Cerebral Venous Thrombosis: A Randomized Clinical Trial. JAMA Neurol. 2019;76(12):1457-1465. DOI: 10.1001/jamaneurol.2019.2764. PMID: 31479105.",
+        "Mismetti P, Laporte S, Pellerin O, et al; PREPIC2 Investigators. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism: a randomized clinical trial. JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/14507948/",
+        "https://pubmed.ncbi.nlm.nih.gov/30482764/",
+        "https://pubmed.ncbi.nlm.nih.gov/34352278/",
+        "https://pubmed.ncbi.nlm.nih.gov/40400471/",
+        "https://pubmed.ncbi.nlm.nih.gov/39188889/",
+        "https://pubmed.ncbi.nlm.nih.gov/26867832/",
+        "https://pubmed.ncbi.nlm.nih.gov/20860504/",
+        "https://pubmed.ncbi.nlm.nih.gov/33334670/",
+        "https://pubmed.ncbi.nlm.nih.gov/19175497/",
+        "https://pubmed.ncbi.nlm.nih.gov/36257568/",
+        "https://pubmed.ncbi.nlm.nih.gov/38068502/",
+        "https://pubmed.ncbi.nlm.nih.gov/9299855/",
+        "https://pubmed.ncbi.nlm.nih.gov/40101859/",
+        "https://pubmed.ncbi.nlm.nih.gov/28710972/",
+        "https://pubmed.ncbi.nlm.nih.gov/39262322/",
+        "https://pubmed.ncbi.nlm.nih.gov/31981840/",
+        "https://pubmed.ncbi.nlm.nih.gov/26398070/",
+        "https://pubmed.ncbi.nlm.nih.gov/28828492/",
+        "https://pubmed.ncbi.nlm.nih.gov/32654348/",
+        "https://pubmed.ncbi.nlm.nih.gov/26095467/",
+        "https://pubmed.ncbi.nlm.nih.gov/19592472/",
+        "https://pubmed.ncbi.nlm.nih.gov/31991381/",
+        "https://pubmed.ncbi.nlm.nih.gov/35439303/",
+        "https://pubmed.ncbi.nlm.nih.gov/27778440/",
+        "https://pubmed.ncbi.nlm.nih.gov/35120736/",
+        "https://pubmed.ncbi.nlm.nih.gov/38284265/",
+        "https://pubmed.ncbi.nlm.nih.gov/31479105/",
+        "https://pubmed.ncbi.nlm.nih.gov/25919526/"
+      ],
+      "related_document_slugs": [
+        "anticoagulacao-estendida-apos-tev-nao-provocado-amplify-ext-einstein-choice-warfasa-e-aspire",
+        "anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat",
+        "anticoagulacao-terapeutica-vs-profilatica-no-paciente-hospitalizado-com-covid-19-o-ensaio-multiplataforma",
+        "anticoagulantes-na-gestacao-e-lactacao-o-que-diz-a-bula-registrada",
+        "doac-em-obesidade-extrema-a-mudanca-de-orientacao-da-isth",
+        "doac-no-tratamento-do-tev-agudo-amplify-einstein-pe-re-cover-e-hokusai-vte",
+        "doac-pos-cirurgia-bariatrica-de-bypass-gastrico-farmacocinetica-alterada",
+        "embolia-paradoxal-iminente-trombo-em-transito-no-forame-oval-patente",
+        "filtro-de-veia-cava-inferior-recuperavel-indicacoes-restritas-e-risco-do-filtro-nao-retirado",
+        "fluxograma-duracao-da-anticoagulacao-apos-tev-nao-provocado",
+        "fluxograma-escolha-do-anticoagulante-no-tev-doac-varfarina-ou-hbpm",
+        "fluxograma-sangramento-maior-em-paciente-anticoagulado",
+        "fluxograma-tev-incidental-em-exame-de-imagem",
+        "fluxograma-trombose-venosa-profunda-suspeita-wells-d-dimero-e-ultrassom",
+        "fluxograma-trombose-venosa-superficial-quando-anticoagular",
+        "meia-elastica-de-compressao-nao-previne-sindrome-pos-trombotica-o-ensaio-sox",
+        "monitorizacao-de-heparina-nao-fracionada-por-anti-xa-versus-ttpa",
+        "profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida",
+        "profilaxia-mecanica-versus-farmacologica-de-tev-no-paciente-cirurgico-com-alto-risco-de-sangramento",
+        "rastreio-de-neoplasia-oculta-apos-tev-nao-provocado-os-ensaios-somit-e-some",
+        "regra-herdoo2-duracao-da-anticoagulacao-apos-tev-nao-provocado-em-mulheres",
+        "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
+        "sindrome-pos-trombotica-escore-de-villalta-e-tratamento",
+        "terapia-endovascular-com-stent-iliaco-na-sindrome-pos-trombotica-ja-estabelecida-o-ensaio-c-tract",
+        "tev-com-insuficiencia-renal-grave-e-dialise-doac-fora-dos-ensaios-pivotais",
+        "tev-recorrente-sob-anticoagulacao-em-dose-terapeutica-conduta",
+        "trombolise-farmacomecanica-dirigida-por-cateter-na-tvp-o-ensaio-attract",
+        "tromboprofilaxia-estendida-apos-cirurgia-bariatrica-quem-precisa-e-por-quanto-tempo",
+        "tromboprofilaxia-no-paciente-critico-de-uti-protect-e-prevent",
+        "trombose-associada-a-cateter-venoso-central-incidencia-subdiagnosticada-fatores-de-risco-e-remover-ou-manter",
+        "trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante",
+        "trombose-de-veia-esplancnica-quando-e-como-anticoagular-com-ou-sem-cirrose",
+        "trombose-venosa-cerebral-anticoagulacao-mesmo-com-hemorragia-e-o-ensaio-re-spect-cvt",
+        "trombose-venosa-cerebral-diagnostico-e-manejo-aha-2024",
+        "trombose-venosa-de-membro-superior-associada-a-cateter-diagnostico-e-manejo",
+        "trombose-venosa-profunda-diagnostico-e-tratamento",
+        "trombose-venosa-profunda-distal-isolada-duracao-da-anticoagulacao-e-vigilancia",
+        "tromboembolismo-venoso-associado-a-viagem-prolongada-risco-quantificado-e-quem-se-beneficia-de-profilaxia",
+        "tromboembolismo-venoso-na-sindrome-nefrotica-risco-por-histologia-e-anticoagulacao-profilatica",
+        "trombofilia-hereditaria-e-adquirida-risco-de-recorrencia-e-doac-na-sindrome-antifosfolipide"
+      ],
+      "patient_material_slug": "trombose-venosa-e-embolia-pulmonar",
+      "review_status": "revisado",
+      "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia) — décimo ciclo do dia. Nenhum verbete geral de tromboembolismo venoso (TEV) existia previamente no corpus — apenas o hub-irmão embolia-pulmonar-aguda, com escopo estrito de TEP agudo/reperfusão (2 documentos vinculados), preservado sem duplicação de escopo. Este hub cobre o espectro mais amplo: TVP proximal/distal/membro superior, trombose venosa superficial, síndrome pós-trombótica, escolha e duração de anticoagulação, populações especiais, sítios incomuns de trombose venosa, trombofilia/SAF, profilaxia, filtro de veia cava e monitorização/reversão de anticoagulação — tratando TEP apenas como desfecho possível, não como foco central. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários em content/Tromboembolismo/ antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para as 28 referências citadas. related_document_slugs conta com 40 documentos, todos verificados individualmente como fora de content/Farmacologia, Calculadoras e Exames, e confirmados sem sobreposição com os 2 documentos já vinculados ao hub-irmão embolia-pulmonar-aguda. Checagem de coordenação com o trabalho concorrente do Codex/ChatGPT realizada antes do commit: nenhum PR aberto que toca doencas/metadados.json cria o slug tromboembolismo-venoso; o PR #544, apesar do título 'aprofundar embolia pulmonar aguda', apenas recria a entrada embolia-pulmonar-aguda já mergeada em main com os mesmos 2 documentos, sem tocar nenhum dos 40 documentos deste hub. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao). Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 1,
+      "fonte_producao": "claude"
+    }
+  }
+]
