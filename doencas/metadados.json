@@ -10643,12 +10643,12 @@
     "assistant_questions": [
       {
         "id": "idade_gestacional_diagnostico",
-        "text": "Qual a idade gestacional, em semanas, no momento do diagnóstico de tetralogia de Fallot?",
+        "label": "Qual a idade gestacional, em semanas, no momento do diagnóstico de tetralogia de Fallot?",
         "type": "number"
       },
       {
         "id": "forma_anatomica_fallot",
-        "text": "Qual a forma anatômica da tetralogia de Fallot identificada na ecocardiografia fetal?",
+        "label": "Qual a forma anatômica da tetralogia de Fallot identificada na ecocardiografia fetal?",
         "type": "select",
         "options": [
           {
@@ -10667,12 +10667,12 @@
       },
       {
         "id": "cariotipo_microarray_realizado",
-        "text": "Foi realizada investigação genética (cariótipo e/ou microarray cromossômico)?",
+        "label": "Foi realizada investigação genética (cariótipo e/ou microarray cromossômico)?",
         "type": "boolean"
       },
       {
         "id": "resultado_del22q11",
-        "text": "Qual o resultado da pesquisa de deleção 22q11.2?",
+        "label": "Qual o resultado da pesquisa de deleção 22q11.2?",
         "type": "select",
         "options": [
           {
@@ -10695,22 +10695,22 @@
       },
       {
         "id": "crescimento_arterias_pulmonares_adequado",
-        "text": "O crescimento seriado das artérias pulmonares está adequado para a idade gestacional?",
+        "label": "O crescimento seriado das artérias pulmonares está adequado para a idade gestacional?",
         "type": "boolean"
       },
       {
         "id": "malformacoes_extracardiacas_associadas",
-        "text": "Foram identificadas malformações extracardíacas associadas na avaliação morfológica?",
+        "label": "Foram identificadas malformações extracardíacas associadas na avaliação morfológica?",
         "type": "boolean"
       },
       {
         "id": "sinais_compressao_via_aerea_fetal",
-        "text": "Há sinais sugestivos de compressão de via aérea fetal (por exemplo, dilatação aneurismática de ramos pulmonares em valva pulmonar ausente)?",
+        "label": "Há sinais sugestivos de compressão de via aérea fetal (por exemplo, dilatação aneurismática de ramos pulmonares em valva pulmonar ausente)?",
         "type": "boolean"
       },
       {
         "id": "local_planejado_parto",
-        "text": "Qual o local planejado para o parto quanto ao suporte cardiológico e cirúrgico disponível?",
+        "label": "Qual o local planejado para o parto quanto ao suporte cardiológico e cirúrgico disponível?",
         "type": "select",
         "options": [
           {
@@ -10725,22 +10725,22 @@
       },
       {
         "id": "saturacao_oxigenio_nascimento",
-        "text": "Qual a saturação de oxigênio do recém-nascido, em percentual, logo após o nascimento?",
+        "label": "Qual a saturação de oxigênio do recém-nascido, em percentual, logo após o nascimento?",
         "type": "number"
       },
       {
         "id": "necessidade_prostaglandina_ao_nascer",
-        "text": "Há necessidade de manter o canal arterial pérvio com prostaglandina E1 ao nascimento?",
+        "label": "Há necessidade de manter o canal arterial pérvio com prostaglandina E1 ao nascimento?",
         "type": "boolean"
       },
       {
         "id": "desconforto_respiratorio_neonatal",
-        "text": "O recém-nascido apresenta desconforto respiratório sugestivo de compressão de via aérea?",
+        "label": "O recém-nascido apresenta desconforto respiratório sugestivo de compressão de via aérea?",
         "type": "boolean"
       },
       {
         "id": "historico_familiar_cardiopatia_congenita",
-        "text": "Há história familiar de cardiopatia congênita ou de síndrome associada à deleção 22q11.2?",
+        "label": "Há história familiar de cardiopatia congênita ou de síndrome associada à deleção 22q11.2?",
         "type": "boolean"
       }
     ],
