@@ -1,0 +1,46 @@
+name: Temporary diagnose disease fragments
+on:
+  push:
+    branches: [release/all-pending-20260828]
+    paths: [.github/workflows/temporary-diagnose-disease-fragments.yml]
+permissions: {contents: read}
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Inspect canonical disease fragments
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base_path = Path('doencas/metadados.json')
+          base = json.loads(base_path.read_text(encoding='utf-8'))
+          by = {x['slug']: x for x in base}
+          print('BASE', len(base), 'unique', len(by))
+          for p in sorted(Path('doencas/fragmentos').glob('*.json')):
+              items = json.loads(p.read_text(encoding='utf-8'))
+              new = []
+              divergent = []
+              identical = 0
+              for x in items:
+                  slug = x.get('slug')
+                  if slug not in by:
+                      new.append(slug)
+                  elif by[slug] == x:
+                      identical += 1
+                  else:
+                      divergent.append(slug)
+              print(f'FRAGMENT {p.name}: total={len(items)} new={len(new)} identical={identical} divergent={len(divergent)}')
+              print('  NEW:', new)
+              print('  DIVERGENT_FIRST_30:', divergent[:30])
+          try:
+              import sys
+              sys.path.insert(0, 'backend')
+              from app.services.disease_manifest import load_disease_records
+              records = load_disease_records(base_path)
+              print('LOAD_OK', len(records))
+          except Exception as e:
+              print('LOAD_ERROR', type(e).__name__, str(e))
+              raise
+          PY
