@@ -15323,12 +15323,12 @@
     "assistant_questions": [
       {
         "id": "gestacao_confirmada",
-        "text": "A gestação está confirmada ou há suspeita de gestação?",
+        "label": "A gestação está confirmada ou há suspeita de gestação?",
         "type": "boolean"
       },
       {
         "id": "trimestre_atual",
-        "text": "Qual o trimestre gestacional atual?",
+        "label": "Qual o trimestre gestacional atual?",
         "type": "select",
         "options": [
           {
@@ -15347,22 +15347,22 @@
       },
       {
         "id": "uso_atual_ieca_bra",
-        "text": "Há uso atual ou recente de IECA, BRA ou inibidor direto de renina?",
+        "label": "Há uso atual ou recente de IECA, BRA ou inibidor direto de renina?",
         "type": "boolean"
       },
       {
         "id": "protese_valvar_mecanica",
-        "text": "A paciente é portadora de prótese valvar mecânica?",
+        "label": "A paciente é portadora de prótese valvar mecânica?",
         "type": "boolean"
       },
       {
         "id": "inr_dentro_alvo",
-        "text": "O INR está dentro da faixa-alvo terapêutica?",
+        "label": "O INR está dentro da faixa-alvo terapêutica?",
         "type": "boolean"
       },
       {
         "id": "classe_farmaco_atual",
-        "text": "Quais classes de fármacos cardiovasculares estão em uso atualmente?",
+        "label": "Quais classes de fármacos cardiovasculares estão em uso atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -15401,32 +15401,32 @@
       },
       {
         "id": "planejamento_gestacional",
-        "text": "A paciente está em planejamento pré-concepcional?",
+        "label": "A paciente está em planejamento pré-concepcional?",
         "type": "boolean"
       },
       {
         "id": "amamentando",
-        "text": "A paciente está amamentando atualmente?",
+        "label": "A paciente está amamentando atualmente?",
         "type": "boolean"
       },
       {
         "id": "sintomas_sugestivos_toxicidade_fetal",
-        "text": "Há sinais sugestivos de toxicidade fetal, como bradicardia fetal ou alteração de crescimento?",
+        "label": "Há sinais sugestivos de toxicidade fetal, como bradicardia fetal ou alteração de crescimento?",
         "type": "boolean"
       },
       {
         "id": "atenolol_em_uso",
-        "text": "Há uso de atenolol especificamente?",
+        "label": "Há uso de atenolol especificamente?",
         "type": "boolean"
       },
       {
         "id": "numero_semanas_gestacionais",
-        "text": "Qual a idade gestacional em semanas?",
+        "label": "Qual a idade gestacional em semanas?",
         "type": "number"
       },
       {
         "id": "funcao_tireoidiana_alterada",
-        "text": "Foram identificadas alterações na função tireoidiana materna ou fetal?",
+        "label": "Foram identificadas alterações na função tireoidiana materna ou fetal?",
         "type": "boolean"
       }
     ],
