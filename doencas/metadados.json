@@ -12502,7 +12502,7 @@
     "category": "arritmia",
     "subtype": "pediatrica",
     "prevalence_rank": 30,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Distúrbios do ritmo na infância com apresentação variável, desde achados incidentais até instabilidade, síncope ou associação com cardiopatia estrutural.",
     "tags": [
       "arritmia",
@@ -12511,20 +12511,556 @@
       "ECG"
     ],
     "source_refs": [
-      "ACC Pediatric and Congenital Cardiology Clinical Algorithms"
+      "ACC Pediatric and Congenital Cardiology Clinical Algorithms",
+      "Lasa JJ, Dhillon GS, Duff JP, et al. Part 8: Pediatric Advanced Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines. Circulation. 2025;152(16_suppl_2):S479-S537. PMID: 41122885.",
+      "Fleming S, Thompson M, Stevens R, et al. Normal ranges of heart rate and respiratory rate in children from birth to 18 years of age: a systematic review of observational studies. Lancet. 2011;377(9770):1011-1018. PMID: 21411136.",
+      "Bjeloševič M, Illíková V, Tomko J, et al. Supraventricular tachyarrhythmias during the intrauterine, neonatal, and infant period: A 10-year population-based study. Pacing Clin Electrophysiol. 2020;43(7):680-686. PMID: 32459027.",
+      "Bah MNM, Zahari N, Boparam BK, Sapian MH. The Incidence and Factors Associated with the Recurrence of Supraventricular Tachycardia in Children: 15 Years Experience from Middle-Income Country. Pediatr Cardiol. 2024;45(2):292-299. PMID: 38165467.",
+      "Kim ME, Baskar S, Janson CM, et al. Epidemiology of Postoperative Junctional Ectopic Tachycardia in Infants Undergoing Cardiac Surgery. Ann Thorac Surg. 2024;117(6):1178-1185. PMID: 38484909.",
+      "Zampi JD, Hirsch JC, Gurney JG, et al. Junctional ectopic tachycardia after infant heart surgery: incidence and outcomes. Pediatr Cardiol. 2012;33(8):1362-1369. PMID: 22585344.",
+      "Etheridge SP, Escudero CA, Blaufox AD, et al. Life-Threatening Event Risk in Children With Wolff-Parkinson-White Syndrome: A Multicenter International Study. JACC Clin Electrophysiol. 2018;4(4):433-444. PMID: 30067481.",
+      "Chiu SN, Wu WL, Lu CW, et al. Special electrophysiological characteristics of pediatric idiopathic ventricular tachycardia. Int J Cardiol. 2017;227:595-601. PMID: 27810292.",
+      "Mycinski F, Waldmann V, Kyndt F, et al. Late outcomes of congenital and childhood non-immune, isolated atrioventricular block: a French nationwide retrospective cohort study. Europace. 2025;27(3):euaf040. PMID: 40067976.",
+      "Kuntz MT, Eagle SS, Dalal A, et al. What an anesthesiologist should know about pediatric arrhythmias. Paediatr Anaesth. 2024;34(12):1187-1199. PMID: 39148245."
     ],
     "source_urls": [
-      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"
+      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms",
+      "https://pubmed.ncbi.nlm.nih.gov/41122885/",
+      "https://pubmed.ncbi.nlm.nih.gov/21411136/",
+      "https://pubmed.ncbi.nlm.nih.gov/32459027/",
+      "https://pubmed.ncbi.nlm.nih.gov/38165467/",
+      "https://pubmed.ncbi.nlm.nih.gov/38484909/",
+      "https://pubmed.ncbi.nlm.nih.gov/22585344/",
+      "https://pubmed.ncbi.nlm.nih.gov/30067481/",
+      "https://pubmed.ncbi.nlm.nih.gov/27810292/",
+      "https://pubmed.ncbi.nlm.nih.gov/40067976/",
+      "https://pubmed.ncbi.nlm.nih.gov/39148245/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (8º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608, hipertensao-arterial-pediatrica/PR #609, dor-toracica-pediatrica/PR #610, dislipidemias-pediatricas/PR #611): ficha estava com apenas metadados de catalogação e 3 related_document_slugs. Produzida epidemiologia (TSV incidência 1:4500 no 1º ano de vida, JET pós-operatória em 6,0% das cirurgias cardíacas congênitas), apresentação (10 itens), abordagem diagnóstica estruturada em 6 subtópicos, 8 diferenciais, 8 exames, 8 sinais de alarme, tratamento (manobras vagais, cardioversão qualitativa sem energia em J/kg, manejo de JET, critérios de ablação por peso, indicação de marca-passo), fluxos ambulatorial/emergência, monitoramento, 6 populações especiais, assistente clínico determinístico (11 perguntas, 10 regras, priority 95 para instabilidade hemodinâmica) e 27 related_document_slugs (24 novos + os 3 já existentes), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. Esta ficha funciona como hub geral de arritmia pediátrica pós-natal; 10 dos 27 documentos são compartilhados com fichas mais específicas já publicadas (sincope-pediatrica, canalopatias-pediatricas, cardiomiopatias-pediatricas, e as 4 fichas de arritmia fetal: taquicardia-supraventricular-fetal, bloqueio-atrioventricular-fetal, flutter-atrial-fetal, extrassistoles-fetais, hidropisia-fetal-cardiovascular) — todos mantidos por serem genuína e centralmente sobre arritmia/canalopatia pediátrica, mesmo padrão de pertencimento múltiplo já usado em ciclos anteriores. Documentos de BAV congênito/pós-operatório deliberadamente EXCLUÍDOS apesar de clinicamente centrais: não usam a palavra 'arritmia'/'bradiarritmia' em nenhum ponto do texto (só 'bloqueio AV'/'bradicardia'), não passando no critério de menção textual direta — decisão conservadora sinalizada para revisão humana. Nenhuma dose de fármaco nem energia de cardioversão/desfibrilação em J/kg citada em nenhum campo.",
+    "version": 2,
     "related_document_slugs": [
       "bradicardia-pediatrica-com-pulso-aha-aap-2025",
       "taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
-      "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico"
+      "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+      "fluxograma-taquicardia-juncional-ectopica-pos-operatoria-jet",
+      "taquicardia-juncional-ectopica-pos-operatoria-jet",
+      "fluxograma-fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente",
+      "fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente",
+      "taquicardia-ventricular-idiopatica-na-crianca-e-no-adolescente-diagnostico-diferencial-manobras-e-decisao-de-tratar",
+      "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",
+      "ablacao-por-cateter-na-crianca-limites-de-peso-e-idade-crioablacao-e-mapeamento-eletroanatomico",
+      "diretriz-aha-aap-2025-suporte-avancado-vida-pediatrico",
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno",
+      "extrassistoles-ventriculares-e-supraventriculares-na-crianca-e-no-adolescente-limiar-de-carga-historia-natural-e-tratamento",
+      "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",
+      "fluxograma-sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",
+      "sindrome-de-brugada-precipitada-por-febre-na-crianca-e-adolescente",
+      "fluxograma-taquiarritmia-pediatrica-com-pulso-aha-aap-2025",
+      "cardiomiopatia-arritmogenica-na-crianca-penetrancia-idade-dependente-rastreio-familiar-e-restricao-de-exercicio",
+      "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",
+      "taquicardia-ventricular-polimorfica-catecolaminergica-cpvt-na-crianca-e-adolescente-genetica-diagnostico-e-tratamento",
+      "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
+      "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
+      "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+      "fluxograma-sindrome-do-qt-longo-congenito-diagnostico-e-manejo-esc-2022",
+      "taquicardia-juncional-jet-e-pjrt-diagnostico-diferencial-e-ablacao-por-cateter",
+      "comunicar-diagnostico-de-canalopatia-hereditaria-teste-em-cascata-culpa-parental-e-teste-em-menores"
     ],
-    "patient_material_slug": "arritmias-pediatricas"
+    "patient_material_slug": "arritmias-pediatricas",
+    "fonte_producao": "claude",
+    "epidemiology": "A taquicardia supraventricular (TSV) é a arritmia sustentada mais comum na infância. Em estudo populacional de base eslovaca acompanhando dez anos consecutivos de nascimentos, a incidência de TSV no primeiro ano de vida foi de 1 em cada 4.500 crianças, com taquicardia por reentrada atrioventricular respondendo por 49% dos casos; 87% dos lactentes tiveram resolução espontânea da arritmia ao longo do seguimento, e a mortalidade associada foi inferior a 1% (Bjeloševič et al., 2020). Em coorte pediátrica mais ampla (mediana de idade ao diagnóstico de 1,9 ano), a taxa de recorrência da TSV ao longo do seguimento foi de 22%, significativamente maior em lactentes com síndrome de Wolff-Parkinson-White — 68% de recorrência — comparados a neonatos sem pré-excitação, nos quais a recorrência foi de apenas 3,7% (Bah et al., 2024). A frequência cardíaca normal varia amplamente conforme a faixa etária: revisão sistemática com dados de mais de 143 mil crianças mostra frequência cardíaca mediana de 127 bpm ao nascimento, com pico de aproximadamente 145 bpm por volta de 1 mês de vida, declinando para 113 bpm aos 2 anos e continuando a cair progressivamente até a adolescência (Fleming et al., 2011, Lancet) — variação central para diferenciar taquicardia patológica de taquicardia sinusal fisiológica em cada faixa etária. No pós-operatório de cirurgia cardíaca congênita, a taquicardia juncional ectópica (JET) é a arritmia mais temida: registro multicêntrico do Pediatric Cardiac Critical Care Consortium com mais de 24 mil lactentes operados identificou JET tratada em 6,0% dos casos (variando de 0% a 17,9% entre centros), predominando após correção de tetralogia de Fallot, defeito do septo atrioventricular e comunicação interventricular, com início mediano 3,4 horas após a cirurgia (Kim et al., 2024, Annals of Thoracic Surgery).",
+    "presentation": [
+      "Recém-nascido ou lactente jovem com TSV sustentada apresentando-se não com palpitação referida, mas com irritabilidade, recusa alimentar, taquipneia, palidez e sudorese — sinais indiretos de insuficiência cardíaca congestiva, já que a criança pré-verbal não relata sintoma.",
+      "Lactente com TSV incessante não reconhecida por dias apresentando letargia, hepatomegalia e choque cardiogênico, quadro compatível com cardiomiopatia induzida por taquicardia.",
+      "Criança maior ou adolescente relatando palpitação de início e término súbitos ('coração dispara e para de repente'), associada ou não a desconforto torácico e tontura — padrão típico de TSV paroxística por reentrada.",
+      "Bradicardia sinusal assintomática identificada em atleta jovem durante avaliação de rotina ou pré-participação esportiva, achado fisiológico relacionado ao condicionamento cardiovascular.",
+      "Bloqueio atrioventricular sintomático com fadiga, intolerância ao esforço, pré-síncope ou síncope, contrastando com a bradicardia benigna do atleta.",
+      "Síncope associada a arritmia, especialmente quando desencadeada por esforço físico ou emoção intensa — sinal de alerta que distingue causa cardíaca de síncope vasovagal benigna.",
+      "Taquicardia juncional ectópica surgindo nas primeiras horas do pós-operatório de cirurgia cardíaca congênita, com frequência acelerada, instabilidade hemodinâmica e dissociação atrioventricular ao monitor.",
+      "Fibrilação atrial pré-excitada em criança ou adolescente com síndrome de Wolff-Parkinson-White, podendo se manifestar diretamente como palpitação irregular grave, colapso hemodinâmico ou morte súbita abortada, sem sintomas prévios.",
+      "Achado incidental de padrão de pré-excitação (intervalo PR curto, onda delta) ou de bradicardia em eletrocardiograma de rotina ou de triagem esportiva, em criança completamente assintomática.",
+      "Taquicardia ventricular idiopática (fascicular ou de via de saída) manifestando-se com palpitação sustentada, por vezes assintomática e detectada incidentalmente, podendo evoluir para cardiomiopatia induzida por taquicardia se não reconhecida."
+    ],
+    "diagnostic_approach": {
+      "eletrocardiograma_inicial": "O eletrocardiograma de 12 derivações é o primeiro exame em toda criança com suspeita de arritmia, avaliando frequência, ritmo, eixo, intervalos (PR, QRS, QT corrigido), padrão de pré-excitação e presença de dissociação atrioventricular; deve ser obtido antes e durante episódios sintomáticos sempre que possível, conforme reforçado pelas diretrizes AHA/AAP 2025 de suporte avançado de vida pediátrico (Lasa et al., 2025, Circulation).",
+      "faixas_normais_de_frequencia_cardiaca": "A frequência cardíaca normal varia por faixa etária e deve ser interpretada em relação a centis específicos por idade, não a um valor único: mediana de 127 bpm ao nascimento, pico de aproximadamente 145 bpm por volta de 1 mês, declinando para 113 bpm aos 2 anos e reduzindo progressivamente até valores próximos aos do adulto na adolescência (Fleming et al., 2011). Uma frequência 'normal' para um lactente pode representar taquicardia franca em criança maior e vice-versa.",
+      "tsv_versus_taquicardia_sinusal": "A diferenciação baseia-se em início e término abruptos (versus aumento e queda graduais da sinusal), ausência de variabilidade batimento a batimento, onda P ausente, retrógrada ou não identificável, e frequências tipicamente muito acima do limite fisiológico para a idade — geralmente acima de 220 bpm em lactentes e acima de 180 bpm em crianças maiores. A resposta a manobras vagais ou adenosina, com terminação abrupta, corrobora TSV por reentrada; a taquicardia sinusal responde com desaceleração transitória, sem terminação.",
+      "reconhecimento_de_jet_pos_operatoria": "A JET pós-operatória caracteriza-se por dissociação atrioventricular com frequência juncional (QRS estreito, igual à morfologia basal) mais acelerada que a frequência atrial sinusal, tipicamente com início nas primeiras horas a 72 horas após circulação extracorpórea; associa-se a cirurgia de tetralogia de Fallot, defeito do septo atrioventricular e comunicação interventricular, tempo prolongado de bypass, esterno aberto e idade neonatal (Kim et al., 2024).",
+      "indicacao_de_holter_e_monitor_de_eventos": "Holter de 24 a 48 horas está indicado para quantificar carga de arritmia, correlacionar sintomas intermitentes (palpitação, tontura) com o ritmo registrado e avaliar resposta terapêutica; monitor de eventos ou looper implantável é preferido quando os sintomas são esparsos e não capturados em Holter convencional.",
+      "indicacao_de_estudo_eletrofisiologico": "Estudo eletrofisiológico invasivo é indicado em pré-excitação sintomática ou de alto risco (Wolff-Parkinson-White), TSV recorrente refratária a tratamento clínico, estratificação de risco de morte súbita em pré-excitação assintomática antes de liberação para esporte competitivo, e antes de ablação por cateter — conforme abordagem preconizada nas diretrizes AHA/AAP 2025 de suporte avançado de vida pediátrico para manejo de taquicardias de QRS estreito e largo (Lasa et al., 2025)."
+    },
+    "differentials": [
+      "Taquicardia sinusal fisiológica (febre, dor, ansiedade, hipovolemia)",
+      "Taquicardia supraventricular por reentrada (taquicardia por reentrada atrioventricular via acessória; taquicardia por reentrada nodal atrioventricular)",
+      "Taquicardia juncional ectópica (congênita ou pós-operatória)",
+      "Fibrilação atrial pré-excitada em síndrome de Wolff-Parkinson-White",
+      "Taquicardia ventricular idiopática (fascicular ou de via de saída)",
+      "Bloqueio atrioventricular congênito (isolado ou associado a autoanticorpos maternos anti-Ro/SSA e anti-La/SSB)",
+      "Flutter atrial neonatal",
+      "Bradicardia sinusal fisiológica do atleta jovem"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações",
+      "Holter de 24-48 horas",
+      "Monitor de eventos ou looper implantável",
+      "Ecocardiograma transtorácico",
+      "Estudo eletrofisiológico invasivo",
+      "Teste ergométrico (esforço)",
+      "Ressonância magnética cardíaca (suspeita de cardiomiopatia associada)",
+      "Avaliação sorológica materna para anti-Ro/SSA e anti-La/SSB (suspeita de bloqueio atrioventricular congênito autoimune)"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica (hipotensão, má perfusão periférica, choque)",
+      "Síncope desencadeada por esforço físico",
+      "Cardiopatia congênita estrutural associada (ex.: anomalia de Ebstein com Wolff-Parkinson-White)",
+      "História familiar de morte súbita cardíaca precoce ou canalopatia conhecida",
+      "Fibrilação atrial pré-excitada com intervalo RR pré-excitado curto (alto risco de degeneração para fibrilação ventricular)",
+      "Taquicardia incessante não reconhecida, com risco de cardiomiopatia induzida por taquicardia",
+      "Taquicardia juncional ectópica pós-operatória refratária associada a instabilidade hemodinâmica",
+      "Bloqueio atrioventricular completo com frequência de escape inadequada para a idade ou associado a QT longo"
+    ],
+    "treatment_summary": "O tratamento das arritmias pediátricas segue estratificação por estabilidade hemodinâmica e mecanismo eletrofisiológico. Na taquicardia supraventricular (TSV) paroxística com pulso e paciente hemodinamicamente estável, a primeira linha é a manobra vagal — aplicação de gelo na face em lactentes, manobra de Valsalva modificada em crianças maiores capazes de cooperar, e massagem do seio carotídeo em casos selecionados — reproduzindo a recomendação de primeira linha do algoritmo AHA/AAP 2025 para manejo agudo de taquiarritmia com QRS estreito e pulso presente (Lasa et al., Circulation 2025). Quando a manobra vagal falha em reverter o ritmo, indica-se cardioversão química sob monitorização contínua; na presença de sinais de instabilidade hemodinâmica (hipotensão, hipoperfusão, alteração aguda do nível de consciência, sinais de choque) ou refratariedade, procede-se à cardioversão elétrica sincronizada imediata, sem aguardar acesso venoso, sendo a energia do choque um parâmetro determinado pelo dispositivo e pela equipe assistente no momento do procedimento, não abordado nesta ficha. A bradicardia sintomática com comprometimento de perfusão (letargia, hipotensão, sinais de choque) exige suporte respiratório e circulatório imediato conforme o algoritmo de bradicardia com pulso e má perfusão, com escalonamento para estimulação cardíaca temporária (transcutânea ou transvenosa) quando a resposta às medidas iniciais é inadequada. A taquicardia juncional ectópica (JET) pós-operatória constitui cenário particular, tipicamente nas primeiras 24 a 72 horas após cirurgia cardíaca com manipulação próxima ao nó atrioventricular; o manejo de primeira linha é predominantemente não farmacológico e inclui hipotermia terapêutica leve, minimização da estimulação adrenérgica (sedoanalgesia adequada, redução do suporte inotrópico quando hemodinamicamente tolerável) e correção de distúrbios hidroeletrolíticos e de temperatura central; quando há dissociação atrioventricular com comprometimento do débito cardíaco, indica-se marca-passo atrial temporário para restabelecer a sincronia AV, mesmo sem alterar diretamente a frequência juncional (Sasikumar, Kumar, Balaji, 2021). Para arritmias recorrentes, incessantes ou refratárias ao manejo clínico, a ablação por cateter é considerada, respeitando limites de idade e peso corporal: em crianças pequenas e lactentes, especialmente abaixo de aproximadamente 15 kg, o procedimento costuma ser reservado a arritmias incessantes, refratárias a fármacos ou associadas a risco de taquicardiomiopatia, pelo maior risco de complicações vasculares e de lesão de estruturas cardíacas em corações de menor dimensão; em crianças maiores e adolescentes com anatomia favorável, a ablação eletiva é factível com boa relação risco-benefício. A crioablação é preferida em substratos próximos ao nó atrioventricular pelo menor risco de bloqueio AV permanente comparado à radiofrequência, com eficácia e segurança em longo prazo descritas em séries pediátricas dedicadas (LaPage, Saul, Reed, 2010). A indicação de marca-passo definitivo aplica-se ao bloqueio atrioventricular (BAV) total congênito ou adquirido sintomático — manifestado por bradicardia inadequada para a idade, síncope, intolerância ao esforço, insuficiência cardíaca ou ritmo de escape de complexo largo — e a determinados BAV de segundo grau avançado com repercussão clínica, conforme critérios do consenso PACES/HRS sobre dispositivos eletrônicos cardíacos implantáveis em pacientes pediátricos (Shah et al., Heart Rhythm 2021). O seguimento em longo prazo inclui reavaliação clínica e eletrocardiográfica periódica, monitorização por Holter ou monitor de eventos conforme recorrência de sintomas, avaliação de crescimento e desenvolvimento em portadores de dispositivos implantáveis, e reavaliação periódica da indicação de ablação ou de terapia farmacológica de manutenção ao longo do crescimento da criança.",
+    "ambulatory_flow": [
+      "Colher história clínica dirigida a palpitações, síncope, tontura, intolerância ao esforço e antecedente familiar de morte súbita ou canalopatia",
+      "Realizar eletrocardiograma de 12 derivações em repouso para triagem de pré-excitação, intervalo QT e sinais de bloqueio atrioventricular",
+      "Solicitar Holter de 24-48 horas ou monitor de eventos prolongado conforme a frequência e a natureza dos sintomas relatados",
+      "Realizar ecocardiograma para excluir cardiopatia estrutural associada e avaliar função ventricular",
+      "Encaminhar a cardiologia pediátrica ou eletrofisiologia pediátrica para estratificação de risco e definição terapêutica",
+      "Discutir com a família a indicação de ablação por cateter eletiva conforme idade, peso e substrato eletrofisiológico identificado",
+      "Orientar a família e o paciente sobre reconhecimento e execução de manobras vagais e sobre sinais de alarme que exigem procura de emergência",
+      "Programar reavaliações periódicas, incluindo checagem de dispositivo e limiares em portadores de marca-passo, com ajuste do plano de seguimento conforme evolução"
+    ],
+    "emergency_flow": [
+      "Avaliar via aérea, respiração, circulação e nível de consciência; iniciar monitorização cardíaca contínua e obter acesso venoso",
+      "Obter traçado de ECG ou do monitor para caracterizar a arritmia (QRS estreito ou largo, regularidade, relação com onda P) e identificar sinais de instabilidade",
+      "Se taquiarritmia com sinais de instabilidade hemodinâmica (hipotensão, má perfusão, alteração aguda de consciência, sinais de choque), proceder à cardioversão elétrica sincronizada imediata; se estável, tentar manobra vagal e considerar cardioversão química sob monitorização",
+      "Se bradicardia sintomática com má perfusão, garantir oxigenação e suporte ventilatório e escalonar para estimulação cardíaca temporária (transcutânea ou transvenosa) quando a resposta às medidas iniciais for inadequada",
+      "Identificar e corrigir causas reversíveis associadas (hipóxia, distúrbio hidroeletrolítico, hipotermia, tamponamento cardíaco, pneumotórax hipertensivo)",
+      "Acionar precocemente a equipe de cardiologia pediátrica ou terapia intensiva pediátrica, preparando via para estimulação temporária ou suporte avançado quando indicado",
+      "Reavaliar continuamente a resposta às intervenções e documentar cronologia do evento, ritmo e intervenções realizadas"
+    ],
+    "monitoring": [
+      "ECG seriado e Holter/monitor de eventos conforme recorrência e evolução dos sintomas",
+      "Avaliação periódica de função e limiares de marca-passo ou dispositivo eletrônico implantável",
+      "Ecocardiograma seriado para monitorar função ventricular e detectar taquicardiomiopatia",
+      "Acompanhamento de crescimento e desenvolvimento neuropsicomotor em crianças com arritmia crônica ou dispositivo implantado",
+      "Rastreio de recorrência e de complicações tardias após ablação por cateter",
+      "Avaliação psicossocial e escolar em crianças com arritmia recorrente ou dispositivo implantável"
+    ],
+    "assistant_questions": [
+      {
+        "id": "hemodynamic_instability",
+        "text": "A criança apresenta sinais de instabilidade hemodinâmica (hipotensão, má perfusão, alteração aguda de consciência, sinais de choque)?",
+        "type": "boolean"
+      },
+      {
+        "id": "arrhythmia_type",
+        "text": "Qual o tipo de arritmia identificada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "tsv",
+            "label": "Taquicardia supraventricular"
+          },
+          {
+            "value": "jet_pos_op",
+            "label": "Taquicardia juncional ectópica pós-operatória"
+          },
+          {
+            "value": "bav",
+            "label": "Bloqueio atrioventricular"
+          },
+          {
+            "value": "bradicardia_sinusal",
+            "label": "Bradicardia sinusal sintomática"
+          },
+          {
+            "value": "outra",
+            "label": "Outra"
+          }
+        ]
+      },
+      {
+        "id": "heart_rate_bpm",
+        "text": "Qual a frequência cardíaca atual (bpm)?",
+        "type": "number"
+      },
+      {
+        "id": "qrs_width",
+        "text": "O QRS observado no traçado é estreito ou largo?",
+        "type": "select",
+        "options": [
+          {
+            "value": "estreito",
+            "label": "Estreito"
+          },
+          {
+            "value": "largo",
+            "label": "Largo"
+          },
+          {
+            "value": "indeterminado",
+            "label": "Indeterminado"
+          }
+        ]
+      },
+      {
+        "id": "vagal_maneuver_attempted",
+        "text": "Alguma manobra vagal já foi tentada nesta criança?",
+        "type": "boolean"
+      },
+      {
+        "id": "postoperative_context",
+        "text": "O quadro ocorreu no pós-operatório recente de cirurgia cardíaca (até 72 horas)?",
+        "type": "boolean"
+      },
+      {
+        "id": "symptoms_present",
+        "text": "Quais sintomas a criança apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "sincope",
+            "label": "Síncope"
+          },
+          {
+            "value": "palpitacao",
+            "label": "Palpitação"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "dispneia",
+            "label": "Dispneia"
+          },
+          {
+            "value": "letargia",
+            "label": "Letargia"
+          },
+          {
+            "value": "assintomatico",
+            "label": "Assintomático"
+          }
+        ]
+      },
+      {
+        "id": "weight_kg",
+        "text": "Qual o peso atual da criança, em quilogramas?",
+        "type": "number"
+      },
+      {
+        "id": "structural_heart_disease",
+        "text": "Há cardiopatia congênita ou estrutural associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "recurrent_episodes",
+        "text": "Os episódios de arritmia são recorrentes ou incessantes apesar do tratamento clínico?",
+        "type": "boolean"
+      },
+      {
+        "id": "family_history_scd",
+        "text": "Há história familiar de morte súbita precoce ou canalopatia conhecida?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rule_instability_high_risk",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "hemodynamic_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica associada a arritmia"
+          ],
+          "emergency_flow": [
+            "Priorizar cardioversão elétrica sincronizada imediata se taquiarritmia instável, ou estimulação cardíaca temporária se bradicardia refratária com má perfusão"
+          ],
+          "messages": [
+            "Sinais de instabilidade hemodinâmica identificados — priorizar estabilização emergencial conforme algoritmo AHA/AAP 2025."
+          ]
+        }
+      },
+      {
+        "id": "rule_postop_jet",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "postoperative_context",
+              "op": "truthy"
+            },
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "jet_pos_op"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Contexto pós-operatório recente compatível com taquicardia juncional ectópica"
+          ],
+          "emergency_flow": [
+            "Considerar hipotermia terapêutica leve e minimização da estimulação adrenérgica",
+            "Avaliar necessidade de marca-passo atrial temporário para restabelecer sincronia AV"
+          ],
+          "messages": [
+            "Padrão sugestivo de taquicardia juncional ectópica pós-operatória."
+          ]
+        }
+      },
+      {
+        "id": "rule_bav_symptomatic_syncope",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "bav"
+            },
+            {
+              "field": "symptoms_present",
+              "op": "contains",
+              "value": "sincope"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Bloqueio atrioventricular com síncope"
+          ],
+          "suggested_tests": [
+            "Avaliação eletrofisiológica para indicação de marca-passo definitivo"
+          ],
+          "messages": [
+            "BAV sintomático com síncope indica avaliação prioritária para marca-passo definitivo, conforme consenso PACES/HRS."
+          ]
+        }
+      },
+      {
+        "id": "rule_stable_svt_vagal_first",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "tsv"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            },
+            {
+              "field": "vagal_maneuver_attempted",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "TSV hemodinamicamente estável sem tentativa prévia de manobra vagal"
+          ],
+          "ambulatory_flow": [
+            "Orientar e realizar manobra vagal como primeira linha antes de considerar cardioversão química"
+          ],
+          "messages": [
+            "Considerar manobra vagal antes de qualquer terapia farmacológica ou elétrica."
+          ]
+        }
+      },
+      {
+        "id": "rule_svt_refractory_to_vagal",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "tsv"
+            },
+            {
+              "field": "vagal_maneuver_attempted",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "TSV persistente após manobra vagal, paciente hemodinamicamente estável"
+          ],
+          "emergency_flow": [
+            "Considerar cardioversão química sob monitorização contínua"
+          ],
+          "messages": [
+            "Falha da manobra vagal em paciente estável — avaliar cardioversão química."
+          ]
+        }
+      },
+      {
+        "id": "rule_ablation_weight_below_15kg",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_episodes",
+              "op": "truthy"
+            },
+            {
+              "field": "weight_kg",
+              "op": "lt",
+              "value": 15
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Confirmar refratariedade farmacológica e risco de taquicardiomiopatia antes de indicar ablação em paciente com menos de 15 kg"
+          ],
+          "suggested_tests": [
+            "Avaliação especializada em eletrofisiologia pediátrica para ponderar risco-benefício da ablação por cateter"
+          ],
+          "messages": [
+            "Peso abaixo de aproximadamente 15 kg eleva o risco de complicações da ablação por cateter — reservar a casos refratários ou incessantes."
+          ]
+        }
+      },
+      {
+        "id": "rule_ablation_candidate_over_15kg",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_episodes",
+              "op": "truthy"
+            },
+            {
+              "field": "weight_kg",
+              "op": "gte",
+              "value": 15
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Peso adequado para considerar ablação eletiva por cateter"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação eletrofisiológica e discussão de ablação por cateter, incluindo crioablação quando aplicável"
+          ],
+          "messages": [
+            "Paciente com peso igual ou superior a 15 kg e recorrência de arritmia é candidato a avaliação para ablação eletiva."
+          ]
+        }
+      },
+      {
+        "id": "rule_bav_asymptomatic_followup",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "arrhythmia_type",
+              "op": "eq",
+              "value": "bav"
+            },
+            {
+              "field": "symptoms_present",
+              "op": "contains",
+              "value": "assintomatico"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "Manter seguimento ambulatorial periódico com ECG e Holter para monitorar progressão e frequência de escape"
+          ],
+          "messages": [
+            "BAV assintomático segue com monitorização clínica periódica, sem indicação imediata de dispositivo."
+          ]
+        }
+      },
+      {
+        "id": "rule_family_history_scd_flag",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "family_history_scd",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "História familiar de morte súbita precoce ou canalopatia"
+          ],
+          "suggested_tests": [
+            "Avaliação genética e cardiológica familiar, com atenção ao intervalo QT no ECG de 12 derivações"
+          ],
+          "messages": [
+            "Antecedente familiar de morte súbita eleva a prioridade de investigação etiológica."
+          ]
+        }
+      },
+      {
+        "id": "rule_structural_disease_referral",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "structural_heart_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Cardiopatia estrutural associada aumenta a complexidade do manejo arrítmico"
+          ],
+          "differentials": [
+            "Arritmia secundária a substrato estrutural ou cirúrgico subjacente"
+          ],
+          "messages": [
+            "Encaminhar para avaliação conjunta com cardiologia estrutural pediátrica."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Recém-nascido e lactente jovem com taquicardia supraventricular (TSV): Apresentação típica não é palpitação (o lactente não relata) e sim sinais de insuficiência cardíaca instalada: irritabilidade, recusa alimentar, taquipneia, sudorese às mamadas, palidez/cianose e, em quadros arrastados, choque cardiogênico e disfunção ventricular por cardiomiopatia induzida por taquicardia. O diagnóstico costuma ser tardio porque o quadro é confundido com sepse, refluxo ou bronquiolite. Manobra vagal (gelo facial) é primeira linha para reversão aguda com instabilidade limítrofe; cardioversão elétrica sincronizada é indicada se houver choque franco. Após reversão, iniciar investigação de pré-excitação (WPW) enquanto se aguarda resolução espontânea, comum no primeiro ano de vida.",
+      "Criança em pós-operatório imediato de cirurgia cardíaca congênita com taquicardia juncional ectópica (JET): JET pós-operatória ocorre tipicamente nas primeiras 24-72 horas após cirurgias que envolvem manipulação próxima ao nó AV/feixe de His (ex. correção de CIV, switch arterial, Fontan), favorecida por inflamação local, catecolaminas endógenas/exógenas e hipomagnesemia. O ritmo é estreito, regular, mais rápido que o sinusal, com dissociação AV ou condução VA 1:1 — armadilha comum é confundir com taquicardia sinusal pós-operatória esperada. Manejo escalonado: reduzir suporte inotrópico/catecolaminérgico ao mínimo tolerado, corrigir magnésio e temperatura (hipotermia leve terapêutica é usada em alguns centros), considerar controle farmacológico de frequência apenas por classe quando a instabilidade persiste. É autolimitada na maioria dos casos, resolvendo em dias, mas exige vigilância contínua em UTI pediátrica pela janela de risco estreita.",
+      "Criança com cardiopatia congênita estrutural e arritmia associada (ex. anomalia de Ebstein com via acessória): Certas lesões estruturais carregam associação eletrofisiológica intrínseca: anomalia de Ebstein tem prevalência aumentada de vias acessórias direitas (frequentemente múltiplas) e WPW, com taquicardia por reentrada AV como a arritmia mais comum nessa população; L-TGA (transposição corrigida) predispõe a bloqueio AV progressivo; pós-operatório de Fontan e de correções atriais (Mustard/Senning) predispõe a flutter atrial macrorreentrante tardio, muitas vezes anos após a cirurgia. Nessas crianças, uma arritmia nova não é evento isolado: exige reavaliação anatômica e hemodinâmica concomitante (função ventricular, resíduos cirúrgicos, pressões).",
+      "Adolescente atleta com bradicardia sinusal — fisiológica versus patológica: Bradicardia sinusal é achado esperado e benigno no atleta adolescente bem condicionado, por tônus vagal aumentado, tipicamente acompanhada de variação apropriada da frequência com esforço, ausência de sintomas e ECG habitualmente normal. Sinais que devem afastar a hipótese fisiológica: bradicardia desproporcional ao condicionamento, pausas sinusais significativas ou incompetência cronotrópica ao esforço, síncope ou pré-síncope associada ao exercício, e história familiar de morte súbita ou canalopatia. Holter e teste ergométrico ajudam a diferenciar o padrão fisiológico do patológico antes de liberar ou restringir a prática esportiva competitiva.",
+      "Criança com canalopatia genética conhecida na família (LQTS, CPVT, Brugada): Quando há mutação patogênica já identificada em um familiar, o limiar de investigação da criança cai de forma importante: o teste genético dirigido à mutação familiar deve ser considerado precocemente, mesmo na infância. LQTS e CPVT são exemplos centrais, porque a confirmação do genótipo já implica restrição de esporte competitivo, terapia com betabloqueador (classe, sem posologia) e orientação sobre gatilhos específicos, antes mesmo do primeiro evento. Rastreio em cascata deve ser conduzido com aconselhamento genético estruturado; ECG de repouso isolado não afasta CPVT (teste ergométrico é necessário) nem sempre confirma LQTS.",
+      "Criança com bloqueio atrioventricular (BAV) congênito completo — mãe com lúpus/Sjögren e anti-Ro/SSA positivo: O anti-Ro/SSA (e frequentemente anti-La/SSB) materno atravessa a placenta e pode lesar de forma irreversível o sistema de condução fetal, tipicamente entre 18-24 semanas de gestação, resultando em BAV completo já estabelecido ao nascimento na maioria dos casos. No recém-nascido, a decisão de marca-passo definitivo segue critérios PACES (sintomas, disfunção ventricular, ritmo de escape inadequado, frequência média baixa para a idade), não apenas o grau do bloqueio isoladamente. Deve-se rastrear ativamente miocardite/fibroelastose e lúpus neonatal cutâneo associados ao mesmo anticorpo. Gestações subsequentes carregam risco de recorrência relevante."
+    ]
   },
   {
     "slug": "indicacoes-ecocardiograma-fetal",
