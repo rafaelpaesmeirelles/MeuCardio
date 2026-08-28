@@ -129,7 +129,7 @@ def test_ficha_continua_existindo_com_mesmo_slug():
 def test_marcacao_editorial_correta():
     item = _load_doencas()[SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "gravidez"
     assert item.get("review_note")

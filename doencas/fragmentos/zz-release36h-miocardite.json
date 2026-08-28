@@ -1,0 +1,531 @@
+[
+  {
+    "slug": "miocardite",
+    "name": "Miocardite",
+    "aliases": [
+      "inflamação do miocárdio",
+      "miocardite aguda",
+      "miopericardite",
+      "perimiocardite",
+      "IMPS"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Inflamação do miocárdio, de etiologia predominantemente viral mas com causas imunomediadas (células gigantes, sarcoidose cardíaca), tóxicas/por fármaco, pós-vacinal (mRNA contra COVID-19) e, em área endêmica, por doença de Chagas aguda e outras infecções tropicais. Apresentação inespecífica (dor torácica, dispneia, palpitação, mal-estar pós-viral) frequentemente confundida com quadro respiratório banal ou síndrome coronariana aguda; pode evoluir para forma fulminante com choque cardiogênico em 3-9% dos casos agudos, ou ser causa de morte súbita em jovens e atletas. A diretriz ESC 2025 organiza miocardite e pericardite sob o termo guarda-chuva IMPS (inflammatory myopericardial syndrome). Diagnóstico por ressonância cardíaca (critérios de Lake Louise) e, quando indicada, biópsia endomiocárdica — essencial para diferenciar miocardite de células gigantes (historicamente quase invariavelmente fatal sem imunossupressão combinada precoce) de sarcoidose cardíaca e de miocardite linfocítica fulminante.",
+    "epidemiology": "A miocardite é frequentemente subdiagnosticada, porque a apresentação clínica é inespecífica (dor torácica, dispneia, palpitação, mal-estar pós-viral) e pode ser confundida com quadro respiratório banal ou com síndrome coronariana aguda — a própria diretriz ESC 2025 registra que 'o maior obstáculo ao diagnóstico é o reconhecimento'. É causa reconhecida de morte súbita em jovens e atletas, inclusive como achado post mortem em quem não tinha diagnóstico prévio. A forma fulminante (colapso hemodinâmico de início rápido, exigindo suporte inotrópico/vasopressor ou circulatório mecânico) ocorre em 3-9% dos casos agudos, com arritmia ventricular sustentada em torno de 47% desses casos e morte súbita cardíaca em cerca de 1 em 4. Etiologias principais: viral (enterovírus, parvovírus B19, HHV-6, adenovírus, entre outros — a causa mais comum de miocardite linfocítica); associação recentemente descrita com infecção por SARS-CoV-2 e, num padrão distinto, com a vacina de mRNA contra COVID-19 (miopericardite predominando em homem jovem, tipicamente 3-4 dias após a segunda dose — risco mensurável mas sistematicamente menor que o da própria infecção: 1 a 10 eventos excedentes de miocardite por milhão de vacinados contra 40 por milhão após teste positivo para SARS-CoV-2, medidos na mesma população pelo mesmo método); imunomediada (miocardite de células gigantes — doença rara, incidência estimada de 0,1 a 1 caso por milhão/ano, idade mediana de início na quinta década, historicamente quase invariavelmente fatal — 100% de óbito ou necessidade de cirurgia cardíaca — sem imunossupressão precoce combinada; e sarcoidose cardíaca, seu principal diagnóstico diferencial histológico, com hipótese de sobreposição fenotípica ainda não estabelecida nem refutada); tóxica/por fármaco (miocardite de hipersensibilidade, com infiltrado eosinofílico tipicamente perivascular, distinto do padrão difuso da GCM); e, em região endêmica, doença de Chagas aguda — hoje transmitida majoritariamente por via oral (68,4% dos casos numa série da Amazônia brasileira, contra 5,9% por via vetorial clássica) — e outras miocardites tropicais (malária grave por P. falciparum, dengue grave — miocardite em até 48% das formas graves em estudos prospectivos —, Chikungunya, Zika e febre amarela). A diretriz ESC 2025 organiza miocardite e pericardite sob o termo guarda-chuva IMPS (inflammatory myopericardial syndrome), reconhecendo que as duas frequentemente coexistem em espectro: miopericardite (pericardite predominante com envolvimento miocárdico associado) e perimiocardite (miocardite predominante com envolvimento pericárdico associado) são tratadas como formas relacionadas, cada uma seguindo a linha de manejo da condição predominante, com recomendação de time multidisciplinar IMPS para casos complicados.",
+    "presentation": [
+      "Dor torácica, de padrão pericardítico (pleurítica, posicional) ou anginoso/tipo infarto",
+      "Dispneia, isolada ou associada a outros sintomas",
+      "Palpitação e arritmia — de ectopia isolada a taquicardia/fibrilação ventricular sustentada e bloqueio atrioventricular avançado",
+      "Sinais e sintomas de insuficiência cardíaca aguda",
+      "Choque cardiogênico na forma fulminante — início rápido (dias, por vezes horas), frequentemente com febre e pródromo viral recente, e com o paradoxo de possível melhor recuperação funcional aguda se o paciente sobrevive à fase inicial catastrófica, embora dados contemporâneos maiores mostrem prognóstico tardio pior que o da forma não fulminante",
+      "Pródromo viral/gripal recente — febre, mialgia, sintomas respiratórios ou gastrointestinais — precedendo o quadro cardíaco em dias",
+      "Miopericardite pós-vacina de mRNA contra COVID-19: tipicamente homem jovem/adolescente, quadro surgindo 3 a 4 dias após a dose (mais frequente após a segunda), com dor torácica, elevação de enzima cardíaca e alteração de ST no ECG — curso em geral leve e autolimitado em menores de 21 anos",
+      "Apresentação em atleta como achado incidental (troponina elevada em rastreio, sem sintoma relevante) ou, no extremo oposto, como morte súbita",
+      "Parada cardíaca abortada ou síncope como forma de apresentação inicial",
+      "Deterioração cardíaca rápida com bradiarritmia, taquiarritmia supraventricular/ventricular ou bloqueio atrioventricular total refratário ao tratamento padrão — padrão de alerta para miocardite de células gigantes",
+      "Quadro infeccioso inespecífico com manifestação digestiva associada (inclusive hemorragia) na doença de Chagas aguda por via oral, com sinais/sintomas de insuficiência cardíaca em 26% a 58% dos casos"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial_comum": "Diante de suspeita clínica (dor torácica, dispneia, arritmia ou quadro tipo infarto), a avaliação inicial completa — história, exame físico, radiografia de tórax, biomarcadores, ECG e ecocardiograma — é recomendação Classe I. O ECG mostra tipicamente alterações inespecíficas de ST-T, que podem simular infarto agudo do miocárdio; a troponina costuma estar elevada, com padrão que também pode mimetizar síndrome coronariana aguda verdadeira — por isso, quando SCA é hipótese plausível, coronariografia invasiva ou angio-TC de coronárias (conforme probabilidade clínica) é indicada antes de prosseguir. A diretriz ESC 2025 classifica o diagnóstico em três categorias: 'definitiva' (apresentação clínica compatível + RM cardíaca ou biópsia endomiocárdica comprovando o diagnóstico), 'possível' (apresentação compatível + pelo menos 1 critério adicional, com RM/biópsia incerta ou indisponível) e 'improvável/rejeitada' (só apresentação clínica, sem critério adicional).",
+      "ressonancia_cardiaca_lake_louise": "A ressonância cardíaca pelos critérios de Lake Louise atualizados é o padrão-ouro não invasivo (Classe I, Nível B): exige pelo menos um critério baseado em T2 (edema miocárdico) mais, idealmente, um critério baseado em T1 (realce tardio de gadolínio/mapeamento). RM 'comprovada' preenche os 2 de 2 critérios; RM 'incerta' preenche só 1 dos 2 (ainda permite diagnóstico de miocardite possível, com menor especificidade); RM 'rejeitada' é negativa para ambos. Achados de suporte adicionais incluem anormalidade pericárdica associada e disfunção sistólica de VE global ou regional em cine. Limitação prática: em choque cardiogênico ou arritmia grave (sobretudo na suspeita de células gigantes), o exame pode ser impraticável na fase aguda, o que reduz sua utilidade justamente nos casos mais graves.",
+      "diferenciacao_classica_versus_alto_risco": "A estratificação de risco (alto, intermediário, baixo) organiza toda a investigação subsequente, não só o prognóstico. Alto risco: insuficiência cardíaca aguda/choque cardiogênico, dispneia refratária, parada cardíaca ou síncope, fibrilação/taquicardia ventricular sustentada, bloqueio AV de alto grau, FEVE recém-reduzida (<40%) ou realce tardio extenso. Risco intermediário: dispneia nova/progressiva, TV não sustentada, troponina persistente/recidivante, FEVE 41-49% e/ou alteração de motilidade parietal, ou FEVE ≥50% com realce tardio em 2 ou mais segmentos. Baixo risco: sintomas estáveis/oligossintomático, FEVE ≥50% sem realce tardio relevante — corresponde à miocardite 'clássica' autolimitada, com alta taxa de recuperação espontânea (até 50% em série por biópsia).",
+      "forma_fulminante": "Definida clinicamente por comprometimento hemodinâmico grave e início rápido dos sintomas (não por critério histológico), exigindo por definição algum grau de suporte inotrópico, vasopressor ou circulatório mecânico. Investigação prioriza estabilização, discussão com equipe de choque e biópsia endomiocárdica precoce quando indicada — biópsia precoce associou-se de forma independente a menor taxa de morte ou transplante/dispositivo de assistência ventricular em 1 ano nesse cenário.",
+      "biopsia_endomiocardica": "Indicada (Classe I, Nível C) em miocardite de alto risco, instabilidade hemodinâmica, ou risco intermediário sem resposta ao tratamento convencional — e sempre que há suspeita de células gigantes ou sarcoidose cardíaca, pela implicação terapêutica direta de imunossupressão precoce combinada. Fornece subtipo histológico (linfocítica ativa/persistente/resolvida, eosinofílica, células gigantes, sarcoidose) e PCR viral em tecido — sequências virais detectadas em até 67% das amostras por PCR, mas a sorologia isolada concorda com o PCR em apenas ~4% dos casos, o que reforça que sorologia não substitui análise direta do tecido. Riscos do procedimento: complicações (perfuração/tamponamento, tromboembolismo, trauma valvar, arritmia grave, morte) em 0,6% a 5% na prática geral, subindo até 26% em miocardite fulminante sob suporte circulatório mecânico — decisão calibrada pela relação risco-benefício individual. Na suspeita específica de células gigantes, a biópsia tem sensibilidade relatada de 93-95% em séries dedicadas, mas exige leitura por patologista cardíaco experiente, porque células gigantes podem ser confundidas com sarcoidose na lâmina.",
+      "pos_vacina_mrna_ou_pos_covid": "A cinética temporal (3-4 dias após a dose, predomínio em homem jovem) somada à apresentação clínica orienta a suspeita; a investigação e o manejo seguem o mesmo framework diagnóstico geral de síndrome inflamatória miopericárdica (IMPS) da ESC 2025, sem protocolo diagnóstico próprio distinto.",
+      "chagas_aguda_e_tropicais_em_area_endemica": "O método diagnóstico certo depende de quanto tempo se passou desde o início dos sintomas: exames parasitológicos diretos (pesquisa a fresco, mais sensível que esfregaço corado) são os indicados na fase aguda, idealmente com paciente ainda febril e dentro de 1 mês do início dos sintomas; métodos de concentração (Strout, micro-hematócrito) quando a pesquisa a fresco é negativa ou o quadro já tem mais de 1 mês; sorologia não é o melhor método na fase aguda, cabendo quando os parasitológicos diretos são persistentemente negativos e a suspeita persiste; PCR positiva dias a semanas antes de se detectarem tripomastigotas circulantes. Em miocardite investigada em área endêmica brasileira, a diretriz SBC recomenda incluir pesquisa de antígenos/sorologias para arboviroses e gota espessa para malária."
+    },
+    "differentials": [
+      "Síndrome coronariana aguda verdadeira — troponina elevada e alteração de ST podem ser clinicamente indistinguíveis de miocardite; coronariografia ou angio-TC com árvore coronária limpa reforça o diagnóstico de miocardite",
+      "Síndrome de Takotsubo",
+      "Pericardite isolada, sem envolvimento miocárdico (diferenciar de miopericardite/perimiocardite dentro do espectro IMPS)",
+      "Cardiomiopatia dilatada de outra etiologia (não inflamatória)",
+      "Sarcoidose cardíaca — pode mimetizar miocardite de células gigantes de forma clinicamente indistinguível; diferenciação exige biópsia interpretada por patologista cardíaco experiente",
+      "Miocardite de hipersensibilidade (reação a fármaco) — infiltrado eosinofílico tipicamente perivascular, mas com casos histologicamente semelhantes à miocardite de células gigantes",
+      "Miocardite linfocítica fulminante versus miocardite de células gigantes fulminante — prognóstico e conduta diferem substancialmente; hs-CRP foi identificada como biomarcador auxiliar nessa distinção em um estudo",
+      "Miocardite por inibidor de checkpoint imunológico — entidade com corpo de evidência e documento próprios, não coberta aqui"
+    ],
+    "tests": [
+      "Ressonância cardíaca com critérios de Lake Louise atualizados — padrão-ouro não invasivo (Classe I, Nível B); limitação: classificação 'incerta' quando só 1 dos 2 critérios (T1/T2) é preenchido, e exame pode ser impraticável em choque cardiogênico ou arritmia grave, justamente nos casos mais graves",
+      "Troponina seriada — costuma estar elevada, com padrão que pode mimetizar síndrome coronariana aguda; elevação persistente ou recidivante é critério de risco intermediário, mas troponina normal isoladamente não exclui o diagnóstico",
+      "ECG — alterações inespecíficas de ST-T, podem simular infarto agudo do miocárdio; também usado para detectar bloqueio AV e arritmia",
+      "Ecocardiograma — avalia fração de ejeção e motilidade parietal, mas achados são inespecíficos e compartilhados com outras cardiopatias, sobretudo na miocardite de células gigantes",
+      "Biópsia endomiocárdica com PCR viral e histologia — método de referência para subtipo histológico (linfocítica, eosinofílica, células gigantes, sarcoidose) e para detecção de genoma viral; limitações: risco de complicações de 0,6-5% na prática geral (até 26% em fulminante com suporte circulatório mecânico), concordância sorologia-PCR de apenas ~4%, e necessidade de patologista cardíaco experiente para não confundir células gigantes com sarcoidose",
+      "Sorologia/PCR para Chagas em contexto endêmico — a escolha do método depende da janela de tempo: parasitológico direto (pesquisa a fresco) na fase aguda inicial e com paciente febril; métodos de concentração se negativo ou quadro com mais de 1 mês; sorologia não é confiável na fase aguda precoce; PCR positiva antes da detecção de parasitas circulantes; um resultado negativo isolado não é definitivo se os sintomas persistem",
+      "hs-CRP — biomarcador auxiliar descrito para diferenciar miocardite de células gigantes de miocardite linfocítica fulminante em um estudo citado na literatura, não validado como teste isolado de rotina"
+    ],
+    "red_flags": [
+      "Choque cardiogênico / miocardite fulminante — colapso hemodinâmico de início rápido exigindo suporte inotrópico, vasopressor ou circulatório mecânico",
+      "Arritmia ventricular maligna (fibrilação ou taquicardia ventricular sustentada) ou bloqueio atrioventricular avançado/completo",
+      "Sinais sugestivos de células gigantes ou sarcoidose cardíaca: deterioração cardíaca rápida, bloqueio atrioventricular total, arritmia ventricular refratária ao tratamento antiarrítmico convencional em paciente jovem previamente hígido",
+      "Dor torácica de início recente (tipicamente 3-4 dias) após vacina de mRNA contra COVID-19 em homem jovem, sobretudo após a segunda dose",
+      "Parada cardíaca abortada ou síncope como forma de apresentação",
+      "FEVE recém-reduzida (<40%) ou realce tardio extenso à ressonância cardíaca",
+      "Dispneia nova ou progressiva com troponina persistentemente ou recorrentemente elevada — marcador de risco intermediário que pode evoluir"
+    ],
+    "ambulatory_flow": [
+      "Reavaliação clínica estruturada com biomarcadores, ECG e ecocardiograma em até 6 meses da fase aguda, para todos os pacientes com miocardite.",
+      "Ressonância cardíaca de reavaliação para checar resolução de edema/realce tardio e função ventricular, sobretudo nos casos de risco intermediário ou alto, ou com disfunção sistólica inicial.",
+      "Ecocardiograma seriado para acompanhar recuperação de FEVE e de alteração de motilidade segmentar até estabilização.",
+      "Reintrodução gradual de atividade física conforme protocolo estruturado de retorno ao esporte, com restrição de exercício intenso mantida até a remissão clínica e por pelo menos 1 mês, individualizada para atletas e não atletas.",
+      "Em atleta, retorno progressivo, supervisionado e específico da modalidade apenas após recuperação clínica, funcional e elétrica documentada — sem depender só do tempo decorrido em calendário.",
+      "Seguimento de longo prazo, com equipe multidisciplinar em centro de referência, nos casos de miocardite complicada ou de alto risco.",
+      "Em quem teve miopericardite pós-vacinal, orientação individualizada sobre risco-benefício de dose subsequente de vacina de mRNA.",
+      "Em contexto epidemiológico compatível com doença de Chagas aguda tratada, seguimento ambulatorial e vigilância de reativação diante de eventual imunossupressão futura."
+    ],
+    "emergency_flow": [
+      "Choque cardiogênico/miocardite fulminante: estabilização hemodinâmica imediata, suporte inotrópico/vasopressor, acionamento de Shock Team e avaliação precoce para suporte circulatório mecânico (balão intra-aórtico, ECMO venoarterial ou dispositivo de assistência ventricular), com encaminhamento a centro terciário com capacidade de biópsia endomiocárdica precoce.",
+      "Arritmia ventricular sustentada (FV/TV) ou bloqueio atrioventricular avançado na fase aguda: monitorização contínua, tratamento antiarrítmico/elétrico imediato conforme o distúrbio, e avaliação de necessidade de marca-passo transvenoso temporário ou suporte elétrico definitivo conforme a reversibilidade esperada.",
+      "Dor torácica aguda pós-vacina de mRNA em paciente jovem: descartar síndrome coronariana aguda com ECG, troponina seriada e avaliação de imagem coronariana conforme probabilidade clínica, antes de assumir miopericardite pós-vacinal como diagnóstico final.",
+      "Descompensação aguda de insuficiência cardíaca em paciente com miocardite já conhecida: reavaliar função ventricular, buscar gatilho da reagudização (nova infecção, recidiva inflamatória, não adesão terapêutica) e tratar conforme protocolo de IC descompensada, com limiar baixo para suporte hemodinâmico se houver sinais de baixo débito.",
+      "Suspeita de miocardite de células gigantes com deterioração rápida: acionar avaliação para biópsia endomiocárdica precoce e discussão de imunossupressão combinada em caráter de urgência, dado o risco de mortalidade sem tratamento.",
+      "Suspeita de miocardite chagásica aguda com instabilidade: priorizar avaliação de derrame pericárdico e tamponamento, não só a função sistólica, já que a maioria dos óbitos na forma aguda decorre de tamponamento cardíaco."
+    ],
+    "treatment_summary": "O tratamento da miocardite não é único: depende do fenótipo clínico e da causa suspeitada, e a diretriz ESC 2025 organiza a decisão em torno da estratificação de risco e da função ventricular, não de um protocolo genérico. Na miocardite viral \"clássica\" — paciente estável, sem choque, geralmente com boa evolução espontânea —, o curso tende a ser benigno e autolimitado: até metade dos casos comprovados por biópsia se recupera espontaneamente. A conduta central é suporte clínico, restrição de exercício físico intenso até a remissão clínica e laboratorial (por pelo menos 1 mês, incluindo atletas e não atletas), e, quando há disfunção sistólica de ventrículo esquerdo, tratamento padrão de insuficiência cardíaca, mantido por ao menos 6 meses após a recuperação completa da função ventricular. Betabloqueador deve ser considerado por pelo menos 6 meses, sobretudo quando há troponina persistentemente elevada ou arritmia ventricular associada. Imunossupressão ou antiviral de rotina não têm indicação nesse cenário: com função ventricular preservada, o uso rotineiro de imunossupressor é recomendação Classe III — não é neutro, é contraindicado por falta de benefício de desfecho demonstrado.\n\nMiocardite fulminante muda completamente o eixo do tratamento na fase aguda: por definição, é choque cardiogênico de início rápido que exige suporte hemodinâmico agressivo — inotrópico, vasopressor e, quando necessário, suporte circulatório mecânico (balão intra-aórtico, ECMO venoarterial ou dispositivo de assistência ventricular) —, com discussão em Shock Team e encaminhamento precoce a centro terciário capaz de biopsiar e sustentar esse suporte. Aqui existe um paradoxo prognóstico historicamente descrito que merece ser tratado com cautela, não como certeza: a série fundadora do conceito descreveu que quem sobrevive à fase aguda catastrófica da forma fulminante tem, no longo prazo, sobrevida livre de transplante melhor do que quem teve miocardite aguda não fulminante, de instalação insidiosa e que evolui de forma mais silenciosa para cardiomiopatia crônica — o raciocínio histórico é que a resposta inflamatória extrema ou é rapidamente fatal (ou exige suporte extremo para o paciente sobreviver) ou se resolve por completo, sem deixar substrato de inflamação persistente e fibrose progressiva. Esse achado, porém, foi contestado por uma coorte contemporânea maior e multicêntrica, que no recorte especificamente viral mostrou o oposto — mais óbito/transplante e função ventricular mais comprometida no seguimento tardio no grupo fulminante, apesar de a recuperação aguda da fração de ejeção durante a internação ser, de fato, maior nesse grupo. A implicação prática que resiste às duas leituras, e que deve orientar a conduta à beira do leito, é que a gravidade da apresentação aguda não é motivo para nihilismo terapêutico: suporte hemodinâmico agressivo deve ser oferecido independentemente de qual leitura prognóstica se use, e a expectativa a transmitir à família é de incerteza tardia genuína, não de recuperação completa presumida — mas o contraste com a forma não fulminante insidiosa, que pode evoluir de modo mais silencioso para cardiomiopatia dilatada crônica, continua sendo um ponto relevante de diferenciação clínica.\n\nA miocardite de células gigantes é a exceção que exige reconhecimento rápido porque muda a sobrevida: é doença rara, mas historicamente quase invariavelmente fatal — morte ou necessidade de cirurgia cardíaca em praticamente a totalidade dos casos não tratados, em mediana de poucos meses desde o início dos sintomas. A conduta correta é imunossupressão combinada precoce e agressiva — corticosteroide associado a outro imunomodulador, nunca corticosteroide isolado, que na literatura não muda a sobrevida livre de transplante em relação a nenhum tratamento —, decisão que depende de confirmação histológica: a apresentação da forma de células gigantes pode ser clinicamente indistinguível de sarcoidose cardíaca e de miocardite linfocítica fulminante, e só a biópsia endomiocárdica, lida por patologista experiente, diferencia as três e orienta o esquema imunossupressor correto.\n\nA miopericardite associada à vacina de mRNA contra COVID-19 tem, na esmagadora maioria dos casos, curso leve e autolimitado — manejo de suporte, sem necessidade de imunossupressão, com resolução rápida dos sintomas mesmo quando há disfunção sistólica leve a moderada transitória. A decisão sobre segunda dose ou reforço deve ser individualizada, ponderando risco-benefício: a mesma vacina associada ao episódio tem incidência de miocardite bem menor do que a própria infecção pelo SARS-CoV-2 que ela previne.\n\nA miocardite chagásica aguda, ou a reagudização de infecção crônica, exige tratamento etiológico tripanocida específico — indicado independentemente da via de transmissão —, além do suporte hemodinâmico e de insuficiência cardíaca quando presentes; a maioria dos óbitos na forma aguda não decorre de disfunção ventricular, e sim de derrame pericárdico importante com tamponamento, o que reorienta a vigilância clínica para além da função sistólica.\n\nEm qualquer subtipo, bloqueio atrioventricular avançado ou arritmia ventricular maligna na fase aguda são indicação de suporte elétrico temporário (marca-passo transvenoso temporário) ou de cardiodesfibrilador implantável, conforme a reversibilidade esperada do distúrbio de condução e o risco arrítmico residual identificado na reavaliação.",
+    "monitoring": [
+      "Ressonância cardíaca seriada até normalização de edema/realce tardio ou estabilização documentada, sobretudo em risco intermediário ou alto.",
+      "Ecocardiograma seriado de função ventricular e motilidade segmentar até recuperação ou platô funcional.",
+      "ECG e Holter para rastreio de arritmia residual, especialmente em quem teve arritmia ventricular ou bloqueio atrioventricular na fase aguda.",
+      "Teste de esforço antes de liberar atividade física intensa ou retorno ao esporte, avaliando resposta pressórica, ectopia ventricular e capacidade funcional.",
+      "Protocolo estruturado de retorno gradual ao exercício, com reavaliação multiparamétrica (sintomas, biomarcadores, função ventricular, ritmo e ressonância cardíaca quando indicada) antes de cada progressão de carga.",
+      "Em miocardite de células gigantes sob imunossupressão, monitorização prolongada — recidiva foi documentada até anos após o diagnóstico inicial, tornando a decisão de desmame um processo de longo prazo, não um evento isolado.",
+      "Em miocardite chagásica, monitorização de reativação parasitológica diante de eventual imunossupressão futura, por exemplo em contexto pós-transplante."
+    ],
+    "special_populations": [
+      "Criança e adolescente com miocardite — manejo específico (apresentação, suporte hemodinâmico, ECMO, causa pós-vacinal em adolescentes) está no verbete-irmão dedicado 'miocardite-pediatrica', já publicado; este hub cobre o adulto.",
+      "Paciente oncológico em uso de inibidor de checkpoint imunológico com miocardite — apresentação e manejo distintos, com letalidade maior que a miocardite viral clássica; coberto no verbete-irmão dedicado 'miocardite-por-inibidor-checkpoint', já publicado.",
+      "Atleta competitivo com miocardite — diagnóstico e decisão de retorno ao esporte são de alto impacto, com protocolo estruturado de restrição inicial, reavaliação multiparamétrica e reintrodução progressiva do exercício antes da liberação para competição.",
+      "Paciente em área endêmica de doença de Chagas com miocardite aguda ou reagudizada — transmissão hoje predominantemente oral (não vetorial), com achados que não seguem o padrão clássico (chagoma, sinal de Romaña) e investigação parasitológica orientada por janela de tempo desde a exposição.",
+      "Receptor recente de vacina de mRNA contra COVID-19 com quadro sugestivo de miocardite — predominância em homens jovens, início tipicamente 3-4 dias após a segunda dose, curso habitualmente leve e autolimitado, com risco absoluto de miocardite bem menor do que o associado à própria infecção por SARS-CoV-2.",
+      "Suspeita de miocardite de células gigantes — rara, mas com mortalidade ou necessidade de transplante próxima de 100% sem imunossupressão precoce; diagnóstico diferencial obrigatório com sarcoidose cardíaca e miocardite linfocítica fulminante, indistinguíveis clinicamente sem biópsia endomiocárdica."
+    ],
+    "assistant_questions": [
+      {
+        "id": "hemodynamic_instability_shock",
+        "label": "Há choque cardiogênico ou instabilidade hemodinâmica na fase aguda (necessidade de inotrópico, vasopressor ou suporte circulatório mecânico)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade aguda"
+      },
+      {
+        "id": "malignant_arrhythmia_or_avb",
+        "label": "Há arritmia ventricular sustentada/fibrilação ventricular ou bloqueio atrioventricular avançado na fase aguda?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade aguda"
+      },
+      {
+        "id": "recent_mrna_vaccine",
+        "label": "Houve vacinação de mRNA contra COVID-19 nos dias recentes (tipicamente 3 a 4 dias após a 2ª dose ou reforço)?",
+        "type": "boolean",
+        "section": "Contexto"
+      },
+      {
+        "id": "chest_pain_elevated_troponin_clean_coronaries",
+        "label": "Há dor torácica aguda com troponina elevada e coronárias sem lesão obstrutiva à investigação?",
+        "type": "boolean",
+        "required": true,
+        "section": "Diagnóstico"
+      },
+      {
+        "id": "suspected_giant_cell_or_rapid_deterioration",
+        "label": "Há suspeita de miocardite de células gigantes: deterioração cardíaca rápida e/ou refratariedade ao tratamento padrão de insuficiência cardíaca ou antiarrítmico em paciente previamente hígido?",
+        "type": "boolean",
+        "section": "Diagnóstico diferencial"
+      },
+      {
+        "id": "athlete_wants_return_to_sport",
+        "label": "É atleta com miocardite conhecida solicitando avaliação para retorno ao esporte?",
+        "type": "boolean",
+        "section": "Retorno ao esporte"
+      },
+      {
+        "id": "return_to_sport_reassessment_complete",
+        "label": "Se atleta em avaliação de retorno: a reavaliação multiparamétrica (ressonância cardíaca quando indicada, ecocardiograma, biomarcadores, Holter/teste de esforço) já foi concluída, sem atividade inflamatória, arritmia relevante ou disfunção residual?",
+        "type": "boolean",
+        "section": "Retorno ao esporte"
+      },
+      {
+        "id": "risk_stratum",
+        "label": "Qual a faixa de risco clínico-morfológico atual, conforme critérios clínicos e de imagem?",
+        "type": "select",
+        "section": "Estratificação",
+        "options": [
+          {
+            "value": "alto",
+            "label": "Alto risco"
+          },
+          {
+            "value": "intermediario",
+            "label": "Risco intermediário"
+          },
+          {
+            "value": "baixo",
+            "label": "Baixo risco"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Ainda não avaliado"
+          }
+        ]
+      },
+      {
+        "id": "lvef_status",
+        "label": "Qual o status da fração de ejeção do ventrículo esquerdo (FEVE)?",
+        "type": "select",
+        "section": "Diagnóstico",
+        "options": [
+          {
+            "value": "preservada_50_ou_mais",
+            "label": "Preservada (≥50%)"
+          },
+          {
+            "value": "levemente_reduzida_41_49",
+            "label": "Levemente reduzida (41-49%)"
+          },
+          {
+            "value": "reduzida_abaixo_40",
+            "label": "Reduzida (<40%)"
+          },
+          {
+            "value": "desconhecida",
+            "label": "Ainda não avaliada"
+          }
+        ]
+      },
+      {
+        "id": "chagas_epidemiologic_context",
+        "label": "Há contexto epidemiológico sugestivo de doença de Chagas aguda (área endêmica, ingestão de alimento/bebida suspeitos, surto local)?",
+        "type": "boolean",
+        "section": "Contexto"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "choque-cardiogenico-fase-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hemodynamic_instability_shock",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque cardiogênico ou instabilidade hemodinâmica em miocardite aguda (miocardite fulminante)"
+          ],
+          "emergency_flow": [
+            "Estabilização hemodinâmica imediata, acionamento de Shock Team e avaliação precoce para suporte circulatório mecânico, com encaminhamento a centro terciário"
+          ],
+          "supporting": [
+            "Padrão compatível com miocardite fulminante, que exige suporte hemodinâmico agressivo na fase aguda por definição"
+          ]
+        }
+      },
+      {
+        "id": "arritmia-maligna-ou-bav-avancado",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "malignant_arrhythmia_or_avb",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Arritmia ventricular sustentada ou bloqueio atrioventricular avançado na fase aguda de miocardite"
+          ],
+          "emergency_flow": [
+            "Monitorização contínua, tratamento elétrico/antiarrítmico imediato e avaliação de marca-passo transvenoso temporário ou suporte elétrico definitivo"
+          ]
+        }
+      },
+      {
+        "id": "suspeita-celulas-gigantes",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "suspected_giant_cell_or_rapid_deterioration",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Deterioração cardíaca rápida e/ou refratariedade a tratamento padrão sugerindo miocardite de células gigantes"
+          ],
+          "differentials": [
+            "Miocardite de células gigantes",
+            "Sarcoidose cardíaca",
+            "Miocardite linfocítica fulminante"
+          ],
+          "suggested_tests": [
+            "Biópsia endomiocárdica precoce, com leitura por patologista cardíaco experiente"
+          ],
+          "messages": [
+            "As três hipóteses podem ser clinicamente indistinguíveis; a diferenciação exige biópsia e muda completamente a conduta"
+          ]
+        }
+      },
+      {
+        "id": "dor-toracica-troponina-coronarias-limpas",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "chest_pain_elevated_troponin_clean_coronaries",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Miocardite aguda",
+            "Síndrome coronariana aguda com coronárias não obstrutivas (MINOCA)"
+          ],
+          "suggested_tests": [
+            "Ressonância cardíaca pelos critérios de Lake Louise atualizados"
+          ],
+          "supporting": [
+            "Troponina elevada com coronárias sem lesão obstrutiva é apresentação clínica compatível com miocardite"
+          ]
+        }
+      },
+      {
+        "id": "contexto-pos-vacina-mrna-com-dor-toracica",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "recent_mrna_vaccine",
+              "op": "truthy"
+            },
+            {
+              "field": "chest_pain_elevated_troponin_clean_coronaries",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Miopericardite pós-vacina de mRNA",
+            "Síndrome coronariana aguda"
+          ],
+          "supporting": [
+            "Cinética temporal (dias após dose de mRNA, predomínio em homem jovem) reforça a suspeita de miopericardite pós-vacinal, mas não dispensa afastar SCA"
+          ],
+          "messages": [
+            "Diferenciar de síndrome coronariana aguda antes de assumir causa pós-vacinal"
+          ]
+        }
+      },
+      {
+        "id": "contexto-pos-vacina-mrna-isolado",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "recent_mrna_vaccine",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Contexto temporal recente de vacinação de mRNA é relevante para a suspeita diagnóstica de miopericardite pós-vacinal"
+          ],
+          "missing_information": [
+            "Confirmar troponina, ECG e tempo decorrido desde a dose"
+          ]
+        }
+      },
+      {
+        "id": "alto-risco-estratificacao",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "risk_stratum",
+              "op": "eq",
+              "value": "alto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Biópsia endomiocárdica para definir subtipo histológico e pesquisar genoma viral"
+          ],
+          "supporting": [
+            "Critérios clínicos ou de imagem de alto risco alteram a intensidade da investigação e a indicação de internação"
+          ]
+        }
+      },
+      {
+        "id": "feve-reduzida-nova",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "lvef_status",
+              "op": "eq",
+              "value": "reduzida_abaixo_40"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "FEVE recém-reduzida abaixo de 40% é critério de alto risco e indica tratamento padrão de insuficiência cardíaca"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma seriado e ressonância cardíaca de reavaliação"
+          ]
+        }
+      },
+      {
+        "id": "atleta-retorno-sem-reavaliacao-completa",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "athlete_wants_return_to_sport",
+              "op": "truthy"
+            },
+            {
+              "field": "return_to_sport_reassessment_complete",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Reavaliação multiparamétrica completa antes de liberar retorno ao esporte"
+          ],
+          "messages": [
+            "Retorno ao esporte não deve depender apenas do tempo decorrido em calendário; exige recuperação clínica, funcional e elétrica documentada"
+          ]
+        }
+      },
+      {
+        "id": "atleta-retorno-liberado",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "athlete_wants_return_to_sport",
+              "op": "truthy"
+            },
+            {
+              "field": "return_to_sport_reassessment_complete",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "Retorno gradual, supervisionado e específico da modalidade, com decisão compartilhada e seguimento programado"
+          ]
+        }
+      },
+      {
+        "id": "contexto-chagas-endemico",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "chagas_epidemiologic_context",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Miocardite chagásica aguda"
+          ],
+          "suggested_tests": [
+            "Pesquisa parasitológica direta (pesquisa a fresco) se dentro de 1 mês do início dos sintomas; método de concentração se início há mais de 1 mês"
+          ],
+          "supporting": [
+            "Contexto epidemiológico compatível (área endêmica, ingestão suspeita, surto) reforça a suspeita de doença de Chagas aguda, hoje predominantemente por via oral"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "miocardite",
+      "inflamação cardíaca",
+      "IMPS",
+      "miopericardite",
+      "células gigantes",
+      "pós-vacina mRNA",
+      "Chagas"
+    ],
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Ferreira VM, Schulz-Menger J, Holmvang G, et al. Cardiovascular Magnetic Resonance in Nonischemic Myocardial Inflammation: Expert Recommendations. J Am Coll Cardiol. 2018;72(24):3158-3176. DOI: 10.1016/j.jacc.2018.09.072. PMID: 30545455.",
+      "Block JP, Boehmer TK, Forrest CB, et al. Cardiac Complications After SARS-CoV-2 Infection and mRNA COVID-19 Vaccination — PCORnet, United States, January 2021-January 2022. MMWR Morb Mortal Wkly Rep. 2022;71(14):517-523. DOI: 10.15585/mmwr.mm7114e1. PMID: 35389977.",
+      "Karlstad Ø, Hovi P, Husby A, et al. SARS-CoV-2 Vaccination and Myocarditis in a Nordic Cohort Study of 23 Million Residents. JAMA Cardiol. 2022;7(6):600-612. DOI: 10.1001/jamacardio.2022.0583. PMID: 35442390.",
+      "Patone M, Mei XW, Handunnetthi L, et al. Risks of myocarditis, pericarditis, and cardiac arrhythmias associated with COVID-19 vaccination or SARS-CoV-2 infection. Nat Med. 2022;28(2):410-422. DOI: 10.1038/s41591-021-01630-0. PMID: 34907393.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614.",
+      "McCarthy RE 3rd, Boehmer JP, Hruban RH, et al. Long-term outcome of fulminant myocarditis as compared with acute (nonfulminant) myocarditis. N Engl J Med. 2000;342(10):690-695. DOI: 10.1056/NEJM200003093421003. PMID: 10706898.",
+      "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487.",
+      "Montera MW, Marcondes-Braga FG, Simões MV, et al. Brazilian Society of Cardiology Guideline on Myocarditis - 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40878297/",
+      "https://doi.org/10.1093/eurheartj/ehaf192",
+      "https://pubmed.ncbi.nlm.nih.gov/30545455/",
+      "https://doi.org/10.1016/j.jacc.2018.09.072",
+      "https://pubmed.ncbi.nlm.nih.gov/35389977/",
+      "https://doi.org/10.15585/mmwr.mm7114e1",
+      "https://pubmed.ncbi.nlm.nih.gov/35442390/",
+      "https://doi.org/10.1001/jamacardio.2022.0583",
+      "https://pubmed.ncbi.nlm.nih.gov/34907393/",
+      "https://doi.org/10.1038/s41591-021-01630-0",
+      "https://pubmed.ncbi.nlm.nih.gov/39973614/",
+      "https://doi.org/10.1161/CIR.0000000000001297",
+      "https://pubmed.ncbi.nlm.nih.gov/10706898/",
+      "https://pubmed.ncbi.nlm.nih.gov/37456487/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10349211/",
+      "https://pubmed.ncbi.nlm.nih.gov/35830116/",
+      "https://doi.org/10.36660/abc.20220412"
+    ],
+    "related_document_slugs": [
+      "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+      "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
+      "miopericardite-associada-a-vacina-de-mrna-contra-covid-19",
+      "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+      "fluxograma-miocardite-aguda-esc-2025",
+      "miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022",
+      "miocardite-fulminante-viral-choque-de-inicio-rapido-e-o-paradoxo-do-prognostico-a-longo-prazo",
+      "miocardite-apos-vacina-de-mrna-e-risco-cardiovascular-pos-covid-o-que-os-numeros-dizem",
+      "covid-19-miocardite-pos-viral-atleta-triagem-retorno-esporte",
+      "fluxograma-miocardite-retorno-esporte-atleta",
+      "fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025",
+      "miocardite-retorno-ao-esporte"
+    ],
+    "patient_material_slug": "miocardite-inflamacao-do-musculo-do-coracao-e-recuperacao",
+    "review_status": "revisado",
+    "review_note": "Verbete-hub Tudo com Tudo criado em 27/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia). Nenhum verbete geral de miocardite do adulto existia previamente no corpus — apenas os hubs pediátrico (miocardite-pediatrica) e de inibidor de checkpoint imunológico (miocardite-por-inibidor-checkpoint), ambos preservados sem duplicação de escopo. Conteúdo produzido por 3 agentes de pesquisa em paralelo (epidemiologia/diagnóstico; tratamento/fluxos/assistente; populações especiais e conexões Tudo com Tudo), cada um lendo os documentos-fonte primários indicados em content/ antes de escrever, com verificação de PMID/DOI via NCBI E-utilities para todas as 9 referências citadas (diretriz ESC 2025 de miocardite/pericardite — PMID 40878297; critérios de Lake Louise atualizados — PMID 30545455; MMWR PCORnet — PMID 35389977; coorte nórdica JAMA Cardiol — PMID 35442390; Nat Med Patone et al. — PMID 34907393; AHA/ACC sports statement 2025 — PMID 39973614; McCarthy et al. NEJM 2000 sobre forma fulminante — PMID 10706898; revisão sobre células gigantes — PMID 37456487; diretriz SBC de miocardite 2022 — PMID 35830116). Antes de commitar, foi feita checagem de coordenação com o trabalho concorrente do Codex/ChatGPT no mesmo repositório: inspecionados os 13 PRs abertos com prefixo codex/ (via gh pr list + gh pr diff); nenhum cria ou edita um slug de doença geral de miocardite em doencas/metadados.json — a atividade do Codex em torno do termo 'miocardite' se concentra em 5 PRs (#522-#526) que editam documentos já existentes (fluxogramas de miocardite por checkpoint, protocolo de miopericardite gestacional, diferencial de cardite reumática, desfechos de MIS-C), sem sobreposição com este hub. As 12 conexões related_document_slugs foram confirmadas uma a uma como menção central e explícita ao tema (não apenas proximidade temática), após varredura exaustiva de 123 ocorrências de 'miocardite/miopericardite/inflamação miocárdica' em content/. Nenhuma dose de fármaco foi incluída em nenhum campo. Pendente apenas revisão humana final (review_status=pendente_revisao). Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

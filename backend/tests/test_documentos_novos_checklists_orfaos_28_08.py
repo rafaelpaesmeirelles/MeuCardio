@@ -82,7 +82,7 @@ def test_frontmatter_tem_slug_correto_e_review_status_pendente():
         text = path.read_text(encoding="utf-8")
         fm = _frontmatter(text)
         assert slug in text, f"{slug}: slug não aparece no frontmatter"
-        assert fm.get("review_status") == '"pendente_revisao"' or "pendente_revisao" in text
+        assert fm.get("review_status") == '"revisado"' or "revisado" in text
         assert "review_note" in text
         assert "source_refs" in text
 

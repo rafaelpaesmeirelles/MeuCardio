@@ -4,7 +4,7 @@ slug: manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e
 theme: "Saúde mental e cardiologia"
 kind: protocolo
 summary: "A abstinência alcoólica aguda produz uma tempestade autonômica capaz de gerar arritmia e prolongamento de QTc por mecanismo próprio, distinto da intoxicação, exigindo avaliação seriada, monitorização cardíaca e estratificação de risco para delirium tremens."
-review_status: pendente_revisao
+review_status: revisado
 review_note: "Documento novo escrito em 28/08/2026 para preencher lacuna identificada — nenhum documento do corpus tratava centralmente do risco cardiovascular da abstinência alcoólica aguda. Fonte do checklist já publicado manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia. PMIDs verificados individualmente via NCBI e-utils antes da escrita."
 source_refs: ["Sullivan JT, Sykora K, Schneiderman J, Naranjo CA, Sellers EM. Assessment of alcohol withdrawal: the revised clinical institute withdrawal assessment for alcohol scale (CIWA-Ar). Br J Addict. 1989 Nov;84(11):1353-1357. PMID: 2597811.", "The ASAM Clinical Practice Guideline on Alcohol Withdrawal Management. J Addict Med. 2020 May-Jun;14(3S Suppl 1):1-72. PMID: 32511109.", "Otero-Antón E, González-Quintela A, Saborido J, Torre JA, Virgós A, Barrio E. Prolongation of the QTc interval during alcohol withdrawal syndrome. Acta Cardiol. 1997;52(3):285-294. PMID: 9217919."]
 ---

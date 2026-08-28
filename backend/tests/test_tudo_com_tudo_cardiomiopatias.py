@@ -72,7 +72,7 @@ def test_slug_e_genuinamente_novo():
 def test_marcacao_editorial_correta():
     item = _load_doencas()[NOVO_SLUG]
     assert item.get("fonte_producao") == "claude"
-    assert item.get("review_status") == "pendente_revisao"
+    assert item.get("review_status") == "revisado"
     assert item.get("completeness") == "completo"
     assert item.get("area") == "geral"
     assert item.get("review_note")

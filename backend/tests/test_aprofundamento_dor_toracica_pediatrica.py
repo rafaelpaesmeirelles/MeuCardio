@@ -51,7 +51,7 @@ def _all_document_paths() -> dict[str, Path]:
 
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
-    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="pendente_revisao"; assert item.get("completeness")=="completo"; assert item.get("area")=="cardiopediatria"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
+    item=_load_doencas()[SLUG]; assert item.get("fonte_producao")=="claude"; assert item.get("review_status")=="revisado"; assert item.get("completeness")=="completo"; assert item.get("area")=="cardiopediatria"; assert item.get("review_note"); assert item.get("source_refs") and len(item["source_refs"])>=5; assert item.get("version")==2
 def test_catalogacao_original_preservada():
     item=_load_doencas()[SLUG]; assert item.get("name")=="Dor torácica pediátrica"; assert "dor no peito na criança" in (item.get("aliases") or []); assert item.get("category")=="sintoma_e_exame"; assert item.get("subtype")=="dor_toracica"; assert item.get("prevalence_rank")==29
 def test_profundidade_minima_e_nao_e_resumo():

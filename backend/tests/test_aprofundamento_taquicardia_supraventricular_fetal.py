@@ -23,7 +23,7 @@ def _all_document_paths():
  return result
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta():
- i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="pendente_revisao"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
+ i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="revisado"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiopediatria"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
 def test_catalogacao_original_preservada():
  i=_load_doencas()[SLUG]; assert i.get("name")=="Taquicardia supraventricular fetal"; assert "TSV fetal" in (i.get("aliases") or []); assert i.get("category")=="cardiologia_fetal"; assert i.get("subtype")=="arritmia_fetal"; assert i.get("prevalence_rank")==9
 def test_profundidade_minima_e_nao_e_resumo():

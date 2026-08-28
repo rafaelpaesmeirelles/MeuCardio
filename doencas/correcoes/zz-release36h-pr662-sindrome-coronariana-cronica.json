@@ -1,0 +1,240 @@
+[
+  {
+    "slug": "sindrome-coronariana-cronica",
+    "set": {
+      "name": "Síndrome coronariana crônica",
+      "aliases": [
+        "SCC",
+        "doença coronariana crônica",
+        "DAC crônica",
+        "angina estável"
+      ],
+      "area": "geral",
+      "category": "doenca_coronariana",
+      "subtype": "aterosclerose_coronariana_cronica_e_anoca_inoca",
+      "prevalence_rank": 4,
+      "completeness": "completo",
+      "summary": "Conjunto de apresentações clínicas crônicas relacionadas a doença coronariana obstrutiva ou não obstrutiva, isquemia ou angina, incluindo pessoas com infarto ou revascularização prévios; o cuidado equilibra diagnóstico proporcional à probabilidade, prevenção de eventos e controle de sintomas.",
+      "epidemiology": "A doença coronariana continua sendo causa relevante de morte e incapacidade. O risco e o mecanismo variam entre aterosclerose obstrutiva, vasoespasmo e disfunção microvascular, e sintomas semelhantes podem ter causa não cardíaca.",
+      "presentation": [
+        "Dor, pressão ou desconforto torácico previsível com esforço ou estresse e alívio com repouso",
+        "Dispneia ou queda de capacidade funcional como equivalente anginoso",
+        "Sintomas podem ser atípicos, sobretudo em mulheres, idosos e pessoas com diabetes",
+        "Angina pode ocorrer sem obstrução coronariana epicárdica por disfunção microvascular ou vasoespasmo",
+        "Mudança recente de padrão, repouso, progressão rápida ou sintomas prolongados exige tratar como possível síndrome coronariana aguda"
+      ],
+      "diagnostic_approach": {
+        "avaliacao_inicial": [
+          "Caracterizar qualidade, gatilho, duração, alívio, evolução e impacto funcional dos sintomas",
+          "Excluir primeiro síndrome coronariana aguda e outras emergências quando o padrão for novo, instável ou acompanhado de sinais de alarme",
+          "Avaliar fatores de risco, doença cardiovascular prévia, exame físico e ECG basal"
+        ],
+        "estratificacao": [
+          "Estimar probabilidade clínica de doença coronariana obstrutiva e modificar pela presença de fatores de risco e achados clínicos",
+          "Selecionar teste anatômico ou funcional conforme probabilidade, idade, qualidade esperada, função renal, ritmo, capacidade de exercício e disponibilidade",
+          "Evitar testes seriados de rotina em paciente estável sem mudança de sintomas ou função"
+        ],
+        "fenotipo": [
+          "Definir presença e extensão de aterosclerose, isquemia e anatomia de alto risco",
+          "Se houver angina/isquemia sem obstrução, considerar ANOCA/INOCA e investigação funcional coronariana em cenário apropriado",
+          "Integrar mecanismo, carga de sintomas, função ventricular e risco de eventos para decidir tratamento e revascularização"
+        ]
+      },
+      "differentials": [
+        "Síndrome coronariana aguda",
+        "Doença aórtica",
+        "Embolia pulmonar",
+        "Pericardite ou miocardite",
+        "Estenose aórtica ou cardiomiopatia hipertrófica",
+        "Dor musculoesquelética",
+        "Refluxo gastroesofágico ou espasmo esofágico",
+        "Doença pulmonar, anemia ou descondicionamento"
+      ],
+      "tests": [
+        "ECG de 12 derivações e exames laboratoriais de risco cardiovascular",
+        "Ecocardiograma para função ventricular, valvas e diagnósticos alternativos quando indicado",
+        "Angiotomografia coronariana para anatomia em pessoas selecionadas pela probabilidade e qualidade esperada",
+        "Teste funcional com imagem ou exercício conforme probabilidade, ECG basal, capacidade e questão clínica",
+        "Coronariografia invasiva quando houver anatomia de alto risco, sintomas refratários, alta probabilidade ou necessidade de intervenção",
+        "Avaliação funcional invasiva ou não invasiva para isquemia e ANOCA/INOCA em cenários selecionados"
+      ],
+      "red_flags": [
+        "Dor em repouso, nova, crescente, prolongada ou diferente do padrão habitual",
+        "Sintomas com hipotensão, síncope, insuficiência cardíaca, arritmia ou alteração isquêmica aguda no ECG",
+        "Elevação de troponina ou instabilidade clínica",
+        "Dor súbita intensa com sinais de síndrome aórtica, embolia pulmonar ou pneumotórax",
+        "Angina com esforço mínimo apesar de tratamento"
+      ],
+      "ambulatory_flow": [
+        "Confirmar que o padrão é crônico e estável antes de usar a via eletiva",
+        "Estimar probabilidade e escolher o teste que responda à questão clínica com menor risco e duplicação",
+        "Iniciar prevenção secundária e controle de fatores de risco quando a doença estiver estabelecida",
+        "Tratar angina de modo individualizado por frequência, pressão, função ventricular, mecanismo e tolerância",
+        "Reavaliar sintomas, adesão e qualidade de vida antes de escalar exames ou intervenção",
+        "Discutir revascularização quando houver sintomas persistentes ou anatomia/risco com benefício plausível"
+      ],
+      "emergency_flow": [
+        "Se houver mudança do padrão ou red flags, migrar imediatamente para protocolo de dor torácica/síndrome coronariana aguda",
+        "Obter ECG rapidamente e troponina seriada conforme protocolo, sem atribuir dor conhecida automaticamente à angina estável",
+        "Avaliar diagnósticos fatais alternativos guiado pela apresentação",
+        "Tratar instabilidade, isquemia e complicações em ambiente monitorizado",
+        "Não usar este verbete crônico para decidir reperfusão ou alta de quadro agudo"
+      ],
+      "treatment_summary": "O manejo tem dois objetivos paralelos: reduzir eventos com controle intensivo de fatores de risco e terapias preventivas indicadas; e aliviar sintomas com antianginosos escolhidos conforme pressão, frequência, função ventricular, comorbidades e mecanismo. Reabilitação e decisão compartilhada são componentes centrais. Revascularização não é automática pela presença de isquemia: deve ser discutida por sintomas refratários, anatomia de alto risco ou benefício prognóstico sustentado no contexto individual.",
+      "monitoring": [
+        "Frequência, gatilhos e limitação por angina ou dispneia",
+        "Pressão, frequência cardíaca, LDL-C, diabetes, tabagismo, atividade física e adesão",
+        "Efeitos adversos, interações e risco hemorrágico das terapias",
+        "Função ventricular e sinais de insuficiência cardíaca quando houver mudança clínica",
+        "Não repetir testes anatômicos ou funcionais apenas por calendário em pessoa estável",
+        "Qualidade de vida e preferência diante de terapia medicamentosa e revascularização"
+      ],
+      "special_populations": [
+        "Mulheres têm maior frequência de ANOCA/INOCA e não devem ter sintomas descartados por ausência de obstrução",
+        "Doença renal exige selecionar contraste e estratégia antitrombótica com cautela",
+        "Diabetes, doença arterial periférica e doença multivascular elevam risco e influenciam prevenção e revascularização",
+        "Idosos frágeis requerem decisão proporcional a sintomas, função, cognição, sangramento e objetivos",
+        "Gestação exige via cardio-obstétrica e proteção fetal na escolha de imagem e fármacos",
+        "Atletas e trabalhadores de alta demanda necessitam avaliação funcional ligada à atividade específica"
+      ],
+      "assistant_questions": [
+        {
+          "id": "pattern_changed",
+          "label": "A dor é nova, em repouso, prolongada, progressiva ou diferente do padrão habitual?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "instability",
+          "label": "Há hipotensão, síncope, insuficiência cardíaca ou arritmia associada?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "known_cad",
+          "label": "Há doença coronariana previamente documentada?",
+          "type": "boolean",
+          "required": true,
+          "section": "História"
+        },
+        {
+          "id": "refractory_symptoms",
+          "label": "Os sintomas persistem apesar de tratamento antianginoso adequado?",
+          "type": "boolean",
+          "section": "Controle de sintomas"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "scc-padrao-instavel",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "pattern_changed",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível síndrome coronariana aguda"
+            ],
+            "emergency_flow": [
+              "Migrar para protocolo de dor torácica aguda com ECG e troponina"
+            ]
+          }
+        },
+        {
+          "id": "scc-instabilidade",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "instability",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Avaliar e tratar instabilidade em ambiente monitorizado"
+            ]
+          }
+        },
+        {
+          "id": "scc-nao-documentada",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "known_cad",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Selecionar investigação proporcional à probabilidade; sintomas isolados não confirmam DAC"
+            ],
+            "suggested_tests": [
+              "Escolher teste anatômico ou funcional conforme probabilidade e contexto"
+            ]
+          }
+        },
+        {
+          "id": "scc-refrataria",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "refractory_symptoms",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Revisar mecanismo, adesão e anatomia; discutir revascularização quando houver indicação"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "doença coronariana crônica",
+        "angina",
+        "ANOCA",
+        "INOCA",
+        "isquemia",
+        "revascularização"
+      ],
+      "source_refs": [
+        "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45:3415-3537. DOI: 10.1093/eurheartj/ehae177.",
+        "Virani SS, Newby LK, Arnold SV, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. J Am Coll Cardiol. 2023;82:833-955. DOI: 10.1016/j.jacc.2023.04.003."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/chronic-coronary-syndromes/",
+        "https://professional.heart.org/en/science-news/2023-guideline-for-the-management-of-patients-with-chronic-coronary-disease"
+      ],
+      "related_document_slugs": [
+        "aha-acc-2023-diretriz-doenca-coronariana-cronica",
+        "fluxograma-sindrome-coronariana-cronica-esc-2024",
+        "orbita-2-pci-versus-placebo-angina-estavel",
+        "fluxograma-angina-estavel-refrataria-manejo-escalonado",
+        "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+        "ischemia-estrategia-invasiva-vs-conservadora-na-dac-estavel",
+        "avaliacao-funcional-da-lesao-coronariana-ffr-e-ifr-o-ensaio-fame-2-e-o-define-flair"
+      ],
+      "patient_material_slug": "vivendo-com-doenca-coronariana-cronica-o-que-realmente-importa",
+      "review_status": "revisado",
+      "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias ESC 2024 e AHA/ACC 2023 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 5 related_document_slugs (ORBITA-2, fluxograma de angina refratária, ANOCA/INOCA ESC 2024, ISCHEMIA, avaliação funcional FFR/iFR), levando o total de 2 para 7. Cada um verificado por leitura direta do documento. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "chatgpt",
+      "version": 2
+    }
+  }
+]

@@ -1,0 +1,240 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca",
+    "set": {
+      "name": "Insuficiência cardíaca",
+      "aliases": [
+        "IC",
+        "síndrome de insuficiência cardíaca",
+        "heart failure"
+      ],
+      "area": "geral",
+      "category": "sindrome_clinica",
+      "subtype": "aguda_ou_cronica_por_fracao_de_ejecao",
+      "prevalence_rank": 3,
+      "completeness": "completo",
+      "summary": "Síndrome clínica causada por alteração estrutural ou funcional cardíaca, com sintomas e sinais de congestão e/ou baixo débito corroborados por evidência objetiva; o fenótipo por fração de ejeção, a etiologia e o estado de congestão orientam tratamento e prognóstico.",
+      "epidemiology": "É causa importante de internação, limitação funcional e mortalidade, com trajetórias heterogêneas e reinternações frequentes. A frequência aumenta com idade, doença coronariana, hipertensão, diabetes, valvopatia e cardiomiopatias.",
+      "presentation": [
+        "Dispneia aos esforços, ortopneia, dispneia paroxística noturna, edema e ganho de peso por congestão",
+        "Fadiga, intolerância ao esforço, fraqueza ou redução funcional por baixo débito e descondicionamento",
+        "Estertores, turgência jugular, refluxo hepatojugular, edema, terceira bulha ou sinais de hipoperfusão",
+        "Pode apresentar-se como síndrome aguda com edema pulmonar, choque, arritmia ou isquemia",
+        "Em idosos, pode predominar confusão, queda funcional, anorexia ou piora renal sem dispneia exuberante"
+      ],
+      "diagnostic_approach": {
+        "confirmacao": [
+          "Integrar sintomas e sinais com ECG, peptídeos natriuréticos e imagem cardíaca; nenhum achado isolado confirma todos os fenótipos",
+          "Ecocardiograma define fração de ejeção, estrutura, valvas, ventrículo direito e pistas etiológicas",
+          "Na fração de ejeção preservada, exigir evidência objetiva de pressões de enchimento elevadas ou anormalidade estrutural/funcional compatível"
+        ],
+        "fenotipo": [
+          "Classificar pela fração de ejeção em reduzida, levemente reduzida, preservada ou melhorada, registrando o valor e a data",
+          "Definir estado clínico: compensada, congesta, hipoperfundida ou em choque",
+          "Distinguir apresentação aguda de doença crônica estável e reconhecer trajetória avançada"
+        ],
+        "etiologia": [
+          "Investigar doença isquêmica, hipertensiva, valvar, arrítmica, tóxica, inflamatória, infiltrativa, genética e periparto conforme história e fenótipo",
+          "Procurar precipitantes de descompensação: infecção, isquemia, arritmia, não adesão, fármacos, hipertensão, anemia, disfunção renal ou tireoidiana"
+        ],
+        "estratificacao": "Avaliar classe funcional, hospitalizações, biomarcadores, função renal/hepática, pressão, frequência, ritmo, ferro, fragilidade e elegibilidade para terapias avançadas ou cuidados paliativos."
+      },
+      "differentials": [
+        "Doença pulmonar obstrutiva ou intersticial",
+        "Embolia pulmonar",
+        "Pneumonia ou outra infecção",
+        "Anemia",
+        "Insuficiência renal ou hepática com retenção de volume",
+        "Síndrome coronariana ou arritmia sem insuficiência cardíaca estabelecida",
+        "Obesidade, descondicionamento ou distúrbio respiratório do sono",
+        "Pericardiopatia constritiva"
+      ],
+      "tests": [
+        "ECG e radiografia de tórax conforme apresentação",
+        "BNP ou NT-proBNP, interpretados com idade, ritmo, função renal e obesidade",
+        "Ecocardiograma transtorácico com fração de ejeção e avaliação estrutural",
+        "Hemograma, creatinina, sódio, potássio, função hepática, glicemia/HbA1c, perfil lipídico e tireoide conforme contexto",
+        "Ferritina e saturação de transferrina para deficiência de ferro",
+        "Investigação de isquemia/anatomia coronariana quando clinicamente indicada",
+        "Ressonância cardíaca, genética, cintilografia, cateterismo direito ou biópsia apenas em fenótipos selecionados"
+      ],
+      "red_flags": [
+        "Hipotensão, alteração de consciência, extremidades frias, oligúria ou lactato elevado sugerindo hipoperfusão/choque",
+        "Edema agudo de pulmão, hipoxemia ou esforço respiratório",
+        "Dor torácica, alteração isquêmica no ECG ou arritmia sustentada",
+        "Síncope, taquicardia ventricular ou bloqueio avançado",
+        "Piora renal rápida, hiponatremia importante ou distúrbio grave de potássio",
+        "Internações repetidas, intolerância progressiva à terapia ou sintomas refratários de IC avançada"
+      ],
+      "ambulatory_flow": [
+        "Confirmar síndrome, fenótipo por fração de ejeção, etiologia e estado de volume",
+        "Iniciar e otimizar terapia modificadora de prognóstico aplicável sem atrasos seriados desnecessários",
+        "Educar sobre adesão, peso, sintomas de piora, atividade física/reabilitação e quando procurar ajuda",
+        "Tratar comorbidades e precipitantes, incluindo hipertensão, diabetes, fibrilação atrial, deficiência de ferro e doença renal",
+        "Reavaliar função ventricular após período apropriado de tratamento para decisões sobre dispositivos",
+        "Encaminhar precocemente para equipe de IC avançada quando houver red flags prognósticas"
+      ],
+      "emergency_flow": [
+        "Avaliar ABC, oxigenação quando hipoxêmica, perfusão, congestão, ECG e precipitante",
+        "Classificar perfil hemodinâmico e tratar edema pulmonar, congestão ou choque conforme protocolo",
+        "Usar diurético intravenoso quando houver sobrecarga de volume e monitorar resposta, função renal e eletrólitos",
+        "Tratar síndrome coronariana, arritmia, infecção, crise hipertensiva ou causa mecânica quando presente",
+        "Evitar reposição volêmica automática em congestão; em choque, definir necessidade de suporte vasoativo e mecânico em equipe especializada",
+        "Planejar transição e terapia crônica antes da alta quando estabilidade permitir"
+      ],
+      "treatment_summary": "Na ICFEr, a terapia de base inclui quatro classes: inibição do sistema renina-angiotensina/neprilisina, betabloqueador com evidência, antagonista mineralocorticoide e inibidor de SGLT2, ajustadas conforme pressão, função renal, potássio e tolerância. Congestão requer diurético. Outros fenótipos se beneficiam de tratamento de comorbidades, controle de volume e terapias indicadas pela diretriz. Dispositivos, intervenção valvar, revascularização, suporte circulatório, transplante e cuidados paliativos dependem do fenótipo e de decisão especializada.",
+      "monitoring": [
+        "Peso, sintomas, classe funcional, pressão, frequência, ritmo e exame de congestão",
+        "Creatinina, ureia, sódio e potássio após ajustes e conforme estabilidade",
+        "Dose alcançada, adesão, acesso, efeitos adversos e contraindicações da terapia",
+        "Fração de ejeção e estrutura após mudança clínica ou intervalo relevante para decisões terapêuticas",
+        "Ferro, diabetes, função renal, sono, vacinação e outras comorbidades",
+        "Hospitalizações, qualidade de vida, fragilidade, suporte social e metas de cuidado"
+      ],
+      "special_populations": [
+        "Gestação e cardiomiopatia periparto exigem equipe especializada e retirada de fármacos fetotóxicos",
+        "Doença renal requer ajuste e monitorização, sem suspender automaticamente terapias por pequenas mudanças esperadas sem avaliação clínica",
+        "Idosos frágeis precisam de conciliação medicamentosa, avaliação funcional, ortostatismo e plano proporcional a objetivos",
+        "Amiloidose, cardiomiopatias genéticas, miocardite e sarcoidose exigem vias diagnósticas específicas",
+        "Câncer ativo ou cardiotoxicidade requer coordenação cardio-oncológica",
+        "IC avançada demanda avaliação precoce de terapias avançadas e integração de cuidados paliativos"
+      ],
+      "assistant_questions": [
+        {
+          "id": "objective_evidence",
+          "label": "Há evidência objetiva de alteração cardíaca ou pressões de enchimento elevadas que sustente o diagnóstico?",
+          "type": "boolean",
+          "required": true,
+          "section": "Confirmação"
+        },
+        {
+          "id": "hypoperfusion",
+          "label": "Há hipotensão, confusão, extremidades frias, oligúria ou outra hipoperfusão?",
+          "type": "boolean",
+          "required": true,
+          "section": "Perfusão"
+        },
+        {
+          "id": "pulmonary_edema",
+          "label": "Há edema pulmonar, hipoxemia ou esforço respiratório?",
+          "type": "boolean",
+          "required": true,
+          "section": "Congestão"
+        },
+        {
+          "id": "recurrent_admissions",
+          "label": "Há internações repetidas ou sintomas refratários apesar de tratamento?",
+          "type": "boolean",
+          "section": "Trajetória"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "ic-hipoperfusao",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "hypoperfusion",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível choque cardiogênico ou hipoperfusão"
+            ],
+            "emergency_flow": [
+              "Monitorizar, investigar causa e acionar equipe de choque/terapia intensiva"
+            ]
+          }
+        },
+        {
+          "id": "ic-edema-pulmonar",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "pulmonary_edema",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Tratar insuficiência respiratória e congestão aguda em ambiente monitorizado"
+            ]
+          }
+        },
+        {
+          "id": "ic-nao-confirmada",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "objective_evidence",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Sintomas isolados não confirmam insuficiência cardíaca"
+            ],
+            "suggested_tests": [
+              "Integrar peptídeo natriurético e ecocardiograma conforme probabilidade clínica"
+            ]
+          }
+        },
+        {
+          "id": "ic-avancada",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "recurrent_admissions",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Considerar avaliação precoce por equipe de insuficiência cardíaca avançada"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "insuficiência cardíaca",
+        "ICFEr",
+        "ICFEp",
+        "congestão",
+        "quatro pilares",
+        "choque cardiogênico"
+      ],
+      "source_refs": [
+        "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. DOI: 10.1161/CIR.0000000000001063.",
+        "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for acute and chronic heart failure. Eur Heart J. 2023;44:3627-3639. DOI: 10.1093/eurheartj/ehad195."
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/guidelines-statements/2022-ahaacchfsa-guideline-for-the-management-of-heart-failure-a-report-of-thecir0000000000001063",
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/focused-update-on-heart-failure/"
+      ],
+      "related_document_slugs": [
+        "fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023",
+        "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+        "segunda-definicao-universal-insuficiencia-cardiaca-2026",
+        "estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc",
+        "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca"
+      ],
+      "patient_material_slug": "insuficiencia-cardiaca",
+      "review_status": "revisado",
+      "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias AHA/ACC/HFSA 2022 e ESC 2023 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 3 related_document_slugs (Segunda Definição Universal de IC 2026, comparativo de estadiamento AHA/ACC/HFSA vs ESC/SBC, atualização focada ESC 2023), levando o total de 2 para 5. Critério rigoroso aplicado: só hub geral/transversal da síndrome, não subtipos/fenótipos já cobertos por documentos próprios (ICFEr, ICFEp) para evitar diluir o vínculo. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "chatgpt",
+      "version": 2
+    }
+  }
+]

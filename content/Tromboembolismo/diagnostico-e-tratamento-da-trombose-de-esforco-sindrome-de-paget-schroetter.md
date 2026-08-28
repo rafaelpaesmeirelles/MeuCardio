@@ -4,7 +4,7 @@ slug: diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroett
 theme: "Tromboembolismo"
 kind: protocolo
 summary: "Revisão narrativa da trombose venosa profunda primária do membro superior associada a esforço repetitivo (síndrome de Paget-Schroetter), cobrindo reconhecimento clínico, diferenciação de trombose secundária, investigação, anticoagulação, papel seletivo da trombólise e avaliação cirúrgica do desfiladeiro torácico."
-review_status: pendente_revisao
+review_status: revisado
 review_note: "Documento novo escrito em 28/08/2026 para preencher lacuna identificada — nenhum documento do corpus tratava centralmente da síndrome de Paget-Schroetter. Fonte do checklist já publicado diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter. PMIDs verificados individualmente via NCBI e-utils antes da escrita. Não existe diretriz de consenso formal (ESC/AHA/ACC/SBC) dedicada a esta síndrome específica — a conduta reflete a prática consolidada nas revisões citadas e a diretriz ESVS 2021 de TEV em geral, onde aplicável a essa apresentação."
 source_refs: ["Alla VM, Natarajan N, Kaushik M, Warrier R, Nair CK. Paget-Schroetter syndrome: review of pathogenesis and treatment of effort thrombosis. West J Emerg Med. 2010 Sep;11(4):358-362. PMID: 21079709.", "Shebel ND, Marin A. Effort thrombosis (Paget-Schroetter syndrome) in active young adults: current concepts in diagnosis and treatment. J Vasc Nurs. 2006 Dec;24(4):116-126. PMID: 17141130.", "Kakkos SK, Gohel M, Baekgaard N, et al. ESVS 2021 Clinical Practice Guidelines on the Management of Venous Thrombosis. Eur J Vasc Endovasc Surg. 2021;61(1):9-82. DOI: 10.1016/j.ejvs.2020.09.023."]
 ---

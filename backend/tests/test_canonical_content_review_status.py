@@ -31,9 +31,7 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
-    "doencas/metadados.json": {"cardiomiopatias", "cardiomiopatia-hipertrofica"},
-}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
@@ -55,9 +53,9 @@ def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
             identifier = record.get("slug") or record.get("title") or record.get("titulo")
             if status == "revisado":
                 continue
-            if relative_path == "medicamentos/metadados.json" and status == "pendente_revisao" and identifier in PENDENTES_MEDICAMENTOS_RC:
+            if relative_path == "medicamentos/metadados.json" and status == "revisado" and identifier in PENDENTES_MEDICAMENTOS_RC:
                 pendentes_encontrados.add(str(identifier)); continue
-            if status == "pendente_revisao" and identifier in PENDENTES_LOTES_TUDO_COM_TUDO.get(relative_path, set()):
+            if status == "revisado" and identifier in PENDENTES_LOTES_TUDO_COM_TUDO.get(relative_path, set()):
                 pendentes_encontrados.add(f"{relative_path}:{identifier}"); continue
             invalidos.append(f"{relative_path}:{identifier}:{status}")
     assert invalidos == []
@@ -85,7 +83,7 @@ def test_todos_os_documentos_markdown_estao_revisados():
         relative_path = str(path.relative_to(REPOSITORY_ROOT))
         if match is None: sem_status.append(relative_path)
         elif match.group(1).strip() != "revisado":
-            if match.group(1).strip() == "pendente_revisao" and relative_path in PENDENTES_MARKDOWN_AVC:
+            if match.group(1).strip() == "revisado" and relative_path in PENDENTES_MARKDOWN_AVC:
                 pendentes_permitidos.add(relative_path)
             else: pendentes.append(f"{relative_path}:{match.group(1).strip()}")
     assert sem_status == []

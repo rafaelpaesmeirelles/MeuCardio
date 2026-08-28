@@ -1,0 +1,387 @@
+[
+  {
+    "slug": "isquemia-mesenterica-aguda-cardioembolica",
+    "set": {
+      "name": "Isquemia mesentérica aguda de origem cardioembólica",
+      "aliases": [
+        "embolia arterial mesentérica",
+        "IMA embólica",
+        "infarto intestinal embólico"
+      ],
+      "area": "cardiogeriatria",
+      "category": "emergencia_vascular",
+      "subtype": "embolia_arterial_mesenterica",
+      "prevalence_rank": 3,
+      "completeness": "completo",
+      "summary": "Emergência vascular tempo-dependente em que um êmbolo de origem cardíaca — fibrilação atrial, trombo mural pós-infarto, valvopatia ou disfunção de VE — oclui a artéria mesentérica superior; reconhecimento pela dor desproporcional ao exame, diferenciação urgente por angiotomografia e revascularização sem atraso definem o desfecho, já que o tempo até o diagnóstico e o tratamento é o principal fator modificável de uma mortalidade que permanece elevada mesmo hoje.",
+      "epidemiology": "A incidência de isquemia mesentérica aguda cresce exponencialmente com a idade: em maiores de 75 anos é causa mais prevalente de abdome agudo que apendicite, e a incidência aos 80 anos é cerca de dez vezes a dos 60 anos (WSES 2022). A fração embólica varia por série: 40-50% na revisão do NEJM (Clair & Beach, 2016) e na WSES 2017; a WSES 2022 registra queda recente para cerca de 25% em séries mais novas, atribuída em parte ao maior uso de anticoagulação na fibrilação atrial. A ESVS 2025 encontrou fibrilação atrial em 32,2% de todos os pacientes com isquemia mesentérica aguda (qualquer etiologia); a WSES cita que cerca de metade dos pacientes com a forma embólica especificamente têm fibrilação atrial. Numa coorte finlandesa de isquemia mesentérica embólica (Kärkkäinen 2021), 72% tinham fibrilação atrial e a idade média era 79 anos — dado de uma coorte, não extrapolado como universal. A mortalidade histórica descrita pela WSES 2022 varia de 30% a 70% conforme o atraso diagnóstico, permanecendo uma das emergências abdominais mais letais mesmo em centros com angiotomografia e revascularização endovascular disponíveis.",
+      "presentation": [
+        "Dor abdominal aguda e intensa, desproporcional aos achados do exame físico — o achado mais sensível e o mais frequentemente subvalorizado, responsável pelo atraso diagnóstico quando ignorado",
+        "Início súbito, muitas vezes descrito como 'em explosão', tipicamente periumbilical ou em mesogástrio antes de se tornar difuso — diferente do início insidioso da isquemia mesentérica crônica",
+        "Esvaziamento intestinal reflexo no início do quadro — vômito, diarreia, por vezes hiperperistaltismo à ausculta",
+        "Fator de risco cardioembólico presente: fibrilação atrial (fonte mais comum), trombo mural de ventrículo esquerdo após infarto do miocárdio recente, doença ou prótese da valva mitral, endocardite infecciosa, disfunção sistólica de ventrículo esquerdo com fração de ejeção reduzida, ou embolia arterial sistêmica prévia (isquemia de membro, AVC embólico)",
+        "Sinais tardios — distensão abdominal, defesa, rigidez, sinais de irritação peritoneal, febre, instabilidade hemodinâmica — já indicam necrose transmural estabelecida; sua ausência nas primeiras horas não afasta o diagnóstico",
+        "Lactato em ascensão, leucocitose e acidose metabólica são achados tardios de necrose já instalada, não sinais precoces a serem aguardados para suspeitar do quadro"
+      ],
+      "differentials": [
+        "Isquemia mesentérica não oclusiva (NOMI) — vasoconstrição difusa em paciente crítico, em vasopressor ou com baixo débito, sem oclusão focal à angiotomografia",
+        "Trombose de veia mesentérica — instalação mais insidiosa, geralmente associada a hipercoagulabilidade, cirrose ou neoplasia; tratada com anticoagulação como primeira linha, sem revascularização",
+        "Trombose arterial mesentérica sobre estenose aterosclerótica prévia — frequentemente com história de dor pós-prandial (angina mesentérica) antecedendo o evento agudo",
+        "Outra causa de abdome agudo (colecistite aguda, pancreatite aguda, perfuração de víscera oca, obstrução intestinal, apendicite)",
+        "Síndrome aórtica aguda ou aneurisma de aorta abdominal com comprometimento de ramos viscerais"
+      ],
+      "tests": [
+        "Angiotomografia de abdome com contraste em fases arterial e venosa, cortes de até 1 mm, independentemente da função renal — exame de escolha (ESVS 2025, Classe I, Nível B); não aguardar exames laboratoriais para solicitá-la",
+        "Mencionar explicitamente a suspeita de isquemia mesentérica aguda na requisição do exame, pois o protocolo de aquisição muda com essa informação (ESVS 2025, Classe I, Nível C)",
+        "Lactato sérico, leucograma e D-dímero — reforçam a suspeita quando elevados, mas nenhum exame laboratorial isolado tem acurácia suficiente para confirmar ou excluir isquemia intestinal (WSES 2022); não devem atrasar a indicação de imagem",
+        "Eletrocardiograma para documentar fibrilação atrial, e ecocardiograma (transtorácico ou transesofágico) para avaliação de fonte cardioembólica — realizados após a angiotomografia e a estabilização inicial, nunca antes",
+        "Radiografia simples de abdome não é recomendada para avaliar isquemia mesentérica aguda (WSES 2022) — não deve ser usada como etapa diagnóstica",
+        "Angiografia mesentérica por cateter, hoje reservada para quando a revascularização endovascular já é a conduta planejada (diagnóstico e tratamento no mesmo tempo), não como exame de triagem inicial"
+      ],
+      "red_flags": [
+        "Dor abdominal desproporcional ao exame físico em paciente com fator de risco cardioembólico (fibrilação atrial, infarto recente, valvopatia, endocardite, embolia prévia)",
+        "Sinais de peritonite (defesa, irritação peritoneal, sepse abdominal) — indicação de laparotomia/laparoscopia sem aguardar angiotomografia",
+        "Paciente crítico com dor ou distensão abdominal em uso de vasopressor — risco de isquemia mesentérica não oclusiva associada",
+        "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica e dor abdominal súbita",
+        "Atraso maior que 48 horas entre início dos sintomas e intervenção — associado a mortalidade perioperatória significativamente maior (Chamseddine et al., J Vasc Surg, 2026)",
+        "Instabilidade hemodinâmica, acidose metabólica ou lactato em ascensão em paciente com dor abdominal aguda — sinaliza necrose intestinal já estabelecida"
+      ],
+      "ambulatory_flow": [
+        "Interromper qualquer avaliação eletiva diante de dor abdominal desproporcional ao exame em paciente com fator de risco cardioembólico",
+        "Encaminhar imediatamente à emergência para angiotomografia — não é quadro para observação ambulatorial ou reavaliação em 24-48h",
+        "Não aguardar exame laboratorial (lactato, hemograma) para decidir a urgência do encaminhamento",
+        "Registrar e comunicar explicitamente o fator de risco cardioembólico conhecido (fibrilação atrial, prótese valvar, infarto recente) na referência à emergência, pois isso orienta a prioridade da investigação",
+        "Orientar o paciente ou cuidador a não usar analgésico ou antiespasmódico por conta própria antes da avaliação, o que pode mascarar a evolução do quadro"
+      ],
+      "emergency_flow": [
+        "Ressuscitação volêmica e correção de distúrbio hidroeletrolítico e ácido-básico",
+        "Angiotomografia de abdome sem atraso, com a suspeita clínica explicitada na requisição, independentemente da função renal",
+        "Sinais de peritonite: ressuscitação, antibiótico de amplo espectro e laparotomia ou laparoscopia sem aguardar a angiotomografia",
+        "Oclusão arterial confirmada sem sinais de infarto: decisão entre revascularização endovascular (primeira opção quando há expertise disponível) e cirurgia aberta pela equipe vascular/cirúrgica, com transferência a centro com serviço 24/7 quando não há expertise local",
+        "Sinais de infarto intestinal ou perfuração à angiotomografia, em qualquer etiologia: laparotomia ou laparoscopia sem aguardar mais exames, com ressecção do segmento necrótico e avaliação de second-look em 24-48h quando a viabilidade do intestino remanescente é incerta",
+        "Trombose de veia mesentérica confirmada: anticoagulação com heparina como primeira linha, geralmente sem cirurgia",
+        "Isquemia não oclusiva confirmada (vasoconstrição difusa, sem oclusão focal): corrigir a causa do baixo fluxo, revisar vasoconstritor evitável e considerar vasodilatador intra-arterial sob heparinização protetora"
+      ],
+      "diagnostic_approach": "A suspeita de isquemia mesentérica aguda cardioembólica é primariamente clínica: dor abdominal aguda, intensa e desproporcional ao exame físico, em paciente com fonte cardioembólica conhecida (fibrilação atrial, trombo mural pós-infarto, valvopatia, endocardite, disfunção de ventrículo esquerdo) deve ser assumida como isquemia mesentérica aguda até prova em contrário (WSES 2022, recomendação forte, evidência de baixa qualidade, 1C). Sinais tardios — distensão, defesa, sepse — já indicam necrose intestinal estabelecida e não devem ser esperados para iniciar a investigação; da mesma forma, não há exame laboratorial (lactato, leucograma, D-dímero) suficientemente acurado para confirmar ou excluir o quadro, e a angiotomografia não deve aguardar esses resultados. Diante de sinais de peritonite, a conduta é cirúrgica imediata, sem aguardar imagem. Na ausência de peritonite, a angiotomografia de abdome com contraste em fases arterial e venosa, com cortes de até 1 mm e independentemente da função renal (ESVS 2025, Classe I, Nível B), é o exame que diferencia as quatro etiologias com condutas distintas: oclusão arterial (embólica ou trombótica), isquemia mesentérica não oclusiva, trombose de veia mesentérica, e sinais de infarto intestinal ou perfuração já estabelecidos — esta última indicando cirurgia imediata independentemente da causa de base. Mencionar explicitamente a suspeita clínica na requisição do exame é recomendado (ESVS 2025, Classe I, Nível C), pois altera o protocolo de aquisição. Cada 6 horas de atraso na realização da angiotomografia associa-se a piora progressiva da mortalidade (WSES 2022), o que torna a velocidade da investigação, e não apenas sua acurácia, parte central da conduta diagnóstica.",
+      "treatment_summary": "O tratamento da isquemia mesentérica aguda cardioembólica combina revascularização, controle da fonte embólica e, quando há necrose já estabelecida, cirurgia ressectiva. Para oclusão arterial (embólica ou trombótica) da artéria mesentérica superior, a revascularização endovascular é considerada terapia de primeira linha quando há expertise disponível (ESVS 2025, Classe IIa, Nível B; WSES 2022 classifica a mesma conduta como recomendação forte, evidência de baixa qualidade, 1C — grau de força diferente entre as duas diretrizes, ambas na mesma direção). A ESVS 2025 recomenda tratar esses pacientes em centros com serviço multidisciplinar 24/7 e experiência em revascularização aberta e endovascular (Classe I, Nível C), com transferência quando não há expertise local; recomenda ainda considerar revascularização antes da ressecção intestinal, sempre que possível (Classe IIa, Nível C). Cirurgia aberta permanece a opção quando não há expertise endovascular disponível ou quando já existem sinais de infarto intestinal exigindo ressecção do segmento necrótico. A anticoagulação com heparina tem grau de recomendação formal e concordante entre as duas diretrizes apenas para a trombose de veia mesentérica, como terapia de primeira linha (ESVS 2025, Classe I, Nível C; WSES 2022, recomendação forte, qualidade moderada, 1B), e como coadjuvante de vasodilatador intra-arterial na isquemia não oclusiva (ESVS 2025, Classe IIb, Nível C). Para a forma arterial embólica/trombótica especificamente, nenhuma das duas diretrizes atuais atribui classe/nível a uma recomendação de heparinização imediata à suspeita; a WSES 2022 descreve anticoagulação plena antes do procedimento cirúrgico em texto de corpo e no algoritmo, sem grau formal — a decisão fica com a equipe assistente, conforme o contexto pré-operatório e o risco de sangramento. Quando há necrose intestinal já estabelecida, a ressecção do segmento não viável é indicada, com decisão de anastomose primária versus ostomia e de second-look laparotomy (reavaliação em 24-48h, WSES 2022, recomendação forte, evidência de baixa qualidade, 1B) guiada pela incerteza sobre a viabilidade do intestino remanescente após a revascularização. Mesmo com tratamento atual, a mortalidade permanece elevada — na faixa de 50% quando não tratada, caindo para cerca de 42% com revascularização versus 62% sem ela em uma série citada pela WSES 2022 — e o principal fator modificável é o tempo até o diagnóstico e a revascularização: uma coorte recente de 92 pacientes mostrou mortalidade perioperatória de 39% quando a intervenção ocorreu mais de 48 horas após o início dos sintomas, contra 14% quando ocorreu dentro desse prazo (Chamseddine et al., J Vasc Surg, 2026). Após a fase aguda, a investigação e o tratamento da fonte cardioembólica (fibrilação atrial, trombo de VE, valvopatia) e a definição de anticoagulação de longo prazo completam o manejo.",
+      "monitoring": [
+        "Sinais vitais, diurese e perfusão durante a ressuscitação e no perioperatório",
+        "Reavaliação da viabilidade intestinal por second-look laparotomy, geralmente em 24-48h, quando há dúvida sobre a viabilidade do intestino remanescente após revascularização e/ou ressecção (WSES 2022, recomendação forte, evidência de baixa qualidade, 1B)",
+        "Vigilância clínica e laboratorial (lactato, acidose, leucograma seriados) para sinais de isquemia recorrente ou progressão após revascularização",
+        "Investigação e tratamento da fonte cardioembólica após a estabilização (ecocardiograma, Holter) e definição de anticoagulação de longo prazo (ESVS 2025)",
+        "Seguimento por imagem (angiotomografia ou angio-RM) para avaliar a patência do vaso revascularizado, conforme protocolo institucional"
+      ],
+      "special_populations": [
+        "Idosos concentram a maior parte dos casos — a incidência cresce exponencialmente com a idade, e a mortalidade e a morbidade perioperatória são maiores nessa faixa etária, o que não justifica retardar a investigação nem reduzir a agressividade diagnóstica",
+        "Fibrilação atrial não anticoagulada ou com anticoagulação subterapêutica é o cenário de maior atenção cardiológica — reforça a probabilidade pré-teste, mas a decisão de investigar não depende de confirmar a fibrilação atrial antes",
+        "Pacientes com infarto do miocárdio recente e trombo mural documentado, ou disfunção de ventrículo esquerdo com fração de ejeção reduzida — fonte emboligênica reconhecida, atenção redobrada a dor abdominal nova nesse contexto pós-infarto",
+        "Pacientes críticos em vasopressor ou com baixo débito cardíaco — maior risco de isquemia mesentérica não oclusiva associada, diagnóstico diferencial que exige a mesma urgência de imagem",
+        "Pacientes com prótese valvar mecânica, endocardite infecciosa ativa ou doença valvar mitral — fontes emboligênicas adicionais reconhecidas pelas diretrizes"
+      ],
+      "assistant_questions": [
+        {
+          "id": "pain_disproportionate",
+          "label": "A dor abdominal é desproporcional ao exame físico?",
+          "type": "boolean",
+          "required": true,
+          "section": "Reconhecimento"
+        },
+        {
+          "id": "cardioembolic_source",
+          "label": "Há fonte cardioembólica conhecida (fibrilação atrial, infarto recente, valvopatia, disfunção de VE)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Fator de risco"
+        },
+        {
+          "id": "peritoneal_signs",
+          "label": "Há sinais de peritonite (defesa, irritação peritoneal, sepse abdominal)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Reconhecimento"
+        },
+        {
+          "id": "hours_since_symptom_onset",
+          "label": "Quantas horas se passaram desde o início da dor?",
+          "type": "number",
+          "required": false,
+          "section": "Reconhecimento"
+        },
+        {
+          "id": "vasopressor_use",
+          "label": "O paciente está em uso de vasopressor ou tem baixo débito cardíaco?",
+          "type": "boolean",
+          "required": false,
+          "section": "Contexto clínico"
+        },
+        {
+          "id": "cta_done",
+          "label": "A angiotomografia já foi realizada?",
+          "type": "boolean",
+          "required": true,
+          "section": "Investigação"
+        },
+        {
+          "id": "ct_finding",
+          "label": "Qual foi o achado principal da angiotomografia?",
+          "type": "select",
+          "required": false,
+          "section": "Investigação",
+          "options": [
+            {
+              "value": "oclusao_arterial",
+              "label": "Oclusão arterial (êmbolo ou trombose)"
+            },
+            {
+              "value": "nomi",
+              "label": "Vasoconstrição difusa sem oclusão focal (isquemia não oclusiva)"
+            },
+            {
+              "value": "trombose_venosa",
+              "label": "Trombose de veia mesentérica"
+            },
+            {
+              "value": "infarto_perfuracao",
+              "label": "Sinais de infarto intestinal ou perfuração"
+            },
+            {
+              "value": "normal_outro",
+              "label": "Normal ou outro achado"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "emergencia-dor-desproporcional-fator-cardioembolico",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "pain_disproportionate",
+                "op": "truthy"
+              },
+              {
+                "field": "cardioembolic_source",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Dor abdominal desproporcional ao exame físico com fonte cardioembólica conhecida — assumir isquemia mesentérica aguda até prova em contrário"
+            ],
+            "emergency_flow": [
+              "Angiotomografia de abdome com contraste em fases arterial e venosa sem atraso, com a suspeita explicitada na requisição, independentemente da função renal"
+            ],
+            "suggested_tests": [
+              "Angiotomografia de abdome com contraste (fases arterial e venosa)"
+            ]
+          }
+        },
+        {
+          "id": "peritonite-cirurgia-imediata",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "peritoneal_signs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sinais de peritonite em paciente com suspeita de isquemia mesentérica aguda"
+            ],
+            "emergency_flow": [
+              "Ressuscitação volêmica, antibiótico de amplo espectro e laparotomia ou laparoscopia sem aguardar angiotomografia"
+            ]
+          }
+        },
+        {
+          "id": "suspeita-mesmo-sem-fonte-conhecida",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "pain_disproportionate",
+                "op": "truthy"
+              },
+              {
+                "field": "cardioembolic_source",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "messages": [
+              "Dor abdominal desproporcional ao exame deve ser assumida como isquemia mesentérica aguda até prova em contrário, mesmo sem fonte cardioembólica identificada (WSES 2022)."
+            ]
+          }
+        },
+        {
+          "id": "exame-pendente",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "pain_disproportionate",
+                "op": "truthy"
+              },
+              {
+                "field": "cta_done",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Solicitar angiotomografia agora, independentemente da função renal e sem aguardar exames laboratoriais."
+            ]
+          }
+        },
+        {
+          "id": "ct-oclusao-arterial-revascularizacao",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "ct_finding",
+                "op": "eq",
+                "value": "oclusao_arterial"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Definir com a equipe vascular/cirúrgica entre revascularização endovascular (primeira opção quando há expertise disponível) e cirurgia aberta"
+            ],
+            "suggested_tests": [
+              "Avaliação de fonte cardioembólica (ecocardiograma) após estabilização"
+            ]
+          }
+        },
+        {
+          "id": "ct-sinais-infarto-perfuracao",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "ct_finding",
+                "op": "eq",
+                "value": "infarto_perfuracao"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Laparotomia ou laparoscopia sem aguardar mais exames; considerar second-look em 24-48h se a viabilidade do intestino remanescente for incerta"
+            ]
+          }
+        },
+        {
+          "id": "ct-trombose-venosa",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "ct_finding",
+                "op": "eq",
+                "value": "trombose_venosa"
+              }
+            ]
+          },
+          "add": {
+            "emergency_flow": [
+              "Iniciar anticoagulação com heparina como terapia de primeira linha; geralmente sem indicação cirúrgica"
+            ],
+            "differentials": [
+              "Trombose de veia mesentérica confirmada por imagem"
+            ]
+          }
+        },
+        {
+          "id": "vasopressor-considerar-nomi",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "vasopressor_use",
+                "op": "truthy"
+              },
+              {
+                "field": "ct_finding",
+                "op": "eq",
+                "value": "nomi"
+              }
+            ]
+          },
+          "add": {
+            "differentials": [
+              "Isquemia mesentérica não oclusiva confirmada por vasoconstrição difusa em paciente crítico/vasopressor"
+            ],
+            "supporting": [
+              "Uso de vasopressor e achado de vasoconstrição difusa sem oclusão focal apoiam isquemia mesentérica não oclusiva"
+            ]
+          }
+        },
+        {
+          "id": "atraso-mais-48h",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "hours_since_symptom_onset",
+                "op": "gt",
+                "value": 48
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "messages": [
+              "Mais de 48 horas entre início dos sintomas e intervenção associam-se a mortalidade perioperatória significativamente maior; priorizar revascularização sem mais atraso."
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "isquemia mesentérica aguda",
+        "embolia",
+        "fibrilação atrial",
+        "abdome vascular agudo",
+        "cardiogeriatria"
+      ],
+      "source_refs": [
+        "Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World Journal of Emergency Surgery. 2022;17(1):54. DOI: 10.1186/s13017-022-00443-x. PMID: 36261857.",
+        "Koelemay MJ, Geelkerken RH, Kärkkäinen J, Leone N, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2025 Clinical Practice Guidelines on the Management of Diseases of the Mesenteric and Renal Arteries and Veins. European Journal of Vascular and Endovascular Surgery. 2025;70(2):153-218. DOI: 10.1016/j.ejvs.2025.06.010. PMID: 40513642.",
+        "Clair DG, Beach JM. Mesenteric Ischemia. New England Journal of Medicine. 2016;374(10):959-968. DOI: 10.1056/NEJMra1503884. PMID: 26962730.",
+        "Kärkkäinen JM. Acute Mesenteric Ischemia: A Challenge for the Acute Care Surgeon. Scandinavian Journal of Surgery. 2021;110(2):150-158. DOI: 10.1177/14574969211007590. PMID: 33866891.",
+        "Chamseddine H, Halabi M, Hamdan H, Kabbani L, Johnson JL, Falvo A, et al. The impact of intervention timing, etiology, and revascularization strategy on acute mesenteric ischemia outcomes. Journal of Vascular Surgery. 2026;83(3):718-728.e4. DOI: 10.1016/j.jvs.2025.11.013. PMID: 41242625."
+      ],
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9580452/",
+        "https://ris.utwente.nl/ws/portalfiles/portal/502462657/PIIS1078588425005167.pdf",
+        "https://www.nejm.org/doi/full/10.1056/NEJMra1503884",
+        "https://journals.sagepub.com/doi/full/10.1177/14574969211007590",
+        "https://doi.org/10.1016/j.jvs.2025.11.013"
+      ],
+      "related_document_slugs": [
+        "isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora",
+        "fluxograma-suspeita-de-isquemia-mesenterica-aguda-primeira-hora",
+        "trombose-de-veia-esplancnica-quando-e-como-anticoagular-com-ou-sem-cirrose"
+      ],
+      "patient_material_slug": "dor-abdominal-subita-e-intensa-quando-procurar-a-emergencia",
+      "review_status": "revisado",
+      "review_note": "Aprofundamento de completeness intermediario para completo (v2 -> v3). Adicionadas: dimensão temporal explícita (assistant_questions/rules sobre horas desde o início dos sintomas e achado de angiotomografia), profundidade em presentation/differentials/tests/red_flags/ambulatory_flow/emergency_flow/monitoring/special_populations, diagnostic_approach e treatment_summary expandidos com as classes/níveis de recomendação já verificados em ciclo anterior (ESVS 2025 e WSES 2022, fontes preexistentes revisadas e reutilizadas). Nova fonte primária adicionada e verificada nesta rodada via PMID/DOI: Chamseddine et al., J Vasc Surg 2026 (PMID 41242625) — coorte de 92 pacientes mostrando mortalidade perioperatória de 39% (intervenção >48h após início dos sintomas) vs 14% (<=48h), usada para sustentar 'tempo até diagnóstico/revascularização é o principal modificador de mortalidade'. Também verificados via WebFetch do texto integral da WSES 2022 (PMC9580452): mortalidade com revascularização 42% vs 62% sem revascularização, mortalidade endovascular 24,9% vs cirurgia aberta 39,3% (dado da National Inpatient Sample 2005-2009 citado pela WSES), e second-look laparotomy recomendada em 24-48h (recomendação forte, evidência de baixa qualidade, 1B). Limitação de acesso: o PDF completo da ESVS 2025 (EJVES) não pôde ser extraído em texto legível nesta sessão (bloqueio de scraping do Elsevier/ScienceDirect); os trechos da ESVS 2025 citados aqui (classes/níveis de recomendação) foram reutilizados do documento irmão já revisado e aprovado neste acervo (isquemia-mesenterica-aguda-origem-cardioembolica-reconhecimento-e-primeira-hora.md), não re-verificados diretamente contra o PDF nesta rodada. related_document_slugs conferido por grep em content/**/*.md: adicionado 'trombose-de-veia-esplancnica-quando-e-como-anticoagular-com-ou-sem-cirrose.md', que cobre explicitamente a trombose de veia mesentérica citada como diferencial. Nenhuma dose de fármaco incluída; nenhum escore proprietário citado. Pendente validação clínica humana antes de nova publicação. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "fonte_producao": "claude",
+      "version": 3
+    }
+  }
+]

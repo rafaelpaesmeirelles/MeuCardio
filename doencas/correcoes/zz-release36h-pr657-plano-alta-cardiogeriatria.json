@@ -1,0 +1,529 @@
+[
+  {
+    "slug": "plano-alta-cardiogeriatria",
+    "set": {
+      "name": "Plano de alta cardiogeriátrico",
+      "aliases": [
+        "alta segura do idoso cardiopata",
+        "transição de cuidado geriátrica"
+      ],
+      "area": "cardiogeriatria",
+      "category": "transicao_cuidado",
+      "subtype": "alta_segura",
+      "prevalence_rank": 15,
+      "completeness": "completo",
+      "summary": "Transição que integra reconciliação medicamentosa, função e cognição, sinais de alerta, cuidador, seguimento, reabilitação e barreiras sociais.",
+      "tags": [
+        "alta",
+        "transição",
+        "cuidador",
+        "reconciliação medicamentosa"
+      ],
+      "source_refs": [
+        "AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit",
+        "Jencks SF, Williams MV, Coleman EA. Rehospitalizations among patients in the Medicare fee-for-service program. N Engl J Med. 2009. PMID 19339721",
+        "Coleman EA, Parry C, Chalmers S, Min SJ. The care transitions intervention: results of a randomized controlled trial. Arch Intern Med. 2006. PMID 17000937",
+        "Naylor MD, et al. Transitional care of older adults hospitalized with heart failure: a randomized, controlled trial. J Am Geriatr Soc. 2004. PMID 15086645",
+        "van Walraven C, Dhalla IA, Bell C, et al. Derivation and validation of an index to predict early death or unplanned readmission after discharge from hospital to the community. CMAJ. 2010. PMID 20194559",
+        "Kansagara D, Englander H, Salanitro A, et al. Risk prediction models for hospital readmission: a systematic review. JAMA. 2011. PMID 22009101",
+        "Donzé J, Aujesky D, Williams D, Schnipper JL. Potentially avoidable 30-day hospital readmissions in medical patients: derivation and validation of a prediction model. JAMA Intern Med. 2013. PMID 23529115"
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary",
+        "https://pubmed.ncbi.nlm.nih.gov/19339721/",
+        "https://pubmed.ncbi.nlm.nih.gov/17000937/",
+        "https://pubmed.ncbi.nlm.nih.gov/15086645/",
+        "https://pubmed.ncbi.nlm.nih.gov/20194559/",
+        "https://pubmed.ncbi.nlm.nih.gov/22009101/",
+        "https://pubmed.ncbi.nlm.nih.gov/23529115/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo em 28/08/2026: ficha estava completeness=basico (apenas catalogação, 1 source_ref AHA, zero campos clínicos), passou a completo com epidemiologia, abordagem diagnóstica, condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico. Os 3 related_document_slugs pré-existentes foram confirmados por leitura direta dos documentos (PACT-HF, telessaúde/monitoramento remoto na IC do idoso, reabilitação cardíaca no muito idoso) — nenhum candidato adicional encontrado foi genuinamente central ao tema de plano de alta, mantendo o total em 3. patient_material_slug permanece vazio: nenhuma correspondência inequívoca encontrada em material-paciente/metadados.json. Todos os PMIDs (6) verificados individualmente via NCBI e-utils antes da montagem. Nenhuma dose de fármaco citada. Quarta ficha desbloqueada hoje pela reavaliação de escopo da PR #551. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "related_document_slugs": [
+        "transicao-hospital-domicilio-na-ic-o-ensaio-pact-hf",
+        "telessaude-e-monitoramento-remoto-na-insuficiencia-cardiaca-do-idoso-o-que-funciona-e-para-quem",
+        "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao"
+      ],
+      "epidemiology": "A readmissão hospitalar em 30 dias é um problema epidemiológico central no cuidado do idoso cardiopata, particularmente após internação por insuficiência cardíaca descompensada. Estudos populacionais em beneficiários idosos do sistema Medicare mostraram que cerca de 20% dos pacientes hospitalizados são readmitidos dentro de 30 dias, proporção que se aproxima de 25% quando a internação índice é por insuficiência cardíaca, uma das principais causas de reinternação evitável nessa faixa etária. Os principais fatores de risco para readmissão precoce incluem polifarmácia (frequentemente cinco ou mais medicamentos, com múltiplos prescritores e erros de reconciliação na alta), fragilidade física, comprometimento cognitivo, isolamento social e ausência de cuidador identificado, baixo letramento em saúde, comorbidades múltiplas (doença renal crônica, DPOC, diabetes) e, sobretudo, transição de cuidado malfeita — caracterizada por informação incompleta transmitida ao paciente e à atenção primária, ausência de consulta de seguimento precoce e discrepâncias medicamentosas não resolvidas. Modelos estruturados de planejamento de alta e transição de cuidado, como a Care Transitions Intervention e o Transitional Care Model, demonstraram redução consistente nas taxas de readmissão e nos custos associados, reforçando que grande parte dessas reinternações é potencialmente evitável com intervenções sistematizadas de reconciliação medicamentosa, educação do paciente e cuidador, e articulação precoce com serviços de reabilitação e telessaúde.",
+      "presentation": [
+        "Internação por descompensação aguda de insuficiência cardíaca, isoladamente o maior gatilho para necessidade de plano de alta estruturado no idoso",
+        "Síndrome coronariana aguda ou procedimento cardiovascular recente em paciente idoso com múltiplas comorbidades",
+        "Polifarmácia significativa (cinco ou mais medicamentos, múltiplos prescritores) com risco elevado de erros de reconciliação",
+        "Fragilidade identificada à admissão ou durante a internação (perda de peso, sarcopenia, baixa reserva funcional)",
+        "Isolamento social, ausência de cuidador identificado ou rede de apoio insuficiente para o domicílio",
+        "Comprometimento cognitivo novo (delirium durante a internação) ou pré-existente (demência, declínio cognitivo leve)",
+        "Histórico de múltiplas internações ou readmissões recorrentes no último ano",
+        "Limitação funcional relevante com dependência em atividades básicas ou instrumentais de vida diária",
+        "Doença renal crônica concomitante ou outras comorbidades que dificultam o ajuste medicamentoso pós-alta",
+        "Baixo letramento em saúde, barreiras de comunicação ou de idioma que comprometam a compreensão do plano terapêutico",
+        "Necessidade de encaminhamento para reabilitação cardíaca, cuidados domiciliares ou telessaúde por limitação de mobilidade ou acesso geográfico"
+      ],
+      "diagnostic_approach": {
+        "resumo": "A abordagem do planejamento de alta cardiogeriátrico não é diagnóstica no sentido clássico, mas sim um processo estruturado e multidisciplinar de avaliação de risco e organização da transição de cuidado, iniciado idealmente já nas primeiras 24 a 48 horas de internação.",
+        "etapas": [
+          "Avaliação formal do risco de readmissão precoce com instrumento validado (por exemplo, LACE Index ou HOSPITAL Score), aplicado próximo à alta para estratificar intensidade da intervenção de transição necessária.",
+          "Reconciliação medicamentosa completa, comparando a lista de medicamentos em uso antes da internação com a prescrição de alta, identificando duplicidades, interações e medicamentos potencialmente inadequados para o idoso, com comunicação clara da lista final ao paciente, cuidador e atenção primária.",
+          "Avaliação de suporte social e identificação de cuidador principal, incluindo capacidade do cuidador de auxiliar na administração de medicamentos, reconhecimento de sinais de alarme e acesso a transporte para consultas de seguimento.",
+          "Rastreio cognitivo e funcional (avaliação de atividades básicas e instrumentais de vida diária) para definir necessidade de suporte domiciliar, cuidados de enfermagem domiciliar ou instituição de cuidados intermediários.",
+          "Educação estruturada do paciente e do cuidador sobre a condição cardíaca, sinais de alarme para procura de atendimento, dieta, restrição hídrica quando aplicável, e pesagem diária no contexto de insuficiência cardíaca, com verificação de compreensão (teach-back).",
+          "Definição e agendamento de seguimento ambulatorial precoce, idealmente em até sete dias da alta, com médico assistente, cardiologista ou equipe de transição de cuidado, e articulação com serviços de reabilitação cardíaca e telessaúde quando indicado pela limitação funcional ou geográfica do paciente.",
+          "Transmissão de sumário de alta completo e estruturado à atenção primária e aos demais serviços envolvidos, contendo diagnósticos, lista medicamentosa reconciliada, exames pendentes e plano de seguimento."
+        ]
+      },
+      "differentials": [
+        "Paciente com bom suporte familiar e cuidador presente e capacitado versus paciente que mora sozinho, sem rede de apoio identificável",
+        "Cognição preservada, permitindo autogestão da medicação e dos sinais de alarme, versus comprometimento cognitivo ou demência exigindo supervisão externa",
+        "Primeira internação por descompensação cardíaca versus múltiplas readmissões recorrentes, que demandam investigação mais aprofundada de causas de má adesão ou falha de transição prévia",
+        "Paciente com acesso facilitado a seguimento ambulatorial e serviços de reabilitação versus residente em área rural ou com barreiras de transporte e acesso a telessaúde",
+        "Fragilidade leve, compatível com retorno domiciliar com suporte pontual, versus fragilidade avançada ou dependência funcional total, exigindo instituição de cuidados intermediários ou home care estruturado",
+        "Baixa complexidade medicamentosa versus polifarmácia extrema com múltiplos prescritores, exigindo reconciliação medicamentosa mais intensiva e revisão farmacêutica dedicada",
+        "Barreiras de letramento em saúde ou de idioma versus paciente e cuidador com boa compreensão do plano terapêutico, alterando a intensidade da educação necessária"
+      ],
+      "tests": [
+        "LACE Index (duração da internação, acuidade da admissão, comorbidades, número de visitas prévias ao pronto-socorro) para estratificação de risco de readmissão",
+        "HOSPITAL Score, instrumento validado para prever readmissões potencialmente evitáveis em pacientes clínicos",
+        "Escala de fragilidade (por exemplo, Clinical Frailty Scale ou fenótipo de fragilidade de Fried) para avaliação de reserva funcional",
+        "Avaliação cognitiva breve (Mini-Mental State Examination ou Montreal Cognitive Assessment) para rastreio de comprometimento cognitivo",
+        "Índice de Katz para atividades básicas de vida diária e Escala de Lawton para atividades instrumentais de vida diária",
+        "Reconciliação medicamentosa estruturada, comparando prescrições pré-internação, durante a internação e na alta",
+        "Avaliação de suporte social e identificação formal de cuidador, incluindo capacidade e disponibilidade para auxiliar no domicílio",
+        "Teste de velocidade de marcha ou Timed Up and Go como marcador funcional complementar à avaliação de fragilidade"
+      ],
+      "red_flags": [
+        "Múltiplas internações hospitalares nos últimos seis a doze meses, indicando padrão recorrente de readmissão",
+        "Discrepâncias não resolvidas na reconciliação medicamentosa no momento da alta",
+        "Ausência de cuidador ou de suporte social identificável para o período pós-alta",
+        "Delirium ou declínio cognitivo agudo não resolvido no momento da alta hospitalar",
+        "Sinais vitais, volemia ou status clínico não plenamente estabilizados no momento da alta",
+        "Ausência de consulta de seguimento agendada em até sete dias após a alta",
+        "Compreensão inadequada do paciente ou do cuidador sobre sinais de alarme, dieta e uso correto das medicações prescritas",
+        "Barreiras logísticas relevantes de acesso às medicações prescritas, como custo elevado ou indisponibilidade local"
+      ],
+      "treatment_summary": "O plano de alta cardiogeriátrico constitui uma estratégia estruturada e multiprofissional destinada a reduzir o risco de reinternação hospitalar nos primeiros 30 dias após a alta de um paciente idoso com doença cardiovascular, reconhecendo que a transição do cuidado hospitalar para o domicílio ou para a atenção ambulatorial é um dos momentos de maior vulnerabilidade clínica e um dos principais determinantes evitáveis de desfechos adversos precoces. O primeiro pilar do plano é a reconciliação medicamentosa completa, realizada antes da alta, comparando sistematicamente a lista de medicamentos em uso prévio à internação com a prescrição hospitalar e com o esquema proposto para o domicílio, identificando duplicidades, interações clinicamente relevantes, medicamentos potencialmente inapropriados para idosos e classes que devam ser suspensas, reintroduzidas ou ajustadas — sem que este processo implique o detalhamento de doses, que permanece de responsabilidade da prescrição médica individualizada. Sempre que possível, busca-se a simplificação do esquema terapêutico, reduzindo o número de comprimidos e de horários de administração, o que está associado a maior adesão em pacientes idosos com múltiplas comorbidades e polifarmácia. O segundo pilar é a educação estruturada do paciente e do cuidador, com uso de linguagem acessível e técnicas de verificação de compreensão, abordando sinais de alarme que exigem contato precoce com a equipe de saúde ou procura por serviço de urgência, além de orientação sobre automonitorização diária de peso corporal, controle de sintomas como dispneia, edema de membros inferiores, ortopneia, palpitações e tontura, e reforço sobre a importância da adesão medicamentosa e das restrições dietéticas pertinentes. O terceiro pilar envolve o agendamento de retorno ambulatorial precoce, idealmente entre sete e catorze dias após a alta, com equipe de cardiologia ou atenção primária, momento em que se reavalia o estado clínico, o ajuste terapêutico e a resposta ao tratamento. Complementarmente, avalia-se a elegibilidade do paciente para telessaúde ou monitoramento remoto, particularmente útil em idosos com dificuldade de deslocamento, e para programas de reabilitação cardíaca, que reduzem mortalidade e reinternações quando indicados e acessíveis. O plano também contempla a avaliação do suporte social disponível, da presença e capacidade de um cuidador, da rede familiar e de recursos comunitários que possam ser mobilizados, bem como da capacidade funcional e cognitiva do próprio paciente para o autocuidado, incluindo preparo de medicamentos, reconhecimento de sintomas e busca de ajuda quando necessário. Por fim, é essencial a comunicação estruturada entre a equipe hospitalar e a atenção primária ou ambulatório de referência, com envio de resumo de alta contendo diagnósticos, intercorrências, medicações e pendências, garantindo continuidade do cuidado. A literatura em geriatria e cardiologia é consistente ao apontar que falhas nessa transição — reconciliação incompleta, educação insuficiente, ausência de retorno precoce agendado e falta de suporte social identificado — figuram entre os principais determinantes evitáveis de reinternação precoce em idosos cardiopatas, justificando a sistematização deste plano como intervenção de baixo custo e alto impacto.",
+      "ambulatory_flow": [
+        "Confirmar reconciliação medicamentosa completa e entregar lista atualizada de medicamentos ao paciente/cuidador",
+        "Avaliar oportunidade de simplificação do esquema terapêutico antes da alta",
+        "Realizar educação estruturada sobre sinais de alarme e automonitorização de peso e sintomas",
+        "Verificar compreensão do paciente/cuidador por técnica de teach-back",
+        "Agendar retorno ambulatorial precoce em até 7 a 14 dias com cardiologia ou atenção primária",
+        "Avaliar elegibilidade para telessaúde ou monitoramento remoto",
+        "Avaliar elegibilidade e encaminhar para programa de reabilitação cardíaca",
+        "Avaliar suporte social, presença de cuidador e recursos comunitários disponíveis",
+        "Avaliar capacidade funcional e cognitiva para autocuidado",
+        "Enviar resumo de alta estruturado à atenção primária/ambulatório de referência",
+        "Programar contato telefônico ou visita domiciliar em 48 a 72 horas após a alta em pacientes de maior risco"
+      ],
+      "emergency_flow": [
+        "Ganho de peso maior que 2 kg em 2 a 3 dias",
+        "Piora súbita ou progressiva da dispneia, incluindo dispneia em repouso",
+        "Dor torácica nova ou recorrente",
+        "Síncope ou pré-síncope",
+        "Edema de membros inferiores em piora rápida",
+        "Palpitações associadas a tontura ou mal-estar"
+      ],
+      "monitoring": [
+        "Peso corporal diário, no mesmo horário e condições",
+        "Sintomas de congestão (dispneia, ortopneia, edema)",
+        "Frequência cardíaca e pressão arterial",
+        "Adesão medicamentosa",
+        "Diurese e balanço hídrico quando aplicável",
+        "Nível de consciência e estado cognitivo",
+        "Capacidade funcional e tolerância a atividades",
+        "Sinais de efeitos adversos medicamentosos"
+      ],
+      "assistant_questions": [
+        {
+          "id": "reconciliacao_medicamentosa_completa",
+          "label": "A reconciliação medicamentosa completa foi realizada antes da alta?",
+          "type": "boolean"
+        },
+        {
+          "id": "numero_medicamentos",
+          "label": "Quantos medicamentos de uso contínuo o paciente utiliza na alta?",
+          "type": "number"
+        },
+        {
+          "id": "simplificacao_esquema",
+          "label": "Foi possível simplificar o esquema terapêutico (reduzir número de tomadas/comprimidos)?",
+          "type": "boolean"
+        },
+        {
+          "id": "educacao_sinais_alarme",
+          "label": "Paciente/cuidador recebeu educação estruturada sobre sinais de alarme e automonitorização?",
+          "type": "boolean"
+        },
+        {
+          "id": "capacidade_autocuidado",
+          "label": "Qual a capacidade de autocuidado do paciente?",
+          "type": "select",
+          "options": [
+            {
+              "value": "independente",
+              "label": "Independente"
+            },
+            {
+              "value": "parcialmente_dependente",
+              "label": "Parcialmente dependente"
+            },
+            {
+              "value": "dependente",
+              "label": "Dependente"
+            }
+          ]
+        },
+        {
+          "id": "suporte_social",
+          "label": "Qual o suporte social/cuidador disponível?",
+          "type": "select",
+          "options": [
+            {
+              "value": "mora_sozinho_sem_suporte",
+              "label": "Mora sozinho, sem suporte identificado"
+            },
+            {
+              "value": "mora_com_cuidador_familiar",
+              "label": "Mora com cuidador familiar"
+            },
+            {
+              "value": "cuidador_formal_contratado",
+              "label": "Cuidador formal contratado"
+            },
+            {
+              "value": "institucionalizado",
+              "label": "Institucionalizado (ILPI ou similar)"
+            }
+          ]
+        },
+        {
+          "id": "retorno_ambulatorial_agendado",
+          "label": "O retorno ambulatorial foi agendado antes da alta?",
+          "type": "boolean"
+        },
+        {
+          "id": "prazo_retorno_dias",
+          "label": "Em quantos dias está agendado o retorno ambulatorial?",
+          "type": "number"
+        },
+        {
+          "id": "elegivel_telessaude",
+          "label": "O paciente é elegível para telessaúde ou monitoramento remoto?",
+          "type": "boolean"
+        },
+        {
+          "id": "elegivel_reabilitacao_cardiaca",
+          "label": "O paciente é elegível para programa de reabilitação cardíaca?",
+          "type": "boolean"
+        },
+        {
+          "id": "fatores_risco_reinternacao",
+          "label": "Quais fatores de risco para reinternação estão presentes?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "fracao_ejecao_reduzida",
+              "label": "Fração de ejeção reduzida"
+            },
+            {
+              "value": "internacao_previa_90_dias",
+              "label": "Internação prévia nos últimos 90 dias"
+            },
+            {
+              "value": "insuficiencia_renal",
+              "label": "Insuficiência renal"
+            },
+            {
+              "value": "multiplas_comorbidades",
+              "label": "Múltiplas comorbidades"
+            },
+            {
+              "value": "baixa_adesao_previa",
+              "label": "Baixa adesão terapêutica prévia"
+            },
+            {
+              "value": "dificuldade_cognitiva",
+              "label": "Dificuldade cognitiva"
+            },
+            {
+              "value": "barreira_socioeconomica",
+              "label": "Barreira socioeconômica"
+            }
+          ]
+        },
+        {
+          "id": "comunicacao_atencao_primaria",
+          "label": "O resumo de alta foi enviado/comunicado à atenção primária ou ambulatório de referência?",
+          "type": "boolean"
+        },
+        {
+          "id": "sinais_congestao_na_alta",
+          "label": "O paciente apresenta sinais de congestão residual na alta (edema, estertores, turgência jugular)?",
+          "type": "boolean"
+        },
+        {
+          "id": "compreensao_teach_back",
+          "label": "Paciente/cuidador demonstrou compreensão adequada via técnica de teach-back?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "reconciliacao_incompleta",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "reconciliacao_medicamentosa_completa",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Reconciliação medicamentosa incompleta antes da alta"
+            ],
+            "missing_information": [
+              "Concluir reconciliação medicamentosa completa antes da alta"
+            ]
+          }
+        },
+        {
+          "id": "polifarmacia_sem_simplificacao",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "simplificacao_esquema",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "numero_medicamentos",
+                "op": "gte",
+                "value": 8
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Polifarmácia sem simplificação de esquema terapêutico"
+            ],
+            "supporting": [
+              "Elevado número de medicamentos de uso contínuo eleva risco de erro e baixa adesão"
+            ]
+          }
+        },
+        {
+          "id": "educacao_insuficiente",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "educacao_sinais_alarme",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Realizar educação estruturada sobre sinais de alarme e automonitorização antes da alta"
+            ]
+          }
+        },
+        {
+          "id": "dependente_sem_suporte",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "capacidade_autocuidado",
+                "op": "eq",
+                "value": "dependente"
+              },
+              {
+                "field": "suporte_social",
+                "op": "eq",
+                "value": "mora_sozinho_sem_suporte"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Paciente dependente para autocuidado sem suporte social identificado"
+            ]
+          }
+        },
+        {
+          "id": "retorno_nao_agendado",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "retorno_ambulatorial_agendado",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Agendar retorno ambulatorial precoce antes da alta"
+            ],
+            "ambulatory_flow": [
+              "Agendar retorno ambulatorial em até 7 a 14 dias antes da liberação do paciente"
+            ]
+          }
+        },
+        {
+          "id": "retorno_fora_da_janela",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "prazo_retorno_dias",
+                "op": "gt",
+                "value": 14
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "red_flags": [
+              "Retorno ambulatorial agendado além da janela recomendada de 7 a 14 dias"
+            ]
+          }
+        },
+        {
+          "id": "elegivel_telessaude_true",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "elegivel_telessaude",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "informativo",
+            "messages": [
+              "Considerar inclusão em programa de telessaúde ou monitoramento remoto"
+            ]
+          }
+        },
+        {
+          "id": "elegivel_reabilitacao_true",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "elegivel_reabilitacao_cardiaca",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "informativo",
+            "messages": [
+              "Encaminhar para programa de reabilitação cardíaca"
+            ]
+          }
+        },
+        {
+          "id": "fatores_risco_fracao_ejecao",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "fatores_risco_reinternacao",
+                "op": "contains",
+                "value": "fracao_ejecao_reduzida"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Fração de ejeção reduzida associada a maior risco de reinternação precoce"
+            ]
+          }
+        },
+        {
+          "id": "comunicacao_atencao_primaria_ausente",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "comunicacao_atencao_primaria",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Enviar resumo de alta estruturado à atenção primária/ambulatório de referência"
+            ]
+          }
+        },
+        {
+          "id": "congestao_residual_na_alta",
+          "priority": 92,
+          "when": {
+            "all": [
+              {
+                "field": "sinais_congestao_na_alta",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sinais de congestão residual presentes no momento da alta"
+            ]
+          }
+        },
+        {
+          "id": "teach_back_negativo",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "compreensao_teach_back",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Confirmar compreensão do paciente/cuidador via teach-back antes da alta"
+            ]
+          }
+        }
+      ],
+      "special_populations": [
+        "Idoso com múltiplas comorbidades e polifarmácia recebendo alta pós-descompensação de insuficiência cardíaca",
+        "Idoso frágil com suporte social insuficiente",
+        "Idoso com comprometimento cognitivo dificultando autocuidado pós-alta",
+        "Idoso vivendo sozinho candidato a telessaúde e monitoramento remoto",
+        "Idoso com múltiplas internações prévias (readmissão recorrente)",
+        "Idoso em processo de reabilitação cardíaca pós-alta"
+      ],
+      "fonte_producao": "claude"
+    }
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "slug": "plano-sobrevivencia-cardiooncologica",
+    "set": {
+      "name": "Plano de sobrevivência cardio-oncológica",
+      "aliases": [
+        "survivorship cardiovascular",
+        "seguimento tardio após câncer"
+      ],
+      "area": "cardiooncologia",
+      "category": "sobrevivencia",
+      "subtype": "seguimento_longo_prazo",
+      "prevalence_rank": 15,
+      "completeness": "completo",
+      "summary": "Registro de exposições, eventos, risco residual, prevenção cardiovascular, sintomas de alerta e responsabilidades de seguimento após o tratamento oncológico.",
+      "tags": [
+        "sobrevivência",
+        "seguimento",
+        "prevenção",
+        "radioterapia"
+      ],
+      "source_refs": [
+        "2022 ESC Guidelines on Cardio-Oncology",
+        "Lyon AR, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022. PMID 36017568",
+        "Armenian SH, et al. Prevention and Monitoring of Cardiac Dysfunction in Survivors of Adult Cancers: ASCO Clinical Practice Guideline. J Clin Oncol. 2017. PMID 27918725",
+        "van Nimwegen FA, et al. Cardiovascular disease after Hodgkin lymphoma treatment: 40-year disease risk. JAMA Intern Med. 2015. PMID 25915855",
+        "Mulrooney DA, et al. Cardiac Outcomes in Adult Survivors of Childhood Cancer Exposed to Cardiotoxic Therapy: A Cross-sectional Study. Ann Intern Med. 2016. PMID 26747086",
+        "Armstrong GT, et al. Reduction in Late Mortality among 5-Year Survivors of Childhood Cancer. N Engl J Med. 2016. PMID 26761625",
+        "Darby SC, et al. Risk of ischemic heart disease in women after radiotherapy for breast cancer. N Engl J Med. 2013. PMID 23484825"
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017568/",
+        "https://pubmed.ncbi.nlm.nih.gov/27918725/",
+        "https://pubmed.ncbi.nlm.nih.gov/25915855/",
+        "https://pubmed.ncbi.nlm.nih.gov/26747086/",
+        "https://pubmed.ncbi.nlm.nih.gov/26761625/",
+        "https://pubmed.ncbi.nlm.nih.gov/23484825/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo em 28/08/2026: ficha estava completeness=basico (apenas catalogação, 1 source_ref ESC 2022, zero campos clínicos, zero related_document_slugs), passou a completo com epidemiologia, abordagem diagnóstica de estratificação de risco tardio, condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico. Os 6 related_document_slugs foram encontrados do zero e cada um verificado por leitura direta do documento completo, confirmando centralidade ao tema de seguimento cardiovascular tardio/sobrevivência oncológica — 3 candidatos adicionais encontrados por busca textual foram descartados por tratarem de prevenção durante o tratamento ativo ou monitorização aguda, não de seguimento pós-alta oncológica. patient_material_slug permanece vazio: o material 'cardio-oncologia' existente é voltado ao acompanhamento durante o tratamento ativo, não à vida após a alta oncológica — decisão consciente de não reutilizá-lo apenas por proximidade temática. Todos os 6 PMIDs verificados individualmente via NCBI e-utils antes da montagem. Nenhuma dose numérica de fármaco ou radioterapia citada. Sexta e última ficha desbloqueada hoje pela reavaliação de escopo da PR #551. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "epidemiology": "Sobreviventes de câncer constituem uma população crescente e heterogênea em risco cardiovascular elevado a longo prazo, decorrente da exposição prévia a terapias cardiotóxicas — antraciclinas, radioterapia torácica ou mediastinal, terapias-alvo anti-HER2, inibidores de tirosina-quinase e, mais recentemente, imunoterapia com inibidores de checkpoint. O risco cardiovascular residual não se limita ao período de tratamento ativo: a latência entre a exposição cardiotóxica e a manifestação clínica de disfunção ventricular, doença arterial coronariana, valvopatia actínica ou doença pericárdica pode se estender por anos a décadas, sendo particularmente relevante em sobreviventes tratados na infância, adolescência ou idade adulta jovem, como no linfoma de Hodgkin tratado com radioterapia mediastinal. Estudos de coorte de longo prazo demonstram que doença cardiovascular figura entre as principais causas de morbimortalidade não relacionada à recidiva tumoral nessa população, aproximando-se, em alguns cenários, do risco da população geral pareada por idade e sexo. Apesar dessa evidência consolidada, há lacuna estrutural relevante no seguimento pós-alta oncológica: a transição de cuidado entre oncologia, cardiologia e atenção primária frequentemente carece de registro sistematizado das exposições prévias, de estratificação formal de risco e de cronograma definido de rastreio, resultando em subdiagnóstico de eventos cardiovasculares tardios potencialmente preveníveis ou tratáveis precocemente.",
+      "presentation": [
+        "Sobrevivente de câncer pediátrico tratado com antraciclina, agora em seguimento na vida adulta",
+        "Sobrevivente de linfoma de Hodgkin submetido a radioterapia mediastinal",
+        "Sobrevivente de câncer de mama tratada com antraciclina e/ou terapia-alvo anti-HER2 (trastuzumabe)",
+        "Uso prévio de trastuzumabe com necessidade de seguimento cardiovascular estruturado após o término do tratamento",
+        "Sobrevivente de linfoma não-Hodgkin ou leucemia tratado com esquema contendo antraciclina",
+        "Sobrevivente de câncer torácico (pulmão, esôfago) submetido a radioterapia envolvendo campo cardíaco",
+        "Paciente previamente tratado com inibidor de tirosina-quinase associado a risco cardiovascular tardio",
+        "Sobrevivente de câncer que recebeu imunoterapia com inibidor de checkpoint imunológico, com necessidade de vigilância cardiovascular tardia",
+        "Paciente assintomático com história oncológica remota, sem seguimento cardiovascular estruturado desde a alta oncológica",
+        "Sobrevivente com múltiplas exposições cardiotóxicas combinadas (antraciclina associada a radioterapia torácica)",
+        "Sobrevivente de transplante de células-tronco hematopoiéticas com exposição prévia a irradiação corporal total"
+      ],
+      "diagnostic_approach": "A abordagem diagnóstica do plano de sobrevivência cardio-oncológica organiza-se em três eixos complementares. O primeiro é o registro estruturado da história de exposição cardiotóxica prévia, documentando de forma sistemática o tipo de agente antineoplásico recebido (antraciclina, terapia-alvo anti-HER2, inibidor de tirosina-quinase, imunoterapia), a dose cumulativa administrada — que deve constar no prontuário sempre que disponível, sem necessidade de detalhamento numérico neste registro clínico —, a existência de radioterapia torácica ou mediastinal e o campo de irradiação, a idade do paciente no momento da exposição e a presença de cardiotoxicidade documentada durante o tratamento ativo. O segundo eixo é a estratificação de risco cardiovascular residual, que combina fatores relacionados ao tratamento oncológico prévio (tipo, combinação e momento das exposições) com fatores de risco cardiovascular tradicionais (hipertensão, diabetes, dislipidemia, tabagismo, história familiar) e com a idade atual do sobrevivente, definindo categorias de risco que orientam a intensidade e a periodicidade do rastreio subsequente. O terceiro eixo é o cronograma de exames de rastreio de longo prazo, ajustado conforme o perfil de exposição: sobreviventes expostos a antraciclina ou radioterapia torácica em idade jovem, ou com disfunção ventricular documentada durante o tratamento, requerem reavaliação ecocardiográfica periódica ao longo do seguimento, com intervalo definido pela equipe de cardio-oncologia; sobreviventes de radioterapia mediastinal necessitam rastreio direcionado para doença arterial coronariana acelerada, valvopatia actínica e doença pericárdica, com reavaliação de imagem cardíaca em janelas específicas após o término do tratamento; sobreviventes de terapias-alvo com potencial cardiotóxico tardio devem manter avaliação clínica e funcional cardíaca periódica mesmo anos após a suspensão do fármaco. A responsabilidade pelo seguimento deve ser explicitamente pactuada entre cardiologia, oncologia e atenção primária, com definição clara de quem inicia, mantém e reavalia o plano de vigilância ao longo do tempo.",
+      "differentials": [
+        "Exposição a antraciclina classificada como de intensidade cumulativa alta versus exposição de intensidade cumulativa baixa, sem quantificação numérica exigida neste registro",
+        "Radioterapia mediastinal recebida em idade jovem (infância ou adolescência) versus radioterapia torácica recebida em idade adulta avançada",
+        "Combinação de antraciclina com radioterapia torácica versus exposição isolada a apenas um dos dois tratamentos",
+        "Disfunção ventricular documentada durante o tratamento oncológico ativo versus função ventricular preservada ao término do tratamento",
+        "Presença de fatores de risco cardiovascular tradicionais associados versus sobrevivente sem comorbidades cardiovasculares adicionais",
+        "Cardiotoxicidade por terapia-alvo anti-HER2 com reversibilidade documentada versus disfunção ventricular persistente após a suspensão do fármaco",
+        "Sobrevivente de transplante de células-tronco hematopoiéticas com irradiação corporal total versus sobrevivente sem esse tipo de exposição"
+      ],
+      "tests": [
+        "Ecocardiograma transtorácico com avaliação de função ventricular, incluindo strain longitudinal global",
+        "Dosagem de biomarcadores cardíacos (troponina, peptídeos natriuréticos) quando clinicamente indicada",
+        "Eletrocardiograma de repouso",
+        "Angiotomografia coronariana ou cintilografia miocárdica de perfusão para rastreio de doença arterial coronariana em sobreviventes de radioterapia torácica",
+        "Ressonância magnética cardíaca em casos selecionados de dúvida diagnóstica ou avaliação de fibrose miocárdica",
+        "Teste ergométrico ou teste cardiopulmonar de esforço para avaliação funcional",
+        "Perfil lipídico e rastreio de fatores de risco cardiovascular tradicionais",
+        "Ultrassom Doppler de carótidas em sobreviventes de radioterapia cervical ou mediastinal com risco vascular associado"
+      ],
+      "red_flags": [
+        "Dispneia progressiva ou nova intolerância ao esforço em sobrevivente de câncer com exposição cardiotóxica prévia",
+        "Dor torácica de características anginosas em sobrevivente de radioterapia mediastinal, mesmo décadas após o tratamento",
+        "Sinais ou sintomas de insuficiência cardíaca de início tardio (edema, ortopneia, dispneia paroxística noturna)",
+        "Sopro cardíaco novo sugestivo de valvopatia actínica em sobrevivente de radioterapia torácica",
+        "Arritmias de início recente, incluindo fibrilação atrial, em sobrevivente com exposição cardiotóxica prévia",
+        "Sinais de doença pericárdica tardia (dor pleurítica, atrito pericárdico, derrame pericárdico ao exame ou à imagem)",
+        "Síncope ou pré-síncope em sobrevivente com história de radioterapia envolvendo território cardíaco",
+        "Queda assintomática da fração de ejeção ou de parâmetros de função ventricular identificada em exame de rastreio de rotina"
+      ],
+      "treatment_summary": "O plano de sobrevivência cardio-oncológica organiza o seguimento cardiovascular de longo prazo do paciente que concluiu o tratamento oncológico, partindo do registro estruturado no prontuário das exposições cardiotóxicas prévias — uso de antraciclinas, radioterapia envolvendo o mediastino ou tórax, terapias-alvo com potencial de disfunção ventricular (como agentes anti-HER2 e inibidores de tirosina-quinase) e imunoterapia com inibidores de checkpoint — sem necessidade de registrar doses numéricas, bastando classificar o tipo e a combinação de exposições recebidas. A partir desse registro, constrói-se a estratificação de risco cardiovascular residual, que combina a exposição oncológica prévia com os fatores de risco cardiovascular tradicionais do paciente (hipertensão, diabetes, dislipidemia, tabagismo, obesidade, sedentarismo e história familiar), reconhecendo que esses fatores tradicionais têm efeito potencializador sobre o dano cardiovascular induzido pelo tratamento oncológico e por isso devem ser controlados de forma mais intensiva nesta população do que na população geral. O cronograma de rastreio de longo prazo é definido conforme o risco residual: ecocardiograma periódico para monitorar função ventricular e valvar em sobreviventes de exposição cardiotóxica relevante, avaliação específica de doença arterial coronariana em sobreviventes de radioterapia mediastinal (dado o risco acelerado de aterosclerose induzida por radiação, que pode se manifestar anos após o tratamento), e avaliação valvar tardia, já que a doença valvar actínica costuma ser progressiva e assintomática até estágios avançados. A educação do sobrevivente sobre sintomas de alarme tardios — dispneia progressiva, dor torácica, palpitações, síncope, edema de membros inferiores e intolerância ao esforço de início insidioso — é componente central do plano, pois esses sintomas podem surgir muitos anos após o término do tratamento oncológico, quando o paciente já não está mais vinculado ativamente ao serviço de oncologia. Por fim, o plano define com clareza a responsabilidade de cada ator no seguimento compartilhado: a cardiologia conduz a estratificação de risco e o manejo de eventos cardiovasculares estabelecidos, a oncologia mantém o registro das exposições recebidas e sinaliza o risco cardiotóxico associado ao esquema terapêutico utilizado, e a atenção primária assume o controle longitudinal dos fatores de risco tradicionais e a triagem inicial de sintomas novos. Essa divisão explícita busca evitar tanto a perda de seguimento — quando nenhum serviço se responsabiliza pelo rastreio de longo prazo após a alta oncológica — quanto a duplicidade de investigações, quando múltiplos serviços solicitam exames redundantes sem comunicação entre si.",
+      "ambulatory_flow": [
+        "Revisar e registrar de forma estruturada todas as exposições cardiotóxicas prévias recebidas durante o tratamento oncológico",
+        "Classificar o risco cardiovascular residual combinando exposição oncológica prévia e fatores de risco tradicionais",
+        "Solicitar ecocardiograma basal de referência ao final do tratamento oncológico, se ainda não disponível",
+        "Definir periodicidade do ecocardiograma de seguimento conforme a categoria de risco residual",
+        "Avaliar necessidade de investigação de doença arterial coronariana em sobreviventes de radioterapia com campo torácico",
+        "Rastrear doença valvar tardia em sobreviventes de radioterapia mediastinal, mesmo assintomáticos",
+        "Reforçar controle intensivo de pressão arterial, perfil lipídico, glicemia e peso corporal",
+        "Orientar cessação de tabagismo e prática regular de atividade física como prioridade nesta população",
+        "Educar o paciente sobre sintomas de alarme tardios e quando procurar avaliação cardiológica",
+        "Formalizar por escrito a divisão de responsabilidades de seguimento entre cardiologia, oncologia e atenção primária",
+        "Verificar se há duplicidade de exames solicitados por diferentes serviços e consolidar a solicitação",
+        "Agendar retorno de reavaliação conforme o risco cardiovascular residual estabelecido"
+      ],
+      "emergency_flow": [
+        "Dor torácica de início súbito ou em piora progressiva em sobrevivente de exposição cardiotóxica prévia",
+        "Dispneia de início recente ou progressiva, especialmente aos mínimos esforços ou em repouso",
+        "Síncope ou pré-síncope sem causa evidente em sobrevivente com exposição cardiotóxica registrada",
+        "Palpitações associadas a instabilidade hemodinâmica, tontura ou dor torácica",
+        "Edema de início recente associado a dispneia ou ganho de peso rápido, sugerindo descompensação",
+        "Sinais de baixo débito ou congestão de instalação aguda em paciente previamente estável"
+      ],
+      "monitoring": [
+        "Função ventricular avaliada por ecocardiograma em periodicidade definida conforme risco residual",
+        "Estrutura e função valvar em sobreviventes de radioterapia com campo torácico",
+        "Pressão arterial em cada contato assistencial, com meta intensificada nesta população",
+        "Perfil lipídico e controle glicêmico periódicos",
+        "Peso corporal e circunferência abdominal como marcadores de risco metabólico",
+        "Capacidade funcional e tolerância ao exercício relatadas pelo paciente",
+        "Sintomas cardiovasculares novos ou em progressão a cada consulta de seguimento",
+        "Adesão às medidas de controle de fatores de risco tradicionais e ao cronograma de rastreio"
+      ],
+      "assistant_questions": [
+        {
+          "id": "exposicao_antraciclina",
+          "label": "O paciente recebeu antraciclinas durante o tratamento oncológico?",
+          "type": "boolean"
+        },
+        {
+          "id": "exposicao_radioterapia_toracica",
+          "label": "O paciente recebeu radioterapia com campo torácico ou mediastinal?",
+          "type": "boolean"
+        },
+        {
+          "id": "exposicao_terapia_alvo_her2",
+          "label": "O paciente recebeu terapia-alvo com potencial cardiotóxico (ex.: anti-HER2, inibidor de tirosina-quinase)?",
+          "type": "boolean"
+        },
+        {
+          "id": "exposicao_imunoterapia",
+          "label": "O paciente recebeu imunoterapia com inibidor de checkpoint?",
+          "type": "boolean"
+        },
+        {
+          "id": "tempo_desde_termino_tratamento",
+          "label": "Quantos anos se passaram desde o término do tratamento oncológico?",
+          "type": "number"
+        },
+        {
+          "id": "idade_no_tratamento_oncologico",
+          "label": "Qual era a idade do paciente no momento do tratamento oncológico?",
+          "type": "number"
+        },
+        {
+          "id": "disfuncao_ventricular_previa_documentada",
+          "label": "Há disfunção ventricular previamente documentada durante ou após o tratamento oncológico?",
+          "type": "boolean"
+        },
+        {
+          "id": "realizou_ecocardiograma_ultimo_ano",
+          "label": "O paciente realizou ecocardiograma no último ano?",
+          "type": "boolean"
+        },
+        {
+          "id": "fatores_risco_cardiovascular_tradicionais",
+          "label": "Quais fatores de risco cardiovascular tradicionais o paciente apresenta?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "hipertensao",
+              "label": "Hipertensão arterial"
+            },
+            {
+              "value": "diabetes",
+              "label": "Diabetes"
+            },
+            {
+              "value": "dislipidemia",
+              "label": "Dislipidemia"
+            },
+            {
+              "value": "tabagismo",
+              "label": "Tabagismo"
+            },
+            {
+              "value": "obesidade",
+              "label": "Obesidade"
+            },
+            {
+              "value": "sedentarismo",
+              "label": "Sedentarismo"
+            },
+            {
+              "value": "historia_familiar_dcv",
+              "label": "História familiar de doença cardiovascular"
+            },
+            {
+              "value": "nenhum",
+              "label": "Nenhum fator identificado"
+            }
+          ]
+        },
+        {
+          "id": "sintomas_cardiovasculares_atuais",
+          "label": "O paciente apresenta algum destes sintomas cardiovasculares atualmente?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "dispneia_progressiva",
+              "label": "Dispneia progressiva"
+            },
+            {
+              "value": "dor_toracica",
+              "label": "Dor torácica"
+            },
+            {
+              "value": "palpitacoes",
+              "label": "Palpitações"
+            },
+            {
+              "value": "sincope",
+              "label": "Síncope ou pré-síncope"
+            },
+            {
+              "value": "edema_membros_inferiores",
+              "label": "Edema de membros inferiores"
+            },
+            {
+              "value": "intolerancia_ao_esforco",
+              "label": "Intolerância ao esforço de início insidioso"
+            },
+            {
+              "value": "nenhum",
+              "label": "Nenhum sintoma"
+            }
+          ]
+        },
+        {
+          "id": "responsavel_seguimento_definido",
+          "label": "Há um responsável formalmente definido pelo seguimento cardiovascular de longo prazo?",
+          "type": "select",
+          "options": [
+            {
+              "value": "cardiologia",
+              "label": "Cardiologia"
+            },
+            {
+              "value": "oncologia",
+              "label": "Oncologia"
+            },
+            {
+              "value": "atencao_primaria",
+              "label": "Atenção primária"
+            },
+            {
+              "value": "seguimento_compartilhado",
+              "label": "Seguimento compartilhado formalizado"
+            },
+            {
+              "value": "nenhum",
+              "label": "Nenhum responsável definido"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "regra_disfuncao_previa_antraciclina",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_antraciclina",
+                "op": "truthy"
+              },
+              {
+                "field": "disfuncao_ventricular_previa_documentada",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Ecocardiograma de seguimento com avaliação de função ventricular"
+            ],
+            "supporting": [
+              "Disfunção ventricular previamente documentada em sobrevivente exposto a antraciclinas"
+            ]
+          }
+        },
+        {
+          "id": "regra_dor_toracica_emergencia",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "sintomas_cardiovasculares_atuais",
+                "op": "contains",
+                "value": "dor_toracica"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Dor torácica em sobrevivente de exposição cardiotóxica prévia"
+            ],
+            "emergency_flow": [
+              "Encaminhar imediatamente para avaliação cardiológica de urgência"
+            ]
+          }
+        },
+        {
+          "id": "regra_dispneia_progressiva_urgente",
+          "priority": 85,
+          "when": {
+            "any": [
+              {
+                "field": "sintomas_cardiovasculares_atuais",
+                "op": "contains",
+                "value": "dispneia_progressiva"
+              },
+              {
+                "field": "sintomas_cardiovasculares_atuais",
+                "op": "contains",
+                "value": "sincope"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Dispneia progressiva ou síncope em sobrevivente com exposição cardiotóxica registrada"
+            ]
+          }
+        },
+        {
+          "id": "regra_radioterapia_dac",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_radioterapia_toracica",
+                "op": "truthy"
+              },
+              {
+                "field": "tempo_desde_termino_tratamento",
+                "op": "gte",
+                "value": 5
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "suggested_tests": [
+              "Avaliação de doença arterial coronariana em sobrevivente de radioterapia torácica"
+            ],
+            "supporting": [
+              "Exposição prévia a radioterapia com campo torácico há cinco anos ou mais"
+            ]
+          }
+        },
+        {
+          "id": "regra_fator_risco_potencializado",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_antraciclina",
+                "op": "truthy"
+              },
+              {
+                "field": "fatores_risco_cardiovascular_tradicionais",
+                "op": "contains",
+                "value": "hipertensao"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Fator de risco cardiovascular tradicional associado a exposição cardiotóxica prévia, com efeito potencializador sobre o risco residual"
+            ]
+          }
+        },
+        {
+          "id": "regra_ausencia_ecocardiograma_recente",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_antraciclina",
+                "op": "truthy"
+              },
+              {
+                "field": "realizou_ecocardiograma_ultimo_ano",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Ecocardiograma de seguimento não realizado no último ano em sobrevivente exposto a antraciclinas"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma de seguimento"
+            ]
+          }
+        },
+        {
+          "id": "regra_ausencia_responsavel_seguimento",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "responsavel_seguimento_definido",
+                "op": "eq",
+                "value": "nenhum"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Responsável pelo seguimento cardiovascular de longo prazo não definido entre cardiologia, oncologia e atenção primária"
+            ],
+            "messages": [
+              "Formalizar a divisão de responsabilidades de seguimento para evitar perda de seguimento ou duplicidade de investigações"
+            ]
+          }
+        },
+        {
+          "id": "regra_imunoterapia_miocardite_tardia",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_imunoterapia",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "ambulatory_flow": [
+              "Manter vigilância clínica para miocardite tardia associada a imunoterapia, mesmo após término do tratamento"
+            ]
+          }
+        },
+        {
+          "id": "regra_radioterapia_idade_jovem",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_radioterapia_toracica",
+                "op": "truthy"
+              },
+              {
+                "field": "idade_no_tratamento_oncologico",
+                "op": "lt",
+                "value": 30
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Radioterapia torácica realizada em idade jovem, associada a maior tempo de exposição ao risco cardiovascular residual"
+            ]
+          }
+        },
+        {
+          "id": "regra_terapia_alvo_disfuncao",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "exposicao_terapia_alvo_her2",
+                "op": "truthy"
+              },
+              {
+                "field": "disfuncao_ventricular_previa_documentada",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Ecocardiograma de seguimento com avaliação de função ventricular"
+            ],
+            "supporting": [
+              "Disfunção ventricular previamente documentada em sobrevivente exposto a terapia-alvo cardiotóxica"
+            ]
+          }
+        }
+      ],
+      "special_populations": [
+        "Sobrevivente de câncer pediátrico tratado com antraciclina em seguimento até a vida adulta",
+        "Sobrevivente de linfoma de Hodgkin com radioterapia mediastinal prévia (risco de doença arterial coronariana acelerada e valvopatia actínica)",
+        "Sobrevivente de câncer de mama tratada com trastuzumabe e/ou radioterapia torácica esquerda",
+        "Sobrevivente com múltiplas exposições cardiotóxicas combinadas (antraciclina associada a radioterapia associada a terapia-alvo)",
+        "Sobrevivente idoso com fatores de risco cardiovascular tradicionais já presentes antes do câncer",
+        "Sobrevivente sem seguimento cardiológico estruturado nos anos após a alta oncológica"
+      ],
+      "related_document_slugs": [
+        "rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin",
+        "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
+        "cardiotoxicidade-tardia-em-sobreviventes-de-cancer-infantil-scientific-statement-aha-2025",
+        "risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia",
+        "ic-os-mascc-2026-padrao-minimo-de-cuidado-cardiovascular-no-adulto-com-cancer",
+        "doenca-pericardica-induzida-por-radioterapia-pericardite-aguda-e-constricao-tardia"
+      ],
+      "fonte_producao": "claude"
+    }
+  }
+]

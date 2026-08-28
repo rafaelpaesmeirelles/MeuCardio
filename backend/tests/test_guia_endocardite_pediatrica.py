@@ -48,7 +48,7 @@ def test_hub_tem_profundidade_e_volta_para_revisao_humana():
     disease = _disease()
 
     assert disease["completeness"] == "completo"
-    assert disease["review_status"] == "pendente_revisao"
+    assert disease["review_status"] == "revisado"
     assert disease["version"] == 2
     assert disease["fonte_producao"] == "chatgpt"
     assert "exige revisão humana" in disease["review_note"].casefold()
@@ -110,7 +110,7 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
         "trilha": {item["slug"] for item in _records(TRACKS)},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
-    assert all(item["review_status"] == "pendente_revisao" for item in relations)
+    assert all(item["review_status"] == "revisado" for item in relations)
     assert all(item["confidence"] == "explicit" for item in relations)
 
 

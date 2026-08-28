@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "avaliacao-cardiovascular-pre-concepcional",
+    "set": {
+      "name": "Avaliação cardiovascular pré-concepcional",
+      "aliases": [
+        "consulta pré-concepcional cardiológica",
+        "pregnancy heart team"
+      ],
+      "area": "gravidez",
+      "category": "planejamento_reprodutivo",
+      "subtype": "pre_concepcao",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Avaliação de cardiopatia, função ventricular, aorta, pressão pulmonar, arritmias, medicamentos e risco materno-fetal antes da gestação.",
+      "presentation": [
+        "Pode ocorrer em paciente assintomática com cardiopatia conhecida",
+        "História obstétrica e capacidade funcional modificam o planejamento"
+      ],
+      "differentials": [
+        "Sintomas fisiológicos",
+        "Doença cardiovascular não diagnosticada",
+        "Risco obstétrico não cardíaco"
+      ],
+      "tests": [
+        "ECG e ecocardiograma conforme cardiopatia",
+        "Pressão, saturação e função renal",
+        "Imagem da aorta quando indicada",
+        "Revisão de medicamentos e anticoagulação"
+      ],
+      "red_flags": [
+        "Hipertensão pulmonar",
+        "Disfunção ventricular importante",
+        "Aortopatia de alto risco",
+        "Valvopatia grave",
+        "Evento cardíaco recente"
+      ],
+      "ambulatory_flow": [
+        "Definir diagnóstico e estado atual",
+        "Revisar medicamentos antes da concepção",
+        "Classificar necessidade de Pregnancy Heart Team",
+        "Planejar seguimento, parto e pós-parto"
+      ],
+      "emergency_flow": [
+        "Gestação já estabelecida com condição de alto risco requer encaminhamento rápido a equipe especializada"
+      ],
+      "assistant_questions": [
+        {
+          "id": "known_heart_disease",
+          "label": "Há cardiopatia conhecida?",
+          "type": "boolean",
+          "required": true,
+          "section": "História"
+        },
+        {
+          "id": "heart_failure_symptoms",
+          "label": "Há dispneia desproporcional, ortopneia, edema ou síncope?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sintomas"
+        },
+        {
+          "id": "pulmonary_hypertension",
+          "label": "Há hipertensão pulmonar conhecida ou suspeita?",
+          "type": "boolean",
+          "section": "Alto risco"
+        },
+        {
+          "id": "aortopathy",
+          "label": "Há aortopatia, síndrome de Marfan/Loeys-Dietz ou aorta dilatada?",
+          "type": "boolean",
+          "section": "Alto risco"
+        },
+        {
+          "id": "mechanical_valve",
+          "label": "Há prótese valvar mecânica?",
+          "type": "boolean",
+          "section": "Anticoagulação"
+        },
+        {
+          "id": "teratogenic_drugs",
+          "label": "Usa medicamento potencialmente incompatível com gestação?",
+          "type": "boolean",
+          "section": "Medicamentos"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "sintomas",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "heart_failure_symptoms",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sintomas relevantes devem ser esclarecidos antes da gestação"
+            ]
+          }
+        },
+        {
+          "id": "pulmonar",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "pulmonary_hypertension",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Hipertensão pulmonar está associada a risco materno elevado e exige Pregnancy Heart Team"
+            ]
+          }
+        },
+        {
+          "id": "aorta",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "aortopathy",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Imagem atualizada da aorta e aconselhamento especializado"
+            ]
+          }
+        },
+        {
+          "id": "valva",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "mechanical_valve",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Prótese mecânica requer plano individualizado de anticoagulação antes da concepção"
+            ]
+          }
+        },
+        {
+          "id": "farmacos",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "teratogenic_drugs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Não suspender abruptamente; revisar e substituir de forma planejada antes da concepção"
+            ]
+          }
+        },
+        {
+          "id": "cardiopatia",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "known_heart_disease",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "suggested_tests": [
+              "ECG, ecocardiograma e exames dirigidos ao diagnóstico"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "gravidez",
+        "pré-concepção",
+        "risco materno",
+        "medicamentos",
+        "parto"
+      ],
+      "source_refs": [
+        "2025 ESC Guidelines for the Management of Cardiovascular Disease and Pregnancy",
+        "De Backer J, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025 Nov 14;46(43):4462-4568. PMID: 40878294.",
+        "De Backer J, et al. The 'Ten Commandments' for the 2025 ESC Guidelines on Cardiovascular Disease and Pregnancy. Eur Heart J. 2026 Feb 9;47(5):543-545. PMID: 41413672.",
+        "Canobbio MM, et al. Management of Pregnancy in Patients With Complex Congenital Heart Disease: A Scientific Statement for Healthcare Professionals From the American Heart Association. Circulation. 2017 Feb 21;135(8):e50-e87. PMID: 28082385.",
+        "Silversides CK, et al. Pregnancy Outcomes in Women With Heart Disease: The CARPREG II Study. J Am Coll Cardiol. 2018 May 29;71(21):2419-2430. PMID: 29793631.",
+        "Roos-Hesselink JW, et al. Outcome of pregnancy in patients with structural or ischaemic heart disease: results of a registry of the European Society of Cardiology. Eur Heart J. 2013 Mar;34(9):657-65. PMID: 22968232.",
+        "Vanharen Y, et al. A blueprint of an integrated cardio-obstetric preconception care pathway for women with pre-pregnancy intermediate- to high-risk cardiovascular disease. Eur J Obstet Gynecol Reprod Biol. 2026 Aug;324:115213. PMID: 42275940."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/",
+        "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+        "https://pubmed.ncbi.nlm.nih.gov/41413672/",
+        "https://pubmed.ncbi.nlm.nih.gov/28082385/",
+        "https://pubmed.ncbi.nlm.nih.gov/29793631/",
+        "https://pubmed.ncbi.nlm.nih.gov/22968232/",
+        "https://pubmed.ncbi.nlm.nih.gov/42275940/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (32º lote de conteúdo do dia): ficha estava rotulada completeness=completo mas rasa na prática — já tinha presentation/differentials/tests/red_flags/ambulatory_flow/emergency_flow/assistant_questions/assistant_rules preenchidos (preservados sem alteração), mas zero epidemiology, diagnostic_approach, treatment_summary, monitoring, special_populations e related_document_slugs (1 source_ref). Adicionados epidemiology (aumento de mulheres com cardiopatia em idade fértil, doença cardiovascular como principal causa de morbimortalidade materna indireta, lacuna entre recomendação e prática), diagnostic_approach (6 etapas: revisão diagnóstica, classificação de risco mWHO 2.0 citada por nome sem reproduzir critérios por licenciamento, avaliação funcional, revisão de medicamentos, aconselhamento genético, definição de Pregnancy Heart Team), treatment_summary (5 eixos: otimização clínica, revisão medicamentosa sem doses, discussão de risco, aconselhamento contraceptivo, plano de acompanhamento antecipado), monitoring (7), special_populations (8). related_document_slugs adicionado do zero para 3 (3 documentos centrais sobre a diretriz ESC 2025 e o Pregnancy Heart Team, verificados por leitura de trecho com seção dedicada ao aconselhamento pré-concepcional em cada um). Nenhuma dose de fármaco em nenhum campo. Todos os 6 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária. A sigla 'mWHO' aparece apenas citando o nome da classificação de risco vigente (já usada dessa forma no review_note original da ficha, que registra explicitamente não reproduzir os critérios por restrição de licenciamento) — nunca no campo assistant_rules nem special_populations, que são o escopo real do gate de compliance. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "epidemiology": "O número de mulheres com cardiopatia congênita ou adquirida que atingem a idade reprodutiva vem crescendo de forma sustentada, reflexo do avanço no diagnóstico e no tratamento cirúrgico e clínico dessas condições ao longo das últimas décadas. Como consequência, a doença cardiovascular tornou-se uma das principais causas de morbimortalidade materna indireta em países de alta e média renda, superando, em vários registros, as causas obstétricas diretas. Nesse cenário, a avaliação cardiovascular pré-concepcional ganha relevância central: ao identificar o risco antes da concepção, é possível intervir em um momento em que o leque de opções terapêuticas é mais amplo — otimização medicamentosa sem restrição pela teratogenicidade, correção ou paliação cirúrgica eletiva de lesões estruturais, ajuste de dispositivos e planejamento reprodutivo compartilhado —, o que não ocorre da mesma forma após a concepção, quando a janela de manejo se estreita e algumas intervenções deixam de ser viáveis ou seguras. Apesar de diretrizes internacionais, incluindo a diretriz europeia de 2025 sobre doença cardiovascular e gravidez, recomendarem de forma consistente que toda mulher com cardiopatia conhecida receba aconselhamento pré-concepcional estruturado, estudos observacionais e registros mostram uma lacuna persistente entre essa recomendação formal e a prática clínica real: parcela relevante das gestações em cardiopatas ainda ocorre sem avaliação prévia documentada, o que reforça a necessidade de estratégias ativas de identificação e encaminhamento dessas pacientes ainda na fase pré-gestacional.",
+      "diagnostic_approach": "A consulta de avaliação cardiovascular pré-concepcional segue uma sequência estruturada, idealmente conduzida em conjunto por cardiologista com experiência em cardiopatia e gravidez e obstetra, com participação de outros especialistas conforme a complexidade do caso.\n\n1) Revisão diagnóstica completa da cardiopatia de base: confirmação ou atualização do diagnóstico anatômico e funcional (ecocardiograma e, quando indicado, ressonância cardíaca, teste ergométrico ou cardiopulmonar de exercício), revisão de cirurgias e intervenções prévias, histórico de arritmias, insuficiência cardíaca ou eventos tromboembólicos, e status atual de próteses valvares ou dispositivos cardíacos implantados.\n\n2) Classificação de risco: estratificação estruturada do risco de complicações cardiovasculares na gestação utilizando a classificação de risco mWHO 2.0, conforme proposto pela diretriz europeia de 2025 sobre doença cardiovascular e gravidez — sem reprodução dos critérios detalhados de cada categoria nesta ficha, por restrição de licenciamento do material original, remetendo-se ao documento fonte para a aplicação completa do escore.\n\n3) Avaliação funcional: classificação funcional, capacidade de exercício, presença de sinais e sintomas de descompensação em repouso ou esforço, e avaliação de comorbidades que amplificam o risco cardiovascular gestacional (hipertensão, diabetes, doença renal, obesidade).\n\n4) Revisão de medicamentos em uso: identificação de fármacos potencialmente teratogênicos ou com perfil de segurança gestacional desfavorável, com planejamento — ainda na fase pré-concepcional — de possíveis trocas ou ajustes de classe terapêutica, sem detalhamento de doses nesta etapa.\n\n5) Aconselhamento genético: quando a cardiopatia de base tem componente hereditário conhecido ou suspeito (cardiomiopatias, doenças da aorta, síndromes associadas a cardiopatia congênita), encaminhamento para aconselhamento genético especializado, com discussão sobre risco de recorrência na prole e opções de diagnóstico pré-natal ou pré-implantacional.\n\n6) Definição da necessidade de Pregnancy Heart Team: com base na categoria de risco e na complexidade da cardiopatia, definição se o acompanhamento poderá ser feito em nível local ou se há indicação de encaminhamento a centro de referência com Pregnancy Heart Team estruturado, envolvendo cardiologia, obstetrícia de alto risco, anestesiologia obstétrica e, quando aplicável, cirurgia cardíaca.",
+      "treatment_summary": "Não existe, propriamente, um \"tratamento\" da avaliação cardiovascular pré-concepcional — o que se oferece é um processo estruturado de aconselhamento e otimização clínica que antecede a tentativa de concepção, com o objetivo de reduzir o risco materno e fetal antes mesmo de a gestação se iniciar.\n\nO primeiro eixo desse processo é a otimização clínica da cardiopatia de base: sempre que possível, busca-se levar a paciente à melhor condição hemodinâmica e funcional antes da concepção, o que pode incluir tratamento de arritmias, compensação de quadros de insuficiência cardíaca, correção ou intervenção percutânea ou cirúrgica eletiva de lesões estruturais significativas (estenoses valvares importantes, comunicações intracardíacas relevantes, dilatações aórticas acima do limiar de intervenção) e ajuste de dispositivos cardíacos implantáveis — tudo isso realizado em um momento em que as opções terapêuticas ainda não estão limitadas pela gestação em curso.\n\nO segundo eixo é a revisão e o planejamento de ajuste de medicamentos potencialmente teratogênicos ou com perfil de segurança desfavorável na gestação — sem detalhamento de doses nesta ficha —, com transição planejada, sempre que viável, para alternativas terapêuticas com perfil de segurança gestacional mais favorável, evitando tanto a exposição fetal indevida quanto a descompensação materna por suspensão abrupta ou inadequada de medicação essencial.\n\nO terceiro eixo é a discussão aberta e individualizada sobre o risco materno e fetal específico da condição cardíaca em questão, incluindo risco de complicações cardiovasculares maternas, risco de eventos obstétricos e neonatais adversos, impacto potencial da cardiopatia sobre o crescimento fetal e, quando pertinente, risco de recorrência da cardiopatia na criança. Essa discussão fundamenta uma decisão verdadeiramente informada sobre buscar ou não a gestação, e sobre o momento mais adequado para isso.\n\nO quarto eixo é o aconselhamento contraceptivo: enquanto o processo de otimização clínica e ajuste medicamentoso não estiver concluído, ou enquanto a paciente ainda estiver processando as informações recebidas, recomenda-se contracepção eficaz e compatível com a cardiopatia de base, evitando gestação não planejada em um momento de risco ainda não otimizado.\n\nPor fim, o quinto eixo é a definição antecipada do plano de acompanhamento, incluindo o local de pré-natal e de parto mais adequado ao nível de risco identificado (unidade local versus centro de referência com Pregnancy Heart Team), a via de parto quando já houver indicação cardiológica preferencial, a necessidade de monitorização hemodinâmica no periparto, e o planejamento do período pós-parto, fase em que parte relevante das complicações cardiovasculares associadas à gestação efetivamente se manifesta.",
+      "monitoring": [
+        "Reavaliação ecocardiográfica seriada antes da tentativa de concepção, em intervalo definido conforme a gravidade da cardiopatia de base.",
+        "Reclassificação do risco (mWHO 2.0) sempre que houver mudança clínica relevante ou após intervenção terapêutica, antes de liberar a tentativa de concepção.",
+        "Monitorização da resposta clínica após ajuste de medicações potencialmente teratogênicas, incluindo reavaliação de sintomas e de parâmetros funcionais.",
+        "Reavaliação do status de dispositivos cardíacos implantáveis (marca-passo, cardioversor-desfibrilador) e de próteses valvares antes da concepção.",
+        "Acompanhamento conjunto com aconselhamento genético, quando indicado, até a conclusão do processo de esclarecimento sobre risco de recorrência.",
+        "Reforço periódico do aconselhamento contraceptivo até que a otimização pré-concepcional esteja formalmente concluída.",
+        "Confirmação, antes da liberação para tentativa de concepção, de que o plano de acompanhamento multidisciplinar (Pregnancy Heart Team, quando indicado) já está estruturado."
+      ],
+      "special_populations": [
+        "Mulher com cardiopatia congênita reparada e boa capacidade funcional, sem lesões residuais significativas — aconselhamento pré-concepcional de rotina, ainda assim recomendado antes da tentativa de engravidar.",
+        "Mulher com cardiopatia estruturada de alto risco (classe de risco mais elevada na classificação de risco gestacional cardiovascular vigente), incluindo hipertensão pulmonar, disfunção ventricular importante, aortopatia de alto risco ou valvopatia grave — encaminhamento obrigatório ao Pregnancy Heart Team antes da concepção, com discussão explícita sobre risco de morbimortalidade materna e fetal.",
+        "Mulher com prótese valvar mecânica planejando gestação — necessidade de plano individualizado de anticoagulação definido antes da concepção, dado o conflito entre eficácia materna e segurança fetal dos diferentes esquemas.",
+        "Mulher com cardiomiopatia periparto prévia considerando nova gestação — avaliação da recuperação da função ventricular e aconselhamento sobre risco de recorrência antes de nova tentativa de concepção.",
+        "Mulher em uso de medicação cardiovascular potencialmente teratogênica (ex.: inibidores da enzima conversora de angiotensina, antagonistas de receptor de angiotensina) — revisão e substituição planejada antes da concepção, não suspensão abrupta.",
+        "Mulher com cardiopatia hereditária (ex.: síndromes aórticas genéticas, cardiomiopatias familiares, canalopatias) — aconselhamento genético formal antes da concepção, incluindo discussão sobre risco de recorrência na prole.",
+        "Mulher com circulação de Fontan considerando gestação — aconselhamento sobre alto risco de evento adverso materno e fetal, ausência de reserva de ventrículo subpulmonar diante da expansão volêmica da gravidez.",
+        "Mulher sem diagnóstico cardiológico prévio, mas com fatores de risco cardiovascular relevantes (hipertensão, obesidade, diabetes, história familiar) buscando aconselhamento pré-concepcional — triagem inicial para identificar necessidade de avaliação cardiológica dirigida antes da concepção."
+      ],
+      "related_document_slugs": [
+        "doenca-cardiovascular-e-gestacao-esc-2025",
+        "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025",
+        "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025"
+      ],
+      "fonte_producao": "claude"
+    }
+  }
+]

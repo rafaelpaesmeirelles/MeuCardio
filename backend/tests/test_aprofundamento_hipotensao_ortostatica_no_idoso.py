@@ -30,7 +30,7 @@ def _all_document_paths():
  return result
 def test_ficha_continua_existindo_com_mesmo_slug(): assert SLUG in _load_doencas()
 def test_marcacao_editorial_correta_apos_aprofundamento():
- i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="pendente_revisao"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiogeriatria"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
+ i=_load_doencas()[SLUG]; assert i.get("fonte_producao")=="claude"; assert i.get("review_status")=="revisado"; assert i.get("completeness")=="completo"; assert i.get("area")=="cardiogeriatria"; assert i.get("review_note"); assert i.get("source_refs") and len(i["source_refs"])>=5; assert i.get("version")==2
 def test_catalogacao_e_conteudo_previo_preservados():
  i=_load_doencas()[SLUG]; assert i.get("name")=="Hipotensão ortostática no idoso"; assert "queda de pressão ao levantar" in (i.get("aliases") or []); assert i.get("category")=="sindrome_geriatrica"; assert i.get("subtype")=="quedas_e_sincope"; assert i.get("prevalence_rank")==2; assert len(i.get("assistant_questions") or [])>=5; assert len(i.get("assistant_rules") or [])>=5
 def test_profundidade_minima_dos_campos_preenchidos_e_dos_novos():

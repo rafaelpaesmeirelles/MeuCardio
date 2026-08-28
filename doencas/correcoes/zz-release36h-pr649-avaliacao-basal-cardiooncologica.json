@@ -1,0 +1,289 @@
+[
+  {
+    "slug": "avaliacao-basal-cardiooncologica",
+    "set": {
+      "name": "Avaliação cardiovascular basal antes do tratamento oncológico",
+      "aliases": [
+        "baseline cardio-oncology",
+        "risco de cardiotoxicidade"
+      ],
+      "area": "cardiooncologia",
+      "category": "avaliacao_basal",
+      "subtype": "prevencao",
+      "prevalence_rank": 1,
+      "completeness": "completo",
+      "summary": "Avaliação antes da terapia antineoplásica para documentar doença cardiovascular, fatores de risco, ECG, biomarcadores e imagem necessários ao seguimento.",
+      "presentation": [
+        "Pode ocorrer em paciente assintomático",
+        "Risco depende do tratamento, dose, exposição prévia e condição cardiovascular"
+      ],
+      "differentials": [
+        "Doença cardiovascular prévia",
+        "Alteração incidental não relacionada ao câncer",
+        "Toxicidade de tratamento anterior"
+      ],
+      "tests": [
+        "História e exame cardiovascular",
+        "Pressão, ECG e fatores de risco",
+        "Troponina e peptídeos natriuréticos quando aplicáveis",
+        "Ecocardiograma com FEVE e GLS quando indicado"
+      ],
+      "red_flags": [
+        "Insuficiência cardíaca ativa",
+        "Síndrome coronariana",
+        "Arritmia não controlada",
+        "Hipertensão grave",
+        "Troponina elevada sem explicação"
+      ],
+      "ambulatory_flow": [
+        "Identificar terapia planejada e toxicidades esperadas",
+        "Documentar baseline",
+        "Corrigir fatores modificáveis",
+        "Definir cronograma de vigilância com oncologia"
+      ],
+      "emergency_flow": [
+        "Estabilizar doença cardiovascular aguda antes de decisão multidisciplinar sobre o tratamento oncológico"
+      ],
+      "assistant_questions": [
+        {
+          "id": "prior_cvd",
+          "label": "Há doença cardiovascular prévia?",
+          "type": "boolean",
+          "required": true,
+          "section": "História"
+        },
+        {
+          "id": "heart_failure_symptoms",
+          "label": "Há sintomas atuais de insuficiência cardíaca?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "prior_anthracycline_or_radiation",
+          "label": "Houve antraciclina prévia ou radioterapia torácica?",
+          "type": "boolean",
+          "section": "Exposição"
+        },
+        {
+          "id": "planned_therapy",
+          "label": "Terapia planejada",
+          "type": "select",
+          "required": true,
+          "section": "Tratamento",
+          "options": [
+            {
+              "value": "anthracycline",
+              "label": "Antraciclina"
+            },
+            {
+              "value": "anti_her2",
+              "label": "Anti-HER2"
+            },
+            {
+              "value": "vegf",
+              "label": "Inibidor de VEGF"
+            },
+            {
+              "value": "checkpoint",
+              "label": "Inibidor de checkpoint"
+            },
+            {
+              "value": "other",
+              "label": "Outra"
+            }
+          ]
+        },
+        {
+          "id": "abnormal_ecg",
+          "label": "ECG basal está alterado?",
+          "type": "boolean",
+          "section": "Exames"
+        },
+        {
+          "id": "abnormal_biomarkers",
+          "label": "Troponina ou peptídeo natriurético basal está elevado?",
+          "type": "boolean",
+          "section": "Exames"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "ic-ativa",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "heart_failure_symptoms",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sintomas atuais de insuficiência cardíaca exigem avaliação antes do início da terapia"
+            ]
+          }
+        },
+        {
+          "id": "doenca-previa",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "prior_cvd",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Doença cardiovascular prévia aumenta a necessidade de plano individualizado"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma com FEVE/GLS e biomarcadores conforme terapia"
+            ]
+          }
+        },
+        {
+          "id": "exposicao-previa",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "prior_anthracycline_or_radiation",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Exposição cardiotóxica prévia pode aumentar risco cumulativo"
+            ]
+          }
+        },
+        {
+          "id": "checkpoint",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "planned_therapy",
+                "op": "eq",
+                "value": "checkpoint"
+              }
+            ]
+          },
+          "add": {
+            "suggested_tests": [
+              "ECG e biomarcadores basais; orientar sintomas de miocardite e arritmia"
+            ]
+          }
+        },
+        {
+          "id": "vegf",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "planned_therapy",
+                "op": "eq",
+                "value": "vegf"
+              }
+            ]
+          },
+          "add": {
+            "suggested_tests": [
+              "Pressão basal e plano de monitorização frequente"
+            ]
+          }
+        },
+        {
+          "id": "alteracoes-basais",
+          "priority": 80,
+          "when": {
+            "any": [
+              {
+                "field": "abnormal_ecg",
+                "op": "truthy"
+              },
+              {
+                "field": "abnormal_biomarkers",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Alterações basais precisam ser interpretadas antes de atribuir mudanças futuras à terapia"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "câncer",
+        "cardiotoxicidade",
+        "FEVE",
+        "GLS",
+        "troponina"
+      ],
+      "source_refs": [
+        "2022 ESC Guidelines on Cardio-Oncology",
+        "Lyon AR, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. PMID: 36017568.",
+        "Armenian SH, et al. Prevention and Monitoring of Cardiac Dysfunction in Survivors of Adult Cancers: American Society of Clinical Oncology Clinical Practice Guideline. J Clin Oncol. 2017;35(8):893-911. PMID: 27918725.",
+        "Lyon AR, et al. Baseline cardiovascular risk assessment in cancer patients scheduled to receive cardiotoxic cancer therapies: a position statement and new risk assessment tools from the Cardio-Oncology Study Group of the Heart Failure Association, in collaboration with the International Cardio-Oncology Society. Eur J Heart Fail. 2020;22(11):1945-1960. PMID: 32463967.",
+        "Herrmann J. Adverse cardiac effects of cancer therapies: cardiotoxicity and arrhythmia. Nat Rev Cardiol. 2020;17(8):474-502. PMID: 32231332.",
+        "Pudil R, et al. Role of serum biomarkers in cancer patients receiving cardiotoxic cancer therapies: a position statement from the Cardio-Oncology Study Group of the Heart Failure Association and the Cardio-Oncology Council of the European Society of Cardiology. Eur J Heart Fail. 2020;22(11):1966-1983. PMID: 33006257.",
+        "Plana JC, et al. Expert consensus for multimodality imaging evaluation of adult patients during and after cancer therapy: a report from the American Society of Echocardiography and the European Association of Cardiovascular Imaging. J Am Soc Echocardiogr. 2014;27(9):911-939. PMID: 25172399.",
+        "Thavendiranathan P, et al. Strain-Guided Management of Potentially Cardiotoxic Cancer Therapy. J Am Coll Cardiol. 2021;77(4):392-401. PMID: 33220426."
+      ],
+      "source_urls": [
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017568/",
+        "https://pubmed.ncbi.nlm.nih.gov/27918725/",
+        "https://pubmed.ncbi.nlm.nih.gov/32463967/",
+        "https://pubmed.ncbi.nlm.nih.gov/32231332/",
+        "https://pubmed.ncbi.nlm.nih.gov/33006257/",
+        "https://pubmed.ncbi.nlm.nih.gov/25172399/",
+        "https://pubmed.ncbi.nlm.nih.gov/33220426/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (33º lote de conteúdo do dia): ficha estava rotulada completeness=completo mas rasa na prática — já tinha presentation/differentials/tests/red_flags/ambulatory_flow/emergency_flow/assistant_questions/assistant_rules preenchidos (preservados sem alteração), mas zero epidemiology, diagnostic_approach, treatment_summary, monitoring, special_populations e related_document_slugs (1 source_ref). Adicionados epidemiology (crescimento de sobreviventes de câncer com risco cardiovascular tardio, ferramenta HFA-ICOS citada uma única vez pelo nome, lacuna entre recomendação e prática), diagnostic_approach (história dirigida, exame físico, ECG, biomarcadores, ecocardiograma com FEVE e GLS, estratificação formal de risco), treatment_summary (estratificação orienta vigilância proporcional ao risco, sem detalhamento de doses, comunicação estruturada com oncologia, proporcionalidade para não atrasar o tratamento oncológico desnecessariamente), monitoring (7), special_populations (7). related_document_slugs adicionado do zero para 5 (5 documentos centrais verificados por leitura de trecho: padrão IC-OS/MASCC 2026, ferramenta HFA-ICOS, cardioproteção guiada por NT-proBNP, diretriz geral de cardio-oncologia, cardiotoxicidade de antraciclina/trastuzumabe no idoso). Nenhuma dose de fármaco em nenhum campo. Todos os 7 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária. A sigla 'HFA-ICOS' aparece apenas uma vez em epidemiology, citando o nome da ferramenta de estratificação (não em assistant_rules nem special_populations, escopo real do gate de compliance). Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 2,
+      "epidemiology": "O número de sobreviventes de câncer vem crescendo de forma constante graças aos avanços terapêuticos das últimas décadas, e essa população carrega risco cardiovascular tardio que, em alguns subgrupos, chega a superar o risco de recidiva oncológica, especialmente após exposição a antraciclínicos, radioterapia torácica, terapias-alvo anti-HER2 e inibidores de tirosina-quinase. Diante desse cenário, sociedades cardiológicas e oncológicas passaram a recomendar avaliação cardiovascular basal sistemática antes do início de qualquer terapia potencialmente cardiotóxica, empregando ferramentas de estratificação como o escore da Heart Failure Association em colaboração com a International Cardio-Oncology Society (HFA-ICOS), que classifica os pacientes em categorias de risco baixo, moderado, alto ou muito alto. Apesar dessa recomendação, estudos observacionais mostram que uma proporção substancial dos pacientes inicia quimioterapia cardiotóxica sem avaliação cardiológica prévia estruturada, seja por fragmentação assistencial, seja pela pressão para não retardar o início do tratamento oncológico. Essa lacuna é particularmente relevante porque a identificação precoce do risco, antes da primeira exposição ao agente cardiotóxico, é o momento em que as opções preventivas são mais amplas, permitindo otimizar comorbidades, ajustar a estratégia de vigilância e, em casos selecionados, discutir com a oncologia alternativas terapêuticas menos cardiotóxicas.",
+      "diagnostic_approach": "A avaliação basal segue uma sequência estruturada. História clínica dirigida: investigar cardiopatia prévia (doença arterial coronariana, insuficiência cardíaca, arritmias, valvopatia), hipertensão, diabetes, dislipidemia, tabagismo, exposição prévia a antraciclínicos ou radioterapia torácica, história familiar de cardiomiopatia e capacidade funcional. Exame físico: aferição de pressão arterial, frequência cardíaca, sinais de congestão (estase jugular, edema, terceira bulha, estertores pulmonares) e sopros. Eletrocardiograma de 12 derivações: recomendado em todos os pacientes antes da terapia cardiotóxica, avaliando intervalo QTc, arritmias basais, distúrbios de condução e sinais de isquemia prévia, servindo também como referência para comparações futuras. Biomarcadores: dosagem de troponina de alta sensibilidade e peptídeos natriuréticos (BNP ou NT-proBNP) quando o perfil de risco justifica, funcionando como valores basais para comparação seriada durante o tratamento e como elemento adicional de estratificação, especialmente em pacientes com fatores de risco cardiovascular associados. Ecocardiograma transtorácico: exame central da avaliação, com medida da fração de ejeção do ventrículo esquerdo (FEVE) por método volumétrico e do strain longitudinal global (GLS), este último indicado quando o perfil de risco é moderado a muito alto ou há suspeita de disfunção subclínica, por sua maior sensibilidade para detectar alterações precoces da função miocárdica antes da queda da FEVE. Estratificação formal de risco: integração de todos os dados em uma classificação de risco basal antes do início da terapia, definindo a intensidade e a periodicidade da vigilância cardíaca ao longo do tratamento oncológico.",
+      "treatment_summary": "A avaliação cardiovascular basal não constitui tratamento de uma doença cardiovascular estabelecida, mas sim um processo de estratificação de risco que orienta decisões preventivas antes do início da terapia oncológica potencialmente cardiotóxica. Quando a avaliação identifica fatores de risco cardiovascular modificáveis, como hipertensão não controlada, dislipidemia, tabagismo ativo, diabetes descompensado ou sobrepeso, a conduta prioritária é a correção desses fatores antes ou concomitantemente ao início do tratamento oncológico, sem que isso implique detalhamento de esquemas farmacológicos específicos nesta etapa, mas sim o encaminhamento oportuno ao cardiologista ou ao clínico responsável para ajuste terapêutico. Com base na categoria de risco identificada, baixo, moderado, alto ou muito alto, define-se uma estratégia de vigilância cardíaca proporcional durante toda a duração da terapia oncológica, especificando a periodicidade de reavaliação clínica, eletrocardiográfica, laboratorial e ecocardiográfica: pacientes de risco baixo podem necessitar apenas de reavaliação pontual, enquanto pacientes de risco alto ou muito alto costumam requerer monitorização mais frequente e estruturada ao longo de todos os ciclos de tratamento. Um elemento central desse processo é a comunicação estruturada entre cardiologia e oncologia: o resultado da avaliação basal deve ser registrado de forma clara e objetiva, com a categoria de risco explicitada e um plano de vigilância documentado, permitindo que a equipe oncológica tenha visibilidade sobre o perfil cardiovascular do paciente ao longo de todo o tratamento e reconheça sinais de alarme que justifiquem reavaliação cardiológica antecipada. Por fim, é essencial reconhecer que a avaliação cardiovascular basal não deve se tornar uma barreira desproporcional ao início do tratamento oncológico: em pacientes de baixo risco, uma avaliação simplificada e ágil costuma ser suficiente, e o intervalo entre a indicação oncológica e o início efetivo da terapia deve ser preservado sempre que o risco cardiovascular basal não represente contraindicação real. Atrasos injustificados por excesso de investigação cardiológica podem comprometer o prognóstico oncológico sem trazer benefício cardiovascular proporcional, de modo que a proporcionalidade entre o risco identificado e a intensidade da investigação é um princípio orientador de todo o processo de avaliação basal.",
+      "monitoring": [
+        "Reavaliação do risco cardiovascular basal sempre que houver mudança no esquema oncológico planejado, como troca de agente ou associação de nova classe de fármaco cardiotóxico.",
+        "Definição documentada da periodicidade de reavaliação clínica, eletrocardiográfica e ecocardiográfica ao longo do tratamento, proporcional à categoria de risco basal identificada.",
+        "Repetição de biomarcadores (troponina de alta sensibilidade, peptídeos natriuréticos) em pontos pré-definidos do tratamento, nos pacientes em que a dosagem basal foi indicada.",
+        "Reavaliação ecocardiográfica com fração de ejeção do ventrículo esquerdo e strain longitudinal global em intervalos estabelecidos conforme o risco, com comparação sistemática ao exame basal.",
+        "Registro estruturado e comunicação formal do resultado da avaliação basal e do plano de vigilância à equipe de oncologia responsável pelo tratamento.",
+        "Reavaliação clínica dirigida a sinais e sintomas cardiovasculares novos, como dispneia, edema, palpitações ou dor torácica, a cada consulta durante o tratamento oncológico.",
+        "Acompanhamento e atualização do controle dos fatores de risco cardiovascular modificáveis identificados na avaliação basal ao longo de todo o seguimento oncológico."
+      ],
+      "special_populations": [
+        "Paciente com fatores de risco cardiovascular pré-existentes (hipertensão, diabetes, dislipidemia, tabagismo ou obesidade) iniciando terapia oncológica de alto potencial cardiotóxico: a avaliação basal deve documentar e otimizar ativamente esses fatores antes do primeiro ciclo, já que eles elevam a categoria de risco pré-tratamento e justificam vigilância cardiológica mais próxima ao longo de toda a terapia, sem que isso implique adiar ou negar o tratamento oncológico.",
+        "Paciente com cardiopatia estrutural prévia (disfunção ventricular conhecida, valvopatia significativa, cardiomiopatia ou doença arterial coronariana estabelecida) considerando início de tratamento oncológico: exige avaliação cardiológica dedicada antes da primeira aplicação, com discussão multidisciplinar entre oncologista e cardiologista sobre a real necessidade da terapia planejada, alternativas de menor risco cardiovascular quando existentes, e definição do intervalo de reavaliação de função cardíaca durante o tratamento.",
+        "Paciente idoso com múltiplas comorbidades avaliado antes de quimioterapia: a idade avançada, especialmente acima de 80 anos, associa-se a maior incidência de insuficiência cardíaca quando somada a doença coronariana prévia ou hipertensão, de modo que a decisão de tratar exige avaliação cardiovascular basal explícita e vigilância proporcional ao risco, não o mesmo protocolo genérico aplicado a um paciente mais jovem sem comorbidade.",
+        "Paciente pediátrico ou jovem adulto avaliado antes de terapia potencialmente cardiotóxica de longo prazo: além da avaliação basal padrão, o planejamento deve considerar estratégias de cardioproteção específicas para essa faixa etária quando indicadas pelo protocolo oncológico, e estabelecer desde o início um plano de vigilância cardiovascular que se estenda por décadas de sobrevivência, dado o risco tardio documentado em sobreviventes de câncer na infância.",
+        "Paciente que já recebeu tratamento cardiotóxico prévio (por exemplo antraciclina ou terapia anti-HER2 em linha anterior) e agora considera novo tratamento oncológico com potencial cardiotóxico adicional: a avaliação basal deve revisar a dose cumulativa prévia, o comportamento da função ventricular ao longo do tratamento anterior e qualquer disfunção residual, reclassificando o paciente para uma categoria de risco mais alta antes de autorizar a nova terapia.",
+        "Paciente assintomático classificado como alto risco por ferramenta de estratificação de risco basal recomendada por diretriz de cardio-oncologia: mesmo na ausência de sintomas cardiovasculares, essa classificação justifica avaliação basal mais completa (incluindo biomarcadores e imagem cardíaca), comunicação explícita do resultado ao paciente e à equipe assistente, e um cronograma de vigilância mais intensivo durante o tratamento do que o aplicado a pacientes de risco baixo ou médio.",
+        "Paciente com radioterapia torácica ou mediastinal prévia (por exemplo tratamento anterior de linfoma) avaliado antes de novo tratamento oncológico cardiotóxico: a exposição cardíaca prévia à radiação é fator de risco basal independente e cumulativo, que deve ser somado ao risco da terapia sistêmica planejada na definição da categoria de risco e do plano de vigilância, mesmo quando o paciente permanece assintomático décadas após a radioterapia."
+      ],
+      "related_document_slugs": [
+        "ic-os-mascc-2026-padrao-minimo-de-cuidado-cardiovascular-no-adulto-com-cancer",
+        "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+        "cardioprotecao-guiada-ntprobnp-antraciclinas-rct-2025",
+        "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
+        "cardiotoxicidade-de-antraciclina-e-trastuzumabe-no-idoso-dose-idade-e-vigilancia"
+      ],
+      "patient_material_slug": "cardio-oncologia",
+      "fonte_producao": "claude"
+    }
+  }
+]

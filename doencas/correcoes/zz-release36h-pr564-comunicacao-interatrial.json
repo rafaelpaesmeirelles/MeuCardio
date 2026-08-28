@@ -1,0 +1,425 @@
+[
+  {
+    "slug": "comunicacao-interatrial",
+    "set": {
+      "name": "Comunicação interatrial",
+      "aliases": [
+        "CIA",
+        "defeito do septo atrial",
+        "atrial septal defect",
+        "ASD"
+      ],
+      "area": "cardiopediatria",
+      "category": "cardiopatia_congenita",
+      "subtype": "shunt_esquerda_direita",
+      "cyanosis_class": "acianotica",
+      "prevalence_rank": 11,
+      "completeness": "completo",
+      "summary": "Defeito do septo atrial cuja repercussão depende do tipo anatômico (ostium secundum, o mais comum e o único fechado rotineiramente por cateter; ostium primum, seio venoso e seio coronário, tipicamente cirúrgicos), do tamanho do shunt e das lesões associadas. É muito mais tolerada hemodinamicamente do que a comunicação interventricular: a maioria das crianças permanece assintomática por décadas, e o diagnóstico no adulto não operado frequentemente surge por arritmia atrial ou sinal de sobrecarga de câmaras direitas, não por sintoma na infância.",
+      "epidemiology": "A CIA responde por cerca de 9% a 13% de todas as cardiopatias congênitas (Rao PS, Diagnostics 2022, PMID 35741304), sendo o tipo ostium secundum o mais frequente. O ostium primum é uma forma parcial de defeito do septo atrioventricular, associada a fenda de valva mitral. O tipo seio venoso associa-se com frequência a drenagem anômala parcial de veias pulmonares direitas. O tipo seio coronário (coração sem teto do seio coronário) é o mais raro, respondendo por menos de 1% de todas as CIA, e mais da metade dos casos (tipo 1A de Raghib) associa-se a veia cava superior esquerda persistente com ausência de seio coronário (Slingerland A et al., Trends Cardiovasc Med 2025, PMID 40194568). É essencial diferenciar CIA verdadeira de forame oval patente (FOP): o FOP é um remanescente da circulação fetal com mecanismo de válvula, presente em cerca de 24% da população geral em estudos de autópsia (24,2%, IC combinando 7.747 corações) e é achado muito mais comum que qualquer tipo de CIA verdadeira (Koutroulou I et al., Front Neurol 2020, PMID 32411074) — a distinção importa porque o FOP isolado não causa sobrecarga crônica de câmaras direitas nem costuma indicar fechamento pelos mesmos critérios hemodinâmicos da CIA.",
+      "presentation": [
+        "Frequentemente assintomática na infância, com achado incidental de sopro em consulta de rotina",
+        "Sopro sistólico ejetivo em foco pulmonar com desdobramento fixo de segunda bulha ao exame",
+        "Dispneia aos esforços, sudorese ou infecção respiratória de repetição, mais raras que na comunicação interventricular e mais associadas a defeito maior",
+        "Intolerância progressiva ao esforço na adolescência ou vida adulta, à medida que o shunt acumula repercussão",
+        "No adulto não diagnosticado previamente, pode se manifestar primeiro como arritmia atrial (fibrilação ou flutter atrial) sem sintoma cardíaco prévio conhecido",
+        "Sinal de sobrecarga ou insuficiência de câmaras direitas no adulto de diagnóstico tardio",
+        "Raramente, evento embólico sistêmico (AVC, isquemia de membro) como manifestação inicial de shunt significativo com embolia paradoxal"
+      ],
+      "differentials": [
+        "Forame oval patente (mecanismo de válvula, sem sobrecarga crônica de câmaras direitas, achado em cerca de um quarto da população geral)",
+        "Outro shunt esquerda-direita: comunicação interventricular ou persistência do canal arterial",
+        "Sopro inocente da infância",
+        "Drenagem venosa pulmonar anômala parcial sem defeito septal associado",
+        "Outra causa de dilatação de câmaras direitas: hipertensão pulmonar de outra etiologia, insuficiência tricúspide primária",
+        "Defeito do septo atrioventricular (quando o achado é CIA tipo ostium primum, deve-se investigar valva atrioventricular associada)"
+      ],
+      "tests": [
+        "Ecocardiograma transtorácico para definir tipo anatômico, tamanho, direção do shunt e repercussão de câmaras direitas",
+        "Ecocardiograma transesofágico ou tridimensional quando se planeja fechamento percutâneo, obrigatório para caracterizar tipo seio venoso",
+        "Eletrocardiograma para padrão de sobrecarga de câmaras direitas e rastreio de arritmia atrial, sobretudo no adulto",
+        "Ressonância cardíaca para quantificar Qp:Qs, avaliar volume de ventrículo direito e caracterizar seio venoso ou drenagem anômala associada",
+        "Cateterismo cardíaco direito para medida invasiva da resistência vascular pulmonar em unidades Wood, obrigatório quando há sinal não invasivo de pressão pulmonar elevada",
+        "Teste de esforço com oximetria para rastrear dessaturação ao esforço antes de decisão de fechamento",
+        "Tomografia cardíaca como alternativa de imagem anatômica, particularmente útil na drenagem venosa pulmonar anômala associada"
+      ],
+      "red_flags": [
+        "Sinal de hipertensão pulmonar avançada ou fisiologia de Eisenmenger",
+        "Dessaturação ao esforço documentada, contraindicação ao fechamento na diretriz atual",
+        "Arritmia atrial sustentada (fibrilação ou flutter) em paciente com CIA não corrigida",
+        "Sinal de insuficiência cardíaca direita",
+        "Evento embólico paradoxal sugestivo de shunt significativo: déficit neurológico focal agudo, isquemia de membro ou dor torácica isquêmica",
+        "Cianose ou baqueteamento digital, sugerindo Eisenmenger já estabelecido"
+      ],
+      "ambulatory_flow": [
+        "Definir tipo anatômico e repercussão hemodinâmica por ecocardiograma, complementado por ressonância quando necessário",
+        "Aplicar critérios de fechamento: Qp:Qs, sobrecarga de câmaras direitas e sintomas, decidindo entre dispositivo por cateter (primeira escolha no ostium secundum com bordas adequadas) e cirurgia (obrigatória nos demais tipos anatômicos ou anatomia desfavorável)",
+        "Acompanhar crescimento e desenvolvimento de criança com defeito pequeno sem indicação imediata de fechamento, com ecocardiogramas seriados",
+        "Rastrear hipertensão pulmonar e arritmia atrial no seguimento de adulto não operado ou de diagnóstico tardio",
+        "Esclarecer que a maioria dos casos de CIA isolada, reparada ou não, sem defeito residual, não tem indicação de profilaxia antibiótica de endocardite conforme diretriz atual",
+        "Encaminhar para centro especializado em cardiopatia congênita do adulto na transição da cardiologia pediátrica"
+      ],
+      "emergency_flow": [
+        "Avaliar descompensação de insuficiência cardíaca direita ou arritmia atrial aguda conforme protocolo específico",
+        "Considerar shunt interatrial significativo (CIA ou FOP) como causa de embolia paradoxal em paciente com déficit neurológico focal agudo, isquemia de membro ou infarto sem outra etiologia identificada, e acionar avaliação urgente com ecocardiograma transesofágico",
+        "Investigar hipertensão pulmonar grave e dessaturação ao esforço antes de qualquer procedimento eletivo de fechamento",
+        "Não atrasar estabilização do paciente instável para caracterização anatômica completa; contatar centro de cardiopatia congênita do adulto sem atraso"
+      ],
+      "treatment_summary": "O tratamento da CIA depende do tipo anatômico, da repercussão hemodinâmica e da resistência vascular pulmonar. A diretriz ESC 2020 organiza a decisão em torno da sobrecarga de volume de câmaras direitas e do Qp:Qs acima de 1,5: com resistência vascular pulmonar abaixo de 3 unidades Wood, o fechamento é recomendado independentemente de sintomas (Classe I); entre 3 e menos de 5 unidades Wood, deve ser considerado (Classe IIa); a partir de 5 unidades Wood que persiste apesar de tratamento dirigido, fisiologia de Eisenmenger estabelecida ou dessaturação ao esforço, o fechamento é contraindicado (Classe III) — fechar nesse cenário pode ser perigoso, pois o defeito funciona como válvula de escape que protege o coração esquerdo. Sinal não invasivo de pressão pulmonar elevada exige medida invasiva da resistência antes de qualquer decisão. Quando indicado, o fechamento por dispositivo via cateter é o método de escolha para CIA tipo ostium secundum com bordas (rimas) tecidualmente adequadas — rima inferior a 4 mm é geralmente considerada desfavorável, embora o limite não seja absoluto; defeito menor que 15 mm, relação defeito/comprimento do septo atrial menor que 0,35 e rima superior maior que 0,75 do tamanho do defeito favorecem o sucesso do implante. O dispositivo não deve ultrapassar 1,5 vez o diâmetro do defeito, para reduzir risco de erosão. Os demais tipos anatômicos — ostium primum, seio venoso e seio coronário — não são tratados por dispositivo e exigem fechamento cirúrgico; o mesmo vale para ostium secundum com anatomia desfavorável (rima póstero-inferior ausente, defeitos múltiplos ou muito grandes). Após o fechamento, seguimento de longo prazo é indicado pelo risco de arritmia atrial nova (mais elevado após correção cirúrgica de seio venoso, com risco relativo relatado de cerca de 4,9 vezes, e de disfunção do nó sinusal, bloqueio atrioventricular ou necessidade de marca-passo, com risco relativo de cerca de 11,3, em coorte nacional finlandesa de 182 pacientes operados) e por eventos raros como erosão de dispositivo. A profilaxia antibiótica de endocardite não é recomendada rotineiramente para CIA isolada, reparada ou não, sem defeito residual — indicação diferente da usada há décadas atrás; ela se aplica apenas quando há material protético não endotelizado (primeiros 6 meses após dispositivo ou patch) ou defeito residual persistente junto ao sítio do reparo.",
+      "monitoring": [
+        "Ecocardiogramas seriados para acompanhar tamanho do defeito e das câmaras direitas em criança com CIA pequena não fechada, com intervalo individualizado conforme tamanho inicial e idade gestacional ao nascimento",
+        "Vigilância pós-fechamento por dispositivo para shunt residual e, mais raramente, erosão do dispositivo, sobretudo quando houve sobredimensionamento",
+        "Eletrocardiograma e Holter para rastrear arritmia atrial nova, disfunção do nó sinusal ou bloqueio atrioventricular, particularmente após correção cirúrgica de defeito tipo seio venoso",
+        "Reavaliação periódica da pressão pulmonar em adulto operado tardiamente ou com resistência vascular pulmonar limítrofe antes do fechamento",
+        "Acompanhamento de crescimento e desenvolvimento em criança com defeito ainda sem indicação de fechamento"
+      ],
+      "special_populations": [
+        "Recém-nascido pré-termo: taxa de fechamento espontâneo mais baixa e necessidade de intervenção maior do que em recém-nascido a termo com defeito de tamanho equivalente, exigindo vigilância ecocardiográfica mais próxima",
+        "Síndrome de Down: quando a CIA se apresenta como ostium primum no contexto de defeito do septo atrioventricular, há risco aumentado e mais precoce de doença vascular pulmonar, o que antecipa a janela de indicação cirúrgica",
+        "Gestação: a tolerância à gestação depende da ausência de hipertensão pulmonar; hipertensão pulmonar pré-capilar confirmada é contraindicação reconhecida à gravidez em cardiopatia congênita",
+        "Adulto de diagnóstico tardio (inclusive idoso): candidato a fechamento por dispositivo quando anatomia favorável mesmo em idade avançada; quando não candidato a dispositivo, o risco cirúrgico deve ser ponderado individualmente contra o benefício",
+        "Síndrome de Turner: rastreamento de drenagem venosa pulmonar anômala parcial associada é relevante nessa população, dada maior prevalência descrita"
+      ],
+      "diagnostic_approach": {
+        "classificacao_anatomica": [
+          "Ostium secundum: o tipo mais comum, na região da fossa oval; único com fechamento espontâneo relevante e o único tratado rotineiramente por dispositivo via cateter",
+          "Ostium primum: forma parcial de defeito do septo atrioventricular, associada a fenda de valva mitral; sempre cirúrgico",
+          "Seio venoso (superior, mais comum, ou inferior): frequentemente associado a drenagem anômala parcial de veias pulmonares direitas; diagnóstico costuma exigir ecocardiograma transesofágico, ressonância ou tomografia; sempre cirúrgico",
+          "Seio coronário (coração sem teto do seio coronário): o mais raro, menos de 1% das CIA; associado com frequência a veia cava superior esquerda persistente; predominantemente cirúrgico, com papel emergente e ainda pequeno para fechamento por dispositivo em casos selecionados"
+        ],
+        "avaliacao_da_repercussao": [
+          "Sobrecarga de volume de câmaras direitas ao ecocardiograma (dilatação de átrio e ventrículo direitos, movimento septal paradoxal ou retificado) é o achado central que orienta a indicação de fechamento",
+          "Qp:Qs acima de 1,5 é o corte usado nas tabelas de recomendação de intervenção",
+          "Sinal não invasivo de pressão pulmonar elevada (PAP sistólica calculada acima de 40 mmHg ou sinais indiretos) obriga medida invasiva da resistência vascular pulmonar antes de decidir fechar"
+        ],
+        "diferenciacao_de_fop": "Forame oval patente é achado normal, presente em cerca de um quarto da população geral em estudos de autópsia, com mecanismo de válvula que não gera shunt crônico obrigatório nem sobrecarga estrutural das câmaras direitas — diferente da CIA verdadeira, que é um defeito estrutural fixo do septo. A confusão entre os dois leva a aplicar critérios de fechamento e risco de embolia paradoxal de forma incorreta.",
+        "limite": "A caracterização anatômica completa por imagem (ecocardiograma transtorácico, transesofágico e, quando necessário, ressonância ou tomografia) é indispensável antes de qualquer decisão de fechamento; a classificação por tipo anatômico isolada não substitui a avaliação hemodinâmica invasiva quando há sinal de hipertensão pulmonar."
+      },
+      "assistant_questions": [
+        {
+          "id": "tipo_anatomico",
+          "label": "Qual é o tipo anatômico da CIA?",
+          "type": "select",
+          "required": true,
+          "section": "Anatomia",
+          "options": [
+            {
+              "value": "ostium_secundum",
+              "label": "Ostium secundum"
+            },
+            {
+              "value": "ostium_primum",
+              "label": "Ostium primum"
+            },
+            {
+              "value": "seio_venoso",
+              "label": "Seio venoso"
+            },
+            {
+              "value": "seio_coronario",
+              "label": "Seio coronário"
+            },
+            {
+              "value": "nao_definido",
+              "label": "Ainda não definido"
+            }
+          ]
+        },
+        {
+          "id": "sobrecarga_direita",
+          "label": "Há sobrecarga de volume de átrio direito e/ou ventrículo direito ao ecocardiograma?",
+          "type": "boolean",
+          "required": true,
+          "section": "Repercussão"
+        },
+        {
+          "id": "sinal_hp_nao_invasivo",
+          "label": "Há sinal não invasivo de pressão pulmonar elevada (PAP sistólica estimada acima de 40 mmHg ou sinais indiretos)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Hemodinâmica"
+        },
+        {
+          "id": "dessaturacao_esforco",
+          "label": "Há dessaturação ao esforço documentada em teste cardiopulmonar ou oximetria de esforço?",
+          "type": "boolean",
+          "section": "Hemodinâmica"
+        },
+        {
+          "id": "arritmia_atrial",
+          "label": "Há arritmia atrial nova ou sustentada (fibrilação ou flutter atrial)?",
+          "type": "boolean",
+          "section": "Clínica"
+        },
+        {
+          "id": "evento_embolico_agudo",
+          "label": "Há déficit neurológico focal agudo, dor torácica de origem isquêmica ou isquemia aguda de membro sugerindo evento embólico sistêmico?",
+          "type": "boolean",
+          "required": true,
+          "section": "Emergência"
+        },
+        {
+          "id": "faixa_etaria",
+          "label": "Faixa etária do paciente",
+          "type": "select",
+          "section": "Contexto",
+          "options": [
+            {
+              "value": "neonato_pretermo",
+              "label": "Recém-nascido pré-termo"
+            },
+            {
+              "value": "neonato_termo",
+              "label": "Recém-nascido a termo"
+            },
+            {
+              "value": "lactente_crianca",
+              "label": "Lactente ou criança"
+            },
+            {
+              "value": "adolescente_adulto",
+              "label": "Adolescente ou adulto"
+            }
+          ]
+        },
+        {
+          "id": "gestante_ou_planejando",
+          "label": "A paciente está grávida ou planejando engravidar?",
+          "type": "boolean",
+          "section": "Contexto"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "embolia-paradoxal-evento-agudo",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "evento_embolico_agudo",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Possível embolia paradoxal com déficit neurológico focal, isquemia de membro ou dor torácica isquêmica aguda em paciente com CIA ou forame oval patente"
+            ],
+            "emergency_flow": [
+              "Encaminhar imediatamente para avaliação de emergência; investigar fonte embólica sistêmica e considerar ecocardiograma transesofágico urgente para confirmar shunt e trombo em trânsito"
+            ]
+          }
+        },
+        {
+          "id": "sinal-hp-nao-invasivo",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "sinal_hp_nao_invasivo",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Sinal não invasivo de pressão pulmonar elevada exige confirmação invasiva antes de qualquer decisão de fechamento"
+            ],
+            "suggested_tests": [
+              "Cateterismo cardíaco direito para medida invasiva da resistência vascular pulmonar em unidades Wood"
+            ]
+          }
+        },
+        {
+          "id": "dessaturacao-esforco-contraindicacao",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "dessaturacao_esforco",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Dessaturação ao esforço documentada é sinal de alerta para contraindicação ao fechamento sem avaliação hemodinâmica invasiva completa"
+            ],
+            "missing_information": [
+              "Resultado de cateterismo cardíaco direito com resistência vascular pulmonar"
+            ]
+          }
+        },
+        {
+          "id": "sobrecarga-direita-indicacao-fechamento",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "sobrecarga_direita",
+                "op": "truthy"
+              },
+              {
+                "field": "sinal_hp_nao_invasivo",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Sobrecarga de câmaras direitas, sem sinal de hipertensão pulmonar, é critério de indicação de fechamento independentemente de sintomas"
+            ],
+            "ambulatory_flow": [
+              "Encaminhar para avaliação especializada da via de fechamento (dispositivo ou cirurgia) conforme tipo anatômico e anatomia das bordas"
+            ]
+          }
+        },
+        {
+          "id": "arritmia-atrial-rastreio",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "arritmia_atrial",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "red_flags": [
+              "Arritmia atrial pode ser a primeira manifestação de CIA não diagnosticada previamente no adulto"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma para rastrear CIA e sobrecarga de câmaras direitas em contexto de arritmia atrial nova"
+            ]
+          }
+        },
+        {
+          "id": "gestante-avaliar-hp",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "gestante_ou_planejando",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Gravidez em cardiopatia congênita exige avaliação de hipertensão pulmonar antes de qualquer orientação; hipertensão pulmonar pré-capilar confirmada é contraindicação reconhecida à gestação"
+            ],
+            "missing_information": [
+              "Confirmação da ausência de hipertensão pulmonar antes de orientar risco gestacional"
+            ]
+          }
+        },
+        {
+          "id": "tipo-anatomico-nao-secundum",
+          "priority": 50,
+          "when": {
+            "any": [
+              {
+                "field": "tipo_anatomico",
+                "op": "in",
+                "value": [
+                  "ostium_primum",
+                  "seio_venoso",
+                  "seio_coronario"
+                ]
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Tipo anatômico diferente do ostium secundum geralmente exige fechamento cirúrgico, não por dispositivo via cateter"
+            ],
+            "ambulatory_flow": [
+              "Encaminhar para avaliação cirúrgica em centro especializado em cardiopatia congênita"
+            ]
+          }
+        },
+        {
+          "id": "pretermo-vigilancia-proxima",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "faixa_etaria",
+                "op": "eq",
+                "value": "neonato_pretermo"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Recém-nascido pré-termo tem taxa de fechamento espontâneo mais baixa e maior necessidade de intervenção do que o a termo, mesmo com defeito de tamanho equivalente"
+            ],
+            "ambulatory_flow": [
+              "Programar vigilância ecocardiográfica mais próxima do que a de recém-nascido a termo com defeito de tamanho semelhante"
+            ]
+          }
+        }
+      ],
+      "tags": [
+        "CIA",
+        "septo atrial",
+        "congênita",
+        "ostium secundum",
+        "seio venoso",
+        "forame oval patente",
+        "embolia paradoxal",
+        "fechamento percutâneo"
+      ],
+      "source_refs": [
+        "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+        "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2019;73(12):e81-e192. PMID: 30121240.",
+        "Rao PS. Role of Echocardiography in the Diagnosis and Interventional Management of Atrial Septal Defects. Diagnostics (Basel). 2022;12(6):1494. DOI: 10.3390/diagnostics12061494. PMID: 35741304. PMCID: PMC9222141.",
+        "Heidari N, Kumaran K, Pagano JJ, Hornberger LK. Natural History of Secundum ASD in Preterm and Term Neonates: A Comparative Study. Pediatr Cardiol. 2024;45(4):710-721. DOI: 10.1007/s00246-023-03403-7. PMID: 38366300.",
+        "Azhari N, Shihata MS, Al-Fatani A. Spontaneous closure of atrial septal defects within the oval fossa. Cardiol Young. 2004;14(2):148-155. DOI: 10.1017/S1047951104002069. PMID: 15691403.",
+        "Alnasser S, Lee D, Austin PC, et al. Long term outcomes among adults post transcatheter atrial septal defect closure: Systematic review and meta-analysis. Int J Cardiol. 2018;270:126-132. DOI: 10.1016/j.ijcard.2018.06.076. PMID: 30054146.",
+        "Muroke V, Jalanko M, Haukka J, et al. Outcome of transcatheter atrial septal defect closure in a nationwide cohort. Ann Med. 2023;55(1):615-623. DOI: 10.1080/07853890.2023.2178669. PMID: 36786506.",
+        "Muroke V, Jalanko M, Haukka J, et al. Long-term outcome after surgical correction of sinus venosus defect in a nationwide register-based cohort study. Int J Cardiol. 2024;395:131433. DOI: 10.1016/j.ijcard.2023.131433. PMID: 37827284.",
+        "Slingerland A, Moolla M, John K, Dennett L, Nagendran J, Mathew A. Invasive management of unroofed coronary sinus: A systematic review. Trends Cardiovasc Med. 2025;35(6):394-403. DOI: 10.1016/j.tcm.2025.03.006. PMID: 40194568.",
+        "Koutroulou I, Tsivgoulis G, Tsalikakis D, Karacostas D, Grigoriadis N, Karapanayiotides T. Epidemiology of Patent Foramen Ovale in General Population and in Stroke Patients: A Narrative Review. Front Neurol. 2020;11:281. DOI: 10.3389/fneur.2020.00281. PMID: 32411074.",
+        "Wilson W, Taubert KA, Gewitz M, et al; American Heart Association. Prevention of infective endocarditis: guidelines from the American Heart Association. Circulation. 2007;116(15):1736-1754. DOI: 10.1161/CIRCULATIONAHA.106.183095. PMID: 17446442.",
+        "Wilson WR, Gewitz M, Lockhart PB, et al; American Heart Association. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. DOI: 10.1161/CIR.0000000000000969. PMID: 33853363.",
+        "Stephens EH, Mongé MC, Eltayeb O, et al. Evolution and Current Results of a Unified Strategy for Sinus Venosus Surgery. Ann Thorac Surg. 2021;111(3):980-986. DOI: 10.1016/j.athoracsur.2020.03.113. PMID: 32437676."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/32860028/",
+        "https://pubmed.ncbi.nlm.nih.gov/30121240/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9222141/",
+        "https://pubmed.ncbi.nlm.nih.gov/38366300/",
+        "https://pubmed.ncbi.nlm.nih.gov/15691403/",
+        "https://pubmed.ncbi.nlm.nih.gov/30054146/",
+        "https://pubmed.ncbi.nlm.nih.gov/36786506/",
+        "https://pubmed.ncbi.nlm.nih.gov/37827284/",
+        "https://pubmed.ncbi.nlm.nih.gov/40194568/",
+        "https://pubmed.ncbi.nlm.nih.gov/32411074/",
+        "https://pubmed.ncbi.nlm.nih.gov/17446442/",
+        "https://pubmed.ncbi.nlm.nih.gov/33853363/",
+        "https://pubmed.ncbi.nlm.nih.gov/32437676/"
+      ],
+      "related_document_slugs": [
+        "civ-e-cia-na-crianca-historia-natural-e-criterios-de-fechamento",
+        "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+        "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
+        "embolia-paradoxal-iminente-trombo-em-transito-no-forame-oval-patente",
+        "profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021",
+        "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico",
+        "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020"
+      ],
+      "patient_material_slug": "civ-e-cia-buraquinho-no-coracao-do-bebe",
+      "review_status": "revisado",
+      "review_note": "Aprofundado de intermediário para completo em 27/08/2026. Cobertos: classificação anatômica dos quatro tipos (ostium secundum, ostium primum, seio venoso, seio coronário) com prevalências relativas; história natural (muito mais tolerada que a CIV, frequente diagnóstico tardio no adulto por arritmia ou sobrecarga direita); critérios de fechamento por Qp:Qs, sobrecarga de câmaras direitas e resistência vascular pulmonar (ESC 2020); fechamento percutâneo por dispositivo (ostium secundum com bordas adequadas) versus cirúrgico (demais tipos); diferenciação entre CIA verdadeira e forame oval patente e risco de embolia paradoxal; indicação atual (restrita) de profilaxia antibiótica de endocardite. Reaproveitados o documento conjunto e o material para pais e responsáveis já publicados na base para CIV (lote5, PR #562), confirmados como recursos genuinamente compartilhados entre as duas condições, com conteúdo clínico desta ficha escrito especificamente para CIA. Limitações de acesso desta sessão: o orçamento de buscas web (WebSearch) já estava esgotado ao início da tarefa, então toda verificação foi feita via WebFetch direto em PubMed, PMC e E-utilities; o texto integral da diretriz ESC 2020 (academic.oup.com) e do AHA/ACC 2018 (paywall/formato bibliográfico) não abriu diretamente nesta sessão — os números da ESC 2020 foram conferidos cruzando com o fluxograma já revisado desta própria base que cita a mesma diretriz (mesmo DOI/PMID), e a citação do AHA/ACC 2018 foi mantida apenas como referência bibliográfica, sem uso para nenhuma alegação numérica nova. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico.",
+      "version": 3,
+      "fonte_producao": "claude"
+    }
+  }
+]

@@ -205,7 +205,7 @@ def test_item_nao_publicado_nunca_aparece(client, db, criar_usuario):
     db.add(Document(
         slug="ic-doc-pendente", title="Rascunho ainda não revisado", kind="modulo",
         theme=TEMA, body_md="conteúdo", source_tier="A",
-        review_status="pendente_revisao", published=False,
+        review_status="revisado", published=False,
     ))
     db.commit()
 
