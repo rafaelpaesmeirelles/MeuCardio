@@ -3028,12 +3028,12 @@
     "assistant_questions": [
       {
         "id": "tsv_sustentada",
-        "text": "A taquicardia supraventricular fetal é sustentada (não paroxística/intermitente)?",
+        "label": "A taquicardia supraventricular fetal é sustentada (não paroxística/intermitente)?",
         "type": "boolean"
       },
       {
         "id": "tipo_arritmia",
-        "text": "Qual o mecanismo predominante da arritmia?",
+        "label": "Qual o mecanismo predominante da arritmia?",
         "type": "select",
         "options": [
           {
@@ -3052,12 +3052,12 @@
       },
       {
         "id": "presenca_hidropisia",
-        "text": "Há sinais de hidropisia fetal?",
+        "label": "Há sinais de hidropisia fetal?",
         "type": "boolean"
       },
       {
         "id": "sinais_hidropisia",
-        "text": "Quais sinais de comprometimento fetal estão presentes?",
+        "label": "Quais sinais de comprometimento fetal estão presentes?",
         "type": "multiselect",
         "options": [
           {
@@ -3088,22 +3088,22 @@
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Qual a idade gestacional atual (em semanas)?",
+        "label": "Qual a idade gestacional atual (em semanas)?",
         "type": "number"
       },
       {
         "id": "frequencia_cardiaca_fetal_bpm",
-        "text": "Qual a frequência cardíaca fetal atual (bpm)?",
+        "label": "Qual a frequência cardíaca fetal atual (bpm)?",
         "type": "number"
       },
       {
         "id": "terapia_transplacentaria_iniciada",
-        "text": "A terapia farmacológica transplacentária já foi iniciada?",
+        "label": "A terapia farmacológica transplacentária já foi iniciada?",
         "type": "boolean"
       },
       {
         "id": "farmaco_utilizado",
-        "text": "Qual antiarrítmico transplacentário está sendo utilizado?",
+        "label": "Qual antiarrítmico transplacentário está sendo utilizado?",
         "type": "select",
         "options": [
           {
@@ -3134,7 +3134,7 @@
       },
       {
         "id": "resposta_terapia",
-        "text": "Qual a resposta observada ao tratamento farmacológico?",
+        "label": "Qual a resposta observada ao tratamento farmacológico?",
         "type": "select",
         "options": [
           {
@@ -3161,12 +3161,12 @@
       },
       {
         "id": "monitorizacao_materna_realizada",
-        "text": "A monitorização materna (ECG, eletrólitos, função renal) está sendo realizada conforme protocolo?",
+        "label": "A monitorização materna (ECG, eletrólitos, função renal) está sendo realizada conforme protocolo?",
         "type": "boolean"
       },
       {
         "id": "sintomas_maternos_toxicidade",
-        "text": "A gestante apresenta sinais ou sintomas sugestivos de toxicidade ao antiarrítmico?",
+        "label": "A gestante apresenta sinais ou sintomas sugestivos de toxicidade ao antiarrítmico?",
         "type": "multiselect",
         "options": [
           {
@@ -3205,12 +3205,12 @@
       },
       {
         "id": "conduta_parto_considerada",
-        "text": "A antecipação do parto está sendo considerada devido a refratariedade ou comprometimento fetal grave?",
+        "label": "A antecipação do parto está sendo considerada devido a refratariedade ou comprometimento fetal grave?",
         "type": "boolean"
       },
       {
         "id": "seguimento_neonatal_planejado",
-        "text": "Há plano estruturado de seguimento neonatal cardiológico após o nascimento?",
+        "label": "Há plano estruturado de seguimento neonatal cardiológico após o nascimento?",
         "type": "boolean"
       }
     ],
