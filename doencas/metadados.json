@@ -10453,22 +10453,22 @@
     "assistant_questions": [
       {
         "id": "anti_ro_ssa_positivo",
-        "text": "A gestante possui sorologia positiva para anti-Ro/SSA?",
+        "label": "A gestante possui sorologia positiva para anti-Ro/SSA?",
         "type": "boolean"
       },
       {
         "id": "anti_la_ssb_positivo",
-        "text": "A gestante possui sorologia positiva para anti-La/SSB?",
+        "label": "A gestante possui sorologia positiva para anti-La/SSB?",
         "type": "boolean"
       },
       {
         "id": "idade_gestacional_semanas",
-        "text": "Qual a idade gestacional atual, em semanas?",
+        "label": "Qual a idade gestacional atual, em semanas?",
         "type": "number"
       },
       {
         "id": "grau_bloqueio_av",
-        "text": "Qual o grau de bloqueio atrioventricular identificado no ecocardiograma fetal mais recente?",
+        "label": "Qual o grau de bloqueio atrioventricular identificado no ecocardiograma fetal mais recente?",
         "type": "select",
         "options": [
           {
@@ -10491,42 +10491,42 @@
       },
       {
         "id": "frequencia_cardiaca_fetal_bpm",
-        "text": "Qual a frequência ventricular fetal atual, em batimentos por minuto?",
+        "label": "Qual a frequência ventricular fetal atual, em batimentos por minuto?",
         "type": "number"
       },
       {
         "id": "disfuncao_ventricular",
-        "text": "Há disfunção ventricular fetal (sistólica ou diastólica) documentada?",
+        "label": "Há disfunção ventricular fetal (sistólica ou diastólica) documentada?",
         "type": "boolean"
       },
       {
         "id": "hidropisia_fetal",
-        "text": "Há sinais de hidropisia fetal (derrame pericárdico, ascite, derrame pleural ou edema subcutâneo)?",
+        "label": "Há sinais de hidropisia fetal (derrame pericárdico, ascite, derrame pleural ou edema subcutâneo)?",
         "type": "boolean"
       },
       {
         "id": "corticosteroide_transplacentario_em_uso",
-        "text": "A gestante está em uso de corticosteroide fluorinado transplacentário (dexametasona)?",
+        "label": "A gestante está em uso de corticosteroide fluorinado transplacentário (dexametasona)?",
         "type": "boolean"
       },
       {
         "id": "imunoglobulina_intravenosa_em_uso",
-        "text": "A gestante está em uso de imunoglobulina intravenosa?",
+        "label": "A gestante está em uso de imunoglobulina intravenosa?",
         "type": "boolean"
       },
       {
         "id": "hidroxicloroquina_profilatica_em_uso",
-        "text": "A gestante está em uso de hidroxicloroquina profilática?",
+        "label": "A gestante está em uso de hidroxicloroquina profilática?",
         "type": "boolean"
       },
       {
         "id": "gestacao_anterior_com_bav",
-        "text": "Há história de gestação anterior complicada por bloqueio atrioventricular fetal?",
+        "label": "Há história de gestação anterior complicada por bloqueio atrioventricular fetal?",
         "type": "boolean"
       },
       {
         "id": "sinais_repercussao_hemodinamica",
-        "text": "Quais sinais de repercussão hemodinâmica estão presentes?",
+        "label": "Quais sinais de repercussão hemodinâmica estão presentes?",
         "type": "multiselect",
         "options": [
           {
@@ -10557,7 +10557,7 @@
       },
       {
         "id": "via_parto_planejada",
-        "text": "Qual a via de parto planejada?",
+        "label": "Qual a via de parto planejada?",
         "type": "select",
         "options": [
           {
@@ -10576,7 +10576,7 @@
       },
       {
         "id": "local_parto_suporte_neonatal_marcapasso",
-        "text": "O parto está planejado em centro com suporte neonatal e disponibilidade de marcapasso?",
+        "label": "O parto está planejado em centro com suporte neonatal e disponibilidade de marcapasso?",
         "type": "boolean"
       }
     ],
