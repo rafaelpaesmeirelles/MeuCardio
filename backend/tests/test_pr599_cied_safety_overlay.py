@@ -49,7 +49,7 @@ def _evaluate(**overrides):
 def test_cied_overlay_fica_revisado_e_regras_validas():
     disease = _disease()
     assert disease["review_status"] == "revisado"
-    assert "Publicação autorizada" in disease["review_note"]
+    assert "publicação autorizada" in disease["review_note"].casefold()
     q_errors, qids = validate_question_definitions(SLUG, disease["assistant_questions"])
     r_errors = validate_rule_definitions(SLUG, disease["assistant_rules"], qids)
     assert q_errors == []
@@ -75,6 +75,19 @@ def test_febre_sem_bacteremia_nao_vira_infeccao_sistemica_de_cied():
     assert "cied-sinais-sistemicos-sem-bacteremia-documentada" in result["matched_rules"]
     assert "cied-infeccao-sistemica-suspeita" not in result["matched_rules"]
     assert result["risk"] != "emergencia"
+
+
+def test_bacteremia_persistente_sem_foco_escala_mesmo_sem_febre():
+    result = _evaluate(
+        systemic_infection_signs=False,
+        cied_bacteremia_without_other_source=True,
+        cied_hardware_exposed_or_purulent=False,
+        pocket_local_signs=False,
+    )
+    assert "cied-infeccao-sistemica-suspeita" in result["matched_rules"]
+    assert result["risk"] == "emergencia"
+    text = " ".join(result.get("emergency_flow") or []).casefold()
+    assert "ausência de febre" in text
 
 
 def test_hardware_exposto_ou_pus_dispara_fluxo_especifico():
