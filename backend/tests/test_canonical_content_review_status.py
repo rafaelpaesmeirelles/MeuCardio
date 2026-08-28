@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # arritmias-na-gravidez passou de completeness=intermediario (zero
+        # related_document_slugs) para completo, com 7 related_document_slugs
+        # encontrados do zero e verificados individualmente — ver review_note.
+        "arritmias-na-gravidez",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
