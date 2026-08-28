@@ -19,6 +19,17 @@ def _rule(hub, rule_id):
     return next(item for item in hub["assistant_rules"] if item["id"] == rule_id)
 
 
+def _strings(value):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, dict):
+        for item in value.values():
+            yield from _strings(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _strings(item)
+
+
 def test_har_revisada_e_autorizada():
     hub = _hub()
     note = hub["review_note"].casefold()
@@ -62,10 +73,24 @@ def test_amilorida_nao_e_mra_e_hipercalemia_nao_recebe_substituto_poupador_de_k(
     assert "não substituir automaticamente" in text
     assert "eplerenona ou amilorida" in text
 
-    blob = str(hub).casefold()
-    assert "contraindicarem o antagonista mineralocorticoide, considerar amilorida ou eplerenona" not in blob
-    if "amilorida ou eplerenona" in blob:
-        assert "não usar essas opções como substituição automática" in blob
+    safety_triggers = ("hipercalemia", "hiperpotassemia", "função renal", "taxa de filtração", "tfge", "disfunção renal")
+    potassium_sparing = ("amilorida", "eplerenona")
+    safe_qualifiers = (
+        "não substituir",
+        "não deve ser usada",
+        "não usar",
+        "apenas se",
+        "se potássio e função renal permitirem",
+        "k/tfge permitirem",
+        "podem perpetuar risco de hiperpotassemia",
+    )
+    unsafe = []
+    for raw in _strings(hub):
+        value = raw.casefold()
+        if any(drug in value for drug in potassium_sparing) and any(trigger in value for trigger in safety_triggers):
+            if not any(qualifier in value for qualifier in safe_qualifiers):
+                unsafe.append(raw)
+    assert unsafe == [], f"Recomendações poupadoras de K sem trava explícita: {unsafe}"
 
 
 def test_mra_so_e_sugerido_apos_k_e_funcao_renal_revistos():
