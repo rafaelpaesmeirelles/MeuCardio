@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Fechamento de lacuna Tudo com Tudo de 28/08/2026: ficha
+        # trombose-associada-cancer já era completeness=completo, mas
+        # related_document_slugs/patient_material_slug estavam None —
+        # ver review_note.
+        "trombose-associada-cancer",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
