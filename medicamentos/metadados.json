@@ -751,7 +751,8 @@
     "generic_name": "Bisoprolol (hemifumarato)",
     "brand_names": [
       "Bizo",
-      "Concor"
+      "Concor",
+      "Biconcor — Merck (combinado com hidroclorotiazida)"
     ],
     "drug_class": "Betabloqueador altamente cardiosseletivo (beta-1 seletivo)",
     "mechanism": "Agente bloqueador seletivo dos receptores beta-1, sem ação estimulante intrínseca ou efeito de estabilização de membrana relevante; afinidade muito baixa a receptores beta-2, com seletividade beta-1 que se estende além da faixa terapêutica; não possui efeito inotrópico negativo pronunciado",
@@ -805,7 +806,10 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do ZEBETA® (bisoprolol fumarate), seção CLINICAL PHARMACOLOGY/CLINICAL STUDIES, consultado via WebSearch em 10/08/2026. **Reconfirmado por fonte independente em 12/08/2026**: mirror de bula brasileira do CONCOR® (Merck) confirma dose única diária com cobertura de 24h, sustentada pela meia-vida de 10-12h — resolvendo a verificação pendente anterior.",
     "sbp_reduction_mmhg": -10.5,
     "dbp_reduction_mmhg": -7.5,
-    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026."
+    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026.",
+    "commercial_presentations": [
+      "Biconcor® (hemifumarato de bisoprolol + hidroclorotiazida), Merck S.A., comprimidos revestidos nas apresentações 2,5 mg/6,25 mg, 5 mg/6,25 mg e 10 mg/6,25 mg, embalagem com 30 comprimidos revestidos. Registro no Ministério da Saúde nº 1.0089.0201. É produto combinado da mesma fabricante do Concor (bisoprolol isolado, já cadastrado) — mesmo padrão já usado no registro de benazepril-cloridrato (\"Lotensin H\"), produto combinado listado junto ao princípio isolado. Fontes: bula.gratis/merck_s_a/biconcor (bula original obtida da ANVISA), drogariasaopaulo.com.br, bemolfarma.com.br, pesquisemedicamentos.com.br. Busca em 21/08/2026. NOTA: \"Bisocor\" e \"Bisogamma\", encontrados em busca inicial, foram descartados — são marcas de bisoprolol na Índia (Bisocor) e Alemanha (Bisogamma), sem confirmação de comercialização no Brasil."
+    ]
   },
   {
     "slug": "bivalirudina",
@@ -1819,11 +1823,13 @@
     ],
     "commercial_presentations": [
       "Digoxina Teuto® (genérico), comprimido de 0,25 mg, embalagem com 30 comprimidos. Fonte: WebSearch, 20/08/2026 (Drogarias Pacheco); registro ANVISA específico não conferido.",
-      "Digoxina Elixir Prati-Donaduzzi® (genérico), 0,05 mg/mL, frasco de 60 mL. Fonte: WebSearch, 20/08/2026 (Farmadelivery, Drogaria São Paulo, CliqueFarma). Esclarece o que a entrada já cadastrada citava vagamente como 'genéricos de diversos fabricantes (ex. Prati-Donaduzzi)': é a forma ELIXIR (líquida), não um comprimido de 0,25 mg — não foi encontrado comprimido de Prati-Donaduzzi para digoxina nesta busca."
+      "Digoxina Elixir Prati-Donaduzzi® (genérico), 0,05 mg/mL, frasco de 60 mL. Fonte: WebSearch, 20/08/2026 (Farmadelivery, Drogaria São Paulo, CliqueFarma). Esclarece o que a entrada já cadastrada citava vagamente como 'genéricos de diversos fabricantes (ex. Prati-Donaduzzi)': é a forma ELIXIR (líquida), não um comprimido de 0,25 mg — não foi encontrado comprimido de Prati-Donaduzzi para digoxina nesta busca.",
+      "Digoxina Wellc® (digoxina) 0,25 mg, Aspen Pharma Indústria Farmacêutica Ltda, comprimidos, embalagem com 25 comprimidos. Listado sob a categoria \"Medicamentos de Referência\" (não genérico/similar) nas redes de varejo consultadas, o que reforça se tratar de nome de fantasia próprio da Aspen e não de rótulo genérico DCB+laboratório (que a mesma fabricante também vende, como \"Digoxina Comprimido Aspen Pharma\" e \"Digoxina Elixir Aspen Pharma\", ambos sem nome de fantasia). Fonte: Drogaria São Paulo e Drogarias Pacheco (duas redes de varejo independentes, mesma ficha de produto convergente), busca em 21/08/2026. Número de registro ANVISA/MS não confirmado nas fontes consultadas — não incluído."
     ],
     "brand_names": [
       "Digoxina Pharlab",
-      "Digoxina (Genérico) — Teuto"
+      "Digoxina (Genérico) — Teuto",
+      "Digoxina Wellc — Aspen Pharma"
     ]
   },
   {
@@ -1896,7 +1902,8 @@
     "generic_name": "Dinitrato de Isossorbida",
     "brand_names": [
       "Isordil",
-      "Angil"
+      "Angil",
+      "Isocord — Laboratório Sinterápico Industrial Farmacêutico Ltda"
     ],
     "drug_class": "Vasodilatador coronariano — nitrato orgânico",
     "mechanism": "Conversão em óxido nítrico no músculo liso vascular, ativando guanilato ciclase e aumentando GMPc, resultando em relaxamento da musculatura lisa vascular (venodilatação predominante em doses baixas, dilatação arterial adicional em doses mais altas), reduzindo pré-carga e demanda miocárdica de oxigênio",
@@ -1946,7 +1953,8 @@
     "duration_of_action_source": "Já documentado nos campos `notes.Farmacocinetica`, `notes.Tolerancia` e `dosing.\"angina oral regular\"` deste mesmo registro — reaproveitado só para popular o campo estruturado novo, sem pesquisa adicional nesta sessão.",
     "bp_evidence_source": "Não se aplica como desfecho de eficácia estudado. O dinitrato de isossorbida reduz pressão arterial como parte do próprio mecanismo (venodilatação/redução de pré-carga, já descrito em `mechanism` deste registro), mas a indicação e os ensaios cadastrados são de profilaxia de angina/adjuvante em ICC (ver `indications`), não de tratamento da hipertensão arterial sistêmica — não há, no registro atual nem no que foi possível pesquisar nesta sessão, uma tabela de redução pressórica placebo-controlada equivalente à usada nos anti-hipertensivos desta base. A própria bula já citada no registro lista hipotensão como contraindicação/precaução (efeito indesejado a evitar), não como desfecho terapêutico medido.",
     "commercial_presentations": [
-      "Angil® (Sanval Comércio e Indústria Ltda.) — dinitrato de isossorbida, medicamento similar: comprimido sublingual de 5 mg, embalagens com 20 ou 500 comprimidos (registro M.S. nº 1.0714.0106). Fonte: bula do profissional (remediobarato.com/pdf/f6c3617ef0be309858b93f954e1da0a0.pdf) e página de produto (consultaremedios.com.br/angil/bula, consultaremedios.com.br/angil/5mg-caixa-com-500-comprimidos-sublinguais/p); conferido via WebSearch em 20/08/2026."
+      "Angil® (Sanval Comércio e Indústria Ltda.) — dinitrato de isossorbida, medicamento similar: comprimido sublingual de 5 mg, embalagens com 20 ou 500 comprimidos (registro M.S. nº 1.0714.0106). Fonte: bula do profissional (remediobarato.com/pdf/f6c3617ef0be309858b93f954e1da0a0.pdf) e página de produto (consultaremedios.com.br/angil/bula, consultaremedios.com.br/angil/5mg-caixa-com-500-comprimidos-sublinguais/p); conferido via WebSearch em 20/08/2026.",
+      "Isocord® (dinitrato de isossorbida), Laboratório Sinterápico Industrial Farmacêutico Ltda, cápsulas de 20 mg e 40 mg, embalagem com 30 cápsulas — atualmente à venda em rede de varejo (Drogaria São Paulo). Ressalva encontrada e não escondida: o único número de registro ANVISA localizado para o nome \"Isocord\" (1044501260010, forma sublingual 2,5 mg) está VENCIDO desde 2013 (fonte: smerp.com.br/anvisa, registro público). A presença atual do produto Isocord em cápsulas (20 mg/40 mg) à venda em farmácia e com bula publicada (BulasMed) indica que existe registro ativo sob outro número para essa apresentação, não localizado nas fontes consultadas — número de registro corrente não confirmado, por isso omitido. Fontes: bulas.med.br (bula \"Isocord Cápsulas\"), drogariasaopaulo.com.br (duas fichas de produto, 20 mg e 40 mg), bulario.lindme.com.br, smerp.com.br/anvisa (registro histórico). Busca em 21/08/2026."
     ]
   },
   {
@@ -2344,7 +2352,8 @@
       "Comprimido revestido 60 mg (80,8 mg de tosilato de edoxabana monoidratado)"
     ],
     "commercial_presentations": [
-      "Roteas® (edoxabana, tosilato monoidratado), Daiichi Sankyo Brasil Farmacêutica Ltda. (comercializado/distribuído também sob a marca do laboratório Aché, ache.com.br), registro ANVISA nº 1045401860030 (válido até 01/05/2029). Comprimidos revestidos de 15 mg (embalagem com 14 comprimidos) e de 30 mg/60 mg (embalagens com 14 ou 30 comprimidos). Indicação: redução de risco de AVC/embolismo sistêmico na FA não valvar; tratamento e prevenção de recorrência de TVP/TEP — mesmas indicações já cadastradas para Lixiana®, mesmo princípio ativo, segunda marca comercial no Brasil. Fonte: ache.com.br, smerp.com.br (consulta de registro ANVISA), drogasil.com.br, farmaindex.com. WebSearch 20/08/2026."
+      "Roteas® (edoxabana, tosilato monoidratado), Daiichi Sankyo Brasil Farmacêutica Ltda. (comercializado/distribuído também sob a marca do laboratório Aché, ache.com.br), registro ANVISA nº 1045401860030 (válido até 01/05/2029). Comprimidos revestidos de 15 mg (embalagem com 14 comprimidos) e de 30 mg/60 mg (embalagens com 14 ou 30 comprimidos). Indicação: redução de risco de AVC/embolismo sistêmico na FA não valvar; tratamento e prevenção de recorrência de TVP/TEP — mesmas indicações já cadastradas para Lixiana®, mesmo princípio ativo, segunda marca comercial no Brasil. Fonte: ache.com.br, smerp.com.br (consulta de registro ANVISA), drogasil.com.br, farmaindex.com. WebSearch 20/08/2026.",
+      "NOTA (não é apresentação comercial): busca dirigida por marca comercial de edoxabana no Brasil além das duas já cadastradas (Lixiana — Daiichi Sankyo, Roteas) não encontrou nenhum nome de fantasia adicional. As fontes convergem em afirmar que a edoxabana é comercializada no Brasil apenas pela Daiichi Sankyo sob a marca Lixiana® (15 mg, 30 mg e 60 mg, comprimidos revestidos), sem concorrência de marca própria de outro laboratório — diferente de rivaroxabana e apixabana, que têm múltiplas marcas/genéricos. Foi localizada uma bula de \"tosilato de edoxabana monoidratado\" da Althaia S.A. Indústria Farmacêutica, mas trata-se de rotulagem genérica (DCB + nome do laboratório), não nome de fantasia — não conta como brand_name pela regra do projeto. Fontes: consultaremedios.com.br, daiichisankyo.com.br (bula oficial), tjdft.jus.br (nota técnica NatJus), guiafarmaceutico.hsl.org.br, bulas-ecommerce (Althaia). Busca em 21/08/2026."
     ]
   },
   {
@@ -4736,12 +4745,14 @@
     ],
     "hepatic_adjustment": "Não há orientação de ajuste hepático específico na bula profissional brasileira do MONOCORDIL, já citada nas referências deste registro — diferente do dinitrato de isossorbida (que depende de metabolismo hepático de primeira passagem para ativação), o mononitrato já é a forma ativa, o que reduz a relevância teórica da função hepática sobre sua farmacocinética.",
     "brand_names": [
-      "Monocordil"
+      "Monocordil",
+      "Coronar — Biolab Sanus Farmacêutica Ltda (injetável)"
     ],
     "commercial_presentations": [
       "Monocordil® mononitrato de isossorbida 20 mg — comprimidos, embalagem com 20 ou 30 comprimidos (Laboratórios Baldacci Ltda.). Fonte: bula profissional oficial em lbaldacci.com.br e drogasil.com.br/bulas/monocordil-baldacci. WebSearch 20/08/2026.",
       "Monocordil® mononitrato de isossorbida 40 mg — comprimidos, embalagem com 30 comprimidos (Laboratórios Baldacci Ltda.). Mesma fonte acima. WebSearch 20/08/2026.",
-      "Monocordil® Retard mononitrato de isossorbida 50 mg — cápsulas de liberação prolongada, embalagem com 15 ou 30 cápsulas (Laboratórios Baldacci Ltda.). Mesma fonte acima. WebSearch 20/08/2026."
+      "Monocordil® Retard mononitrato de isossorbida 50 mg — cápsulas de liberação prolongada, embalagem com 15 ou 30 cápsulas (Laboratórios Baldacci Ltda.). Mesma fonte acima. WebSearch 20/08/2026.",
+      "Coronar® (mononitrato de isossorbida), Biolab Sanus Farmacêutica Ltda, solução injetável 10 mg/mL, ampolas de 1 mL, embalagem com 50 ampolas. Único achado novo em relação à marca já cadastrada (Monocordil): forma farmacêutica distinta (injetável, uso hospitalar/intravenoso), indicado para angina e insuficiência cardíaca com ação praticamente imediata por via IV (início do efeito antianginoso em 2–5 min). Fontes: uploads.consultaremedios.com.br (bula profissional e de paciente, obtidas do detentor do registro), bula.gratis/biolab_sanus_farmaceutica_ltda/coronar (bula original ANVISA), bulas.med.br, farmaindex.com, magazinemedica.com.br. Busca em 21/08/2026."
     ]
   },
   {
@@ -5201,12 +5212,19 @@
     "hepatic_adjustment": "Não é necessário ajuste, mesmo em disfunção hepática grave — cautela recomendada, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave (mesmo conteúdo já registrado em `dosing.Ajuste hepático` deste verbete, aqui estruturado como campo próprio). Fonte: bula profissional brasileira da olmesartana medoxomila (Accord Farma), já citada nas referências deste registro.",
     "brand_names": [
       "Benicar ODT",
-      "Olmetec"
+      "Olmetec",
+      "Olmecor — Torrent do Brasil Ltda",
+      "Olsar — Eurofarma Laboratórios S.A.",
+      "Fluxocor — Medley Farmacêutica Ltda"
     ],
     "commercial_presentations": [
       "Benicar ODT® (Daiichi Sankyo), comprimido orodispersível de 40 mg — consta na Lista A de Medicamentos de Referência da Anvisa publicada em 2026.",
       "Olmetec® 20mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026.",
-      "Olmetec® 40mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026."
+      "Olmetec® 40mg — comprimido revestido, embalagem com 30 comprimidos (Daiichi Sankyo Brasil Farmacêutica Ltda.). Fonte: bula.gratis (Olmetec, bula do paciente) e drogasil.com.br, WebSearch 20/08/2026.",
+      "Olmecor® (olmesartana medoxomila), Torrent do Brasil Ltda, comprimidos revestidos de 20 mg e 40 mg, apresentação com 10 comprimidos revestidos (entre outras). Classificado como medicamento similar (equivalente ao de referência). Fontes: bula.gratis/olmecor (bula original ANVISA), sara.com.br, consultaremedios.com.br, farmaindex.com, img.drogasil.com.br (bula oficial). Busca em 21/08/2026.",
+      "Olsar® (olmesartana medoxomila), Eurofarma Laboratórios S.A. (registrado por Momenta Farmacêutica Ltda), comprimidos revestidos de 20 mg e 40 mg; existe também a combinação Olsar H (olmesartana medoxomila + hidroclorotiazida 20 mg/12,5 mg), mesma fabricante. Fontes: consultaremedios.com.br, sara.com.br, img.drogasil.com.br (bulas oficiais Olsar e Olsar H), drogaraia.com.br. Busca em 21/08/2026.",
+      "Fluxocor® (olmesartana medoxomila), Medley Farmacêutica Ltda, comprimidos revestidos de 20 mg e 40 mg, apresentações com 10 e 30 comprimidos revestidos. Fontes: sara.com.br (duas dosagens), consultaremedios.com.br, drogasil.com.br, farmaindex.com, drogariasp.vteximg.com.br (bula oficial em PDF). Busca em 21/08/2026.",
+      "NOTA: uma síntese de busca anterior citou também os nomes \"Asea\", \"Hipoxomil\", \"Holmes\", \"Olmedix\", \"Olmegran\" e \"Olmy\" como possíveis marcas de olmesartana no Brasil, mas nenhum desses nomes apareceu nos resultados de busca crus (só na síntese) e nenhum foi confirmado por busca dirigida individual — não foram adicionados a brand_names por falta de confirmação em pelo menos duas fontes convergentes, conforme a regra desta rodada."
     ]
   },
   {
@@ -6153,7 +6171,8 @@
       "Neparvis® (sacubitril valsartana sódica hidratada) 50 mg — comprimido revestido, embalagem com 28 unidades (Novartis Biociências S.A.). Fonte: bula profissional Novartis (bulas-ecommerce.s3.sa-east-1.amazonaws.com/NEPARVIS_...), WebSearch 21/08/2026.",
       "Neparvis® 100 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A.). Fonte: mesma bula acima, WebSearch 21/08/2026.",
       "Neparvis® 200 mg — comprimido revestido, embalagens com 28 ou 60 unidades (Novartis Biociências S.A., registro MS confirmado em ficha de produto — ex. 1006811890036 para a apresentação de 200 mg). Fonte: bula profissional Novartis + ficha de produto (biolabeco.com.br/produto/neparvis-200mg-60-comprimidos/), WebSearch 21/08/2026.",
-      "Nota: Neparvis® é a mesma molécula do Entresto® (sacubitril/valsartana sódica hidratada), registrada também pela Novartis Biociências S.A. sob nome comercial distinto — usada, entre outros canais, na dispensação pelo Componente Especializado da Assistência Farmacêutica (CEAF/SUS) para insuficiência cardíaca com fração de ejeção reduzida. Apresentação/marca genuinamente adicional (bula própria, registro ANVISA próprio), não duplicata do mesmo registro do Entresto."
+      "Nota: Neparvis® é a mesma molécula do Entresto® (sacubitril/valsartana sódica hidratada), registrada também pela Novartis Biociências S.A. sob nome comercial distinto — usada, entre outros canais, na dispensação pelo Componente Especializado da Assistência Farmacêutica (CEAF/SUS) para insuficiência cardíaca com fração de ejeção reduzida. Apresentação/marca genuinamente adicional (bula própria, registro ANVISA próprio), não duplicata do mesmo registro do Entresto.",
+      "NOTA (não é apresentação comercial): busca dirigida por marca comercial de sacubitrila/valsartana no Brasil além das duas já cadastradas (Entresto — Novartis, Neparvis — Biolab) não encontrou nenhum nome de fantasia adicional. As fontes consultadas (ConsultaRemedios, Drogarias Pacheco, Guia Farmacêutico HSL, Farmaindex, Bemol) confirmam apenas Entresto e Neparvis como as duas apresentações comerciais existentes no mercado brasileiro; não há registro de versão genérica (DCB) da combinação no país até a data da busca. Fontes: consultaremedios.com.br, drogariaspacheco.com.br, guiafarmaceutico.hsl.org.br, farmaindex.com, bemol.com.br. Busca em 21/08/2026."
     ]
   },
   {
