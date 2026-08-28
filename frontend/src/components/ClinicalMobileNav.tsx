@@ -67,6 +67,7 @@ const CONTA_ADMIN: LinkItem[] = [
   { to: "/minha-conta", label: "Minha conta", icon: "conta" },
   { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
+  { to: "/excluir-conta", label: "Excluir conta e dados", icon: "conta" },
   { to: "/termos", label: "Termos", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
   { to: "/admin", label: "Administração", icon: "gestao", adminOnly: true },
