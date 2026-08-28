@@ -9376,7 +9376,7 @@
     "subtype": "coracao_univentricular",
     "cyanosis_class": "cianotica",
     "prevalence_rank": 21,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Conjunto heterogêneo de anatomias tratadas em estratégia univentricular, com necessidades específicas entre estágios e após a circulação de Fontan.",
     "tags": [
       "ventrículo único",
@@ -9384,20 +9384,573 @@
       "interstage"
     ],
     "source_refs": [
-      "ACC Clinical Practice Algorithm for Fontan Circulation Follow-Up"
+      "ACC Clinical Practice Algorithm for Fontan Circulation Follow-Up",
+      "Rychik J, et al. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019 Aug 6;140(6):e234-e284. PMID: 31256636.",
+      "Gewillig M, Brown SC. The Fontan circulation after 45 years: update in physiology. Heart. 2016 Jul 15;102(14):1081-6. PMID: 27220691.",
+      "Feinstein JA, et al. Hypoplastic left heart syndrome: current considerations and expectations. J Am Coll Cardiol. 2012 Jan 3;59(1 Suppl):S1-42. PMID: 22192720.",
+      "Alsaied T, et al. Factors associated with long-term mortality after Fontan procedures: a systematic review. Heart. 2017 Jan 15;103(2):104-110. PMID: 28057809.",
+      "d'Udekem Y, et al. Redefining expectations of long-term survival after the Fontan procedure. Circulation. 2014 Sep 9;130(11 Suppl 1):S32-8. PMID: 25200053.",
+      "Rychik J. Protein Losing Enteropathy After Fontan Operation. World J Pediatr Congenit Heart Surg. 2020 Jan;11(1):92-96. PMID: 31835975."
     ],
     "source_urls": [
-      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"
+      "https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms",
+      "https://pubmed.ncbi.nlm.nih.gov/31256636/",
+      "https://pubmed.ncbi.nlm.nih.gov/27220691/",
+      "https://pubmed.ncbi.nlm.nih.gov/22192720/",
+      "https://pubmed.ncbi.nlm.nih.gov/28057809/",
+      "https://pubmed.ncbi.nlm.nih.gov/25200053/",
+      "https://pubmed.ncbi.nlm.nih.gov/31835975/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (vigésimo quinto lote de conteúdo do dia): ficha já tinha patient_material_slug e 3 related_document_slugs preenchidos, mas zero campos clínicos (completeness=basico, 1 source_ref). Adicionados epidemiology (grupo heterogêneo de cardiopatias univentriculares, sobrevida pós-Fontan >85-90% em 20 anos com atrito progressivo após 20-25 anos, número crescente de adultos com fisiologia de Fontan), presentation (10 fases/formas: diagnóstico pré-natal/neonatal, fases pré-Glenn/pós-Glenn/pós-Fontan, sinais de falência tardia), diagnostic_approach (4 subtópicos: avaliação pré-natal/neonatal, pré-Glenn, pré-Fontan, seguimento pós-Fontan no adulto), differentials (tratados como cenários anatômicos de base: SCEH, atresia tricúspide, VU de dupla entrada, DSAV desbalanceado, heterotaxia, atresia pulmonar com septo íntegro), tests, red_flags, treatment_summary (lógica da estratégia univentricular em 3 estágios, seguimento multidisciplinar vitalício com ACHD/hepatologia/hematologia, reconhecimento explícito de que a falência de Fontan é trajetória natural em longo prazo para parte dos pacientes), ambulatory_flow, emergency_flow, monitoring, special_populations (10), assistant_questions (14), assistant_rules (10, priority 98 para falência aguda de Fontan: cianose progressiva + edema/ascite + arritmia nova). related_document_slugs expandido de 3 para 7 (união com os originais, sem duplicar) — novos ângulos cobertos: gestação em Fontan, tromboprofilaxia, overlap com TGA no adulto, disfunção do nó sinusal/marca-passo. patient_material_slug original preservado. Overlap pré-existente e legítimo documentado: circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto também vinculado por transposicao-das-grandes-arterias, e ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes também vinculado por atresia-tricuspide (overlaps não introduzidos por este lote). Nenhuma dose de fármaco em nenhum campo. Todos os 6 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — referências com listas de autores não confirmadas via e-utils foram escritas como 'Autor Principal, et al.' para não fabricar nomes não verificados.",
+    "version": 2,
     "related_document_slugs": [
       "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
       "descompensacao-aguda-da-circulacao-de-fontan",
-      "fluxograma-descompensacao-aguda-da-circulacao-de-fontan"
+      "fluxograma-descompensacao-aguda-da-circulacao-de-fontan",
+      "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",
+      "tromboprofilaxia-na-circulacao-de-fontan",
+      "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+      "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo"
     ],
-    "patient_material_slug": "fisiologia-ventriculo-unico"
+    "patient_material_slug": "fisiologia-ventriculo-unico",
+    "epidemiology": "A fisiologia de ventrículo único não corresponde a uma cardiopatia isolada, mas a um grupo heterogêneo de malformações congênitas cujo denominador comum é a impossibilidade de reparo biventricular, exigindo estratégia de paliação em estágios até a circulação de Fontan. Incluem-se nesse espectro a síndrome do coração esquerdo hipoplásico, a atresia tricúspide, o ventrículo único de dupla entrada, formas desbalanceadas de canal atrioventricular e de heterotaxia, entre outras. Em conjunto, essas anomalias respondem por aproximadamente 2 a 3 casos a cada 10.000 nascidos vivos, sendo a síndrome do coração esquerdo hipoplásico a mais frequente isoladamente. Com o aprimoramento da técnica cirúrgica em estágios (Norwood ou variantes, Glenn bidirecional e Fontan) e dos cuidados perioperatórios, a sobrevida atual após a conclusão do Fontan ultrapassa 85 a 90% em 20 anos de seguimento, embora haja atrito progressivo de sobrevida e de função a partir da terceira década de vida, com queda mais acentuada após 20 a 25 anos de circulação de Fontan. Como resultado direto dessa melhora, o número de adultos vivendo com fisiologia de Fontan vem crescendo de forma consistente e hoje se aproxima, em várias séries internacionais, do número de crianças recém-operadas, configurando uma população nova e em expansão que demanda seguimento cardiológico especializado por toda a vida, com atenção às complicações crônicas próprias dessa circulação.",
+    "presentation": [
+      "Diagnóstico pré-natal por ecocardiograma fetal, permitindo planejamento do parto em centro terciário e início precoce de prostaglandina para manter o canal arterial patente nas formas ducto-dependentes.",
+      "Diagnóstico neonatal com cianose importante ou choque circulatório quando a lesão não foi identificada no pré-natal, exigindo estabilização urgente antes da primeira cirurgia paliativa.",
+      "Fase pré-Glenn (após Norwood ou paliação inicial equivalente): circulação em paralelo dependente de shunt sistêmico-pulmonar ou de tubo ventrículo-pulmonar, com sobrecarga de volume do ventrículo único e risco de instabilidade hemodinâmica entre as cirurgias.",
+      "Fase pós-Glenn (circulação cavopulmonar bidirecional): alívio parcial da sobrecarga de volume, cianose leve e estável, com fluxo pulmonar passivo dependente da pressão venosa central e da resistência vascular pulmonar.",
+      "Fase pós-Fontan estável: circulação em série sem bomba subpulmonar, com pressão venosa sistêmica cronicamente elevada e débito cardíaco relativamente fixo, geralmente bem tolerada por anos com boa capacidade funcional.",
+      "Sinais precoces de disfunção da via de Fontan no adulto jovem, como redução progressiva da tolerância ao exercício e queda da saturação de oxigênio por colaterais veno-venosas ou reabertura de fenestração.",
+      "Arritmias atriais, sobretudo flutter atrial por reentrada intra-atrial, frequentemente o primeiro sinal clínico de falência hemodinâmica da circulação de Fontan em adultos.",
+      "Hepatopatia congestiva crônica (doença hepática associada ao Fontan), evoluindo de fibrose para cirrose cardíaca e, em casos avançados, carcinoma hepatocelular.",
+      "Enteropatia perdedora de proteína, manifestando-se com edema, ascite, derrames cavitários e diarreia associada à hipoalbuminemia grave.",
+      "Falência tardia de Fontan no adulto, com cianose progressiva, edema periférico refratário, ascite, intolerância ao exercício e disfunção de múltiplos órgãos, configurando quadro de insuficiência circulatória de Fontan."
+    ],
+    "diagnostic_approach": {
+      "avaliacao_pre_natal_e_neonatal": "O diagnóstico inicial é ecocardiográfico, fetal ou neonatal, definindo a anatomia de base, o tamanho das câmaras, a via de saída sistêmica e o padrão de fluxo pulmonar. No período neonatal, a ecocardiografia orienta a necessidade de manutenção do canal arterial e o momento da primeira cirurgia paliativa; o cateterismo cardíaco raramente é necessário nessa fase, exceto para septostomia atrial ou avaliação de lesões associadas não totalmente esclarecidas ao ecocardiograma.",
+      "avaliacao_pre_glenn": "Antes da cirurgia de Glenn bidirecional, avalia-se por ecocardiograma a função do ventrículo único, a competência valvar atrioventricular e eventual obstrução de arco aórtico. O cateterismo cardíaco é frequentemente indicado para medir diretamente a pressão nas artérias pulmonares, calcular a resistência vascular pulmonar e excluir estenoses de ramos pulmonares, já que uma resistência vascular pulmonar elevada contraindica ou adia o avanço para a circulação cavopulmonar.",
+      "avaliacao_pre_fontan": "Antes da conclusão do Fontan, o cateterismo cardíaco é praticamente obrigatório, com medida da pressão venosa central (que corresponderá à pressão da via de Fontan), da resistência vascular pulmonar, da pressão diastólica final do ventrículo único e do gradiente transpulmonar, além de angiografia para mapear colaterais veno-venosas e aortopulmonares. A ressonância magnética cardíaca complementa a avaliação de volumes ventriculares, função sistólica, fração de regurgitação atrioventricular e anatomia dos ramos pulmonares, sendo particularmente útil quando o ecocardiograma tem janela acústica limitada.",
+      "seguimento_pos_fontan_no_adulto": "No seguimento de longo prazo, a combinação de ecocardiograma, ressonância magnética cardíaca e cateterismo (quando há suspeita de falência hemodinâmica, arritmia refratária ou antes de reintervenções) permanece central, associada a teste ergométrico cardiopulmonar para quantificar a capacidade funcional, a exames laboratoriais seriados (função hepática, albumina, alfa-1-antitripsina fecal, peptídeo natriurético) e a avaliação hepática com elastografia ou ultrassonografia com Doppler para rastreio de hepatopatia congestiva associada ao Fontan. A elevação persistente da pressão venosa sistêmica e/ou da resistência vascular pulmonar identificada nesses exames é o principal determinante da falência tardia da circulação de Fontan."
+    },
+    "differentials": [
+      "Síndrome do coração esquerdo hipoplásico (hipoplasia grave de ventrículo esquerdo, valva mitral e/ou aórtica e aorta ascendente).",
+      "Atresia tricúspide com ventrículo direito hipoplásico.",
+      "Ventrículo único de dupla entrada (double inlet ventricle), geralmente de morfologia esquerda.",
+      "Canal atrioventricular desbalanceado, com hipoplasia significativa de um dos ventrículos.",
+      "Heterotaxia (isomerismo atrial direito ou esquerdo) com desbalanceamento atrioventricular grave.",
+      "Atresia pulmonar com septo interventricular íntegro e ventrículo direito hipoplásico.",
+      "Formas complexas de discordância atrioventricular e ventriculoarterial, com hipoplasia ventricular grave, não passíveis de reparo biventricular."
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico (e fetal, quando aplicável) seriado ao longo da vida.",
+      "Cateterismo cardíaco com medida de pressão venosa central, pressão da via de Fontan, resistência vascular pulmonar e gradiente transpulmonar.",
+      "Ressonância magnética cardíaca para volumes ventriculares, função sistólica e mapeamento de colaterais.",
+      "Teste ergométrico cardiopulmonar para avaliação objetiva da capacidade funcional.",
+      "Exames laboratoriais: albumina sérica, alfa-1-antitripsina fecal, enzimas hepáticas e peptídeo natriurético tipo B.",
+      "Elastografia hepática e ultrassonografia com Doppler abdominal para rastreio de hepatopatia congestiva.",
+      "Holter ou monitorização prolongada de ritmo para detecção de arritmias atriais.",
+      "Angiotomografia ou angiografia por cateterismo para avaliação de ramos pulmonares e colaterais veno-venosas ou aortopulmonares."
+    ],
+    "red_flags": [
+      "Cianose progressiva ou queda inexplicada da saturação de oxigênio.",
+      "Edema periférico progressivo e/ou ascite.",
+      "Diarreia associada a hipoalbuminemia, sugestiva de enteropatia perdedora de proteína.",
+      "Arritmia atrial sustentada (flutter ou fibrilação atrial) de início recente.",
+      "Sinais de disfunção hepática avançada, como icterícia, varizes ou ascite volumosa, no contexto de hepatopatia congestiva associada ao Fontan.",
+      "Hemoptise ou tosse com eliminação de moldes brônquicos (bronquite plástica).",
+      "Sinais sugestivos de tromboembolismo venoso ou acidente vascular cerebral, dado o risco protrombótico da circulação de Fontan.",
+      "Síncope ou pré-síncope, que pode indicar arritmia maligna ou queda crítica do débito cardíaco."
+    ],
+    "treatment_summary": "A fisiologia de ventrículo único descreve um espectro de cardiopatias congênitas complexas — atresia tricúspide, síndrome do coração esquerdo hipoplásico, ventrículo único de dupla via de entrada, entre outras — nas quais apenas uma câmara ventricular funcional é capaz de gerar pressão sistêmica eficaz. A estratégia cirúrgica é paliativa, e não curativa: reorganiza a circulação para que esse único ventrículo bombeie o sangue sistêmico enquanto o retorno venoso sistêmico flui passivamente para os pulmões, sem uma bomba subpulmonar dedicada — o chamado princípio de Fontan. Essa reorganização ocorre classicamente em três estágios. O estágio 1 (cirurgia tipo Norwood ou suas variantes, como a estratégia híbrida) garante fluxo sistêmico não obstruído a partir do ventrículo único, fluxo pulmonar controlado por shunt sistêmico-pulmonar ou conduto do ventrículo direito à artéria pulmonar, e comunicação interatrial ampla, geralmente nas primeiras semanas de vida. O estágio 2 (Glenn bidirecional ou hemi-Fontan), realizado em torno dos 3 a 6 meses, desconecta a veia cava superior do átrio e a conecta diretamente à artéria pulmonar, reduzindo a sobrecarga de volume do ventrículo único ao retirar dele a responsabilidade pelo fluxo pulmonar superior. O estágio 3, a cirurgia de Fontan propriamente dita, geralmente entre 18 meses e 4 anos, completa a circulação ao desviar também o retorno da veia cava inferior diretamente para as artérias pulmonares, por conduto extracardíaco ou túnel lateral, eliminando a mistura de sangue e otimizando a saturação sistêmica. A circulação de Fontan resultante impõe pressão venosa sistêmica cronicamente elevada como motor do fluxo pulmonar passivo, com consequências previsíveis em médio e longo prazo sobre órgãos a jusante. O seguimento vitalício multidisciplinar é obrigatório e deve envolver cardiologia especializada em cardiopatia congênita do adulto (ACHD), hepatologia — dada a hepatopatia congestiva crônica que evolui para fibrose e, eventualmente, cirrose cardíaca — e hematologia, pelo risco tromboembólico inerente ao fluxo venoso lentificado e à eventual disfunção hepática de síntese, além de nutrição, saúde reprodutiva e saúde mental conforme a fase da vida. É preciso reconhecer explicitamente que a falência de Fontan — manifestada por intolerância ao exercício progressiva, enteropatia perdedora de proteína, bronquite plástica, arritmias atriais reentrantes, insuficiência hepática avançada, cianose progressiva por colaterais veno-venosas ou disfunção ventricular — representa a trajetória natural em longo prazo para uma parcela relevante desses pacientes, não uma complicação evitável em todos os casos, e exige vigilância ativa e sistemática ao longo de décadas, não apenas resposta reativa a sintomas já instalados. Diante de qualquer sinal de descompensação — nova arritmia, piora da capacidade funcional, edema, ascite, dispneia, hemoptise ou expectoração de moldes brônquicos, ou saturação em queda — o encaminhamento precoce a um centro terciário com expertise consolidada em ACHD e em falência de Fontan, incluindo avaliação para transplante cardíaco ou cardio-hepático quando indicado, deve ser priorizado, pois a janela terapêutica se estreita rapidamente e decisões tardias reduzem as opções de resgate.",
+    "ambulatory_flow": [
+      "Consulta periódica com cardiologista especializado em cardiopatia congênita do adulto (ACHD), com frequência ajustada à complexidade e ao estágio da via cirúrgica",
+      "Ecocardiograma seriado avaliando função do ventrículo único, competência da valva atrioventricular e permeabilidade do conduto/túnel de Fontan",
+      "Aferição de oximetria de pulso em toda consulta, comparando com a saturação basal individual do paciente",
+      "Eletrocardiograma de rotina e avaliação periódica com Holter para rastreio de arritmias atriais",
+      "Teste cardiopulmonar de esforço periódico para acompanhar a capacidade funcional ao longo do tempo",
+      "Avaliação laboratorial periódica incluindo função hepática, hematológica, renal e albumina sérica",
+      "Elastografia hepática e ultrassom com Doppler abdominal para rastreio da hepatopatia associada a Fontan",
+      "Rastreio direcionado de enteropatia perdedora de proteína quando houver sintomas gastrointestinais ou queda de albumina",
+      "Avaliação nutricional e de crescimento no paciente pediátrico, ou de composição corporal no adulto",
+      "Aconselhamento sobre atividade física orientada, contracepção e planejamento de gestação de alto risco, e programa estruturado de transição do cuidado pediátrico para o adulto",
+      "Ressonância magnética cardíaca periódica para avaliação anatômica e funcional detalhada não totalmente acessível ao ecocardiograma",
+      "Revisão periódica da necessidade de anticoagulação ou antiagregação e da adesão ao seguimento"
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de descompensação aguda da circulação de Fontan: cianose súbita, edema ou ascite de início recente, dispneia progressiva ou síncope",
+      "Priorizar avaliação imediata em serviço com experiência em cardiopatia congênita complexa; quando indisponível, estabilizar e transferir precocemente para centro de referência",
+      "Obter eletrocardiograma imediato para identificar arritmia atrial (fibrilação ou flutter), gatilho frequente de descompensação nessa população",
+      "Avaliar volemia e função hepática e renal de forma aguda, atentando para sinais de baixo débito e congestão sistêmica",
+      "Investigar obstrução mecânica no trajeto de Fontan, incluindo trombose ou estenose de conduto, com ecocardiograma e, se necessário, angiotomografia",
+      "Considerar bronquite plástica em quadros respiratórios agudos com expectoração de moldes brônquicos",
+      "Instituir suporte hemodinâmico e tratamento da arritmia conforme protocolo institucional, evitando condutas que aumentem a resistência vascular pulmonar",
+      "Acionar precocemente avaliação para suporte mecânico circulatório ou transplante em casos refratários à estabilização inicial"
+    ],
+    "monitoring": [
+      "Saturação periférica de oxigênio em relação ao basal individual",
+      "Função hepática seriada (enzimas, bilirrubinas, plaquetas, elastografia)",
+      "Ritmo cardíaco por eletrocardiograma, Holter e, quando presente, dispositivo implantável",
+      "Função ventricular e valvar ao ecocardiograma seriado",
+      "Albumina sérica e sinais clínicos de enteropatia perdedora de proteína",
+      "Capacidade funcional e tolerância ao exercício ao longo do tempo",
+      "Função renal periódica",
+      "Sinais clínicos e laboratoriais de tromboembolismo venoso ou sistêmico"
+    ],
+    "assistant_questions": [
+      {
+        "id": "estagio_cirurgico_atual",
+        "text": "Em qual estágio da via cirúrgica univentricular o paciente se encontra?",
+        "type": "select",
+        "options": [
+          {
+            "value": "estagio1",
+            "label": "Estágio 1 (tipo Norwood ou variante)"
+          },
+          {
+            "value": "estagio2",
+            "label": "Estágio 2 (Glenn/hemi-Fontan)"
+          },
+          {
+            "value": "fontan_completo",
+            "label": "Fontan completo (estágio 3)"
+          },
+          {
+            "value": "pos_fontan_adulto",
+            "label": "Seguimento pós-Fontan no adulto"
+          }
+        ]
+      },
+      {
+        "id": "tempo_desde_fontan_anos",
+        "text": "Quantos anos se passaram desde a cirurgia de Fontan?",
+        "type": "number"
+      },
+      {
+        "id": "saturacao_atual",
+        "text": "Qual a saturação periférica de oxigênio atual, em porcentagem?",
+        "type": "number"
+      },
+      {
+        "id": "sinais_cianose_progressiva",
+        "text": "Há cianose progressiva ou queda em relação à saturação basal do paciente?",
+        "type": "boolean"
+      },
+      {
+        "id": "edema_ascite_novo",
+        "text": "Há edema periférico ou ascite de início recente?",
+        "type": "boolean"
+      },
+      {
+        "id": "arritmia_nova",
+        "text": "Foi identificada arritmia atrial nova ou sintomática?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_atuais",
+        "text": "Quais sintomas o paciente apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia",
+            "label": "Dispneia"
+          },
+          {
+            "value": "palpitacoes",
+            "label": "Palpitações"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope"
+          },
+          {
+            "value": "dor_abdominal",
+            "label": "Dor abdominal"
+          },
+          {
+            "value": "diarreia_cronica",
+            "label": "Diarreia crônica"
+          },
+          {
+            "value": "hemoptise_ou_expectoracao_moldes",
+            "label": "Hemoptise ou expectoração de moldes brônquicos"
+          },
+          {
+            "value": "fadiga",
+            "label": "Fadiga"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sintoma"
+          }
+        ]
+      },
+      {
+        "id": "enteropatia_perdedora_proteina_conhecida",
+        "text": "Há diagnóstico prévio de enteropatia perdedora de proteína?",
+        "type": "boolean"
+      },
+      {
+        "id": "bronquite_plastica_previa",
+        "text": "Há história prévia de bronquite plástica?",
+        "type": "boolean"
+      },
+      {
+        "id": "hepatopatia_estagio",
+        "text": "Qual o estágio conhecido de acometimento hepático associado ao Fontan?",
+        "type": "select",
+        "options": [
+          {
+            "value": "sem_acometimento",
+            "label": "Sem acometimento hepático conhecido"
+          },
+          {
+            "value": "fibrose_leve",
+            "label": "Fibrose leve"
+          },
+          {
+            "value": "fibrose_avancada",
+            "label": "Fibrose avançada"
+          },
+          {
+            "value": "cirrose",
+            "label": "Cirrose cardíaca"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido / não investigado"
+          }
+        ]
+      },
+      {
+        "id": "uso_anticoagulante_antiagregante",
+        "text": "O paciente está em uso de anticoagulante ou antiagregante?",
+        "type": "boolean"
+      },
+      {
+        "id": "seguimento_achd_ativo",
+        "text": "O paciente está em seguimento ativo com centro especializado em cardiopatia congênita do adulto (ACHD)?",
+        "type": "boolean"
+      },
+      {
+        "id": "classe_funcional",
+        "text": "Qual a classe funcional atual (NYHA)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "I",
+            "label": "Classe I"
+          },
+          {
+            "value": "II",
+            "label": "Classe II"
+          },
+          {
+            "value": "III",
+            "label": "Classe III"
+          },
+          {
+            "value": "IV",
+            "label": "Classe IV"
+          }
+        ]
+      },
+      {
+        "id": "acesso_centro_especializado",
+        "text": "Há acesso a centro terciário com expertise em falência de Fontan ou ACHD?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rule_falencia_aguda_fontan",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_cianose_progressiva",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "edema_ascite_novo",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "arritmia_nova",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cianose progressiva associada a congestão sistêmica e arritmia nova sugere falência aguda da circulação de Fontan"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente a serviço com expertise em cardiopatia congênita complexa/ACHD",
+            "Obter eletrocardiograma e ecocardiograma com urgência",
+            "Investigar obstrução mecânica do trajeto de Fontan e disfunção ventricular associada"
+          ],
+          "messages": [
+            "Combinação de cianose progressiva, edema/ascite de início recente e arritmia nova indica risco de descompensação aguda da circulação de Fontan e requer avaliação emergencial"
+          ]
+        }
+      },
+      {
+        "id": "rule_cianose_progressiva_isolada",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_cianose_progressiva",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Queda de saturação em relação ao basal individual"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma",
+            "Angiotomografia para pesquisa de colaterais veno-venosas ou obstrução do trajeto de Fontan"
+          ]
+        }
+      },
+      {
+        "id": "rule_congestao_sistemica_nova",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "edema_ascite_novo",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Edema ou ascite de início recente em portador de circulação de Fontan"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma",
+            "Ultrassom abdominal com Doppler hepático",
+            "Função hepática e renal"
+          ]
+        }
+      },
+      {
+        "id": "rule_arritmia_atrial_nova",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_nova",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Arritmia atrial nova em circulação de Fontan"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Holter",
+            "Ecocardiograma"
+          ],
+          "emergency_flow": [
+            "Avaliar necessidade de reversão do ritmo em serviço especializado"
+          ]
+        }
+      },
+      {
+        "id": "rule_bronquite_plastica_aguda",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "bronquite_plastica_previa",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "hemoptise_ou_expectoracao_moldes"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Expectoração de moldes brônquicos em paciente com história de bronquite plástica"
+          ],
+          "emergency_flow": [
+            "Avaliação respiratória urgente com possível necessidade de broncoscopia em centro especializado"
+          ]
+        }
+      },
+      {
+        "id": "rule_enteropatia_perdedora_proteina",
+        "priority": 70,
+        "when": {
+          "any": [
+            {
+              "field": "enteropatia_perdedora_proteina_conhecida",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "diarreia_cronica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Albumina sérica",
+            "Alfa-1-antitripsina fecal"
+          ],
+          "differentials": [
+            "Enteropatia perdedora de proteína associada a Fontan",
+            "Outras causas de hipoalbuminemia"
+          ]
+        }
+      },
+      {
+        "id": "rule_hepatopatia_avancada",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "hepatopatia_estagio",
+              "op": "in",
+              "value": [
+                "fibrose_avancada",
+                "cirrose"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Estágio avançado de hepatopatia associada a Fontan documentado"
+          ],
+          "suggested_tests": [
+            "Elastografia hepática seriada",
+            "Avaliação hepatológica especializada"
+          ],
+          "missing_information": [
+            "Rastreio de varizes esofágicas e de carcinoma hepatocelular, se ainda não realizado"
+          ]
+        }
+      },
+      {
+        "id": "rule_sem_seguimento_achd",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "seguimento_achd_ativo",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Vínculo ativo com centro especializado em cardiopatia congênita do adulto (ACHD)"
+          ],
+          "messages": [
+            "Recomenda-se estabelecer seguimento regular em centro com expertise em ACHD, mesmo na ausência de sintomas atuais"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação inicial em serviço de ACHD"
+          ]
+        }
+      },
+      {
+        "id": "rule_sem_acesso_centro_especializado_com_alerta",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "acesso_centro_especializado",
+              "op": "falsy",
+              "value": true
+            },
+            {
+              "field": "sinais_cianose_progressiva",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sinal de alerta presente sem acesso identificado a centro especializado em falência de Fontan/ACHD"
+          ],
+          "messages": [
+            "Priorizar articulação imediata para transferência a centro terciário com expertise em ACHD"
+          ]
+        }
+      },
+      {
+        "id": "rule_classe_funcional_avancada",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "classe_funcional",
+              "op": "in",
+              "value": [
+                "III",
+                "IV"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Classe funcional avançada em circulação de Fontan"
+          ],
+          "suggested_tests": [
+            "Teste cardiopulmonar de esforço",
+            "Ecocardiograma",
+            "Avaliação para falência de Fontan"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Paciente aguardando cirurgia de estágio 1 (Norwood ou variante) — período neonatal crítico, circulação sistêmica e pulmonar em paralelo dependente do canal arterial.",
+      "Paciente no intervalo interestágios, entre a cirurgia de estágio 1 e a cavopulmonar bidirecional (Glenn/hemi-Fontan) — fase de maior risco de mortalidade domiciliar, exige vigilância rigorosa de saturação, ganho de peso e sinais de alarme.",
+      "Paciente após cavopulmonar bidirecional (Glenn/hemi-Fontan), aguardando conclusão do Fontan — fisiologia de estágio intermediário, ainda com algum grau de cianose ou mistura.",
+      "Adulto com circulação de Fontan estável de longo prazo — acompanhamento ambulatorial regular e vigilância programada para complicações tardias, mesmo na ausência de sintomas.",
+      "Adulto com sinais de falência da circulação de Fontan e/ou hepatopatia associada ao Fontan — exige avaliação multissistêmica (cardíaca e hepática) e discussão precoce de opções avançadas, incluindo transplante.",
+      "Gestante com fisiologia de Fontan — gestação de alto risco, acompanhamento conjunto obstétrico e cardiológico, pela ausência de reserva de ventrículo subpulmonar diante da expansão volêmica e da queda de resistência vascular sistêmica da gravidez.",
+      "Paciente com arritmia atrial (taquicardia intra-atrial reentrante ou fibrilação atrial) em circulação de Fontan — arritmia associada a risco elevado de descompensação hemodinâmica e indicação frequente de anticoagulação.",
+      "Paciente com enteropatia perdedora de proteína ou bronquite plástica como complicação sistêmica da circulação de Fontan.",
+      "Criança ou adolescente com circulação de Fontan em avaliação de aptidão física, elegibilidade esportiva ou programa de reabilitação cardíaca estruturada.",
+      "Paciente com circulação de Fontan e disfunção do nó sinusal, bradiarritmia ou necessidade de avaliação para marca-passo."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "canalopatias-pediatricas",
