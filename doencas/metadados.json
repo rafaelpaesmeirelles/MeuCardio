@@ -2958,37 +2958,72 @@
     "category": "cardiologia_fetal",
     "subtype": "arritmia_fetal",
     "prevalence_rank": 9,
-    "completeness": "intermediario",
+    "completeness": "completo",
     "summary": "Taquiarritmia fetal sustentada capaz de causar insuficiência cardíaca e hidropisia, exigindo avaliação do mecanismo, frequência, duração e repercussão.",
     "presentation": [
-      "Frequência fetal persistentemente elevada",
-      "Disfunção ventricular",
-      "Regurgitação atrioventricular",
-      "Hidropisia"
+      "Frequência cardíaca fetal persistentemente elevada, identificada em ausculta obstétrica de rotina ou em cardiotocografia",
+      "TSV por reentrada atrioventricular com relação atrioventricular 1:1, intervalo VA curto e frequência ventricular tipicamente entre 220 e 300 bpm, com início e término abruptos (padrão 'liga-desliga')",
+      "Flutter atrial fetal com frequência atrial extremamente elevada e relação atrioventricular variável (bloqueio 2:1, 3:1 ou variável), podendo cursar com frequência ventricular menor que a observada na TSV por reentrada",
+      "Taquicardia atrial ectópica com relação atrioventricular variável, intervalo VA longo, frequência menos extrema e caráter frequentemente incessante",
+      "Taquicardia juncional, forma rara, com relação atrioventricular 1:1 ou dissociação AV e resposta habitualmente mais pobre a fármacos que atuam no nó atrioventricular",
+      "Disfunção ventricular sistólica ao ecocardiograma, evidenciada por redução da fração de encurtamento ou da contratilidade biventricular",
+      "Regurgitação atrioventricular (mitral e/ou tricúspide) ao Doppler colorido, frequentemente um sinal precoce de comprometimento hemodinâmico",
+      "Hidropisia fetal não imune já estabelecida, com ascite, derrame pericárdico, derrame pleural e edema subcutâneo generalizado",
+      "Polidrâmnio associado à taquiarritmia sustentada, refletindo alteração da dinâmica do líquido amniótico",
+      "Cardiomegalia ao exame ecocardiográfico em casos de taquicardia incessante ou prolongada",
+      "Achado incidental em ultrassonografia obstétrica de rotina, sem qualquer sintoma materno associado, em episódios paroxísticos intermitentes e bem tolerados"
     ],
     "differentials": [
-      "Flutter atrial",
-      "Taquicardia sinusal",
-      "Taquicardia ventricular fetal"
+      "Flutter atrial fetal",
+      "Taquicardia sinusal fetal (secundária a estresse fetal, infecção, anemia ou tireotoxicose materna)",
+      "Taquicardia ventricular fetal (rara, com dissociação atrioventricular e frequência ventricular geralmente menos extrema)",
+      "Taquicardia atrial ectópica",
+      "Taquicardia juncional ectópica",
+      "Bloqueio atrioventricular fetal com ritmo de escape acelerado",
+      "Artefato de contagem da frequência cardíaca fetal na monitorização (falso positivo)"
     ],
     "tests": [
-      "Ecocardiograma fetal com relação atrioventricular",
-      "Avaliação de função ventricular, hidropisia e anatomia",
-      "Monitorização materna antes e durante terapia transplacentária"
+      "Ecocardiografia fetal detalhada com Doppler pulsado simultâneo de via de entrada mitral e via de saída aórtica",
+      "Modo M (M-mode) cardíaco fetal",
+      "Doppler tecidual colorido (color tissue Doppler) fetal",
+      "Avaliação da função ventricular (fração de encurtamento e avaliação qualitativa biventricular)",
+      "Doppler colorido para pesquisa de regurgitação atrioventricular",
+      "Pesquisa ecográfica de sinais de hidropisia fetal não imune (ascite, derrame pericárdico, derrame pleural, edema subcutâneo)",
+      "Avaliação do volume de líquido amniótico",
+      "Magnetocardiografia fetal, quando disponível em centro especializado, para caracterização detalhada do ritmo",
+      "Avaliação materna basal (eletrólitos, função tireoidiana, sorologias e eletrocardiograma) antes do início de terapia antiarrítmica transplacentária"
     ],
     "red_flags": [
-      "Hidropisia",
-      "Disfunção ventricular",
-      "Taquicardia sustentada",
-      "Comprometimento materno pelo tratamento"
+      "Hidropisia fetal não imune já estabelecida",
+      "Disfunção ventricular sistólica ao ecocardiograma",
+      "Taquicardia sustentada ou incessante, particularmente acima de 12 horas contínuas",
+      "Frequência ventricular extremamente elevada (acima de 240 bpm)",
+      "Regurgitação atrioventricular importante ao Doppler colorido",
+      "Comprometimento materno relacionado ao tratamento antiarrítmico transplacentário (efeitos adversos ou alterações eletrocardiográficas maternas)",
+      "Ausência de resposta à primeira linha de tratamento farmacológico transplacentário",
+      "Necessidade de intervenção urgente em idade gestacional de prematuridade extrema"
     ],
     "ambulatory_flow": [
-      "Encaminhar para cardiologia fetal",
-      "Definir necessidade de tratamento e frequência de monitorização",
-      "Planejar parto e avaliação neonatal"
+      "Confirmar o diagnóstico de TSV fetal por ecocardiografia fetal detalhada, caracterizando o mecanismo (reentrada versus flutter atrial) e a frequência ventricular",
+      "Avaliar em cada consulta a presença ou ausência de sinais de hidropisia fetal (derrame pericárdico, ascite, edema subcutâneo, derrame pleural)",
+      "Definir, em conjunto com cardiologia fetal e obstetrícia de alto risco, a indicação e a escolha do antiarrítmico transplacentário conforme o mecanismo da arritmia",
+      "Programar avaliações ecocardiográficas fetais seriadas para acompanhar a resposta ao tratamento e a frequência cardíaca fetal",
+      "Realizar monitorização materna clínica e laboratorial regular durante todo o período de uso do antiarrítmico",
+      "Orientar a gestante sobre sinais de alarme maternos e fetais que exigem contato imediato com a equipe assistente",
+      "Reavaliar periodicamente a necessidade de ajuste terapêutico ou de associação de fármacos conforme a resposta clínica observada",
+      "Planejar via e momento do parto considerando idade gestacional, resposta ao tratamento e estabilidade fetal, sem tratar a antecipação do parto como terapia da arritmia",
+      "Articular seguimento neonatal precoce com cardiologia pediátrica após o nascimento, especialmente quando houve conversão a ritmo sinusal intraútero",
+      "Manter comunicação estruturada entre obstetrícia, cardiologia fetal e neonatologia ao longo de todo o acompanhamento"
     ],
     "emergency_flow": [
-      "Hidropisia ou deterioração fetal requer discussão urgente multidisciplinar"
+      "Confirmar com urgência, por ecocardiografia fetal, o mecanismo da arritmia e a presença e extensão da hidropisia",
+      "Iniciar a terapia farmacológica transplacentária sem atraso, priorizando esquema com início de ação mais rápido conforme protocolo institucional",
+      "Internar a gestante para monitorização materna e fetal intensiva durante a fase inicial do tratamento",
+      "Reavaliar a frequência cardíaca fetal e os sinais de hidropisia em intervalos curtos para identificar precocemente resposta ou refratariedade",
+      "Considerar associação de antiarrítmicos ou troca de esquema terapêutico diante de resposta insuficiente em tempo apropriado",
+      "Envolver equipe multidisciplinar (cardiologia fetal, obstetrícia de alto risco, neonatologia) na definição de conduta diante de refratariedade",
+      "Avaliar, em casos refratários graves e conforme a idade gestacional, a indicação excepcional de antecipação do parto",
+      "Preparar suporte neonatal especializado imediato quando o parto for antecipado por comprometimento fetal grave"
     ],
     "tags": [
       "fetal",
@@ -2997,18 +3032,478 @@
       "hidropisia"
     ],
     "source_refs": [
-      "Diretriz Brasileira de Cardiologia Fetal, 2019"
+      "Diretriz Brasileira de Cardiologia Fetal, 2019",
+      "Naheed ZJ, et al. Fetal tachycardia: mechanisms and predictors of hydrops fetalis. J Am Coll Cardiol. 1996;27(7):1736-40. PMID: 8636562.",
+      "Fouron JC. Fetal arrhythmias: the Saint-Justine hospital experience. Prenat Diagn. 2004;24(13):1068-80. PMID: 15612055.",
+      "Strasburger JF, Wakai RT. Fetal cardiac arrhythmia detection and in utero therapy. Nat Rev Cardiol. 2010;7(5):277-90. PMID: 20418904.",
+      "Jaeggi ET, et al. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol. Circulation. 2011;124(16):1747-54. PMID: 21931080.",
+      "Donofrio MT, et al. Diagnosis and treatment of fetal cardiac disease: a scientific statement from the American Heart Association. Circulation. 2014;129(21):2183-242. PMID: 24763516.",
+      "Alvarez SGV, et al. The Incremental Benefit of Color Tissue Doppler in Fetal Arrhythmia Assessment. J Am Soc Echocardiogr. 2019;32(1):145-156. PMID: 30340890."
     ],
     "source_urls": [
-      "https://abccardiol.org/article/diretriz-brasileira-de-cardiologia-fetal-2019/"
+      "https://abccardiol.org/article/diretriz-brasileira-de-cardiologia-fetal-2019/",
+      "https://pubmed.ncbi.nlm.nih.gov/8636562/",
+      "https://pubmed.ncbi.nlm.nih.gov/15612055/",
+      "https://pubmed.ncbi.nlm.nih.gov/20418904/",
+      "https://pubmed.ncbi.nlm.nih.gov/21931080/",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/30340890/"
     ],
-    "review_status": "revisado",
-    "review_note": "Terapia fetal deve ser conduzida por equipe especializada e protocolo materno-fetal.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (vigésimo sexto lote de conteúdo do dia): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos, além de presentation/differentials/tests/red_flags básicos em bullet (completeness=intermediario), mas zero epidemiology, diagnostic_approach, treatment_summary ou assistant machinery (1 source_ref). Adicionados epidemiology (TSV é a taquiarritmia sustentada fetal mais comum, 60-70% dos casos; mecanismo predominante é reentrada AV por via acessória; risco de hidropisia correlaciona com frequência e duração sustentada), presentation expandida de 4 para 11 itens (por mecanismo: reentrada, flutter, taquicardia atrial ectópica, juncional), diagnostic_approach (diferenciação ecocardiográfica dos mecanismos por relação atrioventricular via Doppler pulsado simultâneo/M-mode/Doppler tecidual), differentials expandido de 3 para 7, tests expandido de 3 para 9, red_flags expandido de 4 para 8, treatment_summary (terapia farmacológica transplacentária como primeira linha, sem doses; hidropisia reduz eficácia e aumenta urgência; monitorização materna obrigatória; parto antecipado é conduta de exceção, não trata a arritmia), ambulatory_flow, emergency_flow, monitoring, special_populations (7), assistant_questions (13), assistant_rules (9, priority 95 para TSV sustentada + hidropisia). related_document_slugs expandido de 1 para 3 (união com o original, sem duplicar) — corpus verificado por leitura real, no piso mínimo de 3 (não foi possível superar sem incluir conexões tangenciais; os 2 novos vínculos foram confirmados como centrais por citação de trecho exato antes da montagem). patient_material_slug original preservado. Nenhuma dose de fármaco em nenhum campo — antiarrítmicos (digoxina, flecainida, sotalol) citados apenas por nome. Todos os 6 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária.",
+    "version": 2,
     "related_document_slugs": [
-      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario"
+      "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+      "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario",
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento"
     ],
-    "patient_material_slug": "taquicardia-supraventricular-fetal"
+    "patient_material_slug": "taquicardia-supraventricular-fetal",
+    "epidemiology": "A taquicardia supraventricular (TSV) fetal é a taquiarritmia sustentada mais frequente na vida intrauterina, respondendo por cerca de 60 a 70% dos casos de taquiarritmia fetal identificados em centros de referência, com o flutter atrial constituindo a maior parte dos casos restantes. O mecanismo predominante é a reentrada atrioventricular por via acessória, tipicamente caracterizada por frequência ventricular muito elevada (em geral acima de 220 a 240 batimentos por minuto) e relação atrioventricular 1:1 com condução retrógrada rápida (intervalo VA curto). O flutter atrial fetal é o segundo mecanismo mais comum, geralmente surgindo mais tardiamente na gestação e associado a relação atrioventricular variável (bloqueio 2:1 ou maior) por reentrada intra-atrial. A taquicardia atrial ectópica, decorrente de foco automático fora do nó sinusal, e a taquicardia juncional, menos frequentes, completam o espectro etiológico e costumam apresentar frequências menos extremas e relação atrioventricular variável ou intervalo VA longo. O risco de hidropisia fetal não imune correlaciona-se diretamente com a frequência cardíaca e, sobretudo, com a duração sustentada do episódio: taquicardias incessantes ou de longa duração, especialmente acima de 12 horas contínuas ou com frequência superior a 240 bpm, elevam substancialmente o risco de descompensação hemodinâmica, disfunção ventricular e hidropisia, enquanto episódios paroxísticos breves e intermitentes tendem a ser mais bem tolerados. O diagnóstico pré-natal precoce, associado ao tratamento farmacológico transplacentário guiado por ecocardiografia fetal seriada, modifica de forma expressiva o prognóstico, revertendo a arritmia ou controlando a frequência na maioria dos fetos sem hidropisia ao diagnóstico, ao passo que fetos já hidrópicos apresentam menor taxa de resposta ao tratamento, maior morbimortalidade perinatal e frequentemente necessitam de esquemas combinados de antiarrítmicos e vigilância intensiva até o parto.",
+    "diagnostic_approach": "A abordagem diagnóstica da TSV fetal é primariamente ecocardiográfica, com objetivo central de estabelecer a relação temporal entre a atividade atrial e a ventricular (relação atrioventricular), pois esse padrão é o principal determinante do mecanismo arrítmico subjacente. O método mais utilizado é o Doppler pulsado simultâneo, captando o influxo mitral (via de entrada) e o fluxo de saída aórtico (via de saída) em um único volume de amostra, o que permite inferir o momento da contração atrial e ventricular e calcular os intervalos AV e VA. Alternativamente, emprega-se o modo M (M-mode) posicionado atravessando simultaneamente a parede atrial e a ventricular, ou o Doppler tecidual colorido (color tissue Doppler), que aumenta a acurácia na diferenciação de mecanismos quando a janela acústica é limitada. Na TSV por reentrada atrioventricular observa-se relação atrioventricular 1:1 com intervalo VA curto, refletindo condução retrógrada rápida pela via acessória, e início/término abruptos. No flutter atrial, a frequência atrial é extremamente elevada e regular, com relação atrioventricular variável (bloqueio funcional 2:1, 3:1 ou variável) e intervalo VA mais longo que o intervalo AV. Na taquicardia atrial ectópica, a relação atrioventricular também é variável, porém com intervalo VA longo e frequência atrial menos extrema, muitas vezes com padrão incessante. A taquicardia juncional caracteristicamente exibe relação atrioventricular 1:1 com condução VA muito rápida ou dissociação AV, sendo mecanismo raro e de controle farmacológico mais difícil. Complementarmente, avalia-se de forma sistemática a função ventricular (fração de encurtamento, avaliação qualitativa da contratilidade biventricular), a presença de regurgitação atrioventricular ao Doppler colorido e os sinais ecográficos de hidropisia fetal não imune (ascite, derrame pericárdico, derrame pleural, edema subcutâneo), além do volume de líquido amniótico. A vigilância seriada com ecocardiografia fetal é fundamental durante o tratamento transplacentário, para monitorar a resposta terapêutica, orientar o ajuste do esquema antiarrítmico e detectar precocemente sinais de deterioração hemodinâmica.",
+    "treatment_summary": "A taquicardia supraventricular (TSV) fetal sustentada tem como primeira linha de tratamento a terapia farmacológica transplacentária: a mãe recebe o antiarrítmico por via sistêmica e o fármaco atravessa a placenta para atingir a circulação fetal, permitindo o controle da arritmia sem necessidade de acesso direto ao feto. Essa lógica evita procedimentos invasivos fetais, que carregam risco procedural elevado, e aproveita a via materno-fetal como rota terapêutica eficaz na maioria dos casos. Entre os antiarrítmicos mais utilizados nesse contexto estão a digoxina, a flecainida e o sotalol, isolados ou em associação, conforme o tipo de arritmia, a resposta observada e o perfil materno. A eficácia desses fármacos não é uniforme entre os diferentes mecanismos de taquiarritmia: para a TSV por reentrada, flecainida e digoxina tendem a apresentar taxas de conversão mais altas, enquanto para o flutter atrial as taxas de conversão a ritmo sinusal costumam ser menores, exigindo por vezes associação de fármacos ou reavaliação da estratégia terapêutica. A presença de hidropisia fetal modifica de forma importante o cenário clínico: o edema generalizado e o comprometimento da perfusão tecidual dificultam a absorção e a distribuição do fármaco administrado à mãe, reduzindo a concentração efetiva que alcança o feto e, consequentemente, a resposta terapêutica. Por essa razão, a hidropisia não apenas piora o prognóstico basal como também impõe maior urgência ao tratamento, exigindo intervalos mais curtos entre avaliações, ajustes terapêuticos mais ágeis e, em alguns serviços, escolha de esquemas com início de ação mais rápido. Durante todo o período de tratamento, é indispensável a monitorização materna rigorosa, incluindo eletrocardiograma seriado, avaliação de eletrólitos e função renal, e vigilância clínica de sinais de toxicidade, dado o potencial pró-arrítmico e os efeitos adversos sistêmicos dos antiarrítmicos empregados; essa vigilância é parte inseparável da segurança do tratamento, já que a mãe é exposta a fármacos com margem terapêutica estreita para tratar uma condição que não é dela. O parto antecipado não trata a arritmia fetal e não deve ser considerado conduta de rotina; sua indicação fica reservada a casos refratários graves, quando a terapia farmacológica não obtém resposta adequada e há comprometimento fetal importante, sempre ponderando os riscos da prematuridade conforme a idade gestacional no momento da decisão. Após a conversão a ritmo sinusal, seja intraútero, seja no período neonatal, o seguimento do recém-nascido é essencial, pois há risco reconhecido de recorrência da arritmia no período pós-natal, o que justifica monitorização eletrocardiográfica e clínica continuada nas primeiras semanas de vida, com plano estruturado de acompanhamento cardiológico pediátrico.",
+    "monitoring": [
+      "Eletrocardiograma materno seriado para detectar efeitos pró-arrítmicos do tratamento",
+      "Dosagem de eletrólitos maternos (potássio, magnésio) durante o uso do antiarrítmico",
+      "Avaliação da função renal materna, considerando o risco de acúmulo do fármaco",
+      "Monitorização clínica materna de sinais e sintomas de toxicidade (náusea, tontura, alterações visuais, palpitações)",
+      "Ecocardiografia fetal seriada para acompanhar mecanismo, frequência e resposta da arritmia ao tratamento",
+      "Avaliação seriada de sinais de hidropisia fetal (derrame pericárdico, ascite, edema subcutâneo, derrame pleural)",
+      "Avaliação da função ventricular fetal e de sinais de comprometimento hemodinâmico",
+      "Vigilância do bem-estar fetal (perfil biofísico, Doppler) conforme protocolo institucional"
+    ],
+    "assistant_questions": [
+      {
+        "id": "tsv_sustentada",
+        "label": "A taquicardia supraventricular fetal é sustentada (não paroxística/intermitente)?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_arritmia",
+        "label": "Qual o mecanismo predominante da arritmia?",
+        "type": "select",
+        "options": [
+          {
+            "value": "reentrada",
+            "label": "TSV por reentrada"
+          },
+          {
+            "value": "flutter_atrial",
+            "label": "Flutter atrial"
+          },
+          {
+            "value": "outro",
+            "label": "Outro mecanismo"
+          }
+        ]
+      },
+      {
+        "id": "presenca_hidropisia",
+        "label": "Há sinais de hidropisia fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_hidropisia",
+        "label": "Quais sinais de comprometimento fetal estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "derrame_pericardico",
+            "label": "Derrame pericárdico"
+          },
+          {
+            "value": "ascite",
+            "label": "Ascite"
+          },
+          {
+            "value": "edema_subcutaneo",
+            "label": "Edema subcutâneo"
+          },
+          {
+            "value": "derrame_pleural",
+            "label": "Derrame pleural"
+          },
+          {
+            "value": "disfuncao_ventricular",
+            "label": "Disfunção ventricular"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "label": "Qual a idade gestacional atual (em semanas)?",
+        "type": "number"
+      },
+      {
+        "id": "frequencia_cardiaca_fetal_bpm",
+        "label": "Qual a frequência cardíaca fetal atual (bpm)?",
+        "type": "number"
+      },
+      {
+        "id": "terapia_transplacentaria_iniciada",
+        "label": "A terapia farmacológica transplacentária já foi iniciada?",
+        "type": "boolean"
+      },
+      {
+        "id": "farmaco_utilizado",
+        "label": "Qual antiarrítmico transplacentário está sendo utilizado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "digoxina",
+            "label": "Digoxina"
+          },
+          {
+            "value": "flecainida",
+            "label": "Flecainida"
+          },
+          {
+            "value": "sotalol",
+            "label": "Sotalol"
+          },
+          {
+            "value": "associacao",
+            "label": "Associação de antiarrítmicos"
+          },
+          {
+            "value": "outro",
+            "label": "Outro"
+          },
+          {
+            "value": "nao_iniciado",
+            "label": "Ainda não iniciado"
+          }
+        ]
+      },
+      {
+        "id": "resposta_terapia",
+        "label": "Qual a resposta observada ao tratamento farmacológico?",
+        "type": "select",
+        "options": [
+          {
+            "value": "conversao_ritmo_sinusal",
+            "label": "Conversão a ritmo sinusal"
+          },
+          {
+            "value": "melhora_parcial",
+            "label": "Melhora parcial (controle de frequência sem conversão)"
+          },
+          {
+            "value": "sem_resposta",
+            "label": "Sem resposta"
+          },
+          {
+            "value": "piora",
+            "label": "Piora do quadro"
+          },
+          {
+            "value": "nao_avaliavel",
+            "label": "Ainda não avaliável"
+          }
+        ]
+      },
+      {
+        "id": "monitorizacao_materna_realizada",
+        "label": "A monitorização materna (ECG, eletrólitos, função renal) está sendo realizada conforme protocolo?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_maternos_toxicidade",
+        "label": "A gestante apresenta sinais ou sintomas sugestivos de toxicidade ao antiarrítmico?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "nausea",
+            "label": "Náusea"
+          },
+          {
+            "value": "tontura",
+            "label": "Tontura"
+          },
+          {
+            "value": "alteracoes_visuais",
+            "label": "Alterações visuais"
+          },
+          {
+            "value": "palpitacoes",
+            "label": "Palpitações"
+          },
+          {
+            "value": "bradicardia",
+            "label": "Bradicardia materna"
+          },
+          {
+            "value": "hipotensao",
+            "label": "Hipotensão materna"
+          },
+          {
+            "value": "alteracoes_ecg",
+            "label": "Alterações eletrocardiográficas"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "conduta_parto_considerada",
+        "label": "A antecipação do parto está sendo considerada devido a refratariedade ou comprometimento fetal grave?",
+        "type": "boolean"
+      },
+      {
+        "id": "seguimento_neonatal_planejado",
+        "label": "Há plano estruturado de seguimento neonatal cardiológico após o nascimento?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "tsv_sustentada_hidropisia_emergencia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "tsv_sustentada",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "presenca_hidropisia",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropisia fetal associada a TSV sustentada, o que reduz a eficácia da terapia transplacentária e aumenta o risco de morte fetal"
+          ],
+          "emergency_flow": [
+            "Internar para monitorização materno-fetal intensiva e iniciar ou otimizar a terapia transplacentária sem atraso"
+          ],
+          "messages": [
+            "A presença de hidropisia reduz a resposta esperada à terapia transplacentária e exige conduta de maior urgência."
+          ]
+        }
+      },
+      {
+        "id": "tsv_sustentada_sem_hidropisia",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "tsv_sustentada",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "presenca_hidropisia",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "TSV sustentada sem hidropisia geralmente apresenta melhor resposta à terapia farmacológica transplacentária de primeira linha"
+          ],
+          "ambulatory_flow": [
+            "Programar ecocardiografias fetais seriadas para acompanhar a resposta terapêutica"
+          ]
+        }
+      },
+      {
+        "id": "flutter_atrial_menor_conversao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia",
+              "op": "eq",
+              "value": "flutter_atrial"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Flutter atrial geralmente apresenta taxas de conversão a ritmo sinusal menores do que a TSV por reentrada"
+          ],
+          "missing_information": [
+            "Considerar associação de antiarrítmicos caso a resposta inicial seja insuficiente"
+          ]
+        }
+      },
+      {
+        "id": "sem_resposta_com_hidropisia",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_terapia",
+              "op": "eq",
+              "value": "sem_resposta"
+            },
+            {
+              "field": "presenca_hidropisia",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Ausência de resposta à terapia farmacológica em feto hidrópico"
+          ],
+          "differentials": [
+            "Refratariedade à terapia farmacológica transplacentária"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal urgente para reavaliação do mecanismo da arritmia e da função ventricular"
+          ],
+          "emergency_flow": [
+            "Avaliar troca ou associação de antiarrítmicos e discutir antecipação excepcional do parto conforme a idade gestacional"
+          ]
+        }
+      },
+      {
+        "id": "toxicidade_materna_suspeita",
+        "priority": 80,
+        "when": {
+          "any": [
+            {
+              "field": "sintomas_maternos_toxicidade",
+              "op": "contains",
+              "value": "alteracoes_ecg"
+            },
+            {
+              "field": "sintomas_maternos_toxicidade",
+              "op": "contains",
+              "value": "bradicardia"
+            },
+            {
+              "field": "sintomas_maternos_toxicidade",
+              "op": "contains",
+              "value": "hipotensao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Possíveis sinais de toxicidade materna ao antiarrítmico em uso"
+          ],
+          "missing_information": [
+            "Confirmar eletrocardiograma materno e eletrólitos atualizados"
+          ]
+        }
+      },
+      {
+        "id": "monitorizacao_materna_ausente",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "terapia_transplacentaria_iniciada",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "monitorizacao_materna_realizada",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Monitorização materna (ECG, eletrólitos, função renal) não confirmada durante o uso do antiarrítmico"
+          ]
+        }
+      },
+      {
+        "id": "conversao_sem_seguimento_neonatal",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_terapia",
+              "op": "eq",
+              "value": "conversao_ritmo_sinusal"
+            },
+            {
+              "field": "seguimento_neonatal_planejado",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Plano de seguimento neonatal cardiológico não confirmado apesar da conversão a ritmo sinusal, considerando o risco de recorrência pós-natal"
+          ],
+          "ambulatory_flow": [
+            "Articular seguimento neonatal cardiológico estruturado após o nascimento"
+          ]
+        }
+      },
+      {
+        "id": "parto_antecipado_considerado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "conduta_parto_considerada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "A antecipação do parto deve ser reservada a casos refratários graves, ponderando a idade gestacional; ela não trata a arritmia por si só"
+          ],
+          "missing_information": [
+            "Confirmar refratariedade à terapia farmacológica e avaliar o risco-benefício da prematuridade"
+          ]
+        }
+      },
+      {
+        "id": "tipo_arritmia_nao_definido",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_arritmia",
+              "op": "missing"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Mecanismo da arritmia (reentrada versus flutter atrial) não caracterizado, informação necessária para orientar a escolha terapêutica"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com TSV sustentada e função ventricular preservada, sem sinais de hidropisia: prognóstico mais favorável, resposta habitualmente melhor ao antiarrítmico transplacentário, permitindo terapia por via materna com monitorização ecocardiográfica seriada menos intensiva do que nos casos hidrópicos.",
+      "Feto com TSV sustentada e hidropisia fetal já estabelecida (derrame pericárdico, ascite, derrame pleural, edema subcutâneo): menor taxa de resposta à cardioversão farmacológica transplacentária, maior mortalidade perinatal e necessidade de conduta mais urgente, com escolha de fármaco e via de administração influenciada pela gravidade do quadro hidrópico.",
+      "Feto com TSV intermitente ou não sustentada: episódios curtos e autolimitados de frequência atrial elevada, sem repercussão hemodinâmica mantida; a conduta prioriza vigilância ecocardiográfica seriada sobre tratamento farmacológico imediato, reservando a terapia para progressão a forma sustentada ou sinais de comprometimento da função ventricular.",
+      "Feto com flutter atrial associado (isoladamente ou concomitante à TSV por reentrada): mecanismo arritmogênico distinto da TSV por via acessória ou reentrada nodal, com resposta terapêutica própria aos antiarrítmicos transplacentários e necessidade de diferenciação ecocardiográfica cuidadosa entre os dois ritmos antes de definir a estratégia de tratamento.",
+      "Gestante em uso de antiarrítmico transplacentário para tratamento da TSV fetal: exige monitorização materna dedicada (eletrocardiográfica e, conforme o fármaco, laboratorial) pelo risco de efeitos pró-arrítmicos e de toxicidade sistêmica materna, paralelamente à vigilância da resposta fetal ao tratamento.",
+      "Recém-nascido com histórico de TSV fetal convertida intraútero: mantém risco de recorrência da arritmia no período pós-natal, o que justifica monitorização eletrocardiográfica e clínica dedicada nos primeiros dias e semanas de vida, mesmo após reversão bem-sucedida ainda na vida fetal.",
+      "Gestante com TSV fetal refratária ao tratamento transplacentário e gestação já próxima ao termo: cenário em que a decisão sobre antecipação do parto (em vez de manutenção da tentativa de controle farmacológico intraútero) passa a ser considerada, ponderando maturidade pulmonar fetal contra o risco de deterioração hemodinâmica fetal mantida."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
