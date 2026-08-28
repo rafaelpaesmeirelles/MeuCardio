@@ -14,18 +14,19 @@ concurrency:
 
 jobs:
   recover:
-    name: Restart restored production services
+    name: Deploy corrected main SHA to restore production
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 50
     environment: production
     env:
+      TARGET_SHA: ed4b63171148da782c43a5d6beca61799ed3e803
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
       SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
     steps:
-      - name: Restart backend and public proxy without reconciliation
+      - name: Deploy corrected current main through restricted SSH
         run: |
           set -euo pipefail
           : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
@@ -47,20 +48,12 @@ jobs:
             -o BatchMode=yes \
             -o ConnectTimeout=20 \
             -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=10 \
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            'set -euo pipefail; \
-             cd /opt/meucardio; \
-             docker compose -f docker-compose.prod.yml up -d backend frontend-build caddy agenda-sync; \
-             for i in $(seq 1 30); do \
-               if docker compose -f docker-compose.prod.yml exec -T backend python -c "import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/ready\", timeout=2).read()" >/dev/null 2>&1; then \
-                 break; \
-               fi; \
-               sleep 2; \
-             done; \
-             docker compose -f docker-compose.prod.yml exec -T backend python -c "import urllib.request; urllib.request.urlopen(\"http://localhost:8000/api/ready\", timeout=3).read()" >/dev/null; \
-             docker compose -f docker-compose.prod.yml ps backend caddy db redis agenda-sync'
+            "deploy $TARGET_SHA"
 
       - name: Verify public API is reachable again
         env:
@@ -69,4 +62,16 @@ jobs:
           set -euo pipefail
           curl --fail --silent --show-error --retry 12 --retry-all-errors --retry-delay 5 "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error --retry 12 --retry-all-errors --retry-delay 5 "$PUBLIC_URL/api/ready" > /dev/null
-          echo "CorVIA public API restored."
+          version_file="$RUNNER_TEMP/version.json"
+          curl --fail --silent --show-error --retry 12 --retry-all-errors --retry-delay 5 "$PUBLIC_URL/api/version" > "$version_file"
+          python3 - "$version_file" "$TARGET_SHA" <<'PY'
+          import json
+          import sys
+          path, expected = sys.argv[1:]
+          with open(path, encoding="utf-8") as handle:
+              payload = json.load(handle)
+          actual = payload.get("commit") or payload.get("version") or payload.get("sha")
+          if actual != expected:
+              raise SystemExit(f"Production reports {actual!r}; expected {expected!r}")
+          print(f"Production restored at {actual}")
+          PY
