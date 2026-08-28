@@ -21,9 +21,10 @@ def _rule(hub, rule_id):
 
 def test_har_revisada_e_autorizada():
     hub = _hub()
+    note = hub["review_note"].casefold()
     assert hub["review_status"] == "revisado"
-    assert "publicação autorizada" in hub["review_note"]
-    assert "responsável médico" in hub["review_note"]
+    assert "publicação autorizada" in note
+    assert "responsável médico" in note
 
 
 def test_emergencia_exige_pa_acentuada_e_lesao_aguda():
@@ -61,6 +62,11 @@ def test_amilorida_nao_e_mra_e_hipercalemia_nao_recebe_substituto_poupador_de_k(
     assert "não substituir automaticamente" in text
     assert "eplerenona ou amilorida" in text
 
+    blob = str(hub).casefold()
+    assert "contraindicarem o antagonista mineralocorticoide, considerar amilorida ou eplerenona" not in blob
+    if "amilorida ou eplerenona" in blob:
+        assert "não usar essas opções como substituição automática" in blob
+
 
 def test_mra_so_e_sugerido_apos_k_e_funcao_renal_revistos():
     hub = _hub()
@@ -74,7 +80,9 @@ def test_mra_so_e_sugerido_apos_k_e_funcao_renal_revistos():
 def test_barorreflexo_nao_e_apresentado_como_opcao_rotineira_e_fontes_atualizadas():
     hub = _hub()
     text = str(hub).casefold()
-    assert "ativação do barorreflexo permanece estratégia investigacional/não rotineira" in text
+    assert "ativação do barorreflexo" in text
+    assert "permanece estratégia investigacional/não rotineira" in text
+    assert "não são recomendadas rotineiramente" in text
     refs = " ".join(hub["source_refs"])
     assert "39210715" in refs
     assert "BAXFENDY" in refs
