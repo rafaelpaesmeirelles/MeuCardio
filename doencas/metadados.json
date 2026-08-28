@@ -15233,7 +15233,7 @@
     "category": "planejamento",
     "subtype": "parto",
     "prevalence_rank": 15,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Documento multidisciplinar que organiza local, equipe, monitorização, analgesia, anticoagulação, contingências e cuidados pós-parto conforme risco individual.",
     "tags": [
       "plano de parto",
@@ -15242,14 +15242,559 @@
       "anticoagulação"
     ],
     "source_refs": [
-      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"
+      "2025 ESC Guidelines for Cardiovascular Disease and Pregnancy",
+      "De Backer J, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. PMID: 40878294",
+      "Roos-Hesselink JW, et al. Outcome of pregnancy in patients with structural or ischaemic heart disease: results of a registry of the European Society of Cardiology. Eur Heart J. 2013;34(9):657-665. PMID: 22968232",
+      "Ruys TP, et al. Is a planned caesarean section in women with cardiac disease beneficial? Heart. 2015;101(7):530-536. PMID: 25539946",
+      "Silversides CK, et al. Pregnancy Outcomes in Women With Heart Disease: The CARPREG II Study. J Am Coll Cardiol. 2018;71(21):2419-2430. PMID: 29793631",
+      "Regitz-Zagrosek V, et al. 2018 ESC Guidelines for the management of cardiovascular diseases during pregnancy. Eur Heart J. 2018;39(34):3165-3241. PMID: 30165544",
+      "Cohen KM, et al. Anesthetic Treatment of Cardiac Disease During Pregnancy. Curr Treat Options Cardiovasc Med. 2018;20(8):66. PMID: 30019160",
+      "Mok T, et al. Delivery Timing and Associated Outcomes in Pregnancies With Maternal Congenital Heart Disease at Term. J Am Heart Assoc. 2022;11(16):e025791. PMID: 35943056"
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878294/",
+      "https://pubmed.ncbi.nlm.nih.gov/22968232/",
+      "https://pubmed.ncbi.nlm.nih.gov/25539946/",
+      "https://pubmed.ncbi.nlm.nih.gov/29793631/",
+      "https://pubmed.ncbi.nlm.nih.gov/30165544/",
+      "https://pubmed.ncbi.nlm.nih.gov/30019160/",
+      "https://pubmed.ncbi.nlm.nih.gov/35943056/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (15º lote de conteúdo do dia): ficha tinha apenas summary/tags/1 source_ref de catalogação, zero related_document_slugs, sem patient_material_slug. Ficha framework/processo (planejamento multidisciplinar do parto em gestante cardiopata), não uma doença única — campos presentation/differentials reinterpretados como cenários de decisão/distinções conceituais, mantendo o mesmo schema. Adicionados epidemiology, presentation (11 cenários), diagnostic_approach (5 subtópicos: classificação de risco materno, escolha do local do parto, definição da via de parto, planejamento de analgesia/anestesia, planejamento da anticoagulação periparto), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (13), assistant_rules (9). related_document_slugs criado com 6 itens (máximo permitido: 7 — 1 candidato descartado na montagem: classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025, por tratar apenas de classificação de risco geral, sem menção específica a plano/via de parto, periparto ou local do parto, não satisfazendo o critério de centralidade ao tema desta ficha). 3 dos related_document_slugs compartilhados com outras fichas de gravidez já publicadas (protese-mecanica-na-gravidez, aortopatia-na-gravidez, valvopatias-na-gravidez) — overlap legítimo, documentado no teste dedicado. patient_material_slug preenchido com material já existente (slug idêntico ao da própria ficha). Nenhuma dose de fármaco em nenhum campo. A sigla abreviada banida pelo gate de compliance não aparece em texto autoral (aparece apenas nos slugs de 2 documentos pré-existentes vinculados, não reescritos, mesmo padrão de PR #604/#616).",
+    "version": 2,
+    "epidemiology": "A cardiopatia estrutural, valvar, congênita ou de aorta continua sendo uma das principais causas de mortalidade materna indireta em países de alta e média renda, com risco concentrado no periparto e no puerpério imediato, momento de maior estresse hemodinâmico do ciclo gravídico-puerperal. Registros multicêntricos como o ROPAC (Registry of Pregnancy and Cardiac Disease) demonstram que a mortalidade e as complicações maternas graves (edema pulmonar, arritmia sustentada, insuficiência cardíaca descompensada, dissecção aórtica) concentram-se desproporcionalmente em gestantes sem plano de parto estruturado ou conduzidas em centros sem suporte cardio-obstétrico integrado. O planejamento antecipado do parto por equipe multidisciplinar (cardiologia, obstetrícia, anestesiologia obstétrica, neonatologia e, quando indicado, terapia intensiva e cirurgia cardiovascular), com definição prévia de local, via, momento e contingências, reduz desfechos adversos maternos e neonatais em comparação a parto não planejado ou conduzido em regime de urgência. As diretrizes internacionais recomendam que gestantes com cardiopatia moderada a grave sejam encaminhadas a centros de referência com capacidade de suporte hemodinâmico avançado, reforçando que a antecipação do plano de parto, e não apenas o tratamento da descompensação aguda, é o determinante central do desfecho.",
+    "presentation": [
+      "Definição do local do parto conforme a classificação de risco materno da OMS/ESC, direcionando gestantes de risco moderado a grave para centros terciários com suporte cardio-obstétrico integrado",
+      "Decisão sobre via de parto vaginal versus cesariana eletiva, distinguindo indicações obstétricas clássicas de indicações cardíacas puras (por exemplo, dilatação aórtica significativa, hipertensão pulmonar grave, síndrome de Eisenmenger, anticoagulação terapêutica em curso)",
+      "Definição do momento ideal do parto conforme estabilidade cardíaca materna, equilibrando maturidade fetal e risco de descompensação progressiva com a proximidade do termo",
+      "Necessidade de monitorização hemodinâmica invasiva periparto (linha arterial, acesso venoso central) em cardiopatia grave com risco de instabilidade hemodinâmica abrupta",
+      "Plano de analgesia peridural precoce e titulada para reduzir picos de débito cardíaco, frequência cardíaca e resistência vascular sistêmica associados à dor e ao esforço expulsivo",
+      "Manejo individualizado da segunda fase do parto para evitar manobra de Valsalva prolongada em cardiopatia grave, com consideração de abreviação instrumental do período expulsivo",
+      "Transição planejada da anticoagulação terapêutica (prótese valvar mecânica, tromboembolismo venoso recente, fibrilação atrial de alto risco) para o periparto, com definição antecipada da janela de suspensão e retomada",
+      "Avaliação da disponibilidade local de suporte de terapia intensiva cardiológica, hemodinâmica e, quando aplicável, circulação extracorpórea, como critério de elegibilidade do centro de parto",
+      "Elaboração de plano de contingência escrito para descompensação aguda periparto (edema pulmonar, arritmia instável, choque cardiogênico, dissecção aórtica), com fluxo de acionamento de equipe de resposta rápida",
+      "Indicação de indução eletiva versus expectante para trabalho de parto espontâneo, conforme estabilidade clínica, escore de risco materno e logística da equipe multidisciplinar",
+      "Definição do momento e da via de reversão ou ponte de anticoagulação em relação ao bloqueio neuroaxial planejado, evitando hematoma espinhal e trombose simultaneamente"
+    ],
+    "diagnostic_approach": {
+      "classificacao_de_risco_materno": "A base do planejamento é a classificação de risco materno da OMS/ESC (categorias I a IV), que estratifica a cardiopatia de base conforme risco estimado de mortalidade e morbidade cardiovascular na gestação e no parto. Essa classificação, complementada por escores preditivos como o CARPREG II, orienta a intensidade da vigilância, a escolha do centro de parto e a necessidade de antecipação de intervenções. Deve ser reavaliada ao longo da gestação e novamente próximo ao termo, pois a condição hemodinâmica pode se modificar com a evolução da sobrecarga volêmica fisiológica da gravidez.",
+      "escolha_do_local_do_parto": "Gestantes classificadas em risco baixo podem ser conduzidas em maternidades gerais com suporte cardiológico básico, enquanto risco moderado a grave (classes III e IV da classificação de risco materno da OMS/ESC) exige parto em centro terciário com cardiologia, terapia intensiva, hemodinâmica e, quando pertinente, cirurgia cardiovascular disponíveis no mesmo complexo hospitalar. A decisão deve ser documentada e comunicada precocemente à gestante e à equipe assistencial.",
+      "definicao_da_via_de_parto": "A via vaginal é preferida na maioria das cardiopatias, mesmo graves, pois associa-se a menor perda sanguínea, menor risco tromboembólico e menor instabilidade hemodinâmica aguda em comparação à cesariana. A cesariana deve ser reservada a indicações obstétricas convencionais ou a indicações cardíacas específicas, como dilatação aórtica acima de limiares de risco, hipertensão pulmonar grave ou síndrome de Eisenmenger, instabilidade hemodinâmica aguda, ou necessidade de anticoagulação terapêutica plena no momento previsto do parto.",
+      "planejamento_de_analgesia_e_anestesia": "A analgesia peridural precoce e progressiva é recomendada para atenuar as flutuações hemodinâmicas associadas à dor, taquicardia e aumento do débito cardíaco durante o trabalho de parto. O plano anestésico deve ser individualizado e discutido antecipadamente com a equipe de anestesiologia obstétrica, considerando a fisiologia específica da cardiopatia (por exemplo, evitar queda abrupta de resistência vascular sistêmica em estenose aórtica ou hipertensão pulmonar), a via de parto prevista e a necessidade de anestesia geral de reserva.",
+      "planejamento_da_anticoagulacao_periparto": "Em gestantes com prótese valvar mecânica ou tromboembolismo venoso recente, o plano de parto deve definir com antecedência o momento de transição da anticoagulação terapêutica, a janela de suspensão antes do parto planejado ou da indução, os critérios para bloqueio neuroaxial seguro e o momento de retomada da anticoagulação no puerpério, equilibrando risco hemorrágico periparto e risco de trombose valvar ou tromboembolismo recorrente."
+    },
+    "differentials": [
+      "Indicação obstétrica de cesariana (por exemplo, apresentação anômala, sofrimento fetal, desproporção cefalopélvica) versus indicação cardíaca pura para interromper a via vaginal",
+      "Urgência periparto por descompensação aguda materna versus decisão eletiva planejada com antecedência por equipe multidisciplinar",
+      "Risco hemodinâmico da via vaginal (esforço expulsivo, dor, taquicardia) versus risco cirúrgico e hemorrágico da cesariana em cardiopatia grave",
+      "Analgesia peridural precoce como estratégia de estabilização hemodinâmica versus bloqueio neuroaxial contraindicado por anticoagulação terapêutica vigente",
+      "Indução eletiva planejada em centro de referência versus trabalho de parto espontâneo em gestante estável e de baixo risco",
+      "Abreviação instrumental do período expulsivo por indicação cardíaca versus indicação obstétrica convencional de fórceps ou vácuo-extrator",
+      "Necessidade de monitorização hemodinâmica invasiva por cardiopatia grave versus monitorização materna padrão de trabalho de parto de baixo risco"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico de reavaliação próximo ao termo para documentar função ventricular, gradientes valvares e pressão pulmonar antes da definição final do plano de parto",
+      "Atualização da classificação de risco materno da OMS/ESC com base no quadro clínico e ecocardiográfico mais recente",
+      "Avaliação anestésica pré-parto dedicada, com discussão do plano de analgesia neuroaxial e do plano de anestesia geral de reserva",
+      "Eletrocardiograma e, quando indicado, monitorização ambulatorial do ritmo para rastreio de arritmias antes do parto",
+      "Revisão laboratorial de coagulação e função renal, especialmente em gestantes em anticoagulação terapêutica",
+      "Discussão multidisciplinar formal (heart team obstétrico-cardiológico) para consolidar o plano de parto por escrito, incluindo local, via, momento e contingências",
+      "Avaliação do bem-estar fetal e do crescimento fetal próximo ao termo, integrando o planejamento obstétrico ao cardiológico",
+      "Reconciliação medicamentosa periparto, incluindo revisão da anticoagulação e de outras medicações cardiovasculares em uso"
+    ],
+    "red_flags": [
+      "Piora aguda da classe funcional ou dispneia progressiva em repouso, sugerindo descompensação cardíaca iminente",
+      "Sinais de congestão pulmonar (ortopneia, estertores, dessaturação) exigindo antecipação ou replanejamento imediato do parto",
+      "Arritmia sustentada de novo ou instabilidade do ritmo previamente controlado",
+      "Elevação significativa de peptídeos natriuréticos ou deterioração ecocardiográfica da função ventricular na reavaliação próxima ao termo",
+      "Progressão da dilatação aórtica acima de limiares de segurança, com risco de dissecção",
+      "Sinais de hipertensão pulmonar grave descompensada ou queda da saturação periférica de oxigênio",
+      "Sangramento ou sinais sugestivos de trombose valvar em vigência de transição de anticoagulação periparto",
+      "Instabilidade hemodinâmica materna aguda (hipotensão, taquicardia sustentada, choque) exigindo interrupção imediata do plano eletivo e acionamento da equipe de contingência"
+    ],
+    "treatment_summary": "O plano de parto na cardiopatia materna é um processo multidisciplinar estruturado, não um protocolo de doença única, e deve ser elaborado por um Pregnancy Heart Team composto por cardiologia, obstetrícia de alto risco, anestesiologia obstétrica e neonatologia, idealmente consolidado antes de 32 semanas de gestação para permitir tempo hábil de planejamento logístico e clínico. A primeira decisão estrutural é a definição do local do parto, orientada pela classificação de risco materno da OMS/ESC: gestantes de risco baixo a moderado podem ser acompanhadas em maternidades gerais com suporte cardiológico, enquanto as de risco alto (incluindo hipertensão pulmonar grave, disfunção ventricular importante, valvopatias graves sintomáticas ou aortopatias de risco) devem ser direcionadas a centros de referência com suporte de terapia intensiva e hemodinâmica disponíveis em regime de urgência. Quanto à via de parto, a regra geral favorece o parto vaginal com analgesia peridural precoce na maioria das cardiopatias, pois reduz flutuações hemodinâmicas associadas à dor e ao esforço expulsivo em comparação à cesariana eletiva; a cesariana deve ser reservada para indicações obstétricas convencionais ou para indicações cardíacas específicas, como dissecção ou risco iminente de dissecção aórtica, hipertensão pulmonar grave com instabilidade, ou uso de anticoagulação oral não revertida em trabalho de parto iminente. O manejo da segunda fase do parto deve priorizar abreviação do período expulsivo e orientação para evitar manobra de Valsalva prolongada, minimizando picos de pressão intratorácica e retorno venoso abrupto. A anticoagulação periparto, quando indicada, exige transição planejada entre anticoagulantes orais e parenterais conforme a via e o momento do parto, com estratégia documentada de suspensão e reintrodução — sem especificação de doses neste plano. A monitorização hemodinâmica periparto deve ser proporcional ao risco: da vigilância clínica não invasiva em risco baixo até monitorização invasiva contínua e suporte de equipe de resposta rápida cardio-obstétrica em risco alto. Por fim, todo plano deve incluir um plano de contingência documentado, com fluxo definido para descompensação aguda (edema pulmonar, arritmia grave, choque cardiogênico), contemplando acionamento imediato da equipe multidisciplinar, disponibilidade de leito de terapia intensiva e via de parto de emergência pré-acordada.",
+    "ambulatory_flow": [
+      "Identificar a cardiopatia materna e classificar o risco pela classificação de risco materno da OMS/ESC na primeira consulta de pré-natal de alto risco",
+      "Constituir o Pregnancy Heart Team (cardiologia, obstetrícia de alto risco, anestesiologia obstétrica, neonatologia) idealmente antes de 32 semanas",
+      "Definir e documentar por escrito o local planejado do parto conforme o risco materno e a disponibilidade de suporte intensivo/hemodinâmico",
+      "Definir e documentar a via de parto preferencial e as condições que justificariam mudança para cesariana",
+      "Revisar periodicamente a capacidade funcional (classificação NYHA) e reclassificar o risco a cada consulta de acompanhamento",
+      "Planejar a estratégia de anticoagulação periparto com antecedência, definindo o momento de transição entre anticoagulantes conforme a via de parto prevista",
+      "Realizar reunião multidisciplinar formal de revisão do plano de parto entre 32 e 36 semanas, com registro em prontuário",
+      "Orientar a gestante e a família sobre o plano de parto, sinais de alarme e o fluxo de contingência em caso de descompensação",
+      "Agendar avaliação anestésica obstétrica antecipada para planejamento de analgesia peridural precoce",
+      "Confirmar disponibilidade de leito de terapia intensiva e equipe de resposta rápida cardio-obstétrica próximo à data prevista do parto"
+    ],
+    "emergency_flow": [
+      "Acionar imediatamente o Pregnancy Heart Team e a equipe de resposta rápida cardio-obstétrica diante de trabalho de parto não planejado ou sinais de descompensação",
+      "Reavaliar a classificação de risco materno da OMS/ESC e a via de parto em tempo real diante do quadro clínico atual",
+      "Estabilizar hemodinamicamente a gestante antes de qualquer decisão sobre via de parto, priorizando suporte de oxigenação, posicionamento e otimização de volemia",
+      "Transferir para centro de referência com suporte de terapia intensiva e hemodinâmica quando o parto ocorrer fora de unidade preparada, se o transporte for seguro",
+      "Abreviar a segunda fase do parto e orientar ativamente para evitar manobra de Valsalva prolongada em caso de instabilidade",
+      "Indicar cesariana de urgência quando houver indicação cardíaca específica (dissecção aórtica, hipertensão pulmonar grave descompensada, choque cardiogênico) ou obstétrica concomitante",
+      "Ajustar ou reverter a anticoagulação conforme protocolo institucional de emergência, com decisão conjunta entre cardiologia, obstetrícia e anestesiologia",
+      "Manter monitorização hemodinâmica contínua e reavaliação seriada durante todo o trabalho de parto e no puerpério imediato até estabilização confirmada"
+    ],
+    "monitoring": [
+      "Frequência cardíaca materna e ritmo em monitorização contínua durante o trabalho de parto em risco moderado a alto",
+      "Pressão arterial não invasiva ou invasiva seriada conforme classificação de risco",
+      "Saturação periférica de oxigênio contínua",
+      "Frequência respiratória e sinais de congestão pulmonar (ausculta, dispneia)",
+      "Monitorização eletrocardiográfica contínua em gestantes com risco de arritmia",
+      "Balanço hídrico rigoroso e diurese no periparto",
+      "Vitalidade fetal contínua durante o trabalho de parto",
+      "Sinais clínicos de baixo débito ou choque (perfusão periférica, nível de consciência, lactato quando disponível)"
+    ],
+    "assistant_questions": [
+      {
+        "id": "classificacao_risco_materno",
+        "text": "Qual a classificação de risco materno da OMS/ESC atribuída à gestante?",
+        "type": "select",
+        "options": [
+          {
+            "value": "classe_i",
+            "label": "Classe I"
+          },
+          {
+            "value": "classe_ii",
+            "label": "Classe II"
+          },
+          {
+            "value": "classe_iii",
+            "label": "Classe III"
+          },
+          {
+            "value": "classe_iv",
+            "label": "Classe IV"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "text": "Qual a idade gestacional atual, em semanas completas?",
+        "type": "number"
+      },
+      {
+        "id": "plano_parto_documentado",
+        "text": "Existe plano de parto multidisciplinar documentado em prontuário?",
+        "type": "boolean"
+      },
+      {
+        "id": "local_parto_definido",
+        "text": "Qual o local planejado para o parto?",
+        "type": "select",
+        "options": [
+          {
+            "value": "centro_referencia",
+            "label": "Centro de referência com suporte de terapia intensiva/hemodinâmica"
+          },
+          {
+            "value": "hospital_local",
+            "label": "Hospital sem suporte intensivo/hemodinâmico dedicado"
+          },
+          {
+            "value": "indefinido",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "via_parto_planejada",
+        "text": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Parto vaginal com analgesia peridural precoce"
+          },
+          {
+            "value": "cesariana",
+            "label": "Cesariana eletiva"
+          },
+          {
+            "value": "indefinida",
+            "label": "Ainda não definida"
+          }
+        ]
+      },
+      {
+        "id": "anticoagulacao_uso",
+        "text": "A gestante está em uso de anticoagulação?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_anticoagulante",
+        "text": "Qual o tipo de anticoagulante em uso?",
+        "type": "select",
+        "options": [
+          {
+            "value": "varfarina",
+            "label": "Antagonista de vitamina K (varfarina)"
+          },
+          {
+            "value": "heparina_baixo_peso_molecular",
+            "label": "Heparina de baixo peso molecular"
+          },
+          {
+            "value": "heparina_nao_fracionada",
+            "label": "Heparina não fracionada"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum"
+          }
+        ]
+      },
+      {
+        "id": "hipertensao_pulmonar_grave",
+        "text": "A gestante apresenta hipertensão pulmonar grave?",
+        "type": "boolean"
+      },
+      {
+        "id": "risco_dissecao_aortica",
+        "text": "Há dissecção aórtica atual ou risco elevado de dissecção (aortopatia conhecida)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_descompensacao_atual",
+        "text": "Quais sinais de descompensação estão presentes atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia_progressiva",
+            "label": "Dispneia progressiva"
+          },
+          {
+            "value": "edema_pulmonar",
+            "label": "Edema pulmonar"
+          },
+          {
+            "value": "arritmia_sintomatica",
+            "label": "Arritmia sintomática"
+          },
+          {
+            "value": "hipotensao",
+            "label": "Hipotensão"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "saturacao_baixa",
+            "label": "Queda da saturação de oxigênio"
+          }
+        ]
+      },
+      {
+        "id": "equipe_multidisciplinar_reunida",
+        "text": "A reunião multidisciplinar do Pregnancy Heart Team já ocorreu para esta gestação?",
+        "type": "boolean"
+      },
+      {
+        "id": "trabalho_parto_em_curso",
+        "text": "A gestante está atualmente em trabalho de parto?",
+        "type": "boolean"
+      },
+      {
+        "id": "capacidade_funcional_nyha",
+        "text": "Qual a classe funcional atual (NYHA)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "i",
+            "label": "NYHA I"
+          },
+          {
+            "value": "ii",
+            "label": "NYHA II"
+          },
+          {
+            "value": "iii",
+            "label": "NYHA III"
+          },
+          {
+            "value": "iv",
+            "label": "NYHA IV"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "descompensacao_em_trabalho_de_parto",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "trabalho_parto_em_curso",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "sinais_descompensacao_atual",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de descompensação cardíaca em trabalho de parto ativo"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente equipe de resposta rápida cardio-obstétrica e estabilizar hemodinamicamente antes de decidir via de parto"
+          ],
+          "messages": [
+            "Descompensação em trabalho de parto exige manejo de emergência multidisciplinar imediato."
+          ]
+        }
+      },
+      {
+        "id": "risco_altissimo_sem_plano_proximo_termo",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "classificacao_risco_materno",
+              "op": "eq",
+              "value": "classe_iv"
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 32
+            },
+            {
+              "field": "plano_parto_documentado",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Cardiopatia de risco materno classe IV sem plano de parto definido próximo ao termo"
+          ],
+          "missing_information": [
+            "Plano de parto multidisciplinar documentado e local de parto definido"
+          ],
+          "messages": [
+            "Definir com urgência o plano de parto e o local do parto para gestante de classe IV próxima ao termo."
+          ]
+        }
+      },
+      {
+        "id": "risco_dissecao_aortica_presente",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "risco_dissecao_aortica",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Risco de dissecção aórtica"
+          ],
+          "supporting": [
+            "Indicação cardíaca específica para cesariana"
+          ],
+          "messages": [
+            "Considerar cesariana como via preferencial diante de risco de dissecção aórtica."
+          ]
+        }
+      },
+      {
+        "id": "hipertensao_pulmonar_grave_presente",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "hipertensao_pulmonar_grave",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hipertensão pulmonar grave"
+          ],
+          "supporting": [
+            "Necessidade de monitorização hemodinâmica intensiva no periparto"
+          ],
+          "emergency_flow": [
+            "Priorizar centro de referência com suporte de terapia intensiva e hemodinâmica para o parto"
+          ]
+        }
+      },
+      {
+        "id": "risco_alto_sem_centro_referencia",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "classificacao_risco_materno",
+              "op": "in",
+              "value": [
+                "classe_iii",
+                "classe_iv"
+              ]
+            },
+            {
+              "field": "local_parto_definido",
+              "op": "neq",
+              "value": "centro_referencia"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "opposing": [
+            "Local de parto atual sem suporte de terapia intensiva/hemodinâmica compatível com o risco"
+          ],
+          "missing_information": [
+            "Confirmação de transferência para centro de referência com suporte intensivo/hemodinâmico"
+          ]
+        }
+      },
+      {
+        "id": "capacidade_funcional_reduzida",
+        "priority": 75,
+        "when": {
+          "any": [
+            {
+              "field": "capacidade_funcional_nyha",
+              "op": "eq",
+              "value": "iii"
+            },
+            {
+              "field": "capacidade_funcional_nyha",
+              "op": "eq",
+              "value": "iv"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Classe funcional NYHA III ou IV aumenta risco periparto"
+          ],
+          "suggested_tests": [
+            "Reavaliação ecocardiográfica funcional antes de finalizar o plano de parto"
+          ]
+        }
+      },
+      {
+        "id": "equipe_nao_reunida_gestacao_avancada",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "equipe_multidisciplinar_reunida",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 28
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Reunião formal do Pregnancy Heart Team ainda não realizada"
+          ],
+          "ambulatory_flow": [
+            "Agendar reunião multidisciplinar do Pregnancy Heart Team o quanto antes"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulacao_sem_plano_transicao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulacao_uso",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "plano_parto_documentado",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Estratégia de transição da anticoagulação periparto não documentada"
+          ],
+          "messages": [
+            "Definir e registrar a estratégia de transição da anticoagulação antes do parto."
+          ]
+        }
+      },
+      {
+        "id": "via_parto_indefinida_termo_proximo",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "via_parto_planejada",
+              "op": "eq",
+              "value": "indefinida"
+            },
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 34
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Via de parto ainda não definida em gestação avançada"
+          ],
+          "ambulatory_flow": [
+            "Definir e documentar a via de parto planejada na próxima consulta"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Gestante com prótese valvar mecânica: o plano de parto precisa antecipar, com semanas de antecedência, a transição do regime de anticoagulação crônico para um esquema parenteral de ação curta antes do parto planejado, coordenada por equipe multidisciplinar de valva/cirurgia cardíaca (Pregnancy Heart Team). O momento de suspensão e de reintrocução do anticoagulante em torno do parto é a decisão de maior risco desse plano: interrupção precoce ou prolongada demais expõe a trombose valvar, e reintrocução muito próxima do parto expõe a sangramento periparto e no sítio cirúrgico se houver cesariana. Qualquer sinal de dispneia nova, síncope, mudança no clique protético ou evento embólico nesse período deve ser tratado como emergência e investigado com ecocardiograma urgente, não atribuído a desconforto habitual do trabalho de parto.",
+      "Gestante com hipertensão pulmonar grave ou síndrome de Eisenmenger: o esforço expulsivo prolongado com manobra de Valsalva sustentada é contraindicado nessa fisiologia, porque a elevação abrupta da pressão intratorácica reduz o retorno venoso e pode precipitar colapso hemodinâmico agudo em um circuito pulmonar que já opera com resistência fixa. O plano de parto deve favorecer a via vaginal com abreviação ativa do segundo estágio (parto instrumentado quando indicado), analgesia peridural titulada em doses incrementais lentas para evitar queda abrupta de resistência vascular sistêmica, e evitar decúbito supino prolongado. O período de maior mortalidade concentra-se no periparto e nas primeiras semanas de puerpério, o que exige monitorização hemodinâmica contínua muito além da sala de parto.",
+      "Gestante com dissecção ou aneurisma de aorta conhecido: a via de parto deixa de ser uma decisão obstétrica isolada e passa a ser determinada pelo risco aórtico. Diante de dissecção crônica prévia ou de diâmetro aórtico acima dos limiares de risco estabelecidos para a condição de base, a indicação é de cesariana, decidida em conjunto com a equipe de cirurgia aórtica, com controle rigoroso da pressão arterial e da frequência cardíaca durante todo o trabalho de parto ou o procedimento cirúrgico para minimizar o estresse de cisalhamento sobre a parede aórtica. Dor torácica, dorsal ou abdominal de início súbito e intenso nesse contexto deve acionar investigação de imagem imediata, mesmo durante o próprio trabalho de parto.",
+      "Gestante com cardiopatia congênita complexa em circulação de Fontan: na ausência de ventrículo subpulmonar, o débito cardíaco depende criticamente de pré-carga adequada, o que torna quedas abruptas de volume particularmente perigosas no momento do parto. O plano deve priorizar parto vaginal planejado, com indução programada em horário de maior disponibilidade de recursos assistenciais, e, quando a cesariana for necessária, anestesia peridural com doses incrementais lentas em vez de bloqueio espinhal em dose única; a anestesia geral, quando indicada, exige cautela pelo efeito da ventilação com pressão positiva sobre esse mesmo débito dependente de pré-carga. A equipe de cardiopatia congênita do adulto deve estar envolvida desde o planejamento, não apenas na urgência.",
+      "Gestante classificada na categoria de maior risco materno da classificação de risco materno da OMS/ESC sem centro de referência definido: essa é, por si só, uma falha de planejamento a ser corrigida antes do parto, não uma situação a se resolver no momento da internação. O plano de parto precisa incluir o encaminhamento formal e documentado a um centro de referência com equipe de Pregnancy Heart Team constituída — cardiologia, obstetrícia de alto risco e anestesiologia obstétrica com experiência específica —, definindo hospital, via de parto antecipada e capacidade de suporte hemodinâmico avançado antes do início do trabalho de parto, já que o risco de descompensação nessa categoria se concentra justamente nas janelas de fim de gestação e periparto.",
+      "Puérpera no período de maior risco hemodinâmico pós-parto imediato: a saída do útero da compressão aortocava e a autotransfusão de sangue do território uteroplacentário para a circulação sistêmica produzem, nas primeiras horas após o parto, um aumento abrupto de pré-carga e de débito cardíaco que pode precipitar edema pulmonar, arritmia ou descompensação de insuficiência cardíaca mesmo em uma paciente estável durante todo o trabalho de parto. O plano de parto não termina com o nascimento: a vigilância hemodinâmica intensiva precisa se estender pelas primeiras horas a dias do puerpério imediato, período que concentra a maior parte dos eventos graves e das mortes maternas em várias das cardiopatias de maior risco descritas nesta biblioteca."
+    ],
+    "related_document_slugs": [
+      "via-de-parto-e-insuficiencia-cardiaca-na-gestante-cardiopata-o-registro-ropac",
+      "trombose-de-protese-valvar-mecanica-na-gestacao",
+      "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
+      "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",
+      "sindrome-aortica-aguda-na-gestacao-e-puerperio",
+      "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro"
+    ],
+    "patient_material_slug": "plano-parto-cardiopatia-materna",
+    "fonte_producao": "claude"
   },
   {
     "slug": "seguimento-cardiovascular-pos-parto",
