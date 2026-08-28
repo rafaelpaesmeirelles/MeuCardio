@@ -49,7 +49,7 @@ EXPECTED_NAV_ROUTES = {
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/exames-ia", "/trilhas", "/trilhas/timeline",
-    "/usuarios-online", "/minha-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
+    "/usuarios-online", "/minha-conta", "/excluir-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour", "/tour?origem=assinatura&modo=quick",
 }
 

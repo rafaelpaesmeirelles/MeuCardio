@@ -78,6 +78,11 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "descompensacao-aguda-da-circulacao-de-fontan",
     # também em cardiomiopatias-pediatricas
     "cardiomiopatia-restritiva-na-crianca-e-no-adolescente-etiologia-genetica-diagnostico-diferencial-e-transplante-precoce",
+    "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",  # overlap legítimo no corpus consolidado 28/08/2026
+    "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",  # overlap legítimo no corpus consolidado 28/08/2026
+    "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",  # overlap legítimo no corpus consolidado 28/08/2026
+    "miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual",  # overlap legítimo no corpus consolidado 28/08/2026
+    "miocardite-fulminante-pediatrica-e-choque-cardiogenico",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

@@ -99,6 +99,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # também em aortopatia-na-gravidez
     "sindrome-aortica-aguda-na-gestacao-e-puerperio",
     "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro",
+    "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 

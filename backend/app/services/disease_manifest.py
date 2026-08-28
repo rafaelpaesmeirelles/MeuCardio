@@ -167,6 +167,19 @@ def _apply_corrections(
                 _add_by_id(record.get("assistant_questions"), question_additions, label=f"{path}:{slug}:assistant_questions_add")
 
 
+
+def _normalize_assistant_questions(record: dict[str, Any]) -> None:
+    """Canonicalize legacy question text to the UI-supported label field."""
+    questions = record.get("assistant_questions")
+    if not isinstance(questions, list):
+        return
+    for question in questions:
+        if not isinstance(question, dict):
+            continue
+        legacy = question.pop("text", None)
+        if not str(question.get("label") or "").strip() and isinstance(legacy, str) and legacy.strip():
+            question["label"] = legacy
+
 def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
     base = Path(base_manifest)
     records = [copy.deepcopy(item) for item in _read_list(base)]
@@ -200,4 +213,6 @@ def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
                 )
 
     _apply_corrections(by_slug, base)
+    for slug in ordered_slugs:
+        _normalize_assistant_questions(by_slug[slug])
     return [by_slug[slug] for slug in ordered_slugs]

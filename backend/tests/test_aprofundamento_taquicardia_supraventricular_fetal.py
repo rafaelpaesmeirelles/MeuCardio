@@ -87,6 +87,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
     # também em tetralogia-de-fallot e planejamento-parto-cardiopatia-fetal
     "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento",
+    "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario",  # overlap legítimo no corpus consolidado 28/08/2026
 }
 
 
