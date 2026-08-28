@@ -14745,12 +14745,12 @@
     "assistant_questions": [
       {
         "id": "hp_diagnostico_previo",
-        "text": "A hipertensão pulmonar já era conhecida antes desta gestação?",
+        "label": "A hipertensão pulmonar já era conhecida antes desta gestação?",
         "type": "boolean"
       },
       {
         "id": "hp_etiologia",
-        "text": "Qual a etiologia da hipertensão pulmonar, quando conhecida?",
+        "label": "Qual a etiologia da hipertensão pulmonar, quando conhecida?",
         "type": "select",
         "options": [
           {
@@ -14777,12 +14777,12 @@
       },
       {
         "id": "hp_eisenmenger",
-        "text": "Há síndrome de Eisenmenger (shunt direita-esquerda com cianose)?",
+        "label": "Há síndrome de Eisenmenger (shunt direita-esquerda com cianose)?",
         "type": "boolean"
       },
       {
         "id": "hp_sintomas_atuais",
-        "text": "Quais sintomas a paciente apresenta atualmente?",
+        "label": "Quais sintomas a paciente apresenta atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -14813,17 +14813,17 @@
       },
       {
         "id": "hp_idade_gestacional",
-        "text": "Qual a idade gestacional atual, em semanas?",
+        "label": "Qual a idade gestacional atual, em semanas?",
         "type": "number"
       },
       {
         "id": "hp_saturacao_repouso",
-        "text": "Qual a saturação periférica de oxigênio em repouso, em ar ambiente?",
+        "label": "Qual a saturação periférica de oxigênio em repouso, em ar ambiente?",
         "type": "number"
       },
       {
         "id": "hp_bnp_tendencia",
-        "text": "O BNP/NT-proBNP mais recente está estável ou em elevação em relação ao anterior?",
+        "label": "O BNP/NT-proBNP mais recente está estável ou em elevação em relação ao anterior?",
         "type": "select",
         "options": [
           {
@@ -14842,27 +14842,27 @@
       },
       {
         "id": "hp_seguimento_centro_referencia",
-        "text": "A paciente está em acompanhamento em centro de referência com equipe multidisciplinar para HAP na gestação?",
+        "label": "A paciente está em acompanhamento em centro de referência com equipe multidisciplinar para HAP na gestação?",
         "type": "boolean"
       },
       {
         "id": "hp_terapia_vasodilatadora",
-        "text": "A paciente está em uso de terapia vasodilatadora pulmonar específica prescrita pela equipe especializada?",
+        "label": "A paciente está em uso de terapia vasodilatadora pulmonar específica prescrita pela equipe especializada?",
         "type": "boolean"
       },
       {
         "id": "hp_puerperio",
-        "text": "A paciente está no puerpério (até 7 dias pós-parto)?",
+        "label": "A paciente está no puerpério (até 7 dias pós-parto)?",
         "type": "boolean"
       },
       {
         "id": "hp_disfuncao_vd_eco",
-        "text": "O ecocardiograma mais recente mostra piora da função de ventrículo direito em relação a exame anterior?",
+        "label": "O ecocardiograma mais recente mostra piora da função de ventrículo direito em relação a exame anterior?",
         "type": "boolean"
       },
       {
         "id": "hp_plano_parto_definido",
-        "text": "Há plano multidisciplinar definido para via e local do parto?",
+        "label": "Há plano multidisciplinar definido para via e local do parto?",
         "type": "boolean"
       }
     ],
