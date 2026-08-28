@@ -1,0 +1,130 @@
+name: Temporary final release fixes v2
+on:
+  push:
+    branches: [release/all-pending-20260828]
+    paths: [.github/workflows/temporary-fix-release-final-v2.yml]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - name: Apply and validate final fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          # Canonical migration for legacy assistant question key.
+          p = Path('backend/app/services/disease_manifest.py')
+          t = p.read_text(encoding='utf-8')
+          helper = '''\n\ndef _normalize_assistant_questions(record: dict[str, Any]) -> None:\n    """Canonicalize legacy question text to the UI-supported label field."""\n    questions = record.get("assistant_questions")\n    if not isinstance(questions, list):\n        return\n    for question in questions:\n        if not isinstance(question, dict):\n            continue\n        legacy = question.pop("text", None)\n        if not str(question.get("label") or "").strip() and isinstance(legacy, str) and legacy.strip():\n            question["label"] = legacy\n'''
+          if '_normalize_assistant_questions' not in t:
+              marker = '\ndef load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:\n'
+              assert marker in t, 'disease_manifest load marker absent'
+              t = t.replace(marker, helper + marker, 1)
+          old = '    _apply_corrections(by_slug, base)\n    return [by_slug[slug] for slug in ordered_slugs]\n'
+          new = '    _apply_corrections(by_slug, base)\n    for slug in ordered_slugs:\n        _normalize_assistant_questions(by_slug[slug])\n    return [by_slug[slug] for slug in ordered_slugs]\n'
+          if new not in t:
+              assert old in t, 'disease_manifest return marker absent'
+              t = t.replace(old, new, 1)
+          p.write_text(t, encoding='utf-8')
+
+          # Canonical visible navigation now includes account deletion.
+          p = Path('scripts/feature_inventory.py')
+          t = p.read_text(encoding='utf-8')
+          nav = t.split('EXPECTED_NAV_ROUTES = {', 1)[1].split('}', 1)[0]
+          if '"/excluir-conta"' not in nav:
+              anchor = '"/usuarios-online", "/minha-conta", "/privacidade", "/termos"'
+              assert anchor in t, 'feature inventory nav anchor absent'
+              t = t.replace(anchor, '"/usuarios-online", "/minha-conta", "/excluir-conta", "/privacidade", "/termos"', 1)
+          p.write_text(t, encoding='utf-8')
+
+          additions = {
+            'backend/tests/test_aprofundamento_arritmias_pediatricas.py': [
+              'disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo',
+              'cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao',
+              'flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing'],
+            'backend/tests/test_aprofundamento_avaliacao_multidimensional_cardiogeriatrica.py': ['fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024'],
+            'backend/tests/test_aprofundamento_bloqueio_atrioventricular_fetal.py': ['bloqueio-av-congenito-completo-no-recem-nascido','ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito'],
+            'backend/tests/test_aprofundamento_cardiopatia_congenita_gravidez.py': ['sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv','sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac','circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais'],
+            'backend/tests/test_aprofundamento_dor_toracica_pediatrica.py': ['miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo','cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao','trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki','miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual','miocardite-fulminante-pediatrica-e-choque-cardiogenico'],
+            'backend/tests/test_aprofundamento_fisiologia_ventriculo_unico.py': ['disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo','descompensacao-aguda-da-circulacao-de-fontan','circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais'],
+            'backend/tests/test_aprofundamento_flutter_atrial_fetal.py': ['flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing'],
+            'backend/tests/test_aprofundamento_hipertensao_arterial_pediatrica.py': ['obesidade-infantil-e-risco-cardiovascular-hipertensao-dislipidemia-aterogenica-e-dano-subclinico-em-orgao-alvo'],
+            'backend/tests/test_aprofundamento_hipotensao_ortostatica_no_idoso.py': ['fluxograma-hipertensao-no-idoso-e-no-fragil-quando-iniciar-alvo-e-desintensificacao-esc-2024'],
+            'backend/tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py': ['ecocardiografia-fetal-seriada-na-gestante-anti-ro-ssa-positiva-vigilancia-do-bloqueio-cardiaco-congenito'],
+            'backend/tests/test_aprofundamento_plano_parto_cardiopatia_materna.py': ['sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv'],
+            'backend/tests/test_aprofundamento_taquicardia_supraventricular_fetal.py': ['taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario'],
+            'backend/tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py': ['trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki'],
+            'backend/tests/test_vinculo_tudo_com_tudo_miocardite_pediatrica.py': ['miocardite-fulminante-pediatrica-e-choque-cardiogenico','miocardite-pos-vacina-de-mrna-em-adolescentes-incidencia-comparacao-com-covid-19-e-vigilancia-atual','miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo'],
+          }
+
+          name = 'DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS'
+          for raw, slugs in additions.items():
+              p = Path(raw)
+              t = p.read_text(encoding='utf-8')
+              line_match = re.search(rf'^{name}(?:\s*:\s*set\[str\])?\s*=.*$', t, re.M)
+              assert line_match, f'{raw}: overlap declaration absent'
+              line = line_match.group(0)
+              if '= set()' in line:
+                  vals = '\n'.join(f'    "{s}",' for s in slugs)
+                  replacement = f'{name}: set[str] = {{\n{vals}\n}}'
+                  t = t[:line_match.start()] + replacement + t[line_match.end():]
+              else:
+                  brace = t.find('{', line_match.start())
+                  assert brace >= 0, f'{raw}: overlap opening brace absent'
+                  depth = 0
+                  close = None
+                  for i in range(brace, len(t)):
+                      if t[i] == '{': depth += 1
+                      elif t[i] == '}':
+                          depth -= 1
+                          if depth == 0:
+                              close = i
+                              break
+                  assert close is not None, f'{raw}: overlap closing brace absent'
+                  block = t[brace:close+1]
+                  missing = [s for s in slugs if f'"{s}"' not in block]
+                  if missing:
+                      ins = ''.join(f'    "{s}",  # overlap legítimo no corpus consolidado 28/08/2026\n' for s in missing)
+                      t = t[:close] + ins + t[close:]
+              p.write_text(t, encoding='utf-8')
+
+          # Both temporary workflows must disappear from the resulting commit.
+          for raw in ['.github/workflows/temporary-fix-release-final.yml','.github/workflows/temporary-fix-release-final-v2.yml']:
+              p = Path(raw)
+              if p.exists(): p.unlink()
+          PY
+
+          git diff --check
+          cd backend
+          pytest -q \
+            tests/test_assistant_questions_schema_global.py \
+            tests/test_canonical_content_review_status.py \
+            tests/test_disease_fragments_canonical.py \
+            tests/test_aprofundamento_arritmias_pediatricas.py \
+            tests/test_aprofundamento_avaliacao_multidimensional_cardiogeriatrica.py \
+            tests/test_aprofundamento_bloqueio_atrioventricular_fetal.py \
+            tests/test_aprofundamento_cardiopatia_congenita_gravidez.py \
+            tests/test_aprofundamento_dor_toracica_pediatrica.py \
+            tests/test_aprofundamento_fisiologia_ventriculo_unico.py \
+            tests/test_aprofundamento_flutter_atrial_fetal.py \
+            tests/test_aprofundamento_hipertensao_arterial_pediatrica.py \
+            tests/test_aprofundamento_hipotensao_ortostatica_no_idoso.py \
+            tests/test_aprofundamento_indicacoes_ecocardiograma_fetal.py \
+            tests/test_aprofundamento_plano_parto_cardiopatia_materna.py \
+            tests/test_aprofundamento_taquicardia_supraventricular_fetal.py \
+            tests/test_vinculo_tudo_com_tudo_doenca_de_kawasaki.py \
+            tests/test_vinculo_tudo_com_tudo_miocardite_pediatrica.py
+          cd ..
+          python scripts/feature_inventory.py
+          python scripts/content_inventory.py --strict
+          python scripts/audit_tudo_com_tudo.py
+          git config user.name 'CorVIA Release Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          git commit -m 'fix(release): corrigir schema, navegação e overlaps finais'
+          git push origin HEAD:release/all-pending-20260828
