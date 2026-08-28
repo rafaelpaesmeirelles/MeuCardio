@@ -3,10 +3,10 @@ title: "Cateter de Artéria Pulmonar no Choque Cardiogênico: CPO, PAPi, RAP/PCW
 slug: cateter-de-arteria-pulmonar-no-choque-cardiogenico-cpo-papi-e-ra-pcwp
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Fincke R, Hochman JS, Lowe AM, et al. Cardiac power is the strongest hemodynamic correlate of mortality in cardiogenic shock: a report from the SHOCK trial registry. J Am Coll Cardiol. 2004;44(2):340-348. DOI: 10.1016/j.jacc.2004.03.060. PMID: 15261929.", "Korabathina R, Heffernan KS, Paruchuri V, et al. The pulmonary artery pulsatility index identifies severe right ventricular dysfunction in acute inferior myocardial infarction. Catheter Cardiovasc Interv. 2012;80(4):593-600. DOI: 10.1002/ccd.23309. PMID: 21954053.", "Jentzer JC, et al. Prognostic significance of haemodynamic parameters in patients with cardiogenic shock. Eur Heart J Acute Cardiovasc Care. 2023. PMID: 37640029.", "Use of a Pulmonary Artery Catheter in Patients With Cardiogenic Shock — systematic review and meta-analysis. PMID: 40785816 (2025)."]
-review_note: "Produzido em 28/08/2026. Fórmulas hemodinâmicas e estudos prognósticos foram conferidos; limiares são apresentados como marcadores dependentes de contexto, não como indicações automáticas de dispositivo. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026; fórmulas hemodinâmicas e estudos prognósticos conferidos. Limiar é marcador dependente de contexto, não indicação automática de dispositivo. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Cateter de Artéria Pulmonar no Choque Cardiogênico
