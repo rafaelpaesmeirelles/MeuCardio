@@ -23305,7 +23305,7 @@
     "category": "arritmia",
     "subtype": "qt_longo_adquirido",
     "prevalence_rank": 12,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Gestão do risco de prolongamento do QT considerando fármacos, interações, eletrólitos, ECG basal e sintomas, sem depender de um único valor isolado.",
     "tags": [
       "QT",
@@ -23314,14 +23314,557 @@
       "ECG"
     ],
     "source_refs": [
-      "2022 ESC Guidelines on Cardio-Oncology"
+      "2022 ESC Guidelines on Cardio-Oncology",
+      "Lyon AR, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. PMID: 36017568.",
+      "Porta-Sánchez A, et al. Incidence, Diagnosis, and Management of QT Prolongation Induced by Cancer Therapies: A Systematic Review. J Am Heart Assoc. 2017;6(12). PMID: 29217664.",
+      "Ohnishi K, et al. Prolongation of the QT interval and ventricular tachycardia in patients treated with arsenic trioxide for acute promyelocytic leukemia. Ann Intern Med. 2000;133(11):881-885. PMID: 11103058.",
+      "Murad B, et al. QTc prolongation across CDK4/6 inhibitors: a systematic review and meta-analysis of randomized controlled trials. JNCI Cancer Spectrum. 2024;8(5). PMID: 39254653.",
+      "Shah RR, et al. Cardiovascular safety of tyrosine kinase inhibitors: with a special focus on cardiac repolarisation (QT interval). Drug Saf. 2013;36(5):295-316. PMID: 23620167.",
+      "Issa GC, et al. Menin Inhibition With Revumenib for KMT2A-Rearranged Relapsed or Refractory Acute Leukemia (AUGMENT-101). J Clin Oncol. 2025;43(1):75-84. PMID: 39121437.",
+      "Arellano ML, et al. Menin inhibition with revumenib for NPM1-mutated relapsed or refractory acute myeloid leukemia: the AUGMENT-101 study. Blood. 2025;146(9):1065-1077. PMID: 40332046."
     ],
     "source_urls": [
-      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017568/",
+      "https://pubmed.ncbi.nlm.nih.gov/29217664/",
+      "https://pubmed.ncbi.nlm.nih.gov/11103058/",
+      "https://pubmed.ncbi.nlm.nih.gov/39254653/",
+      "https://pubmed.ncbi.nlm.nih.gov/23620167/",
+      "https://pubmed.ncbi.nlm.nih.gov/39121437/",
+      "https://pubmed.ncbi.nlm.nih.gov/40332046/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (39º lote de conteúdo do dia): ficha estava completeness=basico, só catalogação (1 source_ref: ESC 2022), zero campos clínicos. Terceira ficha desbloqueada hoje pela reavaliação de escopo da PR #551. Adicionados epidemiology (prolongamento de QT transversal a múltiplas classes: CDK4/6/ribociclibe, trióxido de arsênio — praticamente universal —, inibidores de tirosina-quinase, revumenibe), presentation (10), diagnostic_approach (cálculo de QTc por Fridericia/Bazett, cronograma de ECG seriado específico por classe, fatores de risco somados), differentials, tests, red_flags, treatment_summary (abordagem preventiva central: ECG basal + correção de eletrólitos + revisão de polifarmácia QT, conduta bifurcada assintomático vs. sintomático, torsades como emergência verdadeira, sem doses, alerta contra banalizar ou superdimensionar o risco), ambulatory_flow, emergency_flow, monitoring, special_populations (7), assistant_questions (13), assistant_rules (10, priority 100 para torsades confirmada). related_document_slugs adicionado do zero para 6 — 6 documentos centrais confirmados por leitura de trecho (ribociclibe + fluxograma, trióxido de arsênio + fluxograma, revumenibe, lista geral de quimioterápicos QT). patient_material_slug confirmado por correspondência direta em material-paciente/metadados.json. Nenhuma dose de fármaco em nenhum campo. Todos os 7 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária.",
+    "version": 2,
+    "epidemiology": "O prolongamento do intervalo QT/QTc é uma toxicidade cardiovascular transversal a diversas classes de terapia antineoplásica, não restrita a um único mecanismo molecular. Entre os inibidores de ciclina-dependente de quinase 4/6 (CDK4/6) — palbociclibe, ribociclibe e abemaciclibe —, o ribociclibe apresenta o maior risco relativo de prolongamento de QTc, exigindo monitorização eletrocardiográfica basal e seriada conforme a bula. O trióxido de arsênio, usado no tratamento da leucemia promielocítica aguda, é classicamente o agente mais associado a esse efeito, com prolongamento de QTc de magnitude relevante em praticamente todos os pacientes tratados, e risco reconhecido de torsades de pointes mesmo em populações jovens sem cardiopatia prévia. Diversos inibidores de tirosina-quinase (como os direcionados a BCR-ABL, VEGFR e EGFR) também prolongam o QTc por bloqueio do canal hERG, com magnitude variável entre fármacos da mesma classe. Mais recentemente, o revumenibe, inibidor de menina aprovado para leucemias agudas com rearranjo de KMT2A ou mutação de NPM1, foi identificado como causador de prolongamento de QTc dose-dependente nos estudos AUGMENT-101, exigindo protocolo específico de monitorização. O risco de torsades de pointes aumenta de forma aditiva quando fatores como hipopotassemia, hipomagnesemia, uso concomitante de outros fármacos que prolongam o QT, cardiopatia estrutural preexistente, sexo feminino e idade avançada se somam à terapia oncológica, tornando a monitorização eletrocardiográfica sistemática — antes e durante o tratamento — uma medida essencial de segurança nesses regimes.",
+    "presentation": [
+      "Maioria dos casos é assintomática, detectada apenas por prolongamento do QTc em ECG de rotina ou seriado",
+      "Palpitações",
+      "Tontura ou pré-síncope",
+      "Síncope de início súbito, especialmente durante ou logo após a infusão ou dose",
+      "Arritmia ventricular polimórfica documentada (torsades de pointes)",
+      "Parada cardiorrespiratória por fibrilação ventricular secundária a torsades de pointes",
+      "Morte súbita cardíaca (relato raro, mas descrito com trióxido de arsênio e outros agentes)",
+      "Alterações eletrocardiográficas inespecíficas associadas: achatamento ou inversão de onda T, onda U proeminente",
+      "Batimentos ectópicos com fenômeno R-sobre-T precedendo episódios de torsades",
+      "Bradicardia relativa, que pode acentuar o prolongamento do QT dependente de pausa"
+    ],
+    "diagnostic_approach": "Antes de iniciar qualquer terapia oncológica com risco reconhecido de prolongar o QT (trióxido de arsênio, ribociclibe e demais inibidores de CDK4/6, revumenibe, inibidores de tirosina-quinase selecionados), deve-se obter ECG de 12 derivações basal com cálculo do QTc, preferencialmente pela fórmula de Fridericia (mais robusta em frequências cardíacas extremas) ou, alternativamente, pela fórmula de Bazett, sempre medindo o intervalo QT na derivação com onda T bem definida (geralmente DII ou V5) e usando a média de três a cinco batimentos consecutivos. Nesse momento também se avalia o conjunto de fatores de risco somados: dosagem de potássio, magnésio e cálcio séricos, revisão de toda a lista de medicamentos em uso quanto a potencial de prolongar QT (antieméticos como ondansetrona, antifúngicos azólicos, macrolídeos, quinolonas, metadona, antipsicóticos), presença de cardiopatia estrutural ou disfunção ventricular prévia, sexo feminino e idade avançada, além de história pessoal ou familiar de síncope inexplicada ou morte súbita. O cronograma de ECG seriado varia conforme a classe: no trióxido de arsênio, recomenda-se ECG semanal durante a fase de indução; nos inibidores de CDK4/6 (particularmente ribociclibe), ECG basal, em cerca de 14 dias após o início e no início do segundo ciclo; no revumenibe, ECG basal e monitorização intensiva nas primeiras semanas de tratamento, incluindo períodos de ajuste de dose. Qualquer QTc acima de 480-500 ms ou aumento superior a 60 ms em relação ao basal deve motivar reavaliação imediata do risco-benefício, correção de eletrólitos e, conforme protocolo do fármaco, suspensão temporária ou ajuste posológico.",
+    "differentials": [
+      "Síndrome do QT longo congênita (formas hereditárias, ex.: tipos 1, 2 e 3)",
+      "Distúrbio eletrolítico isolado (hipopotassemia, hipomagnesemia, hipocalcemia) não relacionado à terapia oncológica",
+      "Prolongamento de QT por outros fármacos concomitantes não oncológicos (antieméticos, antifúngicos azólicos, macrolídeos, fluoroquinolonas, antipsicóticos, metadona)",
+      "Bradiarritmias e bloqueio atrioventricular avançado",
+      "Hipotireoidismo não controlado",
+      "Isquemia miocárdica aguda ou cardiopatia estrutural de base causando repolarização anormal",
+      "Eventos do sistema nervoso central (hemorragia subaracnóidea, acidente vascular cerebral) associados a prolongamento de QT"
+    ],
+    "tests": [
+      "ECG de 12 derivações basal com cálculo do QTc (Fridericia ou Bazett)",
+      "ECG seriado conforme cronograma específico da classe de fármaco em uso",
+      "Eletrólitos séricos: potássio, magnésio e cálcio",
+      "Função renal e hepática (para avaliar depuração do fármaco)",
+      "TSH, para rastreio de hipotireoidismo",
+      "Revisão sistemática da lista de medicamentos concomitantes quanto a interação farmacológica e potencial de prolongar QT",
+      "Ecocardiograma, se houver suspeita de cardiopatia estrutural associada",
+      "Monitorização eletrocardiográfica contínua ou Holter, se arritmia sintomática ou QTc muito prolongado",
+      "Avaliação genética para síndrome do QT longo congênita em casos selecionados com forte suspeita hereditária"
+    ],
+    "red_flags": [
+      "QTc igual ou superior a 500 ms",
+      "Aumento do QTc igual ou superior a 60 ms em relação ao valor basal",
+      "Síncope durante o tratamento",
+      "Arritmia ventricular documentada (torsades de pointes, taquicardia ventricular polimórfica)",
+      "Parada cardiorrespiratória",
+      "Uso concomitante de múltiplos fármacos que prolongam o QT",
+      "Distúrbio eletrolítico grave não corrigido (hipopotassemia ou hipomagnesemia importantes) durante a terapia",
+      "História pessoal ou familiar de morte súbita cardíaca ou síndrome do QT longo congênita"
+    ],
+    "treatment_summary": "O prolongamento do intervalo QT corrigido (QTc) associado a terapias oncológicas é, na maior parte dos casos, um achado eletrocardiográfico assintomático e evitável, cujo manejo é fundamentalmente preventivo, não reativo. Antes do início de qualquer fármaco com potencial de prolongar o QT — inibidores de tirosina quinase, antraciclinas, inibidores de histona desacetilase, trióxido de arsênio, antagonistas do receptor 5-HT3, entre outros — deve-se obter um eletrocardiograma basal para estabelecer o QTc de referência do paciente, além de dosar e corrigir eletrólitos (potássio, magnésio e cálcio), cujos desvios potencializam de forma significativa o risco de arritmia. Igualmente central é a revisão sistemática da polifarmácia concomitante, identificando outros agentes que também prolongam o QT — antiarrítmicos, antipsicóticos, alguns antibióticos (macrolídeos, fluoroquinolonas), antifúngicos azólicos, metadona e antieméticos antagonistas de 5-HT3 —, já que o risco de torsades de pointes cresce de forma expressiva quando múltiplos agentes QT-prolongadores se somam. Uma vez iniciada a terapia oncológica, a monitorização deve seguir o cronograma específico recomendado para a classe de fármaco em uso, com eletrocardiogramas seriados em intervalos definidos e reavaliação de eletrólitos a cada controle, permitindo detecção precoce de alterações antes que se tornem clinicamente relevantes. Diante de QTc prolongado, a conduta se bifurca conforme a presença de sintomas: no paciente assintomático, mesmo com QTc moderadamente aumentado, a abordagem inicial é otimizar eletrólitos, reavaliar e eventualmente suspender fármacos concomitantes dispensáveis, e intensificar a monitorização, sem necessariamente interromper a terapia oncológica eficaz. Já o paciente sintomático — com síncope, pré-síncope, palpitações sustentadas ou QTc muito prolongado — exige avaliação mais urgente, incluindo consideração de redução de dose ou pausa temporária da terapia oncológica, sempre em decisão compartilhada com a equipe de oncologia, ponderando o benefício antineoplásico contra o risco arritmogênico; a suspensão definitiva é desfecho raro, reservado a casos recorrentes ou de risco inaceitável apesar de todas as medidas corretivas. Torsades de pointes, quando ocorre, constitui verdadeira emergência médica, com risco de degeneração para fibrilação ventricular e morte súbita, exigindo reconhecimento e intervenção imediatos, incluindo suporte avançado de vida quando indicado. É essencial que a equipe assistencial não banalize o achado de QT prolongado, mantendo vigilância e protocolo de correção ativa, mas também não superdimensione o risco a ponto de suspender desnecessariamente tratamentos oncológicos eficazes: a esmagadora maioria dos casos é assintomática, reversível com correção de fatores contribuintes e perfeitamente compatível com a continuidade da terapia antineoplásica sob monitorização adequada.",
+    "ambulatory_flow": [
+      "Obter ECG basal antes do início da terapia oncológica com potencial de prolongar o QT",
+      "Dosar e corrigir potássio, magnésio e cálcio antes do início do tratamento",
+      "Revisar a lista completa de medicamentos concomitantes em busca de outros agentes QT-prolongadores",
+      "Definir cronograma de ECG seriado conforme a classe do fármaco oncológico prescrito",
+      "Repetir eletrólitos a cada controle ambulatorial junto com o ECG seriado",
+      "Registrar o QTc basal e o QTc de cada reavaliação para acompanhar a tendência individual",
+      "Orientar o paciente sobre sintomas de alarme (síncope, palpitações, tontura) e quando procurar atendimento",
+      "Discutir com a oncologia eventual ajuste de dose ou pausa temporária diante de QTc progressivamente prolongado",
+      "Encaminhar para avaliação cardiológica formal casos de QTc persistentemente elevado ou com fatores de risco adicionais",
+      "Reavaliar periodicamente a real necessidade de manter fármacos não essenciais que também prolongam o QT"
+    ],
+    "emergency_flow": [
+      "Reconhecer torsades de pointes como emergência com risco de morte súbita e acionar suporte avançado de vida imediatamente",
+      "Realizar ECG imediato em paciente com síncope, palpitações sustentadas ou parada cardiorrespiratória em uso de terapia oncológica QT-prolongadora",
+      "Corrigir emergencialmente distúrbios eletrolíticos, sobretudo magnésio e potássio, diante de arritmia ventricular",
+      "Suspender temporariamente o fármaco oncológico suspeito e qualquer outro agente QT-prolongador concomitante",
+      "Instituir monitorização cardíaca contínua e garantir acesso a desfibrilador em paciente com QTc extremamente prolongado ou instabilidade",
+      "Avaliar necessidade de suporte avançado de vida cardiovascular diante de torsades de pointes sustentada ou instabilidade hemodinâmica",
+      "Comunicar emergencialmente a equipe de oncologia sobre o evento arrítmico grave para decisão conjunta sobre a terapia antineoplásica",
+      "Internar para observação e monitorização cardíaca todo paciente com torsades de pointes, mesmo quando autolimitada"
+    ],
+    "monitoring": [
+      "ECG seriado conforme cronograma específico da classe de fármaco oncológico em uso",
+      "Dosagem seriada de potássio, magnésio e cálcio a cada reavaliação",
+      "Registro seriado do QTc para identificar tendência de prolongamento ao longo do tratamento",
+      "Revisão periódica dos medicamentos concomitantes com potencial de prolongar o QT",
+      "Avaliação de sintomas cardiovasculares (síncope, palpitações, tontura) em cada consulta",
+      "Reavaliação da função renal e hepática, que influenciam a depuração dos fármacos QT-prolongadores",
+      "Acompanhamento conjunto com a oncologia sobre manutenção, ajuste ou pausa da terapia conforme evolução do QTc"
+    ],
+    "assistant_questions": [
+      {
+        "id": "qtc_basal_ms",
+        "label": "QTc basal registrado antes do início da terapia (ms)",
+        "type": "number"
+      },
+      {
+        "id": "qtc_atual_ms",
+        "label": "QTc mais recente registrado (ms)",
+        "type": "number"
+      },
+      {
+        "id": "classe_farmaco_qt",
+        "label": "Classe do fármaco oncológico associado a risco de prolongamento de QT",
+        "type": "select",
+        "options": [
+          {
+            "value": "inibidor_tirosina_quinase",
+            "label": "Inibidor de tirosina quinase"
+          },
+          {
+            "value": "antraciclina",
+            "label": "Antraciclina"
+          },
+          {
+            "value": "inibidor_histona_desacetilase",
+            "label": "Inibidor de histona desacetilase"
+          },
+          {
+            "value": "trioxido_arsenio",
+            "label": "Trióxido de arsênio"
+          },
+          {
+            "value": "antiemetico_5ht3",
+            "label": "Antiemético antagonista de 5-HT3"
+          },
+          {
+            "value": "outro",
+            "label": "Outro"
+          }
+        ]
+      },
+      {
+        "id": "eletrolitos_corrigidos",
+        "label": "Eletrólitos (potássio, magnésio, cálcio) foram dosados e corrigidos?",
+        "type": "boolean"
+      },
+      {
+        "id": "polifarmacia_qt",
+        "label": "Outros fármacos concomitantes com potencial de prolongar o QT",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "antiarritmico",
+            "label": "Antiarrítmico"
+          },
+          {
+            "value": "antipsicotico",
+            "label": "Antipsicótico"
+          },
+          {
+            "value": "macrolideo_quinolona",
+            "label": "Macrolídeo ou fluoroquinolona"
+          },
+          {
+            "value": "antifungico_azolico",
+            "label": "Antifúngico azólico"
+          },
+          {
+            "value": "metadona",
+            "label": "Metadona"
+          },
+          {
+            "value": "antiemetico_5ht3",
+            "label": "Antiemético antagonista de 5-HT3"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_associados",
+        "label": "Sintomas associados ao evento atual",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "assintomatico",
+            "label": "Assintomático"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope"
+          },
+          {
+            "value": "palpitacoes",
+            "label": "Palpitações"
+          },
+          {
+            "value": "tontura",
+            "label": "Tontura"
+          },
+          {
+            "value": "parada_cardiorrespiratoria",
+            "label": "Parada cardiorrespiratória"
+          }
+        ]
+      },
+      {
+        "id": "torsades_pointes_confirmada",
+        "label": "Torsades de pointes confirmada no evento atual?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_basal_realizado",
+        "label": "ECG basal foi realizado antes do início da terapia oncológica?",
+        "type": "boolean"
+      },
+      {
+        "id": "fase_tratamento",
+        "label": "Fase atual do tratamento",
+        "type": "select",
+        "options": [
+          {
+            "value": "pre_tratamento",
+            "label": "Pré-tratamento (basal)"
+          },
+          {
+            "value": "monitorizacao_seriada",
+            "label": "Monitorização seriada em curso"
+          },
+          {
+            "value": "reavaliacao_pos_alteracao",
+            "label": "Reavaliação após alteração de QTc"
+          }
+        ]
+      },
+      {
+        "id": "funcao_renal_hepatica_alterada",
+        "label": "Há alteração significativa da função renal ou hepática?",
+        "type": "boolean"
+      },
+      {
+        "id": "sexo",
+        "label": "Sexo do paciente",
+        "type": "select",
+        "options": [
+          {
+            "value": "feminino",
+            "label": "Feminino"
+          },
+          {
+            "value": "masculino",
+            "label": "Masculino"
+          }
+        ]
+      },
+      {
+        "id": "historico_arritmia_familiar",
+        "label": "Há história pessoal ou familiar de arritmia ou síndrome do QT longo?",
+        "type": "boolean"
+      },
+      {
+        "id": "decisao_oncologia",
+        "label": "Decisão compartilhada com a oncologia sobre a terapia",
+        "type": "select",
+        "options": [
+          {
+            "value": "manter_dose",
+            "label": "Manter a terapia sem alteração"
+          },
+          {
+            "value": "reduzir_dose",
+            "label": "Reduzir dose (decisão da oncologia)"
+          },
+          {
+            "value": "pausar_temporariamente",
+            "label": "Pausar temporariamente"
+          },
+          {
+            "value": "suspender_definitivamente",
+            "label": "Suspender definitivamente"
+          },
+          {
+            "value": "aguardando_avaliacao",
+            "label": "Aguardando avaliação conjunta"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "torsades_pointes_confirmada_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "torsades_pointes_confirmada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Torsades de pointes confirmada"
+          ],
+          "emergency_flow": [
+            "Acionar suporte avançado de vida imediatamente e preparar desfibrilação",
+            "Corrigir magnésio e potássio emergencialmente"
+          ],
+          "messages": [
+            "Torsades de pointes é emergência verdadeira, com risco de degeneração para fibrilação ventricular e morte súbita."
+          ]
+        }
+      },
+      {
+        "id": "parada_cardiorrespiratoria_emergencia",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_associados",
+              "op": "contains",
+              "value": "parada_cardiorrespiratoria"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Parada cardiorrespiratória associada a prolongamento de QT"
+          ],
+          "emergency_flow": [
+            "Iniciar suporte avançado de vida e monitorização contínua imediata"
+          ]
+        }
+      },
+      {
+        "id": "qtc_extremamente_prolongado",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "qtc_atual_ms",
+              "op": "gte",
+              "value": 500
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "QTc igual ou superior a 500 ms"
+          ],
+          "suggested_tests": [
+            "ECG imediato de confirmação",
+            "Dosagem urgente de eletrólitos"
+          ]
+        }
+      },
+      {
+        "id": "sincope_com_qt_prolongado",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_associados",
+              "op": "contains",
+              "value": "sincope"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope em paciente com prolongamento de QT"
+          ],
+          "suggested_tests": [
+            "ECG imediato",
+            "Dosagem de eletrólitos"
+          ]
+        }
+      },
+      {
+        "id": "eletrolitos_nao_corrigidos",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "eletrolitos_corrigidos",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Confirmação de dosagem e correção de potássio, magnésio e cálcio"
+          ],
+          "suggested_tests": [
+            "Dosagem de potássio, magnésio e cálcio séricos"
+          ]
+        }
+      },
+      {
+        "id": "ecg_basal_ausente_pre_tratamento",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_basal_realizado",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "fase_tratamento",
+              "op": "eq",
+              "value": "pre_tratamento"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "ECG basal antes do início da terapia oncológica"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma basal de 12 derivações"
+          ],
+          "ambulatory_flow": [
+            "Obter ECG basal antes de iniciar o fármaco oncológico QT-prolongador"
+          ]
+        }
+      },
+      {
+        "id": "polifarmacia_qt_concomitante",
+        "priority": 55,
+        "when": {
+          "any": [
+            {
+              "field": "polifarmacia_qt",
+              "op": "contains",
+              "value": "antiarritmico"
+            },
+            {
+              "field": "polifarmacia_qt",
+              "op": "contains",
+              "value": "antipsicotico"
+            },
+            {
+              "field": "polifarmacia_qt",
+              "op": "contains",
+              "value": "macrolideo_quinolona"
+            },
+            {
+              "field": "polifarmacia_qt",
+              "op": "contains",
+              "value": "antifungico_azolico"
+            },
+            {
+              "field": "polifarmacia_qt",
+              "op": "contains",
+              "value": "metadona"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Uso concomitante de outro fármaco com potencial de prolongar o QT, aumentando o risco cumulativo"
+          ]
+        }
+      },
+      {
+        "id": "historico_arritmia_familiar_presente",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "historico_arritmia_familiar",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "História pessoal ou familiar de arritmia ou síndrome do QT longo aumenta o risco basal"
+          ]
+        }
+      },
+      {
+        "id": "funcao_renal_hepatica_alterada_presente",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_renal_hepatica_alterada",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Avaliação de função renal e hepática para ajuste de depuração dos fármacos QT-prolongadores"
+          ],
+          "suggested_tests": [
+            "Função renal e hepática"
+          ]
+        }
+      },
+      {
+        "id": "suspensao_definitiva_reforco",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "decisao_oncologia",
+              "op": "eq",
+              "value": "suspender_definitivamente"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Suspensão definitiva é desfecho raro; confirmar que correção de eletrólitos, revisão de polifarmácia e ajuste de dose foram esgotados antes de suspender uma terapia oncológica eficaz."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Paciente iniciando trióxido de arsênio, em que o prolongamento do intervalo QT é praticamente universal (relatado em 26–93% dos tratados) e exige ECG semanal nas primeiras oito semanas de indução",
+      "Paciente em uso de inibidor de CDK4/6 (ribociclibe), com exigência regulatória própria de monitorização eletrocardiográfica seriada — QTc basal, no dia 14 e no dia 28, distinta dos demais fármacos da mesma classe",
+      "Paciente com múltiplos fatores de risco somados — hipocalemia e/ou hipomagnesemia associadas a outro fármaco prolongador de QT e a cardiopatia estrutural de base — em que o risco de torsades de pointes deixa de ser aditivo e passa a ser multiplicativo",
+      "Paciente com QTc prolongado assintomático descoberto em eletrocardiograma de rotina durante terapia oncológica, situação que exige investigação de causa reversível antes de qualquer decisão sobre continuidade do tratamento antineoplásico",
+      "Paciente com síncope ou arritmia ventricular documentada durante o uso de terapia oncológica de risco reconhecido para prolongamento de QT, que deve ser tratado como emergência com interrupção imediata do fármaco agressor",
+      "Paciente iniciando inibidor de menina (revumenibe), no qual o prolongamento de QTc coexiste com risco concomitante de síndrome de diferenciação, exigindo vigilância cardiovascular e hematológica simultânea e integrada",
+      "Paciente com neoplasia hematológica em indução intensiva (por exemplo, leucemia promielocítica aguda ou leucemia mieloide aguda com rearranjo de KMT2A) recebendo simultaneamente múltiplos agentes com potencial de prolongar QT, em contexto de instabilidade metabólica e eletrolítica própria da síndrome de lise tumoral"
+    ],
+    "related_document_slugs": [
+      "prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe",
+      "fluxograma-prolongamento-qt-por-ribociclibe-e-risco-de-torsades",
+      "prolongamento-de-qt-e-torsades-por-trioxido-de-arsenio",
+      "fluxograma-prolongamento-de-qt-e-torsades-por-trioxido-de-arsenio",
+      "inibidor-de-menina-revumenibe-prolongamento-de-qtc-e-sindrome-de-diferenciacao",
+      "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao"
+    ],
+    "patient_material_slug": "qt-longo-terapia-oncologica",
+    "fonte_producao": "claude"
   },
   {
     "slug": "trombose-associada-cancer",
