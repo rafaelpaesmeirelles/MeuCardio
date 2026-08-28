@@ -1,0 +1,79 @@
+name: Emergency deploy current main
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy current main through restricted SSH
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.title == 'ops: emergency deploy current main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment: production
+    env:
+      TARGET_SHA: ${{ github.event.pull_request.base.sha }}
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+    steps:
+      - name: Confirm target is still current main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          test "$current_main" = "$TARGET_SHA"
+          echo "Deploying exact current main: $TARGET_SHA"
+
+      - name: Deploy exact current main SHA
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          install -m 0700 -d "$ssh_dir"
+          trap 'rm -rf "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
+
+          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" "deploy $TARGET_SHA"
+
+      - name: Verify public production exact SHA
+        env:
+          PUBLIC_URL: https://corvia.med.br
+        run: |
+          set -euo pipefail
+          version_file="$RUNNER_TEMP/version.json"
+          curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 5 \
+            "$PUBLIC_URL/api/version" > "$version_file"
+          python3 - "$version_file" "$TARGET_SHA" <<'PY'
+          import json, sys
+          path, expected = sys.argv[1:]
+          with open(path, encoding='utf-8') as handle:
+              payload = json.load(handle)
+          actual = payload.get('commit') or payload.get('version') or payload.get('sha')
+          if actual != expected:
+              raise SystemExit(f"Production reports {actual!r}; expected {expected!r}")
+          print(f"Production version confirmed: {actual}")
+          PY
+          curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
+          curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
+          echo "Production exact SHA, health and readiness confirmed."
