@@ -21,21 +21,39 @@ def _rule(hub, rule_id):
 
 def test_choque_revisado_e_autorizado_para_publicacao():
     hub = _hub()
+    note = hub["review_note"].casefold()
     assert hub["review_status"] == "revisado"
-    assert "publicação autorizada" in hub["review_note"]
-    assert "responsável médico" in hub["review_note"]
+    assert "publicação autorizada" in note
+    assert "responsável médico" in note
 
 
 def test_hipoperfusao_nao_exige_hipotensao_e_complicacao_mecanica_e_separada():
     hub = _hub()
     label = _question(hub, "hypoperfusion_signs")["label"].casefold()
     assert "independentemente da pressão arterial" in label
+    blob = str(hub).casefold()
+    assert "hipotensão + hipoperfusão" not in blob
+    assert "hipoperfusão tecidual, com hipotensão possível porém não obrigatória" in blob
     options = {item["value"]: item["label"] for item in _question(hub, "shock_etiology")["options"]}
     assert "complicacao_mecanica_pos_iam" in options
     assert "sem complicação mecânica" in options["isquemica_iam"].casefold()
     mechanical = _rule(hub, "choque-cardiogenico-complicacao-mecanica-pos-iam")
     assert mechanical["add"]["risk"] == "emergencia"
     assert any("ecocardiograma urgente" in text.casefold() for text in mechanical["add"]["suggested_tests"])
+
+
+def test_pos_cardiotomia_preserva_gatilho_por_etiologia_ou_contexto_expresso():
+    hub = _hub()
+    rule = _rule(hub, "choque-cardiogenico-pos-cardiotomia")
+    predicates = rule["when"]["any"]
+    assert any(
+        item["field"] == "shock_etiology" and item["op"] == "eq" and item["value"] == "pos_cardiotomia"
+        for item in predicates
+    )
+    assert any(
+        item["field"] == "post_cardiac_surgery" and item["op"] == "truthy"
+        for item in predicates
+    )
 
 
 def test_deterioracao_respeita_suporte_ja_instalado_e_nao_escolhe_dispositivo_por_scai():
