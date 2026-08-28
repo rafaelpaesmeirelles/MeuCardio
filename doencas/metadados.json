@@ -9022,7 +9022,7 @@
     "assistant_questions": [
       {
         "id": "idade_apresentacao",
-        "text": "Qual a faixa etária de apresentação/avaliação atual?",
+        "label": "Qual a faixa etária de apresentação/avaliação atual?",
         "type": "select",
         "options": [
           {
@@ -9045,7 +9045,7 @@
       },
       {
         "id": "gravidade_estenose",
-        "text": "Qual a gravidade da estenose valvar aórtica ao ecocardiograma?",
+        "label": "Qual a gravidade da estenose valvar aórtica ao ecocardiograma?",
         "type": "select",
         "options": [
           {
@@ -9068,7 +9068,7 @@
       },
       {
         "id": "gravidade_insuficiencia",
-        "text": "Qual a gravidade da insuficiência aórtica associada?",
+        "label": "Qual a gravidade da insuficiência aórtica associada?",
         "type": "select",
         "options": [
           {
@@ -9087,7 +9087,7 @@
       },
       {
         "id": "funcao_ventricular_esquerda",
-        "text": "Qual o estado da função sistólica do ventrículo esquerdo?",
+        "label": "Qual o estado da função sistólica do ventrículo esquerdo?",
         "type": "select",
         "options": [
           {
@@ -9106,7 +9106,7 @@
       },
       {
         "id": "sintomas_atuais",
-        "text": "Quais sintomas o paciente apresenta atualmente?",
+        "label": "Quais sintomas o paciente apresenta atualmente?",
         "type": "multiselect",
         "options": [
           {
@@ -9133,37 +9133,37 @@
       },
       {
         "id": "instabilidade_hemodinamica",
-        "text": "Há sinais de instabilidade hemodinâmica ou choque cardiogênico?",
+        "label": "Há sinais de instabilidade hemodinâmica ou choque cardiogênico?",
         "type": "boolean"
       },
       {
         "id": "ducto_arterioso_dependente",
-        "text": "O quadro é ductus-dependente (necessidade de canal arterial pérvio para perfusão sistêmica)?",
+        "label": "O quadro é ductus-dependente (necessidade de canal arterial pérvio para perfusão sistêmica)?",
         "type": "boolean"
       },
       {
         "id": "teste_ergometrico_alterado",
-        "text": "O teste ergométrico mostrou resposta hemodinâmica anormal (queda de PA, infradesnível de ST significativo, arritmia)?",
+        "label": "O teste ergométrico mostrou resposta hemodinâmica anormal (queda de PA, infradesnível de ST significativo, arritmia)?",
         "type": "boolean"
       },
       {
         "id": "diametro_aorta_ascendente_zscore",
-        "text": "Qual o z-score do diâmetro da aorta ascendente/raiz aórtica indexado à superfície corporal?",
+        "label": "Qual o z-score do diâmetro da aorta ascendente/raiz aórtica indexado à superfície corporal?",
         "type": "number"
       },
       {
         "id": "pratica_esporte_competitivo",
-        "text": "O paciente pratica ou pretende praticar esporte competitivo?",
+        "label": "O paciente pratica ou pretende praticar esporte competitivo?",
         "type": "boolean"
       },
       {
         "id": "historico_familiar_dissecao_aorta",
-        "text": "Há história familiar de dissecção de aorta ou aneurisma aórtico precoce?",
+        "label": "Há história familiar de dissecção de aorta ou aneurisma aórtico precoce?",
         "type": "boolean"
       },
       {
         "id": "idade_anos",
-        "text": "Qual a idade do paciente em anos completos?",
+        "label": "Qual a idade do paciente em anos completos?",
         "type": "number"
       }
     ],
