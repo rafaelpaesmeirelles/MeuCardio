@@ -10168,7 +10168,7 @@
     "category": "prevencao",
     "subtype": "lipides",
     "prevalence_rank": 27,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Alterações lipídicas na infância, primárias ou secundárias, que exigem contexto familiar, causas associadas e estratégia preventiva longitudinal.",
     "tags": [
       "dislipidemia",
@@ -10176,14 +10176,518 @@
       "hipercolesterolemia familiar"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "AHA Pediatric Cardiology scientific resources",
+      "Expert Panel on Integrated Guidelines for Cardiovascular Health and Risk Reduction in Children and Adolescents; National Heart, Lung, and Blood Institute. Pediatrics. 2011;128(Suppl 5):S213-S256. PMID: 22084329.",
+      "Daniels SR, Greer FR; Committee on Nutrition. Lipid screening and cardiovascular health in childhood. Pediatrics. 2008;122(1):198-208. PMID: 18596007.",
+      "Wiegman A, Gidding SS, Watts GF, et al. Familial hypercholesterolaemia in children and adolescents: gaining decades of life by optimizing detection and treatment. Eur Heart J. 2015;36(36):2425-2437. PMID: 26009596.",
+      "Nordestgaard BG, Chapman MJ, Humphries SE, et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population. Eur Heart J. 2013;34(45):3478-3490a. PMID: 23956253.",
+      "Beheshti SO, Madsen CM, Varbo A, Nordestgaard BG. Worldwide Prevalence of Familial Hypercholesterolemia: Meta-Analyses of 11 Million Subjects. J Am Coll Cardiol. 2020;75(20):2553-2566. PMID: 32439005.",
+      "Cuchel M, Raal FJ, Hegele RA, et al. 2023 Update on European Atherosclerosis Society Consensus Statement on Homozygous Familial Hypercholesterolaemia. Eur Heart J. 2023;44(25):2277-2291. PMID: 37130090.",
+      "Sjouke B, Kusters DM, Kindt I, et al. Homozygous autosomal dominant hypercholesterolaemia in the Netherlands. Eur Heart J. 2015;36(9):560-565. PMID: 24585268.",
+      "Wiegman A, de Groot E, Hutten BA, et al. Arterial intima-media thickness in children heterozygous for familial hypercholesterolaemia. Lancet. 2004;363(9406):369-370. PMID: 15070569.",
+      "Sturm AC, Knowles JW, Gidding SS, et al. Clinical Genetic Testing for Familial Hypercholesterolemia: JACC Scientific Expert Panel. J Am Coll Cardiol. 2018;72(6):662-680. PMID: 30071997.",
+      "Bento VFR, Kaestner TLDL, Vargas Junior A, et al. Cascade Screening in Adolescents with Lipid Disorders Suggestive of Familial Hypercholesterolemia. Arq Bras Cardiol. 2025;122(3):e20240468. PMID: 40172431.",
+      "Patel M, de la Torre A. Medication Induced Dyslipidemia in Children. Curr Atheroscler Rep. 2025;27(1):52. PMID: 40257603."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology",
+      "https://pubmed.ncbi.nlm.nih.gov/22084329/",
+      "https://pubmed.ncbi.nlm.nih.gov/18596007/",
+      "https://pubmed.ncbi.nlm.nih.gov/26009596/",
+      "https://pubmed.ncbi.nlm.nih.gov/23956253/",
+      "https://pubmed.ncbi.nlm.nih.gov/32439005/",
+      "https://pubmed.ncbi.nlm.nih.gov/37130090/",
+      "https://pubmed.ncbi.nlm.nih.gov/24585268/",
+      "https://pubmed.ncbi.nlm.nih.gov/15070569/",
+      "https://pubmed.ncbi.nlm.nih.gov/30071997/",
+      "https://pubmed.ncbi.nlm.nih.gov/40172431/",
+      "https://pubmed.ncbi.nlm.nih.gov/40257603/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (7º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608, hipertensao-arterial-pediatrica/PR #609 e dor-toracica-pediatrica/PR #610): ficha estava com apenas metadados de catalogação — nenhum campo clínico, zero related_document_slugs. Produzida epidemiologia (HF heterozigota 1:250-1:300, homozigota ~1:160.000-1:300.000), apresentação (10 itens), abordagem diagnóstica estruturada em 5 subtópicos (rastreio universal AAP/NHLBI, rastreio em cascata, critérios HF heterozigota/homozigota, causas secundárias), 8 diferenciais, 8 exames, 8 sinais de alarme, tratamento (mudança de estilo de vida, critérios objetivos de início de estatina, manejo especializado de HF homozigota, rastreio familiar em cascata), fluxos ambulatorial/emergência, monitoramento, 6 populações especiais, assistente clínico determinístico (10 perguntas, 10 regras, priority 100 para pancreatite por hipertrigliceridemia grave) e 5 related_document_slugs, todos verificados individualmente fora de Farmacologia/Calculadoras/Exames, sem sobreposição com nenhuma outra ficha (incluindo o hub geral 'dislipidemia', PR #570, população adulta — slug distinto, sem colisão nem sobreposição de documentos). patient_material_slug permanece null — nenhum material específico de dislipidemia pediátrica encontrado no corpus hoje (os dois candidatos mais próximos são sobre HF em adulto e sobre obesidade infantil em geral, colesterol apenas um dos temas). Limiares diagnósticos de LDL-C/triglicerídeos em mg/dL (unidade de concentração laboratorial) mantidos como conteúdo diagnóstico legítimo — não são doses de fármaco; nenhuma classe/fármaco citado com posologia.",
+    "version": 2,
+    "fonte_producao": "claude",
+    "epidemiology": "A hipercolesterolemia familiar (HF) heterozigota é uma das doenças genéticas mais comuns em cardiologia, com prevalência estimada entre 1:250 e 1:300 na população geral, segundo meta-análise reunindo mais de 11 milhões de indivíduos (Beheshti et al., 2020) e o documento de consenso europeu que relata prevalência histórica variando de 1:200 a 1:500 conforme a população estudada (Nordestgaard et al., 2013). Em termos práticos, isso equivale a cerca de um recém-nascido com mutação causadora de HF a cada minuto no mundo (Wiegman et al., 2015). A forma homozigota (ou heterozigota composta) é muito mais rara, com prevalência estimada em torno de 1:300.000, podendo aproximar-se de 1:160.000 em populações estudadas com genotipagem em larga escala — valor bem superior à cifra clássica de 1:1.000.000 historicamente citada (Sjouke et al., 2015; Cuchel et al., 2023). Apesar dessa prevalência relativamente alta, a HF pediátrica permanece amplamente subdiagnosticada: estudos de rastreio em cascata em adolescentes mostram taxas de identificação de novos casos muito abaixo do esperado pela prevalência populacional, mesmo em contextos com programas estruturados de triagem familiar (Bento et al., 2025). A dislipidemia secundária, por sua vez, é numericamente mais frequente que a primária na faixa etária pediátrica, impulsionada principalmente pelo aumento da prevalência de obesidade infantil, hábitos alimentares inadequados, sedentarismo e causas endócrino-metabólicas e medicamentosas (Patel & de la Torre, 2025; NHLBI, 2011). A detecção precoce da HF é clinicamente relevante porque a aterosclerose subclínica já é mensurável na infância em crianças heterozigotas não tratadas: estudo com crianças de 8 a 16 anos demonstrou espessura íntima-média carotídea significativamente maior em portadoras de HF em comparação com seus irmãos não afetados, achado detectável já antes da puberdade e anos antes de qualquer manifestação clínica de doença coronariana (Wiegman et al., 2004).",
+    "presentation": [
+      "Assintomática na grande maioria dos casos pediátricos, identificada apenas por rastreio lipídico de rotina ou por triagem em cascata familiar",
+      "Xantomas tendinosos (tendão de Aquiles, extensores dos dedos), achado característico de HF homozigota, raramente presentes na forma heterozigota antes da vida adulta",
+      "Arco corneano (arcus corneae) em criança ou adolescente, fortemente sugestivo de HF grave/homozigota quando presente antes dos 10 anos",
+      "Xantelasma palpebral, mais associado a formas graves ou de longa evolução da hipercolesterolemia",
+      "História familiar de doença arterial coronariana precoce (evento antes dos 55 anos em parente masculino de primeiro grau, ou antes dos 65 anos em parente feminina de primeiro grau)",
+      "História familiar de hipercolesterolemia conhecida ou de LDL-C muito elevado em parente de primeiro grau",
+      "Obesidade central e acantose nigricans (pescoço, axilas), sugerindo resistência insulínica e dislipidemia secundária de padrão metabólico",
+      "Outras manifestações da síndrome metabólica pediátrica associadas (pressão arterial elevada, circunferência abdominal aumentada, esteatose hepática)",
+      "Edema e proteinúria em crianças com síndrome nefrótica, frequentemente acompanhados de hipercolesterolemia secundária significativa",
+      "Sinais clínicos sugestivos de hipotireoidismo (ganho de peso, fadiga, constipação, bócio) em criança com perfil lipídico alterado"
+    ],
+    "diagnostic_approach": {
+      "rastreio_universal": "O NHLBI (2011), com respaldo da American Academy of Pediatrics, recomenda rastreio lipídico universal com perfil lipídico em duas janelas etárias: entre 9-11 anos e novamente entre 17-21 anos, período em que o efeito fisiológico da puberdade sobre o perfil lipídico é menor. A amostra pode ser colhida em jejum ou não-jejum para triagem inicial, mas resultados alterados devem ser confirmados com perfil lipídico em jejum de 8-12 horas para cálculo confiável do LDL-C.",
+      "rastreio_seletivo_cascata": "O rastreio seletivo (dirigido) é recomendado a partir dos 2 anos de idade, antes da janela de rastreio universal, em crianças com história familiar de doença cardiovascular precoce em parente de primeiro ou segundo grau ou com pai/mãe com colesterol total muito elevado ou diagnóstico conhecido de HF. O rastreio em cascata, iniciado a partir de um caso índice com HF confirmada clínica ou geneticamente, é a estratégia mais custo-efetiva para identificar novos casos.",
+      "criterios_diagnosticos_hf_heterozigota": "O diagnóstico de HF heterozigota em pediatria combina valor absoluto de LDL-C com critérios clínicos e história familiar: LDL-C igual ou superior a 190 mg/dL, ou igual ou superior a 160 mg/dL na presença de história familiar positiva para HF ou doença coronariana precoce, ou igual ou superior a 130 mg/dL quando há mutação causadora confirmada na família, é considerado diagnóstico ou fortemente sugestivo em criança/adolescente sem causa secundária identificável. Escores clínicos adaptados de adultos, como o Dutch Lipid Clinic Network (DLCN) e o Simon Broome, incorporam LDL-C, xantomas tendinosos, arco corneano e história familiar, mas seu uso em pediatria exige cautela.",
+      "criterios_diagnosticos_hf_homozigota": "A HF homozigota (ou heterozigota composta/dupla heterozigota) deve ser suspeitada em crianças com LDL-C extremamente elevado sem tratamento, tipicamente superior a 400 mg/dL, critério fenotípico priorizado pela atualização do consenso da European Atherosclerosis Society de 2023, que recomenda valorizar o fenótipo sobre o genótipo na definição clínica. Xantomas cutâneos e tendinosos já na primeira infância, arco corneano precoce e doença arterial coronariana ou aórtica sintomática antes dos 20 anos são achados característicos. A confirmação por teste genético é recomendada sempre que disponível, pois o fenótipo é heterogêneo.",
+      "investigacao_causas_secundarias": "Antes de rotular uma dislipidemia pediátrica como primária/genética, as diretrizes recomendam excluir causas secundárias, que são numericamente mais prevalentes na infância: obesidade e síndrome metabólica, diabetes mellitus, hipotireoidismo, síndrome nefrótica e doença renal crônica, doenças hepáticas colestáticas, e uso de medicações associadas a dislipidemia secundária."
+    },
+    "differentials": [
+      "Obesidade e resistência insulínica / síndrome metabólica",
+      "Diabetes mellitus tipo 1 mal controlado ou tipo 2",
+      "Hipotireoidismo primário ou subclínico",
+      "Síndrome nefrótica",
+      "Doença renal crônica",
+      "Doença hepática colestática (ex.: atresia biliar, colestase crônica)",
+      "Uso de medicações associadas a dislipidemia secundária (corticosteroides sistêmicos, isotretinoína, imunossupressores)",
+      "Hipopituitarismo/deficiência de hormônio de crescimento"
+    ],
+    "tests": [
+      "Perfil lipídico completo (colesterol total, LDL-C, HDL-C, triglicerídeos), em jejum ou não-jejum conforme protocolo de rastreio",
+      "Repetição do perfil lipídico em jejum de 8-12 horas para confirmação diagnóstica quando resultado inicial alterado",
+      "Glicemia de jejum e/ou hemoglobina glicada, para rastreio de diabetes e resistência insulínica",
+      "Perfil tireoidiano (TSH e T4 livre)",
+      "Função renal (ureia, creatinina) e urinálise/relação proteína-creatinina urinária, para rastreio de síndrome nefrótica e doença renal crônica",
+      "Enzimas hepáticas e avaliação de função hepática, quando há suspeita de doença colestática",
+      "Teste genético molecular para HF (painel de genes LDLR, APOB, PCSK9, LDLRAP1) em casos com fenótipo compatível",
+      "Aplicação de escore clínico diagnóstico (Dutch Lipid Clinic Network adaptado ou Simon Broome) e coleta sistemática de história familiar cardiovascular em três gerações"
+    ],
+    "red_flags": [
+      "LDL-C muito elevado (acima de 400 mg/dL), sugestivo de HF homozigota",
+      "Xantomas tendinosos ou cutâneos em criança ou adolescente",
+      "Arco corneano em paciente pediátrico",
+      "História familiar de evento coronariano antes dos 55 anos em parente masculino de primeiro grau, ou antes dos 65 anos em parente feminina de primeiro grau",
+      "Doença coronariana ou aórtica precoce documentada em parente de primeiro grau, incluindo eventos antes dos 40 anos",
+      "Pai ou mãe com diagnóstico confirmado de hipercolesterolemia familiar",
+      "LDL-C persistentemente elevado após exclusão de causas secundárias e otimização de estilo de vida",
+      "Sinais sugestivos de doença coronariana precoce no próprio paciente pediátrico (dor torácica atípica, baixa tolerância ao exercício em criança com dislipidemia grave)"
+    ],
+    "treatment_summary": "O tratamento das dislipidemias pediátricas começa, em todos os níveis de gravidade e para todas as etiologias, pela mudança terapêutica do estilo de vida, que deve ser mantida como base do manejo mesmo quando terapia farmacológica é indicada. A intervenção nutricional prioriza redução da ingestão de gordura saturada e gordura trans, aumento de fibras solúveis, incentivo a frutas, vegetais e grãos integrais, e restrição de açúcares simples, sempre adaptada à faixa etária e ao crescimento da criança, sem comprometer o aporte calórico e proteico necessário ao desenvolvimento. Associam-se orientação de atividade física regular, redução de comportamento sedentário e, quando há excesso de peso concomitante, controle ponderal estruturado com acompanhamento nutricional. Esse período de mudança de estilo de vida deve ser mantido por cerca de 6 a 12 meses antes de se considerar escalonamento para terapia farmacológica, exceto em cenários de risco muito alto. A decisão de iniciar tratamento medicamentoso segue critérios objetivos: idade mínima geralmente a partir de 8 a 10 anos, LDL-colesterol persistentemente elevado apesar de mudança de estilo de vida adequada e sustentada, e presença de fatores de risco adicionais que ampliam o risco cardiovascular precoce, como história familiar de doença arterial coronariana precoce, obesidade, hipertensão arterial, diabetes mellitus, doença renal crônica ou tabagismo passivo. Em crianças e adolescentes com hipercolesterolemia familiar heterozigota que preenchem esses critérios, a classe terapêutica de primeira linha é a dos inibidores da HMG-CoA redutase (estatinas), sempre indicados por classe farmacológica, com decisão de início, escolha do agente e ajuste de intensidade a cargo da equipe assistente, sem menção a posologia neste conteúdo. A hipercolesterolemia familiar homozigota exige manejo especializado e mais agressivo desde o diagnóstico, tipicamente em centro de referência em lipidologia pediátrica: além da combinação de classes hipolipemiantes orais (estatina de alta intensidade associada a ezetimiba, não estatina isolada), frequentemente é necessária aférese de LDL periódica para reduzir de forma significativa e sustentada o LDL-colesterol circulante, e, em casos selecionados que não atingem meta, terapias biológicas adicionais dirigidas a vias específicas do metabolismo lipídico (como inibição de ANGPTL3) podem ser consideradas por especialista a partir de idade mínima estabelecida em estudo pediátrico dedicado, sempre com avaliação cardiovascular seriada pelo risco de doença coronariana muito precoce. Causas secundárias de dislipidemia — como hipotireoidismo, síndrome nefrótica, diabetes mellitus descompensado, colestase hepática, obesidade grave ou uso de medicamentos associados a alterações lipídicas — devem ser ativamente investigadas e tratadas de forma dirigida, pois a correção da condição de base frequentemente normaliza total ou parcialmente o perfil lipídico, evitando exposição desnecessária a terapia hipolipemiante crônica. Por fim, o rastreio familiar em cascata é parte essencial e obrigatória do manejo: uma vez identificado um caso índice com hipercolesterolemia familiar (heterozigota ou homozigota) ou outra dislipidemia genética relevante, pais, irmãos e demais familiares de primeiro grau devem ser convocados para avaliação lipídica e, quando disponível, estudo molecular, permitindo diagnóstico precoce, início oportuno de mudança de estilo de vida ou tratamento farmacológico em familiares afetados e quebra da cadeia de doença cardiovascular precoce não diagnosticada na família.",
+    "ambulatory_flow": [
+      "Confirmar o perfil lipídico em jejum com pelo menos duas dosagens em momentos distintos antes de firmar diagnóstico de dislipidemia persistente",
+      "Investigar e excluir causas secundárias de dislipidemia (tireoidianas, renais, hepáticas, metabólicas, medicamentosas) antes de classificar como dislipidemia primária",
+      "Iniciar mudança terapêutica do estilo de vida (dieta com redução de gordura saturada, atividade física regular, controle de peso) em toda criança com LDL-C elevado, independentemente da causa",
+      "Reavaliar o perfil lipídico após 6 a 12 meses de mudança de estilo de vida bem conduzida antes de considerar terapia farmacológica",
+      "Encaminhar a especialista em lipidologia pediátrica ou cardiopediatria os casos que preenchem critérios de início de estatina ou com suspeita de hipercolesterolemia familiar homozigota",
+      "Realizar rastreio familiar em cascata (pais e irmãos) assim que um caso índice de hipercolesterolemia familiar for identificado, com dosagem lipídica e, quando disponível, avaliação genética",
+      "Programar seguimento clínico e laboratorial regular para monitorar adesão às mudanças de estilo de vida, resposta ao tratamento farmacológico quando indicado e crescimento/desenvolvimento",
+      "Orientar a família sobre sinais de alarme (dor abdominal intensa, xantomas de crescimento rápido, dor torácica) que exigem avaliação urgente"
+    ],
+    "emergency_flow": [
+      "Reconhecer pancreatite aguda em criança com hipertrigliceridemia grave conhecida ou não diagnosticada que apresenta dor abdominal intensa, vômitos e sinais sistêmicos, encaminhando imediatamente para avaliação de emergência",
+      "Solicitar avaliação laboratorial de urgência (incluindo triglicerídeos e marcadores pancreáticos) e suporte clínico hospitalar apropriado diante de suspeita de pancreatite por hipertrigliceridemia grave",
+      "Encaminhar com urgência para avaliação cardiológica qualquer criança ou adolescente com hipercolesterolemia familiar homozigota não tratada que apresente dor torácica, dispneia aos esforços ou outros sinais sugestivos de evento coronariano precoce",
+      "Acionar equipe de lipidologia/cardiologia especializada para reavaliação emergencial do plano terapêutico (incluindo indicação de aférese de LDL) em paciente com hipercolesterolemia familiar homozigota descompensada ou sintomática",
+      "Assegurar transporte e estabilização adequados para centro de referência em casos de suspeita de evento cardiovascular agudo em criança com dislipidemia genética grave"
+    ],
+    "monitoring": [
+      "Perfil lipídico completo em jejum a cada 3 a 6 meses durante ajuste de tratamento e anualmente após estabilização",
+      "Avaliação periódica de adesão e resposta à mudança de estilo de vida (dieta, atividade física, controle de peso)",
+      "Acompanhamento de crescimento, desenvolvimento puberal e estado nutricional em todo paciente sob dieta terapêutica ou terapia farmacológica prolongada",
+      "Vigilância clínica de sinais físicos de dislipidemia grave (xantomas, arco corneano) em consultas de retorno",
+      "Reavaliação periódica de fatores de risco cardiovascular associados (pressão arterial, glicemia, peso corporal, exposição a tabagismo passivo)",
+      "Acompanhamento longitudinal em centro especializado, com avaliação cardiovascular seriada, para pacientes com hipercolesterolemia familiar homozigota em aférese de LDL",
+      "Verificação periódica do status de rastreio familiar em cascata, atualizando quais familiares de primeiro grau já foram avaliados"
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_anos",
+        "text": "Qual a idade do paciente, em anos?",
+        "type": "number"
+      },
+      {
+        "id": "ldl_c_mg_dl",
+        "text": "Qual o valor mais recente de LDL-colesterol, em mg/dL?",
+        "type": "number"
+      },
+      {
+        "id": "triglicerideos_mg_dl",
+        "text": "Qual o valor mais recente de triglicerídeos, em mg/dL?",
+        "type": "number"
+      },
+      {
+        "id": "tempo_mudanca_estilo_vida_meses",
+        "text": "Há quantos meses o paciente está em mudança terapêutica do estilo de vida (dieta e atividade física) de forma consistente?",
+        "type": "number"
+      },
+      {
+        "id": "historico_familiar_ihd_precoce",
+        "text": "Há história familiar de doença arterial coronariana precoce (antes dos 55 anos em homens ou 65 anos em mulheres) em parentes de primeiro grau?",
+        "type": "boolean"
+      },
+      {
+        "id": "suspeita_hf_homozigota",
+        "text": "Há suspeita clínica de hipercolesterolemia familiar homozigota (xantomas cutâneos ou tendíneos precoces, LDL-C extremamente elevado, ambos os pais com diagnóstico de hipercolesterolemia familiar)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_pancreatite_aguda",
+        "text": "O paciente apresenta dor abdominal aguda intensa com suspeita de pancreatite?",
+        "type": "boolean"
+      },
+      {
+        "id": "causa_secundaria_identificada",
+        "text": "Foi identificada alguma causa secundária de dislipidemia?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma identificada"
+          },
+          {
+            "value": "hipotireoidismo",
+            "label": "Hipotireoidismo"
+          },
+          {
+            "value": "sindrome_nefrotica",
+            "label": "Síndrome nefrótica"
+          },
+          {
+            "value": "diabetes_descompensado",
+            "label": "Diabetes mellitus descompensado"
+          },
+          {
+            "value": "colestase_hepatica",
+            "label": "Colestase hepática"
+          },
+          {
+            "value": "medicamentos",
+            "label": "Medicamento associado a dislipidemia"
+          },
+          {
+            "value": "obesidade",
+            "label": "Obesidade"
+          }
+        ]
+      },
+      {
+        "id": "caso_indice_familiar_confirmado",
+        "text": "Este paciente é caso índice familiar com diagnóstico (clínico ou molecular) confirmado de hipercolesterolemia familiar?",
+        "type": "boolean"
+      },
+      {
+        "id": "rastreio_familiares_realizado",
+        "text": "Qual o status do rastreio em cascata dos familiares de primeiro grau (pais e irmãos)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizado",
+            "label": "Não realizado"
+          },
+          {
+            "value": "em_andamento",
+            "label": "Em andamento"
+          },
+          {
+            "value": "completo",
+            "label": "Completo"
+          }
+        ]
+      },
+      {
+        "id": "fatores_risco_adicionais",
+        "text": "Quais fatores de risco cardiovascular adicionais estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "obesidade",
+            "label": "Obesidade"
+          },
+          {
+            "value": "hipertensao",
+            "label": "Hipertensão arterial"
+          },
+          {
+            "value": "tabagismo_passivo",
+            "label": "Exposição a tabagismo passivo"
+          },
+          {
+            "value": "diabetes",
+            "label": "Diabetes mellitus"
+          },
+          {
+            "value": "doenca_renal_cronica",
+            "label": "Doença renal crônica"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "regra_pancreatite_hipertrigliceridemia_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_pancreatite_aguda",
+              "op": "truthy"
+            },
+            {
+              "field": "triglicerideos_mg_dl",
+              "op": "gte",
+              "value": 1000
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita de pancreatite aguda por hipertrigliceridemia grave"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para avaliação de emergência com suporte clínico hospitalar"
+          ],
+          "messages": [
+            "Hipertrigliceridemia muito elevada associada a dor abdominal aguda exige avaliação emergencial imediata para pancreatite."
+          ]
+        }
+      },
+      {
+        "id": "regra_suspeita_hf_homozigota",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "suspeita_hf_homozigota",
+              "op": "truthy"
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 400
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "LDL-colesterol extremamente elevado sugestivo de hipercolesterolemia familiar homozigota"
+          ],
+          "suggested_tests": [
+            "Avaliação genética/molecular para hipercolesterolemia familiar",
+            "Avaliação cardiovascular especializada"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar com prioridade a centro de referência em lipidologia pediátrica para manejo especializado, incluindo possível indicação de aférese de LDL"
+          ]
+        }
+      },
+      {
+        "id": "regra_dor_toracica_hf_homozigota",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_hf_homozigota",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Paciente com suspeita de hipercolesterolemia familiar homozigota deve ter avaliação cardiovascular seriada pelo risco de doença coronariana muito precoce."
+          ]
+        }
+      },
+      {
+        "id": "regra_idade_minima_farmacoterapia",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "idade_anos",
+              "op": "lt",
+              "value": 8
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 130
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "Idade abaixo do limiar geralmente aceito para início de terapia farmacológica"
+          ],
+          "messages": [
+            "Priorizar mudança de estilo de vida; reavaliar critérios para terapia farmacológica quando o paciente atingir idade mínima recomendada."
+          ]
+        }
+      },
+      {
+        "id": "regra_criterio_inicio_estatina",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "idade_anos",
+              "op": "gte",
+              "value": 10
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 190
+            },
+            {
+              "field": "tempo_mudanca_estilo_vida_meses",
+              "op": "gte",
+              "value": 6
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "LDL-C persistentemente elevado apesar de mudança de estilo de vida sustentada",
+            "Idade compatível com critério de início de terapia farmacológica"
+          ],
+          "suggested_tests": [
+            "Reavaliação lipídica confirmatória",
+            "Avaliação especializada para indicação de estatina"
+          ]
+        }
+      },
+      {
+        "id": "regra_lifestyle_insuficiente",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "tempo_mudanca_estilo_vida_meses",
+              "op": "lt",
+              "value": 6
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 130
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Tempo de mudança de estilo de vida ainda insuficiente para decisão sobre terapia farmacológica"
+          ],
+          "messages": [
+            "Manter e reforçar mudança de estilo de vida por período adequado antes de considerar escalonamento terapêutico."
+          ]
+        }
+      },
+      {
+        "id": "regra_causa_secundaria_identificada",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "causa_secundaria_identificada",
+              "op": "neq",
+              "value": "nenhuma"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Dislipidemia secundária à condição de base identificada"
+          ],
+          "messages": [
+            "Tratar de forma dirigida a causa secundária identificada; o perfil lipídico pode se normalizar com o controle da condição de base."
+          ]
+        }
+      },
+      {
+        "id": "regra_rastreio_familiar_pendente",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "caso_indice_familiar_confirmado",
+              "op": "truthy"
+            },
+            {
+              "field": "rastreio_familiares_realizado",
+              "op": "neq",
+              "value": "completo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Rastreio em cascata dos familiares de primeiro grau incompleto"
+          ],
+          "suggested_tests": [
+            "Dosagem lipídica dos pais e irmãos do caso índice",
+            "Avaliação genética familiar quando disponível"
+          ],
+          "ambulatory_flow": [
+            "Convocar pais e irmãos para avaliação lipídica em cascata"
+          ]
+        }
+      },
+      {
+        "id": "regra_historico_familiar_precoce",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "historico_familiar_ihd_precoce",
+              "op": "truthy"
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 130
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "História familiar de doença arterial coronariana precoce associada a LDL-C elevado aumenta o risco cardiovascular do paciente"
+          ]
+        }
+      },
+      {
+        "id": "regra_fatores_risco_adicionais_obesidade",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "obesidade"
+            },
+            {
+              "field": "ldl_c_mg_dl",
+              "op": "gte",
+              "value": 130
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Obesidade como fator de risco adicional reforça indicação de controle de peso estruturado junto à mudança de estilo de vida"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Criança ou adolescente com hipercolesterolemia familiar homozigótica (HoFH): fenótipo grave, com LDL-C muito elevado desde o nascimento, xantomas cutâneos/tendíneos precoces (antes dos 10 anos) e risco real de doença arterial coronariana já na infância; exige tratamento combinado (estatina de alta intensidade + ezetimiba) desde o diagnóstico — não estatina isolada — e acompanhamento em centro especializado para terapias adicionais quando a meta não é atingida.",
+      "Criança ou adolescente com obesidade e dislipidemia secundária/síndrome metabólica: padrão lipídico aterogênico típico (triglicerídeos elevados, HDL reduzido), muitas vezes acompanhado de resistência insulínica e hipertensão; pode passar despercebido em dosagem isolada de colesterol total, exigindo perfil lipídico completo, e o manejo inicial prioriza mudança de hábitos antes de considerar terapia farmacológica.",
+      "Adolescente com diabetes tipo 1 ou tipo 2 e dislipidemia associada: o risco cardiovascular composto (hiperglicemia + dislipidemia) justifica rastreio lipídico mais atento e metas de LDL-C mais rigorosas do que na população pediátrica geral, com atenção à interação entre controle glicêmico e perfil lipídico ao longo do seguimento.",
+      "Criança com doença renal crônica ou síndrome nefrótica e dislipidemia secundária: a proteinúria maciça da síndrome nefrótica e a própria DRC alteram o perfil lipídico por mecanismo secundário (não genético); a dislipidemia costuma acompanhar a atividade da doença de base e pode regredir com o tratamento da nefropatia, o que muda a decisão de iniciar hipolipemiante em relação a uma dislipidemia primária.",
+      "Parente de primeiro grau assintomático de caso índice de hipercolesterolemia familiar: candidato a rastreio em cascata (dosagem de LDL-C e, quando disponível, teste genético) mesmo sem sintomas — idealmente a partir dos 5 anos de idade, ou antes se houver suspeita de forma homozigótica na família.",
+      "Criança ou adolescente com hipertrigliceridemia grave e risco de pancreatite: triglicerídeos muito elevados mudam a prioridade terapêutica imediata para prevenção de pancreatite aguda (restrição de gordura na dieta e conduta dirigida ao valor de triglicerídeos), cenário distinto do manejo padrão orientado por meta de LDL-C."
+    ],
+    "related_document_slugs": [
+      "dislipidemia-familiar-heterozigotica-pediatrica-rastreio-alvo-de-ldl-e-inicio-de-estatina",
+      "obesidade-infantil-e-risco-cardiovascular-hipertensao-dislipidemia-aterogenica-e-dano-subclinico-em-orgao-alvo",
+      "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+      "fluxograma-hipercolesterolemia-familiar-diagnostico-dlcn-e-manejo-esc-eas-2025",
+      "evinacumabe-inibidor-de-angptl3-na-hipercolesterolemia-familiar-homozigota-o-ensaio-elipse-hofh"
+    ]
   },
   {
     "slug": "sopros-na-infancia",
