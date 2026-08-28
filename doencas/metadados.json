@@ -28041,13 +28041,18 @@
       "https://professional.heart.org/en/science-news/2026-guideline-for-the-early-management-of-patients-with-acute-ischemic-stroke",
       "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024, AHA/ASA 2026 e Ministério da Saúde. Corrigida a formulação para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão.",
+    "review_status": "pendente_revisao",
+    "review_note": "Revisão clínica concluída em 27/08/2026 contra AHA/American Red Cross 2024, AHA/ASA 2026 e Ministério da Saúde. Corrigida a formulação para não exigir confirmação radiológica de isquemia antes da decisão de reperfusão. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 5 related_document_slugs focados na interseção cardiovascular do AVC (timing cirúrgico pós-AVC na endocardite, monitor implantável para FA pós-AVC criptogênico, anticoagulação empírica no ESUS, trombo de VE cardioembólico na Chagásica, dissecção de artéria cervical), levando o total de 2 para 7. Cada um verificado por leitura direta do documento.",
     "fonte_producao": "chatgpt",
-    "version": 2,
+    "version": 3,
     "related_document_slugs": [
       "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
-      "fluxograma-suspeita-de-avc-agudo-primeira-hora"
+      "fluxograma-suspeita-de-avc-agudo-primeira-hora",
+      "timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023",
+      "monitor-cardiaco-implantavel-e-deteccao-de-fa-pos-avc-criptogenico-crystal-af",
+      "anticoagulacao-empirica-no-avc-criptogenico-sem-fa-documentada-navigate-esus-re-spect-esus-e-arcadia",
+      "aneurisma-apical-trombo-de-ve-e-avc-cardioembolico-na-cardiomiopatia-chagasica",
+      "disseccao-de-arteria-cervical-carotida-e-vertebral-diagnostico-e-antitrombotico-cadiss"
     ],
     "patient_material_slug": "sinais-de-avc-como-agir-sem-perder-tempo"
   },

@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote vincular Tudo com Tudo de 28/08/2026: ficha já completa
+        # acidente-vascular-cerebral-agudo tinha apenas 2
+        # related_document_slugs (abaixo do piso); 5 vínculos adicionados
+        # com foco na interseção cardiovascular do AVC — ver review_note.
+        "acidente-vascular-cerebral-agudo",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
