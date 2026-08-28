@@ -28269,13 +28269,17 @@
     "related_document_slugs": [
       "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
       "hipertensao-arterial-classificacao-diagnostico-metas",
-      "fluxograma-hipertensao-arterial-esc-2024"
+      "fluxograma-hipertensao-arterial-esc-2024",
+      "escolha-do-anti-hipertensivo-de-primeira-linha-allhat-ascot-bpla-e-accomplish",
+      "fluxograma-hipertensao-escalonamento-farmacologico-combinacao-inicial-aos-tres-passos-esc-2024",
+      "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+      "hipertensao-do-jaleco-branco-e-mascarada-mapa-mrpa-prevalencia-e-decisao-terapeutica"
     ],
     "patient_material_slug": "hipertensao-arterial",
-    "review_status": "revisado",
-    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretriz primária atual e sujeito a julgamento clínico individual.",
+    "review_status": "pendente_revisao",
+    "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretriz primária atual e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo (enriquecimento) 28/08/2026: adicionados 4 related_document_slugs (escolha de anti-hipertensivo de primeira linha, escalonamento farmacológico em 3 passos ESC 2024, pseudorresistência vs. resistência verdadeira, MAPA/MRPA e jaleco branco/mascarada), levando o total de 3 para 7.",
     "fonte_producao": "chatgpt",
-    "version": 1
+    "version": 2
   },
   {
     "slug": "fibrilacao-atrial",
