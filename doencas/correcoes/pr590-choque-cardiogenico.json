@@ -27,6 +27,10 @@
         "new": "Hipotensão pode estar presente, mas sua ausência não exclui choque cardiogênico: hipoperfusão pode persistir com pressão preservada ou mantida por suporte vasoativo; interpretar pressão e perfusão separadamente."
       },
       {
+        "old": "hipotensão + hipoperfusão",
+        "new": "hipoperfusão tecidual, com hipotensão possível porém não obrigatória"
+      },
+      {
         "old": "com padrão hemodinâmico e resposta a volume opostos ao choque cardiogênico esquerdo — reconhecer essa etiologia muda a conduta de forma contraintuitiva (restringir, não expandir, volume)",
         "new": "com padrão hemodinâmico distinto do choque cardiogênico esquerdo — reconhecer essa etiologia exige otimizar preload de forma individualizada, evitando tanto expansão reflexa quanto restrição reflexa sem avaliar congestão e pressões de enchimento"
       },
@@ -77,8 +81,9 @@
       },
       "choque-cardiogenico-pos-cardiotomia": {
         "when": {
-          "all": [
-            {"field": "shock_etiology", "op": "eq", "value": "pos_cardiotomia"}
+          "any": [
+            {"field": "shock_etiology", "op": "eq", "value": "pos_cardiotomia"},
+            {"field": "post_cardiac_surgery", "op": "truthy"}
           ]
         }
       }
