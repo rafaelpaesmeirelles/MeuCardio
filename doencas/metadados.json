@@ -10553,7 +10553,7 @@
     "category": "cardiologia_fetal",
     "subtype": "conotruncal",
     "prevalence_rank": 39,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Diagnóstico fetal de discordância ventriculoarterial que permite preparar nascimento, avaliação das comunicações e atendimento neonatal especializado.",
     "tags": [
       "TGA fetal",
@@ -10561,18 +10561,472 @@
       "planejamento do parto"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"
+      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516.",
+      "Bonnet D, Coltri A, Butera G, et al. Detection of Transposition of the Great Arteries in Fetuses Reduces Neonatal Morbidity and Mortality. Circulation. 1999;99(7):916-918. PMID: 10027815.",
+      "Jouannic JM, Gavard L, Fermont L, et al. Sensitivity and Specificity of Prenatal Features of Physiological Shunts to Predict Neonatal Clinical Status in Transposition of the Great Arteries. Circulation. 2004;110(13):1743-1746. PMID: 15364811.",
+      "Punn R, Silverman NH. Fetal Predictors of Urgent Balloon Atrial Septostomy in Neonates With Complete Transposition. Journal of the American Society of Echocardiography. 2011;24(4):425-430. PMID: 21324642.",
+      "Maeno YV, Kamenir SA, Sinclair B, et al. Prenatal Features of Ductus Arteriosus Constriction and Restrictive Foramen Ovale in d-Transposition of the Great Arteries. Circulation. 1999;99(9):1209-1214. PMID: 10069789.",
+      "Escobar-Diaz MC, Freud LR, Bueno A, et al. Prenatal Diagnosis of Transposition of the Great Arteries Over a 20-Year Period: Improved but Imperfect. Ultrasound in Obstetrics & Gynecology. 2015;45(6):678-682. PMID: 25484180.",
+      "Nagata H, Glick L, Lougheed J, et al. Prenatal Diagnosis of Transposition of the Great Arteries Reduces Postnatal Mortality: A Population-Based Study. Canadian Journal of Cardiology. 2020;36(10):1592-1597. PMID: 32622839."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"
+      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/10027815/",
+      "https://pubmed.ncbi.nlm.nih.gov/15364811/",
+      "https://pubmed.ncbi.nlm.nih.gov/21324642/",
+      "https://pubmed.ncbi.nlm.nih.gov/10069789/",
+      "https://pubmed.ncbi.nlm.nih.gov/25484180/",
+      "https://pubmed.ncbi.nlm.nih.gov/32622839/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (23º lote de conteúdo do dia, sétimo do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630, bloqueio-atrioventricular-fetal/PR #631, hidropisia-fetal-cardiovascular/PR #632, flutter-atrial-fetal/PR #633, coarctacao-aorta-fetal/PR #636 e tetralogia-fallot-fetal/PR #637): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos, mas zero campos clínicos. Adicionados epidemiology (baixa detecção pré-natal quando rastreio limitado ao plano de 4 câmaras, redução de mortalidade com diagnóstico pré-natal), presentation (10 formas), diagnostic_approach (5 subtópicos: identificação de vasos paralelos, avaliação do septo interventricular, avaliação de forame oval/canal arterial, diferenciação de conotruncais, avaliação de anatomia coronariana), differentials, tests, red_flags, treatment_summary, ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (12), assistant_rules (10). related_document_slugs expandido de 1 para 6 (união com o original, sem duplicar) — todos verificados quanto a menção explícita a TGA/transposição no texto. patient_material_slug original preservado. Overlap extenso mas legítimo com transposicao-das-grandes-arterias (adulto, 5 documentos compartilhados), tetralogia-de-fallot e planejamento-parto-cardiopatia-fetal — documentado. Nenhuma dose de fármaco em nenhum campo — fármaco/procedimento citado apenas por nome (prostaglandina E1, septostomia de Rashkind). Todos os PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem — nenhuma correção necessária.",
+    "version": 2,
     "related_document_slugs": [
-      "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato"
+      "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
+      "fluxograma-d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
+      "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento",
+      "isquemia-coronaria-aguda-apos-switch-arterial",
+      "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"
     ],
-    "patient_material_slug": "transposicao-grandes-arterias-fetal"
+    "patient_material_slug": "transposicao-grandes-arterias-fetal",
+    "epidemiology": "A transposição das grandes artérias (TGA) é uma das cardiopatias congênitas cianóticas críticas mais frequentes, respondendo por parcela relevante das mortes neonatais potencialmente evitáveis por cardiopatia estrutural quando o diagnóstico não é feito antes do nascimento. Na forma clássica (d-TGA), há discordância ventriculoarterial: a aorta emerge do ventrículo direito e a artéria pulmonar emerge do ventrículo esquerdo, criando duas circulações em paralelo cuja oxigenação depende de comunicações associadas (forame oval, canal arterial e, quando presente, comunicação interventricular). Como o corte de quatro câmaras costuma ser normal na TGA, os rastreios pré-natais restritos a esse único plano apresentaram, historicamente, taxas de detecção pré-natal baixas; a incorporação sistemática da avaliação das vias de saída ventriculares e do cruzamento dos grandes vasos ao Doppler colorido eleva de forma substancial a sensibilidade do rastreio obstétrico de rotina. O diagnóstico pré-natal é determinante para o planejamento do parto em centro terciário com suporte de cardiologia pediátrica e hemodinâmica neonatal disponíveis, permitindo septostomia atrial por balão precoce quando indicada e associando-se a menor morbidade e mortalidade neonatal em comparação ao diagnóstico pós-natal tardio, frequentemente reconhecido apenas após cianose grave e instabilidade hemodinâmica do recém-nascido.",
+    "presentation": [
+      "Ao Doppler colorido, vasos paralelos na saída dos ventrículos, em vez do cruzamento fisiológico entre aorta e artéria pulmonar, configurando o principal sinal diagnóstico da TGA.",
+      "Aorta emergindo anteriormente do ventrículo direito morfológico e artéria pulmonar emergindo posteriormente do ventrículo esquerdo morfológico, caracterizando a discordância ventriculoarterial.",
+      "Corte de quatro câmaras tipicamente normal, reforçando a necessidade de avaliação sistemática das vias de saída para não perder o diagnóstico no rastreio de rotina.",
+      "TGA com septo interventricular íntegro, forma mais crítica ao nascimento, em que a mistura de sangue depende exclusivamente do forame oval e do canal arterial.",
+      "TGA associada a comunicação interventricular (CIV), que proporciona via adicional de mistura e costuma cursar com melhor tolerância hemodinâmica inicial em comparação ao septo íntegro.",
+      "TGA com estenose pulmonar subvalvar ou valvar associada, configurando fisiologia mista com componente de obstrução da via de saída pulmonar.",
+      "Avaliação dirigida do septo atrial quanto a restrição do forame oval, com septo primum pouco móvel ou pouco abaulado, preditor de comprometimento da mistura interatrial ao nascimento.",
+      "Avaliação do canal arterial quanto a sinais de constrição, como fluxo de alta velocidade ou padrão anômalo, que também compromete a mistura sistêmico-pulmonar.",
+      "Achado incidental em exame obstétrico de rotina, quando a avaliação das vias de saída identifica vasos paralelos em gestante sem fatores de risco previamente conhecidos.",
+      "Septo interatrial hipermóvel ou com aspecto aneurismático, achado associado a maior instabilidade da mistura interatrial após o nascimento e necessidade de intervenção precoce."
+    ],
+    "diagnostic_approach": {
+      "identificacao_de_vasos_paralelos": "No plano de vias de saída, a demonstração de dois grandes vasos emergindo de modo paralelo a partir dos ventrículos, sem o cruzamento habitual entre aorta e artéria pulmonar ao Doppler colorido, é o achado cardinal para o diagnóstico. A aorta situa-se anteriormente, emergindo do ventrículo morfologicamente direito, enquanto a artéria pulmonar emerge posteriormente do ventrículo morfologicamente esquerdo e se ramifica precocemente em ramos pulmonares direito e esquerdo, característica útil para diferenciá-la da aorta, que dá origem aos vasos do arco e da cabeça/pescoço.",
+      "avaliacao_do_septo_interventricular": "Determinar se o septo interventricular é íntegro ou apresenta comunicação interventricular (CIV) associada é essencial, pois modifica diretamente o prognóstico neonatal imediato. Na forma com septo íntegro, a mistura de sangue depende exclusivamente do forame oval e do canal arterial, tornando o recém-nascido potencialmente mais dependente de intervenção precoce. Na forma com CIV associada, a comunicação adicional costuma proporcionar mistura interventricular mais estável nas primeiras horas de vida, ainda que às custas de outros riscos hemodinâmicos.",
+      "avaliacao_de_forame_oval_e_canal_arterial": "A análise seriada da mobilidade e do diâmetro do septo primum no forame oval, associada à avaliação do calibre e do padrão de fluxo do canal arterial, permite identificar fetos com maior risco de mistura interatrial insuficiente ao nascimento. Forame oval com septo pouco móvel ou pouco abaulado e canal arterial com sinais de constrição são preditores ecocardiográficos de necessidade de septostomia atrial por balão (procedimento de Rashkind) em caráter de urgência logo após o parto.",
+      "diferenciacao_de_outras_conotruncais": "A TGA deve ser diferenciada de outras anomalias conotruncais, como dupla via de saída de ventrículo direito com relação dos grandes vasos do tipo TGA-símile, tronco arterial comum e tetralogia de Fallot, por meio da análise cuidadosa da relação espacial entre os grandes vasos, do alinhamento em relação ao septo interventricular e da identificação da origem valvar de cada grande artéria.",
+      "avaliacao_de_anatomia_coronariana": "Sempre que a janela acústica permitir, deve-se tentar mapear a origem e o trajeto das artérias coronárias, pois variantes coronarianas influenciam diretamente o planejamento cirúrgico da cirurgia de switch arterial no período neonatal, ainda que a caracterização completa da anatomia coronariana muitas vezes só seja possível de forma definitiva no período pós-natal."
+    },
+    "differentials": [
+      "Dupla via de saída de ventrículo direito com relação dos grandes vasos do tipo TGA-símile (comunicação interventricular subaórtica com má relação espacial dos vasos).",
+      "Tronco arterial comum, com vaso arterial único dando origem às circulações sistêmica, pulmonar e coronariana.",
+      "Tetralogia de Fallot com desvio anterior acentuado do septo infundibular.",
+      "Ventrículo único com transposição das grandes artérias associada, configurando fisiologia univentricular com discordância ventriculoarterial.",
+      "TGA congenitamente corrigida (dupla discordância atrioventricular e ventriculoarterial), que difere da d-TGA pela posição relativa dos ventrículos.",
+      "Janela aortopulmonar, quando a relação espacial dos vasos é atípica e pode gerar confusão inicial no plano de vias de saída."
+    ],
+    "tests": [
+      "Ecocardiografia fetal detalhada com avaliação dedicada das vias de saída ventriculares e Doppler colorido.",
+      "Ecocardiografia fetal seriada no terceiro trimestre para monitorar o forame oval e o canal arterial.",
+      "Ressonância magnética cardíaca fetal em centros selecionados, como complemento em casos de janela acústica limitada.",
+      "Cariótipo fetal e/ou estudo genético, como microarray cromossômico, pois a TGA pode associar-se a anomalias extracardíacas.",
+      "Ecocardiograma neonatal imediato ao nascimento para confirmação diagnóstica e planejamento da intervenção.",
+      "Oximetria de pulso neonatal como ferramenta complementar de triagem pós-natal.",
+      "Cateterismo cardíaco neonatal para septostomia atrial por balão (procedimento de Rashkind), guiada por ecocardiografia, quando indicada.",
+      "Angiotomografia ou angiorressonância pós-natal para mapeamento coronariano pré-operatório, quando a anatomia não é totalmente esclarecida ao ecocardiograma."
+    ],
+    "red_flags": [
+      "Septo interventricular íntegro associado a forame oval restritivo, combinação de maior risco por mistura interatrial insuficiente ao nascimento.",
+      "Canal arterial com sinais de constrição ou fechamento precoce, comprometendo a via alternativa de mistura sistêmico-pulmonar.",
+      "Septo atrial hipermóvel ou com aspecto aneurismático, associado a instabilidade da mistura interatrial no período neonatal imediato.",
+      "Forame oval pequeno ou com septo primum pouco móvel ao exame seriado no terceiro trimestre.",
+      "Ausência de comunicação interventricular associada, retirando uma via adicional de mistura e aumentando a dependência de forame oval e canal arterial.",
+      "Sinais indiretos de comprometimento fetal grave, como restrição de crescimento associada em contexto de TGA complexa.",
+      "Diagnóstico apenas no período pós-natal, em gestação sem rastreio adequado das vias de saída, retardando o planejamento do parto em centro terciário."
+    ],
+    "treatment_summary": "Na transposição das grandes artérias (d-TGA) diagnosticada no período fetal, não há indicação de qualquer intervenção intraútero: não existe terapia fetal capaz de corrigir a discordância ventrículo-arterial nem de modificar a fisiologia circulatória antes do nascimento. O valor central do diagnóstico pré-natal não está, portanto, em possibilitar tratamento durante a gestação, mas em permitir o planejamento rigoroso do momento, do local e do modo do parto, bem como a organização antecipada do manejo neonatal imediato, evitando que a criança nasça em ambiente despreparado para uma cardiopatia crítica. Toda forma de d-TGA é ducto-dependente para a mistura de sangue oxigenado e não oxigenado, já que nessa anomalia a aorta emerge do ventrículo direito e a artéria pulmonar emerge do ventrículo esquerdo, gerando duas circulações em paralelo; a sobrevida imediata depende de comunicações que permitam essa mistura, sobretudo o canal arterial e o forame oval. Por isso, ao nascimento está indicado o início imediato de infusão contínua de prostaglandina E1 para manter o canal arterial pérvio até que a estratégia terapêutica definitiva esteja estabelecida, independentemente da gravidade clínica aparente nas primeiras horas. A identificação pré-natal de septo interventricular íntegro associado a forame oval restritivo (fluxo predominantemente unidirecional, septo atrial hipomóvel, comunicação interatrial pequena) é um preditor importante do maior risco de hipoxemia grave logo após o nascimento, pois nesses casos a mistura de sangue depende quase exclusivamente do canal arterial e de um forame oval que já se mostra insuficiente. Esses recém-nascidos podem necessitar de septostomia atrial com balão (procedimento de Rashkind) em caráter de urgência ou emergência, ainda nas primeiras horas de vida, para ampliar a comunicação interatrial e permitir mistura adequada enquanto se aguarda a correção definitiva. Diante desse risco, recomenda-se fortemente que o parto ocorra em centro terciário com sala de hemodinâmica pediátrica e/ou cirurgia cardíaca pediátrica disponíveis em regime de vinte e quatro horas, com equipe de cardiologia neonatal pronta para atuar já na sala de parto ou nas primeiras horas de vida. A correção cirúrgica definitiva, a cirurgia de switch arterial (técnica de Jatene), deve ser realizada nas primeiras semanas de vida, período em que o ventrículo esquerdo ainda mantém capacidade de se adaptar à nova carga sistêmica. O aconselhamento parental deve deixar claro que a d-TGA é uma cardiopatia crítica mesmo nos casos aparentemente mais estáveis à ecocardiografia fetal, pois a fisiologia neonatal pode se deteriorar rapidamente logo após o nascimento; os pais devem compreender a necessidade de intervenção neonatal precoce, a possibilidade de septostomia atrial de urgência e a importância de manter o acompanhamento em centro com suporte cardiológico pediátrico completo desde o nascimento até a realização da cirurgia definitiva.",
+    "ambulatory_flow": [
+      "Confirmação diagnóstica por ecocardiografia fetal detalhada em centro de referência em cardiologia fetal",
+      "Avaliação detalhada do septo interatrial quanto à mobilidade e à restritividade do forame oval",
+      "Avaliação do canal arterial, do arco aórtico e da direção dos fluxos intracardíacos",
+      "Pesquisa de anomalias associadas, cardíacas e extracardíacas, com avaliação genética quando indicada",
+      "Encaminhamento para aconselhamento multidisciplinar com cardiologia fetal, cardiologia pediátrica, cirurgia cardíaca, neonatologia e obstetrícia",
+      "Ecocardiografias fetais seriadas para monitorar septo atrial, canal arterial e função ventricular ao longo da gestação",
+      "Planejamento conjunto e antecipado do parto, definindo local, via de parto e composição da equipe presente",
+      "Definição antecipada com a equipe de hemodinâmica pediátrica sobre a provável necessidade e logística de septostomia atrial",
+      "Aconselhamento e preparo dos pais sobre prognóstico, etapas do tratamento e caráter crítico da condição",
+      "Articulação prévia com o centro cirúrgico para agendamento da cirurgia de switch arterial nas primeiras semanas de vida"
+    ],
+    "emergency_flow": [
+      "Reconhecimento imediato de cianose grave ou hipoxemia refratária ao nascimento em recém-nascido com diagnóstico ou suspeita de d-TGA",
+      "Início imediato de infusão contínua de prostaglandina E1 para manter ou reabrir o canal arterial",
+      "Suporte ventilatório e hemodinâmico conforme necessidade, evitando hiperóxia excessiva que possa favorecer o fechamento ductal",
+      "Ecocardiografia à beira do leito para confirmar o diagnóstico e avaliar septo interatrial, canal arterial e função ventricular",
+      "Contato imediato com centro terciário com hemodinâmica pediátrica e cirurgia cardíaca disponíveis para transferência urgente, quando o parto ocorreu fora desse ambiente",
+      "Transporte neonatal especializado, com infusão de prostaglandina E1 mantida durante todo o trajeto",
+      "Realização de septostomia atrial com balão (procedimento de Rashkind) em caráter emergencial diante de hipoxemia grave refratária associada a septo restritivo",
+      "Monitorização contínua da resposta à septostomia, com preparo simultâneo para a correção cirúrgica definitiva assim que possível"
+    ],
+    "monitoring": [
+      "Saturação de oxigênio pré-ductal e pós-ductal de forma contínua",
+      "Frequência cardíaca e ritmo por monitorização eletrocardiográfica contínua",
+      "Pressão arterial e sinais de perfusão periférica",
+      "Ecocardiografias seriadas, fetais e neonatais, avaliando septo atrial, canal arterial e função ventricular",
+      "Gasometria arterial seriada para avaliação da oxigenação e do equilíbrio ácido-básico",
+      "Sinais clínicos de insuficiência respiratória e necessidade de suporte ventilatório",
+      "Avaliação clínica seriada de sinais de baixo débito cardíaco e choque",
+      "Acompanhamento pós-operatório da função ventricular e da perfusão coronariana após a cirurgia de switch arterial"
+    ],
+    "assistant_questions": [
+      {
+        "id": "septo_interventricular_integro",
+        "text": "O septo interventricular é íntegro, sem comunicação interventricular associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "forame_oval_restritivo",
+        "text": "O forame oval apresenta-se restritivo à avaliação ecocardiográfica?",
+        "type": "boolean"
+      },
+      {
+        "id": "canal_arterial_patente",
+        "text": "O canal arterial está patente na avaliação mais recente?",
+        "type": "boolean"
+      },
+      {
+        "id": "local_parto_planejado",
+        "text": "Qual o local planejado para o parto?",
+        "type": "select",
+        "options": [
+          {
+            "value": "centro_terciario_com_hemodinamica",
+            "label": "Centro terciário com hemodinâmica pediátrica e/ou cirurgia cardíaca disponíveis 24 horas"
+          },
+          {
+            "value": "centro_sem_suporte",
+            "label": "Centro sem suporte cardiológico pediátrico dedicado"
+          },
+          {
+            "value": "nao_definido",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_semanas",
+        "text": "Qual a idade gestacional atual, em semanas?",
+        "type": "number"
+      },
+      {
+        "id": "anomalias_associadas",
+        "text": "Há anomalias associadas identificadas?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "cardiacas",
+            "label": "Cardíacas"
+          },
+          {
+            "value": "extracardiacas",
+            "label": "Extracardíacas"
+          },
+          {
+            "value": "cromossomicas",
+            "label": "Cromossômicas ou genéticas"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma identificada"
+          }
+        ]
+      },
+      {
+        "id": "saturacao_o2_neonatal",
+        "text": "Qual a saturação de oxigênio do recém-nascido no momento da avaliação, em porcentagem?",
+        "type": "number"
+      },
+      {
+        "id": "infusao_prostaglandina_iniciada",
+        "text": "A infusão de prostaglandina E1 já foi iniciada?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_hipoxemia_grave",
+        "text": "Há sinais clínicos de hipoxemia grave refratária?",
+        "type": "boolean"
+      },
+      {
+        "id": "necessidade_septostomia_avaliada",
+        "text": "A necessidade de septostomia atrial com balão já foi avaliada pela equipe de hemodinâmica pediátrica?",
+        "type": "boolean"
+      },
+      {
+        "id": "transferencia_necessaria",
+        "text": "É necessária transferência para centro terciário com suporte cardiológico pediátrico?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_tga_anatomico",
+        "text": "Qual o tipo anatômico de transposição das grandes artérias identificado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "simples",
+            "label": "TGA simples, com septo interventricular íntegro"
+          },
+          {
+            "value": "com_civ",
+            "label": "TGA com comunicação interventricular associada"
+          },
+          {
+            "value": "com_estenose_pulmonar",
+            "label": "TGA com estenose pulmonar e/ou comunicação interventricular"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "septostomia_urgente_septo_restritivo_fora_centro",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "septo_interventricular_integro",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "forame_oval_restritivo",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "local_parto_planejado",
+              "op": "eq",
+              "value": "centro_sem_suporte"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Septo interventricular íntegro com forame oval restritivo e parto planejado fora de centro com hemodinâmica pediátrica disponível — altíssimo risco de hipoxemia neonatal grave"
+          ],
+          "emergency_flow": [
+            "Transferência materna ou neonatal imediata para centro terciário com hemodinâmica pediátrica e cirurgia cardíaca disponíveis 24 horas",
+            "Preparo antecipado para septostomia atrial com balão (procedimento de Rashkind) já nas primeiras horas de vida"
+          ],
+          "missing_information": [
+            "Confirmar disponibilidade de vaga em centro terciário antes do parto"
+          ]
+        }
+      },
+      {
+        "id": "pge1_nao_iniciada_emergencia",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "infusao_prostaglandina_iniciada",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Iniciar imediatamente infusão contínua de prostaglandina E1 para manter o canal arterial pérvio até a definição terapêutica"
+          ],
+          "red_flags": [
+            "Ausência de infusão de prostaglandina E1 em recém-nascido com transposição das grandes artérias"
+          ]
+        }
+      },
+      {
+        "id": "hipoxemia_grave_septostomia",
+        "priority": 94,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_hipoxemia_grave",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hipoxemia grave refratária em recém-nascido com d-TGA"
+          ],
+          "emergency_flow": [
+            "Acionar equipe de hemodinâmica pediátrica para septostomia atrial com balão em caráter emergencial"
+          ]
+        }
+      },
+      {
+        "id": "canal_arterial_fechando_risco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "canal_arterial_patente",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de fechamento do canal arterial em cardiopatia ducto-dependente"
+          ],
+          "messages": [
+            "Reforçar ou otimizar a infusão de prostaglandina E1 e avaliar necessidade de suporte ventilatório"
+          ]
+        }
+      },
+      {
+        "id": "septo_restritivo_sem_local_definido",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "septo_interventricular_integro",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "forame_oval_restritivo",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Definir com urgência o local do parto, priorizando centro com hemodinâmica pediátrica disponível 24 horas"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada para reavaliação do forame oval e do canal arterial"
+          ]
+        }
+      },
+      {
+        "id": "parto_fora_centro_suporte",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "local_parto_planejado",
+              "op": "eq",
+              "value": "centro_sem_suporte"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Parto planejado fora de centro com suporte cardiológico pediátrico dedicado"
+          ],
+          "missing_information": [
+            "Articular transferência materna ou neonatal para centro terciário antes do parto"
+          ]
+        }
+      },
+      {
+        "id": "transferencia_pendente",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "transferencia_necessaria",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "emergency_flow": [
+            "Organizar transporte neonatal especializado com infusão de prostaglandina E1 mantida durante o trajeto"
+          ]
+        }
+      },
+      {
+        "id": "septostomia_nao_avaliada",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "septo_interventricular_integro",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "necessidade_septostomia_avaliada",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Solicitar avaliação da equipe de hemodinâmica pediátrica quanto à necessidade de septostomia atrial com balão"
+          ]
+        }
+      },
+      {
+        "id": "anomalias_cromossomicas_associadas",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "anomalias_associadas",
+              "op": "contains",
+              "value": "cromossomicas"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Avaliação genética com cariótipo ou microarray cromossômico",
+            "Rastreio detalhado de anomalias extracardíacas associadas"
+          ],
+          "differentials": [
+            "Síndromes genéticas associadas a cardiopatia congênita"
+          ]
+        }
+      },
+      {
+        "id": "acompanhamento_pre_natal_padrao",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "idade_gestacional_semanas",
+              "op": "gte",
+              "value": 20
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "ambulatory_flow": [
+            "Manter ecocardiografias fetais seriadas e planejamento multidisciplinar do parto"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com TGA e septo interventricular íntegro (SIV) e forame oval restritivo: representa o cenário de maior risco entre os fetos com transposição das grandes artérias, porque a mistura entre as circulações sistêmica e pulmonar depende quase exclusivamente da comunicação interatrial. Quando essa comunicação é pequena ou o septo atrial é hipermóvel ou aneurismático, o recém-nascido pode evoluir com hipoxemia grave já nas primeiras horas de vida, mesmo com o canal arterial pérvio, exigindo septostomia atrial por balão (procedimento de Rashkind) em caráter emergencial. O planejamento do parto para esses fetos deve antecipar essa necessidade, com equipe de cardiologia intervencionista pediátrica de prontidão no momento do nascimento.",
+      "Feto com TGA e comunicação interventricular (CIV) associada: a presença de uma CIV oferece uma via adicional de mistura entre os circuitos sistêmico e pulmonar, o que tende a resultar em saturação de oxigênio mais estável ao nascimento e menor urgência de septostomia atrial imediata, quando comparado ao feto com septo interventricular íntegro. Ainda assim, esses recém-nascidos requerem acompanhamento cardiológico rigoroso, pois a fisiologia pode se modificar ao longo dos primeiros dias, e o planejamento da cirurgia de correção definitiva (switch arterial) precisa considerar o fechamento concomitante da CIV.",
+      "Feto com TGA e estenose pulmonar associada: a presença de obstrução da via de saída pulmonar, subvalvar ou valvar, altera de forma importante a fisiologia esperada e a estratégia terapêutica, podendo aproximar o quadro clínico de outras cardiopatias com fluxo pulmonar dependente do canal arterial e orientar a discussão para estratégias cirúrgicas alternativas ao switch arterial simples, a depender da gravidade e da anatomia associada. Esse subgrupo exige avaliação ecocardiográfica fetal detalhada e planejamento cirúrgico individualizado desde o período pré-natal.",
+      "Feto com TGA e anatomia coronariana atípica: variações no padrão de origem e trajeto das artérias coronárias são descritas em parcela significativa dos casos de transposição das grandes artérias e têm impacto direto na complexidade técnica da cirurgia de switch arterial, já que o reimplante coronariano é a etapa mais crítica do procedimento. A suspeita ou identificação de anatomia coronariana atípica no ecocardiograma fetal ou neonatal deve ser comunicada precocemente à equipe cirúrgica, para que a estratégia operatória seja planejada com antecedência.",
+      "Recém-nascido com TGA aguardando septostomia atrial ou cirurgia de switch arterial: nesse período de transição entre o nascimento e a correção definitiva, o recém-nascido permanece dependente da manutenção da mistura entre as circulações, seja por comunicação interatrial, canal arterial ou, quando presente, CIV, e requer monitorização contínua de saturação, perfusão e estabilidade hemodinâmica em unidade de terapia intensiva neonatal, com suporte de cardiologia pediátrica e cirurgia cardíaca disponíveis.",
+      "Gestante orientada sobre necessidade de parto em centro terciário com sala de hemodinâmica pediátrica disponível: diante do diagnóstico pré-natal de TGA, a gestante deve ser orientada de que, mesmo quando o ecocardiograma fetal sugere comunicação interatrial de tamanho aparentemente adequado, uma parcela dos recém-nascidos ainda pode apresentar mistura insuficiente após o nascimento. Por isso, o parto deve ser planejado em centro com equipe de cardiologia intervencionista pediátrica disponível para septostomia atrial em caráter de urgência, e a família deve compreender antecipadamente o motivo dessa recomendação."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "retorno-venoso-pulmonar-anomalo-fetal",

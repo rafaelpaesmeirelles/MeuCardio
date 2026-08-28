@@ -39,7 +39,16 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 28/08/2026: ficha
+        # transposicao-grandes-arterias-fetal passou de
+        # completeness=basico (só catalogação, 1 related_document_slug)
+        # para completo, com conteúdo clínico integral e 6
+        # related_document_slugs — ver review_note.
+        "transposicao-grandes-arterias-fetal",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
