@@ -3,10 +3,10 @@ title: "Marcapasso Transvenoso Temporário na UCO: Bradicardia Instável, Indica
 slug: marcapasso-transvenoso-temporario-na-uco-bradicardia-instavel-indicacao-e-complicacoes
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["American Heart Association. Part 9: Adult Advanced Life Support. 2025 AHA Guidelines for CPR and ECC — Initial Management of Bradycardia.", "American Heart Association. Adult Bradycardia With a Pulse Algorithm. 2025.", "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140:e382-e482. DOI: 10.1161/CIR.0000000000000628."]
-review_note: "Produzido em 28/08/2026. O texto segue AHA 2025 para bradicardia aguda e usa o marcapasso transvenoso temporário como ponte em bradicardia persistentemente instável refratária à terapia inicial, sem transformar frequência cardíaca isolada em indicação. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O texto segue AHA 2025 para bradicardia aguda e usa o marcapasso transvenoso temporário como ponte em bradicardia persistentemente instável refratária à terapia inicial, sem transformar frequência cardíaca isolada em indicação. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Marcapasso Transvenoso Temporário na UCO

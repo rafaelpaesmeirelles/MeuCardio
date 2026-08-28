@@ -3,10 +3,10 @@ title: "Estenose Aórtica Grave com Choque Cardiogênico: TAVI Urgente, Valvulop
 slug: estenose-aortica-grave-com-choque-cardiogenico-tavi-urgente-versus-valvuloplastia-ponte
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Praz F, Borger MA, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194.", "Acute Decompensated Valvular Disease in the Intensive Care Unit. JACC Adv. 2024. DOI: 10.1016/j.jacadv.2024.101402.", "Outcomes of transcatheter aortic valve replacement in patients with cardiogenic shock. Eur Heart J. 2023;44:3181-3195. DOI: 10.1093/eurheartj/ehad387."]
-review_note: "Produzido em 28/08/2026. Baseado prioritariamente na diretriz ESC/EACTS 2025, que recomenda considerar intervenção precoce no choque por estenose aórtica; TAVI é sustentada principalmente por dados observacionais nesse contexto e BAV permanece ponte selecionada, não estratégia definitiva de rotina. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. Baseado prioritariamente na diretriz ESC/EACTS 2025, que recomenda considerar intervenção precoce no choque por estenose aórtica; TAVI é sustentada principalmente por dados observacionais nesse contexto e BAV permanece ponte selecionada, não estratégia definitiva de rotina. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Estenose Aórtica Grave com Choque Cardiogênico

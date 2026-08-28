@@ -3,10 +3,10 @@ title: "Insuficiência Aórtica Aguda Grave na UCO: Endocardite, Dissecção e C
 slug: insuficiencia-aortica-aguda-grave-na-uco-endocardite-disseccao-e-choque
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Praz F, Borger MA, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194.", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143:e72-e227. DOI: 10.1161/CIR.0000000000000923.", "Acute Decompensated Valvular Disease in the Intensive Care Unit. JACC Adv. 2024. DOI: 10.1016/j.jacadv.2024.101402."]
-review_note: "Produzido em 28/08/2026. O protocolo trata IAo aguda grave como emergência cirúrgica, usa terapia hemodinâmica apenas como ponte, contraindica IABP e evita extrapolar relatos excepcionais de TAVI/Impella para prática rotineira. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O protocolo trata IAo aguda grave como emergência cirúrgica, usa terapia hemodinâmica apenas como ponte, contraindica IABP e evita extrapolar relatos excepcionais de TAVI/Impella para prática rotineira. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Insuficiência Aórtica Aguda Grave na UCO

@@ -3,10 +3,10 @@ title: "Cuidados Pós-Parada Cardíaca na UCO — AHA 2025: Oxigenação, Press�
 slug: cuidados-pos-parada-cardiaca-na-uco-aha-2025-oxigenacao-pressao-temperatura-neuroprognostico
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Hirsch KG, Amorim E, Coppler PJ, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(suppl 2):S673-S718. DOI: 10.1161/CIR.0000000000001375.", "Perman SM, Elmer J, Maciel CB, et al. 2023 American Heart Association Focused Update on Adult Advanced Cardiovascular Life Support. Circulation. 2024;149:e254-e273. DOI: 10.1161/CIR.0000000000001194."]
-review_note: "Produzido em 28/08/2026 com base prioritária na diretriz AHA 2025 de cuidados pós-parada. Faixas-alvo, duração de controle de temperatura e recomendações sobre MCS foram conferidas na diretriz. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026 com base prioritária na diretriz AHA 2025 de cuidados pós-parada. Faixas-alvo, duração de controle de temperatura e recomendações sobre MCS foram conferidas na diretriz. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Cuidados Pós-Parada Cardíaca na UCO — AHA 2025

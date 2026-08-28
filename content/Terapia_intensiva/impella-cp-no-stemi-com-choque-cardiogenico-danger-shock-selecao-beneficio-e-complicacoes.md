@@ -3,10 +3,10 @@ title: "Impella CP no STEMI com Choque Cardiogênico após DanGer-Shock: Quem Fo
 slug: impella-cp-no-stemi-com-choque-cardiogenico-danger-shock-selecao-beneficio-e-complicacoes
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390:1382-1393. DOI: 10.1056/NEJMoa2312572.", "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009.", "Sinha SS, Morrow DA, Kapur NK, et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85(16):1618-1641. DOI: 10.1016/j.jacc.2025.02.018. PMID: 40100174."]
-review_note: "Produzido em 28/08/2026. O texto restringe a extrapolação do DanGer-Shock à população efetivamente estudada e explicita o aumento de sangramento, isquemia de membro, eventos de segurança e terapia renal substitutiva. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O texto restringe a extrapolação do DanGer-Shock à população efetivamente estudada e explicita o aumento de sangramento, isquemia de membro, eventos de segurança e terapia renal substitutiva. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Impella CP no STEMI com Choque Cardiogênico após DanGer-Shock

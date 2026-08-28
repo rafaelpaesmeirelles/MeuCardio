@@ -3,10 +3,10 @@ title: "Escalonamento e Desmame do Suporte Circulatório Mecânico Temporário n
 slug: escalonamento-e-desmame-do-suporte-circulatorio-mecanico-temporario-no-choque
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85(16):1618-1641. DOI: 10.1016/j.jacc.2025.02.018. PMID: 40100174.", "Grant MC, Kanwar MK, Spelde AE, et al. Temporary Mechanical Circulatory Support in Cardiogenic Shock: Executive Summary of the Joint Consensus Reports of the PeriOperative Quality Initiative and the Enhanced Recovery After Surgery Cardiac Society. Ann Thorac Surg. 2025;120(2):194-201. DOI: 10.1016/j.athoracsur.2025.03.024. PMID: 40185355.", "Spelde AE, et al. Escalation and De-escalation of Temporary Mechanical Circulatory Support: Joint Consensus Report of POQI and ERAS Cardiac Society. Ann Thorac Surg. 2025;120(2):213-224. DOI: 10.1016/j.athoracsur.2025.01.038. PMID: 40187586.", "Definitions of Cardiogenic Shock and Indications for Temporary Mechanical Circulatory Support: Joint Consensus Report of POQI and ERAS Cardiac Society. Ann Thorac Surg. 2025. PMID: 40187589."]
-review_note: "Produzido em 28/08/2026 com base nos documentos ACC 2025 e POQI/ERAS 2025. O texto exige objetivo terapêutico e exit strategy antes do tMCS, evita indicação por estágio isolado e separa adequação de suporte de simples normalização da pressão. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026 com base nos documentos ACC 2025 e POQI/ERAS 2025. O texto exige objetivo terapêutico e exit strategy antes do tMCS, evita indicação por estágio isolado e separa adequação de suporte de simples normalização da pressão. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Escalonamento e Desmame do tMCS no Choque Cardiogênico

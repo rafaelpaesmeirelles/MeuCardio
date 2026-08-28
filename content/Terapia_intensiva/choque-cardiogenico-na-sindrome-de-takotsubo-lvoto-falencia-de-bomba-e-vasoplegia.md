@@ -3,10 +3,10 @@ title: "Choque Cardiogênico na Síndrome de Takotsubo: LVOTO, Falência de Bomb
 slug: choque-cardiogenico-na-sindrome-de-takotsubo-lvoto-falencia-de-bomba-e-vasoplegia
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Lyon AR, Bossone E, Schneider B, et al. Current state of knowledge on Takotsubo syndrome: a Position Statement from the Taskforce on Takotsubo Syndrome of the Heart Failure Association of the ESC. Eur J Heart Fail. 2016;18(1):8-27.", "Vila-Sanjuán S, et al. Left ventricular outflow tract obstruction in Takotsubo syndrome with cardiogenic shock: prognosis and treatment. Heart. 2024;110(23):1381-1388. DOI: 10.1136/heartjnl-2024-324205. PMID: 39209437.", "Impact of mechanical circulatory support on outcomes in Takotsubo syndrome complicated by cardiogenic shock: Insights from the RETAKO registry. 2024. PMID: 39454688.", "Cardiogenic shock in Takotsubo syndrome: Insights into phenotype-tailored management. 2026. PMID: 42251021. DOI: 10.1016/j.medine.2026.502517."]
-review_note: "Produzido em 28/08/2026. O texto obriga pesquisa de LVOTO antes de tratar choque como falência de bomba, separa vasoplegia/VD e evita catecolamina ou diurese reflexa no fenótipo obstrutivo. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O texto obriga pesquisa de LVOTO antes de tratar choque como falência de bomba, separa vasoplegia/VD e evita catecolamina ou diurese reflexa no fenótipo obstrutivo. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Choque Cardiogênico na Síndrome de Takotsubo

@@ -3,10 +3,10 @@ title: "Complicações da Bomba Microaxial na UCO: Hemólise, Sucção, Sangrame
 slug: complicacoes-da-bomba-microaxial-hemolise-succao-sangramento-isquemia-e-anticoagulacao
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Vandenbriele C, et al. Anticoagulation for Percutaneous Ventricular Assist Device-Supported Cardiogenic Shock: JACC Review Topic of the Week. J Am Coll Cardiol. 2022;79:1949-1962. DOI: 10.1016/j.jacc.2022.02.052.", "Vandenbriele C, et al. Management of Bleeding and Hemolysis During Percutaneous Microaxial Flow Pump Support: A Practical Approach. JACC Cardiovasc Interv. 2023. DOI: 10.1016/j.jcin.2023.05.043.", "Device-related complications after Impella mechanical circulatory support implantation: an IMP-IT observational multicentre registry substudy. 2021. PMID: 34389852.", "Clinical management of the Impella 5.5 pump. 2025. PMID: 40571169."]
-review_note: "Produzido em 28/08/2026. O protocolo não fixa alvo universal de anticoagulação nem concentração de purge, pois variam por plataforma/protocolo; enfatiza contabilizar heparina da purge, investigar causa mecânica de hemólise e priorizar source control no sangramento. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O protocolo não fixa alvo universal de anticoagulação nem concentração de purge, pois variam por plataforma/protocolo; enfatiza contabilizar heparina da purge, investigar causa mecânica de hemólise e priorizar source control no sangramento. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Complicações da Bomba Microaxial na UCO

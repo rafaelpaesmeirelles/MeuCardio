@@ -3,10 +3,10 @@ title: "Acesso Vascular Large-Bore em tMCS: Prevenção de Sangramento, Isquemia
 slug: acesso-vascular-large-bore-em-tmcs-prevencao-de-sangramento-isquemia-e-fechamento
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["SCAI. Best Contemporary Practices for Large-Bore Femoral Arterial Access for Structural Interventions. 2024.", "Naidu SS, Abbott JD, Bagai J, et al. SCAI Expert Consensus Update on Best Practices in the Cardiac Catheterization Laboratory. Catheter Cardiovasc Interv. 2021;98:255-276.", "Jolly SS, AlRashidi S, d'Entremont MA, et al. Routine Ultrasonography Guidance for Femoral Vascular Access for Cardiac Procedures: The UNIVERSAL Randomized Clinical Trial. JAMA Cardiol. 2022;7:1110-1118.", "Ben-Dor I, Sharma A, Rogers T, et al. Micropuncture technique for femoral access is associated with lower vascular complications compared to standard needle. Catheter Cardiovasc Interv. 2021;97:1379-1385."]
-review_note: "Produzido em 28/08/2026. O protocolo prioriza acesso CFA guiado por ultrassom, micropunção e confirmação anatômica antes de upsizing; não define dispositivo de fechamento universal e exige vigilância de perfusão distal quando MCS femoral permanece implantado. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O protocolo prioriza acesso CFA guiado por ultrassom, micropunção e confirmação anatômica antes de upsizing; não define dispositivo de fechamento universal e exige vigilância de perfusão distal quando MCS femoral permanece implantado. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Acesso Vascular Large-Bore em tMCS

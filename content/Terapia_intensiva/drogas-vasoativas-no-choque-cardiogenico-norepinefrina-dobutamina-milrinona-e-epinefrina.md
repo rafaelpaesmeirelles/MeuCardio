@@ -3,10 +3,10 @@ title: "Drogas Vasoativas no Choque Cardiogênico: Norepinefrina, Dobutamina, Mi
 slug: drogas-vasoativas-no-choque-cardiogenico-norepinefrina-dobutamina-milrinona-e-epinefrina
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85(16):1618-1641. DOI: 10.1016/j.jacc.2025.02.018. PMID: 40100174.", "Levy B, Clere-Jehl R, Legras A, et al. Epinephrine Versus Norepinephrine for Cardiogenic Shock After Acute Myocardial Infarction. J Am Coll Cardiol. 2018;72(2):173-182. DOI: 10.1016/j.jacc.2018.04.051. PMID: 29976291.", "Mathew R, Di Santo P, Jung RG, et al. Milrinone as Compared with Dobutamine in the Treatment of Cardiogenic Shock. N Engl J Med. 2021. DOI: 10.1056/NEJMoa2026845. PMID: 34347952.", "Patel SM, et al. Contemporary Practice Patterns of Vasoactive Use in Cardiogenic Shock in the American Heart Association Cardiogenic Shock Registry. J Am Heart Assoc. 2025. PMID: 41147380."]
-review_note: "Produzido em 28/08/2026. Norepinefrina é apresentada como primeira escolha razoável na maioria dos pacientes hipotensos conforme ACC 2025, não como superioridade de mortalidade comprovada. DOREMI e OptimaCC são descritos sem extrapolação indevida. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. Norepinefrina é apresentada como primeira escolha razoável na maioria dos pacientes hipotensos conforme ACC 2025, não como superioridade de mortalidade comprovada. DOREMI e OptimaCC são descritos sem extrapolação indevida. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Drogas Vasoativas no Choque Cardiogênico

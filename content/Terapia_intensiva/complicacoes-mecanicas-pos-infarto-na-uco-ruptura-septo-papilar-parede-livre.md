@@ -3,10 +3,10 @@ title: "Complicações Mecânicas Pós-IAM na UCO: Ruptura Septal, Papilar e de 
 slug: complicacoes-mecanicas-pos-infarto-na-uco-ruptura-septo-papilar-parede-livre
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025. DOI: 10.1016/j.jacc.2024.11.009.", "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI: 10.1161/CIR.0000000000000985. PMID: 34126755."]
-review_note: "Produzido em 28/08/2026 com base na diretriz ACS 2025 e no Scientific Statement AHA 2021. O protocolo exige centro com cirurgia cardíaca, trata tMCS como ponte selecionada e não converte atraso cirúrgico em regra universal. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026 com base na diretriz ACS 2025 e no Scientific Statement AHA 2021. O protocolo exige centro com cirurgia cardíaca, trata tMCS como ponte selecionada e não converte atraso cirúrgico em regra universal. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Complicações Mecânicas Pós-IAM na UCO

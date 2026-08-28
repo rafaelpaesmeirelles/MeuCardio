@@ -3,10 +3,10 @@ title: "VA-ECMO no Choque Cardiogênico: Distensão do VE, Descompressão Seleti
 slug: va-ecmo-no-choque-cardiogenico-distensao-do-ve-e-descompressao-seletiva
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Lorusso R, Shekar K, MacLaren G, et al. ELSO Interim Guidelines for Venoarterial Extracorporeal Membrane Oxygenation in Adult Cardiac Patients. ASAIO J. 2021;67(8):827-844. DOI: 10.1097/MAT.0000000000001510. PMID: 34339398.", "Thiele H, Zeymer U, Akin I, et al. Extracorporeal Life Support in Infarct-Related Cardiogenic Shock. N Engl J Med. 2023;389:1286-1297. DOI: 10.1056/NEJMoa2307227. PMID: 37634145.", "Kim MC, et al. Early Left Ventricular Unloading or Conventional Approach After Venoarterial ECMO: EARLY-UNLOAD Randomized Clinical Trial. 2023. PMID: 37850383.", "Early left ventricular unloading after VA-ECMO: 1-year outcomes of EARLY-UNLOAD. PMID: 39749912.", "Saeed O, Nunez JI, Jorde UP. Pulmonary Protection from Left Ventricular Distension During Venoarterial ECMO. Lung. 2023;201:119-134. DOI: 10.1007/s00408-023-00616-8. PMID: 37043003.", "Harlequin Syndrome in Venoarterial ECMO and ECPELLA: comprehensive review. 2025. PMID: 40927093."]
-review_note: "Produzido em 28/08/2026. O texto incorpora ECLS-SHOCK e EARLY-UNLOAD para impedir uso rotineiro de VA-ECMO ou unloading sem seleção. Hipoxemia diferencial é tratada como síndrome de fluxos competitivos e requer monitorização proximal. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O texto incorpora ECLS-SHOCK e EARLY-UNLOAD para impedir uso rotineiro de VA-ECMO ou unloading sem seleção. Hipoxemia diferencial é tratada como síndrome de fluxos competitivos e requer monitorização proximal. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # VA-ECMO no Choque Cardiogênico

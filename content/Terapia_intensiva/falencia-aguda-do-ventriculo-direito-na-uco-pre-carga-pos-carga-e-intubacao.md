@@ -3,10 +3,10 @@ title: "Falência Aguda do Ventrículo Direito na UCO: Pré-Carga, Pós-Carga, P
 slug: falencia-aguda-do-ventriculo-direito-na-uco-pre-carga-pos-carga-e-intubacao
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Harjola VP, Mebazaa A, Čelutkienė J, et al. Contemporary management of acute right ventricular failure: a statement from the Heart Failure Association and the Working Group on Pulmonary Circulation and Right Ventricular Function of the ESC. Eur J Heart Fail. 2016;18:226-241. PMID: 26995592.", "The Etiology and Management of Critical Acute Right Heart Failure. 2025. PMID: 39938716.", "Maitz T, Shah S, Gupta R, et al. Pathophysiology, diagnosis and management of right ventricular failure: a state of the art review of mechanical support devices. Prog Cardiovasc Dis. 2024;85:103-113. DOI: 10.1016/j.pcad.2024.06.009. PMID: 38944261.", "Korabathina R, Heffernan KS, Paruchuri V, et al. The pulmonary artery pulsatility index identifies severe right ventricular dysfunction in acute inferior myocardial infarction. Catheter Cardiovasc Interv. 2012;80:593-600. PMID: 21954053."]
-review_note: "Produzido em 28/08/2026. O protocolo enfatiza fenotipagem etiológica, evita reposição volêmica reflexa e trata PAPi/pressões invasivas como contexto-dependentes. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O protocolo enfatiza fenotipagem etiológica, evita reposição volêmica reflexa e trata PAPi/pressões invasivas como contexto-dependentes. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Falência Aguda do Ventrículo Direito na UCO

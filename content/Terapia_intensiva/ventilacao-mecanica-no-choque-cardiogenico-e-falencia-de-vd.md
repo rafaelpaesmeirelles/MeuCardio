@@ -3,10 +3,10 @@ title: "Ventilação Mecânica no Choque Cardiogênico e na Falência de VD: Int
 slug: ventilacao-mecanica-no-choque-cardiogenico-e-falencia-de-vd
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Alviar CL, Rico-Mesa JS, Morrow DA, et al. Positive Pressure Ventilation in Cardiogenic Shock: Review of the Evidence and Practical Advice for Patients With Mechanical Circulatory Support. Can J Cardiol. 2020;36(2):300-312. DOI: 10.1016/j.cjca.2019.11.038. PMID: 32036870.", "Tavazzi G. Mechanical ventilation in cardiogenic shock. Curr Opin Crit Care. 2021;27(4):447-453. DOI: 10.1097/MCC.0000000000000836. PMID: 33929345.", "Respiratory-Cardiovascular Interactions During Mechanical Ventilation: Physiology and Clinical Implications. 2022. PMID: 35578946."]
-review_note: "Produzido em 28/08/2026. O protocolo separa fisiologia de VE e VD e evita metas universais de PEEP/PaCO2 sem contexto. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. O protocolo separa fisiologia de VE e VD e evita metas universais de PEEP/PaCO2 sem contexto. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Ventilação Mecânica no Choque Cardiogênico e na Falência de VD

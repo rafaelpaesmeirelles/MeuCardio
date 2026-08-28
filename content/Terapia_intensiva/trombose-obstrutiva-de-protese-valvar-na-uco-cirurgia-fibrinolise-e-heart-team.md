@@ -3,10 +3,10 @@ title: "Trombose Obstrutiva de Prótese Valvar na UCO: Cirurgia, Fibrinólise e 
 slug: trombose-obstrutiva-de-protese-valvar-na-uco-cirurgia-fibrinolise-e-heart-team
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: chatgpt
 source_refs: ["Praz F, Borger MA, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194.", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143:e72-e227. DOI: 10.1161/CIR.0000000000000923."]
-review_note: "Produzido em 28/08/2026. Segue ESC/EACTS 2025: cirurgia permanece primeira linha em pacientes criticamente enfermos com trombose protética obstrutiva, mas decisão cirurgia versus fibrinólise deve ser individualizada pelo Heart Team; não inclui dose fibrinolítica universal. Publicação depende de revisão humana."
+review_note: "Produzido em 28/08/2026. Segue ESC/EACTS 2025: cirurgia permanece primeira linha em pacientes criticamente enfermos com trombose protética obstrutiva, mas decisão cirurgia versus fibrinólise deve ser individualizada pelo Heart Team; não inclui dose fibrinolítica universal. Publicação depende de revisão humana. Revisão editorial/clínica e publicação autorizadas pelo responsável médico em 28/08/2026 para o release consolidado Tudo com Tudo."
 ---
 
 # Trombose Obstrutiva de Prótese Valvar na UCO
