@@ -53,19 +53,23 @@ def test_lote_avc_esta_revisado_sem_publicacao_antecipada():
 
 
 def test_loader_de_emergencia_aceita_par_pendente_sem_relaxar_publicacao():
+    # Documento revisado pode sustentar protocolo revisado mesmo antes do flag
+    # de publicação persistido; a reconciliação é quem controla published.
     assert _documento_pode_ser_referenciado(
         published=False,
         document_status="revisado",
         protocol_status="revisado",
     )
+    # Par ainda pendente pode existir no corpus sem vazar para publicação.
+    assert _documento_pode_ser_referenciado(
+        published=False,
+        document_status="pendente_revisao",
+        protocol_status="pendente_revisao",
+    )
+    # Protocolo já revisado não pode depender de documento ainda pendente.
     assert not _documento_pode_ser_referenciado(
         published=False,
-        document_status="revisado",
-        protocol_status="revisado",
-    )
-    assert _documento_pode_ser_referenciado(
-        published=False,
-        document_status="revisado",
+        document_status="pendente_revisao",
         protocol_status="revisado",
     )
 
@@ -156,7 +160,6 @@ def test_lote_avc_usa_recomendacoes_primarias_com_classe_e_nivel_exatos():
     )
 
 
-
 def test_fluxograma_nao_exige_confirmacao_radiologica_precoce_de_isquemia():
     protocolo = (ROOT / "content/Geral" / f"{DOCUMENTO}.md").read_text(encoding="utf-8")
     fluxograma = (ROOT / "content/Geral" / f"{FLUXOGRAMA}.md").read_text(encoding="utf-8")
@@ -166,6 +169,7 @@ def test_fluxograma_nao_exige_confirmacao_radiologica_precoce_de_isquemia():
     assert "AVC isquêmico confirmado" not in fluxograma
     assert "hipótese clínica" in fluxograma
     assert "não equivale a exigir confirmação radiológica" in fluxograma
+
 
 def test_triagem_avc_aciona_emergencia_mesmo_se_sintomas_melhoraram():
     triagem = _por_slug("triagem-sintomas/metadados.json")[
