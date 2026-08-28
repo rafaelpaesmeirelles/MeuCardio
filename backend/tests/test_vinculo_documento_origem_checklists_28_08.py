@@ -1,19 +1,10 @@
-"""Contrato do lote de fechamento de lacuna Tudo com Tudo de 28/08/2026 —
-5 checklists de checklists/metadados.json com documento_origem vazio,
-agora vinculados a documentos narrativos reais e centrais já publicados
-em content/**/*.md.
+"""Contrato do fechamento de lacunas Tudo com Tudo de 28/08/2026.
 
-Descoberto ao auditar todo checklists/metadados.json em busca de
-documento_origem vazio (8 registros encontrados). Para 5 deles, foi
-confirmado por leitura real do documento candidato que ele trata
-centralmente do mesmo tema clínico do checklist (mesmas referências
-primárias, mesmo escopo). Para os outros 3 (STOP-Bang pré-operatório,
-abstinência alcoólica aguda, síndrome de Paget-Schroetter), nenhum
-documento genuinamente central foi encontrado no corpus — permanecem
-com documento_origem vazio, sem fabricar vínculo fraco. Duas PRs
-anteriores fechadas (#460, #465) já haviam tentado vincular esses 3
-(e outros) a arquivos que nunca chegaram a existir em nenhuma branch —
-referências quebradas, provável motivo do fechamento dessas PRs.
+O lote inicial encontrou 8 checklists sem documento_origem. Cinco foram
+vinculados a documentos centrais já existentes. Os três restantes (STOP-Bang
+pré-operatório, abstinência alcoólica aguda e síndrome de Paget-Schroetter)
+receberam documentos narrativos dedicados no PR #651 e, desde então, também
+devem possuir vínculo explícito e resolvível.
 """
 
 from __future__ import annotations
@@ -34,15 +25,9 @@ VINCULOS_ESPERADOS = {
     "controle-da-hipertensao-sistolica-isolada-no-muito-idoso-com-vigilancia-de-hipotensao-ortostatica-iatrogenica": "hipertensao-sistolica-isolada-e-meta-pressorica-no-muito-idoso-hyvet-sprint-e-step",
     "decisao-entre-valvuloplastia-por-balao-percutanea-e-cirurgia-na-estenose-mitral-reumatica-cronica-grave": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
     "envolvimento-cardiaco-na-sindrome-inflamatoria-multissistemica-pediatrica-mis-c-avaliacao-e-seguimento": "mis-c-com-disfuncao-miocardica-e-choque",
-}
-
-# Estes 3 permanecem sem documento_origem deliberadamente — corpus não
-# tem documento central sobre o tema (verificado por busca ampla e
-# leitura), não é uma omissão a corrigir neste lote.
-DEFERIDOS_SEM_DOCUMENTO_ORIGEM = {
-    "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca",
-    "manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia",
-    "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter",
+    "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca": "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca",
+    "manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia": "manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia",
+    "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter": "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter",
 }
 
 
@@ -91,13 +76,15 @@ def test_documento_origem_resolve_e_esta_no_escopo_permitido():
 def test_documento_origem_menciona_tema_central_do_checklist():
     checklists = _load_checklists()
     documentos = _all_document_paths()
-    # termos mínimos por checklist, extraídos do próprio slug/tema
     termos_por_checklist = {
         "avaliacao-cardiovascular-do-usuario-recreativo-de-esteroides-anabolizantes-androgenicos": ("esteroide", "anabolizante"),
         "manejo-agudo-de-fibrilacao-atrial-induzida-por-alcool-holiday-heart-syndrome": ("holiday heart", "álcool"),
         "controle-da-hipertensao-sistolica-isolada-no-muito-idoso-com-vigilancia-de-hipotensao-ortostatica-iatrogenica": ("hipertensão sistólica isolada",),
         "decisao-entre-valvuloplastia-por-balao-percutanea-e-cirurgia-na-estenose-mitral-reumatica-cronica-grave": ("estenose mitral",),
         "envolvimento-cardiaco-na-sindrome-inflamatoria-multissistemica-pediatrica-mis-c-avaliacao-e-seguimento": ("mis-c",),
+        "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca": ("stop-bang", "apneia obstrutiva"),
+        "manejo-da-abstinencia-alcoolica-aguda-com-risco-de-tempestade-autonomica-e-arritmia": ("abstinência alcoólica", "tempestade autonômica"),
+        "diagnostico-e-tratamento-da-trombose-de-esforco-sindrome-de-paget-schroetter": ("paget-schroetter", "trombose de esforço"),
     }
     for checklist_slug, termos in termos_por_checklist.items():
         doc_slug = checklists[checklist_slug]["documento_origem"]
@@ -107,13 +94,11 @@ def test_documento_origem_menciona_tema_central_do_checklist():
         )
 
 
-def test_checklists_deferidos_permanecem_sem_documento_origem_fabricado():
-    """Confirma que os 3 checklists sem candidato real no corpus não
-    foram forçados com um vínculo fraco — permanecem vazios, aguardando
-    documento narrativo dedicado em lote futuro."""
+def test_todos_os_oito_checklists_tem_documento_origem_real():
+    """Os três antigos deferidos foram fechados pelo PR #651; nenhum dos oito
+    checklists auditados deve voltar a ficar órfão ou apontar para slug inexistente."""
     checklists = _load_checklists()
-    for slug in DEFERIDOS_SEM_DOCUMENTO_ORIGEM:
-        assert slug in checklists, f"checklist {slug} não encontrado"
-        assert not checklists[slug].get("documento_origem"), (
-            f"{slug} não deveria ter documento_origem preenchido neste lote"
-        )
+    documentos = _all_document_paths()
+    for checklist_slug, doc_slug in VINCULOS_ESPERADOS.items():
+        assert checklists[checklist_slug].get("documento_origem") == doc_slug
+        assert doc_slug in documentos
