@@ -1,0 +1,60 @@
+name: Temporary publish PR601 canonical fragment to release
+on:
+  push:
+    branches: [claude/tudo-com-tudo-lacuna-20-20260827]
+    paths: [.github/workflows/temporary-publish-601-to-release.yml]
+permissions: {contents: write}
+jobs:
+  port:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {fetch-depth: 0}
+      - name: Extract source object and port only canonical files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          slug = 'arritmias-ventriculares-e-morte-subita-cardiaca'
+          items = json.loads(Path('doencas/metadados.json').read_text(encoding='utf-8'))
+          found = [x for x in items if x.get('slug') == slug]
+          if len(found) != 0:
+              # Current source branch may already have the release manifest after prior normalization.
+              Path('/tmp/fragment.json').write_text(json.dumps(found, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          else:
+              import subprocess
+              raw = subprocess.check_output(['git','show','d258ba9463e07c3334bf4b849551b650c667c067:doencas/metadados.json'], text=True)
+              old = json.loads(raw)
+              found = [x for x in old if x.get('slug') == slug]
+              if len(found) != 1:
+                  raise SystemExit(f'Esperado 1 registro no commit original; encontrados {len(found)}')
+              Path('/tmp/fragment.json').write_text(json.dumps(found, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+          cp backend/tests/test_tudo_com_tudo_arritmias_ventriculares_e_morte_subita_cardiaca.py /tmp/test601.py
+          cp docs/tudo-com-tudo-arritmias-ventriculares-e-morte-subita-cardiaca-2026-08-27.md /tmp/report601.md
+          git fetch origin release/all-pending-20260828
+          git checkout -B release-port origin/release/all-pending-20260828
+          mkdir -p doencas/fragmentos doencas/correcoes
+          cp /tmp/fragment.json doencas/fragmentos/arritmias-ventriculares-e-morte-subita-cardiaca.json
+          cat > doencas/correcoes/release-approve-20260828-arritmias-ventriculares-e-morte-subita-cardiaca.json <<'EOF'
+          [{"slug":"arritmias-ventriculares-e-morte-subita-cardiaca","set":{"review_status":"revisado","review_note":"Verbete-hub Tudo com Tudo produzido pelo Claude em 27/08/2026, portado para fragmento canônico e publicação explicitamente autorizada pelo responsável médico em 28/08/2026. Mantidas 26 conexões verificadas, fontes primárias e regras determinísticas; exige julgamento clínico individual."}}]
+          EOF
+          cp /tmp/report601.md docs/tudo-com-tudo-arritmias-ventriculares-e-morte-subita-cardiaca-2026-08-27.md
+          cp /tmp/test601.py backend/tests/test_tudo_com_tudo_arritmias_ventriculares_e_morte_subita_cardiaca.py
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('backend/tests/test_tudo_com_tudo_arritmias_ventriculares_e_morte_subita_cardiaca.py')
+          t = p.read_text(encoding='utf-8')
+          anchor = 'from app.services.clinical_rule_engine import (\n'
+          if 'from app.services.disease_manifest import load_disease_records' not in t:
+              t = t.replace(anchor, 'from app.services.disease_manifest import load_disease_records\n\n' + anchor, 1)
+          t = t.replace('items = json.loads(DOENCAS_PATH.read_text(encoding="utf-8"))', 'items = load_disease_records(DOENCAS_PATH)')
+          t = t.replace('assert item.get("review_status") == "pendente_revisao"', 'assert item.get("review_status") == "revisado"')
+          p.write_text(t, encoding='utf-8')
+          PY
+          git diff --check
+          git config user.name 'CorVIA Release Bot'; git config user.email 'actions@users.noreply.github.com'
+          git add backend/tests/test_tudo_com_tudo_arritmias_ventriculares_e_morte_subita_cardiaca.py docs/tudo-com-tudo-arritmias-ventriculares-e-morte-subita-cardiaca-2026-08-27.md
+          git add -f doencas/fragmentos/arritmias-ventriculares-e-morte-subita-cardiaca.json doencas/correcoes/release-approve-20260828-arritmias-ventriculares-e-morte-subita-cardiaca.json
+          git commit -m 'release(science): integrar hub ventricular por fragmento canônico'
+          git push origin HEAD:release/all-pending-20260828
