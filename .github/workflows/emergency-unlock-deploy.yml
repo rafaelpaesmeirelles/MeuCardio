@@ -1,4 +1,4 @@
-name: Emergency unlock production worktree and deploy
+name: Emergency deploy current main
 
 on:
   push:
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  repair-and-deploy:
+  deploy-now:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment: production
@@ -41,20 +41,6 @@ jobs:
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
           echo "SSH_DIR=$ssh_dir" >> "$GITHUB_ENV"
           echo "SSH_PORT=$SSH_PORT" >> "$GITHUB_ENV"
-
-      - name: Detach stale integration worktree from main
-        run: |
-          set -euo pipefail
-          ssh \
-            -p "$SSH_PORT" \
-            -i "$SSH_DIR/deploy_key" \
-            -o BatchMode=yes \
-            -o ConnectTimeout=20 \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            -o "UserKnownHostsFile=$SSH_DIR/known_hosts" \
-            "$SSH_USER@$SSH_HOST" \
-            'set -e; wt=$(find /opt /srv /var/www /home -maxdepth 6 -type d -name corvia-integrate-20260827 -print -quit 2>/dev/null); test -n "$wt"; branch=$(git -C "$wt" symbolic-ref --short -q HEAD || true); if [ "$branch" = main ]; then git -C "$wt" switch --detach; fi; printf "worktree=%s branch_before=%s branch_after=%s\n" "$wt" "$branch" "$(git -C "$wt" symbolic-ref --short -q HEAD || echo DETACHED)"'
 
       - name: Deploy current main SHA
         run: |
