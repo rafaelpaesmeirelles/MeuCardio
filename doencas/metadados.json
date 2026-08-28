@@ -16789,7 +16789,7 @@
     "category": "cardiologia_fetal",
     "subtype": "conexoes_venosas",
     "prevalence_rank": 40,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Avaliação pré-natal das conexões venosas pulmonares, reconhecendo limitações diagnósticas e sinais indiretos de obstrução.",
     "tags": [
       "RVPAT fetal",
@@ -16797,18 +16797,469 @@
       "obstrução"
     ],
     "source_refs": [
-      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram"
+      "2023 ASE Guidelines for Performance of the Fetal Echocardiogram",
+      "Moon-Grady AJ, Donofrio MT, Gelehrter S, Hornberger L, Kreeger J, Lee W, Michelfelder E, Morris SA, Peyvandi S, Pinto NM, Pruetz J, Sethi N, Simpson J, Srivastava S, Tian Z. Guidelines and Recommendations for Performance of the Fetal Echocardiogram: An Update from the American Society of Echocardiography. J Am Soc Echocardiogr. 2023 Jul;36(7):679-723. PMID: 37227365.",
+      "Seale AN, Carvalho JS, Gardiner HM, Mellander M, Roughton M, Simpson J, Tometzki A, Uzun O, Webber SA, Daubeney PE; British Congenital Cardiac Association. Total anomalous pulmonary venous connection: impact of prenatal diagnosis. Ultrasound Obstet Gynecol. 2012 Sep;40(3):310-318. PMID: 22262371.",
+      "Chih WL, Ko H, Chang TY. Prenatal Ultrasound Markers of Isolated Total Anomalous Pulmonary Venous Return. J Med Ultrasound. 2024 Apr-Jun;32(2):104-109. PMID: 38882613.",
+      "Maruyama W, Kawasaki Y, Murakami Y, Fujino M, Sasaki T, Nakamura K, Yoshida Y, Suzuki T, Kurosaki K, Hayashi T, Ono H, Ehara E. Valley Index as a Predictor of Prenatal Diagnosis of Total Anomalous Pulmonary Venous Return. Fetal Diagn Ther. 2024;51(5):445-452. PMID: 38768565.",
+      "Li TG, Ma B, Gao YH, Zhang RH, Li PL, Da ZQ. Prenatal diagnosis of total anomalous pulmonary venous connection using 2D and HDlive flow echocardiography. Echocardiography. 2022 Oct;39(10):1269-1275. PMID: 36100867.",
+      "Voleti Chivukula S. Total Anomalous Pulmonary Venous Connections. Clin Perinatol. 2025 Dec;52(4):747-759. PMID: 41233009.",
+      "Zeng Y, Wang H, Zeng S, Yang W, Liu J, Huang D, Zhang R, Zhou H, Wu H. The Value of the Vertical Vein Stenosis Site, Proximal Flow Velocity, and Their Ratio in Prenatal Ultrasound Diagnosis and Prognostic Assessment of Fetal TAPVC With PVO. J Clin Ultrasound. 2026 Aug 4 (ahead of print). PMID: 42552621."
     ],
     "source_urls": [
-      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"
+      "https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf",
+      "https://pubmed.ncbi.nlm.nih.gov/37227365/",
+      "https://pubmed.ncbi.nlm.nih.gov/22262371/",
+      "https://pubmed.ncbi.nlm.nih.gov/38882613/",
+      "https://pubmed.ncbi.nlm.nih.gov/38768565/",
+      "https://pubmed.ncbi.nlm.nih.gov/36100867/",
+      "https://pubmed.ncbi.nlm.nih.gov/41233009/",
+      "https://pubmed.ncbi.nlm.nih.gov/42552621/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo de 28/08/2026 (vigésimo quarto lote de conteúdo do dia, oitavo do cluster de cardiologia fetal, após indicacoes-ecocardiograma-fetal/PR #630, bloqueio-atrioventricular-fetal/PR #631, hidropisia-fetal-cardiovascular/PR #632, flutter-atrial-fetal/PR #633, coarctacao-aorta-fetal/PR #636, tetralogia-fallot-fetal/PR #637 e transposicao-grandes-arterias-fetal/PR #638): ficha já tinha patient_material_slug e 1 related_document_slug preenchidos, mas zero campos clínicos. Alvo anterior deste ciclo (tumores-cardiacos-fetais) foi abandonado antes de qualquer commit por não atingir o piso de 3 related_document_slugs exigido pela regra Tudo com Tudo (apenas 2 candidatos legítimos identificados no corpus) — decisão de não fabricar uma terceira conexão. Adicionados epidemiology (baixa taxa de detecção pré-natal por câmaras simétricas/septo íntegro/eixo normal, sinais indiretos necessários), presentation (10 formas: 4 tipos anatômicos, sinais indiretos, achado incidental, associação com heterotaxia), diagnostic_approach (5 subtópicos: limitações inerentes ao diagnóstico pré-natal, sinais ecocardiográficos indiretos, avaliação Doppler de veia vertical e confluência, diferenciação dos 4 tipos anatômicos, avaliação de heterotaxia), differentials, tests, red_flags, treatment_summary (destaque de segurança clínica: prostaglandina E1 não tem papel terapêutico útil na forma obstrutiva do RVPAT, ao contrário de lesões ducto-dependentes, e pode agravar a congestão pulmonar), ambulatory_flow, emergency_flow, monitoring, special_populations, assistant_questions (12), assistant_rules (9, priority 98 para RVPAT obstrutivo com cianose/desconforto neonatal). related_document_slugs expandido de 1 para 4 (união com o original, sem duplicar) — todos verificados quanto a menção explícita a RVPA/RVPAT/TAPVR/TAPVC no texto. patient_material_slug original preservado. Overlap parcial mas legítimo com a ficha adulta retorno-venoso-pulmonar-anomalo (alvo do PR #576 aberto, que não toca esta ficha -fetal, confirmado via gh pr diff) e com fluxograma-retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato — documentado. Nenhuma dose de fármaco em nenhum campo — fármaco citado apenas por nome (prostaglandina E1), sem posologia. Todos os 7 PMIDs desta rodada verificados individualmente via NCBI e-utils antes da montagem, tanto pelo agente de pesquisa quanto de forma independente por mim — nenhuma correção necessária.",
+    "version": 2,
     "related_document_slugs": [
-      "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos"
+      "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos",
+      "fluxograma-retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
+      "retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
+      "retorno-venoso-pulmonar-anomalo-papvr-tapvr-no-adulto"
     ],
-    "patient_material_slug": "retorno-venoso-pulmonar-anomalo-fetal"
+    "patient_material_slug": "retorno-venoso-pulmonar-anomalo-fetal",
+    "epidemiology": "O retorno venoso pulmonar anômalo total (RVPAT) figura entre as cardiopatias congênitas críticas com a menor taxa de detecção pré-natal, mesmo em centros terciários de referência em ecocardiografia fetal. Diferentemente da maioria das cardiopatias críticas, no RVPAT as quatro câmaras cardíacas mantêm tamanho simétrico, o septo interventricular está intacto e o eixo cardíaco é normal, de modo que o rastreamento obstétrico básico pelo corte de quatro câmaras — e mesmo a avaliação sistemática das vias de saída — frequentemente não revela nenhuma anormalidade evidente. A anomalia reside nas conexões venosas pulmonares, estruturas de pequeno calibre e localização posterior, cuja identificação direta exige incidências dedicadas (avaliação da confluência venosa pulmonar atrás do átrio esquerdo com Doppler colorido, corte transverso do mediastino superior) que não integram o protocolo obstétrico padrão. Séries multicêntricas mostram taxas de detecção pré-natal historicamente baixas, inclusive em centros especializados de cardiologia fetal, o que torna o reconhecimento de sinais indiretos — ausência de confluência venosa pulmonar visível posterior ao átrio esquerdo, dilatação de veia vertical ascendente, discreta assimetria de câmaras — etapa crítica da suspeita diagnóstica. A relevância clínica é ainda maior na forma obstrutiva, verdadeira emergência neonatal: ao contrário de outras cardiopatias ducto-dependentes, a obstrução ao retorno venoso pulmonar não responde à prostaglandina E1 e pode piorar clinicamente com seu uso, pois manter o canal arterial pérvio não alivia a obstrução venosa pulmonar e pode aumentar o afluxo sanguíneo a um leito pulmonar já congesto, agravando o edema pulmonar e a hipertensão pulmonar neonatal.",
+    "presentation": [
+      "Ausência de confluência venosa pulmonar comum visualizável posterior ao átrio esquerdo, no corte de quatro câmaras, com ou sem discreta assimetria de câmaras associada",
+      "Veia vertical ascendente anômala, anterior ao brônquio esquerdo, drenando para a veia inominada e daí para a veia cava superior — tipo supracardíaco, o mais frequente",
+      "Conexão anômala direta ao seio coronário dilatado, ou diretamente à parede posterior do átrio direito — tipo cardíaco",
+      "Conexão infradiafragmática, com vaso descendente cruzando o diafragma e drenando para a veia porta, o ducto venoso ou a veia umbilical — tipo infracardíaco, o mais associado a obstrução",
+      "Combinação de dois ou mais padrões de drenagem, com diferentes grupos de veias pulmonares seguindo trajetos distintos — tipo misto",
+      "Discreta assimetria de câmaras cardíacas, com átrio e ventrículo esquerdos levemente menores que as câmaras direitas, sem desproporção franca",
+      "Achado incidental durante avaliação sistemática das vias de saída ou dos grandes vasos, mesmo em exames conduzidos por examinadores experientes e com protocolo completo",
+      "Dilatação e trajeto tortuoso de veia vertical, com fluxo turbulento em mosaico ao Doppler colorido, sugerindo componente obstrutivo",
+      "Ausência da imagem típica em confluência ('crux' venoso pulmonar) ao Doppler colorido no plano de quatro câmaras, exigindo busca ativa das veias pulmonares",
+      "Associação com situs ambíguo, isomerismo atrial direito ou outras anomalias de lateralidade, aumentando a suspeita clínica quando presentes concomitantemente"
+    ],
+    "diagnostic_approach": {
+      "limitacoes_inerentes_ao_diagnostico_pre_natal": "O RVPAT é reconhecidamente uma das cardiopatias congênitas críticas mais difíceis de diagnosticar no período fetal. A sensibilidade do rastreamento obstétrico de rotina é baixa, e mesmo em centros especializados de ecocardiografia fetal a taxa de detecção pré-natal permanece historicamente inferior à de outras cardiopatias críticas, porque o corte de quatro câmaras, o eixo cardíaco e o septo interventricular são todos normais, sem os marcadores estruturais grosseiros que costumam disparar o encaminhamento para avaliação especializada.",
+      "sinais_ecocardiograficos_indiretos_de_suspeita": "Na ausência de visualização direta da confluência venosa pulmonar, a suspeita depende de sinais indiretos: discreta assimetria de câmaras (átrio e ventrículo esquerdos relativamente menores), identificação de estrutura vascular anômala anterior ao brônquio esquerdo ou posterior ao átrio esquerdo, e dilatação de veia inominada ou de veia cava superior sem causa aparente. A busca ativa da confluência venosa pulmonar atrás do átrio esquerdo com Doppler colorido, mesmo quando o corte de quatro câmaras parece normal, é etapa obrigatória do protocolo de rastreamento cardíaco fetal recomendado pelas diretrizes vigentes.",
+      "avaliacao_doppler_veia_vertical_e_confluencia": "Quando uma veia vertical é identificada, sua avaliação por Doppler pulsado e colorido é essencial para pesquisar sinais de obstrução: estreitamento focal do calibre, fluxo turbulento em mosaico, ou velocidade de pico aumentada em relação ao esperado para a idade gestacional. O padrão de fluxo na confluência venosa pulmonar e a presença de fluxo contínuo, em vez de fásico, também sugerem obstrução ao retorno venoso, achado com implicação prognóstica direta para o período neonatal imediato.",
+      "diferenciacao_dos_quatro_tipos_anatomicos": "A caracterização do tipo anatômico orienta o planejamento perinatal: supracardíaco (veia vertical ascendente para veia inominada/veia cava superior), cardíaco (drenagem para seio coronário ou átrio direito), infracardíaco (vaso descendente infradiafragmático, com maior associação a obstrução) e misto (combinação de padrões). Essa diferenciação exige varredura sistemática do tórax e do abdome superior fetal, com Doppler colorido em múltiplos planos, incluindo o trajeto do vaso através do diafragma quando há suspeita de tipo infracardíaco.",
+      "avaliacao_de_anomalias_associadas_heterotaxia": "O RVPAT tem associação relevante com síndromes de heterotaxia, particularmente o isomerismo atrial direito, nas quais a drenagem venosa pulmonar anômala é praticamente uma regra. A avaliação sistemática de situs visceral, posição do estômago, disposição da veia cava inferior e da aorta, além do exame cardíaco completo para outras malformações associadas, é indicada sempre que houver suspeita de RVPAT, pois a presença de heterotaxia modifica substancialmente o prognóstico e o planejamento do parto."
+    },
+    "differentials": [
+      "Cor triatriatum (membrana dividindo o átrio esquerdo, sem anomalia de conexão venosa pulmonar)",
+      "Estenose de veia pulmonar individual (isolada), sem anomalia de conexão das demais veias",
+      "Síndrome de heterotaxia com drenagem venosa sistêmica anômala (por exemplo, veia cava inferior interrompida com continuação por veia ázigos), sem RVPAT verdadeiro associado",
+      "Veia vertical persistente sem RVPAT verdadeiro, isto é, veia vertical isolada na ausência de conexão venosa pulmonar anômala subjacente",
+      "Drenagem venosa pulmonar anômala parcial, envolvendo apenas uma ou algumas veias pulmonares, com as demais conectadas normalmente ao átrio esquerdo",
+      "Cardiopatias com hipoplasia de câmaras esquerdas, que podem mimetizar a discreta assimetria de câmaras observada no RVPAT"
+    ],
+    "tests": [
+      "Ecocardiograma fetal direcionado, com Doppler colorido e pulsado da confluência venosa pulmonar e da veia vertical, quando presente",
+      "Avaliação do plano transverso do mediastino superior fetal para identificação de veia vertical, veia inominada e veia cava superior dilatadas",
+      "Ecocardiografia fetal tridimensional/quadridimensional com renderização de volume (técnica STIC) para reconstrução espacial das veias pulmonares e da via de drenagem anômala",
+      "Doppler colorido do abdome superior fetal, pesquisando conexão infracardíaca através do ducto venoso, da veia porta ou da veia umbilical",
+      "Avaliação sistemática de situs visceral e de anomalias associadas, com cariótipo fetal e/ou estudo cromossômico por microarray quando há outras malformações",
+      "Ressonância magnética fetal em casos selecionados, para melhor caracterização anatômica quando a ecocardiografia é inconclusiva",
+      "Ecocardiograma neonatal confirmatório no pós-natal imediato, complementado por angiotomografia ou angiorressonância quando necessário para definição cirúrgica"
+    ],
+    "red_flags": [
+      "Sinais indiretos de obstrução na veia vertical, como estreitamento focal do calibre e fluxo turbulento em mosaico ao Doppler colorido",
+      "Tipo infracardíaco de conexão anômala, por ser o de maior associação com obstrução grave ao retorno venoso pulmonar",
+      "Fluxo turbulento ou de alta velocidade na confluência venosa pulmonar ou na veia vertical ao Doppler pulsado",
+      "Trajeto tortuoso ou calibre reduzido da veia vertical em relação à veia cava superior",
+      "Associação com isomerismo atrial direito ou outras formas de heterotaxia, que elevam o risco de forma obstrutiva grave",
+      "Padrão de fluxo contínuo, em vez de fásico, na via de drenagem venosa pulmonar anômala, sugerindo obstrução funcional",
+      "Deterioração clínica neonatal na vigência de prostaglandina E1, sinal de alerta para RVPAT obstrutivo não diagnosticado no pré-natal, já que essa cardiopatia não é dependente de canal arterial e pode piorar com a manutenção de sua patência"
+    ],
+    "treatment_summary": "O retorno venoso pulmonar anômalo total (RVPAT) diagnosticado no período fetal não possui indicação de intervenção intraútero; não existe procedimento fetal validado capaz de corrigir a conexão venosa pulmonar anômala antes do nascimento, e o acompanhamento pré-natal tem como objetivo principal caracterizar a anatomia, identificar sinais sugestivos de obstrução venosa pulmonar e planejar o nascimento em ambiente adequado. A forma obstrutiva do RVPAT, mais frequentemente associada ao tipo infracardíaco (em que as veias pulmonares drenam através do sistema porta ou da veia cava inferior), constitui uma verdadeira emergência cirúrgica neonatal, distinta da maioria das demais cardiopatias congênitas críticas. Isso porque, ao contrário das lesões ducto-dependentes, nas quais a manutenção da permeabilidade do canal arterial com infusão de prostaglandina E1 é uma medida de estabilização eficaz, na forma obstrutiva do RVPAT a prostaglandina E1 não tem papel terapêutico útil: o problema fisiopatológico central é a obstrução mecânica ao fluxo venoso pulmonar, e não a dependência ductal do fluxo sistêmico ou pulmonar, de modo que a infusão de prostaglandina não alivia — e pode até agravar — o congestionamento pulmonar e o edema pulmonar já presentes, sem benefício hemodinâmico comprovado nessa situação. Diante de um recém-nascido com RVPAT obstrutivo, o tratamento definitivo é a correção cirúrgica de urgência ou emergência, realizada nas primeiras horas a poucos dias de vida, com reimplante das veias pulmonares no átrio esquerdo e ligadura da conexão anômala, associada ao fechamento de comunicações intracardíacas conforme a anatomia individual. Nas formas não obstrutivas do RVPAT, o quadro clínico tende a ser mais estável nos primeiros dias de vida, e a correção cirúrgica, embora ainda indicada precocemente, pode ser conduzida em caráter mais eletivo, com maior margem para estabilização clínica e planejamento cirúrgico cuidadoso. Um aspecto central do aconselhamento é que a taxa de detecção pré-natal do RVPAT é reconhecidamente baixa, mesmo em centros de referência, porque a anatomia das veias pulmonares é tecnicamente difícil de avaliar à ecocardiografia fetal e porque a ausência de conexão direta das veias pulmonares ao átrio esquerdo pode não gerar alterações estruturais evidentes nas quatro câmaras. Por esse motivo, muitos casos permanecem não diagnosticados até o período pós-natal, quando o recém-nascido apresenta cianose progressiva e desconforto respiratório grave, muitas vezes de instalação abrupta nas primeiras horas de vida. Quando o diagnóstico pré-natal é realizado — mesmo que como suspeita, sem confirmação definitiva —, ele muda drasticamente o prognóstico, pois permite o planejamento do parto em centro terciário com equipe de cirurgia cardíaca neonatal disponível 24 horas por dia, evitando a necessidade de transporte emergencial de um recém-nascido gravemente instável. O aconselhamento parental deve, portanto, contemplar tanto a gravidade potencial da condição, sobretudo na forma obstrutiva, quanto as limitações inerentes ao diagnóstico ecocardiográfico fetal, deixando claro que um exame fetal aparentemente normal não exclui completamente a possibilidade de RVPAT, e que a vigilância clínica no período neonatal imediato permanece fundamental mesmo diante de rastreamento pré-natal tranquilizador.",
+    "ambulatory_flow": [
+      "Confirmar a suspeita ecocardiográfica de RVPAT e tentar classificar o tipo anatômico (supracardíaco, cardíaco, infracardíaco ou misto)",
+      "Encaminhar para ecocardiografia fetal detalhada em centro de referência em cardiologia fetal",
+      "Pesquisar sinais indiretos de obstrução venosa pulmonar, como padrão de fluxo venoso de alta velocidade e pouca variação respiratória ao Doppler",
+      "Investigar anomalias associadas, incluindo isomerismo atrial, outras cardiopatias congênitas e síndromes genéticas, com avaliação genética quando indicado",
+      "Realizar seguimento ecocardiográfico seriado ao longo da gestação, pois a caracterização anatômica e o grau de obstrução podem evoluir",
+      "Discutir o caso em equipe multidisciplinar, incluindo cardiologia fetal, obstetrícia de alto risco, cirurgia cardíaca pediátrica e neonatologia",
+      "Planejar o local e o momento do parto em centro terciário com cirurgia cardíaca neonatal disponível 24 horas por dia",
+      "Orientar a família sobre a possibilidade de emergência cirúrgica neonatal, especialmente diante de suspeita de forma obstrutiva",
+      "Esclarecer explicitamente as limitações do diagnóstico pré-natal, incluindo a possibilidade de um exame fetal normal não excluir a condição",
+      "Programar avaliação neonatal imediata ao nascimento, com ecocardiograma pós-natal precoce para confirmação diagnóstica e definição da conduta"
+    ],
+    "emergency_flow": [
+      "Reconhecer cianose e desconforto respiratório grave em recém-nascido como possível emergência cardíaca, incluindo RVPAT obstrutivo entre os diagnósticos diferenciais",
+      "Garantir estabilização respiratória imediata, com suporte de oxigênio e, se necessário, ventilação assistida, mantendo monitorização contínua",
+      "Não considerar a infusão de prostaglandina E1 como medida terapêutica útil na forma obstrutiva do RVPAT, pois não há benefício comprovado e o quadro de congestão pulmonar pode piorar",
+      "Solicitar ecocardiograma à beira do leito em caráter de urgência para confirmar o diagnóstico e caracterizar o local e o grau da obstrução venosa pulmonar",
+      "Acionar de forma emergencial a equipe de cirurgia cardíaca neonatal para avaliação de correção cirúrgica em caráter de urgência ou emergência",
+      "Providenciar transporte neonatal emergencial para centro com cirurgia cardíaca pediátrica disponível caso o nascimento tenha ocorrido em serviço sem esse recurso",
+      "Diante de diagnóstico pós-natal tardio sem suspeita prévia, reavaliar rapidamente a hipótese de RVPAT obstrutivo frente a cianose refratária desproporcional ao exame pulmonar, evitando atraso na indicação cirúrgica"
+    ],
+    "monitoring": [
+      "Saturação periférica de oxigênio de forma contínua",
+      "Frequência respiratória e sinais de desconforto respiratório",
+      "Perfusão periférica e sinais clínicos de baixo débito cardíaco",
+      "Reavaliação ecocardiográfica seriada no pós-operatório imediato e tardio",
+      "Função ventricular e presença de hipertensão pulmonar residual",
+      "Sinais de recorrência de obstrução venosa pulmonar após a correção cirúrgica",
+      "Crescimento pondero-estatural e desenvolvimento neuropsicomotor em seguimento ambulatorial de longo prazo"
+    ],
+    "assistant_questions": [
+      {
+        "id": "diagnostico_pre_natal_confirmado",
+        "label": "Há suspeita ou diagnóstico de RVPAT confirmado no período pré-natal?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_anatomico_rvpat",
+        "label": "Qual o tipo anatômico do RVPAT identificado ou suspeitado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "supracardiaco",
+            "label": "Supracardíaco"
+          },
+          {
+            "value": "cardiaco",
+            "label": "Cardíaco"
+          },
+          {
+            "value": "infracardiaco",
+            "label": "Infracardíaco"
+          },
+          {
+            "value": "misto",
+            "label": "Misto"
+          },
+          {
+            "value": "indeterminado",
+            "label": "Indeterminado"
+          }
+        ]
+      },
+      {
+        "id": "suspeita_obstrucao_venosa",
+        "label": "Há sinais ecocardiográficos sugestivos de obstrução ao fluxo venoso pulmonar?",
+        "type": "boolean"
+      },
+      {
+        "id": "idade_gestacional_diagnostico",
+        "label": "Qual a idade gestacional, em semanas, no momento da suspeita ou diagnóstico?",
+        "type": "number"
+      },
+      {
+        "id": "local_planejado_parto",
+        "label": "O parto está planejado para qual tipo de serviço?",
+        "type": "select",
+        "options": [
+          {
+            "value": "centro_terciario_com_cirurgia_cardiaca_neonatal",
+            "label": "Centro terciário com cirurgia cardíaca neonatal disponível 24 horas"
+          },
+          {
+            "value": "centro_sem_cirurgia_cardiaca",
+            "label": "Centro sem cirurgia cardíaca neonatal disponível"
+          },
+          {
+            "value": "nao_definido",
+            "label": "Ainda não definido"
+          }
+        ]
+      },
+      {
+        "id": "sinais_pos_natais_cianose_desconforto",
+        "label": "O recém-nascido apresenta cianose e/ou desconforto respiratório grave?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_prostaglandina_iniciado",
+        "label": "A infusão de prostaglandina E1 já foi iniciada ou está sendo considerada?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecocardiograma_fetal_normal_mas_suspeita_clinica",
+        "label": "O ecocardiograma fetal foi relatado como normal, apesar de haver suspeita clínica de RVPAT?",
+        "type": "boolean"
+      },
+      {
+        "id": "anomalias_associadas",
+        "label": "Há anomalias associadas identificadas?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "isomerismo_atrial",
+            "label": "Isomerismo atrial"
+          },
+          {
+            "value": "cardiopatia_congenita_associada",
+            "label": "Outra cardiopatia congênita associada"
+          },
+          {
+            "value": "sindrome_genetica",
+            "label": "Síndrome genética associada"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma anomalia associada identificada"
+          }
+        ]
+      },
+      {
+        "id": "via_parto_planejada",
+        "label": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Vaginal"
+          },
+          {
+            "value": "cesarea",
+            "label": "Cesárea"
+          },
+          {
+            "value": "a_definir",
+            "label": "A definir"
+          }
+        ]
+      },
+      {
+        "id": "disponibilidade_cirurgia_cardiaca_24h",
+        "label": "O serviço de nascimento conta com equipe de cirurgia cardíaca neonatal disponível 24 horas por dia?",
+        "type": "boolean"
+      },
+      {
+        "id": "idade_pos_natal_horas",
+        "label": "Qual a idade pós-natal atual, em horas, do recém-nascido?",
+        "type": "number"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rvpat_obstrutivo_cianose_emergencia",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_obstrucao_venosa",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "sinais_pos_natais_cianose_desconforto",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cianose e desconforto respiratório grave em recém-nascido com suspeita de RVPAT obstrutivo: verdadeira emergência cirúrgica neonatal"
+          ],
+          "messages": [
+            "A prostaglandina E1 não tem papel terapêutico útil na forma obstrutiva do RVPAT e não deve ser considerada medida de estabilização; o tratamento definitivo é a correção cirúrgica de urgência/emergência"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente a equipe de cirurgia cardíaca neonatal para correção cirúrgica em caráter de emergência"
+          ]
+        }
+      },
+      {
+        "id": "tipo_infracardiaco_maior_risco_obstrucao",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_anatomico_rvpat",
+              "op": "eq",
+              "value": "infracardiaco"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "O tipo infracardíaco é o mais frequentemente associado à forma obstrutiva do RVPAT, exigindo vigilância redobrada para sinais de obstrução venosa pulmonar"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal seriada com avaliação detalhada do trajeto da conexão venosa anômala e do padrão de fluxo Doppler"
+          ]
+        }
+      },
+      {
+        "id": "prostaglandina_sem_beneficio_na_obstrucao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "uso_prostaglandina_iniciado",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "suspeita_obstrucao_venosa",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Diferente de lesões ducto-dependentes, a infusão de prostaglandina E1 não alivia a obstrução venosa pulmonar do RVPAT e pode agravar o congestionamento pulmonar"
+          ],
+          "messages": [
+            "Reavaliar a indicação de prostaglandina E1: nesta condição obstrutiva específica ela não tem papel terapêutico útil e não substitui a correção cirúrgica de urgência"
+          ]
+        }
+      },
+      {
+        "id": "diagnostico_pre_natal_muda_prognostico",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_pre_natal_confirmado",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "O diagnóstico pré-natal, mesmo como suspeita, permite planejamento do parto em centro terciário com cirurgia cardíaca neonatal disponível, alterando favoravelmente o prognóstico"
+          ],
+          "ambulatory_flow": [
+            "Confirmar e documentar plano de parto em centro terciário com cirurgia cardíaca neonatal disponível 24 horas por dia"
+          ]
+        }
+      },
+      {
+        "id": "diagnostico_pos_natal_tardio_sem_suspeita",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_pre_natal_confirmado",
+              "op": "falsy",
+              "value": true
+            },
+            {
+              "field": "sinais_pos_natais_cianose_desconforto",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Diagnóstico pós-natal tardio sem suspeita pré-natal prévia, com cianose e desconforto respiratório grave, compatível com RVPAT não reconhecido intraútero"
+          ],
+          "emergency_flow": [
+            "Investigar RVPAT como diagnóstico diferencial prioritário diante de cianose refratária neonatal sem cardiopatia previamente conhecida"
+          ]
+        }
+      },
+      {
+        "id": "parto_planejado_sem_suporte_cirurgico",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "local_planejado_parto",
+              "op": "eq",
+              "value": "centro_sem_cirurgia_cardiaca"
+            },
+            {
+              "field": "diagnostico_pre_natal_confirmado",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Definir transferência do plano de parto para centro terciário com cirurgia cardíaca neonatal disponível 24 horas por dia antes do nascimento"
+          ]
+        }
+      },
+      {
+        "id": "eco_fetal_normal_nao_exclui_rvpat",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "ecocardiograma_fetal_normal_mas_suspeita_clinica",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Um ecocardiograma fetal normal não exclui completamente RVPAT, dado o baixo desempenho diagnóstico pré-natal desta condição"
+          ],
+          "missing_information": [
+            "Reforçar vigilância clínica neonatal para sinais de cianose e desconforto respiratório mesmo diante de rastreamento pré-natal tranquilizador"
+          ]
+        }
+      },
+      {
+        "id": "isomerismo_atrial_associado",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "anomalias_associadas",
+              "op": "contains",
+              "value": "isomerismo_atrial"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Síndromes de heterotaxia com isomerismo atrial associadas a RVPAT"
+          ],
+          "suggested_tests": [
+            "Avaliação de situs visceral e anatomia cardíaca completa para pesquisa de heterotaxia"
+          ]
+        }
+      },
+      {
+        "id": "centro_sem_cirurgia_24h_disponivel",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "disponibilidade_cirurgia_cardiaca_24h",
+              "op": "falsy",
+              "value": true
+            },
+            {
+              "field": "diagnostico_pre_natal_confirmado",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Recomenda-se transferência para centro com cirurgia cardíaca neonatal disponível 24 horas por dia antes do nascimento, dado o risco de necessidade de correção cirúrgica em caráter de urgência/emergência"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com suspeita de retorno venoso pulmonar anômalo total (RVPAT) do tipo infracardíaco: representa a apresentação anatômica com maior associação a obstrução do trajeto venoso pulmonar, condição que exige vigilância redobrada por seu potencial de gravidade extrema logo ao nascimento.",
+      "Feto com RVPAT do tipo supracardíaco ou cardíaco: na maioria dos casos apresenta menor associação com obstrução em comparação ao tipo infracardíaco, o que não dispensa acompanhamento cuidadoso, já que obstrução pode ocorrer em qualquer variante anatômica.",
+      "Feto com RVPAT associado a síndrome de heterotaxia/isomerismo: cenário de maior complexidade anatômica, em que a anomalia do retorno venoso pulmonar se insere em um contexto mais amplo de malformações cardíacas e viscerais que exige avaliação estrutural abrangente.",
+      "Recém-nascido com diagnóstico pré-natal de suspeita de RVPAT: mesmo quando a suspeita não é certeza diagnóstica, justifica planejamento de parto antecipado em centro com suporte cardiológico e cirúrgico neonatal imediatamente disponível.",
+      "Recém-nascido sem diagnóstico pré-natal que apresenta cianose ou desconforto respiratório grave de início inesperado: é o cenário mais comum na prática clínica, dada a baixa taxa de detecção pré-natal dessa cardiopatia, exigindo alto índice de suspeição diante de quadro respiratório grave não explicado.",
+      "Gestante orientada sobre as limitações do exame de ultrassom pré-natal de rotina para identificar essa condição específica: compreender essas limitações ajuda a calibrar expectativas sobre o valor preditivo de um resultado aparentemente normal e sobre a necessidade de avaliação especializada quando há sinais indiretos de suspeita."
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "planejamento-parto-cardiopatia-fetal",
