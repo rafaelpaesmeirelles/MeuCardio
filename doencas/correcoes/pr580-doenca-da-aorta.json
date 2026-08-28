@@ -77,6 +77,31 @@
           ]
         }
       }
-    }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "aorta-instabilidade-generica-sem-evidencia-especifica",
+        "priority": 97,
+        "when": {
+          "all": [
+            {"field": "instability_shock", "op": "truthy"}
+          ],
+          "none": [
+            {"field": "sudden_tearing_pain", "op": "truthy"},
+            {"field": "known_aneurysm_surveillance", "op": "truthy"},
+            {"field": "pulsatile_abdominal_mass", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica, déficit de pulso ou déficit neurológico focal exige avaliação emergencial mesmo sem evidência suficiente para rotular ruptura/dissecção aórtica"
+          ],
+          "emergency_flow": [
+            "Conduzir imediatamente por fluxo genérico de emergência e investigar causas de choque/instabilidade em paralelo. Manter síndrome aórtica aguda no diferencial quando clinicamente plausível, sem inferir ruptura aórtica apenas pela instabilidade isolada."
+          ]
+        }
+      }
+    ]
   }
 ]
