@@ -330,12 +330,13 @@
       "https://academic.oup.com/eurheartj/article/45/36/3314/7738779",
       "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
-    "version": 2,
+    "review_status": "pendente_revisao",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. | Lote vincular Tudo com Tudo 28/08/2026: adicionado 1 related_document_slug (reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa, ANNEXA-4/RE-VERSE AD), levando o total de 2 para 3 (piso mínimo da regra). Três candidatos adicionais propostos pelo agente de pesquisa (fluxograma e monografias de idarucizumabe/protamina) foram descartados por resolverem para content/Farmacologia, pasta explicitamente fora do escopo permitido pela regra Tudo com Tudo — verificação feita por mim, corrigindo proposta inicial do agente.",
+    "version": 3,
     "related_document_slugs": [
       "fluxograma-sangramento-maior-em-paciente-anticoagulado",
-      "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach"
+      "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+      "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa"
     ],
     "patient_material_slug": "sangramento-em-quem-usa-anticoagulante-existe-remedio-para-reverter"
   },

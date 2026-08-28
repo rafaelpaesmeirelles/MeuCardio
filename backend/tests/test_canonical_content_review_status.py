@@ -39,7 +39,15 @@ MANIFESTS = (
     "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote vincular Tudo com Tudo de 28/08/2026: ficha já completa
+        # sangramento-relacionado-a-anticoagulante tinha apenas 2
+        # related_document_slugs (abaixo do piso); 1 vínculo adicionado
+        # após verificação — ver review_note.
+        "sangramento-relacionado-a-anticoagulante",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
