@@ -16099,7 +16099,7 @@
     "category": "cuidado_centrado_pessoa",
     "subtype": "paliativo",
     "prevalence_rank": 14,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Abordagem interdisciplinar para sintomas, comunicação, decisões e qualidade de vida, aplicável em paralelo ao tratamento dirigido à doença.",
     "tags": [
       "cuidados paliativos",
@@ -16108,19 +16108,512 @@
       "família"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Palliative Care and Advanced Cardiovascular Disease"
+      "AHA Scientific Statement: Palliative Care and Advanced Cardiovascular Disease",
+      "Graven LJ, Kitko L, Abshire Saylor M, et al. Palliative Care and Advanced Cardiovascular Disease in Adults: Not Just End-of-Life Care. Circulation. 2025;151(21):e1030-e1042. PMID: 40242854.",
+      "Rogers JG, Patel CB, Mentz RJ, et al. Palliative Care in Heart Failure: The PAL-HF Randomized, Controlled Clinical Trial. J Am Coll Cardiol. 2017;70(3):331-341. PMID: 28705314.",
+      "Bakitas MA, Dionne-Odom JN, Ejem DB, et al. Effect of an Early Palliative Care Telehealth Intervention vs Usual Care on Patients With Heart Failure: The ENABLE CHF-PC Randomized Clinical Trial. JAMA Intern Med. 2020;180(9):1203-1213. PMID: 32730613.",
+      "O'Donnell AE, Schaefer KG, Stevenson LW, et al. Social Worker-Aided Palliative Care Intervention in High-risk Patients With Heart Failure (SWAP-HF): A Pilot Randomized Clinical Trial. JAMA Cardiol. 2018;3(6):516-519. PMID: 29641819.",
+      "Bruera E, Kuehn N, Miller MJ, Selmser P, Macmillan K. The Edmonton Symptom Assessment System (ESAS). J Palliat Care. 1991;7(2):6-9. PMID: 1714502.",
+      "Green CP, Porter CB, Bresnahan DR, Spertus JA. Development and evaluation of the Kansas City Cardiomyopathy Questionnaire. J Am Coll Cardiol. 2000;35(5):1245-1255. PMID: 10758967.",
+      "Downar J, Goldman R, Pinto R, Englesakis M, Adhikari NK. The 'surprise question' for predicting death in seriously ill patients: a systematic review and meta-analysis. CMAJ. 2017;189(13):E484-E493. PMID: 28385893.",
+      "Thomas H, Wallace J, Foley P, Johnson MJ. Implantable cardioverter defibrillator deactivation and end-of-life: British Heart Rhythm Society practical consensus guideline. BMJ Support Palliat Care. 2025;15(2):184-190. PMID: 39732473.",
+      "Moin EE, Bayes B, Madden V, Halpern SD, Courtright KR. Disease and Race-Based Differences in Inpatient Palliative Care Consultation in Cancer and Noncancer Serious Illnesses. J Am Geriatr Soc. 2025;73(7):2155-2165. PMID: 40331620.",
+      "Allen LA, Stevenson LW, Grady KL, et al. Decision making in advanced heart failure: a scientific statement from the American Heart Association. Circulation. 2012;125(15):1928-1952. PMID: 22392529.",
+      "Kavalieratos D, Gelfman LP, Tycon LE, et al. Palliative Care in Heart Failure: Rationale, Evidence, and Future Priorities. J Am Coll Cardiol. 2017;70(15):1919-1930. PMID: 28982506.",
+      "Lampert R, Hayes DL, Annas GJ, et al. HRS Expert Consensus Statement on the Management of Cardiovascular Implantable Electronic Devices (CIEDs) in patients nearing end of life. Heart Rhythm. 2010;7(7):1008-1026. PMID: 20471915."
     ],
     "source_urls": [
-      "https://professional.heart.org/en/guidelines-statements/palliative-care-and-advanced-cardiovascular-disease-in-adults-not-justcir0000000000001323"
+      "https://professional.heart.org/en/guidelines-statements/palliative-care-and-advanced-cardiovascular-disease-in-adults-not-justcir0000000000001323",
+      "https://pubmed.ncbi.nlm.nih.gov/40242854/",
+      "https://pubmed.ncbi.nlm.nih.gov/28705314/",
+      "https://pubmed.ncbi.nlm.nih.gov/32730613/",
+      "https://pubmed.ncbi.nlm.nih.gov/29641819/",
+      "https://pubmed.ncbi.nlm.nih.gov/1714502/",
+      "https://pubmed.ncbi.nlm.nih.gov/10758967/",
+      "https://pubmed.ncbi.nlm.nih.gov/28385893/",
+      "https://pubmed.ncbi.nlm.nih.gov/39732473/",
+      "https://pubmed.ncbi.nlm.nih.gov/40331620/",
+      "https://pubmed.ncbi.nlm.nih.gov/22392529/",
+      "https://pubmed.ncbi.nlm.nih.gov/28982506/",
+      "https://pubmed.ncbi.nlm.nih.gov/20471915/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Lote de aprofundamento Tudo com Tudo de 28/08/2026 (10º da série, após doenca-coronariana-idoso/PR #603, valva-aortica-bicuspide-pediatrica/PR #604, hipotensao-ortostatica-no-idoso/PR #606, sopros-na-infancia/PR #608, hipertensao-arterial-pediatrica/PR #609, dor-toracica-pediatrica/PR #610, dislipidemias-pediatricas/PR #611, arritmias-pediatricas/PR #612, avaliacao-multidimensional-cardiogeriatrica/PR #613): ficha estava com apenas metadados de catalogação e 2 related_document_slugs. Diferente de uma doença, esta ficha é um FRAMEWORK de cuidado paliativo aplicado EM PARALELO ao tratamento cardiovascular ativo (não é sinônimo de fim de vida nem de suspensão de tratamento) — produzida epidemiologia (subutilização de cuidados paliativos em cardiologia vs. oncologia, evidência dos ensaios PAL-HF/ENABLE CHF-PC/SWAP-HF), apresentação (12 cenários de decisão, não sintomas de doença), abordagem diagnóstica estruturada em 4 subtópicos (triagem para encaminhamento, avaliação estruturada de sintomas, avaliação de compreensão de prognóstico, cuidados paliativos primários vs. especializados), 7 distinções conceituais (não diagnósticos diferenciais clássicos), 7 instrumentos/escalas, 8 sinais de alarme, tratamento (controle de sintomas por classe sem dose, processo estruturado de desativação de CDI distinguindo choque de estimulação, planejamento antecipado, critérios de hospice), fluxos ambulatorial/emergência, monitoramento, 6 populações especiais, assistente clínico determinístico (12 perguntas, 10 regras, priority 90 para sintoma refratário + múltiplas internações + inotrópico contínuo) e 7 related_document_slugs (5 novos + os 2 já existentes), todos verificados individualmente fora de Farmacologia/Calculadoras/Exames. Os 5 novos não têm sobreposição com nenhuma outra ficha; os 2 já existentes antes deste lote (marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida e cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso) são compartilhados com insuficiencia-cardiaca-no-idoso (paliação terminal em IC) — descoberto pelo teste dedicado, não pelos agentes de pesquisa, e mantido por ser genuína e centralmente relevante também aqui. Nenhuma dose de fármaco citada — opioides, benzodiazepínicos, ISRS e anti-inflamatórios mencionados apenas por classe.",
+    "version": 2,
     "related_document_slugs": [
       "cuidados-paliativos-e-transicao-de-cuidado-na-insuficiencia-cardiaca-terminal-do-muito-idoso",
-      "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida"
+      "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida",
+      "cuidado-paliativo-e-comunicacao-de-prognostico-na-ic-avancada-pal-hf-enable-chf-pc-e-swap-hf",
+      "cuidados-paliativos-e-comunicacao-de-prognostico-duplo-na-ic-avancada-por-cardiotoxicidade",
+      "planejamento-antecipado-de-cuidados-detering-support-e-o-video-de-el-jawahri",
+      "desativacao-de-cdi-e-marca-passo-no-fim-de-vida-consenso-hrs-ehra-2010",
+      "decisao-compartilhada-para-lvad-de-terapia-de-destino-o-ensaio-decide-lvad"
     ],
-    "patient_material_slug": "conversar-sobre-o-futuro-do-tratamento-planejamento-antecipado-de-cuidados"
+    "patient_material_slug": "conversar-sobre-o-futuro-do-tratamento-planejamento-antecipado-de-cuidados",
+    "fonte_producao": "claude",
+    "epidemiology": "Sintomas não controlados são altamente prevalentes na doença cardiovascular avançada e frequentemente subestimados pela equipe assistencial primária. Estudos observacionais em insuficiência cardíaca (IC) avançada mostram dispneia refratária em parcela substancial dos pacientes em fases finais, dor moderada a grave relatada por até três quartos dos casos, fadiga incapacitante na maioria dos pacientes e sintomas ansiosos ou depressivos em cerca de um terço, com sobreposição frequente desses domínios (Rogers et al., 2017). Apesar dessa carga sintomática comparável ou superior à observada em neoplasias avançadas, cuidados paliativos permanecem sistematicamente subutilizados em cardiologia: enquanto pacientes oncológicos em fase avançada recebem avaliação paliativa formal com muito mais frequência, o encaminhamento de pacientes com IC avançada costuma ser tardio, próximo do óbito, em vez de ocorrer em paralelo ao tratamento modificador de doença, com disparidades adicionais documentadas por raça e diagnóstico de base (Moin et al., 2025). O ensaio PAL-HF (Rogers et al., 2017, Journal of the American College of Cardiology) demonstrou que uma intervenção paliativa interdisciplinar associada ao tratamento cardiológico baseado em evidência, iniciada durante internação por IC avançada, reduziu significativamente carga sintomática, ansiedade e sintomas depressivos e melhorou qualidade de vida geral e espiritual, sem diferença em mortalidade — reforçando que cuidados paliativos concomitantes não abreviam a sobrevida. O ensaio ENABLE CHF-PC (Bakitas et al., 2020, JAMA Internal Medicine), conduzido por telessaúde ambulatorial, confirmou melhora sustentada de qualidade de vida e humor com intervenção paliativa precoce concomitante ao cuidado cardiológico usual, reforçando a viabilidade de modelos de baixo custo e ampla escala. O piloto SWAP-HF (O'Donnell et al., 2018, JAMA Cardiology) mostrou a factibilidade de intervenção paliativa liderada por assistente social em pacientes de alto risco. O AHA Scientific Statement de 2025 (Graven et al., Circulation) consolida essa evidência e recomenda integração sistemática de cuidados paliativos ao longo de toda a trajetória da doença cardiovascular avançada, explicitando que isso não é sinônimo de cuidado exclusivo de fim de vida.",
+    "presentation": [
+      "Internações recorrentes por insuficiência cardíaca descompensada (duas ou mais em seis meses) apesar de terapia otimizada",
+      "Dispneia refratária ou desproporcional persistindo apesar de terapia farmacológica e de dispositivos otimizada",
+      "Declínio funcional progressivo com perda de independência para atividades básicas ou instrumentais de vida diária",
+      "Necessidade de decisão compartilhada sobre dispositivo de assistência ventricular como terapia de destino ou sobre elegibilidade para transplante cardíaco",
+      "Discussão pendente sobre desativação de cardioversor-desfibrilador implantável (CDI) em contexto de fim de vida ou mudança de objetivos de cuidado",
+      "Sintomas físicos ou psicológicos não controlados (dor, fadiga, ansiedade, depressão) apesar de tratamento cardiológico otimizado",
+      "Valvopatia grave considerada inoperável ou com risco cirúrgico proibitivo após avaliação por heart team",
+      "Cardiopatia isquêmica terminal sem opções adicionais de revascularização",
+      "Cardio-oncologia com prognóstico reservado e toxicidade cardiovascular limitando as opções terapêuticas oncológicas",
+      "Idoso muito frágil com múltiplas comorbidades cardiovasculares e trajetória de declínio cumulativo",
+      "Cuidador familiar apresentando sinais de sobrecarga, esgotamento físico ou emocional significativos",
+      "Necessidade explícita do paciente ou da família de esclarecer prognóstico e alinhar metas de cuidado com o plano terapêutico vigente"
+    ],
+    "diagnostic_approach": {
+      "triagem_para_encaminhamento": "A identificação sistemática de candidatos a avaliação paliativa começa com ferramentas de rastreio simples, aplicáveis pela própria equipe cardiológica assistente. A 'surprise question' ('Eu ficaria surpreso se este paciente morresse nos próximos 12 meses?') tem acurácia moderada para predizer mortalidade em doença grave, com sensibilidade alta mas especificidade limitada conforme revisão sistemática com metanálise (Downar et al., 2017, CMAJ), funcionando melhor como gatilho de conversa do que como preditor isolado de prognóstico. Outros gatilhos reconhecidos incluem classe funcional NYHA III-IV persistente apesar de terapia otimizada, duas ou mais hospitalizações por descompensação em seis meses, necessidade de suporte inotrópico ambulatorial contínuo e progressão de disfunção de órgão-alvo (renal, hepática) associada à síndrome cardiorrenal.",
+      "avaliacao_estruturada_de_sintomas": "A avaliação de sintomas deve ser estruturada e repetida ao longo do seguimento, e não deixada apenas à queixa espontânea do paciente. A Edmonton Symptom Assessment System (ESAS) permite quantificação numérica de múltiplos domínios — dor, fadiga, náusea, depressão, ansiedade, sonolência, apetite, bem-estar e dispneia — e é amplamente validada em cuidados paliativos (Bruera et al., 1991; Hui e Bruera, 2017). O Kansas City Cardiomyopathy Questionnaire (KCCQ) complementa essa avaliação ao quantificar especificamente limitação física, carga de sintomas de IC e qualidade de vida relacionada à doença, sendo sensível a mudança clínica e útil para monitorar resposta a intervenções paliativas ao longo do tempo (Green et al., 2000).",
+      "avaliacao_de_compreensao_de_prognostico": "A avaliação de quanto o paciente e a família compreendem sobre o prognóstico e a trajetória esperada da doença é etapa central e frequentemente negligenciada na prática cardiológica. Discrepâncias entre a expectativa do paciente e a estimativa objetiva da equipe assistente são comuns em IC avançada e associam-se a decisões terapêuticas desalinhadas com os valores do próprio paciente. Perguntas abertas sobre entendimento da doença, expectativas de tratamento e prioridades diante do tempo restante devem ser exploradas ativamente, com documentação estruturada das metas de cuidado combinadas.",
+      "cuidados_paliativos_primarios_versus_especializados": "O AHA Scientific Statement de 2025 distingue cuidados paliativos primários — comunicação sobre prognóstico, controle básico de sintomas e discussão inicial de metas de cuidado, que podem e devem ser conduzidos pela própria equipe cardiológica assistente — de cuidados paliativos especializados, que requerem encaminhamento formal a equipe interdisciplinar dedicada. O encaminhamento formal é recomendado diante de sintomas refratários ao manejo de primeira linha, conflito familiar sobre metas de cuidado, sofrimento existencial ou espiritual significativo, necessidade de manejo de caso complexo (como desativação de CDI ou descontinuação de suporte mecânico) ou quando a equipe primária identifica limitação de tempo ou expertise para conduzir a conversa com a profundidade necessária."
+    },
+    "differentials": [
+      "Cuidados paliativos não são sinônimo de cuidados de fim de vida ou hospice — podem e devem ser iniciados anos antes do óbito, em paralelo ao tratamento ativo da doença cardiovascular",
+      "Cuidados paliativos não implicam suspensão de terapia direcionada à doença de base (otimização farmacológica para IC, revascularização quando indicada, dispositivos); são abordagens concomitantes, não excludentes",
+      "Sintoma refratário verdadeiro, persistente apesar de terapia cardiológica maximamente otimizada, deve ser diferenciado de sintoma decorrente de doença de base subtratada, que exige primeiro intensificação do tratamento convencional antes de ser rotulado como paliativo-refratário",
+      "Cuidados paliativos primários, conduzidos pela equipe cardiológica assistente, diferem de cuidados paliativos especializados prestados por equipe interdisciplinar dedicada — a necessidade de um não implica automaticamente a necessidade do outro",
+      "Prognóstico reservado em doença cardiovascular avançada não equivale a terminalidade iminente; a trajetória da IC avançada é tipicamente de declínio flutuante e imprevisível, distinta da trajetória mais linear observada em muitas neoplasias",
+      "Desativação de CDI em fim de vida não é equivalente a eutanásia nem a suspensão de todo suporte terapêutico — é decisão específica sobre uma terapia (choques para arritmia), dissociada de decisões sobre função de marca-passo ou demais tratamentos",
+      "Diretivas antecipadas de vontade e ordens de não reanimação não são sinônimos de encaminhamento a cuidados paliativos nem o substituem — são instrumentos complementares dentro de um plano de cuidado mais amplo"
+    ],
+    "tests": [
+      "Edmonton Symptom Assessment System (ESAS) — escala numérica multidimensional de sintomas",
+      "Kansas City Cardiomyopathy Questionnaire (KCCQ) — instrumento de qualidade de vida específico para insuficiência cardíaca",
+      "Surprise question — gatilho prognóstico de triagem para encaminhamento paliativo",
+      "Classificação funcional NYHA seriada — trajetória de capacidade funcional ao longo do tempo",
+      "Palliative Performance Scale (PPS) — estimativa de status funcional e prognóstico em cuidados paliativos",
+      "Patient Health Questionnaire-9 (PHQ-9) — rastreio estruturado de sintomas depressivos",
+      "Zarit Burden Interview — avaliação estruturada de sobrecarga do cuidador"
+    ],
+    "red_flags": [
+      "Duas ou mais internações por insuficiência cardíaca descompensada em período de seis meses apesar de terapia otimizada",
+      "Necessidade de suporte inotrópico contínuo em regime ambulatorial",
+      "Sintoma refratário grave (dispneia incapacitante ou dor não controlada) apesar de tratamento cardiológico maximamente otimizado",
+      "Declínio funcional acelerado com perda progressiva de independência em semanas a poucos meses",
+      "Decisão pendente sobre desativação de CDI diante de mudança de objetivos de cuidado",
+      "Caquexia cardíaca ou perda de peso não intencional e progressiva",
+      "Cuidador familiar com sinais evidentes de esgotamento físico ou emocional",
+      "Múltiplas comorbidades graves associadas com prognóstico combinado significativamente reduzido"
+    ],
+    "treatment_summary": "Cuidados paliativos em doença cardiovascular avançada não são sinônimo de fim de vida iminente nem de abandono da terapia cardiológica ativa — devem ser integrados precocemente e em paralelo ao manejo direcionado por diretriz, seguindo o modelo de duas camadas: cuidados paliativos primários e cuidados paliativos especializados. Os cuidados paliativos primários são fornecidos pela própria equipe cardiológica (cardiologista, enfermagem, assistente social do serviço) e incluem controle básico de sintomas, comunicação inicial de prognóstico, identificação de objetivos de cuidado e rastreio de necessidades psicossociais. Os cuidados paliativos especializados — envolvendo equipe interdisciplinar de paliativistas — são indicados quando há sintomas refratários ao manejo de primeira linha, complexidade na tomada de decisão familiar (conflito, ambivalência, múltiplos decisores), sofrimento existencial ou espiritual intenso, necessidade de suporte psicossocial intensivo, ou dificuldade em conduzir a discussão sobre desativação de dispositivo cardíaco eletrônico implantável (Allen LA et al., 2012; Braun LT et al., 2016; Sobanski PZ et al., 2020).\n\nO controle de sintomas comuns na doença cardiovascular avançada abrange: dispneia refratária, abordada com otimização máxima da terapia cardiovascular associada a opioides titulados por resposta sintomática e, em casos selecionados, ansiolíticos benzodiazepínicos como adjuvantes; dor, tratada com escalonamento analgésico envolvendo anti-inflamatórios (com cautela pelo risco nefro e cardiotóxico), opioides e adjuvantes neuromoduladores; fadiga, de manejo mais limitado, priorizando investigação de causas reversíveis (anemia, distúrbios do sono, depressão) antes de intervenções sintomáticas específicas; e ansiedade/depressão, tratadas com inibidores seletivos da recaptação de serotonina, outros antidepressivos e, quando necessário, benzodiazepínicos de curta ação, sempre associados a suporte psicoterapêutico (Kavalieratos D et al., 2017; Rogers JG et al., 2017 — PAL-HF).\n\nA discussão sobre desativação de dispositivos cardíacos eletrônicos implantáveis em fim de vida deve seguir processo estruturado, documentado e revisitado ao longo do tempo — não um evento único: esclarecer o funcionamento do dispositivo, explorar valores e objetivos do paciente, e formalizar a decisão junto à equipe de eletrofisiologia. É fundamental distinguir eticamente dois cenários: a desativação dos choques do CDI (interrompe apenas a terapia de choque para arritmias ventriculares, sem efeito imediato sobre a sobrevida basal, sendo amplamente aceita como retirada de uma intervenção que pode prolongar um processo de morte sem alívio de sofrimento) versus a desativação do suporte de estimulação em paciente dependente de ritmo (marca-passo), que equivale a retirar um suporte vital com efeito hemodinâmico imediato e exige discussão ainda mais cuidadosa, alinhada aos princípios éticos de retirada de suporte de vida (Lampert R et al., 2010; Goldstein NE et al., 2004).\n\nO planejamento antecipado de cuidados deve incluir a formalização de diretivas antecipadas de vontade e a designação de procurador de saúde, revisitados a cada mudança clínica relevante. Critérios sugestivos de encaminhamento para hospice incluem trajetória de declínio funcional progressivo, internações recorrentes por descompensação, necessidade de suporte inotrópico contínuo sem perspectiva de transplante ou dispositivo de assistência ventricular, e priorização explícita de conforto sobre prolongamento de vida. O suporte ao cuidador — incluindo rastreio de sobrecarga física e emocional e abordagem do luto antecipatório — é parte integrante do cuidado, com evidência de melhora da qualidade de vida e redução de sintomas depressivos quando cuidados paliativos são integrados precocemente ao manejo da insuficiência cardíaca avançada (Warraich HJ et al., 2018).",
+    "ambulatory_flow": [
+      "Na consulta de rotina de doença cardiovascular avançada, avaliar sistematicamente a carga sintomática (dispneia, dor, fadiga, ansiedade/depressão) com instrumento padronizado, além dos parâmetros clínicos habituais.",
+      "Diferenciar necessidade de cuidados paliativos primários (manejados pela própria equipe cardiológica) de critérios de encaminhamento para cuidados paliativos especializados (sintomas refratários, conflito familiar, sofrimento existencial intenso).",
+      "Iniciar conversa sobre prognóstico e objetivos de cuidado o mais precocemente possível na trajetória da doença avançada, revisitando periodicamente conforme evolução clínica.",
+      "Em portadores de cardioversor-desfibrilador implantável (CDI), programar discussão estruturada e documentada sobre desativação de choques como parte do planejamento antecipado, distinguindo-a claramente da desativação de suporte de marca-passo em pacientes dependentes de ritmo.",
+      "Formalizar diretivas antecipadas de vontade e designação de procurador de saúde, registrando em prontuário e comunicando à equipe multiprofissional e à família.",
+      "Rastrear sobrecarga do cuidador principal e sinais de luto antecipatório, oferecendo suporte psicossocial estruturado e orientação sobre recursos comunitários.",
+      "Reavaliar a cada consulta os critérios de elegibilidade para encaminhamento a hospice em pacientes com declínio funcional progressivo ou internações recorrentes.",
+      "Ajustar o controle farmacológico dos sintomas (classes analgésicas, ansiolíticas e para dispneia) em conjunto com a terapia cardiovascular otimizada, sem suspender abruptamente o tratamento de base sem antes discutir os objetivos de cuidado."
+    ],
+    "emergency_flow": [
+      "Diante de crise sintomática aguda grave (dispneia intensa, dor não controlada) em paciente com diretivas de conforto já estabelecidas, priorizar o controle sintomático imediato conforme o plano previamente pactuado, evitando intervenções invasivas não alinhadas aos objetivos documentados.",
+      "Se as diretivas antecipadas não estiverem disponíveis ou claras no momento da crise, buscar ativamente o procurador de saúde ou a família para esclarecer os objetivos de cuidado antes de escalonar intervenções (ex.: ventilação mecânica, inotrópicos).",
+      "Em portador de CDI com choques recorrentes em fase de fim de vida, considerar a desativação emergencial dos choques (procedimento não invasivo e reversível na intenção, realizável por programador dedicado) após validação da vontade do paciente/família, comunicando de imediato à equipe de eletrofisiologia.",
+      "Acionar avaliação de cuidados paliativos especializados em caráter de urgência quando a crise expõe conflito familiar não resolvido, sofrimento existencial intenso ou incerteza sobre os objetivos de cuidado.",
+      "Documentar de forma clara a decisão tomada durante a crise e comunicar à equipe ambulatorial de origem para continuidade e reforço do planejamento antecipado de cuidados."
+    ],
+    "monitoring": [
+      "Reavaliação periódica da carga sintomática (dispneia, dor, fadiga, ansiedade/depressão) a cada consulta, com escala padronizada.",
+      "Revisão do status funcional e de performance a cada contato, para identificar mudança de trajetória que justifique reforço do planejamento antecipado.",
+      "Atualização periódica das diretivas antecipadas de vontade, especialmente após internações ou mudanças clínicas relevantes.",
+      "Reavaliação do status do dispositivo cardíaco implantável (CDI/marca-passo) e da adequação contínua das configurações às metas de cuidado vigentes.",
+      "Monitoramento da sobrecarga do cuidador e de sinais de exaustão ou luto antecipatório em cada contato.",
+      "Reavaliação dos critérios de elegibilidade para hospice a cada mudança clínica significativa ou nova internação.",
+      "Revisão da comunicação entre a equipe cardiológica e a equipe de cuidados paliativos especializada, quando envolvida, garantindo alinhamento do plano de cuidado."
+    ],
+    "assistant_questions": [
+      {
+        "id": "sintomas_refratarios_apesar_otimizacao",
+        "text": "Há sintomas (dispneia, dor, fadiga) refratários apesar de otimização da terapia cardiovascular direcionada por diretriz?",
+        "type": "boolean"
+      },
+      {
+        "id": "possui_cdi",
+        "text": "O paciente possui cardioversor-desfibrilador implantável (CDI)?",
+        "type": "boolean"
+      },
+      {
+        "id": "dependente_marcapasso",
+        "text": "O paciente é dependente de ritmo do marca-passo (ausência de ritmo próprio estável)?",
+        "type": "boolean"
+      },
+      {
+        "id": "discussao_desativacao_dispositivo_feita",
+        "text": "Já houve discussão estruturada e documentada sobre desativação de choques do CDI ou do suporte de marca-passo?",
+        "type": "boolean"
+      },
+      {
+        "id": "internacoes_ultimos_6_meses",
+        "text": "Quantas internações por descompensação cardiovascular o paciente teve nos últimos 6 meses?",
+        "type": "number"
+      },
+      {
+        "id": "uso_inotropico_continuo",
+        "text": "O paciente está em uso de inotrópico endovenoso contínuo como estratégia paliativa?",
+        "type": "boolean"
+      },
+      {
+        "id": "diretivas_antecipadas_registradas",
+        "text": "Existem diretivas antecipadas de vontade formalmente registradas em prontuário?",
+        "type": "boolean"
+      },
+      {
+        "id": "objetivo_cuidado_atual",
+        "text": "Qual o objetivo de cuidado atualmente definido com o paciente e a família?",
+        "type": "select",
+        "options": [
+          {
+            "value": "prolongar_vida",
+            "label": "Prolongar a vida"
+          },
+          {
+            "value": "priorizar_conforto",
+            "label": "Priorizar conforto"
+          },
+          {
+            "value": "indefinido_nao_discutido",
+            "label": "Indefinido / não discutido"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_presentes",
+        "text": "Quais sintomas estão presentes atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "dispneia",
+            "label": "Dispneia"
+          },
+          {
+            "value": "dor",
+            "label": "Dor"
+          },
+          {
+            "value": "fadiga",
+            "label": "Fadiga"
+          },
+          {
+            "value": "ansiedade_depressao",
+            "label": "Ansiedade/depressão"
+          },
+          {
+            "value": "nausea",
+            "label": "Náusea"
+          },
+          {
+            "value": "delirium",
+            "label": "Delirium"
+          },
+          {
+            "value": "edema_refratario",
+            "label": "Edema refratário"
+          }
+        ]
+      },
+      {
+        "id": "cuidador_sobrecarga_sinais",
+        "text": "Há sinais de sobrecarga física/emocional no cuidador principal (esgotamento, luto antecipatório não elaborado)?",
+        "type": "boolean"
+      },
+      {
+        "id": "encaminhado_paliativo_especializado",
+        "text": "O paciente já foi encaminhado para equipe de cuidados paliativos especializada?",
+        "type": "boolean"
+      },
+      {
+        "id": "prognostico_estimado",
+        "text": "Qual a estimativa de prognóstico atual, conforme julgamento clínico da equipe?",
+        "type": "select",
+        "options": [
+          {
+            "value": "menos_6_meses",
+            "label": "Menos de 6 meses"
+          },
+          {
+            "value": "6_a_12_meses",
+            "label": "6 a 12 meses"
+          },
+          {
+            "value": "maior_12_meses_incerto",
+            "label": "Maior que 12 meses / incerto"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "r1_crise_paliativa_alto_risco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_refratarios_apesar_otimizacao",
+              "op": "truthy"
+            },
+            {
+              "field": "internacoes_ultimos_6_meses",
+              "op": "gte",
+              "value": 2
+            },
+            {
+              "field": "uso_inotropico_continuo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sintoma refratário grave associado a múltiplas internações recentes e uso de inotrópico contínuo sugere trajetória de fim de vida não reconhecida — indicação de avaliação paliativa especializada em caráter prioritário."
+          ],
+          "supporting": [
+            "Padrão compatível com doença cardiovascular avançada refratária."
+          ],
+          "ambulatory_flow": [
+            "Acionar encaminhamento urgente para equipe de cuidados paliativos especializada e reunião familiar estruturada de revisão de objetivos de cuidado."
+          ],
+          "messages": [
+            "Revisar de imediato o plano de cuidado e a adequação das diretivas antecipadas de vontade."
+          ]
+        }
+      },
+      {
+        "id": "r2_cdi_sem_discussao_desativacao",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "possui_cdi",
+              "op": "truthy"
+            },
+            {
+              "field": "discussao_desativacao_dispositivo_feita",
+              "op": "falsy"
+            },
+            {
+              "field": "objetivo_cuidado_atual",
+              "op": "eq",
+              "value": "priorizar_conforto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Paciente com CDI e objetivo de conforto já definido, mas sem discussão documentada sobre desativação de choques — risco de choques dolorosos e inapropriados em fim de vida."
+          ],
+          "missing_information": [
+            "Documentação de discussão estruturada sobre desativação de choques do CDI."
+          ],
+          "messages": [
+            "Agendar discussão específica sobre desativação de choques do CDI, distinta de desativação de suporte de marca-passo."
+          ]
+        }
+      },
+      {
+        "id": "r3_dependente_marcapasso_conforto",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "dependente_marcapasso",
+              "op": "truthy"
+            },
+            {
+              "field": "objetivo_cuidado_atual",
+              "op": "eq",
+              "value": "priorizar_conforto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Paciente dependente de ritmo com objetivo de conforto — desativação do suporte de marca-passo equivale a retirada de suporte de vida com efeito hemodinâmico imediato, eticamente distinta da desativação de choques do CDI."
+          ],
+          "messages": [
+            "Conduzir discussão multiprofissional cuidadosa antes de qualquer decisão sobre desativação de suporte de marca-passo."
+          ]
+        }
+      },
+      {
+        "id": "r4_sem_diretivas_prognostico_curto",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "diretivas_antecipadas_registradas",
+              "op": "falsy"
+            },
+            {
+              "field": "prognostico_estimado",
+              "op": "eq",
+              "value": "menos_6_meses"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Diretivas antecipadas de vontade e designação de procurador de saúde não registradas em paciente com prognóstico estimado inferior a 6 meses."
+          ],
+          "ambulatory_flow": [
+            "Priorizar formalização de diretivas antecipadas de vontade na próxima consulta."
+          ]
+        }
+      },
+      {
+        "id": "r5_criterios_hospice_multiplas_internacoes",
+        "priority": 68,
+        "when": {
+          "all": [
+            {
+              "field": "encaminhado_paliativo_especializado",
+              "op": "falsy"
+            },
+            {
+              "field": "internacoes_ultimos_6_meses",
+              "op": "gte",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Três ou mais internações em 6 meses sem encaminhamento a cuidados paliativos especializados — trajetória compatível com critérios de elegibilidade para hospice."
+          ],
+          "supporting": [
+            "Padrão de internações recorrentes é critério reconhecido de encaminhamento para hospice em doença cardiovascular avançada."
+          ]
+        }
+      },
+      {
+        "id": "r6_sobrecarga_cuidador",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "cuidador_sobrecarga_sinais",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Sinais de sobrecarga do cuidador identificados — indicação de suporte psicossocial e orientação sobre luto antecipatório."
+          ],
+          "messages": [
+            "Oferecer suporte estruturado ao cuidador, incluindo orientação sobre recursos comunitários e grupos de apoio."
+          ]
+        }
+      },
+      {
+        "id": "r7_sintomas_multiplos_dispneia_ansiedade",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_presentes",
+              "op": "contains",
+              "value": "dispneia"
+            },
+            {
+              "field": "sintomas_presentes",
+              "op": "contains",
+              "value": "ansiedade_depressao"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Coexistência de dispneia e ansiedade/depressão sugere benefício de abordagem combinada, envolvendo opioides para dispneia e suporte psicoterapêutico/farmacológico para os sintomas ansioso-depressivos."
+          ]
+        }
+      },
+      {
+        "id": "r8_objetivo_indefinido",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "objetivo_cuidado_atual",
+              "op": "eq",
+              "value": "indefinido_nao_discutido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Objetivo de cuidado ainda não discutido ou definido com o paciente e a família."
+          ],
+          "ambulatory_flow": [
+            "Programar conversa estruturada sobre prognóstico e objetivos de cuidado."
+          ]
+        }
+      },
+      {
+        "id": "r9_cdi_discussao_documentada",
+        "priority": 15,
+        "when": {
+          "all": [
+            {
+              "field": "possui_cdi",
+              "op": "truthy"
+            },
+            {
+              "field": "discussao_desativacao_dispositivo_feita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "Discussão sobre desativação de choques do CDI já documentada, alinhada às recomendações de planejamento antecipado de cuidados."
+          ]
+        }
+      },
+      {
+        "id": "r10_delirium_investigar_reversivel",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_presentes",
+              "op": "contains",
+              "value": "delirium"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Causas reversíveis de delirium (distúrbio metabólico, infecção, retenção urinária/fecal, efeito de fármacos) devem ser investigadas antes de atribuir o quadro exclusivamente à progressão da doença de base."
+          ],
+          "red_flags": [
+            "Delirium em paciente com doença cardiovascular avançada pode sinalizar intercorrência reversível ou mudança de trajetória clínica que exige reavaliação."
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Paciente com LVAD de terapia de destino considerando desativação: A desativação do LVAD é eticamente equiparável à suspensão de outro suporte de vida (não é eutanásia), mas tem consequência letal em minutos a horas, o que exige preparo diferente do desligamento de um CDI. A conversa sobre desativação deveria ser antecipada já no consentimento pré-implante — o ensaio DECIDE-LVAD mostra que ferramentas estruturadas de decisão compartilhada incluem o cuidado paliativo como alternativa explícita ao lado do implante. Perto do fim de vida, a equipe de LVAD e a paliativista devem planejar o momento, o local e o suporte à família antes de qualquer piora aguda que force a decisão sob pressão.",
+      "Paciente oncológico com cardiotoxicidade e prognóstico duplo (câncer + cardiopatia): Quando a IC induzida por cardiotoxicidade evolui para refratária num paciente com câncer também avançado, nenhuma das duas especialidades cobre sozinha a decisão. Usar o critério de encaminhamento paliativo mais precoce entre oncologia e cardiologia (a cardiologia historicamente encaminha bem menos que a oncologia diante de critério equivalente). A conversa de prognóstico deve ser conjunta e explícita sobre as duas doenças, porque cada especialista tende a subestimar a gravidade da condição que não é a sua.",
+      "Idoso muito frágil com múltiplas comorbidades e insuficiência cardíaca avançada: A fragilidade modifica a decisão terapêutica antes mesmo de chegar à discussão paliativa: revisão estruturada da lista de medicamentos deve perguntar primeiro se a expectativa de vida é limitada ou se a morte no próximo ano não surpreenderia a equipe. A árvore de decisão deve ser percorrida de novo a cada internação, queda ou progressão de fragilidade, com a desprescrição sempre documentada e comunicada na transição de cuidado.",
+      "Paciente com cardiodesfibrilador implantável (CDI) ativo próximo do fim de vida: O consenso HRS/EHRA distingue CDI de marca-passo: desativar a terapia de choque do CDI é eticamente simples em paciente terminal (evita um choque doloroso sem mudar o desfecho final), enquanto desligar a estimulação em paciente marca-passo-dependente tem consequência letal quase imediata e é eticamente mais controverso. Na prática, o tema deve ser levantado antes de o dispositivo disparar, não depois, e revisitado a cada declínio funcional relevante.",
+      "Paciente com valvopatia grave inoperável (não candidato a TAVI/cirurgia): Quando o Heart Team conclui que o benefício clínico da intervenção é improvável, a conduta não é 'não fazer nada': é decisão compartilhada explícita, tratamento clínico otimizado dos sintomas e envolvimento formal da equipe de cuidados paliativos, sem rotular a decisão como recusa de tratamento — preservando espaço para reavaliação se a trajetória clínica mudar.",
+      "Cuidador familiar sobrecarregado necessitando suporte: O cuidador de um paciente com dispositivo (LVAD em particular) é corresponsável pela sobrevivência do paciente. A equipe deve rastrear ativamente sinais de sobrecarga (exaustão, isolamento social, sintomas depressivos do próprio cuidador), oferecer cuidado de respiro e rede de apoio formal, e revisitar a capacidade de cuidado a cada mudança relevante — sobrecarga não tratada do cuidador é, ela mesma, fator de risco para reinternação e ruptura do plano de cuidado."
+    ]
   },
   {
     "slug": "plano-alta-cardiogeriatria",
