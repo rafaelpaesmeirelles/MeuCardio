@@ -1,0 +1,60 @@
+name: CorVIA Intelligence — Scientific radar
+
+on:
+  schedule:
+    # Quatro vezes ao dia: suficiente para lançamentos de congresso sem
+    # sobrecarregar as fontes editoriais oficiais.
+    - cron: "17 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: corvia-intelligence-scientific-radar
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Discover new official cardiovascular publications
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    env:
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+    steps:
+      - name: Run CorVIA Intelligence inside the production backend
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          SSH_PORT="${SSH_PORT:-22}"
+
+          ssh_dir="$RUNNER_TEMP/corvia-intelligence-ssh"
+          install -m 0700 -d "$ssh_dir"
+          trap 'rm -rf "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/key" "$ssh_dir/known_hosts"
+
+          ssh \
+            -p "$SSH_PORT" \
+            -i "$ssh_dir/key" \
+            -o BatchMode=yes \
+            -o ConnectTimeout=20 \
+            -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=5 \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" \
+            'set -euo pipefail; \
+             cd /opt/meucardio; \
+             docker compose -f docker-compose.prod.yml exec -T backend \
+               python -m app.services.guideline_discovery_cli'
