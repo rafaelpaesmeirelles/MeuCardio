@@ -70,6 +70,7 @@ const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
 const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
 const ExportarConteudo = lazy(() => import("./pages/ExportarConteudo"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
+const ExcluirConta = lazy(() => import("./pages/ExcluirConta"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
 const Tour = lazy(() => import("./pages/Tour"));
@@ -117,6 +118,7 @@ export default function App() {
           <Route path="/redefinir-senha" element={<RedefinirSenha />} />
           <Route path="/corvia-mail" element={<CorviaMail />} />
           <Route path="/privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/excluir-conta" element={<ExcluirConta />} />
           <Route path="/termos" element={<TermosUso />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
@@ -203,6 +205,7 @@ export default function App() {
           <Route path="corvia-mail" element={<CorviaMail />} />
           <Route path="usuarios-online" element={<UsuariosOnline />} />
           <Route path="privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="excluir-conta" element={<ExcluirConta />} />
           <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
