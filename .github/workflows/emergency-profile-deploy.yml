@@ -1,4 +1,5 @@
 name: Emergency profile hotfix deploy
+# Reutilizado em 28/08 para corrigir o destino pós-tour de convidado aprovado.
 
 on:
   push:

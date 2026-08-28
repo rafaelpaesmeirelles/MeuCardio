@@ -224,6 +224,7 @@ export default function TourClinicalOS() {
   const [modo, setModo] = useState<Modo>(urlModo === "quick" || urlModo === "completo" ? urlModo : pendente ? "quick" : "completo");
   const [passo, setPasso] = useState(0);
   const [concluindo, setConcluindo] = useState(false);
+  const destinoAposTour = usuario?.product_access ? "/" : "/em-breve";
 
   const slides = useMemo(() => {
     const base = slidesDoModo(modo);
@@ -244,18 +245,18 @@ export default function TourClinicalOS() {
       if (alvo && /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName)) return;
       if (evento.key === "ArrowRight") avancar();
       if (evento.key === "ArrowLeft") voltar();
-      if (evento.key === "Escape" && !pendente) navigate("/em-breve");
+      if (evento.key === "Escape" && !pendente) navigate(destinoAposTour);
     }
     window.addEventListener("keydown", teclado);
     return () => window.removeEventListener("keydown", teclado);
-  }, [avancar, voltar, navigate, pendente]);
+  }, [avancar, voltar, destinoAposTour, navigate, pendente]);
 
   async function concluir() {
-    if (!pendente) { navigate("/em-breve"); return; }
+    if (!pendente) { navigate(destinoAposTour); return; }
     setConcluindo(true);
     try { await api.post("/auth/me/onboarding-concluido", {}); }
     catch (erro) { if (!(erro instanceof ApiError)) throw erro; }
-    finally { window.location.replace("/em-breve"); }
+    finally { window.location.replace(destinoAposTour); }
   }
 
   function abrirCompleto() { setModo("completo"); setPasso(1); }

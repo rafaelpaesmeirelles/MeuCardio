@@ -124,7 +124,7 @@ def _onboarding_pendente(db: Session, user: User) -> bool:
 
 
 def _perfil(db: Session, user: User) -> dict:
-    from app.services.entitlement import eh_socio
+    from app.services.entitlement import eh_socio, tem_acesso_ao_produto
 
     nome_conselho_exibicao, estado_conselho_exibicao = council_display(user)
     # Nunca reabre automaticamente perfis legados que já foram liberados.
@@ -143,6 +143,10 @@ def _perfil(db: Session, user: User) -> dict:
         "convidado": user.convidado,
         "investidor": user.investidor,
         "socio": eh_socio(user),
+        # Contexto de navegação apenas. O backend continua sendo a autoridade
+        # em cada rota protegida; este valor impede que um convidado aprovado
+        # seja enviado à página comercial "Em breve" ao terminar o tour.
+        "product_access": tem_acesso_ao_produto(db, user),
         "council": f"{nome_conselho_exibicao} {user.council_number}/{estado_conselho_exibicao}"
                    if user.council_name else None,
         "crm": user.crm,
