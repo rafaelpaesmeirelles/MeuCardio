@@ -1,7 +1,7 @@
 ---
 title: "ESC 2026 — Doença Cardiovascular e Doença Renal Crônica: Abordagem Cardiorrenal Integrada"
 slug: esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd
-theme: "Cardiorrenal"
+theme: "Insuficiência cardíaca"
 kind: documento
 fonte_producao: chatgpt
 review_status: revisado

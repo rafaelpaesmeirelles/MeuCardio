@@ -1,7 +1,7 @@
 ---
 title: "ESC 2026 — Reabilitação Cardíaca: Modelo Multicomponente, Prescrição e Desfechos"
 slug: esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia
-theme: "Reabilitação cardíaca"
+theme: "Prevenção e lipídios"
 kind: documento
 fonte_producao: chatgpt
 review_status: revisado

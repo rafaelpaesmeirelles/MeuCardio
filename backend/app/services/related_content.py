@@ -15,8 +15,10 @@ menos óbvio do que parece:
    `evidence_records`, `scientific_studies`, `gallery_images`, `lab_tests` e
    `discharge_checklists` usam `theme` (inglês); `clinical_cases`,
    `study_tracks` e `patient_materials` usam `tema` (português). Os VALORES
-   usam o mesmo vocabulário de 29 temas nos dois casos (conferido por query
-   direta em produção, 08/08/2026) — só o nome da coluna diverge. Quem
+   usam o mesmo vocabulário de 30 temas nos dois casos (recontado por query
+   direta na base, 29/08/2026 — inclui "Cardiologia do Esporte e do
+   Exercício", formalizado em 08/08/2026 e hoje usado consistentemente em
+   221 registros; não é anomalia) — só o nome da coluna diverge. Quem
    adicionar frente nova não deveria precisar redescobrir isso lendo o código
    de todo o resto; está centralizado aqui.
 2. **`drugs` (medicamentos) não tem campo de tema — nem `theme` nem `tema`.**
@@ -31,15 +33,20 @@ menos óbvio do que parece:
 3. **`emergency_protocols` também não tem tema próprio.** Aponta para um
    `documento_slug`; o tema vem por herança do `Document` referenciado.
 
-Duas anomalias reais de dados já encontradas nesta auditoria (08/08/2026, ver
-CLAUDE.md para o detalhe): um `patient_materials` com
-`tema = "Doença arterial coronariana"` (o resto da base usa "Doença
-coronariana") e um `documents` com `theme = "Choque cardiogênico"` (fora dos
-29 temas canônicos). Os dois ficam **invisíveis para este cruzamento** — é
-exatamente o efeito que a regra permanente do CLAUDE.md existe para prevenir
-daqui para frente. Não corrigidos aqui de propósito (correção de conteúdo é
-decisão de conteúdo, fora do escopo desta tarefa de infraestrutura) — ver nota
-no CLAUDE.md.
+Anomalias reais de dados já encontradas e corrigidas por auditorias deste
+mecanismo (ver CLAUDE.md para o detalhe de cada uma): um `patient_materials`
+com `tema = "Doença arterial coronariana"` fora do padrão da base, corrigido
+para "Doença coronariana" no commit fa69c196 (20/08/2026); e um `documents`
+com `theme = "Choque cardiogênico"` fora dos temas canônicos, corrigido para
+"Farmacologia" no commit ad987532 (25/08/2026). Uma nova auditoria em
+29/08/2026 encontrou mais três silos do mesmo tipo — um `documents` com
+`theme = "Cardiorrenal"`, um `documents` com `theme = "Reabilitação
+cardíaca"` e um `patient_materials` com `tema = "Emergências
+cardiovasculares"`, todos fora do vocabulário canônico — e já os corrigiu
+(ver `docs/correcao-anomalias-tema-tudo-com-tudo-2026-08-29.md`). Enquanto
+esse tipo de anomalia acontecer na origem dos dados, **fica invisível para
+este cruzamento** — é exatamente o efeito que a regra permanente do
+CLAUDE.md existe para prevenir daqui para frente.
 
 **Não fabrica relação nenhuma**: cada consulta é `campo == tema` (exato, só
 `strip()`), item publicado, limite razoável por categoria. Sem busca textual,
