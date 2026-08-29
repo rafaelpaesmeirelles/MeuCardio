@@ -15,10 +15,10 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository &&
       github.event.pull_request.title == 'ops: emergency deploy current main'
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 70
     environment: production
     env:
-      TARGET_SHA: 659f2b253e796a9575967575b6d3f28395c079ef
+      TARGET_SHA: d50690b8d0aca3c0a609e113120b9dbdf15f3492
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -35,28 +35,53 @@ jobs:
           test "$current_main" = "$TARGET_SHA"
           echo "Deploying exact current main: $TARGET_SHA"
 
-      - name: Deploy exact current main SHA
+      - name: Prepare restricted SSH client
         run: |
           set -euo pipefail
           : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
           : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
           : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
           : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
-          SSH_PORT="${SSH_PORT:-22}"
           ssh_dir="$RUNNER_TEMP/corvia-ssh"
           install -m 0700 -d "$ssh_dir"
-          trap 'rm -rf "$ssh_dir"' EXIT
           printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
 
+      - name: Deploy exact current main SHA
+        run: |
+          set -euo pipefail
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
           ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
             -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
             -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
             -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" "deploy $TARGET_SHA"
 
-      - name: Verify public production exact SHA
+      - name: Build and publish signed Android APK
+        run: |
+          set -euo pipefail
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" "apk $TARGET_SHA"
+
+      - name: Run CorVIA Intelligence global radar now
+        run: |
+          set -euo pipefail
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" "intelligence $TARGET_SHA"
+
+      - name: Verify public production exact SHA and Android download
         env:
           PUBLIC_URL: https://corvia.med.br
         run: |
@@ -76,4 +101,6 @@ jobs:
           PY
           curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
-          echo "Production exact SHA, health and readiness confirmed."
+          curl --fail --silent --show-error --head "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk" > /dev/null
+          curl --fail --silent --show-error "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk.sha256" > /dev/null
+          echo "Production exact SHA, health, readiness and Android download confirmed."
