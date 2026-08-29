@@ -74,29 +74,7 @@ if [[ "$REQUEST_KIND" == "apk" ]]; then
     exit 65
   fi
 
-  cd "$PROJECT_DIR/frontend"
-  [[ -f android/keystore.properties ]] || deny "android/keystore.properties is missing"
-  command -v npx >/dev/null || deny "npx is unavailable"
-  [[ -x android/gradlew ]] || deny "android/gradlew is unavailable"
-
-  npx cap sync android
-  cd android
-  JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 \
-    PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH \
-    ./gradlew assembleRelease
-
-  apk_file="app/build/outputs/apk/release/app-release.apk"
-  [[ -s "$apk_file" ]] || deny "signed release APK was not generated"
-
-  install -d -m 0755 "$PROJECT_DIR/downloads"
-  install -m 0644 "$apk_file" "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk"
-  cp "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk" \
-    "$PROJECT_DIR/downloads/corvia-os-android.apk"
-  cd "$PROJECT_DIR/downloads"
-  sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256
-  sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256
-  printf 'Android APK published for %s.\n' "$EXPECTED_SHA"
-  exit 0
+  exec bash "$PROJECT_DIR/ops/build-android-apk.sh" "$EXPECTED_SHA"
 fi
 
 git checkout main
