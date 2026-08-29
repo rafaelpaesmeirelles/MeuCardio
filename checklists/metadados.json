@@ -31502,5 +31502,173 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "indicacoes-de-ecocardiograma-em-cardiologia-pediatrica-cenarios-clinicos-especificos",
+    "condicao": "Ecocardiografia pediátrica — indicações por cenário clínico",
+    "resumo": "Checklist clínico das principais situações em que o ecocardiograma transtorácico, transesofágico ou sob estresse está indicado (ou racionalmente não indicado) em cardiologia pediátrica, do recém-nascido criticamente doente ao adolescente em vigilância de cardiotoxicidade, pós-transplante ou suporte por ECMO. Nenhuma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) para este conjunto de cenários foi localizada nas bases consultadas; as recomendações abaixo baseiam-se em diretrizes e consensos internacionais (AHA, ASE, HRS/EHRA/APHRS, ISHLT, IGHG, ELSO) e, quando indicado, em estudos observacionais claramente identificados como tal.",
+    "documento_origem": null,
+    "theme": "Cardiologia pediátrica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "McCrindle BW, et al. \"Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association.\" Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445.",
+      "Puchalski MD, et al. \"Guidelines for Performing a Comprehensive Transesophageal Echocardiographic Examination in Children and All Patients with Congenital Heart Disease: Recommendations from the American Society of Echocardiography.\" J Am Soc Echocardiogr. 2019;32(2):173-215. DOI: 10.1016/j.echo.2018.08.016. PMID: 30579694.",
+      "Baltimore RS, et al. \"Infective Endocarditis in Childhood: 2015 Update: A Scientific Statement From the American Heart Association.\" Circulation. 2015;132(15):1487-1515. DOI: 10.1161/CIR.0000000000000298. PMID: 26373317.",
+      "Priori SG, et al. \"HRS/EHRA/APHRS Expert Consensus Statement on the Diagnosis and Management of Patients with Inherited Primary Arrhythmia Syndromes\" (documento endossado também por PACES e AEPC). Heart Rhythm. 2013;10(12):1932-1963. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539.",
+      "Flynn JT, et al. \"Clinical Practice Guideline for Screening and Management of High Blood Pressure in Children and Adolescents.\" Pediatrics. 2017;140(3):e20171904. DOI: 10.1542/peds.2017-1904. PMID: 28827377.",
+      "Ehrhardt MJ, et al. \"Systematic Review and Updated Recommendations for Cardiomyopathy Surveillance for Survivors of Childhood, Adolescent, and Young Adult Cancer from the International Late Effects of Childhood Cancer Guideline Harmonization Group.\" Lancet Oncol. 2023;24(3):e108-e120. DOI: 10.1016/S1470-2045(23)00012-8. PMID: 37052966.",
+      "Velleca A, et al. \"The International Society for Heart and Lung Transplantation (ISHLT) Guidelines for the Care of Heart Transplant Recipients.\" J Heart Lung Transplant. 2023;42(5):e1-e141. DOI: 10.1016/j.healun.2022.10.015. PMID: 37080658.",
+      "Douflé G, et al. \"Ultrasound in Extracorporeal Membrane Oxygenation: An ELSO State-of-the-Art Review.\" ASAIO J. 2026;72(2):85-98. DOI: 10.1097/MAT.0000000000002656. PMID: 41588617.",
+      "Lopez L, et al. \"Recommendations for Quantification Methods During the Performance of a Pediatric Echocardiogram: A Report from the Pediatric Measurements Writing Group of the American Society of Echocardiography Pediatric and Congenital Heart Disease Council.\" J Am Soc Echocardiogr. 2010;23(5):465-495. DOI: 10.1016/j.echo.2010.03.019. PMID: 20451803.",
+      "Mahle WT, et al. \"Role of Pulse Oximetry in Examining Newborns for Congenital Heart Disease: A Scientific Statement from the AHA and AAP.\" Pediatrics. 2009;124(2):823-836. DOI: 10.1542/peds.2009-1397. PMID: 19581259.",
+      "Crossland DS, Furness JC, Abu-Harb M, Sadagopan SN, Wren C. \"Variability of Four Limb Blood Pressure in Normal Neonates.\" Arch Dis Child Fetal Neonatal Ed. 2004;89(4):F325-F327. DOI: 10.1136/adc.2003.034322. PMID: 15210667. (estudo observacional, não é diretriz)."
+    ],
+    "itens": [
+      {
+        "id": "rn-cianose-choque",
+        "categoria": "Recém-nascido",
+        "obrigatorio": true,
+        "texto": "Recém-nascido com cianose central persistente ou quadro de choque cardiogênico deve ser submetido a ecocardiograma transtorácico com urgência para confirmar ou excluir cardiopatia congênita crítica (frequentemente ducto-dependente), sem atrasar as medidas de estabilização inicial (incluindo início empírico de prostaglandina E1 quando a suspeita clínica for compatível).",
+        "origem_secao": "Mahle et al. 2009 (AHA/AAP) — descreve o eco como exame confirmatório diante de rastreio por oximetria de pulso anormal ou sinais clínicos sugestivos de cardiopatia congênita crítica; nenhuma diretriz SBC específica foi localizada para este cenário."
+      },
+      {
+        "id": "rn-pulsos-gradiente",
+        "categoria": "Recém-nascido",
+        "obrigatorio": true,
+        "texto": "Recém-nascido com assimetria de pulsos entre membros superiores e inferiores ou gradiente pressórico documentado deve ser avaliado por ecocardiograma transtorácico para investigar coarctação de aorta, incluindo caracterização detalhada do arco aórtico e do istmo.",
+        "origem_secao": "Crossland et al. 2004 — estudo observacional que caracteriza a variabilidade fisiológica da pressão arterial em quatro membros em neonatos normais, base para não superinterpretar uma única medida isolada e reforçar a confirmação por imagem; Lopez et al. 2010 (ASE) — padronização das medidas do arco aórtico no exame ecocardiográfico pediátrico."
+      },
+      {
+        "id": "rn-suspeita-pca",
+        "categoria": "Recém-nascido",
+        "obrigatorio": true,
+        "texto": "Recém-nascido com suspeita clínica de persistência do canal arterial (sopro contínuo, pulsos amplos, sinais de hiperfluxo pulmonar ou repercussão hemodinâmica) deve realizar ecocardiograma transtorácico para confirmar o diagnóstico e caracterizar o significado hemodinâmico do canal (tamanho, direção do fluxo, repercussão em câmaras esquerdas).",
+        "origem_secao": "Lopez et al. 2010 (ASE) — padrão de quantificação ecocardiográfica pediátrica aplicável à avaliação do canal arterial; nenhuma diretriz específica dedicada exclusivamente à indicação de eco para PCA em recém-nascido a termo foi verificada além do padrão geral de exame pediátrico."
+      },
+      {
+        "id": "arritmia-historia-familiar",
+        "categoria": "Arritmia/História familiar",
+        "obrigatorio": true,
+        "texto": "Criança ou adolescente com palpitações e história familiar de arritmia hereditária, cardiomiopatia ou morte súbita deve realizar ecocardiograma transtorácico como parte da avaliação inicial, para rastrear cardiopatia estrutural associada a síndromes arrítmicas hereditárias (ex.: cardiomiopatia hipertrófica, displasia arritmogênica de ventrículo direito) antes de concluir que o quadro é puramente elétrico/funcional.",
+        "origem_secao": "Priori et al. 2013 (HRS/EHRA/APHRS, endossado por PACES e AEPC) — consenso de avaliação diagnóstica de síndromes arrítmicas primárias hereditárias, que inclui a avaliação estrutural cardíaca como etapa do algoritmo diagnóstico."
+      },
+      {
+        "id": "hipertensao-repercussao",
+        "categoria": "Hipertensão",
+        "obrigatorio": true,
+        "texto": "Criança ou adolescente com diagnóstico confirmado de hipertensão arterial deve realizar ecocardiograma transtorácico para avaliar repercussão cardíaca (massa e geometria de ventrículo esquerdo, função sistólica) e, especialmente em crianças pequenas ou com hipertensão de início recente, para rastrear coarctação de aorta como causa secundária.",
+        "origem_secao": "Flynn et al. 2017 (AAP, Clinical Practice Guideline) — recomenda avaliação ecocardiográfica de dano em órgão-alvo cardíaco em crianças/adolescentes com hipertensão confirmada; classe/nível de recomendação específicos não foram confirmados no resumo consultado e não estão sendo atribuídos aqui."
+      },
+      {
+        "id": "sincope-esforco-ecg",
+        "categoria": "Síncope/ECG",
+        "obrigatorio": true,
+        "texto": "Criança ou adolescente com síncope desencadeada por esforço físico, ou síncope associada a eletrocardiograma alterado (ex.: QT longo, padrão de pré-excitação, hipertrofia ventricular, arritmia documentada), deve ser avaliado com ecocardiograma transtorácico para excluir cardiopatia estrutural (cardiomiopatia hipertrófica, anomalia de origem coronariana, entre outras) antes de qualquer liberação para atividade física competitiva.",
+        "origem_secao": "Priori et al. 2013 (HRS/EHRA/APHRS) — inclui síncope de esforço e achados eletrocardiográficos sugestivos como gatilhos para investigação estrutural no algoritmo diagnóstico de síndromes arrítmicas hereditárias."
+      },
+      {
+        "id": "endocardite-suspeita",
+        "categoria": "Endocardite",
+        "obrigatorio": true,
+        "texto": "Criança ou adolescente com suspeita clínica de endocardite infecciosa (bacteremia persistente, sopro novo ou em piora, fenômenos embólicos, critérios clínicos compatíveis) deve realizar ecocardiograma transtorácico como exame de imagem inicial; o ecocardiograma transesofágico é reservado para quando a janela transtorácica for insuficiente ou houver suspeita de complicação perivalvar/abscesso não esclarecida pelo TT.",
+        "origem_secao": "Baltimore et al. 2015 (AHA, Infective Endocarditis in Childhood) — o TT costuma ser suficiente como primeira linha em crianças, ao contrário do padrão em adultos, dada a melhor janela acústica; Puchalski et al. 2019 (ASE) — indicações técnicas de TEE pediátrico quando o TT é inconclusivo."
+      },
+      {
+        "id": "kawasaki-avaliacao-inicial",
+        "categoria": "Kawasaki",
+        "obrigatorio": true,
+        "texto": "Todo paciente com diagnóstico suspeito ou confirmado de doença de Kawasaki deve realizar ecocardiograma transtorácico no momento do diagnóstico (fase aguda), documentando artérias coronárias (dimensões absolutas e escore Z), função de ventrículo esquerdo, derrame pericárdico e regurgitação valvar.",
+        "origem_secao": "McCrindle et al. 2017 (AHA, Scientific Statement) — recomenda ecocardiograma na avaliação inicial de todo caso suspeito de Kawasaki para documentação basal das artérias coronárias e função cardíaca."
+      },
+      {
+        "id": "kawasaki-reavaliacao-seriada",
+        "categoria": "Kawasaki",
+        "obrigatorio": true,
+        "texto": "Na fase subaguda, o ecocardiograma deve ser repetido de forma seriada (tipicamente por volta de 1–2 semanas e novamente por volta de 4–6 semanas após o início da doença), com reavaliações adicionais determinadas pelo grau de acometimento coronariano encontrado nos exames prévios.",
+        "origem_secao": "McCrindle et al. 2017 (AHA) — cronograma de reavaliação ecocardiográfica seriada na fase subaguda conforme estratificação de risco coronariano; classe/nível de recomendação específicos não foram extraídos do texto integral e não estão sendo atribuídos aqui."
+      },
+      {
+        "id": "kawasaki-sem-alteracao-nao-indicado",
+        "categoria": "Kawasaki",
+        "obrigatorio": false,
+        "texto": "Em pacientes com doença de Kawasaki sem qualquer alteração coronariana documentada durante toda a fase aguda e subaguda (artérias coronárias normais em todos os exames realizados), a vigilância ecocardiográfica rotineira e prolongada no seguimento tardio (além da janela padrão de reavaliação da fase subaguda) não está indicada — deve-se evitar exame desnecessário nesse grupo de baixo risco.",
+        "origem_secao": "McCrindle et al. 2017 (AHA) — esquema de estratificação de risco que dispensa vigilância ecocardiográfica de longo prazo em pacientes classificados no nível de risco mais baixo (sem envolvimento coronariano documentado)."
+      },
+      {
+        "id": "kawasaki-estresse-alteracao-coronariana",
+        "categoria": "Kawasaki",
+        "obrigatorio": false,
+        "texto": "Em pacientes com doença de Kawasaki que apresentaram alteração coronariana (aneurisma, sobretudo de médio ou grande porte) documentada na fase aguda, o ecocardiograma sob estresse (farmacológico ou de esforço) é uma ferramenta indicada na avaliação tardia para investigar isquemia miocárdica induzível, conforme o nível de risco coronariano estabelecido e o julgamento clínico da equipe assistente.",
+        "origem_secao": "McCrindle et al. 2017 (AHA) — recomenda teste de estresse (incluindo modalidades de imagem sob estresse) na avaliação de longo prazo de pacientes classificados em níveis de risco coronariano mais elevados; a indicação é condicionada à estratificação de risco, por isso não foi marcada como obrigatória universal."
+      },
+      {
+        "id": "cardio-onco-basal",
+        "categoria": "Cardio-oncologia",
+        "obrigatorio": true,
+        "texto": "Criança ou adolescente que irá iniciar quimioterapia com potencial cardiotóxico (ex.: antraciclinas) ou radioterapia com campo mediastinal deve realizar ecocardiograma transtorácico basal, antes do início do tratamento, para documentar função ventricular esquerda (fração de ejeção e, quando disponível, strain longitudinal global) como referência para o seguimento.",
+        "origem_secao": "Ehrhardt et al. 2023 (International Late Effects of Childhood Cancer Guideline Harmonization Group — IGHG) — recomendações de vigilância de cardiomiopatia relacionada ao tratamento oncológico, incluindo avaliação basal pré-tratamento."
+      },
+      {
+        "id": "cardio-onco-seguimento",
+        "categoria": "Cardio-oncologia",
+        "obrigatorio": true,
+        "texto": "Após exposição a quimioterapia cardiotóxica ou radioterapia mediastinal, o paciente deve permanecer em vigilância ecocardiográfica seriada durante e após o tratamento, com periodicidade determinada por fatores de risco cumulativos (dose de antraciclina, idade no tratamento, radioterapia torácica associada, sexo), estendendo-se ao longo do seguimento como sobrevivente de câncer pediátrico conforme a categoria de risco.",
+        "origem_secao": "Ehrhardt et al. 2023 (IGHG) — esquema de vigilância ecocardiográfica estratificado por risco cumulativo para sobreviventes de câncer na infância/adolescência/idade adulta jovem."
+      },
+      {
+        "id": "pos-transplante-vigilancia",
+        "categoria": "Pós-transplante",
+        "obrigatorio": true,
+        "texto": "Paciente pediátrico em pós-transplante cardíaco ou cardiopulmonar deve ser incluído em programa de vigilância ecocardiográfica seriada, com avaliação de função sistólica e diastólica do enxerto, derrame pericárdico de início recente e outros sinais sugestivos de rejeição, habitualmente usada em conjunto com biópsia endomiocárdica conforme protocolo do centro transplantador.",
+        "origem_secao": "Velleca et al. 2023 (ISHLT Guidelines for the Care of Heart Transplant Recipients) — recomenda vigilância ecocardiográfica seriada de função do enxerto e sinais de rejeição no seguimento pós-transplante."
+      },
+      {
+        "id": "pos-transplante-estresse-vasculopatia",
+        "categoria": "Pós-transplante",
+        "obrigatorio": false,
+        "texto": "Na investigação tardia de vasculopatia coronariana do enxerto (CAV) pós-transplante cardíaco pediátrico, o ecocardiograma sob estresse (dobutamina ou esforço) pode ser utilizado como ferramenta não invasiva de vigilância, sobretudo quando a angiografia coronariana invasiva seriada não é factível, conforme o protocolo de cada centro e o julgamento clínico da equipe de transplante.",
+        "origem_secao": "Velleca et al. 2023 (ISHLT) — discute modalidades de vigilância de vasculopatia do enxerto, incluindo ecocardiografia sob estresse como alternativa não invasiva; a indicação não é apresentada como obrigatória/universal, e sim como opção de protocolo."
+      },
+      {
+        "id": "tee-janela-insuficiente",
+        "categoria": "Ecocardiograma transesofágico",
+        "obrigatorio": false,
+        "texto": "Quando a janela transtorácica for tecnicamente insuficiente para responder à pergunta clínica — por deformidade torácica (ex.: pectus excavatum/carinatum), obesidade ou interposição de tecido pulmonar — o ecocardiograma transesofágico está indicado para obter imagem diagnóstica adequada das estruturas cardíacas.",
+        "origem_secao": "Puchalski et al. 2019 (ASE, Guidelines for Performing a Comprehensive Transesophageal Echocardiographic Examination in Children and All Patients with Congenital Heart Disease) — indicação de TEE diante de janela transtorácica tecnicamente limitada."
+      },
+      {
+        "id": "tee-uti-pos-operatorio",
+        "categoria": "UTI/pós-operatório",
+        "obrigatorio": true,
+        "texto": "No pós-operatório imediato de cirurgia cardíaca pediátrica na UTI, o ecocardiograma transesofágico é indicado para avaliar a adequação do reparo cirúrgico e a função ventricular, e para excluir complicações mecânicas, especialmente quando curativos, drenos torácicos ou a posição do paciente sob ventilação mecânica limitam a janela transtorácica.",
+        "origem_secao": "Puchalski et al. 2019 (ASE) — recomendações específicas de indicação e técnica de TEE no contexto intraoperatório e de terapia intensiva pediátrica pós-cirurgia cardíaca."
+      },
+      {
+        "id": "ecmo-canulacao",
+        "categoria": "UTI/ECMO",
+        "obrigatorio": true,
+        "texto": "Antes e durante a canulação para suporte de vida extracorpóreo (ECMO) em crianças e adolescentes, o ecocardiograma (à beira do leito) deve ser usado para confirmar o posicionamento adequado das cânulas, avaliar a função ventricular basal e identificar contraindicações estruturais relevantes (ex.: comunicação interatrial insuficiente para descompressão do ventrículo esquerdo quando indicada).",
+        "origem_secao": "Douflé et al. 2026 (ELSO State-of-the-Art Review, Ultrasound in Extracorporeal Membrane Oxygenation) — papel do ecocardiograma na confirmação de posição de cânulas e avaliação basal na canulação para ECMO."
+      },
+      {
+        "id": "ecmo-monitorizacao",
+        "categoria": "UTI/ECMO",
+        "obrigatorio": true,
+        "texto": "Durante o suporte por ECMO, a monitorização ecocardiográfica seriada (diária ou conforme necessidade clínica) é indicada para avaliar a função cardíaca nativa, identificar sinais de distensão de ventrículo esquerdo, verificar a posição das cânulas e rastrear complicações como trombo intracavitário ou tamponamento pericárdico.",
+        "origem_secao": "Douflé et al. 2026 (ELSO) — recomendações de monitorização ecocardiográfica seriada durante o curso do suporte extracorpóreo."
+      },
+      {
+        "id": "ecmo-desmame",
+        "categoria": "UTI/ECMO",
+        "obrigatorio": true,
+        "texto": "Antes da tentativa de desmame ou decanulação do suporte por ECMO, o ecocardiograma — frequentemente associado a um teste de redução progressiva do fluxo do circuito — é indicado para avaliar a recuperação da função cardíaca nativa e orientar a decisão de interrupção do suporte.",
+        "origem_secao": "Douflé et al. 2026 (ELSO) — papel do ecocardiograma na avaliação de recuperação de função cardíaca e suporte à decisão de desmame do ECMO."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
