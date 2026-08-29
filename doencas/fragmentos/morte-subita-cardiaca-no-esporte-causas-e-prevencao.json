@@ -1,0 +1,256 @@
+[
+  {
+    "slug": "morte-subita-cardiaca-no-esporte-causas-e-prevencao",
+    "name": "Morte súbita cardíaca no esporte: causas estruturais e elétricas além da cardiomiopatia hipertrófica, e prevenção",
+    "aliases": [
+      "MSC no esporte",
+      "morte súbita cardíaca no atleta",
+      "parada cardíaca súbita no esporte",
+      "causas de morte súbita no atleta além da CMH",
+      "prevenção de morte súbita cardíaca no esporte",
+      "DEA no evento esportivo",
+      "triagem pré-participação e ECG do atleta"
+    ],
+    "area": "geral",
+    "category": "avaliacao_esportiva",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Morte súbita cardíaca (MSC) durante ou logo após esforço físico em atleta jovem e aparentemente saudável concentra a atenção pública, mas a cardiomiopatia hipertrófica (CMH) — historicamente apontada como causa dominante — responde por fração minoritária dos casos quando registros sistemáticos de autópsia são analisados: os dois maiores registros disponíveis (NCAA, Harmon et al. 2014; Reino Unido, Finocchiaro et al. 2016) encontram CMH em 6-8% dos óbitos, atrás de morte súbita arrítmica em coração estruturalmente normal à autópsia (compatível com canalopatia elétrica primária não detectável post-mortem), doença miocárdica idiopática/fibrose ventricular, cardiomiopatia arritmogênica de ventrículo direito (ACM/ARVC) e anomalias congênitas de artéria coronária. Este verbete organiza, para o atleta, as causas estruturais e elétricas de MSC além da CMH — anomalia coronária congênita, ACM, canalopatias hereditárias (QT longo, Brugada, taquicardia ventricular polimórfica catecolaminérgica), miocardite subclínica e commotio cordis — e as camadas de prevenção com evidência real: o papel e os limites do eletrocardiograma de 12 derivações na triagem pré-participação em massa (debate do ECG obrigatório europeu versus triagem clínica histórica americana) e a cadeia de sobrevivência no evento esportivo (reconhecimento imediato, RCP de qualidade e desfibrilador externo automático acessível). Canalopatias, cardiomiopatia arritmogênica e miocardite já têm verbete clínico próprio nesta plataforma — aqui são tratadas apenas pela lente específica do risco e da prevenção no contexto esportivo, com remissão ao verbete dedicado para critério diagnóstico e conduta detalhada de cada uma.",
+    "epidemiology": "Registros sistemáticos de autópsia mostram que a cardiomiopatia hipertrófica (CMH) não é a causa predominante de MSC no atleta quando a análise vai além da percepção pública. No registro da NCAA (Harmon et al., 2014, Circ Arrhythm Electrophysiol, PMID 24585715), 45 casos de MSC ocorreram em atletas universitários americanos entre 2004 e 2008; a causa pôde ser razoavelmente determinada em 36 casos, e o achado mais comum foi coração estruturalmente normal/morte súbita inexplicada de autópsia negativa (11 casos, 31% — compatível com canalopatia elétrica primária não detectável em exame post-mortem padrão), seguido de anomalia de artéria coronária (5 casos, 14%), cardiomiopatia dilatada (3 casos, 8%), miocardite (3 casos, 8%), dissecção de aorta (3 casos, 8%) e hipertrofia ventricular esquerda idiopática/possível CMH (3 casos, 8%). No registro regional do Reino Unido (Finocchiaro et al., 2016, J Am Coll Cardiol, PMID 27151341), com 357 atletas necropsiados entre 1994 e 2014, a síndrome de morte súbita arrítmica (SADS, coração estruturalmente normal à autópsia) foi o achado mais prevalente (149 casos, 42%), seguida por doença miocárdica em 40% dos casos — hipertrofia ou fibrose ventricular esquerda idiopática (16%), cardiomiopatia arritmogênica de ventrículo direito (13%) e CMH (6%); 61% dos eventos ocorreram durante esforço intenso, e ACM e fibrose ventricular esquerda foram os achados que mais fortemente predisseram MSC especificamente durante o esforço. Em conjunto, os dois maiores registros disponíveis convergem: CMH responde por minoria dos casos (6-8%), e a soma de canalopatia presumida, anomalia coronária, ACM e doença miocárdica idiopática/fibrose supera com folga a CMH isolada como causa de MSC no atleta. Para commotio cordis, a revisão mais abrangente disponível (Dickey et al., 2026, J Am Heart Assoc, PMID 41717928) reúne 434 casos publicados, dos quais 302 (69,6%) ocorreram em contexto esportivo, com predomínio marcante do sexo masculino (94% dos casos em contexto esportivo, 93% fora dele). Nenhuma das fontes revisadas fornece incidência populacional geral de MSC no esporte estratificada por modalidade, faixa etária ou etnia com verificação individual nesta sessão — número frequentemente citado de memória na literatura leiga, que não entra neste verbete sem essa verificação.",
+    "presentation": [
+      "Síncope ou pré-síncope inexplicada durante ou imediatamente após esforço físico",
+      "Dor torácica de esforço, desproporcional à intensidade do exercício",
+      "Palpitação associada a arritmia ventricular documentada durante ou após exercício",
+      "Parada cardíaca ressuscitada como primeira manifestação clínica, sem sintoma prévio identificado",
+      "Colapso súbito imediatamente após impacto torácico (bola, colisão, soco) sem lesão estrutural evidente — quadro compatível com commotio cordis",
+      "Extrassístoles ventriculares frequentes ou complexas, sobretudo se aumentam ou mudam de morfologia com o esforço",
+      "Dispneia desproporcional ao condicionamento e à intensidade do exercício",
+      "Achado incidental em eletrocardiograma de triagem pré-participação, com ou sem sintoma associado",
+      "Ausência completa de sintoma prévio — parcela relevante dos casos de anomalia coronária congênita, canalopatia e ACM tem triagem clínica e ECG basal normais",
+      "História familiar de morte súbita cardíaca inexplicada antes dos 50 anos, ou de cardiomiopatia/canalopatia conhecida, identificada em anamnese dirigida ou após evento índice em parente"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial_do_atleta_sintomatico_ou_pos_evento": "Síncope de esforço, dor torácica de esforço, palpitação com arritmia documentada ou parada cardíaca ressuscitada em atleta saem do escopo de triagem populacional assintomática e entram em investigação clínica dirigida, com limiar de exame mais baixo do que o de triagem pré-participação. A avaliação combina história clínica e familiar detalhada, eletrocardiograma de 12 derivações interpretado com critério específico para atleta (critérios de Seattle, Drezner et al. 2013, PMID 23303758), ecocardiograma, e — quando a anatomia coronária não é claramente definida pelo ecocardiograma — angiotomografia coronária ou ressonância cardíaca. Teste de esforço deve, sempre que possível, reproduzir a modalidade e a intensidade em que o sintoma ou a arritmia surgem (consenso HRS 2024, Lampert et al., PMID 38763377); interromper o exame apenas por atingir frequência cardíaca-alvo pode perder a janela fisiológica em que a arritmia aparece no atleta treinado.",
+      "papel_e_limites_do_ecg_de_12_derivacoes_na_triagem_em_massa": "O estudo populacional de Corrado et al. (JAMA 2006, PMID 17018804), no Vêneto, Itália, documentou queda de 89% na incidência de morte súbita cardiovascular em atletas competitivos triados (história + exame físico + ECG obrigatório por lei desde 1982) entre 1979-1980 e 2003-2004, com a maior parte da redução concentrada em menos mortes por cardiomiopatia. É o estudo mais citado em favor do ECG na triagem, mas é observacional e ecológico — não isola a contribuição do ECG isolado dentro do pacote história+exame+ECG, nem separa o efeito da triagem de outras mudanças médicas concomitantes ao longo de 25 anos. A ESC (2020 ESC Guidelines on Sports Cardiology, Pelliccia et al., PMID 32860412) incorpora o ECG de 12 derivações à triagem, com endosso narrativo à sua superioridade de desempenho estatístico sobre história e exame físico isolados, mas sem apresentar essa posição como recomendação formal com Classe/Nível na seção de triagem. A declaração científica da AHA/ACC (Maron et al. 2007, PMID 17353433) historicamente não tornou o ECG obrigatório e universal, apoiando-se em checklist de 12 elementos de história e exame físico, por preocupação com custo e taxa de falso-positivo em população jovem treinada cujo coração exibe adaptações elétricas fisiológicas que podem imitar achado patológico — daí o valor dos critérios de Seattle para reduzir esse falso-positivo. O estudo de coorte prospectiva em jogadores de futebol adolescentes no Reino Unido (Malhotra et al., NEJM 2018, PMID 30089062) ilustra o limite prático de qualquer estratégia de triagem: entre atletas com triagem cardiovascular estruturada, 42 (0,38%) tiveram doença associada a MSC identificada na triagem, mas ao longo do seguimento houve 8 mortes súbitas de causa cardíaca — das quais 6 (75%) tinham triagem cardiovascular prévia normal, e cardiomiopatia respondeu por 7 das 8 mortes súbitas (88%). Ou seja: nenhuma estratégia de triagem, incluindo ECG, elimina o risco residual — parcela relevante dos eventos ocorre em quem foi triado e considerado normal.",
+      "quando_investigar_anomalia_coronaria_congenita_mesmo_com_triagem_normal": "Triagem clínica e ECG podem ser normais em atleta com anomalia congênita de artéria coronária. Sintomas de esforço incompatíveis com o perfil de condicionamento do atleta — síncope/pré-síncope, dor torácica de esforço, dispneia desproporcional, arritmia ventricular induzida por exercício ou parada cardíaca ressuscitada — justificam investigação anatômica dirigida mesmo diante de rastreamento inicial aparentemente normal. Características anatômicas potencialmente relevantes ao risco (origem do seio oposto, trajeto interarterial, componente intramural, óstio em fenda, ângulo agudo de origem, compressão dinâmica ao exercício) exigem angiotomografia coronária ou ressonância cardíaca quando o ecocardiograma não define claramente origem e trajeto; teste funcional de isquemia negativo não afasta risco quando a anatomia é considerada de alto risco (Kim et al., AHA/ACC 2025, PMID 39973614/39976316; Petek et al. 2025, PMID 41021664; Daems et al. 2025, PMID 40579103).",
+      "diagnostico_diferencial_do_colapso_apos_impacto_toracico": "Todo colapso súbito imediatamente após impacto torácico no esporte — bola, taco, colisão, soco — deve entrar no diferencial de commotio cordis, mesmo sem fratura de costela ou esterno visível: a revisão mais recente do tema argumenta explicitamente contra usar ausência de lesão estrutural como critério de exclusão diagnóstica (Dickey et al. 2026, PMID 41717928). O mecanismo é acoplamento mecanoelétrico — estiramento do tecido cardíaco no instante vulnerável do ciclo elétrico desencadeando fibrilação ventricular —, não lesão direta ao coração; por isso ECG, troponina e imagem podem ser normais entre os episódios em sobreviventes, e a suspeita clínica deve se apoiar na sequência temporal impacto-colapso, não em achado estrutural.",
+      "investigacao_apos_sobrevivencia_a_parada_cardiaca_ou_em_autopsia": "Retorno ao esporte não deve ser discutido antes de investigação etiológica completa do sobrevivente de parada cardíaca — avaliação para doença coronariana estrutural, cardiomiopatia, canalopatia e outras causas, com decisão posterior sobre tratamento, indicação de cardioversor-desfibrilador implantável quando aplicável, e eventual retorno. Em óbito, a autópsia molecular (teste genético no próprio indivíduo falecido) e o rastreio dirigido de familiares de primeiro grau permitem identificar síndrome arritmogênica hereditária latente e adotar prevenção secundária familiar; a interpretação exige abordagem multidisciplinar (forense, clínica, genética) para chegar a causa definitiva, sem conversão automática de achado isolado em diagnóstico fechado."
+    },
+    "differentials": [
+      "Cardiomiopatia hipertrófica — causa historicamente mais associada a MSC no atleta na percepção pública, mas minoritária em registros de autópsia (6-8%); tem verbete clínico próprio nesta plataforma, fora do escopo central deste verbete",
+      "Coração de atleta (remodelamento fisiológico ao treinamento) — principal diagnóstico diferencial de achado estrutural/elétrico limítrofe em triagem ou imagem, sem substrato patológico",
+      "Canalopatias cardíacas hereditárias (QT longo, Brugada, taquicardia ventricular polimórfica catecolaminérgica, QT curto, fibrilação ventricular idiopática) — verbete clínico próprio nesta plataforma; aqui tratadas apenas pela lente de gatilho pelo exercício e retorno ao esporte",
+      "Cardiomiopatia arritmogênica (ACM/ARVC/ALVC) — verbete clínico próprio nesta plataforma; exercício de endurance é modificador de penetrância e progressão, sobretudo em variante PKP2",
+      "Miocardite subclínica, inclusive pós-viral — verbete clínico próprio nesta plataforma; causa reconhecida de MSC em jovens e atletas, muitas vezes com apresentação inespecífica ou assintomática",
+      "Anomalia congênita de artéria coronária (origem anômala, sobretudo interarterial) — parte do escopo central deste verbete, sem verbete clínico dedicado próprio no momento",
+      "Commotio cordis — parte do escopo central deste verbete, sem verbete clínico dedicado próprio no momento; mecanismo elétrico por acoplamento mecanoelétrico, não lesão estrutural",
+      "Doença coronariana aterosclerótica precoce — diferencial relevante no atleta máster (idade mais avançada), distinto do espectro predominantemente congênito/hereditário do atleta jovem",
+      "Gatilho arritmogênico exógeno (bebidas energéticas, estimulantes, esteroides anabolizantes) sobre substrato genético latente — reduz limiar arrítmico sem ser causa isolada na maioria dos casos"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações, interpretado com critério específico para atleta (critérios de Seattle) para reduzir falso-positivo por adaptação fisiológica ao treinamento",
+      "Ecocardiograma transtorácico, para avaliação estrutural inicial e, em parte dos casos, identificação da origem coronária",
+      "Angiotomografia coronária ou ressonância cardíaca, quando a origem e o trajeto coronário não são claramente definidos pelo ecocardiograma ou há suspeita de anomalia coronária",
+      "Ressonância cardíaca com realce tardio de gadolínio, para caracterização tecidual quando há suspeita de cardiomiopatia estrutural, fibrose ou miocardite",
+      "Teste de esforço específico da modalidade e intensidade em que o sintoma ou a arritmia surgem, não apenas até frequência cardíaca-alvo genérica",
+      "Holter de 24 horas ou monitorização prolongada do ritmo, para quantificar e caracterizar extrassistolia e taquicardia ventricular não sustentada",
+      "Teste genético em painel dirigido (canalopatias, genes desmossômicos), precedido de aconselhamento genético estruturado, quando fenótipo ou história familiar sugerem síndrome arritmogênica hereditária",
+      "Autópsia molecular e rastreio familiar em cascata, após morte súbita não explicada por achado estrutural em exame post-mortem padrão"
+    ],
+    "red_flags": [
+      "Parada cardíaca ressuscitada ou colapso súbito não responsivo durante ou logo após exercício — tratar como possível parada cardíaca até prova em contrário",
+      "Colapso imediatamente após impacto torácico no esporte, mesmo sem fratura de costela ou esterno visível — commotio cordis não é excluído pela ausência de lesão estrutural",
+      "Síncope ou pré-síncope inexplicada relacionada a esforço físico",
+      "Dor torácica de esforço desproporcional à intensidade do exercício",
+      "Arritmia ventricular complexa, polimórfica ou repetitiva, sobretudo se surge ou piora com o esforço",
+      "História familiar de morte súbita cardíaca inexplicada antes dos 50 anos, ou de cardiomiopatia/canalopatia conhecida",
+      "Sintoma de esforço em atleta com triagem prévia (história, exame físico e/ou ECG) considerada normal — triagem normal não exclui risco residual",
+      "Ausência de desfibrilador externo automático acessível no local de treino ou competição"
+    ],
+    "ambulatory_flow": [
+      "Em triagem pré-participação assintomática, aplicar história dirigida e exame físico em toda a população avaliada; decidir a inclusão do ECG de 12 derivações conforme o modelo adotado pela instituição/sociedade responsável, reconhecendo que nenhuma estratégia de triagem, incluindo ECG, elimina o risco residual.",
+      "Interpretar todo ECG de atleta com critério específico para essa população (critérios de Seattle), para não converter adaptação elétrica fisiológica ao treinamento em afastamento esportivo desnecessário.",
+      "Em atleta com sintoma de esforço (síncope, dor torácica, palpitação com arritmia, dispneia desproporcional), investigar de forma dirigida mesmo diante de triagem ou ECG prévios normais — o limiar de exame é mais baixo do que o de triagem populacional.",
+      "Diante de suspeita de anomalia coronária congênita, não liberar apenas por teste ergométrico negativo se a anatomia for preocupante, nem indicar cirurgia apenas pelo rótulo de 'anomalia' sem caracterizar origem e trajeto por imagem.",
+      "Em sintoma ou achado sugestivo de canalopatia hereditária, cardiomiopatia arritmogênica ou miocardite, encaminhar ao verbete clínico dedicado de cada condição para critério diagnóstico e conduta detalhada — este verbete não substitui essa investigação específica.",
+      "Orientar toda organização esportiva (clube, escola, academia, evento) a manter plano de emergência escrito, com DEA fisicamente acessível — sem barreira administrativa ou de chave — durante treinos e competições, não apenas em competições.",
+      "Promover treinamento periódico em suporte básico de vida e uso de DEA para treinadores, professores, árbitros e equipe de apoio, com simulação anual do plano de emergência.",
+      "Em esporte de projétil ou impacto torácico direto (beisebol, hóquei, artes marciais), orientar equipamento de proteção torácica adequado ao padrão de segurança vigente como camada adicional de prevenção primária de commotio cordis.",
+      "Após confirmação de canalopatia, ACM, anomalia coronária corrigida ou outra causa estrutural/elétrica, conduzir decisão de retorno ao esporte de forma individualizada e compartilhada, sem desqualificação automática nem liberação automática."
+    ],
+    "emergency_flow": [
+      "Atleta que colapsa subitamente e está inconsciente/não responsivo: tratar como possível parada cardíaca até prova em contrário, mesmo com respiração agônica ou movimento breve tipo convulsão.",
+      "Sequência imediata: reconhecer o colapso, acionar o serviço de emergência, iniciar compressões torácicas de alta qualidade, trazer e aplicar o DEA assim que disponível, seguir as instruções do aparelho minimizando interrupção das compressões.",
+      "Meta operacional de organização do sistema local: intervalo entre colapso e primeiro choque inferior a 3 minutos sempre que possível, testado por simulação real.",
+      "Colapso imediatamente após impacto torácico: considerar commotio cordis no diferencial e iniciar RCP/DEA sem aguardar confirmação de lesão estrutural.",
+      "Em modalidade com capacete, protetor ou outro equipamento: seguir protocolo específico previamente definido para exposição rápida do tórax e da via aérea sem atraso.",
+      "Evento em área extensa ou remota (corrida de rua, ciclismo, trilha, prova de longa distância): acionar plano com pontos de desfibrilação distribuídos e equipe médica posicionada ao longo do trajeto, não apenas na largada.",
+      "Após retorno da circulação espontânea: cuidados pós-parada conforme protocolo de suporte avançado de vida e transporte para investigação etiológica completa antes de qualquer discussão sobre retorno ao esporte."
+    ],
+    "treatment_summary": "Não há tratamento farmacológico ou dose descritos neste verbete — cada causa estrutural/elétrica (canalopatia, ACM, miocardite) tem manejo detalhado em seu próprio verbete clínico. O eixo deste verbete é prevenção e conduta de sistema: (1) triagem pré-participação com decisão institucional sobre inclusão de ECG de 12 derivações, reconhecendo seu papel e seus limites documentados; (2) investigação anatômica ou funcional dirigida sempre que sintoma de esforço for incompatível com o perfil do atleta, mesmo com triagem prévia normal; (3) correção cirúrgica de anomalia coronária congênita quando indicada por anatomia de risco, sintoma ou isquemia documentada, com retorno ao esporte condicionado a documentação de recuperação clínica, ausência de isquemia relevante e controle de arritmia — nunca automático; (4) cardioversor-desfibrilador implantável conforme critérios de prevenção primária ou secundária já estabelecidos para a doença de base identificada, sem que o dispositivo substitua o controle do substrato ou autorize exposição a esporte de alto risco sem avaliação; (5) prevenção de commotio cordis por equipamento de proteção torácica adequado e, quando aplicável, bolas de segurança desenhadas para reduzir transmissão de energia de impacto; (6) sistema de resposta à parada cardíaca — DEA fisicamente acessível, equipe treinada em RCP e plano de emergência escrito e ensaiado — como intervenção de prevenção secundária com impacto documentado na sobrevida, tão relevante quanto a triagem em si. A cardiologia do esporte contemporânea (AHA/ACC 2025) enfrenta a decisão de participação esportiva por decisão compartilhada e individualizada, abandonando a lógica de desqualificação automática para toda doença cardiovascular identificada, sem que isso signifique ausência de restrição quando a evidência aponta risco real e modificável pelo exercício.",
+    "monitoring": [
+      "Reavaliação clínica, eletrocardiográfica e de imagem periódica de atleta com causa estrutural/elétrica identificada, conforme protocolo do verbete clínico específico da doença de base",
+      "Seguimento pós-correção cirúrgica de anomalia coronária congênita, com reavaliação funcional antes de qualquer progressão do treinamento",
+      "Reestratificação de risco após qualquer evento clínico novo (síncope, arritmia documentada, mudança de padrão sintomático) ou mudança relevante de volume/intensidade de treinamento",
+      "Checagem periódica de bateria, pás e funcionamento do desfibrilador externo automático em instalações esportivas",
+      "Simulação anual, no mínimo, do plano de ação de emergência para parada cardíaca súbita, com instituições de alto volume considerando frequência maior",
+      "Seguimento pós-implante de cardioversor-desfibrilador em atleta, incluindo avaliação de terapias apropriadas/inapropriadas e impacto sobre a modalidade esportiva praticada",
+      "Investigação etiológica completa e seguimento estruturado de todo sobrevivente de parada cardíaca no esporte antes de qualquer decisão sobre retorno"
+    ],
+    "special_populations": [
+      "Atleta assintomático em triagem pré-participação de massa — decisão sobre ECG depende do modelo institucional adotado; ausência de achado na triagem não elimina risco residual",
+      "Atleta com sintoma de esforço e triagem prévia normal — investigação dirigida indicada independentemente do resultado da triagem populacional",
+      "Sobrevivente de parada cardíaca no esporte — retorno ao esporte não deve ser discutido antes de investigação etiológica completa",
+      "Praticante de esporte de projétil ou impacto torácico direto (beisebol, hóquei, artes marciais, entre outros) — população-alvo de prevenção específica de commotio cordis por equipamento de proteção",
+      "Participante de evento em área extensa ou remota (corrida de rua, ciclismo, trilha, prova de longa distância) — exige logística de resposta à parada cardíaca distinta de instalação fechada, com cobertura ao longo de todo o percurso",
+      "Atleta com cardioversor-desfibrilador implantado — decisão de participação esportiva deve considerar risco de trauma sobre o sistema, possibilidade de terapia durante esforço, modalidade específica e plano de emergência local",
+      "Atleta máster (faixa etária mais avançada) — diferencial deve incorporar doença coronariana aterosclerótica precoce, distinta do espectro predominantemente congênito/hereditário do atleta jovem",
+      "Adolescente e criança em triagem escolar/federativa em massa — mesmas limitações de sensibilidade da triagem em adulto jovem, com necessidade adicional de checklist e critérios eletrocardiográficos ajustados por idade"
+    ],
+    "assistant_questions": [
+      {"id": "idade_paciente", "label": "Qual a idade do atleta (anos)?", "type": "number"},
+      {"id": "contexto_avaliacao", "label": "Qual o contexto desta avaliação?", "type": "select", "options": [
+        {"value": "triagem_assintomatica", "label": "Triagem pré-participação em atleta assintomático"},
+        {"value": "sintomas_esforco", "label": "Atleta com sintoma relacionado a esforço físico"},
+        {"value": "pos_evento_parada_cardiaca", "label": "Após parada cardíaca ressuscitada ou colapso súbito"},
+        {"value": "colapso_apos_impacto_toracico", "label": "Colapso imediatamente após impacto torácico"}
+      ]},
+      {"id": "sintomas_esforco_presentes", "label": "Quais sintomas relacionados a esforço estão presentes?", "type": "multiselect", "options": [
+        {"value": "sincope_ou_pre_sincope", "label": "Síncope ou pré-síncope"},
+        {"value": "dor_toracica", "label": "Dor torácica de esforço"},
+        {"value": "palpitacao", "label": "Palpitação"},
+        {"value": "dispneia_desproporcional", "label": "Dispneia desproporcional ao esforço"},
+        {"value": "nenhum", "label": "Nenhum sintoma"}
+      ]},
+      {"id": "arritmia_ventricular_documentada_ao_esforco", "label": "Há arritmia ventricular documentada durante ou logo após esforço?", "type": "boolean"},
+      {"id": "ecg_12_derivacoes_resultado", "label": "Qual o resultado do ECG de 12 derivações mais recente?", "type": "select", "options": [
+        {"value": "nao_realizado", "label": "Não realizado"},
+        {"value": "normal_criterios_seattle", "label": "Normal / adaptação fisiológica pelos critérios de Seattle"},
+        {"value": "alterado_criterios_seattle", "label": "Alterado pelos critérios de Seattle"}
+      ]},
+      {"id": "suspeita_anomalia_coronaria", "label": "Há suspeita ou confirmação de anomalia coronária congênita?", "type": "select", "options": [
+        {"value": "nao", "label": "Não"},
+        {"value": "em_investigacao", "label": "Em investigação"},
+        {"value": "confirmada", "label": "Confirmada"}
+      ]},
+      {"id": "historico_familiar_morte_subita_precoce", "label": "Há história familiar de morte súbita cardíaca inexplicada antes dos 50 anos, ou de cardiomiopatia/canalopatia conhecida?", "type": "boolean"},
+      {"id": "dea_disponivel_no_local", "label": "Há desfibrilador externo automático (DEA) acessível no local de treino/competição?", "type": "boolean"},
+      {"id": "modalidade_esportiva_tipo", "label": "Qual o tipo de modalidade esportiva praticada?", "type": "select", "options": [
+        {"value": "contato_com_projetil_ou_impacto", "label": "Contato com projétil ou impacto torácico direto (ex.: beisebol, hóquei, artes marciais)"},
+        {"value": "endurance_alta_intensidade", "label": "Endurance de alta intensidade"},
+        {"value": "outra", "label": "Outra modalidade"}
+      ]}
+    ],
+    "assistant_rules": [
+      {"id": "colapso_ou_pos_parada_cardiaca_emergencia", "priority": 99, "when": {"any": [
+        {"field": "contexto_avaliacao", "op": "eq", "value": "pos_evento_parada_cardiaca"},
+        {"field": "contexto_avaliacao", "op": "eq", "value": "colapso_apos_impacto_toracico"}
+      ]}, "add": {
+        "risk": "emergencia",
+        "red_flags": ["Colapso súbito ou parada cardíaca no esporte: tratar como emergência com risco de vida imediato até prova em contrário."],
+        "emergency_flow": [
+          "Reconhecer o colapso, acionar emergência, iniciar RCP de alta qualidade e aplicar DEA assim que disponível, sem aguardar confirmação diagnóstica.",
+          "Se o colapso ocorreu imediatamente após impacto torácico, considerar commotio cordis no diferencial sem que isso atrase RCP/DEA."
+        ]
+      }},
+      {"id": "sintoma_de_esforco_de_alto_risco", "priority": 90, "when": {"any": [
+        {"field": "sintomas_esforco_presentes", "op": "contains", "value": "sincope_ou_pre_sincope"},
+        {"field": "sintomas_esforco_presentes", "op": "contains", "value": "dor_toracica"},
+        {"field": "arritmia_ventricular_documentada_ao_esforco", "op": "truthy"}
+      ]}, "add": {
+        "risk": "urgente",
+        "red_flags": ["Síncope/pré-síncope, dor torácica de esforço ou arritmia ventricular documentada ao esforço em atleta: investigação clínica dirigida com limiar mais baixo do que o de triagem populacional, independentemente do resultado de triagem prévia."],
+        "suggested_tests": ["Ecocardiograma transtorácico", "Ressonância cardíaca com realce tardio", "Teste de esforço específico da modalidade e intensidade do sintoma", "Monitorização prolongada do ritmo"]
+      }},
+      {"id": "suspeita_anomalia_coronaria_prioritario", "priority": 85, "when": {"any": [
+        {"field": "suspeita_anomalia_coronaria", "op": "eq", "value": "em_investigacao"},
+        {"field": "suspeita_anomalia_coronaria", "op": "eq", "value": "confirmada"}
+      ]}, "add": {
+        "risk": "prioritario",
+        "supporting": ["Anatomia coronária (origem, trajeto, componente intramural) define o risco mais do que o rótulo 'anomalia coronária' isoladamente — caracterização por imagem é indicada antes de qualquer decisão de restrição ou liberação esportiva."],
+        "suggested_tests": ["Angiotomografia coronária ou ressonância cardíaca para caracterização de origem e trajeto"]
+      }},
+      {"id": "historia_familiar_com_triagem_normal", "priority": 78, "when": {"all": [
+        {"field": "historico_familiar_morte_subita_precoce", "op": "truthy"},
+        {"field": "ecg_12_derivacoes_resultado", "op": "eq", "value": "normal_criterios_seattle"}
+      ]}, "add": {
+        "risk": "prioritario",
+        "supporting": ["Triagem e ECG normais não excluem risco: em coorte prospectiva de triagem estruturada, 75% dos atletas que tiveram morte súbita cardíaca durante o seguimento haviam sido considerados normais na triagem cardiovascular prévia. História familiar de morte súbita precoce mantém indicação de investigação dirigida mesmo com ECG normal."]
+      }},
+      {"id": "ecg_alterado_criterios_seattle", "priority": 65, "when": {"all": [
+        {"field": "ecg_12_derivacoes_resultado", "op": "eq", "value": "alterado_criterios_seattle"}
+      ]}, "add": {
+        "risk": "prioritario",
+        "suggested_tests": ["Ecocardiograma transtorácico", "Avaliação especializada em cardiologia do esporte antes de qualquer restrição ou liberação definitiva"]
+      }},
+      {"id": "dea_indisponivel_no_local", "priority": 55, "when": {"all": [
+        {"field": "dea_disponivel_no_local", "op": "falsy"}
+      ]}, "add": {
+        "risk": "prioritario",
+        "missing_information": ["Desfibrilador externo automático não confirmado como acessível no local de treino/competição — recomenda-se implementar plano de emergência escrito com DEA fisicamente acessível, sem barreira de chave ou administrativa, e treinamento periódico da equipe em RCP."]
+      }},
+      {"id": "modalidade_projetil_ou_impacto_toracico", "priority": 30, "when": {"all": [
+        {"field": "modalidade_esportiva_tipo", "op": "eq", "value": "contato_com_projetil_ou_impacto"}
+      ]}, "add": {
+        "risk": "informativo",
+        "supporting": ["Modalidade com projétil ou impacto torácico direto: orientar equipamento de proteção torácica adequado ao padrão de segurança vigente como camada adicional de prevenção primária de commotio cordis, além do plano de RCP/DEA."]
+      }},
+      {"id": "triagem_assintomatica_sem_bandeira_vermelha", "priority": 15, "when": {"all": [
+        {"field": "contexto_avaliacao", "op": "eq", "value": "triagem_assintomatica"},
+        {"field": "historico_familiar_morte_subita_precoce", "op": "falsy"},
+        {"field": "arritmia_ventricular_documentada_ao_esforco", "op": "falsy"}
+      ]}, "add": {
+        "risk": "rotina",
+        "supporting": ["Triagem pré-participação sem bandeira vermelha identificada: seguir modelo institucional adotado para inclusão ou não de ECG de 12 derivações, com reavaliação periódica e reforço de que nenhuma estratégia de triagem elimina risco residual."]
+      }}
+    ],
+    "tags": ["morte súbita cardíaca", "cardiologia do esporte", "commotio cordis", "anomalia coronária congênita", "canalopatia cardíaca", "cardiomiopatia arritmogênica", "miocardite", "desfibrilador externo automático", "triagem pré-participação esportiva", "eletrocardiograma do atleta", "prevenção cardiovascular", "parada cardíaca no esporte"],
+    "source_refs": [
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. J Am Coll Cardiol. 2025;85(10):1059-1108. DOI: 10.1016/j.jacc.2024.12.025. PMID: 39976316.",
+      "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+      "Lampert R, Chung EH, Ackerman MJ, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21(10):e151-e252. DOI: 10.1016/j.hrthm.2024.05.018. PMID: 38763377.",
+      "Harmon KG, Drezner JA, Maleszewski JJ, et al. Pathogeneses of sudden cardiac death in national collegiate athletic association athletes. Circ Arrhythm Electrophysiol. 2014;7(2):198-204. DOI: 10.1161/CIRCEP.113.001376. PMID: 24585715.",
+      "Finocchiaro G, Papadakis M, Robertus JL, et al. Etiology of Sudden Death in Sports: Insights From a United Kingdom Regional Registry. J Am Coll Cardiol. 2016;67(18):2108-2115. DOI: 10.1016/j.jacc.2016.02.062. PMID: 27151341.",
+      "Malhotra A, Dhutia H, Finocchiaro G, et al. Outcomes of Cardiac Screening in Adolescent Soccer Players. N Engl J Med. 2018;379(6):524-534. DOI: 10.1056/NEJMoa1714719. PMID: 30089062.",
+      "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G. Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA. 2006;296(13):1593-1601. DOI: 10.1001/jama.296.13.1593. PMID: 17018804.",
+      "Drezner JA, Ackerman MJ, Anderson J, et al. Electrocardiographic interpretation in athletes: the 'Seattle criteria'. Br J Sports Med. 2013;47(3):122-124. DOI: 10.1136/bjsports-2012-092067. PMID: 23303758.",
+      "Maron BJ, Thompson PD, Ackerman MJ, et al. Recommendations and considerations related to preparticipation screening for cardiovascular abnormalities in competitive athletes: 2007 update. Circulation. 2007;115(12):1643-1455. DOI: 10.1161/CIRCULATIONAHA.107.181423. PMID: 17353433.",
+      "Halabchi F, Seif-Barghi T, Mazaheri R. Sudden cardiac death in young athletes; a literature review and special considerations in Asia. Asian J Sports Med. 2011;2(1):1-15. PMID: 22375212.",
+      "Petek BJ, Churchill TW, Moulson N, et al. Sudden Cardiac Arrest and Death Secondary to Congenital Coronary Artery Abnormalities in Young Competitive Athletes. Circulation. 2025;152(13):971-973. DOI: 10.1161/CIRCULATIONAHA.125.074330. PMID: 41021664.",
+      "Daems JJN, van Diepen MA, de Mooij SRE, et al. Multimodality Imaging in Anomalous Aortic Origin of the Coronary Arteries: Lessons From 4 Athlete Cases. JACC Case Rep. 2025;30(16):104250. DOI: 10.1016/j.jaccas.2025.104250. PMID: 40579103.",
+      "Dickey GJ, Dorian P, Fedder SP, et al. Revisiting Commotio Cordis: Novel Insight Into Clinical Variability, Diagnosis, Epidemiology, and Prevention. J Am Heart Assoc. 2026;15(5):e045115. DOI: 10.1161/JAHA.125.045115. PMID: 41717928.",
+      "Michelland L, Murad MH, Bougouin W, et al. Association between basic life support and survival in sports-related sudden cardiac arrest: a systematic review and meta-analysis. Eur Heart J. 2023;44(3):180-192. DOI: 10.1093/eurheartj/ehac586. PMID: 36285872.",
+      "Aschieri D, Penela D, Pelizzoni V, et al. Outcomes after sudden cardiac arrest in sports centres with and without on-site external defibrillators. Heart. 2018;104(16):1344-1349. DOI: 10.1136/heartjnl-2017-312441. PMID: 29463609.",
+      "Pelto HF, Drezner JA. Design and Implementation of an Emergency Action Plan for Sudden Cardiac Arrest in Sport. J Cardiovasc Transl Res. 2020;13(3):331-338. DOI: 10.1007/s12265-020-09988-1. PMID: 32300931.",
+      "Petek BJ, Churchill TW, Moulson N, et al. Survival Outcomes After Sudden Cardiac Arrest in Young Competitive Athletes From the United States. J Am Coll Cardiol. 2025;85(17):1682-1692. DOI: 10.1016/j.jacc.2025.03.006. PMID: 40162942.",
+      "Karlsson L, Malta Hansen C, Wissenberg M, et al. Automated external defibrillator accessibility is crucial for bystander defibrillation and survival: A registry-based study. Resuscitation. 2019;136:30-37. DOI: 10.1016/j.resuscitation.2019.01.014. PMID: 30682401."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39973614/", "https://pubmed.ncbi.nlm.nih.gov/39976316/", "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/", "https://pubmed.ncbi.nlm.nih.gov/38763377/", "https://pubmed.ncbi.nlm.nih.gov/24585715/",
+      "https://pubmed.ncbi.nlm.nih.gov/27151341/", "https://pubmed.ncbi.nlm.nih.gov/30089062/", "https://pubmed.ncbi.nlm.nih.gov/17018804/",
+      "https://pubmed.ncbi.nlm.nih.gov/23303758/", "https://pubmed.ncbi.nlm.nih.gov/17353433/", "https://pubmed.ncbi.nlm.nih.gov/22375212/",
+      "https://pubmed.ncbi.nlm.nih.gov/41021664/", "https://pubmed.ncbi.nlm.nih.gov/40579103/", "https://pubmed.ncbi.nlm.nih.gov/41717928/",
+      "https://pubmed.ncbi.nlm.nih.gov/36285872/", "https://pubmed.ncbi.nlm.nih.gov/29463609/", "https://pubmed.ncbi.nlm.nih.gov/32300931/",
+      "https://pubmed.ncbi.nlm.nih.gov/40162942/", "https://pubmed.ncbi.nlm.nih.gov/30682401/"
+    ],
+    "related_document_slugs": [
+      "morte-subita-cardiaca-no-atleta-triagem-causas-arritmogenicas-e-eletrofisiologia-esportiva",
+      "morte-subita-em-atletas-triagem-pre-participacao-e-o-debate-do-ecg-obrigatorio",
+      "commotio-cordis-mecanismo-epidemiologia-e-prevencao",
+      "anomalias-coronarias-congenitas-atleta-esporte",
+      "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+      "canalopatias-qt-longo-cpvt-esporte-retorno",
+      "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte"
+    ],
+    "patient_material_slug": "desmaio-durante-o-esporte-dea-e-o-que-fazer",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo, redigido em 29/08/2026. Sem colisão de slug (grep completo em doencas/metadados.json, doencas/fragmentos/*.json, doencas/correcoes/*.json; git log --all e gh pr list checados). Escopo delimitado para não sobrepor arritmias-ventriculares-e-morte-subita-cardiaca (MSC do adulto em geral), cardiomiopatia-arritmogenica, canalopatias-cardiacas-hereditarias e miocardite (verbetes clínicos próprios, tratados aqui só pela lente esportiva). Anomalia coronária congênita e commotio cordis não têm verbete SpecialtyDisease próprio — tratados aqui com profundidade clínica real. category='avaliacao_esportiva' reutiliza o valor já introduzido nesta mesma rodada (coracao-de-atleta-versus-cardiomiopatia-hipertrofica, avaliacao-pre-participacao-esportiva). area='geral'. 20 PMIDs verificados individualmente via NCBI E-utilities; números de epidemiologia (Harmon 2014, Finocchiaro 2016, Malhotra 2018) conferidos literalmente contra abstract. PMID 37565354 (miocardite) descartado por não conseguir confirmar abstract completo nesta sessão — não usado sem verificação. 7 related_document_slugs lidos por completo, discussão central confirmada, fora de Farmacologia/Calculadoras/Exames. patient_material_slug confirmado por correspondência exata em material-paciente/metadados.json. Nenhuma dose de medicamento.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
