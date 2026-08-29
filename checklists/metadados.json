@@ -32414,5 +32414,84 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "profilaxia-antibiotica-para-prevencao-de-endocardite-infecciosa-indicacoes-por-cenario",
+    "condicao": "Profilaxia antibiótica para prevenção de endocardite infecciosa — indicações por cenário clínico",
+    "resumo": "Checklist de indicações e não indicações de profilaxia antibiótica pré-procedimento para prevenção de endocardite infecciosa (EI), cobrindo procedimento odontológico de alto risco, grupos de risco cardíaco permanente (EI prévia, prótese valvar cirúrgica ou transcateter, VAD/LVAD), profilaxia cirúrgica perioperatória de implante de dispositivo cardíaco eletrônico, cenários de baixo risco em que a profilaxia foi abandonada, procedimentos não odontológicos de indicação mais fraca/opcional, e descolonização de S. aureus. Baseado nas diretrizes da American Heart Association (Wilson W et al. 2007 e atualização de 2021) e da ESC 2023 (Delgado V et al.); nenhuma diretriz específica da SBC sobre profilaxia de EI foi localizada nas buscas realizadas para este item.",
+    "documento_origem": null,
+    "theme": "Endocardite",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Wilson W, Taubert KA, Gewitz M, et al.; American Heart Association Rheumatic Fever, Endocarditis, and Kawasaki Disease Committee. Prevention of Infective Endocarditis: Guidelines From the American Heart Association. Circulation. 2007;116(15):1736-1754. DOI: 10.1161/CIRCULATIONAHA.106.183095. PMID: 17446442.",
+      "Wilson WR, Gewitz M, Lockhart PB, et al.; American Heart Association Young Hearts Rheumatic Fever, Endocarditis and Kawasaki Disease Committee. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. DOI: 10.1161/CIR.0000000000000969. PMID: 33853363.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.",
+      "Baddour LM, Esquer Garrigos Z, Sohail MR, et al. Update on Cardiovascular Implantable Electronic Device Infections and Their Prevention, Diagnosis, and Management: A Scientific Statement From the American Heart Association. Circulation. 2024;149(2):e201-e216. DOI: 10.1161/CIR.0000000000001187. PMID: 38047353.",
+      "Krahn AD, Longtin Y, Philippon F, et al. Prevention of Arrhythmia Device Infection Trial: The PADIT Trial. J Am Coll Cardiol. 2018;72(24):3098-3109. DOI: 10.1016/j.jacc.2018.09.068. PMID: 30545448.",
+      "Yokoe DS, Advani SD, Anderson DJ, et al. Executive Summary: A Compendium of Strategies to Prevent Healthcare-Associated Infections in Acute-Care Hospitals: 2022 Updates. Infect Control Hosp Epidemiol. 2023;44(10):1540-1554. DOI: 10.1017/ice.2023.138. PMID: 37606298."
+    ],
+    "itens": [
+      {
+        "id": "pa-odonto-alto-risco",
+        "categoria": "Procedimento odontológico",
+        "obrigatorio": true,
+        "texto": "Em pacientes classificados nas categorias de mais alto risco cardíaco de EI (prótese valvar cirúrgica ou material protético usado em reparo valvar, endocardite infecciosa prévia, certas cardiopatias congênitas — cianóticas não corrigidas, corrigidas com material protético nos primeiros 6 meses após o reparo, ou corrigidas com defeito residual adjacente ao material protético — e receptores de transplante cardíaco que desenvolvem valvopatia estrutural), recomenda-se profilaxia antibiótica em dose única, administrada antes de procedimentos odontológicos que envolvam manipulação de tecido gengival, da região periapical do dente, ou perfuração da mucosa oral. O regime de referência é amoxicilina ou ampicilina (via oral/IV conforme a via disponível); clindamicina ou outra alternativa é considerada em pacientes com alergia a penicilina — posologia em mg não é reproduzida aqui por não ter sido extraída com segurança da fonte consultada nesta pesquisa.",
+        "origem_secao": "Categorias de risco definidas por Wilson W et al., AHA 2007 (PMID 17446442), reafirmadas sem alterações pela atualização Wilson WR et al., AHA 2021 (PMID 33853363) após revisão de evidências de adesão e desfechos."
+      },
+      {
+        "id": "pa-ei-previa",
+        "categoria": "Grupos de alto risco cardíaco",
+        "obrigatorio": true,
+        "texto": "A história pessoal de endocardite infecciosa prévia é, por si só, uma das categorias de risco mais alto reconhecidas pela AHA — condição que não se 'resolve' com o tempo: o paciente permanece nesse grupo indefinidamente, independentemente de quantos anos se passaram desde o episódio índice ou de intervenção cirúrgica cardíaca subsequente. A justificativa é que a recorrência de EI está associada a morbimortalidade desproporcionalmente maior que o primeiro episódio, o que sustenta profilaxia antibiótica antes de procedimento odontológico de alto risco (manipulação gengival/periapical/perfuração de mucosa) ao longo de toda a vida do paciente, não apenas em uma janela pós-evento.",
+        "origem_secao": "Categoria de altíssimo risco (EI prévia) definida por Wilson W et al., AHA 2007 (PMID 17446442) e mantida por Wilson WR et al., AHA 2021 (PMID 33853363); ESC 2023 (Delgado V et al., PMID 37622656) mantém classificação equivalente."
+      },
+      {
+        "id": "pa-vad-lvad",
+        "categoria": "Dispositivos",
+        "obrigatorio": false,
+        "texto": "Para portadores de dispositivo de assistência ventricular (VAD/LVAD), não há ensaio clínico randomizado dedicado que defina profilaxia antibiótica odontológica específica para este grupo; a extensão da profilaxia é extrapolada, por painéis de especialistas, do mesmo racional de risco elevado usado para prótese valvar — presença de material protético/superfície não endotelizada exposta ao sangue circulante. É importante distinguir esse racional (profilaxia dirigida à prevenção de bacteremia por manipulação odontológica) da prevenção de infecção de bolsa/trajeto do cabo percutâneo (driveline) do próprio dispositivo, que é um problema de infecção de sítio cirúrgico/dispositivo — não de EI propriamente dita — e segue via distinta de cuidado de ferida/curativo, não antibioticoprofilaxia odontológica de rotina. Nível de evidência mais fraco (extrapolação/opinião de especialista) que as demais categorias deste checklist.",
+        "origem_secao": "Extrapolação de racional discutida no contexto de doença associada a dispositivo em ESC 2023 (Delgado V et al., PMID 37622656); ausência de ensaio clínico randomizado específico confirmada nas buscas realizadas nesta pesquisa."
+      },
+      {
+        "id": "pa-protese-transcateter",
+        "categoria": "Grupos de alto risco cardíaco",
+        "obrigatorio": true,
+        "texto": "Nas próteses valvares implantadas por via transcateter (TAVI e outras próteses valvares transcateter), a AHA (atualização 2021) e a ESC (2023) aplicam o mesmo racional e a mesma recomendação de profilaxia antibiótica odontológica de alto risco usada para prótese valvar implantada cirurgicamente — ambas são tratadas como 'material protético cardíaco' para fins de estratificação de risco de EI —, apesar de a base de evidência direta (ensaios clínicos) específica para próteses transcateter ainda ser mais limitada do que a disponível para prótese cirúrgica clássica.",
+        "origem_secao": "Wilson WR et al., AHA 2021 (PMID 33853363) e Delgado V et al., ESC 2023 Guidelines for the management of endocarditis (PMID 37622656), que discutem manejo de EI associada a válvula transcateter equiparando-a a prótese cirúrgica."
+      },
+      {
+        "id": "pa-cied-perioperatoria",
+        "categoria": "Dispositivos",
+        "obrigatorio": true,
+        "texto": "Antes do implante de dispositivo cardíaco eletrônico (marca-passo definitivo, CDI, ressincronizador), recomenda-se profilaxia antibiótica CIRÚRGICA perioperatória com dose única de antibiótico IV pré-procedimento dirigido a flora estafilocócica de pele — padrão consolidado: cefalosporina de primeira geração (ex. cefazolina) —, conforme caracterizado como tratamento de referência no braço-controle do PADIT Trial e detalhado na atualização da AHA sobre infecções de CIED. Esta é uma profilaxia cirúrgica geral de infecção de sítio/bolsa do dispositivo, DISTINTA — em racional, indicação e momento — da profilaxia odontológica de prevenção de EI dos itens anteriores deste checklist. O PADIT Trial (ensaio clínico randomizado cluster-crossover, não uma diretriz) não encontrou redução estatisticamente significativa de infecção com esquema antibiótico incrementado (vancomicina + lavagem de bolsa com bacitracina + cefalexina oral pós-procedimento) além do padrão com cefalosporina isolada.",
+        "origem_secao": "Baddour LM et al., AHA 2024 Update on Cardiovascular Implantable Electronic Device Infections (PMID 38047353); evidência de ensaio clínico em Krahn AD et al., PADIT Trial, JACC 2018 (PMID 30545448)."
+      },
+      {
+        "id": "pa-baixo-risco-nao-indicado",
+        "categoria": "Não indicado/opcional",
+        "obrigatorio": false,
+        "texto": "Desde a atualização da AHA em 2007 (reafirmada em 2021, sem mudanças) e conforme a ESC 2023, a profilaxia antibiótica de rotina para prevenção de EI antes de procedimento odontológico NÃO é recomendada para pacientes de risco cardíaco padrão/baixo — categoria que passou a incluir condições anteriormente cobertas por diretrizes mais antigas, como prolapso de valva mitral (com ou sem regurgitação), doença valvar reumática, valva aórtica bicúspide, estenose aórtica calcificada, e a maioria das cardiopatias congênitas fora das categorias de altíssimo risco descritas no item de procedimento odontológico. A mudança de paradigma (AHA 2007/2021 e ESC 2023) refletiu a constatação de que a bacteremia cumulativa de atividades diárias (mastigação, escovação) é numericamente muito mais frequente do que a bacteremia de um único procedimento odontológico, e de que não há ensaio clínico randomizado que comprove que a profilaxia previna EI nesses grupos.",
+        "origem_secao": "Wilson W et al., AHA 2007 (PMID 17446442), reafirmado por Wilson WR et al., AHA 2021 (PMID 33853363), que revisou evidências de adesão/desfechos e concluiu não haver mudanças recomendadas às categorias de 2007; Delgado V et al., ESC 2023 (PMID 37622656) mantém abordagem equivalente."
+      },
+      {
+        "id": "pa-nao-odonto-opcional",
+        "categoria": "Não indicado/opcional",
+        "obrigatorio": false,
+        "texto": "Para pacientes de alto risco cardíaco submetidos a procedimento NÃO odontológico — respiratório (incisão/biópsia de mucosa respiratória), gastrointestinal, geniturinário, ou de pele/tecidos moles musculoesqueléticos já infectados —, a profilaxia antibiótica dirigida à prevenção de EI tem indicação mais fraca/opcional e deve ser diferenciada da indicação odontológica de alto risco: as diretrizes AHA e ESC não recomendam profilaxia rotineira apenas para prevenir EI em procedimentos gastrointestinais/geniturinários eletivos na ausência de infecção ativa. Quando há infecção de pele ou tecido mole em curso em paciente de alto risco, antibiótico dirigido ao patógeno provável (frequentemente estafilocócico/estreptocócico) PODE ser considerado, com o racional adicional de reduzir bacteremia — indicação de menor força de evidência (opinião de especialista) comparada à indicação odontológica de alto risco.",
+        "origem_secao": "Wilson WR et al., AHA 2021 (PMID 33853363) e Delgado V et al., ESC 2023 (PMID 37622656), que diferenciam a força de recomendação para procedimentos não odontológicos da recomendação odontológica de alto risco."
+      },
+      {
+        "id": "pa-descolonizacao-nao-rotineira",
+        "categoria": "Não indicado/opcional",
+        "obrigatorio": false,
+        "texto": "A descolonização de pele e/ou nasal (ex. mupirocina intranasal associada a banho com clorexidina) de forma ROTINEIRA e às cegas, sem rastreamento (swab/cultura) prévio confirmando colonização por Staphylococcus aureus, não é recomendada. O Compêndio SHEA/IDSA de estratégias para prevenção de infecções relacionadas à assistência à saúde sustenta abordagem direcionada — rastrear e, se positivo, descolonizar — em vez de descolonização universal indiscriminada, dado o custo, o risco de seleção de resistência a mupirocina e o benefício incerto em não portadores. Esta é uma recomendação de prevenção de infecção de sítio cirúrgico/dispositivo de forma geral (relevante a cirurgia cardíaca valvar e a implante de CIED), e não uma recomendação específica e dedicada de diretriz de EI — distinção que deve ficar explícita ao paciente/equipe.",
+        "origem_secao": "Yokoe DS et al., SHEA/IDSA Compendium: Executive Summary 2022 Updates, Infect Control Hosp Epidemiol 2023 (PMID 37606298); nenhuma diretriz de EI dedicada (AHA/ESC) com recomendação específica de descolonização foi localizada nas buscas realizadas para este item."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
