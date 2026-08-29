@@ -33705,5 +33705,64 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "insuficiencia-de-ventriculo-direito-apos-implante-de-lvad-risco-reconhecimento-e-manejo",
+    "condicao": "Insuficiência de ventrículo direito após implante de LVAD",
+    "resumo": "A insuficiência de ventrículo direito (VD) é uma das complicações mais temidas do implante de LVAD, associada a maior mortalidade e tempo de internação em UTI. Este checklist cobre fisiopatologia, estratificação de risco pré-operatória, reconhecimento clínico-hemodinâmico, manejo médico agudo e suporte mecânico temporário de VD quando o manejo médico é insuficiente.",
+    "documento_origem": null,
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kormos RL, Teuteberg JJ, Pagani FD, et al; HeartMate II Clinical Investigators. Right ventricular failure in patients with the HeartMate II continuous-flow left ventricular assist device: incidence, risk factors, and effect on outcomes. J Thorac Cardiovasc Surg. 2010;139(5):1316-1324. DOI: 10.1016/j.jtcvs.2009.11.020. PMID: 20132950.",
+      "Atluri P, Goldstone AB, Fairman AS, et al. Predicting right ventricular failure in the modern, continuous flow left ventricular assist device era. Ann Thorac Surg. 2013;96(3):857-863. DOI: 10.1016/j.athoracsur.2013.03.099. PMID: 23791165. (Escore CRITT)",
+      "Soliman OII, Akin S, Muslem R, et al; EUROMACS Investigators. Derivation and Validation of a Novel Right-Sided Heart Failure Model After Implantation of Continuous Flow Left Ventricular Assist Devices: The EUROMACS Right-Sided Heart Failure Risk Score. Circulation. 2018;137(9):891-906. DOI: 10.1161/CIRCULATIONAHA.117.030543. PMID: 28847897.",
+      "Feldman D, Pamboukian SV, Teuteberg JJ, et al; International Society for Heart and Lung Transplantation. The 2013 International Society for Heart and Lung Transplantation Guidelines for mechanical circulatory support: executive summary. J Heart Lung Transplant. 2013;32(2):157-187. DOI: 10.1016/j.healun.2012.09.013. PMID: 23352391. (Diretriz/consenso ISHLT)",
+      "Rodenas-Alesina E, Brahmbhatt DH, Rao V, Salvatori M, Billia F. Prediction, prevention, and management of right ventricular failure after left ventricular assist device implantation: A comprehensive review. Front Cardiovasc Med. 2022;9:1040251. DOI: 10.3389/fcvm.2022.1040251. PMID: 36407460.",
+      "Lo Coco V, De Piero ME, Massimi G, et al. Right ventricular failure after left ventricular assist device implantation: a review of the literature. J Thorac Dis. 2021;13(2):1256-1269. DOI: 10.21037/jtd-20-2228. PMID: 33717597.",
+      "Anderson MB, Goldstein J, Milano C, et al. Benefits of a novel percutaneous ventricular assist device for right heart failure: The prospective RECOVER RIGHT study of the Impella RP device. J Heart Lung Transplant. 2015;34(12):1549-1560. DOI: 10.1016/j.healun.2015.08.018. PMID: 26681124."
+    ],
+    "itens": [
+      {
+        "id": "fisiopatologia-vd-pos-lvad",
+        "categoria": "Fisiopatologia",
+        "obrigatorio": true,
+        "texto": "Reconhecer que o LVAD pode precipitar ou agravar disfunção de VD por dois mecanismos combinados: (1) a descompressão aguda do VE aumenta o débito cardíaco e, consequentemente, o retorno venoso sistêmico ao VD, impondo uma sobrecarga de pré-carga súbita a um ventrículo já fragilizado pela cardiopatia de base; (2) a redução do volume e da pressão do VE desloca o septo interventricular em direção ao VE, alterando a geometria septal — como parte relevante da função contrátil do VD depende da contração septal (interdependência ventricular), essa mudança geométrica pode comprometer o desempenho sistólico do VD mesmo sem lesão miocárdica adicional. Velocidades de LVAD excessivas acentuam esse desvio septal.",
+        "origem_secao": "Rodenas-Alesina et al., Front Cardiovasc Med 2022 (PMID 36407460) e Lo Coco et al., J Thorac Dis 2021 (PMID 33717597) — revisões sobre fisiologia do VD e suas alterações após implante de LVAD."
+      },
+      {
+        "id": "estratificacao-risco-pre-lvad",
+        "categoria": "Estratificação de risco",
+        "obrigatorio": true,
+        "texto": "Aplicar estratificação de risco pré-operatória para insuficiência de VD como parte da decisão entre LVAD isolado e suporte biventricular (BiVAD) planejado, usando escores validados: (a) preditores independentes descritos por Kormos et al. (coorte HeartMate II BTT, n=484) — relação PVC/PCP (pressão capilar pulmonar) > 0,63, necessidade de ventilação mecânica pré-operatória e ureia (BUN) > 39 mg/dL; (b) escore CRITT (Atluri et al., n=218) — PVC > 15 mmHg (C), disfunção grave de VD ao ecocardiograma (R), intubação pré-operatória (I), regurgitação tricúspide grave (T) e taquicardia com FC > 100 bpm (T); (c) escore de risco EUROMACS-RHF (Soliman et al., registro EUROMACS, n=2988) — escore de 9,5 pontos com 5 variáveis (classe INTERMACS, uso de múltiplos inotrópicos, disfunção grave de VD ao ecocardiograma, relação pressão de átrio direito/PCP e hemoglobina), com incidência de insuficiência de VD variando de 11% no grupo de baixo risco (escore 0–2) a 43,1% no grupo de alto risco (escore > 4). Nenhum desses instrumentos substitui o julgamento clínico individualizado.",
+        "origem_secao": "Kormos et al., J Thorac Cardiovasc Surg 2010 (PMID 20132950); Atluri et al., Ann Thorac Surg 2013 (PMID 23791165 — escore CRITT); Soliman et al., Circulation 2018 (PMID 28847897 — escore EUROMACS-RHF); diretriz ISHLT 2013 (PMID 23352391) como referência de consenso para a decisão LVAD isolado vs. BiVAD."
+      },
+      {
+        "id": "reconhecimento-clinico-hemodinamico-vd",
+        "categoria": "Reconhecimento clínico",
+        "obrigatorio": true,
+        "texto": "Reconhecer precocemente a insuficiência de VD pós-implante por meio de: sinais de baixo fluxo do LVAD decorrentes de enchimento inadequado do VE (secundário à falência do VD em ejetar volume suficiente para a circulação pulmonar e o VE); sinais clínicos de congestão sistêmica (turgência jugular, hepatomegalia, ascite, edema); parâmetros hemodinâmicos, com atenção à pressão venosa central (PVC) elevada e à relação PVC/pressão capilar pulmonar (PVC/PCP) — valor > 0,63 identificado como preditor independente de insuficiência de VD; e avaliação ecocardiográfica seriada da função de VD (incluindo disfunção sistólica grave ao ecocardiograma), já incorporada como variável em escores de risco validados.",
+        "origem_secao": "Kormos et al., J Thorac Cardiovasc Surg 2010 (PMID 20132950 — relação PVC/PCP); Soliman et al., Circulation 2018 (PMID 28847897 — disfunção de VD ao ecocardiograma como variável de escore); Rodenas-Alesina et al., Front Cardiovasc Med 2022 (PMID 36407460 — parâmetros ecocardiográficos e hemodinâmicos de monitorização)."
+      },
+      {
+        "id": "manejo-medico-vd-agudo-pos-lvad",
+        "categoria": "Manejo médico",
+        "obrigatorio": true,
+        "texto": "Iniciar manejo médico da insuficiência de VD aguda pós-implante com: otimização cuidadosa da pré-carga (evitar tanto hipovolemia quanto sobrecarga volêmica, que distende ainda mais um VD já disfuncionante); suporte inotrópico para aumentar a contratilidade do VD; vasodilatadores pulmonares seletivos — óxido nítrico inalatório ou milrinona inalatória/intravenosa — para reduzir a pós-carga do VD por meio da redução da resistência vascular pulmonar; e ajuste cuidadoso da velocidade do LVAD, evitando velocidades excessivas que acentuem o desvio do septo interventricular em direção ao VE e piorem a geometria e a função do VD — considerar redução da velocidade quando o desvio septal for identificado como contribuinte para a falência do VD.",
+        "origem_secao": "Rodenas-Alesina et al., Front Cardiovasc Med 2022 (PMID 36407460 — abordagem multidisciplinar do manejo da insuficiência de VD precoce); Lo Coco et al., J Thorac Dis 2021 (PMID 33717597 — opções de tratamento médico e relação com a fisiologia do VD após suporte do VE)."
+      },
+      {
+        "id": "suporte-mecanico-temporario-vd",
+        "categoria": "Suporte mecânico de VD",
+        "obrigatorio": true,
+        "texto": "Escalar para suporte mecânico temporário de VD quando a insuficiência de VD for refratária à otimização de pré-carga, ao suporte inotrópico e aos vasodilatadores pulmonares, com persistência de baixo fluxo do LVAD, PVC elevada, hipotensão ou hipoperfusão de órgãos-alvo. Opções incluem dispositivo percutâneo de assistência de VD (Impella RP — avaliado prospectivamente no estudo RECOVER RIGHT), ECMO veno-arterial, dispositivos cirúrgicos temporários de assistência de VD e sistemas com cânula ProtekDuo (ex. TandemHeart). A escolha da modalidade depende da gravidade do choque, da necessidade concomitante de suporte respiratório e da experiência do centro.",
+        "origem_secao": "Anderson et al., J Heart Lung Transplant 2015 — estudo RECOVER RIGHT do dispositivo Impella RP (PMID 26681124); Lo Coco et al., J Thorac Dis 2021 (PMID 33717597 — revisão das modalidades de suporte mecânico temporário de VD: ECMO, RVAD cirúrgico e TandemHeart/ProtekDuo)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial; não foi localizada diretriz específica da SBC sobre manejo de insuficiência de VD pós-LVAD — utilizou-se a diretriz/consenso ISHLT 2013 (PMID 23352391) e literatura internacional revisada por pares (escores de risco Kormos, CRITT e EUROMACS-RHF; revisões de Rodenas-Alesina 2022 e Lo Coco 2021; estudo RECOVER RIGHT do Impella RP). Todos os PMIDs/DOIs foram confirmados via NCBI e-utils (esearch/esummary/efetch); nenhum valor numérico foi inventado — os cortes de PVC/PCP, BUN, PVC absoluta, FC e a estrutura do escore EUROMACS-RHF (9,5 pontos, 5 variáveis, faixas de risco 11%–43,1%) foram extraídos diretamente dos abstracts originais."
+    }
   }
 ]
