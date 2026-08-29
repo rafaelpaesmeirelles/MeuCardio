@@ -50,8 +50,8 @@ export default function Documento() {
   if (!doc) return <Carregando />;
 
   const contemFluxograma = /```mermaid\s/i.test(doc.body_md);
-  const ehDiretriz = doc.kind === "diretriz";
-  const originalUrl = ehDiretriz ? fonteOriginal(doc.source_refs) : null;
+  const originalUrl = fonteOriginal(doc.source_refs);
+  const temResumo = Boolean(doc.summary?.trim());
 
   return (
     <article style={{ maxWidth: contemFluxograma ? "100%" : "72ch", minWidth: 0 }}>
@@ -63,17 +63,15 @@ export default function Documento() {
         <span className="selo">versão {doc.version}</span>
       </div>
 
-      {ehDiretriz && (
-        <div className="acoes-linha" style={{ margin: "0 0 1rem", flexWrap: "wrap" }} aria-label="Opções de leitura da diretriz">
-          {doc.summary && <a className="btn primario" href="#resumo-corvia">Resumo CorVIA</a>}
-          <a className="btn" href="#leitura-portugues">Traduzido</a>
-          {originalUrl && (
-            <a className="btn" href={originalUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
-          )}
-        </div>
-      )}
+      <div className="acoes-linha" style={{ margin: "0 0 1rem", flexWrap: "wrap" }} aria-label="Opções de leitura do documento científico">
+        {temResumo && <a className="btn primario" href="#resumo-corvia">Resumo CorVIA</a>}
+        <a className="btn" href="#leitura-portugues">Traduzido</a>
+        {originalUrl && (
+          <a className="btn" href={originalUrl} target="_blank" rel="noopener noreferrer">Original ↗</a>
+        )}
+      </div>
 
-      {ehDiretriz && doc.summary && (
+      {temResumo && (
         <div id="resumo-corvia" className="cartao" style={{ marginBottom: "1rem", scrollMarginTop: "1rem" }}>
           <p className="eyebrow">Resumo CorVIA</p>
           <p>{doc.summary}</p>
@@ -82,8 +80,8 @@ export default function Documento() {
 
       <ExportarApresentacao slug={slug!} titulo={doc.title} />
 
-      <div id={ehDiretriz ? "leitura-portugues" : undefined} className="cartao" style={{ minWidth: 0, overflow: "visible", scrollMarginTop: "1rem" }}>
-        {ehDiretriz && <p className="eyebrow">Leitura em português</p>}
+      <div id="leitura-portugues" className="cartao" style={{ minWidth: 0, overflow: "visible", scrollMarginTop: "1rem" }}>
+        <p className="eyebrow">Leitura em português</p>
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -96,11 +94,9 @@ export default function Documento() {
         >
           {doc.body_md}
         </Markdown>
-        {ehDiretriz && (
-          <p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem", marginTop: "1rem" }}>
-            Leitura clínica em português produzida pelo CorVIA a partir das fontes referenciadas. Não substitui nem republica integralmente o documento original protegido.
-          </p>
-        )}
+        <p style={{ color: "var(--texto-secundario)", fontSize: "0.86rem", marginTop: "1rem" }}>
+          Leitura clínica em português produzida pelo CorVIA a partir das fontes referenciadas. Quando houver obra externa protegida, esta camada é síntese original e não republicação integral do texto-fonte.
+        </p>
       </div>
 
       {doc.source_refs.length > 0 && (
