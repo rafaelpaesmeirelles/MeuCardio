@@ -3,6 +3,7 @@ name: Emergency profile hotfix deploy
 # Reutilizado para hotfixes de produção com validação obrigatória do SHA público.
 # 29/08/2026: release consolidada ChatGPT + Claude + Grok + ajuste do logo no login.
 # 29/08/2026: novas publicações do Intelligence com Resumo CorVIA / Traduzido / Original.
+# 29/08/2026: tradução externa removida; leitura em português passa a ser interna no CorVIA.
 
 on:
   push:
