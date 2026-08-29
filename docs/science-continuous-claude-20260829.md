@@ -564,3 +564,17 @@ de alto risco (opcional), descolonização sem rastreio (não indicado).
 Despachado (agente a2d4aaf7d8a7de498).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 22 — concluído (1 commit, SHA 84129a44) — total 48 commits
+
+- exame `vigilancia-por-imagem-de-toda-a-aorta-e-timing-de-intervencao-na-aortite-inflamatoria-em-remissao`
+  — novo, complementar ao documento narrativo de Takayasu/ACG. 7 PMIDs
+  verificados (Espitia 2021 PMID 33413605, ACR/VF 2021 PMID 34235884,
+  Zheng 2019 PMID 29313449). Declarado explicitamente: a própria diretriz
+  reconhece ausência de indicador de atividade validado; nenhum corte
+  numérico de remissão foi inventado.
+
+Lote 23 (profilaxia antibiótica de endocardite, 8 itens) segue em
+execução em paralelo — despachado antes deste checkpoint.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
