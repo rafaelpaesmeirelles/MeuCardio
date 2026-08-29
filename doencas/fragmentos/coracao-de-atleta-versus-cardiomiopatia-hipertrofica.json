@@ -1,0 +1,547 @@
+[
+  {
+    "slug": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+    "name": "Coração de atleta versus cardiomiopatia hipertrófica: diferenciação na zona cinzenta",
+    "aliases": [
+      "Zona cinzenta cardiológica do atleta",
+      "Diferenciação entre coração de atleta e CMH",
+      "Athlete's heart vs hypertrophic cardiomyopathy gray zone",
+      "Remodelamento cardíaco fisiológico do atleta versus cardiomiopatia hipertrófica",
+      "Hipertrofia ventricular esquerda em zona cinzenta no atleta"
+    ],
+    "area": "geral",
+    "category": "avaliacao_esportiva",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Este verbete NÃO descreve uma doença isolada: é um verbete de diferencial diagnóstico dedicado a um problema recorrente da cardiologia do esporte — distinguir o remodelamento cardíaco fisiológico induzido pelo treinamento sistemático e intenso (\"coração de atleta\") da cardiomiopatia hipertrófica (CMH) verdadeira, a principal causa cardíaca de morte súbita em atletas jovens. Na maioria dos atletas o remodelamento é discreto e facilmente reconhecível como fisiológico, mas um subgrupo apresenta hipertrofia em grau mais pronunciado — a \"zona cinzenta\" propriamente dita — em que nenhuma medida isolada (sobretudo a espessura de parede ventricular) permite a diferenciação com segurança. A literatura contemporânea converge para uma abordagem multimodal e hierárquica que integra padrão de hipertrofia, função diastólica, tamanho do átrio esquerdo, deformação miocárdica (strain), eletrocardiograma, resposta a período de destreinamento e história familiar, escalando de ECG para ecocardiograma com avaliação de deformação miocárdica e, quando a dúvida persiste, para ressonância magnética cardíaca. Populações específicas — atletas mulheres e atletas master — exigem referências e ponderações próprias dentro dessa mesma lógica integrada.",
+    "epidemiology": "A cardiomiopatia hipertrófica tem prevalência populacional estimada em cerca de 1 em 500 adultos e é reconhecida como a principal causa cardíaca de morte súbita em atletas jovens e em indivíduos com menos de 35 anos em geral, o que torna sua identificação correta em atletas uma prioridade de segurança esportiva. Ao mesmo tempo, o treinamento físico sistemático e intenso — sobretudo em modalidades de endurance e mistas — induz remodelamento estrutural e elétrico real, com aumento progressivo de dimensões cavitárias e espessura parietal conforme a modalidade esportiva, criando sobreposição fenotípica com a CMH em parcela dos atletas de alto rendimento (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890). Essa zona de sobreposição não é uniforme entre subgrupos: mulheres atletas apresentam magnitude de remodelamento estrutural menor que homens, ainda que também mostrem remodelamento elétrico real (menor frequência cardíaca de repouso, PR mais longo, maior voltagem de R/T, mais critérios elétricos de hipertrofia), e a interpretação de achados como inversão de onda T deve considerar ancestralidade — mais frequente em atletas negras que em outros grupos étnicos em meta-análise recente (D'Ascenzi et al., Int J Cardiol 2024, PMID 38262482; Laurier et al., Eur J Prev Cardiol 2026, PMID 41289042). Em atletas pediátricos e adolescentes, os critérios eletrocardiográficos do atleta foram desenvolvidos majoritariamente em adultos e podem não se aplicar bem, adicionando dificuldade à diferenciação nessa faixa etária (Wiradinata et al., Eur J Pediatr 2025, PMID 41313487). Em atletas master, a idade aumenta a probabilidade de doença cardiovascular adquirida coexistir com adaptações do treinamento, o que exige que achados de imagem (calcificação coronária, fibrose miocárdica, dilatação aórtica) não sejam automaticamente atribuídos nem ao treinamento nem à doença sem integração clínica (Eijsvogels et al., Eur Heart J 2026, PMID 41947397).",
+    "presentation": [
+      "Achado incidental de hipertrofia ventricular esquerda em atleta assintomático, durante ecocardiograma de rotina, avaliação pré-participação esportiva ou eletrocardiograma de triagem",
+      "Alteração eletrocardiográfica de triagem que não se encaixa claramente nos padrões reconhecidos de adaptação fisiológica do atleta (ex.: QTc prolongado, alteração de onda T ou de segmento ST em território atípico, onda Q patológica), motivando investigação adicional antes de qualquer conclusão",
+      "Atleta com história familiar de cardiomiopatia hipertrófica ou de morte súbita cardíaca prematura, encaminhado para avaliação dirigida mesmo sem sintomas",
+      "Hipertrofia ventricular identificada durante investigação de sintomas relacionados a esforço — palpitações, síncope ou pré-síncope, dispneia desproporcional ao condicionamento aparente",
+      "Achado de imagem em zona de sobreposição (espessura parietal, dimensões cavitárias ou padrão de deformação miocárdica não claramente fisiológicos nem claramente patológicos) que exige investigação adicional antes de qualquer decisão sobre elegibilidade esportiva",
+      "Discordância entre achados de ECG e de ecocardiograma, situação em que nenhuma das fontes recomenda resolução pelo achado isolado, mas sim escalonamento para imagem estrutural mais detalhada"
+    ],
+    "diagnostic_approach": {
+      "principio_geral": "Nenhuma fonte revisada propõe um critério único e definitivo para separar coração de atleta de cardiomiopatia hipertrófica na zona cinzenta. O padrão que emerge de forma consistente é o de uma abordagem multimodal e hierárquica: ECG de repouso como primeira triagem, seguido de ecocardiograma com avaliação de deformação miocárdica, escalando para ressonância magnética cardíaca quando a dúvida persistir (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890). A espessura de parede ventricular isolada NÃO deve ser usada como critério diagnóstico definitivo: ela é apenas um dos parâmetros integrados nessa avaliação, e os próprios cortes numéricos empregados nos algoritmos de imagem publicados não estão detalhados nos resumos indexados das fontes consultadas, exigindo verificação humana do texto completo antes de qualquer aplicação clínica de limiar específico.",
+      "padrao_de_hipertrofia": "O padrão morfológico da hipertrofia — mais concêntrico e simétrico no remodelamento fisiológico do atleta versus mais segmentar, assimétrico ou de distribuição atípica (incluindo apical) na cardiomiopatia hipertrófica verdadeira — integra os algoritmos de imagem descritos como centrais para a diferenciação, ao lado de função diastólica e deformação miocárdica; os cortes numéricos exatos que operacionalizam essa distinção não foram detalhados no resumo indexado da fonte e requerem verificação do texto completo antes de aplicação clínica (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890).",
+      "funcao_diastolica_ao_doppler_tecidual": "A avaliação da função diastólica por Doppler tecidual (velocidades miocárdicas e relação com o enchimento transmitral) compõe, junto ao padrão de hipertrofia e à deformação miocárdica, o conjunto de parâmetros de imagem usados nos algoritmos hierárquicos para diferenciar fenótipos normais de anormais na zona cinzenta — direção qualitativa consistente com a caracterização já registrada no acervo para o diferencial \"coração de atleta\" da CMH, de função diastólica tipicamente preservada no remodelamento fisiológico. Cortes numéricos específicos de velocidade miocárdica não constam do resumo indexado desta fonte e não devem ser inventados; ficam sujeitos à mesma ressalva de verificação humana do texto completo (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890).",
+      "tamanho_do_atrio_esquerdo": "O dimensionamento do átrio esquerdo integra a avaliação estrutural que compõe os algoritmos de imagem hierárquicos da zona cinzenta, ao lado do padrão de hipertrofia e da função diastólica — parâmetros que se relacionam fisiopatologicamente, já que disfunção diastólica sustentada tende a se acompanhar de remodelamento atrial. Nenhum corte numérico específico de diâmetro ou volume atrial foi detalhado no resumo indexado da fonte consultada; a mesma ressalva de verificação humana do texto completo se aplica antes de uso de qualquer limiar numérico (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890).",
+      "resposta_ao_destreinamento": "A regressão do remodelamento após período de destreinamento (classicamente descrita como teste dinâmico de cerca de três meses de interrupção ou redução substancial do treinamento) é um critério clássico de diferenciação já registrado no acervo (ficha de cardiomiopatia hipertrófica): favorece coração de atleta quando há regressão mensurável da hipertrofia, e reforça a suspeita de CMH verdadeira quando a hipertrofia persiste inalterada apesar do destreinamento adequado. É um teste de aplicação prática limitada — depende de adesão do atleta, período de calendário esportivo compatível e reavaliação de imagem estruturada antes e depois — e nenhuma das fontes revisadas nesta produção detalha percentual de regressão esperado como corte numérico verificado; esse dado não deve ser inventado.",
+      "historia_familiar": "História familiar de cardiomiopatia hipertrófica ou de morte súbita cardíaca prematura é red flag maior e critério de peso na diferenciação, coerente com o papel central que a história familiar assume tanto na estratificação de risco da CMH quanto na decisão de rastreamento em cascata já registrado na ficha própria de cardiomiopatia hipertrófica do acervo. Sua ausência não exclui CMH (penetrância incompleta e variável), mas sua presença desloca a probabilidade pré-teste na direção de doença genética e deve motivar investigação completa antes de qualquer liberação esportiva.",
+      "eletrocardiograma": "Metanálise pediátrica com 25 estudos elegíveis identificou diferenças eletrocardiográficas significativas, mais prevalentes no grupo com CMH que na adaptação fisiológica do atleta jovem, em prolongamento do intervalo QTc, alterações de onda T e de segmento ST, e ondas Q patológicas; achados complementares de estudos de braço único também apontaram diferença em desvio de eixo, aumento atrial e bloqueios de ramo. Os valores agregados exatos (odds ratio, sensibilidade, especificidade) não constam do resumo indexado e requerem verificação humana antes de uso como corte numérico. A própria metanálise recomenda que uma alteração eletrocardiográfica detectada deve motivar investigação adicional, nunca servir como critério diagnóstico definitivo isolado — e ressalva que os critérios de ECG do atleta foram desenvolvidos majoritariamente em população adulta, podendo não se aplicar bem a crianças e adolescentes (Wiradinata et al., Eur J Pediatr 2025, PMID 41313487).",
+      "strain_longitudinal_global": "Deformação miocárdica (strain) por ecocardiografia é citada como parâmetro central nos algoritmos de imagem para a zona cinzenta (Pagourelias et al., Heart Fail Rev 2025, PMID 40576890) e é o único parâmetro, em revisão de escopo sobre inteligência artificial aplicada a essa diferenciação, com estudo comparando diretamente CMH contra coração de atleta: classificador por máquina de vetores de suporte usando parâmetros de strain obteve AUC de 0,93 nessa comparação direta — resultado de um único estudo, sem base de dados específica de atletas mais ampla nem validação externa disponível na revisão, o que limita a aplicabilidade clínica atual dessa ferramenta (Deligiannis et al., Hellenic J Cardiol 2026, PMID 42142808).",
+      "populacoes_especificas": "A interpretação de qualquer um dos critérios acima deve considerar sexo, modalidade esportiva e, quando relevante, ancestralidade: mulheres atletas apresentam remodelamento estrutural de menor magnitude que homens apesar de remodelamento elétrico real, e inversão de onda T varia de frequência entre grupos étnicos, o que reforça que nenhum critério deve ser aplicado de forma genérica sem essas referências específicas (D'Ascenzi et al., Int J Cardiol 2024, PMID 38262482; Laurier et al., Eur J Prev Cardiol 2026, PMID 41289042). Em atletas master, achados de imagem (fibrose miocárdica, calcificação coronária) podem refletir doença adquirida relacionada à idade e não apenas adaptação ou fenocópia genética, exigindo integração com risco cardiovascular tradicional (Eijsvogels et al., Eur Heart J 2026, PMID 41947397)."
+    },
+    "differentials": [
+      "Cardiomiopatia hipertrófica verdadeira (hipertrofia ventricular esquerda de origem predominantemente genética/sarcomérica, não explicada por sobrecarga hemodinâmica ou adaptação ao treinamento)",
+      "Coração de atleta (hipertrofia fisiológica de adaptação ao treinamento sistemático e intenso, tipicamente com função diastólica preservada e potencial de regressão com destreinamento)",
+      "Cardiopatia hipertensiva (hipertrofia ventricular esquerda secundária a sobrecarga pressórica crônica, a ser considerada sobretudo em atletas master ou com fatores de risco cardiovascular)",
+      "Outras cardiomiopatias hereditárias que também podem se manifestar em pessoas fisicamente ativas — cardiomiopatia dilatada e cardiomiopatia arritmogênica em fase pré-clínica ou de fenótipo sutil — mencionadas como diagnóstico diferencial adicional no guia de imagem da zona cinzenta",
+      "Doença cardiovascular adquirida coexistente em atleta master (aterosclerose coronária subclínica, fibrilação atrial relacionada a remodelamento atrial, dilatação aórtica), que pode se sobrepor ou ser confundida com achados de imagem atribuídos ao treinamento",
+      "Fenótipo indeterminado mesmo após investigação estruturada completa, que exige reavaliação periódica em vez de rótulo diagnóstico definitivo prematuro"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações, interpretado com critérios específicos de atleta, como primeira triagem — atenção a QTc, alterações de onda T/segmento ST e onda Q patológica, sobretudo em atletas jovens",
+      "Ecocardiograma transtorácico com avaliação de padrão de hipertrofia, função diastólica (incluindo Doppler tecidual) e deformação miocárdica (strain longitudinal global)",
+      "Ressonância magnética cardíaca, escalonada quando ECG e ecocardiograma são discordantes entre si ou quando o padrão permanece indeterminado após a avaliação ecocardiográfica, para caracterização estrutural mais detalhada e pesquisa de realce tardio",
+      "Teste de destreinamento (período de interrupção ou redução substancial do treinamento, com reavaliação de imagem estruturada antes e depois), como teste dinâmico de aplicação seletiva quando o calendário esportivo e a adesão do atleta permitirem",
+      "História clínica e familiar detalhada, incluindo pesquisa dirigida de morte súbita cardíaca prematura em parentes de primeiro grau",
+      "Teste ergométrico ou teste cardiopulmonar de esforço, quando há dúvida sobre segurança esportiva, buscando reproduzir a demanda da modalidade e identificar sintomas, arritmias complexas, resposta pressórica inadequada ou limitação funcional desproporcional",
+      "Holter ou monitorização de ritmo prolongada, quando há palpitações ou suspeita de arritmia associada",
+      "Teste genético em painel, com aconselhamento genético prévio, reservado a casos com fenótipo de probabilidade diagnóstica elevada para cardiomiopatia hipertrófica ou história familiar sugestiva"
+    ],
+    "red_flags": [
+      "História familiar de morte súbita cardíaca prematura ou de cardiomiopatia hipertrófica em parente de primeiro grau",
+      "Síncope ou pré-síncope, sobretudo relacionada a esforço físico ou de origem não claramente neurocardiogênica",
+      "Padrão de hipertrofia assimétrico, segmentar ou de distribuição atípica (incluindo apical), em vez de padrão concêntrico simétrico compatível com adaptação fisiológica",
+      "Obstrução (documentada ou provocável) da via de saída do ventrículo esquerdo",
+      "Função diastólica alterada ao Doppler tecidual ou strain longitudinal global anormal, discordantes de remodelamento puramente fisiológico",
+      "Alterações eletrocardiográficas mais prevalentes em cardiomiopatia hipertrófica — QTc prolongado, alteração de onda T ou de segmento ST em território atípico, onda Q patológica — sobretudo em atletas jovens",
+      "Ausência de regressão da hipertrofia após período adequado de destreinamento, quando esse teste é aplicável",
+      "Arritmia ventricular complexa documentada em Holter ou monitorização prolongada",
+      "Realce tardio de gadolínio à ressonância magnética cardíaca, sobretudo em padrão e extensão não esperados para o contexto"
+    ],
+    "ambulatory_flow": [
+      "Realizar eletrocardiograma de 12 derivações como primeira triagem, interpretado com critérios específicos de atleta (considerando sexo, idade e modalidade esportiva).",
+      "Se o ECG mostrar achados mais prevalentes em cardiomiopatia hipertrófica, ou se houver sintomas, história familiar de morte súbita/CMH ou achado de imagem prévio duvidoso, avançar diretamente para ecocardiograma estrutural completo.",
+      "Realizar ecocardiograma transtorácico com avaliação de padrão de hipertrofia, função diastólica ao Doppler tecidual, tamanho do átrio esquerdo e deformação miocárdica (strain longitudinal global).",
+      "Se o ecocardiograma sugerir padrão fisiológico e não houver outros red flags, considerar remodelamento compatível com coração de atleta, mantendo reavaliação periódica sem restrição esportiva.",
+      "Se o ecocardiograma for inconclusivo, discordante do ECG ou sugerir padrão patológico, escalonar para ressonância magnética cardíaca para diferenciação estrutural mais detalhada antes de qualquer decisão sobre elegibilidade esportiva.",
+      "Quando clinicamente exequível (calendário esportivo compatível, adesão do atleta), considerar teste de destreinamento com reavaliação de imagem estruturada antes e depois, como ferramenta adicional de diferenciação dinâmica.",
+      "Investigar história familiar de forma dirigida e, quando houver suspeita relevante de CMH genética, encaminhar para aconselhamento genético e considerar teste genético em painel.",
+      "Reservar a decisão final sobre elegibilidade esportiva para depois da integração de todos os critérios disponíveis — nunca com base em achado isolado, sobretudo espessura de parede isolada — em discussão compartilhada com o atleta.",
+      "Reavaliar periodicamente atletas cujo fenótipo permaneça indeterminado mesmo após investigação completa, em vez de fixar rótulo diagnóstico definitivo prematuramente."
+    ],
+    "emergency_flow": [
+      "Síncope durante ou imediatamente após exercício, ou palpitações sustentadas com instabilidade: interromper a atividade, obter ECG e monitorização cardíaca contínua, e realizar ecocardiograma para excluir obstrução crítica da via de saída do VE ou arritmia ventricular antes de qualquer retorno ao esporte.",
+      "Dor torácica associada a dispneia súbita ou instabilidade hemodinâmica em atleta com hipertrofia ventricular conhecida ou suspeita: investigar obstrução dinâmica grave da via de saída do VE e descompensação hemodinâmica aguda.",
+      "Parada cardiorrespiratória ou taquicardia ventricular sustentada documentada durante esforço: ressuscitação conforme protocolo de suporte avançado de vida, com acesso rápido a desfibrilador (DEA) na cadeia de sobrevivência do ambiente esportivo, e avaliação cardiológica completa antes de qualquer consideração de retorno ao esporte.",
+      "Nenhum achado isolado de ECG ou imagem, por mais tranquilizador que pareça, autoriza dispensar avaliação de emergência em atleta sintomático agudo — a suspeita clínica de evento arrítmico ou obstrutivo agudo deve sempre prevalecer sobre a hipótese de coração de atleta até investigação completa."
+    ],
+    "treatment_summary": "Este verbete não trata de doença com esquema terapêutico próprio: a conduta depende inteiramente do diagnóstico final alcançado após a investigação integrada. Quando a avaliação multimodal (padrão de hipertrofia, função diastólica, tamanho do átrio esquerdo, strain, ECG, história familiar e, quando aplicável, resposta ao destreinamento) é consistente com remodelamento fisiológico do atleta, não há indicação de restrição esportiva, e o acompanhamento é de reavaliação periódica. Quando a investigação confirma cardiomiopatia hipertrófica verdadeira, a decisão sobre participação esportiva deixou de ser automática ou binária na literatura contemporânea: em vez de exclusão sistemática, atletas de baixo risco podem ser considerados para exercício estruturado e, em perfis selecionados, para esporte competitivo, após avaliação especializada, estratificação formal de risco de morte súbita e decisão compartilhada — reconhecendo que os dados de segurança são mais robustos para exercício moderado do que para intensidade competitiva extrema, e que a reavaliação deve ser periódica porque a CMH é doença dinâmica (Kim et al., Circulation 2025, PMID 39973614; Zampieri et al., Eur Heart J 2026, PMID 41065586; Pelliccia et al., Br J Sports Med 2020, PMID 32532845). Quando o fenótipo permanece indeterminado após investigação completa, a conduta é de reavaliação periódica estruturada, sem liberação nem restrição definitiva baseada em achado incompleto ou isolado. Nenhuma dose de fármaco é abordada neste verbete, que é sobre diferenciação diagnóstica e elegibilidade esportiva, não sobre tratamento farmacológico da CMH (tratado na ficha própria \"cardiomiopatia-hipertrofica\").",
+    "monitoring": [
+      "Reavaliação periódica de ECG e ecocardiograma em atletas cujo remodelamento permanece na zona cinzenta, com intervalo definido conforme julgamento clínico e categoria de risco.",
+      "Reavaliação de imagem estruturada após período de destreinamento, nos casos em que esse teste dinâmico foi aplicado.",
+      "Acompanhamento longitudinal de função diastólica e strain longitudinal global, sobretudo quando o resultado inicial for limítrofe.",
+      "Reavaliação sempre que houver sintoma novo (síncope, palpitações, dispneia desproporcional) ou alteração de wearable/monitor pessoal, com confirmação diagnóstica formal antes de qualquer decisão de restrição ou liberação esportiva.",
+      "Acompanhamento de familiares de primeiro grau quando a investigação apontar para suspeita relevante de cardiomiopatia hipertrófica genética.",
+      "Reestratificação periódica de elegibilidade esportiva em atletas com diagnóstico confirmado de CMH, já que a doença é dinâmica e o perfil de risco pode mudar ao longo do tempo.",
+      "Em atletas master, integração longitudinal de achados de imagem com risco cardiovascular tradicional, não interpretando isoladamente fibrose miocárdica, calcificação coronária ou dilatação aórtica como equivalentes automáticos a doença em progressão."
+    ],
+    "special_populations": [
+      "Atleta feminina: remodelamento estrutural de menor magnitude que em homens, apesar de remodelamento elétrico real (menor frequência cardíaca de repouso, PR mais longo, maior voltagem de R/T, mais critérios elétricos de hipertrofia); a interpretação correta exige referências normativas específicas de sexo, modalidade esportiva e, para achados como inversão de onda T, ancestralidade — usar apenas critérios historicamente construídos em populações masculinas aumenta o risco tanto de sobrediagnóstico quanto de subdiagnóstico (D'Ascenzi et al., Int J Cardiol 2024, PMID 38262482; Laurier et al., Eur J Prev Cardiol 2026, PMID 41289042)",
+      "Atleta master: a idade aumenta a probabilidade de doença cardiovascular adquirida (aterosclerose coronária, fibrilação atrial, dilatação aórtica, fibrose miocárdica) coexistir com adaptações fisiológicas do treinamento; achados de imagem não devem ser automaticamente rotulados como equivalentes aos mesmos achados em sedentários sintomáticos, nem automaticamente atribuídos ao treinamento sem avaliação de risco cardiovascular tradicional e decisão compartilhada (Eijsvogels et al., Eur Heart J 2026, PMID 41947397)",
+      "Atleta pediátrico e adolescente: os critérios de ECG do atleta disponíveis foram desenvolvidos majoritariamente em população adulta e podem não se aplicar bem à criança e ao adolescente, o que exige cautela adicional na triagem eletrocardiográfica dessa faixa etária (Wiradinata et al., Eur J Pediatr 2025, PMID 41313487)",
+      "Atleta com fenótipo indeterminado apesar de investigação completa: não deve receber rótulo diagnóstico definitivo prematuro; a conduta correta é reavaliação periódica estruturada, com decisão de elegibilidade esportiva revisada a cada reavaliação"
+    ],
+    "assistant_questions": [
+      {
+        "id": "padrao_hipertrofia",
+        "label": "Qual o padrão de hipertrofia ventricular observado ao ecocardiograma?",
+        "type": "select",
+        "options": [
+          {
+            "value": "concentrica_simetrica",
+            "label": "Concêntrica e simétrica"
+          },
+          {
+            "value": "assimetrica_segmentar",
+            "label": "Assimétrica ou segmentar"
+          },
+          {
+            "value": "apical",
+            "label": "Apical"
+          },
+          {
+            "value": "indeterminado",
+            "label": "Indeterminado"
+          }
+        ]
+      },
+      {
+        "id": "funcao_diastolica",
+        "label": "Como está a função diastólica ao Doppler tecidual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal/preservada"
+          },
+          {
+            "value": "alterada",
+            "label": "Alterada"
+          },
+          {
+            "value": "indeterminada",
+            "label": "Indeterminada"
+          }
+        ]
+      },
+      {
+        "id": "atrio_esquerdo_aumentado",
+        "label": "O átrio esquerdo está aumentado?",
+        "type": "boolean"
+      },
+      {
+        "id": "strain_longitudinal_alterado",
+        "label": "O strain longitudinal global está alterado?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_sugestivo_cmh",
+        "label": "O ECG mostra achados mais prevalentes em cardiomiopatia hipertrófica (QTc prolongado, alteração de onda T/ST, onda Q patológica)?",
+        "type": "boolean"
+      },
+      {
+        "id": "historia_familiar_cmh_ou_morte_subita",
+        "label": "Há história familiar de cardiomiopatia hipertrófica ou de morte súbita cardíaca prematura?",
+        "type": "boolean"
+      },
+      {
+        "id": "sincope_ou_sintomas_esforco",
+        "label": "Há síncope, pré-síncope ou sintomas relevantes relacionados a esforço?",
+        "type": "boolean"
+      },
+      {
+        "id": "obstrucao_via_saida_ve",
+        "label": "Há obstrução documentada ou provocável da via de saída do ventrículo esquerdo?",
+        "type": "boolean"
+      },
+      {
+        "id": "sexo_atleta",
+        "label": "Qual o sexo do atleta?",
+        "type": "select",
+        "options": [
+          {
+            "value": "feminino",
+            "label": "Feminino"
+          },
+          {
+            "value": "masculino",
+            "label": "Masculino"
+          }
+        ]
+      },
+      {
+        "id": "atleta_master",
+        "label": "O atleta se enquadra na categoria master (idade avançada, com possível coexistência de doença cardiovascular adquirida)?",
+        "type": "boolean"
+      },
+      {
+        "id": "teste_destreinamento_realizado",
+        "label": "Foi realizado teste de destreinamento com reavaliação de imagem?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizado",
+            "label": "Não realizado"
+          },
+          {
+            "value": "regressao",
+            "label": "Realizado, com regressão da hipertrofia"
+          },
+          {
+            "value": "sem_regressao",
+            "label": "Realizado, sem regressão da hipertrofia"
+          }
+        ]
+      },
+      {
+        "id": "rmc_realizada_com_realce_tardio",
+        "label": "A ressonância magnética cardíaca foi realizada e mostrou realce tardio de gadolínio?",
+        "type": "boolean"
+      },
+      {
+        "id": "fenotipo_indeterminado_apos_investigacao",
+        "label": "O fenótipo permanece indeterminado mesmo após investigação completa (ECG, ecocardiograma com strain, RMC quando indicada)?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "padrao_atipico_suspeita_cmh",
+        "priority": 80,
+        "when": {
+          "any": [
+            {
+              "field": "padrao_hipertrofia",
+              "op": "eq",
+              "value": "assimetrica_segmentar"
+            },
+            {
+              "field": "padrao_hipertrofia",
+              "op": "eq",
+              "value": "apical"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Padrão de hipertrofia assimétrico, segmentar ou apical é mais compatível com cardiomiopatia hipertrófica verdadeira do que com remodelamento fisiológico do atleta; investigar de forma completa antes de qualquer decisão de elegibilidade esportiva."
+          ],
+          "suggested_tests": [
+            "Ressonância magnética cardíaca para caracterização estrutural mais detalhada."
+          ]
+        }
+      },
+      {
+        "id": "funcao_diastolica_alterada",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_diastolica",
+              "op": "eq",
+              "value": "alterada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Função diastólica alterada ao Doppler tecidual é discordante de remodelamento puramente fisiológico do atleta; reforça necessidade de investigação estrutural completa."
+          ]
+        }
+      },
+      {
+        "id": "atrio_esquerdo_aumentado_regra",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "atrio_esquerdo_aumentado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Átrio esquerdo aumentado integra os parâmetros de imagem usados na diferenciação da zona cinzenta; considerar em conjunto com padrão de hipertrofia e função diastólica, sem uso isolado como critério definitivo."
+          ]
+        }
+      },
+      {
+        "id": "strain_alterado_regra",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "strain_longitudinal_alterado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Strain longitudinal global alterado é o parâmetro com melhor desempenho isolado descrito para diferenciar CMH de coração de atleta em estudo de inteligência artificial (AUC 0,93), embora baseado em evidência ainda limitada; reforça indicação de investigação adicional."
+          ]
+        }
+      },
+      {
+        "id": "ecg_sugestivo_investigar",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_sugestivo_cmh",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Alteração eletrocardiográfica mais prevalente em cardiomiopatia hipertrófica detectada: motiva investigação adicional (ecocardiograma com strain, considerar RMC), nunca deve ser usada isoladamente como critério diagnóstico definitivo em qualquer direção."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico com avaliação de deformação miocárdica."
+          ]
+        }
+      },
+      {
+        "id": "historia_familiar_red_flag",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "historia_familiar_cmh_ou_morte_subita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "História familiar de cardiomiopatia hipertrófica ou de morte súbita cardíaca prematura: red flag maior, desloca a probabilidade pré-teste para doença genética e exige investigação completa antes de liberação esportiva."
+          ]
+        }
+      },
+      {
+        "id": "sincope_red_flag",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "sincope_ou_sintomas_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope, pré-síncope ou sintomas relevantes relacionados a esforço: red flag maior, exige avaliação cardiológica completa antes de qualquer conclusão sobre coração de atleta."
+          ]
+        }
+      },
+      {
+        "id": "obstrucao_via_saida_red_flag",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "obstrucao_via_saida_ve",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Obstrução documentada ou provocável da via de saída do ventrículo esquerdo é achado incompatível com coração de atleta puro; tratar como forte suspeita de cardiomiopatia hipertrófica obstrutiva até investigação completa."
+          ]
+        }
+      },
+      {
+        "id": "populacao_feminina_referencia_especifica",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "sexo_atleta",
+              "op": "eq",
+              "value": "feminino"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Interpretar ECG e ecocardiograma com referências normativas específicas de sexo, modalidade esportiva e ancestralidade; critérios construídos em populações masculinas podem levar a sobrediagnóstico ou subdiagnóstico na atleta feminina."
+          ]
+        }
+      },
+      {
+        "id": "atleta_master_integracao_risco_cv",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "atleta_master",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Integrar achados de imagem com risco cardiovascular tradicional; não atribuir automaticamente hipertrofia, fibrose miocárdica ou outros achados apenas ao treinamento ou apenas a doença adquirida sem avaliação individualizada."
+          ]
+        }
+      },
+      {
+        "id": "destreinamento_sem_regressao",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "teste_destreinamento_realizado",
+              "op": "eq",
+              "value": "sem_regressao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Ausência de regressão da hipertrofia após período adequado de destreinamento reforça a suspeita de cardiomiopatia hipertrófica verdadeira em vez de remodelamento puramente fisiológico."
+          ],
+          "suggested_tests": [
+            "Considerar teste genético em painel com aconselhamento genético prévio."
+          ]
+        }
+      },
+      {
+        "id": "destreinamento_com_regressao",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "teste_destreinamento_realizado",
+              "op": "eq",
+              "value": "regressao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Regressão da hipertrofia após destreinamento é achado consistente com remodelamento fisiológico do atleta, mas deve ser interpretada em conjunto com os demais critérios, não isoladamente."
+          ]
+        }
+      },
+      {
+        "id": "rmc_realce_tardio_presente",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "rmc_realizada_com_realce_tardio",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Realce tardio de gadolínio à ressonância magnética cardíaca é achado atípico para coração de atleta puro; investigar padrão e extensão e encaminhar para avaliação cardiológica especializada."
+          ]
+        }
+      },
+      {
+        "id": "fenotipo_indeterminado_reavaliar",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "fenotipo_indeterminado_apos_investigacao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Fenótipo permanece indeterminado mesmo após investigação completa: não atribuir rótulo diagnóstico definitivo; programar reavaliação periódica estruturada e revisar elegibilidade esportiva a cada reavaliação."
+          ],
+          "missing_information": [
+            "Diagnóstico definitivo pendente de reavaliação longitudinal."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiologia do esporte",
+      "coração de atleta",
+      "cardiomiopatia hipertrófica",
+      "diagnóstico diferencial",
+      "zona cinzenta",
+      "elegibilidade esportiva",
+      "ecocardiograma com strain",
+      "atleta feminina",
+      "atleta master",
+      "morte súbita cardíaca no atleta"
+    ],
+    "source_refs": [
+      "Pagourelias ED, Ouzouni S, Salmatzidis P, Sargiannidis T, Tsiouli E, Ntelios D, Kouidi E, Vassilikos VP. A concise guide of contemporary cardiovascular imaging practices to differentiate athlete's heart in the gray zone. Heart Fail Rev. 2025;30(6):1215-1224. DOI 10.1007/s10741-025-10541-y. PMID 40576890.",
+      "Wiradinata W, Aditya MR, Subali AD, Lestari H, Hardani RB, Mukti NH. Distinguishing athlete's heart from hypertrophic cardiomyopathy by ECG features in the pediatric population: a systematic review and meta-analysis. Eur J Pediatr. 2025;184(12):802. DOI 10.1007/s00431-025-06657-w. PMID 41313487.",
+      "Deligiannis A, Bompotis G, Deligiannis P, Anifanti M, Kouidi E. Artificial intelligence in the differential diagnosis of hypertrophic cardiomyopathy and physiological hypertrophy: a scoping review. Hellenic J Cardiol. 2026 May 15. PMID 42142808.",
+      "D'Ascenzi F, Cavigli L, Marchese A, et al. Electrical and structural remodelling in female athlete's heart: A comparative study in women vs men athletes and controls. Int J Cardiol. 2024;400:131808. PMID 38262482.",
+      "Laurier N, Salvini Z, Syed LD, et al. Normal echocardiographic and electrocardiographic indices in young female athletes: a meta-analysis across sex, types of sports, races, and ethnicities. Eur J Prev Cardiol. 2026;33(8):1332-1344. DOI 10.1093/eurjpc/zwaf755. PMID 41289042.",
+      "Eijsvogels TMH, Kim JH, Aengevaeren VL, et al. Masters athletes with abnormal cardiovascular findings: a clinical consensus statement of the European Association of Preventive Cardiology of the ESC and the American College of Cardiology. Eur Heart J. 2026;47(21):2541-2560. DOI 10.1093/eurheartj/ehag040. PMID 41947397.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI 10.1161/CIR.0000000000001297. PMID 39973614.",
+      "Zampieri M, Saberi S, D'Ascenzi F, et al. Hypertrophic cardiomyopathy: changing the paradigm of exercise prescription and competitive sport participation. Eur Heart J. 2026;47(8):902-915. DOI 10.1093/eurheartj/ehaf770. PMID 41065586.",
+      "Pelliccia A, Caselli S, Pelliccia M, et al. Clinical outcomes in adult athletes with hypertrophic cardiomyopathy: a 7-year follow-up study. Br J Sports Med. 2020;54(16):1008-1012. PMID 32532845."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40576890/",
+      "https://pubmed.ncbi.nlm.nih.gov/41313487/",
+      "https://pubmed.ncbi.nlm.nih.gov/42142808/",
+      "https://pubmed.ncbi.nlm.nih.gov/38262482/",
+      "https://pubmed.ncbi.nlm.nih.gov/41289042/",
+      "https://pubmed.ncbi.nlm.nih.gov/41947397/",
+      "https://pubmed.ncbi.nlm.nih.gov/39973614/",
+      "https://pubmed.ncbi.nlm.nih.gov/41065586/",
+      "https://pubmed.ncbi.nlm.nih.gov/32532845/"
+    ],
+    "related_document_slugs": [
+      "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+      "fluxograma-coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+      "coracao-atleta-feminina-remodelamento-ecg-eco",
+      "atleta-master-achados-cardiovasculares-e-participacao-esportiva",
+      "cardiomiopatia-hipertrofica-exercicio-esporte-competitivo"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 por instrução direta do Rafael, para o Guia de Doenças, a partir do corpus de Cardiologia do Esporte e do Exercício. VERIFICAÇÃO PRÉVIA DE NÃO DUPLICAÇÃO: li a ficha existente 'cardiomiopatia-hipertrofica' (doencas/fragmentos/cardiomiopatia-hipertrofica.json) antes de iniciar — ela cita coração de atleta apenas como 1 item da lista 'differentials' ('hipertrofia fisiológica de adaptação ao treinamento, tipicamente com função diastólica preservada e regressão com destreinamento'), sem detalhar os critérios integrados de diferenciação (padrão de hipertrofia, Doppler tecidual, tamanho de AE, strain, resposta ao destreinamento, ECG por faixa etária, IA aplicada, populações especiais). Não há sobreposição de profundidade; este verbete é complementar e não duplicativo. DECISÃO DE CATEGORIA: escolhido category='avaliacao_esportiva' em vez de 'cardiomiopatia' porque o tema é um diferencial diagnóstico/processo de decisão de elegibilidade esportiva, não uma doença própria — segue a convenção já usada em outras categorias 'avaliacao_*' do hub (avaliacao_basal, avaliacao_global, avaliacao_pre_procedimento). area='esporte' segue o valor de areaId usado no tema Cardiologia do Esporte e do Exercício (CLAUDE.md); nenhum outro fragmento de doenças usa area='esporte' ainda, então este verbete estabelece o primeiro precedente dessa combinação. REGRA DE CUTOFFS: nenhum corte numérico de espessura parietal, diâmetro de átrio esquerdo ou velocidade de Doppler tecidual foi incluído, porque a fonte primária de imagem (Pagourelias et al., PMID 40576890) registra explicitamente que esses limiares não constam do resumo indexado e exigem verificação humana do texto completo (mesma ressalva já aplicada no fluxograma companheiro do acervo) — incluir números aqui seria fabricar dado que a fonte não fornece. A diferenciação é apresentada de forma multiparamétrica e direcional (padrão de hipertrofia, função diastólica, tamanho de AE, resposta a destreinamento de 3 meses como teste dinâmico, história familiar, ECG, strain), nunca por espessura de parede isolada, conforme regra determinística obrigatória. PMIDs: 9 PMIDs verificados individualmente via NCBI E-utilities (efetch) em 29/08/2026, todos batendo título/periódico/ano com as citações já presentes nos 5 documentos do corpus de apoio — 40576890, 41313487, 42142808, 38262482, 41289042, 41947397, 39973614, 41065586, 32532845. RELATED_DOCUMENT_SLUGS: os 5 documentos indicados como corpus de apoio pelo Rafael foram lidos integralmente e usados como os 5 related_document_slugs (dentro da faixa 4-6 pedida), todos centrais ao tema. PATIENT_MATERIAL_SLUG: deixado null — não há material de paciente específico sobre a diferenciação coração de atleta x CMH em material-paciente/metadados.json; o item mais próximo ('avaliacao-cardiologica-antes-de-praticar-esporte') é sobre triagem pré-participação em geral, não sobre este diferencial específico, portanto não foi usado para evitar associação incorreta. COLISÃO DE SLUG: confirmada ausência de colisão — nenhum arquivo em doencas/ (fragmentos, correções ou metadados.json) usa o slug 'coracao-de-atleta-versus-cardiomiopatia-hipertrofica'. Nenhuma dose de fármaco em nenhum campo. Registro NÃO commitado — entregue como JSON para revisão humana, conforme instrução. CORREÇÃO TÉCNICA 29/08/2026: campo area gravado inicialmente como \"esporte\", valor fora do enum fechado {geral,cardiopediatria,cardiogeriatria,cardiooncologia,gravidez} validado em carregar_doencas_especializadas.py (rejeitaria o registro inteiro no load). Corrigido para \"geral\" antes do commit; decisão de formalizar \"esporte\" como área própria do enum permanece pendente de aval editorial do Rafael.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
