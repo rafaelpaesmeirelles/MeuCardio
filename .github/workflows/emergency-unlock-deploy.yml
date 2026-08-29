@@ -6,6 +6,7 @@ name: Emergency deploy current main
 # 29/08/2026: deploy emergencial dos lotes Grok 37-45 revisados (PR #749).
 # 29/08/2026: reexecução após tornar quota de embeddings não bloqueante.
 # 29/08/2026: passagem 1 para instalar no host a base de recovery certificada.
+# 29/08/2026: passagem 2 para recuperar backend e publicar o SHA atual.
 on:
   push:
     branches: [main]
