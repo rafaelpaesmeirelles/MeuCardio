@@ -2,9 +2,11 @@ name: CorVIA Intelligence — Scientific radar
 
 on:
   schedule:
-    # Quatro vezes ao dia: suficiente para lançamentos de congresso sem
-    # sobrecarregar as fontes editoriais oficiais.
-    - cron: "17 */4 * * *"
+    # O runner acorda de hora em hora; o backend decide se faz varredura completa:
+    # - dias normais: a cada 4h;
+    # - congressos/janelas de publicação: 1/1h;
+    # - pico recente de publicações confiáveis: 1/1h até o pico arrefecer.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +20,7 @@ jobs:
   discover:
     name: Discover new official cardiovascular publications
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     environment: production
     env:
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
@@ -42,6 +44,7 @@ jobs:
       - name: Run CorVIA Intelligence inside the deployed production backend
         env:
           TARGET_SHA: ${{ steps.target.outputs.sha }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           set -euo pipefail
           : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
@@ -50,6 +53,11 @@ jobs:
           : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
           : "${TARGET_SHA:?Missing current main SHA}"
           SSH_PORT="${SSH_PORT:-22}"
+
+          request="intelligence"
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            request="intelligence-force"
+          fi
 
           ssh_dir="$RUNNER_TEMP/corvia-intelligence-ssh"
           install -m 0700 -d "$ssh_dir"
@@ -69,4 +77,4 @@ jobs:
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            "intelligence $TARGET_SHA"
+            "$request $TARGET_SHA"
