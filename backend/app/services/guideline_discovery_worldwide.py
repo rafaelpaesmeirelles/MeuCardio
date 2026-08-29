@@ -2,10 +2,10 @@ from __future__ import annotations
 
 """Worldwide source registry for CorVIA Intelligence.
 
-The core discovery engine intentionally remains small and conservative.  This module
-adds high-signal official societies, guideline repositories, bibliographic indexing
-and major cardiovascular/general medical journals without changing the persistence
-or review rules: discoveries remain `detected` until scientific review.
+The canonical discovery engine stays conservative. This module adds high-signal
+professional societies, guideline repositories, bibliographic indexing and major
+medical journals without changing review semantics: discoveries remain `detected`
+until scientific review.
 """
 
 from app.services import guideline_discovery as core
@@ -55,8 +55,9 @@ HIGH_SIGNAL_TERMS = tuple(dict.fromkeys(
     )
 ))
 
-# PubMed query is already constrained to cardiovascular high-signal document types,
-# so every result link from that index is eligible for detail inspection.
+# PubMed/MEDLINE is the global bibliographic safety net. The query is already
+# constrained to cardiovascular high-signal publication types, so result links
+# can be inspected directly and then deduplicated by DOI by the canonical engine.
 PUBMED_QUERY = (
     "https://pubmed.ncbi.nlm.nih.gov/?term="
     "%28cardiovascular%5BTitle%2FAbstract%5D+OR+cardiac%5BTitle%2FAbstract%5D+OR+"
@@ -69,17 +70,15 @@ PUBMED_QUERY = (
 )
 
 WORLDWIDE_SOURCES = (
-    # Bibliographic indexing: broad peer-reviewed surveillance across publishers.
+    # Global bibliographic indexing across publishers and countries.
     core.Source(
-        "PUBMED/MEDLINE",
+        "PUBMED",
         PUBMED_QUERY,
         ("pubmed.ncbi.nlm.nih.gov",),
-        # The query itself is the filter; the canonical host marker accepts all
-        # result titles without weakening other Source instances.
         keywords=("pubmed.ncbi.nlm.nih.gov/",),
         max_details=100,
     ),
-    # North American and international specialty societies.
+    # Professional societies and guideline repositories.
     core.Source(
         "HRS",
         "https://www.hrsonline.org/publications-resources/resource-library/hrs-documents/",
@@ -143,7 +142,14 @@ WORLDWIDE_SOURCES = (
         keywords=HIGH_SIGNAL_TERMS,
         max_details=80,
     ),
-    # Major journals: direct early-online surveillance complements PubMed latency.
+    core.Source(
+        "COCHRANE",
+        "https://www.cochranelibrary.com/cdsr/reviews",
+        ("cochranelibrary.com", "www.cochranelibrary.com"),
+        keywords=CARDIOVASCULAR_TERMS,
+        max_details=80,
+    ),
+    # Major journals: direct early-online surveillance complements indexing latency.
     core.Source(
         "JACC",
         "https://www.jacc.org/onlinefirst",
@@ -159,11 +165,18 @@ WORLDWIDE_SOURCES = (
         max_details=80,
     ),
     core.Source(
-        "JAMA CARDIOLOGY",
+        "JAMA_CARDIOLOGY",
         "https://jamanetwork.com/journals/jamacardiology/newonline",
         ("jamanetwork.com", "www.jamanetwork.com"),
         keywords=CARDIOVASCULAR_TERMS,
         max_details=80,
+    ),
+    core.Source(
+        "JAMA",
+        "https://jamanetwork.com/journals/jama/newonline",
+        ("jamanetwork.com", "www.jamanetwork.com"),
+        keywords=CARDIOVASCULAR_TERMS,
+        max_details=60,
     ),
     core.Source(
         "NEJM",
@@ -173,21 +186,28 @@ WORLDWIDE_SOURCES = (
         max_details=60,
     ),
     core.Source(
-        "THE LANCET",
+        "THE_LANCET",
         "https://www.thelancet.com/journals/lancet/onlinefirst",
         ("thelancet.com", "www.thelancet.com"),
         keywords=CARDIOVASCULAR_TERMS,
         max_details=60,
     ),
     core.Source(
-        "HEART/BMJ",
+        "BMJ",
+        "https://www.bmj.com/research/research",
+        ("bmj.com", "www.bmj.com"),
+        keywords=CARDIOVASCULAR_TERMS,
+        max_details=60,
+    ),
+    core.Source(
+        "HEART_BMJ",
         "https://heart.bmj.com/online-first",
         ("heart.bmj.com", "bmj.com", "www.bmj.com"),
         keywords=CARDIOVASCULAR_TERMS,
         max_details=80,
     ),
     core.Source(
-        "NATURE MEDICINE",
+        "NATURE_MEDICINE",
         "https://www.nature.com/nm/research-articles",
         ("nature.com", "www.nature.com"),
         keywords=CARDIOVASCULAR_TERMS,
