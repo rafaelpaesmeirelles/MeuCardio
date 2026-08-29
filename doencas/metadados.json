@@ -7341,8 +7341,14 @@
       "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardiovascular-diseases-during-pregnancy-management-of/"
     ],
     "review_status": "revisado",
-    "review_note": "Não reproduz mWHO 2.0; classificação formal depende de licença e validação.",
-    "version": 1
+    "review_note": "Não reproduz mWHO 2.0; classificação formal depende de licença e validação. | Lote vincular Tudo com Tudo 29/08/2026: registro base tinha 0 related_document_slugs apesar de completeness=completo — inconsistência do dataset. Adicionados 4 vínculos verificados por leitura integral (escores de risco materno CARPREG/CARPREG II/ZAHARA, critérios de elegibilidade contraceptiva da OMS, fluxograma ESC 2025 e preditores de recuperação ventricular/aconselhamento pré-concepcional na cardiomiopatia periparto). Achado: doencas/correcoes/zz-release36h-pr648-avaliacao-cardiovascular-pre-concepcional.json (PR #648, aberto, base release/all-science-36h-20260828, mergeable=CONFLICTING) já sobrescreve este registro por completo via load_disease_records, incluindo related_document_slugs com uma lista diferente (doenca-cardiovascular-e-gestacao-esc-2025, fluxograma-doenca-cardiovascular-e-gravidez-esc-2025, classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025). Ou seja: o registro EFETIVO servido pelo app já não tinha 0 vínculos — só a base JSON tinha. Este lote corrige a base por completude e rastreabilidade, mas o vínculo efetivamente ativo continua sendo o do patch até decisão editorial reconciliar os dois. Sinalizado no corpo do PR.",
+    "version": 2,
+    "related_document_slugs": [
+      "escores-de-risco-materno-carpreg-carpreg-ii-e-zahara",
+      "anticoncepcao-na-mulher-com-cardiopatia-criterios-de-elegibilidade-da-oms-posicionamento-sbc-2020",
+      "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025",
+      "preditores-de-recuperacao-ventricular-e-aconselhamento-pre-concepcional-na-cardiomiopatia-periparto"
+    ]
   },
   {
     "slug": "pre-eclampsia-e-risco-cardiovascular",
