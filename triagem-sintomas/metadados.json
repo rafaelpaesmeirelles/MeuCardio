@@ -4649,5 +4649,654 @@
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
     "version": 2
+  },
+  {
+    "slug": "sopro-cardiaco-incidental",
+    "name": "Sopro cardíaco identificado ao exame (achado incidental)",
+    "aliases": [
+      "sopro no coração",
+      "sopro cardíaco",
+      "achado de ausculta",
+      "sopro incidental",
+      "sopro inocente versus patológico"
+    ],
+    "areas": [
+      "geral",
+      "cardiopediatria"
+    ],
+    "summary": "Triagem do sopro cardíaco encontrado em ausculta de rotina, achado incidental em paciente assintomático — cobre adulto e criança, com foco em diferenciar sopro inocente/funcional de sopro que exige investigação.",
+    "questions": [
+      {
+        "id": "age",
+        "label": "Idade",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 120,
+        "unit": "anos",
+        "section": "Contexto"
+      },
+      {
+        "id": "neonate",
+        "label": "É recém-nascido (menos de 28 dias de vida)?",
+        "type": "boolean",
+        "section": "Contexto"
+      },
+      {
+        "id": "unstable",
+        "label": "Há instabilidade agora — cianose central, desconforto respiratório importante, má perfusão, síncope ou hipotensão?",
+        "type": "boolean",
+        "required": true,
+        "section": "Emergência"
+      },
+      {
+        "id": "murmur_timing",
+        "label": "Em que momento do ciclo cardíaco o sopro ocorre?",
+        "type": "select",
+        "required": true,
+        "section": "Características do sopro",
+        "options": [
+          {
+            "value": "systolic",
+            "label": "Sistólico"
+          },
+          {
+            "value": "diastolic",
+            "label": "Diastólico"
+          },
+          {
+            "value": "continuous",
+            "label": "Contínuo (atravessa sístole e diástole)"
+          }
+        ]
+      },
+      {
+        "id": "murmur_grade",
+        "label": "Qual a intensidade do sopro pela escala de Levine (1 a 6)?",
+        "type": "number",
+        "required": true,
+        "min": 1,
+        "max": 6,
+        "unit": "grau (escala de Levine)",
+        "section": "Características do sopro"
+      },
+      {
+        "id": "murmur_alarm_features",
+        "label": "Há alguma destas características de alerta à ausculta?",
+        "type": "multiselect",
+        "section": "Características do sopro",
+        "options": [
+          {
+            "value": "holosystolic_or_late_peak",
+            "label": "Holossistólico ou com pico sistólico tardio"
+          },
+          {
+            "value": "harsh_or_rough_timbre",
+            "label": "Timbre áspero ou rude (não vibratório/musical)"
+          },
+          {
+            "value": "radiates_neck_back_axilla",
+            "label": "Irradia para carótidas, dorso/pescoço ou axila"
+          },
+          {
+            "value": "s2_abnormal",
+            "label": "Segunda bulha (B2) hipofonética, ausente, única ou com desdobramento fixo"
+          },
+          {
+            "value": "systolic_click",
+            "label": "Clique sistólico associado"
+          },
+          {
+            "value": "increases_standing",
+            "label": "Aumenta de intensidade quando o paciente fica em pé"
+          }
+        ]
+      },
+      {
+        "id": "positional_maneuver",
+        "label": "Como o sopro muda com manobra postural (ficar em pé/decúbito) ou compressão/rotação cervical?",
+        "type": "select",
+        "section": "Manobras",
+        "options": [
+          {
+            "value": "decreases_standing_or_louder_supine",
+            "label": "Diminui ao ficar em pé / mais intenso em decúbito"
+          },
+          {
+            "value": "disappears_with_jugular_compression_or_neck_rotation",
+            "label": "Desaparece com compressão da veia jugular, rotação cervical ou hiperextensão dos ombros"
+          },
+          {
+            "value": "increases_standing",
+            "label": "Aumenta ao ficar em pé"
+          },
+          {
+            "value": "no_change_or_not_tested",
+            "label": "Sem alteração ou manobra não realizada"
+          }
+        ]
+      },
+      {
+        "id": "associated_symptoms",
+        "label": "Sintomas associados presentes",
+        "type": "multiselect",
+        "required": true,
+        "section": "Sintomas associados",
+        "options": [
+          {
+            "value": "dyspnea",
+            "label": "Dispneia ou intolerância ao esforço"
+          },
+          {
+            "value": "cyanosis",
+            "label": "Cianose"
+          },
+          {
+            "value": "syncope",
+            "label": "Síncope ou pré-síncope"
+          },
+          {
+            "value": "chest_pain",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "poor_growth_feeding",
+            "label": "Falha de crescimento ou dificuldade alimentar (lactente)"
+          },
+          {
+            "value": "none",
+            "label": "Nenhum sintoma associado"
+          }
+        ]
+      },
+      {
+        "id": "febrile_endocarditis_context",
+        "label": "Há febre atual/recente ou sinal sugestivo de endocardite (fenômeno embólico, lesão cutânea, uso de droga injetável, prótese valvar ou cardiopatia estrutural prévia)?",
+        "type": "boolean",
+        "section": "Contexto infeccioso"
+      },
+      {
+        "id": "family_history_sudden_death_cardiomyopathy",
+        "label": "Há história familiar de morte súbita precoce ou cardiomiopatia?",
+        "type": "boolean",
+        "section": "História familiar"
+      },
+      {
+        "id": "known_structural_risk",
+        "label": "Há fator de risco conhecido para doença valvar estrutural (febre reumática prévia, cardiopatia congênita conhecida, prótese valvar, endocardite prévia, radioterapia torácica)?",
+        "type": "boolean",
+        "section": "História"
+      }
+    ],
+    "rules": [
+      {
+        "id": "instavel",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "unstable",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sopro cardíaco com instabilidade atual (cianose central, desconforto respiratório importante, má perfusão, síncope ou hipotensão) exige avaliação de emergência imediata"
+          ],
+          "suggested_tests": [
+            "Oximetria de pulso, monitorização contínua e avaliação de emergência"
+          ]
+        }
+      },
+      {
+        "id": "lactente-sinais-graves",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "age",
+              "op": "lt",
+              "value": 2
+            }
+          ],
+          "any": [
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "poor_growth_feeding"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "cyanosis"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Falha de crescimento/dificuldade alimentar ou cianose associada a sopro em lactente sugere cardiopatia estrutural com repercussão hemodinâmica e exige avaliação cardiopediátrica urgente"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma e avaliação por cardiologia pediátrica sem postergar"
+          ]
+        }
+      },
+      {
+        "id": "recem-nascido",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "neonate",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sopro em recém-nascido (menos de 28 dias) tem maior taxa de doença estrutural e é mais difícil de caracterizar ao exame"
+          ],
+          "suggested_tests": [
+            "Oximetria de pulso pré e pós-ductal para triagem de cardiopatia congênita crítica",
+            "Avaliação por cardiologia pediátrica, preferencialmente na primeira semana de vida, antes de ecocardiograma solicitado de forma reflexa"
+          ]
+        }
+      },
+      {
+        "id": "sopro-diastolico",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "murmur_timing",
+              "op": "eq",
+              "value": "diastolic"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sopro diastólico é considerado achado anormal tanto na criança quanto no adulto e raramente representa variante fisiológica"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico indicado"
+          ],
+          "differentials": [
+            "Regurgitação aórtica",
+            "Estenose mitral",
+            "Regurgitação pulmonar"
+          ]
+        }
+      },
+      {
+        "id": "sopro-sistolico-alerta",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "murmur_timing",
+              "op": "eq",
+              "value": "systolic"
+            }
+          ],
+          "any": [
+            {
+              "field": "murmur_grade",
+              "op": "gte",
+              "value": 3
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "holosystolic_or_late_peak"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "harsh_or_rough_timbre"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "radiates_neck_back_axilla"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "s2_abnormal"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "systolic_click"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "increases_standing"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "dyspnea"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "cyanosis"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "syncope"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "chest_pain"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sopro sistólico com intensidade grau 3 ou mais, característica de alerta à ausculta ou sintoma cardiovascular associado sugere causa orgânica"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico e ECG"
+          ],
+          "differentials": [
+            "Estenose aórtica",
+            "Regurgitação mitral",
+            "Comunicação interventricular",
+            "Cardiomiopatia hipertrófica obstrutiva"
+          ]
+        }
+      },
+      {
+        "id": "contexto-febril-endocardite",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "febrile_endocarditis_context",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Febre ou sinal sugestivo de endocardite associado a sopro cardíaco exige investigação dirigida antes de assumir variante fisiológica"
+          ],
+          "suggested_tests": [
+            "Hemoculturas antes de iniciar antibiótico, se suspeita de endocardite",
+            "Provas inflamatórias e ecocardiograma conforme suspeita clínica"
+          ],
+          "differentials": [
+            "Endocardite infecciosa",
+            "Sopro fisiológico acentuado por estado febril/hiperdinâmico"
+          ]
+        }
+      },
+      {
+        "id": "historia-e-fator-de-risco",
+        "priority": 68,
+        "when": {
+          "any": [
+            {
+              "field": "family_history_sudden_death_cardiomyopathy",
+              "op": "truthy"
+            },
+            {
+              "field": "known_structural_risk",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "História familiar de morte súbita precoce/cardiomiopatia ou fator de risco conhecido para doença valvar estrutural (febre reumática prévia, cardiopatia congênita, prótese valvar, endocardite prévia, radioterapia torácica) eleva a probabilidade pré-teste de causa orgânica"
+          ],
+          "suggested_tests": [
+            "ECG e ecocardiograma transtorácico"
+          ],
+          "differentials": [
+            "Cardiomiopatia hipertrófica",
+            "Canalopatia associada",
+            "Valvopatia estrutural"
+          ]
+        }
+      },
+      {
+        "id": "sopro-continuo-persistente",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "murmur_timing",
+              "op": "eq",
+              "value": "continuous"
+            }
+          ],
+          "none": [
+            {
+              "field": "positional_maneuver",
+              "op": "eq",
+              "value": "disappears_with_jugular_compression_or_neck_rotation"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiograma transtorácico indicado"
+          ],
+          "differentials": [
+            "Persistência do canal arterial",
+            "Fístula arteriovenosa",
+            "Comunicação anormal de fluxo"
+          ],
+          "messages": [
+            "Sopro contínuo que não se modifica com manobra postural ou compressão jugular não é característico de zumbido venoso"
+          ]
+        }
+      },
+      {
+        "id": "zumbido-venoso",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "murmur_timing",
+              "op": "eq",
+              "value": "continuous"
+            },
+            {
+              "field": "positional_maneuver",
+              "op": "eq",
+              "value": "disappears_with_jugular_compression_or_neck_rotation"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Achado compatível com zumbido venoso (venous hum): variante benigna mais comum em crianças e adultos jovens; não requer ecocardiograma se o restante do exame cardiovascular for normal"
+          ],
+          "differentials": [
+            "Zumbido venoso (venous hum)"
+          ]
+        }
+      },
+      {
+        "id": "sopro-inocente-classico",
+        "priority": 15,
+        "when": {
+          "all": [
+            {
+              "field": "murmur_timing",
+              "op": "eq",
+              "value": "systolic"
+            },
+            {
+              "field": "murmur_grade",
+              "op": "lte",
+              "value": 2
+            }
+          ],
+          "none": [
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "holosystolic_or_late_peak"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "harsh_or_rough_timbre"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "radiates_neck_back_axilla"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "s2_abnormal"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "systolic_click"
+            },
+            {
+              "field": "murmur_alarm_features",
+              "op": "contains",
+              "value": "increases_standing"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "dyspnea"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "cyanosis"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "syncope"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "chest_pain"
+            },
+            {
+              "field": "associated_symptoms",
+              "op": "contains",
+              "value": "poor_growth_feeding"
+            },
+            {
+              "field": "febrile_endocarditis_context",
+              "op": "truthy"
+            },
+            {
+              "field": "family_history_sudden_death_cardiomyopathy",
+              "op": "truthy"
+            },
+            {
+              "field": "known_structural_risk",
+              "op": "truthy"
+            },
+            {
+              "field": "neonate",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Padrão compatível com sopro inocente/funcional (ex.: sopro de Still, sopro de fluxo pulmonar): ausência de característica de alerta, grau baixo, sem sintoma associado; ecocardiograma não é necessário de imediato — orientação e reavaliação clínica programada, com pedido de ecocardiograma se surgir sintoma novo ou mudança do padrão do sopro"
+          ],
+          "differentials": [
+            "Sopro de Still",
+            "Sopro de fluxo pulmonar",
+            "Sopro fisiológico/funcional"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Ausculta cardíaca completa (foco, timbre, timing, grau, irradiação, comportamento com manobra postural)",
+      "Sinais vitais e oximetria de pulso"
+    ],
+    "differentials": [
+      "Sopro inocente/funcional (Still, fluxo pulmonar, zumbido venoso, supraclavicular)",
+      "Valvopatia estrutural (estenose aórtica, regurgitação mitral)",
+      "Cardiopatia congênita",
+      "Endocardite infecciosa",
+      "Estado hiperdinâmico (febre, anemia, gestação, hipertireoidismo)",
+      "Persistência do canal arterial/fístula arteriovenosa (sopro contínuo)"
+    ],
+    "red_flags": [
+      "Sopro diastólico",
+      "Sopro sistólico grau ≥3 ou com característica de alerta à ausculta",
+      "Cianose ou falha de crescimento/dificuldade alimentar em lactente",
+      "Instabilidade clínica",
+      "Recém-nascido com sopro",
+      "Febre ou sinal sugestivo de endocardite",
+      "História familiar de morte súbita precoce/cardiomiopatia"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar o sopro por ausculta completa (timing, grau, irradiação, comportamento com manobra postural)",
+      "Classificar por idade, características do sopro e sintomas associados usando este fluxo",
+      "Solicitar ecocardiograma transtorácico quando houver característica de alerta, sopro diastólico/contínuo persistente ou fator de risco",
+      "Reavaliar clinicamente e orientar a família/paciente quando o padrão for compatível com sopro inocente clássico"
+    ],
+    "emergency_flow": [
+      "Avaliação imediata com monitorização e oximetria de pulso",
+      "Coletar hemoculturas antes de antibiótico se houver suspeita de endocardite",
+      "Ecocardiograma e avaliação por cardiologia (pediátrica quando aplicável) sem postergar",
+      "Transferir para centro com suporte cardiológico/cardiopediátrico quando necessário"
+    ],
+    "tags": [
+      "sopro",
+      "ausculta",
+      "cardiopediatria",
+      "valvopatia",
+      "achado incidental"
+    ],
+    "source_refs": [
+      "Otto CM, Nishimura RA, Bonow RO, Carabello BA, Erwin JP 3rd, Gentile F, Jneid H, Krieger EV, Mack M, McLeod C, O'Gara PT, Rigolin VH, Sundt TM 3rd, Thompson A, Toly C. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150.",
+      "Vahanian A, Beyersdorf F, Praz F, Milojevic M, Baldus S, Bauersachs J, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165.",
+      "Etchells E, Bell C, Robb K. Does This Patient Have an Abnormal Systolic Murmur? JAMA. 1997;277(7):564-571. PMID: 9032164.",
+      "Frank JE, Jacobe KM. Evaluation and Management of Heart Murmurs in Children. Am Fam Physician. 2011;84(7):793-800. PMID: 22010618.",
+      "Ford B, Lara S, Park J. Heart Murmurs in Children: Evaluation and Management. Am Fam Physician. 2022;105(3):277-284. PMID: 35289571.",
+      "Mahawattege A, Shearer L, Chambers A. Navigating heart murmurs in children. Aust J Gen Pract. 2025;54(6):357-361. DOI: 10.31128/AJGP-06-24-7321. PMID: 40466724.",
+      "Doshi AR, Chikkabyrappa S. Innocent Heart Murmur. Cureus. 2018;10(12):e3689. DOI: 10.7759/cureus.3689. PMID: 30761241."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/33332150/",
+      "https://pubmed.ncbi.nlm.nih.gov/34453165/",
+      "https://pubmed.ncbi.nlm.nih.gov/9032164/",
+      "https://pubmed.ncbi.nlm.nih.gov/22010618/",
+      "https://pubmed.ncbi.nlm.nih.gov/35289571/",
+      "https://pubmed.ncbi.nlm.nih.gov/40466724/",
+      "https://pubmed.ncbi.nlm.nih.gov/30761241/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Registro novo criado em 29/08/2026 a partir de content/Geral/fluxograma-sopro-cardiaco-incidental-no-adulto-assintomatico.md e content/Cardiopatias_congênitas/fluxograma-sopro-cardiaco-na-crianca-inocente-versus-patologico.md, enriquecido por content/Cardiologia_pediátrica/sopros-cardiacos-na-infancia-diferenciacao-entre-sopro-inocente-e-sopro-patologico.md. Os sete PMIDs citados (33332150, 34453165, 9032164, 22010618, 35289571, 40466724, 30761241) foram conferidos nesta sessão via PubMed E-utilities (esummary), confirmando título, periódico, ano e primeiro autor. Pendente revisão médica independente antes de publicação — ver test_canonical_content_review_status.py, onde este slug fica intencionalmente fora da allowlist (que só isenta registros já 'revisado').",
+    "version": 1
   }
 ]

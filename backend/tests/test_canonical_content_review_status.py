@@ -31,7 +31,24 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "triagem-sintomas/metadados.json": {
+        # Registro novo de triagem de sintomas criado em 29/08/2026 —
+        # "sopro-cardiaco-incidental" (sopro cardíaco identificado ao exame,
+        # achado incidental, adulto e criança) — ver review_note do próprio
+        # registro em triagem-sintomas/metadados.json e
+        # backend/tests/test_novo_sintoma_sopro_cardiaco_incidental.py. Esta
+        # entrada NÃO isenta o slug do teste principal abaixo, cuja lógica só
+        # consulta esta allowlist para registros já com status="revisado" —
+        # por isso test_manifestos_canonicos_so_tem_pendencias_
+        # explicitamente_aprovadas_para_rc continua falhando para
+        # "sopro-cardiaco-incidental" (status "pendente_revisao"), como
+        # esperado e documentado, seguindo o mesmo padrão adotado em
+        # "cardiomiopatia-de-takotsubo" (PR #698,
+        # claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829).
+        "sopro-cardiaco-incidental",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
