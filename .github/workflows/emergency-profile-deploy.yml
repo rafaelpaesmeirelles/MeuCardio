@@ -1,6 +1,7 @@
 name: Emergency profile hotfix deploy
 # Gatilho emergencial reutilizável; acionado em 29/08/2026 para restaurar Resumo CorVIA / Traduzido / Original nos estudos.
 # Reutilizado para hotfixes de produção com validação obrigatória do SHA público.
+# 29/08/2026: release consolidada ChatGPT + Claude + Grok + ajuste do logo no login.
 
 on:
   push:
