@@ -4,6 +4,7 @@ name: Emergency profile hotfix deploy
 # 29/08/2026: release consolidada ChatGPT + Claude + Grok + ajuste do logo no login.
 # 29/08/2026: novas publicações do Intelligence com Resumo CorVIA / Traduzido / Original.
 # 29/08/2026: tradução externa removida; leitura em português passa a ser interna no CorVIA.
+# 29/08/2026: publicação científica só fica visível após resumo/leitura PT; deploy drena backlog do Intelligence.
 
 on:
   push:
@@ -22,7 +23,7 @@ jobs:
   deploy:
     name: Deploy emergency SHA through restricted SSH
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 120
     environment: production
     env:
       TARGET_SHA: ${{ github.sha }}
@@ -84,3 +85,32 @@ jobs:
           PY
           curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
+
+      - name: Complete published scientific analysis backlog
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          SSH_PORT="${SSH_PORT:-22}"
+
+          ssh_dir="$RUNNER_TEMP/corvia-intelligence-ssh"
+          install -m 0700 -d "$ssh_dir"
+          trap 'rm -rf "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/key" "$ssh_dir/known_hosts"
+
+          ssh \
+            -p "$SSH_PORT" \
+            -i "$ssh_dir/key" \
+            -o BatchMode=yes \
+            -o ConnectTimeout=20 \
+            -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=20 \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" \
+            "intelligence $TARGET_SHA"
