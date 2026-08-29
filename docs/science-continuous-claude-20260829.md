@@ -1083,13 +1083,26 @@ corrigido (JSONs + `content/**/*.md` + `gh pr list`).
   via NCBI e-utils. Ausência de PMID isolado para consenso Montreal 2005
   declarada explicitamente (via revisão posterior, não inventado).
 
-## Lote 48 (planejado)
+## Lote 48 — concluído (SHA 71ac0639) — total 76 commits
 
-A auditar com o procedimento corrigido: candidato a transplante RENAL
-(distinto do hepático já coberto) — avaliação cardiovascular específica,
-já que CKD-associada é fisiopatologia diferente de cardiomiopatia
-cirrótica; ou retomar território ainda não verificado nesta janela.
-Confirmar cobertura (JSONs + `content/**/*.md` + `gh pr list`) antes de
-despachar.
+- checklist `avaliacao-cardiovascular-do-candidato-a-transplante-renal-rastreio-coronariano-e-doenca-mineral-ossea`
+  — 5 itens: rastreio coronariano (AHA 2022 — rastreio sistemático em
+  assintomáticos "não demonstrou melhorar desfechos"; CARSK citado com
+  nota explícita de que a busca não encontrou resultados primários
+  publicados, só protocolo — não inventado); calcificação vascular
+  (escore de cálcio preditor independente de mortalidade); hipertrofia
+  ventricular progressiva mesmo sem doença sintomática; doença valvar
+  calcificada progressiva (coorte brasileira); manejo perioperatório da
+  diálise (coorte Medicare de 1,1 milhão de procedimentos, associação
+  dose-dependente intervalo-mortalidade, com ressalva de ser
+  observacional). 11 fontes via NCBI e-utils. Cluster de avaliação
+  cardiovascular pré-transplante de órgão sólido (hepático + renal)
+  encerrado nesta janela.
+
+## Lote 49 (planejado)
+
+A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
+`gh pr list`): território ainda não explorado nesta janela ou
+aprofundamento pontual em hub existente. A confirmar antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
