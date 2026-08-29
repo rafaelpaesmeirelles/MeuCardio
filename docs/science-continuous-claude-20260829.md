@@ -457,3 +457,23 @@ sem host (só existe item separado de CIMT, tema distinto). Despachado
 como checklist (agente a98c4566a2775830d).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 19 — concluído (1 commit, SHA 7f4af4fa) — total 45 commits
+
+- checklist `criterios-diagnosticos-do-doppler-de-carotidas-avaliacao-multiparametrica-da-estenose`
+  — 13 itens. Fonte primária SRU 2003 (PMID 14500855). Rigor exemplar:
+  agente declarou explicitamente quando não conseguiu confirmar um valor
+  numérico (razão ACI/ACC) ou fonte primária de um sinal de propedêutica
+  consolidada, em vez de inventar. Marcadores DTC: microembolização com
+  evidência prospectiva robusta (ACES) vs. reserva vasomotora sem
+  significância no mesmo estudo — diferença de robustez preservada.
+
+## Lote 20 (em andamento, 1 agente) — correção pequena, fecha o sub-tema ITB SBC 2024
+
+Cluster `itb-pos-esforco-*` SBC 2024 (3 itens): confirmado que o exame
+já existente `itb-pos-exercicio-em-esteira-na-claudicacao-intermitente`
+não cobre os 3 cenários específicos (ITB repouso normal com sintomas, ITB
+alterado em diabético assintomático, TcPO2 complementar). Despachada
+correção aditiva (agente ac51429cd14737ef9).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
