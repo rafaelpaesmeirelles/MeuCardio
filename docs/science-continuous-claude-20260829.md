@@ -1050,15 +1050,31 @@ sem colisão confirmada. Nada publicado foi afetado — tudo estava
 inclui `grep` explícito em `content/**/*.md`, além dos JSONs já
 verificados.
 
-## Lote 46 (planejado)
+## Lote 46 — concluído (SHA 80691b0f) — total 74 commits
 
-CIV perimembranosa/muscular já coberto em content/ — descartado.
-Retomar auditoria com o procedimento de colisão corrigido (incluindo
-`content/**/*.md`). Candidato: miocardite fulminante pediátrica com
-ECMO/VAD — já confirmado coberto em content/Cardiologia_pediátrica/
-(miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo.md
-e miocardite-fulminante-pediatrica-e-choque-cardiogenico.md) — também
-descartado. Buscar novo alvo com o procedimento corrigido antes de
-despachar.
+Primeiro lote desde a correção crítica, verificado com o procedimento
+corrigido (JSONs + `content/**/*.md` + `gh pr list`).
+
+- checklist `interpretacao-do-ecg-em-atletas-negros-variantes-normais-versus-achados-de-alarme`
+  — 5 itens: inversão de onda T anterior V1-V4 como variante normal
+  quando isolada (22,8% vs. 3,7% em brancos); voltagem isolada de HVE
+  como adaptação ao treino, variando por origem geográfica — não
+  generalizar; achados de alarme (100% dos casos com cardiomiopatia
+  confirmada tinham inversão LATERAL, não isolada anterior); fluxo de
+  investigação eco+RM, com nuance de que teste genético isolado agregou
+  só 2,5% de diagnóstico quando avaliação clínica já normal; desfecho —
+  especificidade de 97-99% em ambas as raças, tranquilização vem DEPOIS
+  da triagem, nunca no lugar dela. 8 fontes via NCBI e-utils. Nenhum
+  corte numérico (mm/mV) inventado — regra qualitativa usada por falta
+  de confirmação exata nas fontes.
+
+## Lote 47 (planejado)
+
+A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
+`gh pr list` em toda checagem, sem exceção): retomar territórios ainda
+não verificados nesta janela — Métodos gráficos e funcionais (baixa
+prioridade, mas zero cobertura confirmada) ou nova varredura de
+subtemas dentro dos territórios já bem trabalhados. Confirmar
+cobertura antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
