@@ -1,0 +1,179 @@
+[
+  {
+    "slug": "cardiomiopatia-dilatada",
+    "name": "Cardiomiopatia dilatada",
+    "aliases": ["CMD", "Cardiomiopatia dilatada idiopática", "Dilated cardiomyopathy (DCM)", "Cardiomiopatia dilatada não isquêmica"],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "dilatada",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A cardiomiopatia dilatada (CMD) é caracterizada por dilatação do ventrículo esquerdo (isolada ou biventricular) associada a disfunção sistólica global ou regional não explicada apenas por doença arterial coronariana ou por condições de sobrecarga hemodinâmica primária, como hipertensão, valvopatia ou cardiopatia congênita. É a cardiomiopatia não isquêmica mais prevalente na prática clínica, com etiologia amplamente heterogênea que inclui causas genéticas/familiares, idiopáticas, tóxicas, periparto, induzidas por taquiarritmia e infecciosas/miocardíticas. A investigação etiológica sistemática — combinando ecocardiograma, exclusão formal de doença coronariana, ressonância cardíaca com realce tardio e teste genético em casos selecionados — direciona tanto o tratamento quanto a estratificação de risco de morte súbita e a indicação de cardiodesfibrilador implantável (CDI).",
+    "epidemiology": "A cardiomiopatia dilatada é considerada a cardiomiopatia não isquêmica mais comum na prática clínica e uma causa relevante de insuficiência cardíaca com fração de ejeção reduzida em adultos jovens e de meia-idade, além de figurar entre as principais indicações de transplante cardíaco e de suporte circulatório mecânico em estágio avançado. Estudos populacionais estimam prevalência da ordem de 1 em 250 a 1 em 2.500 indivíduos, provavelmente subestimada pela heterogeneidade de critérios diagnósticos históricos e pelo número de casos assintomáticos identificados apenas em rastreamento familiar em cascata. Uma parcela relevante dos casos historicamente rotulados como idiopáticos tem componente genético/familiar identificável quando investigada de forma sistemática — estudos com sequenciamento em painel encontram variante patogênica ou provavelmente patogênica em fração substancial dos casos, com TTN truncante como o gene isoladamente mais associado, seguido por LMNA, MYH7, FLNC, RBM20 e outros genes sarcoméricos, do citoesqueleto e do envelope nuclear. A etiologia é amplamente variável: além da forma genética/familiar, contribuem causas tóxicas (álcool, quimioterápicos como antraciclinas e trastuzumabe, radioterapia torácica), periparto, taquicardia-induzida, infecciosa/miocardítica e, em regiões endêmicas, a cardiomiopatia chagásica — o que torna a investigação etiológica sistemática, e não o rótulo genérico de idiopática, central ao manejo e ao prognóstico.",
+    "presentation": [
+      "Dispneia aos esforços, progressiva",
+      "Fadiga e intolerância ao exercício",
+      "Ortopneia e dispneia paroxística noturna",
+      "Edema de membros inferiores e sinais de congestão sistêmica",
+      "Palpitações associadas a arritmias atriais ou ventriculares",
+      "Síncope ou pré-síncope (sinal de alarme para arritmia maligna)",
+      "Achado incidental de cardiomegalia ou disfunção sistólica em exame de imagem assintomático, sobretudo em rastreamento familiar",
+      "Fenômenos tromboembólicos (AVC, embolia periférica) por trombo intracavitário",
+      "Dor torácica atípica, sobretudo quando há componente inflamatório/miocardítico associado",
+      "Sinais de baixo débito em estágio avançado (extremidades frias, hipotensão, oligúria)",
+      "Terceira bulha (galope) e sopro de regurgitação mitral ou tricúspide funcional ao exame físico",
+      "Distúrbios de condução (bloqueio atrioventricular, bloqueio de ramo), especialmente sugestivos de etiologia genética como variante em LMNA"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial": "Ecocardiograma transtorácico com Doppler confirma o fenótipo (dilatação do ventrículo esquerdo, isolada ou biventricular, com disfunção sistólica global ou regional) e quantifica fração de ejeção, dimensões cavitárias, função diastólica, insuficiência valvar funcional e presença de trombo intracavitário. Eletrocardiograma de 12 derivações complementa a avaliação inicial, buscando distúrbios de condução (bloqueio atrioventricular, bloqueio de ramo) que podem sinalizar etiologia genética específica, como variantes em LMNA.",
+      "exclusao_de_doenca_coronariana": "Etapa obrigatória antes de rotular o quadro como CMD primária: cateterismo cardíaco (coronariografia invasiva) ou angiotomografia coronariana, conforme probabilidade pré-teste e perfil de risco, para excluir doença arterial coronariana obstrutiva como causa da disfunção sistólica. Hipertensão, valvopatia primária e cardiopatia congênita também precisam ser sistematicamente afastadas como explicação isolada do fenótipo.",
+      "ressonancia_cardiaca": "Ressonância magnética cardíaca com realce tardio de gadolínio caracteriza padrão e distribuição da fibrose/cicatriz miocárdica, auxilia na diferenciação entre etiologia isquêmica e não isquêmica, sinaliza atividade inflamatória sugestiva de miocardite e contribui para a estratificação de risco arrítmico quando há realce tardio mesocárdico ou em padrão de risco.",
+      "investigacao_etiologica_sistematica": "Após excluir causas coronarianas e de sobrecarga, a investigação percorre de forma estruturada: história dirigida de consumo de álcool e exposição a cardiotóxicos (antraciclinas, trastuzumabe, radioterapia torácica); pesquisa de taquiarritmia sustentada precedente (fibrilação/flutter atrial de alta resposta, taquicardia atrial incessante, extrassistolia ventricular de alta carga) sugerindo taquicardiomiopatia; contexto obstétrico (último mês de gestação a cinco meses pós-parto) para cardiomiopatia periparto; sorologia para Chagas em paciente procedente de área endêmica; e sorologias/marcadores para etiologia infecciosa/miocardítica.",
+      "teste_genetico": "Teste genético em painel multigênico é indicado em casos selecionados — história familiar de CMD ou morte súbita precoce, achados extracardíacos sugestivos (doença neuromuscular, distúrbio de condução) ou CMD idiopática mesmo sem história familiar conhecida — sempre precedido de aconselhamento genético estruturado, com rastreamento clínico e genético em cascata dos familiares de primeiro grau quando variante patogênica é identificada.",
+      "estratificacao_de_risco_e_cdi": "Uma vez confirmada a etiologia e otimizado o tratamento farmacológico por período adequado, a estratificação de risco de morte súbita combina fração de ejeção, genótipo (variantes de alto risco em LMNA, FLNC, PLN, RBM20), realce tardio à ressonância, síncope inexplicada e indutibilidade ao estudo eletrofisiológico para individualizar a indicação de cardiodesfibrilador implantável, com calculadora de risco específica disponível para portadores de variante em LMNA."
+    },
+    "differentials": [
+      "Cardiomiopatia isquêmica (doença arterial coronariana com disfunção ventricular)",
+      "Cardiomiopatia hipertensiva com remodelamento excêntrico avançado",
+      "Miocardite aguda ou subaguda com disfunção transitória",
+      "Cardiomiopatia periparto",
+      "Taquicardiomiopatia (cardiomiopatia induzida por taquiarritmia)",
+      "Cardiomiopatia chagásica",
+      "Cardiomiopatia tóxica (induzida por álcool ou quimioterápicos cardiotóxicos)",
+      "Cardiomiopatia arritmogênica com fenótipo de ventrículo esquerdo predominante",
+      "Não compactação/hipertrabeculação do ventrículo esquerdo como achado de imagem sobreposto",
+      "Valvopatia primária não reconhecida com sobrecarga de volume crônica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler",
+      "Eletrocardiograma de 12 derivações",
+      "Cateterismo cardíaco ou angiotomografia coronariana para exclusão de doença arterial coronariana",
+      "Ressonância magnética cardíaca com realce tardio de gadolínio",
+      "Sorologia para Chagas e demais sorologias infecciosas conforme contexto epidemiológico",
+      "Investigação de exposição tóxica (história de consumo de álcool, quimioterápicos cardiotóxicos, radioterapia torácica)",
+      "Painel genético multigênico com aconselhamento genético estruturado",
+      "Monitorização ambulatorial de ritmo (Holter) para arritmias atriais e ventriculares",
+      "Peptídeos natriuréticos (BNP/NT-proBNP)",
+      "Biópsia endomiocárdica em casos selecionados, quando há suspeita de miocardite complicada ou doença infiltrativa"
+    ],
+    "red_flags": [
+      "Síncope inexplicada",
+      "Variante patogênica de alto risco identificada (LMNA, FLNC)",
+      "Bloqueio atrioventricular avançado em paciente jovem",
+      "Taquicardia ventricular não sustentada documentada",
+      "História familiar de morte súbita precoce ou de cardiomiopatia",
+      "Instabilidade hemodinâmica ou choque cardiogênico",
+      "Trombo intracavitário com evento embólico associado",
+      "Fração de ejeção persistentemente muito reduzida apesar de tratamento farmacológico otimizado"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico com ecocardiograma transtorácico detalhando fração de ejeção, dimensões e padrão de enchimento ventricular",
+      "Investigar a etiologia com história clínica dirigida, exames laboratoriais, ressonância cardíaca quando disponível e avaliação de doença coronariana quando indicada",
+      "Iniciar e titular progressivamente a terapia farmacológica guiada por diretriz para insuficiência cardíaca com fração de ejeção reduzida",
+      "Identificar e tratar causas potencialmente reversíveis, como consumo abusivo de álcool, arritmias não controladas ou período periparto",
+      "Orientar restrição de sódio, controle de peso diário e atividade física conforme tolerância",
+      "Reavaliar a função ventricular por ecocardiograma após período adequado de terapia otimizada para reclassificar o risco",
+      "Encaminhar para estratificação de risco de morte súbita e avaliação de cardioversor-desfibrilador implantável quando os critérios forem preenchidos",
+      "Avaliar critérios eletrocardiográficos para terapia de ressincronização cardíaca",
+      "Encaminhar para aconselhamento genético e rastreio familiar quando houver componente familiar sugerido",
+      "Referenciar a centro de insuficiência cardíaca avançada nos casos refratários à terapia otimizada"
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de descompensação aguda (dispneia progressiva, ortopneia, edema, ganho rápido de peso) e orientar procura imediata de atendimento",
+      "Avaliar sinais de choque cardiogênico (hipotensão, extremidades frias, confusão mental, oligúria) e acionar suporte hemodinâmico de emergência",
+      "Investigar arritmias ventriculares sustentadas ou síncope como possível evento de risco de morte súbita, com monitorização eletrocardiográfica contínua",
+      "Considerar suporte circulatório mecânico e avaliação para transplante cardíaco ou dispositivo de assistência ventricular em choque refratário",
+      "Estabilizar quadro de edema agudo de pulmão com suporte ventilatório e terapia depletiva conforme protocolo institucional"
+    ],
+    "treatment_summary": "O tratamento da cardiomiopatia dilatada tem como alicerce a terapia farmacológica guiada por diretriz para insuficiência cardíaca com fração de ejeção reduzida, que deve ser iniciada precocemente e progressivamente otimizada até as doses toleradas, associando as classes atualmente reconhecidas como capazes de reduzir mortalidade e hospitalizações, incluindo bloqueio do sistema renina-angiotensina-aldosterona (ou seu inibidor de neprilisina combinado), betabloqueador com evidência em insuficiência cardíaca, antagonista mineralocorticoide e inibidor do cotransportador sódio-glicose tipo 2, sem que doses específicas sejam aqui detalhadas, cabendo ao médico assistente definir a titulação individualizada. Paralelamente à otimização farmacológica, é fundamental investigar e tratar causas potencialmente reversíveis de disfunção ventricular, pois a remoção do fator causal pode levar à recuperação parcial ou completa da função sistólica. Na cardiomiopatia associada a consumo abusivo de álcool, a abstinência completa e sustentada é a intervenção mais determinante para o prognóstico. Na taquicardiomiopatia, decorrente de arritmias atriais ou ventriculares sustentadas e não controladas, o controle rigoroso de frequência cardíaca ou a restauração do ritmo sinusal frequentemente reverte, ao menos parcialmente, a disfunção ventricular. Na cardiomiopatia periparto, o suporte hemodinâmico e o acompanhamento multidisciplinar entre cardiologia e obstetrícia são essenciais, dada a possibilidade de descompensação rápida durante a gestação, o parto e o puerpério. A estratificação de risco de morte súbita cardíaca é etapa central do seguimento, sendo indicado cardioversor-desfibrilador implantável em prevenção primária para pacientes que mantêm fração de ejeção reduzida após período adequado de terapia farmacológica otimizada, respeitando os intervalos mínimos de reavaliação estabelecidos pelas diretrizes antes de indicar o dispositivo. Em pacientes com componente familiar sugerido por história de cardiomiopatia ou morte súbita em parentes de primeiro grau, recomenda-se aconselhamento genético especializado e rastreio clínico e ecocardiográfico dos familiares em risco, permitindo diagnóstico precoce e intervenção antes do desenvolvimento de disfunção avançada. A terapia de ressincronização cardíaca deve ser considerada nos pacientes que preenchem critérios eletrocardiográficos de dissincronia ventricular, notadamente duração de QRS alargada com morfologia de bloqueio de ramo esquerdo, associada à fração de ejeção reduzida e sintomas persistentes apesar de terapia otimizada, com potencial de melhora funcional, redução de hospitalizações e impacto favorável na sobrevida. O seguimento ambulatorial estruturado, com reavaliações clínicas e de imagem periódicas, permite ajustar a terapia, identificar sinais precoces de descompensação e reavaliar continuamente a indicação de dispositivos e a necessidade de encaminhamento a centros de insuficiência cardíaca avançada, incluindo avaliação para dispositivos de assistência ventricular ou transplante cardíaco nos casos refratários.",
+    "monitoring": [
+      "Reavaliação clínica periódica da classe funcional (NYHA) e de sinais de congestão",
+      "Ecocardiograma seriado para acompanhar fração de ejeção e remodelamento ventricular",
+      "Eletrocardiograma periódico para monitorar duração do QRS e surgimento de bloqueios de condução",
+      "Monitorização de função renal e eletrólitos durante a titulação da terapia farmacológica",
+      "Peso corporal diário e vigilância de sinais de retenção hídrica pelo próprio paciente",
+      "Holter ou monitorização de ritmo prolongada para detectar arritmias atriais ou ventriculares",
+      "Acompanhamento de peptídeos natriuréticos quando disponíveis, como marcador de trajetória clínica",
+      "Reavaliação periódica da indicação de cardioversor-desfibrilador implantável e de terapia de ressincronização cardíaca"
+    ],
+    "special_populations": [
+      "Paciente com cardiomiopatia dilatada de causa genética/familiar (rastreio em cascata dos parentes de primeiro grau)",
+      "Paciente com cardiomiopatia alcoólica (potencial de recuperação funcional relacionado à abstinência)",
+      "Paciente com taquicardiomiopatia (cardiomiopatia induzida por taquicardia), com disfunção potencialmente reversível após controle de frequência ou ritmo",
+      "Paciente com cardiomiopatia periparto",
+      "Paciente com cardiomiopatia dilatada e alto risco de morte súbita, candidato a cardiodesfibrilador implantável",
+      "Paciente com cardiomiopatia dilatada de etiologia miocardítica prévia"
+    ],
+    "assistant_questions": [
+      {"id": "etiologia_suspeita", "label": "Qual a etiologia suspeita ou confirmada da cardiomiopatia dilatada?", "type": "select", "options": [
+        {"value": "idiopatica", "label": "Idiopática"}, {"value": "isquemica", "label": "Isquêmica"}, {"value": "alcoolica", "label": "Alcoólica"}, {"value": "taquicardiomiopatia", "label": "Taquicardiomiopatia"}, {"value": "periparto", "label": "Periparto"}, {"value": "familiar_genetica", "label": "Familiar/genética"}, {"value": "quimioterapia", "label": "Induzida por quimioterapia"}, {"value": "miocardite_previa", "label": "Miocardite prévia"}, {"value": "outra", "label": "Outra"}]},
+      {"id": "fracao_ejecao_percentual", "label": "Qual a fração de ejeção do ventrículo esquerdo atual (%)?", "type": "number"},
+      {"id": "classe_funcional_nyha", "label": "Qual a classe funcional NYHA atual?", "type": "select", "options": [{"value": "i", "label": "I"}, {"value": "ii", "label": "II"}, {"value": "iii", "label": "III"}, {"value": "iv", "label": "IV"}]},
+      {"id": "em_terapia_otimizada_guiada_diretriz", "label": "O paciente está em terapia farmacológica otimizada guiada por diretriz para insuficiência cardíaca com fração de ejeção reduzida?", "type": "boolean"},
+      {"id": "tempo_terapia_otimizada_dias", "label": "Há quantos dias o paciente está em terapia otimizada estável?", "type": "number"},
+      {"id": "consumo_alcool_significativo", "label": "Há consumo abusivo de álcool em curso?", "type": "boolean"},
+      {"id": "arritmia_atrial_sustentada", "label": "Há arritmia atrial ou ventricular sustentada e não controlada?", "type": "boolean"},
+      {"id": "periodo_periparto_atual", "label": "O quadro ocorreu no período periparto (gestação, parto ou puerpério)?", "type": "boolean"},
+      {"id": "sincope_inexplicada", "label": "Houve síncope inexplicada?", "type": "boolean"},
+      {"id": "taquicardia_ventricular_documentada", "label": "Há taquicardia ventricular documentada?", "type": "boolean"},
+      {"id": "duracao_qrs_ms", "label": "Qual a duração do QRS no eletrocardiograma (ms)?", "type": "number"},
+      {"id": "padrao_bloqueio_ramo_esquerdo", "label": "Há padrão eletrocardiográfico de bloqueio de ramo esquerdo?", "type": "boolean"},
+      {"id": "sinais_congestao", "label": "Quais sinais de congestão estão presentes?", "type": "multiselect", "options": [
+        {"value": "dispneia", "label": "Dispneia"}, {"value": "edema", "label": "Edema"}, {"value": "ortopneia", "label": "Ortopneia"}, {"value": "estertores_pulmonares", "label": "Estertores pulmonares"}, {"value": "turgencia_jugular", "label": "Turgência jugular"}, {"value": "hepatomegalia", "label": "Hepatomegalia"}, {"value": "ascite", "label": "Ascite"}]},
+      {"id": "sinais_choque_cardiogenico", "label": "Há sinais de choque cardiogênico (hipotensão, extremidades frias, confusão, oligúria)?", "type": "boolean"},
+      {"id": "historia_familiar_cardiomiopatia_morte_subita", "label": "Há história familiar de cardiomiopatia ou morte súbita em parentes de primeiro grau?", "type": "boolean"},
+      {"id": "aconselhamento_genetico_realizado", "label": "O aconselhamento genético já foi realizado?", "type": "boolean"},
+      {"id": "rastreio_familiar_realizado", "label": "O rastreio clínico e ecocardiográfico dos familiares já foi realizado?", "type": "boolean"}
+    ],
+    "assistant_rules": [
+      {"id": "etiologia_alcoolica_abstinencia", "priority": 70, "when": {"all": [{"field": "etiologia_suspeita", "op": "eq", "value": "alcoolica"}, {"field": "consumo_alcool_significativo", "op": "truthy"}]}, "add": {"supporting": ["Etiologia alcoólica identificada com consumo significativo em curso - abstinência completa é intervenção potencialmente reversível e deve ser reforçada"], "ambulatory_flow": ["Encaminhar para suporte especializado em cessação do consumo de álcool e reavaliar a função ventricular após período de abstinência"]}},
+      {"id": "taquicardiomiopatia_controle_frequencia", "priority": 70, "when": {"all": [{"field": "etiologia_suspeita", "op": "eq", "value": "taquicardiomiopatia"}, {"field": "arritmia_atrial_sustentada", "op": "truthy"}]}, "add": {"supporting": ["Padrão compatível com taquicardiomiopatia - controle rigoroso de frequência ou ritmo é a intervenção causal prioritária e pode reverter a disfunção ventricular"], "suggested_tests": ["Holter de 24-48h para quantificar a carga arrítmica e a resposta ao controle de frequência"]}},
+      {"id": "periparto_suporte", "priority": 80, "when": {"any": [{"field": "etiologia_suspeita", "op": "eq", "value": "periparto"}, {"field": "periodo_periparto_atual", "op": "truthy"}]}, "add": {"risk": "prioritario", "red_flags": ["Cardiomiopatia periparto - risco de descompensação rápida e necessidade de suporte multidisciplinar obstétrico-cardiológico"], "suggested_tests": ["Avaliação conjunta com obstetrícia/cardio-obstetrícia", "Peptídeo natriurético seriado"]}},
+      {"id": "cdi_prevencao_primaria_avaliar", "priority": 85, "when": {"all": [{"field": "fracao_ejecao_percentual", "op": "lte", "value": 35}, {"field": "em_terapia_otimizada_guiada_diretriz", "op": "truthy"}, {"field": "tempo_terapia_otimizada_dias", "op": "gte", "value": 90}]}, "add": {"risk": "prioritario", "supporting": ["Fração de ejeção reduzida persistente após período adequado de terapia otimizada - critério para avaliação de cardioversor-desfibrilador implantável em prevenção primária"], "suggested_tests": ["Reavaliação ecocardiográfica da fração de ejeção", "Encaminhamento para eletrofisiologia/arritmia"]}},
+      {"id": "fe_reduzida_sem_terapia_otimizada_completa", "priority": 55, "when": {"all": [{"field": "fracao_ejecao_percentual", "op": "lte", "value": 35}, {"field": "em_terapia_otimizada_guiada_diretriz", "op": "falsy"}]}, "add": {"risk": "rotina", "missing_information": ["Confirmar se a terapia farmacológica guiada por diretriz para insuficiência cardíaca com fração de ejeção reduzida foi iniciada e otimizada antes de indicar cardioversor-desfibrilador implantável"]}},
+      {"id": "sincope_ou_tv_alerta", "priority": 90, "when": {"any": [{"field": "sincope_inexplicada", "op": "truthy"}, {"field": "taquicardia_ventricular_documentada", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Síncope inexplicada ou taquicardia ventricular documentada em paciente com cardiomiopatia dilatada - risco aumentado de morte súbita, com necessidade de avaliação urgente para estratificação de risco e possível cardioversor-desfibrilador implantável"], "emergency_flow": ["Considerar encaminhamento para avaliação de emergência se síncope recente ou instabilidade hemodinâmica associada"]}},
+      {"id": "choque_cardiogenico_emergencia", "priority": 100, "when": {"all": [{"field": "sinais_choque_cardiogenico", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Sinais de choque cardiogênico - hipoperfusão em paciente com cardiomiopatia dilatada configura emergência com necessidade de suporte hemodinâmico imediato"], "emergency_flow": ["Acionar protocolo de emergência para choque cardiogênico e considerar suporte circulatório mecânico e avaliação para transplante ou dispositivo de assistência ventricular"]}},
+      {"id": "componente_familiar_aconselhamento", "priority": 60, "when": {"any": [{"field": "historia_familiar_cardiomiopatia_morte_subita", "op": "truthy"}, {"field": "etiologia_suspeita", "op": "eq", "value": "familiar_genetica"}]}, "add": {"supporting": ["Componente familiar identificado - indicado aconselhamento genético e rastreio em familiares de primeiro grau"]}},
+      {"id": "aconselhamento_genetico_pendente", "priority": 55, "when": {"all": [{"field": "historia_familiar_cardiomiopatia_morte_subita", "op": "truthy"}, {"field": "aconselhamento_genetico_realizado", "op": "falsy"}]}, "add": {"missing_information": ["Aconselhamento genético ainda não realizado em caso com componente familiar sugerido"]}},
+      {"id": "rastreio_familiar_pendente", "priority": 55, "when": {"all": [{"field": "historia_familiar_cardiomiopatia_morte_subita", "op": "truthy"}, {"field": "rastreio_familiar_realizado", "op": "falsy"}]}, "add": {"missing_information": ["Rastreio familiar (clínico e ecocardiográfico, com aconselhamento genético quando disponível) ainda não realizado nos parentes de primeiro grau"]}},
+      {"id": "trc_avaliar", "priority": 80, "when": {"all": [{"field": "duracao_qrs_ms", "op": "gte", "value": 150}, {"field": "padrao_bloqueio_ramo_esquerdo", "op": "truthy"}, {"field": "fracao_ejecao_percentual", "op": "lte", "value": 35}, {"field": "em_terapia_otimizada_guiada_diretriz", "op": "truthy"}]}, "add": {"supporting": ["QRS alargado com padrão de bloqueio de ramo esquerdo e fração de ejeção reduzida em terapia otimizada - critérios favoráveis para terapia de ressincronização cardíaca"], "suggested_tests": ["Eletrocardiograma para confirmar morfologia e duração do QRS", "Encaminhamento para avaliação de ressincronização cardíaca"]}},
+      {"id": "congestao_ambulatorial", "priority": 50, "when": {"any": [{"field": "sinais_congestao", "op": "contains", "value": "edema"}, {"field": "sinais_congestao", "op": "contains", "value": "dispneia"}, {"field": "sinais_congestao", "op": "contains", "value": "ortopneia"}]}, "add": {"risk": "rotina", "ambulatory_flow": ["Reavaliar volemia e otimizar a terapia diurética/depletiva ambulatorialmente, com reforço de restrição de sódio e monitorização de peso diário"]}},
+      {"id": "etiologia_isquemica_investigar", "priority": 60, "when": {"all": [{"field": "etiologia_suspeita", "op": "eq", "value": "isquemica"}]}, "add": {"differentials": ["Cardiomiopatia isquêmica por doença arterial coronariana subjacente"], "suggested_tests": ["Cinecoronariografia ou angiotomografia coronariana para avaliar doença arterial coronariana como causa ou contribuinte"]}}
+    ],
+    "tags": ["cardiomiopatia", "insuficiência cardíaca", "genética cardiovascular", "morte súbita cardíaca", "cardiodesfibrilador implantável", "arritmia ventricular"],
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID 37622657",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. PMID 31155932",
+      "Bauersachs J, König T, van der Meer P, et al. Pathophysiology, diagnosis and management of peripartum cardiomyopathy: a position statement from the Heart Failure Association of the ESC Study Group on peripartum cardiomyopathy. Eur J Heart Fail. 2019;21(7):827-843. PMID 31243866",
+      "Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026. PMID 42412249",
+      "Lakdawala NK, Hershberger RE, Garcia-Pavia P, et al. Danicamtiv, a Selective Agonist of Cardiac Myosin, for Dilated Cardiomyopathy: A Phase 2 Open-Label Trial. J Am Coll Cardiol. 2025;86(25):2598-2612. PMID 41217321",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572",
+      "Køber L, Thune JJ, Nielsen JC, et al. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. PMID 27571011",
+      "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID 20348027"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37622657/",
+      "https://pubmed.ncbi.nlm.nih.gov/31155932/",
+      "https://pubmed.ncbi.nlm.nih.gov/31243866/",
+      "https://pubmed.ncbi.nlm.nih.gov/42412249/",
+      "https://pubmed.ncbi.nlm.nih.gov/41217321/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://pubmed.ncbi.nlm.nih.gov/27571011/",
+      "https://pubmed.ncbi.nlm.nih.gov/20348027/"
+    ],
+    "related_document_slugs": [
+      "cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023",
+      "fluxograma-cardiomiopatia-dilatada-investigacao-etiologica",
+      "fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi",
+      "taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade",
+      "cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo",
+      "cardiomiopatia-alcoolica-o-efeito-da-abstinencia-e-do-consumo-controlado"
+    ],
+    "patient_material_slug": "cardiomiopatia-dilatada-por-que-o-coracao-aumenta-de-tamanho",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Cardiomiopatia dilatada, a cardiomiopatia não isquêmica mais prevalente, não tinha ficha própria em doencas/metadados.json, apesar de corpus rico já existente em content/Cardiomiopatias/ (diagnóstico genético e manejo ESC 2023, fluxogramas de investigação etiológica e risco de morte súbita/CDI, taquicardiomiopatia, cardiomiopatia periparto, cardiomiopatia alcoólica). related_document_slugs verificados individualmente por leitura direta do documento completo — reduzido de 7 propostos para 6 finais (o 7º candidato, sobre miocardite, foi excluído por eu ter avaliado que a menção à cardiomiopatia dilatada era apenas uma progressão minoritária de desfecho dentro de um documento cujo tema central é miocardite, não CMD em si — decisão de rigor além da proposta inicial do agente). 8 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug confirmado por correspondência em material-paciente/metadados.json. category='cardiomiopatia' e subtype='dilatada' seguem a convenção já usada por cardiomiopatia-hipertrofica. prevalence_rank deixado null. Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
