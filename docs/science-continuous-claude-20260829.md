@@ -1068,13 +1068,28 @@ corrigido (JSONs + `content/**/*.md` + `gh pr list`).
   corte numérico (mm/mV) inventado — regra qualitativa usada por falta
   de confirmação exata nas fontes.
 
-## Lote 47 (planejado)
+## Lote 47 — concluído (SHA d96c623a) — total 75 commits
 
-A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list` em toda checagem, sem exceção): retomar territórios ainda
-não verificados nesta janela — Métodos gráficos e funcionais (baixa
-prioridade, mas zero cobertura confirmada) ou nova varredura de
-subtemas dentro dos territórios já bem trabalhados. Confirmar
-cobertura antes de despachar.
+- checklist `avaliacao-cardiovascular-do-candidato-a-transplante-hepatico-cardiomiopatia-cirrotica-e-rastreio-coronariano`
+  — 5 itens: cardiomiopatia cirrótica (FE de repouso normal mascara
+  reserva contrátil comprometida, critérios revisados 2019/2020
+  substituindo Montreal 2005); eco de estresse com dobutamina (18% de
+  exames inadequados nessa população); rastreio coronariano via escore
+  CAD-LT (97% de acerto), com nuance de que testes funcionais têm
+  acurácia limitada segundo AHA 2022; hipertensão porto-pulmonar (eco
+  como rastreio, SEMPRE exige confirmação por cateterismo antes de
+  contraindicar transplante); manejo perioperatório (reperfusão
+  desmascara reserva comprometida no momento de maior risco). 11 fontes
+  via NCBI e-utils. Ausência de PMID isolado para consenso Montreal 2005
+  declarada explicitamente (via revisão posterior, não inventado).
+
+## Lote 48 (planejado)
+
+A auditar com o procedimento corrigido: candidato a transplante RENAL
+(distinto do hepático já coberto) — avaliação cardiovascular específica,
+já que CKD-associada é fisiopatologia diferente de cardiomiopatia
+cirrótica; ou retomar território ainda não verificado nesta janela.
+Confirmar cobertura (JSONs + `content/**/*.md` + `gh pr list`) antes de
+despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
