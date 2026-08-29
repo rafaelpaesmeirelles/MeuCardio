@@ -160,8 +160,9 @@ def analyze_text(text: str) -> dict[str, Any]:
             "Você é o analisador científico do CorVIA. Analise exclusivamente o documento fornecido. "
             "Não invente dados, doses, classes de recomendação, níveis de evidência ou resultados. "
             "Diferencie claramente resultados do estudo, limitações e implicações clínicas. Produza a "
-            "síntese em português do Brasil. Identifique se o documento acrescenta conhecimento útil ao "
-            "acervo CorVIA, mas não autorize incorporação: isso depende de consentimento explícito do usuário."
+            "síntese em português do Brasil. DOI e URL só podem ser informados quando constarem no próprio "
+            "documento. Identifique se o documento acrescenta conhecimento útil ao acervo CorVIA, mas não "
+            "autorize incorporação: isso depende de consentimento explícito do usuário."
         ),
         "input": [{"role": "user", "content": [{"type": "input_text", "text": prompt}]}],
         "text": {"format": {"type": "json_schema", "name": "corvia_scientific_document_analysis", "strict": True, "schema": ANALYSIS_SCHEMA}},
@@ -183,9 +184,9 @@ def _translate_chunk(chunk: str) -> str:
         "store": False,
         "max_output_tokens": max(4096, settings.ai_max_output_tokens),
         "instructions": (
-            "Traduza fielmente para português do Brasil o trecho científico fornecido. Preserve títulos, "
-            "subtítulos, números, unidades, tabelas em texto, abreviações e referências. Não resuma, não "
-            "interprete e não acrescente conteúdo. Retorne somente a tradução."
+            "Traduza fielmente para português do Brasil o trecho científico fornecido para uso privado do "
+            "usuário que enviou o arquivo. Preserve títulos, subtítulos, números, unidades, tabelas em texto, "
+            "abreviações e referências. Não resuma, não interprete e não acrescente conteúdo. Retorne somente a tradução."
         ),
         "input": [{"role": "user", "content": [{"type": "input_text", "text": chunk}]}],
     }
@@ -235,12 +236,50 @@ def _kind(document_type: str) -> str:
     }.get(document_type, "modulo")
 
 
+def has_traceable_source(analysis: dict) -> bool:
+    return bool(str(analysis.get("doi") or "").strip() or str(analysis.get("source_url") or "").strip())
+
+
+def _shared_synthesis_body(analysis: dict) -> str:
+    """Conteúdo original do CorVIA para o acervo compartilhado.
+
+    A tradução integral do arquivo enviado nunca sai da biblioteca privada do
+    assinante. O corpus global recebe somente síntese derivada e rastreável.
+    """
+    parts = [
+        "## Síntese clínica CorVIA",
+        str(analysis.get("summary_pt") or "").strip(),
+        "\n## Metodologia",
+        str(analysis.get("methodology_pt") or "").strip(),
+        "\n## População",
+        str(analysis.get("population_pt") or "").strip(),
+        "\n## Intervenções / exposições",
+        str(analysis.get("interventions_pt") or "").strip(),
+        "\n## Desfechos e resultados",
+        "\n\n".join(filter(None, [
+            str(analysis.get("outcomes_pt") or "").strip(),
+            str(analysis.get("results_pt") or "").strip(),
+        ])),
+        "\n## Pontos-chave",
+        "\n".join(f"- {x}" for x in analysis.get("key_points_pt") or []),
+        "\n## Implicações clínicas",
+        "\n".join(f"- {x}" for x in analysis.get("clinical_implications_pt") or []),
+        "\n## Limitações",
+        "\n".join(f"- {x}" for x in analysis.get("limitations_pt") or []),
+        "\n## Proveniência",
+        "Síntese original produzida pelo CorVIA a partir de documento enviado por assinante e incorporado mediante consentimento explícito. Consulte a fonte primária para o texto integral.",
+    ]
+    return "\n\n".join(part for part in parts if part.strip()).strip()
+
+
 def incorporate(db: Session, row: ScientificUserDocument, analysis: dict, translated_text: str, *, reviewer_id: int) -> Document:
     duplicate = find_duplicate(db, analysis)
     if duplicate:
         row.incorporation_status = "duplicado"
         row.incorporated_document_id = duplicate.id
         return duplicate
+    if not has_traceable_source(analysis):
+        raise ValueError("Documento sem DOI ou URL de fonte rastreável não pode ser incorporado automaticamente ao acervo compartilhado.")
 
     base_slug = _slug(str(analysis.get("title") or "Documento científico"))
     slug = base_slug
@@ -258,25 +297,22 @@ def incorporate(db: Session, row: ScientificUserDocument, analysis: dict, transl
             refs.append(value)
     refs.append(f"sha256:{row.sha256}")
 
-    body = translated_text.strip()
-    if not body:
-        body = str(analysis.get("summary_pt") or "").strip()
     document = Document(
         slug=slug,
         title=str(analysis.get("title") or "Documento científico")[:500],
         kind=_kind(str(analysis.get("document_type") or row.document_type)),
         theme=theme,
         summary=str(analysis.get("summary_pt") or ""),
-        body_md=body,
+        body_md=_shared_synthesis_body(analysis),
         tags=topics[:30],
         source_refs=refs,
         evidence_level=str(analysis.get("evidence_strength") or "nao_determinada")[:40],
-        source_tier="A" if analysis.get("doi") or analysis.get("source_url") else "B",
-        review_status="revisado_ia_consentido",
+        source_tier="A",
+        review_status="revisado",
         published=True,
         reviewed_by=reviewer_id,
         reviewed_at=datetime.now(timezone.utc),
-        gaps=[] if analysis.get("doi") or analysis.get("source_url") else ["Fonte bibliográfica sem DOI/URL informada no arquivo."],
+        gaps=[],
     )
     db.add(document)
     db.flush()
