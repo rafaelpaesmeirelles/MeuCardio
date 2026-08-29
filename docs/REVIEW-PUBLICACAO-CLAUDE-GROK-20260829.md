@@ -7,6 +7,7 @@
 - Itens de checklist removidos por colisão/fonte não resolvida: **3**.
 - Registros inteiros retidos: **0**.
 - Fragmentos/correções de doença modificados pelo Claude: promovidos a `revisado` após correções dirigidas e gates estruturais.
+- Certificação final solicitada novamente após normalização do contrato de banco de `checklists.revisao`.
 
 ## Correções clínicas dirigidas
 - EAo no idoso: CGA/futilidade e manejo hemodinâmico reescritos sem proibições absolutas.
