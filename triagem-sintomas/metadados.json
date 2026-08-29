@@ -4649,5 +4649,562 @@
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
     "version": 2
+  },
+  {
+    "slug": "tontura-vertigem-persistente",
+    "name": "Tontura/vertigem persistente",
+    "aliases": [
+      "tontura",
+      "cabeça leve",
+      "sensação de desmaio sem desmaiar",
+      "vertigem",
+      "vertigem crônica",
+      "tontura persistente",
+      "instabilidade",
+      "cabeça girando"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem de tontura ou vertigem persistente ou recorrente, sem perda completa de consciência, com foco no diferencial entre causa vestibular, ortostática/hipotensiva, cardiovascular, metabólica e medicamentosa.",
+    "questions": [
+      {
+        "id": "rotatory_sensation",
+        "label": "Há sensação de rotação do ambiente ou de si mesmo (vertigem verdadeira), e não apenas cabeça leve ou instabilidade?",
+        "type": "boolean",
+        "section": "Caracterização"
+      },
+      {
+        "id": "symptom_pattern",
+        "label": "Qual o padrão predominante dos episódios?",
+        "type": "select",
+        "options": [
+          {
+            "value": "episodico_segundos_minutos",
+            "label": "Episódios súbitos, de segundos a poucos minutos"
+          },
+          {
+            "value": "episodico_horas_dias",
+            "label": "Episódios de várias horas a dias"
+          },
+          {
+            "value": "continuo_persistente",
+            "label": "Sintoma contínuo ou persistente"
+          }
+        ],
+        "section": "Caracterização"
+      },
+      {
+        "id": "age_years",
+        "label": "Idade",
+        "type": "number",
+        "min": 0,
+        "max": 120,
+        "unit": "anos",
+        "section": "Caracterização"
+      },
+      {
+        "id": "true_loss_of_consciousness",
+        "label": "Houve perda completa de consciência (desmaio) em algum episódio?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "chest_pain_or_dyspnea",
+        "label": "Há dor torácica ou falta de ar associada ao episódio?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "focal_neuro_deficit",
+        "label": "Há fraqueza, alteração da fala, visão dupla, ataxia ou dormência associada (déficit neurológico focal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "sudden_severe_headache",
+        "label": "Houve dor de cabeça súbita e intensa associada ao início dos sintomas?",
+        "type": "boolean",
+        "section": "Red flags"
+      },
+      {
+        "id": "palpitations",
+        "label": "Há palpitações associadas ao episódio de tontura?",
+        "type": "boolean",
+        "section": "Cardiovascular"
+      },
+      {
+        "id": "known_arrhythmia_or_heart_disease",
+        "label": "Há arritmia conhecida ou cardiopatia estrutural?",
+        "type": "boolean",
+        "section": "Cardiovascular"
+      },
+      {
+        "id": "worse_on_standing",
+        "label": "Os sintomas pioram ao levantar-se e melhoram ao sentar ou deitar?",
+        "type": "boolean",
+        "section": "Ortostático"
+      },
+      {
+        "id": "antihypertensive_or_hypotensive_drug",
+        "label": "Usa anti-hipertensivo, diurético ou outro medicamento que reduza a pressão arterial?",
+        "type": "boolean",
+        "section": "Ortostático"
+      },
+      {
+        "id": "dehydration_or_volume_loss",
+        "label": "Houve baixa ingestão de líquidos, diarreia, vômitos ou sangramento recente?",
+        "type": "boolean",
+        "section": "Ortostático"
+      },
+      {
+        "id": "position_head_movement_trigger",
+        "label": "Os sintomas são desencadeados ou piorados por mudança de posição da cabeça (deitar, virar na cama, olhar para cima)?",
+        "type": "boolean",
+        "section": "Vestibular"
+      },
+      {
+        "id": "nystagmus_or_hearing_change",
+        "label": "Há nistagmo observado, zumbido ou perda auditiva associada?",
+        "type": "boolean",
+        "section": "Vestibular"
+      },
+      {
+        "id": "recent_viral_uri",
+        "label": "Houve infecção viral recente (ex.: resfriado) antes do início dos sintomas?",
+        "type": "boolean",
+        "section": "Vestibular"
+      },
+      {
+        "id": "diabetes_history",
+        "label": "A pessoa tem diabetes?",
+        "type": "boolean",
+        "section": "Metabólico"
+      },
+      {
+        "id": "hypoglycemia_pattern",
+        "label": "Os episódios se relacionam a jejum prolongado ou uso de insulina/hipoglicemiante, com melhora após alimentar-se?",
+        "type": "boolean",
+        "section": "Metabólico"
+      },
+      {
+        "id": "anemia_signs",
+        "label": "Há palidez, fadiga importante ou sangramento sugestivo de anemia?",
+        "type": "boolean",
+        "section": "Metabólico"
+      },
+      {
+        "id": "new_or_changed_medication",
+        "label": "Houve início ou aumento recente de algum medicamento (anti-hipertensivo, sedativo, diurético, entre outros)?",
+        "type": "boolean",
+        "section": "Metabólico"
+      },
+      {
+        "id": "fall_or_injury",
+        "label": "Houve queda ou lesão associada ao episódio?",
+        "type": "boolean",
+        "section": "Idoso e queda"
+      }
+    ],
+    "rules": [
+      {
+        "id": "deficit-neurologico-focal",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "focal_neuro_deficit",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Déficit neurológico focal associado à tontura não é típico de vertigem periférica benigna e pode indicar AVC ou AIT de fossa posterior"
+          ],
+          "suggested_tests": [
+            "Avaliação neurológica de emergência e neuroimagem"
+          ]
+        }
+      },
+      {
+        "id": "cefaleia-subita-intensa",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "sudden_severe_headache",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cefaleia súbita e intensa associada ao início da tontura exige excluir hemorragia, dissecção arterial ou AVC de fossa posterior"
+          ]
+        }
+      },
+      {
+        "id": "perda-consciencia-associada",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "true_loss_of_consciousness",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Perda completa de consciência associada ao episódio não é tontura ou vertigem isolada"
+          ],
+          "messages": [
+            "Este episódio inclui perda de consciência: utilizar a triagem de Síncope e pré-síncope, mais adequada para eventos com perda completa da consciência, em complemento a esta triagem de tontura/vertigem persistente"
+          ]
+        }
+      },
+      {
+        "id": "dor-toracica-ou-dispneia",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "chest_pain_or_dyspnea",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Tontura associada a dor torácica ou dispneia pode indicar síndrome coronariana aguda, embolia pulmonar ou arritmia grave"
+          ]
+        }
+      },
+      {
+        "id": "arritmia-ou-palpitacao",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "palpitations",
+              "op": "truthy"
+            },
+            {
+              "field": "known_arrhythmia_or_heart_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Palpitações associadas ou arritmia/cardiopatia estrutural conhecida elevam a suspeita de causa arrítmica para a tontura"
+          ],
+          "suggested_tests": [
+            "ECG e monitorização de ritmo conforme a suspeita clínica"
+          ]
+        }
+      },
+      {
+        "id": "queda-ou-lesao-associada",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "fall_or_injury",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Queda ou lesão associada ao episódio exige avaliação de trauma e investigação da causa subjacente, com atenção redobrada no idoso"
+          ]
+        }
+      },
+      {
+        "id": "ortostatica-idoso",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "worse_on_standing",
+              "op": "truthy"
+            },
+            {
+              "field": "age_years",
+              "op": "gte",
+              "value": 65
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Tontura postural em pessoa com 65 anos ou mais aumenta a probabilidade de hipotensão ortostática, causa mais prevalente e mais perigosa (risco de queda) nesta faixa etária"
+          ],
+          "suggested_tests": [
+            "Aferição de pressão arterial e frequência cardíaca deitado e em pé (teste de ortostatismo ativo)"
+          ]
+        }
+      },
+      {
+        "id": "ortostatica-medicamentosa",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "worse_on_standing",
+              "op": "truthy"
+            },
+            {
+              "field": "antihypertensive_or_hypotensive_drug",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Uso de anti-hipertensivo, diurético ou outro fármaco hipotensor associado a piora postural sugere hipotensão ortostática medicamentosa"
+          ],
+          "ambulatory_flow": [
+            "Revisar fármacos hipotensores em uso e considerar ajuste sem suspensão autônoma"
+          ]
+        }
+      },
+      {
+        "id": "hipovolemia-ortostase",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "dehydration_or_volume_loss",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Baixa ingestão de líquidos, perdas gastrointestinais ou sangramento recente favorecem hipotensão ortostática por depleção de volume"
+          ],
+          "suggested_tests": [
+            "Hemograma, função renal e avaliação de volume conforme gravidade"
+          ]
+        }
+      },
+      {
+        "id": "neuropatia-autonomica-diabetica",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "diabetes_history",
+              "op": "truthy"
+            },
+            {
+              "field": "worse_on_standing",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Tontura postural em pessoa com diabetes levanta suspeita de neuropatia autonômica cardiovascular"
+          ],
+          "suggested_tests": [
+            "Avaliação de hipotensão ortostática anual e, se alterada, bateria de testes de Ewing"
+          ]
+        }
+      },
+      {
+        "id": "hipoglicemia-provavel",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "hypoglycemia_pattern",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Relação temporal com jejum prolongado ou uso de insulina/hipoglicemiante sugere hipoglicemia como causa da tontura"
+          ],
+          "suggested_tests": [
+            "Glicemia capilar no momento do sintoma, quando possível"
+          ]
+        }
+      },
+      {
+        "id": "anemia-provavel",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "anemia_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Hemograma completo"
+          ]
+        }
+      },
+      {
+        "id": "medicamento-novo",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "new_or_changed_medication",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Início ou aumento recente de medicamento pode explicar a tontura (efeito hipotensor, sedativo ou vestibulotóxico)"
+          ],
+          "ambulatory_flow": [
+            "Revisar a relação temporal entre o ajuste do medicamento e o sintoma, sem suspensão autônoma"
+          ]
+        }
+      },
+      {
+        "id": "vestibular-com-sintomas-auditivos",
+        "priority": 25,
+        "when": {
+          "any": [
+            {
+              "field": "nystagmus_or_hearing_change",
+              "op": "truthy"
+            },
+            {
+              "field": "recent_viral_uri",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Nistagmo, zumbido, perda auditiva ou infecção viral recente sugerem causa vestibular periférica (labirintite, neurite vestibular ou doença de Ménière)"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação otoneurológica dirigida"
+          ]
+        }
+      },
+      {
+        "id": "vestibular-periferica-posicional",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "position_head_movement_trigger",
+              "op": "truthy"
+            },
+            {
+              "field": "focal_neuro_deficit",
+              "op": "falsy"
+            },
+            {
+              "field": "chest_pain_or_dyspnea",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Tontura rotatória breve desencadeada por movimento da cabeça, sem déficit focal ou sinais de alarme cardiovascular, sugere causa vestibular periférica como VPPB"
+          ],
+          "suggested_tests": [
+            "Manobra de Dix-Hallpike ou avaliação otoneurológica dirigida"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Sinais vitais e pressão arterial deitado e em pé (teste de ortostatismo ativo)",
+      "Exame otoneurológico dirigido, incluindo manobra de Dix-Hallpike quando indicada",
+      "ECG"
+    ],
+    "differentials": [
+      "Hipotensão ortostática",
+      "Vertigem posicional paroxística benigna (VPPB)",
+      "Neurite vestibular/labirintite",
+      "Doença de Ménière",
+      "Arritmia cardíaca",
+      "Neuropatia autonômica cardiovascular diabética",
+      "Anemia",
+      "Hipoglicemia",
+      "Efeito medicamentoso",
+      "AVC/AIT de fossa posterior (diferencial a excluir)"
+    ],
+    "red_flags": [
+      "Déficit neurológico focal",
+      "Cefaleia súbita e intensa",
+      "Perda de consciência associada",
+      "Dor torácica ou dispneia associada",
+      "Palpitações ou arritmia/cardiopatia conhecida",
+      "Queda ou lesão associada"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar o padrão (rotatório vs. desequilíbrio vs. cabeça leve), duração e relação com posição/movimento",
+      "Realizar teste de ortostatismo ativo (PA e FC deitado e em pé) e revisar fármacos hipotensores",
+      "Avaliar sinais vestibulares (nistagmo, manobra de Dix-Hallpike) e sintomas auditivos associados",
+      "Investigar causas metabólicas (glicemia, hemograma) e histórico cardiovascular conforme a suspeita",
+      "Encaminhar para avaliação otoneurológica, cardiológica ou neurológica dirigida conforme o diferencial mais provável"
+    ],
+    "emergency_flow": [
+      "Avaliar via aérea, respiração e circulação; obter sinais vitais completos e glicemia capilar imediatamente",
+      "Realizar exame neurológico focado em busca de déficit focal, ataxia, disartria ou alteração do nível de consciência",
+      "Obter ECG e monitorização cardíaca se houver dor torácica, dispneia, palpitações, síncope associada ou arritmia/cardiopatia conhecida",
+      "Considerar neuroimagem de urgência diante de déficit focal, cefaleia súbita e intensa, ou vertigem de início abrupto com sinais atípicos para causa vestibular periférica",
+      "Não atribuir a tontura a causa vestibular benigna sem antes excluir os sinais de alarme cardiovascular e neurológico listados; buscar avaliação de emergência diante de qualquer um deles"
+    ],
+    "tags": [
+      "tontura",
+      "vertigem",
+      "hipotensao-ortostatica",
+      "vestibular",
+      "cardiogeriatria"
+    ],
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — critérios diagnósticos de hipotensão ortostática (queda de PAS ≥20 mmHg, PAD ≥10 mmHg ou PAS <90 mmHg em até 3 min), já usados em 'fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado.md' e 'fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial.md' desta pasta. PMID conferido via PubMed E-utilities nesta produção.",
+      "Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947 — definições de hipotensão ortostática e da síndrome de taquicardia postural (POTS) como diferenciais de intolerância ortostática crônica. PMID conferido via PubMed E-utilities nesta produção.",
+      "Sheldon RS, Grubb BP 2nd, Olshansky B, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576 — critérios de POTS como causa de tontura/intolerância ortostática sem síncope. PMID conferido via PubMed E-utilities nesta produção.",
+      "American Diabetes Association Professional Practice Committee for Diabetes. 12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes-2026. Diabetes Care. 2026;49(Suppl 1):S261-S276. DOI: 10.2337/dc26-S012. PMID: 41358886 — rastreio de neuropatia autonômica cardiovascular no diabético (sintomas posturais, hipotensão ortostática, taquicardia de repouso), já usado em 'fluxograma-investigacao-neuropatia-autonomica-cardiovascular-diabetico.md' desta produção. PMID conferido via PubMed E-utilities nesta produção.",
+      "Gogan A, Potre O, Avram V-F, Andor M, Caruntu F, Timar B. Cardiac Autonomic Neuropathy in Diabetes Mellitus: Pathogenesis, Epidemiology, Diagnosis and Clinical Implications: A Narrative Review. J Clin Med. 2025;14(3):671. DOI: 10.3390/jcm14030671. PMID: 39941342 — bateria de testes de Ewing e estratificação da neuropatia autonômica cardiovascular. PMID conferido via PubMed E-utilities nesta produção."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29562304/",
+      "https://pubmed.ncbi.nlm.nih.gov/21431947/",
+      "https://pubmed.ncbi.nlm.nih.gov/25980576/",
+      "https://pubmed.ncbi.nlm.nih.gov/41358886/",
+      "https://pubmed.ncbi.nlm.nih.gov/39941342/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Registro novo, criado em 29/08/2026 a partir de conteúdo já publicado e revisado nesta base (content/Síncope/fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado.md, content/Síncope/fluxograma-sincope-reflexa-versus-cardiaca-diagnostico-diferencial.md, content/Síncope/fluxograma-sincope-idoso-investigacao-diferenciada.md e content/Diabetes_e_cardiologia/fluxograma-investigacao-neuropatia-autonomica-cardiovascular-diabetico.md), sem consulta a fonte nova; os 5 PMIDs citados em source_refs foram reconferidos individualmente via PubMed E-utilities nesta produção. Distinto do registro já existente 'sincope-e-pre-sincope', que exige perda completa de consciência (síncope) ou sensação iminente dela (pré-síncope): este registro cobre tontura/vertigem crônica ou recorrente SEM perda de consciência, com diferencial entre causa vestibular (posicional, nistagmo, sintomas auditivos), ortostática/hipotensiva (mais prevalente e mais perigosa no idoso, por isso a área 'cardiogeriatria' e a regra 'ortostatica-idoso'), cardiovascular (arritmia, cardiopatia estrutural), metabólica (hipoglicemia, anemia) e medicamentosa. Quando o episódio relatado inclui perda de consciência, a regra 'perda-consciencia-associada' eleva o risco para emergência e orienta explicitamente o uso da triagem 'sincope-e-pre-sincope' em complemento a esta. Nenhuma dose de fármaco em nenhum campo. Pendente de revisão médica humana antes de publicação: test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha para este slug como esperado — não há mecanismo de fragmentos nem teste secundário para triagem-sintomas/metadados.json que consuma PENDENTES_LOTES_TUDO_COM_TUDO, então nenhuma allowlist foi adicionada; a falha fica documentada em docs/novo-sintoma-tontura-vertigem-persistente-2026-08-29.md e no teste dedicado deste registro, não contornada.",
+    "version": 1
   }
 ]
