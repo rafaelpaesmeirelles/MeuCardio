@@ -30782,5 +30782,515 @@
         "origem_secao": "Iniciar, continuar, não suspender"
       }
     ]
+  },
+  {
+    "slug": "inicio-da-proxima-camada-diuretica-apos-alca-advor-clorotic",
+    "condicao": "Início de acetazolamida IV ou hidroclorotiazida oral após diurético de alça na IC descompensada",
+    "resumo": "O que confirmar antes de abrir a segunda camada diurética: congestão residual, alça já otimizada, ausência de choque, malha de K e creatinina, escolha de UMA molécula alinhada ao ensaio, o que cada abstract autoriza a prometer, e quando NÃO associar.",
+    "documento_origem": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559",
+      "Trullàs JC, Morales-Rull JL, Casado J, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214",
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+    ],
+    "itens": [
+      {
+        "id": "camada2-congestao-objetiva",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sobrecarga residual documentada (edema, turgência, estertores, derrame, ascite ou ganho de peso). Sem congestão, segundo diurético não tem ensaio",
+        "origem_secao": "O que precisa estar verdadeiro antes de abrir a segunda camada"
+      },
+      {
+        "id": "camada2-alca-otimizada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diurético de alça IV já em dose e via otimizadas (no ADVOR: equivalente ao dobro da manutenção oral). Não pular esta camada",
+        "origem_secao": "O que precisa estar verdadeiro antes de abrir a segunda camada"
+      },
+      {
+        "id": "camada2-sem-choque",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de hipoperfusão ou choque que mande suporte hemodinâmico — segundo diurético não trata baixo débito",
+        "origem_secao": "Quando NÃO acrescentar o segundo diurético"
+      },
+      {
+        "id": "camada2-malha-k-creatinina",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Potássio e creatinina dosáveis amanhã e diariamente enquanto a associação durar. Sem essa malha, não associar",
+        "origem_secao": "Monitorização enquanto a segunda camada estiver ligada"
+      },
+      {
+        "id": "camada2-hipocalemia-antes",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Hipocalemia corrigida ou reposição já em curso antes de HCTZ. ADVOR: incidência semelhante no abstract (sem %). CLOROTIC: não usar o MEDLINE corrompido como 'K seguro'; ESC 2026 pede cautela",
+        "origem_secao": "Quando NÃO acrescentar o segundo diurético"
+      },
+      {
+        "id": "camada2-uma-molecula",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Uma só molécula, curto prazo, sobre a alça que continua: acetazolamida IV 500 mg 1×/dia (ADVOR) OU HCTZ oral (CLOROTIC). Não empilhar as duas. Não substituir HCTZ por clortalidona",
+        "origem_secao": "Qual molécula — sem ensaio cabeça a cabeça"
+      },
+      {
+        "id": "camada2-promessa-alinhada",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Promessa alinhada ao ensaio: ADVOR — descongestão em 3 dias (42,2% vs. 30,5%; RR 1,46), NÃO morte (HR 1,07; IC95% 0,78-1,48). CLOROTIC — peso (2,3 vs. 1,5 kg), NÃO dispneia (p=0,497), com piora renal 46,5% vs. 17,2%. ESC IIa B1 verbalizada como congestão, não Classe I",
+        "origem_secao": "O que cada ensaio realmente perguntou / Como a ESC 2026 posiciona a classe"
+      },
+      {
+        "id": "camada2-parar-na-euvolemia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Parar o segundo diurético na euvolemia. Não levar o esquema de ensaio para casa sem plano de K e creatinina. Se falhar: fluxograma de resistência (ultrafiltração depois da falha farmacológica)",
+        "origem_secao": "Monitorização enquanto a segunda camada estiver ligada"
+      },
+      {
+        "id": "camada2-sodio-urinario-nao-e-esta-arvore",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Se o serviço usa sódio urinário pontual, o corte operacional está no documento PUSH-AHF/ENACT-HF — ele diz se a ALÇA precisa ser intensificada, não qual segundo diurético escolher",
+        "origem_secao": "A decisão que este protocolo resolve"
+      }
+    ]
+  },
+  {
+    "slug": "vigilancia-e-resgate-no-tep-intermediario-alto-depois-da-classe",
+    "condicao": "Vigilância e decisão de reperfusão no TEP de risco intermediário-alto já classificado",
+    "resumo": "Checklist de execução depois de a classe intermediário-alto já estar nomeada: reconfirmar que não é alto risco, anticoagular, vigiar onde se detecta descompensação, não trombolisar por anatomia, e disparar resgate só na deterioração hemodinâmica. Distinto do checklist de estratificação das quatro classes (estratificacao-de-risco-e-decisao-terapeutica-no-tep-agudo).",
+    "documento_origem": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+    "theme": "Tromboembolismo",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681.",
+      "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+      "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728."
+    ],
+    "itens": [
+      {
+        "id": "tep-ih-reconfirmar-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hemodinâmica reconfirmada agora: choque obstrutivo, parada ou hipotensão persistente (PAS <90 mmHg ou queda ≥40 mmHg por mais de 15 minutos, ou vasopressor) reclassificam como alto risco e mandam reperfundir — o rótulo intermediário-alto não é eterno",
+        "origem_secao": "O que é intermediário-alto — e o que não é"
+      },
+      {
+        "id": "tep-ih-anticoagulacao-parenteral",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação parenteral iniciada de imediato, salvo contraindicação absoluta; a heparina não foi suspensa 'enquanto se decide o lítico' nem substituída por DOAC como forma de encerrar a discussão de reperfusão nesta janela",
+        "origem_secao": "O que fazer nas primeiras horas — o padrão"
+      },
+      {
+        "id": "tep-ih-unidade-monitorizada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Internação em UTI ou unidade com monitorização contínua nas primeiras horas; no PEITHO o composto do placebo ocorreu em 5,6% em 7 dias, com tempo médio até descompensação da ordem de 1,8 dia no texto ESC/ERS",
+        "origem_secao": "O que fazer nas primeiras horas — o padrão"
+      },
+      {
+        "id": "tep-ih-contraindicacoes-fibrinolise-escritas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações absolutas e relativas à fibrinólise (Table 10 ESC: AVC hemorrágico, AVC isquêmico em 6 meses, neoplasia de SNC, trauma/cirurgia/TCE em 3 semanas, diátese, sangramento ativo; relativas incluindo gravidez, punção não compressível, PAS >180 mmHg) registradas no prontuário antes da eventual necessidade de resgate",
+        "origem_secao": "O que fazer nas primeiras horas — o padrão"
+      },
+      {
+        "id": "tep-ih-nao-trombolisar-anatomia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Trombólise sistêmica primária NÃO administrada com justificativa exclusiva de trombo em sela, carga trombótica, relação VD/VE, síncope já resolvida, taquicardia ou lactato isolado — o PEITHO já incluía VD + troponina em normotensos",
+        "origem_secao": "Por que a trombólise sistêmica não é para todo intermediário-alto"
+      },
+      {
+        "id": "tep-ih-resgate-na-deterioracao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se houver deterioração hemodinâmica sob anticoagulação: trombólise de resgate iniciada sem esperar novo biomarcador nem TC de controle, salvo contraindicação absoluta; alternativa cirúrgica ou por cateter só se expertise local — classe de cateter não atribuída neste lote",
+        "origem_secao": "Quando reperfundir neste grupo"
+      },
+      {
+        "id": "tep-ih-nao-mopett-nem-storm-rotina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Dose reduzida (MOPETT) e trombectomia mecânica (STORM-PE, desfecho de imagem, N=100) não adotadas como padrão neste perfil; PEITHO-3 permanece em andamento",
+        "origem_secao": "O que ainda não autoriza rotina"
+      },
+      {
+        "id": "tep-ih-risco-hemorragico-idade-sexo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Idade avançada e sexo feminino, em especial >75 anos (SBPT 2025), registrados como amplificadores do risco hemorrágico se o resgate for considerado — não como argumento para lítico preventivo nem para omitir o resgate no choque",
+        "origem_secao": "SBPT 2025; armadilhas clínicas"
+      },
+      {
+        "id": "tep-ih-comunicacao-equipe",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Equipe alinhada: padrão = anticoagular e vigiar; resgate = deterioração; PERT convocado para organizar alternativas, não para transformar C3/intermediário-alto estável em indicação automática de via avançada",
+        "origem_secao": "Função deste protocolo"
+      }
+    ]
+  },
+  {
+    "slug": "primeiras-24-horas-pos-rosc-o-que-o-cardiologista-checa",
+    "condicao": "Primeiras 24 horas após retorno da circulação espontânea — lista do cardiologista de plantão",
+    "resumo": "O que o cardiologista confirma no mesmo turno da RCE: ECG lido, ramo de cateterismo justificado, temperatura com alvo de evitar febre, PAM e oxigênio fora dos extremos, eco pensado, antitrombótico só se indicado, e neuroprognóstico recusado. Não substitui o checklist já existente de cuidados 24-72 h (foco de UCO) nem o de neuroprognóstico multimodal (depois de 72 h).",
+    "documento_origem": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859",
+      "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057",
+      "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570",
+      "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564",
+      "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
+    ],
+    "itens": [
+      {
+        "id": "rosc24-ecg-12-derivacoes",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações obtido e lido após a RCE, com presença ou ausência de supra persistente (ou equivalente de oclusão) registrada — sem esperar o leito da UCO",
+        "origem_secao": "1. O ECG de 12 derivações"
+      },
+      {
+        "id": "rosc24-ramo-cateterismo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Ramo de coronariografia justificado: emergente se supra; adiada/seletiva se estável sem supra (COACT/TOMAHAWK); alto risco em curso com etiologia cardíaca tratado como via própria, não como 'todo pós-PCR vai à sala'",
+        "origem_secao": "2. Cateterismo agora ou depois"
+      },
+      {
+        "id": "rosc24-temperatura-evitar-febre",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Alvo de temperatura protocolizado como evitar febre, não como induzir 33 °C de rotina — TTM2 sem diferença de morte em 6 meses (50% vs 48%) e com mais arritmia na hipotermia (24% vs 17%)",
+        "origem_secao": "3. Temperatura"
+      },
+      {
+        "id": "rosc24-pam-oxigenio-piso",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Hipotensão e hipoxemia francas tratadas; PAM e PaO2 não 'otimizadas' para o alto da faixa do BOX (77 mmHg e 13–14 kPa foram neutros contra 63 mmHg e 9–10 kPa)",
+        "origem_secao": "4. PAM e oxigenação"
+      },
+      {
+        "id": "rosc24-eco-causa-mecanica",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eco ou POCUS feito, ou sua indisponibilidade documentada, com procura explícita de tamponamento, papilar, CIV, disfunção de VE/VD e hipovolemia versus vasoplegia",
+        "origem_secao": "5. Eco nas primeiras horas"
+      },
+      {
+        "id": "rosc24-dapt-so-se-indicado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "AAS, P2Y12 e anticoagulação plena prescritos só se houver indicação nomeada (IAMCST/ICP, NSTE-ACS definido, trombo, TEP) — parada isolada não carregou DAPT",
+        "origem_secao": "6. Antiplaquetário e anticoagulação"
+      },
+      {
+        "id": "rosc24-nao-prognosticar",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Prognóstico neurológico não declarado nesta janela; família informada de que ainda não é a hora; mioclonia, TC da admissão ou coma na chegada não usados como veredito (ESC 2023: não antes de 72 h, Classe I C)",
+        "origem_secao": "7. Não prognosticar o cérebro nas primeiras 24 horas"
+      },
+      {
+        "id": "rosc24-nao-atrasar-temperatura-na-hemodinamica",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o paciente foi à hemodinâmica (supra ou alto risco), controle de temperatura, PAM e oxigenação iniciados em paralelo — no COACT a estratégia imediata atrasou o alvo térmico (5,4 h vs 4,7 h)",
+        "origem_secao": "2. Cateterismo agora ou depois; Armadilhas"
+      }
+    ]
+  },
+  {
+    "slug": "conduta-hoje-lpa-elevada-enquanto-desfechos-nao-chegam",
+    "condicao": "Conduta no adulto com Lp(a) elevada enquanto os CVOTs de RNA não publicaram MACE",
+    "resumo": "Itens da consulta de hoje: unidade certa, corte como fator agravante, cascata, intensificar LDL com fármaco que já tem desfecho, e a lista do que não prescrever (pelacarsena, olpasirana, AAS só por Lp(a), niacina, conversão por fator). Distinto do checklist de rastreio EAS 2022 já publicado.",
+    "documento_origem": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+    "theme": "Prevenção e lipídios",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Rached FH et al. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178",
+      "Mach F et al. Eur Heart J. 2025;46(42):4359-4378. PMID: 40878289 — Tabela 4",
+      "Kronenberg F et al. Eur Heart J. 2022;43(39):3925-3946. PMID: 36036785",
+      "Cho L et al. Am Heart J. 2025;287:1-9. PMID: 40185318",
+      "ClinicalTrials.gov NCT04023552 e NCT05581303, consulta 29/08/2026"
+    ],
+    "itens": [
+      {
+        "id": "lpa-hoje-ja-medida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado se já existe uma dosagem de Lp(a) na vida adulta. Se não, solicitado uma vez — de preferência nmol/L, ensaio independente da isoforma — não como exame anual",
+        "origem_secao": "Passo 1 — Se ainda não mediu, meça uma vez"
+      },
+      {
+        "id": "lpa-hoje-unidade",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Laudo lido na unidade em que veio. Se só mg/dL e a decisão está perto de 50 mg/dL: não convertido com fator fixo; recoleta em nmol/L planejada (SBC 2025 Forte / Alta: fórmulas não recomendadas)",
+        "origem_secao": "Passo 2 — A armadilha nmol/L versus mg/dL"
+      },
+      {
+        "id": "lpa-hoje-corte-da-mesma-diretriz",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Corte aplicado o da diretriz em uso, na unidade em que ela o escreveu — 50 mg/dL da ESC/EAS 2025 Tabela 4 é ≈105 nmol/L; o 50 mg/dL da EAS 2022/SBC/ACC é 125 nmol/L. Não misturar",
+        "origem_secao": "Passo 2 — A armadilha nmol/L versus mg/dL"
+      },
+      {
+        "id": "lpa-hoje-fator-agravante",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se >50 mg/dL: registrado como fator agravante (ESC/EAS 2025 Tabela 4, Classe IIa, Nível B) e risco global reclassificado quando o paciente estava em moderado ou no limiar de tratar",
+        "origem_secao": "Passo 3 — Interpretar sem transformar corte em biologia"
+      },
+      {
+        "id": "lpa-hoje-cascata",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se ≥50 mg/dL ou ≥125 nmol/L: cascata familiar de 1º grau proposta (SBC 2025 Forte / Alta). Não é painel genético de LPA de rotina",
+        "origem_secao": "Passo 4 — Cascata familiar quando está alta"
+      },
+      {
+        "id": "lpa-hoje-meta-ldl",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Meta de LDL da categoria deste paciente conferida e, se não atingida, hipolipemiante com desfecho já publicado intensificado nesta consulta — sem esperar HORIZON. iPCSK9, se usado, é para o LDL, não 'para Lp(a)'",
+        "origem_secao": "Passo 5 — O que se faz hoje"
+      },
+      {
+        "id": "lpa-hoje-resto-modificavel",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Pressão, tabagismo, diabetes, peso e exercício revisados na mesma visita. A Lp(a) alta não adia esses eixos",
+        "origem_secao": "Passo 5 — O que se faz hoje"
+      },
+      {
+        "id": "lpa-hoje-nao-rna",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Pelacarsena, olpasirana, zerlasirana e muvalaplina NÃO iniciadas como se reduzissem MACE. HORIZON sem artigo de desfecho em 29/08/2026; OCEAN(a) Outcomes em curso. Nenhuma Classe I de evento atribuída",
+        "origem_secao": "Passo 6 — O que não esperar do fármaco"
+      },
+      {
+        "id": "lpa-hoje-nao-aas-por-lpa",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "AAS não prescrito só porque a Lp(a) está alta. Nenhuma tabela lida nesta sessão recomenda isso. AAS, se houver, segue as regras de prevenção primária/secundária já existentes. VERIFICAÇÃO HUMANA se caixa nova for publicada",
+        "origem_secao": "Passo 6 — O que não esperar do fármaco"
+      },
+      {
+        "id": "lpa-hoje-nao-repetir",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno NÃO inclui Lp(a) seriada, salvo doença renal, hepática, infecção aguda na coleta ou menopausa com valor prévio limítrofe",
+        "origem_secao": "Passo 1 — Se ainda não mediu, meça uma vez"
+      }
+    ]
+  },
+  {
+    "slug": "primeira-hora-dor-toracica-aguda-no-pronto-socorro",
+    "condicao": "Primeira hora da dor torácica aguda ou equivalente isquêmico no PS, enfermaria ou UCO",
+    "resumo": "Checklist de execução da primeira hora: ECG em 10 minutos mesmo sem dor “típica”, ramos que não esperam troponina, equivalentes de oclusão, cocaína como desvio de via (não de ECG), hs-cTn 0/1 h ou 0/2 h só depois, HEART depois do ECG, e a distinção tipo 1 versus tipo 2/lesão. Distinct from dor-toracica-na-emergencia-triagem-inicial (HEART/SBC 2025).",
+    "documento_origem": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+    "theme": "Geral",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354.",
+      "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. PMID: 30165617."
+    ],
+    "itens": [
+      {
+        "id": "dtx1h-via-aerea",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Via aérea, respiração e circulação avaliadas de imediato; gasping, rebaixamento ou PCR iminente tratados como reanimação, com o diagnóstico em paralelo",
+        "origem_secao": "Primeiros minutos: o que não espera a troponina"
+      },
+      {
+        "id": "dtx1h-ecg-10-min",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações obtido e interpretado em até 10 minutos do primeiro contato (ESC 2023 I B), inclusive se a queixa for dispneia, epigástrio ou apresentação em mulher, diabetes ou idoso",
+        "origem_secao": "ESC 2023 Table 1 — ECG no FMC"
+      },
+      {
+        "id": "dtx1h-equivalentes-oclusao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Traçado revisado para equivalentes de oclusão (posterior V7–V9 / V1–V3, VD V3R–V4R, aVR com depressão difusa, BRE/BRD/marcapasso com alta suspeita de isquemia) — não só o supra clássico",
+        "origem_secao": "Equivalentes de oclusão que a ESC 2023 manda procurar"
+      },
+      {
+        "id": "dtx1h-nao-esperar-tn",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "STEMI, equivalente de oclusão ou NSTE de risco muito alto (choque, dor refratária, IC isquêmica, arritmia ameaçadora, complicação mecânica, ST dinâmico recorrente) seguiram via imediata SEM esperar hs-cTn (I C no NSTE de muito alto risco)",
+        "origem_secao": "Quando não esperar a troponina"
+      },
+      {
+        "id": "dtx1h-ecg-repetido",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se ECG limítrofe/preocupante ou instabilidade: traçado repetido a cada 10–20 minutos, com derivações complementares (SBC 2025 Classe I)",
+        "origem_secao": "O ECG que muda o destino agora"
+      },
+      {
+        "id": "dtx1h-cocaina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Uso recente de cocaína perguntado; se confirmado ou suspeito, via dedicada acionada (ECG e troponina continuam; betabloqueador puro evitado na intoxicação aguda)",
+        "origem_secao": "Cocaína — via já publicada"
+      },
+      {
+        "id": "dtx1h-hsctn-algoritmo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se sem via imediata: hs-cTn 0 h colhida na chegada e 1 h (ou 2 h) agendada de forma sistemática com o ensaio validado do laboratório — sem misturar cortes de fabricantes (I B)",
+        "origem_secao": "hs-cTn: 0/1 h versus 0/2 h versus 0/3 h"
+      },
+      {
+        "id": "dtx1h-observacao-3h",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se 0/1 h inconclusivo e sem diagnóstico alternativo: terceira hs-cTn em 3 h (I B); zona de observação não tratada como inofensiva",
+        "origem_secao": "Terceira amostra em 3 h"
+      },
+      {
+        "id": "dtx1h-heart-depois",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "HEART, se usado, calculado DEPOIS do ECG e da exclusão da via imediata (SBC 2025 I B); componente T com troponina convencional; EDACS só como opção, sem números inventados",
+        "origem_secao": "HEART e EDACS: depois do ECG"
+      },
+      {
+        "id": "dtx1h-tipo1-tipo2",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Troponina elevada não fechada automaticamente como infarto tipo 1; tipo 2 e lesão não isquêmica considerados quando o quadro for desequilíbrio ou doença crítica — sem DAPT/ICP de rotina nesse recorte; supra/choque não esperaram o rótulo",
+        "origem_secao": "Tipo 1 versus tipo 2 versus lesão"
+      },
+      {
+        "id": "dtx1h-nao-fazer",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não administrados AAS/heparina empíricos se dissecção for plausível; não usado benzodiazepínico como primeira resposta; não dada alta por “ansiedade” com ECG não feito ou algoritmo incompleto",
+        "origem_secao": "O que não fazer nesta hora"
+      },
+      {
+        "id": "dtx1h-comunicacao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Hemodinâmica, UCO ou transferência acionadas conforme STEMI/equivalente/risco muito alto; tempo porta-ECG registrado",
+        "origem_secao": "Função deste protocolo"
+      }
+    ]
+  },
+  {
+    "slug": "wellens-reconhecimento-beira-leito-nao-ergometrico-anatomia",
+    "condicao": "Síndrome de Wellens — reconhecer T tipo A/B no intervalo livre de dor, não enviar ao ergométrico e levar à anatomia como SCA",
+    "resumo": "Checklist de plantão: serializar o ECG após a dor, fechar o conjunto (não a T isolada), nomear tipo A ou B descrevendo a morfologia, interceptar pedido de esteira, tratar como SCA até a cinecoronariografia e mapear o tempo nas vias ESC 2023 sem inventar classe para o epônimo.",
+    "documento_origem": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+      "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024.",
+      "Alexander J, Rizzolo D. JAAPA. 2023;36(2):25-29. PMID: 36701576."
+    ],
+    "itens": [
+      {
+        "id": "wl-nao-e-stemi",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que NÃO há supra persistente nem equivalente de oclusão em curso — se houver, sair para a via STEMI/oclusão. Não fibrinolisar por 'equivalente de Wellens'",
+        "origem_secao": "O que é — e o que não é"
+      },
+      {
+        "id": "wl-ecg-livre-de-dor",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações obtido no intervalo LIVRE de dor (e comparado com o traçado da crise, se existir). Um único ECG na porta, ainda com dor, não descarta o padrão",
+        "origem_secao": "O paradoxo que perde o diagnóstico"
+      },
+      {
+        "id": "wl-conjunto-rhinehardt",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Conjunto conferido: T bifásica ou profundamente invertida em V2–V3 (pode ir a V1–V6) + ST isoelétrico ou < 1 mm + sem Q precordial + progressão de R preservada + angina recente + marcadores normais ou pouco elevados. T isolada não fecha o epônimo",
+        "origem_secao": "Critérios de reconhecimento"
+      },
+      {
+        "id": "wl-tipo-a-ou-b",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Morfologia descrita no prontuário: tipo A = T bifásica (positividade inicial, negatividade terminal) ou tipo B = T profunda simétrica. Conduta idêntica. Não usar tipo 1/2 sem dizer a forma da onda",
+        "origem_secao": "Tipo A versus tipo B"
+      },
+      {
+        "id": "wl-nao-ergometrico",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Teste ergométrico, eco de estresse e cintilografia NÃO solicitados. Angina instável é contraindicação absoluta na SBC 2024; Wellens típico não entra no ramo seletivo da ESC 2023",
+        "origem_secao": "Por que não fazer teste ergométrico"
+      },
+      {
+        "id": "wl-internar-sca",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Internação em leito monitorizado. AAS + P2Y12 e anticoagulante parenteral como SCA até a anatomia (doses no documento de posologia). Não alta da porta",
+        "origem_secao": "Conduta até a anatomia"
+      },
+      {
+        "id": "wl-mapear-esc-timing",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Tempo da angiografia mapeado na ESC 2023 de NSTE-ACS, SEM classe da síndrome nomeada: dor/ST-T recorrentes ou T que pseudonormaliza → imediata (I C); IAMSSST ou T dinâmica / alta suspeita de angina instável → anatomia nesta internação (I A), visando < 24 h (IIa A)",
+        "origem_secao": "Como encaixar na ESC 2023"
+      },
+      {
+        "id": "wl-eco-opcional",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Eco transtorácico se não atrasar a sala (hipocinesia anterior apoia; eco normal NÃO exclui). Não segurar o paciente 'esperando o eco da manhã'",
+        "origem_secao": "Ecocardiograma"
+      },
+      {
+        "id": "wl-pseudo-wellens",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diferencial olhado: TEP, HVE/strain, takotsubo, cocaína, T juvenil, T cerebrais, miocardite, eletrodo mal posicionado. O diferencial não autoriza esteira",
+        "origem_secao": "O que não é Wellens"
+      },
+      {
+        "id": "wl-prontuario",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Prontuário com as sete linhas: morfologia e derivações; livre de dor sim/não; ST/Q/R; angina recente; troponina; o que NÃO foi pedido (ergometria) e por quê; plano de anatomia nesta internação",
+        "origem_secao": "O que escrever no prontuário"
+      },
+      {
+        "id": "wl-nao-inventar-classe",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Não escrever 'Wellens Classe I da ESC'. A diretriz cita o sinal na narrativa; a classe é a da NSTE-ACS",
+        "origem_secao": "Como encaixar na ESC 2023"
+      }
+    ]
   }
 ]

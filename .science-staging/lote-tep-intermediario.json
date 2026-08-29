@@ -1,0 +1,351 @@
+{
+  "lote_id": "tep-intermediario",
+  "titulo": "TEP de risco intermediário-alto — reperfusão versus anticoagulação (PEITHO)",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "review_status": "pendente_revisao",
+  "fonte_producao": "grok",
+  "nota": "Lote de staging para importação após revisão humana. Não edita metadados publicados. Recorte: decisão de reperfusão DEPOIS de a classe intermediário-alto já conhecida. Não colide com tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019, fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019, pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar, nem com fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise (árvore das quatro classes). Estudos novos: PEITHO índice (PMID 24716681, XML PubMed nesta sessão) e seguimento longo (PMID 28335835). Evidências ESC 2019 restaging com slugs inéditos; classe/nível reproduzem registros já revisados do corpus — PDF da Recommendation Table não relido integralmente nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA). SBPT 2025 GRADE restaging a partir do documento já revisado (PMID 40531728). Classe de terapia dirigida por cateter não atribuída. 1 caso, 1 checklist, 1 material-paciente, slugs inéditos. Sem fragmento de emergência novo (tromboembolismo-pulmonar já existe).",
+  "documentos": [
+    {
+      "path": "content/Tromboembolismo/tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar.md",
+      "slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "kind": "protocolo",
+      "theme": "Tromboembolismo",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Tromboembolismo/fluxograma-tep-intermediario-alto-reperfusao-versus-anticoagulacao.md",
+      "slug": "fluxograma-tep-intermediario-alto-reperfusao-versus-anticoagulacao",
+      "kind": "fluxograma",
+      "theme": "Tromboembolismo",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "peitho-tenecteplase-versus-placebo-tep-normotenso-vd-e-troponina",
+      "title": "PEITHO — Tenecteplase versus placebo no TEP normotenso com disfunção de VD e troponina positiva",
+      "study_type": "ensaio_clinico",
+      "authors": "Meyer G, Vicaut E, Danays T, Agnelli G, Becattini C, Beyer-Westendorf J, et al.; PEITHO Investigators.",
+      "journal": "New England Journal of Medicine",
+      "year": 2014,
+      "doi": "10.1056/NEJMoa1302097",
+      "pmid": "24716681",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24716681/",
+      "summary": "Ensaio randomizado, duplo-cego, controlado por placebo. Comparou tenecteplase em bolus único (ajustado ao peso) mais heparina versus placebo mais heparina em pacientes normotensos com TEP agudo de risco intermediário — disfunção de ventrículo direito à ecocardiografia ou à tomografia e lesão miocárdica indicada por troponina I ou T positiva. 1.006 randomizados; 1.005 na intenção de tratar (506 tenecteplase, 499 placebo). Desfecho primário: morte ou descompensação hemodinâmica (ou colapso) em 7 dias. Desfechos de segurança principais: sangramento extracraniano maior e AVC isquêmico ou hemorrágico em 7 dias. EudraCT 2006-005328-18; ClinicalTrials.gov NCT00639743. XML/abstract PubMed conferidos nesta sessão.",
+      "key_findings": "Morte ou descompensação em 7 dias: 13/506 (2,6%) com tenecteplase versus 28/499 (5,6%) com placebo (OR 0,44; IC95% 0,23-0,87; P=0,02). Morte em 7 dias: 6 (1,2%) versus 9 (1,8%), P=0,42. Morte em 30 dias: 12 (2,4%) versus 16 (3,2%), P=0,42. Sangramento extracraniano em 7 dias: 32 (6,3%) versus 6 (1,2%), P<0,001. AVC em 7 dias: 12 (2,4%) versus 1 (0,2%), P=0,003; no braço tenecteplase, 10 dos 12 AVC foram hemorrágicos; o único AVC do placebo também foi hemorrágico.",
+      "clinical_implications": "A fibrinólise sistêmica previne descompensação hemodinâmica no TEP de risco intermediário definido por VD + troponina, sem reduzir mortalidade neste ensaio e à custa de hemorragia extracraniana e de AVC. É a evidência central de por que a trombólise sistêmica de rotina não é o padrão neste grupo e fica reservada ao resgate quando a hemodinâmica se deteriora. O PEITHO usou tenecteplase; a ESC 2019 lista alteplase 100 mg em 2 h como regime preferido de TEP e registra que tenecteplase foi investigada, sem aprovação para essa indicação.",
+      "limitations": "Não testou dose reduzida nem terapia dirigida por cateter. A faixa de peso 30-50 mg da tenecteplase não consta do abstract PubMed (fontes secundárias de protocolo; VERIFICAÇÃO HUMANA NECESSÁRIA se a dose for prescrita a partir desta ficha). Placebo n=499 na ITT, não 500. O composto primário mistura morte e descompensação: ler só o composto superestima o benefício de sobrevida.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "peitho",
+        "tenecteplase",
+        "tromboembolismo pulmonar",
+        "risco intermediário-alto",
+        "fibrinólise",
+        "ensaio clínico"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "peitho-seguimento-longo-prazo-mortalidade-dispneia-e-cteph",
+      "title": "PEITHO — seguimento de longo prazo: mortalidade, dispneia residual e CTEPH após tenecteplase no TEP intermediário",
+      "study_type": "ensaio_clinico",
+      "authors": "Konstantinides SV, Vicaut E, Danays T, Becattini C, Bertoletti L, Beyer-Westendorf J, et al.",
+      "journal": "Journal of the American College of Cardiology",
+      "year": 2017,
+      "doi": "10.1016/j.jacc.2016.12.039",
+      "pmid": "28335835",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28335835/",
+      "summary": "Seguimento de longo prazo do PEITHO, incluído na terceira emenda do protocolo. 28 centros que randomizaram 709 dos 1.006 pacientes participaram. Sobrevida avaliada em 353/359 (98,3%) no braço trombólise e 343/350 (98,0%) no placebo, mediana de 37,8 meses. Abstract PubMed conferido nesta sessão.",
+      "key_findings": "Mortalidade global 20,3% (trombólise) versus 18,0% (placebo), P=0,43. Entre o dia 30 e o seguimento longo, 65 mortes no braço lítico e 53 no placebo. Em sobreviventes avaliados, dispneia persistente (em geral leve) ou limitação funcional: 36,0% versus 30,1%, P=0,23. Ecocardiograma em 144 versus 146 pacientes sem diferença significativa em hipertensão pulmonar residual ou disfunção de VD. CTEPH confirmada em 4 (2,1%) versus 6 (3,2%), P=0,79.",
+      "clinical_implications": "Aproximadamente um terço relata alguma limitação funcional após TEP intermediário; CTEPH é infrequente. A trombólise sistêmica do PEITHO não alterou mortalidade tardia, dispneia residual nem CTEPH. Não se trombolisa o intermediário-alto para 'proteger o pulmão no longo prazo'.",
+      "limitations": "Seguimento longo não foi pré-especificado no protocolo original (terceira emenda); só 28 dos centros, 709/1.006 pacientes. Eco de seguimento em minoria (144 e 146). Não autoriza inferir equivalência de qualidade de vida; o ensaio de fase aguda continua a ditar a decisão de reperfusão.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "peitho",
+        "seguimento longo",
+        "CTEPH",
+        "dispneia residual",
+        "tromboembolismo pulmonar"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc2019-trombolise-sistemica-recomendada-no-tep-alto-risco-choque",
+      "statement": "Terapia trombolítica sistêmica é recomendada em pacientes com tromboembolismo pulmonar agudo hemodinamicamente instável (alto risco: choque, parada ou hipotensão persistente). Este recorte distingue alto risco de intermediário-alto: VD + troponina sem choque não autoriza a mesma conduta.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2019,
+      "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+      "reference": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429. Classe I, nível B conforme evidência já revisada do corpus (trombolise-sistemica-no-tromboembolismo-pulmonar-de-alto-risco). PDF da Recommendation Table de reperfusão não relido integralmente nesta sessão: VERIFICAÇÃO HUMANA NECESSÁRIA. Texto narrativo ERS lido: reperfusão primária, na maioria dos casos trombólise sistêmica, é o tratamento de escolha no alto risco.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "tromboembolismo pulmonar",
+        "trombólise sistêmica",
+        "alto risco",
+        "choque obstrutivo"
+      ],
+      "document_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2019-trombolise-sistemica-rotina-nao-recomendada-tep-intermediario-ou-baixo",
+      "statement": "O uso rotineiro de trombólise sistêmica primária não é recomendado em pacientes com TEP de risco intermediário ou baixo. O PEITHO mostrou redução de descompensação sem redução de mortalidade e com excesso de sangramento extracraniano e de AVC — base empírica desta restrição no intermediário-alto (VD + troponina, sem choque).",
+      "recommendation_class": "III",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2019,
+      "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+      "reference": "Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429. Classe III, nível B conforme evidência já revisada do corpus (trombolise-sistemica-rotineira-nao-recomendada-em-tep-de-risco-intermediario-ou-baixo). PDF da Recommendation Table não relido integralmente nesta sessão: VERIFICAÇÃO HUMANA NECESSÁRIA. Texto narrativo ERS lido: reperfusão primária de rotina, sobretudo trombólise sistêmica em dose plena, não é recomendada no intermediário pelo risco de sangramento potencialmente fatal.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "tromboembolismo pulmonar",
+        "trombólise sistêmica",
+        "risco intermediário-alto",
+        "recomendação negativa",
+        "PEITHO"
+      ],
+      "document_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2019-trombolise-resgate-se-deterioracao-hemodinamica-sob-anticoagulacao",
+      "statement": "Terapia trombolítica de resgate é recomendada para pacientes com TEP e deterioração hemodinâmica durante a anticoagulação (intermediário-alto ou intermediário-baixo que evolui para instabilidade). Não se espera novo biomarcador nem tomografia de controle para iniciar o resgate.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2019,
+      "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+      "reference": "Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429. Classe I, nível B conforme evidência já revisada do corpus (trombolise-de-resgate-na-deterioracao-hemodinamica-sob-anticoagulacao-no-tep). PDF da Recommendation Table não relido integralmente nesta sessão: VERIFICAÇÃO HUMANA NECESSÁRIA. Texto narrativo ERS: resgate (ou, alternativamente, embolectomia cirúrgica ou tratamento por cateter) reservado a quem desenvolve instabilidade. Classe da via por cateter não atribuída neste lote.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "tromboembolismo pulmonar",
+        "trombólise de resgate",
+        "deterioração hemodinâmica",
+        "risco intermediário-alto"
+      ],
+      "document_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbpt2025-sugerir-nao-usar-trombolise-sistemica-rotina-no-tep-intermediario-alto",
+      "statement": "Sugerimos não utilizar trombólise farmacológica sistêmica de rotina, em vez de anticoagulação isolada, em pacientes com TEP de risco intermediário-alto. Recomendação GRADE da SBPT/AMB: condicional, certeza moderada — vocabulário Forte/Cond e Alta/Mod/Baixa/MtBx, não Classe/Nível da ESC.",
+      "recommendation_class": "Cond",
+      "evidence_level": "Mod",
+      "society": "Brazilian Thoracic Association",
+      "year": 2025,
+      "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+      "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105. Restaging com slug inédito e document_slug deste lote; GRADE já conferido no corpus (tep-risco-intermediario-alto-trombolise-sistemica-nao-sugerida-de-rotina) contra a tabela de recomendações do PMC. Texto integral não relido nesta sessão.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "tromboembolismo pulmonar",
+        "trombólise sistêmica",
+        "risco intermediário-alto",
+        "GRADE",
+        "diretriz brasileira"
+      ],
+      "document_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbpt2025-sugerir-trombolise-sistemica-no-tep-alto-risco-choque-obstrutivo",
+      "statement": "Sugerimos trombólise farmacológica sistêmica, em vez de anticoagulação isolada, em pacientes com TEP de alto risco definido por choque obstrutivo (PAS <90 mmHg, ou queda ≥40 mmHg por mais de 15 minutos, ou necessidade de vasopressor). GRADE condicional, certeza muito baixa — a certeza reflete a dificuldade ética de randomizar choque, não fragilidade conceitual da conduta. Distinto do intermediário-alto sem instabilidade.",
+      "recommendation_class": "Cond",
+      "evidence_level": "MtBx",
+      "society": "Brazilian Thoracic Association",
+      "year": 2025,
+      "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+      "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. Restaging com slug inédito; GRADE já conferido no corpus (tep-alto-risco-trombolise-sistemica-sugerida). Texto integral não relido nesta sessão.",
+      "theme": "Tromboembolismo",
+      "tags": [
+        "tromboembolismo pulmonar",
+        "trombólise sistêmica",
+        "alto risco",
+        "choque obstrutivo",
+        "GRADE",
+        "diretriz brasileira"
+      ],
+      "document_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "trombo-em-sela-normotenso-vd-troponina-nao-autoriza-tenecteplase-de-rotina",
+      "titulo": "Trombo em sela, VD dilatado e troponina: trombolisar o normotenso?",
+      "tema": "Tromboembolismo",
+      "nivel": "avançado",
+      "enunciado": "Mulher, 79 anos, 68 kg, chega com dispneia súbita. PA 112/68 mmHg, FC 108 bpm, sem vasopressor. AngioTC: trombo em sela estendendo-se às duas artérias principais, relação VD/VE 1,4, septo parado. Troponina elevada. Heparina já iniciada. A equipe discute três propostas: (1) tenecteplase agora, 'porque o PEITHO reduziu o desfecho primário e a sela é maciça'; (2) alteplase em meia dose 'para sangrar menos, como no MOPETT'; (3) chamar hemodinâmica para trombectomia porque 'sistêmico sangra em idosa'.",
+      "pergunta": "Qual conduta corresponde melhor à evidência deste recorte (intermediário-alto já classificado)?",
+      "opcoes": [
+        "Tenecteplase em bolus agora: sela mais VD mais troponina equivalem a alto risco, e o PEITHO foi positivo no composto de 7 dias",
+        "Manter anticoagulação parenteral e vigilância em unidade monitorizada, com trombólise de resgate só se houver deterioração hemodinâmica; sela não muda a classe, o PEITHO não reduziu mortalidade e aumentou AVC, e nem MOPETT nem STORM-PE autorizam rotina",
+        "Alteplase em metade da dose agora, porque o MOPETT mostrou zero sangramento e o PEITHO sangrou nas idosas",
+        "Suspender a heparina até a decisão do PERT sobre cateter, para não somar risco hemorrágico"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "Este é o paciente do PEITHO: normotensa, disfunção de VD e troponina positiva. Randomizaram 1.006 (1.005 ITT) para tenecteplase ou placebo, ambos com heparina. Morte ou descompensação em 7 dias caiu de 5,6% para 2,6% (OR 0,44; P=0,02), mas morte em 7 dias (1,2% vs. 1,8%) e em 30 dias (2,4% vs. 3,2%) não diferiu, e o preço foi sangramento extracraniano 6,3% vs. 1,2% e AVC 2,4% vs. 0,2% (10 dos 12 AVC do lítico foram hemorrágicos). Trombo em sela é anatomia, não classe de risco; alto risco exige choque, parada ou hipotensão persistente. A SBPT 2025 sugere não usar trombólise sistêmica de rotina no intermediário-alto (condicional, certeza moderada) e cita risco hemorrágico maior em mulheres >75 anos — exatamente este perfil. MOPETT é ensaio pequeno, aberto, unicêntrico, com definição própria de 'TEP moderado' que não exige VD + troponina; não é o PEITHO mais seguro. STORM-PE testou trombectomia contra anticoagulação com desfecho substituto de imagem em 100 pacientes. Suspender a heparina 'enquanto o PERT decide' retira o único tratamento que este ensaio mostrou ser o padrão. O certo é vigiar onde se detecta descompensação e ter o resgate pronto — não aplicar o lítico porque a imagem assusta.",
+      "source_refs": [
+        "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681",
+        "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728",
+        "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "vigilancia-e-resgate-no-tep-intermediario-alto-depois-da-classe",
+      "condicao": "Vigilância e decisão de reperfusão no TEP de risco intermediário-alto já classificado",
+      "resumo": "Checklist de execução depois de a classe intermediário-alto já estar nomeada: reconfirmar que não é alto risco, anticoagular, vigiar onde se detecta descompensação, não trombolisar por anatomia, e disparar resgate só na deterioração hemodinâmica. Distinto do checklist de estratificação das quatro classes (estratificacao-de-risco-e-decisao-terapeutica-no-tep-agudo).",
+      "documento_origem": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "theme": "Tromboembolismo",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681.",
+        "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+        "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728."
+      ],
+      "itens": [
+        {
+          "id": "tep-ih-reconfirmar-hemodinamica",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Hemodinâmica reconfirmada agora: choque obstrutivo, parada ou hipotensão persistente (PAS <90 mmHg ou queda ≥40 mmHg por mais de 15 minutos, ou vasopressor) reclassificam como alto risco e mandam reperfundir — o rótulo intermediário-alto não é eterno",
+          "origem_secao": "O que é intermediário-alto — e o que não é"
+        },
+        {
+          "id": "tep-ih-anticoagulacao-parenteral",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Anticoagulação parenteral iniciada de imediato, salvo contraindicação absoluta; a heparina não foi suspensa 'enquanto se decide o lítico' nem substituída por DOAC como forma de encerrar a discussão de reperfusão nesta janela",
+          "origem_secao": "O que fazer nas primeiras horas — o padrão"
+        },
+        {
+          "id": "tep-ih-unidade-monitorizada",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Internação em UTI ou unidade com monitorização contínua nas primeiras horas; no PEITHO o composto do placebo ocorreu em 5,6% em 7 dias, com tempo médio até descompensação da ordem de 1,8 dia no texto ESC/ERS",
+          "origem_secao": "O que fazer nas primeiras horas — o padrão"
+        },
+        {
+          "id": "tep-ih-contraindicacoes-fibrinolise-escritas",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Contraindicações absolutas e relativas à fibrinólise (Table 10 ESC: AVC hemorrágico, AVC isquêmico em 6 meses, neoplasia de SNC, trauma/cirurgia/TCE em 3 semanas, diátese, sangramento ativo; relativas incluindo gravidez, punção não compressível, PAS >180 mmHg) registradas no prontuário antes da eventual necessidade de resgate",
+          "origem_secao": "O que fazer nas primeiras horas — o padrão"
+        },
+        {
+          "id": "tep-ih-nao-trombolisar-anatomia",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Trombólise sistêmica primária NÃO administrada com justificativa exclusiva de trombo em sela, carga trombótica, relação VD/VE, síncope já resolvida, taquicardia ou lactato isolado — o PEITHO já incluía VD + troponina em normotensos",
+          "origem_secao": "Por que a trombólise sistêmica não é para todo intermediário-alto"
+        },
+        {
+          "id": "tep-ih-resgate-na-deterioracao",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Se houver deterioração hemodinâmica sob anticoagulação: trombólise de resgate iniciada sem esperar novo biomarcador nem TC de controle, salvo contraindicação absoluta; alternativa cirúrgica ou por cateter só se expertise local — classe de cateter não atribuída neste lote",
+          "origem_secao": "Quando reperfundir neste grupo"
+        },
+        {
+          "id": "tep-ih-nao-mopett-nem-storm-rotina",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Dose reduzida (MOPETT) e trombectomia mecânica (STORM-PE, desfecho de imagem, N=100) não adotadas como padrão neste perfil; PEITHO-3 permanece em andamento",
+          "origem_secao": "O que ainda não autoriza rotina"
+        },
+        {
+          "id": "tep-ih-risco-hemorragico-idade-sexo",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "Idade avançada e sexo feminino, em especial >75 anos (SBPT 2025), registrados como amplificadores do risco hemorrágico se o resgate for considerado — não como argumento para lítico preventivo nem para omitir o resgate no choque",
+          "origem_secao": "SBPT 2025; armadilhas clínicas"
+        },
+        {
+          "id": "tep-ih-comunicacao-equipe",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Equipe alinhada: padrão = anticoagular e vigiar; resgate = deterioração; PERT convocado para organizar alternativas, não para transformar C3/intermediário-alto estável em indicação automática de via avançada",
+          "origem_secao": "Função deste protocolo"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "por-que-o-trombolitico-nao-foi-usado-na-minha-embolia-sem-choque",
+      "titulo": "Por que o médico não usou o trombolítico na minha embolia pulmonar",
+      "subtitulo": "Quando o coágulo no pulmão é grave o bastante para internar, mas o remédio que dissolve o coágulo de uma vez não é o tratamento certo",
+      "tema": "Tromboembolismo",
+      "documento_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação para o paciente internado com embolia pulmonar 'intermediária-alta': o coração direito está sobrecarregado e um exame de sangue (troponina) alterou, mas a pressão não caiu. O tratamento padrão é o anticoagulante e observação apertada. O trombolítico — o remédio que dissolve o coágulo depressa — reduz a chance de a pressão cair, mas não mostrou salvar mais vidas nesse grupo e aumenta sangramento grave e derrame. Ele fica reservado se a circulação descompensar.",
+      "secoes": [
+        {
+          "titulo": "O que significa 'risco intermediário-alto'",
+          "paragrafos": [
+            "Nem toda embolia pulmonar é igual. Em um extremo, a pessoa chega em choque ou em parada — aí o tratamento precisa desobstruir o vaso com urgência. No outro extremo, a embolia é pequena e a pessoa pode até ir para casa com anticoagulante.",
+            "No meio existe um grupo em que o lado direito do coração já está trabalhando demais e um exame de sangue (troponina) mostra que o músculo cardíaco sofreu, mas a pressão arterial ainda se sustenta. Os médicos chamam isso de risco intermediário-alto. Internar e vigiar de perto faz sentido. Dissolver o coágulo com trombolítico de rotina, neste grupo, não é o padrão."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo PEITHO mostrou",
+          "paragrafos": [
+            "O maior estudo sobre esse perfil (PEITHO, mais de mil pessoas) comparou o trombolítico tenecteplase com um placebo, todos já recebendo heparina. O trombolítico diminuiu a chance de a circulação descompensar nos primeiros sete dias. Não diminuiu o número de mortes. E aumentou sangramento grave fora da cabeça e derrame — a maior parte dos derrames no grupo do trombolítico foi hemorrágica.",
+            "Anos depois, as mesmas pessoas foram reavaliadas: o trombolítico também não reduziu falta de ar crônica nem a complicação rara chamada hipertensão pulmonar tromboembólica crônica. Por isso o médico não deixa de usar o remédio por 'economia' ou por descuido — deixa de usá-lo de rotina porque o dano visível não é compensado por mais sobrevivência neste grupo."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que acontece então no hospital",
+          "paragrafos": [
+            "O anticoagulante (em geral uma heparina no começo) começa na hora, para o coágulo não crescer e para o corpo ter tempo de reabsorvê-lo. Você fica em um lugar onde a equipe vê logo se a pressão cair, se faltar o ar de forma nova ou se houver confusão — as primeiras 24 a 48 horas são as mais importantes para essa vigilância.",
+            "Se a pressão cair de verdade, se houver choque ou se for preciso usar drogas para sustentar a circulação, aí sim o trombolítico — ou, em alguns hospitais, um procedimento para retirar o coágulo — entra como resgate. Um trombo 'em sela' na tomografia, por si só, não muda essa lógica: o tamanho da imagem não é a mesma coisa que choque."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que você e a família podem perguntar",
+          "paragrafos": [
+            "Pergunte em que classe de gravidade o seu caso foi colocado e o que faria a equipe mudar de ideia (queda de pressão, necessidade de vasopressor, sangramento). Pergunte onde você vai ser vigiado nas primeiras horas. Se alguém oferecer 'meia dose' ou um cateter como se fosse o tratamento óbvio para todo mundo neste grupo, pergunte qual estudo de desfecho duro sustenta isso — hoje o padrão continua sendo anticoagular e observar, com resgate se descompensar."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Queda de pressão, tontura forte, suor frio ou desmaio",
+        "Falta de ar que piora de repente, lábios roxos ou confusão",
+        "Dor no peito nova ou que piora ao respirar",
+        "Sangramento que não para, fezes pretas, sangue na urina ou dor de cabeça súbita forte — sobretudo se houver recebido trombolítico",
+        "Inchaço ou dor nova em uma perna só"
+      ],
+      "perguntas": [
+        "A minha embolia foi classificada como intermediário-alto? O que isso significa na prática?",
+        "Onde vou ficar nas primeiras 24 a 48 horas, e o que a equipe está vigiando?",
+        "Em que situação vocês usariam o trombolítico ou um procedimento para tirar o coágulo?",
+        "Por quanto tempo vou ficar internado e quando começa o anticoagulante em comprimido?",
+        "Que sintomas devo avisar na hora, mesmo de madrugada?"
+      ],
+      "fontes": [
+        "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681.",
+        "Konstantinides SV, Vicaut E, Danays T, et al. Impact of Thrombolytic Therapy on the Long-Term Outcome of Intermediate-Risk Pulmonary Embolism. J Am Coll Cardiol. 2017;69:1536-1544. DOI: 10.1016/j.jacc.2016.12.039. PMID: 28335835.",
+        "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429."
+      ]
+    }
+  ]
+}

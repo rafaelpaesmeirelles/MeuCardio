@@ -936,5 +936,43 @@
     "fonte_producao": "grok",
     "review_note": "Fragmento novo de emergência, ordem 124, sem colisão com insuficiencia-cardiaca-aguda-descompensada (ordem 11, manejo da congestão já diagnosticada) nem com edema-agudo-de-pulmao-hipertensivo (ordem 84). Este slug cobre a primeira hora da dispneia ainda indiferenciada.",
     "version": 1
+  },
+  {
+    "slug": "pos-rosc-primeiras-24-horas-cardiologista",
+    "titulo": "Pós-ROSC — o que o cardiologista decide nas primeiras 24 horas",
+    "gatilho": "RCE · ECG pós-parada · comatoso na UCO · pressão da família por prognóstico · tentação de cateterismo e de 33 °C",
+    "ordem": 125,
+    "documento_slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+    "fluxograma_slug": "fluxograma-pos-rosc-ecg-temperatura-pa-e-cateterismo",
+    "relacionados": [
+      "cuidado-pos-parada-e-coronariografia",
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+      "choque-cardiogenico"
+    ],
+    "review_status": "pendente_revisao",
+    "fonte_producao": "grok",
+    "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com cuidado-pos-parada-e-coronariografia (ordem 17, só o ramo do cateterismo). Este slug cobre a lista integrada das sete decisões do cardiologista nas primeiras 24 h.",
+    "version": 1
+  },
+  {
+    "slug": "dor-toracica-aguda-primeira-hora",
+    "titulo": "Dor torácica aguda — primeira hora no PS, enfermaria ou UCO",
+    "gatilho": "Dor torácica aguda ou equivalente isquêmico (dispneia, epigástrio, mulher/diabetes/idoso) · ECG em 10 min · STEMI ou equivalente de oclusão · choque",
+    "ordem": 126,
+    "documento_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+    "fluxograma_slug": "fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca",
+    "relacionados": [
+      "sindrome-coronariana-aguda",
+      "dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
+      "dispneia-aguda-de-origem-cardiovascular",
+      "choque-cardiogenico",
+      "sindrome-aortica-aguda",
+      "tromboembolismo-pulmonar",
+      "tamponamento-cardiaco"
+    ],
+    "review_status": "pendente_revisao",
+    "fonte_producao": "grok",
+    "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com sindrome-coronariana-aguda (ordem 2, dump ESC 2023 da SCA já diagnosticada) nem com dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina. Este slug cobre a primeira hora da dor ainda indiferenciada.",
+    "version": 1
   }
 ]

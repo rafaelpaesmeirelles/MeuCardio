@@ -27643,5 +27643,399 @@
     "fontes": [
       "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597 — números deste material saíram do resumo público do PubMed (17.604 participantes, 6,5% vs. 8,0%, HR 0,80, seguimento médio 39,8 meses, descontinuação 16,6% vs. 8,2%)."
     ]
+  },
+  {
+    "slug": "segundo-diuretico-na-internacao-por-insuficiencia-cardiaca-o-que-esperar",
+    "titulo": "Segundo diurético na internação por insuficiência cardíaca: o que esperar",
+    "subtitulo": "Por que às vezes se acrescenta acetazolamida ou hidroclorotiazida — e o que os estudos não provaram",
+    "tema": "Insuficiência cardíaca",
+    "documento_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação em linguagem simples para quem está internado com inchaço por insuficiência cardíaca: o diurético de alça continua sendo o primeiro; às vezes a equipe acrescenta por poucos dias um segundo remédio (acetazolamida na veia ou hidroclorotiazida por boca) para ajudar a tirar o excesso de líquido. Nenhum dos dois estudos mostrou que isso diminui morte.",
+    "secoes": [
+      {
+        "titulo": "O primeiro remédio do inchaço continua sendo o de alça",
+        "paragrafos": [
+          "Na internação por insuficiência cardíaca com inchaço, o diurético de alça na veia (em geral furosemida) é o tratamento de base. A equipe primeiro ajusta a dose desse remédio. Só depois, se o inchaço ainda não cedeu, entra a conversa de um segundo diurético por poucos dias.",
+          "Esse segundo remédio não substitui o de alça, não substitui os remédios que protegem o coração a longo prazo e não é para levar para casa no mesmo esquema da internação sem um plano de exames."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo da acetazolamida mostrou",
+        "paragrafos": [
+          "No estudo ADVOR, 519 pessoas internadas com insuficiência cardíaca e sinais de excesso de líquido receberam acetazolamida na veia (500 mg por dia) ou um placebo, sempre junto com o diurético de alça.",
+          "Quem recebeu acetazolamida ficou mais vezes sem sinais de excesso de líquido em até 3 dias: cerca de 42 em cada 100, contra cerca de 31 em cada 100 com placebo. Morte ou nova internação por insuficiência cardíaca em 3 meses foi parecida nos dois grupos. Esse remédio ajuda a desinchar mais rápido; o estudo não mostrou que ele diminui morte."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo da hidroclorotiazida mostrou",
+        "paragrafos": [
+          "No estudo CLOROTIC, 230 pessoas internadas receberam hidroclorotiazida por boca ou placebo, sempre junto com furosemida na veia. Quem recebeu o remédio perdeu mais peso em 72 horas, mas a falta de ar relatada não melhorou de forma diferente do placebo.",
+          "A função do rim piorou com mais frequência (cerca de 47 em cada 100 contra 17 em cada 100). Morte e nova internação não foram diferentes. Esse remédio não é o mesmo que clortalidona — são tiazídicos diferentes, e o estudo testou hidroclorotiazida."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que a equipe vai vigiar",
+        "paragrafos": [
+          "Enquanto o segundo diurético estiver ligado, o esperado é pesar todo dia e repetir exames de potássio e de função do rim. Potássio baixo e piora da creatinina são os sinais que fazem a equipe pausar ou ajustar.",
+          "A diretriz europeia de 2026 considera esses dois remédios por curto prazo para reduzir o inchaço depois do diurético de alça. Isso não significa que todo mundo internado precise deles, nem que eles sejam obrigatórios como os remédios que reduzem internação e morte a longo prazo."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Tontura, fraqueza intensa ou palpitação — podem ser potássio baixo",
+      "Urina muito escassa, náusea nova ou confusão — avise a equipe; a função do rim precisa ser reavaliada",
+      "Falta de ar que piora, inchaço que aumenta ou ganho rápido de peso apesar do tratamento",
+      "Pressão muito baixa, pele fria ou sonolência — isso pode ser outro problema, não só inchaço"
+    ],
+    "perguntas": [
+      "No meu caso, o diurético de alça já foi ajustado antes de pensar no segundo remédio?",
+      "Vai ser acetazolamida ou hidroclorotiazida — e por quê?",
+      "Esse segundo remédio diminui o risco de eu morrer, ou ele serve para desinchar?",
+      "Por quantos dias ele fica ligado, e quais exames vão ser repetidos?",
+      "Eu levo esse segundo diurético para casa ou ele para quando o inchaço sair?"
+    ],
+    "fontes": [
+      "Mullens W, et al. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload (ADVOR). N Engl J Med. 2022;387(13):1185-1195. PMID: 36027559.",
+      "Trullàs JC, et al. Combining loop with thiazide diuretics for decompensated heart failure (CLOROTIC). Eur Heart J. 2023;44(5):411-421. PMID: 36423214.",
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+    ]
+  },
+  {
+    "slug": "por-que-o-trombolitico-nao-foi-usado-na-minha-embolia-sem-choque",
+    "titulo": "Por que o médico não usou o trombolítico na minha embolia pulmonar",
+    "subtitulo": "Quando o coágulo no pulmão é grave o bastante para internar, mas o remédio que dissolve o coágulo de uma vez não é o tratamento certo",
+    "tema": "Tromboembolismo",
+    "documento_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação para o paciente internado com embolia pulmonar 'intermediária-alta': o coração direito está sobrecarregado e um exame de sangue (troponina) alterou, mas a pressão não caiu. O tratamento padrão é o anticoagulante e observação apertada. O trombolítico — o remédio que dissolve o coágulo depressa — reduz a chance de a pressão cair, mas não mostrou salvar mais vidas nesse grupo e aumenta sangramento grave e derrame. Ele fica reservado se a circulação descompensar.",
+    "secoes": [
+      {
+        "titulo": "O que significa 'risco intermediário-alto'",
+        "paragrafos": [
+          "Nem toda embolia pulmonar é igual. Em um extremo, a pessoa chega em choque ou em parada — aí o tratamento precisa desobstruir o vaso com urgência. No outro extremo, a embolia é pequena e a pessoa pode até ir para casa com anticoagulante.",
+          "No meio existe um grupo em que o lado direito do coração já está trabalhando demais e um exame de sangue (troponina) mostra que o músculo cardíaco sofreu, mas a pressão arterial ainda se sustenta. Os médicos chamam isso de risco intermediário-alto. Internar e vigiar de perto faz sentido. Dissolver o coágulo com trombolítico de rotina, neste grupo, não é o padrão."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o estudo PEITHO mostrou",
+        "paragrafos": [
+          "O maior estudo sobre esse perfil (PEITHO, mais de mil pessoas) comparou o trombolítico tenecteplase com um placebo, todos já recebendo heparina. O trombolítico diminuiu a chance de a circulação descompensar nos primeiros sete dias. Não diminuiu o número de mortes. E aumentou sangramento grave fora da cabeça e derrame — a maior parte dos derrames no grupo do trombolítico foi hemorrágica.",
+          "Anos depois, as mesmas pessoas foram reavaliadas: o trombolítico também não reduziu falta de ar crônica nem a complicação rara chamada hipertensão pulmonar tromboembólica crônica. Por isso o médico não deixa de usar o remédio por 'economia' ou por descuido — deixa de usá-lo de rotina porque o dano visível não é compensado por mais sobrevivência neste grupo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que acontece então no hospital",
+        "paragrafos": [
+          "O anticoagulante (em geral uma heparina no começo) começa na hora, para o coágulo não crescer e para o corpo ter tempo de reabsorvê-lo. Você fica em um lugar onde a equipe vê logo se a pressão cair, se faltar o ar de forma nova ou se houver confusão — as primeiras 24 a 48 horas são as mais importantes para essa vigilância.",
+          "Se a pressão cair de verdade, se houver choque ou se for preciso usar drogas para sustentar a circulação, aí sim o trombolítico — ou, em alguns hospitais, um procedimento para retirar o coágulo — entra como resgate. Um trombo 'em sela' na tomografia, por si só, não muda essa lógica: o tamanho da imagem não é a mesma coisa que choque."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que você e a família podem perguntar",
+        "paragrafos": [
+          "Pergunte em que classe de gravidade o seu caso foi colocado e o que faria a equipe mudar de ideia (queda de pressão, necessidade de vasopressor, sangramento). Pergunte onde você vai ser vigiado nas primeiras horas. Se alguém oferecer 'meia dose' ou um cateter como se fosse o tratamento óbvio para todo mundo neste grupo, pergunte qual estudo de desfecho duro sustenta isso — hoje o padrão continua sendo anticoagular e observar, com resgate se descompensar."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Queda de pressão, tontura forte, suor frio ou desmaio",
+      "Falta de ar que piora de repente, lábios roxos ou confusão",
+      "Dor no peito nova ou que piora ao respirar",
+      "Sangramento que não para, fezes pretas, sangue na urina ou dor de cabeça súbita forte — sobretudo se houver recebido trombolítico",
+      "Inchaço ou dor nova em uma perna só"
+    ],
+    "perguntas": [
+      "A minha embolia foi classificada como intermediário-alto? O que isso significa na prática?",
+      "Onde vou ficar nas primeiras 24 a 48 horas, e o que a equipe está vigiando?",
+      "Em que situação vocês usariam o trombolítico ou um procedimento para tirar o coágulo?",
+      "Por quanto tempo vou ficar internado e quando começa o anticoagulante em comprimido?",
+      "Que sintomas devo avisar na hora, mesmo de madrugada?"
+    ],
+    "fontes": [
+      "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681.",
+      "Konstantinides SV, Vicaut E, Danays T, et al. Impact of Thrombolytic Therapy on the Long-Term Outcome of Intermediate-Risk Pulmonary Embolism. J Am Coll Cardiol. 2017;69:1536-1544. DOI: 10.1016/j.jacc.2016.12.039. PMID: 28335835.",
+      "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429."
+    ]
+  },
+  {
+    "slug": "as-primeiras-24-horas-depois-que-o-coracao-voltou-a-bater",
+    "titulo": "As primeiras 24 horas depois que o coração voltou a bater",
+    "subtitulo": "O que a família pode esperar, o que a equipe está decidindo, e por que ainda não é hora de falar do cérebro",
+    "tema": "Terapia intensiva",
+    "documento_slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+    "review_status": "pendente_revisao",
+    "resumo": "Orientação para familiares de alguém que teve parada cardíaca e voltou a ter pulso: as primeiras 24 horas são de estabilizar coração, pressão, oxigênio e temperatura, e de decidir se o cateterismo é agora ou depois. Coma na chegada não é diagnóstico de dano cerebral irreversível.",
+    "secoes": [
+      {
+        "titulo": "O coração voltou. Isso não encerra a emergência",
+        "paragrafos": [
+          "Quando o coração para, os minutos da massagem e do desfibrilador decidem se a pessoa volta a ter pulso. Quando o pulso volta, começa outra fase, que dura horas: o corpo inteiro sofreu falta de sangue, o cérebro ainda está se recuperando, e a equipe precisa descobrir por que a parada aconteceu — sem precipitar o que não ajuda.",
+          "Nessas primeiras 24 horas o cardiologista toma poucas decisões, e recusa outras. Entender quais são evita duas angústias comuns: achar que 'não estão fazendo nada' porque não foram direto para o cateterismo, e achar que já se sabe se o cérebro vai voltar."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que a equipe decide agora",
+        "paragrafos": [],
+        "itens": [
+          "Um eletrocardiograma completo, o mais cedo possível, para ver se há infarto com artéria ocluída",
+          "Se o eletrocardiograma mostra infarto com supra, o cateterismo é emergente — isso não mudou",
+          "Se não mostra supra e a pessoa está estável, dois estudos grandes não mostraram benefício de ir à sala de hemodinâmica na mesma hora; a prioridade passa a ser o cuidado na UTI",
+          "Controlar a temperatura para não deixar febre, o que não é o mesmo que esfriar o corpo a 33 °C de rotina",
+          "Manter a pressão e o oxigênio em faixas seguras, sem perseguir números altos que um ensaio específico testou e não mudaram o desfecho",
+          "Um ultrassom do coração à beira do leito, quando disponível, para procurar causa mecânica ou tamponamento",
+          "Remédios que afinam o sangue só se houver indicação clara — ter tido parada, sozinho, não é essa indicação"
+        ]
+      },
+      {
+        "titulo": "Por que ainda não é hora de falar do cérebro",
+        "paragrafos": [
+          "Quem chega em coma depois de uma parada muitas vezes ainda está sob efeito de sedativos, da própria isquemia e, às vezes, de protocolos de temperatura. Nenhum desses fatores permite dizer, no primeiro dia, se o dano neurológico é reversível ou não.",
+          "A orientação das sociedades é não fechar prognóstico neurológico antes de 72 horas, e em muitos casos ainda mais tarde, depois que a temperatura se normaliza e os sedativos saem. Pupilas abertas na chegada, um exame de imagem 'feio' da admissão ou o fato de a pessoa ainda não ter acordado não são, isolados, a resposta que a família está pedindo.",
+          "Perguntar é justo. A resposta honesta nas primeiras 24 horas é: ainda não sabemos, e é cedo demais para decidir como se soubéssemos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que você pode perguntar à equipe",
+        "paragrafos": [],
+        "itens": [
+          "O eletrocardiograma já foi feito? Mostrou infarto com artéria ocluída?",
+          "Se não vão ao cateterismo agora, quando reavaliam essa decisão?",
+          "Qual é o alvo de temperatura, de pressão e de oxigênio nestas horas?",
+          "Já fizeram, ou vão fazer, um ultrassom do coração?",
+          "Quando, de fato, vocês vão conversar sobre o cérebro — não hoje?"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Nova instabilidade — pressão que cai, arritmia que volta, sangramento",
+      "Febre que não está sendo tratada",
+      "Alguém da equipe falando em 'desligar' ou em dano cerebral irreversível no primeiro dia",
+      "Família pressionada a decidir limitação de suporte nas primeiras horas"
+    ],
+    "perguntas": [
+      "Eu sei o nome do médico de plantão e a hora da próxima conversa marcada?",
+      "Entendi que coma agora não é o mesmo que prognóstico fechado?",
+      "Sei que cateterismo imediato não é automático se o eletrocardiograma não mostra infarto com supra?",
+      "Há alguém da família designado para receber as atualizações, para a equipe não repetir a conversa fragmentada?"
+    ],
+    "fontes": [
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859.",
+      "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057.",
+      "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+    ]
+  },
+  {
+    "slug": "meu-exame-de-lpa-veio-alto-o-que-muda-agora",
+    "titulo": "Meu exame de Lp(a) veio alto — o que muda agora?",
+    "subtitulo": "O remédio específico ainda não provou reduzir infarto. O que dá para fazer nesta década é tratar o resto com mais rigor.",
+    "tema": "Prevenção e lipídios",
+    "documento_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+    "review_status": "pendente_revisao",
+    "resumo": "Texto para quem já tem o resultado de Lp(a) alto e pergunta se existe um remédio novo, se precisa de AAS, se os filhos devem se testar e por que o colesterol 'ruim' passou a ter meta mais baixa. Distinto do material que explica por que o exame se faz uma vez só.",
+    "secoes": [
+      {
+        "titulo": "O número alto não é uma emergência, mas também não é 'só um exame'",
+        "paragrafos": [
+          "Lp(a) alta é, na maior parte, genética. Não veio da última refeição e quase não muda com dieta, caminhada ou a estatina que você já toma. Por isso o médico costuma pedir esse exame uma vez na vida — não todo ano.",
+          "Um valor alto aumenta o risco de infarto, derrame e, em algumas pessoas, de a valva aórtica ir calcificando com os anos. Não é sentença. É um recado para cuidar melhor do que ainda dá para mudar."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O remédio que 'zera' a Lp(a) ainda não provou o que importa",
+        "paragrafos": [
+          "Existem injeções em estudo (pelacarsena, olpasirana e outras) que baixam muito o número no sangue. Isso já foi mostrado em pesquisas de fase 2. O que ainda não foi publicado, até agosto de 2026, é se elas diminuem infarto, derrame ou morte. O grande estudo da pelacarsena, chamado HORIZON, ainda não tinha resultado de eventos na literatura médica nessa data.",
+          "Enquanto esse resultado não existir, nenhum médico responsável deve prescrever esses compostos como se já tivessem ganhado essa prova. Comprar 'tratamento de Lp(a)' por conta própria, no exterior ou em pesquisa sem acompanhamento, não substitui o que já reduz evento de verdade."
+        ],
+        "itens": [
+          "Não interrompa estatina, ezetimiba ou outro hipolipemiante esperando um remédio de Lp(a)",
+          "Não aceite AAS 'só porque a Lp(a) está alta' sem que isso faça parte da indicação usual de prevenção — as diretrizes lidas para este texto não dão essa ordem",
+          "Pergunte ao seu médico se o seu LDL (colesterol ruim) já está na meta da sua categoria de risco. Se não estiver, essa é a prioridade desta consulta"
+        ]
+      },
+      {
+        "titulo": "Cuidado com a unidade do laudo",
+        "paragrafos": [
+          "O exame pode vir em mg/dL ou em nmol/L. Não são a mesma coisa, e não existe uma conta simples e correta para transformar um no outro. A diretriz brasileira de 2025 pede, de preferência, o resultado em nmol/L e desaconselha fórmulas de conversão.",
+          "Se o seu laudo veio só em mg/dL e o número está perto da faixa em que o médico muda a conduta, o caminho honesto é repetir no laboratório que informa nmol/L — não multiplicar o resultado em casa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Família",
+        "paragrafos": [
+          "Como o valor é em grande parte herdado, se o seu resultado está alto (na prática, a partir de 50 mg/dL ou 125 nmol/L), faz sentido que pais, irmãos e filhos conversem com o médico deles sobre dosar uma vez. Isso não é um teste genético caro: é o mesmo exame de sangue, uma vez."
+        ],
+        "itens": [
+          "Leve o número exato, com a unidade, para a consulta — não só 'veio alto'",
+          "Anote quem na família já teve infarto ou derrame cedo (homens antes dos 55, mulheres antes dos 60, como regra de conversa)",
+          "Criança não precisa de rastreio universal de Lp(a); a decisão é do pediatra ou do cardiologista, em situações específicas"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova, em aperto, que piora com esforço",
+      "Falta de ar nova ou que piorou",
+      "Fraqueza de um lado do corpo, boca torta ou fala embolada — isso é emergência, não espera consulta de colesterol",
+      "Este exame não é de pronto-socorro: sintoma agudo não espera o resultado de Lp(a)"
+    ],
+    "perguntas": [
+      "Meu LDL já está na meta que vale para o meu risco, agora que a Lp(a) entrou na conta?",
+      "Meu laudo está em nmol/L ou só em mg/dL? Preciso repetir na outra unidade?",
+      "Alguém da minha família deveria dosar também?",
+      "Existe algum estudo clínico de pelacarsena ou olpasirana aberto e adequado para o meu caso, ou a conduta agora é outra?"
+    ],
+    "fontes": [
+      "Rached FH et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178",
+      "Mach F et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025. PMID: 40878289",
+      "Kronenberg F et al. European Atherosclerosis Society consensus statement on lipoprotein(a). Eur Heart J. 2022. PMID: 36036785",
+      "Cho L et al. Design and Rationale of Lp(a)HORIZON Trial. Am Heart J. 2025. PMID: 40185318 — desenho, não resultado de eventos"
+    ]
+  },
+  {
+    "slug": "quando-a-dor-no-peito-e-emergencia",
+    "titulo": "Quando a dor no peito é uma emergência",
+    "subtitulo": "O que não esperar em casa e quando ligar para o 192 — inclusive se “não dói o peito de verdade”",
+    "tema": "Geral",
+    "documento_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+    "review_status": "pendente_revisao",
+    "resumo": "Orientação para o paciente e a família reconhecerem dor, aperto, queimação ou equivalentes (falta de ar, dor no estômago, irradiação para braço, pescoço ou mandíbula) que não devem esperar consulta eletiva. Mulheres, pessoas com diabetes e idosos muitas vezes não têm a “dor clássica”. Distinct from dor-no-peito-na-emergencia-o-que-acontece-e-como-e-avaliado (o que a equipe faz depois que você chegou).",
+    "secoes": [
+      {
+        "titulo": "Dor no peito que não pode esperar",
+        "paragrafos": [
+          "Aperto, queimação, peso ou dor no peito que começa de repente, em repouso, ou que dura mais do que alguns minutos é motivo para ligar 192 — não para “ver se passa” nem para ir dirigindo. Cada minuto conta se uma artéria do coração estiver fechada.",
+          "Não ter aquela dor “de filme” no centro do peito não acalma. A falta de ar súbita, a dor na boca do estômago, no braço, no pescoço ou na mandíbula, o suor frio e o enjoo podem ser o infarto, sobretudo em mulheres, em quem tem diabetes e em pessoas mais velhas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Ligue para o 192 agora se",
+        "paragrafos": [],
+        "itens": [
+          "A dor, o aperto ou a queimação no peito veio de repente ou não passa em poucos minutos",
+          "Há falta de ar nova, suor frio, enjoo, tontura ou sensação de desmaio junto",
+          "A dor irradia para o braço, o pescoço, a mandíbula, as costas ou a boca do estômago",
+          "Você é mulher, tem diabetes ou mais de 65 anos e o que apareceu foi cansaço súbito ou falta de ar, mesmo sem “dor forte”",
+          "A dor veio depois de usar cocaína — diga isso à equipe; muda o tratamento e não é motivo para esconder nem para deixar de ir",
+          "Houve desmaio, coração disparado ou irregular, ou os lábios ficaram roxos"
+        ]
+      },
+      {
+        "titulo": "O que acontece nos primeiros minutos no hospital",
+        "paragrafos": [
+          "A equipe deve fazer um eletrocardiograma depressa — a meta é cerca de 10 minutos depois que você chega. É um exame indolor, com adesivos no peito. Em alguns casos ele precisa ser repetido. Um exame de sangue (troponina) também é colhido, mas se o eletrocardiograma já mostrar infarto grave o tratamento não espera esse resultado.",
+          "Não dirija. Não tome comprimido “para nervoso” no lugar de pedir socorro. Se a pessoa não responde e não respira normalmente, trate como possível parada: 192 e compressões no centro do peito."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Ansiedade e “é só o estômago”",
+        "paragrafos": [
+          "Dor no peito dá medo, e o medo piora a sensação. Gastrite existe. Pânico existe. Nada disso autoriza você a decidir sozinho em casa. Quem afasta infarto é a avaliação médica com eletrocardiograma — depois, não antes.",
+          "Se a dor estável de esforço já foi investigada no consultório, isso é outro caminho. Dor nova, em repouso, ou que muda de padrão pede o pronto-socorro, não a consulta da semana que vem."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor, aperto ou queimação no peito que não passa em poucos minutos",
+      "Falta de ar súbita, suor frio, enjoo ou desmaio",
+      "Dor no estômago, no braço, no pescoço ou na mandíbula",
+      "Cansaço ou falta de ar novos em mulher, pessoa com diabetes ou idoso",
+      "Dor depois de usar cocaína",
+      "Lábios roxos, confusão ou pessoa que não responde"
+    ],
+    "perguntas": [
+      "Eu sei o número do SAMU (192) e consigo informar o endereço completo?",
+      "Alguém em casa sabe que infarto em mulher ou em quem tem diabetes pode aparecer só como falta de ar ou dor no estômago?",
+      "Se eu usar cocaína, consigo dizer isso à equipe sem esconder?",
+      "Há um DEA no condomínio, no trabalho ou na academia, e alguém treinado para usá-lo se a pessoa desmaiar?"
+    ],
+    "fontes": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354.",
+      "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. PMID: 34709879."
+    ]
+  },
+  {
+    "slug": "onda-t-do-eletro-porque-nao-fazer-teste-de-esforco",
+    "titulo": "A onda T do seu eletrocardiograma: por que não vamos fazer teste de esforço agora",
+    "subtitulo": "Um padrão específico no eletro, mesmo quando a dor no peito já passou, pode indicar que uma artéria importante do coração está muito estreita",
+    "tema": "Doença coronariana",
+    "documento_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação simples do que é a onda T, por que o eletro 'depois da dor' pode ser o mais importante, por que o teste de esteira não é o próximo passo, e o que esperar do cateterismo. Sem números de prognóstico inventados e sem alarmismo.",
+    "secoes": [
+      {
+        "titulo": "O que o eletrocardiograma está mostrando",
+        "paragrafos": [
+          "O eletrocardiograma registra a eletricidade do coração. Uma parte desse traçado se chama onda T. Em algumas pessoas que tiveram dor no peito — mesmo que a dor já tenha passado — a onda T em certas derivações do peito fica com um formato especial: ou profundamente virada para baixo, ou com duas fases (sobe e depois desce). Os médicos chamam esse conjunto de síndrome de Wellens, em homenagem ao cardiologista que ajudou a descrevê-lo.",
+          "Esse formato não é 'um eletro um pouco alterado'. Ele costuma aparecer quando uma artéria da frente do coração, a descendente anterior, está muito estreita. A peculiaridade é que o traçado típico surge justamente quando você já está sem dor."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que não vamos fazer o teste da esteira",
+        "paragrafos": [
+          "O teste ergométrico (a esteira) serve para ver como o coração reage ao esforço quando a suspeita de artéria entupida é menor. No seu caso, o eletro já deu um recado mais direto. Pedir para o coração trabalhar mais, agora, seria aumentar a demanda de oxigênio de uma artéria que pode estar crítica.",
+          "Por isso a equipe não vai marcar esteira, nem um eco de esforço, como próximo passo. Isso não é atraso de exame. É proteção."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que acontece agora",
+        "paragrafos": [],
+        "itens": [
+          "Você fica internado, com o coração monitorado",
+          "Medicamentos que diminuem a formação de coágulos (dois antiagregantes, o chamado DAPT) e um anticoagulante, como na síndrome coronariana aguda, até olharmos a artéria",
+          "Exames de sangue (troponina) em mais de uma coleta — um resultado normal não 'cancela' o que o eletro mostrou",
+          "Na maioria das vezes, um cateterismo nesta internação para ver a descendente anterior e tratar se estiver estreita",
+          "Um ultrassom do coração (ecocardiograma) pode ser feito se não atrasar o cateterismo; se a parede se mexer bem, isso não afasta o problema da artéria"
+        ]
+      },
+      {
+        "titulo": "O que isso não significa",
+        "paragrafos": [
+          "Não significa, sozinho, que você está tendo um infarto com a artéria totalmente fechada neste instante. Muita gente está sem dor quando o eletro é feito.",
+          "Não significa que 'não foi nada' porque a dor passou e o exame de sangue ainda não subiu.",
+          "Não significa que todo mundo com onda T invertida tenha a mesma coisa — outros problemas (por exemplo um coágulo no pulmão, um coração engrossado, uma inflamação) também mudam a onda T. A equipe olha o conjunto, não uma letra do eletro isolada.",
+          "Números de internet sobre 'chance de infarto em X dias' não se aplicam ao seu caso e não devem ser usados para assustar nem para tranquilizar à toa. O que vale é olhar a artéria e tratar o que estiver estreito."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que volta, aperta ou queima, em repouso ou ao menor esforço",
+      "Falta de ar súbita, suor frio, náusea intensa ou sensação de desmaio",
+      "A dor volta e alguém diz que 'o eletro melhorou' — avise na hora; às vezes o traçado 'normalizar' durante a dor é um alerta, não um alívio",
+      "Sangramento que não para, fezes pretas ou vômito com sangue — avise, principalmente se já estiver usando os dois antiagregantes"
+    ],
+    "perguntas": [
+      "O meu eletro é o padrão de Wellens de verdade, ou é outra causa de onda T alterada?",
+      "Vocês vão repetir o eletro quando eu tiver dor e quando eu estiver sem dor?",
+      "Por que eu não vou fazer esteira? Quando, se for o caso, esse exame volta a fazer sentido?",
+      "O cateterismo é hoje, nesta internação, ou só se a troponina subir?",
+      "Quais medicamentos contra coágulo eu vou usar, e por quê?",
+      "Se a artéria estiver estreita, o tratamento é stent, cirurgia ou remédio? Quem decide?"
+    ],
+    "fontes": [
+      "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+      "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024."
+    ]
   }
 ]
