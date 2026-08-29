@@ -8,7 +8,8 @@ from app.core.security import current_user, require_admin
 from app.models.audit import AuditLog
 from app.models.cmed import CmedApresentacao, CmedVersao
 from app.models.drug import Drug
-from app.services import cmed_precos
+from app.models.farmacia_popular import FarmaciaPopularItem
+from app.services import cmed_precos, farmacia_popular
 from app.services.pricing.kairos_provider import load_snapshot as load_kairos_snapshot
 from app.services.pricing.kairos_provider import prescription_options_for
 
@@ -529,11 +530,20 @@ def apresentacoes_comerciais(
     if not d:
         raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
 
+    item_pfpb = (
+        db.query(FarmaciaPopularItem)
+        .filter(FarmaciaPopularItem.drug_id == d.id, FarmaciaPopularItem.ativo.is_(True))
+        .order_by(FarmaciaPopularItem.id.desc())
+        .first()
+    )
+    farmacia_popular_exposicao = farmacia_popular.montar_exposicao(item_pfpb)
+
     versao = db.query(CmedVersao).order_by(CmedVersao.id.desc()).first()
     if not versao:
         return {
             "generic_name": d.generic_name, "uf": None, "cmed_publicado_em": None,
             "kairos": prescription_options_for(d),
+            "farmacia_popular": farmacia_popular_exposicao,
             "apresentacoes": [], "aviso": "Nenhuma lista da CMED foi importada ainda.",
         }
 
@@ -556,6 +566,7 @@ def apresentacoes_comerciais(
         "generic_name": d.generic_name, "uf": uf_usada, "cmed_versao_id": versao.id,
         "cmed_publicado_em": versao.publicado_em,
         "kairos": prescription_options_for(d),
+        "farmacia_popular": farmacia_popular_exposicao,
         "apresentacoes": apresentacoes,
         "aviso": None if apresentacoes else (
             "Sem apresentação com preço publicado pela CMED para esta substância — "

@@ -1,0 +1,160 @@
+{
+  "conferido_em": "20260829",
+  "fontes": "Ministério da Saúde — Programa Farmácia Popular do Brasil, gov.br/saude/pt-br/composicao/sectics/farmacia-popular (página institucional, elenco por categoria); Agência Brasil/EBC, matéria sobre medicamentos gratuitos do programa; CNN Brasil, matéria sobre o mesmo elenco; CRF-GO (Conselho Regional de Farmácia de Goiás), lista de referência do programa. Consolidado e cruzado entre as quatro fontes por sessão externa (Claude chat) em 29/08/2026, que relatou o gap.",
+  "nota_de_contagem": "O relato original que motivou esta carga afirma '29 princípios ativos/doses' de escopo cardiológico, mas a enumeração explícita fornecida (por substância+dose, que é a granularidade real do elenco do PFPB) soma exatamente 19 itens distintos: 10 de hipertensão, 5 de diabetes (metformina 500mg, metformina 850mg, glibenclamida, insulina NPH, insulina regular), 1 de diabetes+cardiovascular (dapagliflozina) e 3 de dislipidemia (sinvastatina 10/20/40mg). Esta divergência (29 citado vs. 19 enumerado) NÃO foi resolvida nesta sessão — não fabriquei 10 itens adicionais para fechar a conta. Carregados exatamente os 19 itens que vieram nominalmente listados, com fonte. Se o elenco oficial tiver mais itens cardiológicos além destes 19, é trabalho de conferência futura, não desta carga.",
+  "observacao": "Nenhum código de barras (EAN) foi confirmado nesta carga — a URL do arquivo/lista de EAN vigente do Ministério da Saúde (gov.br/saude/.../farmacia-popular/.../codigos-de-barras) não foi localizada (tentativa de acesso direto devolveu 404 na sessão que relatou o gap). Todos os itens nascem com elegibilidade NÃO confirmada por EAN — ver aviso de segurança em app/models/farmacia_popular.py. Reconferir vigência mensalmente antes de qualquer atualização.",
+  "itens": [
+    {
+      "substancia_pfpb": "Atenolol",
+      "dose_referencia": "25 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum, sem exigência de Cartão Bolsa Família/NIS para os itens de hipertensão do programa.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Besilato de anlodipino",
+      "dose_referencia": "5 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Captopril",
+      "dose_referencia": "25 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Cloridrato de propranolol",
+      "dose_referencia": "40 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Espironolactona",
+      "dose_referencia": "25 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Furosemida",
+      "dose_referencia": "40 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Hidroclorotiazida",
+      "dose_referencia": "25 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Losartana potássica",
+      "dose_referencia": "50 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Maleato de enalapril",
+      "dose_referencia": "10 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Succinato de metoprolol",
+      "dose_referencia": "25 mg",
+      "categoria": "hipertensao",
+      "indicacao": "Hipertensão arterial",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de hipertensão); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Cloridrato de metformina",
+      "dose_referencia": "500 mg",
+      "categoria": "diabetes",
+      "indicacao": "Diabetes mellitus tipo 2",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de diabetes); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Cloridrato de metformina",
+      "dose_referencia": "850 mg",
+      "categoria": "diabetes",
+      "indicacao": "Diabetes mellitus tipo 2",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de diabetes); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Glibenclamida",
+      "dose_referencia": "5 mg",
+      "categoria": "diabetes",
+      "indicacao": "Diabetes mellitus tipo 2",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de diabetes); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Insulina humana NPH",
+      "dose_referencia": "100 UI/mL",
+      "categoria": "diabetes",
+      "indicacao": "Diabetes mellitus (insulinodependente)",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de diabetes); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Insulina humana regular",
+      "dose_referencia": "100 UI/mL",
+      "categoria": "diabetes",
+      "indicacao": "Diabetes mellitus (insulinodependente)",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de diabetes); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Dapagliflozina",
+      "dose_referencia": "10 mg",
+      "categoria": "diabetes_cardiovascular",
+      "indicacao": "Diabetes mellitus tipo 2 com doença cardiovascular estabelecida (item incorporado ao elenco em 2025-2026 — VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao critério de acesso exato, que pode exigir laudo/diagnóstico específico em vez de receita comum simples).",
+      "criterio_acesso": "Item novo do programa (2025-2026); critério de acesso exato (receita comum vs. exigência de comprovação de doença cardiovascular estabelecida) não confirmado com segurança nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (ampliação do elenco 2025-2026); Agência Brasil; CNN Brasil."
+    },
+    {
+      "substancia_pfpb": "Sinvastatina",
+      "dose_referencia": "10 mg",
+      "categoria": "dislipidemia",
+      "indicacao": "Dislipidemia",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de dislipidemia); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Sinvastatina",
+      "dose_referencia": "20 mg",
+      "categoria": "dislipidemia",
+      "indicacao": "Dislipidemia",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de dislipidemia); Agência Brasil; CNN Brasil; CRF-GO."
+    },
+    {
+      "substancia_pfpb": "Sinvastatina",
+      "dose_referencia": "40 mg",
+      "categoria": "dislipidemia",
+      "indicacao": "Dislipidemia",
+      "criterio_acesso": "Gratuito mediante receita médica comum.",
+      "fonte_refs": "Ministério da Saúde — Programa Farmácia Popular do Brasil (elenco de dislipidemia); Agência Brasil; CNN Brasil; CRF-GO."
+    }
+  ]
+}

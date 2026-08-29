@@ -55,7 +55,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "health.router", "auth.router", "browser_session.router", "social_login.router", "password_reset.router",
     "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "admin_user_management.router", "service_orders.router",
     "partner_courses.router", "email_api.router", "email_session.router", "documentos_publicos.router",
-    "cmed.router", "library.router", "search.router", "calculators.router",
+    "cmed.router", "farmacia_popular.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
     "studies.router", "prescriptions.router", "prescricao_especial.router", "documents.router", "appointments.router",
