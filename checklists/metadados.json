@@ -32493,5 +32493,68 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "teste-ergometrico-e-tcpe-seriado-na-cardiomiopatia-hipertrofica-e-apos-miocardite-sbc-2024",
+    "condicao": "Teste ergométrico e TCPE em cardiomiopatia hipertrófica e após miocardite",
+    "resumo": "Checklist com seis indicações específicas de teste ergométrico e teste cardiopulmonar de exercício (TCPE) em cardiomiopatia hipertrófica (protocolo atenuado, TCPE para aptidão cardiorrespiratória, teste seriado para ajuste de exercício e para avaliação de resposta pressórica) e após miocardite (liberação esportiva em 3–6 meses e reavaliação periódica nos dois primeiros anos), baseado na Diretriz Brasileira de Ergometria 2024 (SBC) e em diretrizes internacionais correlatas. Não repete tópicos gerais de CMH (mavacamten, aneurisma apical, elegibilidade esportiva geral) nem o uso clássico do teste ergométrico para desmascarar gradiente provocado, já cobertos em outro verbete do corpus.",
+    "documento_origem": null,
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, Precoma DB, Falcão AMGM, Mastrocola LE, Castro I, Albuquerque PF, Coutinho RQ, Brito FS, Alves JC, Serra SM, Santos MAD, Colombo CSSS, Stein R, Herdy AH, Silveira ADD, Castro CLB, Silva MMFD, Meneghello RS, Ritt LEF, Malafaia FL, Marinucci LFB, Pena JLB, Almeida AEM, Vieira MLC, Stier Júnior AL. Diretriz Brasileira de Ergometria em População Adulta – 2024 [Brazilian Guideline for Exercise Test in the Adult Population - 2024]. Arq Bras Cardiol. 2024 Feb;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581. PMCID: PMC11656589. (Diretriz — fonte primária deste checklist; inclui teste ergométrico convencional e TCPE no mesmo documento, Partes 1–3.)",
+      "Ommen SR, Ho CY, Asif IM, Balaji S, Burke MA, Day SM, Dearani JA, Epps KC, Evanovich L, Ferrari VA, Joglar JA, Khan SS, Kim JJ, Kittleson MM, Krittanawong C, Martinez MW, Mital S, Naidu SS, Saberi S, Semsarian C, Times S, Waldman CB. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy. Circulation. 2024 Jun 4;149(23):e1239-e1311. DOI: 10.1161/CIR.0000000000001250. PMID: 38718139. Errata: Circulation. 2024;150(8):e198, PMID 39159227. (Diretriz internacional; texto integral não acessível por paywall no momento da pesquisa — citação usada apenas em nível de conteúdo já estabelecido/abstract, com ressalva explícita no item 6.)",
+      "Pelliccia A, Sharma S, Gati S, Bäck M, Börjesson M, Caselli S, Collet JP, Corrado D, Drezner JA, Halle M, Hansen D, Heidbuchel H, Myers J, Niebauer J, Papadakis M, Piepoli MF, Prescott E, Roos-Hesselink JW, Graham Stuart A, Taylor RS, Thompson PD, Tiberi M, Vanhees L, Wilhelm M; ESC Scientific Document Group. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021 Jan 1;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412. (Diretriz — usada como referência corroborante geral sobre liberação esportiva pós-miocardite; não citada como fonte de frase literal verificada neste checklist.)",
+      "Butzner M, Kinyik-Merena C, Aguiar M, Davison N, Shreay S, Masri A. The prognostic value of peak oxygen uptake in obstructive hypertrophic cardiomyopathy: a literature review to inform economic model development. J Med Econ. 2024 Jan-Dec;27(1):817-825. DOI: 10.1080/13696998.2024.2367920. PMID: 38868944. (Revisão de literatura, NÃO é diretriz — usada apenas para sustentar o valor prognóstico do VO2 pico medido por TCPE na CMH obstrutiva, não como recomendação formal de conduta.)"
+    ],
+    "itens": [
+      {
+        "id": "cmh-protocolo-atenuado",
+        "categoria": "CMH",
+        "obrigatorio": false,
+        "texto": "Considerar protocolo ATENUADO de teste ergométrico (progressão de carga mais lenta que a do protocolo de Bruce padrão) em pacientes com cardiomiopatia hipertrófica, especialmente quando há capacidade funcional reduzida, obstrução da via de saída do VE ou disfunção diastólica relevante: incrementos rápidos de carga (como no Bruce clássico, a cada 3 minutos) podem impedir avaliação adequada de sintomas, resposta pressórica e limiar de esforço nesses pacientes. A Diretriz Brasileira de Ergometria 2024 recomenda uso de protocolo atenuado na CMH e na IC compensada para esclarecimento de sintomas, avaliação da capacidade funcional e de marcadores prognósticos (sintomas, arritmia ventricular e resposta pressórica) — Classe IIa, Nível B. Ressalva: a diretriz não especifica valores numéricos exatos de velocidade/inclinação para esse protocolo atenuado; a escolha do protocolo específico (ex.: Bruce modificado, Naughton, rampa) fica a critério do serviço, e nenhum corte técnico foi inventado aqui.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (Arq Bras Cardiol. 2024;121(3):e20240110, PMID 38896581) — Tabela 6, Classe IIa / Nível B."
+      },
+      {
+        "id": "cmh-tcpe-indicacao",
+        "categoria": "CMH",
+        "obrigatorio": false,
+        "texto": "Considerar teste cardiopulmonar de exercício (TCPE/ergoespirometria) — e não apenas o teste ergométrico convencional — na cardiomiopatia hipertrófica para avaliar aptidão cardiorrespiratória e estratificação de risco. O TCPE agrega ao teste ergométrico padrão a análise de gases expirados e de parâmetros ventilatórios (consumo de oxigênio, incluindo VO2 pico, limiares ventilatórios, equivalentes ventilatórios), permitindo determinar causas limitantes do desempenho cardiorrespiratório e mecanismos fisiopatológicos envolvidos, o que o teste ergométrico isolado (sem análise de gases) não fornece. Revisão de literatura específica em CMH obstrutiva mostra VO2 pico como preditor (isolado ou em desfechos compostos) de mortalidade por todas as causas, mortalidade cardiovascular, morte súbita, necessidade de transplante e fibrilação atrial em estudos primários de CMH — reforçando o racional de uso do TCPE além da simples liberação/gradiente.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (PMID 38896581) — Tabela 11 (Indicações específicas do TCPE), Classe IIa / Nível B, e Parte 3 (variáveis do TCPE); corroborado por Butzner et al., J Med Econ 2024, PMID 38868944 (revisão de literatura, não diretriz)."
+      },
+      {
+        "id": "pos-miocardite-liberacao-3-6-meses",
+        "categoria": "Pós-miocardite",
+        "obrigatorio": false,
+        "texto": "Realizar teste ergométrico em pacientes recuperados e assintomáticos após 3 a 6 meses do quadro agudo de miocardite, como parte dos critérios para liberação e prescrição de prática de exercícios físicos/esportivos. A Diretriz Brasileira de Ergometria 2024 lista essa indicação com Classe IIa, Nível B, mas não detalha, no trecho localizado, todos os critérios complementares de liberação (função ventricular normalizada, ausência de arritmia, biomarcadores/RM cardíaca sem sinais de inflamação ativa); esses critérios adicionais são discutidos de forma mais ampla em diretrizes internacionais de cardiologia do esporte (ex.: ESC 2020) e não foram verbatim-verificados aqui — declarar essa limitação ao aplicar o item.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (PMID 38896581) — Tabela 6, Classe IIa / Nível B."
+      },
+      {
+        "id": "pos-miocardite-reavaliacao-periodica-2-anos",
+        "categoria": "Pós-miocardite",
+        "obrigatorio": false,
+        "texto": "Programar reavaliação periódica com teste ergométrico nos primeiros DOIS ANOS após miocardite, mesmo em pacientes já liberados para exercício, com o objetivo de identificar progressão silenciosa da doença (evolução para cardiomiopatia dilatada/disfunção ventricular, arritmia de início tardio) e refinar a estratificação de risco. Esse período é destacado especificamente pela diretriz porque a maior parte do risco residual e da possível progressão subclínica pós-miocardite se concentra nessa janela inicial, distinguindo esse acompanhamento seriado do teste único de liberação em 3–6 meses.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (PMID 38896581) — Tabela 6, Classe IIa / Nível C."
+      },
+      {
+        "id": "cmh-te-seriado-ajuste-exercicio",
+        "categoria": "CMH",
+        "obrigatorio": false,
+        "texto": "Repetir o teste ergométrico de forma SERIADA (não como teste único) em pacientes com cardiomiopatia hipertrófica ao longo do seguimento, especificamente para ajustar a recomendação/prescrição de programa de exercícios e de atividade esportiva conforme a evolução clínica — e não apenas para diagnóstico inicial. A reavaliação seriada permite capturar mudanças na capacidade funcional, em sintomas e em marcadores prognósticos que podem alterar a liberação previamente dada.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (PMID 38896581) — Tabela 6, Classe IIa / Nível B (\"de forma seriada, para ajustes de programa de exercícios e atividade esportiva\")."
+      },
+      {
+        "id": "cmh-te-seriado-resposta-pressorica-intervencao",
+        "categoria": "CMH",
+        "obrigatorio": false,
+        "texto": "Utilizar o teste ergométrico de forma SERIADA na cardiomiopatia hipertrófica também para acompanhar a resposta pressórica ao esforço (elevação inadequada ou queda da pressão arterial sistólica durante o teste) como um dos marcadores prognósticos monitorados ao longo do tempo, em conjunto com sintomas e arritmia ventricular — distinto do uso clássico do teste ergométrico para desmascarar gradiente provocado na via de saída, já coberto em outro verbete do corpus. A resposta pressórica anormal ao exercício é reconhecida na literatura de manejo de CMH como um marcador de risco que, junto com gradiente e sintomas, integra a discussão sobre escalonamento terapêutico, incluindo eventual consideração de terapia de redução septal em pacientes obstrutivos sintomáticos. RESSALVA IMPORTANTE: não foi possível acessar o texto integral da diretriz internacional de CMH (paywall) para citar uma frase literal que vincule explicitamente o teste seriado de resposta pressórica à decisão de redução septal; esse elo é uma inferência de prática clínica geral apoiada no conteúdo declarado no abstract/estrutura da diretriz e na listagem da 'resposta pressórica' como marcador prognóstico seriado na Diretriz Brasileira — não deve ser tratado como recomendação formal com grau/classe verificado até revisão editorial confirmar o texto completo da fonte internacional.",
+        "origem_secao": "Diretriz Brasileira de Ergometria 2024 (PMID 38896581) — Tabela 6 (resposta pressórica como marcador prognóstico avaliado de forma seriada na CMH); contextualizado — sem citação literal verificada — por Ommen SR et al., 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR HCM Guideline, Circulation 2024, PMID 38718139 (texto integral não acessado)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
