@@ -1,0 +1,221 @@
+[
+  {
+    "slug": "aldosteronismo-primario",
+    "name": "Aldosteronismo primário",
+    "aliases": [
+      "hiperaldosteronismo primário",
+      "síndrome de Conn",
+      "hipertensão por excesso de aldosterona"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "hipertensao_secundaria_endocrina",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Forma frequente e subdiagnosticada de hipertensão secundária causada por produção de aldosterona inadequadamente autônoma em relação à renina. Eleva o risco de fibrilação atrial, doença coronariana, insuficiência cardíaca, acidente vascular cerebral e doença renal além do risco explicado pela pressão arterial, tornando importante reconhecer e tratar especificamente a condição.",
+    "epidemiology": "A prevalência aumenta com a gravidade da hipertensão e é particularmente alta na hipertensão resistente. A ESC 2024 destaca que aldosteronismo primário é causa comum de hipertensão secundária e que a hipocalemia está ausente na maioria dos casos; a diretriz Endocrine Society 2025, co-patrocinada pela AHA e sociedades de hipertensão/endocrinologia, passou a sugerir rastreamento em todos os indivíduos com hipertensão, condicionado à capacidade local de implementação.",
+    "presentation": [
+      "Frequentemente assintomático além da própria hipertensão; normocalemia não exclui o diagnóstico.",
+      "Hipertensão de difícil controle, resistente ou de início precoce aumenta a probabilidade pré-teste.",
+      "Hipocalemia espontânea ou induzida por diurético, fraqueza, câimbras, poliúria ou palpitações podem ocorrer, mas não são obrigatórias.",
+      "Fibrilação atrial, hipertrofia ventricular esquerda, AVC, insuficiência cardíaca ou doença renal desproporcionais ao tempo/intensidade aparente da hipertensão devem aumentar a suspeita clínica.",
+      "Incidentaloma adrenal em pessoa hipertensa exige considerar excesso de aldosterona dentro da investigação hormonal apropriada."
+    ],
+    "diagnostic_approach": {
+      "rastreio": "A diretriz Endocrine Society 2025 sugere rastreamento com aldosterona plasmática/sérica e renina, calculando a relação aldosterona-renina (ARR), em todos os indivíduos com hipertensão (recomendação condicional, GRADE 2 | ⊕⊕○○), com implementação dependente de recursos. A ESC 2024 recomenda ARR como teste de rastreio quando se investiga aldosteronismo primário.",
+      "pre_analitica": "Coletar aldosterona e renina em condições padronizadas e interpretar à luz do método laboratorial, sódio, potássio, postura, horário e fármacos interferentes. Hipocalemia pode reduzir falsamente a aldosterona; quando o rastreio é negativo em paciente hipocalêmico, corrigir o potássio e repetir.",
+      "confirmacao": "Resultado de rastreio não deve ser reduzido a um ponto de corte universal sem considerar método e probabilidade pré-teste. A diretriz 2025 permite dispensar teste de supressão em cenários de produção de aldosterona claramente renina-independente e alta probabilidade, ou quando o paciente não deseja/não pode seguir para cirurgia e será tratado clinicamente; em probabilidade intermediária para doença lateralizável e intenção cirúrgica, teste de supressão pode integrar a confirmação.",
+      "subtipagem": "Em candidato a cirurgia, TC de adrenais define anatomia, mas não deve decidir lateralidade isoladamente. A amostragem de veias adrenais é o padrão funcional para diferenciar produção unilateral de bilateral na maioria dos candidatos cirúrgicos, com exceções restritas definidas por diretriz e expertise local.",
+      "tratamento_dirigido": "Doença lateralizada em candidato apropriado pode ser tratada com adrenalectomia unilateral; doença bilateral, lateralidade indeterminada, recusa ou contraindicação à cirurgia favorecem antagonista do receptor mineralocorticoide. O objetivo não é apenas reduzir PA, mas bloquear o excesso de aldosterona e reduzir risco cardiovascular/renal."
+    },
+    "differentials": [
+      "Hipertensão arterial primária com renina baixa",
+      "Uso de diuréticos, bloqueadores do SRAA, betabloqueadores ou outros fármacos que distorcem renina/aldosterona",
+      "Síndrome de Cushing e outros estados de excesso mineralocorticoide",
+      "Hipertensão renovascular",
+      "Doença renal parenquimatosa",
+      "Feocromocitoma/paraganglioma",
+      "Síndrome de Liddle e outras formas monogênicas de hipertensão de baixa renina"
+    ],
+    "tests": [
+      "Potássio sérico concomitante ao rastreio para interpretação adequada da aldosterona; hipocalemia pode causar falso-negativo.",
+      "Aldosterona e renina plasmática/sérica com cálculo da ARR, usando limites e unidades específicos do ensaio.",
+      "Creatinina/TFGe e relação albumina-creatinina urinária para dano renal e segurança terapêutica.",
+      "ECG e avaliação de dano de órgão-alvo; ecocardiograma quando houver indicação clínica por hipertrofia, insuficiência cardíaca ou outro fenótipo.",
+      "Teste de supressão de aldosterona quando indicado pela probabilidade pré-teste e pela intenção de buscar tratamento cirúrgico.",
+      "TC de adrenais em candidato cirúrgico para anatomia e exclusão de lesão suspeita, sem usar a imagem isoladamente para inferir lateralidade.",
+      "Amostragem de veias adrenais em centro experiente quando a lateralização determinar a decisão cirúrgica e não houver exceção bem estabelecida."
+    ],
+    "red_flags": [
+      "Hipocalemia grave ou sintomática, fraqueza importante, arritmia, síncope ou alteração eletrocardiográfica requerem correção e avaliação urgente.",
+      "Hipertensão com lesão aguda de órgão-alvo deve ser tratada como emergência hipertensiva; a investigação etiológica não pode atrasar estabilização.",
+      "Massa adrenal com características suspeitas de malignidade exige avaliação especializada independente do resultado da ARR.",
+      "Piora de função renal ou hiperpotassemia após início/intensificação de antagonista mineralocorticoide exige revisão rápida de dose, interações e estado volêmico."
+    ],
+    "ambulatory_flow": [
+      "Confirmar hipertensão e revisar medidas fora do consultório, adesão e fármacos que interferem na ARR.",
+      "Solicitar aldosterona, renina e potássio em condições interpretáveis; corrigir hipocalemia antes de repetir rastreio negativo suspeito.",
+      "Se rastreio positivo, definir com endocrinologia/hipertensão a necessidade de confirmação bioquímica e se o paciente deseja/é elegível a tratamento cirúrgico.",
+      "Se candidato cirúrgico, realizar imagem adrenal e, em regra, lateralização funcional com AVS antes de adrenalectomia.",
+      "Se doença bilateral ou tratamento não cirúrgico, usar antagonista do receptor mineralocorticoide e titular com monitorização de PA, potássio, função renal e resposta da renina conforme estratégia especializada.",
+      "Manter controle concomitante de risco cardiovascular: lipídios, diabetes, tabagismo, obesidade, sono e doença renal."
+    ],
+    "emergency_flow": [
+      "Em hipertensão grave com lesão aguda de órgão-alvo, estabilizar conforme a síndrome-alvo e postergar investigação detalhada de aldosteronismo até segurança clínica.",
+      "Em hipocalemia grave com arritmia ou instabilidade, monitorizar ritmo, corrigir potássio/magnésio e revisar perdas/medicações enquanto se investiga a causa."
+    ],
+    "treatment_summary": "O tratamento é etiológico. A diretriz Endocrine Society 2025 sugere terapia específica para aldosteronismo primário (GRADE 2 | ⊕⊕○○): adrenalectomia para doença unilateral/lateralizada em candidato que deseja cirurgia ou antagonista mineralocorticoide para doença bilateral, lateralidade desconhecida, não candidato ou quem prefere tratamento clínico. A escolha deve integrar AVS/imagem, risco cirúrgico, função renal, potássio e preferência do paciente.",
+    "monitoring": [
+      "Pressão arterial domiciliar/ambulatorial e necessidade de outros anti-hipertensivos.",
+      "Potássio e função renal após iniciar ou titular antagonista mineralocorticoide e periodicamente.",
+      "Renina e aldosterona podem auxiliar a avaliar adequação do bloqueio mineralocorticoide em manejo especializado.",
+      "Após adrenalectomia, acompanhar pressão, potássio, função renal e desfecho bioquímico/clínico.",
+      "Rastrear e tratar fibrilação atrial, hipertrofia ventricular, doença renal e demais danos cardiovasculares quando presentes."
+    ],
+    "special_populations": [
+      "Doença renal crônica: ARR e tratamento com antagonista mineralocorticoide requerem interpretação/monitorização mais cuidadosas por alterações de renina, potássio e risco de hiperpotassemia.",
+      "Fibrilação atrial: aldosteronismo primário é fator de risco relevante e potencialmente tratável; hipertensão associada a FA deve aumentar a atenção para causas secundárias.",
+      "Jovens com início precoce, história familiar de aldosteronismo ou AVC precoce podem exigir avaliação de formas familiares/genéticas.",
+      "Gestação: investigação e tratamento exigem endocrinologia/obstetrícia especializada; alguns antagonistas mineralocorticoides não são apropriados durante a gestação."
+    ],
+    "assistant_questions": [
+      {
+        "id": "has_hypertension",
+        "label": "Há diagnóstico confirmado de hipertensão arterial?",
+        "type": "boolean",
+        "required": true,
+        "section": "Rastreio"
+      },
+      {
+        "id": "potassium_low",
+        "label": "Há hipocalemia espontânea ou induzida por diurético?",
+        "type": "boolean",
+        "section": "Probabilidade"
+      },
+      {
+        "id": "resistant_or_early",
+        "label": "A hipertensão é resistente, muito grave ou teve início precoce?",
+        "type": "boolean",
+        "section": "Probabilidade"
+      },
+      {
+        "id": "arr_done",
+        "label": "Aldosterona e renina foram medidas com ARR interpretável e potássio concomitante?",
+        "type": "boolean",
+        "section": "Diagnóstico"
+      },
+      {
+        "id": "surgical_candidate",
+        "label": "Se houver doença unilateral, o paciente deseja e tem condições de considerar adrenalectomia?",
+        "type": "boolean",
+        "section": "Subtipagem"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "screen-pa",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "has_hypertension",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Diretriz Endocrine Society 2025 sugere rastreamento de aldosteronismo primário em pessoas com hipertensão, condicionado à viabilidade local."
+          ],
+          "suggested_tests": [
+            "Aldosterona, renina, ARR e potássio em condições interpretáveis"
+          ]
+        }
+      },
+      {
+        "id": "high-prior-pa",
+        "priority": 85,
+        "when": {
+          "any": [
+            {
+              "field": "potassium_low",
+              "op": "truthy"
+            },
+            {
+              "field": "resistant_or_early",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Hipocalemia, hipertensão resistente/grave ou início precoce aumentam a probabilidade de aldosteronismo primário."
+          ]
+        }
+      },
+      {
+        "id": "need-arr",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "arr_done",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Aldosterona, renina, ARR, potássio e condições pré-analíticas/medicações interferentes"
+          ]
+        }
+      },
+      {
+        "id": "subtype-if-surgery",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "surgical_candidate",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Se o rastreio/diagnóstico confirmar aldosteronismo primário e houver intenção cirúrgica, subtipagem adequada é necessária; TC isolada geralmente não substitui AVS."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "aldosteronismo primário",
+      "hiperaldosteronismo",
+      "hipertensão secundária",
+      "hipocalemia",
+      "renina",
+      "ARR",
+      "AVS",
+      "antagonista mineralocorticoide"
+    ],
+    "source_refs": [
+      "Adler GK, Stowasser M, Correa RR, et al. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2025;110(9):2453-2495. doi:10.1210/clinem/dgaf284. PMID:40658480.",
+      "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45:3912-4018.",
+      "Brandão AA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624."
+    ],
+    "source_urls": [
+      "https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/",
+      "https://abccardiol.org/wp-content/uploads/2025/09/2025-0624_Diretriz_Hipertensao_2025_port.x66747.pdf"
+    ],
+    "related_document_slugs": [
+      "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society",
+      "fluxograma-aldosteronismo-primario-subtipagem-avs-cirurgia-ou-mra"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo criado para uma causa frequente e subdiagnosticada de hipertensão secundária, sem substituir os hubs gerais de hipertensão ou hipertensão resistente. As duas relações Tudo com Tudo foram verificadas na main e estão revisadas. Manter pendente até revisão editorial humana."
+  }
+]
