@@ -31,7 +31,17 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote vincular Tudo com Tudo de 29/08/2026: ficha já completa
+        # persistencia-canal-arterial tinha apenas 1 related_document_slug
+        # (abaixo do piso); 5 vínculos adicionados após verificação.
+        # Mantido pendente_revisao (não autoaprovado) — gate canônico deste
+        # arquivo falhará intencionalmente até revisão humana, consistente
+        # com a política vigente desde 28/08/2026.
+        "persistencia-canal-arterial",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
