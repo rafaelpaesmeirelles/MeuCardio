@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "atresia-tricuspide",
+    "assistant_rules": {
+      "canal_dependente_sem_suporte": {
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pre_cirurgico"
+            },
+            {
+              "field": "em_uso_prostaglandina",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Confirmar se a anatomia e o padrão de fluxo são realmente ducto-dependentes e se há indicação atual de manutenção farmacológica do canal arterial.",
+            "Confirmar saturação, perfusão e sinais de deterioração clínica antes de classificar urgência."
+          ],
+          "messages": [
+            "Ausência de prostaglandina no pré-operatório, isoladamente, não define emergência. Escalonar para urgência ou emergência somente diante de dependência ductal documentada, hipoxemia, perfusão inadequada ou outra deterioração clínica."
+          ]
+        }
+      }
+    }
+  }
+]
