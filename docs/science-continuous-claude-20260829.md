@@ -1135,7 +1135,23 @@ stress-CMR/PET-perfusão/MIBG), cluster ACHD, cluster transplante de
 órgão sólido (hepático+renal) e cluster populações especiais (falciforme,
 HIV, pós-COVID) fechados nesta janela.
 
-## Lote 51 (planejado)
+## Lote 51 — concluído (SHA 0e59d9c4) — total 79 commits
+
+- checklist `reabilitacao-cardiaca-e-prescricao-de-exercicio-pos-transplante-cardiaco-coracao-denervado`
+  — 5 itens complementando o checklist de vigilância de rejeição/CAV
+  já existente: fisiologia denervada (resposta cronotrópica
+  catecolamina-dependente, reinervação parcial tardia e incompleta);
+  TCPE (reserva cronotrópica correlacionada a sobrevida, nota explícita
+  de que VE/VCO2 não tem validação transplante-específica); benefícios
+  da reabilitação (Cochrane +2,49 mL/kg/min, HIIT superior mas ganho
+  não se mantém em 5 anos sem manutenção); prescrição (FC-alvo e Borg
+  ambos com limitações documentadas, nuance preservada); segurança
+  (evidência construída em pacientes já estáveis, não na fase hospitalar
+  imediata). 20 fontes via NCBI e-utils. Auditoria prévia confirmou
+  CAR-T, Buerger/Raynaud, critérios de Padua/ALVC e calculadora de
+  risco de ACM já bem cobertos — evitada duplicação.
+
+## Lote 52 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado nesta janela. Confirmar
