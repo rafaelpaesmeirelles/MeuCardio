@@ -1,0 +1,432 @@
+[
+  {
+    "slug": "emergencia-hipertensiva",
+    "name": "Emergência hipertensiva",
+    "aliases": [
+      "crise hipertensiva",
+      "urgência hipertensiva"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "lesao_aguda_de_orgao_alvo_por_elevacao_pressorica",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": 2,
+    "completeness": "completo",
+    "summary": "Elevação acentuada da pressão arterial acompanhada de lesão aguda de órgão-alvo em curso — não um valor pressórico isolado —, que exige redução imediata, monitorizada e guiada pela síndrome-alvo (encefalopatia hipertensiva, edema agudo de pulmão, dissecção aórtica, síndrome coronariana aguda, lesão renal aguda, eclâmpsia, entre outras). Distingue-se da urgência hipertensiva, em que a pressão está muito elevada sem lesão aguda demonstrada e a redução pode ser gradual, por via oral e ambulatorial.",
+    "epidemiology": "Emergência hipertensiva é a apresentação aguda e grave da hipertensão arterial, definida pela combinação entre pressão muito elevada e lesão aguda de órgão-alvo em curso — não por um corte numérico único. É mais frequente em pessoas com hipertensão crônica mal controlada, adesão irregular ao tratamento ou causa secundária não diagnosticada, e pode ocorrer também como primeira manifestação de uma doença de base antes não identificada, como estenose de artéria renal por displasia fibromuscular, aldosteronismo primário ou feocromocitoma/paraganglioma. Este verbete não extrapola prevalências internacionais de emergência hipertensiva para a população brasileira; prioriza o reconhecimento sindrômico e a distinção operacional entre emergência (com lesão aguda) e urgência hipertensiva (sem lesão aguda demonstrada), que reorienta toda a conduta subsequente. Ausência de diagnóstico prévio de hipertensão crônica, pressão diastólica muito elevada e apresentação na gestação ou no puerpério aumentam a suspeita de causa secundária ou de pré-eclâmpsia/eclâmpsia, respectivamente.",
+    "presentation": [
+      "Encefalopatia hipertensiva: cefaleia intensa, confusão, alteração do nível de consciência, náusea/vômito e, por vezes, convulsão, com melhora após redução controlada da pressão",
+      "Edema agudo de pulmão hipertensivo: dispneia súbita, ortopneia, estertores difusos e hipoxemia, frequentemente com função sistólica preservada e sobrecarga de volume relativa",
+      "Dissecção aguda de aorta: dor torácica ou dorsal súbita e lancinante, com possível assimetria de pulsos ou de pressão entre os membros",
+      "Síndrome coronariana aguda: dor torácica anginosa, alterações eletrocardiográficas ou elevação de troponina concomitantes à pressão muito elevada",
+      "Lesão renal aguda: oligúria e elevação de creatinina, em geral acompanhando outras manifestações de lesão de órgão-alvo",
+      "Eclâmpsia: hipertensão na gestação ou no puerpério com convulsão, ou pré-eclâmpsia grave com cefaleia, distúrbio visual, dor em hipocôndrio direito ou epigástrio",
+      "Déficit neurológico focal súbito compatível com AVC isquêmico ou hemorrágico associado a pressão muito elevada",
+      "Alteração visual aguda, incluindo papiledema ou hemorragias e exsudatos retinianos ao exame de fundo de olho",
+      "Crise adrenérgica por excesso de catecolaminas (feocromocitoma, paraganglioma ou intoxicação por estimulante simpaticomimético): cefaleia, sudorese, palpitação, taquicardia e pressão muito lábil, podendo alternar com hipotensão",
+      "Elevação acentuada da pressão sem qualquer um dos sinais acima configura urgência hipertensiva, não emergência"
+    ],
+    "diagnostic_approach": {
+      "emergencia_versus_urgencia": [
+        "A distinção não é pelo valor da pressão, e sim pela presença de lesão aguda de órgão-alvo em curso",
+        "Emergência hipertensiva: pressão muito elevada com lesão aguda demonstrada — exige redução intravenosa monitorizada, guiada pela síndrome-alvo",
+        "Urgência hipertensiva: pressão muito elevada sem lesão aguda demonstrada — reduzir por via oral, de forma gradual, sem anti-hipertensivo intravenoso",
+        "Elevação abaixo de 180/120 mmHg com lesão aguda de órgão-alvo ainda configura emergência; elevação acima desse valor sem lesão aguda não autoriza redução intravenosa imediata"
+      ],
+      "avaliacao_inicial": [
+        "ABC, sinais vitais e pesquisa dirigida a lesão aguda de órgão-alvo neurológico, cardíaco, pulmonar, renal, visual e obstétrico",
+        "Definir a síndrome-alvo predominante, porque ela determina a velocidade e a meta de redução da pressão",
+        "Revisar história de hipertensão crônica, adesão ao tratamento, uso de substâncias/estimulantes e sinais sugestivos de causa secundária"
+      ],
+      "investigacao_etiologica_quando_sugerido": [
+        "Suspeitar hipertensão secundária diante de início abrupto, hipertensão resistente, piora súbita de hipertensão previamente controlada, início precoce ou lesão de órgão-alvo desproporcional",
+        "Feocromocitoma/paraganglioma: suspeitar diante de paroxismo de cefaleia, sudorese, palpitação e pressão lábil; teste inicial com metanefrinas plasmáticas ou urinárias fracionadas; investigação completa e bloqueio pré-operatório são conduzidos após a fase aguda, em conjunto com endocrinologia",
+        "Aldosteronismo primário: suspeitar em hipertensão resistente ou em hipertensão com hipopotassemia espontânea ou induzida por diurético; é a causa secundária identificada com mais frequência em hipertensos jovens",
+        "Estenose de artéria renal por displasia fibromuscular: suspeitar em mulheres jovens com hipertensão de início recente",
+        "A investigação etiológica dirigida ocorre depois da estabilização da fase aguda, sem atrasar o tratamento da lesão de órgão-alvo em curso"
+      ]
+    },
+    "differentials": [
+      "Urgência hipertensiva: pressão muito elevada sem lesão aguda de órgão-alvo demonstrada",
+      "Efeito do avental branco ou elevação transitória por dor, ansiedade, abstinência ou substâncias, sem lesão aguda",
+      "Pré-eclâmpsia sem eclâmpsia franca, distinguida pela ausência de convulsão",
+      "Encefalopatia por outra causa (metabólica, tóxica, infecciosa) coexistindo com pressão elevada reativa",
+      "Intoxicação aguda por cocaína, metanfetamina ou outro estimulante simpaticomimético",
+      "AVC isquêmico com hipertensão reativa/permissiva, sem constituir emergência hipertensiva primária",
+      "Síndrome de encefalopatia posterior reversível (PRES)",
+      "Crise adrenérgica de feocromocitoma/paraganglioma confundida com ansiedade, pânico ou tireotoxicose"
+    ],
+    "tests": [
+      "ECG de 12 derivações",
+      "Troponina",
+      "Creatinina, eletrólitos e exame de urina com pesquisa de proteinúria",
+      "Neuroimagem urgente diante de déficit neurológico, cefaleia intensa ou alteração de consciência",
+      "Radiografia de tórax e avaliação de congestão diante de dispneia",
+      "Fundoscopia para papiledema ou hemorragias/exsudatos retinianos",
+      "Angiotomografia de aorta diante de suspeita de dissecção",
+      "Beta-hCG em mulher em idade fértil com hipertensão grave",
+      "Metanefrinas plasmáticas ou urinárias fracionadas diante de suspeita de feocromocitoma/paraganglioma"
+    ],
+    "red_flags": [
+      "Déficit neurológico focal súbito ou convulsão",
+      "Dor torácica ou dorsal súbita sugestiva de dissecção de aorta",
+      "Dispneia com sinais de edema agudo de pulmão",
+      "Alteração visual aguda ou papiledema",
+      "Oligúria ou outro sinal de lesão renal aguda",
+      "Gestação ou puerpério com hipertensão e sintomas de pré-eclâmpsia ou eclâmpsia",
+      "Pressão muito lábil com sinais de excesso catecolaminérgico",
+      "Deterioração clínica ou transição para hipotensão/choque apesar de pressão inicialmente muito elevada"
+    ],
+    "ambulatory_flow": [
+      "Confirmar que não há lesão aguda de órgão-alvo antes de tratar como urgência hipertensiva ambulatorial",
+      "Reduzir a pressão por via oral, de forma gradual, sem anti-hipertensivo intravenoso",
+      "Reavaliar em curto prazo, ajustar o tratamento crônico e investigar adesão e causa secundária quando indicado",
+      "Orientar sinais de alarme que exigem retorno imediato ao pronto-socorro",
+      "Não normalizar a pressão com urgência em quem não tem lesão aguda demonstrada"
+    ],
+    "emergency_flow": [
+      "ABC, sinais vitais e monitorização contínua da pressão arterial, idealmente por cateter arterial invasivo quando há infusão intravenosa titulada",
+      "Confirmar lesão aguda de órgão-alvo antes de qualquer decisão terapêutica; sem lesão aguda, tratar como urgência hipertensiva, não como emergência",
+      "Identificar a síndrome-alvo predominante, porque ela define a velocidade e a meta de redução da pressão",
+      "Dissecção aguda de aorta: reduzir a frequência cardíaca antes ou junto do vasodilatador, com meta de pressão sistólica abaixo de 120 mmHg (ou a menor pressão que preserve perfusão de órgãos) e frequência cardíaca entre 60 e 80 bpm, em minutos",
+      "AVC isquêmico candidato a trombólise: manter a pressão abaixo de 185/110 mmHg antes do trombolítico e abaixo de 180/105 mmHg nas 24 horas seguintes",
+      "AVC isquêmico sem indicação de trombólise: hipertensão permissiva, tratando só acima de 220/120 mmHg ou na presença de comorbidade que exija meta menor",
+      "Hemorragia intracerebral leve a moderada, com pressão sistólica inicial entre 150 e 220 mmHg: reduzir para alvo de 140 mmHg, com manutenção suave entre 130 e 150 mmHg, evitando queda abaixo de 130 mmHg",
+      "Hemorragia intracerebral fora dessa faixa de gravidade ou de pressão inicial: reduzir com cautela, sem meta numérica única, priorizando perfusão cerebral e avaliação neurocrítica",
+      "Edema agudo de pulmão hipertensivo: reduzir a pressão sistólica para abaixo de 140 mmHg, associando suporte ventilatório e diurético, sem iniciar ou intensificar betabloqueio durante a descompensação instável",
+      "Gestação/puerpério com pressão persistente igual ou acima de 160/110 mmHg: tratar em 30 a 60 minutos, com meta de pressão sistólica abaixo de 160 mmHg e diastólica abaixo de 110 mmHg, associando magnésio conforme protocolo obstétrico para profilaxia/tratamento de convulsão",
+      "Excesso de catecolaminas (PPGL ou intoxicação por estimulante): nunca iniciar betabloqueador antes de bloqueio alfa adequado; estabilizar em UTI/centro experiente e reavaliar volemia",
+      "Se surgir hipotensão ou choque durante o tratamento, suspender a lógica de redução pressórica e tratar a falência circulatória",
+      "Investigar e tratar a causa desencadeante em paralelo, sem atrasar a redução pressórica guiada pela síndrome-alvo",
+      "Fora da dissecção aórtica, evitar normalização rápida e não monitorizada da pressão, pelo risco de hipoperfusão de órgão"
+    ],
+    "treatment_summary": "O tratamento da emergência hipertensiva começa pela confirmação de que existe lesão aguda de órgão-alvo — sem isso, a conduta é de urgência hipertensiva, não de emergência. Confirmada a emergência, a lógica central é a redução controlada e guiada pela síndrome-alvo, nunca a normalização rápida e indiscriminada da pressão: a exceção é a dissecção aguda de aorta, a única situação em que a queda deve ser rápida e agressiva, com controle da frequência cardíaca priorizado antes ou junto do vasodilatador, para evitar que a taquicardia reflexa propague a dissecção. Fora da dissecção, a meta é reduzir a pressão de forma gradual e monitorizada, porque a hipertensão crônica desloca a autorregulação de órgãos para pressões mais altas, e uma queda abrupta pode causar hipoperfusão cerebral, coronariana ou renal, mesmo quando o número final parece 'normal'.\n\nCada síndrome-alvo tem sua própria janela de segurança. No acidente vascular cerebral isquêmico, a tolerância à pressão elevada é maior do que em qualquer outra síndrome-alvo — antes de trombólise, a pressão precisa ser reduzida e mantida sob um limiar definido; fora da elegibilidade para trombólise, a estratégia costuma ser permissiva, tratando apenas acima de um limiar mais alto ou na presença de outra comorbidade que exija meta menor. Na hemorragia intracerebral leve a moderada, a redução cautelosa para um alvo intermediário é apoiada por evidência; fora dessa faixa de gravidade e de pressão inicial, a evidência é insuficiente para definir uma meta única, e a prioridade passa a ser cautela, perfusão cerebral e decisão neurocrítica. No edema agudo de pulmão hipertensivo, a redução rápida da pós-carga é combinada a suporte ventilatório e ao tratamento da congestão, evitando iniciar ou intensificar betabloqueio durante a descompensação hemodinamicamente instável. Na gestação e no puerpério, a redução precisa ocorrer dentro de uma janela curta, associada a magnésio para profilaxia ou tratamento de convulsão quando há eclâmpsia ou pré-eclâmpsia grave — sem extrapolar as metas de outra síndrome-alvo para esse contexto. Na crise por excesso de catecolaminas (feocromocitoma/paraganglioma ou intoxicação por estimulante simpaticomimético), a regra de segurança é absoluta: nunca iniciar betabloqueador antes de bloqueio alfa adequado, porque isso remove a vasodilatação mediada por receptor beta e deixa a vasoconstrição alfa sem oposição, podendo agravar ainda mais a hipertensão; nessa situação, o benzodiazepínico é o primeiro passo na intoxicação aguda por estimulante, e a estabilização em ambiente de terapia intensiva antecede qualquer decisão cirúrgica, reservada a deterioração apesar do suporte, ruptura ou sangramento.\n\nO que une todas as síndromes-alvo, fora a dissecção de aorta, é a mesma característica: ambiente monitorado, redução gradual e reavaliação constante, com investigação e tratamento da causa desencadeante em paralelo, sem esperar a fase aguda terminar para começá-la. Emergência hipertensiva não é uma prescrição única — é uma decisão que muda de síndrome para síndrome, e a urgência hipertensiva, por não ter lesão aguda demonstrada, nunca deve receber a mesma pressa terapêutica.",
+    "monitoring": [
+      "Pressão arterial contínua ou muito frequente, idealmente por via invasiva quando há infusão intravenosa titulada",
+      "Estado neurológico seriado",
+      "Função renal e eletrólitos",
+      "Sinais de perfusão de órgão e de hipotensão/choque durante a redução da pressão",
+      "Diurese",
+      "Sinais vitais maternos e fetais na gestação ou puerpério"
+    ],
+    "special_populations": [
+      "Gestação/puerpério: eclâmpsia e pré-eclâmpsia grave exigem meta e conduta específicas, além de magnésio para profilaxia/tratamento de convulsão; não extrapolar metas de outra síndrome-alvo para esse contexto",
+      "Feocromocitoma/paraganglioma: nunca betabloqueador antes de bloqueio alfa adequado; estabilização em UTI/centro experiente, com cirurgia preferencialmente diferida até estabilização",
+      "Idosos: autorregulação de órgão deslocada para pressões mais altas aumenta o risco de hipoperfusão diante de reduções agressivas",
+      "Doença renal crônica: interpretar a lesão renal aguda considerando a função renal basal",
+      "Intoxicação por estimulante simpaticomimético (cocaína, metanfetamina): benzodiazepínico antes de considerar vasodilatador",
+      "Crianças e adolescentes: apresentação e limiares diferem do adulto e não são cobertos por este verbete"
+    ],
+    "assistant_questions": [
+      {
+        "id": "lesao_aguda_orgao_alvo",
+        "label": "Há sinal ou sintoma de lesão aguda de órgão-alvo associado à pressão muito elevada (neurológico, cardíaco, pulmonar, renal, visual ou obstétrico)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Reconhecimento"
+      },
+      {
+        "id": "suspeita_disseccao_aorta",
+        "label": "Há dor torácica ou dorsal súbita e lancinante, ou assimetria de pulsos/pressão entre os membros?",
+        "type": "boolean",
+        "required": true,
+        "section": "Síndrome-alvo"
+      },
+      {
+        "id": "deficit_neurologico_ou_convulsao",
+        "label": "Há déficit neurológico focal súbito, alteração de consciência ou convulsão?",
+        "type": "boolean",
+        "required": true,
+        "section": "Síndrome-alvo"
+      },
+      {
+        "id": "dispneia_com_congestao",
+        "label": "Há dispneia súbita com sinais de congestão pulmonar?",
+        "type": "boolean",
+        "required": true,
+        "section": "Síndrome-alvo"
+      },
+      {
+        "id": "gestante_ou_puerperio",
+        "label": "A pessoa está gestante ou no puerpério?",
+        "type": "boolean",
+        "required": true,
+        "section": "Situações especiais"
+      },
+      {
+        "id": "suspeita_excesso_catecolaminas",
+        "label": "Há paroxismo de cefaleia, sudorese, palpitação e pressão lábil sugestivo de excesso de catecolaminas (feocromocitoma/paraganglioma ou estimulante)?",
+        "type": "boolean",
+        "section": "Situações especiais"
+      },
+      {
+        "id": "sinais_choque_ou_hipotensao",
+        "label": "Surgiram sinais de hipotensão ou choque durante a avaliação ou o tratamento?",
+        "type": "boolean",
+        "section": "Segurança"
+      },
+      {
+        "id": "criterios_secundaria",
+        "label": "Há critério para suspeitar hipertensão secundária (início antes dos 30 anos, resistência ao tratamento, piora súbita de hipertensão previamente controlada ou lesão de órgão-alvo desproporcional)?",
+        "type": "boolean",
+        "section": "Etiologia"
+      },
+      {
+        "id": "apenas_pa_elevada_sem_lesao",
+        "label": "A pressão está muito elevada, mas sem qualquer sinal de lesão aguda de órgão-alvo?",
+        "type": "boolean",
+        "section": "Reconhecimento"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "emergencia-lesao-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_aguda_orgao_alvo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Tratar como emergência hipertensiva: iniciar avaliação e conduta pela síndrome-alvo predominante"
+          ]
+        }
+      },
+      {
+        "id": "disseccao-suspeita",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_disseccao_aorta",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita de dissecção aguda de aorta: controlar a frequência cardíaca antes ou junto do vasodilatador"
+          ],
+          "emergency_flow": [
+            "Priorizar meta de pressão sistólica abaixo de 120 mmHg e frequência cardíaca entre 60 e 80 bpm, em minutos"
+          ]
+        }
+      },
+      {
+        "id": "deficit-neurologico",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "deficit_neurologico_ou_convulsao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Acionar protocolo de AVC e neuroimagem urgente; definir elegibilidade para trombólise antes de fixar a meta pressórica"
+          ]
+        }
+      },
+      {
+        "id": "edema-pulmonar",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "dispneia_com_congestao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Associar suporte ventilatório e diurético; não iniciar nem intensificar betabloqueio durante a descompensação instável"
+          ]
+        }
+      },
+      {
+        "id": "gestante-emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "gestante_ou_puerperio",
+              "op": "truthy"
+            },
+            {
+              "field": "lesao_aguda_orgao_alvo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Aplicar protocolo obstétrico de pré-eclâmpsia grave/eclâmpsia e considerar magnésio conforme indicação"
+          ]
+        }
+      },
+      {
+        "id": "gestante-vigilancia",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "gestante_ou_puerperio",
+              "op": "truthy"
+            },
+            {
+              "field": "lesao_aguda_orgao_alvo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Gestante ou puérpera com pressão elevada sem lesão aguda ainda exige avaliação obstétrica prioritária para pré-eclâmpsia"
+          ]
+        }
+      },
+      {
+        "id": "catecolaminas-nao-betabloqueio",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_excesso_catecolaminas",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Nunca iniciar betabloqueador antes de bloqueio alfa adequado nesta suspeita"
+          ],
+          "emergency_flow": [
+            "Priorizar bloqueio alfa ou vasodilatador titulável e estabilização em UTI/centro experiente"
+          ]
+        }
+      },
+      {
+        "id": "choque-durante-tratamento",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_choque_ou_hipotensao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Suspender a lógica de redução pressórica, tratar a falência circulatória e reavaliar o suporte"
+          ]
+        }
+      },
+      {
+        "id": "secundaria-a-investigar",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "criterios_secundaria",
+              "op": "truthy"
+            },
+            {
+              "field": "lesao_aguda_orgao_alvo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Investigar causa secundária de forma dirigida (aldosteronismo primário, estenose de artéria renal, feocromocitoma/paraganglioma) após estabilização"
+          ]
+        }
+      },
+      {
+        "id": "urgencia-sem-lesao",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "apenas_pa_elevada_sem_lesao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Tratar como urgência hipertensiva: redução oral gradual, sem anti-hipertensivo intravenoso, com reavaliação em curto prazo"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "emergência hipertensiva",
+      "crise hipertensiva",
+      "lesão de órgão-alvo",
+      "dissecção de aorta",
+      "AVC",
+      "edema agudo de pulmão",
+      "eclâmpsia",
+      "feocromocitoma"
+    ],
+    "source_refs": [
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC Multisociety Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242 — verificado individualmente via NCBI e-utils.",
+      "van den Born BJM, Lip GYH, Brguljan-Hitij J, et al. ESC Council on hypertension position document on the management of hypertensive emergencies. Eur Heart J Cardiovasc Pharmacother. 2019;5(1):37-46. DOI: 10.1093/ehjcvp/pvy032. PMID: 30165588 — verificado individualmente via NCBI e-utils; corrigendum de doses: DOI 10.1093/ehjcvp/pvy040, PMID 30339228, também verificado.",
+      "Isselbacher EM, Preventza O, Black JH 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — verificado individualmente via NCBI e-utils.",
+      "Powers WJ, Rabinstein AA, Ackerson T, et al. Guidelines for the Early Management of Patients With Acute Ischemic Stroke: 2019 Update. Stroke. 2019;50(12):e344-e418. DOI: 10.1161/STR.0000000000000211. PMID: 31662037 — verificado individualmente via NCBI e-utils.",
+      "Greenberg SM, Ziai WC, Cordonnier C, et al. 2022 Guideline for the Management of Patients With Spontaneous Intracerebral Hemorrhage. Stroke. 2022;53(7):e282-e361. DOI: 10.1161/STR.0000000000000407. PMID: 35579034 — verificado individualmente via NCBI e-utils.",
+      "ACOG Committee Opinion No. 767: Emergent Therapy for Acute-Onset, Severe Hypertension During Pregnancy and the Postpartum Period. Obstet Gynecol. 2019;133(2):e174-e180. DOI: 10.1097/AOG.0000000000003075. PMID: 30575639 — verificado individualmente via NCBI e-utils.",
+      "Lenders JW, Duh QY, Eisenhofer G, et al.; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. DOI: 10.1210/jc.2014-1498. PMID: 24893135 — verificado individualmente via NCBI e-utils; diretriz formalmente RETIRADA pela Endocrine Society em 02/12/2022 (ver item de correção/retratação abaixo), sem diretriz de reposição publicada até a data desta revisão.",
+      "Correction to \"Pheochromocytoma and Paraganglioma: An Endocrine Society Clinical Practice Guideline\" (aviso de retratação). J Clin Endocrinol Metab. 2023;108(5):e200. DOI: 10.1210/clinem/dgad064. PMID: 36752564 — verificado individualmente via NCBI e-utils.",
+      "Scholten A, Cisco RM, Vriens MR, et al. Pheochromocytoma crisis is not a surgical emergency. J Clin Endocrinol Metab. 2013;98(2):581-591. DOI: 10.1210/jc.2012-3020. PMID: 23284003 — verificado individualmente via NCBI e-utils.",
+      "Whitelaw BC, Prague JK, Mustafa OG, et al. Phaeochromocytoma crisis. Clin Endocrinol (Oxf). 2014;80(1):13-22. DOI: 10.1111/cen.12324. PMID: 24102156 — verificado individualmente via NCBI e-utils.",
+      "Peacock WF, Varon J, Baumann BM, et al. CLUE: a randomized comparative effectiveness trial of IV nicardipine versus labetalol use in the emergency department. Crit Care. 2011;15(3):R157. DOI: 10.1186/cc10289. PMID: 21707983 — verificado individualmente via NCBI e-utils (PMID obtido por conversão do PMCID PMC3219031 citado na fonte secundária local)."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40815242/",
+      "https://pubmed.ncbi.nlm.nih.gov/30165588/",
+      "https://pubmed.ncbi.nlm.nih.gov/30339228/",
+      "https://pubmed.ncbi.nlm.nih.gov/36322642/",
+      "https://pubmed.ncbi.nlm.nih.gov/31662037/",
+      "https://pubmed.ncbi.nlm.nih.gov/35579034/",
+      "https://pubmed.ncbi.nlm.nih.gov/30575639/",
+      "https://pubmed.ncbi.nlm.nih.gov/24893135/",
+      "https://pubmed.ncbi.nlm.nih.gov/36752564/",
+      "https://pubmed.ncbi.nlm.nih.gov/23284003/",
+      "https://pubmed.ncbi.nlm.nih.gov/24102156/",
+      "https://pubmed.ncbi.nlm.nih.gov/21707983/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK470371/"
+    ],
+    "related_document_slugs": [
+      "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
+      "fluxograma-emergencia-hipertensiva",
+      "nitroprussiato-na-emergencia-hipertensiva-tetos-e-toxicidade-pela-bula-brasileira",
+      "fluxograma-crise-hipertensiva-adrenergica-do-feocromocitoma",
+      "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society"
+    ],
+    "patient_material_slug": "quando-a-pressao-alta-e-uma-emergencia",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado em 29/08/2026 via doencas/fragmentos/emergencia-hipertensiva.json — não via edição direta do manifesto — para minimizar colisão com outras frentes de produção concorrentes. A ficha `hipertensao-arterial-sistemica` trata exclusivamente da HAS crônica ambulatorial; este verbete cobre especificamente a crise/emergência hipertensiva aguda, com lesão de órgão-alvo em curso, tema central de UCO/emergência. 5 related_document_slugs verificados individualmente por leitura completa do arquivo (todos discutem a emergência hipertensiva ou sua triagem etiológica de forma central): o protocolo geral e o fluxograma de emergência hipertensiva, o fluxograma de crise adrenérgica do feocromocitoma, o documento de testes confirmatórios de aldosteronismo primário/feocromocitoma (usado no diagnostic_approach para investigação de causa secundária), e o documento sobre tetos e toxicidade de nitroprussiato pela bula brasileira — este último fisicamente em content/Hipertensão/ (não em content/Farmacologia/, onde só existe o verbete geral `nitroprussiato-de-sodio.md`, não usado como link). Dois candidatos mapeados foram excluídos por centralidade insuficiente ao tema 'emergência hipertensiva' propriamente dito: `feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript.md`, que trata do preparo pré-operatório ELETIVO (fase distinta da crise aguda), e não foi usado nem como leitura de apoio por não ter sido necessário para nenhum campo desta ficha; nenhuma sobreposição de related_document_slugs foi identificada com `hipertensao-arterial-sistemica` (que lista apenas documentos sobre diagnóstico/classificação/metas crônicas). 10 PMIDs verificados individualmente via NCBI e-utils (esummary.fcgi) antes de persistir, incluindo a confirmação de que a diretriz de PPGL da Endocrine Society (Lenders et al. 2014, PMID 24893135) foi formalmente retirada em 02/12/2022 (aviso PMID 36752564), sem diretriz de reposição publicada — por isso este verbete usa a diretriz de 2014 apenas para a regra de segurança 'nunca betabloqueador antes de bloqueio alfa' e para a conduta cirúrgica diferida, ambas corroboradas por Whitelaw et al. 2014 e Scholten et al. 2013, sem reproduzir posologia (a fonte ESC 2019 tem corrigendum específico de erros de dose na Tabela 4, e por isso nenhuma dose foi extraída dela). O PMID do ensaio CLUE (nicardipina vs. labetalol) foi obtido por conversão do PMCID PMC3219031, citado sem PMID na fonte secundária local, e então verificado individualmente. Nenhuma dose de fármaco (nem de nitroprussiato) em nenhum campo: treatment_summary e emergency_flow descrevem a lógica de redução gradual e controlada da pressão por síndrome-alvo, com metas pressóricas (mmHg) e de frequência cardíaca (bpm) quando definidas por diretriz, mas sem qualquer velocidade de infusão, dose de ataque ou dose máxima de fármaco. patient_material_slug confirmado em material-paciente/metadados.json (`quando-a-pressao-alta-e-uma-emergencia`, documento_slug correspondente). review_status=pendente_revisao: conteúdo produzido e verificado cientificamente, mas sem aval de publicação do responsável clínico para este lote; test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro, como esperado e documentado — a entrada foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO apenas para uso por test_disease_fragments_canonical.py, sem isentar o teste principal, seguindo exatamente o padrão do PR #698 (cardiomiopatia-de-takotsubo, 29/08/2026).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
