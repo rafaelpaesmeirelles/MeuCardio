@@ -1,0 +1,344 @@
+{
+  "lote": "lote-hf-transplante",
+  "created": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "tema": "Insuficiência cardíaca",
+  "review_status": "pendente_revisao",
+  "nota": "Lote de critérios de LISTAGEM no adulto (ISHLT 2016, sucessora 2024, encaminhamento ESC 2026). Não duplica sobrevida do enxerto, TCPE fisiológico, fluxograma de porta de entrada LVAD/transplante nem o documento pediátrico. Números de VO2/SHFM/RHC/contraindicações conferidos no PDF oficial ISHLT 2016 (PMID 26776864). Registro ISHLT de sobrevida do enxerto (PMID 37549773) entra como estudo — texto integral já lido via PMC nesta biblioteca. Atualização SBC de listagem posterior a 2018: VERIFICAÇÃO HUMANA NECESSÁRIA.",
+  "documentos": [
+    {
+      "path": "content/Insuficiência_cardíaca/indicacoes-de-transplante-cardiaco-adulto-ishlt-2016.md",
+      "slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "kind": "documento",
+      "title": "Indicações de transplante cardíaco no adulto: critérios de listagem ISHLT 2016, contraindicações e quando encaminhar"
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/fluxograma-quando-encaminhar-para-listagem-de-transplante-cardiaco.md",
+      "slug": "fluxograma-quando-encaminhar-para-listagem-de-transplante-cardiaco",
+      "kind": "fluxograma",
+      "title": "Fluxograma: Quando Encaminhar para Listagem de Transplante Cardíaco no Adulto"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "listagem-transplante-adulto-vo2-pico-com-betabloqueador-ishlt-2016",
+      "statement": "No adulto ambulatorial em avaliação para listagem de transplante cardíaco, em uso de betabloqueador, o VO2 pico ≤12 mL/kg/min em teste cardiopulmonar máximo (RER >1,05 com limiar anaeróbico atingido) deve ser usado para guiar a listagem. Sem betabloqueador (intolerância), o corte é ≤14 mL/kg/min. Ressincronização não altera os cortes. Listar somente com base no VO2 pico não deve ser feito.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ISHLT",
+      "year": 2016,
+      "guideline_title": "The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update",
+      "reference": "Mehra MR, Canter CE, Hannan MM, et al. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864. Cortes mantidos na ISHLT 2024 (Peled Y et al., PMID 39115488, Tabela 4). Classe III, C para listar só com VO2.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "listagem", "VO2 pico", "teste cardiopulmonar", "betabloqueador", "ISHLT"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "listagem-transplante-adulto-shfm-sobrevida-1-ano-menor-80-ishlt-2016",
+      "statement": "No adulto ambulatorial, escores prognósticos devem ser feitos junto ao teste cardiopulmonar. Sobrevida estimada em 1 ano pelo Seattle Heart Failure Model <80% (mortalidade estimada em 1 ano >20%) ou Heart Failure Survival Score em faixa de risco alto ou médio são cortes razoáveis para listagem. Listar somente com base em escore prognóstico não deve ser feito.",
+      "recommendation_class": "IIb",
+      "evidence_level": "C",
+      "society": "ISHLT",
+      "year": 2016,
+      "guideline_title": "The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update",
+      "reference": "Mehra MR, Canter CE, Hannan MM, et al. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864. Classe III, C para listar só com escore.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "listagem", "SHFM", "HFSS", "mortalidade em 1 ano", "ISHLT"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "listagem-transplante-adulto-cateterismo-direito-obrigatorio-ishlt-2016",
+      "statement": "Cateterismo cardíaco direito deve ser realizado em todo candidato adulto antes da listagem para transplante cardíaco e periodicamente até o transplante. Nos já listados com hipertensão pulmonar reversível ou piora da IC, o intervalo recomendado é de 3 a 6 meses. Desafio vasodilatador está indicado quando a PSAP é ≥50 mmHg e o gradiente transpulmonar é ≥15 mmHg ou a RVP é >3 unidades Wood, mantendo PAS >85 mmHg.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ISHLT",
+      "year": 2016,
+      "guideline_title": "The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update",
+      "reference": "Mehra MR, Canter CE, Hannan MM, et al. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864. A ISHLT 2016 não estabelece corte absoluto único de RVP como contraindicação formal no adulto.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "cateterismo direito", "hipertensão pulmonar", "RVP", "listagem", "ISHLT"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "listagem-transplante-adulto-idade-imc-rim-diabetes-relativas-ishlt-2016",
+      "statement": "Pacientes ≤70 anos devem ser considerados para transplante cardíaco (Classe I, C); >70 anos cuidadosamente selecionados podem ser considerados (Classe IIb, C). IMC ≥35 kg/m² é contraindicação relativa — é razoável recomendar perda ponderal até IMC ≤35 kg/m² antes de listar (Classe IIa, C). TFGe <30 mL/min/1,73 m² irreversível é relativa a transplante isolado de coração (Classe IIa, C). Diabetes com lesão de órgão-alvo (exceto retinopatia não proliferativa) ou HbA1c ≥7,5% apesar de esforço otimizado é relativa (Classe IIa, C).",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "society": "ISHLT",
+      "year": 2016,
+      "guideline_title": "The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update",
+      "reference": "Mehra MR, Canter CE, Hannan MM, et al. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "contraindicação relativa", "idade", "IMC", "TFGe", "diabetes", "ISHLT"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "listagem-transplante-adulto-abuso-substancia-nao-adesao-classe-iii-ishlt-2016",
+      "statement": "Pacientes que permanecem em abuso ativo de substância, inclusive álcool, não devem receber transplante cardíaco. Pacientes com incapacidade demonstrada em múltiplas ocasiões de aderir ao regime medicamentoso não devem receber transplante. Avaliação psicossocial antes da listagem é obrigatória.",
+      "recommendation_class": "III",
+      "evidence_level": "C",
+      "society": "ISHLT",
+      "year": 2016,
+      "guideline_title": "The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update",
+      "reference": "Mehra MR, Canter CE, Hannan MM, et al. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864. Avaliação psicossocial: Classe I, C.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "contraindicação", "substância", "adesão", "psicossocial", "ISHLT"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "encaminhamento-precoce-centro-ic-avancada-esc-2026",
+      "statement": "Consulta precoce a um centro de insuficiência cardíaca avançada (centro que realiza implante de LVAD e/ou transplante cardíaco) é recomendada em pacientes com IC avançada ou em risco de IC avançada, motivados e sem contraindicações absolutas a transplante ou a suporte mecânico durável, para avaliar candidatura.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 11, lida no texto da diretriz nesta sessão.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["IC avançada", "encaminhamento", "transplante cardíaco", "LVAD", "ESC 2026"],
+      "document_slug": "fluxograma-quando-encaminhar-para-listagem-de-transplante-cardiaco",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "transplante-cardiaco-ic-avancada-refrataria-sem-contraindicacao-esc-2026",
+      "statement": "Transplante cardíaco é recomendado em pacientes selecionados com insuficiência cardíaca avançada refratária à terapia médica fundacional e à terapia intervencionista orientada por diretriz, sem contraindicações, para melhorar qualidade de vida e sobrevida.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 14 e Tabela 17, lidas no texto da diretriz nesta sessão.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["transplante cardíaco", "IC avançada", "indicação", "ESC 2026"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "registro-ishlt-sobrevida-do-enxerto-transplante-cardiaco-adulto-2023",
+      "title": "Registro ISHLT 2023 — Sobrevida do enxerto em receptores adultos de transplante cardíaco",
+      "study_type": "registro",
+      "authors": "Singh TP, Cherikh WS, Hsich E, Lewis A, Perch M, Kian S, Hayes D Jr, Potena L, Stehlik J, Zuckermann A, Cogswell R; International Society for Heart and Lung Transplantation",
+      "journal": "Journal of Heart and Lung Transplantation",
+      "year": 2023,
+      "doi": "10.1016/j.healun.2023.07.017",
+      "pmid": "37549773",
+      "pmcid": "PMC10901564",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37549773/",
+      "summary": "Relatório especial do Registro Internacional de Transplante de Órgãos Torácicos da ISHLT sobre sobrevida do enxerto (tempo até óbito ou retransplante) em 97.140 receptores adultos de transplante cardíaco (1992–junho de 2017), com 48.505 óbitos ou retransplantes, seguimento até abril de 2019. Texto integral aberto no PMC, já lido nesta biblioteca.",
+      "key_findings": "Sobrevida mediana do enxerto no adulto: 11,3 anos na coorte inteira; 12,1 anos na era 2001–2009. Indicações mais comuns: cardiomiopatia não isquêmica 48% e isquêmica 41%. Retransplante: incidência cumulativa de 1,5% em 10 anos e 2,5% em 20 anos. Gradiente de sobrevida por idade no transplante: 13,2 anos (18–39), 11,8 (40–59), 9,7 (≥60). Diferença de pelo menos 3 anos de sobrevida do enxerto entre TFGe <30 versus ≥30 no transplante.",
+      "clinical_implications": "Calibra a conversa de listagem — a sobrevida mediana do enxerto ultrapassa uma década — contra a mortalidade em 1 ano >40% da IC avançada tratada só clinicamente (ESC 2026). Não substitui critérios de listagem (VO2, SHFM, RHC, contraindicações), que são objeto da ISHLT 2016/2024 e dos documentos deste lote.",
+      "limitations": "Dados submetidos até abril de 2019, sem pacientes novos desde o relatório de 2019; eras anteriores à terapia quádrupla completa e à alocação contemporânea; sobrevida do enxerto (óbito ou retransplante) não é sobrevida do paciente.",
+      "theme": "Insuficiência cardíaca",
+      "tags": ["ISHLT", "registro", "transplante cardíaco", "sobrevida do enxerto", "retransplante"],
+      "document_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "listagem-transplante-adulto-zona-cinzenta-vo2-shfm-imc",
+      "titulo": "IC avançada ambulatorial: VO2 na zona cinzenta, IMC 36 — listar agora?",
+      "tema": "Insuficiência cardíaca",
+      "nivel": "avançado",
+      "enunciado": "Homem, 58 anos, ICFEr isquêmica, FEVE 22%, NYHA III persistente apesar de terapia quádrupla na maior dose tolerada, CRT-D e duas internações por IC no último ano. PAS 98 mmHg, TFGe 48 mL/min/1,73 m², HbA1c 6,8% sem lesão de órgão-alvo, sem tabaco, sem substância, suporte familiar presente. IMC 36 kg/m². TCPE máximo (RER 1,12): VO2 pico 13 mL/kg/min em uso de carvedilol. SHFM estima sobrevida em 1 ano de 74%. Cateterismo direito: PSAP 42 mmHg, gradiente transpulmonar 10 mmHg, RVP 2,1 unidades Wood. Avaliação psicossocial sem red flag.",
+      "pergunta": "Qual a leitura mais alinhada com os critérios de listagem ISHLT 2016 (e a sucessora 2024, que mantém os cortes de TCPE)?",
+      "opcoes": [
+        "Não listar: VO2 pico 13 está acima do corte de 12 em uso de betabloqueador, portanto o transplante pode ser adiado com segurança independentemente do SHFM e das internações",
+        "Listar agora só com o VO2 de 13, porque qualquer valor <14 mL/kg/min em ICFEr isquêmica é indicação absoluta, e o IMC 36 não entra na decisão",
+        "Não listar enquanto o IMC for ≥35 — a ISHLT 2016 trata IMC ≥35 como Classe III, equivalente a abuso ativo de substância",
+        "Encaminhar/levar ao comitê para listagem: o VO2 está na zona cinzenta (12–14), o SHFM <80% em 1 ano apoia listar (IIb C), há sinal clínico de IC avançada, a hemodinâmica pulmonar não é barreira, e o IMC 36 é contraindicação relativa — perda ponderal até ≤35 e/ou LVAD como ponte para candidatura entram no plano, não como motivo para devolver o paciente ao ambulatório genérico"
+      ],
+      "resposta_correta": 3,
+      "explicacao": "A ISHLT 2016 (PMID 26776864) fixa VO2 pico ≤12 mL/kg/min em uso de betabloqueador e ≤14 sem betabloqueador para guiar listagem (Classe I, B), e proíbe listar só com VO2 (Classe III, C). VO2 13 em carvedilol está na zona cinzenta: o SHFM com sobrevida em 1 ano <80% (aqui 74%) é corte razoável de listagem (Classe IIb, C), também sem listar só com o escore. Duas internações no ano e NYHA III apesar de GDMT completa preenchem sinal de IC avançada (ESC 2026, I NEED HELP / regra dos três) — o encaminhamento ao centro já era devido. Hemodinâmica pulmonar (PSAP 42, GTP 10, RVP 2,1) não atinge o gatilho de desafio vasodilatador (PSAP ≥50 e GTP ≥15 ou RVP >3). IMC ≥35 é Classe IIa, C (relativa), com recomendação de perder peso até ≤35 antes de listar, e LVAD como ponte para candidatura é Classe IIb, C — não é Classe III. Abuso ativo de substância e não adesão reiterada é que são Classe III. A opção correta junta os quatro eixos (gravidade clínica, zona cinzenta de TCPE + SHFM, hemodinâmica aceitável, relativa modificável) sem transformar nenhum número isolado em decisão.",
+      "source_refs": [
+        "Mehra MR, Canter CE, Hannan MM, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+        "Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488",
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "checklist-avaliacao-pre-listagem-transplante-cardiaco-adulto",
+      "condicao": "Avaliação pré-listagem de transplante cardíaco no adulto",
+      "resumo": "Checklist de execução para o cardiologista e o centro de IC avançada organizarem a peneira de listagem: gravidade, TCPE, escore de 1 ano, cateterismo direito, contraindicações de Classe III versus relativas, Chagas/TB/HIV quando couber, psicossocial e ponte para candidatura.",
+      "documento_origem": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "theme": "Insuficiência cardíaca",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Mehra MR, Canter CE, Hannan MM, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+        "Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488",
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100"
+      ],
+      "itens": [
+        {
+          "id": "tx-list-sinal-avancada",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Sinal de IC avançada ou de alto risco documentado (I NEED HELP ou regra dos três da ESC 2026, NYHA III-IV persistente, internamentos recorrentes, intolerância a GDMT, hipoperfusão ou caquexia) — sem exigir FEVE reduzida",
+          "origem_secao": "O que conta como IC avançada o bastante para discutir listagem"
+        },
+        {
+          "id": "tx-list-gdmt",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Terapia do fenótipo otimizada e máxima tolerada conferida, ou justificativa explícita de por que não foi possível (hipotensão, rim, choque) — listagem não substitui GDMT omitida sem motivo",
+          "origem_secao": "Encaminhar não é listar"
+        },
+        {
+          "id": "tx-list-urgencia-ino",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Se inotrópico venoso contínuo, suporte mecânico temporário ou choque com recuperação neurológica: encaminhamento urgente ao centro, sem esperar TCPE ambulatorial",
+          "origem_secao": "Teste cardiopulmonar; fluxograma nó D2"
+        },
+        {
+          "id": "tx-list-tcpe",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "No ambulatorial: TCPE máximo (RER >1,05 e limiar anaeróbico) com VO2 pico interpretado à luz do betabloqueador (≤12 com, ≤14 sem); em mulher ou <50 anos, considerar ≤50% do predito; se RER <1,05, registrar VE/VCO2; se IMC >30, considerar VO2 ajustado à massa magra",
+          "origem_secao": "Teste cardiopulmonar: os cortes que guiam a listagem"
+        },
+        {
+          "id": "tx-list-shfm",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "SHFM e/ou HFSS calculados junto ao TCPE no ambulatorial, sobretudo se VO2 entre 12 e 14 mL/kg/min; SHFM com sobrevida em 1 ano <80% ou HFSS médio/alto apoia listar, mas não lista sozinho",
+          "origem_secao": "Mortalidade em 1 ano"
+        },
+        {
+          "id": "tx-list-rhc",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Cateterismo direito realizado (ou agendado no centro) antes da listagem: PSAP, GTP, RVP, débito; desafio vasodilatador se PSAP ≥50 e (GTP ≥15 ou RVP >3) com PAS >85",
+          "origem_secao": "Hipertensão pulmonar: o que é irreversível de verdade"
+        },
+        {
+          "id": "tx-list-classe-iii",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Peneira de Classe III conferida: substância ativa inclusive álcool, não adesão reiterada, HCV/HBV com cirrose ou hipertensão portal ou CHC, comorbidade grave cujo prognóstico o enxerto não reverte, demência com incapacidade permanente de cooperar",
+          "origem_secao": "O que, na prática, impede a listagem"
+        },
+        {
+          "id": "tx-list-relativas",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Relativas nomeadas com plano: idade >70, IMC ≥35, TFGe <30, diabetes com lesão de órgão-alvo ou HbA1c ≥7,5%, tabaco nos 6 meses, DAP/AVC sintomático grave, fragilidade, suporte social frágil — e se LVAD como ponte para candidatura cabe",
+          "origem_secao": "Idade, peso, rim, diabetes; Ponte para candidatura"
+        },
+        {
+          "id": "tx-list-chagas-infeccao",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Rastreio de Trypanosoma cruzi se nascimento ou tempo relevante na América Latina, mãe latino-americana ou hemoderivado não triado; rastreio de TB latente em todos; HIV, HBV e HCV conforme protocolo do centro",
+          "origem_secao": "Chagas; infecção"
+        },
+        {
+          "id": "tx-list-psico",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Avaliação psicossocial formal (consentimento, adesão, suporte domiciliar) concluída ou agendada antes da listagem — não improvisada no corredor",
+          "origem_secao": "Psicossocial é critério, não apêndice"
+        },
+        {
+          "id": "tx-list-oncologia",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "Se neoplasia prévia: discussão com oncologia sobre risco de recidiva por tipo tumoral e resposta — sem quarentena arbitrária de tempo",
+          "origem_secao": "Neoplasia prévia"
+        },
+        {
+          "id": "tx-list-paliativo",
+          "categoria": "seguimento",
+          "obrigatorio": false,
+          "texto": "Se não candidato a transplante nem a LVAD, ou em paralelo a qualquer estratégia: planejamento antecipado e equipe de cuidados paliativos discutidos, não deixados para o 'não há mais o que fazer'",
+          "origem_secao": "ESC 2026 seção 8; o que a árvore não mostra"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "entrar-na-fila-de-transplante-cardiaco-o-que-isso-significa",
+      "titulo": "Entrar na fila de transplante de coração: o que isso significa",
+      "subtitulo": "Encaminhar ao especialista, fazer a avaliação e ser listado são três passos diferentes — e nenhum deles é automático",
+      "tema": "Insuficiência cardíaca",
+      "documento_slug": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para o adulto com insuficiência cardíaca avançada e sua família entenderem a diferença entre ser enviado a um centro especializado, fazer os exames da avaliação e de fato entrar na fila de transplante — o que os exames medem, o que pode adiar a listagem e o que não deve atrasar a primeira consulta.",
+      "secoes": [
+        {
+          "titulo": "Três portas, não uma só",
+          "paragrafos": [
+            "Ser encaminhado a um centro de insuficiência cardíaca avançada não é o mesmo que entrar na fila de transplante. A primeira consulta serve para o time especializado olhar o quadro inteiro — transplante, dispositivo de assistência ventricular, ajuste fino do tratamento e, quando for o caso, cuidado para aliviar sintomas. Entrar na fila é uma decisão posterior, tomada por um comitê, porque o órgão é escasso.",
+            "Se o seu médico já falou em encaminhar, o passo certo é ir. Esperar o tratamento 'esgotar de vez' em casa costuma chegar tarde: a insuficiência cardíaca avançada tratada só com remédio tem mortalidade alta em um ano. O transplante, quando possível, muda essa história — a sobrevida mediana do coração transplantado, no registro internacional, passa de uma década."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o centro vai medir",
+          "paragrafos": [
+            "Nenhum número isolado decide. O time junta sintomas, internações, o tratamento que você já tolera, um teste de esforço com análise dos gases (quando você ainda consegue fazê-lo), um cateterismo do lado direito do coração e uma conversa honesta sobre adesão, família e hábitos."
+          ],
+          "itens": [
+            "O teste de esforço com gases (VO2) ajuda a estimar se o coração ainda dá conta do dia a dia — o valor muda se você usa betabloqueador",
+            "Um cálculo de chance de estar vivo em um ano (modelos como o Seattle Heart Failure Model) entra na conversa, mas não lista ninguém sozinho",
+            "O cateterismo direito mede a pressão da circulação do pulmão — pressão alta demais e irreversível pode impedir o transplante, mas muita pressão alta ainda reverte com tratamento ou com um dispositivo de assistência",
+            "Peso (IMC), rim, diabetes, cigarro recente e idade acima de 70 anos são barreiras que o centro tenta trabalhar, não portas trancadas de antemão"
+          ]
+        },
+        {
+          "titulo": "O que costuma impedir, de verdade",
+          "paragrafos": [
+            "Uso ativo de álcool ou outras substâncias, deixar o tratamento de lado várias vezes, um câncer ou uma doença de fígado ou de outro órgão cujo prognóstico o transplante não muda, e a impossibilidade permanente de entender e seguir o tratamento (por exemplo, demência avançada) são os obstáculos mais duros.",
+            "Ter tido câncer no passado não é, por si, um 'não' para sempre — o tempo de espera depende do tipo de tumor e da chance de voltar, em conversa com o oncologista, sem uma quarentena igual para todo mundo. Infecção de Chagas, comum no Brasil, é rastreada e tratada; não é exclusão automática."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Se o transplante ainda não der",
+          "paragrafos": [
+            "Às vezes o caminho é um dispositivo de assistência do ventrículo esquerdo enquanto se perde peso, se para de fumar, se espera o rim melhorar ou se reavalia a pressão do pulmão. Às vezes o dispositivo é a terapia definitiva. Às vezes o melhor plano é cuidar de sintomas, família e o que importa para você, com o time de cuidados paliativos junto — isso não é abandono.",
+            "Mulheres e pessoas de grupos que historicamente chegam mais tarde a essas terapias merecem a mesma pressa no encaminhamento. Se alguém disse que 'ainda não está ruim o bastante' apesar de internações repetidas, falta de ar aos mínimos esforços ou remédios que você não tolera mais, peça uma segunda avaliação em centro de insuficiência cardíaca avançada."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Duas ou mais internações por insuficiência cardíaca no último ano, ou uma delas com medicamento na veia para o coração bombear",
+        "Remédios da insuficiência cardíaca que precisaram ser reduzidos ou suspensos por pressão baixa ou piora do rim",
+        "Falta de ar que impede atividades simples, inchaço que não cede, perda de peso involuntária",
+        "Dependência de medicamento na veia em casa ou no hospital",
+        "Desmaios, choques do desfibrilador ou piora rápida em poucos meses"
+      ],
+      "perguntas": [
+        "Eu já fui avaliado em um centro que faz transplante ou implanta dispositivo de assistência ventricular?",
+        "O que, no meu caso, é barreira definitiva e o que ainda pode ser trabalhado?",
+        "Preciso de um teste de esforço com gases agora, ou minha situação já é urgente demais para esperar esse exame?",
+        "Quem na família ou na rede de apoio vai estar comigo no dia a dia depois, se houver transplante ou dispositivo?"
+      ],
+      "fontes": [
+        "Mehra MR, Canter CE, Hannan MM, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100",
+        "Singh TP, Cherikh WS, Hsich E, et al. Graft survival in primary thoracic organ transplant recipients. J Heart Lung Transplant. 2023;42(10):1321-1333. DOI: 10.1016/j.healun.2023.07.017. PMID: 37549773"
+      ]
+    }
+  ]
+}

@@ -915,5 +915,26 @@
     "fonte_producao": "chatgpt",
     "review_note": "Revisão clínica concluída em 27/08/2026: gatilho, documentos canônicos e fluxo de acionamento conferidos; sem prescrição autônoma.",
     "version": 2
+  },
+  {
+    "slug": "dispneia-aguda-de-origem-cardiovascular",
+    "titulo": "Dispneia aguda de origem cardiovascular — abordagem inicial",
+    "gatilho": "Dispneia de minutos a horas no PS, enfermaria ou UCO · hipoxemia · ortopneia · equivalente isquêmico sem dor torácica",
+    "ordem": 124,
+    "documento_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+    "fluxograma_slug": "fluxograma-dispneia-aguda-cardiogenica-versus-nao-cardiogenica",
+    "relacionados": [
+      "insuficiencia-cardiaca-aguda-descompensada",
+      "edema-agudo-de-pulmao-hipertensivo",
+      "sindrome-coronariana-aguda",
+      "tromboembolismo-pulmonar",
+      "tamponamento-cardiaco",
+      "choque-cardiogenico",
+      "fibrilacao-atrial-de-alta-resposta"
+    ],
+    "review_status": "pendente_revisao",
+    "fonte_producao": "grok",
+    "review_note": "Fragmento novo de emergência, ordem 124, sem colisão com insuficiencia-cardiaca-aguda-descompensada (ordem 11, manejo da congestão já diagnosticada) nem com edema-agudo-de-pulmao-hipertensivo (ordem 84). Este slug cobre a primeira hora da dispneia ainda indiferenciada.",
+    "version": 1
   }
 ]

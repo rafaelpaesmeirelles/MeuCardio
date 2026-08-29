@@ -1,0 +1,332 @@
+{
+  "lote": "lote-select-sglt2-drc",
+  "created": "2026-08-29",
+  "review_status": "pendente_revisao",
+  "documentos": [
+    {
+      "path": "content/Prevenção_e_lipídios/select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes.md",
+      "slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "kind": "estudo",
+      "theme": "Prevenção e lipídios"
+    },
+    {
+      "path": "content/Diabetes_e_cardiologia/sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow.md",
+      "slug": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "kind": "protocolo",
+      "theme": "Diabetes e cardiologia"
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes",
+      "title": "SELECT — Semaglutida 2,4 mg e desfechos cardiovasculares em obesidade sem diabetes",
+      "study_type": "ensaio_clinico",
+      "authors": "Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, Esbjerg S, Hardt-Lindberg S, Hovingh GK, Kahn SE, Kushner RF, Lingvay I, Oral TK, Plutzky J, Tornøe CW, Ryan DH; SELECT Trial Investigators",
+      "journal": "New England Journal of Medicine",
+      "year": 2023,
+      "doi": "10.1056/NEJMoa2307563",
+      "pmid": "37952131",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/",
+      "summary": "Ensaio multicêntrico, duplo-cego, controlado por placebo, de superioridade, orientado por eventos, com 17.604 pacientes com idade ≥45 anos, doença cardiovascular preexistente, IMC ≥27 kg/m² e sem história de diabetes, randomizados 1:1 para semaglutida 2,4 mg subcutânea semanal (n=8.803) ou placebo (n=8.801). Exposição média 34,2±13,7 meses; seguimento médio 39,8±9,4 meses. Desfecho primário: morte cardiovascular, infarto não fatal ou AVC não fatal. Financiado pela Novo Nordisk.",
+      "key_findings": "Evento do desfecho primário em 569/8.803 (6,5%) com semaglutida versus 701/8.801 (8,0%) com placebo — HR 0,80 (IC95% 0,72-0,90; P<0,001). Eventos adversos que levaram à descontinuação permanente: 1.461 (16,6%) versus 718 (8,2%); P<0,001. O abstract do PubMed não reporta os componentes isolados do composto nem a magnitude da perda de peso; estes números não devem ser inventados a partir desta entrada.",
+      "clinical_implications": "Primeiro ensaio a demonstrar redução de MACE de 3 pontos com um fármaco antiobesidade em prevenção secundária na ausência de diabetes. A dose testada é 2,4 mg semanal, não 1,0 mg (FLOW) nem a formulação oral. O resultado não se extrapola para prevenção primária, para quem não tem doença cardiovascular preexistente, nem para outros agonistas de GLP-1 ou tirzepatida.",
+      "limitations": "População de prevenção secundária (doença cardiovascular preexistente obrigatória); abstract não decompõe os componentes do MACE nem o mecanismo (peso versus efeitos pleiotrópicos); descontinuação por evento adverso o dobro do placebo; financiamento pelo fabricante (Novo Nordisk); não testa semaglutida 1,0 mg, formulação oral, tirzepatida nem cirurgia bariátrica.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "SELECT",
+        "semaglutida",
+        "GLP-1",
+        "obesidade",
+        "prevenção secundária",
+        "desfecho cardiovascular",
+        "sem diabetes"
+      ],
+      "document_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2024-ccs-semaglutida-sobrepeso-obesidade-sem-diabetes",
+      "statement": "O agonista do receptor de GLP-1 semaglutida deve ser considerado em pacientes com síndrome coronariana crônica, sobrepeso (IMC >27 kg/m²) ou obesidade, sem diabetes, para reduzir mortalidade cardiovascular, infarto do miocárdio ou AVC.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2024,
+      "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+      "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710 — Classe IIa, Nível B, linguagem 'should be considered' para semaglutida em SCC com sobrepeso/obesidade sem diabetes, coerente com o SELECT (PMID 37952131). Classe e nível conferidos em fontes secundárias convergentes da própria ESC (CardioPractice) e TCTMD sobre a Recommendation Table da diretriz 2024; a base já tem outras recomendações desta mesma diretriz com PDF integral conferido.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "semaglutida",
+        "SELECT",
+        "síndrome coronariana crônica",
+        "obesidade",
+        "prevenção secundária"
+      ],
+      "document_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "kdigo-2024-sglt2-em-t2d-com-drc-e-tfge-pelo-menos-20",
+      "statement": "Recomenda-se tratar pacientes com diabetes tipo 2, doença renal crônica e TFGe ≥20 mL/min/1,73 m² com um inibidor de SGLT2 (KDIGO GRADE 1A).",
+      "recommendation_class": "1",
+      "evidence_level": "A",
+      "society": "KDIGO",
+      "year": 2024,
+      "guideline_title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+      "reference": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803 — Recommendation 3.7.1, GRADE 1A, texto conferido no sumário executivo (Kidney Int. 2024;105(4):684-701) e no PDF oficial KDIGO.",
+      "theme": "Diabetes e cardiologia",
+      "tags": [
+        "iSGLT2",
+        "doença renal crônica",
+        "diabetes tipo 2",
+        "KDIGO 2024"
+      ],
+      "document_slug": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "kdigo-2024-sglt2-em-drc-albuminurica-ou-ic-independente-de-diabetes",
+      "statement": "Recomenda-se tratar adultos com DRC com um inibidor de SGLT2 quando a TFGe for ≥20 mL/min/1,73 m² e a relação albumina/creatinina urinária for ≥200 mg/g (≥20 mg/mmol), ou quando houver insuficiência cardíaca, independentemente do nível de albuminúria (KDIGO GRADE 1A). A recomendação não exige diabetes.",
+      "recommendation_class": "1",
+      "evidence_level": "A",
+      "society": "KDIGO",
+      "year": 2024,
+      "guideline_title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+      "reference": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803 — Recommendation 3.7.2, GRADE 1A, texto conferido no sumário executivo (Kidney Int. 2024;105(4):684-701).",
+      "theme": "Diabetes e cardiologia",
+      "tags": [
+        "iSGLT2",
+        "doença renal crônica",
+        "albuminúria",
+        "insuficiência cardíaca",
+        "sem diabetes",
+        "KDIGO 2024"
+      ],
+      "document_slug": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "kdigo-2024-sglt2-sugerido-em-tfge-20-a-45-com-rac-menor-que-200",
+      "statement": "Sugere-se tratar adultos com TFGe de 20 a 45 mL/min/1,73 m² e relação albumina/creatinina urinária <200 mg/g (<20 mg/mmol) com um inibidor de SGLT2 (KDIGO GRADE 2B). É sugestão, não recomendação forte — a porta empírica é a do EMPA-KIDNEY.",
+      "recommendation_class": "2",
+      "evidence_level": "B",
+      "society": "KDIGO",
+      "year": 2024,
+      "guideline_title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease",
+      "reference": "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803 — Recommendation 3.7.3, GRADE 2B, texto conferido no sumário executivo (Kidney Int. 2024;105(4):684-701).",
+      "theme": "Diabetes e cardiologia",
+      "tags": [
+        "iSGLT2",
+        "EMPA-KIDNEY",
+        "albuminúria baixa",
+        "KDIGO 2024"
+      ],
+      "document_slug": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-continuar-isglt2-quando-tfge-cai-abaixo-de-20",
+      "statement": "Em pacientes que já utilizam inibidor de SGLT2, a continuação pode ser considerada mesmo quando a TFGe cai abaixo de 20 mL/min/1,73 m², desde que tolerado e sem contraindicação específica.",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "society": "ESC/ERA",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease",
+      "reference": "European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098 — Classe IIa, nível C, conforme síntese já publicada em content/Cardiorrenal/esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd.md. Coerente com o practice point 3.7.1 da KDIGO 2024 (continuar se TFGe cair abaixo de 20, salvo intolerância ou início de terapia renal substitutiva).",
+      "theme": "Diabetes e cardiologia",
+      "tags": [
+        "iSGLT2",
+        "doença renal crônica",
+        "TFGe abaixo de 20",
+        "continuação",
+        "ESC 2026"
+      ],
+      "document_slug": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos_clinicos": [
+    {
+      "slug": "select-nao-se-extrapola-para-obesidade-sem-doenca-cardiovascular",
+      "titulo": "Obesidade sem evento cardiovascular: o SELECT autoriza semaglutida 2,4 mg para 'proteger o coração'?",
+      "tema": "Prevenção e lipídios",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 52 anos, IMC 32 kg/m², hipertensão controlada, sem diabetes (HbA1c 5,6%). Nunca teve infarto, AVC nem claudicação. LDL 118 mg/dL em estatina de moderada intensidade. Procura o cardiologista pedindo semaglutida 2,4 mg 'para proteger o coração', porque leu que o SELECT reduziu infarto e AVC em quem tem obesidade. Um colega endossa a prescrição citando o HR 0,80 do ensaio.",
+      "pergunta": "O que o SELECT, pelo abstract (Lincoff AM et al., N Engl J Med. 2023; PMID 37952131), autoriza neste caso?",
+      "opcoes": [
+        "Autoriza: o SELECT randomizou adultos com IMC ≥27 e mostrou HR 0,80 para MACE, independentemente de haver ou não doença cardiovascular prévia",
+        "Não autoriza a leitura de prevenção primária: o SELECT exigia doença cardiovascular preexistente, idade ≥45 anos e ausência de diabetes; esta paciente não tem DCV estabelecida e o ensaio não se aplica a ela como evidência de redução de MACE",
+        "Autoriza desde que se use a dose de 1,0 mg semanal, que foi a dose do FLOW e é intercambiável com a do SELECT",
+        "Autoriza apenas se a estatina for trocada por semaglutida, porque o SELECT comparou semaglutida com estatina"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O SELECT randomizou 17.604 adultos ≥45 anos com doença cardiovascular preexistente, IMC ≥27 e sem diabetes, para semaglutida 2,4 mg semanal ou placebo. Com seguimento médio de 39,8 meses, o composto de morte cardiovascular, infarto não fatal ou AVC não fatal ocorreu em 569/8.803 (6,5%) versus 701/8.801 (8,0%) — HR 0,80 (IC95% 0,72-0,90; P<0,001). A porta de entrada era prevenção secundária. Extrapolá-lo para uma mulher de 52 anos sem evento cardiovascular é usar o ensaio fora da população randomizada. A dose testada é 2,4 mg, não a 1,0 mg do FLOW (diabetes + DRC). O comparador é placebo sobre o cuidado padrão, não a substituição da estatina. Semaglutida para perda de peso pode ter outras indicações nesta paciente; o que o SELECT não entrega é evidência de redução de MACE em prevenção primária.",
+      "source_refs": [
+        "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "inicio-de-isglt2-na-drc-portas-dapa-ckd-empa-kidney-e-flow",
+      "condicao": "Início de iSGLT2 (e decisão sobre semaglutida 1,0 mg) na doença renal crônica — portas DAPA-CKD, EMPA-KIDNEY e FLOW",
+      "resumo": "O que conferir antes de iniciar dapagliflozina ou empagliflozina na DRC e, se houver diabetes tipo 2 com albuminúria, se a porta FLOW de semaglutida 1,0 mg também está aberta. Derivado dos três ensaios e da KDIGO 2024, sem reescrever os cards de cada trial.",
+      "documento_origem": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+      "theme": "Diabetes e cardiologia",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Heerspink HJL et al.; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383(15):1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396",
+        "The EMPA-KIDNEY Collaborative Group. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388(2):117-127. DOI: 10.1056/NEJMoa2204233. PMID: 36331190",
+        "Perkovic V et al.; FLOW Trial Committees and Investigators. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209",
+        "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803"
+      ],
+      "itens": [
+        {
+          "id": "drc-sglt2-tfg-rac-basal",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "TFGe e relação albumina/creatinina urinária documentadas antes de iniciar — creatinina isolada não define a porta",
+          "origem_secao": "As três portas, lado a lado"
+        },
+        {
+          "id": "drc-sglt2-sraa-base",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "IECA ou BRA em dose máxima tolerada já em uso ou iniciado em paralelo — os três ensaios foram feitos sobre bloqueio do SRAA, não no lugar dele",
+          "origem_secao": "Para que serve este protocolo"
+        },
+        {
+          "id": "drc-sglt2-piso-iniciar",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "TFGe ≥20 mL/min/1,73 m² para iniciar iSGLT2 (piso do EMPA-KIDNEY e KDIGO 3.7.1/3.7.2). Abaixo de 20: não iniciar por estes ensaios",
+          "origem_secao": "Iniciar, continuar, não suspender"
+        },
+        {
+          "id": "drc-sglt2-porta-albuminurica",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Se TFGe ≥25 e RAC ≥200 mg/g, com ou sem diabetes: porta DAPA-CKD e EMPA-KIDNEY aberta — dapagliflozina 10 mg ou empagliflozina 10 mg (KDIGO 3.7.2, GRADE 1A)",
+          "origem_secao": "Conduta por fenótipo / 1"
+        },
+        {
+          "id": "drc-sglt2-porta-empa-larga",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Se TFGe 20 a <25, ou TFGe 20–45 com RAC <200, sem caber no DAPA-CKD: porta EMPA-KIDNEY — empagliflozina 10 mg; KDIGO 3.7.3 é GRADE 2B se RAC <200. Não prometer redução de mortalidade",
+          "origem_secao": "Conduta por fenótipo / 2"
+        },
+        {
+          "id": "drc-sglt2-nao-restringir-diabetes",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Indicação de iSGLT2 na DRC NÃO condicionada à presença de diabetes — DAPA-CKD e EMPA-KIDNEY randomizaram com e sem diabetes",
+          "origem_secao": "Armadilhas clínicas"
+        },
+        {
+          "id": "drc-sglt2-porta-flow",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Se diabetes tipo 2 e porta FLOW (TFGe 25–75 com RAC elevada): semaglutida 1,0 mg semanal considerada em adição ao iSGLT2, não no lugar dele, e não confundir com a dose 2,4 mg do SELECT",
+          "origem_secao": "Conduta por fenótipo / 3 e 4"
+        },
+        {
+          "id": "drc-sglt2-queda-inicial",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Queda inicial de TFGe após o início reconhecida como efeito hemodinâmico esperado — não suspender só por isso (KDIGO practice point 3.7.3)",
+          "origem_secao": "Iniciar, continuar, não suspender"
+        },
+        {
+          "id": "drc-sglt2-continuar-abaixo-20",
+          "categoria": "seguimento",
+          "obrigatorio": false,
+          "texto": "Se a TFGe cair abaixo de 20 sob uso já estabelecido: considerar manter o iSGLT2 se tolerado, salvo início de terapia renal substitutiva (KDIGO 3.7.1 practice point; ESC 2026 IIa C)",
+          "origem_secao": "Iniciar, continuar, não suspender"
+        },
+        {
+          "id": "drc-sglt2-sick-day-perioperatorio",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Paciente orientado a pausar o iSGLT2 em jejum prolongado, doença aguda com baixa ingesta ou cirurgia eletiva (3 dias para dapagliflozina/empagliflozina) pelo risco de cetoacidose euglicêmica — glicemia normal não afasta o diagnóstico",
+          "origem_secao": "Iniciar, continuar, não suspender"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "semaglutida-protege-o-coracao-mesmo-sem-diabetes-o-select",
+      "titulo": "Semaglutida e o coração: o que o estudo SELECT mostrou para quem tem sobrepeso e já teve infarto ou AVC — mesmo sem diabetes",
+      "subtitulo": "Um remédio semanal que nasceu para diabetes e emagrecimento também reduziu infarto, AVC e morte cardiovascular em quem já tem doença do coração e não tem diabetes",
+      "tema": "Prevenção e lipídios",
+      "documento_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação em linguagem simples sobre o estudo SELECT: semaglutida 2,4 mg uma vez por semana reduziu eventos cardiovasculares graves em adultos com sobrepeso ou obesidade e doença do coração já estabelecida, mesmo sem diabetes. O resultado não vale, por este estudo, para quem nunca teve infarto, AVC ou doença arterial dos membros.",
+      "secoes": [
+        {
+          "titulo": "O que o estudo perguntou",
+          "paragrafos": [
+            "A semaglutida é um remédio injetável, tomado uma vez por semana. Ela já era usada para tratar diabetes tipo 2 e, em dose maior, para ajudar a perder peso.",
+            "O SELECT perguntou uma coisa diferente: em pessoas com sobrepeso ou obesidade que JÁ tinham doença do coração (infarto, AVC ou doença das artérias das pernas) e NÃO tinham diabetes, esse remédio na dose de 2,4 mg por semana reduziria infarto, AVC ou morte por causa cardiovascular, comparado a um placebo?"
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo encontrou",
+          "paragrafos": [
+            "Participaram 17.604 adultos com 45 anos ou mais. Metade recebeu semaglutida 2,4 mg por semana; a outra metade, placebo. O acompanhamento médio foi de cerca de 40 meses (39,8 meses).",
+            "O evento combinado (morte cardiovascular, infarto ou AVC) aconteceu em 6,5% de quem usou semaglutida e em 8,0% de quem usou placebo. Em linguagem de estudo, o risco relativo caiu 20% (HR 0,80).",
+            "Mais pessoas pararam o remédio por efeito colateral no grupo da semaglutida (16,6%) do que no grupo placebo (8,2%). Náusea e outros sintomas digestivos são o motivo mais comum na prática — o resumo público do estudo traz o número de quem parou, não o detalhe de cada sintoma."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Para quem isso vale — e para quem não vale",
+          "paragrafos": [
+            "O SELECT estudou quem JÁ tinha doença do coração. Ele não autoriza dizer, só com base nele, que o remédio reduz infarto em quem tem obesidade mas nunca teve evento cardiovascular.",
+            "A dose estudada foi 2,4 mg por semana. Outros estudos usam 1,0 mg em pessoas com diabetes e doença do rim — são perguntas e populações diferentes. Não é o mesmo esquema."
+          ],
+          "itens": [
+            "Vale como evidência de proteção do coração para adulto com sobrepeso ou obesidade, sem diabetes, que já teve infarto, AVC ou doença arterial das pernas",
+            "Não vale, por este estudo, como prova de proteção do coração em quem nunca teve esses eventos",
+            "Não substitui estatina, controle da pressão, antiagregante quando indicado, nem mudança de hábitos"
+          ]
+        },
+        {
+          "titulo": "O que você pode fazer",
+          "paragrafos": [
+            "Se este remédio foi prescrito no seu caso, ele pode estar ali tanto para o peso quanto para o coração. Os dois motivos podem coexistir; um não anula o outro."
+          ],
+          "itens": [
+            "Não pare por conta própria se os sintomas digestivos aparecerem no começo — avise quem prescreveu; a dose costuma ser aumentada aos poucos justamente por isso",
+            "Avise a equipe antes de qualquer cirurgia ou exame com sedação: essa classe de remédio pode atrasar o esvaziamento do estômago",
+            "Continue os outros remédios do coração que já estavam certos (estatina, pressão, antiagregante) — o estudo comparou semaglutida com placebo por cima do tratamento usual, não no lugar dele"
+          ]
+        }
+      ],
+      "sinais_de_alerta": [
+        "Vômitos intensos, dor abdominal forte ou desidratação — procure avaliação",
+        "Dor no peito, falta de ar súbita, fraqueza de um lado do corpo ou fala embolada — trate como emergência (192)",
+        "Incapacidade de se alimentar por vários dias — o remédio pode precisar ser pausado; não decida sozinho"
+      ],
+      "perguntas": [
+        "Eu já tive infarto, AVC ou doença das artérias das pernas — ou estou pedindo este remédio só para emagrecer?",
+        "A dose prescrita é a de 2,4 mg por semana, ou outra apresentação?",
+        "Quem vai me acompanhar na subida lenta da dose e nos sintomas digestivos?",
+        "Meus outros remédios do coração (estatina, pressão, antiagregante) continuam iguais?"
+      ],
+      "fontes": [
+        "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597 — números deste material saíram do resumo público do PubMed (17.604 participantes, 6,5% vs. 8,0%, HR 0,80, seguimento médio 39,8 meses, descontinuação 16,6% vs. 8,2%)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "lote_id": "emerg-dispneia",
+  "titulo": "Dispneia aguda de origem cardiovascular — primeira hora",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "review_status": "pendente_revisao",
+  "fonte_producao": "grok",
+  "nota": "Lote de staging para importação após revisão humana. Não edita metadados publicados. Recorte: primeira hora da dispneia aguda no PS/enfermaria/UCO. Não colide com os slugs de emergência já existentes insuficiencia-cardiaca-aguda-descompensada e edema-agudo-de-pulmao-hipertensivo. Evidências novas usam slugs inéditos; oxigênio I/C e VNI IIa/B reproduzem recomendações já fichadas no corpus (oxigenio-ic-aguda-hipoxemia, ventilacao-nao-invasiva-ic-aguda-desconforto-respiratorio) com recorte de dispneia aguda e document_slug deste lote.",
+  "documentos": [
+    {
+      "path": "content/Geral/dispneia-aguda-de-origem-cardiovascular-abordagem-inicial.md",
+      "slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "kind": "protocolo",
+      "theme": "Geral",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Geral/fluxograma-dispneia-aguda-cardiogenica-versus-nao-cardiogenica.md",
+      "slug": "fluxograma-dispneia-aguda-cardiogenica-versus-nao-cardiogenica",
+      "kind": "fluxograma",
+      "theme": "Geral",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2021-ntprobnp-abaixo-de-300-ou-bnp-abaixo-de-100-ic-aguda-improvavel",
+      "statement": "No cenário agudo (pronto-socorro ou descompensação), NT-proBNP abaixo de 300 pg/mL ou BNP abaixo de 100 pg/mL tornam o diagnóstico de insuficiência cardíaca pouco provável. Esses cortes são distintos dos ambulatoriais (NT-proBNP 125 pg/mL e BNP 35 pg/mL). A dosagem de peptídeo natriurético é recomendada para apoiar ou afastar IC; o número isolado não confirma o diagnóstico — fibrilação atrial, idade, doença renal, SCA e TEP também elevam o peptídeo, e a obesidade o reduz.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2021,
+      "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+      "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Cortes agudos do algoritmo diagnóstico da própria diretriz; Classe I, nível A refere-se à recomendação de dosar o peptídeo. Complemento numérico: Maisel AS et al., Breathing Not Properly, N Engl J Med. 2002;347(3):161-167, PMID 12124404 (acurácia 83,4% com BNP 100 pg/mL); Januzzi JL Jr et al., PRIDE, Am J Cardiol. 2005;95(8):948-954, PMID 15820160 (NT-proBNP <300 pg/mL, VPN 99%).",
+      "theme": "Geral",
+      "tags": [
+        "dispneia aguda",
+        "peptídeo natriurético",
+        "BNP",
+        "NT-proBNP",
+        "insuficiência cardíaca descompensada",
+        "pronto-socorro"
+      ],
+      "document_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2023-ecg-ate-10-minutos-na-dispneia-suspeita-de-sca",
+      "statement": "Na suspeita de síndrome coronariana aguda, o ECG de 12 derivações deve ser obtido o mais cedo possível, operacionalmente nos primeiros 10 minutos do contato. Dispneia nova pode ser equivalente isquêmico — sobretudo em idoso, mulher ou pessoa com diabetes — e a ausência de dor torácica não autoriza atrasar o traçado.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. O tempo-alvo de 10 minutos é o primeiro passo do fluxograma de SCA da casa derivado desta diretriz. Classe I, nível B: VERIFICAÇÃO HUMANA NECESSÁRIA da tabela de recomendação de 2023 para o recorte estrito 'dispneia sem dor'; a classe I do ECG imediato na suspeita de SCA é a posição operacional já usada no acervo.",
+      "theme": "Geral",
+      "tags": [
+        "dispneia aguda",
+        "ECG",
+        "síndrome coronariana aguda",
+        "equivalente isquêmico",
+        "primeira hora"
+      ],
+      "document_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2021-oxigenio-na-dispneia-aguda-se-spo2-abaixo-de-90",
+      "statement": "A oxigenoterapia é recomendada em pacientes com IC aguda/descompensada e SpO2 <90% ou PaO2 <60 mmHg (8,0 kPa) para corrigir a hipoxemia. Não há, nessa recomendação, mandato de oxigênio de rotina em quem já satura acima desse corte.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2021,
+      "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+      "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Recomendação já fichada no corpus como oxigenio-ic-aguda-hipoxemia; restaging aqui com document_slug do protocolo de dispneia aguda.",
+      "theme": "Geral",
+      "tags": [
+        "oxigenoterapia",
+        "dispneia aguda",
+        "hipoxemia",
+        "insuficiência cardíaca descompensada"
+      ],
+      "document_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2021-vni-precoce-na-dispneia-aguda-com-eap-e-desconforto",
+      "statement": "A ventilação não invasiva com pressão positiva (CPAP ou BiPAP) deve ser considerada em pacientes com desconforto respiratório (frequência respiratória >25 irpm, SpO2 <90%) e iniciada o mais precocemente possível, para diminuir o desconforto respiratório e reduzir a taxa de intubação. É adjuvante, não substituto do tratamento farmacológico do edema pulmonar cardiogênico.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2021,
+      "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+      "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Recomendação já fichada no corpus como ventilacao-nao-invasiva-ic-aguda-desconforto-respiratorio. Detalhe de modo (CPAP versus bilevel), 3CPO (PMID 18614781) e Cochrane (PMID 30950507) permanece no documento ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap — este lote não reescreve essa comparação.",
+      "theme": "Geral",
+      "tags": [
+        "ventilação não invasiva",
+        "edema agudo de pulmão",
+        "dispneia aguda",
+        "CPAP",
+        "BiPAP"
+      ],
+      "document_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "aha-acc-hfsa-2022-peptideo-natriuretico-util-para-apoiar-ou-excluir-ic-na-dispneia",
+      "statement": "Em pacientes que se apresentam com dispneia, a dosagem de peptídeo natriurético (BNP ou NT-proBNP) é útil para apoiar o diagnóstico ou a exclusão de insuficiência cardíaca.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "AHA/ACC/HFSA",
+      "year": 2022,
+      "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+      "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499. Mesma recomendação já fichada como aha-2022-peptideos-natriureticos-diagnostico-dispneia; restaging com document_slug do protocolo de dispneia aguda. Declaração científica AHA 2010 (Weintraub NL et al., Circulation. 2010;122(19):1975-1996, PMID 20937981) contextualiza o uso no pronto-socorro, sem classe/nível própria de diretriz terapêutica.",
+      "theme": "Geral",
+      "tags": [
+        "dispneia",
+        "BNP",
+        "NT-proBNP",
+        "diagnóstico",
+        "insuficiência cardíaca"
+      ],
+      "document_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "dispneia-aguda-sem-dor-toracica-eap-versus-dpoc-versus-sca",
+      "titulo": "Dispneia aguda sem dor torácica: edema cardiogênico, DPOC ou infarto?",
+      "tema": "Geral",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 76 anos, hipertensa e diabética, tabagista antiga rotulada como “DPOC” sem espirometria na pasta. Chega ao pronto-socorro com 4 horas de falta de ar em repouso. Nega dor no peito. PA 188/102 mmHg, FC 108 bpm irregular, FR 30 irpm, SpO2 87% em ar ambiente, estertores em ambos os terços inferiores, turgência jugular e edema de tornozelo discreto; também há sibilos. ECG em 8 minutos: fibrilação atrial de alta resposta, sem supra de ST, inversões de T inferolaterais novas em relação a um traçado antigo. A equipe discute se “é só broncoespasmo”, se começa benzodiazepínico porque “não dói o peito, deve ser ansiedade”, ou se trombolisa TEP empiricamente.",
+      "pergunta": "Qual o agrupamento de condutas mais alinhado à primeira meia hora?",
+      "opcoes": [
+        "Benzodiazepínico e observação: ausência de dor torácica torna SCA e IC improváveis, e ansiedade explica a taquipneia",
+        "Oxigênio porque há hipoxemia; considerar VNI se o quadro for de edema cardiogênico; não tratar a FA instabilizante como detalhe; dosar peptídeo e troponina; não fechar como um único diagnóstico nesta hora",
+        "Trombólise imediata para TEP, porque a hipoxemia é desproporcional e o ECG não tem supra",
+        "Só broncodilatador em alta dose e aguardar TC de tórax antes de qualquer medida cardíaca, já que há sibilos e rótulo de DPOC"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "Há hipoxemia (SpO2 87%): a ESC 2021 recomenda oxigênio quando SpO2 <90% (Classe I, C). O fenótipo mistura sibilos com ortopneia, estertores, turgência e PA muito alta — edema pulmonar cardiogênico também sibila, e VNI precoce é Classe IIa, B nesse desconforto, como adjuvante, não como monoterapia. Dispneia sem dor em idosa diabética é equivalente isquêmico: o ECG já foi feito no tempo certo e não mostra supra, mas não encerra SCA (troponina seriada / via NSTE-ACS). A FA rápida pode ser precipitante e precisa de controle se houver instabilidade; não é o único problema. Ansiedade só entra depois de organicidade — nunca como primeira hipótese neste perfil. Trombólise empírica de TEP sem probabilidade formal e sem choque obstrutivo documentado não é o passo desta hora. Broncodilatador isolado, adiando descongestão e ECG/biomarcadores, é o erro clássico do rótulo de DPOC sem espirometria. Peptídeo abaixo de 300/100 tornaria IC pouco provável; peptídeo alto não excluiria TEP nem pneumonia. O caso ensina a manter o diferencial aberto e a tratar o que mata agora (hipoxemia, possível EAP, ritmo, possível SCA) em paralelo.",
+      "source_refs": [
+        "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "primeiros-30-minutos-dispneia-aguda-no-pronto-socorro",
+      "condicao": "Primeiros 30 minutos da dispneia aguda no PS, enfermaria ou UCO",
+      "resumo": "Checklist de execução da primeira meia hora: via aérea, oxigênio só se hipoxemia, ECG em 10 minutos, exame que separa congestão de hipoperfusão e de causa assimétrica, biomarcadores, e o que não fazer (diurético no tamponamento, ansiedade como primeira hipótese, atrasar o traçado porque não dói o peito).",
+      "documento_origem": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "theme": "Geral",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+        "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+        "Rohde LEP, Montera MW, Bocchi EA, et al. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190. PMID: 30379264."
+      ],
+      "itens": [
+        {
+          "id": "dispneia-via-aerea",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Via aérea, padrão respiratório e circulação avaliados de imediato; gasping, rebaixamento ou PCR iminente tratados como reanimação, com o diagnóstico em paralelo",
+          "origem_secao": "Primeiros minutos: o que não espera o diagnóstico"
+        },
+        {
+          "id": "dispneia-spo2-oxigenio",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "SpO2 medida; oxigênio iniciado se SpO2 <90% ou PaO2 <60 mmHg — e não prescrito de rotina na ausência de hipoxemia",
+          "origem_secao": "ESC 2021 — oxigenoterapia na IC aguda"
+        },
+        {
+          "id": "dispneia-ecg-10-min",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "ECG de 12 derivações obtido e visto em até 10 minutos do contato, mesmo sem dor torácica; supra, equivalente de oclusão, taquiarritmia instável ou BAV avançado redirecionam a via",
+          "origem_secao": "O ECG que muda o destino agora"
+        },
+        {
+          "id": "dispneia-monitor-acesso",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Acesso venoso, monitorização contínua e glicemia capilar obtidos sem atrasar o ECG",
+          "origem_secao": "Primeiros minutos: o que não espera o diagnóstico"
+        },
+        {
+          "id": "dispneia-exame-dirigido",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Exame dirigido registrado: congestão versus hipoperfusão, simetria pulmonar, turgência jugular, pulso paradoxal, sibilos, febre, palidez, sinais de TVP",
+          "origem_secao": "Diferencial da primeira hora"
+        },
+        {
+          "id": "dispneia-vni-eap",
+          "categoria": "procedimento",
+          "obrigatorio": false,
+          "texto": "Se edema pulmonar cardiogênico com desconforto (FR >25 e/ou SpO2 <90%), VNI iniciada precocemente como adjuvante — sem substituir diurético/vasodilatador e sem usar em via aérea desprotegida",
+          "origem_secao": "ESC 2021 — VNI; documento dedicado de CPAP versus BiPAP"
+        },
+        {
+          "id": "dispneia-labs",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Coletados BNP ou NT-proBNP, troponina de alta sensibilidade, gasometria, hemograma, creatinina e eletrólitos; radiografia ou ultrassom pulmonar conforme disponibilidade — sem atrasar tratamento de hipoxemia, ritmo instável ou supra",
+          "origem_secao": "Peptídeo natriurético: corte agudo não é corte ambulatorial"
+        },
+        {
+          "id": "dispneia-pocus-choque",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Se hipoperfusão e POCUS disponível: bomba/reservatório/tubos avaliados como hipótese, não como veredito; FOCUS sem disfunção de VE não exclui choque cardiogênico; falta de POCUS não atrasa suporte (SHoC-ED)",
+          "origem_secao": "POCUS: o que o SHoC-ED realmente autoriza nesta hora"
+        },
+        {
+          "id": "dispneia-nao-fazer",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Não administrados diurético ou vasodilatador se tamponamento ou choque hipovolêmico forem plausíveis; não feita trombólise empírica de TEP; não usado benzodiazepínico como primeira resposta no hipoxêmico",
+          "origem_secao": "O que tratar em paralelo — e o que não fazer"
+        },
+        {
+          "id": "dispneia-precipitante",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Precipitante procurado em paralelo (SCA, arritmia, infecção, crise hipertensiva, má adesão, anemia, TEP), sem esperar a descongestão “terminar”",
+          "origem_secao": "O que tratar em paralelo — e o que não fazer"
+        },
+        {
+          "id": "dispneia-comunicacao",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "UCO, cardiologia ou time de choque acionados conforme instabilidade; o rótulo de ansiedade não foi usado para dispensar avaliação",
+          "origem_secao": "Função deste protocolo"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "quando-a-falta-de-ar-e-emergencia",
+      "titulo": "Quando a falta de ar é uma emergência",
+      "subtitulo": "O que não esperar em casa e quando ligar para o 192",
+      "tema": "Geral",
+      "documento_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "review_status": "pendente_revisao",
+      "resumo": "Orientação para o paciente e a família reconhecerem falta de ar que não deve esperar consulta eletiva: início súbito, piora em horas, falta de ar sentado ou deitado, lábios roxos, dor no peito, desmaio, coração irregular ou inchaço rápido. Ansiedade pode acompanhar, mas não deve ser a primeira explicação.",
+      "secoes": [
+        {
+          "titulo": "Falta de ar que não pode esperar",
+          "paragrafos": [
+            "Cansaço ao subir um lance de escada, se é o seu habitual e não piorou de repente, costuma poder ser avaliado em consulta. Falta de ar que começa em minutos ou piora ao longo de poucas horas é outra história: o coração, um vaso do pulmão, uma infecção ou um infarto podem estar por trás, e o tempo muda o tratamento.",
+            "Não ter dor no peito não acalma. Em pessoas mais velhas, nas mulheres e em quem tem diabetes, o infarto às vezes aparece só como falta de ar, suor frio ou cansaço súbito."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Ligue para o 192 agora se",
+          "paragrafos": [],
+          "itens": [
+            "A falta de ar veio de repente, em repouso, ou piora a cada minuto",
+            "Você precisa sentar para conseguir respirar, ou acorda engasgando à noite",
+            "Os lábios ou as unhas estão roxos, ou a pessoa está confusa, muito sonolenta ou não responde",
+            "Há dor, aperto ou queimação no peito, no braço, no pescoço ou no estômago, mesmo que leves",
+            "Houve desmaio, quase-desmaio, ou o coração dispara e fica irregular",
+            "Uma perna inchou de um lado só, com dor, e a falta de ar veio junto",
+            "Você já tem insuficiência cardíaca e ganhou peso rápido, com inchaço e piora da respiração"
+          ]
+        },
+        {
+          "titulo": "O que fazer enquanto a ajuda chega",
+          "paragrafos": [
+            "Sente a pessoa com o tronco elevado, afrouxe roupas justas, abra a janela. Não deite plana quem está ofegante. Não ofereça comida, comprimido “para nervoso” ou remédio de outra pessoa.",
+            "Se a pessoa não responde e não respira normalmente, trate como possível parada: peça ajuda, ligue 192 e comece compressões no centro do peito. Há um material específico nesta biblioteca sobre colapso súbito e DEA."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Ansiedade não é o primeiro diagnóstico",
+          "paragrafos": [
+            "Falta de ar dá medo, e o medo piora a sensação. Isso é verdade. Mas medo não exclui infarto, embolia, água no pulmão nem anemia grave. Quem deve decidir se “é ansiedade” é a avaliação médica depois de examinar, fazer um eletrocardiograma e medir a oxigenação — não a família em casa, e não o próprio paciente tentando se acalmar no lugar de pedir socorro.",
+            "Se você usa bombinha para asma ou DPOC e desta vez o alívio não veio, ou se a falta de ar veio com inchaço, peso no peito ou desmaio, não fique só na bombinha."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Falta de ar súbita ou que piora em horas",
+        "Precisar sentar para respirar ou acordar engasgando",
+        "Lábios ou unhas roxos, confusão ou sonolência",
+        "Dor ou aperto no peito, mesmo sem “ser forte”",
+        "Desmaio, coração disparado ou irregular",
+        "Inchaço de uma perna só junto da falta de ar",
+        "Ganho rápido de peso em quem já tem insuficiência cardíaca"
+      ],
+      "perguntas": [
+        "Eu sei o número do SAMU (192) e consigo informar o endereço completo?",
+        "Alguém em casa reconhece que falta de ar sem dor no peito ainda pode ser infarto?",
+        "Se eu tenho insuficiência cardíaca, sei o meu peso usual e quando o ganho pede pronto-socorro?",
+        "Há um DEA no condomínio, no trabalho ou na academia, e alguém treinado para usá-lo se a pessoa desmaiar?"
+      ],
+      "fontes": [
+        "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+        "Rohde LEP, Montera MW, Bocchi EA, et al. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190. PMID: 30379264.",
+        "Weintraub NL, Collins SP, Pang PS, et al. Acute heart failure syndromes: emergency department presentation, treatment, and disposition. Circulation. 2010;122(19):1975-1996. DOI: 10.1161/CIR.0b013e3181f9a223. PMID: 20937981."
+      ]
+    }
+  ],
+  "emergencia": [
+    {
+      "slug": "dispneia-aguda-de-origem-cardiovascular",
+      "titulo": "Dispneia aguda de origem cardiovascular — abordagem inicial",
+      "gatilho": "Dispneia de minutos a horas no PS, enfermaria ou UCO · hipoxemia · ortopneia · equivalente isquêmico sem dor torácica",
+      "ordem": 124,
+      "documento_slug": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+      "fluxograma_slug": "fluxograma-dispneia-aguda-cardiogenica-versus-nao-cardiogenica",
+      "relacionados": [
+        "insuficiencia-cardiaca-aguda-descompensada",
+        "edema-agudo-de-pulmao-hipertensivo",
+        "sindrome-coronariana-aguda",
+        "tromboembolismo-pulmonar",
+        "tamponamento-cardiaco",
+        "choque-cardiogenico",
+        "fibrilacao-atrial-de-alta-resposta"
+      ],
+      "review_status": "pendente_revisao",
+      "fonte_producao": "grok",
+      "review_note": "Fragmento novo de emergência, ordem 124, sem colisão com insuficiencia-cardiaca-aguda-descompensada (ordem 11, manejo da congestão já diagnosticada) nem com edema-agudo-de-pulmao-hipertensivo (ordem 84). Este slug cobre a primeira hora da dispneia ainda indiferenciada."
+    }
+  ]
+}

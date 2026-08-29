@@ -29606,5 +29606,1181 @@
       }
     ],
     "revisao": "Produzido por Claude em 27/08/2026 com fontes primárias atuais (WSES 2022, ESVS 2025). Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
+  },
+  {
+    "slug": "inicio-de-incretina-na-icfep-com-obesidade-step-summit",
+    "condicao": "Início de semaglutida ou tirzepatida na ICFEp com obesidade",
+    "resumo": "O que confirmar antes de iniciar incretina no fenótipo ICFEp + obesidade: diagnóstico, IMC, FEVE, FMT já em curso, o que cada ensaio permite prometer, e o que a ESC 2026 (IIa B1) de fato indica — peso, exercício e QoL, não mortalidade.",
+    "documento_origem": "agonistas-incretina-na-icfep-com-obesidade-step-e-summit",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681",
+      "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826",
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."
+    ],
+    "itens": [
+      {
+        "id": "incretina-icfep-diagnostico-objetivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de insuficiência cardíaca confirmado por sintomas/sinais e evidência objetiva — a dispneia da obesidade isolada não replica a população do STEP-HFpEF nem do SUMMIT",
+        "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+      },
+      {
+        "id": "incretina-icfep-imc-30",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "IMC ≥ 30 kg/m² documentado: critério de entrada dos dois ensaios e da Recommendation Table 18 da ESC 2026; não extrapolar para ICFEp sem obesidade",
+        "origem_secao": "O que cada ensaio perguntou / Como a esc 2026 posiciona a classe"
+      },
+      {
+        "id": "incretina-icfep-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FEVE conferida: ESC 2026 indica a classe com FEVE ≥45%; o SUMMIT entrou com FEVE ≥50%. Aplicar entre 45% e 49% é síntese da diretriz, não resultado do SUMMIT. ICFEr fica fora — a própria ESC pede RCT dedicado",
+        "origem_secao": "Como a esc 2026 posiciona a classe / Dois desalinhamentos de corte"
+      },
+      {
+        "id": "incretina-icfep-fmt-sglt2",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "iSGLT2 já iniciado ou contraindição explícita registrada — incretina é AMT (IIa B1), não substitui a terapia fundacional nem o diurético da congestão",
+        "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+      },
+      {
+        "id": "incretina-icfep-diabetes-nao-obrigatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença ou ausência de diabetes tipo 2 registrada, sem usá-la como trava: a ESC 2026 diz regardless of diabetes status. Não confundir o STEP-HFpEF original com o STEP-HFpEF DM (braço só com diabetes, outro documento)",
+        "origem_secao": "Como escolher a molecula na ausencia de ensaio direto"
+      },
+      {
+        "id": "incretina-icfep-promessa-alinhada-ao-ensaio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Consentimento alinhado ao ensaio da molécula escolhida: semaglutida/STEP — sintomas, limitação física, exercício e peso (não morte nem internação). Tirzepatida/SUMMIT — composto de morte CV ou piora da IC (9,9% vs. 15,3%; HR 0,62), puxado pela piora; morte CV isolada 8 vs. 5, sem redução demonstrada. ESC IIa B1 verbalizada como peso, exercício e QoL",
+        "origem_secao": "O que dizer — e o que nao dizer / O composto nao e reducao de mortalidade"
+      },
+      {
+        "id": "incretina-icfep-gi-descontinuacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre eventos gastrointestinais e descontinuação: no SUMMIT, 6,3% vs. 1,4% pararam o fármaco por evento adverso (sobretudo GI). Titulação semana a semana segue o rótulo — não está nos abstracts; VERIFICAÇÃO HUMANA NECESSÁRIA se for prescrita neste ato",
+        "origem_secao": "Resultados / Como escolher a molecula na ausencia de ensaio direto"
+      },
+      {
+        "id": "incretina-icfep-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado para tolerabilidade, peso, sintomas de IC e sinais de piora (dispneia, edema, ganho ponderal súbito). Incretina não substitui o plano de descompensação",
+        "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+      },
+      {
+        "id": "incretina-icfep-perioperatorio",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Se houver procedimento com sedação ou anestesia no horizonte, registrar o uso de agonista de GLP-1/GIP-GLP-1 pelo atraso do esvaziamento gástrico — ver o documento perioperatório já desta base; não está no abstract do STEP nem do SUMMIT",
+        "origem_secao": "Como escolher a molecula na ausencia de ensaio direto"
+      }
+    ]
+  },
+  {
+    "slug": "suspeita-civ-e-ruptura-papilar-pos-iam-a-beira-do-leito",
+    "condicao": "Suspeita de CIV ou ruptura papilar após infarto: decisão à beira do leito",
+    "resumo": "O que o cardiologista precisa ter feito antes de chamar o choque pós-IAM de 'bomba', de implantar MCS e de decidir entre IABP, cirurgia de emergência, adiamento selecionado ou fechamento percutâneo.",
+    "documento_origem": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI: 10.1161/CIR.0000000000000985. PMID: 34126755",
+      "Schlotter F, Huber K, Hassager C, et al. Ventricular septal defect complicating acute myocardial infarction: diagnosis and management. Eur Heart J. 2024;45(28):2478-2492. DOI: 10.1093/eurheartj/ehae363. PMID: 38888906",
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025;85(22):2135-2237. DOI: 10.1016/j.jacc.2024.11.009. PMID: 40013746",
+      "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. PMID: 38587239"
+    ],
+    "itens": [
+      {
+        "id": "civ-eco-imediato",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Eco transtorácico com Doppler colorido realizado à beira do leito na deterioração pós-IAM, sem esperar sala formal nem Swan-Ganz",
+        "origem_secao": "Eco à beira do leito"
+      },
+      {
+        "id": "civ-mecanismo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Mecanismo classificado: CIV (jato transseptal E→D), ruptura papilar (flail/IM aguda), parede livre (tamponamento/PEA) ou choque de bomba — sopro ausente não usou para afastar ruptura",
+        "origem_secao": "A pergunta que muda o caminho; Diferenciar CIV de ruptura papilar"
+      },
+      {
+        "id": "civ-ete-se-preciso",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "ETE obtido se a janela do TTE for ruim, se o sopro sugerir IM aguda, ou se o TTE não explicar o choque",
+        "origem_secao": "Eco à beira do leito"
+      },
+      {
+        "id": "civ-centro-cirurgia",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Heart Team acionado; se o hospital não opera coração, transferência para centro com cirurgia cardíaca iniciada (ACC/AHA 2025)",
+        "origem_secao": "Transferência, fibrinólise e o que não fazer"
+      },
+      {
+        "id": "civ-iabp-ponte",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Na instabilidade por CIV ou ruptura papilar, IABP considerado como ponte (ESC 2023 Classe IIa C) e registrado que o balão não fecha o defeito",
+        "origem_secao": "Estabilização: o que o IABP faz"
+      },
+      {
+        "id": "civ-nao-iabp-bomba",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "IABP de rotina não implantado se o eco mostrou choque de bomba sem ruptura (ESC 2023 Classe III B / IABP-SHOCK II)",
+        "origem_secao": "Estabilização: o que o IABP faz"
+      },
+      {
+        "id": "civ-nao-danger-shock",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Impella/DanGer-Shock não usados como justificativa de mortalidade neste fenótipo — o ensaio excluiu ruptura septal, papilar e de parede livre",
+        "origem_secao": "Impella, ECMO e por que o DanGer-Shock não se aplica"
+      },
+      {
+        "id": "civ-timing-heart-team",
+        "categoria": "equipe",
+        "obrigatorio": true,
+        "texto": "Timing documentado pelo Heart Team: emergência se instável/refratário (Classe I C); adiamento de 1–2 semanas só considerado na CIV que sustenta a ponte; ruptura papilar completa tratada como cirurgia de emergência, não como espera",
+        "origem_secao": "Timing da cirurgia"
+      },
+      {
+        "id": "civ-percutaneo-selecionado",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Fechamento percutâneo da CIV (ou edge-to-edge na IM por ruptura) discutido só se risco cirúrgico proibitivo e anatomia favorável — não apresentado como substituto rotineiro",
+        "origem_secao": "Fechamento percutâneo"
+      },
+      {
+        "id": "civ-nao-fibrinolise",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Fibrinolítico não administrado na suspeita de complicação mecânica; ESC 2023 só considera lise no STEMI com choque se ICP primária indisponível em 120 min E a ruptura tiver sido excluída",
+        "origem_secao": "Transferência, fibrinólise e o que não fazer"
+      }
+    ]
+  },
+  {
+    "slug": "alta-pos-sca-cinco-pilares-modificaveis",
+    "condicao": "Alta após SCA pelos cinco pilares modificáveis da prevenção secundária integrada",
+    "resumo": "Checklist da manhã da alta que não substitui alta-pos-sindrome-coronariana-aguda: aprofunda os cinco pilares (DAPT com data, LDL intensificado, eixo FEVE, cessação com fármaco, reabilitação + diabetes/obesidade) e os freios REDUCE-AMI e EMPACT-MI. Distinto também de escalonamento-do-hipolipemiante-em-prevencao-secundaria, que trata só do LDL.",
+    "documento_origem": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178",
+      "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178",
+      "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905"
+    ],
+    "itens": [
+      {
+        "id": "pilar1-dapt-datada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 1: DAPT com os dois fármacos, doses e data de reavaliação escritos no sumário — não 'por um tempo'",
+        "origem_secao": "Pilar 1 — antitrombótico"
+      },
+      {
+        "id": "pilar1-nao-desescalar-30d",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 1: registrado que não se desescalona antiagregante nos primeiros 30 dias (ESC 2023 Classe III B)",
+        "origem_secao": "Pilar 1 — antitrombótico"
+      },
+      {
+        "id": "pilar1-hbr-ou-oac",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 1: se ARC-HBR, DAPT encurtada despachada para o fluxograma de DAPT (SBC 2025 SCC Classe IIa B); se anticoagulante oral, via tripla/dupla própria — não improvisar prazo neste checklist. Dual versus monoterapia em mês 1, 3 ou 6: VERIFICAÇÃO HUMANA NECESSÁRIA se não estiver no fluxograma de DAPT",
+        "origem_secao": "Pilar 1 — antitrombótico"
+      },
+      {
+        "id": "pilar2-estatina-alta-internacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 2: estatina de alta intensidade iniciada ou intensificada na internação índice (SBC 2025 dislipidemias: potente nas primeiras 24 h, Forte Alta; ESC/EAS 2025: intensificar quem já usava, Classe I C)",
+        "origem_secao": "Pilar 2 — LDL"
+      },
+      {
+        "id": "pilar2-meta-ldl-regua",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 2: meta de LDL explícita e régua anotada — ESC/EAS <55 mg/dL e redução ≥50%, ou SBC 2025 dislipidemias <50 mg/dL no muito alto risco (Forte, Alta). Não misturar 55 com 50",
+        "origem_secao": "Pilar 2 — LDL"
+      },
+      {
+        "id": "pilar2-ezetimiba",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 2: ezetimiba considerada já na fase aguda se a meta não virá só com estatina (ESC/EAS 2025 Classe IIa B no virgem; SBC 2025 dislipidemias Forte Moderada para associação na fase aguda)",
+        "origem_secao": "Pilar 2 — LDL"
+      },
+      {
+        "id": "pilar3-feve-numerica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pilar 3: FEVE numérica no prontuário, não 'função preservada' em texto livre",
+        "origem_secao": "Pilar 3 — FEVE e insuficiência cardíaca"
+      },
+      {
+        "id": "pilar3-bb-por-feve",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 3: betabloqueador decidido pela FEVE e por indicação concomitante — sim se FEVE ≤40% ou IC (AHA/ACC 2023 Classe I A); não automático se FEVE ≥50% sem outra indicação (REDUCE-AMI). Estrato 40–49% sem IC: não transformar a IPD 2025 em Classe I sem verificação",
+        "origem_secao": "Subárvore do pilar 3"
+      },
+      {
+        "id": "pilar3-ieca-arni-mra",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 3: IECA ou BRA se disfunção, IC ou diabetes (SBC 2025 SCC Classe I A); ARNI se ICFEr sintomática (ESC 2021 Classe I B); MRA se ICFEr (ESC 2021 Classe I A) ou pós-IAM com FEVE ≤35% e DM ou IC (SBC 2025 Classe IIa A). Não combinar IECA+BRA (Classe III A)",
+        "origem_secao": "Pilar 3 — IECA, BRA, ARNI / MRA"
+      },
+      {
+        "id": "pilar3-sglt2-portas",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 3/5: iSGLT2 se ICFEr, ICFEm/ICFEp, T2DM com doença coronariana ou DRC com indicação — não prescrever só porque o EMPACT-MI randomizou IAM de alto risco (primário neutro)",
+        "origem_secao": "iSGLT2 — três portas, uma armadilha"
+      },
+      {
+        "id": "pilar4-tabaco-farmaco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Pilar 4: status tabágico registrado; se fuma, vareniclina ou TRN iniciada na internação com plano de suporte após a alta (ESC 2021 Classe I A para cessar). Não vaporizador (SBC 2021 Classe III)",
+        "origem_secao": "Pilar 4 — tabagismo"
+      },
+      {
+        "id": "pilar5-reabilitacao-data",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Pilar 5: encaminhamento a reabilitação cardíaca estruturada com data ou contato marcado (ESC 2021 Classe I A) — não folheto. Contraindicada se instabilidade não resolvida (SBC 2021 Classe III A)",
+        "origem_secao": "Pilar 5 — reabilitação"
+      },
+      {
+        "id": "pilar5-diabetes-glp1",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 5: se T2DM, iSGLT2 e/ou agonista de GLP-1 para prevenção secundária (SBC 2025 SCC Classe I A cada um), independente da HbA1c da alta. Individualizar hipoglicemiante por comorbidade (ESC 2023 Classe I A, Tabela 18)",
+        "origem_secao": "Pilar 5 — diabetes"
+      },
+      {
+        "id": "pilar5-select-imc",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Pilar 5: se IMC ≥27 sem diabetes, SELECT discutido (HR 0,80; IC95% 0,72–0,90; PMID 37952131). Não inventar Classe I a partir do ensaio",
+        "origem_secao": "Obesidade sem diabetes — o SELECT cabe aqui"
+      },
+      {
+        "id": "transversal-influenza-teachback-retorno",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Vacina anual contra influenza (ESC 2023 Classe I A); informação de alta escrita e verbal com teach-back (Classe IIa B); retorno com data. Polipílula SECURE só se adesão for o elo frágil e a composição couber — não substitui BB, MRA nem iSGLT2",
+        "origem_secao": "O que conferir ainda na internação"
+      }
+    ]
+  },
+  {
+    "slug": "troponina-elevada-sem-sca-tipo-1-decisao-a-beira-do-leito",
+    "condicao": "Troponina elevada fora da SCA tipo 1 — distinguir infarto tipo 2 / IAM secundário de lesão miocárdica não isquêmica e decidir cateterismo e antitrombótico",
+    "resumo": "Checklist de execução no plantão: excluir a SCA que não pode esperar, classificar o padrão da troponina, exigir evidência de isquemia antes de dizer infarto, não rotular tipo 1 por inércia, não iniciar DAPT/ICP de rotina no tipo 2, e planejar a investigação de DAC só depois da estabilização do precipitante.",
+    "documento_origem": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617.",
+      "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151(13):e771-e862. DOI: 10.1161/CIR.0000000000001309. PMID: 40014670."
+    ],
+    "itens": [
+      {
+        "id": "t2-ecg-risco-muito-alto",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG e exame clínico revisados para supradesnivelamento de ST ou critério de risco muito alto (instabilidade, dor refratária, arritmia grave, IC isquêmica, ST dinâmico recorrente) ANTES de qualquer raciocínio sobre tipo 2 ou lesão — se presente, conduzir como SCA, sem esperar o rótulo",
+        "origem_secao": "Passo 0 — o que não pode esperar o rótulo"
+      },
+      {
+        "id": "t2-padrao-troponina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina interpretada em série, no ensaio local, como elevada versus não elevada em relação ao percentil 99 (específico por sexo se o laboratório usar) e como padrão dinâmico versus estável — um valor isolado não fecha infarto",
+        "origem_secao": "Passo 1 — o número sozinho não diagnostica infarto"
+      },
+      {
+        "id": "t2-evidencia-isquemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Evidência de isquemia explicitamente presente ou ausente (sintoma isquêmico, ECG isquêmico novo, onda Q nova, imagem com perda de viabilidade ou nova alteração segmentar). Sem isquemia: lesão, não infarto",
+        "origem_secao": "Passo 2 — sem isquemia não há infarto"
+      },
+      {
+        "id": "t2-nao-rotular-tipo-1",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "IAM tipo 1 / IAM primário aterotrombótico NÃO rotulado só por troponina elevada, UTI, sepse, DAC antiga ou depressão de ST durante taquicardia/anemia. Tipo 1 exige evidência de aterotrombose aguda",
+        "origem_secao": "Passo 3 — quando não rotular tipo 1"
+      },
+      {
+        "id": "t2-precipitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Precipitante de desequilíbrio oferta-demanda procurado e registrado (taqui/bradiarritmia, anemia, hipotensão/choque, hipoxemia, hipertensão grave) quando há isquemia sem aterotrombose",
+        "origem_secao": "Passo 4 — tipo 2 / IAM secundário"
+      },
+      {
+        "id": "t2-tratar-precipitante",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Tratamento agudo dirigido ao precipitante (volume, pressão, frequência, oxigênio, hemoderivados, hemostasia, foco da sepse) — a ESC 2023 não recomenda intervenção farmacológica específica para o tipo 2",
+        "origem_secao": "Passo 4 — tipo 2 / IAM secundário"
+      },
+      {
+        "id": "t2-nao-dapt-rotina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "DAPT (AAS + P2Y12) NÃO iniciada como rotina do infarto tipo 2 / IAM secundário nem da lesão não isquêmica. As recomendações de DAPT da ESC 2023 e da ACC/AHA 2025 são da SCA tipo 1; a ACC/AHA 2025 declara tipo 2 fora do escopo",
+        "origem_secao": "Tipo 2 não é indicação de DAPT nem de ICP de rotina"
+      },
+      {
+        "id": "t2-nao-pci-rotina",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "ICP NÃO indicada de rotina pelo rótulo tipo 2. Angiografia de emergência só se houver critério de SCA de risco muito alto. Após estabilizar, eco e/ou angio-TC ou angiografia invasiva entram para procurar DAC contributiva, não para stent de estenose crônica como se fosse placa rota",
+        "origem_secao": "Quando cateterizar — e quando não"
+      },
+      {
+        "id": "t2-eco-apos-estabilizar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma planejado após a estabilização (e, conforme probabilidade de DAC, angiotomografia, teste funcional ou angiografia invasiva). Texto narrativo da ESC 2023, sem classe/nível — não omitir, não promover a Classe I",
+        "origem_secao": "Quando cateterizar — e quando não"
+      },
+      {
+        "id": "t2-prontuario",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Prontuário com as sete linhas: padrão da troponina; isquemia sim/não; mecanismo; precipitante; o que NÃO foi iniciado e por quê; plano após estabilização; vocabulário 2026 se o serviço já o usa. Evitar 'NSTEMI' genérico",
+        "origem_secao": "O que escrever no prontuário"
+      },
+      {
+        "id": "t2-minoca-se-angio-sem-obstrucao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a angiografia já foi feita e as coronárias não são obstrutivas: MINOCA como diagnóstico de trabalho (algoritmo Classe I C; RM se o diagnóstico final incerto, Classe I B; tratar a etiologia final, Classe I B) — não encerrar como 'coronárias limpas'",
+        "origem_secao": "MINOCA no cruzamento"
+      },
+      {
+        "id": "t2-nao-confundir-mins",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o contexto for pós-operatório de cirurgia não cardíaca: sair deste checklist e usar o fluxograma de MINS — não absorver MINS como tipo 2 genérico, nem o contrário",
+        "origem_secao": "Lesão não isquêmica"
+      }
+    ]
+  },
+  {
+    "slug": "angina-vasoespastica-epicardica-diagnostico-covadis-e-tratamento",
+    "condicao": "Angina vasoespástica (espasmo epicárdico) — critérios COVADIS, teste provocativo e tratamento dirigido",
+    "resumo": "O que não pode faltar ao investigar angina de repouso (noturna/madrugada) com coronárias sem obstrução que explique o sintoma: excluir SCA, cocaína e fluoropirimidina; aplicar COVADIS (definitiva vs. suspeita); ler o teste de acetilcolina com o corte >90%; não confundir com espasmo microvascular; e tratar o endótipo epicárdico com antagonista de cálcio, sem copiar o diamante antianginoso da DAC obstrutiva.",
+    "documento_origem": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334",
+      "Ong P, Camici PG, Beltrame JF, et al.; COVADIS. International standardization of diagnostic criteria for microvascular angina. Int J Cardiol. 2018;250:16-20. DOI: 10.1016/j.ijcard.2017.08.068. PMID: 29031990",
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710",
+      "Ong P, Athanasiadis A, Borgulya G, et al. The ACOVA Study. J Am Coll Cardiol. 2012;59(7):655-662. DOI: 10.1016/j.jacc.2011.11.015. PMID: 22322081"
+    ],
+    "itens": [
+      {
+        "id": "vsa-nao-e-sca-em-curso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que não se trata de síndrome coronariana aguda em curso (dor persistente, supra que não reverte, troponina em curva) — nesse caso sair para o fluxograma de SCA/MINOCA, sem teste provocativo na fase instável",
+        "origem_secao": "O episódio agudo com supra de ST"
+      },
+      {
+        "id": "vsa-nao-cocaina-nao-fluoropirimidina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exposição atual a cocaína e a fluoropirimidina (5-FU/capecitabina) pesquisada e, se presente, o caso desviado para os protocolos próprios — não rotulado como VSA primária",
+        "origem_secao": "Por que este documento existe"
+      },
+      {
+        "id": "vsa-fenotipo-clinico-covadis",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Fenótipo clínico conferido: angina de repouso (sobretudo noturna/madrugada), variação diurna da tolerância ao esforço, precipitação por hiperventilação ou resposta a antagonista de cálcio (e não a betabloqueador) — elemento 1 do COVADIS, angina nitrato-responsiva",
+        "origem_secao": "Critérios COVADIS — consenso de 2017"
+      },
+      {
+        "id": "vsa-ecg-espontaneo-capturado",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Tentativa de capturar ECG de 12 derivações durante o episódio espontâneo (ST ≥0,1 mV para cima ou para baixo, ou U negativa nova, em ≥2 derivações contíguas): se presente junto com o elemento 1, VSA já é definitiva sem exigir cateterismo",
+        "origem_secao": "Definitiva versus suspeita"
+      },
+      {
+        "id": "vsa-angiografia-nao-encerra",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "\"Coronária normal na angiografia\" não tratada como fim da investigação quando o fenótipo espástico persiste — é o ponto de entrada da CFT, não a alta",
+        "origem_secao": "O que o ACOVA ensina"
+      },
+      {
+        "id": "vsa-cft-classe-i-disponivel",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação funcional invasiva disponível no momento da angiografia (diagnóstico incerto após teste não invasivo) ou organizada em centro de referência se ANOCA já estabelecida com sintoma persistente e má qualidade de vida — Classe I, Nível B (ESC 2024)",
+        "origem_secao": "Quando pedir o teste — o que a ESC 2024 de fato recomenda"
+      },
+      {
+        "id": "vsa-nitrato-ic-na-mesa",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar acetilcolina (ou ergot): nitrato intracoronariano já na mesa, monitorização contínua e equipe experiente — o teste não é \"mais um FFR\"",
+        "origem_secao": "Segurança do teste"
+      },
+      {
+        "id": "vsa-tres-criterios-teste",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Resultado do teste lido com os três critérios simultâneos: (1) dor habitual reproduzida, (2) ECG isquêmico, (3) constrição epicárdica >90%. Relatar o percentual medido. Não usar o corte ≥75% do ACOVA (pré-COVADIS)",
+        "origem_secao": "Como o teste provocativo lê o endótipo"
+      },
+      {
+        "id": "vsa-nao-confundir-microvascular",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se dor + ECG sem constrição >90%: rotulado como espasmo MICROVASCULAR e desviado para o protocolo ANOCA/INOCA — não tratado como VSA clássica",
+        "origem_secao": "Como o teste provocativo lê o endótipo"
+      },
+      {
+        "id": "vsa-ccb-primeira-linha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Espasmo epicárdico confirmado: antagonista de canal de cálcio iniciado como base (doses frequentemente mais altas nos casos graves — ESC 2024, seção 5.2.6; classe/nível específico: verificação humana), com nitrato de ação curta para o episódio",
+        "origem_secao": "Tratamento do endótipo epicárdico"
+      },
+      {
+        "id": "vsa-nao-betabloqueador-antianginoso",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador NÃO iniciado como antianginoso deste endótipo (COVADIS usa a resposta diferencial cálcio vs. betabloqueador como traço diagnóstico; classe ESC 2024 específica: verificação humana). Se houver outra indicação (FE reduzida, arritmia), a decisão sai deste checklist",
+        "origem_secao": "Tratamento do endótipo epicárdico"
+      },
+      {
+        "id": "vsa-cessar-tabagismo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Tabagismo ativo abordado como gatilho evitável — sem isso, titulação de cálcio vira tratamento de um estímulo que continua",
+        "origem_secao": "Tratamento do endótipo epicárdico"
+      },
+      {
+        "id": "vsa-nao-stent-do-espasmo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Revascularização do segmento que apenas espasma, sem lesão obstrutiva funcionalmente significativa, NÃO oferecida como tratamento do endótipo",
+        "origem_secao": "Tratamento do endótipo epicárdico"
+      }
+    ]
+  },
+  {
+    "slug": "primeiros-30-minutos-dispneia-aguda-no-pronto-socorro",
+    "condicao": "Primeiros 30 minutos da dispneia aguda no PS, enfermaria ou UCO",
+    "resumo": "Checklist de execução da primeira meia hora: via aérea, oxigênio só se hipoxemia, ECG em 10 minutos, exame que separa congestão de hipoperfusão e de causa assimétrica, biomarcadores, e o que não fazer (diurético no tamponamento, ansiedade como primeira hipótese, atrasar o traçado porque não dói o peito).",
+    "documento_origem": "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial",
+    "theme": "Geral",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+      "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+      "Rohde LEP, Montera MW, Bocchi EA, et al. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190. PMID: 30379264."
+    ],
+    "itens": [
+      {
+        "id": "dispneia-via-aerea",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Via aérea, padrão respiratório e circulação avaliados de imediato; gasping, rebaixamento ou PCR iminente tratados como reanimação, com o diagnóstico em paralelo",
+        "origem_secao": "Primeiros minutos: o que não espera o diagnóstico"
+      },
+      {
+        "id": "dispneia-spo2-oxigenio",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "SpO2 medida; oxigênio iniciado se SpO2 <90% ou PaO2 <60 mmHg — e não prescrito de rotina na ausência de hipoxemia",
+        "origem_secao": "ESC 2021 — oxigenoterapia na IC aguda"
+      },
+      {
+        "id": "dispneia-ecg-10-min",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações obtido e visto em até 10 minutos do contato, mesmo sem dor torácica; supra, equivalente de oclusão, taquiarritmia instável ou BAV avançado redirecionam a via",
+        "origem_secao": "O ECG que muda o destino agora"
+      },
+      {
+        "id": "dispneia-monitor-acesso",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Acesso venoso, monitorização contínua e glicemia capilar obtidos sem atrasar o ECG",
+        "origem_secao": "Primeiros minutos: o que não espera o diagnóstico"
+      },
+      {
+        "id": "dispneia-exame-dirigido",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exame dirigido registrado: congestão versus hipoperfusão, simetria pulmonar, turgência jugular, pulso paradoxal, sibilos, febre, palidez, sinais de TVP",
+        "origem_secao": "Diferencial da primeira hora"
+      },
+      {
+        "id": "dispneia-vni-eap",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se edema pulmonar cardiogênico com desconforto (FR >25 e/ou SpO2 <90%), VNI iniciada precocemente como adjuvante — sem substituir diurético/vasodilatador e sem usar em via aérea desprotegida",
+        "origem_secao": "ESC 2021 — VNI; documento dedicado de CPAP versus BiPAP"
+      },
+      {
+        "id": "dispneia-labs",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Coletados BNP ou NT-proBNP, troponina de alta sensibilidade, gasometria, hemograma, creatinina e eletrólitos; radiografia ou ultrassom pulmonar conforme disponibilidade — sem atrasar tratamento de hipoxemia, ritmo instável ou supra",
+        "origem_secao": "Peptídeo natriurético: corte agudo não é corte ambulatorial"
+      },
+      {
+        "id": "dispneia-pocus-choque",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se hipoperfusão e POCUS disponível: bomba/reservatório/tubos avaliados como hipótese, não como veredito; FOCUS sem disfunção de VE não exclui choque cardiogênico; falta de POCUS não atrasa suporte (SHoC-ED)",
+        "origem_secao": "POCUS: o que o SHoC-ED realmente autoriza nesta hora"
+      },
+      {
+        "id": "dispneia-nao-fazer",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Não administrados diurético ou vasodilatador se tamponamento ou choque hipovolêmico forem plausíveis; não feita trombólise empírica de TEP; não usado benzodiazepínico como primeira resposta no hipoxêmico",
+        "origem_secao": "O que tratar em paralelo — e o que não fazer"
+      },
+      {
+        "id": "dispneia-precipitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Precipitante procurado em paralelo (SCA, arritmia, infecção, crise hipertensiva, má adesão, anemia, TEP), sem esperar a descongestão “terminar”",
+        "origem_secao": "O que tratar em paralelo — e o que não fazer"
+      },
+      {
+        "id": "dispneia-comunicacao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "UCO, cardiologia ou time de choque acionados conforme instabilidade; o rótulo de ansiedade não foi usado para dispensar avaliação",
+        "origem_secao": "Função deste protocolo"
+      }
+    ]
+  },
+  {
+    "slug": "rastreio-dirigido-de-hipertensao-secundaria-no-adulto",
+    "condicao": "Rastreio dirigido de hipertensão secundária no adulto",
+    "resumo": "Checklist de consultório para decidir se há indício de causa secundária e qual exame de triagem pedir primeiro, sem transformar resistência em painel de endocrinologia.",
+    "documento_origem": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179.",
+      "McCarthy CP et al. Hypertension. 2025;82(3):432-444. PMID: 39970254."
+    ],
+    "itens": [
+      {
+        "id": "has-sec-indicador-alarme",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicadores de alarme conferidos: início < 40 anos (ou < 30 sem obesidade), instalação abrupta, resistência verdadeira, lesão de órgão-alvo desproporcional, emergência hipertensiva",
+        "origem_secao": "Quem entra no catálogo"
+      },
+      {
+        "id": "has-sec-substancias",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lista da SBC 2025 2.3.9 revisada: AINE, contraceptivo, glicocorticoide, calcineurina, simpatomimético, alcaçuz, eritropoetina, testosterona, cocaína/anfetamina/MDMA",
+        "origem_secao": "Medicamentos e substâncias"
+      },
+      {
+        "id": "has-sec-potassio-renal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Potássio, creatinina/TFGe, sumário de urina e albuminúria disponíveis ou solicitados — abrem DRC, aldosteronismo e mineralocorticoide aparente",
+        "origem_secao": "Doença renal parenquimatosa; hiperaldosteronismo"
+      },
+      {
+        "id": "has-sec-arr",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "ARR planejada se houver resistência, hipopotassemia (não obrigatória), nódulo adrenal, ou se o clínico adotar rastreio alargado de aldosteronismo; coleta e interferência de fármacos não improvisadas nesta consulta",
+        "origem_secao": "Hiperaldosteronismo primário"
+      },
+      {
+        "id": "has-sec-aos",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "AOS investigada se resistência (SBC 2025: em todo resistente), obesidade, ronco ou sonolência; questionário não aceito como suficiente",
+        "origem_secao": "Apneia obstrutiva do sono"
+      },
+      {
+        "id": "has-sec-renovascular",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Doppler/angio de artéria renal só com gatilho: < 30 ou > 55 anos com início súbito, sopro, flash EAP, assimetria > 1,5 cm, piora com IECA/BRA",
+        "origem_secao": "Estenose de artéria renal"
+      },
+      {
+        "id": "has-sec-nao-painel",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Metanefrinas e cortisol não pedidos sem tríade paroxística ou hábito cushingoide; amostragem de veia adrenal não pedida como primeiro exame",
+        "origem_secao": "Quando a pista não aponta"
+      }
+    ]
+  },
+  {
+    "slug": "primeira-hora-do-edema-agudo-de-pulmao-cardiogenico",
+    "condicao": "Primeira hora do edema agudo de pulmão cardiogênico",
+    "resumo": "Checklist de execução à beira do leito: posição, VNI, nitrato se permitido, alça, precipitante (SCA, arritmia, mecânica) e a porta de saída para choque.",
+    "documento_origem": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Park M et al. Crit Care Med. 2004;32(12):2407-2415. PMID: 15599144.",
+      "Gray A et al. N Engl J Med. 2008;359(2):142-151. PMID: 18614781.",
+      "Brandão AA et al. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179.",
+      "Cotter G et al. Lancet. 1998;351(9100):389-393. PMID: 9482291."
+    ],
+    "itens": [
+      {
+        "id": "eap-sentar",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Paciente sentado, pernas pendentes, se não houver choque ou rebaixamento que impeça a via aérea",
+        "origem_secao": "Posição"
+      },
+      {
+        "id": "eap-vni",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Oxigênio se SpO2 < 90% ou PaO2 < 60 mmHg; VNI (CPAP ou BiPAP) iniciada cedo no taquipneico hipoxêmico, sem esperar o RX; intubar se houver contraindicação ou falha em ≤ 2 h",
+        "origem_secao": "Oxigênio e VNI"
+      },
+      {
+        "id": "eap-nitrato-gate",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Nitrato IV só se não houver choque, IAM de VD ou inibidor de PDE-5 nas 48 h anteriores",
+        "origem_secao": "Nitrato se não houver choque"
+      },
+      {
+        "id": "eap-alca",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Diurético de alça IV na sobrecarga, em dose inicial — não substituído por mega-dose de furosemida no hipertenso com EAP flash",
+        "origem_secao": "Diurético de alça"
+      },
+      {
+        "id": "eap-ecg",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações na primeira hora; SCA e arritmia instável tratadas em paralelo, não depois da VNI",
+        "origem_secao": "O precipitante que a VNI não trata"
+      },
+      {
+        "id": "eap-mecanica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se sopro novo, choque desproporcional ou EAP alguns dias após IAM: POCUS para septo/papilar/parede livre, sem atrasar o cirurgião",
+        "origem_secao": "Complicação mecânica"
+      },
+      {
+        "id": "eap-fenotipo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fenótipo separado: hipertenso/quente segue nitrato+VNI; hipotenso/frio não recebe nitrato e entra na via de choque",
+        "origem_secao": "Dois fenótipos"
+      },
+      {
+        "id": "eap-nao-bb",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Betabloqueador não iniciado nem aumentado nesta hora de instabilidade",
+        "origem_secao": "SBC 2025 versus primeira hora instável"
+      }
+    ]
+  },
+  {
+    "slug": "checklist-reclassificacao-icfei-historica-esc-2026",
+    "condicao": "Reclassificação de paciente rotulado ICFEi / HFmrEF (FEVE 41–49%) após a ESC 2026",
+    "resumo": "Execução no ambulatório: confirmar a FEVE, a trajetória e os sintomas; aplicar FMT distinguindo ensaio de diretriz; não abrir CDI/TRC; registrar os dois rótulos; checar PCDT/SUS.",
+    "documento_origem": "icfei-historica-e-a-reclassificacao-esc-2026",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+      "McDonagh TA et al. Eur Heart J. 2021;42(36):3599-3726. PMID: 34447992.",
+      "McDonagh TA et al. Eur Heart J. 2023;44(37):3627-3639. PMID: 37622666.",
+      "Ministério da Saúde. PCDT ICFEr. Portaria Conjunta SAES/SECTICS/MS nº 10/2024."
+    ],
+    "itens": [
+      {
+        "id": "icfei-confirmar-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FEVE 41–49% confirmada em exame recente, preferencialmente pelo mesmo método do laudo que gerou o rótulo ICFEi",
+        "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+      },
+      {
+        "id": "icfei-sinais-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais e/ou sintomas atuais ou prévios de IC documentados — sem isso não há ICFEr 2026, apenas um número de FEVE",
+        "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+      },
+      {
+        "id": "icfei-trajetoria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Trajetória classificada: HFimpEF (prévia ≤40% que subiu), estável em 41–49%, ou queda a partir de ≥50%",
+        "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+      },
+      {
+        "id": "icfei-isglt2",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "iSGLT2 (dapagliflozina ou empagliflozina) em uso ou iniciado — ensaio usou FEVE >40%; já era Classe I A na ESC 2023",
+        "origem_secao": "Independente da FEVE"
+      },
+      {
+        "id": "icfei-mra",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "MRA em uso ou planejado (Classe I A independente da FEVE). Molécula em 41–49% (sMRA vs finerenona) marcada para revisão se ainda não definida",
+        "origem_secao": "Independente da FEVE"
+      },
+      {
+        "id": "icfei-bb-arni",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Betabloqueador e IECA/ARNI revisados como FMT da ICFEr 2026 por reclassificação, com o registro de que os RCTs clássicos usaram FEVE ≤40% e o PARAGON-HF (FEVE ≥45%) foi neutro",
+        "origem_secao": "Bloco ICFEr da Tabela 5"
+      },
+      {
+        "id": "icfei-nao-cdi-trc",
+        "categoria": "dispositivo",
+        "obrigatorio": true,
+        "texto": "CDI/TRC NÃO indicados só pelo novo rótulo ICFEr — corte permanece FEVE ≤35% após ≥3 meses de FMT (Tabelas 6 e 7)",
+        "origem_secao": "Dispositivos: a reclassificação não abre indicação"
+      },
+      {
+        "id": "icfei-amt-fatiada",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "AMT conferida pelos cortes que fatiam 41–49%: ivabradina ≤35% (fora); digoxina/hidralazina ≤40% (fora); vericiguat <45% (só 41–44%); semaglutida/tirzepatida ≥45% e IMC ≥30 (só 45–49% obeso)",
+        "origem_secao": "Terapias adicionais que não acompanham a reclassificação"
+      },
+      {
+        "id": "icfei-dois-rotulos",
+        "categoria": "documentacao",
+        "obrigatorio": true,
+        "texto": "Prontuário com os dois rótulos: histórico ICFEi/HFmrEF (ESC 2021/2023, SBC 2018/2021) e ICFEr ESC 2026, mais a trajetória",
+        "origem_secao": "O que escrever no prontuário"
+      },
+      {
+        "id": "icfei-pcdt-sus",
+        "categoria": "acesso",
+        "obrigatorio": true,
+        "texto": "Elegibilidade SUS conferida no PCDT 2024 (dapagliflozina FEVE <40%; sacubitril-valsartana FEVE ≤35%) — reclassificar o prontuário ESC não libera o fármaco",
+        "origem_secao": "O que o Brasil ainda usa"
+      },
+      {
+        "id": "icfei-hfimpef-nao-desescalonar",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Se a trajetória for HFimpEF: FMT mantida na maior dose tolerada (I C); retirada não feita só porque o rótulo antigo era ICFEi",
+        "origem_secao": "Primeiro passo: trajetória"
+      }
+    ]
+  },
+  {
+    "slug": "checklist-avaliacao-pre-listagem-transplante-cardiaco-adulto",
+    "condicao": "Avaliação pré-listagem de transplante cardíaco no adulto",
+    "resumo": "Checklist de execução para o cardiologista e o centro de IC avançada organizarem a peneira de listagem: gravidade, TCPE, escore de 1 ano, cateterismo direito, contraindicações de Classe III versus relativas, Chagas/TB/HIV quando couber, psicossocial e ponte para candidatura.",
+    "documento_origem": "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Mehra MR, Canter CE, Hannan MM, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+      "Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488",
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100"
+    ],
+    "itens": [
+      {
+        "id": "tx-list-sinal-avancada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinal de IC avançada ou de alto risco documentado (I NEED HELP ou regra dos três da ESC 2026, NYHA III-IV persistente, internamentos recorrentes, intolerância a GDMT, hipoperfusão ou caquexia) — sem exigir FEVE reduzida",
+        "origem_secao": "O que conta como IC avançada o bastante para discutir listagem"
+      },
+      {
+        "id": "tx-list-gdmt",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Terapia do fenótipo otimizada e máxima tolerada conferida, ou justificativa explícita de por que não foi possível (hipotensão, rim, choque) — listagem não substitui GDMT omitida sem motivo",
+        "origem_secao": "Encaminhar não é listar"
+      },
+      {
+        "id": "tx-list-urgencia-ino",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se inotrópico venoso contínuo, suporte mecânico temporário ou choque com recuperação neurológica: encaminhamento urgente ao centro, sem esperar TCPE ambulatorial",
+        "origem_secao": "Teste cardiopulmonar; fluxograma nó D2"
+      },
+      {
+        "id": "tx-list-tcpe",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No ambulatorial: TCPE máximo (RER >1,05 e limiar anaeróbico) com VO2 pico interpretado à luz do betabloqueador (≤12 com, ≤14 sem); em mulher ou <50 anos, considerar ≤50% do predito; se RER <1,05, registrar VE/VCO2; se IMC >30, considerar VO2 ajustado à massa magra",
+        "origem_secao": "Teste cardiopulmonar: os cortes que guiam a listagem"
+      },
+      {
+        "id": "tx-list-shfm",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "SHFM e/ou HFSS calculados junto ao TCPE no ambulatorial, sobretudo se VO2 entre 12 e 14 mL/kg/min; SHFM com sobrevida em 1 ano <80% ou HFSS médio/alto apoia listar, mas não lista sozinho",
+        "origem_secao": "Mortalidade em 1 ano"
+      },
+      {
+        "id": "tx-list-rhc",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Cateterismo direito realizado (ou agendado no centro) antes da listagem: PSAP, GTP, RVP, débito; desafio vasodilatador se PSAP ≥50 e (GTP ≥15 ou RVP >3) com PAS >85",
+        "origem_secao": "Hipertensão pulmonar: o que é irreversível de verdade"
+      },
+      {
+        "id": "tx-list-classe-iii",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Peneira de Classe III conferida: substância ativa inclusive álcool, não adesão reiterada, HCV/HBV com cirrose ou hipertensão portal ou CHC, comorbidade grave cujo prognóstico o enxerto não reverte, demência com incapacidade permanente de cooperar",
+        "origem_secao": "O que, na prática, impede a listagem"
+      },
+      {
+        "id": "tx-list-relativas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Relativas nomeadas com plano: idade >70, IMC ≥35, TFGe <30, diabetes com lesão de órgão-alvo ou HbA1c ≥7,5%, tabaco nos 6 meses, DAP/AVC sintomático grave, fragilidade, suporte social frágil — e se LVAD como ponte para candidatura cabe",
+        "origem_secao": "Idade, peso, rim, diabetes; Ponte para candidatura"
+      },
+      {
+        "id": "tx-list-chagas-infeccao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreio de Trypanosoma cruzi se nascimento ou tempo relevante na América Latina, mãe latino-americana ou hemoderivado não triado; rastreio de TB latente em todos; HIV, HBV e HCV conforme protocolo do centro",
+        "origem_secao": "Chagas; infecção"
+      },
+      {
+        "id": "tx-list-psico",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Avaliação psicossocial formal (consentimento, adesão, suporte domiciliar) concluída ou agendada antes da listagem — não improvisada no corredor",
+        "origem_secao": "Psicossocial é critério, não apêndice"
+      },
+      {
+        "id": "tx-list-oncologia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se neoplasia prévia: discussão com oncologia sobre risco de recidiva por tipo tumoral e resposta — sem quarentena arbitrária de tempo",
+        "origem_secao": "Neoplasia prévia"
+      },
+      {
+        "id": "tx-list-paliativo",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se não candidato a transplante nem a LVAD, ou em paralelo a qualquer estratégia: planejamento antecipado e equipe de cuidados paliativos discutidos, não deixados para o 'não há mais o que fazer'",
+        "origem_secao": "ESC 2026 seção 8; o que a árvore não mostra"
+      }
+    ]
+  },
+  {
+    "slug": "prescricao-fitt-exercicio-prevencao-primaria-adulto-nao-atleta",
+    "condicao": "Prescrição FITT de exercício em prevenção primária no adulto não atleta",
+    "resumo": "Itens mínimos para sair da consulta com volume, intensidade, resistido, tempo sedentário e progressão escritos — sem copiar reabilitação cardíaca nem triagem de atleta.",
+    "documento_origem": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+    "theme": "Prevenção e lipídios",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350.",
+      "Arnett DK et al. Circulation. 2019;140(11):e596-e646. PMID: 30879355.",
+      "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID: 34458905. Seção 4.3.1.1 (FITT e progressão)."
+    ],
+    "itens": [
+      {
+        "id": "pp-confirmou-prevencao-primaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que não há doença aterosclerótica estabelecida, revascularização, IC ou evento prévio — se houver, esta checklist não se aplica; usar reabilitação/prevenção secundária",
+        "origem_secao": "Abertura — o que este documento não é"
+      },
+      {
+        "id": "pp-nao-e-atleta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a demanda não é esporte competitivo nem elegibilidade de atleta — se for, sair para Cardiologia do Esporte",
+        "origem_secao": "O que não misturar"
+      },
+      {
+        "id": "pp-aconselhamento-registrado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Aconselhamento de estilo de vida fisicamente ativo registrado nesta visita (ACC/AHA 2019, Classe I B-R), não deixado como 'se der'",
+        "origem_secao": "Por que prescrever"
+      },
+      {
+        "id": "pp-volume-aerobico",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Volume aeróbico prescrito em minutos/semana: alvo de benefício substancial 150–300 min de moderado ou 75–150 min de vigoroso, ou combinação equivalente (OMS 2020). Piso ACC/AHA 2019: ≥150 / ≥75",
+        "origem_secao": "O que escrever no plano: volume"
+      },
+      {
+        "id": "pp-abaixo-do-minimo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Se o paciente não atinge 150/75 min, registrado que alguma atividade moderada ou vigorosa ainda vale (ACC/AHA IIa B-NR; OMS: alguma atividade é melhor do que nenhuma) — não dispensar o sedentário por 'não vai cumprir a meta'",
+        "origem_secao": "O que escrever no plano: volume"
+      },
+      {
+        "id": "pp-intensidade-mets",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Intensidade traduzida em exemplo concreto (moderado = 3,0–5,9 METs, ex. caminhada rápida; vigoroso ≥6 METs) — não só o adjetivo 'moderado'",
+        "origem_secao": "Intensidade: o que é moderado e o que é vigoroso"
+      },
+      {
+        "id": "pp-resistido",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Exercício resistido prescrito em 2 ou mais dias por semana, grandes grupos musculares (OMS 2020). No descondicionado, começar com menos séries e carga menor",
+        "origem_secao": "Exercício resistido"
+      },
+      {
+        "id": "pp-sedentario",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Orientação para limitar tempo sentado e substituir por atividade de qualquer intensidade, inclusive leve — sem inventar um corte de horas que a OMS 2020 declara inexistente",
+        "origem_secao": "Tempo sedentário"
+      },
+      {
+        "id": "pp-idoso-equilibrio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se ≥65 anos: além do aeróbico e do resistido, atividade multicomponente com equilíbrio e força em 3 ou mais dias por semana (OMS 2020)",
+        "origem_secao": "Idoso em prevenção primária"
+      },
+      {
+        "id": "pp-progressao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Progressão escrita: sedentário aumenta volume primeiro, depois intensidade; não saltar de zero para vigoroso (ESC 2021 seção 4.3.1)",
+        "origem_secao": "Como escrever a prescrição (FITT + progressão)"
+      },
+      {
+        "id": "pp-nao-confundir-passos",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se o paciente mede passos: usar como volume da vida diária, sem substituir a prescrição estruturada nem repetir a meta comercial de 10 mil",
+        "origem_secao": "O que não misturar"
+      }
+    ]
+  },
+  {
+    "slug": "avaliacao-pre-participacao-exercicio-adulto-assintomatico-nao-atleta-acsm-2015",
+    "condicao": "Avaliação pré-participação de exercício no adulto assintomático não atleta",
+    "resumo": "Três eixos do algoritmo ACSM 2015 — atividade atual, sintomas ou doença CV/metabólica/renal, intensidade pretendida — com saídas explícitas para reabilitação e para cardiologia do esporte.",
+    "documento_origem": "fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico",
+    "theme": "Prevenção e lipídios",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+      "Whitfield GP et al. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860.",
+      "Précoma DB et al. Arq Bras Cardiol. 2019;113(4):787-891. PMID: 31691761. Capítulo 8."
+    ],
+    "itens": [
+      {
+        "id": "pre-nao-e-secundaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Doença aterosclerótica estabelecida, revascularização, IC ou evento prévio ausentes — se presentes, sair para reabilitação/prevenção secundária",
+        "origem_secao": "Árvore de decisão (ramo C0)"
+      },
+      {
+        "id": "pre-nao-e-atleta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Demanda não é esporte competitivo, atleta master de alto volume nem retorno ao esporte após diagnóstico — se for, sair para Cardiologia do Esporte",
+        "origem_secao": "Árvore de decisão (ramo C00)"
+      },
+      {
+        "id": "pre-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lista ACSM de sintomas sugestivos conferida (dor torácica ou equivalente, dispneia em repouso ou esforço leve, síncope/tontura, ortopneia/DPEN, edema de tornozelo, palpitação, claudicação, sopro conhecido, fadiga/dispneia desproporcional). Qualquer item positivo: não iniciar ou interromper, avaliar antes de qualquer intensidade",
+        "origem_secao": "Lista operacional de sintomas"
+      },
+      {
+        "id": "pre-exercicio-regular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exercício regular classificado pelo critério ACSM (últimos 3 meses, ≥30 min, ≥3 dias/semana, intensidade moderada) — não por autopercepção ('eu me acho ativo')",
+        "origem_secao": "Definição de 'já treina'"
+      },
+      {
+        "id": "pre-doenca-conhecida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Doença cardiovascular, metabólica ou renal conhecida pesquisada (inclui diabetes tipo 1 ou 2 e DRC). Pneumopatia isolada não dispara encaminhamento automático no algoritmo 2015. Fatores de risco isolados (hipertensão, dislipidemia, idade) não reintroduzem a contagem antiga",
+        "origem_secao": "O que a árvore não é"
+      },
+      {
+        "id": "pre-intensidade-pretendida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Intensidade pretendida classificada (leve/moderada vs. vigorosa). Quem já treina, tem doença conhecida e quer vigoroso precisa de liberação antes de subir a intensidade",
+        "origem_secao": "Árvore de decisão (ramos C5/C6)"
+      },
+      {
+        "id": "pre-sedentario-sem-doenca",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se sedentário, assintomático e sem doença conhecida: autorizado início leve a moderado sem liberação adicional, com progressão — não transformar isso em pedido automático de teste ergométrico",
+        "origem_secao": "Como usar a árvore sem transformá-la em barreira"
+      },
+      {
+        "id": "pre-sedentario-com-doenca",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se sedentário assintomático com doença conhecida: liberação médica antes de qualquer intensidade; depois começar leve a moderado",
+        "origem_secao": "Árvore de decisão (ramo C3)"
+      },
+      {
+        "id": "pre-ecg-brasileiro",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No contexto SBC 2019, anamnese e exame físico desta consulta já feitos; ECG de consultório, se solicitado, não foi usado como pedágio para caminhada nem confundido com triagem de atleta. Teste ergométrico/TCPE só se indicação individualizada",
+        "origem_secao": "Como usar a árvore sem transformá-la em barreira"
+      },
+      {
+        "id": "pre-prescricao-depois",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Depois da árvore, a prescrição (volume, resistido, sedentário, progressão) foi escrita — triagem sem prescrição não completa a consulta",
+        "origem_secao": "Depois da árvore"
+      }
+    ]
+  },
+  {
+    "slug": "inicio-de-isglt2-na-drc-portas-dapa-ckd-empa-kidney-e-flow",
+    "condicao": "Início de iSGLT2 (e decisão sobre semaglutida 1,0 mg) na doença renal crônica — portas DAPA-CKD, EMPA-KIDNEY e FLOW",
+    "resumo": "O que conferir antes de iniciar dapagliflozina ou empagliflozina na DRC e, se houver diabetes tipo 2 com albuminúria, se a porta FLOW de semaglutida 1,0 mg também está aberta. Derivado dos três ensaios e da KDIGO 2024, sem reescrever os cards de cada trial.",
+    "documento_origem": "sglt2-na-doenca-renal-cronica-dapa-ckd-empa-kidney-e-flow",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Heerspink HJL et al.; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383(15):1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396",
+      "The EMPA-KIDNEY Collaborative Group. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388(2):117-127. DOI: 10.1056/NEJMoa2204233. PMID: 36331190",
+      "Perkovic V et al.; FLOW Trial Committees and Investigators. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209",
+      "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803"
+    ],
+    "itens": [
+      {
+        "id": "drc-sglt2-tfg-rac-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "TFGe e relação albumina/creatinina urinária documentadas antes de iniciar — creatinina isolada não define a porta",
+        "origem_secao": "As três portas, lado a lado"
+      },
+      {
+        "id": "drc-sglt2-sraa-base",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "IECA ou BRA em dose máxima tolerada já em uso ou iniciado em paralelo — os três ensaios foram feitos sobre bloqueio do SRAA, não no lugar dele",
+        "origem_secao": "Para que serve este protocolo"
+      },
+      {
+        "id": "drc-sglt2-piso-iniciar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "TFGe ≥20 mL/min/1,73 m² para iniciar iSGLT2 (piso do EMPA-KIDNEY e KDIGO 3.7.1/3.7.2). Abaixo de 20: não iniciar por estes ensaios",
+        "origem_secao": "Iniciar, continuar, não suspender"
+      },
+      {
+        "id": "drc-sglt2-porta-albuminurica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se TFGe ≥25 e RAC ≥200 mg/g, com ou sem diabetes: porta DAPA-CKD e EMPA-KIDNEY aberta — dapagliflozina 10 mg ou empagliflozina 10 mg (KDIGO 3.7.2, GRADE 1A)",
+        "origem_secao": "Conduta por fenótipo / 1"
+      },
+      {
+        "id": "drc-sglt2-porta-empa-larga",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se TFGe 20 a <25, ou TFGe 20–45 com RAC <200, sem caber no DAPA-CKD: porta EMPA-KIDNEY — empagliflozina 10 mg; KDIGO 3.7.3 é GRADE 2B se RAC <200. Não prometer redução de mortalidade",
+        "origem_secao": "Conduta por fenótipo / 2"
+      },
+      {
+        "id": "drc-sglt2-nao-restringir-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de iSGLT2 na DRC NÃO condicionada à presença de diabetes — DAPA-CKD e EMPA-KIDNEY randomizaram com e sem diabetes",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "drc-sglt2-porta-flow",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se diabetes tipo 2 e porta FLOW (TFGe 25–75 com RAC elevada): semaglutida 1,0 mg semanal considerada em adição ao iSGLT2, não no lugar dele, e não confundir com a dose 2,4 mg do SELECT",
+        "origem_secao": "Conduta por fenótipo / 3 e 4"
+      },
+      {
+        "id": "drc-sglt2-queda-inicial",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Queda inicial de TFGe após o início reconhecida como efeito hemodinâmico esperado — não suspender só por isso (KDIGO practice point 3.7.3)",
+        "origem_secao": "Iniciar, continuar, não suspender"
+      },
+      {
+        "id": "drc-sglt2-continuar-abaixo-20",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a TFGe cair abaixo de 20 sob uso já estabelecido: considerar manter o iSGLT2 se tolerado, salvo início de terapia renal substitutiva (KDIGO 3.7.1 practice point; ESC 2026 IIa C)",
+        "origem_secao": "Iniciar, continuar, não suspender"
+      },
+      {
+        "id": "drc-sglt2-sick-day-perioperatorio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a pausar o iSGLT2 em jejum prolongado, doença aguda com baixa ingesta ou cirurgia eletiva (3 dias para dapagliflozina/empagliflozina) pelo risco de cetoacidose euglicêmica — glicemia normal não afasta o diagnóstico",
+        "origem_secao": "Iniciar, continuar, não suspender"
+      }
+    ]
   }
 ]

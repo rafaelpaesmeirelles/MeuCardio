@@ -1,0 +1,241 @@
+{
+  "lote": "hf-incretina",
+  "branch": "grok/science-overnight-20260829",
+  "created": "2026-08-29",
+  "review_status": "pendente_revisao",
+  "notas": "Lote novo. Não edita o STEP-HFpEF já publicado nem o SUMMIT do tema Diabetes e cardiologia. Números do SUMMIT restritos ao abstract PubMed PMID 39555826. Classe/nível ESC 2026 conferidos na Recommendation Table 18 (DOI 10.1093/eurheartj/ehag100): semaglutida ou tirzepatida IIa B1 para peso, exercício e QoL — não para mortalidade.",
+  "documentos": [
+    {
+      "path": "content/Insuficiência_cardíaca/summit-tirzepatida-icfep-com-obesidade.md",
+      "slug": "summit-tirzepatida-icfep-com-obesidade",
+      "kind": "estudo",
+      "theme": "Insuficiência cardíaca"
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/agonistas-incretina-na-icfep-com-obesidade-step-e-summit.md",
+      "slug": "agonistas-incretina-na-icfep-com-obesidade-step-e-summit",
+      "kind": "protocolo",
+      "theme": "Insuficiência cardíaca"
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "summit-tirzepatida-icfep-com-obesidade",
+      "title": "Tirzepatida na ICFEp com Obesidade: o Ensaio SUMMIT",
+      "study_type": "ensaio_clinico",
+      "authors": "Packer M, Zile MR, Kramer CM, Baum SJ, Litwin SE, Menon V, Ge J, Weerakkody GJ, Ou Y, Bunck MC, Hurt KC, Murakami M, Borlaug BA; SUMMIT Trial Study Group.",
+      "journal": "New England Journal of Medicine",
+      "year": 2025,
+      "doi": "10.1056/NEJMoa2410027",
+      "pmid": "39555826",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39555826/",
+      "summary": "Ensaio internacional, duplo-cego, randomizado, controlado por placebo. 731 pacientes com IC, FEVE ≥50% e IMC ≥30 kg/m², randomizados 1:1 (364 vs. 367) para tirzepatida (até 15 mg subcutânea semanal) ou placebo por pelo menos 52 semanas; seguimento mediano de 104 semanas. Dois desfechos primários: composto de morte cardiovascular adjudicada ou evento de piora da IC (tempo até o primeiro evento) e variação do KCCQ-CSS até 52 semanas. Números restritos ao abstract PubMed. NCT04847557. Financiamento: Eli Lilly.",
+      "key_findings": "Composto primário: 36/364 (9,9%) vs. 56/367 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). Piora da IC: 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). Morte CV adjudicada: 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83) — numericamente pior no braço ativo, IC que cruza 1. KCCQ-CSS: +19,5±1,2 vs. +12,7±1,3, diferença 6,9 (IC95% 3,3-10,6; p<0,001). Descontinuação por evento adverso (sobretudo GI): 6,3% vs. 1,4%. O abstract não reporta peso nem caminhada de 6 minutos.",
+      "clinical_implications": "O SUMMIT demonstra menor risco do COMPOSTO de morte cardiovascular ou piora da IC, puxado pela piora da IC, e melhora do estado de saúde (KCCQ). Não demonstra redução de mortalidade cardiovascular. Na ESC 2026 a classe (semaglutida ou tirzepatida) entra como AMT IIa B1 para peso, exercício e QoL em IC sintomática com FEVE ≥45% e IMC ≥30, independente de diabetes — não como FMT e não como redução de morte. Não substitui iSGLT2.",
+      "limitations": "Morte CV isolada sem significância e numericamente na direção oposta (8 vs. 5). Sem comparação direta com semaglutida. População restrita a FEVE ≥50% e IMC ≥30. Abstract do artigo principal não traz peso nem 6MWT. Não extrapolar para ICFEr nem para ICFEp sem obesidade.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "summit",
+        "tirzepatida",
+        "icfep",
+        "obesidade",
+        "agonista duplo gip/glp-1",
+        "incretina"
+      ],
+      "document_slug": "summit-tirzepatida-icfep-com-obesidade",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "semaglutida-ou-tirzepatida-ic-sintomatica-feve-45-imc-30-esc-2026",
+      "statement": "Semaglutida ou tirzepatida devem ser consideradas em pacientes com IC sintomática, FEVE ≥45% e IMC ≥30 kg/m², independentemente da presença de diabetes, para reduzir peso corporal e melhorar capacidade de exercício e qualidade de vida.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B1",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18 (Recommendations for obesity in patients with heart failure).",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "semaglutida",
+        "tirzepatida",
+        "icfep",
+        "obesidade",
+        "incretina",
+        "esc 2026"
+      ],
+      "document_slug": "agonistas-incretina-na-icfep-com-obesidade-step-e-summit",
+      "review_status": "pendente_revisao",
+      "published": false,
+      "notas": "Classe IIa e nível B1 conferidos na Recommendation Table 18 visível no original ESC 2026 (DOI 10.1093/eurheartj/ehag100). A indicação da tabela é peso, exercício e QoL — não mortalidade nem hospitalização como FMT. O SUMMIT entrou com FEVE ≥50%; o corte ≥45% é da diretriz."
+    }
+  ],
+  "casos": [
+    {
+      "slug": "icfep-com-obesidade-tirzepatida-summit-composto-nao-mortalidade",
+      "titulo": "ICFEp com obesidade: o que o SUMMIT demonstra — e o que o composto não autoriza a dizer",
+      "tema": "Insuficiência cardíaca",
+      "nivel": "avançado",
+      "enunciado": "Homem, 68 anos, ICFEp com FEVE 55%, IMC 34 kg/m², sem diabetes. Já usa dapagliflozina, está euvolêmico e segue limitado por dispneia aos pequenos esforços. O residente quer iniciar tirzepatida e diz à equipe que o SUMMIT 'reduziu mortalidade cardiovascular nesta população'.",
+      "pergunta": "Qual afirmação corresponde ao que o abstract do SUMMIT (Packer et al., N Engl J Med. 2025; PMID 39555826) realmente demonstra?",
+      "opcoes": [
+        "Tirzepatida reduziu mortalidade cardiovascular isolada (8 vs. 5 mortes não chegam; o HR isolado foi 0,62)",
+        "Tirzepatida reduziu o composto de morte cardiovascular adjudicada ou piora da IC (9,9% vs. 15,3%; HR 0,62), puxado pela piora da IC; a morte CV isolada foi 8 vs. 5 (HR 1,58; IC95% 0,52-4,83) e não autoriza a frase do residente",
+        "Tirzepatida e semaglutida são intercambiáveis nesta frase, porque o STEP-HFpEF teve o mesmo primário de morte ou piora da IC",
+        "O benefício exige diabetes tipo 2; sem diabetes a tirzepatida não tem evidência nesta indicação"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O SUMMIT randomizou 731 pacientes (364 vs. 367) com IC, FEVE ≥50% e IMC ≥30 kg/m² para tirzepatida até 15 mg semanal ou placebo, seguimento mediano de 104 semanas. O desfecho composto primário — morte por causas cardiovasculares adjudicada ou evento de piora da IC — ocorreu em 36 pacientes (9,9%) vs. 56 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). A piora da IC isolada foi 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). A morte CV isolada foi 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83): poucos eventos, intervalo que cruza 1, numericamente na direção oposta. O KCCQ-CSS melhorou (diferença 6,9 pontos; IC95% 3,3-10,6; p<0,001). A ESC 2026 considera semaglutida ou tirzepatida (IIa B1) para peso, exercício e QoL em IC sintomática com FEVE ≥45% e IMC ≥30, independente de diabetes — o residente erra o desfecho, não a elegibilidade. O STEP-HFpEF não teve esse composto como primário (coprimários: KCCQ e peso). iSGLT2 não se retira.",
+      "source_refs": [
+        "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "inicio-de-incretina-na-icfep-com-obesidade-step-summit",
+      "condicao": "Início de semaglutida ou tirzepatida na ICFEp com obesidade",
+      "resumo": "O que confirmar antes de iniciar incretina no fenótipo ICFEp + obesidade: diagnóstico, IMC, FEVE, FMT já em curso, o que cada ensaio permite prometer, e o que a ESC 2026 (IIa B1) de fato indica — peso, exercício e QoL, não mortalidade.",
+      "documento_origem": "agonistas-incretina-na-icfep-com-obesidade-step-e-summit",
+      "theme": "Insuficiência cardíaca",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681",
+        "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."
+      ],
+      "itens": [
+        {
+          "id": "incretina-icfep-diagnostico-objetivo",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Diagnóstico de insuficiência cardíaca confirmado por sintomas/sinais e evidência objetiva — a dispneia da obesidade isolada não replica a população do STEP-HFpEF nem do SUMMIT",
+          "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+        },
+        {
+          "id": "incretina-icfep-imc-30",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "IMC ≥ 30 kg/m² documentado: critério de entrada dos dois ensaios e da Recommendation Table 18 da ESC 2026; não extrapolar para ICFEp sem obesidade",
+          "origem_secao": "O que cada ensaio perguntou / Como a esc 2026 posiciona a classe"
+        },
+        {
+          "id": "incretina-icfep-feve",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "FEVE conferida: ESC 2026 indica a classe com FEVE ≥45%; o SUMMIT entrou com FEVE ≥50%. Aplicar entre 45% e 49% é síntese da diretriz, não resultado do SUMMIT. ICFEr fica fora — a própria ESC pede RCT dedicado",
+          "origem_secao": "Como a esc 2026 posiciona a classe / Dois desalinhamentos de corte"
+        },
+        {
+          "id": "incretina-icfep-fmt-sglt2",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "iSGLT2 já iniciado ou contraindição explícita registrada — incretina é AMT (IIa B1), não substitui a terapia fundacional nem o diurético da congestão",
+          "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+        },
+        {
+          "id": "incretina-icfep-diabetes-nao-obrigatorio",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Presença ou ausência de diabetes tipo 2 registrada, sem usá-la como trava: a ESC 2026 diz regardless of diabetes status. Não confundir o STEP-HFpEF original com o STEP-HFpEF DM (braço só com diabetes, outro documento)",
+          "origem_secao": "Como escolher a molecula na ausencia de ensaio direto"
+        },
+        {
+          "id": "incretina-icfep-promessa-alinhada-ao-ensaio",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Consentimento alinhado ao ensaio da molécula escolhida: semaglutida/STEP — sintomas, limitação física, exercício e peso (não morte nem internação). Tirzepatida/SUMMIT — composto de morte CV ou piora da IC (9,9% vs. 15,3%; HR 0,62), puxado pela piora; morte CV isolada 8 vs. 5, sem redução demonstrada. ESC IIa B1 verbalizada como peso, exercício e QoL",
+          "origem_secao": "O que dizer — e o que nao dizer / O composto nao e reducao de mortalidade"
+        },
+        {
+          "id": "incretina-icfep-gi-descontinuacao",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Paciente orientado sobre eventos gastrointestinais e descontinuação: no SUMMIT, 6,3% vs. 1,4% pararam o fármaco por evento adverso (sobretudo GI). Titulação semana a semana segue o rótulo — não está nos abstracts; VERIFICAÇÃO HUMANA NECESSÁRIA se for prescrita neste ato",
+          "origem_secao": "Resultados / Como escolher a molecula na ausencia de ensaio direto"
+        },
+        {
+          "id": "incretina-icfep-retorno",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Retorno agendado para tolerabilidade, peso, sintomas de IC e sinais de piora (dispneia, edema, ganho ponderal súbito). Incretina não substitui o plano de descompensação",
+          "origem_secao": "Sequencia pratica — nao e algoritmo de substituicao"
+        },
+        {
+          "id": "incretina-icfep-perioperatorio",
+          "categoria": "comunicacao",
+          "obrigatorio": false,
+          "texto": "Se houver procedimento com sedação ou anestesia no horizonte, registrar o uso de agonista de GLP-1/GIP-GLP-1 pelo atraso do esvaziamento gástrico — ver o documento perioperatório já desta base; não está no abstract do STEP nem do SUMMIT",
+          "origem_secao": "Como escolher a molecula na ausencia de ensaio direto"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "icfep-e-obesidade-semaglutida-e-tirzepatida-o-que-esperar",
+      "titulo": "Insuficiência cardíaca com fração preservada e obesidade: semaglutida e tirzepatida",
+      "subtitulo": "O que esses remédios semanais fazem — e o que os estudos não provaram",
+      "tema": "Insuficiência cardíaca",
+      "documento_slug": "agonistas-incretina-na-icfep-com-obesidade-step-e-summit",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação em linguagem simples para quem tem insuficiência cardíaca com fração de ejeção preservada e obesidade: o que o estudo da semaglutida mostrou sobre sintomas e peso, o que o estudo da tirzepatida mostrou sobre piora da insuficiência cardíaca, e por que nenhum dos dois autoriza a frase 'esse remédio reduz morte'.",
+      "secoes": [
+        {
+          "titulo": "Por que o peso entra no tratamento do coração",
+          "paragrafos": [
+            "Uma parte das pessoas com insuficiência cardíaca tem a fração de ejeção preservada: o coração não 'esvazia pouco', mas tem dificuldade para relaxar e encher. Quando há obesidade junto, os sintomas — falta de ar, cansaço, limite para andar — costumam ser mais intensos.",
+            "Semaglutida e tirzepatida são injeções de uma vez por semana da família das incretinas. Elas não substituem o remédio da classe dos inibidores de SGLT2, que continua sendo base do tratamento da insuficiência cardíaca, nem o diurético usado quando há inchaço."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo da semaglutida mostrou",
+          "paragrafos": [
+            "No estudo STEP-HFpEF, 529 pessoas com essa forma de insuficiência cardíaca e índice de massa corporal de 30 ou mais usaram semaglutida 2,4 mg por semana ou um placebo, durante 52 semanas.",
+            "Quem usou o remédio teve menos sintomas e menos limitação no dia a dia, perdeu mais peso e andou mais no teste de 6 minutos do que quem usou placebo. O estudo não foi feito para provar que o remédio diminui morte ou internação."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo da tirzepatida mostrou",
+          "paragrafos": [
+            "No estudo SUMMIT, 731 pessoas com fração de ejeção de pelo menos 50% e obesidade usaram tirzepatida (até 15 mg por semana) ou placebo, com acompanhamento mediano de cerca de dois anos.",
+            "O remédio diminuiu um conjunto de dois problemas somados: morrer por causa do coração ou piorar da insuficiência cardíaca. A redução veio principalmente de menos piora da insuficiência cardíaca, não de menos mortes. As mortes por causa do coração foram 8 com o remédio e 5 com o placebo — número pequeno, sem diferença comprovada. Também melhorou a qualidade de vida medida por um questionário de sintomas."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que a diretriz europeia de 2026 diz",
+          "paragrafos": [
+            "A diretriz da Sociedade Europeia de Cardiologia considera semaglutida ou tirzepatida para pessoas com insuficiência cardíaca sintomática, fração de ejeção de 45% ou mais e índice de massa corporal de 30 ou mais, com ou sem diabetes, para ajudar a perder peso e melhorar a capacidade de se exercitar e a qualidade de vida.",
+            "Isso não significa que o remédio seja obrigatório para todo mundo com insuficiência cardíaca, nem que ele substitua os outros tratamentos. Náusea, vômito e diarreia são os efeitos mais comuns; no SUMMIT, 6 em cada 100 pessoas pararam o remédio por efeito colateral, contra cerca de 1 em cada 100 no placebo."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Falta de ar que piora, inchaço novo nas pernas ou ganho rápido de peso — avise a equipe; o remédio da incretina não substitui o plano de piora da insuficiência cardíaca",
+        "Vômitos que não param, boca seca, tontura ou urina muito escassa — risco de desidratação",
+        "Dor forte na barriga, principalmente irradiando para as costas",
+        "Inchaço de lábios, língua ou rosto, ou falta de ar súbita — procure atendimento imediato"
+      ],
+      "perguntas": [
+        "No meu caso, o objetivo é melhorar sintomas e peso, reduzir piora da insuficiência cardíaca, ou os dois?",
+        "Eu continuo com o inibidor de SGLT2 e com o diurético?",
+        "Esse remédio reduz o risco de eu morrer, ou isso ainda não foi comprovado?",
+        "O que eu faço se o enjoo for forte nas primeiras semanas?",
+        "Preciso ter diabetes para usar?"
+      ],
+      "fontes": [
+        "Kosiborod MN, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity (STEP-HFpEF). N Engl J Med. 2023;389(12):1069-1084. PMID: 37622681.",
+        "Packer M, et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity (SUMMIT). N Engl J Med. 2025;392(5):427-437. PMID: 39555826.",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."
+      ]
+    }
+  ]
+}

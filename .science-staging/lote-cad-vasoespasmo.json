@@ -1,0 +1,396 @@
+{
+  "lote": "cad-vasoespasmo",
+  "created": "2026-08-29",
+  "review_status": "pendente_revisao",
+  "escopo": "Endótipo de espasmo epicárdico (angina vasoespástica / COVADIS). Não cobre cocaína, fluoropirimidina, MINOCA/SCAD como verbete, nem o protocolo geral de ANOCA/INOCA.",
+  "documentos": [
+    "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+    "fluxograma-angina-vasoespastica-teste-provocativo-e-tratamento"
+  ],
+  "evidencias": [
+    {
+      "slug": "cft-invasivo-disponivel-na-angiografia-quando-mecanismo-da-dor-incerto-esc-2024",
+      "statement": "Em pacientes com diagnóstico incerto após teste não invasivo, a angiografia coronariana invasiva com disponibilidade de avaliação funcional invasiva (CFT) no mesmo procedimento é recomendada para confirmar ou excluir doença arterial coronariana obstrutiva ou ANOCA/INOCA — e, nesse contexto, para caracterizar o endótipo vasomotor (espasmo epicárdico versus microvascular) quando essa for a hipótese em jogo.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2024,
+      "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+      "reference": "Vrints C, Andreotti F, Koskinas KC, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Classe I Nível B conferida contra o documento já revisado anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024 (seções 5.2.5) e contra o resumo de Reynolds HR et al., Eur Heart J. 2025 (PMID: 39820976), que descreve a nova recomendação Classe I da CFT no momento da angiografia inicial quando o mecanismo da dor permanece incerto após teste não invasivo.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "angina vasoespástica",
+        "ANOCA",
+        "INOCA",
+        "teste funcional invasivo",
+        "acetilcolina",
+        "COVADIS",
+        "ESC 2024"
+      ],
+      "document_slug": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "cft-invasivo-anoca-inoca-sintomas-persistentes-qualidade-vida-esc-2024",
+      "statement": "Em pacientes com ANOCA/INOCA já estabelecida, sintomas persistentes e má qualidade de vida apesar da terapia médica, a avaliação funcional coronariana invasiva é recomendada para identificar o endótipo (incluindo espasmo epicárdico versus microvascular) e orientar o tratamento pelo mecanismo.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2024,
+      "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+      "reference": "Vrints C, Andreotti F, Koskinas KC, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Classe I Nível B conferida contra o documento já revisado anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024 e contra Reynolds HR et al., Eur Heart J. 2025 (PMID: 39820976), que descreve a Classe I da CFT em INOCA/ANOCA estabelecida com sintomas persistentes e má qualidade de vida apesar da terapia médica.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "angina vasoespástica",
+        "ANOCA",
+        "INOCA",
+        "teste funcional invasivo",
+        "tratamento por endótipo",
+        "ESC 2024"
+      ],
+      "document_slug": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "covadis-criterios-diagnosticos-angina-vasoespastica-2017",
+      "title": "COVADIS 2017 — padronização internacional dos critérios diagnósticos de angina vasoespástica",
+      "study_type": "consenso",
+      "authors": "Beltrame JF, Crea F, Kaski JC, Ogawa H, Ong P, Sechtem U, Shimokawa H, Bairey Merz CN; Coronary Vasomotor Disorders International Study Group (COVADIS)",
+      "journal": "European Heart Journal",
+      "year": 2017,
+      "doi": "10.1093/eurheartj/ehv351",
+      "pmid": "26245334",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26245334/",
+      "summary": "Documento de consenso do Coronary Vasomotor Disorders International Study Group padronizando os critérios diagnósticos internacionais de angina vasoespástica (espasmo epicárdico), com distinção entre diagnóstico definitivo e suspeito e com limiar angiográfico de constrição >90% para documentar o espasmo, espontâneo ou após estímulo provocativo (acetilcolina, ergot ou hiperventilação).",
+      "key_findings": "Três elementos diagnósticos: (1) angina responsiva a nitrato no episódio espontâneo, com pelo menos uma característica (repouso sobretudo noturno/madrugada; variação diurna da tolerância ao esforço; precipitação por hiperventilação; supressão por antagonista de cálcio e não por betabloqueador); (2) alteração isquêmica transitória de ECG no episódio espontâneo em ≥2 derivações contíguas (ST ≥0,1 mV para cima ou para baixo, ou ondas U negativas novas); (3) espasmo coronariano = oclusão transitória total ou subtotal (>90% de constrição) com angina e ECG isquêmico, espontâneo ou provocado. VSA definitiva: elemento 1 + elemento 2 ou 3. VSA suspeita: elemento 1 presente, mas ECG e critério de espasmo equívocos ou indisponíveis. O consenso do simpósio fixou >90% como limiar angiográfico de espasmo induzível.",
+      "clinical_implications": "É o critério diagnóstico vigente citado pela ESC 2024 CCS na leitura do teste de acetilcolina. Os três critérios do teste (dor habitual + ECG isquêmico + constrição epicárdica >90%) definem espasmo epicárdico; dor + ECG sem a constrição >90% aponta para espasmo microvascular (consenso COVADIS de 2018, PMID 29031990) — endótipos que não compartilham a mesma primeira linha. Permite diagnóstico definitivo sem cateterismo quando o episódio espontâneo é capturado no ECG.",
+      "limitations": "É consenso de especialistas, não ensaio randomizado nem diretriz com Classe/Nível. Não valida, por si, o protocolo de dose de acetilcolina nem o tratamento (antagonista de cálcio). O limiar >90% não deve ser misturado com o corte ≥75% usado na coorte ACOVA (PMID 22322081), anterior a esta padronização.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "COVADIS",
+        "angina vasoespástica",
+        "Prinzmetal",
+        "espasmo epicárdico",
+        "acetilcolina",
+        "consenso"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "angina-noturna-coronarias-livres-espasmo-epicardico-covadis",
+      "titulo": "Angina de madrugada com coronárias livres: espasmo epicárdico ou microvascular?",
+      "tema": "Doença coronariana",
+      "nivel": "avançado",
+      "enunciado": "Homem, 48 anos, tabagista ativo, hipertenso. Relata há três meses episódios de dor torácica em aperto, em repouso, entre 3h e 5h da manhã, com duração de 5 a 10 minutos, que cedem minutos após nitrato sublingual. Esforço diurno é bem tolerado. Nega uso de cocaína e não está em quimioterapia. ECG de consultório em período assintomático é normal. Angiografia sem lesão obstrutiva. No mesmo procedimento, teste de acetilcolina reproduz a dor habitual, eleva o ST de V1 a V4 e reduz o calibre do terço médio da descendente anterior em 95%; nitrato intracoronariano devolve calibre, ST e sintoma.",
+      "pergunta": "Qual a leitura COVADIS do teste e a conduta de primeira linha deste endótipo?",
+      "opcoes": [
+        "Espasmo microvascular — faltou oclusão total (100%), então o tratamento é IECA e ranolazina, como na disfunção microvascular estrutural",
+        "Espasmo epicárdico — os três critérios do teste estão presentes (dor habitual, ECG isquêmico e constrição >90%); antagonista de canal de cálcio como base, cessar tabagismo, e não iniciar betabloqueador como antianginoso deste endótipo",
+        "Teste positivo para doença obstrutiva oculta — stentear a descendente anterior no mesmo procedimento, porque 95% de redução de calibre equivale a lesão fixa",
+        "VSA apenas suspeita, porque o ECG espontâneo de madrugada nunca foi documentado; o teste provocativo sozinho não fecha diagnóstico e não autoriza tratamento"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O consenso COVADIS (Beltrame et al., Eur Heart J. 2017, PMID 26245334) define o teste provocativo positivo para espasmo EPICÁRDICO quando os três elementos ocorrem juntos: reprodução da dor habitual, alteração isquêmica de ECG e constrição >90% do vaso epicárdico. Aqui os três estão presentes (95% na DA, dor reproduzida, supra transitório) e revertem com nitrato intracoronariano — não é lesão fixa, e stentear o segmento que só espasma não trata o endótipo. Constrição >90% (não 100%) já cumpre o limiar de 2017; exigir oclusão total mistura o critério com outra definição. A ausência de ECG espontâneo noturno impede o diagnóstico clínico isolado pelo elemento 2, mas o elemento 3 (espasmo documentado com dor e ECG) fecha VSA definitiva em quem já tem o elemento 1 (angina nitrato-responsiva de repouso noturno). O caso irmão desta biblioteca (mulher com dor + ECG sem constrição >90%) é o espasmo MICROVASCULAR — endótipo diferente, que sai para o protocolo ANOCA/INOCA e não se trata como VSA clássica. Antagonista de cálcio é a primeira linha descrita na ESC 2024 (seção 5.2.6) para este endótipo; classe/nível dessa linha específica permanece VERIFICAÇÃO HUMANA NECESSÁRIA. Betabloqueador não é o antianginoso deste fenótipo (o próprio COVADIS usa a resposta diferencial cálcio versus betabloqueador como traço diagnóstico). Tabagismo é o gatilho evitável.",
+      "source_refs": [
+        "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334",
+        "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "angina-vasoespastica-epicardica-diagnostico-covadis-e-tratamento",
+      "condicao": "Angina vasoespástica (espasmo epicárdico) — critérios COVADIS, teste provocativo e tratamento dirigido",
+      "resumo": "O que não pode faltar ao investigar angina de repouso (noturna/madrugada) com coronárias sem obstrução que explique o sintoma: excluir SCA, cocaína e fluoropirimidina; aplicar COVADIS (definitiva vs. suspeita); ler o teste de acetilcolina com o corte >90%; não confundir com espasmo microvascular; e tratar o endótipo epicárdico com antagonista de cálcio, sem copiar o diamante antianginoso da DAC obstrutiva.",
+      "documento_origem": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334",
+        "Ong P, Camici PG, Beltrame JF, et al.; COVADIS. International standardization of diagnostic criteria for microvascular angina. Int J Cardiol. 2018;250:16-20. DOI: 10.1016/j.ijcard.2017.08.068. PMID: 29031990",
+        "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710",
+        "Ong P, Athanasiadis A, Borgulya G, et al. The ACOVA Study. J Am Coll Cardiol. 2012;59(7):655-662. DOI: 10.1016/j.jacc.2011.11.015. PMID: 22322081"
+      ],
+      "itens": [
+        {
+          "id": "vsa-nao-e-sca-em-curso",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Confirmado que não se trata de síndrome coronariana aguda em curso (dor persistente, supra que não reverte, troponina em curva) — nesse caso sair para o fluxograma de SCA/MINOCA, sem teste provocativo na fase instável",
+          "origem_secao": "O episódio agudo com supra de ST"
+        },
+        {
+          "id": "vsa-nao-cocaina-nao-fluoropirimidina",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Exposição atual a cocaína e a fluoropirimidina (5-FU/capecitabina) pesquisada e, se presente, o caso desviado para os protocolos próprios — não rotulado como VSA primária",
+          "origem_secao": "Por que este documento existe"
+        },
+        {
+          "id": "vsa-fenotipo-clinico-covadis",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Fenótipo clínico conferido: angina de repouso (sobretudo noturna/madrugada), variação diurna da tolerância ao esforço, precipitação por hiperventilação ou resposta a antagonista de cálcio (e não a betabloqueador) — elemento 1 do COVADIS, angina nitrato-responsiva",
+          "origem_secao": "Critérios COVADIS — consenso de 2017"
+        },
+        {
+          "id": "vsa-ecg-espontaneo-capturado",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Tentativa de capturar ECG de 12 derivações durante o episódio espontâneo (ST ≥0,1 mV para cima ou para baixo, ou U negativa nova, em ≥2 derivações contíguas): se presente junto com o elemento 1, VSA já é definitiva sem exigir cateterismo",
+          "origem_secao": "Definitiva versus suspeita"
+        },
+        {
+          "id": "vsa-angiografia-nao-encerra",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "\"Coronária normal na angiografia\" não tratada como fim da investigação quando o fenótipo espástico persiste — é o ponto de entrada da CFT, não a alta",
+          "origem_secao": "O que o ACOVA ensina"
+        },
+        {
+          "id": "vsa-cft-classe-i-disponivel",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Avaliação funcional invasiva disponível no momento da angiografia (diagnóstico incerto após teste não invasivo) ou organizada em centro de referência se ANOCA já estabelecida com sintoma persistente e má qualidade de vida — Classe I, Nível B (ESC 2024)",
+          "origem_secao": "Quando pedir o teste — o que a ESC 2024 de fato recomenda"
+        },
+        {
+          "id": "vsa-nitrato-ic-na-mesa",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Antes de iniciar acetilcolina (ou ergot): nitrato intracoronariano já na mesa, monitorização contínua e equipe experiente — o teste não é \"mais um FFR\"",
+          "origem_secao": "Segurança do teste"
+        },
+        {
+          "id": "vsa-tres-criterios-teste",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Resultado do teste lido com os três critérios simultâneos: (1) dor habitual reproduzida, (2) ECG isquêmico, (3) constrição epicárdica >90%. Relatar o percentual medido. Não usar o corte ≥75% do ACOVA (pré-COVADIS)",
+          "origem_secao": "Como o teste provocativo lê o endótipo"
+        },
+        {
+          "id": "vsa-nao-confundir-microvascular",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Se dor + ECG sem constrição >90%: rotulado como espasmo MICROVASCULAR e desviado para o protocolo ANOCA/INOCA — não tratado como VSA clássica",
+          "origem_secao": "Como o teste provocativo lê o endótipo"
+        },
+        {
+          "id": "vsa-ccb-primeira-linha",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Espasmo epicárdico confirmado: antagonista de canal de cálcio iniciado como base (doses frequentemente mais altas nos casos graves — ESC 2024, seção 5.2.6; classe/nível específico: verificação humana), com nitrato de ação curta para o episódio",
+          "origem_secao": "Tratamento do endótipo epicárdico"
+        },
+        {
+          "id": "vsa-nao-betabloqueador-antianginoso",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Betabloqueador NÃO iniciado como antianginoso deste endótipo (COVADIS usa a resposta diferencial cálcio vs. betabloqueador como traço diagnóstico; classe ESC 2024 específica: verificação humana). Se houver outra indicação (FE reduzida, arritmia), a decisão sai deste checklist",
+          "origem_secao": "Tratamento do endótipo epicárdico"
+        },
+        {
+          "id": "vsa-cessar-tabagismo",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Tabagismo ativo abordado como gatilho evitável — sem isso, titulação de cálcio vira tratamento de um estímulo que continua",
+          "origem_secao": "Tratamento do endótipo epicárdico"
+        },
+        {
+          "id": "vsa-nao-stent-do-espasmo",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Revascularização do segmento que apenas espasma, sem lesão obstrutiva funcionalmente significativa, NÃO oferecida como tratamento do endótipo",
+          "origem_secao": "Tratamento do endótipo epicárdico"
+        }
+      ],
+      "revisao": "Itens derivados do protocolo angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento. Pendente de revisão clínica. Classe/nível de CCB, nitrato e betabloqueador não atribuídos além do que a ESC 2024 CFT (I B) sustenta."
+    }
+  ],
+  "materiais": [
+    {
+      "slug": "angina-vasoespastica-o-que-e-e-como-tratar",
+      "titulo": "Angina vasoespástica: quando a artéria se contrai, mas não está entupida",
+      "subtitulo": "Por que a dor pode vir de madrugada, o que o cateterismo precisa investigar além de placa, e por que o remédio costuma ser bloqueador de cálcio — não o mesmo esquema da angina de esforço",
+      "tema": "Doença coronariana",
+      "documento_slug": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para o paciente adulto com suspeita ou diagnóstico de angina vasoespástica (contração transitória da artéria do coração). Explica a diferença entre placa que entope e artéria que se fecha por espasmo, o papel do eletrocardiograma no momento da dor, o teste feito no cateterismo e por que parar de fumar e usar bloqueador de cálcio importam mais, neste diagnóstico, do que stent em artéria sem placa.",
+      "secoes": [
+        {
+          "titulo": "O que está acontecendo",
+          "paragrafos": [
+            "Na angina mais conhecida, uma placa de gordura estreita a artéria e a dor vem no esforço. Na angina vasoespástica, a artéria se contrai de forma anormal por alguns minutos — um espasmo — e a dor costuma vir em repouso, muitas vezes de madrugada ou no começo da manhã. O cateterismo pode mostrar artérias sem entupimento importante. Isso não significa que a dor seja \"ansiedade\" ou \"refluxo\". Significa que o mecanismo é outro.",
+            "O nome antigo é angina de Prinzmetal. O nome atual, usado pelos grupos internacionais, é angina vasoespástica. Os dois descrevem o mesmo fenômeno: isquemia transitória por contração da artéria visível (epicárdica)."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Como se chega ao diagnóstico",
+          "paragrafos": [
+            "O melhor exame no momento da dor é um eletrocardiograma de 12 derivações enquanto o sintoma está acontecendo. Se o traçado muda de forma típica e volta ao normal quando a dor passa ou quando se usa nitrato (o comprimido ou spray de nitroglicerina), o diagnóstico já pode ser feito.",
+            "Na prática, a dor dura poucos minutos e o eletrocardiograma de consultório, feito horas depois, costuma estar normal. Por isso o médico pode pedir um cateterismo com teste provocativo: uma substância (em geral acetilcolina) é injetada na artéria sob monitoração, para ver se ela se contrai, se a dor habitual volta e se o eletrocardiograma muda. O teste só deve ser feito em laboratório preparado, com nitrato à mão para reabrir a artéria na hora."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O tratamento não é o mesmo da placa",
+          "paragrafos": [
+            "Quando o diagnóstico é de espasmo da artéria visível, o remédio de base é um bloqueador dos canais de cálcio. Muita gente precisa de dose mais alta do que a usada para pressão. Nitrato de ação curta fica reservado para o episódio. Parar de fumar é parte do tratamento, não um conselho genérico — o cigarro é um dos gatilhos mais consistentes deste tipo de angina.",
+            "Betabloqueador, tão usado na angina de esforço, não é o primeiro remédio deste diagnóstico e pode não ajudar o espasmo. Stent em artéria que só se contrai, sem placa que esteja de fato entupindo, também não resolve o mecanismo. Se o teste mostrar outro tipo de problema (microcirculação, e não a artéria grande), o esquema muda — por isso o exame existe: para não tratar todo mundo com a mesma receita."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que este texto não é",
+          "paragrafos": [
+            "Dor no peito durante uso de cocaína ou durante quimioterapia com 5-fluorouracil ou capecitabina é outra história, com outra conduta. Infarto com artérias sem entupimento (MINOCA) também tem investigação própria. Este material fala só da angina vasoespástica do adulto, no consultório ou no cateterismo eletivo."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor no peito que não passa em poucos minutos ou que volta cada vez mais forte",
+        "Dor com falta de ar intensa, suor frio, desmaio ou palpitação muito rápida",
+        "Dor que surge em esforço e não só em repouso — avise, o diagnóstico pode ser outro",
+        "Dor durante tratamento de câncer com 5-fluorouracil ou capecitabina, ou após usar cocaína — procure emergência e informe o medicamento ou a substância",
+        "Novo desmaio, ou alguém testemunhou você desmaiar durante a dor"
+      ],
+      "perguntas": [
+        "No meu caso, o diagnóstico já está fechado pelos critérios (eletrocardiograma na hora da dor) ou ainda falta o teste no cateterismo?",
+        "Qual bloqueador de cálcio vamos usar, em que dose, e o que faço se a pressão cair?",
+        "Posso usar o nitrato de ação curta em casa? Quantas vezes, e quando devo ir à emergência?",
+        "Eu fumo — qual o plano concreto para parar, e isso muda a chance de a dor voltar?",
+        "Algum remédio que eu já tomo (inclusive para pressão ou para o coração) pode piorar o espasmo?"
+      ],
+      "fontes": [
+        "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. PMID: 26245334",
+        "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. PMID: 39210710"
+      ]
+    }
+  ],
+  "trilhas": [
+    {
+      "slug": "trilha-angina-vasoespastica-espasmo-epicardico-covadis",
+      "titulo": "Angina vasoespástica: do fenótipo noturno ao endótipo epicárdico (COVADIS)",
+      "tema": "Doença coronariana",
+      "objetivo": "Sair sabendo reconhecer o fenótipo de angina de repouso noturna, aplicar os critérios COVADIS (definitiva vs. suspeita), ler o teste de acetilcolina com o corte >90%, não confundir espasmo epicárdico com microvascular, e tratar o endótipo epicárdico com antagonista de cálcio — sem copiar o algoritmo de ANOCA/INOCA inteiro nem os protocolos de cocaína e fluoropirimidina.",
+      "nivel": "avançado",
+      "review_status": "pendente_revisao",
+      "etapas": [
+        {
+          "ordem": 1,
+          "item_type": "documento",
+          "item_slug": "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+          "por_que": "Começa pelo guarda-chuva: ANOCA/INOCA é o cenário angiográfico. Sem essa moldura, o espasmo epicárdico vira doença isolada em vez de um dos endótipos."
+        },
+        {
+          "ordem": 2,
+          "item_type": "documento",
+          "item_slug": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+          "por_que": "O recorte deste lote: critérios COVADIS, leitura do teste, o que é consenso e o que é Classe I B da ESC 2024, e o tratamento do endótipo epicárdico."
+        },
+        {
+          "ordem": 3,
+          "item_type": "documento",
+          "item_slug": "fluxograma-angina-vasoespastica-teste-provocativo-e-tratamento",
+          "por_que": "A mesma lógica em árvore, com os desvios explícitos para SCA, cocaína, fluoropirimidina e espasmo microvascular."
+        },
+        {
+          "ordem": 4,
+          "item_type": "estudo",
+          "item_slug": "covadis-criterios-diagnosticos-angina-vasoespastica-2017",
+          "por_que": "O consenso que fixou definitiva vs. suspeita e o limiar >90%. Sem ele, o teste continua sendo lido com o corte antigo de 75% do ACOVA."
+        },
+        {
+          "ordem": 5,
+          "item_type": "evidencia",
+          "item_slug": "cft-invasivo-disponivel-na-angiografia-quando-mecanismo-da-dor-incerto-esc-2024",
+          "por_que": "A mudança institucional da ESC 2024: a CFT precisa estar disponível no momento da angiografia, não ser um segundo procedimento 'se ainda doer'."
+        },
+        {
+          "ordem": 6,
+          "item_type": "evidencia",
+          "item_slug": "cft-invasivo-anoca-inoca-sintomas-persistentes-qualidade-vida-esc-2024",
+          "por_que": "O segundo Classe I B: ANOCA já rotulada, sintoma persistente, má qualidade de vida — ainda cabe caracterizar o endótipo, inclusive o espástico."
+        },
+        {
+          "ordem": 7,
+          "item_type": "caso_clinico",
+          "item_slug": "angina-noturna-coronarias-livres-espasmo-epicardico-covadis",
+          "por_que": "Aplica os três critérios do teste num homem com angina de madrugada — o espelho do caso já existente de espasmo microvascular (dor + ECG sem >90%)."
+        },
+        {
+          "ordem": 8,
+          "item_type": "checklist",
+          "item_slug": "angina-vasoespastica-epicardica-diagnostico-covadis-e-tratamento",
+          "por_que": "Fecha em conferência de beira de leito: o que não pode faltar antes de rotular, provocar e prescrever cálcio."
+        },
+        {
+          "ordem": 9,
+          "item_type": "documento",
+          "item_slug": "disfuncao-microvascular-coronariana-angina-microvascular-diagnostico-funcional-e-tratamento-guiado",
+          "por_que": "O outro endótipo e o ensaio CorMicA. Quem só lê o ramo epicárdico volta a tratar ANOCA como entidade única."
+        },
+        {
+          "ordem": 10,
+          "item_type": "documento",
+          "item_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+          "por_que": "Contraponto obrigatório: o vasoespasmo por cocaína não se conduz com este protocolo."
+        },
+        {
+          "ordem": 11,
+          "item_type": "documento",
+          "item_slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas-5fu-capecitabina",
+          "por_que": "O outro vasoespasmo tóxico já coberto na biblioteca — para não misturar reexposição de 5-FU com VSA primária."
+        }
+      ]
+    }
+  ],
+  "retidos_evidencia_insuficiente": [
+    {
+      "item": "Classe/nível do antagonista de canal de cálcio como primeira linha da angina vasoespástica na ESC 2024 CCS",
+      "motivo": "O texto da seção 5.2.6 (e o documento ANOCA já revisado desta biblioteca) descreve o CCB como primeira linha, frequentemente em doses mais altas. A tabela numerada de recomendações dessa linha específica não foi lida no PDF integral nesta sessão. Não inventar Classe I/A."
+    },
+    {
+      "item": "Classe/nível de nitrato de longa ação na VSA (ESC 2024)",
+      "motivo": "Uso clínico consolidado e citado em sínteses de tratamento por endótipo; classe não conferida no material lido."
+    },
+    {
+      "item": "Classe III para betabloqueador na VSA (ESC 2024)",
+      "motivo": "O COVADIS usa 'cálcio suprime, betabloqueador não' como traço diagnóstico. Mecanismo (alfa sem oposição) é fisiopatologia. Não foi lida Classe III numerada na ESC 2024 CCS."
+    },
+    {
+      "item": "Teste de acetilcolina como recomendação isolada com Classe/Nível próprio",
+      "motivo": "A ESC 2024 dá Classe I B à CFT (que inclui acetilcolina quando o mecanismo é vasomotor). Atribuir Classe I ao fármaco provocativo isolado seria inventar tabela."
+    },
+    {
+      "item": "Holter/ECG ambulatorial com classe ESC 2024 na suspeita de VSA",
+      "motivo": "Sínteses da diretriz mencionam ECG durante a angina e consideram monitorização; classe/nível não conferidos no PDF integral."
+    },
+    {
+      "item": "Janela de 48 horas de suspensão de nitrato/CCB antes do teste",
+      "motivo": "Prática de laboratório citada em revisões de técnica (Medscape/consensos de provocação). Não lida como recomendação classificada da ESC 2024."
+    },
+    {
+      "item": "Lista de contraindicações absolutas do teste provocativo como se fosse ESC 2024",
+      "motivo": "Listas existem em consenso japonês (JCS) e revisões especializadas. Não conferidas como tabela da ESC 2024 nesta sessão."
+    },
+    {
+      "item": "Nicorandil, dose-alvo de diltiazem/verapamil, CDI após parada por espasmo",
+      "motivo": "Fora das fontes-âncora com classe conferida. Não protocolados."
+    },
+    {
+      "item": "Evidência adicional a partir da ESC 2023 ACS sobre provocação de espasmo no MINOCA",
+      "motivo": "O espasmo é causa coronariana de MINOCA na ESC 2023; classe de teste provocativo na fase aguda não foi extraída. O algoritmo de MINOCA já tem documento próprio."
+    }
+  ]
+}
