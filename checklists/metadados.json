@@ -29606,5 +29606,196 @@
       }
     ],
     "revisao": "Produzido por Claude em 27/08/2026 com fontes primárias atuais (WSES 2022, ESVS 2025). Não atribui revisão clínica a pessoa específica; requer validação humana antes de publicação."
+  },
+  {
+    "slug": "flutter-atrial-tipico-cardioversao-anticoagulacao-e-ablacao-do-istmo",
+    "condicao": "Flutter atrial típico — cardioversão, anticoagulação e ablação do istmo cavotricuspídeo",
+    "resumo": "Sequência de decisão do flutter atrial típico istmo-dependente: cardioversão elétrica imediata no instável, anticoagulação pelo mesmo princípio da FA (CHA2DS2-VA) no estável, janela segura para reverter o ritmo (24h, 3 semanas de anticoagulação ou ETE sem trombo), 4 semanas de anticoagulação após qualquer reversão e ablação do istmo cavotricuspídeo como tratamento definitivo, não de resgate.",
+    "documento_origem": "fluxograma-flutter-atrial-tipico-anticoagulacao-cardioversao-e-ablacao-do-istmo",
+    "theme": "Arritmias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723",
+      "Da Costa A, Thévenin J, Roche F, et al. Results from the Loire-Ardèche-Drôme-Isère-Puy-de-Dôme (LADIP) trial on atrial flutter — comparison between amiodarone and radiofrequency ablation after the first episode of symptomatic atrial flutter. Circulation. 2006;114(16):1676-1681. PMID: 17030680",
+      "Enriquez A, Sarrias A, Villuendas R, et al. New-onset atrial fibrillation after cavotricuspid isthmus ablation: identification of advanced interatrial block is key. Europace. 2015;17(8):1289-1293. PMID: 25672984"
+    ],
+    "itens": [
+      {
+        "id": "flt-diagnostico-tipico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Flutter atrial confirmado como típico — istmo-dependente: ondas F em serrilhado nas derivações inferiores ao ECG, macrorreentrada obrigatoriamente dependente do istmo cavotricuspídeo (ICT). Distinto do flutter atípico (circuito fora do ICT, tipicamente pós-cirurgia cardíaca ou pós-ablação de FA), que segue via de conduta própria",
+        "origem_secao": "Abertura / Limitações e o que confirmar"
+      },
+      {
+        "id": "flt-instabilidade-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Instabilidade hemodinâmica avaliada de imediato — hipotensão, choque, isquemia ou insuficiência cardíaca aguda atribuíveis ao flutter. Se presente: cardioversão elétrica sincronizada imediata (Classe I, nível B), sem aguardar fármaco ou anticoagulação prévia",
+        "origem_secao": "Instável: cardioversão sincronizada sem esperar fármaco"
+      },
+      {
+        "id": "flt-anticoagulacao-apos-cardioversao-urgencia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se cardioversão de urgência por instabilidade: anticoagulação iniciada a partir daí e mantida por pelo menos 4 semanas, sem exceção pela urgência do procedimento (ESC 2024, Classe I, nível B)",
+        "origem_secao": "Instável: cardioversão sincronizada sem esperar fármaco"
+      },
+      {
+        "id": "flt-estavel-anticoagulacao-cha2ds2va",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente estável: anticoagulação decidida pelo mesmo princípio da fibrilação atrial, calculada pelo escore CHA2DS2-VA (sem o ponto de sexo feminino, ESC 2024) — escore 2 ou mais: iniciar anticoagulante oral (I, C); escore 1: considerar anticoagulante (IIa, C); escore 0: sem indicação pelo escore, mas ainda assim 4 semanas obrigatórias após qualquer cardioversão",
+        "origem_secao": "Estável: anticoagular como na FA antes de decidir o resto"
+      },
+      {
+        "id": "flt-decisao-reverter-ou-controlar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Decisão registrada entre reverter o ritmo agora ou controlar a frequência e adiar a reversão. Se controle de frequência: betabloqueador, verapamil ou diltiazem IV (IIa, B), ou amiodarona IV se os anteriores indisponíveis/contraindicados (IIb, C), alvo inicial de repouso abaixo de 110 bpm — ciente de que o controle de frequência é descrito como particularmente difícil no flutter, mesmo com terapia combinada",
+        "origem_secao": "Controle de frequência: por que costuma falhar"
+      },
+      {
+        "id": "flt-janela-segura-reversao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se estratégia de reverter o ritmo: confirmada uma janela segura antes de cardioverter — até 24h de início documentado, OU pelo menos 3 semanas de anticoagulação terapêutica confirmada, OU ecocardiograma transesofágico sem trombo em apêndice atrial esquerdo. Nenhuma das três cumprida contraindica a cardioversão agora (Classe III, nível C); controlar a frequência e reverter depois",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-metodo-reversao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Método de reversão escolhido conforme preferência clínica e disponibilidade: cardioversão elétrica sincronizada de baixa energia, até 100 J bifásico (I, B — geralmente mais eficaz e com menos energia que na FA); ibutilida IV, ou dofetilida IV/oral em hospital (I, B — contraindicadas se QTc prolongado); ou estimulação atrial de alta frequência se marcapasso/CDI com eletrodo atrial já implantado (I, B). Flecainida e propafenona não recomendadas nesse contexto (Classe III, nível B)",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-anticoagulacao-4-semanas-apos-reversao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica prescrita por pelo menos 4 semanas após qualquer método de reversão bem-sucedido, independentemente do CHA2DS2-VA — mesma regra da cardioversão eletiva de fibrilação atrial",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-nao-suspender-por-escore-zero",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a não suspender a anticoagulação logo após reversão bem-sucedida só porque o CHA2DS2-VA é 0 — a regra das 4 semanas não depende do risco tromboembólico crônico",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-indicacao-ablacao-ict",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Ablação do istmo cavotricuspídeo discutida como tratamento definitivo do flutter típico, não como recurso de resgate: Classe I, nível A no flutter sintomático recorrente; Classe IIa, nível B já após o primeiro episódio sintomático, dentro de decisão compartilhada com o paciente",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-farmaco-se-nao-ablacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se ablação recusada ou indisponível: betabloqueador, verapamil ou diltiazem para controle de longo prazo (IIa, C), amiodarona se falharem (IIb, C)",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-informar-riscos-ablacao",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Paciente informado de que a ablação do ICT com bloqueio bidirecional confirmado deixa recorrência abaixo de 10%, com mortalidade de 0,2 a 0,34% e AVC de 0,19 a 0,5% em séries recentes",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-seguimento-fa-pos-ablacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento pós-ablação orientado para o risco de fibrilação atrial de novo — 50 a 70% dos pacientes em estudos observacionais, com bloqueio interatrial avançado como preditor mais forte — e anticoagulação de longo prazo mantida conforme o CHA2DS2-VA, não pelo sucesso do procedimento de ablação",
+        "origem_secao": "Depois da ablação: a anticoagulação segue o escore, não o procedimento"
+      },
+      {
+        "id": "flt-distinguir-atipico",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Confirmado que não se trata de flutter atípico — circuito fora do istmo cavotricuspídeo, tipicamente pós-cirurgia cardíaca ou pós-ablação de fibrilação atrial — cujo controle de frequência é ainda mais difícil e cuja ablação é restrita a centros experientes, com mapeamento mais complexo",
+        "origem_secao": "Limitações e o que confirmar"
+      }
+    ],
+    "revisao": "Produção científica assistida (Claude), aguardando revisão editorial/científica e aprovação do responsável técnico antes de publicação. Itens derivados do fluxograma citado em documento_origem (ESC 2019 SVT e ESC 2024 FA, revisado e publicado em 26/08/2026), com source_refs e origem_secao rastreáveis por item. Nenhuma dose de fármaco incluída; corte de duração adota os mesmos 24h conservadores da fonte primária."
+  },
+  {
+    "slug": "planejamento-e-triagem-pre-tavi-consolidado",
+    "condicao": "Planejamento e triagem pré-TAVI consolidado",
+    "resumo": "Checklist que consolida, em sequência acionável, o workup pré-procedimento da estenose aórtica grave já indicada para TAVI pelo Heart Team: confirmação de gravidade/indicação, discussão em Heart Team com escore de risco cirúrgico (STS-PROM), angiotomografia de planejamento (anel aórtico e vias de acesso), avaliação de fragilidade, avaliação odontológica, consentimento informado sobre riscos específicos do procedimento e definição de via de acesso e tipo de prótese. Não repete os checklists já publicados por eixo específico (decisão do Heart Team guiada pelo STS-PROM, critérios de internação e encaminhamento, fragilidade pré-procedimento genérica, seguimento pós-TAVI) — organiza a sequência entre a indicação já estabelecida e o agendamento do procedimento, etapa hoje sem checklist próprio que a consolide de ponta a ponta.",
+    "documento_origem": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291 — versão dual-publicada em Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295. Título e periódico confirmados individualmente via PubMed E-utilities (esummary) para ambos os PMIDs antes do uso.",
+      "O'Brien SM, Feng L, He X, et al. The Society of Thoracic Surgeons 2018 Adult Cardiac Surgery Risk Models: Part 2-Statistical Methods and Results. Ann Thorac Surg. 2018;105(5):1419-1428. PMID: 29577924 — título, periódico e ano confirmados via PubMed E-utilities antes do uso.",
+      "Blanke P, Weir-McCall JR, Achenbach S, et al. Computed Tomography Imaging in the Context of Transcatheter Aortic Valve Implantation (TAVI)/Transcatheter Aortic Valve Replacement (TAVR): An Expert Consensus Document of the Society of Cardiovascular Computed Tomography. JACC Cardiovasc Imaging. 2019;12(1):1-24. PMID: 30621986 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; documento de referência para o conteúdo mínimo da angiotomografia de planejamento (anel aórtico, via de saída do ventrículo esquerdo, calcificação da zona de implante, risco de obstrução coronária e trajeto vascular de acesso).",
+      "Afilalo J, Lauck S, Kim DH, et al. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; já usado no checklist publicado 'fragilidade-avaliacao-pre-procedimento-cardiovascular-invasivo-no-idoso', ao qual este item de fragilidade remete sem repetir o conteúdo.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; recomendação de eliminar focos de sepse dentária antes do implante de prótese valvar ou outro material intracardíaco/intravascular, já citada no documento publicado 'fluxograma-endocardite-profilaxia-antibiotica-procedimento-odontologico-invasivo-esc-2023' desta base.",
+      "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients (PARTNER 3). N Engl J Med. 2019;380(18):1695-1705. PMID: 30883058 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; um dos ensaios pivotais que caracterizam os riscos específicos do TAVI (marcapasso definitivo, vazamento paravalvular, AVC) citados no item de consentimento informado, sem atribuição de taxa numérica não verificada individualmente para este documento.",
+      "Popma JJ, Deeb GM, Yakubov SJ, et al. Transcatheter Aortic-Valve Replacement with a Self-Expanding Valve in Low-Risk Patients (Evolut Low Risk). N Engl J Med. 2019;380(18):1706-1715. PMID: 30883053 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; mesmo uso do PARTNER 3 acima, para a plataforma autoexpansível."
+    ],
+    "itens": [
+      {
+        "id": "pretavi-confirmar-gravidade-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar, antes de iniciar o workup pré-procedimento, que a estenose aórtica grave está confirmada e que a indicação formal de intervenção já foi estabelecida — este checklist parte de indicação já definida pelo Heart Team e não substitui a avaliação de gravidade nem a decisão de quando intervir, cobertas em checklists e fluxogramas próprios já publicados.",
+        "origem_secao": "Estenose aortica"
+      },
+      {
+        "id": "pretavi-heart-team-sts-prom",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Discutir o caso em Heart Team com o escore de risco cirúrgico calculado (STS-PROM, complementado por EuroSCORE II quando disponível) como um dos eixos objetivos da escolha entre TAVI e SAVR — nunca como critério isolado nem substituto do julgamento clínico, anatômico e da preferência informada do paciente.",
+        "origem_secao": "Estenose aortica selecao intervencao"
+      },
+      {
+        "id": "pretavi-angiotc-anel-acesso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Realizar angiotomografia de planejamento cobrindo o anel aórtico (dimensionamento da prótese), a via de saída do ventrículo esquerdo, o padrão de calcificação da zona de implante, o risco de obstrução coronária e o trajeto vascular de acesso (ilíaco-femoral e vias alternativas) antes da definição final de modalidade e de via de acesso.",
+        "origem_secao": "Principios diagnosticos"
+      },
+      {
+        "id": "pretavi-avaliar-fragilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar fragilidade por instrumento formal e padronizado — não pela idade cronológica isolada nem por impressão clínica subjetiva — como um dos parâmetros que o Heart Team integra na decisão em paciente idoso, junto a expectativa de vida, qualidade de vida antecipada e comorbidades; ver checklist dedicado de fragilidade pré-procedimento para o detalhamento do instrumento.",
+        "origem_secao": "Idosos tomada decisao"
+      },
+      {
+        "id": "pretavi-avaliacao-odontologica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Solicitar avaliação odontológica e eliminar focos de sepse dentária antes do implante da prótese valvar, com antecedência suficiente para a cicatrização — medida de prevenção geral de endocardite infecciosa, distinta da profilaxia antibiótica de dose única do dia de um eventual procedimento odontológico.",
+        "origem_secao": "Papel equipe multidisciplinar"
+      },
+      {
+        "id": "pretavi-consentimento-informado-riscos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Obter e documentar consentimento informado com discussão específica dos riscos característicos do TAVI — necessidade de marcapasso definitivo por distúrbio de condução, vazamento (leak) paravalvular e acidente vascular cerebral periprocedural — junto ao registro da preferência informada do paciente, sem atribuir ao caso individual uma taxa numérica de risco não calculada especificamente para ele.",
+        "origem_secao": "Estenose aortica selecao intervencao"
+      },
+      {
+        "id": "pretavi-definir-via-acesso-tipo-protese",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir, com base no planejamento anatômico da angiotomografia e na decisão do Heart Team, a via de acesso (transfemoral preferencial, com via alternativa nas contraindicações identificadas) e, quando a modalidade cirúrgica for a escolhida, o tipo de prótese (mecânica vs. biológica) antes de agendar o procedimento.",
+        "origem_secao": "Escolha protese"
+      },
+      {
+        "id": "pretavi-nao-pular-etapas-caso-aparentemente-obvio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Não pular etapas do planejamento (angiotomografia, avaliação de fragilidade, avaliação odontológica) mesmo quando a indicação de TAVI parece clínica e anatomicamente óbvia — achados inesperados na anatomia de acesso ou na calcificação da zona de implante podem mudar a via ou a modalidade depois da triagem inicial.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Registro redigido nesta consolidação a partir do documento de origem já publicado e revisado nesta pasta e de fontes primárias com PMID conferido individualmente via PubMed E-utilities antes do uso. Nenhuma dose de fármaco e nenhum corte numérico foram atribuídos além dos já publicados nos checklists e fluxogramas de origem citados. Pendente de revisão clínica individual antes da publicação — review_status=pendente_revisao."
   }
 ]
