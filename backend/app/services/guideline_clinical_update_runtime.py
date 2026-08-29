@@ -20,7 +20,6 @@ _PENDING_STATUSES = (
     "oficial_aprovada",
     "detected",
     "aguardando_revisao",
-    "revisao_necessaria",
 )
 
 
@@ -120,6 +119,11 @@ def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -
     reconhecidas não são autoaprovadas. Em 429 do provedor, a execução para
     imediatamente: a fila permanece persistida e será retomada no próximo ciclo,
     evitando transformar um rate limit transitório em centenas de falhas.
+
+    ``revisao_necessaria`` não entra de novo nesta fila: esse status só aparece
+    depois de a análise/resumo já terem sido concluídos e significa que uma
+    alteração estrutural do conteúdo-base merece revisão adicional. O documento
+    científico em si continua analisado, resumido e publicado normalmente.
     """
     install_runtime_guards()
     candidates = _official_pending_query(db).order_by(
