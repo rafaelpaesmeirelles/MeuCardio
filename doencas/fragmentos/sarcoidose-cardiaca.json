@@ -1,0 +1,361 @@
+[
+  {
+    "slug": "sarcoidose-cardiaca",
+    "name": "Sarcoidose cardíaca",
+    "aliases": [
+      "cardiopatia sarcoide",
+      "sarcoidose cardíaca isolada",
+      "miocardite granulomatosa sarcoide",
+      "envolvimento cardíaco da sarcoidose",
+      "CS (cardiac sarcoidosis)"
+    ],
+    "area": "geral",
+    "category": "doenca_miocardica",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Doença granulomatosa sistêmica cujo acometimento cardíaco — uma miocardite granulomatosa com marca histológica de granuloma não caseoso — é o que mais determina o prognóstico, e é sistematicamente subdiagnosticado porque se apresenta por manifestações inespecíficas com muitas outras causas: bloqueio atrioventricular avançado em pessoa jovem previamente hígida, arritmia ventricular, ou disfunção ventricular de causa não esclarecida. Diferente da maioria das miocardites (predominantemente virais, pós-vacinais ou por doença de Chagas em área endêmica), a sarcoidose cardíaca é manifestação de doença sistêmica multiorgânica, com abordagem diagnóstica própria — critérios da Japanese Circulation Society (SJC), reproduzidos pela diretriz brasileira, combinando achados de imagem (ressonância cardíaca, PET-FDG ou cintilografia com gálio-67), eletrocardiográficos e, quando possível, histológicos — e indicação de cardiodesfibrilador implantável e imunossupressão com força de recomendação distinta da miocardite de células gigantes, seu principal diagnóstico diferencial histológico e clínico. Pode existir de forma isolada, restrita ao coração, categoria com pré-requisitos diagnósticos próprios.",
+    "epidemiology": "A sarcoidose é doença granulomatosa sistêmica de etiologia não esclarecida, mais comum entre 20 e 40 anos, com acometimento pulmonar e/ou linfonodal mediastinal-hilar na grande maioria dos casos. O acometimento cardíaco clinicamente aparente é bem menos frequente que o achado em necropsia ou em estudos de imagem sistemática — a discrepância entre prevalência clínica e prevalência histológica/por imagem é um dos motivos do subdiagnóstico, junto com a inespecificidade da apresentação (bloqueio atrioventricular, arritmia ventricular, disfunção ventricular sem causa esclarecida) e com achados sistêmicos extracardíacos que podem ser leves, ausentes ou não investigados ativamente. Sarcoidose cardíaca é uma miocardite granulomatosa e entra no mesmo diagnóstico diferencial histológico da miocardite de células gigantes (GCM) — as duas podem ser clinicamente indistinguíveis na apresentação inicial, e um estudo sueco mostrou que a GCM tem curso mais grave, biomarcadores mais elevados e maior necessidade de transplante cardíaco do que a sarcoidose cardíaca, mas a hipótese de que sejam fenótipos de uma mesma doença é discutida na literatura e não está conclusivamente estabelecida nem refutada. A diretriz ESC 2025 organiza miocardite e pericardite sob o termo guarda-chuva IMPS (inflammatory myopericardial syndrome), e a sarcoidose entra nessa classificação como um dos subtipos histológicos identificáveis por biópsia endomiocárdica (granuloma não caseoso, células gigantes CD68+, linfócitos T, macrófagos, necrose variável, PCR viral negativa) — achado que a diferencia da miocardite viral, mas que pode ser confundido na lâmina com a miocardite de células gigantes por um patologista sem experiência cardíaca dedicada.",
+    "presentation": [
+      "Bloqueio atrioventricular de alto grau ou completo em pessoa jovem previamente hígida — apresentação clássica e critério maior isolado suficiente para forte suspeita",
+      "Arritmia ventricular sustentada (taquicardia ventricular ou fibrilação ventricular) — critério maior, pode ser a primeira manifestação",
+      "Insuficiência cardíaca de início não esclarecido, por disfunção sistólica de ventrículo esquerdo (FEVE <50%) ou assinergia focal da parede",
+      "Palpitação por arritmia ventricular não sustentada ou extrassistolia ventricular frequente/multifocal",
+      "Síncope de causa não esclarecida em paciente com sarcoidose sistêmica conhecida — deve disparar investigação cardíaca ativa",
+      "Morte súbita cardíaca como primeira manifestação, inclusive em quem não tinha diagnóstico prévio de sarcoidose",
+      "Sintomas extracardíacos de sarcoidose sistêmica (respiratórios, oftalmológicos, cutâneos, linfonodais) precedendo ou coincidindo com o quadro cardíaco — a maioria dos pacientes com sarcoidose cardíaca tem ou desenvolve doença extracardíaca",
+      "Achado incidental de anormalidade cardíaca (alteração de ECG, disfunção ventricular em exame de rotina) em paciente já com diagnóstico de sarcoidose extracardíaca, sem sintoma cardíaco declarado",
+      "Deterioração cardíaca de curso mais indolente evoluindo para insuficiência cardíaca crônica, em vez de apresentação abrupta",
+      "Dor torácica inespecífica, menos característica que na miocardite viral clássica"
+    ],
+    "diagnostic_approach": {
+      "criterios_sjc_visao_geral": "A diretriz brasileira de miocardites (SBC 2022) reproduz os critérios da Japanese Circulation Society (SJC) para envolvimento cardíaco. O envolvimento cardíaco é fortemente sugerido quando dois ou mais critérios MAIORES são atendidos, ou um critério maior somado a dois ou mais critérios MENORES.",
+      "criterios_maiores": "(a) bloqueio atrioventricular de alto grau, incluindo bloqueio atrioventricular completo, ou arritmia ventricular fatal (taquicardia ventricular sustentada ou fibrilação ventricular); (b) afinamento basal do septo ventricular ou anatomia anormal da parede ventricular — aneurisma ventricular, afinamento do septo ventricular superior ou médio, espessamento regional da parede; (c) disfunção contrátil do ventrículo esquerdo — fração de ejeção abaixo de 50% ou assinergia focal da parede; (d) cintilografia com citrato de gálio-67 ou PET com 18F-FDG revelando acúmulo anormalmente alto de marcador no coração; (e) ressonância magnética com gadolínio revelando realce tardio do miocárdio.",
+      "criterios_menores": "(f) achados anormais ao eletrocardiograma — arritmias ventriculares (taquicardia ventricular não sustentada, extrassístoles ventriculares multifocais ou frequentes), desvio de eixo ou ondas Q anormais; (g) defeitos de perfusão na cintilografia de perfusão miocárdica; (h) biópsia endomiocárdica com infiltração de monócitos e fibrose intersticial miocárdica moderada ou grave.",
+      "grupo_histologico_vs_clinico": "Grupo histológico: diagnóstico firmado quando biópsia endomiocárdica ou amostra cirúrgica demonstra granuloma não caseoso no coração. Grupo clínico (biópsia miocárdica negativa, ou paciente não submetido a biópsia): diagnóstico clínico quando granulomas não caseosos são encontrados em outro órgão que não o coração, associados aos achados clínicos fortemente sugestivos de comprometimento cardíaco descritos acima. Consequência prática direta: biópsia endomiocárdica negativa NÃO exclui sarcoidose cardíaca — o acometimento é focal, e a amostra pode não capturar o granuloma; por isso existe o grupo de diagnóstico clínico.",
+      "sarcoidose_cardiaca_isolada": "Categoria própria, com pré-requisitos que precisam ser cumpridos antes de qualquer critério diagnóstico: (1) ausência de características clínicas de sarcoidose em outros órgãos além do coração, com investigação detalhada de envolvimento respiratório, oftalmológico e cutâneo; (2) cintilografia com gálio-67 ou PET com 18F-FDG sem acúmulo anormal em nenhum outro órgão além do coração; (3) tomografia de tórax sem alteração pulmonar nem linfadenopatia hilar/mediastinal (eixo menor maior que 10 mm). Cumpridos os pré-requisitos: diagnóstico histológico exige granuloma não caseoso em biópsia endomiocárdica ou amostra cirúrgica; diagnóstico clínico exige o critério (d) — captação anormal à cintilografia com gálio ou ao PET-FDG — mais pelo menos três outros critérios maiores. Quando o paciente atende pelo menos quatro critérios de envolvimento cardíaco que não incluam o (d), ou atende os critérios (b) e (d) mais um dos restantes, suspeita-se de sarcoidose cardíaca isolada sem fechar o diagnóstico.",
+      "pet_fdg_e_cintilografia_papel_e_limitacoes": "O PET com 18F-FDG (ou, alternativamente, a cintilografia com citrato de gálio-67) é critério MAIOR isolado (critério d) e é o único exame capaz de rastrear atividade inflamatória extracardíaca sistematicamente — passo indispensável para caracterizar a forma isolada. O exame exige preparo específico para suprimir a captação fisiológica de glicose pelo miocárdio normal, de modo que a captação observada reflita atividade inflamatória granulomatosa e não consumo metabólico basal do miocárdio saudável; a padronização exata do preparo dietético não está detalhada nas fontes primárias consultadas nesta sessão e não deve ser reproduzida de memória. É também o exame usado para monitorar resposta à imunossupressão ao longo do seguimento.",
+      "biopsia_limitacoes": "A biópsia endomiocárdica é indicada (mesma recomendação Classe I, Nível C da miocardite em geral) sempre que há suspeita de sarcoidose cardíaca ou de miocardite de células gigantes, pela implicação terapêutica direta de imunossupressão. O achado diagnóstico é granuloma não caseoso — mas o acometimento miocárdico é tipicamente focal/em mosaico, o que limita a sensibilidade da biópsia (amostra pode não capturar a área acometida); por isso biópsia negativa não exclui o diagnóstico, e existe a via de diagnóstico clínico via achado extracardíaco. A leitura exige patologista cardíaco experiente, porque o granuloma sarcoide e as células gigantes da miocardite de células gigantes podem ser confundidos na mesma lâmina.",
+      "diferenciacao_celulas_gigantes": "Sarcoidose cardíaca e miocardite de células gigantes (GCM) são as duas miocardites granulomatosas do diagnóstico diferencial histológico, e apenas uma fração limitada de pacientes pode ser diferenciada entre as duas só pela apresentação clínica inicial — a diferenciação definitiva exige biópsia. A diretriz SBC 2022 trata as duas condições com urgência terapêutica diferente: imunossupressão em sarcoidose cardíaca é Classe IIa (recomendação mais fraca), enquanto na GCM é Classe I, com manutenção combinada também Classe I e transplante cardíaco como recomendação Classe I — não há indicação equivalente de transplante de primeira linha reportada para sarcoidose cardíaca nesta fonte. A hs-CRP foi identificada, em estudo isolado citado na revisão da GCM, como biomarcador auxiliar para diferenciar miocardite de células gigantes de miocardite linfocítica — não há dado equivalente reportado nas fontes consultadas especificamente para diferenciar GCM de sarcoidose cardíaca por biomarcador.",
+      "indicacao_de_cdi": "A avaliação de risco de morte súbita em cardiomiopatia deixou de depender só da fração de ejeção — a diretriz ESC 2022 de arritmias ventriculares e prevenção de morte súbita passou a reconhecer etiologia, ressonância cardíaca, apresentação arrítmica e marcadores específicos de cada cardiomiopatia como preditores robustos adicionais, citando explicitamente doença inflamatória — sarcoidose cardíaca incluída — como cenário em que a FEVE isolada não é suficiente para a decisão. Na prática, isso significa que bloqueio atrioventricular avançado, arritmia ventricular sustentada ou realce tardio relevante à ressonância podem justificar indicação de cardiodesfibrilador implantável mesmo com FEVE preservada ou pouco reduzida — avaliação que deve ser individualizada com a equipe de arritmia, e não decidida apenas pelos critérios diagnósticos SJC de envolvimento cardíaco."
+    },
+    "differentials": [
+      "Miocardite de células gigantes — diferencial mais próximo: as duas são miocardites granulomatosas, podem ser clinicamente indistinguíveis na apresentação inicial e podem até ser confundidas na mesma lâmina de biópsia; a hipótese de sobreposição fenotípica entre as duas entidades é discutida na literatura e não está conclusivamente estabelecida nem refutada, mas a força da recomendação terapêutica difere (imunossupressão Classe IIa na sarcoidose versus Classe I, com transplante Classe I, na miocardite de células gigantes)",
+      "Miocardite linfocítica fulminante (predominantemente viral) — apresentação aguda com choque pode ser semelhante; PCR viral em tecido tende a ser negativa na sarcoidose e na GCM, positiva com mais frequência na linfocítica",
+      "Doença de Chagas crônica, em área endêmica — também causa bloqueio atrioventricular avançado e arritmia ventricular em cardiopatia estrutural; contexto epidemiológico e sorologia orientam",
+      "Cardiomiopatia arritmogênica (predominantemente de ventrículo direito) — arritmia ventricular e realce tardio também presentes; achados de imagem e genéticos ajudam a diferenciar da sarcoidose",
+      "Amiloidose cardíaca — outra doença infiltrativa que causa disfunção ventricular e alteração de condução, mas sem granuloma não caseoso; investigação combina imunofixação, cadeias leves livres e cintilografia óssea",
+      "Bloqueio atrioventricular degenerativo idiopático do sistema de condução (doença de Lenègre-Lev) — diagnóstico por exclusão em paciente idoso; bloqueio atrioventricular avançado em adulto jovem não deve ser atribuído a essa causa sem investigar sarcoidose",
+      "Cardiomiopatia dilatada de outra etiologia (não inflamatória/não granulomatosa)",
+      "Miocardite por inibidor de checkpoint imunológico — contexto oncológico distinto, com corpo de evidência e verbete próprios nesta biblioteca"
+    ],
+    "tests": [
+      "Critérios SJC de envolvimento cardíaco (reproduzidos pela diretriz SBC 2022) — dois ou mais critérios maiores, ou um maior mais dois menores; combina achados de imagem, ECG e histologia",
+      "PET com 18F-FDG ou cintilografia com citrato de gálio-67 — critério maior isolado; único exame que rastreia atividade inflamatória sistêmica de forma sistemática, indispensável para caracterizar forma isolada e para monitorar resposta a imunossupressão; exige preparo específico para suprimir captação fisiológica de glicose do miocárdio normal",
+      "Ressonância magnética cardíaca com gadolínio — critério maior; realce tardio do miocárdio",
+      "Biópsia endomiocárdica — diagnóstico histológico definitivo (granuloma não caseoso), mas sensibilidade limitada pelo acometimento focal; biópsia negativa não exclui o diagnóstico; leitura exige patologista cardíaco experiente para não confundir com miocardite de células gigantes",
+      "Eletrocardiograma — critério menor; arritmias ventriculares, desvio de eixo, ondas Q anormais",
+      "Ecocardiograma — critério maior; disfunção contrátil do ventrículo esquerdo (FEVE <50%), afinamento septal basal ou anatomia anormal da parede",
+      "Cintilografia de perfusão miocárdica — critério menor; defeitos de perfusão",
+      "Investigação extracardíaca ativa (tomografia de tórax, avaliação pulmonar, oftalmológica e cutânea, biópsia de outro órgão acometido) — necessária tanto para o diagnóstico pelo grupo clínico quanto para caracterizar (ou excluir) a forma isolada"
+    ],
+    "red_flags": [
+      "Bloqueio atrioventricular de alto grau ou completo em pessoa jovem previamente hígida, sem causa isquêmica ou degenerativa óbvia — critério maior isolado, já suficiente para forte suspeita",
+      "Arritmia ventricular sustentada (taquicardia ventricular ou fibrilação ventricular) sem cardiopatia estrutural previamente conhecida",
+      "Síncope não esclarecida em paciente com diagnóstico prévio de sarcoidose extracardíaca",
+      "Deterioração cardíaca rápida com refratariedade a tratamento antiarrítmico ou de insuficiência cardíaca convencional em paciente jovem — sinal também de miocardite de células gigantes; as duas exigem biópsia para diferenciação",
+      "Morte súbita cardíaca abortada em paciente sem etiologia estrutural esclarecida",
+      "Disfunção ventricular nova, de causa não esclarecida, em paciente com diagnóstico conhecido de sarcoidose extracardíaca — deve disparar investigação cardíaca ativa, não só observação"
+    ],
+    "ambulatory_flow": [
+      "Confirmar critérios SJC (maiores/menores) combinando imagem (RM cardíaca, PET-FDG ou cintilografia com gálio), ECG e, quando indicada, biópsia endomiocárdica",
+      "Investigar extracardíaca ativamente — tomografia de tórax, avaliação pulmonar, oftalmológica e cutânea — necessária tanto para o grupo clínico de diagnóstico quanto para caracterizar forma isolada",
+      "Discutir caso com equipe multidisciplinar (cardiologia, pneumologia/reumatologia conforme órgão acometido, arritmia) antes de iniciar imunossupressão, dado o perfil de efeitos adversos de longo prazo dos agentes envolvidos",
+      "Avaliar indicação de cardiodesfibrilador implantável de forma individualizada, considerando bloqueio atrioventricular avançado, arritmia ventricular sustentada e realce tardio à ressonância — não só a fração de ejeção",
+      "Reavaliação com PET-FDG seriado para monitorar resposta à imunossupressão e guiar desmame",
+      "Reavaliação com ressonância cardíaca seriada de função ventricular e realce tardio",
+      "Rastrear familiares apenas se houver indicação clínica específica — sarcoidose não é doença hereditária mendeliana estabelecida da forma como cardiomiopatias genéticas são; não confundir a investigação com rastreamento familiar em cascata"
+    ],
+    "emergency_flow": [
+      "Bloqueio atrioventricular avançado ou completo com instabilidade: estabilização conforme protocolo de bradiarritmia sintomática, com avaliação para marca-passo temporário e discussão precoce sobre necessidade de dispositivo definitivo",
+      "Tempestade elétrica ou taquicardia/fibrilação ventricular sustentada: tratamento antiarrítmico de emergência conforme protocolo padrão de parada/arritmia ventricular maligna, com investigação etiológica precoce para não retardar decisão sobre imunossupressão e CDI",
+      "Choque cardiogênico por disfunção ventricular aguda: estabilização hemodinâmica, suporte inotrópico/vasopressor e, se necessário, suporte circulatório mecânico, com encaminhamento a centro terciário capaz de biópsia endomiocárdica precoce — mesmo fluxo geral de miocardite fulminante",
+      "Suspeita de sarcoidose cardíaca ou de miocardite de células gigantes em quadro agudo grave: biópsia endomiocárdica precoce é prioridade diagnóstica, pela implicação terapêutica direta e pela urgência distinta entre as duas condições"
+    ],
+    "treatment_summary": "O tratamento imunossupressor da sarcoidose cardíaca tem recomendação mais fraca que o da miocardite de células gigantes, e essa diferença de força de recomendação é clinicamente relevante — não devem ser tratadas com a mesma urgência. Conforme SBC 2022: corticosteroide (prednisona) é Classe IIa, Nível B, sem dose reproduzida aqui — consultar fonte primária/bula antes de prescrever. Outros imunossupressores usados no contexto de corticosteroide — azatioprina, metotrexato, leflunomida, e infliximabe nas formas pulmonar, cutânea, ocular, neurológica e multissistêmica — têm recomendação mais fraca (Classe IIb, Nível C), também sem dose reproduzida aqui. Em contraste, a miocardite de células gigantes tem imunossupressão combinada (corticosteroide mais outro imunomodulador) como Classe I, manutenção combinada Classe I, e transplante cardíaco Classe I — recomendações de força bem maior, refletindo curso historicamente quase invariavelmente fatal sem tratamento precoce agressivo. A indicação de cardiodesfibrilador implantável deve ser avaliada de forma individualizada, considerando etiologia inflamatória, achados de ressonância e apresentação arrítmica além da fração de ejeção isolada, conforme a diretriz ESC 2022 de prevenção de morte súbita — decisão que cabe à equipe de arritmia, não a um critério único do escore diagnóstico SJC. Nenhuma dose de fármaco consta neste resumo em nenhum campo; toda decisão posológica deve ser individualizada com bula/fonte primária.",
+    "monitoring": [
+      "PET-FDG seriado para monitorar atividade inflamatória e resposta à imunossupressão, e para orientar decisão de desmame",
+      "Ressonância cardíaca seriada de função ventricular e extensão de realce tardio",
+      "Ecocardiograma seriado de função ventricular e motilidade segmentar",
+      "Monitorização eletrocardiográfica/Holter para arritmia ventricular e progressão de distúrbio de condução, inclusive após imunossupressão iniciada",
+      "Seguimento combinado com a especialidade responsável pelo órgão extracardíaco predominantemente acometido (pneumologia, oftalmologia, dermatologia, conforme o caso)"
+    ],
+    "special_populations": [
+      "Paciente com sarcoidose extracardíaca já diagnosticada e sem sintoma cardíaco declarado — rastreamento cardíaco ativo é recomendado dada a discrepância entre acometimento clínico aparente e acometimento histológico/por imagem; achado cardíaco assintomático ainda pode mudar conduta e prognóstico",
+      "Sarcoidose cardíaca isolada (sem doença extracardíaca detectável) — categoria com pré-requisitos diagnósticos próprios (investigação extracardíaca completa negativa, incluindo TC de tórax e PET-FDG/cintilografia de corpo todo); não deve ser diagnosticada sem cumprir esses pré-requisitos",
+      "Paciente jovem com bloqueio atrioventricular avançado sem etiologia isquêmica ou degenerativa óbvia — sarcoidose cardíaca deve entrar ativamente no diferencial, não ser presumida como degeneração do sistema de condução por exclusão",
+      "Paciente com suspeita simultânea de sarcoidose cardíaca e de miocardite de células gigantes — as duas podem ser indistinguíveis clinicamente; biópsia endomiocárdica lida por patologista cardíaco experiente é indispensável antes de escolher o esquema imunossupressor, porque a força de recomendação terapêutica difere entre as duas condições",
+      "Paciente com hipertensão pulmonar e sarcoidose sistêmica conhecida — disfunção de ventrículo esquerdo por sarcoidose cardíaca concomitante é mecanismo reconhecido de hipertensão pulmonar pós-capilar (Grupo 2) numa fração relevante desses casos, o que muda a investigação e a conduta terapêutica da hipertensão pulmonar associada"
+    ],
+    "assistant_questions": [
+      {
+        "id": "bloqueio_av_avancado_jovem",
+        "label": "Há bloqueio atrioventricular de alto grau ou completo em paciente jovem, sem causa isquêmica ou degenerativa óbvia?",
+        "type": "boolean"
+      },
+      {
+        "id": "arritmia_ventricular_sustentada",
+        "label": "Há taquicardia ventricular sustentada ou fibrilação ventricular documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "label": "Há choque cardiogênico ou instabilidade hemodinâmica na apresentação atual?",
+        "type": "boolean"
+      },
+      {
+        "id": "sarcoidose_extracardiaca_conhecida",
+        "label": "O paciente já tem diagnóstico prévio de sarcoidose extracardíaca (pulmonar, ocular, cutânea, linfonodal)?",
+        "type": "boolean"
+      },
+      {
+        "id": "investigacao_extracardiaca_completa",
+        "label": "A investigação extracardíaca (TC de tórax, avaliação pulmonar/oftalmológica/cutânea) já foi completada e é negativa, sustentando possível forma isolada?",
+        "type": "boolean"
+      },
+      {
+        "id": "criterios_maiores_sjc_atendidos",
+        "label": "Quantos critérios MAIORES da SJC estão atendidos?",
+        "type": "number",
+        "min": 0,
+        "max": 5
+      },
+      {
+        "id": "biopsia_realizada_resultado",
+        "label": "Biópsia endomiocárdica foi realizada? Qual o achado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizada",
+            "label": "Não realizada"
+          },
+          {
+            "value": "granuloma_nao_caseoso",
+            "label": "Granuloma não caseoso (sarcoidose)"
+          },
+          {
+            "value": "celulas_gigantes",
+            "label": "Células gigantes sem granuloma bem formado (sugestivo de GCM)"
+          },
+          {
+            "value": "negativa_inconclusiva",
+            "label": "Negativa/inconclusiva"
+          }
+        ]
+      },
+      {
+        "id": "refratariedade_tratamento_convencional",
+        "label": "Há refratariedade a tratamento antiarrítmico ou de insuficiência cardíaca convencional, com deterioração rápida?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "instabilidade_hemodinamica_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque cardiogênico ou instabilidade hemodinâmica em suspeita de sarcoidose cardíaca"
+          ],
+          "emergency_flow": [
+            "Estabilização hemodinâmica imediata e avaliação precoce para suporte circulatório mecânico, com encaminhamento a centro terciário capaz de biópsia endomiocárdica precoce"
+          ],
+          "supporting": [
+            "Quadro compatível com forma aguda grave, que exige suporte hemodinâmico agressivo e biópsia precoce para diferenciar de miocardite de células gigantes, dada a diferença de urgência terapêutica entre as duas condições"
+          ]
+        }
+      },
+      {
+        "id": "arritmia_ventricular_sustentada_urgente",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_ventricular_sustentada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Taquicardia ventricular sustentada ou fibrilação ventricular em suspeita de sarcoidose cardíaca"
+          ],
+          "supporting": [
+            "Arritmia ventricular maligna é critério maior de envolvimento cardíaco e justifica avaliação urgente de biópsia e de indicação de cardiodesfibrilador implantável"
+          ]
+        }
+      },
+      {
+        "id": "bloqueio_av_jovem_alerta",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "bloqueio_av_avancado_jovem",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Bloqueio atrioventricular avançado em paciente jovem sem causa isquêmica ou degenerativa óbvia — critério maior isolado de envolvimento cardíaco"
+          ],
+          "supporting": [
+            "Não atribuir a bloqueio atrioventricular a degeneração do sistema de condução sem investigar sarcoidose cardíaca; a investigação muda o tratamento"
+          ]
+        }
+      },
+      {
+        "id": "biopsia_celulas_gigantes_diferencial",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "biopsia_realizada_resultado",
+              "op": "eq",
+              "value": "celulas_gigantes"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Miocardite de células gigantes — achado histológico distinto de granuloma não caseoso, mas pode ser confundido na lâmina; releitura por patologista cardíaco experiente é recomendada em caso de dúvida"
+          ],
+          "supporting": [
+            "A força de recomendação terapêutica difere entre as duas condições (imunossupressão Classe IIa na sarcoidose versus Classe I, com transplante Classe I, na miocardite de células gigantes); confirmar o subtipo antes de escolher o esquema"
+          ]
+        }
+      },
+      {
+        "id": "refratariedade_sugere_diferencial_grave",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "refratariedade_tratamento_convencional",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Miocardite de células gigantes"
+          ],
+          "suggested_tests": [
+            "Biópsia endomiocárdica precoce, com leitura por patologista cardíaco experiente"
+          ],
+          "supporting": [
+            "Deterioração rápida refratária a tratamento convencional em paciente jovem é sinal de alerta compartilhado entre sarcoidose cardíaca e miocardite de células gigantes; as duas podem ser clinicamente indistinguíveis sem biópsia"
+          ]
+        }
+      },
+      {
+        "id": "rastreio_cardiaco_em_sarcoidose_extracardiaca_conhecida",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "sarcoidose_extracardiaca_conhecida",
+              "op": "truthy"
+            },
+            {
+              "field": "investigacao_extracardiaca_completa",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Rastreamento cardíaco ativo (ECG, ecocardiograma e, se indicado, ressonância cardíaca ou PET-FDG) em paciente com sarcoidose extracardíaca já conhecida, mesmo sem sintoma cardíaco declarado"
+          ],
+          "supporting": [
+            "A prevalência de acometimento cardíaco histológico/por imagem é maior que a prevalência clínica aparente — o rastreamento ativo é o que evita o subdiagnóstico característico desta condição"
+          ]
+        }
+      },
+      {
+        "id": "criterios_maiores_suficientes",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "criterios_maiores_sjc_atendidos",
+              "op": "gte",
+              "value": 2
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Dois ou mais critérios MAIORES da SJC atendidos — envolvimento cardíaco fortemente sugerido; prosseguir com estadiamento extracardíaco (TC de tórax, avaliação pulmonar/oftalmológica/cutânea) para caracterizar forma isolada versus sistêmica"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "sarcoidose cardíaca",
+      "miocardite granulomatosa",
+      "bloqueio atrioventricular",
+      "PET-FDG",
+      "critérios SJC",
+      "IMPS",
+      "células gigantes",
+      "cardiodesfibrilador implantável"
+    ],
+    "source_refs": [
+      "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — critérios de envolvimento cardíaco da Japanese Circulation Society (SJC), pré-requisitos de sarcoidose cardíaca isolada, e classes de recomendação de imunossupressão e biópsia endomiocárdica; lidos em sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022.md desta biblioteca. PMID verificado via NCBI E-utilities (esummary) em 29/08/2026 — título, periódico e data conferem.",
+      "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487 — diagnóstico diferencial obrigatório entre miocardite de células gigantes e sarcoidose cardíaca, indistinguibilidade clínica sem biópsia, curso comparativo entre as duas condições; lido em miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora.md desta biblioteca. PMID verificado via NCBI E-utilities (esummary) em 29/08/2026 — título, periódico e data conferem.",
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — classificação de sarcoidose sob o guarda-chuva IMPS e critérios histopatológicos de biópsia (granuloma não caseoso, células gigantes CD68+); lido em sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025.md e miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md desta biblioteca. PMID verificado via NCBI E-utilities (esummary) em 29/08/2026 — título, periódico e data conferem.",
+      "Kacprzak A, Tomkowski W, Szturmowicz M. Phenotypes of Sarcoidosis-Associated Pulmonary Hypertension-A Challenging Mystery. Diagnostics (Basel). 2023;13(19):3132. PMID: 37835874 — disfunção de ventrículo esquerdo por sarcoidose cardíaca concomitante como mecanismo de hipertensão pulmonar pós-capilar em 5-20% dos casos de SAPH; lido em hipertensao-pulmonar-associada-a-sarcoidose-mecanismos-multiplos-e-tratamento-individualizado.md desta biblioteca. PMID verificado via NCBI E-utilities (esummary) em 29/08/2026 — título, periódico e data conferem.",
+      "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — reconhecimento de doença inflamatória (sarcoidose cardíaca citada explicitamente) como preditor de risco de morte súbita além da fração de ejeção isolada, usado aqui para fundamentar a individualização da indicação de cardiodesfibrilador implantável; lido em arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md desta biblioteca. PMID verificado via NCBI E-utilities (esummary) em 29/08/2026 — título, periódico e data conferem."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35830116/",
+      "https://doi.org/10.36660/abc.20220412",
+      "https://pubmed.ncbi.nlm.nih.gov/37456487/",
+      "https://doi.org/10.7759/cureus.40439",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10349211/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878297/",
+      "https://doi.org/10.1093/eurheartj/ehaf192",
+      "https://pubmed.ncbi.nlm.nih.gov/37835874/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://doi.org/10.1093/eurheartj/ehac262"
+    ],
+    "related_document_slugs": [
+      "sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022",
+      "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
+      "hipertensao-pulmonar-associada-a-sarcoidose-mecanismos-multiplos-e-tratamento-individualizado"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), a pedido explícito do Rafael, após investigação dedicada de duas fases. FASE 1 — investigação: o fragmento pendente 'miocardite' (verbete-hub IMPS, doencas/fragmentos/zz-release36h-miocardite.json, review_status=revisado) cita 'sarcoidose cardíaca' 14 vezes, sempre no mesmo padrão — como etiologia imunomediada e como diagnóstico diferencial histológico da miocardite de células gigantes que exige biópsia para diferenciação — mas em NENHUM momento reproduz os critérios diagnósticos SJC, o protocolo PET-FDG, os pré-requisitos da forma isolada, ou a classe de recomendação de imunossupressão específica de sarcoidose (Classe IIa, distinta da Classe I da miocardite de células gigantes). O documento-fonte dedicado desta biblioteca (sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022.md, com todo esse conteúdo) nem sequer consta no related_document_slugs do hub de miocardite. Concluiu-se que sarcoidose cardíaca é tratada apenas superficialmente no hub — como menção de etiologia/diferencial, não como abordagem diagnóstica e terapêutica própria — o que justifica ficha dedicada, dado tratar-se de entidade com fisiopatologia granulomatosa distinta (doença sistêmica multiorgânica, não infecciosa/pós-viral como a maioria das miocardites do hub), abordagem diagnóstica própria (critérios SJC, PET-FDG/cintilografia com gálio, forma isolada com pré-requisitos próprios) e força de recomendação terapêutica distinta da miocardite de células gigantes. FASE 2 — Tudo com Tudo: related_document_slugs tem 3 entradas — o corpus mapeado originalmente indicava só 2 documentos com discussão central de sarcoidose cardíaca (sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022.md e miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora.md; o terceiro documento originalmente mapeado, sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025.md, foi lido por completo e NÃO menciona 'sarcoidose' nenhuma vez — foi usado só como contexto de fundo para a classificação IMPS, e excluído do related_document_slugs por não discutir o tema de forma central). Busca ativa adicional via 'grep -ril sarcoidose content/' encontrou mais 11 documentos citando o termo; cada um foi lido por completo. Dez foram descartados por menção superficial (item de lista/diferencial entre muitos, sem discussão dedicada de sarcoidose cardíaca): arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md, cardiomiopatia-pediatrica-dilatada-e-hipertrofica..., cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md, fluxograma-miocardite-aguda-esc-2025.md, miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022.md, cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria.md (sarcoidose aparece só como item em listas de etiologia/checklist ao longo do módulo, sem seção dedicada), doenca-veno-oclusiva-pulmonar-pvod-diagnostico-diferencial-e-risco-de-edema-com-vasodilatador.md, esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes.md (uma única recomendação IIa C sobre PET-FDG, sem contexto adicional — usada como apoio textual no diagnostic_approach mas não como related_document_slug por não atingir densidade de discussão central), doenca-pericardica-induzida-por-radioterapia-pericardite-aguda-e-constricao-tardia.md, e miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md (este último chega a listar o padrão histológico da sarcoidose numa tabela comparativa de subtipos, mas declara explicitamente que 'manejo específico de subtipos raros (sarcoidose cardíaca...) têm corpo de evidência próprio, não reproduzido aqui' — confirma, pela própria fonte, que não é discussão central). Um documento adicional passou no crivo de discussão central e foi incluído: hipertensao-pulmonar-associada-a-sarcoidose-mecanismos-multiplos-e-tratamento-individualizado.md, que dedica um mecanismo inteiro (item 4 de 5, com parágrafo próprio) à disfunção de ventrículo esquerdo por sarcoidose cardíaca concomitante como causa de hipertensão pulmonar pós-capilar em 5-20% dos casos de SAPH — conexão clinicamente verdadeira e específica, não mera proximidade temática (contagem de menções ao termo 'sarcoidose' no arquivo: 15). Não foi possível justificar uma quarta conexão além dessas 3 sem forçar uma menção superficial a passar por discussão central — 3 entradas ficou dentro do intervalo permitido (3-7) e cada uma foi lida por completo e confirmada como discussão central verdadeira. Overlap documentado: miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora também consta no related_document_slugs do hub 'miocardite' — overlap esperado e aceitável (mesmo padrão do verbete-irmão cardiomiopatia-de-takotsubo, PR #698, com o hub cardiomiopatias); hipertensao-pulmonar-associada-a-sarcoidose-mecanismos-multiplos-e-tratamento-individualizado também consta no related_document_slugs do verbete 'hipertensao-pulmonar' — overlap igualmente esperado e documentado em teste dedicado. 5 PMIDs verificados individualmente via NCBI E-utilities (esummary) nesta sessão: 35830116 (SBC 2022 miocardites), 37456487 (revisão GCM Cureus), 40878297 (ESC 2025 IMPS), 37835874 (Kacprzak et al., SAPH), 36017572 (ESC 2022 arritmias ventriculares/morte súbita) — todos com título, periódico e data conferidos contra o documento fonte, sem divergência encontrada. Nenhuma dose de fármaco foi incluída em nenhum campo, inclusive nos imunossupressores citados (prednisona, azatioprina, metotrexato, leflunomida, infliximabe — todos mencionados apenas por classe de recomendação, sem posologia). differentials inclui explicitamente miocardite de células gigantes como diferencial mais próximo, com nota de que as duas podem coexistir/ser confundidas clinicamente e histologicamente, e que a força da recomendação terapêutica difere entre elas. category 'doenca_miocardica' segue a mesma convenção já usada para o verbete-irmão pediátrico 'miocardite-pediatrica' (o hub geral 'miocardite' usa 'doenca_inflamatoria', mas a instrução explícita desta rodada restringiu a escolha a 'doenca_miocardica' ou 'pericardio' — optou-se por 'doenca_miocardica' por ser miocardiopatia granulomatosa antes de ser doença pericárdica; os documentos-fonte vivem na pasta content/Pericárdio/ apenas por organização histórica da biblioteca, não por classificação clínica). Pendente revisão humana final (review_status=pendente_revisao) — por isso a entrada correspondente foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO em test_canonical_content_review_status.py, seguindo exatamente o padrão da PR #698 (cardiomiopatia-de-takotsubo): essa allowlist só produz efeito em test_disease_fragments_canonical.py; o teste principal de review_status (test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc) continua falhando para este slug, como esperado, documentado, e não contornado — ver docs/novo-verbete-sarcoidose-cardiaca-2026-08-29.md.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
