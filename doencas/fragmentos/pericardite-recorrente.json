@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "pericardite-recorrente",
+    "name": "Pericardite recorrente",
+    "aliases": [
+      "Pericardite recidivante",
+      "Recurrent pericarditis",
+      "Pericardite de repetição"
+    ],
+    "area": "geral",
+    "category": "doencas_pericardicas",
+    "subtype": "inflamatoria_recorrente",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "fonte_producao": "chatgpt",
+    "review_status": "pendente_revisao",
+    "summary": "Pericardite recorrente corresponde a novo episódio de atividade pericárdica após episódio prévio documentado e período de remissão. A avaliação contemporânea é fenótipo-dirigida: além da clínica, marcadores inflamatórios e imagem podem ser necessários para confirmar atividade, sobretudo quando os sintomas são atípicos ou persistentes. Aspirina/AINE mais colchicina permanecem a base do tratamento da doença idiopática/inflamatória não complicada; corticosteroides têm papel seletivo. Em doença inflamatória recorrente ou refratária selecionada, ensaios randomizados com anakinra (AIRTRIP) e rilonacept (RHAPSODY) sustentam bloqueio de IL-1. Antes de imunomodulação, etiologias específicas, especialmente tuberculose no contexto brasileiro, devem ser reconsideradas.",
+    "epidemiology": "Recorrência ocorre em parcela relevante dos pacientes após pericardite aguda e o risco aumenta após uma primeira recidiva. As taxas variam conforme etiologia, tratamento inicial e definição utilizada. Uso de colchicina reduz recorrências em ensaios randomizados. Doença idiopática/autoinflamatória predomina em muitas coortes de centros especializados, mas etiologias infecciosas, neoplásicas e sistêmicas têm prognóstico e manejo distintos.",
+    "presentation": [
+      "Dor torácica tipicamente pleurítica e posicional semelhante ao episódio inicial",
+      "Febre ou sintomas sistêmicos quando há inflamação ativa",
+      "Elevação de proteína C reativa ou velocidade de hemossedimentação em parte dos episódios",
+      "Alterações de ECG compatíveis podem reaparecer, mas não são obrigatórias",
+      "Derrame pericárdico novo ou em progressão pode ocorrer",
+      "Fadiga e limitação funcional podem persistir entre episódios e não equivalem necessariamente a nova inflamação"
+    ],
+    "diagnostic_approach": {
+      "confirmar_recorrencia": "Reunir episódio prévio documentado, período de remissão e evidência clínica/objetiva de nova atividade. Dor isolada sem evidência suficiente de inflamação exige diagnóstico diferencial antes de ser rotulada como recorrência.",
+      "avaliacao_basica": "História e exame, ECG, ecocardiograma e marcadores inflamatórios conforme o quadro. Troponina é útil quando há suspeita de envolvimento miocárdico.",
+      "imagem_avancada": "Ressonância cardíaca pode demonstrar edema/realce pericárdico, avaliar miocárdio e ajudar em casos de diagnóstico incerto ou possível constrição transitória. Tomografia pode complementar avaliação estrutural e de calcificação.",
+      "etiologia": "Reavaliar tuberculose, infecção bacteriana, neoplasia, síndrome pós-lesão cardíaca, doença autoimune/autoinflamatória, uremia e outras causas específicas conforme contexto."
+    },
+    "differentials": [
+      "Síndrome coronariana aguda ou outra causa de dor isquêmica",
+      "Miocardite, miopericardite ou perimiocardite",
+      "Embolia pulmonar",
+      "Pleurite/pneumonia e outras causas pulmonares",
+      "Dor musculoesquelética da parede torácica",
+      "Doença esofágica",
+      "Dor residual pós-pericardite sem inflamação ativa",
+      "Tuberculose pericárdica",
+      "Pericardite neoplásica",
+      "Pericardite autoimune ou autoinflamatória sistêmica"
+    ],
+    "tests": [
+      "ECG de 12 derivações",
+      "Proteína C reativa e/ou velocidade de hemossedimentação conforme contexto",
+      "Ecocardiograma transtorácico",
+      "Troponina de alta sensibilidade quando houver suspeita de envolvimento miocárdico",
+      "Ressonância cardíaca em doença complexa, diagnóstico incerto ou avaliação de atividade",
+      "Tomografia quando houver pergunta estrutural específica, calcificação ou limitação da RMC",
+      "Investigação etiológica dirigida, incluindo tuberculose quando epidemiologicamente pertinente"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica ou sinais de tamponamento",
+      "Derrame pericárdico importante ou rapidamente progressivo",
+      "Febre alta persistente ou suspeita de infecção bacteriana",
+      "Suspeita de tuberculose ou neoplasia",
+      "Elevação relevante de troponina, disfunção ventricular ou arritmia sugerindo envolvimento miocárdico",
+      "Sinais de constrição pericárdica",
+      "Imunossupressão importante ou doença sistêmica ativa"
+    ],
+    "treatment_summary": "Na doença idiopática/inflamatória não complicada, aspirina ou AINE associados à colchicina permanecem a base do tratamento conforme ESC 2025 e ACC 2025. Corticosteroides são reservados para situações selecionadas e sua retirada deve ser cuidadosa. Em fenótipo inflamatório recorrente/refratário selecionado, bloqueio de IL-1 é sustentado por ensaios randomizados: AIRTRIP para anakinra e RHAPSODY para rilonacept. A terapia deve ser condicionada à etiologia, atividade objetiva, risco infeccioso, disponibilidade e regulamentação local. Pericardiectomia não é rotina e fica restrita a doença refratária grave ou constrição clinicamente significativa após avaliação especializada.",
+    "ambulatory_flow": [
+      "Confirmar que há nova atividade pericárdica e não apenas dor residual",
+      "Pesquisar red flags, derrame e possível envolvimento miocárdico",
+      "Reavaliar etiologia antes de classificar como idiopática/autoinflamatória",
+      "Usar tratamento anti-inflamatório convencional e colchicina quando apropriados",
+      "Se houver múltiplas recorrências ou dependência terapêutica, fenotipar inflamação com biomarcadores e imagem conforme necessidade",
+      "Considerar avaliação especializada para imunomodulação ou doença refratária",
+      "Reavaliar atividade clínica/inflamatória antes da redução de tratamento"
+    ],
+    "emergency_flow": [
+      "Tamponamento, instabilidade ou suspeita de pericardite purulenta exigem manejo emergencial específico e não devem ser tratados como simples recorrência idiopática",
+      "Suspeita de síndrome coronariana, embolia pulmonar ou miocardite clinicamente relevante deve seguir protocolos próprios"
+    ],
+    "monitoring": [
+      "Sintomas e capacidade funcional",
+      "Proteína C reativa e outros marcadores quando previamente elevados",
+      "Evolução do derrame e função ventricular pelo ecocardiograma quando indicados",
+      "Evidência de atividade pericárdica em RMC em casos complexos",
+      "Efeitos adversos e risco infeccioso de terapias imunomoduladoras",
+      "Sinais de dependência de corticosteroide ou nova recorrência durante redução terapêutica"
+    ],
+    "special_populations": [
+      "Brasil/áreas de maior prevalência de tuberculose: excluir etiologia tuberculosa de forma proporcional ao risco antes de imunomodulação.",
+      "Doença autoimune/autoinflamatória: coordenar tratamento com a doença sistêmica de base.",
+      "Imunossuprimidos e pacientes oncológicos: ampliar investigação etiológica e individualizar imunomodulação.",
+      "Suspeita de envolvimento miocárdico: reclassificar como síndrome miopericárdica inflamatória apropriada e aplicar recomendações específicas."
+    ],
+    "tags": [
+      "pericardite recorrente",
+      "pericárdio",
+      "colchicina",
+      "anakinra",
+      "rilonacept",
+      "IL-1",
+      "ressonância cardíaca",
+      "PCR",
+      "tuberculose pericárdica"
+    ],
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Wang TKM, Klein AL, Cremer PC, et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Diagnosis and Management of Pericarditis. J Am Coll Cardiol. 2025;86(25):2691-2719. DOI: 10.1016/j.jacc.2025.05.023. PMID: 40767817.",
+      "Imazio M, Belli R, Brucato A, et al. CORP-2. Lancet. 2014;383(9936):2232-2237. DOI: 10.1016/S0140-6736(13)62709-9. PMID: 24694983.",
+      "Brucato A, Imazio M, Gattorno M, et al. AIRTRIP. JAMA. 2016;316(18):1906-1912. DOI: 10.1001/jama.2016.15826. PMID: 27825009.",
+      "Klein AL, Imazio M, Cremer P, et al. RHAPSODY. N Engl J Med. 2021;384(1):31-41. DOI: 10.1056/NEJMoa2027892. PMID: 33200890."
+    ],
+    "related_document_slugs": [
+      "pericardite-recorrente-esc-acc-2025-fenotipo-e-escalonamento",
+      "corp-2-colchicina-multiplas-recorrencias-pericardite",
+      "airtrip-anakinra-pericardite-recorrente",
+      "rhapsody-rilonacept-pericardite-recorrente"
+    ],
+    "review_note": "Manter pendente_revisao. Não atribuir classe/nível de recomendação específicos da ESC/ACC sem conferência editorial direta da tabela correspondente. Confirmar status regulatório e disponibilidade de rilonacept/anakinra no Brasil antes de qualquer apresentação operacional como opção disponível localmente."
+  }
+]
