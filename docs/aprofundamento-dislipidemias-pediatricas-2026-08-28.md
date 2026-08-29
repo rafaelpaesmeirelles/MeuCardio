@@ -10,8 +10,10 @@ PR #610). A ficha `dislipidemias-pediatricas` (área `cardiopediatria`,
 `prevalence_rank: 27`) tinha apenas metadados de catalogação — nenhum
 campo clínico, zero `related_document_slugs` (pior caso de violação da
 regra Tudo com Tudo entre os candidatos livres de PR, segundo o agente
-de busca). Distinta do hub geral `dislipidemia` (PR #570 aberto,
-população adulta) — slug diferente, sem colisão.
+de busca). É distinta do hub geral `dislipidemia`, voltado ao adulto,
+mas a consolidação posterior do corpus demonstrou uma interseção
+cientificamente legítima e fechada em três documentos de
+hipercolesterolemia familiar, descrita abaixo.
 
 ## Conteúdo produzido
 
@@ -54,35 +56,37 @@ ciclos anteriores. Nenhuma dose de fármaco foi incluída; estatina,
 ezetimiba e evinacumabe são citados apenas por classe/nome, sem
 posologia.
 
-## Verificações feitas na montagem
+## Verificações feitas na montagem e reconciliação posterior
 
-- Todos os 5 `related_document_slugs` verificados individualmente —
-  confirmada menção a dislipidemia/colesterol/hipercolesterolemia E a
+- Todos os 5 `related_document_slugs` foram verificados individualmente —
+  confirmada menção a dislipidemia/colesterol/hipercolesterolemia e a
   contexto pediátrico explícito no texto de cada um.
-- Nenhuma sobreposição com outras fichas, incluindo o hub adulto
-  `dislipidemia` (PR #570) — confirmado por checagem programática.
-- O agente de pesquisa descartou explicitamente vários candidatos
-  tentadores por menção apenas de passagem (cardiotoxicidade oncológica
-  pediátrica citando dislipidemia só como item de checklist; HAS
-  pediátrica citando perfil lipídico só como exame de rotina;
-  lerodalcibepe/PROGRAM LIBERATE citando "30% pediátricos" só como dado
-  demográfico sem discussão dedicada) — disciplina de vínculo direto
-  central aplicada consistentemente.
-- `patient_material_slug` permanece `null` — os dois candidatos mais
-  próximos são sobre HF em população adulta/geral e sobre obesidade
-  infantil com colesterol como só um dos temas, nenhum central o
-  suficiente.
+- Na branch original não havia sobreposição com o hub adulto porque ele
+  ainda não estava consolidado. Após a composição canônica dos dois hubs,
+  a auditoria identificou **exatamente três documentos compartilhados**, o
+  que é clinicamente apropriado porque hipercolesterolemia familiar é uma
+  doença genética contínua desde a infância e esses três documentos tratam
+  de diagnóstico/manejo de HF, algoritmo DLCN e HF homozigota/ELIPSE HoFH:
+  - `hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025`;
+  - `fluxograma-hipercolesterolemia-familiar-diagnostico-dlcn-e-manejo-esc-eas-2025`;
+  - `evinacumabe-inibidor-de-angptl3-na-hipercolesterolemia-familiar-homozigota-o-ensaio-elipse-hofh`.
+- O contrato de teste foi atualizado para exigir **igualdade exata** com
+  esses três slugs. Qualquer quarto documento compartilhado volta a falhar
+  até revisão explícita, preservando separação entre escopo pediátrico e hub
+  adulto sem negar uma sobreposição transversal real.
+- O agente de pesquisa descartou explicitamente candidatos com menção apenas
+  de passagem (cardiotoxicidade oncológica pediátrica citando dislipidemia
+  como item de checklist; HAS pediátrica citando perfil lipídico como exame
+  de rotina; lerodalcibepe/PROGRAM LIBERATE citando "30% pediátricos" apenas
+  como dado demográfico sem discussão dedicada).
+- `patient_material_slug` permanece `null` — os dois candidatos mais próximos
+  são sobre HF em população adulta/geral e sobre obesidade infantil com
+  colesterol como apenas um dos temas, nenhum central o suficiente.
 
 ## Catalogação preservada
 
 `name`, `aliases`, `area`, `category`, `subtype`, `prevalence_rank`
 originais preservados sem alteração.
-
-## Correção de gate repetida deste PR
-
-Esta branch partiu de `origin/main` antes da branch do PR #606 ser
-mesclada. Apliquei aqui a mesma correção de allowlist já aprovada pelo
-Rafael no PR #606 em `test_disease_fragments_canonical.py`.
 
 ## Fontes primárias
 
@@ -91,30 +95,19 @@ Rafael no PR #606 em `test_disease_fragments_canonical.py`.
 al. (JACC 2020, 11 milhões de indivíduos) e o consenso EAS 2023 de HF
 homozigota (Cuchel et al.).
 
-## Coordenação com Codex
-
-Nenhum dos 31 PRs abertos que tocam `doencas/metadados.json` (ou
-fragmentos/correções) edita `dislipidemias-pediatricas`.
-
 ## Riscos e limitações
 
-- Registro fica `review_status: pendente_revisao` — não publica até
-  revisão humana.
+- O conteúdo clínico continua específico da população pediátrica; a
+  sobreposição documental acima não transforma a ficha em duplicata do hub
+  adulto.
 - Nenhuma dose de fármaco é citada.
 - `patient_material_slug` permanece `null`.
 
 ## Gates
 
-- `scripts/audit_tudo_com_tudo.py`: `broken_references: []`,
-  `total_items: 9497`.
-- `scripts/content_inventory.py --strict`: `invalid: []`, `missing: []`.
-- `backend/tests/test_aprofundamento_dislipidemias_pediatricas.py`: 13
-  testes, todos passando de primeira.
-- `backend/tests/test_canonical_content_review_status.py` e
-  `test_disease_fragments_canonical.py`: passando (allowlist unificada).
-- `app.main` importa sem erro.
-
-## Branch e PR
-
-Branch `claude/aprofundar-dislipidemias-pediatricas-20260828`, baseada
-em `origin/main` (`64db98f8`) sem drift no momento do commit.
+- `scripts/audit_tudo_com_tudo.py`: `broken_references: []` no lote original.
+- `scripts/content_inventory.py --strict`: `invalid: []`, `missing: []` no lote original.
+- `backend/tests/test_aprofundamento_dislipidemias_pediatricas.py`: contrato
+  revisado para validar a interseção canônica exata de três documentos.
+- A visão canônica continua carregada por `disease_manifest`, incluindo
+  fragmentos/correções e o status de revisão publicado.
