@@ -7,12 +7,8 @@ from app.core.db import get_db
 from app.core.security import current_user, require_admin
 from app.models.guideline import Guideline, GuidelineNotification
 from app.models.user import User
-from app.services.guideline_discovery import (
-    DISCOVERY_LOOKBACK_DAYS,
-    DISCOVERY_START,
-    discover_and_publish,
-)
-from app.services.guideline_discovery_worldwide import enable_worldwide_sources
+from app.services.guideline_discovery import DISCOVERY_LOOKBACK_DAYS, DISCOVERY_START
+from app.services.guideline_discovery_worldwide import discover_and_publish_worldwide
 
 router = APIRouter(prefix="/api/guideline-updates", tags=["diretrizes"])
 
@@ -116,5 +112,4 @@ def run_discovery(
     db: Session = Depends(get_db),
     _=Depends(require_admin),
 ):
-    enable_worldwide_sources()
-    return discover_and_publish(db)
+    return discover_and_publish_worldwide(db)
