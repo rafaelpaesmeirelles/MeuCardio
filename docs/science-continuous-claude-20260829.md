@@ -678,3 +678,25 @@ inferolateral (achado precoce característico), T1 nativo REDUZIDO na RMC
 mostra T1 aumentado). Despachado como exame (agente accb1cd58669b414e).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 28 — concluído (1 commit, SHA 0c6fa017) — total 54 commits
+
+- exame `vigilancia-por-imagem-cardiovascular-na-doenca-de-fabry-eco-anual-strain-e-t1-nativo`
+  — novo, primeiro host de imagem estruturado para Fabry no corpus. 8
+  fontes verificadas (Lu 2022 PMID 34687538, Kozor 2016 PMID 26729695,
+  Pica/Sado 2014 PMID 25475749). Rigor: nenhum corte segmentar/T1 universal
+  apresentado como padrão — declarado dependência de plataforma/sequência.
+
+## Lote 29 (em andamento, 1 agente) — correção cirúrgica pequena
+
+Verificado ANTES de dispatchar: verbete sarcoidose-cardiaca já tem
+subseção pet_fdg_e_cintilografia_papel_e_limitacoes que DECLARA
+explicitamente "a padronização exata do preparo dietético não está
+detalhada... não deve ser reproduzida de memória" — confirma gap real
+e genuíno (não falso-positivo do meu grep anterior). monitoring já
+menciona "PET-FDG seriado" mas falta strain como ferramenta de rastreio.
+Despachada correção (agente a7eed9f8e80401158); integração planejada como
+MERGE cirúrgico (nova subseção + item de monitoring adicionado), não
+substituição do dict diagnostic_approach existente.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
