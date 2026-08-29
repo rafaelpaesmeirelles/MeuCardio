@@ -13,7 +13,10 @@ umask 027
 
 readonly PROJECT_DIR="/opt/meucardio"
 readonly ORIGINAL_COMMAND="${SSH_ORIGINAL_COMMAND:-}"
-readonly RECOVERY_BASE_SHA="c06e2dcb28de8c3ffea75fa50fe5279280d4ddf1"
+# Último SHA de produção certificado antes do rollback emergencial de
+# 29/08/2026. A recuperação privada abaixo ainda exige que nenhuma migration
+# tenha mudado entre esta base e o SHA solicitado antes de religar o backend.
+readonly RECOVERY_BASE_SHA="59566e1196e0fa7f465df93516790ef454e1f565"
 
 deny() {
   printf 'Production request denied: %s\n' "$1" >&2
@@ -95,13 +98,11 @@ git merge --ff-only "$EXPECTED_SHA"
 [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || deny "checkout SHA mismatch"
 [[ -z "$(git status --porcelain --untracked-files=normal)" ]] || deny "checkout changed during update"
 
-# Recuperação controlada do incidente de 28/08/2026: o rollback automático
-# restaura o banco e deliberadamente deixa backend/caddy parados. O deploy.sh
-# precisa do backend anterior vivo apenas para ler DEPLOY_COMMIT na guarda de
-# migrations. Se ele estiver parado, religamos SOMENTE o backend privado e
-# apenas quando pudermos provar que nenhuma migration mudou desde o release
-# que estava ativo antes do incidente. Assim o entrypoint do backend não pode
-# aplicar schema novo antes do backup do deploy.
+# Recuperação controlada após rollback automático: o rollback restaura o banco
+# e deliberadamente deixa backend/caddy parados. O deploy.sh precisa do backend
+# anterior vivo apenas para ler DEPLOY_COMMIT na guarda de migrations. Se ele
+# estiver parado, religamos SOMENTE o backend privado e apenas quando pudermos
+# provar que nenhuma migration mudou desde o último release certificado.
 if ! docker compose -f docker-compose.prod.yml exec -T backend true >/dev/null 2>&1; then
   git merge-base --is-ancestor "$RECOVERY_BASE_SHA" "$EXPECTED_SHA" \
     || deny "recovery base is not an ancestor of requested main SHA"
