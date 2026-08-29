@@ -75,6 +75,14 @@ def test_analysis_schema_requires_explicit_source_support_flag():
     assert "source_url" in change["required"]
 
 
+def test_original_analysis_schema_requires_access_level_and_sections():
+    required = runtime._ORIGINAL_ANALYSIS_SCHEMA["required"]
+    assert "source_access_level" in required
+    assert "primary_source_url" in required
+    assert "original_sections_seen" in required
+    assert "source_access_reason_pt" in required
+
+
 def test_fallback_analysis_is_never_publishable():
     analysis = {
         "summary_pt": (
@@ -104,7 +112,7 @@ def test_metadata_only_doi_or_pubmed_never_unlocks_publication():
     assert runtime._analysis_publishable(guideline(), analysis) is False
 
 
-def test_substantive_analysis_with_original_source_is_publishable():
+def test_legacy_substantive_analysis_with_original_source_can_remain_publishable():
     analysis = {
         "summary_pt": substantive_summary(),
         "source_urls_seen": ["https://www.escardio.org/guidelines/test"],
@@ -113,6 +121,56 @@ def test_substantive_analysis_with_original_source_is_publishable():
         "original_source_accessed": True,
     }
     assert runtime._analysis_publishable(guideline(), analysis) is True
+
+
+def test_new_analysis_with_abstract_only_is_blocked_even_on_publisher_url():
+    original = clinical.TRUSTED_DOMAINS
+    try:
+        runtime._install_source_domains()
+        url = "https://link.springer.com/article/10.1007/s11886-026-02405-0"
+        analysis = {
+            "summary_pt": substantive_summary(),
+            "source_urls_seen": [url],
+            "key_changes": [{"explicit_in_source": True}],
+            "limitations": [],
+            "source_access_level": "abstract_only",
+            "primary_source_url": url,
+            "original_sections_seen": ["Abstract"],
+            "source_access_reason_pt": "Apenas o resumo estava acessível.",
+            "original_source_accessed": False,
+        }
+        assert runtime._analysis_publishable(guideline(), analysis) is False
+    finally:
+        clinical.TRUSTED_DOMAINS = original
+
+
+def test_new_analysis_requires_two_observed_parts_for_full_text_confirmation():
+    original = clinical.TRUSTED_DOMAINS
+    try:
+        runtime._install_source_domains()
+        url = "https://link.springer.com/article/10.1007/s11886-026-02405-0"
+        base = {
+            "summary_pt": substantive_summary(),
+            "source_urls_seen": [url],
+            "key_changes": [{"explicit_in_source": True}],
+            "limitations": [],
+            "source_access_level": "full_text",
+            "primary_source_url": url,
+            "source_access_reason_pt": "Texto integral consultado no editor.",
+        }
+        one_section = {**base, "original_sections_seen": ["Hypertrophic cardiomyopathy"]}
+        two_sections = {
+            **base,
+            "original_sections_seen": [
+                "Hypertrophic cardiomyopathy",
+                "Arrhythmogenic cardiomyopathy",
+            ],
+        }
+        assert runtime._full_text_access_confirmed(guideline(), one_section, [url]) is False
+        assert runtime._full_text_access_confirmed(guideline(), two_sections, [url]) is True
+        assert runtime._analysis_publishable(guideline(), two_sections) is True
+    finally:
+        clinical.TRUSTED_DOMAINS = original
 
 
 def test_springer_full_text_is_allowed_as_original_source():
@@ -129,13 +187,10 @@ def test_springer_full_text_is_allowed_as_original_source():
 
 def test_fallback_document_detector_catches_bibliographic_placeholder():
     doc = SimpleNamespace(
-        summary=(
-            "Identidade bibliográfica confirmada. Não foi possível recuperar o texto integral "
-            "e não foi possível verificar recomendações específicas."
-        ),
+        summary="Síntese automática do documento.",
         body_md=(
-            "Não foi possível recuperar o texto integral. Não foi possível verificar as recomendações. "
-            "Não foi possível confirmar doses ou critérios."
+            "Identidade bibliográfica confirmada. Não foi possível recuperar o texto integral. "
+            "Não foi possível verificar as recomendações. Não foi possível confirmar doses ou critérios."
         ),
     )
     assert runtime._document_looks_like_fallback(doc) is True
