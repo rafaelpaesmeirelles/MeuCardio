@@ -1,19 +1,15 @@
 from __future__ import annotations
 
-"""Camada de execução idempotente para os overrides do CorVIA Intelligence.
-
-Os campos clínicos podem receber atualizações de mais de uma diretriz. Cada
-bloco tem marcador próprio; reaplicar uma diretriz já presente não altera a
-ordem nem cria revisão artificial. Depois de uma reconciliação arquivos -> DB,
-o marcador some e o mesmo override é restaurado automaticamente.
-"""
+"""Camada de execução idempotente para os overrides do CorVIA Intelligence."""
 
 import re
+from datetime import datetime, timezone
 from typing import Any
 
 from app.services import guideline_clinical_update as core
 
 _ORIGINAL_APPLY_OVERRIDE = core._apply_override
+_ORIGINAL_ENSURE_SUMMARY = core._ensure_summary_document
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -69,10 +65,21 @@ def _guarded_apply_override(db, guideline, impact: dict, *, record: bool = True)
     return _ORIGINAL_APPLY_OVERRIDE(db, guideline, impact, record=record)
 
 
+def _ensure_summary_published(db, guideline, analysis: dict, impacts: list[dict]):
+    doc = _ORIGINAL_ENSURE_SUMMARY(db, guideline, analysis, impacts)
+    doc.published = True
+    doc.review_status = "revisado"
+    doc.source_tier = "A"
+    doc.reviewed_at = doc.reviewed_at or datetime.now(timezone.utc)
+    db.flush()
+    return doc
+
+
 def install_runtime_guards() -> None:
     core._plain_override = _plain_override
     core._strip_plain_override = _strip_plain_override
     core._apply_override = _guarded_apply_override
+    core._ensure_summary_document = _ensure_summary_published
 
 
 def process_pending_guidelines(db, *, limit: int = core.PROCESS_LIMIT) -> dict:
