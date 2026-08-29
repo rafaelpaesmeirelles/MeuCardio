@@ -1,14 +1,19 @@
 from __future__ import annotations
 
-"""Worldwide source registry for CorVIA Intelligence.
+"""Worldwide source registry and resilient orchestration for CorVIA Intelligence.
 
-The canonical discovery engine stays conservative. This module adds high-signal
-professional societies, guideline repositories, bibliographic indexing and major
-medical journals without changing review semantics: discoveries remain `detected`
-until scientific review.
+Structured scholarly indexes are the primary safety net because many publisher
+sites intentionally block automated HTML clients. Direct society/journal pages
+remain enabled as redundant first-party discovery paths. Every discovery remains
+`detected` until scientific review; this module never changes clinical guidance.
 """
 
+from datetime import datetime, timezone
+
+from sqlalchemy.orm import Session
+
 from app.services import guideline_discovery as core
+from app.services.guideline_discovery_structured import discover_structured_sources
 
 
 CARDIOVASCULAR_TERMS = (
@@ -55,20 +60,6 @@ HIGH_SIGNAL_TERMS = tuple(dict.fromkeys(
     )
 ))
 
-# PubMed/MEDLINE is the global bibliographic safety net. The query is already
-# constrained to cardiovascular high-signal publication types, so result links
-# can be inspected directly and then deduplicated by DOI by the canonical engine.
-PUBMED_QUERY = (
-    "https://pubmed.ncbi.nlm.nih.gov/?term="
-    "%28cardiovascular%5BTitle%2FAbstract%5D+OR+cardiac%5BTitle%2FAbstract%5D+OR+"
-    "%22heart+failure%22%5BTitle%2FAbstract%5D+OR+coronary%5BTitle%2FAbstract%5D+OR+"
-    "arrhythmia%5BTitle%2FAbstract%5D+OR+stroke%5BTitle%2FAbstract%5D+OR+"
-    "hypertension%5BTitle%2FAbstract%5D%29+AND+%28guideline%5BPublication+Type%5D+OR+"
-    "%22practice+guideline%22%5BPublication+Type%5D+OR+clinical+trial%5BPublication+Type%5D+OR+"
-    "meta-analysis%5BPublication+Type%5D+OR+systematic+review%5BPublication+Type%5D%29"
-    "&sort=date&size=100"
-)
-
 SBC_HOSTS = (
     "portal.cardiol.br",
     "www.portal.cardiol.br",
@@ -77,18 +68,9 @@ SBC_HOSTS = (
 )
 
 WORLDWIDE_SOURCES = (
-    # Global bibliographic indexing across publishers and countries.
-    core.Source(
-        "PUBMED",
-        PUBMED_QUERY,
-        ("pubmed.ncbi.nlm.nih.gov",),
-        keywords=("pubmed.ncbi.nlm.nih.gov/",),
-        max_details=100,
-    ),
     # Brazil: SBC/ConDir + Arquivos Brasileiros de Cardiologia. The canonical
-    # core already watches the main SBC directives page; these paginated views
-    # ensure recently displaced documents are still inspected. External links
-    # to ABC Cardiol are explicitly allowed and then deduplicated by DOI.
+    # core already watches the main SBC directives page; paginated views keep
+    # recently displaced documents in the discovery window.
     core.Source(
         "SBC",
         "https://www.portal.cardiol.br/diretrizes?dba05c42_page=1",
@@ -181,7 +163,8 @@ WORLDWIDE_SOURCES = (
         keywords=CARDIOVASCULAR_TERMS,
         max_details=80,
     ),
-    # Major journals: direct early-online surveillance complements indexing latency.
+    # Major journals: early-online HTML is a fallback. PubMed/Europe PMC/Crossref
+    # provide structured coverage when these sites return 403 to automated clients.
     core.Source(
         "JACC",
         "https://www.jacc.org/onlinefirst",
@@ -249,7 +232,7 @@ WORLDWIDE_SOURCES = (
 
 
 def enable_worldwide_sources() -> tuple[core.Source, ...]:
-    """Idempotently install worldwide sources into the canonical engine."""
+    """Idempotently install direct worldwide sources into the canonical engine."""
     current = list(core.SOURCES)
     known = {(item.org, item.index_url) for item in current}
     for source in WORLDWIDE_SOURCES:
@@ -259,3 +242,38 @@ def enable_worldwide_sources() -> tuple[core.Source, ...]:
             known.add(key)
     core.SOURCES = tuple(current)
     return core.SOURCES
+
+
+def discover_and_publish_worldwide(db: Session) -> dict:
+    """Run structured indexes first, then direct first-party fallbacks.
+
+    Structured results are injected only for the duration of this synchronous
+    discovery call and are persisted by the same canonical dedup/review pipeline.
+    """
+    enable_worldwide_sources()
+    now = datetime.now(timezone.utc)
+    cutoff = core._effective_cutoff(now)
+    structured_items, structured_coverage = discover_structured_sources(cutoff, now)
+
+    original_bootstrap = core.BOOTSTRAP_DOCUMENTS
+    try:
+        core.BOOTSTRAP_DOCUMENTS = tuple(original_bootstrap) + tuple(structured_items)
+        result = core.discover_and_publish(db)
+    finally:
+        core.BOOTSTRAP_DOCUMENTS = original_bootstrap
+
+    failed_direct = result.get("source_failures", [])
+    structured_ok = sum(1 for item in structured_coverage if item.get("status") == "ok")
+    structured_failed = len(structured_coverage) - structured_ok
+    result["structured_sources"] = structured_coverage
+    result["coverage"] = {
+        "structured_total": len(structured_coverage),
+        "structured_ok": structured_ok,
+        "structured_failed": structured_failed,
+        "structured_items_seen": len(structured_items),
+        "direct_sources_total": len(core.SOURCES),
+        "direct_sources_failed": len(failed_direct),
+        "direct_sources_ok": max(0, len(core.SOURCES) - len(failed_direct)),
+        "mode": "structured_primary_direct_fallback",
+    }
+    return result
