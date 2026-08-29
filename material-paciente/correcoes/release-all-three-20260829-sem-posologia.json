@@ -3,8 +3,8 @@
     "slug": "icfep-e-obesidade-semaglutida-e-tirzepatida-o-que-esperar",
     "replace_patterns": [
       {
-        "pattern": "2,4\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?",
-        "replacement": "a dose estudada no ensaio clínico"
+        "pattern": "\\b\\d+(?:[.,]\\d+)?\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?\\b",
+        "replacement": "a dose prevista no protocolo do estudo"
       }
     ]
   },
@@ -12,8 +12,8 @@
     "slug": "semaglutida-protege-o-coracao-mesmo-sem-diabetes-o-select",
     "replace_patterns": [
       {
-        "pattern": "2,4\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?",
-        "replacement": "a dose estudada no ensaio SELECT"
+        "pattern": "\\b\\d+(?:[.,]\\d+)?\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?\\b",
+        "replacement": "a dose prevista no protocolo do estudo"
       }
     ]
   },
