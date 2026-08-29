@@ -4,6 +4,7 @@
 #   deploy <40-character current main SHA>
 #   apk <40-character current main SHA>
 #   intelligence <40-character current main SHA>
+#   intelligence-force <40-character current main SHA>
 set -Eeuo pipefail
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -21,6 +22,7 @@ deny() {
 
 REQUEST_KIND=""
 EXPECTED_SHA=""
+INTELLIGENCE_FORCE="0"
 if [[ "$ORIGINAL_COMMAND" =~ ^deploy[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="deploy"
   EXPECTED_SHA="${BASH_REMATCH[1]}"
@@ -30,10 +32,14 @@ elif [[ "$ORIGINAL_COMMAND" =~ ^apk[[:space:]]([0-9a-f]{40})$ ]]; then
 elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="intelligence"
   EXPECTED_SHA="${BASH_REMATCH[1]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence-force[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="intelligence"
+  EXPECTED_SHA="${BASH_REMATCH[1]}"
+  INTELLIGENCE_FORCE="1"
 else
-  deny "expected exactly: deploy <SHA>, apk <SHA>, or intelligence <SHA>"
+  deny "expected exactly: deploy <SHA>, apk <SHA>, intelligence <SHA>, or intelligence-force <SHA>"
 fi
-readonly REQUEST_KIND EXPECTED_SHA
+readonly REQUEST_KIND EXPECTED_SHA INTELLIGENCE_FORCE
 
 [[ -d "$PROJECT_DIR/.git" ]] || deny "production checkout not found"
 cd "$PROJECT_DIR"
@@ -61,6 +67,12 @@ if [[ "$REQUEST_KIND" == "intelligence" ]]; then
 
   docker compose -f docker-compose.prod.yml exec -T backend true >/dev/null 2>&1 \
     || deny "production backend is not running"
+
+  if [[ "$INTELLIGENCE_FORCE" == "1" ]]; then
+    exec docker compose -f docker-compose.prod.yml exec -T \
+      -e CORVIA_INTELLIGENCE_FORCE=1 backend \
+      python -m app.services.guideline_discovery_cli
+  fi
 
   exec docker compose -f docker-compose.prod.yml exec -T backend \
     python -m app.services.guideline_discovery_cli
