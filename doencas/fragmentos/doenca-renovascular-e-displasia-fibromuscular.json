@@ -1,0 +1,326 @@
+[
+  {
+    "slug": "doenca-renovascular-e-displasia-fibromuscular",
+    "name": "Doença renovascular e displasia fibromuscular",
+    "aliases": [
+      "estenose de artéria renal",
+      "displasia fibromuscular",
+      "hipertensão renovascular"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Doença renovascular é o estreitamento da artéria renal capaz de causar hipertensão secundária e/ou deterioração de função renal, com duas etiologias que exigem leitura clínica distinta. Em mais de 90% dos casos é aterosclerótica — paciente idoso, com fatores de risco cardiovascular clássicos, lesão tipicamente ostial — e nessa forma a evidência de ensaios randomizados (CORAL) mostrou que o stent renal não reduz eventos cardiovasculares nem renais frente à terapia médica isolada, sustentando recomendação contra revascularização de rotina na estenose unilateral. A displasia fibromuscular (DFM) é a etiologia não aterosclerótica — mulher jovem ou de meia-idade, lesão focal ou em padrão multifocal ('colar de contas'), podendo acometer múltiplos leitos arteriais além do renal — na qual a angioplastia por balão, e não o stent primário, é a intervenção preferencial quando há significância hemodinâmica demonstrada. Em ambas, a revascularização não é conduta padrão pela estenose isolada: entra como opção em cenários específicos — hipertensão refratária grave, edema pulmonar recorrente sem outra causa, deterioração renal progressiva.",
+    "epidemiology": "Na doença renovascular aterosclerótica, a prevalência de estenose de artéria renal (EAR) ≥60% em maiores de 65 anos é 6,8% na população geral, maior em homens (9,1%) que em mulheres (5,5%); em pacientes com doença arterial periférica já estabelecida, a prevalência varia entre 7% e 42% (Mazzolai et al., Eur Heart J 2024, PMID 39210722). É a causa dominante de doença renovascular, respondendo por mais de 90% dos casos. A displasia fibromuscular tem perfil epidemiológico oposto: 80-90% dos pacientes são mulheres. Por leito arterial, dados de registro internacional mostram acometimento renal em aproximadamente 75% dos pacientes com DFM e acometimento cerebrovascular em aproximadamente 80%, com envolvimento de múltiplos leitos arteriais em mais da metade dos casos (Gornik et al., Vasc Med 2019, PMID 30648921).",
+    "presentation": [
+      "Hipertensão de difícil controle ou resistente (3 anti-hipertensivos incluindo diurético, ou ≥4 anti-hipertensivos, sem outra causa secundária provável)",
+      "Edema agudo de pulmão súbito e recorrente, sem causa cardíaca clara",
+      "Deterioração de função renal (azotemia nova ou piora) após início de bloqueador do sistema renina-angiotensina-aldosterona (IECA/BRA)",
+      "Hipertensão de início antes dos 30 anos ou hipertensão grave de início após os 55 anos, associada a doença renal crônica ou insuficiência cardíaca",
+      "Hipertensão com sopro abdominal à ausculta",
+      "Rim atrófico inexplicado, discrepância de tamanho renal entre os rins, ou insuficiência renal inexplicada",
+      "Achado incidental de lesão em 'colar de contas' ou de estenose focal única em angiotomografia/angiorressonância solicitada por outro motivo, sobretudo em mulher jovem — sugestivo de displasia fibromuscular"
+    ],
+    "diagnostic_approach": {
+      "distincao_etiologica": [
+        "Perfil aterosclerótico: paciente idoso, fatores de risco cardiovascular clássicos, lesão predominantemente ostial",
+        "Perfil de displasia fibromuscular: mulher jovem/meia-idade, sem fatores de risco aterosclerótico clássicos, lesão focal ou multifocal em 'colar de contas'",
+        "O diagnóstico de DFM exige pelo menos uma lesão arterial focal ou multifocal estenótica — aneurisma, dissecção ou tortuosidade isolados não bastam"
+      ],
+      "papel_do_doppler_duplex_renal": [
+        "Doppler é a modalidade de imagem de primeira linha recomendada na suspeita de estenose de artéria renal",
+        "Critério primário: velocidade sistólica de pico >200 cm/s na artéria renal",
+        "Razão de velocidade renal/aórtica (RAR) >3,5"
+      ],
+      "angiotomografia_e_angiorressonancia": [
+        "Para suspeita de DFM renal, angiotomografia (CTA) é a modalidade inicial de escolha, com angiorressonância (MRA) como alternativa",
+        "Angio-RM tem sensibilidade 88% e especificidade 100% para EAR em geral, mas superestima o grau de estenose em 26-32%",
+        "Uma vez identificada DFM em qualquer leito, recomenda-se imagem única de todos os vasos do crânio à pelve"
+      ],
+      "significancia_hemodinamica_na_dfm": [
+        "Na DFM renal, o corte de significância hemodinâmica é razão Pd/Pa <0,90 (gradiente ≥10% da pressão aórtica média)"
+      ]
+    },
+    "differentials": [
+      "Hipertensão essencial (primária)",
+      "Hipertensão resistente por má adesão ou dose subótima",
+      "Outras causas de hipertensão secundária (hiperaldosteronismo primário, feocromocitoma, doença renal parenquimatosa, apneia do sono, coarctação de aorta)",
+      "Vasculite de grandes vasos (Takayasu) em paciente jovem",
+      "Nefroesclerose hipertensiva como causa (não consequência) de deterioração renal"
+    ],
+    "tests": [
+      "Doppler duplex de artérias renais — primeira linha",
+      "Angiotomografia (CTA) — modalidade inicial na suspeita de displasia fibromuscular",
+      "Angiorressonância (MRA) com contraste — alternativa à CTA",
+      "Angiografia por cateter com medida de Pd/Pa — padrão-ouro para significância hemodinâmica",
+      "Função renal seriada"
+    ],
+    "red_flags": [
+      "Edema agudo de pulmão súbito e recorrente sem causa cardíaca clara",
+      "Azotemia nova ou piora aguda após IECA/BRA",
+      "Crise hipertensiva",
+      "Rim atrófico inexplicado ou discrepância de tamanho renal"
+    ],
+    "ambulatory_flow": [
+      "Definir perfil etiológico provável (aterosclerótico vs. DFM) pela idade, sexo e fatores de risco",
+      "Solicitar Doppler duplex renal como primeira linha; em suspeita de DFM, priorizar CTA",
+      "Instituir e otimizar terapia médica independentemente de indicação futura de revascularização",
+      "Se DFM confirmada, imagem única do crânio à pelve para rastrear outros leitos",
+      "Reservar revascularização a cenários específicos combinados a alto risco e viabilidade renal"
+    ],
+    "emergency_flow": [
+      "Edema pulmonar agudo recorrente sem causa cardíaca — investigar EAR bilateral ou em rim único após estabilização",
+      "Deterioração renal aguda após IECA/BRA — suspender bloqueador e investigar",
+      "Crise hipertensiva com lesão de órgão-alvo — manejo em ambiente monitorizado"
+    ],
+    "treatment_summary": "Na estenose aterosclerótica, terapia médica otimizada é recomendada para todo paciente. Os ensaios randomizados, incluindo o CORAL, mostraram que a revascularização endovascular (stent) não é superior à terapia médica isolada para reduzir eventos cardiovasculares, renais ou mortalidade na estenose aterosclerótica unilateral — por isso revascularização de rotina não é recomendada. Revascularização só entra como opção em cenários específicos de alto risco e viabilidade renal (estenose unilateral >70% de alto risco, estenose bilateral ou em rim único, hipertensão/disfunção renal por DFM de alto risco). Na displasia fibromuscular, quando há significância hemodinâmica demonstrada, a angioplastia por balão isolada é a intervenção preferencial, com stent reservado a resgate.",
+    "monitoring": [
+      "Pressão arterial e resposta a ajuste terapêutico",
+      "Função renal seriada",
+      "Progressão do grau de estenose por Doppler seriado"
+    ],
+    "special_populations": [
+      "Mulher jovem sem fatores de risco cardiovascular clássicos — priorizar DFM como hipótese",
+      "Paciente com DFM confirmada em outro leito — rastrear outros leitos com imagem única",
+      "Estenose bilateral ou em rim único — maior risco de deterioração cardiorrenal"
+    ],
+    "assistant_questions": [
+      {
+        "id": "resistant_htn",
+        "label": "Hipertensão resistente (3 anti-hipertensivos incluindo diurético, ou ≥4 anti-hipertensivos, sem outra causa secundária provável)?",
+        "type": "boolean",
+        "required": true,
+        "section": "História"
+      },
+      {
+        "id": "htn_onset_before_30",
+        "label": "Hipertensão com início antes dos 30 anos?",
+        "type": "boolean",
+        "section": "História"
+      },
+      {
+        "id": "severe_htn_after_55_with_ckd_hf",
+        "label": "Hipertensão grave após os 55 anos, associada a DRC ou IC?",
+        "type": "boolean",
+        "section": "História"
+      },
+      {
+        "id": "htn_with_abdominal_bruit",
+        "label": "Hipertensão com sopro abdominal?",
+        "type": "boolean",
+        "section": "Exame físico"
+      },
+      {
+        "id": "hypertensive_crisis",
+        "label": "Crise hipertensiva?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "recurrent_flash_pulmonary_edema",
+        "label": "Edema agudo de pulmão súbito e recorrente sem causa cardíaca?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "renal_function_worsening_after_raas_blocker",
+        "label": "Azotemia nova ou piora após IECA/BRA?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "age_sex_profile",
+        "label": "Perfil de idade e sexo",
+        "type": "select",
+        "section": "Perfil",
+        "options": [
+          {
+            "value": "mulher_jovem_meia_idade",
+            "label": "Mulher jovem ou de meia-idade, sem fatores de risco CV"
+          },
+          {
+            "value": "idoso_fatores_risco_cv",
+            "label": "Idoso com fatores de risco CV clássicos"
+          },
+          {
+            "value": "outro_perfil",
+            "label": "Nenhum dos dois perfis"
+          }
+        ]
+      },
+      {
+        "id": "known_fmd_other_bed",
+        "label": "DFM já diagnosticada em outro leito arterial?",
+        "type": "boolean",
+        "section": "História"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "renovascular-flash-pulmonary-edema",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "recurrent_flash_pulmonary_edema",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Edema agudo de pulmão recorrente sem causa cardíaca — sugestivo de EAR bilateral ou em rim único"
+          ],
+          "suggested_tests": [
+            "Doppler duplex de artérias renais"
+          ]
+        }
+      },
+      {
+        "id": "renovascular-crise-hipertensiva",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "hypertensive_crisis",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Crise hipertensiva — investigar causa renovascular após estabilização"
+          ]
+        }
+      },
+      {
+        "id": "renovascular-aki-raas-blocker",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "renal_function_worsening_after_raas_blocker",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Piora renal após IECA/BRA — sinal de possível EAR bilateral ou em rim único"
+          ],
+          "suggested_tests": [
+            "Doppler duplex de artérias renais",
+            "Função renal seriada"
+          ]
+        }
+      },
+      {
+        "id": "renovascular-suspeita-classica",
+        "priority": 60,
+        "when": {
+          "any": [
+            {
+              "field": "htn_onset_before_30",
+              "op": "truthy"
+            },
+            {
+              "field": "severe_htn_after_55_with_ckd_hf",
+              "op": "truthy"
+            },
+            {
+              "field": "htn_with_abdominal_bruit",
+              "op": "truthy"
+            },
+            {
+              "field": "resistant_htn",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Doppler duplex de artérias renais"
+          ]
+        }
+      },
+      {
+        "id": "renovascular-perfil-fmd-jovem",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "age_sex_profile",
+              "op": "eq",
+              "value": "mulher_jovem_meia_idade"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Angiotomografia (CTA) de artérias renais"
+          ],
+          "differentials": [
+            "Priorizar displasia fibromuscular como hipótese"
+          ]
+        }
+      },
+      {
+        "id": "renovascular-fmd-conhecida-rastrear-outros-leitos",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "known_fmd_other_bed",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "ambulatory_flow": [
+            "Solicitar imagem única do crânio à pelve para rastrear outros leitos acometidos"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "doença renovascular",
+      "estenose de artéria renal",
+      "displasia fibromuscular",
+      "hipertensão renovascular",
+      "CORAL",
+      "stent renal",
+      "angioplastia renal"
+    ],
+    "source_refs": [
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID: 39210722.",
+      "Gornik HL, Persu A, Adlam D, et al. First International Consensus on the diagnosis and management of fibromuscular dysplasia. Vasc Med. 2019;24(2):164-189. PMID: 30648921.",
+      "Cooper CJ, Murphy TP, Cutlip DE, et al. (CORAL Investigators). Stenting and medical therapy for atherosclerotic renal-artery stenosis. N Engl J Med. 2014;370(1):13-22. PMID: 24245566."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39210722/",
+      "https://pubmed.ncbi.nlm.nih.gov/30648921/",
+      "https://pubmed.ncbi.nlm.nih.gov/24245566/"
+    ],
+    "related_document_slugs": [
+      "doenca-renovascular-diagnostico-e-tratamento-esc-2024",
+      "displasia-fibromuscular-consenso-internacional-diagnostico-e-manejo-2019",
+      "estenose-aterosclerotica-de-arteria-renal-o-ensaio-coral-e-o-fim-do-stent-rotineiro"
+    ],
+    "patient_material_slug": "estenose-de-arteria-renal-quando-a-pressao-alta-vem-do-rim",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete-hub novo criado em 29/08/2026. Corpus já existente: 2 documentos narrativos (ESC 2024 doença renovascular, consenso FMD 2019), checklist órfão, caso clínico CORAL, estudo CORAL, 2 materiais para paciente. Segundo material específico de FMD ('displasia-fibromuscular-a-doenca-arterial-que-imita-pressao-alta-comum') não vinculado por limitação do schema (patient_material_slug é string única) — oportunidade registrada. 3 PMIDs verificados individualmente. category='doenca_vascular' segue convenção dos hubs-irmãos 'Doença da aorta' e 'DAP de membros'. Regra determinística CORAL preservada explicitamente. Sem colisão de slug.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
