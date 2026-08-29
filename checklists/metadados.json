@@ -32556,5 +32556,104 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "algoritmo-diagnostico-da-amiloidose-cardiaca-cintilografia-escore-de-perugini-e-biopsia",
+    "condicao": "Amiloidose cardíaca — algoritmo diagnóstico: cintilografia, escore de Perugini e biópsia",
+    "resumo": "Checklist focado nos pontos operacionais do algoritmo diagnóstico da amiloidose cardíaca ainda pouco detalhados no corpus: reconhecimento de red flags, a exclusão obrigatória de AL antes de ATTR, a interpretação da cintilografia óssea (escore de Perugini e razão H/CL), seus falsos-positivos, o papel da biópsia/tipagem/sequenciamento, o encaminhamento a centro especializado e as particularidades do manejo farmacológico da IC nessa cardiomiopatia restritiva. Nenhuma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre amiloidose cardíaca foi localizada nas buscas realizadas no PubMed/NCBI; as fontes priorizadas foram o posicionamento da ESC (2021) e o consenso multissocietário ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI de imagem cardiovascular (2019).",
+    "documento_origem": null,
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. DOI: 10.1093/eurheartj/ehab072. PMID: 33825853.",
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI: 10.1161/CIRCULATIONAHA.116.021612. PMID: 27143678.",
+      "Perugini E, Guidalotti PL, Salvi F, et al. Noninvasive etiologic diagnosis of cardiac amyloidosis using 99mTc-3,3-diphosphono-1,2-propanodicarboxylic acid scintigraphy. J Am Coll Cardiol. 2005;46(6):1076-1084. DOI: 10.1016/j.jacc.2005.05.073. PMID: 16168294.",
+      "Bokhari S, Castaño A, Pozniakoff T, Deslisle S, Latif F, Maurer MS. (99m)Tc-pyrophosphate scintigraphy for differentiating light-chain cardiac amyloidosis from the transthyretin-related familial and senile cardiac amyloidoses. Circ Cardiovasc Imaging. 2013;6(2):195-201. DOI: 10.1161/CIRCIMAGING.112.000132. PMID: 23400849.",
+      "Bokhari S, Morgenstern R, Weinberg R, et al. Standardization of (99m)Technetium pyrophosphate imaging methodology to diagnose TTR cardiac amyloidosis. J Nucl Cardiol. 2018;25(1):181-190. DOI: 10.1007/s12350-016-0610-4. PMID: 27580616.",
+      "Dorbala S, Ando Y, Bokhari S, et al. ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI Expert Consensus Recommendations for Multimodality Imaging in Cardiac Amyloidosis: Part 1 of 2-Evidence Base and Standardized Methods of Imaging. J Card Fail. 2019;25(11):e1-e39. DOI: 10.1016/j.cardfail.2019.08.001. PMID: 31473268.",
+      "Dorbala S, Ando Y, Bokhari S, et al. ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI Expert Consensus Recommendations for Multimodality Imaging in Cardiac Amyloidosis: Part 2 of 2-Diagnostic Criteria and Appropriate Utilization. J Card Fail. 2019;25(11):854-865. DOI: 10.1016/j.cardfail.2019.08.002. PMID: 31473267.",
+      "Hanna M, Ruberg FL, Maurer MS, et al. Cardiac Scintigraphy With Technetium-99m-Labeled Bone-Seeking Tracers for Suspected Amyloidosis: JACC Review Topic of the Week. J Am Coll Cardiol. 2020;75(22):2851-2862. DOI: 10.1016/j.jacc.2020.04.022. PMID: 32498813.",
+      "Alreshq R, Cozzolino M, Lilleness B, et al. Light Chain Testing Abnormalities Among Patients With Transthyretin Amyloid Cardiomyopathy Referred for Technetium-99m Pyrophosphate Imaging. Am J Cardiol. 2022;181:105-112. DOI: 10.1016/j.amjcard.2022.06.064. PMID: 36028388.",
+      "Tingen HSA, Berends M, Tubben A, et al. Detecting early cardiomyopathy in transthyretin variant carriers: reappraising the diagnostic value of Perugini grade 1 radiotracer uptake on bone scintigraphy. Eur J Nucl Med Mol Imaging. 2025;52(13):5000-5005. DOI: 10.1007/s00259-025-07328-6. PMID: 40404867.",
+      "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Redefining optimal medical therapy for heart failure in amyloid transthyretin cardiomyopathy. Eur J Intern Med. 2026;148:106770. DOI: 10.1016/j.ejim.2026.106770. PMID: 41692652.",
+      "Rapezzi C, Quarta CC, Guidalotti PL, et al. Role of (99m)Tc-DPD scintigraphy in diagnosis and prognosis of hereditary transthyretin-related cardiac amyloidosis. JACC Cardiovasc Imaging. 2011;4(6):659-670. DOI: 10.1016/j.jcmg.2011.03.016. PMID: 21679902."
+    ],
+    "itens": [
+      {
+        "id": "red-flags-inicio-investigacao",
+        "categoria": "Triagem inicial",
+        "obrigatorio": true,
+        "texto": "Iniciar a investigação de amiloidose cardíaca diante de 'red flags' clínicas e ecocardiográficas, mesmo sem espessamento de parede isolado como motivador. Red flags extracardíacas: polineuropatia sensitivo-motora, disautonomia, síndrome do túnel do carpo bilateral (sobretudo se prévia à IC), ruptura espontânea do tendão do bíceps, estenose lombar, equimoses cutâneas espontâneas (periorbitárias), macroglossia e depósitos vítreos. Red flags cardíacas/ecocardiográficas: NT-proBNP desproporcionalmente elevado para o grau de disfunção sistólica/classe funcional, troponina persistentemente elevada sem síndrome coronariana aguda, hiperrefringência miocárdica granular ('granular sparkling'), strain longitudinal global reduzido com padrão de poupança apical (apical sparing), baixa voltagem do QRS desproporcional à espessura da parede do VE, derrame pericárdico e espessamento valvar. A presença desses achados deve disparar a investigação, independentemente de haver hipertrofia ventricular esquerda evidente.",
+        "origem_secao": "Garcia-Pavia et al., posicionamento ESC 2021 (Eur Heart J), seção de reconhecimento clínico ('red flags') e algoritmo diagnóstico."
+      },
+      {
+        "id": "excluir-al-antes-de-tudo",
+        "categoria": "Triagem inicial",
+        "obrigatorio": true,
+        "texto": "Excluir amiloidose de cadeia leve (AL) é o primeiro passo obrigatório do algoritmo, antes de qualquer tentativa de confirmação de ATTR — realizar simultaneamente eletroforese de proteínas séricas e urinárias com imunofixação e dosagem de cadeias leves livres séricas (relação kappa/lambda). Essa ordem não é opcional: tratar erroneamente um paciente com AL como se fosse ATTR (por exemplo, prosseguindo direto para tafamidis com base isolada em cintilografia positiva) atrasa o início da quimioterapia hematológica de uma doença de curso potencialmente fatal em semanas a poucos meses, e a cintilografia óssea pode ser positiva também em pacientes com AL, tornando-a não confiável como critério isolado enquanto uma discrasia de plasmócitos não for descartada.",
+        "origem_secao": "Garcia-Pavia et al., ESC 2021 (algoritmo diagnóstico); Gillmore et al., Circulation 2016 (falsos-positivos da cintilografia associados a AL); Hanna et al., JACC 2020 (necessidade de excluir proteína monoclonal antes de confirmar ATTR)."
+      },
+      {
+        "id": "cintilografia-ossea-apenas-apos-excluir-al",
+        "categoria": "Cintilografia",
+        "obrigatorio": true,
+        "texto": "A cintilografia com traçador ósseo (pirofosfato de tecnécio-99m/PYP, ou DPD/HMDP conforme disponibilidade local) só tem valor diagnóstico definitivo para ATTR quando interpretada em conjunto com a exclusão prévia de discrasia de plasmócitos — nunca isoladamente. Gillmore et al. (2016) demonstraram que a combinação de captação miocárdica grau 2 ou 3 na cintilografia com ausência de proteína monoclonal no sangue/urina tem especificidade e valor preditivo positivo de 100% (IC 98,0-100) para ATTR cardíaca, permitindo diagnóstico não invasivo sem biópsia. Sem essa exclusão prévia, a cintilografia positiva não permite diferenciar ATTR de um subgrupo de pacientes com AL que também capta o traçador.",
+        "origem_secao": "Gillmore et al., Circulation 2016 (critério diagnóstico não invasivo); Hanna et al., JACC 2020 ('cardiac scintigraphy can confirm the diagnosis of ATTR-CM only when combined with blood and urine testing to exclude a monoclonal protein')."
+      },
+      {
+        "id": "escore-perugini-e-razao-h-cl",
+        "categoria": "Cintilografia",
+        "obrigatorio": true,
+        "texto": "A interpretação da cintilografia combina graduação visual semiquantitativa (escore de Perugini, de grau 0 a grau 3, comparando a captação miocárdica com a captação óssea costal) com a razão quantitativa coração/contralateral (H/CL, region of interest sobre o coração corrigida pela contagem no hemitórax contralateral). No estudo de validação de Bokhari et al. (2013), o escore visual foi significativamente maior em ATTR do que em AL (2,9±0,06 vs. 0,8±0,27; p<0,0001), e uma razão H/CL >1,5 discriminou ATTR de AL com 97% de sensibilidade e 100% de especificidade (AUC 0,992). Perugini et al. (2005) descreveram originalmente a técnica de graduação visual comparando captação miocárdica e óssea; Bokhari et al. (2018) padronizaram a metodologia de aquisição (imagem em 1 hora, matriz 256, dose de 10 mCi) para reprodutibilidade do H/CL e do escore visual entre serviços. Nota de rigor: a descrição textual detalhada de cada grau intermediário (1 e 2) da escala de Perugini não foi confirmada literalmente nos resumos/artigos consultados nesta pesquisa — apenas os extremos (grau 0 = ausência de captação; grau 3 = captação miocárdica intensa/difusa) foram verificados com clareza nas fontes citadas; a descrição operacional completa dos graus 1 e 2 deve ser conferida no texto integral antes de publicação.",
+        "origem_secao": "Perugini et al., J Am Coll Cardiol 2005 (escore visual original); Bokhari et al., Circ Cardiovasc Imaging 2013 (validação do escore visual 0-3 e do H/CL >1,5); Bokhari et al., J Nucl Cardiol 2018 (padronização metodológica)."
+      },
+      {
+        "id": "falsos-positivos-cintilografia-pyp",
+        "categoria": "Cintilografia",
+        "obrigatorio": true,
+        "texto": "A cintilografia óssea pode ser positiva sem representar ATTR verdadeira. A principal causa de falso-positivo identificada no maior estudo multicêntrico de validação (Gillmore et al., 2016, n=1217) foi a própria amiloidose AL — os raros falsos-positivos ocorreram quase exclusivamente em pacientes com amiloidose cardíaca de cadeia leve, reforçando por que a exclusão de AL deve preceder a interpretação do exame como diagnóstica de ATTR. Há também relatos específicos de falso-positivo por cardiomiopatia induzida por hidroxicloroquina, documentados tanto em série de pacientes portadores de variante TTR (Tingen et al., 2025) quanto em relatos de caso dedicados (cardiomiopatia por hidroxicloroquina mimetizando amiloidose/miocardiopatia hipertrófica). A revisão de Hanna et al. (JACC 2020) é dedicada a mapear cenários de má interpretação da cintilografia e causas de resultados falso-positivos e falso-negativos, reforçando que o exame deve sempre ser lido no contexto clínico completo, não isoladamente.",
+        "origem_secao": "Gillmore et al., Circulation 2016 (falsos-positivos quase exclusivamente por AL); Tingen et al., Eur J Nucl Med Mol Imaging 2025 (falso-positivo por hidroxicloroquina em portador de variante TTR); Hanna et al., JACC 2020 (revisão de causas de falso-positivo/falso-negativo)."
+      },
+      {
+        "id": "biopsia-endomiocardica-grau-1-ou-discordante",
+        "categoria": "Biópsia/tipagem",
+        "obrigatorio": true,
+        "texto": "Quando a cintilografia resulta em grau 1 (captação leve/equívoca) ou é discordante com a apresentação clínica/outros exames de imagem, ela não preenche o critério não invasivo de diagnóstico (que exige grau 2 ou 3 associado à ausência de proteína monoclonal) — nesses casos, a biópsia endomiocárdica (ou de outro sítio acessível, quando aplicável) com tipagem da fibrila é necessária para esclarecer o diagnóstico. O estudo de Tingen et al. (2025) em portadores de variante TTR com grau 1 mostrou que uma parte já tinha ATTR-CM confirmada por biópsia no basal, outra parte desenvolveu ATTR-CM (ou 'provável ATTR-CM') ao longo do seguimento, e outra parte apresentou sinais de cardiomiopatia sem preencher critérios — evidenciando que grau 1 é uma categoria diagnosticamente indeterminada que exige investigação adicional (biópsia e/ou seguimento longitudinal), não uma conclusão definitiva.",
+        "origem_secao": "Dorbala et al., J Card Fail 2019, Parte 2 (critérios diagnósticos e utilização apropriada da imagem multimodal); Gillmore et al., Circulation 2016 (necessidade de histologia quando grau <2 ou proteína monoclonal presente); Tingen et al., Eur J Nucl Med Mol Imaging 2025 (reavaliação do grau 1 de Perugini)."
+      },
+      {
+        "id": "tipagem-proteina-e-sequenciamento-genetico",
+        "categoria": "Biópsia/tipagem",
+        "obrigatorio": true,
+        "texto": "Sempre que houver biópsia positiva para amiloide (endomiocárdica ou de outro sítio), a tipagem da proteína fibrilar (imuno-histoquímica e, idealmente, espectrometria de massa em tecido) é necessária para confirmar se o depósito é de transtirretina (ATTR) ou de cadeia leve (AL) ou de outro tipo raro, evitando erro de atribuição em casos de proteína monoclonal incidental coexistente. Uma vez confirmado o diagnóstico de ATTR (seja por via não invasiva ou por biópsia), o sequenciamento genético do gene TTR é necessário em todos os casos para diferenciar a forma hereditária (ATTRv) da forma selvagem (ATTRwt) — distinção com implicações prognósticas, terapêuticas e de aconselhamento familiar/rastreamento de parentes. Estudo dedicado ao tema reforça a importância de realizar o estudo genético mesmo em pacientes idosos com apresentação inicialmente sugestiva de forma selvagem, já que variantes patogênicas também ocorrem nessa faixa etária.",
+        "origem_secao": "Garcia-Pavia et al., ESC 2021 (algoritmo: genotipagem para diferenciar ATTRwt de ATTRv após confirmação de ATTR); Dorbala et al., J Card Fail 2019 (Partes 1 e 2, critérios de tipagem e sequenciamento); estudo sobre importância do estudo genético em idosos com amiloidose cardíaca por transtirretina, Medicina Clínica 2023, PMID 37532616."
+      },
+      {
+        "id": "encaminhamento-centro-especializado",
+        "categoria": "Encaminhamento",
+        "obrigatorio": true,
+        "texto": "O encaminhamento a um centro especializado em amiloidose é recomendado assim que a suspeita de AL surgir (para definição rápida da estratégia hematológica, dado o curso potencialmente agressivo) e sempre que forem necessárias técnicas diagnósticas complexas não disponíveis em todo serviço — biópsia endomiocárdica, tipagem por espectrometria de massa e avaliação multidisciplinar (cardiologia, hematologia, genética, neurologia). O posicionamento da ESC explicita que a colaboração entre centros é essencial, pois nem todo centro consegue realizar essas técnicas diagnósticas complexas, e que o tratamento específico da amiloidose AL cardíaca deve ser conduzido por equipes multidisciplinares.",
+        "origem_secao": "Garcia-Pavia et al., ESC 2021 — seção sobre colaboração entre centros e manejo multidisciplinar, especialmente para AL cardíaca."
+      },
+      {
+        "id": "nao-usar-quatro-pilares-icfer-indiscriminadamente",
+        "categoria": "Tratamento — particularidades",
+        "obrigatorio": true,
+        "texto": "Os 'quatro pilares' consagrados da terapia da ICFEr clássica (IECA/BRA/INRA, betabloqueador, antagonista mineralocorticoide e iSGLT2) não devem ser aplicados de forma indiscriminada na amiloidose cardíaca. Revisão recente (Aimo et al., 2026) enfatiza que praticamente não há evidência randomizada de desfecho para betabloqueadores, inibidores do sistema renina-angiotensina/INRA e antagonistas mineralocorticoides especificamente em ATTR-CM, e que dados observacionais mostram intolerância frequente a betabloqueadores e a inibidores do sistema renina-angiotensina nessa população (hipotensão, baixo débito), enquanto os antagonistas mineralocorticoides parecem mais bem tolerados, com associações favoráveis mais consistentes. Os inibidores de SGLT2 têm mostrado boa tolerabilidade em estudos observacionais do mundo real recentes, com sinais (ainda geradores de hipótese) de redução de eventos de IC. A recomendação prática é individualizar a terapia e tratá-la como provisória, priorizando sustentabilidade e benefício hemodinâmico líquido — não a aplicação automática do pacote-padrão de ICFEr.",
+        "origem_secao": "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Redefining optimal medical therapy for heart failure in amyloid transthyretin cardiomyopathy. Eur J Intern Med 2026, PMID 41692652."
+      },
+      {
+        "id": "diureticos-e-evitar-bradicardizantes",
+        "categoria": "Tratamento — particularidades",
+        "obrigatorio": true,
+        "texto": "Diuréticos de alça permanecem a base do controle sintomático de congestão na amiloidose cardíaca, exigindo dose individualizada e, em congestão refratária, associação precoce de diuréticos monitorada de perto (estratégias como diurese guiada por natriurese ou programas de diurese IV ambulatorial são extrapoladas de populações de IC não amiloide, com evidência específica em ATTR ainda limitada). O racional é que, no coração restritivo/infiltrado por amiloide, a fisiologia restritiva e a disautonomia frequente criam uma janela terapêutica estreita, em que pequenas variações de pré-carga ou pós-carga podem precipitar hipotensão, lesão renal aguda e sintomas de baixo débito — por isso a titulação deve ser cautelosa e individualizada, e fármacos bradicardizantes/inotrópicos negativos tendem a ser mal tolerados. Nota de rigor: a formulação mecanística clássica de que 'o débito cardíaco torna-se dependente da frequência cardíaca porque o volume sistólico é relativamente fixo pela rigidez diastólica' é um conceito consolidado na literatura de cardiomiopatias restritivas/infiltrativas, mas não foi encontrada, nas fontes consultadas nesta pesquisa, uma frase específica de diretriz/consenso que enuncie essa relação em uma sentença única e citável — a recomendação prática de cautela com diuréticos e fármacos bradicardizantes está diretamente sourced pela revisão de Aimo et al. (2026); a formulação fisiopatológica do 'débito fixo dependente de frequência' deve ser tratada como racional fisiopatológico amplamente aceito, não como citação literal de guideline, até confirmação em revisão futura.",
+        "origem_secao": "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Eur J Intern Med 2026, PMID 41692652 (diuréticos como base do tratamento, janela terapêutica estreita por fisiologia restritiva e disautonomia)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
