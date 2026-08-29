@@ -31384,5 +31384,123 @@
       }
     ],
     "revisao": "Checklist novo criado em 29/08/2026, a partir dos dois documentos-fonte já revisados desta biblioteca, preenchendo lacuna de conectividade do verbete sarcoidose-cardiaca (completo e revisado, mas sem nenhum checklist/caso/material associado antes desta rodada). Sem colisão de slug. Distinto do checklist-irmão já existente (investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022): este aprofunda especificamente o processo de diferenciação com GCM. Nenhuma dose de medicamento. Síntese original em português. Pendente revisão humana."
+  },
+  {
+    "slug": "ecocardiograma-seriado-no-tratamento-da-endocardite-infecciosa-quando-repetir",
+    "condicao": "Endocardite infecciosa — monitorização ecocardiográfica",
+    "resumo": "Checklist prático sobre quando repetir o ecocardiograma (transtorácico ou transesofágico) durante o tratamento da endocardite infecciosa — incluindo ETE intraoperatório, reavaliação em prótese valvar, bacteremia estafilocócica sem foco e as situações em que a investigação NÃO está indicada — com base no Posicionamento da SBC (2019) sobre indicações de ecocardiografia em adultos.",
+    "documento_origem": null,
+    "theme": "Endocardite",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Barberato SH, Romano MMD, Beck ALS, Rodrigues ACT, Almeida ALC, Assunção BMBL, Gripp EA, Guimarães Filho FV, Abensur H, Castillo JMD, Miglioranza MH, Vieira MLC, Barros MVL, Nunes MDCP, Otto MEB, Hortegal RA, Barretto RBM, Campos TH, Siqueira VN, Morhy SS. Posicionamento sobre Indicações da Ecocardiografia em Adultos - 2019 (Position Statement on Indications of Echocardiography in Adults - 2019). Sociedade Brasileira de Cardiologia (SBC). Arq Bras Cardiol. 2019;113(1):135-181. DOI: 10.5935/abc.20190129. PMID: 31411301. PMCID: PMC6684182. Ver seção 3.4 'Infective Endocarditis', Tabela 29 ('Recommendations of echocardiography in infective endocarditis in patients with valve prostheses') e Tabela 31 ('Recommendations of transthoracic echocardiography and transesophageal echocardiography in infectious endocarditis').",
+      "Habib G, Lancellotti P, Antunes MJ, Bongiorni MG, Casalta JP, Del Zotti F, et al. 2015 ESC Guidelines for the management of infective endocarditis: The Task Force for the Management of Infective Endocarditis of the European Society of Cardiology (ESC). Eur Heart J. 2015;36(44):3075-3128. DOI: 10.1093/eurheartj/ehv319. PMID: 26320109. (Referência 169 citada no Posicionamento SBC 2019 como base dos critérios ecocardiográficos de diagnóstico de EI.)",
+      "Nunes MC, Gelape CL, Ferrari TC. Profile of infective endocarditis at a tertiary care center in Brazil during a seven-year period: prognostic factors and in-hospital outcome. Int J Infect Dis. 2010;14(5):e394-e398. DOI: 10.1016/j.ijid.2009.06.024. PMID: 19800277. (Referência 164 citada no Posicionamento SBC 2019; estudo observacional brasileiro sobre perfil da EI, não é recomendação de consenso.)"
+    ],
+    "itens": [
+      {
+        "id": "item-1",
+        "categoria": "TEE intraoperatório",
+        "obrigatorio": true,
+        "texto": "Realizar ETE intraoperatório em todos os casos de cirurgia valvar por endocardite infecciosa (Classe I, Nível de evidência B), para orientar a técnica cirúrgica e avaliar imediatamente o resultado do reparo ou da troca valvar.",
+        "origem_secao": "Tabela 31 — Recomendações de ETT e ETE na endocardite infecciosa (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-2",
+        "categoria": "Reavaliação ao final do tratamento",
+        "obrigatorio": true,
+        "texto": "Solicitar um novo ecocardiograma ao final do tratamento antimicrobiano (Classe I, Nível C) para estabelecer os novos parâmetros basais de morfologia e função cardíaca/valvar, que servirão de referência para o seguimento clínico posterior.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-3",
+        "categoria": "Suspeita de complicação",
+        "obrigatorio": true,
+        "texto": "Diante de suspeita de nova complicação durante o tratamento — abscesso, perfuração, fenômeno embólico, persistência de febre ou insuficiência cardíaca —, solicitar novo ETT ou ETE (Classe I, Nível B), independentemente de quando foi feito o exame anterior.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-4",
+        "categoria": "Repetição de rotina — endocardite não complicada",
+        "obrigatorio": false,
+        "texto": "Em endocardite não complicada, considerar novo ETT ou ETE para monitorar o tamanho da vegetação ou detectar complicações silenciosas (Classe IIa, Nível B); o tipo de exame e o momento da repetição dependem dos achados iniciais, do microrganismo isolado e da resposta à terapia — o posicionamento não define um intervalo fixo único.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-5",
+        "categoria": "Repetição de rotina — prótese valvar",
+        "obrigatorio": false,
+        "texto": "Em portador de prótese valvar com endocardite não complicada, a reavaliação ecocardiográfica puramente 'de rotina' (sem mudança clínica) tem indicação mais fraca (Classe IIb, Nível B) do que as indicações motivadas por má evolução clínica ou suspeita de complicação nesse mesmo grupo, que são Classe I.",
+        "origem_secao": "Tabela 29 — Recomendações de ecocardiografia na endocardite infecciosa em pacientes com prótese valvar (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-6",
+        "categoria": "Suspeita em prótese valvar",
+        "obrigatorio": true,
+        "texto": "Em portador de prótese valvar com suspeita de endocardite, solicitar ecocardiograma para detecção e caracterização da lesão valvar e avaliação da repercussão hemodinâmica (Classe I, Nível B), preferindo ETE pela maior sensibilidade e pela limitação do ETT causada pela sombra acústica da prótese.",
+        "origem_secao": "Tabela 29 e texto da seção 3.3 sobre próteses valvares (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-7",
+        "categoria": "Disfunção protética / complicações",
+        "obrigatorio": true,
+        "texto": "Em portador de prótese valvar com suspeita de endocardite, priorizar a detecção de complicações — abscessos, roturas e fístulas (Classe I, Nível B) —, mais bem caracterizadas por ETE do que por ETT nesse contexto.",
+        "origem_secao": "Tabela 29 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-8",
+        "categoria": "Reavaliação por má evolução clínica",
+        "obrigatorio": true,
+        "texto": "Reavaliar com novo ecocardiograma sempre que houver evolução clínica desfavorável durante o tratamento de endocardite em portador de prótese valvar (Classe I, Nível B), mesmo sem um evento agudo isolado definido.",
+        "origem_secao": "Tabela 29 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-9",
+        "categoria": "Hemoculturas negativas / bacteremia sem foco",
+        "obrigatorio": true,
+        "texto": "Em portador de prótese valvar, investigar com ecocardiograma tanto a suspeita de endocardite com hemoculturas negativas (Classe I, Nível B) quanto a bacteremia de etiologia desconhecida (Classe I, Nível B), pois a ausência de crescimento microbiológico não exclui o diagnóstico.",
+        "origem_secao": "Tabela 29 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-10",
+        "categoria": "Bacteremia estafilocócica sem foco",
+        "obrigatorio": true,
+        "texto": "Investigar com ecocardiograma todo paciente com bacteremia por Staphylococcus aureus sem foco infeccioso definido (Classe IIa, Nível B), dada a associação relevante desse achado com endocardite oculta.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-11",
+        "categoria": "TTE/TEE inicialmente negativo",
+        "obrigatorio": true,
+        "texto": "Diante de alta suspeita clínica de endocardite com ETE inicial negativo, repetir o exame (ETT ou ETE) dentro de 5 a 7 dias (Classe I, Nível C), em vez de descartar o diagnóstico com base em um único exame negativo.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-12",
+        "categoria": "TEE apesar de ETT positivo",
+        "obrigatorio": false,
+        "texto": "Mesmo com ETT tecnicamente adequado e achados positivos confiáveis, considerar ETE complementar (Classe IIa, Nível C) para melhor avaliação de extensão e complicações, exceto em quadros de endocardite isolada já bem caracterizada, situação em que o ETE adicional não muda a indicação de tratamento.",
+        "origem_secao": "Tabela 31 (Posicionamento SBC 2019)"
+      },
+      {
+        "id": "item-13",
+        "categoria": "Quando NÃO investigar",
+        "obrigatorio": true,
+        "texto": "NÃO solicitar (nem repetir) ecocardiograma diante de febre transitória isolada, sem evidência de bacteremia e sem sopro novo, em portador de prótese valvar (Classe III, Nível B) — investigação ecocardiográfica rotineira nesse cenário não é recomendada.",
+        "origem_secao": "Tabela 29 (Posicionamento SBC 2019) — recomendação verificada para a população com prótese valvar; extrapolação para valva nativa deve ser feita com cautela clínica, pois não foi objeto específico desta tabela."
+      },
+      {
+        "id": "item-14",
+        "categoria": "Febre persistente sem bacteremia",
+        "obrigatorio": false,
+        "texto": "Diferente da febre transitória isolada (que não justifica investigação), a febre persistente sem evidência de bacteremia ou sopro novo em portador de prótese valvar pode motivar reavaliação ecocardiográfica (Classe IIa, Nível B) — é a persistência, não a transitoriedade, que muda a indicação.",
+        "origem_secao": "Tabela 29 (Posicionamento SBC 2019)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
