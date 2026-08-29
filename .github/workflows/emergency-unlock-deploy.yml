@@ -3,6 +3,7 @@ name: Emergency deploy current main
 # Gatilho operacional: ao alterar este workflow em main, publica o SHA atual
 # sem executar gates de teste. Usado em 28/08/2026 para release consolidado
 # + correção urgente do APK Android 1.0.1.
+# 29/08/2026: deploy emergencial dos lotes Grok 37-45 revisados (PR #749).
 on:
   push:
     branches: [main]
