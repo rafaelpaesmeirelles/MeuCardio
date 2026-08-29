@@ -983,15 +983,37 @@ ETT-ACHD do lote 31). Interseção de congênita/esporte/morte súbita.
   58% com CPET), não deve ser critério único de liberação. 10 fontes via
   NCBI e-utils, incluindo nomenclatura padronizada ICAAC 2026.
 
-## Lote 44 (planejado)
+## Lote 44 — concluído (SHA cb456a2a) — total 71 commits
 
-A auditar: território ainda pouco explorado — Distúrbios de condução
-específicos além de BAV/nó sinusal já cobertos (ex.: bloqueio de ramo
-esquerdo novo e sua investigação, distinto de Sgarbossa/SCA que é fora
-do escopo de Claude); ou retomar Doenças vasculares estruturais com
-gap ainda não verificado (dissecção coronária espontânea já coberta,
-verificar aneurisma de artéria esplênica/visceral associado a doença
-do tecido conjuntivo). Confirmar via grep + `gh pr list` antes de
-despachar.
+- checklist `vigilancia-arterial-extra-aortica-visceral-em-sindrome-de-loeys-dietz-e-ehlers-danlos-vascular`
+  — 5 itens complementando o fragmento existente de aortopatia genética
+  pediátrica (que cobre só raiz/aorta torácica): distribuição real de
+  leitos extra-aórticos acometidos (mesentérica 31,7% em EDS vascular);
+  protocolo cabeça-a-pelve com intervalo de ~2 anos em LDS estável
+  (atribuído a comunicação pessoal dos autores, não estudo controlado —
+  distinção explícita); manejo de aneurisma visceral (4 óbitos
+  intraoperatórios em 21 reparos abertos vs. zero em 18 embolizações,
+  reforçando preferência endovascular); ruptura espontânea de órgão SEM
+  aneurisma prévio (47% dos casos esplênicos, 17% diagnóstico
+  post-mortem); risco gestacional quantificado (5,3% óbito materno).
+  11 fontes via NCBI e-utils, com leitura de **texto integral via PMC**
+  quando disponível (não apenas abstract) — nível de rigor mais alto
+  que o padrão desta janela.
+
+**Descoberta evitada por colisão de escopo**: "bloqueio de ramo esquerdo
+novo" descartado do planejamento — investigação dessa condição se
+sobrepõe fortemente a critérios de Sgarbossa/SCA, fora do território de
+Claude (coberto por outras branches/Codex).
+
+## Lote 45 (planejado)
+
+Território seguindo mapeado exaustivamente. A auditar: retomar
+Cardiopatias congênitas pediátricas específicas ainda sem hub (ex.:
+janela de intervenção em CIV perimembranosa/muscular na criança,
+distinto do já coberto em CIA/CIV do adulto); ou Populações especiais —
+doença falciforme e acometimento cardiovascular (hipertensão pulmonar,
+cardiomiopatia por sobrecarga crônica), território de alta prevalência
+no Brasil ainda não verificado nesta janela. Confirmar via grep +
+`gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
