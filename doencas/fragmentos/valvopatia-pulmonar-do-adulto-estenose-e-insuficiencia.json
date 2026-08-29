@@ -1,0 +1,282 @@
+[
+  {
+  "slug": "valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia",
+  "name": "Valvopatia pulmonar do adulto: estenose e insuficiência",
+  "aliases": [
+    "estenose pulmonar residual ou recorrente do adulto",
+    "insuficiência pulmonar crônica pós-Fallot",
+    "regurgitação pulmonar pós-tetralogia de Fallot",
+    "doença valvar cardíaca carcinoide direita",
+    "endocardite de valva pulmonar nativa ou protética",
+    "disfunção de bioprótese ou homoenxerto pulmonar no adulto"
+  ],
+  "area": "geral",
+  "category": "valvopatia",
+  "subtype": null,
+  "cyanosis_class": null,
+  "prevalence_rank": null,
+  "completeness": "completo",
+  "summary": "Este verbete cobre a valvopatia pulmonar do adulto fora do cenário já detalhado no verbete pediátrico de estenose pulmonar congênita isolada (ver estenose-pulmonar-congenita, que não é duplicado aqui). Reúne quatro cenários clínicos distintos que convergem para a mesma valva em adultos: (1) estenose pulmonar residual ou recorrente em paciente que foi operado ou submetido a valvoplastia por balão na infância e hoje é adulto, exigindo reavaliação com os mesmos princípios de gravidade ecocardiográfica, mas já em contexto de reintervenção e seguimento de cardiopatia congênita do adulto (ACHD); (2) insuficiência pulmonar crônica pós-cirurgia de tetralogia de Fallot — a causa mais comum de regurgitação pulmonar clinicamente significativa em adultos —, com sobrecarga de volume progressiva do ventrículo direito, risco arrítmico associado e decisão sobre troca valvar pulmonar (cirúrgica ou transcateter) sem um corte volumétrico único validado e consensual; (3) doença valvar cardíaca carcinoide, causa rara mas didaticamente importante de acometimento combinado das valvas tricúspide e pulmonar por fibrose de placa, quase poupando o coração esquerdo; e (4) endocardite de valva pulmonar nativa ou protética (bioprótese cirúrgica, homoenxerto, conduto ou valva transcateter), com fisiopatologia de câmaras direitas distinta da endocardite esquerda clássica. O verbete complementa, sem substituir, o hub cardiopatia-congenita-do-adulto (transversal a toda ACHD) e os documentos lesão-específicos já publicados sobre Fallot, TPVR e endocardite de câmaras direitas.",
+  "epidemiology": "A insuficiência pulmonar crônica pós-reparo de tetralogia de Fallot é reconhecida na literatura de cardiopatia congênita do adulto como a causa mais comum de regurgitação pulmonar clinicamente relevante em adultos, refletindo o sucesso do reparo cirúrgico pediátrico que hoje faz da tetralogia de Fallot uma das lesões mais numerosas na população adulta com cardiopatia congênita (Baumgartner H et al., ESC 2020 ACHD Guidelines, PMID 32860028; Gurvitz M et al., ACC/AHA/HRS/ISACHD/SCAI 2025 ACHD Guideline, PMID 41411480). A regurgitação pulmonar costuma ser bem tolerada por anos após a cirurgia, mas a sobrecarga crônica de volume do ventrículo direito pode eventualmente ultrapassar a capacidade compensatória do miocárdio, e a disfunção resultante pode não ser totalmente reversível mesmo após troca valvar tardia. Uma análise observacional contemporânea da National Inpatient Sample (2016-2022) identificou 11.285 hospitalizações de adultos com cardiopatia congênita submetidos a troca valvar pulmonar nos Estados Unidos, das quais 31% por via transcateter (TPVR) e 69% por cirurgia (SPVR), ilustrando a magnitude atual dessa população e a crescente participação do implante transcateter (Bolad A et al., Catheter Cardiovasc Interv. 2026, PMID 42387804). A doença carcinoide é, em contraste, causa rara: entre pacientes com síndrome carcinoide, aproximadamente 32% apresentam evidência ecocardiográfica de acometimento cardíaco, dos quais 79% têm anormalidade da valva tricúspide e regurgitação tricúspide moderada a importante está presente em 70% dos casos com acometimento cardíaco confirmado; a insuficiência pulmonar acompanha esse padrão de acometimento predominantemente direito, com relativa poupança do coração esquerdo (Namkoong J et al., Front Cardiovasc Med 2024, PMID 38572311). A endocardite de câmaras direitas — que inclui a valva pulmonar nativa ou protética — corresponde a cerca de 10% de todos os casos de endocardite infecciosa, concentrada sobretudo em usuários de droga injetável e portadores de dispositivo cardíaco eletrônico implantável, com mortalidade hospitalar baixa mas mortalidade tardia elevada (El Sabbagh A et al., AHA Science Advisory, J Am Heart Assoc 2026, PMID 42095279).",
+  "presentation": [
+    "Achado incidental de sopro sistólico ou diastólico em adulto com cirurgia cardíaca congênita prévia, muitas vezes assintomático por anos",
+    "Dispneia progressiva ou queda de capacidade funcional em paciente com regurgitação pulmonar crônica pós-Fallot, geralmente tardia em relação ao início da sobrecarga de volume do VD",
+    "Palpitações ou arritmia atrial/ventricular documentada em paciente com cirurgia ventriculotômica prévia e substrato cirúrgico para reentrada",
+    "Síncope ou pré-síncope em adulto operado de Fallot, que deve ser tratada como possível sinal de arritmia ventricular maligna até investigação completa",
+    "Sinais de insuficiência cardíaca direita — edema, congestão hepática, ascite — em regurgitação pulmonar grave de longa data ou em doença carcinoide avançada",
+    "Flushing cutâneo, diarreia crônica e sopro de regurgitação tricúspide/pulmonar em paciente com tumor neuroendócrino conhecido ou hepatopatia metastática, sugerindo doença carcinoide cardíaca",
+    "Febre, mal-estar e sopro novo ou em piora em portador de valva pulmonar nativa displásica, bioprótese, conduto ou valva transcateter, sugerindo endocardite",
+    "Fenômenos embólicos pulmonares (dispneia súbita, dor pleurítica, infiltrados) em endocardite de câmaras direitas, em contraste com a embolização sistêmica da endocardite esquerda",
+    "Estenose residual ou recorrente detectada em seguimento de rotina de paciente operado ou submetido a valvoplastia por balão na infância, hoje adulto",
+    "Deterioração hemodinâmica aguda ou nova regurgitação em portador de conduto ou prótese valvar pulmonar, que deve motivar investigação de endocardite antes de ser atribuída a degeneração estrutural isolada"
+  ],
+  "diagnostic_approach": {
+    "diferenciacao_do_verbete_pediatrico": "Este verbete não repete a fisiopatologia da estenose pulmonar congênita isolada da criança, já detalhada em estenose-pulmonar-congenita (gravidade por Doppler, valva em domo versus displásica, algoritmo de valvoplastia por balão). Aqui o foco é o adulto: estenose residual/recorrente após intervenção na infância, insuficiência pulmonar crônica pós-Fallot, doença carcinoide e endocardite de valva pulmonar nativa ou protética — cenários em que a decisão já ocorre dentro do modelo de cuidado de cardiopatia congênita do adulto (classificação de complexidade, centro ACHD), não do algoritmo pediátrico isolado.",
+    "avaliacao_da_estenose_residual_ou_recorrente": "Em adulto com estenose pulmonar operada ou dilatada na infância, a reavaliação usa os mesmos princípios ecocardiográficos de gravidade (velocidade de pico, gradiente médio, anatomia do anel e da via de saída), mas deve comparar sempre com exames seriados prévios para distinguir estenose residual estável de reestenose progressiva, e diferenciar componente valvar de obstrução supravalvar, de ramos pulmonares ou de conduto. Repercussão sobre o VD (hipertrofia, disfunção, pressão sistólica estimada) pesa tanto quanto o gradiente isolado na decisão de reintervenção.",
+    "avaliacao_da_insuficiencia_pulmonar_cronica_pos_fallot": "A insuficiência pulmonar grave costuma ter jato amplo, de baixa velocidade e curta duração ao Doppler — parâmetros que subestimam a gravidade se lidos como em uma insuficiência de alta pressão, o que torna a avaliação puramente ecocardiográfica insuficiente para decisão de troca valvar. A ressonância magnética cardíaca é o exame de referência para quantificar volumes biventriculares, fração de ejeção do VD e fração regurgitante pulmonar quando o eco é limitado ou a decisão terapêutica depende do grau de remodelamento. O teste cardiopulmonar de exercício documenta declínio objetivo de capacidade funcional, inclusive em paciente que se refere como assintomático. A duração do QRS ao ECG de repouso é o preditor eletrocardiográfico histórico de risco arrítmico ventricular e morte súbita nessa população (Gatzoulis MA et al., Circulation 1995, PMID 7600655), embora seu valor seja de alta sensibilidade e baixa especificidade isoladamente — ver estratificação de risco arrítmico detalhada no documento correlato desta biblioteca.",
+    "avaliacao_da_doenca_carcinoide": "Suspeitar em paciente com tumor neuroendócrino conhecido (tipicamente com metástase hepática) e flushing, diarreia ou outros sintomas de síndrome carcinoide, associados a sopro ou disfunção de câmaras direitas. O padrão típico é insuficiência tricúspide e pulmonar predominando sobre estenose, com relativa poupança do coração esquerdo (exceto se houver shunt direita-esquerda ou tumor carcinoide primário pulmonar). Ecocardiograma transtorácico é o exame inicial de rastreio e de monitorização evolutiva; NT-proBNP e 5-HIAA urinário/plasmático estão significativamente elevados em quem tem acometimento cardíaco, mas a literatura atual não define corte diagnóstico validado para nenhum dos dois biomarcadores.",
+    "avaliacao_de_endocardite_de_valva_pulmonar_nativa_ou_protetica": "Hemoculturas seriadas antes de iniciar antibiótico e ecocardiograma (transtorácico e, se a janela ou a suspeita de complicação exigir, transesofágico) formam a base diagnóstica, com os mesmos critérios diagnósticos gerais de endocardite infecciosa já detalhados nos documentos dedicados desta biblioteca. A endocardite de câmaras direitas tem embolização predominantemente pulmonar, não sistêmica, e a apresentação costuma ser respiratória. Em prótese valvar pulmonar (bioprótese cirúrgica, homoenxerto, conduto ou valva transcateter), classificar o tempo desde o implante em precoce (dentro de 6 meses, conforme a tabela de recomendação cirúrgica da diretriz ESC 2023) ou tardia orienta a probabilidade microbiológica e, segundo a diretriz, a indicação cirúrgica — embora um estudo de coorte de 2024 questione se esse corte temporal isolado prediz mesmo pior desfecho (ver documento correlato de endocardite protética desta biblioteca)."
+  },
+  "differentials": [
+    "Estenose pulmonar congênita isolada não operada ou diagnosticada tardiamente na vida adulta (ver estenose-pulmonar-congenita)",
+    "Hipertensão pulmonar de qualquer grupo etiológico com sobrecarga secundária do VD, sem lesão valvar pulmonar estrutural",
+    "Insuficiência tricúspide isolada de etiologia não carcinoide (funcional, por dispositivo transvalvar ou degenerativa)",
+    "Disfunção mecânica de conduto ou stent da via de saída do VD (fratura, deformação) sem endocardite associada",
+    "Endocardite isolada de valva tricúspide sem acometimento pulmonar",
+    "Insuficiência cardíaca direita por cardiomiopatia primária ou por falência de ventrículo direito sistêmico em outra fisiologia congênita, sem lesão valvar pulmonar dominante",
+    "Obstrução ou compressão extrínseca da via de saída do VD ou dos ramos pulmonares por massa, tumor ou causa não valvar"
+  ],
+  "tests": [
+    "Ecocardiograma transtorácico com Doppler para gradiente, jato regurgitante, anatomia de valva/anel/conduto e repercussão do VD",
+    "Ecocardiograma transesofágico quando a janela transtorácica é limitada ou há suspeita de endocardite/complicação perivalvar",
+    "Ressonância magnética cardíaca para volumes biventriculares, função do VD e fração regurgitante pulmonar, sobretudo quando a decisão terapêutica depende do remodelamento",
+    "Teste cardiopulmonar de exercício para capacidade funcional objetiva, inclusive em paciente referido como assintomático",
+    "ECG de 12 derivações com atenção à duração do QRS e ao padrão de bloqueio de ramo direito",
+    "Holter ou monitor de eventos prolongado diante de palpitações, síncope ou suspeita de arritmia",
+    "Hemoculturas seriadas antes de iniciar antibiótico, diante de suspeita de endocardite",
+    "NT-proBNP e 5-HIAA urinário/plasmático como biomarcadores de rastreio em suspeita de doença carcinoide, sem corte diagnóstico validado isolado",
+    "Tomografia de tórax/coronárias antes de intervenção transcateter em conduto ou via de saída do VD, para mapear calcificação e relação com coronárias",
+    "Cateterismo cardíaco direito quando a decisão terapêutica exige confirmação hemodinâmica invasiva",
+    "Avaliação em centro de cardiopatia congênita do adulto para todo paciente com cirurgia congênita prévia na via de saída direita"
+  ],
+  "red_flags": [
+    "Febre ou sinais infecciosos associados a sopro novo ou em piora em portador de valva pulmonar nativa ou protética",
+    "Instabilidade hemodinâmica, choque ou insuficiência cardíaca direita aguda",
+    "Fenômenos embólicos pulmonares sépticos (dispneia súbita, dor pleurítica, infiltrado novo)",
+    "Síncope ou pré-síncope em adulto com cirurgia prévia na via de saída do ventrículo direito",
+    "Disfunção ou dilatação progressiva do VD associada a sintomas atribuíveis à valvopatia pulmonar",
+    "Endocardite protética pulmonar precoce, dentro de 6 meses do implante cirúrgico ou transcateter",
+    "Regurgitação tricúspide moderada a importante associada, sobretudo em contexto de doença carcinoide",
+    "Nova arritmia sustentada em paciente com cirurgia cardíaca congênita prévia"
+  ],
+  "treatment_summary": "A conduta é organizada pelo cenário etiológico, sempre em articulação com centro de cardiopatia congênita do adulto (ACHD) quando há cirurgia prévia na via de saída direita.\n\nNa estenose residual ou recorrente do adulto, a reintervenção (valvoplastia por balão ou cirurgia, conforme anatomia) segue os mesmos princípios de integração entre gradiente, repercussão do VD e sintomas já descritos no verbete pediátrico de estenose isolada, mas a decisão específica de técnica e momento deve ser feita em centro ACHD, considerando material cirúrgico prévio, conduto ou anel protético eventualmente presentes.\n\nNa insuficiência pulmonar crônica pós-Fallot, não existe um único corte volumétrico de VD validado e consensual para indicar troca valvar pulmonar em paciente assintomático: uma revisão sistemática dedicada ao tema reuniu propostas divergentes de diferentes estudos individuais — por exemplo, um estudo sugeriu troca antes de o índice de volume diastólico final do VD ultrapassar 82 mL/m² para otimizar a chance de recuperação funcional, enquanto outros propuseram limiares distintos entre aproximadamente 90 e 170 mL/m² para o mesmo tipo de decisão, sem convergência entre eles (Slouha E et al., Cureus 2023, PMID 38156158) — de modo que este verbete não adota nenhum desses números como regra e a decisão deve integrar sintomas, declínio objetivo de capacidade funcional ao teste cardiopulmonar, disfunção ou dilatação progressiva do VD, regurgitação tricúspide associada e arritmia, discutida em centro ACHD. Entre pacientes que já têm indicação de troca valvar, a escolha entre implante transcateter (TPVR) e cirurgia (SPVR) é fundamentalmente anatômica: dados observacionais contemporâneos de grande amostra administrativa mostram menor morbidade hospitalar com TPVR (menor lesão renal aguda, infecção e necessidade de suporte circulatório mecânico), sem diferença estatisticamente significativa de mortalidade ajustada em relação à cirurgia — o que não permite escolher a via de acesso sem considerar anatomia da via de saída do VD, cirurgias prévias e viabilidade técnica transcateter (Bolad A et al., Catheter Cardiovasc Interv. 2026, PMID 42387804).\n\nNa doença carcinoide cardíaca, o manejo clínico da insuficiência cardíaca direita usa diuréticos de alça e antagonista de aldosterona como base sintomática (sem dose definida neste verbete). A substituição cirúrgica — tipicamente da valva tricúspide, com ou sem substituição da valva pulmonar associada — é a estratégia mais eficaz disponível para doença valvar carcinoide estabelecida, com bioprótese preferida sobre prótese mecânica quando a expectativa de sobrevida pós-operatória é de pelo menos 12 meses; entretanto, a evidência agregada mais recente ainda não confirma benefício de mortalidade estatisticamente robusto da cirurgia nessa população, e a mortalidade cirúrgica cumulativa documentada é relevante ao longo do seguimento (Namkoong J et al., Front Cardiovasc Med 2024, PMID 38572311) — a decisão deve ser discutida com o paciente reconhecendo essa incerteza, não apresentada como cura. Prevenção e tratamento de crise carcinoide perioperatória com octreotide é a base descrita na literatura, mas o esquema de dose e o momento de administração não são padronizados entre os protocolos publicados e não são definidos neste verbete.\n\nNa endocardite de valva pulmonar, a diretriz ESC 2023 recomenda cirurgia (Classe I) para endocardite protética precoce, definida na tabela de recomendação formal como dentro de 6 meses da cirurgia valvar; endocardite protética tardia não complicada e não estafilocócica pode, em contraste, ser manejada de forma conservadora com antibiótico e seguimento próximo, reservando cirurgia para subgrupos de alto risco (insuficiência cardíaca, disfunção protética grave, abscesso, febre persistente) (Delgado V et al., Eur Heart J 2023, PMID 37622656). Um estudo de coorte retrospectivo publicado em 2024 não encontrou diferença estatisticamente significativa de mortalidade em 1 ano entre endocardite protética precoce e tardia e questiona a suficiência do corte temporal isolado como critério de decisão cirúrgica (Papadimitriou-Olivgeris M et al., Clin Infect Dis 2024/2025, PMID 39067056) — este verbete registra a divergência sem adotar uma posição automática. Na endocardite de valva pulmonar nativa em usuário de droga injetável ou associada a dispositivo cardíaco eletrônico implantável (CIED), a remoção do dispositivo é a pedra angular do manejo quando aplicável, e a aspiração mecânica percutânea é opção emergente para debulking de vegetação em paciente com resposta insuficiente ao antimicrobiano ou risco cirúrgico proibitivo, mas sem respaldo de ensaio clínico randomizado até o momento (El Sabbagh A et al., J Am Heart Assoc 2026, PMID 42095279) — não deve ser apresentada ao paciente como técnica estabelecida.",
+  "ambulatory_flow": [
+    "Definir o cenário etiológico predominante: estenose residual/recorrente, insuficiência pulmonar pós-Fallot, doença carcinoide ou suspeita de endocardite",
+    "Confirmar se há cirurgia congênita prévia na via de saída direita (conduto, patch transanular, valvoplastia) e reunir os exames seriados para comparação",
+    "Em insuficiência pulmonar crônica, solicitar RM cardíaca quando a decisão sobre troca valvar depender de volumes/função do VD que o eco não define com precisão",
+    "Integrar sintomas, teste cardiopulmonar de exercício, QRS/arritmia e repercussão do VD antes de discutir troca valvar pulmonar — não usar isoladamente nenhum corte volumétrico como regra automática",
+    "Encaminhar ou manter seguimento em centro de cardiopatia congênita do adulto para decisão de reintervenção (balão, cirurgia ou TPVR conforme anatomia)",
+    "Rastrear acometimento cardíaco em todo paciente com síndrome carcinoide recém-diagnosticada, mesmo assintomático, com ecocardiograma",
+    "Reavaliar regurgitação tricúspide associada em conjunto com a lesão pulmonar, sobretudo em doença carcinoide",
+    "Programar avaliação anual de prótese ou conduto valvar pulmonar, com avaliação imediata diante de novo sintoma cardíaco",
+    "Discutir aconselhamento pré-concepcional em mulher em idade fértil com lesão pulmonar pelo menos moderada",
+    "Reencaminhar para intervenção se houver progressão de sintomas, disfunção do VD, arritmia nova ou regurgitação tricúspide relevante"
+  ],
+  "emergency_flow": [
+    "Diante de febre com sopro novo ou em piora em portador de valva pulmonar nativa ou protética, colher hemoculturas seriadas antes de iniciar antibiótico e obter ecocardiograma direcionado",
+    "Em instabilidade hemodinâmica ou insuficiência cardíaca direita aguda, avaliação hospitalar imediata com acionamento de Heart Team/equipe de cardiopatia congênita do adulto",
+    "Em suspeita de endocardite protética precoce (dentro de 6 meses do implante), acionar avaliação cirúrgica sem atraso, conforme recomendação Classe I da diretriz ESC 2023",
+    "Em síncope ou pré-síncope, monitorizar ritmo e investigar arritmia ventricular maligna antes de atribuir a causa vasovagal, sobretudo em adulto operado de Fallot",
+    "Em endocardite de câmaras direitas associada a dispositivo cardíaco eletrônico implantável, priorizar avaliação para remoção do dispositivo",
+    "Em fenômenos embólicos pulmonares sépticos, investigar endocardite de câmaras direitas e não atribuir automaticamente a outra causa respiratória",
+    "Evitar apresentar aspiração mecânica percutânea ou cirurgia valvar carcinoide como técnica de benefício comprovado ao discutir risco com o paciente/família em urgência"
+  ],
+  "monitoring": [
+    "Sintomas, capacidade funcional e sinais de insuficiência cardíaca direita a cada consulta",
+    "Ecocardiograma seriado com gradiente, jato regurgitante, função do VD e regurgitação tricúspide associada",
+    "RM cardíaca periódica para volumes/função biventricular quando o eco for insuficiente para a decisão",
+    "Teste cardiopulmonar de exercício seriado para capacidade funcional objetiva",
+    "ECG com duração do QRS e Holter/monitor de eventos diante de palpitações ou marcadores de risco arrítmico",
+    "Avaliação anual de prótese, conduto ou valva transcateter pulmonar, com avaliação imediata diante de novo sintoma",
+    "NT-proBNP e 5-HIAA seriados em doença carcinoide confirmada, como parte da vigilância evolutiva",
+    "Hemoculturas e imagem de controle após término de antibioticoterapia em endocardite tratada"
+  ],
+  "special_populations": [
+    "Gestante ou candidata a gestação com lesão pulmonar pelo menos moderada: avaliação pré-concepcional específica em centro ACHD",
+    "Adulto com décadas de seguimento pós-Fallot: risco arrítmico e disfunção de VD podem emergir tardiamente mesmo com regurgitação bem tolerada por anos",
+    "Portador de conduto ou homoenxerto VD-artéria pulmonar: deterioração pode ser mecânica (fratura/estenose) ou infecciosa, exigindo diferenciação ativa",
+    "Usuário de droga injetável com endocardite de câmaras direitas: mortalidade hospitalar baixa mas mortalidade tardia elevada, com tratamento da dependência química como parte do manejo",
+    "Portador de dispositivo cardíaco eletrônico implantável com endocardite associada: remoção do dispositivo associada a menor mortalidade",
+    "Paciente com doença carcinoide e prognóstico oncológico limitado: preferência por bioprótese e discussão realista de mortalidade cirúrgica cumulativa",
+    "Atleta ou paciente fisicamente ativo pós-correção de via de saída direita: elegibilidade esportiva individualizada por gravidade, função do VD e arritmia"
+  ],
+  "assistant_questions": [
+    {"id": "vpa_contexto_etiologico", "label": "Qual é o cenário clínico predominante?", "type": "select", "required": true, "section": "Contexto", "options": [
+      {"value": "pos_correcao_fallot", "label": "Pós-correção de tetralogia de Fallot"},
+      {"value": "outra_cardiopatia_congenita_com_conduto_ou_bioprotese_pulmonar", "label": "Outra cardiopatia congênita com conduto/bioprótese pulmonar"},
+      {"value": "carcinoide_conhecida_ou_suspeita", "label": "Síndrome carcinoide conhecida ou suspeita"},
+      {"value": "endocardite_suspeita_ou_confirmada", "label": "Endocardite de valva pulmonar suspeita ou confirmada"},
+      {"value": "estenose_residual_pos_valvoplastia_ou_cirurgia_na_infancia", "label": "Estenose residual pós-valvoplastia/cirurgia na infância"},
+      {"value": "achado_novo_sem_cirurgia_previa", "label": "Achado novo, sem cirurgia prévia conhecida"},
+      {"value": "outro_indeterminado", "label": "Outro/indeterminado"}
+    ]},
+    {"id": "vpa_protese_pulmonar", "label": "Há prótese, conduto ou valva transcateter na posição pulmonar?", "type": "select", "required": true, "section": "Anatomia", "options": [
+      {"value": "valva_nativa", "label": "Valva nativa, sem prótese"},
+      {"value": "bioprotese_cirurgica_ou_conduto", "label": "Bioprótese cirúrgica ou conduto"},
+      {"value": "valva_transcateter_tpvr", "label": "Valva transcateter (TPVR)"},
+      {"value": "valvoplastia_previa_sem_protese", "label": "Valvoplastia por balão prévia, sem prótese"},
+      {"value": "desconhecido", "label": "Desconhecido"}
+    ]},
+    {"id": "vpa_tempo_desde_implante", "label": "Se há prótese/valva transcateter, há quanto tempo foi implantada?", "type": "select", "section": "Anatomia", "options": [
+      {"value": "menos_de_6_meses", "label": "Menos de 6 meses"},
+      {"value": "seis_meses_ou_mais", "label": "6 meses ou mais"},
+      {"value": "nao_aplicavel", "label": "Não aplicável"}
+    ]},
+    {"id": "vpa_suspeita_endocardite_ativa", "label": "Há febre, hemocultura positiva, sopro novo/em piora ou outro sinal de endocardite ativa?", "type": "boolean", "required": true, "section": "Segurança"},
+    {"id": "vpa_instabilidade_hemodinamica", "label": "Há choque, insuficiência cardíaca direita aguda ou instabilidade hemodinâmica?", "type": "boolean", "required": true, "section": "Segurança"},
+    {"id": "vpa_sintomas", "label": "Quais sintomas estão presentes?", "type": "multiselect", "section": "Sintomas", "options": [
+      {"value": "dispneia_ou_queda_capacidade_funcional", "label": "Dispneia ou queda de capacidade funcional"},
+      {"value": "palpitacoes_ou_arritmia_documentada", "label": "Palpitações ou arritmia documentada"},
+      {"value": "sincope_ou_pre_sincope", "label": "Síncope ou pré-síncope"},
+      {"value": "edema_ou_sinais_congestao_direita", "label": "Edema ou sinais de congestão direita"},
+      {"value": "assintomatico", "label": "Assintomático"}
+    ]},
+    {"id": "vpa_gravidade_lesao_eco", "label": "Qual é a gravidade ecocardiográfica integrada da lesão pulmonar?", "type": "select", "required": true, "section": "Ecocardiograma", "options": [
+      {"value": "estenose_leve", "label": "Estenose leve"},
+      {"value": "estenose_moderada", "label": "Estenose moderada"},
+      {"value": "estenose_grave", "label": "Estenose grave"},
+      {"value": "insuficiencia_leve", "label": "Insuficiência leve"},
+      {"value": "insuficiencia_moderada", "label": "Insuficiência moderada"},
+      {"value": "insuficiencia_grave", "label": "Insuficiência grave"},
+      {"value": "lesao_mista_moderada_grave", "label": "Lesão mista (estenose + insuficiência) moderada/grave"},
+      {"value": "indeterminada", "label": "Indeterminada/pendente"}
+    ]},
+    {"id": "vpa_repercussao_vd", "label": "Qual é a repercussão sobre o ventrículo direito?", "type": "select", "section": "Ventrículo direito", "options": [
+      {"value": "normal_sem_dilatacao", "label": "Função normal, sem dilatação"},
+      {"value": "dilatacao_ou_disfuncao_progressiva", "label": "Dilatação ou disfunção progressiva"},
+      {"value": "disfuncao_grave", "label": "Disfunção grave"},
+      {"value": "nao_avaliado", "label": "Não avaliado"}
+    ]},
+    {"id": "vpa_regurgitacao_tricuspide_associada", "label": "Há regurgitação tricúspide moderada ou importante associada?", "type": "boolean", "section": "Ventrículo direito"},
+    {"id": "vpa_suspeita_carcinoide", "label": "Há flushing, diarreia crônica ou tumor neuroendócrino conhecido sugerindo doença carcinoide?", "type": "boolean", "section": "Etiologia"},
+    {"id": "vpa_rm_cardiaca_recente", "label": "Há RM cardíaca recente com volumes e função do VD?", "type": "boolean", "required": true, "section": "Imagem"},
+    {"id": "vpa_gestante_ou_planejamento", "label": "Há gestação em curso ou planejamento gestacional?", "type": "boolean", "section": "População especial"}
+  ],
+  "assistant_rules": [
+    {"id": "vpa-endocardite-instabilidade", "priority": 100, "when": {"all": [
+      {"field": "vpa_suspeita_endocardite_ativa", "op": "truthy"},
+      {"field": "vpa_instabilidade_hemodinamica", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Suspeita de endocardite de valva pulmonar com instabilidade hemodinâmica"],
+      "emergency_flow": ["Avaliação hospitalar imediata: hemoculturas seriadas antes de antibiótico, ecocardiograma (transtorácico e, se necessário, transesofágico) e acionamento de Heart Team/equipe de cardiopatia congênita do adulto sem atraso."]
+    }},
+    {"id": "vpa-instabilidade-isolada", "priority": 96, "when": {"all": [
+      {"field": "vpa_instabilidade_hemodinamica", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Instabilidade hemodinâmica em valvopatia pulmonar do adulto"],
+      "emergency_flow": ["Avaliação hospitalar imediata com monitorização, ecocardiograma e equipe de cardiopatia congênita do adulto."]
+    }},
+    {"id": "vpa-endocardite-protetica-precoce", "priority": 92, "when": {"all": [
+      {"field": "vpa_protese_pulmonar", "op": "in", "value": ["bioprotese_cirurgica_ou_conduto", "valva_transcateter_tpvr"]},
+      {"field": "vpa_tempo_desde_implante", "op": "eq", "value": "menos_de_6_meses"},
+      {"field": "vpa_suspeita_endocardite_ativa", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Suspeita de endocardite protética pulmonar precoce (menos de 6 meses do implante)"],
+      "messages": ["A diretriz ESC 2023 recomenda cirurgia (Classe I) para endocardite protética precoce; decisão deve envolver Heart Team e equipe de cardiopatia congênita do adulto sem atraso, mesmo reconhecendo que um estudo de coorte de 2024 questiona a suficiência do corte temporal isolado."]
+    }},
+    {"id": "vpa-endocardite-suspeita-estavel", "priority": 88, "when": {"all": [
+      {"field": "vpa_suspeita_endocardite_ativa", "op": "truthy"}
+    ]}, "add": {
+      "risk": "urgente",
+      "red_flags": ["Suspeita de endocardite de valva pulmonar nativa ou protética"],
+      "suggested_tests": ["Hemoculturas seriadas antes de iniciar antibiótico; ecocardiograma direcionado à valva pulmonar e à valva tricúspide."]
+    }},
+    {"id": "vpa-fallot-ip-grave-repercussao-vd", "priority": 82, "when": {"all": [
+      {"field": "vpa_contexto_etiologico", "op": "eq", "value": "pos_correcao_fallot"},
+      {"field": "vpa_gravidade_lesao_eco", "op": "eq", "value": "insuficiencia_grave"},
+      {"field": "vpa_repercussao_vd", "op": "in", "value": ["dilatacao_ou_disfuncao_progressiva", "disfuncao_grave"]}
+    ]}, "add": {
+      "risk": "prioritario",
+      "ambulatory_flow": ["Discutir indicação e momento de troca valvar pulmonar (cirúrgica ou transcateter) em centro de cardiopatia congênita do adulto, integrando sintomas, teste cardiopulmonar de exercício e arritmia — sem aplicar um corte volumétrico isolado como regra automática."],
+      "missing_information": ["Teste cardiopulmonar de exercício e avaliação de risco arrítmico (QRS, Holter) para completar a decisão sobre troca valvar."]
+    }},
+    {"id": "vpa-sintomas-lesao-grave", "priority": 78, "when": {"all": [
+      {"field": "vpa_gravidade_lesao_eco", "op": "in", "value": ["insuficiencia_grave", "estenose_grave", "lesao_mista_moderada_grave"]},
+      {"field": "vpa_sintomas", "op": "contains", "value": "dispneia_ou_queda_capacidade_funcional"}
+    ]}, "add": {
+      "risk": "prioritario",
+      "messages": ["Sintomas atribuíveis a lesão pulmonar grave reforçam indicação de avaliação especializada para reintervenção."]
+    }},
+    {"id": "vpa-sincope", "priority": 74, "when": {"all": [
+      {"field": "vpa_sintomas", "op": "contains", "value": "sincope_ou_pre_sincope"}
+    ]}, "add": {
+      "risk": "urgente",
+      "red_flags": ["Síncope em valvopatia pulmonar do adulto — investigar arritmia ventricular maligna e repercussão hemodinâmica antes de atribuir a causa vasovagal."]
+    }},
+    {"id": "vpa-carcinoide-suspeita", "priority": 60, "when": {"all": [
+      {"field": "vpa_suspeita_carcinoide", "op": "truthy"}
+    ]}, "add": {
+      "messages": ["Rastrear acometimento cardíaco com ecocardiograma mesmo se assintomático — a doença valvar carcinoide costuma preceder sintomas de insuficiência cardíaca direita em anos."],
+      "suggested_tests": ["NT-proBNP e 5-HIAA urinário/plasmático como biomarcadores de rastreio, sem corte diagnóstico validado isolado."]
+    }},
+    {"id": "vpa-sem-rm-repercussao-nao-avaliada", "priority": 50, "when": {"all": [
+      {"field": "vpa_rm_cardiaca_recente", "op": "falsy"},
+      {"field": "vpa_repercussao_vd", "op": "eq", "value": "nao_avaliado"}
+    ]}, "add": {
+      "risk": "prioritario",
+      "missing_information": ["RM cardíaca com volumes e função biventricular"],
+      "suggested_tests": ["RM cardíaca em centro com experiência em cardiopatia congênita do adulto."]
+    }},
+    {"id": "vpa-gestante-lesao-relevante", "priority": 45, "when": {"all": [
+      {"field": "vpa_gestante_ou_planejamento", "op": "truthy"},
+      {"field": "vpa_gravidade_lesao_eco", "op": "in", "value": ["insuficiencia_grave", "estenose_grave", "insuficiencia_moderada", "estenose_moderada", "lesao_mista_moderada_grave"]}
+    ]}, "add": {
+      "risk": "urgente",
+      "messages": ["Encaminhar para avaliação pré-concepcional/gestacional em centro de cardiopatia congênita do adulto; lesão pulmonar moderada ou grave pode não ser bem tolerada na sobrecarga hemodinâmica da gestação."]
+    }},
+    {"id": "vpa-regurgitacao-tricuspide-associada", "priority": 30, "when": {"all": [
+      {"field": "vpa_regurgitacao_tricuspide_associada", "op": "truthy"}
+    ]}, "add": {
+      "messages": ["Regurgitação tricúspide associada deve ser reavaliada em conjunto com a lesão pulmonar — pode influenciar a indicação de reparo tricúspide concomitante, sobretudo em doença carcinoide."]
+    }}
+  ],
+  "tags": ["valvopatia pulmonar", "estenose pulmonar do adulto", "insuficiência pulmonar", "tetralogia de Fallot", "troca valvar pulmonar", "TPVR", "doença carcinoide", "endocardite de valva pulmonar", "cardiopatia congênita do adulto"],
+  "source_refs": [
+    "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias – 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877.",
+    "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165.",
+    "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.",
+    "Baumgartner H, De Backer J, Babu-Narayan SV, et al.; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+    "Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. DOI: 10.1016/j.jacc.2025.09.006. PMID: 41411480.",
+    "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.",
+    "El Sabbagh A, Yucel E, Sethi SS, et al. Percutaneous Mechanical Aspiration in Patients With Right-Sided Infective Endocarditis: A Science Advisory From the American Heart Association. J Am Heart Assoc. 2026;15(12):e050115. DOI: 10.1161/JAHA.126.050115. PMID: 42095279.",
+    "Bolad A, Elganainy M, Alenezi F, et al. Comparative Outcomes of Transcatheter Versus Surgical Pulmonary Valve Replacement in Adults With Congenital Heart Disease. Catheter Cardiovasc Interv. 2026 Jul 1. DOI: 10.1002/ccd.70718. PMID: 42387804.",
+    "Namkoong J, Arstall MA, et al. A systematic review and meta-analysis of the diagnosis and surgical management of carcinoid heart disease. Front Cardiovasc Med. 2024;11:1353612. DOI: 10.3389/fcvm.2024.1353612. PMID: 38572311.",
+    "Slouha E, Trygg G, Tariq AH, La A, Shay A, Gorantla VR. Pulmonary Valve Replacement Timing Following Initial Tetralogy of Fallot Repair: A Systematic Review. Cureus. 2023;15(11):e49577. DOI: 10.7759/cureus.49577. PMID: 38156158.",
+    "Gatzoulis MA, Till JA, Somerville J, Redington AN. Mechanoelectrical interaction in tetralogy of Fallot. QRS prolongation relates to right ventricular size and predicts malignant ventricular arrhythmias and sudden death. Circulation. 1995;92(2):231-237. DOI: 10.1161/01.cir.92.2.231. PMID: 7600655.",
+    "Papadimitriou-Olivgeris M, Ledergerber B, Siedentop B, et al. Beyond the Timeline: 1-Year Mortality Trends in Early Versus Late Prosthetic Valve Endocarditis. Clin Infect Dis. 2025;80(4):804-806. DOI: 10.1093/cid/ciae392. PMID: 39067056."
+  ],
+  "source_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/33111877/", "https://pubmed.ncbi.nlm.nih.gov/34453165/", "https://pubmed.ncbi.nlm.nih.gov/40878291/",
+    "https://pubmed.ncbi.nlm.nih.gov/32860028/", "https://pubmed.ncbi.nlm.nih.gov/41411480/", "https://pubmed.ncbi.nlm.nih.gov/37622656/",
+    "https://pubmed.ncbi.nlm.nih.gov/42095279/", "https://pubmed.ncbi.nlm.nih.gov/42387804/", "https://pubmed.ncbi.nlm.nih.gov/38572311/",
+    "https://pubmed.ncbi.nlm.nih.gov/38156158/", "https://pubmed.ncbi.nlm.nih.gov/7600655/", "https://pubmed.ncbi.nlm.nih.gov/39067056/"
+  ],
+  "related_document_slugs": [
+    "doenca-valvar-cardiaca-carcinoide",
+    "endocardite-infecciosa-de-camaras-direitas-e-aspiracao-mecanica-percutanea-aha-2026",
+    "endocardite-protetica-precoce-versus-tardia-esc-2023",
+    "tpvr-versus-cirurgia-reposicao-valvar-pulmonar-adultos-chd-2026",
+    "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+    "estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada",
+    "conduto-ventriculo-direito-arteria-pulmonar-seguimento-reintervencao-e-valva-transcateter"
+  ],
+  "patient_material_slug": null,
+  "review_status": "pendente_revisao",
+  "review_note": "Verbete produzido em 29/08/2026, cobrindo a valvopatia pulmonar do ADULTO — estenose residual/recorrente pós-correção na infância, insuficiência pulmonar crônica pós-Fallot, doença carcinoide cardíaca e endocardite de valva pulmonar nativa/protética — sem duplicar a fisiopatologia da estenose pulmonar congênita isolada já coberta no verbete pediátrico estenose-pulmonar-congenita. Sem colisão de slug. 12 PMIDs verificados individualmente via NCBI E-utilities. O limiar volumétrico de VD para troca valvar pulmonar pós-Fallot foi tratado com cautela deliberada: a revisão sistemática verificada (PMID 38156158) mostra propostas divergentes (aproximadamente 82 a 170 mL/m² conforme o estudo), sem corte único validado — relatada a divergência em vez de um número como regra. 7 related_document_slugs lidos por completo, discussão central confirmada, fora de Farmacologia/Calculadoras/Exames. Nenhuma dose de medicamento em nenhum campo.",
+  "version": 1,
+  "fonte_producao": "claude"
+  }
+]
