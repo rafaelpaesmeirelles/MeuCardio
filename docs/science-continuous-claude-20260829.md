@@ -1005,15 +1005,27 @@ novo" descartado do planejamento — investigação dessa condição se
 sobrepõe fortemente a critérios de Sgarbossa/SCA, fora do território de
 Claude (coberto por outras branches/Codex).
 
-## Lote 45 (planejado)
+## Lote 45 — concluído (SHA 4d24da30) — total 72 commits
 
-Território seguindo mapeado exaustivamente. A auditar: retomar
-Cardiopatias congênitas pediátricas específicas ainda sem hub (ex.:
-janela de intervenção em CIV perimembranosa/muscular na criança,
-distinto do já coberto em CIA/CIV do adulto); ou Populações especiais —
-doença falciforme e acometimento cardiovascular (hipertensão pulmonar,
-cardiomiopatia por sobrecarga crônica), território de alta prevalência
-no Brasil ainda não verificado nesta janela. Confirmar via grep +
-`gh pr list` antes de despachar.
+- checklist `acometimento-cardiovascular-na-doenca-falciforme-hipertensao-pulmonar-e-cardiomiopatia`
+  — 5 itens: hipertensão pulmonar via TRV (RR 10,1, com nuance de que é
+  rastreio, não diagnóstico); cardiomiopatia/disfunção diastólica por
+  alto débito (RR 3,5, combinado com HP eleva a RR 12,0); NT-proBNP
+  ≥160 pg/mL validado em 2 coortes independentes; manejo específico
+  (cautela com diuréticos declarada como prática aceita SEM estudo
+  controlado dedicado — não inventado; achado verificado de que
+  hidroxiureia NÃO reduziu HP nessa coorte); morte súbita via registro
+  piloto DREPACOEUR (arritmia ventricular em 22%, GLS promissor mas não
+  validado). Gap de alta prevalência no Brasil — só havia menção
+  tangencial dentro de cardiomiopatia por sobrecarga de ferro. 8 fontes
+  via NCBI e-utils, incluindo diretriz ASH 2019.
+
+## Lote 46 (planejado)
+
+A auditar: janela de intervenção em CIV perimembranosa/muscular na
+criança (distinto do CIA/CIV do adulto já coberto no lote 34); ou
+retomar Cardiologia pediátrica — miocardite fulminante pediátrica com
+suporte circulatório mecânico (ECMO/VAD), distinto do já coberto em
+adultos. Confirmar via grep + `gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
