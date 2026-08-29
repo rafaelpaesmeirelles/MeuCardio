@@ -1113,12 +1113,32 @@ corrigido (JSONs + `content/**/*.md` + `gh pr list`).
   doença coronariana (fenótipo de placa não calcificada/inflamatória,
   escore de cálcio zero pode subestimar). 13 fontes via NCBI e-utils.
 
-## Lote 50 (planejado)
+## Lote 50 — concluído (SHA f0196578) — total 78 commits — MARCO
 
-Marco: 50 lotes nesta janela contínua (22-49, três removidos na
-correção crítica = 28 líquidos + a própria correção). A auditar com o
-procedimento corrigido: território ainda não explorado ou
-aprofundamento pontual em hub existente. Confirmar (JSONs +
-`content/**/*.md` + `gh pr list`) antes de despachar.
+- checklist `sindrome-de-taquicardia-postural-pots-e-disautonomia-desencadeada-pela-covid-19`
+  — 5 itens: epidemiologia/mecanismo (33% de nova POTS em coorte
+  sintomática autosselecionada, viés declarado; aumento populacional em
+  base TriNetX, associação temporal não causal); diagnóstico
+  diferencial (só 13% de fadiga pós-COVID tinha POTS objetiva
+  confirmada); teste de inclinação; manejo não farmacológico (RCT
+  mostrando boa tolerância a HIIT/MICT, contrapondo preocupação teórica
+  de mal-estar pós-esforço); manejo farmacológico (ivabradina com RCT
+  em POTS GERAL, nota de rigor explícita de que nenhum fármaco tem RCT
+  dedicado a POTS pós-COVID — extrapolação declarada). 11 fontes via
+  NCBI e-utils.
+
+**Resumo da janela até aqui**: 50 lotes despachados desde o início
+desta continuação (22-50), 3 removidos por duplicata na correção
+crítica de 30/08 (item anterior), restando 28 itens novos líquidos
+integrados + 1 correção. Cluster imagem cardiovascular (SPECT/PET-FDG/
+stress-CMR/PET-perfusão/MIBG), cluster ACHD, cluster transplante de
+órgão sólido (hepático+renal) e cluster populações especiais (falciforme,
+HIV, pós-COVID) fechados nesta janela.
+
+## Lote 51 (planejado)
+
+A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
+`gh pr list`): território ainda não explorado nesta janela. Confirmar
+cobertura antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
