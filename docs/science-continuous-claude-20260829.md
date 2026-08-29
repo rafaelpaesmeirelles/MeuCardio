@@ -256,3 +256,15 @@ cobre só medição por escore Z, não indicações — confirmado gap real.
 Despachado como checklist (agente a192914cbfd4ed3f2).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 13 — concluído (1 commit, SHA 209db3e7) — total 34 commits
+
+- checklist `indicacoes-de-ecocardiograma-em-cardiologia-pediatrica-cenarios-clinicos-especificos`
+  — 20 itens, 9 categorias, maior impacto de backlog em um único lote desta
+  fase (~19-20 itens evidencias/metadados.json potencialmente desbloqueados).
+  11 fontes verificadas (AHA Kawasaki/endocardite/oximetria, ASE TEE/
+  quantificação pediátrica, HRS/EHRA/APHRS, AAP hipertensão, IGHG
+  cardio-oncologia, ISHLT transplante, ELSO ECMO). Nenhuma diretriz SBC
+  específica localizada — declarado.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
