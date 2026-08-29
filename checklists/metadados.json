@@ -31292,5 +31292,97 @@
         "origem_secao": "Como encaixar na ESC 2023"
       }
     ]
+  },
+  {
+    "slug": "diferenciacao-entre-sarcoidose-cardiaca-e-miocardite-de-celulas-gigantes",
+    "condicao": "Diagnóstico diferencial entre sarcoidose cardíaca e miocardite de células gigantes",
+    "resumo": "Checklist de apoio à diferenciação clínica, diagnóstica e terapêutica entre as duas miocardites granulomatosas mais frequentemente confundidas — sarcoidose cardíaca e miocardite de células gigantes. As duas podem ser clinicamente indistinguíveis na apresentação inicial (bloqueio atrioventricular avançado, arritmia ventricular sustentada, disfunção ventricular de início não esclarecido), mas têm força de recomendação de imunossupressão e indicação de transplante cardíaco distintas, o que torna a diferenciação histológica — por biópsia lida por patologista cardíaco experiente — uma decisão de implicação terapêutica direta.",
+    "documento_origem": "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
+    "theme": "Pericárdio",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116.",
+      "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487."
+    ],
+    "itens": [
+      {
+        "id": "dif-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Considerar as duas entidades juntas diante de bloqueio atrioventricular avançado, arritmia ventricular sustentada ou disfunção ventricular de início não esclarecido em paciente sem cardiopatia estrutural prévia conhecida — sarcoidose cardíaca e miocardite de células gigantes são as duas miocardites granulomatosas do diagnóstico diferencial histológico e podem ser clinicamente indistinguíveis na apresentação inicial.",
+        "origem_secao": "Diagnóstico diferencial obrigatório — as três condições que podem se confundir"
+      },
+      {
+        "id": "dif-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não presumir a diferenciação só pela apresentação clínica: apenas uma fração limitada de pacientes pode ser diferenciada entre as duas condições unicamente pelo quadro inicial — a diferenciação definitiva exige biópsia.",
+        "origem_secao": "Diagnóstico diferencial obrigatório — as três condições que podem se confundir"
+      },
+      {
+        "id": "dif-03",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Priorizar biópsia endomiocárdica precoce diante de suspeita de qualquer uma das duas condições — mesma recomendação Classe I, Nível C da miocardite em geral —, pela implicação terapêutica direta que o resultado histológico traz.",
+        "origem_secao": "Comparação com a miocardite de células gigantes"
+      },
+      {
+        "id": "dif-04",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Garantir leitura da biópsia por patologista cardíaco experiente — o granuloma sarcoide e as células gigantes da miocardite de células gigantes podem ser confundidos na mesma lâmina, e a leitura incorreta muda a urgência terapêutica escolhida.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais"
+      },
+      {
+        "id": "dif-05",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Lembrar que biópsia endomiocárdica negativa não exclui sarcoidose cardíaca — o acometimento é focal e a amostra pode não capturar o granuloma; nesse cenário, investigar granuloma não caseoso em outro órgão para fechar o diagnóstico pela via do grupo clínico, em vez de encerrar a investigação.",
+        "origem_secao": "Os dois grupos de diagnóstico"
+      },
+      {
+        "id": "dif-06",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Usar a ressonância cardíaca com gadolínio como apoio, sabendo que o realce tardio é achado sugestivo em ambas as condições; considerar que a caracterização por ressonância na miocardite de células gigantes tem corpo de evidência mais limitado, porque choque cardiogênico e arritmia grave frequentemente tornam o exame impraticável na fase aguda dessa condição.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais"
+      },
+      {
+        "id": "dif-07",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Não usar hs-CRP para diferenciar sarcoidose cardíaca de miocardite de células gigantes — esse biomarcador foi identificado, em estudo isolado, como útil para diferenciar miocardite de células gigantes de miocardite LINFOCÍTICA; não há dado equivalente reportado nas fontes consultadas para diferenciar as duas condições granulomatosas entre si por biomarcador.",
+        "origem_secao": "Diagnóstico diferencial obrigatório — as três condições que podem se confundir"
+      },
+      {
+        "id": "dif-08",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não tratar as duas condições com a mesma urgência depois de confirmado o achado histológico: a força de recomendação difere — imunossupressão é Classe IIa na sarcoidose cardíaca, e Classe I, com transplante cardíaco também Classe I, na miocardite de células gigantes.",
+        "origem_secao": "Comparação com a miocardite de células gigantes"
+      },
+      {
+        "id": "dif-09",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Não considerar corticosteroide isolado como esquema suficiente diante de miocardite de células gigantes confirmada — o corpo de evidência mostra que corticosteroide sozinho não muda a sobrevida livre de transplante em relação a nenhuma imunossupressão; o ganho documentado depende de esquema combinado, definido pela equipe assistente sem dose reproduzida aqui.",
+        "origem_secao": "Tratamento — imunossupressão combinada, não corticosteroide isolado"
+      },
+      {
+        "id": "dif-10",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Discutir o caso em equipe multidisciplinar (cardiologia, arritmia, patologia cardíaca experiente e, conforme achado extracardíaco, pneumologia/reumatologia) antes de definir o esquema imunossupressor, dado o perfil de efeitos adversos de longo prazo dos agentes envolvidos e a diferença de urgência entre as duas condições.",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "dif-11",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Não interromper ou reduzir a imunossupressão por melhora clínica ou funcional aparente sem reavaliação estruturada: na miocardite de células gigantes, recidiva foi documentada até 8 anos após o diagnóstico inicial, e a resposta histológica em biópsia de controle pode preceder a resposta funcional — a fração de ejeção pode não mudar em curto prazo mesmo com redução histológica clara da inflamação.",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Checklist novo criado em 29/08/2026, a partir dos dois documentos-fonte já revisados desta biblioteca, preenchendo lacuna de conectividade do verbete sarcoidose-cardiaca (completo e revisado, mas sem nenhum checklist/caso/material associado antes desta rodada). Sem colisão de slug. Distinto do checklist-irmão já existente (investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022): este aprofunda especificamente o processo de diferenciação com GCM. Nenhuma dose de medicamento. Síntese original em português. Pendente revisão humana."
   }
 ]
