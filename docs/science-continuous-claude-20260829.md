@@ -1099,10 +1099,26 @@ corrigido (JSONs + `content/**/*.md` + `gh pr list`).
   cardiovascular pré-transplante de órgão sólido (hepático + renal)
   encerrado nesta janela.
 
-## Lote 49 (planejado)
+## Lote 49 — concluído (SHA dad1d5e0) — total 77 commits
 
-A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list`): território ainda não explorado nesta janela ou
-aprofundamento pontual em hub existente. A confirmar antes de despachar.
+- checklist `doenca-cardiovascular-no-paciente-com-hiv-risco-inflamatorio-interacoes-e-prevencao`
+  — 5 itens: risco inflamatório persistente mesmo com supressão viral
+  (HR 1,48 para IAM ajustado); estratificação de risco — equações
+  tradicionais subestimam risco em HIV, ensaio REPRIEVE como 1º RCT de
+  prevenção primária específico (interrompido por eficácia, HR 0,65);
+  interações medicamentosas (PI/cobicistat como inibidores potentes de
+  CYP3A4 — contraindicação de sinvastatina/lovastatina, DOAC, BCC);
+  cardiomiopatia/miocardite (transição pré-TARV/TARV, prevalência de
+  miocardite na era moderna declarada como lacuna — não inventado);
+  doença coronariana (fenótipo de placa não calcificada/inflamatória,
+  escore de cálcio zero pode subestimar). 13 fontes via NCBI e-utils.
+
+## Lote 50 (planejado)
+
+Marco: 50 lotes nesta janela contínua (22-49, três removidos na
+correção crítica = 28 líquidos + a própria correção). A auditar com o
+procedimento corrigido: território ainda não explorado ou
+aprofundamento pontual em hub existente. Confirmar (JSONs +
+`content/**/*.md` + `gh pr list`) antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
