@@ -1020,12 +1020,45 @@ Claude (coberto por outras branches/Codex).
   tangencial dentro de cardiomiopatia por sobrecarga de ferro. 8 fontes
   via NCBI e-utils, incluindo diretriz ASH 2019.
 
+## ⚠️ CORREÇÃO CRÍTICA (30/08/2026) — falha de processo em waves 22-45
+
+Ao investigar o lote 46 (CIV perimembranosa/muscular na criança),
+descobri que o alvo já estava coberto em
+`content/Cardiologia_pediátrica/civ-e-cia-na-crianca-historia-natural-e-
+criterios-de-fechamento.md` — arquivo em uma pasta que eu nunca havia
+buscado nesta janela. Investigação revelou uma falha de processo
+sistêmica: **todo o procedimento de checagem de colisão usado nas waves
+22-45 buscava apenas em `doencas/fragmentos/*.json`,
+`checklists/metadados.json` e `exames/metadados.json` — nunca em
+`content/**/*.md`**, corpus de 1.962 arquivos markdown organizados por
+pasta de especialidade, que é a base de conteúdo primária de outras
+trilhas de produção (ChatGPT/Codex, sessões noturnas anteriores de
+Claude). Isso violou a regra obrigatória de colisão do briefing.
+
+Auditoria retroativa (SHA 919b3b86) encontrou 3 duplicatas quase totais
+— removidas: AAOCA (lote 43, duplicava documento já revisado e
+autorizado em 27/08), CPVT (lote 35, duplicava documento com MAIS rigor
+de 25/08), algoritmo de amiloidose (lote 26, duplicava fluxograma
+existente de Perugini). 2 checklists com sobreposição PARCIAL mantidos
+com nota de revisão apontando o documento a cotejar: ACHD granular
+(lote 34, 2 dos 5 itens sobrepostos) e vigilância pós-transplante
+(lote 38, seção de biópsia sobreposta). Demais 19 waves verificados
+sem colisão confirmada. Nada publicado foi afetado — tudo estava
+`pendente_revisao`.
+
+**Procedimento corrigido a partir de agora**: toda checagem de colisão
+inclui `grep` explícito em `content/**/*.md`, além dos JSONs já
+verificados.
+
 ## Lote 46 (planejado)
 
-A auditar: janela de intervenção em CIV perimembranosa/muscular na
-criança (distinto do CIA/CIV do adulto já coberto no lote 34); ou
-retomar Cardiologia pediátrica — miocardite fulminante pediátrica com
-suporte circulatório mecânico (ECMO/VAD), distinto do já coberto em
-adultos. Confirmar via grep + `gh pr list` antes de despachar.
+CIV perimembranosa/muscular já coberto em content/ — descartado.
+Retomar auditoria com o procedimento de colisão corrigido (incluindo
+`content/**/*.md`). Candidato: miocardite fulminante pediátrica com
+ECMO/VAD — já confirmado coberto em content/Cardiologia_pediátrica/
+(miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo.md
+e miocardite-fulminante-pediatrica-e-choque-cardiogenico.md) — também
+descartado. Buscar novo alvo com o procedimento corrigido antes de
+despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
