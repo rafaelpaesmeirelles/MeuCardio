@@ -1,0 +1,197 @@
+[
+  {
+    "slug": "flutter-atrial-adulto",
+    "name": "Flutter atrial do adulto (típico e atípico)",
+    "aliases": [
+      "flutter atrial",
+      "flutter atrial típico",
+      "flutter atrial atípico",
+      "flutter istmo-dependente",
+      "taquicardia atrial macrorreentrante",
+      "flutter atrial pós-cirúrgico"
+    ],
+    "area": "geral",
+    "category": "arritmia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Flutter atrial é uma taquicardia atrial macrorreentrante regular e organizada — distinta da fibrilação atrial pela atividade atrial ordenada em vez de caótica —, subdividida em típico, macrorreentrada fixa dependente do istmo cavotricuspídeo (CTI) com padrão eletrocardiográfico em \"dente de serra\" nas derivações inferiores e ablação curativa em mais de 90% dos procedimentos, e atípico, grupo heterogêneo de circuitos não dependentes do CTI, predominante em pacientes com cirurgia cardíaca prévia envolvendo abordagem atrial ou ablação de fibrilação atrial prévia, cujo diagnóstico de circuito exige mapeamento eletroanatômico dirigido. Compartilha com a fibrilação atrial a mesma lógica de estratificação de risco tromboembólico e anticoagulação.",
+    "epidemiology": "O flutter atrial é uma das taquiarritmias atriais sustentadas mais comuns na prática clínica, coexistindo com frequência com a fibrilação atrial (FA) — parte relevante dos pacientes com flutter tem ou desenvolve FA ao longo do seguimento. O tipo típico, dependente do istmo cavotricuspídeo (CTI), é a forma mais prevalente entre os pacientes referenciados para ablação; no ensaio randomizado LADIP (Da Costa et al., 2006), que testou ablação já no primeiro episódio sintomático de flutter típico (n=104), a idade média da população estudada foi de aproximadamente 78 anos, refletindo o perfil etário típico de apresentação clínica. O tipo atípico, por definição não dependente do CTI, é um grupo heterogêneo de circuitos de macrorreentrada que ocorre mais comumente em pacientes com cirurgia cardíaca prévia envolvendo abordagem atrial (atriotomia, canulação, correção de defeito septal) ou com ablação de fibrilação atrial prévia — não é uma variante rara do flutter típico, mas uma categoria mecanística e clinicamente distinta (Johner et al., 2025). Não foi localizada, nas fontes primárias revisadas, uma taxa de incidência populacional (coorte cirúrgica não selecionada) para flutter atípico/taquicardia atrial pós-incisional especificamente no adulto operado de cirurgia cardíaca não congênita — os dados disponíveis nas séries publicadas partem de pacientes já referenciados para ablação, não de rastreamento sistemático de toda a coorte operada, ao contrário da fibrilação atrial pós-operatória precoce, cuja incidência é bem estabelecida na literatura.",
+    "presentation": [
+      "Palpitação regular, geralmente mais rápida e menos variável que a da fibrilação atrial, muitas vezes com condução atrioventricular fixa (2:1, 3:1 ou 4:1) — pode ser percebida como \"regular e rápida\" mesmo quando o paciente não sabe descrever o ritmo com precisão",
+      "Dispneia, fadiga ou intolerância ao esforço, sobretudo em condução 2:1 com frequência ventricular em torno de 150 bpm — faixa classicamente associada ao flutter mesmo sem ondas F nitidamente visíveis ao ECG de repouso",
+      "Resposta apenas parcial (lentificação, não terminação) a manobra vagal ou adenosina, revelando ondas F antes ocultas na condução 2:1 — achado útil tanto para diagnóstico quanto para diferencial com taquicardias dependentes do nó atrioventricular",
+      "Tontura, pré-síncope ou síncope, mais frequentes quando há condução atrioventricular 1:1 com frequência ventricular muito elevada",
+      "Dor torácica ou sinais de insuficiência cardíaca aguda em paciente com cardiopatia estrutural de base ou frequência ventricular sustentadamente elevada",
+      "Achado incidental e assintomático em ECG de rotina, Holter ou telemetria — especialmente relevante para o subtipo atípico em pós-operatório de cirurgia cardíaca ou pós-ablação de fibrilação atrial",
+      "Fadiga progressiva e queda de função ventricular em flutter recorrente, incessante ou não reconhecido por tempo prolongado — sinal de alerta para cardiomiopatia induzida por taquicardia",
+      "Instabilidade hemodinâmica franca (hipotensão, choque, edema pulmonar agudo) como primeira manifestação, sobretudo em paciente com cardiopatia estrutural prévia"
+    ],
+    "diagnostic_approach": {
+      "eletrocardiograma_no_flutter_tipico_istmo_dependente": [
+        "Padrão \"em dente de serra\" (ondas F) nas derivações inferiores (II, III, aVF), sem linha isoelétrica entre as deflexões atriais — atividade atrial regular e organizada, ao contrário da atividade caótica e sem padrão repetitivo da fibrilação atrial",
+        "Circuito de macrorreentrada fixo em torno do anel tricúspide, cruzando obrigatoriamente o istmo cavotricuspídeo (CTI) — a faixa de tecido entre o anel tricúspide e a veia cava inferior, zona crítica de condução lenta que perpetua o circuito",
+        "Condução atrioventricular tipicamente fixa (2:1 é a mais comum, também 3:1 ou 4:1) ou variável; condução 2:1 sobre frequência atrial em torno de 300 bpm produz frequência ventricular na faixa de aproximadamente 150 bpm, achado que deve levantar suspeita de flutter mesmo sem ondas F nitidamente visíveis",
+        "Bloqueio atrioventricular induzido por manobra vagal ou adenosina não interrompe a arritmia — revela ondas F antes ocultas dentro do QRS ou da onda T, útil para diferenciar de taquicardias dependentes do nó atrioventricular, que costumam terminar com a manobra"
+      ],
+      "por_que_o_ecg_de_superficie_nao_basta_no_flutter_atipico": [
+        "O padrão eletrocardiográfico do flutter atípico é pouco preditivo da anatomia real do circuito, ainda que possa sugerir alguma pista mecanística — ao contrário do típico, cujo padrão em dente de serra nas derivações inferiores é característico",
+        "Circuitos atípicos são heterogêneos: incluem macrorreentradas ao redor de cicatriz de atriotomia (incisional), ao redor de áreas de cicatriz não incisional/fibrose difusa, peri-mitrais, dependentes do teto do átrio esquerdo, ou em torno de veias pulmonares em pacientes com ablação de fibrilação atrial prévia",
+        "O diagnóstico definitivo do circuito depende de estudo eletrofisiológico com mapeamento — o ECG de 12 derivações isoladamente não deve ser usado para prever a localização do istmo crítico em flutter pós-cirúrgico ou pós-ablação de fibrilação atrial"
+      ],
+      "mapeamento_eletroanatomico_no_flutter_atipico": [
+        "A combinação de mapeamento de ativação e entrainment é a estratégia-chave para identificar o circuito de reentrada crítico, reconhecendo três armadilhas mecanísticas: istmo de condução lenta dentro do circuito, reentrada localizada (circuito pequeno, não macrorreentrante clássico) e circuitos de duplo loop ou \"bystander loops\" ativados passivamente",
+        "Quando o flutter atípico não é indutível em laboratório, o mapeamento de substrato em ritmo sinusal (identificação de cicatriz, zonas de baixo voltamento e condução lenta) é estratégia viável para planejar a ablação",
+        "Endpoints aceitos do procedimento: bloqueio de condução bidirecional através da(s) lesão(ões) linear(es) realizada(s) e/ou não indutibilidade de taquicardia atrial ao final do procedimento"
+      ],
+      "manobras_diagnosticas_a_beira_do_leito": [
+        "Manobra vagal (massagem do seio carotídeo, Valsalva modificada) ou adenosina intravenosa, com registro eletrocardiográfico contínuo, podem lentificar transitoriamente a condução atrioventricular sem terminar a arritmia, revelando ondas F antes mascaradas — útil sobretudo na condução 2:1, em que a onda F fica oculta no QRS ou na onda T",
+        "No diferencial de QRS estreito regular com taquicardia supraventricular por reentrada nodal ou por via acessória, o flutter tende a apenas lentificar com a manobra, enquanto as taquicardias dependentes do nó atrioventricular tendem a terminar de forma abrupta"
+      ]
+    },
+    "differentials": [
+      "Fibrilação atrial — atividade atrial caótica, sem padrão organizado repetitivo; flutter com condução variável pode simular irregularidade ao pulso, mas mantém padrão atrial organizado subjacente ao ECG",
+      "Taquicardia atrial focal ou multifocal — onda P de morfologia distinta, sem o padrão contínuo \"em dente de serra\"; na multifocal, três ou mais morfologias de onda P com linha isoelétrica entre elas",
+      "Taquicardia supraventricular por reentrada nodal (AVNRT) ou por via acessória (AVRT) — geralmente termina, e não apenas lentifica, com manobra vagal ou adenosina; relação RP e morfologia de onda P (quando visível) distintas do padrão de flutter",
+      "Taquicardia sinusal — onda P de morfologia sinusal preservada, resposta de lentificação gradual (não em degrau) à manobra vagal",
+      "Fibrilação atrial pré-excitada em paciente com via acessória manifesta — ritmo irregular de QRS largo que pode ser confundido com taquicardia ventricular; contexto de WPW conhecido e irregularidade franca favorecem esse diagnóstico",
+      "Taquicardia ventricular com condução retrógrada — diferencial obrigatório diante de QRS largo de origem incerta; tratar como taquicardia ventricular até prova em contrário na dúvida diagnóstica"
+    ],
+    "tests": [
+      "ECG de 12 derivações — exame inicial; busca padrão em dente de serra nas derivações inferiores (sugestivo de típico) ou ritmo atrial regular sem esse padrão característico (compatível com atípico, não diagnóstico isolado de circuito)",
+      "Manobra vagal ou adenosina intravenosa com registro contínuo — lentifica a condução atrioventricular e revela ondas F ocultas, sem terminar a arritmia; ferramenta diagnóstica, não terapêutica, no flutter",
+      "Ecocardiograma transtorácico — avalia função ventricular (rastreio de cardiomiopatia induzida por taquicardia), tamanho atrial e cardiopatia estrutural de base, relevante para a decisão de anticoagulação e de estratégia de controle de ritmo",
+      "Ecocardiograma transesofágico — exclusão de trombo em apêndice atrial esquerdo antes de cardioversão quando não há 3 semanas de anticoagulação terapêutica documentada ou quando a duração do episódio é incerta ou maior que a janela de segurança",
+      "Estudo eletrofisiológico com mapeamento eletroanatômico — no flutter atípico, é o método diagnóstico definitivo do circuito, já que o ECG de superfície isoladamente não localiza o istmo crítico; no típico, confirma o circuito CTI-dependente e mede o bloqueio bidirecional como endpoint da ablação",
+      "Revisão dirigida da história de cirurgia cardíaca e de ablação de fibrilação atrial prévias — dado clínico com valor diagnóstico direto no flutter atípico, pela alta prevalência de circuitos relacionados a cicatriz de atriotomia ou a lesões lineares de ablação prévia nesse subgrupo"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica atribuível ao flutter (hipotensão, choque, dor torácica isquêmica, sinais de insuficiência cardíaca aguda ou alteração aguda do estado mental) — indicação de cardioversão elétrica sincronizada imediata, sem tentativa farmacológica prévia",
+      "Condução atrioventricular 1:1 com frequência ventricular muito elevada — risco maior em paciente em uso de antiarrítmico de classe Ic sem bloqueador do nó atrioventricular associado, que pode lentificar a frequência atrial do flutter o suficiente para permitir condução 1:1",
+      "Flutter em paciente com via acessória manifesta (Wolff-Parkinson-White) — risco de condução muito rápida pela via acessória; bloqueadores do nó atrioventricular exigem avaliação especializada antes do uso nesse contexto",
+      "Flutter com mais de 24 horas de duração ou de duração incerta, sem 3 semanas de anticoagulação terapêutica documentada e sem ecocardiograma transesofágico afastando trombo — cardioversão eletiva não deve ser realizada nesse cenário pelo risco tromboembólico",
+      "Sinais ou sintomas de disfunção ventricular em paciente com flutter recorrente, incessante ou não reconhecido por tempo prolongado — sinaliza possível cardiomiopatia induzida por taquicardia, potencialmente reversível com controle da arritmia",
+      "Taquicardia de QRS largo de origem incerta em paciente com flutter conhecido ou suspeito — tratar como taquicardia ventricular até prova em contrário; bloqueador do nó atrioventricular usado de forma empírica é conduta perigosa se o ritmo real for taquicardia ventricular ou flutter/fibrilação atrial pré-excitados"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico eletrocardiográfico e distinguir flutter típico (padrão em dente de serra nas derivações inferiores) de atípico (padrão pouco preditivo do circuito, sobretudo em paciente com cirurgia cardíaca ou ablação de fibrilação atrial prévias)",
+      "Iniciar ou revisar anticoagulação oral pelo mesmo princípio de estratificação de risco tromboembólico usado na fibrilação atrial (CHA2DS2-VASc ou sua variante CHA2DS2-VA), independentemente da estratégia de controle de ritmo escolhida",
+      "No flutter típico sintomático e recorrente — ou já no primeiro episódio —, encaminhar para avaliação eletrofisiológica e discutir ablação do istmo cavotricuspídeo como tratamento definitivo de primeira linha, não reservado para falha de fármaco",
+      "No flutter atípico, sobretudo em contexto pós-cirúrgico ou pós-ablação de fibrilação atrial, encaminhar para centro com experiência em mapeamento eletroanatômico de taquicardia atrial complexa, já que o sucesso depende de caracterização detalhada e individualizada do circuito",
+      "Reforçar controle farmacológico de frequência com bloqueador do nó atrioventricular enquanto se aguarda ablação ou em quem não é candidato ao procedimento, reconhecendo que esse controle costuma ser mais difícil de alcançar no flutter do que na fibrilação atrial",
+      "Programar reversão de ritmo eletiva (cardioversão elétrica, farmacológica ou por estimulação atrial via dispositivo já implantado) respeitando a mesma janela de segurança de anticoagulação da fibrilação atrial quando a duração for maior que 24 horas ou incerta",
+      "Reavaliar periodicamente o risco de fibrilação atrial de novo após ablação bem-sucedida de flutter típico, já que ablacionar o flutter não elimina a doença atrial subjacente compartilhada com a fibrilação atrial",
+      "Buscar bloqueio interatrial avançado no ECG pré-ablação como marcador de maior risco de fibrilação atrial subsequente, orientando a intensidade do seguimento e a decisão de manter anticoagulação"
+    ],
+    "emergency_flow": [
+      "Avaliar instabilidade hemodinâmica (hipotensão, alteração aguda do estado mental, dor torácica, sinais de insuficiência cardíaca aguda ou choque) antes de qualquer manobra farmacológica",
+      "Flutter com instabilidade hemodinâmica: cardioversão elétrica sincronizada imediata — geralmente exige menor energia e é mais eficaz do que na fibrilação atrial —, sem tentar antes manobra vagal ou controle farmacológico de frequência",
+      "Flutter estável: manobra vagal ou adenosina com finalidade diagnóstica (revelar ondas F), seguidas de controle de frequência com bloqueador do nó atrioventricular; reconhecer que a combinação de fármacos pode falhar em reduzir a frequência de forma satisfatória, tornando a cardioversão necessária mesmo no paciente estável",
+      "Antes de reverter o ritmo (elétrica, farmacológica ou por estimulação atrial), confirmar se a duração é menor que 24 horas, se há 3 semanas de anticoagulação terapêutica documentada, ou se há ecocardiograma transesofágico sem trombo; se nenhuma condição for satisfeita, priorizar controle de frequência e anticoagulação, adiando a reversão",
+      "Reversão farmacológica com antiarrítmico que prolonga o intervalo QT (ibutilida, dofetilida) requer ambiente monitorado e avaliação de QTc basal, pelo risco de torsades de pointes",
+      "Evitar antiarrítmico de classe Ic (flecainida, propafenona) isolado no flutter, pelo risco de lentificar a frequência atrial e favorecer condução atrioventricular 1:1 com resposta ventricular muito rápida",
+      "Estimulação atrial de alta frequência por marcapasso ou cardiodesfibrilador já implantado com eletrodo atrial é alternativa à cardioversão elétrica ou farmacológica no paciente estável que já dispõe desse dispositivo",
+      "Após qualquer cardioversão (elétrica, farmacológica ou por estimulação), manter anticoagulação por pelo menos 4 semanas independentemente do escore de risco, com continuidade de longo prazo conforme o risco tromboembólico do paciente",
+      "Diante de taquicardia de QRS largo de origem incerta, tratar como taquicardia ventricular até prova em contrário"
+    ],
+    "treatment_summary": "O tratamento do flutter atrial se organiza em quatro eixos que se aplicam de forma diferente ao subtipo típico e ao atípico: controle agudo da frequência ou do ritmo, anticoagulação conforme risco tromboembólico, reversão programada quando indicada, e tratamento definitivo por ablação. Na fase aguda, instabilidade hemodinâmica indica cardioversão elétrica sincronizada imediata; no paciente estável, o controle de frequência com bloqueador do nó atrioventricular é a primeira etapa, mas costuma ser particularmente difícil de alcançar no flutter — mesmo a combinação de classes farmacológicas pode falhar, tornando a cardioversão necessária com frequência maior do que na fibrilação atrial. A anticoagulação segue a mesma lógica de estratificação de risco tromboembólico da fibrilação atrial, pelo escore CHA2DS2-VASc (ou sua variante sem o ponto de sexo feminino, CHA2DS2-VA), independentemente da estratégia de controle de ritmo escolhida e da eventual coexistência com fibrilação atrial documentada; a evidência de anticoagulação específica para flutter isolado é majoritariamente extrapolada da fibrilação atrial, reconhecidamente com menos ensaios dedicados a essa arritmia especificamente. Antes de qualquer reversão eletiva (elétrica, farmacológica ou por estimulação atrial via dispositivo implantado), aplica-se a mesma janela de segurança da fibrilação atrial: episódio com menos de 24 horas de duração, ou pelo menos 3 semanas de anticoagulação terapêutica documentada, ou ecocardiograma transesofágico sem trombo em apêndice atrial esquerdo; a anticoagulação é mantida por pelo menos 4 semanas após qualquer cardioversão, com continuidade de longo prazo conforme o risco tromboembólico do paciente, não conforme o sucesso do procedimento. Para o flutter típico, dependente do istmo cavotricuspídeo, a ablação por cateter é tratamento definitivo de primeira linha — não reservado para falha de fármaco —, com bloqueio de condução bidirecional através do istmo como endpoint do procedimento; evidência de ensaio randomizado sustenta a ablação já no primeiro episódio sintomático, com recorrência de flutter substancialmente menor do que com tratamento farmacológico crônico e sem excesso de complicação. Fármacos bloqueadores do nó atrioventricular ficam reservados a quem não deseja ou não pode ser submetido à ablação. Ablacionar o flutter típico não elimina o risco de fibrilação atrial subsequente — parte relevante dos pacientes desenvolve fibrilação atrial de novo no seguimento, mais ainda na presença de bloqueio interatrial avançado ao ECG pré-procedimento —, por isso a decisão de manter ou suspender anticoagulação após ablação bem-sucedida segue o escore de risco tromboembólico do paciente, não o resultado do procedimento. Para o flutter atípico, mais comum em pacientes com cirurgia cardíaca prévia envolvendo abordagem atrial ou com ablação de fibrilação atrial prévia, o tratamento também é centrado em ablação por cateter, mas exige mapeamento eletroanatômico dirigido (combinando ativação e entrainment) em vez de uma linha anatômica fixa e previsível como no istmo cavotricuspídeo, porque o circuito crítico varia conforme a cicatriz cirúrgica ou as lesões de ablação prévias de cada paciente; a ablação nesse subgrupo deve ser reservada a centros com experiência específica em mapeamento de taquicardia atrial complexa, e a recorrência tende a ser mais frequente do que no flutter típico, com recorrências subsequentes muitas vezes de mecanismo distinto do episódio índice.",
+    "monitoring": [
+      "Recorrência de flutter após ablação, incluindo eventual necessidade de reintervenção — mais comum e mais heterogênea no flutter atípico do que no típico",
+      "Desenvolvimento de fibrilação atrial de novo após ablação bem-sucedida de flutter típico, especialmente em paciente com bloqueio interatrial avançado identificado no ECG pré-procedimento",
+      "Manutenção ou reavaliação periódica da indicação de anticoagulação conforme o escore de risco tromboembólico, independentemente do sucesso da ablação",
+      "Frequência cardíaca em repouso e resposta ao controle farmacológico em quem não foi submetido a ablação ou aguarda o procedimento",
+      "Função ventricular ao ecocardiograma em paciente com flutter recorrente, incessante ou reconhecido tardiamente — rastreio de cardiomiopatia induzida por taquicardia e de sua reversibilidade após controle da arritmia",
+      "Intervalo QTc durante e após uso de antiarrítmico que prolonga a repolarização (ibutilida, dofetilida) na reversão farmacológica",
+      "No pós-operatório de cirurgia cardíaca ou pós-ablação de fibrilação atrial, monitorização eletrocardiográfica dirigida para reconhecimento precoce de flutter atípico, dado seu potencial de apresentação assintomática ou oligossintomática"
+    ],
+    "special_populations": [
+      "Pós-cirurgia cardíaca com abordagem atrial prévia (atriotomia, canulação, correção de defeito septal): substrato para flutter atípico por cicatriz incisional e por cicatriz não incisional/fibrose difusa; mapeamento eletroanatômico é indispensável porque o ECG de superfície não prevê a localização do circuito nesse grupo. Em coorte com seguimento muito longo (média de 90±36 meses) após ablação guiada por mapeamento em pacientes com incisão prévia em átrio direito, a maioria das recorrências tardias foi de mecanismo atípico (taquicardia intra-atrial reentrante), mesmo quando o episódio índice havia sido um flutter típico dependente do istmo cavotricuspídeo — reforçando que mapeamento repetido, e não a suposição de repetição do mesmo circuito, deve orientar a ablação de redo",
+      "Pós-ablação de fibrilação atrial: o mecanismo mais comum de flutter esquerdo atípico subsequente é peri-mitral, dependente do teto do átrio esquerdo, ou envolvendo veias pulmonares, em contraste com pacientes sem ablação prévia; o uso de lesões lineares (comparado a isolamento de veias pulmonares isolado) aumenta a incidência de flutter atípico direito ou esquerdo subsequente",
+      "Paciente com via acessória manifesta (Wolff-Parkinson-White) e flutter atrial: risco de condução muito rápida pela via acessória; avaliação por especialista antes de bloqueador do nó atrioventricular, com a mesma lógica de cautela já estabelecida para fibrilação atrial pré-excitada",
+      "Paciente em uso de antiarrítmico de classe Ic (flecainida, propafenona) que desenvolve flutter atrial: risco de lentificação da frequência atrial suficiente para permitir condução atrioventricular 1:1 e resposta ventricular muito rápida — associação com bloqueador do nó atrioventricular é medida de segurança reconhecida nesse cenário, não uma opção descartável",
+      "Idoso com flutter atrial típico de primeiro episódio: população estudada no principal ensaio randomizado de ablação versus fármaco teve idade média de aproximadamente 78 anos — a evidência de ablação como primeira linha já no primeiro episódio inclui especificamente essa faixa etária, não apenas pacientes jovens de baixo risco cirúrgico",
+      "Gestante com flutter atrial: cardioversão elétrica sincronizada é a opção preferida na paciente instável, com segurança já estabelecida na gestação; manejo farmacológico agudo e decisão de anticoagulação seguem os mesmos princípios de segurança medicamentosa na gestação já estabelecidos para a fibrilação atrial, com avaliação individualizada por especialista"
+    ],
+    "assistant_questions": [
+      { "id": "hemodynamic_instability", "label": "Houve instabilidade hemodinâmica durante o episódio (hipotensão, síncope, dor torácica intensa, sinais de insuficiência cardíaca aguda)?", "type": "boolean", "required": true, "section": "Segurança" },
+      { "id": "ecg_sawtooth_pattern", "label": "O ECG mostra padrão \"em dente de serra\" nas derivações inferiores, característico de flutter típico?", "type": "boolean", "required": true, "section": "Diagnóstico" },
+      { "id": "prior_cardiac_surgery_or_af_ablation", "label": "Há cirurgia cardíaca prévia com abordagem atrial ou ablação de fibrilação atrial prévia?", "type": "boolean", "required": true, "section": "História" },
+      { "id": "known_wpw_preexcitation", "label": "Há Wolff-Parkinson-White ou pré-excitação conhecida ao ECG?", "type": "boolean", "required": true, "section": "História" },
+      { "id": "episode_duration", "label": "Qual a duração estimada do episódio atual?", "type": "select", "required": true, "section": "Caracterização", "options": [
+        { "value": "menos_24h", "label": "Menos de 24 horas" },
+        { "value": "mais_24h_sem_anticoagulacao_ou_ete", "label": "24 horas ou mais, sem 3 semanas de anticoagulação nem ETE sem trombo" },
+        { "value": "anticoagulado_ou_ete_sem_trombo", "label": "3 semanas ou mais de anticoagulação terapêutica, ou ETE sem trombo" },
+        { "value": "duracao_incerta", "label": "Duração incerta" }
+      ]},
+      { "id": "av_conduction_ratio", "label": "Qual a razão de condução atrioventricular observada no ECG?", "type": "select", "required": false, "section": "Diagnóstico", "options": [
+        { "value": "2_1", "label": "2:1" },
+        { "value": "3_1_ou_maior", "label": "3:1 ou maior" },
+        { "value": "variavel", "label": "Variável" },
+        { "value": "1_1", "label": "1:1" }
+      ]},
+      { "id": "episode_frequency", "label": "Qual a frequência/recorrência dos episódios de flutter?", "type": "select", "required": true, "section": "Caracterização", "options": [
+        { "value": "primeiro_episodio", "label": "Primeiro episódio" },
+        { "value": "esporadico", "label": "Esporádico (poucos episódios ao ano)" },
+        { "value": "recorrente", "label": "Recorrente (mensal ou mais frequente)" },
+        { "value": "incessante", "label": "Incessante/quase contínuo" }
+      ]},
+      { "id": "current_anticoagulation_status", "label": "O paciente já está em anticoagulação oral terapêutica há pelo menos 3 semanas?", "type": "boolean", "required": false, "section": "Segurança" }
+    ],
+    "assistant_rules": [
+      { "id": "flutter-instabilidade-hemodinamica", "priority": 100, "when": { "all": [ { "field": "hemodynamic_instability", "op": "truthy" } ] }, "add": { "risk": "emergencia", "red_flags": ["Flutter atrial com instabilidade hemodinâmica"], "emergency_flow": ["Cardioversão elétrica sincronizada imediata, sem tentar antes manobra vagal ou controle farmacológico de frequência"] } },
+      { "id": "flutter-conducao-1-1", "priority": 90, "when": { "all": [ { "field": "av_conduction_ratio", "op": "eq", "value": "1_1" } ] }, "add": { "risk": "urgente", "red_flags": ["Condução atrioventricular 1:1 com frequência ventricular muito elevada"], "emergency_flow": ["Avaliação imediata de instabilidade hemodinâmica e consideração de cardioversão"] } },
+      { "id": "flutter-wpw-cautela", "priority": 80, "when": { "all": [ { "field": "known_wpw_preexcitation", "op": "truthy" } ] }, "add": { "risk": "prioritario", "red_flags": ["Flutter atrial em paciente com via acessória manifesta (Wolff-Parkinson-White)"], "messages": ["Avaliação especializada antes de qualquer bloqueador do nó atrioventricular, pelo risco de condução muito rápida pela via acessória"] } },
+      { "id": "flutter-duracao-sem-seguranca", "priority": 70, "when": { "all": [ { "field": "episode_duration", "op": "in", "value": ["mais_24h_sem_anticoagulacao_ou_ete", "duracao_incerta"] } ] }, "add": { "messages": ["Não cardioverter agora sem confirmar 3 semanas de anticoagulação terapêutica ou ecocardiograma transesofágico sem trombo em apêndice atrial esquerdo"], "suggested_tests": ["Ecocardiograma transesofágico para exclusão de trombo em apêndice atrial esquerdo antes de cardioversão"] } },
+      { "id": "flutter-atipico-pos-cirurgico", "priority": 60, "when": { "all": [ { "field": "prior_cardiac_surgery_or_af_ablation", "op": "truthy" }, { "field": "ecg_sawtooth_pattern", "op": "falsy" } ] }, "add": { "differentials": ["Flutter atrial atípico (não dependente do istmo cavotricuspídeo)"], "messages": ["Padrão eletrocardiográfico pouco preditivo do circuito nesse contexto — diagnóstico definitivo depende de mapeamento eletroanatômico"], "suggested_tests": ["Estudo eletrofisiológico com mapeamento eletroanatômico em centro com experiência em taquicardia atrial complexa"] } },
+      { "id": "flutter-sem-anticoagulacao-avaliar", "priority": 55, "when": { "all": [ { "field": "current_anticoagulation_status", "op": "falsy" } ] }, "add": { "messages": ["Avaliar indicação de anticoagulação oral pelo mesmo escore de risco tromboembólico usado na fibrilação atrial (CHA2DS2-VASc ou CHA2DS2-VA), independentemente da estratégia de controle de ritmo"] } },
+      { "id": "flutter-tipico-sinal-classico", "priority": 40, "when": { "all": [ { "field": "ecg_sawtooth_pattern", "op": "truthy" } ] }, "add": { "supporting": ["Padrão em dente de serra nas derivações inferiores é característico de flutter atrial típico dependente do istmo cavotricuspídeo"], "differentials": ["Flutter atrial típico (dependente do istmo cavotricuspídeo)"] } },
+      { "id": "flutter-recorrente-encaminhar-ablacao", "priority": 45, "when": { "all": [ { "field": "episode_frequency", "op": "in", "value": ["recorrente", "incessante"] } ] }, "add": { "ambulatory_flow": ["Encaminhar para avaliação eletrofisiológica e discutir ablação por cateter como tratamento definitivo de primeira linha"], "supporting": ["Episódios recorrentes ou incessantes reforçam a indicação de ablação em vez de apenas controle farmacológico crônico"] } }
+    ],
+    "tags": [
+      "flutter atrial",
+      "flutter atrial típico",
+      "flutter atrial atípico",
+      "istmo cavotricuspídeo",
+      "ablação por cateter",
+      "macrorreentrada atrial",
+      "anticoagulação",
+      "cardioversão"
+    ],
+    "source_refs": [
+      "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. PMID: 31504425",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. PMID: 39210723",
+      "Da Costa A, Thévenin J, Roche F, et al. Results from the Loire-Ardèche-Drôme-Isère-Puy-de-Dôme (LADIP) trial on atrial flutter, a multicentric prospective randomized study comparing amiodarone and radiofrequency ablation after the first episode of symptomatic atrial flutter. Circulation. 2006;114(16):1676-1681. PMID: 17030680",
+      "Pérez FJ, Schubert CM, Parvez B, Pathak V, Ellenbogen KA, Wood MA. Long-term outcomes after catheter ablation of cavo-tricuspid isthmus dependent atrial flutter: a meta-analysis. Circ Arrhythm Electrophysiol. 2009;2(4):393-401. PMID: 19808495",
+      "Pang N, Gao J, Zhang N, Guo M, Wang R. Cavotricuspid isthmus ablation for atrial flutter guided by contact force related parameters: a systematic review and meta-analysis. Front Cardiovasc Med. 2023;9:1060542. PMID: 36684611",
+      "Enriquez A, Sarrias A, Villuendas R, et al. New-onset atrial fibrillation after cavotricuspid isthmus ablation: identification of advanced interatrial block is key. Europace. 2015;17(8):1289-1293. PMID: 25672984",
+      "O'Neill MD, Jaïs P, Jönsson A, et al. An approach to catheter ablation of cavotricuspid isthmus dependent atrial flutter. Indian Pacing Electrophysiol J. 2006;6(2):100-110. PMID: 16943901",
+      "Johner N, Namdar M, Shah DC. Atypical atrial flutter: electrophysiological characterization and effective catheter ablation. J Cardiovasc Electrophysiol. 2025;36(10):2692-2711. PMID: 39821917",
+      "Zhou GB, Hu JQ, Guo XG, et al. Very long-term outcome of catheter ablation of post-incisional atrial tachycardia: role of incisional and non-incisional scar. Int J Cardiol. 2016;205:72-80. PMID: 26720044",
+      "Ko Ko NL, Sriramoju A, Khetarpal BK, Srivathsan K. Atypical atrial flutter: review of mechanisms, advances in mapping and ablation outcomes. Curr Opin Cardiol. 2022;37(1):36-45. PMID: 34857715"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31504425/",
+      "https://pubmed.ncbi.nlm.nih.gov/39210723/",
+      "https://pubmed.ncbi.nlm.nih.gov/17030680/",
+      "https://pubmed.ncbi.nlm.nih.gov/19808495/",
+      "https://pubmed.ncbi.nlm.nih.gov/36684611/",
+      "https://pubmed.ncbi.nlm.nih.gov/25672984/",
+      "https://pubmed.ncbi.nlm.nih.gov/16943901/",
+      "https://pubmed.ncbi.nlm.nih.gov/39821917/",
+      "https://pubmed.ncbi.nlm.nih.gov/26720044/",
+      "https://pubmed.ncbi.nlm.nih.gov/34857715/"
+    ],
+    "related_document_slugs": [
+      "flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo",
+      "flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablacao",
+      "fluxograma-flutter-atrial-tipico-anticoagulacao-cardioversao-e-ablacao-do-istmo",
+      "ablacao-do-istmo-cavotricuspideo-no-flutter-atrial-tipico-primeira-linha-sucesso-e-recorrencia"
+    ],
+    "patient_material_slug": "flutter-atrial-diagnostico-e-ablacao-por-cateter",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete criado por lacuna identificada no Guia de Doenças: não existia nenhum registro de flutter atrial do adulto (típico ou atípico) em doencas/metadados.json nem em doencas/fragmentos/*.json — apenas flutter-atrial-fetal (área cardiopediatria/cardiologia fetal, população e escopo distintos, preservado sem duplicação de escopo). Colisão de slug verificada e afastada via grep -ri \"flutter\" em doencas/metadados.json e doencas/fragmentos/*.json antes da redação. Corpus de apoio já existia no acervo, todos lidos integralmente antes da redação, mas nunca haviam sido convertidos em verbete estruturado do Guia de Doenças. As 10 referências com PMID foram verificadas individualmente via NCBI E-utilities (esummary) nesta sessão antes do uso. patient_material_slug confirmado existente em material-paciente/metadados.json. Pendente revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
