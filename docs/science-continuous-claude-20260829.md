@@ -731,3 +731,12 @@ substanciais desde o início desta fase (lote 7), cobrindo consistentemente
 o território designado do Claude sem nenhuma colisão registrada.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 30 (em andamento, 1 agente)
+
+Cluster "depositos-de-glicogenio-*" (4 itens): verbete Danon/PRKAG2 (lote
+15) confirmado sem cobertura de protocolo de imagem — eco primeira linha,
+manobras provocativas, T1 nativo reduzido no PRKAG2 (mapeamento), TEE em
+evento neurológico. Despachado como exame (agente ae1d6fb8b354d0b26).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
