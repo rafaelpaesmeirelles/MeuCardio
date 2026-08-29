@@ -657,3 +657,24 @@ brasileira priorizada (doença endêmica no Brasil). Despachado (agente
 a6f8173cbd84a6f3f).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 27 — concluído (1 commit, SHA bd39ef47) — total 53 commits
+
+- checklist `investigacao-por-imagem-e-ecg-na-cardiomiopatia-chagasica-do-rastreio-a-estratificacao-de-risco`
+  — 9 itens, fonte brasileira priorizada, 13 fontes verificadas.
+  ECG define transição indeterminada→cardíaca; RMC com RTG em 71,4% da
+  coorte USP associado a morte CV/TVS; trombo medeia 63,3% do risco
+  embólico do aneurisma apical (coorte UFMG 2026). 3 lacunas declaradas
+  explicitamente (periodicidade de ECG, corte de RTG, duração de
+  anticoagulação).
+
+## Lote 28 (em andamento, 1 agente)
+
+Cluster Fabry (4 itens): nenhum host no corpus (só documento narrativo
+sem detalhamento de vigilância por imagem) — eco anual primeira linha,
+eco em triagem familiar sem teste genético, strain reduzido basal
+inferolateral (achado precoce característico), T1 nativo REDUZIDO na RMC
+(diferenciador — a maioria das outras causas de hipertrofia/infiltração
+mostra T1 aumentado). Despachado como exame (agente accb1cd58669b414e).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
