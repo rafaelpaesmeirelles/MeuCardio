@@ -1,1 +1,13 @@
-[{"slug": "tumores-cardiacos-fetais", "append": {"related_document_slugs": ["arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario", "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional", "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"]}}]
+[
+  {
+    "slug": "tumores-cardiacos-fetais",
+    "append": {
+      "related_document_slugs": [
+        "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+        "intervencao-cardiaca-fetal-valvuloplastia-aortica-fetal-e-feto-hidropico-registro-internacional",
+        "extrassistoles-fetais-irregularidade-do-ritmo-fetal-vigilancia-e-quando-nao-e-benigno"
+      ]
+    },
+    "review_status": "revisado"
+  }
+]

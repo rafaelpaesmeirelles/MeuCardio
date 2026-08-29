@@ -1,226 +1,581 @@
 [
-{
-  "slug": "estenose-tricuspide",
-  "name": "Estenose tricúspide",
-  "aliases": ["Estenose da valva tricúspide", "Estenose valvar tricúspide", "Estenose tricúspide reumática", "Doença tricúspide obstrutiva", "Tricuspid stenosis", "TS"],
-  "area": "geral",
-  "category": "valvopatia",
-  "subtype": null,
-  "cyanosis_class": null,
-  "prevalence_rank": null,
-  "completeness": "completo",
-  "summary": "A estenose tricúspide (ET) é a obstrução ao enchimento diastólico do ventrículo direito (VD) por doença do aparelho valvar tricúspide — espessamento e retração das cúspides, com acometimento comissural. É uma valvopatia rara e, na prática, quase nunca isolada: sua causa mais comum, disparadamente, é a febre reumática, cenário em que a ET ocorre concomitantemente ao acometimento da valva mitral (mais frequente) e/ou aórtica — encontrar ET deve disparar avaliação ativa de valvopatia do lado esquerdo, e vice-versa: doença mitral reumática conhecida deve levantar suspeita de acometimento tricúspide associado, sobretudo diante de congestão sistêmica desproporcional. Causas não reumáticas são bem mais raras — síndrome carcinoide, endocardite infecciosa com vegetação obstrutiva, lúpus eritematoso sistêmico, doenças de depósito (amiloidose, doença de Fabry), doença de Whipple, trombo associado a eletrodo de dispositivo cardíaco implantável, deformidades congênitas e, mais raramente ainda, uso de certos medicamentos (fenfluramina, metisergida). O diagnóstico e a graduação de gravidade são ecocardiográficos: área valvar tricúspide ≤ 1,0 cm², gradiente diastólico médio átrio direito (AD)/VD ≥ 5 mmHg e tempo de hemipressão (PHT) tricúspide ≥ 190 ms definem ET importante. O tratamento de escolha, quando indicado por sintomas (fadiga é o principal) ou por complicadores (fibrilação atrial, disfunção hepática por congestão), é a valvoplastia tricúspide por cateter-balão (VCTB) — mas essa opção percutânea é bem menos estabelecida do que na estenose mitral: a literatura é escassa pela raridade da doença, e a insuficiência tricúspide (IT) importante concomitante — muito mais frequente na ET do que a insuficiência mitral relevante é na estenose mitral — contraindica a VCTB, direcionando esses casos para cirurgia (troca valvar, preferencialmente biológica, ou plástica).",
-  "epidemiology": "A ET é descrita pelas duas diretrizes de referência desta ficha como valvopatia rara. A Atualização das Diretrizes Brasileiras de Valvopatias (SBC, 2020) afirma que sua etiologia mais comum é a doença reumática, geralmente concomitante ao comprometimento da valva mitral e/ou aórtica, e que é mais frequente em adultos jovens — perfil demográfico compatível com o longo intervalo de latência entre o episódio de febre reumática (muitas vezes não reconhecido) e a manifestação clínica da valvopatia sequelar. As Diretrizes ESC/EACTS 2025 caracterizam a ET como manifestação muito rara de valvopatia adquirida em países de alta renda, e no resumo executivo reafirmam que a ET está principalmente associada à doença valvar reumática, à síndrome carcinoide ou a distúrbios enzimáticos como as doenças de Fabry e de Whipple — nesta ordem de menção, com a etiologia reumática listada em primeiro lugar. A mesma diretriz descreve a fisiopatologia da causa carcinoide como proliferação mediada por serotonina, com deposição de fibroblastos e matriz extracelular sobre os folhetos e o aparato subvalvar, e cita como causas raras adicionais a obstrução ao influxo por trombo associado a eletrodo de dispositivo cardíaco eletrônico implantável (CDI/marca-passo) ou por endocardite com vegetações volumosas, além de medicamentos como fenfluramina ou metisergida. Um ponto de atenção epidemiológica prática, documentado tanto pela SBC quanto por revisões de febre reumática já presentes nesta biblioteca: o acometimento tricúspide reumático é frequente em pacientes com doença mitral e aórtica associada, e sua negligência pode aumentar morbidade e levar a reoperação quando a valva mitral é operada isoladamente sem reavaliação sistemática da tricúspide.",
-  "presentation": [
-    "Fadiga — descrita pela SBC 2020 como o sintoma mais comumente encontrado na ET importante, podendo se associar a dor e edema de membros inferiores",
-    "Ausência de dispneia relevante como sintoma predominante — achado que a própria diretriz da SBC contrasta explicitamente com o quadro de estenose mitral, e que pode levar a subvalorização do diagnóstico se o examinador procurar dispneia como sintoma-guia",
-    "Sinais de congestão sistêmica: hepatomegalia, ascite, edema de membros inferiores, estase jugular e sinal de Kussmaul",
-    "Onda 'a' gigante no pulso venoso jugular, refletindo a contração atrial direita contra a valva estenótica",
-    "Ao exame físico: estalido de abertura precoce, B1 hiperfonética e sopro diastólico em ruflar (com reforço pré-sistólico se o paciente estiver em ritmo sinusal) em borda esternal esquerda, que tipicamente aumenta com a inspiração",
-    "Palpitações, associadas a fibrilação atrial concomitante",
-    "Sinais de disfunção hepática secundária à congestão crônica (icterícia leve, alterações bioquímicas hepáticas)",
-    "Sinais de baixo débito associados a congestão sistêmica desproporcional ao grau de doença valvar do lado esquerdo isoladamente conhecido — pista clínica importante para suspeitar de acometimento tricúspide associado em paciente com doença mitral reumática já estabelecida",
-    "Quando a etiologia é carcinoide: flushing cutâneo e diarreia associados, refletindo a síndrome sistêmica de base",
-    "Apresentação insidiosa, com sintomas frequentemente atribuídos apenas à valvopatia do lado esquerdo conhecida, retardando o reconhecimento do componente tricúspide"
-  ],
-  "diagnostic_approach": {
-    "metodo_diagnostico_principal": "O ecocardiograma transtorácico com Doppler é a ferramenta principal para definição da gravidade anatômica da ET (SBC 2020) e para o diagnóstico funcional (ESC/EACTS 2025), combinando avaliação morfológica do folheto e do aparato subvalvar com quantificação hemodinâmica do gradiente transvalvar. Espessamento de folheto, com ou sem calcificação, e fusão comissural são achados patognomônicos de acometimento reumático, segundo a ESC/EACTS 2025.",
-    "criterios_ecocardiograficos_de_gravidade": "A SBC 2020 define ET anatomicamente importante pela combinação de: área valvar tricúspide ≤ 1,0 cm²; gradiente diastólico médio AD/VD ≥ 5 mmHg; aumento isolado de átrio direito; e tempo de hemipressão (PHT) tricúspide ≥ 190 ms. A ESC/EACTS 2025 cross-valida especificamente o critério de gradiente, afirmando que um gradiente transvalvar diastólico médio maior que 5 mmHg, com frequência cardíaca normal, indica ET grave — o mesmo corte numérico da diretriz brasileira, obtido de forma independente. Ao eletrocardiograma, espera-se sobrecarga de átrio direito e, com frequência, fibrilação atrial; à radiografia de tórax, aumento isolado de átrio direito.",
-    "avaliacao_etiologica": "Diante de ET importante, a etiologia mais provável — de longe — é a reumática, com espessamento e retração das cúspides e acometimento comissural, geralmente concomitante a acometimento mitral e/ou aórtico. Causas não reumáticas (endocardite infecciosa, lúpus eritematoso sistêmico, síndrome carcinoide, deformidades congênitas, mixoma atrial, lesão actínica pós-radioterapia, doenças de depósito como amiloidose e doença de Fabry, doença de Whipple, obstrução por trombo associado a eletrodo de dispositivo cardíaco implantável, ou, mais raramente, medicamentos como fenfluramina ou metisergida) devem ser consideradas quando não há história ou achados compatíveis com febre reumática, ou quando há elementos clínicos sistêmicos sugestivos (flushing e diarreia na síndrome carcinoide; febre e fenômenos embólicos na endocardite; dispositivo cardíaco implantado com trombo documentado).",
-    "avaliacao_de_valvopatia_associada_do_lado_esquerdo": "Pela forte associação reumática, todo diagnóstico de ET deve disparar avaliação ecocardiográfica ativa e dedicada da valva mitral (mais comumente acometida em conjunto) e da valva aórtica — e o inverso também se aplica: doença mitral reumática conhecida, sobretudo com sinais de congestão sistêmica desproporcionais ao grau de doença mitral isolada, deve motivar reavaliação sistemática da valva tricúspide. Essa avaliação combinada é particularmente relevante antes de qualquer decisão cirúrgica sobre a valva mitral, porque muda o planejamento operatório (ver 'tratamento').",
-    "avaliacao_pre_intervencao_percutanea": "Antes de indicar valvoplastia tricúspide por cateter-balão (VCTB), a SBC 2020 exige excluir trombo refratário à anticoagulação e vegetação valvar — ambos contraindicam o procedimento. A presença de refluxo tricuspídeo (insuficiência) apenas leve a moderado não contraindica a VCTB, mas insuficiência tricúspide importante concomitante é contraindicação formal (Classe III, SBC), diferente da estenose mitral, em que a insuficiência mitral relevante associada é proporcionalmente menos frequente. Quando há estenose mitral concomitante candidata a valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão, a VCTB associada é indicação de Classe I.",
-    "exames_complementares_em_dissociacao_clinico_ecocardiografica": "Estudo hemodinâmico invasivo (confirmando gradiente diastólico AD/VD ≥ 5 mmHg) e ressonância magnética cardíaca são reservados, pela SBC 2020, a casos de dissociação entre o quadro clínico e a gravidade estimada pelo ecocardiograma transtorácico, ou quando a qualidade da imagem ecocardiográfica é limitada."
-  },
-  "differentials": [
-    "Insuficiência tricúspide isolada — diferenciada pelo padrão de fluxo sistólico regurgitante ao Doppler, em vez do gradiente diastólico e da onda 'a' gigante da estenose",
-    "Estenose mitral isolada, sem componente tricúspide — sintomas de congestão pulmonar predominam, em vez da congestão sistêmica desproporcional que sugere componente tricúspide associado",
-    "Mixoma de átrio direito, causando obstrução funcional do influxo tricúspide",
-    "Endocardite infecciosa com vegetação volumosa obstruindo o influxo tricúspide — causa rara mas reconhecida de estenose funcional, distinta da fusão comissural reumática",
-    "Síndrome carcinoide, com fibrose de placa sobre folhetos tricúspide e pulmonar por proliferação mediada por serotonina — geralmente associada também a flushing e diarreia",
-    "Obstrução ao influxo tricuspídeo por trombo associado a eletrodo de marca-passo ou cardioversor-desfibrilador implantável",
-    "Doenças de depósito (amiloidose cardíaca, doença de Fabry) e doença de Whipple, causas raras de espessamento valvar não reumático",
-    "Lúpus eritematoso sistêmico e síndrome antifosfolípide, causas raras de valvopatia tricúspide não reumática",
-    "Deformidades congênitas da valva tricúspide (por exemplo, componente obstrutivo em anomalias congênitas do aparato tricuspídeo), causa rara em adulto"
-  ],
-  "tests": [
-    "Ecocardiograma transtorácico com Doppler — método principal para diagnóstico e graduação de gravidade (área valvar, gradiente diastólico médio, PHT)",
-    "Ecocardiograma transesofágico com técnica 3D, quando a janela transtorácica é subótima ou há dissociação clínico-ecocardiográfica",
-    "Eletrocardiograma de 12 derivações, para sobrecarga de átrio direito e fibrilação atrial",
-    "Radiografia de tórax, para aumento isolado de átrio direito",
-    "Estudo hemodinâmico invasivo (cateterismo cardíaco direito), reservado a casos de dissociação entre quadro clínico e gravidade ecocardiográfica, confirmando gradiente diastólico AD/VD",
-    "Ressonância magnética cardíaca, quando a qualidade da imagem ecocardiográfica é limitada ou há dissociação clínico-ecocardiográfica",
-    "Provas de função hepática e coagulograma, como marcador de complicador (congestão hepática) e de gravidade",
-    "Investigação etiológica direcionada por suspeita clínica quando a causa reumática não é evidente (por exemplo, rastreio de síndrome carcinoide, hemoculturas e ecocardiograma dedicado a vegetação se suspeita de endocardite, sorologia para lúpus eritematoso sistêmico)"
-  ],
-  "red_flags": [
-    "Trombo refratário à anticoagulação ou vegetação na valva tricúspide — contraindicação formal à valvoplastia por cateter-balão, direcionando para investigação de causa (incluindo endocardite ativa) e via cirúrgica",
-    "Insuficiência tricúspide importante concomitante — contraindicação formal (Classe III, SBC) à valvoplastia tricúspide por cateter-balão isolada",
-    "Estenose mitral reumática com indicação cirúrgica (ou valvuloplastia por cateter-balão) já estabelecida, sem reavaliação sistemática da valva tricúspide antes do procedimento — risco de reoperação evitável",
-    "Sinais de disfunção hepática relacionada à congestão crônica (alteração de coagulograma, elevação de enzimas hepáticas, ascite) — complicador reconhecido que reforça indicação de intervenção",
-    "Fibrilação atrial documentada em paciente com ET importante — complicador reconhecido que reforça indicação de intervenção",
-    "Dissociação entre quadro clínico exuberante e gravidade aparentemente discreta ao ecocardiograma transtorácico — investigar com estudo hemodinâmico ou ressonância magnética antes de descartar intervenção",
-    "Suspeita de endocardite ativa com vegetação obstrutiva (febre, fenômenos embólicos) associada a estenose tricúspide de instalação recente"
-  ],
-  "ambulatory_flow": [
-    "Confirmar diagnóstico e gravidade da ET por ecocardiograma transtorácico com medida de área valvar, gradiente diastólico médio AD/VD e PHT tricúspide.",
-    "Investigar etiologia, com forte prior para doença reumática — e, quando a história ou os achados não forem compatíveis com febre reumática, investigar ativamente causas raras (síndrome carcinoide, endocardite prévia, lúpus, doenças de depósito, dispositivo cardíaco implantado).",
-    "Avaliar ativamente valvopatia associada do lado esquerdo (mitral, mais comum, e aórtica) diante de achado de ET, e o inverso diante de doença mitral reumática conhecida — sobretudo se houver congestão sistêmica desproporcional.",
-    "Avaliar sintomas (fadiga como principal) e complicadores (fibrilação atrial, comprometimento hepático por congestão) em todo paciente com ET anatomicamente importante, já que sua presença indica intervenção.",
-    "Em paciente elegível para intervenção, avaliar contraindicações à valvoplastia tricúspide por cateter-balão (trombo refratário à anticoagulação, vegetação, insuficiência tricúspide importante associada) antes de definir a via percutânea.",
-    "Encaminhar para valvoplastia tricúspide por cateter-balão quando ET importante sintomática, isolada e sem contraindicações — tratamento de escolha segundo a SBC 2020, apesar da escassez de literatura pela raridade da doença.",
-    "Encaminhar para avaliação cirúrgica (troca valvar, com preferência por prótese biológica, ou plástica/comissurotomia) quando houver contraindicação à valvoplastia por cateter-balão, ou quando já houver indicação cirúrgica de valva mitral estabelecida — nesse último cenário, operar a tricúspide no mesmo tempo cirúrgico.",
-    "Reavaliar sistematicamente a valva tricúspide antes de cirurgia mitral reumática já indicada, mesmo quando a estenose tricúspide parecer discreta isoladamente, pelo risco de reoperação evitável.",
-    "Manter seguimento clínico e ecocardiográfico periódico em ET leve a moderada, assintomática e sem complicadores, sem indicação de intervenção neste momento.",
-    "Discutir o caso em equipe cardíaca multidisciplinar (Heart Team) quando houver doença valvar múltipla ou dúvida sobre a melhor via de intervenção."
-  ],
-  "emergency_flow": [
-    "Reconhecer descompensação aguda por congestão sistêmica grave (ascite tensa, hepatomegalia dolorosa, edema importante) como manifestação de ET importante não tratada ou de piora aguda.",
-    "Investigar e tratar o fator precipitante — fibrilação atrial de início recente ou não controlada, ou suspeita de endocardite ativa com vegetação obstrutiva (febre, fenômenos embólicos, vegetação nova ao ecocardiograma).",
-    "Em suspeita de endocardite com vegetação tricúspide obstrutiva, seguir a investigação e os critérios diagnósticos padrão de endocardite infecciosa, sem assumir automaticamente etiologia reumática.",
-    "Avaliar sinais de disfunção hepática aguda relacionada à congestão (coagulograma, enzimas hepáticas) diante de descompensação sistêmica em paciente com ET conhecida.",
-    "Encaminhar para avaliação de intervenção valvar (percutânea ou cirúrgica) após estabilização do quadro agudo e investigação completa de contraindicações à via percutânea, não em caráter de urgência isolada pela ET em si, salvo suspeita de endocardite ativa ou instabilidade hemodinâmica associada."
-  ],
-  "treatment_summary": "O tratamento da ET é definido pela gravidade ecocardiográfica, pela presença de sintomas (fadiga é o principal) ou complicadores (fibrilação atrial, disfunção hepática por congestão sistêmica) e pela ausência de contraindicações à via percutânea. A ESC/EACTS 2025 descreve a terapia medicamentosa (restrição de sódio e diurético) como ponte para intervenção cirúrgica ou transcateter, capaz de melhorar sintomas e reduzir a congestão hepática, mas sem papel curativo — sem especificação de dose neste conteúdo. Quando indicada, a SBC 2020 é explícita: apesar da raridade dos casos e da escassez da literatura, a valvoplastia tricúspide por cateter-balão (VCTB) ainda é o tratamento de escolha para ET importante isolada sintomática sem contraindicações (Classe IIa, Nível C, SBC e AHA), sendo possível realizá-la mesmo com refluxo tricuspídeo apenas moderado associado. Quando há estenose mitral concomitante candidata a valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão, a VCTB associada passa a ser indicação de Classe I, Nível C (SBC e AHA). A VCTB é formalmente contraindicada (Classe III, SBC) na presença de insuficiência tricúspide importante concomitante, e também não deve ser realizada diante de trombo refratário à anticoagulação ou vegetação valvar. Nesses cenários de contraindicação, a via é cirúrgica — troca da valva tricúspide (opção preferencial quando a valvoplastia não é possível, com preferência explícita por prótese biológica, Classe I, Nível C, SBC) ou plástica/comissurotomia — indicação de Classe I, Nível C nas três diretrizes (SBC, AHA e ESC) para ET importante sintomática com contraindicação à VCTB, e de Classe IIa, Nível C (SBC) a Classe I, Nível C (AHA e ESC) para ET importante isolada sintomática mesmo sem contraindicação formal à via percutânea — refletindo maior confiança das diretrizes internacionais na cirurgia do que na experiência ainda limitada com a VCTB. A cirurgia é preferível à valvoplastia isolada quando a valva mitral já tem indicação cirúrgica estabelecida, corrigindo as duas valvas no mesmo tempo operatório. A ESC/EACTS 2025 resume a decisão em sua Tabela de Recomendações 10: cirurgia (geralmente troca valvar) é recomendada (Classe I, Nível C) em paciente sintomático com ET importante, podendo-se tentar valvoplastia por balão como primeira abordagem quando a ET é isolada; e cirurgia também é recomendada (Classe I, Nível C) em paciente com ET importante submetido a intervenção de valva esquerda, podendo-se tentar valvoplastia por balão quando for possível realizar comissurotomia mitral percutânea na valva mitral concomitante. Um ponto explicitamente reconhecido como lacuna de evidência pela própria ESC/EACTS 2025: o papel da troca valvar tricúspide transcateter permanece inexplorado especificamente na ET — ao contrário do que já ocorre para a insuficiência tricúspide grave (reparo borda a borda e troca transcateter, cobertos em ficha própria desta biblioteca), não há, até o momento, alternativa transcateter validada para a estenose tricúspide fora da valvoplastia por balão.",
-  "monitoring": [
-    "Ecocardiograma transtorácico seriado, para reavaliar gravidade da ET, valvopatia associada do lado esquerdo e função de ventrículo direito.",
-    "Avaliação clínica periódica de sintomas (fadiga, edema) e de complicadores (fibrilação atrial, sinais de disfunção hepática).",
-    "Monitorização de ritmo cardíaco para detecção de fibrilação atrial.",
-    "Provas de função hepática e coagulograma seriados como marcador de gravidade e de resposta ao tratamento da congestão.",
-    "Reavaliação ecocardiográfica após valvoplastia por cateter-balão ou cirurgia, incluindo gradiente residual e grau de insuficiência tricúspide residual.",
-    "Reavaliação sistemática da valva tricúspide no seguimento de paciente com valvopatia mitral reumática conhecida, pela forte associação entre as duas.",
-    "Vigilância clínica estruturada, sem intervenção mecânica, em ET leve a moderada assintomática e sem complicadores."
-  ],
-  "special_populations": [
-    "Paciente com valvopatia reumática multivalvar (mitral e/ou aórtica associada): investigação e correção cirúrgica devem ser sistemáticas e combinadas, não sequenciais — a ET costuma ser achado concomitante, não isolado.",
-    "Adulto jovem: perfil demográfico mais característico da ET reumática, refletindo o longo intervalo de latência entre o episódio de febre reumática e a manifestação clínica da valvopatia sequelar.",
-    "Paciente com síndrome carcinoide: rastreio cardíaco ativo é recomendado assim que o diagnóstico oncológico é estabelecido, já que o acometimento valvar costuma preceder os sintomas em anos; padrão predominante é insuficiência de valvas direitas, mas estenose também é descrita em doença mais avançada.",
-    "Paciente com dispositivo cardíaco eletrônico implantável (marca-passo ou cardioversor-desfibrilador): eletrodo é causa reconhecida de obstrução ao influxo tricúspide por trombo associado, uma das causas raras e potencialmente reversíveis de ET.",
-    "Paciente com insuficiência tricúspide importante concomitante: contraindicação formal à valvoplastia por cateter-balão, direcionando para avaliação cirúrgica desde o início.",
-    "Paciente com suspeita de endocardite infecciosa: vegetação volumosa pode causar obstrução funcional ao influxo tricúspide, mecanismo distinto — e a investigação diagnóstica deve seguir os critérios padrão de endocardite, não os de valvopatia reumática crônica."
-  ],
-  "assistant_questions": [
-    {"id": "gravidade_et", "label": "Qual a gravidade da estenose tricúspide ao ecocardiograma?", "type": "select", "options": [
-      {"value": "leve", "label": "Leve"}, {"value": "moderada", "label": "Moderada"}, {"value": "grave", "label": "Grave/importante"}
-    ]},
-    {"id": "area_valvar_tricuspide_cm2", "label": "Área valvar tricúspide estimada (cm²)", "type": "number"},
-    {"id": "gradiente_diastolico_medio_mmhg", "label": "Gradiente diastólico médio AD/VD (mmHg)", "type": "number"},
-    {"id": "pht_tricuspide_ms", "label": "Tempo de hemipressão (PHT) tricúspide (ms)", "type": "number"},
-    {"id": "etiologia_et", "label": "Etiologia da estenose tricúspide", "type": "select", "options": [
-      {"value": "reumatica", "label": "Reumática"}, {"value": "carcinoide", "label": "Síndrome carcinoide"}, {"value": "endocardite_vegetacao", "label": "Endocardite com vegetação obstrutiva"},
-      {"value": "congenita", "label": "Congênita"}, {"value": "lupus", "label": "Lúpus eritematoso sistêmico"}, {"value": "doenca_deposito", "label": "Doença de depósito (amiloidose, Fabry) ou Whipple"},
-      {"value": "trombo_eletrodo", "label": "Trombo associado a eletrodo de dispositivo implantável"}, {"value": "outra", "label": "Outra"}
-    ]},
-    {"id": "sintomatico", "label": "Paciente sintomático (fadiga, sinais de congestão sistêmica)?", "type": "boolean"},
-    {"id": "estenose_mitral_concomitante", "label": "Há estenose mitral concomitante?", "type": "boolean"},
-    {"id": "valvuloplastia_mitral_por_cateter_balao_planejada", "label": "Há valvuloplastia mitral por cateter-balão (VMCB) planejada para a mesma sessão?", "type": "boolean"},
-    {"id": "indicacao_cirurgica_mitral_ja_estabelecida", "label": "Há indicação cirúrgica de valva mitral (troca ou plástica) já estabelecida?", "type": "boolean"},
-    {"id": "insuficiencia_tricuspide_importante_concomitante", "label": "Há insuficiência tricúspide importante concomitante?", "type": "boolean"},
-    {"id": "trombo_ou_vegetacao_valvar", "label": "Há trombo refratário à anticoagulação ou vegetação na valva tricúspide?", "type": "boolean"},
-    {"id": "fibrilacao_atrial", "label": "Há fibrilação atrial?", "type": "boolean"},
-    {"id": "sinais_congestao_hepatica", "label": "Há sinais de congestão hepática (elevação de enzimas, alteração do coagulograma, ascite)?", "type": "boolean"},
-    {"id": "dissociacao_clinico_ecocardiografica", "label": "Há dissociação entre o quadro clínico e a gravidade estimada pelo ecocardiograma transtorácico?", "type": "boolean"},
-    {"id": "anatomia_favoravel_valvoplastia", "label": "A anatomia valvar é favorável à valvoplastia tricúspide por cateter-balão (folhetos pouco calcificados, sem trombo ou vegetação)?", "type": "boolean"},
-    {"id": "suspeita_endocardite_ativa", "label": "Há suspeita clínica de endocardite ativa (febre, fenômenos embólicos, vegetação nova)?", "type": "boolean"}
-  ],
-  "assistant_rules": [
-    {"id": "trombo_ou_vegetacao_contraindica_vctb", "priority": 92, "when": {"all": [{"field": "trombo_ou_vegetacao_valvar", "op": "truthy"}]}, "add": {
-      "risk": "urgente",
-      "red_flags": ["Trombo refratário à anticoagulação ou vegetação na valva tricúspide contraindica valvoplastia por cateter-balão — via cirúrgica deve ser considerada, com investigação de endocardite ativa se vegetação estiver presente."]
-    }},
-    {"id": "suspeita_endocardite_ativa_investigar", "priority": 90, "when": {"all": [{"field": "suspeita_endocardite_ativa", "op": "truthy"}]}, "add": {
-      "risk": "urgente",
-      "red_flags": ["Suspeita clínica de endocardite ativa em paciente com estenose tricúspide: seguir investigação e critérios diagnósticos padrão de endocardite infecciosa, sem assumir automaticamente etiologia reumática."],
-      "differentials": ["Endocardite infecciosa com vegetação obstrutiva como causa (ou complicação) da estenose tricúspide."]
-    }},
-    {"id": "it_importante_concomitante_contraindica_vctb", "priority": 88, "when": {"all": [{"field": "insuficiencia_tricuspide_importante_concomitante", "op": "truthy"}]}, "add": {
-      "risk": "prioritario",
-      "red_flags": ["Insuficiência tricúspide importante concomitante contraindica valvoplastia tricúspide por cateter-balão (Classe III, SBC) — avaliação cirúrgica (troca ou plástica) deve ser considerada."]
-    }},
-    {"id": "et_grave_com_indicacao_cirurgica_mitral", "priority": 75, "when": {"all": [
-      {"field": "gravidade_et", "op": "eq", "value": "grave"},
-      {"field": "indicacao_cirurgica_mitral_ja_estabelecida", "op": "truthy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Indicação cirúrgica de valva mitral já estabelecida: a valva tricúspide deve ser sistematicamente reavaliada e corrigida no mesmo tempo cirúrgico diante de estenose tricúspide concomitante — cirurgia (troca, com preferência por prótese biológica, ou plástica/comissurotomia) é preferível à valvoplastia isolada nesse cenário, evitando reoperação evitável."],
-      "ambulatory_flow": ["Encaminhar para avaliação cirúrgica combinada mitral e tricúspide, sem indicar valvoplastia tricúspide isolada."]
-    }},
-    {"id": "et_grave_com_vmcb_concomitante", "priority": 72, "when": {"all": [
-      {"field": "gravidade_et", "op": "eq", "value": "grave"},
-      {"field": "valvuloplastia_mitral_por_cateter_balao_planejada", "op": "truthy"},
-      {"field": "trombo_ou_vegetacao_valvar", "op": "falsy"},
-      {"field": "insuficiencia_tricuspide_importante_concomitante", "op": "falsy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Valvoplastia tricúspide por cateter-balão concomitante à valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão é indicação de Classe I, Nível C (SBC/AHA), quando a anatomia tricúspide permite."]
-    }},
-    {"id": "et_grave_sintomatica_sem_contraindicacao_vctb", "priority": 65, "when": {"all": [
-      {"field": "gravidade_et", "op": "eq", "value": "grave"},
-      {"field": "sintomatico", "op": "truthy"},
-      {"field": "trombo_ou_vegetacao_valvar", "op": "falsy"},
-      {"field": "insuficiencia_tricuspide_importante_concomitante", "op": "falsy"},
-      {"field": "indicacao_cirurgica_mitral_ja_estabelecida", "op": "falsy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Estenose tricúspide importante sintomática, isolada, sem trombo/vegetação nem insuficiência tricúspide importante associada: valvoplastia tricúspide por cateter-balão é o tratamento de escolha (Classe IIa, Nível C, SBC e AHA), apesar da escassez de literatura pela raridade da doença."],
-      "ambulatory_flow": ["Encaminhar para avaliação de valvoplastia tricúspide por cateter-balão em centro com experiência no procedimento."],
-      "suggested_tests": ["Ecocardiograma transtorácico dedicado à anatomia valvar (calcificação, trombo, vegetação) antes do procedimento."]
-    }},
-    {"id": "et_grave_sintomatica_com_contraindicacao_vctb", "priority": 68, "when": {"any": [
-      {"field": "trombo_ou_vegetacao_valvar", "op": "truthy"},
-      {"field": "insuficiencia_tricuspide_importante_concomitante", "op": "truthy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Estenose tricúspide importante sintomática com contraindicação à valvoplastia por cateter-balão: cirurgia (troca valvar, com preferência por prótese biológica, ou plástica) é indicação Classe I, Nível C nas três diretrizes de referência (SBC, AHA e ESC/EACTS 2025)."]
-    }},
-    {"id": "estenose_mitral_concomitante_investigar", "priority": 45, "when": {"all": [{"field": "estenose_mitral_concomitante", "op": "truthy"}]}, "add": {
-      "risk": "rotina",
-      "supporting": ["Estenose tricúspide quase sempre é reumática e associada a estenose mitral concomitante — confirmar gravidade e indicação de intervenção da valva mitral em paralelo, e vice-versa: valvopatia mitral reumática conhecida deve motivar avaliação ativa da valva tricúspide."]
-    }},
-    {"id": "congestao_hepatica_sinais_monitorar", "priority": 40, "when": {"all": [{"field": "sinais_congestao_hepatica", "op": "truthy"}]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Sinais de congestão hepática (elevação de enzimas, coagulograma alterado, ascite) são complicador reconhecido da estenose tricúspide importante e reforçam a indicação de intervenção — monitorizar função hepática de forma seriada."]
-    }},
-    {"id": "fa_documentada_complicador", "priority": 35, "when": {"all": [{"field": "fibrilacao_atrial", "op": "truthy"}]}, "add": {
-      "risk": "rotina",
-      "supporting": ["Fibrilação atrial é complicador reconhecido da estenose tricúspide importante e reforça a indicação de intervenção, além de exigir avaliação de anticoagulação (sem detalhe de dose neste conteúdo)."]
-    }},
-    {"id": "dissociacao_clinico_eco_investigar", "priority": 30, "when": {"all": [{"field": "dissociacao_clinico_ecocardiografica", "op": "truthy"}]}, "add": {
-      "risk": "rotina",
-      "suggested_tests": ["Estudo hemodinâmico invasivo (cateterismo cardíaco direito) para confirmar o gradiente diastólico médio AD/VD.", "Ressonância magnética cardíaca, quando a qualidade da imagem ecocardiográfica é limitada."]
-    }},
-    {"id": "etiologia_rara_investigar", "priority": 25, "when": {"all": [
-      {"field": "etiologia_et", "op": "in", "value": ["carcinoide", "endocardite_vegetacao", "lupus", "doenca_deposito", "trombo_eletrodo"]}
-    ]}, "add": {
-      "risk": "rotina",
-      "differentials": ["Causa não reumática de estenose tricúspide (síndrome carcinoide, endocardite com vegetação obstrutiva, lúpus eritematoso sistêmico, doenças de depósito como amiloidose e doença de Fabry, doença de Whipple, ou trombo associado a eletrodo de dispositivo implantável) deve ser investigada de forma dirigida."]
-    }},
-    {"id": "et_leve_moderada_assintomatica_sem_complicadores", "priority": 12, "when": {"all": [
-      {"field": "gravidade_et", "op": "in", "value": ["leve", "moderada"]},
-      {"field": "sintomatico", "op": "falsy"}
-    ]}, "add": {
-      "risk": "informativo",
-      "ambulatory_flow": ["Manter seguimento clínico e ecocardiográfico periódico, sem indicação de intervenção neste momento."]
-    }}
-  ],
-  "tags": ["valvopatia", "estenose tricúspide", "valvopatia reumática", "estenose mitral", "febre reumática", "doença cardíaca reumática", "valvoplastia tricúspide por cateter-balão", "síndrome carcinoide", "endocardite infecciosa", "insuficiência tricúspide", "fibrilação atrial", "Heart Team"],
-  "source_refs": [
-    "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias – 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877.",
-    "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295.",
-    "Baumgartner H, Hung J, Bermejo J, et al. Echocardiographic assessment of valve stenosis: EAE/ASE recommendations for clinical practice. J Am Soc Echocardiogr. 2009;22(1):1-23. DOI: 10.1016/j.echo.2008.11.029. PMID: 19130998.",
-    "Namkoong J, Arstall MA, et al. A systematic review and meta-analysis of the diagnosis and surgical management of carcinoid heart disease. Front Cardiovasc Med. 2024;11:1353612. DOI: 10.3389/fcvm.2024.1353612. PMID: 38572311.",
-    "Tricuspid Stenosis. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK499990."
-  ],
-  "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/33111877/", "https://pubmed.ncbi.nlm.nih.gov/40878295/", "https://pubmed.ncbi.nlm.nih.gov/19130998/", "https://pubmed.ncbi.nlm.nih.gov/38572311/", "https://www.ncbi.nlm.nih.gov/books/NBK499990/"],
-  "related_document_slugs": [
-    "estenose-tricuspide-reumatica-diagnostico-e-manejo",
-    "cirurgia-de-valvopatia-reumatica-mitral-multivalvar-reparo-versus-substituicao",
-    "fluxograma-valvopatia-mitral-reumatica-cronica-quando-e-como-intervir",
-    "doenca-valvar-cardiaca-carcinoide"
-  ],
-  "patient_material_slug": null,
-  "review_status": "pendente_revisao",
-  "review_note": "Ficha nova, sem colisão de slug (distinta de atresia-tricuspide e insuficiencia-tricuspide, ambas lidas por completo antes da redação). Aprofunda o que insuficiencia-tricuspide.json resume sobre ET: critérios ecocardiográficos completos, tabela de recomendações e comparação balão vs. cirurgia. category='valvopatia'/area='geral' seguem convenção dos irmãos. SBC 2020 (PMID 33111877) e ESC/EACTS 2025 (PMID 40878295) obtidas em PDF de acesso aberto e lidas seção a seção (Quadros 36-41/Figura 9 da SBC; seção 12/Recommendation Table 10 da ESC). Cutoffs (área ≤1,0cm², gradiente ≥5mmHg, PHT ≥190ms) cross-validados entre as duas fontes. 4 related_document_slugs lidos por completo, discussão central confirmada; candidatos tangenciais explicitamente excluídos (ver relatório do agente). Nenhuma dose de medicamento.",
-  "version": 1,
-  "fonte_producao": "claude"
-}
+  {
+    "slug": "estenose-tricuspide",
+    "name": "Estenose tricúspide",
+    "aliases": [
+      "Estenose da valva tricúspide",
+      "Estenose valvar tricúspide",
+      "Estenose tricúspide reumática",
+      "Doença tricúspide obstrutiva",
+      "Tricuspid stenosis",
+      "TS"
+    ],
+    "area": "geral",
+    "category": "valvopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A estenose tricúspide (ET) é a obstrução ao enchimento diastólico do ventrículo direito (VD) por doença do aparelho valvar tricúspide — espessamento e retração das cúspides, com acometimento comissural. É uma valvopatia rara e, na prática, quase nunca isolada: sua causa mais comum, disparadamente, é a febre reumática, cenário em que a ET ocorre concomitantemente ao acometimento da valva mitral (mais frequente) e/ou aórtica — encontrar ET deve disparar avaliação ativa de valvopatia do lado esquerdo, e vice-versa: doença mitral reumática conhecida deve levantar suspeita de acometimento tricúspide associado, sobretudo diante de congestão sistêmica desproporcional. Causas não reumáticas são bem mais raras — síndrome carcinoide, endocardite infecciosa com vegetação obstrutiva, lúpus eritematoso sistêmico, doenças de depósito (amiloidose, doença de Fabry), doença de Whipple, trombo associado a eletrodo de dispositivo cardíaco implantável, deformidades congênitas e, mais raramente ainda, uso de certos medicamentos (fenfluramina, metisergida). O diagnóstico e a graduação de gravidade são ecocardiográficos: área valvar tricúspide ≤ 1,0 cm², gradiente diastólico médio átrio direito (AD)/VD ≥ 5 mmHg e tempo de hemipressão (PHT) tricúspide ≥ 190 ms definem ET importante. O tratamento de escolha, quando indicado por sintomas (fadiga é o principal) ou por complicadores (fibrilação atrial, disfunção hepática por congestão), é a valvoplastia tricúspide por cateter-balão (VCTB) — mas essa opção percutânea é bem menos estabelecida do que na estenose mitral: a literatura é escassa pela raridade da doença, e a insuficiência tricúspide (IT) importante concomitante — muito mais frequente na ET do que a insuficiência mitral relevante é na estenose mitral — contraindica a VCTB, direcionando esses casos para cirurgia (troca valvar, preferencialmente biológica, ou plástica).",
+    "epidemiology": "A ET é descrita pelas duas diretrizes de referência desta ficha como valvopatia rara. A Atualização das Diretrizes Brasileiras de Valvopatias (SBC, 2020) afirma que sua etiologia mais comum é a doença reumática, geralmente concomitante ao comprometimento da valva mitral e/ou aórtica, e que é mais frequente em adultos jovens — perfil demográfico compatível com o longo intervalo de latência entre o episódio de febre reumática (muitas vezes não reconhecido) e a manifestação clínica da valvopatia sequelar. As Diretrizes ESC/EACTS 2025 caracterizam a ET como manifestação muito rara de valvopatia adquirida em países de alta renda, e no resumo executivo reafirmam que a ET está principalmente associada à doença valvar reumática, à síndrome carcinoide ou a distúrbios enzimáticos como as doenças de Fabry e de Whipple — nesta ordem de menção, com a etiologia reumática listada em primeiro lugar. A mesma diretriz descreve a fisiopatologia da causa carcinoide como proliferação mediada por serotonina, com deposição de fibroblastos e matriz extracelular sobre os folhetos e o aparato subvalvar, e cita como causas raras adicionais a obstrução ao influxo por trombo associado a eletrodo de dispositivo cardíaco eletrônico implantável (CDI/marca-passo) ou por endocardite com vegetações volumosas, além de medicamentos como fenfluramina ou metisergida. Um ponto de atenção epidemiológica prática, documentado tanto pela SBC quanto por revisões de febre reumática já presentes nesta biblioteca: o acometimento tricúspide reumático é frequente em pacientes com doença mitral e aórtica associada, e sua negligência pode aumentar morbidade e levar a reoperação quando a valva mitral é operada isoladamente sem reavaliação sistemática da tricúspide.",
+    "presentation": [
+      "Fadiga — descrita pela SBC 2020 como o sintoma mais comumente encontrado na ET importante, podendo se associar a dor e edema de membros inferiores",
+      "Ausência de dispneia relevante como sintoma predominante — achado que a própria diretriz da SBC contrasta explicitamente com o quadro de estenose mitral, e que pode levar a subvalorização do diagnóstico se o examinador procurar dispneia como sintoma-guia",
+      "Sinais de congestão sistêmica: hepatomegalia, ascite, edema de membros inferiores, estase jugular e sinal de Kussmaul",
+      "Onda 'a' gigante no pulso venoso jugular, refletindo a contração atrial direita contra a valva estenótica",
+      "Ao exame físico: estalido de abertura precoce, B1 hiperfonética e sopro diastólico em ruflar (com reforço pré-sistólico se o paciente estiver em ritmo sinusal) em borda esternal esquerda, que tipicamente aumenta com a inspiração",
+      "Palpitações, associadas a fibrilação atrial concomitante",
+      "Sinais de disfunção hepática secundária à congestão crônica (icterícia leve, alterações bioquímicas hepáticas)",
+      "Sinais de baixo débito associados a congestão sistêmica desproporcional ao grau de doença valvar do lado esquerdo isoladamente conhecido — pista clínica importante para suspeitar de acometimento tricúspide associado em paciente com doença mitral reumática já estabelecida",
+      "Quando a etiologia é carcinoide: flushing cutâneo e diarreia associados, refletindo a síndrome sistêmica de base",
+      "Apresentação insidiosa, com sintomas frequentemente atribuídos apenas à valvopatia do lado esquerdo conhecida, retardando o reconhecimento do componente tricúspide"
+    ],
+    "diagnostic_approach": {
+      "metodo_diagnostico_principal": "O ecocardiograma transtorácico com Doppler é a ferramenta principal para definição da gravidade anatômica da ET (SBC 2020) e para o diagnóstico funcional (ESC/EACTS 2025), combinando avaliação morfológica do folheto e do aparato subvalvar com quantificação hemodinâmica do gradiente transvalvar. Espessamento de folheto, com ou sem calcificação, e fusão comissural são achados patognomônicos de acometimento reumático, segundo a ESC/EACTS 2025.",
+      "criterios_ecocardiograficos_de_gravidade": "A SBC 2020 define ET anatomicamente importante pela combinação de: área valvar tricúspide ≤ 1,0 cm²; gradiente diastólico médio AD/VD ≥ 5 mmHg; aumento isolado de átrio direito; e tempo de hemipressão (PHT) tricúspide ≥ 190 ms. A ESC/EACTS 2025 cross-valida especificamente o critério de gradiente, afirmando que um gradiente transvalvar diastólico médio maior que 5 mmHg, com frequência cardíaca normal, indica ET grave — o mesmo corte numérico da diretriz brasileira, obtido de forma independente. Ao eletrocardiograma, espera-se sobrecarga de átrio direito e, com frequência, fibrilação atrial; à radiografia de tórax, aumento isolado de átrio direito.",
+      "avaliacao_etiologica": "Diante de ET importante, a etiologia mais provável — de longe — é a reumática, com espessamento e retração das cúspides e acometimento comissural, geralmente concomitante a acometimento mitral e/ou aórtico. Causas não reumáticas (endocardite infecciosa, lúpus eritematoso sistêmico, síndrome carcinoide, deformidades congênitas, mixoma atrial, lesão actínica pós-radioterapia, doenças de depósito como amiloidose e doença de Fabry, doença de Whipple, obstrução por trombo associado a eletrodo de dispositivo cardíaco implantável, ou, mais raramente, medicamentos como fenfluramina ou metisergida) devem ser consideradas quando não há história ou achados compatíveis com febre reumática, ou quando há elementos clínicos sistêmicos sugestivos (flushing e diarreia na síndrome carcinoide; febre e fenômenos embólicos na endocardite; dispositivo cardíaco implantado com trombo documentado).",
+      "avaliacao_de_valvopatia_associada_do_lado_esquerdo": "Pela forte associação reumática, todo diagnóstico de ET deve disparar avaliação ecocardiográfica ativa e dedicada da valva mitral (mais comumente acometida em conjunto) e da valva aórtica — e o inverso também se aplica: doença mitral reumática conhecida, sobretudo com sinais de congestão sistêmica desproporcionais ao grau de doença mitral isolada, deve motivar reavaliação sistemática da valva tricúspide. Essa avaliação combinada é particularmente relevante antes de qualquer decisão cirúrgica sobre a valva mitral, porque muda o planejamento operatório (ver 'tratamento').",
+      "avaliacao_pre_intervencao_percutanea": "Antes de indicar valvoplastia tricúspide por cateter-balão (VCTB), a SBC 2020 exige excluir trombo refratário à anticoagulação e vegetação valvar — ambos contraindicam o procedimento. A presença de refluxo tricuspídeo (insuficiência) apenas leve a moderado não contraindica a VCTB, mas insuficiência tricúspide importante concomitante é contraindicação formal (Classe III, SBC), diferente da estenose mitral, em que a insuficiência mitral relevante associada é proporcionalmente menos frequente. Quando há estenose mitral concomitante candidata a valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão, a VCTB associada é indicação de Classe I.",
+      "exames_complementares_em_dissociacao_clinico_ecocardiografica": "Estudo hemodinâmico invasivo (confirmando gradiente diastólico AD/VD ≥ 5 mmHg) e ressonância magnética cardíaca são reservados, pela SBC 2020, a casos de dissociação entre o quadro clínico e a gravidade estimada pelo ecocardiograma transtorácico, ou quando a qualidade da imagem ecocardiográfica é limitada."
+    },
+    "differentials": [
+      "Insuficiência tricúspide isolada — diferenciada pelo padrão de fluxo sistólico regurgitante ao Doppler, em vez do gradiente diastólico e da onda 'a' gigante da estenose",
+      "Estenose mitral isolada, sem componente tricúspide — sintomas de congestão pulmonar predominam, em vez da congestão sistêmica desproporcional que sugere componente tricúspide associado",
+      "Mixoma de átrio direito, causando obstrução funcional do influxo tricúspide",
+      "Endocardite infecciosa com vegetação volumosa obstruindo o influxo tricúspide — causa rara mas reconhecida de estenose funcional, distinta da fusão comissural reumática",
+      "Síndrome carcinoide, com fibrose de placa sobre folhetos tricúspide e pulmonar por proliferação mediada por serotonina — geralmente associada também a flushing e diarreia",
+      "Obstrução ao influxo tricuspídeo por trombo associado a eletrodo de marca-passo ou cardioversor-desfibrilador implantável",
+      "Doenças de depósito (amiloidose cardíaca, doença de Fabry) e doença de Whipple, causas raras de espessamento valvar não reumático",
+      "Lúpus eritematoso sistêmico e síndrome antifosfolípide, causas raras de valvopatia tricúspide não reumática",
+      "Deformidades congênitas da valva tricúspide (por exemplo, componente obstrutivo em anomalias congênitas do aparato tricuspídeo), causa rara em adulto"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler — método principal para diagnóstico e graduação de gravidade (área valvar, gradiente diastólico médio, PHT)",
+      "Ecocardiograma transesofágico com técnica 3D, quando a janela transtorácica é subótima ou há dissociação clínico-ecocardiográfica",
+      "Eletrocardiograma de 12 derivações, para sobrecarga de átrio direito e fibrilação atrial",
+      "Radiografia de tórax, para aumento isolado de átrio direito",
+      "Estudo hemodinâmico invasivo (cateterismo cardíaco direito), reservado a casos de dissociação entre quadro clínico e gravidade ecocardiográfica, confirmando gradiente diastólico AD/VD",
+      "Ressonância magnética cardíaca, quando a qualidade da imagem ecocardiográfica é limitada ou há dissociação clínico-ecocardiográfica",
+      "Provas de função hepática e coagulograma, como marcador de complicador (congestão hepática) e de gravidade",
+      "Investigação etiológica direcionada por suspeita clínica quando a causa reumática não é evidente (por exemplo, rastreio de síndrome carcinoide, hemoculturas e ecocardiograma dedicado a vegetação se suspeita de endocardite, sorologia para lúpus eritematoso sistêmico)"
+    ],
+    "red_flags": [
+      "Trombo refratário à anticoagulação ou vegetação na valva tricúspide — contraindicação formal à valvoplastia por cateter-balão, direcionando para investigação de causa (incluindo endocardite ativa) e via cirúrgica",
+      "Insuficiência tricúspide importante concomitante — contraindicação formal (Classe III, SBC) à valvoplastia tricúspide por cateter-balão isolada",
+      "Estenose mitral reumática com indicação cirúrgica (ou valvuloplastia por cateter-balão) já estabelecida, sem reavaliação sistemática da valva tricúspide antes do procedimento — risco de reoperação evitável",
+      "Sinais de disfunção hepática relacionada à congestão crônica (alteração de coagulograma, elevação de enzimas hepáticas, ascite) — complicador reconhecido que reforça indicação de intervenção",
+      "Fibrilação atrial documentada em paciente com ET importante — complicador reconhecido que reforça indicação de intervenção",
+      "Dissociação entre quadro clínico exuberante e gravidade aparentemente discreta ao ecocardiograma transtorácico — investigar com estudo hemodinâmico ou ressonância magnética antes de descartar intervenção",
+      "Suspeita de endocardite ativa com vegetação obstrutiva (febre, fenômenos embólicos) associada a estenose tricúspide de instalação recente"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico e gravidade da ET por ecocardiograma transtorácico com medida de área valvar, gradiente diastólico médio AD/VD e PHT tricúspide.",
+      "Investigar etiologia, com forte prior para doença reumática — e, quando a história ou os achados não forem compatíveis com febre reumática, investigar ativamente causas raras (síndrome carcinoide, endocardite prévia, lúpus, doenças de depósito, dispositivo cardíaco implantado).",
+      "Avaliar ativamente valvopatia associada do lado esquerdo (mitral, mais comum, e aórtica) diante de achado de ET, e o inverso diante de doença mitral reumática conhecida — sobretudo se houver congestão sistêmica desproporcional.",
+      "Avaliar sintomas (fadiga como principal) e complicadores (fibrilação atrial, comprometimento hepático por congestão) em todo paciente com ET anatomicamente importante, já que sua presença indica intervenção.",
+      "Em paciente elegível para intervenção, avaliar contraindicações à valvoplastia tricúspide por cateter-balão (trombo refratário à anticoagulação, vegetação, insuficiência tricúspide importante associada) antes de definir a via percutânea.",
+      "Encaminhar para valvoplastia tricúspide por cateter-balão quando ET importante sintomática, isolada e sem contraindicações — tratamento de escolha segundo a SBC 2020, apesar da escassez de literatura pela raridade da doença.",
+      "Encaminhar para avaliação cirúrgica (troca valvar, com preferência por prótese biológica, ou plástica/comissurotomia) quando houver contraindicação à valvoplastia por cateter-balão, ou quando já houver indicação cirúrgica de valva mitral estabelecida — nesse último cenário, operar a tricúspide no mesmo tempo cirúrgico.",
+      "Reavaliar sistematicamente a valva tricúspide antes de cirurgia mitral reumática já indicada, mesmo quando a estenose tricúspide parecer discreta isoladamente, pelo risco de reoperação evitável.",
+      "Manter seguimento clínico e ecocardiográfico periódico em ET leve a moderada, assintomática e sem complicadores, sem indicação de intervenção neste momento.",
+      "Discutir o caso em equipe cardíaca multidisciplinar (Heart Team) quando houver doença valvar múltipla ou dúvida sobre a melhor via de intervenção."
+    ],
+    "emergency_flow": [
+      "Reconhecer descompensação aguda por congestão sistêmica grave (ascite tensa, hepatomegalia dolorosa, edema importante) como manifestação de ET importante não tratada ou de piora aguda.",
+      "Investigar e tratar o fator precipitante — fibrilação atrial de início recente ou não controlada, ou suspeita de endocardite ativa com vegetação obstrutiva (febre, fenômenos embólicos, vegetação nova ao ecocardiograma).",
+      "Em suspeita de endocardite com vegetação tricúspide obstrutiva, seguir a investigação e os critérios diagnósticos padrão de endocardite infecciosa, sem assumir automaticamente etiologia reumática.",
+      "Avaliar sinais de disfunção hepática aguda relacionada à congestão (coagulograma, enzimas hepáticas) diante de descompensação sistêmica em paciente com ET conhecida.",
+      "Encaminhar para avaliação de intervenção valvar (percutânea ou cirúrgica) após estabilização do quadro agudo e investigação completa de contraindicações à via percutânea, não em caráter de urgência isolada pela ET em si, salvo suspeita de endocardite ativa ou instabilidade hemodinâmica associada."
+    ],
+    "treatment_summary": "O tratamento da ET é definido pela gravidade ecocardiográfica, pela presença de sintomas (fadiga é o principal) ou complicadores (fibrilação atrial, disfunção hepática por congestão sistêmica) e pela ausência de contraindicações à via percutânea. A ESC/EACTS 2025 descreve a terapia medicamentosa (restrição de sódio e diurético) como ponte para intervenção cirúrgica ou transcateter, capaz de melhorar sintomas e reduzir a congestão hepática, mas sem papel curativo — sem especificação de dose neste conteúdo. Quando indicada, a SBC 2020 é explícita: apesar da raridade dos casos e da escassez da literatura, a valvoplastia tricúspide por cateter-balão (VCTB) ainda é o tratamento de escolha para ET importante isolada sintomática sem contraindicações (Classe IIa, Nível C, SBC e AHA), sendo possível realizá-la mesmo com refluxo tricuspídeo apenas moderado associado. Quando há estenose mitral concomitante candidata a valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão, a VCTB associada passa a ser indicação de Classe I, Nível C (SBC e AHA). A VCTB é formalmente contraindicada (Classe III, SBC) na presença de insuficiência tricúspide importante concomitante, e também não deve ser realizada diante de trombo refratário à anticoagulação ou vegetação valvar. Nesses cenários de contraindicação, a via é cirúrgica — troca da valva tricúspide (opção preferencial quando a valvoplastia não é possível, com preferência explícita por prótese biológica, Classe I, Nível C, SBC) ou plástica/comissurotomia — indicação de Classe I, Nível C nas três diretrizes (SBC, AHA e ESC) para ET importante sintomática com contraindicação à VCTB, e de Classe IIa, Nível C (SBC) a Classe I, Nível C (AHA e ESC) para ET importante isolada sintomática mesmo sem contraindicação formal à via percutânea — refletindo maior confiança das diretrizes internacionais na cirurgia do que na experiência ainda limitada com a VCTB. A cirurgia é preferível à valvoplastia isolada quando a valva mitral já tem indicação cirúrgica estabelecida, corrigindo as duas valvas no mesmo tempo operatório. A ESC/EACTS 2025 resume a decisão em sua Tabela de Recomendações 10: cirurgia (geralmente troca valvar) é recomendada (Classe I, Nível C) em paciente sintomático com ET importante, podendo-se tentar valvoplastia por balão como primeira abordagem quando a ET é isolada; e cirurgia também é recomendada (Classe I, Nível C) em paciente com ET importante submetido a intervenção de valva esquerda, podendo-se tentar valvoplastia por balão quando for possível realizar comissurotomia mitral percutânea na valva mitral concomitante. Um ponto explicitamente reconhecido como lacuna de evidência pela própria ESC/EACTS 2025: o papel da troca valvar tricúspide transcateter permanece inexplorado especificamente na ET — ao contrário do que já ocorre para a insuficiência tricúspide grave (reparo borda a borda e troca transcateter, cobertos em ficha própria desta biblioteca), não há, até o momento, alternativa transcateter validada para a estenose tricúspide fora da valvoplastia por balão.",
+    "monitoring": [
+      "Ecocardiograma transtorácico seriado, para reavaliar gravidade da ET, valvopatia associada do lado esquerdo e função de ventrículo direito.",
+      "Avaliação clínica periódica de sintomas (fadiga, edema) e de complicadores (fibrilação atrial, sinais de disfunção hepática).",
+      "Monitorização de ritmo cardíaco para detecção de fibrilação atrial.",
+      "Provas de função hepática e coagulograma seriados como marcador de gravidade e de resposta ao tratamento da congestão.",
+      "Reavaliação ecocardiográfica após valvoplastia por cateter-balão ou cirurgia, incluindo gradiente residual e grau de insuficiência tricúspide residual.",
+      "Reavaliação sistemática da valva tricúspide no seguimento de paciente com valvopatia mitral reumática conhecida, pela forte associação entre as duas.",
+      "Vigilância clínica estruturada, sem intervenção mecânica, em ET leve a moderada assintomática e sem complicadores."
+    ],
+    "special_populations": [
+      "Paciente com valvopatia reumática multivalvar (mitral e/ou aórtica associada): investigação e correção cirúrgica devem ser sistemáticas e combinadas, não sequenciais — a ET costuma ser achado concomitante, não isolado.",
+      "Adulto jovem: perfil demográfico mais característico da ET reumática, refletindo o longo intervalo de latência entre o episódio de febre reumática e a manifestação clínica da valvopatia sequelar.",
+      "Paciente com síndrome carcinoide: rastreio cardíaco ativo é recomendado assim que o diagnóstico oncológico é estabelecido, já que o acometimento valvar costuma preceder os sintomas em anos; padrão predominante é insuficiência de valvas direitas, mas estenose também é descrita em doença mais avançada.",
+      "Paciente com dispositivo cardíaco eletrônico implantável (marca-passo ou cardioversor-desfibrilador): eletrodo é causa reconhecida de obstrução ao influxo tricúspide por trombo associado, uma das causas raras e potencialmente reversíveis de ET.",
+      "Paciente com insuficiência tricúspide importante concomitante: contraindicação formal à valvoplastia por cateter-balão, direcionando para avaliação cirúrgica desde o início.",
+      "Paciente com suspeita de endocardite infecciosa: vegetação volumosa pode causar obstrução funcional ao influxo tricúspide, mecanismo distinto — e a investigação diagnóstica deve seguir os critérios padrão de endocardite, não os de valvopatia reumática crônica."
+    ],
+    "assistant_questions": [
+      {
+        "id": "gravidade_et",
+        "label": "Qual a gravidade da estenose tricúspide ao ecocardiograma?",
+        "type": "select",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave/importante"
+          }
+        ]
+      },
+      {
+        "id": "area_valvar_tricuspide_cm2",
+        "label": "Área valvar tricúspide estimada (cm²)",
+        "type": "number"
+      },
+      {
+        "id": "gradiente_diastolico_medio_mmhg",
+        "label": "Gradiente diastólico médio AD/VD (mmHg)",
+        "type": "number"
+      },
+      {
+        "id": "pht_tricuspide_ms",
+        "label": "Tempo de hemipressão (PHT) tricúspide (ms)",
+        "type": "number"
+      },
+      {
+        "id": "etiologia_et",
+        "label": "Etiologia da estenose tricúspide",
+        "type": "select",
+        "options": [
+          {
+            "value": "reumatica",
+            "label": "Reumática"
+          },
+          {
+            "value": "carcinoide",
+            "label": "Síndrome carcinoide"
+          },
+          {
+            "value": "endocardite_vegetacao",
+            "label": "Endocardite com vegetação obstrutiva"
+          },
+          {
+            "value": "congenita",
+            "label": "Congênita"
+          },
+          {
+            "value": "lupus",
+            "label": "Lúpus eritematoso sistêmico"
+          },
+          {
+            "value": "doenca_deposito",
+            "label": "Doença de depósito (amiloidose, Fabry) ou Whipple"
+          },
+          {
+            "value": "trombo_eletrodo",
+            "label": "Trombo associado a eletrodo de dispositivo implantável"
+          },
+          {
+            "value": "outra",
+            "label": "Outra"
+          }
+        ]
+      },
+      {
+        "id": "sintomatico",
+        "label": "Paciente sintomático (fadiga, sinais de congestão sistêmica)?",
+        "type": "boolean"
+      },
+      {
+        "id": "estenose_mitral_concomitante",
+        "label": "Há estenose mitral concomitante?",
+        "type": "boolean"
+      },
+      {
+        "id": "valvuloplastia_mitral_por_cateter_balao_planejada",
+        "label": "Há valvuloplastia mitral por cateter-balão (VMCB) planejada para a mesma sessão?",
+        "type": "boolean"
+      },
+      {
+        "id": "indicacao_cirurgica_mitral_ja_estabelecida",
+        "label": "Há indicação cirúrgica de valva mitral (troca ou plástica) já estabelecida?",
+        "type": "boolean"
+      },
+      {
+        "id": "insuficiencia_tricuspide_importante_concomitante",
+        "label": "Há insuficiência tricúspide importante concomitante?",
+        "type": "boolean"
+      },
+      {
+        "id": "trombo_ou_vegetacao_valvar",
+        "label": "Há trombo refratário à anticoagulação ou vegetação na valva tricúspide?",
+        "type": "boolean"
+      },
+      {
+        "id": "fibrilacao_atrial",
+        "label": "Há fibrilação atrial?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_congestao_hepatica",
+        "label": "Há sinais de congestão hepática (elevação de enzimas, alteração do coagulograma, ascite)?",
+        "type": "boolean"
+      },
+      {
+        "id": "dissociacao_clinico_ecocardiografica",
+        "label": "Há dissociação entre o quadro clínico e a gravidade estimada pelo ecocardiograma transtorácico?",
+        "type": "boolean"
+      },
+      {
+        "id": "anatomia_favoravel_valvoplastia",
+        "label": "A anatomia valvar é favorável à valvoplastia tricúspide por cateter-balão (folhetos pouco calcificados, sem trombo ou vegetação)?",
+        "type": "boolean"
+      },
+      {
+        "id": "suspeita_endocardite_ativa",
+        "label": "Há suspeita clínica de endocardite ativa (febre, fenômenos embólicos, vegetação nova)?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "trombo_ou_vegetacao_contraindica_vctb",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "trombo_ou_vegetacao_valvar",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Trombo refratário à anticoagulação ou vegetação na valva tricúspide contraindica valvoplastia por cateter-balão — via cirúrgica deve ser considerada, com investigação de endocardite ativa se vegetação estiver presente."
+          ]
+        }
+      },
+      {
+        "id": "suspeita_endocardite_ativa_investigar",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_endocardite_ativa",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita clínica de endocardite ativa em paciente com estenose tricúspide: seguir investigação e critérios diagnósticos padrão de endocardite infecciosa, sem assumir automaticamente etiologia reumática."
+          ],
+          "differentials": [
+            "Endocardite infecciosa com vegetação obstrutiva como causa (ou complicação) da estenose tricúspide."
+          ]
+        }
+      },
+      {
+        "id": "it_importante_concomitante_contraindica_vctb",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "insuficiencia_tricuspide_importante_concomitante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Insuficiência tricúspide importante concomitante contraindica valvoplastia tricúspide por cateter-balão (Classe III, SBC) — avaliação cirúrgica (troca ou plástica) deve ser considerada."
+          ]
+        }
+      },
+      {
+        "id": "et_grave_com_indicacao_cirurgica_mitral",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_et",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "indicacao_cirurgica_mitral_ja_estabelecida",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Indicação cirúrgica de valva mitral já estabelecida: a valva tricúspide deve ser sistematicamente reavaliada e corrigida no mesmo tempo cirúrgico diante de estenose tricúspide concomitante — cirurgia (troca, com preferência por prótese biológica, ou plástica/comissurotomia) é preferível à valvoplastia isolada nesse cenário, evitando reoperação evitável."
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação cirúrgica combinada mitral e tricúspide, sem indicar valvoplastia tricúspide isolada."
+          ]
+        }
+      },
+      {
+        "id": "et_grave_com_vmcb_concomitante",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_et",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "valvuloplastia_mitral_por_cateter_balao_planejada",
+              "op": "truthy"
+            },
+            {
+              "field": "trombo_ou_vegetacao_valvar",
+              "op": "falsy"
+            },
+            {
+              "field": "insuficiencia_tricuspide_importante_concomitante",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Valvoplastia tricúspide por cateter-balão concomitante à valvuloplastia mitral por cateter-balão (VMCB) na mesma sessão é indicação de Classe I, Nível C (SBC/AHA), quando a anatomia tricúspide permite."
+          ]
+        }
+      },
+      {
+        "id": "et_grave_sintomatica_sem_contraindicacao_vctb",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_et",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "sintomatico",
+              "op": "truthy"
+            },
+            {
+              "field": "trombo_ou_vegetacao_valvar",
+              "op": "falsy"
+            },
+            {
+              "field": "insuficiencia_tricuspide_importante_concomitante",
+              "op": "falsy"
+            },
+            {
+              "field": "indicacao_cirurgica_mitral_ja_estabelecida",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Estenose tricúspide importante sintomática, isolada, sem trombo/vegetação nem insuficiência tricúspide importante associada: valvoplastia tricúspide por cateter-balão é o tratamento de escolha (Classe IIa, Nível C, SBC e AHA), apesar da escassez de literatura pela raridade da doença."
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação de valvoplastia tricúspide por cateter-balão em centro com experiência no procedimento."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico dedicado à anatomia valvar (calcificação, trombo, vegetação) antes do procedimento."
+          ]
+        }
+      },
+      {
+        "id": "et_grave_sintomatica_com_contraindicacao_vctb",
+        "priority": 68,
+        "when": {
+          "any": [
+            {
+              "field": "trombo_ou_vegetacao_valvar",
+              "op": "truthy"
+            },
+            {
+              "field": "insuficiencia_tricuspide_importante_concomitante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Estenose tricúspide importante sintomática com contraindicação à valvoplastia por cateter-balão: cirurgia (troca valvar, com preferência por prótese biológica, ou plástica) é indicação Classe I, Nível C nas três diretrizes de referência (SBC, AHA e ESC/EACTS 2025)."
+          ]
+        }
+      },
+      {
+        "id": "estenose_mitral_concomitante_investigar",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "estenose_mitral_concomitante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Estenose tricúspide quase sempre é reumática e associada a estenose mitral concomitante — confirmar gravidade e indicação de intervenção da valva mitral em paralelo, e vice-versa: valvopatia mitral reumática conhecida deve motivar avaliação ativa da valva tricúspide."
+          ]
+        }
+      },
+      {
+        "id": "congestao_hepatica_sinais_monitorar",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_congestao_hepatica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Sinais de congestão hepática (elevação de enzimas, coagulograma alterado, ascite) são complicador reconhecido da estenose tricúspide importante e reforçam a indicação de intervenção — monitorizar função hepática de forma seriada."
+          ]
+        }
+      },
+      {
+        "id": "fa_documentada_complicador",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "fibrilacao_atrial",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Fibrilação atrial é complicador reconhecido da estenose tricúspide importante e reforça a indicação de intervenção, além de exigir avaliação de anticoagulação (sem detalhe de dose neste conteúdo)."
+          ]
+        }
+      },
+      {
+        "id": "dissociacao_clinico_eco_investigar",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "dissociacao_clinico_ecocardiografica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Estudo hemodinâmico invasivo (cateterismo cardíaco direito) para confirmar o gradiente diastólico médio AD/VD.",
+            "Ressonância magnética cardíaca, quando a qualidade da imagem ecocardiográfica é limitada."
+          ]
+        }
+      },
+      {
+        "id": "etiologia_rara_investigar",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "etiologia_et",
+              "op": "in",
+              "value": [
+                "carcinoide",
+                "endocardite_vegetacao",
+                "lupus",
+                "doenca_deposito",
+                "trombo_eletrodo"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "Causa não reumática de estenose tricúspide (síndrome carcinoide, endocardite com vegetação obstrutiva, lúpus eritematoso sistêmico, doenças de depósito como amiloidose e doença de Fabry, doença de Whipple, ou trombo associado a eletrodo de dispositivo implantável) deve ser investigada de forma dirigida."
+          ]
+        }
+      },
+      {
+        "id": "et_leve_moderada_assintomatica_sem_complicadores",
+        "priority": 12,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_et",
+              "op": "in",
+              "value": [
+                "leve",
+                "moderada"
+              ]
+            },
+            {
+              "field": "sintomatico",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "ambulatory_flow": [
+            "Manter seguimento clínico e ecocardiográfico periódico, sem indicação de intervenção neste momento."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "valvopatia",
+      "estenose tricúspide",
+      "valvopatia reumática",
+      "estenose mitral",
+      "febre reumática",
+      "doença cardíaca reumática",
+      "valvoplastia tricúspide por cateter-balão",
+      "síndrome carcinoide",
+      "endocardite infecciosa",
+      "insuficiência tricúspide",
+      "fibrilação atrial",
+      "Heart Team"
+    ],
+    "source_refs": [
+      "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias – 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877.",
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295.",
+      "Baumgartner H, Hung J, Bermejo J, et al. Echocardiographic assessment of valve stenosis: EAE/ASE recommendations for clinical practice. J Am Soc Echocardiogr. 2009;22(1):1-23. DOI: 10.1016/j.echo.2008.11.029. PMID: 19130998.",
+      "Namkoong J, Arstall MA, et al. A systematic review and meta-analysis of the diagnosis and surgical management of carcinoid heart disease. Front Cardiovasc Med. 2024;11:1353612. DOI: 10.3389/fcvm.2024.1353612. PMID: 38572311.",
+      "Tricuspid Stenosis. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK499990."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/33111877/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+      "https://pubmed.ncbi.nlm.nih.gov/19130998/",
+      "https://pubmed.ncbi.nlm.nih.gov/38572311/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK499990/"
+    ],
+    "related_document_slugs": [
+      "estenose-tricuspide-reumatica-diagnostico-e-manejo",
+      "cirurgia-de-valvopatia-reumatica-mitral-multivalvar-reparo-versus-substituicao",
+      "fluxograma-valvopatia-mitral-reumatica-cronica-quando-e-como-intervir",
+      "doenca-valvar-cardiaca-carcinoide"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Ficha nova, sem colisão de slug (distinta de atresia-tricuspide e insuficiencia-tricuspide, ambas lidas por completo antes da redação). Aprofunda o que insuficiencia-tricuspide.json resume sobre ET: critérios ecocardiográficos completos, tabela de recomendações e comparação balão vs. cirurgia. category='valvopatia'/area='geral' seguem convenção dos irmãos. SBC 2020 (PMID 33111877) e ESC/EACTS 2025 (PMID 40878295) obtidas em PDF de acesso aberto e lidas seção a seção (Quadros 36-41/Figura 9 da SBC; seção 12/Recommendation Table 10 da ESC). Cutoffs (área ≤1,0cm², gradiente ≥5mmHg, PHT ≥190ms) cross-validados entre as duas fontes. 4 related_document_slugs lidos por completo, discussão central confirmada; candidatos tangenciais explicitamente excluídos (ver relatório do agente). Nenhuma dose de medicamento. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
 ]

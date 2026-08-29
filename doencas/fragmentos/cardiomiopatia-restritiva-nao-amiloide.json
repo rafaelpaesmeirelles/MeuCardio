@@ -1,174 +1,417 @@
 [
-{
-  "slug": "cardiomiopatia-restritiva-nao-amiloide",
-  "name": "Cardiomiopatia restritiva não amiloide",
-  "aliases": ["RCM não amiloide", "cardiomiopatia restritiva idiopática", "fibrose endomiocárdica", "endomiocardiofibrose", "síndrome hipereosinofílica com acometimento cardíaco", "endocardite de Löffler", "cardiomiopatia restritiva primária"],
-  "area": "geral",
-  "category": "cardiomiopatia",
-  "subtype": "restritiva",
-  "cyanosis_class": null,
-  "prevalence_rank": null,
-  "completeness": "completo",
-  "summary": "Grupo heterogêneo de doenças definido por um critério hemodinâmico, não por espessura de parede: fisiopatologia restritiva persistente, disfunção diastólica, ventrículos não dilatados e dilatação atrial, independentemente da espessura da parede ventricular ou da função sistólica (Rapezzi C et al., Eur Heart J 2022, PMID 36269634). Esta ficha cobre as causas NÃO amiloides — fibrose intersticial idiopática/genética, fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler), e, de forma mais breve, outras causas por depósito em cardiomiócito (ex.: sobrecarga de ferro) — porque a amiloidose cardíaca, causa infiltrativa mais prevalente de fenótipo restritivo, já tem fichas dedicadas e completas nesta biblioteca (amiloidose por transtirretina e por cadeia leve), com via diagnóstica e tratamento próprios que não devem ser duplicados aqui. Dois pontos de nomenclatura da diretriz ESC 2023 de cardiomiopatias evitam erro de rotulagem: (1) fisiologia restritiva também ocorre em cardiomiopatia hipertrófica ou dilatada em estágio terminal — nesses casos o termo correto é 'cardiomiopatia hipertrófica/dilatada com fisiologia restritiva', não 'cardiomiopatia restritiva' isolada, que exige espessura de parede NORMAL; (2) a antiga 'não compactação ventricular' (hoje 'hipertrabeculação') e a síndrome de takotsubo foram explicitamente excluídas da categoria cardiomiopatia pela força-tarefa ESC 2023 e não são formas de cardiomiopatia restritiva.",
-  "epidemiology": "A cardiomiopatia restritiva (RCM) é classificada por Rapezzi et al. (Eur Heart J 2022, PMID 36269634) em quatro mecanismos de doença: (i) fibrose intersticial com disfunção miocárdica intrínseca (formas idiopáticas e genéticas/sarcoméricas), (ii) infiltração do espaço extracelular (amiloidose — já coberta em fichas próprias desta biblioteca), (iii) acúmulo de material de depósito dentro do cardiomiócito (ex.: sobrecarga de ferro/hemocromatose), e (iv) fibrose endomiocárdica. Os autores destacam que tratamento modificador de doença só existe, hoje, para a amiloidose cardíaca e, parcialmente, para a cardiomiopatia por sobrecarga de ferro — as demais causas de RCM têm manejo predominantemente de suporte. Dentro do mecanismo (iv), a fibrose endomiocárdica (FEM) associada à síndrome hipereosinofílica (SHE) — descrita classicamente como endocardite de Löffler em sua fase inicial — tem relevância epidemiológica particular no Brasil e em outras regiões tropicais, conforme registrado pela diretriz de imagem cardiovascular da SBC (Magalhães TA et al., Arq Bras Cardiol 2024, PMID 39475988), que recomenda formalmente a ressonância magnética cardíaca (Classe I, Nível B) diante de suspeita da doença justamente por essa relevância regional.",
-  "presentation": [
-    "Dispneia e fadiga aos esforços de instalação insidiosa, muitas vezes com predomínio de sinais de congestão sistêmica (edema, ascite, hepatomegalia) sobre os pulmonares, refletindo a fisiologia restritiva biventricular",
-    "Sinais de insuficiência cardíaca direita desproporcionais ao grau de disfunção sistólica — que pode estar preservada ou apenas discretamente reduzida",
-    "Palpitações ou sintomas relacionados a fibrilação/flutter atrial, favorecidos pela dilatação biatrial característica do fenótipo restritivo",
-    "Eosinofilia inexplicada em hemograma de rotina, com ou sem sintomas cardíacos ainda evidentes — achado laboratorial simples que deve redirecionar a investigação para fibrose endomiocárdica/síndrome hipereosinofílica antes de assumir amiloidose",
-    "Evento embólico sistêmico (acidente vascular cerebral, embolia periférica) como manifestação inicial, pela formação de trombo apical característico da fibrose endomiocárdica",
-    "Manifestações sistêmicas de síndrome hipereosinofílica associadas (cutâneas, pulmonares, neurológicas) quando a causa é FEM/SHE — o acometimento cardíaco é apenas um dos órgãos-alvo possíveis",
-    "Ausência de hipertrofia ventricular ao ecocardiograma — achado que, quando presente com fenótipo restritivo, deve redirecionar a suspeita para amiloidose ou cardiomiopatia hipertrófica com fisiologia restritiva, não para RCM isolada"
-  ],
-  "diagnostic_approach": "O diagnóstico nasce da demonstração hemodinâmica de fisiologia restritiva — elevação rápida da pressão ventricular com pequeno incremento de volume de enchimento, por rigidez miocárdica aumentada — documentável por cateterismo cardíaco ou por ecocardiograma com Doppler (Rapezzi C et al., Eur Heart J 2022, PMID 36269634). Uma vez demonstrada a fisiologia restritiva, a diretriz ESC 2023 de cardiomiopatias recomenda formalmente (Classe I) o uso de imagem multimodal para diferenciar a cardiomiopatia restritiva verdadeira da cardiomiopatia hipertrófica e da dilatada com fisiologia restritiva — as três podem se apresentar com o mesmo padrão hemodinâmico, mas a distinção muda etiologia, tratamento e rastreamento familiar. A ressonância magnética cardíaca com contraste é recomendada (Classe I, Nível B) em todo paciente com cardiomiopatia já na avaliação inicial: a caracterização tecidual pelo realce tardio e pelo mapeamento T1/T2 muda a hipótese etiológica e pesa na estratificação de risco. Antes de qualquer conclusão etiológica, a amiloidose cardíaca — causa infiltrativa mais prevalente de fenótipo restritivo — deve ser ativamente excluída pela via diagnóstica própria já descrita nas fichas de amiloidose ATTR e AL desta biblioteca (cintilografia óssea com SPECT e exclusão de clonalidade monoclonal). Excluída a amiloidose, um hemograma com diferencial simples redireciona toda a investigação: eosinofilia associada ao fenótipo restritivo aponta para fibrose endomiocárdica/síndrome hipereosinofílica, cujo achado de imagem patognomônico à RMC é o sinal do 'duplo V' ('double V sign') — um padrão trilaminar no ápice ventricular, com miocárdio normal, endocárdio fibrótico e trombo sobrejacente dispostos em camadas sucessivas visíveis na sequência de realce tardio (Antoun I et al., Catheter Cardiovasc Interv 2026, PMID 41298288). A RMC também estadia a atividade da doença: o mapeamento T2 quantitativo distingue fase inflamatória ativa (miocardite eosinofílica aguda) de fase fibrótica já estabelecida, distinção que é o ponto prático central para a decisão de imunossupressão. Nos casos sem eosinofilia e sem achado de FEM, a investigação segue para causas idiopáticas/genéticas de fibrose intersticial — com avaliação genética e, quando necessário, biópsia endomiocárdica — e para causas por depósito em cardiomiócito, como a sobrecarga de ferro, em que a ressonância com medida do T2* tem papel formal de acompanhamento terapêutico (Hotta VT et al., posicionamento SBC 2026, Arq Bras Cardiol, PMID 42233840). Em toda suspeita de eosinofilia inexplicada com acometimento cardíaco, a investigação hematológica da causa (incluindo pesquisa de rearranjo FIP1L1-PDGFRA associado a neoplasia mieloproliferativa) é etapa obrigatória e não deve ser postergada em função do achado cardíaco.",
-  "differentials": [
-    "Amiloidose cardíaca por transtirretina (ATTR) e por cadeia leve (AL) — causa infiltrativa mais prevalente de fenótipo restritivo; deve ser sempre excluída primeiro pela via diagnóstica própria (cintilografia óssea/exclusão de clonalidade); ver fichas dedicadas desta biblioteca",
-    "Cardiomiopatia hipertrófica com fisiologia restritiva — presença de hipertrofia de parede afasta RCM isolada, que por definição exige espessura parietal normal",
-    "Cardiomiopatia dilatada em estágio terminal com fisiologia restritiva — fase final de doença primariamente dilatada, nomenclatura distinta de RCM primária",
-    "Pericardite constritiva — diferencial clássico de fisiologia restritiva por mecanismo extrínseco (pericárdico), não miocárdico ou endocárdico; a distinção muda completamente a conduta (constrição é potencialmente curável por pericardiectomia)",
-    "Fisiologia restritiva de causa endocárdica não relacionada a eosinofilia — fibrose, fibroelastose ou trombose endocárdica de outra etiologia, mecanicamente distinta da RCM miocárdica verdadeira",
-    "Sarcoidose cardíaca — outra cardiomiopatia infiltrativa não amiloide que pode cursar com fenótipo restritivo; ver ficha própria desta biblioteca",
-    "Cardiomiopatia por sobrecarga de ferro (hemocromatose) — mecanismo de depósito em cardiomiócito, uma das poucas causas de RCM com tratamento modificador de doença (quelação/flebotomia), monitorado por T2* seriado",
-    "Neoplasia mieloproliferativa com rearranjo FIP1L1-PDGFRA associada a hipereosinofilia — implicação terapêutica hematológica específica que foge do escopo cardiológico isolado quando a fibrose endomiocárdica é secundária a essa causa"
-  ],
-  "tests": [
-    "Ecocardiograma com Doppler — demonstra a fisiologia restritiva e é método de triagem inicial; limitação: pode subestimar obliteração apical por trombo/fibrose que a ressonância detecta melhor",
-    "Cateterismo cardíaco — via alternativa para documentar hemodinâmica restritiva quando a avaliação não invasiva é inconclusiva",
-    "Ressonância magnética cardíaca com contraste (realce tardio) e mapeamento T1/T2 — recomendada (ESC 2023, Classe I, Nível B) na avaliação inicial de todo paciente com cardiomiopatia; identifica o sinal do 'duplo V' patognomônico de fibrose endomiocárdica e, pelo mapeamento T2 quantitativo, distingue fase inflamatória ativa de fase fibrótica estabelecida; recomendada especificamente (SBC 2024, Classe I, Nível B) na suspeita de endomiocardiofibrose",
-    "Hemograma completo com diferencial (contagem de eosinófilos) — eosinofilia inexplicada aponta para fibrose endomiocárdica/síndrome hipereosinofílica antes de se assumir amiloidose ou outra causa",
-    "Via diagnóstica de exclusão de amiloidose cardíaca (cintilografia óssea com SPECT e eletroforese/imunofixação com cadeias leves livres) — etapa obrigatória antes de rotular o fenótipo restritivo como RCM não amiloide",
-    "Avaliação hematológica da causa da hipereosinofilia, incluindo pesquisa de rearranjo FIP1L1-PDGFRA",
-    "Ressonância com medida de T2* — recomendação fraca, certeza moderada (SBC 2026, GRADE) para acompanhamento de tratamento com quelante de ferro e flebotomia quando a causa suspeita é sobrecarga de ferro",
-    "Avaliação genética e, quando necessário, biópsia endomiocárdica — reservadas para investigação de causas idiopáticas/familiares de fibrose intersticial sem eosinofilia nem achado de depósito"
-  ],
-  "red_flags": [
-    "Trombo apical característico da fibrose endomiocárdica com risco embólico",
-    "Evento embólico sistêmico (AVC, embolia periférica) como manifestação inicial em paciente com fenótipo restritivo e eosinofilia",
-    "Eosinofilia inexplicada associada a fenótipo restritivo, sobretudo sem investigação hematológica da causa (incluindo rearranjo FIP1L1-PDGFRA)",
-    "Sinais de fase inflamatória ativa ao mapeamento T2 (miocardite eosinofílica aguda) — janela em que a imunossupressão pode prevenir progressão para fibrose estabelecida",
-    "Dilatação biatrial importante com sinais de descompensação de instalação relativamente rápida",
-    "Instabilidade hemodinâmica, arritmia mal tolerada ou síncope em paciente com fenótipo restritivo já caracterizado ou fortemente suspeito"
-  ],
-  "ambulatory_flow": [
-    "Diante de fenótipo restritivo ao ecocardiograma (sem hipertrofia de parede), completar a exclusão de amiloidose cardíaca pela via diagnóstica própria antes de qualquer outra conclusão etiológica",
-    "Solicitar hemograma completo com diferencial: eosinofilia inexplicada redireciona a investigação para fibrose endomiocárdica/síndrome hipereosinofílica e justifica ressonância magnética cardíaca com mapeamento T1/T2",
-    "Se a ressonância confirmar fibrose endomiocárdica: encaminhar à hematologia para investigação da causa da hipereosinofilia, em paralelo ao manejo cardiológico",
-    "Usar o mapeamento T2 quantitativo para orientar a decisão de imunossupressão: fase ativa pode se beneficiar de corticoterapia, fase fibrótica já estabelecida tem benefício limitado — reavaliar com mapeamento T2 seriado, não de forma empírica",
-    "Anticoagular o trombo apical característico quando presente, com reavaliação de resposta radiológica ao longo do seguimento",
-    "Sem eosinofilia nem achado de FEM à ressonância: prosseguir com avaliação genética e considerar biópsia endomiocárdica",
-    "Manter seguimento estruturado com reavaliação clínica e ecocardiográfica periódica, atenção ao surgimento de fibrilação/flutter atrial, e reforço de que este fenótipo NÃO é sinônimo de amiloidose nem de 'não compactação'/hipertrabeculação"
-  ],
-  "emergency_flow": [
-    "Estabilizar primeiro; obter ECG, ecocardiograma à beira-leito, função renal/eletrólitos e revisar toda a medicação em uso",
-    "Congestão: diurese cautelosa com reavaliação frequente de pressão arterial, perfusão e função renal — a fisiologia restritiva tolera mal tanto expansão volêmica excessiva quanto diurese excessiva",
-    "Suspeita ou confirmação de evento embólico agudo em paciente com trombo apical conhecido ou fenótipo restritivo com eosinofilia: manejo do evento embólico segue protocolo específico da condição aguda",
-    "Arritmia atrial de início agudo ou mal tolerada: telemetria, corrigir causas reversíveis, avaliar necessidade de anticoagulação e de controle de frequência/ritmo",
-    "Hipotensão: investigar mecanismo (baixo débito restritivo, arritmia, hipovolemia por diurese, evento embólico, sepse) antes de expandir volume de forma reflexa",
-    "Se o fenótipo restritivo ainda não tiver etiologia definida: estabilizar tem prioridade imediata, mas diferenciar é essencial assim que possível — a pericardite constritiva, em particular, é potencialmente curável por pericardiectomia e não deve ser perdida como diagnóstico"
-  ],
-  "treatment_summary": "Segundo a revisão de Rapezzi et al. (Eur Heart J 2022, PMID 36269634), o espectro terapêutico da cardiomiopatia restritiva é amplo e heterogêneo, mas tratamento modificador de doença só está disponível, hoje, para a amiloidose cardíaca e, de forma parcial, para a cardiomiopatia por sobrecarga de ferro — nas demais causas de RCM, incluindo a fibrose endomiocárdica já estabelecida, o manejo é predominantemente de suporte. Para a fibrose endomiocárdica associada à síndrome hipereosinofílica, o ponto terapêutico central é que a decisão de imunossupressão depende inteiramente da fase da doença, definida pelo mapeamento T2 quantitativo à ressonância: na fase inflamatória precoce (miocardite eosinofílica aguda), a imunossupressão pode prevenir a progressão para fibrose estabelecida; na fase fibrótica já estabelecida, o corticosteroide oferece benefício limitado (Antoun I et al., Catheter Cardiovasc Interv 2026, PMID 41298288). A anticoagulação é indicada para tratar e prevenir a progressão do trombo apical característico da doença, com a escolha do agente considerando o quadro clínico individual. O mapeamento T2 seriado no seguimento por ressonância permite reavaliar objetivamente se ainda há inflamação ativa, orientando a manutenção ou suspensão da imunossupressão em vez de uma decisão empírica. Sempre que a hipereosinofilia tiver causa hematológica identificada — como rearranjo FIP1L1-PDGFRA associado a neoplasia mieloproliferativa —, o tratamento dirigido a essa causa (conduzido pela hematologia) tem implicação terapêutica sistêmica independente do manejo cardiológico. Quando a etiologia é sobrecarga de ferro, quelação de ferro e flebotomia compõem o tratamento modificador de doença, com resposta acompanhada objetivamente pela melhora do T2* à ressonância (posicionamento SBC 2026, PMID 42233840). O manejo cardiológico de suporte comum a todas as causas de RCM — diurético para controle de congestão, cautela com fármacos que reduzem excessivamente a pré-carga ou a frequência cardíaca, atenção a arritmia atrial e ao risco tromboembólico da dilatação biatrial — segue os mesmos princípios gerais já descritos nas fichas de amiloidose cardíaca desta biblioteca, mas nunca substitui o tratamento dirigido à causa de base quando ela é identificável e tratável.",
-  "monitoring": [
-    "Mapeamento T2 quantitativo seriado à ressonância magnética cardíaca, para reavaliar atividade inflamatória e orientar manutenção ou suspensão de imunossupressão",
-    "Contagem de eosinófilos seriada, em conjunto com a equipe de hematologia responsável pela causa da hipereosinofilia",
-    "Reavaliação ecocardiográfica periódica, incluindo acompanhamento do trombo apical quando presente, sob anticoagulação",
-    "T2* seriado à ressonância, quando a etiologia é sobrecarga de ferro, para acompanhar resposta a quelante e flebotomia",
-    "Monitorização de ritmo pela suscetibilidade a fibrilação/flutter atrial da dilatação biatrial característica",
-    "Biomarcadores de congestão e função renal a cada consulta, especialmente ao ajustar diurético em fisiologia restritiva"
-  ],
-  "special_populations": [
-    "Paciente em região tropical ou com procedência de área endêmica: a fibrose endomiocárdica tem relevância epidemiológica particular no Brasil e em outras regiões tropicais",
-    "Eosinofilia persistente com suspeita de neoplasia mieloproliferativa associada (rearranjo FIP1L1-PDGFRA): implicação terapêutica hematológica específica",
-    "Paciente com fenótipo restritivo ainda sem etiologia definida: nunca assumir amiloidose sem antes checar hemograma com diferencial",
-    "Paciente já rotulado como 'não compactação ventricular'/hipertrabeculação: essa entidade foi reclassificada pela ESC 2023 como traço fenotípico, não cardiomiopatia — não deve ser confundida com esta ficha",
-    "Paciente com trombo apical identificado: risco embólico sistêmico exige anticoagulação e seguimento radiológico de resposta"
-  ],
-  "assistant_questions": [
-    {"id": "age_years", "label": "Idade", "type": "number", "required": true, "section": "Dados básicos"},
-    {"id": "acute_instability", "label": "Há congestão, hipotensão, arritmia mal tolerada, evento embólico agudo ou síncope agora?", "type": "boolean", "required": true, "section": "Triagem"},
-    {"id": "restrictive_phenotype_no_hypertrophy", "label": "Há fisiologia restritiva ao ecocardiograma/Doppler ou cateterismo, com espessura de parede ventricular NORMAL (sem hipertrofia)?", "type": "boolean", "section": "Suspeita clínica"},
-    {"id": "amyloid_excluded", "label": "A amiloidose cardíaca já foi ativamente excluída (cintilografia óssea com SPECT e/ou exclusão de clonalidade monoclonal)?", "type": "select", "section": "Investigação", "options": [
-      {"value": "nao_investigada", "label": "Ainda não investigada"}, {"value": "excluida", "label": "Excluída"}, {"value": "confirmada", "label": "Confirmada (é amiloidose)"}
-    ]},
-    {"id": "eosinophilia", "label": "Há eosinofilia inexplicada no hemograma?", "type": "boolean", "section": "Investigação"},
-    {"id": "mri_double_v_sign", "label": "A ressonância cardíaca mostrou o sinal do 'duplo V' (fibrose endomiocárdica com trombo apical em camadas)?", "type": "select", "section": "Investigação", "options": [
-      {"value": "nao_realizada", "label": "Ressonância não realizada"}, {"value": "ausente", "label": "Ausente"}, {"value": "presente", "label": "Presente"}
-    ]},
-    {"id": "t2_mapping_activity", "label": "Se fibrose endomiocárdica confirmada, o mapeamento T2 mostra atividade inflamatória ativa ou fase fibrótica já estabelecida?", "type": "select", "section": "Estadiamento", "options": [
-      {"value": "nao_avaliado", "label": "Ainda não avaliado"}, {"value": "fase_ativa", "label": "Fase inflamatória ativa"}, {"value": "fase_fibrotica", "label": "Fase fibrótica estabelecida"}
-    ]},
-    {"id": "apical_thrombus", "label": "Há trombo apical identificado por imagem?", "type": "boolean", "section": "Investigação"}
-  ],
-  "assistant_rules": [
-    {"id": "emergencia-instabilidade-aguda", "priority": 100, "when": {"all": [{"field": "acute_instability", "op": "truthy"}]}, "add": {
-      "risk": "emergencia",
-      "red_flags": ["Possível descompensação aguda, evento embólico ou arritmia em paciente com fenótipo restritivo"],
-      "emergency_flow": ["Encaminhar para avaliação emergencial imediata com ECG, ecocardiograma, função renal/eletrólitos e revisão de toda a medicação em uso antes de qualquer ajuste terapêutico"]
-    }},
-    {"id": "amiloidose-confirmada-ficha-nao-se-aplica", "priority": 95, "when": {"all": [{"field": "amyloid_excluded", "op": "eq", "value": "confirmada"}]}, "add": {
-      "risk": "urgente",
-      "messages": ["Amiloidose cardíaca confirmada — esta ficha não se aplica; usar a ficha própria de amiloidose ATTR ou amiloidose AL desta biblioteca, com via diagnóstica e tratamento específicos"]
-    }},
-    {"id": "restritivo-sem-exclusao-de-amiloide", "priority": 90, "when": {"all": [
-      {"field": "restrictive_phenotype_no_hypertrophy", "op": "truthy"},
-      {"field": "amyloid_excluded", "op": "eq", "value": "nao_investigada"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "differentials": ["Amiloidose cardíaca (ATTR ou AL) — causa infiltrativa mais prevalente de fenótipo restritivo, ainda não excluída"],
-      "messages": ["Completar a exclusão de amiloidose cardíaca (cintilografia óssea com SPECT e/ou provas de clonalidade monoclonal) antes de assumir cardiomiopatia restritiva não amiloide"]
-    }},
-    {"id": "eosinofilia-com-fenotipo-restritivo", "priority": 85, "when": {"all": [
-      {"field": "eosinophilia", "op": "truthy"},
-      {"field": "amyloid_excluded", "op": "neq", "value": "confirmada"}
-    ]}, "add": {
-      "risk": "urgente",
-      "differentials": ["Fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler)"],
-      "suggested_tests": ["Ressonância magnética cardíaca com mapeamento T1/T2 para pesquisa do sinal do 'duplo V' e estadiamento de atividade", "Avaliação hematológica da causa da hipereosinofilia, incluindo pesquisa de rearranjo FIP1L1-PDGFRA"],
-      "messages": ["Eosinofilia inexplicada com fenótipo restritivo: redirecionar a investigação para fibrose endomiocárdica/síndrome hipereosinofílica e encaminhar à hematologia em paralelo ao manejo cardiológico"]
-    }},
-    {"id": "trombo-apical-anticoagular", "priority": 80, "when": {"all": [{"field": "apical_thrombus", "op": "truthy"}]}, "add": {
-      "risk": "urgente",
-      "red_flags": ["Trombo apical com risco embólico sistêmico"],
-      "messages": ["Indicar anticoagulação para tratar e prevenir progressão do trombo apical, com reavaliação radiológica de resposta ao longo do seguimento"]
-    }},
-    {"id": "fase-inflamatoria-ativa-considerar-imunossupressao", "priority": 75, "when": {"all": [{"field": "t2_mapping_activity", "op": "eq", "value": "fase_ativa"}]}, "add": {
-      "risk": "prioritario",
-      "messages": ["Fase inflamatória ativa ao mapeamento T2: discutir imunossupressão para tentar prevenir progressão a fibrose estabelecida, com reavaliação por mapeamento T2 seriado para orientar manutenção ou suspensão do tratamento"]
-    }},
-    {"id": "fase-fibrotica-beneficio-limitado-imunossupressao", "priority": 70, "when": {"all": [{"field": "t2_mapping_activity", "op": "eq", "value": "fase_fibrotica"}]}, "add": {
-      "risk": "rotina",
-      "messages": ["Fase fibrótica já estabelecida: benefício do corticosteroide é limitado — priorizar manejo de suporte e anticoagulação se houver trombo"]
-    }},
-    {"id": "sem-sinais-de-alerta", "priority": 10, "when": {"all": [
-      {"field": "acute_instability", "op": "falsy"},
-      {"field": "eosinophilia", "op": "falsy"},
-      {"field": "apical_thrombus", "op": "falsy"},
-      {"field": "amyloid_excluded", "op": "neq", "value": "confirmada"}
-    ]}, "add": {
-      "risk": "informativo",
-      "messages": ["Sem sinais de alerta de fibrose endomiocárdica/síndrome hipereosinofílica no momento; manter avaliação clínica habitual e reconsiderar a suspeita diante de eosinofilia, trombo apical ou instabilidade em investigação futura"]
-    }}
-  ],
-  "tags": ["cardiomiopatia restritiva", "fibrose endomiocárdica", "endomiocardiofibrose", "síndrome hipereosinofílica", "endocardite de Löffler", "ressonância magnética cardíaca", "mapeamento T2", "sinal do duplo V", "trombo apical", "ESC 2023", "SBC", "doença tropical"],
-  "source_refs": [
-    "Rapezzi C, Aimo A, Barison A, et al. Restrictive cardiomyopathy: definition and diagnosis. Eur Heart J. 2022;43(45):4679-4693. DOI: 10.1093/eurheartj/ehac543. PMID: 36269634.",
-    "Antoun I, Marrow B, Pathmanathan R, Bhandari SS. Endomyocardial Fibrosis Associated With Hypereosinophilic Syndrome: Diagnostic and Management Insights From a Case Report. Catheter Cardiovasc Interv. 2026;107(2):520-523. DOI: 10.1002/ccd.70377. PMID: 41298288.",
-    "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657.",
-    "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988.",
-    "Hotta VT, Costa IBSS, Felix RCM, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (SBC). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840."
-  ],
-  "source_urls": ["https://doi.org/10.1093/eurheartj/ehac543", "https://doi.org/10.1002/ccd.70377", "https://doi.org/10.1093/eurheartj/ehad194", "https://doi.org/10.36660/abc.20240608", "https://doi.org/10.36660/abc.20260221"],
-  "related_document_slugs": [
-    "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
-    "reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia",
-    "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
-    "diagnostico-e-tratamento-da-amiloidose-cardiaca",
-    "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
-    "massas-cardiacas-e-pericardicas-caracterizacao-por-tc-e-ressonancia-sbc-2024"
-  ],
-  "patient_material_slug": null,
-  "review_status": "pendente_revisao",
-  "review_note": "Verbete novo a partir do backlog de 118 itens de Cardiomiopatias (evidencias/metadados.json). Cluster genuinamente sem verbete: cardiomiopatia restritiva não amiloide (49 itens CMH e 21 amiloidose já têm hospedeiro). Não confundir com não-compactação/hipertrabeculação, reclassificada pela ESC 2023 como traço fenotípico, não cardiomiopatia. 5 PMIDs verificados. 6 related_document_slugs (2 compartilhados com as fichas de amiloidose, mesma lógica de exclusão mútua bidirecional). Nenhuma dose.",
-  "version": 1,
-  "fonte_producao": "claude"
-}
+  {
+    "slug": "cardiomiopatia-restritiva-nao-amiloide",
+    "name": "Cardiomiopatia restritiva não amiloide",
+    "aliases": [
+      "RCM não amiloide",
+      "cardiomiopatia restritiva idiopática",
+      "fibrose endomiocárdica",
+      "endomiocardiofibrose",
+      "síndrome hipereosinofílica com acometimento cardíaco",
+      "endocardite de Löffler",
+      "cardiomiopatia restritiva primária"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "restritiva",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Grupo heterogêneo de doenças definido por um critério hemodinâmico, não por espessura de parede: fisiopatologia restritiva persistente, disfunção diastólica, ventrículos não dilatados e dilatação atrial, independentemente da espessura da parede ventricular ou da função sistólica (Rapezzi C et al., Eur Heart J 2022, PMID 36269634). Esta ficha cobre as causas NÃO amiloides — fibrose intersticial idiopática/genética, fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler), e, de forma mais breve, outras causas por depósito em cardiomiócito (ex.: sobrecarga de ferro) — porque a amiloidose cardíaca, causa infiltrativa mais prevalente de fenótipo restritivo, já tem fichas dedicadas e completas nesta biblioteca (amiloidose por transtirretina e por cadeia leve), com via diagnóstica e tratamento próprios que não devem ser duplicados aqui. Dois pontos de nomenclatura da diretriz ESC 2023 de cardiomiopatias evitam erro de rotulagem: (1) fisiologia restritiva também ocorre em cardiomiopatia hipertrófica ou dilatada em estágio terminal — nesses casos o termo correto é 'cardiomiopatia hipertrófica/dilatada com fisiologia restritiva', não 'cardiomiopatia restritiva' isolada, que exige espessura de parede NORMAL; (2) a antiga 'não compactação ventricular' (hoje 'hipertrabeculação') e a síndrome de takotsubo foram explicitamente excluídas da categoria cardiomiopatia pela força-tarefa ESC 2023 e não são formas de cardiomiopatia restritiva.",
+    "epidemiology": "A cardiomiopatia restritiva (RCM) é classificada por Rapezzi et al. (Eur Heart J 2022, PMID 36269634) em quatro mecanismos de doença: (i) fibrose intersticial com disfunção miocárdica intrínseca (formas idiopáticas e genéticas/sarcoméricas), (ii) infiltração do espaço extracelular (amiloidose — já coberta em fichas próprias desta biblioteca), (iii) acúmulo de material de depósito dentro do cardiomiócito (ex.: sobrecarga de ferro/hemocromatose), e (iv) fibrose endomiocárdica. Os autores destacam que tratamento modificador de doença só existe, hoje, para a amiloidose cardíaca e, parcialmente, para a cardiomiopatia por sobrecarga de ferro — as demais causas de RCM têm manejo predominantemente de suporte. Dentro do mecanismo (iv), a fibrose endomiocárdica (FEM) associada à síndrome hipereosinofílica (SHE) — descrita classicamente como endocardite de Löffler em sua fase inicial — tem relevância epidemiológica particular no Brasil e em outras regiões tropicais, conforme registrado pela diretriz de imagem cardiovascular da SBC (Magalhães TA et al., Arq Bras Cardiol 2024, PMID 39475988), que recomenda formalmente a ressonância magnética cardíaca (Classe I, Nível B) diante de suspeita da doença justamente por essa relevância regional.",
+    "presentation": [
+      "Dispneia e fadiga aos esforços de instalação insidiosa, muitas vezes com predomínio de sinais de congestão sistêmica (edema, ascite, hepatomegalia) sobre os pulmonares, refletindo a fisiologia restritiva biventricular",
+      "Sinais de insuficiência cardíaca direita desproporcionais ao grau de disfunção sistólica — que pode estar preservada ou apenas discretamente reduzida",
+      "Palpitações ou sintomas relacionados a fibrilação/flutter atrial, favorecidos pela dilatação biatrial característica do fenótipo restritivo",
+      "Eosinofilia inexplicada em hemograma de rotina, com ou sem sintomas cardíacos ainda evidentes — achado laboratorial simples que deve redirecionar a investigação para fibrose endomiocárdica/síndrome hipereosinofílica antes de assumir amiloidose",
+      "Evento embólico sistêmico (acidente vascular cerebral, embolia periférica) como manifestação inicial, pela formação de trombo apical característico da fibrose endomiocárdica",
+      "Manifestações sistêmicas de síndrome hipereosinofílica associadas (cutâneas, pulmonares, neurológicas) quando a causa é FEM/SHE — o acometimento cardíaco é apenas um dos órgãos-alvo possíveis",
+      "Ausência de hipertrofia ventricular ao ecocardiograma — achado que, quando presente com fenótipo restritivo, deve redirecionar a suspeita para amiloidose ou cardiomiopatia hipertrófica com fisiologia restritiva, não para RCM isolada"
+    ],
+    "diagnostic_approach": "O diagnóstico nasce da demonstração hemodinâmica de fisiologia restritiva — elevação rápida da pressão ventricular com pequeno incremento de volume de enchimento, por rigidez miocárdica aumentada — documentável por cateterismo cardíaco ou por ecocardiograma com Doppler (Rapezzi C et al., Eur Heart J 2022, PMID 36269634). Uma vez demonstrada a fisiologia restritiva, a diretriz ESC 2023 de cardiomiopatias recomenda formalmente (Classe I) o uso de imagem multimodal para diferenciar a cardiomiopatia restritiva verdadeira da cardiomiopatia hipertrófica e da dilatada com fisiologia restritiva — as três podem se apresentar com o mesmo padrão hemodinâmico, mas a distinção muda etiologia, tratamento e rastreamento familiar. A ressonância magnética cardíaca com contraste é recomendada (Classe I, Nível B) em todo paciente com cardiomiopatia já na avaliação inicial: a caracterização tecidual pelo realce tardio e pelo mapeamento T1/T2 muda a hipótese etiológica e pesa na estratificação de risco. Antes de qualquer conclusão etiológica, a amiloidose cardíaca — causa infiltrativa mais prevalente de fenótipo restritivo — deve ser ativamente excluída pela via diagnóstica própria já descrita nas fichas de amiloidose ATTR e AL desta biblioteca (cintilografia óssea com SPECT e exclusão de clonalidade monoclonal). Excluída a amiloidose, um hemograma com diferencial simples redireciona toda a investigação: eosinofilia associada ao fenótipo restritivo aponta para fibrose endomiocárdica/síndrome hipereosinofílica, cujo achado de imagem patognomônico à RMC é o sinal do 'duplo V' ('double V sign') — um padrão trilaminar no ápice ventricular, com miocárdio normal, endocárdio fibrótico e trombo sobrejacente dispostos em camadas sucessivas visíveis na sequência de realce tardio (Antoun I et al., Catheter Cardiovasc Interv 2026, PMID 41298288). A RMC também estadia a atividade da doença: o mapeamento T2 quantitativo distingue fase inflamatória ativa (miocardite eosinofílica aguda) de fase fibrótica já estabelecida, distinção que é o ponto prático central para a decisão de imunossupressão. Nos casos sem eosinofilia e sem achado de FEM, a investigação segue para causas idiopáticas/genéticas de fibrose intersticial — com avaliação genética e, quando necessário, biópsia endomiocárdica — e para causas por depósito em cardiomiócito, como a sobrecarga de ferro, em que a ressonância com medida do T2* tem papel formal de acompanhamento terapêutico (Hotta VT et al., posicionamento SBC 2026, Arq Bras Cardiol, PMID 42233840). Em toda suspeita de eosinofilia inexplicada com acometimento cardíaco, a investigação hematológica da causa (incluindo pesquisa de rearranjo FIP1L1-PDGFRA associado a neoplasia mieloproliferativa) é etapa obrigatória e não deve ser postergada em função do achado cardíaco.",
+    "differentials": [
+      "Amiloidose cardíaca por transtirretina (ATTR) e por cadeia leve (AL) — causa infiltrativa mais prevalente de fenótipo restritivo; deve ser sempre excluída primeiro pela via diagnóstica própria (cintilografia óssea/exclusão de clonalidade); ver fichas dedicadas desta biblioteca",
+      "Cardiomiopatia hipertrófica com fisiologia restritiva — presença de hipertrofia de parede afasta RCM isolada, que por definição exige espessura parietal normal",
+      "Cardiomiopatia dilatada em estágio terminal com fisiologia restritiva — fase final de doença primariamente dilatada, nomenclatura distinta de RCM primária",
+      "Pericardite constritiva — diferencial clássico de fisiologia restritiva por mecanismo extrínseco (pericárdico), não miocárdico ou endocárdico; a distinção muda completamente a conduta (constrição é potencialmente curável por pericardiectomia)",
+      "Fisiologia restritiva de causa endocárdica não relacionada a eosinofilia — fibrose, fibroelastose ou trombose endocárdica de outra etiologia, mecanicamente distinta da RCM miocárdica verdadeira",
+      "Sarcoidose cardíaca — outra cardiomiopatia infiltrativa não amiloide que pode cursar com fenótipo restritivo; ver ficha própria desta biblioteca",
+      "Cardiomiopatia por sobrecarga de ferro (hemocromatose) — mecanismo de depósito em cardiomiócito, uma das poucas causas de RCM com tratamento modificador de doença (quelação/flebotomia), monitorado por T2* seriado",
+      "Neoplasia mieloproliferativa com rearranjo FIP1L1-PDGFRA associada a hipereosinofilia — implicação terapêutica hematológica específica que foge do escopo cardiológico isolado quando a fibrose endomiocárdica é secundária a essa causa"
+    ],
+    "tests": [
+      "Ecocardiograma com Doppler — demonstra a fisiologia restritiva e é método de triagem inicial; limitação: pode subestimar obliteração apical por trombo/fibrose que a ressonância detecta melhor",
+      "Cateterismo cardíaco — via alternativa para documentar hemodinâmica restritiva quando a avaliação não invasiva é inconclusiva",
+      "Ressonância magnética cardíaca com contraste (realce tardio) e mapeamento T1/T2 — recomendada (ESC 2023, Classe I, Nível B) na avaliação inicial de todo paciente com cardiomiopatia; identifica o sinal do 'duplo V' patognomônico de fibrose endomiocárdica e, pelo mapeamento T2 quantitativo, distingue fase inflamatória ativa de fase fibrótica estabelecida; recomendada especificamente (SBC 2024, Classe I, Nível B) na suspeita de endomiocardiofibrose",
+      "Hemograma completo com diferencial (contagem de eosinófilos) — eosinofilia inexplicada aponta para fibrose endomiocárdica/síndrome hipereosinofílica antes de se assumir amiloidose ou outra causa",
+      "Via diagnóstica de exclusão de amiloidose cardíaca (cintilografia óssea com SPECT e eletroforese/imunofixação com cadeias leves livres) — etapa obrigatória antes de rotular o fenótipo restritivo como RCM não amiloide",
+      "Avaliação hematológica da causa da hipereosinofilia, incluindo pesquisa de rearranjo FIP1L1-PDGFRA",
+      "Ressonância com medida de T2* — recomendação fraca, certeza moderada (SBC 2026, GRADE) para acompanhamento de tratamento com quelante de ferro e flebotomia quando a causa suspeita é sobrecarga de ferro",
+      "Avaliação genética e, quando necessário, biópsia endomiocárdica — reservadas para investigação de causas idiopáticas/familiares de fibrose intersticial sem eosinofilia nem achado de depósito"
+    ],
+    "red_flags": [
+      "Trombo apical característico da fibrose endomiocárdica com risco embólico",
+      "Evento embólico sistêmico (AVC, embolia periférica) como manifestação inicial em paciente com fenótipo restritivo e eosinofilia",
+      "Eosinofilia inexplicada associada a fenótipo restritivo, sobretudo sem investigação hematológica da causa (incluindo rearranjo FIP1L1-PDGFRA)",
+      "Sinais de fase inflamatória ativa ao mapeamento T2 (miocardite eosinofílica aguda) — janela em que a imunossupressão pode prevenir progressão para fibrose estabelecida",
+      "Dilatação biatrial importante com sinais de descompensação de instalação relativamente rápida",
+      "Instabilidade hemodinâmica, arritmia mal tolerada ou síncope em paciente com fenótipo restritivo já caracterizado ou fortemente suspeito"
+    ],
+    "ambulatory_flow": [
+      "Diante de fenótipo restritivo ao ecocardiograma (sem hipertrofia de parede), completar a exclusão de amiloidose cardíaca pela via diagnóstica própria antes de qualquer outra conclusão etiológica",
+      "Solicitar hemograma completo com diferencial: eosinofilia inexplicada redireciona a investigação para fibrose endomiocárdica/síndrome hipereosinofílica e justifica ressonância magnética cardíaca com mapeamento T1/T2",
+      "Se a ressonância confirmar fibrose endomiocárdica: encaminhar à hematologia para investigação da causa da hipereosinofilia, em paralelo ao manejo cardiológico",
+      "Usar o mapeamento T2 quantitativo para orientar a decisão de imunossupressão: fase ativa pode se beneficiar de corticoterapia, fase fibrótica já estabelecida tem benefício limitado — reavaliar com mapeamento T2 seriado, não de forma empírica",
+      "Anticoagular o trombo apical característico quando presente, com reavaliação de resposta radiológica ao longo do seguimento",
+      "Sem eosinofilia nem achado de FEM à ressonância: prosseguir com avaliação genética e considerar biópsia endomiocárdica",
+      "Manter seguimento estruturado com reavaliação clínica e ecocardiográfica periódica, atenção ao surgimento de fibrilação/flutter atrial, e reforço de que este fenótipo NÃO é sinônimo de amiloidose nem de 'não compactação'/hipertrabeculação"
+    ],
+    "emergency_flow": [
+      "Estabilizar primeiro; obter ECG, ecocardiograma à beira-leito, função renal/eletrólitos e revisar toda a medicação em uso",
+      "Congestão: diurese cautelosa com reavaliação frequente de pressão arterial, perfusão e função renal — a fisiologia restritiva tolera mal tanto expansão volêmica excessiva quanto diurese excessiva",
+      "Suspeita ou confirmação de evento embólico agudo em paciente com trombo apical conhecido ou fenótipo restritivo com eosinofilia: manejo do evento embólico segue protocolo específico da condição aguda",
+      "Arritmia atrial de início agudo ou mal tolerada: telemetria, corrigir causas reversíveis, avaliar necessidade de anticoagulação e de controle de frequência/ritmo",
+      "Hipotensão: investigar mecanismo (baixo débito restritivo, arritmia, hipovolemia por diurese, evento embólico, sepse) antes de expandir volume de forma reflexa",
+      "Se o fenótipo restritivo ainda não tiver etiologia definida: estabilizar tem prioridade imediata, mas diferenciar é essencial assim que possível — a pericardite constritiva, em particular, é potencialmente curável por pericardiectomia e não deve ser perdida como diagnóstico"
+    ],
+    "treatment_summary": "Segundo a revisão de Rapezzi et al. (Eur Heart J 2022, PMID 36269634), o espectro terapêutico da cardiomiopatia restritiva é amplo e heterogêneo, mas tratamento modificador de doença só está disponível, hoje, para a amiloidose cardíaca e, de forma parcial, para a cardiomiopatia por sobrecarga de ferro — nas demais causas de RCM, incluindo a fibrose endomiocárdica já estabelecida, o manejo é predominantemente de suporte. Para a fibrose endomiocárdica associada à síndrome hipereosinofílica, o ponto terapêutico central é que a decisão de imunossupressão depende inteiramente da fase da doença, definida pelo mapeamento T2 quantitativo à ressonância: na fase inflamatória precoce (miocardite eosinofílica aguda), a imunossupressão pode prevenir a progressão para fibrose estabelecida; na fase fibrótica já estabelecida, o corticosteroide oferece benefício limitado (Antoun I et al., Catheter Cardiovasc Interv 2026, PMID 41298288). A anticoagulação é indicada para tratar e prevenir a progressão do trombo apical característico da doença, com a escolha do agente considerando o quadro clínico individual. O mapeamento T2 seriado no seguimento por ressonância permite reavaliar objetivamente se ainda há inflamação ativa, orientando a manutenção ou suspensão da imunossupressão em vez de uma decisão empírica. Sempre que a hipereosinofilia tiver causa hematológica identificada — como rearranjo FIP1L1-PDGFRA associado a neoplasia mieloproliferativa —, o tratamento dirigido a essa causa (conduzido pela hematologia) tem implicação terapêutica sistêmica independente do manejo cardiológico. Quando a etiologia é sobrecarga de ferro, quelação de ferro e flebotomia compõem o tratamento modificador de doença, com resposta acompanhada objetivamente pela melhora do T2* à ressonância (posicionamento SBC 2026, PMID 42233840). O manejo cardiológico de suporte comum a todas as causas de RCM — diurético para controle de congestão, cautela com fármacos que reduzem excessivamente a pré-carga ou a frequência cardíaca, atenção a arritmia atrial e ao risco tromboembólico da dilatação biatrial — segue os mesmos princípios gerais já descritos nas fichas de amiloidose cardíaca desta biblioteca, mas nunca substitui o tratamento dirigido à causa de base quando ela é identificável e tratável.",
+    "monitoring": [
+      "Mapeamento T2 quantitativo seriado à ressonância magnética cardíaca, para reavaliar atividade inflamatória e orientar manutenção ou suspensão de imunossupressão",
+      "Contagem de eosinófilos seriada, em conjunto com a equipe de hematologia responsável pela causa da hipereosinofilia",
+      "Reavaliação ecocardiográfica periódica, incluindo acompanhamento do trombo apical quando presente, sob anticoagulação",
+      "T2* seriado à ressonância, quando a etiologia é sobrecarga de ferro, para acompanhar resposta a quelante e flebotomia",
+      "Monitorização de ritmo pela suscetibilidade a fibrilação/flutter atrial da dilatação biatrial característica",
+      "Biomarcadores de congestão e função renal a cada consulta, especialmente ao ajustar diurético em fisiologia restritiva"
+    ],
+    "special_populations": [
+      "Paciente em região tropical ou com procedência de área endêmica: a fibrose endomiocárdica tem relevância epidemiológica particular no Brasil e em outras regiões tropicais",
+      "Eosinofilia persistente com suspeita de neoplasia mieloproliferativa associada (rearranjo FIP1L1-PDGFRA): implicação terapêutica hematológica específica",
+      "Paciente com fenótipo restritivo ainda sem etiologia definida: nunca assumir amiloidose sem antes checar hemograma com diferencial",
+      "Paciente já rotulado como 'não compactação ventricular'/hipertrabeculação: essa entidade foi reclassificada pela ESC 2023 como traço fenotípico, não cardiomiopatia — não deve ser confundida com esta ficha",
+      "Paciente com trombo apical identificado: risco embólico sistêmico exige anticoagulação e seguimento radiológico de resposta"
+    ],
+    "assistant_questions": [
+      {
+        "id": "age_years",
+        "label": "Idade",
+        "type": "number",
+        "required": true,
+        "section": "Dados básicos"
+      },
+      {
+        "id": "acute_instability",
+        "label": "Há congestão, hipotensão, arritmia mal tolerada, evento embólico agudo ou síncope agora?",
+        "type": "boolean",
+        "required": true,
+        "section": "Triagem"
+      },
+      {
+        "id": "restrictive_phenotype_no_hypertrophy",
+        "label": "Há fisiologia restritiva ao ecocardiograma/Doppler ou cateterismo, com espessura de parede ventricular NORMAL (sem hipertrofia)?",
+        "type": "boolean",
+        "section": "Suspeita clínica"
+      },
+      {
+        "id": "amyloid_excluded",
+        "label": "A amiloidose cardíaca já foi ativamente excluída (cintilografia óssea com SPECT e/ou exclusão de clonalidade monoclonal)?",
+        "type": "select",
+        "section": "Investigação",
+        "options": [
+          {
+            "value": "nao_investigada",
+            "label": "Ainda não investigada"
+          },
+          {
+            "value": "excluida",
+            "label": "Excluída"
+          },
+          {
+            "value": "confirmada",
+            "label": "Confirmada (é amiloidose)"
+          }
+        ]
+      },
+      {
+        "id": "eosinophilia",
+        "label": "Há eosinofilia inexplicada no hemograma?",
+        "type": "boolean",
+        "section": "Investigação"
+      },
+      {
+        "id": "mri_double_v_sign",
+        "label": "A ressonância cardíaca mostrou o sinal do 'duplo V' (fibrose endomiocárdica com trombo apical em camadas)?",
+        "type": "select",
+        "section": "Investigação",
+        "options": [
+          {
+            "value": "nao_realizada",
+            "label": "Ressonância não realizada"
+          },
+          {
+            "value": "ausente",
+            "label": "Ausente"
+          },
+          {
+            "value": "presente",
+            "label": "Presente"
+          }
+        ]
+      },
+      {
+        "id": "t2_mapping_activity",
+        "label": "Se fibrose endomiocárdica confirmada, o mapeamento T2 mostra atividade inflamatória ativa ou fase fibrótica já estabelecida?",
+        "type": "select",
+        "section": "Estadiamento",
+        "options": [
+          {
+            "value": "nao_avaliado",
+            "label": "Ainda não avaliado"
+          },
+          {
+            "value": "fase_ativa",
+            "label": "Fase inflamatória ativa"
+          },
+          {
+            "value": "fase_fibrotica",
+            "label": "Fase fibrótica estabelecida"
+          }
+        ]
+      },
+      {
+        "id": "apical_thrombus",
+        "label": "Há trombo apical identificado por imagem?",
+        "type": "boolean",
+        "section": "Investigação"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "emergencia-instabilidade-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível descompensação aguda, evento embólico ou arritmia em paciente com fenótipo restritivo"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação emergencial imediata com ECG, ecocardiograma, função renal/eletrólitos e revisão de toda a medicação em uso antes de qualquer ajuste terapêutico"
+          ]
+        }
+      },
+      {
+        "id": "amiloidose-confirmada-ficha-nao-se-aplica",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "amyloid_excluded",
+              "op": "eq",
+              "value": "confirmada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Amiloidose cardíaca confirmada — esta ficha não se aplica; usar a ficha própria de amiloidose ATTR ou amiloidose AL desta biblioteca, com via diagnóstica e tratamento específicos"
+          ]
+        }
+      },
+      {
+        "id": "restritivo-sem-exclusao-de-amiloide",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "restrictive_phenotype_no_hypertrophy",
+              "op": "truthy"
+            },
+            {
+              "field": "amyloid_excluded",
+              "op": "eq",
+              "value": "nao_investigada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Amiloidose cardíaca (ATTR ou AL) — causa infiltrativa mais prevalente de fenótipo restritivo, ainda não excluída"
+          ],
+          "messages": [
+            "Completar a exclusão de amiloidose cardíaca (cintilografia óssea com SPECT e/ou provas de clonalidade monoclonal) antes de assumir cardiomiopatia restritiva não amiloide"
+          ]
+        }
+      },
+      {
+        "id": "eosinofilia-com-fenotipo-restritivo",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "eosinophilia",
+              "op": "truthy"
+            },
+            {
+              "field": "amyloid_excluded",
+              "op": "neq",
+              "value": "confirmada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler)"
+          ],
+          "suggested_tests": [
+            "Ressonância magnética cardíaca com mapeamento T1/T2 para pesquisa do sinal do 'duplo V' e estadiamento de atividade",
+            "Avaliação hematológica da causa da hipereosinofilia, incluindo pesquisa de rearranjo FIP1L1-PDGFRA"
+          ],
+          "messages": [
+            "Eosinofilia inexplicada com fenótipo restritivo: redirecionar a investigação para fibrose endomiocárdica/síndrome hipereosinofílica e encaminhar à hematologia em paralelo ao manejo cardiológico"
+          ]
+        }
+      },
+      {
+        "id": "trombo-apical-anticoagular",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "apical_thrombus",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Trombo apical com risco embólico sistêmico"
+          ],
+          "messages": [
+            "Indicar anticoagulação para tratar e prevenir progressão do trombo apical, com reavaliação radiológica de resposta ao longo do seguimento"
+          ]
+        }
+      },
+      {
+        "id": "fase-inflamatoria-ativa-considerar-imunossupressao",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "t2_mapping_activity",
+              "op": "eq",
+              "value": "fase_ativa"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fase inflamatória ativa ao mapeamento T2: discutir imunossupressão para tentar prevenir progressão a fibrose estabelecida, com reavaliação por mapeamento T2 seriado para orientar manutenção ou suspensão do tratamento"
+          ]
+        }
+      },
+      {
+        "id": "fase-fibrotica-beneficio-limitado-imunossupressao",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "t2_mapping_activity",
+              "op": "eq",
+              "value": "fase_fibrotica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Fase fibrótica já estabelecida: benefício do corticosteroide é limitado — priorizar manejo de suporte e anticoagulação se houver trombo"
+          ]
+        }
+      },
+      {
+        "id": "sem-sinais-de-alerta",
+        "priority": 10,
+        "when": {
+          "all": [
+            {
+              "field": "acute_instability",
+              "op": "falsy"
+            },
+            {
+              "field": "eosinophilia",
+              "op": "falsy"
+            },
+            {
+              "field": "apical_thrombus",
+              "op": "falsy"
+            },
+            {
+              "field": "amyloid_excluded",
+              "op": "neq",
+              "value": "confirmada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Sem sinais de alerta de fibrose endomiocárdica/síndrome hipereosinofílica no momento; manter avaliação clínica habitual e reconsiderar a suspeita diante de eosinofilia, trombo apical ou instabilidade em investigação futura"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiomiopatia restritiva",
+      "fibrose endomiocárdica",
+      "endomiocardiofibrose",
+      "síndrome hipereosinofílica",
+      "endocardite de Löffler",
+      "ressonância magnética cardíaca",
+      "mapeamento T2",
+      "sinal do duplo V",
+      "trombo apical",
+      "ESC 2023",
+      "SBC",
+      "doença tropical"
+    ],
+    "source_refs": [
+      "Rapezzi C, Aimo A, Barison A, et al. Restrictive cardiomyopathy: definition and diagnosis. Eur Heart J. 2022;43(45):4679-4693. DOI: 10.1093/eurheartj/ehac543. PMID: 36269634.",
+      "Antoun I, Marrow B, Pathmanathan R, Bhandari SS. Endomyocardial Fibrosis Associated With Hypereosinophilic Syndrome: Diagnostic and Management Insights From a Case Report. Catheter Cardiovasc Interv. 2026;107(2):520-523. DOI: 10.1002/ccd.70377. PMID: 41298288.",
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657.",
+      "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988.",
+      "Hotta VT, Costa IBSS, Felix RCM, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (SBC). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehac543",
+      "https://doi.org/10.1002/ccd.70377",
+      "https://doi.org/10.1093/eurheartj/ehad194",
+      "https://doi.org/10.36660/abc.20240608",
+      "https://doi.org/10.36660/abc.20260221"
+    ],
+    "related_document_slugs": [
+      "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
+      "reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia",
+      "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+      "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+      "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+      "massas-cardiacas-e-pericardicas-caracterizacao-por-tc-e-ressonancia-sbc-2024"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Verbete novo a partir do backlog de 118 itens de Cardiomiopatias (evidencias/metadados.json). Cluster genuinamente sem verbete: cardiomiopatia restritiva não amiloide (49 itens CMH e 21 amiloidose já têm hospedeiro). Não confundir com não-compactação/hipertrabeculação, reclassificada pela ESC 2023 como traço fenotípico, não cardiomiopatia. 5 PMIDs verificados. 6 related_document_slugs (2 compartilhados com as fichas de amiloidose, mesma lógica de exclusão mútua bidirecional). Nenhuma dose. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
 ]

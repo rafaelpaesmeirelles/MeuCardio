@@ -2,7 +2,13 @@
   {
     "slug": "dissecao-aortica-tipo-b",
     "name": "Dissecção aórtica aguda tipo B (Stanford B / DeBakey III)",
-    "aliases": ["dissecção tipo B", "Stanford B", "DeBakey III", "TBAD", "dissecção aórtica descendente"],
+    "aliases": [
+      "dissecção tipo B",
+      "Stanford B",
+      "DeBakey III",
+      "TBAD",
+      "dissecção aórtica descendente"
+    ],
     "area": "geral",
     "category": "doenca_vascular",
     "subtype": "aguda",
@@ -91,79 +97,279 @@
       "Paciente já na fase crônica com aneurisma residual — sai do território de TEVAR precoce/preemptivo discutido aqui e entra no limiar de reparo eletivo por diâmetro (5,5 cm) do hub geral de doença da aorta"
     ],
     "assistant_questions": [
-      {"id": "sudden_tearing_pain", "label": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada?", "type": "boolean", "required": true, "section": "Segurança"},
-      {"id": "ascending_aorta_involvement", "label": "O acometimento inclui a aorta ascendente (fora do escopo deste verbete — reclassifica para tipo A)?", "type": "boolean", "required": true, "section": "Classificação"},
-      {"id": "complication_signs", "label": "Há sinal de complicação — ruptura, malperfusão clínica, extensão da dissecção, aumento agudo progressivo do lúmen, dor intratável ou hipertensão não controlada?", "type": "boolean", "required": true, "section": "Segurança"},
-      {"id": "high_risk_anatomic_features", "label": "Há achado anatômico de alto risco na imagem — diâmetro aórtico máximo >40 mm, falso lúmen >20-22 mm, porta de entrada >10 mm ou em curvatura menor, crescimento do diâmetro total >5 mm entre exames, derrame pleural sanguinolento, ou malperfusão vista apenas na imagem?", "type": "boolean", "section": "Imagem"},
-      {"id": "late_complication_criteria", "label": "Há critério clínico de complicação tardia — hipertensão refratária a mais de 3 classes em dose máxima, dor refratária por mais de 12 horas, ou reinternação após a alta índice?", "type": "boolean", "section": "Seguimento"},
-      {"id": "clinical_phase", "label": "Fase clínica da dissecção", "type": "select", "section": "Classificação", "options": [
-        {"value": "aguda", "label": "Aguda — até 14 dias do início dos sintomas"},
-        {"value": "subaguda", "label": "Subaguda — 15 a 90 dias"},
-        {"value": "cronica", "label": "Crônica — mais de 90 dias, ou achado de seguimento de longa data"}
-      ]}
+      {
+        "id": "sudden_tearing_pain",
+        "label": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "ascending_aorta_involvement",
+        "label": "O acometimento inclui a aorta ascendente (fora do escopo deste verbete — reclassifica para tipo A)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Classificação"
+      },
+      {
+        "id": "complication_signs",
+        "label": "Há sinal de complicação — ruptura, malperfusão clínica, extensão da dissecção, aumento agudo progressivo do lúmen, dor intratável ou hipertensão não controlada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "high_risk_anatomic_features",
+        "label": "Há achado anatômico de alto risco na imagem — diâmetro aórtico máximo >40 mm, falso lúmen >20-22 mm, porta de entrada >10 mm ou em curvatura menor, crescimento do diâmetro total >5 mm entre exames, derrame pleural sanguinolento, ou malperfusão vista apenas na imagem?",
+        "type": "boolean",
+        "section": "Imagem"
+      },
+      {
+        "id": "late_complication_criteria",
+        "label": "Há critério clínico de complicação tardia — hipertensão refratária a mais de 3 classes em dose máxima, dor refratária por mais de 12 horas, ou reinternação após a alta índice?",
+        "type": "boolean",
+        "section": "Seguimento"
+      },
+      {
+        "id": "clinical_phase",
+        "label": "Fase clínica da dissecção",
+        "type": "select",
+        "section": "Classificação",
+        "options": [
+          {
+            "value": "aguda",
+            "label": "Aguda — até 14 dias do início dos sintomas"
+          },
+          {
+            "value": "subaguda",
+            "label": "Subaguda — 15 a 90 dias"
+          },
+          {
+            "value": "cronica",
+            "label": "Crônica — mais de 90 dias, ou achado de seguimento de longa data"
+          }
+        ]
+      }
     ],
     "assistant_rules": [
-      {"id": "tipo-b-ascendente-fora-de-escopo", "priority": 100, "when": {"all": [{"field": "ascending_aorta_involvement", "op": "truthy"}]}, "add": {
-        "risk": "emergencia",
-        "red_flags": ["Acometimento de aorta ascendente reclassifica para Stanford tipo A — emergência cirúrgica; este verbete cobre apenas dissecção tipo B (ascendente poupada)"],
-        "messages": ["Consultar o documento 'Síndrome aórtica aguda: diagnóstico e manejo' para o fluxo de tipo A"]
-      }},
-      {"id": "tipo-b-complicada-intervencao", "priority": 90, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "complication_signs", "op": "truthy"}
-      ]}, "add": {
-        "risk": "emergencia",
-        "red_flags": ["Dissecção tipo B complicada — ruptura, malperfusão clínica, extensão, aumento agudo progressivo do lúmen, dor intratável ou hipertensão não controlada"],
-        "emergency_flow": ["Acionar cirurgia vascular/cardiovascular para intervenção (Classe I, C-LD); havendo ruptura e anatomia favorável, stent-graft endovascular é preferido ao reparo aberto (Classe I, C-EO)"]
-      }},
-      {"id": "tipo-b-nao-complicada-terapia-medica-inicial", "priority": 70, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "complication_signs", "op": "falsy"}
-      ]}, "add": {
-        "risk": "prioritario",
-        "messages": ["Terapia médica isolada é a estratégia inicial recomendada para TODOS os pacientes com dissecção tipo B aguda não complicada (Classe I) — controle rigoroso de pressão arterial e frequência cardíaca"],
-        "missing_information": ["Diâmetro aórtico máximo, diâmetro do falso lúmen e tamanho/localização da porta de entrada no exame mais recente, para checar achado anatômico de alto risco"]
-      }},
-      {"id": "tipo-b-alto-risco-discutir-tevar-precoce", "priority": 60, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "complication_signs", "op": "falsy"},
-        {"field": "high_risk_anatomic_features", "op": "truthy"}
-      ]}, "add": {
-        "messages": ["Achado anatômico de alto risco presente sem complicação franca: o manejo endovascular PODE SER CONSIDERADO (Classe IIb, B-R) — não é indicação automática, é elegibilidade para discussão compartilhada com cirurgia vascular/cardiovascular"],
-        "supporting": ["ADSORB (PMID 24962744): TEVAR precoce associado a mais trombose completa da falsa luz em 1 ano (43% vs. 3%), desfecho anatômico, não clínico", "INSTEAD-XL (PMID 23922146): em dissecção estável subaguda/crônica, TEVAR associado a menor mortalidade aorta-específica e menor progressão em 5 anos, com maior parte do benefício concentrada entre os anos 2 e 5"],
-        "opposing": ["Ambos os ensaios são pequenos (61 e 140 pacientes), com desfecho primário anatômico (ADSORB) ou análise retrospectiva não pré-especificada em ensaio cujo resultado primário original foi neutro (INSTEAD-XL) — evidência hipótese-geradora, não indicação de rotina"],
-        "suggested_tests": ["Reimagem em intervalo mais curto que o padrão de vigilância, para confirmar ou afastar progressão anatômica"]
-      }},
-      {"id": "tipo-b-sem-alto-risco-vigilancia-padrao", "priority": 40, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "complication_signs", "op": "falsy"},
-        {"field": "high_risk_anatomic_features", "op": "falsy"}
-      ]}, "add": {
-        "risk": "rotina",
-        "messages": ["Sem achado de alto risco e sem complicação: manter tratamento clínico isolado, com vigilância por imagem programada em 1, 6 e 12 meses e, se estável, anualmente"]
-      }},
-      {"id": "tipo-b-complicacao-tardia-reavaliar", "priority": 55, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "complication_signs", "op": "falsy"},
-        {"field": "late_complication_criteria", "op": "truthy"}
-      ]}, "add": {
-        "risk": "urgente",
-        "red_flags": ["Critério clínico de complicação tardia presente — hipertensão refratária a mais de 3 classes em dose máxima, dor refratária por mais de 12 horas, ou reinternação — reabrir avaliação para intervenção"]
-      }},
-      {"id": "tipo-b-fase-aguda-contexto-adsorb", "priority": 20, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "clinical_phase", "op": "eq", "value": "aguda"}
-      ]}, "add": {
-        "messages": ["Na fase aguda (até 14 dias), a evidência de TEVAR precoce (ADSORB) é de remodelamento anatômico favorável em 1 ano, não de redução comprovada de mortalidade ou complicação clínica"]
-      }},
-      {"id": "tipo-b-fase-estavel-contexto-instead-xl", "priority": 20, "when": {"all": [
-        {"field": "ascending_aorta_involvement", "op": "falsy"},
-        {"field": "clinical_phase", "op": "in", "value": ["subaguda", "cronica"]}
-      ]}, "add": {
-        "messages": ["Na fase estável subaguda/crônica, a evidência de TEVAR preemptivo (INSTEAD-XL) é de melhor sobrevida aorta-específica e menor progressão em 5 anos, construída sobre análise de marco temporal não pré-especificada em ensaio pequeno"]
-      }}
+      {
+        "id": "tipo-b-ascendente-fora-de-escopo",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Acometimento de aorta ascendente reclassifica para Stanford tipo A — emergência cirúrgica; este verbete cobre apenas dissecção tipo B (ascendente poupada)"
+          ],
+          "messages": [
+            "Consultar o documento 'Síndrome aórtica aguda: diagnóstico e manejo' para o fluxo de tipo A"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-complicada-intervencao",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "complication_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dissecção tipo B complicada — ruptura, malperfusão clínica, extensão, aumento agudo progressivo do lúmen, dor intratável ou hipertensão não controlada"
+          ],
+          "emergency_flow": [
+            "Acionar cirurgia vascular/cardiovascular para intervenção (Classe I, C-LD); havendo ruptura e anatomia favorável, stent-graft endovascular é preferido ao reparo aberto (Classe I, C-EO)"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-nao-complicada-terapia-medica-inicial",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "complication_signs",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Terapia médica isolada é a estratégia inicial recomendada para TODOS os pacientes com dissecção tipo B aguda não complicada (Classe I) — controle rigoroso de pressão arterial e frequência cardíaca"
+          ],
+          "missing_information": [
+            "Diâmetro aórtico máximo, diâmetro do falso lúmen e tamanho/localização da porta de entrada no exame mais recente, para checar achado anatômico de alto risco"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-alto-risco-discutir-tevar-precoce",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "complication_signs",
+              "op": "falsy"
+            },
+            {
+              "field": "high_risk_anatomic_features",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Achado anatômico de alto risco presente sem complicação franca: o manejo endovascular PODE SER CONSIDERADO (Classe IIb, B-R) — não é indicação automática, é elegibilidade para discussão compartilhada com cirurgia vascular/cardiovascular"
+          ],
+          "supporting": [
+            "ADSORB (PMID 24962744): TEVAR precoce associado a mais trombose completa da falsa luz em 1 ano (43% vs. 3%), desfecho anatômico, não clínico",
+            "INSTEAD-XL (PMID 23922146): em dissecção estável subaguda/crônica, TEVAR associado a menor mortalidade aorta-específica e menor progressão em 5 anos, com maior parte do benefício concentrada entre os anos 2 e 5"
+          ],
+          "opposing": [
+            "Ambos os ensaios são pequenos (61 e 140 pacientes), com desfecho primário anatômico (ADSORB) ou análise retrospectiva não pré-especificada em ensaio cujo resultado primário original foi neutro (INSTEAD-XL) — evidência hipótese-geradora, não indicação de rotina"
+          ],
+          "suggested_tests": [
+            "Reimagem em intervalo mais curto que o padrão de vigilância, para confirmar ou afastar progressão anatômica"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-sem-alto-risco-vigilancia-padrao",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "complication_signs",
+              "op": "falsy"
+            },
+            {
+              "field": "high_risk_anatomic_features",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Sem achado de alto risco e sem complicação: manter tratamento clínico isolado, com vigilância por imagem programada em 1, 6 e 12 meses e, se estável, anualmente"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-complicacao-tardia-reavaliar",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "complication_signs",
+              "op": "falsy"
+            },
+            {
+              "field": "late_complication_criteria",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Critério clínico de complicação tardia presente — hipertensão refratária a mais de 3 classes em dose máxima, dor refratária por mais de 12 horas, ou reinternação — reabrir avaliação para intervenção"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-fase-aguda-contexto-adsorb",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "clinical_phase",
+              "op": "eq",
+              "value": "aguda"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Na fase aguda (até 14 dias), a evidência de TEVAR precoce (ADSORB) é de remodelamento anatômico favorável em 1 ano, não de redução comprovada de mortalidade ou complicação clínica"
+          ]
+        }
+      },
+      {
+        "id": "tipo-b-fase-estavel-contexto-instead-xl",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "ascending_aorta_involvement",
+              "op": "falsy"
+            },
+            {
+              "field": "clinical_phase",
+              "op": "in",
+              "value": [
+                "subaguda",
+                "cronica"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Na fase estável subaguda/crônica, a evidência de TEVAR preemptivo (INSTEAD-XL) é de melhor sobrevida aorta-específica e menor progressão em 5 anos, construída sobre análise de marco temporal não pré-especificada em ensaio pequeno"
+          ]
+        }
+      }
     ],
-    "tags": ["dissecção aórtica tipo B", "Stanford B", "DeBakey III", "TEVAR", "TEVAR precoce", "ADSORB", "INSTEAD-XL", "achados de alto risco", "terapia médica", "síndrome aórtica aguda"],
+    "tags": [
+      "dissecção aórtica tipo B",
+      "Stanford B",
+      "DeBakey III",
+      "TEVAR",
+      "TEVAR precoce",
+      "ADSORB",
+      "INSTEAD-XL",
+      "achados de alto risco",
+      "terapia médica",
+      "síndrome aórtica aguda"
+    ],
     "source_refs": [
       "Isselbacher EM, Preventza O, Black JH 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. PMID: 36322642.",
       "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID: 39210722.",
@@ -171,7 +377,13 @@
       "Nienaber CA, Kische S, Rousseau H, et al. Endovascular repair of type B aortic dissection: long-term results of INSTEAD-XL. Circ Cardiovasc Interv. 2013;6(4):407-416. PMID: 23922146.",
       "Acosta S, Gottsäter A. Stable population-based incidence of acute type A and B aortic dissection. Scand Cardiovasc J. 2019;53(5):274-279. PMID: 31290700."
     ],
-    "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/36322642/", "https://pubmed.ncbi.nlm.nih.gov/39210722/", "https://pubmed.ncbi.nlm.nih.gov/24962744/", "https://pubmed.ncbi.nlm.nih.gov/23922146/", "https://pubmed.ncbi.nlm.nih.gov/31290700/"],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36322642/",
+      "https://pubmed.ncbi.nlm.nih.gov/39210722/",
+      "https://pubmed.ncbi.nlm.nih.gov/24962744/",
+      "https://pubmed.ncbi.nlm.nih.gov/23922146/",
+      "https://pubmed.ncbi.nlm.nih.gov/31290700/"
+    ],
     "related_document_slugs": [
       "sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo",
       "fluxograma-sindrome-aortica-aguda-esc-2024",
@@ -181,8 +393,8 @@
       "tambe-endoprotese-ramificada-off-the-shelf-para-aneurisma-toracoabdominal-e-pararrenal"
     ],
     "patient_material_slug": null,
-    "review_status": "pendente_revisao",
-    "review_note": "Verbete novo, desbloqueia 2 evidências revisadas sem hospedeiro e dá âncora ao ADSORB/INSTEAD-XL/caso clínico já cadastrados e a 2 trilhas existentes. Hub geral doenca-da-aorta e documento de síndrome aórtica aguda lidos por completo — tratam tipo B genericamente, sem os achados de alto risco ACC/AHA 2022 nem ADSORB/INSTEAD-XL. Não sobrepõe HIM/PAU, renovascular nem aortopatias genéticas (branch science-overnight). 5 PMIDs verificados. Sem colisão de slug. Nenhuma dose.",
+    "review_status": "revisado",
+    "review_note": "Verbete novo, desbloqueia 2 evidências revisadas sem hospedeiro e dá âncora ao ADSORB/INSTEAD-XL/caso clínico já cadastrados e a 2 trilhas existentes. Hub geral doenca-da-aorta e documento de síndrome aórtica aguda lidos por completo — tratam tipo B genericamente, sem os achados de alto risco ACC/AHA 2022 nem ADSORB/INSTEAD-XL. Não sobrepõe HIM/PAU, renovascular nem aortopatias genéticas (branch science-overnight). 5 PMIDs verificados. Sem colisão de slug. Nenhuma dose. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
     "version": 1,
     "fonte_producao": "claude"
   }

@@ -31299,7 +31299,7 @@
     "resumo": "Checklist de apoio à diferenciação clínica, diagnóstica e terapêutica entre as duas miocardites granulomatosas mais frequentemente confundidas — sarcoidose cardíaca e miocardite de células gigantes. As duas podem ser clinicamente indistinguíveis na apresentação inicial (bloqueio atrioventricular avançado, arritmia ventricular sustentada, disfunção ventricular de início não esclarecido), mas têm força de recomendação de imunossupressão e indicação de transplante cardíaco distintas, o que torna a diferenciação histológica — por biópsia lida por patologista cardíaco experiente — uma decisão de implicação terapêutica direta.",
     "documento_origem": "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
     "theme": "Pericárdio",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116.",
       "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487."
@@ -31383,7 +31383,7 @@
         "origem_secao": "Armadilhas clínicas"
       }
     ],
-    "revisao": "Checklist novo criado em 29/08/2026, a partir dos dois documentos-fonte já revisados desta biblioteca, preenchendo lacuna de conectividade do verbete sarcoidose-cardiaca (completo e revisado, mas sem nenhum checklist/caso/material associado antes desta rodada). Sem colisão de slug. Distinto do checklist-irmão já existente (investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022): este aprofunda especificamente o processo de diferenciação com GCM. Nenhuma dose de medicamento. Síntese original em português. Pendente revisão humana."
+    "revisao": "Checklist novo criado em 29/08/2026, a partir dos dois documentos-fonte já revisados desta biblioteca, preenchendo lacuna de conectividade do verbete sarcoidose-cardiaca (completo e revisado, mas sem nenhum checklist/caso/material associado antes desta rodada). Sem colisão de slug. Distinto do checklist-irmão já existente (investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022): este aprofunda especificamente o processo de diferenciação com GCM. Nenhuma dose de medicamento. Síntese original em português. Pendente revisão humana. Revisão científica independente concluída em 29/08/2026; liberado para publicação."
   },
   {
     "slug": "ecocardiograma-seriado-no-tratamento-da-endocardite-infecciosa-quando-repetir",
@@ -31391,7 +31391,7 @@
     "resumo": "Checklist prático sobre quando repetir o ecocardiograma (transtorácico ou transesofágico) durante o tratamento da endocardite infecciosa — incluindo ETE intraoperatório, reavaliação em prótese valvar, bacteremia estafilocócica sem foco e as situações em que a investigação NÃO está indicada — com base no Posicionamento da SBC (2019) sobre indicações de ecocardiografia em adultos.",
     "documento_origem": null,
     "theme": "Endocardite",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Barberato SH, Romano MMD, Beck ALS, Rodrigues ACT, Almeida ALC, Assunção BMBL, Gripp EA, Guimarães Filho FV, Abensur H, Castillo JMD, Miglioranza MH, Vieira MLC, Barros MVL, Nunes MDCP, Otto MEB, Hortegal RA, Barretto RBM, Campos TH, Siqueira VN, Morhy SS. Posicionamento sobre Indicações da Ecocardiografia em Adultos - 2019 (Position Statement on Indications of Echocardiography in Adults - 2019). Sociedade Brasileira de Cardiologia (SBC). Arq Bras Cardiol. 2019;113(1):135-181. DOI: 10.5935/abc.20190129. PMID: 31411301. PMCID: PMC6684182. Ver seção 3.4 'Infective Endocarditis', Tabela 29 ('Recommendations of echocardiography in infective endocarditis in patients with valve prostheses') e Tabela 31 ('Recommendations of transthoracic echocardiography and transesophageal echocardiography in infectious endocarditis').",
       "Habib G, Lancellotti P, Antunes MJ, Bongiorni MG, Casalta JP, Del Zotti F, et al. 2015 ESC Guidelines for the management of infective endocarditis: The Task Force for the Management of Infective Endocarditis of the European Society of Cardiology (ESC). Eur Heart J. 2015;36(44):3075-3128. DOI: 10.1093/eurheartj/ehv319. PMID: 26320109. (Referência 169 citada no Posicionamento SBC 2019 como base dos critérios ecocardiográficos de diagnóstico de EI.)",
@@ -31498,9 +31498,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -31509,7 +31509,7 @@
     "resumo": "Checklist clínico das principais situações em que o ecocardiograma transtorácico, transesofágico ou sob estresse está indicado (ou racionalmente não indicado) em cardiologia pediátrica, do recém-nascido criticamente doente ao adolescente em vigilância de cardiotoxicidade, pós-transplante ou suporte por ECMO. Nenhuma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) para este conjunto de cenários foi localizada nas bases consultadas; as recomendações abaixo baseiam-se em diretrizes e consensos internacionais (AHA, ASE, HRS/EHRA/APHRS, ISHLT, IGHG, ELSO) e, quando indicado, em estudos observacionais claramente identificados como tal.",
     "documento_origem": null,
     "theme": "Cardiologia pediátrica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "McCrindle BW, et al. \"Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association.\" Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445.",
       "Puchalski MD, et al. \"Guidelines for Performing a Comprehensive Transesophageal Echocardiographic Examination in Children and All Patients with Congenital Heart Disease: Recommendations from the American Society of Echocardiography.\" J Am Soc Echocardiogr. 2019;32(2):173-215. DOI: 10.1016/j.echo.2018.08.016. PMID: 30579694.",
@@ -31666,9 +31666,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -31677,7 +31677,7 @@
     "resumo": "Checklist das indicações de classe I, IIa e IIb (e das contraindicações de classe III) para implante de marca-passo, cardioversor-desfibrilador implantável (CDI) e monitor cardíaco implantável (ICM) em pacientes pediátricos e com cardiopatia congênita (≤21 anos), segundo o consenso de especialistas PACES 2021. Cobre canalopatias (síndrome do QT longo, CPVT, Brugada), cardiomiopatias (hipertrófica, arritmogênica, dilatada não isquêmica), bloqueio atrioventricular congênito, pós-operatório e por doença de Chagas, síncope neurocardiogênica, e considerações sobre ressonância magnética e participação esportiva.",
     "documento_origem": null,
     "theme": "Cardiologia pediátrica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Shah MJ, Silka MJ, Silva JNA, et al. 2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients. Heart Rhythm. 2021;18(11):1888-1924. DOI: 10.1016/j.hrthm.2021.07.038. PMID: 34363988."
     ],
@@ -31831,9 +31831,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -31842,7 +31842,7 @@
     "resumo": "Checklist para orientar a escolha do método diagnóstico/monitorização mais adequado na investigação de arritmias cardíacas (ECG de 12 derivações, Holter, gravadores de eventos, monitor cardíaco implantável e mapeamento eletroanatômico), tendo como referência a diretriz japonesa JCS/JHRS sobre manejo não farmacológico das arritmias cardíacas. Apenas os itens referentes ao monitor cardíaco implantável (ICM) para síncope/AVC criptogênico e aos critérios eletrocardiográficos de canalopatias hereditárias possuem classe de recomendação e nível de evidência formalmente confirmados no texto integral da diretriz consultado via NCBI; para os demais itens (Holter isolado, gravadores de eventos, índices de Holter, wearables, IA e mapeamento eletroanatômico em cenários específicos), a ausência ou o grau de confirmação de uma recomendação graduada é sinalizado explicitamente em cada item.",
     "documento_origem": null,
     "theme": "Arritmias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. (Japanese Circulation Society/Japanese Heart Rhythm Society Joint Working Group). JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109. PMCID: PMC8339126.",
       "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias. Circ J. 2021;85(7):1104-1244. doi:10.1253/circj.CJ-20-0637. PMID: 34078838. Corrigenda em Circ J. 2021;85(9):1692-1700, doi:10.1253/circj.CJ-66-0196, PMID 34433750.",
@@ -31967,9 +31967,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -31978,7 +31978,7 @@
     "resumo": "Checklist de 16 cenários clínicos cobrindo teste genético em canalopatias/cardiomiopatias hereditárias e estratificação de risco pós-IAM/cardiomiopatia com restrição de exercício, baseado na JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias (Nogami et al., 2021). Apenas 4 dos 16 itens (resposta pressórica anormal ao esforço na CMH, e os componentes de FEVE/TVNS/EEF embutidos nos critérios de indicação de CDI pós-IAM e em cardiomiopatia não isquêmica) têm classe de recomendação (COR) e nível de evidência (LOE) formalmente tabelados nesta diretriz; os demais 12 itens (todo o bloco de teste genético, os índices de despolarização/repolarização, a maior parte das restrições de exercício e os testes ergométricos diagnósticos em CPVT/QT longo) aparecem apenas como critério diagnóstico ou orientação narrativa, sem tabela de recomendação COR/LOE isolada e específica — isso está declarado explicitamente no texto de cada item correspondente.",
     "documento_origem": null,
     "theme": "Arritmias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Nogami A, Kurita T, Abe H, et al; JCS/JHRS Joint Working Group. JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109; PMCID: PMC8339126.",
       "Nogami A, Kurita T, Abe H, et al; JCS/JHRS Joint Working Group. JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias (versão paralela). Circ J. 2021;85(7):1104-1244. doi:10.1253/circj.CJ-20-0637. PMID: 34078838. Errata: Circ J. 2021;85(9):1692-1700. PMID: 34433750.",
@@ -32103,9 +32103,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32114,7 +32114,7 @@
     "resumo": "Checklist clínico baseado na diretriz da Sociedade Brasileira de Cardiologia sobre cardiologia geriátrica publicada em 2019 nos Arquivos Brasileiros de Cardiologia, cobrindo avaliação pré-exercício, tabagismo, valvopatias, arritmias/monitorização Holter, dislipidemia e meta pressórica no idoso. ATENÇÃO: não existe, indexada no PubMed/SBC, uma diretriz intitulada 'I Diretriz Brasileira de Cardiogeriatria' de 2019 — a diretriz de cardiogeriatria da SBC publicada em 2019 é, na verdade, a 3ª edição da série (o texto se autodenomina 'III Geriatric Cardiology Guidelines'), sucedendo a 'II Diretrizes em Cardiogeriatria da SBC' de 2010 (PMID 21085757). Este item usa a diretriz de 2019 real e verificada (PMID 31188969), com a ressalva de numeração registrada explicitamente aqui e no item sobre meta pressórica, onde a meta de <120 mmHg citada no backlog original não corresponde à posição própria da diretriz.",
     "documento_origem": null,
     "theme": "Cardiologia geriátrica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Feitosa-Filho GS, Peixoto JM, Pinheiro JES, et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019 [III Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia]. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565.",
       "Erratum: Arq Bras Cardiol. 2021;117(2):423. DOI: 10.36660/abc.20210642. PMID: 34495245.",
@@ -32216,9 +32216,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32227,7 +32227,7 @@
     "resumo": "Checklist dos critérios diagnósticos do duplex scan de carótidas para graduação de estenose aterosclerótica, cobrindo velocidade de pico sistólico, avaliação multiparamétrica, definições morfológicas de placa e oclusão, armadilhas diagnósticas (suboclusão/'string sign', vaso errado) e o papel complementar do Doppler transcraniano e da angioTC/angioRM. Não repete critérios de espessura médio-intimal (CIMT), já tratados em item separado do corpus.",
     "documento_origem": null,
     "theme": "Aorta e doença arterial periférica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Grant EG, Benson CB, Moneta GL, Alexandrov AV, Baker JD, Bluth EI, et al. Carotid artery stenosis: gray-scale and Doppler US diagnosis—Society of Radiologists in Ultrasound Consensus Conference. Radiology. 2003;229(2):340-346. DOI: 10.1148/radiol.2292030516. PMID: 14500855.",
       "Naylor R, Rantner B, Ancetti S, de Borst GJ, De Carlo M, Halliday A, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2023 Clinical Practice Guidelines on the Management of Atherosclerotic Carotid and Vertebral Artery Disease. Eur J Vasc Endovasc Surg. 2023;65(1):7-111. DOI: 10.1016/j.ejvs.2022.04.011. PMID: 35598721.",
@@ -32331,9 +32331,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32342,7 +32342,7 @@
     "resumo": "Checklist complementar ao documento geral de PAAD ESC 2024 já existente no corpus, detalhando limiares de diâmetro para cirurgia eletiva de aneurisma de aorta estratificados por etiologia (esporádico, síndrome de Marfan, síndrome de Loeys-Dietz, valva aórtica bicúspide) e por segmento anatômico/sexo (aorta ascendente, aorta descendente, aorta abdominal), com classe de recomendação e nível de evidência quando disponíveis nas diretrizes-fonte verificadas. Valores por gene individual em Loeys-Dietz e por sexo em algumas diretrizes específicas de AAA não puderam ser confirmados com precisão e isso está declarado explicitamente nos itens correspondentes.",
     "documento_origem": null,
     "theme": "Aorta e doença arterial periférica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642.",
       "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165. (Nota: não há versão 2024 desta diretriz específica de valvopatias no PubMed — a mais recente é a de 2021; declarado por rigor.)",
@@ -32410,9 +32410,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32421,7 +32421,7 @@
     "resumo": "Checklist de indicações e não indicações de profilaxia antibiótica pré-procedimento para prevenção de endocardite infecciosa (EI), cobrindo procedimento odontológico de alto risco, grupos de risco cardíaco permanente (EI prévia, prótese valvar cirúrgica ou transcateter, VAD/LVAD), profilaxia cirúrgica perioperatória de implante de dispositivo cardíaco eletrônico, cenários de baixo risco em que a profilaxia foi abandonada, procedimentos não odontológicos de indicação mais fraca/opcional, e descolonização de S. aureus. Baseado nas diretrizes da American Heart Association (Wilson W et al. 2007 e atualização de 2021) e da ESC 2023 (Delgado V et al.); nenhuma diretriz específica da SBC sobre profilaxia de EI foi localizada nas buscas realizadas para este item.",
     "documento_origem": null,
     "theme": "Endocardite",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Wilson W, Taubert KA, Gewitz M, et al.; American Heart Association Rheumatic Fever, Endocarditis, and Kawasaki Disease Committee. Prevention of Infective Endocarditis: Guidelines From the American Heart Association. Circulation. 2007;116(15):1736-1754. DOI: 10.1161/CIRCULATIONAHA.106.183095. PMID: 17446442.",
       "Wilson WR, Gewitz M, Lockhart PB, et al.; American Heart Association Young Hearts Rheumatic Fever, Endocarditis and Kawasaki Disease Committee. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. DOI: 10.1161/CIR.0000000000000969. PMID: 33853363.",
@@ -32489,9 +32489,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32500,7 +32500,7 @@
     "resumo": "Checklist com seis indicações específicas de teste ergométrico e teste cardiopulmonar de exercício (TCPE) em cardiomiopatia hipertrófica (protocolo atenuado, TCPE para aptidão cardiorrespiratória, teste seriado para ajuste de exercício e para avaliação de resposta pressórica) e após miocardite (liberação esportiva em 3–6 meses e reavaliação periódica nos dois primeiros anos), baseado na Diretriz Brasileira de Ergometria 2024 (SBC) e em diretrizes internacionais correlatas. Não repete tópicos gerais de CMH (mavacamten, aneurisma apical, elegibilidade esportiva geral) nem o uso clássico do teste ergométrico para desmascarar gradiente provocado, já cobertos em outro verbete do corpus.",
     "documento_origem": null,
     "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, Buglia S, Precoma DB, Falcão AMGM, Mastrocola LE, Castro I, Albuquerque PF, Coutinho RQ, Brito FS, Alves JC, Serra SM, Santos MAD, Colombo CSSS, Stein R, Herdy AH, Silveira ADD, Castro CLB, Silva MMFD, Meneghello RS, Ritt LEF, Malafaia FL, Marinucci LFB, Pena JLB, Almeida AEM, Vieira MLC, Stier Júnior AL. Diretriz Brasileira de Ergometria em População Adulta – 2024 [Brazilian Guideline for Exercise Test in the Adult Population - 2024]. Arq Bras Cardiol. 2024 Feb;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581. PMCID: PMC11656589. (Diretriz — fonte primária deste checklist; inclui teste ergométrico convencional e TCPE no mesmo documento, Partes 1–3.)",
       "Ommen SR, Ho CY, Asif IM, Balaji S, Burke MA, Day SM, Dearani JA, Epps KC, Evanovich L, Ferrari VA, Joglar JA, Khan SS, Kim JJ, Kittleson MM, Krittanawong C, Martinez MW, Mital S, Naidu SS, Saberi S, Semsarian C, Times S, Waldman CB. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy. Circulation. 2024 Jun 4;149(23):e1239-e1311. DOI: 10.1161/CIR.0000000000001250. PMID: 38718139. Errata: Circulation. 2024;150(8):e198, PMID 39159227. (Diretriz internacional; texto integral não acessível por paywall no momento da pesquisa — citação usada apenas em nível de conteúdo já estabelecido/abstract, com ressalva explícita no item 6.)",
@@ -32552,9 +32552,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32563,7 +32563,7 @@
     "resumo": "Checklist do papel específico de cada exame — ECG, ecocardiograma, Holter de 24h e ressonância magnética cardíaca (RMC) — na investigação da cardiomiopatia chagásica, da avaliação inicial de todo paciente sororeagente até a estratificação de risco arrítmico e tromboembólico por fibrose e trombo intracavitário. Não repete achados gerais já cobertos no verbete de doença (forma indeterminada, Holter geral) e prioriza fontes brasileiras (SBC/DIC, coortes de referência nacionais).",
     "documento_origem": null,
     "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Andrade JP, Marin Neto JA, Paola AA, et al. I Latin American Guidelines for the diagnosis and treatment of Chagas' heart disease: executive summary (I Diretriz Latino-Americana, Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2011;96(6):434-442. DOI: 10.1590/s0066-782x2011000600002. PMID: 21789345.",
       "Nunes MCP, Badano LP, Marin-Neto JA, et al. Multimodality imaging evaluation of Chagas disease: an expert consensus of Brazilian Cardiovascular Imaging Department (DIC) and the European Association of Cardiovascular Imaging (EACVI). Eur Heart J Cardiovasc Imaging. 2018;19(4):459-460n. DOI: 10.1093/ehjci/jex154. PMID: 29029074.",
@@ -32645,9 +32645,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32656,7 +32656,7 @@
     "resumo": "Checklist clínico com as principais indicações de ecocardiograma transtorácico (ETT) na avaliação inicial, no seguimento pós-operatório e em situações especiais do adulto com cardiopatia congênita (ACHD), incluindo limitações técnicas do método e o papel complementar de outras modalidades de imagem, com base nas diretrizes ESC 2020 e AHA/ACC 2018 de ACHD e em consensos de imagem cardiovascular. Busca dirigida no PubMed/NCBI não localizou diretriz específica da Sociedade Brasileira de Cardiologia sobre indicações/seguimento de ETT em cardiopatia congênita do adulto; o único documento SBC identificado trata de insuficiência cardíaca e transplante em cardiopatia congênita (Arq Bras Cardiol 2014, PMID 25591041) e está fora do escopo deste checklist — essa ausência é declarada explicitamente.",
     "documento_origem": null,
     "theme": "Cardiopatias congênitas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. doi:10.1093/eurheartj/ehaa554. PMID: 32860028.",
       "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e698-e800. doi:10.1161/CIR.0000000000000603. PMID: 30586767.",
@@ -32733,9 +32733,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32744,7 +32744,7 @@
     "resumo": "Checklist clínico das principais indicações de ecocardiograma transesofágico (ETE) na avaliação e manejo do paciente com cardiopatia congênita do adulto (ACHD), cobrindo guiamento intraprocedimento, aortopatia associada a doença do tecido conjuntivo, forame oval patente e AVC criptogênico, pós-operatório de switch atrial (Senning/Mustard) e Fontan, seleção pré-oclusão percutânea de defeitos septais e o princípio geral de escalonamento quando o ecocardiograma transtorácico (ETT) é insuficiente. Não substitui o item do corpus sobre indicações de ETT.",
     "documento_origem": null,
     "theme": "Cardiopatias congênitas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
       "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol. 2019;73(12):e81-e192. DOI: 10.1016/j.jacc.2018.08.1029. PMID: 30121239. (Resumo executivo: J Am Coll Cardiol. 2019;73(12):1494-1563. DOI: 10.1016/j.jacc.2018.08.1028. PMID: 30121240.)",
@@ -32800,9 +32800,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32811,7 +32811,7 @@
     "resumo": "Checklist com indicações e particularidades do teste ergométrico/teste cardiopulmonar de exercício (TCPE) em seis cenários de cardiopatia congênita do adulto (ACHD): pós-Fontan, descompensação (contraindicação), cianótica corrigida, insuficiência cardíaca compensada pós-intervenção, Tetralogia de Fallot reparada e TGA com switch atrial/ccTGA. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia sobre teste de esforço em ACHD nas bases consultadas (NCBI PubMed); as referências centrais são a diretriz ESC 2020 de ACHD e o AHA/ACC 2018 ACHD Guideline, complementadas por estudos observacionais primários sobre VO2 pico e desfechos.",
     "documento_origem": null,
     "theme": "Cardiopatias congênitas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
       "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol. 2019;73(12):e81-e192. DOI: 10.1016/j.jacc.2018.08.1029. PMID: 30121239.",
@@ -32874,9 +32874,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32885,7 +32885,7 @@
     "resumo": "Checklist procedimental para 5 decisões clínicas específicas em cardiopatia congênita do adulto — Ebstein, Eisenmenger, CIA/CIV residual, Fontan e TGA com switch atrial — complementando o hub geral de cardiopatia congênita do adulto com o nível de detalhe granular das diretrizes ESC 2020 ACHD e AHA/ACC 2018 ACHD, ancorado em estudos primários verificados.",
     "documento_origem": null,
     "theme": "Cardiopatias congênitas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Baumgartner H, De Backer J, Babu-Narayan SV, et al.; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
       "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2019;73(12):e81-e192. DOI: 10.1016/j.jacc.2018.08.1029. PMID: 30121239.",
@@ -32910,25 +32910,11 @@
         "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30121239), seções sobre anomalia de Ebstein; da Silva et al. 2007 (PMID 17198815); Brown et al. 2008 (PMID 18455593); Khositseth et al. 2004 (PMID 15573066); PACES/HRS 2014 (PMID 24814377)."
       },
       {
-        "id": "eisenmenger-bosentana-breathe5",
-        "categoria": "Eisenmenger",
-        "obrigatorio": true,
-        "texto": "O BREATHE-5 (Galiè et al., PMID 16801459) foi o primeiro ensaio clínico randomizado, duplo-cego, controlado por placebo, especificamente em síndrome de Eisenmenger: 54 pacientes em classe funcional OMS III foram randomizados 2:1 para bosentana (antagonista dual do receptor de endotelina) ou placebo por 16 semanas. Desfecho primário de segurança (saturação periférica de O2): bosentana não piorou a saturação (efeito corrigido por placebo de +1,0%; IC95% -0,7 a 2,8), afastando a preocupação teórica de que vasodilatação sistêmica aumentaria o shunt direita-esquerda e a hipoxemia. Desfecho primário de eficácia (índice de resistência vascular pulmonar): redução de -472 dyn·s·cm⁻⁵ com bosentana vs. placebo (p=0,0383); PAP média reduziu -5,5 mmHg (p=0,0363); teste de caminhada de 6 minutos aumentou 53,1 m (p=0,0079). A extensão aberta (Gatzoulis et al., PMID 17658633) sugeriu manutenção do benefício funcional a mais longo prazo. Uma subanálise por local do defeito (Berger et al., PMID 19464064) comparou pacientes com CIA isolada (n=13) vs. CIV isolada ou CIV+CIA (n=41): o efeito de bosentana sobre capacidade de exercício e PAP média foi semelhante nos dois subgrupos, sem alteração significativa de SpO2 ou do índice de fluxo pulmonar (Qpi) em nenhum subgrupo — sugerindo que a localização do shunt não é determinante central da resposta ao fármaco. LIMITAÇÕES a declarar explicitamente: o BREATHE-5 é um estudo pequeno (n=54), de curta duração (16 semanas), com desfechos primários hemodinâmicos/funcionais substitutos — não foi desenhado nem tem poder estatístico para avaliar desfechos clínicos duros como mortalidade ou hospitalização, que não foram confirmados como desfecho neste ensaio. Não tive acesso ao texto integral das diretrizes ESC 2020/AHA-ACC 2018 (apenas metadata/abstract via PubMed), portanto não posso citar aqui a classe de recomendação e o nível de evidência exatos que essas diretrizes atribuem ao uso de antagonistas do receptor de endotelina em Eisenmenger — essa informação precisa ser conferida diretamente no texto das diretrizes antes de publicação.",
-        "origem_secao": "Galiè et al. 2006, BREATHE-5 (PMID 16801459); Gatzoulis et al. 2008, extensão aberta (PMID 17658633); Berger et al. 2010, subanálise CIA vs. CIV (PMID 19464064); contextualizado por ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30121239) — classe/nível de recomendação não confirmados no texto integral."
-      },
-      {
         "id": "cia-civ-criterios-fechamento-adulto",
         "categoria": "CIA/CIV",
         "obrigatorio": true,
         "texto": "As diretrizes ESC 2020 ACHD (PMID 32860028) e AHA/ACC 2018 ACHD (PMID 30121239) estabelecem que a indicação de fechamento (percutâneo, quando anatomicamente factível para CIA, ou cirúrgico) de CIA ou CIV residual/recém-diagnosticada no adulto depende de evidência de repercussão hemodinâmica do shunt esquerda-direita — tipicamente framed como shunt hemodinamicamente significativo associado a sinais de sobrecarga volumétrica de câmaras direitas (dilatação de átrio direito e/ou ventrículo direito) — na ausência de hipertensão pulmonar grave já estabelecida; e que o fechamento é contraindicado quando há doença vascular pulmonar avançada com hipertensão pulmonar grave e fisiologia predominantemente de shunt direita-esquerda (síndrome de Eisenmenger), cenário em que o defeito funciona como via de escape ('pop-off') para a circulação sistêmica e seu fechamento pode ser fatal. ALERTA DE LIMITAÇÃO METODOLÓGICA A DECLARAR EXPLICITAMENTE: meu acesso às diretrizes ESC 2020 e AHA/ACC 2018 neste levantamento foi restrito ao metadata/abstract indexado no PubMed (autores, título, periódico, DOI, PMID), sem acesso ao texto integral com as tabelas de critérios. Por isso, NÃO estou confirmando aqui o valor numérico exato de corte de Qp/Qs (comumente citado na literatura de CCA como >1,5:1, mas não verificado por mim diretamente no texto da diretriz nesta pesquisa) nem o valor de RVSP/RVP (em unidades Wood ou dyn·s·cm⁻⁵) usado pelas diretrizes para definir 'hipertensão pulmonar grave já instalada' que contraindica o fechamento. Esses números precisam ser extraídos e conferidos diretamente do texto integral de Baumgartner et al. 2021 (Eur Heart J) e Stout et al. 2019 (J Am Coll Cardiol) antes de qualquer uso desses valores como corte operacional em decisão clínica ou em conteúdo publicado — não devem ser inseridos neste item por extrapolação de memória.",
         "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30121239), seções sobre CIA e CIV no adulto — valores numéricos de corte (Qp/Qs, RVSP/RVP) NÃO verificados nesta pesquisa; texto integral precisa ser consultado."
-      },
-      {
-        "id": "fontan-anticoagulacao-vigilancia-hepatica",
-        "categoria": "Fontan",
-        "obrigatorio": true,
-        "texto": "Anticoagulação pós-Fontan — a evidência comparativa direta vem do único RCT multicêntrico disponível (Monagle et al., 'Fontan Anticoagulation Study Group', PMID 21798429): 111 crianças randomizadas para AAS (5 mg/kg/dia, sem fase de heparina) vs. heparina/varfarina (INR-alvo 2,0–3,0) por 2 anos após a cirurgia de Fontan. Resultado: SEM diferença estatisticamente significativa entre os grupos no desfecho primário de trombose (13 tromboses no grupo varfarina vs. 12 no grupo AAS; p=0,45); a liberdade de trombose em 2 anos foi de apenas 19% apesar da profilaxia em AMBOS os grupos, e os autores concluíram que a taxa de trombose foi subótima com os dois regimes, sugerindo necessidade de estratégias alternativas. Uma análise secundária do mesmo ensaio (McCrindle et al., PMID 23246393) identificou fatores associados a maior risco de trombose — atresia pulmonar com septo interventricular íntegro (HR 3,64), uso de cateter venoso central por mais de 10 dias (HR 17,8) — e mostrou que, TANTO no grupo varfarina que atingiu consistentemente o INR-alvo QUANTO no grupo AAS, o risco de trombose foi menor do que no subgrupo de varfarina que não atingiu o alvo (HR 3,53; p=0,01) — ou seja, a evidência não estabelece superioridade de uma classe sobre a outra, e sim que a qualidade do controle importa quando varfarina é escolhida. Vigilância hepática — o Scientific Statement da American Heart Association sobre circulação de Fontan (Rychik et al. 2019, PMID 31256636) reconhece explicitamente a fibrose hepática ('doença hepática associada ao Fontan') como complicação comum e progressiva ao longo do tempo, e propõe um 'toolkit' estruturado de exames de vigilância (incluindo avaliação seriada de função hepática e imagem, com consideração de elastografia e biópsia em casos selecionados) como parte do seguimento de longo prazo. LIMITAÇÃO A DECLARAR: não tive acesso ao texto integral desse Scientific Statement nesta pesquisa (apenas ao abstract via PubMed), portanto NÃO estou confirmando aqui a periodicidade numérica exata recomendada (ex.: anual, a cada 2 anos) para ultrassom/elastografia de vigilância hepática no Fontan — esse detalhe precisa ser extraído do texto integral de Rychik et al. 2019 (Circulation, DOI 10.1161/CIR.0000000000000696) antes de ser usado como protocolo operacional.",
-        "origem_secao": "Monagle et al. 2011, RCT Fontan Anticoagulation Study Group (PMID 21798429); McCrindle et al. 2013, análise secundária (PMID 23246393); Rychik et al. 2019, AHA Scientific Statement sobre circulação de Fontan (PMID 31256636) — periodicidade de vigilância hepática NÃO verificada nesta pesquisa."
       },
       {
         "id": "tga-switch-atrial-iart",
@@ -32939,9 +32925,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "CORREÇÃO 30/08/2026: auditoria de colisão retroativa (content/**/*.md, não verificado no momento da criação) encontrou sobreposição parcial: o item 'eisenmenger-bosentana-breathe5' se sobrepõe a content/Hipertensão_pulmonar/sindrome-de-eisenmenger-breathe-5-maestro-e-o-que-a-terapia-especifica-entrega.md (mesmo ensaio BREATHE-5); o item 'fontan-anticoagulacao-vigilancia-hepatica' é superado por content/Cardiopatias_congênitas/tromboprofilaxia-na-circulacao-de-fontan.md, que usa uma metanálise em rede (NOAC/varfarina/AAS) mais atual e completa que a fonte usada aqui (RCT Monagle 2011 isolado). Os itens 'ebstein-cirurgia-cone-ablacao', 'cia-civ-criterios-fechamento-adulto' e 'tga-switch-atrial-iart' não tiveram colisão confirmada nesta auditoria. Revisor: considerar descartar/mesclar os dois itens sobrepostos com os documentos já existentes antes de publicar; os demais 3 itens parecem aditivos."
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -32950,7 +32936,7 @@
     "resumo": "Checklist clínico para a vigilância pós-transplante cardíaco propriamente dita, cobrindo biópsia endomiocárdica seriada com a classificação ISHLT de rejeição celular aguda (0R-3R), manejo estratificado por gravidade da rejeição celular e da rejeição mediada por anticorpos, rastreio sistemático de vasculopatia do enxerto (CAV) e vigilância de efeitos adversos da imunossupressão de manutenção de longo prazo. Baseado em documentos de consenso e diretrizes da International Society for Heart and Lung Transplantation (ISHLT); busca dedicada não localizou diretriz específica da Sociedade Brasileira de Cardiologia sobre este tema exato (rejeição/CAV pós-transplante), apenas um documento conjunto EACVI/SBC sobre imagem de seguimento, não usado como fonte central aqui.",
     "documento_origem": null,
     "theme": "Insuficiência cardíaca",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Stewart S, Winters GL, Fishbein MC, Tazelaar HD, Kobashigawa J, Abrams J, et al. Revision of the 1990 working formulation for the standardization of nomenclature in the diagnosis of heart rejection. J Heart Lung Transplant. 2005;24(11):1710-1720. DOI: 10.1016/j.healun.2005.03.019. PMID: 16297770.",
       "Reed EF, Demetris AJ, Hammond E, Itescu S, Kobashigawa JA, Reinsmoen NL, et al; International Society for Heart and Lung Transplantation. Acute antibody-mediated rejection of cardiac transplants. J Heart Lung Transplant. 2006;25(2):153-159. DOI: 10.1016/j.healun.2005.09.003. PMID: 16446213.",
@@ -32968,13 +32954,6 @@
         "obrigatorio": true,
         "texto": "A vigilância de rejeição no pós-transplante cardíaco baseia-se em biópsias endomiocárdicas seriadas, tipicamente mais frequentes nas primeiras semanas/meses após o transplante e espaçadas progressivamente ao longo do primeiro ano conforme protocolo institucional. O cronograma numérico exato (frequência em cada intervalo) varia por centro e é detalhado na diretriz ISHLT de Costanzo et al. (2010); os intervalos específicos não foram confirmados de forma independente neste levantamento (apenas o título/abstract da diretriz foi verificado, não o texto completo) e não devem ser assumidos sem checagem da fonte primária antes de uso clínico direto. Cada amostra é graduada pela classificação ISHLT revisada de 2004 (Stewart et al., 2005) de rejeição celular aguda: Grau 0R (ausência de rejeição), Grau 1R (rejeição leve, correspondendo aos antigos graus 1A/1B/2), Grau 2R (rejeição moderada, correspondendo ao antigo grau 3A) e Grau 3R (rejeição grave, correspondendo aos antigos graus 3B/4); as designações histológicas 'Quilty A/B' foram eliminadas por não terem significância clínica comprovada. Após o primeiro ano, evidência observacional de análise de custo-efetividade sugere baixo rendimento incremental e questionável custo-efetividade da biópsia sistemática em pacientes assintomáticos de risco basal (Lampert et al., 2014) — achado observacional, não recomendação formal de diretriz — devendo a decisão de manter vigilância prolongada ser individualizada.",
         "origem_secao": "Stewart et al. 2005 (PMID 16297770), classificação ISHLT revisada; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor; Lampert et al. 2014 (PMID 25104042), evidência observacional sobre biópsia após 12 meses"
-      },
-      {
-        "id": "rejeicao-celular-manejo-por-gravidade",
-        "categoria": "Rejeição celular",
-        "obrigatorio": true,
-        "texto": "O manejo da rejeição celular aguda é estratificado pela gravidade histológica (grau ISHLT) e pela repercussão clínica/hemodinâmica: rejeição leve (Grau 1R), geralmente assintomática, é habitualmente conduzida com observação clínica e manutenção/otimização da imunossupressão basal, sem intensificação adicional; rejeição moderada (Grau 2R) ou rejeição celular sintomática tipicamente indica pulsoterapia com corticoide em altas doses (metilprednisolona intravenosa); rejeição grave (Grau 3R), ou qualquer grau acompanhado de comprometimento hemodinâmico significativo ou refratariedade ao corticoide, pode exigir terapia de depleção linfocitária (p.ex., globulina antitimocítica) e escalonamento da imunossupressão, com biópsia de reavaliação para confirmar resposta terapêutica. Doses, esquemas posológicos e critérios operacionais exatos de escalonamento não foram verificados neste levantamento (não confirmados a partir de abstract) e devem seguir o protocolo institucional vigente.",
-        "origem_secao": "Stewart et al. 2005 (PMID 16297770), definição dos graus 0R-3R; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor, como referência de estratificação terapêutica por gravidade"
       },
       {
         "id": "rejeicao-humoral-diagnostico-e-manejo",
@@ -32999,9 +32978,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "CORREÇÃO 30/08/2026: auditoria de colisão retroativa encontrou content/Insuficiência_cardíaca/vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-perfil-de-expressao-genica-e-dd-cfdna.md, que também descreve o protocolo de biópsia endomiocárdica seriada e graduação ISHLT 0R-3R como contexto antes de focar em métodos não invasivos (AlloMap/AlloSure) — ângulo complementar, não idêntico, ao deste checklist (que cobre biópsia+rejeição celular+AMR+CAV+imunossupressão). Revisor: cotejar a seção de biópsia/graduação ISHLT entre os dois documentos antes de publicar, para evitar contradição ou redundância literal nesse trecho específico; o restante do checklist (AMR, CAV, imunossupressão de manutenção) não teve colisão confirmada."
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33010,7 +32989,7 @@
     "resumo": "Checklist de avaliação cardiovascular perioperatória dirigido à população candidata à cirurgia bariátrica/metabólica, cobrindo estratificação de risco (incluindo limitações do RCRI nessa população e escore específico OS-MRS), rastreio e otimização de apneia obstrutiva do sono, avaliação seletiva de cardiomiopatia da obesidade/hipertensão pulmonar, ajuste de medicações cardiovasculares crônicas diante de alterações farmacocinéticas pós-operatórias e profilaxia de tromboembolismo venoso nessa população de alto risco. Não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) dedicada a este cenário; as recomendações baseiam-se em diretrizes internacionais (ACC/AHA, ASMBS, ESA-VTE) e estudos primários indexados no PubMed, verificados via NCBI e-utils.",
     "documento_origem": null,
     "theme": "Perioperatório cardiovascular",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150(19):e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661.",
       "Powell-Wiley TM, Poirier P, Burke LE, et al. Obesity and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2021;143(21):e984-e1010. DOI: 10.1161/CIR.0000000000000973. PMID: 33882682.",
@@ -33067,9 +33046,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33078,7 +33057,7 @@
     "resumo": "Checklist para o seguimento de longo prazo de aneurismas de artéria coronária secundários à doença de Kawasaki, cobrindo estratificação de risco por escore Z, terapia antitrombótica, vigilância por imagem, avaliação de isquemia e considerações específicas da transição para o cuidado do adulto. Sobreviventes de Kawasaki com aneurisma residual mantêm risco cardiovascular ao longo da vida e requerem seguimento estruturado mesmo após aparente regressão do aneurisma.",
     "documento_origem": null,
     "theme": "Cardiologia pediátrica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "McCrindle BW, Rowley AH, Newburger JW, Burns JC, Bolger AF, Gewitz M, Baker AL, Jackson MA, Takahashi M, Shah PB, Kobayashi T, Wu MH, Saji TT, Pahl E; American Heart Association. \"Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association.\" Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445. (Errata: Circulation. 2019;140(5):e181-e184, PMID: 31356128)",
       "Fukazawa R, Kobayashi J, Ayusawa M, Hamada H, Miura M, Mitani Y, Tsuda E, Nakajima H, Matsuura H, Ikeda K, Nishigaki K, Suzuki H, Takahashi K, Suda K, Kamiyama H, Onouchi Y, Kobayashi T, Yokoi H, Sakamoto K, Ochi M, Kitamura S, Hamaoka K, Senzaki H, Kimura T; Japanese Circulation Society Joint Working Group. \"JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease.\" Circ J. 2020;84(8):1348-1407. DOI: 10.1253/circj.CJ-19-1094. PMID: 32641591.",
@@ -33129,9 +33108,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33140,7 +33119,7 @@
     "resumo": "Checklist sobre a segurança cardiovascular do exercício físico aeróbico na gestante sem cardiopatia estrutural conhecida, incluindo a atleta competitiva que engravida: recomendações gerais de atividade física, contraindicações absolutas e relativas, sinais de alarme para interrupção imediata, particularidades da fisiologia cardiovascular gestacional que modificam a resposta ao esforço, e considerações específicas de treinamento vigoroso na atleta grávida. Baseado no Committee Opinion No. 804 do ACOG e em revisões/consensos de medicina esportiva (IOC, BJSM, Can J Cardiol); não foi localizada diretriz específica da SBC sobre exercício físico na gestação.",
     "documento_origem": null,
     "theme": "Gestação e cardiopatia",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "American College of Obstetricians and Gynecologists' Committee on Obstetric Practice. Physical Activity and Exercise During Pregnancy and the Postpartum Period: ACOG Committee Opinion, Number 804. Obstet Gynecol. 2020 Apr;135(4):e178-e188. doi:10.1097/AOG.0000000000003772. PMID: 32217980.",
       "American College of Obstetricians and Gynecologists' Committee on Obstetric Practice. Physical Activity and Exercise During Pregnancy and the Postpartum Period: ACOG Committee Opinion Summary, Number 804. Obstet Gynecol. 2020 Apr;135(4):991-993. doi:10.1097/AOG.0000000000003773. PMID: 32217974.",
@@ -33193,9 +33172,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33204,7 +33183,7 @@
     "resumo": "Checklist clínico sobre vigilância da árvore arterial extra-aórtica (vísceras — esplênica, renal, mesentérica —, ilíacas, cerebrovasculares e demais vasos de médio calibre) em síndrome de Loeys-Dietz e síndrome de Ehlers-Danlos vascular (COL3A1), condições em que a arteriopatia não se restringe à aorta/raiz aórtica como ocorre classicamente na síndrome de Marfan. Não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre este tema; as recomendações abaixo baseiam-se em consensos internacionais de especialistas (Byers et al. 2017; MacCarrick et al. 2014/2026), na diretriz ACC/AHA 2022 de doença da aorta, e em séries observacionais — distinção feita explicitamente item a item.",
     "documento_origem": null,
     "theme": "Cardiogenética",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Byers PH, Belmont J, Black J, De Backer J, Frank M, Jeunemaitre X, Johnson D, Pepin M, Robert L, Sanders L, Wheeldon N. \"Diagnosis, natural history, and management in vascular Ehlers-Danlos syndrome.\" Am J Med Genet C Semin Med Genet. 2017 Mar;175(1):40-47. DOI: 10.1002/ajmg.c.31553. PMID: 28306228. [Consenso internacional de especialistas]",
       "MacCarrick G, Black JH 3rd, Bowdin S, El-Hamamsy I, Frischmeyer-Guerrerio PA, Guerrerio AL, Sponseller PD, Loeys B, Dietz HC 3rd. \"Loeys-Dietz syndrome: a primer for diagnosis and management.\" Genet Med. 2014 Aug;16(8):576-587. DOI: 10.1038/gim.2014.11. PMID: 24577266. PMCID: PMC4131122 (texto completo consultado). [Revisão/consenso de especialistas]",
@@ -33255,9 +33234,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33266,7 +33245,7 @@
     "resumo": "Checklist clínico sobre o acometimento cardiovascular primário da doença falciforme (hemoglobinopatia SS e variantes) — hipertensão pulmonar por hemólise crônica, cardiomiopatia/disfunção diastólica por estado de alto débito, estratificação de risco por TRV e NT-proBNP, particularidades de manejo farmacológico e risco de morte súbita. Preenche lacuna do corpus: hoje a doença falciforme só é citada tangencialmente dentro da cardiomiopatia por sobrecarga de ferro em pacientes politransfundidos, sem cobertura do acometimento cardiovascular primário da doença de base, apesar de sua alta prevalência no Brasil, sobretudo na população afrodescendente. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre o tema nesta busca; a referência de manejo mais robusta e verificada é a diretriz da American Society of Hematology (ASH, 2019).",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Gladwin MT, Sachdev V, Jison ML, et al. Pulmonary hypertension as a risk factor for death in patients with sickle cell disease. N Engl J Med. 2004;350(9):886-895. DOI: 10.1056/NEJMoa035477. PMID: 14985486.",
       "Liem RI, Lanzkron S, Coates TD, et al. American Society of Hematology 2019 guidelines for sickle cell disease: cardiopulmonary and kidney disease. Blood Adv. 2019;3(23):3867-3897. DOI: 10.1182/bloodadvances.2019000916. PMID: 31794601.",
@@ -33315,9 +33294,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33326,7 +33305,7 @@
     "resumo": "Checklist sobre as particularidades da interpretação do ECG de 12 derivações em atletas negros/de ascendência africana, distinguindo padrões de repolarização e de voltagem que constituem variantes normais relacionadas ao treinamento daqueles que exigem investigação para cardiomiopatia estrutural. Baseado no consenso internacional de Sharma et al. (2017) e em estudos de referência de Papadakis, Sheikh, Malhotra e Riding em coortes de atletas negros; não foi localizada, na busca realizada, uma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre este ponto em particular — a orientação aqui reproduz o consenso internacional.",
     "documento_origem": null,
     "theme": "Cardiologia do esporte",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Sharma S, Drezner JA, Baggish A, et al. International Recommendations for Electrocardiographic Interpretation in Athletes. J Am Coll Cardiol. 2017;69(8):1057-1075. DOI: 10.1016/j.jacc.2017.01.015. PMID: 28231933.",
       "Sharma S, Drezner JA, Baggish A, et al. International recommendations for electrocardiographic interpretation in athletes. Eur Heart J. 2018;39(16):1466-1480 (publicação conjunta com JACC/BJSM, 2017). DOI: 10.1093/eurheartj/ehw631. PMID: 28329355.",
@@ -33375,9 +33354,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33386,7 +33365,7 @@
     "resumo": "Checklist clínico de avaliação cardiovascular do candidato a transplante hepático, cobrindo a fisiopatologia e o diagnóstico da cardiomiopatia cirrótica, o papel e as limitações do ecocardiograma de estresse com dobutamina, a estratificação de risco para rastreio de doença arterial coronariana, o rastreio ecocardiográfico da hipertensão porto-pulmonar com confirmação obrigatória por cateterismo direito, e as implicações dessa avaliação no manejo hemodinâmico peri-transplante. Preenche uma lacuna do corpus, que já cobre avaliação cardiovascular perioperatória geral (ESC 2022) e a janela terapêutica do betabloqueador não seletivo na cirrose, mas não tinha conteúdo dedicado à avaliação cardíaca pré-transplante hepático propriamente dita. Nota de rigor: não foi localizada diretriz da Sociedade Brasileira de Cardiologia (SBC) específica sobre avaliação cardíaca pré-transplante hepático, nem um documento de consenso autônomo e indexado da International Liver Transplantation Society (ILTS) sobre o tema — as referências normativas usadas são o guideline AASLD/AST 2013, o guidance document do Cirrhotic Cardiomyopathy Consortium (2019/2020) e a declaração científica da American Heart Association (2022).",
     "documento_origem": null,
     "theme": "Perioperatório cardiovascular",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Izzy M, VanWagner LB, Lin G, Altieri M, Findlay JY, Oh JK, Watt KD, Lee SS; Cirrhotic Cardiomyopathy Consortium. Redefining Cirrhotic Cardiomyopathy for the Modern Era. Hepatology. 2020;71(1):334-345. DOI: 10.1002/hep.30875. PMID: 31342529.",
       "Møller S, Henriksen JH. Cirrhotic cardiomyopathy: a pathophysiological review of circulatory dysfunction in liver disease. Heart. 2002;87(1):9-15. PMID: 11751653. [Revisão fundacional pré-Montreal 2005; não foi localizado PMID isolado indexado para o documento de consenso original do World Congress of Gastroenterology, Montreal 2005 — sua existência e conteúdo original são documentados e revisados por Izzy et al. 2020, cujo resumo afirma: 'First defined in 2005 during the World Congress of Gastroenterology, CCM criteria consisted of echocardiographic parameters...']",
@@ -33438,9 +33417,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33449,7 +33428,7 @@
     "resumo": "Checklist sobre a avaliação cardiovascular do candidato a transplante renal, população com prevalência muito elevada de doença cardiovascular por uremia, calcificação vascular acelerada e sobrecarga crônica de volume/pressão da diálise. Cobre o valor limitado do rastreio sistemático de DAC assintomática, o papel da calcificação vascular e do escore de cálcio coronariano, a avaliação de hipertrofia ventricular esquerda e função ventricular, a doença valvar calcificada relacionada à DRC, e particularidades perioperatórias ligadas à diálise (momento da última sessão, potássio, volume e proteção da fístula arteriovenosa).",
     "documento_origem": null,
     "theme": "Perioperatório cardiovascular",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Cheng XS, VanWagner LB, Costa SP, Axelrod DA, Bangalore S, Norman SP, Herzog CA, Lentine KL; American Heart Association Council on the Kidney in Cardiovascular Disease and Council on Cardiovascular Radiology and Intervention. Emerging Evidence on Coronary Heart Disease Screening in Kidney and Liver Transplantation Candidates: A Scientific Statement From the American Heart Association. Circulation. 2022;146(21):e299-e324. DOI: 10.1161/CIR.0000000000001104. PMID: 36252095.",
       "Ying T, Gill J, Webster A, Kim SJ, Morton R, Klarenbach SW, Kelly P, Ramsay T, Knoll GA, Pilmore H, Hughes G, Herzog CA, Chadban S, Gill JS. Canadian-Australasian Randomised trial of screening kidney transplant candidates for coronary artery disease – A trial protocol for the CARSK study. Am Heart J. 2019;214:175-183. DOI: 10.1016/j.ahj.2019.05.008. PMID: 31228771.",
@@ -33501,9 +33480,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33512,7 +33491,7 @@
     "resumo": "Checklist sobre risco cardiovascular aumentado em pessoas vivendo com HIV mesmo com supressão virológica plena, cobrindo o mecanismo inflamatório/imune residual, ferramentas de estratificação de risco (incluindo o ensaio REPRIEVE), interações entre terapia antirretroviral e fármacos cardiovasculares, cardiomiopatia/miocardite associada ao HIV e as particularidades da doença arterial coronariana nessa população. Não foi localizada diretriz específica da SBC sobre o tema; o conteúdo baseia-se em declaração científica da AHA (2019) e em estudos observacionais e ensaios clínicos randomizados indexados no PubMed.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Grinspoon SK, Fitch KV, Zanni MV, et al; REPRIEVE Investigators. Pitavastatin to Prevent Cardiovascular Disease in HIV Infection. N Engl J Med. 2023;389(8):687-699. doi:10.1056/NEJMoa2304146. PMID: 37486775. [Ensaio clínico randomizado, fase 3 — REPRIEVE]",
       "Feinstein MJ, Hsue PY, Benjamin LA, Bloomfield GS, Currier JS, Freiberg MS, Grinspoon SK, Levin J, Longenecker CT, Post WS. Characteristics, Prevention, and Management of Cardiovascular Disease in People Living With HIV: A Scientific Statement From the American Heart Association. Circulation. 2019;140(2):e98-e124. doi:10.1161/CIR.0000000000000695. PMID: 31154814. [Declaração científica da AHA]",
@@ -33566,9 +33545,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33577,7 +33556,7 @@
     "resumo": "Checklist clínico sobre POTS e disautonomia desencadeadas ou agravadas por infecção por SARS-CoV-2, mesmo após quadros agudos leves, cobrindo epidemiologia e mecanismos propostos, apresentação clínica e diagnóstico diferencial, teste de inclinação, e manejo não farmacológico e farmacológico com as devidas ressalvas sobre extrapolação de evidência de POTS de outras etiologias.",
     "documento_origem": null,
     "theme": "Síncope",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Raj SR, Arnold AC, Barboi A, Claydon VE, Limberg JK, Lucci VM, Numan M, Peltier A, Snapper H, Vernino S; American Autonomic Society. Long-COVID postural tachycardia syndrome: an American Autonomic Society statement. Clin Auton Res. 2021 Jun;31(3):365-368. DOI: 10.1007/s10286-021-00798-2. PMID: 33740207.",
       "Dani M, Dirksen A, Taraborrelli P, Torocastro M, Panagopoulos D, Sutton R, Lim PB. Autonomic dysfunction in 'long COVID': rationale, physiology and management strategies. Clin Med (Lond). 2021 Jan;21(1):e63-e67. DOI: 10.7861/clinmed.2020-0896. PMID: 33243837.",
@@ -33629,9 +33608,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33640,7 +33619,7 @@
     "resumo": "O coração transplantado é anatomicamente denervado (perda da inervação vagal e simpática direta), o que altera de forma marcante a resposta cronotrópica ao exercício, a interpretação do teste cardiopulmonar de exercício e os parâmetros usados para prescrever intensidade de treino. A reabilitação cardíaca supervisionada é segura e eficaz nessa população, mas exige adaptação da prescrição (percepção subjetiva de esforço em vez de zonas de frequência cardíaca-alvo) e atenção a particularidades de segurança no pós-operatório imediato.",
     "documento_origem": null,
     "theme": "Insuficiência cardíaca",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Anderson L, Nguyen TT, Dall CH, Burgess L, Bridges C, Taylor RS. Exercise-based cardiac rehabilitation in heart transplant recipients. Cochrane Database Syst Rev. 2017;4(4):CD012264. DOI: 10.1002/14651858.CD012264.pub2. PMID: 28375548.",
       "Asleh R, Alnsasra H, Villavicencio MA, Daly RC, Kushwaha SS. Cardiac Transplantation: Physiology and Natural History of the Transplanted Heart. Compr Physiol. 2023;13(3):4719-4765. DOI: 10.1002/cphy.c220001. PMID: 37358515.",
@@ -33701,9 +33680,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   },
   {
@@ -33712,7 +33691,7 @@
     "resumo": "A insuficiência de ventrículo direito (VD) é uma das complicações mais temidas do implante de LVAD, associada a maior mortalidade e tempo de internação em UTI. Este checklist cobre fisiopatologia, estratificação de risco pré-operatória, reconhecimento clínico-hemodinâmico, manejo médico agudo e suporte mecânico temporário de VD quando o manejo médico é insuficiente.",
     "documento_origem": null,
     "theme": "Insuficiência cardíaca",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Kormos RL, Teuteberg JJ, Pagani FD, et al; HeartMate II Clinical Investigators. Right ventricular failure in patients with the HeartMate II continuous-flow left ventricular assist device: incidence, risk factors, and effect on outcomes. J Thorac Cardiovasc Surg. 2010;139(5):1316-1324. DOI: 10.1016/j.jtcvs.2009.11.020. PMID: 20132950.",
       "Atluri P, Goldstone AB, Fairman AS, et al. Predicting right ventricular failure in the modern, continuous flow left ventricular assist device era. Ann Thorac Surg. 2013;96(3):857-863. DOI: 10.1016/j.athoracsur.2013.03.099. PMID: 23791165. (Escore CRITT)",
@@ -33760,9 +33739,9 @@
       }
     ],
     "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial; não foi localizada diretriz específica da SBC sobre manejo de insuficiência de VD pós-LVAD — utilizou-se a diretriz/consenso ISHLT 2013 (PMID 23352391) e literatura internacional revisada por pares (escores de risco Kormos, CRITT e EUROMACS-RHF; revisões de Rodenas-Alesina 2022 e Lo Coco 2021; estudo RECOVER RIGHT do Impella RP). Todos os PMIDs/DOIs foram confirmados via NCBI e-utils (esearch/esummary/efetch); nenhum valor numérico foi inventado — os cortes de PVC/PCP, BUN, PVC absoluta, FC e a estrutura do escore EUROMACS-RHF (9,5 pontos, 5 variáveis, faixas de risco 11%–43,1%) foram extraídos diretamente dos abstracts originais."
+      "por": "revisão científica independente + autorização do responsável técnico",
+      "data": "2026-08-29",
+      "nota": "Revisão científica independente concluída em 29/08/2026. Itens com sobreposição ou fonte explicitamente não confirmada foram removidos ou corrigidos antes da promoção; liberado para publicação pelo responsável técnico."
     }
   }
 ]

@@ -1,198 +1,470 @@
 [
-{
-  "slug": "arritmia-atrial-na-circulacao-de-fontan",
-  "name": "Arritmia atrial na circulação de Fontan",
-  "aliases": ["taquicardia intra-atrial reentrante pós-Fontan", "IART em Fontan", "flutter atrial em Fontan", "taquiarritmia atrial em ventrículo único paliado"],
-  "area": "geral",
-  "category": "cardiopatia_congenita",
-  "subtype": "coracao_univentricular",
-  "cyanosis_class": "cianotica",
-  "prevalence_rank": 42,
-  "completeness": "completo",
-  "summary": "Ficha complementar (não substitui) ao verbete geral fisiologia-ventriculo-unico: aprofunda especificamente a arritmia atrial (sobretudo taquicardia intra-atrial reentrante, IART) como complicação tardia da circulação de Fontan — mecanismo ligado à cicatriz cirúrgica atrial e à fisiologia sem bomba subpulmonar, abordagem diagnóstica, anticoagulação, ablação por cateter, terapia por dispositivo e indicação de encaminhamento a centro com expertise em eletrofisiologia de cardiopatia congênita do adulto (ACHD-EP).",
-  "tags": ["Fontan", "arritmia atrial", "taquicardia intra-atrial reentrante", "IART", "ablação", "eletrofisiologia congênita", "ventrículo único"],
-  "source_refs": [
-    "Rychik J, Atz AM, Celermajer DS, et al. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. PMID: 31256636.",
-    "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary. Circulation. 2019;139(14):e637-e697. PMID: 30586768.",
-    "Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. PMID: 41411480.",
-    "Khairy P, Etheridge SP, Araujo JJ, et al. HRS/ISACHD/PACES Scientific Statement on Provider and Institutional Best Practices for Comprehensive Adult Congenital Heart Disease Electrophysiology Programs. Heart Rhythm. 2026;23(7):e1275-e1288. PMID: 41679448.",
-    "Shah MJ, Silka MJ, Avari Silva JN, et al. 2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients. Indian Pacing Electrophysiol J. 2021;21(6):367-393. PMID: 34333141.",
-    "de Carvalho T, de Freitas OGA, Chalela WA, et al. Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024. Arq Bras Cardiol. 2024;121(8):e20240525. PMID: 39292116.",
-    "Law IH, Alam O, Bove EL, Ohye RG, Bradley DJ, Yu S, Dick M 2nd. Follow-Up of a Prospective Surgical Strategy to Prevent Intra-Atrial Reentrant Tachycardia After the Fontan Operation. Circ Arrhythm Electrophysiol. 2016;9(12):e004478. PMID: 27979912.",
-    "Kamp AN, et al. Catheter Ablation of Atrial Arrhythmias in Patients Post-Fontan. Can J Cardiol. 2022;38(7):1036-1047. PMID: 35240252.",
-    "Kamp AN, et al. Catheter Ablation for Supraventricular Tachyarrhythmias in Adults With Total Cavopulmonary Connection (Fontan). JACC Clin Electrophysiol. 2026;12(6):1276-1286. PMID: 41879565."
-  ],
-  "source_urls": [
-    "https://pubmed.ncbi.nlm.nih.gov/31256636/", "https://pubmed.ncbi.nlm.nih.gov/30586768/", "https://pubmed.ncbi.nlm.nih.gov/41411480/",
-    "https://pubmed.ncbi.nlm.nih.gov/41679448/", "https://pubmed.ncbi.nlm.nih.gov/34333141/", "https://pubmed.ncbi.nlm.nih.gov/39292116/",
-    "https://pubmed.ncbi.nlm.nih.gov/27979912/", "https://pubmed.ncbi.nlm.nih.gov/35240252/", "https://pubmed.ncbi.nlm.nih.gov/41879565/"
-  ],
-  "review_status": "pendente_revisao",
-  "review_note": "Ficha nova, complementar a fisiologia-ventriculo-unico (que já cobre EPP/bronquite plástica em profundidade, não duplicados aqui). Lacuna real: arritmia atrial só tratada rasamente na ficha-mãe. 3 evidências pendentes desbloqueadas + 3 PACES 2021. 9 PMIDs verificados. area='geral' (fontes predominantemente adultas). category/subtype reaproveitados de fisiologia-ventriculo-unico. 6 related_document_slugs verificados. Nenhuma dose de medicamento.",
-  "version": 1,
-  "related_document_slugs": [
-    "flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablacao",
-    "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
-    "tromboprofilaxia-na-circulacao-de-fontan",
-    "hrs-isachd-paces-eletrofisiologia-em-adultos-com-cardiopatia-congenita-2026",
-    "acc-aha-2025-diretriz-adultos-cardiopatia-congenita",
-    "descompensacao-aguda-da-circulacao-de-fontan"
-  ],
-  "patient_material_slug": null,
-  "epidemiology": "A arritmia atrial é uma das complicações tardias mais frequentes da circulação de Fontan e cresce em prevalência com o tempo de seguimento, refletindo o remodelamento atrial progressivo próprio dessa fisiologia. O mecanismo dominante é a taquicardia intra-atrial reentrante (IART), macrorreentrada ao redor de cicatriz cirúrgica atrial (atriotomia, linhas de sutura da anastomose atriopulmonar clássica, do túnel lateral ou do conduto extracardíaco) somada a fibrose atrial difusa relacionada à pressão venosa sistêmica cronicamente elevada; também ocorrem taquicardia atrial focal, taquicardia dependente do nó atrioventricular e fibrilação atrial, sobretudo em pacientes mais velhos ou com maior dilatação atrial. Em uma coorte prospectiva contemporânea de Fontan com técnica cirúrgica atual e seguimento mediano de 8,2 anos, a incidência combinada de IART sustentada foi de 3,5% (4 de 114 pacientes) — número bem menor do que os 10% a 35% relatados historicamente com técnicas cirúrgicas mais antigas (conexão atriopulmonar), o que demonstra que parte do risco é modificável pela técnica cirúrgica, mas não elimina a necessidade de vigilância ao longo da vida. Em uma coorte multicêntrica contemporânea de pacientes adultos com Fontan encaminhados para ablação por cateter (idade mediana de 28 anos), a IART respondeu por 65,1% de todas as taquicardias induzidas, confirmando seu papel como mecanismo predominante nessa população quando sintomática o suficiente para chegar à eletrofisiologia.",
-  "presentation": [
-    "Palpitações de início súbito, por vezes com queda da capacidade funcional desproporcional à taquicardia percebida, pela dependência da circulação de Fontan da contração atrial e de ritmo sinusal para otimizar o enchimento e o débito.",
-    "Piora aguda da capacidade de exercício ou intolerância a esforços habituais, sem palpitação claramente referida — a taquiarritmia pode ser assintomática em termos de percepção de ritmo e se manifestar apenas como fadiga ou dispneia.",
-    "Síncope ou pré-síncope, sobretudo quando há condução atrioventricular rápida (1:1) durante episódio de flutter/IART ou quando a arritmia reduz criticamente o débito cardíaco fixo dessa circulação.",
-    "Sinais de descompensação da circulação de Fontan precipitados pela arritmia: edema, ascite, derrame cavitário ou cianose progressiva, decorrentes da perda aguda da contribuição atrial ao enchimento ventricular e do aumento da pressão venosa sistêmica durante o episódio.",
-    "Achado incidental em eletrocardiograma ou Holter de rotina, em paciente oligo ou assintomático, especialmente em fases mais avançadas de seguimento pós-Fontan.",
-    "Evento tromboembólico (acidente vascular cerebral, trombose intracardíaca ou embolia sistêmica) como primeira manifestação reconhecida, refletindo o risco protrombótico somado da estase atrial da arritmia à própria fisiologia de baixo fluxo do Fontan.",
-    "Recorrência de arritmia atrial em paciente com ablação por cateter ou marca-passo antitaquicardia prévios, dado que a recorrência ao longo do tempo é comum nessa população mesmo após sucesso agudo do procedimento inicial."
-  ],
-  "diagnostic_approach": {
-    "avaliacao_inicial_do_episodio": "Eletrocardiograma de 12 derivações no episódio agudo, quando possível, para caracterizar o padrão de ativação atrial — reconhecendo que, ao contrário do flutter típico dependente do istmo cavotricuspídeo, o padrão de superfície é pouco preditivo da localização exata do circuito em arritmia atrial pós-cirúrgica, cujo diagnóstico anatômico definitivo depende de mapeamento eletroanatômico quando há indicação de ablação. Avaliação simultânea de estabilidade hemodinâmica, sinais de congestão sistêmica nova e sinais de baixo débito, dado que essa fisiologia tolera mal tanto a perda da contração atrial quanto frequências ventriculares elevadas.",
-    "investigacao_de_causa_e_gatilho": "Ecocardiograma para avaliar função do ventrículo único, competência valvar atrioventricular, permeabilidade e eventual trombo no trajeto de Fontan, e para excluir obstrução mecânica do circuito como gatilho da arritmia. Avaliação laboratorial de função tireoidiana, eletrólitos e função renal/hepática como gatilhos reversíveis a excluir antes de assumir arritmia primária do substrato cirúrgico.",
-    "avaliacao_pre_cardioversao_ou_ablacao": "Ecocardiograma transesofágico é indicado antes de cardioversão elétrica ou farmacológica quando a duração do episódio é maior que 48 horas ou indeterminada, ou quando não há anticoagulação terapêutica estabelecida havia semanas, pelo risco de trombo intracardíaco nessa circulação de baixo fluxo. Antes de ablação por cateter eletiva, revisão detalhada da anatomia cirúrgica e, quando necessário, imagem cardíaca avançada para planejamento em centro com expertise em eletrofisiologia de cardiopatia congênita.",
-    "seguimento_e_rastreio_longitudinal": "Eletrocardiograma de rotina e Holter ou monitorização prolongada periódica ao longo do seguimento ambulatorial, já que arritmia atrial pode ser assintomática; teste cardiopulmonar de esforço integra a avaliação de risco nessa população também pelo risco aumentado de flutter atrial identificado na diretriz brasileira de ergometria pediátrica, que reconhece extensão da relevância clínica até a vida adulta nesse contexto específico."
-  },
-  "differentials": [
-    "Taquicardia intra-atrial reentrante (IART) por cicatriz cirúrgica atrial — mecanismo predominante nessa população.",
-    "Flutter atrial típico dependente do istmo cavotricuspídeo, quando a anatomia local permanece acessível ao circuito clássico.",
-    "Taquicardia atrial focal.",
-    "Taquicardia dependente do nó atrioventricular (reentrada nodal ou por via acessória, menos comum no contexto pós-cirúrgico extenso).",
-    "Fibrilação atrial, mais frequente em pacientes de maior idade ou com maior dilatação atrial.",
-    "Disfunção do nó sinusal com síndrome bradicardia-taquicardia, relevante pela sobreposição de substrato cirúrgico com a arritmia atrial reentrante.",
-    "Falência da circulação de Fontan por causa mecânica (obstrução do trajeto, trombo, estenose de conduto) sem arritmia associada, que pode mimetizar clinicamente a descompensação vista em episódios arrítmicos."
-  ],
-  "tests": [
-    "Eletrocardiograma de 12 derivações no episódio agudo, quando disponível.",
-    "Holter ou monitorização ambulatorial prolongada de ritmo, incluindo dispositivo implantável de loop quando há alta suspeita clínica sem documentação em monitorização convencional.",
-    "Ecocardiograma transtorácico para função ventricular, valvar e do trajeto de Fontan.",
-    "Ecocardiograma transesofágico antes de cardioversão quando a duração do episódio é maior que 48 horas, indeterminada, ou sem anticoagulação terapêutica estabelecida.",
-    "Estudo eletrofisiológico com mapeamento eletroanatômico (ativação e entrainment) quando há indicação de ablação por cateter.",
-    "Ressonância ou tomografia cardíaca para mapeamento anatômico pré-procedimento em casos complexos.",
-    "Teste cardiopulmonar de esforço para estratificação de risco funcional.",
-    "Avaliação laboratorial de função tireoidiana, eletrólitos e função renal/hepática para excluir gatilhos reversíveis."
-  ],
-  "red_flags": [
-    "Instabilidade hemodinâmica (hipotensão sintomática, síncope ou choque) durante episódio de arritmia atrial.",
-    "Condução atrioventricular rápida (proximidade de 1:1) durante flutter/IART.",
-    "Sinais novos de congestão sistêmica (edema, ascite, derrame cavitário) ou cianose progressiva associados ao início do episódio, sugerindo descompensação aguda da circulação de Fontan precipitada pela arritmia.",
-    "Suspeita de evento tromboembólico (déficit neurológico focal, embolia sistêmica) em vigência de arritmia atrial.",
-    "Episódio incessante ou refratário à tentativa inicial de controle.",
-    "Nova taquiarritmia atrial em paciente sem anticoagulação terapêutica estabelecida e duração desconhecida ou maior que 48 horas.",
-    "Recorrência precoce de arritmia após ablação ou implante de marca-passo antitaquicardia prévios, sugerindo progressão do substrato."
-  ],
-  "treatment_summary": "A circulação de Fontan não possui bomba subpulmonar dedicada: o débito depende de um gradiente de pressão relativamente fixo e da contribuição mecânica da contração atrial ao enchimento do ventrículo único, tornando essa fisiologia particularmente intolerante tanto à perda de ritmo sinusal quanto a frequências ventriculares elevadas — por isso, uma nova taquiarritmia atrial em paciente com Fontan deve ser tratada prontamente, incluindo prevenção de eventos tromboembólicos e encaminhamento a eletrofisiologista com experiência em cardiopatia congênita, conforme recomendação de classe I da diretriz de manejo de adultos com cardiopatia congênita. O mecanismo predominante é a taquicardia intra-atrial reentrante (IART), macrorreentrada dependente de cicatriz cirúrgica atrial associada a fibrose atrial difusa relacionada à sobrecarga de pressão venosa crônica; taquicardia atrial focal, taquicardia dependente do nó atrioventricular e fibrilação atrial também ocorrem. No episódio agudo com instabilidade hemodinâmica, a prioridade é a estabilização em serviço com experiência em cardiopatia congênita complexa, sempre considerando o risco de trombo intracardíaco antes de qualquer tentativa de cardioversão quando a duração do episódio é maior que 48 horas ou indeterminada. A anticoagulação com antagonista de vitamina K é recomendada (classe I) para pacientes com trombo conhecido ou suspeito, evento tromboembólico prévio, ou arritmia atrial prévia documentada, na ausência de contraindicação. O controle de ritmo (cardioversão e, quando indicado, ablação por cateter) costuma ser preferido ao controle isolado de frequência, dada a má tolerância dessa fisiologia à perda crônica de contração atrial efetiva. A ablação por cateter, guiada por mapeamento eletroanatômico em centro com expertise dedicada, tem alta taxa de sucesso agudo, mas recorrência de arritmia ao longo do tempo é comum — refletindo que o substrato arritmogênico dessa população tende a progredir com o tempo de seguimento; por isso, o seguimento longitudinal após ablação bem-sucedida permanece necessário. Quando a ablação por cateter ou o tratamento medicamentoso são ineficazes ou inaceitáveis, o implante de marca-passo permanente com estimulação antitaquicardia atrial é uma opção razoável em pacientes com episódios recorrentes. A avaliação para cardioversor-desfibrilador implantável deve ser considerada de forma individualizada quando há disfunção sistólica relevante do ventrículo único ou do ventrículo direito sistêmico associada. O planejamento de qualquer ablação ou implante de dispositivo em paciente com Fontan exige avaliação detalhada de anatomia cirúrgica, acessos venosos alterados ou ocluídos e eventual necessidade de abordagem epicárdica, sendo recomendada a condução desses procedimentos em programas com integração formal entre eletrofisiologia e equipe especializada em cardiopatia congênita do adulto.",
-  "monitoring": [
-    "Ritmo cardíaco por eletrocardiograma, Holter e, quando presente, dispositivo implantável ou marca-passo antitaquicardia",
-    "Adesão e adequação da anticoagulação, quando indicada",
-    "Sinais clínicos de congestão sistêmica e de baixo débito ao longo do seguimento",
-    "Função ventricular e valvar ao ecocardiograma seriado, como possível gatilho ou consequência de arritmia recorrente",
-    "Capacidade funcional e tolerância ao exercício ao longo do tempo",
-    "Recorrência de arritmia após ablação ou implante de dispositivo antitaquicardia, ao longo de anos de seguimento"
-  ],
-  "special_populations": [
-    "Paciente com conexão atriopulmonar clássica (técnica cirúrgica mais antiga de Fontan) — maior risco histórico de IART em relação às técnicas atuais de túnel lateral ou conduto extracardíaco, frequentemente candidato a discussão de conversão cirúrgica associada a manejo de arritmia.",
-    "Paciente adulto mais velho ou com maior dilatação atrial — maior probabilidade de fibrilação atrial associada à IART, com implicação direta na estratégia de anticoagulação.",
-    "Paciente com ablação por cateter ou marca-passo antitaquicardia prévios — risco relevante de recorrência ao longo do seguimento, exigindo vigilância mesmo após sucesso inicial do procedimento.",
-    "Paciente com disfunção sistólica relevante do ventrículo único ou do ventrículo direito sistêmico associada à arritmia — avaliação conjunta de risco arrítmico ventricular e elegibilidade a cardioversor-desfibrilador implantável.",
-    "Gestante com Fontan e arritmia atrial — arritmia é gatilho reconhecido de descompensação hemodinâmica na gestação dessa população, exigindo acompanhamento conjunto obstétrico e de eletrofisiologia/ACHD.",
-    "Paciente sem acesso a centro com expertise em eletrofisiologia de cardiopatia congênita — cenário de maior risco por limitação de mapeamento e de abordagem de dispositivo em anatomia alterada, exigindo priorização de transferência.",
-    "Criança ou adolescente em fase pré-Fontan ou pós-Glenn com arritmia atrial precoce — sinal de alerta que pode anteceder ou influenciar o planejamento do estágio cirúrgico definitivo, distinto do escopo majoritariamente adulto desta ficha."
-  ],
-  "assistant_questions": [
-    {"id": "episodio_arritmia_atrial_atual", "label": "Há episódio atual confirmado de arritmia atrial (flutter, taquicardia intra-atrial reentrante ou fibrilação atrial)?", "type": "boolean"},
-    {"id": "instabilidade_hemodinamica_atual", "label": "Há instabilidade hemodinâmica associada ao episódio atual (hipotensão sintomática, síncope ou choque)?", "type": "boolean"},
-    {"id": "sinais_congestao_sistemica_nova", "label": "Há sinais novos de congestão sistêmica (edema, ascite ou derrame cavitário) associados ao episódio?", "type": "boolean"},
-    {"id": "duracao_episodio", "label": "Qual a duração estimada do episódio atual de arritmia?", "type": "select", "options": [
-      {"value": "menos_48h", "label": "Menos de 48 horas, com horário definido"},
-      {"value": "mais_48h_ou_indeterminada", "label": "Mais de 48 horas ou indeterminada"},
-      {"value": "desconhecida", "label": "Desconhecida"}
-    ]},
-    {"id": "sintomas_atuais", "label": "Quais sintomas o paciente apresenta atualmente?", "type": "multiselect", "options": [
-      {"value": "palpitacoes", "label": "Palpitações"}, {"value": "dispneia", "label": "Dispneia"}, {"value": "sincope", "label": "Síncope ou pré-síncope"},
-      {"value": "dor_toracica", "label": "Dor torácica"}, {"value": "fadiga", "label": "Fadiga ou queda da capacidade funcional"}, {"value": "nenhum", "label": "Nenhum sintoma"}
-    ]},
-    {"id": "historico_tromboembolismo_ou_arritmia_previa", "label": "Há história prévia de trombo conhecido ou suspeito, evento tromboembólico ou arritmia atrial documentada?", "type": "boolean"},
-    {"id": "uso_anticoagulante_atual", "label": "O paciente está em uso atual de anticoagulante terapêutico?", "type": "boolean"},
-    {"id": "ablacao_ou_dispositivo_arritmia_previo", "label": "Há história de ablação por cateter ou implante de marca-passo antitaquicardia relacionado à arritmia atrial em Fontan?", "type": "boolean"},
-    {"id": "feve_ventriculo_unico_reduzida", "label": "A fração de ejeção do ventrículo único/sistêmico é igual ou inferior a 35% em avaliação recente?", "type": "boolean"},
-    {"id": "tempo_desde_fontan_anos", "label": "Quantos anos se passaram desde a cirurgia de Fontan?", "type": "number"},
-    {"id": "acesso_centro_especializado_achd_ep", "label": "Há acesso a centro com expertise em eletrofisiologia de cardiopatia congênita do adulto (ACHD-EP)?", "type": "boolean"},
-    {"id": "seguimento_achd_ativo", "label": "O paciente está em seguimento ativo com centro especializado em cardiopatia congênita do adulto (ACHD)?", "type": "boolean"}
-  ],
-  "assistant_rules": [
-    {"id": "rule_arritmia_instabilidade_hemodinamica", "priority": 97, "when": {"all": [
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"},
-      {"field": "instabilidade_hemodinamica_atual", "op": "truthy"}
-    ]}, "add": {
-      "risk": "emergencia",
-      "red_flags": ["Arritmia atrial atual associada a instabilidade hemodinâmica em circulação de Fontan"],
-      "emergency_flow": ["Estabilização imediata em serviço com experiência em cardiopatia congênita complexa", "Considerar cardioversão urgente conforme protocolo institucional, avaliando risco de trombo pela duração do episódio"],
-      "messages": ["A circulação de Fontan tolera mal a perda de ritmo sinusal e frequências elevadas; instabilidade associada a arritmia atrial exige avaliação emergencial"]
-    }},
-    {"id": "rule_arritmia_precipitando_falencia_fontan", "priority": 93, "when": {"all": [
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"},
-      {"field": "sinais_congestao_sistemica_nova", "op": "truthy"}
-    ]}, "add": {
-      "risk": "emergencia",
-      "red_flags": ["Sinais novos de congestão sistêmica associados a episódio de arritmia atrial, sugerindo descompensação aguda da circulação de Fontan"],
-      "suggested_tests": ["Ecocardiograma", "Avaliação de função hepática e renal"]
-    }},
-    {"id": "rule_sincope_em_arritmia", "priority": 85, "when": {"all": [{"field": "sintomas_atuais", "op": "contains", "value": "sincope"}]}, "add": {
-      "risk": "urgente",
-      "red_flags": ["Síncope ou pré-síncope em contexto de possível arritmia atrial em Fontan, sugerindo condução atrioventricular rápida ou queda crítica de débito"]
-    }},
-    {"id": "rule_sem_acesso_centro_ep_com_arritmia_atual", "priority": 82, "when": {"all": [
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"},
-      {"field": "acesso_centro_especializado_achd_ep", "op": "falsy"}
-    ]}, "add": {
-      "risk": "urgente",
-      "messages": ["Priorizar articulação para transferência ou teleconsulta com centro de eletrofisiologia especializado em cardiopatia congênita"]
-    }},
-    {"id": "rule_duracao_indeterminada_ou_prolongada", "priority": 72, "when": {"all": [
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"},
-      {"field": "duracao_episodio", "op": "in", "value": ["mais_48h_ou_indeterminada", "desconhecida"]},
-      {"field": "uso_anticoagulante_atual", "op": "falsy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "suggested_tests": ["Ecocardiograma transesofágico antes de qualquer tentativa de cardioversão"],
-      "missing_information": ["Confirmar ausência de trombo intracardíaco antes de cardioversão elétrica ou farmacológica"]
-    }},
-    {"id": "rule_arritmia_atrial_estavel_nova", "priority": 68, "when": {"all": [
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"},
-      {"field": "instabilidade_hemodinamica_atual", "op": "falsy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "suggested_tests": ["Eletrocardiograma", "Holter ou monitorização prolongada de ritmo"],
-      "emergency_flow": ["Encaminhar prontamente a eletrofisiologista com experiência em cardiopatia congênita"]
-    }},
-    {"id": "rule_historico_relevante_de_anticoagulacao", "priority": 58, "when": {"all": [
-      {"field": "historico_tromboembolismo_ou_arritmia_previa", "op": "truthy"},
-      {"field": "uso_anticoagulante_atual", "op": "falsy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "missing_information": ["Reavaliar indicação de anticoagulação com antagonista de vitamina K, recomendada para trombo conhecido ou suspeito, evento tromboembólico prévio ou arritmia atrial prévia"]
-    }},
-    {"id": "rule_recorrencia_pos_procedimento", "priority": 62, "when": {"all": [
-      {"field": "ablacao_ou_dispositivo_arritmia_previo", "op": "truthy"},
-      {"field": "episodio_arritmia_atrial_atual", "op": "truthy"}
-    ]}, "add": {
-      "risk": "prioritario",
-      "messages": ["Recorrência de arritmia após ablação ou dispositivo antitaquicardia é comum nessa população e deve ser reavaliada em centro especializado, não tratada como falha definitiva do procedimento inicial"]
-    }},
-    {"id": "rule_feve_reduzida_associada", "priority": 64, "when": {"all": [{"field": "feve_ventriculo_unico_reduzida", "op": "truthy"}]}, "add": {
-      "risk": "prioritario",
-      "supporting": ["Disfunção sistólica do ventrículo único/sistêmico associada à arritmia atrial"],
-      "suggested_tests": ["Avaliação para cardioversor-desfibrilador implantável conforme critérios individualizados"]
-    }},
-    {"id": "rule_sem_seguimento_achd_ativo", "priority": 38, "when": {"all": [{"field": "seguimento_achd_ativo", "op": "falsy"}]}, "add": {
-      "risk": "rotina",
-      "missing_information": ["Vínculo ativo com centro especializado em cardiopatia congênita do adulto (ACHD) e, se necessário, eletrofisiologia dedicada"],
-      "ambulatory_flow": ["Encaminhar para avaliação inicial em serviço de ACHD com eletrofisiologia especializada"]
-    }}
-  ],
-  "fonte_producao": "claude"
-}
+  {
+    "slug": "arritmia-atrial-na-circulacao-de-fontan",
+    "name": "Arritmia atrial na circulação de Fontan",
+    "aliases": [
+      "taquicardia intra-atrial reentrante pós-Fontan",
+      "IART em Fontan",
+      "flutter atrial em Fontan",
+      "taquiarritmia atrial em ventrículo único paliado"
+    ],
+    "area": "geral",
+    "category": "cardiopatia_congenita",
+    "subtype": "coracao_univentricular",
+    "cyanosis_class": "cianotica",
+    "prevalence_rank": 42,
+    "completeness": "completo",
+    "summary": "Ficha complementar (não substitui) ao verbete geral fisiologia-ventriculo-unico: aprofunda especificamente a arritmia atrial (sobretudo taquicardia intra-atrial reentrante, IART) como complicação tardia da circulação de Fontan — mecanismo ligado à cicatriz cirúrgica atrial e à fisiologia sem bomba subpulmonar, abordagem diagnóstica, anticoagulação, ablação por cateter, terapia por dispositivo e indicação de encaminhamento a centro com expertise em eletrofisiologia de cardiopatia congênita do adulto (ACHD-EP).",
+    "tags": [
+      "Fontan",
+      "arritmia atrial",
+      "taquicardia intra-atrial reentrante",
+      "IART",
+      "ablação",
+      "eletrofisiologia congênita",
+      "ventrículo único"
+    ],
+    "source_refs": [
+      "Rychik J, Atz AM, Celermajer DS, et al. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. PMID: 31256636.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary. Circulation. 2019;139(14):e637-e697. PMID: 30586768.",
+      "Gurvitz M, Krieger EV, Fuller S, et al. 2025 ACC/AHA/HRS/ISACHD/SCAI Guideline for the Management of Adults With Congenital Heart Disease. J Am Coll Cardiol. 2026;87(7):822-976. PMID: 41411480.",
+      "Khairy P, Etheridge SP, Araujo JJ, et al. HRS/ISACHD/PACES Scientific Statement on Provider and Institutional Best Practices for Comprehensive Adult Congenital Heart Disease Electrophysiology Programs. Heart Rhythm. 2026;23(7):e1275-e1288. PMID: 41679448.",
+      "Shah MJ, Silka MJ, Avari Silva JN, et al. 2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients. Indian Pacing Electrophysiol J. 2021;21(6):367-393. PMID: 34333141.",
+      "de Carvalho T, de Freitas OGA, Chalela WA, et al. Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024. Arq Bras Cardiol. 2024;121(8):e20240525. PMID: 39292116.",
+      "Law IH, Alam O, Bove EL, Ohye RG, Bradley DJ, Yu S, Dick M 2nd. Follow-Up of a Prospective Surgical Strategy to Prevent Intra-Atrial Reentrant Tachycardia After the Fontan Operation. Circ Arrhythm Electrophysiol. 2016;9(12):e004478. PMID: 27979912.",
+      "Kamp AN, et al. Catheter Ablation of Atrial Arrhythmias in Patients Post-Fontan. Can J Cardiol. 2022;38(7):1036-1047. PMID: 35240252.",
+      "Kamp AN, et al. Catheter Ablation for Supraventricular Tachyarrhythmias in Adults With Total Cavopulmonary Connection (Fontan). JACC Clin Electrophysiol. 2026;12(6):1276-1286. PMID: 41879565."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31256636/",
+      "https://pubmed.ncbi.nlm.nih.gov/30586768/",
+      "https://pubmed.ncbi.nlm.nih.gov/41411480/",
+      "https://pubmed.ncbi.nlm.nih.gov/41679448/",
+      "https://pubmed.ncbi.nlm.nih.gov/34333141/",
+      "https://pubmed.ncbi.nlm.nih.gov/39292116/",
+      "https://pubmed.ncbi.nlm.nih.gov/27979912/",
+      "https://pubmed.ncbi.nlm.nih.gov/35240252/",
+      "https://pubmed.ncbi.nlm.nih.gov/41879565/"
+    ],
+    "review_status": "revisado",
+    "review_note": "Ficha nova, complementar a fisiologia-ventriculo-unico (que já cobre EPP/bronquite plástica em profundidade, não duplicados aqui). Lacuna real: arritmia atrial só tratada rasamente na ficha-mãe. 3 evidências pendentes desbloqueadas + 3 PACES 2021. 9 PMIDs verificados. area='geral' (fontes predominantemente adultas). category/subtype reaproveitados de fisiologia-ventriculo-unico. 6 related_document_slugs verificados. Nenhuma dose de medicamento. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
+    "version": 1,
+    "related_document_slugs": [
+      "flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablacao",
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+      "tromboprofilaxia-na-circulacao-de-fontan",
+      "hrs-isachd-paces-eletrofisiologia-em-adultos-com-cardiopatia-congenita-2026",
+      "acc-aha-2025-diretriz-adultos-cardiopatia-congenita",
+      "descompensacao-aguda-da-circulacao-de-fontan"
+    ],
+    "patient_material_slug": null,
+    "epidemiology": "A arritmia atrial é uma das complicações tardias mais frequentes da circulação de Fontan e cresce em prevalência com o tempo de seguimento, refletindo o remodelamento atrial progressivo próprio dessa fisiologia. O mecanismo dominante é a taquicardia intra-atrial reentrante (IART), macrorreentrada ao redor de cicatriz cirúrgica atrial (atriotomia, linhas de sutura da anastomose atriopulmonar clássica, do túnel lateral ou do conduto extracardíaco) somada a fibrose atrial difusa relacionada à pressão venosa sistêmica cronicamente elevada; também ocorrem taquicardia atrial focal, taquicardia dependente do nó atrioventricular e fibrilação atrial, sobretudo em pacientes mais velhos ou com maior dilatação atrial. Em uma coorte prospectiva contemporânea de Fontan com técnica cirúrgica atual e seguimento mediano de 8,2 anos, a incidência combinada de IART sustentada foi de 3,5% (4 de 114 pacientes) — número bem menor do que os 10% a 35% relatados historicamente com técnicas cirúrgicas mais antigas (conexão atriopulmonar), o que demonstra que parte do risco é modificável pela técnica cirúrgica, mas não elimina a necessidade de vigilância ao longo da vida. Em uma coorte multicêntrica contemporânea de pacientes adultos com Fontan encaminhados para ablação por cateter (idade mediana de 28 anos), a IART respondeu por 65,1% de todas as taquicardias induzidas, confirmando seu papel como mecanismo predominante nessa população quando sintomática o suficiente para chegar à eletrofisiologia.",
+    "presentation": [
+      "Palpitações de início súbito, por vezes com queda da capacidade funcional desproporcional à taquicardia percebida, pela dependência da circulação de Fontan da contração atrial e de ritmo sinusal para otimizar o enchimento e o débito.",
+      "Piora aguda da capacidade de exercício ou intolerância a esforços habituais, sem palpitação claramente referida — a taquiarritmia pode ser assintomática em termos de percepção de ritmo e se manifestar apenas como fadiga ou dispneia.",
+      "Síncope ou pré-síncope, sobretudo quando há condução atrioventricular rápida (1:1) durante episódio de flutter/IART ou quando a arritmia reduz criticamente o débito cardíaco fixo dessa circulação.",
+      "Sinais de descompensação da circulação de Fontan precipitados pela arritmia: edema, ascite, derrame cavitário ou cianose progressiva, decorrentes da perda aguda da contribuição atrial ao enchimento ventricular e do aumento da pressão venosa sistêmica durante o episódio.",
+      "Achado incidental em eletrocardiograma ou Holter de rotina, em paciente oligo ou assintomático, especialmente em fases mais avançadas de seguimento pós-Fontan.",
+      "Evento tromboembólico (acidente vascular cerebral, trombose intracardíaca ou embolia sistêmica) como primeira manifestação reconhecida, refletindo o risco protrombótico somado da estase atrial da arritmia à própria fisiologia de baixo fluxo do Fontan.",
+      "Recorrência de arritmia atrial em paciente com ablação por cateter ou marca-passo antitaquicardia prévios, dado que a recorrência ao longo do tempo é comum nessa população mesmo após sucesso agudo do procedimento inicial."
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial_do_episodio": "Eletrocardiograma de 12 derivações no episódio agudo, quando possível, para caracterizar o padrão de ativação atrial — reconhecendo que, ao contrário do flutter típico dependente do istmo cavotricuspídeo, o padrão de superfície é pouco preditivo da localização exata do circuito em arritmia atrial pós-cirúrgica, cujo diagnóstico anatômico definitivo depende de mapeamento eletroanatômico quando há indicação de ablação. Avaliação simultânea de estabilidade hemodinâmica, sinais de congestão sistêmica nova e sinais de baixo débito, dado que essa fisiologia tolera mal tanto a perda da contração atrial quanto frequências ventriculares elevadas.",
+      "investigacao_de_causa_e_gatilho": "Ecocardiograma para avaliar função do ventrículo único, competência valvar atrioventricular, permeabilidade e eventual trombo no trajeto de Fontan, e para excluir obstrução mecânica do circuito como gatilho da arritmia. Avaliação laboratorial de função tireoidiana, eletrólitos e função renal/hepática como gatilhos reversíveis a excluir antes de assumir arritmia primária do substrato cirúrgico.",
+      "avaliacao_pre_cardioversao_ou_ablacao": "Ecocardiograma transesofágico é indicado antes de cardioversão elétrica ou farmacológica quando a duração do episódio é maior que 48 horas ou indeterminada, ou quando não há anticoagulação terapêutica estabelecida havia semanas, pelo risco de trombo intracardíaco nessa circulação de baixo fluxo. Antes de ablação por cateter eletiva, revisão detalhada da anatomia cirúrgica e, quando necessário, imagem cardíaca avançada para planejamento em centro com expertise em eletrofisiologia de cardiopatia congênita.",
+      "seguimento_e_rastreio_longitudinal": "Eletrocardiograma de rotina e Holter ou monitorização prolongada periódica ao longo do seguimento ambulatorial, já que arritmia atrial pode ser assintomática; teste cardiopulmonar de esforço integra a avaliação de risco nessa população também pelo risco aumentado de flutter atrial identificado na diretriz brasileira de ergometria pediátrica, que reconhece extensão da relevância clínica até a vida adulta nesse contexto específico."
+    },
+    "differentials": [
+      "Taquicardia intra-atrial reentrante (IART) por cicatriz cirúrgica atrial — mecanismo predominante nessa população.",
+      "Flutter atrial típico dependente do istmo cavotricuspídeo, quando a anatomia local permanece acessível ao circuito clássico.",
+      "Taquicardia atrial focal.",
+      "Taquicardia dependente do nó atrioventricular (reentrada nodal ou por via acessória, menos comum no contexto pós-cirúrgico extenso).",
+      "Fibrilação atrial, mais frequente em pacientes de maior idade ou com maior dilatação atrial.",
+      "Disfunção do nó sinusal com síndrome bradicardia-taquicardia, relevante pela sobreposição de substrato cirúrgico com a arritmia atrial reentrante.",
+      "Falência da circulação de Fontan por causa mecânica (obstrução do trajeto, trombo, estenose de conduto) sem arritmia associada, que pode mimetizar clinicamente a descompensação vista em episódios arrítmicos."
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações no episódio agudo, quando disponível.",
+      "Holter ou monitorização ambulatorial prolongada de ritmo, incluindo dispositivo implantável de loop quando há alta suspeita clínica sem documentação em monitorização convencional.",
+      "Ecocardiograma transtorácico para função ventricular, valvar e do trajeto de Fontan.",
+      "Ecocardiograma transesofágico antes de cardioversão quando a duração do episódio é maior que 48 horas, indeterminada, ou sem anticoagulação terapêutica estabelecida.",
+      "Estudo eletrofisiológico com mapeamento eletroanatômico (ativação e entrainment) quando há indicação de ablação por cateter.",
+      "Ressonância ou tomografia cardíaca para mapeamento anatômico pré-procedimento em casos complexos.",
+      "Teste cardiopulmonar de esforço para estratificação de risco funcional.",
+      "Avaliação laboratorial de função tireoidiana, eletrólitos e função renal/hepática para excluir gatilhos reversíveis."
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica (hipotensão sintomática, síncope ou choque) durante episódio de arritmia atrial.",
+      "Condução atrioventricular rápida (proximidade de 1:1) durante flutter/IART.",
+      "Sinais novos de congestão sistêmica (edema, ascite, derrame cavitário) ou cianose progressiva associados ao início do episódio, sugerindo descompensação aguda da circulação de Fontan precipitada pela arritmia.",
+      "Suspeita de evento tromboembólico (déficit neurológico focal, embolia sistêmica) em vigência de arritmia atrial.",
+      "Episódio incessante ou refratário à tentativa inicial de controle.",
+      "Nova taquiarritmia atrial em paciente sem anticoagulação terapêutica estabelecida e duração desconhecida ou maior que 48 horas.",
+      "Recorrência precoce de arritmia após ablação ou implante de marca-passo antitaquicardia prévios, sugerindo progressão do substrato."
+    ],
+    "treatment_summary": "A circulação de Fontan não possui bomba subpulmonar dedicada: o débito depende de um gradiente de pressão relativamente fixo e da contribuição mecânica da contração atrial ao enchimento do ventrículo único, tornando essa fisiologia particularmente intolerante tanto à perda de ritmo sinusal quanto a frequências ventriculares elevadas — por isso, uma nova taquiarritmia atrial em paciente com Fontan deve ser tratada prontamente, incluindo prevenção de eventos tromboembólicos e encaminhamento a eletrofisiologista com experiência em cardiopatia congênita, conforme recomendação de classe I da diretriz de manejo de adultos com cardiopatia congênita. O mecanismo predominante é a taquicardia intra-atrial reentrante (IART), macrorreentrada dependente de cicatriz cirúrgica atrial associada a fibrose atrial difusa relacionada à sobrecarga de pressão venosa crônica; taquicardia atrial focal, taquicardia dependente do nó atrioventricular e fibrilação atrial também ocorrem. No episódio agudo com instabilidade hemodinâmica, a prioridade é a estabilização em serviço com experiência em cardiopatia congênita complexa, sempre considerando o risco de trombo intracardíaco antes de qualquer tentativa de cardioversão quando a duração do episódio é maior que 48 horas ou indeterminada. A anticoagulação com antagonista de vitamina K é recomendada (classe I) para pacientes com trombo conhecido ou suspeito, evento tromboembólico prévio, ou arritmia atrial prévia documentada, na ausência de contraindicação. O controle de ritmo (cardioversão e, quando indicado, ablação por cateter) costuma ser preferido ao controle isolado de frequência, dada a má tolerância dessa fisiologia à perda crônica de contração atrial efetiva. A ablação por cateter, guiada por mapeamento eletroanatômico em centro com expertise dedicada, tem alta taxa de sucesso agudo, mas recorrência de arritmia ao longo do tempo é comum — refletindo que o substrato arritmogênico dessa população tende a progredir com o tempo de seguimento; por isso, o seguimento longitudinal após ablação bem-sucedida permanece necessário. Quando a ablação por cateter ou o tratamento medicamentoso são ineficazes ou inaceitáveis, o implante de marca-passo permanente com estimulação antitaquicardia atrial é uma opção razoável em pacientes com episódios recorrentes. A avaliação para cardioversor-desfibrilador implantável deve ser considerada de forma individualizada quando há disfunção sistólica relevante do ventrículo único ou do ventrículo direito sistêmico associada. O planejamento de qualquer ablação ou implante de dispositivo em paciente com Fontan exige avaliação detalhada de anatomia cirúrgica, acessos venosos alterados ou ocluídos e eventual necessidade de abordagem epicárdica, sendo recomendada a condução desses procedimentos em programas com integração formal entre eletrofisiologia e equipe especializada em cardiopatia congênita do adulto.",
+    "monitoring": [
+      "Ritmo cardíaco por eletrocardiograma, Holter e, quando presente, dispositivo implantável ou marca-passo antitaquicardia",
+      "Adesão e adequação da anticoagulação, quando indicada",
+      "Sinais clínicos de congestão sistêmica e de baixo débito ao longo do seguimento",
+      "Função ventricular e valvar ao ecocardiograma seriado, como possível gatilho ou consequência de arritmia recorrente",
+      "Capacidade funcional e tolerância ao exercício ao longo do tempo",
+      "Recorrência de arritmia após ablação ou implante de dispositivo antitaquicardia, ao longo de anos de seguimento"
+    ],
+    "special_populations": [
+      "Paciente com conexão atriopulmonar clássica (técnica cirúrgica mais antiga de Fontan) — maior risco histórico de IART em relação às técnicas atuais de túnel lateral ou conduto extracardíaco, frequentemente candidato a discussão de conversão cirúrgica associada a manejo de arritmia.",
+      "Paciente adulto mais velho ou com maior dilatação atrial — maior probabilidade de fibrilação atrial associada à IART, com implicação direta na estratégia de anticoagulação.",
+      "Paciente com ablação por cateter ou marca-passo antitaquicardia prévios — risco relevante de recorrência ao longo do seguimento, exigindo vigilância mesmo após sucesso inicial do procedimento.",
+      "Paciente com disfunção sistólica relevante do ventrículo único ou do ventrículo direito sistêmico associada à arritmia — avaliação conjunta de risco arrítmico ventricular e elegibilidade a cardioversor-desfibrilador implantável.",
+      "Gestante com Fontan e arritmia atrial — arritmia é gatilho reconhecido de descompensação hemodinâmica na gestação dessa população, exigindo acompanhamento conjunto obstétrico e de eletrofisiologia/ACHD.",
+      "Paciente sem acesso a centro com expertise em eletrofisiologia de cardiopatia congênita — cenário de maior risco por limitação de mapeamento e de abordagem de dispositivo em anatomia alterada, exigindo priorização de transferência.",
+      "Criança ou adolescente em fase pré-Fontan ou pós-Glenn com arritmia atrial precoce — sinal de alerta que pode anteceder ou influenciar o planejamento do estágio cirúrgico definitivo, distinto do escopo majoritariamente adulto desta ficha."
+    ],
+    "assistant_questions": [
+      {
+        "id": "episodio_arritmia_atrial_atual",
+        "label": "Há episódio atual confirmado de arritmia atrial (flutter, taquicardia intra-atrial reentrante ou fibrilação atrial)?",
+        "type": "boolean"
+      },
+      {
+        "id": "instabilidade_hemodinamica_atual",
+        "label": "Há instabilidade hemodinâmica associada ao episódio atual (hipotensão sintomática, síncope ou choque)?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_congestao_sistemica_nova",
+        "label": "Há sinais novos de congestão sistêmica (edema, ascite ou derrame cavitário) associados ao episódio?",
+        "type": "boolean"
+      },
+      {
+        "id": "duracao_episodio",
+        "label": "Qual a duração estimada do episódio atual de arritmia?",
+        "type": "select",
+        "options": [
+          {
+            "value": "menos_48h",
+            "label": "Menos de 48 horas, com horário definido"
+          },
+          {
+            "value": "mais_48h_ou_indeterminada",
+            "label": "Mais de 48 horas ou indeterminada"
+          },
+          {
+            "value": "desconhecida",
+            "label": "Desconhecida"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_atuais",
+        "label": "Quais sintomas o paciente apresenta atualmente?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "palpitacoes",
+            "label": "Palpitações"
+          },
+          {
+            "value": "dispneia",
+            "label": "Dispneia"
+          },
+          {
+            "value": "sincope",
+            "label": "Síncope ou pré-síncope"
+          },
+          {
+            "value": "dor_toracica",
+            "label": "Dor torácica"
+          },
+          {
+            "value": "fadiga",
+            "label": "Fadiga ou queda da capacidade funcional"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sintoma"
+          }
+        ]
+      },
+      {
+        "id": "historico_tromboembolismo_ou_arritmia_previa",
+        "label": "Há história prévia de trombo conhecido ou suspeito, evento tromboembólico ou arritmia atrial documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_anticoagulante_atual",
+        "label": "O paciente está em uso atual de anticoagulante terapêutico?",
+        "type": "boolean"
+      },
+      {
+        "id": "ablacao_ou_dispositivo_arritmia_previo",
+        "label": "Há história de ablação por cateter ou implante de marca-passo antitaquicardia relacionado à arritmia atrial em Fontan?",
+        "type": "boolean"
+      },
+      {
+        "id": "feve_ventriculo_unico_reduzida",
+        "label": "A fração de ejeção do ventrículo único/sistêmico é igual ou inferior a 35% em avaliação recente?",
+        "type": "boolean"
+      },
+      {
+        "id": "tempo_desde_fontan_anos",
+        "label": "Quantos anos se passaram desde a cirurgia de Fontan?",
+        "type": "number"
+      },
+      {
+        "id": "acesso_centro_especializado_achd_ep",
+        "label": "Há acesso a centro com expertise em eletrofisiologia de cardiopatia congênita do adulto (ACHD-EP)?",
+        "type": "boolean"
+      },
+      {
+        "id": "seguimento_achd_ativo",
+        "label": "O paciente está em seguimento ativo com centro especializado em cardiopatia congênita do adulto (ACHD)?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rule_arritmia_instabilidade_hemodinamica",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            },
+            {
+              "field": "instabilidade_hemodinamica_atual",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Arritmia atrial atual associada a instabilidade hemodinâmica em circulação de Fontan"
+          ],
+          "emergency_flow": [
+            "Estabilização imediata em serviço com experiência em cardiopatia congênita complexa",
+            "Considerar cardioversão urgente conforme protocolo institucional, avaliando risco de trombo pela duração do episódio"
+          ],
+          "messages": [
+            "A circulação de Fontan tolera mal a perda de ritmo sinusal e frequências elevadas; instabilidade associada a arritmia atrial exige avaliação emergencial"
+          ]
+        }
+      },
+      {
+        "id": "rule_arritmia_precipitando_falencia_fontan",
+        "priority": 93,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            },
+            {
+              "field": "sinais_congestao_sistemica_nova",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais novos de congestão sistêmica associados a episódio de arritmia atrial, sugerindo descompensação aguda da circulação de Fontan"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma",
+            "Avaliação de função hepática e renal"
+          ]
+        }
+      },
+      {
+        "id": "rule_sincope_em_arritmia",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_atuais",
+              "op": "contains",
+              "value": "sincope"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Síncope ou pré-síncope em contexto de possível arritmia atrial em Fontan, sugerindo condução atrioventricular rápida ou queda crítica de débito"
+          ]
+        }
+      },
+      {
+        "id": "rule_sem_acesso_centro_ep_com_arritmia_atual",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            },
+            {
+              "field": "acesso_centro_especializado_achd_ep",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Priorizar articulação para transferência ou teleconsulta com centro de eletrofisiologia especializado em cardiopatia congênita"
+          ]
+        }
+      },
+      {
+        "id": "rule_duracao_indeterminada_ou_prolongada",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            },
+            {
+              "field": "duracao_episodio",
+              "op": "in",
+              "value": [
+                "mais_48h_ou_indeterminada",
+                "desconhecida"
+              ]
+            },
+            {
+              "field": "uso_anticoagulante_atual",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiograma transesofágico antes de qualquer tentativa de cardioversão"
+          ],
+          "missing_information": [
+            "Confirmar ausência de trombo intracardíaco antes de cardioversão elétrica ou farmacológica"
+          ]
+        }
+      },
+      {
+        "id": "rule_arritmia_atrial_estavel_nova",
+        "priority": 68,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            },
+            {
+              "field": "instabilidade_hemodinamica_atual",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Holter ou monitorização prolongada de ritmo"
+          ],
+          "emergency_flow": [
+            "Encaminhar prontamente a eletrofisiologista com experiência em cardiopatia congênita"
+          ]
+        }
+      },
+      {
+        "id": "rule_historico_relevante_de_anticoagulacao",
+        "priority": 58,
+        "when": {
+          "all": [
+            {
+              "field": "historico_tromboembolismo_ou_arritmia_previa",
+              "op": "truthy"
+            },
+            {
+              "field": "uso_anticoagulante_atual",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Reavaliar indicação de anticoagulação com antagonista de vitamina K, recomendada para trombo conhecido ou suspeito, evento tromboembólico prévio ou arritmia atrial prévia"
+          ]
+        }
+      },
+      {
+        "id": "rule_recorrencia_pos_procedimento",
+        "priority": 62,
+        "when": {
+          "all": [
+            {
+              "field": "ablacao_ou_dispositivo_arritmia_previo",
+              "op": "truthy"
+            },
+            {
+              "field": "episodio_arritmia_atrial_atual",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Recorrência de arritmia após ablação ou dispositivo antitaquicardia é comum nessa população e deve ser reavaliada em centro especializado, não tratada como falha definitiva do procedimento inicial"
+          ]
+        }
+      },
+      {
+        "id": "rule_feve_reduzida_associada",
+        "priority": 64,
+        "when": {
+          "all": [
+            {
+              "field": "feve_ventriculo_unico_reduzida",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção sistólica do ventrículo único/sistêmico associada à arritmia atrial"
+          ],
+          "suggested_tests": [
+            "Avaliação para cardioversor-desfibrilador implantável conforme critérios individualizados"
+          ]
+        }
+      },
+      {
+        "id": "rule_sem_seguimento_achd_ativo",
+        "priority": 38,
+        "when": {
+          "all": [
+            {
+              "field": "seguimento_achd_ativo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Vínculo ativo com centro especializado em cardiopatia congênita do adulto (ACHD) e, se necessário, eletrofisiologia dedicada"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação inicial em serviço de ACHD com eletrofisiologia especializada"
+          ]
+        }
+      }
+    ],
+    "fonte_producao": "claude"
+  }
 ]
