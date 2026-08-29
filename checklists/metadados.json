@@ -33319,5 +33319,65 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "interpretacao-do-ecg-em-atletas-negros-variantes-normais-versus-achados-de-alarme",
+    "condicao": "Triagem cardiovascular pré-participação esportiva — interpretação do ECG em atletas negros/de ascendência africana",
+    "resumo": "Checklist sobre as particularidades da interpretação do ECG de 12 derivações em atletas negros/de ascendência africana, distinguindo padrões de repolarização e de voltagem que constituem variantes normais relacionadas ao treinamento daqueles que exigem investigação para cardiomiopatia estrutural. Baseado no consenso internacional de Sharma et al. (2017) e em estudos de referência de Papadakis, Sheikh, Malhotra e Riding em coortes de atletas negros; não foi localizada, na busca realizada, uma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre este ponto em particular — a orientação aqui reproduz o consenso internacional.",
+    "documento_origem": null,
+    "theme": "Cardiologia do esporte",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sharma S, Drezner JA, Baggish A, et al. International Recommendations for Electrocardiographic Interpretation in Athletes. J Am Coll Cardiol. 2017;69(8):1057-1075. DOI: 10.1016/j.jacc.2017.01.015. PMID: 28231933.",
+      "Sharma S, Drezner JA, Baggish A, et al. International recommendations for electrocardiographic interpretation in athletes. Eur Heart J. 2018;39(16):1466-1480 (publicação conjunta com JACC/BJSM, 2017). DOI: 10.1093/eurheartj/ehw631. PMID: 28329355.",
+      "Sharma S, Drezner JA, Baggish A, et al. International criteria for electrocardiographic interpretation in athletes: Consensus statement. Br J Sports Med. 2017;51(9):704-731. DOI: 10.1136/bjsports-2016-097331. PMID: 28258178.",
+      "Papadakis M, Carre F, Kervio G, et al. The prevalence, distribution, and clinical outcomes of electrocardiographic repolarization patterns in male athletes of African/Afro-Caribbean origin. Eur Heart J. 2011;32(18):2304-2313. DOI: 10.1093/eurheartj/ehr140. PMID: 21613263.",
+      "Sheikh N, Papadakis M, Wilson M, et al. Diagnostic Yield of Genetic Testing in Young Athletes With T-Wave Inversion. Circulation. 2018;138(12):1184-1194. DOI: 10.1161/CIRCULATIONAHA.118.034208. PMID: 29764897.",
+      "Malhotra A, Dhutia H, Yeo TJ, et al. Accuracy of the 2017 international recommendations for clinicians who interpret adolescent athletes' ECGs: a cohort study of 11 168 British white and black soccer players. Br J Sports Med. 2020;54(12):739-745. DOI: 10.1136/bjsports-2017-098528. PMID: 31278087.",
+      "Riding NR, Sharma S, McClean G, et al. Impact of geographical origin upon the electrical and structural manifestations of the black athlete's heart. Eur Heart J. 2019;40(1):50-58. DOI: 10.1093/eurheartj/ehy521. PMID: 30169663.",
+      "Maron BJ, Levine BD, Washington RL, Baggish AL, Kovacs RJ, Maron MS. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 2: Preparticipation Screening for Cardiovascular Disease in Competitive Athletes. A Scientific Statement from the American Heart Association and American College of Cardiology. J Am Coll Cardiol. 2015;66(21):2356-2361 (publicação conjunta em Circulation, PMID: 26527714). DOI: 10.1016/j.jacc.2015.09.034. PMID: 26542659."
+    ],
+    "itens": [
+      {
+        "id": "variante-repolarizacao-anterior",
+        "categoria": "Variantes normais",
+        "obrigatorio": true,
+        "texto": "Reconhecer que a inversão de onda T anterior confinada às derivações contíguas V1-V4 (com ou sem elevação côncava do ponto J/segmento ST) é significativamente mais prevalente em atletas negros do que em atletas brancos e, quando isolada — sem se estender além de V4 e sem outras alterações associadas —, é classificada pelos critérios internacionais de interpretação do ECG do atleta (2017) como variante normal relacionada ao treinamento, não devendo por si só ser rotulada como anormal nem disparar investigação. Em coorte de referência (Papadakis et al., 2011, n=904 atletas negros vs. 1819 brancos), a inversão de onda T esteve presente em 22,8% dos atletas negros vs. 3,7% dos brancos, com o padrão confinado a V1-V4 em 12,7% dos atletas negros (apenas 4,1% com extensão às derivações laterais) — achado que os autores descrevem como variante étnica do coração de atleta.",
+        "origem_secao": "Sharma et al. 2017 (International Recommendations for ECG Interpretation in Athletes, PMID 28231933/28329355/28258178); Papadakis et al. 2011, Eur Heart J (PMID 21613263)"
+      },
+      {
+        "id": "voltagem-isolada-hve",
+        "categoria": "Critérios de voltagem",
+        "obrigatorio": true,
+        "texto": "Reconhecer que critérios de voltagem isolados para hipertrofia ventricular esquerda (HVE) — sem sobrecarga atrial esquerda associada, sem desvio de eixo, sem alterações de ST-T, sem ondas Q patológicas — são achado de treinamento mais prevalente em atletas negros do que em brancos e, isoladamente, NÃO devem disparar investigação cardiológica extensa (ecocardiograma pode ser realizado como triagem de rotina, mas não há indicação de RM cardíaca ou afastamento da prática apenas por este achado). Estudo de Riding et al. (2019) documentou que a prevalência de HVE ao ECG varia conforme origem geográfica dentro do grupo 'atleta negro', sendo significativamente maior em atletas afro-americanos/caribenhos (9,5%) e da África Ocidental (5%) comparados a atletas da África Oriental, Norte da África e Ásia Ocidental — reforçando que voltagem aumentada isolada reflete adaptação fisiológica ao treinamento nesses subgrupos, e não deve ser interpretada de forma genérica e uniforme para todo atleta 'negro'.",
+        "origem_secao": "Sharma et al. 2017 (International Recommendations for ECG Interpretation in Athletes); Riding et al. 2019, Eur Heart J (PMID 30169663)"
+      },
+      {
+        "id": "achados-de-alarme-associados",
+        "categoria": "Achados de alarme",
+        "obrigatorio": true,
+        "texto": "Considerar a inversão de onda T como achado de ALARME — mesmo quando envolve V1-V4 — e investigar quando presentes: (a) extensão da inversão de onda T para além de V4, isto é, para derivações laterais, inferiores ou inferolaterais; (b) ondas Q patológicas; (c) alterações associadas do segmento ST (infra ou supradesnivelamento não côncavo); (d) arritmia ventricular ou taquiarritmia documentada; (e) sintomas cardiovasculares (síncope, dor torácica aos esforços, palpitações) ou história familiar de morte súbita/cardiomiopatia. Em Papadakis et al. (2011), apenas 4,1% dos atletas negros tiveram inversão de onda T em derivações laterais, e foi exatamente nesse subgrupo que ocorreram os casos de cardiomiopatia hipertrófica (HCM) identificados no seguimento. Em Sheikh et al. (2018), TODOS os atletas negros (e 93,3% dos brancos) com diagnóstico clínico de cardiomiopatia ou mutação patogênica identificada apresentavam inversão de onda T lateral, em contraste com o padrão isolado anterior ou inferior.",
+        "origem_secao": "Papadakis et al. 2011, Eur Heart J (PMID 21613263); Sheikh et al. 2018, Circulation (PMID 29764897)"
+      },
+      {
+        "id": "fluxo-investigacao-estrutural",
+        "categoria": "Investigação complementar",
+        "obrigatorio": true,
+        "texto": "Diante de achado limítrofe ou preocupante (inversão de onda T lateral, ondas Q patológicas, alterações de ST não explicadas, arritmia ou sintomas), indicar ecocardiograma transtorácico como exame de primeira linha para avaliar espessura e função do ventrículo esquerdo, tamanho de cavidades e ventrículo direito. Quando o ecocardiograma for inconclusivo, de qualidade técnica limitada ou a suspeita clínica de cardiomiopatia estrutural persistir (particularmente cardiomiopatia hipertrófica e cardiomiopatia arritmogênica de ventrículo direito), complementar com ressonância magnética cardíaca antes de rotular o achado como variante normal do treinamento. O estudo de Sheikh et al. (2018) exemplifica esse protocolo de investigação (ecocardiograma + teste ergométrico + Holter de 24h + ECG de alta resolução + RM cardíaca + painel genético de 311 genes em atletas com inversão de onda T e ecocardiograma normal), tendo identificado doença cardíaca em 21% da coorte por meio de avaliação clínica; o teste genético, isoladamente, agregou diagnóstico em apenas 2,5% dos atletas sem fenótipo clínico, sendo de utilidade limitada na prática rotineira quando a avaliação clínica (ecocardiograma/RM) já é normal.",
+        "origem_secao": "Sheikh et al. 2018, Circulation (PMID 29764897); Sharma et al. 2017 (International Recommendations for ECG Interpretation in Athletes)"
+      },
+      {
+        "id": "desfecho-longo-prazo-triagem-adequada",
+        "categoria": "Desfecho",
+        "obrigatorio": false,
+        "texto": "Ao orientar o atleta e a equipe técnica, comunicar que, quando a inversão de onda T anterior (V1-V4) ou a voltagem isolada aumentada são adequadamente triadas — sem os achados de alarme descritos acima e com ecocardiograma (e RM, quando indicada) estrutural e funcionalmente normais —, a evolução de longo prazo é tipicamente benigna, compatível com variante fisiológica do treinamento, e não uma cardiomiopatia oculta. Em Papadakis et al. (2011), com seguimento médio de 69,7 ± 29,6 meses, os eventos adversos (morte súbita abortada, diagnóstico de HCM) ocorreram exclusivamente entre atletas com inversão de onda T em derivações laterais, não entre aqueles com padrão isolado em V1-V4. Em coorte pediátrica/adolescente maior (Malhotra et al., 2020, 11.168 jogadores de futebol britânicos brancos e negros), os critérios internacionais de 2017 mostraram alta especificidade tanto em atletas brancos (99%) quanto negros (97%) e identificaram 86% dos 42 casos de doença cardíaca grave da coorte — reforçando que a maioria dos padrões elétricos típicos do atleta negro é de fato variante benigna, mas que a tranquilização do atleta deve vir SEMPRE depois, e não no lugar, da triagem estrutural adequada.",
+        "origem_secao": "Papadakis et al. 2011, Eur Heart J (PMID 21613263); Malhotra et al. 2020, Br J Sports Med (PMID 31278087)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
