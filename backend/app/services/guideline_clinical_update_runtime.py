@@ -3,13 +3,17 @@ from __future__ import annotations
 """Camada de execução idempotente para os overrides do CorVIA Intelligence.
 
 Os campos clínicos podem receber atualizações de mais de uma diretriz. Cada
-bloco precisa ter marcador próprio para que reaplicar uma diretriz não remova a
-atualização de outra.
+bloco tem marcador próprio; reaplicar uma diretriz já presente não altera a
+ordem nem cria revisão artificial. Depois de uma reconciliação arquivos -> DB,
+o marcador some e o mesmo override é restaurado automaticamente.
 """
 
 import re
+from typing import Any
 
 from app.services import guideline_clinical_update as core
+
+_ORIGINAL_APPLY_OVERRIDE = core._apply_override
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -34,13 +38,41 @@ def _strip_plain_override(text: str | None, guideline_slug: str) -> str:
     return pattern.sub("", text).lstrip()
 
 
+def _already_applied(target: Any, item_type: str, guideline_slug: str) -> bool:
+    markdown_marker = f"<!-- corvia-intelligence:{guideline_slug}:start -->"
+    plain_marker = f"<!-- corvia-intelligence:{guideline_slug}:plain:start -->"
+    if item_type == "document":
+        return markdown_marker in str(getattr(target, "body_md", "") or "")
+    if item_type == "evidence":
+        return plain_marker in str(getattr(target, "summary", "") or "")
+    if item_type == "disease":
+        return plain_marker in str(getattr(target, "summary", "") or "") or plain_marker in str(getattr(target, "treatment_summary", "") or "")
+    if item_type == "drug":
+        notes = dict(getattr(target, "notes", {}) or {})
+        return any(
+            isinstance(item, dict) and item.get("guideline_slug") == guideline_slug
+            for item in (notes.get("corvia_intelligence_updates") or [])
+        )
+    if item_type == "checklist":
+        return plain_marker in str(getattr(target, "resumo", "") or "")
+    if item_type == "triage":
+        return plain_marker in str(getattr(target, "summary", "") or "")
+    return False
+
+
+def _guarded_apply_override(db, guideline, impact: dict, *, record: bool = True) -> bool:
+    item_type = str(impact.get("item_type") or "")
+    item_id = int(impact.get("item_id") or 0)
+    target = core._get_target(db, item_type, item_id)
+    if target is not None and _already_applied(target, item_type, guideline.slug):
+        return False
+    return _ORIGINAL_APPLY_OVERRIDE(db, guideline, impact, record=record)
+
+
 def install_runtime_guards() -> None:
-    # Os métodos de aplicação resolvem estes nomes no módulo em tempo de
-    # execução. A substituição é local ao processo e mantém o arquivo canônico
-    # legível, além de garantir compatibilidade com registros criados antes
-    # deste guard.
     core._plain_override = _plain_override
     core._strip_plain_override = _strip_plain_override
+    core._apply_override = _guarded_apply_override
 
 
 def process_pending_guidelines(db, *, limit: int = core.PROCESS_LIMIT) -> dict:
