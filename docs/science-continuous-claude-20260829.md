@@ -50,4 +50,61 @@ Achados-chave (agente de auditoria):
 5. `avaliacao-cardiovascular-pre-concepcional` — Tudo com Tudo (related_document_slugs vazio → 3-7 links)
 6. `sarcoidose-cardiaca` — checklist + caso clínico novos (verbete já completo, faltava conectividade a esses tipos)
 
+## Lote 2 — concluído (5 commits, SHA e2d5cd90)
+
+- `valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia` — verbete novo
+- `estenose-tricuspide` — verbete novo, integrado ao doc narrativo já existente
+- `doenca-de-kawasaki` — aprofundado (diagnostic_approach + treatment_summary)
+- `miocardite-pediatrica` — aprofundado (idem)
+- `avaliacao-cardiovascular-pre-concepcional` — +1 related_document_slug
+- `sarcoidose-cardiaca` — +1 checklist, +1 caso clínico
+
+## Lote 3 (em andamento, 4 agentes)
+
+1. `tronco-arterial-comum` — aprofundamento (diag/treat vazios)
+2. `extrassistoles-fetais` — aprofundamento (idem)
+3. `tumores-cardiacos-fetais` — aprofundamento (idem)
+4. `defeito-septo-atrioventricular` — Tudo com Tudo (related=1 → mais links)
+
+## Lote 3 — concluído (4 commits, SHA cc0fa412)
+
+- `defeito-septo-atrioventricular` — +2 related_document_slugs
+- `extrassistoles-fetais` — aprofundado (diag/treat)
+- `tronco-arterial-comum` — aprofundado (diag/treat, Van Praagh, 22q11.2)
+- `tumores-cardiacos-fetais` — aprofundado (rabdomioma/teratoma/fibroma)
+
+## Lote 4 (em andamento, 4 agentes)
+
+1. `hipertensao-gestacional` — aprofundamento (diag vazio, treat raso)
+2. Cardiologia do Esporte — scouting + verbete novo (tema a definir pelo agente, evitando overlap com science-overnight)
+3. Endocardite — auditoria de profundidade + aprofundamento ou subtema novo
+4. Imagem cardiovascular — scouting + exame novo
+
+## Lote 4 — concluído (4 commits, SHA cce611ec)
+
+- `hipertensao-gestacional` — aprofundado (CHIPS vs. CHAP, HYPITAT, risco pós-parto)
+- `endocardite-de-protese-valvar` — verbete novo (desbloqueia 11 evidências SBC 2019)
+- `valvopatia-elegibilidade-esportiva-atleta` — verbete novo (maior bloco pendente do tema esporte, 29/54)
+- exame `ecocardiograma-com-contraste...` — novo
+
+Nota: main drift confirmado sem conflito (mudanças em infra/frontend/API de guideline_updates, nenhum arquivo de conteúdo tocado).
+Território verificado antes do lote: PR #599 (dispositivos) e #725 (FA/Codex) ainda abertos — continuar evitando. `disfuncao-do-no-sinusal` tocado por Codex HOJE (correção zzzzz-codex-20260829, removeu links órfãos) — evitado.
+
+## Lote 5 (em andamento, 3 agentes)
+
+1. `tronco-arterial-comum` — Tudo com Tudo (rel=1)
+2. `extrassistoles-fetais` + `tumores-cardiacos-fetais` — Tudo com Tudo (rel=1 cada)
+3. Aorta torácica descendente — scouting + verbete/correção (evitar duplicar HIM/PAU/renovascular/aortopatias-genéticas já feitos na branch science-overnight)
+
+## Lote 5 — concluído (2 commits, SHA 4ce777ea) — total 15 commits na branch
+
+- Tudo com Tudo para trio fetal/pediátrico (tronco arterial comum +4, extrassístoles fetais +5, tumores cardíacos fetais +3)
+- `dissecao-aortica-tipo-b` — verbete novo (ADSORB/INSTEAD-XL, tricotomia complicada/alto-risco/sem-alto-risco)
+
+## Resumo cumulativo até aqui (15 commits)
+Verbetes novos: valvopatia-pulmonar-do-adulto, estenose-tricuspide, endocardite-de-protese-valvar, valvopatia-elegibilidade-esportiva-atleta, dissecao-aortica-tipo-b (5)
+Aprofundamentos: doenca-de-kawasaki, miocardite-pediatrica, tronco-arterial-comum, extrassistoles-fetais, tumores-cardiacos-fetais, hipertensao-gestacional (6)
+Tudo-com-Tudo (só links): avaliacao-cardiovascular-pre-concepcional, defeito-septo-atrioventricular, + trio fetal do lote 5 (5 correções)
+Novo tipo de conteúdo: checklist+caso para sarcoidose-cardiaca, exame ecocardiograma-com-contraste (3)
+
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
