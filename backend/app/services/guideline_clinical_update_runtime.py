@@ -9,12 +9,19 @@ from typing import Any
 
 from app.models.guideline import Guideline, GuidelineNotification
 from app.services import guideline_clinical_update as core
+from app.services.guideline_source_trust import is_trusted_official_guideline
 
 log = logging.getLogger("corvia.guideline_clinical_update.runtime")
 
 _ORIGINAL_APPLY_OVERRIDE = core._apply_override
 _ORIGINAL_ENSURE_SUMMARY = core._ensure_summary_document
 COMPLETE_PUBLICATION_LIMIT = 300
+_PENDING_STATUSES = (
+    "oficial_aprovada",
+    "detected",
+    "aguardando_revisao",
+    "revisao_necessaria",
+)
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -96,42 +103,78 @@ def _reopen_in_app_alerts(db, guideline_id: int) -> None:
     db.commit()
 
 
-def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -> dict:
-    """Processa todo o backlog elegível antes de liberar a publicação ao usuário.
+def _is_rate_limit(exc: Exception) -> bool:
+    response = getattr(exc, "response", None)
+    return getattr(response, "status_code", None) == 429
 
-    O limite ampliado evita que o radar mostre dezenas de itens apenas detectados
-    enquanto somente os primeiros 20 recebem resumo/leitura em português.
-    Falhas individuais permanecem registradas e não impedem os demais itens.
+
+def _official_pending_query(db):
+    return db.query(Guideline).filter(Guideline.detection_status.in_(_PENDING_STATUSES))
+
+
+def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -> dict:
+    """Processa automaticamente toda publicação de fonte confiável.
+
+    PubMed, Europe PMC e Crossref são tratados como fontes confiáveis quando o
+    item já passou pelos filtros de alto sinal dos indexadores. Fontes não
+    reconhecidas não são autoaprovadas. Em 429 do provedor, a execução para
+    imediatamente: a fila permanece persistida e será retomada no próximo ciclo,
+    evitando transformar um rate limit transitório em centenas de falhas.
     """
     install_runtime_guards()
-    guidelines = db.query(Guideline).filter(
-        Guideline.detection_status.in_(("detected", "aguardando_revisao"))
-    ).order_by(
+    candidates = _official_pending_query(db).order_by(
         Guideline.published_at.desc().nullslast(),
         Guideline.discovered_at.asc(),
     ).limit(limit).all()
+    guidelines = [item for item in candidates if is_trusted_official_guideline(item)]
 
     items: list[dict] = []
     failures: list[dict] = []
+    rate_limited = False
     if not core.settings.ai_enabled or core.settings.ai_provider != "openai" or not core.settings.openai_api_key.strip():
-        return {"processed": 0, "skipped": "ai_unavailable", "items": [], "failures": []}
+        return {
+            "processed": 0,
+            "skipped": "ai_unavailable",
+            "requested": len(guidelines),
+            "remaining": len(guidelines),
+            "items": [],
+            "failures": [],
+        }
 
     with core._PROCESS_LOCK:
         for guideline in guidelines:
+            # Garante que um item confiável nunca volte a depender de revisão manual
+            # apenas porque uma tentativa anterior de análise falhou.
+            if guideline.detection_status != "oficial_aprovada":
+                guideline.detection_status = "oficial_aprovada"
+                db.commit()
             try:
                 result = core.process_guideline(db, guideline)
                 _reopen_in_app_alerts(db, guideline.id)
                 items.append(result)
             except Exception as exc:
                 db.rollback()
+                if _is_rate_limit(exc):
+                    rate_limited = True
+                    log.warning("Rate limit ao analisar %s; fila oficial preservada para retomada.", guideline.slug)
+                    break
                 log.exception("Falha ao analisar/aplicar diretriz %s", guideline.slug)
-                failures.append({"guideline_id": guideline.id, "slug": guideline.slug, "error": type(exc).__name__})
+                failures.append({
+                    "guideline_id": guideline.id,
+                    "slug": guideline.slug,
+                    "error": type(exc).__name__,
+                })
+
+    remaining = sum(
+        1
+        for item in _official_pending_query(db).all()
+        if is_trusted_official_guideline(item)
+    )
     return {
         "processed": len(items),
         "requested": len(guidelines),
-        "remaining": db.query(Guideline).filter(
-            Guideline.detection_status.in_(("detected", "aguardando_revisao"))
-        ).count(),
+        "remaining": remaining,
+        "rate_limited": rate_limited,
         "items": items,
         "failures": failures,
     }
