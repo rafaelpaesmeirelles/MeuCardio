@@ -33042,5 +33042,68 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "manejo-terapeutico-escalonado-da-taquicardia-ventricular-polimorfica-catecolaminergica-cpvt",
+    "condicao": "Taquicardia ventricular polimórfica catecolaminérgica (CPVT) — manejo terapêutico escalonado",
+    "resumo": "Checklist do manejo terapêutico escalonado da CPVT após o diagnóstico: betabloqueador não seletivo como primeira linha, flecainida como terapia adjuvante em arritmia refratária, denervação simpática cardíaca esquerda (LCSD) para casos refratários, indicação criteriosa de CDI (com atenção ao risco de tempestade elétrica por choque) e restrição de exercício vigoroso/esporte competitivo. A literatura é predominantemente composta por coortes multicêntricas observacionais e séries de caso, dado tratar-se de doença rara; as recomendações de classe seguem os consensos HRS/EHRA/APHRS 2013 e ESC 2022.",
+    "documento_origem": null,
+    "theme": "Canalopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013 Dec;10(12):1932-63. doi: 10.1016/j.hrthm.2013.05.014. PMID: 24011539.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022 Oct 21;43(40):3997-4126. doi: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+      "Leren IS, Saberniak J, Majid E, Haland TF, Edvardsen T, Haugaa KH. Nadolol decreases the incidence and severity of ventricular arrhythmias during exercise stress testing compared with β1-selective β-blockers in patients with catecholaminergic polymorphic ventricular tachycardia. Heart Rhythm. 2016 Feb;13(2):433-40. doi: 10.1016/j.hrthm.2015.09.029. PMID: 26432584.",
+      "Peltenburg PJ, Kallas D, Bos JM, et al. An International Multicenter Cohort Study on β-Blockers for the Treatment of Symptomatic Children With Catecholaminergic Polymorphic Ventricular Tachycardia. Circulation. 2022 Feb 1;145(5):333-344. doi: 10.1161/CIRCULATIONAHA.121.056018. PMID: 34874747.",
+      "van der Werf C, Kannankeril PJ, Sacher F, et al. Flecainide therapy reduces exercise-induced ventricular arrhythmias in patients with catecholaminergic polymorphic ventricular tachycardia. J Am Coll Cardiol. 2011 May 31;57(22):2244-54. doi: 10.1016/j.jacc.2011.01.026. PMID: 21616285.",
+      "Bergeman AT, Lieve KVV, Kallas D, et al. Flecainide Is Associated With a Lower Incidence of Arrhythmic Events in a Large Cohort of Patients With Catecholaminergic Polymorphic Ventricular Tachycardia. Circulation. 2023 Dec 19;148(25):2029-2041. doi: 10.1161/CIRCULATIONAHA.123.064786. PMID: 37886885.",
+      "Wilde AA, Bhuiyan ZA, Crotti L, et al. Left cardiac sympathetic denervation for catecholaminergic polymorphic ventricular tachycardia. N Engl J Med. 2008 May 8;358(19):2024-9. doi: 10.1056/NEJMoa0708006. PMID: 18463378.",
+      "Roston TM, Jones K, Hawkins NM, et al. Implantable cardioverter-defibrillator use in catecholaminergic polymorphic ventricular tachycardia: A systematic review. Heart Rhythm. 2018 Dec;15(12):1791-1799. doi: 10.1016/j.hrthm.2018.06.046. PMID: 30063211.",
+      "van der Werf C, Lieve KV, Bos JM, et al. Implantable cardioverter-defibrillators in previously undiagnosed patients with catecholaminergic polymorphic ventricular tachycardia resuscitated from sudden cardiac arrest. Eur Heart J. 2019 Sep 14;40(35):2953-2961. doi: 10.1093/eurheartj/ehz309. PMID: 31145795.",
+      "Lamba A, Roston TM, Peltenburg PJ, et al. An international multicenter cohort study on implantable cardioverter-defibrillators for the treatment of symptomatic children with catecholaminergic polymorphic ventricular tachycardia. Heart Rhythm. 2024 Oct;21(10):1900-1909. doi: 10.1016/j.hrthm.2024.04.006. PMID: 38588993.",
+      "Ackerman MJ, Zipes DP, Kovacs RJ, Maron BJ. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 10: The Cardiac Channelopathies. J Am Coll Cardiol. 2015 Dec 1;66(21):2424-2428. doi: 10.1016/j.jacc.2015.09.042. PMID: 26542662. (versão espelho: Circulation. 2015 Dec 1;132(22):e326-9. doi: 10.1161/CIR.0000000000000246. PMID: 26527716.)"
+    ],
+    "itens": [
+      {
+        "id": "cpvt-manejo-01",
+        "categoria": "Betabloqueador",
+        "obrigatorio": true,
+        "texto": "Iniciar betabloqueador não seletivo em dose plena tolerada em todo paciente com diagnóstico de CPVT, sintomático ou não (classe I nos consensos). Nadolol (1,0-2,5 mg/kg/dia, dose única diária, quando disponível) é o agente preferido na literatura: em coorte de 34 pacientes (Leren et al., 2016), nadolol associou-se a menor incidência e menor gravidade de arritmia ventricular induzida por esforço no teste ergométrico do que betabloqueadores β1-seletivos (ex. metoprolol, atenolol, bisoprolol). O maior estudo multicêntrico internacional em crianças sintomáticas (Peltenburg et al., Circulation 2022, n=329) reforça a superioridade relativa do nadolol sobre outros betabloqueadores na redução de eventos arrítmicos em análise observacional, mas os autores destacam que os grupos não foram randomizados e que fatores de confusão (gravidade basal, adesão, uso concomitante de flecainida) limitam a força da inferência causal. Onde nadolol não está disponível, propranolol é a alternativa não seletiva mais usada; betabloqueadores β1-seletivos são considerados inferiores e não são a primeira escolha. Não há ensaio clínico randomizado comparando betabloqueadores em CPVT — toda a evidência é observacional/coorte, dado tratar-se de doença rara.",
+        "origem_secao": "Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572); Leren et al. Heart Rhythm 2016 (PMID 26432584); Peltenburg et al. Circulation 2022 (PMID 34874747)"
+      },
+      {
+        "id": "cpvt-manejo-02",
+        "categoria": "Flecainida",
+        "obrigatorio": true,
+        "texto": "Adicionar flecainida ao betabloqueador quando arritmia ventricular sintomática (síncope, tempestade elétrica, taquicardia ventricular sustentada) persiste apesar de betabloqueio otimizado, ou quando o teste ergométrico/Holter seriado mostra arritmia ventricular complexa persistente. O mecanismo proposto vai além do bloqueio clássico do canal de sódio (INa): estudos pré-clínicos sugerem que a flecainida inibe diretamente o receptor de rianodina cardíaco (RyR2), reduzindo o vazamento diastólico de cálcio do retículo sarcoplasmático que dispara a atividade deflagrada (afterdepolarizações tardias) característica da CPVT — mecanismo distinto do seu efeito antiarrítmico clássico de classe IC. Evidência de eficácia clínica: van der Werf et al. (JACC 2011, coorte multicêntrica de 33 pacientes refratários a betabloqueador) mostrou redução ou abolição completa de arritmia ventricular induzida por esforço no teste ergométrico em 76% dos pacientes após adição de flecainida. Coorte multicêntrica maior e mais recente (Bergeman et al., Circulation 2023) associou uso de flecainida a menor incidência de eventos arrítmicos em seguimento longitudinal. Ambos os estudos são coortes observacionais, sem grupo controle randomizado; não usar flecainida em monoterapia (sempre associada a betabloqueador) e observar contraindicações estruturais (cardiopatia estrutural, disfunção de VE, uso concomitante de outros bloqueadores de canal de sódio).",
+        "origem_secao": "van der Werf et al. JACC 2011 (PMID 21616285); Bergeman et al. Circulation 2023 (PMID 37886885); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
+      },
+      {
+        "id": "cpvt-manejo-03",
+        "categoria": "LCSD/simpatectomia",
+        "obrigatorio": false,
+        "texto": "Considerar denervação simpática cardíaca esquerda (LCSD, ressecção do gânglio estrelado inferior e dos três a quatro primeiros gânglios torácicos simpáticos, hoje predominantemente por via toracoscópica) em pacientes com CPVT que mantêm síncope, arritmia ventricular sintomática ou choques de CDI apesar de betabloqueador associado a flecainida em dose otimizada, ou como estratégia para reduzir a carga de choques em portadores de CDI com tempestade elétrica recorrente. A série de referência (Wilde et al., NEJM 2008, 3 pacientes com descrição detalhada dentro de coorte multicêntrica mais ampla de portadores de LQT/CPVT) documentou redução acentuada de eventos arrítmicos após LCSD em pacientes refratários à terapia farmacológica máxima. Estudos observacionais subsequentes (séries de caso multicêntricas, não citadas individualmente aqui) reforçam esse benefício, mas todos compartilham a limitação de tamanho amostral pequeno, ausência de randomização e viés de indicação (pacientes mais graves selecionados para o procedimento). LCSD não abole o risco de morte súbita e não substitui indicação de CDI quando esta já está estabelecida; é adjuvante e não é considerada terapia de primeira linha nos consensos atuais.",
+        "origem_secao": "Wilde et al. NEJM 2008 (PMID 18463378); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
+      },
+      {
+        "id": "cpvt-manejo-04",
+        "categoria": "CDI",
+        "obrigatorio": false,
+        "texto": "Indicar CDI em sobrevivente de parada cardíaca por CPVT que já está em farmacoterapia otimizada (classe I/IIa conforme o consenso), mas evitar CDI como primeira intervenção isolada ou em substituição à otimização farmacológica em pacientes sem história de parada cardíaca — a decisão deve ser individualizada e multidisciplinar. O racional para essa cautela é específico da CPVT: revisão sistemática (Roston et al., Heart Rhythm 2018) e coortes multicêntricas subsequentes (van der Werf et al., Eur Heart J 2019, em sobreviventes de parada cardíaca não diagnosticados previamente; Lamba et al., Heart Rhythm 2024, em crianças sintomáticas) documentam alta incidência de choques inadequados e, mais preocupante, de tempestade elétrica desencadeada pelo próprio choque do CDI — a dor e a descarga adrenérgica do choque podem reiniciar o circuito catecolaminérgico que gera nova taquicardia ventricular polimórfica, criando um ciclo de choques sucessivos. Por isso, quando implantado, recomenda-se programação conservadora (zonas de detecção altas, tempos de detecção prolongados, terapia de sobrestimulação antitaquicardia priorizada sobre choque) e otimização máxima concomitante de betabloqueador, flecainida e, quando indicado, LCSD, para reduzir a chance de o dispositivo ser acionado. Toda essa evidência é de coortes observacionais/registro multicêntrico e séries de caso, sem ensaio randomizado — reflexo da raridade da doença.",
+        "origem_secao": "Roston et al. Heart Rhythm 2018 (PMID 30063211); van der Werf et al. Eur Heart J 2019 (PMID 31145795); Lamba et al. Heart Rhythm 2024 (PMID 38588993); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
+      },
+      {
+        "id": "cpvt-manejo-05",
+        "categoria": "Restrição de exercício",
+        "obrigatorio": true,
+        "texto": "Restringir esporte competitivo e exercício físico vigoroso/extenuante em todo paciente com diagnóstico de CPVT (portador sintomático ou assintomático, incluindo portador genotipado assintomático), independentemente da terapia farmacológica em uso, dado que a descarga adrenérgica do esforço físico é o gatilho fisiopatológico central da arritmia nessa condição. O documento de elegibilidade para atletas competitivos (Ackerman et al., Task Force 10, JACC/Circulation 2015) recomenda afastamento de esportes competitivos de alta intensidade em portadores de CPVT, com possível exceção individualizada para esportes de baixa intensidade dinâmica/estática após avaliação especializada e ausência de arritmia em teste de esforço sob terapia otimizada. Os consensos HRS/EHRA/APHRS 2013 e ESC 2022 reforçam a restrição de exercício vigoroso e de esportes competitivos como parte integral e obrigatória do manejo, mesmo em pacientes assintomáticos e mesmo com controle farmacológico aparente da arritmia ao teste ergométrico, pela impossibilidade de garantir ausência completa de risco residual durante o esforço máximo real de competição.",
+        "origem_secao": "Ackerman et al. JACC/Circulation 2015, Task Force 10 (PMID 26542662 / 26527716); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
