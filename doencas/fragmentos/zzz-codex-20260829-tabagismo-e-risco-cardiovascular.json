@@ -1,0 +1,119 @@
+[
+  {
+    "slug": "tabagismo-e-risco-cardiovascular",
+    "name": "Tabagismo e risco cardiovascular",
+    "aliases": [
+      "tabagismo",
+      "dependência de nicotina e coração",
+      "cigarro e doença cardiovascular",
+      "uso de tabaco e risco cardiovascular"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "fator_de_risco_modificavel",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "O uso de tabaco é um dos fatores de risco cardiovasculares modificáveis de maior impacto. A exposição ativa e passiva aumenta risco de doença coronariana, acidente vascular cerebral, doença arterial periférica, aneurisma de aorta e morte cardiovascular. A cessação completa reduz risco cardiovascular em qualquer idade e deve ser tratada como intervenção clínica, combinando aconselhamento e tratamento farmacológico quando apropriado.",
+    "epidemiology": "O risco cardiovascular associado ao tabagismo é dose-dependente, mas não existe nível seguro de exposição. Mesmo baixa intensidade e exposição passiva produzem risco clinicamente relevante. A cessação reduz progressivamente o excesso de risco e oferece benefício mesmo após doença cardiovascular estabelecida. Produtos combustíveis concentram a maior evidência de dano; cigarros eletrônicos e produtos aquecidos não devem ser classificados como inócuos nem usados para retirar o diagnóstico de exposição nicotínica.",
+    "presentation": [
+      "Muitos pacientes são assintomáticos e o diagnóstico depende de perguntar sistematicamente sobre uso atual, prévio e exposição passiva.",
+      "Angina, dispneia aos esforços, claudicação, déficit neurológico transitório ou persistente e redução de tolerância ao exercício podem revelar doença cardiovascular associada.",
+      "Dependência de nicotina pode se manifestar por uso logo após acordar, dificuldade de permanecer abstinente, múltiplas tentativas de cessação e sintomas de abstinência.",
+      "Registrar separadamente cigarro convencional, charuto/cachimbo, narguilé, tabaco sem fumaça, cigarro eletrônico/vape e produtos de tabaco aquecido.",
+      "A exposição domiciliar ou ocupacional à fumaça de terceiros também é clinicamente relevante."
+    ],
+    "diagnostic_approach": {
+      "identificacao": "Perguntar e documentar tabagismo em toda oportunidade clínica. A diretriz ACC/AHA de prevenção primária recomenda avaliar todos os adultos quanto ao uso de tabaco em cada consulta e registrar o status como nunca fumante, ex-fumante ou uso atual, incluindo produtos eletrônicos.",
+      "gravidade_e_dependencia": "Quantificar produto, frequência, duração, exposição passiva, tentativas prévias de cessação, sintomas de abstinência e barreiras psicossociais. A intensidade da dependência ajuda a planejar suporte, mas não deve ser usada para negar tratamento a usuários de menor consumo.",
+      "risco_cardiovascular": "Tabagismo é fator de risco causal e modificável; a indicação de cessação independe de escore de risco. Em quem já tem ASCVD, a cessação é parte obrigatória da prevenção secundária.",
+      "produtos_novos": "Cigarros eletrônicos e produtos aquecidos devem ser registrados como exposições específicas. A ausência de combustão não equivale a ausência de risco cardiovascular; evitar afirmações de segurança de longo prazo sem evidência.",
+      "comorbidades": "Avaliar doença coronariana, doença cerebrovascular, doença arterial periférica, DPOC, câncer, gravidez, saúde mental e uso de outras substâncias, pois modificam urgência, abordagem e escolha terapêutica."
+    },
+    "differentials": [
+      "Uso ocasional/social subestimado pelo paciente",
+      "Exposição passiva significativa sem tabagismo ativo",
+      "Uso exclusivo de cigarro eletrônico ou tabaco aquecido",
+      "Dependência de nicotina por outras apresentações",
+      "Dispneia por DPOC, insuficiência cardíaca, anemia ou doença pulmonar intersticial",
+      "Claudicação de causa não vascular"
+    ],
+    "tests": [
+      "O diagnóstico de exposição ao tabaco é clínico e não exige exame laboratorial de rotina.",
+      "Pressão arterial, perfil lipídico, glicemia/HbA1c e avaliação global do risco cardiovascular conforme idade e comorbidades.",
+      "ECG, investigação de isquemia, índice tornozelo-braquial ou imagem vascular apenas quando indicados por sintomas, exame físico ou risco clínico; não rastrear indiscriminadamente apenas por ser fumante.",
+      "Espirometria quando houver sintomas respiratórios, exposição relevante ou suspeita clínica de DPOC, seguindo diretrizes respiratórias.",
+      "Biomarcadores de exposição, como cotinina, podem ter uso selecionado, mas não são necessários para a maioria das decisões clínicas de cessação."
+    ],
+    "red_flags": [
+      "Dor torácica, dispneia aguda, síncope ou sinais de síndrome coronariana aguda exigem avaliação emergencial e não devem ser atribuídos à ansiedade ou abstinência.",
+      "Déficit neurológico focal, alteração súbita da fala/visão ou síndrome vestibular aguda sugerem evento cerebrovascular.",
+      "Dor aguda em membro com palidez, frialdade, ausência de pulso ou déficit motor/sensitivo sugere isquemia aguda.",
+      "Hemoptise, perda ponderal inexplicada ou sintomas respiratórios persistentes exigem investigação pulmonar apropriada.",
+      "Gestação com tabagismo ativo requer intervenção rápida para cessação e coordenação obstétrica."
+    ],
+    "ambulatory_flow": [
+      "Perguntar e registrar uso de tabaco/nicotina e exposição passiva em toda consulta.",
+      "Aconselhar de forma clara a cessação completa e relacionar o benefício ao risco cardiovascular individual.",
+      "Avaliar prontidão, dependência, tentativas anteriores, saúde mental, gestação e contraindicações/interações relevantes.",
+      "Oferecer intervenção comportamental e farmacoterapia baseada em evidência quando apropriada; a combinação é mais eficaz do que aconselhamento isolado.",
+      "Entre as opções recomendadas pela OMS estão terapia de reposição de nicotina, vareniclina, bupropiona e citisina onde disponível, individualizadas à disponibilidade, perfil do paciente e contraindicações.",
+      "Combinar formas de reposição de nicotina pode ser considerada em dependência maior conforme estratégia de cessação.",
+      "Definir data/estratégia de parada, antecipar sintomas de abstinência e organizar acompanhamento próximo para prevenir recaída.",
+      "Eliminar exposição passiva em casa, carro e trabalho sempre que possível."
+    ],
+    "emergency_flow": [
+      "Em evento cardiovascular agudo, tratar o evento segundo protocolo e identificar tabagismo como fator de risco modificável durante a internação.",
+      "Usar a internação como janela de intervenção: aconselhamento estruturado e plano de cessação devem começar antes da alta quando clinicamente possível.",
+      "Não postergar indevidamente terapia de cessação por receio inespecífico de eventos cardiovasculares; o ensaio EAGLES não demonstrou aumento significativo de eventos cardiovasculares graves com vareniclina, bupropiona ou reposição de nicotina em comparação com placebo na população estudada.",
+      "Coordenar seguimento após a alta, pois recaída é frequente sem suporte continuado."
+    ],
+    "treatment_summary": "A cessação completa é a meta. ACC/AHA 2019 recomenda avaliar uso de tabaco em todos os adultos em cada consulta (Classe I, nível A), aconselhar todos os usuários a abandonar o tabaco (Classe I, nível A) e combinar intervenções comportamentais com farmacoterapia para maximizar abstinência (Classe I, nível A). A SBC 2019 adota recomendações concordantes. A OMS 2024 recomenda suporte comportamental e farmacológico, incluindo vareniclina, reposição de nicotina, bupropiona e citisina onde disponível. Exposição passiva também deve ser evitada.",
+    "monitoring": [
+      "Status de abstinência e data da última exposição.",
+      "Craving, sintomas de abstinência e recaídas ou lapsos.",
+      "Adesão e efeitos adversos da estratégia farmacológica escolhida.",
+      "Peso, humor e sono quando clinicamente relevantes durante a cessação.",
+      "Pressão arterial, lipídios, diabetes e demais fatores de risco cardiovasculares.",
+      "Manutenção de ambiente domiciliar e ocupacional sem fumaça."
+    ],
+    "special_populations": [
+      "ASCVD estabelecida: cessação é componente de prevenção secundária de alto impacto e deve ser abordada durante internações e seguimento.",
+      "Doença psiquiátrica: não excluir tratamento farmacológico por diagnóstico psiquiátrico isolado; selecionar e monitorar terapia individualmente.",
+      "Gestação e lactação: priorizar cessação com suporte comportamental e decisão farmacológica individualizada com obstetrícia.",
+      "Adolescentes e adultos jovens: enfatizar prevenção da dependência e registrar vaping, que pode não ser espontaneamente relatado como tabagismo.",
+      "DPOC: cessação é intervenção fundamental para reduzir progressão da doença pulmonar e risco cardiovascular concorrente.",
+      "Doença renal/hepática: ajustar escolha de farmacoterapia às características de depuração e contraindicações do agente."
+    ],
+    "assistant_questions": [
+      {"id": "current_tobacco", "label": "Há uso atual de cigarro, tabaco, vape ou outro produto com nicotina?", "type": "boolean", "required": true, "section": "Exposição"},
+      {"id": "secondhand_smoke", "label": "Há exposição passiva frequente à fumaça de tabaco em casa, carro ou trabalho?", "type": "boolean", "section": "Exposição"},
+      {"id": "cv_symptoms", "label": "Há dor torácica, dispneia aguda, síncope, déficit neurológico ou sinais de isquemia de membro?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "ready_to_quit", "label": "O paciente aceita construir uma estratégia de cessação agora?", "type": "boolean", "section": "Cessação"},
+      {"id": "prior_relapse", "label": "Houve tentativa prévia com recaída ou sintomas de abstinência relevantes?", "type": "boolean", "section": "Dependência"}
+    ],
+    "assistant_rules": [
+      {"id": "tobacco-cessation", "priority": 80, "when": {"all": [{"field": "current_tobacco", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Uso atual de tabaco é fator de risco cardiovascular modificável e deve gerar intervenção de cessação."], "messages": ["Oferecer aconselhamento e discutir farmacoterapia baseada em evidência quando apropriada."]}},
+      {"id": "acute-cv-red-flag", "priority": 100, "when": {"all": [{"field": "cv_symptoms", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Sintomas compatíveis com evento cardiovascular agudo em pessoa exposta ao tabaco."], "emergency_flow": ["Avaliar imediatamente segundo o protocolo da síndrome aguda; não atribuir o quadro à abstinência."]}},
+      {"id": "passive-exposure", "priority": 50, "when": {"all": [{"field": "secondhand_smoke", "op": "truthy"}]}, "add": {"supporting": ["Exposição passiva à fumaça aumenta risco cardiovascular e deve ser eliminada sempre que possível."]}},
+      {"id": "relapse-support", "priority": 65, "when": {"all": [{"field": "prior_relapse", "op": "truthy"}]}, "add": {"messages": ["Recaída prévia não deve encerrar o tratamento; intensificar suporte, revisar gatilhos e ajustar a estratégia de cessação."]}}
+    ],
+    "tags": ["tabagismo", "nicotina", "prevenção cardiovascular", "cessação", "vareniclina", "reposicao de nicotina", "bupropiona", "vape", "fumo passivo"],
+    "source_refs": [
+      "Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140:e596-e646. doi:10.1161/CIR.0000000000000678.",
+      "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42:3227-3337. doi:10.1093/eurheartj/ehab484.",
+      "Précoma DB, Oliveira GMM, Simão AF, et al. Atualização da Diretriz de Prevenção Cardiovascular da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(4):787-891.",
+      "World Health Organization. WHO clinical treatment guideline for tobacco cessation in adults. Geneva: WHO; 2024.",
+      "Benowitz NL, Pipe A, West R, et al. Cardiovascular Safety of Varenicline, Bupropion, and Nicotine Patch in Smokers: A Randomized Clinical Trial. JAMA Intern Med. 2018;178:622-631. PMID:29630702."
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/science-news/2019-acc-aha-guideline-on-the-primary-prevention-of-cardiovascular-disease",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cvd-prevention/",
+      "https://www.who.int/publications/i/item/9789240096431"
+    ],
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo para fator de risco cardiovascular de alta carga assistencial. A auditoria da main não encontrou hub dedicado nem documento científico central de tabagismo já publicado e revisado que justificasse relação Tudo com Tudo forte; por isso related_document_slugs permanece vazio em vez de criar vínculo tangencial. Manter pendente até revisão editorial humana."
+  }
+]
