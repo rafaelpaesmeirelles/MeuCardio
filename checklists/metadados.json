@@ -29797,5 +29797,107 @@
       }
     ],
     "revisao": "Registro redigido nesta consolidação a partir do documento de origem já publicado e revisado nesta pasta e de fontes primárias com PMID conferido individualmente via PubMed E-utilities antes do uso. Nenhuma dose de fármaco e nenhum corte numérico foram atribuídos além dos já publicados nos checklists e fluxogramas de origem citados. Pendente de revisão clínica individual antes da publicação — review_status=pendente_revisao."
+  },
+  {
+    "slug": "escolha-do-metodo-de-imagem-para-viabilidade-miocardica-pre-revascularizacao",
+    "condicao": "Escolha de método de imagem para avaliação de viabilidade miocárdica antes de revascularização",
+    "resumo": "Checklist comparativo para apoiar a escolha entre os métodos de imagem disponíveis para avaliar viabilidade miocárdica em disfunção ventricular esquerda isquêmica antes de decidir revascularização — ecocardiograma com dobutamina em baixa dose (contratilidade de reserva), cintilografia de perfusão com tálio-201 ou tecnécio-99m (captação em repouso), PET com FDG (metabolismo glicolítico residual) e ressonância magnética cardíaca com realce tardio (extensão transmural da fibrose) —, organizado por critérios práticos de decisão (disponibilidade local, função renal, dispositivo cardíaco implantável não condicional, objetivo clínico do exame) e não como protocolo de execução de um único método. Não aborda se revascularizar nem o manejo da síndrome coronariana crônica em si.",
+    "documento_origem": null,
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Mastrocola LE, Amorim BJ, Vitola JV, Brandão SCS, Grossman GB, Lima RSL, Lopes RW, Chalela WA, Carreira LCTF, Araújo JRN, Mesquita CT, Meneghetti JC, et al. Atualização da Diretriz de Cardiologia Nuclear da SBC – 2020 · Arquivos Brasileiros de Cardiologia · 2020 · 114(2):325-429 · DOI: 10.36660/abc.20200087 · PMID: 32215507",
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, Lopes MMU, Cerci RJ, Nacif MS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC e do Colégio Brasileiro de Radiologia – 2024 · Arquivos Brasileiros de Cardiologia · 2024 · 121(9):e20240608 · DOI: 10.36660/abc.20240608 · PMID: 39475988",
+      "Knuuti J, Wijns W, Saraste A, Capodanno D, Barbato E, Funck-Brentano C, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes · European Heart Journal · 2020 · 41(3):407-477 · DOI: 10.1093/eurheartj/ehz425 · PMID: 31504439",
+      "Dilsizian V, Bacharach SL, Beanlands RS, Bergmann SR, Delbeke D, Dorbala S, Gropler RJ, Knuuti J, Schelbert HR, Travin MI. ASNC imaging guidelines/SNMMI procedure standard for positron emission tomography (PET) nuclear cardiology procedures · Journal of Nuclear Cardiology · 2016 · 23(5):1187-1226 · DOI: 10.1007/s12350-016-0522-3 · PMID: 27392702",
+      "Kim RJ, Wu E, Rafael A, Chen EL, Parker MA, Simonetti O, Klocke FJ, Bonow RO, Judd RM. The use of contrast-enhanced magnetic resonance imaging to identify reversible myocardial dysfunction · New England Journal of Medicine · 2000 · 343(20):1445-1453 · DOI: 10.1056/NEJM200011163432003 · PMID: 11078769"
+    ],
+    "itens": [
+      {
+        "id": "vmi-objetivo-clinico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Objetivo do exame definido antes de escolher o método: pesquisar contratilidade de reserva (resposta inotrópica a estímulo farmacológico), captação/perfusão em repouso, metabolismo glicolítico residual, ou extensão transmural de fibrose — cada objetivo aponta para um método diferente, não para uma escala única de 'melhor exame'",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, capítulo de avaliação de viabilidade miocárdica"
+      },
+      {
+        "id": "vmi-disponibilidade-local",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Disponibilidade local e experiência da equipe com cada método verificadas antes de indicar — ecocardiograma com dobutamina e cintilografia de perfusão são amplamente acessíveis na maioria dos serviços; PET com FDG depende de ciclotron ou gerador de radionuclídeo e de logística de radiofármaco, e está concentrado em poucos centros",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear; ASNC/SNMMI 2016 — guideline de PET, considerações de infraestrutura"
+      },
+      {
+        "id": "vmi-funcao-renal-contraste",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função renal (taxa de filtração glomerular estimada) verificada antes de indicar ressonância magnética cardíaca com contraste à base de gadolínio para realce tardio — necessária para avaliar o risco de fibrose sistêmica nefrogênica em disfunção renal grave; ecocardiograma, cintilografia e PET não dependem de contraste nefrotóxico para avaliar viabilidade",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de segurança do contraste"
+      },
+      {
+        "id": "vmi-cied-nao-condicional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de marca-passo, CDI ou outro dispositivo cardíaco eletrônico implantável pesquisada antes de indicar ressonância magnética — dispositivo não condicional para RM não é contraindicação absoluta, mas exige protocolo de segurança dedicado (reprogramação, monitorização, equipe capacitada); quando esse protocolo não está disponível no serviço, a RM deixa de ser a opção prática mesmo sendo a mais informativa",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular; protocolo institucional correspondente a dispositivo não condicional"
+      },
+      {
+        "id": "vmi-contraindicacao-dobutamina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações ao estresse farmacológico com dobutamina pesquisadas antes de indicar o ecocardiograma sob dobutamina — arritmia ventricular significativa não controlada, hipertensão grave não controlada, e obstrução dinâmica relevante da via de saída do ventrículo esquerdo — quando presentes, deslocam a escolha para um método sem estímulo inotrópico",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de testes de estresse farmacológico"
+      },
+      {
+        "id": "vmi-janela-acustica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Qualidade da janela acústica avaliada antes de indicar ecocardiograma com dobutamina — janela tecnicamente limitada (obesidade, doença pulmonar, deformidade torácica) reduz a confiabilidade da leitura de contratilidade segmentar e favorece um método de imagem tomográfica (cintilografia, PET ou ressonância) em vez de insistir no eco",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de limitações técnicas do ecocardiograma sob estresse"
+      },
+      {
+        "id": "vmi-radiacao-ionizante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Necessidade de evitar radiação ionizante ponderada quando aplicável (paciente jovem, gestante, exames repetidos previstos no seguimento) — cintilografia de perfusão e PET expõem o paciente a radiação ionizante; ecocardiograma com dobutamina e ressonância magnética não",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de radioproteção"
+      },
+      {
+        "id": "vmi-extensao-transmural-fibrose",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se a decisão exige quantificar a extensão transmural da fibrose (e não apenas classificar o segmento como viável ou não), a ressonância cardíaca com realce tardio é o método com maior resolução espacial disponível para essa graduação — quanto maior a extensão transmural do realce tardio em um segmento, menor a probabilidade de recuperação contrátil após revascularização",
+        "origem_secao": "Kim RJ et al., NEJM 2000 (PMID 11078769); SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular"
+      },
+      {
+        "id": "vmi-pet-fdg-referencia",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando disponível e o resultado de outro método for discordante da apresentação clínica, ou a decisão envolver alto risco cirúrgico, considerar PET com FDG — avalia o metabolismo glicolítico residual do miocárdio hibernado e é tratado pela ASNC/SNMMI como método de referência para viabilidade entre os exames de medicina nuclear, sobretudo quando combinado a estudo de perfusão em repouso para caracterizar o padrão de descompasso perfusão-metabolismo",
+        "origem_secao": "ASNC/SNMMI 2016 — guideline de PET em cardiologia nuclear, seção de avaliação de viabilidade miocárdica"
+      },
+      {
+        "id": "vmi-informacao-etiologica-adicional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a etiologia da disfunção ventricular ainda não está esclarecida (dúvida entre origem isquêmica e não isquêmica — miocardite, doença infiltrativa, cardiomiopatia não compactada), considerar que a ressonância cardíaca soma essa informação ao mesmo exame que avalia viabilidade, o que nenhum dos outros três métodos oferece isoladamente",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de caracterização tecidual"
+      },
+      {
+        "id": "vmi-capacidade-cooperacao-exame",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Capacidade do paciente de cooperar com o protocolo verificada antes de indicar ressonância magnética — apneias repetidas, permanência prolongada no túnel (claustrofobia) e ritmo cardíaco estável para sincronização com o ECG são necessários; fibrilação atrial não controlada ou incapacidade de cooperar tornam a aquisição tecnicamente difícil e podem inviabilizar a leitura",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de preparo e limitações técnicas"
+      },
+      {
+        "id": "vmi-custo-tempo-execucao",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Custo e tempo de execução comparados entre os métodos disponíveis no serviço quando mais de um atende ao objetivo clínico — ecocardiograma com dobutamina costuma ser o mais rápido e de menor custo direto; PET com FDG costuma ser o mais restrito por custo e logística de radiofármaco, o que pesa na escolha quando a informação adicional não muda a conduta",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear; ASNC/SNMMI 2016 — guideline de PET, considerações de custo-efetividade"
+      }
+    ],
+    "revisao": "Checklist redigido em 29/08/2026, sem documento de origem no repositório: busca por 'viabilidade miocárdica' em content/ não localizou fluxograma dedicado à escolha entre métodos de imagem para viabilidade pré-revascularização. O documento mais próximo do tema, content/Insuficiência_cardíaca/revascularizacao-cirurgica-na-cardiomiopatia-isquemica-stich-stiches-e-a-viabilidade-miocardica.md, discute se a viabilidade deve guiar a indicação de revascularização (subestudo do STICH) — pergunta diferente da deste checklist — e por isso não foi usado como documento_origem. Itens derivados diretamente das fontes listadas em source_refs, com PMID e DOI de cada uma conferidos individualmente via NCBI eutils (esearch/esummary) antes do uso. Enquadramento mantido estritamente em escolha de método de imagem para viabilidade miocárdica; indicação de revascularização e manejo de síndrome coronariana crônica ficam fora de escopo, por serem território de outra frente de produção. review_status pendente_revisao até validação clínica humana."
   }
 ]
