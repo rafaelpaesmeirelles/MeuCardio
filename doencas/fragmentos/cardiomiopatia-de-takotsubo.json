@@ -1,0 +1,640 @@
+[
+  {
+    "slug": "cardiomiopatia-de-takotsubo",
+    "name": "Cardiomiopatia de takotsubo",
+    "aliases": [
+      "Síndrome de takotsubo",
+      "Síndrome do coração partido",
+      "Broken heart syndrome",
+      "Cardiomiopatia induzida por estresse",
+      "Cardiomiopatia de estresse",
+      "Síndrome de balonamento apical transitório do ventrículo esquerdo",
+      "Takotsubo cardiomyopathy / Takotsubo syndrome (TTS)"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia de takotsubo é uma síndrome de disfunção ventricular esquerda aguda e tipicamente transitória, desencadeada por descarga catecolaminérgica excessiva (gatilho emocional, físico ou catecolaminérgico direto), na ausência de doença coronariana obstrutiva que explique a extensão da disfunção contrátil regional. É diagnóstico de exclusão que se confunde clinicamente com síndrome coronariana aguda — dor torácica, alteração eletrocardiográfica nova e troponina elevada —, mas apresenta, no maior registro internacional já publicado (InterTAK, 1.750 pacientes), fração de ejeção inicial mais baixa e taxas de complicação intra-hospitalar (incluindo choque e morte) estatisticamente semelhantes às da síndrome coronariana aguda pareada, desfazendo a percepção histórica de benignidade. A variante apical clássica responde por cerca de 82% dos casos; variantes atípicas (médio-ventricular, basal/invertida, focal) somam o restante e predominam em pacientes mais jovens, com maior associação a gatilho catecolaminérgico secundário identificável (feocromocitoma/paraganglioma, hemorragia subaracnóidea, catecolaminas exógenas). O manejo agudo depende de fenotipar o mecanismo da instabilidade hemodinâmica — falência de bomba, obstrução dinâmica da via de saída do ventrículo esquerdo, falência de ventrículo direito ou vasoplegia — antes de escalonar inotrópico ou vasoativo, já que a conduta reflexa de choque cardiogênico pode agravar o quadro no subgrupo obstrutivo. A recuperação da função ventricular costuma ser completa em 4 a 8 semanas, mas o seguimento de longo prazo importa: taxa de recorrência de cerca de 4% ao ano (maior sem gatilho identificável), maior prevalência de transtorno neurológico/psiquiátrico prévio e maior carga de ansiedade/sintomas de estresse pós-traumático após o evento.",
+    "epidemiology": "O Registro Internacional de Takotsubo (InterTAK), consórcio de 26 centros na Europa e nos Estados Unidos com 1.750 pacientes comparados a controles pareados por idade e sexo com síndrome coronariana aguda, é a maior coorte prospectiva já reunida sobre a síndrome e a base da classificação anatômica usada hoje. Nesse registro, 89,8% dos pacientes eram mulheres, com idade média de 66,8 anos. Ao contrário da percepção popular de que o takotsubo é predominantemente ligado a estresse emocional, o gatilho físico foi mais comum que o emocional (36,0% vs. 27,7%), e 28,5% dos pacientes não tiveram nenhum gatilho identificável. Doença neurológica ou psiquiátrica prévia foi muito mais frequente no grupo takotsubo do que no grupo com síndrome coronariana aguda pareado (55,8% vs. 25,7%, p<0,001) — um dos achados mais citados do registro. Doença coronariana obstrutiva concomitante está presente em 10-29% dos casos e não exclui o diagnóstico, desde que a disfunção contrátil regional se estenda além do território da artéria acometida. Quanto à distribuição anatômica, a variante apical (típica) responde por cerca de 81,7% dos casos, e as formas atípicas (18,3%) se dividem em médio-ventricular (10-20%), basal/invertida (menos de 5%, cerca de 2,2% na população geral) e focal (cerca de 1,5%). Pacientes com forma atípica são, em média, quase 5 anos mais jovens que os com forma apical (62,5 vs. 67,3 anos, p<0,001) e têm mais transtorno neurológico associado. Quando o gatilho é excesso identificável de catecolaminas (exógenas ou endógenas, incluindo feocromocitoma/paraganglioma), o perfil muda de forma marcante: idade média de 46,4 anos (mais de 15 anos abaixo da média geral), padrão basal em quase 29% dos casos (mais de dez vezes a proporção da população geral) e taxa de complicação de 68,2%. No contexto perioperatório de cirurgia não cardíaca, a incidência é de 0,016% em geral, subindo para 0,06% em cesarianas (que respondem por 30% dos casos de takotsubo perioperatório); metade das mulheres acometidas nesse contexto são pré-menopáusicas, um perfil demográfico atípico em relação ao takotsubo clássico. No seguimento de longo prazo do InterTAK, a taxa de evento cardiovascular e cerebrovascular adverso maior foi de 9,9% por paciente-ano, e a taxa de morte, de 5,6% por paciente-ano; a taxa de recorrência do próprio takotsubo, medida no registro espanhol RETAKO (1.097 pacientes), foi de aproximadamente 4% ao ano, com a ausência de gatilho identificável no episódio índice como único fator independentemente associado à recorrência (razão de chances 3,7).",
+    "presentation": [
+      "Dor torácica aguda, com ou sem irradiação, indistinguível clinicamente de síndrome coronariana aguda",
+      "Dispneia súbita, podendo evoluir com edema pulmonar",
+      "Alterações eletrocardiográficas novas — supra ou infra de segmento ST, inversão de onda T ou prolongamento do intervalo QTc — inespecíficas e sobrepostas às do infarto",
+      "Elevação de troponina e/ou CK, tipicamente com magnitude desproporcional (mais baixa) à extensão da disfunção contrátil observada, mas sem corte que discrimine com segurança de infarto no nível individual",
+      "Palpitações, síncope ou pré-síncope, sobretudo quando há obstrução dinâmica da via de saída do ventrículo esquerdo ou arritmia ventricular associada",
+      "Gatilho emocional, físico (doença aguda, cirurgia, trauma) ou neurológico identificável em cerca de 72% dos casos; ausência de gatilho evidente em cerca de 28,5%",
+      "Choque cardiogênico ou hipotensão persistente como forma de apresentação, com taxa de complicação grave intra-hospitalar comparável à da síndrome coronariana aguda pareada",
+      "Padrão atípico (acinesia/hipocinesia basal com hipercinesia apical, ou padrão médio-ventricular ou focal) em cerca de 18% dos casos, mais comum em pacientes mais jovens e com gatilho catecolaminérgico secundário",
+      "Sofrimento psicológico desproporcional ao habitual de uma síndrome coronariana aguda no período pós-alta, com sintomas de ansiedade e de estresse pós-traumático mais marcados que em controles com infarto",
+      "Apresentação perioperatória — instabilidade hemodinâmica nova, troponina elevada e alteração eletrocardiográfica no pós-operatório imediato ou durante a emergência anestésica de cirurgia não cardíaca, frequentemente confundida com infarto perioperatório verdadeiro"
+    ],
+    "diagnostic_approach": {
+      "criterios_diagnosticos_intertak": "O critério central, consolidado pelo documento de consenso internacional que definiu os critérios InterTAK, é a disfunção contrátil regional transitória do ventrículo esquerdo (abaulamento apical, médio-ventricular, basal ou focal) que se estende além do território de qualquer artéria coronária isoladamente obstruída, ou que ocorre sem obstrução coronariana associada. Um gatilho emocional, físico ou neurológico costuma preceder o evento, mas não é obrigatório para o diagnóstico — cerca de 28,5% dos casos do InterTAK não tiveram gatilho identificável. Os demais elementos do critério InterTAK incluem: biomarcadores (troponina/CK) moderadamente elevados; peptídeo natriurético tipo B frequentemente elevado; ausência de evidência de miocardite infecciosa; e predomínio de mulheres na pós-menopausa. Doença coronariana obstrutiva concomitante NÃO exclui o diagnóstico — está presente em 10-29% dos casos (critério InterTAK nº 6) —, desde que a disfunção observada ultrapasse o território explicado pela lesão. A pergunta que decide não é 'há lesão coronariana?', mas 'a disfunção contrátil é explicada inteiramente por essa lesão, ou a ultrapassa?'.",
+      "diferenciacao_da_sindrome_coronariana_aguda": "Coronariografia com ventriculografia esquerda urgente é o padrão-ouro para excluir infarto agudo do miocárdio quando a apresentação é compatível com síndrome coronariana aguda, sobretudo com supra de ST, onde excluir infarto com segurança é prioridade imediata. Angiotomografia coronária é alternativa aceita em paciente estável, de baixo risco, com takotsubo recorrente já com padrão conhecido, ou criticamente enfermo em quem a invasão adicional traz risco desproporcional — incluindo o paciente oncológico com trombocitopenia importante ou malignidade avançada, situação em que a diretriz ESC 2022 de cardio-oncologia recomenda explicitamente essa alternativa. No registro InterTAK, a fração de ejeção do ventrículo esquerdo inicial é, em média, mais baixa no takotsubo do que na síndrome coronariana aguda pareada (40,7% vs. 51,5%, p<0,001) — apesar da percepção de benignidade, a disfunção ventricular aguda tende a ser mais grave —, e as taxas de complicação grave intra-hospitalar (incluindo choque e morte) são estatisticamente semelhantes entre os dois grupos (p=0,93). Um discriminador bioquímico citado na literatura de manejo perioperatório é a razão BNP/troponina acima de 159 (sensibilidade 95,2%, especificidade 97,9%, estudo de takotsubo em geral, não validado especificamente na população perioperatória) — mas a confirmação por imagem (ventriculografia, ecocardiograma seriado ou angiografia coronariana) permanece o critério mais robusto quando uma diferenciação numérica precisa é necessária para decisão clínica individual.",
+      "variantes_anatomicas": "Apical (típica): hipocinesia/acinesia dos segmentos médio e apical com hipercinesia compensatória da base — cerca de 81,7% dos casos, e a origem do nome da síndrome (formato de vaso usado para capturar polvo no Japão). Médio-ventricular: cerca de 10-20% dos casos. Basal/invertida (também chamada takotsubo invertido ou reverse takotsubo): base acinética ou hipocinética com ápice contraindo de forma preservada ou hipercinética — cerca de 2,2% da população geral de takotsubo, mas até 28,8% dos casos de takotsubo catecolaminérgico (feocromocitoma/paraganglioma, hemorragia subaracnóidea, catecolaminas exógenas); paciente tipicamente mais jovem (idade média 62,5 vs. 67,3 anos nas formas típicas) e com mais transtorno neurológico associado. Focal: cerca de 1,5% dos casos, mais comum em parede anterolateral. As quatro variantes compartilham o mesmo reconhecimento e manejo agudo geral, mas o padrão basal exige suspeita ativa de gatilho catecolaminérgico secundário tratável, porque o examinador que espera o padrão apical clássico tende a não nomear a síndrome diante de um padrão de imagem invertido.",
+      "avaliacao_hemodinamica_e_de_risco": "Ecocardiograma com Doppler deve pesquisar sistematicamente: obstrução dinâmica da via de saída do ventrículo esquerdo (LVOTO) com gradiente significativo, presente em cerca de 20% dos casos; movimento sistólico anterior da valva mitral e gravidade de regurgitação mitral associada; função e tamanho do ventrículo direito; e extensão da acinesia apical, pelo risco de trombo mural. Monitorização eletrocardiográfica contínua é indicada pelo risco de prolongamento de QTc e arritmia ventricular maligna, documentada em 3,0-8,6% dos casos. Em paciente com padrão basal/atípico ou idade jovem, a investigação deve incluir busca ativa de gatilho catecolaminérgico secundário — uso recente de agonista adrenérgico exógeno, evento neurológico agudo concomitante (hemorragia subaracnóidea, AVC, crise convulsiva) e sinais sugestivos de feocromocitoma/paraganglioma (hipertensão paroxística, palpitação, sudorese, cefaleia), com dosagem de metanefrinas plasmáticas ou urinárias fracionadas quando essa suspeita existir. Em paciente oncológico, especialmente em uso de inibidor de checkpoint imune, a ressonância magnética cardíaca ajuda a diferenciar takotsubo de miocardite associada ao imunoterápico quando os dois quadros se sobrepõem."
+    },
+    "differentials": [
+      "Infarto agudo do miocárdio com ou sem supra de ST (padrão de disfunção restrito ao território de artéria obstruída, ao contrário do takotsubo)",
+      "MINOCA (infarto do miocárdio com artérias coronárias não obstrutivas) — takotsubo é uma das causas de MINOCA, não um diagnóstico mutuamente exclusivo dele",
+      "Dissecção espontânea de artéria coronária (SCAD)",
+      "Miocardite aguda, incluindo miocardite associada a inibidor de checkpoint imune no paciente oncológico — overlap descrito, ressonância cardíaca ajuda a diferenciar",
+      "Miocardiopatia catecolaminérgica por feocromocitoma ou paraganglioma secretor (gatilho endógeno específico, mais associado ao padrão basal invertido)",
+      "Choque vasoplégico ou séptico com disfunção ventricular secundária, sem o padrão morfológico característico do takotsubo",
+      "Cardiotoxicidade relacionada a tratamento oncológico (CTRCD) sem o padrão típico de disfunção regional extensa além de um território",
+      "Transtorno de ansiedade ou pânico, quando o quadro predominante é dor torácica e palpitação sem disfunção ventricular documentada"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações seriado, incluindo medida de QTc",
+      "Troponina e/ou CK seriadas; peptídeo natriurético tipo B (BNP), com atenção à razão BNP/troponina como discriminador auxiliar (não substitui confirmação por imagem)",
+      "Ecocardiograma transtorácico com Doppler, avaliando padrão de disfunção segmentar, obstrução dinâmica da via de saída do VE, movimento sistólico anterior da mitral, função de ventrículo direito e extensão da acinesia apical",
+      "Coronariografia com ventriculografia esquerda urgente (padrão-ouro para exclusão de infarto agudo, sobretudo com supra de ST)",
+      "Angiotomografia coronária, alternativa em paciente estável, de baixo risco, com takotsubo recorrente de padrão conhecido, ou quando a invasão de cateterismo traz risco desproporcional",
+      "Ressonância magnética cardíaca, quando disponível, para caracterização tecidual e diferenciação de miocardite (particularmente relevante em paciente oncológico em uso de inibidor de checkpoint imune)",
+      "Ecocardiograma seriado de reavaliação, documentando recuperação da função ventricular (tipicamente completa em 4 a 8 semanas)",
+      "Metanefrinas plasmáticas ou urinárias fracionadas, quando há suspeita de gatilho catecolaminérgico secundário (padrão basal, paciente jovem, sinais sugestivos de feocromocitoma/paraganglioma)",
+      "Rastreio psicológico estruturado (ansiedade, sintomas de estresse pós-traumático e humor) no seguimento pós-alta"
+    ],
+    "red_flags": [
+      "Obstrução dinâmica da via de saída do ventrículo esquerdo (LVOTO) com repercussão hemodinâmica — mortalidade de até 20% descrita quando tratada erroneamente com inotrópico ou catecolamina",
+      "Choque cardiogênico ou hipotensão persistente, com taxa de complicação grave comparável à da síndrome coronariana aguda pareada",
+      "Disfunção de ventrículo direito concomitante à disfunção de ventrículo esquerdo",
+      "QTc muito prolongado com risco de arritmia ventricular maligna (documentada em 3,0-8,6% dos casos)",
+      "Disfunção ventricular extensa (abaulamento apical amplo, acinesia extensa) com risco aumentado de trombo mural e embolia",
+      "Doença neurológica ou psiquiátrica aguda concomitante — preditor independente de complicação intra-hospitalar, presente em mais da metade dos pacientes do InterTAK",
+      "Ausência de gatilho identificável no episódio índice — único fator independentemente associado a recorrência no registro RETAKO (razão de chances 3,7)",
+      "Padrão basal/invertido em paciente jovem sem investigação de gatilho catecolaminérgico secundário (feocromocitoma/paraganglioma, hemorragia subaracnóidea)",
+      "Apresentação perioperatória com instabilidade hemodinâmica nova — mortalidade hospitalar de 6,9-10% descrita nessa população, não deve ser tratada como quadro necessariamente benigno"
+    ],
+    "ambulatory_flow": [
+      "Confirmar recuperação da função ventricular com ecocardiograma de reavaliação, tipicamente entre 4 e 8 semanas após o evento agudo.",
+      "Investigar histórico psiquiátrico e neurológico prévio de forma ativa — presente em mais da metade dos pacientes do InterTAK e frequentemente antecede o evento.",
+      "Realizar rastreio psicológico estruturado no seguimento pós-alta, cobrindo tanto ansiedade/sintomas de estresse pós-traumático quanto transtorno de humor, já que a literatura diverge sobre qual eixo predomina.",
+      "Informar ao paciente o risco real de recorrência (aproximadamente 4% ao ano no registro RETAKO), maior se não houve gatilho identificável no episódio índice, em vez de deixá-lo com estimativa própria e tipicamente mais catastrófica.",
+      "Em paciente com padrão basal/invertido ou idade jovem, investigar gatilho catecolaminérgico secundário tratável (feocromocitoma/paraganglioma, uso de simpaticomiméticos) com metanefrinas fracionadas.",
+      "Considerar inibidor da ECA/BRA e betabloqueador enquanto houver disfunção ventricular residual, extrapolado do manejo geral de insuficiência cardíaca — sem ensaio randomizado dedicado a takotsubo, sem dose especificada aqui.",
+      "Avaliar necessidade de anticoagulação individualizada quando trombo mural foi identificado na fase aguda, conforme resolução da acinesia.",
+      "No paciente oncológico com takotsubo atribuído a terapia antineoplásica, discutir eventual reintrodução do fármaco causal em conjunto entre oncologia e cardio-oncologia, considerando benefício oncológico, alternativa terapêutica, recuperação de FEVE e normalização do QTc.",
+      "Em paciente com feocromocitoma/paraganglioma confirmado como gatilho, considerar seguimento estruturado pelo risco de recorrência, maior nesse subgrupo (16,8% na metanálise de casos catecolaminérgicos) do que em outras causas.",
+      "Reavaliar restrição de esforço físico e retomada de atividades conforme trajetória de recuperação documentada por imagem, sem protocolo específico validado por ensaio clínico."
+    ],
+    "emergency_flow": [
+      "Diante de quadro sugestivo (dor torácica/dispneia aguda, alteração eletrocardiográfica nova, troponina elevada), investigar com coronariografia e ventriculografia esquerda urgentes (ou angiotomografia em paciente estável/baixo risco/takotsubo recorrente) se a disfunção contrátil regional se estende além do território de qualquer artéria obstruída, ou ocorre sem obstrução coronariana associada.",
+      "Antes de escalonar inotrópico, diurético ou vasodilatador em paciente hipotenso, pesquisar obrigatoriamente obstrução dinâmica da via de saída do ventrículo esquerdo (LVOTO) com ecocardiograma e Doppler contínuo — presente em cerca de 20% dos casos.",
+      "Se LVOTO presente: evitar catecolaminas e nitroglicerina (podem agravar o gradiente, com mortalidade de até 20% descrita nesse subgrupo); corrigir hipovolemia com volume cauteloso apenas se não houver congestão; considerar aumento de resistência vascular sistêmica com vasoconstritor de perfil predominantemente periférico; controlar taquicardia; considerar betabloqueador de curta ação sob monitorização intensiva quando a hemodinâmica permitir; evitar balão intra-aórtico, que pode acentuar o gradiente.",
+      "Se choque sem LVOTO relevante e com falência de bomba predominante: preferir levosimendana a catecolaminas como inotrópico quando inotropia for necessária; evitar excesso de catecolaminas pela possível participação catecolaminérgica na própria fisiopatologia; considerar suporte circulatório mecânico precocemente em choque refratário, em centro experiente.",
+      "Se falência predominante de ventrículo direito: manejar conforme fisiologia de VD — pré-carga adequada (não máxima), corrigir hipóxia/hipercapnia/acidemia, manter pressão sistêmica, evitar ventilação excessivamente agressiva, considerar suporte biventricular se refratário.",
+      "Se suspeita de vasoplegia (resistência vascular sistêmica baixa, contexto pós-parada, sepse/inflamação concomitante): vasopressor pode ser necessário, com preferência por estratégia que minimize estímulo beta-adrenérgico quando possível; cateter de artéria pulmonar pode ajudar a diferenciar baixo débito de vasoplegia quando o quadro não é claro pelo eco e pela clínica.",
+      "Manter monitorização eletrocardiográfica contínua, corrigir distúrbio eletrolítico (potássio/magnésio) e suspender fármacos que prolongam o QT diante de QTc muito prolongado ou risco de arritmia ventricular maligna.",
+      "Avaliar necessidade de anticoagulação com heparina diante de disfunção ventricular extensa com risco aumentado de trombo mural apical, individualizando a decisão.",
+      "Em suporte circulatório mecânico temporário: bomba microaxial pode ser considerada em falência predominante de VE, inclusive quando LVOTO torna inotrópicos indesejáveis; VA-ECMO pode ser necessária em choque profundo/biventricular ou quando suporte respiratório também é necessário, com atenção à pós-carga do VE; evitar balão intra-aórtico especificamente no fenótipo com LVOTO hemodinamicamente relevante.",
+      "No paciente oncológico, interromper o fármaco antineoplásico provavelmente causal na fase aguda (fluoropirimidinas, inibidor de checkpoint imune, inibidor de angiogênese/VEGF), considerando reintrodução apenas após recuperação e discussão multidisciplinar."
+    ],
+    "treatment_summary": "Não existe ensaio clínico randomizado que estabeleça terapia farmacológica específica e definitiva para a cardiomiopatia de takotsubo; o manejo agudo é predominantemente de suporte e guiado por fenotipagem hemodinâmica, não por um protocolo único de choque cardiogênico. A regra mais importante é que 'takotsubo com choque' não é um fenótipo único: a hipotensão pode resultar de falência grave de bomba do ventrículo esquerdo, obstrução dinâmica da via de saída do VE (LVOTO, cerca de 20% dos casos, frequentemente com movimento sistólico anterior da mitral e regurgitação mitral dinâmica), falência de ventrículo direito, vasoplegia, ou combinação desses mecanismos — e o tratamento inotrópico ou catecolaminérgico reflexo, apropriado em outras formas de choque cardiogênico, pode agravar exatamente o mecanismo responsável pela hipotensão no subgrupo com LVOTO. Diante de LVOTO hemodinamicamente relevante, a estratégia fisiológica prioriza suspender estímulo inotrópico exógeno, corrigir hipovolemia com cautela, aumentar resistência vascular sistêmica com vasoconstritor de perfil predominantemente periférico, controlar taquicardia e considerar betabloqueador de ação curta sob monitorização intensiva quando a hemodinâmica permitir — sem que nenhuma dessas estratégias tenha respaldo de ensaio randomizado dedicado. Na falência de bomba sem LVOTO relevante, levosimendana é preferida a catecolaminas como inotrópico quando inotropia é necessária, pela possível participação catecolaminérgica na própria fisiopatologia da síndrome; suporte circulatório mecânico temporário (bomba microaxial ou VA-ECMO, com atenção à pós-carga do VE nesta última) deve ser discutido precocemente em choque refratário, em centro experiente, dado o caráter potencialmente reversível da disfunção — balão intra-aórtico deve ser evitado especificamente quando LVOTO é o mecanismo dominante. Fora do contexto de choque, o paciente hemodinamicamente estável com disfunção ventricular residual é tratado com inibidor da ECA/BRA e betabloqueador enquanto a disfunção persistir, por extrapolação do manejo geral de insuficiência cardíaca, sem dose especificada nesta ficha. Anticoagulação é individualizada, não automática, reservada a disfunção apical extensa com trombo mural identificado ou risco considerado muito alto. QTc prolongado e arritmia ventricular exigem monitorização contínua, correção de distúrbio eletrolítico e suspensão de fármacos QT-prolongadores; cardioversor-desfibrilador implantável tem valor incerto dado o caráter tipicamente reversível da disfunção em 4 a 8 semanas. Quando o gatilho é uma terapia antineoplásica (fluoropirimidinas, inibidor de checkpoint imune, inibidor de angiogênese/VEGF), a diretriz ESC 2022 de cardio-oncologia recomenda interrupção do fármaco causal na fase aguda, com reintrodução discutida apenas após recuperação de FEVE, normalização de QTc e avaliação multidisciplinar de benefício oncológico versus risco. Quando o gatilho é catecolaminérgico secundário identificável (feocromocitoma/paraganglioma, hemorragia subaracnóidea), o tratamento definitivo é o da causa de base, além do suporte hemodinâmico da fase aguda. O seguimento psicológico estruturado — cobrindo ansiedade, sintomas de estresse pós-traumático e transtorno de humor — e o aconselhamento sobre risco real de recorrência (cerca de 4% ao ano) completam o manejo além da fase aguda.",
+    "monitoring": [
+      "Ecocardiograma seriado até documentar recuperação da função ventricular, tipicamente completa em 4 a 8 semanas.",
+      "Monitorização eletrocardiográfica contínua na fase aguda, com QTc seriado e correção de potássio/magnésio enquanto houver risco de arritmia ventricular.",
+      "Reavaliação de biomarcadores (troponina, BNP) até normalização na fase aguda.",
+      "Rastreio psicológico estruturado (ansiedade, sintomas de estresse pós-traumático, humor) na alta e reavaliado no seguimento, já que o sofrimento tende a ser maior logo após o evento e pode melhorar espontaneamente ao longo do tempo.",
+      "Seguimento estruturado de risco de recorrência (~4% ao ano; maior sem gatilho identificável), com orientação explícita ao paciente sobre esse número.",
+      "Em paciente com gatilho catecolaminérgico secundário confirmado (feocromocitoma/paraganglioma), seguimento estruturado pelo risco de recorrência mais elevado nesse subgrupo (16,8%).",
+      "Em paciente oncológico com rechallenge de terapia antineoplásica causal, monitorização cardíaca cuidadosa incluindo biomarcadores e ecocardiografia conforme o agente e o risco.",
+      "Reavaliação de eco seriado em padrão de alto risco de trombo mural até resolução da acinesia extensa."
+    ],
+    "special_populations": [
+      "Padrão basal/invertido (takotsubo invertido): paciente tipicamente mais jovem, maior associação a gatilho catecolaminérgico secundário identificável e tratável (feocromocitoma/paraganglioma, hemorragia subaracnóidea, catecolaminas exógenas) — investigação dirigida recomendada, incluindo metanefrinas fracionadas.",
+      "Takotsubo perioperatório em cirurgia não cardíaca: incidência de 0,016% em geral, 0,06% em cesarianas (30% dos casos), padrão não apical mais frequente (35%) que na população geral, metade das mulheres pré-menopáusicas — risco real de cateterismo/revascularização desnecessários se não reconhecido; mortalidade hospitalar de 6,9-10% descrita, não é apresentação benigna.",
+      "Paciente oncológico em terapia antineoplásica (fluoropirimidinas, inibidor de checkpoint imune, inibidor de angiogênese/VEGF): takotsubo pode mimetizar síndrome coronariana aguda, miocardite e cardiotoxicidade com disfunção ventricular; interrupção do fármaco causal na fase aguda e discussão multidisciplinar antes de rechallenge.",
+      "Overlap com miocardite por inibidor de checkpoint imune: quando há inflamação miocárdica em padrão de takotsubo na ressonância cardíaca, tratar como possível toxicidade inflamatória por ICI, considerando o algoritmo específico de miocardite por ICI.",
+      "Comorbidade neurológica ou psiquiátrica aguda concomitante: presente em mais da metade dos pacientes do InterTAK e preditor independente de complicação intra-hospitalar — parte ativa da avaliação inicial, não achado incidental.",
+      "Feocromocitoma/paraganglioma secretor como causa identificada: risco de recorrência de takotsubo maior que em outras causas catecolaminérgicas (16,8% vs. recorrência geral de ~4% ao ano), justificando seguimento estruturado.",
+      "Sobrevivente com sofrimento psicológico pós-evento: ansiedade e sintomas de estresse pós-traumático mais marcados que em controles com infarto na maioria dos estudos, com divergência na literatura sobre o peso relativo de ansiedade versus transtorno de humor — rastreio deve cobrir os dois eixos."
+    ],
+    "assistant_questions": [
+      {
+        "id": "padrao_anatomico",
+        "label": "Qual o padrão anatômico de disfunção ventricular observado na imagem?",
+        "type": "select",
+        "options": [
+          {
+            "value": "apical",
+            "label": "Apical (típico)"
+          },
+          {
+            "value": "medioventricular",
+            "label": "Médio-ventricular"
+          },
+          {
+            "value": "basal_invertido",
+            "label": "Basal/invertido (reverse takotsubo)"
+          },
+          {
+            "value": "focal",
+            "label": "Focal"
+          }
+        ]
+      },
+      {
+        "id": "disfuncao_alem_territorio_unico",
+        "label": "A disfunção contrátil regional se estende além do território de uma única artéria coronária, ou ocorre sem obstrução coronariana associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "lesao_coronariana_obstrutiva_concomitante",
+        "label": "Há lesão coronariana obstrutiva concomitante na angiografia?",
+        "type": "boolean"
+      },
+      {
+        "id": "gatilho_identificado",
+        "label": "Qual o gatilho identificado, se houver?",
+        "type": "select",
+        "options": [
+          {
+            "value": "emocional",
+            "label": "Emocional"
+          },
+          {
+            "value": "fisico",
+            "label": "Físico (doença aguda, cirurgia, trauma)"
+          },
+          {
+            "value": "catecolaminergico_farmacologico",
+            "label": "Catecolaminérgico exógeno/farmacológico"
+          },
+          {
+            "value": "neurologico_agudo",
+            "label": "Neurológico agudo (HSA, AVC, crise convulsiva)"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum identificado"
+          }
+        ]
+      },
+      {
+        "id": "obstrucao_dinamica_via_saida_ve",
+        "label": "Ecocardiograma com Doppler mostra obstrução dinâmica da via de saída do VE (LVOTO)?",
+        "type": "boolean"
+      },
+      {
+        "id": "movimento_sistolico_anterior_mitral",
+        "label": "Há movimento sistólico anterior da valva mitral (SAM) com regurgitação mitral dinâmica associada?",
+        "type": "boolean"
+      },
+      {
+        "id": "fenotipo_choque",
+        "label": "Se há choque/hipotensão, qual o fenótipo hemodinâmico predominante?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ausente",
+            "label": "Sem choque/hipotensão"
+          },
+          {
+            "value": "lvoto",
+            "label": "Obstrução dinâmica da via de saída do VE"
+          },
+          {
+            "value": "falencia_bomba",
+            "label": "Falência de bomba do VE sem LVOTO"
+          },
+          {
+            "value": "falencia_vd",
+            "label": "Falência de ventrículo direito"
+          },
+          {
+            "value": "vasoplegia",
+            "label": "Vasoplegia/choque misto"
+          }
+        ]
+      },
+      {
+        "id": "fracao_ejecao_admissao",
+        "label": "Qual a fração de ejeção do VE na admissão (%)?",
+        "type": "number"
+      },
+      {
+        "id": "qtc_prolongado_risco_arritmia",
+        "label": "Há QTc muito prolongado ou arritmia ventricular documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "disfuncao_apical_extensa_risco_trombo",
+        "label": "Há disfunção apical extensa (acinesia ampla) com risco aumentado de trombo mural?",
+        "type": "boolean"
+      },
+      {
+        "id": "comorbidade_neuropsiquiatrica_aguda",
+        "label": "Há doença neurológica ou psiquiátrica aguda concomitante?",
+        "type": "boolean"
+      },
+      {
+        "id": "contexto_perioperatorio",
+        "label": "O quadro ocorreu no período perioperatório de cirurgia não cardíaca?",
+        "type": "boolean"
+      },
+      {
+        "id": "contexto_oncologico_terapia_suspeita",
+        "label": "Paciente está em tratamento oncológico com fármaco potencialmente causal (fluoropirimidina, inibidor de checkpoint imune, inibidor de angiogênese/VEGF)?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_inibidor_checkpoint_imune",
+        "label": "Paciente está em uso de inibidor de checkpoint imune (risco de overlap com miocardite por ICI)?",
+        "type": "boolean"
+      },
+      {
+        "id": "suspeita_feocromocitoma_paraganglioma",
+        "label": "Há suspeita clínica de feocromocitoma/paraganglioma como gatilho catecolaminérgico secundário?",
+        "type": "boolean"
+      },
+      {
+        "id": "episodio_previo_takotsubo",
+        "label": "Há episódio prévio de takotsubo (recorrência)?",
+        "type": "boolean"
+      },
+      {
+        "id": "rastreio_psicologico_realizado",
+        "label": "Rastreio psicológico estruturado (ansiedade/TEPT e humor) foi realizado no seguimento?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "lvoto_evitar_inotropico",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "obstrucao_dinamica_via_saida_ve",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Obstrução dinâmica da via de saída do VE (LVOTO) presente — inotrópico, catecolamina ou nitroglicerina podem agravar o gradiente, com mortalidade de até 20% descrita nesse subgrupo."
+          ],
+          "supporting": [
+            "Suspender/reduzir estímulo inotrópico exógeno; corrigir hipovolemia com cautela apenas se não houver congestão; considerar vasoconstritor de perfil predominantemente periférico; evitar balão intra-aórtico."
+          ]
+        }
+      },
+      {
+        "id": "choque_falencia_bomba",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "fenotipo_choque",
+              "op": "eq",
+              "value": "falencia_bomba"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Falência de bomba do VE sem LVOTO relevante: preferir levosimendana a catecolaminas quando inotropia é necessária; considerar suporte circulatório mecânico precoce em choque refratário, em centro experiente."
+          ]
+        }
+      },
+      {
+        "id": "choque_falencia_vd",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "fenotipo_choque",
+              "op": "eq",
+              "value": "falencia_vd"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Falência de ventrículo direito: manejar conforme fisiologia de VD — pré-carga adequada (não máxima), corrigir hipóxia/hipercapnia/acidemia, evitar ventilação excessivamente agressiva."
+          ]
+        }
+      },
+      {
+        "id": "choque_vasoplegia",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "fenotipo_choque",
+              "op": "eq",
+              "value": "vasoplegia"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Vasoplegia/choque misto: vasopressor pode ser necessário, com preferência por estratégia que minimize estímulo beta-adrenérgico quando possível; considerar cateter de artéria pulmonar se o quadro não estiver claro pelo eco e pela clínica."
+          ]
+        }
+      },
+      {
+        "id": "coronariopatia_concomitante_nao_exclui",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_coronariana_obstrutiva_concomitante",
+              "op": "truthy"
+            },
+            {
+              "field": "disfuncao_alem_territorio_unico",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "Lesão coronariana obstrutiva concomitante não exclui takotsubo (presente em 10-29% dos casos do InterTAK) quando a disfunção contrátil ultrapassa o território explicado pela lesão."
+          ]
+        }
+      },
+      {
+        "id": "qtc_prolongado_monitorizar",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "qtc_prolongado_risco_arritmia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "QTc muito prolongado ou arritmia ventricular documentada — risco de torsades/TV polimórfica."
+          ],
+          "supporting": [
+            "Manter monitorização eletrocardiográfica contínua, corrigir potássio/magnésio, suspender fármacos que prolongam o QT."
+          ]
+        }
+      },
+      {
+        "id": "trombo_mural_risco",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "disfuncao_apical_extensa_risco_trombo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiograma seriado para reavaliação de trombo mural apical."
+          ],
+          "supporting": [
+            "Considerar anticoagulação individualizada diante de disfunção apical extensa com risco aumentado de trombo mural — não anticoagular automaticamente todo takotsubo apenas pelo diagnóstico."
+          ]
+        }
+      },
+      {
+        "id": "comorbidade_neuropsiquiatrica_investigar",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "comorbidade_neuropsiquiatrica_aguda",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Doença neurológica ou psiquiátrica aguda concomitante é preditor independente de complicação intra-hospitalar no InterTAK — parte ativa da avaliação, não achado incidental."
+          ]
+        }
+      },
+      {
+        "id": "padrao_basal_investigar_catecolamina",
+        "priority": 58,
+        "when": {
+          "all": [
+            {
+              "field": "padrao_anatomico",
+              "op": "eq",
+              "value": "basal_invertido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Padrão basal/invertido: investigar ativamente gatilho catecolaminérgico secundário (feocromocitoma/paraganglioma, evento neurológico agudo, catecolaminas exógenas) — mais frequente nesse subgrupo e potencialmente tratável."
+          ],
+          "suggested_tests": [
+            "Metanefrinas plasmáticas ou urinárias fracionadas."
+          ]
+        }
+      },
+      {
+        "id": "suspeita_pheo_seguimento_recorrencia",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_feocromocitoma_paraganglioma",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Feocromocitoma/paraganglioma confirmado como gatilho: risco de recorrência de takotsubo maior que em outras causas catecolaminérgicas (16,8%) — considerar seguimento estruturado."
+          ]
+        }
+      },
+      {
+        "id": "contexto_perioperatorio_evitar_cateterismo_desnecessario",
+        "priority": 48,
+        "when": {
+          "all": [
+            {
+              "field": "contexto_perioperatorio",
+              "op": "truthy"
+            },
+            {
+              "field": "disfuncao_alem_territorio_unico",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Padrão de disfunção que ultrapassa território coronariano único no perioperatório é compatível com takotsubo perioperatório — evitar revascularização de lesão coronariana incidental que não explica o quadro; recuperação espontânea rápida (mediana de 1-2 semanas) é esperada."
+          ],
+          "missing_information": [
+            "Takotsubo perioperatório não é apresentação benigna (mortalidade hospitalar de 6,9-10% descrita) — não deve ser desconsiderado apesar da recuperação funcional tipicamente rápida."
+          ]
+        }
+      },
+      {
+        "id": "oncologico_interromper_farmaco_causal",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "contexto_oncologico_terapia_suspeita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Takotsubo atribuído a terapia antineoplásica: interromper o fármaco causal na fase aguda (ESC 2022); rechallenge apenas após recuperação e discussão multidisciplinar entre oncologia e cardio-oncologia."
+          ]
+        }
+      },
+      {
+        "id": "overlap_miocardite_ici",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "uso_inibidor_checkpoint_imune",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Uso de inibidor de checkpoint imune: considerar overlap com miocardite por ICI — ressonância cardíaca ajuda a diferenciar; se houver inflamação miocárdica em padrão de takotsubo, tratar como possível toxicidade inflamatória por ICI conforme algoritmo específico."
+          ]
+        }
+      },
+      {
+        "id": "episodio_previo_recorrencia",
+        "priority": 38,
+        "when": {
+          "all": [
+            {
+              "field": "episodio_previo_takotsubo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Episódio prévio de takotsubo: taxa de recorrência de aproximadamente 4% ao ano no registro RETAKO, maior quando não há gatilho identificável no episódio índice."
+          ]
+        }
+      },
+      {
+        "id": "sem_rastreio_psicologico_pendente",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "rastreio_psicologico_realizado",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Rastreio psicológico estruturado (ansiedade/sintomas de estresse pós-traumático e humor) ainda não documentado no seguimento pós-evento."
+          ]
+        }
+      },
+      {
+        "id": "ausencia_gatilho_maior_risco_recorrencia",
+        "priority": 42,
+        "when": {
+          "all": [
+            {
+              "field": "gatilho_identificado",
+              "op": "eq",
+              "value": "nenhum"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Ausência de gatilho identificável no episódio índice é o único fator independentemente associado a recorrência no registro RETAKO (razão de chances 3,7) — reforçar essa informação no aconselhamento."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiomiopatia",
+      "síndrome de takotsubo",
+      "choque cardiogênico",
+      "obstrução dinâmica da via de saída do VE",
+      "diagnóstico diferencial de síndrome coronariana aguda",
+      "saúde mental e cardiologia",
+      "cardio-oncologia",
+      "feocromocitoma e paraganglioma"
+    ],
+    "source_refs": [
+      "Templin C, Ghadri JR, Diekmann J, et al.; InterTAK Cooperation. Clinical Features and Outcomes of Takotsubo (Stress) Cardiomyopathy. N Engl J Med. 2015;373(10):929-938. DOI: 10.1056/NEJMoa1406761. PMID: 26332547 — título/revista/volume/páginas conferidos no PubMed (e-utils) em 29/08/2026.",
+      "Ghadri JR, Wittstein IS, Prasad A, et al. International Expert Consensus Document on Takotsubo Syndrome (Part I): Clinical Characteristics, Diagnostic Criteria, and Pathophysiology. Eur Heart J. 2018;39(22):2032-2046. DOI: 10.1093/eurheartj/ehy076. PMID: 29850871 — conferido no PubMed em 29/08/2026.",
+      "Ghadri JR, Wittstein IS, Prasad A, et al. International Expert Consensus Document on Takotsubo Syndrome (Part II): Diagnostic Workup, Outcome, and Management. Eur Heart J. 2018;39(22):2047-2062. DOI: 10.1093/eurheartj/ehy077. PMID: 29850820 — conferido no PubMed em 29/08/2026.",
+      "Ghadri JR, Cammann VL, Napp LC, et al. Differences in the Clinical Profile and Outcomes of Typical and Atypical Takotsubo Syndrome: Data From the International Takotsubo Registry. JAMA Cardiol. 2016;1(3):335-340. DOI: 10.1001/jamacardio.2016.0225. PMID: 27438117 — conferido no PubMed em 29/08/2026.",
+      "Wittstein IS, Thiemann DR, Lima JA, et al. Neurohumoral features of myocardial stunning due to sudden emotional stress. N Engl J Med. 2005;352(6):539-548. DOI: 10.1056/NEJMoa043046. PMID: 15703419 — conferido no PubMed em 29/08/2026.",
+      "Singh T, Khan H, Gamble DT, Scally C, Newby DE, Dawson D. Takotsubo Syndrome: Pathophysiology, Emerging Concepts, and Clinical Implications. Circulation. 2022;145(13):1002-1019. DOI: 10.1161/CIRCULATIONAHA.121.055854. PMID: 35344411 — conferido no PubMed em 29/08/2026.",
+      "Fernández-Cordón C, Núñez-Gil IJ, Martín de Miguel I, et al. Takotsubo Syndrome, Stressful Triggers, and Risk of Recurrence. Am J Cardiol. 2023;205:58-62. DOI: 10.1016/j.amjcard.2023.07.028. PMID: 37586122 — conferido no PubMed em 29/08/2026 (registro RETAKO, 1.097 pacientes).",
+      "Vila-Sanjuán S, et al. Left ventricular outflow tract obstruction in Takotsubo syndrome with cardiogenic shock: prognosis and treatment. Heart. 2024;110(23):1381-1388. DOI: 10.1136/heartjnl-2024-324205. PMID: 39209437 — conferido no PubMed em 29/08/2026.",
+      "Alhuarrat MAD, Rios SS, Aggarwal V, et al. Meta-Analysis and Clinical Features of Perioperative Takotsubo Cardiomyopathy in Noncardiac Surgery. Am J Cardiol. 2023;201:78-85. DOI: 10.1016/j.amjcard.2023.06.015. PMID: 37352669 — CORRIGIDO após verificação no PubMed em 29/08/2026: a citação do documento-fonte trazia volume/páginas/DOI divergentes (200:29-35, DOI ...05.037); o registro oficial do PubMed é volume 201, páginas 78-85, DOI ...06.015 — usado aqui o dado verificado, não o do documento-fonte.",
+      "Shang Z, Ma X, Chabra R, et al. Peri-operative Takotsubo syndrome after non-cardiac surgery: a retrospective nested case-control study. ESC Heart Fail. 2022;9(5):3149-3159. DOI: 10.1002/ehf2.14015. PMID: 35757924 — CORRIGIDO após verificação no PubMed em 29/08/2026: a citação do documento-fonte trazia issue/páginas divergentes (9(6):3785-3796); o registro oficial do PubMed é issue 5, páginas 3149-3159, DOI ...14015 — usado aqui o dado verificado.",
+      "Lyon AR, López-Fernández T, Couch LS, et al.; ESC Scientific Document Group. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568 — conferido no PubMed em 29/08/2026.",
+      "Y-Hassan S, Falhammar H. Clinical features, complications, and outcomes of exogenous and endogenous catecholamine-triggered Takotsubo syndrome: a systematic review and meta-analysis of 156 published cases. Clin Cardiol. 2020;43(5):459-467. DOI: 10.1002/clc.23352. PMID: 32125009 — conferido no PubMed em 29/08/2026.",
+      "Gagnon N, Mansour S, Bitton Y, Bourdeau I. Takotsubo-Like Cardiomyopathy in a Large Cohort of Patients with Pheochromocytoma and Paraganglioma. Endocr Pract. 2017;23(10):1178-1192. DOI: 10.4158/EP171930.OR. PMID: 28704094 — conferido no PubMed em 29/08/2026.",
+      "Impact of mechanical circulatory support on outcomes in Takotsubo syndrome complicated by cardiogenic shock: insights from a multicenter registry. Int J Cardiol. 2025;419:132681. DOI: 10.1016/j.ijcard.2024.132681. PMID: 39454688 — conferido no PubMed em 29/08/2026 (documento-fonte não especificava periódico; título/volume/página/DOI completados a partir do registro oficial do PubMed)."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26332547/",
+      "https://pubmed.ncbi.nlm.nih.gov/29850871/",
+      "https://pubmed.ncbi.nlm.nih.gov/29850820/",
+      "https://pubmed.ncbi.nlm.nih.gov/27438117/",
+      "https://pubmed.ncbi.nlm.nih.gov/15703419/",
+      "https://pubmed.ncbi.nlm.nih.gov/35344411/",
+      "https://pubmed.ncbi.nlm.nih.gov/37586122/",
+      "https://pubmed.ncbi.nlm.nih.gov/39209437/",
+      "https://pubmed.ncbi.nlm.nih.gov/37352669/",
+      "https://pubmed.ncbi.nlm.nih.gov/35757924/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017568/",
+      "https://pubmed.ncbi.nlm.nih.gov/32125009/",
+      "https://pubmed.ncbi.nlm.nih.gov/28704094/",
+      "https://pubmed.ncbi.nlm.nih.gov/39454688/"
+    ],
+    "related_document_slugs": [
+      "cardiomiopatia-de-takotsubo-o-registro-internacional-e-o-que-a-diferencia-da-sindrome-coronariana-aguda",
+      "fluxograma-cardiomiopatia-takotsubo-reconhecimento-manejo-agudo",
+      "takotsubo-variante-basal-invertida-reconhecimento-do-padrao-atipico-e-gatilho-catecolaminergico",
+      "impacto-psicologico-e-psiquiatrico-do-diagnostico-de-takotsubo-no-sobrevivente",
+      "choque-cardiogenico-na-sindrome-de-takotsubo-lvoto-falencia-de-bomba-e-vasoplegia",
+      "takotsubo-perioperatorio-em-cirurgia-nao-cardiaca-confundido-com-sindrome-coronariana-aguda",
+      "sindrome-de-takotsubo-associada-ao-cancer-e-terapia-antineoplasica"
+    ],
+    "patient_material_slug": "cardiomiopatia-de-takotsubo-sindrome-do-coracao-partido",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente no sistema. Cardiomiopatia de takotsubo não tinha ficha própria em doencas/metadados.json apesar de corpus rico e já existente em content/Cardiomiopatias/, content/Saúde_mental_e_cardiologia/, content/Terapia_intensiva/ e content/Cardio-oncologia/. Os 7 related_document_slugs foram verificados individualmente por leitura direta do documento completo, confirmando discussão central (não tangencial) do takotsubo em cada um: registro InterTAK/diferenciação de SCA, fluxograma de reconhecimento e manejo agudo, variante basal invertida/gatilho catecolaminérgico, impacto psicológico/psiquiátrico no sobrevivente, choque cardiogênico fenotipado (LVOTO/falência de bomba/VD/vasoplegia), takotsubo perioperatório em cirurgia não cardíaca e takotsubo associado a câncer/terapia antineoplásica. Um oitavo documento candidato mapeado pelo reconhecimento prévio ('reclassificacao-fenotipica-esc-2023-...') foi lido por completo e DELIBERADAMENTE EXCLUÍDO da lista: ele trata takotsubo apenas como uma de três entidades reclassificadas pela ESC 2023 (ao lado de RCM e hipertrabeculação/NDLVC), sem ser central o suficiente ao tema takotsubo especificamente para a régua de 'discussão central' desta disciplina. 14 PMIDs verificados individualmente via NCBI e-utils (esummary) em 29/08/2026 antes da montagem do source_refs; DOIS deles (37352669 e 35757924) tinham citação divergente (volume/páginas/DOI) nos documentos-fonte em relação ao registro oficial do PubMed — corrigidos para o dado verificado, com a divergência documentada explicitamente no próprio texto do source_ref. patient_material_slug resolvido para 'cardiomiopatia-de-takotsubo-sindrome-do-coracao-partido' em material-paciente/metadados.json (ligado ao documento-fonte principal desta ficha via documento_slug); existe um segundo material de paciente sobre takotsubo ('sindrome-do-coracao-partido-o-que-e-o-takotsubo', ligado a outro documento-fonte sobre ansiedade), mas o campo aceita apenas um slug e o escolhido é o mais diretamente correspondente ao conteúdo desta ficha. NOTA EDITORIAL SOBRE CLASSIFICAÇÃO: a diretriz ESC 2023 de cardiomiopatias (Eur Heart J. 2023;44(37):3503-3626) reclassificou formalmente o takotsubo como NÃO sendo uma cardiomiopatia no sentido estrito (fenômeno tipicamente reversível, não doença estrutural permanente do miocárdio) — ver documento já publicado 'reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia.md'. Mesmo assim, usei category='cardiomiopatia' porque: (1) é a mesma convenção editorial já adotada nesta mesma frente de produção para cardiomiopatia-hipertrofica e para o hub geral 'cardiomiopatias' (PR #565); (2) o corpus markdown de origem do takotsubo vive predominantemente no tema 'Cardiomiopatias' do repositório; (3) o esquema atual não tem uma categoria alternativa mais específica para 'síndrome reclassificada que já foi cardiomiopatia'. Essa tensão nomenclatura-vs-convenção-de-schema fica registrada aqui para decisão editorial humana explícita, não resolvida por omissão. prevalence_rank deixado null por não pertencer ao hub fechado de doenças de altíssima prevalência em área 'geral' (ranks 1-9). FALHA ESPERADA E DOCUMENTADA: backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro porque review_status='pendente_revisao' e a lógica desse teste específico só usa a allowlist PENDENTES_LOTES_TUDO_COM_TUDO para registros que JÁ estão com status='revisado' (bug estrutural pré-existente no teste, não introduzido por este commit — o primeiro `if status == 'revisado': continue` já consome todo registro revisado antes de qualquer checagem de allowlist, tornando as checagens de allowlist seguintes inalcançáveis para registros pendentes). Isso é esperado e correto: conteúdo novo não revisado por humano não deve se autoaprovar nesse gate. A entrada 'cardiomiopatia-de-takotsubo' FOI adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] porque essa mesma allowlist é reaproveitada, por importação direta, em backend/tests/test_disease_fragments_canonical.py::test_catalogo_combinado_tem_slugs_unicos_e_status_editorial_explicito — nesse segundo teste, a checagem funciona corretamente (compara o slug pendente contra a allowlist antes de reprovar), então a entrada É necessária ali. Resultado esperado: test_disease_fragments_canonical.py passa; test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha (esperado, documentado, não contornado). Nenhuma dose de fármaco em nenhum campo de texto. Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes — nesta mesma data (29/08/2026), pelo menos uma outra frente produzia cardiomiopatia-dilatada em paralelo; verificado programaticamente que não há overlap de related_document_slugs entre as duas fichas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
