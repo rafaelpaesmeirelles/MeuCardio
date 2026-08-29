@@ -1,5 +1,8 @@
 from datetime import datetime, timezone
 
+from sqlalchemy import Text
+
+from app.models.guideline import Guideline
 from app.services.guideline_discovery import (
     BOOTSTRAP_DOCUMENTS,
     SOURCES,
@@ -62,3 +65,7 @@ def test_bootstrap_does_not_emit_future_documents():
     assert all(cutoff <= item["published_at"] <= now for item in items)
     assert any(item["doi"] == "10.1093/eurheartj/ehag100" for item in items)
     assert len(BOOTSTRAP_DOCUMENTS) >= len(items)
+
+
+def test_guideline_title_column_preserves_long_scientific_titles():
+    assert isinstance(Guideline.__table__.c.titulo.type, Text)
