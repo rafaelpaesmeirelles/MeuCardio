@@ -571,6 +571,254 @@
         }
       },
       {
+        "id": "aortogen-bicuspide-isolada-52-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 52
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado, em centro de baixo risco cirúrgico: cirurgia deve ser considerada a partir de 52 mm (Classe IIa, Nível B, ESC 2024) — nuance intermediária entre a vigilância e o limiar Classe I de 5,5 cm; decisão em Heart Team."
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-50-com-fator-risco-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 52
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "crescimento_rapido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado com fator de risco adicional presente: cirurgia deve ser considerada já a partir de 50 mm (Classe IIa, ESC 2024), mesmo abaixo do limiar de 52 mm sem fator de risco."
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-50-historia-familiar-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 52
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "historia_familiar_disseccao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado com fator de risco adicional presente: cirurgia deve ser considerada já a partir de 50 mm (Classe IIa, ESC 2024), mesmo abaixo do limiar de 52 mm sem fator de risco."
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-50-has-resistente-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 52
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "hipertensao_resistente"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado com fator de risco adicional presente: cirurgia deve ser considerada já a partir de 50 mm (Classe IIa, ESC 2024), mesmo abaixo do limiar de 52 mm sem fator de risco."
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-50-estatura-baixa-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 52
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "estatura_baixa"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado com fator de risco adicional presente: cirurgia deve ser considerada já a partir de 50 mm (Classe IIa, ESC 2024), mesmo abaixo do limiar de 52 mm sem fator de risco."
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-50-desejo-gestacao-classe-iia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 52
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "desejo_gestacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado com fator de risco adicional presente: cirurgia deve ser considerada já a partir de 50 mm (Classe IIa, ESC 2024), mesmo abaixo do limiar de 52 mm sem fator de risco."
+          ]
+        }
+      },
+      {
         "id": "aortogen-bicuspide-fenotipo-raiz-5-0",
         "priority": 88,
         "when": {

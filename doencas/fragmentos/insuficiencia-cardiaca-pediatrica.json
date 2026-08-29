@@ -255,21 +255,54 @@
         }
       },
       {
-        "id": "neonato-suspeita-ducto-dependente",
-        "priority": 85,
+        "id": "neonato-suspeita-ducto-dependente-com-corroboracao",
+        "priority": 90,
         "when": {
           "all": [
             {
               "field": "age_group",
               "op": "eq",
               "value": "neonato"
+            },
+            {
+              "field": "shock_or_low_output",
+              "op": "truthy"
             }
           ]
         },
         "add": {
           "risk": "urgente",
+          "red_flags": [
+            "Neonato com choque/hipoperfusão: priorizar investigação imediata de cardiopatia congênita crítica ducto-dependente antes de assumir causa adquirida."
+          ],
           "messages": [
-            "Em neonato, a IC é predominantemente de causa estrutural ducto-dependente; priorizar investigação de cardiopatia congênita crítica com fechamento do canal arterial antes de assumir causa adquirida"
+            "Em neonato com sinais de baixo débito, a IC é predominantemente de causa estrutural ducto-dependente; priorizar investigação de cardiopatia congênita crítica com avaliação de necessidade de manter o canal arterial patente antes de assumir causa adquirida."
+          ]
+        }
+      },
+      {
+        "id": "neonato-sem-corroboracao-clinica-ainda",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "age_group",
+              "op": "eq",
+              "value": "neonato"
+            },
+            {
+              "field": "shock_or_low_output",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Neonato sem choque/hipoperfusão registrado ainda: buscar ativamente sinais de baixo débito, cianose, dificuldade alimentar e pulsos, já que a faixa etária tem prevalência relevante de cardiopatia congênita crítica ducto-dependente mesmo antes de sinais floridos aparecerem."
+          ],
+          "messages": [
+            "Considerar investigação de cardiopatia congênita crítica ducto-dependente nesta faixa etária; a ausência de sinais de choque no momento da avaliação não afasta a hipótese."
           ]
         }
       }
