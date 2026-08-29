@@ -578,3 +578,26 @@ Lote 23 (profilaxia antibiótica de endocardite, 8 itens) segue em
 execução em paralelo — despachado antes deste checkpoint.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 23 — concluído (1 commit, SHA 26250d8a) — total 49 commits
+
+- checklist `profilaxia-antibiotica-para-prevencao-de-endocardite-infecciosa-indicacoes-por-cenario`
+  — 8 itens. 6 fontes (AHA 2007/2021, ESC 2023, AHA CIED 2024, PADIT
+  Trial, SHEA/IDSA). Distinção clara entre indicações fortes e
+  extrapolação/opinião de especialista (VAD, procedimento não-odontológico).
+
+Nota: cluster Dispositivos "esc-2021-*"/CDI por canalopatia (~30 itens,
+maior parcela do backlog não coberto) verificado como colidindo com o
+hub geral ainda sob PR #599 (confirmado aberto) — não acionado, correto
+manter distância. Pequeno gap de radioterapia+CIED (2 itens) parcialmente
+coberto por doc existente, não priorizado.
+
+## Lote 24 (em andamento, 1 agente) — fecha tema Endocardite nesta janela
+
+Último item pequeno do backlog de Endocardite: seleção de modalidade de
+imagem na avaliação DIAGNÓSTICA inicial (ETT primeira linha, ETE
+obrigatório com prótese/dispositivo intracardíaco, RM não recomendada
+para vegetação) — distinto do checklist de timing de repetição (lote 8).
+Despachado (agente a827eb7ee6ccb2c32).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
