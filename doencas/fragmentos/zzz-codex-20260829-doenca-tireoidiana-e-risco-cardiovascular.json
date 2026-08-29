@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "doenca-tireoidiana-e-risco-cardiovascular",
+    "name": "Doença tireoidiana e risco cardiovascular",
+    "aliases": [
+      "tireoide e coração",
+      "hipertireoidismo e coração",
+      "hipotireoidismo e coração",
+      "disfunção tireoidiana e risco cardiovascular"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "endocrinopatia_cardiovascular",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Disfunções tireoidianas alteram frequência e ritmo cardíacos, contratilidade, resistência vascular, pressão arterial, perfil lipídico e volemia. Hipertireoidismo, inclusive formas subclínicas selecionadas, associa-se especialmente a fibrilação atrial e insuficiência cardíaca; hipotireoidismo pode causar bradicardia, dislipidemia, hipertensão diastólica, derrame pericárdico e piora de doença coronariana. A conduta depende de confirmar a alteração hormonal, definir gravidade e etiologia e tratar o fenótipo tireoidiano sem substituir a prevenção cardiovascular habitual.",
+    "epidemiology": "Disfunções tireoidianas são frequentes, sobretudo em mulheres e idosos. A associação entre excesso de hormônio tireoidiano e fibrilação atrial é consistente; no hipertireoidismo subclínico, o risco aumenta à medida que o TSH se suprime. O hipotireoidismo subclínico é comum em idosos, mas ensaios randomizados como TRUST não demonstraram benefício sintomático do tratamento rotineiro com levotiroxina em pessoas mais velhas com elevações leves/moderadas de TSH, reforçando individualização.",
+    "presentation": [
+      "Hipertireoidismo pode causar palpitações, taquicardia, fibrilação atrial, hipertensão sistólica, intolerância ao esforço, angina e insuficiência cardíaca de alto débito ou descompensação de cardiopatia prévia.",
+      "Hipotireoidismo pode causar bradicardia, fadiga, intolerância ao esforço, hipertensão diastólica, edema, dislipidemia e derrame pericárdico; manifestações cardiovasculares podem preceder sintomas endócrinos exuberantes.",
+      "Idosos podem apresentar hipertireoidismo pouco sintomático, com fibrilação atrial, perda ponderal ou piora de insuficiência cardíaca como manifestação dominante.",
+      "Amiodarona pode causar hipotireoidismo ou tireotoxicose; o risco deve ser lembrado antes e durante tratamento prolongado.",
+      "Doença tireoidiana não deve ser presumida como causa de arritmia sem confirmação laboratorial, e alteração isolada de TSH durante doença aguda deve ser interpretada com cautela."
+    ],
+    "diagnostic_approach": {
+      "triagem": "TSH é o teste inicial usual quando há suspeita de disfunção tireoidiana; T4 livre complementa a classificação e T3 pode ser útil quando há suspeita de tireotoxicose com T4 livre normal ou desproporcional.",
+      "confirmacao": "Distinguir doença manifesta de subclínica: hipertireoidismo manifesto combina TSH suprimido com hormônios tireoidianos elevados; hipotireoidismo manifesto combina TSH elevado com T4 livre baixo na doença primária. Alterações subclínicas requerem persistência e contexto clínico antes de decisões de longo prazo.",
+      "etiologia": "Depois de confirmar disfunção, investigar etiologia conforme fenótipo: autoimunidade, doença nodular, fármacos, tireoidite, exposição a iodo e causas centrais quando apropriado.",
+      "cardiovascular": "Em fibrilação atrial, insuficiência cardíaca, taquicardia persistente ou bradicardia inexplicada, integrar avaliação tireoidiana à investigação de gatilhos e comorbidades, sem atrasar o tratamento cardiovascular indicado.",
+      "doenca_aguda": "Síndrome do eutireoidiano doente e interferências medicamentosas podem alterar TSH/T4 durante doença crítica. Repetir testes após estabilização quando o padrão não for coerente com doença tireoidiana primária."
+    },
+    "differentials": [
+      "Fibrilação atrial ou taquicardia por doença cardíaca estrutural, infecção, anemia, hipovolemia ou estimulantes",
+      "Insuficiência cardíaca sem causa tireoidiana",
+      "Síndrome do eutireoidiano doente",
+      "Tireotoxicose por amiodarona ou excesso exógeno de hormônio tireoidiano",
+      "Hipotireoidismo induzido por amiodarona, lítio ou outras drogas",
+      "Doença hipofisária/hipotalâmica quando TSH e T4 livre não seguem o padrão de doença primária",
+      "Derrame pericárdico por causas infecciosas, neoplásicas, autoimunes, renais ou cardíacas"
+    ],
+    "tests": [
+      "TSH e T4 livre; acrescentar T3 quando clinicamente indicado.",
+      "ECG em palpitações, taquicardia, bradicardia, síncope ou suspeita de fibrilação atrial/condução anormal.",
+      "Monitorização ambulatorial de ritmo quando sintomas paroxísticos ou carga de arritmia precisarem ser quantificados.",
+      "Ecocardiograma quando houver insuficiência cardíaca, sopro, cardiopatia estrutural suspeita ou derrame pericárdico clinicamente relevante.",
+      "Perfil lipídico no hipotireoidismo e após correção quando a disfunção tireoidiana puder ter contribuído para dislipidemia secundária.",
+      "Anticorpos e imagem tireoidiana apenas conforme a questão etiológica; ultrassonografia não é teste obrigatório para toda alteração funcional."
+    ],
+    "red_flags": [
+      "Tireotoxicose com febre, alteração neurológica, insuficiência cardíaca, instabilidade hemodinâmica ou disfunção multiorgânica sugere tempestade tireotóxica e requer emergência.",
+      "Hipotermia, rebaixamento do nível de consciência, hipoventilação, hipotensão ou hiponatremia importante em hipotireoidismo grave sugerem coma mixedematoso e requerem emergência.",
+      "Fibrilação atrial com instabilidade, síndrome coronariana aguda ou edema agudo de pulmão deve ser tratada pela síndrome cardiovascular aguda em paralelo à correção tireoidiana.",
+      "Bradicardia sintomática grave ou bloqueio avançado exige manejo urgente e não deve ser atribuído automaticamente ao hipotireoidismo.",
+      "Derrame pericárdico com sinais de tamponamento exige avaliação e tratamento imediato."
+    ],
+    "ambulatory_flow": [
+      "Confirmar a alteração com TSH/T4 livre e revisar fármacos, suplementos, biotina, exposição a iodo e doença aguda recente.",
+      "Definir se o quadro é manifesto ou subclínico e identificar etiologia quando isso mudar tratamento.",
+      "No hipertireoidismo, tratar a causa e controlar sintomas adrenérgicos com betabloqueador quando apropriado e não contraindicado; terapia antitireoidiana, radioiodo ou cirurgia dependem da etiologia e do perfil do paciente.",
+      "No hipertireoidismo subclínico persistente, considerar idade, grau de supressão do TSH, sintomas, fibrilação atrial, doença cardiovascular e risco ósseo antes de tratar.",
+      "Em pacientes >65 anos com TSH persistentemente <0,1 mUI/L, a diretriz ETA 2015 recomenda tratamento do hipertireoidismo subclínico para reduzir risco de eventos associados; com TSH 0,1–0,39 mUI/L, tratamento pode ser considerado especialmente pelo risco de fibrilação atrial.",
+      "No hipotireoidismo manifesto, levotiroxina é padrão; em idosos e pessoas com doença coronariana, iniciar e titular de forma conservadora conforme orientação endocrinológica e resposta clínica.",
+      "Não prescrever levotiroxina rotineiramente apenas para tentar reduzir risco cardiovascular em idosos com hipotireoidismo subclínico leve: o TRUST não demonstrou benefício clínico aparente nessa população.",
+      "Tratar fatores cardiovasculares concomitantes independentemente da correção tireoidiana."
+    ],
+    "emergency_flow": [
+      "Em tempestade tireotóxica, iniciar tratamento emergencial multidisciplinar dirigido a síntese/liberação hormonal, efeitos adrenérgicos, causa precipitante e suporte de órgãos conforme protocolo especializado.",
+      "Em coma mixedematoso, tratar em ambiente de terapia intensiva com reposição hormonal e suporte, avaliando insuficiência adrenal e precipitantes conforme protocolo.",
+      "Em fibrilação atrial hemodinamicamente instável, cardioversão elétrica segue indicação de emergência; tratar a tireotoxicose em paralelo.",
+      "Em fibrilação atrial estável associada a hipertireoidismo, controlar frequência e tratar a doença tireoidiana; anticoagulação deve seguir avaliação de risco tromboembólico e hemorrágico, não apenas a presença da tireotoxicose."
+    ],
+    "treatment_summary": "A meta é normalizar o estado tireoidiano e tratar manifestações cardiovasculares de forma simultânea. Hipertireoidismo manifesto requer tratamento etiológico; betabloqueadores são úteis para sintomas adrenérgicos quando apropriados. Hipotireoidismo manifesto é tratado com levotiroxina, com titulação cautelosa em idosos/doença coronariana. Para doença subclínica, não extrapolar: a decisão depende de TSH, idade, sintomas e risco; TRUST não mostrou benefício aparente da levotiroxina em idosos com hipotireoidismo subclínico, enquanto a ETA recomenda tratar hipertireoidismo subclínico persistente grau 2 em >65 anos e considerar tratamento em grau 1 pelo risco de FA.",
+    "monitoring": [
+      "TSH e T4 livre conforme o tratamento e a meia-vida da terapia escolhida; evitar ajustes excessivamente precoces de levotiroxina.",
+      "Frequência e ritmo cardíacos, sintomas de insuficiência cardíaca e pressão arterial.",
+      "Carga de fibrilação atrial e necessidade de controle de frequência/ritmo conforme quadro clínico.",
+      "Perfil lipídico após normalização do hipotireoidismo quando havia dislipidemia potencialmente secundária.",
+      "Em uso de amiodarona, monitorar função tireoidiana periodicamente e diante de sintomas compatíveis.",
+      "Evitar iatrogenia por excesso de reposição, sobretudo supressão de TSH em idosos, pela associação com fibrilação atrial e perda óssea."
+    ],
+    "special_populations": [
+      "Idosos: apresentações atípicas são comuns; evitar tanto subtratamento de doença manifesta quanto excesso de levotiroxina.",
+      "Doença coronariana: reposição de levotiroxina deve ser iniciada/titulada cautelosamente para evitar precipitar angina ou isquemia.",
+      "Fibrilação atrial: tratar a disfunção tireoidiana e seguir diretrizes de FA para anticoagulação e estratégia de ritmo/frequência.",
+      "Insuficiência cardíaca: tireotoxicose pode precipitar ou agravar IC; hipotireoidismo também pode piorar hemodinâmica e retenção hídrica.",
+      "Gestação: metas e tratamento tireoidiano são específicos e exigem protocolo obstétrico-endocrinológico próprio.",
+      "Uso de amiodarona: distinguir hipotireoidismo de tireotoxicose tipo 1, tipo 2 ou mista, pois a conduta difere e a necessidade da amiodarona deve ser discutida com cardiologia/endocrinologia."
+    ],
+    "assistant_questions": [
+      {"id": "thyroid_labs", "label": "Há TSH e T4 livre recentes e interpretáveis?", "type": "boolean", "required": true, "section": "Diagnóstico"},
+      {"id": "af_or_hf", "label": "Há fibrilação atrial, taquicardia persistente ou insuficiência cardíaca?", "type": "boolean", "section": "Cardiovascular"},
+      {"id": "thyroid_emergency", "label": "Há febre/alteração neurológica/instabilidade na tireotoxicose ou hipotermia/rebaixamento no hipotireoidismo grave?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "amiodarone", "label": "O paciente usa ou usou recentemente amiodarona?", "type": "boolean", "section": "Etiologia"},
+      {"id": "subclinical", "label": "A alteração é subclínica (T4 livre normal)?", "type": "boolean", "section": "Classificação"}
+    ],
+    "assistant_rules": [
+      {"id": "thyroid-emergency", "priority": 100, "when": {"all": [{"field": "thyroid_emergency", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Possível tempestade tireotóxica ou coma mixedematoso."], "emergency_flow": ["Encaminhar para tratamento emergencial e suporte de órgãos; não aguardar investigação ambulatorial completa."]}},
+      {"id": "thyroid-af-hf", "priority": 80, "when": {"all": [{"field": "af_or_hf", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["ECG e TSH/T4 livre; avaliar ecocardiograma conforme quadro"], "messages": ["Tratar simultaneamente a manifestação cardiovascular e a disfunção tireoidiana confirmada."]}},
+      {"id": "amiodarone-thyroid", "priority": 75, "when": {"all": [{"field": "amiodarone", "op": "truthy"}]}, "add": {"supporting": ["Amiodarona pode causar hipotireoidismo ou diferentes formas de tireotoxicose; definir o fenótipo antes de escolher o tratamento."]}},
+      {"id": "need-thyroid-labs", "priority": 60, "when": {"all": [{"field": "thyroid_labs", "op": "falsy"}]}, "add": {"missing_information": ["TSH e T4 livre interpretáveis antes de atribuir a manifestação cardiovascular à tireoide"]}}
+    ],
+    "tags": ["tireoide", "hipertireoidismo", "hipotireoidismo", "fibrilacao atrial", "insuficiencia cardiaca", "amiodarona", "TSH", "levotiroxina"],
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45:3314-3414.",
+      "Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26:1343-1421. doi:10.1089/thy.2016.0229.",
+      "Jonklaas J, Bianco AC, Bauer AJ, et al. Guidelines for the Treatment of Hypothyroidism. Thyroid. 2014;24:1670-1751. doi:10.1089/thy.2014.0028.",
+      "Biondi B, Bartalena L, Cooper DS, et al. 2015 European Thyroid Association Guidelines on Diagnosis and Treatment of Endogenous Subclinical Hyperthyroidism. Eur Thyroid J. 2015;4:149-163.",
+      "Stott DJ, Rodondi N, Kearney PM, et al. Thyroid Hormone Therapy for Older Adults with Subclinical Hypothyroidism. N Engl J Med. 2017;376:2534-2544. doi:10.1056/NEJMoa1603825. PMID:28402245."
+    ],
+    "source_urls": [
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/atrial-fibrillation/",
+      "https://www.thyroid.org/professionals/ata-professional-guidelines/",
+      "https://pubmed.ncbi.nlm.nih.gov/28402245/"
+    ],
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo para interação tireoide-cardiovascular. Não foi identificado na main um documento científico central revisado com slug inequívoco para vínculo Tudo com Tudo; relações foram mantidas vazias para evitar associação tangencial. Não há diretriz SBC cardiovascular específica recente de tireoide que substitua as referências endocrinológicas/ESC utilizadas. Manter pendente até revisão editorial humana."
+  }
+]
