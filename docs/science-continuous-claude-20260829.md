@@ -420,3 +420,17 @@ Cardiologia pediátrica, Arritmias/Canalopatias — todos no território designa
 Colisões evitadas em todas as rodadas: PR #599, #725 (reconferidos a cada lote).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 18 (em andamento, 1 agente)
+
+Backlog Cardiologia geriátrica (69 itens) escaneado: cluster "sbc2019-*"
+(~17 itens da I Diretriz Brasileira de Cardiogeriatria, SBC/Arq Bras
+Cardiol 2019) — fonte brasileira prioritária conforme hierarquia da missão,
+sem host no corpus. Primeiro sub-lote despachado: prevenção/estilo de vida
+(exercício, tabagismo/método 4As), valvopatia (regurgitação aórtica),
+arritmia/monitorização (ETE pré-cardioversão, ECG/Holter — incl. uso
+apropriado vs. inadequado), estatina (não freia progressão de EAo vs.
+PROSPER reduz eventos), meta pressórica <120mmHg em DAC crônica — 13 itens
+(agente a6d3b07ccc21502d0).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
