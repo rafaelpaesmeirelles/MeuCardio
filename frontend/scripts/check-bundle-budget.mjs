@@ -134,7 +134,14 @@ for (const path of await listarArquivos(dist.pathname)) {
 // original. O precache medido foi 2916376 B, 2072 B acima do teto anterior.
 // O acréscimo é limitado a 3 KiB; entrypoint, gzip, code splitting e teto de
 // chunk opcional permanecem inalterados, deixando ~1 KiB de margem residual.
-const maxPrecacheBytes = 2849 * 1024;
+//
+// Ajustado de 2849 KB para 2864 KB em 29/08/2026: a release consolidada
+// adiciona uma rota lazy de análise científica por IA e a assistência
+// multimodal longitudinal dentro do chunk já lazy do Prontuário. O precache
+// medido foi 2931451 B, 14075 B acima do teto anterior. O aumento é restrito a
+// 15 KiB e deixa ~1,2 KiB de margem; entrypoint, gzip, code splitting e teto de
+// chunk opcional permanecem rigorosamente inalterados.
+const maxPrecacheBytes = 2864 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
