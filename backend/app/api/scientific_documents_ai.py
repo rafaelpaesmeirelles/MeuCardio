@@ -72,6 +72,7 @@ def _dump(row: ScientificUserDocument, *, detail: bool = False) -> dict:
             "extracted_text": extracted,
             "translated_text": translated or extracted,
             "translation_available": bool(translated),
+            "shared_incorporation_mode": "sintese_original_corvia",
         })
     return payload
 
@@ -104,8 +105,6 @@ async def upload_document(
         raise HTTPException(status_code=413, detail="O documento científico precisa ter no máximo 25 MB.")
     try:
         original_name = safe_filename(arquivo.filename, "documento-cientifico")
-        # A política de anexo já valida PDF/OOXML/TXT de forma fail-closed,
-        # incluindo macros, objetos incorporados e scripts em PDF.
         media_type = validate_file(content, original_name, "email")
     except UploadRejected as error:
         raise HTTPException(status_code=error.status_code, detail=error.detail) from error
@@ -236,14 +235,20 @@ async def analyze_document(
         extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
         analysis = await run_in_threadpool(engine.analyze_text, extracted)
         duplicate = engine.find_duplicate(db, analysis)
+        traceable = engine.has_traceable_source(analysis)
         if duplicate:
             analysis["adds_to_corvia"] = False
             analysis["incorporation_reason_pt"] = f"Documento já representado no acervo CorVIA por {duplicate.title}."
             row.incorporation_status = "duplicado"
             row.incorporated_document_id = duplicate.id
-        elif analysis.get("adds_to_corvia"):
+        elif analysis.get("adds_to_corvia") and traceable:
             row.incorporation_status = "aguardando_consentimento"
         else:
+            if analysis.get("adds_to_corvia") and not traceable:
+                analysis["incorporation_reason_pt"] = (
+                    "O documento pode acrescentar conhecimento, mas DOI/URL de fonte rastreável não foi identificado no próprio arquivo. "
+                    "Ele permanece na biblioteca privada e não será incorporado automaticamente ao acervo compartilhado."
+                )
             row.incorporation_status = "nao_recomendado"
 
         translated = ""
@@ -257,14 +262,14 @@ async def analyze_document(
         row.language = str(analysis.get("language") or "")[:20] or None
         row.doi = str(analysis.get("doi") or "").strip()[:160] or None
         row.source_url = str(analysis.get("source_url") or "").strip() or None
-        row.incorporation_recommended = bool(analysis.get("adds_to_corvia")) and duplicate is None
+        row.incorporation_recommended = bool(analysis.get("adds_to_corvia")) and duplicate is None and traceable
         row.analysis_status = "concluido"
         db.add(AuditLog(
             user_id=user.id,
             action="analyze_private_scientific_document",
             entity="scientific_user_document",
             entity_id=str(row.id),
-            detail={"document_type": row.document_type, "language": row.language, "incorporation_recommended": row.incorporation_recommended, "duplicate_document_id": duplicate.id if duplicate else None},
+            detail={"document_type": row.document_type, "language": row.language, "incorporation_recommended": row.incorporation_recommended, "traceable_source": traceable, "duplicate_document_id": duplicate.id if duplicate else None},
         ))
         db.commit()
     except Exception as error:
@@ -301,18 +306,22 @@ def incorporate_document(
     if row.incorporation_status == "duplicado" and row.incorporated_document_id:
         return {"incorporated": False, "duplicate": True, "document_id": row.incorporated_document_id}
     if not row.incorporation_recommended:
-        raise HTTPException(status_code=409, detail="A análise atual não identificou ganho de repertório que justifique incorporação automática.")
+        raise HTTPException(status_code=409, detail="A análise atual não identificou ganho rastreável de repertório que justifique incorporação ao acervo compartilhado.")
 
     extracted, translated, analysis = engine.decrypt_payload(row)
     row.consented_at = datetime.now(timezone.utc)
     row.incorporation_status = "consentido"
-    document = engine.incorporate(db, row, analysis, translated or extracted, reviewer_id=user.id)
+    try:
+        document = engine.incorporate(db, row, analysis, translated or extracted, reviewer_id=user.id)
+    except ValueError as error:
+        db.rollback()
+        raise HTTPException(status_code=409, detail=str(error)) from error
     db.add(AuditLog(
         user_id=user.id,
         action="consent_and_incorporate_scientific_document",
         entity="scientific_user_document",
         entity_id=str(row.id),
-        detail={"document_id": document.id, "slug": document.slug, "doi": row.doi},
+        detail={"document_id": document.id, "slug": document.slug, "doi": row.doi, "shared_mode": "corvia_original_synthesis"},
     ))
     db.commit()
     return {"incorporated": row.incorporation_status == "incorporado", "duplicate": row.incorporation_status == "duplicado", "document_id": document.id, "slug": document.slug}
