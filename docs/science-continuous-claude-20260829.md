@@ -763,3 +763,15 @@ falho, zero PMID inventado em toda a extensão. Fila mantida cheia o tempo
 todo conforme instruído; nenhum pedido de confirmação entre lotes.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lotes 31-32 (em andamento, 2 agentes em paralelo) — nova continuação ("prossiga")
+
+Backlog Cardiopatias congênitas (57 itens) escaneado: grandes clusters
+"cc-adulto-*" (eco, 8 itens) + "cc-transesofagico-*" (ETE, 6 itens) +
+"erg-ped-*" (teste ergométrico em ACHD, 6 itens) confirmados sem host —
+nenhum checklist de indicações de imagem em ACHD existe no corpus.
+Despachados dois agentes em paralelo: lote 31 = indicações de ETT em
+ACHD (9 itens, agente aa1698398cc976c97), lote 32 = indicações de ETE em
+ACHD (6 itens, agente a1dac83182823407a).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
