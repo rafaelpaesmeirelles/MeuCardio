@@ -177,19 +177,7 @@ jobs:
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            'set -euo pipefail; \
-             cd /opt/meucardio/frontend; \
-             test -f android/keystore.properties; \
-             npx cap sync android; \
-             cd android; \
-             JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH ./gradlew assembleRelease; \
-             test -s app/build/outputs/apk/release/app-release.apk; \
-             install -d -m 0755 /opt/meucardio/downloads; \
-             install -m 0644 app/build/outputs/apk/release/app-release.apk /opt/meucardio/downloads/corvia-os-android-1.0.1.apk; \
-             cp /opt/meucardio/downloads/corvia-os-android-1.0.1.apk /opt/meucardio/downloads/corvia-os-android.apk; \
-             cd /opt/meucardio/downloads; \
-             sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256; \
-             sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256'
+            "apk $TARGET_SHA"
 
       - name: Verify public production
         env:
