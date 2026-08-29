@@ -187,3 +187,30 @@ básico de planejamento (anel/vias de acesso) já existente. Despachado
 (agente a9fce3dda4bfdf359).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+## Lote 10 — concluído (1 commit, SHA 36bbab23) — total 29 commits
+
+- exame `angiotomografia-coronariana-e-cardiaca-em-papeis-expandidos-no-tavi...`
+  — novo, complementar ao exame básico de planejamento pré-TAVI. 4 cenários
+  (coronária pré-TAVI, valve-in-valve/VTC, escore de cálcio na discordância
+  eco, trombose de folheto/HALT — controvérsia GALILEO vs. GALILEO-4D
+  preservada). 15 PMIDs. Correção: indications/interpretation/limitations
+  vieram como lista no rascunho — LabTest usa Text, não ARRAY; convertidas
+  para string antes de gravar.
+
+Aprendizado do lote: boa parte do restante do backlog de Valvopatias
+(comissurotomia mitral, DOAC vs. AVK em valvopatia não-mitral, cirurgia de
+tricúspide combinada) já tem host real (verbetes/documentos existentes) —
+são lacunas de CONECTIVIDADE, não de conteúdo novo. Não acionado nesta
+rodada (fora do padrão de produção deste agente, que gera conteúdo).
+
+## Lote 11 (em andamento, 1 agente)
+
+Backlog de Cardiologia pediátrica (61 itens) escaneado: cluster JCS 2020
+Kawasaki (6 itens) sobre farmacoterapia de longo prazo estratificada por
+tamanho de aneurisma coronariano (AAS dose baixa vs. dupla antiagregação vs.
+varfarina+AAS em aneurisma grande, estatina, IECA/BRA) — confirmado como
+lacuna real no aprofundamento já feito no lote 2 (que cobriu só AHA 2017,
+sem a estratificação JCS 2020 por tamanho). Despachada correção aditiva
+(agente ad3fdc574c880d8da).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
