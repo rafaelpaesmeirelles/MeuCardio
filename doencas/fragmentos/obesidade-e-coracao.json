@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "obesidade-e-coracao",
+    "name": "Obesidade e risco cardiovascular",
+    "aliases": [
+      "Obesidade e coração",
+      "Obesidade como fator de risco cardiovascular",
+      "Doença cardiovascular relacionada à obesidade",
+      "Risco cardiometabólico da obesidade",
+      "Obesidade e insuficiência cardíaca com fração de ejeção preservada"
+    ],
+    "area": "geral",
+    "category": "prevencao_e_risco",
+    "subtype": "excesso_de_peso_e_adiposidade_como_fator_de_risco",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Obesidade é fator de risco cardiovascular independente — não apenas mediado por hipertensão, diabetes tipo 2 e dislipidemia — e também modificador direto de doenças cardíacas já estabelecidas, como a insuficiência cardíaca com fração de ejeção preservada (ICFEp) e a fibrilação atrial. A avaliação vai além do índice de massa corporal (IMC) isolado: circunferência abdominal, obesidade central e rastreio de obesidade sarcopênica agregam informação de risco que o IMC sozinho não captura. Desde 2023, os ensaios SELECT (semaglutida em doença aterosclerótica sem diabetes), STEP-HFpEF e SUMMIT (semaglutida e tirzepatida em ICFEp com obesidade) mudaram o estado da arte ao demonstrar que fármacos antiobesidade reduzem desfecho cardiovascular duro ou sintomático nessas populações. Ainda assim, o chamado \"paradoxo da obesidade\" no perioperatório e a necessidade de reavaliar terapias como a anticoagulação em obesidade extrema mostram que a relação entre peso corporal e risco cardiovascular agudo não é linear nem uniforme.",
+    "epidemiology": "A prevalência de obesidade cresce de forma sustentada em nível global, e dois terços do excesso de mortalidade atribuído a ela são de causa cardiovascular, segundo o consenso clínico da Sociedade Europeia de Cardiologia (ESC) sobre obesidade e doença cardiovascular (Koskinas KC, et al. Eur Heart J. 2024;45(38):4063-4098). A obesidade associa-se de forma consistente a hipertensão arterial sistêmica, diabetes tipo 2, dislipidemia aterogênica, fibrilação atrial e insuficiência cardíaca com fração de ejeção preservada (ICFEp) — esta última tem na obesidade um dos principais fatores de risco reconhecidos para o próprio desenvolvimento do fenótipo, não apenas uma comorbidade concomitante. A questão da independência causal é central e ainda parcialmente em debate: o ensaio SELECT (Lincoff AM, et al. N Engl J Med. 2023;389(24):2221-2232), com 17.604 pacientes com obesidade e doença cardiovascular estabelecida sem diabetes, mostrou redução de 20% em eventos cardiovasculares maiores com semaglutida, com benefício descrito como amplamente independente da adiposidade basal e da magnitude da perda de peso obtida — achado que sustenta mecanismos de proteção cardiovascular além da simples redução de peso corporal. Em contraste, o Look AHEAD, maior ensaio de intervenção intensiva de estilo de vida com desfecho cardiovascular em diabéticos com sobrepeso/obesidade, foi interrompido por futilidade após seguimento mediano de 9,6 anos, sem redução do desfecho composto primário — evidência de que \"obesidade causa risco cardiovascular\" não implica automaticamente que qualquer estratégia de perda de peso reduza evento clínico; a magnitude, a sustentabilidade e o mecanismo da perda de peso importam tanto quanto o resultado na balança.",
+    "presentation": [
+      "Dispneia aos esforços progressiva, muitas vezes atribuída apenas ao excesso de peso antes de investigação cardiovascular completa (fenômeno de diagnostic overshadowing)",
+      "Intolerância ao exercício e fadiga desproporcionais ao esperado apenas pela sobrecarga mecânica do peso",
+      "Hipertensão arterial de difícil controle, exigindo múltiplas classes de anti-hipertensivos",
+      "Palpitações e/ou fibrilação atrial de início recente ou recorrente",
+      "Edema bilateral de membros inferiores, de difícil diferenciação entre origem cardíaca, venosa e relacionada à inatividade",
+      "Sinais e sintomas sugestivos de apneia obstrutiva do sono (ronco, sonolência diurna, pausas respiratórias referidas por acompanhante)",
+      "Dor torácica atípica, com investigação por vezes tecnicamente mais difícil (limitação de janela ecocardiográfica, qualidade de imagem em cintilografia/tomografia)",
+      "Quadro clínico compatível com ICFEp (dispneia, edema, intolerância ao esforço) em paciente com IMC igual ou maior que 30 kg/m² — fenótipo com ensaios de tratamento dedicado (STEP-HFpEF, SUMMIT)",
+      "Perda de peso não intencional recente (igual ou maior que 7,5% em até 6 meses) em paciente idoso com insuficiência cardíaca, podendo sinalizar caquexia cardíaca sobreposta, não sinal tranquilizador",
+      "Massa e força muscular reduzidas com IMC normal ou elevado (obesidade sarcopênica), frequentemente não detectada porque o rastreio se limita à balança"
+    ],
+    "diagnostic_approach": {
+      "imc": "O índice de massa corporal (peso em kg dividido pela altura em metros ao quadrado) continua sendo a triagem inicial: sobrepeso corresponde a IMC entre 25 e 29,9 kg/m² e obesidade a IMC igual ou maior que 30 kg/m² (classe I: 30-34,9; classe II: 35-39,9; classe III ou obesidade extrema: igual ou maior que 40 kg/m² — limiar também usado nos estudos de farmacocinética de anticoagulantes orais diretos). O consenso ESC 2024 fixa IMC igual ou maior que 30 kg/m², ou igual ou maior que 27 kg/m² com pelo menos uma comorbidade relacionada ao peso, como limiar para considerar farmacoterapia antiobesidade associada à mudança de estilo de vida. O IMC isolado tem limitações reconhecidas: não distingue massa magra de massa gorda, não localiza a distribuição da gordura corporal (visceral versus subcutânea) e pode subestimar risco cardiometabólico em pacientes com obesidade central e IMC normal ou levemente elevado.",
+      "circunferencia_abdominal": "A circunferência abdominal (cintura), a relação cintura-quadril, a relação cintura-estatura e o índice de arredondamento corporal (body roundness index) capturam adiposidade central/visceral, mais associada a resistência insulínica e a risco cardiometabólico do que a adiposidade periférica. Estudo de coorte mostrou relação dose-resposta entre obesidade central e desfechos cardiometabólicos mesmo após ajuste para o IMC — inclusive em indivíduos com IMC dentro da faixa normal, subgrupo em que a obesidade central mais passa despercebida se a triagem se limitar ao IMC isolado.",
+      "obesidade_sarcopenica": "A obesidade sarcopênica — coexistência de excesso de adiposidade com massa e força muscular reduzidas — é subdiagnosticada porque o peso corporal e o IMC podem permanecer normais ou elevados, mascarando a perda muscular subjacente. O algoritmo do EWGSOP2 (Cruz-Jentoft AJ, et al. Age Ageing. 2019;48(1):16-31) diagnostica sarcopenia em três etapas: baixa força muscular (dinamometria) identifica sarcopenia provável; confirmação por baixa quantidade/qualidade muscular (bioimpedância, DXA ou imagem) define sarcopenia confirmada; baixo desempenho físico (velocidade de marcha) classifica a forma grave. Em insuficiência cardíaca, o estudo SICA-HF documentou perda muscular medida por DXA em quase 1 em cada 5 pacientes, associada de forma independente a menor capacidade funcional — achado que a avaliação por peso ou IMC isolados não captura.",
+      "rastreio_comorbidades_cardiometabolicas": "O paciente com obesidade recém-identificado deve ser rastreado ativamente para hipertensão arterial, diabetes tipo 2/pré-diabetes, dislipidemia, apneia obstrutiva do sono, fibrilação atrial e, quando houver sintomas sugestivos, ICFEp — condições que a obesidade tanto predispõe quanto agrava. Isso inclui aferição de pressão arterial, perfil lipídico, glicemia/HbA1c, investigação clínica de sintomas de apneia do sono e, diante de dispneia ou intolerância ao esforço inexplicadas, avaliação estruturada de ICFEp (ecocardiograma, peptídeos natriuréticos, escores como H2FPEF)."
+    },
+    "differentials": [
+      "Causas endócrinas secundárias de ganho de peso e hipertensão (hipotireoidismo, síndrome de Cushing), que devem ser consideradas antes de atribuir todo o quadro à obesidade primária",
+      "ICFEp de outras etiologias predominantes (amiloidose cardíaca, cardiomiopatia hipertrófica, doença pericárdica constritiva) em paciente obeso, quando o fenótipo não se encaixa no padrão obesidade-ICFEp",
+      "Apneia obstrutiva do sono isolada como causa de fadiga, sonolência e hipertensão, sem doença cardiovascular estrutural associada",
+      "Causas pulmonares de dispneia (DPOC, síndrome de hipoventilação da obesidade) mimetizando ou coexistindo com limitação funcional cardíaca",
+      "Edema de membros inferiores por insuficiência venosa crônica ou por inatividade, sem etiologia cardíaca",
+      "Caquexia cardíaca e sarcopenia isoladas, sem obesidade concomitante — quadro consumptivo com definição e prognóstico distintos da obesidade sarcopênica",
+      "Fenótipo de risco cardiometabólico elevado com IMC normal (\"metabolicamente obeso, peso normal\") — a mesma categoria de IMC pode representar risco muito diferente conforme a distribuição de gordura",
+      "Hipertensão arterial secundária de outra causa, não relacionada ao peso, coexistindo com obesidade e podendo ser erroneamente atribuída inteiramente ao excesso de peso"
+    ],
+    "tests": [
+      "Índice de massa corporal (IMC) e classificação por classe de obesidade",
+      "Circunferência abdominal, relação cintura-quadril ou relação cintura-estatura, para adiposidade central",
+      "Ecocardiograma transtorácico, com atenção à limitação de janela acústica em obesidade e à necessidade de protocolo individualizado",
+      "Peptídeos natriuréticos (BNP/NT-proBNP), interpretados com cautela — a obesidade associa-se a níveis mais baixos desses marcadores mesmo na presença de disfunção cardíaca",
+      "Teste de caminhada de 6 minutos ou teste cardiopulmonar de exercício, para capacidade funcional objetiva",
+      "Perfil lipídico e glicemia de jejum/HbA1c, para rastreio de dislipidemia e diabetes tipo 2 associados",
+      "Polissonografia, quando houver sintomas sugestivos de apneia obstrutiva do sono",
+      "Avaliação de composição corporal (bioimpedância ou DXA) e/ou dinamometria de preensão manual, quando houver suspeita de obesidade sarcopênica",
+      "Escore de cálcio coronariano ou angiotomografia coronariana, reconhecendo limitações técnicas de acurácia relacionadas à obesidade"
+    ],
+    "red_flags": [
+      "Dispneia nova ou progressiva atribuída apenas ao peso, sem completar a investigação cardiovascular padrão que seria feita em paciente com IMC normal e a mesma queixa",
+      "Dor torácica em paciente obeso conduzida com menor prioridade diagnóstica — dados observacionais associam obesidade a maior taxa de internação, parada cardíaca e insuficiência respiratória aguda quando a investigação é adiada",
+      "Perda de peso não intencional igual ou maior que 7,5% do peso corporal em até 6 meses em paciente com insuficiência cardíaca — critério clássico de caquexia cardíaca, marcador independente de mortalidade",
+      "Sinais de ICFEp descompensada (edema, ortopneia, dispneia paroxística noturna) em paciente com obesidade e IMC igual ou maior que 30 kg/m² — fenótipo com terapia dirigida específica",
+      "Hipertensão arterial resistente a múltiplas classes terapêuticas em paciente obeso — investigar apneia obstrutiva do sono grave e causas secundárias antes de atribuir apenas ao peso",
+      "Fibrilação atrial de início recente em paciente obeso — obesidade é fator de risco reconhecido, mas não deve substituir a investigação etiológica padrão",
+      "IMC igual ou maior que 40 kg/m² ou peso acima de 120 kg em uso de anticoagulante oral direto — a orientação sobre uso padrão foi revisada pela ISTH em 2021 e precisa ser ativamente considerada na prescrição e no seguimento",
+      "Obesidade central desproporcional ao IMC total (circunferência abdominal aumentada com IMC normal ou levemente elevado) — o risco cardiometabólico pode estar subestimado se a triagem se limitar ao IMC"
+    ],
+    "ambulatory_flow": [
+      "Avaliação inicial com cálculo de IMC, circunferência abdominal e estratificação do risco cardiovascular global",
+      "Rastreio ativo de comorbidades associadas: hipertensão arterial sistêmica, diabetes mellitus tipo 2 e dislipidemia",
+      "Encaminhamento para intervenção estruturada em estilo de vida com nutrição, educação física e suporte comportamental",
+      "Avaliação da elegibilidade para terapia com agonistas de GLP-1 ou agonistas duais de GLP-1/GIP considerando benefício cardiovascular",
+      "Investigação de comorbidades frequentemente associadas, como apneia obstrutiva do sono e doença hepática gordurosa",
+      "Discussão multidisciplinar sobre critérios de indicação para cirurgia bariátrica em casos selecionados",
+      "Ajuste e revisão periódica das terapias cardiovasculares em vigor, considerando peso corporal e função renal",
+      "Planejamento antecipado de exames de imagem contrastados e procedimentos, com atenção a limites técnicos relacionados ao peso",
+      "Definição de metas individualizadas de pressão arterial, controle glicêmico e perfil lipídico",
+      "Programação de retornos regulares para reforço de adesão e reavaliação de resposta terapêutica"
+    ],
+    "emergency_flow": [
+      "Avaliação imediata de dor torácica ou dispneia aguda em paciente obeso, considerando maior dificuldade diagnóstica por limitação de exame físico e de imagem",
+      "Ajuste do protocolo de exames contrastados ao peso corporal e verificação de limite de peso de equipamentos e mesas de exame",
+      "Consideração de via de acesso vascular alternativa e instrumental adequado diante de dificuldade técnica relacionada à obesidade",
+      "Reavaliação cautelosa de anticoagulação em curso, considerando incerteza de exposição terapêutica em obesidade extrema",
+      "Investigação de sinais de descompensação cardíaca aguda e de eventos tromboembólicos, condições mais frequentes nessa população",
+      "Acionamento precoce de equipe multidisciplinar para suporte a procedimentos que exijam adaptação técnica por obesidade extrema"
+    ],
+    "treatment_summary": "A obesidade é hoje reconhecida como fator de risco cardiovascular independente e amplificador de outros fatores tradicionais, exigindo abordagem estruturada que combina mudança de estilo de vida, terapia farmacológica moderna e, quando indicado, tratamento cirúrgico. O primeiro pilar do manejo é a intervenção em estilo de vida: reeducação alimentar com déficit calórico individualizado, aumento da atividade física aeróbica e de resistência, abordagem comportamental para adesão sustentada e suporte multidisciplinar com nutrição, educação física e, quando necessário, saúde mental. Essa base deve ser mantida mesmo quando terapias farmacológicas ou cirúrgicas são associadas, pois potencializa os resultados e reduz a recidiva de peso. Os agonistas do receptor de GLP-1 e os agonistas duais de GLP-1/GIP representam avanço relevante no tratamento da obesidade associada a risco cardiovascular, com evidência consistente de redução de eventos cardiovasculares maiores em pacientes obesos, além do efeito sobre o peso corporal, o controle glicêmico e o perfil lipídico; a decisão de iniciar essas classes deve considerar comorbidades, tolerância gastrointestinal e histórico pessoal ou familiar de neoplasia endócrina, sem que doses específicas sejam definidas neste documento. Em pacientes com obesidade extrema, diversas terapias cardiovasculares exigem ajuste técnico: a anticoagulação demanda atenção redobrada à variabilidade do volume de distribuição e à confiabilidade dos métodos de monitorização; exames contrastados requerem ajuste do volume de contraste ao peso corporal e atenção à função renal; procedimentos cirúrgicos e intervenções percutâneas podem exigir acesso vascular alternativo, instrumental de maior alcance e planejamento antecipado de posicionamento e via de acesso. A cirurgia bariátrica deve ser considerada em casos selecionados, especialmente pacientes com obesidade grave refratária a tratamento clínico otimizado e comorbidades cardiovasculares significativas, sendo indicada dentro de critérios estabelecidos e após avaliação multidisciplinar completa, com potencial de redução expressiva do risco cardiovascular a médio e longo prazo. Por fim, o controle agressivo das comorbidades associadas — hipertensão arterial sistêmica, diabetes mellitus tipo 2 e dislipidemia — é indissociável do manejo da obesidade, devendo seguir metas individualizadas e revisão periódica, com integração entre as equipes de cardiologia, endocrinologia e atenção primária para garantir continuidade do cuidado e redução efetiva do risco cardiovascular global.",
+    "monitoring": [
+      "Evolução do peso corporal e do índice de massa corporal ao longo do tratamento",
+      "Circunferência abdominal como marcador de risco cardiometabólico",
+      "Pressão arterial em consultas regulares",
+      "Perfil lipídico periódico",
+      "Controle glicêmico com hemoglobina glicada em pacientes com diabetes mellitus tipo 2 associado",
+      "Função renal, especialmente antes e após exposição a contraste iodado",
+      "Tolerância e efeitos adversos de agonistas de GLP-1 ou GLP-1/GIP",
+      "Rastreio periódico de sintomas sugestivos de apneia obstrutiva do sono",
+      "Acompanhamento de adesão às mudanças de estilo de vida e sustentabilidade da perda de peso"
+    ],
+    "special_populations": [
+      "Paciente com obesidade e insuficiência cardíaca com fração de ejeção preservada",
+      "Paciente com obesidade sarcopênica (massa muscular reduzida apesar de índice de massa corporal elevado)",
+      "Paciente com obesidade extrema candidato a anticoagulação (ajuste por peso)",
+      "Paciente obeso no perioperatório de cirurgia cardíaca",
+      "Paciente com \"paradoxo da obesidade\" documentado",
+      "Paciente candidato a agonista de GLP-1/GIP com múltiplas comorbidades cardiometabólicas"
+    ],
+    "assistant_questions": [
+      {"id": "imc_atual", "label": "Qual o índice de massa corporal (IMC) atual do paciente?", "type": "number"},
+      {"id": "circunferencia_abdominal_cm", "label": "Qual a circunferência abdominal em centímetros?", "type": "number"},
+      {"id": "classe_obesidade", "label": "Qual a classe de obesidade do paciente?", "type": "select", "options": [
+        {"value": "sobrepeso", "label": "Sobrepeso"}, {"value": "grau_i", "label": "Obesidade grau I"}, {"value": "grau_ii", "label": "Obesidade grau II"}, {"value": "grau_iii", "label": "Obesidade grau III (extrema)"}]},
+      {"id": "comorbidades_cardiovasculares", "label": "Quais comorbidades cardiovasculares ou metabólicas associadas o paciente apresenta?", "type": "multiselect", "options": [
+        {"value": "has", "label": "Hipertensão arterial sistêmica"}, {"value": "dm2", "label": "Diabetes mellitus tipo 2"}, {"value": "dislipidemia", "label": "Dislipidemia"}, {"value": "dac", "label": "Doença arterial coronariana"}, {"value": "ic", "label": "Insuficiência cardíaca"}, {"value": "fa", "label": "Fibrilação atrial"}, {"value": "avc_previo", "label": "AVC prévio"}]},
+      {"id": "em_uso_glp1_gip", "label": "O paciente já está em uso de agonista de GLP-1 ou GLP-1/GIP?", "type": "boolean"},
+      {"id": "contraindicacao_glp1", "label": "Existe contraindicação conhecida ao uso de agonistas de GLP-1/GIP (ex.: história pessoal ou familiar de neoplasia endócrina)?", "type": "boolean"},
+      {"id": "sintomas_apneia_sono", "label": "O paciente apresenta sintomas sugestivos de apneia obstrutiva do sono?", "type": "boolean"},
+      {"id": "candidato_cirurgia_bariatrica", "label": "O paciente atende critérios para avaliação de cirurgia bariátrica?", "type": "boolean"},
+      {"id": "em_uso_anticoagulante", "label": "O paciente está em uso de anticoagulante?", "type": "boolean"},
+      {"id": "dificuldade_acesso_vascular_imagem", "label": "Há dificuldade técnica antecipada para acesso vascular ou realização de exames de imagem devido ao peso corporal?", "type": "boolean"},
+      {"id": "perda_peso_percentual_6_meses", "label": "Qual o percentual de perda de peso nos últimos 6 meses de tratamento?", "type": "number"},
+      {"id": "dieta_estruturada_ativa", "label": "O paciente está em programa estruturado de dieta e atividade física?", "type": "boolean"},
+      {"id": "sintomas_agudos", "label": "O paciente apresenta algum sintoma agudo no momento da avaliação?", "type": "multiselect", "options": [
+        {"value": "dor_toracica", "label": "Dor torácica"}, {"value": "dispneia", "label": "Dispneia"}, {"value": "edema", "label": "Edema de membros inferiores"}, {"value": "palpitacoes", "label": "Palpitações"}, {"value": "nenhum", "label": "Nenhum sintoma agudo"}]}
+    ],
+    "assistant_rules": [
+      {"id": "obesidade_grau_iii_ajuste_terapeutico", "priority": 80, "when": {"all": [{"field": "classe_obesidade", "op": "eq", "value": "grau_iii"}]}, "add": {"risk": "prioritario", "supporting": ["Obesidade grau III exige revisão de ajustes técnicos em terapias cardiovasculares, incluindo anticoagulação, contraste e via de acesso"], "missing_information": ["Confirmar limites de peso de equipamentos de imagem e procedimento disponíveis no serviço"]}},
+      {"id": "dor_toracica_aguda_emergencia", "priority": 95, "when": {"all": [{"field": "sintomas_agudos", "op": "contains", "value": "dor_toracica"}]}, "add": {"risk": "emergencia", "red_flags": ["Dor torácica aguda em paciente obeso — avaliação de síndrome coronariana aguda e considerar dificuldade adicional de exame físico e de imagem"], "emergency_flow": ["Priorizar eletrocardiograma e marcadores de necrose miocárdica imediatos, considerando adaptação técnica pelo peso corporal"]}},
+      {"id": "dispneia_aguda_avaliacao", "priority": 90, "when": {"all": [{"field": "sintomas_agudos", "op": "contains", "value": "dispneia"}]}, "add": {"risk": "urgente", "red_flags": ["Dispneia aguda em paciente obeso — avaliar descompensação cardíaca e eventos tromboembólicos"], "differentials": ["Insuficiência cardíaca descompensada", "Tromboembolismo pulmonar", "Síndrome de hipoventilação da obesidade"]}},
+      {"id": "candidato_glp1_nao_iniciado", "priority": 60, "when": {"all": [{"field": "em_uso_glp1_gip", "op": "falsy"}, {"field": "contraindicacao_glp1", "op": "falsy"}, {"field": "comorbidades_cardiovasculares", "op": "exists"}]}, "add": {"risk": "rotina", "supporting": ["Paciente com comorbidades cardiovasculares e obesidade sem uso atual de agonista de GLP-1/GIP: avaliar elegibilidade dado o benefício cardiovascular demonstrado dessa classe"]}},
+      {"id": "contraindicacao_glp1_alerta", "priority": 70, "when": {"all": [{"field": "contraindicacao_glp1", "op": "truthy"}]}, "add": {"opposing": ["Contraindicação identificada ao uso de agonistas de GLP-1/GIP: considerar estratégias terapêuticas alternativas para manejo de peso e risco cardiovascular"]}},
+      {"id": "anticoagulacao_obesidade_extrema", "priority": 75, "when": {"all": [{"field": "em_uso_anticoagulante", "op": "truthy"}, {"field": "classe_obesidade", "op": "eq", "value": "grau_iii"}]}, "add": {"risk": "prioritario", "supporting": ["Anticoagulação em obesidade extrema requer atenção redobrada à confiabilidade do esquema terapêutico e ao monitoramento clínico"], "missing_information": ["Revisar histórico de eventos trombóticos ou hemorrágicos prévios e adequação da estratégia de anticoagulação vigente"]}},
+      {"id": "candidato_bariatrica_avaliacao", "priority": 55, "when": {"all": [{"field": "candidato_cirurgia_bariatrica", "op": "truthy"}]}, "add": {"supporting": ["Paciente elegível para discussão de cirurgia bariátrica: encaminhar para avaliação multidisciplinar especializada"], "suggested_tests": ["Avaliação cardiológica pré-operatória", "Avaliação endócrino-metabólica completa", "Investigação de comorbidades associadas antes do procedimento"]}},
+      {"id": "apneia_sono_rastreio", "priority": 50, "when": {"all": [{"field": "sintomas_apneia_sono", "op": "truthy"}]}, "add": {"suggested_tests": ["Polissonografia para investigação de apneia obstrutiva do sono"], "differentials": ["Apneia obstrutiva do sono como contribuinte para risco cardiovascular"]}},
+      {"id": "dificuldade_tecnica_procedimentos", "priority": 65, "when": {"all": [{"field": "dificuldade_acesso_vascular_imagem", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Planejar antecipadamente via de acesso vascular alternativa e ajuste de protocolo de imagem devido à dificuldade técnica relacionada ao peso corporal"]}},
+      {"id": "resposta_inadequada_estilo_vida", "priority": 45, "when": {"all": [{"field": "dieta_estruturada_ativa", "op": "truthy"}, {"field": "perda_peso_percentual_6_meses", "op": "lt", "value": 5}]}, "add": {"opposing": ["Resposta insuficiente à intervenção em estilo de vida isolada: reforçar avaliação de terapia farmacológica adjuvante ou reavaliar plano nutricional e comportamental"], "missing_information": ["Detalhar adesão real ao programa de dieta e atividade física para identificar barreiras específicas"]}}
+    ],
+    "tags": [
+      "obesidade",
+      "risco cardiovascular",
+      "agonistas de GLP-1",
+      "ICFEp",
+      "síndrome metabólica",
+      "cirurgia bariátrica",
+      "obesidade sarcopênica",
+      "paradoxo da obesidade"
+    ],
+    "source_refs": [
+      "Koskinas KC, Van Craenenbroeck EM, Antoniades C, et al; ESC Scientific Document Group. Obesity and cardiovascular disease: an ESC clinical consensus statement. Eur Heart J. 2024;45(38):4063-4098. PMID 39210706",
+      "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. PMID 37952131",
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. PMID 37622681",
+      "Kosiborod MN, Petrie MC, Borlaug BA, et al; STEP-HFpEF DM Trial Committees and Investigators. Semaglutide in Patients with Obesity-Related Heart Failure and Type 2 Diabetes. N Engl J Med. 2024;390(15):1394-1407. PMID 38587233",
+      "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. PMID 39555826",
+      "Sjöström L, Peltonen M, Jacobson P, et al. Bariatric surgery and long-term cardiovascular events (Swedish Obese Subjects study). JAMA. 2012;307(1):56-65. PMID 22215166",
+      "Aminian A, Zajichek A, Arterburn DE, et al. Association of Metabolic Surgery With Major Adverse Cardiovascular Outcomes in Patients With Type 2 Diabetes and Obesity. JAMA. 2019;322(13):1271-1282. PMID 31475297",
+      "Hidvegi R, Puelacher C, Gualandro DM, et al. Obesity paradox and perioperative myocardial infarction/injury in non-cardiac surgery. Clin Res Cardiol. 2020;109(9):1140-1147. PMID 32025837",
+      "Martin KA, Beyer-Westendorf J, Davidson BL, et al; ISTH SSC Subcommittee on Control of Anticoagulation. Use of direct oral anticoagulants in patients with obesity for treatment and prevention of venous thromboembolism: updated communication. J Thromb Haemost. 2021;19(8):1874-1882. PMID 34259389",
+      "Cruz-Jentoft AJ, Bahat G, Bauer J, et al; Writing Group for the EWGSOP2. Sarcopenia: revised European consensus on definition and diagnosis. Age Ageing. 2019;48(1):16-31. PMID 30312372"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39210706/",
+      "https://pubmed.ncbi.nlm.nih.gov/37952131/",
+      "https://pubmed.ncbi.nlm.nih.gov/37622681/",
+      "https://pubmed.ncbi.nlm.nih.gov/38587233/",
+      "https://pubmed.ncbi.nlm.nih.gov/39555826/",
+      "https://pubmed.ncbi.nlm.nih.gov/22215166/",
+      "https://pubmed.ncbi.nlm.nih.gov/31475297/",
+      "https://pubmed.ncbi.nlm.nih.gov/32025837/",
+      "https://pubmed.ncbi.nlm.nih.gov/34259389/",
+      "https://pubmed.ncbi.nlm.nih.gov/30312372/"
+    ],
+    "related_document_slugs": [
+      "fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica",
+      "paradoxo-da-obesidade-no-risco-cardiovascular-perioperatorio",
+      "estigma-de-peso-na-consulta-cardiologica",
+      "doac-em-obesidade-extrema-a-mudanca-de-orientacao-da-isth",
+      "semaglutida-na-icfep-com-obesidade-o-ensaio-step-hfpef",
+      "cirurgia-bariatrica-e-eventos-cardiovasculares-de-longo-prazo-estudo-sos",
+      "perder-peso-reduz-evento-cardiovascular-look-ahead-surmount-1-e-o-contraste-com-o-select"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Obesidade como fator de risco cardiovascular independente não tinha ficha própria em doencas/metadados.json, apesar de corpus rico já existente em content/Prevenção_e_lipídios/, Perioperatório, Tromboembolismo, Insuficiência_cardíaca, Diabetes_e_cardiologia e Comunicação_clínica (SELECT, STEP-HFpEF, SUMMIT, SOS, paradoxo da obesidade, DOAC em obesidade extrema, estigma de peso). Os 7 related_document_slugs foram verificados individualmente por leitura direta do documento completo. 10 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug não encontrado em material-paciente/metadados.json, mantido null. category='prevencao_e_risco' já existe na convenção do corpus (área geral). prevalence_rank deixado null, seguindo o padrão de verbetes-hub recentes fora do hub fechado de doenças de rank 1-9. Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
