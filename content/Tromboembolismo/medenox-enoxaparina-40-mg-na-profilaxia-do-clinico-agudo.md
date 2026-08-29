@@ -6,9 +6,11 @@ kind: estudo
 summary: "1.102 clínicos >40 anos, 6–14 d: enoxaparina 40 mg vs 20 mg vs placebo. Primário avaliável em 866 (flebografia). TEV 5,5% (16/291) vs 14,9% (43/288); RR 0,37 (IC 97,6% 0,22–0,63; P<0,001). 20 mg 15,0% — NS vs placebo. Morte dia 110 11,4% vs 13,9% NS. Não é ADOPT/MAGELLAN/APEX (profilaxia estendida). Primário é TEV predominantemente flebográfico, não morte."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC/PubMed (Samama, PMID 10477777; N Engl J Med. 1999;341(11):793-800; DOI 10.1056/NEJM199909093411103). Dose 20 mg NS. Morte NS. Taxas de 3 meses do TEV não estão no abstract — só 'benefício mantido'. Não inventar. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMID/DOI e mensagem de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Samama, PMID 10477777; N Engl J Med. 1999;341(11):793-800; DOI 10.1056/NEJM199909093411103). Dose 20 mg NS. Morte NS. Taxas de 3 meses do TEV não estão no abstract — só 'benefício mantido'. Não inventar. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
-  - "Samama MM, Cohen AT, Darmon JY, et al. A comparison of enoxaparin with placebo for the prevention of venous thromboembolism in acutely ill medical patients. N Engl J Med. 1999;341(11):793-800. DOI: 10.1056/NEJM199909093411103. PMID: 10477777."
+  - "Samama MM, Cohen AT, Darmon JY, Desjardins L, Eldor A, Janbon C, Leizorovicz A, Nguyen H, Olsson CG, Turpie AG, Weisslinger N; Prophylaxis in Medical Patients with Enoxaparin Study Group. A comparison of enoxaparin with placebo for the prevention of venous thromboembolism in acutely ill medical patients. N Engl J Med. 1999;341(11):793-800. DOI: 10.1056/NEJM199909093411103. PMID: 10477777. Abstract relido nesta sessão."
+  - "Documento da casa fluxograma-profilaxia-estendida-no-clinico-adopt-magellan-apex — estendida, não estes 6–14 dias."
+  - "Documento da casa exclaim-enoxaparina-estendida-no-clinico-com-mobilidade-reduzida — critério emendado."
 ---
 
 # MEDENOX: 40 mg na internação; 20 mg não

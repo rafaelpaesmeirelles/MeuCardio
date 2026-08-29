@@ -6,9 +6,11 @@ kind: estudo
 summary: "Os 1.810 do RITA-3: morte 10 anos 25,1% vs 25,4% (P=0,94); morte CV 15,1% vs 16,1% (P=0,65). O sinal de mortalidade dos 5 anos (P=0,054) não se mantém. Gradiente GRACE 14,4% a 56,2% — independente da estratégia. Não vender invasivo rotineiro desta era como ganho de sobrevida longa. ISRCTN07752711."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC/PubMed (Henderson, PMID 26227188; J Am Coll Cardiol. 2015;66(5):511-520; DOI 10.1016/j.jacc.2015.05.051). Primário de morte 10 a NS. Cartas 27012413/27012414 não são o RCT. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMID/DOI e mensagem de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Henderson, PMID 26227188; J Am Coll Cardiol. 2015;66(5):511-520; DOI 10.1016/j.jacc.2015.05.051). Primário de morte 10 a NS. Cartas 27012413/27012414 não são o RCT. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
-  - "Henderson RA, Jarvis C, Clayton T, Pocock SJ, Fox KAA. 10-Year Mortality Outcome of a Routine Invasive Strategy Versus a Selective Invasive Strategy in Non-ST-Segment Elevation Acute Coronary Syndrome: The British Heart Foundation RITA-3 Randomized Trial. J Am Coll Cardiol. 2015;66(5):511-520. DOI: 10.1016/j.jacc.2015.05.051. PMID: 26227188."
+  - "Henderson RA, Jarvis C, Clayton T, Pocock SJ, Fox KA. 10-Year Mortality Outcome of a Routine Invasive Strategy Versus a Selective Invasive Strategy in Non-ST-Segment Elevation Acute Coronary Syndrome: The British Heart Foundation RITA-3 Randomized Trial. J Am Coll Cardiol. 2015;66(5):511-520. DOI: 10.1016/j.jacc.2015.05.051. PMID: 26227188. ISRCTN07752711. Abstract relido nesta sessão."
+  - "Documento da casa rita-3-intervencao-versus-conservador-na-sca-sem-supra."
+  - "Documento da casa rita-3-cinco-anos-invasivo-versus-conservador-na-sca-sem-supra."
 ---
 
 # RITA-3 aos 10 anos: mortalidade empata

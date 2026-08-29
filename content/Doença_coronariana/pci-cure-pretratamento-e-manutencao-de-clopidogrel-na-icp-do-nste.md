@@ -6,12 +6,14 @@ kind: estudo
 summary: "Subgrupo do CURE: 2.658 com NSTE que foram à ICP (1.313 clopidogrel vs 1.345 placebo). Pré-tratamento mediano 6 d na internação (10 d no total). Primário 30 d (morte CV, IAM, revasc urgente do vaso) 4,5% vs 6,4% (RR 0,70; P=0,03). Sangramento maior P=0,64 NS. A redução de 31% em morte CV/IAM inclui eventos antes da ICP — não é o primário. Não randomizou a ICP. CREDO é PCI eletiva com ataque 3–24 h."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC/PubMed (Mehta, PMID 11520521; Lancet. 2001;358(9281):527-533; DOI 10.1016/S0140-6736(01)05701-4). Redução global de 31% inclui eventos pré e pós-ICP. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMID/DOI e mensagem de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Mehta, PMID 11520521; Lancet. 2001;358(9281):527-533; DOI 10.1016/s0140-6736(01)05701-4). Subgrupo de ICP do CURE, não RCT autónomo de ICP. Taxas do composto de longo prazo e do 31% global ausentes no abstract — só p. Não inventar. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
-  - "Mehta SR, Yusuf S, Peters RJG, et al. Effects of pretreatment with clopidogrel and aspirin followed by long-term therapy in patients undergoing percutaneous coronary intervention: the PCI-CURE study. Lancet. 2001;358(9281):527-533. DOI: 10.1016/S0140-6736(01)05701-4. PMID: 11520521."
+  - "Mehta SR, Yusuf S, Peters RJ, Bertrand ME, Lewis BS, Natarajan MK, Malmberg K, Rupprecht H, Zhao F, Chrolavicius S, Copland I, Fox KA; Clopidogrel in Unstable angina to prevent Recurrent Events trial (CURE) Investigators. Effects of pretreatment with clopidogrel and aspirin followed by long-term therapy in patients undergoing percutaneous coronary intervention: the PCI-CURE study. Lancet. 2001;358(9281):527-533. DOI: 10.1016/s0140-6736(01)05701-4. PMID: 11520521. Abstract relido nesta sessão."
+  - "Documento da casa cure-clopidogrel-no-nste-acs — RCT-mãe; PCI não está no abstract do CURE."
+  - "Documento da casa credo-clopidogrel-12-meses-apos-pci-e-ataque-pre-procedimento — PCI eletiva; ataque 3–24 h NS."
 ---
 
-# PCI-CURE: o subgrupo de ICP do CURE não é um RCT de PCI
+# PCI-CURE: subgrupo de ICP do CURE, não um RCT de PCI
 
 ## Pergunta clínica
 

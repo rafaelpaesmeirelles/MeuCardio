@@ -6,12 +6,19 @@ kind: estudo
 summary: "6.010 em ICP urgente ou eletiva: bivalirudina com GPI provisória (7,2%) vs HNF+GPI planejada. Primário (morte/IAM/revasc urgente/sangramento maior) 9,2% vs 10,0% (OR 0,92; P=0,32). Isquêmico 7,6% vs 7,1% (P=0,40). Sangramento maior 2,4% vs 4,1% (P<0,001). Autores declaram NI — margem ausente neste abstract. Não é HEAT/VALIDATE (IAM). ACUITY é SCA invasiva."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC/PubMed (Lincoff, PMID 12588269; JAMA. 2003;289(7):853-863; DOI 10.1001/jama.289.7.853). Primário P=0,32. Margem de NI não está no abstract — não inventar. Não vender superioridade. Revisão independente ChatGPT concluída em 29/08/2026: desfechos, amostra, comparadores, PMID/DOI e mensagem de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Lincoff, PMID 12588269; JAMA. 2003;289(7):853-863; DOI 10.1001/jama.289.7.853). Primário P=0,32. Margem de NI não está no abstract — não inventar. Não vender superioridade. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
-  - "Lincoff AM, Bittl JA, Harrington RA, et al. Bivalirudin and provisional glycoprotein IIb/IIIa blockade compared with heparin and planned glycoprotein IIb/IIIa blockade during percutaneous coronary intervention: REPLACE-2 randomized trial. JAMA. 2003;289(7):853-863. DOI: 10.1001/jama.289.7.853. PMID: 12588269."
+  - "Lincoff AM, Bittl JA, Harrington RA, Feit F, Kleiman NS, Jackman JD, Sarembock IJ, Cohen DJ, Spriggs D, Ebrahimi R, Keren G, Carr J, Cohen EA, et al; REPLACE-2 Investigators. Bivalirudin and provisional glycoprotein IIb/IIIa blockade compared with heparin and planned glycoprotein IIb/IIIa blockade during percutaneous coronary intervention: REPLACE-2 randomized trial. JAMA. 2003;289(7):853-863. DOI: 10.1001/jama.289.7.853. PMID: 12588269. Abstract relido nesta sessão."
+  - "Documento da casa acuity-bivalirudina-na-sca-invasiva — SCA, não este misto eletivo/urgente."
+  - "Documento da casa heat-ppci-heparina-versus-bivalirudina-na-icp-primaria."
+  - "Documento da casa hero-2-bivalirudina-versus-hnf-com-estreptoquinase-no-iamcsst — lise, não ICP."
 ---
 
-# REPLACE-2: bivalirudina e GPI provisório na ICP
+# REPLACE-2: empate isquêmico, menos sangramento maior
+
+## Pergunta clínica
+
+ICP urgente ou eletiva. Bivalirudina com GPI só se complicar protege igual a HNF com GPI planejada?
 
 ## Desenho
 
@@ -19,11 +26,14 @@ source_refs:
 
 ## Resultado
 
+GPI provisória no braço bivalirudina: **7,2%**.
+
 - Primário: **9,2% vs 10,0%**; OR **0,92** (0,77–1,09); **P=0,32**
 - Isquêmico: **7,6% vs 7,1%**; OR **1,09** (0,90–1,32); **P=0,40**
-- Critérios formais de **não inferioridade** foram atendidos para ambos os compostos.
-- Sangramento maior hospitalar: **2,4% vs 4,1%**; **P<0,001**
+- Sangramento maior: **2,4% vs 4,1%**; **P<0,001**
+
+Os autores: critérios pré-especificados de não inferioridade satisfeitos. A **margem de NI não está neste abstract**.
 
 ## Mensagem prática
 
-Não usar P=0,32 para afirmar superioridade. O estudo testou uma estratégia de bivalirudina com GPI de resgate que preservasse eficácia isquêmica com menor sangramento em relação a HNF + GPI planejada.
+**Não vender superioridade isquêmica — os dois compostos incluem 1 no IC.** O ganho é menos sangramento maior contra HNF+GPI planejada. HEAT/VALIDATE testam IAM com heparina monoterapia. ACUITY é SCA invasiva.
