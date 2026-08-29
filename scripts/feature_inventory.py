@@ -162,7 +162,7 @@ EXPECTED_SUPPORT_FILES = {
     "backend/migrations/versions/f49a20260805_agenda_integrada.py",
     "backend/migrations/versions/f75a20260814_account_recovery_email.py",
     "backend/migrations/versions/f86a20260829_guideline_title_text.py",
-    "backend/migrations/versions/f86b20260829_scientific_user_library.py",
+    "backend/migrations/versions/f86b20260829_scientific_user_documents.py",
     "backend/migrations/versions/f86c20260829_patient_multimodal.py",
     "doencas/metadados.json",
     "triagem-sintomas/metadados.json",
