@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import {
@@ -9,16 +10,46 @@ import {
   ClinicalSection,
 } from "../components/ClinicalCommandPrimitives";
 
+type StatusAtualizacao = "detected" | "aguardando_revisao" | "revisada" | "analisada" | "revisao_necessaria" | "aplicada_auto";
+type Mudanca = {
+  category: string;
+  change_pt: string;
+  previous_pt: string | null;
+  practical_impact_pt: string;
+  explicit_in_source: boolean;
+  source_url: string;
+};
+type Impacto = {
+  item_type: string;
+  item_id: number;
+  target_label: string | null;
+  target_section: string | null;
+  change_summary_pt: string | null;
+  source_url: string | null;
+  applied_at: string | null;
+  mode: string | null;
+};
 type Atualizacao = {
   id: number;
   slug: string;
   org: string;
   title: string;
+  title_original: string;
+  title_pt: string | null;
+  summary_pt: string | null;
+  theme: string | null;
   published_at: string;
   discovered_at: string;
   url: string | null;
-  status: "detected" | "aguardando_revisao" | "revisada";
-  clinical_content_changed: false;
+  doi: string | null;
+  status: StatusAtualizacao;
+  key_changes: Mudanca[];
+  limitations: string[];
+  impacts: Impacto[];
+  summary_document_slug: string | null;
+  clinical_content_changed: boolean;
+  translation_mode: string | null;
+  analyzed_at: string | null;
 };
 
 type Notificacao = {
@@ -30,20 +61,85 @@ type Notificacao = {
 
 type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
 type RespostaNotificacoes = { cutoff: string; items: Notificacao[] };
-type DiretrizBiblioteca = {
-  slug: string;
-  title: string;
-  theme: string;
-};
+type DiretrizBiblioteca = { slug: string; title: string; theme: string };
 
 function dataBr(valor: string) {
   return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
 }
 
-function statusLabel(status: Atualizacao["status"]) {
+function statusLabel(status: StatusAtualizacao) {
+  if (status === "aplicada_auto") return "CorVIA atualizado";
+  if (status === "analisada") return "Analisada";
+  if (status === "revisao_necessaria") return "Revisão necessária";
   if (status === "revisada") return "Revisada";
   if (status === "aguardando_revisao") return "Aguardando revisão";
   return "Detectada";
+}
+
+function statusClass(status: StatusAtualizacao) {
+  return ["aplicada_auto", "analisada", "revisada"].includes(status) ? "selo--revisado" : "selo--pendente";
+}
+
+function titulo(item: Atualizacao) {
+  return item.title_pt?.trim() || item.title;
+}
+
+function categoria(valor: string) {
+  const mapa: Record<string, string> = {
+    definicao: "Definição", diagnostico: "Diagnóstico", tratamento: "Tratamento",
+    fluxograma: "Fluxograma", monitorizacao: "Monitorização", seguranca: "Segurança",
+    prevencao: "Prevenção", procedimento: "Procedimento", outro: "Prática clínica",
+  };
+  return mapa[valor] || valor;
+}
+
+function CardAtualizacao({ item }: { item: Atualizacao }) {
+  return (
+    <article className="cc-guideline-row">
+      <div>
+        <small>{item.org} · {dataBr(item.published_at)}{item.theme ? ` · ${item.theme}` : ""}</small>
+        <strong>{titulo(item)}</strong>
+        {item.title_pt && item.title_pt !== item.title_original && <span>Título original: {item.title_original}</span>}
+        {item.summary_pt ? <p>{item.summary_pt}</p> : <span>Análise clínica em processamento.</span>}
+
+        {item.key_changes.filter((mudanca) => mudanca.explicit_in_source).length > 0 && (
+          <div className="cc-detail-card">
+            <p className="eyebrow">O que este documento mudou</p>
+            <ul className="cc-clinical-list">
+              {item.key_changes.filter((mudanca) => mudanca.explicit_in_source).map((mudanca, indice) => (
+                <li key={`${item.id}-mudanca-${indice}`}>
+                  <strong>{categoria(mudanca.category)}:</strong> {mudanca.change_pt}
+                  {mudanca.previous_pt && <><br /><small>Antes: {mudanca.previous_pt}</small></>}
+                  <br /><small>Impacto prático: {mudanca.practical_impact_pt}</small>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {item.impacts.length > 0 && (
+          <div className="cc-detail-card">
+            <p className="eyebrow">O que o CorVIA atualizou</p>
+            <ul className="cc-clinical-list">
+              {item.impacts.map((impacto) => (
+                <li key={`${impacto.item_type}-${impacto.item_id}`}>
+                  <strong>{impacto.target_label || impacto.item_type}</strong>
+                  {impacto.target_section ? ` · ${impacto.target_section}` : ""}
+                  {impacto.change_summary_pt ? <><br /><span>{impacto.change_summary_pt}</span></> : null}
+                </li>
+              ))}
+            </ul>
+            <p><small>As atualizações são overrides versionados, rastreáveis e reversíveis; em conflito, a orientação nova explicitamente verificada prevalece.</small></p>
+          </div>
+        )}
+      </div>
+      <div className="cc-guideline-row__side">
+        <span className={`selo ${statusClass(item.status)}`}>{statusLabel(item.status)}</span>
+        {item.summary_document_slug && <Link to={`/biblioteca/${item.summary_document_slug}`}>Ler síntese CorVIA</Link>}
+        {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Publicação original ↗</a>}
+      </div>
+    </article>
+  );
 }
 
 export default function Diretrizes() {
@@ -66,18 +162,10 @@ export default function Diretrizes() {
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
 
-  const naoLidas = useMemo(
-    () => (notificacoes?.items ?? []).filter((item) => !item.read_at),
-    [notificacoes?.items],
-  );
-  const revisadas = useMemo(
-    () => (atualizacoes?.items ?? []).filter((item) => item.status === "revisada").length,
-    [atualizacoes?.items],
-  );
-  const organizacoes = useMemo(
-    () => new Set((atualizacoes?.items ?? []).map((item) => item.org).filter(Boolean)).size,
-    [atualizacoes?.items],
-  );
+  const naoLidas = useMemo(() => (notificacoes?.items ?? []).filter((item) => !item.read_at), [notificacoes?.items]);
+  const analisadas = useMemo(() => (atualizacoes?.items ?? []).filter((item) => Boolean(item.summary_pt)).length, [atualizacoes?.items]);
+  const aplicadas = useMemo(() => (atualizacoes?.items ?? []).filter((item) => item.clinical_content_changed).length, [atualizacoes?.items]);
+  const organizacoes = useMemo(() => new Set((atualizacoes?.items ?? []).map((item) => item.org).filter(Boolean)).size, [atualizacoes?.items]);
 
   async function marcarLida(id: number) {
     try {
@@ -97,36 +185,38 @@ export default function Diretrizes() {
   return (
     <div className="cc-page cc-guidelines-page">
       <ClinicalPageHeader
-        eyebrow="Guidelines"
+        eyebrow="CorVIA Intelligence"
         title="Diretrizes e alertas clínicos"
-        description="Publicações oficiais detectadas com rastreabilidade. Nenhuma recomendação, dose ou protocolo muda na CorVIA sem revisão clínica humana."
+        description="Novas publicações são detectadas, analisadas e resumidas em português. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
         icon="documento"
         actions={[
           { to: "/evidencias", label: "Evidências", icon: "evidencia" },
           { to: "/estudos", label: "Estudos", icon: "evidencia", tone: "primary" },
         ]}
-        meta={<><span className="selo">monitoramento oficial</span><span className="selo">revisão humana</span></>}
+        meta={<><span className="selo">fontes oficiais</span><span className="selo">síntese em português</span><span className="selo">Tudo com Tudo</span></>}
       />
 
       <div className="cc-metrics">
         <ClinicalMetric label="Publicações" value={atualizacoes.items.length} detail={`desde ${dataBr(atualizacoes.cutoff)}`} icon="documento" />
         <ClinicalMetric label="Novas para você" value={naoLidas.length} detail="alertas ainda não lidos" icon="evidencia" />
-        <ClinicalMetric label="Revisadas" value={revisadas} detail="análise clínica concluída" icon="check" />
-        <ClinicalMetric label="Organizações" value={organizacoes} detail="fontes oficiais detectadas" icon="documento" />
+        <ClinicalMetric label="Analisadas" value={analisadas} detail="com síntese clínica em português" icon="check" />
+        <ClinicalMetric label="Atualizaram o CorVIA" value={aplicadas} detail={`${organizacoes} organizações monitoradas`} icon="sincronizar" />
       </div>
 
       {naoLidas.length > 0 && (
-        <ClinicalSection eyebrow="Seu radar clínico" title="Novos para você" description="Priorize o que foi publicado desde sua última revisão.">
+        <ClinicalSection eyebrow="Seu radar clínico" title="Novos para você" description="Veja primeiro o resumo em português, as mudanças e o impacto no CorVIA; abra o original quando quiser aprofundar.">
           <div className="cc-guideline-alerts">
             {naoLidas.map((item) => (
               <article key={item.notification_id} className="cc-guideline-alert">
                 <div className="cc-guideline-alert__copy">
                   <small>{item.guideline.org} · {dataBr(item.guideline.published_at)}</small>
-                  <strong>{item.guideline.title}</strong>
-                  <p>{item.message}</p>
+                  <strong>{titulo(item.guideline)}</strong>
+                  <p>{item.guideline.summary_pt || item.message}</p>
+                  {item.guideline.clinical_content_changed && <p><strong>CorVIA atualizado:</strong> {item.guideline.impacts.length} ponto(s) clínico(s) receberam orientação prevalente nova.</p>}
                 </div>
                 <div className="cc-guideline-alert__actions">
-                  {item.guideline.url && <a className="botao" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Abrir oficial ↗</a>}
+                  {item.guideline.summary_document_slug && <Link className="botao" to={`/biblioteca/${item.guideline.summary_document_slug}`}>Resumo CorVIA</Link>}
+                  {item.guideline.url && <a className="botao botao--secundario" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
                   <button className="botao botao--secundario" type="button" onClick={() => void marcarLida(item.notification_id)}>Marcar como lido</button>
                 </div>
               </article>
@@ -135,41 +225,20 @@ export default function Diretrizes() {
         </ClinicalSection>
       )}
 
-      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Itens não revisados permanecem explicitamente rotulados; detecção não equivale a mudança clínica.">
+      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="A síntese em português facilita a leitura; a publicação original permanece sempre acessível e é a fonte primária.">
         {atualizacoes.items.length === 0 ? (
-          <ClinicalEmpty title="Nenhuma nova diretriz oficial identificada" description="A rotina de monitoramento continua consultando as fontes oficiais." />
+          <ClinicalEmpty title="Nenhuma nova publicação oficial identificada" description="O CorVIA Intelligence continua consultando sociedades, periódicos e indexadores estruturados." />
         ) : (
           <div className="cc-guideline-list">
-            {atualizacoes.items.map((item) => (
-              <article key={item.id} className="cc-guideline-row">
-                <div>
-                  <small>{item.org} · {dataBr(item.published_at)}</small>
-                  <strong>{item.title}</strong>
-                  <span>{item.status === "revisada" ? "Revisão clínica concluída." : "Publicação detectada; análise clínica aguardando revisão humana."}</span>
-                </div>
-                <div className="cc-guideline-row__side">
-                  <span className={`selo ${item.status === "revisada" ? "selo--revisado" : "selo--pendente"}`}>{statusLabel(item.status)}</span>
-                  {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Documento oficial ↗</a>}
-                </div>
-              </article>
-            ))}
+            {atualizacoes.items.map((item) => <CardAtualizacao key={item.id} item={item} />)}
           </div>
         )}
       </ClinicalSection>
 
-      <ClinicalSection
-        eyebrow="Biblioteca clínica"
-        title="Guidelines conectadas"
-      >
+      <ClinicalSection eyebrow="Biblioteca clínica" title="Guidelines conectadas">
         <div className="cc-context-grid">
           {diretrizes.map((item) => (
-            <ClinicalContextLink
-              key={item.slug}
-              to={`/biblioteca/${item.slug}`}
-              icon="evidencia"
-              title={item.title}
-              detail={item.theme}
-            />
+            <ClinicalContextLink key={item.slug} to={`/biblioteca/${item.slug}`} icon="evidencia" title={item.title} detail={item.theme} />
           ))}
         </div>
       </ClinicalSection>

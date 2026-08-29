@@ -4,8 +4,10 @@ from __future__ import annotations
 
 Structured scholarly indexes are the primary safety net because many publisher
 sites intentionally block automated HTML clients. Direct society/journal pages
-remain enabled as redundant first-party discovery paths. Every discovery remains
-`detected` until scientific review; this module never changes clinical guidance.
+remain enabled as redundant first-party discovery paths. New publications are
+persisted first; a second, source-grounded clinical pipeline then creates an
+original Portuguese synthesis and may apply only independently verified,
+high-confidence, reversible clinical overrides.
 """
 
 import threading
@@ -53,8 +55,6 @@ WORLDWIDE_SOURCES = (
     core.Source("NICE", "https://www.nice.org.uk/guidance/conditions-and-diseases/cardiovascular-conditions", ("nice.org.uk", "www.nice.org.uk"), keywords=HIGH_SIGNAL_TERMS, max_details=100),
     core.Source("WHO", "https://www.who.int/health-topics/cardiovascular-diseases", ("who.int", "www.who.int"), keywords=HIGH_SIGNAL_TERMS, max_details=80),
     core.Source("COCHRANE", "https://www.cochranelibrary.com/cdsr/reviews", ("cochranelibrary.com", "www.cochranelibrary.com"), keywords=CARDIOVASCULAR_TERMS, max_details=80),
-    # Direct early-online pages are fallbacks. Structured indexes below remain
-    # the backbone when publishers return HTTP 403 to automated HTML clients.
     core.Source("JACC", "https://www.jacc.org/onlinefirst", ("jacc.org", "www.jacc.org"), keywords=CARDIOVASCULAR_TERMS, max_details=80),
     core.Source("CIRCULATION", "https://www.ahajournals.org/toc/circ/0/0", ("ahajournals.org", "www.ahajournals.org"), keywords=CARDIOVASCULAR_TERMS, max_details=80),
     core.Source("JAMA_CARDIOLOGY", "https://jamanetwork.com/journals/jamacardiology/newonline", ("jamanetwork.com", "www.jamanetwork.com"), keywords=CARDIOVASCULAR_TERMS, max_details=80),
@@ -70,7 +70,6 @@ _DISCOVERY_LOCK = threading.Lock()
 
 
 def enable_worldwide_sources() -> tuple[core.Source, ...]:
-    """Idempotently install direct worldwide sources into the canonical engine."""
     current = list(core.SOURCES)
     known = {(item.org, item.index_url) for item in current}
     for source in WORLDWIDE_SOURCES:
@@ -82,16 +81,13 @@ def enable_worldwide_sources() -> tuple[core.Source, ...]:
     return core.SOURCES
 
 
-def discover_and_publish_worldwide(db: Session) -> dict:
-    """Run structured indexes first, then direct first-party fallbacks."""
+def discover_and_publish_worldwide(db: Session, *, analyze_clinical_impact: bool = True) -> dict:
+    """Discover globally and, when enabled, process clinical impact immediately."""
     enable_worldwide_sources()
     now = datetime.now(timezone.utc)
     cutoff = core._effective_cutoff(now)
     structured_items, structured_coverage = discover_structured_sources(cutoff, now)
 
-    # The canonical engine owns deduplication, notification and persistence.
-    # Serialize the temporary seed injection so concurrent admin/scheduled runs
-    # in the same worker cannot observe each other's structured result sets.
     with _DISCOVERY_LOCK:
         original_bootstrap = core.BOOTSTRAP_DOCUMENTS
         try:
@@ -114,4 +110,16 @@ def discover_and_publish_worldwide(db: Session) -> dict:
         "direct_sources_ok": max(0, len(core.SOURCES) - len(failed_direct)),
         "mode": "structured_primary_direct_fallback",
     }
+
+    if analyze_clinical_impact:
+        try:
+            from app.services.guideline_clinical_update_runtime import process_pending_guidelines
+            result["clinical_update_pipeline"] = process_pending_guidelines(db)
+        except Exception as exc:  # descoberta nunca é perdida por falha do segundo estágio
+            core.log.exception("Falha no pipeline clínico pós-descoberta")
+            result["clinical_update_pipeline"] = {
+                "processed": 0,
+                "items": [],
+                "failures": [{"error": type(exc).__name__}],
+            }
     return result
