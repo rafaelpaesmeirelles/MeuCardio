@@ -1,0 +1,209 @@
+[
+  {
+    "slug": "aconselhamento-genetico-cardiovascular",
+    "name": "Aconselhamento genético cardiovascular",
+    "aliases": [
+      "teste genético cardiovascular",
+      "cardiogenética",
+      "aconselhamento genético em cardiologia",
+      "teste genético para doenças cardíacas hereditárias",
+      "rastreio em cascata familiar cardiovascular"
+    ],
+    "area": "geral",
+    "category": "genetica_cardiovascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Processo transversal de indicação, condução e interpretação de teste genético em cardiologia — aplicável a cardiomiopatias hereditárias (hipertrófica, dilatada, arritmogênica), canalopatias (síndrome do QT longo, síndrome de Brugada, taquicardia ventricular polimórfica catecolaminérgica), aortopatias hereditárias (síndrome de Marfan, Loeys-Dietz, Ehlers-Danlos vascular), hipercolesterolemia familiar e morte súbita cardíaca inexplicada em família — e não uma doença isolada. Cobre quando indicar o teste, o aconselhamento genético pré-teste, a interpretação do resultado (variante patogênica/provavelmente patogênica versus variante de significado incerto — VUS —, que nunca deve ser tratada como diagnóstica), o rastreamento em cascata dos parentes de primeiro grau e os limites do aconselhamento: não é ferramenta de rastreamento populacional e exige equipe multidisciplinar especializada em cardiogenética. Os limiares cirúrgicos e o manejo específico de cada condição hereditária têm hub próprio e não são repetidos aqui.",
+    "epidemiology": "Este documento não descreve a epidemiologia de uma doença específica, mas o contexto populacional em que o teste genético cardiovascular se aplica: uma minoria dos pacientes avaliados em cardiologia geral, concentrada em fenótipos de alta probabilidade diagnóstica (cardiomiopatia com padrão sugestivo, canalopatia documentada, aortopatia com estigma sindrômico, dislipidemia grave desproporcional à idade, ou morte súbita cardíaca precoce/inexplicada num parente de primeiro grau). A proporção de casos com variante causal identificável, a prevalência populacional e a penetrância variam por condição e são tratadas nos hubs específicos de cada doença (ex.: cardiomiopatia hipertrófica, canalopatias cardíacas hereditárias, doença da aorta, dislipidemia) para não duplicar dado já verificado nessas fichas. O eixo transversal comum, documentado por consenso de especialistas EHRA/HRS/APHRS/LAHRS, é que o teste deve ser restrito a genes de evidência definida ou forte, oferecido ao caso índice de fenótipo bem caracterizado, e sempre precedido de aconselhamento genético estruturado (Wilde AAM et al., Europace 2022;24(8):1307-1367, PMID 35373836).",
+    "presentation": [
+      "Diagnóstico recente de cardiomiopatia (hipertrófica, dilatada ou arritmogênica) em paciente jovem, com dúvida sobre indicação de teste genético e rastreio familiar",
+      "Suspeita ou confirmação de canalopatia (síndrome do QT longo, síndrome de Brugada, TVPC) após síncope, palpitações ou achado eletrocardiográfico",
+      "Aneurisma ou dissecção de aorta em paciente jovem, ou com estigmas sindrômicos de tecido conjuntivo (hábito marfanoide, ectopia lentis, hiperextensibilidade articular, história familiar de dissecção precoce)",
+      "Hipercolesterolemia grave e desproporcional à idade, com ou sem xantoma/xantelasma/arco corneano precoce, levantando suspeita de hipercolesterolemia familiar",
+      "Morte súbita cardíaca inexplicada de parente jovem (autópsia sem causa estrutural definida), com família buscando orientação sobre investigação e risco próprio",
+      "Sobrevivente de parada cardíaca resgatada sem causa estrutural ou coronariana identificada (fibrilação ventricular idiopática) encaminhado para investigação etiológica ampliada",
+      "Parente assintomático de primeiro ou segundo grau de um caso índice com variante patogênica já identificada, buscando orientação sobre teste em cascata",
+      "Paciente ou família com plano de gestação e diagnóstico prévio de condição cardiovascular hereditária, buscando aconselhamento reprodutivo"
+    ],
+    "diagnostic_approach": {
+      "quando_indicar_teste_genetico": "O teste genético deve ser oferecido ao caso índice quando o fenótipo tem alta probabilidade diagnóstica por critérios clínicos e de imagem estabelecidos para a condição suspeitada — não diante de suspeita vaga ou achado inespecífico. Testar genes de evidência limitada, disputada ou refutada num fenótipo mal definido não esclarece o diagnóstico e ainda produz variantes de significado incerto que geram ansiedade e decisões clínicas equivocadas (Wilde AAM et al., Europace 2022;24(8):1307-1367, PMID 35373836).",
+      "aconselhamento_genetico_pre_teste": "Precede a coleta da amostra em todos os casos: explicar o padrão de herança esperado (em geral autossômico dominante, com transmissão de 50% para a prole nas condições mais comuns deste escopo), a penetrância incompleta e variável — carrear a variante não significa necessariamente desenvolver a doença —, as implicações reprodutivas (incluindo diagnóstico pré-natal e diagnóstico genético pré-implantacional, quando aplicável), as implicações para seguro e emprego, e o direito do paciente de não realizar o teste. Quando o cardiologista não está municiado para conduzir essas questões, o aconselhamento deve ser feito em parceria com aconselhador genético, enfermeiro geneticista ou geneticista clínico (Wilde AAM et al., Europace 2022, PMID 35373836; Ackerman MJ et al., Heart Rhythm 2011;8(8):1308-1339, PMID 21787999).",
+      "interpretacao_do_resultado": "O resultado do teste no caso índice tem três respostas possíveis, e confundir a segunda com a terceira é o erro mais descrito na literatura: (1) variante patogênica ou provavelmente patogênica (P/LP), classificada por critérios padronizados de evidência (herança/segregação familiar, dados populacionais, dados funcionais e computacionais — Richards S et al., Genet Med 2015;17(5):405-424, PMID 25741868) — habilita teste em cascata dirigido à variante nos parentes; (2) variante de significado incerto (VUS) — NÃO deve ser usada para autorizar ou dispensar rastreamento em cascata; parentes seguem rastreamento clínico periódico, não genético, até eventual reclassificação; (3) resultado negativo — não exclui doença monogênica não identificada pelo painel testado; parentes também seguem rastreamento clínico periódico, pela heterogeneidade de idade de início e progressão dentro da mesma família (Wilde AAM et al., Europace 2022, PMID 35373836).",
+      "rastreamento_em_cascata_familiar": "Após identificação de variante P/LP no caso índice, o teste dirigido a essa variante específica deve ser oferecido aos parentes de primeiro grau (e demais parentes apropriados): o não portador é liberado da vigilância clínica de rotina na maioria das condições deste escopo; o portador segue vigilância clínica periódica, porque penetrância incompleta e variável significa que carrear a variante não implica doença clínica manifesta. A adesão ao aconselhamento em cascata mediado apenas pelo probando é estruturalmente incompleta ao longo do tempo; abordagens ativas (carta familiar por escrito, contato direto complementar da equipe de saúde, agendamento facilitado) tendem a melhorar a cobertura familiar mais do que apenas orientar o paciente a avisar os parentes (Grutters LA, Christiaans I, Fam Cancer 2024;23(2):155-164, PMID 38184510).",
+      "limites_do_aconselhamento_e_encaminhamento": "O aconselhamento genético cardiovascular não é ferramenta de rastreamento populacional — aplica-se a indivíduos e famílias com fenótipo ou história familiar que justifiquem probabilidade pré-teste relevante, não à população geral assintomática sem fator de risco identificado. A condução completa — da indicação à interpretação do resultado e ao plano de rastreio em cascata — deve ocorrer, sempre que possível, em centro com experiência estabelecida em avaliação genética e manejo familiar de doenças cardiovasculares hereditárias; interpretação isolada de painel amplo sem essa estrutura aumenta o risco de uso inadequado de VUS e de decisões clínicas (restrição de esporte, indicação de CDI, teste em menores) baseadas em evidência insuficiente."
+    },
+    "differentials": [
+      "Fenocópias não genéticas que mimetizam o fenótipo estrutural: coração de atleta (hipertrofia fisiológica), cardiopatia hipertensiva, estenose aórtica valvar e amiloidose cardíaca mimetizando cardiomiopatia hipertrófica",
+      "QT longo adquirido (fármacos, distúrbio eletrolítico, bradicardia extrema) mimetizando síndrome do QT longo congênito",
+      "Aneurisma de aorta degenerativo relacionado a hipertensão/aterosclerose, sem estigma sindrômico nem história familiar, mimetizando aortopatia genética",
+      "Cardiomiopatia adquirida (tóxica, induzida por taquiarritmia, periparto, infecciosa/miocardítica) mimetizando cardiomiopatia dilatada de causa genética",
+      "Hipercolesterolemia secundária (hipotireoidismo, síndrome nefrótica, colestase, uso de determinados fármacos) mimetizando hipercolesterolemia familiar",
+      "Causas não genéticas de morte súbita cardíaca inexplicada (doença coronariana silenciosa, uso de substâncias, causa extracardíaca) a excluir antes de atribuir o evento a condição hereditária"
+    ],
+    "tests": [
+      "Caracterização fenotípica completa antes do teste genético — ecocardiograma, ressonância magnética cardíaca, eletrocardiograma, conforme a condição suspeitada — para confirmar fenótipo de alta probabilidade diagnóstica",
+      "Painel de sequenciamento de nova geração restrito a genes de evidência definida ou forte para a condição suspeitada, no caso índice",
+      "Teste genético dirigido à variante específica (não painel completo) nos parentes de primeiro grau, após identificação de variante P/LP no caso índice",
+      "Autópsia molecular (teste genético post-mortem em amostra do falecido, quando disponível) em morte súbita cardíaca inexplicada, para orientar rastreio dos sobreviventes da família",
+      "Avaliação clínica, eletrocardiográfica e de imagem periódica dos parentes de primeiro grau quando o teste é negativo, não realizado, ou identifica apenas VUS"
+    ],
+    "red_flags": [
+      "Morte súbita cardíaca inexplicada ou precoce (parente de primeiro grau com menos de 40-50 anos) sem investigação genética prévia na família",
+      "Uso de variante de significado incerto (VUS) ou de teste negativo do caso índice para liberar parente da vigilância clínica — erro reconhecido que remove acompanhamento de quem ainda está em risco",
+      "Teste genético amplo indicado sem fenótipo bem definido, ou incluindo genes de evidência limitada/disputada/refutada para a condição",
+      "Teste genético realizado ou planejado sem aconselhamento pré-teste estruturado",
+      "Decisão de testar (ou não testar) menor de idade em risco tomada sem discussão explícita da distinção entre condições com conduta pediátrica definida (ex.: síndrome do QT longo, TVPC) e condições sem essa definição",
+      "Rastreio em cascata familiar nunca iniciado apesar de variante patogênica identificada no caso índice",
+      "Interpretação de resultado genético complexo (VUS, variante em gene de evidência moderada/limitada) conduzida sem apoio de equipe especializada em cardiogenética"
+    ],
+    "ambulatory_flow": [
+      "Confirmar fenótipo de alta probabilidade diagnóstica por critérios clínicos e de imagem antes de considerar teste genético.",
+      "Realizar aconselhamento genético pré-teste estruturado (herança, penetrância incompleta e variável, implicações reprodutivas e para seguro/emprego, direito de não testar), preferencialmente com equipe de cardiogenética.",
+      "Solicitar painel de sequenciamento restrito a genes de evidência definida ou forte para a condição suspeitada no caso índice, após aceite informado.",
+      "Interpretar o resultado nas três categorias possíveis — variante P/LP, VUS ou negativo — e comunicar a implicação correta de cada uma, sem tratar VUS como diagnóstica.",
+      "Oferecer teste em cascata dirigido à variante específica aos parentes de primeiro grau quando variante P/LP for identificada.",
+      "Manter rastreamento clínico periódico (ECG, ecocardiograma) dos parentes quando o resultado for VUS, negativo, ou o teste não tiver sido realizado, pela heterogeneidade de idade de início e progressão dentro da mesma família.",
+      "Estruturar ativamente a comunicação do risco à família — carta familiar por escrito, mapeamento explícito da árvore genealógica, plano definido de quem vai contar a quem — em vez de apenas orientar o probando a avisar os parentes.",
+      "Reavaliar em consulta de retorno o avanço do rastreio em cascata e reforçar o convite aos parentes ainda não testados.",
+      "Encaminhar a centro de referência em cardiogenética sempre que houver VUS, variante em gene de evidência moderada/limitada, decisão sobre teste em menores, ou plano de gestação com condição hereditária confirmada."
+    ],
+    "emergency_flow": [
+      "Sobrevivente de parada cardíaca resgatada sem causa estrutural ou coronariana evidente: manter investigação etiológica hospitalar (ECG seriado, ecocardiograma, avaliação para canalopatia/cardiomiopatia) e iniciar articulação com equipe de cardiogenética antes da alta, sem aguardar ambulatório.",
+      "Família de vítima de morte súbita cardíaca inexplicada em pronto-socorro ou UTI: orientar sobre a possibilidade de autópsia molecular quando ainda houver material disponível, e encaminhar parentes de primeiro grau para avaliação cardiológica estruturada, mesmo antes de qualquer resultado genético.",
+      "Paciente jovem com síncope de esforço, palpitações sustentadas ou parada cardiorrespiratória e suspeita de canalopatia ou cardiomiopatia hereditária: seguir o protocolo de emergência específico da condição suspeitada (hub próprio); este documento não substitui o manejo agudo, apenas orienta a investigação genética e familiar subsequente.",
+      "Não usar o resultado de um teste genético ainda pendente para postergar medida de segurança imediata (ex.: restrição de esforço, CDI em prevenção secundária) já indicada por critério clínico independente do resultado genético."
+    ],
+    "treatment_summary": "Não há tratamento farmacológico ou intervencionista próprio deste documento — o manejo clínico de cada condição hereditária (cardiomiopatia, canalopatia, aortopatia genética, hipercolesterolemia familiar) é tratado no hub específico de cada doença. O que este documento organiza é o processo de aconselhamento e teste genético em si: aconselhamento pré-teste estruturado antes de qualquer amostra ser colhida; teste restrito a genes de evidência definida ou forte, no caso índice de fenótipo bem caracterizado; interpretação correta do resultado, com VUS explicitamente NÃO tratada como diagnóstica; oferta de teste em cascata dirigido à variante específica aos parentes de primeiro grau quando há variante P/LP; e manutenção do rastreamento clínico periódico dos parentes sempre que o resultado não permitir liberar a vigilância. Nenhuma dose de medicamento é abordada neste documento. Quando o teste ou a interpretação envolve complexidade (VUS, gene de evidência moderada/limitada, decisão sobre menores, autópsia molecular), a condução deve passar por equipe multidisciplinar especializada em cardiogenética, não apenas pelo cardiologista assistente.",
+    "monitoring": [
+      "Reavaliação periódica do status do rastreio em cascata familiar (parentes convidados, testados, resultado obtido) em consultas de retorno do caso índice",
+      "Rastreamento clínico cardíaco periódico (ECG, ecocardiograma, ressonância quando indicada) dos parentes portadores da variante, ou de parentes com resultado VUS/negativo/teste não realizado, com periodicidade definida pela condição específica no hub correspondente",
+      "Reavaliação da classificação da variante ao longo do tempo — uma VUS pode ser reclassificada como patogênica ou benigna conforme surge nova evidência de segregação familiar ou dados populacionais",
+      "Acompanhamento psicológico dedicado para probando e parentes testados, sobretudo pacientes jovens e pais de menores testados, pela carga emocional documentada do resultado genético confirmado, independente do impacto clínico objetivo da doença",
+      "Reforço em consultas sucessivas da comunicação de risco à família, já que a adesão ao rastreio em cascata aumenta com o tempo mas raramente se completa"
+    ],
+    "special_populations": [
+      "Parente menor de idade em risco — decisão de testar ou adiar o teste depende da condição específica (medida preventiva eficaz desde a infância como em síndrome do QT longo e TVPC versus condição sem conduta pediátrica definida), sempre com aconselhamento genético formal e atenção à culpa parental",
+      "Gestante ou casal planejando gestação com condição cardiovascular hereditária confirmada na família — aconselhamento reprodutivo antes da concepção, incluindo diagnóstico pré-natal e diagnóstico genético pré-implantacional quando aplicável",
+      "Família após morte súbita cardíaca inexplicada — autópsia molecular quando material disponível, e investigação cardiológica estruturada dos parentes de primeiro grau mesmo sem diagnóstico prévio confirmado",
+      "Paciente ou família com ancestralidade sub-representada nos bancos de dados populacionais de referência usados para classificação de variantes — maior probabilidade de resultado VUS por menor dado populacional de comparação, o que exige cautela redobrada na comunicação do resultado",
+      "Parente adotado ou sem acesso à história familiar completa — árvore genealógica incompleta dificulta tanto a indicação do teste quanto a interpretação de um resultado negativo",
+      "Paciente com receio de discriminação por seguradora ou empregador — barreira documentada à adesão ao teste em cascata, a ser abordada explicitamente no aconselhamento pré-teste"
+    ],
+    "assistant_questions": [
+      {"id": "suspeita_condicao_hereditaria", "label": "Há suspeita clínica de condição cardiovascular hereditária no paciente ou em parente de primeiro grau (cardiomiopatia, canalopatia, aortopatia genética, hipercolesterolemia familiar ou morte súbita inexplicada)?", "type": "boolean"},
+      {"id": "categoria_condicao", "label": "Qual a categoria de condição cardiovascular hereditária envolvida?", "type": "select", "options": [
+        {"value": "cardiomiopatia_hereditaria", "label": "Cardiomiopatia hereditária"},
+        {"value": "canalopatia", "label": "Canalopatia"},
+        {"value": "aortopatia_genetica", "label": "Aortopatia genética"},
+        {"value": "hipercolesterolemia_familiar", "label": "Hipercolesterolemia familiar"},
+        {"value": "morte_subita_inexplicada_sem_diagnostico", "label": "Morte súbita inexplicada, sem diagnóstico prévio na família"},
+        {"value": "outra_ou_nao_definida", "label": "Outra ou não definida"}
+      ]},
+      {"id": "fenotipo_bem_definido", "label": "O fenótipo do caso índice está bem definido por critérios clínicos e de imagem antes de indicar o teste genético (não apenas suspeita vaga)?", "type": "boolean"},
+      {"id": "historia_familiar_morte_subita", "label": "Há história familiar de morte súbita cardíaca inexplicada ou precoce (parente de primeiro grau com menos de 40-50 anos)?", "type": "boolean"},
+      {"id": "resultado_teste_caso_indice", "label": "Qual o resultado do teste genético no caso índice, se já realizado?", "type": "select", "options": [
+        {"value": "nao_realizado", "label": "Não realizado"},
+        {"value": "variante_patogenica_ou_provavelmente_patogenica", "label": "Variante patogênica ou provavelmente patogênica (P/LP)"},
+        {"value": "variante_significado_incerto_vus", "label": "Variante de significado incerto (VUS)"},
+        {"value": "negativo", "label": "Negativo — nenhuma variante P/LP identificada"}
+      ]},
+      {"id": "aconselhamento_pre_teste_realizado", "label": "Aconselhamento genético pré-teste (herança, penetrância, implicações reprodutivas e direito de não testar) foi realizado antes da coleta da amostra?", "type": "boolean"},
+      {"id": "acesso_equipe_cardiogenetica", "label": "Paciente e família têm acesso a equipe multidisciplinar de cardiogenética (aconselhador genético, geneticista clínico) para conduzir o processo?", "type": "boolean"},
+      {"id": "rastreio_cascata_status", "label": "Qual o status do rastreio em cascata dos familiares de primeiro grau?", "type": "select", "options": [
+        {"value": "nao_aplicavel", "label": "Não aplicável"},
+        {"value": "nao_iniciado", "label": "Não iniciado"},
+        {"value": "em_andamento", "label": "Em andamento"},
+        {"value": "concluido", "label": "Concluído"}
+      ]},
+      {"id": "parente_menor_em_risco", "label": "Há parente menor de idade em risco sendo considerado para teste genético?", "type": "boolean"},
+      {"id": "uso_indevido_resultado_para_liberar_parente", "label": "O resultado (VUS ou teste negativo do caso índice) está sendo usado para liberar algum parente da vigilância clínica?", "type": "boolean"},
+      {"id": "planejamento_gestacional", "label": "Há plano de gestação, própria ou de parente em risco, que torna o aconselhamento reprodutivo relevante agora?", "type": "boolean"},
+      {"id": "investigacao_pos_morte_subita", "label": "Trata-se de investigação após morte súbita inexplicada na família (autópsia molecular) para orientar rastreio dos sobreviventes?", "type": "boolean"}
+    ],
+    "assistant_rules": [
+      {"id": "uso_indevido_vus_ou_negativo", "priority": 95, "when": {"all": [{"field": "uso_indevido_resultado_para_liberar_parente", "op": "truthy"}]},
+       "add": {"risk": "urgente",
+               "red_flags": ["Uso de variante de significado incerto (VUS) ou de teste negativo do caso índice para liberar parente da vigilância clínica é erro reconhecido — nenhum dos dois resultados autoriza suspender o rastreamento clínico do parente."],
+               "suggested_tests": ["Manter rastreamento clínico cardíaco periódico do parente (ECG, ecocardiograma) independentemente do resultado genético do caso índice."]}},
+      {"id": "investigacao_pos_morte_subita_ativa", "priority": 88, "when": {"all": [{"field": "investigacao_pos_morte_subita", "op": "truthy"}]},
+       "add": {"risk": "prioritario",
+               "suggested_tests": ["Considerar autópsia molecular (teste genético post-mortem, quando material disponível) e avaliação cardiológica estruturada dos parentes de primeiro grau do falecido, mesmo sem diagnóstico prévio confirmado na família."],
+               "ambulatory_flow": ["Encaminhar a família a centro de referência em cardiogenética para investigação sistemática após morte súbita inexplicada."]}},
+      {"id": "historia_familiar_morte_subita_sem_diagnostico", "priority": 82, "when": {"all": [{"field": "historia_familiar_morte_subita", "op": "truthy"}, {"field": "resultado_teste_caso_indice", "op": "eq", "value": "nao_realizado"}]},
+       "add": {"risk": "prioritario",
+               "red_flags": ["História familiar de morte súbita cardíaca inexplicada ou precoce em parente de primeiro grau sem investigação genética prévia: indicação para avaliação cardiológica estruturada do caso índice mais afetado da família e consideração de teste genético."]}},
+      {"id": "menor_em_risco_decisao_individualizada", "priority": 78, "when": {"all": [{"field": "parente_menor_em_risco", "op": "truthy"}]},
+       "add": {"risk": "prioritario",
+               "messages": ["Decisão de testar menor de idade depende da condição específica: em doenças com medida preventiva eficaz na infância (ex.: síndrome do QT longo, taquicardia ventricular polimórfica catecolaminérgica), considerar teste dirigido à variante familiar precocemente; em condições sem conduta pediátrica definida, é razoável adiar o teste e manter rastreamento clínico periódico — decisão sempre compartilhada com aconselhamento genético formal."]}},
+      {"id": "variante_patogenica_iniciar_cascata", "priority": 75, "when": {"all": [{"field": "resultado_teste_caso_indice", "op": "eq", "value": "variante_patogenica_ou_provavelmente_patogenica"}]},
+       "add": {"risk": "prioritario",
+               "supporting": ["Variante patogênica ou provavelmente patogênica identificada no caso índice: oferecer teste em cascata dirigido a essa variante específica aos parentes de primeiro grau."],
+               "ambulatory_flow": ["Encaminhar parentes de primeiro grau para aconselhamento genético e teste dirigido à variante identificada, não painel completo."]}},
+      {"id": "vus_nao_e_diagnostica", "priority": 70, "when": {"all": [{"field": "resultado_teste_caso_indice", "op": "eq", "value": "variante_significado_incerto_vus"}]},
+       "add": {"risk": "rotina",
+               "messages": ["Variante de significado incerto (VUS) não deve ser usada para autorizar ou liberar rastreio em cascata — parentes de primeiro grau seguem rastreamento clínico periódico (não genético) até eventual reclassificação da variante em centro de cardiogenética."],
+               "missing_information": ["Reclassificação da VUS depende de evidência adicional de segregação familiar do fenótipo."]}},
+      {"id": "fenotipo_indefinido_nao_testar_ainda", "priority": 55, "when": {"all": [{"field": "suspeita_condicao_hereditaria", "op": "truthy"}, {"field": "fenotipo_bem_definido", "op": "falsy"}]},
+       "add": {"risk": "rotina",
+               "opposing": ["Fenótipo do caso índice ainda não está bem definido por critérios clínicos e de imagem — testar genes de evidência limitada nesse contexto tende a gerar variantes de significado incerto sem esclarecer o diagnóstico."],
+               "missing_information": ["Completar caracterização fenotípica (ecocardiograma, ressonância cardíaca, ECG, conforme a condição suspeitada) antes de indicar painel genético amplo."]}},
+      {"id": "sem_aconselhamento_pre_teste", "priority": 50, "when": {"all": [{"field": "suspeita_condicao_hereditaria", "op": "truthy"}, {"field": "aconselhamento_pre_teste_realizado", "op": "falsy"}]},
+       "add": {"risk": "rotina",
+               "missing_information": ["Aconselhamento genético pré-teste (padrão de herança, penetrância incompleta e variável, implicações reprodutivas e para seguro/emprego, direito de não testar) ainda não realizado — deve preceder a coleta da amostra."]}},
+      {"id": "sem_acesso_equipe_especializada", "priority": 45, "when": {"all": [{"field": "acesso_equipe_cardiogenetica", "op": "falsy"}]},
+       "add": {"risk": "rotina",
+               "missing_information": ["Sem acesso confirmado a equipe multidisciplinar de cardiogenética — encaminhar a centro de referência antes de interpretar resultado complexo (VUS, variante em gene de evidência moderada/limitada) ou de conduzir teste em menores."]}},
+      {"id": "rastreio_cascata_nao_iniciado_apos_variante_positiva", "priority": 42, "when": {"all": [{"field": "rastreio_cascata_status", "op": "eq", "value": "nao_iniciado"}, {"field": "resultado_teste_caso_indice", "op": "eq", "value": "variante_patogenica_ou_provavelmente_patogenica"}]},
+       "add": {"risk": "rotina",
+               "missing_information": ["Rastreio em cascata familiar não iniciado apesar de variante patogênica identificada — adesão mediada apenas pelo probando é estruturalmente incompleta ao longo do tempo; abordagem ativa (carta familiar por escrito, agendamento direto do aconselhamento) tende a ampliar a cobertura familiar mais do que apenas orientar o probando a avisar os parentes."]}},
+      {"id": "planejamento_gestacional_aconselhamento_reprodutivo", "priority": 40, "when": {"all": [{"field": "planejamento_gestacional", "op": "truthy"}]},
+       "add": {"risk": "rotina",
+               "suggested_tests": ["Discutir aconselhamento reprodutivo — risco de transmissão, diagnóstico pré-natal e diagnóstico genético pré-implantacional quando aplicável — antes da concepção."]}},
+      {"id": "hipercolesterolemia_familiar_direcionar_hub", "priority": 20, "when": {"all": [{"field": "categoria_condicao", "op": "eq", "value": "hipercolesterolemia_familiar"}]},
+       "add": {"risk": "rotina",
+               "messages": ["Escore diagnóstico (Dutch Lipid Clinic Network) e manejo lipídico da hipercolesterolemia familiar são tratados no hub de Dislipidemia — este documento cobre apenas o processo transversal de aconselhamento genético e rastreio em cascata aplicável também a essa condição."]}},
+      {"id": "aortopatia_genetica_direcionar_hub", "priority": 20, "when": {"all": [{"field": "categoria_condicao", "op": "eq", "value": "aortopatia_genetica"}]},
+       "add": {"risk": "rotina",
+               "messages": ["Limiares cirúrgicos por etiologia (Marfan, Loeys-Dietz/ACTA2, valva aórtica bicúspide) são tratados no hub de Doença da aorta — este documento cobre apenas o processo transversal de teste genético e aconselhamento aplicável à aortopatia hereditária."]}}
+    ],
+    "tags": [
+      "genética cardiovascular",
+      "aconselhamento genético",
+      "teste genético",
+      "rastreio em cascata",
+      "variante de significado incerto",
+      "VUS",
+      "morte súbita cardíaca",
+      "cardiogenética",
+      "doença cardíaca hereditária"
+    ],
+    "source_refs": [
+      "Wilde AAM, Semsarian C, Márquez MF, et al. European Heart Rhythm Association (EHRA)/Heart Rhythm Society (HRS)/Asia Pacific Heart Rhythm Society (APHRS)/Latin American Heart Rhythm Society (LAHRS) Expert Consensus Statement on the State of Genetic Testing for Cardiac Diseases. Europace. 2022;24(8):1307-1367. DOI 10.1093/europace/euac030. PMID 35373836.",
+      "Richards S, Aziz N, Bale S, et al. Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genet Med. 2015;17(5):405-424. DOI 10.1038/gim.2015.30. PMID 25741868.",
+      "Grutters LA, Christiaans I. Cascade genetic counseling and testing in hereditary syndromes: inherited cardiovascular disease as a model: a narrative review. Fam Cancer. 2024;23(2):155-164. DOI 10.1007/s10689-023-00356-x. PMID 38184510.",
+      "Ackerman MJ, Priori SG, Willems S, et al. HRS/EHRA expert consensus statement on the state of genetic testing for the channelopathies and cardiomyopathies. Heart Rhythm. 2011;8(8):1308-1339. DOI 10.1016/j.hrthm.2011.05.020. PMID 21787999.",
+      "Fernandes F, Simões MV, Correia EB, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI 10.36660/abc.20240415. PMID 39082572."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35373836/",
+      "https://pubmed.ncbi.nlm.nih.gov/25741868/",
+      "https://pubmed.ncbi.nlm.nih.gov/38184510/",
+      "https://pubmed.ncbi.nlm.nih.gov/21787999/",
+      "https://pubmed.ncbi.nlm.nih.gov/39082572/"
+    ],
+    "related_document_slugs": [
+      "fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita",
+      "comunicacao-de-risco-genetico-e-rastreio-em-cascata-na-cardiologia-hereditaria",
+      "comunicar-diagnostico-de-canalopatia-hereditaria-teste-em-cascata-culpa-parental-e-teste-em-menores",
+      "comunicacao-risco-hereditario-morte-subita-familia-rastreio-cascata",
+      "amiloidose-cardiaca-attr-hereditaria-versus-selvagem-diferenciacao-clinica-e-teste-genetico"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo, redigido pelo Claude em 29/08/2026. PENDÊNCIAS EDITORIAIS: (1) area='geral' (genetica não é enum válido). (2) category='genetica_cardiovascular' é valor novo, segue precedente de 'disturbio_de_conducao'. (3) Sem colisão de slug. (4) Escopo restrito ao processo transversal de aconselhamento/teste para não sobrepor 'doenca-da-aorta' (limiares Marfan/Loeys-Dietz/bicúspide) nem 'dislipidemia' (hipercolesterolemia familiar/Dutch Lipid Clinic Network) — ambos referenciados por assistant_rule de redirecionamento, não duplicados. (5) related_document_slugs: 5 documentos lidos por completo, discussão central confirmada, fora de Farmacologia/Calculadoras/Exames. (6) 5 PMIDs verificados individualmente via NCBI E-utilities. (7) Busca por posicionamento SBC específico de genética cardiovascular não concluída (orçamento de WebSearch da sessão esgotado) — usada diretriz SBC de CMH 2024 mais próxima disponível; recomenda-se busca dirigida numa sessão futura. (8) patient_material_slug=null — nenhum material equivalente encontrado em material-paciente/metadados.json. (9) Nenhuma dose de medicamento. (10) review_status=pendente_revisao.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
