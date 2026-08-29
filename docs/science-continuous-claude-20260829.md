@@ -214,3 +214,20 @@ sem a estratificação JCS 2020 por tamanho). Despachada correção aditiva
 (agente ad3fdc574c880d8da).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 11 — concluído (1 commit, SHA 9311ef5d) — total 30 commits
+
+- correção `doenca-de-kawasaki` — farmacoterapia de longo prazo por tamanho
+  de aneurisma (JCS/JSCS 2020, PMID 32641591): AAS dose baixa em aneurisma
+  persistente, dupla antiagregação em médio/grande, varfarina+AAS em
+  gigante, estatina e IECA/BRA (evidência preliminar, declarado). Arquivo
+  zzzzzzz-jcs2020- ordenado corretamente após a correção anterior;
+  review_status confirmado pendente_revisao via load_disease_records().
+
+## Lote 12 (em andamento, 1 agente)
+
+Backlog pediátrico: cluster erg-ped/ergped2024 restante (QT longo, Brugada,
+BAVT congênito) — CPVT já tem 2 exames-host, não incluído. Despachado exame
+complementar (agente a25dd7a5b2c95d2e9).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
