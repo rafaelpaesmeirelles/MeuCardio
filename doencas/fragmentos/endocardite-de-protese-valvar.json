@@ -1,0 +1,238 @@
+[
+  {
+  "slug": "endocardite-de-protese-valvar",
+  "name": "Endocardite de prótese valvar",
+  "aliases": ["endocardite protética", "PVE", "prosthetic valve endocarditis", "endocardite de válvula protética", "endocardite pós-TAVI", "endocardite de bioprótese", "endocardite de prótese mecânica"],
+  "area": "geral",
+  "category": "cardiopatia_adquirida",
+  "subtype": "infecciosa",
+  "cyanosis_class": "nao_aplicavel",
+  "prevalence_rank": null,
+  "completeness": "completo",
+  "summary": "Este verbete cobre a endocardite infecciosa em portador de prótese valvar (cirúrgica mecânica, biológica, homoenxerto/conduto ou implantada por via transcateter) — entidade com epidemiologia, protocolo diagnóstico por imagem, perfil microbiológico e limiar de decisão cirúrgica próprios, distintos da endocardite de valva nativa já detalhada no hub geral (ver endocardite-infecciosa, que não é duplicado aqui). Reúne a classificação de tempo precoce/tardia e a controvérsia sobre seu peso prognóstico real, o protocolo de imagem específico para material protético (ecocardiograma transesofágico obrigatório, não apenas de segunda linha, e o papel complementar de PET-CT e tomografia cardíaca), a endocardite pós-TAVI como subtipo com epidemiologia própria, e as complicações perianulares que concentram a maior parte das indicações cirúrgicas por infecção não controlada nessa população.",
+  "epidemiology": "No registro europeu EURO-ENDO, com 3.116 pacientes adultos em 156 centros de 40 países, a endocardite de válvula protética correspondeu a 30,1% de todos os casos de endocardite infecciosa, e a diretriz ESC 2023 registra que a mortalidade da endocardite protética é cerca do dobro da endocardite de valva nativa (Habib G et al., Eur Heart J. 2019;40(39):3222-3232, PMID 31504413; Delgado V et al., Eur Heart J. 2023;44(39):3948-4042, PMID 37622656). Extensão perianular — abscesso, pseudoaneurisma — é quase duas vezes mais frequente em prótese valvar (55%) do que em valva nativa (29%), segundo coorte prospectiva de 211 pacientes com endocardite do lado esquerdo (Graupner C et al., J Am Coll Cardiol 2002;39(7):1204-11, PMID 11923047), o que reduz o limiar de suspeita de complicação estrutural nessa população. A endocardite pós-implante valvar aórtico transcateter (TAVI) é subtipo com epidemiologia própria: um registro internacional de 47 centros identificou 250 casos de endocardite definida entre 20.006 pacientes submetidos a TAVI (incidência de 1,1% por pessoa-ano; IC95% 1,1-1,4%), com tempo mediano de 5,3 meses entre o procedimento e o diagnóstico de endocardite — mais precoce do que o padrão típico da endocardite protética cirúrgica tardia —, mortalidade intra-hospitalar de 36% (IC95% 30,0-41,9%) e mortalidade em 2 anos de 66,7% (IC95% 59,0-74,2%) (Regueiro A et al., JAMA 2016;316(10):1083-1092, PMID 27623462). Fatores associados a maior risco de endocardite pós-TAVI nesse registro incluíram sexo masculino, diabetes mellitus e regurgitação aórtica paravalvar residual moderada a grave.",
+  "presentation": [
+    "Febre, mal-estar ou sopro novo/em piora em portador de prótese valvar cirúrgica (mecânica ou biológica) ou transcateter, isoladamente já suficiente para levantar a suspeita",
+    "Bacteremia estafilocócica de foco desconhecido em portador de prótese valvar — indicação formal de investigação ecocardiográfica mesmo sem outro sinal localizatório",
+    "Sinais de insuficiência cardíaca de início recente ou agravada em portador de prótese, sobretudo se acompanhada de febre",
+    "Bloqueio atrioventricular novo em portador de prótese aórtica — deve ser interpretado como sinal de provável extensão perianular, não apenas como problema elétrico isolado",
+    "Fenômenos embólicos sistêmicos (AVC, embolia periférica) ou pulmonares em portador de prótese, dependendo da posição valvar acometida",
+    "Febre persistente (não transitória) sem foco identificado em portador de prótese valvar, mesmo sem sopro novo documentado",
+    "Deterioração hemodinâmica aguda ou piora funcional em portador de conduto, homoenxerto ou valva transcateter, que não deve ser atribuída automaticamente a degeneração estrutural isolada antes de excluir endocardite",
+    "Apresentação nos primeiros meses após TAVI (tempo mediano de 5,3 meses na maior coorte internacional publicada), o que exige vigilância infecciosa mais atenta nesse período do que a intuição sobre endocardite protética cirúrgica tardia sugeriria",
+    "Achado incidental de vegetação, disfunção protética nova ou complicação perivalvular em ecocardiograma de rotina ou motivado por outra indicação clínica"
+  ],
+  "diagnostic_approach": {
+    "classificacao_de_tempo_precoce_versus_tardia_e_por_que_existe": "A diretriz ESC 2023 distingue endocardite protética precoce (dentro de 6 meses da cirurgia valvar, conforme a Recommendation Table 19, específica para a indicação cirúrgica) de tardia — mas a própria diretriz reconhece explicitamente que 'o tempo até o início da endocardite é prognosticamente menos importante que a conexão da endocardite ao período peri-operatório ou a patógenos específicos'. Há uma inconsistência real dentro da diretriz: a seção de epidemiologia geral usa o corte de 1 ano para 'precoce', enquanto a tabela de recomendação cirúrgica formal usa 6 meses — este verbete usa o corte de 6 meses por ser o que orienta a decisão cirúrgica. Um estudo de coorte retrospectivo (Lausanne e Zurique, 2014-2023, 302 episódios de PVE em 286 pacientes) usando o mesmo corte de 6 meses não encontrou diferença estatisticamente significativa de mortalidade em 1 ano entre PVE precoce (21%) e tardia (32%; p=0,126), e questiona diretamente se o corte temporal isolado deveria orientar a decisão cirúrgica, propondo que os subgrupos de alto risco (insuficiência cardíaca, disfunção protética grave, abscesso, febre persistente) — já usados pela própria diretriz para a PVE tardia — sejam o eixo real da decisão também na PVE precoce, em vez do corte automático (Papadimitriou-Olivgeris M et al., Clin Infect Dis 2025;80(4):804-806, PMID 39067056). Este verbete registra essa divergência sem adotar automaticamente nenhuma das duas posições como regra fechada.",
+    "perfil_microbiologico_por_tempo_e_por_tipo_de_protese": "Endocardite protética de início peri-operatório é predominada por Staphylococcus aureus, Staphylococcus epidermidis e microrganismos nosocomiais (Gram-negativos, fungos); a forma tardia mais comumente mimetiza o padrão da endocardite de valva nativa, com predomínio de estreptococos e estafilococos. S. aureus é mais comum em portador de prótese mecânica; estreptococos alfa-hemolíticos, enterococos e estafilococos coagulase-negativos são mais comuns em portador de prótese biológica. Endocardite por Mycobacterium chimaera é forma incomum, associada a sistemas de aquecimento-resfriamento contaminados de circulação extracorpórea, apresenta-se muitos meses após a cirurgia e associa-se a mortalidade alta. Na endocardite pós-TAVI, o perfil difere do perfil predominantemente estreptocócico da endocardite de valva nativa comunitária: enterococos (24,6%) e S. aureus (23,3%) predominam, e mais da metade dos casos (52,8%) é endocardite associada a cuidados de saúde, não adquirida na comunidade (Delgado V et al., ESC 2023, PMID 37622656; Regueiro A et al., JAMA 2016, PMID 27623462).",
+    "protocolo_ecocardiografico_especifico_para_protese": "Em portador de prótese valvar ou dispositivo intracardíaco, o ecocardiograma transesofágico não é exame de segunda linha reservado para quando o transtorácico é negativo: é indicado diretamente (Classe I) na suspeita de endocardite, porque a sombra acústica da prótese e a limitação intrínseca do transtorácico reduzem sua sensibilidade nesse contexto, mesmo quando o transtorácico é positivo e de boa qualidade. Diante de alta suspeita clínica com transesofágico inicial negativo, o exame deve ser repetido dentro de 5 a 7 dias — janela em que a vegetação pode se tornar visível — e o exame negativo isolado não encerra a investigação. O transesofágico intraoperatório é indicado em toda cirurgia valvar por endocardite, e um exame de encerramento ao final do tratamento estabelece os parâmetros basais de referência contra os quais qualquer recidiva futura será comparada (Barberato SH et al., Posicionamento SBC sobre Indicações da Ecocardiografia em Adultos, Arq Bras Cardiol 2019;113(1):135-181, PMID 31411301).",
+    "diagnostico_por_imagem_alem_do_ecocardiograma": "Para abscesso/pseudoaneurisma perivalvar, um estudo comparando ecocardiografia combinada (transtorácica + transesofágica), tomografia computadorizada cardíaca e achado cirúrgico como padrão-ouro em 53 pacientes (71 valvas acometidas) encontrou sensibilidade de 63% e especificidade de 90% para a ecocardiografia combinada, sensibilidade de 81% e especificidade de 90% para a tomografia, e sensibilidade de 100% quando os dois métodos são combinados — ou seja, a ecocardiografia isolada, mesmo incluindo a via transesofágica, deixa de detectar mais de um terço dos abscessos/pseudoaneurismas confirmados cirurgicamente (Hryniewiecki T et al., Eur Radiol 2019;29(8):4368-4376, PMID 30643945). A atualização Duke-ISCVID 2023 dos critérios diagnósticos incorporou formalmente PET-CT com 18F-FDG como critério maior em cenários definidos, especialmente em material protético, e deu papel formal à tomografia cardíaca na demonstração de lesões anatômicas compatíveis (Fowler VG et al., Clin Infect Dis 2023;77(4):518-526, PMID 37138445).",
+    "diferenciacao_de_disfuncao_protetica_nao_infecciosa": "Em portador de prótese mecânica com fenômeno embólico e/ou insuficiência cardíaca aguda, a suspeita de trombose de prótese (não infecciosa) também é indicação formal de ecocardiograma, com o transesofágico complementar útil para julgar mobilidade e potencial emboligênico do trombo — a distinção entre trombo e vegetação infecciosa depende de contexto clínico (febre, hemocultura), não apenas do achado ecocardiográfico isolado. Mudança de sinais ou sintomas sugestiva de disfunção protética (estenose ou insuficiência nova) também é indicação formal de reavaliação ecocardiográfica, mesmo sem febre associada (Barberato SH et al., PMID 31411301)."
+  },
+  "differentials": [
+    "Trombose de prótese valvar mecânica sem infecção associada (ver protese-valvar-mecanica desta biblioteca)",
+    "Degeneração estrutural de bioprótese, homoenxerto ou conduto sem endocardite associada",
+    "Endocardite de valva nativa em paciente que também possui prótese em outra posição valvar",
+    "Pannus ou hiperplasia fibrosa de prótese mecânica, causa não infecciosa de disfunção protética",
+    "Regurgitação paravalvar sem endocardite, sobretudo após TAVI",
+    "Febre de outra origem (não relacionada à prótese) em paciente coincidentemente portador de material protético cardíaco",
+    "Endocardite trombótica não bacteriana (marântica) em prótese, sem infecção documentada"
+  ],
+  "tests": [
+    "Hemoculturas seriadas (pelo menos três, de sítios de punção diferentes) antes de iniciar antibiótico",
+    "Ecocardiograma transesofágico indicado diretamente na suspeita, sem aguardar transtorácico negativo, por conta da sombra acústica da prótese",
+    "Ecocardiograma transtorácico como parte da avaliação inicial, para repercussão hemodinâmica global e triagem, mesmo sabendo de sua sensibilidade reduzida isolada em prótese",
+    "Repetição do ecocardiograma (transtorácico ou transesofágico) em 5 a 7 dias se a suspeita clínica persistir apesar de exame inicial negativo",
+    "Tomografia computadorizada cardíaca complementar quando houver suspeita de abscesso/pseudoaneurisma perivalvar e o ecocardiograma for inconclusivo",
+    "PET-CT com 18F-FDG em cenário de suspeita de endocardite protética com critérios diagnósticos ainda indeterminados pelos critérios convencionais",
+    "Ecocardiograma transesofágico intraoperatório em toda cirurgia valvar indicada por endocardite",
+    "Ecocardiograma de encerramento ao final do tratamento, para estabelecer parâmetro basal de referência para seguimento futuro",
+    "ECG seriado, com atenção a bloqueio atrioventricular novo como sinal de possível extensão perianular em endocardite de valva aórtica protética",
+    "Avaliação por equipe de endocardite (Endocarditis Team) multidisciplinar, incluindo cirurgia cardíaca, desde a suspeita inicial em portador de prótese"
+  ],
+  "red_flags": [
+    "Febre ou sinal infeccioso associado a sopro novo/em piora em portador de prótese valvar ou dispositivo intracardíaco",
+    "Instabilidade hemodinâmica, choque ou insuficiência cardíaca aguda em portador de prótese com suspeita de endocardite",
+    "Bloqueio atrioventricular novo em portador de prótese aórtica — sinal de provável extensão perianular, não apenas problema elétrico isolado",
+    "Suspeita de endocardite protética precoce (dentro de 6 meses do implante cirúrgico ou transcateter)",
+    "Fenômeno embólico sistêmico ou pulmonar em portador de prótese com febre ou hemocultura positiva",
+    "Bacteremia estafilocócica de foco desconhecido em portador de prótese valvar",
+    "Febre persistente (não transitória) em portador de prótese, mesmo sem sopro novo documentado",
+    "Suspeita de endocardite nos primeiros 6 meses após TAVI, período de maior incidência observada em registro internacional"
+  ],
+  "treatment_summary": "O tratamento combina antibioticoterapia prolongada com decisão cirúrgica frequentemente indicada, sempre discutida em equipe de endocardite multidisciplinar (Endocarditis Team), com participação de cirurgia cardíaca desde a suspeita inicial — este verbete não define fármacos, doses nem durações específicas.\n\nA diretriz ESC 2023 recomenda cirurgia (Classe I, nível C) para endocardite protética precoce, definida na tabela de recomendação formal como dentro de 6 meses da cirurgia valvar, com nova troca valvar e desbridamento completo. A endocardite protética tardia não complicada e não estafilocócica pode, em contraste, ser manejada de forma conservadora, mas exige seguimento próximo; uma estratégia cirúrgica é recomendada nos subgrupos de alto risco identificados: insuficiência cardíaca, disfunção protética grave, abscesso ou febre persistente. No registro EURO-ENDO, cirurgia foi realizada em apenas 73% dos pacientes com PVE apesar de indicação clara (Delgado V et al., ESC 2023, PMID 37622656). Um estudo de coorte de 2024/2025 não encontrou diferença estatisticamente significativa de mortalidade em 1 ano entre PVE precoce e tardia e questiona a suficiência do corte temporal isolado como critério de decisão cirúrgica (Papadimitriou-Olivgeris M et al., Clin Infect Dis 2025, PMID 39067056) — este verbete registra a divergência sem adotar uma posição automática sobre qual das duas fontes prevalece.\n\nDiante de complicação perianular (abscesso, pseudoaneurisma) — quase duas vezes mais frequente em prótese (55%) do que em valva nativa (29%) — a indicação cirúrgica por 'infecção não controlada' costuma ter essa extensão perianular como a manifestação anatômica concreta por trás da decisão (Graupner C et al., J Am Coll Cardiol 2002, PMID 11923047). As três indicações cirúrgicas principais da endocardite infecciosa em geral — insuficiência cardíaca, infecção não controlada e prevenção de embolização séptica — aplicam-se também à endocardite protética, com a atualização 2023 reforçando cirurgia urgente considerada a partir de vegetação ≥10 mm associada a outra indicação; a classificação de timing cirúrgico da diretriz distingue emergencial (dentro de 24 horas), urgente (3-5 dias) e não urgente (durante a mesma internação).\n\nNa endocardite pós-TAVI, a cirurgia foi realizada em apenas 14,8% dos casos do maior registro internacional publicado, refletindo o perfil de risco cirúrgico mais alto que levou esses pacientes a TAVI em vez de cirurgia valvar aberta desde o início (Regueiro A et al., JAMA 2016, PMID 27623462). A escolha empírica de antibiótico nessa população, antes do resultado da hemocultura, deve considerar que enterococo e S. aureus predominam, diferente do perfil estreptocócico mais comum na endocardite de valva nativa comunitária.",
+  "ambulatory_flow": [
+    "Em portador de prótese valvar com febre, mal-estar ou sopro novo, encaminhar para investigação hospitalar — não conduzir a suspeita de endocardite protética em nível puramente ambulatorial",
+    "Programar ecocardiograma de rotina periódico em portador de bioprótese assintomático, reconhecendo que essa reavaliação sem sinal de disfunção é apenas Classe IIb, não uma obrigação rígida",
+    "Reavaliar prontamente com ecocardiograma transtorácico diante de qualquer mudança de sinais ou sintomas sugestiva de disfunção protética nova, mesmo sem febre associada",
+    "Em paciente pós-TAVI, manter vigilância infecciosa mais atenta nos primeiros 6 meses, período de maior incidência observada em registro internacional",
+    "Encaminhar todo caso confirmado ou fortemente suspeito para avaliação em equipe de endocardite multidisciplinar, incluindo cirurgia cardíaca",
+    "Programar ecocardiograma de encerramento ao final do tratamento antibiótico, para estabelecer parâmetro basal de referência para comparação futura",
+    "Em seguimento de endocardite protética não complicada, novo exame ecocardiográfico deve ser considerado (não é rotina obrigatória) para monitorar tamanho de vegetação e detectar complicação silenciosa"
+  ],
+  "emergency_flow": [
+    "Diante de febre com sopro novo/em piora em portador de prótese valvar, colher hemoculturas seriadas antes de iniciar antibiótico e obter ecocardiograma transesofágico direcionado, sem aguardar transtorácico negativo",
+    "Em instabilidade hemodinâmica ou insuficiência cardíaca aguda em portador de prótese com suspeita de endocardite, avaliação hospitalar imediata com acionamento de equipe de endocardite/Heart Team",
+    "Em bloqueio atrioventricular novo em portador de prótese aórtica, investigar extensão perianular (abscesso/pseudoaneurisma) com imagem dirigida, não tratar apenas como problema elétrico isolado",
+    "Em suspeita de endocardite protética precoce (dentro de 6 meses do implante), acionar avaliação cirúrgica sem atraso, conforme recomendação Classe I da diretriz ESC 2023",
+    "Diante de alta suspeita clínica com ecocardiograma transesofágico inicial negativo, programar repetição do exame em 5 a 7 dias, sem encerrar a investigação",
+    "Em paciente com bacteremia estafilocócica de foco desconhecido e prótese valvar conhecida, obter ecocardiograma como parte da investigação inicial, mesmo sem outro sinal localizatório",
+    "Em suspeita de trombose de prótese mecânica com embolia ou insuficiência cardíaca aguda, obter ecocardiograma e manter endocardite no diferencial simultâneo até esclarecimento"
+  ],
+  "monitoring": [
+    "Hemoculturas de controle durante e após o tratamento antibiótico",
+    "Ecocardiograma seriado conforme achados iniciais, microrganismo e resposta à terapia — não em intervalo fixo universal",
+    "Ecocardiograma transesofágico intraoperatório em toda cirurgia valvar por endocardite, e ecocardiograma de encerramento ao final do tratamento",
+    "Reavaliação clínica e ecocardiográfica diante de febre persistente, novo sopro ou piora funcional durante o seguimento",
+    "Avaliação periódica de bioprótese mesmo assintomática, e reavaliação imediata diante de mudança de sinais/sintomas sugestiva de disfunção",
+    "Vigilância clínica mais atenta nos primeiros 6 meses após TAVI, período de maior incidência de endocardite observada em registro internacional",
+    "ECG seriado em portador de prótese aórtica, com atenção a bloqueio atrioventricular novo"
+  ],
+  "special_populations": [
+    "Paciente pós-TAVI: epidemiologia própria (mediana de 5,3 meses até o diagnóstico), perfil microbiológico com predomínio de enterococo e S. aureus, e taxa cirúrgica baixa (14,8%) refletindo seleção prévia por risco cirúrgico elevado",
+    "Portador de regurgitação paravalvar residual moderada a grave pós-TAVI: fator de risco identificado para endocardite subsequente, não apenas problema hemodinâmico isolado",
+    "Portador de prótese mecânica: maior associação com S. aureus e com trombose de prótese como diferencial ativo a ser distinguido de endocardite",
+    "Portador de prótese biológica, homoenxerto ou conduto: maior associação com estreptococos, enterococos e estafilococos coagulase-negativos",
+    "Endocardite protética de valva aórtica: risco quase dobrado de extensão perianular (abscesso/pseudoaneurisma) em relação à posição mitral ou à valva nativa, com bloqueio atrioventricular novo como sinal de alarme",
+    "Suspeita de Mycobacterium chimaera em apresentação atípica e tardia após cirurgia cardíaca com circulação extracorpórea, sem outro agente identificado",
+    "Paciente com endocardite protética e critérios diagnósticos ainda indeterminados pelos critérios convencionais: candidato a PET-CT com 18F-FDG como ferramenta adicional formalmente incorporada pelo Duke-ISCVID 2023"
+  ],
+  "assistant_questions": [
+    {"id": "epv_tipo_protese", "label": "Qual é o tipo de material protético envolvido?", "type": "select", "required": true, "section": "Anatomia", "options": [
+      {"value": "protese_mecanica", "label": "Prótese mecânica"},
+      {"value": "biopotese_cirurgica_ou_homoenxerto_conduto", "label": "Bioprótese cirúrgica, homoenxerto ou conduto"},
+      {"value": "valva_transcateter_tavi", "label": "Valva transcateter (TAVI)"},
+      {"value": "desconhecido", "label": "Desconhecido"}
+    ]},
+    {"id": "epv_tempo_desde_implante", "label": "Há quanto tempo a prótese foi implantada?", "type": "select", "required": true, "section": "Anatomia", "options": [
+      {"value": "menos_de_6_meses", "label": "Menos de 6 meses"},
+      {"value": "seis_meses_ou_mais", "label": "6 meses ou mais"},
+      {"value": "desconhecido", "label": "Desconhecido"}
+    ]},
+    {"id": "epv_suspeita_endocardite_ativa", "label": "Há febre, hemocultura positiva, sopro novo/em piora ou outro sinal de endocardite ativa?", "type": "boolean", "required": true, "section": "Segurança"},
+    {"id": "epv_instabilidade_hemodinamica", "label": "Há choque, insuficiência cardíaca aguda ou instabilidade hemodinâmica?", "type": "boolean", "required": true, "section": "Segurança"},
+    {"id": "epv_posicao_valvar", "label": "Qual é a posição valvar acometida?", "type": "select", "section": "Anatomia", "options": [
+      {"value": "aortica", "label": "Aórtica"},
+      {"value": "mitral", "label": "Mitral"},
+      {"value": "tricuspide_ou_pulmonar", "label": "Tricúspide ou pulmonar"},
+      {"value": "multipla_ou_indeterminada", "label": "Múltipla ou indeterminada"}
+    ]},
+    {"id": "epv_bloqueio_av_novo", "label": "Há bloqueio atrioventricular novo ao ECG?", "type": "boolean", "section": "ECG"},
+    {"id": "epv_fenomeno_embolico", "label": "Há fenômeno embólico sistêmico ou pulmonar documentado?", "type": "boolean", "section": "Complicações"},
+    {"id": "epv_ecocardiograma_transesofagico_realizado", "label": "Já foi realizado ecocardiograma transesofágico?", "type": "select", "required": true, "section": "Imagem", "options": [
+      {"value": "sim_positivo", "label": "Sim, positivo/sugestivo"},
+      {"value": "sim_negativo", "label": "Sim, negativo/inconclusivo"},
+      {"value": "nao_realizado", "label": "Não realizado ainda"}
+    ]},
+    {"id": "epv_tempo_desde_eco_negativo", "label": "Se o exame foi negativo/inconclusivo, quanto tempo desde então?", "type": "select", "section": "Imagem", "options": [
+      {"value": "menos_de_5_dias", "label": "Menos de 5 dias"},
+      {"value": "cinco_a_sete_dias_ou_mais", "label": "5 a 7 dias ou mais"},
+      {"value": "nao_aplicavel", "label": "Não aplicável"}
+    ]},
+    {"id": "epv_disfuncao_protetica_grave_ou_abscesso", "label": "Há disfunção protética grave, abscesso ou pseudoaneurisma identificado?", "type": "boolean", "section": "Complicações"},
+    {"id": "epv_bacteremia_estafilococica_sem_foco", "label": "Há bacteremia estafilocócica de foco desconhecido?", "type": "boolean", "section": "Microbiologia"}
+  ],
+  "assistant_rules": [
+    {"id": "epv-endocardite-instabilidade", "priority": 100, "when": {"all": [
+      {"field": "epv_suspeita_endocardite_ativa", "op": "truthy"},
+      {"field": "epv_instabilidade_hemodinamica", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Suspeita de endocardite de prótese valvar com instabilidade hemodinâmica"],
+      "emergency_flow": ["Avaliação hospitalar imediata: hemoculturas seriadas antes de antibiótico, ecocardiograma transesofágico direcionado e acionamento de equipe de endocardite/Heart Team sem atraso."]
+    }},
+    {"id": "epv-instabilidade-isolada", "priority": 96, "when": {"all": [
+      {"field": "epv_instabilidade_hemodinamica", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Instabilidade hemodinâmica em portador de prótese valvar"],
+      "emergency_flow": ["Avaliação hospitalar imediata com monitorização, ecocardiograma e equipe de endocardite."]
+    }},
+    {"id": "epv-precoce-com-suspeita-ativa", "priority": 92, "when": {"all": [
+      {"field": "epv_tempo_desde_implante", "op": "eq", "value": "menos_de_6_meses"},
+      {"field": "epv_suspeita_endocardite_ativa", "op": "truthy"}
+    ]}, "add": {
+      "risk": "emergencia",
+      "red_flags": ["Suspeita de endocardite protética precoce (menos de 6 meses do implante)"],
+      "messages": ["A diretriz ESC 2023 recomenda cirurgia (Classe I) para endocardite protética precoce; decisão deve envolver equipe de endocardite sem atraso, mesmo reconhecendo que um estudo de coorte de 2024/2025 questiona a suficiência do corte temporal isolado."]
+    }},
+    {"id": "epv-bloqueio-av-novo-aortica", "priority": 88, "when": {"all": [
+      {"field": "epv_bloqueio_av_novo", "op": "truthy"},
+      {"field": "epv_posicao_valvar", "op": "eq", "value": "aortica"}
+    ]}, "add": {
+      "risk": "urgente",
+      "red_flags": ["Bloqueio atrioventricular novo em prótese aórtica — sinal de provável extensão perianular"],
+      "suggested_tests": ["Ecocardiograma transesofágico direcionado a abscesso/pseudoaneurisma e, se inconclusivo, tomografia computadorizada cardíaca complementar."],
+      "messages": ["Não tratar apenas como problema elétrico isolado — comunicar a suspeita de extensão perianular à equipe de endocardite."]
+    }},
+    {"id": "epv-suspeita-estavel", "priority": 84, "when": {"all": [
+      {"field": "epv_suspeita_endocardite_ativa", "op": "truthy"}
+    ]}, "add": {
+      "risk": "urgente",
+      "red_flags": ["Suspeita de endocardite de prótese valvar"],
+      "suggested_tests": ["Hemoculturas seriadas antes de iniciar antibiótico; ecocardiograma transesofágico direto, sem aguardar transtorácico negativo."]
+    }},
+    {"id": "epv-disfuncao-grave-ou-abscesso", "priority": 80, "when": {"all": [
+      {"field": "epv_disfuncao_protetica_grave_ou_abscesso", "op": "truthy"}
+    ]}, "add": {
+      "risk": "prioritario",
+      "messages": ["Disfunção protética grave, abscesso ou pseudoaneurisma são subgrupos de alto risco que reforçam indicação cirúrgica, mesmo em endocardite protética tardia não complicada."]
+    }},
+    {"id": "epv-eco-negativo-persistencia-suspeita", "priority": 70, "when": {"all": [
+      {"field": "epv_ecocardiograma_transesofagico_realizado", "op": "eq", "value": "sim_negativo"},
+      {"field": "epv_suspeita_endocardite_ativa", "op": "truthy"},
+      {"field": "epv_tempo_desde_eco_negativo", "op": "eq", "value": "menos_de_5_dias"}
+    ]}, "add": {
+      "missing_information": ["Repetição do ecocardiograma (transtorácico ou transesofágico) em 5 a 7 dias, pela persistência da suspeita clínica."],
+      "messages": ["Exame negativo isolado não encerra a investigação diante de alta suspeita clínica."]
+    }},
+    {"id": "epv-fenomeno-embolico", "priority": 65, "when": {"all": [
+      {"field": "epv_fenomeno_embolico", "op": "truthy"}
+    ]}, "add": {
+      "risk": "prioritario",
+      "red_flags": ["Fenômeno embólico documentado em portador de prótese valvar"]
+    }},
+    {"id": "epv-bacteremia-estafilococica-sem-foco", "priority": 55, "when": {"all": [
+      {"field": "epv_bacteremia_estafilococica_sem_foco", "op": "truthy"}
+    ]}, "add": {
+      "suggested_tests": ["Ecocardiograma como parte da investigação de bacteremia estafilocócica de foco desconhecido em portador de prótese valvar, mesmo sem outro sinal localizatório."]
+    }},
+    {"id": "epv-eco-nao-realizado", "priority": 50, "when": {"all": [
+      {"field": "epv_ecocardiograma_transesofagico_realizado", "op": "eq", "value": "nao_realizado"},
+      {"field": "epv_suspeita_endocardite_ativa", "op": "truthy"}
+    ]}, "add": {
+      "missing_information": ["Ecocardiograma transesofágico direcionado, indicado diretamente em portador de prótese valvar, sem aguardar transtorácico."]
+    }}
+  ],
+  "tags": ["endocardite protética", "prótese valvar", "PVE", "endocardite pós-TAVI", "ESC 2023", "Duke-ISCVID 2023", "complicação perianular", "endocardite de câmaras direitas", "PET-CT", "equipe de endocardite"],
+  "source_refs": [
+    "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656.",
+    "Habib G, Erba PA, Iung B, et al. Clinical presentation, aetiology and outcome of infective endocarditis. Results of the ESC-EORP EURO-ENDO registry: a prospective cohort study. Eur Heart J. 2019;40(39):3222-3232. PMID: 31504413.",
+    "Papadimitriou-Olivgeris M, Ledergerber B, Siedentop B, et al. Beyond the Timeline: 1-Year Mortality Trends in Early Versus Late Prosthetic Valve Endocarditis. Clin Infect Dis. 2025;80(4):804-806. DOI: 10.1093/cid/ciae392. PMID: 39067056.",
+    "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445.",
+    "Barberato SH, Romano MMD, Beck ALS, et al. Position Statement on Indications of Echocardiography in Adults – 2019 (SBC). Arq Bras Cardiol. 2019;113(1):135-181. DOI: 10.5935/abc.20190129. PMID: 31411301.",
+    "Graupner C, Vilacosta I, SanRomán J, et al. Periannular extension of infective endocarditis. J Am Coll Cardiol. 2002;39(7):1204-1211. PMID: 11923047.",
+    "Hryniewiecki T, Zatorska K, Abramczuk E, et al. The usefulness of cardiac CT in the diagnosis of perivalvular complications in patients with infective endocarditis. Eur Radiol. 2019;29(8):4368-4376. PMID: 30643945.",
+    "Regueiro A, Linke A, Latib A, et al. Association Between Transcatheter Aortic Valve Replacement and Subsequent Infective Endocarditis and In-Hospital Death. JAMA. 2016;316(10):1083-1092. PMID: 27623462."
+  ],
+  "source_urls": [
+    "https://pubmed.ncbi.nlm.nih.gov/37622656/", "https://pubmed.ncbi.nlm.nih.gov/31504413/", "https://pubmed.ncbi.nlm.nih.gov/39067056/",
+    "https://pubmed.ncbi.nlm.nih.gov/37138445/", "https://pubmed.ncbi.nlm.nih.gov/31411301/", "https://pubmed.ncbi.nlm.nih.gov/11923047/",
+    "https://pubmed.ncbi.nlm.nih.gov/30643945/", "https://pubmed.ncbi.nlm.nih.gov/27623462/"
+  ],
+  "related_document_slugs": [
+    "endocardite-protetica-precoce-versus-tardia-esc-2023",
+    "complicacoes-perianulares-na-endocardite-aortica-abscesso-pseudoaneurisma-e-bloqueio-atrioventricular-novo",
+    "endocardite-infecciosa-apos-implante-valvar-aortico-transcateter-tavi-registro-internacional",
+    "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+    "tepvendo-pet-ct-corpo-inteiro-endocardite",
+    "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+    "endocardite-fungica-e-criterios-duke-iscvid-2023-para-endocardite-de-dispositivo"
+  ],
+  "patient_material_slug": null,
+  "review_status": "pendente_revisao",
+  "review_note": "Verbete novo, produzido em 29/08/2026. O hub endocardite-infecciosa (PR #553, já publicado, revisado) foi lido por completo e NÃO foi reescrito — já tem diagnostic_approach/treatment_summary completos e 28 related_document_slugs. Em vez disso, evidencias/metadados.json filtrado por theme=Endocardite, revisado, published=false retornou 23 itens; 11 (maior cluster) tratam de protocolo ecocardiográfico em endocardite de PRÓTESE — lacuna real de hospedeiro dedicado. 8 PMIDs verificados individualmente. 7 related_document_slugs lidos por completo, fora de Farmacologia/Calculadoras/Exames. Nenhuma dose de medicamento. Sem colisão de slug.",
+  "version": 1,
+  "fonte_producao": "claude"
+  }
+]
