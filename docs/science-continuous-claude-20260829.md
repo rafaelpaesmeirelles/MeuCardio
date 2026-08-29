@@ -477,3 +477,36 @@ alterado em diabético assintomático, TcPO2 complementar). Despachada
 correção aditiva (agente ac51429cd14737ef9).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 20 — concluído (1 commit, SHA f2bdf4fe) — total 46 commits
+
+- correção `itb-pos-exercicio-em-esteira-na-claudicacao-intermitente` — 3
+  cenários SBC 2024/SBACV (Erzinger et al., PMID 39493832): sintomático com
+  ITB repouso normal, diabético assintomático com ITB alterado por
+  calcificação, TcPO2 complementar (WIfI ≥60/​<30mmHg). review_status
+  revertido de revisado para pendente_revisao; source_refs 2→5.
+
+## Lote 21 (em andamento, 1 agente)
+
+Backlog Aorta: cluster de limiares cirúrgicos de aneurisma por etiologia
+(8 itens: ascendente esporádico 5,5cm, Marfan 5,0cm, Loeys-Dietz por gene,
+bicúspide isolado vs. com troca valvar concomitante 4,5cm, aorta
+descendente, AAA por sexo) — confirmado sem host (doc geral PAAD ESC 2024
+existente não detalha por etiologia, 0 menções aos limiares numéricos).
+Despachado (agente a60b82fe6e884144e).
+
+## Panorama consolidado desta janela estendida (lotes 7-21, ~46 commits)
+21 lotes completados nesta sessão contínua. Território coberto: Cardiomiopatias
+(restritiva, sobrecarga de ferro, fenocópias glicogênicas, esclerose sistêmica),
+Dispositivos (periop CIED, PACES 2021 pediátrico), Valvopatias (estenose
+aórtica geriátrica/TAVI/futilidade), Cardiologia pediátrica (eco indicações,
+teste ergométrico QTL/Brugada/BAVT, Kawasaki JCS 2020, aortopatia genética
+pediátrica), Arritmias (seleção diagnóstica JCS 2019, teste genético/exercício
+JCS 2019), Cardiologia geriátrica (SBC 2019 cardiogeriatria), Aorta/vascular
+(TAVI angiotomografia expandida, Doppler de carótidas SRU 2003, ITB SBC 2024).
+Padrão de rigor consistente: múltiplos agentes corrigiram premissas do próprio
+briefing do orquestrador ao não encontrar confirmação na fonte primária, e
+declararam isso explicitamente em vez de inventar — sinal de que o processo de
+verificação está funcionando como pretendido.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
