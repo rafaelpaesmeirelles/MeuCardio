@@ -601,3 +601,21 @@ para vegetação) — distinto do checklist de timing de repetição (lote 8).
 Despachado (agente a827eb7ee6ccb2c32).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 24 — concluído (1 commit, SHA d217c1d7) — total 50 commits (marco)
+
+- exame `selecao-de-modalidade-de-imagem-na-avaliacao-diagnostica-inicial-da-endocardite-infecciosa`
+  — novo. Mesma fonte primária SBC 2019 do checklist de timing (Tabela 31),
+  5 PMIDs verificados. Fecha a cobertura do tema Endocardite nesta janela.
+
+## Lote 25 (em andamento, 1 agente) — retorno a Cardiomiopatias (maior backlog, 118 itens)
+
+Cluster "cmh-*" identificado como o maior remanescente (34+ itens) — hub
+`cardiomiopatia-hipertrofica` já tem boa profundidade geral (mavacamten,
+aneurisma apical, esporte já cobertos), mas cluster "te-*"/SBC 2024
+(6 itens: protocolo atenuado, TCPE, liberação pós-miocardite 3-6 meses,
+reavaliação 2 anos pós-miocardite, TE seriado para ajuste de exercício e
+para resposta pressórica) confirmado sem host — fonte brasileira
+priorizada. Despachado (agente ad379774df47bfcc2).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
