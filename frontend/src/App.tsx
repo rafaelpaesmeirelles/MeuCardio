@@ -24,6 +24,7 @@ const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
 const Indicadores = lazy(() => import("./pages/Indicadores"));
 const Cursos = lazy(() => import("./pages/Cursos"));
 const Biblioteca = lazy(() => import("./pages/Biblioteca"));
+const ScientificDocumentAI = lazy(() => import("./pages/ScientificDocumentAI"));
 const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
 const Diretrizes = lazy(() => import("./pages/Diretrizes"));
 const Galeria = lazy(() => import("./pages/Galeria"));
@@ -147,10 +148,6 @@ export default function App() {
 
   return (
     <>
-      {/* Recurso opcional da home: só é montado depois de autenticação,
-          perfil, KYC e primeiro acesso. Assim nenhuma incompatibilidade do
-          personalizador pode bloquear login ou cadastro de qualquer tipo de
-          conta atual ou futura. */}
       <OptionalFeatureBoundary nome="personalização da página inicial">
         <HomeQuickActionsPersonalizer />
       </OptionalFeatureBoundary>
@@ -161,6 +158,7 @@ export default function App() {
           <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
+          <Route path="documentos-cientificos-ia" element={<ScientificDocumentAI />} />
           <Route path="doencas" element={<GuiaDoencas />} />
           <Route path="doencas/:slug" element={<GuiaDoenca />} />
           <Route path="triagem-sintomas" element={<TriagemSintomas />} />
