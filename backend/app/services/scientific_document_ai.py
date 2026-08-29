@@ -205,12 +205,35 @@ def _normalize(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", ascii_value.casefold()).strip()
 
 
-def find_duplicate(db: Session, analysis: dict) -> Document | None:
-    doi = str(analysis.get("doi") or "").strip().lower()
+def _normalized_reference(value: str | None) -> str:
+    return str(value or "").strip().casefold().rstrip("/")
+
+
+def find_duplicate(db: Session, analysis: dict, *, fingerprint: str | None = None) -> Document | None:
+    """Deduplica por DOI, URL/fonte, metadado de título e fingerprint do arquivo.
+
+    O fingerprint é aplicado novamente imediatamente antes da incorporação para
+    impedir que duas bibliotecas privadas publiquem cópias do mesmo arquivo com
+    metadados ligeiramente diferentes.
+    """
+    doi = _normalized_reference(str(analysis.get("doi") or ""))
+    source_url = _normalized_reference(str(analysis.get("source_url") or ""))
+    fingerprint_ref = f"sha256:{str(fingerprint or '').strip().casefold()}" if fingerprint else ""
     title = _normalize(str(analysis.get("title") or ""))
+
     for document in db.query(Document).all():
-        refs = [str(ref).lower() for ref in (document.source_refs or [])]
-        if doi and any(doi in ref for ref in refs):
+        refs = {_normalized_reference(str(ref)) for ref in (document.source_refs or []) if str(ref).strip()}
+        if doi and any(
+            ref == doi
+            or ref == f"doi:{doi}"
+            or ref == f"https://doi.org/{doi}"
+            or ref == f"http://doi.org/{doi}"
+            for ref in refs
+        ):
+            return document
+        if source_url and source_url in refs:
+            return document
+        if fingerprint_ref and fingerprint_ref in refs:
             return document
         if title and _normalize(document.title) == title:
             return document
@@ -273,7 +296,7 @@ def _shared_synthesis_body(analysis: dict) -> str:
 
 
 def incorporate(db: Session, row: ScientificUserDocument, analysis: dict, translated_text: str, *, reviewer_id: int) -> Document:
-    duplicate = find_duplicate(db, analysis)
+    duplicate = find_duplicate(db, analysis, fingerprint=row.sha256)
     if duplicate:
         row.incorporation_status = "duplicado"
         row.incorporated_document_id = duplicate.id
