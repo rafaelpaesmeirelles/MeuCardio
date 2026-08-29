@@ -2,11 +2,11 @@ from __future__ import annotations
 
 """Worldwide source registry and resilient orchestration for CorVIA Intelligence.
 
-Structured scholarly indexes remain discovery safety nets because many publisher
-sites intentionally block automated HTML clients. Direct society/journal pages
-are the first-party trust boundary: when a publication is confirmed there, it is
-auto-approved and enters the clinical analysis/publication queue. Aggregators
-alone never confer editorial approval.
+Sociedades, órgãos públicos, periódicos cadastrados e os indexadores PubMed,
+Europe PMC e Crossref formam a lista de fontes confiáveis do radar. Itens vindos
+dessas fontes são autoaprovados após os filtros de alto sinal e entram na fila
+de análise clínica, resumo em português e publicação. Fontes não reconhecidas
+não recebem aprovação automática.
 """
 
 import threading
@@ -83,12 +83,7 @@ def enable_worldwide_sources() -> tuple[core.Source, ...]:
 
 
 def _autoapprove_official_backlog(db: Session, cutoff: datetime) -> dict:
-    """Promove toda fonte primária confiável para a fila oficial persistente.
-
-    Não publica indexadores isolados. Estados já concluídos são preservados.
-    Itens incompletos/revisão_necessária de fonte oficial são reabertos para que
-    o pipeline tente completar a análise e a síntese automaticamente.
-    """
+    """Promove toda fonte confiável ainda não analisada para a fila automática."""
     candidates = db.query(Guideline).filter(
         Guideline.published_at.isnot(None),
         Guideline.published_at >= cutoff,
@@ -99,7 +94,7 @@ def _autoapprove_official_backlog(db: Session, cutoff: datetime) -> dict:
         if not is_trusted_official_guideline(guideline):
             continue
         trusted += 1
-        if guideline.detection_status in {"detected", "aguardando_revisao", "revisao_necessaria"}:
+        if guideline.detection_status in {"detected", "aguardando_revisao"}:
             guideline.detection_status = "oficial_aprovada"
             promoted += 1
     if promoted:
@@ -108,7 +103,7 @@ def _autoapprove_official_backlog(db: Session, cutoff: datetime) -> dict:
 
 
 def discover_and_publish_worldwide(db: Session, *, analyze_clinical_impact: bool = True) -> dict:
-    """Descobre globalmente e autoaprova apenas fontes primárias oficiais."""
+    """Descobre globalmente e autoaprova todas as fontes confiáveis cadastradas."""
     enable_worldwide_sources()
     now = datetime.now(timezone.utc)
     cutoff = core._effective_cutoff(now)
@@ -136,7 +131,7 @@ def discover_and_publish_worldwide(db: Session, *, analyze_clinical_impact: bool
         "direct_sources_total": len(core.SOURCES),
         "direct_sources_failed": len(failed_direct),
         "direct_sources_ok": max(0, len(core.SOURCES) - len(failed_direct)),
-        "mode": "official_primary_autoapprove_structured_discovery_only",
+        "mode": "trusted_sources_autoapprove_with_structured_indexes",
     }
 
     if analyze_clinical_impact:
