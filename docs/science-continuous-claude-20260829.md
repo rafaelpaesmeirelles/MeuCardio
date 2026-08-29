@@ -970,6 +970,28 @@ Gap novo encontrado: origem anômala de artéria coronária (AAOCA) —
 2ª causa mais comum de morte súbita em atletas jovens em séries de
 necropsia, sem hub dedicado (só menção tangencial dentro do checklist de
 ETT-ACHD do lote 31). Interseção de congênita/esporte/morte súbita.
-Despachado.
+
+## Lote 43 — concluído (SHA 025fdd23) — total 70 commits
+
+- checklist `origem-anomala-de-arteria-coronaria-aaoca-caracterizacao-anatomica-cirurgia-e-elegibilidade-esportiva`
+  — 5 itens: anatomia de risco (trajeto intramural como mecanismo de
+  compressão dinâmica, não fixa; ausência de corte numérico declarada);
+  angio-TC como modalidade de escolha; indicação cirúrgica escalonada
+  por sintoma+anatomia+subtipo (AAOLCA sempre mais grave); elegibilidade
+  esportiva via Task Force 4 AHA/ACC; limitação crítica do teste de
+  esforço isolado — sensibilidade de apenas 19% para isquemia (sobe a
+  58% com CPET), não deve ser critério único de liberação. 10 fontes via
+  NCBI e-utils, incluindo nomenclatura padronizada ICAAC 2026.
+
+## Lote 44 (planejado)
+
+A auditar: território ainda pouco explorado — Distúrbios de condução
+específicos além de BAV/nó sinusal já cobertos (ex.: bloqueio de ramo
+esquerdo novo e sua investigação, distinto de Sgarbossa/SCA que é fora
+do escopo de Claude); ou retomar Doenças vasculares estruturais com
+gap ainda não verificado (dissecção coronária espontânea já coberta,
+verificar aneurisma de artéria esplênica/visceral associado a doença
+do tecido conjuntivo). Confirmar via grep + `gh pr list` antes de
+despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
