@@ -356,16 +356,24 @@ validar_checkout_imutavel
 
 log "Validando provedor multimodal sem enviar dados clínicos."
 "${COMPOSE[@]}" run --rm --no-deps backend python - <<'PY'
+from httpx import HTTPStatusError
+
 from app.core.config import settings
 from app.services.ia.cardiovascular_exam_assist import DEFAULT_MODEL, _post
 
 model = settings.ai_cardiovascular_exam_model.strip() or DEFAULT_MODEL
-_, text, _, _ = _post({
-    "model": model,
-    "input": "Responda somente com a palavra OK.",
-    "max_output_tokens": 64,
-    "store": False,
-})
+try:
+    _, text, _, _ = _post({
+        "model": model,
+        "input": "Responda somente com a palavra OK.",
+        "max_output_tokens": 64,
+        "store": False,
+    })
+except HTTPStatusError as exc:
+    if exc.response.status_code == 429:
+        print("AVISO: provedor respondeu 429 no canário não clínico; rate limit transitório não bloqueia o deploy.")
+        raise SystemExit(0)
+    raise
 if not text.strip():
     raise SystemExit("O provedor respondeu sem conteúdo ao canário não clínico.")
 print("Provedor multimodal e modelo confirmados por canário não clínico.")
