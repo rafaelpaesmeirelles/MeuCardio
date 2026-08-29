@@ -2,11 +2,15 @@ from __future__ import annotations
 
 """Camada de execução idempotente para os overrides do CorVIA Intelligence."""
 
+import logging
 import re
 from datetime import datetime, timezone
 from typing import Any
 
+from app.models.guideline import Guideline, GuidelineNotification
 from app.services import guideline_clinical_update as core
+
+log = logging.getLogger("corvia.guideline_clinical_update.runtime")
 
 _ORIGINAL_APPLY_OVERRIDE = core._apply_override
 _ORIGINAL_ENSURE_SUMMARY = core._ensure_summary_document
@@ -82,9 +86,41 @@ def install_runtime_guards() -> None:
     core._ensure_summary_document = _ensure_summary_published
 
 
+def _reopen_in_app_alerts(db, guideline_id: int) -> None:
+    db.query(GuidelineNotification).filter(
+        GuidelineNotification.guideline_id == guideline_id,
+        GuidelineNotification.channel == "in_app",
+        GuidelineNotification.status == "disponivel",
+    ).update({GuidelineNotification.read_at: None}, synchronize_session=False)
+    db.commit()
+
+
 def process_pending_guidelines(db, *, limit: int = core.PROCESS_LIMIT) -> dict:
+    """Processa uma vez itens recém-detectados; ambiguidade aguarda revisão humana."""
     install_runtime_guards()
-    return core.process_pending_guidelines(db, limit=limit)
+    guidelines = db.query(Guideline).filter(
+        Guideline.detection_status.in_(("detected", "aguardando_revisao"))
+    ).order_by(
+        Guideline.published_at.desc().nullslast(),
+        Guideline.discovered_at.asc(),
+    ).limit(limit).all()
+
+    items: list[dict] = []
+    failures: list[dict] = []
+    if not core.settings.ai_enabled or core.settings.ai_provider != "openai" or not core.settings.openai_api_key.strip():
+        return {"processed": 0, "skipped": "ai_unavailable", "items": [], "failures": []}
+
+    with core._PROCESS_LOCK:
+        for guideline in guidelines:
+            try:
+                result = core.process_guideline(db, guideline)
+                _reopen_in_app_alerts(db, guideline.id)
+                items.append(result)
+            except Exception as exc:
+                db.rollback()
+                log.exception("Falha ao analisar/aplicar diretriz %s", guideline.slug)
+                failures.append({"guideline_id": guideline.id, "slug": guideline.slug, "error": type(exc).__name__})
+    return {"processed": len(items), "items": items, "failures": failures}
 
 
 def reapply_confirmed_updates(db) -> dict:
