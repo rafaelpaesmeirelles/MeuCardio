@@ -552,3 +552,15 @@ genuinamente novo — registrado como direção para a próxima fase de
 trabalho, seja pelo Claude nesta mesma branch ou por outro agente.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 23 (em andamento, despachado em paralelo ao lote 22)
+
+Retorno ao backlog de Endocardite (23 itens): cluster "profilaxia
+antibiotica-*" (8 itens) — completamente distinto do checklist de timing
+de eco já produzido no lote 8, sem host no corpus. Cobre procedimento
+odontológico de alto risco, endocardite prévia, VAD, prótese transcateter,
+implante de CIED, baixo risco (não indicado), procedimento não-odontológico
+de alto risco (opcional), descolonização sem rastreio (não indicado).
+Despachado (agente a2d4aaf7d8a7de498).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
