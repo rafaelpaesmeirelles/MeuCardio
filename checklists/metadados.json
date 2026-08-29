@@ -31670,5 +31670,170 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "indicacoes-de-dispositivo-cardiaco-eletronico-implantavel-em-pediatria-paces-2021",
+    "condicao": "Dispositivos cardíacos eletrônicos implantáveis em pediatria — indicações PACES 2021",
+    "resumo": "Checklist das indicações de classe I, IIa e IIb (e das contraindicações de classe III) para implante de marca-passo, cardioversor-desfibrilador implantável (CDI) e monitor cardíaco implantável (ICM) em pacientes pediátricos e com cardiopatia congênita (≤21 anos), segundo o consenso de especialistas PACES 2021. Cobre canalopatias (síndrome do QT longo, CPVT, Brugada), cardiomiopatias (hipertrófica, arritmogênica, dilatada não isquêmica), bloqueio atrioventricular congênito, pós-operatório e por doença de Chagas, síncope neurocardiogênica, e considerações sobre ressonância magnética e participação esportiva.",
+    "documento_origem": null,
+    "theme": "Cardiologia pediátrica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Shah MJ, Silka MJ, Silva JNA, et al. 2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients. Heart Rhythm. 2021;18(11):1888-1924. DOI: 10.1016/j.hrthm.2021.07.038. PMID: 34363988."
+    ],
+    "itens": [
+      {
+        "id": "cdi-sca-sobrevivente",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é indicado para sobreviventes de parada cardíaca súbita por TV/FV, desde que causas completamente reversíveis tenham sido excluídas e o CDI seja considerado mais benéfico que tratamentos alternativos que possam reduzir significativamente o risco de nova parada (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.2 'General Recommendations for Implantable Cardioverter Defibrillator Therapy', tabela de recomendações."
+      },
+      {
+        "id": "cdi-cardiomiopatia-tv-sincope-fe35-geral",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Em cardiomiopatias pediátricas, é razoável indicar CDI diante de TV sustentada hemodinamicamente tolerada, síncope presumidamente arrítmica, ou FEVE ≤35% (Classe IIa). Nota: esse padrão de risco recebe classes diferentes conforme a cardiomiopatia — na cardiomiopatia arritmogênica é Classe IIa (item específico abaixo); na cardiomiopatia dilatada não isquêmica, 'síncope ou FEVE ≤35% apesar de terapia otimizada' é Classe IIb; na cardiopatia congênita, 'FEVE sistêmica <35% e TV sustentada' é Classe IIa. Não há uma tabela única de 'cardiomiopatia em geral' com essa redação — é um padrão recorrente entre seções, não uma recomendação isolada.",
+        "origem_secao": "Comparação entre as seções 3.4.3 (Arrhythmogenic Cardiomyopathies, Classe IIa), 3.4.4 (Nonischemic Dilated Cardiomyopathy, Classe IIb) e 3.5 (Congenital Heart Disease, Classe IIa)."
+      },
+      {
+        "id": "cdi-brugada-sca-tv",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é indicado em pacientes com síndrome de Brugada sobreviventes de parada cardíaca súbita ou com TV sustentada espontânea documentada (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.3.3 'Brugada Syndrome', tabela de recomendações."
+      },
+      {
+        "id": "cdi-hcm-primario",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Em crianças com cardiomiopatia hipertrófica que apresentem ≥1 fator de risco primário (síncope inexplicada, hipertrofia ventricular esquerda maciça, TV não sustentada, ou história familiar de morte súbita precoce relacionada à HCM), o implante de CDI para prevenção primária é razoável, após ponderação das complicações potenciais do implante em longo prazo (Classe IIa; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.4.1 'Hypertrophic Cardiomyopathy', tabela de recomendações."
+      },
+      {
+        "id": "cdi-acm-sca-tv-instavel",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é indicado em pacientes com cardiomiopatia arritmogênica (ACM) ressuscitados de parada cardíaca súbita ou com TV sustentada hemodinamicamente não tolerada (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.4.3 'Arrhythmogenic Cardiomyopathies', tabela de recomendações."
+      },
+      {
+        "id": "cdi-acm-tv-tolerada-iia",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é razoável em pacientes com cardiomiopatia arritmogênica (ACM) com TV sustentada hemodinamicamente tolerada, síncope presumidamente devida a arritmia ventricular, ou FEVE ≤35% (Classe IIa; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.4.3 'Arrhythmogenic Cardiomyopathies', tabela de recomendações."
+      },
+      {
+        "id": "cdi-cpvt-sca-sincope",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é indicado em pacientes com CPVT (taquicardia ventricular polimórfica catecolaminérgica) que apresentem parada cardíaca ou síncope arrítmica apesar de betabloqueador em dose máxima tolerada associado a flecainida e/ou denervação simpática cardíaca (Classe I; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 3.3.2 'Catecholaminergic Polymorphic Ventricular Tachycardia', tabela de recomendações."
+      },
+      {
+        "id": "cdi-cpvt-sca-apresentacao-inicial",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI é razoável, em combinação com terapia farmacológica (com ou sem denervação simpática cardíaca), quando a parada cardíaca súbita abortada é a apresentação inicial de CPVT (Classe IIa; Nível de Evidência C-LD). Terapia farmacológica e/ou denervação simpática sem CDI pode ser considerada como alternativa.",
+        "origem_secao": "Seção 3.3.2 'Catecholaminergic Polymorphic Ventricular Tachycardia', tabela de recomendações."
+      },
+      {
+        "id": "cdi-qtl-prevencao-primaria-iib",
+        "categoria": "CDI",
+        "obrigatorio": false,
+        "texto": "Terapia com CDI pode ser considerada para prevenção primária em pacientes com síndrome do QT longo (LQTS) que tenham fatores de risco clínicos estabelecidos e/ou mutações patogênicas de alto risco (Classe IIb; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 3.3.1 'Long QT Syndrome', tabela de recomendações."
+      },
+      {
+        "id": "cdi-qtl-sca-betabloqueador",
+        "categoria": "CDI",
+        "obrigatorio": true,
+        "texto": "Implante de CDI associado ao uso de betabloqueador é indicado em pacientes com diagnóstico de LQTS sobreviventes de parada cardíaca súbita; em pacientes selecionados, terapia medicamentosa e/ou denervação simpática cardíaca podem ser consideradas como alternativa (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 3.3.1 'Long QT Syndrome', tabela de recomendações."
+      },
+      {
+        "id": "cdi-nao-esporte",
+        "categoria": "CDI",
+        "obrigatorio": false,
+        "texto": "O implante de CDI com a finalidade exclusiva de permitir a participação em esporte competitivo não deve ser realizado (Classe III, sem benefício; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 7.2 'CIEDs and Sports Participation', tabela de recomendações."
+      },
+      {
+        "id": "mp-bavt-congenito-fc-corte",
+        "categoria": "Marca-passo",
+        "obrigatorio": true,
+        "texto": "Implante de marca-passo definitivo é indicado para bloqueio atrioventricular total congênito (BAVT) em neonatos ou lactentes assintomáticos quando a frequência ventricular média é <50 bpm; a frequência ventricular isolada não deve ser usada como critério único de implante, pois sintomas de baixo débito podem ocorrer com frequências mais altas (Classe I; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 2.3 'Isolated Congenital Complete Atrioventricular Block', tabela de recomendações."
+      },
+      {
+        "id": "mp-disfuncao-no-sinusal-sintomatica",
+        "categoria": "Marca-passo",
+        "obrigatorio": true,
+        "texto": "Implante de marca-passo atrial ou dupla-câmara é indicado para disfunção do nó sinusal (DNS) quando há correlação de sintomas com bradicardia inapropriada para a idade (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 2.2 'Isolated Sinus Node Dysfunction', tabela de recomendações."
+      },
+      {
+        "id": "mp-disfuncao-no-sinusal-assintomatica-nao",
+        "categoria": "Marca-passo",
+        "obrigatorio": false,
+        "texto": "Implante de marca-passo definitivo não é indicado em pacientes com disfunção do nó sinusal assintomática (Classe III, sem benefício; Nível de Evidência C-EO).",
+        "origem_secao": "Seção 2.2 'Isolated Sinus Node Dysfunction', tabela de recomendações."
+      },
+      {
+        "id": "mp-bav1-mobitz1-nao",
+        "categoria": "Marca-passo",
+        "obrigatorio": false,
+        "texto": "Implante de marca-passo definitivo não é indicado para bloqueio atrioventricular de 1º grau assintomático ou bloqueio de 2º grau Mobitz tipo I assintomático (Classe III, dano; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 2.4 'Atrioventricular Block: Other Considerations', tabela de recomendações."
+      },
+      {
+        "id": "mp-bav-pos-operatorio-persistente",
+        "categoria": "Marca-passo",
+        "obrigatorio": true,
+        "texto": "Implante de marca-passo definitivo é indicado para bloqueio atrioventricular avançado de 2º ou 3º grau pós-operatório que persiste por pelo menos 7–10 dias após cirurgia cardíaca (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 2.5 'Postoperative Atrioventricular Block', tabela de recomendações."
+      },
+      {
+        "id": "mp-qtl-bav-funcional-2-1",
+        "categoria": "Marca-passo",
+        "obrigatorio": false,
+        "texto": "Implante de marca-passo pode ser considerado como terapia adjuvante em pacientes com síndrome do QT longo e bloqueio atrioventricular funcional 2:1 (Classe IIb; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 2.10 'Cardiac Channelopathies', tabela de recomendações."
+      },
+      {
+        "id": "mp-chagas-bavt",
+        "categoria": "Marca-passo",
+        "obrigatorio": true,
+        "texto": "Implante de marca-passo é razoável na doença de Chagas com bloqueio atrioventricular avançado de 2º ou 3º grau, já que a resolução espontânea é improvável; o implante de CDI pode ser uma alternativa razoável quando há disfunção ventricular esquerda significativa ou arritmias ventriculares associadas (Classe IIa; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 2.11 'Inflammation/Infection', tabela de recomendações."
+      },
+      {
+        "id": "mci-sincope-alto-risco",
+        "categoria": "Outros dispositivos",
+        "obrigatorio": true,
+        "texto": "Implante de monitor cardíaco implantável (ICM) é indicado em pacientes com síncope e critérios de alto risco quando a avaliação abrangente não define a causa da síncope nem leva a um tratamento específico, e que não têm indicação convencional de marca-passo ou CDI (Classe I; Nível de Evidência B-NR).",
+        "origem_secao": "Seção 4 'Insertable Cardiac Monitors', tabela de recomendações."
+      },
+      {
+        "id": "mp-sincope-neurocardiogenica-tilt-nao",
+        "categoria": "Marca-passo",
+        "obrigatorio": false,
+        "texto": "Implante de marca-passo definitivo não é indicado para síncope neurocardiogênica baseado apenas em resposta cardioinibitória positiva no tilt-test (Classe III, sem benefício; Nível de Evidência C-EO).",
+        "origem_secao": "Seção 2.9 'Neurocardiogenic Syncope', tabela de recomendações."
+      },
+      {
+        "id": "rm-dispositivo-protocolo-institucional",
+        "categoria": "Outros dispositivos",
+        "obrigatorio": true,
+        "texto": "A realização de ressonância magnética em pacientes pediátricos com dispositivo cardíaco eletrônico implantável, condicional ou não condicional a RM, deve ocorrer no contexto de um protocolo institucional definido (Classe I; Nível de Evidência C-LD). RM é razoável em pacientes com dispositivos transvenosos não condicionais na ausência de eletrodos fraturados, epicárdicos ou abandonados (Classe IIa; Nível de Evidência B-NR); pode ser considerada em pacientes com eletrodos epicárdicos ou abandonados mediante avaliação individualizada da relação risco-benefício (Classe IIb; Nível de Evidência C-LD).",
+        "origem_secao": "Seção 7.1 'CIEDs and Magnetic Resonance Imaging', tabela de recomendações."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
