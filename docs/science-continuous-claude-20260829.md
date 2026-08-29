@@ -345,3 +345,16 @@ teste genético em canalopatias, restrição de exercício por condição) fica
 para próximos lotes.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 16 — concluído (1 commit, SHA f158b807) — total 40 commits
+
+- checklist `selecao-do-metodo-diagnostico-e-monitorizacao-de-arritmia-jcs-2022`
+  — 16 itens. Rigor exemplar: agente identificou que a diretriz correta é
+  o documento-base JCS/JHRS 2019 (PMID 34386109), não a atualização focada
+  2021/2022 popularmente chamada "JCS 2022"; declarou explicitamente que 4
+  itens do briefing (HRV/turbulência, câmera smartphone, smartwatch, IA
+  para FA) NÃO constam na diretriz pesquisada, em vez de inventar — mantidos
+  como lacunas assinaladas. ICM: 4 indicações com COR/LOE exatos da
+  Tabela 44.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
