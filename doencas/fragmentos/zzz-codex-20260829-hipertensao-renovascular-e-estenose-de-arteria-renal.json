@@ -1,0 +1,247 @@
+[
+  {
+    "slug": "hipertensao-renovascular-e-estenose-de-arteria-renal",
+    "name": "Hipertensão renovascular e estenose de artéria renal",
+    "aliases": [
+      "hipertensão renovascular",
+      "estenose de artéria renal",
+      "doença renovascular",
+      "estenose aterosclerótica de artéria renal",
+      "displasia fibromuscular renal"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": "hipertensao_secundaria_renovascular",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "review_status": "revisado",
+    "summary": "Hipertensão renovascular é a elevação pressórica causada por redução hemodinamicamente relevante da perfusão renal, em geral por estenose aterosclerótica da artéria renal no adulto mais velho ou por displasia fibromuscular em pessoas mais jovens. A presença anatômica de estenose não prova causalidade. O manejo atual prioriza terapia médica e reserva revascularização para fenótipos selecionados de alto risco ou falha do tratamento clínico, evitando stent rotineiro em doença aterosclerótica unilateral estável.",
+    "epidemiology": "A aterosclerose responde pela grande maioria das estenoses de artéria renal e se associa a idade, tabagismo, doença arterial periférica, doença coronariana, diabetes e doença renal crônica. A displasia fibromuscular é a principal causa não aterosclerótica e predomina em mulheres mais jovens. A diretriz AHA/ACC de hipertensão de 2025 ressalta que doença renovascular aterosclerótica pode ser encontrada em parcela relevante de pessoas hipertensas, mas apenas uma pequena fração apresenta estenose hemodinamicamente significativa capaz de causar hipertensão renovascular; portanto, rastreamento anatômico indiscriminado gera sobrediagnóstico e procedimentos desnecessários.",
+    "presentation": [
+      "Hipertensão de início súbito ou piora rápida de hipertensão previamente controlada, especialmente antes dos 30 anos ou após os 55 anos, deve aumentar a suspeita quando acompanhada de outros sinais.",
+      "Hipertensão resistente verdadeira após excluir pseudorresistência, baixa adesão, efeito do avental branco, excesso de sódio e fármacos/substâncias pressoras.",
+      "Sopro abdominal ou em flanco, particularmente quando associado a hipertensão de difícil controle ou doença aterosclerótica em outros territórios.",
+      "Piora inexplicada da função renal, rim atrófico ou discrepância relevante entre tamanhos renais.",
+      "Deterioração renal após bloqueio do sistema renina-angiotensina pode ser pista de estenose bilateral importante ou estenose em rim único funcionante, mas não confirma o diagnóstico isoladamente.",
+      "Edema agudo de pulmão recorrente ou súbito, insuficiência cardíaca aguda sem explicação adequada ou síndrome cardiorrenal desproporcional podem representar fenótipo renovascular de alto risco.",
+      "Em pessoa jovem, sobretudo mulher, hipertensão com sinais de doença arterial em múltiplos leitos deve levantar a possibilidade de displasia fibromuscular."
+    ],
+    "diagnostic_approach": {
+      "principio": "Distinguir estenose anatômica de hipertensão renovascular causal. Investigar quando a probabilidade clínica é suficiente para que o resultado mude tratamento; não rastrear por imagem apenas porque o paciente tem hipertensão.",
+      "sbc_2025": "A Diretriz Brasileira de Hipertensão Arterial 2025 lista estenose de artéria renal entre causas de hipertensão secundária e sugere investigação diante de início abrupto/piora sem causa aparente, hipertensão resistente ou refratária, sopro abdominal, edema agudo de pulmão súbito, alteração renal inexplicada ou associada a bloqueio do SRAA e assimetria renal. O rastreio inclui ultrassonografia com Doppler; angio-TC ou angio-RM podem complementar.",
+      "doppler": "Na ESC 2024 de doenças arteriais periféricas e aórticas, ultrassonografia Doppler das artérias renais é modalidade de imagem de primeira linha na suspeita de estenose de artéria renal (Classe I, nível B). A qualidade depende de operador, janela acústica, anatomia, obesidade e calcificação.",
+      "imagem_seccional": "Angio-TC ou angio-RM são apropriadas para confirmar anatomia quando o Doppler é inconclusivo, para mapear extensão da doença ou para planejamento de intervenção. Escolher conforme função renal, alergia/risco de contraste, dispositivos e disponibilidade.",
+      "angiografia": "Angiografia invasiva é o padrão anatômico e permite avaliação hemodinâmica, mas não deve ser o exame inicial de rotina; reservar para dúvida relevante após imagem não invasiva ou quando uma intervenção está sendo efetivamente considerada.",
+      "testes_nao_recomendados_rotineiramente": "Cintilografia renal com captopril, medidas de renina plasmática provocada e renina de veia renal não devem substituir a avaliação clínica e a imagem vascular contemporânea para investigação rotineira de estenose.",
+      "etiologia": "Caracterizar aterosclerose versus displasia fibromuscular antes de decidir revascularização. Lesão ostial/proximal em adulto mais velho com aterosclerose sistêmica favorece etiologia aterosclerótica; padrão multifocal de artéria de médio calibre em pessoa mais jovem favorece displasia fibromuscular."
+    },
+    "differentials": [
+      "Hipertensão arterial primária com pseudorresistência ou baixa adesão",
+      "Aldosteronismo primário",
+      "Doença renal parenquimatosa",
+      "Apneia obstrutiva do sono",
+      "Feocromocitoma/paraganglioma",
+      "Coarctação de aorta",
+      "Uso de anti-inflamatórios, simpaticomiméticos, estimulantes ou outras substâncias pressoras",
+      "Vasculites de grandes/médios vasos, como arterite de Takayasu, em contexto clínico compatível"
+    ],
+    "tests": [
+      "MAPA ou MRPA quando necessário para confirmar hipertensão resistente verdadeira e afastar efeito do avental branco antes de rotular falha terapêutica.",
+      "Creatinina, TFGe, potássio e relação albumina-creatinina urinária para caracterizar função e dano renal, além de permitir monitorização do tratamento.",
+      "Ultrassonografia renal com avaliação de tamanho dos rins e Doppler de artérias renais como rastreio vascular de primeira linha quando a suspeita clínica é pertinente.",
+      "Angio-TC de artérias renais quando necessária melhor definição anatômica e o uso de contraste iodado for aceitável.",
+      "Angio-RM como alternativa anatômica em situações selecionadas, reconhecendo limitações de disponibilidade, artefatos e potencial de superestimar o grau de estenose.",
+      "Angiografia renal invasiva com avaliação hemodinâmica quando a anatomia permanece duvidosa ou quando a revascularização está sendo planejada.",
+      "Avaliação de aterosclerose sistêmica, lipídios, diabetes, tabagismo e doença arterial em outros territórios quando a etiologia for aterosclerótica."
+    ],
+    "red_flags": [
+      "Edema agudo de pulmão súbito ou recorrente, sobretudo com estenose bilateral importante ou rim único, exige avaliação hospitalar e discussão precoce de doença renovascular de alto risco.",
+      "Hipertensão grave com lesão aguda de órgão-alvo é emergência hipertensiva; estabilização tem prioridade sobre a investigação etiológica detalhada.",
+      "Piora rápida e inexplicada da função renal, oligúria ou injúria renal aguda em suspeita de doença bilateral ou rim único exige avaliação urgente.",
+      "Queda importante da função renal ou hiperpotassemia após bloqueio do SRAA requer revisão imediata de volume, fármacos, bilateralidade e outras causas de injúria renal.",
+      "Hipertensão resistente associada a declínio renal progressivo apesar de terapia otimizada deve motivar avaliação especializada para definir se há falha do manejo clínico e possibilidade de revascularização."
+    ],
+    "ambulatory_flow": [
+      "Confirmar hipertensão fora do consultório quando indicado e revisar técnica de medida, adesão, combinações, doses, sódio, álcool e substâncias pressoras.",
+      "Avaliar pistas de causa renovascular e também causas secundárias concorrentes, em especial aldosteronismo primário e doença renal parenquimatosa.",
+      "Quando a suspeita for clinicamente relevante, iniciar por Doppler de artérias renais e ultrassonografia renal; avançar para angio-TC/angio-RM se o resultado for inconclusivo ou se a anatomia mudar conduta.",
+      "Na estenose aterosclerótica, instituir terapia médica otimizada e prevenção cardiovascular intensiva. A AHA/ACC 2025 recomenda tratamento médico para hipertensão com estenose aterosclerótica de artéria renal (Classe I, nível A).",
+      "Não indicar revascularização rotineira de estenose aterosclerótica unilateral estável. A ESC PAAD 2024 classifica essa estratégia como não recomendada (Classe III, nível A), em concordância com os ensaios randomizados negativos.",
+      "Se houver falha do tratamento clínico com hipertensão resistente, piora progressiva da função renal e/ou insuficiência cardíaca aguda, a AHA/ACC 2025 considera razoável encaminhar para revascularização percutânea (Classe IIa, nível C-EO).",
+      "Na ESC PAAD 2024, revascularização deve ser considerada em estenose aterosclerótica >70% com características de alto risco e sinais de viabilidade renal, inclusive em doença bilateral ou rim único (Classe IIa, nível B). A diretriz ESC de hipertensão 2024 usa gradação mais conservadora em cenários selecionados; registrar qual documento sustenta a decisão em vez de harmonizar artificialmente as classes.",
+      "Na displasia fibromuscular renal sintomática, encaminhar para equipe experiente: a AHA/ACC 2025 considera que angioplastia pode ser razoável (Classe IIb, nível C-LD), enquanto a ESC PAAD 2024 recomenda considerar angioplastia por balão primária com stent de resgate em fenótipo apropriado (Classe IIa, nível B)."
+    ],
+    "emergency_flow": [
+      "Em edema agudo de pulmão, insuficiência cardíaca aguda, emergência hipertensiva ou injúria renal aguda, estabilizar primeiro e pesquisar rapidamente se há doença renovascular bilateral/funcionalmente crítica quando o fenótipo e a história forem compatíveis.",
+      "Não atrasar tratamento da síndrome aguda para obter confirmação eletiva de etiologia; envolver cardiologia, nefrologia e equipe vascular/intervencionista quando houver suspeita de fenótipo renovascular de alto risco.",
+      "Em deterioração renal após bloqueio do SRAA, avaliar estado volêmico, outros nefrotóxicos e causas concorrentes; suspender ou ajustar terapia apenas conforme gravidade e contexto, sem assumir automaticamente estenose bilateral.",
+      "Se a síndrome de alto risco persistir apesar de terapia médica adequada e houver estenose relevante com rim potencialmente viável, discutir revascularização em centro experiente."
+    ],
+    "treatment_summary": "A base é terapia médica e redução global de risco cardiovascular. O CORAL mostrou que, em doença aterosclerótica estudada, acrescentar stent à terapia médica não reduziu o desfecho cardiovascular/renal composto nem seus componentes e produziu apenas pequena redução adicional da pressão sistólica; ASTRAL e outros ensaios também não demonstraram benefício rotineiro. Por isso, não se deve tratar a imagem isoladamente. A AHA/ACC 2025 recomenda terapia médica na estenose aterosclerótica (Classe I/A) e considera razoável encaminhar para revascularização quando o manejo clínico falha, como em hipertensão resistente, piora renal e/ou insuficiência cardíaca aguda (IIa/C-EO). A ESC PAAD 2024 mantém Classe III/A contra revascularização rotineira de doença unilateral e Classe IIa/B para estenose >70% com alto risco e viabilidade renal. As diferenças de gradação entre documentos refletem populações e escopos distintos e devem permanecer explícitas.",
+    "monitoring": [
+      "Pressão arterial domiciliar/ambulatorial, adesão e número de anti-hipertensivos necessários para controle.",
+      "Creatinina/TFGe e potássio após início ou intensificação de bloqueio do SRAA e após mudanças clínicas relevantes.",
+      "Episódios de insuficiência cardíaca, edema pulmonar, internações, progressão de DRC ou surgimento de hipertensão resistente verdadeira.",
+      "Progressão anatômica por Doppler quando o resultado puder mudar decisão terapêutica; não repetir imagem em calendário rígido sem finalidade clínica.",
+      "Após angioplastia/stent, acompanhar pressão, função renal e sinais de reestenose ou complicação vascular conforme protocolo do centro."
+    ],
+    "special_populations": [
+      "Displasia fibromuscular: predomina em mulheres mais jovens e deve ser tratada como doença não aterosclerótica; a estratégia intervencionista não é a mesma do stent rotineiro para aterosclerose.",
+      "Doença renal crônica avançada: risco de contraste e menor reserva renal exigem escolha cuidadosa da modalidade de imagem e avaliação de viabilidade/benefício antes de intervenção.",
+      "Rim único ou estenose bilateral de alto grau: maior risco de deterioração renal e sobrecarga volêmica; esses fenótipos têm limiar mais baixo para discussão especializada quando há sinais de alto risco.",
+      "Aterosclerose poliarterial: intensificar prevenção cardiovascular e pesquisar doença coronariana, carotídea ou periférica conforme sintomas e indicação clínica, sem transformar a estenose renal em indicação automática de intervenção.",
+      "Gestação ou potencial gestacional: bloqueadores do SRAA não são usados durante a gestação; suspeita de displasia fibromuscular exige coordenação com obstetrícia e especialistas vasculares."
+    ],
+    "assistant_questions": [
+      {
+        "id": "resistant_hypertension",
+        "label": "A hipertensão permanece não controlada apesar de esquema apropriado e adesão confirmada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Probabilidade"
+      },
+      {
+        "id": "renal_decline",
+        "label": "Há piora progressiva ou inexplicada da função renal?",
+        "type": "boolean",
+        "required": true,
+        "section": "Alto risco"
+      },
+      {
+        "id": "flash_pulmonary_edema",
+        "label": "Houve edema agudo de pulmão súbito/recorrente ou insuficiência cardíaca aguda sem explicação suficiente?",
+        "type": "boolean",
+        "required": true,
+        "section": "Alto risco"
+      },
+      {
+        "id": "renal_artery_imaging",
+        "label": "Há imagem vascular que documente estenose renal e defina unilateralidade/bilateralidade e gravidade?",
+        "type": "boolean",
+        "section": "Diagnóstico"
+      },
+      {
+        "id": "fmd_phenotype",
+        "label": "O fenótipo sugere displasia fibromuscular em vez de aterosclerose?",
+        "type": "boolean",
+        "section": "Etiologia"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "rvh-high-risk",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "flash_pulmonary_edema",
+              "op": "truthy"
+            },
+            {
+              "field": "renal_decline",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Edema pulmonar súbito/recorrente ou deterioração renal progressiva podem marcar doença renovascular de alto risco."
+          ],
+          "messages": [
+            "Avaliação especializada precoce é necessária; se houver síndrome aguda, estabilização hospitalar tem prioridade."
+          ]
+        }
+      },
+      {
+        "id": "rvh-resistant",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "resistant_hypertension",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Hipertensão resistente verdadeira é indicação para investigação dirigida de causas secundárias, incluindo doença renovascular quando o fenótipo é compatível."
+          ],
+          "suggested_tests": [
+            "Doppler de artérias renais se a suspeita clínica for suficiente para mudar conduta"
+          ]
+        }
+      },
+      {
+        "id": "rvh-no-imaging",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "renal_artery_imaging",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Anatomia das artérias renais por método não invasivo apropriado quando houver indicação clínica"
+          ]
+        }
+      },
+      {
+        "id": "rvh-fmd",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "fmd_phenotype",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Displasia fibromuscular renal é entidade distinta da estenose aterosclerótica; angioplastia pode ter papel maior e a indicação deve ser discutida em centro experiente."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "hipertensão renovascular",
+      "estenose de artéria renal",
+      "displasia fibromuscular",
+      "hipertensão resistente",
+      "edema agudo de pulmão",
+      "doença renal crônica",
+      "CORAL",
+      "SBC 2025",
+      "ESC 2024",
+      "AHA ACC 2025"
+    ],
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI:10.36660/abc.20250624.",
+      "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI:10.1093/eurheartj/ehae178.",
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI:10.1093/eurheartj/ehae179. PMID:39210722.",
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18). DOI:10.1016/j.jacc.2025.05.007.",
+      "Cooper CJ, Murphy TP, Cutlip DE, et al; CORAL Investigators. Stenting and Medical Therapy for Atherosclerotic Renal-Artery Stenosis. N Engl J Med. 2014;370:13-22. DOI:10.1056/NEJMoa1310753. PMID:24245566.",
+      "Wheatley K, Ives N, Gray R, et al. Revascularization versus Medical Therapy for Renal-Artery Stenosis. N Engl J Med. 2009;361:1953-1962. PMID:19907042."
+    ],
+    "source_urls": [
+      "https://abccardiol.org/article/diretriz-brasileira-de-hipertensao-arterial-2025/",
+      "https://academic.oup.com/eurheartj/article/45/38/3912/7741010",
+      "https://doi.org/10.1093/eurheartj/ehae179",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2025.05.007",
+      "https://www.nejm.org/doi/full/10.1056/NEJMoa1310753"
+    ],
+    "related_document_slugs": [
+      "doenca-renovascular-diagnostico-e-tratamento-esc-2024",
+      "estenose-aterosclerotica-de-arteria-renal-o-ensaio-coral-e-o-fim-do-stent-rotineiro",
+      "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria"
+    ],
+    "patient_material_slug": null,
+    "review_note": "Revisado em 29/08/2026 contra a Diretriz Brasileira de Hipertensão Arterial 2025, a diretriz AHA/ACC multisocietária de hipertensão 2025, as diretrizes ESC 2024 de hipertensão e de doenças arteriais periféricas/aórticas, e os ensaios CORAL/ASTRAL. As classes e níveis são atribuídos somente ao documento que explicitamente os sustenta. A discrepância de gradação entre documentos ESC 2024 para revascularização seletiva foi preservada, não harmonizada. Os vínculos Tudo com Tudo apontam apenas para documentos já existentes na main."
+  }
+]

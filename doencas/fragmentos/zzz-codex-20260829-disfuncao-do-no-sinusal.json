@@ -1,0 +1,219 @@
+[
+  {
+    "slug": "disfuncao-do-no-sinusal",
+    "name": "Disfunção do nó sinusal",
+    "aliases": [
+      "doença do nó sinusal",
+      "síndrome do nó sinusal",
+      "síndrome do nó sinusal doente",
+      "sick sinus syndrome",
+      "sinus node dysfunction",
+      "síndrome bradi-taqui"
+    ],
+    "area": "geral",
+    "category": "arritmia",
+    "subtype": "bradiarritmia_sinusal",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A disfunção do nó sinusal (DNS) reúne bradicardia sinusal inapropriada, pausas/parada sinusal, bloqueio sinoatrial, incompetência cronotrópica e a forma bradi-taquicardia. O diagnóstico clinicamente relevante exige integrar sintomas ao ritmo e excluir causas reversíveis; frequência cardíaca ou duração de pausa isoladas não definem, por si, indicação de marca-passo. Quando os sintomas são claramente atribuíveis à bradiarritmia, a estimulação cardíaca permanente é recomendada pelas diretrizes ESC, ACC/AHA/HRS e brasileiras. A ficha também aborda monitorização prolongada, incompetência cronotrópica, FA associada, escolha/programação do dispositivo e situações em que não se deve implantar marca-passo.",
+    "epidemiology": "A DNS é uma das principais indicações de marca-passo permanente e sua frequência aumenta fortemente com a idade, refletindo sobretudo fibrose degenerativa progressiva do nó sinusal e do miocárdio atrial. A diretriz brasileira de DCEI 2023 descreve a doença do nó sinusal como a indicação mais comum de estimulação cardíaca artificial em âmbito global, correspondendo aproximadamente à metade dos implantes de marca-passo definitivo. Fibrilação atrial e outras taquiarritmias atriais coexistem com frequência, especialmente na síndrome bradi-taqui. Em pessoas jovens, atletas e durante o sono, bradicardia sinusal pode ser fisiológica e não deve ser rotulada automaticamente como DNS.",
+    "presentation": [
+      "Bradicardia sinusal persistente ou intermitente associada a fadiga, intolerância ao esforço, tontura, pré-síncope ou síncope.",
+      "Pausas sinusais, parada sinusal ou bloqueio sinoatrial, frequentemente intermitentes e dependentes de monitorização ambulatorial para documentação.",
+      "Incompetência cronotrópica com dispneia ou fadiga desproporcional ao esforço e resposta inadequada da frequência cardíaca ao exercício.",
+      "Síndrome bradi-taqui: fibrilação atrial, flutter ou outra taquiarritmia atrial alternando com bradicardia ou pausas pós-conversão.",
+      "Confusão, quedas ou deterioração funcional em idosos podem ser manifestações de hipoperfusão, mas exigem correlação objetiva com a bradicardia.",
+      "Ausência de sintomas apesar de bradicardia de repouso, sobretudo em atleta, sono ou alto tônus vagal, favorece variante fisiológica em vez de indicação de estimulação."
+    ],
+    "diagnostic_approach": {
+      "principio": "Demonstrar que a bradiarritmia é verdadeira, caracterizar o fenótipo e estabelecer correlação temporal entre sintomas e ritmo. A ACC/AHA/HRS 2018 enfatiza que não existe frequência cardíaca mínima nem duração de pausa universal que, isoladamente, determine marca-passo na DNS.",
+      "ecg_e_monitorizacao": "Obter ECG de 12 derivações e comparar com traçados prévios. Escolher Holter, patch/monitor externo, telemetria ou monitor implantável conforme a frequência dos sintomas; a ESC 2021 recomenda monitorização ECG ambulatorial para correlacionar sintomas e bradicardia (Classe I, nível C) e ILR para sintomas/síncope infrequentes, em geral menos de uma vez por mês, quando a avaliação inicial permanece inconclusiva (Classe I, nível A).",
+      "incompetencia_cronotropica": "Quando os sintomas surgem durante ou logo após exercício, realizar teste ergométrico. Na suspeita de incompetência cronotrópica, a ESC 2021 recomenda considerar teste de exercício para confirmar o diagnóstico (Classe IIa, nível B). Interpretar a resposta cronotrópica no contexto de idade, condicionamento e uso de fármacos.",
+      "causas_reversiveis": "Revisar betabloqueadores, verapamil/diltiazem, digoxina, antiarrítmicos, simpaticolíticos, lítio e outras drogas bradicardizantes; pesquisar distúrbios eletrolíticos, disfunção tireoidiana, hipotermia, isquemia, infecção/inflamação, apneia do sono e causas autonômicas. A ESC recomenda testes laboratoriais dirigidos quando houver suspeita clínica de causa potencialmente tratável (Classe I, nível C).",
+      "estrutura_cardiaca": "Ecocardiograma é apropriado quando há suspeita de cardiopatia estrutural, disfunção ventricular ou outra causa associada. CMR/PET e investigação de doença infiltrativa ou inflamatória devem ser reservadas ao fenótipo compatível, especialmente em pacientes mais jovens ou com outras anormalidades de condução.",
+      "eef": "Estudo eletrofisiológico não é exame rotineiro para DNS. Pode ser considerado em síncope com bradicardia sinusal quando testes não invasivos não demonstraram correlação (ESC 2021, Classe IIb, nível B); resultados devem ser interpretados junto ao quadro clínico."
+    },
+    "differentials": [
+      "Bradicardia sinusal fisiológica do atleta, do sono ou por alto tônus vagal.",
+      "Efeito de betabloqueadores, bloqueadores de canal de cálcio não di-hidropiridínicos, digoxina, antiarrítmicos, simpaticolíticos ou lítio.",
+      "Bloqueio atrioventricular, especialmente quando pausas ou bradicardia são interpretadas sem análise das ondas P.",
+      "Extrassístoles atriais bloqueadas simulando pausas sinusais.",
+      "Hipotireoidismo, distúrbios eletrolíticos, hipotermia e outras causas metabólicas.",
+      "Apneia obstrutiva do sono com bradicardia ou pausas noturnas.",
+      "Síncope reflexa/cardioinibitória e hipersensibilidade do seio carotídeo.",
+      "Isquemia miocárdica aguda, miocardite, sarcoidose, amiloidose ou outra cardiopatia estrutural/infiltrativa.",
+      "Fibrilação atrial com resposta ventricular lenta por doença do nó AV ou efeito farmacológico, sem demonstração de DNS."
+    ],
+    "tests": [
+      "ECG de 12 derivações com análise de ritmo sinusal, ondas P, pausas, condução AV e QRS.",
+      "Monitorização ECG ambulatorial escolhida pela frequência dos sintomas: Holter, patch/monitor de eventos, telemetria ou ILR.",
+      "Teste ergométrico quando houver sintomas aos esforços ou suspeita de incompetência cronotrópica.",
+      "Eletrólitos, função renal, TSH e outros exames dirigidos à hipótese de causa reversível; nível de digoxina quando pertinente.",
+      "Ecocardiograma transtorácico quando houver suspeita de doença estrutural ou disfunção ventricular.",
+      "Polissonografia ou avaliação de apneia do sono quando houver sintomas de SAOS ou bradicardia/pausas predominantes durante o sono.",
+      "CMR, PET ou investigação etiológica avançada quando o fenótipo sugerir doença inflamatória, infiltrativa ou genética.",
+      "Estudo eletrofisiológico apenas em cenários selecionados, não como teste de rotina para todo paciente com bradicardia sinusal."
+    ],
+    "red_flags": [
+      "Bradicardia associada a hipotensão, choque, dor torácica isquêmica, edema agudo de pulmão ou alteração do nível de consciência.",
+      "Síncope traumática ou recorrente com bradicardia/pausa documentada.",
+      "Pausa prolongada sintomática ou assistolia documentada, sobretudo se recorrente.",
+      "Bradicardia nova no contexto de síndrome coronariana aguda, miocardite, intoxicação farmacológica ou distúrbio eletrolítico importante.",
+      "Sobreposição com BAV Mobitz II, BAV de alto grau, bloqueio de ramo alternante ou outro distúrbio de condução de maior risco.",
+      "Taquiarritmia atrial seguida de pausas sintomáticas importantes com instabilidade.",
+      "Suspeita de hipercalemia/BRASH, toxicidade digitálica ou intoxicação por bloqueadores nodais.",
+      "Bradicardia em paciente jovem com cardiomiopatia, história familiar de morte súbita ou sinais de doença infiltrativa/inflamatória."
+    ],
+    "ambulatory_flow": [
+      "Confirmar se há sintomas potencialmente relacionados à bradicardia e documentar sua relação temporal com ECG ou monitorização; não usar um corte isolado de frequência ou duração de pausa como indicação automática de marca-passo.",
+      "Identificar e corrigir causas reversíveis ou fisiológicas antes de rotular DNS persistente: fármacos, distúrbios metabólicos, hipotireoidismo, apneia do sono, isquemia e causas autonômicas.",
+      "ESC 2021: em DNS com sintomas claramente atribuíveis à bradiarritmia, estimulação permanente é indicada (Classe I, nível B).",
+      "ACC/AHA/HRS 2018: em sintomas diretamente atribuíveis à DNS, marca-passo permanente é indicado para aumentar a frequência e melhorar sintomas (Classe I, nível C-LD); se a bradicardia sintomática decorrer de terapia necessária sem alternativa, o marca-passo também é recomendado (Classe I, nível C-EO).",
+      "SBC/SOBRAC/SBCCV 2023: DNS espontânea sem causa tratável ou induzida por fármaco necessário e insubstituível, com sintomas documentados relacionados à bradicardia, tem indicação de marca-passo definitivo (Classe I, nível C).",
+      "Na síndrome bradi-taqui sintomática, ESC 2021 recomenda estimulação para corrigir bradiarritmia e permitir tratamento farmacológico, salvo quando ablação da taquiarritmia for preferida (Classe I, nível B); ACC/AHA/HRS 2018 considera marca-passo razoável quando os sintomas são atribuíveis à bradicardia (Classe IIa, nível C-EO).",
+      "Em incompetência cronotrópica com sintomas claros aos esforços, ESC 2021 recomenda considerar DDD com resposta de frequência (Classe IIa, nível B); ACC/AHA/HRS 2018 também considera razoável estimulação com resposta de frequência (Classe IIa, nível C-EO).",
+      "Em paciente com DNS e marca-passo DDD, ESC 2021 recomenda minimizar estimulação ventricular desnecessária por programação (Classe I, nível A).",
+      "Para FA relacionada a bradicardia ou pausas sintomáticas pós-conversão, a ESC 2021 recomenda considerar ablação de FA como estratégia para evitar implante em pacientes selecionados (Classe IIa, nível C). A indicação de anticoagulação permanece baseada no risco tromboembólico da FA, independentemente do marca-passo.",
+      "Não implantar marca-passo para bradicardia sinusal assintomática fisiológica, pausas relacionadas apenas ao sono ou sintomas comprovadamente não relacionados à bradicardia; ACC/AHA/HRS classifica essas situações como Classe III (dano) quando não há outra indicação."
+    ],
+    "emergency_flow": [
+      "Em bradicardia com sinais de instabilidade, priorizar ABC, monitorização contínua, acesso venoso e investigação simultânea de causa reversível.",
+      "Seguir algoritmo de bradicardia sintomática/instável com terapia cronotrópica e estimulação temporária quando necessária; não atrasar pacing em instabilidade refratária.",
+      "Suspender ou antagonizar, quando aplicável e seguro, agentes bradicardizantes suspeitos e corrigir hipercalemia, acidose, hipóxia, hipotermia ou intoxicação.",
+      "Se houver síndrome coronariana aguda, miocardite, toxicidade ou outra causa transitória, tratar a etiologia e reavaliar a necessidade de dispositivo definitivo após estabilização.",
+      "Após estabilização, documentar o mecanismo da bradiarritmia e distinguir DNS de BAV avançado, pois urgência, prognóstico e estratégia de estimulação diferem."
+    ],
+    "treatment_summary": "O tratamento da DNS é orientado por sintomas e causalidade. A primeira etapa é corrigir causas reversíveis e confirmar correlação sintoma-bradicardia. Marca-passo permanente melhora sintomas e qualidade de vida quando a DNS é sintomática, mas não deve ser indicado por um número isolado de frequência cardíaca ou pausa. A seleção do modo deve considerar condução AV, necessidade de resposta de frequência, risco de futura doença de condução, comorbidades e preferência do paciente. Ensaios randomizados sustentam evitar pacing ventricular isolado quando há opção atrial/dupla: no MOST, DDD não melhorou sobrevida livre de AVC versus VVIR, mas reduziu FA, melhorou escores de insuficiência cardíaca e trouxe pequeno ganho de qualidade de vida. O DANPACE mostrou maior FA paroxística e mais reoperações com AAIR versus DDDR, reforçando a escolha individualizada e o papel de DDD(R) em muitos pacientes. Em DDD, programação que preserve condução AV e minimize pacing ventricular desnecessário é recomendada pela ESC.",
+    "monitoring": [
+      "Após decisão conservadora, acompanhar evolução dos sintomas, frequência/pausas, carga de FA e surgimento de distúrbio AV.",
+      "Após marca-passo, realizar seguimento presencial/remoto com avaliação de bateria, limiares, sensibilidade, integridade dos eletrodos, percentuais de pacing e eventos atriais.",
+      "Reavaliar programação em persistência de fadiga/intolerância ao esforço, suspeita de incompetência cronotrópica ou alta carga de pacing ventricular.",
+      "Monitorar FA/AHRE detectada pelo dispositivo e aplicar avaliação apropriada de risco tromboembólico; o marca-passo não substitui prevenção de AVC quando anticoagulação é indicada.",
+      "Revisar fármacos bradicardizantes e necessidade clínica em cada consulta, evitando retirar terapia prognóstica necessária sem avaliar alternativa de estimulação quando houver correlação sintomática."
+    ],
+    "special_populations": [
+      "Atletas e adultos jovens: bradicardia de repouso e pausas noturnas podem ser fisiológicas; exigir sintomas, contexto e documentação antes de diagnosticar DNS.",
+      "Idosos frágeis: quedas e fadiga são multifatoriais; buscar correlação objetiva entre sintomas e bradiarritmia e incorporar prognóstico global e preferências à decisão de dispositivo.",
+      "Apneia obstrutiva do sono: tratar o distúrbio respiratório; bradicardia ou pausas exclusivamente relacionadas ao sono não constituem, isoladamente, indicação de marca-passo.",
+      "FA/síndrome bradi-taqui: integrar estratégia de ritmo/frequência, eventual ablação, necessidade de fármacos e anticoagulação.",
+      "Cardiomiopatia ou FE reduzida: evitar alta carga desnecessária de pacing ventricular direito e selecionar a estratégia de estimulação de acordo com função ventricular e necessidade esperada de pacing.",
+      "Pacientes jovens com início precoce ou fenótipo familiar: considerar etiologia genética, inflamatória ou infiltrativa e avaliação especializada."
+    ],
+    "assistant_questions": [
+      {
+        "id": "snd_instability",
+        "label": "Há hipotensão, choque, dor torácica isquêmica, congestão pulmonar ou alteração do nível de consciência associada à bradicardia?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "snd_symptom_correlation",
+        "label": "Há correlação documentada entre sintomas e bradicardia/pausa sinusal ou incompetência cronotrópica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Indicação"
+      },
+      {
+        "id": "snd_reversible_cause",
+        "label": "Existe causa potencialmente reversível ou fisiológica (fármaco substituível, distúrbio metabólico, hipotireoidismo, sono/apneia, alto tônus vagal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Etiologia"
+      },
+      {
+        "id": "snd_tachy_brady",
+        "label": "Há fibrilação atrial/flutter/taquiarritmia atrial com bradicardia ou pausas pós-conversão?",
+        "type": "boolean",
+        "section": "Fenótipo"
+      },
+      {
+        "id": "snd_exertional_symptoms",
+        "label": "Há fadiga, dispneia ou intolerância ao esforço com suspeita de incompetência cronotrópica?",
+        "type": "boolean",
+        "section": "Fenótipo"
+      }
+    ],
+    "guideline_recommendations": [
+      {
+        "society": "ESC",
+        "year": 2021,
+        "recommendation": "Estimulação cardíaca na DNS quando sintomas podem ser claramente atribuídos à bradiarritmia.",
+        "class": "I",
+        "level": "B"
+      },
+      {
+        "society": "ESC",
+        "year": 2021,
+        "recommendation": "Na forma bradi-taqui sintomática, pacing para corrigir bradiarritmia e permitir tratamento farmacológico, salvo quando ablação da taquiarritmia for preferida.",
+        "class": "I",
+        "level": "B"
+      },
+      {
+        "society": "ESC",
+        "year": 2021,
+        "recommendation": "Em DNS com DDD, minimizar pacing ventricular desnecessário por programação.",
+        "class": "I",
+        "level": "A"
+      },
+      {
+        "society": "ESC",
+        "year": 2021,
+        "recommendation": "Incompetência cronotrópica com sintomas claros ao esforço: considerar DDD com resposta de frequência.",
+        "class": "IIa",
+        "level": "B"
+      },
+      {
+        "society": "ACC/AHA/HRS",
+        "year": 2018,
+        "recommendation": "Sintomas diretamente atribuíveis à DNS: pacing permanente indicado para elevar a frequência e melhorar sintomas.",
+        "class": "I",
+        "level": "C-LD"
+      },
+      {
+        "society": "ACC/AHA/HRS",
+        "year": 2018,
+        "recommendation": "Bradicardia sintomática causada por tratamento necessário sem alternativa: pacing permanente recomendado.",
+        "class": "I",
+        "level": "C-EO"
+      },
+      {
+        "society": "SBC/SOBRAC/SBCCV",
+        "year": 2023,
+        "recommendation": "DNS espontânea sem causa tratável ou induzida por fármaco necessário/insubstituível, com sintomas documentados relacionados à bradicardia: MP definitivo.",
+        "class": "I",
+        "level": "C"
+      }
+    ],
+    "evidence_update": [
+      "MOST (NEJM 2002; n=2010): DDD versus VVIR não reduziu o desfecho primário de morte ou AVC não fatal, mas reduziu fibrilação atrial (HR 0,79; IC95% 0,66–0,94), melhorou escores de insuficiência cardíaca e produziu pequeno ganho de qualidade de vida.",
+      "DANPACE (n=1415): AAIR versus DDDR não mostrou vantagem de sobrevida; AAIR associou-se a maior incidência de FA paroxística e mais reoperações/upgrade, informação incorporada às recomendações modernas de escolha do modo.",
+      "DANPACE II (2023; n=540): minimizar agressivamente pacing atrial com DDD a 40 bpm sem resposta de frequência não reduziu FA versus DDDR a 60 bpm e aumentou síncope/pré-síncope, desaconselhando programação excessivamente baixa apenas para reduzir porcentagem de pacing atrial."
+    ],
+    "references": [
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021. doi:10.1093/eurheartj/ehab364.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140:e382-e482. doi:10.1161/CIR.0000000000000628.",
+      "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. doi:10.36660/abc.20220892.",
+      "Lamas GA, Lee KL, Sweeney MO, et al. Ventricular Pacing or Dual-Chamber Pacing for Sinus-Node Dysfunction. N Engl J Med. 2002;346:1854-1862. doi:10.1056/NEJMoa013040.",
+      "Nielsen JC, Thomsen PEB, Højberg S, et al. A comparison of single-lead atrial pacing with dual-chamber pacing in sick sinus syndrome. Eur Heart J. 2011;32(6):686-696. doi:10.1093/eurheartj/ehr022.",
+      "Kronborg MB, Johansen JB, Riahi S, et al. Atrial pacing minimization in sinus node dysfunction and risk of incident atrial fibrillation: a randomized trial (DANPACE II). Eur Heart J. 2023."
+    ],
+    "source_urls": [
+      "https://academic.oup.com/eurheartj/article/42/35/3427/6358547",
+      "https://doi.org/10.1161/CIR.0000000000000628",
+      "https://doi.org/10.36660/abc.20220892",
+      "https://doi.org/10.1056/NEJMoa013040",
+      "https://doi.org/10.1093/eurheartj/ehr022",
+      "https://pubmed.ncbi.nlm.nih.gov/37638973/"
+    ],
+    "related_document_slugs": [
+      "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+      "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021",
+      "bradicardia-instavel-apos-beta-bloqueador-reconhecimento-e-conduta-na-primeira-hora",
+      "marcapasso-temporario-indicacoes-modos-e-captura"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão científica concluída em 29/08/2026 contra ESC 2021 para pacing/CRT, ACC/AHA/HRS 2018 para bradicardia e distúrbios de condução e Diretriz Brasileira SBC/SOBRAC/SBCCV de DCEI 2023, com incorporação de MOST, DANPACE e DANPACE II para escolha/programação de pacing. Não foi identificado documento posterior que substitua as diretrizes centrais de DNS. Classes e níveis foram mantidos por sociedade, sem extrapolar uma classificação para outra. Relações Tudo com Tudo foram limitadas a documentos já existentes no acervo e diretamente pertinentes."
+  }
+]

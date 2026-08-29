@@ -1,0 +1,439 @@
+[
+  {
+    "slug": "doenca-renal-cronica-e-risco-cardiovascular",
+    "name": "Doença renal crônica e risco cardiovascular",
+    "aliases": [
+      "DRC e coração",
+      "doença renal crônica cardiovascular",
+      "CKD e risco cardiovascular",
+      "doença cardiorrenal crônica"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A doença renal crônica (DRC) é simultaneamente doença de órgão-alvo, amplificador independente de risco cardiovascular e modificador de decisões em hipertensão, insuficiência cardíaca, doença coronariana, arritmias, anticoagulação e procedimentos. O diagnóstico e a estratificação não devem usar creatinina isoladamente: a combinação de taxa de filtração glomerular estimada (TFGe), albuminúria e trajetória temporal define risco renal e cardiovascular. Este verbete é deliberadamente cardiorrenal: organiza o impacto cardiovascular da DRC e a segurança do manejo cardiológico, sem substituir a investigação etiológica e o tratamento nefrológico específico.",
+    "epidemiology": "A DRC é frequente na população adulta e sua coexistência com hipertensão, diabetes, obesidade, aterosclerose e insuficiência cardíaca aumenta de forma marcada a carga de eventos cardiovasculares. A atualização brasileira de prevenção cardiovascular da SBC já reconhecia DRC como marcador de alto risco e recomendava individualizar prevenção conforme função renal, comorbidades e risco global (Classe I, nível C). Em 2026, a ESC publicou sua primeira diretriz dedicada à interface cardiovascular-renal, estruturada no framework STAMP on CKD, e AHA/ACC/ADA/ASN incorporaram a DRC ao continuum cardiovascular-renal-metabólico (CKM). Na prática, a progressão de categoria de TFGe, o aumento da albuminúria e a presença de doença cardiovascular estabelecida devem ser interpretados em conjunto, porque pacientes com a mesma creatinina sérica podem ter riscos muito diferentes.",
+    "presentation": [
+      "Frequentemente assintomática por anos; DRC pode ser identificada apenas por redução persistente da TFGe, albuminúria ou outro marcador de lesão renal",
+      "Hipertensão de difícil controle, aumento da pressão de pulso e hipertrofia ventricular esquerda podem acompanhar a progressão da DRC",
+      "Dispneia, edema, ortopneia e ganho de peso podem refletir congestão e insuficiência cardíaca associadas, e não devem ser atribuídos automaticamente apenas à retenção renal de volume",
+      "Dor torácica ou equivalente anginoso pode ocorrer em contexto de elevada carga aterosclerótica; a DRC também modifica interpretação prognóstica de biomarcadores e risco hemorrágico",
+      "Palpitações, fibrilação atrial e arritmias ventriculares podem ser facilitadas por remodelamento cardíaco e distúrbios eletrolíticos",
+      "Claudicação, déficit neurológico focal ou outros sinais de doença vascular devem ser investigados como manifestação aterosclerótica associada",
+      "Fadiga e intolerância ao esforço podem ser multifatoriais, incluindo anemia, deficiência de ferro, insuficiência cardíaca, uremia e descondicionamento",
+      "Prurido, inapetência, náusea, alteração cognitiva ou pericardite em DRC avançada sugerem complicações urêmicas e exigem avaliação nefrológica urgente"
+    ],
+    "diagnostic_approach": {
+      "confirmacao_da_cronicidade": "Confirmar que a alteração renal persiste por pelo menos 3 meses ou que existe evidência inequívoca de cronicidade. TFGe reduzida de forma isolada em doença aguda deve levantar a hipótese de lesão renal aguda ou LRA sobre DRC antes de rotular doença crônica.",
+      "duplo_eixo_tfge_albuminuria": "Solicitar e interpretar TFGe e relação albumina/creatinina urinária (UACR) em conjunto. A ESC 2026 recomenda o rastreamento de DRC com os dois eixos simultaneamente em pacientes com doença cardiovascular (Classe I, nível C); creatinina sérica isolada não é suficiente. Albuminúria persistente a partir de 30 mg/g já constitui marcador de lesão renal mesmo com TFGe preservada.",
+      "classificacao_cga_e_trajetoria": "Classificar por causa, categoria de TFGe e categoria de albuminúria (CGA, KDIGO) e recuperar valores prévios para definir trajetória. Mudanças rápidas de TFGe, aumento relevante de albuminúria ou discordância entre dados clínicos e creatinina exigem investigação adicional; cistatina C pode refinar a estimativa quando a creatinina é pouco confiável.",
+      "estratificacao_cardiovascular": "Buscar ativamente hipertensão, doença aterosclerótica, insuficiência cardíaca, arritmias e valvopatias. A ESC 2026 recomenda incorporar função renal aos modelos de risco quando aplicável (Classe I, nível B) e reconhece DRC grave como condição de risco cardiovascular muito elevado (Classe I, nível B). O guideline CKM AHA/ACC/ADA/ASN 2026 integra DRC, fatores metabólicos, doença cardiovascular subclínica/estabelecida e estimativas PREVENT em uma mesma trajetória de risco.",
+      "seguranca_farmacologica_e_procedimental": "Antes de prescrever ou realizar procedimento, revisar TFGe atual, eletrólitos, tendência renal, risco de hipovolemia/hiperpotassemia, eliminação renal dos fármacos e necessidade real de contraste. DRC aumenta risco de eventos adversos, mas não deve gerar suspensão automática de terapias prognósticas nem recusa reflexa de procedimentos cardiovasculares potencialmente salvadores.",
+      "diferenciar_drc_de_sindrome_cardiorrenal": "DRC é uma condição crônica definida por persistência de alteração renal; síndrome cardiorrenal descreve interação bidirecional coração-rim em fenótipos agudos ou crônicos. Em paciente com insuficiência cardíaca descompensada e piora de creatinina, interpretar congestão, perfusão, resposta diurética e trajetória clínica antes de assumir lesão renal estrutural progressiva."
+    },
+    "differentials": [
+      "Lesão renal aguda sem DRC prévia — alteração recente de creatinina/diurese sem evidência de cronicidade",
+      "Lesão renal aguda sobre DRC — mudança abrupta sobre função renal previamente alterada, frequentemente com gatilho hemodinâmico, infeccioso, obstrutivo ou medicamentoso",
+      "Síndrome cardiorrenal em insuficiência cardíaca descompensada — elevação de creatinina pode acompanhar congestão e descongestão, com significado diferente de progressão renal crônica isolada",
+      "Obstrução urinária — particularmente quando há hidronefrose, retenção urinária ou fatores anatômicos/urológicos",
+      "Doença glomerular ativa — hematúria glomerular, proteinúria importante, sedimento ativo ou manifestações sistêmicas exigem investigação nefrológica específica",
+      "Redução aparente da TFGe por limitação da creatinina como marcador — extremos de massa muscular, amputação, desnutrição ou outras situações em que cistatina C pode ajudar",
+      "Alteração hemodinâmica esperada após introdução/intensificação de terapias cardiorrenais — deve ser distinguida de lesão renal aguda clinicamente relevante"
+    ],
+    "tests": [
+      "Creatinina sérica com cálculo de TFGe e comparação com valores prévios; interpretar tendência, não apenas um valor isolado",
+      "Relação albumina/creatinina urinária (UACR), com confirmação da persistência quando elevada fora de contexto agudo",
+      "Urina tipo I e sedimento quando houver suspeita etiológica, hematúria, proteinúria ou deterioração inexplicada",
+      "Potássio, sódio e bicarbonato para identificar distúrbios que modificam segurança farmacológica e risco arrítmico",
+      "Hemograma e estudos de ferro quando houver fadiga, dispneia ou suspeita de anemia/deficiência de ferro",
+      "Cistatina C ou equação combinada creatinina-cistatina em situações selecionadas nas quais a creatinina pode estimar mal a função renal",
+      "ECG quando houver sintomas cardiovasculares, distúrbio eletrolítico ou uso de fármacos com repercussão de condução/QT",
+      "Ecocardiograma quando houver sinais ou sintomas de insuficiência cardíaca, valvopatia, hipertrofia ou alteração estrutural",
+      "Ultrassonografia renal quando a etiologia for incerta, houver suspeita de obstrução ou necessidade de avaliar anatomia renal"
+    ],
+    "red_flags": [
+      "Oligúria/anúria nova ou deterioração rápida da função renal, sugerindo LRA ou LRA sobre DRC",
+      "Hiperpotassemia com alteração eletrocardiográfica, arritmia, fraqueza importante ou instabilidade clínica",
+      "Edema agudo de pulmão, hipoxemia, hipotensão ou sinais de hipoperfusão",
+      "Dor torácica aguda, equivalente isquêmico ou instabilidade compatível com síndrome coronariana aguda",
+      "Pericardite, encefalopatia, sangramento inexplicado ou outros sinais de síndrome urêmica em DRC avançada",
+      "Queda acelerada de TFGe ou aumento importante de albuminúria sem explicação, especialmente com hematúria/sedimento ativo",
+      "Suspeita de obstrução urinária com piora renal aguda",
+      "Necessidade de procedimento cardiovascular urgente em DRC avançada: risco renal deve ser mitigado em paralelo, não usado isoladamente para atrasar terapia salvadora"
+    ],
+    "ambulatory_flow": [
+      "Confirmar cronicidade e recuperar TFGe/UACR anteriores; se não houver evidência de pelo menos 3 meses, manter LRA no diferencial",
+      "Classificar causa provável, categoria de TFGe e albuminúria; documentar trajetória e velocidade de progressão",
+      "Revisar pressão arterial, diabetes, tabagismo, lipídios, obesidade, atividade física e doença cardiovascular estabelecida",
+      "Rastrear sinais de insuficiência cardíaca, doença coronariana, fibrilação atrial, doença arterial periférica e doença cerebrovascular conforme contexto",
+      "Revisar medicamentos com benefício cardiorrenal, necessidade de ajuste por função renal, risco de hiperpotassemia e potenciais nefrotóxicos",
+      "Em albuminúria, avaliar bloqueio do sistema renina-angiotensina conforme indicação e tolerância; evitar bloqueio duplo IECA+BRA",
+      "Avaliar elegibilidade a inibidor de SGLT2 segundo diretrizes atuais; o benefício renal dos ensaios DAPA-CKD e EMPA-KIDNEY ocorreu também sem diabetes",
+      "Em diabetes tipo 2 com DRC albuminúrica, considerar finerenona quando indicada, com monitorização apropriada de potássio e função renal; não extrapolar essa evidência para toda DRC não diabética",
+      "Planejar periodicidade de TFGe, UACR e eletrólitos de acordo com risco e após mudanças terapêuticas relevantes",
+      "Encaminhar/co-gerir com nefrologia quando houver risco elevado de progressão, etiologia incerta, complicações da DRC ou aproximação de terapia renal substitutiva"
+    ],
+    "emergency_flow": [
+      "Priorizar a síndrome aguda que ameaça vida — síndrome coronariana, edema pulmonar, arritmia, choque ou emergência eletrolítica — sem permitir que a DRC atrase estabilização",
+      "Verificar creatinina/TFGe, potássio, bicarbonato, diurese e valores prévios para diferenciar DRC estável de LRA sobre DRC",
+      "Em hiperpotassemia com repercussão clínica/eletrocardiográfica, migrar para protocolo de emergência específico; o valor renal crônico não reduz a prioridade arrítmica",
+      "Em insuficiência cardíaca congestiva, avaliar perfusão e resposta à descongestão; não suspender terapia eficaz apenas por elevação moderada e isolada da creatinina sem sinais de hipovolemia ou outra lesão",
+      "Se contraste for essencial para diagnóstico/intervenção urgente, usar estratégia de mitigação renal individualizada e monitorização, evitando veto automático baseado apenas na TFGe",
+      "Solicitar avaliação nefrológica urgente diante de deterioração rápida, complicações urêmicas, distúrbios refratários ou possível necessidade de terapia renal substitutiva"
+    ],
+    "treatment_summary": "O manejo cardiovascular da DRC é multimodal e orientado por risco. Controlar pressão arterial, tabagismo, lipídios, diabetes, peso e atividade física, individualizando metas conforme tolerância, fragilidade e risco. Em DRC albuminúrica, bloqueio do sistema renina-angiotensina permanece base terapêutica quando indicado; a combinação IECA+BRA não deve ser usada para intensificar nefroproteção. Inibidores de SGLT2 reduzem progressão renal em espectro amplo de DRC e o benefício de DAPA-CKD/EMPA-KIDNEY não dependeu da presença de diabetes. Finerenona tem evidência robusta para DRC associada a diabetes tipo 2 e albuminúria, não para toda DRC não diabética. Terapias de insuficiência cardíaca, anticoagulação e antitrombóticos devem ser ajustados ao contexto renal sem abandono reflexo de fármacos prognósticos. A DRC isoladamente não justifica antiagregação em prevenção primária; a decisão depende do risco aterotrombótico e hemorrágico global. Procedimentos com contraste exigem indicação apropriada e mitigação de risco, não proibição automática.",
+    "monitoring": [
+      "TFGe e UACR seriadas, com frequência proporcional à categoria de risco e à velocidade de progressão",
+      "Potássio e outros eletrólitos após mudanças relevantes em bloqueio do SRAA, antagonismo mineralocorticoide, diuréticos ou outras terapias que alterem homeostase",
+      "Pressão arterial e sintomas de hipotensão/ortostatismo, especialmente no idoso, frágil ou durante intensificação terapêutica",
+      "Estado volêmico, peso, edema, dispneia e sinais de congestão quando houver insuficiência cardíaca associada",
+      "Hemograma e ferro conforme estágio/sintomas; anemia não deve ser atribuída automaticamente à DRC sem excluir outras causas",
+      "Revisão periódica de medicamentos renodependentes, nefrotóxicos e interações",
+      "Rastreamento clínico de doença coronariana, arritmias, doença vascular periférica e cerebrovascular de acordo com sintomas e risco",
+      "Planejamento antecipado com nefrologia quando houver progressão para DRC avançada, incluindo discussão de diálise/transplante sem esperar uma emergência"
+    ],
+    "special_populations": [
+      "Diabetes tipo 2: risco cardiovascular e renal é integrado; iSGLT2 e, em pacientes apropriados com DRC albuminúrica, finerenona têm evidência específica. Não extrapolar finerenona para DRC não diabética sem suporte de indicação própria",
+      "Insuficiência cardíaca: interpretar variações de creatinina no contexto de congestão, perfusão e resposta à terapia; preservar tratamentos prognósticos quando clinicamente tolerados",
+      "Fibrilação atrial/anticoagulação: escolha e dose de anticoagulante dependem da função renal atual e de sua trajetória; reavaliar diante de deterioração renal",
+      "Doença coronariana/procedimentos com contraste: balancear benefício do diagnóstico/revascularização com risco renal; DRC aumenta risco, mas não é contraindicação automática à estratégia invasiva indicada",
+      "Diálise: risco cardiovascular é muito elevado e a evidência de algumas estratégias preventivas difere da DRC não dialítica; individualizar volume, pressão, potássio, arritmias e doença estrutural com equipe cardiorrenal",
+      "Transplante renal/candidato a transplante: exige avaliação cardiovascular proporcional ao risco e coordenação entre cardiologia e nefrologia/transplante",
+      "Idoso e fragilidade: metas pressóricas e intensidade terapêutica devem considerar ortostatismo, quedas, polifarmácia, sarcopenia e menor confiabilidade da creatinina como marcador isolado"
+    ],
+    "assistant_questions": [
+      {
+        "id": "drc_cronicidade_confirmada",
+        "label": "Há evidência de alteração renal persistente por pelo menos 3 meses ou outra evidência inequívoca de cronicidade?",
+        "type": "boolean",
+        "required": true,
+        "section": "Confirmação diagnóstica"
+      },
+      {
+        "id": "drc_tfge_disponivel",
+        "label": "Há TFGe atual disponível e comparável com valores prévios?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estratificação renal"
+      },
+      {
+        "id": "drc_uacr_disponivel",
+        "label": "Há relação albumina/creatinina urinária (UACR) recente disponível?",
+        "type": "boolean",
+        "required": true,
+        "section": "Estratificação renal"
+      },
+      {
+        "id": "drc_piora_aguda_oliguria",
+        "label": "Há oligúria/anúria nova ou piora rápida da função renal em relação ao basal?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "drc_hipercalemia_instabilidade",
+        "label": "Há hiperpotassemia conhecida/suspeita com alteração de ECG, arritmia, fraqueza importante ou instabilidade clínica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "drc_edema_pulmonar_instabilidade",
+        "label": "Há dispneia aguda com edema pulmonar/hipoxemia, hipotensão ou sinais de hipoperfusão?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "drc_sintomas_isquemicos_neurologicos",
+        "label": "Há dor torácica aguda/equivalente isquêmico ou déficit neurológico focal de início agudo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "drc_diabetes_tipo_2",
+        "label": "Há diabetes mellitus tipo 2 associado?",
+        "type": "boolean",
+        "required": false,
+        "section": "Comorbidades"
+      },
+      {
+        "id": "drc_insuficiencia_cardiaca",
+        "label": "Há insuficiência cardíaca associada?",
+        "type": "boolean",
+        "required": false,
+        "section": "Comorbidades"
+      },
+      {
+        "id": "drc_contraste_planejado",
+        "label": "Há procedimento cardiovascular com contraste planejado ou em consideração?",
+        "type": "boolean",
+        "required": false,
+        "section": "Procedimentos"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "drc-emergencia-hipercalemia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "drc_hipercalemia_instabilidade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível emergência eletrolítica/arrítmica em DRC"
+          ],
+          "suggested_tests": [
+            "ECG e potássio sérico com avaliação imediata do contexto ácido-base e renal"
+          ],
+          "emergency_flow": [
+            "Migrar imediatamente para protocolo de hiperpotassemia/arrítmia; DRC crônica não reduz a prioridade da instabilidade elétrica"
+          ]
+        }
+      },
+      {
+        "id": "drc-emergencia-congestao-choque",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "drc_edema_pulmonar_instabilidade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível edema agudo de pulmão, choque ou hipoperfusão em paciente com DRC"
+          ],
+          "emergency_flow": [
+            "Estabilizar síndrome cardiovascular aguda e avaliar simultaneamente congestão, perfusão, diurese e função renal"
+          ]
+        }
+      },
+      {
+        "id": "drc-emergencia-isquemia-neurologia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "drc_sintomas_isquemicos_neurologicos",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível síndrome coronariana aguda ou evento cerebrovascular agudo"
+          ],
+          "emergency_flow": [
+            "Migrar para o protocolo agudo correspondente; mitigar risco renal em paralelo sem atrasar diagnóstico/reperfusão indicada"
+          ]
+        }
+      },
+      {
+        "id": "drc-piora-aguda-sobre-cronica",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "drc_piora_aguda_oliguria",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Suspeita de lesão renal aguda sobre DRC"
+          ],
+          "suggested_tests": [
+            "Creatinina/TFGe, eletrólitos, diurese, urina tipo I e investigação etiológica dirigida"
+          ],
+          "messages": [
+            "Não atribuir deterioração aguda à progressão natural da DRC sem pesquisar gatilho reversível"
+          ]
+        }
+      },
+      {
+        "id": "drc-cronicidade-nao-confirmada",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "drc_cronicidade_confirmada",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Cronicidade da alteração renal ainda não demonstrada"
+          ],
+          "messages": [
+            "Manter lesão renal aguda no diferencial e recuperar exames prévios antes de classificar definitivamente como DRC"
+          ]
+        }
+      },
+      {
+        "id": "drc-sem-tfge",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "drc_tfge_disponivel",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "TFGe atual e trajetória renal não disponíveis"
+          ],
+          "suggested_tests": [
+            "Creatinina sérica com cálculo de TFGe e comparação com valores prévios"
+          ]
+        }
+      },
+      {
+        "id": "drc-sem-uacr",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "drc_uacr_disponivel",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Albuminúria não quantificada"
+          ],
+          "suggested_tests": [
+            "Relação albumina/creatinina urinária (UACR)"
+          ],
+          "messages": [
+            "Não estratificar DRC apenas pela creatinina/TFGe quando a albuminúria ainda é desconhecida"
+          ]
+        }
+      },
+      {
+        "id": "drc-diabetes-ckm",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "drc_diabetes_tipo_2",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Diabetes tipo 2 + DRC configura fenótipo de alto risco cardiorrenal/CKM"
+          ],
+          "messages": [
+            "Revisar terapias com benefício cardiorrenal comprovado e elegibilidade específica; finerenona tem evidência própria no fenótipo diabético albuminúrico"
+          ]
+        }
+      },
+      {
+        "id": "drc-insuficiencia-cardiaca",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "drc_insuficiencia_cardiaca",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Insuficiência cardíaca associada aumenta risco cardiorrenal e exige leitura integrada de congestão, perfusão e função renal"
+          ],
+          "messages": [
+            "Evitar interromper terapia prognóstica apenas por pequena variação isolada de creatinina; interpretar tolerância e contexto clínico global"
+          ]
+        }
+      },
+      {
+        "id": "drc-contraste-planejado",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "drc_contraste_planejado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Planejar indicação, minimização de exposição, estado volêmico, medicamentos e monitorização renal; DRC não é veto automático a procedimento cardiovascular necessário"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "doença renal crônica",
+      "DRC",
+      "CKD",
+      "risco cardiovascular",
+      "albuminúria",
+      "TFGe",
+      "cardiorrenal",
+      "CKM",
+      "STAMP on CKD",
+      "iSGLT2"
+    ],
+    "source_refs": [
+      "European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098.",
+      "Ndumele CE, Rodriguez F, Dixon DL, et al. 2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome. J Am Coll Cardiol. 2026. DOI: 10.1016/j.jacc.2026.03.056. PMID: 42265997.",
+      "Levin A, Ahmed SB, Carrero JJ, et al. Executive summary of the KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4):684-701. DOI: 10.1016/j.kint.2023.10.016. PMID: 38519239.",
+      "Précoma DB, Oliveira GMM, Simão AF, et al. Atualização da Diretriz de Prevenção Cardiovascular da Sociedade Brasileira de Cardiologia - 2019. Arq Bras Cardiol. 2019;113(4):787-891. DOI: 10.5935/abc.20190204.",
+      "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383(15):1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396.",
+      "The EMPA-KIDNEY Collaborative Group; Herrington WG, Staplin N, Wanner C, et al. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388(2):117-127. DOI: 10.1056/NEJMoa2204233. PMID: 36331190."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehag098",
+      "https://professional.heart.org/en/science-news/2026-guideline-for-the-prevention-detection-evaluation-and-management-of-ckm-syndrome",
+      "https://pubmed.ncbi.nlm.nih.gov/38519239/",
+      "https://abccardiol.org/article/atualizacao-da-diretriz-de-prevencao-cardiovascular-da-sociedadebrasileira-de-cardiologia-2019/",
+      "https://pubmed.ncbi.nlm.nih.gov/32970396/",
+      "https://pubmed.ncbi.nlm.nih.gov/36331190/"
+    ],
+    "related_document_slugs": [
+      "esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd",
+      "aha-acc-ada-asn-2026-sindrome-cardiovascular-renal-metabolica-ckm",
+      "inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney",
+      "controle-pressorico-na-doenca-renal-cronica-estagios-3-a-5",
+      "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
+      "nefroprotecao-com-bloqueio-do-sraa-na-nefropatia-diabetica-renaal-idnt-e-o-limite-do-ontarget"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub cardiorrenal produzido em 29/08/2026 após auditoria da main e dos PRs abertos. Busca exata não encontrou slug prévio `doenca-renal-cronica-e-risco-cardiovascular`; o PR #692 cobre síndrome cardiorrenal (entidade distinta, centrada na interação coração-rim em insuficiência cardíaca), e o PR #552 cobre LRA em UCO, portanto não há colisão de escopo. A seleção científica foi atualizada com a primeira diretriz ESC dedicada a DCV+DRC, publicada em 28/08/2026 (STAMP on CKD), guideline AHA/ACC/ADA/ASN CKM 2026, KDIGO 2024, contexto brasileiro SBC 2019 e ensaios DAPA-CKD/EMPA-KIDNEY. A busca dirigida não identificou diretriz SBC dedicada a DRC cardiovascular mais recente que substitua o capítulo brasileiro de prevenção; por isso a SBC 2019 é usada apenas como contexto nacional e as recomendações contemporâneas são ancoradas em ESC/AHA-ACC/KDIGO. Seis related_document_slugs foram confirmados como existentes e centrais ao tema no corpus atual. Não foi encontrado material-paciente específico e o vínculo foi mantido nulo. Nenhuma dose de medicamento foi adicionada. Conteúdo novo permanece pendente_revisao e não deve ser publicado sem revisão clínica/editorial humana.",
+    "version": 1,
+    "fonte_producao": "chatgpt"
+  }
+]

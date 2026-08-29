@@ -1,0 +1,151 @@
+[
+  {
+    "slug": "sindrome-cardiovascular-rim-metabolica-ckm",
+    "name": "Síndrome cardiovascular-rim-metabólica (CKM)",
+    "aliases": [
+      "síndrome CKM",
+      "síndrome cardiovascular-renal-metabólica",
+      "cardiovascular-kidney-metabolic syndrome",
+      "saúde cardiovascular-rim-metabólica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A síndrome cardiovascular-rim-metabólica (CKM) é um modelo clínico integrado para reconhecer e tratar, ao longo de um continuum, a interação entre excesso ou disfunção do tecido adiposo, fatores metabólicos, doença renal crônica (DRC), doença cardiovascular subclínica e doença cardiovascular clínica. A diretriz AHA/ACC/ADA/ASN 2026 formalizou o estadiamento 0–4 e recomenda que o estágio seja usado para orientar prevenção, estratificação de risco e intensidade terapêutica. CKM não substitui diagnósticos específicos como obesidade, diabetes, hipertensão, DRC, insuficiência cardíaca ou doença aterosclerótica: funciona como camada transversal que obriga a procurar e tratar os três eixos em conjunto.",
+    "epidemiology": "A carga populacional é muito alta porque obesidade, hipertensão, dislipidemia, pré-diabetes/diabetes e DRC são frequentes e se agrupam. A AHA/ACC estima que quase 90% dos adultos dos Estados Unidos tenham ao menos um fator de risco do espectro CKM; esse número não deve ser extrapolado diretamente para o Brasil, mas ilustra a magnitude do problema. No Brasil, a Diretriz Brasileira Baseada em Evidências de 2025 para obesidade e prevenção cardiovascular reconhece o excesso de peso como determinante relevante de risco aterosclerótico e de insuficiência cardíaca e recomenda avaliação cardiovascular estruturada no adulto com sobrepeso/obesidade. A ESC 2026 acrescenta a DRC como eixo cardiovascular central e recomenda abordagem integrada por TFGe e albuminúria.",
+    "presentation": [
+      "Estágio 0: sem fatores de risco CKM, com peso/cintura, glicemia, pressão arterial, lipídios e função renal normais e sem doença cardiovascular subclínica ou clínica",
+      "Estágio 1: excesso ou disfunção adiposa, incluindo sobrepeso/obesidade, adiposidade abdominal e/ou pré-diabetes, sem fatores metabólicos adicionais ou DRC",
+      "Estágio 2: um ou mais fatores metabólicos relevantes, como hipertensão, hipertrigliceridemia, síndrome metabólica ou diabetes tipo 2, e/ou DRC, sem doença cardiovascular clínica",
+      "Estágio 3: doença cardiovascular subclínica no contexto CKM ou equivalentes de risco, incluindo DRC de muito alto risco ou risco cardiovascular previsto em 10 anos ≥20% pelo PREVENT",
+      "Estágio 4: doença cardiovascular clínica, incluindo doença coronariana, insuficiência cardíaca, AVC, doença arterial periférica ou fibrilação atrial, coexistindo com fatores CKM",
+      "O paciente pode ser assintomático durante grande parte do continuum; o objetivo é detectar risco e lesão antes do primeiro evento cardiovascular ou da progressão renal"
+    ],
+    "diagnostic_approach": {
+      "confirmar_estagio_ckm": "Identificar sistematicamente adiposidade, pressão arterial, perfil glicêmico, lipídios, função renal e presença de doença cardiovascular subclínica/clínica. O estágio CKM é uma síntese de risco e não deve apagar os diagnósticos componentes.",
+      "antropometria_e_adiposidade": "Medir IMC e circunferência da cintura sempre que viável. A diretriz AHA/ACC/ADA/ASN 2026 enfatiza que a cintura acrescenta informação sobre adiposidade abdominal; a diretriz brasileira de obesidade 2025 também recomenda avaliação além do IMC.",
+      "eixo_metabolico": "Avaliar pressão arterial, glicemia de jejum e/ou HbA1c conforme contexto, triglicerídeos e demais componentes do perfil lipídico. Confirmar diagnósticos formais de hipertensão, diabetes, pré-diabetes e dislipidemia pelos respectivos critérios, sem tratá-los como meros marcadores do estágio CKM.",
+      "eixo_renal": "Usar simultaneamente creatinina com TFGe e relação albumina/creatinina urinária (UACR) para caracterizar DRC e risco. A ESC 2026 reforça TFGe + albuminúria no paciente cardiovascular e a diretriz CKM 2026 recomenda UACR além da TFGe para caracterização adequada da DRC.",
+      "risco_prevent": "Nos estágios 0–3, quando o paciente estiver dentro da população de validade do PREVENT e não tiver doença cardiovascular estabelecida, estimar risco de ASCVD, insuficiência cardíaca e doença cardiovascular total em 10 e, quando aplicável, 30 anos. Risco de DCV em 10 anos ≥20% é um dos critérios de estágio 3. Não usar PREVENT como substituto de prevenção secundária.",
+      "doenca_subclinica": "Investigar doença cardiovascular subclínica apenas quando o resultado puder mudar estratificação ou conduta. Cálcio coronariano e avaliação de pré-insuficiência cardíaca podem refinar risco em pacientes selecionados; rastreamento indiscriminado por imagem não é parte obrigatória de todo paciente CKM.",
+      "comorbidades_associadas": "Nos fenótipos apropriados, rastrear apneia obstrutiva do sono e doença hepática esteatótica associada à disfunção metabólica (MASLD), condições explicitamente integradas à avaliação CKM 2026."
+    },
+    "differentials": [
+      "Síndrome metabólica isolada — conceito mais estreito, baseado em agrupamento de fatores metabólicos, sem incorporar todo o continuum renal e cardiovascular do CKM",
+      "Síndrome cardiorrenal clássica — descreve interação bidirecional coração-rim em fenótipos agudos/crônicos e não equivale ao estadiamento CKM 0–4",
+      "Obesidade sem outros fatores CKM — pode corresponder ao estágio 1, mas ainda exige avaliação de cintura, metabolismo, rim e risco cardiovascular",
+      "DRC primária sem adiposidade ou fatores metabólicos — continua podendo posicionar o paciente no continuum CKM, mas requer investigação etiológica renal própria",
+      "Doença cardiovascular estabelecida sem fator metabólico, adiposidade ou DRC — não deve ser rotulada automaticamente como estágio 4 CKM sem componente CKM concomitante",
+      "Doença aguda transitória alterando creatinina ou glicemia — confirmar cronicidade de DRC e diagnósticos metabólicos antes de estadiar"
+    ],
+    "tests": [
+      "Peso, altura, IMC e circunferência da cintura",
+      "Pressão arterial com técnica adequada e, quando indicada, medidas fora do consultório",
+      "Glicemia de jejum e/ou HbA1c conforme risco e contexto clínico",
+      "Perfil lipídico completo",
+      "Creatinina sérica com TFGe",
+      "Relação albumina/creatinina urinária (UACR)",
+      "ECG quando houver indicação clínica, doença cardiovascular conhecida ou suspeita de arritmia",
+      "Ecocardiograma quando houver sinais/sintomas de insuficiência cardíaca ou suspeita estrutural",
+      "Cálcio coronariano ou outros métodos para doença subclínica apenas em pacientes selecionados quando houver potencial de reclassificação e mudança de conduta",
+      "Avaliação direcionada para apneia obstrutiva do sono e MASLD quando o fenótipo clínico justificar"
+    ],
+    "red_flags": [
+      "Dor torácica aguda ou equivalente isquêmico com suspeita de síndrome coronariana aguda",
+      "Dispneia aguda, edema pulmonar, hipoxemia, hipotensão ou sinais de insuficiência cardíaca descompensada/choque",
+      "Déficit neurológico focal ou síndrome compatível com AVC/AIT",
+      "Hipertensão com lesão aguda de órgão-alvo",
+      "Lesão renal aguda, oligúria/anúria, hiperpotassemia importante ou deterioração renal rápida",
+      "Hiperglicemia grave com suspeita de cetoacidose ou estado hiperosmolar",
+      "Arritmia sustentada, síncope de provável origem cardíaca ou instabilidade hemodinâmica"
+    ],
+    "ambulatory_flow": [
+      "Definir o estágio CKM 0–4 e registrar separadamente cada diagnóstico componente",
+      "Medir IMC e cintura; revisar alimentação, atividade física, sono, tabagismo e determinantes sociais que interfiram no tratamento",
+      "Confirmar pressão arterial, glicemia/HbA1c, lipídios, TFGe e UACR; recuperar séries históricas para reconhecer progressão",
+      "Nos estágios 0–3 e dentro da população validada, calcular PREVENT e integrar risco absoluto às decisões preventivas",
+      "Tratar hipertensão, dislipidemia, diabetes, obesidade e DRC segundo suas diretrizes específicas; evitar terapia automática apenas pelo rótulo CKM",
+      "Em diabetes tipo 2 com doença cardiovascular ou risco aumentado, considerar terapias cardioprotetoras com iSGLT2 e/ou terapias baseadas em GLP-1 conforme o fenótipo e as indicações formais",
+      "Na DRC, verificar indicação a bloqueio do SRAA, iSGLT2, antagonista mineralocorticoide não esteroidal e/ou terapia baseada em GLP-1 de acordo com diabetes, albuminúria, TFGe, potássio e evidência aplicável",
+      "Em obesidade, oferecer tratamento longitudinal estruturado; farmacoterapia antiobesidade e cirurgia metabólica/bariátrica devem obedecer indicação, contraindicações e risco-benefício individual",
+      "No estágio 4, priorizar prevenção secundária e tratamento dirigido à doença cardiovascular estabelecida, simultaneamente aos eixos renal e metabólico",
+      "Definir um profissional/coordenador de referência quando múltiplas especialidades estiverem envolvidas, para reduzir fragmentação e duplicidade terapêutica"
+    ],
+    "emergency_flow": [
+      "O estágio CKM não modifica a prioridade ABC nem deve atrasar tratamento da síndrome aguda ameaçadora à vida",
+      "Identificar imediatamente síndrome coronariana aguda, insuficiência cardíaca aguda, AVC, arritmia instável, emergência hipertensiva, crise hiperglicêmica e emergência renal/eletrolítica",
+      "Obter glicemia, creatinina/TFGe e eletrólitos precocemente quando puderem modificar medicação, contraste, volume ou risco arrítmico",
+      "Em doença cardiovascular aguda com DRC, mitigar risco renal sem negar automaticamente terapia cardiovascular comprovadamente benéfica ou urgente",
+      "Após estabilização, reconciliar medicações e reconstruir o estágio CKM para planejar prevenção de recorrência e seguimento coordenado"
+    ],
+    "treatment_summary": "O tratamento da síndrome CKM é orientado pelo estágio, pelo risco absoluto e pelas doenças componentes. Estilo de vida, peso, pressão arterial, lipídios, glicemia, tabagismo e sono formam a base longitudinal. A diretriz AHA/ACC/ADA/ASN 2026 recomenda terapias cardioprotetoras no diabetes e agentes renoprotetores na DRC conforme indicação; iSGLT2, terapias baseadas em GLP-1, bloqueio do sistema renina-angiotensina e antagonismo mineralocorticoide não esteroidal não devem ser prescritos de forma indiscriminada apenas pela presença do rótulo CKM. Na obesidade, perda ponderal sustentada pode promover regressão de estágio e deve ser tratada como alvo clínico, utilizando intervenção comportamental, farmacoterapia ou cirurgia metabólica quando apropriado. No estágio 3, a presença de lesão subclínica ou risco muito elevado exige intensificação preventiva; no estágio 4, a prevenção secundária e a terapia dirigida à doença cardiovascular estabelecida têm prioridade, sempre com ajuste à função renal e às comorbidades metabólicas.",
+    "monitoring": [
+      "Peso, circunferência da cintura e trajetória ponderal",
+      "Pressão arterial e tolerância ao tratamento",
+      "HbA1c/glicemia de acordo com o diagnóstico metabólico",
+      "Perfil lipídico e adesão à terapia hipolipemiante",
+      "TFGe, UACR e potássio, com frequência proporcional ao risco e após mudanças de terapias cardiorrenais",
+      "Sintomas e sinais de insuficiência cardíaca, doença aterosclerótica e arritmias conforme estágio",
+      "Eventos adversos, interações e contraindicações das terapias utilizadas",
+      "Reestadiamento CKM quando houver mudança relevante de peso, fatores metabólicos, DRC, doença subclínica ou evento cardiovascular"
+    ],
+    "special_populations": [
+      "Gestação e puerpério — não extrapolar PREVENT nem farmacoterapias CKM usuais; seguir diretrizes obstétricas específicas e revisar teratogenicidade",
+      "Idoso frágil — individualizar metas, intensidade de perda de peso, pressão arterial e polifarmácia, preservando função e evitando hipotensão/sarcopenia",
+      "DRC avançada ou terapia renal substitutiva — muitas recomendações farmacológicas dependem de TFGe, potássio e evidência específica; co-manejo nefrológico é frequentemente necessário",
+      "Diabetes tipo 2 — priorizar proteção cardiovascular e renal além do controle glicêmico isolado",
+      "Obesidade com insuficiência cardíaca com fração de ejeção preservada — considerar o fenótipo obesidade-ICFEp e terapias com evidência própria, sem reduzir o quadro a descondicionamento",
+      "Adultos jovens — valorizar risco ao longo da vida e prevenção primordial; o risco de 10 anos isolado pode subestimar exposição cumulativa"
+    ],
+    "assistant_questions": [
+      {"id": "doenca_cv_clinica", "label": "Há doença cardiovascular clínica estabelecida (DAC, IC, AVC, DAP ou FA)?", "type": "boolean"},
+      {"id": "doenca_cv_subclinica", "label": "Há doença cardiovascular subclínica documentada ou pré-IC?", "type": "boolean"},
+      {"id": "imc", "label": "Qual é o IMC atual?", "type": "number"},
+      {"id": "cintura_aumentada", "label": "Há adiposidade abdominal/circunferência da cintura aumentada?", "type": "boolean"},
+      {"id": "prediabetes", "label": "Há pré-diabetes?", "type": "boolean"},
+      {"id": "diabetes_tipo2", "label": "Há diabetes tipo 2?", "type": "boolean"},
+      {"id": "hipertensao", "label": "Há hipertensão arterial?", "type": "boolean"},
+      {"id": "hipertrigliceridemia", "label": "Há hipertrigliceridemia ou síndrome metabólica?", "type": "boolean"},
+      {"id": "tfge", "label": "Qual é a TFGe atual (mL/min/1,73 m²)?", "type": "number"},
+      {"id": "uacr", "label": "Qual é a UACR/RAC urinária (mg/g), se disponível?", "type": "number"},
+      {"id": "prevent_10a", "label": "Qual é o risco PREVENT de DCV em 10 anos, se válido para este paciente?", "type": "number"}
+    ],
+    "assistant_rules": [
+      {"id": "ckm_nao_substitui_diagnosticos", "priority": 10, "when": {"all": []}, "add": {"supporting": ["O estágio CKM é uma camada integradora; manter e tratar separadamente os diagnósticos de obesidade, diabetes, hipertensão, DRC, IC, DAC, FA e demais condições presentes."]}},
+      {"id": "estagio4", "priority": 20, "when": {"all": [{"field": "doenca_cv_clinica", "op": "truthy"}]}, "add": {"supporting": ["Doença cardiovascular clínica com fatores CKM sugere estágio 4: priorizar prevenção secundária e terapia dirigida à condição cardiovascular, com integração renal/metabólica."]}},
+      {"id": "estagio3_subclinico", "priority": 30, "when": {"all": [{"field": "doenca_cv_clinica", "op": "falsy"}, {"field": "doenca_cv_subclinica", "op": "truthy"}]}, "add": {"supporting": ["Doença cardiovascular subclínica no contexto CKM sugere estágio 3 e requer prevenção intensificada orientada por risco."]}},
+      {"id": "prevent_alto", "priority": 40, "when": {"all": [{"field": "doenca_cv_clinica", "op": "falsy"}, {"field": "prevent_10a", "op": "gte", "value": 20}]}, "add": {"supporting": ["Risco PREVENT de DCV em 10 anos ≥20% é critério de equivalência de risco para estágio 3 na diretriz CKM 2026, quando o cálculo é válido."]}},
+      {"id": "uacr_ausente", "priority": 50, "when": {"all": [{"field": "uacr", "op": "missing"}]}, "add": {"missing_information": ["Obter UACR/RAC urinária quando indicada; TFGe isolada não caracteriza adequadamente o eixo renal e o risco cardiorrenal."]}},
+      {"id": "seguranca_farmacos", "priority": 60, "when": {"all": [{"field": "tfge", "op": "lt", "value": 45}]}, "add": {"supporting": ["Função renal reduzida modifica elegibilidade, dose e monitorização de várias terapias; conferir indicação específica, TFGe, potássio e bula/diretriz antes de prescrever."]}}
+    ],
+    "tags": [
+      "CKM",
+      "síndrome cardiovascular-rim-metabólica",
+      "prevenção cardiovascular",
+      "obesidade",
+      "diabetes",
+      "doença renal crônica",
+      "hipertensão",
+      "PREVENT",
+      "risco cardiovascular",
+      "Tudo com Tudo"
+    ],
+    "source_refs": [
+      "Ndumele CE, Rodriguez F, Dixon DL, et al. 2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome. J Am Coll Cardiol. Published online June 9, 2026. DOI: 10.1016/j.jacc.2026.03.056; Circulation. DOI: 10.1161/CIR.0000000000001453.",
+      "European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. Framework STAMP on CKD; documento oficial publicado em 28/08/2026.",
+      "Saraiva JFK, Valerio CM, Rached FH, et al. Diretriz Brasileira Baseada em Evidências de 2025 para o Manejo da Obesidade e Prevenção de Doenças Cardiovasculares e Complicações Associadas à Obesidade: Uma Declaração de Posicionamento de Cinco Sociedades Médicas. Arq Bras Cardiol. 2025;122(9):e20250621. DOI: 10.36660/abc.20250621."
+    ],
+    "related_document_slugs": [
+      "esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd",
+      "fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Hub novo produzido e revisado em 29/08/2026. A lacuna foi confirmada por busca do slug na main e auditoria dos PRs abertos; o conceito foi mantido distinto da síndrome cardiorrenal clássica e do hub de DRC. Conteúdo confrontado com a primeira diretriz AHA/ACC/ADA/ASN específica de CKM (09/06/2026), a diretriz ESC/ERA 2026 de DCV+DRC (28/08/2026) e a Diretriz Brasileira Baseada em Evidências de 2025 para obesidade e prevenção cardiovascular. Não foram atribuídas classes/níveis de recomendação onde não houve conferência direta da tabela correspondente; as indicações farmacológicas permanecem condicionadas aos fenótipos/doenças específicos. Os dois related_document_slugs foram validados diretamente na main e patient_material_slug foi mantido null para evitar vínculo órfão.",
+    "version": 1,
+    "fonte_producao": "chatgpt"
+  }
+]

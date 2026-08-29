@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca",
+    "append": {
+      "presentation": [
+        "Melhora da fração de ejeção após tratamento não significa cura da cardiomiopatia: o fenótipo de IC com fração de ejeção melhorada mantém risco de recaída"
+      ],
+      "tests": [
+        "Repetir avaliação de ferro quando houver sintomas persistentes, anemia, internação recente ou resposta clínica inadequada, utilizando ferritina e saturação de transferrina em conjunto",
+        "Na IC com fração de ejeção preservada ou levemente reduzida, procurar sistematicamente causas e imitadores tratáveis, incluindo isquemia, valvopatia, fibrilação atrial, obesidade, doença renal, apneia do sono e amiloidose quando o fenótipo sugerir"
+      ],
+      "red_flags": [
+        "Necessidade crescente de diurético, pressão progressivamente baixa, hiponatremia, piora renal, caquexia ou repetidas idas ao pronto atendimento podem sinalizar transição para IC avançada mesmo antes de choque manifesto",
+        "Nova intolerância a bloqueadores neuro-hormonais previamente tolerados deve levantar suspeita de baixo débito, deterioração renal, distúrbio eletrolítico ou outra descompensação"
+      ],
+      "ambulatory_flow": [
+        "Na ICFEr, priorizar introdução precoce das quatro classes fundamentais em doses toleradas, evitando esperar a titulação máxima de uma classe para só então iniciar as demais",
+        "Na IC com fração de ejeção levemente reduzida ou preservada, incorporar inibidor de SGLT2 quando elegível para reduzir desfechos de insuficiência cardíaca, além do controle de congestão e comorbidades",
+        "Em IC com fração de ejeção melhorada, manter terapia modificadora de prognóstico salvo contraindicação relevante, pois retirada pode favorecer recaída",
+        "Após internação por IC, revisar terapia modificadora de prognóstico antes da alta e organizar reavaliação precoce de sintomas, congestão, pressão, função renal e eletrólitos",
+        "Quando houver repetidas internações, hipotensão limitante, piora renal, necessidade crescente de diurético ou intolerância terapêutica, discutir encaminhamento para equipe de IC avançada sem aguardar choque"
+      ],
+      "monitoring": [
+        "Após iniciar ou intensificar terapia modificadora de prognóstico, revisar pressão, frequência, creatinina e potássio em janela compatível com o fármaco e o risco individual",
+        "Documentar a trajetória da fração de ejeção; pacientes que melhoram para acima de 40% continuam pertencendo ao fenótipo de IC com fração de ejeção melhorada e necessitam seguimento longitudinal",
+        "No pós-alta recente, acompanhar precocemente congestão residual, peso, adesão, acesso aos medicamentos e eventos adversos, período de maior vulnerabilidade para reinternação"
+      ],
+      "special_populations": [
+        "Na IC com obesidade, valores de peptídeos natriuréticos podem ser relativamente baixos; resultado isolado não deve excluir IC quando a probabilidade clínica e a imagem sustentam o diagnóstico",
+        "Na fibrilação atrial e doença renal, peptídeos natriuréticos podem estar elevados por fatores além da congestão; interpretar tendências no contexto clínico"
+      ],
+      "tags": [
+        "ICFEmr",
+        "ICFE melhorada",
+        "SGLT2",
+        "STRONG-HF",
+        "terapia modificadora de prognóstico",
+        "pós-alta"
+      ]
+    }
+  }
+]
