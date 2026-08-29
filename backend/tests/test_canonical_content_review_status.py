@@ -27,7 +27,28 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+# Lote "science overnight" de 29/08/2026 (branch claude/science-overnight-20260829,
+# sem merge): 11 verbetes novos em doencas/fragmentos/ produzidos por pesquisa
+# científica autônoma, com review_status=pendente_revisao por instrução explícita
+# do Rafael (nunca promover automaticamente a revisado). Rastreados aqui apenas
+# para test_disease_fragments_canonical.py (PENDENTES_DOENCAS) — não afeta e não
+# tenta contornar o gate principal desta suíte, que continua corretamente
+# quebrando para qualquer status != revisado até revisão editorial humana.
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        "flutter-atrial-adulto",
+        "wolff-parkinson-white",
+        "bloqueio-de-ramo",
+        "hematoma-intramural-aortico-e-ulcera-penetrante",
+        "doenca-renovascular-e-displasia-fibromuscular",
+        "aortopatias-geneticas-do-adulto",
+        "coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+        "avaliacao-pre-participacao-esportiva",
+        "avaliacao-cardiovascular-perioperatoria",
+        "insuficiencia-cardiaca-pediatrica",
+        "transplante-cardiaco-pediatrico",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
