@@ -3819,10 +3819,13 @@
       "https://abccardiol.org/article/atualizacao-das-diretrizes-em-cardiogeriatria-da-sociedade-brasileira-de-cardiologia-2019/"
     ],
     "review_status": "revisado",
-    "review_note": "Não recomenda retirada automática; toda mudança exige confirmação e plano de monitorização.",
-    "version": 1,
+    "review_note": "Não recomenda retirada automática; toda mudança exige confirmação e plano de monitorização. | Lote vincular Tudo com Tudo 29/08/2026: adicionados 3 related_document_slugs (fluxograma de desprescrição cardiovascular no idoso/fim de vida, consenso científico AHA 2026 sobre desprescrição na polifarmácia cardiovascular, polifarmácia anti-hipertensiva e adesão no idoso), levando o total de 1 para 4. Cada um verificado por leitura direta do documento; review_status mantido inalterado por instrução explícita, apesar dos 3 vínculos novos não terem sido revisados por humano separadamente deste lote — ver nota no PR.",
+    "version": 2,
     "related_document_slugs": [
-      "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao"
+      "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+      "fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida",
+      "desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia-consenso-cientifico-aha-2026",
+      "polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter"
     ],
     "patient_material_slug": "quantos-remedios-sao-demais-polifarmacia-no-idoso-cardiopata"
   },
