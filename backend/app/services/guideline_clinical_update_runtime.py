@@ -8,6 +8,7 @@ conteúdo clínico publicável. Sínteses antigas nessa situação são retirada
 acervo, removidas do índice RAG e reenfileiradas para reconstrução.
 """
 
+import copy
 import logging
 import re
 from datetime import datetime, timezone
@@ -69,6 +70,29 @@ _FALLBACK_MARKERS = (
     "não foi possível acessar",
     "nao foi possivel acessar",
 )
+
+# A análise reconstruída precisa declarar explicitamente o nível de acesso à
+# fonte. Isso evita confundir uma URL de editor/periódico com leitura real do
+# documento. O modelo só pode declarar full_text quando conseguiu inspecionar
+# conteúdo além de título/resumo e identificar pelo menos duas seções/partes do
+# original. Esses campos são exigidos pelo JSON Schema estrito.
+_ORIGINAL_ANALYSIS_SCHEMA = copy.deepcopy(core.ANALYSIS_SCHEMA)
+_ORIGINAL_ANALYSIS_SCHEMA["properties"].update({
+    "source_access_level": {
+        "type": "string",
+        "enum": ["full_text", "abstract_only", "metadata_only", "inaccessible"],
+    },
+    "primary_source_url": {"type": "string"},
+    "original_sections_seen": {"type": "array", "items": {"type": "string"}},
+    "source_access_reason_pt": {"type": "string"},
+})
+_ORIGINAL_ANALYSIS_SCHEMA["required"] = [
+    *_ORIGINAL_ANALYSIS_SCHEMA["required"],
+    "source_access_level",
+    "primary_source_url",
+    "original_sections_seen",
+    "source_access_reason_pt",
+]
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -154,6 +178,40 @@ def _has_primary_content_source(guideline: Guideline, sources: list[str]) -> boo
     return any(_is_primary_content_url(guideline, url) for url in sources)
 
 
+def _normalize_seen_url(value: str) -> str:
+    return re.sub(r"[?#].*$", "", str(value or "").strip()).rstrip("/").casefold()
+
+
+def _source_url_was_seen(primary_url: str, sources: list[str]) -> bool:
+    primary = _normalize_seen_url(primary_url)
+    if not primary:
+        return False
+    if any(_normalize_seen_url(url) == primary for url in sources):
+        return True
+    # Algumas citações do web_search devolvem uma âncora/variante da mesma
+    # página. Aceitamos a mesma origem + caminho-base, mas não apenas o host.
+    primary_base = primary.rsplit("/", 1)[0]
+    return bool(primary_base and any(
+        _normalize_seen_url(url).startswith(primary_base + "/")
+        for url in sources
+    ))
+
+
+def _full_text_access_confirmed(guideline: Guideline, analysis: dict, sources: list[str]) -> bool:
+    primary_url = str(analysis.get("primary_source_url") or "").strip()
+    sections = [
+        re.sub(r"\s+", " ", str(item or "")).strip()
+        for item in (analysis.get("original_sections_seen") or [])
+        if str(item or "").strip()
+    ]
+    return bool(
+        analysis.get("source_access_level") == "full_text"
+        and _is_primary_content_url(guideline, primary_url)
+        and _source_url_was_seen(primary_url, sources)
+        and len(sections) >= 2
+    )
+
+
 def _analyze_source_from_original(guideline: Guideline) -> dict:
     """Reconstrói a síntese somente depois de acessar o documento original."""
     domains = core._domains_for(guideline)
@@ -171,7 +229,17 @@ Não invente classe, nível, dose, corte, estratégia ou mudança. Se o document
 ser efetivamente acessado, NÃO preencha a lacuna com conhecimento geral: registre a limitação e
 não fabrique conteúdo clínico para tornar o texto aparentemente completo.
 
-Use source_url que tenha sido efetivamente consultada. Responda somente no JSON solicitado."""
+Classifique source_access_level com rigor:
+- full_text: você conseguiu efetivamente inspecionar conteúdo do documento além de título e resumo/abstract;
+- abstract_only: você acessou apenas o abstract/resumo;
+- metadata_only: apenas DOI/PubMed/Crossref/título/autores/metadados;
+- inaccessible: nem conteúdo suficiente nem metadados confiáveis foram acessíveis.
+Só use full_text se puder preencher original_sections_seen com pelo menos DUAS seções, partes,
+tabelas ou blocos temáticos realmente observados no original. Não invente nomes de seção.
+primary_source_url deve ser a página efetivamente consultada que contém o documento original,
+não a página DOI/PubMed usada para encontrá-lo. source_access_reason_pt deve explicar brevemente
+o que foi possível ler. Use source_url nas mudanças apenas para páginas efetivamente consultadas.
+Responda somente no JSON solicitado."""
     user_text = (
         f"Organização/indexador: {guideline.org}\n"
         f"Título original: {guideline.titulo}\n"
@@ -184,8 +252,8 @@ Use source_url que tenha sido efetivamente consultada. Responda somente no JSON 
     analysis, sources = core._responses_json(
         instructions=instructions,
         user_text=user_text,
-        schema=core.ANALYSIS_SCHEMA,
-        schema_name="corvia_guideline_analysis",
+        schema=_ORIGINAL_ANALYSIS_SCHEMA,
+        schema_name="corvia_guideline_analysis_original_source",
         allowed_domains=domains,
     )
     for change in analysis.get("key_changes") or []:
@@ -200,10 +268,13 @@ Use source_url que tenha sido efetivamente consultada. Responda somente no JSON 
     analysis["analyzed_at"] = datetime.now(timezone.utc).isoformat()
     analysis["analysis_model"] = core._model()
     analysis["translation_mode"] = "sintese_original_pt_br"
-    analysis["original_source_accessed"] = _has_primary_content_source(guideline, sources)
+    analysis["original_source_accessed"] = _full_text_access_confirmed(
+        guideline, analysis, sources
+    )
     if not analysis["original_source_accessed"]:
         analysis.setdefault("limitations", []).append(
-            "O documento original não foi efetivamente acessado; metadados bibliográficos não são suficientes para publicação."
+            "O texto do documento original não teve leitura integral/substantiva confirmada; "
+            "metadados ou abstract isolados não são suficientes para publicação."
         )
     return analysis
 
@@ -228,7 +299,15 @@ def _analysis_publishable(guideline: Guideline, analysis: dict | None) -> bool:
     ]
     if not _has_primary_content_source(guideline, sources):
         return False
-    if analysis.get("original_source_accessed") is False:
+
+    # Análises novas usam o contrato forte de acesso. Análises legadas sem
+    # esses campos ainda podem permanecer se já forem substantivas, tiverem
+    # fonte primária e não apresentarem assinatura de fallback; as ruins são
+    # reenfileiradas e, a partir daí, passam obrigatoriamente pelo contrato novo.
+    if "source_access_level" in analysis:
+        if not _full_text_access_confirmed(guideline, analysis, sources):
+            return False
+    elif analysis.get("original_source_accessed") is False:
         return False
 
     explicit_changes = [
@@ -280,9 +359,12 @@ def _document_looks_like_fallback(doc) -> bool:
     body = str(getattr(doc, "body_md", "") or "").casefold()
     summary_hits = sum(marker in summary for marker in _FALLBACK_MARKERS)
     body_hits = sum(marker in body for marker in _FALLBACK_MARKERS)
-    bibliographic_only = "identidade bibliográfica confirmada" in summary
+    bibliographic_only = (
+        "identidade bibliográfica confirmada" in summary
+        or "identidade bibliográfica confirmada" in body
+    )
     return bool(
-        bibliographic_only
+        (bibliographic_only and (summary_hits + body_hits) >= 1)
         or (summary_hits >= 1 and body_hits >= 2)
         or (len(summary.split()) < 35 and body_hits >= 3)
     )
