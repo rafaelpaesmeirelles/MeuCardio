@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "doenca-hepatica-metabolica-masld-e-risco-cardiovascular",
+    "name": "Doença hepática metabólica (MASLD) e risco cardiovascular",
+    "aliases": ["MASLD e coração", "esteatose hepática metabólica e risco cardiovascular", "NAFLD e risco cardiovascular", "fígado gorduroso metabólico e coração"],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "cardiometabolica_hepatica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "MASLD é doença hepática esteatótica associada a disfunção metabólica e integra o continuum cardiometabólico. Obesidade, diabetes tipo 2, hipertensão, dislipidemia e doença renal frequentemente coexistem, e a doença cardiovascular aterosclerótica é uma das principais causas de morbimortalidade. O manejo deve combinar estratificação de fibrose hepática com prevenção cardiovascular intensiva e tratamento das comorbidades metabólicas.",
+    "epidemiology": "A antiga NAFLD afeta mais de um quarto da população adulta mundial segundo a AHA 2022; a nomenclatura atual MASLD incorpora explicitamente fatores cardiometabólicos. O risco cardiovascular aumenta em paralelo à carga metabólica, enquanto fibrose avançada é determinante importante dos desfechos hepáticos. O reconhecimento de MASLD deve acionar avaliação cardiovascular e renal, mas não significa que todos tenham ASCVD estabelecida.",
+    "presentation": [
+      "Frequentemente assintomática e descoberta por esteatose em imagem, elevação de aminotransferases ou avaliação de obesidade/diabetes.",
+      "Transaminases normais não excluem MASLD nem fibrose significativa.",
+      "Obesidade visceral, hipertensão, hipertrigliceridemia, diabetes tipo 2, apneia do sono e DRC são pistas de alto risco cardiometabólico.",
+      "Dor torácica, dispneia, claudicação ou déficit neurológico devem ser avaliados como possíveis manifestações cardiovasculares e não atribuídos à doença hepática.",
+      "Sinais de hipertensão portal ou descompensação hepática indicam doença avançada e mudam segurança de fármacos/procedimentos."
+    ],
+    "diagnostic_approach": {
+      "definicao": "Confirmar doença hepática esteatótica e presença de pelo menos um fator cardiometabólico, excluindo/quantificando outras etiologias e consumo de álcool conforme nomenclatura atual.",
+      "fibrose": "EASL-EASD-EASO 2024 recomenda estratégia de case-finding para fibrose em pessoas com fatores cardiometabólicos, enzimas alteradas ou esteatose em imagem, especialmente diabetes tipo 2 ou obesidade com fatores adicionais. Usar abordagem escalonada com FIB-4 e, quando indicado, elastografia/outro teste não invasivo.",
+      "cardiovascular": "Avaliar pressão arterial, lipídios, diabetes, tabagismo, obesidade, função renal e risco cardiovascular absoluto. Na abordagem CKM 2026, integrar estágios cardiometabólicos e, quando aplicável, equações PREVENT para risco de ASCVD, IC e CVD total.",
+      "medicacoes": "Não suspender estatina por esteatose simples ou elevação leve estável de aminotransferases sem evidência de hepatotoxicidade clinicamente relevante; tratar dislipidemia conforme risco cardiovascular.",
+      "mash": "Suspeita de MASH/fibrose avançada requer hepatologia; terapias específicas para MASH dependem de estágio, aprovação regulatória e indicação hepática, não de benefício cardiovascular presumido."
+    },
+    "differentials": ["Doença hepática relacionada ao álcool", "Hepatites virais", "Hepatite autoimune", "Hemocromatose", "Doença de Wilson conforme idade/contexto", "Esteatose induzida por fármacos", "Congestão hepática por insuficiência cardíaca direita", "Doença hepática associada à circulação de Fontan"],
+    "tests": [
+      "Aminotransferases, fosfatase alcalina, bilirrubinas, albumina e INR conforme contexto hepático.",
+      "Hemograma com plaquetas, necessário também para cálculo de escores não invasivos como FIB-4.",
+      "FIB-4 como teste inicial de risco de fibrose quando aplicável; interpretar com cautela em extremos de idade e doença aguda.",
+      "Elastografia transitória ou outro teste de segunda linha quando FIB-4/risco clínico indicar.",
+      "Perfil lipídico, HbA1c/glicemia, pressão arterial, IMC/circunferência e creatinina/TFGe/UACR conforme fenótipo CKM.",
+      "ECG, teste de isquemia ou imagem cardiovascular apenas por indicação clínica/risco; MASLD isolada não justifica rastreamento indiscriminado de DAC por imagem."
+    ],
+    "red_flags": [
+      "Ascite nova, encefalopatia, sangramento digestivo, icterícia progressiva ou coagulopatia sugerem descompensação hepática e requerem avaliação urgente.",
+      "Dor torácica, dispneia aguda, síncope ou déficit neurológico devem seguir protocolos cardiovasculares de emergência.",
+      "Elevação marcada de aminotransferases com sintomas sistêmicos, icterícia ou alteração de INR exige investigação de lesão hepática aguda e não deve ser rotulada como MASLD estável.",
+      "Sinais de insuficiência cardíaca direita/congestão importante exigem considerar hepatopatia congestiva como diagnóstico concorrente."
+    ],
+    "ambulatory_flow": [
+      "Confirmar fenótipo MASLD e excluir causas concorrentes relevantes de esteatose/doença hepática.",
+      "Estratificar fibrose com FIB-4 e teste de segunda linha quando indicado; encaminhar hepatologia em suspeita de fibrose avançada/cirrose ou diagnóstico incerto.",
+      "Tratar agressivamente fatores cardiometabólicos: cessação do tabagismo, atividade física, padrão alimentar saudável, perda ponderal quando necessária, pressão arterial, lipídios, diabetes e DRC.",
+      "Usar terapias para obesidade/diabetes com benefício cardiovascular quando houver indicação independente; EASL 2024 cita incretínicos como semaglutida/tirzepatida para T2D ou obesidade conforme indicação, não como prescrição automática para toda MASLD.",
+      "Manter estatina quando indicada pela prevenção cardiovascular; MASLD não é contraindicação rotineira.",
+      "Considerar cirurgia metabólica/bariátrica em pacientes elegíveis com obesidade conforme critérios próprios.",
+      "Resmetirom ou outra terapia dirigida a MASH deve seguir indicação hepatológica, estágio de fibrose e aprovação local; não usar com objetivo primário de prevenção cardiovascular."
+    ],
+    "emergency_flow": [
+      "Em descompensação hepática, priorizar estabilização, pesquisa de precipitantes e avaliação hepatológica; revisar antitrombóticos e fármacos cardiovasculares conforme sangramento, função renal e hemodinâmica.",
+      "Em SCA/AVC/IC aguda, tratar a síndrome cardiovascular conforme diretrizes e ajustar apenas o que for necessário à função hepática/coagulação; MASLD estável não deve atrasar terapia cardiovascular efetiva.",
+      "Diferenciar congestão hepática aguda por IC direita de progressão primariamente hepática quando houver edema/ascite e piora rápida das enzimas."
+    ],
+    "treatment_summary": "O eixo terapêutico é redução de risco cardiometabólico e prevenção de progressão hepática. EASL-EASD-EASO 2024 recomenda mudanças de estilo de vida, perda ponderal quando apropriada e tratamento ótimo de diabetes, obesidade, hipertensão e dislipidemia. A AHA reconhece MASLD/NAFLD como fator associado a ASCVD, principal causa de morte nesse grupo. A diretriz CKM AHA/ACC/ADA/ASN 2026 reforça abordagem integrada de obesidade, diabetes, rim e CVD. Terapia específica de MASH deve seguir critérios hepáticos e aprovação local.",
+    "monitoring": ["Peso/circunferência e atividade física", "Pressão arterial, lipídios e controle glicêmico", "Função renal e albuminúria quando aplicável", "Aminotransferases e marcadores de função hepática conforme estágio", "FIB-4/elastografia em intervalos definidos pelo risco e diretriz hepatológica", "Sinais de ASCVD, IC e progressão de doença hepática"],
+    "special_populations": [
+      "Diabetes tipo 2: alto risco de MASLD/fibrose; intensificar case-finding e terapias cardiometabólicas com benefício comprovado.",
+      "Obesidade: perda ponderal sustentada melhora o fenótipo metabólico e pode melhorar doença hepática; considerar farmacoterapia/cirurgia quando critérios forem preenchidos.",
+      "ASCVD estabelecida: prevenção secundária tem prioridade; não reduzir intensidade de estatina apenas por MASLD estável.",
+      "Cirrose: farmacoterapia metabólica e antitrombótica exige revisão específica por função hepática, hipertensão portal e risco hemorrágico.",
+      "Insuficiência cardíaca direita: congestão hepática pode coexistir ou mimetizar progressão de MASLD e precisa ser reconhecida."
+    ],
+    "assistant_questions": [
+      {"id":"masld_confirmed","label":"Há esteatose hepática associada a fator cardiometabólico e causas concorrentes avaliadas?","type":"boolean","required":true,"section":"Diagnóstico"},
+      {"id":"fibrosis_assessed","label":"O risco de fibrose foi avaliado com FIB-4 e/ou teste não invasivo apropriado?","type":"boolean","section":"Fibrose"},
+      {"id":"cv_risk_assessed","label":"Pressão, lipídios, diabetes, função renal e risco cardiovascular foram avaliados?","type":"boolean","section":"Cardiovascular"},
+      {"id":"decompensated_liver","label":"Há ascite nova, encefalopatia, sangramento digestivo ou icterícia progressiva?","type":"boolean","required":true,"section":"Red flags"}
+    ],
+    "assistant_rules": [
+      {"id":"masld-decomp","priority":100,"when":{"all":[{"field":"decompensated_liver","op":"truthy"}]},"add":{"risk":"emergencia","red_flags":["Possível descompensação hepática."],"emergency_flow":["Avaliar urgentemente função hepática, sangramento, precipitantes e necessidade de hospitalização."]}},
+      {"id":"masld-fibrosis","priority":75,"when":{"all":[{"field":"fibrosis_assessed","op":"falsy"}]},"add":{"missing_information":["Estratificação não invasiva de fibrose, iniciando por FIB-4 quando aplicável"]}},
+      {"id":"masld-cv","priority":80,"when":{"all":[{"field":"cv_risk_assessed","op":"falsy"}]},"add":{"suggested_tests":["Pressão arterial, perfil lipídico, glicemia/HbA1c e avaliação renal"],"supporting":["MASLD integra um fenótipo cardiometabólico com risco cardiovascular elevado."]}}
+    ],
+    "tags": ["MASLD", "MASH", "esteatose hepatica", "risco cardiovascular", "CKM", "FIB-4", "diabetes", "obesidade", "estatinas"],
+    "source_refs": [
+      "EASL-EASD-EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD). J Hepatol. 2024;81:492-542. doi:10.1016/j.jhep.2024.04.031. PMID:38851997.",
+      "Duell PB, Welty FK, Miller M, et al. Nonalcoholic Fatty Liver Disease and Cardiovascular Risk: A Scientific Statement From the American Heart Association. Arterioscler Thromb Vasc Biol. 2022. doi:10.1161/ATV.0000000000000153.",
+      "Ndumele CE, Rodriguez F, Dixon DL, et al. 2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome. Circulation. 2026. doi:10.1161/CIR.0000000000001453."
+    ],
+    "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/38851997/", "https://professional.heart.org/en/science-news/nonalcoholic-fatty-liver-disease-and-cardiovascular-risk", "https://professional.heart.org/en/science-news/2026-guideline-for-the-prevention-detection-evaluation-and-management-of-ckm-syndrome"],
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo MASLD-cardiovascular. Nenhum PR aberto concorrente ou slug equivalente foi identificado; relações documentais permanecem vazias por ausência de slug central verificado na main. Manter pendente até revisão editorial humana."
+  }
+]
