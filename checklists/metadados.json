@@ -32558,105 +32558,6 @@
     }
   },
   {
-    "slug": "algoritmo-diagnostico-da-amiloidose-cardiaca-cintilografia-escore-de-perugini-e-biopsia",
-    "condicao": "Amiloidose cardíaca — algoritmo diagnóstico: cintilografia, escore de Perugini e biópsia",
-    "resumo": "Checklist focado nos pontos operacionais do algoritmo diagnóstico da amiloidose cardíaca ainda pouco detalhados no corpus: reconhecimento de red flags, a exclusão obrigatória de AL antes de ATTR, a interpretação da cintilografia óssea (escore de Perugini e razão H/CL), seus falsos-positivos, o papel da biópsia/tipagem/sequenciamento, o encaminhamento a centro especializado e as particularidades do manejo farmacológico da IC nessa cardiomiopatia restritiva. Nenhuma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre amiloidose cardíaca foi localizada nas buscas realizadas no PubMed/NCBI; as fontes priorizadas foram o posicionamento da ESC (2021) e o consenso multissocietário ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI de imagem cardiovascular (2019).",
-    "documento_origem": null,
-    "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
-    "source_refs": [
-      "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. DOI: 10.1093/eurheartj/ehab072. PMID: 33825853.",
-      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI: 10.1161/CIRCULATIONAHA.116.021612. PMID: 27143678.",
-      "Perugini E, Guidalotti PL, Salvi F, et al. Noninvasive etiologic diagnosis of cardiac amyloidosis using 99mTc-3,3-diphosphono-1,2-propanodicarboxylic acid scintigraphy. J Am Coll Cardiol. 2005;46(6):1076-1084. DOI: 10.1016/j.jacc.2005.05.073. PMID: 16168294.",
-      "Bokhari S, Castaño A, Pozniakoff T, Deslisle S, Latif F, Maurer MS. (99m)Tc-pyrophosphate scintigraphy for differentiating light-chain cardiac amyloidosis from the transthyretin-related familial and senile cardiac amyloidoses. Circ Cardiovasc Imaging. 2013;6(2):195-201. DOI: 10.1161/CIRCIMAGING.112.000132. PMID: 23400849.",
-      "Bokhari S, Morgenstern R, Weinberg R, et al. Standardization of (99m)Technetium pyrophosphate imaging methodology to diagnose TTR cardiac amyloidosis. J Nucl Cardiol. 2018;25(1):181-190. DOI: 10.1007/s12350-016-0610-4. PMID: 27580616.",
-      "Dorbala S, Ando Y, Bokhari S, et al. ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI Expert Consensus Recommendations for Multimodality Imaging in Cardiac Amyloidosis: Part 1 of 2-Evidence Base and Standardized Methods of Imaging. J Card Fail. 2019;25(11):e1-e39. DOI: 10.1016/j.cardfail.2019.08.001. PMID: 31473268.",
-      "Dorbala S, Ando Y, Bokhari S, et al. ASNC/AHA/ASE/EANM/HFSA/ISA/SCMR/SNMMI Expert Consensus Recommendations for Multimodality Imaging in Cardiac Amyloidosis: Part 2 of 2-Diagnostic Criteria and Appropriate Utilization. J Card Fail. 2019;25(11):854-865. DOI: 10.1016/j.cardfail.2019.08.002. PMID: 31473267.",
-      "Hanna M, Ruberg FL, Maurer MS, et al. Cardiac Scintigraphy With Technetium-99m-Labeled Bone-Seeking Tracers for Suspected Amyloidosis: JACC Review Topic of the Week. J Am Coll Cardiol. 2020;75(22):2851-2862. DOI: 10.1016/j.jacc.2020.04.022. PMID: 32498813.",
-      "Alreshq R, Cozzolino M, Lilleness B, et al. Light Chain Testing Abnormalities Among Patients With Transthyretin Amyloid Cardiomyopathy Referred for Technetium-99m Pyrophosphate Imaging. Am J Cardiol. 2022;181:105-112. DOI: 10.1016/j.amjcard.2022.06.064. PMID: 36028388.",
-      "Tingen HSA, Berends M, Tubben A, et al. Detecting early cardiomyopathy in transthyretin variant carriers: reappraising the diagnostic value of Perugini grade 1 radiotracer uptake on bone scintigraphy. Eur J Nucl Med Mol Imaging. 2025;52(13):5000-5005. DOI: 10.1007/s00259-025-07328-6. PMID: 40404867.",
-      "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Redefining optimal medical therapy for heart failure in amyloid transthyretin cardiomyopathy. Eur J Intern Med. 2026;148:106770. DOI: 10.1016/j.ejim.2026.106770. PMID: 41692652.",
-      "Rapezzi C, Quarta CC, Guidalotti PL, et al. Role of (99m)Tc-DPD scintigraphy in diagnosis and prognosis of hereditary transthyretin-related cardiac amyloidosis. JACC Cardiovasc Imaging. 2011;4(6):659-670. DOI: 10.1016/j.jcmg.2011.03.016. PMID: 21679902."
-    ],
-    "itens": [
-      {
-        "id": "red-flags-inicio-investigacao",
-        "categoria": "Triagem inicial",
-        "obrigatorio": true,
-        "texto": "Iniciar a investigação de amiloidose cardíaca diante de 'red flags' clínicas e ecocardiográficas, mesmo sem espessamento de parede isolado como motivador. Red flags extracardíacas: polineuropatia sensitivo-motora, disautonomia, síndrome do túnel do carpo bilateral (sobretudo se prévia à IC), ruptura espontânea do tendão do bíceps, estenose lombar, equimoses cutâneas espontâneas (periorbitárias), macroglossia e depósitos vítreos. Red flags cardíacas/ecocardiográficas: NT-proBNP desproporcionalmente elevado para o grau de disfunção sistólica/classe funcional, troponina persistentemente elevada sem síndrome coronariana aguda, hiperrefringência miocárdica granular ('granular sparkling'), strain longitudinal global reduzido com padrão de poupança apical (apical sparing), baixa voltagem do QRS desproporcional à espessura da parede do VE, derrame pericárdico e espessamento valvar. A presença desses achados deve disparar a investigação, independentemente de haver hipertrofia ventricular esquerda evidente.",
-        "origem_secao": "Garcia-Pavia et al., posicionamento ESC 2021 (Eur Heart J), seção de reconhecimento clínico ('red flags') e algoritmo diagnóstico."
-      },
-      {
-        "id": "excluir-al-antes-de-tudo",
-        "categoria": "Triagem inicial",
-        "obrigatorio": true,
-        "texto": "Excluir amiloidose de cadeia leve (AL) é o primeiro passo obrigatório do algoritmo, antes de qualquer tentativa de confirmação de ATTR — realizar simultaneamente eletroforese de proteínas séricas e urinárias com imunofixação e dosagem de cadeias leves livres séricas (relação kappa/lambda). Essa ordem não é opcional: tratar erroneamente um paciente com AL como se fosse ATTR (por exemplo, prosseguindo direto para tafamidis com base isolada em cintilografia positiva) atrasa o início da quimioterapia hematológica de uma doença de curso potencialmente fatal em semanas a poucos meses, e a cintilografia óssea pode ser positiva também em pacientes com AL, tornando-a não confiável como critério isolado enquanto uma discrasia de plasmócitos não for descartada.",
-        "origem_secao": "Garcia-Pavia et al., ESC 2021 (algoritmo diagnóstico); Gillmore et al., Circulation 2016 (falsos-positivos da cintilografia associados a AL); Hanna et al., JACC 2020 (necessidade de excluir proteína monoclonal antes de confirmar ATTR)."
-      },
-      {
-        "id": "cintilografia-ossea-apenas-apos-excluir-al",
-        "categoria": "Cintilografia",
-        "obrigatorio": true,
-        "texto": "A cintilografia com traçador ósseo (pirofosfato de tecnécio-99m/PYP, ou DPD/HMDP conforme disponibilidade local) só tem valor diagnóstico definitivo para ATTR quando interpretada em conjunto com a exclusão prévia de discrasia de plasmócitos — nunca isoladamente. Gillmore et al. (2016) demonstraram que a combinação de captação miocárdica grau 2 ou 3 na cintilografia com ausência de proteína monoclonal no sangue/urina tem especificidade e valor preditivo positivo de 100% (IC 98,0-100) para ATTR cardíaca, permitindo diagnóstico não invasivo sem biópsia. Sem essa exclusão prévia, a cintilografia positiva não permite diferenciar ATTR de um subgrupo de pacientes com AL que também capta o traçador.",
-        "origem_secao": "Gillmore et al., Circulation 2016 (critério diagnóstico não invasivo); Hanna et al., JACC 2020 ('cardiac scintigraphy can confirm the diagnosis of ATTR-CM only when combined with blood and urine testing to exclude a monoclonal protein')."
-      },
-      {
-        "id": "escore-perugini-e-razao-h-cl",
-        "categoria": "Cintilografia",
-        "obrigatorio": true,
-        "texto": "A interpretação da cintilografia combina graduação visual semiquantitativa (escore de Perugini, de grau 0 a grau 3, comparando a captação miocárdica com a captação óssea costal) com a razão quantitativa coração/contralateral (H/CL, region of interest sobre o coração corrigida pela contagem no hemitórax contralateral). No estudo de validação de Bokhari et al. (2013), o escore visual foi significativamente maior em ATTR do que em AL (2,9±0,06 vs. 0,8±0,27; p<0,0001), e uma razão H/CL >1,5 discriminou ATTR de AL com 97% de sensibilidade e 100% de especificidade (AUC 0,992). Perugini et al. (2005) descreveram originalmente a técnica de graduação visual comparando captação miocárdica e óssea; Bokhari et al. (2018) padronizaram a metodologia de aquisição (imagem em 1 hora, matriz 256, dose de 10 mCi) para reprodutibilidade do H/CL e do escore visual entre serviços. Nota de rigor: a descrição textual detalhada de cada grau intermediário (1 e 2) da escala de Perugini não foi confirmada literalmente nos resumos/artigos consultados nesta pesquisa — apenas os extremos (grau 0 = ausência de captação; grau 3 = captação miocárdica intensa/difusa) foram verificados com clareza nas fontes citadas; a descrição operacional completa dos graus 1 e 2 deve ser conferida no texto integral antes de publicação.",
-        "origem_secao": "Perugini et al., J Am Coll Cardiol 2005 (escore visual original); Bokhari et al., Circ Cardiovasc Imaging 2013 (validação do escore visual 0-3 e do H/CL >1,5); Bokhari et al., J Nucl Cardiol 2018 (padronização metodológica)."
-      },
-      {
-        "id": "falsos-positivos-cintilografia-pyp",
-        "categoria": "Cintilografia",
-        "obrigatorio": true,
-        "texto": "A cintilografia óssea pode ser positiva sem representar ATTR verdadeira. A principal causa de falso-positivo identificada no maior estudo multicêntrico de validação (Gillmore et al., 2016, n=1217) foi a própria amiloidose AL — os raros falsos-positivos ocorreram quase exclusivamente em pacientes com amiloidose cardíaca de cadeia leve, reforçando por que a exclusão de AL deve preceder a interpretação do exame como diagnóstica de ATTR. Há também relatos específicos de falso-positivo por cardiomiopatia induzida por hidroxicloroquina, documentados tanto em série de pacientes portadores de variante TTR (Tingen et al., 2025) quanto em relatos de caso dedicados (cardiomiopatia por hidroxicloroquina mimetizando amiloidose/miocardiopatia hipertrófica). A revisão de Hanna et al. (JACC 2020) é dedicada a mapear cenários de má interpretação da cintilografia e causas de resultados falso-positivos e falso-negativos, reforçando que o exame deve sempre ser lido no contexto clínico completo, não isoladamente.",
-        "origem_secao": "Gillmore et al., Circulation 2016 (falsos-positivos quase exclusivamente por AL); Tingen et al., Eur J Nucl Med Mol Imaging 2025 (falso-positivo por hidroxicloroquina em portador de variante TTR); Hanna et al., JACC 2020 (revisão de causas de falso-positivo/falso-negativo)."
-      },
-      {
-        "id": "biopsia-endomiocardica-grau-1-ou-discordante",
-        "categoria": "Biópsia/tipagem",
-        "obrigatorio": true,
-        "texto": "Quando a cintilografia resulta em grau 1 (captação leve/equívoca) ou é discordante com a apresentação clínica/outros exames de imagem, ela não preenche o critério não invasivo de diagnóstico (que exige grau 2 ou 3 associado à ausência de proteína monoclonal) — nesses casos, a biópsia endomiocárdica (ou de outro sítio acessível, quando aplicável) com tipagem da fibrila é necessária para esclarecer o diagnóstico. O estudo de Tingen et al. (2025) em portadores de variante TTR com grau 1 mostrou que uma parte já tinha ATTR-CM confirmada por biópsia no basal, outra parte desenvolveu ATTR-CM (ou 'provável ATTR-CM') ao longo do seguimento, e outra parte apresentou sinais de cardiomiopatia sem preencher critérios — evidenciando que grau 1 é uma categoria diagnosticamente indeterminada que exige investigação adicional (biópsia e/ou seguimento longitudinal), não uma conclusão definitiva.",
-        "origem_secao": "Dorbala et al., J Card Fail 2019, Parte 2 (critérios diagnósticos e utilização apropriada da imagem multimodal); Gillmore et al., Circulation 2016 (necessidade de histologia quando grau <2 ou proteína monoclonal presente); Tingen et al., Eur J Nucl Med Mol Imaging 2025 (reavaliação do grau 1 de Perugini)."
-      },
-      {
-        "id": "tipagem-proteina-e-sequenciamento-genetico",
-        "categoria": "Biópsia/tipagem",
-        "obrigatorio": true,
-        "texto": "Sempre que houver biópsia positiva para amiloide (endomiocárdica ou de outro sítio), a tipagem da proteína fibrilar (imuno-histoquímica e, idealmente, espectrometria de massa em tecido) é necessária para confirmar se o depósito é de transtirretina (ATTR) ou de cadeia leve (AL) ou de outro tipo raro, evitando erro de atribuição em casos de proteína monoclonal incidental coexistente. Uma vez confirmado o diagnóstico de ATTR (seja por via não invasiva ou por biópsia), o sequenciamento genético do gene TTR é necessário em todos os casos para diferenciar a forma hereditária (ATTRv) da forma selvagem (ATTRwt) — distinção com implicações prognósticas, terapêuticas e de aconselhamento familiar/rastreamento de parentes. Estudo dedicado ao tema reforça a importância de realizar o estudo genético mesmo em pacientes idosos com apresentação inicialmente sugestiva de forma selvagem, já que variantes patogênicas também ocorrem nessa faixa etária.",
-        "origem_secao": "Garcia-Pavia et al., ESC 2021 (algoritmo: genotipagem para diferenciar ATTRwt de ATTRv após confirmação de ATTR); Dorbala et al., J Card Fail 2019 (Partes 1 e 2, critérios de tipagem e sequenciamento); estudo sobre importância do estudo genético em idosos com amiloidose cardíaca por transtirretina, Medicina Clínica 2023, PMID 37532616."
-      },
-      {
-        "id": "encaminhamento-centro-especializado",
-        "categoria": "Encaminhamento",
-        "obrigatorio": true,
-        "texto": "O encaminhamento a um centro especializado em amiloidose é recomendado assim que a suspeita de AL surgir (para definição rápida da estratégia hematológica, dado o curso potencialmente agressivo) e sempre que forem necessárias técnicas diagnósticas complexas não disponíveis em todo serviço — biópsia endomiocárdica, tipagem por espectrometria de massa e avaliação multidisciplinar (cardiologia, hematologia, genética, neurologia). O posicionamento da ESC explicita que a colaboração entre centros é essencial, pois nem todo centro consegue realizar essas técnicas diagnósticas complexas, e que o tratamento específico da amiloidose AL cardíaca deve ser conduzido por equipes multidisciplinares.",
-        "origem_secao": "Garcia-Pavia et al., ESC 2021 — seção sobre colaboração entre centros e manejo multidisciplinar, especialmente para AL cardíaca."
-      },
-      {
-        "id": "nao-usar-quatro-pilares-icfer-indiscriminadamente",
-        "categoria": "Tratamento — particularidades",
-        "obrigatorio": true,
-        "texto": "Os 'quatro pilares' consagrados da terapia da ICFEr clássica (IECA/BRA/INRA, betabloqueador, antagonista mineralocorticoide e iSGLT2) não devem ser aplicados de forma indiscriminada na amiloidose cardíaca. Revisão recente (Aimo et al., 2026) enfatiza que praticamente não há evidência randomizada de desfecho para betabloqueadores, inibidores do sistema renina-angiotensina/INRA e antagonistas mineralocorticoides especificamente em ATTR-CM, e que dados observacionais mostram intolerância frequente a betabloqueadores e a inibidores do sistema renina-angiotensina nessa população (hipotensão, baixo débito), enquanto os antagonistas mineralocorticoides parecem mais bem tolerados, com associações favoráveis mais consistentes. Os inibidores de SGLT2 têm mostrado boa tolerabilidade em estudos observacionais do mundo real recentes, com sinais (ainda geradores de hipótese) de redução de eventos de IC. A recomendação prática é individualizar a terapia e tratá-la como provisória, priorizando sustentabilidade e benefício hemodinâmico líquido — não a aplicação automática do pacote-padrão de ICFEr.",
-        "origem_secao": "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Redefining optimal medical therapy for heart failure in amyloid transthyretin cardiomyopathy. Eur J Intern Med 2026, PMID 41692652."
-      },
-      {
-        "id": "diureticos-e-evitar-bradicardizantes",
-        "categoria": "Tratamento — particularidades",
-        "obrigatorio": true,
-        "texto": "Diuréticos de alça permanecem a base do controle sintomático de congestão na amiloidose cardíaca, exigindo dose individualizada e, em congestão refratária, associação precoce de diuréticos monitorada de perto (estratégias como diurese guiada por natriurese ou programas de diurese IV ambulatorial são extrapoladas de populações de IC não amiloide, com evidência específica em ATTR ainda limitada). O racional é que, no coração restritivo/infiltrado por amiloide, a fisiologia restritiva e a disautonomia frequente criam uma janela terapêutica estreita, em que pequenas variações de pré-carga ou pós-carga podem precipitar hipotensão, lesão renal aguda e sintomas de baixo débito — por isso a titulação deve ser cautelosa e individualizada, e fármacos bradicardizantes/inotrópicos negativos tendem a ser mal tolerados. Nota de rigor: a formulação mecanística clássica de que 'o débito cardíaco torna-se dependente da frequência cardíaca porque o volume sistólico é relativamente fixo pela rigidez diastólica' é um conceito consolidado na literatura de cardiomiopatias restritivas/infiltrativas, mas não foi encontrada, nas fontes consultadas nesta pesquisa, uma frase específica de diretriz/consenso que enuncie essa relação em uma sentença única e citável — a recomendação prática de cautela com diuréticos e fármacos bradicardizantes está diretamente sourced pela revisão de Aimo et al. (2026); a formulação fisiopatológica do 'débito fixo dependente de frequência' deve ser tratada como racional fisiopatológico amplamente aceito, não como citação literal de guideline, até confirmação em revisão futura.",
-        "origem_secao": "Aimo A, Emdin M, Vergaro G, Gillmore JD, Fontana M. Eur J Intern Med 2026, PMID 41692652 (diuréticos como base do tratamento, janela terapêutica estreita por fisiologia restritiva e disautonomia)."
-      }
-    ],
-    "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
-    }
-  },
-  {
     "slug": "investigacao-por-imagem-e-ecg-na-cardiomiopatia-chagasica-do-rastreio-a-estratificacao-de-risco",
     "condicao": "Cardiomiopatia chagásica — papel de cada modalidade de imagem e ECG na investigação",
     "resumo": "Checklist do papel específico de cada exame — ECG, ecocardiograma, Holter de 24h e ressonância magnética cardíaca (RMC) — na investigação da cardiomiopatia chagásica, da avaliação inicial de todo paciente sororeagente até a estratificação de risco arrítmico e tromboembólico por fibrose e trombo intracavitário. Não repete achados gerais já cobertos no verbete de doença (forma indeterminada, Holter geral) e prioriza fontes brasileiras (SBC/DIC, coortes de referência nacionais).",
@@ -33040,70 +32941,7 @@
     "revisao": {
       "por": null,
       "data": null,
-      "nota": "aguardando revisão editorial"
-    }
-  },
-  {
-    "slug": "manejo-terapeutico-escalonado-da-taquicardia-ventricular-polimorfica-catecolaminergica-cpvt",
-    "condicao": "Taquicardia ventricular polimórfica catecolaminérgica (CPVT) — manejo terapêutico escalonado",
-    "resumo": "Checklist do manejo terapêutico escalonado da CPVT após o diagnóstico: betabloqueador não seletivo como primeira linha, flecainida como terapia adjuvante em arritmia refratária, denervação simpática cardíaca esquerda (LCSD) para casos refratários, indicação criteriosa de CDI (com atenção ao risco de tempestade elétrica por choque) e restrição de exercício vigoroso/esporte competitivo. A literatura é predominantemente composta por coortes multicêntricas observacionais e séries de caso, dado tratar-se de doença rara; as recomendações de classe seguem os consensos HRS/EHRA/APHRS 2013 e ESC 2022.",
-    "documento_origem": null,
-    "theme": "Canalopatias",
-    "review_status": "pendente_revisao",
-    "source_refs": [
-      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013 Dec;10(12):1932-63. doi: 10.1016/j.hrthm.2013.05.014. PMID: 24011539.",
-      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022 Oct 21;43(40):3997-4126. doi: 10.1093/eurheartj/ehac262. PMID: 36017572.",
-      "Leren IS, Saberniak J, Majid E, Haland TF, Edvardsen T, Haugaa KH. Nadolol decreases the incidence and severity of ventricular arrhythmias during exercise stress testing compared with β1-selective β-blockers in patients with catecholaminergic polymorphic ventricular tachycardia. Heart Rhythm. 2016 Feb;13(2):433-40. doi: 10.1016/j.hrthm.2015.09.029. PMID: 26432584.",
-      "Peltenburg PJ, Kallas D, Bos JM, et al. An International Multicenter Cohort Study on β-Blockers for the Treatment of Symptomatic Children With Catecholaminergic Polymorphic Ventricular Tachycardia. Circulation. 2022 Feb 1;145(5):333-344. doi: 10.1161/CIRCULATIONAHA.121.056018. PMID: 34874747.",
-      "van der Werf C, Kannankeril PJ, Sacher F, et al. Flecainide therapy reduces exercise-induced ventricular arrhythmias in patients with catecholaminergic polymorphic ventricular tachycardia. J Am Coll Cardiol. 2011 May 31;57(22):2244-54. doi: 10.1016/j.jacc.2011.01.026. PMID: 21616285.",
-      "Bergeman AT, Lieve KVV, Kallas D, et al. Flecainide Is Associated With a Lower Incidence of Arrhythmic Events in a Large Cohort of Patients With Catecholaminergic Polymorphic Ventricular Tachycardia. Circulation. 2023 Dec 19;148(25):2029-2041. doi: 10.1161/CIRCULATIONAHA.123.064786. PMID: 37886885.",
-      "Wilde AA, Bhuiyan ZA, Crotti L, et al. Left cardiac sympathetic denervation for catecholaminergic polymorphic ventricular tachycardia. N Engl J Med. 2008 May 8;358(19):2024-9. doi: 10.1056/NEJMoa0708006. PMID: 18463378.",
-      "Roston TM, Jones K, Hawkins NM, et al. Implantable cardioverter-defibrillator use in catecholaminergic polymorphic ventricular tachycardia: A systematic review. Heart Rhythm. 2018 Dec;15(12):1791-1799. doi: 10.1016/j.hrthm.2018.06.046. PMID: 30063211.",
-      "van der Werf C, Lieve KV, Bos JM, et al. Implantable cardioverter-defibrillators in previously undiagnosed patients with catecholaminergic polymorphic ventricular tachycardia resuscitated from sudden cardiac arrest. Eur Heart J. 2019 Sep 14;40(35):2953-2961. doi: 10.1093/eurheartj/ehz309. PMID: 31145795.",
-      "Lamba A, Roston TM, Peltenburg PJ, et al. An international multicenter cohort study on implantable cardioverter-defibrillators for the treatment of symptomatic children with catecholaminergic polymorphic ventricular tachycardia. Heart Rhythm. 2024 Oct;21(10):1900-1909. doi: 10.1016/j.hrthm.2024.04.006. PMID: 38588993.",
-      "Ackerman MJ, Zipes DP, Kovacs RJ, Maron BJ. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 10: The Cardiac Channelopathies. J Am Coll Cardiol. 2015 Dec 1;66(21):2424-2428. doi: 10.1016/j.jacc.2015.09.042. PMID: 26542662. (versão espelho: Circulation. 2015 Dec 1;132(22):e326-9. doi: 10.1161/CIR.0000000000000246. PMID: 26527716.)"
-    ],
-    "itens": [
-      {
-        "id": "cpvt-manejo-01",
-        "categoria": "Betabloqueador",
-        "obrigatorio": true,
-        "texto": "Iniciar betabloqueador não seletivo em dose plena tolerada em todo paciente com diagnóstico de CPVT, sintomático ou não (classe I nos consensos). Nadolol (1,0-2,5 mg/kg/dia, dose única diária, quando disponível) é o agente preferido na literatura: em coorte de 34 pacientes (Leren et al., 2016), nadolol associou-se a menor incidência e menor gravidade de arritmia ventricular induzida por esforço no teste ergométrico do que betabloqueadores β1-seletivos (ex. metoprolol, atenolol, bisoprolol). O maior estudo multicêntrico internacional em crianças sintomáticas (Peltenburg et al., Circulation 2022, n=329) reforça a superioridade relativa do nadolol sobre outros betabloqueadores na redução de eventos arrítmicos em análise observacional, mas os autores destacam que os grupos não foram randomizados e que fatores de confusão (gravidade basal, adesão, uso concomitante de flecainida) limitam a força da inferência causal. Onde nadolol não está disponível, propranolol é a alternativa não seletiva mais usada; betabloqueadores β1-seletivos são considerados inferiores e não são a primeira escolha. Não há ensaio clínico randomizado comparando betabloqueadores em CPVT — toda a evidência é observacional/coorte, dado tratar-se de doença rara.",
-        "origem_secao": "Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572); Leren et al. Heart Rhythm 2016 (PMID 26432584); Peltenburg et al. Circulation 2022 (PMID 34874747)"
-      },
-      {
-        "id": "cpvt-manejo-02",
-        "categoria": "Flecainida",
-        "obrigatorio": true,
-        "texto": "Adicionar flecainida ao betabloqueador quando arritmia ventricular sintomática (síncope, tempestade elétrica, taquicardia ventricular sustentada) persiste apesar de betabloqueio otimizado, ou quando o teste ergométrico/Holter seriado mostra arritmia ventricular complexa persistente. O mecanismo proposto vai além do bloqueio clássico do canal de sódio (INa): estudos pré-clínicos sugerem que a flecainida inibe diretamente o receptor de rianodina cardíaco (RyR2), reduzindo o vazamento diastólico de cálcio do retículo sarcoplasmático que dispara a atividade deflagrada (afterdepolarizações tardias) característica da CPVT — mecanismo distinto do seu efeito antiarrítmico clássico de classe IC. Evidência de eficácia clínica: van der Werf et al. (JACC 2011, coorte multicêntrica de 33 pacientes refratários a betabloqueador) mostrou redução ou abolição completa de arritmia ventricular induzida por esforço no teste ergométrico em 76% dos pacientes após adição de flecainida. Coorte multicêntrica maior e mais recente (Bergeman et al., Circulation 2023) associou uso de flecainida a menor incidência de eventos arrítmicos em seguimento longitudinal. Ambos os estudos são coortes observacionais, sem grupo controle randomizado; não usar flecainida em monoterapia (sempre associada a betabloqueador) e observar contraindicações estruturais (cardiopatia estrutural, disfunção de VE, uso concomitante de outros bloqueadores de canal de sódio).",
-        "origem_secao": "van der Werf et al. JACC 2011 (PMID 21616285); Bergeman et al. Circulation 2023 (PMID 37886885); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
-      },
-      {
-        "id": "cpvt-manejo-03",
-        "categoria": "LCSD/simpatectomia",
-        "obrigatorio": false,
-        "texto": "Considerar denervação simpática cardíaca esquerda (LCSD, ressecção do gânglio estrelado inferior e dos três a quatro primeiros gânglios torácicos simpáticos, hoje predominantemente por via toracoscópica) em pacientes com CPVT que mantêm síncope, arritmia ventricular sintomática ou choques de CDI apesar de betabloqueador associado a flecainida em dose otimizada, ou como estratégia para reduzir a carga de choques em portadores de CDI com tempestade elétrica recorrente. A série de referência (Wilde et al., NEJM 2008, 3 pacientes com descrição detalhada dentro de coorte multicêntrica mais ampla de portadores de LQT/CPVT) documentou redução acentuada de eventos arrítmicos após LCSD em pacientes refratários à terapia farmacológica máxima. Estudos observacionais subsequentes (séries de caso multicêntricas, não citadas individualmente aqui) reforçam esse benefício, mas todos compartilham a limitação de tamanho amostral pequeno, ausência de randomização e viés de indicação (pacientes mais graves selecionados para o procedimento). LCSD não abole o risco de morte súbita e não substitui indicação de CDI quando esta já está estabelecida; é adjuvante e não é considerada terapia de primeira linha nos consensos atuais.",
-        "origem_secao": "Wilde et al. NEJM 2008 (PMID 18463378); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
-      },
-      {
-        "id": "cpvt-manejo-04",
-        "categoria": "CDI",
-        "obrigatorio": false,
-        "texto": "Indicar CDI em sobrevivente de parada cardíaca por CPVT que já está em farmacoterapia otimizada (classe I/IIa conforme o consenso), mas evitar CDI como primeira intervenção isolada ou em substituição à otimização farmacológica em pacientes sem história de parada cardíaca — a decisão deve ser individualizada e multidisciplinar. O racional para essa cautela é específico da CPVT: revisão sistemática (Roston et al., Heart Rhythm 2018) e coortes multicêntricas subsequentes (van der Werf et al., Eur Heart J 2019, em sobreviventes de parada cardíaca não diagnosticados previamente; Lamba et al., Heart Rhythm 2024, em crianças sintomáticas) documentam alta incidência de choques inadequados e, mais preocupante, de tempestade elétrica desencadeada pelo próprio choque do CDI — a dor e a descarga adrenérgica do choque podem reiniciar o circuito catecolaminérgico que gera nova taquicardia ventricular polimórfica, criando um ciclo de choques sucessivos. Por isso, quando implantado, recomenda-se programação conservadora (zonas de detecção altas, tempos de detecção prolongados, terapia de sobrestimulação antitaquicardia priorizada sobre choque) e otimização máxima concomitante de betabloqueador, flecainida e, quando indicado, LCSD, para reduzir a chance de o dispositivo ser acionado. Toda essa evidência é de coortes observacionais/registro multicêntrico e séries de caso, sem ensaio randomizado — reflexo da raridade da doença.",
-        "origem_secao": "Roston et al. Heart Rhythm 2018 (PMID 30063211); van der Werf et al. Eur Heart J 2019 (PMID 31145795); Lamba et al. Heart Rhythm 2024 (PMID 38588993); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
-      },
-      {
-        "id": "cpvt-manejo-05",
-        "categoria": "Restrição de exercício",
-        "obrigatorio": true,
-        "texto": "Restringir esporte competitivo e exercício físico vigoroso/extenuante em todo paciente com diagnóstico de CPVT (portador sintomático ou assintomático, incluindo portador genotipado assintomático), independentemente da terapia farmacológica em uso, dado que a descarga adrenérgica do esforço físico é o gatilho fisiopatológico central da arritmia nessa condição. O documento de elegibilidade para atletas competitivos (Ackerman et al., Task Force 10, JACC/Circulation 2015) recomenda afastamento de esportes competitivos de alta intensidade em portadores de CPVT, com possível exceção individualizada para esportes de baixa intensidade dinâmica/estática após avaliação especializada e ausência de arritmia em teste de esforço sob terapia otimizada. Os consensos HRS/EHRA/APHRS 2013 e ESC 2022 reforçam a restrição de exercício vigoroso e de esportes competitivos como parte integral e obrigatória do manejo, mesmo em pacientes assintomáticos e mesmo com controle farmacológico aparente da arritmia ao teste ergométrico, pela impossibilidade de garantir ausência completa de risco residual durante o esforço máximo real de competição.",
-        "origem_secao": "Ackerman et al. JACC/Circulation 2015, Task Force 10 (PMID 26542662 / 26527716); Priori et al. HRS/EHRA/APHRS 2013 (PMID 24011539); Zeppenfeld et al. ESC 2022 (PMID 36017572)"
-      }
-    ],
-    "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
+      "nota": "CORREÇÃO 30/08/2026: auditoria de colisão retroativa (content/**/*.md, não verificado no momento da criação) encontrou sobreposição parcial: o item 'eisenmenger-bosentana-breathe5' se sobrepõe a content/Hipertensão_pulmonar/sindrome-de-eisenmenger-breathe-5-maestro-e-o-que-a-terapia-especifica-entrega.md (mesmo ensaio BREATHE-5); o item 'fontan-anticoagulacao-vigilancia-hepatica' é superado por content/Cardiopatias_congênitas/tromboprofilaxia-na-circulacao-de-fontan.md, que usa uma metanálise em rede (NOAC/varfarina/AAS) mais atual e completa que a fonte usada aqui (RCT Monagle 2011 isolado). Os itens 'ebstein-cirurgia-cone-ablacao', 'cia-civ-criterios-fechamento-adulto' e 'tga-switch-atrial-iart' não tiveram colisão confirmada nesta auditoria. Revisor: considerar descartar/mesclar os dois itens sobrepostos com os documentos já existentes antes de publicar; os demais 3 itens parecem aditivos."
     }
   },
   {
@@ -33163,7 +33001,7 @@
     "revisao": {
       "por": null,
       "data": null,
-      "nota": "aguardando revisão editorial"
+      "nota": "CORREÇÃO 30/08/2026: auditoria de colisão retroativa encontrou content/Insuficiência_cardíaca/vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-perfil-de-expressao-genica-e-dd-cfdna.md, que também descreve o protocolo de biópsia endomiocárdica seriada e graduação ISHLT 0R-3R como contexto antes de focar em métodos não invasivos (AlloMap/AlloSure) — ângulo complementar, não idêntico, ao deste checklist (que cobre biópsia+rejeição celular+AMR+CAV+imunossupressão). Revisor: cotejar a seção de biópsia/graduação ISHLT entre os dois documentos antes de publicar, para evitar contradição ou redundância literal nesse trecho específico; o restante do checklist (AMR, CAV, imunossupressão de manutenção) não teve colisão confirmada."
     }
   },
   {
@@ -33352,68 +33190,6 @@
         "obrigatorio": true,
         "texto": "Atletas competitivas que engravidam podem, em geral, continuar treinando com intensidade vigorosa durante a gestação, desde que sem contraindicação e sob acompanhamento médico e ajuste progressivo de carga conforme o trimestre — dados de revisões de escopo recentes (2022 e 2026) não demonstram efeito adverso consistente de cargas de treinamento elevadas sobre desfechos gestacionais, mas apontam que a base de evidência ainda é limitada, heterogênea e concentrada em modalidades de endurance. Um achado consistente entre esses estudos é que picos de exercício agudo acima de aproximadamente 90% da frequência cardíaca máxima materna foram associados, em testes de esforço controlados, a desacelerações da frequência cardíaca fetal — o que sustenta a orientação de monitorar intensidade (por frequência cardíaca e/ou percepção subjetiva de esforço) e evitar sustentar esforços nessa faixa muito alta, especialmente em testes/provas de curta duração e altíssima intensidade. Encaminhamento para avaliação cardiológica antes de manter treinamento vigoroso é recomendado sempre que houver sintomas cardiovasculares (dispneia desproporcional, palpitações sustentadas, dor torácica, síncope ou pré-síncope aos esforços), história cardiovascular prévia, ou quando a intensidade planejada for próxima de máxima competitiva; não foi localizado, nas fontes revisadas, um protocolo padronizado único de triagem cardiológica pré-participação específico para a atleta grávida — trata-se de decisão clínica individualizada, apoiada por consenso de especialistas.",
         "origem_secao": "Wieloch N et al. BMJ Open Sport Exerc Med 2022 (PMID 36451657); Nolte J et al. Sports Med Open 2026 (PMID 41801540); Bø K et al., IOC expert group Part 1 (PMID 27127296) e Part 5 (PMID 29895607)."
-      }
-    ],
-    "revisao": {
-      "por": null,
-      "data": null,
-      "nota": "aguardando revisão editorial"
-    }
-  },
-  {
-    "slug": "origem-anomala-de-arteria-coronaria-aaoca-caracterizacao-anatomica-cirurgia-e-elegibilidade-esportiva",
-    "condicao": "Origem anômala de artéria coronária (AAOCA) — caracterização de risco, cirurgia e elegibilidade esportiva",
-    "resumo": "AAOCA (com foco na coronária direita anômala do seio esquerdo e na coronária esquerda/tronco anômalo do seio direito) é reconhecida como a segunda causa mais comum de morte súbita cardíaca em atletas jovens, atrás apenas da cardiomiopatia hipertrófica. A estratificação de risco depende do reconhecimento de características anatômicas de alto risco (trajeto interarterial, componente intramural, óstio em fenda, ângulo de saída agudo), de imagem que caracterize esse trajeto com precisão, e de uma decisão compartilhada entre cirurgia e conduta conservadora que também define a elegibilidade para esporte competitivo.",
-    "documento_origem": null,
-    "theme": "Cardiopatias congênitas",
-    "review_status": "pendente_revisao",
-    "source_refs": [
-      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
-      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e698-e800. DOI: 10.1161/CIR.0000000000000603. PMID: 30586767.",
-      "Brothers JA, Frommelt MA, Jaquiss RDB, Myerburg RJ, Fraser CD Jr, Tweddell JS. Expert consensus guidelines: Anomalous aortic origin of a coronary artery [Congenital Heart Surgeons' Society / American Association for Thoracic Surgery]. J Thorac Cardiovasc Surg. 2017;153(6):1440-1457. DOI: 10.1016/j.jtcvs.2016.06.066. PMID: 28274557.",
-      "Van Hare GF, Ackerman MJ, Evangelista JA, et al. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 4: Congenital Heart Disease: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2015;132(22):e281-e291. DOI: 10.1161/CIR.0000000000000240. PMID: 26621645.",
-      "Gaudino M, Di Franco A, Arbustini E, et al. Management of Adults With Anomalous Aortic Origin of the Coronary Arteries: State-of-the-Art Review. Ann Thorac Surg. 2023;116(6):1124-1141. DOI: 10.1016/j.athoracsur.2023.09.025. PMID: 37855783.",
-      "Mery CM, Nathan M, Gräni C, et al. Proposed Standardized Nomenclature for Anomalous Aortic Origin of a Coronary Artery: An International Multidisciplinary Initiative (ICAAC). JACC Cardiovasc Imaging. 2026;19(8):983-1001. DOI: 10.1016/j.jcmg.2026.02.005. PMID: 41902825.",
-      "Molossi S, Agrawal H, Mery CM, et al. Outcomes in Anomalous Aortic Origin of a Coronary Artery Following a Prospective Standardized Approach. Circ Cardiovasc Interv. 2020;13(2):e008445. DOI: 10.1161/CIRCINTERVENTIONS.119.008445. PMID: 32069111.",
-      "Qasim A, Doan TT, Dan Pham T, Reaves-O'Neal D, Sachdeva S, Mery CM, Binsalamah Z, Molossi S. Is Exercise Stress Testing Useful for Risk Stratification in Anomalous Aortic Origin of a Coronary Artery? Semin Thorac Cardiovasc Surg. 2023;35(4):759-768. DOI: 10.1053/j.semtcvs.2022.08.009. PMID: 36041683.",
-      "Angelini P, Uribe C. Anatomic spectrum of left coronary artery anomalies and associated mechanisms of coronary insufficiency. Catheter Cardiovasc Interv. 2018;92(2):313-321. DOI: 10.1002/ccd.27656. PMID: 30051621.",
-      "Uebleis C, Groebner M, von Ziegler F, et al. Combined anatomical and functional imaging using coronary CT angiography and myocardial perfusion SPECT in symptomatic adults with abnormal origin of a coronary artery. Int J Cardiovasc Imaging. 2012;28(7):1763-1774. DOI: 10.1007/s10554-011-9995-y. PMID: 22147107."
-    ],
-    "itens": [
-      {
-        "id": "aaoca-anatomia-risco",
-        "categoria": "Anatomia de risco",
-        "obrigatorio": true,
-        "texto": "Ao descrever anatomicamente uma AAOCA, registrar explicitamente quatro características associadas a maior risco de isquemia/morte súbita: (1) trajeto interarterial (entre a aorta e o tronco da artéria pulmonar); (2) trajeto intramural — o segmento proximal do vaso corre dentro da parede aórtica (túnica média), compartilhando a adventícia com a aorta em vez de ter parede própria; (3) óstio em fenda ('slit-like'); (4) ângulo de saída agudo/tangencial em relação à parede aórtica. Entre esses achados, o componente intramural é apontado como o mecanismo fisiopatológico central: gera compressão lateral dinâmica do lúmen coronariano dentro da parede aórtica, presente em repouso e que se acentua com o aumento da pressão/distensão aórtica e do débito cardíaco ao esforço — mecanismo de estenose funcional variável, e não fixa, o que explica a natureza intermitente da isquemia e sua relação com morte súbita relacionada a exercício. Um vaso puramente interarterial, sem componente intramural, tende a ser considerado de menor risco isoladamente. Documentar também presença de estreitamento proximal/hipoplasia do segmento anômalo, quando houver. Não foi possível confirmar, nas fontes revisadas, um valor numérico único e universalmente aceito de corte (ex.: comprimento em mm do trajeto intramural) que defina 'alto risco' de forma isolada — a classificação de risco combina esses achados anatômicos com o quadro clínico.",
-        "origem_secao": "Brothers JA et al., Expert consensus guidelines: AAOCA, J Thorac Cardiovasc Surg 2017 (PMID 28274557); Angelini P, Uribe C, Catheter Cardiovasc Interv 2018 (PMID 30051621) — mecanismo de compressão dinâmica intramural; Molossi S et al., Circ Cardiovasc Interv 2020 (PMID 32069111) — definição operacional de anatomia de alto risco (anomalia esquerda do seio oposto, intramuralidade, óstio anormal); Mery CM et al., JACC Cardiovasc Imaging 2026 (PMID 41902825) — nomenclatura padronizada dos achados anatômicos."
-      },
-      {
-        "id": "aaoca-imagem-cta",
-        "categoria": "Imagem",
-        "obrigatorio": true,
-        "texto": "Solicitar angiotomografia coronariana (angio-CT) como modalidade de escolha para caracterização anatômica completa de uma AAOCA suspeita ou confirmada, incluindo definição do trajeto (interarterial, intramural, pré-pulmonar, retroaórtico ou septal), relação tridimensional com a aorta e a artéria pulmonar, morfologia e diâmetro do óstio, ângulo de saída e comprimento do segmento intramural — informações que orientam diretamente a decisão entre cirurgia e conduta conservadora. O ecocardiograma transtorácico é útil como método inicial de triagem (é frequentemente o exame que detecta o achado, sobretudo em crianças e adolescentes com boa janela acústica), mas tem limitações reconhecidas para caracterização completa em adultos/atletas (janela acústica variável, dificuldade em definir de forma confiável o componente intramural e a relação exata com os grandes vasos) e não deve ser considerado suficiente, isoladamente, para decisão terapêutica quando há suspeita de anatomia de alto risco. Ressonância magnética cardíaca e ultrassom intravascular (IVUS) têm papel complementar, este último especialmente para avaliar de forma dinâmica a compressão intramural em casos selecionados.",
-        "origem_secao": "Stout KK et al., 2018 AHA/ACC Guideline for ACHD, Circulation 2019 (PMID 30586767); Baumgartner H et al., 2020 ESC Guidelines for ACHD, Eur Heart J 2021 (PMID 32860028); Uebleis C et al., Int J Cardiovasc Imaging 2012 (PMID 22147107) — imagem anatômica (CTA) combinada a imagem funcional; Mery CM et al., JACC Cardiovasc Imaging 2026 (PMID 41902825) — papel central da imagem avançada na caracterização morfológica."
-      },
-      {
-        "id": "aaoca-indicacao-cirurgica",
-        "categoria": "Indicação cirúrgica",
-        "obrigatorio": true,
-        "texto": "Considerar correção cirúrgica (tipicamente 'unroofing'/desteterização do trajeto intramural, com ou sem ostioplastia; reimplante/translocação coronariana é opção em casos selecionados, com maior risco técnico) nas seguintes situações: (a) paciente sintomático — dor torácica, síncope ou pré-síncope relacionados a esforço, arritmia — associado a anatomia de alto risco (intramuralidade, óstio anormal, origem anômala esquerda) ou evidência objetiva de isquemia miocárdica; (b) origem anômala da coronária esquerda/tronco a partir do seio direito (AAOLCA), mesmo assintomática, dado o perfil de risco intrinsecamente maior desse subtipo em relação à origem anômala da coronária direita a partir do seio esquerdo (AAORCA). Conduta conservadora (observação clínica, com decisão individualizada sobre restrição de esforço) pode ser razoável em pacientes assintomáticos com AAORCA sem características anatômicas de alto risco (sem componente intramural relevante, sem óstio em fenda ou estreitamento proximal), conforme abordagem multidisciplinar padronizada que, num estudo prospectivo, manteve a maior parte dos pacientes avaliados (82%) sem restrição de atividade física. A decisão deve ser tomada por equipe multidisciplinar (cardiologia, cirurgia cardíaca congênita, imagem), pesando anatomia, sintomas e evidência de isquemia em conjunto — não existe, nas fontes revisadas, um critério numérico isolado (ex.: milímetros de trajeto intramural) que defina indicação cirúrgica de forma automática.",
-        "origem_secao": "Brothers JA et al., Expert consensus guidelines: AAOCA, J Thorac Cardiovasc Surg 2017 (PMID 28274557) — Congenital Heart Surgeons' Society/AATS; Molossi S et al., Circ Cardiovasc Interv 2020 (PMID 32069111) — abordagem prospectiva padronizada e desfechos; Gaudino M et al., Ann Thorac Surg 2023 (PMID 37855783) — revisão de manejo cirúrgico em adultos."
-      },
-      {
-        "id": "aaoca-elegibilidade-esportiva",
-        "categoria": "Elegibilidade esportiva",
-        "obrigatorio": true,
-        "texto": "Em AAOCA não operada com anatomia de alto risco (particularmente origem anômala da coronária esquerda/tronco a partir do seio direito), as recomendações de elegibilidade esportiva da força-tarefa conjunta AHA/ACC para atletas competitivos com anormalidades cardiovasculares (Task Force 4 — cardiopatia congênita) orientam restrição a esportes competitivos de alta intensidade até avaliação completa e, quando indicada, correção cirúrgica — dado o risco de morte súbita relacionada a esforço. Após correção cirúrgica bem-sucedida, com recuperação adequada e reavaliação objetiva (imagem e teste de esforço) sem evidência de isquemia residual, disfunção ventricular ou arritmia, a liberação gradual para esporte competitivo é considerada apropriada pela mesma força-tarefa e é referenciada nas diretrizes de ACHD da AHA/ACC (2018) e da ESC (2020). Diante da limitação reconhecida do teste de esforço isolado nessa condição (ver item de teste de esforço), a decisão de liberação — sobretudo em anatomia não operada de alto risco — deve ser individualizada e compartilhada, não devendo se basear apenas em um teste de esforço negativo. Não foi possível confirmar, nas fontes revisadas nesta pesquisa, um intervalo de tempo pós-operatório específico e universal (ex.: número exato de meses) recomendado antes da liberação; declarar essa limitação ao aplicar o item na prática e verificar o texto integral da Task Force 4 (Circulation 2015) para o detalhamento operacional.",
-        "origem_secao": "Van Hare GF et al., Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 4: Congenital Heart Disease, Circulation 2015 (PMID 26621645); Stout KK et al., 2018 AHA/ACC Guideline for ACHD, Circulation 2019 (PMID 30586767); Baumgartner H et al., 2020 ESC Guidelines for ACHD, Eur Heart J 2021 (PMID 32860028)."
-      },
-      {
-        "id": "aaoca-teste-esforco-limitacoes",
-        "categoria": "Teste de esforço",
-        "obrigatorio": true,
-        "texto": "O teste de esforço máximo (ergométrico com ECG e/ou teste cardiopulmonar) faz parte da avaliação de AAOCA, mas seu resultado negativo NÃO deve ser interpretado como exclusão confiável de isquemia, mesmo em anatomia de alto risco — a compressão coronariana nessa condição é dinâmica e pode não se reproduzir de forma consistente durante o protocolo de esforço utilizado. Em estudo prospectivo dedicado, o teste de esforço isolado por ECG teve sensibilidade muito baixa para detectar isquemia induzível confirmada por ressonância cardíaca com estresse por dobutamina (padrão de referência no estudo): sensibilidade de 19%, subindo para 58% com a adição de teste cardiopulmonar (CPET) ao protocolo — e mesmo assim sem concordância consistente entre o teste de esforço e a imagem de estresse. Isquemia induzível foi mais frequentemente detectada, tanto no teste de esforço quanto na ressonância com estresse, em pacientes com origem anômala da coronária esquerda (AAOLCA) do que da direita (AAORCA). Na prática, recomenda-se não usar o teste de esforço isolado como critério único para liberar esporte competitivo ou afastar necessidade de cirurgia em anatomia de alto risco; considerar teste de esforço com componente cardiopulmonar (CPET) e, quando disponível, imagem de estresse (RM com dobutamina, SPECT ou CTA-FFR) como avaliação complementar antes da decisão final.",
-        "origem_secao": "Qasim A et al., Is Exercise Stress Testing Useful for Risk Stratification in Anomalous Aortic Origin of a Coronary Artery?, Semin Thorac Cardiovasc Surg 2023 (PMID 36041683); Molossi S et al., Circ Cardiovasc Interv 2020 (PMID 32069111) — uso de imagem de estresse na estratificação de risco."
       }
     ],
     "revisao": {
