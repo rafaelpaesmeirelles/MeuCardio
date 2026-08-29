@@ -883,13 +883,30 @@ em ambos. **Fecha o gap de medicina nuclear/RM de estresse desta janela.**
 
 Auditoria pré-lote-39: confirmado sem gap acionável em LVAD (já coberto).
 
-## Lote 39 (planejado)
+## Lote 39 — concluído (SHA baa7f231) — total 66 commits
 
-A auditar: Doenças vasculares estruturais (aneurisma de aorta abdominal
-— rastreio populacional, aortite não-Takayasu, doença arterial
-periférica além do que já existe); ou populações especiais adicionais
-(doador vivo/critérios de doador em transplante, obesidade grave e
-cirurgia bariátrica pré-cardiopatia). Confirmar via grep + `gh pr list`
-antes de despachar.
+- checklist `avaliacao-cardiovascular-pre-operatoria-para-cirurgia-bariatrica`
+  — 5 itens: estratificação de risco (limitação do RCRI em obesidade
+  grave declarada como extrapolação, não achado validado; escore
+  OS-MRS; prevalência de DAC de 31,7% em candidatos com síndrome
+  metabólica); AOS via STOP-BANG (remissão pós-cirúrgica de só 65% —
+  não presumir resolução automática); cardiomiopatia da obesidade (eco
+  de rotina NÃO preditivo de eventos, priorizar história dirigida);
+  ajuste de medicação crônica com farmacocinética quantificada
+  pós-bypass; profilaxia de TEV estratificada por risco. Gap de alta
+  prevalência: cirurgia bariátrica é um dos procedimentos eletivos mais
+  comuns hoje e tinha zero cobertura cardiovascular específica. 16
+  fontes via NCBI e-utils. Confirmado que DAP/claudicação (exercício +
+  cilostazol + revascularização já num checklist de 9 itens) e rastreio
+  de AAA já estavam bem cobertos — evitada duplicação.
+
+## Lote 40 (planejado)
+
+A auditar: retomar Cardiomiopatias hereditárias/canalopatias para
+subtemas ainda granulares e ausentes (ex.: síndrome de Brugada — manejo
+de tempestade elétrica, ablação de epicárdio; QT longo — nuances por
+genótipo LQT1/2/3 além do já coberto); ou Avaliação pré-participação
+esportiva em populações especiais ainda não vistas nesta janela.
+Confirmar via grep + `gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
