@@ -787,11 +787,32 @@ declararam explicitamente quando não confirmaram classe/nível de
 evidência por falta de acesso a texto integral — nunca inventaram
 gradação.
 
-## Lote 33 (em andamento, 1 agente)
+## Lote 33 — concluído (SHA 63b18e45) — total 60 commits
 
-Restante do cluster ACHD: "erg-ped-*" teste ergométrico em cardiopatia
-congênita do adulto (6 itens — Fontan, contraindicado em descompensada,
-cianótica corrigida, IC compensada pós-intervenção, Fallot reparada, TGA
-corrigida) — confirmado sem host. Despachado.
+- checklist `teste-ergometrico-e-tcpe-na-cardiopatia-congenita-do-adulto-fontan-fallot-tga-e-descompensacao`
+  — 6 itens: VO2 pico prognóstico em Fontan (ressalva: sem corte único
+  validado, só trajetória de declínio); contraindicação em
+  descompensação (referência geral AHA, sem lista ACHD-específica);
+  cianótica corrigida — incompetência cronotrópica (caveat: estudo-base
+  é pediátrico); IC compensada pós-intervenção; Fallot reparada —
+  dispersão QTc/JTc e MTWA induzidos por esforço, relevantes para
+  decisão de troca valvar pulmonar; TGA corrigida (switch atrial/ccTGA)
+  — 4 achados (incompetência cronotrópica, VE/VCO2 e VO2% preditores,
+  segurança de treino aeróbico, GLS do VD sistêmico).
+15 fontes via NCBI e-utils. Nenhuma diretriz SBC específica localizada —
+declarado. **Fecha o cluster ACHD ETT/ETE/TCPE desta janela.**
+
+Nota: origin/main avançou para 97899cf6 ("recovery emergencial
+certificado", fora do escopo desta branch) — sem colisão nos diretórios
+de conteúdo; branch segue sem rebase.
+
+## Lote 34 (planejado)
+
+Próximo cluster: "achd2018-*" — recomendações específicas da diretriz
+ESC 2020 / AHA-ACC 2018 de ACHD ainda sem host dedicado: cirurgia/
+ablação em anomalia de Ebstein; Eisenmenger e uso de bosentana; critérios
+de fechamento de CIA/CIV residual no adulto; anticoagulação e vigilância
+hepática em Fontan; manejo de arritmia na TGA com switch atrial. A
+confirmar cobertura existente e ausência de colisão antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
