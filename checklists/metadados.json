@@ -31835,5 +31835,141 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "selecao-do-metodo-diagnostico-e-monitorizacao-de-arritmia-jcs-2022",
+    "condicao": "Investigação de arritmia — seleção do método diagnóstico e de monitorização",
+    "resumo": "Checklist para orientar a escolha do método diagnóstico/monitorização mais adequado na investigação de arritmias cardíacas (ECG de 12 derivações, Holter, gravadores de eventos, monitor cardíaco implantável e mapeamento eletroanatômico), tendo como referência a diretriz japonesa JCS/JHRS sobre manejo não farmacológico das arritmias cardíacas. Apenas os itens referentes ao monitor cardíaco implantável (ICM) para síncope/AVC criptogênico e aos critérios eletrocardiográficos de canalopatias hereditárias possuem classe de recomendação e nível de evidência formalmente confirmados no texto integral da diretriz consultado via NCBI; para os demais itens (Holter isolado, gravadores de eventos, índices de Holter, wearables, IA e mapeamento eletroanatômico em cenários específicos), a ausência ou o grau de confirmação de uma recomendação graduada é sinalizado explicitamente em cada item.",
+    "documento_origem": null,
+    "theme": "Arritmias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. (Japanese Circulation Society/Japanese Heart Rhythm Society Joint Working Group). JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109. PMCID: PMC8339126.",
+      "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias. Circ J. 2021;85(7):1104-1244. doi:10.1253/circj.CJ-20-0637. PMID: 34078838. Corrigenda em Circ J. 2021;85(9):1692-1700, doi:10.1253/circj.CJ-66-0196, PMID 34433750.",
+      "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. JCS/JHRS 2021 guideline focused update on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2022;38(1):1-30. doi:10.1002/joa3.12649. PMID: 35222748. PMCID: PMC8851582.",
+      "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. JCS/JHRS 2021 Guideline Focused Update on Non-Pharmacotherapy of Cardiac Arrhythmias. Circ J. 2022;86(2):337-363. doi:10.1253/circj.CJ-21-0162. PMID: 34987141.",
+      "Gladstone DJ, Spring M, Dorian P, Panzov V, Thorpe KE, Hall J, et al.; EMBRACE Investigators and Coordinators. Atrial fibrillation in patients with cryptogenic stroke. N Engl J Med. 2014;370(26):2467-2477. doi:10.1056/NEJMoa1311376. PMID: 24963566.",
+      "Sanna T, Diener HC, Passman RS, Di Lazzaro V, Bernstein RA, Morillo CA, et al.; CRYSTAL AF Investigators. Cryptogenic stroke and underlying atrial fibrillation. N Engl J Med. 2014;370(26):2478-2486. doi:10.1056/NEJMoa1313600. PMID: 24963567.",
+      "Brignole M, Moya A, de Lange FJ, Deharo JC, Elliott PM, Fanciulli A, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. doi:10.1093/eurheartj/ehy037. PMID: 29562304."
+    ],
+    "itens": [
+      {
+        "id": "ecg-estrutural",
+        "categoria": "ECG",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações como exame inicial obrigatório em todo paciente com arritmia ou suspeita dela, para rastrear sinais de cardiopatia estrutural subjacente (sobrecarga de câmaras, ondas Q patológicas, bloqueios de ramo, baixa voltagem etc.) que possam explicar a arritmia. RIGOR: a diretriz JCS/JHRS 2019/2021 trata o ECG de repouso como parte da avaliação inicial padrão (associado a Holter e ecocardiograma) na investigação de síncope/arritmia, mas não foi localizada, no texto integral acessado via NCBI, uma tabela de recomendação isolada com classe (COR) e nível de evidência (LOE) formal e específica para este item autônomo — reflete prática clínica descrita narrativamente na diretriz, não uma recomendação graduada explícita.",
+        "origem_secao": "JCS/JHRS 2019/2021, seção 'Electrophysiological studies' (2.1/2.2) e Tabela 17 (achados clínicos sugestivos de síncope cardiogênica)"
+      },
+      {
+        "id": "ecg-canalopatia",
+        "categoria": "ECG",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações (em repouso e, quando indicado, seriado/ambulatorial) é o exame definidor no diagnóstico das canalopatias hereditárias: achado 'definitivo' para síndrome de Brugada (padrão tipo 1 espontâneo em derivações precordiais altas, ou induzido por fármaco bloqueador de canal de sódio) e critério central para síndrome do QT longo congênito, com diagnóstico estabelecido por QTc ≥500 ms em ECGs de 12 derivações repetidos, ou 480-499 ms associado a síncope inexplicada, na ausência de causa secundária de prolongamento do QT (critério HRS/EHRA/APHRS reproduzido pela diretriz).",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 21 (Diagnosis of Brugada syndrome) e Tabela 25 (Diagnosis of congenital LQTS, HRS/EHRA/APHRS expert consensus statement)"
+      },
+      {
+        "id": "holter-paroxistica",
+        "categoria": "Holter/gravadores de eventos",
+        "obrigatorio": true,
+        "texto": "Holter de ECG (24-48h ou mais) como método padrão para detectar arritmias paroxísticas — sintomáticas ou assintomáticas —, citado repetidamente na diretriz como ferramenta para identificar TVNS (taquicardia ventricular não sustentada) como marcador de risco em cardiomiopatia hipertrófica e em displasia arritmogênica de ventrículo direito, e para monitorar recorrência de FA no seguimento pós-ablação. RIGOR: não foi localizada tabela de recomendação isolada com classe/nível de evidência formal dedicada especificamente a este item como afirmação autônoma; o uso do Holter aparece integrado a outras recomendações específicas de doença (HCM, ARVC, seguimento de FA), não como recomendação isolada graduada.",
+        "origem_secao": "JCS/JHRS 2019/2021, seções 4.4.1 (cardiomiopatia hipertrófica), 4.4.2 (ARVC) e seção sobre seguimento pós-ablação de FA"
+      },
+      {
+        "id": "loop-recorder-externo",
+        "categoria": "Holter/gravadores de eventos",
+        "obrigatorio": false,
+        "texto": "Gravador de eventos em alça externo (external loop recorder) mencionado na diretriz como etapa a ser realizada pelo menos uma vez antes da indicação de monitor cardíaco implantável (ICM), na investigação de síncope inexplicada e de FA criptogênica pós-AVC. RIGOR: essa menção consta no texto de discussão que fundamenta a Tabela 44 (ICM), não em uma tabela de recomendação própria com classe/nível de evidência isolados — não foi possível confirmar uma classe de recomendação formal específica para este item.",
+        "origem_secao": "JCS/JHRS 2019/2021, seção 8 'Implantable cardiac monitor (ICM)', texto de discussão que precede a Tabela 44"
+      },
+      {
+        "id": "gravador-eventos-sem-alca",
+        "categoria": "Holter/gravadores de eventos",
+        "obrigatorio": false,
+        "texto": "A diretriz cita, no texto de discussão de evidências, um gravador de eventos ambulatorial não contínuo ('30-day event-triggered recorder', sem alça, tipo utilizado no estudo EMBRACE de Gladstone et al., NEJM 2014) como exame com maior sensibilidade que o Holter convencional para detectar FA em pacientes com AVC criptogênico/AIT recente em ≥55 anos. RIGOR: essa citação aparece apenas no texto de discussão de evidências que sustenta a Tabela 44 (ICM), não em uma tabela de recomendação COR/LOE própria — não é possível confirmar uma classe de recomendação formal da diretriz especificamente para este item isolado.",
+        "origem_secao": "JCS/JHRS 2019/2021, texto de discussão que precede a Tabela 44, citando o estudo EMBRACE (Gladstone DJ et al., N Engl J Med 2014;370:2467-77)"
+      },
+      {
+        "id": "holter-indices-hrv-turbulencia",
+        "categoria": "Holter/gravadores de eventos",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR este item no texto integral acessível da diretriz JCS/JHRS 2019/2021 (documento-base) nem na atualização focada JCS/JHRS 2021 (publicada em 2022) — os termos 'heart rate variability', 'HRV' e 'turbulence' não constam no texto completo indexado no PMC. A diretriz utiliza, como marcadores de risco de morte súbita, o estudo eletrofisiológico invasivo, TVNS ao Holter convencional, teste de esforço, ECG de sinal médio e teste de alternância de onda T — mas não menciona explicitamente índices de variabilidade de frequência cardíaca ou turbulência de FC como ferramenta formal de estratificação de risco. Item mantido por relevância clínica geral, porém SEM confirmação de classe/nível de evidência na diretriz JCS pesquisada — deve ser tratado como não verificado nesta fonte específica.",
+        "origem_secao": "Não localizado no texto disponível da diretriz JCS/JHRS (busca realizada no texto integral via NCBI PMC, PMID 34386109 e PMID 35222748)"
+      },
+      {
+        "id": "camera-smartphone-fc",
+        "categoria": "Dispositivos vestíveis/wearables",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR este item na diretriz JCS/JHRS 2019/2021 nem na atualização focada de 2021/2022 — o termo 'camera' não aparece associado a monitorização de frequência cardíaca no texto integral pesquisado (a única ocorrência do termo no documento-base é o nome do estudo CAMERA-MRI, referente a ablação de FA versus controle de frequência, sem relação com monitorização por câmera de smartphone). Este cenário não pôde ser referenciado a uma recomendação real da diretriz JCS consultada — mantido no checklist apenas como lacuna explicitamente assinalada, sem classe de recomendação atribuída.",
+        "origem_secao": "Não localizado na diretriz JCS/JHRS pesquisada (via NCBI PMC, PMID 34386109 e PMID 35222748)"
+      },
+      {
+        "id": "smartwatch-ecg",
+        "categoria": "Dispositivos vestíveis/wearables",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR este item na diretriz JCS/JHRS 2019/2021 nem na atualização focada de 2021/2022 — os termos 'smartwatch' e 'smart watch' não aparecem no texto integral pesquisado via NCBI PMC. A diretriz aborda o 'wearable cardioverter-defibrillator' (desfibrilador vestível, WCD), que é um dispositivo TERAPÊUTICO usado como ponte até implante de CDI, distinto de um programa diagnóstico de ECG por smartwatch — não devem ser confundidos. Item mantido como lacuna explicitamente assinalada, sem classe de recomendação da diretriz JCS.",
+        "origem_secao": "Não localizado na diretriz JCS/JHRS pesquisada; nota de diferenciação: seção 9 'Wearable cardioverter-defibrillator' do documento-base trata de dispositivo terapêutico, não diagnóstico"
+      },
+      {
+        "id": "ia-diagnostico-fa",
+        "categoria": "Inteligência artificial",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR este item na diretriz JCS/JHRS 2019/2021 nem na atualização focada de 2021/2022 — a única ocorrência do termo 'artificial intelligence' no documento-base refere-se ao uso de IA em processamento de sinal para mapeamento de potencial de membrana (phase mapping) durante ablação do substrato de FA persistente, e não a um algoritmo diagnóstico de FA a partir de ECG, pulso ou fotopletismografia. Não há, no texto pesquisado, recomendação formal sobre algoritmos de IA como auxiliar diagnóstico de FA nesta diretriz JCS. Item mantido apenas como lacuna explicitamente assinalada.",
+        "origem_secao": "Não localizado na diretriz JCS/JHRS pesquisada; único achado tangencial no documento-base: uso de IA em processamento de sinal para mapeamento de substrato de FA (ablação de LVA/drivers), não diagnóstico de FA"
+      },
+      {
+        "id": "icm-sincope-precoce-baixo-risco",
+        "categoria": "Monitor cardíaco implantável",
+        "obrigatorio": true,
+        "texto": "Uso PRECOCE de monitor cardíaco implantável (ICM) é recomendado em pacientes com síncope recorrente, infrequente e inexplicada, SEM fatores de alto risco sugestivos de causa cardiogênica e sem causas não cardíacas evidentes (síncope reflexa, hipotensão ortostática) — Classe de Recomendação I, Nível de Evidência B (COR I / LOE B; GOR B / LOE MINDS II, na graduação paralela MINDS usada pela diretriz).",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 44 (Recommendations and evidence levels for ICM indications), 1º item da lista sob COR I/LOE B"
+      },
+      {
+        "id": "icm-sincope-alto-risco-sem-causa",
+        "categoria": "Monitor cardíaco implantável",
+        "obrigatorio": true,
+        "texto": "Uso de ICM é recomendado em pacientes COM fatores de alto risco sugestivos de causa cardiogênica, mas sem causa identificada ou terapia definida para a síncope após várias avaliações — Classe de Recomendação I, Nível de Evidência B (COR I / LOE B; GOR B / LOE MINDS II).",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 44, 2º item da lista sob COR I/LOE B"
+      },
+      {
+        "id": "icm-avc-criptogenico-holter-negativo",
+        "categoria": "Monitor cardíaco implantável",
+        "obrigatorio": true,
+        "texto": "Uso de ICM é recomendado para detecção de FA silenciosa (assintomática) em pacientes com AVC criptogênico de causa desconhecida, mesmo após uso de monitorização Holter ou de gravadores de eventos em alça externos — Classe de Recomendação I, Nível de Evidência B (COR I / LOE B; GOR B / LOE MINDS II). Suporte de evidência citado na diretriz: estudos CRYSTAL AF (Sanna et al., N Engl J Med 2014) e EMBRACE (Gladstone et al., N Engl J Med 2014).",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 44, 3º item da lista sob COR I/LOE B"
+      },
+      {
+        "id": "icm-sincope-reflexa-recorrente-antes-marcapasso",
+        "categoria": "Monitor cardíaco implantável",
+        "obrigatorio": false,
+        "texto": "Uso de ICM DEVE SER CONSIDERADO para determinar a indicação de terapia de estimulação cardíaca (marca-passo) em pacientes com suspeita de síncope reflexa combinada com recorrência frequente e/ou trauma associado — Classe de Recomendação IIa, Nível de Evidência C (COR IIa / LOE C; GOR C1 / LOE MINDS IVb).",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 44, 4ª linha (última recomendação da tabela, isolada em COR IIa/LOE C)"
+      },
+      {
+        "id": "eam-criancas-gestantes-radiacao",
+        "categoria": "Mapeamento eletroanatômico",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR, no texto integral disponível, uma recomendação específica e isolada da diretriz JCS/JHRS 2019/2021 sobre uso de sistemas de mapeamento eletroanatômico (3D) para reduzir exposição à radiação especificamente em CRIANÇAS e GESTANTES combinadas. A diretriz possui seção dedicada a avanços em sistemas de mapeamento 3D (CARTO, EnSite NavX, MediGuide) como estratégia de redução de radiação durante ablação por cateter, e discute separadamente proteção radiológica em crianças (inclusive <15 kg), mas o termo 'pregnant'/gestante não aparece no texto integral pesquisado — não foi possível confirmar o componente 'gestantes' desta indicação nesta fonte. Item mantido como plausível clinicamente (redução de radiação em crianças é apoiada pela diretriz), mas com o componente sobre gestantes explicitamente não confirmado.",
+        "origem_secao": "JCS/JHRS 2019/2021, seção 1.5.4 'Advances in 3D mapping systems' e seção sobre ablação em crianças <15 kg (radiação); componente 'gestantes' não localizado no texto"
+      },
+      {
+        "id": "eam-arritmia-pos-operatoria-cardiopatia-congenita",
+        "categoria": "Mapeamento eletroanatômico",
+        "obrigatorio": false,
+        "texto": "A diretriz reconhece, por meio de múltiplas referências bibliográficas citadas no capítulo de ablação em cardiopatia congênita, que sistemas de mapeamento eletroanatômico (3D) são amplamente empregados na caracterização de taquicardias atriais macrorreentrantes pós-operatórias (istmos arritmogênicos, circuitos de reentrada intra-atrial) em pacientes com cardiopatia congênita operada. RIGOR: essas referências aparecem no corpo bibliográfico de suporte às recomendações de ABLAÇÃO por cateter em cardiopatia congênita, e não foi localizada, no corpo do texto da diretriz, uma recomendação formal isolada com classe/nível de evidência específica para 'mapeamento eletroanatômico como ferramenta diagnóstica' separada da indicação de ablação.",
+        "origem_secao": "JCS/JHRS 2019/2021, capítulo 'Catheter ablation', seções 5.2 (Tachycardias in adult congenital heart disease) e 7.4 (Catheter ablation for children with congenital heart disease); recomendações de ablação nas Tabelas 68 e 77"
+      },
+      {
+        "id": "eam-tv-cardiopatia-estrutural",
+        "categoria": "Mapeamento eletroanatômico",
+        "obrigatorio": true,
+        "texto": "A diretriz recomenda, com Classe de Recomendação I e Nível de Evidência B, a ablação por cateter — procedimento que rotineiramente incorpora mapeamento eletroanatômico 3D para caracterização do substrato cicatricial e do padrão de ativação — em pacientes com cardiopatia estrutural e TV monomórfica incessante ou tempestade elétrica de TV refratária ou intolerante a antiarrítmicos. RIGOR: essa Classe I/B refere-se à indicação de ABLAÇÃO por cateter (da qual o mapeamento eletroanatômico é parte técnica integrante), não a uma recomendação autônoma isolada de 'mapeamento eletroanatômico como exame diagnóstico' em separado da decisão de ablação.",
+        "origem_secao": "JCS/JHRS 2019/2021, Tabela 69 (Recommendations and evidence levels for catheter ablation of sustained monomorphic VT) e seção 'Electrophysiological study' 2.2 '3D mapping systems'"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
