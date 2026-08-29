@@ -619,3 +619,23 @@ para resposta pressórica) confirmado sem host — fonte brasileira
 priorizada. Despachado (agente ad379774df47bfcc2).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 25 — concluído (1 commit, SHA b2925991) — total 51 commits
+
+- checklist `teste-ergometrico-e-tcpe-seriado-na-cardiomiopatia-hipertrofica-e-apos-miocardite-sbc-2024`
+  — 6 itens, fonte Diretriz Brasileira de Ergometria 2024 (PMID 38896581).
+  Rigor exemplar no item 6: agente declarou explicitamente não ter
+  conseguido acessar texto integral da diretriz internacional de CMH
+  (paywall) para verificar elo com decisão de redução septal — tratado
+  como inferência não verificada, não recomendação formal.
+
+## Lote 26 (em andamento, 1 agente)
+
+Cluster "amiloidose-*" (16 itens): verbetes de amiloidose já têm boa
+profundidade geral (tafamidis, estadiamento), mas faltam pontos específicos
+do algoritmo diagnóstico (escore de Perugini, razão H/CL, falsos-positivos
+da cintilografia, biópsia quando cintilografia não resolve, tipagem/
+sequenciamento, "não usar os 4 pilares da ICFEr" na amiloidose). Despachado
+como checklist de 10 itens (agente aee932a13ee2f31a9).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
