@@ -32748,5 +32748,160 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "indicacoes-de-ecocardiograma-transtoracico-na-cardiopatia-congenita-do-adulto",
+    "condicao": "Cardiopatia congênita do adulto — indicações de ecocardiograma transtorácico",
+    "resumo": "Checklist clínico com as principais indicações de ecocardiograma transtorácico (ETT) na avaliação inicial, no seguimento pós-operatório e em situações especiais do adulto com cardiopatia congênita (ACHD), incluindo limitações técnicas do método e o papel complementar de outras modalidades de imagem, com base nas diretrizes ESC 2020 e AHA/ACC 2018 de ACHD e em consensos de imagem cardiovascular. Busca dirigida no PubMed/NCBI não localizou diretriz específica da Sociedade Brasileira de Cardiologia sobre indicações/seguimento de ETT em cardiopatia congênita do adulto; o único documento SBC identificado trata de insuficiência cardíaca e transplante em cardiopatia congênita (Arq Bras Cardiol 2014, PMID 25591041) e está fora do escopo deste checklist — essa ausência é declarada explicitamente.",
+    "documento_origem": null,
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. doi:10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e698-e800. doi:10.1161/CIR.0000000000000603. PMID: 30586767.",
+      "Budts W, Miller O, Babu-Narayan SV, et al. Imaging the adult with simple shunt lesions: position paper from the EACVI and the ESC Working Group on Adult Congenital Heart Disease. Eur Heart J Cardiovasc Imaging. 2021;22(6):e58-e70. doi:10.1093/ehjci/jeaa314. PMID: 33338215.",
+      "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. doi:10.1161/CIR.0000000000001106. PMID: 36322642.",
+      "Erbel R, Aboyans V, Boileau C, et al. 2014 ESC Guidelines on the diagnosis and treatment of aortic diseases. Eur Heart J. 2014;35(41):2873-2926. doi:10.1093/eurheartj/ehu281. PMID: 25173340.",
+      "Kalogeropoulos AP, Deka A, Border W, et al. Right ventricular function with standard and speckle-tracking echocardiography and clinical events in adults with D-transposition of the great arteries post atrial switch. J Am Soc Echocardiogr. 2012;25(3):304-312. doi:10.1016/j.echo.2011.12.003. PMID: 22196884.",
+      "Forsha D, Risum N, Smith PB, et al. Frequent Activation Delay-Induced Mechanical Dyssynchrony and Dysfunction in the Systemic Right Ventricle. J Am Soc Echocardiogr. 2016;29(11):1074-1083. doi:10.1016/j.echo.2016.08.002. PMID: 27624591.",
+      "Molossi S, Agrawal H. Clinical evaluation of anomalous aortic origin of a coronary artery (AAOCA). Congenit Heart Dis. 2017;12(5):607-609. doi:10.1111/chd.12505. PMID: 28621042."
+    ],
+    "itens": [
+      {
+        "id": "ett-suspeita-inicial",
+        "categoria": "Avaliação inicial",
+        "obrigatorio": true,
+        "texto": "Diante de sopro cardíaco de significado incerto, cianose, saturação de O2 reduzida ou sintomas cardiovasculares inexplicados em adulto com suspeita de cardiopatia congênita (conhecida ou não diagnosticada previamente), o ecocardiograma transtorácico (ETT) é o exame de imagem de primeira linha para avaliação inicial, definindo anatomia, função ventricular, valvar e hemodinâmica antes da eventual indicação de exames complementares mais invasivos ou de maior custo.",
+        "origem_secao": "ESC 2020 ACHD Guideline (Baumgartner et al., Eur Heart J 2021, PMID 32860028) e AHA/ACC 2018 ACHD Guideline (Stout et al., Circulation 2019, PMID 30586767) — princípio geral de avaliação inicial por imagem em suspeita de ACHD; classe de recomendação e nível de evidência específicos não foram confirmados nesta pesquisa, pois o texto integral da diretriz não foi acessado (apenas resumo/metadados via NCBI e-utils)."
+      },
+      {
+        "id": "ett-anual-defeito-residual",
+        "categoria": "Seguimento pós-operatório",
+        "obrigatorio": true,
+        "texto": "Em paciente operado com defeito residual conhecido (ex.: regurgitação valvar residual, shunt residual, obstrução residual em via de entrada ou saída), o ETT deve ser repetido em intervalo regular — tipicamente anual — permitindo detecção precoce de progressão hemodinâmica que module a necessidade de reintervenção.",
+        "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30586767) — princípio geral de vigilância por imagem estratificada por complexidade e presença de lesão residual. O intervalo 'anual' citado reflete prática habitual referida nessas diretrizes para lesões residuais relevantes; classe/nível específicos por tipo de lesão não foram individualmente verificados nesta pesquisa e devem ser conferidos na tabela de seguimento da diretriz completa."
+      },
+      {
+        "id": "ett-reducao-frequencia-sem-residual",
+        "categoria": "Seguimento pós-operatório",
+        "obrigatorio": false,
+        "texto": "Em paciente operado sem defeito residual hemodinamicamente significativo, função ventricular normal e ausência de arritmia, a frequência de vigilância ecocardiográfica pode ser reduzida (por exemplo, a cada 2-3 anos ou mais), reservando reavaliação mais frequente para lesões residuais anatomicamente complexas ou com risco reconhecido de deterioração tardia. A decisão de espaçar o seguimento deve ser individualizada conforme a complexidade da lesão de base, não aplicada de forma uniforme a todos os pacientes operados.",
+        "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) — princípio de estratificação do seguimento por complexidade da cardiopatia (simples/moderada/complexa) e ausência de residual. Intervalos numéricos exatos por lesão específica não foram individualmente verificados nesta pesquisa (não houve acesso ao texto integral/tabelas da diretriz)."
+      },
+      {
+        "id": "ett-mudanca-quadro-clinico",
+        "categoria": "Situações especiais",
+        "obrigatorio": true,
+        "texto": "Qualquer mudança no quadro clínico — piora de sintomas (dispneia, síncope, dor torácica), surgimento de novo sopro, nova arritmia documentada ou sinais de insuficiência cardíaca — deve motivar ETT não programado, independentemente do intervalo de vigilância previamente definido, para reavaliação de função ventricular, valvar e hemodinâmica.",
+        "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30586767) — princípio geral e consistente entre as duas diretrizes de reavaliação por imagem diante de mudança clínica em paciente com ACHD."
+      },
+      {
+        "id": "ett-sincope-pos-esforco-anomalia-coronaria",
+        "categoria": "Situações especiais",
+        "obrigatorio": true,
+        "texto": "Síncope relacionada ao esforço em paciente com ACHD é sinal de alarme e exige investigação, incluindo ETT para avaliação de função ventricular e obstruções residuais e, quando tecnicamente possível, da origem e trajeto proximal das artérias coronárias — anomalia de artéria coronária associada (isolada ou em contexto de cardiopatia congênita complexa) é causa reconhecida de síncope e morte súbita relacionadas ao esforço. A limitação de janela acústica para visualizar todo o trajeto coronariano frequentemente exige complementação com angiotomografia ou angiorressonância cardíaca.",
+        "origem_secao": "Molossi S, Agrawal H. Clinical evaluation of anomalous aortic origin of a coronary artery (AAOCA). Congenit Heart Dis. 2017 (PMID 28621042) — papel e limites do ETT na avaliação inicial de AAOCA; AHA/ACC 2018 ACHD Guideline (PMID 30586767) — síncope como achado de alarme em ACHD que exige reavaliação."
+      },
+      {
+        "id": "ett-limitacao-arco-aortico-arterias-pulmonares",
+        "categoria": "Limitações",
+        "obrigatorio": true,
+        "texto": "O ETT tem limitação reconhecida para avaliação completa do arco aórtico distal, istmo, aorta descendente e ramos pulmonares distais, devido à interposição de estruturas aéreas/ósseas e à janela acústica limitada nessas regiões — especialmente relevante em pacientes com coarctação de aorta reparada, tetralogia de Fallot operada ou estenose de ramos pulmonares. Nessas situações, angiotomografia ou angiorressonância cardiovascular são métodos complementares necessários para caracterização anatômica completa.",
+        "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e Budts W et al., posição EACVI/ESC Working Group on ACHD sobre imagem em cardiopatias congênitas com shunt simples (Eur Heart J Cardiovasc Imaging 2021, PMID 33338215) — reconhecimento das limitações do ETT para estruturas extracardíacas distais e necessidade de imagem complementar por TC/RM."
+      },
+      {
+        "id": "ett-seriado-marfan-raiz-aortica",
+        "categoria": "Situações especiais",
+        "obrigatorio": true,
+        "texto": "Em paciente com síndrome de Marfan e cardiopatia congênita associada, o ETT seriado da raiz aórtica é obrigatório: ecocardiograma inicial ao diagnóstico com reavaliação em cerca de 6 meses para confirmar estabilidade da taxa de crescimento; se estável, seguimento anual subsequente. Intervalos mais curtos (semestrais) são indicados se o diâmetro aórtico se aproximar do limiar cirúrgico, houver taxa de crescimento acelerada, dilatação significativa, história familiar de dissecção com diâmetro menor, ou em gestação.",
+        "origem_secao": "Erbel R et al., 2014 ESC Guidelines on the diagnosis and treatment of aortic diseases (PMID 25173340) e Isselbacher EM et al., 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease (PMID 36322642) — princípio de vigilância seriada da raiz aórtica em doenças do tecido conjuntivo/síndrome de Marfan; intervalos específicos (avaliação inicial, reavaliação em 6 meses e depois anual, com individualização por fatores de risco) descritos nessas diretrizes, cujo texto integral não foi acessado nesta pesquisa (apenas metadados via NCBI e-utils) — recomenda-se conferir a redação exata das classes/níveis antes de publicação final."
+      },
+      {
+        "id": "strain-vd-sistemico-subpulmonar",
+        "categoria": "Situações especiais",
+        "obrigatorio": false,
+        "texto": "Em pacientes com ventrículo direito (VD) funcionando como câmara sistêmica (transposição das grandes artérias com switch atrial — Mustard/Senning — ou transposição congenitamente corrigida) ou na avaliação do VD subpulmonar, a avaliação convencional de função de VD (TAPSE, onda S' tecidual, fractional area change) tem desempenho limitado, pois essas métricas capturam predominantemente o encurtamento longitudinal e não refletem adequadamente a geometria complexa e não elipsoide do VD nem a interdependência ventricular. O strain longitudinal global por speckle-tracking acrescenta valor por detectar disfunção subclínica e dessincronia mecânica induzida por atraso de ativação, associando-se a desfechos clínicos (arritmia, insuficiência cardíaca, eventos adversos); é complementar — não substituto — à avaliação qualitativa e, quando disponível, à quantificação volumétrica por ressonância cardíaca.",
+        "origem_secao": "Kalogeropoulos AP et al., J Am Soc Echocardiogr 2012 (PMID 22196884) — função de VD por speckle-tracking associada a eventos clínicos em VD sistêmico pós-switch atrial; Forsha D et al., J Am Soc Echocardiogr 2016 (PMID 27624591) — dessincronia mecânica por atraso de ativação e disfunção do VD sistêmico detectadas por strain. Ambos são estudos observacionais, não diretrizes — distinção explicitada conforme exigido."
+      },
+      {
+        "id": "ett-seguimento-individualizado-complexidade",
+        "categoria": "Seguimento pós-operatório",
+        "obrigatorio": true,
+        "texto": "O acompanhamento ecocardiográfico do adulto com cardiopatia congênita deve ser individualizado conforme a complexidade anatômica da lesão (classificada em simples, moderada ou complexa pelas diretrizes de ACHD), a presença de lesões residuais, o status cirúrgico/intervencionista prévio e a estabilidade clínica. Pacientes com lesões simples e sem residual podem ter intervalos mais espaçados, enquanto lesões complexas (ex.: fisiologia univentricular, VD sistêmico, tetralogia de Fallot operada com disfunção de VD ou insuficiência pulmonar significativa) requerem seguimento mais frequente e estruturado, idealmente em centro de referência para cardiopatia congênita do adulto.",
+        "origem_secao": "ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30586767) — princípio de estratificação por complexidade anatômica e cuidado centrado em centros especializados como base para definição da frequência de seguimento ecocardiográfico."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
+  },
+  {
+    "slug": "indicacoes-de-ecocardiograma-transesofagico-na-cardiopatia-congenita-do-adulto",
+    "condicao": "Cardiopatia congênita do adulto — indicações de ecocardiograma transesofágico",
+    "resumo": "Checklist clínico das principais indicações de ecocardiograma transesofágico (ETE) na avaliação e manejo do paciente com cardiopatia congênita do adulto (ACHD), cobrindo guiamento intraprocedimento, aortopatia associada a doença do tecido conjuntivo, forame oval patente e AVC criptogênico, pós-operatório de switch atrial (Senning/Mustard) e Fontan, seleção pré-oclusão percutânea de defeitos septais e o princípio geral de escalonamento quando o ecocardiograma transtorácico (ETT) é insuficiente. Não substitui o item do corpus sobre indicações de ETT.",
+    "documento_origem": null,
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol. 2019;73(12):e81-e192. DOI: 10.1016/j.jacc.2018.08.1029. PMID: 30121239. (Resumo executivo: J Am Coll Cardiol. 2019;73(12):1494-1563. DOI: 10.1016/j.jacc.2018.08.1028. PMID: 30121240.)",
+      "Puchalski MD, Lui GK, Miller-Hance WC, et al. Guidelines for Performing a Comprehensive Transesophageal Echocardiographic Examination in Children and All Patients with Congenital Heart Disease: Recommendations from the American Society of Echocardiography. J Am Soc Echocardiogr. 2019;32(2):173-215. DOI: 10.1016/j.echo.2018.08.016. PMID: 30579694.",
+      "Hahn RT, Abraham T, Adams MS, et al. Guidelines for Performing a Comprehensive Transesophageal Echocardiographic Examination: Recommendations from the American Society of Echocardiography and the Society of Cardiovascular Anesthesiologists. J Am Soc Echocardiogr. 2013;26(9):921-964. DOI: 10.1016/j.echo.2013.07.009. PMID: 23998692.",
+      "Messé SR, Gronseth GS, Kent DM, et al. Practice advisory update summary: Patent foramen ovale and secondary stroke prevention: Report of the Guideline Subcommittee of the American Academy of Neurology. Neurology. 2020;94(20):876-885. DOI: 10.1212/WNL.0000000000009443. PMID: 32350058.",
+      "Isselbacher EM, Preventza O, Writing Committee Members, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. J Am Coll Cardiol. 2022;80(24):e223-e393. DOI: 10.1016/j.jacc.2022.08.004. PMID: 36334952.",
+      "Budts W, Miller O, Babu-Narayan SV, et al. Imaging the adult with simple shunt lesions: position paper from the EACVI and the ESC WG on ACHD. Eur Heart J Cardiovasc Imaging. 2021;22(6):e58-e70. DOI: 10.1093/ehjci/jeaa314. PMID: 33338215.",
+      "Di Salvo G, Miller O, Babu Narayan S, et al. Imaging the adult with congenital heart disease: a multimodality imaging approach - position paper from the EACVI. Eur Heart J Cardiovasc Imaging. 2018;19(10):1077-1098. DOI: 10.1093/ehjci/jey102. PMID: 30084968."
+    ],
+    "itens": [
+      {
+        "id": "tee-tevar-ablacao-guiada",
+        "categoria": "Guiado por imagem/procedimento",
+        "obrigatorio": false,
+        "texto": "Considerar ETE para orientar procedimentos intervencionistas em ACHD, incluindo implante de endoprótese aórtica (TEVAR) e ablação por cateter de arritmias atriais (comuns nesses pacientes por cicatrizes cirúrgicas e alterações anatômicas). No TEVAR, o ETE intraoperatório complementa a fluoroscopia: confirma diâmetros e zona de aterrissagem, detecta endoleak imediato, avalia função ventricular e identifica complicações agudas (dissecção iatrogênica, derrame pericárdico). Na ablação (ex.: flutter atrial de reentrada intra-atrial após Fontan/Mustard/Senning/reparo de CIA), o ETE ajuda a excluir trombo intracardíaco antes de punção transeptal e no mapeamento de anatomias complexas (câmara única, baffles atriais). Limitação declarada: não foi localizada diretriz específica de ACHD com classe/nível de evidência dedicado a este cenário exato (TEVAR + ablação); a orientação apoia-se em princípios gerais de imagem intraprocedimento dos guidelines ASE/SCA de ETE (Hahn 2013) e ASE de ETE em cardiopatia congênita (Puchalski 2019), extrapolados ao contexto de ACHD, e não em uma recomendação numerada específica.",
+        "origem_secao": "Hahn et al. 2013 (ASE/SCA Guidelines for Performing a Comprehensive TEE Examination, PMID 23998692); Puchalski et al. 2019 (ASE TEE-in-CHD Guidelines, PMID 30579694)"
+      },
+      {
+        "id": "tee-dissecao-aortica-tecido-conjuntivo",
+        "categoria": "Aortopatia",
+        "obrigatorio": false,
+        "texto": "Em pacientes com doença do tecido conjuntivo (Marfan, Loeys-Dietz, Ehlers-Danlos vascular) — associada com frequência a válvula aórtica bicúspide, coarctação ou outra aortopatia congênita — considerar ETE como modalidade de imagem de primeira linha na suspeita de dissecção aórtica aguda, especialmente em paciente hemodinamicamente instável, por permitir avaliação rápida à beira do leito sem necessidade de contraste iodado nem transporte. É particularmente relevante nesse grupo porque: (1) dissecção pode ocorrer com diâmetros aórticos ainda não claramente aneurismáticos, exigindo avaliação minuciosa da íntima; (2) na síndrome de Ehlers-Danlos vascular, a fragilidade tecidual eleva o risco de complicações com angiografia invasiva de grande calibre, tornando o ETE uma alternativa relativamente menos invasiva quando indicado; (3) o guideline ACC/AHA 2022 de doença aórtica reconhece a ecocardiografia (incluindo ETE) como modalidade de imagem aceita para dissecção aguda, ao lado da angiotomografia. Observação: o ETE tem campo de visão limitado da aorta ascendente distal/arco (zona de sombra do brônquio/traqueia) e, na maioria dos casos estáveis, a angioTC/RM segue sendo necessária para mapear toda a aorta torácica e abdominal e planejar a conduta cirúrgica. Não foi encontrada diretriz SBC específica sobre ETE nessas doenças do tecido conjuntivo — declarar essa ausência.",
+        "origem_secao": "Isselbacher et al. 2022 ACC/AHA Aortic Disease Guideline (PMID 36334952); ESC 2020 ACHD Guideline (Baumgartner et al., PMID 32860028)"
+      },
+      {
+        "id": "tee-fop-avc-criptogenico-menor-60-anos",
+        "categoria": "FOP/AVC criptogênico",
+        "obrigatorio": true,
+        "texto": "Em paciente com menos de 60 anos e AVC isquêmico criptogênico, indicar ETE (com estudo de contraste salino agitado/bolhas e manobra de Valsalva) para diagnóstico e caracterização anatômica do forame oval patente (FOP): tamanho e direção do shunt, presença de aneurisma do septo interatrial, e exclusão de outras fontes cardioembólicas concomitantes (trombo em apêndice atrial esquerdo, placas complexas de aorta). O ETE é superior ao ETT com bolhas para esses achados e fornece os dados anatômicos que orientam a decisão de fechamento percutâneo. A atualização de 2020 do practice advisory da American Academy of Neurology (AAN) discute o fechamento de FOP em pacientes selecionados de 18-60 anos com AVC criptogênico e FOP após avaliação multidisciplinar que exclui outras etiologias — avaliação que depende de caracterização ecocardiográfica adequada, tipicamente por ETE. Limitação declarada: não foi possível confirmar, a partir dos metadados/abstract disponíveis via e-utils, uma classe/nível de evidência numérico atribuído especificamente ao 'uso do ETE' (distinto da recomendação de fechamento do FOP em si); recomenda-se consulta ao texto integral do advisory para essa granularidade.",
+        "origem_secao": "Messé et al. 2020 AAN Practice Advisory Update, PFO e prevenção secundária de AVC (PMID 32350058); ESC 2020 ACHD Guideline (PMID 32860028)"
+      },
+      {
+        "id": "tee-pos-op-senning-mustard-fontan",
+        "categoria": "Pós-operatório complexo",
+        "obrigatorio": true,
+        "texto": "Em pacientes submetidos a switch atrial (Senning ou Mustard) para transposição das grandes artérias, ou a cirurgia de Fontan, indicar ETE mesmo quando o ETT parece tecnicamente adequado, pois: (1) os baffles atriais do Senning/Mustard criam vias sistêmica e pulmonar com trajetos complexos e frequentemente mal visualizados por janelas transtorácicas, dificultando a detecção de obstrução de baffle, vazamento (leak) inter-baffle ou trombo; (2) no Fontan, o conduto extracardíaco (ou túnel lateral), a anastomose cavopulmonar e eventuais fenestrações são estruturas posteriores/retrocardíacas mais bem avaliadas pela janela esofágica, incluindo a triagem de trombo (risco aumentado pelo fluxo não pulsátil) antes de cardioversão elétrica; (3) essas anatomias têm alta prevalência de arritmias atriais reentrantes, o que exige ETE pré-procedimento para exclusão de trombo antes de cardioversão ou ablação. O guideline ASE de ETE em cardiopatia congênita (Puchalski 2019) e a diretriz ESC 2020 de ACHD discutem as limitações das janelas transtorácicas nessas anatomias operadas; o position paper da EACVI (Di Salvo 2018) reforça a abordagem de imagem multimodal (ETT insuficiente → ETE ± RM cardíaca) nesse grupo. Limitação declarada: não localizei, nos resumos/metadados disponíveis via e-utils, uma classe/nível de evidência numérico atribuído especificamente a esta recomendação.",
+        "origem_secao": "Puchalski et al. 2019 (ASE TEE-in-CHD Guidelines, PMID 30579694); ESC 2020 ACHD Guideline (PMID 32860028); Di Salvo et al. 2018 EACVI multimodality imaging position paper (PMID 30084968)"
+      },
+      {
+        "id": "tee-selecao-pre-oclusao-percutanea",
+        "categoria": "Seleção pré-oclusão percutânea",
+        "obrigatorio": true,
+        "texto": "Antes de indicar oclusão percutânea de defeito septal (CIA tipo ostium secundum, FOP, ou outros defeitos passíveis de fechamento por dispositivo), realizar ETE — idealmente com reconstrução 3D — para avaliação anatômica detalhada: medir o diâmetro máximo do defeito, avaliar a integridade e o comprimento das bordas (rims), com atenção especial à borda retroaórtica/anterossuperior e à borda da veia cava inferior, cuja deficiência pode contraindicar ou dificultar certos dispositivos; checar a distância a estruturas adjacentes (válvulas atrioventriculares, veias pulmonares, seio coronário); e excluir defeitos septais múltiplos ou lesões associadas (ex.: drenagem anômala parcial de veias pulmonares), que podem mudar a estratégia de percutânea para cirúrgica. O position paper da EACVI de 2021 sobre imagem em shunts simples (Budts et al.) e o guideline ASE de ETE em cardiopatia congênita (Puchalski 2019) detalham esses critérios de seleção anatômica por via transesofágica, frequentemente com adjunto de ETE 3D e/ou ecocardiografia intracardíaca. A diretriz ESC 2020 de ACHD também referencia a avaliação ecocardiográfica pré-procedimento como parte do planejamento do fechamento percutâneo. Limitação declarada: não confirmei uma classe/nível de evidência numérico específico atribuído exclusivamente ao 'uso de ETE' (distinto da indicação de fechamento em si) nos metadados disponíveis via e-utils.",
+        "origem_secao": "Budts et al. 2021 EACVI position paper sobre shunts simples (PMID 33338215); Puchalski et al. 2019 ASE TEE-in-CHD Guidelines (PMID 30579694); ESC 2020 ACHD Guideline (PMID 32860028)"
+      },
+      {
+        "id": "tee-escalonamento-quando-ett-insuficiente",
+        "categoria": "Escalonamento de imagem",
+        "obrigatorio": true,
+        "texto": "Princípio geral: quando o ETT não fornece informação diagnóstica suficiente — por janela acústica limitada (obesidade, DPOC, deformidade torácica, múltiplas esternotomias/cirurgias prévias) ou por limitação intrínseca da via transtorácica para certas estruturas — o ETE deve ser o próximo passo antes de recorrer a modalidades mais invasivas ou dispendiosas, conforme princípio reconhecido pelos guidelines ASE (Hahn 2013; Puchalski 2019) e pela diretriz ESC 2020 de ACHD. Exemplos específicos do contexto de cardiopatia congênita do adulto em que esse escalonamento se aplica: avaliação de apêndices atriais e septo interatrial não totalmente visualizados por ETT (ex.: FOP pequeno, CIA tipo seio venoso); caracterização de próteses valvares em posição mitral/atrioventricular esquerda, onde a sombra acústica da prótese limita o ETT; suspeita de endocardite infecciosa em cardiopatia congênita (vegetações pequenas, abscessos periprotéticos, envolvimento de condutos/homoenxertos); avaliação detalhada de baffles de Senning/Mustard e do conduto/anastomoses de Fontan (ver item de pós-operatório); e exclusão de trombo intracardíaco antes de cardioversão ou ablação em anatomias complexas. O position paper da EACVI de 2018 (Di Salvo et al.) discute esse princípio de escalonamento de imagem multimodal (ETT → ETE → RM/TC → cateterismo) especificamente para a população de cardiopatia congênita do adulto.",
+        "origem_secao": "Di Salvo et al. 2018 EACVI multimodality imaging position paper (PMID 30084968); Hahn et al. 2013 ASE/SCA TEE Guidelines (PMID 23998692); Puchalski et al. 2019 ASE TEE-in-CHD Guidelines (PMID 30579694); ESC 2020 ACHD Guideline (PMID 32860028)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
