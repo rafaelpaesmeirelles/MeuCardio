@@ -1,0 +1,161 @@
+[
+  {
+    "slug": "sindrome-cardiorrenal",
+    "name": "Síndrome cardiorrenal",
+    "aliases": ["Síndrome cardio-renal", "Cardiorenal syndrome", "Interação coração-rim"],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A síndrome cardiorrenal descreve os distúrbios combinados do coração e dos rins nos quais a disfunção aguda ou crônica de um órgão pode induzir disfunção aguda ou crônica do outro, refletindo a interdependência hemodinâmica, neuro-hormonal e inflamatória entre os dois sistemas. A classificação de Ronco em cinco subtipos organiza o raciocínio clínico conforme o órgão inicialmente acometido e a cronicidade do processo (tipo 1: cardiorrenal agudo; tipo 2: cardiorrenal crônico; tipo 3: renocardíaco agudo; tipo 4: renocardíaco crônico; tipo 5: secundário a doença sistêmica). Na prática, o cenário mais frequente é a piora da função renal durante o tratamento da insuficiência cardíaca aguda descompensada, situação em que a elevação de creatinina isoladamente não deve ser confundida com lesão renal verdadeira quando a descongestão está sendo bem-sucedida — distinção central para não subtratar a congestão por receio equivocado de 'piorar o rim'.",
+    "epidemiology": "A síndrome cardiorrenal é extremamente comum na prática de insuficiência cardíaca: piora da função renal ocorre em parcela substancial dos pacientes hospitalizados por insuficiência cardíaca aguda descompensada durante a terapia depletiva, e doença renal crônica coexiste em fração relevante dos pacientes ambulatoriais com insuficiência cardíaca crônica, sendo um dos preditores mais consistentes de pior prognóstico e maior taxa de reinternação em todas as coortes de insuficiência cardíaca já estudadas. A relação é bidirecional: doença renal crônica é fator de risco independente para desenvolvimento de doença cardiovascular, e a combinação das duas condições — somada a distúrbios metabólicos como diabetes e obesidade — deu origem ao conceito mais recente de síndrome cardiovascular-renal-metabólica, que reconhece a sobreposição fisiopatológica e de risco entre esses três eixos como um continuum, não como comorbidades isoladas.",
+    "presentation": [
+      "Piora da função renal (elevação de creatinina) durante tratamento de insuficiência cardíaca aguda descompensada",
+      "Congestão refratária a diuréticos (resistência diurética)",
+      "Edema persistente apesar de terapia depletiva em curso",
+      "Oligúria durante terapia diurética intensiva",
+      "Hipotensão ou baixo débito cardíaco limitando a diurese",
+      "Doença renal crônica de longa data associada a desenvolvimento progressivo de disfunção cardíaca",
+      "Descompensação cardíaca aguda secundária a evento renal agudo (por exemplo, sobrecarga volêmica em lesão renal aguda)",
+      "Sinais e sintomas de doença sistêmica que acomete simultaneamente coração e rins (por exemplo, sepse, amiloidose, diabetes avançado)"
+    ],
+    "diagnostic_approach": {
+      "classificacao_por_subtipo": "A classificação de Ronco organiza a avaliação conforme a sequência temporal e o órgão desencadeante: tipo 1 (cardiorrenal agudo) — piora aguda da função cardíaca causando lesão renal aguda, como na insuficiência cardíaca aguda descompensada ou choque cardiogênico; tipo 2 (cardiorrenal crônico) — disfunção cardíaca crônica levando a doença renal crônica progressiva; tipo 3 (renocardíaco agudo) — piora aguda da função renal desencadeando disfunção cardíaca aguda, por sobrecarga de volume ou distúrbio metabólico/eletrolítico; tipo 4 (renocardíaco crônico) — doença renal crônica contribuindo para doença cardiovascular crônica, remodelamento e maior risco de eventos; tipo 5 (secundário) — disfunção combinada de coração e rim por doença sistêmica comum a ambos, como sepse, diabetes ou doenças autoimunes.",
+      "diferenciacao_piora_renal_verdadeira_vs_hemoconcentracao": "Etapa central na insuficiência cardíaca aguda descompensada: distinguir a elevação de creatinina que reflete hemoconcentração e ajuste hemodinâmico esperado de uma descongestão eficaz — geralmente transitória, acompanhada de melhora clínica e sem repercussão prognóstica adversa relevante — de uma lesão renal verdadeira, que tende a se associar a descongestão insuficiente, hipotensão ou baixo débito. Essa distinção evita a interrupção prematura ou inadequada da terapia diurética diante de elevação isolada e transitória de creatinina.",
+      "avaliacao_hemodinamica_e_volemica": "Avaliação clínica cuidadosa do estado volêmico (sinais de congestão versus depleção), pressão arterial e sinais de perfusão orienta se a piora renal decorre de congestão venosa renal (mais comum) ou de hipoperfusão por baixo débito, com implicações terapêuticas opostas.",
+      "exames_complementares": "Função renal seriada (creatinina, ureia, eletrólitos), peptídeos natriuréticos, ecocardiograma para avaliar função ventricular e sinais indiretos de congestão (veia cava inferior, padrão de enchimento), e investigação de doença sistêmica subjacente quando o quadro sugere síndrome tipo 5.",
+      "avaliacao_de_resistencia_diuretica": "Quando a resposta à dose inicial de diurético de alça é insuficiente, avalia-se sistematicamente a causa da resistência diurética — biodisponibilidade, dose inadequada, hipoalbuminemia, hiponatremia, uso concomitante de anti-inflamatórios não esteroidais, ou adaptação tubular distal — antes de escalar para estratégias de bloqueio sequencial do néfron."
+    },
+    "differentials": [
+      "Lesão renal aguda intrínseca não relacionada à insuficiência cardíaca (nefrotóxica, isquêmica, pós-contraste)",
+      "Depleção intravascular verdadeira por diurese excessiva",
+      "Estenose de artéria renal bilateral ou em rim único",
+      "Nefropatia por contraste após procedimento invasivo recente",
+      "Uropatia obstrutiva",
+      "Glomerulopatia primária concomitante",
+      "Choque cardiogênico com hipoperfusão renal predominante",
+      "Doença renal crônica de etiologia primária não cardiovascular coexistindo com insuficiência cardíaca"
+    ],
+    "tests": [
+      "Creatinina e ureia seriadas",
+      "Eletrólitos séricos (sódio, potássio)",
+      "Peptídeos natriuréticos (BNP/NT-proBNP)",
+      "Ecocardiograma transtorácico com avaliação de veia cava inferior",
+      "Avaliação de proteinúria/albuminúria quando doença renal crônica é suspeitada",
+      "Exame de urina tipo I",
+      "Balanço hídrico rigoroso e peso diário durante internação",
+      "Investigação de doença sistêmica subjacente (sorologias, marcadores inflamatórios) quando sugerido pelo contexto clínico"
+    ],
+    "red_flags": [
+      "Oligúria persistente apesar de otimização da terapia depletiva",
+      "Hipotensão ou sinais de baixo débito limitando a diurese",
+      "Elevação progressiva e sustentada de creatinina sem sinais de descongestão eficaz",
+      "Hiperpotassemia significativa",
+      "Congestão refratária apesar de bloqueio sequencial do néfron",
+      "Necessidade de terapia renal substitutiva (ultrafiltração/diálise) por sobrecarga volêmica refratária"
+    ],
+    "ambulatory_flow": [
+      "Monitorar função renal periodicamente em pacientes com insuficiência cardíaca crônica, especialmente após ajustes de dose de diuréticos ou bloqueadores do sistema renina-angiotensina-aldosterona",
+      "Reforçar controle de fatores de risco cardiovascular-renal-metabólico compartilhados (diabetes, hipertensão, obesidade)",
+      "Considerar terapias com benefício simultâneo cardiovascular e renal, como inibidores do cotransportador sódio-glicose tipo 2 e antagonistas mineralocorticoides não esteroidais, conforme avaliação médica individualizada",
+      "Orientar o paciente a não interpretar toda elevação de creatinina como motivo para suspender medicação cardioprotetora sem avaliação médica",
+      "Encaminhar para avaliação nefrológica conjunta em casos de doença renal crônica avançada concomitante",
+      "Educar sobre sinais de alerta de congestão e de depleção excessiva para ajuste precoce ambulatorial"
+    ],
+    "emergency_flow": [
+      "Avaliar estado volêmico e hemodinâmico para diferenciar congestão de hipoperfusão como causa da piora renal aguda",
+      "Reavaliar e ajustar a estratégia diurética diante de resposta inadequada, considerando bloqueio sequencial do néfron sob supervisão especializada",
+      "Investigar e corrigir distúrbios eletrolíticos graves associados (hiperpotassemia, hiponatremia)",
+      "Considerar suporte hemodinâmico ou inotrópico quando a piora renal decorre de baixo débito cardíaco",
+      "Acionar avaliação nefrológica para terapia renal substitutiva quando há sobrecarga volêmica refratária ou distúrbio metabólico grave"
+    ],
+    "treatment_summary": "O manejo da síndrome cardiorrenal parte do reconhecimento de que a piora isolada e transitória da função renal durante a descongestão ativa da insuficiência cardíaca aguda descompensada não deve, por si só, motivar a redução ou suspensão da terapia diurética quando há evidência clínica de descongestão eficaz, dado que a congestão persistente é, em si, um determinante importante de lesão renal e de pior prognóstico. A avaliação cuidadosa do estado volêmico orienta a estratégia: quando a piora renal decorre predominantemente de congestão venosa renal, a intensificação da terapia depletiva tende a ser benéfica; quando decorre de hipoperfusão por baixo débito ou depleção intravascular, a abordagem se volta para otimização hemodinâmica. Diante de resposta diurética insuficiente, investiga-se sistematicamente a causa da resistência diurética antes de escalar a estratégia terapêutica, considerando otimização da dose e via de administração do diurético de alça e, quando necessário, bloqueio sequencial do néfron com associação de diurético tiazídico ou poupador de potássio, sempre sob supervisão médica individualizada e sem que doses específicas sejam aqui detalhadas. Nos pacientes com insuficiência cardíaca crônica e doença renal crônica concomitante, o tratamento busca terapias com benefício comprovado em ambos os eixos, incluindo bloqueio do sistema renina-angiotensina-aldosterona (respeitando limites de função renal e potássio), inibidores do cotransportador sódio-glicose tipo 2 e antagonistas mineralocorticoides não esteroidais, no contexto mais amplo do que hoje se reconhece como continuum cardiovascular-renal-metabólico, com controle simultâneo de fatores de risco compartilhados como diabetes e obesidade. Em casos de congestão refratária às medidas farmacológicas otimizadas, a ultrafiltração ou a terapia renal substitutiva podem ser consideradas em ambiente especializado, com decisão compartilhada entre cardiologia e nefrologia. Ao longo de todo o manejo, o monitoramento seriado de função renal, eletrólitos e estado volêmico permite ajustes terapêuticos precoces e evita tanto a subtratamento da congestão por receio infundado de piora renal transitória quanto o agravamento de lesão renal verdadeira por descongestão excessivamente agressiva ou por hipoperfusão não reconhecida.",
+    "monitoring": [
+      "Função renal seriada (creatinina, ureia) durante ajustes de terapia diurética ou de bloqueadores do sistema renina-angiotensina-aldosterona",
+      "Eletrólitos séricos, com atenção a potássio durante bloqueio sequencial do néfron",
+      "Peso corporal diário e balanço hídrico durante terapia depletiva",
+      "Sinais clínicos de congestão versus depleção a cada reavaliação",
+      "Pressão arterial e sinais de perfusão periférica",
+      "Reavaliação periódica de proteinúria/albuminúria em doença renal crônica concomitante"
+    ],
+    "special_populations": [
+      "Paciente com insuficiência cardíaca aguda descompensada e piora renal durante descongestão ativa (distinguir hemoconcentração benigna de lesão renal verdadeira)",
+      "Paciente com doença renal crônica avançada e insuficiência cardíaca crônica concomitante",
+      "Paciente idoso com múltiplas comorbidades cardiovasculares-renais-metabólicas",
+      "Paciente com resistência diurética estabelecida necessitando bloqueio sequencial do néfron",
+      "Paciente com síndrome cardiorrenal tipo 5 no contexto de doença sistêmica aguda (por exemplo, sepse)"
+    ],
+    "assistant_questions": [
+      {"id": "subtipo_suspeito", "label": "Qual subtipo de síndrome cardiorrenal é mais compatível com o quadro?", "type": "select", "options": [
+        {"value": "tipo1_cardiorrenal_agudo", "label": "Tipo 1 - Cardiorrenal agudo"},
+        {"value": "tipo2_cardiorrenal_cronico", "label": "Tipo 2 - Cardiorrenal crônico"},
+        {"value": "tipo3_renocardiaco_agudo", "label": "Tipo 3 - Renocardíaco agudo"},
+        {"value": "tipo4_renocardiaco_cronico", "label": "Tipo 4 - Renocardíaco crônico"},
+        {"value": "tipo5_secundario", "label": "Tipo 5 - Secundário a doença sistêmica"},
+        {"value": "indefinido", "label": "Ainda não definido"}
+      ]},
+      {"id": "contexto_atual", "label": "Qual o contexto clínico atual?", "type": "select", "options": [
+        {"value": "icad_em_descongestao", "label": "Insuficiência cardíaca aguda descompensada em descongestão ativa"}, {"value": "ic_cronica_ambulatorial", "label": "Insuficiência cardíaca crônica ambulatorial"}, {"value": "lesao_renal_aguda_primaria", "label": "Lesão renal aguda de causa primariamente renal"}, {"value": "doenca_sistemica_aguda", "label": "Doença sistêmica aguda concomitante"}]},
+      {"id": "creatinina_basal_mg_dl", "label": "Qual a creatinina basal (mg/dL) antes da descompensação atual?", "type": "number"},
+      {"id": "creatinina_atual_mg_dl", "label": "Qual a creatinina atual (mg/dL)?", "type": "number"},
+      {"id": "sinais_congestao_presentes", "label": "Há sinais clínicos de congestão (edema, turgência jugular, estertores)?", "type": "boolean"},
+      {"id": "sinais_depleccao_ou_hipoperfusao", "label": "Há sinais de depleção intravascular ou hipoperfusão (hipotensão, extremidades frias)?", "type": "boolean"},
+      {"id": "resposta_diuretico_alca_inicial", "label": "A resposta ao diurético de alça inicial foi adequada?", "type": "boolean"},
+      {"id": "diurese_avaliada_ml_dia", "label": "Qual o débito urinário estimado nas últimas 24h (mL)?", "type": "number"},
+      {"id": "potassio_serico_meq_l", "label": "Qual o potássio sérico atual (mEq/L)?", "type": "number"},
+      {"id": "doenca_renal_cronica_previa", "label": "Há doença renal crônica documentada previamente?", "type": "boolean"},
+      {"id": "uso_bloqueio_sra_atual", "label": "O paciente está em uso de bloqueador do sistema renina-angiotensina-aldosterona?", "type": "boolean"},
+      {"id": "uso_isglt2_atual", "label": "O paciente está em uso de inibidor do cotransportador sódio-glicose tipo 2?", "type": "boolean"},
+      {"id": "diabetes_associado", "label": "Há diabetes mellitus associado?", "type": "boolean"}
+    ],
+    "assistant_rules": [
+      {"id": "elevacao_creatinina_com_descongestao_eficaz", "priority": 60, "when": {"all": [{"field": "contexto_atual", "op": "eq", "value": "icad_em_descongestao"}, {"field": "creatinina_atual_mg_dl", "op": "gt", "value": 0}, {"field": "sinais_congestao_presentes", "op": "truthy"}]}, "add": {"supporting": ["Elevação de creatinina durante descongestão ativa com congestão clínica ainda presente sugere hemoconcentração/ajuste hemodinâmico esperado, não necessariamente lesão renal verdadeira - avaliar resposta clínica antes de reduzir a terapia diurética"], "missing_information": ["Confirmar se há melhora clínica concomitante de congestão que sustente a interpretação de hemoconcentração benigna"]}},
+      {"id": "resistencia_diuretica_avaliar", "priority": 65, "when": {"all": [{"field": "resposta_diuretico_alca_inicial", "op": "falsy"}, {"field": "sinais_congestao_presentes", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Resistência diurética identificada com congestão persistente - considerar avaliação sistemática da causa e bloqueio sequencial do néfron sob supervisão especializada"], "suggested_tests": ["Reavaliação de eletrólitos e função renal antes de escalar terapia diurética"]}},
+      {"id": "hipoperfusao_limitando_diurese", "priority": 80, "when": {"all": [{"field": "sinais_depleccao_ou_hipoperfusao", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Sinais de hipoperfusão ou depleção intravascular limitando a resposta diurética - risco de agravar a lesão renal com intensificação inadequada da diurese"], "missing_information": ["Reavaliar estado volêmico e considerar suporte hemodinâmico antes de intensificar a terapia depletiva"]}},
+      {"id": "oliguria_persistente_emergencia", "priority": 90, "when": {"all": [{"field": "diurese_avaliada_ml_dia", "op": "lt", "value": 400}, {"field": "sinais_congestao_presentes", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Oligúria persistente com congestão em curso - avaliar necessidade de escalonamento terapêutico e avaliação nefrológica para possível terapia renal substitutiva"], "emergency_flow": ["Acionar avaliação conjunta cardiologia-nefrologia diante de oligúria persistente refratária"]}},
+      {"id": "hiperpotassemia_alerta", "priority": 85, "when": {"all": [{"field": "potassio_serico_meq_l", "op": "gte", "value": 5.5}]}, "add": {"risk": "urgente", "red_flags": ["Hiperpotassemia significativa - reavaliar doses de bloqueadores do sistema renina-angiotensina-aldosterona e função renal com urgência"]}},
+      {"id": "drc_cronica_terapia_dupla_beneficio", "priority": 55, "when": {"all": [{"field": "doenca_renal_cronica_previa", "op": "truthy"}, {"field": "diabetes_associado", "op": "truthy"}]}, "add": {"supporting": ["Doença renal crônica associada a diabetes - contexto de síndrome cardiovascular-renal-metabólica com potencial benefício de terapias com efeito simultâneo cardiovascular e renal"]}},
+      {"id": "isglt2_nao_iniciado_drc_diabetes", "priority": 50, "when": {"all": [{"field": "doenca_renal_cronica_previa", "op": "truthy"}, {"field": "diabetes_associado", "op": "truthy"}, {"field": "uso_isglt2_atual", "op": "falsy"}]}, "add": {"missing_information": ["Avaliar elegibilidade para inibidor do cotransportador sódio-glicose tipo 2, com benefício cardiovascular e renal reconhecido nesse perfil de risco combinado"]}},
+      {"id": "tipo5_doenca_sistemica", "priority": 60, "when": {"all": [{"field": "subtipo_suspeito", "op": "eq", "value": "tipo5_secundario"}]}, "add": {"supporting": ["Padrão compatível com síndrome cardiorrenal tipo 5 - priorizar investigação e tratamento da doença sistêmica subjacente comum a ambos os órgãos"]}},
+      {"id": "creatinina_progressiva_sem_descongestao", "priority": 70, "when": {"all": [{"field": "creatinina_atual_mg_dl", "op": "gt", "value": 0}, {"field": "creatinina_basal_mg_dl", "op": "gt", "value": 0}, {"field": "sinais_congestao_presentes", "op": "truthy"}, {"field": "resposta_diuretico_alca_inicial", "op": "falsy"}]}, "add": {"risk": "prioritario", "red_flags": ["Elevação de creatinina associada a congestão persistente e resposta diurética inadequada - padrão menos compatível com hemoconcentração benigna isolada, reforçando necessidade de reavaliação ativa"]}}
+    ],
+    "tags": ["síndrome cardiorrenal", "insuficiência cardíaca", "doença renal crônica", "resistência diurética", "síndrome cardiovascular-renal-metabólica"],
+    "source_refs": [
+      "Ronco C, McCullough P, Anker SD, et al. Cardio-renal syndromes: report from the consensus conference of the Acute Dialysis Quality Initiative. Eur Heart J. 2010;31(6):703-711. PMID 20037146",
+      "Ronco C, Haapio M, House AA, et al. Cardiorenal syndrome. J Am Coll Cardiol. 2008;52(19):1527-1539. PMID 19007588",
+      "House AA, Wang AY, Ronco C, et al. Estimating and monitoring GFR in heart failure: a scientific workshop of the AHA. Circulation. 2019. PMID 30852913",
+      "Testani JM, Chen J, McCauley BD, et al. Potential effects of aggressive decongestion during the treatment of decompensated heart failure on renal function and survival. Circulation. 2010;122(3):265-272. PMID 20606118",
+      "Mullens W, Damman K, Harjola VP, et al. The use of diuretics in heart failure with congestion: a position statement from the Heart Failure Association of the ESC. Eur J Heart Fail. 2019;21(2):137-155. PMID 30600580",
+      "Mentz RJ, Stevens SR, DeVore AD, et al. Torsemide versus furosemide/hydrochlorothiazide combination in acute decompensated heart failure (CLOROTIC trial). Eur J Heart Fail. 2022. PMID 36423214",
+      "Mullens W, Dauw J, Martens P, et al. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload (ADVOR). N Engl J Med. 2022;387(13):1185-1195. PMID 36027559",
+      "Bakris GL, Agarwal R, Anker SD, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes (FIDELIO-DKD). N Engl J Med. 2020;383(23):2219-2229. PMID 33264825",
+      "Pitt B, Filippatos G, Agarwal R, et al. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes (FIGARO-DKD). N Engl J Med. 2021;385(24):2252-2263. PMID 34449181"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20037146/",
+      "https://pubmed.ncbi.nlm.nih.gov/19007588/",
+      "https://pubmed.ncbi.nlm.nih.gov/30852913/",
+      "https://pubmed.ncbi.nlm.nih.gov/20606118/",
+      "https://pubmed.ncbi.nlm.nih.gov/30600580/",
+      "https://pubmed.ncbi.nlm.nih.gov/36423214/",
+      "https://pubmed.ncbi.nlm.nih.gov/36027559/",
+      "https://pubmed.ncbi.nlm.nih.gov/33264825/",
+      "https://pubmed.ncbi.nlm.nih.gov/34449181/"
+    ],
+    "related_document_slugs": [
+      "sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca",
+      "sindrome-cardiorrenal-no-idoso-classificacao-e-o-mito-da-piora-renal-durante-a-descongestao",
+      "esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd",
+      "resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron",
+      "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+      "aha-acc-ada-asn-2026-sindrome-cardiovascular-renal-metabolica-ckm"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Síndrome cardiorrenal, tema central e recorrente na prática de insuficiência cardíaca, não tinha ficha própria em doencas/metadados.json apesar de corpus rico já existente sobre classificação, manejo no idoso, diretrizes ESC 2026 sobre DCV/DRC, resistência diurética e estratégia diurética na ICAD. related_document_slugs verificados individualmente por leitura direta do documento completo - reduzido de 7 candidatos propostos para 6 finais: um candidato (fluxograma de diurético resistente na síndrome cardiorrenal) foi excluído por resolver a um arquivo em content/Farmacologia/, pasta excluída pela regra Tudo com Tudo. 9 PMIDs verificados individualmente via NCBI e-utils antes da montagem. Nenhum patient_material_slug correspondente foi encontrado em material-paciente/metadados.json, por isso o campo foi deixado null - pode ser oportunidade futura de produção de material para paciente. category='sindrome_clinica' segue convenção já usada em outras síndromes clínicas transversais do sistema. prevalence_rank deixado null. Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
