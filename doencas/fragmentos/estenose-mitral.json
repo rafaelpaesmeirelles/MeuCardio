@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "estenose-mitral",
+    "name": "Estenose mitral",
+    "aliases": ["Doença mitral reumática", "Estenose valvar mitral", "Estenose da valva mitral", "Mitral stenosis", "EM reumática"],
+    "area": "geral",
+    "category": "valvopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A estenose mitral é a obstrução ao fluxo entre átrio e ventrículo esquerdos causada por espessamento, fusão comissural e retração do aparato subvalvar dos folhetos mitrais, predominantemente como sequela tardia da febre reumática. O diagnóstico e a quantificação de gravidade são ecocardiográficos, combinando planimetria da área valvar mitral, gradiente transvalvar médio e pressão sistólica pulmonar, enquanto o escore de Wilkins orienta a escolha entre comissurotomia mitral percutânea por balão e cirurgia valvar. A fibrilação atrial é complicação frequente e, por se tratar de valvopatia reumática, contraindica o uso de anticoagulantes orais diretos, exigindo antagonista de vitamina K.",
+    "epidemiology": "A estenose mitral (EM) tem a febre reumática como causa mais comum em todo o mundo, sendo também a principal causa de morte por valvopatia em escala global. Em países de alta e média renda, a prevalência da EM reumática caiu de forma expressiva ao longo das últimas décadas, em paralelo à redução da incidência de febre reumática aguda; entretanto, em regiões de baixa renda — partes da África Subsaariana, sul da Ásia, Oceania e América Latina — a doença cardíaca reumática continua um problema grave de saúde pública, afetando predominantemente crianças, adolescentes e adultos jovens, com nítido predomínio no sexo feminino. Uma característica central da história natural é o longo período de latência entre o episódio de febre reumática (com frequência não reconhecido clinicamente) e o aparecimento de sintomas relacionados à EM, que costuma se estender por vinte a quarenta anos, de modo que a doença se manifesta sobretudo entre a terceira e a quinta décadas de vida, mesmo quando a agressão valvar inicial ocorreu na infância. Paralelamente à forma reumática, existe a estenose mitral degenerativa associada à calcificação do anel mitral (MAC), entidade distinta, dependente da idade, cada vez mais relevante em populações envelhecidas de países desenvolvidos, que não compartilha o mecanismo de fusão comissural e por isso exige abordagem terapêutica diferente.",
+    "presentation": [
+      "Dispneia aos esforços, progressiva, por hipertensão venocapilar pulmonar",
+      "Ortopneia e dispneia paroxística noturna em fases mais avançadas",
+      "Fadiga e intolerância ao exercício por débito cardíaco relativamente fixo",
+      "Palpitações associadas a fibrilação atrial paroxística ou persistente",
+      "Hemoptise por ruptura de veias brônquicas colaterais em hipertensão venocapilar grave",
+      "Rouquidão por compressão do nervo laríngeo recorrente pelo átrio esquerdo dilatado (síndrome de Ortner)",
+      "Fenômenos embólicos sistêmicos (acidente vascular cerebral, isquemia de membro) associados a fibrilação atrial ou trombo em átrio esquerdo",
+      "Sinais de congestão sistêmica (edema de membros inferiores, turgência jugular, hepatomegalia) quando há hipertensão pulmonar e disfunção de ventrículo direito",
+      "Ausculta com hiperfonese de B1, estalido de abertura mitral e ruflar diastólico com reforço pré-sistólico em ritmo sinusal",
+      "Piora ou desmascaramento de sintomas em situações de aumento de débito cardíaco, como gestação, infecção, tireotoxicose ou início de fibrilação atrial com resposta ventricular rápida",
+      "Facies mitral (rubor malar) em casos avançados com baixo débito cardíaco"
+    ],
+    "diagnostic_approach": {
+      "metodo_principal": "Ecocardiografia transtorácica é o método de escolha para diagnóstico, rastreio em região endêmica de febre reumática e avaliação de gravidade, extensão das lesões anatômicas e repercussão hemodinâmica da estenose mitral. A área valvar mitral por planimetria 2D é a medida mais usada para quantificar gravidade; ecocardiografia 3D e transesofágica agregam valor diagnóstico adicional, sobretudo quando a planimetria 2D é tecnicamente difícil.",
+      "quantificacao_gravidade": "Área valvar mitral (AVM) igual ou menor que 1,5 cm², associada a fatores clínicos (sintomas, alto risco tromboembólico ou de descompensação hemodinâmica), define estenose clinicamente grave. O gradiente transvalvar médio e a pressão sistólica pulmonar refletem a repercussão hemodinâmica e têm valor prognóstico complementar à área valvar isolada.",
+      "escore_de_wilkins": {
+        "finalidade": "Estimar a probabilidade de sucesso e a elegibilidade anatômica para comissurotomia mitral percutânea (CMP) por balão.",
+        "componentes": ["mobilidade do folheto", "espessamento do folheto", "calcificação", "espessamento e calcificação do aparato subvalvar"],
+        "pontuacao": "Cada componente é pontuado de 1 a 4 por ecocardiografia, somando de 4 a 16 pontos no total.",
+        "interpretacao": "Escore igual ou menor que 8 é preditor de sucesso do tratamento percutâneo; escore entre 9 e 11 é zona cinzenta de decisão. Escore maior que 8 é um dos critérios de anatomia desfavorável à CMP, junto com calcificação bicomissural (Cormier grupo 3) e insuficiência tricúspide grave."
+      },
+      "avaliacao_pre_valvuloplastia": "Ecocardiograma transesofágico deve ser realizado sistematicamente antes da CMP para excluir trombo em átrio esquerdo, particularmente no apêndice atrial esquerdo, ou após episódio embólico prévio; também orienta o procedimento. Trombo em átrio esquerdo é contraindicação à CMP, exceto quando confinado ao apêndice atrial esquerdo, situação em que a CMP pode ser reconsiderada após 1 a 3 meses de anticoagulação eficaz e confirmação de resolução do trombo por novo ecocardiograma transesofágico.",
+      "testes_complementares": "Teste de esforço (preferencialmente ecocardiografia de esforço) é indicado em paciente assintomático ou com sintomas equívocos ou discordantes da gravidade estimada da estenose, avaliando capacidade funcional e variação do gradiente mitral e da pressão pulmonar com o exercício. Tomografia computadorizada cardíaca é útil na estenose mitral degenerativa por calcificação do anel mitral, onde a planimetria por ecocardiografia transtorácica é menos confiável por sombra acústica."
+    },
+    "differentials": [
+      "Mixoma de átrio esquerdo, causando obstrução funcional do influxo mitral",
+      "Estenose mitral degenerativa por calcificação do anel mitral (MAC)",
+      "Cor triatriatum",
+      "Estenose mitral congênita (por exemplo, valva mitral em paraquedas)",
+      "Endocardite infecciosa com vegetação volumosa obstruindo o influxo mitral",
+      "Trombo em átrio esquerdo simulando massa obstrutiva",
+      "Insuficiência cardíaca com fração de ejeção preservada e outras causas de dispneia",
+      "Hipertensão pulmonar de outras etiologias, sem estenose mitral associada"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler, incluindo planimetria da área valvar mitral, gradiente médio e pressão sistólica pulmonar estimada",
+      "Ecocardiograma transesofágico, sobretudo para pesquisa de trombo em apêndice atrial esquerdo antes de valvuloplastia",
+      "Ecocardiograma de esforço em sintomas equívocos ou discordantes da gravidade ecocardiográfica",
+      "Eletrocardiograma, avaliando sobrecarga de átrio esquerdo e fibrilação atrial",
+      "Radiografia de tórax, com duplo contorno atrial esquerdo e sinais de congestão pulmonar",
+      "Cateterismo cardíaco, reservado a casos de discordância entre ecocardiograma e quadro clínico",
+      "Tomografia computadorizada cardíaca sincronizada ao ECG, na avaliação de calcificação do anel mitral antes de intervenção",
+      "Peptídeo natriurético tipo B (BNP ou NT-proBNP) como apoio prognóstico"
+    ],
+    "red_flags": [
+      "Área valvar mitral igual ou menor que 1,5 cm² associada a sintomas, indicando necessidade de intervenção",
+      "Trombo em átrio esquerdo, contraindicação a valvuloplastia percutânea (exceto trombo restrito ao apêndice atrial esquerdo após anticoagulação e confirmação de resolução)",
+      "Hipertensão pulmonar grave em repouso (pressão sistólica de artéria pulmonar acima de 50 mmHg)",
+      "Fibrilação atrial de início recente ou episódio de embolia sistêmica prévia",
+      "Insuficiência mitral mais que leve associada, contraindicando comissurotomia mitral percutânea",
+      "Escore de Wilkins maior que 8, calcificação bicomissural (Cormier grupo 3) ou insuficiência tricúspide grave, definindo anatomia desfavorável à valvuloplastia percutânea",
+      "Gestação ou desejo de engravidar em paciente com estenose mitral grave, com alto risco de descompensação hemodinâmica",
+      "Hemoptise ou edema pulmonar agudo como primeira manifestação de estenose mitral não diagnosticada"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico e gravidade por ecocardiograma transtorácico com medida da área valvar mitral",
+      "Classificar a estenose em leve, moderada ou grave e correlacionar com sintomas e classe funcional",
+      "Investigar etiologia (reumática versus degenerativa/calcificação versus outras causas)",
+      "Avaliar anatomia valvar pelo escore de Wilkins para definir elegibilidade à valvuloplastia por balão",
+      "Pesquisar trombo em átrio esquerdo e grau de regurgitação mitral associada, com ecocardiograma transesofágico se indicado",
+      "Manter vigilância clínica estruturada nos casos leves e assintomáticos, sem intervenção mecânica",
+      "Encaminhar para valvuloplastia mitral por balão percutânea quando anatomia for favorável e houver indicação clínica",
+      "Encaminhar para avaliação cirúrgica (comissurotomia ou troca valvar) quando a anatomia for desfavorável",
+      "Iniciar ou revisar anticoagulação com antagonista de vitamina K em estenose mitral reumática com fibrilação atrial ou trombo/evento embólico prévio",
+      "Avaliar necessidade e adesão à profilaxia secundária de febre reumática",
+      "Orientar sobre sinais de alarme e critérios para procura de atendimento de emergência",
+      "Programar seguimento ecocardiográfico periódico conforme a gravidade da lesão"
+    ],
+    "emergency_flow": [
+      "Reconhecer edema agudo de pulmão precipitado por taquiarritmia (por exemplo, fibrilação atrial de alta resposta ventricular) em paciente com estenose mitral grave",
+      "Estabilizar via aérea, oxigenação e suporte ventilatório conforme gravidade do quadro respiratório",
+      "Controlar urgentemente a frequência cardíaca/ritmo para reduzir o tempo de enchimento diastólico e aliviar a congestão pulmonar",
+      "Investigar e tratar o fator precipitante (arritmia nova, infecção, anemia, gestação, sobrecarga volêmica)",
+      "Avaliar necessidade de intervenção valvar de urgência (valvuloplastia por balão ou cirurgia) em caso de instabilidade hemodinâmica refratária",
+      "Considerar anticoagulação urgente em fibrilação atrial de início recente com risco embólico elevado",
+      "Manter monitorização contínua em ambiente de emergência ou unidade de terapia intensiva até estabilização"
+    ],
+    "treatment_summary": "O manejo da estenose mitral é definido pela gravidade da lesão valvar, pela presença de sintomas, pela etiologia (predominantemente reumática) e pela anatomia valvar avaliada por ecocardiograma transtorácico, com ecocardiograma transesofágico complementar quando há suspeita de trombo em átrio esquerdo. Nos casos de doença leve e assintomática, a conduta recomendada é a vigilância clínica estruturada, com reavaliação periódica de sintomas e reavaliação ecocardiográfica em intervalos proporcionais à gravidade, sem indicação de intervenção mecânica nesse estágio. Quando a estenose é moderada a grave e sintomática, ou quando há repercussão hemodinâmica relevante, indica-se intervenção sobre a valva mitral. A valvuloplastia mitral por balão percutânea é a estratégia de primeira escolha quando a anatomia valvar é favorável, caracterizada por escore de Wilkins baixo, ausência de trombo em átrio esquerdo e ausência de regurgitação mitral significativa associada — condições que reduzem o risco do procedimento e favorecem bom resultado hemodinâmico com preservação da valva nativa. Quando a anatomia é desfavorável — escore de Wilkins elevado, presença de trombo atrial ou regurgitação mitral significativa concomitante — a valvuloplastia por balão é contraindicada ou tem baixa probabilidade de sucesso, sendo indicada avaliação cirúrgica, com opções de comissurotomia mitral aberta (em valvas ainda passíveis de reparo) ou troca valvar mitral (protética) nos casos de degeneração estrutural mais avançada. A decisão entre as estratégias deve envolver avaliação conjunta de cardiologia clínica e cirurgia cardíaca (heart team), considerando também risco cirúrgico, comorbidades e preferência do paciente. Nos pacientes com estenose mitral de etiologia reumática associada a fibrilação atrial ou a evento embólico/trombo prévio, a anticoagulação indicada é com antagonista de vitamina K, e não com anticoagulantes orais diretos (DOAC), dado o padrão de evidência que sustenta a eficácia e segurança dos antagonistas de vitamina K nesse contexto valvar específico — sem especificação de dose neste conteúdo. A profilaxia secundária de febre reumática deve ser mantida e monitorada quando há história compatível, como componente essencial do controle da progressão da doença valvar reumática ao longo do tempo. O acompanhamento longitudinal inclui reavaliação clínica de classe funcional, monitorização de ritmo cardíaco para detecção de fibrilação atrial, seguimento ecocardiográfico seriado e reavaliação após qualquer intervenção realizada, seja percutânea ou cirúrgica.",
+    "monitoring": [
+      "Ecocardiograma transtorácico seriado, com intervalo definido pela gravidade da estenose (mais frequente na doença grave)",
+      "Avaliação clínica de sintomas e classe funcional (NYHA) a cada consulta de seguimento",
+      "Monitorização de ritmo cardíaco para detecção precoce de fibrilação atrial",
+      "Acompanhamento laboratorial de controle da anticoagulação em pacientes em uso de antagonista de vitamina K",
+      "Vigilância de sinais de hipertensão pulmonar e disfunção de ventrículo direito",
+      "Reavaliação ecocardiográfica após valvuloplastia por balão ou cirurgia (área valvar residual, regurgitação residual)",
+      "Rastreio de reestenose ou recorrência de sintomas em seguimento de longo prazo",
+      "Monitorização da adesão à profilaxia secundária de febre reumática quando indicada"
+    ],
+    "special_populations": [
+      "Paciente com estenose mitral reumática e fibrilação atrial associada, em quem a anticoagulação é obrigatória com antagonista de vitamina K (varfarina) e não com anticoagulante oral direto (DOAC)",
+      "Gestante com estenose mitral, com risco de descompensação hemodinâmica por hipervolemia e taquicardia próprias da gestação",
+      "Paciente idoso com estenose mitral degenerativa por calcificação do anel mitral, mecanismo obstrutivo distinto da fusão comissural reumática",
+      "Paciente candidato a valvuloplastia mitral por balão (comissurotomia percutânea), por ter anatomia valvar favorável ao procedimento",
+      "Paciente com estenose mitral grave e trombo no apêndice atrial esquerdo, contraindicação relativa à valvuloplastia por balão",
+      "Paciente com história de febre reumática em país de alta prevalência da doença",
+      "Paciente idoso com estenose mitral reumática de longa data, em quem a idade por si só modifica o resultado esperado do tratamento percutâneo",
+      "Paciente com estenose mitral e insuficiência tricúspide grave concomitante, cenário que muda a escolha entre comissurotomia percutânea e cirurgia de dupla valva"
+    ],
+    "assistant_questions": [
+      {"id": "severity_ms", "label": "Qual a gravidade da estenose mitral?", "type": "select", "options": [{"value": "leve", "label": "Leve"}, {"value": "moderada", "label": "Moderada"}, {"value": "grave", "label": "Grave"}]},
+      {"id": "symptomatic", "label": "Paciente sintomático?", "type": "boolean"},
+      {"id": "nyha_class", "label": "Classe funcional NYHA", "type": "select", "options": [{"value": "I", "label": "I"}, {"value": "II", "label": "II"}, {"value": "III", "label": "III"}, {"value": "IV", "label": "IV"}]},
+      {"id": "etiology", "label": "Etiologia da estenose mitral", "type": "select", "options": [{"value": "reumatica", "label": "Reumática"}, {"value": "degenerativa_calcificacao", "label": "Degenerativa/calcificação"}, {"value": "congenita", "label": "Congênita"}, {"value": "outra", "label": "Outra"}]},
+      {"id": "wilkins_score", "label": "Escore de Wilkins (avaliação anatômica valvar)", "type": "number"},
+      {"id": "atrial_thrombus", "label": "Trombo em átrio esquerdo presente?", "type": "boolean"},
+      {"id": "significant_mr", "label": "Regurgitação mitral significativa associada?", "type": "boolean"},
+      {"id": "atrial_fibrillation", "label": "Fibrilação atrial presente?", "type": "boolean"},
+      {"id": "prior_embolic_event", "label": "História de evento embólico prévio?", "type": "boolean"},
+      {"id": "anticoagulation_current", "label": "Anticoagulação atual", "type": "select", "options": [{"value": "nenhuma", "label": "Nenhuma"}, {"value": "antagonista_vitamina_k", "label": "Antagonista de vitamina K"}, {"value": "doac", "label": "Anticoagulante oral direto (DOAC)"}, {"value": "heparina", "label": "Heparina"}]},
+      {"id": "rheumatic_fever_history", "label": "História de febre reumática?", "type": "boolean"},
+      {"id": "pregnancy", "label": "Gestação atual?", "type": "boolean"},
+      {"id": "acute_pulmonary_edema", "label": "Apresenta edema agudo de pulmão precipitado por taquiarritmia?", "type": "boolean"},
+      {"id": "comorbidities", "label": "Comorbidades relevantes", "type": "multiselect", "options": [{"value": "hipertensao_pulmonar", "label": "Hipertensão pulmonar"}, {"value": "disfuncao_vd", "label": "Disfunção de ventrículo direito"}, {"value": "doenca_renal", "label": "Doença renal"}, {"value": "outras", "label": "Outras"}]}
+    ],
+    "assistant_rules": [
+      {"id": "estenose_leve_assintomatica_vigilancia", "priority": 20, "when": {"all": [{"field": "severity_ms", "op": "eq", "value": "leve"}, {"field": "symptomatic", "op": "falsy"}]}, "add": {"risk": "rotina", "ambulatory_flow": ["Manter vigilância clínica e ecocardiográfica periódica"], "messages": ["Doença leve assintomática: seguimento clínico é a conduta recomendada, sem indicação de intervenção neste momento."]}},
+      {"id": "estenose_grave_sintomatica_prioridade", "priority": 70, "when": {"all": [{"field": "severity_ms", "op": "eq", "value": "grave"}, {"field": "symptomatic", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["Ecocardiograma transtorácico atualizado com avaliação do escore de Wilkins", "Ecocardiograma transesofágico para pesquisa de trombo atrial"], "missing_information": ["Escore de Wilkins", "Presença de trombo em átrio esquerdo", "Grau de regurgitação mitral associada"]}},
+      {"id": "anatomia_favoravel_valvuloplastia", "priority": 80, "when": {"all": [{"field": "wilkins_score", "op": "lte", "value": 8}, {"field": "atrial_thrombus", "op": "falsy"}, {"field": "significant_mr", "op": "falsy"}, {"field": "severity_ms", "op": "eq", "value": "grave"}]}, "add": {"supporting": ["Anatomia valvar favorável (escore de Wilkins baixo, ausência de trombo atrial e de regurgitação mitral significativa) — valvuloplastia mitral por balão percutânea é a primeira escolha terapêutica"], "ambulatory_flow": ["Encaminhar para valvuloplastia mitral por balão percutânea"]}},
+      {"id": "anatomia_desfavoravel_cirurgia", "priority": 80, "when": {"any": [{"field": "wilkins_score", "op": "gt", "value": 8}, {"field": "atrial_thrombus", "op": "truthy"}, {"field": "significant_mr", "op": "truthy"}]}, "add": {"opposing": ["Anatomia desfavorável para valvuloplastia por balão (escore de Wilkins elevado, trombo atrial ou regurgitação mitral significativa)"], "supporting": ["Avaliação cirúrgica indicada — comissurotomia mitral aberta ou troca valvar mitral"], "ambulatory_flow": ["Encaminhar para avaliação cirúrgica cardíaca"]}},
+      {"id": "trombo_atrial_red_flag", "priority": 90, "when": {"all": [{"field": "atrial_thrombus", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Trombo em átrio esquerdo identificado — contraindicação à valvuloplastia por balão até resolução"], "suggested_tests": ["Ecocardiograma transesofágico de controle"]}},
+      {"id": "fa_reumatica_anticoagulacao_avk", "priority": 75, "when": {"all": [{"field": "atrial_fibrillation", "op": "truthy"}, {"field": "etiology", "op": "eq", "value": "reumatica"}]}, "add": {"risk": "prioritario", "supporting": ["Indicação de anticoagulação com antagonista de vitamina K na estenose mitral reumática com fibrilação atrial"], "missing_information": ["Confirmação de uso de antagonista de vitamina K e acompanhamento do controle de anticoagulação"]}},
+      {"id": "doac_inadequado_fa_reumatica", "priority": 95, "when": {"all": [{"field": "anticoagulation_current", "op": "eq", "value": "doac"}, {"field": "etiology", "op": "eq", "value": "reumatica"}, {"field": "atrial_fibrillation", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Uso de DOAC em estenose mitral reumática com fibrilação atrial — anticoagulante inadequado, indicado antagonista de vitamina K"]}},
+      {"id": "doac_inadequado_evento_embolico_previo", "priority": 95, "when": {"all": [{"field": "anticoagulation_current", "op": "eq", "value": "doac"}, {"field": "etiology", "op": "eq", "value": "reumatica"}, {"field": "prior_embolic_event", "op": "truthy"}]}, "add": {"risk": "urgente", "red_flags": ["Uso de DOAC em estenose mitral reumática com evento embólico prévio — anticoagulante inadequado, indicado antagonista de vitamina K"]}},
+      {"id": "profilaxia_secundaria_febre_reumatica", "priority": 40, "when": {"all": [{"field": "rheumatic_fever_history", "op": "truthy"}]}, "add": {"supporting": ["Manter profilaxia secundária de febre reumática conforme indicação clínica"], "missing_information": ["Confirmar adesão à profilaxia secundária de febre reumática"]}},
+      {"id": "gestante_estenose_grave_urgente", "priority": 85, "when": {"all": [{"field": "pregnancy", "op": "truthy"}, {"field": "severity_ms", "op": "eq", "value": "grave"}]}, "add": {"risk": "urgente", "red_flags": ["Estenose mitral grave em gestante — alto risco de descompensação hemodinâmica"], "suggested_tests": ["Avaliação conjunta com equipe de cardiologia obstétrica"]}},
+      {"id": "edema_agudo_pulmao_taquiarritmia", "priority": 100, "when": {"all": [{"field": "acute_pulmonary_edema", "op": "truthy"}, {"field": "severity_ms", "op": "eq", "value": "grave"}]}, "add": {"risk": "emergencia", "red_flags": ["Edema agudo de pulmão precipitado por taquiarritmia em estenose mitral grave — emergência cardiovascular"], "emergency_flow": ["Encaminhar imediatamente para atendimento de emergência para estabilização hemodinâmica e controle urgente de frequência/ritmo"]}},
+      {"id": "nyha_avancada_prioridade", "priority": 65, "when": {"any": [{"field": "nyha_class", "op": "eq", "value": "III"}, {"field": "nyha_class", "op": "eq", "value": "IV"}]}, "add": {"risk": "prioritario", "supporting": ["Classe funcional avançada (NYHA III/IV) reforça indicação de intervenção valvar"]}}
+    ],
+    "tags": ["valvopatia", "estenose mitral", "febre reumática", "doença cardíaca reumática", "valvuloplastia mitral por balão", "escore de Wilkins", "fibrilação atrial", "anticoagulação valvar"],
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. PMID 40878295",
+      "Wilkins GT, Weyman AE, Abascal VM, et al. Percutaneous balloon dilatation of the mitral valve: an analysis of echocardiographic variables related to outcome and the mechanism of dilatation. Br Heart J. 1988;60(4):299-308. PMID 3190958",
+      "Reményi B, Wilson N, Steer A, et al. World Heart Federation criteria for echocardiographic diagnosis of rheumatic heart disease — an evidence-based guideline. Nat Rev Cardiol. 2012;9(5):297-309. PMID 22371105",
+      "Connolly SJ, Karthikeyan G, Ntsekhe M, et al. Rivaroxaban in Rheumatic Heart Disease-Associated Atrial Fibrillation (INVICTUS). N Engl J Med. 2022;387(11):978-988. PMID 36036525",
+      "Baumgartner H, Hung J, Bermejo J, et al. Echocardiographic assessment of valve stenosis: EAE/ASE recommendations for clinical practice. J Am Soc Echocardiogr. 2009;22(1):1-23. PMID 19130998",
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMID 34453165"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+      "https://pubmed.ncbi.nlm.nih.gov/3190958/",
+      "https://pubmed.ncbi.nlm.nih.gov/22371105/",
+      "https://pubmed.ncbi.nlm.nih.gov/36036525/",
+      "https://pubmed.ncbi.nlm.nih.gov/19130998/",
+      "https://pubmed.ncbi.nlm.nih.gov/34453165/"
+    ],
+    "related_document_slugs": [
+      "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+      "fluxograma-estenose-mitral-grave-comissurotomia-vs-cirurgia-esc-eacts-2025",
+      "rastreamento-ecocardiografico-whf-e-valvuloplastia-por-balao-na-estenose-mitral-reumatica",
+      "estenose-mitral-descompensada-na-gestacao-e-edema-pulmonar",
+      "estenose-mitral-reumatica-no-idoso-diagnostico-diferencial-e-estrategia-terapeutica-por-faixa-etaria",
+      "doenca-valvar-mitral-degenerativa-no-idoso-calcificacao-anular-e-opcoes-percutaneas",
+      "fibrilacao-atrial-valvar-reumatica-e-escolha-do-anticoagulante-invictus"
+    ],
+    "patient_material_slug": "estenose-mitral-entendendo-a-valvula-estreitada",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Estenose mitral não tinha ficha própria em doencas/metadados.json, apesar de corpus rico já existente (fluxograma ESC/EACTS 2025, rastreamento WHF/valvuloplastia, INVICTUS, formas na gestação/idoso/degenerativa). Os 7 related_document_slugs foram verificados individualmente por leitura direta do documento completo. 6 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug confirmado por correspondência exata em material-paciente/metadados.json. category='valvopatia' já existe na convenção do corpus. prevalence_rank deixado null. Nenhuma dose de fármaco em nenhum campo. Criado via doencas/fragmentos/ para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

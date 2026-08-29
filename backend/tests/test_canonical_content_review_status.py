@@ -31,7 +31,13 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete novo criado em 29/08/2026 via doencas/fragmentos/
+        # estenose-mitral.json — ver review_note.
+        "estenose-mitral",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
