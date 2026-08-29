@@ -15,7 +15,10 @@ class Guideline(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(160), index=True)
     org: Mapped[str] = mapped_column(String(40), index=True)
-    titulo: Mapped[str] = mapped_column(String(300))
+    # Títulos científicos legítimos frequentemente ultrapassam 300 caracteres,
+    # sobretudo consensos multi-sociedade. O Intelligence deve preservar a
+    # referência bibliográfica completa, nunca truncá-la para caber no schema.
+    titulo: Mapped[str] = mapped_column(Text)
     ano: Mapped[int] = mapped_column(Integer, index=True)
     tema: Mapped[str | None] = mapped_column(String(120), nullable=True)
     doi: Mapped[str | None] = mapped_column(String(160), nullable=True)
