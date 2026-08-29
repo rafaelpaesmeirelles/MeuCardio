@@ -5,6 +5,7 @@ name: Emergency deploy current main
 # + correção urgente do APK Android 1.0.1.
 # 29/08/2026: deploy emergencial dos lotes Grok 37-45 revisados (PR #749).
 # 29/08/2026: reexecução após tornar quota de embeddings não bloqueante.
+# 29/08/2026: passagem 1 para instalar no host a base de recovery certificada.
 on:
   push:
     branches: [main]
