@@ -16,6 +16,7 @@ from app.core.canonical_registration import CanonicalRegistrationMiddleware
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
+from app.core.new_feature_uploads import NewFeatureUploadSecurityMiddleware
 from app.core.oauth_session_recovery import OAuthSessionRecoveryMiddleware
 from app.core.observability import ObservabilityMiddleware, configure_observability_logging
 from app.core.prescricao_especial_isolation import PrescricaoEspecialIsolationMiddleware
@@ -48,6 +49,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.add_middleware(UploadSecurityMiddleware)
+app.add_middleware(NewFeatureUploadSecurityMiddleware)
 app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
 app.add_middleware(ObservabilityMiddleware)
