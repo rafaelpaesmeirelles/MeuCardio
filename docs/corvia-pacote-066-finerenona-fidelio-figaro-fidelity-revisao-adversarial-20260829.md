@@ -20,8 +20,9 @@ Em pessoas com diabetes tipo 2 e doença renal crônica, finerenona adicionada a
 - PubMed: https://pubmed.ncbi.nlm.nih.gov/34449181/
 
 ### FIDELITY
-- Agarwal R, Filippatos G, Pitt B, et al. *Cardiovascular and kidney outcomes with finerenone in patients with type 2 diabetes and chronic kidney disease: the FIDELITY pooled analysis.* Eur Heart J. 2022.
+- Agarwal R, Filippatos G, Pitt B, et al. *Cardiovascular and kidney outcomes with finerenone in patients with type 2 diabetes and chronic kidney disease: the FIDELITY pooled analysis.* Eur Heart J. 2022;43:474-484.
 - PMID: `35023547`.
+- DOI: `10.1093/eurheartj/ehab777`.
 - PubMed: https://pubmed.ncbi.nlm.nih.gov/35023547/
 
 ## População e desenho conferidos
