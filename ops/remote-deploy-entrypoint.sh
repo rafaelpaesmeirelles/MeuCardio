@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Forced command for the GitHub Actions deploy key. This key cannot open a
-# shell, forward ports, or execute any command other than `deploy <main SHA>`.
+# Forced command for the GitHub Actions production key. This key cannot open a
+# shell, forward ports, or execute arbitrary commands. It accepts only:
+#   deploy <40-character current main SHA>
+#   apk <40-character current main SHA>
+#   intelligence <40-character current main SHA>
 set -Eeuo pipefail
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -12,21 +15,32 @@ readonly ORIGINAL_COMMAND="${SSH_ORIGINAL_COMMAND:-}"
 readonly RECOVERY_BASE_SHA="c06e2dcb28de8c3ffea75fa50fe5279280d4ddf1"
 
 deny() {
-  printf 'Deploy request denied: %s\n' "$1" >&2
+  printf 'Production request denied: %s\n' "$1" >&2
   exit 64
 }
 
-if [[ ! "$ORIGINAL_COMMAND" =~ ^deploy[[:space:]]([0-9a-f]{40})$ ]]; then
-  deny "expected exactly: deploy <40-character main SHA>"
+REQUEST_KIND=""
+EXPECTED_SHA=""
+if [[ "$ORIGINAL_COMMAND" =~ ^deploy[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="deploy"
+  EXPECTED_SHA="${BASH_REMATCH[1]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^apk[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="apk"
+  EXPECTED_SHA="${BASH_REMATCH[1]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="intelligence"
+  EXPECTED_SHA="${BASH_REMATCH[1]}"
+else
+  deny "expected exactly: deploy <SHA>, apk <SHA>, or intelligence <SHA>"
 fi
-readonly EXPECTED_SHA="${BASH_REMATCH[1]}"
+readonly REQUEST_KIND EXPECTED_SHA
 
 [[ -d "$PROJECT_DIR/.git" ]] || deny "production checkout not found"
 cd "$PROJECT_DIR"
 
 changes="$(git status --porcelain --untracked-files=normal)"
 if [[ -n "$changes" ]]; then
-  printf 'Production checkout is dirty; refusing to overwrite it:\n%s\n' "$changes" >&2
+  printf 'Production checkout is dirty; refusing request:\n%s\n' "$changes" >&2
   exit 65
 fi
 
@@ -35,6 +49,54 @@ remote_main="$(git rev-parse --verify origin/main)"
 if [[ "$remote_main" != "$EXPECTED_SHA" ]]; then
   printf 'Requested SHA %s is not current origin/main %s.\n' "$EXPECTED_SHA" "$remote_main" >&2
   exit 65
+fi
+
+if [[ "$REQUEST_KIND" == "intelligence" ]]; then
+  deployed_sha="$(git rev-parse --verify HEAD)"
+  if [[ "$deployed_sha" != "$EXPECTED_SHA" ]]; then
+    printf 'CorVIA Intelligence refused: production is at %s but current main is %s. Deploy current main first.\n' \
+      "$deployed_sha" "$EXPECTED_SHA" >&2
+    exit 65
+  fi
+
+  docker compose -f docker-compose.prod.yml exec -T backend true >/dev/null 2>&1 \
+    || deny "production backend is not running"
+
+  exec docker compose -f docker-compose.prod.yml exec -T backend \
+    python -m app.services.guideline_discovery_cli
+fi
+
+if [[ "$REQUEST_KIND" == "apk" ]]; then
+  deployed_sha="$(git rev-parse --verify HEAD)"
+  if [[ "$deployed_sha" != "$EXPECTED_SHA" ]]; then
+    printf 'APK build refused: production is at %s but current main is %s. Deploy current main first.\n' \
+      "$deployed_sha" "$EXPECTED_SHA" >&2
+    exit 65
+  fi
+
+  cd "$PROJECT_DIR/frontend"
+  [[ -f android/keystore.properties ]] || deny "android/keystore.properties is missing"
+  command -v npx >/dev/null || deny "npx is unavailable"
+  [[ -x android/gradlew ]] || deny "android/gradlew is unavailable"
+
+  npx cap sync android
+  cd android
+  JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 \
+    PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH \
+    ./gradlew assembleRelease
+
+  apk_file="app/build/outputs/apk/release/app-release.apk"
+  [[ -s "$apk_file" ]] || deny "signed release APK was not generated"
+
+  install -d -m 0755 "$PROJECT_DIR/downloads"
+  install -m 0644 "$apk_file" "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk"
+  cp "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk" \
+    "$PROJECT_DIR/downloads/corvia-os-android.apk"
+  cd "$PROJECT_DIR/downloads"
+  sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256
+  sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256
+  printf 'Android APK published for %s.\n' "$EXPECTED_SHA"
+  exit 0
 fi
 
 git checkout main

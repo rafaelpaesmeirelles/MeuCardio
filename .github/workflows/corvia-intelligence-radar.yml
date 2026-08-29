@@ -27,13 +27,28 @@ jobs:
       SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
     steps:
-      - name: Run CorVIA Intelligence inside the production backend
+      - name: Resolve exact current main SHA
+        id: target
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          sha="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          [[ "$sha" =~ ^[0-9a-f]{40}$ ]]
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+          echo "CorVIA Intelligence target: $sha"
+
+      - name: Run CorVIA Intelligence inside the deployed production backend
+        env:
+          TARGET_SHA: ${{ steps.target.outputs.sha }}
         run: |
           set -euo pipefail
           : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
           : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
           : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
           : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          : "${TARGET_SHA:?Missing current main SHA}"
           SSH_PORT="${SSH_PORT:-22}"
 
           ssh_dir="$RUNNER_TEMP/corvia-intelligence-ssh"
@@ -54,7 +69,4 @@ jobs:
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            'set -euo pipefail; \
-             cd /opt/meucardio; \
-             docker compose -f docker-compose.prod.yml exec -T backend \
-               python -m app.services.guideline_discovery_cli'
+            "intelligence $TARGET_SHA"
