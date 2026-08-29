@@ -434,3 +434,26 @@ PROSPER reduz eventos), meta pressórica <120mmHg em DAC crônica — 13 itens
 (agente a6d3b07ccc21502d0).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 18 — concluído (1 commit, SHA 91935ab4) — total 44 commits
+
+- checklist `diretriz-brasileira-de-cardiogeriatria-sbc-2019-avaliacao-e-manejo-cardiovascular-no-idoso`
+  — 13 itens, fonte SBC. Achados de rigor: diretriz é na verdade a 3ª
+  edição da série (não "I Diretriz"); meta de PAS <120mmHg do backlog NÃO
+  é posição própria da diretriz (é só descrição do braço SPRINT) — meta
+  real é ≤130mmHg/<140mmHg, divergência documentada explicitamente.
+
+Verificado antes do próximo lote: cluster `aas/prasugrel/DAPT idoso pós-SCA`
+já tem host (`terapia-antiplaquetaria-dupla-no-muito-idoso...`, 8 menções
+a prasugrel/AAS) — conectividade, não conteúdo novo, não acionado.
+
+## Lote 19 (em andamento, 1 agente) — território Aorta/vascular
+
+Backlog "Aorta e doença arterial periférica" (72 itens): cluster
+`carotidas-*` (15 itens, critérios de Doppler de carótidas — VPS,
+avaliação multiparamétrica, definição de placa/oclusão, armadilhas de
+suboclusão, extensão do exame, complementação por angio-TC/RM) confirmado
+sem host (só existe item separado de CIMT, tema distinto). Despachado
+como checklist (agente a98c4566a2775830d).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
