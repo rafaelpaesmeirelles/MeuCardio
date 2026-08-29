@@ -152,17 +152,24 @@ Pendência não acionada: possível quase-duplicata entre
 `hipertensao-renovascular-e-estenose-de-arteria-renal` (já em main) — a
 reconciliar quando as branches forem revisadas/mescladas.
 
-## Lote 9 (próximo, em preparação)
+## Lote 9 (em andamento, 2 itens) — total 27 commits na branch
 
-Lote 8 fechado — 4/4 itens integrados, total 26 commits na branch. Backlog de
-cardiomiopatias praticamente esgotado nos subtemas identificados (restritiva,
-sobrecarga de ferro, esclerose sistêmica, fenocópias glicogênicas). Próxima
-varredura: reauditar backlog de evidências por tema (Perioperatório 82,
-Valvopatias 77, Aorta 72 — já zerado, Gravidez 61, Cardiologia pediátrica 61,
-Congênitas 57, Esporte 54, Arritmias 42, Endocardite 23 — parcialmente
-reduzido) e escolher o próximo maior valor marginal, evitando temas já
-hospedados (CMH periop já tem doc — ver nota no lote 8) e respeitando o mapa
-de colisão (PR #599 dispositivos, PR #725 FA, ambos seguem abertos — reconferir
-antes de agir).
+Reaudição confirmou PR #599 (dispositivos) e #725 (FA) ainda abertos — mantido
+afastamento. Backlog Valvopatias (77 itens) escaneado: cluster eco-estresse
+(~10 itens) já tem exame-host (`ecocardiografia-de-estresse-na-doenca-valvar`,
+pré-existente) — descartado como candidato a conteúdo novo, é lacuna de
+conectividade, não de conteúdo. Cluster geriátrico (~10 itens: TAVI vs.
+cirurgia por idade/risco, HAS na EAo do idoso, estatina não freia progressão,
+valvoplastia por balão como ponte) mapeado a uma lacuna real e explícita: o
+verbete geral `estenose-aortica` já cita textualmente "ver ficha específica de
+estenose aórtica e TAVI no idoso" — ficha que nunca foi criada. Despachada.
+
+- exame `teste-ergometrico-na-estenose-aortica-pediatrica-e-na-valva-aortica-bicuspide`
+  — novo (SHA 6d7a5468). Complementar ao Bruce modificado pediátrico genérico
+  já existente. 9 PMIDs (Task Forces AHA/ACC de elegibilidade esportiva,
+  EAPC/ESC/AEPC, TCPE em CHD). Sem corte numérico único validado — declarado.
+- `estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade` — despachado
+  (agente ab3e70e75eefb06ab), aprofundamento geriátrico complementar ao
+  verbete geral, area=cardiogeriatria.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
