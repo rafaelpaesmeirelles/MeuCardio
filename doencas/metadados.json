@@ -32379,13 +32379,16 @@
       "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidadoscardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
     ],
     "review_status": "revisado",
-    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
-    "version": 2,
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. | Lote vincular Tudo com Tudo 29/08/2026: adicionados 3 related_document_slugs de cuidados pós-parada (neuroprognóstico multimodal, decisão de coronariografia sem supra de ST, RCP extracorpórea na parada refratária), levando o total de 4 para 7.",
+    "version": 3,
     "related_document_slugs": [
       "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
       "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
       "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
-      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2"
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+      "neuroprognostico-multimodal-pos-parada-cardiorrespiratoria-algoritmo-erc-esicm-2021-e-a-atualizacao-aha-2025",
+      "coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk",
+      "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception"
     ],
     "patient_material_slug": "colapso-subito-como-reconhecer-parada-e-usar-o-dea"
   },
