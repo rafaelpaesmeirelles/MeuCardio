@@ -20,6 +20,7 @@ class HighFrequencyWindow:
 
 # Janelas ampliadas em 1 dia nas bordas quando há press day/embargo/publicações
 # simultâneas, para capturar os artigos liberados imediatamente antes/depois.
+# Manter esta lista curta e centrada em congressos cardiovasculares de alto sinal.
 HIGH_FREQUENCY_WINDOWS = (
     HighFrequencyWindow("ESC Congress 2026", date(2026, 8, 27), date(2026, 9, 1)),
     HighFrequencyWindow("HRS HRX Live 2026", date(2026, 9, 17), date(2026, 9, 21)),
