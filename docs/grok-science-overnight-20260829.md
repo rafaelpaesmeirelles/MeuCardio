@@ -10,6 +10,7 @@ slug: grok-science-overnight-20260829
 Branch: `grok/science-overnight-20260829`
 Base: `origin/main` SHA `1945e11197bb9a1708469498c1317bae607540e3`
 HEAD local (antes dos commits finais do lote 2): `4d26221867a2c4f417579f6bf6f8c087a8169885`
+HEAD local **final da sessão**: `a9ffeebff56f6d89d8e86fce79c8350856ce42fd`
 
 Escopo: conteúdo científico original, status inicial `pendente_revisao`. Sem merge, sem deploy, sem alteração de produto, sem push para `main`.
 
