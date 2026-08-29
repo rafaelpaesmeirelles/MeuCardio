@@ -740,3 +740,26 @@ manobras provocativas, T1 nativo reduzido no PRKAG2 (mapeamento), TEE em
 evento neurológico. Despachado como exame (agente ae1d6fb8b354d0b26).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 30 — concluído (1 commit, SHA f0587af0) — total 57 commits
+
+- exame `imagem-cardiovascular-nas-fenocopias-glicogenicas-danon-e-prkag2-eco-manobras-e-t1-mapping`
+  — novo, complementar ao verbete Danon/PRKAG2 (lote 15). 6 fontes
+  (Pöyhönen 2015 PMID 26496977, Bukhari 2026 PMID 42530173, Fang 2021
+  PMID 34362124). Rigor exemplar: agente buscou o termo "mapa polar"
+  pedido no briefing e declarou explicitamente NÃO tê-lo encontrado nas
+  fontes — não reproduzido como achado confirmado.
+
+## Fim desta continuação ("prossiga") — total 24 commits desde o checkpoint anterior (lotes 22-30)
+
+9 lotes adicionais: 4 exames novos (aortite Takayasu/ACG, imagem
+diagnóstica em EI, vigilância Fabry, imagem em fenocópias glicogênicas),
+5 checklists novos (profilaxia antibiótica de EI, TE/TCPE em CMH pós-
+miocardite, algoritmo diagnóstico da amiloidose, imagem na cardiomiopatia
+chagásica) e 2 correções cirúrgicas com merge preservando estrutura
+existente (ITB pós-esforço SBC 2024, sarcoidose PET-FDG+strain — incl.
+reversão de review_status quando necessário). Zero colisão, zero gate
+falho, zero PMID inventado em toda a extensão. Fila mantida cheia o tempo
+todo conforme instruído; nenhum pedido de confirmação entre lotes.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
