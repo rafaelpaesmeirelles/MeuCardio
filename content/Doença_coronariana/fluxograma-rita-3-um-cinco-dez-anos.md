@@ -4,9 +4,9 @@ slug: fluxograma-rita-3-um-cinco-dez-anos
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "RITA-3 n=1.810. 4 meses: composto cai por angina refratária. 1 ano morte/IAM NS. 5 anos morte/IAM P=0,044; morte P=0,054. 10 anos morte P=0,94. Não colapsar num 'invasivo salva vida'."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em PMID 12241831, 16154018 e 26227188. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em PMID 12241831, 16154018 e 26227188. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Fox KA, et al. RITA 3. Lancet. 2002;360(9335):743-751. PMID: 12241831."
   - "Fox KA, et al. RITA 3 5-year. Lancet. 2005;366(9489):914-920. PMID: 16154018."

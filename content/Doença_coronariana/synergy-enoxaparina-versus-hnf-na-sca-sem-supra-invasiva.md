@@ -4,14 +4,11 @@ slug: synergy-enoxaparina-versus-hnf-na-sca-sem-supra-invasiva
 theme: "Doença coronariana"
 kind: estudo
 summary: "10.027 de alto risco com SCA sem supra e estratégia invasiva precoce pretendida: enoxaparina SC vs HNF EV, aberto. Morte ou IAM 30 d 14,0% vs 14,5% (OR 0,96; IC 0,86–1,06). TIMI major 9,1% vs 7,6% (P=0,008). GUSTO grave P=0,08 NS. Não vender superioridade. OASIS-5 é fondaparinux vs enoxaparina — outro ensaio."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Ferguson, PMID 15238590; JAMA. 2004;292(1):45-54; DOI 10.1001/jama.292.1.45). Primário sem p; IC inclui 1. Autores declaram não superior / não inferior — margem de NI não está neste abstract, não inventar. TIMI major P=0,008. OASIS-5 já na casa. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC/PubMed (Ferguson, PMID 15238590; JAMA. 2004;292(1):45-54; DOI 10.1001/jama.292.1.45). Primário sem p; IC inclui 1. Autores declaram não superior / não inferior — margem de NI não está neste abstract, não inventar. TIMI major P=0,008. OASIS-5 já na casa. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMID/DOI e mensagem de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
-  - "Ferguson JJ, Califf RM, Antman EM, Cohen M, Grines CL, Goodman S, Kereiakes DJ, Langer A, Mahaffey KW, Nessel CC, Armstrong PW, Avezum A, Aylward P, Becker RC, Biasucci L, Borzak S, Col J, Frey MJ, et al; SYNERGY Trial Investigators. Enoxaparin vs unfractionated heparin in high-risk patients with non-ST-segment elevation acute coronary syndromes managed with an intended early invasive strategy: primary results of the SYNERGY randomized trial. JAMA. 2004;292(1):45-54. DOI: 10.1001/jama.292.1.45. PMID: 15238590. Abstract relido nesta sessão."
-  - "Documento da casa oasis-5-fondaparinux-versus-enoxaparina-na-sca — fondaparinux, não HNF."
-  - "Documento da casa extract-timi-25-enoxaparina-versus-hnf-com-fibrinolise-no-iamcsst — STEMI com lise, não este."
-  - "Documento da casa essence-enoxaparina-versus-hnf-na-angina-instavel — era conservadora; tríplice com angina."
+  - "Ferguson JJ, Califf RM, Antman EM, et al. Enoxaparin vs unfractionated heparin in high-risk patients with non-ST-segment elevation acute coronary syndromes managed with an intended early invasive strategy: primary results of the SYNERGY randomized trial. JAMA. 2004;292(1):45-54. DOI: 10.1001/jama.292.1.45. PMID: 15238590."
 ---
 
 # SYNERGY: enoxaparina empata o isquêmico e sangra mais no TIMI major

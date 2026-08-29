@@ -4,9 +4,9 @@ slug: isis-4-captopril-mononitrato-e-magnesio-no-iam-suspeito
 theme: "Doença coronariana"
 kind: estudo
 summary: "58.050 com IAM suspeito <24 h (mediana 8 h), fatorial 2×2×2. Captopril 1 mês: morte 5 semanas 7,19% vs 7,69% (2p=0,02; −4,9/1.000). Hipotensão que encerra o fármaco +52/1.000; choque +5/1.000. Mononitrato: 7,34% vs 7,54% NS. Braço magnésio: abstract MEDLINE truncado — não inventar. GISSI-3 é lisinopril. CONSENSUS II é EV e NS."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC + NCBI efetch (ISIS-4 Collaborative Group, PMID 7661937; Lancet. 1995;345(8951):669-685; DOI ausente no MEDLINE). Abstract truncado aos 400 palavras antes do braço magnésio. Subgrupo 'talvez 10/1.000' é linguagem do abstract, não primário. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC + NCBI efetch (ISIS-4 Collaborative Group, PMID 7661937; Lancet. 1995;345(8951):669-685; DOI ausente no MEDLINE). Abstract truncado aos 400 palavras antes do braço magnésio. Subgrupo 'talvez 10/1.000' é linguagem do abstract, não primário. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "ISIS-4 (Fourth International Study of Infarct Survival) Collaborative Group. ISIS-4: a randomised factorial trial assessing early oral captopril, oral mononitrate, and intravenous magnesium sulphate in 58,050 patients with suspected acute myocardial infarction. Lancet. 1995;345(8951):669-685. PMID: 7661937. Abstract relido nesta sessão. DOI ausente no MEDLINE. Abstract MEDLINE truncado — braço magnésio não extraído."
   - "Documento da casa gissi-3-lisinopril-e-nitrato-precoce-no-iam — lisinopril, não captopril."

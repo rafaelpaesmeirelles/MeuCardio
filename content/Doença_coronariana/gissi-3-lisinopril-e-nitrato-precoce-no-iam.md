@@ -4,9 +4,9 @@ slug: gissi-3-lisinopril-e-nitrato-precoce-no-iam
 theme: "Doença coronariana"
 kind: estudo
 summary: "19.394 com IAM <24 h, fatorial: lisinopril 6 semanas vs controle aberto e nitrato (EV 24 h + GTN transdérmico) vs controle. Lisinopril: morte OR 0,88 (0,79–0,99); composto morte+disfunção grave OR 0,90. GTN isolado NS (OR 0,94). Não vender nitrato. SAVE/AIRE/TRACE são IAM com IC/FE baixa, outro desenho. CONSENSUS II é enalaprilato EV — NS."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (GISSI-3, PMID 7910229; Lancet. 1994;343(8906):1115-1122; DOI ausente no MEDLINE). Mortalidade global 6,7%. Percentuais por braço não estão no abstract — só OR. Não inventar. GISSI-HF é IC crônica, outro ensaio. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (GISSI-3, PMID 7910229; Lancet. 1994;343(8906):1115-1122; DOI ausente no MEDLINE). Mortalidade global 6,7%. Percentuais por braço não estão no abstract — só OR. Não inventar. GISSI-HF é IC crônica, outro ensaio. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Gruppo Italiano per lo Studio della Sopravvivenza nell'Infarto Miocardico. GISSI-3: effects of lisinopril and transdermal glyceryl trinitrate singly and together on 6-week mortality and ventricular function after acute myocardial infarction. Lancet. 1994;343(8906):1115-1122. PMID: 7910229. Abstract relido nesta sessão. DOI ausente no MEDLINE."
   - "Documento da casa fluxograma-ieca-pos-iam-e-na-dac-estavel-save-aire-trace-europa-peace — selecionados, não este IAM não selecionado."

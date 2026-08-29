@@ -4,9 +4,9 @@ slug: fluxograma-bivalirudina-hero-2-replace-2-heat
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "Lise com estreptoquinase: HERO-2 morte 30 d P=0,85. ICP eletiva/urgente: REPLACE-2 primário P=0,32, menos sangramento maior contra HNF+GPI. IAM com ICP: HEAT/VALIDATE/EUROMAX — arquivos próprios. Não vender reinfarto de 96 h nem NI sem margem."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em HERO-2 PMID 11741625 e REPLACE-2 PMID 12588269. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em HERO-2 PMID 11741625 e REPLACE-2 PMID 12588269. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "White H, et al. HERO-2. Lancet. 2001;358(9296):1855-1863. PMID: 11741625."
   - "Lincoff AM, et al. REPLACE-2. JAMA. 2003;289(7):853-863. PMID: 12588269."

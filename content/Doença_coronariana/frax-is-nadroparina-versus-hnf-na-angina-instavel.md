@@ -4,9 +4,9 @@ slug: frax-is-nadroparina-versus-hnf-na-angina-instavel
 theme: "Doença coronariana"
 kind: estudo
 summary: "3.468 com angina instável ou IAM sem Q: HNF 6 d vs nadroparina 6 d vs nadroparina 14 d. Primário dia 14 (morte cardíaca, IAM, angina refratária ou recorrência) NS. Diferença absoluta nadro 6 vs HNF −0,3% (P=0,85); nadro 14 vs HNF +1,9% (P=0,24). Hemorragia maior 14 d 3,5% vs 1,6% (P=0,0035). Não é ESSENCE. Taxas do primário não estão neste abstract."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (PMID 10529323; Eur Heart J. 1999;20(21):1553-1562; DOI 10.1053/euhj.1999.1879). Primário NS. Percentuais absolutos do primário não publicados neste abstract — só diferenças. Não inventar. Não vender como confirmação do ESSENCE (enoxaparina). Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (PMID 10529323; Eur Heart J. 1999;20(21):1553-1562; DOI 10.1053/euhj.1999.1879). Primário NS. Percentuais absolutos do primário não publicados neste abstract — só diferenças. Não inventar. Não vender como confirmação do ESSENCE (enoxaparina). Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "FRAX.I.S. Study Group. Comparison of two treatment durations (6 days and 14 days) of a low molecular weight heparin with a 6-day treatment of unfractionated heparin in the initial management of unstable angina or non-Q wave myocardial infarction: FRAX.I.S. (FRAxiparine in Ischaemic Syndrome). Eur Heart J. 1999;20(21):1553-1562. DOI: 10.1053/euhj.1999.1879. PMID: 10529323. Abstract relido nesta sessão."
   - "Documento da casa essence-enoxaparina-versus-hnf-na-angina-instavel — enoxaparina, tríplice com angina."

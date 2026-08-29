@@ -4,9 +4,9 @@ slug: fluxograma-ieca-precoce-no-iam-gissi-3-isis-4-consensus-ii
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "IAM não selecionado: GISSI-3 lisinopril e ISIS-4 captopril reduzem morte com ganho absoluto pequeno. CONSENSUS II (enalaprilato EV) primário NS, mais hipotensão. SAVE/AIRE/TRACE são IC/FE baixa. Nitrato de rotina NS. Magnésio do ISIS-4 não está no abstract relido."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em GISSI-3 PMID 7910229, ISIS-4 PMID 7661937 (abstract truncado), CONSENSUS II PMID 1495520. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em GISSI-3 PMID 7910229, ISIS-4 PMID 7661937 (abstract truncado), CONSENSUS II PMID 1495520. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "GISSI-3. Lancet. 1994;343(8906):1115-1122. PMID: 7910229."
   - "ISIS-4. Lancet. 1995;345(8951):669-685. PMID: 7661937."

@@ -4,9 +4,9 @@ slug: frisc-dalteparina-versus-placebo-na-dac-instavel
 theme: "Doença coronariana"
 kind: estudo
 summary: "1.506 com angina instável ou IAM sem Q: dalteparina 120 UI/kg 12/12 h por 6 d e depois 7.500 UI/d por 35–45 d vs placebo. Morte/IAM 6 d 1,8% vs 4,8% (RR 0,37). Aos 40 d o sinal persiste, mas o abstract restringe o efeito a não fumantes. 4–5 meses após o fim: sem diferença. É vs placebo, não vs HNF. FRISC II é outro ensaio (estratégia invasiva)."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (FRISC study group, PMID 8596317; Lancet. 1996;347(9001):561-568; DOI ausente no MEDLINE). Primário 6 d vs placebo. Taxas de 40 e 150 d isoladas não completas no trecho — não inventar. FRISC II é outro RCT. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (FRISC study group, PMID 8596317; Lancet. 1996;347(9001):561-568; DOI ausente no MEDLINE). Primário 6 d vs placebo. Taxas de 40 e 150 d isoladas não completas no trecho — não inventar. FRISC II é outro RCT. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Fragmin during Instability in Coronary Artery Disease (FRISC) study group. Low-molecular-weight heparin during instability in coronary artery disease. Lancet. 1996;347(9001):561-568. PMID: 8596317. DOI ausente no MEDLINE. Abstract relido nesta sessão."
   - "Documento da casa frisc-ii-estrategia-invasiva-precoce-na-dac-instavel — outro ensaio, outra pergunta."

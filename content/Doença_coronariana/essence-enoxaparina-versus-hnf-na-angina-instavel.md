@@ -4,9 +4,9 @@ slug: essence-enoxaparina-versus-hnf-na-angina-instavel
 theme: "Doença coronariana"
 kind: estudo
 summary: "3.171 com angina em repouso ou IAM sem Q: enoxaparina 1 mg/kg SC 12/12 h vs HNF EV, 48 h–8 d, duplo-cego. Morte/IAM/angina recorrente 14 d 16,6% vs 19,8% (P=0,019); 30 d 19,8% vs 23,3% (P=0,016). Revasc 30 d 27,1% vs 32,2% (P=0,001). Sangramento maior 6,5% vs 7,0%; sangramento total 18,4% vs 14,2% (P=0,001) por equimose. Composto inclui angina — não vender morte/IAM. SYNERGY, era invasiva, não mostrou superioridade."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Cohen, PMID 9250846; N Engl J Med. 1997;337(7):447-452; DOI 10.1056/NEJM199708143370702). Primário é tríplice com angina recorrente. Taxas isoladas de morte/IAM ausentes no abstract — não inventar. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Cohen, PMID 9250846; N Engl J Med. 1997;337(7):447-452; DOI 10.1056/NEJM199708143370702). Primário é tríplice com angina recorrente. Taxas isoladas de morte/IAM ausentes no abstract — não inventar. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Cohen M, Demers C, Gurfinkel EP, Turpie AG, Fromell GJ, Goodman S, Langer A, Califf RM, Fox KA, Premmereur J, Bigonzi F. A comparison of low-molecular-weight heparin with unfractionated heparin for unstable coronary artery disease. Efficacy and Safety of Subcutaneous Enoxaparin in Non-Q-Wave Coronary Events Study Group. N Engl J Med. 1997;337(7):447-452. DOI: 10.1056/NEJM199708143370702. PMID: 9250846. Abstract relido nesta sessão."
   - "Documento da casa synergy-enoxaparina-versus-hnf-na-sca-sem-supra-invasiva — era invasiva; primário NS."

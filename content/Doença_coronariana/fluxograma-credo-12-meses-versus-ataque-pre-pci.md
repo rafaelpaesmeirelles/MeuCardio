@@ -4,9 +4,9 @@ slug: fluxograma-credo-12-meses-versus-ataque-pre-pci
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "PCI eletiva/alta chance: CREDO 12 meses reduz morte/IAM/AVC (P=0,02; ARD 3%). Ataque 300 mg 3–24 h: 28 d P=0,23 NS. Subgrupo ≥6 h P=0,051. CURE é NSTE. PCI-CURE é subgrupo de ICP do CURE (pré-tratamento mediano 6 d), não ataque 3–24 h. PLATO/TRITON são P2Y12 mais novos."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em CREDO PMID 12435254, CURE PMID 11519503 e PCI-CURE PMID 11520521. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em CREDO PMID 12435254, CURE PMID 11519503 e PCI-CURE PMID 11520521. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Steinhubl SR, et al. CREDO. JAMA. 2002;288(19):2411-2420. PMID: 12435254."
   - "Yusuf S, et al. CURE. N Engl J Med. 2001;345(7):494-502. PMID: 11519503."
