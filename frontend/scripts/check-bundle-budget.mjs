@@ -141,7 +141,12 @@ for (const path of await listarArquivos(dist.pathname)) {
 // medido foi 2931451 B, 14075 B acima do teto anterior. O aumento é restrito a
 // 15 KiB e deixa ~1,2 KiB de margem; entrypoint, gzip, code splitting e teto de
 // chunk opcional permanecem rigorosamente inalterados.
-const maxPrecacheBytes = 2864 * 1024;
+//
+// Ajustado de 2864 KB para 2865 KB em 29/08/2026: a restauração das ações
+// Resumo CorVIA / Traduzido / Original elevou o precache em apenas 390 B acima
+// do teto anterior. O incremento mínimo de 1 KiB preserva entrypoint, gzip,
+// code splitting e teto individual de chunks sem alteração.
+const maxPrecacheBytes = 2865 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
