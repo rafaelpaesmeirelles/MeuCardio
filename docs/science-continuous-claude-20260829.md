@@ -900,13 +900,36 @@ Auditoria pré-lote-39: confirmado sem gap acionável em LVAD (já coberto).
   cilostazol + revascularização já num checklist de 9 itens) e rastreio
   de AAA já estavam bem cobertos — evitada duplicação.
 
-## Lote 40 (planejado)
+## Lote 40 — concluído (SHA d1c8b1b0) — total 67 commits
 
-A auditar: retomar Cardiomiopatias hereditárias/canalopatias para
-subtemas ainda granulares e ausentes (ex.: síndrome de Brugada — manejo
-de tempestade elétrica, ablação de epicárdio; QT longo — nuances por
-genótipo LQT1/2/3 além do já coberto); ou Avaliação pré-participação
-esportiva em populações especiais ainda não vistas nesta janela.
-Confirmar via grep + `gh pr list` antes de despachar.
+- checklist `manejo-de-longo-prazo-de-aneurisma-coronariano-de-kawasaki-da-infancia-a-vida-adulta`
+  — 5 itens: classificação de risco por escore Z (AHA 2017); antitrombótico
+  escalonado por tamanho (trombose intra-aneurismática documentada mesmo
+  sob profilaxia); vigilância por imagem migrando de eco para angio-TC/RM
+  com crescimento somático; avaliação funcional de isquemia; transição
+  para o adulto (casos de Kawasaki não diagnosticado se apresentando como
+  IAM em jovens; remodelamento residual mesmo após regressão aparente).
+  10 fontes via NCBI e-utils, incluindo diretriz JCS/JSCS 2020 como
+  complemento à AHA 2017. Periodicidade numérica exata declarada como
+  não confirmada (acesso só a metadados) — não inventada.
+
+**Nota de auditoria desta janela**: varredura extensa pré-lote-40
+confirmou que Brugada (tempestade elétrica, ablação epicárdica,
+quinidina), LQT1/2/3 por genótipo, limiares cirúrgicos de aneurisma de
+aorta (inclusive degenerativo/esporádico), IMH/PAU, febre reumática (4
+checklists, 50 itens), cardiotoxicidade por antraciclina/dexrazoxano e
+DAP/claudicação já estão bem cobertos nesta base — os gaps
+"fáceis"/óbvios do território de Claude estão substancialmente
+exauridos nesta janela. Continuar exigirá auditorias progressivamente
+mais estreitas/profundas por sub-tema.
+
+## Lote 41 (planejado)
+
+A auditar com foco mais granular: subtemas dentro de hubs já existentes
+mas ainda rasos em pontos específicos (aprofundamento, não novo tópico),
+ou território ainda não tocado nesta janela: Cardiologia do esporte em
+populações especiais (atleta idoso, atleta gestante), ou Medicina nuclear
+cardiovascular — PET de perfusão com rubídio/amônia (distinto do PET-FDG
+já coberto). Confirmar via grep + `gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
