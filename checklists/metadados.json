@@ -32107,5 +32107,118 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "diretriz-brasileira-de-cardiogeriatria-sbc-2019-avaliacao-e-manejo-cardiovascular-no-idoso",
+    "condicao": "Cardiogeriatria — avaliação e manejo cardiovascular no idoso (SBC 2019)",
+    "resumo": "Checklist clínico baseado na diretriz da Sociedade Brasileira de Cardiologia sobre cardiologia geriátrica publicada em 2019 nos Arquivos Brasileiros de Cardiologia, cobrindo avaliação pré-exercício, tabagismo, valvopatias, arritmias/monitorização Holter, dislipidemia e meta pressórica no idoso. ATENÇÃO: não existe, indexada no PubMed/SBC, uma diretriz intitulada 'I Diretriz Brasileira de Cardiogeriatria' de 2019 — a diretriz de cardiogeriatria da SBC publicada em 2019 é, na verdade, a 3ª edição da série (o texto se autodenomina 'III Geriatric Cardiology Guidelines'), sucedendo a 'II Diretrizes em Cardiogeriatria da SBC' de 2010 (PMID 21085757). Este item usa a diretriz de 2019 real e verificada (PMID 31188969), com a ressalva de numeração registrada explicitamente aqui e no item sobre meta pressórica, onde a meta de <120 mmHg citada no backlog original não corresponde à posição própria da diretriz.",
+    "documento_origem": null,
+    "theme": "Cardiologia geriátrica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Feitosa-Filho GS, Peixoto JM, Pinheiro JES, et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019 [III Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia]. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565.",
+      "Erratum: Arq Bras Cardiol. 2021;117(2):423. DOI: 10.36660/abc.20210642. PMID: 34495245.",
+      "Gravina CF, Franken R, Wenger N, et al; Sociedade Brasileira de Cardiologia. II Diretrizes em Cardiogeriatria da Sociedade Brasileira de Cardiologia. Arq Bras Cardiol. 2010;95(3 Suppl 2):e16-76. PMID: 21085757.",
+      "Shepherd J, Blauw GJ, Murphy MB, et al; PROSPER study group. Pravastatin in elderly individuals at risk of vascular disease (PROSPER): a randomised controlled trial. Lancet. 2002;360(9346):1623-1630. DOI: 10.1016/S0140-6736(02)11600-X. PMID: 12457784.",
+      "Wright JT Jr, Williamson JD, Whelton PK, et al; SPRINT Research Group. A Randomized Trial of Intensive versus Standard Blood-Pressure Control. N Engl J Med. 2015;373(22):2103-2116. DOI: 10.1056/NEJMoa1511939. PMID: 26551272. PMCID: PMC4689591."
+    ],
+    "itens": [
+      {
+        "id": "avaliacao-pre-exercicio",
+        "categoria": "Prevenção/estilo de vida",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar programa de exercício físico no idoso, recomenda-se exame clínico e eletrocardiograma de repouso (Classe I, Nível C). Em pacientes de risco intermediário ou que pretendem exercício de intensidade moderada a intensa, recomenda-se acrescentar eletrocardiograma de esforço, teste ergométrico ou cintilografia miocárdica (Classe IIa, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 1.8 (Sedentarismo), tabela de Recomendações."
+      },
+      {
+        "id": "tabagismo-fator-risco",
+        "categoria": "Prevenção/estilo de vida",
+        "obrigatorio": true,
+        "texto": "O tabagismo é fator de risco cardiovascular modificável no idoso, e a cessação é recomendada (Classe I, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 1.6 (Tabagismo), tabela de Recomendações."
+      },
+      {
+        "id": "metodo-4as-tabagismo",
+        "categoria": "Prevenção/estilo de vida",
+        "obrigatorio": true,
+        "texto": "Recomenda-se abordagem multidisciplinar pelo método dos 4 As para cessação do tabagismo no idoso — ask/abordar (perguntar sobre o uso), advise/aconselhar (aconselhar a parar), assist/auxiliar (apoiar a tentativa, inclusive com terapia farmacológica) e arrange follow-up/acompanhar (organizar seguimento) (Classe I, Nível C). Adesivos ou goma de nicotina, ou bupropiona, podem ser usados como auxílio farmacológico (Classe IIa, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 1.6 (Tabagismo), tabela de Recomendações."
+      },
+      {
+        "id": "cirurgia-insuficiencia-aortica-grave",
+        "categoria": "Valvopatia",
+        "obrigatorio": true,
+        "texto": "Cirurgia é indicada em idosos sintomáticos com insuficiência/regurgitação aórtica grave, independentemente da função sistólica do ventrículo esquerdo (Classe I, Nível B). Também indicada em assintomáticos com FEVE < 50% (Classe I, Nível B) e em pacientes já programados para outra cirurgia cardíaca (Classe I, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 6.4 (Insuficiência/Regurgitação Aórtica), tabela 'Recommendations for surgical treatment of aortic regurgitation'."
+      },
+      {
+        "id": "eco-transesofagico-pre-cardioversao-fa",
+        "categoria": "Arritmia/monitorização",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transesofágico é recomendado em idosos com fibrilação atrial de duração > 48 horas antes de cardioversão para ritmo sinusal (Classe I, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 7.3 (Fibrilação Atrial), tabela de Recomendações."
+      },
+      {
+        "id": "ecg-12-derivacoes-bradiarritmia",
+        "categoria": "Arritmia/monitorização",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações é recomendado para todo idoso com suspeita de bradiarritmia (Classe I, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 7.1.2 (Peculiaridades Diagnósticas das Bradiarritmias), tabela de Recomendações."
+      },
+      {
+        "id": "estatina-nao-indicada-estenose-aortica-leve-moderada",
+        "categoria": "Valvopatia",
+        "obrigatorio": true,
+        "texto": "O uso de estatina NÃO é indicado para prevenir a progressão de estenose aórtica em pacientes com lesões calcificadas leves a moderadas (Classe III, Nível A).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 6.3 (Estenose Aórtica), tabela de Recomendações."
+      },
+      {
+        "id": "estatina-reduz-eventos-coronarianos-avc-prosper",
+        "categoria": "Prevenção/estilo de vida",
+        "obrigatorio": false,
+        "texto": "Em análises de subgrupo de estudos de prevenção primária/secundária e no ensaio clínico randomizado PROSPER (Prospective Study of Pravastatin in the Elderly at Risk; Shepherd J et al., Lancet 2002, PMID 12457784), desenhado especificamente para idosos com ou sem manifestação prévia de aterosclerose, a estatina demonstrou redução de eventos coronarianos (Classe IIa, Nível B) e de AVC (Classe IIa, Nível B), além de sinal de preservação de função cognitiva (Classe IIb, Nível B). Importante: PROSPER é um ensaio clínico randomizado, não um estudo observacional.",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 1.9 (Dislipidemia no Idoso), citando o ensaio PROSPER (Lancet 2002;360(9346):1623-1630, PMID 12457784)."
+      },
+      {
+        "id": "exercicio-fisico-regular-idoso-sedentario",
+        "categoria": "Prevenção/estilo de vida",
+        "obrigatorio": true,
+        "texto": "Exercício físico regular é recomendado para o idoso sedentário (Classe I, Nível A). Exercício resistido (de força) pode ser recomendado como complemento (Classe IIa, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 1.8 (Sedentarismo), tabela de Recomendações."
+      },
+      {
+        "id": "holter-24h-assintomatico-disfuncao-ve-hvem",
+        "categoria": "Arritmia/monitorização",
+        "obrigatorio": true,
+        "texto": "Holter de 24 horas é recomendado em idoso assintomático com função de ventrículo esquerdo deprimida e ECG com hipertrofia ventricular esquerda (Classe I, Nível A). Em assintomático com função de VE normal e ECG com HVE, a indicação passa a ser Classe IIa, Nível B.",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 7.2 (Taquiarritmias no Idoso), tabela de Recomendações."
+      },
+      {
+        "id": "holter-24h-nao-indicado-sintomas-inespecificos-bradicardia",
+        "categoria": "Arritmia/monitorização",
+        "obrigatorio": true,
+        "texto": "Holter de 24 horas NÃO é indicado para correlação eletrocardiográfica de sintomas inespecíficos (tontura rotatória, dispneia, sudorese) em pacientes com bradicardia já documentada (Classe III, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 7.1.2 (Peculiaridades Diagnósticas das Bradiarritmias), tabela de Recomendações."
+      },
+      {
+        "id": "holter-eventos-7-dias-sintomas-infrequentes",
+        "categoria": "Arritmia/monitorização",
+        "obrigatorio": true,
+        "texto": "Holter de eventos (looper) de 7 dias é recomendado para idosos com pré-síncope, síncope, palpitações, dispneia aos esforços, fadiga desproporcional ao esforço ou tontura não rotatória de caráter infrequente (Classe I, Nível C).",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 7.1.2 (Peculiaridades Diagnósticas das Bradiarritmias), tabela de Recomendações."
+      },
+      {
+        "id": "meta-pas-120-doenca-coronaria-cronica",
+        "categoria": "Meta pressórica",
+        "obrigatorio": false,
+        "texto": "DIVERGÊNCIA CONFIRMADA NO TEXTO ORIGINAL: a Diretriz SBC 2019 de Cardiogeriatria NÃO recomenda meta de PAS < 120 mmHg como posição própria. A diretriz (que se autodenomina 'III Geriatric Cardiology Guidelines' / III Diretrizes em Cardiogeriatria da SBC) recomenda PAS ≤ 130 mmHg para idosos ≥ 65 anos robustos, sem critérios de fragilidade; para idosos até 80 anos sem fragilidade, PAS < 140 mmHg pode ser considerada; em ≥ 80 anos com PAS ≥ 160 mmHg, redução inicial para a faixa de 140-150 mmHg pode ser considerada; em idosos frágeis ou com múltiplas comorbidades, a meta deve ser individualizada. A meta de PAS < 120 mmHg é citada pela diretriz apenas ao descrever o braço intensivo do ensaio SPRINT (Wright JT Jr et al., NEJM 2015, PMID 26551272), destacando que esse braço reduziu desfechos primários (infarto, outras síndromes coronarianas agudas, AVC, IC ou morte cardiovascular) mas com mais eventos adversos graves (hipotensão, síncope, distúrbios eletrolíticos, insuficiência renal aguda), e a diretriz alerta explicitamente para a curva J/U em idosos com PA muito baixa. Conclusão: a meta de <120 mmHg NÃO tem respaldo na posição própria desta diretriz SBC 2019 — a meta de referência aqui é ≤130 mmHg (robustos, ≥65 anos) / <140 mmHg (sem fragilidade, ≤80 anos), distinta e mais conservadora do que outras metas eventualmente citadas em outros contextos.",
+        "origem_secao": "Diretriz SBC 2019 (PMID 31188969), Seção 5.2.1 (Metas Terapêuticas para o Paciente Idoso, dentro de Hipertensão Arterial Sistêmica no Idoso), com referência ao ensaio SPRINT (NEJM 2015;373(22):2103-2116, PMID 26551272)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
