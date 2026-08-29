@@ -865,13 +865,31 @@ encontrados e despachados em paralelo:
 Nenhuma diretriz SBC específica localizada em nenhum dos dois — declarado
 em ambos. **Fecha o gap de medicina nuclear/RM de estresse desta janela.**
 
-## Lote 38 (planejado)
+## Lote 38 — concluído (SHA 14e9e711) — total 65 commits
 
-A auditar: Populações especiais ainda sem cobertura profunda —
-transplante cardíaco (rejeição, vasculopatia do enxerto), dispositivos
-de assistência ventricular (LVAD) fora do contexto perioperatório já
-coberto; ou nova varredura de Doenças vasculares estruturais
-(aortopatias não-genéticas, doença arterial periférica além do que já
-existe). Confirmar via grep + `gh pr list` antes de despachar.
+- checklist `vigilancia-e-manejo-pos-transplante-cardiaco-rejeicao-e-vasculopatia-do-enxerto`
+  — 5 itens: biópsia de vigilância com classificação ISHLT 0R-3R
+  (cronograma numérico exato declarado como não confirmado por texto
+  integral); manejo escalonado da rejeição celular; rejeição humoral
+  (AMR) via working formulation pAMR0-3, com nuance de assintomaticidade
+  e DSA nem sempre detectável; vasculopatia do enxerto (CAV) com ênfase
+  em que a denervação torna a angina silenciosa — rastreio não pode ser
+  guiado por sintomas; imunossupressão de manutenção e vigilância de
+  efeitos adversos. Gap de alto impacto: corpus cobria IC avançada/
+  indicação de transplante mas nada da vigilância pós-transplante
+  propriamente dita (zero menção a rejeição celular/humoral ou CAV antes
+  desta adição). 8 fontes ISHLT via NCBI e-utils. Checagem de LVAD
+  confirmou já bem coberto (7 itens dedicados) — evitada duplicação.
+
+Auditoria pré-lote-39: confirmado sem gap acionável em LVAD (já coberto).
+
+## Lote 39 (planejado)
+
+A auditar: Doenças vasculares estruturais (aneurisma de aorta abdominal
+— rastreio populacional, aortite não-Takayasu, doença arterial
+periférica além do que já existe); ou populações especiais adicionais
+(doador vivo/critérios de doador em transplante, obesidade grave e
+cirurgia bariátrica pré-cardiopatia). Confirmar via grep + `gh pr list`
+antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
