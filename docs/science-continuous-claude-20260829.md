@@ -510,3 +510,45 @@ declararam isso explicitamente em vez de inventar — sinal de que o processo de
 verificação está funcionando como pretendido.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 21 — concluído (1 commit, SHA 16cebe8d) — total 47 commits
+
+- checklist `limiares-cirurgicos-de-aneurisma-de-aorta-por-etiologia-marfan-loeys-dietz-bicuspide-esporadico`
+  — 8 itens, fonte ACC/AHA 2022 (PMID 36322642) verificada por texto
+  integral. Declaração explícita de ausência de corte único por gene em
+  Loeys-Dietz; contraponto de debate em andamento sobre limiar por sexo em
+  AAA (Talvitie 2024, PMID 37963191) preservado, não omitido.
+
+## Lote 22 (em andamento, 1 agente)
+
+Item pequeno e focado: vigilância de TODA a aorta (não só segmento
+sintomático) e timing de intervenção eletiva apenas em remissão na
+aortite inflamatória (Takayasu/arterite de células gigantes) — documento
+narrativo já existente no corpus não cobre esses 2 pontos práticos.
+Despachado como exame (agente a889586a272ee92f8).
+
+## Checkpoint final desta janela estendida (lotes 7-22, 47+ commits)
+
+22 lotes completados nesta sessão de produção contínua. Cobertura por
+território (todos dentro do escopo designado do Claude): Cardiomiopatias
+(4 verbetes novos), Dispositivos/Perioperatório (2), Valvopatias/
+Cardiogeriatria (2), Cardiologia pediátrica (5: eco indicações, teste
+ergométrico, Kawasaki, PACES 2021, aortopatia genética), Arritmias (2
+checklists JCS 2019, ~32 itens), Cardiologia geriátrica (1, SBC 2019),
+Aorta/vascular (4: TAVI angiotomografia, Doppler carótidas, ITB SBC 2024,
+limiares de aneurisma). Total aproximado: 9 verbetes novos, 3 exames
+novos, 8 checklists novos (>150 itens de checklist ao todo), 2 correções.
+
+Padrão de qualidade mantido em todas as rodadas: PMIDs verificados via
+NCBI e-utils (nunca inventados), declarações explícitas de incerteza
+quando a fonte não confirma um valor/recomendação (múltiplas ocorrências
+por lote nas rodadas finais), gates de validação (field/enum/question/rule,
+Tudo-com-Tudo, content_inventory --strict) limpos antes de cada commit,
+zero colisão com PR #599/#725 (reconferidos a cada lote), zero arquivo
+perdido no checkout compartilhado. Sinal de encerramento natural: as
+últimas varreduras de backlog mostram predominância de lacunas de
+CONECTIVIDADE (conteúdo já existente sem link) sobre lacunas de conteúdo
+genuinamente novo — registrado como direção para a próxima fase de
+trabalho, seja pelo Claude nesta mesma branch ou por outro agente.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
