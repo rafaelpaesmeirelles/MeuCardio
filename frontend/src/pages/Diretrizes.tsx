@@ -93,13 +93,14 @@ function categoria(valor: string) {
   return mapa[valor] || valor;
 }
 
-function urlTraduzida(url: string) {
-  const params = new URLSearchParams({ sl: "auto", tl: "pt", u: url });
-  return `https://translate.google.com/translate?${params.toString()}`;
+function temLeituraPortugues(item: Atualizacao) {
+  return Boolean(item.title_pt || item.summary_pt || item.key_changes.length || item.impacts.length || item.limitations.length);
 }
 
 function CardAtualizacao({ item }: { item: Atualizacao }) {
-  const traducaoUrl = item.url ? urlTraduzida(item.url) : null;
+  const mudancas = item.key_changes.filter((mudanca) => mudanca.explicit_in_source);
+  const leituraDisponivel = temLeituraPortugues(item);
+
   return (
     <article className="cc-guideline-row">
       <div>
@@ -108,34 +109,52 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
         {item.title_pt && item.title_pt !== item.title_original && <span>Título original: {item.title_original}</span>}
         {item.summary_pt ? <p>{item.summary_pt}</p> : <span>Análise clínica em processamento.</span>}
 
-        {item.key_changes.filter((mudanca) => mudanca.explicit_in_source).length > 0 && (
-          <div className="cc-detail-card">
-            <p className="eyebrow">O que este documento mudou</p>
-            <ul className="cc-clinical-list">
-              {item.key_changes.filter((mudanca) => mudanca.explicit_in_source).map((mudanca, indice) => (
-                <li key={`${item.id}-mudanca-${indice}`}>
-                  <strong>{categoria(mudanca.category)}:</strong> {mudanca.change_pt}
-                  {mudanca.previous_pt && <><br /><small>Antes: {mudanca.previous_pt}</small></>}
-                  <br /><small>Impacto prático: {mudanca.practical_impact_pt}</small>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {leituraDisponivel && (
+          <div id={`leitura-portugues-${item.slug}`} className="cc-detail-card" style={{ scrollMarginTop: "1rem" }}>
+            <p className="eyebrow">Leitura em português</p>
+            {item.title_pt && <p><strong>{item.title_pt}</strong></p>}
+            {item.summary_pt && <p>{item.summary_pt}</p>}
 
-        {item.impacts.length > 0 && (
-          <div className="cc-detail-card">
-            <p className="eyebrow">O que o CorVIA atualizou</p>
-            <ul className="cc-clinical-list">
-              {item.impacts.map((impacto) => (
-                <li key={`${impacto.item_type}-${impacto.item_id}`}>
-                  <strong>{impacto.target_label || impacto.item_type}</strong>
-                  {impacto.target_section ? ` · ${impacto.target_section}` : ""}
-                  {impacto.change_summary_pt ? <><br /><span>{impacto.change_summary_pt}</span></> : null}
-                </li>
-              ))}
-            </ul>
-            <p><small>As atualizações são overrides versionados, rastreáveis e reversíveis; em conflito, a orientação nova explicitamente verificada prevalece.</small></p>
+            {mudancas.length > 0 && (
+              <>
+                <p><strong>Principais mudanças</strong></p>
+                <ul className="cc-clinical-list">
+                  {mudancas.map((mudanca, indice) => (
+                    <li key={`${item.id}-mudanca-${indice}`}>
+                      <strong>{categoria(mudanca.category)}:</strong> {mudanca.change_pt}
+                      {mudanca.previous_pt && <><br /><small>Antes: {mudanca.previous_pt}</small></>}
+                      <br /><small>Impacto prático: {mudanca.practical_impact_pt}</small>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {item.impacts.length > 0 && (
+              <>
+                <p><strong>Impacto no CorVIA</strong></p>
+                <ul className="cc-clinical-list">
+                  {item.impacts.map((impacto) => (
+                    <li key={`${impacto.item_type}-${impacto.item_id}`}>
+                      <strong>{impacto.target_label || impacto.item_type}</strong>
+                      {impacto.target_section ? ` · ${impacto.target_section}` : ""}
+                      {impacto.change_summary_pt ? <><br /><span>{impacto.change_summary_pt}</span></> : null}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {item.limitations.length > 0 && (
+              <>
+                <p><strong>Limitações</strong></p>
+                <ul className="cc-clinical-list">
+                  {item.limitations.map((limitacao, indice) => <li key={`${item.id}-limitacao-${indice}`}>{limitacao}</li>)}
+                </ul>
+              </>
+            )}
+
+            <p><small>Leitura clínica original em português produzida pelo CorVIA a partir das fontes científicas disponíveis. Não depende do Google Tradutor e não reproduz tradução integral de conteúdo protegido.</small></p>
           </div>
         )}
       </div>
@@ -146,7 +165,7 @@ function CardAtualizacao({ item }: { item: Atualizacao }) {
         ) : item.summary_pt ? (
           <a href={`#publicacao-${item.slug}`}>Resumo CorVIA</a>
         ) : null}
-        {traducaoUrl && <a href={traducaoUrl} target="_blank" rel="noopener noreferrer">Traduzido ↗</a>}
+        {leituraDisponivel && <a href={`#leitura-portugues-${item.slug}`}>Traduzido</a>}
         {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
       </div>
     </article>
@@ -198,13 +217,13 @@ export default function Diretrizes() {
       <ClinicalPageHeader
         eyebrow="CorVIA Intelligence"
         title="Diretrizes e alertas clínicos"
-        description="Novas publicações são detectadas, analisadas e resumidas em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma visualização traduzida da fonte ou a publicação original. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
+        description="Novas publicações são detectadas, analisadas e resumidas em português. Em cada trabalho, você pode abrir o Resumo CorVIA, uma leitura clínica em português dentro do próprio CorVIA ou a publicação original. Mudanças clínicas só são aplicadas automaticamente quando a fonte primária sustenta explicitamente a mudança e uma segunda verificação independente confirma o override; situações ambíguas permanecem sinalizadas para revisão."
         icon="documento"
         actions={[
           { to: "/evidencias", label: "Evidências", icon: "evidencia" },
           { to: "/estudos", label: "Estudos", icon: "evidencia", tone: "primary" },
         ]}
-        meta={<><span className="selo">fontes oficiais</span><span className="selo">síntese em português</span><span className="selo">Tudo com Tudo</span></>}
+        meta={<><span className="selo">fontes oficiais</span><span className="selo">leitura em português</span><span className="selo">Tudo com Tudo</span></>}
       />
 
       <div className="cc-metrics">
@@ -215,36 +234,33 @@ export default function Diretrizes() {
       </div>
 
       {naoLidas.length > 0 && (
-        <ClinicalSection eyebrow="Seu radar clínico" title="Novos para você" description="Abra o resumo em português, a visualização traduzida ou o original diretamente daqui.">
+        <ClinicalSection eyebrow="Seu radar clínico" title="Novos para você" description="Abra o resumo, a leitura em português ou o original diretamente daqui, sem depender de proxy de tradução externo.">
           <div className="cc-guideline-alerts">
-            {naoLidas.map((item) => {
-              const traducaoUrl = item.guideline.url ? urlTraduzida(item.guideline.url) : null;
-              return (
-                <article key={item.notification_id} className="cc-guideline-alert">
-                  <div className="cc-guideline-alert__copy">
-                    <small>{item.guideline.org} · {dataBr(item.guideline.published_at)}</small>
-                    <strong>{titulo(item.guideline)}</strong>
-                    <p>{item.guideline.summary_pt || item.message}</p>
-                    {item.guideline.clinical_content_changed && <p><strong>CorVIA atualizado:</strong> {item.guideline.impacts.length} ponto(s) clínico(s) receberam orientação prevalente nova.</p>}
-                  </div>
-                  <div className="cc-guideline-alert__actions">
-                    {item.guideline.summary_document_slug ? (
-                      <Link className="botao" to={`/biblioteca/${item.guideline.summary_document_slug}`}>Resumo CorVIA</Link>
-                    ) : item.guideline.summary_pt ? (
-                      <a className="botao" href={`#publicacao-${item.guideline.slug}`}>Resumo CorVIA</a>
-                    ) : null}
-                    {traducaoUrl && <a className="botao botao--secundario" href={traducaoUrl} target="_blank" rel="noopener noreferrer">Traduzido ↗</a>}
-                    {item.guideline.url && <a className="botao botao--secundario" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
-                    <button className="botao botao--secundario" type="button" onClick={() => void marcarLida(item.notification_id)}>Marcar como lido</button>
-                  </div>
-                </article>
-              );
-            })}
+            {naoLidas.map((item) => (
+              <article key={item.notification_id} className="cc-guideline-alert">
+                <div className="cc-guideline-alert__copy">
+                  <small>{item.guideline.org} · {dataBr(item.guideline.published_at)}</small>
+                  <strong>{titulo(item.guideline)}</strong>
+                  <p>{item.guideline.summary_pt || item.message}</p>
+                  {item.guideline.clinical_content_changed && <p><strong>CorVIA atualizado:</strong> {item.guideline.impacts.length} ponto(s) clínico(s) receberam orientação prevalente nova.</p>}
+                </div>
+                <div className="cc-guideline-alert__actions">
+                  {item.guideline.summary_document_slug ? (
+                    <Link className="botao" to={`/biblioteca/${item.guideline.summary_document_slug}`}>Resumo CorVIA</Link>
+                  ) : item.guideline.summary_pt ? (
+                    <a className="botao" href={`#publicacao-${item.guideline.slug}`}>Resumo CorVIA</a>
+                  ) : null}
+                  {temLeituraPortugues(item.guideline) && <a className="botao botao--secundario" href={`#leitura-portugues-${item.guideline.slug}`}>Traduzido</a>}
+                  {item.guideline.url && <a className="botao botao--secundario" href={item.guideline.url} target="_blank" rel="noopener noreferrer">Original ↗</a>}
+                  <button className="botao botao--secundario" type="button" onClick={() => void marcarLida(item.notification_id)}>Marcar como lido</button>
+                </div>
+              </article>
+            ))}
           </div>
         </ClinicalSection>
       )}
 
-      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Cada trabalho oferece Resumo CorVIA, visualização traduzida e fonte original quando disponíveis.">
+      <ClinicalSection eyebrow="Monitoramento" title="Publicações identificadas" description="Cada trabalho oferece Resumo CorVIA, leitura clínica em português dentro do CorVIA e fonte original quando disponíveis.">
         {atualizacoes.items.length === 0 ? (
           <ClinicalEmpty title="Nenhuma nova publicação oficial identificada" description="O CorVIA Intelligence continua consultando sociedades, periódicos e indexadores estruturados." />
         ) : (
