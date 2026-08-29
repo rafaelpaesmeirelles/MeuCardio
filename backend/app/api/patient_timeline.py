@@ -1,8 +1,9 @@
 """Linha do tempo longitudinal do PatientProfile sem duplicar dados clínicos.
 
 Os eventos são derivados em leitura das fontes canônicas do prontuário:
-Encounter, resumo clínico, resultados de exames, Agenda/Sala de Espera e
-artefatos explicitamente vinculados. Nada é copiado para uma tabela de timeline.
+Encounter, resumo clínico, resultados de exames, Agenda/Sala de Espera,
+ECG/exames multimodais e artefatos explicitamente vinculados. Nada é copiado
+para uma tabela de timeline.
 """
 from __future__ import annotations
 
@@ -17,12 +18,14 @@ from app.models.appointment_clinical_flow import AppointmentClinicalFlow
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment, GeneratedDocument, Prescription
 from app.models.encounter_artifact import EncounterArtifact
+from app.models.patient_multimodal import PatientMultimodalAISuggestion, PatientMultimodalExamRecord
 from app.models.prontuario import (
     ClinicalEncounter, PatientClinicalAISuggestion, PatientClinicalItem,
     PatientECGRecord, PatientExamResult,
 )
 from app.services import cofre
 from app.services.clinical_ownership import patient_profile_for_user
+from app.services.ia.cardiovascular_exam_assist import EXAM_TYPES
 
 router = APIRouter(prefix="/api/pacientes", tags=["prontuario"])
 
@@ -142,14 +145,41 @@ def linha_do_tempo_paciente(
         .order_by(PatientClinicalAISuggestion.created_at.desc())
         .all()
     )
-    accepted_by_result = {
+    multimodal_exams = (
+        db.query(PatientMultimodalExamRecord)
+        .filter(
+            PatientMultimodalExamRecord.owner_id == user.id,
+            PatientMultimodalExamRecord.patient_profile_id == pid,
+        )
+        .all()
+    )
+    multimodal_suggestions = (
+        db.query(PatientMultimodalAISuggestion)
+        .filter(
+            PatientMultimodalAISuggestion.owner_id == user.id,
+            PatientMultimodalAISuggestion.patient_profile_id == pid,
+        )
+        .order_by(PatientMultimodalAISuggestion.created_at.desc())
+        .all()
+    )
+
+    accepted_ecg_by_result = {
         row.accepted_result_id: row
         for row in ai_suggestions
+        if row.status == "accepted" and row.accepted_result_id is not None
+    }
+    accepted_multimodal_by_result = {
+        row.accepted_result_id: row
+        for row in multimodal_suggestions
         if row.status == "accepted" and row.accepted_result_id is not None
     }
     latest_by_ecg: dict[int, PatientClinicalAISuggestion] = {}
     for suggestion in ai_suggestions:
         latest_by_ecg.setdefault(suggestion.ecg_record_id, suggestion)
+    latest_by_multimodal: dict[int, PatientMultimodalAISuggestion] = {}
+    for suggestion in multimodal_suggestions:
+        latest_by_multimodal.setdefault(suggestion.exam_record_id, suggestion)
+
     for row in resultados:
         payload = _payload_resultado(row)
         nome = (payload.get("exam_name") or "").strip()
@@ -159,7 +189,8 @@ def linha_do_tempo_paciente(
         resultado = " ".join(x for x in (valor, unidade) if x).strip()
         origem = (payload.get("source") or "").strip()
         resumo = " · ".join(x for x in (nome, resultado or laudo, origem) if x)[:240]
-        ai_origin = accepted_by_result.get(row.id)
+        ecg_origin = accepted_ecg_by_result.get(row.id)
+        multimodal_origin = accepted_multimodal_by_result.get(row.id)
         eventos.append({
             "id": f"resultado_exame:{row.id}",
             "tipo": "resultado_exame",
@@ -174,14 +205,14 @@ def linha_do_tempo_paciente(
             "corrected_by_id": corrected_by.get(row.id),
             "is_superseded": row.id in corrected_by,
             "source": origem or None,
-            "ecg_record_id": ai_origin.ecg_record_id if ai_origin else None,
-            "ai_suggestion_id": ai_origin.id if ai_origin else None,
-            "ai_review_status": ai_origin.status if ai_origin else None,
+            "ecg_record_id": ecg_origin.ecg_record_id if ecg_origin else None,
+            "multimodal_exam_record_id": multimodal_origin.exam_record_id if multimodal_origin else payload.get("multimodal_exam_record_id"),
+            "ai_suggestion_id": ecg_origin.id if ecg_origin else multimodal_origin.id if multimodal_origin else payload.get("ai_suggestion_id"),
+            "ai_review_status": ecg_origin.status if ecg_origin else multimodal_origin.status if multimodal_origin else None,
         })
 
-    # Um ECG aceito aparece pela fonte canônica `PatientExamResult`; enquanto
-    # não aceito, o próprio arquivo imutável é o evento. Assim a timeline não
-    # duplica o mesmo exame nem promove a sugestão da IA a fato clínico.
+    # Um ECG aceito aparece pela fonte canônica PatientExamResult; enquanto
+    # não aceito, o próprio arquivo imutável é o evento.
     accepted_ecg_ids = {
         row.ecg_record_id for row in ai_suggestions if row.status == "accepted"
     }
@@ -204,6 +235,35 @@ def linha_do_tempo_paciente(
             "status": status,
             "encounter_id": row.source_encounter_id,
             "ecg_record_id": row.id,
+            "ai_suggestion_id": suggestion.id if suggestion else None,
+            "ai_review_status": suggestion.status if suggestion else None,
+        })
+
+    # Mesma regra para qualquer outro exame multimodal: o arquivo é fato
+    # documental; a sugestão é apoio revisável. Após aceitação, só o
+    # PatientExamResult escrito pelo médico aparece como fato clínico.
+    accepted_multimodal_ids = {
+        row.exam_record_id for row in multimodal_suggestions if row.status == "accepted"
+    }
+    for row in multimodal_exams:
+        if row.id in accepted_multimodal_ids:
+            continue
+        suggestion = latest_by_multimodal.get(row.id)
+        if suggestion and suggestion.status == "generated":
+            resumo, status = "Sugestão multimodal da IA disponível; revisão médica pendente.", "awaiting_review"
+        elif suggestion and suggestion.status == "rejected":
+            resumo, status = "Sugestão da IA rejeitada; exame original preservado.", "ai_rejected"
+        else:
+            resumo, status = "Arquivo original do exame anexado ao prontuário.", "uploaded"
+        eventos.append({
+            "id": f"exame_multimodal:{row.id}",
+            "tipo": "exame_multimodal",
+            "data": row.performed_at,
+            "titulo": f"{EXAM_TYPES.get(row.exam_type, row.exam_type)} anexado",
+            "resumo": resumo,
+            "status": status,
+            "encounter_id": row.source_encounter_id,
+            "multimodal_exam_record_id": row.id,
             "ai_suggestion_id": suggestion.id if suggestion else None,
             "ai_review_status": suggestion.status if suggestion else None,
         })
