@@ -69,6 +69,13 @@ PUBMED_QUERY = (
     "&sort=date&size=100"
 )
 
+SBC_HOSTS = (
+    "portal.cardiol.br",
+    "www.portal.cardiol.br",
+    "abccardiol.org",
+    "www.abccardiol.org",
+)
+
 WORLDWIDE_SOURCES = (
     # Global bibliographic indexing across publishers and countries.
     core.Source(
@@ -77,6 +84,31 @@ WORLDWIDE_SOURCES = (
         ("pubmed.ncbi.nlm.nih.gov",),
         keywords=("pubmed.ncbi.nlm.nih.gov/",),
         max_details=100,
+    ),
+    # Brazil: SBC/ConDir + Arquivos Brasileiros de Cardiologia. The canonical
+    # core already watches the main SBC directives page; these paginated views
+    # ensure recently displaced documents are still inspected. External links
+    # to ABC Cardiol are explicitly allowed and then deduplicated by DOI.
+    core.Source(
+        "SBC",
+        "https://www.portal.cardiol.br/diretrizes?dba05c42_page=1",
+        SBC_HOSTS,
+        keywords=HIGH_SIGNAL_TERMS,
+        max_details=180,
+    ),
+    core.Source(
+        "SBC",
+        "https://www.portal.cardiol.br/diretrizes?dba05c42_page=2",
+        SBC_HOSTS,
+        keywords=HIGH_SIGNAL_TERMS,
+        max_details=180,
+    ),
+    core.Source(
+        "SBC",
+        "https://www.portal.cardiol.br/diretrizes?dba05c42_page=3",
+        SBC_HOSTS,
+        keywords=HIGH_SIGNAL_TERMS,
+        max_details=180,
     ),
     # Professional societies and guideline repositories.
     core.Source(
