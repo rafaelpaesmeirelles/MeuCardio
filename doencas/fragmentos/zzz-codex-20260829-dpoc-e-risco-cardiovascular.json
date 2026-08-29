@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "dpoc-e-risco-cardiovascular",
+    "name": "DPOC e risco cardiovascular",
+    "aliases": ["doença pulmonar obstrutiva crônica e coração", "COPD e risco cardiovascular", "DPOC cardiovascular"],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "doenca_respiratoria_cardiovascular",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "DPOC e doença cardiovascular coexistem com alta frequência por fatores de risco compartilhados, inflamação, hipoxemia e envelhecimento. DPOC aumenta risco de ASCVD, AVC, insuficiência cardíaca, fibrilação atrial, arritmia ventricular e morte súbita. Dispneia em pessoa com DPOC não deve ser automaticamente atribuída ao pulmão: insuficiência cardíaca, isquemia, arritmia e tromboembolismo precisam ser considerados.",
+    "epidemiology": "A ESC 2021 considera DPOC importante fator de risco cardiovascular e recomenda investigar doença cardiovascular nos pacientes com DPOC. O GOLD 2026 mantém avaliação de comorbidades como parte central do manejo. Exacerbações respiratórias são períodos de risco cardiovascular aumentado e podem coexistir com descompensação de IC, síndrome coronariana ou arritmia.",
+    "presentation": [
+      "Dispneia crônica, tosse e expectoração com limitação persistente ao fluxo aéreo sugerem DPOC, especialmente após exposição a tabaco, biomassa ou outros poluentes.",
+      "Piora súbita de dispneia pode representar exacerbação de DPOC, mas também insuficiência cardíaca, pneumonia, embolia pulmonar, SCA ou arritmia.",
+      "Edema, ortopneia, turgência jugular e ganho de peso favorecem congestão, embora hiperinsuflação possa dificultar o exame.",
+      "Palpitações, síncope e taquicardia persistente merecem ECG e investigação de arritmia.",
+      "Hipoxemia crônica grave pode contribuir para hipertensão pulmonar e cor pulmonale."
+    ],
+    "diagnostic_approach": {
+      "dpoc": "Confirmar DPOC por espirometria pós-broncodilatador demonstrando limitação persistente ao fluxo aéreo, integrada à exposição e sintomas conforme GOLD 2026; sintomas isolados não confirmam o diagnóstico.",
+      "cardiovascular": "Procurar ativamente hipertensão, ASCVD, insuficiência cardíaca, arritmias e fatores de risco; a ESC 2021 recomenda investigação de CVD em pacientes com DPOC.",
+      "dispneia": "Quando houver piora, comparar sintomas, volume, ausculta, oxigenação, ECG e biomarcadores/imagem conforme hipótese. BNP/NT-proBNP podem ajudar na suspeita de IC, mas devem ser interpretados no contexto.",
+      "hipertensao_pulmonar": "Suspeitar quando dispneia/hipoxemia forem desproporcionais, houver sinais de sobrecarga direita ou ecocardiograma sugestivo; não diagnosticar hipertensão pulmonar apenas pelo contexto de DPOC.",
+      "medicacoes": "Revisar broncodilatadores, corticoide inalatório quando indicado e fármacos cardiovasculares. Evitar retirar terapia cardiovascular comprovada apenas pelo rótulo de DPOC."
+    },
+    "differentials": ["Insuficiência cardíaca esquerda", "Embolia pulmonar", "Pneumonia", "Síndrome coronariana aguda", "Fibrilação atrial ou outra taquiarritmia", "Asma", "Doença pulmonar intersticial", "Anemia", "Hipertensão pulmonar"],
+    "tests": [
+      "Espirometria pós-broncodilatador para confirmação de DPOC quando o paciente estiver clinicamente estável o suficiente.",
+      "Oximetria e, em cenários selecionados, gasometria arterial.",
+      "ECG diante de sintomas cardiovasculares, taquicardia, síncope ou exacerbação importante.",
+      "Radiografia de tórax na piora aguda quando pneumonia, edema pulmonar ou outra causa estrutural for plausível.",
+      "BNP/NT-proBNP e ecocardiograma quando houver suspeita de insuficiência cardíaca ou disfunção ventricular/direita.",
+      "Troponina quando houver suspeita de SCA; elevação durante exacerbação deve ser interpretada como lesão miocárdica até definir mecanismo.",
+      "Avaliar perfil lipídico, glicemia/HbA1c, pressão arterial e tabagismo como prevenção cardiovascular."
+    ],
+    "red_flags": [
+      "Hipoxemia grave, exaustão respiratória, rebaixamento de consciência, instabilidade ou hipercapnia progressiva exigem manejo emergencial.",
+      "Dor torácica, alteração isquêmica no ECG ou instabilidade devem acionar protocolo de SCA.",
+      "Síncope, taquiarritmia sustentada ou bradiarritmia sintomática exigem avaliação imediata.",
+      "Hemoptise, dor pleurítica, hipoxemia desproporcional ou sinais de TVP aumentam suspeita de embolia pulmonar.",
+      "Congestão importante ou edema agudo de pulmão exigem manejo de insuficiência cardíaca, mesmo na presença de sibilos."
+    ],
+    "ambulatory_flow": [
+      "Confirmar DPOC por espirometria e classificar sintomas/exacerbações conforme GOLD 2026.",
+      "Promover cessação do tabagismo, vacinação, atividade física/reabilitação pulmonar e terapia inalatória indicada.",
+      "Rastrear e tratar risco cardiovascular de forma ativa: pressão, lipídios, diabetes, obesidade, sedentarismo e tabagismo.",
+      "Não suspender betabloqueador com indicação cardiovascular comprovada apenas por DPOC; preferir agente beta-1 seletivo quando adequado e monitorar sintomas respiratórios.",
+      "Não iniciar betabloqueador somente para prevenir exacerbações de DPOC na ausência de indicação cardiovascular: no BLOCK-COPD, metoprolol não prolongou o tempo até a primeira exacerbação e aumentou exacerbações que levaram à hospitalização.",
+      "Reavaliar dispneia persistente apesar de terapia pulmonar otimizada para IC, isquemia, arritmia, anemia e hipertensão pulmonar."
+    ],
+    "emergency_flow": [
+      "Na piora aguda, tratar bronco-obstrução/insuficiência respiratória conforme protocolo e procurar simultaneamente pneumonia, IC, SCA, arritmia e embolia pulmonar.",
+      "Oxigênio deve ser titulado ao alvo apropriado, com atenção à retenção de CO2 em pacientes suscetíveis; não retardar suporte ventilatório quando indicado.",
+      "Sibilância não exclui edema pulmonar; ultrassom pulmonar/POCUS e ecocardiografia podem auxiliar quando disponíveis e clinicamente apropriados.",
+      "Elevação de troponina ou BNP durante exacerbação requer interpretação clínica e não deve gerar diagnóstico automático de IAM ou IC sem critérios adicionais."
+    ],
+    "treatment_summary": "Tratar DPOC conforme GOLD 2026 e, em paralelo, doença cardiovascular segundo suas próprias diretrizes. A presença de DPOC não é motivo isolado para negar terapias cardiovasculares de benefício comprovado. Betabloqueador deve ter indicação cardiovascular; BLOCK-COPD mostrou que metoprolol, em pacientes sem indicação estabelecida, não preveniu exacerbações e aumentou hospitalizações por exacerbação.",
+    "monitoring": ["Sintomas respiratórios e carga de exacerbações", "Oximetria quando indicada", "Técnica e adesão aos inaladores", "Pressão arterial, lipídios, diabetes e tabagismo", "Sinais de insuficiência cardíaca e arritmia", "Efeitos respiratórios após iniciar/titular betabloqueador quando clinicamente indicado"],
+    "special_populations": [
+      "Insuficiência cardíaca: DPOC frequentemente coexistente pode dificultar interpretação da dispneia; manter terapia modificadora de prognóstico sempre que tolerada.",
+      "Doença coronariana: tratar conforme diretrizes; broncodilatadores e sintomas devem ser integrados ao risco de taquicardia/isquemia sem retirar terapia necessária de forma reflexa.",
+      "Fibrilação atrial: exacerbações podem precipitar arritmia; corrigir hipóxia/infecção e seguir estratégia de anticoagulação baseada em risco.",
+      "Hipertensão pulmonar/cor pulmonale: avaliar gravidade da doença pulmonar e hipóxia; vasodilatadores específicos não são tratamento rotineiro de HP por DPOC sem avaliação especializada.",
+      "Tabagistas ativos: cessação é intervenção prioritária para risco pulmonar e cardiovascular."
+    ],
+    "assistant_questions": [
+      {"id":"copd_confirmed","label":"A DPOC foi confirmada por espirometria pós-broncodilatador?","type":"boolean","required":true,"section":"Diagnóstico"},
+      {"id":"acute_dyspnea","label":"Há piora aguda de dispneia ou hipoxemia?","type":"boolean","required":true,"section":"Red flags"},
+      {"id":"cv_features","label":"Há dor torácica, edema/ortopneia, palpitação/síncope ou sinais de tromboembolismo?","type":"boolean","section":"Cardiovascular"},
+      {"id":"beta_blocker_indication","label":"Existe indicação cardiovascular independente para betabloqueador?","type":"boolean","section":"Medicação"}
+    ],
+    "assistant_rules": [
+      {"id":"copd-acute","priority":100,"when":{"all":[{"field":"acute_dyspnea","op":"truthy"}]},"add":{"risk":"prioritario","messages":["Na piora aguda, procurar causa respiratória e cardiovascular em paralelo; DPOC não explica automaticamente toda dispneia."]}},
+      {"id":"copd-cv","priority":90,"when":{"all":[{"field":"cv_features","op":"truthy"}]},"add":{"suggested_tests":["ECG e investigação dirigida para IC/SCA/TEP conforme apresentação"],"supporting":["DPOC associa-se a elevada carga de doença cardiovascular."]}},
+      {"id":"copd-bb","priority":70,"when":{"all":[{"field":"beta_blocker_indication","op":"truthy"}]},"add":{"messages":["Não retirar betabloqueador indicado por doença cardiovascular apenas por DPOC; individualizar agente e monitorização."]}}
+    ],
+    "tags": ["DPOC", "COPD", "risco cardiovascular", "insuficiencia cardiaca", "fibrilacao atrial", "betabloqueador", "GOLD 2026"],
+    "source_refs": [
+      "Global Initiative for Chronic Obstructive Lung Disease. Global Strategy for Prevention, Diagnosis and Management of COPD: 2026 Report.",
+      "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42:3227-3337.",
+      "Dransfield MT, Voelker H, Bhatt SP, et al. Metoprolol for the Prevention of Acute Exacerbations of COPD. N Engl J Med. 2019;381:2304-2314. doi:10.1056/NEJMoa1908142. PMID:31633896."
+    ],
+    "source_urls": ["https://goldcopd.org/wp-content/uploads/2026/01/GOLD-REPORT-2026-v1.3-8Dec2025_WMV2.pdf", "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cvd-prevention/", "https://pubmed.ncbi.nlm.nih.gov/31633896/"],
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo DPOC-cardiovascular. Não há PR aberto concorrente de hub; a busca da main não identificou slug correspondente. Vínculos documentais permaneceram vazios para evitar associações não verificadas. Manter pendente até revisão editorial humana."
+  }
+]
