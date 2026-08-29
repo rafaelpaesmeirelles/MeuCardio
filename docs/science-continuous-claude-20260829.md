@@ -1164,10 +1164,48 @@ HIV, pós-COVID) fechados nesta janela.
   Todos os cortes numéricos extraídos diretamente dos abstracts, nenhum
   inventado.
 
-## Lote 53 (planejado)
+## PARADA — ordem do Rafael (30/08/2026)
 
-A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list`): território ainda não explorado nesta janela. Confirmar
-cobertura antes de despachar.
+Ordem recebida: "Interromper produção, finalize o que está fazendo,
+salve, e prepare para publicação." Produção interrompida imediatamente.
 
-_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+Um agente de pesquisa do lote 53 (trombose subclínica de folheto em
+biopróteses/HALT-HAT) estava em andamento no momento da ordem — seu
+resultado NÃO foi integrado ao corpus; a pesquisa pode ter concluído
+em background de forma independente, mas nenhum conteúdo dela entrou
+em `checklists/metadados.json` ou em qualquer arquivo do repositório.
+
+**Estado final desta janela contínua (lotes 22-52, 30/08/2026, SHA
+5e8c99cc)**: árvore de trabalho limpa, sem alterações pendentes;
+`audit_tudo_com_tudo.py` com `broken_references: []`;
+`content_inventory.py --strict` com 0 erros, 9.812 registros totais;
+`/opt/meucardio` sem arquivos órfãos. 126 commits à frente de
+`origin/main` (branch nunca rebaseada, nunca mesclada, conforme
+instrução original).
+
+**Resumo do que foi produzido nesta janela** (lotes 22-52, 31 lotes
+efetivos após a correção crítica que removeu 3 duplicatas): cluster
+imagem cardiovascular (aortite/Takayasu, endocardite×2, PET-FDG
+sarcoidose, Fabry, Danon/PRKAG2, stress-CMR, PET-perfusão/Rb-82,
+MIBG); cluster ACHD (ETT, ETE, TCPE, recomendações granulares
+ESC2020/AHA2018); cluster canalopatias (CPVT — removido por duplicata,
+ver correção); cluster transplante de órgão sólido (hepático, renal,
+vigilância de rejeição/CAV cardíaco, reabilitação pós-transplante
+cardíaco); cluster populações especiais (doença falciforme, HIV,
+avaliação pré-bariátrica, exercício na gestação, POTS pós-COVID);
+AAOCA; Kawasaki no adulto; vigilância extra-aórtica em Loeys-Dietz/EDS
+vascular; ECG em atletas negros; insuficiência de VD pós-LVAD.
+
+**Correção crítica registrada em 30/08/2026** (ver acima): 3 itens
+duplicados removidos (AAOCA, CPVT, algoritmo de amiloidose), 2
+parcialmente sobrepostos flagados com nota de revisão (ACHD granular,
+vigilância pós-transplante). Procedimento de colisão corrigido
+permanentemente para incluir `content/**/*.md` em toda checagem futura
+nesta branch.
+
+**Status editorial**: todo conteúdo desta janela está com
+`review_status: pendente_revisao` — nada foi aprovado editorialmente
+por Claude, conforme regra do briefing original. Pronto para revisão
+humana e decisão de publicação pelo Rafael.
+
+_(fim da produção contínua desta janela — aguardando nova instrução)_
