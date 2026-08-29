@@ -370,3 +370,53 @@ de rigor do lote 16 (declarar explicitamente quando recomendação formal
 não for confirmada). Despachado (agente a8c914f2ae48e97d2).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 17 — concluído (1 commit, SHA b1f2043f) — total 42 commits
+
+- checklist `teste-genetico-em-canalopatias-e-risco-pos-iam-e-restricao-de-exercicio-em-arritmia-jcs`
+  — 16 itens, sub-lote 2/3 do cluster JCS/JHRS 2019. 8/16 itens declarados
+  explicitamente como não confirmados na diretriz (incl. correção de uma
+  hipótese do meu próprio briefing sobre testes ergométricos em CPVT/QTL).
+
+## Varredura final de encerramento do ciclo ativo desta janela
+
+Verificado antes de continuar: AVNRT (2 itens restantes do cluster
+Arritmias) e LQTS betabloqueador/mexiletina já têm host narrativo completo
+(`taquicardia-por-reentrada-nodal-avnrt-ablacao-versus-farmacos...`,
+`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`)
+— lacuna de conectividade, não de conteúdo. Cluster `aortopatia-gestante-*`
+(7 itens, cortes de diâmetro para via de parto) já coberto por
+`sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro`
+(confirmado: menciona cesárea, parto vaginal E os cortes de 4cm/40mm
+citados no backlog). Cluster `gravidez-esc-2018-*` (~30 itens): mWHO 2.0
+já coberto por `classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025` —
+versão MAIS RECENTE (ESC 2025) já presente no corpus; produzir conteúdo
+novo citando a diretriz 2018 desatualizada quando o corpus já tem a
+atualização de 2025 seria contraproducente.
+
+**Conclusão desta rodada**: os clusters de maior valor marginal genuíno
+(cardiomiopatias, dispositivos periop/pediátricos, valvopatias geriátricas,
+aortopatia pediátrica, arritmias/canalopatias JCS) foram identificados e
+produzidos. Os clusters remanescentes auditados nesta última varredura são,
+de forma consistente, lacunas de CONECTIVIDADE (Tudo-com-Tudo) sobre
+conteúdo já existente, não lacunas de conteúdo novo — produzir verbete/
+checklist novo ali duplicaria material já presente. Registrado aqui como
+sinal para a próxima rodada: um lote de Tudo-com-Tudo puro (sem produção de
+conteúdo novo, só related_document_slugs) nesses clusters teria alto valor.
+
+## Resumo cumulativo final desta janela (lotes 7-17, 35 commits)
+Verbetes novos (8): cardiomiopatia-restritiva-nao-amiloide, manejo-perioperatorio-cied,
+esclerose-sistemica-cardiaca, cardiomiopatia-por-sobrecarga-de-ferro,
+fenocopias-glicogenicas-danon-prkag2, estenose-aortica-idoso-fragilidade-tavi,
+aortopatia-genetica-pediatrica-marfan-loeys-dietz-eds-vascular
+Exames novos (3): teste-ergometrico-ea-pediatrica-vab, angiotomografia-tavi-expandida,
+teste-ergometrico-canalopatias-bavt-pediatrico
+Checklists novos (5): eco-endocardite-seriado, indicacoes-eco-pediatrico (20 itens),
+paces2021-dispositivos-pediatricos (21 itens), selecao-metodo-diagnostico-arritmia-jcs (16 itens),
+teste-genetico-canalopatias-exercicio-jcs (16 itens)
+Correções (1): kawasaki JCS 2020 farmacoterapia por tamanho de aneurisma
+Território: Cardiomiopatias, Dispositivos/Perioperatório, Valvopatias/Cardiogeriatria,
+Cardiologia pediátrica, Arritmias/Canalopatias — todos no território designado.
+Colisões evitadas em todas as rodadas: PR #599, #725 (reconferidos a cada lote).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
