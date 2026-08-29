@@ -33233,5 +33233,67 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "manejo-de-longo-prazo-de-aneurisma-coronariano-de-kawasaki-da-infancia-a-vida-adulta",
+    "condicao": "Doença de Kawasaki — manejo de longo prazo do aneurisma coronariano, da infância à vida adulta",
+    "resumo": "Checklist para o seguimento de longo prazo de aneurismas de artéria coronária secundários à doença de Kawasaki, cobrindo estratificação de risco por escore Z, terapia antitrombótica, vigilância por imagem, avaliação de isquemia e considerações específicas da transição para o cuidado do adulto. Sobreviventes de Kawasaki com aneurisma residual mantêm risco cardiovascular ao longo da vida e requerem seguimento estruturado mesmo após aparente regressão do aneurisma.",
+    "documento_origem": null,
+    "theme": "Cardiologia pediátrica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, Burns JC, Bolger AF, Gewitz M, Baker AL, Jackson MA, Takahashi M, Shah PB, Kobayashi T, Wu MH, Saji TT, Pahl E; American Heart Association. \"Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association.\" Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445. (Errata: Circulation. 2019;140(5):e181-e184, PMID: 31356128)",
+      "Fukazawa R, Kobayashi J, Ayusawa M, Hamada H, Miura M, Mitani Y, Tsuda E, Nakajima H, Matsuura H, Ikeda K, Nishigaki K, Suzuki H, Takahashi K, Suda K, Kamiyama H, Onouchi Y, Kobayashi T, Yokoi H, Sakamoto K, Ochi M, Kitamura S, Hamaoka K, Senzaki H, Kimura T; Japanese Circulation Society Joint Working Group. \"JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease.\" Circ J. 2020;84(8):1348-1407. DOI: 10.1253/circj.CJ-19-1094. PMID: 32641591.",
+      "Denby KJ, Clark DE, Markham LW. \"Management of Kawasaki disease in adults.\" Heart. 2017;103(22):1760-1769. DOI: 10.1136/heartjnl-2017-311774. PMID: 28751537.",
+      "Daniels LB, Gordon JB, Burns JC. \"Kawasaki disease: late cardiovascular sequelae.\" Curr Opin Cardiol. 2012;27(6):572-577. DOI: 10.1097/HCO.0b013e3283588f06. PMID: 23075819.",
+      "Levy DM, Silverman ED, Massicotte MP, McCrindle BW, Yeung RS. \"Longterm outcomes in patients with giant aneurysms secondary to Kawasaki disease.\" J Rheumatol. 2005;32(5):928-934. PMID: 15868632.",
+      "Lin MT, Sun LC, Wu ET, Wang JK, Lue HC, Wu MH. \"Acute and late coronary outcomes in 1073 patients with Kawasaki disease with and without intravenous γ-immunoglobulin therapy.\" Arch Dis Child. 2015;100(6):542-547. DOI: 10.1136/archdischild-2014-306427. PMID: 25564534.",
+      "Dietz SM, Tacke CE, Kuipers IM, Wiegman A, de Winter RJ, Burns JC, Gordon JB, Groenink M, Kuijpers TW. \"Cardiovascular imaging in children and adults following Kawasaki disease.\" Insights Imaging. 2015;6(6):697-705. DOI: 10.1007/s13244-015-0422-0. PMID: 26210915.",
+      "Tacke CE, Kuipers IM, Groenink M, Spijkerboer AM, Kuijpers TW. \"Cardiac magnetic resonance imaging for noninvasive assessment of cardiovascular disease during the follow-up of patients with Kawasaki disease.\" Circ Cardiovasc Imaging. 2011;4(6):712-720. DOI: 10.1161/CIRCIMAGING.111.965996. PMID: 21921132.",
+      "Vijayvergiya R, Bhattad S, Varma S, Singhal M, Gordon J, Singh S. \"Presentation of missed childhood Kawasaki disease in adults: Experience from a tertiary care center in north India.\" Int J Rheum Dis. 2017;20(8):1023-1027. DOI: 10.1111/1756-185X.13073. PMID: 28378434.",
+      "Bhagwat A, Mukhedkar S, Ekbote S, Gordon JB. \"Missed Kawasaki disease in childhood presenting as myocardial infarction in adults.\" Indian Heart J. 2015;67(4):385-388. DOI: 10.1016/j.ihj.2015.04.014. PMID: 26304576. PMCID: PMC4561782."
+    ],
+    "itens": [
+      {
+        "id": "risco-tamanho-z-score",
+        "categoria": "Classificação de risco",
+        "obrigatorio": true,
+        "texto": "Estratificar todo aneurisma coronariano documentado após doença de Kawasaki pela classificação de risco da diretriz da American Heart Association (McCrindle et al., 2017), baseada no diâmetro absoluto e no escore Z ajustado para superfície corporal: sem envolvimento coronariano (Z<2), apenas dilatação (Z entre 2 e <2,5), aneurisma pequeno (Z entre 2,5 e <5), aneurisma médio (Z entre 5 e <10 e diâmetro absoluto <8 mm) e aneurisma grande/gigante (Z≥10 ou diâmetro absoluto ≥8 mm). Essa categoria de risco — que substitui e refina a antiga classificação por 'níveis de risco I a V' — determina diretamente a intensidade do seguimento cardiológico, a necessidade e intensidade de terapia antitrombótica e a periodicidade dos exames de imagem, e deve ser reavaliada a cada exame, pois o aneurisma pode regredir, permanecer estável ou evoluir com estenose. NOTA DE RIGOR: os pontos de corte de escore Z citados reproduzem a tabela de classificação amplamente replicada da diretriz AHA 2017 (Table 4); como a consulta via NCBI e-utils retorna apenas metadados/resumo (não o texto integral do artigo), recomenda-se conferir a tabela original antes de aplicar os cortes em decisão clínica individual.",
+        "origem_secao": "McCrindle et al. 2017 (AHA Scientific Statement, PMID 28356445) — classificação de risco por escore Z coronariano"
+      },
+      {
+        "id": "antitrombotico-estratificado",
+        "categoria": "Antitrombótico",
+        "obrigatorio": true,
+        "texto": "A estratégia antitrombótica deve ser estratificada pelo tamanho/risco do aneurisma: aneurisma pequeno — antiagregação isolada com ácido acetilsalicílico (AAS) em dose baixa; aneurisma médio — AAS em dose baixa, com associação de anticoagulante avaliada individualmente conforme evolução morfológica; aneurisma grande/gigante — combinação de antiagregante (AAS) com anticoagulação sistêmica (varfarina ou heparina de baixo peso molecular) pelo risco elevado de trombose intra-aneurismática, reconhecida como a principal causa de infarto do miocárdio e morte súbita nesse subgrupo. As diretrizes AHA 2017 (McCrindle et al.) e JCS/JSCS 2020 (Fukazawa et al.) convergem nessa lógica de escalonamento por tamanho, embora difiram em detalhes de esquema posológico; dados sobre anticoagulantes orais diretos (DOACs) em aneurisma gigante de Kawasaki ainda são limitados e não constituem recomendação de primeira linha em nenhuma das duas diretrizes. O estudo observacional de Levy et al. (2005) documenta trombose intra-aneurismática e eventos coronarianos mesmo sob antitrombótico em aneurismas gigantes, reforçando que a profilaxia farmacológica não substitui a vigilância clínica e de imagem contínua.",
+        "origem_secao": "McCrindle et al. 2017 (PMID 28356445); Fukazawa et al. 2020 — JCS/JSCS (PMID 32641591); Levy et al. 2005 (PMID 15868632, estudo observacional)"
+      },
+      {
+        "id": "vigilancia-imagem-longo-prazo",
+        "categoria": "Vigilância por imagem",
+        "obrigatorio": true,
+        "texto": "Pacientes com aneurisma pequeno podem ser seguidos predominantemente com ecocardiograma transtorácico seriado; aneurisma médio requer ecocardiograma mais frequente e reavaliação seriada da morfologia coronariana; aneurisma grande/gigante requer seguimento intensivo com ecocardiograma repetido associado, à medida que a janela acústica se torna limitante na adolescência e na vida adulta, à angiotomografia coronariana ou angiorressonância coronariana como modalidades não invasivas de escolha para caracterização anatômica (trajeto, calcificação, estenose), reservando a angiografia por cateterismo para caracterização inicial de lesões complexas, planejamento pré-intervenção ou quando a imagem não invasiva é inconclusiva. Dietz et al. (2015) e Tacke et al. (2011) descrevem especificamente o papel crescente de ressonância magnética cardíaca e angio-TC no seguimento de crianças e adultos após Kawasaki, superando as limitações acústicas do ecocardiograma transtorácico com o crescimento somático. NOTA DE RIGOR: a periodicidade exata recomendada por categoria de risco e faixa etária (intervalos específicos em meses/anos) não pôde ser confirmada literalmente a partir do texto integral das diretrizes via e-utils (que retorna apenas metadados); a tabela de seguimento da diretriz AHA 2017 e/ou JCS/JSCS 2020 deve ser consultada diretamente para os intervalos formalmente recomendados antes de uso em protocolo clínico.",
+        "origem_secao": "Dietz et al. 2015 (PMID 26210915, revisão); Tacke et al. 2011 (PMID 21921132); McCrindle et al. 2017 (PMID 28356445); Fukazawa et al. 2020 (PMID 32641591)"
+      },
+      {
+        "id": "avaliacao-isquemia-seguimento",
+        "categoria": "Avaliação de isquemia",
+        "obrigatorio": true,
+        "texto": "Pacientes com aneurisma médio ou grande/gigante, ou com estenose/oclusão coronariana documentada, devem ser submetidos a avaliação periódica de isquemia miocárdica — teste ergométrico, cintilografia de perfusão miocárdica ou ressonância cardíaca de estresse, conforme idade e capacidade de realizar exercício —, já que a caracterização anatômica isolada (angiografia, angio-TC) não determina a significância funcional de uma estenose. Tanto a diretriz AHA 2017 quanto a JCS/JSCS 2020 recomendam avaliação de isquemia nesse subgrupo de maior risco, especialmente antes de liberação para atividade física vigorosa/esportiva e no acompanhamento de lesões obstrutivas ou de segmentos com risco de trombose associada a aneurisma calcificado ou em regressão. Daniels, Gordon e Burns (2012) situam essa avaliação funcional como componente central do seguimento de sequelas cardiovasculares tardias da doença. NOTA DE RIGOR: a periodicidade específica recomendada por categoria de risco (ex.: intervalo entre testes de estresse) não foi confirmada literalmente nesta pesquisa e deve ser conferida na diretriz original antes de aplicação em protocolo clínico.",
+        "origem_secao": "McCrindle et al. 2017 (PMID 28356445); Fukazawa et al. 2020 (PMID 32641591); Daniels, Gordon, Burns 2012 (PMID 23075819, revisão)"
+      },
+      {
+        "id": "transicao-vigilancia-adulto",
+        "categoria": "Transição para o adulto",
+        "obrigatorio": true,
+        "texto": "A transição do cuidado pediátrico para o cardiologista de adulto (idealmente especializado em cardiopatia congênita/adquirida do adulto) deve ser planejada e documentada, com transferência estruturada do histórico completo de escores Z seriados, imagens de referência e conduta antitrombótica vigente. Adultos jovens com aneurisma coronariano prévio por Kawasaki mantêm risco de infarto do miocárdio e morte súbita ao longo da vida; casos de Kawasaki não diagnosticado ou não reconhecido na infância que se apresentaram décadas depois como infarto agudo do miocárdio em adultos jovens foram descritos em relatos e séries de casos (Bhagwat et al. 2015; Vijayvergiya et al. 2017), o que reforça a importância de manter suspeita diagnóstica retrospectiva diante de IAM em paciente jovem sem fatores de risco ateroscleróticos clássicos. Mesmo pacientes cujo aneurisma apresentou regressão ecocardiográfica para diâmetro luminal aparentemente normal não devem receber alta do seguimento cardiovascular, pois a evidência disponível aponta remodelamento vascular residual (disfunção endotelial, alterações mio-intimais na parede do vaso previamente aneurismático); a vigilância cardiovascular deve ser mantida ao longo da vida com reavaliação periódica de risco, conforme discutido por Daniels, Gordon e Burns (2012) e, de forma mais dirigida ao paciente adulto, por Denby, Clark e Markham (2017), que revisam o manejo de Kawasaki no adulto e apontam a lacuna de evidência sobre desfechos em coortes que hoje atingem a quinta e sexta décadas de vida — coortes que correspondem justamente aos picos de incidência da doença observados desde as décadas de 1970-80.",
+        "origem_secao": "Denby, Clark, Markham 2017 (PMID 28751537, revisão); Daniels, Gordon, Burns 2012 (PMID 23075819, revisão); Bhagwat et al. 2015 (PMID 26304576, relato de caso); Vijayvergiya et al. 2017 (PMID 28378434, série de casos)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
