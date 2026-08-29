@@ -15,10 +15,10 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository &&
       github.event.pull_request.title == 'ops: emergency deploy current main'
     runs-on: ubuntu-latest
-    timeout-minutes: 70
+    timeout-minutes: 50
     environment: production
     env:
-      TARGET_SHA: 60148b5ecad08dae60aac91eb1920074ce90b3fb
+      TARGET_SHA: 2edf6f7dfb8dba5ebab7dada995a971d826d9dc2
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -59,31 +59,7 @@ jobs:
             -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
             "$SSH_USER@$SSH_HOST" "deploy $TARGET_SHA"
 
-      - name: Build and publish signed Android APK
-        run: |
-          set -euo pipefail
-          SSH_PORT="${SSH_PORT:-22}"
-          ssh_dir="$RUNNER_TEMP/corvia-ssh"
-          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
-            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
-            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
-            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
-            "$SSH_USER@$SSH_HOST" "apk $TARGET_SHA"
-
-      - name: Run CorVIA Intelligence global radar now
-        if: always()
-        run: |
-          set -euo pipefail
-          SSH_PORT="${SSH_PORT:-22}"
-          ssh_dir="$RUNNER_TEMP/corvia-ssh"
-          ssh -p "$SSH_PORT" -i "$ssh_dir/deploy_key" \
-            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
-            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
-            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
-            "$SSH_USER@$SSH_HOST" "intelligence $TARGET_SHA"
-
-      - name: Verify public production exact SHA and Android download
-        if: always()
+      - name: Verify public production exact SHA
         env:
           PUBLIC_URL: https://corvia.med.br
         run: |
@@ -103,6 +79,4 @@ jobs:
           PY
           curl --fail --silent --show-error "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error "$PUBLIC_URL/api/ready" > /dev/null
-          curl --fail --silent --show-error --head "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk" > /dev/null
-          curl --fail --silent --show-error "$PUBLIC_URL/downloads/corvia-os-android-1.0.1.apk.sha256" > /dev/null
-          echo "Production exact SHA, health, readiness and Android download confirmed."
+          echo "Production exact SHA, health and readiness confirmed."
