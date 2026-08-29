@@ -822,14 +822,35 @@ de conteúdo; branch segue sem rebase.
   específica localizada — declarado. **Fecha o cluster ACHD/achd2018
   desta janela.**
 
-## Lote 35 (planejado)
+## Lote 35 — concluído (SHA 27304ce6) — total 62 commits
 
-Cluster ACHD encerrado. Próximo alvo a auditar: retomar territórios
-ainda pouco explorados nesta janela — candidatos: Cardiomiopatias
-hereditárias (aprofundamento de subtemas específicos ainda não
-cobertos), Dispositivos cardíacos (respeitando colisão com PR #599,
-ainda aberto), ou nova varredura de conectividade Tudo com Tudo em
-verbetes recentes. A confirmar via grep + `gh pr list` antes de
-despachar.
+- checklist `manejo-terapeutico-escalonado-da-taquicardia-ventricular-polimorfica-catecolaminergica-cpvt`
+  — 5 itens: betabloqueador não seletivo (nadolol preferencial);
+  flecainida adjuvante via RyR2 (76% resposta em refratários);
+  LCSD/simpatectomia para refratários; CDI com nuance específica de
+  tempestade elétrica autoperpetuada pelo próprio choque; restrição de
+  esporte competitivo mesmo em assintomático controlado. Gap confirmado
+  por grep: hub geral de canalopatias cobria diagnóstico mas nada além
+  de "betabloqueador primeira linha". 11 fontes via NCBI e-utils, toda
+  evidência observacional/coorte (doença rara, sem RCT) — declarado.
+  Nenhuma diretriz SBC específica localizada.
+
+Auditoria pré-lote-36 nesta janela (grep + gh pr list) confirmou bem
+cobertos e SEM gap acionável: gestação/cardiopatia (11 checklists),
+esporte/pré-participação (17 checklists + 8 exames), perioperatório
+(10 checklists), bloqueio AV/distúrbio de condução (fragmento completo,
+inclui HV/bifascicular), MAD/prolapso mitral arritmogênico, cardiogenética
+(13 painéis genéticos + 4 checklists). Evitados por colisão com PR aberto:
+dispositivos cardíacos (PR #599), cardiomiopatia arritmogênica (PR #723).
+
+## Lote 36 (planejado)
+
+A auditar: Medicina nuclear cardiovascular (cintilografia de perfusão,
+PET) fora do contexto de amiloidose já coberto — protocolos de estresse
+farmacológico, atenuação de artefato; TC cardíaca — escore de cálcio em
+populações especiais, angio-TC coronária em dor torácica de baixo risco;
+Populações especiais (idoso frágil, doença renal crônica) ainda sem
+cluster dedicado nesta janela. Confirmar via grep + `gh pr list` antes
+de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
