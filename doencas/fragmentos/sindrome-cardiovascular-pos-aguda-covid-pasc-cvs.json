@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "sindrome-cardiovascular-pos-aguda-covid-pasc-cvs",
+    "name": "Síndrome cardiovascular pós-aguda da COVID-19 (PASC-CVS)",
+    "aliases": [
+      "PASC-CVS",
+      "Long COVID cardiovascular syndrome",
+      "Síndrome cardiovascular pós-COVID",
+      "Sequelas cardiovasculares pós-agudas da COVID-19",
+      "COVID longa com sintomas cardiovasculares"
+    ],
+    "area": "geral",
+    "category": "sequelas_pos_infecciosas",
+    "subtype": "pasc_cvs_sem_doenca_cardiovascular_objetiva_inicial",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "fonte_producao": "chatgpt",
+    "review_status": "pendente_revisao",
+    "summary": "PASC-CVS é o termo usado pelo ACC para um fenótipo cardiovascular pós-agudo após infecção por SARS-CoV-2 no qual sintomas como taquicardia, palpitações, intolerância ao esforço, dor torácica ou dispneia persistem sem que a avaliação cardiovascular inicial identifique doença cardiovascular objetiva capaz de explicá-los. Deve ser distinguida de PASC-CVD, na qual há uma entidade cardiovascular definida — por exemplo, miocardite, pericardite, isquemia, tromboembolismo, arritmia ou descompensação de cardiopatia preexistente. PASC-CVS é uma síndrome clínica, não um diagnóstico etiológico único. O manejo depende do fenótipo: excluir doença tratável específica, reconhecer disautonomia/POTS quando critérios próprios forem preenchidos, corrigir descondicionamento e hipovolemia quando presentes e individualizar reabilitação e farmacoterapia.",
+    "epidemiology": "Sintomas cardiovasculares fazem parte do espectro de condições pós-COVID, mas a prevalência de PASC-CVS depende da definição, da população estudada, da gravidade da infecção inicial e do tempo de seguimento. Coortes observacionais têm importante heterogeneidade e risco de viés de seleção. A literatura não sustenta interpretar todo sintoma cardiovascular persistente após COVID como lesão cardíaca estrutural. A AHA reconhece disfunção autonômica, POTS e taquicardia sinusal inapropriada como fenótipos descritos no período de recuperação, mantendo a necessidade de diagnóstico diferencial convencional.",
+    "presentation": [
+      "Palpitações e percepção de taquicardia persistente ou episódica",
+      "Intolerância ao exercício e queda funcional após a infecção",
+      "Tontura, pré-síncope ou sintomas predominantemente ortostáticos",
+      "Dor torácica ou desconforto precordial sem causa definida na avaliação inicial",
+      "Dispneia ou sensação de falta de ar persistente",
+      "Fadiga associada a sintomas cardiovasculares, frequentemente em quadro multissistêmico",
+      "Exacerbação pós-esforço em parte dos pacientes, exigindo individualização do retorno à atividade"
+    ],
+    "diagnostic_approach": {
+      "conceito": "Confirmar relação temporal com infecção por SARS-CoV-2, caracterizar a síndrome clínica e procurar doença cardiovascular objetiva ou outra causa sistêmica antes de usar o rótulo PASC-CVS.",
+      "separar_pasc_cvd": "Miocardite, pericardite, síndrome coronariana, tromboembolismo pulmonar, arritmia sustentada, nova disfunção ventricular ou outra doença cardiovascular definida devem ser classificadas e manejadas como entidades próprias, não como PASC-CVS inespecífica.",
+      "avaliacao_inicial": "História e exame físico direcionados; ECG; troponina, ecocardiograma, monitorização ambulatorial, exames laboratoriais ou avaliação pulmonar/tromboembólica conforme sinais, sintomas e probabilidade pré-teste. Não há indicação para painel avançado universal em todos os pacientes.",
+      "fenotipo_ortostatico": "Quando palpitações, tontura ou taquicardia forem dependentes da postura, medir frequência cardíaca e pressão arterial em decúbito e durante ortostase seriada. POTS exige critérios próprios e exclusão de causas secundárias; antecedente de COVID por si só não confirma o diagnóstico.",
+      "fenotipo_esforco": "Distinguir descondicionamento, limitação cardiopulmonar, doença vascular pulmonar, isquemia, disfunção ventricular e exacerbação pós-esforço. Teste cardiopulmonar pode ser útil em casos selecionados quando a pergunta clínica justificar."
+    },
+    "differentials": [
+      "Miocardite ou pericardite pós-COVID",
+      "Embolia pulmonar ou tromboembolismo venoso",
+      "Doença coronariana ou isquemia miocárdica",
+      "Insuficiência cardíaca ou nova disfunção ventricular",
+      "Fibrilação atrial, taquicardia supraventricular ou outra arritmia verdadeira",
+      "POTS ou outra disautonomia com critérios próprios",
+      "Taquicardia sinusal inapropriada",
+      "Anemia, disfunção tireoidiana, hipovolemia e outras causas sistêmicas de taquicardia",
+      "Doença pulmonar residual após COVID-19",
+      "Descondicionamento físico",
+      "Ansiedade ou transtorno de pânico como diagnóstico concorrente, nunca presumido antes de avaliação clínica adequada"
+    ],
+    "tests": [
+      "ECG de 12 derivações — documenta ritmo e procura alterações que orientem investigação específica",
+      "Troponina de alta sensibilidade — indicada quando há suspeita clínica de lesão miocárdica, não como rastreio indiscriminado repetitivo",
+      "Ecocardiograma — apropriado quando sintomas, exame, biomarcadores ou ECG sugerem cardiopatia estrutural",
+      "Holter/monitorização ambulatorial — útil para correlação sintoma-ritmo em palpitações ou taquicardia episódica",
+      "Teste de ortostase ativa ou tilt test — conforme fenótipo de intolerância ortostática/disautonomia",
+      "Hemograma, eletrólitos e função tireoidiana — direcionados à exclusão de causas secundárias conforme contexto",
+      "Ressonância cardíaca — reservada para suspeita específica de envolvimento miocárdico ou pergunta diagnóstica apropriada; não é exame universal de PASC-CVS",
+      "Investigação de embolia pulmonar/doença pulmonar — conforme probabilidade clínica, hipoxemia, dispneia e sinais associados",
+      "Teste cardiopulmonar de exercício — útil em casos selecionados para fenotipar limitação quando a avaliação inicial não esclarece o mecanismo"
+    ],
+    "red_flags": [
+      "Síncope durante esforço",
+      "Dor torácica persistente ou progressiva com características isquêmicas",
+      "Hipoxemia, hemoptise ou sinais de tromboembolismo pulmonar",
+      "Elevação de troponina ou nova disfunção ventricular",
+      "Arritmia sustentada ou taquicardia de início e término abruptos documentada",
+      "Sinais de insuficiência cardíaca",
+      "Instabilidade hemodinâmica",
+      "Déficit neurológico focal ou outra manifestação sistêmica que não seja explicada por PASC-CVS"
+    ],
+    "treatment_summary": "O tratamento é fenótipo-específico. Corrigir causas reversíveis e manejar qualquer PASC-CVD conforme a doença definida. Em pacientes com PASC-CVS sem doença cardiovascular estrutural identificada, educação, hidratação e expansão de sódio quando seguras, compressão e recondicionamento físico progressivo podem ser úteis especialmente no fenótipo ortostático/descondicionado. Exercício recumbente ou semi-recumbente de baixa intensidade pode ser ponto de partida para pacientes muito sintomáticos, com progressão individualizada; porém, exacerbação pós-esforço importante exige adaptação da carga e evita progressão rígida. Não existe fármaco especificamente aprovado para PASC-CVS. Betabloqueadores, ivabradina, midodrina, fludrocortisona e outros agentes só devem ser usados quando um fenótipo clínico apropriado justificar, extrapolando evidência de POTS/IST/disautonomia e considerando pressão arterial, comorbidades e eventos adversos.",
+    "ambulatory_flow": [
+      "Confirmar padrão temporal pós-COVID e caracterizar sintomas dominantes",
+      "Procurar red flags e sinais de PASC-CVD antes de rotular PASC-CVS",
+      "Realizar ECG e exames complementares dirigidos à apresentação, evitando painel avançado universal",
+      "Se houver sintomas ortostáticos, medir frequência cardíaca e pressão arterial de forma estruturada e aplicar critérios formais de POTS/hipotensão ortostática",
+      "Se houver palpitações paroxísticas, documentar ritmo com monitorização apropriada",
+      "Se avaliação inicial não revelar doença específica, tratar fenótipo funcional/autonômico e reavaliar capacidade funcional e sintomas",
+      "Reabrir investigação se surgirem novos sinais objetivos, piora progressiva ou mudança importante no padrão clínico"
+    ],
+    "emergency_flow": [
+      "Instabilidade, hipoxemia, síncope de esforço, dor torácica persistente, arritmia sustentada ou sinais de insuficiência cardíaca não devem ser atribuídos a COVID longa sem investigação de emergência apropriada",
+      "Suspeita de embolia pulmonar, síndrome coronariana, miocardite clinicamente significativa ou arritmia ameaçadora deve seguir protocolos específicos independentes do antecedente de SARS-CoV-2"
+    ],
+    "monitoring": [
+      "Capacidade funcional, retorno ao trabalho/estudo e tolerância ao esforço",
+      "Frequência cardíaca e pressão arterial em repouso e ortostase quando o fenótipo for autonômico",
+      "Correlação entre sintomas e ritmo quando monitorização ambulatorial estiver indicada",
+      "Aparecimento de novos sinais objetivos de doença cardiovascular",
+      "Resposta e tolerabilidade ao programa de recondicionamento individualizado",
+      "Eventos adversos de qualquer farmacoterapia fenótipo-específica"
+    ],
+    "special_populations": [
+      "Pacientes com cardiopatia prévia: diferenciar PASC-CVS de descompensação da doença cardiovascular de base.",
+      "Pacientes com hipertensão, insuficiência cardíaca ou doença renal: expansão de sódio/volume pode ser inadequada e precisa de individualização.",
+      "Atletas: retorno ao exercício deve considerar sintomas cardiopulmonares, avaliação clínica e suspeita de miocardite; ausência de sintomas de alarme reduz a necessidade de testagem cardíaca indiscriminada.",
+      "Pacientes com exacerbação pós-esforço importante: evitar protocolos rígidos de incremento de exercício sem adaptação ao padrão de sintomas."
+    ],
+    "tags": [
+      "PASC-CVS",
+      "COVID longa",
+      "long COVID",
+      "SARS-CoV-2",
+      "disautonomia",
+      "POTS",
+      "taquicardia",
+      "palpitações",
+      "intolerância ao exercício",
+      "dor torácica",
+      "dispneia"
+    ],
+    "source_refs": [
+      "Gluckman TJ, Bhave NM, Allen LA, et al. 2022 ACC Expert Consensus Decision Pathway on Cardiovascular Sequelae of COVID-19 in Adults: Myocarditis and Other Myocardial Involvement, Post-Acute Sequelae of SARS-CoV-2 Infection, and Return to Play. J Am Coll Cardiol. 2022;79(17):1717-1756. DOI: 10.1016/j.jacc.2022.02.003. PMID: 35307156.",
+      "Gopinathannair R, Olshansky B, Chung MK, et al. Cardiac Arrhythmias and Autonomic Dysfunction Associated With COVID-19: A Scientific Statement From the American Heart Association. Circulation. 2024;150(21):e449-e465. DOI: 10.1161/CIR.0000000000001290. PMID: 39397661.",
+      "Task Force for the management of COVID-19 of the European Society of Cardiology. ESC guidance for the diagnosis and management of cardiovascular disease during the COVID-19 pandemic: part 2-care pathways, treatment, and follow-up. Cardiovasc Res. 2022;118(7):1618-1666. DOI: 10.1093/cvr/cvab343. PMID: 34864876."
+    ],
+    "related_document_slugs": [
+      "pasc-cardiovascular-acc-2022-avaliacao-e-manejo",
+      "aha-2024-arritmias-e-disfuncao-autonomica-covid",
+      "pots-posicionamento-canadense-2020-diagnostico-e-manejo"
+    ],
+    "review_note": "Manter como pendente_revisao. Não transformar PASC-CVS em diagnóstico de exclusão definitivo sem investigação proporcional ao fenótipo. A busca dirigida desta rodada não identificou diretriz SBC especificamente dedicada a PASC-CVS; documentos brasileiros sobre COVID-19 cardiovascular não foram usados para criar recomendações específicas sem lastro direto."
+  }
+]
