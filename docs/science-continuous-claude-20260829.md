@@ -700,3 +700,34 @@ MERGE cirúrgico (nova subseção + item de monitoring adicionado), não
 substituição do dict diagnostic_approach existente.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 29 — concluído (1 commit, SHA cac190fe) — total 55 commits
+
+- Correção `sarcoidose-cardiaca`: merge cirúrgico (não substituição) —
+  protocolo de preparo do PET-FDG (dieta hiperlipídica/hipoglicídica +
+  jejum, Christopoulos 2021 PMID 31111450) preencheu lacuna que o próprio
+  verbete declarava explicitamente não ter conseguido detalhar; strain
+  como rastreio adicionado ao monitoring (corte ~-17,3%, 80% sens.).
+  Achado importante: item já estava "revisado" por correção anterior
+  (zzz-auditoria-703) — nova correção zzzzzzz- reverteu para
+  pendente_revisao, ordenação de arquivo verificada antes do commit.
+
+## Checkpoint consolidado desta continuação ("prossiga", lotes 22-29, 13 commits)
+
+8 lotes adicionais desde o checkpoint anterior: 2 exames novos (aortite
+Takayasu/ACG, imagem diagnóstica em EI, vigilância Fabry), 1 verbete
+complementar pediátrico já contabilizado no checkpoint anterior, 5
+checklists novos (profilaxia EI, TE/TCPE em CMH, algoritmo diagnóstico da
+amiloidose, imagem na cardiomiopatia chagásica) e 2 correções cirúrgicas
+(ITB pós-esforço SBC 2024, sarcoidose PET-FDG+strain). Padrão de rigor
+mantido em toda a extensão: PMIDs sempre verificados via NCBI e-utils,
+lacunas declaradas explicitamente em vez de inventadas (múltiplas por
+lote), merges cirúrgicos preservando estrutura existente em vez de
+substituição destrutiva, correção de review_status quando conteúdo novo
+é adicionado a item já aprovado.
+
+Total geral da branch: 55 commits, 17+ verbetes/exames/checklists novos
+substanciais desde o início desta fase (lote 7), cobrindo consistentemente
+o território designado do Claude sem nenhuma colisão registrada.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
