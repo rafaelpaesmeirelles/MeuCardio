@@ -1,9 +1,10 @@
 """Validação central de uploads antes dos routers FastAPI.
 
-A aplicação recebe quatro tipos de upload com perfis diferentes: foto, logo,
-exame de telediagnóstico e anexo de e-mail. Esta camada limita o body antes que
-um endpoint faça ``await arquivo.read()``, valida o conteúdo real e reproduz o
-mesmo body para o parser multipart da rota.
+A aplicação recebe uploads com perfis de risco distintos: imagem de perfil,
+exames clínicos, documentos científicos privados, anexos de e-mail e materiais
+de fluxos especializados. Esta camada limita o body antes que um endpoint faça
+``await arquivo.read()``, valida o conteúdo real e reproduz o mesmo body para o
+parser multipart da rota.
 
 Não é antivírus. A defesa é reduzir a superfície permitida: imagens realmente
 decodificáveis, PDF sem recursos ativos conhecidos e documentos Office Open
@@ -69,6 +70,16 @@ _CARDIOVASCULAR_EXAM_POLICY = UploadPolicy(
     max_total_file_bytes=40 * 1024 * 1024,
     min_files=0,
 )
+_PATIENT_MULTIMODAL_EXAM_POLICY = UploadPolicy(
+    "exame-prontuario-multimodal",
+    20 * 1024 * 1024,
+    "clinical_exam",
+)
+_SCIENTIFIC_DOCUMENT_POLICY = UploadPolicy(
+    "documento-cientifico-privado",
+    25 * 1024 * 1024,
+    "email",
+)
 _EMAIL_POLICY = UploadPolicy("anexo-email", 15 * 1024 * 1024, "email")
 
 
@@ -88,8 +99,12 @@ def policy_for(method: str, path: str) -> UploadPolicy | None:
         return _EXAM_POLICY
     if re.fullmatch(r"/api/pacientes/\d+/ecgs", path) or path == "/api/ecg-ia/analisar":
         return _EXAM_POLICY
+    if re.fullmatch(r"/api/pacientes/\d+/exames-multimodais", path):
+        return _PATIENT_MULTIMODAL_EXAM_POLICY
     if path == "/api/exames-ia/analisar":
         return _CARDIOVASCULAR_EXAM_POLICY
+    if path == "/api/documentos-cientificos-ia":
+        return _SCIENTIFIC_DOCUMENT_POLICY
     if path == "/api/email/mensagens/anexos":
         return _EMAIL_POLICY
     return None
