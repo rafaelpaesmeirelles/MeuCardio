@@ -1,0 +1,520 @@
+[
+  {
+    "slug": "avaliacao-pre-participacao-esportiva",
+    "name": "Avaliação pré-participação esportiva e elegibilidade cardiovascular",
+    "aliases": [
+      "Triagem cardiovascular pré-participação esportiva",
+      "Elegibilidade cardiovascular para esporte",
+      "Screening cardiovascular do atleta",
+      "Avaliação cardiológica pré-participação",
+      "Triagem pré-participação com ECG do atleta"
+    ],
+    "area": "geral",
+    "category": "avaliacao_esportiva",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A avaliação pré-participação esportiva é o processo estruturado de identificar, em atleta ou praticante de exercício físico regular, uma doença cardiovascular ainda não reconhecida e potencialmente associada a parada cardíaca súbita durante o esporte, ou de reavaliar a elegibilidade de quem já tem diagnóstico cardiovascular conhecido. A declaração científica AHA/ACC de 2025 abandonou a lógica binária \"liberar ou desqualificar\" e a dicotomia simples \"ECG para todos\" versus \"ECG para ninguém\": história cardiovascular e familiar dirigidas mais exame físico continuam obrigatórios em qualquer cenário; o ECG de 12 derivações é considerado razoável de incluir, mas apenas quando o programa dispõe de profissional treinado em critérios de interpretação específicos do atleta e de via organizada para investigar achados anormais; ecocardiograma, teste de esforço e monitorização de ritmo não são recomendados como rastreamento universal de primeira linha em atleta assintomático, funcionando como exames de segunda linha dirigidos pelo achado clínico ou eletrocardiográfico. Um ponto central e frequentemente mal compreendido é que o treinamento físico intenso produz adaptações elétricas e estruturais fisiológicas (\"coração de atleta\") que se sobrepõem, em parte dos casos, aos achados de cardiomiopatias e canalopatias; por isso a interpretação do ECG do atleta exige critérios próprios — como os critérios internacionais (\"critérios de Seattle\" atualizados) — que diferenciam adaptação fisiológica de achado que exige investigação, e não uma leitura binária de que todo achado incomum é doença nem de que todo achado incomum em atleta é normal. Quando uma condição cardiovascular é identificada, a decisão de elegibilidade deixa de ser uma contraindicação automática e passa a ser estratificação de risco específica da doença, decisão compartilhada e plano de emergência — nunca uma restrição uniforme.",
+    "epidemiology": "A motivação central da triagem pré-participação é a morte súbita cardíaca (MSC) relacionada ao esporte: evento raro, porém devastador, que atinge sobretudo crianças e adultos jovens sem sintomas prévios. O estudo de referência de Harmon et al. (Circulation, 2015; PMID 25977310), que revisou uma década (2003-2013) de óbitos na National Collegiate Athletic Association (NCAA) dos Estados Unidos, encontrou incidência global de MSC de 1 em 53.703 atleta-ano entre atletas universitários, com variação relevante por subgrupo: 1 em 37.790 atleta-ano em homens contra 1 em 121.593 atleta-ano em mulheres; 1 em 21.491 atleta-ano em atletas negros contra 1 em 68.354 atleta-ano em atletas brancos; e risco substancialmente maior em jogadores de basquete universitário do sexo masculino da Divisão I (cerca de 1 em 5.200 atleta-ano). Nessa coorte, quase um quarto dos casos permaneceu como \"morte súbita inexplicada com autópsia negativa\" e cardiomiopatia hipertrófica definitiva respondeu por apenas 8% dos óbitos — números que contrariam a percepção leiga de que a cardiomiopatia hipertrófica é a causa isolada predominante e reforçam por que nenhuma estratégia de triagem, isoladamente, elimina o risco. É exatamente essa irredutibilidade do risco residual que torna o plano de emergência com desfibrilador externo automático (DEA) componente indissociável da avaliação pré-participação, e não um item opcional reservado a quem tem diagnóstico conhecido. A declaração AHA/ACC 2025 (Kim JH et al., PMID 39976316 / PMID 39973614) sintetiza a evidência acumulada nas últimas décadas sobre esse equilíbrio entre detecção de doença, falsos positivos e prevenção secundária, e é adotada aqui como referência primária por ser a atualização mais recente e abrangente disponível; a Diretriz Brasileira de Cardiologia do Esporte e do Exercício da Sociedade Brasileira de Cardiologia em conjunto com a Sociedade Brasileira de Medicina do Esporte e do Exercício (Ghorayeb N et al., Arq Bras Cardiol. 2019, PMID 30916199) é o posicionamento de sociedade nacional equivalente, citada aqui como referência complementar — ver review_note sobre o motivo de a fonte de 2025 permanecer como eixo organizador desta ficha.",
+    "presentation": [
+      "Atleta ou praticante de exercício assintomático em avaliação de rotina antes de iniciar ou renovar participação em esporte competitivo ou federado",
+      "Achado eletrocardiográfico incidental em ECG de rotina, pré-operatório ou de outra finalidade, sem qualquer sintoma prévio",
+      "Dor ou desconforto torácico durante ou imediatamente após o esforço físico",
+      "Síncope ou pré-síncope durante o exercício, ou nos minutos imediatamente seguintes ao término do esforço",
+      "Palpitações sustentadas desencadeadas ou agravadas por esforço físico",
+      "Dispneia desproporcional à intensidade do exercício ou ao nível de condicionamento esperado",
+      "História familiar de morte súbita precoce, cardiomiopatia, canalopatia ou síndrome de Marfan motivando avaliação dirigida antes da liberação esportiva",
+      "Colapso presenciado durante atividade esportiva, com necessidade de reconhecimento imediato de possível parada cardíaca e reanimação",
+      "Reavaliação de elegibilidade após diagnóstico cardiovascular já estabelecido (cardiomiopatia, canalopatia, aortopatia, arritmia, valvopatia, cardiopatia congênita) antes de autorizar retorno ao esporte",
+      "Avaliação periódica programada de atleta master, atleta feminina, adolescente ou para-atleta, populações com padrões de remodelamento e risco distintos do atleta adulto do sexo masculino sem deficiência"
+    ],
+    "diagnostic_approach": {
+      "historia_clinica_e_familiar_dirigida": "A história cardiovascular dirigida busca ativamente sintomas relacionados a esforço — dor ou desconforto torácico, síncope ou pré-síncope, palpitações sustentadas e dispneia desproporcional ao condicionamento — além de eventos prévios como intolerância inexplicada ao exercício. A história familiar deve investigar morte súbita precoce (idade abaixo de 50 anos), cardiomiopatias, canalopatias hereditárias (síndrome do QT longo, síndrome de Brugada, taquicardia ventricular polimórfica catecolaminérgica), síndrome de Marfan ou outra aortopatia hereditária, e implante de desfibrilador em parente próximo. A declaração AHA/ACC 2025 mantém história e exame físico dirigidos como componentes obrigatórios em qualquer modelo de triagem, independentemente de o programa incluir ou não ECG, porque identificam atletas sintomáticos e antecedentes familiares sugestivos de doença hereditária — ainda que, isoladamente, tenham sensibilidade limitada para doença estrutural ou elétrica silenciosa.",
+      "exame_fisico": "O exame físico cardiovascular deve incluir ausculta cardíaca em repouso e, quando pertinente, com manobras dinâmicas (Valsalva, agachamento) para rastrear sopros que se comportam de forma atípica para um coração estruturalmente normal, aferição de pressão arterial, palpação de pulsos periféricos e avaliação de estigmas de doença do tecido conjuntivo (fenótipo marfanoide) quando há suspeita de aortopatia hereditária. O exame físico, assim como a história, tem sensibilidade limitada para doença cardiovascular silenciosa — a maioria dos atletas com cardiomiopatia ou canalopatia subjacente tem exame físico normal — por isso não substitui investigação dirigida quando a história aponta risco.",
+      "ecg_12_derivacoes_criterios_de_interpretacao_do_atleta": "A declaração AHA/ACC 2025 considera razoável incluir o ECG de 12 derivações na triagem pré-participação, porque aumenta a detecção de doença cardíaca potencialmente relevante em atletas assintomáticos comparado a história e exame físico isolados — mas essa recomendação é condicionada à existência de profissional treinado em critérios de interpretação específicos para atleta e de via organizada de investigação dos achados anormais; sem esse ecossistema, o próprio documento de origem alerta que um programa de ECG gera falsos positivos, exames desnecessários, ansiedade, custo e afastamento esportivo indevido. O ponto determinante para a interpretação correta é que o ECG do atleta treinado NÃO deve ser lido com os mesmos critérios usados na população geral: o treinamento físico sistemático produz adaptações elétricas fisiológicas (por exemplo bradicardia sinusal, aumento de voltagem por hipertrofia, repolarização precoce, bloqueio incompleto de ramo direito), que não devem ser rotuladas como patológicas. Ao mesmo tempo, determinados padrões NÃO devem ser presumidos como variante benigna do treinamento: inversão de onda T em território não compatível com padrão reconhecido de atleta, depressão difusa do segmento ST, ondas Q patológicas e bloqueio completo de ramo esquerdo são achados que a declaração AHA/ACC 2025 cita explicitamente como justificativa para investigação dirigida. Os critérios internacionais de interpretação eletrocardiográfica em atletas (Drezner JA, Sharma S, Baggish A, et al., \"critérios de Seattle\" atualizados; Br J Sports Med. 2017, PMID 28258178) são a referência técnica que operacionaliza essa distinção, separando explicitamente achados normais de treinamento, achados limítrofes e achados anormais que exigem investigação — e essa distinção depende de sexo, ancestralidade, idade e modalidade esportiva praticada, não de um critério único aplicado de forma indiscriminada.",
+      "quando_investigacao_adicional_e_indicada": "Ecocardiograma, teste ergométrico e monitorização ambulatorial de ritmo não são recomendados como rastreamento universal de primeira linha em atleta assintomático pela declaração AHA/ACC 2025 — a evidência disponível não sustenta esse uso indiscriminado. Eles são, no entanto, exames de segunda linha indispensáveis, dirigidos por um achado positivo na história, no exame físico ou no ECG: um sintoma de alarme durante esforço, uma história familiar de alto risco, ou um padrão eletrocardiográfico que exige investigação, conforme descrito acima. Nessas situações, a escolha do exame deve ser dirigida pela hipótese diagnóstica em investigação — ecocardiograma para suspeita de cardiomiopatia, valvopatia ou aortopatia; teste ergométrico para sintomas relacionados a esforço, resposta pressórica anormal ou arritmia induzida por catecolaminas; Holter ou monitor de eventos para palpitações sustentadas; ressonância magnética cardíaca quando há dúvida diagnóstica entre remodelamento fisiológico do treinamento e cardiomiopatia estrutural (a chamada \"zona cinzenta\"). Mesmo um ECG corretamente interpretado não detecta todas as causas de parada cardíaca súbita — algumas condições, como certas anomalias coronarianas, aortopatias, doença valvar relevante e algumas arritmias induzidas por catecolaminas, podem ser eletricamente silenciosas — o que reforça que nenhum programa de triagem, isoladamente, elimina o risco de morte súbita."
+    },
+    "differentials": [
+      "Coração de atleta (remodelamento elétrico e estrutural fisiológico do treinamento) versus cardiomiopatia hipertrófica — a \"zona cinzenta\" de sobreposição exige avaliação multimodal por imagem (ecocardiograma com deformação miocárdica, escalando para ressonância cardíaca) quando a espessura parietal ou o padrão eletrocardiográfico não é claramente fisiológico nem claramente patológico",
+      "Coração de atleta versus cardiomiopatia dilatada — dilatação e função ventricular levemente reduzida podem ocorrer como adaptação em atletas de endurance de alto volume, exigindo diferenciação de disfunção sistólica patológica",
+      "Coração de atleta versus cardiomiopatia arritmogênica — ectopia ventricular frequente e inversão de onda T em derivações precordiais direitas podem refletir tanto remodelamento induzido pelo treinamento quanto fenótipo inicial de cardiomiopatia arritmogênica",
+      "Bradicardia sinusal e bloqueio atrioventricular de primeiro grau fisiológicos do condicionamento versus distúrbio de condução patológico",
+      "Repolarização precoce e elevação de ST de padrão vagotônico (achado comum e benigno no atleta treinado) versus padrões de repolarização que sinalizam canalopatia ou cardiomiopatia",
+      "Dilatação da aorta proporcional ao tamanho corporal e ao tipo de treinamento versus aortopatia hereditária (síndrome de Marfan e correlatas) ou valva aórtica bicúspide com aortopatia associada",
+      "Síncope vasovagal relacionada a calor, desidratação ou pós-esforço (geralmente benigna) versus síncope de esforço propriamente dita, que é sinal de alarme e exige investigação cardiovascular estruturada",
+      "Elevação de troponina e de peptídeos natriuréticos após exercício intenso prolongado (fenômeno fisiológico transitório descrito na literatura) versus elevação sustentada sugestiva de lesão miocárdica real (miocardite, síndrome coronariana)"
+    ],
+    "tests": [
+      "História cardiovascular e familiar dirigidas (obrigatória em qualquer modelo de triagem)",
+      "Exame físico cardiovascular, incluindo ausculta com manobras dinâmicas quando pertinente",
+      "Eletrocardiograma de 12 derivações interpretado com critérios específicos para atleta, quando o programa dispõe de profissional treinado e via organizada de investigação",
+      "Ecocardiograma transtorácico — exame de segunda linha, dirigido por achado clínico ou eletrocardiográfico, não rastreamento universal",
+      "Teste ergométrico (teste de esforço) — dirigido por sintomas relacionados a esforço, resposta pressórica exagerada ou suspeita de arritmia induzida por esforço",
+      "Monitorização ambulatorial do ritmo (Holter ou monitor de eventos) — dirigida por palpitações sustentadas ou suspeita de arritmia",
+      "Ressonância magnética cardíaca — quando há dúvida entre remodelamento fisiológico do treinamento e cardiomiopatia estrutural (\"zona cinzenta\"), ou suspeita de fibrose miocárdica",
+      "Teste cardiopulmonar de exercício — avaliação funcional dirigida em cenários específicos (retorno ao esporte após evento, cardiopatia estabelecida, para-atleta)",
+      "Investigação genética e rastreamento em cascata familiar — quando há suspeita ou confirmação de cardiomiopatia ou canalopatia hereditária"
+    ],
+    "red_flags": [
+      "Síncope ou pré-síncope durante o esforço (não a síncope vasovagal típica pós-esforço, de calor ou ortostática)",
+      "Dor ou desconforto torácico durante o esforço",
+      "Palpitações sustentadas desencadeadas por esforço",
+      "Dispneia desproporcional à intensidade do exercício ou ao condicionamento esperado",
+      "História familiar de morte súbita cardíaca precoce (idade abaixo de 50 anos) ou de cardiomiopatia, canalopatia ou síndrome de Marfan em parente de primeiro grau",
+      "Colapso presenciado durante atividade esportiva — deve ser tratado como possível parada cardíaca até prova em contrário, independentemente de haver ou não movimento tipo convulsivo ou respiração agônica",
+      "Padrão eletrocardiográfico que exige investigação segundo os critérios de interpretação do atleta: inversão de onda T em território não compatível com padrão reconhecido de treinamento, depressão difusa do segmento ST, ondas Q patológicas, bloqueio completo de ramo esquerdo",
+      "Achado estrutural desproporcional ao tipo e volume de treinamento realizado (hipertrofia, dilatação ou disfunção que não se explica pelo fenótipo esperado da modalidade)"
+    ],
+    "ambulatory_flow": [
+      "Realizar história cardiovascular e familiar dirigidas e exame físico em toda avaliação pré-participação, independentemente de o programa incluir ECG",
+      "Considerar ECG de 12 derivações apenas quando houver profissional treinado em critérios de interpretação específicos do atleta e via organizada de investigação de achados anormais",
+      "Interpretar o ECG do atleta com critérios próprios (critérios internacionais/Seattle atualizados), distinguindo adaptação fisiológica de achado que exige investigação — sem presumir automaticamente doença nem normalidade",
+      "Diante de sintoma de alarme, história familiar de alto risco ou achado eletrocardiográfico que exige investigação, indicar exame de segunda linha dirigido pela hipótese diagnóstica (ecocardiograma, teste ergométrico, Holter, ressonância cardíaca) antes de decidir a elegibilidade",
+      "Quando um achado estrutural é limítrofe entre remodelamento fisiológico e cardiomiopatia, escalar para avaliação multimodal por imagem antes de qualquer decisão de restrição ou liberação",
+      "Quando uma condição cardiovascular é identificada ou confirmada, aplicar processo de estratificação de risco específico da doença — não uma restrição uniforme — considerando diagnóstico, tratamento, modalidade esportiva real (intensidade, componente de força, risco de colisão, ambiente) e capacidade de resposta a emergência",
+      "Conduzir decisão compartilhada com o atleta (ou responsável, quando aplicável), explicitando o que é conhecido, o que permanece incerto, e quais sinais exigem nova avaliação",
+      "Programar reavaliação periódica e definir explicitamente o plano de emergência esportivo antes de liberar ou manter a participação",
+      "Encaminhar a cardiologia do esporte ou eletrofisiologia especializada quando o achado, o diagnóstico ou a decisão de elegibilidade exceder a complexidade do acompanhamento de rotina"
+    ],
+    "emergency_flow": [
+      "Tratar todo atleta que colapsa subitamente e está inconsciente ou não responsivo durante atividade esportiva como possível parada cardíaca até prova em contrário, mesmo na presença de respiração agônica ou movimentos tipo convulsivo",
+      "Acionar imediatamente o serviço de emergência e a equipe de resposta do local",
+      "Iniciar compressões torácicas de alta qualidade sem atraso",
+      "Buscar e aplicar o desfibrilador externo automático (DEA) o mais rápido possível, seguindo suas instruções e minimizando interrupções das compressões — a meta operacional de programas de preparação para parada cardíaca no esporte é intervalo entre colapso e primeiro choque inferior a 3 minutos sempre que possível",
+      "Em modalidades com capacete, protetor torácico ou outro equipamento, seguir protocolo específico previamente ensaiado para exposição rápida do tórax e acesso à via aérea sem atraso desnecessário",
+      "Garantir que o plano de ação de emergência do local (clube, escola, academia, evento) defina previamente quem reconhece e inicia a reanimação cardiopulmonar, quem busca o DEA, quem aciona o serviço de emergência e como a equipe de resgate externa consegue entrar no local",
+      "Em provas de rua, ciclismo, trilha ou outros percursos extensos, garantir cobertura de desfibrilação distribuída ao longo do trajeto, não apenas um único DEA no ponto de largada",
+      "Após reanimação bem-sucedida, não discutir retorno ao esporte antes de investigação etiológica completa (doença estrutural, coronariana, canalopatia, cardiomiopatia e outras causas), com decisão posterior sobre tratamento, indicação de cardioversor-desfibrilador implantável quando aplicável, e eventual retorno"
+    ],
+    "treatment_summary": "Não existe \"tratamento\" da avaliação pré-participação em si — o que existe é um processo estruturado de decisão sobre elegibilidade esportiva, que a declaração AHA/ACC 2025 organiza em cinco etapas e que este verbete adota como estrutura de raciocínio clínico: (1) confirmar o diagnóstico e a atividade da doença, já que sintomas, função ventricular, carga arrítmica, anatomia e evolução temporal não são intercambiáveis; (2) caracterizar a modalidade esportiva real — intensidade, volume, componente de força, risco de colisão, possibilidade de síncope em ambiente hostil e acesso a socorro mudam o risco de forma relevante, de modo que \"esporte\" não é uma categoria única; (3) tratar a condição identificada e reavaliar antes de decidir elegibilidade, já que a decisão não deve ser tomada antes de corrigir causas reversíveis e documentar resposta ao tratamento instituído; (4) discutir benefícios, riscos e incerteza em processo de decisão compartilhada, no qual o atleta compreenda o que é conhecido, o que permanece incerto e quais sinais exigem nova avaliação; e (5) definir vigilância e plano de emergência, já que o retorno à prática não encerra o acompanhamento. Um achado cardiovascular identificado na triagem — seja eletrocardiográfico, estrutural ou arrítmico — não constitui, isoladamente, contraindicação automática nem liberação automática: a desqualificação esportiva pode ser temporária (enquanto se completa investigação, se trata uma causa reversível ou se reavalia resposta terapêutica) ou, mais raramente, permanente para determinada modalidade específica, e essa distinção depende do diagnóstico confirmado, da gravidade, da resposta ao tratamento e da modalidade praticada — nunca de uma regra genérica aplicada a todo achado incomum. Miocardiopatias, aortopatias, canalopatias, arritmias e uso de dispositivos (cardioversor-desfibrilador implantável, anticoagulação) têm cada um particularidades específicas de decisão que não podem ser generalizadas entre si, e todos esses cenários exigem encaminhamento a avaliação cardiovascular especializada (cardiologia do esporte, eletrofisiologia ou subespecialidade pertinente ao achado) antes de qualquer definição final de elegibilidade. Nenhuma dose de fármaco é discutida neste verbete, por não ser o objeto da avaliação pré-participação.",
+    "monitoring": [
+      "Reavaliação periódica da elegibilidade esportiva conforme a modalidade praticada, a idade e a presença ou não de diagnóstico cardiovascular",
+      "Repetição de história dirigida e exame físico a cada avaliação periódica, mesmo na ausência de novo sintoma",
+      "Reavaliação eletrocardiográfica e, quando indicado, por imagem, em intervalo definido para atletas com achado limítrofe ou diagnóstico cardiovascular confirmado sob acompanhamento",
+      "Vigilância ativa de sintomas novos relacionados a esforço entre uma avaliação periódica e outra, com orientação explícita ao atleta sobre quais sinais exigem reavaliação antes da data programada",
+      "Reavaliação do plano de emergência esportivo (localização e acessibilidade do DEA, treinamento da equipe, simulação do plano) pelo menos anualmente, com ensaio mais frequente em instituições de alto volume",
+      "Acompanhamento longitudinal específico após diagnóstico de cardiomiopatia, canalopatia, aortopatia ou arritmia, com reestratificação de risco ao longo do tempo, e não apenas na avaliação inicial",
+      "Reavaliação completa antes de qualquer retorno ao esporte após evento cardiovascular ou parada cardíaca revertida"
+    ],
+    "special_populations": [
+      "Atleta master — a idade aumenta a probabilidade de doença cardiovascular adquirida (aterosclerose coronária, fibrilação atrial e outras arritmias atriais, fibrose miocárdica, dilatação aórtica) coexistir com adaptações fisiológicas do treinamento; consenso conjunto EAPC/ESC-ACC de 2026 (Eijsvogels TMH et al., PMID 41947397) recomenda não interpretar automaticamente achados como calcificação coronária, realce tardio na ressonância ou dilatação aórtica como equivalentes aos mesmos achados em sedentário sintomático, integrando risco cardiovascular clássico, fenótipo atlético e testes direcionados antes de qualquer restrição",
+      "Atleta feminina — os critérios históricos de \"coração de atleta\" foram construídos majoritariamente em populações masculinas; dados contemporâneos (D'Ascenzi F et al., 2024, PMID 38262482) mostram remodelamento elétrico e estrutural real em mulheres treinadas, porém de padrão e magnitude distintos dos homens (menor frequência cardíaca de repouso, PR mais longo, maior voltagem de R e T, mais critérios elétricos de hipertrofia, porém remodelamento estrutural de menor magnitude que o masculino); interpretar a atleta feminina com referências exclusivamente masculinas aumenta tanto o risco de sobrediagnóstico quanto o de subdiagnóstico",
+      "Adolescente atleta — os critérios de ECG do atleta foram desenvolvidos majoritariamente em população adulta e podem não se aplicar diretamente à criança e ao adolescente; achado eletrocardiográfico incidental (padrão de Brugada tipo 1, QTc prolongado, repolarização precoce) pode ocorrer em triagem pré-participação de adolescente completamente assintomático e exige a mesma cautela contra generalização em qualquer direção",
+      "Para-atleta — a avaliação periódica precisa considerar simultaneamente modalidade esportiva, tipo de deficiência e adaptações ao treinamento, evitando aplicar de forma automática o protocolo do atleta sem deficiência; position statement internacional de 2024 (Pinheiro L et al., PMID 39411023) destaca que para-atletas podem subnotificar sintomas, o que reforça a importância de ambiente de avaliação em que sinais sejam discutidos sem receio de perda automática de elegibilidade",
+      "Atleta com cardiopatia congênita reparada ou não reparada — decisão de elegibilidade individualizada por lesão anatômica específica, função ventricular, presença de arritmia e de hipertensão pulmonar, tipicamente com teste cardiopulmonar de exercício orientando a prescrição, e não uma regra única aplicada a \"cardiopatia congênita\" como categoria genérica",
+      "Atleta gestante — avaliação cardiovascular pré-participação e continuidade da prática esportiva na gestação exigem consideração de adaptações hemodinâmicas fisiológicas da gravidez sobrepostas às adaptações do treinamento, com encaminhamento a avaliação obstétrica e cardiológica conjunta quando há cardiopatia estrutural de base"
+    ],
+    "assistant_questions": [
+      {
+        "id": "contexto_avaliacao",
+        "label": "Qual o contexto principal desta avaliação?",
+        "type": "select",
+        "options": [
+          {
+            "value": "rotina_assintomatico",
+            "label": "Triagem de rotina em atleta assintomático"
+          },
+          {
+            "value": "sintomas_alarme",
+            "label": "Sintoma de alarme relacionado a esforço"
+          },
+          {
+            "value": "pos_evento",
+            "label": "Reavaliação após evento cardiovascular ou parada cardíaca revertida"
+          },
+          {
+            "value": "reavaliacao_diagnostico_conhecido",
+            "label": "Reavaliação de elegibilidade com diagnóstico cardiovascular já conhecido"
+          }
+        ]
+      },
+      {
+        "id": "colapso_durante_atividade",
+        "label": "Houve colapso ou perda de consciência durante atividade esportiva neste episódio?",
+        "type": "boolean"
+      },
+      {
+        "id": "sintomas_esforco",
+        "label": "O atleta apresenta síncope/pré-síncope, dor ou desconforto torácico, palpitação sustentada ou dispneia desproporcional relacionados a esforço?",
+        "type": "boolean"
+      },
+      {
+        "id": "historia_familiar_alto_risco",
+        "label": "Há história familiar de morte súbita precoce (abaixo de 50 anos), cardiomiopatia, canalopatia ou síndrome de Marfan em parente de primeiro grau?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_realizado",
+        "label": "Foi realizado ECG de 12 derivações como parte da triagem?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecossistema_programa_ecg",
+        "label": "O programa dispõe de profissional treinado em critérios de ECG específicos do atleta e via organizada de investigação de achados anormais?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_resultado",
+        "label": "Qual o resultado do ECG interpretado com critérios do atleta?",
+        "type": "select",
+        "options": [
+          {
+            "value": "adaptacao_fisiologica",
+            "label": "Compatível com adaptação fisiológica do treinamento"
+          },
+          {
+            "value": "exige_investigacao",
+            "label": "Padrão que exige investigação dirigida"
+          },
+          {
+            "value": "nao_realizado",
+            "label": "ECG não realizado"
+          }
+        ]
+      },
+      {
+        "id": "achado_estrutural_zona_cinzenta",
+        "label": "Há achado estrutural (hipertrofia, dilatação ou disfunção) limítrofe entre remodelamento fisiológico e cardiomiopatia?",
+        "type": "boolean"
+      },
+      {
+        "id": "diagnostico_cardiovascular_confirmado",
+        "label": "Existe diagnóstico cardiovascular já confirmado (cardiomiopatia, canalopatia, aortopatia, arritmia, valvopatia, cardiopatia congênita) motivando esta avaliação?",
+        "type": "boolean"
+      },
+      {
+        "id": "populacao_especial",
+        "label": "O atleta pertence a alguma população que exige interpretação específica?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "atleta_master",
+            "label": "Atleta master"
+          },
+          {
+            "value": "atleta_feminina",
+            "label": "Atleta feminina"
+          },
+          {
+            "value": "adolescente",
+            "label": "Adolescente"
+          },
+          {
+            "value": "para_atleta",
+            "label": "Para-atleta"
+          },
+          {
+            "value": "gestante",
+            "label": "Atleta gestante"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma população especial"
+          }
+        ]
+      },
+      {
+        "id": "plano_emergencia_local",
+        "label": "O local de treino/competição tem plano de emergência escrito com DEA acessível?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "colapso_durante_esporte_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "colapso_durante_atividade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Tratar como possível parada cardíaca até prova em contrário: reconhecer o colapso, acionar emergência, iniciar RCP de alta qualidade e aplicar o DEA imediatamente, mesmo diante de respiração agônica ou movimento tipo convulsivo."
+          ],
+          "emergency_flow": [
+            "Priorizar reconhecimento imediato de parada cardíaca, RCP e desfibrilação precoce sobre qualquer outra etapa da avaliação.",
+            "Não discutir retorno ao esporte antes de investigação etiológica completa após reanimação."
+          ]
+        }
+      },
+      {
+        "id": "sintomas_alarme_esforco",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Síncope, dor torácica, palpitação sustentada ou dispneia desproporcional relacionadas a esforço são sinais de alarme: investigar dirigidamente antes de qualquer decisão de elegibilidade, e não apenas registrar o sintoma."
+          ],
+          "suggested_tests": [
+            "ecocardiograma",
+            "teste ergométrico",
+            "Holter ou monitor de eventos"
+          ]
+        }
+      },
+      {
+        "id": "historia_familiar_alto_risco_regra",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "historia_familiar_alto_risco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "História familiar de morte súbita precoce ou de cardiopatia hereditária exige investigação dirigida (clínica, eletrocardiográfica e, conforme o caso, genética) antes de liberar a participação esportiva, mesmo em atleta assintomático."
+          ]
+        }
+      },
+      {
+        "id": "ecg_sem_ecossistema_interpretativo",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_realizado",
+              "op": "truthy"
+            },
+            {
+              "field": "ecossistema_programa_ecg",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "ECG realizado sem profissional treinado em critérios específicos do atleta e sem via organizada de investigação: encaminhar a leitura por profissional qualificado antes de agir sobre qualquer achado, para evitar tanto falso positivo com restrição indevida quanto falso negativo."
+          ]
+        }
+      },
+      {
+        "id": "ecg_exige_investigacao_regra",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_resultado",
+              "op": "eq",
+              "value": "exige_investigacao"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Padrão eletrocardiográfico não compatível com adaptação fisiológica do treinamento: investigar de forma dirigida pelo padrão encontrado e pelo contexto clínico, sem presumir doença nem normalidade antes da investigação."
+          ],
+          "differentials": [
+            "coração de atleta versus cardiomiopatia",
+            "canalopatia hereditária",
+            "distúrbio de condução patológico"
+          ]
+        }
+      },
+      {
+        "id": "ecg_adaptacao_fisiologica_sem_alarme",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_resultado",
+              "op": "eq",
+              "value": "adaptacao_fisiologica"
+            },
+            {
+              "field": "sintomas_esforco",
+              "op": "falsy"
+            },
+            {
+              "field": "historia_familiar_alto_risco",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "ECG compatível com adaptação fisiológica do treinamento, sem sintoma de alarme nem história familiar de risco: quadro compatível com liberação para a modalidade avaliada, mantendo plano de emergência com DEA disponível independentemente da liberação."
+          ]
+        }
+      },
+      {
+        "id": "achado_estrutural_zona_cinzenta_regra",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "achado_estrutural_zona_cinzenta",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Achado estrutural limítrofe entre coração de atleta e cardiomiopatia: escalar para avaliação multimodal por imagem (ecocardiograma com deformação miocárdica, ressonância cardíaca quando a dúvida persistir) antes de qualquer decisão, sem presumir remodelamento fisiológico nem doença estrutural."
+          ]
+        }
+      },
+      {
+        "id": "diagnostico_confirmado_estratificacao_especifica",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_cardiovascular_confirmado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Diagnóstico cardiovascular confirmado: a decisão de elegibilidade deve seguir estratificação de risco específica da doença (diagnóstico, atividade da doença, modalidade real praticada, resposta ao tratamento e plano de emergência), nunca uma restrição uniforme baseada apenas no rótulo diagnóstico. Encaminhar a avaliação especializada em cardiologia do esporte ou subespecialidade pertinente."
+          ]
+        }
+      },
+      {
+        "id": "para_atleta_avaliacao_individualizada",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "populacao_especial",
+              "op": "contains",
+              "value": "para_atleta"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Para-atleta: individualizar a avaliação por modalidade e tipo de deficiência, sem copiar automaticamente o protocolo do atleta sem deficiência; considerar subnotificação de sintomas e reforçar ambiente de discussão aberta de sinais."
+          ]
+        }
+      },
+      {
+        "id": "atleta_feminina_referencia_especifica",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "populacao_especial",
+              "op": "contains",
+              "value": "atleta_feminina"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Atleta feminina: interpretar ECG e ecocardiograma com referências específicas de sexo, considerando também modalidade e ancestralidade, evitando critérios construídos em populações predominantemente masculinas."
+          ]
+        }
+      },
+      {
+        "id": "atleta_master_avaliacao_adicional",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "populacao_especial",
+              "op": "contains",
+              "value": "atleta_master"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Atleta master: considerar coexistência de doença cardiovascular adquirida (coronariana, arrítmica, aórtica) com adaptação fisiológica do treinamento antes de rotular qualquer achado como puramente relacionado ao exercício."
+          ]
+        }
+      },
+      {
+        "id": "plano_emergencia_ausente_ou_nao_confirmado",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "plano_emergencia_local",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Local sem plano de emergência confirmado com DEA acessível: recomendar estruturação do plano de ação de emergência (reconhecimento, RCP, DEA, acionamento do serviço de emergência) independentemente do resultado da triagem cardiovascular, já que nenhuma triagem elimina o risco residual de parada cardíaca."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiologia do esporte",
+      "triagem pré-participação esportiva",
+      "elegibilidade esportiva",
+      "morte súbita cardíaca no atleta",
+      "ECG do atleta",
+      "critérios de Seattle",
+      "coração de atleta",
+      "DEA",
+      "decisão compartilhada"
+    ],
+    "source_refs": [
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. J Am Coll Cardiol. 2025;85(10):1059-1108. DOI: 10.1016/j.jacc.2024.12.025. PMID: 39976316.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614.",
+      "Drezner JA, Sharma S, Baggish A, et al. International criteria for electrocardiographic interpretation in athletes: Consensus statement. Br J Sports Med. 2017;51(9):704-731. DOI: 10.1136/bjsports-2016-097331. PMID: 28258178.",
+      "Harmon KG, Drezner JA, Maleszewski JJ, et al. Incidence, Cause, and Comparative Frequency of Sudden Cardiac Death in National Collegiate Athletic Association Athletes: A Decade in Review. Circulation. 2015;132(1):10-19. DOI: 10.1161/CIRCULATIONAHA.115.015431. PMID: 25977310.",
+      "Ghorayeb N, Stein R, Daher DJ, et al. The Brazilian Society of Cardiology and Brazilian Society of Exercise and Sports Medicine Updated Guidelines for Sports and Exercise Cardiology - 2019. Arq Bras Cardiol. 2019;112(3):326-368. DOI: 10.5935/abc.20190048. PMID: 30916199.",
+      "Eijsvogels TMH, et al. Masters athletes with abnormal cardiovascular findings: a clinical consensus statement of the European Association of Preventive Cardiology of the ESC and the American College of Cardiology. Eur Heart J. 2026;47(21):2541-2560. DOI: 10.1093/eurheartj/ehag040. PMID: 41947397.",
+      "D'Ascenzi F, et al. Electrical and structural remodelling in female athlete's heart: A comparative study in women vs men athletes and controls. Int J Cardiol. 2024;400:131808. DOI: 10.1016/j.ijcard.2024.131808. PMID: 38262482.",
+      "Pinheiro L, et al. Periodic health evaluation in Para athletes: a position statement based on expert consensus. BMJ Open Sport Exerc Med. 2024;10:e001946. DOI: 10.1136/bmjsem-2024-001946. PMID: 39411023.",
+      "Karlsson L, Malta Hansen C, Wissenberg M, et al. Automated external defibrillator accessibility is crucial for bystander defibrillation and survival: A registry-based study. Resuscitation. 2019;136:30-37. DOI: 10.1016/j.resuscitation.2019.01.014. PMID: 30682401."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39976316/",
+      "https://pubmed.ncbi.nlm.nih.gov/39973614/",
+      "https://pubmed.ncbi.nlm.nih.gov/28258178/",
+      "https://pubmed.ncbi.nlm.nih.gov/25977310/",
+      "https://pubmed.ncbi.nlm.nih.gov/30916199/",
+      "https://pubmed.ncbi.nlm.nih.gov/41947397/",
+      "https://pubmed.ncbi.nlm.nih.gov/38262482/",
+      "https://pubmed.ncbi.nlm.nih.gov/39411023/",
+      "https://pubmed.ncbi.nlm.nih.gov/30682401/",
+      "https://professional.heart.org/en/science-news/clinical-considerations-for-competitive-sports-participation-for-athletes-with-cv-abnormalities"
+    ],
+    "related_document_slugs": [
+      "triagem-cardiovascular-pre-participacao-ecg-atleta-aha-acc-2025",
+      "fluxograma-triagem-pre-participacao-esportiva-ecg-atleta",
+      "diretriz-participacao-esportiva-aha-acc-2025",
+      "para-atleta-avaliacao-periodica-cardiovascular",
+      "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+      "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta"
+    ],
+    "patient_material_slug": "avaliacao-cardiologica-antes-de-praticar-esporte",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado em 29/08/2026 a pedido de Rafael... [ver texto completo no arquivo /tmp/claude-0/-root/9da98263-03bc-451d-9daa-5637b621793a/scratchpad/record.json — resumo: colisão de slug/termos verificada e ausente; area='geral' usado como fallback por enum fechado {geral,cardiopediatria,cardiogeriatria,cardiooncologia,gravidez}; category='avaliacao_esportiva' é decisão editorial nova documentada; SBC/SBME (PMID 30916199) localizado e verificado mas não priorizado sobre AHA/ACC 2025 por ser mais antigo, sem abstract indexado e com texto integral bloqueado (SciELO 403); regra de atenção sobre ECG do atleta aplicada com fonte real (critérios de Seattle, PMID 28258178); 9 PMIDs verificados individualmente via E-utilities; 6 related_document_slugs lidos integralmente e centrais; patient_material_slug já vinculado ao mesmo documento-fonte principal.]",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
