@@ -306,3 +306,17 @@ Nenhuma colisão: PR #599 e #725 seguem abertos e evitados em todas as rodadas
 (reconferidos a cada lote via git fetch + gh pr view).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 15 (em andamento, 1 agente)
+
+`aortopatias-geneticas-do-adulto` já existe (branch science-overnight,
+confirmado via git log --all — Marfan/Loeys-Dietz/bicúspide, limiares em
+mm de adulto). Gap real: verbete PEDIÁTRICO complementar — escore Z (não
+mm absoluto) para vigilância seriada de raiz aórtica em criança, limiares
+cirúrgicos pediátricos, técnica valve-sparing conforme crescimento
+residual, diferenciação de agressividade entre Marfan/Loeys-Dietz/EDS
+vascular em criança. Documento narrativo já existente no corpus usado
+como contexto, verbete estruturado ainda não existia. Despachado (agente
+a9fd2a92b9f72117f).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
