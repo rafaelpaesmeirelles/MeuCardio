@@ -330,3 +330,18 @@ _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoi
   Complementar (não duplicado) ao verbete de adulto da outra branch.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 16 (em andamento, 1 agente) — retorno ao território primário (Arritmias)
+
+Backlog de Arritmias (42 itens) escaneado: cluster "jcs-2022" muito grande
+(~32 itens da diretriz JCS/JHRS 2022 de manejo não farmacológico de
+arritmias) — dividido em sub-lotes. Primeiro sub-lote despachado: seleção
+de método diagnóstico/monitorização (ECG, Holter, gravadores de eventos,
+smartphone/smartwatch, IA, monitor implantável/looper, mapeamento
+eletroanatômico) — 16 itens (agente ae582afc63f5011a8). CDI prevenção
+primária/secundária (2 itens) já tem host (fluxogramas CDI ESC 2022 já
+existentes) — não acionado. Restante do cluster JCS 2022 (risco pós-IAM,
+teste genético em canalopatias, restrição de exercício por condição) fica
+para próximos lotes.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
