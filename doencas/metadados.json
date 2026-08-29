@@ -12007,7 +12007,7 @@
     "subtype": "coracao_univentricular",
     "cyanosis_class": "cianotica",
     "prevalence_rank": 18,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Ausência de conexão atrioventricular direita funcional, pertencente ao espectro univentricular e dependente de planejamento longitudinal por centro especializado.",
     "tags": [
       "atresia tricúspide",
@@ -12015,18 +12015,651 @@
       "cianose"
     ],
     "source_refs": [
-      "AHA Pediatric Cardiology scientific resources"
+      "AHA Pediatric Cardiology scientific resources",
+      "Fontan F, Baudet E. Surgical repair of tricuspid atresia. Thorax. 1971;26(3):240-8. PMID 5089489",
+      "Sumal AS, Kyriacou H, Mostafa AMHAM. Tricuspid atresia: Where are we now? J Card Surg. 2020;35(7):1609-1617. PMID 32484582",
+      "Faber JW, Buijtendijk MFJ, Klarenberg H, et al. Fetal Tricuspid Valve Agenesis/Atresia: Testing Predictions of the Embryonic Etiology. Pediatr Cardiol. 2022;43(4):796-806. PMID 34988599",
+      "Hadjicosta E, Franklin R, Seale A, et al. Cohort study of intervened functionally univentricular heart in England and Wales (2000-2018). Heart. 2022;108(13):1046-1054. PMID 34706904",
+      "Rao PS, et al. Fontan Operation: Indications, Short and Long Term Outcomes. Indian J Pediatr. 2015;82(12):1147-56. PMID 26088549",
+      "Minocha PK, Horenstein MS, Phoon C. Tricuspid Atresia. StatPearls (Treasure Island, FL). Atualizado em 2024. PMID 32119382"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"
+      "https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology",
+      "https://pubmed.ncbi.nlm.nih.gov/5089489/",
+      "https://pubmed.ncbi.nlm.nih.gov/32484582/",
+      "https://pubmed.ncbi.nlm.nih.gov/34988599/",
+      "https://pubmed.ncbi.nlm.nih.gov/34706904/",
+      "https://pubmed.ncbi.nlm.nih.gov/26088549/",
+      "https://pubmed.ncbi.nlm.nih.gov/32119382/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo em 29/08/2026: ficha estava completeness=basico, 1 related_document_slug, passou a completo com epidemiologia (classificação Kuhne/Edwards-Burchell), abordagem diagnóstica, condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico. related_document_slugs expandido de 1 para 6, todos verificados por leitura direta do documento completo. 6 PMIDs verificados individualmente via NCBI e-utils antes da montagem. patient_material_slug pré-existente confirmado. Nenhuma dose de fármaco citada. Ficha não estava sendo trabalhada por nenhuma PR aberta no momento da produção.",
+    "version": 2,
     "related_document_slugs": [
-      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes"
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+      "descompensacao-aguda-da-circulacao-de-fontan",
+      "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",
+      "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+      "tromboprofilaxia-na-circulacao-de-fontan",
+      "trombose-aguda-de-shunt-sistemico-pulmonar"
     ],
-    "patient_material_slug": "atresia-tricuspide"
+    "patient_material_slug": "atresia-tricuspide",
+    "epidemiology": "A atresia da valva tricúspide é uma cardiopatia congênita cianótica rara, com incidência estimada em aproximadamente 1 a cada 10.000 nascidos vivos, correspondendo a cerca de 1 a 3% de todas as cardiopatias congênitas e configurando-se como uma das principais causas de fisiologia univentricular funcional no período neonatal. Caracteriza-se pela ausência completa de conexão atrioventricular direita, com a valva tricúspide substituída por tecido fibroso ou muscular imperfurado, determinando hipoplasia variável do ventrículo direito e dependência obrigatória de shunt interatrial (comunicação interatrial ou forame oval patente) para o retorno venoso sistêmico alcançar a circulação. A classificação anatômica clássica de Kuhne, modificada por Edwards e Burchell, divide a atresia tricúspide em três tipos conforme a relação ventrículo-arterial: tipo I, com grandes artérias normorrelacionadas (cerca de 70% dos casos); tipo II, com transposição completa das grandes artérias; e tipo III, com transposição corrigida ou outras relações ventrículo-arteriais anômalas. Cada tipo é subdividido em A, B ou C conforme o grau de fluxo pulmonar (atresia pulmonar, estenose pulmonar/comunicação interventricular restritiva, ou fluxo pulmonar não restritivo), determinando se a circulação pulmonar é ducto-dependente, dependente de comunicação interventricular ou associada a hiperfluxo pulmonar. O diagnóstico pré-natal por ecocardiografia fetal é factível a partir do segundo trimestre de gestação, permitindo identificar a ausência de fluxo através da valva tricúspide e a hipoplasia ventricular direita, o que possibilita planejamento do parto em centro terciário com suporte especializado disponível para estabilização da patência ductal quando indicado.",
+    "presentation": [
+      "Cianose neonatal de início precoce, geralmente perceptível nas primeiras horas a dias de vida, de intensidade variável conforme o grau de fluxo pulmonar",
+      "Taquipneia e desconforto respiratório leve a moderado, mesmo na ausência de doença pulmonar primária",
+      "Sopro cardíaco variável, tipicamente sistólico, relacionado ao fluxo através da comunicação interventricular ou à estenose pulmonar associada",
+      "Segunda bulha cardíaca única, refletindo atresia ou hipofluxo pulmonar",
+      "Piora súbita e progressiva da cianose e hipoperfusão sistêmica quando ocorre fechamento espontâneo do canal arterial em fisiologia ducto-dependente para fluxo pulmonar",
+      "Sinais de insuficiência cardíaca congestiva (taquipneia, dificuldade alimentar, sudorese, hepatomegalia) nos casos com fluxo pulmonar não restritivo ou com transposição das grandes artérias associada",
+      "Dificuldade de ganho ponderal, fadiga às mamadas e recusa alimentar",
+      "Pulsos periféricos diminuídos ou assimétricos quando há coarctação de aorta associada, achado mais comum no tipo II com transposição",
+      "Hepatomegalia decorrente de congestão sistêmica em quadros de comunicação interatrial restritiva",
+      "Hipoxemia progressiva e acidose metabólica quando a comunicação interatrial se torna funcionalmente restritiva ao fluxo do átrio direito para o esquerdo"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial": "Suspeita clínica em recém-nascido com cianose central e ausculta de sopro variável deve motivar oximetria de pulso e ecocardiograma transtorácico em caráter de urgência, dado o risco de deterioração hemodinâmica rápida por dependência ductal.",
+      "ecocardiograma_fetal": "Recomendado em gestações de risco ou quando triagem obstétrica sugere alteração da relação de câmaras cardíacas; permite identificar ausência de fluxo trans-tricúspide, hipoplasia do ventrículo direito, avaliar tamanho da comunicação interatrial e a relação ventrículo-arterial, orientando o planejamento do parto em centro com suporte cardiológico neonatal.",
+      "ecocardiograma_neonatal": "Exame de escolha para confirmação diagnóstica; deve caracterizar de forma sistemática: ausência de conexão atrioventricular direita e morfologia da placa valvar tricúspide; tamanho e grau de restrição da comunicação interatrial (forame oval ou comunicação interatrial); tamanho, morfologia e localização da comunicação interventricular quando presente, incluindo seu potencial de restrição ao fluxo pulmonar; relação ventrículo-arterial (normorrelacionada, transposta ou corrigida) e presença de estenose subpulmonar ou pulmonar; tamanho e função do ventrículo esquerdo, que assume o papel de câmara sistêmica funcional; patência, calibre e direção do fluxo pelo canal arterial, definindo o grau de dependência ductal para o fluxo pulmonar sistêmico; lesões associadas, como coarctação de aorta, arco aórtico hipoplásico ou anomalias de veias sistêmicas e pulmonares.",
+      "avaliacao_dependencia_ductal": "Fundamental classificar o paciente conforme a fonte de fluxo pulmonar: quando o fluxo pulmonar depende primariamente do canal arterial (atresia ou estenose pulmonar grave), o recém-nascido é ducto-dependente e requer monitorização contínua da saturação e vigilância para sinais de fechamento ductal; quando o fluxo pulmonar ocorre via comunicação interventricular sem obstrução relevante, o risco predominante é de hiperfluxo pulmonar e insuficiência cardíaca, não de ducto-dependência.",
+      "exames_complementares": "Radiografia de tórax para avaliar trama vascular pulmonar (diminuída na fisiologia ducto-dependente, aumentada no hiperfluxo) e eletrocardiograma, que classicamente mostra desvio do eixo do QRS para a esquerda e hipertrofia ventricular esquerda, achado relativamente característico e útil para diferenciação de outras cardiopatias univentriculares direitas.",
+      "cateterismo_e_imagem_avancada": "Cateterismo cardíaco e angiotomografia ou angiorressonância cardíaca são reservados para caracterização anatômica detalhada pré-operatória, avaliação de resistência vascular pulmonar antes de estágios cirúrgicos avançados (Glenn e Fontan) e investigação de lesões associadas não totalmente elucidadas pela ecocardiografia."
+    },
+    "differentials": [
+      "Síndrome do coração esquerdo hipoplásico",
+      "Anomalia de Ebstein com hipoplasia funcional grave do ventrículo direito",
+      "Atresia pulmonar com septo interventricular íntegro",
+      "Ventrículo único de dupla via de entrada (dupla entrada ventricular)",
+      "Transposição das grandes artérias com septo interventricular íntegro",
+      "Tetralogia de Fallot com atresia pulmonar",
+      "Estenose pulmonar crítica neonatal",
+      "Drenagem anômala total de veias pulmonares com obstrução"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler colorido",
+      "Ecocardiograma fetal",
+      "Oximetria de pulso (triagem neonatal de cardiopatia crítica)",
+      "Radiografia de tórax",
+      "Eletrocardiograma de 12 derivações",
+      "Cateterismo cardíaco para avaliação hemodinâmica pré-estágio cirúrgico",
+      "Angiotomografia ou angiorressonância magnética cardíaca",
+      "Teste de hiperóxia para diferenciação de causa cardíaca versus pulmonar da cianose"
+    ],
+    "red_flags": [
+      "Cianose progressiva e refratária à oxigenoterapia suplementar",
+      "Sinais de fechamento do canal arterial: piora súbita da cianose, palidez, hipoperfusão periférica e acidose metabólica em paciente com fisiologia ducto-dependente para fluxo pulmonar",
+      "Taquipneia acentuada, hepatomegalia e sinais de insuficiência cardíaca congestiva em paciente com fluxo pulmonar não restritivo",
+      "Acidose metabólica e lactato elevado, sugestivos de baixo débito sistêmico",
+      "Diminuição do débito urinário como marcador de hipoperfusão sistêmica",
+      "Irritabilidade, letargia ou rebaixamento do nível de consciência associados a hipoxemia",
+      "Restrição progressiva da comunicação interatrial, com piora da cianose apesar de canal arterial patente",
+      "Arritmias ou instabilidade hemodinâmica súbita, que podem sinalizar deterioração aguda e necessidade de intervenção emergencial"
+    ],
+    "treatment_summary": "O manejo da atresia tricúspide inicia-se no período neonatal, quando a sobrevida depende, na maioria dos casos, da manutenção da permeabilidade do canal arterial para garantir fluxo pulmonar ou fluxo sistêmico adequado, conforme a anatomia associada (posição das grandes artérias, tamanho do septo interventricular e grau de estenose pulmonar). Diante de diagnóstico pré-natal ou suspeita clínica ao nascimento (cianose precoce, sopro, hipoxemia refratária a oxigênio), a conduta inicial prioriza estabilização hemodinâmica, manutenção do canal arterial pérvio por via farmacológica até a definição cirúrgica, monitorização contínua de saturação periférica de oxigênio, perfusão, diurese e sinais de insuficiência cardíaca, além de suporte ventilatório e correção de distúrbios metabólicos quando necessário. Não há tratamento clínico definitivo para a atresia tricúspide; a correção é sempre cirúrgica e ocorre em etapas paliativas sucessivas, já que não existe reparo biventricular possível na ausência funcional do ventrículo direito. A primeira etapa cirúrgica é individualizada conforme o fluxo pulmonar: quando o fluxo pulmonar é restritivo (estenose pulmonar significativa ou atresia pulmonar associada), realiza-se uma derivação sistêmico-pulmonar, classicamente a fístula de Blalock-Taussig modificada, para garantir fluxo pulmonar suficiente; quando o fluxo pulmonar é excessivo (ausência de estenose pulmonar relevante, risco de hiperfluxo e insuficiência cardíaca congestiva), realiza-se banda de artéria pulmonar para limitar o fluxo e proteger o leito vascular pulmonar de hipertensão pulmonar irreversível. Essa primeira intervenção costuma ocorrer nas primeiras semanas de vida. A segunda etapa, a cirurgia de Glenn bidirecional (anastomose cavopulmonar superior), é realizada tipicamente entre quatro e seis meses de idade, quando a resistência vascular pulmonar já apresenta a queda fisiológica esperada, permitindo que o retorno venoso da veia cava superior seja direcionado diretamente à artéria pulmonar sem necessidade de bomba, reduzindo a sobrecarga de volume do ventrículo único. A terceira e última etapa é a cirurgia de Fontan, geralmente realizada entre dois e quatro anos de idade, que completa a separação das circulações sistêmica e pulmonar ao redirecionar o retorno venoso da veia cava inferior diretamente à artéria pulmonar, por meio de conduto extracardíaco ou túnel lateral, tornando o ventrículo único responsável exclusivamente pela circulação sistêmica. Após a conclusão da via de Fontan, o acompanhamento cardiológico é vitalício, pois a fisiologia de Fontan não é normal: depende de baixa resistência vascular pulmonar e de função ventricular preservada para manter débito cardíaco adequado, e está associada a complicações tardias específicas, como arritmias atriais, disfunção ventricular progressiva, enteropatia perdedora de proteínas, bronquite plástica, eventos tromboembólicos, disfunção hepática congestiva e limitação da capacidade funcional ao esforço. O seguimento ambulatorial contínuo, com reavaliações clínicas, de imagem e funcionais periódicas, é essencial para identificar precocemente essas complicações e ajustar a estratégia terapêutica ao longo da vida.",
+    "ambulatory_flow": [
+      "Confirmar estágio cirúrgico atual (pré-operatório, pós-derivação sistêmico-pulmonar ou banda, pós-Glenn, pós-Fontan) e revisar relatório da última cirurgia realizada",
+      "Avaliar crescimento pondero-estatural e desenvolvimento neuropsicomotor em cada consulta, comparando com curvas específicas para cardiopatia congênita complexa",
+      "Solicitar ecocardiograma transtorácico periódico para avaliar função ventricular sistêmica, competência valvar atrioventricular, gradiente das anastomoses cavopulmonares e presença de obstruções residuais",
+      "Realizar eletrocardiograma de rotina e investigar arritmias, especialmente flutter e taquicardia atrial, mais frequentes a longo prazo após Fontan",
+      "Avaliar capacidade funcional ao esforço com teste cardiopulmonar ou teste de caminhada em pacientes maiores, correlacionando com classe funcional referida",
+      "Rastrear sinais de enteropatia perdedora de proteínas e complicações hepáticas tardias (edema, ascite, alterações de exames laboratoriais, elastografia hepática) em pacientes pós-Fontan",
+      "Revisar esquema antitrombótico vigente e aderência ao seguimento, sem detalhar doses, reforçando a importância da continuidade da terapia prescrita pela equipe assistente",
+      "Orientar a família sobre sinais de alarme, cuidados com atividade física, restrições e liberações conforme fase cirúrgica e função ventricular",
+      "Coordenar avaliação multidisciplinar (nutrição, desenvolvimento, saúde bucal, imunizações) considerando maior vulnerabilidade a infecções e necessidade de profilaxias específicas",
+      "Planejar antecipadamente a transição de cuidado da cardiologia pediátrica para a cardiologia de cardiopatias congênitas do adulto quando aplicável"
+    ],
+    "emergency_flow": [
+      "Cianose progressiva ou queda aguda da saturação periférica de oxigênio em lactente com circulação canal-dependente sugerindo fechamento ou redução do fluxo pelo canal arterial: encaminhar imediatamente para avaliação em urgência com suporte de manutenção do canal e contato com a equipe de cardiologia",
+      "Taquipneia importante, dificuldade para mamar com sudorese e ganho ponderal insuficiente em neonato ou lactente pré-operatório, sinalizando possível insuficiência cardíaca por hiperfluxo pulmonar ou obstrução de derivação: avaliação urgente e reavaliação cirúrgica",
+      "Letargia, hiporresponsividade, palidez ou extremidades frias em qualquer fase, sugerindo baixo débito sistêmico: acionar atendimento de emergência sem atraso",
+      "Aparecimento ou piora de edema, ascite, derrame pleural ou diarreia crônica em paciente pós-Fontan, levantando suspeita de enteropatia perdedora de proteínas ou disfunção da via de Fontan: avaliação prioritária em pronto atendimento cardiológico",
+      "Palpitações associadas a mal-estar, síncope ou pré-síncope em paciente pós-Fontan, sugerindo arritmia atrial hemodinamicamente significativa: encaminhar para avaliação de emergência com eletrocardiograma imediato",
+      "Febre persistente sem foco definido em paciente com material protético (derivação, conduto de Fontan), levantando suspeita de endocardite infecciosa: avaliação médica urgente"
+    ],
+    "monitoring": [
+      "Saturação periférica de oxigênio em repouso e, quando indicado, durante o sono e o esforço, em todas as fases do seguimento",
+      "Ecocardiograma seriado para função ventricular sistêmica, valva atrioventricular comum ou remanescente e patência das anastomoses cirúrgicas",
+      "Eletrocardiograma de rotina e, quando indicado, Holter de 24 horas para rastreio de arritmias em pacientes pós-Glenn e pós-Fontan",
+      "Curva de crescimento pondero-estatural e marcos de desenvolvimento neuropsicomotor",
+      "Exames laboratoriais direcionados a função hepática, proteínas séricas e coagulação em pacientes pós-Fontan",
+      "Avaliação periódica de capacidade funcional ao esforço (classe funcional ou teste cardiopulmonar) conforme idade e fase cirúrgica",
+      "Rastreio de sinais clínicos de enteropatia perdedora de proteínas, disfunção hepática congestiva e eventos tromboembólicos em consultas de seguimento pós-Fontan"
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_meses",
+        "label": "Qual a idade atual do paciente, em meses?",
+        "type": "number"
+      },
+      {
+        "id": "estagio_cirurgico_atual",
+        "label": "Qual o estágio cirúrgico atual?",
+        "type": "select",
+        "options": [
+          {
+            "value": "pre_cirurgico",
+            "label": "Pré-cirúrgico (ainda sem intervenção paliativa)"
+          },
+          {
+            "value": "bt_shunt_ou_banda",
+            "label": "Pós-derivação sistêmico-pulmonar (Blalock-Taussig modificada) ou banda de artéria pulmonar"
+          },
+          {
+            "value": "pos_glenn",
+            "label": "Pós-Glenn bidirecional"
+          },
+          {
+            "value": "pos_fontan",
+            "label": "Pós-Fontan"
+          }
+        ]
+      },
+      {
+        "id": "fluxo_pulmonar_predominante",
+        "label": "Como está o fluxo pulmonar predominante?",
+        "type": "select",
+        "options": [
+          {
+            "value": "aumentado",
+            "label": "Aumentado (hiperfluxo)"
+          },
+          {
+            "value": "diminuido",
+            "label": "Diminuído (restritivo)"
+          },
+          {
+            "value": "balanceado",
+            "label": "Balanceado"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido"
+          }
+        ]
+      },
+      {
+        "id": "canal_arterial_pervio",
+        "label": "O canal arterial está pérvio?",
+        "type": "boolean"
+      },
+      {
+        "id": "em_uso_prostaglandina",
+        "label": "O paciente está em manutenção farmacológica da permeabilidade do canal arterial?",
+        "type": "boolean"
+      },
+      {
+        "id": "saturacao_o2_percentual",
+        "label": "Qual a saturação periférica de oxigênio atual (%)?",
+        "type": "number"
+      },
+      {
+        "id": "sinais_descompensacao_aguda",
+        "label": "Há sinais agudos de descompensação?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "cianose_progressiva",
+            "label": "Cianose progressiva"
+          },
+          {
+            "value": "taquipneia_importante",
+            "label": "Taquipneia importante"
+          },
+          {
+            "value": "dificuldade_alimentar_com_sudorese",
+            "label": "Dificuldade alimentar com sudorese"
+          },
+          {
+            "value": "letargia_ou_hiporresponsividade",
+            "label": "Letargia ou hiporresponsividade"
+          },
+          {
+            "value": "edema_ou_ganho_ponderal_rapido",
+            "label": "Edema ou ganho ponderal rápido"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "classe_funcional_ross",
+        "label": "Qual a classe funcional (Ross)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ross_i",
+            "label": "Ross I"
+          },
+          {
+            "value": "ross_ii",
+            "label": "Ross II"
+          },
+          {
+            "value": "ross_iii",
+            "label": "Ross III"
+          },
+          {
+            "value": "ross_iv",
+            "label": "Ross IV"
+          }
+        ]
+      },
+      {
+        "id": "funcao_ventricular_eco",
+        "label": "Como está a função ventricular sistêmica no ecocardiograma mais recente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "disfuncao_leve",
+            "label": "Disfunção leve"
+          },
+          {
+            "value": "disfuncao_moderada_grave",
+            "label": "Disfunção moderada a grave"
+          },
+          {
+            "value": "nao_avaliada_recentemente",
+            "label": "Não avaliada recentemente"
+          }
+        ]
+      },
+      {
+        "id": "arritmia_documentada",
+        "label": "Há arritmia documentada?",
+        "type": "boolean"
+      },
+      {
+        "id": "edema_ou_ascite",
+        "label": "Há edema ou ascite?",
+        "type": "boolean"
+      },
+      {
+        "id": "derrame_pleural",
+        "label": "Há derrame pleural?",
+        "type": "boolean"
+      },
+      {
+        "id": "diarreia_cronica_ou_perda_proteica",
+        "label": "Há diarreia crônica ou sinais de perda proteica?",
+        "type": "boolean"
+      },
+      {
+        "id": "consulta_cardiologica_em_atraso",
+        "label": "O seguimento cardiológico está em atraso em relação ao previsto?",
+        "type": "boolean"
+      },
+      {
+        "id": "anticoagulacao_ou_antiagregacao_atual",
+        "label": "O paciente está em uso de terapia antitrombótica atualmente?",
+        "type": "boolean"
+      },
+      {
+        "id": "saturacao_alvo_atingida",
+        "label": "A saturação alvo definida pela equipe cirúrgica está sendo atingida?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "descompensacao_aguda_geral",
+        "priority": 95,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "cianose_progressiva"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "letargia_ou_hiporresponsividade"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Cianose progressiva ou letargia em paciente com atresia tricúspide, sugerindo descompensação hemodinâmica aguda"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para atendimento de emergência com contato prévio à equipe de cardiologia"
+          ]
+        }
+      },
+      {
+        "id": "dessaturacao_critica",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "saturacao_o2_percentual",
+              "op": "lt",
+              "value": 70
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Saturação periférica de oxigênio criticamente baixa"
+          ],
+          "suggested_tests": [
+            "Gasometria arterial",
+            "Ecocardiograma urgente"
+          ]
+        }
+      },
+      {
+        "id": "canal_dependente_sem_suporte",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pre_cirurgico"
+            },
+            {
+              "field": "em_uso_prostaglandina",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Circulação canal-dependente sem manutenção farmacológica documentada do canal arterial antes da cirurgia paliativa inicial"
+          ],
+          "missing_information": [
+            "Confirmar com a equipe assistente se há manutenção da permeabilidade do canal arterial até a estabilização cirúrgica"
+          ]
+        }
+      },
+      {
+        "id": "taquipneia_dificuldade_alimentar",
+        "priority": 80,
+        "when": {
+          "any": [
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "taquipneia_importante"
+            },
+            {
+              "field": "sinais_descompensacao_aguda",
+              "op": "contains",
+              "value": "dificuldade_alimentar_com_sudorese"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Sinais compatíveis com sobrecarga de volume ou insuficiência cardíaca em fase paliativa"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma",
+            "Radiografia de tórax"
+          ]
+        }
+      },
+      {
+        "id": "edema_ascite_pos_fontan",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pos_fontan"
+            },
+            {
+              "field": "edema_ou_ascite",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Enteropatia perdedora de proteínas",
+            "Disfunção da via de Fontan"
+          ],
+          "suggested_tests": [
+            "Dosagem de proteínas e albumina séricas",
+            "Ecocardiograma com avaliação da via de Fontan"
+          ]
+        }
+      },
+      {
+        "id": "derrame_pleural_pos_fontan",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pos_fontan"
+            },
+            {
+              "field": "derrame_pleural",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Complicação da fisiologia de Fontan",
+            "Bronquite plástica associada"
+          ],
+          "suggested_tests": [
+            "Radiografia de tórax",
+            "Ecocardiograma"
+          ]
+        }
+      },
+      {
+        "id": "diarreia_cronica_pos_fontan",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pos_fontan"
+            },
+            {
+              "field": "diarreia_cronica_ou_perda_proteica",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Enteropatia perdedora de proteínas"
+          ],
+          "suggested_tests": [
+            "Alfa-1-antitripsina fecal",
+            "Proteínas totais e albumina séricas"
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_ventricular_moderada_grave",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_ventricular_eco",
+              "op": "eq",
+              "value": "disfuncao_moderada_grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Falência da fisiologia de ventrículo único"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação detalhada de função sistólica",
+            "Avaliação clínica especializada em cardiopatias congênitas complexas"
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_ventricular_leve",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "funcao_ventricular_eco",
+              "op": "eq",
+              "value": "disfuncao_leve"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção ventricular leve requer acompanhamento mais próximo em fisiologia de ventrículo único"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma de reavaliação em intervalo reduzido"
+          ]
+        }
+      },
+      {
+        "id": "arritmia_pos_fontan",
+        "priority": 84,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_documentada",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pos_fontan"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Flutter atrial",
+            "Taquicardia atrial reentrante"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma",
+            "Holter de 24 horas"
+          ]
+        }
+      },
+      {
+        "id": "sem_antitrombotico_pos_fontan",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "eq",
+              "value": "pos_fontan"
+            },
+            {
+              "field": "anticoagulacao_ou_antiagregacao_atual",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Confirmar com a equipe assistente o esquema antitrombótico vigente e o motivo de sua eventual suspensão"
+          ],
+          "red_flags": [
+            "Ausência de terapia antitrombótica documentada em paciente pós-Fontan, fase de maior risco tromboembólico"
+          ]
+        }
+      },
+      {
+        "id": "saturacao_alvo_nao_atingida",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "saturacao_alvo_atingida",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "estagio_cirurgico_atual",
+              "op": "in",
+              "value": [
+                "bt_shunt_ou_banda",
+                "pos_glenn"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Saturação abaixo da meta esperada para a fase cirúrgica atual"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma para avaliar patência da derivação ou anastomose cavopulmonar"
+          ]
+        }
+      },
+      {
+        "id": "atraso_seguimento_cardiologico",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "consulta_cardiologica_em_atraso",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Agendar reavaliação cardiológica o mais breve possível para retomar o cronograma de seguimento"
+          ],
+          "messages": [
+            "O seguimento cardiológico regular é essencial para detecção precoce de complicações tardias em fisiologia de ventrículo único"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Neonato com atresia tricúspide e circulação sistêmica ou pulmonar dependente de canal arterial",
+      "Lactente em fase pré-Glenn com fluxo pulmonar excessivo (congestão) ou insuficiente (shunt sistêmico-pulmonar restritivo ou ocluído)",
+      "Criança pós-Glenn bidirecional aguardando o estágio de Fontan",
+      "Adolescente ou adulto pós-Fontan com risco de complicações tardias (enteropatia perdedora de proteína, arritmia atrial, disfunção hepática associada a Fontan)",
+      "Gestante com fisiologia de Fontan prévia (circulação univentricular paliada)",
+      "Paciente com atresia tricúspide associada a transposição das grandes artérias"
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "tronco-arterial-comum",

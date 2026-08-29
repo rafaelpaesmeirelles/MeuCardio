@@ -31,7 +31,21 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 29/08/2026: ficha
+        # atresia-tricuspide passou de completeness=basico para completo.
+        # Fica pendente_revisao (não "revisado") até decisão editorial
+        # explícita — mantido aqui apenas para satisfazer a semântica de
+        # exceção usada por test_disease_fragments_canonical.py
+        # (PENDENTES_DOENCAS). O gate deste próprio arquivo
+        # (test_manifestos_canonicos_so_tem_pendencias_explicitamente_
+        # aprovadas_para_rc) exige status=="revisado" e portanto
+        # CONTINUARÁ reportando esta ficha como pendência — comportamento
+        # esperado e correto pela política vigente desde 28/08/2026.
+        "atresia-tricuspide",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
