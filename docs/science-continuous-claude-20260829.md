@@ -639,3 +639,21 @@ sequenciamento, "não usar os 4 pilares da ICFEr" na amiloidose). Despachado
 como checklist de 10 itens (agente aee932a13ee2f31a9).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 26 — concluído (1 commit, SHA 7d254034) — total 52 commits
+
+- checklist `algoritmo-diagnostico-da-amiloidose-cardiaca-cintilografia-escore-de-perugini-e-biopsia`
+  — 10 itens, 12 fontes. Gillmore 2016 (PMID 27143678, VPP 100%), Bokhari
+  2013 (PMID 23400849, H/CL). Rigor: 2 lacunas declaradas explicitamente
+  (descrição de graus 1/2 de Perugini, formulação mecanística sem citação
+  literal de guideline).
+
+## Lote 27 (em andamento, 1 agente)
+
+Cluster Chagas em Cardiomiopatias (9 itens): verbete geral já cobre forma
+indeterminada/Holter, mas RM cardíaca (fibrose/edema/trombo), periodicidade
+de ECG e anticoagulação em trombo mural confirmados sem host — fonte
+brasileira priorizada (doença endêmica no Brasil). Despachado (agente
+a6f8173cbd84a6f3f).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
