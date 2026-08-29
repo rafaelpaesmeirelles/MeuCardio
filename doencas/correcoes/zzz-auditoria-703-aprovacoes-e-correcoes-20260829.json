@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "obesidade-e-coracao",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão científica independente concluída na auditoria #703 da janela 2026-08-28 16:06:46Z a 2026-08-29 04:06:46Z; fontes, segurança, taxonomia e vínculos revisados. Publicação autorizada no release #708, condicionada aos gates finais.",
+      "summary": "Obesidade é fator de risco cardiovascular e modificador importante de hipertensão, diabetes tipo 2, fibrilação atrial e insuficiência cardíaca. A evidência terapêutica deve ser interpretada por população e intervenção: no SELECT, semaglutida 2,4 mg reduziu eventos cardiovasculares maiores em pessoas com sobrepeso/obesidade, doença cardiovascular estabelecida e sem diabetes; no STEP-HFpEF, semaglutida melhorou sintomas, função e peso em ICFEp relacionada à obesidade; no SUMMIT, tirzepatida melhorou desfechos clínicos e estado de saúde em ICFEp com obesidade. Esses resultados não devem ser extrapolados como efeito de classe universal nem como indicação automática para toda pessoa com obesidade."
+    }
+  },
+  {
+    "slug": "insuficiencia-mitral",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; conteúdo valvar, referências e Tudo com Tudo revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "bloqueio-atrioventricular",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703. Indicação de marca-passo em Mobitz II, bloqueio AV avançado ou completo deve ser interpretada após excluir causas reversíveis ou fisiológicas e conforme contexto clínico/diretriz. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "estenose-mitral",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; conteúdo valvar, referências e Tudo com Tudo revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "cardiomiopatia-dilatada",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; etiologia, estratificação arrítmica, referências e vínculos revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "apneia-do-sono-e-coracao",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão científica independente concluída na auditoria #703. Atualizada a interpretação de ASV após AASM 2025: o sinal de dano do SERVE-HF não deve ser convertido em proibição universal para todos os dispositivos/cenários. Publicação autorizada no release #708, condicionada aos gates finais.",
+      "summary": "A apneia do sono inclui fenótipos obstrutivo e central com implicações cardiovasculares distintas. A apneia obstrutiva associa-se a obesidade, hipertensão resistente e fibrilação atrial; a apneia central/respiração de Cheyne-Stokes é frequente na insuficiência cardíaca. O CPAP melhora sintomas e parâmetros respiratórios na AOS, mas não deve ser apresentado como estratégia isolada comprovada para reduzir eventos cardiovasculares duros. Na apneia central com insuficiência cardíaca e fração de ejeção reduzida, o sinal de excesso de mortalidade do SERVE-HF permanece relevante para o dispositivo/algoritmo estudado, porém a diretriz AASM 2025 passou a recomendar ASV de forma condicional e individualizada; em ICFEr, seu uso deve ficar restrito a centros experientes, com decisão compartilhada e monitorização próxima.",
+      "treatment_summary": "O manejo deve começar pela identificação do fenótipo e pela otimização da doença de base. Na apneia obstrutiva sintomática, CPAP é tratamento de primeira linha para melhora de sonolência, qualidade do sono e controle respiratório; o benefício sobre eventos cardiovasculares duros não é estabelecido de forma uniforme. Na apneia central associada à insuficiência cardíaca, otimizar terapia da insuficiência cardíaca e estado volêmico é prioritário. O SERVE-HF identificou aumento de mortalidade com um algoritmo/dispositivo de ASV em ICFEr e apneia central predominante, mas evidência e tecnologia posteriores modificaram a interpretação: a AASM 2025 sugere ASV de forma condicional, com baixa certeza, e recomenda que pacientes com ICFEr sejam tratados apenas em centros experientes, após decisão compartilhada voltada a sintomas/qualidade de vida e com acompanhamento estreito. Outras opções dependem do fenótipo e da avaliação especializada."
+    },
+    "append": {
+      "source_refs": ["Badr MS, Khayat RN, Allam JS, et al. Treatment of central sleep apnea in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2025;21(12). DOI: 10.5664/jcsm.11858."],
+      "source_urls": ["https://doi.org/10.5664/jcsm.11858"]
+    },
+    "replace": [
+      {"old": "Evitar prescrição de servoventilação adaptativa em pacientes com apneia central predominante e insuficiência cardíaca com fração de ejeção reduzida", "new": "Não iniciar servoventilação adaptativa de rotina na ICFEr sem avaliação especializada; quando considerada, restringir a centro experiente, com decisão compartilhada e monitorização próxima"},
+      {"old": "Suspender ou não iniciar servoventilação adaptativa em paciente internado com ICFEr e apneia central predominante", "new": "Reavaliar servoventilação adaptativa em paciente com ICFEr e apneia central predominante com equipe experiente, considerando estabilidade clínica, dispositivo/algoritmo e objetivos sintomáticos"},
+      {"old": "Paciente com apneia central do sono grave e refratária, avaliado para estimulação transvenosa do nervo frênico quando a servoventilação adaptativa é contraindicada", "new": "Paciente com apneia central do sono grave e refratária, avaliado para estimulação transvenosa do nervo frênico quando a servoventilação adaptativa não for apropriada, tolerada ou disponível após avaliação especializada"}
+    ],
+    "assistant_rules": {
+      "asv_contraindicada_icfer_apneia_central": {
+        "add": {
+          "risk": "prioritario",
+          "supporting": ["ICFEr com apneia central em uso ou avaliação para ASV exige revisão especializada por causa do sinal de dano do SERVE-HF e das recomendações atualizadas da AASM 2025."],
+          "opposing": ["Evitar decisão automática de manter ou suspender ASV apenas pela FEVE; a recomendação atual é condicional e depende do dispositivo, objetivos clínicos, experiência do centro e decisão compartilhada."],
+          "messages": ["Reavaliar em centro com experiência em insuficiência cardíaca e medicina do sono, com monitorização e seguimento próximos."]
+        }
+      }
+    }
+  },
+  {
+    "slug": "sindrome-cardiorrenal",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; classificação cardiorrenal, descongestão, função renal e Tudo com Tudo revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "cardiomiopatia-chagasica",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; diagnóstico, risco arrítmico/tromboembólico, fontes e vínculos revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "minoca-e-disseccao-espontanea-arteria-coronaria",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão científica independente concluída na auditoria #703. Correção editorial aplicada: MINOCA permanece diagnóstico de trabalho; SCAD é entidade relacionada, mas não sinônima; miocardite, Takotsubo e lesão miocárdica sistêmica são diagnósticos alternativos que excluem o rótulo final de MINOCA. Publicação autorizada no release #708, condicionada aos gates finais.",
+      "summary": "MINOCA é um diagnóstico de trabalho definido por critérios de infarto agudo do miocárdio, ausência de estenose coronariana obstrutiva (≥50%) e ausência inicial de uma explicação alternativa evidente. A investigação subsequente deve estabelecer o mecanismo isquêmico — ruptura/erosão de placa não obstrutiva, vasoespasmo epicárdico ou microvascular, embolia/trombose coronariana ou, em alguns casos, dissecção espontânea de artéria coronária (SCAD). Miocardite, síndrome de Takotsubo e causas sistêmicas de lesão miocárdica são diagnósticos alternativos que, quando confirmados, retiram o rótulo final de MINOCA. SCAD é entidade própria e pode ocorrer com ou sem obstrução ≥50%; portanto nem toda SCAD é MINOCA. Quando SCAD estável é confirmada, a estratégia conservadora costuma ser preferida, reservando revascularização para isquemia persistente, instabilidade, tronco esquerdo ou outros cenários de alto risco."
+    }
+  },
+  {
+    "slug": "cardiomiopatia-de-takotsubo",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703. A categoria interna 'cardiomiopatia' é mantida para navegação/compatibilidade do catálogo e não implica classificar Takotsubo como cardiomiopatia primária na taxonomia contemporânea. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "cardiotoxicidade-por-cocaina-e-estimulantes",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão científica independente concluída na auditoria #703. Corrigido o risco de transformar a hipótese de 'alfa sem oposição' em contraindicação universal: a restrição é centrada na intoxicação aguda com sinais simpaticomiméticos e a evidência clínica permanece limitada/conflitante. Publicação autorizada no release #708, condicionada aos gates finais.",
+      "summary": "A cocaína e outros estimulantes podem produzir síndrome simpaticomimética, vasoconstrição coronariana, trombose, arritmias por bloqueio de canais iônicos e cardiomiopatia associada ao uso crônico. Na dor torácica/ACS, a exposição à cocaína não substitui a investigação padrão. Em pacientes com sinais de intoxicação aguda, a diretriz AHA/ACC recomenda evitar betabloqueadores na fase aguda enquanto se controla o estado simpaticomimético e o vasoespasmo; fora desse cenário, não existe proibição automática baseada apenas em uso recente. Metanálises observacionais de dor torácica associada à cocaína não demonstraram aumento de infarto ou mortalidade com betabloqueadores, portanto a hipótese de 'alfa sem oposição' não deve ser apresentada como dano clínico universal comprovado.",
+      "treatment_summary": "Na cardiotoxicidade aguda por cocaína/estimulantes, a prioridade é estabilização, investigação padrão de síndrome coronariana quando indicada e controle da síndrome simpaticomimética/vasoespasmo. Benzodiazepínicos e vasodilatadores podem ser usados conforme o cenário clínico e protocolos institucionais. Em ACS com sinais de intoxicação aguda, a recomendação AHA/ACC é não administrar betabloqueadores durante a fase de intoxicação por preocupação com potencialização de espasmo coronariano; essa recomendação tem baixo nível de evidência e não deve ser extrapolada para uma contraindicação permanente em todo paciente com uso recente ou remoto. Estudos observacionais e metanálises não demonstraram maior risco de infarto ou mortalidade com betabloqueadores em dor torácica associada à cocaína, reforçando a individualização após controle da fase simpaticomimética. QRS alargado, QT prolongado, arritmia ventricular, isquemia persistente, hipertermia e instabilidade hemodinâmica exigem manejo emergencial dirigido ao mecanismo e protocolos toxicológicos/cardiológicos. Na cardiomiopatia crônica associada a estimulantes, o tratamento segue as diretrizes de insuficiência cardíaca e a cessação do uso é componente central."
+    },
+    "append": {
+      "source_refs": [
+        "Amsterdam EA, Wenger NK, Brindis RG, et al. 2014 AHA/ACC Guideline for the Management of Patients With Non-ST-Elevation Acute Coronary Syndromes — seção Cocaine and Methamphetamine Users. Circulation. 2014. DOI: 10.1161/CIR.0000000000000134.",
+        "Pham D, Addison D, Kayani W, et al. Outcomes of beta blocker use in cocaine-associated chest pain: a meta-analysis. Emerg Med J. 2018. PMID: 29921621.",
+        "Lo KB, Virk HUH, Lakhter V, et al. Clinical Outcomes After Treatment of Cocaine-Induced Chest Pain with Beta-Blockers: A Systematic Review and Meta-Analysis. Am J Med. 2019. PMID: 30562494."
+      ],
+      "source_urls": ["https://doi.org/10.1161/CIR.0000000000000134", "https://pubmed.ncbi.nlm.nih.gov/29921621/", "https://pubmed.ncbi.nlm.nih.gov/30562494/"]
+    },
+    "replace": [
+      {"old": "Uso de betabloqueador não seletivo/puro isolado durante intoxicação aguda por cocaína ou estimulante — pode piorar o vasoespasmo coronariano por deixar o estímulo alfa-adrenérgico sem oposição", "new": "Uso de betabloqueador durante intoxicação aguda com sinais simpaticomiméticos deve ser evitado conforme AHA/ACC até controle do quadro; a evidência clínica de dano por 'alfa sem oposição' é limitada e não sustenta proibição automática fora da intoxicação aguda"},
+      {"old": "Evitar betabloqueador não seletivo/puro isolado nessa fase aguda, pelo risco de piorar o vasoespasmo coronariano por bloqueio beta sem oposição alfa-adrenérgica; quando é necessário controle adicional de frequência ou pressão, considerar beta/alfa-bloqueador combinado como opção mais estudada dentro da classe", "new": "Durante intoxicação aguda com sinais simpaticomiméticos, evitar administração reflexa de betabloqueador antes do controle do quadro e da vasodilatação; após estabilização, individualizar a necessidade de betabloqueio conforme indicação cardiovascular e contexto clínico"}
+    ],
+    "assistant_rules": {
+      "betabloqueador_puro_contraindicado_na_intoxicacao_aguda": {
+        "add": {
+          "risk": "prioritario",
+          "opposing": ["Betabloqueador não é terapia de primeira linha durante intoxicação aguda com sinais simpaticomiméticos; a recomendação de evitar uso nessa fase não equivale a contraindicação permanente em usuários de cocaína."],
+          "messages": ["Priorizar controle da intoxicação e do vasoespasmo; depois da estabilização, reavaliar individualmente a indicação de betabloqueador. Metanálises observacionais não demonstraram aumento de IAM ou mortalidade em dor torácica associada à cocaína."]
+        }
+      },
+      "betabloqueador_combinado_alternativa_documentada": {
+        "add": {"supporting": ["Bloqueio alfa/beta combinado tem racional fisiológico e experiência clínica, mas a evidência comparativa é limitada; não deve ser apresentado como regra universal nem substituir o manejo da intoxicação/vasoespasmo."]}
+      }
+    }
+  },
+  {
+    "slug": "amiloidose-cardiaca-cadeia-leve",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703. Confirmada separação de escopo em relação à ATTR: etiologia plasmocitária, algoritmo diagnóstico e tratamento são distintos; overlap documental legítimo foi mantido. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "insuficiencia-tricuspide",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; gravidade, etiologia primária/secundária, intervenção transcateter/cirúrgica e referências revisadas. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "emergencia-hipertensiva",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; distinção emergência versus elevação grave sem lesão aguda de órgão-alvo, síndromes-alvo e segurança do assistente revisadas. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "cteph",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; diagnóstico de CTEPH, imagem/hemodinâmica, endarterectomia/angioplastia/terapia especializada e referências revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "protese-valvar-mecanica",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão científica independente concluída na auditoria #703. Correção editorial aplicada: dupla antiagregação foi explicitada como inadequada para substituir AVK na prevenção da trombose da prótese, sem criar proibição absoluta quando houver indicação coronariana independente. Publicação autorizada no release #708, condicionada aos gates finais.",
+      "summary": "Prótese valvar mecânica oferece alta durabilidade, mas exige anticoagulação vitalícia com antagonista da vitamina K, com alvo de INR individualizado conforme posição, tipo de prótese e fatores trombóticos. Anticoagulantes orais diretos não devem substituir AVK em próteses mecânicas; antiagregação plaquetária isolada ou dupla também não substitui a anticoagulação da prótese, embora antiagregantes possam ser necessários por outra indicação cardiovascular, com avaliação cuidadosa do risco hemorrágico. Trombose de prótese mecânica exige confirmação por imagem e diferenciação de pannus; na trombose obstrutiva, a decisão entre cirurgia e fibrinólise de baixa dose/infusão lenta deve ser individualizada pela Heart Team conforme estabilidade, carga trombótica, posição valvar, contraindicações e experiência do centro."
+    }
+  },
+  {
+    "slug": "torsades-de-pointes-qt-longo-adquirido",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; diferenciação de QT longo adquirido/congênito, Tisdale, correção de precipitantes e manejo emergencial da TV polimórfica revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "insuficiencia-aortica",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; insuficiência aórtica crônica/aguda, critérios de intervenção, imagem e referências revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "estenose-aortica",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; gravidade, baixo fluxo/baixo gradiente, decisão TAVI/cirurgia e referências revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "sarcoidose-cardiaca",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; imagem multimodal, risco arrítmico, diagnóstico diferencial e referências revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "cardiomiopatia-arritmogenica",
+    "set": {"review_status": "revisado", "review_note": "Revisão científica independente concluída na auditoria #703; critérios diagnósticos, genética, exercício, estratificação de morte súbita e referências revisados. Publicação autorizada no release #708, condicionada aos gates finais."}
+  },
+  {
+    "slug": "persistencia-canal-arterial",
+    "set": {"review_status": "revisado", "version": 3, "review_note": "Auditoria #703: vínculos Tudo com Tudo do PR #679 revisados e aprovados; nenhum conteúdo clínico pré-existente reescrito."},
+    "append": {"related_document_slugs": ["persistencia-do-canal-arterial-no-adulto-criterios-hemodinamicos-de-fechamento-esc-2020", "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020", "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente", "fluxograma-colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente", "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"]}
+  },
+  {
+    "slug": "atresia-pulmonar",
+    "set": {"review_status": "revisado", "version": 3, "review_note": "Auditoria #703: vínculos Tudo com Tudo do PR #680 revisados; aprovação anterior não é usada para mascarar o novo delta, que fica explicitamente auditado neste release."},
+    "append": {"related_document_slugs": ["tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica", "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente", "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso", "conduto-ventriculo-direito-arteria-pulmonar-seguimento-reintervencao-e-valva-transcateter", "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"]}
+  },
+  {
+    "slug": "polifarmacia-e-desprecricao-cardiovascular",
+    "set": {"review_status": "revisado", "version": 2, "review_note": "Auditoria #703: sincronização base↔correção e vínculos Tudo com Tudo do PR #693 revisados; sem criação de registro novo."},
+    "append": {"related_document_slugs": ["fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida", "desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia-consenso-cientifico-aha-2026", "polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter"]}
+  },
+  {
+    "slug": "avaliacao-cardiovascular-pre-concepcional",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Auditoria #703: reconciliados os vínculos do patch canônico já publicado (#648) com o delta do PR #694, preservando apenas relações centrais e não duplicadas.",
+      "related_document_slugs": ["doenca-cardiovascular-e-gestacao-esc-2025", "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025", "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025", "escores-de-risco-materno-carpreg-carpreg-ii-e-zahara", "anticoncepcao-na-mulher-com-cardiopatia-criterios-de-elegibilidade-da-oms-posicionamento-sbc-2020", "preditores-de-recuperacao-ventricular-e-aconselhamento-pre-concepcional-na-cardiomiopatia-periparto"]
+    }
+  },
+  {
+    "slug": "parada-cardiorrespiratoria-e-morte-subita-abortada",
+    "set": {"review_status": "revisado", "review_note": "Auditoria #703: três vínculos adicionais do PR #705 aprovados por complementaridade (neuroprognóstico, coronariografia pós-PCR sem supra e ECPR)."},
+    "append": {"related_document_slugs": ["neuroprognostico-multimodal-pos-parada-cardiorrespiratoria-algoritmo-erc-esicm-2021-e-a-atualizacao-aha-2025", "coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk", "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception"]}
+  },
+  {
+    "slug": "embolia-pulmonar-aguda",
+    "set": {"review_status": "revisado", "review_note": "Auditoria #703: cinco vínculos adicionais do PR #706 aprovados, cobrindo estratificação, trombólise, trombectomia, terapia por cateter e filtro de veia cava sem reescrever conduta canônica."},
+    "append": {"related_document_slugs": ["fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise", "trombolise-sistemica-em-dose-reduzida-no-tep-de-risco-intermediario-o-ensaio-mopett", "trombectomia-mecanica-versus-anticoagulacao-isolada-no-tep-de-risco-intermediario-alto-storm-pe", "terapia-dirigida-por-cateter-no-tep-peerless-e-o-que-ainda-nao-esta-respondido", "filtro-de-veia-cava-inferior-recuperavel-no-tep-agudo-o-ensaio-prepic2"]}
+  }
+]

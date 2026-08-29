@@ -1,0 +1,776 @@
+[
+  {
+    "slug": "protese-valvar-mecanica",
+    "name": "Prótese valvar mecânica",
+    "aliases": [
+      "Válvula cardíaca mecânica",
+      "Válvula do coração mecânica",
+      "Prótese mecânica cardíaca",
+      "Mechanical heart valve (MHV)",
+      "Trombose de prótese valvar mecânica",
+      "Anticoagulação em válvula mecânica",
+      "Prosthetic valve thrombosis (PVT) em prótese mecânica"
+    ],
+    "area": "geral",
+    "category": "valvopatia_e_anticoagulacao",
+    "subtype": "protese_mecanica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Prótese valvar mecânica é a opção de substituição valvar escolhida quando a durabilidade estrutural de longo prazo pesa mais do que o custo de uma anticoagulação oral contínua obrigatória com antagonista de vitamina K (AVK) — ao contrário da bioprótese, que degenera estruturalmente ao longo dos anos mas dispensa anticoagulação crônica na maioria dos casos. A decisão entre mecânica e biológica, segundo a diretriz ESC/EACTS 2025, não é uma equação de idade isolada: pondera desejo do paciente informado (Classe I em ambos os sentidos), contraindicação a anticoagulação de longo prazo, planejamento gestacional, já ter prótese mecânica em outra posição, e só então o corte etário por posição valvar (em torno de 60 anos para posição aórtica e 65 anos para posição mitral, com zona de decisão individualizada nos anos ao redor desses cortes). Uma vez implantada a prótese mecânica, a anticoagulação com AVK — com alvo de INR individualizado conforme o tipo/geração da prótese, a posição valvar e a presença de fator pró-trombótico adicional — é obrigatória e vitalícia; DOAC e dupla antiagregação são formalmente contraindicados nessa população, achado estabelecido pelo ensaio randomizado RE-ALIGN, interrompido precocemente por excesso simultâneo de acidente vascular cerebral isquêmico e de sangramento maior no grupo dabigatrana. A trombose de prótese mecânica — obstrutiva ou não obstrutiva — é uma emergência potencial mesmo quando o paciente parece clinicamente estável, e a decisão entre fibrinólise em baixa dose/infusão lenta e reoperação exige avaliação pela Heart Team, integrando classe funcional, tamanho do trombo à ecocardiografia transesofágica, lado da prótese (esquerdo versus direito) e risco cirúrgico individual — sem que nenhuma das duas estratégias seja isenta de risco sério.",
+    "epidemiology": "Sem anticoagulação, a taxa de trombose cardioembólica/valvar é substancial: cerca de 12% ao ano para prótese mecânica aórtica de primeira geração e 22% ao ano para prótese mecânica mitral de primeira geração, número que por si só justifica por que a anticoagulação com AVK não é negociável nessa população, mesmo sendo trabalhosa. A coorte histórica de Roudaut et al. (263 episódios de obstrução protética) encontrou, comparando cirurgia com fibrinólise: mortalidade precoce semelhante entre as duas estratégias (10% em ambas), mas maior restauração hemodinâmica com cirurgia (89% vs. 70,9%) e muito menos episódio embólico (0,7% vs. 15%) e complicação total (11,1% vs. 25,2%) com cirurgia — dados que sustentaram décadas de preferência cirúrgica. O registro internacional PRO-TEE (107 pacientes, 14 centros, 1985-2001) tratados com fibrinólise documentou sucesso hemodinâmico em 85%, complicações em 17,8% e óbito em 5,6%, identificando como preditores independentes de complicação a área do trombo à ecocardiografia transesofágica (razão de chances 2,41 por incremento de 1 cm², IC95% 1,12-5,19) e AVC prévio (razão de chances 4,55, IC95% 1,35-15,38) — o corte de área de trombo <0,8 cm² segue citado na literatura como identificador de menor risco para tentar fibrinólise. A metanálise de Karthikeyan et al. (2013, 7 estudos observacionais, 690 episódios de trombose protética do lado esquerdo, 446 com cirurgia e 244 com fibrinólise) mostrou, a favor da cirurgia, menos sangramento maior (1,4% vs. 5%, p=0,046), menos tromboembolismo (1,6% vs. 16%, p<0,001) e menos recorrência de trombose (7,1% vs. 25,4%, p=0,013), sem diferença estatisticamente significativa em restauração da função valvar (86,5% vs. 69,7%) nem em mortalidade (13,5% vs. 9%). O primeiro ensaio randomizado no tema, o SAFE-PVT (Karthikeyan et al., 2025, 79 pacientes, centro único), comparou cirurgia urgente com fibrinólise em baixa dose/infusão lenta: resposta clínica completa na alta semelhante (71,8% vs. 67,5%; razão de chances 1,22, IC95% 0,47-3,19; p=0,689), mas o composto de morte/AVC/sangramento maior/embolia sistêmica foi mais frequente com cirurgia (28,2% vs. 7,5%; razão de chances 5,14, IC95% 1,28-20,59; p=0,021), com 7 mortes em 39 pacientes versus 1 em 40 — resultado pequeno e unicêntrico, mas que sustentou a mudança de recomendação da diretriz ESC/EACTS 2025 de uma resposta cirúrgica automática para decisão individualizada pela Heart Team. Já a mortalidade cirúrgica de urgência/emergência para trombose protética varia fortemente por classe funcional: cerca de 4% em NYHA I-III, subindo para 17,5% em NYHA IV (Roudaut et al., 2007) — várias vezes maior que a de cirurgia valvar eletiva contemporânea. Quanto ao anticoagulante oral direto, o ensaio RE-ALIGN (252 pacientes com prótese mecânica, randomizados 2:1 para dabigatrana ou varfarina) foi interrompido precocemente por excesso de eventos: AVC isquêmico ou não especificado em 9 pacientes (5%) com dabigatrana contra nenhum caso com varfarina, e sangramento maior em 7 pacientes (4%) com dabigatrana contra 2 (2%) com varfarina — todos os sangramentos maiores foram pericárdicos, concentrados no pós-operatório recente.",
+    "presentation": [
+      "Assintomático, em seguimento ambulatorial crônico de rotina com controle periódico de INR, na ampla maioria do tempo de vida útil da prótese",
+      "Dispneia recente, de início súbito ou progressivo, em portador de prótese valvar — sinal cardinal que deve levantar suspeita imediata de trombose valvar, mesmo sem outros achados",
+      "Evento embólico sistêmico (AVC, isquemia de membro, embolia visceral) como forma de apresentação, por vezes sem dispneia associada, sobretudo na trombose não obstrutiva",
+      "Síncope ou pré-síncope associada a obstrução protética grave com baixo débito",
+      "Edema pulmonar agudo ou choque cardiogênico, na trombose obstrutiva grave com repercussão hemodinâmica",
+      "Ausculta com alteração ou abolição do clique metálico habitual da prótese mecânica, achado clínico simples mas facilmente negligenciado",
+      "Sangramento (equimose, epistaxe, hematúria, sangramento gastrointestinal) relacionado a excesso de anticoagulação com AVK, motivando ajuste de dose sem suspensão indevida",
+      "Achado incidental de gradiente elevado ou mobilidade reduzida de folheto/disco em ecocardiograma de rotina, sem sintoma correspondente — trombose não obstrutiva subclínica",
+      "Palpitação ou arritmia nova em paciente com prótese mecânica, podendo sinalizar disfunção protética ou descompensação hemodinâmica associada",
+      "Sinais de endocardite protética sobreposta (febre, novo sopro, fenômenos embólicos) em paciente com prótese mecânica — diagnóstico diferencial que exige investigação própria, distinta de trombose isolada"
+    ],
+    "diagnostic_approach": {
+      "confirmacao_da_trombose_valvar": "Ecocardiograma transtorácico (ETT) e transesofágico (ETE) são a base da confirmação diagnóstica diante de suspeita de trombose valvar (dispneia recente ou evento embólico em portador de prótese). Cinefluoroscopia e tomografia computadorizada cardíaca (TCC), quando disponíveis prontamente, complementam a avaliação — a fluoroscopia é particularmente útil para avaliar a mobilidade dos folhetos/disco da prótese mecânica, e a TCC (idealmente 4D) ajuda a diferenciar trombo de pannus, distinção clinicamente decisiva porque pannus (tecido fibroso de encapsulamento crônico) responde mal à fibrinólise e tende a exigir reoperação, enquanto trombo agudo pode responder a estratégia farmacológica.",
+      "obstrutiva_versus_nao_obstrutiva": "A primeira pergunta que organiza toda a decisão subsequente é se a trombose é obstrutiva (redução importante da mobilidade dos folhetos/disco, gradiente elevado, potencial para edema pulmonar, baixo débito, choque, síncope, arritmia ou tromboembolismo) ou não obstrutiva (achado incidental ou associado a evento embólico, com gradiente preservado ou apenas discretamente alterado). A gravidade hemodinâmica muda completamente a urgência da investigação e da decisão terapêutica.",
+      "avaliacao_para_escolha_entre_fibrinolise_e_cirurgia": "Quando a trombose obstrutiva causa insuficiência cardíaca aguda NYHA III-IV, a diretriz ESC/EACTS 2025 exige avaliação imediata pela Heart Team para escolher entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B) — não há mais resposta automática de cirurgia para todo paciente grave, ao contrário da diretriz de 2021. A escolha entre as duas estratégias integra: classe funcional/estabilidade hemodinâmica (variável mais determinante segundo a literatura clássica de Roudaut et al.); tamanho do trombo à ETE, com o corte histórico de 0,8 cm² citado como referência de estratificação de risco de complicação da fibrinólise; lado da prótese — esquerda (mitral/aórtica) tradicionalmente favorece cirurgia quando viável, enquanto direita (tricúspide/pulmonar) tradicionalmente favorece fibrinólise pelo menor risco de embolia sistêmica de um êmbolo que, se deslocado, vai para a circulação pulmonar; contraindicações a trombolítico; risco cirúrgico individual; experiência do centro; e possibilidade de resgate cirúrgico. Para trombo não obstrutivo pequeno e sem repercussão, a conduta inicial não é nenhuma das duas estratégias de emergência, e sim intensificação da anticoagulação com reavaliação seriada por imagem; cirurgia deve ser considerada para trombo protético grande (maior que 10 mm) complicado por embolia ou persistente apesar de anticoagulação oral ótima (Classe IIa, Nível C).",
+      "escolha_de_protese_mecanica_versus_biologica_na_indicacao_inicial": "Antes mesmo de existir prótese implantada, a escolha do tipo de prótese na indicação inicial de troca valvar pondera, na ordem que a diretriz ESC/EACTS 2025 prioriza: preferência do paciente informado (Classe I em ambos os sentidos, mecânica ou biológica); contraindicação a anticoagulação oral de longo prazo (favorece biológica, Classe I); já ter prótese mecânica em outra posição (favorece nova prótese mecânica, Classe IIa); indicação clara de anticoagulação de longo prazo por outro motivo, como fibrilação atrial permanente (permite considerar mecânica, Classe IIb); planejamento de gestação (favorece biológica, Classe IIa); e só então, na ausência desses fatores, o corte etário por posição — abaixo de 60 anos (posição aórtica) ou 65 anos (posição mitral) favorece mecânica (Classe IIa), acima de 65 anos (aórtica) ou 70 anos (mitral) favorece biológica (Classe IIa), com zona intermediária de decisão individualizada nos anos entre esses cortes."
+    },
+    "differentials": [
+      "Pannus (tecido fibroso de encapsulamento crônico da prótese) — mimetiza trombose à imagem inicial, mas responde mal à fibrinólise e tende a exigir reoperação; a diferenciação por tomografia cardíaca é decisiva antes de escolher estratégia",
+      "Trombose de bioprótese — entidade com fisiopatologia e primeira linha de tratamento diferentes (farmacológica com AVK como primeira linha na bioprótese, cirúrgica/fibrinolítica na mecânica obstrutiva); não deve ser tratada com o mesmo algoritmo",
+      "Endocardite protética, precoce ou tardia — pode cursar com massa/vegetação que mimetiza trombo à ecocardiografia e exige investigação microbiológica própria, distinta da trombose isolada",
+      "Degeneração estrutural da prótese (mais típica de bioprótese, mas disco/folheto mecânico também pode ter falha mecânica primária, rara) — disfunção sem trombo documentado",
+      "Vazamento paravalvular (leak) — causa hemólise, sopro novo e por vezes insuficiência cardíaca, sem obstrução do orifício protético central",
+      "Discordância paciente-prótese (patient-prosthesis mismatch) — gradiente elevado por prótese pequena para a superfície corporal do paciente, sem trombo nem pannus",
+      "Endocardite infecciosa com vegetação sobre o anel da prótese, sem envolvimento do mecanismo de abertura/fechamento propriamente dito",
+      "Hemólise mecânica por turbulência de fluxo normal da prótese (achado esperado em algum grau, sobretudo em prótese mecânica) versus hemólise patológica associada a disfunção estrutural ou trombose"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico (ETT) com Doppler — avaliação inicial de gradiente, mobilidade de folheto/disco e repercussão hemodinâmica",
+      "Ecocardiograma transesofágico (ETE) — base da confirmação diagnóstica de trombose valvar e da medida do tamanho do trombo, variável central na decisão entre fibrinólise e cirurgia",
+      "Cinefluoroscopia — avaliação da mobilidade dos folhetos/disco da prótese mecânica quando disponível prontamente",
+      "Tomografia computadorizada cardíaca, idealmente 4D — diferenciação entre trombo e pannus, relevante para orientar a estratégia terapêutica",
+      "INR seriado e cálculo do tempo em faixa terapêutica — monitorização crônica obrigatória de quem usa antagonista de vitamina K por prótese mecânica",
+      "Hemograma e marcadores de hemólise (LDH, haptoglobina, bilirrubina indireta, esquizócitos) — investigação de disfunção protética ou hemólise excessiva",
+      "Ecocardiograma seriado de reavaliação — acompanhamento de resposta à intensificação de anticoagulação em trombo não obstrutivo pequeno tratado clinicamente",
+      "Investigação de causa de trombose (revisão de adesão à anticoagulação, tempo em faixa terapêutica recente, eventos intercorrentes) diante de qualquer episódio de trombose protética"
+    ],
+    "red_flags": [
+      "Trombose obstrutiva com insuficiência cardíaca aguda NYHA III-IV — exige avaliação imediata pela Heart Team para escolher entre nova troca valvar e fibrinólise em baixa dose/infusão lenta",
+      "Choque cardiogênico ou instabilidade hemodinâmica franca em portador de prótese mecânica com suspeita de trombose — emergência potencial mesmo quando o paciente parece inicialmente estável",
+      "Trombo não obstrutivo grande (maior que 10 mm) complicado por evento embólico ou persistente apesar de anticoagulação oral ótima — indicação para considerar cirurgia",
+      "Área de trombo maior que 0,8 cm² à ecocardiografia transesofágica e/ou AVC prévio — preditores independentes de complicação de estratégia fibrinolítica na literatura histórica (PRO-TEE)",
+      "Uso de DOAC ou dupla antiagregação como substituto de AVK em prótese mecânica — contraindicado (Classe III, Nível A); associado a excesso de AVC isquêmico no ensaio RE-ALIGN",
+      "Tratar trombose obstrutiva em paciente aparentemente estável como \"não urgente\" — o atraso na decisão entre cirurgia e fibrinólise piora desfecho mesmo sem instabilidade hemodinâmica franca no momento da avaliação inicial",
+      "Não distinguir trombo de pannus antes de escolher fibrinólise — pannus responde mal a trombolítico e a tentativa atrasa a reoperação necessária",
+      "Complicação tromboembólica maior apesar de INR documentado adequado e tempo em faixa terapêutica satisfatório — merece reavaliação de estratégia, não apenas reforço da adesão"
+    ],
+    "ambulatory_flow": [
+      "Confirmar e reforçar a obrigatoriedade de anticoagulação com antagonista de vitamina K vitalícia em todo portador de prótese mecânica, com alvo de INR individualizado conforme tipo/geração da prótese, posição valvar e presença de fator pró-trombótico adicional.",
+      "Investir em educação estruturada do paciente sobre anticoagulação oral — a diretriz ESC/EACTS 2025 recomenda essa educação como Classe I, Nível A, pela alta variabilidade intra e interpaciente do AVK, a janela terapêutica estreita e a interação com fármacos e alimentos.",
+      "Monitorizar o INR com a periodicidade definida pelo serviço responsável, calculando o tempo em faixa terapêutica ao longo do seguimento, não apenas o valor pontual do exame.",
+      "Nunca converter para anticoagulante oral direto ou dupla antiagregação \"para simplificar o seguimento\" mesmo diante de dificuldade real de controle de INR — o caminho correto é melhorar o tempo em faixa terapêutica, não trocar de classe de anticoagulante.",
+      "Diante de complicação tromboembólica maior apesar de INR adequado e tempo em faixa terapêutica satisfatório, considerar aumentar o alvo de INR em fração de unidade ou associar antiagregação em dose baixa (Classe IIa, Nível C) — não trocar para DOAC, que segue contraindicado nesse cenário.",
+      "Reavaliar periodicamente a prótese com ecocardiograma transtorácico, comparando gradiente e mobilidade de folheto/disco com o exame basal pós-implante.",
+      "Orientar explicitamente o paciente sobre sinais de alarme que exigem avaliação de emergência — dispneia nova, evento embólico focal, síncope — e não apenas sobre a rotina de controle de INR.",
+      "Em paciente com trombo não obstrutivo pequeno tratado clinicamente, programar ecocardiograma seriado até documentar resolução ou estabilidade.",
+      "Revisar interações medicamentosas e alimentares relevantes ao AVK a cada mudança de prescrição concomitante, dada a janela terapêutica estreita do fármaco.",
+      "Planejar com antecedência o manejo perioperatório de anticoagulação (interrupção, ponte, retomada) sempre que procedimento eletivo for necessário, remetendo ao protocolo específico de manejo perioperatório desta biblioteca."
+    ],
+    "emergency_flow": [
+      "Diante de dispneia recente ou evento embólico em portador de prótese mecânica, investigar imediatamente com ecocardiograma transtorácico e transesofágico, complementados por cinefluoroscopia ou tomografia cardíaca 4D quando disponíveis, para confirmar trombose obstrutiva ou não obstrutiva.",
+      "Em trombose obstrutiva com insuficiência cardíaca aguda NYHA III-IV, acionar avaliação imediata da Heart Team para decidir entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B) — a escolha depende de estabilidade hemodinâmica, contraindicações a trombolítico, risco de reoperação, extensão/localização do trombo, embolização, experiência do centro e possibilidade de resgate cirúrgico.",
+      "Em trombose obstrutiva do lado esquerdo (mitral/aórtica) com risco cirúrgico aceitável, a cirurgia mantém papel central segundo a literatura histórica que sustenta a diretriz, com menor taxa de embolia e de recorrência do que a fibrinólise isolada, ainda que sem diferença estatística consistente em mortalidade nos estudos disponíveis.",
+      "Em trombose obstrutiva do lado direito (tricúspide/pulmonar), considerar fibrinólise como estratégia preferencial na maior parte dos cenários, pelo menor risco de embolia sistêmica quando comparada à posição esquerda.",
+      "Para trombo não obstrutivo pequeno e sem repercussão hemodinâmica, priorizar intensificação da anticoagulação (revisão da adesão, ajuste guiado por INR seriado, com reavaliação por imagem seriada) em vez de intervenção imediata.",
+      "Considerar cirurgia para trombo não obstrutivo grande (maior que 10 mm) complicado por embolia ou persistente apesar de anticoagulação oral ótima (Classe IIa, Nível C).",
+      "Diferenciar trombo de pannus por tomografia cardíaca antes de definir estratégia sempre que a apresentação permitir — pannus responde mal à fibrinólise e orienta diretamente para reoperação.",
+      "Corrigir prontamente causa identificável de trombose (sobretudo anticoagulação subterapêutica recente) em paralelo à decisão de reperfusão, sem que a correção substitua a necessidade de decisão sobre fibrinólise versus cirurgia no paciente com repercussão hemodinâmica importante.",
+      "Não reproduzir esquema fibrinolítico rápido em bolus como padrão atual — a diretriz ESC/EACTS 2025 especifica baixa dose/infusão lenta e manejo em centro experiente, sem protocolo numérico padronizado para uso fora de serviço especializado."
+    ],
+    "treatment_summary": "O manejo de prótese valvar mecânica se organiza em dois momentos distintos, que não devem ser confundidos: a prevenção crônica da trombose, centrada na anticoagulação obrigatória, e o manejo agudo da trombose já instalada, centrado na decisão entre fibrinólise e cirurgia. Na prevenção crônica, todo portador de prótese mecânica necessita de anticoagulação com antagonista de vitamina K (AVK), com alvo de INR individualizado conforme o tipo/geração da prótese, a posição valvar (aórtica, mitral ou tricúspide/pulmonar) e a presença de fator pró-trombótico adicional (estado de hipercoagulabilidade herdado ou adquirido, disfunção de ventrículo esquerdo, fibrilação atrial com estenose mitral significativa, ou evento trombótico maior recente) — a diretriz ESC/EACTS 2025 detalha essas faixas de INR por combinação de fatores como informação de classificação de risco, não como esquema posológico do fármaco em si, já que a dose individual de AVK é titulada por resposta laboratorial, não prescrita em número fixo. Anticoagulante oral direto e dupla antiagregação NÃO são recomendados para essa indicação (Classe III, Nível A) — o ensaio randomizado RE-ALIGN, interrompido precocemente por excesso simultâneo de AVC isquêmico e de sangramento maior no grupo dabigatrana, estabeleceu esse ponto de forma definitiva para prótese mecânica, e a extensão da contraindicação aos demais anticoagulantes orais diretos é regulatória e de diretriz, não evidência randomizada direta de cada composto. Educação estruturada do paciente sobre a anticoagulação oral é recomendada (Classe I, Nível A) para melhorar a qualidade do controle, dada a janela terapêutica estreita do AVK e sua interação com fármacos e alimentos. Diante de complicação tromboembólica maior apesar de INR documentado adequado e tempo em faixa terapêutica satisfatório, aumentar o alvo de INR ou associar antiagregação em dose baixa deve ser considerado (Classe IIa, Nível C) — nunca substituir por DOAC, que segue contraindicado nesse cenário. Já no manejo agudo da trombose instalada, a primeira decisão é diferenciar trombose obstrutiva de não obstrutiva. Na trombose obstrutiva com insuficiência cardíaca aguda importante (NYHA III-IV), a avaliação pela Heart Team é recomendada (Classe I, Nível B) para escolher entre nova troca valvar e fibrinólise em baixa dose/infusão lenta — mudança relevante frente à diretriz de 2021, que apresentava a cirurgia como resposta praticamente automática para todo paciente grave. A escolha integra classe funcional, estabilidade hemodinâmica, tamanho e localização do trombo, lado da prótese (esquerdo versus direito), contraindicações a trombolítico, risco de reoperação, experiência do centro e possibilidade de resgate cirúrgico; a diferenciação entre trombo e pannus por imagem também orienta a decisão, já que pannus responde mal à fibrinólise. Na trombose não obstrutiva, trombo pequeno e sem repercussão não é indicação automática de intervenção — a conduta inicial é intensificar a anticoagulação com reavaliação seriada por imagem —, mas cirurgia deve ser considerada para trombo grande (maior que 10 mm) complicado por embolia ou persistente apesar de anticoagulação oral ótima (Classe IIa, Nível C). Nenhuma das duas estratégias de emergência — fibrinólise ou cirurgia — é isenta de risco sério, e a decisão exige avaliação especializada individualizada, não protocolo genérico aplicado por reflexo. Fora do contexto de trombose, a escolha inicial entre prótese mecânica e biológica na indicação de troca valvar pondera preferência do paciente informado, contraindicação a anticoagulação de longo prazo, planejamento gestacional, já ter prótese mecânica em outra posição e, por último, corte etário por posição valvar — decisão multifatorial centrada no paciente, não equação apenas de idade.",
+    "monitoring": [
+      "INR seriado com a periodicidade definida pelo serviço responsável, calculando o tempo em faixa terapêutica ao longo do seguimento como indicador de qualidade do controle, não apenas o valor isolado de cada coleta.",
+      "Ecocardiograma transtorácico periódico, comparando gradiente e mobilidade de folheto/disco com o exame basal pós-implante, para detectar disfunção protética incipiente.",
+      "Reavaliação clínica estruturada de sinais de alarme (dispneia nova, evento embólico focal, síncope, sangramento) em toda consulta de seguimento, não apenas revisão do INR.",
+      "Ecocardiograma seriado de reavaliação em paciente com trombo não obstrutivo pequeno tratado clinicamente, até documentar resolução ou estabilidade.",
+      "Monitorização de marcadores de hemólise (LDH, haptoglobina, bilirrubina indireta, esquizócitos) quando há suspeita clínica de disfunção protética ou hemólise excessiva.",
+      "Revisão periódica de interações medicamentosas e alimentares com o AVK a cada mudança relevante de prescrição concomitante.",
+      "Planejamento estruturado do manejo perioperatório de anticoagulação com antecedência mínima adequada sempre que procedimento eletivo for necessário."
+    ],
+    "special_populations": [
+      "Gestante com prótese valvar mecânica: cenário de alto risco tromboembólico e hemorrágico com decisão de anticoagulação especialmente complexa por trimestre, tratado em ficha própria desta biblioteca ('Prótese valvar mecânica na gravidez') — não deve ser conduzido pelo mesmo raciocínio simplificado da população geral.",
+      "Paciente idoso com prótese mecânica antiga (posição aórtica, primeira geração): corte etário da diretriz favorece biológica em nova indicação acima de 65 anos, mas quem já tem prótese mecânica implantada mantém a mesma obrigatoriedade de anticoagulação com AVK independentemente da idade atingida ao longo do seguimento.",
+      "Prótese em posição tricúspide ou pulmonar (lado direito): perfil de risco embólico diferente do lado esquerdo — em trombose obstrutiva, fibrinólise costuma ser preferida por menor risco de embolia sistêmica, mas a decisão continua exigindo avaliação especializada, não trombólise automática.",
+      "Paciente com contraindicação relativa a anticoagulação de longo prazo (risco de sangramento elevado, mas não absoluto): decisão inicial de tipo de prótese deve considerar biológica com mais força, e, se prótese mecânica já implantada, o alvo de INR pode ser mantido em faixa mais baixa restrita a combinações específicas de tipo/posição de prótese, sempre individualizado.",
+      "Paciente com fator pró-trombótico adicional (hipercoagulabilidade herdada/adquirida, disfunção de ventrículo esquerdo, fibrilação atrial com estenose mitral significativa, evento trombótico maior recente): exige alvo de INR mais alto do que o padrão para o mesmo tipo/posição de prótese, conforme a tabela da diretriz vigente.",
+      "Paciente com múltiplas próteses mecânicas em posições diferentes: já ter prótese mecânica em outra posição favorece, na diretriz, escolher nova prótese mecânica também na posição a ser substituída (Classe IIa), reduzindo a complexidade de manejar dois esquemas de anticoagulação conceitualmente distintos.",
+      "Paciente com indicação concomitante de anticoagulação de longo prazo por outro motivo (por exemplo, fibrilação atrial permanente): a presença dessa indicação permite considerar prótese mecânica mesmo fora dos cortes etários clássicos (Classe IIb), já que o paciente vai precisar de anticoagulação de qualquer forma."
+    ],
+    "assistant_questions": [
+      {
+        "id": "momento_clinico",
+        "label": "Qual o momento clínico da avaliação?",
+        "type": "select",
+        "options": [
+          {
+            "value": "escolha_da_protese",
+            "label": "Escolha do tipo de prótese antes do implante"
+          },
+          {
+            "value": "seguimento_cronico",
+            "label": "Seguimento crônico de prótese mecânica já implantada"
+          },
+          {
+            "value": "suspeita_trombose_aguda",
+            "label": "Suspeita aguda de trombose de prótese mecânica"
+          }
+        ]
+      },
+      {
+        "id": "posicao_valvar",
+        "label": "Qual a posição da prótese (ou a ser implantada)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "aortica",
+            "label": "Aórtica"
+          },
+          {
+            "value": "mitral",
+            "label": "Mitral"
+          },
+          {
+            "value": "tricuspide_pulmonar",
+            "label": "Tricúspide ou pulmonar"
+          }
+        ]
+      },
+      {
+        "id": "idade_paciente",
+        "label": "Qual a idade do paciente (anos)?",
+        "type": "number"
+      },
+      {
+        "id": "preferencia_informada_do_paciente",
+        "label": "Há preferência clara do paciente informado sobre o tipo de prótese?",
+        "type": "select",
+        "options": [
+          {
+            "value": "mecanica",
+            "label": "Preferência por mecânica"
+          },
+          {
+            "value": "biologica",
+            "label": "Preferência por biológica"
+          },
+          {
+            "value": "sem_preferencia",
+            "label": "Sem preferência clara"
+          }
+        ]
+      },
+      {
+        "id": "contraindicacao_anticoagulacao_longo_prazo",
+        "label": "Há contraindicação a anticoagulação oral de longo prazo?",
+        "type": "boolean"
+      },
+      {
+        "id": "planejamento_gestacional",
+        "label": "Há planejamento de gestação futura?",
+        "type": "boolean"
+      },
+      {
+        "id": "ja_tem_protese_mecanica_outra_posicao",
+        "label": "O paciente já tem prótese mecânica em outra posição?",
+        "type": "boolean"
+      },
+      {
+        "id": "indicacao_outra_anticoagulacao_longo_prazo",
+        "label": "Há indicação clara de anticoagulação de longo prazo por outro motivo (ex.: fibrilação atrial permanente)?",
+        "type": "boolean"
+      },
+      {
+        "id": "fator_protrombotico_adicional",
+        "label": "Há fator pró-trombótico adicional (hipercoagulabilidade, FEVE <35%, FA com estenose mitral significativa, evento trombótico maior recente)?",
+        "type": "boolean"
+      },
+      {
+        "id": "em_uso_doac_ou_dupla_antiagregacao",
+        "label": "O paciente está em uso de anticoagulante oral direto (DOAC) ou dupla antiagregação em vez de AVK para a prótese mecânica?",
+        "type": "boolean"
+      },
+      {
+        "id": "tempo_em_faixa_terapeutica_inadequado",
+        "label": "O tempo em faixa terapêutica de INR está inadequado ou há INR subterapêutico recente documentado?",
+        "type": "boolean"
+      },
+      {
+        "id": "trombose_confirmada_por_imagem",
+        "label": "A trombose de prótese foi confirmada por ecocardiograma/imagem?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_de_trombose",
+        "label": "A trombose confirmada é obstrutiva ou não obstrutiva?",
+        "type": "select",
+        "options": [
+          {
+            "value": "obstrutiva",
+            "label": "Obstrutiva"
+          },
+          {
+            "value": "nao_obstrutiva",
+            "label": "Não obstrutiva"
+          },
+          {
+            "value": "nao_confirmada",
+            "label": "Ainda não confirmada"
+          }
+        ]
+      },
+      {
+        "id": "ic_aguda_nyha_iii_iv",
+        "label": "Há insuficiência cardíaca aguda NYHA III-IV atribuída à trombose obstrutiva?",
+        "type": "boolean"
+      },
+      {
+        "id": "tamanho_trombo_mm",
+        "label": "Qual o tamanho do trombo à ecocardiografia transesofágica (mm)?",
+        "type": "number"
+      },
+      {
+        "id": "evento_embolico_associado",
+        "label": "Há evento embólico associado ao trombo?",
+        "type": "boolean"
+      },
+      {
+        "id": "persistencia_apesar_anticoagulacao_otima",
+        "label": "O trombo persiste apesar de anticoagulação oral otimizada?",
+        "type": "boolean"
+      },
+      {
+        "id": "distincao_trombo_pannus",
+        "label": "A tomografia cardíaca diferenciou trombo de pannus?",
+        "type": "select",
+        "options": [
+          {
+            "value": "trombo",
+            "label": "Trombo"
+          },
+          {
+            "value": "pannus",
+            "label": "Pannus"
+          },
+          {
+            "value": "indeterminado",
+            "label": "Indeterminado / não realizado"
+          }
+        ]
+      },
+      {
+        "id": "contraindicacao_ou_alto_risco_cirurgico",
+        "label": "Há contraindicação a cirurgia ou risco cirúrgico muito alto?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "trombose_obstrutiva_ic_aguda_heart_team",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "trombose_confirmada_por_imagem",
+              "op": "truthy"
+            },
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "obstrutiva"
+            },
+            {
+              "field": "ic_aguda_nyha_iii_iv",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Trombose obstrutiva de prótese mecânica com insuficiência cardíaca aguda NYHA III-IV — exige avaliação imediata da Heart Team para decidir entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B)."
+          ],
+          "supporting": [
+            "A decisão integra estabilidade hemodinâmica, contraindicações a trombolítico, risco de reoperação, extensão/localização do trombo, embolização, experiência do centro e possibilidade de resgate cirúrgico."
+          ]
+        }
+      },
+      {
+        "id": "trombose_obstrutiva_sem_ic_grave",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "trombose_confirmada_por_imagem",
+              "op": "truthy"
+            },
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "obstrutiva"
+            },
+            {
+              "field": "ic_aguda_nyha_iii_iv",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Trombose obstrutiva é emergência potencial mesmo sem instabilidade hemodinâmica franca no momento da avaliação — o atraso na decisão entre cirurgia e fibrinólise piora desfecho."
+          ]
+        }
+      },
+      {
+        "id": "protese_esquerda_obstrutiva_favorece_cirurgia",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "obstrutiva"
+            },
+            {
+              "field": "posicao_valvar",
+              "op": "in",
+              "value": [
+                "aortica",
+                "mitral"
+              ]
+            },
+            {
+              "field": "contraindicacao_ou_alto_risco_cirurgico",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Trombose obstrutiva do lado esquerdo com risco cirúrgico aceitável: literatura histórica mostra menos embolia e menos recorrência com cirurgia do que com fibrinólise isolada, sem diferença estatística consistente em mortalidade."
+          ]
+        }
+      },
+      {
+        "id": "protese_direita_favorece_fibrinolise",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "obstrutiva"
+            },
+            {
+              "field": "posicao_valvar",
+              "op": "eq",
+              "value": "tricuspide_pulmonar"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Prótese em posição direita: fibrinólise costuma ser a estratégia preferencial na maior parte dos cenários, pelo menor risco de embolia sistêmica em relação ao lado esquerdo."
+          ]
+        }
+      },
+      {
+        "id": "trombo_nao_obstrutivo_grande",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "nao_obstrutiva"
+            },
+            {
+              "field": "tamanho_trombo_mm",
+              "op": "gt",
+              "value": 10
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Trombo não obstrutivo grande (maior que 10 mm): cirurgia deve ser considerada, sobretudo se complicado por embolia ou persistente apesar de anticoagulação oral ótima (Classe IIa, Nível C)."
+          ]
+        }
+      },
+      {
+        "id": "trombo_nao_obstrutivo_com_embolia",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "nao_obstrutiva"
+            },
+            {
+              "field": "evento_embolico_associado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Trombo não obstrutivo complicado por evento embólico: cirurgia deve ser considerada (Classe IIa, Nível C)."
+          ]
+        }
+      },
+      {
+        "id": "trombo_nao_obstrutivo_persistente",
+        "priority": 72,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "nao_obstrutiva"
+            },
+            {
+              "field": "persistencia_apesar_anticoagulacao_otima",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Trombo não obstrutivo persistente apesar de anticoagulação oral ótima: cirurgia deve ser considerada (Classe IIa, Nível C)."
+          ]
+        }
+      },
+      {
+        "id": "trombo_nao_obstrutivo_pequeno_sem_repercussao",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "tipo_de_trombose",
+              "op": "eq",
+              "value": "nao_obstrutiva"
+            },
+            {
+              "field": "evento_embolico_associado",
+              "op": "falsy"
+            },
+            {
+              "field": "persistencia_apesar_anticoagulacao_otima",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Trombo não obstrutivo pequeno e sem repercussão não é indicação automática de intervenção — priorizar intensificação da anticoagulação com reavaliação seriada por imagem."
+          ]
+        }
+      },
+      {
+        "id": "distincao_pannus_evitar_fibrinolise",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "distincao_trombo_pannus",
+              "op": "eq",
+              "value": "pannus"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Pannus identificado por tomografia cardíaca: responde mal à fibrinólise e tende a exigir reoperação — não tratar como trombose aguda simples."
+          ]
+        }
+      },
+      {
+        "id": "doac_ou_dupla_antiagregacao_em_protese_mecanica",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "em_uso_doac_ou_dupla_antiagregacao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Uso de DOAC ou dupla antiagregação em vez de antagonista de vitamina K em prótese valvar mecânica — contraindicado (Classe III, Nível A); o ensaio RE-ALIGN mostrou excesso de AVC isquêmico e de sangramento maior com dabigatrana."
+          ],
+          "supporting": [
+            "Reavaliar a troca imediata para antagonista de vitamina K, com alvo de INR individualizado conforme tipo/posição de prótese — não há alternativa oral aprovada com evidência favorável para essa indicação."
+          ]
+        }
+      },
+      {
+        "id": "tempo_em_faixa_inadequado_reforcar_educacao",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "seguimento_cronico"
+            },
+            {
+              "field": "tempo_em_faixa_terapeutica_inadequado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Tempo em faixa terapêutica de INR inadequado ou INR subterapêutico recente — reforçar educação estruturada do paciente sobre anticoagulação oral (Classe I, Nível A) em vez de considerar troca de classe de anticoagulante."
+          ]
+        }
+      },
+      {
+        "id": "escolha_favorece_biologica_contraindicacao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "escolha_da_protese"
+            },
+            {
+              "field": "contraindicacao_anticoagulacao_longo_prazo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Contraindicação a anticoagulação de longo prazo: favorece prótese biológica (Classe I), salvo preferência explícita do paciente em sentido contrário."
+          ]
+        }
+      },
+      {
+        "id": "escolha_favorece_biologica_gestacao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "escolha_da_protese"
+            },
+            {
+              "field": "planejamento_gestacional",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Planejamento de gestação futura: favorece prótese biológica (Classe IIa), salvo preferência explícita do paciente em sentido contrário."
+          ]
+        }
+      },
+      {
+        "id": "escolha_favorece_mecanica_ja_tem_outra",
+        "priority": 48,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "escolha_da_protese"
+            },
+            {
+              "field": "ja_tem_protese_mecanica_outra_posicao",
+              "op": "truthy"
+            },
+            {
+              "field": "contraindicacao_anticoagulacao_longo_prazo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Já ter prótese mecânica em outra posição favorece nova prótese mecânica (Classe IIa), na ausência de contraindicação a anticoagulação."
+          ]
+        }
+      },
+      {
+        "id": "escolha_favorece_mecanica_indicacao_previa",
+        "priority": 48,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "escolha_da_protese"
+            },
+            {
+              "field": "indicacao_outra_anticoagulacao_longo_prazo",
+              "op": "truthy"
+            },
+            {
+              "field": "contraindicacao_anticoagulacao_longo_prazo",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Indicação clara de anticoagulação de longo prazo por outro motivo (ex.: fibrilação atrial permanente) permite considerar prótese mecânica (Classe IIb), na ausência de contraindicação a anticoagulação."
+          ]
+        }
+      },
+      {
+        "id": "escolha_por_idade_zona_individualizada",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "escolha_da_protese"
+            },
+            {
+              "field": "preferencia_informada_do_paciente",
+              "op": "eq",
+              "value": "sem_preferencia"
+            },
+            {
+              "field": "contraindicacao_anticoagulacao_longo_prazo",
+              "op": "falsy"
+            },
+            {
+              "field": "planejamento_gestacional",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "Na ausência de preferência clara, contraindicação a anticoagulação ou planejamento gestacional, o corte etário por posição valvar orienta a decisão (em torno de 60 anos para posição aórtica, 65 para mitral) — não decidir só pela idade cronológica sem considerar expectativa de vida ajustada."
+          ]
+        }
+      },
+      {
+        "id": "fator_protrombotico_adicional_inr_mais_alto",
+        "priority": 42,
+        "when": {
+          "all": [
+            {
+              "field": "fator_protrombotico_adicional",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Fator pró-trombótico adicional presente (hipercoagulabilidade, FEVE <35%, FA com estenose mitral significativa, evento trombótico maior recente): exige alvo de INR mais alto do que o padrão para o mesmo tipo/posição de prótese."
+          ]
+        }
+      },
+      {
+        "id": "suspeita_aguda_investigar_com_imagem",
+        "priority": 68,
+        "when": {
+          "all": [
+            {
+              "field": "momento_clinico",
+              "op": "eq",
+              "value": "suspeita_trombose_aguda"
+            },
+            {
+              "field": "trombose_confirmada_por_imagem",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Ecocardiograma transtorácico e transesofágico, complementados por cinefluoroscopia ou tomografia cardíaca 4D quando disponíveis, para confirmar trombose obstrutiva ou não obstrutiva."
+          ],
+          "supporting": [
+            "Dispneia recente ou evento embólico em portador de prótese mecânica exige investigação imediata — trombose valvar é diagnóstico de suspeita ativa, não de exclusão por estabilidade aparente."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "valvopatia",
+      "prótese valvar mecânica",
+      "anticoagulação com antagonista de vitamina K",
+      "trombose de prótese valvar",
+      "fibrinólise versus cirurgia",
+      "contraindicação de DOAC",
+      "escolha de prótese mecânica vs biológica",
+      "alvo de INR por prótese"
+    ],
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — título/revista/volume/páginas conferidos no PubMed (e-utils) em 29/08/2026.",
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165 — conferido no PubMed em 29/08/2026.",
+      "Karthikeyan G, Rajashekar P, Devasenapathy N, et al. Urgent surgery vs fibrinolytic therapy for left-sided prosthetic valve thrombosis: a randomized trial (SAFE-PVT). Eur Heart J. 2025;46(34):3373-3381. DOI: 10.1093/eurheartj/ehaf391. PMID: 40574603 — conferido no PubMed em 29/08/2026.",
+      "Roudaut R, Lafitte S, Roudaut MF, et al. Management of prosthetic heart valve obstruction: fibrinolysis versus surgery. Early results and long-term follow-up in a single-centre study of 263 cases. Arch Cardiovasc Dis. 2009;102(4):269-277. DOI: 10.1016/j.acvd.2009.01.007. PMID: 19427604 — conferido no PubMed em 29/08/2026.",
+      "Eikelboom JW, Connolly SJ, Brueckmann M, et al.; RE-ALIGN Investigators. Dabigatran versus warfarin in patients with mechanical heart valves. N Engl J Med. 2013;369(13):1206-1214. DOI: 10.1056/NEJMoa1300615. PMID: 23991661 — conferido no PubMed em 29/08/2026.",
+      "Tong AT, Roudaut R, Ozkan M, et al.; PRO-TEE Registry Investigators. Transesophageal echocardiography improves risk assessment of thrombolysis of prosthetic valve thrombosis: results of the international PRO-TEE registry. J Am Coll Cardiol. 2004;43(1):77-84. DOI: 10.1016/j.jacc.2003.08.028. PMID: 14715187 — conferido no PubMed em 29/08/2026.",
+      "Karthikeyan G, Senguttuvan NB, Joseph J, et al. Urgent surgery compared with fibrinolytic therapy for the treatment of left-sided prosthetic heart valve thrombosis: a systematic review and meta-analysis of observational studies. Eur Heart J. 2013;34(21):1557-1566. DOI: 10.1093/eurheartj/ehs486. PMID: 23329151 — conferido no PubMed em 29/08/2026.",
+      "Roudaut R, Serri K, Lafitte S. Thrombosis of prosthetic heart valves: diagnosis and therapeutic considerations. Heart. 2007;93(1):137-142. PMID: 17170355 — conferido no PubMed em 29/08/2026.",
+      "Raj Mantoo M, Makkar N, Sharma G. Prosthetic valve thrombosis: contemporary concepts in diagnosis and management. Expert Rev Cardiovasc Ther. 2026;24(7):609-624. DOI: 10.1080/14779072.2026.2700450. PMID: 42412081 — conferido no PubMed em 29/08/2026."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+      "https://pubmed.ncbi.nlm.nih.gov/34453165/",
+      "https://pubmed.ncbi.nlm.nih.gov/40574603/",
+      "https://pubmed.ncbi.nlm.nih.gov/19427604/",
+      "https://pubmed.ncbi.nlm.nih.gov/23991661/",
+      "https://pubmed.ncbi.nlm.nih.gov/14715187/",
+      "https://pubmed.ncbi.nlm.nih.gov/23329151/",
+      "https://pubmed.ncbi.nlm.nih.gov/17170355/",
+      "https://pubmed.ncbi.nlm.nih.gov/42412081/"
+    ],
+    "related_document_slugs": [
+      "trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia",
+      "fluxograma-trombose-de-protese-valvar-mecanica-fibrinolise-vs-cirurgia-esc-eacts-2021",
+      "fluxograma-trombose-de-protese-valvar-mecanica-fibrinolise-vs-cirurgia-esc-eacts-2025",
+      "protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025",
+      "fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025",
+      "anticoagulante-oral-direto-em-protese-valvar-mecanica-por-que-e-contraindicado-re-align",
+      "trombose-de-protese-valvar-mecanica-trombolise-versus-cirurgia-de-urgencia"
+    ],
+    "patient_material_slug": "vivendo-com-uma-valvula-mecanica-anticoagulacao-e-cuidados-no-dia-a-dia",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), a pedido de Rafael, para preencher lacuna real: não existia ficha própria de doença/entidade clínica para 'prótese valvar mecânica' em doencas/metadados.json, apesar de corpus extenso e já publicado em content/Valvopatias/ (escolha mecânica vs. biológica, alvo de INR, trombose aguda e ambos os fluxogramas ESC/EACTS 2021 e 2025) e em content/Tromboembolismo/ (RE-ALIGN sobre contraindicação de DOAC, e revisão histórica PRO-TEE/Roudaut/Karthikeyan sobre trombólise vs. cirurgia). Os 7 related_document_slugs foram cada um LIDO POR COMPLETO nesta sessão, confirmando discussão CENTRAL (não tangencial) do tema prótese valvar mecânica em todos eles; nenhum pertence a content/Farmacologia/, content/Calculadoras/ ou content/Exames/. Um oitavo candidato mapeado inicialmente ('antitrombotico-nos-primeiros-3-meses-apos-biopotese-valvar-esc-eacts-2021.md') foi lido e DELIBERADAMENTE EXCLUÍDO por tratar de bioprótese (valva biológica), fora do escopo desta ficha específica sobre prótese mecânica — confirmado pelo próprio Rafael na instrução da tarefa. Também foram avaliados e descartados por menor centralidade ou maior distância temática: 'trombose-obstrutiva-de-protese-valvar-na-uco-cirurgia-fibrinolise-e-heart-team.md' (cobre mecânica E biológica, redundante com as fontes ESC/EACTS 2025 já centrais desta ficha) e 'endocardite-protetica-precoce-versus-tardia-esc-2023.md' (tema é endocardite, não escolha/anticoagulação/trombose). SOBREPOSIÇÃO DOCUMENTADA: há overlap de related_document_slugs com três registros já existentes em doencas/metadados.json — o hub 'valvopatias' (compartilha 5 dos 7 slugs: os dois fluxogramas de trombose 2021/2025, o documento de trombose ESC/EACTS 2025, o documento de escolha mecânica-vs-biológica/INR e o fluxograma de escolha), 'protese-mecanica-na-gravidez' (compartilha 2: o RE-ALIGN e o documento de escolha/INR) e 'anticoagulacao-idoso' (compartilha 1: o documento de escolha/INR). Essa sobreposição é esperada e aceitável — este verbete é a ficha específica sobre a entidade 'prótese valvar mecânica' dentro do hub geral 'valvopatias' (mesmo padrão já usado para cardiomiopatia-de-takotsubo dentro do hub 'cardiomiopatias'), e os outros dois registros são recortes por população (gestação) ou por faixa etária (idoso) do mesmo corpo de evidência sobre INR-alvo e contraindicação de DOAC — não fichas concorrentes sobre o mesmo escopo. category='valvopatia_e_anticoagulacao' reutiliza a única convenção já existente no sistema para esse cruzamento temático (usada uma vez, em 'protese-mecanica-na-gravidez'), confirmada por listagem programática de todas as categorias em doencas/metadados.json e doencas/fragmentos/*.json nesta sessão — preferida a 'valvopatia' simples porque a ficha é tão sobre anticoagulação quanto sobre a prótese em si. subtype='protese_mecanica' também replica a convenção já usada em 'protese-mecanica-na-gravidez'. 9 PMIDs verificados individualmente via NCBI e-utils (esummary) nesta sessão em 29/08/2026, todos com título/revista/volume/páginas batendo exatamente com a citação já usada nos documentos-fonte publicados desta biblioteca — nenhuma correção necessária. patient_material_slug resolvido para 'vivendo-com-uma-valvula-mecanica-anticoagulacao-e-cuidados-no-dia-a-dia' (ligado ao documento-fonte de escolha/INR) em material-paciente/metadados.json; existe um segundo material relevante, 'trombose-da-valvula-mecanica-sinais-de-alerta-e-conduta-de-emergencia' (ligado ao documento-fonte de trombose aguda), mas o campo aceita apenas um slug — escolhido o material sobre convivência crônica com a prótese e a anticoagulação por corresponder ao eixo mais amplo e permanente desta ficha (a prótese existe e exige anticoagulação todos os dias; a trombose aguda é evento raro dentro desse seguimento), com o segundo material coberto indiretamente pelo emergency_flow do próprio registro. NENHUMA DOSE DE FÁRMACO em nenhum campo de texto — inclusive a menção ao ensaio RE-ALIGN evita reproduzir os esquemas posológicos de dabigatrana e de varfarina citados no documento-fonte (só resultado clínico do ensaio); as faixas numéricas de alvo de INR por tipo/posição de prótese foram tratadas como informação de classificação de risco (mesma lógica já usada no documento-fonte ESC/EACTS 2025 publicado nesta pasta), não como esquema posológico de fármaco. FALHA ESPERADA E DOCUMENTADA: backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro porque review_status='pendente_revisao' e a lógica desse teste específico só consulta a allowlist PENDENTES_LOTES_TUDO_COM_TUDO para registros já com status='revisado' — comportamento correto e esperado, não contornado. A entrada 'protese-valvar-mecanica' foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] apenas porque essa mesma allowlist é reaproveitada por test_disease_fragments_canonical.py, onde a checagem funciona corretamente contra status pendente. Resultado esperado: test_disease_fragments_canonical.py passa; test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha (esperado, documentado, não contornado). Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes nesta mesma data.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

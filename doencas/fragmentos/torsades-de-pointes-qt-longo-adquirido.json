@@ -1,0 +1,479 @@
+[
+  {
+    "slug": "torsades-de-pointes-qt-longo-adquirido",
+    "name": "Torsades de pointes e QT longo adquirido",
+    "aliases": [
+      "QT longo adquirido",
+      "Torsade de pointes (TdP) adquirida",
+      "TV polimórfica associada a QT longo adquirido",
+      "Prolongamento do QT induzido por fármacos",
+      "Drug-induced QT prolongation",
+      "Acquired long QT syndrome"
+    ],
+    "area": "geral",
+    "category": "arritmia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Torsades de pointes (TdP) e QT longo adquirido descrevem a forma NÃO genética de prolongamento do intervalo QT corrigido (QTc) e da taquicardia ventricular polimórfica pausa-dependente que ela predispõe, causada por bloqueio farmacológico da corrente retificadora tardia de potássio (IKr, canal hERG) somado — na maioria dos episódios — a um segundo fator precipitante: distúrbio eletrolítico (hipocalemia, hipomagnesemia, hipocalcemia), bradicardia/pausa, disfunção renal ou hepática que reduz a depuração do fármaco causal, ou associação de múltiplos agentes pró-QT na mesma prescrição. É distinta da síndrome do QT longo CONGÊNITA (canalopatia hereditária por mutação em gene de canal iônico, presente desde o nascimento, com estratificação por escore de Schwartz e genótipo) e do prolongamento de QT por terapia oncológica especificamente dirigida (inibidores de tirosina-quinase, trióxido de arsênio, inibidores de CDK4/6 e outros antineoplásicos com protocolo de monitorização próprio) — ambos os cenários têm ficha dedicada neste catálogo. O escore de Tisdale estratifica o risco de um paciente hospitalizado desenvolver QTc prolongado, mas não diagnostica TdP nem substitui o reconhecimento clínico do evento agudo. Diante de taquicardia ventricular polimórfica sustentada — associada a QT longo ou não —, a conduta que salva vida é o choque não sincronizado imediato; a correção do fator precipitante e a prevenção de recorrência vêm depois de resolvida a instabilidade elétrica aguda.",
+    "epidemiology": "O QT longo adquirido é, na prática clínica, muito mais frequente que a forma congênita: praticamente qualquer paciente exposto ao fármaco e ao cofator certos pode desenvolvê-lo, enquanto a canalopatia hereditária depende de uma mutação específica presente em uma fração pequena da população. O escore de Tisdale et al. (Circ Cardiovasc Qual Outcomes 2013, PMID 23716032), derivado e validado em unidades de cuidado cardíaco de um único centro, documentou incidência de QTc prolongado (definido como QTc >500 ms ou aumento >60 ms do basal) de aproximadamente 15% no estrato de baixo risco (0-6 pontos), 37% no moderado (7-10 pontos) e 73% no alto risco (11-21 pontos) — uma gradação de risco diretamente proporcional ao número de fatores predisponentes acumulados, não um evento de tudo-ou-nada ligado a um único fármaco. Entre as classes de fármacos mais estudadas, o antipsicótico ilustra bem a magnitude do risco populacional: a coorte de Ray et al. (Arch Gen Psychiatry 2001, PMID 11735845), com 481.744 beneficiários do Medicaid do Tennessee e 1.282.996 pessoas-ano de seguimento, documentou risco de morte súbita cardíaca dose-dependente em uso corrente de antipsicótico, com razão de taxa de 2,39 (IC95% 1,77-3,22) em dose moderada a alta — equivalente a 367 mortes adicionais por 10.000 pessoas-ano nesse subgrupo. O seguimento de Ray et al. (N Engl J Med 2009, PMID 19144938), com 44.218 usuários de antipsicótico típico e 46.089 de atípico comparados a 186.600 não usuários, mostrou que a divisão típico/atípico não protege: razão de incidência de 1,99 para típicos e 2,26 para atípicos, sem diferença estatisticamente relevante entre as classes. O documento de consenso científico da AHA/ACC Foundation sobre prevenção de torsades em ambiente hospitalar (Drew et al., Circulation 2010, PMID 20142454) define QTc acima do percentil 99 (470 ms em homens, 480 ms em mulheres) como anormalmente prolongado e acima de 500 ms como altamente anormal em ambos os sexos — essa assimetria de corte por sexo reflete um achado consistente na literatura: o QTc basal é, em média, mais longo em mulheres, e o sexo feminino é o próprio segundo item de maior peso relativo no escore de Tisdale. O prolongamento de QT induzido por fármaco raramente ocorre por um único fator isolado: a combinação de múltiplos fármacos pró-QT, distúrbio eletrolítico não corrigido, disfunção renal/hepática que retarda a depuração do agente causal e bradicardia de base é o padrão mais comumente descrito nos casos de torsades induzida por fármaco relatados na literatura.",
+    "presentation": [
+      "Síncope ou pré-síncope de início súbito, tipicamente autolimitada, podendo se repetir em salvas ao longo de horas",
+      "Palpitações associadas a tontura, sobretudo em paciente recém-exposto a fármaco pró-QT novo ou com aumento recente de dose",
+      "Parada cardíaca súbita como primeira manifestação identificada, sem pródromo relatado",
+      "Eletrocardiograma de base com QTc prolongado, às vezes achado incidental antes de qualquer sintoma, especialmente em paciente hospitalizado polimedicado",
+      "Padrão eletrocardiográfico de torsades de pointes durante o evento: complexos QRS que parecem girar em torno da linha isoelétrica, em salvas autolimitadas ou evoluindo para taquicardia ventricular polimórfica sustentada",
+      "Início do evento tipicamente pausa-dependente: uma extrassístole seguida de pausa compensatória, com o batimento seguinte ocorrendo sobre a onda T prolongada ('fenômeno R sobre T')",
+      "Bradicardia relativa ou bloqueio atrioventricular de base, funcionando como pano de fundo predisponente à pausa que dispara o evento",
+      "Contexto de hospitalização com múltiplos fatores de risco simultâneos (sepse, insuficiência cardíaca, diurético de alça, dois ou mais fármacos pró-QT) identificável quando se aplica o escore de Tisdale retrospectivamente",
+      "Ondas U proeminentes ou alternância de onda T (T-wave alternans) no eletrocardiograma de base, marcadores de instabilidade de repolarização",
+      "Ausência completa de sintomas prévios em paciente ambulatorial que inicia fármaco pró-QT sem monitorização — o primeiro sinal pode ser o próprio evento arrítmico"
+    ],
+    "diagnostic_approach": {
+      "mecanismo_fisiopatologico": "O mecanismo central é o bloqueio farmacológico da corrente retificadora tardia de potássio (IKr), conduzida pelo canal codificado pelo gene hERG (KCNH2) no miocárdio ventricular. O poro interno relativamente amplo e a estrutura aromática desse canal o tornam promiscuamente suscetível ao bloqueio por moléculas estruturalmente muito diferentes entre si — por isso fármacos de classes terapêuticas tão distintas quanto antipsicóticos, antiarrítmicos, alguns antimicrobianos e antieméticos compartilham o mesmo potencial de prolongar a repolarização (Sanguinetti & Tristani-Firouzi, Nature 2006, PMID 16554806). A corrente IKr reduzida prolonga a fase 3 do potencial de ação ventricular, alongando o intervalo QT no eletrocardiograma de superfície. Esse prolongamento cria uma janela de vulnerabilidade em que pode surgir uma pós-despolarização precoce (early afterdepolarization) — um segundo pico de despolarização durante a própria fase de repolarização prolongada — que, quando atinge o limiar, gera atividade deflagrada (triggered activity). A dispersão transmural heterogênea da repolarização entre as camadas do miocárdio ventricular cria o substrato de reentrada funcional que sustenta a torsades uma vez iniciada (Roden, N Engl J Med 2004, PMID 14999113). O bloqueio farmacológico do hERG é, portanto, condição necessária mas frequentemente NÃO suficiente por si só: a manifestação clínica de torsades depende de um segundo evento precipitante — pausa, bradicardia, hipocalemia (que paradoxalmente aumenta a afinidade de vários fármacos pelo canal hERG) ou combinação de múltiplos fármacos pró-QT — sobreposto ao prolongamento farmacológico basal.",
+      "causas_farmacologicas_comuns": "Nenhuma dose ou esquema posológico é reproduzido nesta ficha; a lista abaixo é qualitativa, por classe farmacológica, e serve apenas para orientar reconhecimento de risco, não prescrição. Classes reconhecidamente associadas a bloqueio de hERG e prolongamento de QT incluem: antipsicóticos típicos e atípicos (com heterogeneidade de risco dentro da própria classe, conforme detalhado no verbete dedicado de psicofarmacologia cardiovascular); antiarrítmicos das classes IA e III, cujo próprio mecanismo terapêutico de bloqueio de corrente de potássio os torna intrinsecamente pró-QT (efeito de classe, não uma reação idiossincrática); alguns antimicrobianos, incluindo determinados macrolídeos e fluoroquinolonas; antieméticos antagonistas de receptor 5-HT3; metadona, um opioide com bloqueio de hERG documentado e risco que aumenta com a dose acumulada e com interações farmacocinéticas que elevam seu nível sérico; e alguns antidepressivos, com citalopram citado na literatura por alerta regulatório específico de prolongamento de QT dose-dependente. A lista de fármacos de risco muda com o tempo, conforme farmacovigilância pós-comercialização; a conduta prática mais robusta não é memorizar uma lista fixa, mas revisar sistematicamente toda prescrição em busca de fármacos pró-QT antes de somar um novo agente, e reconhecer que o risco de um fármaco isolado se multiplica quando somado a outro fármaco pró-QT, a distúrbio eletrolítico ou a disfunção de depuração renal/hepática.",
+      "disturbios_eletroliticos_predisponentes": "Hipocalemia, hipomagnesemia e hipocalcemia reduzem a reserva de repolarização ventricular e são cofatores clássicos, não causas isoladas, de torsades. A ESC 2022 de arritmias ventriculares e prevenção de morte súbita (Zeppenfeld et al., Eur Heart J 2022, PMID 36017572) recomenda explicitamente a correção desses três eletrólitos como parte do manejo do QT longo adquirido. Um ponto frequentemente mal compreendido na prática: o magnésio intravenoso é reconhecidamente eficaz para suprimir recorrência de torsades mesmo quando o magnésio sérico do paciente NÃO está baixo — o efeito antiarrítmico do magnésio na torsades não depende de o paciente estar hipomagnesêmico. Já a hipocalemia tem relação mais direta com o próprio mecanismo: potássio sérico baixo aumenta paradoxalmente a afinidade de vários fármacos pelo canal hERG, de modo que a mesma dose de um fármaco pró-QT prolonga mais o QT em paciente hipocalêmico do que em paciente normocalêmico. Por isso a correção eletrolítica antes ou durante o uso de fármaco pró-QT reconhecido não é apenas prudência genérica, é modulação direta do risco farmacodinâmico.",
+      "escore_de_tisdale_estratificacao_de_risco": "O escore de Tisdale et al. (Circ Cardiovasc Qual Outcomes 2013, PMID 23716032) foi desenvolvido e validado para PREDIZER prolongamento de QTc em paciente hospitalizado — não para diagnosticar torsades, não para decidir choque elétrico e não para definir dose de qualquer fármaco. É uma ferramenta de estratificação de risco, a ser somada em pontos: idade igual ou superior a 68 anos (1 ponto); sexo feminino (1 ponto); uso de diurético de alça (1 ponto); potássio sérico igual ou inferior a 3,5 mEq/L (2 pontos); QTc na admissão igual ou superior a 450 ms (2 pontos); infarto agudo do miocárdio (2 pontos); sepse (3 pontos); insuficiência cardíaca (3 pontos); e a variável medicamentosa, que tem uma regra própria frequentemente mal aplicada: um único fármaco prolongador de QTc soma 3 pontos, mas se houver DOIS OU MAIS fármacos prolongadores de QTc simultâneos, a pontuação medicamentosa total sobe para 6 pontos (3 do primeiro fármaco mais 3 adicionais pela combinação) — não 3 pontos por fármaco somados linearmente, e não uma pontuação fixa de 3 independentemente do número de agentes. A pontuação máxima do instrumento é 21. No estudo original, os estratos de risco corresponderam a incidência de QTc prolongado de aproximadamente 15% (baixo risco, 0-6 pontos), 37% (moderado, 7-10 pontos) e 73% (alto risco, 11-21 pontos). O escore foi derivado e validado em unidades de cuidado cardíaco de um único centro; não deve ser extrapolado sem crítica para ambulatório, população pediátrica, ou para estimar diretamente a probabilidade de torsades ou de morte súbita — ele estratifica o risco de um achado eletrocardiográfico (QTc prolongado), um passo anterior ao evento arrítmico clínico.",
+      "reconhecimento_da_torsades_no_ecg": "O nome torsades de pointes ('torção das pontas') descreve o padrão eletrocardiográfico característico: os complexos QRS parecem girar progressivamente em torno da linha isoelétrica, mudando de amplitude e polaridade a cada poucos batimentos, em vez de manter morfologia constante como em outras taquicardias ventriculares monomórficas. O início costuma ser pausa-dependente: uma extrassístole seguida de pausa compensatória, com o batimento seguinte caindo sobre a onda T ainda prolongada ('fenômeno R sobre T'), disparando a sequência. Os episódios podem ser autolimitados, recorrentes em salvas, ou evoluir para taquicardia ventricular polimórfica sustentada instável — e é exatamente essa variabilidade morfológica batimento a batimento que torna a sincronização confiável com a onda R impossível, motivo pelo qual a AHA 2025 orienta choque NÃO sincronizado imediato diante de TV polimórfica sustentada, com ou sem pulso (Wigginton et al., Circulation 2025, PMID 41122884). QTc muito prolongado (a AHA 2025 destaca maior risco acima de 500 ms, sobretudo com bradicardia associada) é marcador de risco aumentado, não um limiar absoluto abaixo do qual a torsades seja impossível nem acima do qual seja inevitável."
+    },
+    "differentials": [
+      "Síndrome do QT longo CONGÊNITA (canalopatia hereditária por mutação em gene de canal iônico) — presente desde o nascimento, estratificada por escore de Schwartz e genótipo, com ficha própria neste catálogo (canalopatias cardíacas hereditárias); a torsades pode ser a mesma manifestação final, mas a causa, a genética e o manejo de longo prazo divergem",
+      "Prolongamento de QT por terapia oncológica dirigida (inibidores de tirosina-quinase, trióxido de arsênio, inibidores de CDK4/6 e outros antineoplásicos) — ficha própria neste catálogo, com protocolo de monitorização específico do contexto oncológico",
+      "Taquicardia ventricular polimórfica SEM QT longo — mecanismo e conduta diferentes; a causa mais comum no contexto agudo é isquemia/infarto, e magnésio rotineiro não tem benefício demonstrado nesse fenótipo (AHA 2025, Classe 3, sem benefício)",
+      "Taquicardia ventricular polimórfica catecolaminérgica (CPVT) — QT tipicamente normal, gatilho por exercício físico ou emoção intensa, mecanismo genético envolvendo liberação anômala de cálcio, não bloqueio de hERG",
+      "Síndrome de Brugada — padrão eletrocardiográfico próprio (supradesnivelamento de ST em derivações precordiais direitas), risco de morte súbita por mecanismo distinto do QT longo",
+      "Taquicardia ventricular bidirecional por intoxicação digitálica — alternância de eixo do QRS batimento a batimento, mecanismo de automatismo/atividade deflagrada por sobrecarga de cálcio intracelular, não bloqueio de hERG; deve ser ativamente considerada em paciente em uso de digoxina",
+      "Síndrome de Andersen-Tawil (LQT7) — QT nominalmente pouco prolongado, mas com onda U proeminente que amplia o intervalo QU medido; mecanismo, fenótipo extracardíaco e manejo distintos do QT longo adquirido clássico",
+      "Isquemia miocárdica aguda como causa direta de arritmia ventricular maligna, sem relação com prolongamento farmacológico de QT — sempre considerar concomitantemente diante de dor torácica, alteração isquêmica nova ou fator de risco coronariano"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações com medida sistemática do QTc (fórmula de correção de Bazett é a mais usada na prática, com limitações reconhecidas em frequências cardíacas extremas; Fridericia é alternativa)",
+      "Eletrólitos séricos: potássio, magnésio e cálcio, com prioridade de correção quando alterados",
+      "Função renal (creatinina/taxa de filtração glomerular estimada) e função hepática, quando o fármaco suspeito depende dessas vias para depuração",
+      "Revisão estruturada e completa da lista de medicamentos em uso, incluindo fármacos de venda livre e interações que aumentem o nível sérico de agente pró-QT já conhecido",
+      "Aplicação do escore de Tisdale em paciente hospitalizado, como ferramenta de estratificação de risco para prolongamento de QTc — não como escore diagnóstico de torsades",
+      "Monitorização eletrocardiográfica contínua (telemetria) em paciente com QTc muito prolongado, fator de risco relevante identificado, ou fármaco pró-QT recém-iniciado/com dose recentemente aumentada",
+      "Eletrocardiogramas seriados após início ou ajuste de fármaco pró-QT, comparando QTc basal e QTc sob exposição",
+      "Investigação de história familiar de morte súbita, síncope inexplicada ou QT longo conhecido quando o quadro não se resolve completamente após remoção do fator adquirido — sinaliza necessidade de avaliar canalopatia congênita subjacente (dois fatores sobrepostos: predisposição genética latente mais exposição farmacológica)"
+    ],
+    "red_flags": [
+      "Taquicardia ventricular polimórfica sustentada em curso, com ou sem pulso — emergência elétrica que exige choque não sincronizado imediato, sem atrasar para obter eletrólitos, sincronizar ou administrar magnésio",
+      "QTc acima de 500 ms, sobretudo quando acompanhado de bradicardia — marcador de risco maior de torsades iminente (AHA 2025)",
+      "Aumento do QTc de 60 ms ou mais em relação ao basal do próprio paciente após início ou ajuste de fármaco pró-QT, mesmo que o valor absoluto ainda não ultrapasse 500 ms",
+      "Combinação de dois ou mais fármacos prolongadores de QT na mesma prescrição — a regra do escore de Tisdale (6 pontos, não 3) reflete que essa combinação eleva desproporcionalmente o risco",
+      "Hipocalemia, hipomagnesemia ou hipocalcemia não corrigidas em paciente exposto a fármaco pró-QT",
+      "Bradicardia significativa, pausa sinusal ou bloqueio atrioventricular de alto grau em paciente com QTc prolongado — substrato para o início pausa-dependente da torsades",
+      "Insuficiência renal ou hepática relevante em paciente recebendo fármaco pró-QT cuja depuração depende dessas vias, sem ajuste ou reavaliação",
+      "Ondas U proeminentes ou alternância de onda T no eletrocardiograma — marcadores de instabilidade elétrica que precedem o evento clínico",
+      "Escore de Tisdale em faixa de alto risco (11-21 pontos) em paciente hospitalizado — sinaliza necessidade de vigilância eletrocardiográfica mais próxima, não decisão terapêutica isolada",
+      "Persistência de QT longo ou recorrência de arritmia mesmo após remoção completa do fator adquirido reversível — deve levantar suspeita de canalopatia congênita subjacente não reconhecida"
+    ],
+    "ambulatory_flow": [
+      "Antes de prescrever qualquer fármaco reconhecidamente pró-QT em ambulatório, revisar sistematicamente a lista completa de medicamentos em uso, incluindo fármacos de venda livre, buscando outro agente pró-QT já presente.",
+      "Solicitar eletrocardiograma basal antes de iniciar fármaco pró-QT em paciente com qualquer fator de risco cardiovascular conhecido, doença cardíaca estrutural, arritmia prévia, QT longo congênito ou adquirido documentado, ou uso concomitante de outro fármaco prolongador de QT.",
+      "Corrigir hipocalemia, hipomagnesemia e hipocalcemia antes e durante o uso de fármaco pró-QT, e não apenas quando sintomático — os três eletrólitos são cofatores modificáveis do risco.",
+      "Reavaliar com eletrocardiograma após escalonamento de dose de fármaco pró-QT, coerente com o padrão de risco dose-dependente documentado para diversas classes, incluindo antipsicóticos.",
+      "Orientar explicitamente o paciente com evento prévio de QT longo/torsades induzida por fármaco a comunicar esse histórico a qualquer novo prescritor, incluindo dentista e outras especialidades, antes de iniciar medicação nova.",
+      "Em paciente psiquiátrico grave com risco iminente de auto ou heteroagressão, não adiar o tratamento da emergência psiquiátrica esperando eletrocardiograma quando a via de administração e o fármaco puderem ser escolhidos dentro do perfil de menor risco — o risco de suspender tratamento psiquiátrico necessário também tem custo de mortalidade próprio.",
+      "Reavaliar função renal e hepática periodicamente em paciente crônico usando fármaco pró-QT dependente dessas vias de depuração, especialmente diante de nova doença aguda intercorrente.",
+      "Se o QT longo ou a arritmia não se resolvem completamente após remoção do fator adquirido identificado, encaminhar para avaliação de canalopatia congênita subjacente, incluindo investigação familiar quando indicada.",
+      "Reforçar com o paciente e a farmácia comunitária a importância de checar interações antes de somar antibiótico, antiemético ou outro fármaco de curso curto a um esquema crônico que já inclui agente pró-QT.",
+      "Documentar de forma explícita e acessível (prontuário, cartão do paciente) qualquer fármaco identificado como causador de QT longo/torsades, para evitar reexposição inadvertida no futuro."
+    ],
+    "emergency_flow": [
+      "Diante de taquicardia ventricular polimórfica SUSTENTADA, com ou sem pulso: choque NÃO sincronizado imediato — os complexos mudam de morfologia batimento a batimento e não permitem sincronização confiável com a onda R (AHA 2025, Classe 1, nível B-NR). Não atrasar o choque para obter eletrólitos, sincronizar ou administrar magnésio.",
+      "Em paralelo, suspender qualquer fármaco que prolongue o QT quando clinicamente possível, e revisar toda a prescrição em busca de outros agentes pró-QT concomitantes.",
+      "Corrigir hipocalemia, hipomagnesemia e hipocalcemia; a correção faz parte central do manejo do QT longo adquirido, mesmo quando o magnésio sérico não está francamente baixo.",
+      "Magnésio intravenoso pode ser considerado para prevenir/suprimir recorrências de taquicardia ventricular polimórfica associada a QT longo/torsades (AHA 2025, Classe 2b, nível C-LD) — a evidência de suporte é baseada principalmente em séries de casos, não em ensaios randomizados; nenhuma dose é especificada nesta ficha.",
+      "Diante de torsades recorrente e pausa/bradicardia-dependente, consulta especializada para overdrive pacing ou isoproterenol pode ser indicada especificamente no QT longo ADQUIRIDO — não extrapolar essa estratégia para QT longo congênito sem avaliação especializada dedicada.",
+      "Rever função renal e hepática quando o fármaco pró-QT causal depende dessas vias de depuração, e investigar bradicardia/pausas, isquemia miocárdica e interações medicamentosas como fatores adicionais.",
+      "Manter monitorização eletrocardiográfica contínua durante toda a fase aguda e até estabilização do QTc e do fator precipitante.",
+      "Diferenciar ativamente de taquicardia ventricular polimórfica SEM QT longo (mecanismo predominantemente isquêmico no contexto agudo): magnésio rotineiro não é recomendado nesse fenótipo (AHA 2025, Classe 3, sem benefício) — tratar a etiologia isquêmica é prioridade nesse caso, não repetir magnésio.",
+      "Aplicar o escore de Tisdale apenas como ferramenta de estratificação de risco de prolongamento de QTc em paciente hospitalizado — não como critério de decisão sobre choque, magnésio ou qualquer intervenção do evento agudo.",
+      "Após reversão do evento agudo, reavaliar sistematicamente se o QT longo persiste apesar da remoção do fator adquirido, o que sinaliza necessidade de investigação de canalopatia congênita subjacente antes da alta."
+    ],
+    "treatment_summary": "O manejo do QT longo adquirido e da torsades de pointes se organiza em dois momentos claramente distintos: a emergência elétrica aguda e a prevenção de recorrência guiada pela causa. Diante de taquicardia ventricular polimórfica sustentada — associada a QT longo ou não —, a AHA 2025 recomenda choque NÃO sincronizado imediato, com ou sem pulso presente (Classe 1, nível B-NR): como os complexos QRS mudam de morfologia batimento a batimento, a sincronização confiável com a onda R não é possível, e atrasar o choque para obter eletrólitos, tentar sincronização ou administrar magnésio expõe o paciente a risco desnecessário. Essa é a etapa que efetivamente salva vida e não deve ser confundida com as medidas de prevenção de recorrência, que vêm depois. Em paralelo à terapia elétrica, o substrato reversível deve ser removido: suspender fármacos pró-QT quando clinicamente possível, corrigir hipocalemia/hipomagnesemia/hipocalcemia, e revisar função renal/hepática quando o fármaco causal depende dessas vias de depuração. O magnésio intravenoso tem papel principalmente na prevenção/supressão de recorrências de torsades associada a QT longo, não como substituto do choque elétrico na TV polimórfica sustentada — a AHA 2025 classifica esse uso como Classe 2b, nível C-LD, reconhecendo que a evidência de suporte vem majoritariamente de séries de casos, não de ensaios randomizados; o magnésio pode ser efetivo mesmo quando o nível sérico do próprio paciente não está baixo, e nenhuma dose é especificada nesta ficha. É igualmente importante não generalizar 'TV polimórfica = magnésio': na TV polimórfica SEM QT longo, tipicamente de mecanismo isquêmico no contexto agudo, o magnésio rotineiro não tem benefício demonstrado (AHA 2025, Classe 3, sem benefício) e a prioridade passa a ser tratar a etiologia isquêmica. Para a torsades recorrente e pausa/bradicardia-dependente, a consulta especializada para overdrive pacing ou isoproterenol pode ser indicada especificamente no cenário adquirido — essa estratégia não deve ser generalizada para o QT longo congênito sem avaliação especializada própria. O escore de Tisdale entra apenas como ferramenta de ESTRATIFICAÇÃO DE RISCO de prolongamento de QTc em paciente hospitalizado: quantifica fatores predisponentes acumulados (idade, sexo feminino, diurético de alça, hipocalemia, QTc de admissão já elevado, infarto agudo, sepse, insuficiência cardíaca e número de fármacos pró-QT simultâneos, com a regra específica de que dois ou mais fármacos somam 6 pontos, não 3), mas não diagnostica torsades, não decide choque e não define nenhuma dose de fármaco — seu papel é orientar vigilância eletrocardiográfica mais próxima em paciente de maior risco acumulado. Fora da fase aguda, a prevenção depende de identificar e evitar reexposição ao fármaco causal, corrigir e monitorizar eletrólitos de forma sustentada, revisar periodicamente a lista de medicamentos em paciente polimedicado, e investigar canalopatia congênita subjacente quando o QT longo ou a arritmia persistem apesar da remoção completa do fator adquirido identificado — nesse cenário de sobreposição 'dois fatores', a predisposição genética latente some ao gatilho farmacológico para produzir o evento clínico, e o manejo de longo prazo passa a seguir o protocolo de canalopatia hereditária, não o desta ficha.",
+    "monitoring": [
+      "Monitorização eletrocardiográfica contínua (telemetria) durante toda a fase aguda do evento e até resolução do fator precipitante identificado.",
+      "QTc seriado por eletrocardiograma de 12 derivações após remoção do fármaco causal e correção eletrolítica, documentando normalização progressiva.",
+      "Eletrólitos séricos (potássio, magnésio, cálcio) seriados até estabilização, com atenção a rebote de hipo ou hipercalemia durante reposição.",
+      "Reavaliação de função renal e hepática quando o fármaco causal dependia dessas vias, especialmente se houve disfunção transitória contribuindo para o acúmulo do agente.",
+      "Revisão periódica e estruturada da lista completa de medicamentos em paciente polimedicado com fator de risco persistente (idade avançada, sexo feminino, uso crônico de diurético de alça).",
+      "Eletrocardiograma de controle após qualquer reintrodução ou ajuste de dose de fármaco pró-QT em paciente com evento prévio, quando a reintrodução for clinicamente necessária e não houver alternativa de menor risco.",
+      "Reaplicação do escore de Tisdale durante a internação se surgirem novos fatores de risco (sepse nova, insuficiência cardíaca descompensada, novo fármaco pró-QT), já que a pontuação reflete o estado clínico atual, não um valor fixo na admissão.",
+      "Seguimento estruturado de longo prazo quando houver suspeita de canalopatia congênita subjacente não completamente excluída na fase aguda."
+    ],
+    "special_populations": [
+      "Paciente psiquiátrico em uso de antipsicótico: risco de morte súbita cardíaca dose-dependente documentado tanto para típicos quanto para atípicos, sem diferença relevante entre as classes (Ray et al., NEJM 2009); a decisão de tratar a emergência psiquiátrica não deve ser adiada esperando eletrocardiograma quando a via/dose puderem ser escolhidas dentro do perfil de menor risco, mas monitorização eletrocardiográfica basal e seriada é recomendada quando o quadro permite.",
+      "Paciente hospitalizado com múltiplos fatores de risco simultâneos (idade avançada, sexo feminino, diurético de alça, hipocalemia, QTc de admissão elevado, infarto agudo, sepse, insuficiência cardíaca, dois ou mais fármacos pró-QT): população em que o escore de Tisdale foi derivado e validado, indicando vigilância eletrocardiográfica mais próxima nos estratos de risco moderado e alto.",
+      "Sexo feminino: QTc basal em média mais longo que no sexo masculino, refletido tanto no ponto específico do escore de Tisdale quanto na assimetria de corte por sexo do documento de consenso da AHA/ACC Foundation (470 ms em homens, 480 ms em mulheres, como limiar de percentil 99).",
+      "Idoso polimedicado: acúmulo simultâneo de idade avançada (fator isolado no escore de Tisdale), maior prevalência de disfunção renal/hepática que retarda depuração de fármacos pró-QT, e maior probabilidade de múltiplas prescrições concomitantes — combinação que eleva desproporcionalmente o risco.",
+      "Insuficiência renal ou hepática: reduz a depuração de diversos fármacos pró-QT, prolongando sua exposição sistêmica e elevando o risco mesmo sem alteração da dose prescrita — reavaliação de função de órgão deve acompanhar qualquer paciente crônico nessas condições em uso de agente pró-QT.",
+      "Paciente predisposto a hipocalemia (uso crônico de diurético de alça ou tiazídico): a hipocalemia aumenta paradoxalmente a afinidade de diversos fármacos pelo canal hERG, amplificando o prolongamento de QT produzido pela mesma exposição farmacológica.",
+      "Portador de variante genética latente de canalopatia (QT longo congênito subclínico, nunca diagnosticado) exposto a fármaco pró-QT: cenário de sobreposição 'dois fatores', em que a predisposição hereditária silenciosa some ao gatilho farmacológico — deve ser suspeitado quando o QT longo ou a arritmia persistem após remoção completa do fator adquirido identificado, com encaminhamento para avaliação de canalopatia hereditária."
+    ],
+    "assistant_questions": [
+      {
+        "id": "tv_polimorfica_sustentada_em_curso",
+        "label": "Há taquicardia ventricular polimórfica SUSTENTADA em curso agora (com ou sem pulso)?",
+        "type": "boolean"
+      },
+      {
+        "id": "qtc_medido_ms",
+        "label": "Qual o valor do QTc medido no eletrocardiograma mais recente (em ms)?",
+        "type": "number"
+      },
+      {
+        "id": "aumento_qtc_60ms_do_basal",
+        "label": "Houve aumento de 60 ms ou mais do QTc em relação ao basal do próprio paciente?",
+        "type": "boolean"
+      },
+      {
+        "id": "evento_pausa_bradicardia_dependente",
+        "label": "O episódio de torsades/arritmia foi precedido por pausa ou bradicardia significativa?",
+        "type": "boolean"
+      },
+      {
+        "id": "numero_farmacos_prolongadores_qt",
+        "label": "Quantos fármacos reconhecidamente prolongadores de QT o paciente está usando simultaneamente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhum",
+            "label": "Nenhum identificado"
+          },
+          {
+            "value": "um",
+            "label": "Um fármaco"
+          },
+          {
+            "value": "dois_ou_mais",
+            "label": "Dois ou mais fármacos"
+          }
+        ]
+      },
+      {
+        "id": "farmaco_pro_qt_recente_ou_dose_aumentada",
+        "label": "Algum fármaco pró-QT foi iniciado ou teve a dose aumentada recentemente?",
+        "type": "boolean"
+      },
+      {
+        "id": "eletrolito_alterado_nao_corrigido",
+        "label": "Há hipocalemia, hipomagnesemia ou hipocalcemia identificada e ainda não corrigida?",
+        "type": "boolean"
+      },
+      {
+        "id": "disfuncao_renal_ou_hepatica_relevante",
+        "label": "Há disfunção renal ou hepática relevante que possa reduzir a depuração do fármaco suspeito?",
+        "type": "boolean"
+      },
+      {
+        "id": "idade_68_ou_mais",
+        "label": "Idade igual ou superior a 68 anos?",
+        "type": "boolean"
+      },
+      {
+        "id": "sexo_feminino",
+        "label": "Sexo feminino?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_diuretico_de_alca",
+        "label": "Uso de diurético de alça?",
+        "type": "boolean"
+      },
+      {
+        "id": "contexto_hospitalar_sepse_iam_ic",
+        "label": "Há sepse, infarto agudo do miocárdio ou insuficiência cardíaca descompensada concomitante?",
+        "type": "boolean"
+      },
+      {
+        "id": "contexto_psiquiatrico_antipsicotico",
+        "label": "O contexto envolve uso de antipsicótico em paciente psiquiátrico?",
+        "type": "boolean"
+      },
+      {
+        "id": "evento_previo_qt_longo_por_farmaco",
+        "label": "Há episódio prévio documentado de QT longo ou torsades induzida por fármaco?",
+        "type": "boolean"
+      },
+      {
+        "id": "qt_persiste_apos_remocao_fator_adquirido",
+        "label": "O QT longo ou a arritmia persistem mesmo após remoção completa do fator adquirido identificado?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "tv_polimorfica_sustentada_choque_imediato",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "tv_polimorfica_sustentada_em_curso",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Taquicardia ventricular polimórfica sustentada em curso — choque NÃO sincronizado imediato indicado (AHA 2025, Classe 1, B-NR); não atrasar para eletrólitos, sincronização ou magnésio."
+          ],
+          "supporting": [
+            "A variação morfológica batimento a batimento impede sincronização confiável com a onda R."
+          ]
+        }
+      },
+      {
+        "id": "qtc_muito_prolongado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "qtc_medido_ms",
+              "op": "gte",
+              "value": 500
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "QTc igual ou superior a 500 ms — marcador de maior risco de torsades iminente, sobretudo se associado a bradicardia."
+          ]
+        }
+      },
+      {
+        "id": "aumento_qtc_significativo_do_basal",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "aumento_qtc_60ms_do_basal",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Aumento de 60 ms ou mais do QTc em relação ao basal é critério de ação pronta mesmo sem o valor absoluto ultrapassar 500 ms."
+          ]
+        }
+      },
+      {
+        "id": "evento_pausa_dependente_recorrente",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "evento_pausa_bradicardia_dependente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Torsades pausa/bradicardia-dependente recorrente: consulta especializada para overdrive pacing ou isoproterenol pode ser indicada especificamente no QT longo adquirido."
+          ]
+        }
+      },
+      {
+        "id": "combinacao_dois_ou_mais_farmacos_pro_qt",
+        "priority": 68,
+        "when": {
+          "all": [
+            {
+              "field": "numero_farmacos_prolongadores_qt",
+              "op": "eq",
+              "value": "dois_ou_mais"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Dois ou mais fármacos prolongadores de QT simultâneos — no escore de Tisdale essa combinação soma 6 pontos no total (3 do primeiro fármaco mais 3 adicionais), não 3 pontos isolados."
+          ],
+          "supporting": [
+            "Revisar a prescrição em busca de alternativa de menor risco QT sempre que clinicamente possível."
+          ]
+        }
+      },
+      {
+        "id": "farmaco_pro_qt_recente_suspender_se_possivel",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "farmaco_pro_qt_recente_ou_dose_aumentada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Fármaco pró-QT iniciado ou com dose aumentada recentemente: suspender ou reduzir quando clinicamente possível é parte central da remoção do substrato reversível."
+          ]
+        }
+      },
+      {
+        "id": "eletrolito_nao_corrigido",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "eletrolito_alterado_nao_corrigido",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Hipocalemia, hipomagnesemia ou hipocalcemia identificada e ainda não corrigida — correção reduz diretamente o risco farmacodinâmico de prolongamento de QT."
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_organo_reduz_depuracao",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "disfuncao_renal_ou_hepatica_relevante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Disfunção renal ou hepática relevante pode prolongar a exposição sistêmica ao fármaco pró-QT mesmo sem alteração de dose — reavaliar função de órgão."
+          ]
+        }
+      },
+      {
+        "id": "tisdale_multiplos_fatores_hospitalares",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "contexto_hospitalar_sepse_iam_ic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Sepse, infarto agudo ou insuficiência cardíaca somam pontos relevantes no escore de Tisdale — considerar vigilância eletrocardiográfica mais próxima."
+          ]
+        }
+      },
+      {
+        "id": "contexto_psiquiatrico_nao_adiar_tratamento",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "contexto_psiquiatrico_antipsicotico",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Contexto psiquiátrico com antipsicótico: monitorização eletrocardiográfica basal/seriada quando o quadro permite, sem adiar o tratamento de emergência psiquiátrica quando houver risco iminente de auto ou heteroagressão."
+          ]
+        }
+      },
+      {
+        "id": "evento_previo_documentar_evitar_reexposicao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "evento_previo_qt_longo_por_farmaco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Episódio prévio de QT longo/torsades por fármaco: documentar de forma explícita e acessível para evitar reexposição inadvertida ao agente causal identificado."
+          ]
+        }
+      },
+      {
+        "id": "suspeita_canalopatia_congenita_subjacente",
+        "priority": 58,
+        "when": {
+          "all": [
+            {
+              "field": "qt_persiste_apos_remocao_fator_adquirido",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "QT longo ou arritmia persistente apesar da remoção completa do fator adquirido identificado: investigar canalopatia congênita subjacente, incluindo história familiar."
+          ],
+          "suggested_tests": [
+            "Avaliação especializada de canalopatia hereditária (escore de Schwartz, avaliação genética quando indicada)."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "arritmia",
+      "torsades de pointes",
+      "QT longo adquirido",
+      "escore de Tisdale",
+      "canal hERG",
+      "distúrbio eletrolítico",
+      "antipsicóticos e QT",
+      "TV polimórfica"
+    ],
+    "source_refs": [
+      "Wigginton JG, Agarwal S, Bartos JA, et al. Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2025;152(16 Suppl 2):S538-S577. DOI: 10.1161/CIR.0000000000001376. PMID: 41122884 — conferido no PubMed (NCBI e-utils) em 29/08/2026; TV polimórfica sustentada: choque não sincronizado imediato (Classe 1, B-NR); magnésio pode ser considerado nas recorrências associadas a QT longo/TdP (Classe 2b, C-LD); magnésio rotineiro sem benefício na TV polimórfica com QT normal (Classe 3, C-LD).",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — conferido no PubMed em 29/08/2026; correção de hipocalemia/hipomagnesemia/hipocalcemia e retirada de fármaco causal no QT longo adquirido.",
+      "Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — conferido no PubMed em 29/08/2026; escore de risco de prolongamento de QTc em paciente hospitalizado, não escore de diagnóstico ou tratamento de torsades; ≥2 fármacos pró-QT somam 6 pontos no total (3 do primeiro + 3 adicionais).",
+      "Drew BJ, Ackerman MJ, Funk M, et al.; American Heart Association Acute Cardiac Care Committee. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060. DOI: 10.1161/CIRCULATIONAHA.109.192704. PMID: 20142454 — conferido no PubMed em 29/08/2026; QTc >500 ms ou aumento ≥60 ms do basal como limiares de ação pronta; QTc acima do percentil 99 (470 ms em homens, 480 ms em mulheres) como anormalmente prolongado.",
+      "Ray WA, Meredith S, Thapa PB, Meador KG, Hall K, Murray KT. Antipsychotics and the risk of sudden cardiac death. Arch Gen Psychiatry. 2001;58(12):1161-1167. DOI: 10.1001/archpsyc.58.12.1161. PMID: 11735845 — conferido no PubMed em 29/08/2026; coorte de 481.744 beneficiários, risco dose-dependente de morte súbita cardíaca com uso corrente de antipsicótico.",
+      "Ray WA, Chung CP, Murray KT, Hall K, Stein CM. Atypical antipsychotic drugs and the risk of sudden cardiac death. N Engl J Med. 2009;360(3):225-235. DOI: 10.1056/NEJMoa0806994. PMID: 19144938 — conferido no PubMed em 29/08/2026; risco de morte súbita cardíaca semelhante entre antipsicóticos típicos e atípicos, ambos dose-dependentes.",
+      "Roden DM. Drug-induced prolongation of the QT interval. N Engl J Med. 2004;350(10):1013-1022. DOI: 10.1056/NEJMra032426. PMID: 14999113 — conferido no PubMed em 29/08/2026; mecanismo de bloqueio de hERG, pós-despolarização precoce e atividade deflagrada como base do QT longo adquirido induzido por fármaco.",
+      "Sanguinetti MC, Tristani-Firouzi M. hERG potassium channels and cardiac arrhythmia. Nature. 2006;440(7083):463-469. DOI: 10.1038/nature04710. PMID: 16554806 — conferido no PubMed em 29/08/2026; estrutura e promiscuidade farmacológica do canal hERG (KCNH2) como base molecular da suscetibilidade de fármacos estruturalmente diversos ao bloqueio da corrente IKr."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/41122884/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://pubmed.ncbi.nlm.nih.gov/23716032/",
+      "https://pubmed.ncbi.nlm.nih.gov/20142454/",
+      "https://pubmed.ncbi.nlm.nih.gov/11735845/",
+      "https://pubmed.ncbi.nlm.nih.gov/19144938/",
+      "https://pubmed.ncbi.nlm.nih.gov/14999113/",
+      "https://pubmed.ncbi.nlm.nih.gov/16554806/"
+    ],
+    "related_document_slugs": [
+      "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+      "fluxograma-torsades-de-pointes-e-qt-longo-adquirido",
+      "antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca",
+      "hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao",
+      "hipocalemia-grave-risco-arritmico-e-reposicao-segura"
+    ],
+    "patient_material_slug": "qt-longo-o-que-significa-e-cuidados-com-medicamentos",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), cobrindo especificamente a forma ADQUIRIDA (induzida por fármaco/distúrbio eletrolítico) de QT longo e torsades de pointes — distinta da canalopatia hereditária congênita (ficha já existente 'canalopatias-cardiacas-hereditarias', category='arritmia') e do prolongamento de QT por terapia oncológica dirigida (ficha já existente 'qt-longo-terapia-oncologica', category='arritmia', criada nesta mesma data). category='arritmia' segue exatamente a convenção já em uso nas duas fichas irmãs. \n\nTUDO COM TUDO — 5 related_document_slugs, cada um LIDO POR COMPLETO nesta sessão, confirmando discussão CENTRAL do tema (não tangencial): 'torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo' e 'fluxograma-torsades-de-pointes-e-qt-longo-adquirido' (os dois documentos centrais e homônimos do tema, em content/Arritmias/); 'antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca' (em content/Saúde_mental_e_cardiologia/, documento inteiro dedicado ao risco de QT/torsades por antipsicótico); e dois candidatos adicionais buscados ativamente via grep fora de Farmacologia/Calculadoras/Exames, para dar folga acima do piso de 3: 'hipomagnesemia-risco-arritmico-hipocalemia-refrataria-e-investigacao' (em content/Terapia_intensiva/, contém seção dedicada 'QT longo adquirido e torsades de pointes' que já referencia explicitamente os dois documentos centrais desta ficha) e 'hipocalemia-grave-risco-arritmico-e-reposicao-segura' (em content/Terapia_intensiva/, contém subseção dedicada 'QT longo adquirido / torsades de pointes' descrevendo hipocalemia como cofator clássico). \n\nEXCLUSÃO DELIBERADA DE FARMACOLOGIA: exatamente 3 dos 6 candidatos originalmente mapeados vivem fisicamente em content/Farmacologia/ e foram EXCLUÍDOS de related_document_slugs por instrução explícita desta rodada (mesmo sendo tematicamente relevantes): 'metadona-e-prolongamento-do-intervalo-qt', 'hipocalcemia-grave-e-prolongamento-do-qt-mecanismo-de-fase-2-e-reversao-rapida-com-calcio' e 'sulfato-de-magnesio-em-cardiologia-torsades-de-pointes-e-adjuvante-no-controle-de-frequencia-da-fa'. Todos os três foram lidos como apoio de conteúdo para o texto desta ficha (mecanismo de metadona, hipocalcemia de fase 2, papel do magnésio), mas não entram como link estrutural. Nenhum candidato resolve para content/Farmacologia/, content/Calculadoras/ ou content/Exames/ na lista final. \n\nSOBREPOSIÇÃO DE HUB DOCUMENTADA: 2 dos 5 related_document_slugs ('torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo' e 'fluxograma-torsades-de-pointes-e-qt-longo-adquirido') também aparecem em related_document_slugs da ficha-hub 'arritmias-ventriculares-e-morte-subita-cardiaca' (category='arritmia', area='geral', 26 vínculos). Essa sobreposição é esperada e aceita pela mesma lógica já usada para o hub 'cardiomiopatias' na ficha 'cardiomiopatia-de-takotsubo' (PR #698, 29/08/2026): torsades de pointes é, ao mesmo tempo, um verbete específico com fisiopatologia/manejo próprios e uma das entidades listadas no hub geral de arritmias ventriculares/morte súbita — não há sobreposição não documentada com nenhuma outra ficha do catálogo (verificado programaticamente contra doencas/metadados.json e doencas/fragmentos/*.json).\n\nVERIFICAÇÃO DE PMIDs: 8 PMIDs verificados individualmente via NCBI e-utils (esummary) em 29/08/2026 — título, periódico, ano, volume, número e páginas conferidos contra o registro oficial do PubMed antes de persistir no source_refs. Nenhuma divergência encontrada em relação aos documentos-fonte lidos nesta sessão (diferente da rodada de takotsubo, onde 2 PMIDs precisaram de correção).\n\nESCORE DE TISDALE CAPTURADO QUALITATIVAMENTE: a pontuação do escore de Tisdale (pontos por variável, faixas de risco 0-6/7-10/11-21) é um sistema de estratificação de risco, não uma prescrição — foi descrita integralmente em diagnostic_approach e treatment_summary sem qualquer dose de sulfato de magnésio, isoproterenol ou outro fármaco em nenhum campo. Nenhuma dose de fármaco em nenhum campo de texto desta ficha (verificado por revisão manual e pelos mesmos padrões regex do teste dedicado).\n\npatient_material_slug: reaproveitado 'qt-longo-o-que-significa-e-cuidados-com-medicamentos' (ligado ao documento-fonte da canalopatia congênita em material-paciente/metadados.json). O material explica em linguagem simples AMBAS as formas de QT longo (congênita e por remédio), sendo o material mais diretamente correspondente ao conteúdo desta ficha disponível no catálogo — não existe, no momento desta criação, um segundo material de paciente dedicado exclusivamente à forma adquirida.\n\nGATE DE review_status: seguindo o padrão exato da PR #698 (branch claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829), a entrada 'torsades-de-pointes-qt-longo-adquirido' foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] em backend/tests/test_canonical_content_review_status.py — necessária apenas porque essa allowlist é reaproveitada por importação direta em backend/tests/test_disease_fragments_canonical.py::test_catalogo_combinado_tem_slugs_unicos_e_status_editorial_explicito, onde a checagem funciona corretamente contra status pendente. Essa entrada NÃO isenta o registro do teste principal, cuja lógica só consulta a allowlist para registros já com status='revisado' — por isso test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc CONTINUA FALHANDO para este slug, como esperado, documentado e não contornado: conteúdo novo não revisado por humano não deve se autoaprovar nesse gate.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

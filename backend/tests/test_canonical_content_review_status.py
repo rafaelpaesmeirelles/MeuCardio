@@ -5,13 +5,8 @@ editorial posterior. A fronteira de segurança de publicação fica na
 reconciliação: apenas `review_status=revisado` é publicado e qualquer registro
 que deixe de estar revisado é despublicado.
 
-A exceção estreita usada durante a RC de lançamento (dez medicamentos
-conhecidos, aprovados nominalmente) foi fechada em 12/08/2026, depois da
-validação científica completa dos dez contra fonte primária (bula/rótulo/
-PubMed) — ver `review_note` de cada um em `medicamentos/metadados.json`. Os lotes
-Tudo com Tudo pendentes foram revisados em 28/08/2026. As allowlists ficam
-vazias: qualquer novo status diferente de `revisado` quebra o gate e exige
-decisão editorial explícita.
+Os lotes Tudo com Tudo pendentes anteriores foram revisados. Qualquer novo
+status diferente de revisado quebra o gate e exige decisão editorial explícita.
 """
 
 from __future__ import annotations
@@ -21,6 +16,7 @@ from pathlib import Path
 import re
 
 from app.services.disease_manifest import load_disease_records
+from app.services.carregar_triagem_sintomas import load_triage_records
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
@@ -39,6 +35,8 @@ def _records(relative_path: str) -> list[dict]:
     path = REPOSITORY_ROOT / relative_path
     if relative_path == "doencas/metadados.json":
         return load_disease_records(path)
+    if relative_path == "triagem-sintomas/metadados.json":
+        return load_triage_records(path)
     payload = json.loads(path.read_text(encoding="utf-8"))
     assert isinstance(payload, list)
     return payload

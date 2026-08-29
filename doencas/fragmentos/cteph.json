@@ -1,0 +1,336 @@
+[
+  {
+    "slug": "cteph",
+    "name": "Hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "aliases": [
+      "CTEPH",
+      "Chronic thromboembolic pulmonary hypertension",
+      "Hipertensão pulmonar tromboembólica crônica",
+      "Doença tromboembólica pulmonar crônica",
+      "Chronic thromboembolic pulmonary disease (CTEPD)",
+      "Hipertensão pulmonar do grupo 4"
+    ],
+    "area": "geral",
+    "category": "circulacao_pulmonar",
+    "subtype": "grupo_4_esc_ers_2022",
+    "cyanosis_class": "nao_aplicavel",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "fonte_producao": "claude",
+    "summary": "A hipertensão pulmonar tromboembólica crônica (CTEPH, grupo 4 da classificação ESC/ERS) resulta da obstrução mecânica crônica das artérias pulmonares por material trombótico organizado e fibrosado, não resolvido após um ou mais episódios de tromboembolismo pulmonar agudo, associada a remodelamento microvascular progressivo nos territórios não obstruídos. É a única forma de hipertensão pulmonar com tratamento potencialmente curativo — a endarterectomia pulmonar —, o que torna a sequência de decisão diferente de qualquer outro grupo: todo paciente deve primeiro ser avaliado quanto à operabilidade por um heart team especializado (cirurgião de endarterectomia, intervencionista de angioplastia pulmonar por balão, especialista em hipertensão pulmonar e radiologista torácico) antes de qualquer definição terapêutica. A confirmação diagnóstica combina cintilografia pulmonar de ventilação-perfusão (exame de rastreio com altíssimo valor preditivo negativo), angiotomografia de tórax e cateterismo cardíaco direito. Para quem não é candidato à cirurgia — por doença anatomicamente inacessível, comorbidade proibitiva ou recusa —, angioplastia pulmonar por balão e terapia farmacológica dirigida (riociguate, e mais recentemente macitentana) são as opções estabelecidas, isoladas ou combinadas, também usadas para tratar doença residual ou recorrente após a cirurgia. Casos refratários a todas essas estratégias podem ser encaminhados para transplante pulmonar.",
+    "epidemiology": "A CTEPH tem incidência estimada em 3 a 5 casos por 100.000 habitantes ao ano. O maior registro prospectivo internacional já publicado sobre a doença (Delcroix M et al., Circulation. 2016;133(9):859-871, PMID 26826181) acompanhou 679 pacientes com CTEPH recém-diagnosticada em 27 centros europeus, ao longo de um período de recrutamento de 24 meses: 404 pacientes (59%) foram submetidos a endarterectomia pulmonar e 275 (41%) não foram operados, por inoperabilidade anatômica, risco cirúrgico individual proibitivo ou recusa do próprio paciente. A diferença de sobrevida entre os dois grupos é grande e cresce ao longo do tempo — em 1, 2 e 3 anos, respectivamente 93%, 91% e 89% nos operados contra 88%, 79% e 70% nos não operados —, o dado quantitativo que sustenta a afirmação de que a endarterectomia é potencialmente curativa. Classe funcional da OMS IV e história prévia de câncer se associaram a maior mortalidade nos dois grupos (HR 4,16 e 3,02 nos operados; HR 4,76 e 2,15 nos não operados); pressão de átrio direito elevada só alcançou significância estatística como preditor no grupo não operado (HR 1,50; IC95% 1,20-1,88). Em centros de expertise, a mortalidade operatória da endarterectomia pulmonar está hoje em torno de 2%, com centros de referência abaixo de 3% — inclusive nas formas hemodinamicamente mais graves, com resistência vascular pulmonar pré-operatória acima de 1.000 dyn·s·cm⁻⁵, em que a mortalidade caiu para menos de 5% (Kim NH et al., Eur Respir J. 2024;64(4):2401294, PMID 39209473). Ainda assim, uma parcela relevante dos pacientes permanece fora do alcance cirúrgico: cerca de 30 a 45% não são candidatos à endarterectomia pulmonar, e mesmo entre os operados, hipertensão pulmonar residual clinicamente relevante — definida na literatura como PAPm ≥25 mmHg no pós-operatório — foi relatada em 17% a 51% dos casos, com o limiar de PAPm ≥38 mmHg e RVP ≥5 UW, medido 3 a 6 meses após a cirurgia, associado a pior desfecho a médio prazo.",
+    "presentation": [
+      "Dispneia progressiva aos esforços — sintoma mais comum e inicialmente inespecífico, com frequência atribuída a descondicionamento físico, o que contribui para o atraso diagnóstico já descrito na hipertensão pulmonar em geral",
+      "Fadiga desproporcional ao nível de esforço",
+      "História pregressa de tromboembolismo pulmonar agudo ou trombose venosa profunda, presente na maioria dos casos, mas não em todos — a ausência de evento tromboembólico documentado não afasta o diagnóstico",
+      "Persistência ou piora da dispneia meses após um episódio de tromboembolismo pulmonar agudo, quando a anticoagulação isolada não teria explicado a evolução",
+      "Síncope ou pré-síncope de esforço — sinal de gravidade hemodinâmica, com o mesmo significado de baixo débito descrito na hipertensão pulmonar em geral",
+      "Dor torácica atípica, por sobrecarga do ventrículo direito",
+      "Hemoptise ou escarro hemoptoico — mais característico da CTEPH do que de outros grupos de hipertensão pulmonar, refletindo a circulação colateral brônquica hipertrofiada em resposta à obstrução pulmonar crônica",
+      "Palpitações",
+      "Sinais de falência de ventrículo direito já estabelecida — edema de membros inferiores, turgência jugular, ascite — em doença avançada não reconhecida precocemente",
+      "Achado incidental de defeitos de perfusão em exame de imagem solicitado por outro motivo, em paciente oligossintomático"
+    ],
+    "diagnostic_approach": {
+      "criterios_hemodinamicos_e_via_diagnostica": "O diagnóstico de CTEPH exige a combinação de três elementos: padrão hemodinâmico pré-capilar ao cateterismo cardíaco direito (PAPm >20 mmHg, pressão de oclusão capilar pulmonar ≤15 mmHg e resistência vascular pulmonar >2 unidades Wood, conforme o limiar da diretriz ESC/ERS 2022 já registrado na ficha geral de hipertensão pulmonar desta base — Humbert M et al., Eur Heart J. 2022;43(38):3618-3731, PMID 36017548); defeitos de perfusão pulmonar persistentes, de padrão segmentar ou maior, à cintilografia de ventilação-perfusão; e persistência desses achados apesar de anticoagulação terapêutica plena por pelo menos 3 meses — o intervalo que distingue material tromboembólico crônico organizado e fibrosado de trombo agudo ainda em resolução. Confirmado esse padrão, todo paciente — com ou sem hipertensão pulmonar já estabelecida — deve ser referenciado a um centro de expertise em CTEPH para decisão em heart team multidisciplinar, antes de qualquer definição terapêutica (Kim NH et al., Eur Respir J. 2024;64(4):2401294, PMID 39209473).",
+      "cintilografia_vq_versus_angiotomografia": "A cintilografia pulmonar de ventilação-perfusão (V/Q) é o exame de rastreio de escolha: tem sensibilidade maior que a angiotomografia para doença tromboembólica de vasos distais, e um resultado normal ou de baixa probabilidade tem altíssimo valor preditivo negativo para excluir CTEPH — por isso a via diagnóstica da hipertensão pulmonar em geral já registra que cintilografia normal afasta CTEPH com segurança na maioria dos casos, embora suspeita clínica mantida não deva ser descartada só por esse exame de menor especificidade anatômica. A angiotomografia de tórax complementa a cintilografia: detalha a extensão anatômica do material trombótico organizado (padrões de obstrução em teia, bandas e faixas intraluminais, oclusão completa, irregularidade de parede), ajuda a excluir diagnósticos alternativos que mimetizam defeito de perfusão (compressão extrínseca, massa mediastinal) e é essencial ao planejamento cirúrgico. Nenhum dos dois exames isoladamente substitui o cateterismo cardíaco direito confirmatório, nem a correlação final feita pelo heart team entre imagem e hemodinâmica.",
+      "avaliacao_de_operabilidade_pelo_heart_team": "O critério anatômico central de operabilidade é a acessibilidade cirúrgica do material trombótico organizado — historicamente restrita a doença central (tronco, artérias lobares e segmentares proximais), mas hoje a endarterectomia distal em vasos segmentares e subsegmentares já é considerada factível em centros de alto volume, com desfechos comparáveis a curto e longo prazo (Kim NH et al., Eur Respir J. 2024, PMID 39209473). Não existe hoje um escore de risco pré-operatório validado que substitua o julgamento de uma equipe experiente; a própria literatura reconhece essa lacuna explicitamente. Três pontos que a literatura recente corrige, porque continuam sendo usados informalmente para excluir pacientes da avaliação: resistência vascular pulmonar muito elevada (mesmo acima de 1.000 dyn·s·cm⁻⁵) não é, por si só, contraindicação; idade avançada (>80 anos), obesidade mórbida e cirurgia prévia (reoperação) também não são contraindicações isoladas reconhecidas. Doença que se estende além do alcance de cirurgiões experientes é o critério que de fato define inoperabilidade anatômica — não um corte fixo de segmento vascular. Operabilidade técnica não é sinônimo de decisão de operar: um paciente pode ser tecnicamente operável e, ainda assim, não seguir para cirurgia por recusa própria ou por comorbidade proibitiva que torna a relação risco-benefício desfavorável para a equipe. Quando a obstrução mecânica central não se correlaciona com a gravidade hemodinâmica encontrada, há suspeita de microvasculopatia associada — doença de pequenos vasos que acompanha a obstrução e limita o benefício hemodinâmico esperado da cirurgia, mesmo em doença central tecnicamente ressecável."
+    },
+    "differentials": [
+      "Hipertensão arterial pulmonar idiopática ou hereditária (grupo 1) — pode ter padrão hemodinâmico pré-capilar indistinguível ao cateterismo isolado; a cintilografia V/Q com defeitos de perfusão persistentes é o que direciona para CTEPH em vez de HAP idiopática",
+      "Hipertensão pulmonar por doença cardíaca esquerda (grupo 2) — padrão pós-capilar, com pressão de oclusão capilar pulmonar elevada, o que já distingue do padrão pré-capilar da CTEPH",
+      "Hipertensão pulmonar por doença pulmonar ou hipóxia (grupo 3) — contexto de pneumopatia estrutural conhecida, sem os defeitos de perfusão em mosaico persistentes característicos da CTEPH",
+      "Estenose ou compressão extrínseca de artéria pulmonar por outras causas — massa mediastinal, mediastinite fibrosante, sarcoma de artéria pulmonar — que podem mimetizar defeito de perfusão à cintilografia e exigem correlação com a angiotomografia para diferenciação",
+      "Tromboembolismo pulmonar agudo recorrente sem hipertensão pulmonar estabelecida (doença tromboembólica pulmonar crônica sem HP, CTEPD) — mesmo espectro fisiopatológico, mas sem o critério hemodinâmico de HP confirmado",
+      "Doença veno-oclusiva pulmonar/microvasculopatia associada sem obstrução central proporcional — quando a gravidade hemodinâmica excede o que a obstrução mecânica visível explicaria, sugerindo componente de pequenos vasos sobreposto",
+      "Hipertensão pulmonar do grupo 5, multifatorial ou de mecanismo incerto, quando não há defeito de perfusão persistente compatível nem história tromboembólica que sustente CTEPH"
+    ],
+    "tests": [
+      "Cintilografia pulmonar de ventilação-perfusão (V/Q) — finalidade: exame de rastreio de escolha, maior sensibilidade que a angiotomografia para doença tromboembólica distal, altíssimo valor preditivo negativo quando normal; limitação: menor especificidade anatômica, exige interpretação especializada e correlação com angiotomografia",
+      "Angiotomografia de tórax — finalidade: detalha a extensão anatômica do material trombótico organizado, essencial ao planejamento cirúrgico e à exclusão de diagnósticos alternativos (massa, compressão extrínseca); limitação: sensibilidade menor que a cintilografia para doença tromboembólica distal isolada",
+      "Cateterismo cardíaco direito — finalidade: confirma o padrão hemodinâmico pré-capilar (PAPm, pressão de oclusão capilar pulmonar, resistência vascular pulmonar), obrigatório antes de qualquer definição terapêutica; limitação: mesmos riscos procedimentais já registrados na ficha geral de hipertensão pulmonar desta base",
+      "Angiografia pulmonar convencional/por subtração digital — finalidade: em centros de referência, complementa a angiotomografia no planejamento cirúrgico e na definição de vasos-alvo para angioplastia pulmonar por balão; limitação: invasiva, reservada a centros de expertise",
+      "Ressonância magnética cardíaca — finalidade: avaliação da função e das dimensões do ventrículo direito quando o ecocardiograma é inconclusivo; limitação: disponibilidade e experiência variáveis entre centros",
+      "Ecocardiograma transtorácico com Doppler — finalidade: triagem inicial e acompanhamento seriado da função de ventrículo direito, mesmas limitações de acurácia já registradas na ficha geral de hipertensão pulmonar desta base",
+      "Teste de caminhada de 6 minutos e NT-proBNP — finalidade: estratificação de risco e acompanhamento de resposta terapêutica, reutilizando a mesma lógica de estratificação da hipertensão pulmonar em geral; limitação: não substituem a avaliação hemodinâmica nem a decisão de operabilidade"
+    ],
+    "red_flags": [
+      "Sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica — mesmo significado de gravidade já registrado na ficha geral de hipertensão pulmonar",
+      "Classe funcional da OMS III ou IV no diagnóstico ou no seguimento — marcador de doença avançada e de maior mortalidade, tanto em pacientes operados quanto não operados (HR 4,16 e 4,76, respectivamente, no registro de Delcroix)",
+      "Doença tromboembólica pulmonar crônica confirmada sem encaminhamento a centro de expertise em CTEPH para avaliação de operabilidade em heart team — falha de processo com impacto direto na sobrevida",
+      "Discordância entre a extensão da obstrução mecânica central e a gravidade hemodinâmica encontrada — sugere microvasculopatia associada, que limita o benefício esperado mesmo de cirurgia tecnicamente bem-sucedida",
+      "PAPm ≥38 mmHg e/ou resistência vascular pulmonar ≥5 unidades Wood, medidos 3 a 6 meses após endarterectomia pulmonar — limiar associado a pior desfecho a médio prazo na doença residual",
+      "Hemoptise significativa — tanto como manifestação da própria CTEPH (circulação colateral brônquica hipertrofiada) quanto como complicação relacionada ao procedimento de angioplastia pulmonar por balão",
+      "Resistência vascular pulmonar acima de 4 unidades Wood antes de angioplastia pulmonar por balão sem consideração de pré-tratamento farmacológico — associada a maior risco de complicação grave do procedimento"
+    ],
+    "treatment_summary": "O tratamento da CTEPH segue uma sequência de decisão específica deste grupo, diferente de qualquer outra forma de hipertensão pulmonar: anticoagulação terapêutica por toda a vida é a base para todos os pacientes, salvo contraindicação individual, e todo paciente deve primeiro ser encaminhado a um centro de expertise para avaliação de operabilidade em heart team multidisciplinar — composto por cirurgião de endarterectomia pulmonar, intervencionista de angioplastia pulmonar por balão, especialista em hipertensão pulmonar e radiologista torácico —, com três funções bem definidas: confirmar o diagnóstico, determinar a operabilidade e determinar o potencial de angioplastia pulmonar por balão. A endarterectomia pulmonar é o tratamento de escolha e o único potencialmente curativo da hipertensão pulmonar em qualquer grupo: remove cirurgicamente o material fibrótico organizado que obstrui as artérias pulmonares, com mortalidade operatória hoje em torno de 2% em centros de expertise (abaixo de 3% em centros de referência, inclusive nas formas hemodinamicamente mais graves) e ganho de sobrevida que se acentua ao longo dos anos frente ao paciente não operado. Resistência vascular pulmonar muito elevada, idade avançada, obesidade mórbida e cirurgia prévia não são, isoladamente, contraindicações à cirurgia — a inoperabilidade anatômica verdadeira é definida pelo limite técnico do que uma equipe experiente consegue ressecar com segurança, e não por um corte fixo de segmento vascular. Para o paciente tecnicamente inoperável, para quem é operável mas recusa a cirurgia ou tem comorbidade proibitiva, e para a hipertensão pulmonar residual ou recorrente após a endarterectomia (relatada em 17% a 51% dos operados), duas frentes se somam ou se sucedem: a angioplastia pulmonar por balão, que reduz a resistência vascular pulmonar de forma mais pronunciada que a terapia farmacológica isolada nos dois ensaios randomizados que a compararam diretamente a riociguate (RACE e MR BPA), mas às custas de eventos adversos procedimentais relevantes — eventos adversos graves relacionados ao tratamento em 42% dos pacientes no RACE, complicação hemorrágica pulmonar em 44% no MR BPA —, o que restringe seu uso a centros com operadores experientes; e a terapia farmacológica dirigida, hoje com duas classes com evidência randomizada específica para CTEPH inoperável: o estimulador da guanilato-ciclase solúvel (riociguate), única classe com recomendação Classe I/Nível B da ESC/ERS 2022 nesse cenário, sem dose especificada nesta ficha; e o antagonista do receptor de endotelina (macitentana), com evidência do ensaio MERIT-1 mostrando melhora significativa da resistência vascular pulmonar em CTEPH inoperável, também sem dose especificada aqui. Quando a carga hemodinâmica pré-angioplastia é elevada (resistência vascular pulmonar acima de 4 unidades Wood), o pré-tratamento farmacológico antes da BPA reduz a taxa de complicações graves do procedimento — achado do próprio ensaio RACE —, mas isso não torna esse limiar uma regra binária universal: sequência e duração do pré-tratamento são decisões individualizadas do heart team, não um protocolo fixo. Não há evidência de benefício em atrasar a cirurgia de um paciente considerado operável para tentar terapia-ponte farmacológica ou por angioplastia antes — essas duas frentes são o caminho de quem já foi definido como inoperável pela equipe, ou o complemento para tratar o que sobra depois da cirurgia, não uma etapa que precede a avaliação cirúrgica em quem tem doença acessível. Nos casos refratários a todas essas estratégias — cirurgia, angioplastia e terapia farmacológica combinada —, o transplante pulmonar é a medida de resgate definitiva, seguindo os mesmos critérios gerais de encaminhamento e listagem já registrados na ficha geral de hipertensão pulmonar desta base (estratificação de risco pelo modelo ESC/ERS de quatro estratos ou pelo escore REVEAL 2.0, deterioração clínica, classe funcional persistentemente III-IV, necessidade de terapia parenteral, hipoxemia ou disfunção de órgão-alvo).",
+    "ambulatory_flow": [
+      "Encaminhamento e acompanhamento em centro de expertise em CTEPH, com heart team estruturado, para confirmação diagnóstica, decisão de operabilidade e escolha da estratégia terapêutica",
+      "Manutenção de anticoagulação terapêutica por toda a vida, salvo contraindicação individual, independentemente da estratégia de tratamento escolhida",
+      "Reavaliação hemodinâmica e funcional 3 a 6 meses após a endarterectomia pulmonar, para identificar hipertensão pulmonar residual clinicamente relevante e decidir necessidade de terapia complementar (riociguate e/ou angioplastia pulmonar por balão)",
+      "Seguimento seriado com classe funcional da OMS, teste de caminhada de 6 minutos e NT-proBNP, reutilizando a mesma lógica de estratificação de risco da hipertensão pulmonar em geral",
+      "Programação de sessões seriadas de angioplastia pulmonar por balão, quando indicada, em centro com operadores experientes, com reavaliação hemodinâmica entre sessões",
+      "Reavaliação de risco de sangramento e ajuste de estratégia de anticoagulação em paciente com hemoptise recorrente",
+      "Encaminhamento para avaliação de transplante pulmonar quando a doença permanece refratária apesar de cirurgia, angioplastia e terapia farmacológica combinadas, seguindo os critérios já registrados na ficha geral de hipertensão pulmonar desta base",
+      "Vacinação anual contra influenza e vacinação contra pneumococo, pelo mesmo risco de descompensação de ventrículo direito em infecção respiratória já registrado na hipertensão pulmonar em geral"
+    ],
+    "emergency_flow": [
+      "Reconhecimento precoce de falência aguda de ventrículo direito/crise de hipertensão pulmonar — seguir o mesmo protocolo já registrado na ficha geral de hipertensão pulmonar desta base (hipotensão, síncope, sinais de baixo débito, sinais de falência de VD), sem duplicar a orientação de suporte hemodinâmico ali detalhada",
+      "Investigar e tratar o gatilho precipitante da descompensação aguda: novo episódio tromboembólico, infecção, arritmia, interrupção da anticoagulação ou da terapia farmacológica dirigida em uso crônico",
+      "Diante de hemoptise significativa em paciente com CTEPH conhecida, considerar tanto a própria doença de base (circulação colateral brônquica hipertrofiada) quanto complicação relacionada a procedimento recente de angioplastia pulmonar por balão como causas prováveis, com avaliação urgente em centro com experiência em via aérea e embolização quando necessário",
+      "Em paciente em sessões seriadas de angioplastia pulmonar por balão que desenvolve dispneia aguda, hipoxemia ou hemoptise nas horas seguintes ao procedimento, considerar lesão pulmonar relacionada ao procedimento (mecanismo de reperfusão) como causa provável e manejar em conjunto com a equipe intervencionista",
+      "Avaliação precoce de suporte circulatório mecânico em centro especializado quando há refratariedade ao suporte farmacológico inicial, decisão de heart team/centro de referência, seguindo o mesmo princípio de escalonamento já registrado na hipertensão pulmonar em geral"
+    ],
+    "monitoring": [
+      "Classe funcional da OMS seriada em cada consulta de seguimento",
+      "Teste de caminhada de 6 minutos seriado, para acompanhar capacidade de exercício e alimentar a reavaliação de risco",
+      "NT-proBNP seriado, biomarcador de resposta terapêutica",
+      "Cateterismo cardíaco direito de reavaliação 3 a 6 meses após a endarterectomia pulmonar, para identificar hipertensão pulmonar residual e decidir necessidade de terapia complementar",
+      "Ecocardiograma de reavaliação periódica, para monitorar função e dimensões do ventrículo direito ao longo do seguimento, inclusive entre sessões de angioplastia pulmonar por balão",
+      "Reavaliação hemodinâmica seriada durante o curso de angioplastia pulmonar por balão, para guiar o número e o intervalo entre as sessões",
+      "Seguimento de sinais de recorrência tromboembólica e de adesão à anticoagulação terapêutica ao longo de todo o acompanhamento"
+    ],
+    "special_populations": [
+      "Paciente com resistência vascular pulmonar pré-operatória muito elevada (acima de 1.000 dyn·s·cm⁻⁵): não deve ser excluído da avaliação cirúrgica só por esse critério — mortalidade operatória em centros de expertise caiu para menos de 5% mesmo nessas formas mais graves (Kim NH et al., Eur Respir J. 2024, PMID 39209473).",
+      "Paciente idoso (acima de 80 anos), com obesidade mórbida ou com cirurgia prévia (candidato a reoperação): nenhum desses três fatores é, isoladamente, contraindicação reconhecida à endarterectomia pulmonar pela literatura mais recente — a decisão permanece do heart team, não de um corte demográfico.",
+      "Paciente tecnicamente operável que recusa a cirurgia ou tem comorbidade proibitiva que eleva o risco global: segue via farmacológica (riociguate e/ou macitentana) e/ou angioplastia pulmonar por balão, conforme decisão do heart team — não deve ser tratado como se a avaliação inicial de operabilidade fosse dispensável.",
+      "Paciente com hipertensão pulmonar residual ou recorrente após endarterectomia pulmonar (17% a 51% dos operados): reavaliação hemodinâmica 3 a 6 meses após a cirurgia decide necessidade de riociguate e/ou angioplastia pulmonar por balão complementar; PAPm ≥38 mmHg e RVP ≥5 UW nesse momento são marcadores prognósticos adversos, não critérios binários que excluam tratamento de doença residual abaixo desses valores.",
+      "Paciente com discordância entre a extensão da obstrução mecânica central e a gravidade hemodinâmica encontrada: suspeita de microvasculopatia associada, que limita o benefício hemodinâmico esperado da cirurgia mesmo quando a doença central é tecnicamente ressecável — achado que deve ser discutido no heart team, não tratado apenas como falha técnica da cirurgia.",
+      "Paciente em uso de macitentana com base no ensaio MERIT-1: a publicação original de 2017 (PMID 28919201) foi retratada pelo próprio periódico em 2024 após revisão de integridade de dados hemodinâmicos em 14 dos 80 participantes, e republicada no mesmo número com dados revisados (PMID 38548406) — o resultado favorável ao fármaco se manteve na análise de sensibilidade que excluiu os casos implausíveis; a citação vigente é a versão republicada de 2024, não o registro retratado de 2017.",
+      "Paciente candidato a angioplastia pulmonar por balão com resistência vascular pulmonar acima de 4 unidades Wood: considerar pré-tratamento farmacológico antes da primeira sessão, pela redução de complicações graves do procedimento demonstrada no ensaio RACE — sequência e duração individualizadas pelo heart team, não um protocolo fixo aplicável a todo paciente acima desse limiar."
+    ],
+    "assistant_questions": [
+      {
+        "id": "acute_rv_failure_signs",
+        "label": "Há sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica (hipotensão, síncope, baixo débito)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Gravidade"
+      },
+      {
+        "id": "functional_class",
+        "label": "Classe funcional da OMS/NYHA atual",
+        "type": "select",
+        "required": true,
+        "section": "Estratificação",
+        "options": [
+          { "value": "I_II", "label": "I ou II" },
+          { "value": "III", "label": "III" },
+          { "value": "IV", "label": "IV" }
+        ]
+      },
+      {
+        "id": "encaminhado_centro_expertise",
+        "label": "O paciente já foi encaminhado a centro de expertise em CTEPH para decisão em heart team?",
+        "type": "boolean",
+        "required": true,
+        "section": "Fluxo assistencial"
+      },
+      {
+        "id": "status_operabilidade",
+        "label": "Qual o status de operabilidade definido pelo heart team, se já avaliado?",
+        "type": "select",
+        "section": "Classificação",
+        "options": [
+          { "value": "operavel_aceita_cirurgia", "label": "Operável, aceita a cirurgia, sem comorbidade proibitiva" },
+          { "value": "operavel_recusa_ou_comorbidade", "label": "Operável tecnicamente, mas recusa ou comorbidade proibitiva" },
+          { "value": "inoperavel_anatomica", "label": "Inoperável — doença além do alcance cirúrgico seguro" },
+          { "value": "pos_eap_residual", "label": "Pós-endarterectomia, com doença residual/recorrente" },
+          { "value": "ainda_nao_avaliado", "label": "Ainda não avaliado pelo heart team" }
+        ]
+      },
+      {
+        "id": "rvp_muito_elevada_pre_operatoria",
+        "label": "Resistência vascular pulmonar pré-operatória acima de 1.000 dyn·s·cm⁻⁵?",
+        "type": "boolean",
+        "section": "Hemodinâmica"
+      },
+      {
+        "id": "candidato_bpa_rvp_acima_4uw",
+        "label": "Se candidato a angioplastia pulmonar por balão, a resistência vascular pulmonar está acima de 4 unidades Wood?",
+        "type": "boolean",
+        "section": "Procedimento"
+      },
+      {
+        "id": "hemoptise_significativa",
+        "label": "Há hemoptise significativa (espontânea ou pós-procedimento)?",
+        "type": "boolean",
+        "section": "Red flags"
+      },
+      {
+        "id": "discordancia_obstrucao_hemodinamica",
+        "label": "Há discordância entre a extensão da obstrução mecânica central e a gravidade hemodinâmica encontrada (suspeita de microvasculopatia associada)?",
+        "type": "boolean",
+        "section": "Avaliação especializada"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "falencia-aguda-de-vd",
+        "priority": 100,
+        "when": {
+          "all": [
+            { "field": "acute_rv_failure_signs", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de falência aguda de ventrículo direito ou instabilidade hemodinâmica em paciente com CTEPH"
+          ],
+          "emergency_flow": [
+            "Seguir o protocolo de falência aguda do ventrículo direito já ligado a esta ficha; investigar gatilho precipitante (novo evento tromboembólico, infecção, arritmia, interrupção de anticoagulação) e preservar perfusão."
+          ]
+        }
+      },
+      {
+        "id": "hemoptise-significativa",
+        "priority": 90,
+        "when": {
+          "all": [
+            { "field": "hemoptise_significativa", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hemoptise significativa em paciente com CTEPH — considerar tanto a doença de base quanto complicação relacionada a procedimento recente de angioplastia pulmonar por balão."
+          ],
+          "messages": [
+            "Avaliação urgente em centro com experiência em via aérea e, se necessário, embolização, especialmente se houve angioplastia pulmonar por balão recente."
+          ]
+        }
+      },
+      {
+        "id": "nao-encaminhado-centro-expertise",
+        "priority": 85,
+        "when": {
+          "all": [
+            { "field": "encaminhado_centro_expertise", "op": "falsy" },
+            { "field": "acute_rv_failure_signs", "op": "falsy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Todo paciente com CTEPH confirmada — com ou sem hipertensão pulmonar já estabelecida — deve ser encaminhado a centro de expertise para decisão em heart team antes de qualquer definição terapêutica; não há evidência de benefício em avaliar operabilidade fora dessa estrutura."
+          ]
+        }
+      },
+      {
+        "id": "rvp-elevada-nao-excluir-cirurgia",
+        "priority": 50,
+        "when": {
+          "all": [
+            { "field": "rvp_muito_elevada_pre_operatoria", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Resistência vascular pulmonar muito elevada (acima de 1.000 dyn·s·cm⁻⁵) não é, por si só, contraindicação à endarterectomia pulmonar — mortalidade operatória em centros de expertise caiu para menos de 5% mesmo nessas formas mais graves; a decisão de operabilidade permanece do heart team."
+          ]
+        }
+      },
+      {
+        "id": "bpa-rvp-alta-considerar-pretratamento",
+        "priority": 55,
+        "when": {
+          "all": [
+            { "field": "candidato_bpa_rvp_acima_4uw", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Resistência vascular pulmonar acima de 4 unidades Wood antes de angioplastia pulmonar por balão: considerar pré-tratamento farmacológico, associado a menor taxa de complicações graves do procedimento no ensaio RACE — sequência e duração individualizadas pelo heart team."
+          ]
+        }
+      },
+      {
+        "id": "discordancia-microvasculopatia",
+        "priority": 45,
+        "when": {
+          "all": [
+            { "field": "discordancia_obstrucao_hemodinamica", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Discordância entre extensão da obstrução mecânica central e gravidade hemodinâmica sugere microvasculopatia associada, que pode limitar o benefício hemodinâmico da cirurgia mesmo em doença central tecnicamente ressecável — discutir no heart team."
+          ]
+        }
+      },
+      {
+        "id": "classe-funcional-avancada",
+        "priority": 60,
+        "when": {
+          "all": [
+            { "field": "functional_class", "op": "in", "value": ["III", "IV"] },
+            { "field": "acute_rv_failure_signs", "op": "falsy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Classe funcional III ou IV indica doença avançada — priorizar avaliação em centro de expertise em CTEPH para decisão de operabilidade e possível escalonamento terapêutico."
+          ]
+        }
+      },
+      {
+        "id": "residual-pos-eap-reavaliar",
+        "priority": 40,
+        "when": {
+          "all": [
+            { "field": "status_operabilidade", "op": "eq", "value": "pos_eap_residual" }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Hipertensão pulmonar residual/recorrente pós-endarterectomia: reavaliação hemodinâmica 3 a 6 meses após a cirurgia decide necessidade de riociguate e/ou angioplastia pulmonar por balão complementar; PAPm ≥38 mmHg e RVP ≥5 UW são marcadores prognósticos, não corte binário que exclua tratamento abaixo desses valores."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "CTEPH",
+      "hipertensão pulmonar tromboembólica crônica",
+      "grupo 4",
+      "endarterectomia pulmonar",
+      "angioplastia pulmonar por balão",
+      "cintilografia V/Q",
+      "riociguate",
+      "heart team",
+      "circulação pulmonar",
+      "tromboembolismo pulmonar crônico"
+    ],
+    "source_refs": [
+      "Kim NH, D'Armini AM, Delcroix M, Jaïs X, Jevnikar M, Madani MM, Matsubara H, Palazzini M, Wiedenroth CB, Simonneau G, Jenkins DP. Chronic thromboembolic pulmonary disease. Eur Respir J. 2024;64(4):2401294. DOI: 10.1183/13993003.01294-2024. PMID: 39209473 — conferido no PubMed (e-utils) em 29/08/2026.",
+      "Delcroix M, Lang I, Pepke-Zaba J, et al. Long-Term Outcome of Patients With Chronic Thromboembolic Pulmonary Hypertension: Results From an International Prospective Registry. Circulation. 2016;133(9):859-871. DOI: 10.1161/CIRCULATIONAHA.115.016522. PMID: 26826181 — conferido no PubMed em 29/08/2026.",
+      "Jaïs X, Brenot P, Bouvaist H, et al. Balloon pulmonary angioplasty versus riociguat for the treatment of inoperable chronic thromboembolic pulmonary hypertension (RACE): a multicentre, phase 3, open-label, randomised controlled trial. Lancet Respir Med. 2022;10(10):961-971. DOI: 10.1016/S2213-2600(22)00214-4. PMID: 35926542 — conferido no PubMed em 29/08/2026.",
+      "Kawakami T, Matsubara H, Shinke T, et al. Balloon pulmonary angioplasty versus riociguat in inoperable chronic thromboembolic pulmonary hypertension (MR BPA): an open-label, randomised controlled trial. Lancet Respir Med. 2022;10(10):949-960. DOI: 10.1016/S2213-2600(22)00171-0. PMID: 35926544 — conferido no PubMed em 29/08/2026.",
+      "Ghofrani HA, Simonneau G, D'Armini AM, et al; MERIT study investigators. Macitentan for the treatment of inoperable chronic thromboembolic pulmonary hypertension (MERIT-1): results from the multicentre, phase 2, randomised, double-blind, placebo-controlled study. Lancet Respir Med. 2024;12(4):e21-e30. DOI: 10.1016/S2213-2600(24)00027-4. PMID: 38548406 — REPUBLICAÇÃO vigente, conferida no PubMed em 29/08/2026. O registro original de 2017 (Lancet Respir Med. 2017;5(10):785-794, PMID 28919201) está oficialmente marcado 'Retracted Publication' no PubMed e NÃO deve ser citado isoladamente; a retratação (Lancet Respir Med. 2024;12(4):262-263, PMID 38552648) decorreu de revisão de integridade de dados hemodinâmicos em 14 dos 80 participantes, e uma análise de sensibilidade excluindo esses casos confirmou o resultado positivo original — não houve reversão de conclusão nem fraude. Ver review_note para detalhamento completo.",
+      "The Editors of The Lancet Respiratory Medicine. Retraction and republication—Macitentan for the treatment of inoperable chronic thromboembolic pulmonary hypertension (MERIT-1). Lancet Respir Med. 2024;12(4):262-263. DOI: 10.1016/S2213-2600(24)00029-8. PMID: 38552648 — nota de retratação, conferida no PubMed em 29/08/2026.",
+      "Humbert M, Kovacs G, Hoeper MM, et al.; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548 — já citado e conferido na ficha geral de hipertensão pulmonar desta base, reconferido no PubMed em 29/08/2026."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39209473/",
+      "https://pubmed.ncbi.nlm.nih.gov/26826181/",
+      "https://pubmed.ncbi.nlm.nih.gov/35926542/",
+      "https://pubmed.ncbi.nlm.nih.gov/35926544/",
+      "https://pubmed.ncbi.nlm.nih.gov/38548406/",
+      "https://pubmed.ncbi.nlm.nih.gov/38552648/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017548/"
+    ],
+    "related_document_slugs": [
+      "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+      "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+      "angioplastia-pulmonar-por-balao-na-cteph-inoperavel-race-e-mr-bpa",
+      "macitentana-na-cteph-inoperavel-o-ensaio-merit-1-e-sua-retratacao-republicacao",
+      "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+      "fluxograma-cteph-operabilidade-bpa-riociguate"
+    ],
+    "patient_material_slug": "cteph-hipertensao-pulmonar-por-coagulos-antigos",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael. A ficha genérica já existente 'hipertensao-pulmonar' (revisada, publicada) cobre os cinco grupos ESC/ERS 2022 em visão panorâmica e já menciona CTEPH como grupo 4, mas sem a profundidade específica de fisiopatologia da obstrução trombótica organizada, protocolo de cintilografia V/Q versus angiotomografia, critérios detalhados de operabilidade e a decisão do heart team, ou os dados quantitativos de sobrevida operado-versus-não-operado — lacuna confirmada por leitura completa do registro existente antes de iniciar este verbete. Criado via doencas/fragmentos/cteph.json (não via edição direta do manifesto) para minimizar colisão com outras frentes de produção concorrentes.\n\nOs 6 related_document_slugs foram verificados individualmente por leitura direta e completa do documento (não apenas título/frontmatter), confirmando discussão CENTRAL de CTEPH em cada um: critérios de operabilidade e heart team (Kim NH 2024), sobrevida de longo prazo no registro de Delcroix 2016, angioplastia pulmonar por balão nos ensaios RACE/MR BPA, macitentana no MERIT-1, o protocolo de diagnóstico/EAP/BPA/critérios de transplante, e o fluxograma de decisão operabilidade-BPA-riociguate. Nenhum candidato resolve para content/Farmacologia/, content/Calculadoras/ ou content/Exames/.\n\nSOBREPOSIÇÃO DOCUMENTADA COM O HUB 'hipertensao-pulmonar': os 6 related_document_slugs desta ficha JÁ constam integralmente em related_document_slugs de 'hipertensao-pulmonar' (ficha genérica, revisada e publicada). Isso é overlap legítimo e esperado — CTEPH é o grupo 4 dentro da classificação dos cinco grupos que 'hipertensao-pulmonar' cobre de forma panorâmica, exatamente a mesma relação hub-subficha já registrada e aceita entre 'cardiomiopatia-de-takotsubo' e o hub 'cardiomiopatias' em rodada anterior desta mesma frente (29/08/2026, não mergeada em main no momento desta ficha). Nenhum dos 6 documentos foi compartilhado com nenhuma outra ficha do catálogo além de 'hipertensao-pulmonar' — verificado programaticamente contra todo o catálogo combinado.\n\nVERIFICAÇÃO DE PMIDs: 7 PMIDs verificados individualmente via NCBI e-utils (esummary) em 29/08/2026 antes da montagem do source_refs — 39209473, 26826181, 35926542, 35926544, 38548406, 38552648, 36017548. Todos os títulos, periódicos, volumes e páginas conferem com o documento-fonte correspondente.\n\nATENÇÃO ESPECIAL AO PMID DO MERIT-1 (macitentana): o ensaio original (Ghofrani HA et al., Lancet Respir Med. 2017;5(10):785-794, PMID 28919201) está hoje marcado 'Retracted Publication' no registro oficial do PubMed. A verificação via e-utils confirma a cadeia completa: o registro de 2017 carrega 'Retraction in' (PMID 38552648, nota editorial de 2024) e 'Retracted and republished in' (PMID 38548406, republicação de 2024 com dados revisados). O motivo, apurado no próprio documento-fonte desta rodada e consistente com os metadados do PubMed: inspeção de autoridade sanitária levou à verificação dos dados-fonte de cateterismo cardíaco direito local, corrigindo 15 valores de RVP em 13 dos 80 participantes; revisão médica independente subsequente classificou como implausíveis os dados de 14 dos 80 participantes (8 macitentana, 6 placebo); uma análise de sensibilidade excluindo esses 14 participantes CONFIRMOU o resultado positivo original do desfecho primário de eficácia. Ou seja: retratação por rigor de integridade/plausibilidade de dados em uma fração da amostra, SEM reversão de conclusão e SEM acusação de fraude. Esta ficha cita exclusivamente a versão republicada de 2024 (PMID 38548406) no source_refs, com nota explícita alertando contra o uso isolado do PMID 28919201 (2017), e documenta a situação também em special_populations. Nenhuma dose de macitentana, riociguate ou qualquer outro fármaco em nenhum campo desta ficha — apenas classes terapêuticas.\n\nFALHA ESPERADA E DOCUMENTADA no gate de review_status: este registro permanece 'pendente_revisao' — conteúdo novo não revisado por humano não se autoaprova. backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para o slug 'cteph' (comportamento esperado e correto: a lógica desse teste específico só consulta PENDENTES_LOTES_TUDO_COM_TUDO para registros que JÁ têm status='revisado', nunca para 'pendente_revisao' — a falha não é contornada). A entrada 'cteph' foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] apenas porque essa allowlist é reaproveitada por importação direta em backend/tests/test_disease_fragments_canonical.py, onde a checagem contra pendência funciona corretamente e a entrada é necessária para esse segundo teste passar — seguindo exatamente o padrão da PR #698 (branch claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829, ainda não mergeada em main nesta data).",
+    "version": 1
+  }
+]

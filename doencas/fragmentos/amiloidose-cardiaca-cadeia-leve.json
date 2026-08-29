@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "amiloidose-cardiaca-cadeia-leve",
+    "name": "Amiloidose cardíaca por cadeia leve (AL)",
+    "aliases": [
+      "Amiloidose AL",
+      "Amiloidose AL cardíaca",
+      "Amiloidose primária",
+      "AL-CA",
+      "Amiloidose de cadeia leve de imunoglobulina",
+      "Discrasia de plasmócitos com amiloidose cardíaca"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "infiltrativa",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia infiltrativa causada pelo depósito de fibrilas amiloides formadas a partir de cadeias leves de imunoglobulina produzidas por um clone de plasmócitos — doença hematológica de base, não um distúrbio do envelhecimento da transtirretina. É a forma mais agressiva de amiloidose cardíaca, com sobrevida medida em meses quando não tratada e determinada primariamente pela velocidade e profundidade da resposta hematológica ao tratamento antiplasmocitário, não apenas pelo suporte cardiológico. Entidade clinicamente distinta da amiloidose cardíaca por transtirretina (ATTR) — etiologia, via diagnóstica, tratamento e prognóstico não têm equivalência entre as duas, apesar de a apresentação clínica cardíaca poder ser semelhante.",
+    "epidemiology": "A amiloidose AL (cadeia leve) é uma doença clonal e não proliferativa de plasmócitos — um clone de plasmócitos na medula óssea produz cadeias leves de imunoglobulina livres que se dobram de forma anômala e se depositam como fibrilas amiloides em múltiplos órgãos, com acometimento cardíaco, renal, hepático e neurológico entre as manifestações mais relevantes (Gertz MA, Am J Hematol 2024, PMID 38095141). Ao contrário da amiloidose ATTR — cuja forma selvagem é, por definição fisiopatológica, uma doença do envelhecimento da transtirretina, praticamente restrita a pacientes acima de 60 anos — a amiloidose AL pode acometer adultos de qualquer faixa etária, incluindo pacientes bem mais jovens do que o perfil típico de ATTRwt, porque sua origem é um clone de plasmócitos e não a instabilidade de uma proteína ligada à idade. O acometimento cardíaco é o principal determinante isolado de sobrevida na amiloidose AL sistêmica, mais do que a carga de cadeia leve livre ou o grau de acometimento de outros órgãos (Khwaja J et al., J Clin Oncol 2026, PMID 41353737) — por isso a estratificação de risco cardíaco por biomarcadores é o eixo central do estadiamento prognóstico da doença, e não um exame acessório. A confirmação diagnóstica dispensa biópsia de órgão-alvo na maioria dos casos: cerca de 85% dos pacientes não precisam de biópsia cardíaca ou de outro órgão acometido, porque a biópsia de gordura abdominal subcutânea ou de medula óssea já é suficiente para demonstrar depósito amiloide corado pelo vermelho Congo (birrefringência verde-maçã à luz polarizada), desde que a tipagem confirme composição de cadeia leve (Gertz MA, Am J Hematol 2024, PMID 38095141). Essa é precisamente a lacuna que a ficha de amiloidose ATTR no idoso já assinala como etapa obrigatória de exclusão antes de fechar diagnóstico de ATTR: qualquer prova de clonalidade alterada (eletroforese sérica/urinária com imunofixação ou relação de cadeias leves livres) impede assumir ATTR, mesmo com cintilografia óssea positiva, e direciona para a via diagnóstica própria da AL descrita nesta ficha.",
+    "presentation": [
+      "Fadiga desproporcional e dispneia aos esforços de instalação subaguda, muitas vezes atribuída inicialmente a outras causas",
+      "Edema de membros inferiores e/ou ascite de instalação relativamente rápida, por vezes com síndrome nefrótica associada",
+      "Macroglossia — sinal relativamente específico de amiloidose AL, ausente na amiloidose ATTR",
+      "Púrpura periorbitária espontânea ou após manobra de Valsalva (\"olhos de guaxinim\") — outro sinal característico de depósito amiloide de cadeia leve em vasos de pequeno calibre",
+      "Hepatomegalia sem explicação, por vezes com elevação isolada de fosfatase alcalina",
+      "Hipotensão ortostática e outras manifestações de disautonomia, por acometimento amiloide do sistema nervoso autônomo",
+      "Neuropatia periférica sensitivo-motora associada, que pode preceder o diagnóstico sistêmico",
+      "Síndrome do túnel do carpo bilateral — também descrita na ATTR, portanto não discrimina isoladamente entre as duas etiologias",
+      "Proteinúria significativa ou síndrome nefrótica, refletindo acometimento renal concomitante, comum na doença sistêmica",
+      "Insuficiência cardíaca de instalação mais rápida e curso mais agressivo do que o observado tipicamente na amiloidose ATTR, refletindo a maior toxicidade miocárdica direta das fibrilas de cadeia leve",
+      "Síncope ou pré-síncope, sobretudo em fase mais avançada com comprometimento hemodinâmico importante",
+      "Elevação desproporcional de NT-proBNP/BNP e troponina em relação ao grau aparente de disfunção sistólica — biomarcadores que são, nesta doença, também ferramenta prognóstica formal (estadiamento), não apenas marcador de gravidade"
+    ],
+    "diagnostic_approach": "A investigação nasce de duas portas de entrada possíveis: fenótipo cardíaco compatível com cardiomiopatia infiltrativa (espessamento de parede do VE sem explicação, ICFEp, discordância entre voltagem do ECG e espessura parietal, NT-proBNP/troponina desproporcionalmente elevados), ou identificação prévia de gamopatia monoclonal/discrasia de plasmócitos em investigação hematológica. O primeiro passo é sempre a triagem de clonalidade: eletroforese de proteínas séricas e urinárias com imunofixação, mais a relação de cadeias leves livres séricas (kappa/lambda) — exatamente a mesma tríade que, na via diagnóstica da amiloidose ATTR, funciona como critério de exclusão obrigatório antes de aceitar cintilografia óssea positiva como diagnóstica. Quando qualquer uma dessas provas está alterada, o achado NÃO permite assumir ATTR — mesmo com cintilografia positiva, porque a captação miocárdica do traçador ósseo ocorre em mais de 10% dos casos de amiloidose AL (falso-positivo para ATTR) — e o caminho correto é avaliação hematológica com biópsia e tipagem histológica do amiloide. A biópsia de gordura abdominal subcutânea (aspirado de coxim adiposo) ou de medula óssea confirma o depósito em cerca de 85% dos casos, evitando biópsia do órgão clinicamente acometido (incluindo biópsia endomiocárdica) na maioria dos pacientes; a coloração pelo vermelho Congo com birrefringência verde-maçã sob luz polarizada confirma a presença de amiloide, e a tipagem da composição da fibrila — idealmente por espectrometria de massa com microdissecção a laser, considerada o padrão de referência atual — confirma que a proteína depositada é cadeia leve de imunoglobulina, não transtirretina (Gertz MA, Am J Hematol 2024, PMID 38095141). Confirmada a amiloidose AL, o passo seguinte é o estadiamento de risco cardíaco, eixo central do prognóstico e da intensidade terapêutica: o estadiamento revisado de Mayo usa três biomarcadores — NT-proBNP (ou BNP), troponina cardíaca (T ou I) e a diferença entre cadeia leve envolvida e não envolvida (dFLC) — definindo quatro estágios (I a IV) com sobrevida em 5 anos de aproximadamente 82%, 62%, 34% e 20%, respectivamente (Gertz MA, Am J Hematol 2024, PMID 38095141). Uma atualização mais recente e validada internacionalmente, o AL-ISS (AL International Staging System), reformula o antigo estágio III em três subestágios (IIIA, IIIB e IIIC) ao acrescentar o strain longitudinal global do ventrículo esquerdo ao ecocardiograma como terceiro parâmetro, isolando um subgrupo de risco ultra-alto (IIIC) com sobrevida mediana de poucos meses mesmo sob tratamento contemporâneo com daratumumabe — achado derivado e validado em coorte internacional de 2.493 pacientes (573 na derivação, 1.920 na validação externa), com recomendação explícita dos autores de considerar avaliação precoce para transplante cardíaco nos elegíveis em estágio IIIC (Khwaja J et al., J Clin Oncol 2026, PMID 41353737). A avaliação de órgão-alvo se completa com função renal e proteinúria de 24 horas, provas hepáticas e avaliação neurológica dirigida, porque a estratégia terapêutica considera o acometimento sistêmico como um todo, não apenas o cardíaco isoladamente.",
+    "differentials": [
+      "Amiloidose cardíaca por transtirretina (ATTR) — forma selvagem/senil ou hereditária: entidade clinicamente distinta, com etiologia (desdobramento da transtirretina, não discrasia de plasmócitos), via diagnóstica, tratamento (estabilizadores do tetrâmero de TTR, não quimioterapia) e prognóstico completamente diferentes da AL; nunca deve ser assumida como a mesma condição nem tratada com a mesma abordagem — ver ficha própria desta biblioteca dedicada à amiloidose ATTR no idoso",
+      "Mieloma múltiplo com acometimento cardíaco por outras vias (ex.: cardiotoxicidade de fármaco antimielomatoso como carfilzomibe) — aqui o dano cardíaco é efeito adverso do tratamento, não depósito amiloide direto da doença de base; as duas condições podem coexistir e exigem leitura diferente",
+      "Amiloidose AA (secundária, por proteína de fase aguda) — outra forma sistêmica de amiloidose, ligada a doença inflamatória crônica, não a discrasia de plasmócitos; acometimento cardíaco é infrequente nesta forma, ao contrário da AL",
+      "Cardiomiopatia hipertensiva com hipertrofia ventricular concêntrica",
+      "Cardiomiopatia hipertrófica sarcomérica",
+      "Doença de Fabry com acometimento cardíaco",
+      "Outras cardiomiopatias infiltrativas ou restritivas não amiloides (sarcoidose cardíaca, fibrose endomiocárdica, cardiomiopatia restritiva por síndrome hipereosinofílica)",
+      "Insuficiência cardíaca com fração de ejeção preservada de outra etiologia, sem discrasia de plasmócitos nem depósito amiloide"
+    ],
+    "tests": [
+      "Eletroforese de proteínas séricas e urinárias com imunofixação, e relação de cadeias leves livres séricas — triagem inicial de clonalidade; quando alterada, impede assumir ATTR mesmo com cintilografia óssea positiva e direciona para a via diagnóstica de AL",
+      "Biópsia de gordura abdominal subcutânea (aspirado de coxim adiposo) ou de medula óssea, com coloração pelo vermelho Congo — confirma depósito amiloide em cerca de 85% dos casos, evitando biópsia do órgão clinicamente acometido na maioria dos pacientes; limitação: sensibilidade não é de 100%, e biópsia do órgão-alvo (incluindo endomiocárdica) permanece necessária quando o sítio de fácil acesso é negativo e a suspeita persiste",
+      "Tipagem da composição da fibrila amiloide, idealmente por espectrometria de massa com microdissecção a laser — padrão de referência atual para confirmar que o depósito é de cadeia leve, não de transtirretina; limitação: exame de disponibilidade restrita a centros de referência",
+      "NT-proBNP (ou BNP) e troponina cardíaca (T ou I) — compõem o estadiamento prognóstico formal (Mayo revisado), além de biomarcadores de gravidade; limitação: elevam-se por disfunção renal isolada, exigindo leitura cautelosa no paciente com insuficiência renal associada",
+      "Diferença entre cadeia leve livre envolvida e não envolvida (dFLC) — terceiro componente do estadiamento de Mayo revisado, reflete a carga do clone plasmocitário",
+      "Ecocardiograma com strain longitudinal global (padrão de apical sparing) — auxilia a suspeita inicial e, no AL-ISS, funciona como terceiro parâmetro de estadiamento que distingue o subgrupo de risco ultra-alto (estágio IIIC) do risco intermediário-alto (IIIB); limitação: exige medição padronizada por speckle-tracking, não disponível com a mesma qualidade em todo serviço",
+      "Ressonância cardíaca com realce tardio e mapeamento T1 — caracterização tecidual adicional; limitação: não substitui a tipagem histológica nem o estadiamento biomarcador-dependente",
+      "Cintilografia óssea com traçador (99mTc-PYP, DPD ou HMDP): tem papel apenas de exclusão relativa nesta ficha — captação miocárdica de grau 2-3 pode ocorrer em mais de 10% dos pacientes com AL (falso-positivo para ATTR), por isso nunca deve ser interpretada isoladamente sem as provas de clonalidade",
+      "Avaliação sistêmica de órgão-alvo — função renal e proteinúria de 24 horas, provas hepáticas, avaliação neurológica dirigida — necessária porque a estratégia terapêutica considera o acometimento sistêmico como um todo"
+    ],
+    "red_flags": [
+      "Macroglossia ou púrpura periorbitária espontânea associada a sinais de insuficiência cardíaca — combinação relativamente específica de amiloidose AL",
+      "Instalação subaguda e curso mais agressivo de insuficiência cardíaca do que o esperado, sobretudo em paciente mais jovem do que o perfil típico de ATTR",
+      "Síndrome nefrótica ou proteinúria significativa associada a cardiomiopatia infiltrativa não explicada",
+      "Hepatomegalia inexplicada com elevação isolada de fosfatase alcalina em paciente com sinais cardíacos sugestivos de infiltração",
+      "Qualquer prova de clonalidade alterada (eletroforese sérica/urinária com imunofixação ou relação de cadeias leves livres) em paciente com fenótipo de amiloidose cardíaca, mesmo diante de cintilografia óssea positiva",
+      "Estadiamento biomarcador em estágio avançado (III/IV de Mayo, ou IIIB/IIIC do AL-ISS) — sinaliza necessidade de escalonamento rápido de cuidado, incluindo avaliação precoce de elegibilidade a transplante cardíaco nos casos de risco ultra-alto",
+      "Hipotensão ortostática e outras manifestações de disautonomia associadas a sinais cardíacos, sugerindo acometimento neurológico autonômico concomitante",
+      "Instabilidade hemodinâmica, arritmia mal tolerada ou síncope no paciente com diagnóstico confirmado ou fortemente suspeito de amiloidose AL"
+    ],
+    "ambulatory_flow": [
+      "Diante de fenótipo cardíaco compatível com cardiomiopatia infiltrativa, solicitar em conjunto eletroforese sérica/urinária com imunofixação e relação de cadeias leves livres, junto com cintilografia óssea quando a via ATTR também estiver em investigação",
+      "Se qualquer prova de clonalidade estiver alterada: encaminhar sem retardo à hematologia para biópsia (gordura abdominal ou medula óssea preferencialmente) com coloração pelo vermelho Congo e tipagem da fibrila amiloide — não assumir ATTR mesmo com cintilografia positiva",
+      "Confirmado o depósito amiloide de cadeia leve, completar avaliação sistêmica de órgão-alvo (renal, hepática, neurológica) e obter os três componentes do estadiamento de Mayo revisado (NT-proBNP/BNP, troponina, dFLC), acrescentando strain longitudinal global ao ecocardiograma quando disponível para refinar o estadiamento (AL-ISS)",
+      "Iniciar tratamento antiplasmocitário de primeira linha em conjunto com a hematologia assim que o estadiamento estiver completo — a velocidade de início da terapia hematológica é determinante de prognóstico cardíaco nesta doença, ao contrário de outras cardiomiopatias em que o tratamento cardiológico isolado é suficiente",
+      "Em estágio de risco ultra-alto (estágio IV de Mayo ou IIIC do AL-ISS): discutir precocemente elegibilidade para transplante cardíaco com equipe de insuficiência cardíaca avançada, em paralelo ao tratamento hematológico, sem aguardar falha terapêutica",
+      "Manter seguimento estruturado conjunto entre cardiologia e hematologia, com reavaliação periódica de resposta hematológica (resposta completa, muito boa resposta parcial) e de resposta cardíaca de órgão-alvo definida por variação de NT-proBNP",
+      "Reforçar aconselhamento sobre a diferença prática entre esta doença e a amiloidose ATTR sempre que o paciente ou a família tiver contato prévio com informação sobre amiloidose cardíaca em geral, para evitar expectativa terapêutica equivocada (tafamidis não tem papel na AL)"
+    ],
+    "emergency_flow": [
+      "Estabilizar primeiro; obter ECG, ecocardiograma à beira-leito, função renal/eletrólitos e revisar toda a medicação em uso",
+      "Congestão: diurese cautelosa com reavaliação frequente de pressão arterial, perfusão e função renal — fisiologia restritiva tolera mal tanto expansão volêmica excessiva quanto diurese excessiva, sem dose universal específica para esta doença",
+      "Hipotensão: investigar mecanismo (disautonomia amiloide, baixo débito restritivo, arritmia, hipovolemia por diurese, sepse) antes de expandir volume de forma reflexa — a disautonomia autonômica é particularmente relevante nesta doença",
+      "Arritmia ou distúrbio de condução: telemetria, corrigir causas reversíveis, avaliação convencional de indicação de marca-passo quando aplicável — a fisiologia restritiva torna o paciente muito dependente da frequência cardíaca para manter débito",
+      "Se o subtipo de amiloidose ainda não estiver definido (ATTR vs. AL): estabilizar tem prioridade imediata, mas diferenciar as duas é essencial assim que possível, porque a estratégia de tratamento da doença de base é completamente diferente — suspeita de AL (fenótipo mais agressivo, sinais extracardíacos como macroglossia/púrpura periorbitária/síndrome nefrótica) exige avaliação hematológica urgente, sem retardo, dado o curso potencialmente rápido da doença não tratada",
+      "Paciente com amiloidose AL já confirmada e descompensação aguda: comunicar a equipe de hematologia responsável — a intensidade e o momento do tratamento antiplasmocitário podem precisar de ajuste diante de descompensação cardíaca aguda, e essa decisão é conjunta, não isolada da cardiologia"
+    ],
+    "treatment_summary": "O tratamento da amiloidose AL cardíaca é dirigido ao clone de plasmócitos causador — a resposta hematológica é, ela mesma, a intervenção cardioprotetora, porque reduzir a produção de cadeia leve amiloidogênica interrompe o depósito contínuo de fibrilas no miocárdio. O esquema de primeira linha combina daratumumabe (anticorpo monoclonal anti-CD38) associado a bortezomibe, ciclofosfamida e dexametasona (esquema conhecido pela sigla dara-CyBorD), com meta terapêutica mínima de resposta hematológica muito boa (≥VGPR) (Gertz MA, Am J Hematol 2024, PMID 38095141). A evidência pivotal para a adição do daratumumabe é o ensaio ANDROMEDA (Kastritis E et al., N Engl J Med 2021, PMID 34192431): 388 pacientes com amiloidose AL recém-diagnosticada, randomizados para CyBorD isolado (6 ciclos) versus CyBorD associado a daratumumabe subcutâneo seguido de daratumumabe isolado por até 24 ciclos, com seguimento mediano de 11,4 meses. Resposta hematológica completa foi de 53,3% no grupo daratumumabe contra 18,1% no grupo controle (razão de risco relativo 2,9; IC95% 2,1-4,1; p<0,001); sobrevida livre de deterioração de órgão-alvo maior ou progressão hematológica favoreceu o grupo daratumumabe (HR 0,58; IC95% 0,36-0,93; p=0,02); resposta cardíaca aos 6 meses foi de 41,5% versus 22,2%, e resposta renal de 53,0% versus 23,9%. O evento adverso grau 3-4 de insuficiência cardíaca foi numericamente mais frequente no grupo daratumumabe (6,2% vs. 4,8%), sinal que reforça a necessidade de monitorização cardiológica durante o tratamento hematológico, sem anular o benefício líquido de órgão-alvo observado. Para pacientes com resposta inadequada ao esquema de primeira linha, alternativas descritas incluem pomalidomida, transplante autólogo de células-tronco hematopoéticas (reservado a pacientes com estadiamento cardíaco favorável e boa reserva funcional), venetoclax e bendamustina (Gertz MA, Am J Hematol 2024, PMID 38095141). A intensidade e a urgência do tratamento — incluindo a decisão de avaliar precocemente elegibilidade para transplante cardíaco — são orientadas pelo estadiamento de risco cardíaco: pacientes em estágio de risco ultra-alto (estágio IV de Mayo revisado, ou IIIC do AL-ISS) têm sobrevida mediana de poucos meses mesmo sob tratamento contemporâneo com daratumumabe, e os autores do AL-ISS recomendam explicitamente considerar avaliação precoce para transplante cardíaco nos elegíveis desse subgrupo, em vez de esperar falha terapêutica hematológica (Khwaja J et al., J Clin Oncol 2026, PMID 41353737). O manejo cardiológico de suporte — diurético para controle de congestão, cautela com fármacos que reduzem pré-carga ou frequência cardíaca de forma excessiva na fisiologia restritiva, e atenção a arritmia e distúrbio de condução — segue os mesmos princípios gerais aplicados a outras cardiomiopatias infiltrativas/restritivas, mas nunca substitui o tratamento hematológico dirigido ao clone de plasmócitos, que é o determinante real do prognóstico. Uma via de consenso multidisciplinar mais ampla sobre o cuidado do paciente com amiloidose cardíaca — incluindo AL e ATTR — reforça a necessidade de manejo colaborativo entre cardiologia e hematologia desde o momento do diagnóstico (Kittleson MM et al., 2023 ACC ECDP, J Am Coll Cardiol 2023, PMID 36697326). É essencial não confundir esta via terapêutica com a da amiloidose ATTR: estabilizadores do tetrâmero de transtirretina (como o tafamidis) não têm papel na amiloidose AL, porque não atuam sobre a via fisiopatológica desta doença — a proteína depositada não é transtirretina.",
+    "monitoring": [
+      "Resposta hematológica seriada (eletroforese/imunofixação, cadeias leves livres) conforme protocolo hematológico, buscando ao menos resposta muito boa parcial (≥VGPR)",
+      "Resposta cardíaca de órgão-alvo definida por variação de NT-proBNP/BNP ao longo do tratamento, biomarcador central tanto para estadiamento quanto para acompanhamento de resposta",
+      "Troponina cardíaca seriada, componente do estadiamento e sinal de atividade de doença/lesão miocárdica em curso",
+      "Reavaliação ecocardiográfica periódica, incluindo strain longitudinal global quando disponível",
+      "Função renal e proteinúria de 24 horas periódicas, pelo acometimento renal frequentemente concomitante",
+      "Avaliação clínica de sinais extracardíacos (macroglossia, púrpura periorbitária, hepatomegalia, neuropatia) como marcador indireto de atividade sistêmica da doença",
+      "Monitorização cardiológica reforçada durante ciclos de tratamento antiplasmocitário, dado o sinal de insuficiência cardíaca grau 3-4 discretamente mais frequente sob daratumumabe descrito no ANDROMEDA"
+    ],
+    "special_populations": [
+      "Paciente mais jovem com insuficiência cardíaca inexplicada: a amiloidose AL não deve ser deixada de fora da investigação apenas por idade menor, ao contrário da amiloidose ATTR selvagem, que é praticamente restrita a maiores de 60 anos",
+      "Estágio de risco cardíaco ultra-alto (IV de Mayo revisado ou IIIC do AL-ISS): sobrevida mediana de poucos meses mesmo sob daratumumabe; avaliação precoce de elegibilidade para transplante cardíaco deve ser discutida em paralelo ao tratamento hematológico, não após falha terapêutica",
+      "Paciente com insuficiência renal concomitante: leitura de NT-proBNP e da relação de cadeias leves livres exige cautela, porque ambos se elevam por disfunção renal isolada, independentemente da carga de doença amiloide",
+      "Paciente com síndrome nefrótica e/ou hepatomegalia associada: reflete acometimento sistêmico multiorgânico típico da AL, com implicação direta na intensidade e no acompanhamento do tratamento hematológico",
+      "Suspeita inicial rotulada como ATTR sem exclusão adequada de clonalidade: risco de erro grave de conduta — encaminhamento hematológico não deve ser postergado diante de qualquer prova de clonalidade alterada, mesmo com cintilografia óssea positiva",
+      "Paciente elegível a transplante autólogo de células-tronco hematopoéticas: reservado a quem tem estadiamento cardíaco favorável e boa reserva funcional — decisão conjunta entre hematologia e cardiologia"
+    ],
+    "assistant_questions": [
+      {
+        "id": "age_years",
+        "label": "Idade",
+        "type": "number",
+        "required": true,
+        "section": "Dados básicos"
+      },
+      {
+        "id": "acute_instability",
+        "label": "Há congestão, hipotensão, arritmia mal tolerada ou síncope agora?",
+        "type": "boolean",
+        "required": true,
+        "section": "Triagem"
+      },
+      {
+        "id": "monoclonal_workup",
+        "label": "Qual o resultado da investigação de proteína monoclonal (eletroforese sérica/urinária e cadeias leves livres)?",
+        "type": "select",
+        "section": "Investigação",
+        "options": [
+          {
+            "value": "nao_solicitado",
+            "label": "Não solicitado"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "alterado",
+            "label": "Alterado"
+          }
+        ]
+      },
+      {
+        "id": "amyloid_typing",
+        "label": "Se houve biópsia com tipagem do amiloide, qual o resultado?",
+        "type": "select",
+        "section": "Investigação",
+        "options": [
+          {
+            "value": "nao_realizada",
+            "label": "Não realizada"
+          },
+          {
+            "value": "cadeia_leve_al",
+            "label": "Confirma cadeia leve (AL)"
+          },
+          {
+            "value": "transtirretina_attr",
+            "label": "Confirma transtirretina (ATTR)"
+          },
+          {
+            "value": "indeterminada",
+            "label": "Indeterminada"
+          }
+        ]
+      },
+      {
+        "id": "extracardiac_al_signs",
+        "label": "Há macroglossia, púrpura periorbitária, síndrome nefrótica ou hepatomegalia inexplicada?",
+        "type": "boolean",
+        "section": "Sinais extracardíacos"
+      },
+      {
+        "id": "cardiac_biomarker_stage",
+        "label": "Estágio de risco cardíaco pelo estadiamento biomarcador (NT-proBNP/BNP, troponina e dFLC, com ou sem strain do AL-ISS)?",
+        "type": "select",
+        "section": "Estadiamento",
+        "options": [
+          {
+            "value": "nao_estadiado",
+            "label": "Ainda não estadiado"
+          },
+          {
+            "value": "baixo_i_ii",
+            "label": "Baixo (estágio I-II)"
+          },
+          {
+            "value": "intermediario_iiia_iiib",
+            "label": "Intermediário (IIIA-IIIB)"
+          },
+          {
+            "value": "ultra_alto_iv_iiic",
+            "label": "Ultra-alto (IV de Mayo ou IIIC do AL-ISS)"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "emergencia-instabilidade-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível descompensação aguda de amiloidose cardíaca: congestão, hipotensão, arritmia ou síncope em fisiologia restritiva"
+          ],
+          "emergency_flow": [
+            "Encaminhar para avaliação emergencial imediata com ECG, ecocardiograma, função renal/eletrólitos e revisão de toda a medicação em uso antes de qualquer ajuste terapêutico"
+          ]
+        }
+      },
+      {
+        "id": "tipagem-confirma-attr-nao-al",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "amyloid_typing",
+              "op": "eq",
+              "value": "transtirretina_attr"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Tipagem confirma amiloidose por transtirretina (ATTR), não cadeia leve (AL) — esta ficha não se aplica; usar a ficha própria de amiloidose ATTR e a via terapêutica de estabilizador de TTR, não quimioterapia"
+          ]
+        }
+      },
+      {
+        "id": "tipagem-confirma-al-estagio-ultra-alto",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "amyloid_typing",
+              "op": "eq",
+              "value": "cadeia_leve_al"
+            },
+            {
+              "field": "cardiac_biomarker_stage",
+              "op": "eq",
+              "value": "ultra_alto_iv_iiic"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Amiloidose AL em estágio de risco cardíaco ultra-alto — sobrevida mediana de poucos meses mesmo sob tratamento contemporâneo"
+          ],
+          "messages": [
+            "Discutir precocemente, em paralelo ao início do tratamento hematológico, elegibilidade para transplante cardíaco com equipe de insuficiência cardíaca avançada — não aguardar falha terapêutica"
+          ]
+        }
+      },
+      {
+        "id": "clonalidade-alterada-sem-tipagem",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "monoclonal_workup",
+              "op": "eq",
+              "value": "alterado"
+            },
+            {
+              "field": "amyloid_typing",
+              "op": "eq",
+              "value": "nao_realizada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Amiloidose cardíaca por cadeia leve (AL) — discrasia de plasmócitos ainda sem tipagem histológica confirmada"
+          ],
+          "messages": [
+            "Não assumir ATTR nem AL sem tipagem: encaminhar à hematologia para biópsia (gordura abdominal ou medula óssea) com coloração pelo vermelho Congo e tipagem da fibrila antes de qualquer decisão terapêutica"
+          ]
+        }
+      },
+      {
+        "id": "sinais-extracardiacos-sugestivos",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "extracardiac_al_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Amiloidose cardíaca por cadeia leve (AL)",
+            "Amiloidose cardíaca por transtirretina (ATTR)"
+          ],
+          "messages": [
+            "Sinais extracardíacos sugestivos de amiloidose sistêmica: solicitar em conjunto eletroforese de proteínas séricas/urinárias com imunofixação e relação de cadeias leves livres antes de qualquer suposição sobre o subtipo"
+          ]
+        }
+      },
+      {
+        "id": "sem-sinais-de-alerta",
+        "priority": 10,
+        "when": {
+          "all": [
+            {
+              "field": "acute_instability",
+              "op": "falsy"
+            },
+            {
+              "field": "extracardiac_al_signs",
+              "op": "falsy"
+            }
+          ],
+          "any": [
+            {
+              "field": "monoclonal_workup",
+              "op": "eq",
+              "value": "nao_solicitado"
+            },
+            {
+              "field": "monoclonal_workup",
+              "op": "eq",
+              "value": "normal"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Sem sinais de alerta de amiloidose AL no momento; manter avaliação clínica habitual e reconsiderar a suspeita diante de sinais extracardíacos, proteinúria significativa ou clonalidade alterada em investigação futura"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "amiloidose",
+      "AL",
+      "cadeia leve",
+      "discrasia de plasmócitos",
+      "cardiomiopatia infiltrativa",
+      "daratumumabe",
+      "quimioterapia",
+      "estadiamento AL-ISS",
+      "biópsia",
+      "hematologia",
+      "insuficiência cardíaca",
+      "transplante cardíaco"
+    ],
+    "source_refs": [
+      "Kastritis E, Palladini G, Minnema MC, et al. Daratumumab-Based Treatment for Immunoglobulin Light-Chain Amyloidosis (ANDROMEDA). N Engl J Med. 2021;385(1):46-58. DOI: 10.1056/NEJMoa2028631. PMID: 34192431. Título/periódico/ano conferidos via NCBI e-utils (esummary) nesta sessão em 29/08/2026.",
+      "Khwaja J, Kirkwood AA, Milani P, et al. New Validated Staging System for Light Chain (AL) Amyloidosis With Stage IIIC Defining Ultra-Poor Risk: AL International Staging System. J Clin Oncol. 2026;44(4):311-320. DOI: 10.1200/JCO-25-02558. PMID: 41353737. Título/periódico/ano conferidos via NCBI e-utils (esummary) nesta sessão em 29/08/2026.",
+      "Kittleson MM, Ruberg FL, Ambardekar AV, et al. 2023 ACC Expert Consensus Decision Pathway on Comprehensive Multidisciplinary Care for the Patient With Cardiac Amyloidosis: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. 2023;81(11):1076-1126. DOI: 10.1016/j.jacc.2022.11.022. PMID: 36697326. Título/periódico/ano conferidos via NCBI e-utils (esummary) nesta sessão em 29/08/2026 — mesma referência já usada e verificada na ficha amiloidose-cardiaca-idoso, reverificada de forma independente aqui.",
+      "Gertz MA. Immunoglobulin light chain amyloidosis: 2024 update on diagnosis, prognosis, and treatment. Am J Hematol. 2024;99(2):309-324. DOI: 10.1002/ajh.27177. PMID: 38095141. Título/periódico/ano/volume/páginas conferidos via NCBI e-utils (esummary), e abstract conferido via e-utils (efetch) nesta sessão em 29/08/2026."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1056/NEJMoa2028631",
+      "https://doi.org/10.1200/JCO-25-02558",
+      "https://www.jacc.org/doi/10.1016/j.jacc.2022.11.022",
+      "https://doi.org/10.1002/ajh.27177"
+    ],
+    "related_document_slugs": [
+      "amiloidose-cardiaca-por-cadeia-leve-al-e-o-ensaio-andromeda-daratumumabe",
+      "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+      "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo"
+    ],
+    "patient_material_slug": "amiloidose-cardiaca",
+    "review_status": "pendente_revisao",
+    "review_note": "VERBETE NOVO — decisão editorial de escopo que merece atenção humana confirmatória antes de publicação, dada a proximidade temática com a ficha já existente e publicada 'amiloidose-cardiaca-idoso'. Investigação prévia (Fase 1) confirmou que aquela ficha é genuinamente focada em ATTR (transtirretina): seus aliases ('ATTR cardíaca', 'cardiomiopatia amiloide') e tags (tafamidis, transtirretina selvagem, cintilografia óssea, amiloidose hereditária) não incluem 'AL' nem 'cadeia leve' como eixo central; a amiloidose AL aparece ali apenas como (1) critério de exclusão no algoritmo diagnóstico da ATTR, (2) um parágrafo de contraste na epidemiologia, (3) uma entrada de diferencial explícita anotando que é 'entidade distinta' que deve ser 'excluída antes de fechar diagnóstico de ATTR, nunca assumida como a mesma condição', e (4) uma frase no treatment_summary que remete explicitamente ao 'conteúdo específico já publicado no acervo sobre o ensaio ANDROMEDA (daratumumabe)... sem duplicação aqui' — ou seja, a própria ficha ATTR já sinalizava que o conteúdo de AL pertence a outro lugar. Este verbete novo preenche exatamente essa lacuna: reúne, sob um registro de doença próprio, o conteúdo de AL que já existia disperso no corpus (documento ANDROMEDA em Cardio-oncologia, algoritmo de exclusão em Cardiomiopatias, estadiamento AL-ISS em Calculadoras) mas sem ficha organizadora. As duas entidades são clinicamente distintas: etiologia (discrasia de plasmócitos vs. desdobramento de transtirretina ligado à idade), via diagnóstica (biópsia de gordura/medula com tipagem por espectrometria de massa vs. cintilografia óssea não invasiva), tratamento (quimioterapia dirigida ao clone plasmocitário, dara-CyBorD, possível transplante de células-tronco, vs. estabilizadores do tetrâmero de TTR como tafamidis) e prognóstico/faixa etária (AL mais agressiva, pode acometer adultos jovens; ATTRwt restrita essencialmente a idosos) não têm equivalência. A ficha 'amiloidose-cardiaca-idoso' foi mantida sem alteração nesta rodada — nenhum campo dela foi editado. \n\nSOBREPOSIÇÃO DOCUMENTADA: dois dos três related_document_slugs desta ficha nova ('diagnostico-e-tratamento-da-amiloidose-cardiaca' e 'fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo') também aparecem no related_document_slugs de 'amiloidose-cardiaca-idoso'. Essa sobreposição é intencional e legítima: os dois documentos discutem lado a lado o algoritmo de exclusão de AL antes de fechar diagnóstico de ATTR, portanto pertencem organicamente às duas fichas — o mesmo padrão de sobreposição documentada já usado no verbete cardiomiopatia-hipertrofica em relação ao hub cardiomiopatias (PR anterior). O hub geral 'cardiomiopatias' também cita os mesmos dois documentos em seu próprio related_document_slugs (conteúdo nuclear de amiloidose cardíaca dentro do hub) — overlap de três vias (amiloidose-cardiaca-cadeia-leve, amiloidose-cardiaca-idoso, cardiomiopatias) sobre exatamente os mesmos dois documentos, todo documentado no teste dedicado. O documento 'al-iss-estadiamento-internacional-da-amiloidose-al-cardiaca-2026' (Calculadoras) discute AL cardíaca de forma central e rica, mas foi deliberadamente excluído de related_document_slugs por estar em pasta fora do escopo da regra Tudo com Tudo (Calculadoras); seu PMID (Khwaja et al. 2026) foi usado normalmente como referência bibliográfica em source_refs, o que é mecanismo distinto. Os documentos 'amiloidose-cardiaca-attr-hereditaria-versus-selvagem-diferenciacao-clinica-e-teste-genetico' e 'fibrilacao-atrial-e-amiloidose-cardiaca-prevalencia-e-implicacao-terapeutica' foram avaliados e excluídos de related_document_slugs por não discutirem AL de forma central (o primeiro é puramente sobre ATTRv vs. ATTRwt, com uma única menção lateral a AL; o segundo trata de amiloidose cardíaca em geral — AL e ATTR combinadas — sem foco específico em AL). \n\npatient_material_slug reaproveita 'amiloidose-cardiaca' (já usado por amiloidose-cardiaca-idoso): o material em linguagem simples já explica explicitamente os dois tipos principais de amiloidose cardíaca (transtirretina e cadeia leve) e não precisou de alteração; reúso intencional, não erro. \n\nGATE DE REVIEW_STATUS: este registro usa review_status='pendente_revisao' deliberadamente, e isso fará test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falhar — comportamento esperado e correto, não contornado por allowlist, exatamente porque esta é uma decisão de escopo/taxonomia que precisa de aval humano explícito do Rafael antes de qualquer publicação, dado o risco de sobreposição percebido com a ficha ATTR já publicada.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

@@ -1,0 +1,546 @@
+[
+  {
+    "slug": "insuficiencia-tricuspide",
+    "name": "Insuficiência tricúspide",
+    "aliases": [
+      "Regurgitação tricúspide",
+      "Insuficiência tricúspide primária",
+      "Insuficiência tricúspide secundária (funcional)",
+      "Incompetência valvar tricúspide",
+      "Refluxo tricúspide",
+      "Tricuspid regurgitation (TR)"
+    ],
+    "area": "geral",
+    "category": "valvopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A insuficiência tricúspide (IT) é o refluxo de sangue do ventrículo direito (VD) para o átrio direito durante a sístole, por incompetência da valva tricúspide. É classificada como primária, quando a doença está no próprio aparelho valvar (folhetos, cordas, prótese prévia, marca-passo/CDI, doença carcinoide, endocardite), ou secundária/funcional, quando a valva é estruturalmente normal mas o anel tricúspide dilata por sobrecarga crônica do VD e do átrio direito — a forma disparadamente mais comum na prática clínica, geralmente por fibrilação atrial de longa data, hipertensão pulmonar de qualquer causa (incluindo doença do coração esquerdo) ou disfunção prévia do VD. Por décadas foi tratada quase exclusivamente com diurético, porque a cirurgia isolada de troca ou plastia tricúspide carrega mortalidade operatória elevada (8,8% em coorte nacional americana, sem melhora ao longo de uma década, maior ainda na troca do que no reparo) em paciente já com disfunção de VD — a maioria dos pacientes com IT grave sintomática nunca chegava a ser operada. Esse cenário mudou a partir de 2023: o reparo transcateter borda a borda (T-TEER, ensaio TRILUMINATE Pivotal, dispositivo TriClip) e, mais recentemente, a troca valvar transcateter (TTVR, ensaio TRISCEND II, sistema EVOQUE) ofereceram alternativas de baixo risco procedural, ambas com benefício demonstrado em qualidade de vida e redução da gravidade da IT — não, até o momento, em mortalidade isolada ou hospitalização por insuficiência cardíaca como componentes independentes do desfecho. A gravidade da IT carrega informação prognóstica própria e independente de fração de ejeção do VE e de pressão pulmonar: sobrevida em 1 ano de 91,7% na ausência de IT contra 63,9% na IT grave, em coorte de mais de 5.000 pacientes. Como diferencial dentro do mesmo espectro de doença valvar tricúspide, esta ficha cobre também a estenose tricúspide reumática — quase sempre acompanhada de doença mitral, de curso em geral benigno quando isolada, mas que exige avaliação sistemática e correção na mesma cirurgia quando a valva mitral já tem indicação operatória, para evitar reoperação evitável.",
+    "epidemiology": "O maior corpo de evidência prognóstica independente vem de Nath, Foster e Heidenreich (J Am Coll Cardiol, 2004): coorte retrospectiva de 5.223 pacientes submetidos a ecocardiograma em três centros de Veteranos americanos, seguimento médio de 498 dias, mostrando queda consistente de sobrevida em 1 ano conforme a gravidade da IT (ausente 91,7%, leve 90,3%, moderada 78,9%, grave 63,9%) — efeito independente da pressão sistólica de artéria pulmonar e da fração de ejeção do VE mesmo após ajuste multivariado. A gravidade da IT não é achado ecocardiográfico neutro, é preditor de mortalidade por si. A imensa maioria da IT clinicamente relevante é secundária/funcional (anel dilatado por sobrecarga de VD/AD), não doença primária dos folhetos; fibrilação atrial de longa data e hipertensão pulmonar (mais comumente secundária a doença do coração esquerdo) são as causas mais frequentes de dilatação anular. A população que preenche critério de IT grave sintomática já é, por definição, predominantemente idosa: idade média de 78 anos no TRILUMINATE Pivotal (350 pacientes, 54,9% mulheres) e de 77 anos no registro STS/ACC TVT de troca valvar transcateter em prática real (1.034 pacientes, 82 centros americanos, 69% mulheres, fevereiro de 2024 a março de 2025, primeiro ano completo pós-aprovação regulatória). A cirurgia isolada de valva tricúspide continua pouco realizada apesar de crescimento de volume: 5.005 cirurgias identificadas em dados nacionais americanos entre 2004 e 2013 (crescimento de 290 para 780 procedimentos por ano), com mortalidade intra-hospitalar estável em 8,8% ao longo da década, maior na troca valvar que no reparo (razão de chances 1,91) — o que ajuda a explicar por que a maioria dos pacientes permanecia sem tratamento definitivo antes da chegada das alternativas transcateter. A estenose tricúspide, por contraste, é quase exclusivamente de etiologia reumática e raramente isolada — está quase sempre associada a doença da valva mitral (mais comumente estenose mitral) ou aórtica, de modo que seu achado deve disparar investigação ativa de valvopatia associada do lado esquerdo, e vice-versa.",
+    "presentation": [
+      "Sinais de congestão venosa sistêmica retrógrada — turgência jugular, hepatomegalia congestiva, ascite e edema de membros inferiores — frequentemente desproporcionais ao grau de doença do lado esquerdo isoladamente conhecido",
+      "Dispneia aos esforços e queda progressiva da tolerância ao exercício, por redução do débito cardíaco anterógrado",
+      "Fígado pulsátil e sopro holossistólico em foco tricúspide que aumenta com a inspiração (sinal de Rivero-Carvallo), no exame físico da IT primária mais exuberante",
+      "Onda 'v' proeminente no pulso venoso jugular, refletindo o refluxo sistólico para o átrio direito",
+      "Caquexia cardíaca em estágio avançado, por má absorção intestinal em intestino cronicamente congesto",
+      "Fadiga e capacidade funcional reduzida, muitas vezes atribuídas apenas à doença do coração esquerdo ou pulmonar de base, e não à IT em si",
+      "Sinais de congestão hepática crônica — desconforto em hipocôndrio direito, icterícia leve, alterações bioquímicas hepáticas (bilirrubina, transaminases, tempo de protrombina/INR alargado)",
+      "Palpitações e sintomas relacionados a fibrilação atrial concomitante, causa e/ou consequência comum da dilatação do átrio e do anel tricúspide",
+      "Na estenose tricúspide reumática (diferencial coberto nesta ficha): sinais de baixo débito associados a congestão sistêmica desproporcional, onda 'a' gigante no pulso jugular e sopro diastólico em foco tricúspide, geralmente em paciente com doença mitral reumática já conhecida",
+      "Anasarca e refratariedade a diurético em estágio avançado, quando a falência de VD já está estabelecida",
+      "Apresentação insidiosa e subdiagnosticada — sintomas atribuídos apenas à doença causal de base (fibrilação atrial, hipertensão pulmonar, insuficiência cardíaca esquerda), com a IT tratada como achado incidental em vez de doença com morbimortalidade própria"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_ecocardiografica_da_gravidade": "O ecocardiograma transtorácico com Doppler é o método inicial e geralmente suficiente para graduar a gravidade da IT, caracterizando morfologia valvar, tamanho do anel, extensão do jato regurgitante, dilatação de átrio e ventrículo direitos e sinais indiretos de gravidade (fluxo sistólico revertido em veia hepática, dilatação franca de veia cava inferior sem colapso inspiratório). Quando a janela transtorácica é subótima ou a decisão terapêutica exige detalhamento anatômico adicional — sobretudo antes de intervenção transcateter —, ecocardiograma transesofágico com técnica tridimensional caracteriza com mais precisão a geometria do anel, o número e a mobilidade dos folhetos e a extensão da coaptação, informação central para decidir entre reparo borda a borda (que exige folhetos passíveis de coaptação adequada) e troca valvar (que substitui a valva inteira e pode ser preferida quando a anatomia não favorece reparo). Ressonância magnética cardíaca acrescenta quantificação volumétrica do VD quando a janela ecocardiográfica é limitada.",
+      "diferenciacao_primaria_versus_secundaria": "IT primária decorre de doença estrutural do próprio aparelho valvar — folhetos, cordas tendíneas, prótese prévia — por causas como endocardite infecciosa, doença carcinoide, lesão de folheto por cabo-eletrodo de marca-passo/CDI, prolapso mixomatoso ou anomalia congênita (Ebstein). IT secundária (funcional), disparadamente mais comum, ocorre com valva estruturalmente normal, por dilatação do anel tricúspide secundária a sobrecarga crônica de volume ou pressão do ventrículo e átrio direitos — fibrilação atrial de longa data, hipertensão pulmonar de qualquer origem (mais comumente secundária a doença do coração esquerdo) e disfunção prévia de ventrículo direito são as causas mais frequentes. A distinção importa clinicamente porque muda o alvo terapêutico: na IT secundária, tratar apenas 'a válvula' sem tratar o que dilatou o anel — a fibrilação atrial não revertida, a hipertensão pulmonar não controlada — tende a perpetuar o ciclo, porque a causa continua presente; a decisão de intervir sobre a valva em si só se coloca quando a IT permanece grave e sintomática apesar de terapia clínica otimizada da causa de base.",
+      "avaliacao_hemodinamica_e_funcao_de_ventriculo_direito": "A avaliação de função de VD (TAPSE, variação de área fracional, strain longitudinal, quando disponível) e da presença de hipertensão pulmonar pré-capilar é central antes de qualquer decisão de intervenção — não pela gravidade da IT isoladamente, mas porque disfunção grave e já estabelecida de VD ou de VE, ou hipertensão pulmonar pré-capilar, tornam qualquer intervenção sobre a valva potencialmente fútil: o problema deixou de ser a regurgitação e passou a ser a falência que ela deixou para trás. Cateterismo cardíaco direito complementa a avaliação quando a etiologia ou a magnitude da hipertensão pulmonar é incerta pela ecocardiografia. Pressão venosa central elevada — mais do que o índice cardíaco — é o determinante hemodinâmico mais associado à piora de função renal em descompensação: um aumento de creatinina sob diurese intensiva não é sinal automático para reduzir o diurético, podendo, ao contrário, refletir descongestão venosa ainda insuficiente.",
+      "estenose_tricuspide_reumatica_como_diferencial": "Praticamente todos os casos de estenose tricúspide resultam de febre reumática, e a doença quase sempre vem acompanhada de doença da valva aórtica ou, mais comumente, mitral — encontrar estenose tricúspide deve disparar investigação ativa de valvopatia associada do lado esquerdo, e vice-versa: doença mitral reumática conhecida deve levantar suspeita de acometimento tricúspide associado, sobretudo diante de sinais de congestão sistêmica desproporcionais ao grau de doença mitral isolada. Ao ecocardiograma Doppler, o padrão inclui folhetos espessados com mobilidade reduzida, possível fusão de comissuras, aumento de átrio direito e gradiente de pressão elevado através da valva, quantificado por Doppler contínuo; ecocardiograma transesofágico com técnica 3D é indicado quando a avaliação transtorácica é inconclusiva. Ao contrário da IT grave, a estenose tricúspide isolada costuma ter curso benigno e frequentemente não exige tratamento específico; cirurgia (reparo ou substituição) é considerada em paciente sintomático refratário a tratamento clínico, ou — o cenário mais comum na prática — quando valvopatia concomitante do lado esquerdo (por exemplo, estenose mitral) já tem indicação cirúrgica: nesse caso a valva tricúspide deve ser sistematicamente reavaliada e corrigida no mesmo tempo cirúrgico, porque operar a valva mitral e deixar uma estenose tricúspide concomitante não identificada para depois significa reoperação evitável.",
+      "selecao_para_intervencao_transcateter_versus_cirurgia": "A ESC/EACTS 2025 orienta uma sequência de decisão para IT secundária grave sintomática apesar de terapia clínica otimizada: primeiro, afastar disfunção grave de VD, disfunção grave de VE ou hipertensão pulmonar pré-capilar (nesses cenários, tratamento clínico otimizado é preferido pelo risco de futilidade do procedimento); segundo, se há indicação concomitante de cirurgia cardíaca (por exemplo, cirurgia de valva mitral), operar a tricúspide no mesmo tempo cirúrgico; terceiro, em paciente operável e com risco aceitável mesmo sem outra cirurgia indicada, considerar cirurgia tricúspide isolada (Classe IIa, Nível B), preferindo reparo quando tecnicamente viável — ausência de outra cirurgia cardíaca indicada não equivale a inoperabilidade, e a mortalidade historicamente alta da cirurgia isolada reflete em parte encaminhamento tardio; quarto, em alto risco cirúrgico com anatomia adequada avaliada por Heart Team em Centro de Válvula Cardíaca experiente, tratamento transcateter da valva tricúspide (reparo borda a borda quando a anatomia permite coaptação adequada dos folhetos, ou troca valvar quando não permite) para melhorar qualidade de vida e promover remodelamento de VD — Classe IIa, Nível A. A escolha entre reparo (T-TEER) e troca (TTVR) depende de avaliação anatômica estrutural especializada e carrega, na troca, custo de segurança maior — sangramento grave e implante de marca-passo definitivo novo em proporção expressivamente maior que no reparo, segundo o TRISCEND II."
+    },
+    "differentials": [
+      "Estenose tricúspide reumática — quase sempre acompanhada de doença mitral concomitante; distinta por gradiente diastólico ao Doppler contínuo, folhetos espessados com mobilidade reduzida e onda 'a' gigante, em vez do jato sistólico regurgitante da insuficiência",
+      "Endocardite infecciosa de valva tricúspide, sobretudo em usuário de droga injetável, causando IT primária por destruição de folheto",
+      "Lesão de folheto tricúspide por cabo de marca-passo ou cardioversor-desfibrilador implantável (CDI), causa reconhecida de IT primária iatrogênica",
+      "Doença carcinoide, causando espessamento e retração de folhetos com padrão característico de IT frequentemente associada a estenose pulmonar",
+      "Anomalia de Ebstein, causa congênita de IT primária por deslocamento apical dos folhetos septal e posterior",
+      "Hipertensão pulmonar de qualquer etiologia (incluindo a secundária a doença do coração esquerdo), como causa de IT secundária por sobrecarga de pressão do VD, sem doença estrutural da valva",
+      "Infarto ou disfunção primária aguda de ventrículo direito, causando IT funcional aguda por dilatação abrupta do anel",
+      "Prolapso mixomatoso da valva tricúspide, causa primária menos comum, análoga ao prolapso mitral"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler — método inicial para graduar gravidade, morfologia valvar e função de VD",
+      "Ecocardiograma transesofágico com técnica 3D, quando a janela transtorácica é subótima ou antes de intervenção transcateter",
+      "Ressonância magnética cardíaca, para quantificação volumétrica do VD quando a ecocardiografia é limitada",
+      "Cateterismo cardíaco direito, para caracterizar etiologia e magnitude de hipertensão pulmonar quando incerta pela imagem",
+      "Eletrocardiograma, para rastrear fibrilação atrial e outras arritmias associadas à dilatação atrial direita",
+      "Peptídeo natriurético tipo B (BNP), como marcador de sobrecarga hemodinâmica e de resposta a tratamento",
+      "Testes de função hepática (bilirrubina, transaminases, tempo de protrombina/INR), como marcador de gravidade e prognóstico da congestão hepática crônica",
+      "Teste de caminhada de 6 minutos e questionário de qualidade de vida (KCCQ), para quantificar capacidade funcional e resposta a intervenção",
+      "Doppler contínuo transtricúspide dedicado, para quantificar gradiente de pressão quando há suspeita de componente estenótico (diferencial de estenose reumática)"
+    ],
+    "red_flags": [
+      "Disfunção grave e já estabelecida de ventrículo direito, ou de ventrículo esquerdo, ou hipertensão pulmonar pré-capilar — tratamento clínico otimizado é preferido nesse cenário pelo risco de futilidade de qualquer intervenção valvar",
+      "Choque cardiogênico ou hipotensão persistente em paciente com IT grave",
+      "Congestão hepática avançada com sinais de disfunção sintética (INR alargado, hipoalbuminemia) — sugere cirrose cardíaca já estabelecida",
+      "Ascite refratária e anasarca apesar de diurético otimizado",
+      "Piora de função renal durante diurese intensiva atribuída erroneamente a hipovolemia, quando na verdade reflete descongestão venosa ainda insuficiente",
+      "Sangramento grave ou necessidade de marca-passo definitivo novo após troca valvar transcateter — desfechos de segurança com diferença absoluta grande frente ao reparo, que não devem ser omitidos na decisão compartilhada",
+      "Onda 'a' gigante e sinais de baixo débito associados a congestão desproporcional — sugerem componente estenótico concomitante (estenose tricúspide reumática) não investigado",
+      "Estenose mitral reumática com indicação cirúrgica já estabelecida, sem reavaliação sistemática da valva tricúspide antes da cirurgia — risco de reoperação evitável"
+    ],
+    "ambulatory_flow": [
+      "Otimizar terapia clínica antes de qualquer decisão sobre a válvula — diurético guiado por sinais clínicos de congestão (peso, turgência jugular, edema, ascite), controle de ritmo da fibrilação atrial e tratamento da causa de hipertensão pulmonar ou de doença do coração esquerdo, quando presentes.",
+      "Reavaliar a gravidade da IT e a função de VD por ecocardiograma seriado, mesmo em paciente assintomático, dado o valor prognóstico independente da gravidade da IT.",
+      "Encaminhar ao Heart Team em Centro de Válvula Cardíaca experiente todo paciente que permanece sintomático apesar de terapia clínica otimizada, para decisão entre cirurgia (concomitante ou isolada) e tratamento transcateter.",
+      "Investigar ativamente valvopatia associada do lado esquerdo diante de achado de estenose tricúspide, e vice-versa, pela forte associação reumática entre as duas.",
+      "Reavaliar sistematicamente a valva tricúspide antes de cirurgia mitral reumática já indicada, corrigindo a tricúspide no mesmo tempo cirúrgico quando há doença concomitante demonstrável.",
+      "Monitorizar exames de função hepática como marcador de gravidade e prognóstico, e considerar ajuste de fármacos hepaticamente metabolizados quando há congestão hepática relevante.",
+      "Documentar explicitamente ao paciente, na decisão compartilhada sobre intervenção transcateter, que o benefício demonstrado até o momento é de qualidade de vida e redução de gravidade da IT — não, isoladamente, de mortalidade ou de menos hospitalização por insuficiência cardíaca.",
+      "Considerar avaliação de fragilidade estruturada antes de negar intervenção transcateter só pela idade cronológica avançada — dado observacional específico de octogenários não mostrou diferença relevante de desfecho clínico frente a pacientes mais jovens após ajuste por escore de propensão."
+    ],
+    "emergency_flow": [
+      "Diante de descompensação aguda com congestão sistêmica grave, priorizar descongestão guiada por sinais clínicos (peso, turgência jugular, edema, ascite) — piora de creatinina sob diurese intensiva não é sinal automático para reduzir o diurético, podendo refletir descongestão ainda insuficiente.",
+      "Investigar e tratar ativamente o gatilho da descompensação — fibrilação atrial de início recente ou não controlada, piora de hipertensão pulmonar, isquemia ou disfunção aguda de VD.",
+      "Em choque ou hipotensão persistente associada a IT grave, avaliar precocemente função de VD e presença de hipertensão pulmonar antes de escalonar suporte, pela cautela hemodinâmica específica do VD sobrecarregado — dependente de pré-carga em graus variáveis, com risco de piora do débito diante de diurese ou vasodilatação excessivamente agressivas.",
+      "Encaminhar para avaliação de intervenção valvar (cirúrgica ou transcateter) apenas após estabilização hemodinâmica e otimização de volemia, e apenas se não houver disfunção grave já estabelecida de VD/VE ou hipertensão pulmonar pré-capilar que torne a intervenção fútil.",
+      "Em paciente com estenose tricúspide reumática e sinais de baixo débito desproporcionais à doença mitral conhecida, reavaliar ativamente a valva tricúspide por ecocardiograma dedicado antes de atribuir o quadro inteiramente à valvopatia do lado esquerdo."
+    ],
+    "treatment_summary": "Não existe terapia farmacológica específica e comprovadamente modificadora de doença para a insuficiência tricúspide; o tratamento clínico é predominantemente de suporte, centrado em diurético guiado por sinais de congestão (sem dose especificada nesta ficha) e no tratamento da causa da dilatação anular — controle de ritmo da fibrilação atrial e manejo da hipertensão pulmonar ou da doença do coração esquerdo, quando presentes. Por décadas essa foi praticamente a única opção prática, porque a cirurgia isolada de troca ou plastia tricúspide carrega mortalidade intra-hospitalar elevada (8,8% em coorte nacional americana, estável ao longo de uma década, maior na troca que no reparo) em paciente já com disfunção de ventrículo direito — a maioria dos pacientes com IT grave sintomática nunca chegava a ser operada. Dois programas de ensaios randomizados mudaram esse cenário. O reparo transcateter borda a borda (T-TEER, dispositivo TriClip, ensaio TRILUMINATE Pivotal — 350 pacientes) demonstrou desfecho primário positivo por razão de vitórias (win ratio 1,48), carregado pelo componente de qualidade de vida (KCCQ com diferença de 11,7 pontos) e por redução expressiva da gravidade da IT (87,0% com IT moderada ou menos em 30 dias, contra 4,8% do controle) — sem diferença estatística nos componentes duros do desfecho (morte ou cirurgia valvar; hospitalização por insuficiência cardíaca), achado que se manteve no seguimento de 2 anos. A troca valvar transcateter (TTVR, sistema EVOQUE, ensaio TRISCEND II — 400 pacientes) mostrou padrão semelhante: benefício de win ratio dirigido por qualidade de vida e classe funcional, com quase eliminação da IT documentada por substudo ecocardiográfico (95,3% com IT leve em 1 ano) e remodelamento reverso de VD associado a menos congestão venosa e maior débito cardíaco anterógrado — mas com custo de segurança real e maior que o do reparo: sangramento grave e implante de marca-passo definitivo novo em proporção expressivamente maior que no grupo controle, achado reproduzido em prática real pelo registro STS/ACC TVT (1.034 pacientes, 82 centros, mortalidade de 3,1% e regurgitação leve ou menor em 97,7% aos 30 dias). A escolha entre reparo e troca depende de avaliação anatômica estrutural especializada — o reparo exige folhetos passíveis de coaptação adequada, a troca substitui a valva inteira e pode ser opção quando a anatomia não favorece reparo — e ambas são reservadas, pela ESC/EACTS 2025, ao paciente sintomático apesar de terapia clínica otimizada, sem disfunção grave já estabelecida de VD/VE ou hipertensão pulmonar pré-capilar (cenário em que a intervenção tende a ser fútil), avaliado por Heart Team em Centro de Válvula Cardíaca experiente. Cirurgia tricúspide isolada continua indicada (Classe IIa, Nível B) no paciente operável e sintomático, mesmo sem outra cirurgia cardíaca concomitante indicada, preferindo reparo cirúrgico quando tecnicamente viável. Como diferencial dentro do mesmo espectro, a estenose tricúspide reumática tem tratamento distinto: o curso costuma ser benigno quando isolada e frequentemente não exige tratamento específico; cirurgia (reparo ou substituição) é reservada a paciente sintomático refratário, ou — cenário mais comum — realizada no mesmo tempo cirúrgico de uma cirurgia mitral reumática já indicada, evitando reoperação por doença tricúspide concomitante não corrigida.",
+    "monitoring": [
+      "Ecocardiograma seriado para reavaliar gravidade da IT, função de VD e resposta a tratamento clínico ou a intervenção.",
+      "Peso diário, sinais clínicos de congestão (turgência jugular, edema, ascite) e função renal, com diurese guiada por congestão — não interrompida automaticamente diante de aumento isolado de creatinina.",
+      "Exames de função hepática seriados como marcador de gravidade e prognóstico da congestão hepática crônica.",
+      "Classe funcional NYHA e questionário de qualidade de vida (KCCQ), sobretudo no seguimento pós-intervenção transcateter, onde é o desfecho com benefício mais consistentemente demonstrado.",
+      "Monitorização de ritmo, pelo risco de fibrilação atrial concomitante como causa e consequência da dilatação atrial e anular direita.",
+      "Após troca valvar transcateter (TTVR), monitorização dedicada de necessidade de marca-passo definitivo novo e de sangramento, desfechos de segurança com incidência expressivamente maior que no reparo.",
+      "Reavaliação sistemática da valva tricúspide no seguimento de paciente com valvopatia mitral reumática conhecida, pela forte associação entre as duas."
+    ],
+    "special_populations": [
+      "Idoso frágil: a IT grave sintomática é, por definição populacional, predominantemente doença do idoso — idade média de 78 anos no TRILUMINATE Pivotal e de 77 anos no registro STS/ACC TVT; dado observacional específico de octogenários mostrou desfechos comparáveis a pacientes mais jovens após ajuste por escore de propensão, reforçando que idade cronológica isolada não deveria negar o procedimento transcateter, desde que a seleção do candidato seja cuidadosa.",
+      "Paciente com valvopatia reumática multivalvar: estenose tricúspide quase sempre acompanha doença mitral (ou aórtica) reumática — investigação e correção cirúrgica devem ser sistemáticas e combinadas, não sequenciais.",
+      "Paciente com dispositivo cardíaco eletrônico implantável (marca-passo/CDI): cabo-eletrodo é causa reconhecida de IT primária por lesão de folheto, e novo implante de marca-passo definitivo é desfecho de segurança relevante após troca valvar transcateter.",
+      "Paciente com hipertensão pulmonar pré-capilar ou disfunção grave já estabelecida de VD/VE: tratamento clínico otimizado é preferido a qualquer intervenção valvar, pelo risco de futilidade do procedimento nesse cenário.",
+      "Paciente com fibrilação atrial de longa data: causa mais comum de dilatação do anel tricúspide e de IT secundária — controle de ritmo é parte central do tratamento da causa, não apenas comorbidade concomitante.",
+      "Paciente com risco de sangramento elevado: o custo de segurança da troca valvar transcateter (sangramento grave em proporção expressivamente maior que no grupo controle do TRISCEND II) pesa contra o implante nesse subgrupo, favorecendo reparo quando a anatomia permitir."
+    ],
+    "assistant_questions": [
+      {
+        "id": "tipo_it",
+        "label": "A insuficiência tricúspide é primária (doença do próprio aparelho valvar) ou secundária/funcional (anel dilatado, valva estruturalmente normal)?",
+        "type": "select",
+        "options": [
+          { "value": "primaria", "label": "Primária" },
+          { "value": "secundaria", "label": "Secundária/funcional" }
+        ]
+      },
+      {
+        "id": "gravidade_it",
+        "label": "Qual a gravidade da insuficiência tricúspide ao ecocardiograma?",
+        "type": "select",
+        "options": [
+          { "value": "leve", "label": "Leve" },
+          { "value": "moderada", "label": "Moderada" },
+          { "value": "grave", "label": "Grave" }
+        ]
+      },
+      {
+        "id": "sintomatico_apesar_terapia_otimizada",
+        "label": "O paciente permanece sintomático apesar de terapia clínica otimizada (diurético e tratamento da causa)?",
+        "type": "boolean"
+      },
+      {
+        "id": "disfuncao_grave_vd",
+        "label": "Há disfunção grave e já estabelecida de ventrículo direito?",
+        "type": "boolean"
+      },
+      {
+        "id": "disfuncao_grave_ve",
+        "label": "Há disfunção grave e já estabelecida de ventrículo esquerdo?",
+        "type": "boolean"
+      },
+      {
+        "id": "hipertensao_pulmonar_pre_capilar",
+        "label": "Há hipertensão pulmonar pré-capilar?",
+        "type": "boolean"
+      },
+      {
+        "id": "indicacao_concomitante_cirurgia_cardiaca",
+        "label": "Há indicação concomitante de outra cirurgia cardíaca (por exemplo, cirurgia de valva mitral)?",
+        "type": "boolean"
+      },
+      {
+        "id": "risco_cirurgico_aceitavel",
+        "label": "O risco cirúrgico é aceitável, após avaliação pelo Heart Team, para cirurgia tricúspide isolada?",
+        "type": "boolean"
+      },
+      {
+        "id": "anatomia_adequada_transcateter",
+        "label": "A anatomia é adequada a tratamento transcateter, segundo avaliação do Heart Team em Centro de Válvula Cardíaca experiente?",
+        "type": "boolean"
+      },
+      {
+        "id": "folhetos_permitem_coaptacao_reparo",
+        "label": "Os folhetos são passíveis de coaptação adequada para reparo borda a borda (T-TEER)?",
+        "type": "boolean"
+      },
+      {
+        "id": "estenose_tricuspide_concomitante_suspeita",
+        "label": "Há suspeita de componente estenótico concomitante (onda 'a' gigante, gradiente diastólico, folhetos espessados)?",
+        "type": "boolean"
+      },
+      {
+        "id": "valvopatia_mitral_reumatica_conhecida",
+        "label": "Há valvopatia mitral reumática conhecida?",
+        "type": "boolean"
+      },
+      {
+        "id": "congestao_hepatica_avancada",
+        "label": "Há sinais de congestão hepática avançada (INR alargado, hipoalbuminemia, icterícia)?",
+        "type": "boolean"
+      },
+      {
+        "id": "piora_renal_sob_diuretico",
+        "label": "Houve piora de função renal (aumento de creatinina) durante diurese intensiva?",
+        "type": "boolean"
+      },
+      {
+        "id": "fragilidade_ou_idade_avancada",
+        "label": "O paciente é idoso frágil ou tem idade cronológica avançada (≥80 anos) sendo considerado para intervenção?",
+        "type": "boolean"
+      },
+      {
+        "id": "risco_sangramento_elevado",
+        "label": "O paciente tem risco de sangramento elevado ou já é limítrofe para bloqueio de condução?",
+        "type": "boolean"
+      },
+      {
+        "id": "choque_ou_hipotensao_persistente",
+        "label": "Há choque cardiogênico ou hipotensão persistente associados ao quadro?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "choque_ou_hipotensao_grave",
+        "priority": 95,
+        "when": {
+          "all": [
+            { "field": "choque_ou_hipotensao_persistente", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque cardiogênico ou hipotensão persistente em paciente com IT grave — avaliar precocemente função de VD e hipertensão pulmonar antes de escalonar suporte hemodinâmico."
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_grave_vd_futilidade",
+        "priority": 88,
+        "when": {
+          "all": [
+            { "field": "disfuncao_grave_vd", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção grave e já estabelecida de ventrículo direito: tratamento clínico otimizado é preferido a qualquer intervenção sobre a valva, pelo risco de futilidade do procedimento nesse cenário."
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_grave_ve_futilidade",
+        "priority": 87,
+        "when": {
+          "all": [
+            { "field": "disfuncao_grave_ve", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Disfunção grave e já estabelecida de ventrículo esquerdo: tratamento clínico otimizado é preferido a qualquer intervenção sobre a valva, pelo risco de futilidade do procedimento nesse cenário."
+          ]
+        }
+      },
+      {
+        "id": "hp_precapilar_futilidade",
+        "priority": 86,
+        "when": {
+          "all": [
+            { "field": "hipertensao_pulmonar_pre_capilar", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Hipertensão pulmonar pré-capilar: tratamento clínico otimizado é preferido a qualquer intervenção sobre a valva, pelo risco de futilidade do procedimento nesse cenário."
+          ]
+        }
+      },
+      {
+        "id": "it_secundaria_grave_sintomatica_elegivel",
+        "priority": 62,
+        "when": {
+          "all": [
+            { "field": "tipo_it", "op": "eq", "value": "secundaria" },
+            { "field": "gravidade_it", "op": "eq", "value": "grave" },
+            { "field": "sintomatico_apesar_terapia_otimizada", "op": "truthy" },
+            { "field": "disfuncao_grave_vd", "op": "falsy" },
+            { "field": "disfuncao_grave_ve", "op": "falsy" },
+            { "field": "hipertensao_pulmonar_pre_capilar", "op": "falsy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "IT secundária grave, sintomática apesar de terapia clínica otimizada, sem disfunção grave de VD/VE nem hipertensão pulmonar pré-capilar: elegível para avaliação de intervenção pelo Heart Team, conforme a sequência de decisão da ESC/EACTS 2025."
+          ],
+          "ambulatory_flow": [
+            "Encaminhar ao Heart Team em Centro de Válvula Cardíaca experiente para decisão entre cirurgia (concomitante ou isolada) e tratamento transcateter."
+          ]
+        }
+      },
+      {
+        "id": "indicacao_concomitante_operar_junto",
+        "priority": 55,
+        "when": {
+          "all": [
+            { "field": "indicacao_concomitante_cirurgia_cardiaca", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Há indicação concomitante de outra cirurgia cardíaca: a cirurgia da valva tricúspide deve ser realizada no mesmo tempo cirúrgico, e não como procedimento isolado posterior."
+          ]
+        }
+      },
+      {
+        "id": "cirurgia_isolada_considerar",
+        "priority": 50,
+        "when": {
+          "all": [
+            { "field": "indicacao_concomitante_cirurgia_cardiaca", "op": "falsy" },
+            { "field": "risco_cirurgico_aceitavel", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Sem outra cirurgia cardíaca indicada, mas com risco cirúrgico aceitável: cirurgia tricúspide isolada deve ser considerada (Classe IIa, Nível B), preferindo reparo quando tecnicamente viável. Ausência de outra cirurgia indicada não equivale a inoperabilidade."
+          ]
+        }
+      },
+      {
+        "id": "alto_risco_avaliar_transcateter",
+        "priority": 52,
+        "when": {
+          "all": [
+            { "field": "risco_cirurgico_aceitavel", "op": "falsy" },
+            { "field": "anatomia_adequada_transcateter", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Alto risco cirúrgico com anatomia adequada: tratamento transcateter da valva tricúspide, avaliado por Heart Team em Centro de Válvula Cardíaca experiente, para melhorar qualidade de vida e promover remodelamento de VD (Classe IIa, Nível A)."
+          ],
+          "suggested_tests": [
+            "Avaliação anatômica estrutural especializada (ecocardiograma transesofágico 3D) pelo Heart Team, antes de definir reparo ou troca."
+          ]
+        }
+      },
+      {
+        "id": "reparo_versus_troca_por_anatomia",
+        "priority": 40,
+        "when": {
+          "all": [
+            { "field": "anatomia_adequada_transcateter", "op": "truthy" },
+            { "field": "folhetos_permitem_coaptacao_reparo", "op": "falsy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Anatomia não favorece coaptação adequada dos folhetos: troca valvar transcateter (TTVR) pode ser preferida ao reparo borda a borda, ponderando também o maior custo de segurança da troca (sangramento grave e marca-passo definitivo novo)."
+          ]
+        }
+      },
+      {
+        "id": "estenose_reumatica_suspeita_investigar",
+        "priority": 45,
+        "when": {
+          "all": [
+            { "field": "estenose_tricuspide_concomitante_suspeita", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Estenose tricúspide reumática concomitante — investigar com Doppler contínuo dedicado e ecocardiograma transesofágico 3D se a avaliação transtorácica for inconclusiva."
+          ],
+          "supporting": [
+            "Sinais sugestivos de componente estenótico (onda 'a' gigante, baixo débito desproporcional) exigem investigação ativa de valvopatia associada do lado esquerdo, pela forte associação reumática entre as duas."
+          ]
+        }
+      },
+      {
+        "id": "mitral_reumatica_reavaliar_tricuspide",
+        "priority": 48,
+        "when": {
+          "all": [
+            { "field": "valvopatia_mitral_reumatica_conhecida", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Valvopatia mitral reumática conhecida: reavaliar sistematicamente a valva tricúspide antes de cirurgia mitral já indicada, para correção combinada no mesmo tempo cirúrgico e evitar reoperação evitável."
+          ]
+        }
+      },
+      {
+        "id": "congestao_hepatica_avancada_monitorar",
+        "priority": 35,
+        "when": {
+          "all": [
+            { "field": "congestao_hepatica_avancada", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Congestão hepática avançada com sinais de disfunção sintética sugere cirrose cardíaca já estabelecida — monitorizar função hepática e ajustar fármacos hepaticamente metabolizados."
+          ]
+        }
+      },
+      {
+        "id": "piora_renal_sob_diuretico_nao_reduzir_automaticamente",
+        "priority": 42,
+        "when": {
+          "all": [
+            { "field": "piora_renal_sob_diuretico", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Aumento de creatinina sob diurese intensiva não é sinal automático para reduzir o diurético — pode refletir descongestão venosa ainda insuficiente; guiar a conduta por sinais clínicos de congestão, não apenas pela creatinina isolada."
+          ]
+        }
+      },
+      {
+        "id": "fragilidade_nao_negar_isoladamente",
+        "priority": 20,
+        "when": {
+          "all": [
+            { "field": "fragilidade_ou_idade_avancada", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "Idade cronológica avançada isoladamente não deveria negar intervenção transcateter — avaliação de fragilidade estruturada e função de VD basal são mais informativas que a idade isolada para essa decisão."
+          ]
+        }
+      },
+      {
+        "id": "risco_sangramento_favorecer_reparo",
+        "priority": 38,
+        "when": {
+          "all": [
+            { "field": "risco_sangramento_elevado", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Risco de sangramento elevado ou paciente limítrofe para bloqueio de condução: favorece reparo transcateter (T-TEER) sobre troca valvar (TTVR), pelo maior custo de segurança documentado desta última."
+          ]
+        }
+      },
+      {
+        "id": "it_leve_moderada_sem_intervencao",
+        "priority": 10,
+        "when": {
+          "all": [
+            { "field": "gravidade_it", "op": "in", "value": ["leve", "moderada"] }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "IT leve a moderada isolada, sem elemento adicional de gravidade: manter seguimento clínico e ecocardiográfico, sem indicação de intervenção valvar neste momento."
+          ]
+        }
+      },
+      {
+        "id": "assintomatico_manter_tratamento_clinico",
+        "priority": 15,
+        "when": {
+          "all": [
+            { "field": "gravidade_it", "op": "eq", "value": "grave" },
+            { "field": "sintomatico_apesar_terapia_otimizada", "op": "falsy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "IT grave, porém sem sintomas refratários à terapia clínica otimizada: manter tratamento clínico e reavaliação periódica, sem indicação imediata de intervenção sobre a valva."
+          ]
+        }
+      },
+      {
+        "id": "it_primaria_investigar_causa",
+        "priority": 28,
+        "when": {
+          "all": [
+            { "field": "tipo_it", "op": "eq", "value": "primaria" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "IT primária: investigar causas do próprio aparelho valvar — endocardite infecciosa, lesão por cabo-eletrodo de marca-passo/CDI, doença carcinoide, anomalia de Ebstein, prolapso mixomatoso."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "valvopatia",
+      "insuficiência tricúspide",
+      "regurgitação tricúspide",
+      "estenose tricúspide",
+      "estenose tricúspide reumática",
+      "reparo transcateter borda a borda",
+      "TEER tricúspide",
+      "troca valvar tricúspide transcateter",
+      "TTVR",
+      "insuficiência cardíaca direita",
+      "hipertensão pulmonar",
+      "fibrilação atrial",
+      "cardiologia geriátrica",
+      "Heart Team"
+    ],
+    "source_refs": [
+      "Sorajja P, Whisenant B, Hamid N, et al.; TRILUMINATE Pivotal Investigators. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — título/revista/volume/páginas/DOI conferidos via NCBI e-utils (esummary) em 29/08/2026.",
+      "Kar S, Makkar RR, Whisenant BK, et al.; TRILUMINATE Pivotal Investigators. Two-Year Outcomes of Transcatheter Edge-to-Edge Repair for Severe Tricuspid Regurgitation: The TRILUMINATE Pivotal Randomized Controlled Trial. Circulation. 2025;151(23):1630-1638. DOI: 10.1161/CIRCULATIONAHA.125.074536. PMID: 40159089 — conferido via NCBI e-utils em 29/08/2026.",
+      "Hahn RT, Makkar R, Thourani VH, et al.; TRISCEND II Trial Investigators. Transcatheter Valve Replacement in Severe Tricuspid Regurgitation. N Engl J Med. 2025;392(2):115-126. DOI: 10.1056/NEJMoa2401918. PMID: 39475399 — conferido via NCBI e-utils em 29/08/2026.",
+      "Sannino A, Grayburn PA, Kodali SK, et al.; TRISCEND II Pivotal Trial Investigators. TRISCEND II: Effect of Transcatheter Tricuspid Valve Replacement on Echocardiographic Measures of Right Heart Remodeling and Function. JACC Cardiovasc Imaging. 2026 Jul 14. DOI: 10.1016/j.jcmg.2026.05.019. PMID: 42470411 — conferido via NCBI e-utils em 29/08/2026; volume/fascículo/páginas ainda não atribuídos pelo PubMed no momento da checagem (publicação eletrônica antecipada).",
+      "Makkar RR, Gupta A, O'Neill BP, et al. Real-World Outcomes of Transcatheter Tricuspid Valve Replacement: Analysis From the STS/ACC TVT Registry. JAMA. 2026;335(18):1606-1615. DOI: 10.1001/jama.2026.3446. PMID: 41973411 — conferido via NCBI e-utils em 29/08/2026.",
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — CORRIGIDO após verificação via NCBI e-utils em 29/08/2026: os documentos-fonte desta biblioteca citam a faixa de páginas 4635-4747; o registro oficial do PubMed (esummary) traz 4635-4736 — usado aqui o dado verificado, divergência documentada.",
+      "Nath J, Foster E, Heidenreich PA. Impact of tricuspid regurgitation on long-term survival. J Am Coll Cardiol. 2004;43(3):405-409. DOI: 10.1016/j.jacc.2003.09.036. PMID: 15013122 — conferido via NCBI e-utils em 29/08/2026.",
+      "Zack CJ, Fender EA, Chandrashekar P, Reddy YNV, Bennett CE, Stulak JM, Miller VM, Nishimura RA. National Trends and Outcomes in Isolated Tricuspid Valve Surgery. J Am Coll Cardiol. 2017;70(24):2953-2960. DOI: 10.1016/j.jacc.2017.10.039. PMID: 29241483 — conferido via NCBI e-utils em 29/08/2026.",
+      "Tricuspid Stenosis. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; NCBI Bookshelf NBK499990 — usado para o enquadramento geral de etiologia, diagnóstico e conduta da estenose tricúspide reumática; já verificado por busca cruzada em literatura secundária concordante em sessão anterior desta biblioteca (documento-fonte estenose-tricuspide-reumatica-diagnostico-e-manejo.md, checagem em 06/08/2026). Não é indexado no PubMed (NCBI Bookshelf), portanto sem PMID."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36876753/",
+      "https://pubmed.ncbi.nlm.nih.gov/40159089/",
+      "https://pubmed.ncbi.nlm.nih.gov/39475399/",
+      "https://pubmed.ncbi.nlm.nih.gov/42470411/",
+      "https://pubmed.ncbi.nlm.nih.gov/41973411/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+      "https://pubmed.ncbi.nlm.nih.gov/15013122/",
+      "https://pubmed.ncbi.nlm.nih.gov/29241483/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK499990/"
+    ],
+    "related_document_slugs": [
+      "insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda",
+      "insuficiencia-tricuspide-grave-triscend-ii-e-a-troca-valvar-transcateter-com-o-sistema-evoque",
+      "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025",
+      "troca-valvar-tricuspide-transcateter-no-mundo-real-registro-sts-acc-tvt",
+      "estenose-tricuspide-reumatica-diagnostico-e-manejo",
+      "insuficiencia-tricuspide-funcional-grave-no-idoso-fragil-teer-tricuspide-e-o-triluminate",
+      "insuficiencia-cardiaca-direita-isolada-por-doenca-tricuspide-fisiopatologia-da-congestao-e-manejo-clinico"
+    ],
+    "patient_material_slug": "insuficiencia-tricuspide-a-terceira-valvula-e-o-reparo-por-cateter",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente no sistema. Insuficiência tricúspide não tinha ficha própria em doencas/metadados.json apesar de corpus rico e já existente em content/Valvopatias/ (TRILUMINATE, TRISCEND II, fluxograma de seleção ESC/EACTS 2025, registro STS/ACC TVT, estenose tricúspide reumática), content/Cardiologia_geriátrica/ (TEER no idoso frágil) e content/Insuficiência_cardíaca/ (fisiopatologia da congestão por doença tricúspide). Os 7 related_document_slugs foram verificados individualmente por leitura direta e completa do documento inteiro, confirmando discussão CENTRAL (não tangencial) da insuficiência ou estenose tricúspide em cada um: TRILUMINATE Pivotal (reparo T-TEER), TRISCEND II (troca valvar TTVR/EVOQUE), fluxograma de seleção para intervenção na IT secundária grave (ESC/EACTS 2025), registro STS/ACC TVT (troca valvar em prática real), estenose tricúspide reumática (diferencial explícito coberto nesta mesma ficha), IT funcional grave no idoso frágil (TEER/TRILUMINATE em Cardiologia geriátrica) e insuficiência cardíaca direita isolada por doença tricúspide (fisiopatologia da congestão, dado de sobrevida de Nath 2004, mortalidade cirúrgica de Zack 2017). Nenhum dos 7 está em content/Farmacologia/, content/Calculadoras/ ou content/Exames/. Dois candidatos adicionais mapeados por grep foram lidos e DELIBERADAMENTE EXCLUÍDOS por não serem centrais ao tema: 'regurgitacao-tricuspide-induzida-por-eletrodo-mecanismo-prognostico-e-manejo.md' (Dispositivos) e 'displasia-congenita-isolada-da-valva-tricuspide-nao-ebstein-...md' (Cardiologia pediátrica) tratam de subtipos etiológicos específicos com corpo de evidência próprio, fora do escopo desta ficha geral sobre IT grave (primária/secundária do adulto) e estenose reumática — mantidos apenas como diferenciais textuais (lesão por cabo-eletrodo), sem link direto, para não diluir a régua de 'discussão central'. 9 PMIDs/referências verificados individualmente via NCBI e-utils (esummary) em 29/08/2026 antes da montagem do source_refs; UM deles (ESC/EACTS 2025, PMID 40878295) tinha citação de página divergente nos dois documentos-fonte desta biblioteca (4635-4747) em relação ao registro oficial do PubMed (4635-4736) — corrigido para o dado verificado, com a divergência documentada explicitamente no próprio texto do source_ref. A referência de estenose tricúspide reumática (StatPearls NBK499990) não tem PMID por ser NCBI Bookshelf, não indexada no PubMed — mantida como já verificada em sessão anterior desta biblioteca, conforme registrado no documento-fonte. patient_material_slug resolvido para 'insuficiencia-tricuspide-a-terceira-valvula-e-o-reparo-por-cateter' em material-paciente/metadados.json, já vinculado ao documento_slug 'insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda' (um dos 7 related_document_slugs desta ficha). category='valvopatia' segue a convenção já usada nos 3 registros existentes dessa categoria (estenose-aortica-tavi-idoso, valvopatias-na-gravidez, valvopatias); area='geral' e subtype=null porque não há modificador populacional fechado aplicável (a ficha cobre adulto em geral, com subseção dedicada de população geriátrica em special_populations, sem justificar um 'subtype' fechado análogo a heart_team/gestacao/multiplas_lesoes dos registros já existentes). prevalence_rank deixado null por não pertencer ao hub fechado de doenças de altíssima prevalência em área 'geral' (ranks 1-9), mesma convenção do verbete cardiomiopatia-de-takotsubo. Nenhuma dose de fármaco em nenhum campo de texto. Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes. FALHA ESPERADA E DOCUMENTADA: backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro porque review_status='pendente_revisao' e conteúdo novo não revisado por humano não deve se autoaprovar nesse gate — não contornado. A entrada 'insuficiencia-tricuspide' foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] apenas porque essa mesma allowlist é reaproveitada, por importação direta, em backend/tests/test_disease_fragments_canonical.py::test_catalogo_combinado_tem_slugs_unicos_e_status_editorial_explicito, onde a checagem funciona corretamente contra status pendente; ela NÃO isenta este slug do teste principal de review status, que continua falhando como esperado. Resultado esperado: test_disease_fragments_canonical.py passa; test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha (esperado, documentado, não contornado) — exatamente 1 falha no conjunto de gates desta rodada.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

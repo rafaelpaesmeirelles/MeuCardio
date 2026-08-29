@@ -1,0 +1,560 @@
+[
+  {
+    "slug": "insuficiencia-aortica",
+    "name": "Insuficiência aórtica",
+    "aliases": [
+      "Regurgitação aórtica",
+      "Insuficiência da valva aórtica",
+      "Refluxo aórtico",
+      "Doença aórtica regurgitante",
+      "Insuficiência valvar aórtica",
+      "Aortic regurgitation (AR)"
+    ],
+    "area": "geral",
+    "category": "valvopatia",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A insuficiência aórtica (IAo, regurgitação aórtica) é o refluxo diastólico de sangue da aorta para o ventrículo esquerdo por falha de coaptação dos folhetos da valva aórtica, e se divide em duas formas com fisiopatologia, apresentação e urgência de manejo completamente diferentes. Na forma CRÔNICA, o ventrículo esquerdo tem tempo para se adaptar com dilatação excêntrica progressiva e aumento de complacência, o que torna a doença tolerada por anos e explica por que boa parte dos pacientes graves permanece assintomática — e é justamente essa adaptação silenciosa que exige critérios objetivos (função e dimensões do VE, diâmetro da raiz/aorta ascendente) para decidir o momento cirúrgico antes que a disfunção se torne irreversível. Cirurgia é recomendada em todo paciente sintomático independentemente da FEVE, e no assintomático a decisão depende de cortes de FEVE e diâmetro/volume sistólico final do VE (ESC/EACTS 2021 e 2025), de aneurisma associado de raiz/aorta ascendente, ou de indicação concomitante de outra cirurgia cardíaca; troca valvar continua sendo o procedimento padrão, com reparo em ascensão (Classe IIa em 2025) para paciente selecionado em centro experiente. Para o paciente de alto risco cirúrgico com RA nativa grave inelegível para cirurgia convencional, o tratamento transcateter DEDICADO (sistema Trilogy, avaliado no ensaio pivotal ALIGN-AR) surgiu como alternativa validada — ao contrário dos dispositivos convencionais de TAVI desenhados para valva calcificada de estenose, que se ancoram mal numa valva regurgitante sem cálcio. Já a IAo AGUDA é uma emergência estruturalmente distinta: o ventrículo esquerdo não teve tempo de dilatar, a pressão diastólica sobe abruptamente, e o quadro pode evoluir rapidamente para edema pulmonar e choque cardiogênico, mais frequentemente por endocardite infecciosa com destruição valvar ou por dissecção aguda de aorta envolvendo a raiz — sem que exista corte numérico de gravidade equivalente ao da forma crônica; a diretriz de valvopatia remete às diretrizes específicas de cada doença de base. O tratamento definitivo da IAo aguda grave é cirurgia urgente/imediata guiada pela etiologia, com suporte hemodinâmico servindo apenas de ponte — nunca como substituto —, e com armadilhas terapêuticas próprias (balão intra-aórtico contraindicado, cautela com betabloqueador fora do contexto de dissecção, risco de bradicardia agravar o refluxo).",
+    "epidemiology": "Os critérios ecocardiográficos de gravidade da IAo, consolidados na Tabela de recomendações da ESC/EACTS, combinam achados qualitativos (morfologia valvar anormal, jato de cor amplo na via de saída do VE, fluxo reverso holodiastólico na aorta descendente com velocidade acima de 20 cm/s), semiquantitativos (vena contracta acima de 6 mm, tempo de meia-pressão abaixo de 200 ms) e quantitativos (área de orifício regurgitante efetivo — EROA — igual ou acima de 30 mm², volume regurgitante igual ou acima de 60 mL por batimento, e dilatação do VE) para classificar a lesão como grave. Na IAo crônica grave assintomática, a indicação cirúrgica Classe I (nível B) — inalterada entre 2021 e 2025 — usa FEVE de repouso igual ou abaixo de 50%, diâmetro sistólico final do VE (DSFVE) acima de 50 mm, ou DSFVE indexado à superfície corporal acima de 25 mm/m² (sobretudo em compleição pequena). A atualização de 2025 elevou o corte indexado da zona cinzenta Classe IIb — reservada a cirurgia de baixo risco — de 20 para 22 mm/m² de DSFVE indexado, subiu o nível de evidência de C para B, e acrescentou um critério volumétrico próprio (volume sistólico final indexado — VSFVEi — acima de 45 mL/m², por eco ou RM), além de considerar FEVE de repouso igual ou abaixo de 55% nessa mesma zona. Quando há aneurisma associado de raiz ou aorta ascendente, a cirurgia é recomendada com diâmetro máximo igual ou acima de 55 mm em qualquer paciente, e pode ser considerada a partir de 50 mm em paciente selecionado de baixo risco com fator de risco adicional; em síndrome de Marfan, o corte cai para 50 mm (diâmetro máximo) e chega a 45 mm quando há fator de risco adicional ou mutação TGFBR1/TGFBR2 (Loeys-Dietz), e em valva aórtica bicúspide com fator de risco adicional ou coarctação o corte é de 50 mm; reimplante com preservação valvar é recomendado (Classe I) em paciente jovem com raiz dilatada e boa qualidade de cúspide, em centro experiente. Para o tratamento transcateter dedicado da RA nativa grave (sem estenose associada), o ensaio pivotal ALIGN-AR (Lancet 2025, PMID 41260228), braço único, 30 centros dos EUA, incluiu 700 pacientes (idade mediana 79 anos, 46% mulheres, alto risco cirúrgico) implantados com a válvula Trilogy: sucesso técnico do implante em 95% (664/700), composto de segurança em 30 dias de 24,0% (atingindo a meta pré-especificada de não inferioridade, p<0,0001, com RA grave residual em zero pacientes), e mortalidade por qualquer causa em 1 ano de 7,7% (atingindo a meta de superioridade, p<0,0001) — ao custo de uma taxa de novo marca-passo definitivo de 21,6% (127/589). Uma metanálise de 19 estudos observacionais (Bacigalupi et al., J Am Heart Assoc 2025, PMID 41147394) documenta a evolução histórica do uso de dispositivos em RA pura: dispositivos convencionais de 1ª geração usados off-label tiveram mortalidade em 30 dias de 16,9% e migração valvar de 19,0%, contra 4,7% e 3,0%, respectivamente, com dispositivos dedicados — tendência estatisticamente significativa entre gerações (p<0,0001) em todos os desfechos avaliados. Não há corte numérico de gravidade equivalente para a IAo AGUDA: a ESC/EACTS remete às diretrizes de endocardite infecciosa e de síndrome aórtica aguda/dissecção como fonte da decisão, já que a etiologia — não um patamar ecocardiográfico — determina a operação.",
+    "presentation": [
+      "IAo crônica: assintomática por anos, mesmo em grau grave, pela adaptação progressiva do VE por dilatação excêntrica e aumento de complacência",
+      "Dispneia aos esforços, fadiga, ou (mais raramente) angina, quando os sintomas finalmente aparecem na forma crônica",
+      "Sopro diastólico decrescente em foco aórtico/borda esternal esquerda, classicamente mais audível com o paciente sentado, inclinado para frente, em apneia expiratória",
+      "Pressão de pulso alargada e sinais periféricos clássicos de IAo crônica grave (pulso em martelo d'água/pulso de Corrigan, entre outros sinais periféricos) — sinais que refletem a adaptação crônica, não a gravidade aguda",
+      "IAo AGUDA: apresentação frequentemente diferente da forma crônica — não esperar o fenótipo clássico",
+      "Na IAo aguda grave, a pressão de pulso pode ser estreita ou pouco aumentada, e o VE pode não estar dilatado — a ausência de pulso em martelo d'água NÃO exclui IAo aguda grave",
+      "Sopro diastólico curto e discreto na IAo aguda, ao contrário do sopro mais prolongado e clássico da forma crônica",
+      "Edema pulmonar agudo e choque cardiogênico podem dominar o quadro na IAo aguda grave, muitas vezes com instalação rápida",
+      "Contexto clínico sugestivo de causa aguda: febre/sinais de endocardite infecciosa, dor torácica de início súbito sugestiva de dissecção de aorta, trauma torácico recente, ou procedimento por cateter recente",
+      "Fechamento diastólico prematuro da valva mitral ao ecocardiograma quando a pressão diastólica do VE sobe muito rapidamente — achado de imagem, não sinal clínico ao exame físico, mas orienta a suspeita quando presente no laudo"
+    ],
+    "diagnostic_approach": {
+      "criterios_ecocardiograficos_de_gravidade": "A avaliação integrada ao ecocardiograma combina três níveis de critério para classificar IAo como grave: qualitativos (morfologia valvar anormal, jato de cor amplo na via de saída do VE, fluxo reverso holodiastólico na aorta descendente com velocidade acima de 20 cm/s), semiquantitativos (vena contracta acima de 6 mm, tempo de meia-pressão abaixo de 200 ms) e quantitativos (área de orifício regurgitante efetivo igual ou acima de 30 mm², volume regurgitante igual ou acima de 60 mL/batimento, e dilatação do VE). Em casos limítrofes, RM cardíaca ou ecocardiograma 3D ajudam a resolver a gravidade antes de fechar a decisão terapêutica.",
+      "avaliacao_do_ve_e_indicacao_cirurgica_no_assintomatico_cronico": "No paciente assintomático com IAo crônica grave, dois patamares de disfunção ventricular definem a conduta. O patamar de indicação firme (Classe I, nível B, inalterado entre 2021 e 2025): FEVE de repouso igual ou abaixo de 50%, DSFVE acima de 50 mm, ou DSFVE indexado à superfície corporal acima de 25 mm/m² (sobretudo se superfície corporal pequena). O patamar da zona cinzenta (Classe IIb, só em cirurgia de baixo risco): em 2021 era DSFVE indexado acima de 20 mm/m² ou FEVE de repouso igual ou abaixo de 55% (nível C); em 2025 o corte indexado subiu para acima de 22 mm/m², o nível de evidência subiu para B, e entrou um critério volumétrico próprio — volume sistólico final indexado (VSFVEi) acima de 45 mL/m² por eco ou RM. O corte IIb NÃO substitui o corte I: são dois patamares de decisão diferentes, o segundo mais permissivo e baseado em evidência mais fraca (estudos ecocardiográficos observacionais).",
+      "avaliacao_de_raiz_e_aorta_ascendente": "Independentemente da gravidade da IAo, a dilatação de raiz ou aorta ascendente pode, por si só, indicar cirurgia: diâmetro máximo igual ou acima de 55 mm em qualquer paciente (Classe IIa/I conforme contexto), ou a partir de 50 mm em paciente selecionado de baixo risco com fator de risco adicional, em centro experiente. Cortes mais baixos se aplicam por etiologia: 50 mm em síndrome de Marfan (45 mm com fator de risco adicional ou mutação TGFBR1/TGFBR2 de Loeys-Dietz) e 50 mm em valva aórtica bicúspide com fator de risco adicional ou coarctação associada. Reimplante com preservação valvar (técnica valve-sparing) é recomendado em paciente jovem com dilatação de raiz e cúspides de boa qualidade, em centro experiente, com resultado durável esperado.",
+      "reconhecimento_e_diagnostico_da_ia_aguda": "Ecocardiograma transtorácico (TTE) à beira do leito é a primeira linha diante de suspeita de IAo aguda grave. Ecocardiograma transesofágico (TEE) deve ser obtido rapidamente quando o mecanismo não está claro, há suspeita de endocardite, há possibilidade de dissecção da raiz/aorta ascendente, o TTE é tecnicamente inadequado, ou o planejamento cirúrgico exige definição anatômica mais precisa. A avaliação deve cobrir mecanismo e gravidade da regurgitação, função de VE/VD, pressão pulmonar, fechamento prematuro da valva mitral, vegetação/abscesso, raiz/aorta ascendente, derrame pericárdico/tamponamento e avaliação de prótese quando presente. Em paciente instável, a cirurgia não deve ser atrasada apenas para completar exames de caráter eletivo — a diretriz de valvopatia não fornece corte numérico próprio de gravidade para a forma aguda, remetendo às diretrizes de endocardite infecciosa e de síndrome aórtica aguda/dissecção como fonte da decisão terapêutica."
+    },
+    "differentials": [
+      "Estenose aórtica com regurgitação concomitante (dupla lesão aórtica) — fisiopatologia e limiares de decisão diferem da RA pura, e dispositivos transcateter dedicados a RA pura não foram validados nesse cenário misto",
+      "Insuficiência mitral aguda como causa alternativa de edema pulmonar/choque súbito — mecanismo, achados ecocardiográficos (incluindo fechamento prematuro da mitral, que é achado de IAo, não de IM) e conduta hemodinâmica (IABP pode ser útil como ponte em IM aguda selecionada, mas é CONTRAINDICADO na IAo aguda) são distintos",
+      "Comunicação interventricular com prolapso de cúspide aórtica associado, causa estrutural distinta de regurgitação aórtica progressiva no adulto com CIV não corrigida",
+      "Endocardite infecciosa sem destruição valvar significativa (vegetação sem regurgitação hemodinamicamente relevante) — diferenciação depende da avaliação ecocardiográfica detalhada do mecanismo e gravidade",
+      "Dissecção de aorta tipo A sem envolvimento valvar significativo, em que a dor torácica e a instabilidade não decorrem de regurgitação aórtica aguda, mas de outras complicações da dissecção (tamponamento, malperfusão)",
+      "Prolapso de cúspide aórtica isolado (degenerativo, sem dilatação de raiz) versus doença de raiz/aorta como mecanismo predominante da regurgitação — distinção que orienta a viabilidade técnica de reparo versus troca"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico (TTE) com Doppler — exame inicial e de primeira linha, tanto na forma crônica (avaliação de gravidade, função e dimensões do VE, raiz e aorta ascendente) quanto na aguda (à beira do leito)",
+      "Ecocardiograma transesofágico (TEE), quando o mecanismo não está claro, há suspeita de endocardite ou de dissecção envolvendo a raiz/aorta ascendente, o TTE é tecnicamente inadequado, ou o planejamento cirúrgico exige definição anatômica adicional",
+      "Ressonância magnética cardíaca, para resolver casos limítrofes de gravidade e para quantificar volume sistólico final indexado do VE (critério formal desde 2025)",
+      "Ecocardiograma 3D, como alternativa em casos limítrofes de quantificação de volumes do VE",
+      "Angiotomografia ou angiorressonância de aorta, para medir com precisão o diâmetro máximo de raiz/aorta ascendente e definir a necessidade e o intervalo de vigilância por imagem",
+      "Teste de esforço no paciente assintomático sem critério cirúrgico formal, para desmascarar sintoma e medir capacidade funcional — não para quantificar a regurgitação",
+      "Hemoculturas (antes do antibiótico, quando isso não representar atraso perigoso) diante de suspeita de endocardite infecciosa como causa de IAo aguda",
+      "Coronariografia/avaliação pré-operatória conforme protocolo institucional, quando cirurgia valvar está indicada"
+    ],
+    "red_flags": [
+      "IAo crônica grave sintomática — indicação cirúrgica independentemente da FEVE, salvo risco operatório proibitivo",
+      "IAo crônica grave assintomática com FEVE de repouso igual ou abaixo de 50%, DSFVE acima de 50 mm, ou DSFVE indexado acima de 25 mm/m²",
+      "Raiz ou aorta ascendente com diâmetro máximo igual ou acima de 55 mm (ou 50 mm com fator de risco adicional em baixo risco; 50/45 mm em Marfan; 50 mm em bicúspide com fator de risco) — decide independentemente da gravidade da IAo",
+      "IAo aguda grave por endocardite infecciosa ou dissecção de aorta — emergência cirúrgica, terapia definitiva é intervenção urgente/imediata",
+      "Edema pulmonar ou choque cardiogênico em paciente com IAo aguda — não atrasar cirurgia tentando normalizar todos os parâmetros hemodinâmicos primeiro",
+      "Balão intra-aórtico (IABP) em uso ou planejado em IAo aguda grave — CONTRAINDICADO, pode aumentar o volume regurgitante",
+      "Bradicardia significativa em IAo aguda grave — alonga a diástole e pode agravar o refluxo",
+      "Abscesso perivalvar, bloqueio atrioventricular novo ou fenômeno embólico em endocardite associada a IAo aguda",
+      "Malperfusão ou tamponamento em dissecção de aorta tipo A associada a IAo aguda",
+      "Dilatação progressiva do VE (DDVE acima de 65 mm) ou queda progressiva de FEVE no seguimento do assintomático, mesmo sem atingir os cortes formais"
+    ],
+    "ambulatory_flow": [
+      "Confirmar a gravidade da IAo por avaliação integrada ao ecocardiograma (com RM cardíaca ou eco 3D em casos limítrofes), medindo FEVE, DSFVE, DSFVE indexado, VSFVE indexado e diâmetros de raiz e aorta ascendente.",
+      "No assintomático sem critério cirúrgico, reavaliar com ecocardiograma anualmente; ao se aproximar dos cortes cirúrgicos, ou diante de dilatação progressiva do VE/queda de FEVE no seguimento, reduzir o intervalo para 3 a 6 meses.",
+      "Realizar teste de esforço quando factível no assintomático sem critério cirúrgico formal, para desmascarar sintoma e medir capacidade funcional (não para quantificar a regurgitação).",
+      "Se aorta ascendente dilatada ao primeiro eco (acima de 45 mm), obter TC ou RM sincronizada ao ECG para confirmar o diâmetro máximo, repetir eco em 6 meses e depois anualmente.",
+      "Diante de sintoma atribuível à IAo, encaminhar para avaliação de risco cirúrgico pelo Heart Team; se risco proibitivo e anatomia adequada em centro experiente, discutir tratamento transcateter dedicado à RA nativa.",
+      "Se indicação de outra cirurgia cardíaca (revascularização, cirurgia de aorta ascendente ou de outra valva) em paciente com IAo grave, tratar a valva aórtica na mesma cirurgia, sintomático ou não.",
+      "Se raiz ou aorta ascendente com diâmetro máximo igual ou acima de 55 mm (ou 50 mm com fator de risco em baixo risco), encaminhar para cirurgia pela aorta com tratamento da valva, independentemente da gravidade da IAo.",
+      "Discutir reparo versus troca valvar com o Heart Team quando cirurgia indicada — reparo em centro experiente quando durabilidade é esperada; troca continua sendo a abordagem padrão na maioria dos casos.",
+      "Em paciente jovem com IAo por doença de raiz e boa qualidade de cúspide, discutir reimplante com preservação valvar (valve-sparing) em centro experiente.",
+      "Orientar o paciente sobre os limites reais da terapia clínica (IECA ou diidropiridínico): tratam sintoma quando cirurgia não é possível, mas não substituem nem adiam a indicação cirúrgica no assintomático; cautela com betabloqueador, que alonga a diástole e aumenta o volume regurgitante."
+    ],
+    "emergency_flow": [
+      "Diante de suspeita de IAo aguda grave (dispneia/edema pulmonar súbito, choque, sopro diastólico novo, contexto de febre/endocardite ou dor torácica sugestiva de dissecção), obter ecocardiograma transtorácico imediato à beira do leito.",
+      "Obter TEE rapidamente quando o mecanismo não está claro, há suspeita de endocardite ou de dissecção da raiz/aorta ascendente, o TTE é tecnicamente inadequado, ou o planejamento cirúrgico exige definição anatômica adicional — sem atrasar cirurgia em paciente instável apenas para completar exames eletivos.",
+      "Acionar Heart Team/cirurgia cardíaca/cirurgia de aorta/infectologia em paralelo à estabilização — tratamento médico não substitui a correção estrutural em IAo aguda grave por endocardite ou dissecção.",
+      "Não atrasar a cirurgia tentando 'otimizar' todos os parâmetros hemodinâmicos primeiro diante de hipotensão, edema pulmonar, baixo fluxo/choque ou destruição valvar importante.",
+      "Evitar bradicardia relevante — quanto maior a duração da diástole, maior o tempo disponível para refluxo; considerar fast pacing temporário como estratégia excepcional de ponte para encurtar a diástole quando indicado, sem induzir taquicardia extrema.",
+      "Usar betabloqueador com grande cautela em causas de IAo aguda que não a dissecção, pois bloquear a taquicardia compensatória pode piorar o débito; na dissecção de aorta, o controle de impulso com betabloqueio permanece parte do tratamento, exigindo manejo coordenado com a equipe cirúrgica.",
+      "Em paciente hipertenso/normotenso com perfusão preservável, considerar vasodilatação titulável para aumentar fluxo anterógrado e reduzir a fração regurgitante — NÃO usar vasodilatação agressiva em hipotensão/choque profundo.",
+      "Em choque, titular suporte pressor/inotrópico conforme pressão e fluxo, evitando vasoconstrição pura excessiva; considerar cateter de artéria pulmonar em choque complexo quando a informação mudar a conduta sem atrasar a cirurgia.",
+      "Reavaliar continuamente ventilação e diurese diante de edema pulmonar — ventilação positiva e diurese agressiva podem reduzir a pré-carga e derrubar o débito em choque.",
+      "NÃO usar balão intra-aórtico (IABP) — aumenta a pressão diastólica aórtica e pode aumentar o volume regurgitante; ao considerar suporte circulatório mecânico temporário, discutir em centro avançado, definir mecanismo/configuração e avaliar possibilidade de intervenção definitiva imediata.",
+      "Na suspeita de endocardite: coletar hemoculturas antes do antibiótico quando isso não representar atraso perigoso, iniciar antibioticoterapia apropriada após culturas conforme protocolo, procurar abscesso/bloqueio AV/embolização/extensão perivalvar, e envolver a equipe de endocardite/cirurgia precocemente.",
+      "Na suspeita de dissecção tipo A: tratar como emergência aórtica com cirurgia imediata, analgesia, controle de impulso/pressão equilibrado com perfusão, evitar atrasos por coronariografia não essencial, e avaliar tamponamento/malperfusão — o tratamento definitivo não é 'trocar apenas a valva' quando o mecanismo é dissecção de raiz."
+    ],
+    "treatment_summary": "Na IAo CRÔNICA grave sintomática, a cirurgia valvar é recomendada independentemente da função ventricular, a menos que o risco operatório seja proibitivo. No assintomático, a cirurgia é indicada quando FEVE de repouso, DSFVE ou DSFVE indexado ultrapassam os cortes de disfunção ventricular estabelecidos, quando raiz ou aorta ascendente atingem os diâmetros de indicação (independentemente da gravidade da IAo), ou quando o paciente será operado por outro motivo cardíaco. Troca valvar continua sendo o procedimento padrão na maioria dos casos; reparo valvar (Classe IIa desde 2025) é reservado a paciente selecionado em centro experiente quando resultado durável é esperado, e reimplante com preservação valvar é indicado em paciente jovem com doença de raiz e boa qualidade de cúspide. Quando nem cirurgia nem tratamento transcateter são possíveis, terapia clínica (IECA ou diidropiridínico) pode aliviar sintoma, mas não deve ser usada para adiar cirurgia no assintomático; betabloqueador exige cautela, porque alonga a diástole e aumenta o volume regurgitante. Para o paciente de alto risco cirúrgico com RA nativa grave e anatomia adequada, o tratamento transcateter DEDICADO a RA (sistema Trilogy, testado no ensaio pivotal ALIGN-AR) é uma alternativa validada por estudo prospectivo de braço único que atingiu as metas pré-especificadas de segurança em 30 dias e de mortalidade em 1 ano — mas não é um ensaio randomizado contra cirurgia, não deve ser extrapolado para risco intermediário/baixo nem para RA associada a estenose (dupla lesão), e carrega taxa relevante de novo marca-passo definitivo que precisa ser discutida na decisão compartilhada; dispositivos convencionais de TAVI desenhados para estenose calcificada não devem ser usados de forma improvisada em RA pura, pela evidência histórica claramente pior de má-posição, migração e regurgitação residual. Na IAo AGUDA grave — predominantemente por endocardite infecciosa ou dissecção de aorta — o tratamento definitivo é cirurgia urgente/imediata guiada pela etiologia de base; o suporte hemodinâmico (controle cuidadoso de frequência cardíaca evitando bradicardia, vasodilatação titulada apenas quando a perfusão permite, suporte pressor/inotrópico fenotipado, ventilação e diurese ajustadas com cautela) serve apenas como ponte até a correção estrutural, nunca como substituto dela; balão intra-aórtico é contraindicado, e extrapolar relatos excepcionais de dispositivos de suporte circulatório mecânico avançado para uso rotineiro não é recomendado. Na dissecção de aorta associada, o controle de impulso com betabloqueio continua indicado, em coordenação estreita com a equipe cirúrgica; na endocardite, antibioticoterapia e busca ativa de complicações perivalvares acompanham a preparação cirúrgica.",
+    "monitoring": [
+      "IAo grave assintomática fora dos cortes cirúrgicos: ecocardiograma anual.",
+      "IAo grave assintomática se aproximando dos cortes, ou com dilatação progressiva do VE/queda de FEVE no seguimento: ecocardiograma a cada 3 a 6 meses, com RM cardíaca quando útil.",
+      "IAo moderada: consulta anual, ecocardiograma a cada 2 anos.",
+      "Aorta ascendente dilatada ao primeiro eco (acima de 45 mm): TC ou RM sincronizada ao ECG para confirmar o diâmetro máximo, novo eco em 6 meses e depois anualmente; aumento acima de 3 mm exige confirmação por angio-TC ou RM.",
+      "Após tratamento transcateter dedicado (Trilogy/ALIGN-AR), seguimento estruturado de marca-passo definitivo (taxa de 21,6% no ensaio pivotal) e de função ventricular/classe funcional.",
+      "Após cirurgia valvar (troca ou reparo), seguimento de função protética/durabilidade do reparo e de recuperação da função ventricular conforme protocolo institucional de pós-operatório de cirurgia cardíaca.",
+      "Após IAo aguda tratada cirurgicamente, seguimento específico da etiologia de base — protocolo de endocardite infecciosa (incluindo profilaxia e vigilância de recidiva) ou de doença aórtica/dissecção (vigilância por imagem seriada do restante da aorta)."
+    ],
+    "special_populations": [
+      "Valva aórtica bicúspide: predispõe tanto a estenose quanto a regurgitação valvar e carrega aortopatia própria, com corte de intervenção na raiz/aorta ascendente mais baixo (50 mm) quando há fator de risco adicional ou coarctação associada — os cortes específicos de fenótipo da aortopatia bicúspide vêm da diretriz de aorta, não da de valvopatia.",
+      "Síndrome de Marfan e outras doenças de tecido conjuntivo (Loeys-Dietz): cortes de intervenção na raiz mais baixos que a população geral (50 mm em Marfan; 45 mm com fator de risco adicional ou mutação TGFBR1/TGFBR2 em Loeys-Dietz); reimplante com preservação valvar é a técnica preferida em paciente jovem com boa qualidade de cúspide.",
+      "Endocardite infecciosa como causa de IAo aguda: destruição/perfuração valvar exige busca ativa de abscesso, bloqueio AV, embolização e extensão perivalvar; hemoculturas antes do antibiótico quando não representar atraso perigoso; equipe de endocardite/cirurgia envolvida precocemente.",
+      "Dissecção aguda de aorta tipo A como causa de IAo aguda: emergência aórtica com prioridades simultâneas de cirurgia imediata, controle de impulso/pressão equilibrado com perfusão e avaliação de tamponamento/malperfusão — o tratamento definitivo trata a raiz/aorta, não apenas a valva.",
+      "Paciente de alto risco cirúrgico com RA nativa grave sintomática: população-alvo do ensaio ALIGN-AR (idade mediana 79 anos), candidata a tratamento transcateter dedicado quando a anatomia é adequada e a cirurgia convencional é inviável ou de risco proibitivo pelo Heart Team.",
+      "Atleta com IAo: elegibilidade para esporte recreativo/competitivo depende de gravidade, dimensões do VE (com cortes próprios para diferenciar remodelamento fisiológico do atleta de dilatação patológica), FEVE e resposta ao teste de esforço — IAo grave sintomática contraindica esporte competitivo e recreativo, com cirurgia recomendada antes de qualquer retorno.",
+      "Trauma torácico fechado ou complicação iatrogênica de procedimento por cateter como causas menos comuns, porém reconhecidas, de IAo aguda grave — mesma lógica de emergência cirúrgica guiada pela etiologia."
+    ],
+    "assistant_questions": [
+      {
+        "id": "apresentacao_temporal",
+        "label": "A insuficiência aórtica é crônica ou de instalação aguda?",
+        "type": "select",
+        "options": [
+          { "value": "cronica", "label": "Crônica" },
+          { "value": "aguda", "label": "Aguda" }
+        ]
+      },
+      {
+        "id": "sintomas_atribuiveis_ia",
+        "label": "Há sintomas atribuíveis à insuficiência aórtica (dispneia, fadiga, angina)?",
+        "type": "boolean"
+      },
+      {
+        "id": "etiologia_aguda",
+        "label": "Se aguda, qual a etiologia identificada ou suspeita?",
+        "type": "select",
+        "options": [
+          { "value": "endocardite", "label": "Endocardite infecciosa" },
+          { "value": "disseccao_aortica", "label": "Dissecção aguda de aorta" },
+          { "value": "trauma", "label": "Trauma torácico fechado" },
+          { "value": "iatrogenica", "label": "Complicação iatrogênica de procedimento por cateter" },
+          { "value": "falencia_protese_biopotese", "label": "Falência aguda de prótese/bioprótese" },
+          { "value": "nao_aplicavel", "label": "Não aplicável (forma crônica)" }
+        ]
+      },
+      {
+        "id": "gravidade_eco",
+        "label": "Qual a gravidade da IAo pela avaliação ecocardiográfica integrada?",
+        "type": "select",
+        "options": [
+          { "value": "leve", "label": "Leve" },
+          { "value": "moderada", "label": "Moderada" },
+          { "value": "grave", "label": "Grave" }
+        ]
+      },
+      {
+        "id": "feve_repouso_percent",
+        "label": "Qual a FEVE de repouso (%)?",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "id": "dsfve_mm",
+        "label": "Qual o diâmetro sistólico final do VE (DSFVE, em mm)?",
+        "type": "number",
+        "min": 0,
+        "max": 120
+      },
+      {
+        "id": "dsfve_indexado_mm_m2",
+        "label": "Qual o DSFVE indexado à superfície corporal (mm/m²)?",
+        "type": "number",
+        "min": 0,
+        "max": 60
+      },
+      {
+        "id": "vsfve_indexado_ml_m2",
+        "label": "Qual o volume sistólico final do VE indexado (VSFVEi, em mL/m²), se disponível por eco ou RM?",
+        "type": "number",
+        "min": 0,
+        "max": 200
+      },
+      {
+        "id": "diametro_raiz_aorta_ascendente_mm",
+        "label": "Qual o diâmetro máximo de raiz ou aorta ascendente (mm)?",
+        "type": "number",
+        "min": 0,
+        "max": 120
+      },
+      {
+        "id": "doenca_tecido_conjuntivo_marfan_loeys_dietz",
+        "label": "Há síndrome de Marfan ou outra doença de tecido conjuntivo (Loeys-Dietz)?",
+        "type": "boolean"
+      },
+      {
+        "id": "valva_aortica_bicuspide",
+        "label": "A valva aórtica é bicúspide?",
+        "type": "boolean"
+      },
+      {
+        "id": "risco_cirurgico_proibitivo_heart_team",
+        "label": "O risco cirúrgico foi considerado proibitivo pelo Heart Team?",
+        "type": "boolean"
+      },
+      {
+        "id": "risco_cirurgico_baixo",
+        "label": "O risco cirúrgico foi considerado baixo pelo Heart Team?",
+        "type": "boolean"
+      },
+      {
+        "id": "anatomia_adequada_tavi_dedicado",
+        "label": "A anatomia é adequada para tratamento transcateter dedicado à RA nativa, em centro experiente?",
+        "type": "boolean"
+      },
+      {
+        "id": "indicacao_outra_cirurgia_cardiaca_concomitante",
+        "label": "Há indicação de outra cirurgia cardíaca (revascularização, aorta ascendente, outra valva)?",
+        "type": "boolean"
+      },
+      {
+        "id": "choque_ou_edema_pulmonar",
+        "label": "Há choque cardiogênico ou edema pulmonar agudo no momento da avaliação?",
+        "type": "boolean"
+      },
+      {
+        "id": "iabp_em_uso_ou_planejado",
+        "label": "Balão intra-aórtico (IABP) está em uso ou sendo planejado?",
+        "type": "boolean"
+      },
+      {
+        "id": "bradicardia_significativa",
+        "label": "Há bradicardia significativa?",
+        "type": "boolean"
+      },
+      {
+        "id": "atleta_competitivo",
+        "label": "O paciente é atleta competitivo?",
+        "type": "boolean"
+      },
+      {
+        "id": "dilatacao_progressiva_ve_ou_queda_feve_seguimento",
+        "label": "Há dilatação progressiva do VE (DDVE acima de 65 mm) ou queda progressiva de FEVE no seguimento?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ia_aguda_emergencia_geral",
+        "priority": 95,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "IAo aguda grave é emergência estruturalmente diferente da forma crônica: o VE não teve tempo de adaptar, e a terapia definitiva é intervenção urgente/imediata, geralmente cirurgia."
+          ],
+          "supporting": [
+            "Suporte hemodinâmico serve apenas como ponte até a correção estrutural, nunca como substituto dela."
+          ]
+        }
+      },
+      {
+        "id": "ia_aguda_iabp_contraindicado",
+        "priority": 99,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" },
+            { "field": "iabp_em_uso_ou_planejado", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Balão intra-aórtico (IABP) em uso ou planejado em IAo aguda grave — CONTRAINDICADO: aumenta a pressão diastólica aórtica e pode aumentar o volume regurgitante."
+          ]
+        }
+      },
+      {
+        "id": "ia_aguda_choque_edema_pulmonar",
+        "priority": 97,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" },
+            { "field": "choque_ou_edema_pulmonar", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Não atrasar cirurgia tentando normalizar todos os parâmetros hemodinâmicos primeiro diante de choque ou edema pulmonar em IAo aguda grave."
+          ]
+        }
+      },
+      {
+        "id": "ia_aguda_endocardite",
+        "priority": 88,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" },
+            { "field": "etiologia_aguda", "op": "eq", "value": "endocardite" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Coletar hemoculturas antes do antibiótico quando isso não representar atraso perigoso; envolver equipe de endocardite/cirurgia precocemente."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transesofágico para buscar vegetação, abscesso e extensão perivalvar."
+          ]
+        }
+      },
+      {
+        "id": "ia_aguda_disseccao",
+        "priority": 92,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" },
+            { "field": "etiologia_aguda", "op": "eq", "value": "disseccao_aortica" }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "supporting": [
+            "Tratar como emergência aórtica: cirurgia imediata, controle de impulso/pressão equilibrado com perfusão, avaliar tamponamento/malperfusão — o tratamento definitivo trata a raiz/aorta, não apenas a valva."
+          ]
+        }
+      },
+      {
+        "id": "ia_aguda_bradicardia",
+        "priority": 78,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "aguda" },
+            { "field": "bradicardia_significativa", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Bradicardia alonga a diástole e pode agravar o refluxo em IAo aguda; considerar fast pacing temporário como estratégia excepcional de ponte, sem induzir taquicardia extrema."
+          ]
+        }
+      },
+      {
+        "id": "cronica_sintomatica_cirurgia",
+        "priority": 85,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "cronica" },
+            { "field": "sintomas_atribuiveis_ia", "op": "truthy" }
+          ],
+          "none": [
+            { "field": "risco_cirurgico_proibitivo_heart_team", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "IAo crônica grave sintomática: cirurgia valvar recomendada independentemente da FEVE, salvo risco operatório proibitivo (Classe I, nível B)."
+          ]
+        }
+      },
+      {
+        "id": "cronica_sintomatica_risco_proibitivo_tavi",
+        "priority": 83,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "cronica" },
+            { "field": "sintomas_atribuiveis_ia", "op": "truthy" },
+            { "field": "risco_cirurgico_proibitivo_heart_team", "op": "truthy" },
+            { "field": "anatomia_adequada_tavi_dedicado", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Risco cirúrgico proibitivo com anatomia adequada em centro experiente: tratamento transcateter dedicado à RA nativa pode ser considerado, preferindo dispositivo dedicado (não convencional) a dispositivos desenhados para estenose calcificada."
+          ]
+        }
+      },
+      {
+        "id": "cronica_assintomatica_disfuncao_ve_classe_i",
+        "priority": 76,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "cronica" },
+            { "field": "sintomas_atribuiveis_ia", "op": "falsy" }
+          ],
+          "any": [
+            { "field": "feve_repouso_percent", "op": "lte", "value": 50 },
+            { "field": "dsfve_mm", "op": "gt", "value": 50 },
+            { "field": "dsfve_indexado_mm_m2", "op": "gt", "value": 25 }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "IAo crônica grave assintomática com FEVE de repouso ≤50%, DSFVE >50 mm, ou DSFVE indexado >25 mm/m²: indicação cirúrgica firme (Classe I, nível B)."
+          ]
+        }
+      },
+      {
+        "id": "cronica_assintomatica_zona_iib_baixo_risco",
+        "priority": 55,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "cronica" },
+            { "field": "sintomas_atribuiveis_ia", "op": "falsy" },
+            { "field": "risco_cirurgico_baixo", "op": "truthy" }
+          ],
+          "any": [
+            { "field": "feve_repouso_percent", "op": "lte", "value": 55 },
+            { "field": "dsfve_indexado_mm_m2", "op": "gt", "value": 22 },
+            { "field": "vsfve_indexado_ml_m2", "op": "gt", "value": 45 }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Zona cinzenta Classe IIb (2025): FEVE de repouso ≤55%, DSFVE indexado >22 mm/m², ou VSFVE indexado >45 mL/m² — só se aplica quando a cirurgia é de baixo risco; não substitui o corte Classe I."
+          ]
+        }
+      },
+      {
+        "id": "aorta_dilatada_indicacao_geral",
+        "priority": 89,
+        "when": {
+          "all": [
+            { "field": "diametro_raiz_aorta_ascendente_mm", "op": "gte", "value": 55 }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Raiz ou aorta ascendente com diâmetro máximo ≥55 mm: cirurgia pela aorta com tratamento da valva recomendada, independentemente da gravidade da IAo."
+          ]
+        }
+      },
+      {
+        "id": "aorta_dilatada_tecido_conjuntivo",
+        "priority": 91,
+        "when": {
+          "all": [
+            { "field": "doenca_tecido_conjuntivo_marfan_loeys_dietz", "op": "truthy" },
+            { "field": "diametro_raiz_aorta_ascendente_mm", "op": "gte", "value": 45 }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Doença de tecido conjuntivo (Marfan/Loeys-Dietz): cortes de intervenção na raiz mais baixos que a população geral (50 mm em Marfan; 45 mm com fator de risco adicional ou mutação TGFBR1/TGFBR2)."
+          ]
+        }
+      },
+      {
+        "id": "valva_bicuspide_informativo",
+        "priority": 20,
+        "when": {
+          "all": [
+            { "field": "valva_aortica_bicuspide", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "Valva aórtica bicúspide predispõe tanto a estenose quanto a regurgitação e carrega aortopatia própria, com corte específico de intervenção na raiz/aorta ascendente."
+          ]
+        }
+      },
+      {
+        "id": "cirurgia_cardiaca_concomitante",
+        "priority": 70,
+        "when": {
+          "all": [
+            { "field": "indicacao_outra_cirurgia_cardiaca_concomitante", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Indicação de outra cirurgia cardíaca (revascularização, aorta ascendente, outra valva) em paciente com IAo grave: tratar a valva aórtica na mesma cirurgia, sintomático ou não."
+          ]
+        }
+      },
+      {
+        "id": "dilatacao_progressiva_seguimento",
+        "priority": 45,
+        "when": {
+          "all": [
+            { "field": "apresentacao_temporal", "op": "eq", "value": "cronica" },
+            { "field": "dilatacao_progressiva_ve_ou_queda_feve_seguimento", "op": "truthy" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Dilatação progressiva do VE (DDVE >65 mm) ou queda progressiva de FEVE no seguimento, mesmo sem atingir os cortes formais: discutir cirurgia com o Heart Team, sem classe formal na diretriz."
+          ]
+        }
+      },
+      {
+        "id": "atleta_competitivo_gravidade",
+        "priority": 40,
+        "when": {
+          "all": [
+            { "field": "atleta_competitivo", "op": "truthy" },
+            { "field": "gravidade_eco", "op": "eq", "value": "grave" }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "IAo grave em atleta competitivo: elegibilidade depende de dimensões do VE, FEVE e resposta ao teste de esforço (ESC 2020 Sports Cardiology); IAo grave sintomática ou com FEVE ≤50% contraindica esporte competitivo."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "Valvopatias",
+      "Insuficiência aórtica crônica",
+      "Insuficiência aórtica aguda",
+      "Ecocardiografia",
+      "Tratamento transcateter dedicado (Trilogy)",
+      "Endocardite infecciosa",
+      "Dissecção de aorta",
+      "Cirurgia cardíaca"
+    ],
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, Milojevic M, Baldus S, Bauersachs J, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165 — título, autoria, periódico, volume/página e DOI conferidos individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Praz F, Borger MA, Lanz J, Marin-Cuartas M, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Makkar RR, Thourani VH, Vahl TP, et al.; ALIGN-AR Investigators. Transcatheter aortic valve implantation with the Trilogy valve for symptomatic native aortic regurgitation (ALIGN-AR): a pivotal, multicentre, single-arm, investigational device exemption study. Lancet. 2025;406(10521):2757-2771. DOI: 10.1016/S0140-6736(25)02215-9. PMID: 41260228 — conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Vahl TP, Thourani VH, Makkar RR, et al.; ALIGN-AR Investigators. Transcatheter aortic valve implantation in patients with high-risk symptomatic native aortic regurgitation (ALIGN-AR): a prospective, multicentre, single-arm study. Lancet. 2024;403(10435):1451-1459. DOI: 10.1016/S0140-6736(23)02806-4. PMID: 38552656 — relatório inicial (n=180), citado para contexto histórico do desenho pivotal; conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Bacigalupi E, Scorpiglione L, Prendergast BD, et al.; Heart Team study group. Dedicated Versus Conventional Devices in Patients With Pure Native Aortic Regurgitation: A Systematic Review and Meta-Analysis. J Am Heart Assoc. 2025;14(21):e038659. DOI: 10.1161/JAHA.124.038659. PMID: 41147394 — conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Otto CM, Nishimura RA, Bonow RO, et al.; ACC/AHA Joint Committee on Clinical Practice Guidelines. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150 — conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026.",
+      "Miller PE, Senman BC, Gage A, et al. Acute Decompensated Valvular Disease in the Intensive Care Unit. JACC Adv. 2024;3(12):101402. DOI: 10.1016/j.jacadv.2024.101402. PMID: 39735779 — conferido individualmente no PubMed via E-utilities (esummary) em 29/08/2026."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/34453165/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878295/",
+      "https://pubmed.ncbi.nlm.nih.gov/41260228/",
+      "https://pubmed.ncbi.nlm.nih.gov/38552656/",
+      "https://pubmed.ncbi.nlm.nih.gov/41147394/",
+      "https://pubmed.ncbi.nlm.nih.gov/33332150/",
+      "https://pubmed.ncbi.nlm.nih.gov/39735779/"
+    ],
+    "related_document_slugs": [
+      "regurgitacao-aortica-cronica-e-aguda-indicacao-cirurgica-esceacts-2021",
+      "regurgitacao-aortica-nativa-grave-tratamento-transcateter-dedicado-align-ar-trilogy",
+      "fluxograma-insuficiencia-aortica-cronica-grave-quando-intervir-esc-eacts-2025",
+      "insuficiencia-aortica-aguda-grave-na-uco-endocardite-disseccao-e-choque",
+      "doenca-valvar-elegibilidade-esportiva-no-atleta"
+    ],
+    "patient_material_slug": "regurgitacao-aortica-quando-a-valvula-vaza-e-quando-operar",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), a pedido de Rafael, para preencher lacuna confirmada: insuficiência aórtica (regurgitação aórtica crônica e aguda) não tinha ficha própria em doencas/metadados.json apesar de corpus já existente em content/Valvopatias/ e content/Terapia_intensiva/. ANTES DE INICIAR: o registro 'insuficiencia-mitral' (criado no mesmo dia, na branch claude/novo-verbete-insuficiencia-mitral-20260829, ainda não mesclada a main) foi lido por completo e confirmado como exclusivamente sobre a valva mitral (regurgitação mitral primária/secundária, aliases e related_document_slugs todos mitrais) — sem overlap de escopo com este verbete de valva aórtica. Os 5 related_document_slugs foram cada um LIDO POR COMPLETO, confirmando discussão CENTRAL (não tangencial) de insuficiência/regurgitação aórtica: indicação cirúrgica na RA crônica/aguda (ESC/EACTS 2021), tratamento transcateter dedicado da RA nativa grave (ALIGN-AR/Trilogy), fluxograma de decisão da IAo crônica grave (ESC/EACTS 2025), protocolo de IAo aguda grave na UCO (endocardite/dissecção/choque — necessário para cobrir a forma AGUDA pedida explicitamente, localizado por busca ativa em content/Terapia_intensiva/ por não estar entre os 3 candidatos mapeados) e a seção dedicada de regurgitação aórtica no documento de elegibilidade esportiva (ESC 2020 Sports Cardiology, cortes de dimensão de VE e classe/nível por gravidade — 5º documento buscado ativamente conforme exigido, além do 4º). Outros candidatos foram lidos e DELIBERADAMENTE EXCLUÍDOS por não serem centrais: 'padrao-de-acometimento-valvar-mitral-versus-aortico...-remedy' (o achado central é o padrão mitral-primeiro/aórtico-depois na cardiopatia reumática, RA é apenas uma linha de tabela); 'valva-aortica-bicuspide-e-aortopatia-associada-esc-2024' (central é a aortopatia associada à VAB, RA é mencionada de passagem); 'doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025' (visão geral de valvopatia sem seção própria de regurgitação aórtica); 'valvopatia-e-cirurgia-nao-cardiaca-avaliacao-e-manejo-esc-2022' (seção de RA presente, porém mais curta e menos central que os 5 escolhidos). 7 PMIDs verificados individualmente via NCBI E-utilities (esummary) em 29/08/2026 antes da montagem do source_refs — todos concordantes com os documentos-fonte, sem divergência de título/volume/página/DOI a corrigir. patient_material_slug resolvido para 'regurgitacao-aortica-quando-a-valvula-vaza-e-quando-operar' em material-paciente/metadados.json, ligado diretamente ao documento-fonte principal desta ficha (regurgitacao-aortica-cronica-e-aguda-indicacao-cirurgica-esceacts-2021). area='geral' e subtype/cyanosis_class/prevalence_rank=null seguem a mesma convenção adotada no mesmo dia para o fragmento 'insuficiencia-mitral' (mesma frente de produção paralela). SOBREPOSIÇÃO DOCUMENTADA de related_document_slugs: os 3 documentos de RA crônica/aguda/transcateter também aparecem em related_document_slugs do hub 'valvopatias' (esperado — hub geral de valvopatia cita os mesmos documentos centrais de RA); o documento de elegibilidade esportiva também aparece em related_document_slugs de 'valva-aortica-bicuspide-pediatrica' (esperado — mesmo documento cobre seções dedicadas de RA e de valva bicúspide). Nenhuma outra ficha do catálogo compartilha related_document_slugs com este verbete. Nenhuma dose de fármaco em nenhum campo de texto. FALHA ESPERADA E DOCUMENTADA: backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro porque review_status='pendente_revisao' e conteúdo não foi revisado por humano — esperado, não contornado. A entrada 'insuficiencia-aortica' foi adicionada a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] no mesmo teste, seguindo exatamente o padrão/comentário usado na branch claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829 (PR #698), porque essa mesma allowlist é reaproveitada por importação direta em backend/tests/test_disease_fragments_canonical.py, onde a checagem funciona corretamente para registro pendente. Resultado esperado: test_disease_fragments_canonical.py passa; test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha (única falha esperada, documentada, não contornada).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
