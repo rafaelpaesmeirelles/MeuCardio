@@ -1,0 +1,593 @@
+[
+  {
+    "slug": "cardiomiopatia-arritmogenica",
+    "name": "Cardiomiopatia arritmogênica",
+    "aliases": [
+      "DAVD",
+      "ACM",
+      "displasia arritmogênica de ventrículo direito",
+      "ARVC",
+      "ARVD/C",
+      "CAVD",
+      "cardiomiopatia arritmogênica de ventrículo direito",
+      "cardiomiopatia arritmogênica de ventrículo esquerdo",
+      "ALVC"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "arritmogenica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia arritmogênica (ACM), historicamente chamada de displasia/cardiomiopatia arritmogênica do ventrículo direito (DAVD/ARVC/D), é doença hereditária do miocárdio caracterizada por substituição fibro-adiposa progressiva, na maioria dos casos por variante patogênica em genes de proteínas desmossômicas (PKP2, DSP, DSG2, DSC2, JUP), com tendência a arritmias ventriculares malignas e, tardiamente, insuficiência de ventrículo direito ou biventricular. É causa reconhecida de morte súbita cardíaca em jovens e atletas, com o exercício de alto volume — sobretudo endurance competitivo — atuando como modificador direto da história natural da doença, e não apenas como gatilho ocasional de arritmia num substrato já formado. O diagnóstico combina os critérios revisados da Task Force de 2010 (desenhados em torno do fenótipo de ventrículo direito) e os Critérios de Padua de 2020 (que desdobram cada categoria em critério de VD e de VE, captando formalmente o fenótipo biventricular e o de predomínio esquerdo, ALVC). O manejo se apoia em quatro pilares: controle de arritmias, manejo de insuficiência cardíaca quando presente, prevenção de morte súbita por estratificação de risco individualizada e cardiodesfibrilador implantável quando indicado, e rastreio familiar em cascata — com restrição de exercício competitivo como intervenção que modifica diretamente a progressão anatômica da doença, inclusive no portador assintomático de variante patogênica.",
+    "epidemiology": "As fontes revisadas para este verbete não relatam uma estimativa validada de prevalência populacional da cardiomiopatia arritmogênica — nenhum dos documentos-fonte apresenta esse número, e ele não foi extrapolado. A diretriz ESC 2023 para manejo de cardiomiopatias identifica a ACM como causa significativa de morte arrítmica súbita em jovens e atletas, sem quantificar prevalência. Os estudos de coorte que sustentam a estratificação de risco descrevem populações predominantemente adultas: a coorte de derivação da calculadora de risco de Cadrin-Tourigny et al. (2019) reuniu 528 pacientes com ACM/ARVC definida (idade média 38,2 ± 15,5 anos, 44,7% homens, cinco registros da América do Norte e Europa), e a coorte de validação de 2021 do mesmo grupo reuniu 864 pacientes (idade média 40 ± 16 anos, 53% homens). A revisão original da Task Force de 2010 foi derivada de população com idade média de 38 ± 13 anos, e apenas 9 de 108 probandos (8%) tinham entre 12 e 18 anos — praticamente nenhuma criança pré-púbere participou da derivação dos critérios ainda hoje usados para diagnosticá-la. Em população pediátrica dedicada, a coorte de Smedsrud et al. (2022, n=62, idade mediana 9,8 anos) mostrou penetrância crescente com o tempo entre familiares genótipo-positivos (de 6% na avaliação inicial para 18% ao final do seguimento) e uma fração relevante (40% dos diagnósticos pediátricos daquela coorte, incluindo casos aos 3 anos) confirmada com 12 anos de idade ou menos, apesar da penetrância global da doença ser descrita como predominantemente pós-puberal e crescente ao longo de toda a vida (te Riele et al., 2021). A revisão sistemática de Sharma et al. (2022), com 1.359 familiares de risco agregados de 13 coortes (população mista adulta e pediátrica), estimou prevalência média de diagnóstico por critérios de Task Force de 25% (IC95% 0,15-0,35) entre familiares de primeiro grau rastreados, e prevalência de arritmia ventricular de 18% entre os geneticamente positivos.",
+    "presentation": [
+      "Assintomático, achado incidental em eletrocardiograma de triagem esportiva ou em rastreio familiar em cascata de parente de primeiro grau de caso índice",
+      "Palpitações associadas a extrassístoles ventriculares frequentes, muitas vezes com morfologia de bloqueio de ramo esquerdo",
+      "Taquicardia ventricular não sustentada ou sustentada, por vezes primeira manifestação clínica da doença",
+      "Síncope, sobretudo relacionada a esforço físico",
+      "Morte súbita cardíaca como primeira manifestação, particularmente em crianças, adolescentes e adultos jovens, incluindo atletas de endurance",
+      "Alterações eletrocardiográficas de repolarização e despolarização em derivações precordiais direitas (onda T invertida, onda épsilon), muitas vezes achado assintomático em rastreio",
+      "Sinais e sintomas de insuficiência cardíaca de ventrículo direito isolada ou biventricular, tipicamente em fase tardia da doença (dispneia, edema, congestão sistêmica)",
+      "Fibrilação atrial ou outras arritmias atriais, descritas com maior ênfase no espectro de predomínio esquerdo/biventricular (NDLVC/ALVC)",
+      "Achados estruturais ou de realce tardio à ressonância cardíaca, assintomáticos, em portador de variante patogênica desmossômica confirmada (fenótipo negativo/genótipo positivo)",
+      "Em criança ou adolescente familiar de primeiro grau: apresentação frequentemente pré-sintomática, detectada apenas por protocolo de rastreio ativo, não por queixa espontânea"
+    ],
+    "diagnostic_approach": {
+      "criterios_task_force_revisada_2010": "Marcus et al. (Eur Heart J 2010, PMID 20172912), publicada simultaneamente em Circulation, organiza o diagnóstico em seis categorias (disfunção estrutural de VD por eco/RM, caracterização tecidual por biópsia, anormalidades de repolarização, anormalidades de despolarização/condução, arritmias e história familiar), cada uma com critério maior e menor definidos por cortes numéricos explícitos (por exemplo, onda T invertida em V1-V3 acima de 14 anos como critério maior, onda épsilon reprodutível, mais de 500 extrassístoles ventriculares em 24h ao Holter). A classificação final soma critérios maiores e menores de categorias diferentes: diagnóstico definitivo com 2 maiores, ou 1 maior + 2 menores, ou 4 menores; borderline com 1 maior + 1 menor ou 3 menores; possível com 1 maior ou 2 menores — nunca somando dois critérios da mesma categoria, e um critério maior isolado nunca fecha diagnóstico definitivo. A Task Force de 2010 foi desenhada em torno do fenótipo de ventrículo direito e tem sensibilidade baixa para a variante predominantemente de ventrículo esquerdo.",
+      "criterios_de_padua_2020": "Corrado et al. (Int J Cardiol 2020, PMID 32561223) mantêm a mesma estrutura de seis categorias e a mesma aritmética de classificação da Task Force de 2010, mas desdobram cada categoria em critério de VD e de VE, permitindo classificar o fenótipo final como ACM clássica (predomínio de VD), biventricular, ou de predomínio de VE (ALVC). Diferença estrutural relevante: os Critérios de Padua exigem que pelo menos um critério (maior ou menor) venha da categoria estrutural (morfofuncional ou de caracterização tecidual, de VD ou de VE) para que qualquer diagnóstico seja firmado — exigência que a Task Force de 2010 não impõe. Ao contrário da Task Force, que usa cortes numéricos fixos (PLAX/PSAX, RM EDV/RVEF), Padua remete os critérios estruturais a nomogramas do próprio método de imagem, ajustados por idade, sexo e superfície corporal. Um refinamento posterior (Corrado et al., European Task Force consensus report, Int J Cardiol 2024, PMID 37844667) descreve-se no próprio abstract como refinamento dos Critérios de Padua de 2020; seu conteúdo detalhado não foi extraído para este verbete.",
+      "avaliacao_por_imagem": "Ecocardiograma transtorácico avalia acinesia, discinesia ou aneurisma regional de VD e parâmetros estruturais (PLAX/PSAX, fração de encurtamento de área). Ressonância cardíaca com realce tardio de gadolínio, em pelo menos 2 planos ortogonais, é central para caracterizar o padrão de realce em faixa subepicárdico ou médio-parietal de VE (excluindo realce juncional septal isolado, achado inespecífico) e a extensão de acometimento de VD, além de contribuir para diferenciação com outras cardiomiopatias e para estratificação de risco.",
+      "teste_genetico_e_rastreio_familiar_em_cascata": "Teste genético em painel de genes desmossômicos (PKP2, DSP, DSG2, DSC2, JUP, entre outros) deve ser oferecido ao caso índice com aconselhamento genético prévio; quando uma variante patogênica é identificada, o teste em cascata dirigido a essa variante é oferecido a parentes de primeiro grau. O rastreio clínico de familiar de primeiro grau assintomático combina eletrocardiograma de 12 derivações, Holter de 24 horas e exame de imagem (ecocardiograma ou ressonância cardíaca); sociedades divergem quanto à idade de início (Heart Rhythm Society: 10-12 anos; Heart Failure Society of America: 6 anos, com intensificação entre 13-19 anos), e a literatura pediátrica mais recente aponta para início ainda mais precoce diante de fenótipos malignos de início na infância. O intervalo entre rastreios sucessivos citado na literatura (Sharma et al. 2022, população mista adulto+pediátrica, não validada isoladamente em criança) é de 1-2 anos para familiar geneticamente positivo e 3-5 anos para familiar de família sem variante identificada ('gene-elusive'), condicionado à ausência de sintomas e de treinamento atlético competitivo.",
+      "particularidades_diagnosticas_na_crianca": "A Task Force de 2010 foi derivada de população quase inteiramente adulta (apenas 8% dos probandos originais tinham 12-18 anos), com três limitações práticas descritas na literatura pediátrica: inversão de onda T em V1-V3 é achado eletrocardiográfico fisiológico antes da puberdade (o corte de idade acima de 14 anos para valer como critério maior precisa ser respeitado, e entre 12-14 anos o mesmo achado só conta como menor); onda épsilon é extremamente rara em criança, e sua ausência não tem o mesmo peso de exclusão que no adulto; os cortes de volume/função de VD por imagem foram derivados de coorte com idade média de 60 anos, e o volume diastólico final de VD diminui, em média, 4% por década em indivíduos saudáveis. Os Critérios de Padua 2020 foram testados especificamente em duas coortes pediátricas dedicadas (Cicenia et al. 2022, PMID 34998950, n=21; Kofeynikova et al. 2023, PMID 37781308, n=13) com melhora da acurácia diagnóstica relatada pelos próprios autores em comparação à Task Force isolada, sobretudo para captar fenótipo de VE isolado ou biventricular, mais frequente na criança do que a Task Force original prevê.",
+      "estratificacao_de_risco_arritmico_pos_diagnostico": "Uma vez confirmado o diagnóstico, a calculadora de risco de Cadrin-Tourigny et al. (derivação 2019, PMID 30915475, C-index 0,77; validação/refinamento 2021, PMID 33296238, C-index 0,74, calibração praticamente perfeita) estima o risco de arritmia ventricular com risco de vida a partir de idade, sexo, síncope cardíaca prévia, TV não sustentada, contagem de extrassístoles ventriculares em 24h e número de derivações com onda T invertida, disponível em www.arvcrisk.com. O desempenho da ferramenta não é uniforme entre genótipos: testada especificamente em 252 pacientes com variante patogênica em desmoplaquina (DSP) por Gasperetti et al. (2024, PMID 38938828), o C-statistic caiu para 0,604, e para 0,558 (praticamente equivalente ao acaso) no subgrupo com envolvimento de ventrículo esquerdo — subgrupo fenotípico característico de DSP —, com a taquicardia ventricular não sustentada prévia emergindo como preditor mais forte nessa população específica, ao contrário do modelo geral."
+    },
+    "differentials": [
+      "Coração de atleta (remodelamento fisiológico de ventrículo direito e/ou esquerdo por treinamento de endurance, sem substrato fibrogorduroso)",
+      "Cardiomiopatia dilatada não isquêmica sem substrato arritmogênico desmossômico",
+      "Cardiomiopatia ventricular esquerda não dilatada (NDLVC), categoria criada pela ESC 2023 para fenótipos que não preenchem critério formal de ACM/ARVC apesar de doença miocárdica documentada por imagem",
+      "Sarcoidose cardíaca (fibrose miocárdica não isquêmica que pode mimetizar padrão de realce tardio e substrato arrítmico)",
+      "Miocardite, sobretudo em apresentação com arritmia ventricular e realce tardio subepicárdico",
+      "Taquicardia ventricular idiopática da via de saída do ventrículo direito ou fascicular, sem substrato estrutural",
+      "Síndrome de Brugada e outras canalopatias hereditárias, no diferencial de síncope/arritmia ventricular sem alteração estrutural evidente ao exame inicial",
+      "Sarcopenia/hipertrabeculação (ex-não compactação) de ventrículo esquerdo, reclassificada pela ESC 2023 como traço fenotípico, não cardiomiopatia própria"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações, incluindo pesquisa de onda épsilon e padrão de repolarização em precordiais direitas e esquerdas",
+      "Ecocardiograma transtorácico, para avaliação estrutural e funcional de ventrículo direito e esquerdo",
+      "Ressonância magnética cardíaca com realce tardio de gadolínio em pelo menos 2 planos ortogonais, para caracterização tecidual e diferenciação de fenótipo (VD, biventricular, VE)",
+      "Holter de 24 horas ou monitorização prolongada, para quantificar extrassístoles ventriculares e detectar taquicardia ventricular não sustentada",
+      "Eletrocardiograma de alta amplificação (SAECG), para potenciais tardios",
+      "Teste genético em painel de genes desmossômicos, precedido de aconselhamento genético estruturado, com teste em cascata dirigido aos parentes de primeiro grau quando uma variante é identificada",
+      "Biópsia endomiocárdica, uso seletivo, para o critério histológico de substituição fibrosa da parede livre de VD",
+      "Calculadora de risco arrítmico pós-diagnóstico (Cadrin-Tourigny), com ressalva explícita de desempenho reduzido em portador de variante em desmoplaquina, sobretudo com envolvimento de ventrículo esquerdo"
+    ],
+    "red_flags": [
+      "Taquicardia ventricular sustentada ou tempestade elétrica",
+      "Síncope inexplicada, sobretudo relacionada a esforço físico",
+      "História familiar de morte súbita cardíaca precoce (menos de 35 anos) atribuível a ACM",
+      "Taquicardia ventricular não sustentada documentada em Holter ou monitorização prolongada",
+      "Onda épsilon reprodutível nas derivações precordiais direitas",
+      "Mais de 500 extrassístoles ventriculares em 24 horas ao Holter",
+      "Envolvimento extenso de ventrículo esquerdo ao realce tardio de gadolínio, particularmente em portador de variante em desmoplaquina (subgrupo em que a calculadora de risco padrão tem desempenho próximo do acaso)",
+      "Diagnóstico de início na infância (12 anos ou menos), fenótipo descrito como particularmente maligno em coorte pediátrica dedicada",
+      "Atleta de endurance competitivo com critério diagnóstico preenchido ou variante patogênica confirmada"
+    ],
+    "ambulatory_flow": [
+      "Aplicar de forma combinada os critérios da Task Force revisada de 2010 e os Critérios de Padua 2020, reconhecendo a sensibilidade baixa da Task Force isolada para o fenótipo de predomínio de ventrículo esquerdo.",
+      "Em criança e adolescente, ajustar a interpretação de critérios elétricos por idade (onda T invertida fisiológica antes da puberdade, onda épsilon rara) e priorizar os Critérios de Padua 2020, validados em coortes pediátricas dedicadas.",
+      "Encaminhar para teste genético em painel de genes desmossômicos, com aconselhamento genético estruturado prévio sobre padrão de herança e penetrância incompleta e idade-dependente.",
+      "Iniciar rastreio familiar em cascata em parentes de primeiro grau assintomáticos, com eletrocardiograma, Holter e exame de imagem, respeitando idade de início e intervalo de repetição conforme protocolo adotado.",
+      "Estratificar risco arrítmico com calculadora validada (Cadrin-Tourigny) em quem já tem diagnóstico confirmado, reconhecendo desempenho reduzido em portador de variante em desmoplaquina com envolvimento de ventrículo esquerdo — nesse subgrupo, a decisão de CDI não deve se apoiar isoladamente na calculadora.",
+      "Discutir indicação de cardioversor-desfibrilador implantável conforme estratificação de risco individualizada, em prevenção primária ou secundária.",
+      "Orientar restrição de exercício competitivo e de endurance de alta intensidade como intervenção que modifica diretamente a progressão da doença, inclusive no portador assintomático de variante patogênica desmossômica sem nenhum critério diagnóstico preenchido.",
+      "Considerar atividade recreativa de intensidade baixa a moderada em pacientes selecionados, sem história de parada cardíaca, síncope inexplicada ou carga arrítmica relevante, por decisão compartilhada.",
+      "Conduzir o manejo em abordagem multidisciplinar, envolvendo cardiologia, eletrofisiologia, genética clínica e, quando aplicável, medicina do esporte."
+    ],
+    "emergency_flow": [
+      "Taquicardia ventricular sustentada ou tempestade elétrica: estabilização conforme protocolo de suporte avançado de vida, com avaliação de cardiodesfibrilador implantável após estabilização.",
+      "Síncope de esforço em paciente com ACM conhecida ou suspeita: avaliação imediata com eletrocardiograma, monitorização cardíaca contínua e ecocardiograma.",
+      "Parada cardiorrespiratória ou fibrilação ventricular documentada: ressuscitação conforme protocolo de suporte avançado de vida, com avaliação para CDI em prevenção secundária após estabilização.",
+      "Descompensação de insuficiência cardíaca de ventrículo direito isolada ou biventricular: critérios de internação conforme gravidade clínica e hemodinâmica.",
+      "Fibrilação atrial de início agudo com instabilidade hemodinâmica: considerar cardioversão e avaliação de risco tromboembólico."
+    ],
+    "treatment_summary": "O manejo da cardiomiopatia arritmogênica se apoia em quatro pilares que não competem entre si: controle de arritmias, manejo de insuficiência cardíaca quando presente, prevenção de morte súbita cardíaca e rastreio familiar em cascata. O controle de arritmias combina abordagem farmacológica (inibidores da ECA, bloqueadores do receptor de angiotensina II e betabloqueadores são recomendados de forma unânime nos documentos revisados; a diretriz ESC 2023 destaca especificamente flecainida para controle de fibrilação atrial e de arritmias atriais/ventriculares no espectro da doença) e ablação por cateter, sem que doses específicas sejam abordadas nesta ficha — a individualização posológica cabe à equipe assistente. A prevenção de morte súbita depende de estratificação de risco individualizada, apoiada em ferramenta quantitativa validada (calculadora de Cadrin-Tourigny), com a ressalva de que seu desempenho cai substancialmente em portador de variante em desmoplaquina, sobretudo com envolvimento de ventrículo esquerdo — população em que a decisão de cardiodesfibrilador implantável exige julgamento clínico que vá além do escore. A restrição de exercício físico competitivo e de endurance de alta intensidade não é uma precaução genérica de cardiopata, mas uma intervenção que modifica diretamente a história natural da doença: há relação dose-resposta demonstrada entre volume de exercício ao longo da vida e penetrância, idade de manifestação e sobrevida livre de evento arrítmico maligno, inclusive em portador de mutação ainda assintomático e com coração estruturalmente normal ao ecocardiograma; a redução do volume de exercício após diagnóstico associou-se a redução mensurável do risco arrítmico. O rastreio familiar sistemático em cascata é recomendado em todo parente de primeiro grau, dada a natureza hereditária da condição, mesmo em familiares assintomáticos. O manejo requer abordagem multidisciplinar envolvendo cardiologia, eletrofisiologia, genética clínica e, quando aplicável, medicina do esporte.",
+    "monitoring": [
+      "Reavaliação eletrocardiográfica e ecocardiográfica periódica de portadores confirmados e de familiares em rastreio",
+      "Monitorização ambulatorial do ritmo (Holter) periódica para reavaliação de carga de extrassístoles ventriculares e de taquicardia ventricular não sustentada",
+      "Reestratificação periódica do risco arrítmico, sobretudo após eventos clínicos novos ou mudança relevante no volume de exercício físico",
+      "Acompanhamento de familiares em rastreio em cascata, com intervalo diferenciado entre geneticamente positivos (1-2 anos) e famílias sem variante identificada ('gene-elusive', 3-5 anos), sempre condicionado à ausência de sintomas e de treinamento competitivo",
+      "Seguimento de criança/adolescente familiar de primeiro grau com protocolo de rastreio ativo, dado que a penetrância aumenta ao longo da própria infância e adolescência",
+      "Monitorização de resposta à redução de volume de exercício em paciente já sintomático, com reavaliação de risco arrítmico",
+      "Seguimento pós-implante de cardiodesfibrilador, incluindo avaliação de terapias apropriadas e inapropriadas",
+      "Reavaliação de ressonância cardíaca com realce tardio ao longo do seguimento, para acompanhar progressão estrutural, particularmente em portador de variante em desmoplaquina"
+    ],
+    "special_populations": [
+      "Atleta de endurance, competitivo ou recreativo de alta intensidade — a restrição de exercício é intervenção modificadora da doença, não apenas precaução, com associação particularmente consistente na doença relacionada a PKP2",
+      "Portador de variante patogênica em desmoplaquina (DSP), sobretudo com envolvimento de ventrículo esquerdo — a calculadora de risco padrão (Cadrin-Tourigny) tem desempenho próximo do acaso nesse subgrupo, e a taquicardia ventricular não sustentada prévia é o preditor mais forte de evento nos primeiros 5 anos",
+      "Criança e adolescente familiar de primeiro grau de caso índice — penetrância idade-dependente com fração relevante e potencialmente grave de diagnóstico antes dos 12 anos, ajuste obrigatório de critérios elétricos por idade e protocolo de rastreio próprio",
+      "Portador genótipo-positivo/fenótipo-negativo, adulto ou pediátrico, sem nenhum critério diagnóstico preenchido — orientação de restrição de exercício competitivo/endurance é indicada mesmo nesse estágio pré-clínico",
+      "Família com ACM fenotípica sem variante genética identificada ('gene-elusiva') — série de coorte sugere papel proporcionalmente maior do fator ambiental (exercício) na expressão da doença nesse subgrupo",
+      "Fenótipo de predomínio de ventrículo esquerdo (ALVC) ou biventricular — historicamente subcaptado pela Task Force de 2010, exige aplicação dos Critérios de Padua 2020 e, segundo fontes secundárias, tipicamente exige confirmação genética para maior segurança diagnóstica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "idade_paciente",
+        "label": "Qual a idade do paciente (anos)?",
+        "type": "number"
+      },
+      {
+        "id": "contexto_avaliacao",
+        "label": "Qual o contexto da avaliação?",
+        "type": "select",
+        "options": [
+          {
+            "value": "sintomas_arritmicos",
+            "label": "Sintomas arrítmicos (palpitação, síncope, TV documentada)"
+          },
+          {
+            "value": "rastreio_familiar",
+            "label": "Rastreio familiar em cascata (parente de primeiro grau)"
+          },
+          {
+            "value": "achado_incidental",
+            "label": "Achado incidental em triagem esportiva ou exame de rotina"
+          },
+          {
+            "value": "diagnostico_ja_confirmado",
+            "label": "Diagnóstico de ACM já confirmado, em seguimento"
+          }
+        ]
+      },
+      {
+        "id": "historico_sincope_esforco",
+        "label": "Há história de síncope inexplicada, sobretudo relacionada a esforço?",
+        "type": "boolean"
+      },
+      {
+        "id": "tv_documentada",
+        "label": "Qual arritmia ventricular já foi documentada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma"
+          },
+          {
+            "value": "extrassistolia_frequente",
+            "label": "Extrassistolia ventricular frequente"
+          },
+          {
+            "value": "tv_nao_sustentada",
+            "label": "TV não sustentada"
+          },
+          {
+            "value": "tv_sustentada",
+            "label": "TV sustentada"
+          },
+          {
+            "value": "tempestade_eletrica",
+            "label": "Tempestade elétrica"
+          }
+        ]
+      },
+      {
+        "id": "extrassistoles_24h",
+        "label": "Quantas extrassístoles ventriculares em 24h ao Holter?",
+        "type": "number"
+      },
+      {
+        "id": "onda_epsilon",
+        "label": "Onda épsilon reprodutível está presente ao ECG?",
+        "type": "boolean"
+      },
+      {
+        "id": "historico_familiar_morte_subita",
+        "label": "Há história familiar de morte súbita cardíaca precoce (menos de 35 anos) atribuível a ACM?",
+        "type": "boolean"
+      },
+      {
+        "id": "variante_genetica_identificada",
+        "label": "Qual o resultado do teste genético?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_testado",
+            "label": "Não testado"
+          },
+          {
+            "value": "negativo_ou_indeterminado",
+            "label": "Negativo ou variante de significado incerto"
+          },
+          {
+            "value": "positivo_dsp",
+            "label": "Positivo — desmoplaquina (DSP)"
+          },
+          {
+            "value": "positivo_outro_gene",
+            "label": "Positivo — outro gene desmossômico (PKP2, DSG2, DSC2, JUP)"
+          }
+        ]
+      },
+      {
+        "id": "envolvimento_ve_imagem",
+        "label": "Há envolvimento de ventrículo esquerdo (realce tardio ou disfunção) à imagem?",
+        "type": "boolean"
+      },
+      {
+        "id": "fenotipo_estrutural",
+        "label": "Qual o fenótipo estrutural predominante?",
+        "type": "select",
+        "options": [
+          {
+            "value": "predominio_vd",
+            "label": "Predomínio de ventrículo direito (clássico)"
+          },
+          {
+            "value": "biventricular",
+            "label": "Biventricular"
+          },
+          {
+            "value": "predominio_ve",
+            "label": "Predomínio de ventrículo esquerdo (ALVC)"
+          },
+          {
+            "value": "genotipo_positivo_fenotipo_negativo",
+            "label": "Genótipo positivo, fenótipo ainda negativo"
+          }
+        ]
+      },
+      {
+        "id": "pratica_esporte_competitivo_endurance",
+        "label": "Paciente pratica ou deseja praticar esporte competitivo ou endurance de alta intensidade?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_insuficiencia_cardiaca",
+        "label": "Há sinais/sintomas de insuficiência cardíaca de VD ou biventricular?",
+        "type": "boolean"
+      },
+      {
+        "id": "categoria_risco_arritmico",
+        "label": "Qual a categoria de risco arrítmico estimado pela calculadora validada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "baixo",
+            "label": "Baixo"
+          },
+          {
+            "value": "intermediario",
+            "label": "Intermediário"
+          },
+          {
+            "value": "alto",
+            "label": "Alto"
+          }
+        ]
+      },
+      {
+        "id": "rastreio_familiar_status",
+        "label": "Qual o status do rastreio familiar em cascata?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_iniciado",
+            "label": "Não iniciado"
+          },
+          {
+            "value": "em_andamento",
+            "label": "Em andamento"
+          },
+          {
+            "value": "concluido",
+            "label": "Concluído"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "aplicar_criterios_combinados",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "contexto_avaliacao",
+              "op": "eq",
+              "value": "sintomas_arritmicos"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Aplicar de forma combinada os critérios da Task Force revisada de 2010 e os Critérios de Padua 2020, dada a sensibilidade baixa da Task Force isolada para o fenótipo de predomínio de ventrículo esquerdo."
+          ]
+        }
+      },
+      {
+        "id": "ajuste_pediatrico_criterios",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "idade_paciente",
+              "op": "lt",
+              "value": 18
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Paciente pediátrico: ajustar interpretação de critérios elétricos por idade (onda T invertida em V1-V3 é fisiológica antes da puberdade; onda épsilon é rara nessa faixa etária) e priorizar os Critérios de Padua 2020, validados em coortes pediátricas dedicadas."
+          ]
+        }
+      },
+      {
+        "id": "tempestade_eletrica_emergencia",
+        "priority": 99,
+        "when": {
+          "all": [
+            {
+              "field": "tv_documentada",
+              "op": "eq",
+              "value": "tempestade_eletrica"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Tempestade elétrica em paciente com ACM/suspeita de ACM: emergência com risco de vida imediato."
+          ],
+          "emergency_flow": [
+            "Estabilização imediata conforme protocolo de suporte avançado de vida, com avaliação de cardiodesfibrilador implantável após estabilização."
+          ]
+        }
+      },
+      {
+        "id": "tv_sustentada_ou_sincope_esforco",
+        "priority": 92,
+        "when": {
+          "any": [
+            {
+              "field": "tv_documentada",
+              "op": "eq",
+              "value": "tv_sustentada"
+            },
+            {
+              "field": "historico_sincope_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "TV sustentada documentada ou síncope inexplicada relacionada a esforço: fator de risco maior para morte súbita, avaliação urgente e discussão de CDI."
+          ]
+        }
+      },
+      {
+        "id": "carga_arritmica_significativa",
+        "priority": 70,
+        "when": {
+          "any": [
+            {
+              "field": "extrassistoles_24h",
+              "op": "gte",
+              "value": 500
+            },
+            {
+              "field": "onda_epsilon",
+              "op": "truthy"
+            },
+            {
+              "field": "tv_documentada",
+              "op": "eq",
+              "value": "tv_nao_sustentada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Critério maior ou menor de arritmia/despolarização presente (extrassistolia frequente, onda épsilon ou TV não sustentada): contribui para classificação diagnóstica por Task Force/Padua."
+          ]
+        }
+      },
+      {
+        "id": "historia_familiar_morte_subita_rastreio",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "historico_familiar_morte_subita",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "História familiar de morte súbita precoce atribuível a ACM: reforça indicação de rastreio familiar em cascata e ponderação na estratificação de risco do próprio paciente."
+          ],
+          "suggested_tests": [
+            "Avaliação clínica, eletrocardiográfica e ecocardiográfica dos familiares de primeiro grau, com aconselhamento genético."
+          ]
+        }
+      },
+      {
+        "id": "variante_dsp_calculadora_limitada",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "variante_genetica_identificada",
+              "op": "eq",
+              "value": "positivo_dsp"
+            },
+            {
+              "field": "envolvimento_ve_imagem",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Portador de variante em desmoplaquina (DSP) com envolvimento de ventrículo esquerdo: desempenho da calculadora de risco padrão (Cadrin-Tourigny) próximo do acaso nesse subgrupo — a decisão de CDI não deve se apoiar isoladamente no escore, e a TVNS prévia é o preditor mais forte de evento nos primeiros 5 anos nessa população."
+          ]
+        }
+      },
+      {
+        "id": "risco_alto_calculadora",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "categoria_risco_arritmico",
+              "op": "eq",
+              "value": "alto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Categoria de alto risco arrítmico estimado: candidato a avaliação para cardiodesfibrilador implantável em prevenção primária."
+          ]
+        }
+      },
+      {
+        "id": "restricao_esporte_endurance",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "pratica_esporte_competitivo_endurance",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Orientar restrição de exercício competitivo e de endurance de alta intensidade, dada a relação dose-resposta entre volume de exercício e penetrância/risco arrítmico — indicada mesmo em portador assintomático de variante patogênica, sem critério diagnóstico preenchido."
+          ]
+        }
+      },
+      {
+        "id": "genotipo_positivo_fenotipo_negativo_orientacao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "fenotipo_estrutural",
+              "op": "eq",
+              "value": "genotipo_positivo_fenotipo_negativo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Portador genótipo-positivo/fenótipo-negativo: orientar, em decisão compartilhada com a família quando pediátrico, que exercício competitivo ou de endurance de alta intensidade frequente está associado a maior probabilidade de expressar a doença e arritmia ventricular, mesmo antes de qualquer critério diagnóstico preenchido."
+          ]
+        }
+      },
+      {
+        "id": "insuficiencia_cardiaca_biventricular",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_insuficiencia_cardiaca",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Sinais de insuficiência cardíaca de ventrículo direito ou biventricular: possível fase tardia da doença, avaliar necessidade de manejo de insuficiência cardíaca e reestratificação de risco arrítmico."
+          ]
+        }
+      },
+      {
+        "id": "rastreio_familiar_nao_iniciado",
+        "priority": 42,
+        "when": {
+          "all": [
+            {
+              "field": "rastreio_familiar_status",
+              "op": "eq",
+              "value": "nao_iniciado"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Rastreio familiar em cascata não iniciado."
+          ],
+          "suggested_tests": [
+            "Avaliação clínica, eletrocardiográfica e ecocardiográfica dos familiares de primeiro grau, com aconselhamento genético estruturado."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiomiopatia",
+      "genética cardiovascular",
+      "morte súbita cardíaca",
+      "arritmia ventricular",
+      "displasia arritmogênica de ventrículo direito",
+      "cardiologia do esporte",
+      "rastreio familiar em cascata",
+      "cardiodesfibrilador implantável"
+    ],
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Marcus FI, McKenna WJ, Sherrill D, et al. Diagnosis of arrhythmogenic right ventricular cardiomyopathy/dysplasia: proposed modification of the Task Force Criteria. Eur Heart J. 2010;31(7):806-814. DOI: 10.1093/eurheartj/ehq025. PMID: 20172912 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Corrado D, Perazzolo Marra M, Zorzi A, et al. Diagnosis of arrhythmogenic cardiomyopathy: The Padua criteria. Int J Cardiol. 2020;319:106-114. DOI: 10.1016/j.ijcard.2020.06.005. PMID: 32561223 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Corrado D, Anastasakis A, Basso C, et al. Proposed diagnostic criteria for arrhythmogenic cardiomyopathy: European Task Force consensus report. Int J Cardiol. 2024;395:131447. DOI: 10.1016/j.ijcard.2023.131447. PMID: 37844667 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão; conteúdo detalhado do refinamento de 2024 não extraído neste verbete, citado apenas como marco posterior.",
+      "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2019;40(23):1850-1858. DOI: 10.1093/eurheartj/ehz103. PMID: 30915475 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Cadrin-Tourigny J, Bosman LP, Wang W, et al. Sudden Cardiac Death Prediction in Arrhythmogenic Right Ventricular Cardiomyopathy: A Multinational Collaboration. Circ Arrhythm Electrophysiol. 2021;14(1):e008509. PMID: 33296238 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Gasperetti A, Carrick R, Protonotarios A, et al. Long-Term Arrhythmic Follow-Up and Risk Stratification of Patients With Desmoplakin-Associated Arrhythmogenic Cardiomyopathy. JACC Adv. 2024 Mar. PMID: 38938828 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "James CA, Bhonsale A, Tichnell C, et al. Exercise increases age-related penetrance and arrhythmic risk in arrhythmogenic right ventricular dysplasia/cardiomyopathy-associated desmosomal mutation carriers. J Am Coll Cardiol. 2013;62(14):1290-1297. DOI: 10.1016/j.jacc.2013.06.033. PMID: 23871885 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Ruwald AC, Marcus F, Estes NAM 3rd, et al. Association of competitive and recreational sport participation with cardiac events in patients with arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2015;36(27):1735-1743. DOI: 10.1093/eurheartj/ehv110. PMID: 25896080 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Sawant AC, Bhonsale A, te Riele ASJM, et al. Exercise has a disproportionate role in the pathogenesis of arrhythmogenic right ventricular dysplasia/cardiomyopathy in patients without desmosomal mutations. J Am Heart Assoc. 2014;3(6):e001471. DOI: 10.1161/JAHA.114.001471. PMID: 25516436 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão.",
+      "Lampert R, Chung EH, Ackerman MJ, et al. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart Rhythm. 2024;21:e151-e252. DOI: 10.1016/j.hrthm.2024.05.018. PMID: 38763377 — verificado individualmente via NCBI E-utilities (esummary) nesta sessão."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37622657/",
+      "https://pubmed.ncbi.nlm.nih.gov/20172912/",
+      "https://pubmed.ncbi.nlm.nih.gov/32561223/",
+      "https://pubmed.ncbi.nlm.nih.gov/37844667/",
+      "https://pubmed.ncbi.nlm.nih.gov/30915475/",
+      "https://pubmed.ncbi.nlm.nih.gov/33296238/",
+      "https://pubmed.ncbi.nlm.nih.gov/38938828/",
+      "https://pubmed.ncbi.nlm.nih.gov/23871885/",
+      "https://pubmed.ncbi.nlm.nih.gov/25896080/",
+      "https://pubmed.ncbi.nlm.nih.gov/25516436/",
+      "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+      "https://pubmed.ncbi.nlm.nih.gov/38763377/"
+    ],
+    "related_document_slugs": [
+      "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+      "cardiomiopatia-arritmogenica-criterios-de-padua-2020-e-task-force-revisada-de-2010",
+      "calculadora-de-risco-da-cardiomiopatia-arritmogenica-desempenho-por-genotipo",
+      "restricao-de-exercicio-na-cardiomiopatia-arritmogenica-de-ventriculo-direito-dose-resposta-e-mecanismo",
+      "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+      "cardiomiopatia-arritmogenica-na-crianca-penetrancia-idade-dependente-rastreio-familiar-e-restricao-de-exercicio"
+    ],
+    "patient_material_slug": "cardiomiopatia-arritmogenica-musculo-do-coracao-trocado-por-gordura-e-cicatriz",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em doencas/metadados.json. Cardiomiopatia arritmogênica (ACM/DAVD) não tinha ficha própria em doencas/metadados.json apesar de corpus rico já existente em content/Cardiomiopatias/, content/Arritmias/, content/Cardiologia_do_Esporte_e_do_Exercício/ e content/Cardiologia_pediátrica/. Criado via doencas/fragmentos/cardiomiopatia-arritmogenica.json (não via edição direta do manifesto) para minimizar colisão com outras frentes de produção concorrentes — cardiomiopatia-hipertrofica (já integrada, PR #668) e cardiomiopatia-de-takotsubo (produzida em paralelo nesta mesma data, branch claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829) revisadas e sem sobreposição de related_document_slugs. 6 related_document_slugs verificados individualmente por leitura completa do documento-fonte, confirmando discussão CENTRAL da cardiomiopatia arritmogênica em cada um: diagnóstico/manejo ESC 2023, critérios diagnósticos Task Force 2010/Padua 2020, calculadora de risco genótipo-dependente (fisicamente em content/Arritmias/, não em content/Calculadoras/ — path conferido explicitamente), restrição de exercício (dose-resposta e mecanismo), ACM no atleta (retorno ao esporte) e ACM na criança (penetrância, rastreio familiar). Um sétimo candidato mapeado inicialmente — reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia.md — foi lido por completo e EXCLUÍDO: o documento discute a reclassificação de NDLVC, hipertrabeculação e takotsubo como traço/síndrome, e cita ARVC/ALVC apenas tangencialmente ao delimitar a categoria NDLVC, sem tratar centralmente a cardiomiopatia arritmogênica. 12 PMIDs verificados individualmente via NCBI E-utilities (esummary) nesta sessão, todos com título/autores/periódico conferidos contra a citação nos documentos-fonte, sem divergência encontrada. patient_material_slug confirmado por correspondência exata em material-paciente/metadados.json (cardiomiopatia-arritmogenica-musculo-do-coracao-trocado-por-gordura-e-cicatriz). category='cardiomiopatia' e subtype='arritmogenica' seguem a convenção usada nesta frente. epidemiology deliberadamente não apresenta número de prevalência populacional: nenhum documento-fonte revisado fornece essa estimativa, e nenhuma foi extrapolada — a seção descreve, em vez disso, as coortes de derivação/validação citadas nas fontes. prevalence_rank e cyanosis_class deixados null (ACM não pertence ao hub fechado de doenças de altíssima prevalência em área 'geral', nem é cardiopatia cianótica). Nenhuma dose de fármaco em nenhum campo. review_status='pendente_revisao' reflete ausência de revisão médica humana; gate test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc falha para este registro, como esperado e documentado — o slug foi adicionado a PENDENTES_LOTES_TUDO_COM_TUDO['doencas/metadados.json'] apenas para que test_disease_fragments_canonical.py passe, seguindo exatamente o padrão da branch claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829 (PR #698).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

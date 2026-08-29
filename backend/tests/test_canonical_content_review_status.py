@@ -31,7 +31,21 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete novo criado em 29/08/2026 via doencas/fragmentos/
+        # cardiomiopatia-arritmogenica.json — ver review_note do próprio
+        # registro. Esta entrada é usada por
+        # test_disease_fragments_canonical.py (onde a checagem funciona
+        # corretamente contra status pendente). Ela NÃO isenta este slug do
+        # teste principal abaixo, cuja lógica só consulta esta allowlist
+        # para registros já com status="revisado" — por isso
+        # test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc
+        # continua falhando para "cardiomiopatia-arritmogenica", como
+        # esperado e documentado.
+        "cardiomiopatia-arritmogenica",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 
