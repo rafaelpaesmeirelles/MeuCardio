@@ -11,6 +11,7 @@ from app.api import (
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada, agenda_clinica,
     encounter_artifacts, related_content, knowledge_graph, patient_profiles, patient_timeline, ecg_quick,
     cardiovascular_exam_ai, scientific_documents_ai, patient_multimodal_ai,
+    patient_multimodal_delete_guard as _patient_multimodal_delete_guard,
 )
 from app.core.canonical_registration import CanonicalRegistrationMiddleware
 from app.core.config import settings
@@ -77,6 +78,10 @@ app.add_middleware(CanonicalRegistrationMiddleware)
 # Fica antes do router administrativo legado para o Starlette resolver este
 # handler na mesma URL, preservando o contrato externo e o inventário canônico.
 ADMIN_USER_DELETE_ROUTER = getattr(_admin_user_delete, "router")
+# O banco já restringe a exclusão de prontuários com exame multimodal; este
+# override expõe 409 previsível antes do fluxo canônico de pacientes. Precisa
+# preceder patient_profiles.router porque as duas rotas têm o mesmo método/path.
+PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER = getattr(_patient_multimodal_delete_guard, "router")
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, social_login.router, password_reset.router,
@@ -103,7 +108,8 @@ ROUTERS_ASSINANTES = (
     # botões antigos da Agenda passam pelo mesmo supervisor capability-aware
     # do /sync-live sem duplicar a regra de sincronização.
     account_sync.router, agenda_integrada.router, agenda_clinica.router, kyc.router, avaliacao_preoperatoria.router,
-    encounter_artifacts.router, related_content.router, knowledge_graph.router, patient_profiles.router, patient_timeline.router,
+    encounter_artifacts.router, related_content.router, knowledge_graph.router,
+    PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER, patient_profiles.router, patient_timeline.router,
     patient_multimodal_ai.router, ecg_quick.router, cardiovascular_exam_ai.router,
 )
 
