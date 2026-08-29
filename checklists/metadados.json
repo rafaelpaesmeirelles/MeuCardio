@@ -32220,5 +32220,120 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "criterios-diagnosticos-do-doppler-de-carotidas-avaliacao-multiparametrica-da-estenose",
+    "condicao": "Doppler de carótidas — critérios diagnósticos de estenose aterosclerótica",
+    "resumo": "Checklist dos critérios diagnósticos do duplex scan de carótidas para graduação de estenose aterosclerótica, cobrindo velocidade de pico sistólico, avaliação multiparamétrica, definições morfológicas de placa e oclusão, armadilhas diagnósticas (suboclusão/'string sign', vaso errado) e o papel complementar do Doppler transcraniano e da angioTC/angioRM. Não repete critérios de espessura médio-intimal (CIMT), já tratados em item separado do corpus.",
+    "documento_origem": null,
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Grant EG, Benson CB, Moneta GL, Alexandrov AV, Baker JD, Bluth EI, et al. Carotid artery stenosis: gray-scale and Doppler US diagnosis—Society of Radiologists in Ultrasound Consensus Conference. Radiology. 2003;229(2):340-346. DOI: 10.1148/radiol.2292030516. PMID: 14500855.",
+      "Naylor R, Rantner B, Ancetti S, de Borst GJ, De Carlo M, Halliday A, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2023 Clinical Practice Guidelines on the Management of Atherosclerotic Carotid and Vertebral Artery Disease. Eur J Vasc Endovasc Surg. 2023;65(1):7-111. DOI: 10.1016/j.ejvs.2022.04.011. PMID: 35598721.",
+      "Kleindorfer DO, Towfighi A, Chaturvedi S, Cockroft KM, Gutierrez J, Lombardi-Hill D, et al. 2021 Guideline for the Prevention of Stroke in Patients With Stroke and Transient Ischemic Attack: A Guideline From the American Heart Association/American Stroke Association. Stroke. 2021;52(7):e364-e467. DOI: 10.1161/STR.0000000000000375. PMID: 34024117.",
+      "Touboul PJ, Hennerici MG, Meairs S, Adams H, Amarenco P, Bornstein N, et al. Mannheim carotid intima-media thickness and plaque consensus (2004-2006-2011). Cerebrovasc Dis. 2012;34(4):290-296. DOI: 10.1159/000343145. PMID: 23128470.",
+      "Markus HS, King A, Shipley M, Topakian R, Cullinane M, Reihill S, et al. Asymptomatic embolisation for prediction of stroke in the Asymptomatic Carotid Emboli Study (ACES): a prospective observational study. Lancet Neurol. 2010;9(7):663-671. DOI: 10.1016/S1474-4422(10)70120-4. PMID: 20554250.",
+      "King A, Serena J, Bornstein NM, Markus HS; ACES Investigators. Does impaired cerebrovascular reactivity predict stroke risk in asymptomatic carotid stenosis? A prospective substudy of the Asymptomatic Carotid Emboli Study. Stroke. 2011;42(6):1550-1555. DOI: 10.1161/STROKEAHA.110.609057. PMID: 21527764.",
+      "Antonopoulos CN, Giosdekos A, Mylonas SN, Liapis CD. Management of internal carotid artery near-occlusion: the need for updated evidence. Ann Transl Med. 2020;8(19):1263. DOI: 10.21037/atm.2020.03.148. PMID: 33178795."
+    ],
+    "itens": [
+      {
+        "id": "usv-primeira-escolha",
+        "categoria": "Método/técnica",
+        "obrigatorio": true,
+        "texto": "A ultrassonografia vascular com Doppler (duplex scan) é o método de imagem recomendado como abordagem inicial na suspeita de estenose carotídea aterosclerótica, por ser não invasiva, amplamente disponível e sem exposição a radiação ionizante ou contraste iodado. Diretrizes vasculares atuais (ESVS 2023; AHA/ASA 2021) posicionam o duplex carotídeo como exame de primeira linha, reservando angiotomografia (angioTC) e angiorressonância (angioRM) para confirmação em casos duvidosos ou discordantes.",
+        "origem_secao": "ESVS 2023 (Naylor R et al., PMID 35598721) e AHA/ASA 2021 (Kleindorfer DO et al., PMID 34024117) — recomendação geral sobre hierarquia de métodos de imagem; texto integral das diretrizes não recuperado nesta pesquisa, apenas metadados/PMID/DOI verificados via NCBI e-utils."
+      },
+      {
+        "id": "vps-criterio-principal",
+        "categoria": "Critérios de velocidade",
+        "obrigatorio": true,
+        "texto": "A velocidade de pico sistólico (VPS) na artéria carótida interna (ACI) é o parâmetro primário para diagnóstico e graduação da estenose. Pelo consenso SRU 2003: VPS <125 cm/s sem placa/espessamento intimal visível = normal; VPS <125 cm/s COM placa/espessamento intimal visível = estenose <50%; VPS 125–230 cm/s com placa visível = estenose 50–69%; VPS >230 cm/s com placa e redução luminal visíveis = estenose ≥70% até quase oclusão.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (d) do resumo estruturado. PMID 14500855."
+      },
+      {
+        "id": "avaliacao-multiparametrica",
+        "categoria": "Critérios de velocidade",
+        "obrigatorio": true,
+        "texto": "A gravidade da estenose carotídea não deve ser definida por um único parâmetro isolado. O consenso SRU 2003 recomenda associar a VPS da ACI (parâmetro primário) à presença de placa à escala de cinza/Doppler colorido e, quando fatores clínicos ou técnicos (ex.: estado hiperdinâmico, estenose contralateral grave, tortuosidade, calibre vascular atípico) suscitarem dúvida sobre a representatividade da VPS isolada, a dois parâmetros adicionais: a razão de velocidade sistólica ACI/artéria carótida comum (ACC) e a velocidade diastólica final da ACI. Os valores numéricos exatos de corte propostos pelo painel para esses dois parâmetros adicionais não puderam ser confirmados a partir do resumo/texto disponível via NCBI e-utils nesta pesquisa — essa limitação é declarada explicitamente, e esses cortes específicos não são reproduzidos aqui para evitar erro de citação.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (c) do resumo estruturado. PMID 14500855."
+      },
+      {
+        "id": "definicao-de-placa",
+        "categoria": "Definições anatômicas",
+        "obrigatorio": true,
+        "texto": "Placa carotídea é definida, pelo consenso de Mannheim (atualização 2004-2006-2011), como estrutura focal que invade o lúmen arterial em pelo menos 0,5 mm ou em 50% do valor do espessamento médio-intimal (IMT) circunjacente, OU que apresenta espessura >1,5 mm medida da interface média-adventícia até a interface íntima-lúmen. Esse critério morfológico-dimensional é distinto da métrica contínua de IMT (tema já coberto em item separado deste corpus) e serve para diferenciar espessamento intimal difuso de formação de placa aterosclerótica focal.",
+        "origem_secao": "Touboul PJ et al., Mannheim carotid intima-media thickness and plaque consensus (2004-2006-2011), Cerebrovasc Dis. 2012;34(4):290-296. PMID 23128470."
+      },
+      {
+        "id": "estenose-abaixo-de-50",
+        "categoria": "Definições anatômicas",
+        "obrigatorio": true,
+        "texto": "A categoria de estenose <50% no consenso SRU 2003 é definida pela combinação de VPS da ACI ainda dentro da faixa 'normal' (<125 cm/s) associada à presença visível de placa ou espessamento intimal à escala de cinza/Doppler colorido — ou seja, abaixo de 50% a distinção entre 'sem estenose' e '<50%' depende do achado morfológico (presença de placa), e não de um patamar de velocidade diferenciado, já que a VPS permanece na mesma faixa (<125 cm/s) em ambas as situações. Isso contrasta com as categorias ≥50%, nas quais a VPS isolada (125–230 cm/s; >230 cm/s) já discrimina os patamares de gravidade — refletindo o fato de que estenoses leves tipicamente não geram aceleração de fluxo hemodinamicamente detectável, tornando a avaliação morfológica mais confiável que a velocimetria nessa faixa.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (d), subitens i-ii. PMID 14500855."
+      },
+      {
+        "id": "definicao-de-oclusao-completa",
+        "categoria": "Definições anatômicas",
+        "obrigatorio": true,
+        "texto": "Oclusão completa da carótida é definida, pelo consenso SRU 2003, pela ausência de lúmen patente detectável à ultrassonografia em escala de cinza associada à ausência de fluxo detectável ao Doppler espectral, Doppler de amplitude (power) e Doppler colorido. É importante diferenciar essa categoria da 'quase oclusão' (near-occlusion), definida por lúmen residual acentuadamente estreitado ao Doppler colorido — nessa última situação ainda há fluxo detectável, porém frequentemente com velocidades não confiáveis para graduação (ver item de suboclusão/'string sign').",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (d), subitens v-vi. PMID 14500855."
+      },
+      {
+        "id": "criterios-nao-intercambiaveis-entre-vasos",
+        "categoria": "Critérios de velocidade",
+        "obrigatorio": true,
+        "texto": "Os critérios de velocidade do consenso SRU 2003 (VPS 125 cm/s e 230 cm/s, razão ACI/ACC, velocidade diastólica final) foram derivados e validados especificamente para graduação de estenose na artéria carótida interna (ACI). Esses mesmos patamares não devem ser aplicados para graduar estenose na artéria carótida comum (ACC) ou na artéria carótida externa (ACE): o consenso SRU delimita seu escopo à ACI, e a ACC e a ACE têm calibre, padrão de fluxo e relações anatômicas distintos (ACE tipicamente com padrão de maior resistência e ramos colaterais, identificável pela resposta à percussão temporal superficial), sem base de validação equivalente publicada para esses dois vasos.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346 — escopo do consenso restrito à ACI (itens a-d). PMID 14500855. A caracterização detalhada da diferenciação técnica ACE/ACI/ACC (manobra de percussão temporal) reflete propedêutica vascular consolidada; não foi localizada referência PubMed específica e isolada para esse detalhe técnico nesta pesquisa — declarado explicitamente."
+      },
+      {
+        "id": "suboclusao-string-sign",
+        "categoria": "Armadilhas diagnósticas",
+        "obrigatorio": true,
+        "texto": "Na estenose suboclusiva (near-occlusion, popularmente chamada 'string sign'), o lúmen residual é tão estreito que o volume de fluxo anterógrado cai, podendo fazer com que a VPS não se eleve na magnitude esperada para o grau real de estenose — armadilha que pode levar à subestimação da gravidade se a graduação for baseada apenas no patamar de velocidade. O próprio consenso SRU 2003 trata a quase oclusão como categoria diagnóstica à parte, definida por critério morfológico (lúmen acentuadamente estreitado ao Doppler colorido), e não por um corte de VPS, reconhecendo implicitamente a perda de acurácia da velocimetria isolada nesse cenário. Revisão de manejo da quase oclusão da ACI confirma tratar-se de entidade rara, de diagnóstico difícil e com implicações prognósticas/terapêuticas distintas da estenose grave 'convencional'.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (d) subitem v. PMID 14500855. Antonopoulos CN, Giosdekos A, Mylonas SN, Liapis CD. Management of internal carotid artery near-occlusion: the need for updated evidence. Ann Transl Med. 2020;8(19):1263. PMID 33178795 (contexto clínico/prognóstico; não é a fonte primária do critério ultrassonográfico)."
+      },
+      {
+        "id": "fluxo-alta-resistencia-cca-sinal-indireto",
+        "categoria": "Armadilhas diagnósticas",
+        "obrigatorio": false,
+        "texto": "Um padrão de fluxo de alta resistência (redução ou ausência de fluxo diastólico, índice de resistência elevado) na artéria carótida comum (ACC), na ausência de estenose significativa visível na própria ACC, pode ser um sinal indireto sugestivo de oclusão da artéria carótida interna (ACI) distalmente ao segmento insonado, refletindo o aumento da resistência ao fluxo anterógrado imposto pelo território ocluído. Trata-se de princípio fisiológico consolidado na propedêutica de ultrassonografia vascular, mas não foi possível localizar, nesta pesquisa via NCBI e-utils, um artigo original específico que sirva de referência primária verificável para esse sinal isolado — limitação declarada explicitamente. O item deve ser tratado como orientação de propedêutica consolidada, não como recomendação formal de diretriz com grau de evidência associado.",
+        "origem_secao": "Não localizada referência PubMed específica e isolada para este sinal nesta pesquisa — declarado explicitamente conforme instrução de rigor. Consistente com o arcabouço geral de avaliação morfológica e de fluxo do consenso SRU 2003 (Grant EG et al., PMID 14500855)."
+      },
+      {
+        "id": "extensao-obrigatoria-do-exame",
+        "categoria": "Método/técnica",
+        "obrigatorio": true,
+        "texto": "O exame de duplex carotídeo deve avaliar sistematicamente, de forma bilateral: artéria carótida comum (segmentos proximal, médio e distal), bifurcação carotídea, artéria carótida interna (bulbo e segmento cervical acessível) e artéria carótida externa (para diferenciação correta em relação à ACI), sempre com associação de escala de cinza, Doppler colorido e Doppler espectral — conforme item (a) do consenso SRU 2003. A avaliação da artéria vertebral (ao menos segmento V2, quando tecnicamente possível) é habitualmente incorporada ao mesmo protocolo, dado o overlap de território vascular cerebral, embora o detalhamento granular exato de protocolo padronizado de extensão do exame não tenha sido confirmado a partir do resumo disponível nesta pesquisa.",
+        "origem_secao": "Grant EG et al., SRU 2003 Consensus Conference, Radiology 2003;229(2):340-346, item (a) do resumo estruturado e seção sobre aspectos técnicos do exame. PMID 14500855. Extensão detalhada a segmentos vertebrais não confirmada em granularidade a partir do resumo disponível — declarado explicitamente."
+      },
+      {
+        "id": "doppler-transcraniano-complementar-sintomatico",
+        "categoria": "Métodos complementares",
+        "obrigatorio": false,
+        "texto": "Em pacientes sintomáticos (AVC/AIT recente) com estenose carotídea extracraniana identificada, a avaliação complementar da circulação intracraniana — por Doppler transcraniano (DTC) e/ou angioTC/angioRM intracraniana — é útil para identificar lesões intracranianas associadas (lesões em tandem) e colaterais, informação que pode influenciar a decisão terapêutica. Esse conteúdo é consistente com diretrizes vasculares atuais (ESVS 2023; AHA/ASA 2021) sobre avaliação de imagem em doença carotídea sintomática, mas o texto integral dessas diretrizes não foi recuperado nesta pesquisa (apenas título, metadados e PMID/DOI verificados via NCBI e-utils) — a formulação específica de grau de recomendação não foi confirmada linha a linha e não deve ser citada como texto literal da diretriz.",
+        "origem_secao": "ESVS 2023 (Naylor R et al., PMID 35598721) e AHA/ASA 2021 (Kleindorfer DO et al., PMID 34024117) — texto integral não recuperado nesta pesquisa; conteúdo descrito de forma geral e cautelosa."
+      },
+      {
+        "id": "angiotc-angiorm-confirmatorio-sintomatico",
+        "categoria": "Métodos complementares",
+        "obrigatorio": false,
+        "texto": "Em pacientes sintomáticos nos quais o duplex carotídeo apresenta achado duvidoso, tecnicamente limitado (ex.: calcificação extensa com sombra acústica, obesidade, pescoço curto) ou discordante de outros dados clínicos, a angiotomografia (angioTC) ou a angiorressonância (angioRM) de carótidas são recomendadas como métodos complementares/confirmatórios antes da decisão de revascularização, permitindo caracterização adicional de placa, quantificação alternativa do grau de estenose e avaliação do arco aórtico e da circulação intracraniana. Esse princípio de combinação de métodos em casos discordantes é consistente com diretrizes vasculares atuais, mas — como no item anterior — o texto integral dessas diretrizes não foi recuperado nesta pesquisa, apenas metadados/PMID/DOI verificados.",
+        "origem_secao": "ESVS 2023 (Naylor R et al., PMID 35598721) e AHA/ASA 2021 (Kleindorfer DO et al., PMID 34024117) — texto integral não recuperado; conteúdo descrito de forma geral."
+      },
+      {
+        "id": "microembolizacao-e-reserva-vasomotora-marcadores-adicionais",
+        "categoria": "Marcadores de risco adicionais",
+        "obrigatorio": false,
+        "texto": "Além do grau de estenose, dois marcadores adicionais de risco de AVC, identificáveis por Doppler transcraniano (DTC) em pacientes com estenose carotídea, têm respaldo em estudos prospectivos, com evidência de qualidade desigual entre eles: (1) microembolização espontânea assintomática — sinais embólicos detectados ao DTC da artéria cerebral média ipsilateral — associou-se a maior risco de AVC/AIT ipsilateral no estudo ACES (n=467 avaliáveis, estenose assintomática ≥70%; HR 2,54 [IC95% 1,20–5,36] para AVC/AIT ipsilateral em 2 anos; HR 5,57 [IC95% 1,61–19,32] para AVC isolado); (2) reserva vasomotora cerebral (cerebrovascular reactivity, CVR) reduzida — resposta vasodilatadora insuficiente ao CO2/acetazolamida medida por DTC — mostrou associação com maior risco de AVC em metanálise de estudos prévios (OR entre 4,66 e 6,14 conforme o desfecho), mas no substudo prospectivo multicêntrico do próprio ACES (n=106) não houve associação estatisticamente significativa com eventos recorrentes (HR 2,54; IC95% 0,61–21,74; p=0,158), e os autores concluíram que os dados eram insuficientes para justificar uso rotineiro da CVR na estratificação de risco para seleção de endarterectomia. A microembolização ao DTC tem, portanto, evidência prospectiva direta mais robusta como marcador de risco do que a CVR, cujo uso permanece não estabelecido na prática clínica rotineira.",
+        "origem_secao": "Markus HS, King A, Shipley M, et al. Asymptomatic embolisation for prediction of stroke in the Asymptomatic Carotid Emboli Study (ACES). Lancet Neurol. 2010;9(7):663-671. PMID 20554250. King A, Serena J, Bornstein NM, Markus HS; ACES Investigators. Does impaired cerebrovascular reactivity predict stroke risk in asymptomatic carotid stenosis? Stroke. 2011;42(6):1550-1555. PMID 21527764."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
