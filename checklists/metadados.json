@@ -32655,5 +32655,98 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "investigacao-por-imagem-e-ecg-na-cardiomiopatia-chagasica-do-rastreio-a-estratificacao-de-risco",
+    "condicao": "Cardiomiopatia chagásica — papel de cada modalidade de imagem e ECG na investigação",
+    "resumo": "Checklist do papel específico de cada exame — ECG, ecocardiograma, Holter de 24h e ressonância magnética cardíaca (RMC) — na investigação da cardiomiopatia chagásica, da avaliação inicial de todo paciente sororeagente até a estratificação de risco arrítmico e tromboembólico por fibrose e trombo intracavitário. Não repete achados gerais já cobertos no verbete de doença (forma indeterminada, Holter geral) e prioriza fontes brasileiras (SBC/DIC, coortes de referência nacionais).",
+    "documento_origem": null,
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Andrade JP, Marin Neto JA, Paola AA, et al. I Latin American Guidelines for the diagnosis and treatment of Chagas' heart disease: executive summary (I Diretriz Latino-Americana, Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2011;96(6):434-442. DOI: 10.1590/s0066-782x2011000600002. PMID: 21789345.",
+      "Nunes MCP, Badano LP, Marin-Neto JA, et al. Multimodality imaging evaluation of Chagas disease: an expert consensus of Brazilian Cardiovascular Imaging Department (DIC) and the European Association of Cardiovascular Imaging (EACVI). Eur Heart J Cardiovasc Imaging. 2018;19(4):459-460n. DOI: 10.1093/ehjci/jex154. PMID: 29029074.",
+      "Nunes MCP, Beaton A, Acquatella H, et al. Chagas Cardiomyopathy: An Update of Current Clinical Knowledge and Management: A Scientific Statement From the American Heart Association. Circulation. 2018;138(12):e169-e209. DOI: 10.1161/CIR.0000000000000599. PMID: 30354432.",
+      "Hasslocher-Moreno AM, Xavier SS, Saraiva RM, et al. Progression Rate from the Indeterminate Form to the Cardiac Form in Patients with Chronic Chagas Disease: Twenty-Two-Year Follow-Up in a Brazilian Urban Cohort. Trop Med Infect Dis. 2020;5(2):76. DOI: 10.3390/tropicalmed5020076. PMID: 32408570.",
+      "Hasslocher-Moreno AM, Saraiva RM, Sangenis LHC, et al. Benznidazole decreases the risk of chronic Chagas disease progression and cardiovascular events: A long-term follow up study. EClinicalMedicine. 2020;31:100694. DOI: 10.1016/j.eclinm.2020.100694. PMID: 33554085.",
+      "Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995.",
+      "Volpe GJ, Moreira HT, Trad HS, et al. Left Ventricular Scar and Prognosis in Chronic Chagas Cardiomyopathy. J Am Coll Cardiol. 2018;72(21):2567-2576. DOI: 10.1016/j.jacc.2018.09.035. PMID: 30466514.",
+      "Uellendahl M, Siqueira ME, Calado EB, et al. Cardiac Magnetic Resonance-Verified Myocardial Fibrosis in Chagas Disease: Clinical Correlates and Risk Stratification. Arq Bras Cardiol. 2016;107(5):460-466. DOI: 10.5935/abc.20160168. PMID: 27982271.",
+      "Noya-Rabelo MM, Macedo CT, Larocca T, et al. The Presence and Extension of Myocardial Fibrosis in the Undetermined Form of Chagas' Disease: A Study Using Magnetic Resonance. Arq Bras Cardiol. 2018;110(2):124-131. DOI: 10.5935/abc.20180016. PMID: 29466491.",
+      "Melo RJL, Assunção AN Jr, Morais TC, et al. Detection of Early Diffuse Myocardial Fibrosis and Inflammation in Chagas Cardiomyopathy with T1 Mapping and Extracellular Volume. Radiol Cardiothorac Imaging. 2023;5(3):e220112. DOI: 10.1148/ryct.220112. PMID: 37404789.",
+      "Moreira HT, Volpe GJ, Marin-Neto JA, et al. Evaluation of Right Ventricular Systolic Function in Chagas Disease Using Cardiac Magnetic Resonance Imaging. Circ Cardiovasc Imaging. 2017;10(3):e005571. DOI: 10.1161/CIRCIMAGING.116.005571. PMID: 28289020.",
+      "Teixeira Tupinambás J, Rocha MOC, Lage TAR, et al. Cardioembolic stroke in Chagas cardiomyopathy: the interplay between apical aneurysm, left ventricular thrombus and clinical outcomes. Heart. 2026 Jul 28 (ahead of print). DOI: 10.1136/heartjnl-2026-328159. PMID: 42521491.",
+      "Lage TAR, Rocha MOC, Tupinambás JT, et al. Predictors of ischemic stroke in Chagas disease: Insights into mechanisms beyond cardiomyopathy severity. Int J Cardiol. 2025;418:132628. DOI: 10.1016/j.ijcard.2024.132628. PMID: 39395719."
+    ],
+    "itens": [
+      {
+        "id": "ecg-avaliacao-inicial-sorologia-positiva",
+        "categoria": "ECG",
+        "obrigatorio": true,
+        "texto": "O ECG de 12 derivações deve ser realizado em TODO paciente com sorologia positiva para T. cruzi na avaliação inicial, mesmo assintomático e sem sinais de cardiopatia estrutural ao exame físico — inclusive na forma indeterminada. Isso porque o ECG (e não o ecocardiograma) é o exame que, na prática clínica e nas coortes brasileiras de referência, define a transição da forma indeterminada para a forma cardíaca: alterações eletrocardiográficas típicas (bloqueio de ramo direito, bloqueio divisional anterossuperior esquerdo, extrassistolia ventricular, alterações de repolarização, baixa voltagem do QRS, entre outras) costumam preceder alterações estruturais evidentes em outros métodos e constituem o próprio critério de progressão de forma clínica usado em estudos de seguimento de longo prazo. Um ECG normal reforça a classificação de forma indeterminada, mas essa classificação depende justamente de o ECG ter sido feito e estar normal — não pode ser presumida sem o exame.",
+        "origem_secao": "I Diretriz Latino-Americana SBC (Andrade JP et al., Arq Bras Cardiol 2011; PMID 21789345); critério de progressão baseado em ECG em coorte de 22 anos do INI/Fiocruz (Hasslocher-Moreno AM et al., Trop Med Infect Dis 2020; PMID 32408570)"
+      },
+      {
+        "id": "ecg-periodicidade-seguimento",
+        "categoria": "ECG",
+        "obrigatorio": true,
+        "texto": "Na forma indeterminada, o protocolo de seguimento documentado na coorte brasileira de referência do INI/Fiocruz (mediana de seguimento acima de 15 anos) prevê pelo menos uma consulta clínica e um ECG anuais, com ecocardiograma realizado na avaliação basal e repetido ao longo do acompanhamento. ATENÇÃO — não foi localizada, nas fontes verificadas via NCBI e-utils, uma diretriz brasileira que estabeleça de forma explícita um intervalo numérico diferenciado de ECG para a forma cardíaca já estabelecida (maior comprometimento funcional, arritmia ou disfunção ventricular). Nesses casos, a I Diretriz Latino-Americana SBC e o AHA Scientific Statement apontam apenas o princípio geral de reavaliação mais frequente conforme a gravidade — o número exato de meses não deve ser tratado como verificado nesta pesquisa nem virar regra numérica fixa no sistema sem checagem do texto integral da diretriz.",
+        "origem_secao": "Protocolo de ECG anual em forma indeterminada: Hasslocher-Moreno AM et al., Trop Med Infect Dis 2020 (PMID 32408570) e EClinicalMedicine 2020 (PMID 33554085); princípio geral de individualização por gravidade: Andrade JP et al., Arq Bras Cardiol 2011 (PMID 21789345) e Nunes MCP et al., Circulation 2018 (PMID 30354432)"
+      },
+      {
+        "id": "ecocardiograma-avaliacao-inicial",
+        "categoria": "Ecocardiograma/Holter",
+        "obrigatorio": true,
+        "texto": "O ecocardiograma transtorácico é exame obrigatório na avaliação inicial de todo paciente com suspeita ou confirmação de cardiopatia chagásica (sintomático ou com ECG alterado), avaliando especificamente: função sistólica biventricular (fração de ejeção do VE e função sistólica do VD, esta última quantificável por múltiplos parâmetros incluindo strain longitudinal por speckle tracking); alterações segmentares de contratilidade tipicamente basais (inferior/inferolateral) e apicais, não atribuíveis a território coronariano; aneurisma apical — achado morfológico característico e de alto valor discriminativo para cardiopatia chagásica quando presente; disfunção diastólica, que pode ser a alteração mais precoce e por vezes isolada em fase inicial; e rastreio dirigido de trombo intracavitário, sobretudo no ápice aneurismático. Ecocardiografia tridimensional e com contraste aumentam a acurácia para detecção de aneurisma apical e trombo quando há suspeita de encurtamento (foreshortening) do ápice na avaliação bidimensional.",
+        "origem_secao": "Consenso de especialistas do Departamento de Imagem Cardiovascular da SBC (DIC) em parceria com a EACVI — Nunes MCP et al., Eur Heart J Cardiovasc Imaging 2018;19(4):459-460n, PMID 29029074"
+      },
+      {
+        "id": "holter-24h-avaliacao-inicial",
+        "categoria": "Ecocardiograma/Holter",
+        "obrigatorio": true,
+        "texto": "O Holter de 24 horas deve compor a avaliação inicial de todo paciente com cardiopatia chagásica estabelecida, buscando especificamente arritmia ventricular complexa — em particular taquicardia ventricular não sustentada (TVNS), um dos seis preditores independentes de mortalidade no escore de risco de Rassi (desenvolvido e validado em duas coortes brasileiras, estatística C de 0,84 e 0,81) — e bloqueio atrioventricular paroxístico, arritmia reconhecidamente associada a síncope e morte súbita nesta doença. A presença de TVNS ao Holter tem peso prognóstico formal (3 dos 20 pontos do escore de Rassi, mesmo peso atribuído à disfunção sistólica de VE) e não deve ser interpretada como achado incidental de baixo valor clínico.",
+        "origem_secao": "TVNS como preditor independente de mortalidade: Rassi A Jr et al., N Engl J Med 2006;355(8):799-808, PMID 16928995; recomendação geral de investigação de arritmia na avaliação inicial: I Diretriz Latino-Americana SBC (PMID 21789345) e AHA Scientific Statement (PMID 30354432)"
+      },
+      {
+        "id": "rmc-funcao-biventricular",
+        "categoria": "Ressonância magnética",
+        "obrigatorio": false,
+        "texto": "A RMC agrega valor ao ecocardiograma na avaliação da função biventricular da cardiomiopatia chagásica principalmente quando: (a) a janela acústica é ruim ou há aneurisma apical distorcendo a geometria ventricular — situação em que a RMC é mais acurada que o método de Simpson biplanar 2D para volumes e fração de ejeção do VE; e (b) há suspeita de disfunção do VD, historicamente subestimada nessa doença. Estudo brasileiro (USP Ribeirão Preto) com RMC em 158 pacientes chagásicos identificou disfunção sistólica de VD em 37% dos casos, por vezes isolada — sem disfunção proporcional de VE —, achado que a avaliação ecocardiográfica isolada tende a subestimar dada a geometria complexa do VD. Nesse contexto, a RMC é considerada método de referência para quantificação biventricular.",
+        "origem_secao": "Nunes MCP et al., Eur Heart J Cardiovasc Imaging 2018 (PMID 29029074); Moreira HT et al., Circ Cardiovasc Imaging 2017;10(3):e005571, PMID 28289020 (disfunção de VD isolada em 37% de coorte chagásica)"
+      },
+      {
+        "id": "rmc-fibrose-realce-tardio-estratificacao-risco",
+        "categoria": "Ressonância magnética",
+        "obrigatorio": false,
+        "texto": "A RMC com realce tardio pelo gadolínio (RTG) é o método de referência para detectar e quantificar fibrose miocárdica na cardiomiopatia chagásica, achado marcante da doença mesmo em pacientes com função sistólica global preservada. Estudo prospectivo brasileiro (USP Ribeirão Preto, 140 pacientes, seguimento mediano de 34 meses) encontrou RTG em 71,4% dos pacientes com cardiopatia chagásica crônica, predominando em parede lateral, inferolateral e inferior, associado de forma independente (análise multivariável) ao desfecho combinado de morte cardiovascular e taquicardia ventricular sustentada — ou seja, é marcador prognóstico e de risco arrítmico, não apenas achado morfológico. Outro estudo brasileiro (InCor/UNIFESP, 39 pacientes) encontrou forte correlação (r=0,76) entre extensão de fibrose por RTG e o escore de risco de Rassi, reforçando seu papel complementar na estratificação de risco. NÃO foi verificado nesta pesquisa um ponto de corte numérico específico e validado (percentual de massa miocárdica com RTG) que defina categorias de risco de forma consensual — esse número não deve ser inventado nem inserido no sistema sem checagem do texto integral desses estudos.",
+        "origem_secao": "Volpe GJ et al., J Am Coll Cardiol 2018;72(21):2567-2576, PMID 30466514; Uellendahl M et al., Arq Bras Cardiol 2016;107(5):460-466, PMID 27982271"
+      },
+      {
+        "id": "rmc-fibrose-edema-forma-indeterminada",
+        "categoria": "Ressonância magnética",
+        "obrigatorio": false,
+        "texto": "Na forma indeterminada — por definição, paciente com sorologia positiva, ECG normal, radiografia de tórax e exame físico sem alterações —, a RMC pode identificar fibrose miocárdica subclínica por RTG e/ou fibrose intersticial/inflamação difusa por mapeamento T1 e volume extracelular (VEC), mesmo quando ECG e ecocardiograma convencional são normais. Estudo brasileiro (Salvador, BA) encontrou RTG em 41% dos pacientes classificados como forma indeterminada, com extensão de fibrose comparável à da forma cardíaca sem disfunção de VE, sugerindo que esses pacientes já integram um espectro de acometimento subclínico, e não uma ausência real de cardiopatia. Estudo do InCor/USP com mapeamento T1/VEC mostrou que 12% dos pacientes com forma indeterminada já apresentam VEC remoto anormal (>30%), proporção que aumenta com a gravidade da doença, e que o T1 nativo remoto associou-se a eventos cardiovasculares maiores no seguimento. Na prática, um achado positivo de fibrose/edema por RMC num paciente rotulado como forma indeterminada aponta para um estágio de acometimento cardíaco subclínico e justifica seguimento cardiológico mais próximo, mesmo com ECG e ecocardiograma normais — mas essa reclassificação ainda não foi encontrada como critério formalmente incorporado a uma diretriz da SBC nesta busca.",
+        "origem_secao": "Noya-Rabelo MM et al., Arq Bras Cardiol 2018;110(2):124-131, PMID 29466491; Melo RJL et al., Radiol Cardiothorac Imaging 2023;5(3):e220112, PMID 37404789; Uellendahl M et al., Arq Bras Cardiol 2016, PMID 27982271 (inclui grupo forma indeterminada)"
+      },
+      {
+        "id": "rmc-trombo-avc-criptogenico",
+        "categoria": "Ressonância magnética",
+        "obrigatorio": false,
+        "texto": "Em paciente chagásico com AVC isquêmico criptogênico (ou de padrão embólico sem fonte definida ao ecocardiograma transtorácico), a RMC cardíaca deve ser considerada para pesquisa dirigida de trombo intracavitário — sobretudo apical, área de difícil visualização ao ecocardiograma 2D por encurtamento do VE —, já que a cardiomiopatia chagásica é causa reconhecida e provavelmente subdiagnosticada de cardioembolismo mesmo em pacientes com FEVE preservada ou pouco reduzida. Coorte prospectiva brasileira (UFMG, 518 pacientes, seguimento médio de 4,9 anos) mostrou que o AVC cardioembólico foi impulsionado primariamente pela formação de trombo no VE, e que o aneurisma apical aumenta o risco embólico principalmente por mediação do trombo (63,3% do efeito do aneurisma sobre o AVC cardioembólico foi mediado pela presença de trombo), e não diretamente pela FEVE. Estudo irmão da mesma linha de pesquisa (517 pacientes) mostrou relação não linear entre risco de AVC e FEVE/volume atrial esquerdo, com padrão bimodal de ocorrência segundo a gravidade da disfunção ventricular — ou seja, o risco cardioembólico não se concentra apenas nos pacientes com disfunção sistólica grave, o que reforça a relevância de investigar trombo por imagem mesmo fora do perfil clássico de FE muito reduzida.",
+        "origem_secao": "Teixeira Tupinambás J et al., Heart 2026 (ahead of print), doi:10.1136/heartjnl-2026-328159, PMID 42521491; Lage TAR et al., Int J Cardiol 2025;418:132628, PMID 39395719"
+      },
+      {
+        "id": "anticoagulacao-trombo-mural",
+        "categoria": "Anticoagulação",
+        "obrigatorio": true,
+        "texto": "Diante de trombo mural (intracavitário, tipicamente apical) documentado por imagem — ecocardiograma ou RMC — na cardiomiopatia chagásica, a anticoagulação oral está indicada, alinhada à conduta geral adotada para trombo de VE de outras etiologias. ATENÇÃO — não foi localizada nesta busca via NCBI e-utils uma diretriz específica da SBC sobre doença de Chagas que detalhe, com base de evidência própria, a duração exata da anticoagulação nesse contexto (tempo fixo em meses vs. anticoagulação indefinida) nem uma recomendação categórica sobre anticoagulante direto (DOAC) vs. antagonista de vitamina K especificamente para trombo chagásico. A coorte brasileira mais recente sobre o tema (UFMG, PMID 39395719) inclusive registra que a incidência de AVC permanece alta apesar da anticoagulação, sinalizando que a eficácia da anticoagulação nesse cenário específico ainda é objeto de pesquisa ativa e não deve ser tratada como questão resolvida. A fonte internacional mais próxima disponível é o AHA Scientific Statement sobre cardiomiopatia chagásica (2018), que aborda manejo de complicações tromboembólicas de forma geral. Antes de transformar este item em regra numérica fixa no sistema (ex.: duração específica em meses), recomenda-se checagem do texto integral dessa e de outras fontes, e não apenas do resumo indexado no PubMed.",
+        "origem_secao": "AHA Scientific Statement — Nunes MCP et al., Circulation 2018;138(12):e169-e209, PMID 30354432 (fonte internacional mais próxima; não é diretriz SBC específica sobre duração de anticoagulação); dado observacional sobre eficácia limitada da anticoagulação: Lage TAR et al., Int J Cardiol 2025, PMID 39395719; mediação de trombo no risco embólico do aneurisma apical: Teixeira Tupinambás J et al., Heart 2026, PMID 42521491"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
