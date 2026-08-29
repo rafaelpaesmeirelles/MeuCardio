@@ -775,3 +775,23 @@ ACHD (9 itens, agente aa1698398cc976c97), lote 32 = indicações de ETE em
 ACHD (6 itens, agente a1dac83182823407a).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lotes 31-32 — concluídos (1 commit, SHA 8afd6e64) — total 59 commits
+
+- checklist `indicacoes-de-ecocardiograma-transtoracico-na-cardiopatia-congenita-do-adulto`
+  — 9 itens (ETT).
+- checklist `indicacoes-de-ecocardiograma-transesofagico-na-cardiopatia-congenita-do-adulto`
+  — 6 itens (ETE).
+Produzidos em paralelo, 15 fontes verificadas no total. Ambos os agentes
+declararam explicitamente quando não confirmaram classe/nível de
+evidência por falta de acesso a texto integral — nunca inventaram
+gradação.
+
+## Lote 33 (em andamento, 1 agente)
+
+Restante do cluster ACHD: "erg-ped-*" teste ergométrico em cardiopatia
+congênita do adulto (6 itens — Fontan, contraindicado em descompensada,
+cianótica corrigida, IC compensada pós-intervenção, Fallot reparada, TGA
+corrigida) — confirmado sem host. Despachado.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
