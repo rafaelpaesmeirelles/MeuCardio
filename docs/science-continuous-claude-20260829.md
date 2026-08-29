@@ -843,14 +843,35 @@ inclui HV/bifascicular), MAD/prolapso mitral arritmogênico, cardiogenética
 (13 painéis genéticos + 4 checklists). Evitados por colisão com PR aberto:
 dispositivos cardíacos (PR #599), cardiomiopatia arritmogênica (PR #723).
 
-## Lote 36 (planejado)
+## Lotes 36-37 — concluídos (2 commits, SHA fe051491 e 08112cb6) — total 64 commits
 
-A auditar: Medicina nuclear cardiovascular (cintilografia de perfusão,
-PET) fora do contexto de amiloidose já coberto — protocolos de estresse
-farmacológico, atenuação de artefato; TC cardíaca — escore de cálcio em
-populações especiais, angio-TC coronária em dor torácica de baixo risco;
-Populações especiais (idoso frágil, doença renal crônica) ainda sem
-cluster dedicado nesta janela. Confirmar via grep + `gh pr list` antes
-de despachar.
+Auditoria confirmou escore de calcio/angio-TC/SPECT já muito bem
+cobertos e idoso frágil/DRC já com fragmentos dedicados — sem gap
+acionável ali. Dois gaps genuínos de medicina/imagem nuclear e RM
+encontrados e despachados em paralelo:
+
+- exame `ressonancia-magnetica-cardiaca-de-estresse-com-perfusao-por-vasodilatador-adenosina-ou-regadenosona`
+  (lote 36) — mecanismo, indicações (RCT MR-INFORM), interpretação
+  (CE-MARC vs. SPECT), ausência de corte quantitativo único declarada,
+  artefato "dark rim", segurança de regadenosona em coorte de 5.780
+  pacientes. 8 fontes via NCBI e-utils.
+- exame `cintilografia-cardiaca-com-123i-mibg-avaliacao-da-inervacao-simpatica`
+  (lote 37) — mecanismo (H/M ratio, washout), prognóstico em IC via
+  ADMIRE-HF/ADMIRE-HFX (corte H/M ≥1,60), diferenciação de
+  parkinsonismos, reanálise de interferência medicamentosa (só
+  neuropsiquiátricos de alta potência afetam H/M, ao contrário do
+  presumido). 8 fontes via NCBI e-utils.
+
+Nenhuma diretriz SBC específica localizada em nenhum dos dois — declarado
+em ambos. **Fecha o gap de medicina nuclear/RM de estresse desta janela.**
+
+## Lote 38 (planejado)
+
+A auditar: Populações especiais ainda sem cobertura profunda —
+transplante cardíaco (rejeição, vasculopatia do enxerto), dispositivos
+de assistência ventricular (LVAD) fora do contexto perioperatório já
+coberto; ou nova varredura de Doenças vasculares estruturais
+(aortopatias não-genéticas, doença arterial periférica além do que já
+existe). Confirmar via grep + `gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
