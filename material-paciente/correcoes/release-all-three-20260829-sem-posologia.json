@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "icfep-e-obesidade-semaglutida-e-tirzepatida-o-que-esperar",
+    "replace_patterns": [
+      {
+        "pattern": "2,4\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?",
+        "replacement": "a dose estudada no ensaio clínico"
+      }
+    ]
+  },
+  {
+    "slug": "semaglutida-protege-o-coracao-mesmo-sem-diabetes-o-select",
+    "replace_patterns": [
+      {
+        "pattern": "2,4\\s*mg(?:\\s*/\\s*semana|\\s+por\\s+semana)?",
+        "replacement": "a dose estudada no ensaio SELECT"
+      }
+    ]
+  },
+  {
+    "slug": "segundo-diuretico-na-internacao-por-insuficiencia-cardiaca-o-que-esperar",
+    "replace_patterns": [
+      {
+        "pattern": "500\\s*mg(?:\\s+(?:IV|intravenosa|intravenoso))?",
+        "replacement": "a dose investigada no ensaio clínico"
+      }
+    ]
+  },
+  {
+    "slug": "meu-exame-de-lpa-veio-alto-o-que-muda-agora",
+    "replace_patterns": [
+      {
+        "pattern": "50\\s*mg\\s*/\\s*dL",
+        "replacement": "o limiar de risco adotado nas diretrizes"
+      }
+    ]
+  }
+]
