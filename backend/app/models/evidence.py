@@ -17,7 +17,7 @@ class EvidenceRecord(Base):
     statement: Mapped[str] = mapped_column(Text)
     summary: Mapped[str | None] = mapped_column(Text, nullable=True)
     recommendation_class: Mapped[str] = mapped_column(String(10))
-    evidence_level: Mapped[str] = mapped_column(String(5))
+    evidence_level: Mapped[str] = mapped_column(Text)
     society: Mapped[str] = mapped_column(String(80))
     year: Mapped[int] = mapped_column()
     guideline_title: Mapped[str] = mapped_column(String(400))

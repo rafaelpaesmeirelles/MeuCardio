@@ -1,0 +1,192 @@
+{
+  "lote": "lote-miocardite-aguda",
+  "fonte_producao": "grok",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "tema": "Cardiomiopatias",
+  "review_status": "pendente_revisao",
+  "decisao": "retain",
+  "objetivo_solicitado": "Protocolo de miocardite aguda do adulto (não ICI, não pediátrico): diagnóstico, quando internar, restrição de exercício, quando RM/biópsia, quando NÃO dar corticoide de alta dose empírico.",
+  "nota_editorial": "Inventário em 29/08/2026: o protocolo adulto já existe no acervo e cobre os cinco eixos pedidos. Criar miocardite-aguda-do-adulto-diagnostico-internacao-e-restricao-de-exercicio.md e fluxograma-miocardite-aguda-adulto-rm-biopsia-e-quando-internar.md duplicaria slugs, árvores e classes já publicadas. ICI permanece em Cardio-oncologia; pediátrico em Cardiologia_pediátrica. Não clonados. Não se inventou tratamento por PCR viral. Não se transpôs o protocolo de corticoide de ICI para miocardite viral/linfocítica. Duração de restrição de exercício só a partir de tabelas já lidas no corpus.",
+  "documentos_criados": [],
+  "casos_criados": [],
+  "checklists_criados": [],
+  "materiais_paciente_criados": [],
+  "evidencias_criadas": [],
+  "protocolo": {
+    "acao": "retido_nao_criar",
+    "arquivo_solicitado_nao_criado": "content/Cardiomiopatias/miocardite-aguda-do-adulto-diagnostico-internacao-e-restricao-de-exercicio.md",
+    "motivo": "Já há protocolo adulto de diagnóstico, estratificação, internação, RM, biópsia e corticoide, mais fluxograma canônico de tratamento (incluindo Classe III de imunossupressão de rotina com FEVE preservada e restrição de exercício Classe I por pelo menos 1 mês). Um terceiro documento narrativo com slug novo inflaria o acervo sem decisão clínica nova.",
+    "documentos_canonicos": [
+      {
+        "path": "content/Cardiomiopatias/fluxograma-miocardite-aguda-esc-2025.md",
+        "slug": "fluxograma-miocardite-aguda-esc-2025",
+        "kind": "fluxograma",
+        "theme": "Cardiomiopatias",
+        "review_status": "revisado",
+        "cobre": [
+          "diagnóstico inicial (história, exame, RX, biomarcadores, ECG, eco — Classe I)",
+          "exclusão de SCA (coronariografia ou angio-TC — Classe I)",
+          "RM pelos critérios de Lake Louise atualizados (Classe I, nível B no fluxograma)",
+          "internação: Classe I no alto e no intermediário; Classe IIa no baixo risco",
+          "biópsia: Classe I no alto risco e no intermediário sem resposta",
+          "imunossupressão de rotina com FEVE preservada: Classe III",
+          "corticoide: IIa na forma fulminante não infecciosa; IIb se disfunção refratária à terapia de IC",
+          "restrição de exercício até a remissão, por pelo menos 1 mês, atletas e não atletas — Classe I"
+        ]
+      },
+      {
+        "path": "content/Pericárdio/miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md",
+        "slug": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+        "kind": "diretriz",
+        "theme": "Pericárdio",
+        "review_status": "revisado",
+        "cobre": [
+          "critérios diagnósticos definitiva/possível/improvável",
+          "Lake Louise atualizado (proven/uncertain/rejeitada)",
+          "Tabela 7 de risco (alto/intermediário/baixo) com FEVE e realce tardio",
+          "EMB Classe I C no alto risco, instabilidade e intermediário sem resposta",
+          "corticoide IIb C se FEVE reduzida refratária; Classe III C de rotina se FEVE preservada",
+          "definição e gravidade de forma fulminante"
+        ],
+        "lacuna_declarada_no_proprio_documento": "Retorno ao esporte segue como lacuna neste arquivo; a restrição mínima de 1 mês já está no fluxograma canônico e na evidencia restricao-de-exercicio-fisico-apos-sindrome-mio-pericardica-inflamatoria (Tabela 26 ESC 2025). Recorte de atleta competitivo está em Cardiologia do Esporte."
+      },
+      {
+        "path": "content/Pericárdio/sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025.md",
+        "slug": "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+        "kind": "diretriz",
+        "theme": "Pericárdio",
+        "review_status": "revisado",
+        "cobre": [
+          "framework IMPS, miopericardite vs perimiocardite",
+          "Recommendation Tables 9 e 10 (terapia medicamentosa)",
+          "corticoide IIa C na forma fulminante não infecciosa",
+          "betabloqueador IIa C por pelo menos 6 meses",
+          "seguir diretriz de IC Classe I C se disfunção sistólica"
+        ]
+      }
+    ]
+  },
+  "fluxograma": {
+    "acao": "retido_nao_criar",
+    "arquivo_solicitado_nao_criado": "content/Cardiomiopatias/fluxograma-miocardite-aguda-adulto-rm-biopsia-e-quando-internar.md",
+    "motivo": "O fluxograma canônico já publicado é exatamente a árvore de RM, biópsia e internação pedida. Segundo slug com o mesmo recorte (adulto, RM, biópsia, internar) criaria duas árvores divergentes para a mesma decisão.",
+    "slug_canonico": "fluxograma-miocardite-aguda-esc-2025",
+    "path_canonico": "content/Cardiomiopatias/fluxograma-miocardite-aguda-esc-2025.md"
+  },
+  "complementos_ja_existentes_nao_clonar": {
+    "checklist": {
+      "slug": "alta-pos-miocardite-aguda",
+      "documento_origem": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+      "theme": "Cardiomiopatias",
+      "review_status": "revisado",
+      "cobre": "Estratificação, decisão de EMB, corticoide IIb vs III, terapia de IC, arritmia, retorno agendado"
+    },
+    "material_paciente": {
+      "slug": "miocardite-inflamacao-do-musculo-do-coracao-e-recuperacao",
+      "documento_slug": "fluxograma-miocardite-aguda-esc-2025",
+      "tema": "Cardiomiopatias",
+      "review_status": "revisado",
+      "cobre": "Linguagem leiga de diagnóstico, faixas de risco, biópsia, imunossupressão NÃO de rotina com FE preservada, restrição de exercício por pelo menos 1 mês"
+    },
+    "emergencia": {
+      "slug": "miocardite-fulminante",
+      "documento_slug": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+      "fluxograma_slug": "fluxograma-miocardite-aguda-esc-2025"
+    },
+    "esporte_atleta_fora_do_recorte_adulto_geral": [
+      "content/Cardiologia_do_Esporte_e_do_Exercício/miocardite-retorno-ao-esporte.md",
+      "content/Cardiologia_do_Esporte_e_do_Exercício/fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025.md"
+    ],
+    "ici_nao_clonar": "Cardio-oncologia (miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025 e fluxogramas correlatos). Corticoide de alta dose empírico é da via ICI, não da miocardite viral/linfocítica do adulto.",
+    "pediatrico_nao_clonar": "Cardiologia_pediátrica (miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo; fluxograma-miocardite-fulminante-pediatrica-e-choque-cardiogenico).",
+    "chagas_e_tropicais": "content/Cardiomiopatias/miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022.md — recorte endêmico, não substitui o protocolo ESC 2025 do adulto.",
+    "gcm_sarcoidose": "content/Pericárdio/miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora.md e sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022.md"
+  },
+  "mapeamento_eixos_solicitados": {
+    "diagnostico": "fluxograma-miocardite-aguda-esc-2025 + miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+    "quando_internar": "fluxograma-miocardite-aguda-esc-2025 (alto/intermediário Classe I; baixo Classe IIa)",
+    "restricao_de_exercicio": "fluxograma-miocardite-aguda-esc-2025 e evidencia restricao-de-exercicio-fisico-apos-sindrome-mio-pericardica-inflamatoria — Classe I C, até a remissão, pelo menos 1 mês, atletas e não atletas (ESC 2025 Tabela 26). SBC 2022 (PMID 35830116) e ESC 2020 esporte (PMID 32860412) usam 3 a 6 meses para retorno; não misturar o prazo mínimo de restrição ESC 2025 com o prazo de retorno ao esporte competitivo.",
+    "quando_rm": "fluxograma: RM Classe I nível B pelos Lake Louise atualizados, antes da estratificação de risco",
+    "quando_biopsia": "EMB Classe I C no alto risco / instabilidade / intermediário sem resposta (Recommendation Table 6, conferida 30/07/2026 no texto integral)",
+    "quando_nao_corticoide_empirico_alta_dose": "Imunossupressão de rotina com FEVE preservada é Classe III C (ESC 2025). Corticoide empírico de alta dose é da via ICI, não desta. Forma fulminante não infecciosa: IIa C para estabilizar. FEVE reduzida refratária à IC: IIb C. Não aplicar esquema ICI a miocardite viral."
+  },
+  "evidencias_canonicas_ja_no_corpus": [
+    {
+      "slug": "restricao-de-exercicio-fisico-apos-sindrome-mio-pericardica-inflamatoria",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "pmid": "40878297",
+      "tabela": "ESC 2025 Recommendation Table 26"
+    },
+    {
+      "slug": "biopsia-endomiocardica-em-miocardite-de-alto-risco-ou-instabilidade-hemodinamica",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "pmid": "40878297",
+      "tabela": "ESC 2025 quadro de avaliação clínica / Table 6"
+    },
+    {
+      "slug": "retorno-ao-exercicio-apos-miocardite-criterios-e-prazo",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "pmid": "35830116",
+      "nota": "SBC 2022: retorno em 3–6 meses se FEVE normal, biomarcadores normais e sem arritmia no Holter/TE — prazo de RETORNO, não o mínimo de restrição da ESC 2025"
+    },
+    {
+      "slug": "esc2020-miocardite-sem-exercicio-moderado-alto-por-3-a-6-meses",
+      "recommendation_class": "III",
+      "evidence_level": "B",
+      "pmid": "32860412",
+      "nota": "ESC 2020 sports: exercício moderado-alto não recomendado por 3–6 meses após miocardite aguda"
+    },
+    {
+      "slug": "imunossupressao-na-ic-aguda-nao-responsiva-nao-e-recomendada",
+      "recommendation_class": "III",
+      "evidence_level": "C",
+      "pmid": "35830116",
+      "nota": "SBC 2022 Tabela 17 — não é o par ESC 2025 Classe III da FEVE preservada, que está no texto do fluxograma e do documento de diagnóstico (não há slug dedicado no evidencias/ para essa linha ESC 2025)"
+    }
+  ],
+  "guideline_verificacao": {
+    "esc_2025_myocarditis_pericarditis": {
+      "presente_no_corpus": true,
+      "pmid": "40878297",
+      "doi": "10.1093/eurheartj/ehaf192",
+      "citacao": "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041.",
+      "pubmed_confirmado_nesta_sessao": true,
+      "pmc": "ausente — corpus já registra que a ESC 2025 de miocardite/pericardite não tem PMC; classes usadas aqui vêm de tabelas já lidas no texto integral em 30/07/2026 e reproduzidas nos documentos retidos"
+    },
+    "acc_2024_ecdp_myocarditis": {
+      "presente_no_corpus": true,
+      "recorte": "Cardiologia do Esporte (retorno ao esporte), não o protocolo adulto geral",
+      "pmid": "39665703",
+      "doi": "10.1016/j.jacc.2024.10.080",
+      "citacao": "Drazner MH, Bozkurt B, Cooper LT, et al. 2024 ACC Expert Consensus Decision Pathway on Strategies and Criteria for the Diagnosis and Management of Myocarditis. J Am Coll Cardiol. 2025;85(4):391-431.",
+      "pubmed_confirmado_nesta_sessao": true
+    },
+    "aha_acc_2025_sports": {
+      "presente_no_corpus": true,
+      "recorte": "atleta competitivo — fora do protocolo adulto geral pedido",
+      "pmid": "39973614",
+      "doi": "10.1161/CIR.0000000000001297",
+      "citacao": "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151(11):e716-e761."
+    }
+  },
+  "pmids": [
+    "40878297",
+    "39665703",
+    "39973614",
+    "32860412",
+    "35830116",
+    "32367345"
+  ],
+  "o_que_nao_foi_feito": [
+    "Não criado content/Cardiomiopatias/miocardite-aguda-do-adulto-diagnostico-internacao-e-restricao-de-exercicio.md",
+    "Não criado content/Cardiomiopatias/fluxograma-miocardite-aguda-adulto-rm-biopsia-e-quando-internar.md",
+    "Não criado caso, checklist nem material-paciente novos (já existem alta-pos-miocardite-aguda e miocardite-inflamacao-do-musculo-do-coracao-e-recuperacao)",
+    "Não editado arquivo existente",
+    "Não clonado protocolo ICI nem pediátrico",
+    "Não inventado tratamento por PCR viral de rotina"
+  ]
+}

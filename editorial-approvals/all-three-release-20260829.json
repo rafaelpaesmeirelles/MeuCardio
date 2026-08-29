@@ -1,0 +1,37 @@
+{
+  "batch": "all-three-release-20260829",
+  "base": "1945e11197bb9a1708469498c1317bae607540e3",
+  "decision": "approved_for_publication",
+  "approval_basis": "Instrução explícita do responsável pelo repositório em 29/08/2026 para publicar toda a produção das três frentes (ChatGPT/Codex, Claude e Grok), após consolidação sem duplicação, correção da regra insegura de atresia tricúspide, preservação da barreira de posologia em material ao paciente e aprovação condicionada aos gates finais de corpus e banco.",
+  "source_heads": {
+    "chatgpt_codex": "9f3e142ce1c9941da2fada20dc3a79708cebe162",
+    "claude_atresia": "32c74621d71ae5d6798b6b0f339560e9338152b7",
+    "claude_parto_fetal": "09703d7dc7538e83f44288d88d53b38614e34e62",
+    "claude_triagem_ascite": "3d5617e544d7faa0d5e6c57c05b1d35201e3ed4c",
+    "claude_triagem_sopro": "d9e214f7efb136097e8a4448439e19582faf0313",
+    "claude_triagem_tontura": "ea5ed55f0f828dd7b8e0fb6e6a3d308ac995a120",
+    "grok": "b80215c914bf428a094a4f5edfd268eca044bb0e"
+  },
+  "fronts": {
+    "doencas_especializadas": [
+      "aldosteronismo-primario",
+      "anemia-deficiencia-de-ferro-e-risco-cardiovascular",
+      "disfuncao-do-no-sinusal",
+      "doenca-carotidea-aterosclerotica",
+      "doenca-hepatica-metabolica-masld-e-risco-cardiovascular",
+      "doenca-renal-cronica-e-risco-cardiovascular",
+      "doenca-tireoidiana-e-risco-cardiovascular",
+      "dpoc-e-risco-cardiovascular",
+      "hipertensao-renovascular-e-estenose-de-arteria-renal",
+      "sindrome-cardiovascular-rim-metabolica-ckm",
+      "tabagismo-e-risco-cardiovascular",
+      "atresia-tricuspide",
+      "planejamento-parto-cardiopatia-fetal"
+    ],
+    "triagem_sintomas": [
+      "distensao-abdominal-ascite-congestao-cardiaca",
+      "sopro-cardiaco-incidental",
+      "tontura-vertigem-persistente"
+    ]
+  }
+}

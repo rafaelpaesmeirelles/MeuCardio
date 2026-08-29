@@ -1,11 +1,12 @@
-"""Leitura canônica do catálogo de doenças com fragmentos e correções aditivas.
+"""Leitura canônica do catálogo de doenças com composição auditável.
 
 `doencas/metadados.json` permanece a base histórica. Novos hubs podem ser
 versionados em `doencas/fragmentos/*.json` para reduzir colisões entre frentes
-paralelas. Um fragmento pode ser um recorte mínimo ou um snapshot histórico do
-manifesto: registros já existentes e idênticos são ignorados; divergências em
-slug existente são bloqueadas. Correções pequenas e auditáveis podem ser
-aplicadas por `doencas/correcoes/*.json` depois da composição.
+paralelas. Snapshots legados em `doencas/snapshots/*.json` são reconciliados
+contra o blob-base: somente registros que realmente divergem da base são
+aplicados, permitindo combinar produções antigas sobre o mesmo manifesto sem
+um snapshot reverter alterações independentes de outro. Correções pequenas e
+auditáveis são aplicadas por `doencas/correcoes/*.json` ao final da composição.
 """
 
 from __future__ import annotations
@@ -36,6 +37,10 @@ def _paths(base_manifest: str | Path, directory_name: str) -> list[Path]:
 
 def disease_fragment_paths(base_manifest: str | Path) -> list[Path]:
     return _paths(base_manifest, "fragmentos")
+
+
+def disease_snapshot_paths(base_manifest: str | Path) -> list[Path]:
+    return _paths(base_manifest, "snapshots")
 
 
 def disease_correction_paths(base_manifest: str | Path) -> list[Path]:
@@ -108,13 +113,7 @@ def _append_unique(record: dict[str, Any], append_values: Any, *, label: str) ->
 
 
 def _canonicalize_assistant_questions(record: dict[str, Any], *, slug: str) -> None:
-    """Converte o legado ``text`` para o contrato canônico ``label``.
-
-    A composição nunca expõe ambos os campos. Se um registro histórico trouxer
-    os dois com valores divergentes, a carga falha em vez de escolher um deles
-    silenciosamente. Isso mantém compatibilidade de leitura sem reabrir
-    allowlists editoriais nem enfraquecer o gate global.
-    """
+    """Converte o legado ``text`` para o contrato canônico ``label``."""
     questions = record.get("assistant_questions")
     if questions is None:
         return
@@ -214,6 +213,8 @@ def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
         by_slug[slug] = item
         ordered_slugs.append(slug)
 
+    base_by_slug = {slug: copy.deepcopy(item) for slug, item in by_slug.items()}
+
     for fragment in disease_fragment_paths(base):
         for item in _read_list(fragment):
             slug = str(item.get("slug") or "").strip()
@@ -230,6 +231,25 @@ def load_disease_records(base_manifest: str | Path) -> list[dict[str, Any]]:
                     f"{fragment}: slug {slug} diverge de registro já composto; "
                     "use doencas/correcoes para alterações explícitas"
                 )
+
+    snapshot_updates: dict[str, dict[str, Any]] = {}
+    for snapshot in disease_snapshot_paths(base):
+        for item in _read_list(snapshot):
+            slug = str(item.get("slug") or "").strip()
+            if not slug or slug not in base_by_slug:
+                raise ValueError(
+                    f"{snapshot}: snapshot só pode alterar slug existente na base: {slug or '?'}"
+                )
+            if item == base_by_slug[slug]:
+                continue
+            previous = snapshot_updates.get(slug)
+            if previous is not None and previous != item:
+                raise ValueError(
+                    f"{snapshot}: colisão de snapshots divergentes para o slug {slug}"
+                )
+            copied = copy.deepcopy(item)
+            snapshot_updates[slug] = copied
+            by_slug[slug] = copied
 
     _apply_corrections(by_slug, base)
     for slug in ordered_slugs:

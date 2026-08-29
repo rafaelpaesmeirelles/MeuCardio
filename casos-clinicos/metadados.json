@@ -16904,5 +16904,470 @@
       "Stekelenburg JO, Berge K, Janssen SLJE, Omland T, Myhre PL, Thompson PD, Aengevaeren VL, Eijsvogels TMH. Prevalence and Predictors of Cardiac Troponin Elevations Following Exercise: a Systematic Review, Meta-analysis, and Meta-regression. Eur J Prev Cardiol. 2026 Apr 15:zwag218. PMID: 41985028. DOI: 10.1093/eurjpc/zwag218."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-com-obesidade-tirzepatida-summit-composto-nao-mortalidade",
+    "titulo": "ICFEp com obesidade: o que o SUMMIT demonstra — e o que o composto não autoriza a dizer",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, ICFEp com FEVE 55%, IMC 34 kg/m², sem diabetes. Já usa dapagliflozina, está euvolêmico e segue limitado por dispneia aos pequenos esforços. O residente quer iniciar tirzepatida e diz à equipe que o SUMMIT 'reduziu mortalidade cardiovascular nesta população'.",
+    "pergunta": "Qual afirmação corresponde ao que o abstract do SUMMIT (Packer et al., N Engl J Med. 2025; PMID 39555826) realmente demonstra?",
+    "opcoes": [
+      "Tirzepatida reduziu mortalidade cardiovascular isolada (8 vs. 5 mortes não chegam; o HR isolado foi 0,62)",
+      "Tirzepatida reduziu o composto de morte cardiovascular adjudicada ou piora da IC (9,9% vs. 15,3%; HR 0,62), puxado pela piora da IC; a morte CV isolada foi 8 vs. 5 (HR 1,58; IC95% 0,52-4,83) e não autoriza a frase do residente",
+      "Tirzepatida e semaglutida são intercambiáveis nesta frase, porque o STEP-HFpEF teve o mesmo primário de morte ou piora da IC",
+      "O benefício exige diabetes tipo 2; sem diabetes a tirzepatida não tem evidência nesta indicação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O SUMMIT randomizou 731 pacientes (364 vs. 367) com IC, FEVE ≥50% e IMC ≥30 kg/m² para tirzepatida até 15 mg semanal ou placebo, seguimento mediano de 104 semanas. O desfecho composto primário — morte por causas cardiovasculares adjudicada ou evento de piora da IC — ocorreu em 36 pacientes (9,9%) vs. 56 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). A piora da IC isolada foi 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). A morte CV isolada foi 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83): poucos eventos, intervalo que cruza 1, numericamente na direção oposta. O KCCQ-CSS melhorou (diferença 6,9 pontos; IC95% 3,3-10,6; p<0,001). A ESC 2026 considera semaglutida ou tirzepatida (IIa B1) para peso, exercício e QoL em IC sintomática com FEVE ≥45% e IMC ≥30, independente de diabetes — o residente erra o desfecho, não a elegibilidade. O STEP-HFpEF não teve esse composto como primário (coprimários: KCCQ e peso). iSGLT2 não se retira.",
+    "source_refs": [
+      "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826",
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "civ-pos-iam-sopro-novo-e-choque-no-terceiro-dia",
+    "titulo": "Sopro novo e choque no terceiro dia após IAM anterior: bomba, CIV ou papilar?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem, 71 anos, primeiro infarto. IAM anterior com supra, ICP primária da descendente anterior 9 horas após o início da dor — reperfusão tardia. FEVE na sala: 40%, sem IM importante, sem derrame. No terceiro dia de UCO, hipotensão súbita (78/50 mmHg), hipoperfusão (lactato em alta, oligúria) e sopro holossistólico novo em borda esternal esquerda, com frêmito. Campos pulmonares com estertores, mas sem edema maciço. O plantonista de plantão pensa em 'choque cardiogênico de bomba' e pede Impella citando DanGer-Shock. Eco à beira do leito: VE ainda com FEVE 42%, VD dilatado, jato de alta velocidade da esquerda para a direita através do septo apical no Doppler colorido, IM leve, sem derrame pericárdico.",
+    "pergunta": "Qual a conduta imediata mais alinhada com a evidência e as diretrizes atuais?",
+    "opcoes": [
+      "Implantar Impella CP de rotina: o DanGer-Shock reduziu mortalidade em 180 dias no STEMI com choque, e este paciente está em choque pós-IAM",
+      "Tratar como choque de bomba, manter noradrenalina em dose crescente e repetir o eco só se o sopro piorar — FEVE de 42% 'explica' o quadro",
+      "Reconhecer CIV pós-IAM, considerar IABP como ponte, acionar Heart Team para reparo e não extrapolar DanGer-Shock — o ensaio excluiu ruptura septal",
+      "Administrar fibrinolítico agora, porque o choque após STEMI com reperfusão tardia ainda se beneficia de lise de resgate"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O eco já fechou o mecanismo: jato transseptal E→D, VE que ainda ejeta, VD dilatado, sopro novo com frêmito. Isso é CIV pós-IAM, não choque de bomba. A ESC 2023 recomenda reparo emergencial cirúrgico ou por cateter na instabilidade (Classe I C) e considera IABP na instabilidade por complicação mecânica (Classe IIa C). O IABP-SHOCK II e a Classe III da mesma diretriz valem para o choque SEM ruptura — não para este paciente. O DanGer-Shock (Møller, NEJM 2024, PMID 38587239) excluiu explicitamente choque por ruptura do septo, papilar ou parede livre; citar o HR 0,74 daquele ensaio aqui é extrapolação. Fibrinólise não cabe: o paciente já foi reperfundido, e a ESC 2023 só considera lise no STEMI com choque se a ICP primária não for viável em 120 min E a complicação mecânica tiver sido excluída. FEVE de 42% com choque não 'explica' o quadro — no registro SHOCK de CIV (Menon, JACC 2000, PMID 10985713) a FEVE média era 40%, maior do que no choque de bomba, e a mortalidade era 87%. O próximo passo é ponte (IABP) e Heart Team, não mais catecolamina sem correção do defeito.",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Menon V, Webb JG, Hillis LD, et al. Outcome and profile of ventricular septal rupture with cardiogenic shock after myocardial infarction: a report from the SHOCK Trial Registry. J Am Coll Cardiol. 2000;36(3 Suppl A):1110-1116. DOI: 10.1016/S0735-1097(00)00878-0. PMID: 10985713",
+      "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. DOI: 10.1056/NEJMoa2312572. PMID: 38587239",
+      "Schlotter F, Huber K, Hassager C, et al. Ventricular septal defect complicating acute myocardial infarction: diagnosis and management. Eur Heart J. 2024;45(28):2478-2492. DOI: 10.1093/eurheartj/ehae363. PMID: 38888906"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "alta-pos-nstemi-cinco-pilares-incompletos-feve-reduzida-tabagismo-ldl-diabetes",
+    "titulo": "Alta após NSTEMI: a receita tem DAPT e mesmo assim está incompleta",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, NSTEMI tratado com ICP e stent farmacológico na DA. Alta prevista para hoje. FEVE 38% no eco do 2º dia, sem congestão atual. Fuma 20 cigarros/dia; recusou 'parar sozinho'. Diabetes tipo 2 em metformina, HbA1c 7,1%. IMC 31 kg/m². LDL na admissão 132 mg/dL em sinvastatina 40 mg. TFGe 68 mL/min/1,73 m², K 4,3 mEq/L, PA 128/78 mmHg. A receita de alta que chegaram a imprimir: AAS 100 mg, ticagrelor 90 mg 2x/dia 'por um tempo', sinvastatina 40 mg, metoprolol 50 mg 2x/dia, metformina. Sem encaminhamento a reabilitação, sem fármaco de cessação, sem data de retorno da DAPT.",
+    "pergunta": "Qual conduta de alta está alinhada com o playbook de prevenção secundária integrada, sem extrapolar EMPACT-MI nem inventar prazo de monoterapia?",
+    "opcoes": [
+      "Manter a receita: DAPT já está prescrita, betabloqueador já está prescrito, e iSGLT2 não cabe porque a HbA1c está aceitável e o EMPACT-MI foi neutro",
+      "Trocar ticagrelor por AAS isolado na alta, porque ULTIMATE-DAPT mostrou que 1 mês de DAPT basta em todo pós-ICP",
+      "Reescrever a alta pelos cinco pilares: anotar duração e data de reavaliação da DAPT sem desescalar nos primeiros 30 dias; trocar para estatina de alta intensidade e considerar ezetimiba já na internação, com meta de LDL explícita; manter BB e acrescentar IECA (e iSGLT2 pela ICFEr e pelo T2DM, não pelo EMPACT-MI); iniciar vareniclina ou TRN agora; encaminhar reabilitação com data; discutir GLP-1 pela diabetes e pelo IMC",
+      "Acrescentar só empagliflozina 10 mg porque o EMPACT-MI randomizou IAM com FE <45% e isso substitui IECA, estatina de alta intensidade e reabilitação"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A receita impressa cobre um pedaço do pilar 1 e um pedaço do pilar 3, e falha nos cinco. (1) 'Ticagrelor por um tempo' não é DAPT definida: falta data de reavaliação, e desescalar nos primeiros 30 dias é Classe III B na ESC 2023. ULTIMATE-DAPT não autoriza monoterapia na alta deste paciente — randomizou depois de 1 mês sem evento, e transformar o ensaio em prazo universal é o que o playbook marca como verificação humana. (2) Sinvastatina 40 mg em quem interna com LDL 132 não é intensificação da internação índice: ESC/EAS 2025 pede intensificar quem já usava hipolipemiante (Classe I C) e considerar estatina de alta intensidade + ezetimiba no virgem quando a meta não virá só com estatina (Classe IIa B); a SBC 2025 de dislipidemias pede estatina potente nas primeiras 24 h (Forte, Alta) e meta de LDL-c <50 mg/dL no muito alto risco (Forte, Alta), distinta dos <55 mg/dL da ESC. (3) FEVE 38% abre BB (já prescrito, e cabe), IECA de rotina na SCC com disfunção (SBC 2025 Classe I A) e iSGLT2 pela ICFEr (ESC 2021 Classe I A) e pelo T2DM com doença coronariana (SBC 2025 Classe I A). EMPACT-MI foi neutro no primário (HR 0,90; 0,76–1,06) e não é a porta deste paciente — ele já tem duas portas que preexistem. Empagliflozina não substitui IECA, estatina nem reabilitação. (4) Tabagismo sem fármaco não é cessação: ESC 2021 Classe I A para cessar; iniciar vareniclina ou TRN na internação. (5) Reabilitação estruturada é Classe I A ESC 2021 e precisa de data. GLP-1 no T2DM com SCC é Classe I A na SBC 2025; o IMC 31 sem ser o SELECT (aquele ensaio é sem diabetes) reforça a discussão da classe, não a inventa.",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178",
+      "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178",
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289",
+      "Butler J, Jones WS, Udell JA, et al. Empagliflozin after Acute Myocardial Infarction. N Engl J Med. 2024;390(16):1455-1466. DOI: 10.1056/NEJMoa2314051. PMID: 38587237"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "sangramento-digestivo-troponina-dinamica-nao-rotular-tipo-1",
+    "titulo": "Sangramento digestivo, troponina dinâmica e depressão de ST: tipo 1, tipo 2 ou lesão?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 72 anos, DAC conhecida tratada clinicamente, internado por hematêmese e melena. Pressão 88/54 mmHg na chegada, frequência 118 bpm, hemoglobina 6,4 g/dL. Relata opressão precordial concomitante à hipotensão. ECG: depressão de ST de 1 mm em V4–V6, sem supradesnivelamento. Troponina de alta sensibilidade acima do percentil 99, com nova subida na segunda amostra. Endoscopia de urgência mostra úlcera gástrica com sangramento recente. Um colega sugere iniciar DAPT, chamar a hemodinâmica como NSTEMI de alto risco e 'proteger o miocárdio' enquanto a hemoglobina é corrigida.",
+    "pergunta": "Qual a conduta mais alinhada à Quarta/Quinta Definição Universal e à ESC 2023 para este recorte?",
+    "opcoes": [
+      "Diagnosticar IAM tipo 1 / NSTEMI, iniciar DAPT com AAS e ticagrelor e indicar angiografia invasiva precoce (< 24 h), porque a troponina é dinâmica e há DAC conhecida",
+      "Corrigir o precipitante (volume, hemoderivados conforme o protocolo de anemia no infarto, controle pressórico e da frequência, hemostasia da úlcera), não iniciar DAPT nem ICP de rotina, registrar infarto tipo 2 / IAM secundário se a evidência de isquemia se sustentar, e só depois da estabilização planejar eco e investigação de DAC contributiva",
+      "Rotular lesão miocárdica aguda não isquêmica e encerrar a investigação cardiológica, porque o sangramento explica a troponina e o ECG não tem supra de ST",
+      "Indicar ICP imediata da estenose mais grave que aparecer na angiografia, mesmo com sangramento ativo, porque todo infarto com DAC conhecida é tipo 1 até prova em contrário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Há lesão aguda (troponina dinâmica acima do percentil 99) e evidência clínica de isquemia (opressão precordial + depressão de ST no momento do desequilíbrio), com precipitante óbvio de oferta reduzida (choque hemorrágico e anemia grave). Isso preenche infarto tipo 2 na Quarta Definição e IAM secundário na Quinta — não tipo 1, porque não há evidência de aterotrombose aguda. A ESC 2023 não recomenda intervenção farmacológica específica para o tipo 2: o tratamento agudo é o do precipitante. DAPT e ICP de rotina são da via de SCA tipo 1; aqui o sangramento ativo torna a DAPT particularmente nociva. A apresentação não tem critério de risco muito alto isquêmico independente do choque hemorrágico (não há supra, dor refratária isquêmica isolada nem arritmia ameaçadora), portanto a angiografia de emergência como NSTEMI não se aplica. Também não é lesão não isquêmica: há critério de isquemia. Depois de estabilizar, eco e/ou angiografia (invasiva ou angio-TC) entram para procurar DAC contributiva e orientar o tratamento de longo prazo — texto narrativo da ESC 2023, sem classe/nível, e sem transformar estenose crônica em placa rota.",
+    "source_refs": [
+      "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617.",
+      "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "angina-noturna-coronarias-livres-espasmo-epicardico-covadis",
+    "titulo": "Angina de madrugada com coronárias livres: espasmo epicárdico ou microvascular?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem, 48 anos, tabagista ativo, hipertenso. Relata há três meses episódios de dor torácica em aperto, em repouso, entre 3h e 5h da manhã, com duração de 5 a 10 minutos, que cedem minutos após nitrato sublingual. Esforço diurno é bem tolerado. Nega uso de cocaína e não está em quimioterapia. ECG de consultório em período assintomático é normal. Angiografia sem lesão obstrutiva. No mesmo procedimento, teste de acetilcolina reproduz a dor habitual, eleva o ST de V1 a V4 e reduz o calibre do terço médio da descendente anterior em 95%; nitrato intracoronariano devolve calibre, ST e sintoma.",
+    "pergunta": "Qual a leitura COVADIS do teste e a conduta de primeira linha deste endótipo?",
+    "opcoes": [
+      "Espasmo microvascular — faltou oclusão total (100%), então o tratamento é IECA e ranolazina, como na disfunção microvascular estrutural",
+      "Espasmo epicárdico — os três critérios do teste estão presentes (dor habitual, ECG isquêmico e constrição >90%); antagonista de canal de cálcio como base, cessar tabagismo, e não iniciar betabloqueador como antianginoso deste endótipo",
+      "Teste positivo para doença obstrutiva oculta — stentear a descendente anterior no mesmo procedimento, porque 95% de redução de calibre equivale a lesão fixa",
+      "VSA apenas suspeita, porque o ECG espontâneo de madrugada nunca foi documentado; o teste provocativo sozinho não fecha diagnóstico e não autoriza tratamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso COVADIS (Beltrame et al., Eur Heart J. 2017, PMID 26245334) define o teste provocativo positivo para espasmo EPICÁRDICO quando os três elementos ocorrem juntos: reprodução da dor habitual, alteração isquêmica de ECG e constrição >90% do vaso epicárdico. Aqui os três estão presentes (95% na DA, dor reproduzida, supra transitório) e revertem com nitrato intracoronariano — não é lesão fixa, e stentear o segmento que só espasma não trata o endótipo. Constrição >90% (não 100%) já cumpre o limiar de 2017; exigir oclusão total mistura o critério com outra definição. A ausência de ECG espontâneo noturno impede o diagnóstico clínico isolado pelo elemento 2, mas o elemento 3 (espasmo documentado com dor e ECG) fecha VSA definitiva em quem já tem o elemento 1 (angina nitrato-responsiva de repouso noturno). O caso irmão desta biblioteca (mulher com dor + ECG sem constrição >90%) é o espasmo MICROVASCULAR — endótipo diferente, que sai para o protocolo ANOCA/INOCA e não se trata como VSA clássica. Antagonista de cálcio é a primeira linha descrita na ESC 2024 (seção 5.2.6) para este endótipo; classe/nível dessa linha específica permanece VERIFICAÇÃO HUMANA NECESSÁRIA. Betabloqueador não é o antianginoso deste fenótipo (o próprio COVADIS usa a resposta diferencial cálcio versus betabloqueador como traço diagnóstico). Tabagismo é o gatilho evitável.",
+    "source_refs": [
+      "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334",
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dispneia-aguda-sem-dor-toracica-eap-versus-dpoc-versus-sca",
+    "titulo": "Dispneia aguda sem dor torácica: edema cardiogênico, DPOC ou infarto?",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 76 anos, hipertensa e diabética, tabagista antiga rotulada como “DPOC” sem espirometria na pasta. Chega ao pronto-socorro com 4 horas de falta de ar em repouso. Nega dor no peito. PA 188/102 mmHg, FC 108 bpm irregular, FR 30 irpm, SpO2 87% em ar ambiente, estertores em ambos os terços inferiores, turgência jugular e edema de tornozelo discreto; também há sibilos. ECG em 8 minutos: fibrilação atrial de alta resposta, sem supra de ST, inversões de T inferolaterais novas em relação a um traçado antigo. A equipe discute se “é só broncoespasmo”, se começa benzodiazepínico porque “não dói o peito, deve ser ansiedade”, ou se trombolisa TEP empiricamente.",
+    "pergunta": "Qual o agrupamento de condutas mais alinhado à primeira meia hora?",
+    "opcoes": [
+      "Benzodiazepínico e observação: ausência de dor torácica torna SCA e IC improváveis, e ansiedade explica a taquipneia",
+      "Oxigênio porque há hipoxemia; considerar VNI se o quadro for de edema cardiogênico; não tratar a FA instabilizante como detalhe; dosar peptídeo e troponina; não fechar como um único diagnóstico nesta hora",
+      "Trombólise imediata para TEP, porque a hipoxemia é desproporcional e o ECG não tem supra",
+      "Só broncodilatador em alta dose e aguardar TC de tórax antes de qualquer medida cardíaca, já que há sibilos e rótulo de DPOC"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Há hipoxemia (SpO2 87%): a ESC 2021 recomenda oxigênio quando SpO2 <90% (Classe I, C). O fenótipo mistura sibilos com ortopneia, estertores, turgência e PA muito alta — edema pulmonar cardiogênico também sibila, e VNI precoce é Classe IIa, B nesse desconforto, como adjuvante, não como monoterapia. Dispneia sem dor em idosa diabética é equivalente isquêmico: o ECG já foi feito no tempo certo e não mostra supra, mas não encerra SCA (troponina seriada / via NSTE-ACS). A FA rápida pode ser precipitante e precisa de controle se houver instabilidade; não é o único problema. Ansiedade só entra depois de organicidade — nunca como primeira hipótese neste perfil. Trombólise empírica de TEP sem probabilidade formal e sem choque obstrutivo documentado não é o passo desta hora. Broncodilatador isolado, adiando descongestão e ECG/biomarcadores, é o erro clássico do rótulo de DPOC sem espirometria. Peptídeo abaixo de 300/100 tornaria IC pouco provável; peptídeo alto não excluiria TEP nem pneumonia. O caso ensina a manter o diferencial aberto e a tratar o que mata agora (hipoxemia, possível EAP, ritmo, possível SCA) em paralelo.",
+    "source_refs": [
+      "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "rastreio-de-aldosteronismo-em-hipertensao-resistente-sem-hipopotassemia",
+    "titulo": "Hipertensão resistente sem hipopotassemia: pedir ARR agora?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 52 anos, PA de consultório 168/102 mmHg em uso de perindopril, anlodipino e clortalidona em doses plenas há 8 semanas, com adesão conferida e MAPA confirmando hipertensão sustentada (média 24 h 154/96 mmHg). Potássio 3,9 mEq/L. Sem sopro abdominal, sem ronco relatado, sem tríade de cefaleia-sudorese-palpitação, sem hábito cushingoide. IMC 31 kg/m². Creatinina 1,1 mg/dL.",
+    "pergunta": "Qual o próximo passo diagnóstico mais alinhado à diretriz brasileira de 2025 e às posições contemporâneas de rastreio de aldosteronismo?",
+    "opcoes": [
+      "Não rastrear causa secundária: potássio normal exclui aldosteronismo primário e não há pista para as demais causas",
+      "Pedir relação aldosterona-renina (após planejar a coleta) e investigar apneia obstrutiva do sono; a hipopotassemia não é obrigatória e a AOS é recomendada em toda hipertensão resistente",
+      "Pedir de uma vez ARR, metanefrinas plasmáticas, cortisol salivar noturno e Doppler de artérias renais, porque resistência autoriza o painel completo",
+      "Encaminhar direto para amostragem de veias adrenais, já que a resistência com três fármacos fecha o diagnóstico de adenoma produtor de aldosterona"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A SBC 2025 (Quadro 4.5) rastreia hiperaldosteronismo primário na hipertensão resistente e/ou com hipopotassemia — e escreve que a hipopotassemia não é obrigatória. No resistente verdadeiro, o Capítulo 12.5 manda investigar especificamente aldosteronismo, doença renovascular e AOS, e recomenda AOS em todo paciente com hipertensão resistente (prevalência que pode chegar a 80%), independentemente do relato espontâneo de ronco. Metanefrinas e cortisol sem tríade paroxística ou hábito cushingoide multiplicam falso-positivo. Amostragem de veia adrenal é etapa de subtipagem depois de ARR e teste confirmatório, não o primeiro exame. Coleta, cortes e interferência de fármacos: documento de testes confirmatórios da Endocrine Society já publicado nesta biblioteca.",
+    "source_refs": [
+      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Quadro 4.5 e Capítulo 12.5.",
+      "Adler GK et al. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2025;110(9):2453-2495. PMID: 40658480."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "primeira-hora-do-eap-cardiogenico-hipertensivo",
+    "titulo": "EAP hipertensivo na chegada: o que fazer nesta hora?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 68 anos, chega sentada na maca, agitada, com estertores até o terço médio, SpO2 84% em ar ambiente, PA 210/118 mmHg, FC 118 bpm, extremidades quentes. Nega dor torácica. ECG sem supradesnível. Relata sildenafila ontem à noite. Sem sopro novo.",
+    "pergunta": "Qual a sequência da primeira hora mais alinhada à evidência e à SBC 2025?",
+    "opcoes": [
+      "Deitar para o RX, oxigênio por cateter nasal, furosemida 160 mg IV agora e nitroglicerina em infusão; VNI só se não melhorar em 2 horas",
+      "Sentar, iniciar VNI (CPAP ou BiPAP) e oxigênio, furosemida IV em dose moderada; não iniciar nitroglicerina nesta hora por uso de sildenafila nas 48 h anteriores; ECG e precipitante em paralelo",
+      "Intubação imediata de todo EAP com SpO2 < 90%, seguida de noradrenalina porque a PA 210 mmHg é compensatória",
+      "Metoprolol IV agora para a FC 118 bpm, depois furosemida; VNI é equivalente ao oxigênio em mortalidade e portanto opcional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A paciente está no fenótipo hipertenso/quente: sentar, VNI cedo e alça. Park 2004 (PMID 15599144) reduziu intubação de 42% para 7% com CPAP ou bilevel versus oxigênio no pronto-socorro. A SBC 2025 contraindica NTG IV se houver uso de inibidor de PDE-5 nas 48 h anteriores (caixa GRADE, Fraca/Moderada) — sildenafila ontem fecha o nitrato desta hora. Betabloqueador IV não entra na primeira hora de EAP instável. Intubação não é automática só pela SpO2; a VNI é a primeira via se a consciência e o vômito permitirem. PA 210 mmHg neste fenótipo não é compensatória de choque — é o mecanismo. O 3CPO ser neutro em mortalidade (9,5% vs. 9,8%) não torna a VNI opcional: ela acelera dispneia, frequência cardíaca, acidose e hipercapnia na primeira hora.",
+    "source_refs": [
+      "Park M et al. Crit Care Med. 2004;32(12):2407-2415. DOI: 10.1097/01.CCM.0000147770.20400.10. PMID: 15599144.",
+      "Gray A et al.; 3CPO Trialists. N Engl J Med. 2008;359(2):142-151. DOI: 10.1056/NEJMoa0707992. PMID: 18614781.",
+      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179. Capítulo 11, NTG no EAP por emergência hipertensiva."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "paciente-rotulado-icfei-reclassificacao-esc-2026",
+    "titulo": "Paciente rotulado ICFEi: o que muda com a ESC 2026?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 68 anos, hipertensão e FA paroxística. Diagnóstico de IC NYHA II em 2023, com FEVE 44% no eco da época, rotulada ICFEi. Usa dapagliflozina 10 mg, espironolactona 25 mg, losartana 50 mg e furosemida conforme congestão. Sem betabloqueador (bradicardia sinusal intermitente 52–58 bpm, QRS 98 ms). Eco de agora: FEVE 45%, mesmo método. NT-proBNP 780 pg/mL. Nunca teve FEVE ≤40%. Sem síncope, sem TV. Ela pergunta se 'agora que virou ICFEr' precisa de CDI.",
+    "pergunta": "Qual conduta está alinhada à ESC 2026 sem converter ensaio antigo em indicação nova?",
+    "opcoes": [
+      "Indicar CDI em prevenção primária: a ESC 2026 reclassificou 41–49% como ICFEr, e ICFEr tem indicação de CDI",
+      "Manter iSGLT2 e MRA (já Classe I A nesta faixa desde 2023/2026, com ensaios que usaram FEVE >40% / ≥40%); discutir IECA/ARNI e betabloqueador como FMT da ICFEr por reclassificação, não por RCT novo nesta faixa; não implantar CDI — o corte de dispositivo permanece FEVE ≤35%",
+      "Suspender espironolactona e trocar por finerenona obrigatoriamente, porque FINEARTS-HF é o único MRA com ensaio em FEVE ≥40% e a ESC 2026 lista nsMRA só para ICFEp",
+      "Recodificar o prontuário como ICFEp, porque a FEVE está mais perto de 50% do que de 40%, e aplicar só iSGLT2"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A ESC 2026 reclassifica FEVE 41–49% sintomática como ICFEr, mas as Tabelas 6 e 7 mantêm CDI/TRC em FEVE ≤35%. Chamar de ICFEr não coloca a paciente no SCD-HeFT. iSGLT2 já tinha Classe I A nesta faixa em 2023 (EMPEROR-Preserved e DELIVER usaram FEVE >40%). MRA passou a Classe I A independente da FEVE; a molécula em 41–49% (sMRA versus finerenona) é VERIFICAÇÃO HUMANA NECESSÁRIA — não há troca obrigatória nesta vinheta. Betabloqueador e IECA/ARNI entram na FMT da ICFEr por reclassificação; os RCTs clássicos usaram FEVE ≤40% e o PARAGON-HF (FEVE ≥45%) foi neutro. Recodificar como ICFEp está errado: ICFEp 2026 exige FEVE ≥50% mais anormalidade objetiva.",
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+      "Anker SD et al. N Engl J Med. 2021;385:1451-1461. PMID: 34449189.",
+      "Solomon SD et al. N Engl J Med. 2022;387:1089-1098. PMID: 36027570.",
+      "Solomon SD et al. N Engl J Med. 2019;381:1609-1620. PMID: 31475794."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "icfei-historica-trajetoria-hfimpef-versus-dispositivo",
+    "titulo": "FEVE 46% hoje: ICFEi histórica, HFimpEF ou queda recente?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 61 anos. Em 2022, IAM anterior, FEVE 32%, NYHA II. Fez os quatro pilares, FEVE subiu para 47% em 2024 e está 46% agora, assintomático, QRS 110 ms, sem TV. O prontuário ainda diz 'ICFEi'. Colega sugere reduzir as doses 'porque a FEVE saiu da ICFEr clássica' e outro sugere CDI 'porque a ESC 2026 voltou a chamar isso de ICFEr'.",
+    "pergunta": "Qual leitura da trajetória e qual conduta?",
+    "opcoes": [
+      "É ICFEi de novo: FEVE 41–49% estável, então a ESC 2026 manda iniciar de zero a FMT da ICFEr e discutir CDI",
+      "É HFimpEF (ICFEr prévia ≤40% que melhorou para 41–49%): manter FMT na maior dose tolerada (Classe I C), inclusive assintomático; não implantar CDI — FEVE não é ≤35%",
+      "Como está assintomático com FEVE >40%, a ESC 2026 autoriza retirada gradual da FMT em ambulatório",
+      "Recodificar como ICFEp melhorada e aplicar só iSGLT2 e MRA da ICFEp, suspendendo betabloqueador e ARNI"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A trajetória manda: FEVE prévia 32% que subiu para 46% é fração de ejeção melhorada, não ICFEi de novo. A ESC 2026 recomenda manter FMT na maior dose tolerada inclusive no assintomático e na FEVE que melhorou (I C). Retirada gradual é IIb C só em casos altamente selecionados com normalização completa após causa reversível — este paciente teve IAM, não causa reversível demonstrada, e 46% não é normalização. CDI em prevenção primária continua FEVE ≤35% após ≥3 meses de FMT; 46% não entra. Recodificar como ICFEp está errado (ICFEp 2026 é ≥50% sem FEVE prévia reduzida no critério da diretriz). O rótulo antigo 'ICFEi' no prontuário deve ser preservado como histórico, ao lado de HFimpEF / ICFEr 2026.",
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5 (continuidade da FMT) e Table 6 (CDI, FEVE ≤35%).",
+      "Halliday BP et al. TRED-HF. Lancet. 2019;393:61-73. PMID: 30429050."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "listagem-transplante-adulto-zona-cinzenta-vo2-shfm-imc",
+    "titulo": "IC avançada ambulatorial: VO2 na zona cinzenta, IMC 36 — listar agora?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, ICFEr isquêmica, FEVE 22%, NYHA III persistente apesar de terapia quádrupla na maior dose tolerada, CRT-D e duas internações por IC no último ano. PAS 98 mmHg, TFGe 48 mL/min/1,73 m², HbA1c 6,8% sem lesão de órgão-alvo, sem tabaco, sem substância, suporte familiar presente. IMC 36 kg/m². TCPE máximo (RER 1,12): VO2 pico 13 mL/kg/min em uso de carvedilol. SHFM estima sobrevida em 1 ano de 74%. Cateterismo direito: PSAP 42 mmHg, gradiente transpulmonar 10 mmHg, RVP 2,1 unidades Wood. Avaliação psicossocial sem red flag.",
+    "pergunta": "Qual a leitura mais alinhada com os critérios de listagem ISHLT 2016 (e a sucessora 2024, que mantém os cortes de TCPE)?",
+    "opcoes": [
+      "Não listar: VO2 pico 13 está acima do corte de 12 em uso de betabloqueador, portanto o transplante pode ser adiado com segurança independentemente do SHFM e das internações",
+      "Listar agora só com o VO2 de 13, porque qualquer valor <14 mL/kg/min em ICFEr isquêmica é indicação absoluta, e o IMC 36 não entra na decisão",
+      "Não listar enquanto o IMC for ≥35 — a ISHLT 2016 trata IMC ≥35 como Classe III, equivalente a abuso ativo de substância",
+      "Encaminhar/levar ao comitê para listagem: o VO2 está na zona cinzenta (12–14), o SHFM <80% em 1 ano apoia listar (IIb C), há sinal clínico de IC avançada, a hemodinâmica pulmonar não é barreira, e o IMC 36 é contraindicação relativa — perda ponderal até ≤35 e/ou LVAD como ponte para candidatura entram no plano, não como motivo para devolver o paciente ao ambulatório genérico"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "A ISHLT 2016 (PMID 26776864) fixa VO2 pico ≤12 mL/kg/min em uso de betabloqueador e ≤14 sem betabloqueador para guiar listagem (Classe I, B), e proíbe listar só com VO2 (Classe III, C). VO2 13 em carvedilol está na zona cinzenta: o SHFM com sobrevida em 1 ano <80% (aqui 74%) é corte razoável de listagem (Classe IIb, C), também sem listar só com o escore. Duas internações no ano e NYHA III apesar de GDMT completa preenchem sinal de IC avançada (ESC 2026, I NEED HELP / regra dos três) — o encaminhamento ao centro já era devido. Hemodinâmica pulmonar (PSAP 42, GTP 10, RVP 2,1) não atinge o gatilho de desafio vasodilatador (PSAP ≥50 e GTP ≥15 ou RVP >3). IMC ≥35 é Classe IIa, C (relativa), com recomendação de perder peso até ≤35 antes de listar, e LVAD como ponte para candidatura é Classe IIb, C — não é Classe III. Abuso ativo de substância e não adesão reiterada é que são Classe III. A opção correta junta os quatro eixos (gravidade clínica, zona cinzenta de TCPE + SHFM, hemodinâmica aceitável, relativa modificável) sem transformar nenhum número isolado em decisão.",
+    "source_refs": [
+      "Mehra MR, Canter CE, Hannan MM, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864",
+      "Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488",
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "sedentario-assintomatico-sem-doenca-conhecida-quer-comecar-caminhada-acsm-2015",
+    "titulo": "Sedentário assintomático sem doença conhecida: precisa de teste ergométrico para começar a caminhar?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "básico",
+    "enunciado": "Mulher, 48 anos, hipertensão controlada em monoterapia, sem diabetes, sem doença renal, sem evento cardiovascular. IMC 27. Nunca fez exercício estruturado. Sem dor torácica, dispneia, síncope, palpitação, claudicação ou edema. Quer começar caminhada rápida de 30 minutos, 5 dias por semana, por orientação de prevenção primária. Pergunta se precisa de teste ergométrico antes.",
+    "pergunta": "Segundo o algoritmo ACSM 2015 de rastreio pré-participação, qual é a conduta imediata?",
+    "opcoes": [
+      "Teste ergométrico obrigatório em todo sedentário acima de 45 anos antes de qualquer caminhada",
+      "Iniciar exercício leve a moderado sem liberação médica adicional, com progressão gradual — hipertensão isolada não dispara encaminhamento no algoritmo ACSM 2015",
+      "Proibir exercício até ECG, eco e Holter, porque toda avaliação pré-participação de exercício segue o protocolo de atleta",
+      "Só liberar se ela concordar em atingir 10 mil passos por dia desde a primeira semana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O algoritmo ACSM 2015 (Riebe et al., PMID 26473759) deixou de usar contagem de fatores de risco como critério de encaminhamento. Os três eixos são: atividade atual, sintomas ou doença cardiovascular/metabólica/renal conhecida, e intensidade pretendida. Esta paciente é sedentária, assintomática, sem diabetes, sem DRC e sem doença cardiovascular conhecida; a caminhada rápida é intensidade moderada (3,0–5,9 METs na Tabela 4 da ACC/AHA 2019). Whitfield et al. (2017) descrevem exatamente este ramo: iniciar leve a moderado sem liberação, com progressão. Hipertensão isolada não é 'doença conhecida' que dispare o pedido. Teste ergométrico como rito de passagem de todo sedentário é o modelo que a ACSM quis reduzir. Avaliação de atleta (ECG com critérios específicos, elegibilidade) é outra pergunta, outra pasta. A meta de 10 mil passos não veio de ensaio e não é critério de liberação — ver o documento de Paluch já publicado.",
+    "source_refs": [
+      "Riebe D, Franklin BA, Thompson PD, et al. Updating ACSM's Recommendations for Exercise Preparticipation Health Screening. Med Sci Sports Exerc. 2015;47(8):2473-2479. DOI: 10.1249/MSS.0000000000000664. PMID: 26473759.",
+      "Arnett DK et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. PMID: 30879355."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "diabetico-tipo-2-assintomatico-sedentario-liberacao-antes-de-qualquer-intensidade-acsm",
+    "titulo": "Diabetes tipo 2 assintomático e sedentário: academia libera hoje?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 56 anos, diabetes tipo 2 há 6 anos, HbA1c 7,2%, sem infarto, sem revascularização, sem claudicação, sem dor torácica, sem dispneia. Não pratica exercício regular (caminha menos de 30 minutos, menos de 3 dias por semana). Quer assinar plano anual de academia e começar treino de musculação e esteira no mesmo dia, sem avaliação prévia.",
+    "pergunta": "No algoritmo ACSM 2015, este paciente está em prevenção primária de evento aterosclerótico. O que o eixo de 'doença conhecida' muda na liberação?",
+    "opcoes": [
+      "Nada: diabetes não conta, porque ele nunca teve infarto — pode iniciar vigoroso hoje",
+      "Diabetes tipo 2 entra como doença metabólica conhecida; no sedentário assintomático a ACSM recomenda liberação médica antes de qualquer intensidade, e depois começar leve a moderado",
+      "Diabetes exige triagem de atleta com ECG obrigatório e desqualificação se houver qualquer alteração",
+      "Só precisa de liberação se a HbA1c estiver acima de 8%"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Prevenção primária (sem doença aterosclerótica estabelecida) e 'doença metabólica conhecida' no algoritmo ACSM não são a mesma coisa. Diabetes tipo 1 ou 2 está na lista que dispara encaminhamento. No sedentário assintomático com essa doença, a conduta é liberação médica antes de qualquer intensidade; depois de liberado, começar leve a moderado e progredir. Não é reabilitação cardíaca (não há evento). Não é triagem de atleta. Não há corte de HbA1c nesse algoritmo. A prescrição em si — 150–300 min de moderado ou 75–150 de vigoroso, resistido 2 ou mais dias, reduzir tempo sedentário — vem da OMS 2020 / ACC/AHA 2019 e está no documento irmão de prescrição, não neste ramo de triagem.",
+    "source_refs": [
+      "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+      "Whitfield GP et al. Applying the ACSM Preparticipation Screening Algorithm to U.S. adults: NHANES 2001–04. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860.",
+      "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "idosa-ja-caminha-quer-passar-a-correr-vigoroso-equilibrio-who-2020",
+    "titulo": "Idosa que já caminha e quer começar a correr: o que muda além da intensidade?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 71 anos, sem doença cardiovascular estabelecida, sem diabetes, sem DRC, assintomática. Caminha 40 minutos em ritmo que permite conversar, 4 dias por semana, há mais de um ano (cumpre o critério ACSM de exercício regular moderado). Quer passar a correr 3 vezes por semana. Não faz treino de força nem de equilíbrio.",
+    "pergunta": "O que está alinhado às fontes de prevenção primária (ACSM 2015 + OMS 2020) nesta transição?",
+    "opcoes": [
+      "Como ela já treina, é assintomática e não tem doença conhecida, pode progredir para vigoroso sem liberação; a OMS 2020 mantém o alvo aeróbico depois dos 65 anos e acrescenta atividade multicomponente com equilíbrio e força em 3 ou mais dias por semana",
+      "Depois dos 65 anos a OMS reduz o alvo aeróbico pela metade, então correr é contraindicado",
+      "Toda progressão para vigoroso em idoso exige Holter e eco, porque passou a ser atleta master",
+      "Basta contar 10 mil passos; resistido e equilíbrio são opcionais nesta faixa etária"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No algoritmo ACSM 2015, quem já pratica exercício regular, é assintomático e não tem doença CV/metabólica/renal conhecida pode continuar moderado ou vigoroso sem liberação e progredir. Correr é vigoroso (≥6 METs na Tabela 4 da ACC/AHA 2019). A OMS 2020 não corta o volume aeróbico no idoso (continua 150–300 min de moderado ou 75–150 de vigoroso); acrescenta o componente que esta paciente não faz: atividade multicomponente com ênfase em equilíbrio funcional e força, 3 ou mais dias por semana, para capacidade funcional e prevenção de quedas (recomendação forte, certeza moderada). Atleta master e elegibilidade são outra pergunta. Passos por dia no idoso têm platô em 6.000–8.000 na metanálise de Paluch — conversa de volume da vida diária, não substituto de força e equilíbrio.",
+    "source_refs": [
+      "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+      "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350. Recomendações para ≥65 anos em NCBI Bookshelf NBK566046.",
+      "Arnett DK et al. Circulation. 2019;140(11):e596-e646. PMID: 30879355. Tabela 4 (METs)."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "select-nao-se-extrapola-para-obesidade-sem-doenca-cardiovascular",
+    "titulo": "Obesidade sem evento cardiovascular: o SELECT autoriza semaglutida 2,4 mg para 'proteger o coração'?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 52 anos, IMC 32 kg/m², hipertensão controlada, sem diabetes (HbA1c 5,6%). Nunca teve infarto, AVC nem claudicação. LDL 118 mg/dL em estatina de moderada intensidade. Procura o cardiologista pedindo semaglutida 2,4 mg 'para proteger o coração', porque leu que o SELECT reduziu infarto e AVC em quem tem obesidade. Um colega endossa a prescrição citando o HR 0,80 do ensaio.",
+    "pergunta": "O que o SELECT, pelo abstract (Lincoff AM et al., N Engl J Med. 2023; PMID 37952131), autoriza neste caso?",
+    "opcoes": [
+      "Autoriza: o SELECT randomizou adultos com IMC ≥27 e mostrou HR 0,80 para MACE, independentemente de haver ou não doença cardiovascular prévia",
+      "Não autoriza a leitura de prevenção primária: o SELECT exigia doença cardiovascular preexistente, idade ≥45 anos e ausência de diabetes; esta paciente não tem DCV estabelecida e o ensaio não se aplica a ela como evidência de redução de MACE",
+      "Autoriza desde que se use a dose de 1,0 mg semanal, que foi a dose do FLOW e é intercambiável com a do SELECT",
+      "Autoriza apenas se a estatina for trocada por semaglutida, porque o SELECT comparou semaglutida com estatina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O SELECT randomizou 17.604 adultos ≥45 anos com doença cardiovascular preexistente, IMC ≥27 e sem diabetes, para semaglutida 2,4 mg semanal ou placebo. Com seguimento médio de 39,8 meses, o composto de morte cardiovascular, infarto não fatal ou AVC não fatal ocorreu em 569/8.803 (6,5%) versus 701/8.801 (8,0%) — HR 0,80 (IC95% 0,72-0,90; P<0,001). A porta de entrada era prevenção secundária. Extrapolá-lo para uma mulher de 52 anos sem evento cardiovascular é usar o ensaio fora da população randomizada. A dose testada é 2,4 mg, não a 1,0 mg do FLOW (diabetes + DRC). O comparador é placebo sobre o cuidado padrão, não a substituição da estatina. Semaglutida para perda de peso pode ter outras indicações nesta paciente; o que o SELECT não entrega é evidência de redução de MACE em prevenção primária.",
+    "source_refs": [
+      "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "escolher-acetazolamida-ou-hctz-apos-alca-otimizada-advor-clorotic",
+    "titulo": "Alça já otimizada, congestão residual: o que o ADVOR autoriza a dizer — e o que o CLOROTIC cobra em creatinina",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 82 anos, internada por IC descompensada com edema sacral e derrame pleural. FEVE 38%. Furosemida IV já em dose equivalente ao dobro da manutenção oral, sem choque. Peso caiu pouco em 48 h. Potássio 4,1 mmol/L, creatinina estável. O residente quer 'associar clortalidona, porque o ADVOR mostrou que segundo diurético reduz mortalidade, e o CLOROTIC é o mesmo tiazídico'.",
+    "pergunta": "Qual afirmação corresponde ao que os abstracts do ADVOR (PMID 36027559) e do CLOROTIC (PMID 36423214) e a Recommendation Table 9 da ESC 2026 realmente sustentam?",
+    "opcoes": [
+      "O ADVOR reduziu morte ou re-hospitalização por IC em 3 meses (29,7% vs. 27,8% é redução; o HR 1,07 confirma benefício) e autoriza clortalidona como equivalente do CLOROTIC",
+      "A alça ainda não foi otimizada; o próximo passo é ultrafiltração, porque o CARRESS-HF mostrou que segundo diurético é inferior",
+      "Pode-se considerar acetazolamida IV 500 mg/dia (ADVOR: descongestão 42,2% vs. 30,5%; RR 1,46) ou HCTZ oral (CLOROTIC: mais perda de peso, dispneia sem diferença, piora renal 46,5% vs. 17,2%); nenhum dos dois reduziu morte; clortalidona não é o fármaco do CLOROTIC; ESC 2026 IIa B1 é para congestão, não Classe I",
+      "Associar acetazolamida e HCTZ juntas, porque a ESC 2026 Table 9 recomenda as duas ao mesmo tempo em Classe I"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "ADVOR (519 randomizados; primário em 256 vs. 259): descongestão bem-sucedida 42,2% vs. 30,5%, RR 1,46 (IC95% 1,17-1,82; p<0,001). Morte ou re-hospitalização por IC em 3 meses: 29,7% vs. 27,8%, HR 1,07 (IC95% 0,78-1,48) — intervalo que cruza 1; descongestão não é mortalidade. CLOROTIC (n=230): peso 2,3 vs. 1,5 kg (diferença ajustada 1,14 kg; p=0,002); dispneia AUC 960 vs. 720 (p=0,497); piora renal 46,5% vs. 17,2% (p=0,001); sem diferença em morte/reinternação. O tiazídico testado é hidroclorotiazida, não clortalidona. ESC 2026 Table 9: acetazolamida IV ou HCTZ oral de curto prazo IIa B1 para reduzir congestão — 'should be considered', um ou outro, não os dois empilhados, não Classe I. A alça já está no dobro da manutenção oral, o cenário do ADVOR. Ultrafiltração entra depois da falha farmacológica (CARRESS-HF no fluxograma de resistência), não no lugar da segunda camada.",
+    "source_refs": [
+      "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559",
+      "Trullàs JC, Morales-Rull JL, Casado J, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214",
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "trombo-em-sela-normotenso-vd-troponina-nao-autoriza-tenecteplase-de-rotina",
+    "titulo": "Trombo em sela, VD dilatado e troponina: trombolisar o normotenso?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 79 anos, 68 kg, chega com dispneia súbita. PA 112/68 mmHg, FC 108 bpm, sem vasopressor. AngioTC: trombo em sela estendendo-se às duas artérias principais, relação VD/VE 1,4, septo parado. Troponina elevada. Heparina já iniciada. A equipe discute três propostas: (1) tenecteplase agora, 'porque o PEITHO reduziu o desfecho primário e a sela é maciça'; (2) alteplase em meia dose 'para sangrar menos, como no MOPETT'; (3) chamar hemodinâmica para trombectomia porque 'sistêmico sangra em idosa'.",
+    "pergunta": "Qual conduta corresponde melhor à evidência deste recorte (intermediário-alto já classificado)?",
+    "opcoes": [
+      "Tenecteplase em bolus agora: sela mais VD mais troponina equivalem a alto risco, e o PEITHO foi positivo no composto de 7 dias",
+      "Manter anticoagulação parenteral e vigilância em unidade monitorizada, com trombólise de resgate só se houver deterioração hemodinâmica; sela não muda a classe, o PEITHO não reduziu mortalidade e aumentou AVC, e nem MOPETT nem STORM-PE autorizam rotina",
+      "Alteplase em metade da dose agora, porque o MOPETT mostrou zero sangramento e o PEITHO sangrou nas idosas",
+      "Suspender a heparina até a decisão do PERT sobre cateter, para não somar risco hemorrágico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Este é o paciente do PEITHO: normotensa, disfunção de VD e troponina positiva. Randomizaram 1.006 (1.005 ITT) para tenecteplase ou placebo, ambos com heparina. Morte ou descompensação em 7 dias caiu de 5,6% para 2,6% (OR 0,44; P=0,02), mas morte em 7 dias (1,2% vs. 1,8%) e em 30 dias (2,4% vs. 3,2%) não diferiu, e o preço foi sangramento extracraniano 6,3% vs. 1,2% e AVC 2,4% vs. 0,2% (10 dos 12 AVC do lítico foram hemorrágicos). Trombo em sela é anatomia, não classe de risco; alto risco exige choque, parada ou hipotensão persistente. A SBPT 2025 sugere não usar trombólise sistêmica de rotina no intermediário-alto (condicional, certeza moderada) e cita risco hemorrágico maior em mulheres >75 anos — exatamente este perfil. MOPETT é ensaio pequeno, aberto, unicêntrico, com definição própria de 'TEP moderado' que não exige VD + troponina; não é o PEITHO mais seguro. STORM-PE testou trombectomia contra anticoagulação com desfecho substituto de imagem em 100 pacientes. Suspender a heparina 'enquanto o PERT decide' retira o único tratamento que este ensaio mostrou ser o padrão. O certo é vigiar onde se detecta descompensação e ter o resgate pronto — não aplicar o lítico porque a imagem assusta.",
+    "source_refs": [
+      "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681",
+      "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728",
+      "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cardiologista-nas-primeiras-24h-pos-rosc-sete-decisoes",
+    "titulo": "Pós-ROSC sem supra: cateterismo agora, 33 °C, DAPT e 'o cérebro não volta'?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Homem, 62 anos, hipertenso, ressuscitado de parada extra-hospitalar testemunhada, ritmo inicial FV, RCE após 18 minutos. Chega comatoso, intubado, PAM 68 mmHg com noradrenalina baixa, SpO2 96% com FiO2 0,40, temperatura 36,4 °C. ECG de 12 derivações 12 minutos após a RCE: sem supra, sem equivalente de oclusão, inversões inespecíficas. Sem sopro novo. A família pergunta se 'o cérebro já morreu'. O intensivista sugere esfriar a 33 °C 'porque é o protocolo antigo'. O hemodinamicista quer sala agora 'porque a causa mais comum é coronária'. A residência já preparou AAS 300 mg + ticagrelor 180 mg 'para não perder o DAPT'. Ninguém pediu eco.",
+    "pergunta": "Qual agrupamento de condutas das próximas 24 horas está alinhado com TTM2, COACT, TOMAHAWK, BOX e com o interdito de prognosticar cedo?",
+    "opcoes": [
+      "Sala de hemodinâmica agora, hipotermia a 33 °C, DAPT carregada, e dizer à família que o coma na chegada indica mau prognóstico neurológico",
+      "Não ir à hemodinâmica de rotina; não induzir 33 °C por rotina (tratar febre se vier); não carregar DAPT sem indicação de SCA/ICP; pedir eco; manter PAM e oxigenação fora dos extremos; e recusar prognosticar o cérebro nesta janela",
+      "Elevar a PAM para 77 mmHg e a PaO2 para 13–14 kPa 'para proteger o cérebro', porque o BOX mostrou benefício desses alvos altos",
+      "Adiar o ECG e o eco até o paciente aquecer e acordar, porque o traçado pós-RCE não é interpretável e o prognóstico neurológico sai em 24 horas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ECG já foi feito e não mostra supra: COACT (sobrevida em 90 dias 64,5% vs 67,2%, p=0,51) e TOMAHAWK (óbito em 30 dias HR 1,28, IC95% 1,00-1,63, p=0,06) não sustentam cateterismo imediato de rotina no estável sem supra — e o COACT ainda mostrou atraso da temperatura-alvo (5,4 h vs 4,7 h). Não há choque refratário, tempestade elétrica nem isquemia em curso neste enunciado; esse ramo de alto risco não está aberto. TTM2 (morte em 6 meses 50% vs 48%, RR 1,04, p=0,37; Rankin ≥4 55% vs 55%) não mostrou ganho de 33 °C contra tratar febre ≥37,8 °C, e a hipotermia teve mais arritmia hemodinâmica (24% vs 17%). BOX foi neutro entre PAM 77 e 63 mmHg e entre PaO2 9–10 e 13–14 kPa — perseguir o alto da faixa não é a alavanca. Parada não é SCA: DAPT sem lesão culpada nem IAMCST é reflexo, não indicação. Eco nas primeiras horas procura o que o ECG não vê (mecânica, tamponamento, VE/VD). Prognosticar nesta janela contradiz a ESC 2023 (não antes de 72 h, Classe I C já fichada no corpus). A opção que junta sala + 33 °C + DAPT + veredito neurológico replica os quatro erros clássicos das primeiras 24 h. Adiar o ECG já feito não se aplica; o traçado pós-RCE é exatamente o que abriu este caso.",
+    "source_refs": [
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859",
+      "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057",
+      "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570",
+      "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564",
+      "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "lpa-95-mg-dl-pos-iam-nao-converter-nao-esperar-horizon",
+    "titulo": "Lp(a) 95 mg/dL após infarto: converter, esperar o HORIZON ou intensificar o LDL agora?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, infarto há 8 meses, em rosuvastatina 20 mg e ezetimiba 10 mg. LDL-C atual 78 mg/dL. Nunca tinha dosado Lp(a); o laudo desta semana veio 95 mg/dL, sem nmol/L. Ele leu que a pelacarsena 'zera' a Lp(a) e pergunta se espera o resultado do HORIZON ou se entra num ensaio de olpasirana. Um colega sugere multiplicar 95 × 2,5 = 237,5 nmol/L e iniciar AAS 100 mg 'porque Lp(a) alta é pró-trombótica'. Pressão e glicemia controladas; parou de fumar na internação.",
+    "pergunta": "Qual é a conduta alinhada às tabelas lidas (ESC/EAS 2025, SBC 2025) e ao estado dos CVOTs em 29/08/2026?",
+    "opcoes": [
+      "Converter 95 mg/dL × 2,5 para 237,5 nmol/L, classificar como risco extremo e iniciar AAS 100 mg mais olpasirana compassiva, porque a redução de 97% no OCEAN(a)-DOSE já equivale a redução de evento",
+      "Não converter com fator fixo; se a unidade mudar a decisão, recoletar em nmol/L (ensaio independente da isoforma). Não iniciar pelacarsena/olpasirana como se reduzissem MACE — Lp(a)HORIZON não tinha artigo de desfecho em 29/08/2026. Não iniciar AAS só pela Lp(a). Intensificar agora o hipolipemiante com evidência de evento, porque o LDL 78 mg/dL está fora da meta de muito alto risco, e planejar cascata familiar",
+      "Aguardar o HORIZON para qualquer mudança: estatina e ezetimiba já bastam enquanto o RNA não publicar, e repetir Lp(a) a cada retorno",
+      "Trocar a rosuvastatina por niacina, único fármaco oral que reduz Lp(a) com desfecho cardiovascular positivo nos ensaios AIM-HIGH e HPS2-THRIVE"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Três erros cabem na mesma consulta, e nenhum deles é o rastreio do consenso EAS 2022 nem a leitura do OCEAN(a)-DOSE. Primeiro: a SBC 2025 (PMID 41379178, tabela lida no PMC) recomenda ensaio em nmol/L, independente da isoforma, e declara que fórmulas de conversão não são recomendadas (Forte, Alta). ESC/EAS 2025 mapeia 50 mg/dL a ≈105 nmol/L; EAS 2022/SBC/ACC mapeiam o mesmo 50 mg/dL a 125 nmol/L — o fator 2,5 é invenção. Segundo: pelacarsena e olpasirana não têm Classe I (nem outra) de redução de MACE. Lp(a)HORIZON (PMID 40185318, NCT04023552) permanece sem artigo de desfecho na consulta PubMed de 29/08/2026; OCEAN(a)-DOSE (PMID 36342163) é biomarcador. Terceiro: nenhuma tabela lida recomenda AAS só por Lp(a) alta; a ACC/AHA 2026 cita post hoc e pede ensaio prospectivo. A conduta de hoje é a do risco residual já tratável: LDL 78 mg/dL em secundária está fora da meta ESC (<55 mg/dL e ≥50% de queda) e da SBC de muito alto risco (<50 mg/dL) — intensificar hipolipemiante com evidência de evento (iPCSK9 para o LDL, não 'para Lp(a)'), cascata familiar se confirmada ≥50 mg/dL ou ≥125 nmol/L (SBC Forte, Alta), e não repetir Lp(a) de rotina. Niacina não: AIM-HIGH e HPS2-THRIVE já estão nesta pasta.",
+    "source_refs": [
+      "Rached FH et al. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178. PMCID: PMC12674852",
+      "Mach F et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. PMID: 40878289 — Tabela 4",
+      "Cho L et al. Am Heart J. 2025;287:1-9. PMID: 40185318",
+      "O'Donoghue ML et al. N Engl J Med. 2022;387(20):1855-1864. PMID: 36342163",
+      "ClinicalTrials.gov NCT04023552, consulta 29/08/2026: Active, not recruiting, sem resultados postados"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dor-toracica-aguda-primeira-hora-equivalente-posterior-sem-esperar-troponina",
+    "titulo": "Mulher diabética com epigástrio e dispneia: esperar a troponina porque “não tem supra”?",
+    "tema": "Geral",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 67 anos, diabetes tipo 2 e hipertensão. Chega ao pronto-socorro com 40 minutos de desconforto epigástrico e falta de ar, sem aperto precordial. PA 148/88 mmHg, FC 92 bpm, SpO2 94% em ar ambiente, sudorese fria. A equipe discute se “é gastrite ou ansiedade, colhe troponina e reavalia em uma hora”, porque “mulher diabética quase nunca tem infarto clássico”. O ECG só é feito aos 18 minutos: ritmo sinusal, sem supra clássico, depressão de ST em V1–V3 com T terminal positiva. Derivações posteriores ainda não foram feitas.",
+    "pergunta": "Qual agrupamento de condutas está alinhado à primeira hora?",
+    "opcoes": [
+      "Aguardar a hs-cTn de 0 h e o delta de 1 h antes de qualquer decisão, porque não há supra de ST e o HEART ainda não pode ser calculado",
+      "Tratar como gastrite/ansiedade: ausência de dor precordial em mulher diabética torna SCA improvável; alta se a primeira troponina vier “normal”",
+      "Reconhecer equivalente de oclusão posterior, completar V7–V9 agora, ativar via de reperfusão e não esperar troponina; o ECG já deveria ter saído em 10 minutos",
+      "Calcular GRACE na porta para decidir se o cateterismo é imediato ou em 24 horas, e só então pedir o ECG de 12 derivações"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Dispneia e epigástrio em mulher diabética são equivalentes isquêmicos, não tranquilizantes. A ESC 2023 recomenda ECG o mais cedo possível no primeiro contato, com alvo de 10 minutos (Classe I B, Table 1, PMID 37622654) — 18 minutos já estourou o alvo. Depressão de ST em V1–V3 com T terminal positiva é o padrão que a própria diretriz aponta como altamente sugestivo de oclusão posterior; V7–V9 confirmam e a via é de reperfusão, não de “NSTE a esclarecer”. Troponina não pedagia STEMI nem equivalente de oclusão. HEART (SBC 2025 I B) e algoritmos 0/1 h (I B) só entram depois dessa porta. GRACE não é critério de emergência imediata e não deve ser inventado nesta hora; a opção que o coloca antes do ECG inverte a ordem. Ansiedade/gastrite como primeira hipótese neste perfil é o erro clássico de sexo e diabetes.",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "wellens-tipo-b-livre-de-dor-nao-mandar-ao-ergometrico",
+    "titulo": "Livre de dor, T profunda em V2–V4, troponina no limiar: esteira amanhã ou anatomia?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 54 anos, hipertenso e tabagista, chega à emergência às 23 h relatando opressão precordial em esforço nos últimos três dias, com um episódio em repouso de 20 minutos no fim da tarde, já cessado. Está conversando, afebril, PA 138/82 mmHg, frequência 78 bpm, sem dor. ECG da porta (ainda com desconforto residual mínimo): ST isoelétrico, T pouco positiva em V2–V3. Segundo ECG, já sem dor, 40 minutos depois: T simetricamente invertidas e profundas em V2–V4, sem Q, com progressão de R preservada, ST < 1 mm. Troponina de alta sensibilidade no percentil 99 do ensaio local na primeira amostra; a segunda ainda não voltou. Um colega propõe observação na unidade de dor torácica, alta pela manhã se a segunda troponina não subir, e teste ergométrico ambulatorial 'porque está estável e o ECG não tem supra'.",
+    "pergunta": "Qual a conduta alinhada ao reconhecimento de Wellens e às vias ESC 2023 / SBC 2024, sem inventar classe para a síndrome nomeada?",
+    "opcoes": [
+      "Alta com teste ergométrico em 24–48 h, porque está livre de dor, não há supra e a primeira troponina não está em curva — o HEART baixo autoriza a esteira",
+      "Internar monitorizado, não solicitar teste ergométrico (angina instável é contraindicação absoluta na SBC 2024), iniciar AAS + P2Y12 e anticoagulante parenteral como SCA até a anatomia, e programar cinecoronariografia nesta internação — imediata se a dor ou o ST/T recorrerem; durante a internação, visando < 24 h se viável, porque o conjunto é Wellens tipo B (T profunda em precordiais no intervalo livre de dor) e alta suspeita de angina instável / NSTE-ACS de alto risco",
+      "Ativar protocolo de IAMCSST e fibrinolisar agora, porque Wellens é equivalente de supra e a DA proximal crítica não pode esperar angiografia",
+      "Pedir eco de estresse com dobutamina na manhã seguinte para localizar a isquemia anterior e só então decidir se cateteriza, já que a ESC 2023 reserva imagem de estresse ao ramo seletivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O segundo ECG, já sem dor, mostra T profunda simétrica em V2–V4 com ST mínimo, sem Q e com R preservada, após angina recente — conjunto de Wellens tipo B (Rhinehardt 2002, PMID 12442245; convenção tipo A bifásica / tipo B profunda alinhada à galeria CorVIA). O primeiro traçado, ainda com desconforto, não tinha o padrão: a T da síndrome aparece no intervalo livre de dor; serializar o ECG foi o que fechou o reconhecimento. Esteira e eco de estresse são do ramo seletivo da ESC 2023, reservado a quem NÃO tem alto risco nem alta suspeita de angina instável. Wellens típico é precisamente essa suspeita. A SBC 2024 lista angina instável como contraindicação absoluta do teste ergométrico; o paciente 'estável' na cadeira não deixa de ser o cenário da lista. Fibrinolisar mistura o epônimo com equivalente de supra (oclusão em curso) — Wellens livre de dor é fenômeno de reperfusão de DA crítica, via NSTE-ACS, não IAMCSST. A ESC 2023 não dá classe à síndrome nomeada (cita Wellens’ sign na narrativa); o mapeamento é: dor/ST-T recorrentes → invasiva imediata Classe I C; IAMSSST ou T dinâmica / alta suspeita de angina instável → anatomia nesta internação Classe I A, precoce < 24 h Classe IIa A. AAS, P2Y12 e heparina são da via de SCA até a anatomia, com posologia no documento já publicado — não de uma classe 'de Wellens'. Eco transtorácico, se não atrasar a sala, pode mostrar hipocinesia anterior e é opcional; eco de estresse não.",
+    "source_refs": [
+      "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+      "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024.",
+      "Alexander J, Rizzolo D. JAAPA. 2023;36(2):25-29. PMID: 36701576."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

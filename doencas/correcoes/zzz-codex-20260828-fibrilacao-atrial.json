@@ -1,0 +1,49 @@
+[
+  {
+    "slug": "fibrilacao-atrial",
+    "append": {
+      "presentation": [
+        "FA diagnosticada durante doença aguda, cirurgia ou outro precipitante não deve ser presumida como evento isolado: há risco de recorrência e necessidade de seguimento clínico"
+      ],
+      "tests": [
+        "Recalcular função renal com o método exigido para o anticoagulante prescrito e revisar peso, idade e interações antes de confirmar dose de anticoagulante oral direto",
+        "Documentar duração conhecida ou incerta do episódio e estratégia antitrombótica antes de cardioversão eletiva"
+      ],
+      "red_flags": [
+        "FA pré-excitada com resposta ventricular muito rápida ou instabilidade é emergência; bloqueadores exclusivos do nó AV podem ser perigosos nesse contexto",
+        "Dose reduzida de anticoagulante oral direto sem critério formal pode deixar o paciente subprotegido contra AVC e exige reconciliação imediata"
+      ],
+      "ambulatory_flow": [
+        "Não usar antiagregante plaquetário como substituto rotineiro da anticoagulação quando esta estiver indicada para prevenção de AVC na FA",
+        "Preferir anticoagulante oral direto em pacientes elegíveis, reservando antagonista da vitamina K para situações em que ele permanece indicado, como prótese valvar mecânica e estenose mitral reumática clinicamente relevante",
+        "Após ablação ou restauração do ritmo sinusal, decidir continuidade da anticoagulação pelo risco tromboembólico e contexto clínico, e não apenas pela aparente ausência de recorrência",
+        "Tratar obesidade, hipertensão, inatividade física, tabagismo, consumo excessivo de álcool e outros fatores modificáveis como parte do tratamento da própria FA, não como medidas acessórias"
+      ],
+      "emergency_flow": [
+        "Na FA com pré-excitação, evitar fármacos que bloqueiam isoladamente o nó AV e seguir via específica de arritmia pré-excitada/cardioversão conforme estabilidade"
+      ],
+      "monitoring": [
+        "Reavaliar periodicamente risco tromboembólico, função renal, dose do anticoagulante e fatores de sangramento porque essas variáveis mudam com idade, doença intercorrente e novos medicamentos",
+        "Após FA associada a cirurgia ou doença aguda, programar vigilância de recorrência e reavaliação de risco em vez de encerrar seguimento automaticamente"
+      ],
+      "special_populations": [
+        "FA detectada por dispositivo ou monitorização subclínica exige interpretar duração/carga do episódio e risco individual antes de extrapolar automaticamente a estratégia usada para FA clínica documentada"
+      ],
+      "tags": [
+        "ACC AHA HRS 2023",
+        "SBC SOBRAC 2025",
+        "DOAC",
+        "pré-excitação",
+        "FA pós-operatória",
+        "redução de risco"
+      ],
+      "source_refs": [
+        "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. Circulation. DOI: 10.1161/CIR.0000000000001193."
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/science-news/2023-acc-aha-accp-hrs-guideline-for-the-diagnosis-and-management-of-atrial-fibrillation",
+        "https://www.acc.org/Guidelines/Guidelines/2023/11/30/12/05/Atrial-Fibrillation-2023-Guideline"
+      ]
+    }
+  }
+]

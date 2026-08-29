@@ -1,0 +1,513 @@
+{
+  "lote": "cad-wellens",
+  "lote_id": "lote-cad-wellens",
+  "fonte_producao": "grok",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "tema": "Doença coronariana",
+  "review_status": "pendente_revisao",
+  "objetivo": "Protocolo de reconhecimento à beira do leito da síndrome de Wellens (T bifásica tipo A vs T profunda tipo B, intervalo livre de dor, DA proximal crítica): não enviar ao teste ergométrico, tratar como SCA até a anatomia, mapear o tempo do cateterismo nas vias ESC 2023 já publicadas — sem clonar a diretriz de SCA e sem inventar classe para a síndrome nomeada.",
+  "inventario": {
+    "buscas": [
+      "wellens (case-insensitive) em content/ e no repositório",
+      "biphasic em content/",
+      "onda T em content/Doença_coronariana e content/Geral"
+    ],
+    "achados": {
+      "protocolo_ou_fluxograma_dedicado": "nenhum em content/Doença_coronariana nem em content/Geral",
+      "galeria": {
+        "slug": "ecg-wellens-sindrome-lad-critica",
+        "path": "galeria/ecg/ecg-wellens-sindrome-lad-critica.png",
+        "nota": "ECG didático com teaching_points de tipo A/B e contraindicação de esforço. Não é protocolo. Não editado neste lote."
+      },
+      "mencoes_proximas": [
+        "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023: alterações dinâmicas de ST/onda T como critério de risco muito alto e de alto risco — não nomeia Wellens",
+        "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024: angina instável = contraindicação absoluta — não nomeia Wellens",
+        "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025: equivalentes de supra Classe I B — outra caçada (oclusão em curso)"
+      ]
+    },
+    "decisao": "gap real — criar protocolo + fluxograma + staging. Não retido."
+  },
+  "documentos_criados": [
+    {
+      "path": "content/Doença_coronariana/sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico.md",
+      "slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "kind": "protocolo",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "path": "content/Doença_coronariana/fluxograma-wellens-ecg-e-via-de-anatomia-urgente.md",
+      "slug": "fluxograma-wellens-ecg-e-via-de-anatomia-urgente",
+      "kind": "fluxograma",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "verbete_doenca": {
+    "acao": "nao_criar",
+    "motivo": "Pedido: criar somente os dois markdowns de conteúdo e este JSON."
+  },
+  "evidencias": [
+    {
+      "slug": "nste-acs-invasiva-imediata-risco-muito-alto-esc-2023",
+      "statement": "Uma estratégia invasiva imediata (angiografia de emergência, o mais rápido possível) é recomendada no diagnóstico de trabalho de NSTE-ACS com pelo menos um critério de risco muito alto, incluindo alterações dinâmicas recorrentes de ST ou onda T, particularmente com supradesnivelamento intermitente de ST.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 4, conferida no acervo CorVIA (fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023). A tabela NÃO nomeia síndrome de Wellens. Entra neste lote porque é o mapeamento quando o padrão de T se acompanha de dor recorrente, T que pseudonormaliza ou supra intermitente.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "Wellens",
+        "NSTE-ACS",
+        "estratégia invasiva imediata",
+        "onda T dinâmica",
+        "risco muito alto"
+      ],
+      "document_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "review_status": "pendente_revisao",
+      "published": false,
+      "nota": "Não é classe da síndrome nomeada. Não promover a 'Wellens Classe I'."
+    },
+    {
+      "slug": "nste-acs-invasiva-durante-internacao-alto-risco-ou-alta-suspeita-ai-esc-2023",
+      "statement": "Uma estratégia invasiva durante a internação é recomendada em pacientes com NSTE-ACS e critérios de alto risco ou alto índice de suspeita de angina instável.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 4, conferida no acervo CorVIA (fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023). A tabela NÃO nomeia Wellens. O conjunto clássico livre de dor, com angina recente, é alta suspeita de angina instável (ou IAMSSST se a troponina fechar) — por isso não cai no ramo seletivo.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "Wellens",
+        "NSTE-ACS",
+        "angina instável",
+        "estratégia invasiva",
+        "internação"
+      ],
+      "document_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "nste-acs-invasiva-precoce-24h-alto-risco-esc-2023",
+      "statement": "Uma estratégia invasiva precoce, em menos de 24 h, deve ser considerada em pacientes com pelo menos um critério de alto risco: IAMSSST confirmado pelos algoritmos ESC de troponina ultrassensível; alterações dinâmicas de ST ou onda T; supradesnivelamento transitório de ST; GRACE acima de 140.",
+      "recommendation_class": "IIa",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Classe IIa nível A conferida no fluxograma já revisado desta pasta (esc-2023 reduziu a força da janela de 24 h em relação a 2020). A tabela lista 'dynamic ST-segment or T wave changes' — não lista Wellens. A angiografia antes da alta continua Classe I A; as 24 h são o alvo a perseguir.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "Wellens",
+        "NSTE-ACS",
+        "estratégia invasiva precoce",
+        "onda T dinâmica",
+        "alto risco"
+      ],
+      "document_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias_nao_criadas": [
+    {
+      "tema": "Classe ESC para a síndrome de Wellens como entidade nomeada",
+      "motivo": "O PDF ESC 2023 ACS (espelho uniklinik-ulm) cita Wellens’ sign na narrativa do ECG da NSTE-ACS (T bifásica ou T negativa proeminente, estenose grave proximal da DA, Figura S3 suplementar). Nenhuma Recommendation Table nomeia a síndrome. Inventar Classe I ou IIa para 'Wellens' seria fabricar diretriz. Arghittu et al., JACC Case Rep. 2025, registram a mesma lacuna nas diretrizes americana e europeia quanto ao tempo de revascularização desta entidade."
+    },
+    {
+      "tema": "Classe III contra teste ergométrico especificamente em Wellens",
+      "motivo": "A SBC 2024 lista angina instável como contraindicação ABSOLUTA do teste ergométrico, transcrita no documento já publicado; não nomeia Wellens e o documento transcrito não atribui Classe/Nível à lista. Rhinehardt, StatPearls e Alexander/ACC ensinam a não testar — revisão e consenso prático, não tabela classificada. Não inventar Classe III."
+    },
+    {
+      "tema": "DAPT ou heparina 'de Wellens'",
+      "motivo": "São da via de SCA (diagnóstico de trabalho). A posologia está no documento já publicado. Classes de AAS/P2Y12/anticoagulação parenteral não foram relidas linha a linha numa única tabela estável nesta sessão (o extrato do PDF veio inconsistente entre I A e I C). Permanecem no protocolo em prosa, apontando para o documento de posologia, sem evidencia nova."
+    },
+    {
+      "tema": "Ecocardiograma com alteração segmentar como critério de Wellens",
+      "motivo": "Eco de emergência no choque/complicação mecânica é Classe I C já conferida noutro fluxograma. Eco na triagem se incerteza, sem atrasar a sala, é Classe IIa C (Recommendation Table 2, lida nesta sessão) — de SCA suspeita, não de Wellens. Alteração segmentar apoia território de DA e eco normal não exclui. Sem classe própria."
+    },
+    {
+      "tema": "Especificidade 99%/97% tipo A/B para oclusão de DA",
+      "motivo": "Cifra repetida no ACC Ten Points (Alexander 2023). Artigo primário da especificidade não lido nesta sessão. Não republicar."
+    }
+  ],
+  "casos": [
+    {
+      "slug": "wellens-tipo-b-livre-de-dor-nao-mandar-ao-ergometrico",
+      "titulo": "Livre de dor, T profunda em V2–V4, troponina no limiar: esteira amanhã ou anatomia?",
+      "tema": "Doença coronariana",
+      "nivel": "intermediário",
+      "documento_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "enunciado": "Homem, 54 anos, hipertenso e tabagista, chega à emergência às 23 h relatando opressão precordial em esforço nos últimos três dias, com um episódio em repouso de 20 minutos no fim da tarde, já cessado. Está conversando, afebril, PA 138/82 mmHg, frequência 78 bpm, sem dor. ECG da porta (ainda com desconforto residual mínimo): ST isoelétrico, T pouco positiva em V2–V3. Segundo ECG, já sem dor, 40 minutos depois: T simetricamente invertidas e profundas em V2–V4, sem Q, com progressão de R preservada, ST < 1 mm. Troponina de alta sensibilidade no percentil 99 do ensaio local na primeira amostra; a segunda ainda não voltou. Um colega propõe observação na unidade de dor torácica, alta pela manhã se a segunda troponina não subir, e teste ergométrico ambulatorial 'porque está estável e o ECG não tem supra'.",
+      "pergunta": "Qual a conduta alinhada ao reconhecimento de Wellens e às vias ESC 2023 / SBC 2024, sem inventar classe para a síndrome nomeada?",
+      "opcoes": [
+        "Alta com teste ergométrico em 24–48 h, porque está livre de dor, não há supra e a primeira troponina não está em curva — o HEART baixo autoriza a esteira",
+        "Internar monitorizado, não solicitar teste ergométrico (angina instável é contraindicação absoluta na SBC 2024), iniciar AAS + P2Y12 e anticoagulante parenteral como SCA até a anatomia, e programar cinecoronariografia nesta internação — imediata se a dor ou o ST/T recorrerem; durante a internação, visando < 24 h se viável, porque o conjunto é Wellens tipo B (T profunda em precordiais no intervalo livre de dor) e alta suspeita de angina instável / NSTE-ACS de alto risco",
+        "Ativar protocolo de IAMCSST e fibrinolisar agora, porque Wellens é equivalente de supra e a DA proximal crítica não pode esperar angiografia",
+        "Pedir eco de estresse com dobutamina na manhã seguinte para localizar a isquemia anterior e só então decidir se cateteriza, já que a ESC 2023 reserva imagem de estresse ao ramo seletivo"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O segundo ECG, já sem dor, mostra T profunda simétrica em V2–V4 com ST mínimo, sem Q e com R preservada, após angina recente — conjunto de Wellens tipo B (Rhinehardt 2002, PMID 12442245; convenção tipo A bifásica / tipo B profunda alinhada à galeria CorVIA). O primeiro traçado, ainda com desconforto, não tinha o padrão: a T da síndrome aparece no intervalo livre de dor; serializar o ECG foi o que fechou o reconhecimento. Esteira e eco de estresse são do ramo seletivo da ESC 2023, reservado a quem NÃO tem alto risco nem alta suspeita de angina instável. Wellens típico é precisamente essa suspeita. A SBC 2024 lista angina instável como contraindicação absoluta do teste ergométrico; o paciente 'estável' na cadeira não deixa de ser o cenário da lista. Fibrinolisar mistura o epônimo com equivalente de supra (oclusão em curso) — Wellens livre de dor é fenômeno de reperfusão de DA crítica, via NSTE-ACS, não IAMCSST. A ESC 2023 não dá classe à síndrome nomeada (cita Wellens’ sign na narrativa); o mapeamento é: dor/ST-T recorrentes → invasiva imediata Classe I C; IAMSSST ou T dinâmica / alta suspeita de angina instável → anatomia nesta internação Classe I A, precoce < 24 h Classe IIa A. AAS, P2Y12 e heparina são da via de SCA até a anatomia, com posologia no documento já publicado — não de uma classe 'de Wellens'. Eco transtorácico, se não atrasar a sala, pode mostrar hipocinesia anterior e é opcional; eco de estresse não.",
+      "source_refs": [
+        "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+        "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+        "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024.",
+        "Alexander J, Rizzolo D. JAAPA. 2023;36(2):25-29. PMID: 36701576."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "wellens-reconhecimento-beira-leito-nao-ergometrico-anatomia",
+      "condicao": "Síndrome de Wellens — reconhecer T tipo A/B no intervalo livre de dor, não enviar ao ergométrico e levar à anatomia como SCA",
+      "resumo": "Checklist de plantão: serializar o ECG após a dor, fechar o conjunto (não a T isolada), nomear tipo A ou B descrevendo a morfologia, interceptar pedido de esteira, tratar como SCA até a cinecoronariografia e mapear o tempo nas vias ESC 2023 sem inventar classe para o epônimo.",
+      "documento_origem": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+        "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+        "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024.",
+        "Alexander J, Rizzolo D. JAAPA. 2023;36(2):25-29. PMID: 36701576."
+      ],
+      "itens": [
+        {
+          "id": "wl-nao-e-stemi",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Confirmado que NÃO há supra persistente nem equivalente de oclusão em curso — se houver, sair para a via STEMI/oclusão. Não fibrinolisar por 'equivalente de Wellens'",
+          "origem_secao": "O que é — e o que não é"
+        },
+        {
+          "id": "wl-ecg-livre-de-dor",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "ECG de 12 derivações obtido no intervalo LIVRE de dor (e comparado com o traçado da crise, se existir). Um único ECG na porta, ainda com dor, não descarta o padrão",
+          "origem_secao": "O paradoxo que perde o diagnóstico"
+        },
+        {
+          "id": "wl-conjunto-rhinehardt",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Conjunto conferido: T bifásica ou profundamente invertida em V2–V3 (pode ir a V1–V6) + ST isoelétrico ou < 1 mm + sem Q precordial + progressão de R preservada + angina recente + marcadores normais ou pouco elevados. T isolada não fecha o epônimo",
+          "origem_secao": "Critérios de reconhecimento"
+        },
+        {
+          "id": "wl-tipo-a-ou-b",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Morfologia descrita no prontuário: tipo A = T bifásica (positividade inicial, negatividade terminal) ou tipo B = T profunda simétrica. Conduta idêntica. Não usar tipo 1/2 sem dizer a forma da onda",
+          "origem_secao": "Tipo A versus tipo B"
+        },
+        {
+          "id": "wl-nao-ergometrico",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Teste ergométrico, eco de estresse e cintilografia NÃO solicitados. Angina instável é contraindicação absoluta na SBC 2024; Wellens típico não entra no ramo seletivo da ESC 2023",
+          "origem_secao": "Por que não fazer teste ergométrico"
+        },
+        {
+          "id": "wl-internar-sca",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Internação em leito monitorizado. AAS + P2Y12 e anticoagulante parenteral como SCA até a anatomia (doses no documento de posologia). Não alta da porta",
+          "origem_secao": "Conduta até a anatomia"
+        },
+        {
+          "id": "wl-mapear-esc-timing",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Tempo da angiografia mapeado na ESC 2023 de NSTE-ACS, SEM classe da síndrome nomeada: dor/ST-T recorrentes ou T que pseudonormaliza → imediata (I C); IAMSSST ou T dinâmica / alta suspeita de angina instável → anatomia nesta internação (I A), visando < 24 h (IIa A)",
+          "origem_secao": "Como encaixar na ESC 2023"
+        },
+        {
+          "id": "wl-eco-opcional",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Eco transtorácico se não atrasar a sala (hipocinesia anterior apoia; eco normal NÃO exclui). Não segurar o paciente 'esperando o eco da manhã'",
+          "origem_secao": "Ecocardiograma"
+        },
+        {
+          "id": "wl-pseudo-wellens",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Diferencial olhado: TEP, HVE/strain, takotsubo, cocaína, T juvenil, T cerebrais, miocardite, eletrodo mal posicionado. O diferencial não autoriza esteira",
+          "origem_secao": "O que não é Wellens"
+        },
+        {
+          "id": "wl-prontuario",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Prontuário com as sete linhas: morfologia e derivações; livre de dor sim/não; ST/Q/R; angina recente; troponina; o que NÃO foi pedido (ergometria) e por quê; plano de anatomia nesta internação",
+          "origem_secao": "O que escrever no prontuário"
+        },
+        {
+          "id": "wl-nao-inventar-classe",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Não escrever 'Wellens Classe I da ESC'. A diretriz cita o sinal na narrativa; a classe é a da NSTE-ACS",
+          "origem_secao": "Como encaixar na ESC 2023"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "onda-t-do-eletro-porque-nao-fazer-teste-de-esforco",
+      "titulo": "A onda T do seu eletrocardiograma: por que não vamos fazer teste de esforço agora",
+      "subtitulo": "Um padrão específico no eletro, mesmo quando a dor no peito já passou, pode indicar que uma artéria importante do coração está muito estreita",
+      "tema": "Doença coronariana",
+      "documento_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação simples do que é a onda T, por que o eletro 'depois da dor' pode ser o mais importante, por que o teste de esteira não é o próximo passo, e o que esperar do cateterismo. Sem números de prognóstico inventados e sem alarmismo.",
+      "secoes": [
+        {
+          "titulo": "O que o eletrocardiograma está mostrando",
+          "paragrafos": [
+            "O eletrocardiograma registra a eletricidade do coração. Uma parte desse traçado se chama onda T. Em algumas pessoas que tiveram dor no peito — mesmo que a dor já tenha passado — a onda T em certas derivações do peito fica com um formato especial: ou profundamente virada para baixo, ou com duas fases (sobe e depois desce). Os médicos chamam esse conjunto de síndrome de Wellens, em homenagem ao cardiologista que ajudou a descrevê-lo.",
+            "Esse formato não é 'um eletro um pouco alterado'. Ele costuma aparecer quando uma artéria da frente do coração, a descendente anterior, está muito estreita. A peculiaridade é que o traçado típico surge justamente quando você já está sem dor."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Por que não vamos fazer o teste da esteira",
+          "paragrafos": [
+            "O teste ergométrico (a esteira) serve para ver como o coração reage ao esforço quando a suspeita de artéria entupida é menor. No seu caso, o eletro já deu um recado mais direto. Pedir para o coração trabalhar mais, agora, seria aumentar a demanda de oxigênio de uma artéria que pode estar crítica.",
+            "Por isso a equipe não vai marcar esteira, nem um eco de esforço, como próximo passo. Isso não é atraso de exame. É proteção."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que acontece agora",
+          "paragrafos": [],
+          "itens": [
+            "Você fica internado, com o coração monitorado",
+            "Medicamentos que diminuem a formação de coágulos (dois antiagregantes, o chamado DAPT) e um anticoagulante, como na síndrome coronariana aguda, até olharmos a artéria",
+            "Exames de sangue (troponina) em mais de uma coleta — um resultado normal não 'cancela' o que o eletro mostrou",
+            "Na maioria das vezes, um cateterismo nesta internação para ver a descendente anterior e tratar se estiver estreita",
+            "Um ultrassom do coração (ecocardiograma) pode ser feito se não atrasar o cateterismo; se a parede se mexer bem, isso não afasta o problema da artéria"
+          ]
+        },
+        {
+          "titulo": "O que isso não significa",
+          "paragrafos": [
+            "Não significa, sozinho, que você está tendo um infarto com a artéria totalmente fechada neste instante. Muita gente está sem dor quando o eletro é feito.",
+            "Não significa que 'não foi nada' porque a dor passou e o exame de sangue ainda não subiu.",
+            "Não significa que todo mundo com onda T invertida tenha a mesma coisa — outros problemas (por exemplo um coágulo no pulmão, um coração engrossado, uma inflamação) também mudam a onda T. A equipe olha o conjunto, não uma letra do eletro isolada.",
+            "Números de internet sobre 'chance de infarto em X dias' não se aplicam ao seu caso e não devem ser usados para assustar nem para tranquilizar à toa. O que vale é olhar a artéria e tratar o que estiver estreito."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor no peito que volta, aperta ou queima, em repouso ou ao menor esforço",
+        "Falta de ar súbita, suor frio, náusea intensa ou sensação de desmaio",
+        "A dor volta e alguém diz que 'o eletro melhorou' — avise na hora; às vezes o traçado 'normalizar' durante a dor é um alerta, não um alívio",
+        "Sangramento que não para, fezes pretas ou vômito com sangue — avise, principalmente se já estiver usando os dois antiagregantes"
+      ],
+      "perguntas": [
+        "O meu eletro é o padrão de Wellens de verdade, ou é outra causa de onda T alterada?",
+        "Vocês vão repetir o eletro quando eu tiver dor e quando eu estiver sem dor?",
+        "Por que eu não vou fazer esteira? Quando, se for o caso, esse exame volta a fazer sentido?",
+        "O cateterismo é hoje, nesta internação, ou só se a troponina subir?",
+        "Quais medicamentos contra coágulo eu vou usar, e por quê?",
+        "Se a artéria estiver estreita, o tratamento é stent, cirurgia ou remédio? Quem decide?"
+      ],
+      "fontes": [
+        "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. PMID: 6121481.",
+        "Rhinehardt J, Brady WJ, Perron AD, Mattu A. Am J Emerg Med. 2002;20(7):638-643. PMID: 12442245.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+        "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024."
+      ]
+    }
+  ],
+  "tudo_com_tudo": [
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "fluxograma-wellens-ecg-e-via-de-anatomia-urgente",
+      "tipo": "fluxograma",
+      "por_que": "Árvore do mesmo lote: do padrão de T à anatomia, sem ramo ergométrico."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+      "tipo": "fluxograma_canonico",
+      "por_que": "Onde moram as classes de timing da NSTE-ACS (imediata I C, internacao I A, precoce IIa A) para as quais Wellens mapeia — a tabela não nomeia a síndrome."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "fluxograma-sindrome-coronariana-aguda-esc-2023",
+      "tipo": "fluxograma",
+      "por_que": "Saída obrigatória se houver supra persistente; Wellens livre de dor não ativa essa via."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024",
+      "tipo": "protocolo",
+      "por_que": "Angina instável = contraindicação absoluta da esteira; o protocolo de Wellens herda a lista sem exigir que a SBC nomeie o epônimo."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+      "tipo": "protocolo",
+      "por_que": "Porta brasileira: ECG seriado, equivalentes de supra (outra caçada) e HEART — que não autoriza esteira neste padrão."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023",
+      "tipo": "protocolo",
+      "por_que": "DAPT e heparina são da via de SCA até a anatomia; doses não são copiadas neste lote."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "qual-teste-funcional-pedir-na-doenca-coronariana-te-cintilografia-ou-eco-de-estresse-sbc-2024",
+      "tipo": "protocolo",
+      "por_que": "O teste funcional é do ramo seletivo / da crônica; Wellens típico não pede esse documento como próximo passo."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "stemi-estrategia-de-reperfusao-esc-2023",
+      "tipo": "protocolo",
+      "por_que": "Fronteira: não misturar Wellens livre de dor com IAMCSST nem fibrinolisar."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "fluxograma-minoca-investigacao-diagnostica",
+      "tipo": "fluxograma",
+      "por_que": "Se a sala não mostrar DA crítica: não encerrar como 'era Wellens'; seguir o mecanismo."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "fluxograma-cardiomiopatia-takotsubo-reconhecimento-manejo-agudo",
+      "tipo": "fluxograma",
+      "por_que": "Pseudo-Wellens clássico; não se diagnostica takotsubo para poupar o cateter neste padrão."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+      "tipo": "protocolo",
+      "por_que": "Pseudo-Wellens por espasmo; a via aguda ainda é SCA, mas o betabloqueador muda."
+    },
+    {
+      "de": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "para": "ecg-wellens-sindrome-lad-critica",
+      "tipo": "galeria",
+      "por_que": "Traçado didático já no acervo (tipo A/B). Não editado."
+    },
+    {
+      "de": "wellens-tipo-b-livre-de-dor-nao-mandar-ao-ergometrico",
+      "para": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "tipo": "caso",
+      "por_que": "Vinheta do erro clássico: esteira no paciente que melhorou."
+    },
+    {
+      "de": "wellens-reconhecimento-beira-leito-nao-ergometrico-anatomia",
+      "para": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "tipo": "checklist",
+      "por_que": "Execução no plantão do protocolo."
+    },
+    {
+      "de": "onda-t-do-eletro-porque-nao-fazer-teste-de-esforco",
+      "para": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+      "tipo": "material_paciente",
+      "por_que": "Tradução para o paciente do porquê a esteira não é o próximo passo."
+    }
+  ],
+  "citacoes_verificadas_nesta_sessao": [
+    {
+      "fonte": "de Zwaan 1982",
+      "pmid": "6121481",
+      "doi": "10.1016/0002-8703(82)90480-x",
+      "status": "PMID/DOI conferidos no PubMed. Resumo: 26 de 145 internados por angina instável (18%) tinham o padrão. PDF integral de 1982 não relido página a página; o numerador 12/16 de infarto anterior nos não revascularizados e a média de 8,5 dias NÃO foram republicados como cifra verificada — só a direção histórica, atribuída às revisões."
+    },
+    {
+      "fonte": "de Zwaan 1989",
+      "pmid": "2784024",
+      "doi": "10.1016/0002-8703(89)90742-4",
+      "status": "PMID/DOI conferidos. Resumo: 180 de 1260 internados por angina instável; estenose ≥50% da DA proximal em todos."
+    },
+    {
+      "fonte": "Rhinehardt 2002",
+      "pmid": "12442245",
+      "doi": "10.1053/ajem.2002.34800",
+      "status": "PMID/DOI conferidos. Critérios diagnósticos de emergência (T em V2–3, livre de dor, ST <1 mm, sem Q, R preservada, angina recente, marcadores normais/discretos) usados como consenso prático, não diretriz."
+    },
+    {
+      "fonte": "Byrne 2023 ESC ACS",
+      "pmid": "37622654",
+      "doi": "10.1093/eurheartj/ehad191",
+      "status": "PMID/DOI conferidos. PDF espelhado uniklinik-ulm lido nesta sessão para a frase narrativa: ST depression and T wave changes (especially biphasic T waves or prominent negative T waves [Wellens’ sign, related to severe proximal left anterior descending artery stenosis]), Supplementary Figure S3. Recommendation Table 4 NÃO nomeia Wellens. Classes de timing: as já conferidas no fluxograma revisado do acervo (I C imediata; I A internacao; IIa A precoce <24 h)."
+    },
+    {
+      "fonte": "Alexander JAAPA 2023",
+      "pmid": "36701576",
+      "doi": "10.1097/01.JAA.0000911188.18646",
+      "status": "PMID conferido. Revisão; síntese ACC Ten Points (não enviar ao stress test; internar; anatomia). Especificidade 99%/97% NÃO republicada (primário não lido)."
+    },
+    {
+      "fonte": "Miner StatPearls",
+      "pmid": "29494097",
+      "doi": null,
+      "status": "PMID do verbete StatPearls conferido (atualização 31/07/2023). Didático, não diretriz. Tipo A bifásica ~25%, tipo B profunda ~75%; não testar esforço; tratar como SCA até o cateter."
+    },
+    {
+      "fonte": "Arghittu JACC Case Reports 2025",
+      "pmid": null,
+      "doi": "10.1016/j.jaccas.2025.106491",
+      "status": "DOI conferido. Relato/revisão: diretrizes americana e europeia não trazem recomendação clara de timing para a entidade nomeada. Apoia a decisão de não inventar classe."
+    },
+    {
+      "fonte": "Niksic 2025",
+      "pmid": "41163254",
+      "doi": "10.12659/AJCR.950353",
+      "status": "PMID conferido. Relato de caso 2025: o padrão pode ocorrer em multiarterial, não só em DA ostial isolada. Usado só como nuance do C7 do fluxograma, não como incidência."
+    },
+    {
+      "fonte": "SBC Ergometria 2024",
+      "pmid": null,
+      "doi": null,
+      "status": "Lista de contraindicação absoluta (angina instável) conferida contra o documento já publicado teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024. Sem classe/nível no documento transcrito."
+    }
+  ],
+  "itens_retidos": [
+    {
+      "item": "Protocolo ou fluxograma pré-existente de Wellens",
+      "motivo": "Não existia. Gap real. Criados os dois arquivos pedidos."
+    },
+    {
+      "item": "Edição da galeria ecg-wellens-sindrome-lad-critica",
+      "motivo": "Pedido: NO existing-file edits. Teaching_points da galeria já alinhados (tipo A 25% bifásica, tipo B 75% profunda, não fazer esforço). Apenas vínculo Tudo com Tudo."
+    },
+    {
+      "item": "Verbete de doença",
+      "motivo": "Fora do pedido (somente 2 md + JSON)."
+    },
+    {
+      "item": "Classe ESC da síndrome nomeada",
+      "motivo": "Não existe na tabela. Narrativa sim (Wellens’ sign). Registrado em evidencias_nao_criadas."
+    },
+    {
+      "item": "Cifras de progressão para infarto anterior (12/16, 8,5 dias) e especificidade 99%/97%",
+      "motivo": "Primários não relidos nesta sessão. Direção histórica citada; números não republicados como verificados."
+    }
+  ],
+  "pmids_deste_lote": [
+    "6121481",
+    "2784024",
+    "12442245",
+    "37622654",
+    "36701576",
+    "29494097",
+    "41163254"
+  ]
+}

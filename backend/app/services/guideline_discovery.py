@@ -304,7 +304,7 @@ def _page_title(parser: PageParser, fallback: str) -> str:
         or parser.title
         or fallback
     )
-    return re.sub(r"\s+", " ", title).strip()[:300]
+    return re.sub(r"\s+", " ", title).strip()
 
 
 def _clean_doi(value: str | None) -> str | None:
@@ -493,6 +493,7 @@ def discover_and_publish(db: Session, *, fetch=_fetch) -> dict:
     for fingerprint, item in unique.items():
         guideline = None
         doi = _clean_doi(item.get("doi"))
+        candidate_slug = _slug(item["org"], item["title"], item["published_at"])
         if doi:
             guideline = db.query(Guideline).filter(Guideline.doi == doi).first()
         if guideline is None:
@@ -501,10 +502,16 @@ def discover_and_publish(db: Session, *, fetch=_fetch) -> dict:
             ).first()
         if guideline is None:
             guideline = db.query(Guideline).filter(Guideline.url == item["url"]).first()
+        if guideline is None:
+            # Slug é determinístico por organização+título+data. Registros já
+            # persistidos com metadados alternativos (ex.: URL/DOI/fingerprint
+            # enriquecidos por outro indexador) devem ser tratados como o mesmo
+            # achado, nunca como um novo INSERT que viola uq_guideline_slug.
+            guideline = db.query(Guideline).filter(Guideline.slug == candidate_slug).first()
 
         if guideline is None:
             guideline = Guideline(
-                slug=_slug(item["org"], item["title"], item["published_at"]),
+                slug=candidate_slug,
                 org=item["org"],
                 titulo=item["title"],
                 ano=item["published_at"].year,

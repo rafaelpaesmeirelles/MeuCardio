@@ -1,0 +1,533 @@
+{
+  "lote": "lote-prev-exercicio",
+  "fonte_producao": "grok",
+  "created": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "theme": "Prevenção e lipídios",
+  "review_status": "pendente_revisao",
+  "escopo": "Prevenção primária de exercício no adulto não atleta. Não duplica reabilitação cardíaca (prevenção secundária), não invade elegibilidade de atleta, não clona passos-por-dia.",
+  "documentos": [
+    {
+      "path": "content/Prevenção_e_lipídios/prescricao-de-exercicio-em-prevencao-primaria-cardiovascular.md",
+      "slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "kind": "protocolo",
+      "title": "Prescrição de Exercício em Prevenção Primária Cardiovascular"
+    },
+    {
+      "path": "content/Prevenção_e_lipídios/fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico.md",
+      "slug": "fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico",
+      "kind": "fluxograma",
+      "title": "Fluxograma: Avaliação pré-participação de exercício no adulto assintomático (não atleta)"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "adultos-devem-ser-aconselhados-rotineiramente-a-otimizar-estilo-de-vida-fisicamente-ativo",
+      "statement": "Adultos devem ser aconselhados de rotina, nas visitas de saúde, a otimizar um estilo de vida fisicamente ativo.",
+      "recommendation_class": "I",
+      "evidence_level": "B-R",
+      "society": "ACC/AHA",
+      "year": 2019,
+      "guideline_title": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease",
+      "reference": "Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. Seção 3.2, recomendação 1, conferida no PMC.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "atividade física",
+        "prevenção primária",
+        "aconselhamento",
+        "consulta"
+      ],
+      "document_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "adulto-prevenir-ascvd-pelo-menos-150-min-moderado-ou-75-min-vigoroso-por-semana",
+      "statement": "Adultos devem realizar pelo menos 150 minutos por semana de atividade aeróbica de intensidade moderada acumulada, ou 75 minutos por semana de intensidade vigorosa, ou combinação equivalente, para reduzir o risco de doença aterosclerótica. A OMS 2020 formula o mesmo volume como faixa de 150–300 minutos de moderado ou 75–150 de vigoroso para benefícios substanciais (recomendação forte, certeza moderada).",
+      "recommendation_class": "I",
+      "evidence_level": "B-NR",
+      "society": "ACC/AHA",
+      "year": 2019,
+      "guideline_title": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease; WHO 2020 guidelines on physical activity and sedentary behaviour",
+      "reference": "Arnett DK et al. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. Seção 3.2, recomendação 2 (piso ≥150/≥75). Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. DOI: 10.1136/bjsports-2020-102955. PMID: 33239350 (faixa 150–300 / 75–150). A SBC 2019 Tabela 8.3 classifica ≥150 min moderado ou 75 min mais intenso como Classe I, nível A (Précoma DB et al. Arq Bras Cardiol. 2019;113(4):787-891. PMID: 31691761).",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "atividade física",
+        "prevenção primária",
+        "volume semanal",
+        "OMS 2020"
+      ],
+      "document_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "alguma-atividade-moderada-ou-vigorosa-mesmo-abaixo-de-150-min-reduz-risco-ascvd",
+      "statement": "Para adultos que não conseguem atingir o mínimo de 150 minutos por semana de atividade aeróbica moderada ou 75 minutos de vigorosa, realizar alguma atividade de intensidade moderada ou vigorosa, mesmo abaixo desse volume, pode ser benéfico para reduzir o risco de doença aterosclerótica. A OMS 2020 registra como boa prática que alguma atividade é melhor do que nenhuma.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B-NR",
+      "society": "ACC/AHA",
+      "year": 2019,
+      "guideline_title": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease",
+      "reference": "Arnett DK et al. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. Seção 3.2, recomendação 3. Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350. A SBC 2019 Tabela 8.3 classifica volume abaixo de 150/75 min como Classe IIa, nível B (PMID: 31691761).",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "atividade física",
+        "sedentarismo",
+        "prevenção primária",
+        "volume abaixo do mínimo"
+      ],
+      "document_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "diminuir-comportamento-sedentario-pode-ser-razoavel-para-reduzir-risco-ascvd",
+      "statement": "Diminuir o comportamento sedentário em adultos pode ser razoável para reduzir o risco de doença aterosclerótica. A OMS 2020 recomenda limitar o tempo sedentário e substituí-lo por atividade de qualquer intensidade, inclusive leve (recomendação forte, certeza moderada), sem quantificar um limiar de horas.",
+      "recommendation_class": "IIb",
+      "evidence_level": "C-LD",
+      "society": "ACC/AHA",
+      "year": 2019,
+      "guideline_title": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease; WHO 2020 guidelines on physical activity and sedentary behaviour",
+      "reference": "Arnett DK et al. Circulation. 2019;140(11):e596-e646. PMID: 30879355. Seção 3.2, recomendação 4 (definição: gasto ≤1,5 MET em postura sentada ou reclinada). Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350 — evidência insuficiente para um corte numérico de tempo sedentário.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "sedentarismo",
+        "prevenção primária",
+        "tempo sentado"
+      ],
+      "document_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "fortalecimento-muscular-dois-ou-mais-dias-por-semana-em-adultos-who-2020",
+      "statement": "Adultos devem também realizar atividades de fortalecimento muscular de intensidade moderada ou maior, envolvendo os grandes grupos musculares, em 2 ou mais dias por semana, porque isso acrescenta benefício de saúde.",
+      "recommendation_class": "forte",
+      "evidence_level": "certeza moderada",
+      "society": "OMS",
+      "year": 2020,
+      "guideline_title": "WHO 2020 guidelines on physical activity and sedentary behaviour",
+      "reference": "Bull FC, Al-Ansari SS, Biddle S, et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54(24):1451-1462. DOI: 10.1136/bjsports-2020-102955. PMID: 33239350. Texto da recomendação para adultos 18–64 anos conferido em NCBI Bookshelf NBK566046 (recomendação forte, certeza moderada). A ESC 2021 recomenda exercício resistido além do aeróbico em 2 ou mais dias por semana para reduzir mortalidade por todas as causas — par classe/nível da tabela ESC: VERIFICAÇÃO HUMANA NECESSÁRIA nesta sessão.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "exercício resistido",
+        "fortalecimento muscular",
+        "prevenção primária",
+        "OMS 2020"
+      ],
+      "document_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sedentario-assintomatico-sem-doenca-conhecida-inicia-exercicio-leve-moderado-sem-liberacao-acsm-2015",
+      "statement": "O adulto que não pratica exercício regular, não tem doença cardiovascular, metabólica ou renal conhecida e não tem sinais ou sintomas sugestivos dessas doenças pode iniciar programa de exercício em intensidade leve a moderada sem liberação médica adicional, progredindo gradualmente. O algoritmo ACSM 2015 baseia o encaminhamento em atividade atual, sintomas ou doença conhecida e intensidade pretendida — não na contagem de fatores de risco.",
+      "recommendation_class": null,
+      "evidence_level": null,
+      "society": "ACSM",
+      "year": 2015,
+      "guideline_title": "Updating ACSM's Recommendations for Exercise Preparticipation Health Screening",
+      "reference": "Riebe D, Franklin BA, Thompson PD, et al. Updating ACSM's Recommendations for Exercise Preparticipation Health Screening. Med Sci Sports Exerc. 2015;47(8):2473-2479. DOI: 10.1249/MSS.0000000000000664. PMID: 26473759. Ramos confirmados em Whitfield GP et al. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860. Não é classe COR/LOE ACC/AHA; é algoritmo de rastreio pré-participação. Classe/nível: não aplicável.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "pré-participação",
+        "ACSM",
+        "liberação médica",
+        "adulto assintomático"
+      ],
+      "document_slug": "fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "sedentario-assintomatico-sem-doenca-conhecida-quer-comecar-caminhada-acsm-2015",
+      "titulo": "Sedentário assintomático sem doença conhecida: precisa de teste ergométrico para começar a caminhar?",
+      "tema": "Prevenção e lipídios",
+      "nivel": "básico",
+      "enunciado": "Mulher, 48 anos, hipertensão controlada em monoterapia, sem diabetes, sem doença renal, sem evento cardiovascular. IMC 27. Nunca fez exercício estruturado. Sem dor torácica, dispneia, síncope, palpitação, claudicação ou edema. Quer começar caminhada rápida de 30 minutos, 5 dias por semana, por orientação de prevenção primária. Pergunta se precisa de teste ergométrico antes.",
+      "pergunta": "Segundo o algoritmo ACSM 2015 de rastreio pré-participação, qual é a conduta imediata?",
+      "opcoes": [
+        "Teste ergométrico obrigatório em todo sedentário acima de 45 anos antes de qualquer caminhada",
+        "Iniciar exercício leve a moderado sem liberação médica adicional, com progressão gradual — hipertensão isolada não dispara encaminhamento no algoritmo ACSM 2015",
+        "Proibir exercício até ECG, eco e Holter, porque toda avaliação pré-participação de exercício segue o protocolo de atleta",
+        "Só liberar se ela concordar em atingir 10 mil passos por dia desde a primeira semana"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O algoritmo ACSM 2015 (Riebe et al., PMID 26473759) deixou de usar contagem de fatores de risco como critério de encaminhamento. Os três eixos são: atividade atual, sintomas ou doença cardiovascular/metabólica/renal conhecida, e intensidade pretendida. Esta paciente é sedentária, assintomática, sem diabetes, sem DRC e sem doença cardiovascular conhecida; a caminhada rápida é intensidade moderada (3,0–5,9 METs na Tabela 4 da ACC/AHA 2019). Whitfield et al. (2017) descrevem exatamente este ramo: iniciar leve a moderado sem liberação, com progressão. Hipertensão isolada não é 'doença conhecida' que dispare o pedido. Teste ergométrico como rito de passagem de todo sedentário é o modelo que a ACSM quis reduzir. Avaliação de atleta (ECG com critérios específicos, elegibilidade) é outra pergunta, outra pasta. A meta de 10 mil passos não veio de ensaio e não é critério de liberação — ver o documento de Paluch já publicado.",
+      "source_refs": [
+        "Riebe D, Franklin BA, Thompson PD, et al. Updating ACSM's Recommendations for Exercise Preparticipation Health Screening. Med Sci Sports Exerc. 2015;47(8):2473-2479. DOI: 10.1249/MSS.0000000000000664. PMID: 26473759.",
+        "Arnett DK et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. PMID: 30879355."
+      ],
+      "review_status": "pendente_revisao"
+    },
+    {
+      "slug": "diabetico-tipo-2-assintomatico-sedentario-liberacao-antes-de-qualquer-intensidade-acsm",
+      "titulo": "Diabetes tipo 2 assintomático e sedentário: academia libera hoje?",
+      "tema": "Prevenção e lipídios",
+      "nivel": "intermediário",
+      "enunciado": "Homem, 56 anos, diabetes tipo 2 há 6 anos, HbA1c 7,2%, sem infarto, sem revascularização, sem claudicação, sem dor torácica, sem dispneia. Não pratica exercício regular (caminha menos de 30 minutos, menos de 3 dias por semana). Quer assinar plano anual de academia e começar treino de musculação e esteira no mesmo dia, sem avaliação prévia.",
+      "pergunta": "No algoritmo ACSM 2015, este paciente está em prevenção primária de evento aterosclerótico. O que o eixo de 'doença conhecida' muda na liberação?",
+      "opcoes": [
+        "Nada: diabetes não conta, porque ele nunca teve infarto — pode iniciar vigoroso hoje",
+        "Diabetes tipo 2 entra como doença metabólica conhecida; no sedentário assintomático a ACSM recomenda liberação médica antes de qualquer intensidade, e depois começar leve a moderado",
+        "Diabetes exige triagem de atleta com ECG obrigatório e desqualificação se houver qualquer alteração",
+        "Só precisa de liberação se a HbA1c estiver acima de 8%"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "Prevenção primária (sem doença aterosclerótica estabelecida) e 'doença metabólica conhecida' no algoritmo ACSM não são a mesma coisa. Diabetes tipo 1 ou 2 está na lista que dispara encaminhamento. No sedentário assintomático com essa doença, a conduta é liberação médica antes de qualquer intensidade; depois de liberado, começar leve a moderado e progredir. Não é reabilitação cardíaca (não há evento). Não é triagem de atleta. Não há corte de HbA1c nesse algoritmo. A prescrição em si — 150–300 min de moderado ou 75–150 de vigoroso, resistido 2 ou mais dias, reduzir tempo sedentário — vem da OMS 2020 / ACC/AHA 2019 e está no documento irmão de prescrição, não neste ramo de triagem.",
+      "source_refs": [
+        "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+        "Whitfield GP et al. Applying the ACSM Preparticipation Screening Algorithm to U.S. adults: NHANES 2001–04. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860.",
+        "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350."
+      ],
+      "review_status": "pendente_revisao"
+    },
+    {
+      "slug": "idosa-ja-caminha-quer-passar-a-correr-vigoroso-equilibrio-who-2020",
+      "titulo": "Idosa que já caminha e quer começar a correr: o que muda além da intensidade?",
+      "tema": "Prevenção e lipídios",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 71 anos, sem doença cardiovascular estabelecida, sem diabetes, sem DRC, assintomática. Caminha 40 minutos em ritmo que permite conversar, 4 dias por semana, há mais de um ano (cumpre o critério ACSM de exercício regular moderado). Quer passar a correr 3 vezes por semana. Não faz treino de força nem de equilíbrio.",
+      "pergunta": "O que está alinhado às fontes de prevenção primária (ACSM 2015 + OMS 2020) nesta transição?",
+      "opcoes": [
+        "Como ela já treina, é assintomática e não tem doença conhecida, pode progredir para vigoroso sem liberação; a OMS 2020 mantém o alvo aeróbico depois dos 65 anos e acrescenta atividade multicomponente com equilíbrio e força em 3 ou mais dias por semana",
+        "Depois dos 65 anos a OMS reduz o alvo aeróbico pela metade, então correr é contraindicado",
+        "Toda progressão para vigoroso em idoso exige Holter e eco, porque passou a ser atleta master",
+        "Basta contar 10 mil passos; resistido e equilíbrio são opcionais nesta faixa etária"
+      ],
+      "resposta_correta": 0,
+      "explicacao": "No algoritmo ACSM 2015, quem já pratica exercício regular, é assintomático e não tem doença CV/metabólica/renal conhecida pode continuar moderado ou vigoroso sem liberação e progredir. Correr é vigoroso (≥6 METs na Tabela 4 da ACC/AHA 2019). A OMS 2020 não corta o volume aeróbico no idoso (continua 150–300 min de moderado ou 75–150 de vigoroso); acrescenta o componente que esta paciente não faz: atividade multicomponente com ênfase em equilíbrio funcional e força, 3 ou mais dias por semana, para capacidade funcional e prevenção de quedas (recomendação forte, certeza moderada). Atleta master e elegibilidade são outra pergunta. Passos por dia no idoso têm platô em 6.000–8.000 na metanálise de Paluch — conversa de volume da vida diária, não substituto de força e equilíbrio.",
+      "source_refs": [
+        "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+        "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350. Recomendações para ≥65 anos em NCBI Bookshelf NBK566046.",
+        "Arnett DK et al. Circulation. 2019;140(11):e596-e646. PMID: 30879355. Tabela 4 (METs)."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "prescricao-fitt-exercicio-prevencao-primaria-adulto-nao-atleta",
+      "condicao": "Prescrição FITT de exercício em prevenção primária no adulto não atleta",
+      "resumo": "Itens mínimos para sair da consulta com volume, intensidade, resistido, tempo sedentário e progressão escritos — sem copiar reabilitação cardíaca nem triagem de atleta.",
+      "documento_origem": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "theme": "Prevenção e lipídios",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Bull FC et al. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350.",
+        "Arnett DK et al. Circulation. 2019;140(11):e596-e646. PMID: 30879355.",
+        "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID: 34458905. Seção 4.3.1.1 (FITT e progressão)."
+      ],
+      "itens": [
+        {
+          "id": "pp-confirmou-prevencao-primaria",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Confirmado que não há doença aterosclerótica estabelecida, revascularização, IC ou evento prévio — se houver, esta checklist não se aplica; usar reabilitação/prevenção secundária",
+          "origem_secao": "Abertura — o que este documento não é"
+        },
+        {
+          "id": "pp-nao-e-atleta",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Confirmado que a demanda não é esporte competitivo nem elegibilidade de atleta — se for, sair para Cardiologia do Esporte",
+          "origem_secao": "O que não misturar"
+        },
+        {
+          "id": "pp-aconselhamento-registrado",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Aconselhamento de estilo de vida fisicamente ativo registrado nesta visita (ACC/AHA 2019, Classe I B-R), não deixado como 'se der'",
+          "origem_secao": "Por que prescrever"
+        },
+        {
+          "id": "pp-volume-aerobico",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Volume aeróbico prescrito em minutos/semana: alvo de benefício substancial 150–300 min de moderado ou 75–150 min de vigoroso, ou combinação equivalente (OMS 2020). Piso ACC/AHA 2019: ≥150 / ≥75",
+          "origem_secao": "O que escrever no plano: volume"
+        },
+        {
+          "id": "pp-abaixo-do-minimo",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Se o paciente não atinge 150/75 min, registrado que alguma atividade moderada ou vigorosa ainda vale (ACC/AHA IIa B-NR; OMS: alguma atividade é melhor do que nenhuma) — não dispensar o sedentário por 'não vai cumprir a meta'",
+          "origem_secao": "O que escrever no plano: volume"
+        },
+        {
+          "id": "pp-intensidade-mets",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Intensidade traduzida em exemplo concreto (moderado = 3,0–5,9 METs, ex. caminhada rápida; vigoroso ≥6 METs) — não só o adjetivo 'moderado'",
+          "origem_secao": "Intensidade: o que é moderado e o que é vigoroso"
+        },
+        {
+          "id": "pp-resistido",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Exercício resistido prescrito em 2 ou mais dias por semana, grandes grupos musculares (OMS 2020). No descondicionado, começar com menos séries e carga menor",
+          "origem_secao": "Exercício resistido"
+        },
+        {
+          "id": "pp-sedentario",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Orientação para limitar tempo sentado e substituir por atividade de qualquer intensidade, inclusive leve — sem inventar um corte de horas que a OMS 2020 declara inexistente",
+          "origem_secao": "Tempo sedentário"
+        },
+        {
+          "id": "pp-idoso-equilibrio",
+          "categoria": "orientacao",
+          "obrigatorio": false,
+          "texto": "Se ≥65 anos: além do aeróbico e do resistido, atividade multicomponente com equilíbrio e força em 3 ou mais dias por semana (OMS 2020)",
+          "origem_secao": "Idoso em prevenção primária"
+        },
+        {
+          "id": "pp-progressao",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Progressão escrita: sedentário aumenta volume primeiro, depois intensidade; não saltar de zero para vigoroso (ESC 2021 seção 4.3.1)",
+          "origem_secao": "Como escrever a prescrição (FITT + progressão)"
+        },
+        {
+          "id": "pp-nao-confundir-passos",
+          "categoria": "orientacao",
+          "obrigatorio": false,
+          "texto": "Se o paciente mede passos: usar como volume da vida diária, sem substituir a prescrição estruturada nem repetir a meta comercial de 10 mil",
+          "origem_secao": "O que não misturar"
+        }
+      ]
+    },
+    {
+      "slug": "avaliacao-pre-participacao-exercicio-adulto-assintomatico-nao-atleta-acsm-2015",
+      "condicao": "Avaliação pré-participação de exercício no adulto assintomático não atleta",
+      "resumo": "Três eixos do algoritmo ACSM 2015 — atividade atual, sintomas ou doença CV/metabólica/renal, intensidade pretendida — com saídas explícitas para reabilitação e para cardiologia do esporte.",
+      "documento_origem": "fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico",
+      "theme": "Prevenção e lipídios",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Riebe D et al. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+        "Whitfield GP et al. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860.",
+        "Précoma DB et al. Arq Bras Cardiol. 2019;113(4):787-891. PMID: 31691761. Capítulo 8."
+      ],
+      "itens": [
+        {
+          "id": "pre-nao-e-secundaria",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Doença aterosclerótica estabelecida, revascularização, IC ou evento prévio ausentes — se presentes, sair para reabilitação/prevenção secundária",
+          "origem_secao": "Árvore de decisão (ramo C0)"
+        },
+        {
+          "id": "pre-nao-e-atleta",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Demanda não é esporte competitivo, atleta master de alto volume nem retorno ao esporte após diagnóstico — se for, sair para Cardiologia do Esporte",
+          "origem_secao": "Árvore de decisão (ramo C00)"
+        },
+        {
+          "id": "pre-sintomas",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Lista ACSM de sintomas sugestivos conferida (dor torácica ou equivalente, dispneia em repouso ou esforço leve, síncope/tontura, ortopneia/DPEN, edema de tornozelo, palpitação, claudicação, sopro conhecido, fadiga/dispneia desproporcional). Qualquer item positivo: não iniciar ou interromper, avaliar antes de qualquer intensidade",
+          "origem_secao": "Lista operacional de sintomas"
+        },
+        {
+          "id": "pre-exercicio-regular",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Exercício regular classificado pelo critério ACSM (últimos 3 meses, ≥30 min, ≥3 dias/semana, intensidade moderada) — não por autopercepção ('eu me acho ativo')",
+          "origem_secao": "Definição de 'já treina'"
+        },
+        {
+          "id": "pre-doenca-conhecida",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Doença cardiovascular, metabólica ou renal conhecida pesquisada (inclui diabetes tipo 1 ou 2 e DRC). Pneumopatia isolada não dispara encaminhamento automático no algoritmo 2015. Fatores de risco isolados (hipertensão, dislipidemia, idade) não reintroduzem a contagem antiga",
+          "origem_secao": "O que a árvore não é"
+        },
+        {
+          "id": "pre-intensidade-pretendida",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Intensidade pretendida classificada (leve/moderada vs. vigorosa). Quem já treina, tem doença conhecida e quer vigoroso precisa de liberação antes de subir a intensidade",
+          "origem_secao": "Árvore de decisão (ramos C5/C6)"
+        },
+        {
+          "id": "pre-sedentario-sem-doenca",
+          "categoria": "orientacao",
+          "obrigatorio": false,
+          "texto": "Se sedentário, assintomático e sem doença conhecida: autorizado início leve a moderado sem liberação adicional, com progressão — não transformar isso em pedido automático de teste ergométrico",
+          "origem_secao": "Como usar a árvore sem transformá-la em barreira"
+        },
+        {
+          "id": "pre-sedentario-com-doenca",
+          "categoria": "orientacao",
+          "obrigatorio": false,
+          "texto": "Se sedentário assintomático com doença conhecida: liberação médica antes de qualquer intensidade; depois começar leve a moderado",
+          "origem_secao": "Árvore de decisão (ramo C3)"
+        },
+        {
+          "id": "pre-ecg-brasileiro",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "No contexto SBC 2019, anamnese e exame físico desta consulta já feitos; ECG de consultório, se solicitado, não foi usado como pedágio para caminhada nem confundido com triagem de atleta. Teste ergométrico/TCPE só se indicação individualizada",
+          "origem_secao": "Como usar a árvore sem transformá-la em barreira"
+        },
+        {
+          "id": "pre-prescricao-depois",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Depois da árvore, a prescrição (volume, resistido, sedentário, progressão) foi escrita — triagem sem prescrição não completa a consulta",
+          "origem_secao": "Depois da árvore"
+        }
+      ]
+    }
+  ],
+  "materiais": [
+    {
+      "slug": "como-comecar-a-se-mexer-mesmo-que-ainda-nao-consiga-150-minutos",
+      "titulo": "Como começar a se mexer — mesmo que 150 minutos por semana ainda pareçam longe",
+      "subtitulo": "Alguma atividade já vale. O primeiro passo é sair do zero, não acertar a meta perfeita.",
+      "tema": "Prevenção e lipídios",
+      "documento_slug": "prescricao-de-exercicio-em-prevencao-primaria-cardiovascular",
+      "review_status": "pendente_revisao",
+      "resumo": "Orientação para quem ainda não tem doença do coração estabelecida e ouviu do médico que precisa se mexer: o que as diretrizes realmente pedem, o que conta como atividade moderada, por que musculação também entra, e por que não precisa esperar ficar 'pronto' para começar.",
+      "secoes": [
+        {
+          "titulo": "O número que você vai ouvir: 150 a 300 minutos",
+          "paragrafos": [
+            "A Organização Mundial da Saúde recomenda que adultos façam de 150 a 300 minutos por semana de atividade aeróbica de intensidade moderada — ou de 75 a 150 minutos de atividade mais intensa — espalhados ao longo da semana. Isso não é um número inventado de aplicativo: está na diretriz de 2020 da OMS.",
+            "Cento e cinquenta minutos são duas horas e meia. Podem ser 30 minutos em 5 dias, ou um volume parecido concentrado em menos dias, se essa for a sua rotina. O que as evidências mostram é que atingir o volume importa mais do que distribuir direitinho todos os dias."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Se você não chega a 150 minutos, ainda assim comece",
+          "paragrafos": [
+            "A própria OMS diz que alguma atividade é melhor do que nenhuma. A diretriz americana de prevenção primária (ACC/AHA 2019) transforma isso em recomendação formal: mesmo abaixo do mínimo, mexer-se em intensidade moderada ou vigorosa já pode reduzir risco cardiovascular.",
+            "O maior ganho costuma estar em sair do sedentarismo, não em chegar ao topo da tabela. Por isso a meta alta demais, logo na primeira semana, desanima mais do que ajuda."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que conta como moderado",
+          "paragrafos": [
+            "Moderado é o esforço em que você ainda consegue conversar, mas não cantarolar com folga — caminhada rápida, bicicleta em ritmo confortável, natação recreativa, dança. Nas tabelas médicas isso corresponde a cerca de 3 a 6 vezes o gasto de energia de estar parado.",
+            "Vigoroso é correr, pedalar forte, nadar ruas, tênis individual. Não é por aí que a maioria das pessoas deve começar se estava parada."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Musculação também faz parte",
+          "paragrafos": [
+            "Além do aeróbico, a OMS pede atividades que fortaleçam os músculos grandes (pernas, quadril, costas, abdômen, peito, ombros e braços) em 2 ou mais dias por semana. Pode ser peso, elástico, aparelho ou o próprio corpo.",
+            "Quem tem 65 anos ou mais ganha um terceiro recado: incluir exercícios de equilíbrio e força juntos, em 3 ou mais dias, para reduzir o risco de queda. Caminhar só não cobre esse pedaço."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Sentar o dia inteiro também conta — contra você",
+          "paragrafos": [
+            "Mesmo quem 'já se exercita de manhã' se beneficia de interromper o tempo longo sentado com movimento leve: levantar, caminhar até outro cômodo, cozinhar. A OMS não fixa um número mágico de horas sentado a partir do qual o dano começa; pede para sentar menos e trocar esse tempo por qualquer movimento."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor ou aperto no peito, pescoço, mandíbula ou braço durante o esforço",
+        "Falta de ar desproporcional, em repouso ou no mínimo esforço",
+        "Tontura, quase desmaio ou desmaio",
+        "Palpitação nova, inchaço nas pernas ou dor na panturrilha ao caminhar que some com o repouso",
+        "Cansaço novo e muito maior do que o esperado para a atividade habitual"
+      ],
+      "perguntas": [
+        "Preciso de um teste de esteira para começar a caminhar? Na maioria das pessoas adultas assintomáticas, sem diabetes, sem doença renal e sem doença do coração conhecida, as recomendações internacionais permitem começar em ritmo leve a moderado e ir aumentando. Quem tem sintoma, diabetes, doença renal ou já teve problema no coração precisa ser avaliado antes. Isso o médico decide com você — não a academia.",
+        "E os 10 mil passos? Essa meta não veio de estudo científico. Caminhar mais ajuda, e boa parte do benefício aparece antes dos 10 mil, especialmente depois dos 60 anos. Passos são um jeito de medir o dia; não substituem o treino de força nem a conversa com o médico.",
+        "Se eu só consigo treinar no fim de semana, está errado? Não necessariamente. Para o coração, atingir o volume de atividade moderada a vigorosa na semana importou mais, num grande estudo, do que espalhar esse volume em todos os dias. Evite só o salto brusco de zero a esforço muito intenso, por causa de lesão.",
+        "Tenho pressão alta. Ainda assim posso começar? Pressão alta isolada, controlada, não é o mesmo que ter tido infarto. A decisão de começar caminhada moderada é comum e faz parte do tratamento. Não copie por conta própria o treino de quem está em reabilitação depois de um infarto."
+      ],
+      "fontes": [
+        "Bull FC et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54(24):1451-1462. PMID: 33239350.",
+        "Arnett DK et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. PMID: 30879355.",
+        "Riebe D et al. Updating ACSM's Recommendations for Exercise Preparticipation Health Screening. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759."
+      ]
+    },
+    {
+      "slug": "antes-de-comecar-academia-quando-procurar-o-medico",
+      "titulo": "Antes de começar a academia: quando você precisa passar no médico primeiro",
+      "subtitulo": "Sintoma, diabetes, rim ou coração já doente mudam a ordem. Caminhada em quem está bem e parado, em geral, não espera um exame especial.",
+      "tema": "Prevenção e lipídios",
+      "documento_slug": "fluxograma-avaliacao-pre-participacao-exercicio-adulto-assintomatico",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para o adulto que não é atleta e quer começar ou aumentar exercício. Explica, em linguagem leiga, o raciocínio que o médico usa: sintomas, se você já treina de verdade, se tem diabetes ou doença no rim, e se o plano é leve ou muito intenso.",
+      "secoes": [
+        {
+          "titulo": "Três perguntas, não uma lista infinita de exames",
+          "paragrafos": [
+            "A recomendação internacional mais usada para isso (ACSM, 2015) não pede que todo mundo some 'pontos de risco' para decidir se pode caminhar. Ela faz três perguntas: você já se exercita com regularidade? Tem sintoma ou doença conhecida do coração, metabolismo (como diabetes) ou rim? Qual intensidade você quer fazer agora?",
+            "Isso existe para não transformar o conselho 'se mexa' numa fila de exames que impede a pessoa de começar."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que é 'já me exercito de verdade'",
+          "paragrafos": [
+            "Não é ir ao mercado a pé de vez em quando. O critério usado é: nos últimos 3 meses, pelo menos 30 minutos, em 3 ou mais dias por semana, num ritmo moderado. Quem está abaixo disso entra como quem ainda vai começar — e isso não é crítica, é só classificação para decidir o próximo passo com segurança."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Quando parar e procurar avaliação antes",
+          "paragrafos": [
+            "Se aparece dor no peito, falta de ar estranha, desmaio, palpitação nova, inchaço nas pernas ou dor na panturrilha ao andar, a pessoa deixou de ser 'assintomática'. Aí o exercício espera a avaliação, mesmo que ela já corra há anos.",
+            "Quem tem diabetes ou doença no rim e estava parado também deve ser avaliado antes de qualquer intensidade, mesmo sem sintoma. Quem já teve infarto, stent, cirurgia do coração ou insuficiência cardíaca não está neste texto — isso é reabilitação, com equipe e plano próprios."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Isso não é o 'exame do atleta'",
+          "paragrafos": [
+            "Quem compete, é atleta ou volta a um esporte depois de um diagnóstico cardíaco segue outro caminho, com outros exames. Começar caminhada ou academia na vida comum não usa essa ficha."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor ou aperto no peito no esforço ou em repouso",
+        "Falta de ar nova ou desproporcional",
+        "Desmaio, quase desmaio ou tontura no esforço",
+        "Palpitação, inchaço nas pernas, sopro que você já soube que tinha",
+        "Cansaço ou falta de ar nas tarefas que antes eram fáceis"
+      ],
+      "perguntas": [
+        "Tenho pressão alta e colesterol alto. Preciso de teste de esteira mesmo assim? Pressão e colesterol, sozinhos, não são o gatilho desse algoritmo internacional. O médico ainda pode pedir ECG ou outro exame na consulta, especialmente no Brasil, mas isso não deve virar uma barreira para começar caminhada leve a moderada se você está sem sintomas e sem diabetes, sem doença no rim e sem doença do coração conhecida.",
+        "A academia disse que só treina com atestado. O atestado é decisão clínica, não um formulário genérico de atleta. Leve a lista de sintomas e o que você pretende fazer (caminhar, musculação, correr). O médico decide se libera moderado agora ou se precisa investigar.",
+        "Já caminho e quero começar a correr. Muda alguma coisa? Se você já treina com regularidade, não tem sintoma e não tem diabetes nem doença do coração ou do rim, a progressão para um esforço mais intenso costuma ser permitida. Ainda assim, aumente aos poucos e acrescente força e, se tiver 65 anos ou mais, equilíbrio."
+      ],
+      "fontes": [
+        "Riebe D et al. Updating ACSM's Recommendations for Exercise Preparticipation Health Screening. Med Sci Sports Exerc. 2015;47(8):2473-2479. PMID: 26473759.",
+        "Whitfield GP et al. Applying the ACSM Preparticipation Screening Algorithm to U.S. adults. Med Sci Sports Exerc. 2017;49(10):2056-2063. PMID: 28557860.",
+        "Précoma DB et al. Atualização da Diretriz de Prevenção Cardiovascular da SBC – 2019. Arq Bras Cardiol. 2019;113(4):787-891. PMID: 31691761."
+      ]
+    }
+  ],
+  "retido_propositalmente": [
+    "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria.md — prevenção SECUNDÁRIA, não duplicar",
+    "passos-por-dia-e-mortalidade-o-que-substitui-a-meta-dos-10-mil.md — referenciado, não clonado",
+    "tempo-sentado-e-atividade-fisica-a-dose-que-anula-o-risco.md — referenciado",
+    "atividade-fisica-concentrada-no-fim-de-semana-e-risco-cardiovascular.md — referenciado",
+    "Pasta Cardiologia_do_Esporte_e_do_Exercício (triagem ECG atleta, elegibilidade) — fora de escopo"
+  ],
+  "verificacao_humana_necessaria": [
+    "Par classe/nível de cada linha da tabela ESC 2021 de atividade física (especialmente exercício resistido: I vs IIa).",
+    "FITT numérico de resistido da seção 4.3.1.3 ESC 2021 (séries, repetições, %1RM) contra a página impressa.",
+    "Prazo de 'liberação nos últimos 12 meses' para quem já treina, tem doença conhecida e quer vigoroso — confirmar se está no Riebe 2015 ou só em edições posteriores do ACSM GETP.",
+    "Figura original e errata 2016 do algoritmo ACSM 2015.",
+    "Tabelas FITT do consenso EXPERT 2018 (Hansen, PMID 29729003) por combinação de fatores de risco — abstract apenas nesta sessão.",
+    "Classe/nível específica do exercício resistido isolado na Tabela 8.3 da SBC 2019."
+  ]
+}

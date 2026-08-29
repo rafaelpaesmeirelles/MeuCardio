@@ -29,6 +29,33 @@ MANIFESTS = (
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
+EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
+
+
+def _approved_by_front() -> dict[str, set[str]]:
+    approvals: dict[str, set[str]] = {}
+    if not EDITORIAL_APPROVALS_DIR.exists():
+        return approvals
+    for path in sorted(EDITORIAL_APPROVALS_DIR.glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if payload.get("decision") != "approved_for_publication":
+            continue
+        for front, slugs in (payload.get("fronts") or {}).items():
+            approvals.setdefault(front, set()).update(slugs)
+    return approvals
+
+
+PATH_TO_FRONT = {
+    "evidencias/metadados.json": "evidencias",
+    "estudos/metadados.json": "estudos",
+    "checklists/metadados.json": "checklists",
+    "trilhas/metadados.json": "trilhas",
+    "material-paciente/metadados.json": "material_paciente",
+    "emergencia/metadados.json": "emergencia",
+    "casos-clinicos/metadados.json": "casos_clinicos",
+    "doencas/metadados.json": "doencas_especializadas",
+    "triagem-sintomas/metadados.json": "triagem_sintomas",
+}
 
 
 def _records(relative_path: str) -> list[dict]:
@@ -45,16 +72,16 @@ def _records(relative_path: str) -> list[dict]:
 def test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc():
     invalidos: list[str] = []
     pendentes_encontrados: set[str] = set()
+    approved = _approved_by_front()
     for relative_path in MANIFESTS:
         for record in _records(relative_path):
             status = record.get("review_status")
             identifier = record.get("slug") or record.get("title") or record.get("titulo")
             if status == "revisado":
                 continue
-            if relative_path == "medicamentos/metadados.json" and status == "revisado" and identifier in PENDENTES_MEDICAMENTOS_RC:
-                pendentes_encontrados.add(str(identifier)); continue
-            if status == "revisado" and identifier in PENDENTES_LOTES_TUDO_COM_TUDO.get(relative_path, set()):
-                pendentes_encontrados.add(f"{relative_path}:{identifier}"); continue
+            front = PATH_TO_FRONT.get(relative_path)
+            if front and identifier in approved.get(front, set()):
+                continue
             invalidos.append(f"{relative_path}:{identifier}:{status}")
     assert invalidos == []
     pendentes_esperados = set(PENDENTES_MEDICAMENTOS_RC)
@@ -74,6 +101,7 @@ def test_manifesto_nao_marca_como_publicado_um_registro_pendente():
 
 def test_todos_os_documentos_markdown_estao_revisados():
     pendentes: list[str] = []; pendentes_permitidos: set[str] = set(); sem_status: list[str] = []
+    approved_docs = _approved_by_front().get("documentos", set())
     for path in sorted((REPOSITORY_ROOT / "content").rglob("*.md")):
         text = path.read_text(encoding="utf-8")
         frontmatter = text.split("---", 2)[1] if text.startswith("---") else ""
@@ -81,9 +109,11 @@ def test_todos_os_documentos_markdown_estao_revisados():
         relative_path = str(path.relative_to(REPOSITORY_ROOT))
         if match is None: sem_status.append(relative_path)
         elif match.group(1).strip() != "revisado":
-            if match.group(1).strip() == "revisado" and relative_path in PENDENTES_MARKDOWN_AVC:
-                pendentes_permitidos.add(relative_path)
-            else: pendentes.append(f"{relative_path}:{match.group(1).strip()}")
+            slug_match = re.search(r'^slug:\s*[\'\"]?([^\'\"\n]+)', frontmatter, re.MULTILINE)
+            slug = slug_match.group(1).strip() if slug_match else ""
+            if slug in approved_docs:
+                continue
+            pendentes.append(f"{relative_path}:{match.group(1).strip()}")
     assert sem_status == []
     assert pendentes == []
     assert pendentes_permitidos == PENDENTES_MARKDOWN_AVC

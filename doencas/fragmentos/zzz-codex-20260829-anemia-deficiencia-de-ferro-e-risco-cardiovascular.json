@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "anemia-deficiencia-de-ferro-e-risco-cardiovascular",
+    "name": "Anemia, deficiência de ferro e risco cardiovascular",
+    "aliases": [
+      "anemia e coração",
+      "deficiência de ferro e insuficiência cardíaca",
+      "ferro e doença cardiovascular",
+      "anemia cardiovascular"
+    ],
+    "area": "geral",
+    "category": "comorbidade_cardiovascular",
+    "subtype": "hematologica_metabolica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Anemia e deficiência de ferro são frequentes em doença cardiovascular e podem reduzir oferta de oxigênio, capacidade funcional e reserva hemodinâmica. Na insuficiência cardíaca, deficiência de ferro pode existir com ou sem anemia e constitui alvo terapêutico específico em pacientes selecionados. A causa da anemia deve ser investigada antes de atribuí-la à cardiopatia; transfusão e ferro intravenoso têm indicações distintas e não são intercambiáveis.",
+    "epidemiology": "Anemia é comum em idosos, doença renal crônica, insuficiência cardíaca e hospitalizações cardiovasculares. Deficiência de ferro é frequente na insuficiência cardíaca e associa-se a pior capacidade funcional e prognóstico. A evidência para ferro intravenoso é mais robusta em insuficiência cardíaca sintomática com deficiência de ferro documentada; não deve ser extrapolada automaticamente para toda anemia ou para prevenção cardiovascular primária.",
+    "presentation": [
+      "Fadiga, dispneia, intolerância ao esforço, palpitações, tontura e piora funcional podem ocorrer, mas são inespecíficos e se sobrepõem a insuficiência cardíaca, doença pulmonar e descondicionamento.",
+      "Anemia importante pode precipitar ou agravar angina, taquicardia e descompensação de insuficiência cardíaca em pacientes com reserva cardiovascular limitada.",
+      "Deficiência de ferro pode reduzir desempenho físico mesmo sem anemia franca.",
+      "Sangramento gastrointestinal oculto, perdas menstruais, doença renal, inflamação crônica, neoplasia, deficiência de B12/folato e distúrbios medulares devem ser considerados conforme o padrão hematológico e o contexto.",
+      "Anticoagulantes e antiagregantes aumentam a relevância de procurar sangramento quando hemoglobina cai sem explicação."
+    ],
+    "diagnostic_approach": {
+      "confirmacao": "Confirmar anemia pelo hemograma e interpretar VCM, RDW, reticulócitos e tendência temporal; uma única hemoglobina baixa durante expansão volêmica ou doença aguda pode não refletir o estado basal.",
+      "ferro": "Avaliar ferritina e saturação de transferrina (TSAT) quando deficiência de ferro é provável ou quando há insuficiência cardíaca. Na IC, as definições usadas em ensaios/diretrizes devem ser aplicadas ao fenótipo e ao momento clínico, reconhecendo que ferritina é reagente de fase aguda.",
+      "etiologia": "Investigar perdas, deficiência nutricional, doença renal, inflamação, hemólise e doença hematológica conforme o perfil. Deficiência de ferro em adulto exige procurar fonte de perda, especialmente gastrointestinal, quando apropriado.",
+      "cardiovascular": "Determinar se a anemia está contribuindo para isquemia, taquicardia ou descompensação de IC e se há necessidade de intervenção urgente, sem tratar apenas o número da hemoglobina.",
+      "transfusao": "Decisão transfusional deve integrar hemoglobina, sintomas, sangramento, isquemia, estabilidade e comorbidades. Em infarto agudo do miocárdio, a evidência recente não sustenta tratar o contexto como equivalente ao de pacientes estáveis sem isquemia."
+    },
+    "differentials": [
+      "Deficiência de ferro absoluta ou funcional",
+      "Anemia da doença renal crônica",
+      "Anemia de inflamação/doença crônica",
+      "Sangramento gastrointestinal ou geniturinário",
+      "Deficiência de vitamina B12 ou folato",
+      "Hemólise",
+      "Doença medular ou neoplasia",
+      "Hemodiluição em congestão/expansão volêmica",
+      "Hemoglobinopatias conforme epidemiologia e história"
+    ],
+    "tests": [
+      "Hemograma completo com índices eritrocitários e contagem de reticulócitos conforme contexto.",
+      "Ferritina e saturação de transferrina; ferro sérico isolado não é suficiente para definir o estado de ferro.",
+      "Creatinina/TFGe, urina e avaliação renal quando apropriado.",
+      "Vitamina B12, folato, marcadores de hemólise, função tireoidiana e investigação inflamatória conforme padrão clínico.",
+      "Pesquisa de fonte de sangramento gastrointestinal quando deficiência de ferro não tem causa evidente, especialmente em homens e mulheres pós-menopausa.",
+      "ECG/troponina e investigação de isquemia quando sintomas sugerirem síndrome coronariana aguda.",
+      "Na insuficiência cardíaca, integrar ferro com classe funcional, congestão, função renal, hemoglobina e terapia modificadora de prognóstico."
+    ],
+    "red_flags": [
+      "Anemia com instabilidade hemodinâmica, sangramento ativo importante, síncope recorrente, choque ou hipoperfusão requer avaliação emergencial.",
+      "Dor torácica ou alterações isquêmicas em paciente anêmico exigem investigação de síndrome coronariana aguda; anemia pode ser precipitante, agravante ou consequência de sangramento.",
+      "Queda aguda e inexplicada de hemoglobina em uso de anticoagulante/antiagregante exige procurar sangramento oculto ou ativo.",
+      "Dispneia aguda/congestão após transfusão sugere sobrecarga circulatória associada à transfusão e requer manejo imediato.",
+      "Pancitopenia, blastos, hemólise intensa ou sinais de doença medular exigem avaliação hematológica urgente."
+    ],
+    "ambulatory_flow": [
+      "Confirmar anemia e caracterizar padrão hematológico e tendência temporal.",
+      "Solicitar ferritina e TSAT quando deficiência de ferro for plausível ou em insuficiência cardíaca sintomática.",
+      "Investigar e tratar a causa; não usar ferro empiricamente por tempo prolongado sem confirmar deficiência quando a etiologia não é evidente.",
+      "Em HFrEF com deficiência de ferro, a AHA/ACC/HFSA 2022 considera razoável ferro intravenoso para melhorar estado funcional e qualidade de vida (Classe IIa, nível B-R).",
+      "A atualização ESC 2023 incorporou ferro intravenoso em pacientes sintomáticos com HFrEF/HFmrEF e deficiência de ferro para melhora de sintomas/qualidade de vida e consideração para reduzir hospitalizações por IC, conforme formulação estudada e elegibilidade.",
+      "Não usar agentes estimuladores de eritropoiese em insuficiência cardíaca apenas para melhorar morbidade/mortalidade; AHA/ACC/HFSA classifica essa estratégia como Classe III: dano, nível B-R.",
+      "Reavaliar hemograma e parâmetros de ferro após tratamento no intervalo apropriado e evitar sobrecarga de ferro."
+    ],
+    "emergency_flow": [
+      "Tratar primeiro sangramento, choque, isquemia e descompensação de insuficiência cardíaca quando presentes.",
+      "Transfusão de hemácias deve ser individualizada; em infarto agudo do miocárdio com anemia, MINT comparou estratégia restritiva (limiar 7–8 g/dL) a liberal (<10 g/dL) e não demonstrou redução estatisticamente significativa de morte ou reinfarto com a estratégia liberal, embora dano potencial da estratégia restritiva não tenha sido excluído.",
+      "A metanálise individual posterior dos ensaios em IAM reforça incerteza sobre limiar único e recomenda cautela com restrição extrema em isquemia miocárdica.",
+      "Em pacientes com congestão ou insuficiência cardíaca, considerar risco de sobrecarga volêmica relacionado à transfusão e monitorizar cuidadosamente."
+    ],
+    "treatment_summary": "Tratar a causa da anemia e a deficiência de ferro documentada. Em HFrEF com deficiência de ferro, ferro IV é razoável para melhorar capacidade funcional/qualidade de vida segundo AHA/ACC/HFSA 2022 (IIa, B-R); ESC 2023 também recomenda/considera ferro IV em fenótipo sintomático HFrEF/HFmrEF para sintomas/qualidade de vida e redução de hospitalizações conforme a formulação estudada. Eritropoetina não deve ser usada na IC para melhorar desfechos (III: dano, B-R). Transfusão é intervenção distinta, reservada a cenários clínicos apropriados e individualizada especialmente em IAM.",
+    "monitoring": [
+      "Hemoglobina/hematócrito e índices eritrocitários conforme gravidade e etiologia.",
+      "Ferritina e TSAT após reposição de ferro no intervalo clinicamente apropriado.",
+      "Função renal e potássio em pacientes com IC/DRC conforme terapia concomitante.",
+      "Sintomas, classe funcional, capacidade de exercício e hospitalizações por insuficiência cardíaca.",
+      "Evidência de sangramento em pacientes em antitrombóticos.",
+      "Sinais de sobrecarga de ferro quando houver reposições repetidas."
+    ],
+    "special_populations": [
+      "Insuficiência cardíaca: deficiência de ferro deve ser procurada independentemente da presença de anemia; evidência terapêutica é específica e não autoriza ferro IV indiscriminado.",
+      "Infarto agudo do miocárdio: o limiar transfusional é mais controverso do que em pacientes clínicos estáveis sem isquemia; usar evidência do MINT e julgamento clínico.",
+      "Doença renal crônica: anemia e deficiência de ferro têm mecanismos e metas próprias; coordenar com nefrologia quando avançada e não extrapolar recomendações de IC para uso de ESA.",
+      "Anticoagulação/antiagregação: queda de hemoglobina exige busca ativa de sangramento antes de atribuir a anemia à doença crônica.",
+      "Idosos: causas múltiplas são comuns; deficiência de ferro, DRC, inflamação, neoplasia e deficiência de B12 podem coexistir.",
+      "Gestação: limites diagnósticos e estratégia de reposição são específicos e requerem protocolo obstétrico."
+    ],
+    "assistant_questions": [
+      {"id": "acute_bleeding", "label": "Há sangramento ativo, instabilidade ou queda aguda importante de hemoglobina?", "type": "boolean", "required": true, "section": "Red flags"},
+      {"id": "heart_failure", "label": "Há insuficiência cardíaca sintomática?", "type": "boolean", "section": "Fenótipo"},
+      {"id": "iron_studies", "label": "Ferritina e saturação de transferrina estão disponíveis?", "type": "boolean", "section": "Ferro"},
+      {"id": "acute_mi", "label": "Há infarto agudo do miocárdio ou isquemia miocárdica em curso?", "type": "boolean", "section": "Isquemia"},
+      {"id": "antithrombotic", "label": "O paciente usa anticoagulante ou antiagregante?", "type": "boolean", "section": "Sangramento"}
+    ],
+    "assistant_rules": [
+      {"id": "anemia-bleeding-redflag", "priority": 100, "when": {"all": [{"field": "acute_bleeding", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Anemia associada a sangramento/instabilidade requer avaliação imediata."], "emergency_flow": ["Estabilizar, localizar/controlar sangramento e individualizar transfusão conforme quadro clínico."]}},
+      {"id": "hf-iron", "priority": 80, "when": {"all": [{"field": "heart_failure", "op": "truthy"}]}, "add": {"suggested_tests": ["Ferritina e saturação de transferrina"], "supporting": ["Na insuficiência cardíaca, deficiência de ferro pode ser relevante mesmo sem anemia."]}},
+      {"id": "mi-anemia", "priority": 90, "when": {"all": [{"field": "acute_mi", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["IAM com anemia exige estratégia transfusional individualizada; não aplicar automaticamente limiar restritivo de pacientes estáveis sem isquemia."]}},
+      {"id": "antithrombotic-anemia", "priority": 70, "when": {"all": [{"field": "antithrombotic", "op": "truthy"}]}, "add": {"supporting": ["Em uso de antitrombóticos, queda de hemoglobina aumenta a prioridade de excluir sangramento oculto ou ativo."]}}
+    ],
+    "tags": ["anemia", "deficiencia de ferro", "ferro intravenoso", "insuficiencia cardiaca", "MINT", "ferritina", "TSAT", "transfusao"],
+    "source_refs": [
+      "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. doi:10.1161/CIR.0000000000001063.",
+      "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44:3627-3639.",
+      "Carson JL, Brooks MM, Hébert PC, et al. Restrictive or Liberal Transfusion Strategy in Myocardial Infarction and Anemia. N Engl J Med. 2023;389:2446-2456. doi:10.1056/NEJMoa2307983. PMID:37952133.",
+      "Carson JL, et al. Restrictive versus Liberal Transfusion in Myocardial Infarction – A Patient-Level Meta-Analysis. NEJM Evidence. 2025. PMID:39714935."
+    ],
+    "source_urls": [
+      "https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of-heart-failure",
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/focused-update-on-heart-failure/",
+      "https://pubmed.ncbi.nlm.nih.gov/37952133/",
+      "https://pubmed.ncbi.nlm.nih.gov/39714935/"
+    ],
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Novo hub aditivo de anemia/ferro com ênfase cardiovascular. PRs #249/#284 têm checklists de deficiência de ferro na IC, mas não criam hub de doença; busca na main não confirmou documento central com slug estável para relacionamento, então related_document_slugs permanece vazio. Manter pendente até revisão editorial humana."
+  }
+]

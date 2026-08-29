@@ -1,0 +1,277 @@
+{
+  "lote": "hf-advor-clorotic",
+  "titulo": "Próxima camada diurética após a alça — ADVOR (acetazolamida) e CLOROTIC (hidroclorotiazida)",
+  "created": "2026-08-29",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "tema": "Insuficiência cardíaca",
+  "fonte_producao": "grok",
+  "review_status": "pendente_revisao",
+  "nota": "Lote novo. Não edita os documentos já publicados de mecanismos/CLOROTIC, de resistência ampla, de natriurese guiada nem de titulação pós-alta — só os liga. Números do ADVOR e do CLOROTIC restritos aos abstracts MEDLINE lidos via E-utilities nesta sessão (PMID 36027559 e 36423214). Recommendation Table 9 da ESC 2026 (IIa B1) extraída da página oficial DOI 10.1093/eurheartj/ehag100; PDF integral 403. Abstract do CLOROTIC corrompido no MEDLINE: não interpolar N de mulheres nem taxas limiar-específicas de K. Slugs de estudo novos (não reutilizam advor-acetazolamida-diuretico-ic-aguda-descompensada nem clorotic-hidroclorotiazida-associada-a-diuretico-de-alca-na-ic-aguda já fichados). SBC 2018: sem evidência de classe neste lote.",
+  "documentos": [
+    {
+      "path": "content/Insuficiência_cardíaca/acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic.md",
+      "slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "kind": "protocolo",
+      "theme": "Insuficiência cardíaca",
+      "title": "Acetazolamida e tiazídico na resistência diurética: ADVOR e CLOROTIC como próxima camada após o diurético de alça",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/fluxograma-proxima-camada-diuretica-apos-alca-advor-clorotic.md",
+      "slug": "fluxograma-proxima-camada-diuretica-apos-alca-advor-clorotic",
+      "kind": "fluxograma",
+      "theme": "Insuficiência cardíaca",
+      "title": "Fluxograma: próxima camada diurética após o diurético de alça — ADVOR ou CLOROTIC",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "advor-mullens-2022-acetazolamida-iv-descongestao-apos-alca",
+      "title": "ADVOR — Acetazolamida IV associada ao diurético de alça na IC descompensada com sobrecarga",
+      "study_type": "ensaio_clinico",
+      "authors": "Mullens W, Dauw J, Martens P, Verbrugge FH, Nijst P, Meekers E, Tartaglia K, Chenot F, Moubayed S, Dierckx R, Blouard P, Troisfontaines P, Derthoo D, Smolders W, Bruckers L, Droogne W, Ter Maaten JM, Damman K, Lassus J, Mebazaa A, Filippatos G, Ruschitzka F, Dupont M; ADVOR Study Group",
+      "journal": "New England Journal of Medicine",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2203094",
+      "pmid": "36027559",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36027559/",
+      "summary": "Ensaio multicêntrico, paralelo, duplo-cego, randomizado, controlado por placebo. 519 pacientes com IC aguda descompensada, sinais clínicos de sobrecarga (edema, derrame pleural ou ascite) e NT-proBNP >1000 pg/mL ou BNP >250 pg/mL, randomizados para acetazolamida IV 500 mg 1×/dia ou placebo, ambos sobre diurético de alça IV padronizado na dose equivalente ao dobro da manutenção oral. Randomização estratificada por FEVE ≤40% ou >40%. Primário: descongestão bem-sucedida em até 3 dias (ausência de sinais de sobrecarga sem indicação de escalonar). Números restritos ao abstract MEDLINE lido via E-utilities nesta sessão. NCT03505788. Financiamento: Belgian Health Care Knowledge Center.",
+      "key_findings": "Descongestão bem-sucedida: 108/256 (42,2%) vs. 79/259 (30,5%); RR 1,46 (IC95% 1,17-1,82; p<0,001). Maior débito urinário acumulado e maior natriurese (sem litros nem mmol no abstract). Morte por qualquer causa ou re-hospitalização por IC em 3 meses: 76/256 (29,7%) vs. 72/259 (27,8%); HR 1,07 (IC95% 0,78-1,48). Piora da função renal, hipocalemia, hipotensão e eventos adversos semelhantes entre os grupos (abstract sem porcentagens).",
+      "clinical_implications": "Acetazolamida IV de curto prazo sobre a alça aumenta a chance de descongestão clínica em 3 dias. Não demonstra redução de morte nem de re-hospitalização por IC — o HR do composto cruza 1. Ferramenta de descongestão, não modificador de desfecho duro. ESC 2026 Table 9: IIa B1 para reduzir congestão, não Classe I.",
+      "limitations": "Primário de sinal de volume, não de evento. Abstract sem porcentagens de segurança e sem tempo de internação. 519 randomizados vs. 256+259 no primário. Sem comparação direta com tiazídico. Não extrapolar para uso ambulatorial prolongado.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "advor",
+        "acetazolamida",
+        "diurético de alça",
+        "ic descompensada",
+        "descongestão",
+        "resistência diurética"
+      ],
+      "document_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "clorotic-trullas-2023-hctz-oral-add-on-furosemida-iv",
+      "title": "CLOROTIC — Hidroclorotiazida oral associada à furosemida IV na IC aguda descompensada",
+      "study_type": "ensaio_clinico",
+      "authors": "Trullàs JC, Morales-Rull JL, Casado J, Carrera-Izquierdo M, Sánchez-Marteles M, Conde-Martel A, Dávila-Ramos MF, Llácer P, Salamanca-Bautista P, Pérez-Silvestre J, Plasín MÁ, Cerqueiro JM, Gil P, Formiga F, Manzano L; CLOROTIC trial investigators",
+      "journal": "European Heart Journal",
+      "year": 2023,
+      "doi": "10.1093/eurheartj/ehac689",
+      "pmid": "36423214",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36423214/",
+      "summary": "Ensaio prospectivo, duplo-cego, controlado por placebo. 230 pacientes internados por IC aguda, randomizados para hidroclorotiazida oral ou placebo sobre furosemida IV. Coprimários: variação de peso e dispneia relatada (AUC da escala visual analógica) em 72 horas. Abstract MEDLINE lido via E-utilities nesta sessão; texto integral não aberto. O XML MEDLINE traz '(48 women, 83 years)' — campo ambíguo; não usar 48 como N absoluto de mulheres. Dose e duração não estão no abstract. NCT01647932. EudraCT 2013-001852-36.",
+      "key_findings": "Peso em 72 h: 2,3 vs. 1,5 kg; diferença ajustada estimada 1,14 kg (extremos do IC no XML MEDLINE 0,42 e 1,84; p=0,002). Dispneia: AUC 960 vs. 720; p=0,497 — sem diferença. Diurese 24 h: 1775 vs. 1400 mL; p=0,05. Piora renal (↑ creatinina 26,5 µmol/L ou ↓ eGFR 50%): 46,5% vs. 17,2%; p=0,001. Mortalidade e reinternação em 30 e 90 dias: sem diferença. Frase de hipocalemia no MEDLINE está corrompida ('hypokalaemia and hypokalaemia were similar'); não citar como segurança. A ESC 2026 descreve mais hipocalemia com HCTZ e pede cautela.",
+      "clinical_implications": "HCTZ oral sobre a alça aumenta perda de peso e diurese, sem melhorar a dispneia relatada e com piora renal quase três vezes mais frequente. Não demonstra redução de morte ou reinternação. Não é clortalidona. ESC 2026 Table 9: IIa B1 de curto prazo para reduzir congestão, com cautela renal e de potássio.",
+      "limitations": "Abstract MEDLINE corrompido (sexo, IC, hipocalemia). Texto integral não lido nesta sessão. Sem comparação direta com acetazolamida. Amostra pequena para mortalidade. Não extrapolar clortalidona, metolazona ou uso ambulatorial prolongado.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "clorotic",
+        "hidroclorotiazida",
+        "tiazídico",
+        "diurético de alça",
+        "ic descompensada",
+        "bloqueio sequencial do néfron"
+      ],
+      "document_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2026-acetazolamida-iv-ou-hctz-oral-curto-prazo-congestao-apos-alca-iia-b1",
+      "statement": "A adição de acetazolamida intravenosa ou hidroclorotiazida oral de curto prazo deve ser considerada em pacientes com sobrecarga hídrica previamente tratados com diurético de alça, para reduzir a congestão.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B1",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9 (Recommendations for the immediate and intermediate treatment of decompensated heart failure). Wording extraído da página oficial nesta sessão; PDF integral 403 — VERIFICAÇÃO HUMANA NECESSÁRIA contra o arquivo. A indicação da tabela é reduzir congestão, não mortalidade. Não é Classe I.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "acetazolamida",
+        "hidroclorotiazida",
+        "diurético de alça",
+        "ic descompensada",
+        "esc 2026",
+        "descongestão"
+      ],
+      "document_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "review_status": "pendente_revisao",
+      "published": false,
+      "notas": "Classe IIa e nível B1 conferidos na Recommendation Table 9 visível na página oficial ESC 2026 (DOI 10.1093/eurheartj/ehag100). PDF não baixado nesta sessão. Na mesma tabela: alça IV na sobrecarga I A; sódio urinário IIb B1 (outro documento desta pasta). Não há evidência SBC de classe neste lote."
+    }
+  ],
+  "casos": [
+    {
+      "slug": "escolher-acetazolamida-ou-hctz-apos-alca-otimizada-advor-clorotic",
+      "titulo": "Alça já otimizada, congestão residual: o que o ADVOR autoriza a dizer — e o que o CLOROTIC cobra em creatinina",
+      "tema": "Insuficiência cardíaca",
+      "nivel": "avançado",
+      "enunciado": "Mulher, 82 anos, internada por IC descompensada com edema sacral e derrame pleural. FEVE 38%. Furosemida IV já em dose equivalente ao dobro da manutenção oral, sem choque. Peso caiu pouco em 48 h. Potássio 4,1 mmol/L, creatinina estável. O residente quer 'associar clortalidona, porque o ADVOR mostrou que segundo diurético reduz mortalidade, e o CLOROTIC é o mesmo tiazídico'.",
+      "pergunta": "Qual afirmação corresponde ao que os abstracts do ADVOR (PMID 36027559) e do CLOROTIC (PMID 36423214) e a Recommendation Table 9 da ESC 2026 realmente sustentam?",
+      "opcoes": [
+        "O ADVOR reduziu morte ou re-hospitalização por IC em 3 meses (29,7% vs. 27,8% é redução; o HR 1,07 confirma benefício) e autoriza clortalidona como equivalente do CLOROTIC",
+        "A alça ainda não foi otimizada; o próximo passo é ultrafiltração, porque o CARRESS-HF mostrou que segundo diurético é inferior",
+        "Pode-se considerar acetazolamida IV 500 mg/dia (ADVOR: descongestão 42,2% vs. 30,5%; RR 1,46) ou HCTZ oral (CLOROTIC: mais perda de peso, dispneia sem diferença, piora renal 46,5% vs. 17,2%); nenhum dos dois reduziu morte; clortalidona não é o fármaco do CLOROTIC; ESC 2026 IIa B1 é para congestão, não Classe I",
+        "Associar acetazolamida e HCTZ juntas, porque a ESC 2026 Table 9 recomenda as duas ao mesmo tempo em Classe I"
+      ],
+      "resposta_correta": 2,
+      "explicacao": "ADVOR (519 randomizados; primário em 256 vs. 259): descongestão bem-sucedida 42,2% vs. 30,5%, RR 1,46 (IC95% 1,17-1,82; p<0,001). Morte ou re-hospitalização por IC em 3 meses: 29,7% vs. 27,8%, HR 1,07 (IC95% 0,78-1,48) — intervalo que cruza 1; descongestão não é mortalidade. CLOROTIC (n=230): peso 2,3 vs. 1,5 kg (diferença ajustada 1,14 kg; p=0,002); dispneia AUC 960 vs. 720 (p=0,497); piora renal 46,5% vs. 17,2% (p=0,001); sem diferença em morte/reinternação. O tiazídico testado é hidroclorotiazida, não clortalidona. ESC 2026 Table 9: acetazolamida IV ou HCTZ oral de curto prazo IIa B1 para reduzir congestão — 'should be considered', um ou outro, não os dois empilhados, não Classe I. A alça já está no dobro da manutenção oral, o cenário do ADVOR. Ultrafiltração entra depois da falha farmacológica (CARRESS-HF no fluxograma de resistência), não no lugar da segunda camada.",
+      "source_refs": [
+        "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559",
+        "Trullàs JC, Morales-Rull JL, Casado J, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "inicio-da-proxima-camada-diuretica-apos-alca-advor-clorotic",
+      "condicao": "Início de acetazolamida IV ou hidroclorotiazida oral após diurético de alça na IC descompensada",
+      "resumo": "O que confirmar antes de abrir a segunda camada diurética: congestão residual, alça já otimizada, ausência de choque, malha de K e creatinina, escolha de UMA molécula alinhada ao ensaio, o que cada abstract autoriza a prometer, e quando NÃO associar.",
+      "documento_origem": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "theme": "Insuficiência cardíaca",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559",
+        "Trullàs JC, Morales-Rull JL, Casado J, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+      ],
+      "itens": [
+        {
+          "id": "camada2-congestao-objetiva",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Sobrecarga residual documentada (edema, turgência, estertores, derrame, ascite ou ganho de peso). Sem congestão, segundo diurético não tem ensaio",
+          "origem_secao": "O que precisa estar verdadeiro antes de abrir a segunda camada"
+        },
+        {
+          "id": "camada2-alca-otimizada",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Diurético de alça IV já em dose e via otimizadas (no ADVOR: equivalente ao dobro da manutenção oral). Não pular esta camada",
+          "origem_secao": "O que precisa estar verdadeiro antes de abrir a segunda camada"
+        },
+        {
+          "id": "camada2-sem-choque",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Ausência de hipoperfusão ou choque que mande suporte hemodinâmico — segundo diurético não trata baixo débito",
+          "origem_secao": "Quando NÃO acrescentar o segundo diurético"
+        },
+        {
+          "id": "camada2-malha-k-creatinina",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Potássio e creatinina dosáveis amanhã e diariamente enquanto a associação durar. Sem essa malha, não associar",
+          "origem_secao": "Monitorização enquanto a segunda camada estiver ligada"
+        },
+        {
+          "id": "camada2-hipocalemia-antes",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Hipocalemia corrigida ou reposição já em curso antes de HCTZ. ADVOR: incidência semelhante no abstract (sem %). CLOROTIC: não usar o MEDLINE corrompido como 'K seguro'; ESC 2026 pede cautela",
+          "origem_secao": "Quando NÃO acrescentar o segundo diurético"
+        },
+        {
+          "id": "camada2-uma-molecula",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Uma só molécula, curto prazo, sobre a alça que continua: acetazolamida IV 500 mg 1×/dia (ADVOR) OU HCTZ oral (CLOROTIC). Não empilhar as duas. Não substituir HCTZ por clortalidona",
+          "origem_secao": "Qual molécula — sem ensaio cabeça a cabeça"
+        },
+        {
+          "id": "camada2-promessa-alinhada",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Promessa alinhada ao ensaio: ADVOR — descongestão em 3 dias (42,2% vs. 30,5%; RR 1,46), NÃO morte (HR 1,07; IC95% 0,78-1,48). CLOROTIC — peso (2,3 vs. 1,5 kg), NÃO dispneia (p=0,497), com piora renal 46,5% vs. 17,2%. ESC IIa B1 verbalizada como congestão, não Classe I",
+          "origem_secao": "O que cada ensaio realmente perguntou / Como a ESC 2026 posiciona a classe"
+        },
+        {
+          "id": "camada2-parar-na-euvolemia",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Parar o segundo diurético na euvolemia. Não levar o esquema de ensaio para casa sem plano de K e creatinina. Se falhar: fluxograma de resistência (ultrafiltração depois da falha farmacológica)",
+          "origem_secao": "Monitorização enquanto a segunda camada estiver ligada"
+        },
+        {
+          "id": "camada2-sodio-urinario-nao-e-esta-arvore",
+          "categoria": "comunicacao",
+          "obrigatorio": false,
+          "texto": "Se o serviço usa sódio urinário pontual, o corte operacional está no documento PUSH-AHF/ENACT-HF — ele diz se a ALÇA precisa ser intensificada, não qual segundo diurético escolher",
+          "origem_secao": "A decisão que este protocolo resolve"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "segundo-diuretico-na-internacao-por-insuficiencia-cardiaca-o-que-esperar",
+      "titulo": "Segundo diurético na internação por insuficiência cardíaca: o que esperar",
+      "subtitulo": "Por que às vezes se acrescenta acetazolamida ou hidroclorotiazida — e o que os estudos não provaram",
+      "tema": "Insuficiência cardíaca",
+      "documento_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação em linguagem simples para quem está internado com inchaço por insuficiência cardíaca: o diurético de alça continua sendo o primeiro; às vezes a equipe acrescenta por poucos dias um segundo remédio (acetazolamida na veia ou hidroclorotiazida por boca) para ajudar a tirar o excesso de líquido. Nenhum dos dois estudos mostrou que isso diminui morte.",
+      "secoes": [
+        {
+          "titulo": "O primeiro remédio do inchaço continua sendo o de alça",
+          "paragrafos": [
+            "Na internação por insuficiência cardíaca com inchaço, o diurético de alça na veia (em geral furosemida) é o tratamento de base. A equipe primeiro ajusta a dose desse remédio. Só depois, se o inchaço ainda não cedeu, entra a conversa de um segundo diurético por poucos dias.",
+            "Esse segundo remédio não substitui o de alça, não substitui os remédios que protegem o coração a longo prazo e não é para levar para casa no mesmo esquema da internação sem um plano de exames."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo da acetazolamida mostrou",
+          "paragrafos": [
+            "No estudo ADVOR, 519 pessoas internadas com insuficiência cardíaca e sinais de excesso de líquido receberam acetazolamida na veia (500 mg por dia) ou um placebo, sempre junto com o diurético de alça.",
+            "Quem recebeu acetazolamida ficou mais vezes sem sinais de excesso de líquido em até 3 dias: cerca de 42 em cada 100, contra cerca de 31 em cada 100 com placebo. Morte ou nova internação por insuficiência cardíaca em 3 meses foi parecida nos dois grupos. Esse remédio ajuda a desinchar mais rápido; o estudo não mostrou que ele diminui morte."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que o estudo da hidroclorotiazida mostrou",
+          "paragrafos": [
+            "No estudo CLOROTIC, 230 pessoas internadas receberam hidroclorotiazida por boca ou placebo, sempre junto com furosemida na veia. Quem recebeu o remédio perdeu mais peso em 72 horas, mas a falta de ar relatada não melhorou de forma diferente do placebo.",
+            "A função do rim piorou com mais frequência (cerca de 47 em cada 100 contra 17 em cada 100). Morte e nova internação não foram diferentes. Esse remédio não é o mesmo que clortalidona — são tiazídicos diferentes, e o estudo testou hidroclorotiazida."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que a equipe vai vigiar",
+          "paragrafos": [
+            "Enquanto o segundo diurético estiver ligado, o esperado é pesar todo dia e repetir exames de potássio e de função do rim. Potássio baixo e piora da creatinina são os sinais que fazem a equipe pausar ou ajustar.",
+            "A diretriz europeia de 2026 considera esses dois remédios por curto prazo para reduzir o inchaço depois do diurético de alça. Isso não significa que todo mundo internado precise deles, nem que eles sejam obrigatórios como os remédios que reduzem internação e morte a longo prazo."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Tontura, fraqueza intensa ou palpitação — podem ser potássio baixo",
+        "Urina muito escassa, náusea nova ou confusão — avise a equipe; a função do rim precisa ser reavaliada",
+        "Falta de ar que piora, inchaço que aumenta ou ganho rápido de peso apesar do tratamento",
+        "Pressão muito baixa, pele fria ou sonolência — isso pode ser outro problema, não só inchaço"
+      ],
+      "perguntas": [
+        "No meu caso, o diurético de alça já foi ajustado antes de pensar no segundo remédio?",
+        "Vai ser acetazolamida ou hidroclorotiazida — e por quê?",
+        "Esse segundo remédio diminui o risco de eu morrer, ou ele serve para desinchar?",
+        "Por quantos dias ele fica ligado, e quais exames vão ser repetidos?",
+        "Eu levo esse segundo diurético para casa ou ele para quando o inchaço sair?"
+      ],
+      "fontes": [
+        "Mullens W, et al. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload (ADVOR). N Engl J Med. 2022;387(13):1185-1195. PMID: 36027559.",
+        "Trullàs JC, et al. Combining loop with thiazide diuretics for decompensated heart failure (CLOROTIC). Eur Heart J. 2023;44(5):411-421. PMID: 36423214.",
+        "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "lote_id": "lote-cad-prev-secundaria",
+  "fonte_producao": "grok",
+  "created_at": "2026-08-29",
+  "theme": "Doença coronariana",
+  "review_status": "pendente_revisao",
+  "proposito": "Playbook único de prevenção secundária integrada na alta após SCA. Costura DAPT, LDL, eixo neuro-hormonal/FEVE, tabagismo, reabilitação e diabetes/obesidade. Não clona os documentos de ensaio já publicados.",
+  "documentos": [
+    {
+      "path": "content/Doença_coronariana/prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda.md",
+      "slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "kind": "protocolo"
+    },
+    {
+      "path": "content/Doença_coronariana/fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis.md",
+      "slug": "fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis",
+      "kind": "fluxograma"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc2023-acs-individualizar-tratamento-hipoglicemiante-conforme-comorbidade",
+      "statement": "Na síndrome coronariana aguda, o tratamento hipoglicemiante deve ser individualizado conforme as comorbidades do paciente. É a única recomendação Classe I com nível A de terapia hipoglicemiante da ESC 2023 ACS (Tabela 18).",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Tabela 18 (controle glicêmico em paciente diabético com SCA). Classe e nível já conferidos no documento sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023 contra o texto da diretriz.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "síndrome coronariana aguda",
+        "diabetes",
+        "hipoglicemiante",
+        "prevenção secundária",
+        "alta"
+      ],
+      "document_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-dislip-meta-ldl-menor-50-risco-muito-alto",
+      "statement": "Em indivíduos de risco cardiovascular muito alto, recomenda-se a favor das metas de LDL-c < 50 mg/dL e de não-HDL-c < 80 mg/dL.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Alta",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, Zimerman A, Cesena FHY, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — seção 5.2.4 / Tabela 5.1, GRADE Forte, Alta, lidos no texto em acesso aberto nesta sessão.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "LDL",
+        "prevenção secundária",
+        "muito alto risco",
+        "dislipidemia",
+        "SCA"
+      ],
+      "document_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-dislip-meta-ldl-menor-40-risco-extremo",
+      "statement": "Em indivíduos de risco cardiovascular extremo, recomenda-se a favor das metas de LDL-c < 40 mg/dL e de não-HDL-c < 70 mg/dL.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Moderada",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, Zimerman A, Cesena FHY, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — seção 5.2.5, GRADE Forte, Moderada, lidos no texto em acesso aberto nesta sessão.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "LDL",
+        "risco extremo",
+        "evento recorrente",
+        "dislipidemia"
+      ],
+      "document_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-dislip-iniciar-estatina-potente-nas-primeiras-24h-da-sca",
+      "statement": "Em pacientes com síndrome coronariana aguda, recomenda-se iniciar estatinas potentes nas primeiras 24 horas após a internação.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Alta",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, Zimerman A, Cesena FHY, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — seção 9.13 / tabela de recomendações na SCA, GRADE Forte, Alta, lidos no texto em acesso aberto nesta sessão.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "estatina",
+        "SCA",
+        "alta",
+        "prevenção secundária",
+        "internação"
+      ],
+      "document_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-dislip-estatina-potente-com-ezetimiba-na-fase-aguda-da-sca",
+      "statement": "Em pacientes com síndrome coronariana aguda, recomenda-se iniciar estatinas potentes associadas à ezetimiba ainda na fase aguda e considerar precocemente terapia anti-PCSK9 em indivíduos de risco muito alto ou extremo, como estratégia de redução rápida do LDL-c e de combate à inércia terapêutica.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Moderada",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, Zimerman A, Cesena FHY, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — seção 9.13 / tabela de recomendações na SCA, GRADE Forte, Moderada, lidos no texto em acesso aberto nesta sessão.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "estatina",
+        "ezetimiba",
+        "PCSK9",
+        "SCA",
+        "fase aguda"
+      ],
+      "document_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos_clinicos": [
+    {
+      "slug": "alta-pos-nstemi-cinco-pilares-incompletos-feve-reduzida-tabagismo-ldl-diabetes",
+      "titulo": "Alta após NSTEMI: a receita tem DAPT e mesmo assim está incompleta",
+      "tema": "Doença coronariana",
+      "nivel": "intermediário",
+      "enunciado": "Homem, 61 anos, NSTEMI tratado com ICP e stent farmacológico na DA. Alta prevista para hoje. FEVE 38% no eco do 2º dia, sem congestão atual. Fuma 20 cigarros/dia; recusou 'parar sozinho'. Diabetes tipo 2 em metformina, HbA1c 7,1%. IMC 31 kg/m². LDL na admissão 132 mg/dL em sinvastatina 40 mg. TFGe 68 mL/min/1,73 m², K 4,3 mEq/L, PA 128/78 mmHg. A receita de alta que chegaram a imprimir: AAS 100 mg, ticagrelor 90 mg 2x/dia 'por um tempo', sinvastatina 40 mg, metoprolol 50 mg 2x/dia, metformina. Sem encaminhamento a reabilitação, sem fármaco de cessação, sem data de retorno da DAPT.",
+      "pergunta": "Qual conduta de alta está alinhada com o playbook de prevenção secundária integrada, sem extrapolar EMPACT-MI nem inventar prazo de monoterapia?",
+      "opcoes": [
+        "Manter a receita: DAPT já está prescrita, betabloqueador já está prescrito, e iSGLT2 não cabe porque a HbA1c está aceitável e o EMPACT-MI foi neutro",
+        "Trocar ticagrelor por AAS isolado na alta, porque ULTIMATE-DAPT mostrou que 1 mês de DAPT basta em todo pós-ICP",
+        "Reescrever a alta pelos cinco pilares: anotar duração e data de reavaliação da DAPT sem desescalar nos primeiros 30 dias; trocar para estatina de alta intensidade e considerar ezetimiba já na internação, com meta de LDL explícita; manter BB e acrescentar IECA (e iSGLT2 pela ICFEr e pelo T2DM, não pelo EMPACT-MI); iniciar vareniclina ou TRN agora; encaminhar reabilitação com data; discutir GLP-1 pela diabetes e pelo IMC",
+        "Acrescentar só empagliflozina 10 mg porque o EMPACT-MI randomizou IAM com FE <45% e isso substitui IECA, estatina de alta intensidade e reabilitação"
+      ],
+      "resposta_correta": 2,
+      "explicacao": "A receita impressa cobre um pedaço do pilar 1 e um pedaço do pilar 3, e falha nos cinco. (1) 'Ticagrelor por um tempo' não é DAPT definida: falta data de reavaliação, e desescalar nos primeiros 30 dias é Classe III B na ESC 2023. ULTIMATE-DAPT não autoriza monoterapia na alta deste paciente — randomizou depois de 1 mês sem evento, e transformar o ensaio em prazo universal é o que o playbook marca como verificação humana. (2) Sinvastatina 40 mg em quem interna com LDL 132 não é intensificação da internação índice: ESC/EAS 2025 pede intensificar quem já usava hipolipemiante (Classe I C) e considerar estatina de alta intensidade + ezetimiba no virgem quando a meta não virá só com estatina (Classe IIa B); a SBC 2025 de dislipidemias pede estatina potente nas primeiras 24 h (Forte, Alta) e meta de LDL-c <50 mg/dL no muito alto risco (Forte, Alta), distinta dos <55 mg/dL da ESC. (3) FEVE 38% abre BB (já prescrito, e cabe), IECA de rotina na SCC com disfunção (SBC 2025 Classe I A) e iSGLT2 pela ICFEr (ESC 2021 Classe I A) e pelo T2DM com doença coronariana (SBC 2025 Classe I A). EMPACT-MI foi neutro no primário (HR 0,90; 0,76–1,06) e não é a porta deste paciente — ele já tem duas portas que preexistem. Empagliflozina não substitui IECA, estatina nem reabilitação. (4) Tabagismo sem fármaco não é cessação: ESC 2021 Classe I A para cessar; iniciar vareniclina ou TRN na internação. (5) Reabilitação estruturada é Classe I A ESC 2021 e precisa de data. GLP-1 no T2DM com SCC é Classe I A na SBC 2025; o IMC 31 sem ser o SELECT (aquele ensaio é sem diabetes) reforça a discussão da classe, não a inventa.",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178",
+        "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178",
+        "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289",
+        "Butler J, Jones WS, Udell JA, et al. Empagliflozin after Acute Myocardial Infarction. N Engl J Med. 2024;390(16):1455-1466. DOI: 10.1056/NEJMoa2314051. PMID: 38587237"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "alta-pos-sca-cinco-pilares-modificaveis",
+      "condicao": "Alta após SCA pelos cinco pilares modificáveis da prevenção secundária integrada",
+      "resumo": "Checklist da manhã da alta que não substitui alta-pos-sindrome-coronariana-aguda: aprofunda os cinco pilares (DAPT com data, LDL intensificado, eixo FEVE, cessação com fármaco, reabilitação + diabetes/obesidade) e os freios REDUCE-AMI e EMPACT-MI. Distinto também de escalonamento-do-hipolipemiante-em-prevencao-secundaria, que trata só do LDL.",
+      "documento_origem": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178",
+        "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178",
+        "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905"
+      ],
+      "itens": [
+        {
+          "id": "pilar1-dapt-datada",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 1: DAPT com os dois fármacos, doses e data de reavaliação escritos no sumário — não 'por um tempo'",
+          "origem_secao": "Pilar 1 — antitrombótico"
+        },
+        {
+          "id": "pilar1-nao-desescalar-30d",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 1: registrado que não se desescalona antiagregante nos primeiros 30 dias (ESC 2023 Classe III B)",
+          "origem_secao": "Pilar 1 — antitrombótico"
+        },
+        {
+          "id": "pilar1-hbr-ou-oac",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 1: se ARC-HBR, DAPT encurtada despachada para o fluxograma de DAPT (SBC 2025 SCC Classe IIa B); se anticoagulante oral, via tripla/dupla própria — não improvisar prazo neste checklist. Dual versus monoterapia em mês 1, 3 ou 6: VERIFICAÇÃO HUMANA NECESSÁRIA se não estiver no fluxograma de DAPT",
+          "origem_secao": "Pilar 1 — antitrombótico"
+        },
+        {
+          "id": "pilar2-estatina-alta-internacao",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 2: estatina de alta intensidade iniciada ou intensificada na internação índice (SBC 2025 dislipidemias: potente nas primeiras 24 h, Forte Alta; ESC/EAS 2025: intensificar quem já usava, Classe I C)",
+          "origem_secao": "Pilar 2 — LDL"
+        },
+        {
+          "id": "pilar2-meta-ldl-regua",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 2: meta de LDL explícita e régua anotada — ESC/EAS <55 mg/dL e redução ≥50%, ou SBC 2025 dislipidemias <50 mg/dL no muito alto risco (Forte, Alta). Não misturar 55 com 50",
+          "origem_secao": "Pilar 2 — LDL"
+        },
+        {
+          "id": "pilar2-ezetimiba",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 2: ezetimiba considerada já na fase aguda se a meta não virá só com estatina (ESC/EAS 2025 Classe IIa B no virgem; SBC 2025 dislipidemias Forte Moderada para associação na fase aguda)",
+          "origem_secao": "Pilar 2 — LDL"
+        },
+        {
+          "id": "pilar3-feve-numerica",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Pilar 3: FEVE numérica no prontuário, não 'função preservada' em texto livre",
+          "origem_secao": "Pilar 3 — FEVE e insuficiência cardíaca"
+        },
+        {
+          "id": "pilar3-bb-por-feve",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 3: betabloqueador decidido pela FEVE e por indicação concomitante — sim se FEVE ≤40% ou IC (AHA/ACC 2023 Classe I A); não automático se FEVE ≥50% sem outra indicação (REDUCE-AMI). Estrato 40–49% sem IC: não transformar a IPD 2025 em Classe I sem verificação",
+          "origem_secao": "Subárvore do pilar 3"
+        },
+        {
+          "id": "pilar3-ieca-arni-mra",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 3: IECA ou BRA se disfunção, IC ou diabetes (SBC 2025 SCC Classe I A); ARNI se ICFEr sintomática (ESC 2021 Classe I B); MRA se ICFEr (ESC 2021 Classe I A) ou pós-IAM com FEVE ≤35% e DM ou IC (SBC 2025 Classe IIa A). Não combinar IECA+BRA (Classe III A)",
+          "origem_secao": "Pilar 3 — IECA, BRA, ARNI / MRA"
+        },
+        {
+          "id": "pilar3-sglt2-portas",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 3/5: iSGLT2 se ICFEr, ICFEm/ICFEp, T2DM com doença coronariana ou DRC com indicação — não prescrever só porque o EMPACT-MI randomizou IAM de alto risco (primário neutro)",
+          "origem_secao": "iSGLT2 — três portas, uma armadilha"
+        },
+        {
+          "id": "pilar4-tabaco-farmaco",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Pilar 4: status tabágico registrado; se fuma, vareniclina ou TRN iniciada na internação com plano de suporte após a alta (ESC 2021 Classe I A para cessar). Não vaporizador (SBC 2021 Classe III)",
+          "origem_secao": "Pilar 4 — tabagismo"
+        },
+        {
+          "id": "pilar5-reabilitacao-data",
+          "categoria": "encaminhamento",
+          "obrigatorio": true,
+          "texto": "Pilar 5: encaminhamento a reabilitação cardíaca estruturada com data ou contato marcado (ESC 2021 Classe I A) — não folheto. Contraindicada se instabilidade não resolvida (SBC 2021 Classe III A)",
+          "origem_secao": "Pilar 5 — reabilitação"
+        },
+        {
+          "id": "pilar5-diabetes-glp1",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 5: se T2DM, iSGLT2 e/ou agonista de GLP-1 para prevenção secundária (SBC 2025 SCC Classe I A cada um), independente da HbA1c da alta. Individualizar hipoglicemiante por comorbidade (ESC 2023 Classe I A, Tabela 18)",
+          "origem_secao": "Pilar 5 — diabetes"
+        },
+        {
+          "id": "pilar5-select-imc",
+          "categoria": "medicacao",
+          "obrigatorio": false,
+          "texto": "Pilar 5: se IMC ≥27 sem diabetes, SELECT discutido (HR 0,80; IC95% 0,72–0,90; PMID 37952131). Não inventar Classe I a partir do ensaio",
+          "origem_secao": "Obesidade sem diabetes — o SELECT cabe aqui"
+        },
+        {
+          "id": "transversal-influenza-teachback-retorno",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Vacina anual contra influenza (ESC 2023 Classe I A); informação de alta escrita e verbal com teach-back (Classe IIa B); retorno com data. Polipílula SECURE só se adesão for o elo frágil e a composição couber — não substitui BB, MRA nem iSGLT2",
+          "origem_secao": "O que conferir ainda na internação"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "vida-depois-do-infarto",
+      "titulo": "Vida depois do infarto",
+      "subtitulo": "O que muda na alta: remédios, cigarro, exercício, retorno e quando chamar o 192",
+      "tema": "Doença coronariana",
+      "documento_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "review_status": "pendente_revisao",
+      "resumo": "Material para quem sai do hospital depois de um infarto ou angina instável. Explica, em linguagem de paciente, por que a receita tem vários remédios, por que parar de fumar não espera a consulta de 30 dias, o que é reabilitação cardíaca e quais sinais pedem emergência. Não ensina a suspender medicamento.",
+      "secoes": [
+        {
+          "titulo": "A internação acabou. O tratamento não",
+          "paragrafos": [
+            "O infarto é o momento em que uma artéria do coração fecha de forma aguda. O hospital trata isso: abre a artéria, coloca stent se for o caso, estabiliza. A partir da alta, o objetivo muda: impedir o próximo evento. Isso não acontece com um único comprimido nem com 'ficar de repouso'.",
+            "A receita longa não é exagero. Cada classe tem um papel: um impede novo coágulo no stent, outro baixa o colesterol da placa, outro protege o músculo se a força do coração caiu, outro trata diabetes ou ajuda a parar de fumar. Quem interrompe por conta própria, sobretudo o antiagregante nas primeiras semanas depois do stent, assume um risco que o médico não consegue compensar depois."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Os cinco pontos que a alta precisa deixar resolvidos",
+          "paragrafos": [
+            "Peça para conferirem estes cinco com você, em voz alta, antes de sair. Se algum ficou em branco, a alta está incompleta."
+          ],
+          "itens": [
+            "Os dois antiagregantes: quais são, até quando, e em que consulta isso será revisto. 'Por um tempo' não é resposta",
+            "A estatina de alta intensidade, começada ainda no hospital, e o alvo de colesterol LDL que o seu médico está perseguindo",
+            "Se o coração perdeu força: se há remédio específico para isso, e por quê. Se a força está preservada, alguns remédios que 'todo mundo tomava depois de infarto' podem não ser mais rotina",
+            "Cigarro: se você fuma, o tratamento para parar começa no hospital, com remédio, não só com conselho",
+            "Reabilitação cardíaca com data, mais o plano para diabetes ou peso, se for o seu caso"
+          ]
+        },
+        {
+          "titulo": "Parar de fumar não é um conselho. É tratamento",
+          "paragrafos": [
+            "Entre tudo o que se pode fazer depois de um infarto, parar de fumar é das medidas com maior efeito. Fazer isso 'quando a vida acalmar' costuma significar não fazer. Há remédios que aumentam a chance de ficar abstinente, e eles podem — e devem — começar ainda internado, com acompanhamento depois.",
+            "Cigarro eletrônico e cigarro 'mais fraco' não são o plano. Se houver recaída, isso é comum; o caminho é voltar ao médico e ajustar o tratamento, não esconder."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Reabilitação cardíaca não é academia por conta própria",
+          "paragrafos": [
+            "Reabilitação é um programa com equipe, exercício prescrito, revisão dos remédios, orientação alimentar e, quando precisa, apoio para ansiedade ou depressão — que são frequentes depois de um infarto e atrapalham a adesão. É uma das medidas com melhor resultado e uma das menos usadas, em geral porque ninguém marca a vaga.",
+            "Enquanto o programa não começa, a orientação de esforço dos primeiros dias é a que o seu médico escrever: escada, rua, relação sexual e trabalho não têm uma data universal. Quem teve complicação, arritmia ou o coração muito fraco segue outro ritmo."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Diabetes, peso e o colesterol que não se sente",
+          "paragrafos": [
+            "Alguns remédios de diabetes protegem o coração mesmo quando o açúcar no sangue já está razoável. Não recuse um comprimido novo só porque a glicemia 'já estava boa'. O contrário também vale: o alvo do colesterol LDL depois de um infarto é mais baixo do que o número que muita gente conhece de check-up — e o ajuste começa no hospital, não três meses depois.",
+            "Se há sobrepeso sem diabetes, existe evidência de que um medicamento usado para emagrecer também reduz infarto, AVC e morte cardiovascular em quem já tem doença do coração. Isso se discute com o seu médico; não se começa por conta própria nem se lê como obrigação de todo mundo."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que não fazer nos primeiros dias",
+          "paragrafos": [],
+          "itens": [
+            "Não suspender antiagregante, estatina ou remédio da pressão porque 'já passou o susto'",
+            "Não dirigir até o médico liberar — a regra depende do tipo de infarto, da função do coração e da legislação local",
+            "Não voltar a fumar 'só um' para aliviar o nervoso",
+            "Não trocar a receita por similar de farmácia sem conferir o princípio ativo e a dose",
+            "Não esperar a consulta de 30 dias se surgir dor no peito igual à do infarto"
+          ]
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor, aperto ou queimação no peito que volta e não passa com repouso — chame o 192, não dirija",
+        "Falta de ar súbita, suor frio, desmaio ou palpitação com mal-estar importante",
+        "Sangramento que não para, fezes pretas ou vômito com sangue — pode ser efeito do antiagregante e precisa de avaliação",
+        "Inchaço rápido nas pernas, falta de ar ao deitar ou ganho de peso em poucos dias — o coração pode estar retendo líquido",
+        "Febre com o ponto do cateterismo vermelho, quente ou com pus"
+      ],
+      "perguntas": [
+        "Até quando eu tomo os dois antiagregantes, e em que consulta isso será decidido?",
+        "Qual é o meu alvo de colesterol LDL, e quando vou repetir o exame?",
+        "A força do meu coração (fração de ejeção) foi medida? Isso muda algum remédio?",
+        "Se eu fumo, qual remédio para parar começa ainda hoje?",
+        "Qual o nome e o telefone do programa de reabilitação, e quando é o primeiro dia?",
+        "Quando posso voltar a trabalhar, dirigir e ter relação sexual?",
+        "Quais destes remédios não posso interromper nem por um dia?"
+      ],
+      "fontes": [
+        "Byrne RA et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023. PMID 37622654",
+        "Visseren FLJ et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021. PMID 34458905",
+        "Lincoff AM et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023. PMID 37952131 — citado apenas para o paciente com sobrepeso e doença do coração sem diabetes; não é receita"
+      ]
+    }
+  ],
+  "trilhas": [
+    {
+      "slug": "trilha-prevencao-secundaria-integrada-apos-sca",
+      "titulo": "Prevenção secundária integrada após SCA — da alta aos cinco pilares",
+      "tema": "Doença coronariana",
+      "objetivo": "Sair sabendo montar a alta após síndrome coronariana aguda como um único raciocínio: DAPT com data, LDL intensificado, eixo neuro-hormonal guiado pela FEVE, cessação com fármaco, reabilitação e diabetes/obesidade — e saber onde a evidência recente (REDUCE-AMI, EMPACT-MI, SELECT, SECURE) muda o reflexo, em vez de criar um reflexo novo.",
+      "nivel": "intermediário",
+      "review_status": "pendente_revisao",
+      "etapas": [
+        {
+          "ordem": 1,
+          "item_type": "documento",
+          "item_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+          "por_que": "É o playbook. Sem ele, os ensaios da trilha viram peças soltas e a alta continua sendo uma lista de fármacos."
+        },
+        {
+          "ordem": 2,
+          "item_type": "documento",
+          "item_slug": "fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis",
+          "por_que": "A mesma sequência em árvore, com a subárvore da FEVE que impede betabloqueador e iSGLT2 por reflexo."
+        },
+        {
+          "ordem": 3,
+          "item_type": "documento",
+          "item_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+          "por_que": "A ESC 2023 é o chão da alta: intensificar hipolipemiante na internação, não desescalar DAPT em 30 dias, teach-back, vacina de influenza, reabilitação como regra."
+        },
+        {
+          "ordem": 4,
+          "item_type": "documento",
+          "item_slug": "fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp",
+          "por_que": "O pilar 1 despacha para cá. Esta trilha não inventa 1 versus 3 versus 12 meses."
+        },
+        {
+          "ordem": 5,
+          "item_type": "documento",
+          "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+          "por_que": "Pilar 2 na régua europeia: <55 mg/dL e redução ≥50%, com intensificação na internação. Contrasta com a meta <50 da SBC 2025 de dislipidemias citada no playbook."
+        },
+        {
+          "ordem": 6,
+          "item_type": "documento",
+          "item_slug": "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+          "por_que": "O freio do pilar 3 quando a FEVE é ≥50% e não há outra indicação de betabloqueador."
+        },
+        {
+          "ordem": 7,
+          "item_type": "documento",
+          "item_slug": "betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50",
+          "por_que": "Impede tratar 40–49% e ≥50% como o mesmo grupo — que é o erro que o REDUCE-AMI sozinho não mostra."
+        },
+        {
+          "ordem": 8,
+          "item_type": "documento",
+          "item_slug": "empact-mi-empagliflozina-pos-iam-alto-risco",
+          "por_que": "O outro freio: iSGLT2 não vira rotina de todo IAM de alto risco para IC. As portas que continuam abertas (ICFEr, T2DM, DRC) vêm na etapa seguinte."
+        },
+        {
+          "ordem": 9,
+          "item_type": "documento",
+          "item_slug": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+          "por_que": "A porta que o EMPACT-MI não fecha: diabetes tipo 2 com doença aterosclerótica."
+        },
+        {
+          "ordem": 10,
+          "item_type": "documento",
+          "item_slug": "fluxograma-cessacao-do-tabagismo-no-cardiopata-farmacoterapia-e-seguimento",
+          "por_que": "Pilar 4 operacional: vareniclina ou TRN na internação, não conselho no sumário."
+        },
+        {
+          "ordem": 11,
+          "item_type": "documento",
+          "item_slug": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+          "por_que": "Pilar 5 na prescrição de exercício. O encaminhamento sem data não cumpre a Classe I."
+        },
+        {
+          "ordem": 12,
+          "item_type": "documento",
+          "item_slug": "esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia",
+          "por_que": "Atualiza o pilar 5: reabilitação como programa multicomponente, não só esteira."
+        },
+        {
+          "ordem": 13,
+          "item_type": "documento",
+          "item_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+          "por_que": "O IMC ≥27 sem diabetes depois de SCA é população de DCV estabelecida. O SELECT entra aqui; a classe de diretriz não se inventa a partir do HR 0,80."
+        },
+        {
+          "ordem": 14,
+          "item_type": "documento",
+          "item_slug": "polipilula-em-prevencao-secundaria-pos-infarto-o-ensaio-secure",
+          "por_que": "Fecha implementação: o mesmo tratamento, mais simples, reduz evento. Não substitui os pilares que a composição não carrega."
+        },
+        {
+          "ordem": 15,
+          "item_type": "checklist",
+          "item_slug": "alta-pos-sca-cinco-pilares-modificaveis",
+          "por_que": "A conferência da manhã da alta. Distinta do checklist geral de SCA já publicado: esta exige os cinco pilares e os dois freios."
+        },
+        {
+          "ordem": 16,
+          "item_type": "caso_clinico",
+          "item_slug": "alta-pos-nstemi-cinco-pilares-incompletos-feve-reduzida-tabagismo-ldl-diabetes",
+          "por_que": "Aplica a trilha num NSTEMI realista cuja receita tem DAPT e mesmo assim está incompleta."
+        }
+      ]
+    }
+  ],
+  "slugs_referenciados_nao_criados": [
+    "fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp",
+    "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
+    "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023",
+    "master-dapt-dapt-abreviada-em-alto-risco-hemorragico",
+    "ultimate-dapt-ticagrelor-monoterapia-apos-1-mes-acs-pci",
+    "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+    "betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50",
+    "empact-mi-empagliflozina-pos-iam-alto-risco",
+    "polipilula-em-prevencao-secundaria-pos-infarto-o-ensaio-secure",
+    "fluxograma-cessacao-do-tabagismo-no-cardiopata-farmacoterapia-e-seguimento",
+    "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+    "esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia",
+    "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+    "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
+    "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+    "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+    "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+    "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+    "fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica",
+    "alta-pos-sindrome-coronariana-aguda"
+  ],
+  "notas_de_verificacao": [
+    "DAPT dual versus monoterapia em mês 1/3/6: não inventada. Despacho para fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp. Marcado VERIFICAÇÃO HUMANA NECESSÁRIA onde o ensaio recente não é texto de diretriz.",
+    "PDF integral ESC 2023 ACS retornou 403 nesta sessão. Classe III B de não desescalar em 30 dias e Classe I A de influenza e IIa B de teach-back já estavam conferidas no acervo contra o texto original. Tabela 18 (hipoglicemiante I/A) idem. Meta LDL <55 e intensificação ESC/EAS 2025 vêm de documentos e evidencias já conferidos no acervo.",
+    "SBC 2025 SCC: classes usadas (IECA I/A, iSGLT2 I/A, GLP-1 I/A, ARC-HBR IIa/B, DAPT score III/C, MRA IIa/A, exercício I/A) já conferidas no acervo contra PMC13400070. Nenhuma classe nova foi inventada a partir desta diretriz.",
+    "SBC 2025 dislipidemias (e20250640, PMID 41379178): metas <50 e <40, estatina em 24 h e estatina+ezetimiba na fase aguda lidas no PMC12674852 nesta sessão (GRADE Forte/Alta ou Forte/Moderada). Não convertidas para Classe I/A europeia.",
+    "SBC aguda: não foi encontrada diretriz unificada de SCA 2025. Usada Nicolau 2021 SCASSST (PMID 34320090) só onde o acervo já tinha classe conferida (P2Y12+AAS I/A; vaporizador III).",
+    "SELECT PMID 37952131: n, HR, IC, seguimento e inclusão conferidos no abstract PubMed nesta sessão. Classe de diretriz para semaglutida 2,4 mg em pós-SCA sem diabetes: VERIFICAÇÃO HUMANA NECESSÁRIA.",
+    "Slugs da trilha conferidos um a um contra front matter de content/. Os dois slugs novos desta sessão entram nas etapas 1, 2, 15 e 16."
+  ]
+}

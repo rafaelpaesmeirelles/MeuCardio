@@ -1,0 +1,368 @@
+{
+  "lote_id": "dor-toracica-ps",
+  "titulo": "Dor torácica aguda — primeira hora no pronto-socorro",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "review_status": "pendente_revisao",
+  "fonte_producao": "grok",
+  "acao": "created",
+  "nota": "Lote de staging para importação após revisão humana. Não edita metadados publicados. Inventário prévio: NÃO existe slug canônico de primeira hora da dor torácica aguda indiferenciada do adulto no PS/enfermaria/UCO. O que há — e NÃO foi clonado — é o dump de SCA ESC 2023, o protocolo HEART/porta-ECG SBC 2025, o algoritmo 0/1 h, a via da cocaína e o fluxograma ambulatorial de baixo risco. Recorte: ECG ≤10 min, o que não espera troponina, 0/1 h vs 0/2 h vs 0/3 h, equivalentes (dispneia, mulher, diabetes), tipo 1 vs tipo 2/lesão. Cortes de GRACE não reproduzidos. Evidências novas usam slugs inéditos; HEART/EDACS só com papers verificados (HEART PMIDs lidos no acervo; EDACS PMID 24428678 verificado, números de desfecho não reproduzidos).",
+  "pmids": [
+    "37622654",
+    "18665203",
+    "23465250",
+    "28437795",
+    "24428678",
+    "30165617",
+    "34709879"
+  ],
+  "documentos": [
+    {
+      "path": "content/Geral/dor-toracica-aguda-primeira-hora-no-pronto-socorro.md",
+      "slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "kind": "protocolo",
+      "theme": "Geral",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Geral/fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca.md",
+      "slug": "fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca",
+      "kind": "fluxograma",
+      "theme": "Geral",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "nao_clonados_e_linkados": [
+    "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+    "escore-heart-dor-toracica-no-pronto-socorro",
+    "fluxograma-heart-dor-toracica-pronto-socorro",
+    "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+    "fluxograma-sindrome-coronariana-aguda-esc-2023",
+    "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+    "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+    "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+    "dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
+    "fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
+    "fluxograma-dor-toracica-ambulatorial-estavel-baixo-risco",
+    "dispneia-aguda-de-origem-cardiovascular-abordagem-inicial"
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2023-ecg-ate-10-minutos-na-dor-toracica-suspeita-de-sca",
+      "statement": "Na suspeita de síndrome coronariana aguda, o registro e a interpretação do ECG de 12 derivações são recomendados o mais cedo possível no primeiro contato médico, com alvo de 10 minutos. Equivalente isquêmico (dispneia, epigástrio, apresentação em mulher, diabetes ou idoso) não autoriza atrasar o traçado.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 1, p. 3738: “Twelve-lead ECG recording and interpretation is recommended as soon as possible at the point of FMC, with a target of 10 min.” Classe I, nível B, lida nesta sessão no PDF ehad191 e conferida na tradução oficial da SEC (tabela 1). Distinct from esc-2023-ecg-ate-10-minutos-na-dispneia-suspeita-de-sca (recorte de dispneia já fichado).",
+      "theme": "Geral",
+      "tags": [
+        "dor torácica aguda",
+        "ECG",
+        "síndrome coronariana aguda",
+        "primeira hora",
+        "pronto-socorro"
+      ],
+      "document_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2023-hsctn-algoritmo-0-1h-ou-0-2h-confirmar-ou-afastar-iamsest",
+      "statement": "É recomendado usar a abordagem algorítmica da ESC com medições seriadas de hs-cTn (0 h/1 h ou 0 h/2 h) para confirmar ou afastar IAMSEST, com ensaio que tenha o algoritmo validado. Só se aplica depois de STEMI, equivalente de oclusão e NSTE de risco muito alto excluídos pelo ECG e pela clínica. Cortes são específicos do ensaio e não são intercambiáveis.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 1: “It is recommended to use an ESC algorithmic approach with serial hs-cTn measurements (0 h/1 h or 0 h/2 h) to rule in and rule out NSTEMI.” Classe I, nível B. Tabela de cortes por ensaio (S4) permanece no fluxograma 0/1 h já publicado; este lote não a duplica.",
+      "theme": "Geral",
+      "tags": [
+        "troponina de alta sensibilidade",
+        "algoritmo 0/1 h",
+        "algoritmo 0/2 h",
+        "IAMSEST",
+        "pronto-socorro"
+      ],
+      "document_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2023-hsctn-terceira-amostra-3h-se-algoritmo-0-1h-inconclusivo",
+      "statement": "Determinação adicional de hs-cTn após 3 horas é recomendada se as duas primeiras medições do algoritmo 0 h/1 h forem inconclusivas e não se tiver estabelecido diagnóstico alternativo. A zona de observação não é resultado inofensivo: a diretriz associa mortalidade semelhante à da via de confirmação.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 1: “Additional testing after 3 h is recommended if the first two hs-cTn measurements of the 0 h/1 h algorithm are inconclusive and no alternative diagnoses explaining the condition have been made.” Classe I, nível B. Isto NÃO é a estratégia 0/3 h como algoritmo primário — essa fica como alternativa quando 0/1 h e 0/2 h não são viáveis, sem classe própria na Table 1 de 2023.",
+      "theme": "Geral",
+      "tags": [
+        "troponina de alta sensibilidade",
+        "zona de observação",
+        "algoritmo 0/1 h",
+        "3 horas"
+      ],
+      "document_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2023-estrategia-invasiva-imediata-nste-risco-muito-alto-sem-esperar-troponina",
+      "statement": "Em paciente com diagnóstico de trabalho de NSTE-ACS e pelo menos um critério de risco muito alto (instabilidade hemodinâmica ou choque; dor recorrente ou refratária; IC aguda presumidamente isquêmica; arritmia ameaçadora ou parada após a apresentação; complicação mecânica; ST/T dinâmico recorrente, particularmente supra intermitente), recomenda-se estratégia invasiva imediata — angiografia de emergência, o mais rápido possível. O resultado da hs-cTn não é necessário para essa triagem e não deve atrasá-la. STEMI e equivalente de oclusão tampouco esperam troponina.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 4, seção 5.2.2 e Figura 8; classe I C já conferida no fluxograma de timing da casa (fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023), que leu o PDF integral. A ESC 2023 não fixa “< 2 h” para essa via (número da ESC 2020). Cortes de GRACE não fazem parte desta recomendação — GRACE >140 é critério de alto risco (estratégia na internação), não de emergência imediata, e não é reproduzido neste lote.",
+      "theme": "Geral",
+      "tags": [
+        "NSTE-ACS",
+        "risco muito alto",
+        "angiografia imediata",
+        "troponina",
+        "primeira hora"
+      ],
+      "document_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc-2025-heart-escore-preferencial-na-dor-toracica-da-emergencia-apos-ecg",
+      "statement": "O escore HEART é o escore clínico preferencial na avaliação de paciente com dor torácica em investigação de síndrome coronariana aguda (Classe I, nível B, SBC 2025). Na primeira hora ele não precede o ECG nem autoriza atrasar STEMI, equivalente de oclusão ou NSTE de risco muito alto. O componente T original usa troponina convencional; o algoritmo de hs-cTn é rota separada.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025",
+      "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354. Classe I B do HEART como preferencial transcrita das tabelas no protocolo já publicado protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025. Papers de derivação/validação/implementação: Six et al. PMID 18665203; Backus et al. PMID 23465250; Poldervaart et al. PMID 28437795. Distinct from heart-score-deve-ser-utilizado-para-estratificacao-risco-alta-hospitalar (SBC 2021).",
+      "theme": "Geral",
+      "tags": [
+        "escore HEART",
+        "dor torácica",
+        "pronto-socorro",
+        "SBC 2025"
+      ],
+      "document_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "dor-toracica-aguda-primeira-hora-equivalente-posterior-sem-esperar-troponina",
+      "titulo": "Mulher diabética com epigástrio e dispneia: esperar a troponina porque “não tem supra”?",
+      "tema": "Geral",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 67 anos, diabetes tipo 2 e hipertensão. Chega ao pronto-socorro com 40 minutos de desconforto epigástrico e falta de ar, sem aperto precordial. PA 148/88 mmHg, FC 92 bpm, SpO2 94% em ar ambiente, sudorese fria. A equipe discute se “é gastrite ou ansiedade, colhe troponina e reavalia em uma hora”, porque “mulher diabética quase nunca tem infarto clássico”. O ECG só é feito aos 18 minutos: ritmo sinusal, sem supra clássico, depressão de ST em V1–V3 com T terminal positiva. Derivações posteriores ainda não foram feitas.",
+      "pergunta": "Qual agrupamento de condutas está alinhado à primeira hora?",
+      "opcoes": [
+        "Aguardar a hs-cTn de 0 h e o delta de 1 h antes de qualquer decisão, porque não há supra de ST e o HEART ainda não pode ser calculado",
+        "Tratar como gastrite/ansiedade: ausência de dor precordial em mulher diabética torna SCA improvável; alta se a primeira troponina vier “normal”",
+        "Reconhecer equivalente de oclusão posterior, completar V7–V9 agora, ativar via de reperfusão e não esperar troponina; o ECG já deveria ter saído em 10 minutos",
+        "Calcular GRACE na porta para decidir se o cateterismo é imediato ou em 24 horas, e só então pedir o ECG de 12 derivações"
+      ],
+      "resposta_correta": 2,
+      "explicacao": "Dispneia e epigástrio em mulher diabética são equivalentes isquêmicos, não tranquilizantes. A ESC 2023 recomenda ECG o mais cedo possível no primeiro contato, com alvo de 10 minutos (Classe I B, Table 1, PMID 37622654) — 18 minutos já estourou o alvo. Depressão de ST em V1–V3 com T terminal positiva é o padrão que a própria diretriz aponta como altamente sugestivo de oclusão posterior; V7–V9 confirmam e a via é de reperfusão, não de “NSTE a esclarecer”. Troponina não pedagia STEMI nem equivalente de oclusão. HEART (SBC 2025 I B) e algoritmos 0/1 h (I B) só entram depois dessa porta. GRACE não é critério de emergência imediata e não deve ser inventado nesta hora; a opção que o coloca antes do ECG inverte a ordem. Ansiedade/gastrite como primeira hipótese neste perfil é o erro clássico de sexo e diabetes.",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "primeira-hora-dor-toracica-aguda-no-pronto-socorro",
+      "condicao": "Primeira hora da dor torácica aguda ou equivalente isquêmico no PS, enfermaria ou UCO",
+      "resumo": "Checklist de execução da primeira hora: ECG em 10 minutos mesmo sem dor “típica”, ramos que não esperam troponina, equivalentes de oclusão, cocaína como desvio de via (não de ECG), hs-cTn 0/1 h ou 0/2 h só depois, HEART depois do ECG, e a distinção tipo 1 versus tipo 2/lesão. Distinct from dor-toracica-na-emergencia-triagem-inicial (HEART/SBC 2025).",
+      "documento_origem": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "theme": "Geral",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+        "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354.",
+        "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. PMID: 30165617."
+      ],
+      "itens": [
+        {
+          "id": "dtx1h-via-aerea",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Via aérea, respiração e circulação avaliadas de imediato; gasping, rebaixamento ou PCR iminente tratados como reanimação, com o diagnóstico em paralelo",
+          "origem_secao": "Primeiros minutos: o que não espera a troponina"
+        },
+        {
+          "id": "dtx1h-ecg-10-min",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "ECG de 12 derivações obtido e interpretado em até 10 minutos do primeiro contato (ESC 2023 I B), inclusive se a queixa for dispneia, epigástrio ou apresentação em mulher, diabetes ou idoso",
+          "origem_secao": "ESC 2023 Table 1 — ECG no FMC"
+        },
+        {
+          "id": "dtx1h-equivalentes-oclusao",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Traçado revisado para equivalentes de oclusão (posterior V7–V9 / V1–V3, VD V3R–V4R, aVR com depressão difusa, BRE/BRD/marcapasso com alta suspeita de isquemia) — não só o supra clássico",
+          "origem_secao": "Equivalentes de oclusão que a ESC 2023 manda procurar"
+        },
+        {
+          "id": "dtx1h-nao-esperar-tn",
+          "categoria": "encaminhamento",
+          "obrigatorio": true,
+          "texto": "STEMI, equivalente de oclusão ou NSTE de risco muito alto (choque, dor refratária, IC isquêmica, arritmia ameaçadora, complicação mecânica, ST dinâmico recorrente) seguiram via imediata SEM esperar hs-cTn (I C no NSTE de muito alto risco)",
+          "origem_secao": "Quando não esperar a troponina"
+        },
+        {
+          "id": "dtx1h-ecg-repetido",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Se ECG limítrofe/preocupante ou instabilidade: traçado repetido a cada 10–20 minutos, com derivações complementares (SBC 2025 Classe I)",
+          "origem_secao": "O ECG que muda o destino agora"
+        },
+        {
+          "id": "dtx1h-cocaina",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Uso recente de cocaína perguntado; se confirmado ou suspeito, via dedicada acionada (ECG e troponina continuam; betabloqueador puro evitado na intoxicação aguda)",
+          "origem_secao": "Cocaína — via já publicada"
+        },
+        {
+          "id": "dtx1h-hsctn-algoritmo",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Se sem via imediata: hs-cTn 0 h colhida na chegada e 1 h (ou 2 h) agendada de forma sistemática com o ensaio validado do laboratório — sem misturar cortes de fabricantes (I B)",
+          "origem_secao": "hs-cTn: 0/1 h versus 0/2 h versus 0/3 h"
+        },
+        {
+          "id": "dtx1h-observacao-3h",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Se 0/1 h inconclusivo e sem diagnóstico alternativo: terceira hs-cTn em 3 h (I B); zona de observação não tratada como inofensiva",
+          "origem_secao": "Terceira amostra em 3 h"
+        },
+        {
+          "id": "dtx1h-heart-depois",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "HEART, se usado, calculado DEPOIS do ECG e da exclusão da via imediata (SBC 2025 I B); componente T com troponina convencional; EDACS só como opção, sem números inventados",
+          "origem_secao": "HEART e EDACS: depois do ECG"
+        },
+        {
+          "id": "dtx1h-tipo1-tipo2",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Troponina elevada não fechada automaticamente como infarto tipo 1; tipo 2 e lesão não isquêmica considerados quando o quadro for desequilíbrio ou doença crítica — sem DAPT/ICP de rotina nesse recorte; supra/choque não esperaram o rótulo",
+          "origem_secao": "Tipo 1 versus tipo 2 versus lesão"
+        },
+        {
+          "id": "dtx1h-nao-fazer",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Não administrados AAS/heparina empíricos se dissecção for plausível; não usado benzodiazepínico como primeira resposta; não dada alta por “ansiedade” com ECG não feito ou algoritmo incompleto",
+          "origem_secao": "O que não fazer nesta hora"
+        },
+        {
+          "id": "dtx1h-comunicacao",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Hemodinâmica, UCO ou transferência acionadas conforme STEMI/equivalente/risco muito alto; tempo porta-ECG registrado",
+          "origem_secao": "Função deste protocolo"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "quando-a-dor-no-peito-e-emergencia",
+      "titulo": "Quando a dor no peito é uma emergência",
+      "subtitulo": "O que não esperar em casa e quando ligar para o 192 — inclusive se “não dói o peito de verdade”",
+      "tema": "Geral",
+      "documento_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "review_status": "pendente_revisao",
+      "resumo": "Orientação para o paciente e a família reconhecerem dor, aperto, queimação ou equivalentes (falta de ar, dor no estômago, irradiação para braço, pescoço ou mandíbula) que não devem esperar consulta eletiva. Mulheres, pessoas com diabetes e idosos muitas vezes não têm a “dor clássica”. Distinct from dor-no-peito-na-emergencia-o-que-acontece-e-como-e-avaliado (o que a equipe faz depois que você chegou).",
+      "secoes": [
+        {
+          "titulo": "Dor no peito que não pode esperar",
+          "paragrafos": [
+            "Aperto, queimação, peso ou dor no peito que começa de repente, em repouso, ou que dura mais do que alguns minutos é motivo para ligar 192 — não para “ver se passa” nem para ir dirigindo. Cada minuto conta se uma artéria do coração estiver fechada.",
+            "Não ter aquela dor “de filme” no centro do peito não acalma. A falta de ar súbita, a dor na boca do estômago, no braço, no pescoço ou na mandíbula, o suor frio e o enjoo podem ser o infarto, sobretudo em mulheres, em quem tem diabetes e em pessoas mais velhas."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Ligue para o 192 agora se",
+          "paragrafos": [],
+          "itens": [
+            "A dor, o aperto ou a queimação no peito veio de repente ou não passa em poucos minutos",
+            "Há falta de ar nova, suor frio, enjoo, tontura ou sensação de desmaio junto",
+            "A dor irradia para o braço, o pescoço, a mandíbula, as costas ou a boca do estômago",
+            "Você é mulher, tem diabetes ou mais de 65 anos e o que apareceu foi cansaço súbito ou falta de ar, mesmo sem “dor forte”",
+            "A dor veio depois de usar cocaína — diga isso à equipe; muda o tratamento e não é motivo para esconder nem para deixar de ir",
+            "Houve desmaio, coração disparado ou irregular, ou os lábios ficaram roxos"
+          ]
+        },
+        {
+          "titulo": "O que acontece nos primeiros minutos no hospital",
+          "paragrafos": [
+            "A equipe deve fazer um eletrocardiograma depressa — a meta é cerca de 10 minutos depois que você chega. É um exame indolor, com adesivos no peito. Em alguns casos ele precisa ser repetido. Um exame de sangue (troponina) também é colhido, mas se o eletrocardiograma já mostrar infarto grave o tratamento não espera esse resultado.",
+            "Não dirija. Não tome comprimido “para nervoso” no lugar de pedir socorro. Se a pessoa não responde e não respira normalmente, trate como possível parada: 192 e compressões no centro do peito."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Ansiedade e “é só o estômago”",
+          "paragrafos": [
+            "Dor no peito dá medo, e o medo piora a sensação. Gastrite existe. Pânico existe. Nada disso autoriza você a decidir sozinho em casa. Quem afasta infarto é a avaliação médica com eletrocardiograma — depois, não antes.",
+            "Se a dor estável de esforço já foi investigada no consultório, isso é outro caminho. Dor nova, em repouso, ou que muda de padrão pede o pronto-socorro, não a consulta da semana que vem."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor, aperto ou queimação no peito que não passa em poucos minutos",
+        "Falta de ar súbita, suor frio, enjoo ou desmaio",
+        "Dor no estômago, no braço, no pescoço ou na mandíbula",
+        "Cansaço ou falta de ar novos em mulher, pessoa com diabetes ou idoso",
+        "Dor depois de usar cocaína",
+        "Lábios roxos, confusão ou pessoa que não responde"
+      ],
+      "perguntas": [
+        "Eu sei o número do SAMU (192) e consigo informar o endereço completo?",
+        "Alguém em casa sabe que infarto em mulher ou em quem tem diabetes pode aparecer só como falta de ar ou dor no estômago?",
+        "Se eu usar cocaína, consigo dizer isso à equipe sem esconder?",
+        "Há um DEA no condomínio, no trabalho ou na academia, e alguém treinado para usá-lo se a pessoa desmaiar?"
+      ],
+      "fontes": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+        "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354.",
+        "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. PMID: 34709879."
+      ]
+    }
+  ],
+  "emergencia": [
+    {
+      "slug": "dor-toracica-aguda-primeira-hora",
+      "titulo": "Dor torácica aguda — primeira hora no PS, enfermaria ou UCO",
+      "gatilho": "Dor torácica aguda ou equivalente isquêmico (dispneia, epigástrio, mulher/diabetes/idoso) · ECG em 10 min · STEMI ou equivalente de oclusão · choque",
+      "ordem": 125,
+      "documento_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+      "fluxograma_slug": "fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca",
+      "relacionados": [
+        "sindrome-coronariana-aguda",
+        "dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
+        "dispneia-aguda-de-origem-cardiovascular",
+        "choque-cardiogenico",
+        "sindrome-aortica-aguda",
+        "tromboembolismo-pulmonar",
+        "tamponamento-cardiaco"
+      ],
+      "review_status": "pendente_revisao",
+      "fonte_producao": "grok",
+      "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com sindrome-coronariana-aguda (ordem 2, dump ESC 2023 da SCA já diagnosticada) nem com dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina. Este slug cobre a primeira hora da dor ainda indiferenciada."
+    }
+  ]
+}

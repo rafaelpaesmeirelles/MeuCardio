@@ -1,0 +1,405 @@
+{
+  "lote_id": "has-eap",
+  "titulo": "Hipertensão secundária rastreável no adulto e protocolo da primeira hora do EAP cardiogênico",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "fonte_producao": "grok",
+  "review_status": "pendente_revisao",
+  "nota": "Lote de staging para importação após revisão humana. Não edita metadados publicados. Catálogo de quando rastrear qual causa de hipertensão secundária no adulto + protocolo da primeira hora do EAP cardiogênico. Documentos novos apenas. Evidências SBC 2025 extraídas do PDF integral (PMID 41294179). ESC 2024 de rastreio via McCarthy et al. Hypertension 2025 (PMID 39970254), porque o PDF da ESC 2024 permanece 403 — LoE da Recommendation Table 13 pendente de verificação humana. Park 2004 e Cotter 1998 conferidos por abstract PubMed nesta sessão. 3CPO reutilizado do documento já revisado de VNI. Não colide com fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar, hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr, ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap, nem com o verbete de emergência hipertensiva do PR #713.",
+  "documentos": [
+    {
+      "path": "content/Hipertensão/hipertensao-secundaria-causas-rastreaveis-no-adulto.md",
+      "slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "kind": "protocolo",
+      "theme": "Hipertensão",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Terapia_intensiva/edema-agudo-de-pulmao-cardiogenico-protocolo-inicial.md",
+      "slug": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+      "kind": "protocolo",
+      "theme": "Terapia intensiva",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "sbc2025-anamnese-e-exame-fisico-para-identificar-causas-secundarias-de-ha",
+      "statement": "Recomenda-se realizar anamnese e exame físico com o objetivo de se obter um diagnóstico mais preciso e ajudar na identificação de causas secundárias de hipertensão arterial e de lesão de órgão-alvo.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Baixa",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+      "reference": "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Caixa GRADE do Capítulo 4, PDF integral lido nesta sessão.",
+      "theme": "Hipertensão",
+      "tags": ["hipertensão secundária", "anamnese", "exame físico", "SBC 2025", "rastreio"],
+      "document_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2024-rastreio-de-ha-secundaria-antes-dos-40-anos-exceto-jovem-obeso",
+      "statement": "O rastreio de hipertensão secundária é recomendado em adultos com hipertensão diagnosticada antes dos 40 anos, exceptuando o jovem obeso, em quem o primeiro passo deve ser a avaliação de apneia obstrutiva do sono.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2024,
+      "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+      "reference": "McEvoy JW et al. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715. Classe I conforme McCarthy CP et al. Hypertension. 2025;82(3):432-444. DOI: 10.1161/HYPERTENSIONAHA.124.24173. PMID: 39970254, e ACC Key Points 2024. PDF integral da ESC 2024 não lido nesta sessão (Oxford Academic 403). Nível de evidência C: VERIFICAÇÃO HUMANA NECESSÁRIA contra a Recommendation Table 13.",
+      "theme": "Hipertensão",
+      "tags": ["hipertensão secundária", "adulto jovem", "apneia obstrutiva do sono", "ESC 2024"],
+      "document_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2024-considerar-rastreio-de-aldosteronismo-primario-em-todo-hipertenso",
+      "statement": "O rastreio de aldosteronismo primário por dosagem de renina e aldosterona deve ser considerado em todo adulto com hipertensão confirmada — não apenas nos grupos clássicos de alto risco.",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2024,
+      "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+      "reference": "McCarthy CP, Bruno RM, Rahimi K, Touyz RM, McEvoy JW. Hypertension. 2025;82(3):432-444. DOI: 10.1161/HYPERTENSIONAHA.124.24173. PMID: 39970254 — revisão da ESC 2024 que atribui Classe IIa a esta recomendação. PDF integral da ESC 2024 não lido nesta sessão. Nível de evidência C: VERIFICAÇÃO HUMANA NECESSÁRIA contra a Recommendation Table 13.",
+      "theme": "Hipertensão",
+      "tags": ["aldosteronismo primário", "ARR", "rastreio", "ESC 2024"],
+      "document_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-investigar-aos-em-todo-paciente-com-hipertensao-resistente",
+      "statement": "A investigação da apneia obstrutiva do sono é recomendada para os pacientes com hipertensão resistente, devido à sua alta prevalência nessa população, que pode chegar a 80%.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Baixa",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+      "reference": "Brandão AA et al. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Capítulo 12.5, PDF integral lido nesta sessão. Frase do texto da abordagem clínica da hipertensão resistente, não de caixa GRADE própria. Força/certeza aqui espelham a recomendação GRADE vizinha do Capítulo 4 (anamnese para causas secundárias: Forte, Baixa) — VERIFICAÇÃO HUMANA NECESSÁRIA se o importador exigir caixa GRADE literal.",
+      "theme": "Hipertensão",
+      "tags": ["apneia obstrutiva do sono", "hipertensão resistente", "SBC 2025"],
+      "document_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-ntg-iv-nas-primeiras-48h-no-eap-por-emergencia-hipertensiva",
+      "statement": "Recomenda-se, em pacientes com edema agudo de pulmão por emergência hipertensiva, o uso de nitroglicerina intravenosa nas primeiras 48 horas, desde que não haja hipotensão, infarto do ventrículo direito ou uso de inibidor da fosfodiesterase tipo 5 (sildenafila, tadalafila) nas 48 horas anteriores.",
+      "recommendation_class": "Fraca",
+      "evidence_level": "Moderada",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Hipertensão Arterial – 2025",
+      "reference": "Brandão AA et al. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Caixa GRADE do Capítulo 11, PDF integral lido nesta sessão.",
+      "theme": "Terapia intensiva",
+      "tags": ["edema agudo de pulmão", "nitroglicerina", "emergência hipertensiva", "SBC 2025"],
+      "document_slug": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "aha2022-nitrato-iv-pode-ser-considerado-na-ic-descompensada-sem-hipotensao",
+      "statement": "Em pacientes internados com insuficiência cardíaca descompensada, na ausência de hipotensão sistêmica, nitroglicerina ou nitroprussiato intravenosos podem ser considerados como adjuvante da terapia diurética para alívio da dispneia.",
+      "recommendation_class": "2b",
+      "evidence_level": "B-NR",
+      "society": "AHA/ACC/HFSA",
+      "year": 2022,
+      "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+      "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+      "theme": "Terapia intensiva",
+      "tags": ["edema agudo de pulmão", "nitrato", "nitroglicerina", "insuficiência cardíaca aguda"],
+      "document_slug": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "rastreio-de-aldosteronismo-em-hipertensao-resistente-sem-hipopotassemia",
+      "titulo": "Hipertensão resistente sem hipopotassemia: pedir ARR agora?",
+      "tema": "Hipertensão",
+      "nivel": "intermediário",
+      "enunciado": "Homem, 52 anos, PA de consultório 168/102 mmHg em uso de perindopril, anlodipino e clortalidona em doses plenas há 8 semanas, com adesão conferida e MAPA confirmando hipertensão sustentada (média 24 h 154/96 mmHg). Potássio 3,9 mEq/L. Sem sopro abdominal, sem ronco relatado, sem tríade de cefaleia-sudorese-palpitação, sem hábito cushingoide. IMC 31 kg/m². Creatinina 1,1 mg/dL.",
+      "pergunta": "Qual o próximo passo diagnóstico mais alinhado à diretriz brasileira de 2025 e às posições contemporâneas de rastreio de aldosteronismo?",
+      "opcoes": [
+        "Não rastrear causa secundária: potássio normal exclui aldosteronismo primário e não há pista para as demais causas",
+        "Pedir relação aldosterona-renina (após planejar a coleta) e investigar apneia obstrutiva do sono; a hipopotassemia não é obrigatória e a AOS é recomendada em toda hipertensão resistente",
+        "Pedir de uma vez ARR, metanefrinas plasmáticas, cortisol salivar noturno e Doppler de artérias renais, porque resistência autoriza o painel completo",
+        "Encaminhar direto para amostragem de veias adrenais, já que a resistência com três fármacos fecha o diagnóstico de adenoma produtor de aldosterona"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "A SBC 2025 (Quadro 4.5) rastreia hiperaldosteronismo primário na hipertensão resistente e/ou com hipopotassemia — e escreve que a hipopotassemia não é obrigatória. No resistente verdadeiro, o Capítulo 12.5 manda investigar especificamente aldosteronismo, doença renovascular e AOS, e recomenda AOS em todo paciente com hipertensão resistente (prevalência que pode chegar a 80%), independentemente do relato espontâneo de ronco. Metanefrinas e cortisol sem tríade paroxística ou hábito cushingoide multiplicam falso-positivo. Amostragem de veia adrenal é etapa de subtipagem depois de ARR e teste confirmatório, não o primeiro exame. Coleta, cortes e interferência de fármacos: documento de testes confirmatórios da Endocrine Society já publicado nesta biblioteca.",
+      "source_refs": [
+        "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Quadro 4.5 e Capítulo 12.5.",
+        "Adler GK et al. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2025;110(9):2453-2495. PMID: 40658480."
+      ],
+      "review_status": "pendente_revisao"
+    },
+    {
+      "slug": "primeira-hora-do-eap-cardiogenico-hipertensivo",
+      "titulo": "EAP hipertensivo na chegada: o que fazer nesta hora?",
+      "tema": "Terapia intensiva",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 68 anos, chega sentada na maca, agitada, com estertores até o terço médio, SpO2 84% em ar ambiente, PA 210/118 mmHg, FC 118 bpm, extremidades quentes. Nega dor torácica. ECG sem supradesnível. Relata sildenafila ontem à noite. Sem sopro novo.",
+      "pergunta": "Qual a sequência da primeira hora mais alinhada à evidência e à SBC 2025?",
+      "opcoes": [
+        "Deitar para o RX, oxigênio por cateter nasal, furosemida 160 mg IV agora e nitroglicerina em infusão; VNI só se não melhorar em 2 horas",
+        "Sentar, iniciar VNI (CPAP ou BiPAP) e oxigênio, furosemida IV em dose moderada; não iniciar nitroglicerina nesta hora por uso de sildenafila nas 48 h anteriores; ECG e precipitante em paralelo",
+        "Intubação imediata de todo EAP com SpO2 < 90%, seguida de noradrenalina porque a PA 210 mmHg é compensatória",
+        "Metoprolol IV agora para a FC 118 bpm, depois furosemida; VNI é equivalente ao oxigênio em mortalidade e portanto opcional"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "A paciente está no fenótipo hipertenso/quente: sentar, VNI cedo e alça. Park 2004 (PMID 15599144) reduziu intubação de 42% para 7% com CPAP ou bilevel versus oxigênio no pronto-socorro. A SBC 2025 contraindica NTG IV se houver uso de inibidor de PDE-5 nas 48 h anteriores (caixa GRADE, Fraca/Moderada) — sildenafila ontem fecha o nitrato desta hora. Betabloqueador IV não entra na primeira hora de EAP instável. Intubação não é automática só pela SpO2; a VNI é a primeira via se a consciência e o vômito permitirem. PA 210 mmHg neste fenótipo não é compensatória de choque — é o mecanismo. O 3CPO ser neutro em mortalidade (9,5% vs. 9,8%) não torna a VNI opcional: ela acelera dispneia, frequência cardíaca, acidose e hipercapnia na primeira hora.",
+      "source_refs": [
+        "Park M et al. Crit Care Med. 2004;32(12):2407-2415. DOI: 10.1097/01.CCM.0000147770.20400.10. PMID: 15599144.",
+        "Gray A et al.; 3CPO Trialists. N Engl J Med. 2008;359(2):142-151. DOI: 10.1056/NEJMoa0707992. PMID: 18614781.",
+        "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179. Capítulo 11, NTG no EAP por emergência hipertensiva."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "rastreio-dirigido-de-hipertensao-secundaria-no-adulto",
+      "condicao": "Rastreio dirigido de hipertensão secundária no adulto",
+      "resumo": "Checklist de consultório para decidir se há indício de causa secundária e qual exame de triagem pedir primeiro, sem transformar resistência em painel de endocrinologia.",
+      "documento_origem": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "theme": "Hipertensão",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179.",
+        "McCarthy CP et al. Hypertension. 2025;82(3):432-444. PMID: 39970254."
+      ],
+      "itens": [
+        {
+          "id": "has-sec-indicador-alarme",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Indicadores de alarme conferidos: início < 40 anos (ou < 30 sem obesidade), instalação abrupta, resistência verdadeira, lesão de órgão-alvo desproporcional, emergência hipertensiva",
+          "origem_secao": "Quem entra no catálogo"
+        },
+        {
+          "id": "has-sec-substancias",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Lista da SBC 2025 2.3.9 revisada: AINE, contraceptivo, glicocorticoide, calcineurina, simpatomimético, alcaçuz, eritropoetina, testosterona, cocaína/anfetamina/MDMA",
+          "origem_secao": "Medicamentos e substâncias"
+        },
+        {
+          "id": "has-sec-potassio-renal",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Potássio, creatinina/TFGe, sumário de urina e albuminúria disponíveis ou solicitados — abrem DRC, aldosteronismo e mineralocorticoide aparente",
+          "origem_secao": "Doença renal parenquimatosa; hiperaldosteronismo"
+        },
+        {
+          "id": "has-sec-arr",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "ARR planejada se houver resistência, hipopotassemia (não obrigatória), nódulo adrenal, ou se o clínico adotar rastreio alargado de aldosteronismo; coleta e interferência de fármacos não improvisadas nesta consulta",
+          "origem_secao": "Hiperaldosteronismo primário"
+        },
+        {
+          "id": "has-sec-aos",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "AOS investigada se resistência (SBC 2025: em todo resistente), obesidade, ronco ou sonolência; questionário não aceito como suficiente",
+          "origem_secao": "Apneia obstrutiva do sono"
+        },
+        {
+          "id": "has-sec-renovascular",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "Doppler/angio de artéria renal só com gatilho: < 30 ou > 55 anos com início súbito, sopro, flash EAP, assimetria > 1,5 cm, piora com IECA/BRA",
+          "origem_secao": "Estenose de artéria renal"
+        },
+        {
+          "id": "has-sec-nao-painel",
+          "categoria": "seguranca",
+          "obrigatorio": true,
+          "texto": "Metanefrinas e cortisol não pedidos sem tríade paroxística ou hábito cushingoide; amostragem de veia adrenal não pedida como primeiro exame",
+          "origem_secao": "Quando a pista não aponta"
+        }
+      ],
+      "revisao": "Produção 29/08/2026 a partir do Quadro 4.5 da SBC 2025 (PDF lido). Pendente de revisão humana. Não substitui o fluxograma de quando suspeitar já publicado."
+    },
+    {
+      "slug": "primeira-hora-do-edema-agudo-de-pulmao-cardiogenico",
+      "condicao": "Primeira hora do edema agudo de pulmão cardiogênico",
+      "resumo": "Checklist de execução à beira do leito: posição, VNI, nitrato se permitido, alça, precipitante (SCA, arritmia, mecânica) e a porta de saída para choque.",
+      "documento_origem": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+      "theme": "Terapia intensiva",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Park M et al. Crit Care Med. 2004;32(12):2407-2415. PMID: 15599144.",
+        "Gray A et al. N Engl J Med. 2008;359(2):142-151. PMID: 18614781.",
+        "Brandão AA et al. Arq Bras Cardiol. 2025;122(9):e20250624. PMID: 41294179.",
+        "Cotter G et al. Lancet. 1998;351(9100):389-393. PMID: 9482291."
+      ],
+      "itens": [
+        {
+          "id": "eap-sentar",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Paciente sentado, pernas pendentes, se não houver choque ou rebaixamento que impeça a via aérea",
+          "origem_secao": "Posição"
+        },
+        {
+          "id": "eap-vni",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Oxigênio se SpO2 < 90% ou PaO2 < 60 mmHg; VNI (CPAP ou BiPAP) iniciada cedo no taquipneico hipoxêmico, sem esperar o RX; intubar se houver contraindicação ou falha em ≤ 2 h",
+          "origem_secao": "Oxigênio e VNI"
+        },
+        {
+          "id": "eap-nitrato-gate",
+          "categoria": "seguranca",
+          "obrigatorio": true,
+          "texto": "Nitrato IV só se não houver choque, IAM de VD ou inibidor de PDE-5 nas 48 h anteriores",
+          "origem_secao": "Nitrato se não houver choque"
+        },
+        {
+          "id": "eap-alca",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Diurético de alça IV na sobrecarga, em dose inicial — não substituído por mega-dose de furosemida no hipertenso com EAP flash",
+          "origem_secao": "Diurético de alça"
+        },
+        {
+          "id": "eap-ecg",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "ECG de 12 derivações na primeira hora; SCA e arritmia instável tratadas em paralelo, não depois da VNI",
+          "origem_secao": "O precipitante que a VNI não trata"
+        },
+        {
+          "id": "eap-mecanica",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "Se sopro novo, choque desproporcional ou EAP alguns dias após IAM: POCUS para septo/papilar/parede livre, sem atrasar o cirurgião",
+          "origem_secao": "Complicação mecânica"
+        },
+        {
+          "id": "eap-fenotipo",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Fenótipo separado: hipertenso/quente segue nitrato+VNI; hipotenso/frio não recebe nitrato e entra na via de choque",
+          "origem_secao": "Dois fenótipos"
+        },
+        {
+          "id": "eap-nao-bb",
+          "categoria": "seguranca",
+          "obrigatorio": true,
+          "texto": "Betabloqueador não iniciado nem aumentado nesta hora de instabilidade",
+          "origem_secao": "SBC 2025 versus primeira hora instável"
+        }
+      ],
+      "revisao": "Produção 29/08/2026. Pendente de revisão humana. Não substitui o documento de CPAP vs BiPAP nem o fluxograma de IC aguda já publicados."
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "por-que-as-vezes-e-preciso-procurar-outra-causa-para-a-pressao-alta",
+      "titulo": "Por que às vezes é preciso procurar outra causa para a pressão alta",
+      "subtitulo": "Nem toda hipertensão é essencial: o que o médico está procurando e o que isso muda para você",
+      "tema": "Hipertensão",
+      "documento_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para o paciente hipertenso em quem o médico suspeita de causa secundária: o que isso significa, quais pistas importam, e por que um exame específico é melhor do que uma bateria completa.",
+      "secoes": [
+        {
+          "titulo": "O que é hipertensão secundária",
+          "paragrafos": [
+            "Na maioria das pessoas, a pressão alta não tem uma causa única que se possa tirar com uma cirurgia ou com a troca de um remédio. Isso se chama hipertensão primária, ou essencial.",
+            "Em uma minoria — a diretriz brasileira estima algo entre 5 e 10 em cada 100 hipertensos — existe uma causa identificável: um hormônio, uma artéria do rim, o sono, um remédio, uma doença do próprio rim. Encontrar essa causa pode melhorar o controle da pressão e, em alguns casos, reduzir o número de comprimidos."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Por que o médico não pede todos os exames de uma vez",
+          "paragrafos": [
+            "Cada exame funciona melhor quando há uma pista. Pedir tudo ao mesmo tempo aumenta o risco de um resultado falso e de uma investigação longa, cara e desnecessária.",
+            "Por isso a consulta começa por perguntas (ronco, crises de dor de cabeça com suor e palpitação, remédios, chás, alcaçuz, anti-inflamatório) e por exames simples de sangue e urina."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que você pode fazer",
+          "paragrafos": [],
+          "itens": [
+            "Leve a lista completa de remédios, inclusive os que compra sem receita, gotas nasais, anti-inflamatório, anticoncepcional, testosterona e chás",
+            "Conte se ronca, se acorda engasgando, se tem sono de dia — mesmo que sempre tenha sido assim",
+            "Não pare o anti-hipertensivo por conta própria para fazer o exame do hormônio; a coleta de aldosterona e renina precisa ser planejada",
+            "Se a pressão não baixa com três remédios, isso não é falha sua: é o momento de o médico revisar a causa, não só a dose"
+          ]
+        }
+      ],
+      "sinais_de_alerta": [
+        "Pressão que sobe de repente depois de anos controlada",
+        "Pressão muito alta em pessoa com menos de 40 anos",
+        "Cãibra, fraqueza ou potássio baixo em exame",
+        "Inchaço súbito, falta de ar noturna ou ronco com pausas",
+        "Crises de dor de cabeça, suor e coração disparado"
+      ],
+      "perguntas": [
+        "Eu uso anti-inflamatório, anticoncepcional, corticoide ou algum chá ou doce de alcaçuz?",
+        "Alguém em casa diz que eu paro de respirar durante o sono?",
+        "Meus exames de potássio e de rim já foram feitos neste ano?"
+      ],
+      "fontes": [
+        "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624."
+      ]
+    },
+    {
+      "slug": "edema-agudo-de-pulmao-os-primeiros-minutos-no-hospital",
+      "titulo": "Edema agudo de pulmão: o que acontece nos primeiros minutos no hospital",
+      "subtitulo": "Por que sentam você, colocam uma máscara e não esperam o raio-x para começar",
+      "tema": "Terapia intensiva",
+      "documento_slug": "edema-agudo-de-pulmao-cardiogenico-protocolo-inicial",
+      "review_status": "pendente_revisao",
+      "resumo": "Orientação para o paciente e a família sobre a primeira hora do edema agudo de pulmão cardiogênico: posição sentada, máscara de pressão positiva, remédio para dilatar vasos e diurético, e a busca simultânea por infarto ou arritmia.",
+      "secoes": [
+        {
+          "titulo": "O que está acontecendo",
+          "paragrafos": [
+            "No edema agudo de pulmão, líquido sai dos vasos e enche os alvéolos. A pessoa sente que está se afogando em terra. Quase sempre o problema é o coração, não uma pneumonia isolada.",
+            "Os primeiros minutos no hospital existem para fazer você respirar melhor agora, enquanto o time descobre por que o coração falhou nesta hora: pressão muito alta, infarto, arritmia ou, mais raro, uma complicação mecânica depois de um infarto."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Por que não deitam você para o exame",
+          "paragrafos": [
+            "Sentado, com as pernas para baixo, volta menos sangue para o peito e a respiração custa menos. O raio-x confirma; ele não autoriza o primeiro gesto.",
+            "A máscara de pressão positiva (CPAP ou BiPAP) não é só oxigênio. Ela abre alvéolos e alivia o trabalho do coração. Em um estudo brasileiro feito no pronto-socorro, essa máscara diminuiu a necessidade de tubo na garganta de cerca de 4 em cada 10 pessoas para menos de 1 em cada 10."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Remédios desta hora",
+          "paragrafos": [
+            "Se a pressão estiver alta e não houver choque, um nitrato na veia alivia o pulmão mais depressa do que só o diurético em dose muito alta. Se você usou sildenafila ou tadalafila nas últimas 48 horas, diga imediatamente: esse nitrato pode derrubar a pressão de forma perigosa.",
+            "O diurético de alça (furosemida) entra quando há excesso de volume. Ele não substitui a máscara nem o nitrato, e o efeito na urina demora mais do que o alívio da máscara."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Falta de ar que piora ao deitar, tosse com catarro rosado ou espumoso",
+        "Pressão muito alta com agitação e chiado",
+        "Dor no peito, desmaio ou coração muito rápido ou muito lento junto da falta de ar",
+        "A máscara não alivia e a pessoa fica sonolenta ou exausta — avise a equipe"
+      ],
+      "perguntas": [
+        "Usei sildenafila, tadalafila ou outro remédio para ereção nas últimas 48 horas?",
+        "Tenho infarto recente, sopro novo ou cirurgia do coração?",
+        "Quem da família sabe informar os remédios de casa, inclusive o diurético?"
+      ],
+      "fontes": [
+        "Park M et al. Crit Care Med. 2004;32(12):2407-2415. PMID: 15599144.",
+        "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624."
+      ]
+    }
+  ]
+}

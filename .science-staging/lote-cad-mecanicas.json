@@ -1,0 +1,298 @@
+{
+  "lote": "cad-mecanicas-civ-pos-iam-20260829",
+  "theme": "Doença coronariana",
+  "review_status": "pendente_revisao",
+  "review_note": "Lote de staging da sessão grok/science-overnight-20260829. Documentos-âncora: comunicacao-interventricular-pos-infarto-diagnostico-e-decisao e fluxograma-complicacao-mecanica-pos-iam-civ-e-ruptura-papilar. Não duplica o catálogo de UCO complicacoes-mecanicas-pos-infarto-na-uco-ruptura-septo-papilar-parede-livre. Classes ESC 2023 conferidas no PDF (Tabelas 9 e 14). Números do registro SHOCK de CIV (PMID 10985713) conferidos contra o abstract JACC. DanGer-Shock não entra como estudo deste lote porque já está em estudos/metadados.json e não randomizou VSR. SHOCK trial RCT (PMID 10460813) já cadastrado; este lote cadastra o registro de ruptura septal, que é outro paper. PMID da V Diretriz SBC 2015 de IAMCST não localizado — não há evidencia SBC com classe neste JSON.",
+  "evidencias": [
+    {
+      "slug": "esc2023-reparo-emergencial-complicacao-mecanica-sca-heart-team",
+      "statement": "Na instabilidade hemodinâmica, o reparo cirúrgico ou por cateter, de emergência, das complicações mecânicas da síndrome coronariana aguda é recomendado, com base na discussão do Heart Team.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Recommendation Table 9 (cardiogenic shock), conferida no PDF da diretriz nesta sessão.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "complicação mecânica",
+        "comunicação interventricular pós-infarto",
+        "ruptura de músculo papilar",
+        "Heart Team",
+        "cirurgia de emergência"
+      ],
+      "document_slug": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2023-iabp-considerar-choque-por-complicacao-mecanica-sca",
+      "statement": "O balão intra-aórtico deve ser considerado em pacientes com instabilidade hemodinâmica ou choque cardiogênico decorrente de complicação mecânica da síndrome coronariana aguda.",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Recommendation Table 14 (ACS complications / heart failure), conferida no PDF da diretriz nesta sessão. Não confundir com a Classe III da mesma diretriz contra IABP rotineiro no choque sem ruptura.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "balão intra-aórtico",
+        "complicação mecânica",
+        "choque cardiogênico",
+        "comunicação interventricular pós-infarto"
+      ],
+      "document_slug": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2023-iabp-rotina-nao-recomendado-choque-sem-complicacao-mecanica",
+      "statement": "O uso rotineiro de balão intra-aórtico em pacientes com síndrome coronariana aguda e choque cardiogênico, sem complicação mecânica, não é recomendado.",
+      "recommendation_class": "III",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Recommendation Table 9 (cardiogenic shock), conferida no PDF da diretriz nesta sessão. Fundamento: IABP-SHOCK II (Thiele, N Engl J Med 2012, PMID 22920912), já cadastrado em estudos/metadados.json. Esta evidencia existe neste lote para contrastar, no mesmo tema, com a Classe IIa da complicação mecânica — não para republicar o IABP-SHOCK II.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "balão intra-aórtico",
+        "choque cardiogênico",
+        "Classe III",
+        "IABP-SHOCK II"
+      ],
+      "document_slug": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc2023-fibrinolise-no-choque-so-apos-excluir-complicacao-mecanica",
+      "statement": "A fibrinólise deve ser considerada em pacientes com STEMI e choque cardiogênico se a estratégia de ICP primária não estiver disponível em 120 minutos a partir do diagnóstico de STEMI e as complicações mecânicas tiverem sido excluídas.",
+      "recommendation_class": "IIa",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Recommendation Table 9 (cardiogenic shock), conferida no PDF da diretriz nesta sessão. Leitura operacional: na suspeita de CIV, ruptura papilar ou tamponamento, não administrar o fibrinolítico antes do eco.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "fibrinólise",
+        "choque cardiogênico",
+        "complicação mecânica",
+        "STEMI"
+      ],
+      "document_slug": "fluxograma-complicacao-mecanica-pos-iam-civ-e-ruptura-papilar",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "shock-registry-ruptura-septal-ventricular-pos-iam-menon-2000",
+      "title": "SHOCK Trial Registry — Perfil e desfecho da ruptura septal ventricular com choque cardiogênico após infarto",
+      "study_type": "registro_prospectivo",
+      "authors": "Menon V, Webb JG, Hillis LD, Sleeper LA, Abboud R, Dzavik V, Slater JN, Forman R, Monrad ES, Talley JD, Hochman JS; SHOCK Investigators",
+      "journal": "Journal of the American College of Cardiology",
+      "year": 2000,
+      "doi": "10.1016/S0735-1097(00)00878-0",
+      "pmid": "10985713",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10985713/",
+      "summary": "Relato do registro concomitante ao ensaio SHOCK descrevendo 55 pacientes com ruptura do septo ventricular e choque cardiogênico após infarto, comparados a 884 pacientes do mesmo registro com falência predominante de ventrículo esquerdo. Não é o ensaio randomizado SHOCK (Hochman, NEJM 1999, PMID 10460813, já cadastrado): o RCT excluiu choque por ruptura e testou revascularização precoce no choque de bomba. Este paper é o braço observacional da CIV.",
+      "key_findings": "Mortalidade intra-hospitalar 87% (48/55) na CIV versus 61% na falência de VE (p<0,001); sobrevida global 13% (7/55). Cirurgia em 31 pacientes (21 com revascularização concomitante): mortalidade 81% (25/31). Tratamento clínico em 24: sobreviveu 1. IABP em 75% (41/55), com elevação da pressão sistólica mediana de 81 para 102 mmHg (p<0,001). Tempo mediano entre o infarto e a ruptura: 16 horas (IQR 1,8–42,5 h). Pacientes com CIV eram mais frequentemente mulheres (58% vs 36%), com menos infarto prévio (17% vs 40%) e fração de ejeção maior (40% vs 30%). Coronária culpada: 46% direita, 42% descendente anterior, 12% circunflexa, entre os 35 angiografados.",
+      "clinical_implications": "Define o fenótipo que o cardiologista precisa reconhecer à beira do leito: choque com VE que ainda ejeta, mais mulheres, primeiro infarto, e mortalidade pior do que o choque de bomba do mesmo registro. O IABP melhorou a pressão, mas não salvou o grupo clínico. A janela mediana de 16 horas impede tratar 'dia 3 a 5' como horário de começar a procurar. Não extrapolar o benefício de 6 meses do RCT SHOCK (revascularização no choque de bomba) para este mecanismo.",
+      "limitations": "Registro observacional da era pré-stent farmacológico e pré-suporte mecânico contemporâneo, selecionado por choque — o tempo mediano de 16 horas é o de quem chegou em choque, não o da incidência geral da CIV. Amostra de 55 pacientes. Mortalidade cirúrgica de 81% não representa a cirurgia eletiva em paciente estabilizado duas décadas depois, nem invalida a cirurgia como tratamento de escolha das diretrizes atuais.",
+      "theme": "Doença coronariana",
+      "tags": [
+        "SHOCK registry",
+        "comunicação interventricular pós-infarto",
+        "ruptura septal",
+        "choque cardiogênico",
+        "IABP"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "civ-pos-iam-sopro-novo-e-choque-no-terceiro-dia",
+      "titulo": "Sopro novo e choque no terceiro dia após IAM anterior: bomba, CIV ou papilar?",
+      "tema": "Doença coronariana",
+      "nivel": "avançado",
+      "enunciado": "Homem, 71 anos, primeiro infarto. IAM anterior com supra, ICP primária da descendente anterior 9 horas após o início da dor — reperfusão tardia. FEVE na sala: 40%, sem IM importante, sem derrame. No terceiro dia de UCO, hipotensão súbita (78/50 mmHg), hipoperfusão (lactato em alta, oligúria) e sopro holossistólico novo em borda esternal esquerda, com frêmito. Campos pulmonares com estertores, mas sem edema maciço. O plantonista de plantão pensa em 'choque cardiogênico de bomba' e pede Impella citando DanGer-Shock. Eco à beira do leito: VE ainda com FEVE 42%, VD dilatado, jato de alta velocidade da esquerda para a direita através do septo apical no Doppler colorido, IM leve, sem derrame pericárdico.",
+      "pergunta": "Qual a conduta imediata mais alinhada com a evidência e as diretrizes atuais?",
+      "opcoes": [
+        "Implantar Impella CP de rotina: o DanGer-Shock reduziu mortalidade em 180 dias no STEMI com choque, e este paciente está em choque pós-IAM",
+        "Tratar como choque de bomba, manter noradrenalina em dose crescente e repetir o eco só se o sopro piorar — FEVE de 42% 'explica' o quadro",
+        "Reconhecer CIV pós-IAM, considerar IABP como ponte, acionar Heart Team para reparo e não extrapolar DanGer-Shock — o ensaio excluiu ruptura septal",
+        "Administrar fibrinolítico agora, porque o choque após STEMI com reperfusão tardia ainda se beneficia de lise de resgate"
+      ],
+      "resposta_correta": 2,
+      "explicacao": "O eco já fechou o mecanismo: jato transseptal E→D, VE que ainda ejeta, VD dilatado, sopro novo com frêmito. Isso é CIV pós-IAM, não choque de bomba. A ESC 2023 recomenda reparo emergencial cirúrgico ou por cateter na instabilidade (Classe I C) e considera IABP na instabilidade por complicação mecânica (Classe IIa C). O IABP-SHOCK II e a Classe III da mesma diretriz valem para o choque SEM ruptura — não para este paciente. O DanGer-Shock (Møller, NEJM 2024, PMID 38587239) excluiu explicitamente choque por ruptura do septo, papilar ou parede livre; citar o HR 0,74 daquele ensaio aqui é extrapolação. Fibrinólise não cabe: o paciente já foi reperfundido, e a ESC 2023 só considera lise no STEMI com choque se a ICP primária não for viável em 120 min E a complicação mecânica tiver sido excluída. FEVE de 42% com choque não 'explica' o quadro — no registro SHOCK de CIV (Menon, JACC 2000, PMID 10985713) a FEVE média era 40%, maior do que no choque de bomba, e a mortalidade era 87%. O próximo passo é ponte (IABP) e Heart Team, não mais catecolamina sem correção do defeito.",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Menon V, Webb JG, Hillis LD, et al. Outcome and profile of ventricular septal rupture with cardiogenic shock after myocardial infarction: a report from the SHOCK Trial Registry. J Am Coll Cardiol. 2000;36(3 Suppl A):1110-1116. DOI: 10.1016/S0735-1097(00)00878-0. PMID: 10985713",
+        "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. DOI: 10.1056/NEJMoa2312572. PMID: 38587239",
+        "Schlotter F, Huber K, Hassager C, et al. Ventricular septal defect complicating acute myocardial infarction: diagnosis and management. Eur Heart J. 2024;45(28):2478-2492. DOI: 10.1093/eurheartj/ehae363. PMID: 38888906"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "suspeita-civ-e-ruptura-papilar-pos-iam-a-beira-do-leito",
+      "condicao": "Suspeita de CIV ou ruptura papilar após infarto: decisão à beira do leito",
+      "resumo": "O que o cardiologista precisa ter feito antes de chamar o choque pós-IAM de 'bomba', de implantar MCS e de decidir entre IABP, cirurgia de emergência, adiamento selecionado ou fechamento percutâneo.",
+      "documento_origem": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654",
+        "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI: 10.1161/CIR.0000000000000985. PMID: 34126755",
+        "Schlotter F, Huber K, Hassager C, et al. Ventricular septal defect complicating acute myocardial infarction: diagnosis and management. Eur Heart J. 2024;45(28):2478-2492. DOI: 10.1093/eurheartj/ehae363. PMID: 38888906",
+        "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025;85(22):2135-2237. DOI: 10.1016/j.jacc.2024.11.009. PMID: 40013746",
+        "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. PMID: 38587239"
+      ],
+      "itens": [
+        {
+          "id": "civ-eco-imediato",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Eco transtorácico com Doppler colorido realizado à beira do leito na deterioração pós-IAM, sem esperar sala formal nem Swan-Ganz",
+          "origem_secao": "Eco à beira do leito"
+        },
+        {
+          "id": "civ-mecanismo",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Mecanismo classificado: CIV (jato transseptal E→D), ruptura papilar (flail/IM aguda), parede livre (tamponamento/PEA) ou choque de bomba — sopro ausente não usou para afastar ruptura",
+          "origem_secao": "A pergunta que muda o caminho; Diferenciar CIV de ruptura papilar"
+        },
+        {
+          "id": "civ-ete-se-preciso",
+          "categoria": "exame",
+          "obrigatorio": false,
+          "texto": "ETE obtido se a janela do TTE for ruim, se o sopro sugerir IM aguda, ou se o TTE não explicar o choque",
+          "origem_secao": "Eco à beira do leito"
+        },
+        {
+          "id": "civ-centro-cirurgia",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Heart Team acionado; se o hospital não opera coração, transferência para centro com cirurgia cardíaca iniciada (ACC/AHA 2025)",
+          "origem_secao": "Transferência, fibrinólise e o que não fazer"
+        },
+        {
+          "id": "civ-iabp-ponte",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "Na instabilidade por CIV ou ruptura papilar, IABP considerado como ponte (ESC 2023 Classe IIa C) e registrado que o balão não fecha o defeito",
+          "origem_secao": "Estabilização: o que o IABP faz"
+        },
+        {
+          "id": "civ-nao-iabp-bomba",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "IABP de rotina não implantado se o eco mostrou choque de bomba sem ruptura (ESC 2023 Classe III B / IABP-SHOCK II)",
+          "origem_secao": "Estabilização: o que o IABP faz"
+        },
+        {
+          "id": "civ-nao-danger-shock",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Impella/DanGer-Shock não usados como justificativa de mortalidade neste fenótipo — o ensaio excluiu ruptura septal, papilar e de parede livre",
+          "origem_secao": "Impella, ECMO e por que o DanGer-Shock não se aplica"
+        },
+        {
+          "id": "civ-timing-heart-team",
+          "categoria": "equipe",
+          "obrigatorio": true,
+          "texto": "Timing documentado pelo Heart Team: emergência se instável/refratário (Classe I C); adiamento de 1–2 semanas só considerado na CIV que sustenta a ponte; ruptura papilar completa tratada como cirurgia de emergência, não como espera",
+          "origem_secao": "Timing da cirurgia"
+        },
+        {
+          "id": "civ-percutaneo-selecionado",
+          "categoria": "procedimento",
+          "obrigatorio": false,
+          "texto": "Fechamento percutâneo da CIV (ou edge-to-edge na IM por ruptura) discutido só se risco cirúrgico proibitivo e anatomia favorável — não apresentado como substituto rotineiro",
+          "origem_secao": "Fechamento percutâneo"
+        },
+        {
+          "id": "civ-nao-fibrinolise",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "Fibrinolítico não administrado na suspeita de complicação mecânica; ESC 2023 só considera lise no STEMI com choque se ICP primária indisponível em 120 min E a ruptura tiver sido excluída",
+          "origem_secao": "Transferência, fibrinólise e o que não fazer"
+        }
+      ]
+    }
+  ],
+  "materiais": [
+    {
+      "slug": "comunicacao-no-septo-depois-do-infarto-o-que-significa",
+      "titulo": "Um orifício no septo depois do infarto: o que isso significa",
+      "subtitulo": "Por que o coração piorou de repente e o que a equipe vai decidir agora",
+      "tema": "Doença coronariana",
+      "documento_slug": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação em linguagem simples da comunicação interventricular que pode surgir nos primeiros dias após um infarto: não é o 'furinho' de nascença, por que o sopro e a pressão baixa aparecem de repente, e por que a correção — quase sempre cirúrgica — não pode esperar um 'choque comum' ser tratado só com remédio.",
+      "secoes": [
+        {
+          "titulo": "O que aconteceu",
+          "paragrafos": [
+            "O infarto deixa uma área do músculo do coração sem sangue. Nos primeiros dias essa área fica frágil. Em poucas pessoas — hoje menos de 1 em cada 300 infartos, porque a desobstrução precoce ficou mais comum — o tabique que separa o lado esquerdo do direito do coração rasga. Os médicos chamam isso de comunicação interventricular pós-infarto, ou CIV pós-IAM.",
+            "Não é o mesmo 'furinho no coração' com o qual algumas pessoas nascem. Aqui o rasgo é agudo, o tecido ao redor está necrosado, e o sangue que deveria ir para o corpo passa a ser jogado de volta para o lado direito e para o pulmão."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Por que a pessoa piora de repente",
+          "paragrafos": [
+            "O rasgo faz o lado direito receber um volume de sangue para o qual ele não estava preparado. A pressão cai, falta ar, aparece um sopro novo (um som que o médico ouve com o estetoscópio) e os rins e o resto do corpo deixam de ser bem perfundidos. Isso pode acontecer no primeiro dia ou alguns dias depois do infarto — não é preciso 'esperar o quarto dia' para pensar nisso.",
+            "Há um problema parecido, a ruptura do músculo que segura a valva mitral, que também causa sopro e choque, em geral com falta de ar ainda mais explosiva. O ultrassom do coração (ecocardiograma) feito no leito é o exame que separa os dois e confirma o diagnóstico. Sem esse exame, o quadro pode ser confundido com 'o coração simplesmente enfraqueceu'."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que a equipe faz agora",
+          "paragrafos": [
+            "O primeiro passo é o ecocardiograma à beira do leito. Com o diagnóstico, a equipe discute — cardiologista, cirurgião e intensivista — o timing da correção. O tratamento de escolha é fechar o rasgo, em geral com cirurgia. Em algumas pessoas muito graves para operar, existe a opção de um dispositivo colocado pelo cateter, em centro especializado. Nenhum desses caminhos é 'o remédio do choque comum'.",
+            "Enquanto a correção é organizada, pode ser usado um balão dentro da aorta (balão intra-aórtico). Ele alivia o trabalho do coração e reduz a quantidade de sangue que atravessa o rasgo. Ele não tapa o orifício. Outros dispositivos de suporte existem, mas o estudo que mostrou benefício de um deles no choque após infarto (DanGer-Shock) não incluiu pessoas com rasgo no septo — por isso a equipe não aplica aquele resultado automaticamente aqui."
+          ],
+          "itens": [
+            "Peça para lhe explicarem o que o eco mostrou: buraco no septo, valva mitral rasgada, ou só o músculo fraco",
+            "Pergunte se o hospital opera coração; se não opera, a transferência faz parte do tratamento",
+            "O balão na aorta, se for colocado, é ponte — não é a correção",
+            "A espera de alguns dias só entra em cena se a pessoa estiver estável com o suporte; se estiver piorando, esperar o tecido 'cicatrizar' pode ser tarde demais"
+          ]
+        },
+        {
+          "titulo": "O que a família pode esperar",
+          "paragrafos": [
+            "Esta é uma das complicações mais graves do infarto. Mesmo com cirurgia, o risco de morte é alto — em séries clássicas de choque por CIV, a maior parte dos pacientes não sobrevivia à internação. Isso não é motivo para omitir a correção: sem fechar o rasgo, a mortalidade se aproxima da totalidade. A conversa honesta com a equipe sobre o que é possível, o que é paliativo e o que a pessoa quereria é parte do cuidado, não um recuo."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Piora súbita da falta de ar ou da pressão nos primeiros dias após um infarto",
+        "O médico ouve um sopro novo que não estava lá na admissão",
+        "A pessoa fica fria, confusa, com pouco xixi, mesmo com o infarto 'já desobstruído'",
+        "Desmaio ou parada nos primeiros dias de internação por infarto"
+      ],
+      "perguntas": [
+        "O eco mostrou um rasgo no septo, na valva mitral, ou só o músculo fraco?",
+        "Este hospital opera coração? Se não, para onde vamos e quando?",
+        "O balão na aorta já foi considerado? Ele é ponte ou tratamento?",
+        "A cirurgia é agora ou a equipe acha possível esperar — e o que acontece se eu piorar nessa espera?",
+        "Existe opção por cateter no meu caso, ou isso seria um desvio da cirurgia?"
+      ],
+      "fontes": [
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654.",
+        "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. PMID: 34126755.",
+        "Schlotter F, Huber K, Hassager C, et al. Ventricular septal defect complicating acute myocardial infarction. Eur Heart J. 2024;45(28):2478-2492. PMID: 38888906.",
+        "Menon V, Webb JG, Hillis LD, et al. Outcome and profile of ventricular septal rupture with cardiogenic shock after myocardial infarction. J Am Coll Cardiol. 2000;36(3 Suppl A):1110-1116. PMID: 10985713."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "append": {
+      "presentation": [
+        "Equivalentes isquêmicos como dispneia, sudorese, náusea, síncope/pré-síncope ou desconforto epigástrico podem predominar, especialmente em idosos, mulheres e pessoas com diabetes; ausência de dor torácica típica não exclui SCA."
+      ],
+      "tests": [
+        "Usar troponina cardíaca de alta sensibilidade em estratégia seriada validada e interpretar valor absoluto, delta, tempo desde o início dos sintomas e contexto clínico; elevação de troponina documenta lesão miocárdica, mas não define isoladamente infarto tipo 1.",
+        "Repetir ECG quando a suspeita clínica permanecer alta apesar de traçado inicial não diagnóstico; considerar derivações posteriores e direitas quando o território suspeito justificar.",
+        "Em SCA submetida a PCI com lesões coronárias complexas, imagem intravascular para guiar a intervenção é recomendada pela diretriz ACC/AHA 2025 (Classe I, nível A)."
+      ],
+      "red_flags": [
+        "Novo sopro, edema agudo de pulmão, choque, deterioração hemodinâmica ou recorrência abrupta de dor após infarto exigem investigação imediata de complicação mecânica, incluindo insuficiência mitral aguda, comunicação interventricular e ruptura de parede livre.",
+        "SCA com choque cardiogênico exige revascularização emergencial da artéria culpada; PCI rotineira das artérias não culpadas no mesmo procedimento não é recomendada."
+      ],
+      "ambulatory_flow": [
+        "Após SCA, usar dupla antiagregação por 12 meses como estratégia padrão quando o risco hemorrágico não é alto, individualizando encurtamento, monoterapia após período inicial ou combinação com anticoagulação conforme risco isquêmico, hemorrágico e necessidade de anticoagulante oral.",
+        "Prescrever prevenção secundária intensiva e reabilitação cardíaca; repetir perfil lipídico 4 a 8 semanas após início ou ajuste da terapia hipolipemiante para verificar resposta e adesão.",
+        "Planejar revascularização completa em pacientes apropriados com doença multiarterial após SCA; no choque cardiogênico, separar essa recomendação da estratégia aguda de tratar inicialmente apenas a lesão culpada."
+      ],
+      "emergency_flow": [
+        "Em NSTE-ACS de risco intermediário ou alto, adotar estratégia invasiva durante a hospitalização; não transformar o rótulo de NSTE-ACS em indicação automática de angiografia imediata sem considerar instabilidade e critérios de muito alto risco.",
+        "Evitar pré-tratamento rotineiro com inibidor P2Y12 antes de conhecer a anatomia em NSTE-ACS quando angiografia precoce estiver planejada; a estratégia pode mudar se a angiografia for postergada por mais de 24 horas, conforme a diretriz ACC/AHA 2025.",
+        "Preferir acesso radial à via femoral para PCI em SCA quando tecnicamente factível, pela redução de sangramento, complicações vasculares e mortalidade."
+      ],
+      "monitoring": [
+        "Na fase hospitalar, vigiar recorrência isquêmica, arritmias, congestão, perfusão, sangramento e sinais de complicações mecânicas; a intensidade da monitorização deve acompanhar o risco clínico.",
+        "Após a alta, revisar adesão e tolerabilidade da terapia antitrombótica e hipolipemiante, pressão arterial, tabagismo, diabetes, sintomas recorrentes e comparecimento à reabilitação cardíaca."
+      ],
+      "special_populations": [
+        "Em paciente que necessita anticoagulação oral crônica após PCI por SCA, minimizar a duração da terapia tripla e retirar aspirina precocemente quando apropriado, mantendo preferencialmente clopidogrel como P2Y12 na combinação com anticoagulante, conforme risco individual."
+      ],
+      "tags": [
+        "ACC AHA ACS 2025",
+        "ESC ACS 2023",
+        "SBC dor torácica 2025",
+        "acesso radial",
+        "imagem intravascular",
+        "revascularização completa",
+        "choque cardiogênico"
+      ],
+      "source_refs": [
+        "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025. doi:10.1161/CIR.0000000000001309.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44:3720-3826. doi:10.1093/eurheartj/ehad191.",
+        "de Barros e Silva PGM, et al. Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025;122(9):e20250620."
+      ],
+      "source_urls": [
+        "https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes",
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-coronary-syndromes/",
+        "https://abccardiol.org/wp-content/uploads/2025/10/2025-0620_Diretriz-Dor-Toracica_2025_port.x66747.pdf"
+      ]
+    }
+  }
+]

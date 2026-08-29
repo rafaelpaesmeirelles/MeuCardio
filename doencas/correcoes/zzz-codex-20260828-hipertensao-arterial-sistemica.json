@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "hipertensao-arterial-sistemica",
+    "append": {
+      "presentation": [
+        "Queda, pré-síncope ou tontura após intensificação terapêutica deve motivar pesquisa de hipotensão ortostática e revisão de fármacos, especialmente em idosos e pessoas frágeis"
+      ],
+      "tests": [
+        "Pressão ortostática quando houver tontura, quedas, fragilidade, neuropatia autonômica ou suspeita de hipotensão induzida pelo tratamento",
+        "Relação aldosterona/renina e investigação dirigida de hiperaldosteronismo primário quando houver hipertensão resistente, hipocalemia espontânea ou induzida por diurético, ou outros critérios clínicos pertinentes"
+      ],
+      "red_flags": [
+        "Hipertensão de início muito precoce, abrupto ou rapidamente progressivo, sobretudo quando associada a hipocalemia, deterioração renal ou assimetria de pulsos, exige busca dirigida de causa secundária",
+        "Hipertensão aparentemente resistente não deve ser rotulada como verdadeira antes de excluir técnica inadequada, efeito do avental branco, baixa adesão e substâncias que elevam a pressão"
+      ],
+      "ambulatory_flow": [
+        "Usar dispositivos validados e incorporar medidas domiciliares ou ambulatoriais ao seguimento quando isso puder distinguir efeito do avental branco, hipertensão mascarada ou resposta terapêutica",
+        "Na hipertensão aparentemente resistente, revisar adesão, doses, combinações, ingestão de sódio, álcool, anti-inflamatórios, simpaticomiméticos, estimulantes e outras substâncias antes de ampliar investigação ou considerar terapias por dispositivo",
+        "Individualizar a intensidade do tratamento diante de ortostatismo sintomático, fragilidade, expectativa de vida limitada ou baixa tolerabilidade; metas não substituem julgamento clínico"
+      ],
+      "monitoring": [
+        "Pressão em ortostase quando indicada e correlação de sintomas com valores domiciliares após intensificação do tratamento",
+        "Reconciliação periódica de medicamentos e substâncias que podem elevar a pressão ou reduzir a adesão, incluindo anti-inflamatórios, descongestionantes, estimulantes e produtos ergogênicos"
+      ],
+      "special_populations": [
+        "Hipertensão resistente ou hipocalemia exige considerar hiperaldosteronismo primário; a triagem deve respeitar interferentes farmacológicos e condições de coleta",
+        "Pessoas com grande discrepância entre medidas de consultório e domiciliares devem ser avaliadas para efeito do avental branco ou hipertensão mascarada antes de decisões terapêuticas irreversíveis"
+      ],
+      "tags": [
+        "SBC 2025",
+        "ESC 2024",
+        "AHA ACC 2025",
+        "hipertensão resistente",
+        "hiperaldosteronismo primário",
+        "hipotensão ortostática"
+      ],
+      "source_refs": [
+        "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624.",
+        "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45:3912-4018."
+      ],
+      "source_urls": [
+        "https://abccardiol.org/article/diretriz-brasileira-de-hipertensao-arterial-2025/",
+        "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+      ]
+    }
+  }
+]

@@ -1,0 +1,241 @@
+{
+  "lote_id": "pos-rosc",
+  "titulo": "Pós-ROSC: o que o cardiologista decide nas primeiras 24 horas",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "review_status": "pendente_revisao",
+  "fonte_producao": "grok",
+  "nota": "Lote de staging para importação após revisão humana. Não edita metadados publicados. Recorte: sete decisões do CARDIOLOGISTA nas primeiras 24 h após RCE. Não clona TTM/TTM2, COACT/TOMAHAWK, BOX, o protocolo AHA 2025 de cuidados na UCO nem o algoritmo de neuroprognóstico — os markdowns apontam para eles. PMIDs TTM2 34133859, COACT 30883057, TOMAHAWK 34459570, BOX 36027564 e 36027567 conferidos via PubMed E-utilities (efetch) nesta sessão. Tabelas COR/LOE AHA 2025 Parte 11 e ESC 2023 Recommendation Table 8 não abertas (403) — retidas. Uma única evidência classificada: restage da Classe I C ESC 2023 de não prognosticar antes de 72 h, já fichada no corpus como avaliacao-de-prognostico-neurologico-nao-antes-de-72-horas-apos-parada (classe conferida em contexto no texto original); slug novo porque o recorte é a recusa nas primeiras 24 h do cardiologista. Não colide com os slugs de caso pos-parada-cardiorrespiratoria-normotermia-versus-hipotermia-induzida e pos-parada-cardiaca-sem-supra-de-st-coronariografia-imediata-ou-adiada, nem com o checklist cuidados-nas-primeiras-24-a-72-horas-pos-parada-cardiorrespiratoria, nem com o material colapso-subito-como-reconhecer-parada-e-usar-o-dea, nem com a emergência cuidado-pos-parada-e-coronariografia.",
+  "documentos": [
+    {
+      "path": "content/Terapia_intensiva/pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide.md",
+      "slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+      "kind": "protocolo",
+      "theme": "Terapia intensiva",
+      "review_status": "pendente_revisao"
+    },
+    {
+      "path": "content/Terapia_intensiva/fluxograma-pos-rosc-ecg-temperatura-pa-e-cateterismo.md",
+      "slug": "fluxograma-pos-rosc-ecg-temperatura-pa-e-cateterismo",
+      "kind": "fluxograma",
+      "theme": "Terapia intensiva",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2023-nao-declarar-neuroprognostico-nas-primeiras-24h-pos-rosc",
+      "statement": "A avaliação de prognóstico neurológico é recomendada em sobreviventes comatosos de parada cardíaca e não deve ocorrer antes de 72 horas da admissão. Nas primeiras 24 horas após o retorno da circulação espontânea o cardiologista registra o exame e não declara dano cerebral irreversível, não conversa limitação de suporte como se o prognóstico já existisse, e não usa mioclonia isolada, TC da admissão ou 'ainda não acordou' como veredito.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Classe I, nível C conferidos em contexto no texto original — restage da evidência já fichada no corpus como avaliacao-de-prognostico-neurologico-nao-antes-de-72-horas-apos-parada. Recorte deste lote: a recusa explícita nas primeiras 24 h do cardiologista, que está contida no interdito de 72 h. Algoritmo multimodal (ERC-ESICM 2021 / AHA 2025) permanece no documento dedicado, não nesta ficha.",
+      "theme": "Terapia intensiva",
+      "tags": [
+        "pós-ROSC",
+        "neuroprognóstico",
+        "primeiras 24 horas",
+        "parada cardiorrespiratória",
+        "coma"
+      ],
+      "document_slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "cardiologista-nas-primeiras-24h-pos-rosc-sete-decisoes",
+      "titulo": "Pós-ROSC sem supra: cateterismo agora, 33 °C, DAPT e 'o cérebro não volta'?",
+      "tema": "Terapia intensiva",
+      "nivel": "avançado",
+      "enunciado": "Homem, 62 anos, hipertenso, ressuscitado de parada extra-hospitalar testemunhada, ritmo inicial FV, RCE após 18 minutos. Chega comatoso, intubado, PAM 68 mmHg com noradrenalina baixa, SpO2 96% com FiO2 0,40, temperatura 36,4 °C. ECG de 12 derivações 12 minutos após a RCE: sem supra, sem equivalente de oclusão, inversões inespecíficas. Sem sopro novo. A família pergunta se 'o cérebro já morreu'. O intensivista sugere esfriar a 33 °C 'porque é o protocolo antigo'. O hemodinamicista quer sala agora 'porque a causa mais comum é coronária'. A residência já preparou AAS 300 mg + ticagrelor 180 mg 'para não perder o DAPT'. Ninguém pediu eco.",
+      "pergunta": "Qual agrupamento de condutas das próximas 24 horas está alinhado com TTM2, COACT, TOMAHAWK, BOX e com o interdito de prognosticar cedo?",
+      "opcoes": [
+        "Sala de hemodinâmica agora, hipotermia a 33 °C, DAPT carregada, e dizer à família que o coma na chegada indica mau prognóstico neurológico",
+        "Não ir à hemodinâmica de rotina; não induzir 33 °C por rotina (tratar febre se vier); não carregar DAPT sem indicação de SCA/ICP; pedir eco; manter PAM e oxigenação fora dos extremos; e recusar prognosticar o cérebro nesta janela",
+        "Elevar a PAM para 77 mmHg e a PaO2 para 13–14 kPa 'para proteger o cérebro', porque o BOX mostrou benefício desses alvos altos",
+        "Adiar o ECG e o eco até o paciente aquecer e acordar, porque o traçado pós-RCE não é interpretável e o prognóstico neurológico sai em 24 horas"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "O ECG já foi feito e não mostra supra: COACT (sobrevida em 90 dias 64,5% vs 67,2%, p=0,51) e TOMAHAWK (óbito em 30 dias HR 1,28, IC95% 1,00-1,63, p=0,06) não sustentam cateterismo imediato de rotina no estável sem supra — e o COACT ainda mostrou atraso da temperatura-alvo (5,4 h vs 4,7 h). Não há choque refratário, tempestade elétrica nem isquemia em curso neste enunciado; esse ramo de alto risco não está aberto. TTM2 (morte em 6 meses 50% vs 48%, RR 1,04, p=0,37; Rankin ≥4 55% vs 55%) não mostrou ganho de 33 °C contra tratar febre ≥37,8 °C, e a hipotermia teve mais arritmia hemodinâmica (24% vs 17%). BOX foi neutro entre PAM 77 e 63 mmHg e entre PaO2 9–10 e 13–14 kPa — perseguir o alto da faixa não é a alavanca. Parada não é SCA: DAPT sem lesão culpada nem IAMCST é reflexo, não indicação. Eco nas primeiras horas procura o que o ECG não vê (mecânica, tamponamento, VE/VD). Prognosticar nesta janela contradiz a ESC 2023 (não antes de 72 h, Classe I C já fichada no corpus). A opção que junta sala + 33 °C + DAPT + veredito neurológico replica os quatro erros clássicos das primeiras 24 h. Adiar o ECG já feito não se aplica; o traçado pós-RCE é exatamente o que abriu este caso.",
+      "source_refs": [
+        "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859",
+        "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057",
+        "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570",
+        "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564",
+        "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "primeiras-24-horas-pos-rosc-o-que-o-cardiologista-checa",
+      "condicao": "Primeiras 24 horas após retorno da circulação espontânea — lista do cardiologista de plantão",
+      "resumo": "O que o cardiologista confirma no mesmo turno da RCE: ECG lido, ramo de cateterismo justificado, temperatura com alvo de evitar febre, PAM e oxigênio fora dos extremos, eco pensado, antitrombótico só se indicado, e neuroprognóstico recusado. Não substitui o checklist já existente de cuidados 24-72 h (foco de UCO) nem o de neuroprognóstico multimodal (depois de 72 h).",
+      "documento_origem": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+      "theme": "Terapia intensiva",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859",
+        "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057",
+        "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570",
+        "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564",
+        "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
+      ],
+      "itens": [
+        {
+          "id": "rosc24-ecg-12-derivacoes",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "ECG de 12 derivações obtido e lido após a RCE, com presença ou ausência de supra persistente (ou equivalente de oclusão) registrada — sem esperar o leito da UCO",
+          "origem_secao": "1. O ECG de 12 derivações"
+        },
+        {
+          "id": "rosc24-ramo-cateterismo",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Ramo de coronariografia justificado: emergente se supra; adiada/seletiva se estável sem supra (COACT/TOMAHAWK); alto risco em curso com etiologia cardíaca tratado como via própria, não como 'todo pós-PCR vai à sala'",
+          "origem_secao": "2. Cateterismo agora ou depois"
+        },
+        {
+          "id": "rosc24-temperatura-evitar-febre",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Alvo de temperatura protocolizado como evitar febre, não como induzir 33 °C de rotina — TTM2 sem diferença de morte em 6 meses (50% vs 48%) e com mais arritmia na hipotermia (24% vs 17%)",
+          "origem_secao": "3. Temperatura"
+        },
+        {
+          "id": "rosc24-pam-oxigenio-piso",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Hipotensão e hipoxemia francas tratadas; PAM e PaO2 não 'otimizadas' para o alto da faixa do BOX (77 mmHg e 13–14 kPa foram neutros contra 63 mmHg e 9–10 kPa)",
+          "origem_secao": "4. PAM e oxigenação"
+        },
+        {
+          "id": "rosc24-eco-causa-mecanica",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Eco ou POCUS feito, ou sua indisponibilidade documentada, com procura explícita de tamponamento, papilar, CIV, disfunção de VE/VD e hipovolemia versus vasoplegia",
+          "origem_secao": "5. Eco nas primeiras horas"
+        },
+        {
+          "id": "rosc24-dapt-so-se-indicado",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "AAS, P2Y12 e anticoagulação plena prescritos só se houver indicação nomeada (IAMCST/ICP, NSTE-ACS definido, trombo, TEP) — parada isolada não carregou DAPT",
+          "origem_secao": "6. Antiplaquetário e anticoagulação"
+        },
+        {
+          "id": "rosc24-nao-prognosticar",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Prognóstico neurológico não declarado nesta janela; família informada de que ainda não é a hora; mioclonia, TC da admissão ou coma na chegada não usados como veredito (ESC 2023: não antes de 72 h, Classe I C)",
+          "origem_secao": "7. Não prognosticar o cérebro nas primeiras 24 horas"
+        },
+        {
+          "id": "rosc24-nao-atrasar-temperatura-na-hemodinamica",
+          "categoria": "conduta",
+          "obrigatorio": false,
+          "texto": "Se o paciente foi à hemodinâmica (supra ou alto risco), controle de temperatura, PAM e oxigenação iniciados em paralelo — no COACT a estratégia imediata atrasou o alvo térmico (5,4 h vs 4,7 h)",
+          "origem_secao": "2. Cateterismo agora ou depois; Armadilhas"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "as-primeiras-24-horas-depois-que-o-coracao-voltou-a-bater",
+      "titulo": "As primeiras 24 horas depois que o coração voltou a bater",
+      "subtitulo": "O que a família pode esperar, o que a equipe está decidindo, e por que ainda não é hora de falar do cérebro",
+      "tema": "Terapia intensiva",
+      "documento_slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+      "review_status": "pendente_revisao",
+      "resumo": "Orientação para familiares de alguém que teve parada cardíaca e voltou a ter pulso: as primeiras 24 horas são de estabilizar coração, pressão, oxigênio e temperatura, e de decidir se o cateterismo é agora ou depois. Coma na chegada não é diagnóstico de dano cerebral irreversível.",
+      "secoes": [
+        {
+          "titulo": "O coração voltou. Isso não encerra a emergência",
+          "paragrafos": [
+            "Quando o coração para, os minutos da massagem e do desfibrilador decidem se a pessoa volta a ter pulso. Quando o pulso volta, começa outra fase, que dura horas: o corpo inteiro sofreu falta de sangue, o cérebro ainda está se recuperando, e a equipe precisa descobrir por que a parada aconteceu — sem precipitar o que não ajuda.",
+            "Nessas primeiras 24 horas o cardiologista toma poucas decisões, e recusa outras. Entender quais são evita duas angústias comuns: achar que 'não estão fazendo nada' porque não foram direto para o cateterismo, e achar que já se sabe se o cérebro vai voltar."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que a equipe decide agora",
+          "paragrafos": [],
+          "itens": [
+            "Um eletrocardiograma completo, o mais cedo possível, para ver se há infarto com artéria ocluída",
+            "Se o eletrocardiograma mostra infarto com supra, o cateterismo é emergente — isso não mudou",
+            "Se não mostra supra e a pessoa está estável, dois estudos grandes não mostraram benefício de ir à sala de hemodinâmica na mesma hora; a prioridade passa a ser o cuidado na UTI",
+            "Controlar a temperatura para não deixar febre, o que não é o mesmo que esfriar o corpo a 33 °C de rotina",
+            "Manter a pressão e o oxigênio em faixas seguras, sem perseguir números altos que um ensaio específico testou e não mudaram o desfecho",
+            "Um ultrassom do coração à beira do leito, quando disponível, para procurar causa mecânica ou tamponamento",
+            "Remédios que afinam o sangue só se houver indicação clara — ter tido parada, sozinho, não é essa indicação"
+          ]
+        },
+        {
+          "titulo": "Por que ainda não é hora de falar do cérebro",
+          "paragrafos": [
+            "Quem chega em coma depois de uma parada muitas vezes ainda está sob efeito de sedativos, da própria isquemia e, às vezes, de protocolos de temperatura. Nenhum desses fatores permite dizer, no primeiro dia, se o dano neurológico é reversível ou não.",
+            "A orientação das sociedades é não fechar prognóstico neurológico antes de 72 horas, e em muitos casos ainda mais tarde, depois que a temperatura se normaliza e os sedativos saem. Pupilas abertas na chegada, um exame de imagem 'feio' da admissão ou o fato de a pessoa ainda não ter acordado não são, isolados, a resposta que a família está pedindo.",
+            "Perguntar é justo. A resposta honesta nas primeiras 24 horas é: ainda não sabemos, e é cedo demais para decidir como se soubéssemos."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que você pode perguntar à equipe",
+          "paragrafos": [],
+          "itens": [
+            "O eletrocardiograma já foi feito? Mostrou infarto com artéria ocluída?",
+            "Se não vão ao cateterismo agora, quando reavaliam essa decisão?",
+            "Qual é o alvo de temperatura, de pressão e de oxigênio nestas horas?",
+            "Já fizeram, ou vão fazer, um ultrassom do coração?",
+            "Quando, de fato, vocês vão conversar sobre o cérebro — não hoje?"
+          ]
+        }
+      ],
+      "sinais_de_alerta": [
+        "Nova instabilidade — pressão que cai, arritmia que volta, sangramento",
+        "Febre que não está sendo tratada",
+        "Alguém da equipe falando em 'desligar' ou em dano cerebral irreversível no primeiro dia",
+        "Família pressionada a decidir limitação de suporte nas primeiras horas"
+      ],
+      "perguntas": [
+        "Eu sei o nome do médico de plantão e a hora da próxima conversa marcada?",
+        "Entendi que coma agora não é o mesmo que prognóstico fechado?",
+        "Sei que cateterismo imediato não é automático se o eletrocardiograma não mostra infarto com supra?",
+        "Há alguém da família designado para receber as atualizações, para a equipe não repetir a conversa fragmentada?"
+      ],
+      "fontes": [
+        "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859.",
+        "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057.",
+        "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+      ]
+    }
+  ],
+  "emergencia": [
+    {
+      "slug": "pos-rosc-primeiras-24-horas-cardiologista",
+      "titulo": "Pós-ROSC — o que o cardiologista decide nas primeiras 24 horas",
+      "gatilho": "RCE · ECG pós-parada · comatoso na UCO · pressão da família por prognóstico · tentação de cateterismo e de 33 °C",
+      "ordem": 125,
+      "documento_slug": "pos-rosc-primeiras-24-horas-o-que-o-cardiologista-decide",
+      "fluxograma_slug": "fluxograma-pos-rosc-ecg-temperatura-pa-e-cateterismo",
+      "relacionados": [
+        "cuidado-pos-parada-e-coronariografia",
+        "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+        "choque-cardiogenico"
+      ],
+      "review_status": "pendente_revisao",
+      "fonte_producao": "grok",
+      "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com cuidado-pos-parada-e-coronariografia (ordem 17, só o ramo do cateterismo). Este slug cobre a lista integrada das sete decisões do cardiologista nas primeiras 24 h."
+    }
+  ]
+}

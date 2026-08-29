@@ -23914,5 +23914,189 @@
       }
     ],
     "revisao": "Lote produzido em 27/08/2026 com a diretriz KDIGO publicada de 2012 e estudos originais de cirurgia cardíaca; o rascunho KDIGO 2026 foi explicitamente excluído como norma. Conteúdo e sequência permanecem pendentes de revisão clínica humana."
+  },
+  {
+    "slug": "trilha-prevencao-secundaria-integrada-apos-sca",
+    "titulo": "Prevenção secundária integrada após SCA — da alta aos cinco pilares",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo montar a alta após síndrome coronariana aguda como um único raciocínio: DAPT com data, LDL intensificado, eixo neuro-hormonal guiado pela FEVE, cessação com fármaco, reabilitação e diabetes/obesidade — e saber onde a evidência recente (REDUCE-AMI, EMPACT-MI, SELECT, SECURE) muda o reflexo, em vez de criar um reflexo novo.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+        "por_que": "É o playbook. Sem ele, os ensaios da trilha viram peças soltas e a alta continua sendo uma lista de fármacos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis",
+        "por_que": "A mesma sequência em árvore, com a subárvore da FEVE que impede betabloqueador e iSGLT2 por reflexo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+        "por_que": "A ESC 2023 é o chão da alta: intensificar hipolipemiante na internação, não desescalar DAPT em 30 dias, teach-back, vacina de influenza, reabilitação como regra."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp",
+        "por_que": "O pilar 1 despacha para cá. Esta trilha não inventa 1 versus 3 versus 12 meses."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "por_que": "Pilar 2 na régua europeia: <55 mg/dL e redução ≥50%, com intensificação na internação. Contrasta com a meta <50 da SBC 2025 de dislipidemias citada no playbook."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+        "por_que": "O freio do pilar 3 quando a FEVE é ≥50% e não há outra indicação de betabloqueador."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50",
+        "por_que": "Impede tratar 40–49% e ≥50% como o mesmo grupo — que é o erro que o REDUCE-AMI sozinho não mostra."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "empact-mi-empagliflozina-pos-iam-alto-risco",
+        "por_que": "O outro freio: iSGLT2 não vira rotina de todo IAM de alto risco para IC. As portas que continuam abertas (ICFEr, T2DM, DRC) vêm na etapa seguinte."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+        "por_que": "A porta que o EMPACT-MI não fecha: diabetes tipo 2 com doença aterosclerótica."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cessacao-do-tabagismo-no-cardiopata-farmacoterapia-e-seguimento",
+        "por_que": "Pilar 4 operacional: vareniclina ou TRN na internação, não conselho no sumário."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+        "por_que": "Pilar 5 na prescrição de exercício. O encaminhamento sem data não cumpre a Classe I."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia",
+        "por_que": "Atualiza o pilar 5: reabilitação como programa multicomponente, não só esteira."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+        "por_que": "O IMC ≥27 sem diabetes depois de SCA é população de DCV estabelecida. O SELECT entra aqui; a classe de diretriz não se inventa a partir do HR 0,80."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "polipilula-em-prevencao-secundaria-pos-infarto-o-ensaio-secure",
+        "por_que": "Fecha implementação: o mesmo tratamento, mais simples, reduz evento. Não substitui os pilares que a composição não carrega."
+      },
+      {
+        "ordem": 15,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-sca-cinco-pilares-modificaveis",
+        "por_que": "A conferência da manhã da alta. Distinta do checklist geral de SCA já publicado: esta exige os cinco pilares e os dois freios."
+      },
+      {
+        "ordem": 16,
+        "item_type": "caso_clinico",
+        "item_slug": "alta-pos-nstemi-cinco-pilares-incompletos-feve-reduzida-tabagismo-ldl-diabetes",
+        "por_que": "Aplica a trilha num NSTEMI realista cuja receita tem DAPT e mesmo assim está incompleta."
+      }
+    ],
+    "fonte_producao": "grok"
+  },
+  {
+    "slug": "trilha-angina-vasoespastica-espasmo-epicardico-covadis",
+    "titulo": "Angina vasoespástica: do fenótipo noturno ao endótipo epicárdico (COVADIS)",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo reconhecer o fenótipo de angina de repouso noturna, aplicar os critérios COVADIS (definitiva vs. suspeita), ler o teste de acetilcolina com o corte >90%, não confundir espasmo epicárdico com microvascular, e tratar o endótipo epicárdico com antagonista de cálcio — sem copiar o algoritmo de ANOCA/INOCA inteiro nem os protocolos de cocaína e fluoropirimidina.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+        "por_que": "Começa pelo guarda-chuva: ANOCA/INOCA é o cenário angiográfico. Sem essa moldura, o espasmo epicárdico vira doença isolada em vez de um dos endótipos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento",
+        "por_que": "O recorte deste lote: critérios COVADIS, leitura do teste, o que é consenso e o que é Classe I B da ESC 2024, e o tratamento do endótipo epicárdico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-angina-vasoespastica-teste-provocativo-e-tratamento",
+        "por_que": "A mesma lógica em árvore, com os desvios explícitos para SCA, cocaína, fluoropirimidina e espasmo microvascular."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "covadis-criterios-diagnosticos-angina-vasoespastica-2017",
+        "por_que": "O consenso que fixou definitiva vs. suspeita e o limiar >90%. Sem ele, o teste continua sendo lido com o corte antigo de 75% do ACOVA."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "cft-invasivo-disponivel-na-angiografia-quando-mecanismo-da-dor-incerto-esc-2024",
+        "por_que": "A mudança institucional da ESC 2024: a CFT precisa estar disponível no momento da angiografia, não ser um segundo procedimento 'se ainda doer'."
+      },
+      {
+        "ordem": 6,
+        "item_type": "evidencia",
+        "item_slug": "cft-invasivo-anoca-inoca-sintomas-persistentes-qualidade-vida-esc-2024",
+        "por_que": "O segundo Classe I B: ANOCA já rotulada, sintoma persistente, má qualidade de vida — ainda cabe caracterizar o endótipo, inclusive o espástico."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "angina-noturna-coronarias-livres-espasmo-epicardico-covadis",
+        "por_que": "Aplica os três critérios do teste num homem com angina de madrugada — o espelho do caso já existente de espasmo microvascular (dor + ECG sem >90%)."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "angina-vasoespastica-epicardica-diagnostico-covadis-e-tratamento",
+        "por_que": "Fecha em conferência de beira de leito: o que não pode faltar antes de rotular, provocar e prescrever cálcio."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "disfuncao-microvascular-coronariana-angina-microvascular-diagnostico-funcional-e-tratamento-guiado",
+        "por_que": "O outro endótipo e o ensaio CorMicA. Quem só lê o ramo epicárdico volta a tratar ANOCA como entidade única."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+        "por_que": "Contraponto obrigatório: o vasoespasmo por cocaína não se conduz com este protocolo."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas-5fu-capecitabina",
+        "por_que": "O outro vasoespasmo tóxico já coberto na biblioteca — para não misturar reexposição de 5-FU com VSA primária."
+      }
+    ],
+    "fonte_producao": "grok"
   }
 ]

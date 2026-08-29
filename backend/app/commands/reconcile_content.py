@@ -36,12 +36,14 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
+from app.services.carregar_triagem_sintomas import load_triage_records
 from app.services.disease_manifest import load_disease_records
 from app.services.importer import _resolve_markdown_slug, import_directory
 from app.services.knowledge_graph import backfill_mesmo_tema
 from app.services.study_slug_aliases import canonicalize_study_slugs
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
     "ignorados", "puladas", "pulados", "recusadas", "recusados",
@@ -121,6 +123,8 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
 
     if front == "doencas_especializadas":
         data = load_disease_records(source)
+    elif front == "triagem_sintomas":
+        data = load_triage_records(source)
     else:
         data = json.loads(source.read_text(encoding="utf-8"))
     if not isinstance(data, list):
@@ -217,6 +221,67 @@ def _load_front(front: str, config: dict[str, Any]) -> tuple[dict, set[str]]:
     result = {**result, "itens_fonte": len(canonical_slugs)}
     _assert_no_rejections(front, result)
     return result, canonical_slugs
+
+
+def _load_editorial_approvals() -> dict[str, set[str]]:
+    """Carrega decisões editoriais versionadas por lote.
+
+    O conteúdo produzido por agentes permanece com o status de origem no arquivo
+    para preservar proveniência. A aprovação humana para publicação vive em um
+    manifesto separado, auditável, e só vale para slugs que continuam canônicos
+    no commit atual.
+    """
+    approvals: dict[str, set[str]] = {front: set() for front in FRONTS}
+    if not EDITORIAL_APPROVALS_DIR.exists():
+        return approvals
+
+    for path in sorted(EDITORIAL_APPROVALS_DIR.glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if payload.get("decision") != "approved_for_publication":
+            continue
+        fronts = payload.get("fronts") or {}
+        unknown = sorted(set(fronts) - set(FRONTS))
+        if unknown:
+            raise RuntimeError(
+                f"Aprovação editorial {path.name} contém frentes desconhecidas: {unknown}"
+            )
+        for front, slugs in fronts.items():
+            if not isinstance(slugs, list) or not all(isinstance(x, str) and x for x in slugs):
+                raise RuntimeError(
+                    f"Aprovação editorial {path.name}/{front} deve ser lista de slugs."
+                )
+            approvals[front].update(slugs)
+    return approvals
+
+
+def _apply_editorial_approvals(
+    db: Session, canonical_slugs: dict[str, set[str]]
+) -> dict[str, int]:
+    """Promove no banco apenas slugs canônicos com aprovação versionada."""
+    approvals = _load_editorial_approvals()
+    applied: dict[str, int] = {}
+    try:
+        for front, slugs in approvals.items():
+            if not slugs:
+                applied[front] = 0
+                continue
+            absent = sorted(slugs - canonical_slugs[front])
+            if absent:
+                raise RuntimeError(
+                    f"Aprovação editorial de {front} aponta slugs ausentes do corpus: {absent}"
+                )
+            model = FRONTS[front]["model"]
+            changed = (
+                db.query(model)
+                .filter(model.slug.in_(slugs), model.review_status != "revisado")
+                .update({model.review_status: "revisado"}, synchronize_session=False)
+            )
+            applied[front] = int(changed)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+    return applied
 
 
 def _load_controlled_substances(db: Session) -> dict:
@@ -351,6 +416,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     try:
         loads["controlados"] = _load_controlled_substances(db)
         migrated_study_track_progress = _migrate_study_track_progress(db)
+        editorial_approvals = _apply_editorial_approvals(db, canonical_slugs)
         published, unpublished_absent, unpublished_unreviewed = _synchronize_publication(
             db, canonical_slugs, publish_reviewed=publish_reviewed
         )
@@ -366,6 +432,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
 
     result = {
         "loads": loads,
+        "editorial_approvals": editorial_approvals,
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,

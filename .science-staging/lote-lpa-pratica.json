@@ -1,0 +1,335 @@
+{
+  "lote": "lote-lpa-pratica",
+  "fonte_producao": "grok",
+  "created": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "theme": "Prevenção e lipídios",
+  "review_status": "pendente_revisao",
+  "escopo": "Conduta prática de Lp(a) elevada enquanto Lp(a)HORIZON e OCEAN(a) Outcomes não publicaram redução de MACE. Liga, não clona, o consenso EAS 2022 de rastreio e o ensaio OCEAN(a)-DOSE. Sem Classe I de evento para pelacarsena/olpasirana. AAS por Lp(a) isolada retido (nenhuma tabela lida).",
+  "documentos": [
+    {
+      "path": "content/Prevenção_e_lipídios/lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam.md",
+      "slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "kind": "protocolo",
+      "title": "Lipoproteína(a) elevada: o que fazer HOJE, enquanto os desfechos de pelacarsena e olpasirana não chegam"
+    },
+    {
+      "path": "content/Prevenção_e_lipídios/fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco.md",
+      "slug": "fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco",
+      "kind": "fluxograma",
+      "title": "Fluxograma: Lp(a) elevada — rastreio, risco residual e o que não esperar do fármaco"
+    }
+  ],
+  "evidencias": [
+    {
+      "slug": "sbc2025-lpa-dosar-uma-vez-populacao-geral-quando-disponivel",
+      "statement": "Na população geral, é recomendada a dosagem de Lp(a) uma vez na vida, quando disponível, para auxiliar na estratificação de risco e/ou manejo terapêutico.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Moderada",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, Zimerman A, Cesena FHY, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — tabela de recomendações de Lp(a) lida no texto em acesso aberto nesta sessão.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "lipoproteína(a)",
+        "rastreamento",
+        "população geral",
+        "SBC 2025"
+      ],
+      "document_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-lpa-dosar-uma-vez-populacoes-especificas",
+      "statement": "Em populações específicas — DAC precoce, estenose aórtica, hipercolesterolemia familiar, história familiar de DCVA precoce ou de Lp(a) aumentada — é recomendada a dosagem de Lp(a) uma vez na vida, quando disponível, para auxiliar na estratificação de risco e/ou manejo terapêutico.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Alta",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — tabela de recomendações de Lp(a) lida no texto em acesso aberto nesta sessão.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "lipoproteína(a)",
+        "DAC precoce",
+        "estenose aórtica",
+        "hipercolesterolemia familiar",
+        "SBC 2025"
+      ],
+      "document_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-lpa-ensaio-independente-isoforma-em-nmol-sem-conversao",
+      "statement": "Recomenda-se como método preferencial para medir a Lp(a) um ensaio independente da isoforma, que meça o número de partículas por litro (nmol/L). A dosagem por unidade de massa (mg/dL) deve ser evitada. As fórmulas de conversão não corrigem a diferença entre os métodos e não são recomendadas. A medida em mg/dL pode ser usada quando for a única disponível.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Alta",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — tabela de recomendações de Lp(a) lida no texto em acesso aberto nesta sessão.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "lipoproteína(a)",
+        "nmol/L",
+        "isoforma",
+        "conversão",
+        "SBC 2025"
+      ],
+      "document_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "sbc2025-lpa-cascata-familiar-se-maior-igual-50-mg-dl",
+      "statement": "Em indivíduos com Lp(a) ≥50 mg/dL ou ≥125 nmol/L, cuja concentração é predominantemente determinada geneticamente, é recomendada a investigação em cascata nos familiares para identificar outros possíveis portadores e avaliar precocemente o risco cardiovascular.",
+      "recommendation_class": "Forte",
+      "evidence_level": "Alta",
+      "society": "SBC",
+      "year": 2025,
+      "guideline_title": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025",
+      "reference": "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640. PMID: 41379178. PMCID: PMC12674852 — tabela de recomendações de Lp(a) lida no texto em acesso aberto nesta sessão.",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "lipoproteína(a)",
+        "cascata familiar",
+        "rastreamento",
+        "SBC 2025"
+      ],
+      "document_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-eas-2025-lpa-acima-de-50-mg-dl-fator-agravante-tabela-4",
+      "statement": "Níveis de Lp(a) acima de 50 mg/dL (≈105 nmol/L) devem ser considerados, em todo adulto, fator agravante de risco cardiovascular, com acréscimo de risco crescente em níveis mais altos.",
+      "recommendation_class": "IIa",
+      "evidence_level": "B",
+      "society": "ESC/EAS",
+      "year": 2025,
+      "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+      "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 4, lida no PDF da atualização e na página da EAS nesta sessão. Slug distinto da ficha já existente lipoproteina-a-acima-de-50-mg-dl-como-fator-agravante-de-risco (document_slug daquele aponta para outro fluxograma).",
+      "theme": "Prevenção e lipídios",
+      "tags": [
+        "lipoproteína(a)",
+        "fator agravante",
+        "ESC/EAS 2025",
+        "Tabela 4"
+      ],
+      "document_slug": "fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "lpa-95-mg-dl-pos-iam-nao-converter-nao-esperar-horizon",
+      "titulo": "Lp(a) 95 mg/dL após infarto: converter, esperar o HORIZON ou intensificar o LDL agora?",
+      "tema": "Prevenção e lipídios",
+      "nivel": "intermediário",
+      "enunciado": "Homem, 58 anos, infarto há 8 meses, em rosuvastatina 20 mg e ezetimiba 10 mg. LDL-C atual 78 mg/dL. Nunca tinha dosado Lp(a); o laudo desta semana veio 95 mg/dL, sem nmol/L. Ele leu que a pelacarsena 'zera' a Lp(a) e pergunta se espera o resultado do HORIZON ou se entra num ensaio de olpasirana. Um colega sugere multiplicar 95 × 2,5 = 237,5 nmol/L e iniciar AAS 100 mg 'porque Lp(a) alta é pró-trombótica'. Pressão e glicemia controladas; parou de fumar na internação.",
+      "pergunta": "Qual é a conduta alinhada às tabelas lidas (ESC/EAS 2025, SBC 2025) e ao estado dos CVOTs em 29/08/2026?",
+      "opcoes": [
+        "Converter 95 mg/dL × 2,5 para 237,5 nmol/L, classificar como risco extremo e iniciar AAS 100 mg mais olpasirana compassiva, porque a redução de 97% no OCEAN(a)-DOSE já equivale a redução de evento",
+        "Não converter com fator fixo; se a unidade mudar a decisão, recoletar em nmol/L (ensaio independente da isoforma). Não iniciar pelacarsena/olpasirana como se reduzissem MACE — Lp(a)HORIZON não tinha artigo de desfecho em 29/08/2026. Não iniciar AAS só pela Lp(a). Intensificar agora o hipolipemiante com evidência de evento, porque o LDL 78 mg/dL está fora da meta de muito alto risco, e planejar cascata familiar",
+        "Aguardar o HORIZON para qualquer mudança: estatina e ezetimiba já bastam enquanto o RNA não publicar, e repetir Lp(a) a cada retorno",
+        "Trocar a rosuvastatina por niacina, único fármaco oral que reduz Lp(a) com desfecho cardiovascular positivo nos ensaios AIM-HIGH e HPS2-THRIVE"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "Três erros cabem na mesma consulta, e nenhum deles é o rastreio do consenso EAS 2022 nem a leitura do OCEAN(a)-DOSE. Primeiro: a SBC 2025 (PMID 41379178, tabela lida no PMC) recomenda ensaio em nmol/L, independente da isoforma, e declara que fórmulas de conversão não são recomendadas (Forte, Alta). ESC/EAS 2025 mapeia 50 mg/dL a ≈105 nmol/L; EAS 2022/SBC/ACC mapeiam o mesmo 50 mg/dL a 125 nmol/L — o fator 2,5 é invenção. Segundo: pelacarsena e olpasirana não têm Classe I (nem outra) de redução de MACE. Lp(a)HORIZON (PMID 40185318, NCT04023552) permanece sem artigo de desfecho na consulta PubMed de 29/08/2026; OCEAN(a)-DOSE (PMID 36342163) é biomarcador. Terceiro: nenhuma tabela lida recomenda AAS só por Lp(a) alta; a ACC/AHA 2026 cita post hoc e pede ensaio prospectivo. A conduta de hoje é a do risco residual já tratável: LDL 78 mg/dL em secundária está fora da meta ESC (<55 mg/dL e ≥50% de queda) e da SBC de muito alto risco (<50 mg/dL) — intensificar hipolipemiante com evidência de evento (iPCSK9 para o LDL, não 'para Lp(a)'), cascata familiar se confirmada ≥50 mg/dL ou ≥125 nmol/L (SBC Forte, Alta), e não repetir Lp(a) de rotina. Niacina não: AIM-HIGH e HPS2-THRIVE já estão nesta pasta.",
+      "source_refs": [
+        "Rached FH et al. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178. PMCID: PMC12674852",
+        "Mach F et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. PMID: 40878289 — Tabela 4",
+        "Cho L et al. Am Heart J. 2025;287:1-9. PMID: 40185318",
+        "O'Donoghue ML et al. N Engl J Med. 2022;387(20):1855-1864. PMID: 36342163",
+        "ClinicalTrials.gov NCT04023552, consulta 29/08/2026: Active, not recruiting, sem resultados postados"
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "conduta-hoje-lpa-elevada-enquanto-desfechos-nao-chegam",
+      "condicao": "Conduta no adulto com Lp(a) elevada enquanto os CVOTs de RNA não publicaram MACE",
+      "resumo": "Itens da consulta de hoje: unidade certa, corte como fator agravante, cascata, intensificar LDL com fármaco que já tem desfecho, e a lista do que não prescrever (pelacarsena, olpasirana, AAS só por Lp(a), niacina, conversão por fator). Distinto do checklist de rastreio EAS 2022 já publicado.",
+      "documento_origem": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "theme": "Prevenção e lipídios",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Rached FH et al. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178",
+        "Mach F et al. Eur Heart J. 2025;46(42):4359-4378. PMID: 40878289 — Tabela 4",
+        "Kronenberg F et al. Eur Heart J. 2022;43(39):3925-3946. PMID: 36036785",
+        "Cho L et al. Am Heart J. 2025;287:1-9. PMID: 40185318",
+        "ClinicalTrials.gov NCT04023552 e NCT05581303, consulta 29/08/2026"
+      ],
+      "itens": [
+        {
+          "id": "lpa-hoje-ja-medida",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Confirmado se já existe uma dosagem de Lp(a) na vida adulta. Se não, solicitado uma vez — de preferência nmol/L, ensaio independente da isoforma — não como exame anual",
+          "origem_secao": "Passo 1 — Se ainda não mediu, meça uma vez"
+        },
+        {
+          "id": "lpa-hoje-unidade",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Laudo lido na unidade em que veio. Se só mg/dL e a decisão está perto de 50 mg/dL: não convertido com fator fixo; recoleta em nmol/L planejada (SBC 2025 Forte / Alta: fórmulas não recomendadas)",
+          "origem_secao": "Passo 2 — A armadilha nmol/L versus mg/dL"
+        },
+        {
+          "id": "lpa-hoje-corte-da-mesma-diretriz",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Corte aplicado o da diretriz em uso, na unidade em que ela o escreveu — 50 mg/dL da ESC/EAS 2025 Tabela 4 é ≈105 nmol/L; o 50 mg/dL da EAS 2022/SBC/ACC é 125 nmol/L. Não misturar",
+          "origem_secao": "Passo 2 — A armadilha nmol/L versus mg/dL"
+        },
+        {
+          "id": "lpa-hoje-fator-agravante",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "Se >50 mg/dL: registrado como fator agravante (ESC/EAS 2025 Tabela 4, Classe IIa, Nível B) e risco global reclassificado quando o paciente estava em moderado ou no limiar de tratar",
+          "origem_secao": "Passo 3 — Interpretar sem transformar corte em biologia"
+        },
+        {
+          "id": "lpa-hoje-cascata",
+          "categoria": "encaminhamento",
+          "obrigatorio": true,
+          "texto": "Se ≥50 mg/dL ou ≥125 nmol/L: cascata familiar de 1º grau proposta (SBC 2025 Forte / Alta). Não é painel genético de LPA de rotina",
+          "origem_secao": "Passo 4 — Cascata familiar quando está alta"
+        },
+        {
+          "id": "lpa-hoje-meta-ldl",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Meta de LDL da categoria deste paciente conferida e, se não atingida, hipolipemiante com desfecho já publicado intensificado nesta consulta — sem esperar HORIZON. iPCSK9, se usado, é para o LDL, não 'para Lp(a)'",
+          "origem_secao": "Passo 5 — O que se faz hoje"
+        },
+        {
+          "id": "lpa-hoje-resto-modificavel",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Pressão, tabagismo, diabetes, peso e exercício revisados na mesma visita. A Lp(a) alta não adia esses eixos",
+          "origem_secao": "Passo 5 — O que se faz hoje"
+        },
+        {
+          "id": "lpa-hoje-nao-rna",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "Pelacarsena, olpasirana, zerlasirana e muvalaplina NÃO iniciadas como se reduzissem MACE. HORIZON sem artigo de desfecho em 29/08/2026; OCEAN(a) Outcomes em curso. Nenhuma Classe I de evento atribuída",
+          "origem_secao": "Passo 6 — O que não esperar do fármaco"
+        },
+        {
+          "id": "lpa-hoje-nao-aas-por-lpa",
+          "categoria": "orientacao",
+          "obrigatorio": true,
+          "texto": "AAS não prescrito só porque a Lp(a) está alta. Nenhuma tabela lida nesta sessão recomenda isso. AAS, se houver, segue as regras de prevenção primária/secundária já existentes. VERIFICAÇÃO HUMANA se caixa nova for publicada",
+          "origem_secao": "Passo 6 — O que não esperar do fármaco"
+        },
+        {
+          "id": "lpa-hoje-nao-repetir",
+          "categoria": "seguimento",
+          "obrigatorio": true,
+          "texto": "Retorno NÃO inclui Lp(a) seriada, salvo doença renal, hepática, infecção aguda na coleta ou menopausa com valor prévio limítrofe",
+          "origem_secao": "Passo 1 — Se ainda não mediu, meça uma vez"
+        }
+      ]
+    }
+  ],
+  "materiais": [
+    {
+      "slug": "meu-exame-de-lpa-veio-alto-o-que-muda-agora",
+      "titulo": "Meu exame de Lp(a) veio alto — o que muda agora?",
+      "subtitulo": "O remédio específico ainda não provou reduzir infarto. O que dá para fazer nesta década é tratar o resto com mais rigor.",
+      "tema": "Prevenção e lipídios",
+      "documento_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para quem já tem o resultado de Lp(a) alto e pergunta se existe um remédio novo, se precisa de AAS, se os filhos devem se testar e por que o colesterol 'ruim' passou a ter meta mais baixa. Distinto do material que explica por que o exame se faz uma vez só.",
+      "secoes": [
+        {
+          "titulo": "O número alto não é uma emergência, mas também não é 'só um exame'",
+          "paragrafos": [
+            "Lp(a) alta é, na maior parte, genética. Não veio da última refeição e quase não muda com dieta, caminhada ou a estatina que você já toma. Por isso o médico costuma pedir esse exame uma vez na vida — não todo ano.",
+            "Um valor alto aumenta o risco de infarto, derrame e, em algumas pessoas, de a valva aórtica ir calcificando com os anos. Não é sentença. É um recado para cuidar melhor do que ainda dá para mudar."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O remédio que 'zera' a Lp(a) ainda não provou o que importa",
+          "paragrafos": [
+            "Existem injeções em estudo (pelacarsena, olpasirana e outras) que baixam muito o número no sangue. Isso já foi mostrado em pesquisas de fase 2. O que ainda não foi publicado, até agosto de 2026, é se elas diminuem infarto, derrame ou morte. O grande estudo da pelacarsena, chamado HORIZON, ainda não tinha resultado de eventos na literatura médica nessa data.",
+            "Enquanto esse resultado não existir, nenhum médico responsável deve prescrever esses compostos como se já tivessem ganhado essa prova. Comprar 'tratamento de Lp(a)' por conta própria, no exterior ou em pesquisa sem acompanhamento, não substitui o que já reduz evento de verdade."
+          ],
+          "itens": [
+            "Não interrompa estatina, ezetimiba ou outro hipolipemiante esperando um remédio de Lp(a)",
+            "Não aceite AAS 'só porque a Lp(a) está alta' sem que isso faça parte da indicação usual de prevenção — as diretrizes lidas para este texto não dão essa ordem",
+            "Pergunte ao seu médico se o seu LDL (colesterol ruim) já está na meta da sua categoria de risco. Se não estiver, essa é a prioridade desta consulta"
+          ]
+        },
+        {
+          "titulo": "Cuidado com a unidade do laudo",
+          "paragrafos": [
+            "O exame pode vir em mg/dL ou em nmol/L. Não são a mesma coisa, e não existe uma conta simples e correta para transformar um no outro. A diretriz brasileira de 2025 pede, de preferência, o resultado em nmol/L e desaconselha fórmulas de conversão.",
+            "Se o seu laudo veio só em mg/dL e o número está perto da faixa em que o médico muda a conduta, o caminho honesto é repetir no laboratório que informa nmol/L — não multiplicar o resultado em casa."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Família",
+          "paragrafos": [
+            "Como o valor é em grande parte herdado, se o seu resultado está alto (na prática, a partir de 50 mg/dL ou 125 nmol/L), faz sentido que pais, irmãos e filhos conversem com o médico deles sobre dosar uma vez. Isso não é um teste genético caro: é o mesmo exame de sangue, uma vez."
+          ],
+          "itens": [
+            "Leve o número exato, com a unidade, para a consulta — não só 'veio alto'",
+            "Anote quem na família já teve infarto ou derrame cedo (homens antes dos 55, mulheres antes dos 60, como regra de conversa)",
+            "Criança não precisa de rastreio universal de Lp(a); a decisão é do pediatra ou do cardiologista, em situações específicas"
+          ]
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor no peito nova, em aperto, que piora com esforço",
+        "Falta de ar nova ou que piorou",
+        "Fraqueza de um lado do corpo, boca torta ou fala embolada — isso é emergência, não espera consulta de colesterol",
+        "Este exame não é de pronto-socorro: sintoma agudo não espera o resultado de Lp(a)"
+      ],
+      "perguntas": [
+        "Meu LDL já está na meta que vale para o meu risco, agora que a Lp(a) entrou na conta?",
+        "Meu laudo está em nmol/L ou só em mg/dL? Preciso repetir na outra unidade?",
+        "Alguém da minha família deveria dosar também?",
+        "Existe algum estudo clínico de pelacarsena ou olpasirana aberto e adequado para o meu caso, ou a conduta agora é outra?"
+      ],
+      "fontes": [
+        "Rached FH et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178",
+        "Mach F et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025. PMID: 40878289",
+        "Kronenberg F et al. European Atherosclerosis Society consensus statement on lipoprotein(a). Eur Heart J. 2022. PMID: 36036785",
+        "Cho L et al. Design and Rationale of Lp(a)HORIZON Trial. Am Heart J. 2025. PMID: 40185318 — desenho, não resultado de eventos"
+      ]
+    }
+  ],
+  "estudos": [],
+  "retidos": [
+    {
+      "item": "Classe I de redução de MACE para pelacarsena (Lp(a)HORIZON) ou olpasirana (OCEAN(a) Outcomes)",
+      "motivo": "Em 29/08/2026 o PubMed não tinha artigo de desfecho do HORIZON (só desenho, PMID 40185318). ClinicalTrials.gov NCT04023552: Active, not recruiting, sem resultados postados. OCEAN(a) Outcomes (NCT05581303) em curso. Não se inventa classe de evento."
+    },
+    {
+      "item": "COR/LOE da ACC/AHA 2026 para medir Lp(a) ao menos uma vez",
+      "motivo": "A diretriz recomenda a medição (PMID 41824590). Comentário Watson 2026 cita Class I, mas a caixa COR+LOE não foi lida junta nesta sessão. Não virou evidência classificada. VERIFICAÇÃO HUMANA."
+    },
+    {
+      "item": "AAS isolado porque a Lp(a) está alta",
+      "motivo": "Nenhuma tabela lida (ESC/EAS 2019, ESC/EAS 2025 Tabela 4, SBC 2025 Lp(a), trecho visível ACC/AHA 2026) recomenda. O texto de suporte da ACC/AHA 2026 cita post hoc e pede ensaio prospectivo. VERIFICAÇÃO HUMANA; não virou evidência nem folha de fluxograma."
+    },
+    {
+      "item": "Nível C da linha ESC/EAS 2019 'medir ao menos uma vez'",
+      "motivo": "A diretriz 2019 considera a dosagem Classe IIa no texto já fichado no acervo. O nível C dessa linha não foi relido na tabela integral nesta sessão; a ficha existente lipoproteina-a-deve-ser-dosada-ao-menos-uma-vez-na-vida já o registra. Não republicado como evidência nova."
+    },
+    {
+      "item": "Duplicar evidências ESC já no corpus (medir uma vez 2019 IIa C; medir uma vez 2025 IIa B; >50 mg/dL IIa B no fluxograma de LDL)",
+      "motivo": "Slugs já existem. Este lote cria slug novo só para a Tabela 4 amarrada ao fluxograma de Lp(a) e as quatro linhas GRADE da SBC 2025, que não estavam fichadas."
+    }
+  ]
+}

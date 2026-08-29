@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "disfuncao-do-no-sinusal",
+    "set": {
+      "source_refs": [
+        "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021. doi:10.1093/eurheartj/ehab364.",
+        "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140:e382-e482. doi:10.1161/CIR.0000000000000628.",
+        "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. doi:10.36660/abc.20220892.",
+        "Lamas GA, Lee KL, Sweeney MO, et al. Ventricular Pacing or Dual-Chamber Pacing for Sinus-Node Dysfunction. N Engl J Med. 2002;346:1854-1862. doi:10.1056/NEJMoa013040.",
+        "Nielsen JC, Thomsen PEB, Højberg S, et al. A comparison of single-lead atrial pacing with dual-chamber pacing in sick sinus syndrome. Eur Heart J. 2011;32(6):686-696. doi:10.1093/eurheartj/ehr022.",
+        "Kronborg MB, Johansen JB, Riahi S, et al. Atrial pacing minimization in sinus node dysfunction and risk of incident atrial fibrillation: a randomized trial (DANPACE II). Eur Heart J. 2023."
+      ]
+    }
+  },
+  {
+    "slug": "sindrome-cardiovascular-rim-metabolica-ckm",
+    "assistant_rules": {
+      "ckm_nao_substitui_diagnosticos": {
+        "when": {
+          "any": [
+            {"field": "doenca_cv_clinica", "op": "exists"},
+            {"field": "doenca_cv_subclinica", "op": "exists"},
+            {"field": "imc", "op": "exists"},
+            {"field": "tfge", "op": "exists"}
+          ]
+        }
+      }
+    }
+  }
+]

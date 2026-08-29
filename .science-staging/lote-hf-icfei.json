@@ -1,0 +1,534 @@
+{
+  "lote": "lote-hf-icfei",
+  "theme": "Insuficiência cardíaca",
+  "review_status": "pendente_revisao",
+  "created": "2026-08-29",
+  "nota_editorial": "Lote da tradução prática da reclassificação da ICFEi/HFmrEF (FEVE 41–49%) pela ESC 2026. Distingue corte de ensaio de reclassificação diagnóstica. Não duplica esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes. Itens ambíguos marcados no campo limitations/explicacao/review_note dos registros. Não promover sem revisão da nota de rodapé 'e' da Tabela 5 e da molécula de MRA em 41–49%.",
+  "documentos": [
+    "icfei-historica-e-a-reclassificacao-esc-2026",
+    "fluxograma-feve-esc-2021-versus-esc-2026"
+  ],
+  "evidencias": [
+    {
+      "slug": "esc-2026-hfmrEF-categoria-removida",
+      "statement": "A ESC 2026 elimina o fenótipo de insuficiência cardíaca com fração de ejeção levemente reduzida (ICFEi/HFmrEF, FEVE 41–49%). A classificação passa a ter dois fenótipos: ICFEr (FEVE <50% com sinais e/ou sintomas) e ICFEp (FEVE ≥50% com sinais/sintomas e evidência objetiva de anormalidade estrutural e/ou funcional).",
+      "recommendation_class": "",
+      "evidence_level": "",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Advance publication 28 Aug 2026. Mudança de classificação, não recomendação Classe/Nível.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "ESC 2026",
+        "ICFEi",
+        "HFmrEF",
+        "classificação",
+        "FEVE"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-icfer-feve-menor-50-com-sinais-sintomas",
+      "statement": "Na ESC 2026, ICFEr/HFrEF é FEVE <50% associada a sinais e/ou sintomas de insuficiência cardíaca. A faixa histórica 41–49% entra neste fenótipo por reclassificação, não por ensaio novo dedicado a betabloqueador ou IECA/ARNI nessa faixa.",
+      "recommendation_class": "",
+      "evidence_level": "",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "ESC 2026",
+        "ICFEr",
+        "FEVE <50%",
+        "reclassificação"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-sglt2-independente-de-feve",
+      "statement": "Um inibidor de SGLT2 (dapagliflozina ou empagliflozina) é recomendado em pacientes com IC sintomática independente da FEVE para reduzir hospitalização por IC ou morte cardiovascular.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5. Ensaios: EMPEROR-Preserved PMID 34449189 (FEVE >40%); DELIVER PMID 36027570 (FEVE >40%); análise pré-especificada 41–49% do EMPEROR-Preserved PMID 36471037.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "SGLT2",
+        "dapagliflozina",
+        "empagliflozina",
+        "ICFEi histórica",
+        "ESC 2026"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-mra-independente-de-feve",
+      "statement": "Um antagonista mineralocorticoide é recomendado em IC sintomática independente da FEVE para reduzir hospitalização por IC ou morte cardiovascular (sMRA na ICFEr; sMRA/nsMRA na ICFEp). Qual molécula usar na faixa histórica 41–49% — sMRA porque a ESC 2026 a chamou de ICFEr, ou finerenona porque o FINEARTS-HF randomizou FEVE ≥40% — é VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5. FINEARTS-HF PMID 39225278 (FEVE ≥40%, finerenona). RALES/EMPHASIS-HF usaram FEVE ≤35%.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "MRA",
+        "finerenona",
+        "espironolactona",
+        "ICFEi histórica",
+        "ESC 2026"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-bb-icfer-classe-i-a-reclassificacao-nao-e-rct-novo",
+      "statement": "Betabloqueador é recomendado na ICFEr sintomática estável (Classe I A). Como a ICFEr 2026 inclui FEVE <50%, a redação alcança a faixa 41–49% por reclassificação. Os ensaios de mortalidade (CIBIS-II, MERIT-HF, COPERNICUS) usaram FEVE ≤25–40%. Não tratar como RCT novo nesta faixa. Nota de rodapé 'e' da Tabela 5: VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5, bloco HFrEF. Comparar com ESC 2021, em que BB na ICFEi era IIb C (PMID 34447992).",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "betabloqueador",
+        "ICFEr",
+        "reclassificação",
+        "ESC 2026"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-ieca-arni-icfer-classe-i-a-reclassificacao-nao-e-rct-novo",
+      "statement": "IECA ou ARNI é recomendado na ICFEr sintomática (Classe I A); troca de IECA/BRA para ARNI é I B1. A redação alcança 41–49% por reclassificação. PARADIGM-HF usou FEVE ≤40%. PARAGON-HF usou FEVE ≥45% e não atingiu significância no primário (razão de taxa 0,87; IC95% 0,75–1,01; p=0,06; PMID 31475794). Não citar PARAGON-HF como positivo nesta faixa. Nota de rodapé 'e' da Tabela 5: VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5. PARADIGM-HF PMID 25176015; PARAGON-HF PMID 31475794. ESC 2021: ARNI na ICFEi era IIb C.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "ARNI",
+        "IECA",
+        "sacubitril-valsartana",
+        "reclassificação",
+        "ESC 2026"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-cdi-prevencao-primaria-mantem-feve-35",
+      "statement": "CDI em prevenção primária na ESC 2026 permanece com FEVE ≤35% após ≥3 meses de FMT ótima (Classe I B1 na etiologia isquêmica NYHA II–III; Classe IIa B1 na não isquêmica). A expansão da ICFEr até FEVE <50% não abre indicação de CDI para a faixa histórica 41–49%.",
+      "recommendation_class": "I",
+      "evidence_level": "B1",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 6. Corte de FEVE conferido no texto visível da tabela; etiologia não isquêmica é IIa B1 com o mesmo corte ≤35%.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "CDI",
+        "prevenção primária",
+        "FEVE ≤35%",
+        "dispositivo",
+        "ESC 2026"
+      ],
+      "document_slug": "fluxograma-feve-esc-2021-versus-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-crt-mantem-feve-35",
+      "statement": "TRC na ESC 2026 permanece com FEVE ≤35% apesar de FMT ótima. Classe I A se ritmo sinusal, BRE e QRS ≥150 ms. Combinações de QRS 130–149 ms ou morfologia não-BRE seguem IIa/IIb, sempre com FEVE ≤35%. QRS <130 ms sem indicação de estimulação ventricular: Classe III A. A reclassificação da faixa 41–49% como ICFEr não cria indicação de TRC.",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 7.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "TRC",
+        "CRT",
+        "FEVE ≤35%",
+        "dispositivo",
+        "ESC 2026"
+      ],
+      "document_slug": "fluxograma-feve-esc-2021-versus-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2026-manter-fmt-apos-melhora-feve",
+      "statement": "A continuação da FMT na maior dose tolerada é recomendada em todos os pacientes com IC, inclusive nos que se tornam assintomáticos ou apresentam melhora da FEVE, para reduzir hospitalização por IC e morte. Paciente com ICFEr prévia ≤40% agora em 41–49% é HFimpEF, não ICFEi de novo: não desescalonar porque o rótulo antigo era ICFEi.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2026,
+      "guideline_title": "2026 ESC Guidelines for the management of heart failure",
+      "reference": "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5. Retirada gradual permanece IIb C em casos altamente selecionados com normalização completa após causa reversível.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "HFimpEF",
+        "FMT",
+        "manutenção",
+        "ICFEi histórica",
+        "ESC 2026"
+      ],
+      "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "esc-2023-sglt2-icfei-classe-i-a-era-tres-fenotipos",
+      "statement": "Na atualização focada ESC 2023, iSGLT2 (dapagliflozina ou empagliflozina) já era Classe I A na ICFEi (FEVE 41–49%) e na ICFEp para reduzir hospitalização por IC ou morte cardiovascular. Essa indicação na faixa 41–49% antecede a reclassificação de 2026 e se apoia em EMPEROR-Preserved e DELIVER (ensaios com FEVE >40%).",
+      "recommendation_class": "I",
+      "evidence_level": "A",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+      "reference": "McDonagh TA, Metra M, Adamo M, et al. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "SGLT2",
+        "ESC 2023",
+        "ICFEi",
+        "histórico"
+      ],
+      "document_slug": "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "pcdt-2024-dapagliflozina-exige-feve-menor-40",
+      "statement": "O PCDT de ICFEr 2024 do Ministério da Saúde exige FEVE <40% para dapagliflozina e FEVE ≤35% para sacubitril-valsartana no SUS. A reclassificação ESC 2026 da faixa 41–49% como ICFEr não altera, sozinha, a elegibilidade regulatória brasileira.",
+      "recommendation_class": "",
+      "evidence_level": "",
+      "society": "Ministério da Saúde",
+      "year": 2024,
+      "guideline_title": "Protocolo Clínico e Diretrizes Terapêuticas — Insuficiência Cardíaca com Fração de Ejeção Reduzida",
+      "reference": "Ministério da Saúde. Portaria Conjunta SAES/SECTICS/MS nº 10, de 13 de setembro de 2024 (publicada em 26/09/2024, retificada em 20/01/2025). Critério de acesso, não classe ESC.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "PCDT",
+        "SUS",
+        "dapagliflozina",
+        "sacubitril-valsartana",
+        "acesso"
+      ],
+      "document_slug": "pcdt-icfer-2024-criterios-diagnosticos-e-de-acesso-a-farmaco-no-sus",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "estudos": [
+    {
+      "slug": "emperor-preserved-subgrupo-feve-41-49",
+      "title": "EMPEROR-Preserved — análise pré-especificada da faixa FEVE 41–49% (ensaio usou >40%; não é a reclassificação ESC 2026)",
+      "study_type": "analise_pre_especificada",
+      "authors": "Anker SD, Butler J, Filippatos G, et al.; EMPEROR-Preserved Trial Investigators",
+      "journal": "Nature Medicine",
+      "year": 2022,
+      "doi": "10.1038/s41591-022-02041-5",
+      "pmid": "36471037",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36471037/",
+      "summary": "Análise pré-especificada do EMPEROR-Preserved (ensaio principal: Anker et al., N Engl J Med 2021, PMID 34449189, FEVE >40%, n=5.988, HR 0,79 no composto morte CV ou hospitalização por IC) separando FEVE 41–49% de FEVE ≥50%. O ensaio usou o corte >40%; esta análise não é a diretriz ESC 2026 e não autoriza converter a faixa em ICFEr clássica de dispositivos.",
+      "key_findings": "Faixa 41–49%: 995 vs 988 pacientes; composto morte CV ou HHF HR 0,71 (IC95% 0,57–0,88; p=0,002). Faixa ≥50% (n=4.005): HR 0,83 (IC95% 0,71–0,98; p=0,024). P de interação = 0,27. Hospitalizações totais por IC: HR 0,57 (IC95% 0,42–0,79) em 41–49% versus 0,83 (IC95% 0,66–1,04) em ≥50% (p interação = 0,06). Morte CV isolada na faixa 41–49%: HR 0,92 (IC95% 0,69–1,22; p=0,54).",
+      "clinical_implications": "É a melhor evidência randomizada de iSGLT2 exatamente na faixa que a ESC 2021 chamou de ICFEi. Sustenta a Classe I A de 2023 e a manutenção dessa Classe I A em 2026, independente da reclassificação. Não sustenta CDI/TRC, nem betabloqueador ou ARNI como se o EMPEROR-Preserved os tivesse testado.",
+      "limitations": "Subgrupo pré-especificado, mas o ensaio não foi desenhado com poder para a faixa 41–49% isolada. P de interação não significativo no primário: não prova heterogeneidade, tampouco prova identidade de efeito com ICFEr ≤40%. O ensaio principal exigiu FEVE >40%, não o rótulo ICFEr 2026.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "EMPEROR-Preserved",
+        "empagliflozina",
+        "FEVE 41-49",
+        "ICFEi histórica",
+        "subgrupo"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "deliver-consistencia-por-faixa-de-feve-nao-e-reclassificacao-2026",
+      "title": "DELIVER — dapagliflozina em FEVE >40%; consistência relatada em ≤49% / 50–59% / ≥60% (ensaio, não diretriz 2026)",
+      "study_type": "ensaio_clinico",
+      "authors": "Solomon SD, McMurray JJV, Claggett B, et al.; DELIVER Trial Committees and Investigators",
+      "journal": "New England Journal of Medicine",
+      "year": 2022,
+      "doi": "10.1056/NEJMoa2206286",
+      "pmid": "36027570",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36027570/",
+      "summary": "Ensaio randomizado, duplo-cego, 6.263 pacientes com IC sintomática e FEVE >40% (população que a ESC 2021 chamaria de ICFEi + ICFEp), dapagliflozina 10 mg versus placebo. Seguimento mediano 2,3 anos. O corte de entrada é >40%, não o <50% da ICFEr 2026.",
+      "key_findings": "Desfecho primário (piora de IC ou morte CV): 16,4% vs 19,5%; HR 0,82 (IC95% 0,73–0,92; p<0,001). Piora de IC isolada: 11,8% vs 14,5%; HR 0,79 (IC95% 0,69–0,91). Morte CV isolada: 7,4% vs 8,3%; HR 0,88 (IC95% 0,74–1,05), não significativa. FEVE média 54%; cerca de 34% na faixa 40–49%. Consistência relatada nas faixas pré-especificadas ≤49%, 50–59% e ≥60%. HR pontual isolado da faixa ≤49%: VERIFICAÇÃO HUMANA NECESSÁRIA (não relido no texto integral nesta sessão).",
+      "clinical_implications": "Segundo pilar, com EMPEROR-Preserved, da Classe I A de iSGLT2 na faixa histórica 41–49% já em 2023. A ESC 2026 não inventou essa indicação; apenas deixou de chamar a faixa de ICFEi.",
+      "limitations": "Morte CV isolada não significativa. O ensaio inclui ICFEp (≥50%) e a faixa 41–49% no mesmo protocolo; o efeito da faixa isolada depende de subgrupo. Não testou betabloqueador, ARNI, CDI nem TRC.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "DELIVER",
+        "dapagliflozina",
+        "FEVE >40%",
+        "ICFEi histórica"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "finearts-hf-populacao-feve-maior-igual-40-faixa-historica-icfei",
+      "title": "FINEARTS-HF — finerenona em FEVE ≥40% (36% na faixa 40–50%); ensaio da molécula, não da reclassificação ESC 2026",
+      "study_type": "ensaio_clinico",
+      "authors": "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Committees and Investigators",
+      "journal": "New England Journal of Medicine",
+      "year": 2024,
+      "doi": "10.1056/NEJMoa2407107",
+      "pmid": "39225278",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39225278/",
+      "summary": "Ensaio randomizado, duplo-cego, 6.001 pacientes com IC sintomática e FEVE ≥40% (3.003 finerenona, 2.998 placebo), seguimento mediano 32 meses. Cerca de 36% tinham FEVE 40–50%. O corte de entrada é ≥40%, que atravessa a ICFEr 2026 (<50%) e a ICFEp (≥50%). Não é um ensaio de ICFEr clássica ≤40%.",
+      "key_findings": "Desfecho primário (eventos totais de piora de IC + morte CV): 1.083 vs 1.283 eventos; razão de taxa 0,84 (IC95% 0,74–0,95; p=0,007). Eventos totais de piora de IC: 842 vs 1.024; razão de taxa 0,82 (IC95% 0,71–0,94; p=0,006). Morte CV: 8,1% vs 8,7%; HR 0,93 (IC95% 0,78–1,11), não significativa. Consistência relatada em 40–50% versus >50%; HR pontual isolado da faixa 40–50%: VERIFICAÇÃO HUMANA NECESSÁRIA.",
+      "clinical_implications": "É o RCT positivo de MRA não esteroidal na população que inclui a ICFEi histórica. A ESC 2026 recomenda MRA Classe I A independente da FEVE, mas lista sMRA para ICFEr e sMRA/nsMRA para ICFEp. Qual molécula usar em 41–49% permanece VERIFICAÇÃO HUMANA NECESSÁRIA: não converter silenciosamente FINEARTS-HF em FMT da nova ICFEr nem RALES em evidência desta faixa.",
+      "limitations": "Benefício impulsionado por piora de IC, não por morte CV isolada. Hipercalemia mais frequente. Não estabelece equivalência entre finerenona e espironolactona/eplerenona. Não autoriza dispositivo.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "FINEARTS-HF",
+        "finerenona",
+        "FEVE ≥40%",
+        "MRA",
+        "ICFEi histórica"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "paragon-hf-neutro-e-a-faixa-45-49-nao-e-paradigm",
+      "title": "PARAGON-HF — sacubitril-valsartana em FEVE ≥45%, primário neutro (p=0,06); não é PARADIGM-HF e não é a ICFEr 2026",
+      "study_type": "ensaio_clinico",
+      "authors": "Solomon SD, McMurray JJV, Anand IS, et al.; PARAGON-HF Investigators and Committees",
+      "journal": "New England Journal of Medicine",
+      "year": 2019,
+      "doi": "10.1056/NEJMoa1908655",
+      "pmid": "31475794",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31475794/",
+      "summary": "Ensaio randomizado, 4.822 pacientes com IC NYHA II–IV e FEVE ≥45%, sacubitril-valsartana versus valsartana. O corte ≥45% cobre parte da ICFEi histórica (45–49%) e a ICFEp. PARADIGM-HF (FEVE ≤40%) é outro ensaio; misturá-los é o erro que a ESC 2021 evitou ao deixar ARNI na ICFEi em IIb C.",
+      "key_findings": "Desfecho primário (hospitalizações totais por IC + morte CV): 526 vs 557 eventos; razão de taxa 0,87 (IC95% 0,75–1,01; p=0,06). Primário formalmente neutro. Morte CV 8,5% vs 8,9%. Melhora de NYHA em 12 meses: 15,0% vs 12,6%. Subanálise por sexo (PMID 31736337): mulheres 0,73 (0,59–0,90), homens 1,03 (0,84–1,25), p interação 0,017.",
+      "clinical_implications": "Explica por que ARNI na faixa 41–49% era IIb C em 2021/2023. A ESC 2026 coloca IECA/ARNI em Classe I A na ICFEr (agora <50%) por reclassificação. Aplicar essa Classe I A a 41–49% é decisão da diretriz, não resultado positivo do PARAGON-HF. Não citar o PARAGON como se tivesse 'ganho' nesta faixa.",
+      "limitations": "Primário não significativo. Corte ≥45% deixa de fora 41–44%. Comparador foi valsartana, não placebo. Heterogeneidade por sexo é geradora de hipótese para decisão individual, não para reescrever a classificação.",
+      "theme": "Insuficiência cardíaca",
+      "tags": [
+        "PARAGON-HF",
+        "sacubitril-valsartana",
+        "FEVE ≥45%",
+        "primário neutro",
+        "ICFEi histórica"
+      ],
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "casos": [
+    {
+      "slug": "paciente-rotulado-icfei-reclassificacao-esc-2026",
+      "titulo": "Paciente rotulado ICFEi: o que muda com a ESC 2026?",
+      "tema": "Insuficiência cardíaca",
+      "nivel": "intermediário",
+      "enunciado": "Mulher, 68 anos, hipertensão e FA paroxística. Diagnóstico de IC NYHA II em 2023, com FEVE 44% no eco da época, rotulada ICFEi. Usa dapagliflozina 10 mg, espironolactona 25 mg, losartana 50 mg e furosemida conforme congestão. Sem betabloqueador (bradicardia sinusal intermitente 52–58 bpm, QRS 98 ms). Eco de agora: FEVE 45%, mesmo método. NT-proBNP 780 pg/mL. Nunca teve FEVE ≤40%. Sem síncope, sem TV. Ela pergunta se 'agora que virou ICFEr' precisa de CDI.",
+      "pergunta": "Qual conduta está alinhada à ESC 2026 sem converter ensaio antigo em indicação nova?",
+      "opcoes": [
+        "Indicar CDI em prevenção primária: a ESC 2026 reclassificou 41–49% como ICFEr, e ICFEr tem indicação de CDI",
+        "Manter iSGLT2 e MRA (já Classe I A nesta faixa desde 2023/2026, com ensaios que usaram FEVE >40% / ≥40%); discutir IECA/ARNI e betabloqueador como FMT da ICFEr por reclassificação, não por RCT novo nesta faixa; não implantar CDI — o corte de dispositivo permanece FEVE ≤35%",
+        "Suspender espironolactona e trocar por finerenona obrigatoriamente, porque FINEARTS-HF é o único MRA com ensaio em FEVE ≥40% e a ESC 2026 lista nsMRA só para ICFEp",
+        "Recodificar o prontuário como ICFEp, porque a FEVE está mais perto de 50% do que de 40%, e aplicar só iSGLT2"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "A ESC 2026 reclassifica FEVE 41–49% sintomática como ICFEr, mas as Tabelas 6 e 7 mantêm CDI/TRC em FEVE ≤35%. Chamar de ICFEr não coloca a paciente no SCD-HeFT. iSGLT2 já tinha Classe I A nesta faixa em 2023 (EMPEROR-Preserved e DELIVER usaram FEVE >40%). MRA passou a Classe I A independente da FEVE; a molécula em 41–49% (sMRA versus finerenona) é VERIFICAÇÃO HUMANA NECESSÁRIA — não há troca obrigatória nesta vinheta. Betabloqueador e IECA/ARNI entram na FMT da ICFEr por reclassificação; os RCTs clássicos usaram FEVE ≤40% e o PARAGON-HF (FEVE ≥45%) foi neutro. Recodificar como ICFEp está errado: ICFEp 2026 exige FEVE ≥50% mais anormalidade objetiva.",
+      "source_refs": [
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+        "Anker SD et al. N Engl J Med. 2021;385:1451-1461. PMID: 34449189.",
+        "Solomon SD et al. N Engl J Med. 2022;387:1089-1098. PMID: 36027570.",
+        "Solomon SD et al. N Engl J Med. 2019;381:1609-1620. PMID: 31475794."
+      ],
+      "review_status": "pendente_revisao"
+    },
+    {
+      "slug": "icfei-historica-trajetoria-hfimpef-versus-dispositivo",
+      "titulo": "FEVE 46% hoje: ICFEi histórica, HFimpEF ou queda recente?",
+      "tema": "Insuficiência cardíaca",
+      "nivel": "avançado",
+      "enunciado": "Homem, 61 anos. Em 2022, IAM anterior, FEVE 32%, NYHA II. Fez os quatro pilares, FEVE subiu para 47% em 2024 e está 46% agora, assintomático, QRS 110 ms, sem TV. O prontuário ainda diz 'ICFEi'. Colega sugere reduzir as doses 'porque a FEVE saiu da ICFEr clássica' e outro sugere CDI 'porque a ESC 2026 voltou a chamar isso de ICFEr'.",
+      "pergunta": "Qual leitura da trajetória e qual conduta?",
+      "opcoes": [
+        "É ICFEi de novo: FEVE 41–49% estável, então a ESC 2026 manda iniciar de zero a FMT da ICFEr e discutir CDI",
+        "É HFimpEF (ICFEr prévia ≤40% que melhorou para 41–49%): manter FMT na maior dose tolerada (Classe I C), inclusive assintomático; não implantar CDI — FEVE não é ≤35%",
+        "Como está assintomático com FEVE >40%, a ESC 2026 autoriza retirada gradual da FMT em ambulatório",
+        "Recodificar como ICFEp melhorada e aplicar só iSGLT2 e MRA da ICFEp, suspendendo betabloqueador e ARNI"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "A trajetória manda: FEVE prévia 32% que subiu para 46% é fração de ejeção melhorada, não ICFEi de novo. A ESC 2026 recomenda manter FMT na maior dose tolerada inclusive no assintomático e na FEVE que melhorou (I C). Retirada gradual é IIb C só em casos altamente selecionados com normalização completa após causa reversível — este paciente teve IAM, não causa reversível demonstrada, e 46% não é normalização. CDI em prevenção primária continua FEVE ≤35% após ≥3 meses de FMT; 46% não entra. Recodificar como ICFEp está errado (ICFEp 2026 é ≥50% sem FEVE prévia reduzida no critério da diretriz). O rótulo antigo 'ICFEi' no prontuário deve ser preservado como histórico, ao lado de HFimpEF / ICFEr 2026.",
+      "source_refs": [
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 5 (continuidade da FMT) e Table 6 (CDI, FEVE ≤35%).",
+        "Halliday BP et al. TRED-HF. Lancet. 2019;393:61-73. PMID: 30429050."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "checklist-reclassificacao-icfei-historica-esc-2026",
+      "condicao": "Reclassificação de paciente rotulado ICFEi / HFmrEF (FEVE 41–49%) após a ESC 2026",
+      "resumo": "Execução no ambulatório: confirmar a FEVE, a trajetória e os sintomas; aplicar FMT distinguindo ensaio de diretriz; não abrir CDI/TRC; registrar os dois rótulos; checar PCDT/SUS.",
+      "documento_origem": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "theme": "Insuficiência cardíaca",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+        "McDonagh TA et al. Eur Heart J. 2021;42(36):3599-3726. PMID: 34447992.",
+        "McDonagh TA et al. Eur Heart J. 2023;44(37):3627-3639. PMID: 37622666.",
+        "Ministério da Saúde. PCDT ICFEr. Portaria Conjunta SAES/SECTICS/MS nº 10/2024."
+      ],
+      "itens": [
+        {
+          "id": "icfei-confirmar-feve",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "FEVE 41–49% confirmada em exame recente, preferencialmente pelo mesmo método do laudo que gerou o rótulo ICFEi",
+          "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+        },
+        {
+          "id": "icfei-sinais-sintomas",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Sinais e/ou sintomas atuais ou prévios de IC documentados — sem isso não há ICFEr 2026, apenas um número de FEVE",
+          "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+        },
+        {
+          "id": "icfei-trajetoria",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Trajetória classificada: HFimpEF (prévia ≤40% que subiu), estável em 41–49%, ou queda a partir de ≥50%",
+          "origem_secao": "Primeiro passo: trajetória, não o número isolado"
+        },
+        {
+          "id": "icfei-isglt2",
+          "categoria": "tratamento",
+          "obrigatorio": true,
+          "texto": "iSGLT2 (dapagliflozina ou empagliflozina) em uso ou iniciado — ensaio usou FEVE >40%; já era Classe I A na ESC 2023",
+          "origem_secao": "Independente da FEVE"
+        },
+        {
+          "id": "icfei-mra",
+          "categoria": "tratamento",
+          "obrigatorio": true,
+          "texto": "MRA em uso ou planejado (Classe I A independente da FEVE). Molécula em 41–49% (sMRA vs finerenona) marcada para revisão se ainda não definida",
+          "origem_secao": "Independente da FEVE"
+        },
+        {
+          "id": "icfei-bb-arni",
+          "categoria": "tratamento",
+          "obrigatorio": true,
+          "texto": "Betabloqueador e IECA/ARNI revisados como FMT da ICFEr 2026 por reclassificação, com o registro de que os RCTs clássicos usaram FEVE ≤40% e o PARAGON-HF (FEVE ≥45%) foi neutro",
+          "origem_secao": "Bloco ICFEr da Tabela 5"
+        },
+        {
+          "id": "icfei-nao-cdi-trc",
+          "categoria": "dispositivo",
+          "obrigatorio": true,
+          "texto": "CDI/TRC NÃO indicados só pelo novo rótulo ICFEr — corte permanece FEVE ≤35% após ≥3 meses de FMT (Tabelas 6 e 7)",
+          "origem_secao": "Dispositivos: a reclassificação não abre indicação"
+        },
+        {
+          "id": "icfei-amt-fatiada",
+          "categoria": "tratamento",
+          "obrigatorio": false,
+          "texto": "AMT conferida pelos cortes que fatiam 41–49%: ivabradina ≤35% (fora); digoxina/hidralazina ≤40% (fora); vericiguat <45% (só 41–44%); semaglutida/tirzepatida ≥45% e IMC ≥30 (só 45–49% obeso)",
+          "origem_secao": "Terapias adicionais que não acompanham a reclassificação"
+        },
+        {
+          "id": "icfei-dois-rotulos",
+          "categoria": "documentacao",
+          "obrigatorio": true,
+          "texto": "Prontuário com os dois rótulos: histórico ICFEi/HFmrEF (ESC 2021/2023, SBC 2018/2021) e ICFEr ESC 2026, mais a trajetória",
+          "origem_secao": "O que escrever no prontuário"
+        },
+        {
+          "id": "icfei-pcdt-sus",
+          "categoria": "acesso",
+          "obrigatorio": true,
+          "texto": "Elegibilidade SUS conferida no PCDT 2024 (dapagliflozina FEVE <40%; sacubitril-valsartana FEVE ≤35%) — reclassificar o prontuário ESC não libera o fármaco",
+          "origem_secao": "O que o Brasil ainda usa"
+        },
+        {
+          "id": "icfei-hfimpef-nao-desescalonar",
+          "categoria": "tratamento",
+          "obrigatorio": true,
+          "texto": "Se a trajetória for HFimpEF: FMT mantida na maior dose tolerada (I C); retirada não feita só porque o rótulo antigo era ICFEi",
+          "origem_secao": "Primeiro passo: trajetória"
+        }
+      ]
+    }
+  ],
+  "materiais": [
+    {
+      "slug": "o-que-muda-quando-a-faixa-41-49-deixa-de-ser-icfei",
+      "titulo": "A faixa 41–49% deixou de se chamar ICFEi: o que isso muda para você",
+      "subtitulo": "O nome no prontuário muda; o aparelho no peito não é automático; alguns remédios desta faixa já tinham evidência antes da mudança de nome",
+      "tema": "Insuficiência cardíaca",
+      "documento_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
+      "review_status": "pendente_revisao",
+      "resumo": "Texto para o paciente que foi diagnosticado com 'fração de ejeção levemente reduzida' (41 a 49%) e agora ouve que a diretriz europeia de 2026 passou a chamar isso de fração reduzida. Explica o que muda no tratamento, o que não muda, e por que CDI não entra só por causa do novo nome.",
+      "secoes": [
+        {
+          "titulo": "O que mudou de nome — e o que não mudou no seu coração",
+          "paragrafos": [
+            "Até 2025, muita gente com fração de ejeção entre 41 e 49% recebia o rótulo de 'levemente reduzida'. Em 2026 a Sociedade Europeia de Cardiologia passou a usar só dois nomes: reduzida (abaixo de 50%) e preservada (50% ou mais). O seu coração não mudou de um dia para o outro. Mudou a forma de classificar o exame.",
+            "Se a sua fração de ejeção já esteve em 40% ou menos e depois subiu para 41–49%, isso se chama melhora, não um diagnóstico novo. Os remédios que ajudaram a subir a fração em geral devem ser mantidos, mesmo se você se sente bem."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que isso costuma mudar no tratamento",
+          "paragrafos": [
+            "Alguns remédios desta faixa já tinham estudo próprio antes da mudança de nome — especialmente os inibidores de SGLT2 (dapagliflozina ou empagliflozina). A diretriz de 2023 já os recomendava. A de 2026 não inventou essa indicação.",
+            "Outros remédios (betabloqueador, IECA ou sacubitril-valsartana) passam a ser tratados, na diretriz europeia, como parte do tratamento de base da fração reduzida. Isso é decisão da diretriz de 2026, não um estudo novo feito só em quem tem 41 a 49%. Seu médico deve explicar essa diferença se for iniciar ou ajustar essas classes."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que isso NÃO muda",
+          "paragrafos": [
+            "Aparelho para prevenir morte súbita (CDI) e aparelho para ressincronizar o coração (TRC) continuam, nesta diretriz, com corte de fração de ejeção de 35% ou menos, depois de meses de tratamento otimizado. Ter o novo nome 'fração reduzida' com 44% não é, sozinho, indicação de implante.",
+            "No SUS, as regras de quem recebe dapagliflozina ou sacubitril-valsartana ainda usam os cortes antigos (abaixo de 40% e de 35%). A diretriz europeia não substitui o protocolo brasileiro. Pergunte à equipe se o seu acesso muda ou não."
+          ],
+          "itens": [
+            "Não pare remédio só porque a fração de ejeção 'melhorou um pouco'",
+            "Não cobre CDI só porque o prontuário agora diz 'fração reduzida'",
+            "Leve à consulta o laudo antigo e o atual — a trajetória da fração importa tanto quanto o número de hoje"
+          ]
+        },
+        {
+          "titulo": "Perguntas úteis para a próxima consulta",
+          "paragrafos": [],
+          "itens": [
+            "A minha fração de ejeção 41–49% é estável, melhorou a partir de um valor mais baixo, ou caiu a partir de um valor mais alto?",
+            "Eu já estou com inibidor de SGLT2? Se não, por quê?",
+            "Algum remédio vai ser acrescentado por causa da diretriz de 2026 — e isso vem de estudo nesta faixa ou de mudança de classificação?",
+            "Eu tenho indicação de CDI ou TRC pelo corte de 35%, ou só pelo nome novo?"
+          ]
+        }
+      ]
+    }
+  ]
+}

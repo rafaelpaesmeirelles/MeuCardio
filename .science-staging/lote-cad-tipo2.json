@@ -1,0 +1,475 @@
+{
+  "lote": "cad-tipo2",
+  "fonte_producao": "grok",
+  "data": "2026-08-29",
+  "branch": "grok/science-overnight-20260829",
+  "tema": "Doença coronariana",
+  "review_status": "pendente_revisao",
+  "objetivo": "Protocolo de beira de leito: infarto tipo 2 / IAM secundário versus lesão miocárdica não isquêmica — quando cateterizar, quando não rotular tipo 1, e por que DAPT/ICP não são de rotina. Complementa a Quinta Definição Universal 2026 e o fluxograma já publicado.",
+  "documentos_criados": [
+    {
+      "path": "content/Doença_coronariana/infarto-tipo-2-versus-lesao-miocardica-nao-isquemica.md",
+      "slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "kind": "protocolo",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "fluxograma": {
+    "acao": "retido_nao_criar",
+    "motivo": "O fluxograma canônico já publicado é algoritmo completo: primeiro exclui SCA de risco muito alto, depois separa padrão crônico versus dinâmico, depois isquemia versus lesão não isquêmica, depois tipo 1 versus tipo 2 versus MINOCA, com condutas de eco, angiografia e precipitante. Criar um segundo fluxograma com slug próximo inflaria o acervo sem decisão nova.",
+    "slug_canonico": "fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2",
+    "path_canonico": "content/Doença_coronariana/fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2.md",
+    "arquivo_2_solicitado_nao_criado": "content/Doença_coronariana/fluxograma-troponina-elevada-sem-sca-tipo-1.md",
+    "o_que_o_protocolo_acrescenta": [
+      "Mapeamento Quarta Definição (tipos 1/2) → Quinta Definição 2026 (IAM primário / secundário / relacionado a procedimento), inclusive SCAD/espasmo/embolia saindo do guarda-chuva tipo 2",
+      "Tabela de quando cateterizar, com distinção explícita entre via de SCA classificada, texto narrativo da ESC 2023 e consenso Delphi",
+      "Regra de que tipo 2 não é indicação de DAPT nem de ICP de rotina, com o recorte de escopo da ACC/AHA 2025",
+      "Quando não rotular tipo 1 (UTI, sepse, DAC antiga, depressão de ST na taquicardia, 'DAPT enquanto se define')",
+      "Linguagem de prontuário para impedir NSTEMI genérico por inércia"
+    ]
+  },
+  "verbete_doenca": {
+    "acao": "nao_criar",
+    "motivo": "Pedido explícito: no disease verbete."
+  },
+  "evidencias": [
+    {
+      "slug": "minoca-seguir-algoritmo-diagnostico-esc-2023",
+      "statement": "Em todo paciente com diagnóstico de trabalho de MINOCA, é recomendado seguir um algoritmo diagnóstico para determinar o diagnóstico final subjacente.",
+      "recommendation_class": "I",
+      "evidence_level": "C",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Classe e nível já conferidos no acervo CorVIA (fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2 e minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea).",
+      "theme": "Doença coronariana",
+      "tags": [
+        "MINOCA",
+        "infarto tipo 2",
+        "lesão miocárdica",
+        "algoritmo diagnóstico"
+      ],
+      "document_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "review_status": "pendente_revisao",
+      "published": false,
+      "nota": "Entra neste lote porque é a única recomendação classificada no cruzamento tipo 2 / lesão / coronária não obstrutiva. Não é recomendação de tratamento do tipo 2 em si."
+    },
+    {
+      "slug": "minoca-rm-apos-angiografia-se-diagnostico-incerto-esc-2023",
+      "statement": "Em pacientes com diagnóstico de trabalho de MINOCA, a ressonância magnética cardíaca é recomendada após a angiografia invasiva se o diagnóstico final não estiver claro.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Classe e nível já conferidos no acervo CorVIA (minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea; fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2).",
+      "theme": "Doença coronariana",
+      "tags": [
+        "MINOCA",
+        "ressonância magnética cardíaca",
+        "lesão miocárdica"
+      ],
+      "document_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "review_status": "pendente_revisao",
+      "published": false
+    },
+    {
+      "slug": "minoca-tratar-conforme-diagnostico-final-esc-2023",
+      "statement": "O manejo do MINOCA deve seguir o diagnóstico final estabelecido, de acordo com as diretrizes específicas da doença identificada.",
+      "recommendation_class": "I",
+      "evidence_level": "B",
+      "society": "ESC",
+      "year": 2023,
+      "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+      "reference": "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Classe e nível já conferidos no acervo CorVIA (fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2).",
+      "theme": "Doença coronariana",
+      "tags": [
+        "MINOCA",
+        "tratamento etiológico",
+        "infarto tipo 2"
+      ],
+      "document_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "review_status": "pendente_revisao",
+      "published": false
+    }
+  ],
+  "evidencias_nao_criadas": [
+    {
+      "tema": "DAPT de rotina no infarto tipo 2",
+      "motivo": "A ESC 2023 afirma textualmente que não há intervenção farmacológica específica recomendada para o infarto tipo 2. Não existe classe/nível a cadastrar. Inventar Classe III seria tão indevido quanto inventar Classe I."
+    },
+    {
+      "tema": "ICP de rotina no infarto tipo 2",
+      "motivo": "Sem tabela de recomendação na ESC 2023. A ACC/AHA 2025 declara o tipo 2 fora do escopo. Angiografia após estabilização é texto narrativo, não classe."
+    },
+    {
+      "tema": "Ecocardiograma e angio-TC após estabilização do tipo 2",
+      "motivo": "Presentes no texto narrativo da ESC 2023 (seção de tipo 2 / lesão aguda) e no Delphi 2025. Sem classe/nível. Permanecem no protocolo em prosa, não em evidencias/."
+    }
+  ],
+  "casos": [
+    {
+      "slug": "sangramento-digestivo-troponina-dinamica-nao-rotular-tipo-1",
+      "titulo": "Sangramento digestivo, troponina dinâmica e depressão de ST: tipo 1, tipo 2 ou lesão?",
+      "tema": "Doença coronariana",
+      "nivel": "intermediário",
+      "documento_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "enunciado": "Homem, 72 anos, DAC conhecida tratada clinicamente, internado por hematêmese e melena. Pressão 88/54 mmHg na chegada, frequência 118 bpm, hemoglobina 6,4 g/dL. Relata opressão precordial concomitante à hipotensão. ECG: depressão de ST de 1 mm em V4–V6, sem supradesnivelamento. Troponina de alta sensibilidade acima do percentil 99, com nova subida na segunda amostra. Endoscopia de urgência mostra úlcera gástrica com sangramento recente. Um colega sugere iniciar DAPT, chamar a hemodinâmica como NSTEMI de alto risco e 'proteger o miocárdio' enquanto a hemoglobina é corrigida.",
+      "pergunta": "Qual a conduta mais alinhada à Quarta/Quinta Definição Universal e à ESC 2023 para este recorte?",
+      "opcoes": [
+        "Diagnosticar IAM tipo 1 / NSTEMI, iniciar DAPT com AAS e ticagrelor e indicar angiografia invasiva precoce (< 24 h), porque a troponina é dinâmica e há DAC conhecida",
+        "Corrigir o precipitante (volume, hemoderivados conforme o protocolo de anemia no infarto, controle pressórico e da frequência, hemostasia da úlcera), não iniciar DAPT nem ICP de rotina, registrar infarto tipo 2 / IAM secundário se a evidência de isquemia se sustentar, e só depois da estabilização planejar eco e investigação de DAC contributiva",
+        "Rotular lesão miocárdica aguda não isquêmica e encerrar a investigação cardiológica, porque o sangramento explica a troponina e o ECG não tem supra de ST",
+        "Indicar ICP imediata da estenose mais grave que aparecer na angiografia, mesmo com sangramento ativo, porque todo infarto com DAC conhecida é tipo 1 até prova em contrário"
+      ],
+      "resposta_correta": 1,
+      "explicacao": "Há lesão aguda (troponina dinâmica acima do percentil 99) e evidência clínica de isquemia (opressão precordial + depressão de ST no momento do desequilíbrio), com precipitante óbvio de oferta reduzida (choque hemorrágico e anemia grave). Isso preenche infarto tipo 2 na Quarta Definição e IAM secundário na Quinta — não tipo 1, porque não há evidência de aterotrombose aguda. A ESC 2023 não recomenda intervenção farmacológica específica para o tipo 2: o tratamento agudo é o do precipitante. DAPT e ICP de rotina são da via de SCA tipo 1; aqui o sangramento ativo torna a DAPT particularmente nociva. A apresentação não tem critério de risco muito alto isquêmico independente do choque hemorrágico (não há supra, dor refratária isquêmica isolada nem arritmia ameaçadora), portanto a angiografia de emergência como NSTEMI não se aplica. Também não é lesão não isquêmica: há critério de isquemia. Depois de estabilizar, eco e/ou angiografia (invasiva ou angio-TC) entram para procurar DAC contributiva e orientar o tratamento de longo prazo — texto narrativo da ESC 2023, sem classe/nível, e sem transformar estenose crônica em placa rota.",
+      "source_refs": [
+        "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617.",
+        "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+      ],
+      "review_status": "pendente_revisao"
+    }
+  ],
+  "checklists": [
+    {
+      "slug": "troponina-elevada-sem-sca-tipo-1-decisao-a-beira-do-leito",
+      "condicao": "Troponina elevada fora da SCA tipo 1 — distinguir infarto tipo 2 / IAM secundário de lesão miocárdica não isquêmica e decidir cateterismo e antitrombótico",
+      "resumo": "Checklist de execução no plantão: excluir a SCA que não pode esperar, classificar o padrão da troponina, exigir evidência de isquemia antes de dizer infarto, não rotular tipo 1 por inércia, não iniciar DAPT/ICP de rotina no tipo 2, e planejar a investigação de DAC só depois da estabilização do precipitante.",
+      "documento_origem": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "theme": "Doença coronariana",
+      "review_status": "pendente_revisao",
+      "source_refs": [
+        "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617.",
+        "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654.",
+        "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151(13):e771-e862. DOI: 10.1161/CIR.0000000000001309. PMID: 40014670."
+      ],
+      "itens": [
+        {
+          "id": "t2-ecg-risco-muito-alto",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "ECG e exame clínico revisados para supradesnivelamento de ST ou critério de risco muito alto (instabilidade, dor refratária, arritmia grave, IC isquêmica, ST dinâmico recorrente) ANTES de qualquer raciocínio sobre tipo 2 ou lesão — se presente, conduzir como SCA, sem esperar o rótulo",
+          "origem_secao": "Passo 0 — o que não pode esperar o rótulo"
+        },
+        {
+          "id": "t2-padrao-troponina",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Troponina interpretada em série, no ensaio local, como elevada versus não elevada em relação ao percentil 99 (específico por sexo se o laboratório usar) e como padrão dinâmico versus estável — um valor isolado não fecha infarto",
+          "origem_secao": "Passo 1 — o número sozinho não diagnostica infarto"
+        },
+        {
+          "id": "t2-evidencia-isquemia",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Evidência de isquemia explicitamente presente ou ausente (sintoma isquêmico, ECG isquêmico novo, onda Q nova, imagem com perda de viabilidade ou nova alteração segmentar). Sem isquemia: lesão, não infarto",
+          "origem_secao": "Passo 2 — sem isquemia não há infarto"
+        },
+        {
+          "id": "t2-nao-rotular-tipo-1",
+          "categoria": "diagnostico",
+          "obrigatorio": true,
+          "texto": "IAM tipo 1 / IAM primário aterotrombótico NÃO rotulado só por troponina elevada, UTI, sepse, DAC antiga ou depressão de ST durante taquicardia/anemia. Tipo 1 exige evidência de aterotrombose aguda",
+          "origem_secao": "Passo 3 — quando não rotular tipo 1"
+        },
+        {
+          "id": "t2-precipitante",
+          "categoria": "avaliacao",
+          "obrigatorio": true,
+          "texto": "Precipitante de desequilíbrio oferta-demanda procurado e registrado (taqui/bradiarritmia, anemia, hipotensão/choque, hipoxemia, hipertensão grave) quando há isquemia sem aterotrombose",
+          "origem_secao": "Passo 4 — tipo 2 / IAM secundário"
+        },
+        {
+          "id": "t2-tratar-precipitante",
+          "categoria": "conduta",
+          "obrigatorio": true,
+          "texto": "Tratamento agudo dirigido ao precipitante (volume, pressão, frequência, oxigênio, hemoderivados, hemostasia, foco da sepse) — a ESC 2023 não recomenda intervenção farmacológica específica para o tipo 2",
+          "origem_secao": "Passo 4 — tipo 2 / IAM secundário"
+        },
+        {
+          "id": "t2-nao-dapt-rotina",
+          "categoria": "medicacao",
+          "obrigatorio": true,
+          "texto": "DAPT (AAS + P2Y12) NÃO iniciada como rotina do infarto tipo 2 / IAM secundário nem da lesão não isquêmica. As recomendações de DAPT da ESC 2023 e da ACC/AHA 2025 são da SCA tipo 1; a ACC/AHA 2025 declara tipo 2 fora do escopo",
+          "origem_secao": "Tipo 2 não é indicação de DAPT nem de ICP de rotina"
+        },
+        {
+          "id": "t2-nao-pci-rotina",
+          "categoria": "procedimento",
+          "obrigatorio": true,
+          "texto": "ICP NÃO indicada de rotina pelo rótulo tipo 2. Angiografia de emergência só se houver critério de SCA de risco muito alto. Após estabilizar, eco e/ou angio-TC ou angiografia invasiva entram para procurar DAC contributiva, não para stent de estenose crônica como se fosse placa rota",
+          "origem_secao": "Quando cateterizar — e quando não"
+        },
+        {
+          "id": "t2-eco-apos-estabilizar",
+          "categoria": "exame",
+          "obrigatorio": true,
+          "texto": "Ecocardiograma planejado após a estabilização (e, conforme probabilidade de DAC, angiotomografia, teste funcional ou angiografia invasiva). Texto narrativo da ESC 2023, sem classe/nível — não omitir, não promover a Classe I",
+          "origem_secao": "Quando cateterizar — e quando não"
+        },
+        {
+          "id": "t2-prontuario",
+          "categoria": "comunicacao",
+          "obrigatorio": true,
+          "texto": "Prontuário com as sete linhas: padrão da troponina; isquemia sim/não; mecanismo; precipitante; o que NÃO foi iniciado e por quê; plano após estabilização; vocabulário 2026 se o serviço já o usa. Evitar 'NSTEMI' genérico",
+          "origem_secao": "O que escrever no prontuário"
+        },
+        {
+          "id": "t2-minoca-se-angio-sem-obstrucao",
+          "categoria": "seguimento",
+          "obrigatorio": false,
+          "texto": "Se a angiografia já foi feita e as coronárias não são obstrutivas: MINOCA como diagnóstico de trabalho (algoritmo Classe I C; RM se o diagnóstico final incerto, Classe I B; tratar a etiologia final, Classe I B) — não encerrar como 'coronárias limpas'",
+          "origem_secao": "MINOCA no cruzamento"
+        },
+        {
+          "id": "t2-nao-confundir-mins",
+          "categoria": "avaliacao",
+          "obrigatorio": false,
+          "texto": "Se o contexto for pós-operatório de cirurgia não cardíaca: sair deste checklist e usar o fluxograma de MINS — não absorver MINS como tipo 2 genérico, nem o contrário",
+          "origem_secao": "Lesão não isquêmica"
+        }
+      ]
+    }
+  ],
+  "material_paciente": [
+    {
+      "slug": "o-que-significa-uma-troponina-elevada-que-nao-e-infarto-classico",
+      "titulo": "Troponina elevada: o que isso significa quando não é o infarto clássico",
+      "subtitulo": "Uma proteína do coração pode subir no sangue por vários motivos — o número sozinho não diz que uma artéria entupiu",
+      "tema": "Doença coronariana",
+      "documento_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "review_status": "pendente_revisao",
+      "resumo": "Explicação em linguagem simples sobre o que é a troponina, por que ela pode estar alta sem ser o infarto clássico por artéria entupida, o que a equipe médica observa além do número, e quais perguntas fazer. Sem prognóstico inventado e sem alarmismo.",
+      "secoes": [
+        {
+          "titulo": "O que é a troponina",
+          "paragrafos": [
+            "A troponina é uma proteína que existe dentro das células do músculo do coração. Quando essas células sofrem algum dano, uma parte dela passa para a corrente sanguínea e o laboratório consegue medir.",
+            "Por isso o exame é útil: ele avisa que o músculo do coração foi agredido. O que ele não faz, sozinho, é dizer o motivo da agressão."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "Alta não é o mesmo que infarto clássico",
+          "paragrafos": [
+            "Muita gente ouve 'troponina alta' e entende 'infarto', no sentido de uma artéria do coração entupida por um coágulo. Esse infarto clássico existe, é grave e tem tratamento próprio. Mas a troponina também sobe em outras situações, por exemplo quando o coração trabalha sob estresse de outra doença (uma anemia importante, uma infecção grave, um ritmo muito rápido, falta de oxigênio) ou quando há inflamação do próprio músculo, embolia pulmonar, piora de insuficiência cardíaca ou doença renal crônica.",
+            "Os médicos às vezes usam a expressão em inglês 'troponin leak' — um 'vazamento' de troponina. Não é um diagnóstico e não significa, por si, que o coração esteja 'estragado' ou que uma artéria precise ser aberta. É só uma forma informal de dizer: o número subiu, agora precisamos entender por quê."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que a equipe olha além do número",
+          "paragrafos": [],
+          "itens": [
+            "Como você se sente: dor no peito, falta de ar, palpitação, desmaio",
+            "O eletrocardiograma, que registra a eletricidade do coração",
+            "Se a troponina sobe e desce entre duas coletas ou se ela está alta mas estável",
+            "Outras doenças do momento: infecção, sangramento, falta de ar, ritmo irregular, anemia",
+            "Às vezes um ultrassom do coração (ecocardiograma) ou outros exames de imagem, quando isso ajuda a achar a causa"
+          ]
+        },
+        {
+          "titulo": "O tratamento depende da causa, não do número",
+          "paragrafos": [
+            "Se a causa for uma artéria entupida de verdade, o tratamento pode incluir medicamentos que diminuem a formação de coágulos e, em muitos casos, um cateterismo para olhar e tratar a artéria.",
+            "Se a causa for outra — por exemplo um sangramento, uma infecção ou um ritmo muito rápido — o mais importante é tratar essa condição. Nessa situação, os medicamentos usados no infarto clássico (a combinação de dois antiagregantes, o chamado DAPT) e o cateterismo de urgência muitas vezes não são o caminho certo e podem até fazer mal, principalmente se houver sangramento.",
+            "A decisão é da equipe que está com você, olhando o quadro inteiro. Um resultado de laboratório não 'obriga' um cateterismo."
+          ],
+          "itens": []
+        },
+        {
+          "titulo": "O que isso não significa",
+          "paragrafos": [
+            "Não significa, automaticamente, que você teve um infarto clássico.",
+            "Não significa, automaticamente, que o coração ficará fraco.",
+            "Não significa que todo mundo com troponina alta tenha o mesmo risco. O significado depende da causa, da sua saúde de base e de como o quadro evolui — números gerais de 'chance de piora' tirados da internet não se aplicam ao seu caso e não devem ser usados para assustar nem para tranquilizar à toa.",
+            "Também não significa que o exame foi pedido à toa. A troponina ajuda a não perder um infarto verdadeiro e a acompanhar quem está muito doente. O valor está em interpretá-la no contexto, não em isolá-la."
+          ],
+          "itens": []
+        }
+      ],
+      "sinais_de_alerta": [
+        "Dor no peito forte, que aperta ou queima, que não passa com repouso",
+        "Falta de ar intensa ou que piora depressa",
+        "Desmaio, quase desmaio ou palpitações com mal-estar",
+        "Suor frio, náusea intensa ou sensação de morte iminente junto com dor no peito",
+        "Sangramento que não para, fezes pretas como piche ou vômito com sangue — avise na hora, principalmente se estiver usando antiagregante ou anticoagulante"
+      ],
+      "perguntas": [
+        "A minha troponina alta é infarto clássico, infarto por outra doença ou só um sinal de que o músculo do coração foi agredido?",
+        "Vocês vão repetir o exame? O que muda se o número subir, descer ou ficar estável?",
+        "Eu preciso de cateterismo agora, depois, ou talvez não precise?",
+        "Vou usar dois antiagregantes (DAPT)? Se não, por quê?",
+        "Qual é a doença que vocês estão tratando em primeiro lugar — a do coração ou a outra que precipitou o quadro?",
+        "Quando eu saio daqui, que sintomas devem me fazer voltar?"
+      ],
+      "fontes": [
+        "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101.",
+        "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+      ]
+    }
+  ],
+  "tudo_com_tudo": [
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2",
+      "tipo": "fluxograma_canonico",
+      "por_que": "Árvore diagnóstica já completa; este protocolo é a camada de conduta."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia",
+      "tipo": "definicao",
+      "por_que": "Taxonomia 2026 (IAM primário / secundário / relacionado a procedimento) que o protocolo traduz em decisão de DAPT e cateterismo."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+      "tipo": "diretriz",
+      "por_que": "ESC 2023: via de SCA tipo 1 e texto narrativo de tipo 2 / lesão aguda, inclusive a ausência de intervenção farmacológica específica."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-sindrome-coronariana-aguda-esc-2023",
+      "tipo": "fluxograma",
+      "por_que": "Saída obrigatória quando há supra ou risco muito alto — o rótulo tipo 2 não atrasa essa via."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+      "tipo": "fluxograma",
+      "por_que": "Tempos de angiografia da SCA tipo 1, para não copiá-los automaticamente no tipo 2."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+      "tipo": "fluxograma",
+      "por_que": "Como decidir padrão dinâmico na porta; cortes por ensaio não são reproduzidos no protocolo."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+      "tipo": "protocolo",
+      "por_que": "SCAD/espasmo/embolia são IAM primário na taxonomia 2026, com tratamento do mecanismo, não cópia do tipo 1."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-minoca-investigacao-diagnostica",
+      "tipo": "fluxograma",
+      "por_que": "Quando a angiografia já foi feita e não há obstrução: diagnóstico de trabalho, não alta."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+      "tipo": "protocolo",
+      "por_que": "Endótipos de espasmo e disfunção microvascular quando o mecanismo não é aterotrombose nem precipitante sistêmico."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-mins-lesao-miocardica-pos-operatoria",
+      "tipo": "fluxograma",
+      "por_que": "Fronteira explícita: MINS não é tipo 2 genérico e tem via própria."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-anemia-e-decisao-de-transfusao-no-infarto",
+      "tipo": "fluxograma",
+      "por_que": "Precipitante clássico de tipo 2; alvos transfusionais não são copiados neste protocolo."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+      "tipo": "protocolo",
+      "por_que": "Porta de entrada brasileira da dor torácica e da troponina; não cobre tratamento do tipo 2."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+      "tipo": "diretriz",
+      "por_que": "Escopo negativo útil: a diretriz de SCA norte-americana não cobre tipo 2, SCAD nem MINOCA."
+    },
+    {
+      "de": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "para": "fluxograma-miocardite-aguda-esc-2025",
+      "tipo": "fluxograma",
+      "por_que": "Ramo de lesão aguda não isquêmica quando o quadro aponta miocardite."
+    },
+    {
+      "de": "sangramento-digestivo-troponina-dinamica-nao-rotular-tipo-1",
+      "para": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "tipo": "caso",
+      "por_que": "Vinheta de precipitante hemorrágico — o erro clássico de DAPT/ICP."
+    },
+    {
+      "de": "troponina-elevada-sem-sca-tipo-1-decisao-a-beira-do-leito",
+      "para": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "tipo": "checklist",
+      "por_que": "Execução no plantão do protocolo."
+    },
+    {
+      "de": "o-que-significa-uma-troponina-elevada-que-nao-e-infarto-classico",
+      "para": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+      "tipo": "material_paciente",
+      "por_que": "Tradução para o paciente do que uma 'troponin leak' quer e não quer dizer."
+    }
+  ],
+  "citacoes_verificadas_nesta_sessao": [
+    {
+      "fonte": "Byrne 2023 ESC ACS",
+      "pmid": "37622654",
+      "doi": "10.1093/eurheartj/ehad191",
+      "status": "PMID/DOI conferidos no PubMed. Seção de tipo 2 lida via PDF espelhado já usado no acervo CorVIA: sem tabela de classe/nível; texto narrativo de tratar o precipitante e investigar DAC após estabilização."
+    },
+    {
+      "fonte": "Fourth Universal Definition 2018",
+      "pmid": "30165617",
+      "doi": "10.1093/eurheartj/ehy462",
+      "status": "PMID/DOI conferidos. Critérios de tipo 2, lesão versus infarto, variação de 20% no contexto apropriado, e a frase de que a angiografia nem sempre é necessária para tipo 2."
+    },
+    {
+      "fonte": "Fifth Universal Definition 2026",
+      "pmid": null,
+      "doi": "10.1093/eurheartj/ehag101",
+      "status": "DOI confirmado no comunicado oficial da ESC e na página da diretriz ESC. PMID não atribuído. Conteúdo clínico de categorias (primário/secundário/procedimento), MINOCA como myocardial injury e alerta contra rótulo automático no doente grave: síntese CorVIA já revisada no acervo + press release ESC. Tabelas diagnósticas integrais não reproduzidas."
+    },
+    {
+      "fonte": "Taggart Delphi 2025",
+      "pmid": "40905366",
+      "doi": "10.1093/ehjqcco/qcaf069",
+      "status": "PMID/DOI conferidos. Tratado como consenso de especialistas, não evidência de desfecho. Percentuais de concordância e mortalidade em 5 anos do artigo NÃO foram republicados neste lote, porque o fluxograma canônico já os cita com ressalva de que a mortalidade não teve a fonte primária conferida."
+    },
+    {
+      "fonte": "ACC/AHA 2025 ACS",
+      "pmid": "40014670",
+      "doi": "10.1161/CIR.0000000000001309",
+      "status": "PMID/DOI conferidos. Escopo: a diretriz foca IAM tipo 1 e declara que tipo 2, SCAD e MINOCA ficam em documentos separados."
+    }
+  ],
+  "itens_retidos": [
+    {
+      "item": "Segundo fluxograma (fluxograma-troponina-elevada-sem-sca-tipo-1.md)",
+      "motivo": "O slug fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2 já cobre a árvore completa. Pedido: se já for algoritmo completo, não criar o segundo; aprofundar só o protocolo e anotar o slug existente."
+    },
+    {
+      "item": "Verbete de doença",
+      "motivo": "Pedido: no disease verbete."
+    },
+    {
+      "item": "Evidência classificada de DAPT ou ICP no tipo 2",
+      "motivo": "Não existe classe/nível verificável na ESC 2023 nem na ACC/AHA 2025 para esse recorte."
+    },
+    {
+      "item": "Percentuais de incidência e mortalidade do tipo 2",
+      "motivo": "Pedido: do not invent incidence percentages. O Delphi tem números de concordância e uma cifra de mortalidade a 5 anos que o fluxograma canônico já registrou com ressalva; este lote não a republica."
+    },
+    {
+      "item": "Edição de arquivos existentes",
+      "motivo": "Pedido: Create ONLY new files. O fluxograma e a síntese 2026 não foram tocados."
+    }
+  ]
+}
