@@ -31971,5 +31971,141 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "teste-genetico-em-canalopatias-e-risco-pos-iam-e-restricao-de-exercicio-em-arritmia-jcs",
+    "condicao": "Teste genético em arritmias hereditárias, estratificação de risco pós-IAM/cardiomiopatia e restrição de exercício",
+    "resumo": "Checklist de 16 cenários clínicos cobrindo teste genético em canalopatias/cardiomiopatias hereditárias e estratificação de risco pós-IAM/cardiomiopatia com restrição de exercício, baseado na JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias (Nogami et al., 2021). Apenas 4 dos 16 itens (resposta pressórica anormal ao esforço na CMH, e os componentes de FEVE/TVNS/EEF embutidos nos critérios de indicação de CDI pós-IAM e em cardiomiopatia não isquêmica) têm classe de recomendação (COR) e nível de evidência (LOE) formalmente tabelados nesta diretriz; os demais 12 itens (todo o bloco de teste genético, os índices de despolarização/repolarização, a maior parte das restrições de exercício e os testes ergométricos diagnósticos em CPVT/QT longo) aparecem apenas como critério diagnóstico ou orientação narrativa, sem tabela de recomendação COR/LOE isolada e específica — isso está declarado explicitamente no texto de cada item correspondente.",
+    "documento_origem": null,
+    "theme": "Arritmias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Nogami A, Kurita T, Abe H, et al; JCS/JHRS Joint Working Group. JCS/JHRS 2019 guideline on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2021;37(4):709-870. doi:10.1002/joa3.12491. PMID: 34386109; PMCID: PMC8339126.",
+      "Nogami A, Kurita T, Abe H, et al; JCS/JHRS Joint Working Group. JCS/JHRS 2019 Guideline on Non-Pharmacotherapy of Cardiac Arrhythmias (versão paralela). Circ J. 2021;85(7):1104-1244. doi:10.1253/circj.CJ-20-0637. PMID: 34078838. Errata: Circ J. 2021;85(9):1692-1700. PMID: 34433750.",
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963. PMID: 24011539.",
+      "Tester DJ, Will ML, Haglund CM, Ackerman MJ. Effect of clinical phenotype on yield of long QT syndrome genetic testing. J Am Coll Cardiol. 2006;47(4):764-768. doi:10.1016/j.jacc.2005.09.056. PMID: 16487842.",
+      "Schwartz PJ, Crotti L. QTc behavior during exercise and genetic testing for the long-QT syndrome. Circulation. 2011;124(20):2181-2184. doi:10.1161/CIRCULATIONAHA.111.062182. PMID: 22083145.",
+      "Sadoul N, Prasad K, Elliott PM, et al. Prospective prognostic assessment of blood pressure response during exercise in patients with hypertrophic cardiomyopathy. Circulation. 1997;96(9):2987-2991. PMID: 9386166.",
+      "Nogami A, Kurita T, Kusano K, Goya M, Shoda M, Tada H, et al. JCS/JHRS 2021 guideline focused update on non-pharmacotherapy of cardiac arrhythmias. J Arrhythm. 2022;38(1):1-30. PMID: 35222748. Nota: esta atualização focada trata de marca-passo sem fio, extração de eletrodo e oclusor de apêndice atrial esquerdo (WATCHMAN) — temas distintos dos abordados neste checklist — e NÃO foi usada como fonte de conteúdo."
+    ],
+    "itens": [
+      {
+        "id": "gen-01-lqt-painel-lqt1-3",
+        "categoria": "Teste genético",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR: a diretriz JCS/JHRS 2019 (texto integral em PMC8339126) não apresenta uma tabela de recomendação formal com Classe de Recomendação (COR) e Nível de Evidência (LOE) dedicada a teste genético (painel amplo ou dirigido a LQT1-3) para síndrome do QT longo. O teste genético aparece apenas como componente dos critérios DIAGNÓSTICOS da LQTS congênita (Tabela 25, baseada no HRS/EHRA/APHRS Expert Consensus Statement de 2013 — Priori et al., Heart Rhythm 2013, PMID 24011539): 'presença de mutação inequivocamente patogênica em um dos genes de LQTS' é um dos três critérios diagnósticos, ao lado do escore de risco de Schwartz ≥3,5 (Tabela 23) e do QTc ≥500 ms. Não há, porém, uma recomendação formal COR/LOE isolada indicando quando pedir painel amplo versus teste dirigido a LQT1-3 especificamente.",
+        "origem_secao": "Seção II (Cardiac Implantable Electronic Devices), subseção sobre LQTS congênita; Tabela 23 (escore de risco de Schwartz) e Tabela 25 (critérios diagnósticos HRS/EHRA/APHRS) — sem tabela de recomendação COR/LOE dedicada a teste genético."
+      },
+      {
+        "id": "gen-02-cascata-familiares",
+        "categoria": "Teste genético",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR: não foi localizada, no texto integral da diretriz JCS/JHRS 2019, nenhuma tabela de recomendação COR/LOE nem discussão narrativa específica sobre teste genético em cascata (teste dirigido à mutação específica identificada no caso-índice, aplicado a familiares). O termo 'cascade' não aparece no texto. A diretriz trata de teste genético apenas como critério diagnóstico do caso-índice (ex.: LQTS, Brugada), não como estratégia de rastreamento familiar em cascata.",
+        "origem_secao": "Não localizado — ausente do texto integral da diretriz (PMC8339126)."
+      },
+      {
+        "id": "gen-03-cpvt",
+        "categoria": "Teste genético",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR: não há tabela de recomendação COR/LOE dedicada a teste genético em CPVT. O teste genético aparece apenas embutido nos critérios diagnósticos de CPVT adaptados do 2013 HRS/EHRA/APHRS Consensus Statement (Priori et al., PMID 24011539): um dos critérios de diagnóstico definitivo é 'se o probando ou familiares têm mutação patogênica associada a CPVT', ao lado de critérios baseados em teste de esforço/adrenalina. Isso é apresentado como critério diagnóstico, não como recomendação COR/LOE de indicação de teste.",
+        "origem_secao": "Seção II, subseção sobre CPVT (antes da Tabela 28 — Recomendações para CDI em CPVT); critérios diagnósticos citando referência 277 (Priori et al. 2013)."
+      },
+      {
+        "id": "gen-04-brugada-tipo1",
+        "categoria": "Teste genético",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR uma classe de recomendação/nível de evidência formal para 'pedir teste genético' na síndrome de Brugada tipo 1 sintomática com história familiar de morte súbita/síncope. O que a diretriz apresenta é a Tabela 21 (Diagnóstico de síndrome de Brugada), na qual 'mutação provavelmente patogênica em gene de suscetibilidade a Brugada' figura como achado MENOR de 'Teste Genético (sem reembolso no Japão)' — um achado de referência para avaliação de risco, junto com histórico familiar de Brugada definitivo, morte súbita suspeita e morte súbita inexplicada <46 anos. Não é uma recomendação COR/LOE graduada como as tabelas de indicação de CDI.",
+        "origem_secao": "Tabela 21 (Diagnosis of Brugada syndrome), item 'Genetic Testing (no reimbursement)', achado menor E."
+      },
+      {
+        "id": "risco-05-fe-reduzida",
+        "categoria": "Estratificação de risco pós-IAM/cardiomiopatia",
+        "obrigatorio": true,
+        "texto": "CONFIRMADO, embutido nos critérios de indicação de CDI como prevenção primária: FEVE ≤35% (com TVNS, sob terapia médica otimizada e classe funcional NYHA ≥II, ≥40 dias após IAM e ≥90 dias após revascularização) é critério de Classe de Recomendação I, Nível de Evidência A para indicação de CDI em doença arterial coronariana (Tabela 15); FEVE ≤40% associada a TVNS e indução de TV/FV sustentada em estudo eletrofisiológico é Classe I, Nível de Evidência B (mesma tabela). Em cardiomiopatia não isquêmica, FEVE ≤35% com TVNS também é Classe I, Nível B (Tabela 16). A diretriz não apresenta a FEVE isoladamente como 'ferramenta de avaliação de risco'; ela integra os critérios formais de indicação de CDI.",
+        "origem_secao": "Tabela 15 (Recommendations and evidence levels for ICD as primary prevention of sudden death in patients with coronary artery disease); Tabela 16 (idem, non-ischemic cardiomyopathy)."
+      },
+      {
+        "id": "risco-06-tvns-holter",
+        "categoria": "Estratificação de risco pós-IAM/cardiomiopatia",
+        "obrigatorio": true,
+        "texto": "CONFIRMADO nas três situações, com graus distintos: (1) pós-IAM — TVNS + FEVE ≤35% é Classe I, Nível de Evidência A; TVNS + FEVE ≤40% + indução em EEF é Classe I, Nível B (Tabela 15); (2) cardiomiopatia dilatada/não isquêmica — TVNS + FEVE ≤35% é Classe I, Nível A (Tabela 16); (3) cardiomiopatia hipertrófica — TVNS isolada (sem outros fatores de risco maiores/modificadores) é Classe IIb, Nível de Evidência C; TVNS associada a outros fatores de risco maiores ou modificadores é Classe IIa, Nível C (Tabela 19). Em todos os casos, a TVNS é um dos 'fatores de risco maiores' clássicos para morte súbita, mas seu peso na indicação de CDI varia conforme a doença de base.",
+        "origem_secao": "Tabela 15 (DAC), Tabela 16 (cardiomiopatia não isquêmica) e Tabela 19 (Recommendations and evidence levels for ICD for hypertrophic cardiomyopathy)."
+      },
+      {
+        "id": "risco-07-eef-tvns-pos-iam",
+        "categoria": "Estratificação de risco pós-IAM/cardiomiopatia",
+        "obrigatorio": true,
+        "texto": "CONFIRMADO: a combinação de TVNS + indução de TV/FV sustentada em estudo eletrofisiológico (EEF), em paciente pós-IAM (≥40 dias após IAM e ≥90 dias após revascularização, sob terapia médica otimizada) com FEVE ≤40%, é Classe de Recomendação I, Nível de Evidência B para indicação de CDI como prevenção primária — critério formalmente distinto (e com corte de FEVE menos restritivo) do critério de FEVE ≤35% sem necessidade de EEF, que é Classe I, Nível A.",
+        "origem_secao": "Tabela 15 (Recommendations and evidence levels for ICD as primary prevention of sudden death in patients with coronary artery disease), segundo critério listado."
+      },
+      {
+        "id": "risco-08-despolarizacao-repolarizacao",
+        "categoria": "Estratificação de risco pós-IAM/cardiomiopatia",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR: não há tabela de recomendação COR/LOE dedicada a ECG de sinal médio (potencial tardio ventricular), alternância de onda T ou dispersão de QT como índices de risco pós-IAM ou em cardiomiopatia não isquêmica. O texto menciona narrativamente que 'casos são determinados de forma abrangente usando avaliação de Holter, teste de esforço, ECG de sinal médio e testes de alternância de onda T' e que 'a avaliação de risco com estudo eletrofisiológico é útil quando há TVNS registrada OU o ECG de sinal médio é positivo' em pacientes com FEVE <40% por doença isquêmica e IC classe NYHA ≥II — mas isso é descrito em texto corrido, sem tabela de COR/LOE específica. 'Dispersão de QT' (QT dispersion) aparece somente em títulos de referências bibliográficas citadas, sem discussão no corpo do texto da diretriz.",
+        "origem_secao": "Texto narrativo na introdução da seção de avaliação eletrofisiológica de risco de morte súbita (antes da Tabela 13), citando referências 85-88; 'QT dispersion' aparece apenas em referências bibliográficas (refs. 687-689), não no corpo do texto."
+      },
+      {
+        "id": "exerc-09-monitorizado-pos-cdi",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR uma recomendação COR/LOE formal sobre exercício monitorizado após implante de CDI em adultos. A diretriz aborda o tema apenas na Tabela 80 (School Activity Management Table), uma tabela categórica (A-E, não COR/LOE) usada para orientar retorno a atividades escolares/esportivas em crianças com dispositivos cardíacos implantáveis, e em texto narrativo associado: pacientes com marca-passo e função cardíaca normal podem ser enquadrados em categoria 'E-permitido' (exercício vigoroso permitido); crianças com CDI por LQTS/CPVT são orientadas para categorias C ou D, com natação geralmente proibida mas eventualmente permitida sob supervisão. Não há tabela de recomendação formal equivalente para adultos.",
+        "origem_secao": "Capítulo VI (Returning to/Attending School or Work After Non-Pharmacotherapy), Tabela 80-82 (School Activity Management Tables) — tabelas categóricas, não COR/LOE."
+      },
+      {
+        "id": "exerc-10-moderado-fa",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR: não foi localizada, no texto integral desta diretriz de não-farmacoterapia, qualquer recomendação (formal ou narrativa) sobre exercício moderado regular para melhorar a tolerância ao exercício em pacientes com fibrilação atrial. A diretriz JCS/JHRS 2019 trata de dispositivos, ablação e cirurgia; discute apenas que a ablação por cateter melhora tolerância ao exercício em pacientes com FA (não o exercício físico em si como intervenção). Este tópico provavelmente pertence a outra diretriz JCS específica sobre manejo/estilo de vida em FA, não a esta.",
+        "origem_secao": "Não localizado nesta diretriz — tema ausente do texto integral (PMC8339126)."
+      },
+      {
+        "id": "exerc-11-evitar-vigoroso-cpvt",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": true,
+        "texto": "RIGOR: há afirmação textual explícita — 'restrição de exercício é essencial em todos os casos' de CPVT ('Exercise restriction is essential in all cases') —, mas essa frase está no texto narrativo da seção de CDI em CPVT (citando referências 311-314), e NÃO dentro de uma tabela de recomendação COR/LOE isolada; a única tabela formal daquela subseção (Tabela 28) trata exclusivamente da indicação de CDI. Portanto, a orientação de restrição de exercício em CPVT está claramente declarada na diretriz, mas sem classe de recomendação/nível de evidência graduados formalmente.",
+        "origem_secao": "Seção II, subseção 'Catecholaminergic Polymorphic Ventricular Tachycardia' (texto imediatamente anterior à Tabela 28), citando referências 311-314."
+      },
+      {
+        "id": "exerc-12-evitar-competitivo-cavd",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": true,
+        "texto": "CONFIRMADO, em tabela categórica (não no formato COR I-III/LOE A-C usado nas tabelas de CDI, mas em formato de categorias de manejo A-E): a Tabela 85 (Conditions and management categories of exercise for patients with cardiomyopathies), reproduzida da diretriz JCS 2013, classifica cardiomiopatia/displasia arritmogênica de ventrículo direito (ARVC) como 'Exercise is contraindicated — Categoria C' (contraindicação de exercício). O texto complementar reforça: 'nos pacientes com cardiomiopatia arritmogênica de ventrículo direito, deve-se notar que o movimento exacerba a lesão e piora tanto a arritmia quanto a insuficiência cardíaca direita' (citando referências 1346-1347). Não há, porém, tabela no formato COR/LOE padrão para este item específico.",
+        "origem_secao": "Tabela 85 (Conditions and management categories of exercise for patients with cardiomyopathies, from JCS guideline 2013), linha ARVC; texto narrativo associado citando refs. 1346-1347."
+      },
+      {
+        "id": "exerc-13-evitar-lqt1",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": false,
+        "texto": "NÃO FOI POSSÍVEL CONFIRMAR uma recomendação específica para LQT1 (subtipo genético) sobre evitar exercício extenuante e natação. A diretriz discute restrição de exercício/natação apenas para 'pacientes com síndrome do QT longo ou CPVT' como grupo geral (não estratificado por genótipo LQT1/2/3), no contexto de crianças com CDI: 'torsade de pointes e fibrilação ventricular podem ser induzidas por exercício e aumento do tônus simpático... a natação, em particular, é geralmente proibida; porém, pode ser permitida, sempre sob supervisão, conforme critérios C e D'. Isso é orientação narrativa/categórica (Tabelas 80-82), não uma recomendação COR/LOE, e não é específica de LQT1 (o subtipo com maior sensibilidade a gatilhos por esforço/natação é mencionado na literatura geral de LQTS, mas a diretriz JCS/JHRS 2019 não faz essa distinção de subtipo nesta passagem).",
+        "origem_secao": "Capítulo VI, texto associado às Tabelas 80-82 (School Activity Management Tables), seção sobre crianças com CDI por LQTS/CPVT; referências 1344-1345."
+      },
+      {
+        "id": "risco-14-pressao-anormal-cmh",
+        "categoria": "Estratificação de risco pós-IAM/cardiomiopatia",
+        "obrigatorio": true,
+        "texto": "CONFIRMADO com precisão: na Tabela 19 (Recommendations and evidence levels for ICD for hypertrophic cardiomyopathy), resposta pressórica anormal ao esforço (PAS no esforço máximo não se eleva ≥20 mmHg acima do repouso, ou cai ≥20 mmHg durante o exercício) associada a outros fatores de risco maiores ou modificadores de morte súbita é Classe de Recomendação IIa, Nível de Evidência C para considerar CDI; quando isolada (sem outros fatores de risco maiores/modificadores), é Classe IIb, Nível de Evidência C. É um dos 5 fatores de risco maiores clássicos listados pela diretriz (junto com história familiar de morte súbita, síncope, espessura de VE >30 mm e TVNS), citando Sadoul et al. Circulation 1997 (PMID 9386166) e Olivotto et al. J Am Coll Cardiol 1999 (PMID 10362212) entre as referências de base.",
+        "origem_secao": "Tabela 19 (Recommendations and evidence levels for ICD for hypertrophic cardiomyopathy), linhas sobre 'abnormal blood pressure response to exercise'; texto narrativo imediatamente anterior citando referências 238-246."
+      },
+      {
+        "id": "diag-15-ergometrico-cpvt",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": false,
+        "texto": "RIGOR: o teste ergométrico (teste de esforço ou teste provocativo com adrenalina) para detectar arritmia ventricular induzida por esforço é usado pela diretriz como CRITÉRIO DIAGNÓSTICO de CPVT (adotado do 2013 HRS/EHRA/APHRS Expert Consensus Statement, Priori et al., PMID 24011539), e não como uma recomendação isolada com Classe de Recomendação/Nível de Evidência no formato das tabelas de indicação de CDI. Critério textual: 'se um teste de esforço ou teste provocativo com adrenalina induz TV bidirecional, TV polimórfica ou EV multifocais sem outra causa conhecida em paciente com ECG normal, <40 anos, sem cardiopatia estrutural' = diagnóstico definitivo de CPVT. Portanto, o papel do teste ergométrico está claramente documentado na diretriz, mas como critério diagnóstico, não como item de uma tabela COR/LOE.",
+        "origem_secao": "Seção II, subseção 'Catecholaminergic Polymorphic Ventricular Tachycardia', critérios diagnósticos (1)-(4), citando referência 277 (Priori et al. 2013 HRS/EHRA/APHRS Consensus)."
+      },
+      {
+        "id": "diag-16-ergometrico-lqt",
+        "categoria": "Restrição/liberação de exercício",
+        "obrigatorio": false,
+        "texto": "RIGOR: o teste ergométrico também é usado como CRITÉRIO DIAGNÓSTICO (não como recomendação COR/LOE isolada) para síndrome do QT longo congênita. No escore de risco de Schwartz (Tabela 23), 'QTc no 4º minuto de recuperação do teste de esforço ≥480 ms' vale 1 ponto adicional (item B), incorporado desde a revisão de 2012 do escore — pontuação total ≥3,5 indica alta probabilidade de LQTS. A diretriz não apresenta uma tabela de COR/LOE separada recomendando 'realizar teste ergométrico para diagnóstico de LQTS'; o teste é um componente pontuado dentro do critério diagnóstico composto (Tabela 23/25), citando Schwartz PJ, Crotti L. Circulation 2011 (PMID 22083145) e referência ao Priori et al. 2013 (Tabela 25, HRS/EHRA/APHRS).",
+        "origem_secao": "Tabela 23 (Congenital long QT syndrome risk score and diagnostic criteria), item B; Tabela 25 (Diagnosis of congenital LQTS, HRS/EHRA/APHRS expert consensus statement)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
