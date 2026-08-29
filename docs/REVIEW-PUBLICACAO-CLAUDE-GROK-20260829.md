@@ -20,6 +20,8 @@
 - `recomendacoes-granulares-esc2020-ahaacc2018-ebstein-eisenmenger-cia-civ-fontan-tga-switch` / `fontan-anticoagulacao-vigilancia-hepatica` — superado por documento de tromboprofilaxia em Fontan com síntese mais atual.
 - `vigilancia-e-manejo-pos-transplante-cardiaco-rejeicao-e-vasculopatia-do-enxerto` / `rejeicao-celular-manejo-por-gravidade` — fonte não resolvida: não confirmados a partir de abstract.
 
+- Gate de reconciliação do banco: campo `checklists.revisao` normalizado de objeto JSON para texto, compatível com `discharge_checklists.revisao`.
+
 ## Grok 67–75
 
 - HEAD local informado no handoff: `8b00af0c…`.
