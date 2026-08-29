@@ -458,7 +458,15 @@ async def generate_multimodal_suggestion(
 
     context = _chart_context(pid, db, user)
     attempt_id = _reserve_quota(db, user, exam_id=row.id)
-    clinical_file = ClinicalFile(content=sanitized, media_type=sanitized_type, file_id=f"exame-{row.id}", label=_notes(row) or cardiovascular_exam_assist.EXAM_TYPES[row.exam_type])
+    # A observação livre permanece cifrada e local no prontuário. A legenda
+    # externa usa apenas o tipo canônico do exame para não transferir texto
+    # potencialmente identificável que não passou pelo sanitizador clínico.
+    clinical_file = ClinicalFile(
+        content=sanitized,
+        media_type=sanitized_type,
+        file_id=f"exame-{row.id}",
+        label=cardiovascular_exam_assist.EXAM_TYPES[row.exam_type],
+    )
     try:
         analysis = await run_in_threadpool(
             cardiovascular_exam_assist.analyze_exam,
