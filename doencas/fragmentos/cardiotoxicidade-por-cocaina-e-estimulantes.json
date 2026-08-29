@@ -1,0 +1,620 @@
+[
+  {
+    "slug": "cardiotoxicidade-por-cocaina-e-estimulantes",
+    "name": "Cardiotoxicidade por cocaína e estimulantes",
+    "aliases": [
+      "Toxicidade cardiovascular por cocaína",
+      "Cardiotoxicidade por estimulantes",
+      "Síndrome coronariana associada à cocaína",
+      "Cardiomiopatia associada à metanfetamina",
+      "Toxicidade cardíaca por simpaticomiméticos",
+      "Cocaína e coração"
+    ],
+    "area": "geral",
+    "category": "toxicologia_cardiovascular",
+    "subtype": "toxicidade_aguda_e_cardiomiopatia_cronica_por_simpaticomimeticos",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A cardiotoxicidade por cocaína e outros estimulantes simpaticomiméticos (metanfetamina, anfetamina) combina três mecanismos convergentes de lesão cardiovascular: vasoespasmo coronariano por estímulo alfa-adrenérgico não contraposto (mesmo em artérias sem placa aterosclerótica visível), bloqueio direto de canais de sódio cardíacos (efeito tipo anestésico local/antiarrítmico de classe I, com alargamento do QRS e risco de arritmia por reentrada) e bloqueio de canais de potássio (hERG), com prolongamento de QT. O espectro clínico vai de dor torácica desencadeada na primeira hora após o uso — com risco de infarto descrito como muitas vezes maior nesse período — a arritmia ventricular potencialmente letal e, no uso crônico (sobretudo de metanfetamina), cardiomiopatia estrutural que costuma ter potencial real de recuperação da fração de ejeção condicionado à abstinência. O ponto de maior risco de erro na conduta é farmacológico e contraintuitivo: o betabloqueador — conduta reflexa em dor torácica e síndrome coronariana — não deve ser usado isoladamente na fase aguda da intoxicação por deixar o estímulo alfa-adrenérgico sem oposição, o que piora (não melhora) o vasoespasmo coronariano; beta/alfa-bloqueadores combinados são a alternativa mais bem documentada dentro da classe quando é necessário controle adicional de frequência ou pressão. O uso terapêutico prescrito de estimulantes para transtorno de déficit de atenção/hiperatividade (TDAH) é farmacologicamente relacionado, mas clinicamente distinto: dose, via e contexto de uso mudam radicalmente a magnitude do risco cardiovascular, que neste cenário é objeto de sinal ainda em investigação para uso contínuo de longo prazo, não de risco agudo estabelecido.",
+    "epidemiology": "Dor torácica relacionada ao uso de cocaína é causa frequente de procura a serviços de emergência nos países onde o consumo é prevalente, e o uso costuma não ser relatado espontaneamente pelo paciente — o que torna a pergunta direta na anamnese relevante sempre que houver fatores de risco compatíveis (idade jovem, dor torácica atípica, ausência de fatores de risco coronariano clássicos). Um estudo caso-cruzado do Determinants of Myocardial Infarction Onset Study, com 3.946 pacientes entrevistados após infarto, encontrou risco de início do infarto elevado em cerca de 24 vezes na hora seguinte ao uso de cocaína em relação ao risco basal do próprio paciente em outros momentos — efeito abrupto e transitório, concentrado nessa janela inicial, não cumulativo ao longo do dia. Em contraste, uma coorte de validação de protocolo de observação breve para dor torácica associada à cocaína, com pacientes de risco baixo a intermediário observados por 9 a 12 horas com troponina e ECG seriados, encontrou risco de morte cardiovascular em 30 dias próximo de zero, com os únicos infartos não fatais concentrados em quem manteve o uso após a alta — reforçando que a cessação do uso é parte inseparável do desfecho de segurança, não um adendo. No uso crônico, o padrão de dano é diferente por substância: cocaína tem o efeito agudo mais bem quantificado, enquanto metanfetamina tem o dano estrutural cardíaco crônico mais bem documentado, com séries de cardiomiopatia associada à metanfetamina descrevendo disfunção sistólica grave na apresentação e recuperação funcional substancial condicionada à abstinência, e piora persistente em quem mantém o uso. No espectro do uso prescrito, estudos farmacoepidemiológicos de grande escala com estimulantes para TDAH (metilfenidato, anfetamina, atomoxetina) não mostraram sinal de risco cardiovascular agudo em uso atual/recente de curto a médio prazo, mas um registro nacional de longo prazo identificou associação com risco maior de acidente vascular cerebral e, mais robustamente, de insuficiência cardíaca em uso contínuo de dose mais alta por vários anos, sem sinal aumentado para síndrome coronariana aguda — achado que os próprios autores tratam como associação a investigar, não causalidade estabelecida.",
+    "presentation": [
+      "Dor torácica de início associado temporalmente ao uso recente de cocaína ou outro estimulante, tipicamente na primeira hora após o consumo",
+      "Dor torácica atípica em paciente jovem, sem fatores de risco coronariano clássicos, muitas vezes sem relato espontâneo de uso de substância",
+      "Palpitações e percepção de taquiarritmia associadas ao uso agudo",
+      "Sinais de intoxicação simpaticomimética aguda concomitantes: euforia, agitação, taquicardia, hipertensão, midríase, hipertermia",
+      "Síncope ou pré-síncope por arritmia ventricular no contexto de bloqueio de canal de sódio (QRS alargado)",
+      "Dispneia progressiva e sinais de congestão em usuário crônico com cardiomiopatia estabelecida (uso prolongado, sobretudo de metanfetamina)",
+      "Intolerância a esforço e fadiga como manifestação insidiosa de disfunção ventricular em usuário crônico assintomático do ponto de vista cardiovascular até a descompensação",
+      "Parada cardíaca súbita como primeira manifestação, por arritmia ventricular maligna associada ao uso agudo em dose elevada",
+      "Dor torácica recorrente em paciente com uso concomitante de álcool (cocaetileno), com sintomas mais prolongados que o esperado pela farmacocinética isolada da cocaína",
+      "Achado incidental de disfunção sistólica ou hipertrofia ventricular concêntrica em usuário crônico assintomático, identificado em avaliação de rotina"
+    ],
+    "diagnostic_approach": "A avaliação inicial de toda dor torácica com uso recente confirmado ou suspeito de cocaína ou outro estimulante segue o mesmo fluxo de qualquer suspeita de síndrome coronariana aguda: eletrocardiograma de 12 derivações precoce, troponina seriada, monitorização contínua e avaliação clínica de estabilidade hemodinâmica — a exposição à substância não deve, por si só, retirar o paciente do protocolo padrão de investigação. O eletrocardiograma cumpre função dupla: além de rastrear supradesnível de ST e alteração isquêmica, deve ser lido ativamente em busca de alargamento do complexo QRS, achado que aponta para bloqueio direto de canal de sódio cardíaco pela substância (mecanismo eletrofisiológico distinto do vasoespasmo, com implicação terapêutica própria) e para prolongamento de QTc, marcador de bloqueio de canal de potássio associado a maior risco de morte súbita. A decisão que mais muda a conduta farmacológica imediata é distinguir história de uso recente de intoxicação aguda em curso (euforia, taquicardia, hipertensão): na ausência de sinais de intoxicação ativa, o paciente deve ser mantido no protocolo habitual de síndrome coronariana aguda sem restrição especial de betabloqueador; na presença de intoxicação aguda, a investigação segue igual, mas a escolha farmacológica para controle de frequência e pressão muda (ver treatment_summary). Pacientes de risco baixo a intermediário, sem alteração isquêmica nova e sem instabilidade, podem ser conduzidos por protocolo estruturado de observação breve (cerca de 9 a 12 horas) com ECG e troponina seriados antes da decisão de alta. Persistência de dor ou de alteração isquêmica apesar de tratamento inicial do vasoespasmo levanta suspeita de trombose sobreposta e indica avaliação para angiografia coronariana, já que o mecanismo não exclui doença aterosclerótica concomitante. Em uso crônico — sobretudo de metanfetamina — ou quando há suspeita de disfunção estrutural (dispneia, sinais de congestão, cardiomiopatia prévia), ecocardiograma transtorácico é indicado para caracterizar padrão e gravidade da disfunção (na cocaína, hipertrofia concêntrica e disfunção diastólica predominam em usuário crônico assintomático; na cardiomiopatia associada à metanfetamina, disfunção sistólica importante, câmaras dilatadas e trombo intraventricular são achados descritos), com reavaliação seriada após eventual cessação do uso para documentar reversibilidade. A anamnese dirigida sobre uso de substâncias — incluindo uso concomitante de álcool, que forma cocaetileno — deve ser ativa em toda dor torácica atípica de paciente jovem, já que a omissão espontânea é a regra, não a exceção.",
+    "differentials": [
+      "Síndrome coronariana aguda aterosclerótica clássica, com ou sem uso concomitante de estimulante",
+      "Vasoespasmo coronariano induzido por cocaína/estimulante em artéria sem placa aterosclerótica visível",
+      "Trombose coronariana sobreposta ao vasoespasmo em usuário de cocaína",
+      "Cardiomiopatia de Takotsubo, também desencadeada por excesso catecolaminérgico",
+      "Miocardite aguda, sobretudo quando há febre, achados inflamatórios ou disfunção difusa desproporcional ao quadro isquêmico",
+      "Dissecção aórtica aguda, no diagnóstico diferencial de dor torácica associada a uso de estimulante e hipertensão grave",
+      "Embolia pulmonar, no diagnóstico diferencial de dor torácica aguda com dispneia",
+      "Taquicardiomiopatia por arritmia sustentada não reconhecida, no diagnóstico diferencial de disfunção ventricular em usuário crônico",
+      "Outras causas de complexo QRS alargado (hipercalemia, outros bloqueadores de canal de sódio, antidepressivo tricíclico) quando o uso de estimulante não está confirmado",
+      "Cardiomiopatia dilatada de outra etiologia (isquêmica, genética, alcoólica, periparto) em usuário crônico sem uso ativo documentado no momento da avaliação"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações seriado, com atenção a supradesnível de ST, alargamento de QRS e prolongamento de QTc",
+      "Troponina seriada",
+      "Monitorização eletrocardiográfica contínua durante toda a fase de risco",
+      "Ecocardiograma transtorácico para avaliação de função ventricular, padrão de disfunção e trombo intracavitário",
+      "Rastreio toxicológico urinário/sérico para confirmação de uso recente, quando disponível e clinicamente relevante",
+      "Eletrólitos séricos e função renal, para excluir causas alternativas ou contribuintes de alargamento de QRS e arritmia",
+      "Angiografia coronariana quando há suspeita de trombose sobreposta, persistência de isquemia apesar de tratamento inicial, ou apresentação de alto risco",
+      "Ressonância magnética cardíaca ou outra investigação etiológica dirigida quando há suspeita de miocardite ou de outra causa estrutural concomitante",
+      "Avaliação seriada de fração de ejeção após cessação do uso, em cardiomiopatia associada a estimulante, para documentar reversibilidade"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica (hipotensão, choque, rebaixamento do nível de consciência) associada ao quadro",
+      "Complexo QRS alargado ao eletrocardiograma, sugerindo bloqueio de canal de sódio com risco de arritmia por reentrada",
+      "QTc prolongado, marcador de bloqueio de canal de potássio associado a maior risco de morte súbita",
+      "Dor torácica ou alteração isquêmica persistente apesar de tratamento inicial do vasoespasmo (benzodiazepínico, nitrato, bloqueador de canal de cálcio), sugerindo trombose sobreposta",
+      "Uso de betabloqueador não seletivo/puro isolado durante intoxicação aguda por cocaína ou estimulante — pode piorar o vasoespasmo coronariano por deixar o estímulo alfa-adrenérgico sem oposição",
+      "Uso concomitante de álcool com cocaína (cocaetileno), que aumenta a potência de bloqueio de canais iônicos cardíacos e o risco de arritmia",
+      "Sinais de descompensação de insuficiência cardíaca em usuário crônico de metanfetamina, incluindo trombo intraventricular à ecocardiografia",
+      "Persistência do uso da substância após episódio agudo, marcador de maior risco de recorrência e de infarto não fatal em seguimento de curto prazo",
+      "Parada cardíaca ou arritmia ventricular maligna como manifestação inicial"
+    ],
+    "ambulatory_flow": [
+      "Perguntar ativamente sobre uso de cocaína, metanfetamina, anfetamina ilícita ou estimulante prescrito na anamnese cardiológica, já que a omissão espontânea é frequente",
+      "Investigar uso concomitante de álcool em quem usa cocaína, pelo risco somado de cocaetileno",
+      "Avaliar função ventricular por ecocardiograma em usuário crônico, mesmo assintomático do ponto de vista cardiovascular, para rastreio de hipertrofia concêntrica, disfunção diastólica ou disfunção sistólica subclínica",
+      "Encaminhar para tratamento especializado do transtorno por uso de substância como parte central da conduta cardiológica, em paralelo ao manejo cardiovascular",
+      "Reavaliar função ventricular após período de abstinência documentada em paciente com cardiomiopatia associada a estimulante, para orientar prognóstico e decisões terapêuticas subsequentes",
+      "Em paciente com insuficiência cardíaca associada a estimulante, seguir os pilares terapêuticos padrão de insuficiência cardíaca com fração de ejeção reduzida, sem excluir betabloqueador de manutenção fora da fase aguda de intoxicação",
+      "Orientar explicitamente que a contraindicação a betabloqueador isolado se aplica à fase aguda de intoxicação/vasoespasmo ativo, não ao tratamento de manutenção da doença cardiovascular de base após esse período",
+      "Em paciente com TDAH em uso de estimulante prescrito, avaliar fatores de risco cardiovascular basais antes e durante o tratamento, sem interromper a medicação por reflexo apenas pela classe farmacológica",
+      "Discutir com o paciente o risco concreto associado à continuidade do uso ilícito, incluindo a evidência de que o risco de infarto residual se concentra em quem mantém o uso"
+    ],
+    "emergency_flow": [
+      "Avaliar imediatamente sinais de instabilidade hemodinâmica, alteração isquêmica ao ECG e alargamento de QRS",
+      "Investigar a síndrome coronariana aguda pelo protocolo habitual (ECG seriado, troponina, monitorização), sem suspender essa investigação apenas pela exposição à substância",
+      "Na presença de sinais de intoxicação aguda (euforia, taquicardia, hipertensão), priorizar benzodiazepínico como conduta inicial para reduzir o tônus simpático central, associando nitrato e bloqueador de canal de cálcio não di-hidropiridínico quando há suspeita de vasoespasmo coronariano persistente",
+      "Evitar betabloqueador não seletivo/puro isolado nessa fase aguda, pelo risco de piorar o vasoespasmo coronariano por bloqueio beta sem oposição alfa-adrenérgica; quando é necessário controle adicional de frequência ou pressão, considerar beta/alfa-bloqueador combinado como opção mais estudada dentro da classe",
+      "Diante de complexo QRS alargado sugerindo bloqueio de canal de sódio, priorizar alcalinização com bicarbonato de sódio guiada por resposta eletrocardiográfica, evitando antiarrítmicos de classe IA e IC pelo risco de efeito aditivo ao bloqueio de sódio já causado pela própria substância",
+      "Se dor torácica ou alteração isquêmica persistir apesar do tratamento inicial do vasoespasmo, manter investigação ativa de síndrome coronariana aguda e encaminhar para angiografia coronariana",
+      "Reservar a decisão sobre reintrodução ou manutenção de betabloqueador para depois da estabilização da fase aguda de intoxicação, de forma individualizada",
+      "Manter suporte geral (controle de agitação e hipertermia, hidratação, ambiente calmo) e monitorização contínua ao longo de toda a fase de instabilidade"
+    ],
+    "treatment_summary": "O manejo da cardiotoxicidade por cocaína e outros estimulantes depende, antes de tudo, de distinguir a fase aguda de intoxicação simpaticomimética ativa (euforia, taquicardia, hipertensão) do uso recente sem sinais de intoxicação em curso e da apresentação crônica em usuário estabelecido. Na dor torácica com sinais de intoxicação aguda, a conduta inicial prioriza benzodiazepínico, que reduz o tônus simpático central e, por si só, pode melhorar frequência cardíaca, pressão arterial e a condução cardíaca comprometida. Nitrato e bloqueador de canal de cálcio não di-hidropiridínico são associados para tratar o vasoespasmo coronariano quando a dor ou a suspeita isquêmica persiste apesar do benzodiazepínico. O ponto de maior risco de erro na conduta é farmacológico: o betabloqueador — conduta reflexa em protocolo de síndrome coronariana aguda — não deve ser usado de forma isolada (beta puro/não seletivo) nessa fase aguda, porque bloquear o receptor beta sem bloquear também o alfa deixa a vasoconstricção coronariana mediada por estímulo alfa-adrenérgico sem oposição, o que piora — em vez de tratar — o vasoespasmo coronariano; esse efeito foi demonstrado objetivamente em ensaio clínico randomizado, com queda adicional do fluxo coronariano e elevação adicional da resistência vascular coronariana após o betabloqueador administrado sobre a vasoconstricção já induzida pela substância. A literatura descreve o beta/alfa-bloqueador combinado (classe que bloqueia simultaneamente receptores alfa e beta) como a exceção mais bem documentada dentro da classe dos betabloqueadores para controle adicional de frequência cardíaca e pressão arterial nesse contexto, quando necessário, sem o mesmo sinal de piora do vasoespasmo associado ao betabloqueador puro — distinção qualitativa de classe farmacológica, sem que este registro detalhe posologia de qualquer fármaco. Importante: essa contraindicação relativa é circunscrita à fase aguda de intoxicação/vasoespasmo ativo — não equivale a proibição permanente de betabloqueador em quem já usou cocaína no passado, tampouco no tratamento de manutenção da doença cardiovascular de base fora do episódio agudo, onde a decisão volta a ser individualizada como em qualquer outro paciente. Quando o eletrocardiograma mostra complexo QRS alargado, sugerindo bloqueio direto de canal de sódio cardíaco pela substância, a conduta prioriza alcalinização com bicarbonato de sódio hipertônico guiada por resposta eletrocardiográfica (estreitamento progressivo do QRS conforme o pH sobe), com antiarrítmico de classe IB aceitável quando indicado por outro motivo — ao contrário dos antiarrítmicos de classe IA e IC, que devem ser evitados por terem efeito de bloqueio de canal de sódio potencialmente aditivo ao já causado pela própria substância, agravando o bloqueio em vez de revertê-lo. Persistência de dor torácica ou de alteração isquêmica apesar dessas medidas levanta suspeita de trombose coronariana sobreposta ao vasoespasmo e deve manter o paciente no fluxo de investigação e, quando indicado, de intervenção coronariana da síndrome coronariana aguda, sem que a exposição à substância, por si só, deva restringir esse cuidado padrão. No uso crônico com cardiomiopatia ou insuficiência cardíaca estabelecida — mais descrito para metanfetamina, mas relevante também para uso crônico de cocaína — o tratamento segue os pilares terapêuticos padrão de insuficiência cardíaca com fração de ejeção reduzida, incluindo betabloqueador de manutenção fora da fase aguda de intoxicação; a cessação do uso é, nesse cenário, o elemento terapêutico com maior potencial de reversão funcional documentado, com recuperação relevante da fração de ejeção descrita em quem consegue manter abstinência e ausência de melhora, com pior desfecho combinado de morte, acidente vascular cerebral e reinternação por insuficiência cardíaca, em quem mantém o uso — o que torna o encaminhamento a tratamento especializado do transtorno por uso de substância parte inseparável da conduta cardiológica, não um adendo. Em toda fase do manejo, a orientação de cessação do uso da substância é parte do próprio desfecho de segurança demonstrado, não uma recomendação genérica à parte.",
+    "monitoring": [
+      "Monitorização eletrocardiográfica contínua durante toda a fase aguda de instabilidade ou intoxicação",
+      "Troponina e ECG seriados ao longo do período de observação, em qualquer ramo da investigação",
+      "Reavaliação seriada de QRS e QTc enquanto houver suspeita de efeito direto da substância sobre canais iônicos cardíacos",
+      "Reavaliação ecocardiográfica programada da função ventricular após período de abstinência documentada, em paciente com cardiomiopatia associada a estimulante",
+      "Acompanhamento clínico de sintomas de insuficiência cardíaca e de recorrência de uso da substância a cada consulta de seguimento",
+      "Monitorização de adesão ao tratamento do transtorno por uso de substância, em conjunto com a equipe especializada",
+      "Reavaliação periódica de risco cardiovascular basal em paciente com TDAH mantido em uso prolongado de estimulante prescrito"
+    ],
+    "special_populations": [
+      "Usuário crônico de metanfetamina com cardiomiopatia estabelecida — maior potencial de recuperação funcional da fração de ejeção entre os subtipos descritos, condicionado à abstinência",
+      "Uso concomitante de cocaína e álcool (cocaetileno) — metabólito com maior potência de bloqueio de canais iônicos cardíacos, somando risco de arritmia ao uso isolado de cocaína",
+      "Paciente com TDAH em uso terapêutico prescrito de estimulante (metilfenidato, anfetamina) ou de atomoxetina — perfil de risco cardiovascular distinto do uso ilícito, com sinal específico de investigação em aberto para uso contínuo de dose mais alta por vários anos, não para uso agudo/recente",
+      "Paciente jovem com dor torácica atípica e ausência de fatores de risco coronariano clássicos — a omissão espontânea do uso de substância na anamnese é a regra, não a exceção, e o mecanismo atua mesmo sem doença aterosclerótica estabelecida",
+      "Paciente com insuficiência cardíaca associada a estimulante já em investigação ou tratamento — decisão sobre betabloqueador de manutenção deve ser individualizada e distinta da restrição válida apenas para a fase aguda de intoxicação",
+      "Paciente com uso de drogas injetáveis e suspeita concomitante de endocardite infecciosa — cenário clínico distinto, com abordagem diagnóstica e terapêutica próprias, que não deve ser confundido com a cardiotoxicidade direta descrita neste registro"
+    ],
+    "assistant_questions": [
+      {
+        "id": "uso_confirmado_ou_suspeito",
+        "label": "Há uso confirmado ou suspeito de cocaína ou outro estimulante (metanfetamina, anfetamina ilícita) nas últimas horas?",
+        "type": "boolean"
+      },
+      {
+        "id": "substancia_envolvida",
+        "label": "Qual substância está envolvida?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "cocaina",
+            "label": "Cocaína"
+          },
+          {
+            "value": "metanfetamina",
+            "label": "Metanfetamina"
+          },
+          {
+            "value": "anfetamina_ilicita",
+            "label": "Anfetamina de uso ilícito"
+          },
+          {
+            "value": "estimulante_prescrito_tdah",
+            "label": "Estimulante prescrito para TDAH"
+          },
+          {
+            "value": "outro",
+            "label": "Outro estimulante"
+          }
+        ]
+      },
+      {
+        "id": "tempo_desde_uso",
+        "label": "Quanto tempo se passou desde o uso mais recente?",
+        "type": "select",
+        "options": [
+          {
+            "value": "menos_de_1_hora",
+            "label": "Menos de 1 hora"
+          },
+          {
+            "value": "1_a_24_horas",
+            "label": "1 a 24 horas"
+          },
+          {
+            "value": "mais_de_24_horas",
+            "label": "Mais de 24 horas (uso recente, sem intoxicação ativa)"
+          },
+          {
+            "value": "uso_cronico_sem_evento_agudo",
+            "label": "Uso crônico, sem evento agudo recente identificado"
+          }
+        ]
+      },
+      {
+        "id": "sinais_intoxicacao_aguda",
+        "label": "Há sinais de intoxicação simpaticomimética aguda em curso (euforia, agitação, taquicardia, hipertensão)?",
+        "type": "boolean"
+      },
+      {
+        "id": "dor_toracica_presente",
+        "label": "O paciente apresenta dor torácica no momento da avaliação?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_qrs_alargado",
+        "label": "O eletrocardiograma mostra complexo QRS alargado?",
+        "type": "boolean"
+      },
+      {
+        "id": "ecg_supra_st_ou_isquemia",
+        "label": "O eletrocardiograma mostra supradesnível de ST ou outra alteração isquêmica nova?",
+        "type": "boolean"
+      },
+      {
+        "id": "instabilidade_hemodinamica",
+        "label": "Há instabilidade hemodinâmica (hipotensão, choque, rebaixamento do nível de consciência)?",
+        "type": "boolean"
+      },
+      {
+        "id": "troponina_alterada",
+        "label": "A troponina está alterada?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_concomitante_alcool",
+        "label": "Há uso concomitante de álcool com a cocaína (risco de cocaetileno)?",
+        "type": "boolean"
+      },
+      {
+        "id": "cardiomiopatia_ou_ic_conhecida",
+        "label": "Há cardiomiopatia ou insuficiência cardíaca já conhecida associada ao uso da substância?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_cronico_estimulante_ilicito",
+        "label": "Há uso crônico e prolongado de estimulante ilícito, independentemente de evento agudo atual?",
+        "type": "boolean"
+      },
+      {
+        "id": "tdah_uso_estimulante_prescrito",
+        "label": "O paciente tem TDAH e está em uso terapêutico prescrito de estimulante?",
+        "type": "boolean"
+      },
+      {
+        "id": "considerando_betabloqueador",
+        "label": "Está sendo considerado o uso de betabloqueador para controle de frequência cardíaca ou pressão arterial neste paciente?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_betabloqueador_considerado",
+        "label": "Que tipo de betabloqueador está sendo considerado?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_seletivo_ou_seletivo_puro",
+            "label": "Betabloqueador puro (não seletivo ou seletivo beta-1)"
+          },
+          {
+            "value": "combinado_alfa_beta",
+            "label": "Beta/alfa-bloqueador combinado"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável"
+          }
+        ]
+      },
+      {
+        "id": "persistencia_sintomas_apos_medidas_iniciais",
+        "label": "A dor torácica ou a alteração isquêmica persiste apesar das medidas iniciais (benzodiazepínico, nitrato, bloqueador de canal de cálcio)?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "instabilidade_hemodinamica_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "instabilidade_hemodinamica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Instabilidade hemodinâmica associada a intoxicação por cocaína/estimulante"
+          ],
+          "emergency_flow": [
+            "Estabilização hemodinâmica imediata com monitorização contínua e investigação simultânea de síndrome coronariana aguda e arritmia"
+          ]
+        }
+      },
+      {
+        "id": "qrs_alargado_bloqueio_sodio",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_qrs_alargado",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Complexo QRS alargado sugerindo bloqueio de canal de sódio cardíaco"
+          ],
+          "suggested_tests": [
+            "ECG seriado com atenção à duração do QRS e do QTc"
+          ],
+          "opposing": [
+            "Antiarrítmico de classe IA ou IC não é conduta apropriada para esse alargamento de QRS, pelo risco de efeito aditivo ao bloqueio de sódio já causado pela substância"
+          ]
+        }
+      },
+      {
+        "id": "betabloqueador_puro_contraindicado_na_intoxicacao_aguda",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "considerando_betabloqueador",
+              "op": "truthy"
+            },
+            {
+              "field": "tipo_betabloqueador_considerado",
+              "op": "eq",
+              "value": "nao_seletivo_ou_seletivo_puro"
+            },
+            {
+              "field": "sinais_intoxicacao_aguda",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Uso de betabloqueador puro/não seletivo isolado durante intoxicação aguda por cocaína ou estimulante pode piorar o vasoespasmo coronariano por bloqueio beta sem oposição alfa-adrenérgica"
+          ],
+          "opposing": [
+            "Betabloqueador puro isolado não é conduta de primeira linha para controle de frequência ou pressão nessa fase aguda"
+          ],
+          "messages": [
+            "Priorizar benzodiazepínico, nitrato e bloqueador de canal de cálcio; se for necessário controle farmacológico adicional de frequência ou pressão, beta/alfa-bloqueador combinado é a alternativa mais estudada dentro da classe nesse contexto"
+          ]
+        }
+      },
+      {
+        "id": "betabloqueador_combinado_alternativa_documentada",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "considerando_betabloqueador",
+              "op": "truthy"
+            },
+            {
+              "field": "tipo_betabloqueador_considerado",
+              "op": "eq",
+              "value": "combinado_alfa_beta"
+            },
+            {
+              "field": "sinais_intoxicacao_aguda",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Beta/alfa-bloqueador combinado é a alternativa mais estudada dentro da classe dos betabloqueadores para controle adicional de frequência e pressão na intoxicação aguda por cocaína/estimulante, sem o mesmo sinal de piora do vasoespasmo associado ao betabloqueador puro"
+          ]
+        }
+      },
+      {
+        "id": "dor_toracica_primeira_hora_apos_uso",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "dor_toracica_presente",
+              "op": "truthy"
+            },
+            {
+              "field": "tempo_desde_uso",
+              "op": "eq",
+              "value": "menos_de_1_hora"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Risco de início de infarto descrito como muito elevado na primeira hora após uso de cocaína em estudo caso-cruzado dedicado"
+          ],
+          "suggested_tests": [
+            "ECG seriado",
+            "Troponina seriada"
+          ]
+        }
+      },
+      {
+        "id": "vasoespasmo_diferencial_ativo",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "dor_toracica_presente",
+              "op": "truthy"
+            },
+            {
+              "field": "uso_confirmado_ou_suspeito",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Vasoespasmo coronariano induzido por cocaína/estimulante, inclusive sem placa aterosclerótica visível"
+          ],
+          "ambulatory_flow": [
+            "Investigar dor torácica pelo protocolo padrão de síndrome coronariana aguda em paralelo à hipótese de vasoespasmo"
+          ]
+        }
+      },
+      {
+        "id": "isquemia_persistente_apesar_de_medidas_iniciais",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "persistencia_sintomas_apos_medidas_iniciais",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": [
+            "Persistência de dor torácica ou de alteração isquêmica apesar de benzodiazepínico, nitrato e bloqueador de canal de cálcio sugere trombose coronariana sobreposta ao vasoespasmo"
+          ],
+          "suggested_tests": [
+            "Angiografia coronariana"
+          ]
+        }
+      },
+      {
+        "id": "supra_st_ou_isquemia_emergencia",
+        "priority": 97,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_supra_st_ou_isquemia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "emergency_flow": [
+            "Conduzir pelo protocolo padrão de síndrome coronariana aguda, sem restringir a investigação ou a estratégia de reperfusão pela exposição à substância"
+          ]
+        }
+      },
+      {
+        "id": "cocaetileno_risco_somado",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "uso_concomitante_alcool",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Uso concomitante de álcool com cocaína forma cocaetileno, metabólito com maior potência de bloqueio de canais iônicos cardíacos"
+          ],
+          "red_flags": [
+            "Cocaetileno associado a risco somado de arritmia em relação ao uso isolado de cocaína"
+          ]
+        }
+      },
+      {
+        "id": "cardiomiopatia_estimulante_reversibilidade",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "cardiomiopatia_ou_ic_conhecida",
+              "op": "truthy"
+            },
+            {
+              "field": "substancia_envolvida",
+              "op": "contains",
+              "value": "metanfetamina"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Cardiomiopatia associada à metanfetamina tem potencial relevante de recuperação da fração de ejeção condicionado à abstinência; encaminhamento a tratamento especializado do transtorno por uso de substância é parte central da conduta"
+          ],
+          "ambulatory_flow": [
+            "Reavaliar função ventricular por ecocardiograma após período de abstinência documentada"
+          ]
+        }
+      },
+      {
+        "id": "uso_cronico_rastreio_estrutural",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "uso_cronico_estimulante_ilicito",
+              "op": "truthy"
+            },
+            {
+              "field": "cardiomiopatia_ou_ic_conhecida",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Ecocardiograma transtorácico para rastreio de disfunção estrutural em uso crônico assintomático"
+          ],
+          "missing_information": [
+            "Confirmar função ventricular basal em usuário crônico ainda sem avaliação estrutural documentada"
+          ]
+        }
+      },
+      {
+        "id": "tdah_estimulante_prescrito_risco_distinto",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "tdah_uso_estimulante_prescrito",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "Uso terapêutico prescrito de estimulante para TDAH em dose acompanhada tem perfil de risco cardiovascular agudo distinto do uso ilícito, sem sinal de aumento de síndrome coronariana aguda nos estudos disponíveis"
+          ],
+          "missing_information": [
+            "Avaliar fatores de risco cardiovascular basais e tempo de uso contínuo em dose mais alta, sinal descrito para acidente vascular cerebral e insuficiência cardíaca em uso prolongado"
+          ]
+        }
+      },
+      {
+        "id": "uso_recente_sem_intoxicacao_manter_protocolo_padrao",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "uso_confirmado_ou_suspeito",
+              "op": "truthy"
+            },
+            {
+              "field": "sinais_intoxicacao_aguda",
+              "op": "falsy"
+            },
+            {
+              "field": "dor_toracica_presente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Uso recente sem sinais de intoxicação aguda em curso não deve, por si só, retirar o paciente do protocolo padrão de investigação e tratamento de síndrome coronariana aguda"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cocaína",
+      "metanfetamina",
+      "estimulantes",
+      "vasoespasmo coronariano",
+      "toxicologia cardiovascular",
+      "cardiomiopatia induzida por substância",
+      "bloqueio de canal de sódio",
+      "arritmia",
+      "TDAH",
+      "síndrome coronariana aguda",
+      "dor torácica",
+      "betabloqueador"
+    ],
+    "source_refs": [
+      "Lange RA, Cigarroa RG, Yancy CW Jr, et al. Cocaine-Induced Coronary-Artery Vasoconstriction. N Engl J Med. 1989;321(23):1557-1562. PMID: 2573838",
+      "Lange RA, Cigarroa RG, Flores ED, et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. PMID: 1971166",
+      "Weber JE, Shofer FS, Larkin GL, Kalaria AS, Hollander JE. Validation of a Brief Observation Period for Patients with Cocaine-Associated Chest Pain. N Engl J Med. 2003;348(6):510-517. PMID: 12571258",
+      "Richards JR, Garber D, Laurin EG, et al. Treatment of cocaine cardiovascular toxicity: a systematic review. Clin Toxicol (Phila). 2016;54(5):345-364. PMID: 26919414",
+      "Anderson JL, Adams CD, Antman EM, et al. 2012 ACCF/AHA focused update incorporated into the ACCF/AHA 2007 guidelines for the management of patients with unstable angina/non-ST-elevation myocardial infarction. J Am Coll Cardiol. 2013;61(23):e179-e347. PMID: 23639841",
+      "Richards JR, Le JK. Cocaine Toxicity. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695 — fonte terciária, usada só para síntese prática de classes de fármaco",
+      "McCord J, Jneid H, Hollander JE, et al. Management of cocaine-associated chest pain and myocardial infarction: a scientific statement from the American Heart Association. Circulation. 2008;117(14):1897-1907. PMID: 18347214",
+      "O'Leary ME, Hancox JC. Role of voltage-gated sodium, potassium and calcium channels in the development of cocaine-associated cardiac arrhythmias. Br J Clin Pharmacol. 2010;69(5):427-442. PMID: 20573078",
+      "Hoffman RS. Treatment of patients with cocaine-induced arrhythmias: bringing the bench to the bedside. Br J Clin Pharmacol. 2010;69(5):448-457. PMID: 20573080",
+      "Mittleman MA, Mintzer D, Maclure M, Tofler GH, Sherwood JB, Muller JE. Triggering of myocardial infarction by cocaine. Circulation. 1999;99(21):2737-2741. PMID: 10351966",
+      "Schürer S, Klingel K, Sandri M, et al. Clinical Characteristics, Histopathological Features, and Clinical Outcome of Methamphetamine-Associated Cardiomyopathy. JACC Heart Fail. 2017;5(6):435-445. PMID: 28571597",
+      "Sliman S, Waalen J, Shaw D. Methamphetamine-Associated Congestive Heart Failure: Increasing Prevalence and Relationship of Clinical Outcomes to Continued Use or Abstinence. Cardiovasc Toxicol. 2016;16(4):381-389. PMID: 26661075",
+      "Kevil CG, Goeders NE, Woolard MD, et al. Methamphetamine Use and Cardiovascular Disease. Arterioscler Thromb Vasc Biol. 2019;39(9):1739-1746. PMID: 31433698",
+      "Habel LA, Cooper WO, Sox CM, et al. ADHD medications and risk of serious cardiovascular events in young and middle-aged adults. JAMA. 2011;306(24):2673-2683. PMID: 22161946",
+      "Holt A, Strange JE, Rasmussen PV, et al. Long-Term Cardiovascular Risk Associated With Treatment of Attention-Deficit/Hyperactivity Disorder in Adults. J Am Coll Cardiol. 2024;83(19):1870-1882. PMID: 38719367",
+      "Amsterdam EA, Wenger NK, Brindis RG, et al. 2014 AHA/ACC Guideline for the Management of Patients With Non-ST-Elevation Acute Coronary Syndromes. J Am Coll Cardiol. 2014;64(24):e139-e228. PMID: 25260718",
+      "Lo KB, Virk HUH, Lakhter V, et al. Clinical Outcomes After Treatment of Cocaine-Induced Chest Pain with Beta-Blockers: A Systematic Review and Meta-Analysis. Am J Med. 2019;132(4):505-509. PMID: 30562494"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/2573838/",
+      "https://pubmed.ncbi.nlm.nih.gov/1971166/",
+      "https://pubmed.ncbi.nlm.nih.gov/12571258/",
+      "https://pubmed.ncbi.nlm.nih.gov/26919414/",
+      "https://pubmed.ncbi.nlm.nih.gov/23639841/",
+      "https://pubmed.ncbi.nlm.nih.gov/28613695/",
+      "https://pubmed.ncbi.nlm.nih.gov/18347214/",
+      "https://pubmed.ncbi.nlm.nih.gov/20573078/",
+      "https://pubmed.ncbi.nlm.nih.gov/20573080/",
+      "https://pubmed.ncbi.nlm.nih.gov/10351966/",
+      "https://pubmed.ncbi.nlm.nih.gov/28571597/",
+      "https://pubmed.ncbi.nlm.nih.gov/26661075/",
+      "https://pubmed.ncbi.nlm.nih.gov/31433698/",
+      "https://pubmed.ncbi.nlm.nih.gov/22161946/",
+      "https://pubmed.ncbi.nlm.nih.gov/38719367/",
+      "https://pubmed.ncbi.nlm.nih.gov/25260718/",
+      "https://pubmed.ncbi.nlm.nih.gov/30562494/"
+    ],
+    "related_document_slugs": [
+      "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+      "fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
+      "cardiotoxicidade-aguda-por-cocaina-vasoespasmo-bloqueio-de-canal-de-sodio-e-por-que-nao-usar-betabloqueador-isolado",
+      "cocaina-e-metanfetamina-infarto-desencadeado-na-primeira-hora-e-cardiomiopatia-reversivel",
+      "fluxograma-dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
+      "estimulantes-no-tdah-e-risco-cardiovascular-curto-versus-longo-prazo"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), seguindo instrução de Rafael de produzir conteúdo inexistente em todo o sistema. Cardiotoxicidade por cocaína e estimulantes não tinha ficha própria em doencas/metadados.json, apesar de corpus rico e já existente na biblioteca: content/Geral/cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto.md e o fluxograma irmão (mecanismo do vasoespasmo alfa-adrenérgico, ensaio randomizado de Lange 1990, protocolo de observação de Weber 2003, revisão de manejo agudo de Richards 2016), content/Terapia_intensiva/cardiotoxicidade-aguda-por-cocaina-... (mecanismo eletrofisiológico de bloqueio de canal de sódio e potássio de O'Leary/Hancox 2010, manejo da arritmia de Hoffman 2010), e em content/Saúde_mental_e_cardiologia/ os documentos de infarto na primeira hora e cardiomiopatia por metanfetamina (Mittleman 1999, Schürer 2017, Sliman 2016, Kevil 2019), o fluxograma de dor torácica aguda com uso recente de cocaína (AHA/ACC 2014, metanálise de Lo 2019) e o documento de estimulantes prescritos no TDAH (Habel 2011, Holt 2024). Os 6 related_document_slugs foram lidos por completo e verificados individualmente como discussão central do tema (cardiotoxicidade por cocaína/estimulantes), não tangencial. **Um 7º candidato mapeado pelo reconhecimento prévio — content/Farmacologia/cardiotoxicidade-da-cocaina-reavaliacao-do-betabloqueador-e-miocardiopatia-cronica-2023-2024.md — foi EXCLUÍDO por regra da frente Tudo com Tudo: resolve fisicamente para content/Farmacologia/, pasta fora de escopo permitido para related_document_slugs, apesar de tematicamente muito relevante (reavaliação 2018-2024 da contraindicação ao betabloqueador, RUTI-Cocaine, atualização AHA 2023 de intoxicação e miocardiopatia crônica com dado quantitativo da Alawoè 2024). O conteúdo qualitativo essencial desse documento (contraindicação relativa ao betabloqueador puro isolado no agudo, reversibilidade da cardiomiopatia crônica com abstinência, manutenção de betabloqueador fora da fase aguda) já está coberto de forma equivalente pelos 6 documentos válidos e por literatura verificada independentemente (Lange 1990, Hoffman 2010, Richards 2016), então nenhum PMID exclusivo desse documento excluído precisou ser usado. 17 PMIDs verificados individualmente via NCBI e-utils (esummary) antes da montagem, confirmando título, periódico e ano contra os source_refs dos documentos de origem — todos batem. category='toxicologia_cardiovascular' é categoria NOVA — nenhuma categoria existente encaixava bem: 'toxicidade_por_tratamento' é semanticamente específica para toxicidade iatrogênica de tratamento médico (ex.: cardiotoxicidade-por-antraciclinas), não para toxicidade por substância recreativa/ilícita; 'emergencia_cardiovascular' captura só a faceta aguda, mas o verbete cobre igualmente a cardiomiopatia crônica reversível e o uso prescrito de estimulantes no TDAH, que não são emergência. Segue o precedente de 'disturbio_de_conducao' (verbete bloqueio-atrioventricular, 29/08/2026): categoria nova quando nenhuma existente encaixa sem forçar. prevalence_rank deixado null por não pertencer ao hub fechado de doenças de altíssima prevalência em área 'geral'. patient_material_slug: nenhuma correspondência em material-paciente/metadados.json para cocaína/estimulantes, mantido null. Capturada explicitamente, como regra qualitativa sem dose de fármaco em assistant_rules/red_flags/treatment_summary, a contraindicação relativa a betabloqueador não seletivo isolado na intoxicação aguda por cocaína (vasoespasmo coronariano sem oposição alfa-adrenérgica), com a ressalva de que a restrição é circunscrita à fase aguda, não ao tratamento de manutenção. Nenhuma dose de fármaco em nenhum campo. Nenhum overlap de related_document_slugs encontrado com outras fichas de doenças já compostas (verificado programaticamente contra todos os registros de doencas/metadados.json, incluindo sindrome-coronariana-aguda e cardiomiopatias). Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
