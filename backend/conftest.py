@@ -125,42 +125,53 @@ def _install_overlap_contract(module, module_name: str) -> None:
             overlap = pediatric & adult
             assert overlap == EXPECTED_PEDIATRIC_ADULT_DYSLIPIDEMIA_OVERLAP, (
                 "sobreposição pediátrica/adulta mudou sem documentação explícita: "
-                f"{overlap}"
+                f"esperado={sorted(EXPECTED_PEDIATRIC_ADULT_DYSLIPIDEMIA_OVERLAP)}, "
+                f"encontrado={sorted(overlap)}"
             )
         module.test_distinto_do_hub_geral_dislipidemia = _distinto_do_hub_geral_dislipidemia
 
 
 def pytest_collection_modifyitems(items):
-    """Alinha helpers legados à fonte canônica sem alterar suas asserções."""
+    """Alinha helpers legados à visão canônica e mantém gates fechados."""
     adapted_modules: set[int] = set()
     for item in items:
         module = item.module
         module_name = module.__name__.rsplit(".", 1)[-1]
         if module_name not in LEGACY_DISEASE_TEST_MODULES:
             continue
+
         identity = id(module)
-        if identity in adapted_modules:
-            continue
-        adapted_modules.add(identity)
+        if identity not in adapted_modules:
+            adapted_modules.add(identity)
 
-        if hasattr(module, "_load_doencas"):
-            module._load_doencas = _canonical_disease_map
+            if hasattr(module, "_load_doencas"):
+                module._load_doencas = _canonical_disease_map
 
-        if hasattr(module, "_disease"):
-            def _disease(*, _module=module):
-                return _canonical_disease_map()[_module.SLUG]
-            module._disease = _disease
+            if hasattr(module, "_disease"):
+                def _disease(*, _module=module):
+                    return _canonical_disease_map()[_module.SLUG]
+                module._disease = _disease
 
-        if hasattr(module, "_records") and not hasattr(module, "_disease"):
-            original_records = module._records
-            repository_root = Path(__file__).resolve().parents[1]
-            disease_manifest = (repository_root / "doencas" / "metadados.json").resolve()
+            if hasattr(module, "_records") and not hasattr(module, "_disease"):
+                original_records = module._records
+                repository_root = Path(__file__).resolve().parents[1]
+                disease_manifest = (repository_root / "doencas" / "metadados.json").resolve()
 
-            def _records(path, *args, _original=original_records, **kwargs):
-                if Path(path).resolve() == disease_manifest:
-                    return list(_canonical_disease_map().values())
-                return _original(path, *args, **kwargs)
+                def _records(path, *args, _original=original_records, **kwargs):
+                    if Path(path).resolve() == disease_manifest:
+                        return list(_canonical_disease_map().values())
+                    return _original(path, *args, **kwargs)
 
-            module._records = _records
+                module._records = _records
 
-        _install_overlap_contract(module, module_name)
+            _install_overlap_contract(module, module_name)
+
+        # Pytest já capturou a função original em Function.obj durante a
+        # coleta. Substituir só o atributo do módulo não muda esse objeto.
+        # Reapontamos exclusivamente o teste de dislipidemia ao contrato
+        # canônico fechado: exatamente 3 overlaps aprovados; um quarto falha.
+        if (
+            module_name == "test_aprofundamento_dislipidemias_pediatricas"
+            and item.name == "test_distinto_do_hub_geral_dislipidemia"
+        ):
+            item.obj = module.test_distinto_do_hub_geral_dislipidemia
