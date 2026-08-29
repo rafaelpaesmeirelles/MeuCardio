@@ -168,8 +168,22 @@ estenose aórtica e TAVI no idoso" — ficha que nunca foi criada. Despachada.
   — novo (SHA 6d7a5468). Complementar ao Bruce modificado pediátrico genérico
   já existente. 9 PMIDs (Task Forces AHA/ACC de elegibilidade esportiva,
   EAPC/ESC/AEPC, TCPE em CHD). Sem corte numérico único validado — declarado.
-- `estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade` — despachado
-  (agente ab3e70e75eefb06ab), aprofundamento geriátrico complementar ao
-  verbete geral, area=cardiogeriatria.
+- `estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade` — verbete novo
+  (SHA 6fc9965a), area=cardiogeriatria. 14 PMIDs (FRAILTY-AVR, futilidade,
+  SEAS/ASTRONOMER estatina, BAV ponte/paliação). Correção: 7 assistant_rules
+  referenciavam ids de pergunta inexistentes — remapeados; 2 perguntas novas
+  adicionadas; 4 related_document_slugs reais preenchidos.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 10 (em andamento, 1 agente) — lote 9 fechado, total 28 commits
+
+Lote 9 fechado — 2/2 integrados (exame ergométrico EAo pediátrica + verbete
+geriátrico de EAo/TAVI/futilidade). Cluster restante do backlog de
+Valvopatias mapeado: angiotomografia com 4 papéis expandidos no TAVI
+(coronária pré-TAVI, valve-in-valve, escore de cálcio para dirimir gravidade
+discordante ao eco, trombose de folheto pós-TAVI) — complementar ao exame
+básico de planejamento (anel/vias de acesso) já existente. Despachado
+(agente a9fce3dda4bfdf359).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
