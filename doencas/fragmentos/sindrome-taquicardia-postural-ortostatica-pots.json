@@ -1,0 +1,129 @@
+[
+  {
+    "slug": "sindrome-taquicardia-postural-ortostatica-pots",
+    "name": "Síndrome de taquicardia postural ortostática (POTS)",
+    "aliases": [
+      "POTS",
+      "Postural orthostatic tachycardia syndrome",
+      "Síndrome de taquicardia postural ortostática",
+      "Síndrome postural ortostática taquicardizante",
+      "Intolerância ortostática com taquicardia postural"
+    ],
+    "area": "geral",
+    "category": "disautonomia",
+    "subtype": "intolerancia_ortostatica_cronica",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "fonte_producao": "chatgpt",
+    "summary": "POTS é uma síndrome de intolerância ortostática crônica em que a posição em pé provoca aumento excessivo e sustentado da frequência cardíaca, acompanhado de sintomas que pioram em ortostase e melhoram em decúbito, sem hipotensão ortostática significativa que explique o quadro. O diagnóstico é clínico e hemodinâmico, exige exclusão de causas secundárias de taquicardia sinusal e não deve ser feito a partir de um valor isolado de relógio, Holter ou frequência cardíaca. Em adultos, o critério contemporâneo usa incremento sustentado de frequência cardíaca de pelo menos 30 bpm dentro de até 10 minutos de ortostase; entre 12 e 19 anos, pelo menos 40 bpm. A síndrome é heterogênea e pode combinar componentes neuropáticos, hipovolêmicos e hiperadrenérgicos. O manejo começa por educação, hidratação/expansão de sódio quando segura, compressão e recondicionamento físico progressivo; fármacos são individualizados conforme frequência cardíaca, pressão arterial e fenótipo. Evidência randomizada publicada em 2026 confirma que ivabradina e propranolol reduzem a taquicardia ortostática versus placebo, sem demonstrar superioridade clara entre ambos para redução da frequência cardíaca e com efeitos sintomáticos mais seletivos do que o efeito hemodinâmico.",
+    "epidemiology": "POTS é mais diagnosticada em adolescentes e adultos jovens e tem forte predominância feminina nas coortes de referência. A prevalência populacional exata é incerta porque os critérios diagnósticos evoluíram e há sobreposição com outras formas de intolerância ortostática. A incapacidade funcional pode ser importante apesar da ausência de cardiopatia estrutural, e atraso diagnóstico é comum. A associação temporal com infecções, inclusive SARS-CoV-2, ampliou o reconhecimento da síndrome, mas o rótulo POTS continua exigindo os mesmos critérios hemodinâmicos e clínicos e não deve ser presumido apenas pela presença de sintomas pós-virais.",
+    "presentation": [
+      "Palpitações, sensação de coração acelerado e piora previsível ao ficar em pé",
+      "Tontura, sensação de cabeça leve, pré-síncope e, em parte dos pacientes, síncope",
+      "Fadiga e intolerância ao exercício desproporcionais",
+      "Dispneia subjetiva ou desconforto torácico durante ortostase sem que isso, isoladamente, defina doença cardiopulmonar",
+      "Fraqueza, tremor, sudorese e sensação de hiperatividade adrenérgica em alguns fenótipos",
+      "Cefaleia/enxaqueca, dificuldade de concentração e sintomas gastrointestinais podem coexistir",
+      "Melhora parcial ou rápida ao sentar/deitar é característica clínica importante"
+    ],
+    "diagnostic_approach": {
+      "criterios": "Sintomas frequentes de intolerância ortostática que pioram em pé e melhoram em decúbito; incremento sustentado da frequência cardíaca de pelo menos 30 bpm em adultos ou 40 bpm entre 12 e 19 anos dentro de até 10 minutos de ortostase; ausência de hipotensão ortostática clássica sustentada (queda de pressão arterial sistólica ≥20 mmHg ou diastólica ≥10 mmHg); síndrome crônica por pelo menos cerca de 3 meses; e ausência de outra condição ativa que explique a taquicardia ortostática.",
+      "como_medir": "Após repouso em decúbito, registrar pressão arterial e frequência cardíaca basal e repetir medidas seriadas durante a ortostase ativa por até 10 minutos. O tilt test pode aumentar sensibilidade e é útil em casos selecionados ou quando a ortostase ativa não é conclusiva, mas não é requisito obrigatório em todo paciente com medidas adequadas e quadro típico.",
+      "exclusao_secundarias": "Antes de confirmar POTS, procurar hipovolemia/desidratação, anemia, febre/infecção, dor importante, hipertireoidismo, efeito de fármacos ou estimulantes, repouso prolongado/descondicionamento grave, gestação e doença cardiopulmonar/sistêmica capaz de explicar a taquicardia. A presença de uma dessas condições não significa que POTS nunca possa coexistir, mas impede atribuir automaticamente a taquicardia ortostática à síndrome enquanto a causa alternativa estiver ativa.",
+      "diferenciar_ist": "Taquicardia sinusal inapropriada (IST) pode produzir frequência cardíaca inadequadamente alta mesmo em repouso ou com estímulos não posturais. POTS é definida pelo fenótipo ortostático. Holter pode ajudar quando a dúvida é taquicardia persistente fora da ortostase ou outra arritmia, mas não substitui a avaliação postural."
+    },
+    "differentials": [
+      "Hipotensão ortostática clássica ou tardia",
+      "Síncope vasovagal, que pode coexistir com POTS mas tem fisiologia e padrão de eventos diferentes",
+      "Taquicardia sinusal inapropriada",
+      "Taquiarritmias supraventriculares paroxísticas",
+      "Anemia e hipovolemia/desidratação",
+      "Hipertireoidismo e outras causas endócrinas de taquicardia",
+      "Infecção, febre, dor e estados hipermetabólicos",
+      "Efeito de estimulantes, descongestionantes, drogas simpaticomiméticas ou medicamentos que reduzam volume/pressão arterial",
+      "Descondicionamento grave ou repouso prolongado",
+      "Doença cardiopulmonar estrutural quando sintomas ou exame sugerirem causa alternativa"
+    ],
+    "tests": [
+      "Teste de ortostase ativa com frequência cardíaca e pressão arterial seriadas por até 10 minutos — exame central para demonstrar o fenótipo hemodinâmico",
+      "Tilt test — útil em casos selecionados, especialmente quando o teste ativo é inconclusivo ou se deseja caracterização autonômica mais detalhada",
+      "ECG de 12 derivações — confirma ritmo sinusal e procura substrato elétrico alternativo",
+      "Holter/monitorização ambulatorial — indicado quando há dúvida de taquiarritmia, taquicardia persistente fora da ortostase ou possível IST; não é teste diagnóstico isolado de POTS",
+      "Hemograma, função tireoidiana e exames direcionados ao contexto — objetivo é excluir causas secundárias, não montar painel laboratorial indiscriminado",
+      "Ecocardiograma — não é obrigatório para todo caso típico, mas é apropriado quando história, exame ou ECG levantam suspeita de cardiopatia estrutural"
+    ],
+    "red_flags": [
+      "Síncope durante esforço, e não apenas após ortostase prolongada, especialmente com história familiar de morte súbita",
+      "Dor torácica persistente, dessaturação, sinais de insuficiência cardíaca ou achados estruturais que não são explicados por POTS",
+      "Taquicardia de início e término abruptos ou ritmo não sinusal, sugerindo taquiarritmia alternativa",
+      "Perda ponderal importante, febre, sangramento, anemia significativa ou sinais de doença sistêmica como causa secundária",
+      "Déficit neurológico focal ou síncope com características que sugiram causa neurológica/estrutural",
+      "Hipotensão ortostática importante e sustentada — exige reclassificar o fenótipo em vez de forçar diagnóstico de POTS"
+    ],
+    "treatment_summary": "O manejo é escalonado e orientado pelo fenótipo. A primeira camada é não farmacológica: educação, retirada/correção de fatores agravantes, hidratação e maior ingestão de sódio quando não houver contraindicação cardiovascular/renal, compressão de membros inferiores com benefício maior quando inclui abdome e recondicionamento físico progressivo. O exercício pode começar em modalidades recumbentes/semi-recumbentes em pacientes muito sintomáticos e progredir conforme tolerância; repouso prolongado tende a piorar descondicionamento. Quando sintomas persistem, terapia farmacológica é individualizada: bloqueio beta-adrenérgico em baixa intensidade ou ivabradina podem ser usados para controlar frequência cardíaca em pacientes selecionados; midodrina pode ser considerada quando baixa pressão/vasoconstrição insuficiente é parte importante do fenótipo; fludrocortisona pode ser empregada para expansão de volume com monitorização de pressão, potássio e retenção hídrica; outras opções têm evidência mais limitada. Não há fármaco especificamente aprovado para POTS. O ensaio randomizado crossover de 2026 mostrou que ivabradina e propranolol reduziram a taquicardia ortostática em comparação com placebo, sem diferença significativa entre os dois para os principais desfechos de frequência cardíaca; a ivabradina elevou mais a pressão sistólica durante o tilt, mas sintomas e qualidade de vida não acompanharam de forma uniforme a melhora hemodinâmica. Esse achado favorece individualização, não uma hierarquia universal. Ablação do nó sinusal e marcapasso não são terapias de rotina para POTS sem indicação independente.",
+    "ambulatory_flow": [
+      "Confirmar critérios de POTS com ortostase estruturada e excluir causas secundárias de taquicardia",
+      "Revisar medicamentos, estimulantes, hidratação, padrão de sono, atividade física e fatores que pioram intolerância ortostática",
+      "Implementar estratégia não farmacológica individualizada e reavaliar impacto funcional, não apenas frequência cardíaca",
+      "Se sintomas persistirem, escolher farmacoterapia de acordo com pressão arterial, intensidade da taquicardia, sinais de hipovolemia/vasoconstrição inadequada e tolerabilidade",
+      "Reavaliar periodicamente necessidade de medicamentos; evitar escalada simultânea de múltiplos agentes sem conseguir atribuir benefício ou evento adverso",
+      "Investigar diagnósticos associados apenas quando houver sinais clínicos específicos; não atribuir automaticamente enxaqueca, hipermobilidade ou sintomas pós-virais à mesma causa"
+    ],
+    "emergency_flow": [
+      "POTS isoladamente não deve ser usada para explicar instabilidade hemodinâmica grave, dor torácica persistente, dessaturação ou déficit neurológico; nesses cenários seguir protocolos de emergência apropriados e procurar diagnóstico alternativo",
+      "Em síncope com trauma, síncope de esforço, ECG de alto risco ou história familiar de morte súbita, priorizar investigação de causas cardíacas potencialmente graves antes de atribuir o evento à disautonomia"
+    ],
+    "monitoring": [
+      "Sintomas ortostáticos, capacidade de permanecer em pé, retorno a estudo/trabalho e tolerância ao exercício",
+      "Frequência cardíaca e pressão arterial supina e em ortostase quando necessário para ajuste terapêutico",
+      "Efeitos adversos de fármacos: bradicardia/hipotensão com redutores de frequência, hipertensão supina com vasoconstritores, edema/hipocalemia com expansão mineralocorticoide",
+      "Progressão gradual do programa de exercício e prevenção de novo descondicionamento",
+      "Reavaliação diagnóstica se o padrão de sintomas mudar ou surgirem red flags"
+    ],
+    "special_populations": [
+      "Adolescentes de 12 a 19 anos: usar incremento de frequência cardíaca ≥40 bpm dentro de até 10 minutos, e não o corte adulto de 30 bpm.",
+      "Gestação: alterações fisiológicas de frequência cardíaca e volume tornam a interpretação mais complexa; confirmar se o padrão realmente representa POTS e individualizar tratamento com avaliação de segurança materno-fetal.",
+      "Pós-COVID ou pós-infecção: POTS pode surgir após doença infecciosa, mas sintomas pós-virais isolados não bastam; aplicar os mesmos critérios e excluir causas alternativas, incluindo anemia, tromboembolismo, miocardite ou doença pulmonar quando clinicamente indicados.",
+      "Hipermobilidade articular: associação clínica é descrita, mas não transformar hipermobilidade em causa automática da disautonomia nem solicitar investigação genética indiscriminada sem fenótipo apropriado.",
+      "Paciente com hipertensão, insuficiência cardíaca ou doença renal: estratégias de aumento de sal/volume exigem individualização e podem ser inadequadas."
+    ],
+    "tags": [
+      "POTS",
+      "disautonomia",
+      "intolerância ortostática",
+      "taquicardia postural",
+      "síncope",
+      "pré-síncope",
+      "tilt test",
+      "taquicardia sinusal inapropriada",
+      "ivabradina",
+      "propranolol",
+      "recondicionamento físico"
+    ],
+    "source_refs": [
+      "Raj SR, Guzman JC, Harvey P, Richer L, Schondorf R, Seifer C, Thibodeau-Jarry N, Sheldon RS. Canadian Cardiovascular Society Position Statement on Postural Orthostatic Tachycardia Syndrome (POTS) and Related Disorders of Chronic Orthostatic Intolerance. Can J Cardiol. 2020;36(3):357-372. DOI: 10.1016/j.cjca.2019.12.024. PMID: 32145864.",
+      "Sheldon RS, Grubb BP 2nd, Olshansky B, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576.",
+      "Raj SR, Fedorowski A, Sheldon RS. Diagnosis and management of postural orthostatic tachycardia syndrome. CMAJ. 2022;194(10):E378-E385. DOI: 10.1503/cmaj.211373. PMID: 35288409.",
+      "Uppal J, Deol P, Giri P, et al. Ivabradine, Propranolol, and Placebo for Postural Orthostatic Tachycardia Syndrome (POTS): A Randomized Crossover Trial. J Am Coll Cardiol. 2026;88(4):510-513. DOI: 10.1016/j.jacc.2026.03.167. PMID: 42126367.",
+      "Uppal J, Deol P, Giri P, et al. A Randomized Crossover Trial of Ivabradine, Propranolol, and Placebo in Postural Orthostatic Tachycardia Syndrome: A Detailed Description. JACC Adv. 2026;5(6 Pt 2):102795. DOI: 10.1016/j.jacadv.2026.102795. PMID: 42132710.",
+      "Fu Q, Vangundy TB, Shibata S, et al. Exercise training versus propranolol in the treatment of the postural orthostatic tachycardia syndrome. Hypertension. 2011;58(2):167-175. DOI: 10.1161/HYPERTENSIONAHA.111.172262. PMID: 21690484."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/32145864/",
+      "https://pubmed.ncbi.nlm.nih.gov/25980576/",
+      "https://pubmed.ncbi.nlm.nih.gov/35288409/",
+      "https://pubmed.ncbi.nlm.nih.gov/42126367/",
+      "https://pubmed.ncbi.nlm.nih.gov/42132710/",
+      "https://pubmed.ncbi.nlm.nih.gov/21690484/"
+    ],
+    "related_document_slugs": [
+      "pots-posicionamento-canadense-2020-diagnostico-e-manejo",
+      "pots-ivabradina-propranolol-placebo-ensaio-randomizado-2026"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "published": false,
+    "review_note": "Lote 1 da produção científica autônoma ChatGPT em 29/08/2026. Busca no repositório no SHA-base 1945e11197bb9a1708469498c1317bae607540e3 não encontrou ocorrência de 'taquicardia postural' nem o DOI 10.1503/cmaj.211373, reduzindo risco de duplicação canônica. Fontes principais verificadas externamente antes da redação: CCS 2020 (PMID 32145864), HRS 2015 (PMID 25980576), CMAJ 2022 (PMID 35288409) e ensaio randomizado crossover publicado em 2026 no JACC/JACC Advances (PMIDs 42126367 e 42132710). A ficha evita dose farmacológica fixa e não transforma melhora de frequência cardíaca no ensaio de 2026 em superioridade universal de ivabradina ou propranolol. Permanecer pendente_revisao; não publicar automaticamente. Dois documentos relacionados foram criados no mesmo lote e resolvem na mesma branch. Material ao paciente não foi criado neste primeiro corte para não expandir escopo antes da revisão clínica.",
+    "version": 1
+  }
+]
