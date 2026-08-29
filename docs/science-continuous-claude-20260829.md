@@ -358,3 +358,15 @@ _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoi
   Tabela 44.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 17 (em andamento, 1 agente) — sub-lote 2/3 do cluster JCS 2019/2021
+
+Segundo sub-lote: teste genético em canalopatias (LQTS, CPVT, Brugada +
+cascata familiar) e estratificação de risco pós-IAM/cardiomiopatia
+(FEVE, TVNS, EPS+TVNS, índices de despolarização/repolarização) +
+restrição/liberação de exercício (pós-CDI, FA, CPVT, CAVD, LQT1, resposta
+pressórica na CMH, teste ergométrico em CPVT/QTL) — 16 itens. Mesmo padrão
+de rigor do lote 16 (declarar explicitamente quando recomendação formal
+não for confirmada). Despachado (agente a8c914f2ae48e97d2).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
