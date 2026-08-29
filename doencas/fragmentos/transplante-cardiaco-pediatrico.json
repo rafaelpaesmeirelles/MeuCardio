@@ -1,0 +1,328 @@
+[
+  {
+    "slug": "transplante-cardiaco-pediatrico",
+    "name": "Transplante cardíaco pediátrico",
+    "aliases": [
+      "transplante de coração na criança",
+      "transplante cardíaco na infância",
+      "transplante cardíaco em lactente"
+    ],
+    "area": "cardiopediatria",
+    "category": "transplante",
+    "subtype": "cardiaco_isolado",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Terapia estabelecida para a criança com doença cardíaca em estágio terminal sem alternativa cirúrgica ou farmacológica capaz de estender a sobrevida com qualidade aceitável — predominantemente cardiomiopatia refratária (sobretudo dilatada) e cardiopatia congênita complexa sem opção de reparo adicional, incluindo a circulação de Fontan falida; a proporção entre essas duas indicações varia por faixa etária e mudou ao longo das últimas três décadas.",
+    "epidemiology": "Na criança, ao contrário do adulto (em que predomina cardiomiopatia isquêmica/não isquêmica adquirida), a proporção entre cardiopatia congênita e cardiomiopatia como indicação de transplante varia por faixa etária e mudou de forma mensurável ao longo do tempo. Em lactentes (<1 ano), o relatório do registro internacional (ISHLT) mostra a cardiopatia congênita caindo de 78% (década de 1990) para 57% (2010-2018) como indicação, enquanto a cardiomiopatia dilatada subiu de 17% para 35% no mesmo período — leitura compatível com o avanço da cirurgia reparadora/paliativa em cardiopatia congênita complexa reduzindo a fração que chega ao transplante como única opção, e com melhor reconhecimento/encaminhamento de cardiomiopatia dilatada grave em lactente (Singh TP et al., J Heart Lung Transplant 2022, PMID 35989143). O volume de transplantes em lactentes ficou estável em torno de 100/ano entre 1990 e meados dos anos 2000 e aumentou para a faixa de 120-150/ano a partir de 2008; cerca de 90% dos transplantes cardíacos em lactentes relatados ao registro internacional foram realizados na América do Norte, uma concentração geográfica relevante para interpretar qualquer número de sobrevida ou complicação como representativo sobretudo da prática norte-americana (Singh TP et al., PMID 35989143). A distribuição equivalente de indicação para crianças maiores (1-10 anos) e adolescentes — em que se espera proporção maior de cardiomiopatia hipertrófica não obstrutiva refratária e restritiva, e de doença valvar/coronariana adquirida — não foi extraída nesta revisão a partir do recorte de lactentes do registro; está disponível em edições anuais do mesmo registro com recorte etário mais amplo. O risco de morrer em lista de espera é maior no lactente do que em qualquer outra faixa etária de candidato a transplante cardíaco (afirmação qualitativa do próprio registro), sem percentual numérico correspondente confirmado nesta revisão.",
+    "presentation": [
+      "Insuficiência cardíaca em estágio D (falência terminal) apesar de tratamento clínico otimizado, por cardiomiopatia dilatada — dispneia progressiva, fadiga, falha de crescimento em lactente, intolerância a esforço, descompensações recorrentes com hospitalização",
+      "Necessidade de suporte inotrópico contínuo ou de suporte circulatório mecânico (dispositivo de assistência ventricular ou ECMO) para manter perfusão adequada — reflexo de instabilidade hemodinâmica que já motiva avaliação/priorização para transplante, não apenas suporte de resgate",
+      "Cardiopatia congênita complexa sem opção adicional de reparo cirúrgico ou paliação, incluindo circulação de Fontan falida — sinais de falência da fisiologia de Fontan como enteropatia perdedora de proteína, bronquite plástica, ascite ou derrames refratários, cianose progressiva por via colateral veno-venosa, e queda mensurável da capacidade funcional",
+      "Arritmia ventricular sustentada, síncope em esforço ou parada cardíaca abortada em cardiomiopatia (sobretudo restritiva e hipertrófica avançada), quando não controlada por terapia antiarrítmica ou cardiodesfibrilador",
+      "Qualquer sintoma cardíaco, mesmo leve, em cardiomiopatia restritiva pediátrica — já é gatilho reconhecido para avaliação de transplante, por ser fator de risco consistente de óbito/necessidade de transplante nessa forma específica",
+      "Cardiomiopatia hipertrófica com disfunção sistólica em fase terminal ('burned-out', fração de ejeção reduzida) ou de início antes de 1 ano de idade, faixa em que o prognóstico é substancialmente pior",
+      "Choque cardiogênico refratário de início agudo (por exemplo, miocardite fulminante) sem recuperação de função ventricular após suporte circulatório mecânico temporário, evoluindo para indicação de transplante"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_hemodinamica_pre_transplante": "O cateterismo cardíaco direito seriado, com teste de vasorreatividade pulmonar, é o exame central da avaliação pré-transplante, quantificando a resistência vascular pulmonar (RVP) e sua reversibilidade farmacológica. Em revisão pediátrica dedicada a cardiomiopatia como indicação de transplante, RVP elevada — sobretudo se irreversível ao teste vasodilatador — é descrita como contraindicação relativa a absoluta ao transplante cardíaco isolado, com o limiar de RVP >6 UW·m² e/ou gradiente transpulmonar >15 mmHg associado a alto risco de falência do ventrículo direito do doador (Raissadati A, Tolani D, Profita EL, JHLT Open 2025, PMID 40843315). A mesma fonte registra que 40% das crianças com cardiomiopatia restritiva têm RVP elevada — achado que reforça por que a avaliação hemodinâmica seriada é parte obrigatória, não opcional, do seguimento desse fenótipo. Na cardiopatia congênita complexa, e em particular na circulação de Fontan falida, a elevação persistente da pressão venosa sistêmica e/ou da RVP é descrita como o principal determinante da falência tardia da fisiologia de Fontan (Rychik J et al.; American Heart Association, Circulation 2019, PMID 31256636) — o que torna a RVP fixa uma barreira técnica potencialmente ainda mais relevante nesse subgrupo, por já estar associada à própria história natural da falência circulatória que motiva a indicação. LIMITE DE EVIDÊNCIA: os limiares numéricos formais de RVP/gradiente transpulmonar aplicados especificamente à candidatura de criança com Fontan falido — incluindo quando a RVP fixa afasta o transplante cardíaco isolado e aponta para avaliação de transplante coração-pulmão — constam do documento de critérios de listagem ISHLT 2024 (Peled Y et al., J Heart Lung Transplant 2024, PMID 39115488), cujo texto integral não foi obtido nesta revisão (acesso pago); não foram extrapolados do adulto nem estimados neste registro.",
+      "sensibilizacao_imunologica_previa": "A sensibilização por anticorpos anti-HLA (definida operacionalmente pelo registro como painel de reatividade contra painel, PRA, >10%) está associada a cirurgia cardíaca prévia e a transfusão sanguínea prévia, e sua frequência entre lactentes transplantados aumentou de 10% (era 1995-2004) para 18% (era 2010-2018) — um reflexo direto do maior número de cirurgias paliativas prévias em lactentes com cardiopatia congênita complexa chegando ao transplante nas eras mais recentes (Singh TP et al., PMID 35989143). Na prática, isso torna a criança com cardiopatia congênita e múltiplas cirurgias/transfusões prévias um grupo com maior probabilidade de prova cruzada positiva, crossmatch virtual desfavorável e tempo de espera mais longo por doador compatível — questão que deve ser antecipada na avaliação pré-transplante desse subgrupo, e não apenas descoberta no momento da alocação de órgão.",
+      "indicacoes_por_etiologia": "Nas cardiomiopatias, a indicação segue o estadiamento de insuficiência cardíaca: estágio D com disfunção ventricular sistêmica em qualquer fenótipo; estágio C com falha de crescimento, limitação grave de atividade física ou arritmia com risco de vida na forma dilatada; estágio C com hipertensão pulmonar reativa como indicação Classe I na forma restritiva; e estágio D ('burned-out', fração de ejeção ≤50%) na forma hipertrófica, com início antes de 1 ano qualificando para categoria de prioridade elevada em alguns sistemas de alocação (Raissadati A et al., PMID 40843315). Na cardiopatia congênita, a indicação central é a ausência de opção adicional de reparo cirúrgico ou paliação capaz de sustentar circulação viável — a circulação de Fontan falida é o cenário mais representativo dessa categoria em criança maior/adolescente, distinta da cardiopatia congênita não operável do lactente.",
+      "particularidades_tecnicas_da_cardiopatia_congenita": "A cardiopatia congênita complexa impõe particularidades técnicas próprias, não extrapoláveis do transplante em coração estruturalmente normal: necessidade frequente de reconstrução da aorta e/ou da artéria pulmonar durante a cirurgia de transplante, o que prolonga o tempo de isquemia do órgão doador (Singh TP et al., PMID 35989143); e desfecho pós-transplante mensuravelmente diferente — receptores com cardiomiopatia dilatada têm sobrevida superior em 1 e 5 anos comparados a receptores transplantados por cardiopatia congênita complexa, diferença atribuída, entre outros fatores, a menor número de esternotomias prévias e a anatomia cirúrgica menos complexa nos receptores com cardiomiopatia (Raissadati A et al., PMID 40843315). Isso reforça que, na criança com cardiopatia congênita candidata a transplante, o número de cirurgias prévias e a complexidade anatômica residual são, eles próprios, fatores de risco a considerar na avaliação — e não apenas a fisiologia hemodinâmica isolada."
+    },
+    "differentials": [
+      "Dispositivo de assistência ventricular (VAD) como ponte para o transplante ou, em cenário selecionado, como terapia de destino — alternativa a considerar antes de indicar transplante isolado, sobretudo quando a instabilidade é aguda e pode haver recuperação de função ventricular",
+      "ECMO como suporte circulatório de curto prazo, distinto do VAD como ponte de médio/longo prazo — usado sobretudo na descompensação aguda (ex.: miocardite fulminante) enquanto se define se haverá recuperação, necessidade de VAD ou indicação de transplante",
+      "Otimização adicional de terapia clínica de insuficiência cardíaca ainda não esgotada, incluindo reavaliação de causa secundária/tratável antes de assumir falência terminal irreversível",
+      "Revisão ou reoperação cirúrgica de estágio de Fontan (ou de lesão residual/associada) ainda tecnicamente viável, antes de concluir que não há mais opção de reparo/paliação",
+      "Terapia dirigida a hipertensão pulmonar reativa (quando a resistência vascular pulmonar ainda é reversível ao teste vasodilatador), com reavaliação hemodinâmica seriada antes de definir transplante cardíaco isolado versus necessidade potencial de avaliação para transplante combinado coração-pulmão"
+    ],
+    "tests": [
+      "Cateterismo cardíaco direito com teste de vasorreatividade pulmonar: avaliação seriada da resistência vascular pulmonar e de sua reversibilidade, central na candidatura a transplante e na diferenciação entre transplante cardíaco isolado e necessidade de avaliação para transplante combinado coração-pulmão",
+      "Painel de reatividade contra painel (PRA) e crossmatch virtual: rastreio de sensibilização por anticorpos anti-HLA associada a cirurgia cardíaca prévia e transfusão — antecipa dificuldade de alocação de doador compatível, sobretudo na cardiopatia congênita com múltiplas cirurgias prévias",
+      "Ecocardiograma transtorácico seriado: avaliação de função ventricular e anatomia residual na fila de espera, e vigilância de rejeição e de disfunção do enxerto no pós-transplante",
+      "Biópsia endomiocárdica seriada pós-transplante: exame padrão de vigilância de rejeição aguda, com protocolo de frequência mais intensa no primeiro ano e espaçamento progressivo conforme estabilidade clínica e tempo desde o transplante",
+      "Avaliação multiorgânica pré-transplante (função renal e hepática): identifica disfunção de órgão-alvo relevante para o risco cirúrgico e para a escolha/ajuste de imunossupressão no pós-operatório",
+      "Teste cardiopulmonar de exercício, quando a criança tem idade e desenvolvimento suficientes para realizá-lo: quantifica capacidade funcional e reserva cardíaca na avaliação de candidatura, de forma equivalente ao papel já estabelecido no adulto",
+      "Avaliação seriada de hepatopatia congestiva associada à circulação de Fontan (função hepática, albumina, elastografia ou ultrassonografia com Doppler) quando a indicação é cardiopatia congênita com fisiologia de Fontan falida"
+    ],
+    "red_flags": [
+      "Sinais de rejeição aguda no transplantado: disfunção ventricular nova ou piora aguda ao ecocardiograma, arritmia nova, sinais de baixo débito cardíaco — tratar como suspeita de rejeição até prova em contrário",
+      "Febre ou sinais de infecção em criança imunossuprimida pós-transplante — limiar baixo para investigação e tratamento precoce, dado o risco de deterioração rápida sob imunossupressão",
+      "Choque ou instabilidade hemodinâmica em criança na fila de espera de transplante — faixa etária de lactente tem o maior risco relatado de óbito em lista de espera entre todas as idades",
+      "Sinais sugestivos de vasculopatia do enxerto coronariano em seguimento tardio (isquemia silenciosa é possível pela denervação do enxerto — sintoma clássico de angina pode estar ausente)",
+      "Sinais sugestivos de doença linfoproliferativa pós-transplante (linfadenopatia, massa, sintomas sistêmicos inexplicados) em criança sob imunossupressão crônica",
+      "Deterioração hemodinâmica em criança com circulação de Fontan apesar de otimização clínica — sinal de possível falência tardia da fisiologia de Fontan que deve acelerar reavaliação de candidatura a transplante"
+    ],
+    "ambulatory_flow": [
+      "Seguimento estruturado em centro de transplante cardíaco pediátrico, com biópsia endomiocárdica seriada mais frequente no primeiro ano pós-transplante e espaçamento progressivo conforme protocolo do centro e estabilidade clínica",
+      "Ecocardiograma seriado para vigilância de função do enxerto e sinais indiretos de rejeição, complementar (não substituto) à biópsia",
+      "Vigilância laboratorial seriada de função renal e hepática, dado o risco de nefrotoxicidade associado ao manejo imunossupressor crônico",
+      "Vigilância infecciosa estruturada, incluindo monitorização de vírus associados a risco de doença linfoproliferativa pós-transplante (Epstein-Barr, entre outros), conforme protocolo do centro",
+      "Rastreio programado de vasculopatia do enxerto coronariano a longo prazo, por método definido pelo centro transplantador (angiografia coronariana, ecocardiograma de estresse ou outro conforme disponibilidade e idade da criança)",
+      "Acompanhamento de crescimento, desenvolvimento puberal e adesão terapêutica ao longo da infância e adolescência sob imunossupressão crônica",
+      "Planejamento e execução de transição estruturada do cuidado de cardiologia/transplante pediátrico para a equipe de transplante cardíaco do adulto, iniciado com antecedência na adolescência, não no momento abrupto da maioridade"
+    ],
+    "emergency_flow": [
+      "Diante de disfunção ventricular nova, arritmia nova ou sinais de baixo débito em criança transplantada, tratar como suspeita de rejeição aguda até prova em contrário: acionar avaliação urgente com ecocardiograma e biópsia endomiocárdica em articulação direta com o centro transplantador",
+      "Diante de febre ou sinal de infecção em criança imunossuprimida pós-transplante, investigar e tratar precocemente, com limiar baixo para hospitalização e suporte, dado o risco de deterioração rápida sob imunossupressão",
+      "Diante de instabilidade hemodinâmica em criança ainda na fila de espera (sobretudo lactente, faixa de maior risco relatado de óbito em lista), priorizar avaliação de suporte circulatório mecânico e comunicação imediata com o centro transplantador sobre prioridade de listagem",
+      "Diante de deterioração hemodinâmica aguda em criança com circulação de Fontan sem enxerto ainda, considerar tanto causas agudas reversíveis quanto falência tardia da fisiologia de Fontan como gatilho para reavaliação urgente de candidatura a transplante",
+      "Manter comunicação direta e precoce com o centro de transplante cardíaco pediátrico responsável em qualquer descompensação de criança transplantada ou em fila de espera — decisões de ajuste de imunossupressão, biópsia de urgência ou realocação de prioridade na fila não devem ser feitas isoladamente fora desse centro"
+    ],
+    "treatment_summary": "O manejo pós-transplante combina imunossupressão de manutenção com vigilância ativa e sistemática de rejeição e infecção — nenhuma dose ou esquema posológico de imunossupressor é tratado aqui; a escolha e o ajuste de classe e intensidade de imunossupressão são decisão do centro transplantador. Em nível de classe terapêutica, o inibidor de calcineurina é a base da imunossupressão de manutenção, e o registro internacional mostra diferença relevante de incidência de rejeição tratada entre os dois principais agentes dessa classe em lactentes transplantados entre 2012 e 2018: 13,6% com ciclosporina versus 5,2% com tacrolimo — diferença absoluta grande o suficiente para ajudar a explicar por que o tacrolimo se tornou o inibidor de calcineurina de manutenção predominante em transplante cardíaco pediátrico contemporâneo, sem que o registro permita afirmar causalidade direta isolada da droga, já que a escolha do esquema pode se associar a outras características do paciente ou do centro (Singh TP et al., PMID 35989143). A lógica geral de manejo é a de equilíbrio dinâmico: imunossupressão insuficiente aumenta risco de rejeição aguda e de vasculopatia do enxerto coronariano a longo prazo; imunossupressão excessiva aumenta risco de infecção oportunista e de doença linfoproliferativa pós-transplante — daí a necessidade de vigilância seriada (biópsia, exame de imagem, laboratório) para ajuste individualizado ao longo do tempo, mais intensa no primeiro ano e espaçada progressivamente conforme estabilidade. Suporte circulatório mecânico (dispositivo de assistência ventricular ou ECMO) tem papel estabelecido como ponte para o transplante em criança instável na fila de espera, sobretudo em lactente — na era 2010-2018, 16% dos lactentes transplantados chegaram ao procedimento em VAD, 7% em ECMO e 36% em suporte ventilatório (números não mutuamente exclusivos), refletindo uma população frequentemente instável no momento do transplante (Singh TP et al., PMID 35989143). A sobrevida pós-transplante em lactente melhorou de forma consistente ao longo de três eras sucessivas (80,7% para 88,4% em 1 ano; 71,6% para 81,5% em 5 anos, comparando 1995-2004 com 2010-2017), um ganho lido como reflexo tanto do avanço da tecnologia de suporte quanto do manejo perioperatório e do seguimento a médio prazo (Singh TP et al., PMID 35989143). Mesmo com esse ganho de sobrevida, complicações tardias exigem vigilância dedicada e prolongada, não apenas no primeiro ano: em coorte transplantada entre 2005 e 2017 e seguida por até 10 anos, a liberdade de vasculopatia do enxerto coronariano foi de 85%, a liberdade de disfunção renal grave foi de 90%, e a liberdade de doença linfoproliferativa pós-transplante foi de 88,4% — ou seja, uma fração relevante de sobreviventes de longo prazo desenvolve cada uma dessas complicações (Singh TP et al., PMID 35989143). O retransplante é uma possibilidade real ao longo da vida da criança transplantada em lactência (5% até 10 anos, 11,5% até 20 anos após o primeiro transplante), reforçando que a durabilidade finita de um único enxerto é questão de planejamento de vida inteira, não apenas de prognóstico de curto prazo (Singh TP et al., PMID 35989143).",
+    "monitoring": [
+      "Biópsia endomiocárdica seriada, com frequência mais intensa no primeiro ano pós-transplante e espaçamento progressivo conforme protocolo do centro e estabilidade clínica — método padrão de vigilância de rejeição",
+      "Ecocardiograma seriado de função do enxerto",
+      "Vigilância laboratorial seriada de função renal e hepática, dado o risco de nefrotoxicidade da imunossupressão crônica",
+      "Vigilância infecciosa estruturada, incluindo monitorização de vírus associados a maior risco de doença linfoproliferativa pós-transplante conforme protocolo do centro",
+      "Rastreio programado de vasculopatia do enxerto coronariano a longo prazo (angiografia coronariana, ecocardiograma de estresse ou outro método conforme disponibilidade e idade da criança), considerando que a denervação do enxerto pode tornar isquemia silenciosa",
+      "Reavaliação seriada de resistência vascular pulmonar por cateterismo enquanto a criança permanece candidata em fila de espera, sobretudo na cardiopatia congênita/Fontan falido e na cardiomiopatia restritiva/hipertrófica avançada",
+      "Vigilância de crescimento, desenvolvimento puberal e adesão terapêutica ao longo da infância e adolescência sob imunossupressão crônica"
+    ],
+    "special_populations": [
+      "Lactente transplantado: subgrupo com maior proporção de suporte circulatório mecânico pré-transplante (VAD 16%, ECMO 7%, suporte ventilatório 36% na era 2010-2018), maior tempo de isquemia do doador quando há cardiopatia congênita complexa por necessidade de reconstrução aórtica/pulmonar, e sobrevida pós-transplante historicamente inferior à de crianças maiores — ainda que em melhora progressiva ao longo das eras reportadas pelo registro internacional; também é a faixa etária com maior risco relatado de óbito em lista de espera (Singh TP et al., PMID 35989143)",
+      "Criança/adolescente com cardiopatia congênita complexa e circulação de Fontan falida: candidatura tecnicamente mais complexa por múltiplas cirurgias e transfusões prévias (maior sensibilização por anticorpos anti-HLA), possível necessidade de reconstrução vascular no ato cirúrgico do transplante, e necessidade de avaliação dedicada de hepatopatia congestiva associada ao Fontan; sobrevida pós-transplante mensuravelmente inferior à de receptores com cardiomiopatia dilatada, atribuída em parte à maior complexidade anatômica e cirúrgica prévia — os limiares numéricos formais de resistência vascular pulmonar que definem contraindicação específica ao transplante isolado nesse subgrupo não foram confirmados nesta revisão (texto integral do documento de critérios ISHLT 2024 inacessível)",
+      "Adolescente em transição de cuidado: transição estruturada e planejada do acompanhamento de cardiologia/transplante pediátrico para a equipe de transplante cardíaco do adulto deve ser iniciada com antecedência, não no momento abrupto da maioridade, dada a expectativa de seguimento por décadas e a possibilidade real de retransplante ao longo da vida"
+    ],
+    "assistant_questions": [
+      {
+        "id": "primary_etiology",
+        "label": "Qual a etiologia principal motivando a avaliação de transplante?",
+        "type": "select",
+        "required": true,
+        "section": "Indicação",
+        "options": [
+          {
+            "value": "cardiomiopatia_dilatada",
+            "label": "Cardiomiopatia dilatada refratária"
+          },
+          {
+            "value": "cardiomiopatia_restritiva_hipertrofica",
+            "label": "Cardiomiopatia restritiva ou hipertrófica avançada"
+          },
+          {
+            "value": "cardiopatia_congenita_complexa",
+            "label": "Cardiopatia congênita complexa sem opção de reparo adicional"
+          },
+          {
+            "value": "fontan_falido",
+            "label": "Circulação de Fontan falida"
+          },
+          {
+            "value": "outra",
+            "label": "Outra"
+          }
+        ]
+      },
+      {
+        "id": "age_months",
+        "label": "Idade",
+        "type": "number",
+        "required": true,
+        "section": "Dados básicos"
+      },
+      {
+        "id": "post_transplant",
+        "label": "A criança já foi transplantada e está em seguimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Dados básicos"
+      },
+      {
+        "id": "mechanical_support",
+        "label": "Há suporte circulatório mecânico em uso (VAD ou ECMO) ou suporte ventilatório?",
+        "type": "boolean",
+        "section": "Suporte pré-transplante"
+      },
+      {
+        "id": "pvr_elevated_fixed",
+        "label": "Resistência vascular pulmonar elevada e não reversível ao teste vasodilatador?",
+        "type": "boolean",
+        "section": "Avaliação hemodinâmica"
+      },
+      {
+        "id": "sensitization_pra_positive",
+        "label": "Sensibilização confirmada (PRA elevado) por cirurgia cardíaca ou transfusão prévia?",
+        "type": "boolean",
+        "section": "Avaliação hemodinâmica"
+      },
+      {
+        "id": "signs_rejection",
+        "label": "Há sinais sugestivos de rejeição aguda (disfunção ventricular nova, arritmia nova, baixo débito)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "fever_immunosuppressed",
+        "label": "Há febre ou sinal de infecção em criança imunossuprimida pós-transplante?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "suspeita-rejeicao-aguda",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "post_transplant",
+              "op": "truthy"
+            },
+            {
+              "field": "signs_rejection",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Disfunção ventricular nova, arritmia nova ou sinais de baixo débito em criança transplantada — tratar como suspeita de rejeição aguda até prova em contrário"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação urgente com ecocardiograma e biópsia endomiocárdica em articulação direta com o centro transplantador"
+          ]
+        }
+      },
+      {
+        "id": "febre-imunossuprimido",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "post_transplant",
+              "op": "truthy"
+            },
+            {
+              "field": "fever_immunosuppressed",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Febre ou sinal de infecção em criança imunossuprimida pós-transplante cardíaco"
+          ],
+          "emergency_flow": [
+            "Investigação e tratamento precoces com limiar baixo para hospitalização, dado o risco de deterioração rápida sob imunossupressão"
+          ]
+        }
+      },
+      {
+        "id": "instabilidade-em-fila",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "post_transplant",
+              "op": "falsy"
+            },
+            {
+              "field": "mechanical_support",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Criança candidata a transplante em suporte circulatório mecânico ou ventilatório é população de maior risco de instabilidade; priorizar comunicação com o centro transplantador sobre status de listagem"
+          ]
+        }
+      },
+      {
+        "id": "rvp-fixa-flag",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "post_transplant",
+              "op": "falsy"
+            },
+            {
+              "field": "pvr_elevated_fixed",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Resistência vascular pulmonar elevada e fixa é contraindicação relativa a absoluta ao transplante cardíaco isolado por risco de falência do ventrículo direito do doador; reavaliação hemodinâmica dedicada e discussão com o centro transplantador sobre eventual necessidade de avaliação para transplante combinado coração-pulmão são recomendadas"
+          ]
+        }
+      },
+      {
+        "id": "fontan-falido-flag",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "primary_etiology",
+              "op": "eq",
+              "value": "fontan_falido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Na circulação de Fontan falida, a avaliação de candidatura a transplante exige investigação dedicada de resistência vascular pulmonar, sensibilização por cirurgias prévias e hepatopatia congestiva associada — encaminhamento a centro com experiência em transplante cardíaco pediátrico em cardiopatia congênita complexa é recomendado"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "transplante cardíaco",
+      "transplante cardíaco pediátrico",
+      "insuficiência cardíaca terminal",
+      "cardiopatia congênita complexa",
+      "Fontan falido",
+      "cardiomiopatia dilatada",
+      "rejeição aguda",
+      "imunossupressão",
+      "biópsia endomiocárdica",
+      "sensibilização imunológica",
+      "resistência vascular pulmonar",
+      "dispositivo de assistência ventricular",
+      "ECMO",
+      "vasculopatia do enxerto coronariano",
+      "doença linfoproliferativa pós-transplante",
+      "ISHLT",
+      "registro internacional de transplante"
+    ],
+    "source_refs": [
+      "Singh TP, Cherikh WS, Hsich E, Harhay MO, Hayes D Jr, Perch M, Potena L, Sadavarte A, Zuckermann A, Stehlik J; International Society for Heart and Lung Transplantation. The International Thoracic Organ Transplant Registry of the International Society for Heart and Lung Transplantation: Twenty-fifth pediatric heart transplantation report-2022; focus on infant heart transplantation. J Heart Lung Transplant. 2022;41(10):1357-1365. DOI: 10.1016/j.healun.2022.07.019. PMID: 35989143. PMCID: PMC10281815 — PMID verificado individualmente nesta sessão via NCBI E-utilities (esummary); texto integral aberto lido via PMC. Fonte principal de todos os números de indicação por era, volume por era, suporte circulatório mecânico pré-transplante, sobrevida por era, morbidade tardia (vasculopatia do enxerto, disfunção renal, PTLD), incidência de rejeição tratada por esquema imunossupressor, retransplante, sensibilização (PRA) por cirurgia/transfusão prévia e particularidade de tempo de isquemia doador em cardiopatia congênita citados neste registro.",
+      "Peled Y, Ducharme A, Kittleson M, Bansal N, Stehlik J, Amdani S, et al.; International Society for Heart and Lung Transplantation. International Society for Heart and Lung Transplantation Guidelines for the Evaluation and Care of Cardiac Transplant Candidates-2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488 — PMID verificado individualmente nesta sessão via NCBI E-utilities (esummary e elink); confirmado que não há PMCID de acesso aberto associado. Texto integral não obtido (paywall Elsevier/jhltonline), citado apenas para o fato de que este documento de 2024 substitui os critérios de listagem de 2006/atualização de 2016 e teve cada uma de suas três forças-tarefa copresidida por médico de transplante cardíaco pediátrico. Nenhum limiar numérico de indicação/contraindicação pediátrica específico deste documento foi extraído nesta revisão.",
+      "Raissadati A, Tolani D, Profita EL. Cardiomyopathy as indication for pediatric heart transplantation. JHLT Open. 2025;10:100360. DOI: 10.1016/j.jhlto.2025.100360. PMID: 40843315. PMCID: PMC12365339 — PMID verificado individualmente nesta sessão via NCBI E-utilities; texto integral aberto lido via PMC. Fonte dos critérios de listagem por subtipo de cardiomiopatia (estadiamento A-D), do limiar de resistência vascular pulmonar/gradiente transpulmonar como contraindicação ao transplante isolado, da comparação de sobrevida pós-transplante entre cardiomiopatia dilatada e cardiopatia congênita complexa, e da evolução de sobrevida pós-transplante em cardiomiopatia restritiva/hipertrófica entre décadas.",
+      "Rychik J, Atz AM, Celermajer DS, Deal BJ, Gatzoulis MA, Gewillig MH, et al.; American Heart Association Council on Cardiovascular Disease in the Young and Council on Cardiovascular and Stroke Nursing. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. DOI: 10.1161/CIR.0000000000000696. PMID: 31256636 — PMID verificado individualmente nesta sessão via NCBI E-utilities; sem PMCID de acesso aberto, abstract/resumo estruturado consultado. Usado apenas para o fato, sustentado no resumo consultado, de que a elevação persistente de pressão venosa sistêmica e/ou de resistência vascular pulmonar é o principal determinante de falência tardia da circulação de Fontan, e para o registro qualitativo de que o papel do transplante cardíaco nesse contexto permanece não totalmente definido; nenhum critério numérico de indicação/contraindicação de transplante específico para Fontan foi extraído desta fonte nesta revisão.",
+      "Irving C, Azeka E, Adorisio R, Blume ED, Bogle C, Chubb H, et al.; International Society for Heart and Lung Transplantation. The International Society for Heart and Lung Transplantation Guidelines for the Management of Pediatric Heart Failure (Update From 2014). J Heart Lung Transplant. 2025;44(10):e21-e71. DOI: 10.1016/j.healun.2025.06.003. PMID: 40838915 — PMID verificado individualmente nesta sessão via NCBI E-utilities; sem PMCID de acesso aberto. Documento irmão de 2025, específico de manejo de insuficiência cardíaca pediátrica (não é o documento de critérios de listagem ao transplante, que é o ISHLT 2024 acima). Citado apenas como referência de contexto bibliográfico; nenhum número foi extraído desta fonte nesta revisão."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35989143/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281815/",
+      "https://pubmed.ncbi.nlm.nih.gov/39115488/",
+      "https://pubmed.ncbi.nlm.nih.gov/40843315/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12365339/",
+      "https://pubmed.ncbi.nlm.nih.gov/31256636/",
+      "https://pubmed.ncbi.nlm.nih.gov/40838915/"
+    ],
+    "related_document_slugs": [
+      "transplante-cardiaco-pediatrico-indicacoes-contraindicacoes-e-desfechos-do-registro-ishlt",
+      "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+      "cardiomiopatia-restritiva-na-crianca-e-no-adolescente-etiologia-genetica-diagnostico-diferencial-e-transplante-precoce",
+      "ventriculo-unico-e-estadiamento-de-fontan-fisiologia-cirurgica-em-tres-estagios-e-complicacoes",
+      "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "FICHA NOVA (2026-08-29) — Guia de Doenças não tinha ficha estruturada para transplante cardíaco pediátrico; existia apenas o verbete narrativo content/Cardiologia_pediátrica/transplante-cardiaco-pediatrico-indicacoes-contraindicacoes-e-desfechos-do-registro-ishlt.md (110 linhas, já revisado), usado como fonte central e citado em related_document_slugs. ACHADO IMPORTANTE SOBRE O CORPUS DE APOIO INFORMADO NA MISSÃO: dos quatro documentos de apoio citados na tarefa, apenas o verbete narrativo acima foi localizado no repositório após busca exaustiva (find/grep, sem restrição de diretório). Os três demais — caso clínico 'transplante-cardiaco-em-lactente-...', caso clínico 'estratificacao-hemodinamica-pre-transplante-cardiaco-...' e o exame 'biopsia-endomiocardica-em-cardiopatia-congenita-pos-transplante-cardiaco' — NÃO existem em casos-clinicos/ nem em exames/ nem em qualquer outro diretório desta branch main (confirmado via fetch/checkout atualizado). A ficha foi redigida sem esses três documentos, usando em seu lugar fontes primárias verificadas individualmente (ISHLT, registro internacional) — sinalizado aqui para que, se esses casos/exame forem criados futuramente, a ficha seja revisitada e enriquecida com related_document_slugs adicionais. CATEGORIA NOVA: não existe precedente de category='transplante' em nenhuma área do banco (cardiopediatria, geral, cardiogeriatria, cardiooncologia — nenhuma tem essa categoria); proponho 'transplante' como nova categoria dentro de area='cardiopediatria', análoga ao padrão de categorias temáticas já usado (cardiomiopatia, circulacao_pulmonar, cardiopatia_congenita); decisão documentada aqui para validação humana antes de publicar. PREVALENCE_RANK: deixado null por instrução explícita da missão; o conjunto atual de cardiopediatria usa ranking sequencial 1-41 sem lacunas — se a convenção for mantida, o próximo rank seria 42, mas a atribuição foi deixada para decisão curatorial humana, não presumida aqui. MATERIAL-PACIENTE: existe apenas material-paciente/transplante-cardiaco (slug 'transplante-cardiaco'), mas seu conteúdo é redigido para o paciente adulto em primeira pessoa ('você'), com foco em teste cardiopulmonar de exercício/VO2 pico e decisão individual do próprio paciente — inadequado para pai/mãe de criança transplantada sem adaptação. patient_material_slug foi deixado null propositalmente; registro aqui como oportunidade real de material pediátrico dedicado (linguagem para responsável, foco em suporte circulatório mecânico como ponte, rotina de biópsia na criança, sinais de alerta em casa). LACUNAS EXPLÍCITAS HERDADAS DA FONTE NARRATIVA E CONFIRMADAS NESTA REVISÃO: (1) critérios numéricos formais de indicação/contraindicação pediátrica do ISHLT 2024 (Peled Y, PMID 39115488) permanecem não confirmados — texto integral pago, inacessível nesta sessão; os únicos limiares hemodinâmicos numéricos usados nesta ficha (RVP >6 UW·m²/gradiente transpulmonar >15 mmHg) vêm de fonte pediátrica distinta e verificada (Raissadati 2025, PMID 40843315), não do documento de critérios ISHLT 2024, e não foram extrapolados do adulto; (2) limiares específicos de RVP/contraindicação formal para Fontan falido não foram confirmados — a fonte disponível (Rychik 2019, PMID 31256636) sustenta apenas o princípio geral (RVP/pressão venosa sistêmica fixa como determinante de falência de Fontan), sem número de corte específico para candidatura a transplante nesse subgrupo; (3) distribuição de indicação por faixa etária além do lactente (criança 1-10 anos, adolescente) não extraída; (4) percentual numérico de mortalidade em lista de espera por faixa etária não confirmado, apenas a afirmação qualitativa de maior risco no lactente. Nenhuma dessas lacunas foi preenchida por estimativa ou extrapolação do adulto — regra determinística da missão cumprida. ACHADO INCIDENTAL (fora do escopo desta ficha, não corrigido): o verbete narrativo já publicado cita para Reinhardt Z (Arch Dis Child 2019) o DOI 10.1136/archdischild-2017-313103; a verificação desta sessão via NCBI E-utilities e Crossref para o mesmo PMID (31097529) retorna o DOI correto 10.1136/archdischild-2018-315682 — divergência não corrigida aqui (fora do escopo desta missão, que é apenas redigir a ficha nova), mas sinalizada para revisão humana do documento narrativo. Nenhuma dose de imunossupressor foi incluída em nenhum campo, conforme regra da missão — treatment_summary trata apenas classe/lógica de manejo (inibidor de calcineurina como base, diferença de incidência de rejeição tratada entre ciclosporina e tacrolimo no registro) e vigilância. Produção assistida por Claude; revisão técnica e aprovação de publicação pendentes.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
