@@ -937,13 +937,30 @@ mais estreitas/profundas por sub-tema.
   conjunto SNMMI/ASNC. **Fecha o gap de medicina nuclear cardiovascular
   desta janela (SPECT + PET-FDG + PET-perfusão + MIBG agora cobertos).**
 
-## Lote 42 (planejado)
+## Lote 42 — concluído (SHA 0cd0457a) — total 69 commits
 
-Território de imagem cardiovascular substancialmente coberto nesta
-janela. A auditar: Cardiologia do esporte em populações especiais ainda
-não vistas (atleta gestante, atleta com doença renal crônica em diálise);
-ou retomar aprofundamento de hubs existentes com baixa profundidade
-identificados via nova varredura. Confirmar via grep + `gh pr list`
-antes de despachar.
+- checklist `seguranca-cardiovascular-do-exercicio-fisico-e-esporte-na-gestacao-sem-cardiopatia`
+  — 5 itens na interseção de gestação+cardiopatia e cardiologia do
+  esporte (territórios cobertos separadamente, mas nunca combinados):
+  recomendação geral ACOG (RPE/talk-test em vez de zona de FC-alvo,
+  ausência declarada); contraindicações absolutas/relativas com
+  reavaliação de "quase-contraindicações" tradicionais sem evidência de
+  dano; sinais de alarme para suspensão imediata; síndrome de hipotensão
+  supina com nuance de revisão 2022 questionando magnitude clássica;
+  atleta competitiva grávida — desaceleração de FC fetal acima de ~90%
+  da FC materna máxima em 2 estudos independentes, ausência de protocolo
+  padronizado de triagem pré-participação declarada. 12 fontes via NCBI
+  e-utils.
+
+## Lote 43 (planejado)
+
+Gaps óbvios/fáceis do território seguem escassos. Próxima auditoria:
+varredura de conectividade Tudo com Tudo em itens recém-criados nesta
+janela (waves 22-42, ~20 itens) para confirmar backlinks bidirecionais
+quando aplicável; ou retomar território ainda pouco tocado — Métodos
+gráficos e funcionais (legado, baixa prioridade) vs. aprofundamento de
+subtemas dentro de hubs de alta prevalência já existentes (IC, FA,
+SCA) que possam ter lacunas pontuais não descobertas. Confirmar via
+grep + `gh pr list` antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
