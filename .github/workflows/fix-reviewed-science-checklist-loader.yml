@@ -1,0 +1,81 @@
+name: Fix reviewed science checklist loader contract
+
+on:
+  push:
+    branches: [release/reviewed-science-grok-claude-20260829]
+    paths:
+      - .github/workflows/fix-reviewed-science-checklist-loader.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-reviewed-science-checklist-loader-20260829
+  cancel-in-progress: false
+
+jobs:
+  fix-loader-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: release/reviewed-science-grok-claude-20260829
+          fetch-depth: 0
+
+      - name: Normalize checklist revisao field to text
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('checklists/metadados.json')
+          rows = json.loads(path.read_text(encoding='utf-8'))
+          changed = 0
+          for rec in rows:
+              if not isinstance(rec, dict):
+                  continue
+              rev = rec.get('revisao')
+              if not isinstance(rev, dict):
+                  continue
+              por = str(rev.get('por') or '').strip()
+              data = str(rev.get('data') or '').strip()
+              nota = str(rev.get('nota') or '').strip()
+              parts = [nota]
+              if por:
+                  parts.append(f'Revisão: {por}.')
+              if data:
+                  parts.append(f'Data: {data}.')
+              rec['revisao'] = ' '.join(p for p in parts if p).strip()
+              changed += 1
+
+          path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          bad = [r.get('slug') for r in rows if isinstance(r, dict) and isinstance(r.get('revisao'), dict)]
+          if bad:
+              raise SystemExit(f'revisao ainda é dict em: {bad}')
+          print(f'Checklist revisao dict -> texto: {changed} registros')
+
+          report = Path('docs/REVIEW-PUBLICACAO-CLAUDE-GROK-20260829.md')
+          text = report.read_text(encoding='utf-8')
+          marker = '- Gate de reconciliação do banco: campo `checklists.revisao` normalizado de objeto JSON para texto, compatível com `discharge_checklists.revisao`.'
+          if marker not in text:
+              text = text.replace('## Grok 67–75', marker + '\n\n## Grok 67–75')
+              report.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Re-run structural corpus gates
+        run: |
+          set -euo pipefail
+          git diff --check
+          python3 scripts/content_inventory.py --strict
+          python3 scripts/audit_tudo_com_tudo.py
+
+      - name: Commit loader-contract correction
+        run: |
+          set -euo pipefail
+          git config user.name corvia-release-bot
+          git config user.email actions@users.noreply.github.com
+          git add checklists/metadados.json docs/REVIEW-PUBLICACAO-CLAUDE-GROK-20260829.md
+          git diff --cached --quiet || git commit -m 'fix(release): normalizar revisao de checklists para texto'
+          git push origin HEAD:release/reviewed-science-grok-claude-20260829
