@@ -1,0 +1,259 @@
+[
+  {
+    "slug": "doenca-carotidea-aterosclerotica",
+    "name": "Doença carotídea aterosclerótica",
+    "aliases": [
+      "estenose carotídea",
+      "aterosclerose carotídea",
+      "estenose da carótida interna extracraniana",
+      "doença cerebrovascular extracraniana aterosclerótica"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": "aterosclerose_carotidea_extracraniana",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A doença carotídea aterosclerótica é a formação de placa, em geral na bifurcação carotídea e carótida interna extracraniana proximal, capaz de causar embolização ou, menos frequentemente, hipoperfusão cerebral. A ficha separa doença assintomática de doença sintomática por evento isquêmico focal cerebral ou retinal ipsilateral recente, integra tratamento médico intensivo a eventual revascularização e incorpora o CREST-2, publicado após as diretrizes ESC 2024 e AHA/ASA vigentes.",
+    "epidemiology": "A aterosclerose carotídea é uma causa importante e tratável de AVC isquêmico, com frequência crescente com a idade e com a carga de aterosclerose sistêmica. Hipertensão, tabagismo, dislipidemia, diabetes, doença coronariana e doença arterial periférica aumentam a probabilidade de doença carotídea. A presença de estenose assintomática não significa que a placa causará um AVC, e a melhora contemporânea do tratamento médico reduziu o risco absoluto, tornando a seleção para revascularização mais exigente.",
+    "presentation": [
+      "Muitos pacientes permanecem assintomáticos; sopro carotídeo é um achado de exame físico de baixa sensibilidade e especificidade e não define gravidade da estenose.",
+      "Doença sintomática típica inclui AIT ou AVC isquêmico hemisférico ipsilateral à artéria doente, com fraqueza ou perda sensitiva contralateral, alteração de linguagem quando o hemisfério dominante é acometido ou outro déficit focal compatível.",
+      "Amaurose fugaz ou isquemia retinal monocular ipsilateral é manifestação carotídea clássica e deve ser tratada como evento isquêmico vascular até esclarecimento.",
+      "Tontura isolada, vertigem isolada, síncope e sintomas bilaterais ou não focais não devem, por si, transformar uma estenose carotídea em doença sintomática.",
+      "AITs recorrentes em curto intervalo ou déficit neurológico flutuante/evolutivo exigem avaliação neurovascular urgente."
+    ],
+    "diagnostic_approach": {
+      "definicao_sintomatica": "Classificar como sintomática quando houve evento isquêmico focal cerebral ou retinal ipsilateral atribuível ao território carotídeo, em geral nos 6 meses prévios; quanto mais recente o evento, maior a relevância para o benefício de revascularização.",
+      "imagem_inicial": "Ultrassonografia vascular com Doppler é método de primeira linha para detectar e graduar estenose extracraniana em laboratório validado. Quando uma intervenção é cogitada ou há discordância diagnóstica, confirmar anatomia e gravidade com angio-TC ou angio-RM conforme função renal, contraindicações e disponibilidade.",
+      "quantificacao": "Usar critérios validados e método NASCET-compatible para quantificar estenose da carótida interna; não misturar percentuais obtidos por métodos de mensuração distintos sem explicitar a técnica.",
+      "evento_agudo": "Em déficit focal ou isquemia retinal aguda, ativar protocolo de AVC/AIT, definir última vez sabidamente bem, realizar neuroimagem e imagem vascular sem atrasar terapias de reperfusão quando indicadas.",
+      "causalidade": "Mesmo diante de estenose carotídea, investigar mecanismos concorrentes de AVC, especialmente fibrilação atrial e outras fontes cardioembólicas; a presença simultânea de FA e placa carotídea exige atribuição etiológica cuidadosa.",
+      "rastreamento": "Evitar ultrassonografia carotídea indiscriminada em adultos assintomáticos de baixo risco ou por sintomas não focais. Avaliação dirigida pode ser considerada em contextos vasculares selecionados quando o resultado tiver potencial real de mudar conduta."
+    },
+    "differentials": [
+      "Fibrilação atrial ou outra fonte cardioembólica de AVC/AIT",
+      "Doença aterosclerótica intracraniana",
+      "Doença de pequenos vasos e infarto lacunar",
+      "Dissecção de carótida ou vertebral",
+      "Vasculite, displasia fibromuscular ou outra arteriopatia não aterosclerótica",
+      "Enxaqueca com aura, crise epiléptica e outros imitadores de AVC",
+      "Doença ocular não vascular em perda visual monocular",
+      "Estenose vertebrobasilar quando os sintomas pertencem à circulação posterior"
+    ],
+    "tests": [
+      "Ultrassonografia vascular das carótidas com descrição de grau de estenose, velocidades, razão ACI/ACC e características de placa conforme recomendação DIC/SBC-CBR-SBACV 2023.",
+      "Angio-TC ou angio-RM de vasos cervicais/intracranianos quando necessária confirmação anatômica, planejamento de revascularização ou investigação de evento cerebral agudo.",
+      "TC ou RM de encéfalo no contexto de AIT/AVC para caracterizar infarto, hemorragia, extensão da lesão e segurança/timing de intervenções.",
+      "ECG e investigação de fibrilação atrial ou outra fonte cardioembólica conforme fenótipo do evento neurológico.",
+      "Perfil lipídico, pressão arterial, glicemia/HbA1c, função renal e avaliação de tabagismo e outros fatores de risco para orientar tratamento médico intensivo.",
+      "Angiografia por cateter não é exame diagnóstico de rotina; reservar para situações em que agregue informação ou faça parte do procedimento endovascular."
+    ],
+    "red_flags": [
+      "Déficit neurológico focal súbito, mesmo transitório, exige protocolo de AVC/AIT e avaliação imediata de reperfusão; não aguardar consulta vascular eletiva.",
+      "Amaurose fugaz recente ou perda visual monocular aguda pode representar isquemia retinal e requer avaliação urgente.",
+      "AIT em crescendo ou déficit neurológico flutuante/evolutivo associado a estenose carotídea requer discussão neurovascular urgente em centro experiente.",
+      "Grande infarto, transformação hemorrágica, rebaixamento de consciência ou déficit incapacitante importante mudam o risco e o momento da revascularização; intervenção carotídea imediata não deve ser automática.",
+      "Síndrome de hiperperfusão cerebral, cefaleia intensa nova, convulsão ou déficit neurológico após revascularização carotídea requer avaliação emergencial."
+    ],
+    "ambulatory_flow": [
+      "Confirmar se a doença é verdadeiramente assintomática ou se houve AIT, AVC não incapacitante ou isquemia retinal ipsilateral recente; essa distinção muda o benefício esperado da intervenção.",
+      "Instituir tratamento médico otimizado para todos: cessar tabagismo, atividade física e dieta apropriadas, controle pressórico e glicêmico, terapia hipolipemiante intensiva e antitrombótico conforme indicação clínica e diretrizes de prevenção de AVC/aterosclerose.",
+      "Na estenose sintomática de 70–99% em paciente apropriado, a ESC 2024 recomenda endarterectomia carotídea quando o risco documentado de AVC/óbito em 30 dias do serviço é <6% (Classe I, nível A).",
+      "Na estenose sintomática de 50–69%, a ESC 2024 recomenda considerar endarterectomia quando o risco de AVC/óbito em 30 dias é <6% (Classe IIa, nível A), ponderando idade, sexo, comorbidades, anatomia e características do evento.",
+      "Quando indicada na doença sintomática, realizar endarterectomia precocemente, idealmente dentro de 14 dias do último evento isquêmico, conforme ESC 2024 (Classe I, nível B), após avaliar tamanho do infarto, estabilidade neurológica e risco hemorrágico.",
+      "Na doença sintomática que requer revascularização, endarterectomia é em geral o padrão. A ESC 2024 considera stent carotídeo em alto risco para endarterectomia com estenose 70–99% (Classe IIa, nível B) e pode considerá-lo em pacientes <70 anos com estenose 70–99% (Classe IIb, nível A), desde que o risco procedural seja aceitável.",
+      "Em estenose assintomática de alto grau, tratamento médico intensivo é obrigatório e revascularização não deve ser reflexa. Selecionar em discussão multidisciplinar conforme expectativa de vida, risco procedural do centro, anatomia, progressão/características de placa e preferências.",
+      "Incorporar o CREST-2 à decisão assintomática: em estenose ≥70%, stent transfemoral mais tratamento intensivo reduziu o desfecho primário em 4 anos versus tratamento intensivo isolado (2,8% vs 6,0%; p=0,02), enquanto endarterectomia não mostrou diferença estatisticamente significativa (3,7% vs 5,3%; p=0,24). Esses resultados são posteriores à ESC 2024 e não devem ser convertidos automaticamente em nova classe de recomendação."
+    ],
+    "emergency_flow": [
+      "Em déficit focal súbito ou isquemia retinal aguda, priorizar ABC, glicemia, última vez sabidamente bem, neuroimagem e protocolo de AVC; a avaliação da carótida ocorre em paralelo e não deve atrasar trombólise ou trombectomia quando indicadas.",
+      "Identificar rapidamente estenose/oclusão carotídea e circulação intracraniana por imagem vascular quando o resultado puder mudar reperfusão, transferência ou estratégia de prevenção secundária.",
+      "Após AIT ou AVC não incapacitante atribuído a estenose carotídea, envolver neurologia vascular e cirurgia vascular/intervencionista precocemente para definir elegibilidade e timing da revascularização.",
+      "Não indicar endarterectomia ou stent emergencial apenas pelo percentual de estenose: volume do infarto, hemorragia, déficit incapacitante, estabilidade neurológica, anatomia e risco do centro modificam a decisão.",
+      "Se houver FA concomitante, não presumir que a carótida é a fonte; decidir antitrombótico e eventual intervenção por equipe multidisciplinar com análise do mecanismo do evento."
+    ],
+    "treatment_summary": "Todo paciente com aterosclerose carotídea necessita prevenção vascular intensiva. Na doença sintomática, o benefício de endarterectomia é mais robusto para estenose 70–99% e permanece relevante em pacientes selecionados com 50–69%, sobretudo quando realizada precocemente em centro com baixa taxa de complicações. Stent é alternativa em cenários anatômicos/cirúrgicos selecionados. Na doença assintomática, a decisão é mais controversa: tratamento médico contemporâneo é a base, e o CREST-2 de 2025/2026 mostrou benefício do stent transfemoral para seu desfecho composto, mas não demonstrou benefício estatisticamente significativo da endarterectomia; o risco peri-procedimento, a predominância de AVCs não incapacitantes e a ausência ainda de atualização formal das diretrizes exigem seleção compartilhada, não revascularização automática.",
+    "monitoring": [
+      "Reavaliar tabagismo, pressão arterial, LDL-colesterol, diabetes, adesão e tolerabilidade da prevenção vascular.",
+      "Acompanhar novos sintomas focais ou retinais; qualquer evento torna necessária reclassificação imediata de assintomático para sintomático.",
+      "Usar ultrassonografia seriada quando o resultado puder documentar progressão e alterar decisão; o intervalo deve considerar grau da estenose, qualidade do exame e estratégia do serviço.",
+      "Após endarterectomia ou stent, realizar vigilância clínica e ultrassonográfica conforme protocolo vascular, buscando reestenose e complicações.",
+      "Após revascularização, monitorar pressão arterial e sinais de síndrome de hiperperfusão, AVC, lesão de nervo craniano após cirurgia ou complicações do acesso/stent conforme técnica."
+    ],
+    "special_populations": [
+      "Idosos, especialmente ≥70 anos: risco de AVC peri-procedimento com stent transfemoral tende a ser maior; idade deve integrar a escolha entre endarterectomia, stent e tratamento médico.",
+      "Doença coronariana ou insuficiência cardíaca: ponderar risco de infarto e complicações cirúrgicas frente ao risco de AVC; decisão deve considerar risco global e experiência do centro.",
+      "Doença renal crônica: planejar contraste na angio-TC/stent e prevenção de lesão renal, usando alternativas quando apropriado.",
+      "Radioterapia cervical prévia, reestenose, traqueostomia, lesão alta ou anatomia hostil podem aumentar risco de endarterectomia e favorecer avaliação endovascular individualizada.",
+      "Fibrilação atrial concomitante: distinguir fonte cardioembólica de aterotrombose carotídea antes de associar intervenção a anticoagulação.",
+      "Mulheres e pacientes com expectativa de vida limitada: na doença assintomática, o benefício absoluto de procedimento pode ser pequeno; evitar extrapolar resultados históricos sem considerar risco contemporâneo e objetivos do paciente."
+    ],
+    "assistant_questions": [
+      {
+        "id": "acute_focal_event",
+        "label": "Há déficit neurológico focal ou perda visual monocular de início recente/agudo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "ipsilateral_recent_event",
+        "label": "Houve AIT, AVC isquêmico não incapacitante ou isquemia retinal ipsilateral atribuível à carótida nos últimos 6 meses?",
+        "type": "boolean",
+        "required": true,
+        "section": "Classificação"
+      },
+      {
+        "id": "high_grade_stenosis",
+        "label": "A imagem documenta estenose de alto grau da carótida interna (aproximadamente ≥70% por método validado)?",
+        "type": "boolean",
+        "section": "Imagem"
+      },
+      {
+        "id": "large_or_hemorrhagic_infarct",
+        "label": "Há grande infarto, transformação hemorrágica, rebaixamento de consciência ou déficit incapacitante importante?",
+        "type": "boolean",
+        "section": "Segurança"
+      },
+      {
+        "id": "af_or_cardioembolic_source",
+        "label": "Há fibrilação atrial ou outra fonte cardioembólica concorrente relevante?",
+        "type": "boolean",
+        "section": "Etiologia"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "carotid-acute-neuro-event",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_focal_event",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível AVC/AIT ou isquemia retinal aguda."
+          ],
+          "emergency_flow": [
+            "Ativar protocolo de AVC/AIT e neuroimagem/imagem vascular sem aguardar avaliação eletiva da estenose carotídea."
+          ]
+        }
+      },
+      {
+        "id": "carotid-recent-symptomatic",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "ipsilateral_recent_event",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Doença carotídea sintomática recente exige avaliação neurovascular precoce para prevenção secundária e possível revascularização."
+          ]
+        }
+      },
+      {
+        "id": "carotid-large-infarct",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "large_or_hemorrhagic_infarct",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Grande infarto/hemorragia altera o risco e o timing da revascularização; não sugerir procedimento imediato apenas pelo grau de estenose."
+          ]
+        }
+      },
+      {
+        "id": "carotid-asymptomatic-high-grade",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "high_grade_stenosis",
+              "op": "truthy"
+            },
+            {
+              "field": "ipsilateral_recent_event",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Em estenose assintomática de alto grau, otimizar prevenção vascular e discutir revascularização de forma multidisciplinar; CREST-2 não autoriza procedimento automático."
+          ]
+        }
+      },
+      {
+        "id": "carotid-competing-cardioembolism",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "af_or_cardioembolic_source",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Fonte cardioembólica concorrente deve ser investigada antes de atribuir causalidade do evento à placa carotídea."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "carótida",
+      "estenose carotídea",
+      "aterosclerose",
+      "AVC",
+      "AIT",
+      "amaurose fugaz",
+      "endarterectomia",
+      "stent carotídeo",
+      "CREST-2",
+      "prevenção vascular"
+    ],
+    "source_refs": [
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024. doi:10.1093/eurheartj/ehae179.",
+      "Kleindorfer DO, Towfighi A, Chaturvedi S, et al. 2021 Guideline for the Prevention of Stroke in Patients With Stroke and Transient Ischemic Attack. Stroke. 2021;52:e364-e467. doi:10.1161/STR.0000000000000375.",
+      "Albricker ACL, Freire CMV, Santos SN, et al. Atualização da Recomendação para Avaliação da Doença das Artérias Carótidas e Vertebrais pela Ultrassonografia Vascular: DIC, CBR, SBACV – 2023. Arq Bras Cardiol. 2023;120(10):e20230695. doi:10.36660/abc.20230695.",
+      "Ristow AVB, Massière B, Meirelles GV, et al. Diretrizes da Sociedade Brasileira de Angiologia e Cirurgia Vascular para o tratamento da doença cerebrovascular extracraniana. J Vasc Bras. 2024;23:e20230094. doi:10.1590/1677-5449.202300941.",
+      "Brott TG, Howard G, Lal BK, et al. Medical Management and Revascularization for Asymptomatic Carotid Stenosis. N Engl J Med. 2026;394(3):219-231. doi:10.1056/NEJMoa2508800."
+    ],
+    "source_urls": [
+      "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/peripheral-arterial-and-aortic-diseases/",
+      "https://professional.heart.org/en/science-news/2021-guideline-for-the-prevention-of-stroke-in-patients-with-stroke-and-transient-ischemic-attack",
+      "https://abccardiol.org/article/atualizacao-da-recomendacao-para-avaliacao-da-doenca-das-arterias-carotidas-e-vertebrais-pela-ultrassonografia-vascular-dic-cbr-sbacv-2023/",
+      "https://www.scielo.br/j/jvb/a/9KpCvY3JvDLcPbpPVqXjNCH/",
+      "https://doi.org/10.1056/NEJMoa2508800"
+    ],
+    "related_document_slugs": [
+      "deficit-neurologico-focal-subito-reconhecimento-e-primeira-hora-do-avc",
+      "fluxograma-suspeita-de-avc-agudo-primeira-hora"
+    ],
+    "review_status": "revisado",
+    "review_note": "Revisão científica concluída em 29/08/2026 contra ESC 2024, AHA/ASA 2021, DIC/SBC-CBR-SBACV 2023, SBACV 2024 e o ensaio randomizado CREST-2 publicado no NEJM em 2026. O CREST-2 é evidência posterior às diretrizes ESC 2024/AHA-ASA vigentes; seus resultados foram incorporados como atualização de evidência, sem inventar nova classe de recomendação. Relações Tudo com Tudo limitadas a documentos do acervo com vínculo clínico direto e slugs confirmados.",
+    "fonte_producao": "chatgpt",
+    "version": 1
+  }
+]
