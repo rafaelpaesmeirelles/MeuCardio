@@ -64,7 +64,9 @@ def _app(redis=None) -> Starlette:
             Route("/api/auth/me/foto", echo_upload, methods=["POST"]),
             Route("/api/auth/me/logo", echo_upload, methods=["POST"]),
             Route("/api/pedidos/{pedido_id:int}/exame", echo_upload, methods=["POST"]),
+            Route("/api/pacientes/{pid:int}/exames-multimodais", echo_upload, methods=["POST"]),
             Route("/api/exames-ia/analisar", echo_uploads, methods=["POST"]),
+            Route("/api/documentos-cientificos-ia", echo_upload, methods=["POST"]),
             Route("/api/email/mensagens/anexos", echo_upload, methods=["POST"]),
             Route("/api/cursos/admin/{slug}/material", echo_upload, methods=["POST"]),
         ]
@@ -155,6 +157,22 @@ def test_central_cardiovascular_reproduz_multiplos_arquivos_e_limita_a_cinco():
     }
     assert blocked.status_code == 422
     assert "no máximo 5 arquivos" in blocked.json()["detail"]
+
+
+def test_novos_fluxos_ia_passam_pela_barreira_asgi():
+    exam = _png()
+    document = _docx()
+    with TestClient(_app()) as client:
+        exam_response = client.post(
+            "/api/pacientes/7/exames-multimodais",
+            files={"arquivo": ("eco.png", exam, "image/png")},
+        )
+        document_response = client.post(
+            "/api/documentos-cientificos-ia",
+            files={"arquivo": ("consenso.docx", document, "application/vnd.openxmlformats-officedocument.wordprocessingml.document")},
+        )
+    assert exam_response.status_code == 200
+    assert document_response.status_code == 200
 
 
 def test_pdf_clinico_com_javascript_e_rejeitado():
@@ -306,6 +324,10 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # Central multimodal cardiovascular: até cinco fotos/arquivos, com
         # limites individual e agregado e validação antes do parser FastAPI.
         "cardiovascular_exam_ai.py",
+        # Fluxos novos: arquivo científico privado (25 MB) e exame multimodal
+        # longitudinal (20 MB) também são cortados/validados antes do multipart.
+        "scientific_documents_ai.py",
+        "patient_multimodal_ai.py",
         # Prescrição livre especial: a devolução do PDF assinado também usa
         # o fluxo externo existente, com leitura limitada a 15 MB + 1 byte,
         # validação real do PDF por validate_file() e conferência criptográfica
@@ -324,6 +346,14 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert cardiovascular_policy.max_file_bytes == 20 * 1024 * 1024
     assert cardiovascular_policy.max_total_file_bytes == 40 * 1024 * 1024
     assert cardiovascular_policy.min_files == 0
+    multimodal_policy = policy_for("POST", "/api/pacientes/1/exames-multimodais")
+    assert multimodal_policy is not None
+    assert multimodal_policy.max_files == 1
+    assert multimodal_policy.max_file_bytes == 20 * 1024 * 1024
+    scientific_policy = policy_for("POST", "/api/documentos-cientificos-ia")
+    assert scientific_policy is not None
+    assert scientific_policy.max_files == 1
+    assert scientific_policy.max_file_bytes == 25 * 1024 * 1024
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None
