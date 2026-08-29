@@ -242,3 +242,17 @@ _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoi
   declarado.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 13 (em andamento, 1 agente)
+
+Cluster "eco-*" do backlog pediátrico (~16-19 itens): indicações de
+ecocardiograma pediátrico por cenário clínico (RN cianótico/choque, RN
+assimetria de pulsos, RN suspeita PCA, palpitação+HF arritmia/morte súbita,
+HAS, síncope de esforço, endocardite, Kawasaki fase aguda/seguimento/
+eco-estresse tardio, cardio-oncologia, pós-transplante+eco-estresse
+vasculopatia tardia, ETE por janela ruim, ETE em UTI pós-operatória, ECMO).
+Exame técnico existente (`ecocardiograma-transtoracico-pediatrico-com-escore-z`)
+cobre só medição por escore Z, não indicações — confirmado gap real.
+Despachado como checklist (agente a192914cbfd4ed3f2).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
