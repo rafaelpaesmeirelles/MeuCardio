@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 import PatientECGAssistant from "./PatientECGAssistant";
+import PatientMultimodalAssistant from "./PatientMultimodalAssistant";
 import PatientExamResults from "./PatientExamResults";
 import PatientProfileTimeline from "./PatientProfileTimeline";
 
@@ -35,6 +36,7 @@ export default function PatientClinicalSummary({patientId,currentEncounterId,foc
 
   return <>
     <PatientECGAssistant patientId={patientId} currentEncounterId={currentEncounterId} focusOnMount={focusECG} onChanged={()=>setTimelineRevision(x=>x+1)}/>
+    <PatientMultimodalAssistant patientId={patientId} currentEncounterId={currentEncounterId} onChanged={()=>setTimelineRevision(x=>x+1)}/>
     <section className="pep-card" style={{marginTop:"0.8rem"}}>
       <div className="pep-title"><div><p className="eyebrow">Resumo clínico</p><h2>Problemas, alergias e medicações</h2></div><small>{itens.length} ativo(s)</small></div>
       {erro&&<p role="alert" className="pep-error">{erro}</p>}
