@@ -12,6 +12,7 @@ from app.services.guideline_discovery import (
     DISCOVERY_START,
     discover_and_publish,
 )
+from app.services.guideline_discovery_worldwide import enable_worldwide_sources
 
 router = APIRouter(prefix="/api/guideline-updates", tags=["diretrizes"])
 
@@ -115,4 +116,5 @@ def run_discovery(
     db: Session = Depends(get_db),
     _=Depends(require_admin),
 ):
+    enable_worldwide_sources()
     return discover_and_publish(db)
