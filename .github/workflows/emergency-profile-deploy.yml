@@ -1,4 +1,5 @@
 name: Emergency profile hotfix deploy
+# Gatilho emergencial reutilizável; acionado para a release consolidada #708 em 29/08/2026.
 # Reutilizado em 28/08 para corrigir o destino pós-tour de convidado aprovado.
 
 on:
