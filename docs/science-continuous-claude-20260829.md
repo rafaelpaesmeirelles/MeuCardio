@@ -923,13 +923,27 @@ DAP/claudicação já estão bem cobertos nesta base — os gaps
 exauridos nesta janela. Continuar exigirá auditorias progressivamente
 mais estreitas/profundas por sub-tema.
 
-## Lote 41 (planejado)
+## Lote 41 — concluído (SHA 79f6716a) — total 68 commits
 
-A auditar com foco mais granular: subtemas dentro de hubs já existentes
-mas ainda rasos em pontos específicos (aprofundamento, não novo tópico),
-ou território ainda não tocado nesta janela: Cardiologia do esporte em
-populações especiais (atleta idoso, atleta gestante), ou Medicina nuclear
-cardiovascular — PET de perfusão com rubídio/amônia (distinto do PET-FDG
-já coberto). Confirmar via grep + `gh pr list` antes de despachar.
+- exame `pet-de-perfusao-miocardica-com-rubidio-82-ou-amonia-n-13-e-reserva-de-fluxo-coronariano`
+  — único método com quantificação absoluta de fluxo/CFR, ausente do
+  corpus apesar de SPECT e PET-FDG já cobertos. Especificidade superior
+  ao SPECT em obesidade (84% vs. 64%); indicação central em doença
+  microvascular e isquemia balanceada triarterial; valor prognóstico
+  robusto do CFR (HR 5,6x no tercil mais baixo); ausência de corte
+  numérico único validado por consenso declarada explicitamente (dois
+  limiares distintos citados de estudos diferentes, sem apresentar como
+  consenso). 8 fontes via NCBI e-utils, incluindo posicionamento
+  conjunto SNMMI/ASNC. **Fecha o gap de medicina nuclear cardiovascular
+  desta janela (SPECT + PET-FDG + PET-perfusão + MIBG agora cobertos).**
+
+## Lote 42 (planejado)
+
+Território de imagem cardiovascular substancialmente coberto nesta
+janela. A auditar: Cardiologia do esporte em populações especiais ainda
+não vistas (atleta gestante, atleta com doença renal crônica em diálise);
+ou retomar aprofundamento de hubs existentes com baixa profundidade
+identificados via nova varredura. Confirmar via grep + `gh pr list`
+antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
