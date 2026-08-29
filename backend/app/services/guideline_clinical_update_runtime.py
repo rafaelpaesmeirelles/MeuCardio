@@ -14,6 +14,7 @@ log = logging.getLogger("corvia.guideline_clinical_update.runtime")
 
 _ORIGINAL_APPLY_OVERRIDE = core._apply_override
 _ORIGINAL_ENSURE_SUMMARY = core._ensure_summary_document
+COMPLETE_PUBLICATION_LIMIT = 300
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -95,8 +96,13 @@ def _reopen_in_app_alerts(db, guideline_id: int) -> None:
     db.commit()
 
 
-def process_pending_guidelines(db, *, limit: int = core.PROCESS_LIMIT) -> dict:
-    """Processa uma vez itens recém-detectados; ambiguidade aguarda revisão humana."""
+def process_pending_guidelines(db, *, limit: int = COMPLETE_PUBLICATION_LIMIT) -> dict:
+    """Processa todo o backlog elegível antes de liberar a publicação ao usuário.
+
+    O limite ampliado evita que o radar mostre dezenas de itens apenas detectados
+    enquanto somente os primeiros 20 recebem resumo/leitura em português.
+    Falhas individuais permanecem registradas e não impedem os demais itens.
+    """
     install_runtime_guards()
     guidelines = db.query(Guideline).filter(
         Guideline.detection_status.in_(("detected", "aguardando_revisao"))
@@ -120,7 +126,15 @@ def process_pending_guidelines(db, *, limit: int = core.PROCESS_LIMIT) -> dict:
                 db.rollback()
                 log.exception("Falha ao analisar/aplicar diretriz %s", guideline.slug)
                 failures.append({"guideline_id": guideline.id, "slug": guideline.slug, "error": type(exc).__name__})
-    return {"processed": len(items), "items": items, "failures": failures}
+    return {
+        "processed": len(items),
+        "requested": len(guidelines),
+        "remaining": db.query(Guideline).filter(
+            Guideline.detection_status.in_(("detected", "aguardando_revisao"))
+        ).count(),
+        "items": items,
+        "failures": failures,
+    }
 
 
 def reapply_confirmed_updates(db) -> dict:
