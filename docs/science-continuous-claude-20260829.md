@@ -136,7 +136,7 @@ antes do commit final.
 - `esclerose-sistemica-com-acometimento-cardiaco` — verbete novo (SHA 2e31a566). Escopo restrito a miocárdio/pericárdio/condução; HP-ESc e crise renal ficam de fora (diferenciais, linkados aos 2 docs DETECT já existentes). 12 PMIDs (EUSTAR consensus/coorte, RM T1 mapping, disfunção microvascular, arritmia/condução, tamponamento). Correção: 2 perguntas com options em string simples → formato {value,label}.
 - checklist `ecocardiograma-seriado-no-tratamento-da-endocardite-infecciosa-quando-repetir` — 14 itens (SHA 750c12e4). Fonte: Posicionamento SBC 2019 de ecocardiografia em adultos (Tabelas 29/31, seção 3.4), classes/níveis transcritos literalmente do full-text PMC. documento_origem=null (nenhum match direto real).
 - `cardiomiopatia-por-sobrecarga-de-ferro` — verbete novo (SHA 2e9d3020). Hemocromatose (flebotomia) vs. sobrecarga transfusional/talassemia (quelação, sem posologia por falta de fonte). Eixo: RM T2* (cortes 20/10ms, RR de IC=160 e RR arritmia=4,6, Kirk 2009). 10 PMIDs, incl. confirmação por full-text de que o posicionamento SBC 2026 tem seção dedicada. Correções: entidades HTML → caracteres reais, options de pergunta → {value,label}, 4 related_document_slugs reais preenchidos.
-- `fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2` — despachado, ainda em execução (agente a490ae8b455a6fb6b).
+- `fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2` — verbete novo (SHA c8dc5c27). Danon (LAMP2) vs. PRKAG2, pré-excitação ventricular como pista compartilhada, Fabry tratada só como diferencial (ficha própria já existe). 8 PMIDs. 5 related_document_slugs reais.
 
 Todos os 3 já integrados passaram pelos 3 gates (field/enum/question/rule,
 audit_tudo_com_tudo broken_references:[], content_inventory --strict) limpos
@@ -151,5 +151,18 @@ Pendência não acionada: possível quase-duplicata entre
 `doenca-renovascular-e-displasia-fibromuscular` (branch science-overnight) e
 `hipertensao-renovascular-e-estenose-de-arteria-renal` (já em main) — a
 reconciliar quando as branches forem revisadas/mescladas.
+
+## Lote 9 (próximo, em preparação)
+
+Lote 8 fechado — 4/4 itens integrados, total 26 commits na branch. Backlog de
+cardiomiopatias praticamente esgotado nos subtemas identificados (restritiva,
+sobrecarga de ferro, esclerose sistêmica, fenocópias glicogênicas). Próxima
+varredura: reauditar backlog de evidências por tema (Perioperatório 82,
+Valvopatias 77, Aorta 72 — já zerado, Gravidez 61, Cardiologia pediátrica 61,
+Congênitas 57, Esporte 54, Arritmias 42, Endocardite 23 — parcialmente
+reduzido) e escolher o próximo maior valor marginal, evitando temas já
+hospedados (CMH periop já tem doc — ver nota no lote 8) e respeitando o mapa
+de colisão (PR #599 dispositivos, PR #725 FA, ambos seguem abertos — reconferir
+antes de agir).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
