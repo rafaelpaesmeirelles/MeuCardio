@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 50
     environment: production
     env:
-      TARGET_SHA: 2edf6f7dfb8dba5ebab7dada995a971d826d9dc2
+      TARGET_SHA: f90d0f30f8cfef44f474ec46b8b3a325b9372e48
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
