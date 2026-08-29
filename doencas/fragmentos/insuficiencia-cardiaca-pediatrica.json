@@ -1,0 +1,337 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca-pediatrica",
+    "name": "Insuficiência cardíaca pediátrica",
+    "aliases": [
+      "IC pediátrica",
+      "insuficiência cardíaca na criança",
+      "IC infantil",
+      "heart failure in children"
+    ],
+    "area": "cardiopediatria",
+    "category": "insuficiencia_cardiaca",
+    "subtype": "pediatrica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Síndrome clínica decorrente de disfunção ventricular, sobrecarga de volume ou de pressão na criança, cuja causa mais provável muda de forma previsível conforme a idade: predominantemente estrutural/ducto-dependente no neonato, shunt não corrigido, miocardite ou cardiomiopatia no lactente, e cardiomiopatia adquirida ou sequela de cirurgia congênita na criança maior e no adolescente. A classificação de Ross substitui a NYHA em lactentes, usando dificuldade alimentar como sinal equivalente à dispneia do adulto; fisiologia univentricular (por exemplo, pós-Fontan) é diferencial obrigatório, com fisiopatologia distinta da IC biventricular clássica.",
+    "epidemiology": "Nos Estados Unidos, estima-se que a IC pediátrica afete entre 12.000 e 35.000 crianças por ano, respondendo por aproximadamente 11.000 a 14.000 internações anuais; comparada ao adulto, a internação pediátrica por IC tem permanência mais longa, maior taxa de readmissão e custo hospitalar mais alto, em grande parte por depender com frequência de intervenção cirúrgica ou por cateter (Das BB, Children 2024, PMID 39062308). A causa mais provável muda de forma previsível conforme a idade. Em coorte prospectiva de 402 crianças já com cardiopatia congênita conhecida, 45 (11,19%) desenvolveram IC, com idade mediana de apenas 7,5 meses — significativamente menor que a mediana de 36 meses do grupo sem IC (p<0,0001); defeito estrutural único (predominantemente shunt esquerda-direita não corrigido) respondeu por 71,11% dos casos, e cardiomiopatia dilatada adquirida por 13,33% (Moeinipour Y et al., Curr Cardiol Rev 2025, PMID 39931850). O mesmo artigo cita um estudo anterior (Massin et al., citação de segunda mão, não verificada diretamente nesta síntese) que acompanhou 1.196 crianças com cardiopatia congênita por 10 anos: 124 desenvolveram IC (10,4%), das quais 72 (58,1%) já no primeiro ano de vida — retrato numérico da regra 'shunt não corrigido no lactente'. Nota de leitura: esses números vêm de uma coorte já com cardiopatia congênita conhecida, não da população pediátrica geral, e não devem ser lidos como prevalência de IC na criança em geral. Como causa isolada, a cardiomiopatia pediátrica (dilatada e hipertrófica) também concentra risco no primeiro ano de vida: incidência 12 vezes maior no lactente menor de 1 ano (8,34/100.000/ano) do que na criança de 1 a 18 anos (0,70/100.000/ano, p<0,001) (Lipshultz SE et al., N Engl J Med 2003, PMID 12711739) — outro sinal convergente de que o primeiro ano de vida concentra o maior risco absoluto de IC pediátrica, ainda que por mecanismos etiológicos distintos dos do lactente com shunt não corrigido. Este verbete trata da síndrome de IC na criança como categoria própria do Guia de Doenças, complementar aos verbetes gerais de IC do adulto e do idoso desta plataforma; verbetes específicos aprofundam etiologias individuais — cardiomiopatias pediátricas, ALCAPA, descompensação de Fontan e transplante cardíaco pediátrico — sem que seu conteúdo seja duplicado aqui.",
+    "presentation": [
+      "Neonato (primeiras semanas de vida): sinais de cardiopatia congênita crítica ducto-dependente — cianose ou choque cardiogênico ao fechamento do canal arterial, taquipneia, hipoperfusão, acidose; nessa faixa a causa é predominantemente estrutural, e não adquirida",
+      "Lactente: dificuldade para mamar é o sinal equivalente à dispneia do adulto — mamada prolongada (mais de 40 minutos) ou volume ingerido reduzido (menos de 90-100 mL por mamada), diaforese durante a mamada, taquipneia de repouso (frequência respiratória acima de 50-60/min), ganho de peso insuficiente ou falha de crescimento, irritabilidade, ritmo de galope diastólico e hepatomegalia (Ross RD et al., Pediatr Cardiol 1992, PMID 1614922)",
+      "Criança maior e adolescente: sintomas já relatados de forma mais próxima ao adulto — dispneia aos esforços, ortopneia, fadiga, intolerância ao exercício, dor torácica, palpitação ou síncope; a classificação NYHA torna-se aplicável nessa faixa, ao lado da escala de Ross",
+      "Sinais de baixo débito/choque cardiogênico em qualquer idade: extremidades frias, pulsos finos, tempo de enchimento capilar prolongado, oligúria, alteração do nível de consciência",
+      "Em paciente com fisiologia univentricular/circulação de Fontan: queda da saturação em relação ao basal individual, fadiga intensa ou síncope podem ser a manifestação de descompensação, com fisiopatologia distinta da IC biventricular clássica (ver verbete próprio de descompensação de Fontan)"
+    ],
+    "diagnostic_approach": {
+      "classificacao_de_ross": [
+        "A classificação NYHA, central no adulto, depende de sintomas relatados pelo próprio paciente (dispneia aos esforços, ortopneia) — pouco aplicável ao lactente, que não consegue verbalizá-los. A escala de Ross foi desenvolvida especificamente para a criança, adaptando o sistema NYHA para sintomas prevalentes na IC pediátrica, sobretudo os ligados à alimentação em lactentes (Ross RD et al., Pediatr Cardiol 1992, PMID 1614922; Das BB, Children 2024, PMID 39062308)",
+        "Versão em quatro classes usada na prática, com correspondência aproximada à NYHA: Classe I — assintomático; Classe II — taquipneia leve ou diaforese à mamada em lactentes (equivalente a sintoma com atividade ordinária); Classe III — taquipneia ou diaforese marcantes à mamada, com tempo de mamada prolongado e falha de crescimento em lactentes, ou dispneia marcante ao esforço em crianças maiores; Classe IV — taquipneia, retrações, gemido ou diaforese em repouso (Moeinipour Y et al., Curr Cardiol Rev 2025, PMID 39931850, reproduzindo tabela comparativa NYHA/Ross)",
+        "Uma revisão de 2012 do próprio Ross propôs versão estratificada por idade, argumentando que a gradação de sintomas depende da idade e que ecocardiografia, teste de esforço e NT-proBNP deveriam ser incorporados à gradação clínica isolada — o racional foi confirmado no resumo consultado, mas a tabela de pontos por faixa etária resultante não está disponível em acesso aberto (Ross RD, Pediatr Cardiol 2012, PMID 22476605)"
+      ],
+      "estadiamento_acc_aha": [
+        "Paralelamente à classe funcional atual (Ross/NYHA), o estadiamento ACC/AHA de A a D — risco (Estágio A), doença estrutural precoce assintomática (Estágio B), IC sintomática (Estágio C) e IC avançada refratária (Estágio D) — está incorporado às diretrizes pediátricas desde 2004 e orienta decisões terapêuticas de maior peso, como indicação de dispositivo de assistência ventricular e avaliação para transplante, mais do que a classe funcional isolada do momento (Das BB, Children 2024, PMID 39062308)"
+      ],
+      "biomarcadores": [
+        "BNP e NT-proBNP auxiliam a investigação de cardiopatia estrutural com repercussão hemodinâmica, miocardite e IC pediátrica, mas não existe um corte único como no adulto (por exemplo, <125 pg/mL ambulatorial): os valores são fortemente dependentes da idade, mais altos nos primeiros dias de vida (refletindo a transição da circulação fetal para a neonatal), com queda acentuada nas primeiras semanas e declínio gradual ao longo da infância (Nir A et al., Pediatr Cardiol 2009, PMID 18600369; Palm J et al., Clin Chem Lab Med 2020, PMID 32305952)",
+        "Um resultado só é interpretável comparando-o à referência da idade exata — e, no neonato, do dia de vida — da criança no momento da coleta; extrapolar o corte do adulto é inválido. BNP e NT-proBNP não são intercambiáveis entre si, e ensaios de fabricantes diferentes não são diretamente comparáveis; não há, na prática clínica corrente, um Z-score único consagrado para todas as idades"
+      ],
+      "ecocardiograma": [
+        "Exame inicial central para toda criança com suspeita de IC: define anatomia estrutural (shunt, obstrução, lesão ducto-dependente), função ventricular sistólica e diastólica, derrame pericárdico e, quando indicado, origem coronariana anômala — excluir ALCAPA antes de rotular disfunção de ventrículo esquerdo do lactente como cardiomiopatia dilatada primária idiopática — além da anatomia univentricular/pós-Fontan quando presente"
+      ]
+    },
+    "differentials": [
+      "Neonato: cardiopatia congênita crítica ducto-dependente — obstrução do coração esquerdo (síndrome do coração esquerdo hipoplásico, coarctação de aorta crítica), lesões dependentes de canal arterial para fluxo pulmonar ou sistêmico; sepse neonatal e distúrbio metabólico/eletrolítico como diferencial não cardíaco",
+      "Lactente: shunt esquerda-direita não corrigido (comunicação interventricular, interatrial, persistência do canal arterial, defeito do septo atrioventricular) — causa mais frequente nessa faixa; miocardite aguda; origem anômala da coronária esquerda a partir da artéria pulmonar (ALCAPA), que pode mimetizar cardiomiopatia dilatada idiopática; cardiomiopatia dilatada primária (genética) ou secundária a erro inato do metabolismo; taquicardia supraventricular sustentada não reconhecida (cardiomiopatia induzida por taquicardia)",
+      "Criança maior e adolescente: cardiomiopatia adquirida (dilatada, hipertrófica, restritiva), miocardite, sequela tardia de cirurgia de cardiopatia congênita (disfunção de ventrículo sistêmico não morfologicamente esquerdo, insuficiência valvar residual), cardiotoxicidade por quimioterapia (antraciclina), febre reumática/valvopatia adquirida, endocardite infecciosa",
+      "Em qualquer idade com fisiologia univentricular (por exemplo, após estadiamento de Fontan): descompensação da circulação de Fontan é diagnóstico diferencial obrigatório, com fisiopatologia distinta da IC biventricular clássica — fluxo pulmonar passivo dependente de retorno venoso e resistência vascular pulmonar baixa, não de uma bomba subpulmonar; abordada em detalhe em verbete próprio desta plataforma, sem aprofundamento neste documento"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico (exame de primeira linha)",
+      "BNP ou NT-proBNP seriado, sempre interpretado contra referência pediátrica por idade/dia de vida, nunca contra o corte do adulto (Nir A et al., PMID 18600369; Palm J et al., PMID 32305952)",
+      "Eletrocardiograma de 12 derivações — triagem de arritmia e de padrão isquêmico (ondas Q anormais em derivações laterais sugerem ALCAPA em lactente)",
+      "Radiografia de tórax — cardiomegalia, congestão pulmonar",
+      "Teste de caminhada de 6 minutos (TC6) adaptado à idade, em criança maior capaz de cooperar, sobretudo em cardiopatia congênita complexa e fisiologia de Fontan — reprodutibilidade teste-reteste boa (coeficiente de correlação intraclasse 0,93) e correlação moderada a forte com o VO2 de pico do teste cardiopulmonar (r=0,62) (Qu J et al., Front Pediatr 2022, PMID 36452347)",
+      "Ressonância magnética cardíaca — caracterização de fibrose/massa quando cardiomiopatia é considerada, frequentemente exigindo sedação em criança pequena",
+      "Triagem metabólica e genética dirigida quando há suspeita de cardiomiopatia (hemograma, painel metabólico, troponina, creatinoquinase, painel tireoidiano, aminoácidos plasmáticos, ácidos orgânicos urinários, carnitina/acilcarnitinas, painel genético conforme fenótipo)",
+      "Cateterismo cardíaco com teste de vasorreatividade pulmonar — reservado à avaliação de IC avançada/candidatura a transplante, não à investigação inicial"
+    ],
+    "red_flags": [
+      "Choque cardiogênico ou sinais de baixo débito/hipoperfusão em qualquer idade",
+      "Frequência cardíaca de repouso muito elevada associada a padrão respiratório anormal, ritmo de galope e hepatomegalia importante em lactente (critérios originais de IC grave de Ross)",
+      "Cianose central ou deterioração súbita em neonato — suspeitar de lesão ducto-dependente com fechamento do canal arterial",
+      "Falha de crescimento ou dificuldade alimentar grave em lactente com sinais de IC",
+      "Arritmia com risco de vida, síncope em esforço ou parada cardíaca abortada",
+      "Nova hipoxemia, síncope ou choque em paciente com fisiologia univentricular/Fontan — não presumir 'normal do Fontan' sem comparar ao basal individual",
+      "Disfunção ventricular sistólica significativa nova ao ecocardiograma"
+    ],
+    "ambulatory_flow": [
+      "Classificar por Ross (lactente) ou NYHA (criança maior/adolescente) e pelo estadiamento ACC/AHA A-D, este último orientando decisões de maior peso como indicação de dispositivo ou transplante",
+      "Investigar ativamente a causa por faixa etária antes de rotular como idiopática — shunt não corrigido e ALCAPA no lactente, cardiomiopatia genética/adquirida na criança maior",
+      "Otimização farmacológica gradual guiada por peso, função renal e tolerância clínica, com reavaliação clínica e de biomarcador seriada",
+      "Encaminhar precocemente a centro de cardiologia pediátrica especializado em IC avançada quando houver progressão para estágio C refratário ou D, sem aguardar deterioração hemodinâmica franca",
+      "Vigilância nutricional estruturada em lactente — a dificuldade alimentar é, ao mesmo tempo, sintoma e determinante de desfecho",
+      "Rastreio genético e aconselhamento familiar quando a etiologia é cardiomiopatia",
+      "Planejamento de transição estruturada do cuidado de cardiologia pediátrica para a equipe de cardiologia do adulto na adolescência tardia"
+    ],
+    "emergency_flow": [
+      "Estabilização ABC, monitorização contínua e avaliação imediata de sinais de choque ou IC descompensada",
+      "Suporte inotrópico/vasoativo individualizado; não há agente ou dose universal — seguir protocolo de choque pediátrico do centro",
+      "Corrigir precipitantes ativamente: arritmia, infecção, desidratação/hipovolemia, anemia, distúrbio eletrolítico e acidobásico",
+      "Evitar sobrecarga volêmica indiscriminada diante de disfunção ventricular; em fisiologia univentricular/Fontan, ponderar que hipovolemia também reduz diretamente o débito — não existe bolus universal",
+      "Considerar transferência precoce a centro com suporte circulatório mecânico (ECMO/dispositivo de assistência ventricular) diante de deterioração refratária ao tratamento clínico inicial",
+      "Em paciente com fisiologia univentricular/Fontan, não aplicar automaticamente a lógica da IC biventricular — priorizar retorno venoso, resistência vascular pulmonar baixa e ventilação com pressão positiva cautelosa; buscar ativamente arritmia ou obstrução corrigível do circuito antes de escalar suporte",
+      "Acionar avaliação urgente de transplante diante de síncope, parada cardíaca abortada, arritmia hemodinamicamente significativa recorrente ou choque refratário à otimização inicial"
+    ],
+    "treatment_summary": "O tratamento farmacológico crônico da IC pediátrica é, em grande parte, extrapolado do adulto — ao contrário do adulto, para quem há múltiplos ensaios clínicos randomizados robustos por classe terapêutica, praticamente não há ensaio clínico randomizado pediátrico dedicado para inibidor da enzima conversora de angiotensina (IECA), bloqueador do receptor de angiotensina (BRA) ou antagonista do receptor mineralocorticoide — o uso na criança é apoiado por extrapolação de estudos de adulto, dado pediátrico limitado e consenso de especialistas (Das BB, Children 2024, PMID 39062308). Diuréticos permanecem o pilar do controle sintomático congestivo. Betabloqueador é amplamente usado (recomendação de classe IIa, nível de evidência C nas diretrizes propostas de 2024), mas o único grande ensaio pediátrico dedicado — o PICES, com carvedilol — não mostrou diferença significativa no desfecho composto de piora clínica na população geral estudada; um achado mais específico do mesmo ensaio, relevante para decisão individualizada, foi a interação estatisticamente significativa entre tratamento e morfologia do ventrículo sistêmico (p=0,02): tendência de benefício quando o ventrículo sistêmico é um ventrículo esquerdo morfológico, e tendência não benéfica quando não é — como na fisiologia univentricular com ventrículo sistêmico de morfologia direita (Shaddy RE et al., JAMA 2007, PMID 17848651). O inibidor da neprilisina e do receptor de angiotensina (ARNI, combinação sacubitril-valsartana) tem ensaio pediátrico dedicado — o PANORAMA-HF, com 375 crianças de 1 mês a menos de 18 anos com disfunção sistólica de ventrículo esquerdo e fisiologia biventricular, comparando ARNI a enalapril por 52 semanas: não houve diferença significativa no desfecho primário de ordenação global de gravidade (probabilidade de Mann-Whitney 0,52; IC95% 0,47-0,58; p=0,42), com incidência semelhante de eventos adversos entre os grupos (88,8% com ARNI vs. 87,8% com enalapril) — o benefício de superioridade sobre IECA visto no adulto (PARADIGM-HF) não se confirmou na criança para esse desfecho primário, ainda que o perfil de segurança tenha sido considerado aceitável. Segundo diretrizes propostas de 2024 da ISHLT (classes e níveis pendentes de confirmação linha a linha na diretriz pediátrica de IC vigente, publicada em 2025), o ARNI é considerado alternativa razoável ao IECA/BRA acima de 1 ano em disfunção sistólica pediátrica (classe IIa, nível de evidência B) (Shaddy R et al., Circulation 2024, PMID 39319469; Irving C et al., J Heart Lung Transplant 2025, PMID 40838915; Das BB, PMID 39062308). Ivabradina tem indicação regulatória específica em cardiomiopatia dilatada pediátrica sintomática, em ritmo sinusal e com frequência cardíaca elevada, a partir de 6 meses de idade — sem que dose ou esquema sejam reproduzidos neste documento. Nos casos refratários à otimização clínica (estágio D), dispositivo de assistência ventricular pediátrica é usado como ponte para recuperação, para decisão ou para transplante; o transplante cardíaco é a opção definitiva na IC pediátrica terminal sem alternativa cirúrgica ou farmacológica capaz de estender a sobrevida com qualidade aceitável — indicações por subtipo, suporte circulatório de ponte e desfechos do registro internacional têm verbete próprio dedicado nesta plataforma, sem duplicação de conteúdo aqui.",
+    "monitoring": [
+      "Reavaliação seriada da classe de Ross (lactente) ou NYHA (criança maior), integrada ao estadiamento ACC/AHA",
+      "BNP/NT-proBNP seriado, sempre comparado à referência pediátrica por idade — nunca a um valor fixo (Nir A et al., PMID 18600369; Palm J et al., PMID 32305952)",
+      "Ecocardiograma seriado com intervalo individualizado por etiologia e estágio",
+      "Teste de caminhada de 6 minutos adaptado à idade em criança maior cooperativa, sobretudo em cardiopatia congênita complexa e fisiologia de Fontan — o achado mais relevante na prática costuma ser a queda da distância percorrida em avaliações seriadas do mesmo paciente, sinalizando piora funcional antes de sintomas floridos em repouso (Qu J et al., Front Pediatr 2022, PMID 36452347)",
+      "Vigilância de crescimento pondero-estatural e desenvolvimento, particularmente em lactente",
+      "Monitorização de eletrólitos e função renal durante uso crônico de diurético e de fármacos do eixo renina-angiotensina-aldosterona",
+      "Em fisiologia univentricular/Fontan, comparação sistemática da saturação com o basal individual do paciente, não com um valor de referência populacional"
+    ],
+    "special_populations": [
+      "Neonato: IC nessa faixa é, na esmagadora maioria, de causa estrutural ducto-dependente — cardiopatia congênita crítica com fechamento do canal arterial; investigação e conduta priorizam reconhecimento e estabilização emergencial, não farmacoterapia crônica de IC",
+      "Lactente: maior incidência absoluta de IC entre todas as faixas pediátricas, concentrando quase metade dos casos associados a cardiopatia congênita já no primeiro ano de vida; sinal clínico central é a dificuldade alimentar (mamada prolongada, diaforese, ganho de peso insuficiente), não a dispneia relatada; a escala de Ross é a ferramenta de classificação apropriada, não a NYHA",
+      "Criança maior e adolescente: perfil etiológico desloca-se para cardiomiopatia adquirida e sequela tardia de cirurgia de cardiopatia congênita; a classificação NYHA torna-se aplicável ao lado da Ross",
+      "Fisiologia univentricular/pós-estadiamento de Fontan: contexto especial com fisiopatologia distinta da IC biventricular clássica — débito depende de retorno venoso, resistência vascular pulmonar baixa e ausência de obstrução no circuito, não de uma bomba ventricular subpulmonar; extrapolar diretamente a lógica farmacológica e hemodinâmica da IC biventricular pode ser inadequado, com sinal de interação negativa a betabloqueador especificamente quando o ventrículo sistêmico não é um ventrículo esquerdo morfológico (Shaddy RE et al., PMID 17848651); abordagem detalhada em verbete próprio desta plataforma sobre descompensação aguda da circulação de Fontan"
+    ],
+    "assistant_questions": [
+      {
+        "id": "age_group",
+        "label": "Faixa etária",
+        "type": "select",
+        "required": true,
+        "section": "Dados básicos",
+        "options": [
+          {
+            "value": "neonato",
+            "label": "Neonato (até 28 dias)"
+          },
+          {
+            "value": "lactente",
+            "label": "Lactente (29 dias a 2 anos)"
+          },
+          {
+            "value": "crianca_maior",
+            "label": "Criança maior (2 a 12 anos)"
+          },
+          {
+            "value": "adolescente",
+            "label": "Adolescente (12 a 18 anos)"
+          }
+        ]
+      },
+      {
+        "id": "feeding_difficulty",
+        "label": "Lactente com dificuldade para mamar (mamada prolongada, diaforese, volume reduzido) ou ganho de peso insuficiente?",
+        "type": "boolean",
+        "section": "Apresentação"
+      },
+      {
+        "id": "exertional_symptom",
+        "label": "Criança maior ou adolescente com dispneia, fadiga ou intolerância ao esforço?",
+        "type": "boolean",
+        "section": "Apresentação"
+      },
+      {
+        "id": "shock_or_low_output",
+        "label": "Há choque, hipoperfusão ou sinais de baixo débito cardíaco?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "univentricular_physiology",
+        "label": "Paciente tem fisiologia univentricular (por exemplo, circulação de Fontan)?",
+        "type": "boolean",
+        "section": "Contexto especial"
+      },
+      {
+        "id": "new_desaturation_fontan",
+        "label": "Se fisiologia univentricular: houve nova hipoxemia ou queda de saturação em relação ao basal do paciente?",
+        "type": "boolean",
+        "section": "Red flags"
+      },
+      {
+        "id": "life_threatening_arrhythmia",
+        "label": "Há arritmia com risco de vida, síncope em esforço ou parada cardíaca abortada?",
+        "type": "boolean",
+        "section": "Red flags"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "choque",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "shock_or_low_output",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Choque ou baixo débito cardíaco em criança com insuficiência cardíaca"
+          ],
+          "emergency_flow": [
+            "Monitorização contínua, suporte hemodinâmico especializado e avaliação de transferência para centro com suporte circulatório mecânico"
+          ]
+        }
+      },
+      {
+        "id": "arritmia-maligna",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "life_threatening_arrhythmia",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Arritmia com risco de vida, síncope em esforço ou parada cardíaca abortada em IC pediátrica"
+          ],
+          "emergency_flow": [
+            "ECG contínuo/Holter e priorização de avaliação de transplante quando aplicável"
+          ]
+        }
+      },
+      {
+        "id": "fontan-dessaturacao",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "univentricular_physiology",
+              "op": "truthy"
+            },
+            {
+              "field": "new_desaturation_fontan",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Nova hipoxemia ou queda de saturação em paciente com fisiologia univentricular/Fontan — não presumir 'normal do Fontan'"
+          ],
+          "messages": [
+            "A lógica da IC biventricular não deve ser aplicada automaticamente; priorizar investigação de arritmia, trombose/obstrução do circuito e otimização de retorno venoso/resistência vascular pulmonar, conforme o verbete específico de descompensação de Fontan desta plataforma"
+          ]
+        }
+      },
+      {
+        "id": "lactente-alimentacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "age_group",
+              "op": "eq",
+              "value": "lactente"
+            },
+            {
+              "field": "feeding_difficulty",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Dificuldade alimentar em lactente (mamada prolongada, diaforese, ganho de peso insuficiente) é o sinal equivalente à dispneia do adulto e deve ser classificada pela escala de Ross, não pela NYHA; investigar ativamente shunt não corrigido, ALCAPA e cardiomiopatia antes de atribuir a refluxo ou cólica"
+          ]
+        }
+      },
+      {
+        "id": "neonato-suspeita-ducto-dependente",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "age_group",
+              "op": "eq",
+              "value": "neonato"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Em neonato, a IC é predominantemente de causa estrutural ducto-dependente; priorizar investigação de cardiopatia congênita crítica com fechamento do canal arterial antes de assumir causa adquirida"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "insuficiência cardíaca",
+      "pediatria",
+      "classificação de Ross",
+      "NYHA",
+      "cardiomiopatia pediátrica",
+      "BNP",
+      "NT-proBNP",
+      "sacubitril-valsartana",
+      "PANORAMA-HF",
+      "carvedilol",
+      "PICES",
+      "transplante cardíaco pediátrico",
+      "fisiologia univentricular",
+      "circulação de Fontan",
+      "ALCAPA"
+    ],
+    "source_refs": [
+      "Ross RD, Bollinger RO, Pinsky WW. Grading the severity of congestive heart failure in infants. Pediatr Cardiol. 1992;13(2):72-75. DOI: 10.1007/BF00798207. PMID: 1614922.",
+      "Ross RD. The Ross classification for heart failure in children after 25 years: a review and an age-stratified revision. Pediatr Cardiol. 2012;33(8):1295-1300. DOI: 10.1007/s00246-012-0306-8. PMID: 22476605.",
+      "Das BB. A Review of Contemporary and Future Pharmacotherapy for Chronic Heart Failure in Children. Children (Basel). 2024;11(7):859. DOI: 10.3390/children11070859. PMID: 39062308.",
+      "Irving C, et al.; International Society for Heart and Lung Transplantation. The International Society for Heart and Lung Transplantation Guidelines for the Management of Pediatric Heart Failure (Update From 2014). J Heart Lung Transplant. 2025;44(10):e21-e71. DOI: 10.1016/j.healun.2025.06.003. PMID: 40838915.",
+      "Moeinipour Y, Moeinipour A, Alizadeh B, Raesi R, Naghibi M. The Incidence of Heart Failure in Children with Congenital Heart Disease: A Prospective Cohort Study. Curr Cardiol Rev. 2025;21(5):e1573403X345783. DOI: 10.2174/011573403X345783250128052038. PMID: 39931850.",
+      "Shaddy R, Burch M, Kantor PF, et al.; PANORAMA-HF Investigators. Sacubitril/Valsartan in Pediatric Heart Failure (PANORAMA-HF): A Randomized, Multicenter, Double-Blind Trial. Circulation. 2024;150(22):1756-1766. DOI: 10.1161/CIRCULATIONAHA.123.066605. PMID: 39319469.",
+      "Shaddy RE, Boucek MM, Hsu DT, et al.; Pediatric Carvedilol Study Group. Carvedilol for children and adolescents with heart failure: a randomized controlled trial. JAMA. 2007;298(10):1171-1179. DOI: 10.1001/jama.298.10.1171. PMID: 17848651.",
+      "Nir A, Lindinger A, Rauh M, Bar-Oz B, Laer S, Schwachtgen L, Koch A, Falkenberg J, Mir TS. NT-pro-B-type natriuretic peptide in infants and children: reference values based on combined data from four studies. Pediatr Cardiol. 2009;30(1):3-8. PMID: 18600369.",
+      "Palm J, Hoffmann G, Klawonn F, Tutarel O, Palm H, Holdenrieder S, Ewert P. Continuous, complete and comparable NT-proBNP reference ranges in healthy children. Clin Chem Lab Med. 2020;58(9):1509-1516. PMID: 32305952.",
+      "Qu J, Shi H, Guo Y, et al. Is the six-minute walk test still reliable compared to cardiopulmonary exercise test for exercise capacity in children with congenital heart disease? Front Pediatr. 2022;10:965739. PMID: 36452347.",
+      "Lipshultz SE, Sleeper LA, Towbin JA, et al. The incidence of pediatric cardiomyopathy in two regions of the United States. N Engl J Med. 2003;348(17):1647-1655. DOI: 10.1056/NEJMoa021715. PMID: 12711739.",
+      "Raissadati A, Tolani D, Profita EL. Cardiomyopathy as indication for pediatric heart transplantation. JHLT Open. 2025;10:100360. DOI: 10.1016/j.jhlto.2025.100360. PMID: 40843315.",
+      "Singh TP, Cherikh WS, Hsich E, et al.; International Society for Heart and Lung Transplantation. The International Thoracic Organ Transplant Registry of the International Society for Heart and Lung Transplantation: Twenty-fifth pediatric heart transplantation report-2022. J Heart Lung Transplant. 2022;41(10):1357-1365. PMID: 35989143.",
+      "Rychik J, Atz AM, Celermajer DS, et al.; American Heart Association. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. DOI: 10.1161/CIR.0000000000000696. PMID: 31256636."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/1614922/",
+      "https://pubmed.ncbi.nlm.nih.gov/22476605/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11276462/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001151",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12307988/",
+      "https://pubmed.ncbi.nlm.nih.gov/39319469/",
+      "https://pubmed.ncbi.nlm.nih.gov/17848651/",
+      "https://pubmed.ncbi.nlm.nih.gov/18600369/",
+      "https://pubmed.ncbi.nlm.nih.gov/32305952/",
+      "https://pubmed.ncbi.nlm.nih.gov/36452347/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10281815/",
+      "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000696"
+    ],
+    "related_document_slugs": [
+      "insuficiencia-cardiaca-pediatrica-classificacao-causas-por-faixa-etaria-e-manejo-farmacologico",
+      "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+      "alcapa-isquemia-e-insuficiencia-cardiaca-no-lactente",
+      "transplante-cardiaco-pediatrico-indicacoes-contraindicacoes-e-desfechos-do-registro-ishlt",
+      "descompensacao-aguda-da-circulacao-de-fontan"
+    ],
+    "patient_material_slug": "alimentacao-do-bebe-com-cardiopatia-congenita",
+    "review_status": "pendente_revisao",
+    "review_note": "Ficha nova do Guia de Doenças (não havia estrutura formal para IC pediátrica — apenas o verbete narrativo em content/Cardiologia_pediátrica/ e os verbetes de IC do adulto e do idoso). Síntese redigida a partir do corpus já publicado desta plataforma (verbete narrativo de classificação/causas/manejo farmacológico, casos clínicos sobre PANORAMA-HF e sobre PICES/carvedilol em fisiologia univentricular, e exames de BNP/NT-proBNP e TC6 em pediatria), com 14 PMIDs verificados individualmente via NCBI E-utilities nesta sessão. Nenhuma dose de fármaco foi incluída, inclusive na menção ao PANORAMA-HF (apenas achado de eficácia/segurança). Classificação de Ross reproduzida conforme a fonte primária de 1992 e a tabela comparativa NYHA/Ross de Moeinipour et al. 2025. Fisiologia univentricular/Fontan tratada como diferencial e contexto especial, sem aprofundamento (fisiopatologia detalhada em verbete próprio já publicado). Transplante cardíaco pediátrico mencionado apenas como opção terapêutica avançada, remetendo ao verbete dedicado, sem duplicar indicações/desfechos do registro ISHLT. Pendente revisão médica antes de publicação.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
