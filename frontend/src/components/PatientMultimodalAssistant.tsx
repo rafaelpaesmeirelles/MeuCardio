@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
 
 type Suggestion = {
@@ -31,15 +31,14 @@ export default function PatientMultimodalAssistant({patientId,currentEncounterId
     setSelected(current=>current?rows.find(row=>row.id===current.id)??rows[0]??null:rows[0]??null);
   }
   useEffect(()=>{setSelected(null);setError("");setInfo("");void load().catch(e=>setError(messageOf(e)));},[patientId]); // eslint-disable-line react-hooks/exhaustive-deps
-  const accept=useMemo(()=>status?.supported_media_types.includes(file?.type||"")??true,[status,file]);
 
   async function upload(){
     if(!file)return;setBusy(true);setError("");setInfo("");
     try{
       const at=new Date(performedAt);if(Number.isNaN(at.getTime()))throw new Error("Informe data e hora válidas.");
-      const row=await api.uploadFormulario<Exam>(`/pacientes/${patientId}/exames-multimodais`,[{campo:"arquivo",arquivo:file}],{
-        exam_type:examType,performed_at:at.toISOString(),notes:notes.trim(),source_encounter_id:currentEncounterId?String(currentEncounterId):"",
-      });
+      const fields:Record<string,string>={exam_type:examType,performed_at:at.toISOString(),notes:notes.trim()};
+      if(currentEncounterId)fields.source_encounter_id=String(currentEncounterId);
+      const row=await api.uploadFormulario<Exam>(`/pacientes/${patientId}/exames-multimodais`,[{campo:"arquivo",arquivo:file}],fields);
       setFile(null);setNotes("");await load();setSelected(row);setInfo("Exame armazenado de forma cifrada no prontuário.");onChanged?.();
     }catch(e){setError(messageOf(e));}finally{setBusy(false);}
   }
@@ -75,8 +74,7 @@ export default function PatientMultimodalAssistant({patientId,currentEncounterId
       <label>Arquivo<input type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,.txt,.csv" onChange={e=>setFile(e.target.files?.[0]??null)}/></label>
     </div>
     <label style={{display:"block",marginTop:"0.5rem"}}>Observação sobre o exame<input value={notes} onChange={e=>setNotes(e.target.value)} placeholder="Opcional; não use identificadores desnecessários"/></label>
-    {file&&!accept&&<p className="pep-error">O formato selecionado não é aceito pelo provedor atual.</p>}
-    <button className="botao" style={{marginTop:"0.5rem"}} disabled={!file||busy||!accept} onClick={()=>void upload()}>{busy?"Processando…":"Armazenar exame no prontuário"}</button>
+    <button className="botao" style={{marginTop:"0.5rem"}} disabled={!file||busy} onClick={()=>void upload()}>{busy?"Processando…":"Armazenar exame no prontuário"}</button>
 
     {!!exams.length&&<div className="grade grade--3" style={{marginTop:"0.8rem"}}>
       <div className="cartao"><strong>Exames armazenados</strong>{exams.map(row=><button key={row.id} type="button" className="botao botao--secundario" style={{display:"block",width:"100%",marginTop:"0.4rem",textAlign:"left"}} onClick={()=>{setSelected(row);setFinalInterpretation("");setReviewNote("");}}>{row.exam_type_label}<small style={{display:"block"}}>{when(row.performed_at)} · {row.latest_suggestion?.status??"sem análise"}</small></button>)}</div>
