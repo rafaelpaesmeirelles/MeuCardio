@@ -33483,5 +33483,65 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "acometimento-cardiovascular-na-doenca-falciforme-hipertensao-pulmonar-e-cardiomiopatia",
+    "condicao": "Doença falciforme — acometimento cardiovascular: hipertensão pulmonar, cardiomiopatia e risco de morte súbita",
+    "resumo": "Checklist clínico sobre o acometimento cardiovascular primário da doença falciforme (hemoglobinopatia SS e variantes) — hipertensão pulmonar por hemólise crônica, cardiomiopatia/disfunção diastólica por estado de alto débito, estratificação de risco por TRV e NT-proBNP, particularidades de manejo farmacológico e risco de morte súbita. Preenche lacuna do corpus: hoje a doença falciforme só é citada tangencialmente dentro da cardiomiopatia por sobrecarga de ferro em pacientes politransfundidos, sem cobertura do acometimento cardiovascular primário da doença de base, apesar de sua alta prevalência no Brasil, sobretudo na população afrodescendente. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre o tema nesta busca; a referência de manejo mais robusta e verificada é a diretriz da American Society of Hematology (ASH, 2019).",
+    "documento_origem": null,
+    "theme": "Populações especiais",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Gladwin MT, Sachdev V, Jison ML, et al. Pulmonary hypertension as a risk factor for death in patients with sickle cell disease. N Engl J Med. 2004;350(9):886-895. DOI: 10.1056/NEJMoa035477. PMID: 14985486.",
+      "Liem RI, Lanzkron S, Coates TD, et al. American Society of Hematology 2019 guidelines for sickle cell disease: cardiopulmonary and kidney disease. Blood Adv. 2019;3(23):3867-3897. DOI: 10.1182/bloodadvances.2019000916. PMID: 31794601.",
+      "Willen SM, Gladwin MT. What is the role of screening for pulmonary hypertension in adults and children with sickle cell disease? Hematology Am Soc Hematol Educ Program. 2017;2017(1):431-434. DOI: 10.1182/asheducation-2017.1.431. PMID: 29222289.",
+      "Wood KC, Gladwin MT, Straub AC. Sickle cell disease: at the crossroads of pulmonary hypertension and diastolic heart failure. Heart. 2020;106(8):562-568. DOI: 10.1136/heartjnl-2019-314810. PMID: 31822569.",
+      "Sachdev V, Machado RF, Shizukuda Y, et al. Diastolic dysfunction is an independent risk factor for death in patients with sickle cell disease. J Am Coll Cardiol. 2007;49(4):472-479. DOI: 10.1016/j.jacc.2006.09.038. PMID: 17258093.",
+      "Machado RF, Anthi A, Steinberg MH, et al; MSH Investigators. N-terminal pro-brain natriuretic peptide levels and risk of death in sickle cell disease. JAMA. 2006;296(3):310-318. DOI: 10.1001/jama.296.3.310. PMID: 16849664.",
+      "Machado RF, Hildesheim M, Mendelsohn L, Remaley AT, Kato GJ, Gladwin MT. NT-pro brain natriuretic peptide levels and the risk of death in the Cooperative Study of Sickle Cell Disease. Br J Haematol. 2011;154(4):512-520. DOI: 10.1111/j.1365-2141.2011.08777.x. PMID: 21689089.",
+      "d'Humières T, Saba J, Savale L, et al. Determinants of ventricular arrhythmias in sickle cell anemia: toward better prevention of sudden cardiac death. Blood. 2023;142(5):409-420. DOI: 10.1182/blood.2022019571. PMID: 37216685."
+    ],
+    "itens": [
+      {
+        "id": "hpsf-01",
+        "categoria": "Hipertensão pulmonar",
+        "obrigatorio": true,
+        "texto": "Na doença falciforme (hemoglobinopatia SS e variantes), a hipertensão pulmonar (HP) é uma complicação comum, fisiopatologicamente distinta da HP arterial idiopática: liga-se à hemólise intravascular crônica (consumo de óxido nítrico e disfunção endotelial), ao estado circulatório de alto débito da anemia crônica e a fenômenos tromboembólicos pulmonares recorrentes. O ecocardiograma Doppler com medida da velocidade de regurgitação tricúspide (TRV) é a ferramenta de rastreio recomendada: em coorte prospectiva do NIH (n=195 adultos), TRV ≥2,5 m/s esteve presente em 32% dos pacientes e associou-se a risco de óbito 10 vezes maior (RR 10,1; IC95% 2,2-47,0; p<0,001), mantido após ajuste para outros fatores de risco. IMPORTANTE: TRV elevada ao ecocardiograma é achado de RASTREIO, não diagnóstico definitivo de hipertensão pulmonar — a confirmação exige cateterismo cardíaco direito, com medida direta da pressão da artéria pulmonar e da resistência vascular pulmonar, antes de se firmar o diagnóstico e considerar terapia específica. A diretriz ASH 2019 recomenda o rastreio ecocardiográfico de pacientes sintomáticos e a confirmação hemodinâmica dos casos suspeitos, com grau de recomendação condicional pela qualidade limitada da evidência direta disponível.",
+        "origem_secao": "Gladwin MT et al., N Engl J Med. 2004;350(9):886-895 (PMID 14985486) — coorte original TRV/mortalidade; Willen SM, Gladwin MT, Hematology Am Soc Hematol Educ Program. 2017 (PMID 29222289) — caso ilustrativo com TRV 5,93 m/s confirmado por cateterismo direito (PASP 147/49 mmHg); Liem RI et al., Blood Adv. 2019;3(23):3867-3897 (PMID 31794601) — diretriz ASH, recomendações de rastreio e confirmação diagnóstica."
+      },
+      {
+        "id": "hpsf-02",
+        "categoria": "Cardiomiopatia",
+        "obrigatorio": true,
+        "texto": "A anemia hemolítica crônica da doença falciforme impõe um estado circulatório de alto débito sustentado (aumento crônico de volume sistólico e frequência cardíaca compensando a baixa capacidade de transporte de oxigênio) que, ao longo dos anos, remodela o coração: dilatação de câmaras (átrio esquerdo, ventrículos), hipertrofia biventricular e disfunção diastólica do ventrículo esquerdo, configurando um fenótipo que se assemelha à insuficiência cardíaca com fração de ejeção preservada (ICFEp). Em coorte de 235 pacientes com doença falciforme avaliados por ecocardiograma (com subgrupo de 141 avaliados por Doppler tecidual), disfunção diastólica (razão E/A reduzida) esteve presente em 18% e associou-se, de forma independente da TRV, a risco de óbito 3,5 vezes maior (RR 3,5; IC95% 1,5-8,4; p<0,001); a combinação de disfunção diastólica e hipertensão pulmonar elevou o risco de óbito para 12 vezes (RR 12,0; IC95% 3,8-38,1; p<0,001). Esses achados sustentam a avaliação ecocardiográfica sistemática — incluindo função diastólica, não apenas TRV — como ferramenta de estratificação de risco nessa população.",
+        "origem_secao": "Sachdev V et al., J Am Coll Cardiol. 2007;49(4):472-479 (PMID 17258093) — disfunção diastólica como fator de risco independente de óbito; Wood KC, Gladwin MT, Straub AC, Heart. 2020;106(8):562-568 (PMID 31822569) — revisão do fenótipo de ICFEp/hipertrofia biventricular/fibrose miocárdica na doença falciforme."
+      },
+      {
+        "id": "hpsf-03",
+        "categoria": "Biomarcadores",
+        "obrigatorio": true,
+        "texto": "O NT-proBNP é biomarcador prognóstico validado na doença falciforme, correlacionando-se com a gravidade da hipertensão pulmonar (correlação com TRV, R=0,50, p<0,001 na coorte do NIH) e funcionando como preditor independente de mortalidade. Um valor de corte de NT-proBNP ≥160 pg/mL (ng/L) foi identificado em coorte do NIH (n=230) com valor preditivo positivo de 78% para diagnóstico de hipertensão pulmonar e associação a risco de óbito 5 vezes maior (RR 5,1; IC95% 2,1-12,5; p<0,001); esse mesmo ponto de corte foi validado de forma independente em coorte maior e distinta — o Cooperative Study of Sickle Cell Disease (758 participantes, 428 crianças e 330 adultos) — com NT-proBNP ≥160 ng/L presente em 27,6% dos adultos e associado a risco de óbito 6,24 vezes maior (RR 6,24; IC95% 2,9-13,3; p<0,0001). Na prática, o uso combinado de TRV (ecocardiograma) e NT-proBNP (biomarcador sérico, mais acessível e repetível) permite estratificar risco cardiovascular e priorizar pacientes para investigação hemodinâmica confirmatória (cateterismo direito) e acompanhamento mais próximo.",
+        "origem_secao": "Machado RF et al.; MSH Investigators, JAMA. 2006;296(3):310-318 (PMID 16849664) — definição do ponto de corte NT-proBNP ≥160 pg/mL em coorte do NIH e validação na coorte MSH; Machado RF et al., Br J Haematol. 2011;154(4):512-520 (PMID 21689089) — validação independente do ponto de corte na coorte CSSCD."
+      },
+      {
+        "id": "hpsf-04",
+        "categoria": "Manejo específico",
+        "obrigatorio": true,
+        "texto": "O manejo cardiovascular na doença falciforme tem particularidades que o distinguem do manejo convencional de insuficiência cardíaca/hipertensão pulmonar: (a) diuréticos devem ser usados com cautela nesses pacientes, pois diurese agressiva pode causar desidratação e hemoconcentração, fatores reconhecidos na prática hematológica como gatilho de falcização eritrocitária e de crise vaso-oclusiva — esta é uma cautela amplamente aceita clinicamente, mas nesta busca NÃO foi identificado um estudo controlado dedicado que quantifique esse risco com um limiar específico de dose ou volume; a recomendação prática é de individualização e cautela (não uma diretriz numérica verificada), idealmente em conjunto com hematologia. (b) Quanto à hidroxiureia, o dado direto e verificado disponível (coorte NIH, Gladwin et al. 2004) mostrou que seu uso NÃO esteve associado a menor prevalência de hipertensão pulmonar Doppler-definida nessa análise transversal — a hipertensão pulmonar mostrou-se, nesse estudo, resistente à hidroxiureia; isso não deve ser confundido com ausência de benefício da hidroxiureia sobre outros desfechos bem estabelecidos da doença falciforme (redução de crises vaso-oclusivas e de síndrome torácica aguda), que não foram o objeto desta busca. (c) Quanto ao papel da terapia transfusional crônica especificamente na modificação do risco cardiovascular (hipertensão pulmonar/cardiomiopatia), esta busca NÃO localizou um estudo controlado dedicado e verificado que quantifique esse efeito; a indicação de transfusão crônica nessa população deve seguir critérios hematológicos já estabelecidos (ex.: prevenção primária/secundária de AVC), com o efeito cardiovascular acompanhado caso a caso, sem assumir benefício comprovado sobre hipertensão pulmonar/cardiomiopatia sem revisão adicional dedicada da literatura. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre manejo cardiovascular na doença falciforme; a referência mais robusta disponível é a diretriz ASH 2019.",
+        "origem_secao": "Gladwin MT et al., N Engl J Med. 2004;350(9):886-895 (PMID 14985486) — achado verificado de que uso de hidroxiureia não se associou a menor prevalência de HP nessa coorte; Liem RI et al., Blood Adv. 2019;3(23):3867-3897 (PMID 31794601) — diretriz ASH de manejo cardiopulmonar/renal na doença falciforme; ausência de diretriz SBC dedicada confirmada por busca textual nesta pesquisa (limitação declarada, não uma afirmação de inexistência absoluta)."
+      },
+      {
+        "id": "hpsf-05",
+        "categoria": "Morte súbita",
+        "obrigatorio": true,
+        "texto": "Morte súbita é uma das principais causas de óbito em adultos com doença falciforme, mas seus mecanismos permanecem incompletamente esclarecidos. Estudo prospectivo francês (registro DREPACOEUR, n=100 pacientes com anemia falciforme, 2019-2022), com Holter de 24h, ecocardiograma transtorácico e exames laboratoriais no mesmo dia, identificou arritmia ventricular (taquicardia ventricular sustentada/não sustentada, >500 extrassístoles ventriculares em 24h, ou histórico recente de ablação de TV) em 22% dos pacientes. Sexo masculino (81% vs 34%), strain longitudinal global (GLS) mais alterado (-16% ± 1,9% vs -18,3% ± 2,7%) e contagem de plaquetas mais baixa associaram-se de forma independente a arritmia ventricular; um GLS de corte de -17,5% predisse arritmia ventricular com sensibilidade de 82% e especificidade de 63%. É um estudo observacional piloto (não é diretriz nem ensaio controlado) que aponta a avaliação de deformação miocárdica (strain) como possível ferramenta futura de estratificação de risco rítmico, ainda carecendo de validação prospectiva maior antes de guiar decisões clínicas de rotina. A literatura de revisão menciona também embolia gordurosa medular e comprometimento cardíaco associado a síndrome torácica aguda grave como mecanismos contribuintes de morte súbita nessa população, mas esta busca NÃO confirmou um estudo populacional dedicado que quantifique a contribuição relativa de cada mecanismo — ponto que permanece como lacuna de evidência a ser declarada explicitamente, não uma afirmação verificada de magnitude de risco.",
+        "origem_secao": "d'Humières T, Saba J, Savale L, et al., Blood. 2023;142(5):409-420 (PMID 37216685) — estudo observacional piloto (registro DREPACOEUR) sobre determinantes de arritmia ventricular e prevenção de morte súbita na anemia falciforme."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
