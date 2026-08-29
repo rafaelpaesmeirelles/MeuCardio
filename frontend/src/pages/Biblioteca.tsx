@@ -129,6 +129,18 @@ export default function Biblioteca() {
         </p>
       )}
 
+      <section className="cartao" style={{ margin: "1rem 0 1.25rem" }} aria-labelledby="analise-cientifica-ia-titulo">
+        <p className="eyebrow">IA científica · biblioteca privada</p>
+        <h2 id="analise-cientifica-ia-titulo">Analisar um documento científico</h2>
+        <p style={{ color: "var(--texto-secundario)", maxWidth: "78ch" }}>
+          Envie diretriz, consenso, artigo, estudo ou outra evidência. A IA identifica o documento,
+          resume em português e traduz para sua biblioteca privada quando necessário. Se houver ganho
+          real para o repertório do CorVIA, a incorporação ao acervo compartilhado só ocorre após sua
+          autorização explícita e preserva a fonte original.
+        </p>
+        <Link className="botao" to="/documentos-cientificos-ia">Analisar documento com IA</Link>
+      </section>
+
       {contagensAreas.length > 0 && (
         <section className="cartao" style={{ margin: "1rem 0 1.25rem" }} aria-labelledby="acervo-especializado-titulo">
           <p className="eyebrow">Acervo especializado consolidado</p>
