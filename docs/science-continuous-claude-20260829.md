@@ -952,15 +952,24 @@ mais estreitas/profundas por sub-tema.
   padronizado de triagem pré-participação declarada. 12 fontes via NCBI
   e-utils.
 
-## Lote 43 (planejado)
+## Lote 43 (em andamento, 1 agente)
 
-Gaps óbvios/fáceis do território seguem escassos. Próxima auditoria:
-varredura de conectividade Tudo com Tudo em itens recém-criados nesta
-janela (waves 22-42, ~20 itens) para confirmar backlinks bidirecionais
-quando aplicável; ou retomar território ainda pouco tocado — Métodos
-gráficos e funcionais (legado, baixa prioridade) vs. aprofundamento de
-subtemas dentro de hubs de alta prevalência já existentes (IC, FA,
-SCA) que possam ter lacunas pontuais não descobertas. Confirmar via
-grep + `gh pr list` antes de despachar.
+Tentativa de conectividade: cogitei setar `documento_origem` de 8
+checklists desta janela (CPVT→canalopatias, ACHD×4→cardiopatia-congenita-
+do-adulto, CMH, Chagas, transplante→IC avançada) diretamente para o
+slug do hub de doença. `audit_tudo_com_tudo.py` **rejeitou as 8** —
+`documento_origem` só aceita referência a item tipo `documento`/
+`fluxograma`, não a `SpecialtyDisease` diretamente (mecanismo distinto
+de `related_document_slugs`, que é campo de doença, não de checklist).
+Revertido via `git checkout` antes de qualquer commit — nenhum dano.
+Lição registrada: os `documento_origem: null` desta janela eram
+corretos por ausência de fluxograma/documento dedicado ao subtema, não
+por descuido.
+
+Gap novo encontrado: origem anômala de artéria coronária (AAOCA) —
+2ª causa mais comum de morte súbita em atletas jovens em séries de
+necropsia, sem hub dedicado (só menção tangencial dentro do checklist de
+ETT-ACHD do lote 31). Interseção de congênita/esporte/morte súbita.
+Despachado.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
