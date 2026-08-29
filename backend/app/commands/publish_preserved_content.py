@@ -4,6 +4,10 @@ O reconciliador mantém registros antigos no PostgreSQL para auditoria. Eles
 devem permanecer despublicados mesmo que tenham sido revisados no passado.
 Este comando, mantido para uso operacional, restringe a publicação aos slugs
 presentes nas fontes versionadas do commit atual.
+
+Depois da reconciliação, restaura também os overrides clínicos confirmados pelo
+CorVIA Intelligence. Assim uma atualização científica aplicada entre deploys
+não é perdida quando arquivos versionados são novamente importados para o DB.
 """
 
 from __future__ import annotations
@@ -14,11 +18,7 @@ from typing import Any
 
 from sqlalchemy.orm import Session
 
-from app.commands.reconcile_content import (
-    FRONTS,
-    _canonical_source_slugs,
-    _ensure_source,
-)
+from app.commands.reconcile_content import FRONTS, _canonical_source_slugs, _ensure_source
 from app.core.db import SessionLocal
 
 
@@ -58,9 +58,12 @@ def main() -> int:
     db = SessionLocal()
     try:
         result = publish_preserved_reviewed(db, dry_run=args.dry_run)
+        if not args.dry_run:
+            from app.services.guideline_clinical_update_runtime import reapply_confirmed_updates
+            result["guideline_updates"] = reapply_confirmed_updates(db)
     except Exception as exc:  # noqa: BLE001
-        print(json.dumps({"status": "error", "type": type(exc).__name__, "detail": str(exc)},
-                         ensure_ascii=False, indent=2))
+        db.rollback()
+        print(json.dumps({"status": "error", "type": type(exc).__name__, "detail": str(exc)}, ensure_ascii=False, indent=2))
         return 1
     finally:
         db.close()
