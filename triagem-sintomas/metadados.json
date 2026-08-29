@@ -4649,5 +4649,437 @@
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
     "version": 2
+  },
+  {
+    "slug": "distensao-abdominal-ascite-congestao-cardiaca",
+    "name": "Distensão abdominal/ascite com suspeita de congestão cardíaca direita",
+    "aliases": [
+      "barriga inchada",
+      "ascite",
+      "distensão abdominal",
+      "abdômen inchado"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem de distensão abdominal/ascite para reconhecer o padrão clássico de congestão cardíaca direita (insuficiência cardíaca ou doença tricúspide conhecida, edema de membros inferiores, dispneia, hepatomegalia dolorosa) e diferenciá-lo de causas não cardíacas — hepatopatia primária, uso de álcool e ascite neoplásica — além de sinalizar febre/dor abdominal importante como possível peritonite bacteriana espontânea e ganho de peso rápido como descompensação aguda.",
+    "questions": [
+      {
+        "id": "fever_or_severe_abdominal_pain",
+        "label": "Há febre e/ou dor abdominal importante associada à distensão/ascite?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "acute_dyspnea_hypoxia",
+        "label": "Há dispneia aguda em repouso, ortopneia franca ou hipóxia associada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "hemodynamic_instability",
+        "label": "Há hipotensão, taquicardia sustentada ou outros sinais de baixo débito/instabilidade hemodinâmica?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "rapid_weight_gain",
+        "label": "Houve ganho de peso rápido (dias) ou redução da diurese?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "known_hf_or_tricuspid_disease",
+        "label": "Há insuficiência cardíaca ou doença tricúspide conhecida?",
+        "type": "boolean",
+        "required": true,
+        "section": "História cardíaca"
+      },
+      {
+        "id": "lower_limb_edema",
+        "label": "Há edema de membros inferiores associado?",
+        "type": "boolean",
+        "required": false,
+        "section": "História cardíaca"
+      },
+      {
+        "id": "associated_dyspnea_on_exertion",
+        "label": "Há dispneia aos esforços ou ortopneia crônica associada?",
+        "type": "boolean",
+        "required": false,
+        "section": "História cardíaca"
+      },
+      {
+        "id": "jugular_distension_known",
+        "label": "Há turgência jugular patológica ou ictus deslocado já registrados no exame, se souber informar?",
+        "type": "boolean",
+        "required": false,
+        "section": "História cardíaca"
+      },
+      {
+        "id": "painful_hepatomegaly",
+        "label": "Há hepatomegalia dolorosa ou desconforto/peso em hipocôndrio direito?",
+        "type": "boolean",
+        "required": false,
+        "section": "História cardíaca"
+      },
+      {
+        "id": "onset_pattern",
+        "label": "O quadro é de descompensação aguda/subaguda recente ou crônico e progressivo ao longo de meses a anos?",
+        "type": "select",
+        "required": true,
+        "section": "Padrão evolutivo",
+        "options": [
+          {
+            "value": "agudo",
+            "label": "Agudo/subagudo, descompensação recente"
+          },
+          {
+            "value": "cronico_progressivo",
+            "label": "Crônico, progressivo ao longo de meses a anos"
+          }
+        ]
+      },
+      {
+        "id": "distension_duration_weeks",
+        "label": "Há quantas semanas a distensão abdominal vem evoluindo?",
+        "type": "number",
+        "required": false,
+        "section": "Padrão evolutivo",
+        "min": 0,
+        "max": 520,
+        "unit": "semanas"
+      },
+      {
+        "id": "known_liver_disease",
+        "label": "Há história de doença hepática crônica (hepatite, cirrose, esteatose avançada) conhecida?",
+        "type": "boolean",
+        "required": true,
+        "section": "Causas não cardíacas"
+      },
+      {
+        "id": "alcohol_use",
+        "label": "Há uso de álcool significativo ou de risco?",
+        "type": "boolean",
+        "required": false,
+        "section": "Causas não cardíacas"
+      },
+      {
+        "id": "oncologic_alarm_weight_loss",
+        "label": "Há perda de peso não intencional associada a outros sinais de alarme oncológico (massa palpável, sangramento, anorexia progressiva)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Causas não cardíacas"
+      }
+    ],
+    "rules": [
+      {
+        "id": "emergencia_infeccao_ou_peritonite",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "fever_or_severe_abdominal_pain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Febre e/ou dor abdominal importante em paciente com distensão/ascite sugere peritonite bacteriana espontânea ou outra infecção intra-abdominal"
+          ],
+          "emergency_flow": [
+            "Priorizar avaliação de emergência com paracentese diagnóstica (contagem de polimorfonucleares e cultura), hemoculturas e antibioticoterapia empírica conforme protocolo local se peritonite bacteriana espontânea for confirmada ou fortemente suspeita"
+          ]
+        }
+      },
+      {
+        "id": "emergencia_instabilidade_hemodinamica_ou_hipoxia",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "acute_dyspnea_hypoxia",
+              "op": "truthy"
+            },
+            {
+              "field": "hemodynamic_instability",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dispneia aguda/hipóxia ou instabilidade hemodinâmica associada à distensão abdominal/ascite sugere descompensação aguda de congestão direita ou outra emergência cardiovascular"
+          ],
+          "emergency_flow": [
+            "Priorizar via de emergência: sinais vitais, oximetria, ECG e avaliação hemodinâmica antes de qualquer investigação ambulatorial da ascite"
+          ]
+        }
+      },
+      {
+        "id": "ganho_peso_rapido_descompensacao",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "rapid_weight_gain",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Ganho de peso rápido e/ou redução da diurese em paciente com distensão abdominal/ascite sugere retenção de volume aguda e possível descompensação de congestão direita"
+          ],
+          "suggested_tests": [
+            "Função renal e eletrólitos",
+            "Peso diário e reavaliação clínica de volemia em curto prazo"
+          ]
+        }
+      },
+      {
+        "id": "sinal_alarme_oncologico",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "oncologic_alarm_weight_loss",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Perda de peso não intencional com sinais de alarme oncológico associada a ascite sugere possível causa neoplásica (ex.: carcinomatose peritoneal, neoplasia hepática, ovariana ou gastrointestinal) e exige investigação prioritária"
+          ],
+          "suggested_tests": [
+            "Exame de imagem abdominal/pélvico (ultrassonografia ou tomografia)",
+            "Paracentese diagnóstica com citologia oncótica quando indicada",
+            "Marcadores tumorais conforme suspeita clínica dirigida"
+          ],
+          "differentials": [
+            "Ascite neoplásica/carcinomatose peritoneal"
+          ]
+        }
+      },
+      {
+        "id": "congestao_direita_classica_descompensada",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "known_hf_or_tricuspid_disease",
+              "op": "truthy"
+            },
+            {
+              "field": "lower_limb_edema",
+              "op": "truthy"
+            }
+          ],
+          "any": [
+            {
+              "field": "associated_dyspnea_on_exertion",
+              "op": "truthy"
+            },
+            {
+              "field": "painful_hepatomegaly",
+              "op": "truthy"
+            },
+            {
+              "field": "jugular_distension_known",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Ascite associada a edema de membros inferiores e a dispneia aos esforços/hepatomegalia dolorosa/turgência jugular em paciente com insuficiência cardíaca ou doença tricúspide conhecida é o padrão clássico de congestão direita descompensada"
+          ],
+          "suggested_tests": [
+            "NT-proBNP ou BNP",
+            "Ecocardiograma transtorácico",
+            "Função renal, eletrólitos e provas de função hepática (padrão colestático esperado: bilirrubina, GGT e fosfatase alcalina discretamente elevadas, com AST/ALT normais ou pouco alteradas)"
+          ],
+          "ambulatory_flow": [
+            "Avaliar volemia por sinais clínicos de congestão (peso, turgência jugular, edema) e otimizar diurético; aumento isolado de creatinina sob diurese não é sinal automático para reduzi-lo"
+          ]
+        }
+      },
+      {
+        "id": "hepatopatia_primaria_sem_contexto_cardiaco",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "known_liver_disease",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "known_hf_or_tricuspid_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Hepatopatia primária/cirrose como causa de ascite, sem componente de congestão cardíaca direita conhecido"
+          ],
+          "suggested_tests": [
+            "Ultrassonografia abdominal com Doppler e avaliação de sinais de hipertensão portal",
+            "Provas de função hepática completas e avaliação de coagulação (INR)",
+            "Paracentese diagnóstica com gradiente de albumina soro-ascite (GASA) quando indicada"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação hepatológica dirigida à causa de base da doença hepática crônica"
+          ]
+        }
+      },
+      {
+        "id": "alcool_uso_risco_diferencial",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "alcohol_use",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "known_hf_or_tricuspid_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Hepatopatia alcoólica como causa de ascite"
+          ],
+          "messages": [
+            "Uso de álcool significativo reforça investigar causa hepática primária antes de assumir origem cardíaca isolada"
+          ]
+        }
+      },
+      {
+        "id": "contexto_cronico_progressivo",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "onset_pattern",
+              "op": "eq",
+              "value": "cronico_progressivo"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Quadro crônico e progressivo ao longo de meses a anos é compatível tanto com congestão direita de longa data (ex.: doença tricúspide não tratada, hepatopatia congestiva) quanto com hepatopatia primária avançada — a distinção depende da história cardíaca, hepática e do exame associado"
+          ],
+          "ambulatory_flow": [
+            "Investigação ambulatorial programada, sem necessidade de via de urgência isolada apenas pela cronicidade"
+          ]
+        }
+      },
+      {
+        "id": "duracao_prolongada_sem_etiologia_definida",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "distension_duration_weeks",
+              "op": "gte",
+              "value": 12
+            }
+          ],
+          "none": [
+            {
+              "field": "known_hf_or_tricuspid_disease",
+              "op": "truthy"
+            },
+            {
+              "field": "known_liver_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Distensão abdominal/ascite com 12 semanas ou mais de evolução, sem etiologia cardíaca ou hepática conhecida, reforça a necessidade de investigação etiológica ampla (cardíaca, hepática e neoplásica) antes de qualquer rótulo idiopático"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Sinais vitais, peso e exame dirigido de congestão (turgência jugular, refluxo hepatojugular, edema)",
+      "Função renal, eletrólitos e provas de função hepática",
+      "Ultrassonografia abdominal (avaliação de ascite, fígado, veias hepáticas e sinais de hipertensão portal)"
+    ],
+    "differentials": [
+      "Congestão cardíaca direita (insuficiência cardíaca direita, doença tricúspide)",
+      "Hepatopatia congestiva crônica secundária a congestão direita de longa data",
+      "Cirrose/hepatopatia primária",
+      "Ascite neoplásica/carcinomatose peritoneal",
+      "Pericardite constritiva",
+      "Síndrome nefrótica/doença renal com hipoalbuminemia"
+    ],
+    "red_flags": [
+      "Dispneia aguda/hipóxia",
+      "Instabilidade hemodinâmica",
+      "Febre ou dor abdominal importante (suspeita de peritonite bacteriana espontânea)",
+      "Ganho de peso rápido/oligúria",
+      "Perda de peso com sinais de alarme oncológico"
+    ],
+    "ambulatory_flow": [
+      "Definir padrão evolutivo (agudo vs. crônico) e história cardíaca, hepática e oncológica dirigida",
+      "Exame físico de congestão sistêmica (turgência jugular, hepatomegalia, edema) e sinais de hepatopatia (estigmas, esplenomegalia)",
+      "Solicitar NT-proBNP/BNP, ecocardiograma e provas de função hepática conforme a suspeita predominante",
+      "Encaminhar para cardiologia ou hepatologia conforme a etiologia identificada"
+    ],
+    "emergency_flow": [
+      "ABC, sinais vitais e avaliação hemodinâmica imediata",
+      "Paracentese diagnóstica quando houver febre, dor abdominal importante ou suspeita de peritonite bacteriana espontânea",
+      "Investigar e tratar a causa de descompensação aguda de congestão direita, otimizando diurético guiado por sinais de congestão e não por creatinina isolada",
+      "Comunicar cardiologia/hepatologia conforme a etiologia predominante"
+    ],
+    "tags": [
+      "ascite",
+      "distensão abdominal",
+      "congestão direita",
+      "insuficiência cardíaca direita",
+      "hepatopatia congestiva",
+      "doença tricúspide"
+    ],
+    "source_refs": [
+      "Konstam MA, Kiernan MS, Bernstein D, Bozkurt B, Jacob M, Kapur NK, et al., for the American Heart Association Council on Clinical Cardiology, Council on Cardiovascular Disease in the Young, and Council on Cardiovascular Surgery and Anesthesia. Evaluation and Management of Right-Sided Heart Failure: A Scientific Statement From the American Heart Association. Circulation. 2018;137(20):e578-e622. DOI: 10.1161/CIR.0000000000000560. PMID: 29650544 — título, autoria, journal, volume, páginas e DOI conferidos via NCBI E-utilities (esummary) em 29/08/2026.",
+      "Mullens W, Abrahams Z, Francis GS, Sokos G, Taylor DO, Starling RC, Young JB, Tang WHW. Importance of venous congestion for worsening of renal function in advanced decompensated heart failure. J Am Coll Cardiol. 2009;53(7):589-596. DOI: 10.1016/j.jacc.2008.05.068. PMID: 19215833 — conferido via NCBI E-utilities (esummary) em 29/08/2026; base para a orientação de que a piora de creatinina sob diurese reflete pressão venosa central, não necessariamente hipoperfusão.",
+      "Jarasvaraparn C, Schooler GR, González IA, Ginde S, Mavis A. Long-Term Care in Fontan Circulation: Surveillance and Management of Fontan-Associated Liver Disease and Protein-Losing Enteropathy. Curr Cardiol Rep. 2026;28(1):56. DOI: 10.1007/s11886-026-02378-0. PMID: 42154163 — conferido via NCBI E-utilities (esummary) em 29/08/2026; base para o padrão bioquímico colestático esperado na hepatopatia congestiva crônica.",
+      "Trayes KP, Studdiford JS, Pickle S, Tully AS. Edema: diagnosis and management. Am Fam Physician. 2013;88(2):102-110. PMID: 23939641 — conferido via NCBI E-utilities (esummary) em 29/08/2026; base para o raciocínio de diferencial sistêmico de edema/congestão (cardíaco vs. hepático vs. renal vs. fármacos).",
+      "Harjola VP, Mebazaa A, Čelutkienė J, Bettex D, Bueno H, Chioncel O, et al. Contemporary management of acute right ventricular failure: a statement from the Heart Failure Association and the Working Group on Pulmonary Circulation and Right Ventricular Function of the ESC. Eur J Heart Fail. 2016;18(3):226-241. DOI: 10.1002/ejhf.478. PMID: 26995592 — conferido via NCBI E-utilities (esummary) em 29/08/2026; base para a distinção entre fenótipo agudo/instável de falência de VD e o quadro crônico de congestão direita abordado nesta triagem."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29650544/",
+      "https://pubmed.ncbi.nlm.nih.gov/19215833/",
+      "https://pubmed.ncbi.nlm.nih.gov/42154163/",
+      "https://pubmed.ncbi.nlm.nih.gov/23939641/",
+      "https://pubmed.ncbi.nlm.nih.gov/26995592/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Registro novo criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Corvia, seguindo instrução de Rafael para cobrir 'Distensão abdominal/ascite com suspeita de congestão cardíaca direita' na Triagem de Sintomas — sintoma sem registro próprio em triagem-sintomas/metadados.json apesar de corpus rico já existente na biblioteca (hepatopatia congestiva crônica na IC direita de longa data, insuficiência cardíaca direita isolada por doença tricúspide, falência aguda de VD na UCO e fluxograma de edema bilateral). Os 4 documentos-fonte mapeados foram lidos por completo antes da montagem das perguntas e regras. Os 5 PMIDs citados em source_refs (29650544, 19215833, 42154163, 23939641, 26995592) foram verificados individualmente via NCBI E-utilities (esummary) em 29/08/2026, conferindo título, autoria, journal, volume, páginas e DOI contra o texto usado nos documentos-fonte já revisados desta biblioteca — sem divergência encontrada. As perguntas cobrem: história de insuficiência cardíaca/doença tricúspide conhecida, edema de membros inferiores associado, dispneia associada (aguda e crônica), hepatomegalia dolorosa/desconforto em hipocôndrio direito, turgência jugular quando souber informar, ganho de peso rápido/redução da diurese, padrão evolutivo agudo vs. crônico progressivo (incluindo duração em semanas), e causas não cardíacas de ascite — história de doença hepática, uso de álcool e perda de peso com sinais de alarme oncológico. As regras cobrem o padrão clássico de congestão direita descompensada (ascite + edema + dispneia/hepatomegalia/turgência jugular + história cardíaca conhecida, risco prioritário), a descompensação aguda com dispneia/hipóxia ou instabilidade hemodinâmica (risco emergência), o ganho de peso rápido como red flag isolado de descompensação (risco urgente), a diferenciação de hepatopatia primária sem contexto cardíaco (diferencial hepatológico) e de uso de álcool, o sinal de alarme oncológico (risco urgente, diferencial de ascite neoplásica) e, como acréscimo de segurança específico de ascite não coberto explicitamente pela instrução original mas clinicamente padrão, febre/dor abdominal importante como possível peritonite bacteriana espontânea (risco emergência) — sinalizado aqui para revisão humana explícita dessa extrapolação. Nenhuma dose de fármaco em nenhum campo. RISCO DE COLISÃO SINALIZADO: outros agentes podem estar adicionando registros ao mesmo arquivo triagem-sintomas/metadados.json em branches paralelas simultâneas nesta mesma janela de produção (29/08/2026); este registro foi adicionado ao FINAL do array para minimizar conflito de merge, mas a resolução de drift contra origin/main antes da abertura do PR é necessária e foi feita. FALHA ESPERADA E DOCUMENTADA: backend/tests/test_canonical_content_review_status.py::test_manifestos_canonicos_so_tem_pendencias_explicitamente_aprovadas_para_rc FALHA para este registro porque review_status='pendente_revisao' — conteúdo novo, ainda sem revisão humana, não se autoaprova nesse gate. Diferente do padrão usado na PR #698 (cardiomiopatia-de-takotsubo) para doencas/metadados.json, este registro NÃO foi adicionado a PENDENTES_LOTES_TUDO_COM_TUDO em test_canonical_content_review_status.py: naquele caso a entrada era necessária porque a mesma allowlist é reaproveitada por um segundo teste (test_disease_fragments_canonical.py) que a consome corretamente para registros pendentes; não existe teste equivalente para triagem-sintomas que reaproveite essa allowlist, então adicionar uma entrada aqui não teria efeito sobre nenhum gate e só ampliaria, sem necessidade, uma allowlist que o próprio comentário do arquivo descreve como devendo ficar vazia. A falha permanece documentada apenas aqui e na PR, exatamente como o padrão de comentário da PR #698 registrou o mesmo tipo de falha esperada sem tentar contorná-la.",
+    "fonte_producao": "claude",
+    "version": 1
   }
 ]
