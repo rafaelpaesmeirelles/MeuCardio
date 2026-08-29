@@ -1,0 +1,748 @@
+[
+  {
+    "slug": "aortopatias-geneticas-do-adulto",
+    "name": "Aortopatias genéticas do adulto (Marfan, Loeys-Dietz, valva aórtica bicúspide e aneurisma familiar)",
+    "aliases": [
+      "síndrome de Marfan",
+      "síndrome de Loeys-Dietz",
+      "aneurisma aórtico familiar",
+      "aortopatia bicúspide"
+    ],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": "aortopatia_hereditaria_do_adulto",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Espectro de condições hereditárias do adulto não gestante que predispõem a aneurisma e dissecção da aorta torácica por mecanismo distinto do degenerativo/aterosclerótico: síndrome de Marfan (gene FBN1), síndrome de Loeys-Dietz (genes da via de sinalização do TGF-β — TGFBR1, TGFBR2, SMAD3, TGFB2, TGFB3), valva aórtica bicúspide com aortopatia associada, e aneurisma/dissecção torácica familiar não sindrômico. A regra clínica central é que CADA condição tem limiar cirúrgico próprio e não intercambiável: 5,0 cm na raiz/ascendente para Marfan; limiares mais conservadores e ESPECÍFICOS POR GENE na Loeys-Dietz (de 4,0 a 5,0 cm conforme o gene e a presença de achados de alto risco); 5,5 cm na valva bicúspide isolada (o mesmo corte da aorta tricúspide — a bicúspide não opera mais cedo por padrão, ao contrário da intuição comum), refinado por fenótipo de dilatação e reduzido a 4,5 cm apenas quando há cirurgia valvar aórtica concomitante já programada. Rastreamento em cascata de familiares de primeiro grau e aconselhamento genético fazem parte do manejo, mas são aprofundados em verbete próprio sobre aconselhamento genético cardiovascular. A gestante com qualquer uma dessas condições tem manejo próprio, coberto em documento e hub dedicados, para onde este verbete remete sem duplicar.",
+    "epidemiology": "A valva aórtica bicúspide é a cardiopatia congênita mais comum, presente em 0,5% a 2% dos nascidos vivos, e carrega aortopatia associada com risco de evento aórtico agudo várias vezes maior que na população geral (Mazzolai L et al., 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases, Eur Heart J 2024, PMID 39210722). A síndrome de Marfan e a síndrome de Loeys-Dietz são doenças hereditárias raras do tecido conjuntivo — a primeira por variante patogênica no gene FBN1 (fibrilina-1), de padrão autossômico dominante (Dietz H, FBN1-Related Marfan Syndrome, GeneReviews, PMID 20301510); a segunda por variante em genes da via de sinalização do TGF-β — mais frequentemente TGFBR1 e TGFBR2, também SMAD3, TGFB2 e TGFB3 (Loeys BL & Dietz HC, Loeys-Dietz Syndrome, GeneReviews, PMID 20301312). O aneurisma de aorta torácica, de modo geral, é etiologicamente heterogêneo — degenerativo/aterosclerótico, valva aórtica bicúspide (associada a 20-30% dos aneurismas de raiz) e síndromes genéticas do tecido conjuntivo (Marfan, Loeys-Dietz, gene ACTA2) — com curso predominantemente assintomático até a dissecção ou até achado incidental em exame de imagem solicitado por outro motivo (Bossone E & Eagle KA, Nat Rev Cardiol 2021, PMID 33353985). A síndrome de Loeys-Dietz tem, em geral, curso mais agressivo que a síndrome de Marfan clássica — dissecção pode ocorrer com diâmetros aórticos menores, e o acometimento arterial costuma ser mais extenso, não restrito à aorta torácica proximal — o que justifica os limiares cirúrgicos mais conservadores da diretriz ACC/AHA 2022 (Isselbacher EM et al., 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease, Circulation 2022, PMID 36322642). O aneurisma/dissecção torácica familiar não sindrômico — sem fenótipo de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular reconhecível — reúne famílias com pelo menos dois parentes de primeiro grau acometidos, muitas vezes sem variante genética identificada em painel comercial, e ainda assim com risco de evento aórtico maior que o da população geral, o que justifica vigilância e limiares mais conservadores do que os do aneurisma esporádico.",
+    "presentation": [
+      "Aneurisma de raiz ou aorta ascendente assintomático, achado em ecocardiograma ou exame de imagem solicitado por outro motivo — forma de apresentação mais comum em todas as quatro condições",
+      "Dilatação de raiz ou aorta ascendente identificada em ecocardiograma de rastreio após diagnóstico de valva aórtica bicúspide — a própria diretriz recomenda avaliar a aorta inteira em todo paciente com VAB recém-diagnosticada, e o inverso: caracterizar a morfologia valvar em todo paciente com dilatação de ascendente",
+      "Manifestações extra-aórticas de síndrome de Marfan — estatura elevada com envergadura maior que a altura, aracnodactilia, deformidade do tórax (pectus excavatum ou carinatum), hipermobilidade articular, ectopia lentis (luxação do cristalino), miopia importante, estrias cutâneas atróficas e, ocasionalmente, ectasia dural e pneumotórax espontâneo",
+      "Manifestações extra-aórticas de síndrome de Loeys-Dietz — fenótipo craniofacial distinto do Marfan: hipertelorismo ocular, úvula bífida ou palato fendido, tortuosidade arterial difusa (não só na aorta), pele translúcida com veias visíveis, equimose fácil, craniossinostose e pé torto congênito; ectopia lentis é característica que ajuda a diferenciar de Marfan quando ausente",
+      "História familiar de aneurisma, dissecção ou morte súbita aórtica em parente de primeiro grau, levando ao rastreamento do probando ou de outros familiares mesmo antes de qualquer sintoma",
+      "Dor torácica ou dorsal súbita, de intensidade máxima já no início, lancinante ou em rasgo — apresentação de síndrome aórtica aguda, que nessas condições pode ocorrer em diâmetro aórtico menor do que o esperado para etiologia degenerativa",
+      "Sopro novo de insuficiência aórtica em paciente jovem com dilatação de raiz conhecida ou desconhecida"
+    ],
+    "diagnostic_approach": {
+      "criterios_diagnosticos_por_condicao": [
+        "Síndrome de Marfan — diagnóstico clínico por nosologia reconhecida (critérios de Ghent revisados), combinando achados sistêmicos, dilatação/z-score da raiz aórtica, ectopia lentis e confirmação molecular de variante patogênica em FBN1 quando disponível; avaliação multidisciplinar com genética clínica",
+        "Síndrome de Loeys-Dietz — suspeita pelo fenótipo craniofacial e vascular associado a variante patogênica confirmada em gene da via do TGF-β (TGFBR1, TGFBR2, SMAD3, TGFB2 ou TGFB3); o GENE ESPECÍFICO muda o limiar cirúrgico e por isso deve constar explicitamente no registro do paciente, não apenas o diagnóstico sindrômico genérico",
+        "Valva aórtica bicúspide — diagnóstico por imagem (ecocardiograma, angiotomografia ou ressonância), caracterizando morfologia valvar (fusionada, de dois seios ou de fusão parcial) e, de forma independente, o fenótipo de dilatação aórtica (ascendente, de raiz ou estendido) — os dois eixos mudam a conduta de vigilância e o limiar cirúrgico",
+        "Aneurisma/dissecção torácica familiar não sindrômico — pelo menos dois parentes de primeiro grau com aneurisma ou dissecção de aorta torácica, sem fenótipo reconhecível de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular; teste genético (painel de genes de aortopatia hereditária) pode identificar variante causal em parcela dos casos, mas resultado negativo não afasta a natureza familiar nem relaxa a vigilância"
+      ],
+      "avaliacao_inicial": [
+        "Ecocardiograma transtorácico para medida da raiz e aorta ascendente, com avaliação da morfologia valvar aórtica em toda suspeita de aortopatia genética",
+        "Angiotomografia ou angiorressonância de aorta completa (da raiz à bifurcação ilíaca) ao diagnóstico — obrigatória para caracterizar segmentos que o ecocardiograma não alcança bem (arco, ascendente distal, descendente), especialmente relevante em Loeys-Dietz, onde parte relevante dos aneurismas descritos fica fora do alcance do ecocardiograma",
+        "Levantamento de três gerações de história familiar dirigido a morte súbita, aneurisma e dissecção de aorta, e a manifestações de doença do tecido conjuntivo",
+        "Encaminhamento a genética clínica para teste molecular dirigido pelo fenótipo, quando há suspeita de síndrome genética específica ou história familiar sugestiva"
+      ],
+      "limiares_cirurgicos_por_etiologia_nao_generalizar": [
+        "Regra determinística: o limiar cirúrgico de UMA condição não se aplica às outras. Registrar sempre a condição específica antes de aplicar qualquer corte de diâmetro.",
+        "MARFAN (raiz/aorta ascendente): cirurgia recomendada com diâmetro máximo ≥ 5,0 cm (Classe I, B-NR). Com ≥ 4,5 cm e achados que aumentem o risco de dissecção, cirurgia é razoável (Classe IIa, B-NR); razão área transversal/altura ≥ 10 também sustenta indicação nessa faixa (Classe IIa, C-LD) (Isselbacher EM et al., Circulation 2022, PMID 36322642).",
+        "LOEYS-DIETZ, sem achados de alto risco: TGFBR1 e TGFBR2 — cirurgia recomendada com diâmetro ≥ 4,5 cm (Classe I, C-LD); SMAD3 — ≥ 4,5 cm (Classe IIa, C-EO); TGFB2 — ≥ 4,5 cm (Classe IIb, C-EO); TGFB3 — ≥ 5,0 cm (Classe IIb, C-EO) (Isselbacher EM et al., Circulation 2022, PMID 36322642).",
+        "LOEYS-DIETZ, COM achados de alto risco: o limiar cai ainda mais — TGFBR2 desce para ≥ 4,0 cm (Classe IIa, C-LD) e TGFBR1 para ≥ 4,0 cm (Classe IIb, C-EO) (Isselbacher EM et al., Circulation 2022, PMID 36322642).",
+        "Alerta de nomenclatura, textual na diretriz: variantes patogênicas no gene TGFB2 são DIFERENTES das do gene TGFBR2 — os nomes são quase idênticos por escrito e os limiares cirúrgicos não são os mesmos; conferir o gene exato antes de aplicar qualquer corte de Loeys-Dietz (Isselbacher EM et al., Circulation 2022, PMID 36322642).",
+        "VALVA AÓRTICA BICÚSPIDE, isolada (sem cirurgia valvar concomitante planejada): cirurgia recomendada com diâmetro ≥ 5,5 cm (Classe I) — o mesmo corte da aorta tricúspide; entre 5,0 e 5,4 cm é razoável havendo fator de risco adicional (Classe IIa), e pode ser considerada sem fatores de risco em paciente de baixo risco cirúrgico (Classe IIb) (Isselbacher EM et al., Circulation 2022, PMID 36322642). A diretriz ESC 2024 refina esse corte pelo FENÓTIPO de dilatação: fenótipo de raiz — cirurgia recomendada já a partir de 50 mm (Classe I, Nível B); fenótipo ascendente em centro de baixo risco cirúrgico — cirurgia deve ser considerada a partir de 52 mm (Classe IIa, Nível B), ou a partir de 50 mm se presente fator de risco adicional (idade < 50 anos, estatura menor, comprimento aórtico ≥ 11 cm, crescimento ≥ 3 mm/ano, história familiar de síndrome aórtica aguda, coarctação, hipertensão resistente, cirurgia cardíaca concomitante não valvar aórtica, ou desejo de gestação) (Classe IIa, Nível C) (Mazzolai L et al., Eur Heart J 2024, PMID 39210722).",
+        "VALVA AÓRTICA BICÚSPIDE com cirurgia da própria valva já programada por outro motivo: operar a aorta no MESMO tempo cirúrgico se raiz ou ascendente ≥ 4,5 cm — corte válido especificamente nesse cenário de cirurgia concomitante, não para vigilância ambulatorial isolada (Classe IIa) (Isselbacher EM et al., Circulation 2022, PMID 36322642; Mazzolai L et al., Eur Heart J 2024, PMID 39210722).",
+        "ANEURISMA/DISSECÇÃO TORÁCICA FAMILIAR NÃO SINDRÔMICO: sem síndrome genética identificada, a decisão cirúrgica costuma usar limiar mais conservador do que o do aneurisma esporádico tricúspide (que é de 5,5 cm), individualizado por diâmetro, taxa de crescimento e gravidade do fenótipo familiar (idade de acometimento e tipo de evento nos parentes afetados); não há um corte numérico único validado para esse grupo heterogêneo, o que reforça a necessidade de avaliação compartilhada com cirurgia aórtica e genética clínica, em vez de aplicar por analogia o corte de qualquer uma das três condições acima."
+      ],
+      "vigilancia_por_imagem": [
+        "Valva aórtica bicúspide com raiz ou aorta ascendente ≥ 4,0 cm: imagem VITALÍCIA recomendada — ecocardiograma transtorácico, angiotomografia ou ressonância, com intervalo definido pelo diâmetro e pela taxa de crescimento (Classe I, C-LD) (Isselbacher EM et al., Circulation 2022, PMID 36322642)",
+        "Em qualquer das quatro condições, TC ou RM são necessários pelo menos uma vez para avaliar segmentos que o ecocardiograma transtorácico não alcança de forma confiável (arco, ascendente distal, descendente) — particularmente relevante em Loeys-Dietz, onde metade dos aneurismas descritos em coorte fica fora do alcance do ecocardiograma",
+        "Intervalo de reimagem individualizado por diâmetro atual, taxa de crescimento documentada e condição específica — mais frequente quanto menor a margem até o limiar cirúrgico daquela condição"
+      ],
+      "limite_do_assistente": "O assistente organiza a condição referida, o diâmetro informado e sinais de alarme, mas não substitui avaliação compartilhada entre cardiologia, cirurgia cardiovascular/aórtica e genética clínica — sobretudo na definição do gene exato em Loeys-Dietz e do fenótipo de dilatação na valva bicúspide, que dependem de imagem detalhada e, quando aplicável, de teste genético interpretado por especialista."
+    },
+    "differentials": [
+      "Aneurisma de aorta torácica degenerativo/aterosclerótico — mesmo achado de imagem, mas sem fenótipo sindrômico, sem história familiar relevante e com limiar cirúrgico padrão de 5,5 cm, sem os cortes mais conservadores das síndromes genéticas",
+      "Síndrome de Ehlers-Danlos vascular (gene COL3A1) — outra aortopatia genética grave, coberta em documento próprio desta biblioteca, na qual o risco de dissecção/ruptura arterial não depende do diâmetro absoluto, tornando a vigilância por imagem isoladamente insuficiente",
+      "Síndrome de Turner — aortopatia associada a cariótipo 45,X, com uso do índice de tamanho aórtico (diâmetro indexado à superfície corporal) em vez do diâmetro absoluto isolado",
+      "Aortite inflamatória não degenerativa (arterite de Takayasu, arterite de células gigantes) — dilatação e risco de evento aórtico por mecanismo inflamatório, não genético/estrutural, com perfil demográfico e marcadores inflamatórios próprios",
+      "Aorta do atleta — dilatação discreta e simétrica associada a treinamento de alto volume, que se atenua quando o diâmetro é indexado à superfície corporal e não progride ao longo do tempo, diferente da dilatação genuinamente patológica",
+      "Valva aórtica bicúspide sem aortopatia associada — morfologia valvar bicúspide isolada, com aorta de diâmetro normal, que não preenche os critérios deste verbete e segue apenas vigilância de rotina da própria valva"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico — método inicial para raiz e aorta ascendente proximal e para morfologia valvar; limitação: não é confiável para arco, ascendente distal e descendente, segmentos onde subestima o diâmetro real",
+      "Angiotomografia de aorta completa — define diâmetro em todos os segmentos com alta resolução; limitação: expõe a radiação ionizante e contraste iodado, relevante em paciente jovem que fará exames seriados por décadas",
+      "Angiorressonância de aorta completa — alternativa sem radiação para seguimento seriado de longo prazo, especialmente valiosa em paciente jovem com doença hereditária que exige décadas de vigilância; limitação: menor disponibilidade e tempo de aquisição mais longo",
+      "Teste genético dirigido pelo fenótipo (painel de genes de aortopatia hereditária — FBN1, TGFBR1, TGFBR2, SMAD3, TGFB2, TGFB3, ACTA2, COL3A1, entre outros) — confirma o diagnóstico molecular e, na Loeys-Dietz, define o gene específico que determina o limiar cirúrgico; limitação: resultado negativo não afasta aortopatia genética nem relaxa a vigilância clínica, sobretudo no aneurisma familiar não sindrômico",
+      "Avaliação oftalmológica com lâmpada de fenda — rastreia ectopia lentis, achado que ajuda a diferenciar Marfan de Loeys-Dietz e de outras aortopatias genéticas",
+      "Avaliação musculoesquelética e de pele — sistematiza achados de tecido conjuntivo (hipermobilidade articular, deformidade torácica, estrias, pele translúcida) que apoiam a suspeita clínica e orientam qual painel genético priorizar"
+    ],
+    "red_flags": [
+      "Dor torácica, dorsal ou abdominal de início súbito, intensidade máxima já no início, lancinante ou em rasgo, em paciente com aortopatia genética conhecida OU com fenótipo sugestivo ainda não diagnosticado — sinaliza síndrome aórtica aguda",
+      "Dissecção ou ruptura aórtica em diâmetro MENOR do que o esperado para etiologia aterosclerótica comum — acender suspeita retroativa de aortopatia genética não diagnosticada, sobretudo em paciente jovem",
+      "História familiar de morte súbita aórtica, aneurisma ou dissecção em parente de primeiro grau, mesmo sem diagnóstico sindrômico estabelecido no probando",
+      "Sopro novo de insuficiência aórtica associado a dor torácica aguda em paciente jovem, sugerindo dissecção proximal com acometimento da raiz/valva",
+      "Assimetria de pulsos ou de pressão arterial entre membros em paciente jovem sem fator de risco aterosclerótico tradicional",
+      "Crescimento documentado do diâmetro aórtico acima da taxa esperada para a condição específica, independentemente de o diâmetro absoluto ainda não ter atingido o limiar cirúrgico daquela etiologia",
+      "Ectopia lentis, hipertelorismo importante, tortuosidade arterial difusa ou pele translúcida em paciente com aneurisma de aorta torácica sem diagnóstico sindrômico prévio — motivo para avaliação genética dirigida antes de tratar como aneurisma degenerativo isolado"
+    ],
+    "ambulatory_flow": [
+      "Confirmar a condição específica (Marfan, Loeys-Dietz com gene identificado, valva aórtica bicúspide com fenótipo de dilatação caracterizado, ou aneurisma familiar não sindrômico) antes de aplicar qualquer limiar de vigilância ou cirurgia — o corte muda com a etiologia e, na Loeys-Dietz, com o gene específico",
+      "Programar ecocardiograma seriado e, pelo menos uma vez, TC ou RM de aorta completa, com intervalo definido por diâmetro atual, taxa de crescimento e condição específica",
+      "Levantar história familiar de três gerações para aneurisma, dissecção ou morte súbita aórtica e para manifestações de doença do tecido conjuntivo, encaminhando aconselhamento genético e rastreamento em cascata de parentes de primeiro grau quando indicado — o detalhamento técnico desse processo é tema de verbete próprio sobre aconselhamento genético cardiovascular",
+      "Discutir indicação de reparo eletivo assim que o diâmetro se aproximar do limiar específico da condição, antecipando a avaliação com cirurgia cardiovascular/aórtica em vez de aguardar o corte exato ser atingido",
+      "Orientar restrição de esporte competitivo de alta intensidade, isométrico ou de contato, com avaliação individualizada por condição, diâmetro e história familiar — sem regra binária única aplicada a todas as aortopatias genéticas",
+      "Em mulher em idade fértil com qualquer uma dessas condições, discutir planejamento reprodutivo e avaliação pré-concepcional antes de uma gestação não planejada, remetendo ao manejo específico da gestante com aortopatia quando a gestação for confirmada ou estiver sendo planejada",
+      "Reavaliar a morfologia valvar e a aorta juntas em toda consulta de seguimento de valva aórtica bicúspide, mesmo quando o motivo da consulta for a função valvar isolada"
+    ],
+    "emergency_flow": [
+      "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante, em paciente com aortopatia genética conhecida OU com fenótipo sugestivo — obter angiotomografia de aorta sincronizada ao ECG, do pescoço à pelve, como exame de primeira linha, sem aguardar confirmação sindrômica prévia",
+      "Instabilidade hemodinâmica, síncope ou déficit de pulso/neurológico focal associado à dor — estabilizar em ambiente monitorizado e acionar cirurgia cardiovascular/aórtica imediatamente, sem atraso por exames não essenciais",
+      "Síndrome aórtica aguda confirmada com acometimento de aorta ascendente (tipo A) — emergência cirúrgica, independentemente do diâmetro absoluto medido, porque nessas condições a dissecção pode ocorrer abaixo do limiar cirúrgico eletivo daquela etiologia",
+      "Suspeita de síndrome aórtica aguda em paciente jovem sem diagnóstico sindrômico prévio, mas com fenótipo sugestivo (estatura elevada, ectopia lentis, hipertelorismo, pele translúcida) — não deixar a ausência de diagnóstico genético formal atrasar a investigação de imagem de emergência",
+      "Iniciar controle de pressão arterial e frequência cardíaca assim que a suspeita for levantada, em paralelo à investigação de imagem, sem que a escolha da classe farmacológica ou a definição de dose substitua a avaliação à beira do leito pelo médico assistente"
+    ],
+    "treatment_summary": "O manejo se apoia em três eixos que valem para as quatro condições, mas cujo detalhe numérico e farmacológico muda por etiologia: terapia farmacológica para reduzir o estresse hemodinâmico sobre a parede aórtica, vigilância por imagem seriada, e indicação cirúrgica eletiva pelo limiar específico da condição antes que ocorra dissecção. Do ponto de vista farmacológico, betabloqueador e bloqueador do receptor de angiotensina II (BRA) são as duas classes historicamente usadas para reduzir a taxa de dilatação aórtica, sobretudo na síndrome de Marfan; o maior ensaio clínico randomizado a comparar diretamente as duas classes em crianças e adultos jovens com Marfan (Pediatric Heart Network, Lacro RV et al., N Engl J Med 2014, PMID 25405392) não encontrou diferença estatisticamente significativa entre atenolol e losartan na taxa de mudança do escore-z da raiz aórtica em três anos, com melhora em ambos os grupos e sem diferença nas taxas de cirurgia da raiz, dissecção ou morte — ou seja, nenhuma das duas classes demonstrou superioridade farmacológica comprovada sobre a outra nessa população, e a escolha entre elas pode considerar tolerabilidade e comorbidades associadas em vez de suposta vantagem de uma classe sobre a outra. Este verbete não indica dose de nenhum fármaco — a definição de dose e via cabe ao médico assistente à beira do leito.\n\nA indicação cirúrgica NÃO deve ser generalizada entre as quatro condições — cada uma tem limiar próprio, detalhado no bloco de diagnóstico deste verbete: 5,0 cm na raiz/ascendente para síndrome de Marfan (com antecipação para 4,5 cm havendo fator de risco adicional); limiares mais conservadores e específicos por gene na síndrome de Loeys-Dietz, de 4,0 a 5,0 cm conforme o gene exato (TGFBR1, TGFBR2, SMAD3, TGFB2 ou TGFB3) e a presença de achados de alto risco; 5,5 cm na valva aórtica bicúspide isolada, refinado por fenótipo de dilatação (raiz opera mais cedo, a partir de 50 mm) e reduzido a 4,5 cm apenas quando há cirurgia da própria valva já programada no mesmo tempo cirúrgico; e limiar individualizado, tipicamente mais conservador que o do aneurisma esporádico, no aneurisma familiar não sindrômico. Em toda condição, crescimento acelerado documentado por imagem seriada é fator que antecipa a indicação cirúrgica independentemente do diâmetro absoluto ainda não ter atingido o corte formal.\n\nO terceiro eixo é a restrição de atividade física de alta intensidade, isométrica ou de contato — avaliada de forma individualizada por condição, diâmetro atual, taxa de crescimento e história familiar, sem regra binária única de \"pode/não pode\" baseada apenas no diagnóstico sindrômico nominal. Atividade aeróbica recreacional de baixa a moderada intensidade costuma ser aceitável para muitos pacientes com aortopatia estável após avaliação individual, enquanto esportes competitivos com grande componente estático, manobras de Valsalva repetidas e esforços máximos exigem cautela adicional pela elevação abrupta da pressão sobre a parede aórtica.\n\nAconselhamento genético e rastreamento em cascata de parentes de primeiro grau fazem parte do manejo de todas as quatro condições — mencionados aqui como etapa obrigatória do cuidado, sem aprofundamento técnico, que é objeto de verbete próprio sobre aconselhamento genético cardiovascular.",
+    "monitoring": [
+      "Diâmetro da raiz e aorta ascendente por ecocardiograma seriado, com TC ou RM de aorta completa pelo menos uma vez e sempre que houver discrepância relevante entre medidas ou dúvida sobre segmentos não avaliáveis pelo eco",
+      "Taxa de crescimento do diâmetro aórtico ao longo do tempo — mais informativa que uma medida isolada, e capaz de antecipar indicação cirúrgica mesmo abaixo do corte absoluto da condição",
+      "Pressão arterial e frequência cardíaca, com controle rigoroso em toda pessoa com aortopatia genética, independentemente de indicação cirúrgica atual",
+      "Sinais de alarme para nova síndrome aórtica aguda — dor torácica/dorsal nova ou recorrente, síncope, déficit de pulso ou neurológico focal",
+      "Progressão de manifestações extra-aórticas (musculoesquelética, oftalmológica, cutânea, vascular periférica) que possam indicar necessidade de avaliação multidisciplinar adicional",
+      "Adesão ao seguimento por imagem de longo prazo — populações jovens com décadas de vigilância pela frente, nas quais perda de seguimento é risco tão relevante quanto o diâmetro em si",
+      "Resultado do rastreamento em cascata de familiares de primeiro grau, quando realizado, e necessidade de reavaliação periódica de familiares inicialmente sem achado"
+    ],
+    "special_populations": [
+      "Mulher em idade fértil com síndrome de Marfan, síndrome de Loeys-Dietz, valva aórtica bicúspide com dilatação ou aneurisma familiar não sindrômico — a gestação é um período de risco aumentado de dissecção aórtica nessas condições; avaliação pré-concepcional, estratificação de risco e manejo específico da gestante NÃO são aprofundados aqui, e sim no documento e no hub dedicados desta biblioteca ('Aortopatia na gravidez' e conteúdo específico de síndrome de Marfan na gestação), para onde este verbete remete sem duplicar",
+      "Criança e adolescente com aortopatia genética — vigilância, limiares cirúrgicos e manejo têm particularidades próprias da faixa etária pediátrica (uso de taxa de crescimento em vez de diâmetro absoluto em crianças pequenas, entre outras diferenças), cobertas em documento dedicado de Cardiologia pediátrica; este verbete cobre especificamente o adulto",
+      "Atleta ou candidato a exercício de alta intensidade com aortopatia genética conhecida ou suspeita — decisão de participação esportiva não deve se basear apenas no diagnóstico nominal, exigindo integração de fenótipo, diâmetro, taxa de crescimento, história familiar e modalidade pretendida",
+      "Familiar de primeiro grau assintomático de paciente com aortopatia genética confirmada — candidato a rastreamento em cascata por imagem e, quando aplicável, teste genético, mesmo sem sintoma ou achado prévio",
+      "Paciente com valva aórtica bicúspide e coarctação de aorta associada (até 50-85% de coexistência) — a coarctação tem seguimento e limiares de intervenção próprios (gradiente invasivo, hipertensão), tratados em documento específico de cardiopatia congênita do adulto, não neste verbete"
+    ],
+    "assistant_questions": [
+      {
+        "id": "condicao_confirmada",
+        "label": "Qual condição está confirmada ou é a mais provável?",
+        "type": "select",
+        "required": true,
+        "section": "Diagnóstico",
+        "options": [
+          {
+            "value": "marfan",
+            "label": "Síndrome de Marfan (FBN1)"
+          },
+          {
+            "value": "loeys_dietz",
+            "label": "Síndrome de Loeys-Dietz"
+          },
+          {
+            "value": "valva_bicuspide",
+            "label": "Valva aórtica bicúspide com aortopatia associada"
+          },
+          {
+            "value": "aneurisma_familiar_nao_sindromico",
+            "label": "Aneurisma/dissecção torácica familiar, sem síndrome identificada"
+          },
+          {
+            "value": "sem_diagnostico_definido",
+            "label": "Suspeita clínica, sem diagnóstico sindrômico definido"
+          }
+        ]
+      },
+      {
+        "id": "gene_loeys_dietz",
+        "label": "Se síndrome de Loeys-Dietz confirmada, qual gene?",
+        "type": "select",
+        "section": "Diagnóstico",
+        "options": [
+          {
+            "value": "TGFBR1",
+            "label": "TGFBR1"
+          },
+          {
+            "value": "TGFBR2",
+            "label": "TGFBR2"
+          },
+          {
+            "value": "SMAD3",
+            "label": "SMAD3"
+          },
+          {
+            "value": "TGFB2",
+            "label": "TGFB2"
+          },
+          {
+            "value": "TGFB3",
+            "label": "TGFB3"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Gene não identificado/não testado"
+          }
+        ]
+      },
+      {
+        "id": "diametro_raiz_ascendente_mm",
+        "label": "Diâmetro atual da raiz ou aorta ascendente (mm)",
+        "type": "number",
+        "section": "Imagem"
+      },
+      {
+        "id": "fenotipo_bicuspide",
+        "label": "Se valva aórtica bicúspide, qual o fenótipo de dilatação?",
+        "type": "select",
+        "section": "Imagem",
+        "options": [
+          {
+            "value": "ascendente",
+            "label": "Ascendente (tubular)"
+          },
+          {
+            "value": "raiz",
+            "label": "Raiz (seios de Valsalva)"
+          },
+          {
+            "value": "estendido",
+            "label": "Estendido (raiz e ascendente)"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Não avaliado/desconhecido"
+          }
+        ]
+      },
+      {
+        "id": "cirurgia_valvar_concomitante_planejada",
+        "label": "Há cirurgia da valva aórtica já programada por outro motivo (concomitante)?",
+        "type": "boolean",
+        "section": "Perfil"
+      },
+      {
+        "id": "achados_alto_risco_loeys_dietz",
+        "label": "Presentes achados de alto risco descritos para Loeys-Dietz (ex.: crescimento rápido, história familiar de dissecção em diâmetro pequeno, outros critérios de gravidade reconhecidos pela equipe assistente)?",
+        "type": "boolean",
+        "section": "Perfil"
+      },
+      {
+        "id": "fatores_risco_adicionais",
+        "label": "Fatores de risco adicionais presentes?",
+        "type": "multiselect",
+        "section": "Perfil",
+        "options": [
+          {
+            "value": "crescimento_rapido",
+            "label": "Crescimento do diâmetro ≥ 3 mm/ano"
+          },
+          {
+            "value": "historia_familiar_disseccao",
+            "label": "História familiar de síndrome aórtica aguda"
+          },
+          {
+            "value": "hipertensao_resistente",
+            "label": "Hipertensão resistente"
+          },
+          {
+            "value": "estatura_baixa",
+            "label": "Estatura baixa"
+          },
+          {
+            "value": "desejo_gestacao",
+            "label": "Desejo de gestação"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum fator adicional identificado"
+          }
+        ]
+      },
+      {
+        "id": "sinais_alarme_dissecacao",
+        "label": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante, ou outro sinal de síndrome aórtica aguda?",
+        "type": "boolean",
+        "required": true,
+        "section": "Segurança"
+      },
+      {
+        "id": "historia_familiar_morte_subita_aortica",
+        "label": "História familiar de morte súbita aórtica, aneurisma ou dissecção em parente de primeiro grau?",
+        "type": "boolean",
+        "section": "História"
+      },
+      {
+        "id": "gestante_ou_planeja_gestacao",
+        "label": "Paciente gestante ou planejando gestação?",
+        "type": "boolean",
+        "section": "Perfil"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "aortogen-dissecacao-aguda-emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_alarme_dissecacao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor lancinante/rasgante de início súbito sugestiva de síndrome aórtica aguda em paciente com aortopatia genética conhecida ou suspeita"
+          ],
+          "emergency_flow": [
+            "Obter angiotomografia de aorta sincronizada ao ECG, do pescoço à pelve, sem atraso, independentemente do diâmetro previamente conhecido"
+          ],
+          "suggested_tests": [
+            "Angiotomografia de aorta sincronizada ao ECG (pescoço à pelve)"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-marfan-limiar-5-0",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "marfan"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Diâmetro ≥ 5,0 cm em síndrome de Marfan atinge o limiar de indicação cirúrgica (Classe I) — encaminhar a cirurgia aórtica/cardiovascular"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-marfan-zona-intermediaria-4-5",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "marfan"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 45
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "lt",
+              "value": 50
+            },
+            {
+              "field": "fatores_risco_adicionais",
+              "op": "contains",
+              "value": "crescimento_rapido"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "4,5 cm com fator de risco adicional (crescimento acelerado) em Marfan torna a cirurgia razoável (Classe IIa) mesmo abaixo de 5,0 cm — discutir com cirurgia aórtica"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-tgfbr-basal-4-5",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "in",
+              "value": [
+                "TGFBR1",
+                "TGFBR2"
+              ]
+            },
+            {
+              "field": "achados_alto_risco_loeys_dietz",
+              "op": "falsy"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 45
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "TGFBR1/TGFBR2 sem achados de alto risco: 4,5 cm já atinge o limiar cirúrgico (Classe I) — mais conservador que Marfan"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-tgfbr2-alto-risco-4-0",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "eq",
+              "value": "TGFBR2"
+            },
+            {
+              "field": "achados_alto_risco_loeys_dietz",
+              "op": "truthy"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 40
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "TGFBR2 com achados de alto risco: limiar cai para 4,0 cm (Classe IIa) — não aguardar 4,5 cm"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-tgfbr1-alto-risco-4-0",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "eq",
+              "value": "TGFBR1"
+            },
+            {
+              "field": "achados_alto_risco_loeys_dietz",
+              "op": "truthy"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 40
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "TGFBR1 com achados de alto risco: limiar cai para 4,0 cm (Classe IIb) — discutir com cirurgia aórtica mesmo em evidência C-EO"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-smad3-4-5",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "eq",
+              "value": "SMAD3"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 45
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "SMAD3: cirurgia razoável a partir de 4,5 cm (Classe IIa, C-EO)"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-tgfb2-4-5",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "eq",
+              "value": "TGFB2"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 45
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "TGFB2 (NÃO confundir com TGFBR2 — nomes quase idênticos, limiares diferentes): cirurgia pode ser considerada a partir de 4,5 cm (Classe IIb, C-EO)"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-loeys-dietz-tgfb3-5-0",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "loeys_dietz"
+            },
+            {
+              "field": "gene_loeys_dietz",
+              "op": "eq",
+              "value": "TGFB3"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "TGFB3: cirurgia pode ser considerada a partir de 5,0 cm (Classe IIb, C-EO) — limiar mais próximo do de Marfan que o das demais variantes de Loeys-Dietz"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-isolada-5-5",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "falsy"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "neq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 55
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Fenótipo ascendente/estendido isolado: 5,5 cm atinge o limiar cirúrgico padrão (Classe I) — mesmo corte da aorta tricúspide"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-fenotipo-raiz-5-0",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "fenotipo_bicuspide",
+              "op": "eq",
+              "value": "raiz"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Fenótipo de raiz: limiar cirúrgico mais baixo, a partir de 5,0 cm (Classe I, ESC 2024) — esse fenótipo cresce mais rápido e tem maior risco de síndrome aórtica aguda"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-bicuspide-cirurgia-concomitante-4-5",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "valva_bicuspide"
+            },
+            {
+              "field": "cirurgia_valvar_concomitante_planejada",
+              "op": "truthy"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 45
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Cirurgia valvar aórtica já programada: operar também a aorta no mesmo tempo cirúrgico a partir de 4,5 cm (Classe IIa) — corte válido só neste cenário de cirurgia concomitante, não para vigilância isolada"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-aneurisma-familiar-conservador",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "aneurisma_familiar_nao_sindromico"
+            },
+            {
+              "field": "diametro_raiz_ascendente_mm",
+              "op": "gte",
+              "value": 50
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Aneurisma familiar não sindrômico com diâmetro ≥ 5,0 cm: sem corte único validado para esse grupo, mas a maioria dos centros usa limiar mais conservador que o do aneurisma esporádico (5,5 cm) — decisão individualizada com cirurgia aórtica e genética clínica"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-historia-familiar-triagem-cascata",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "historia_familiar_morte_subita_aortica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "História familiar de morte súbita aórtica, aneurisma ou dissecção aumenta a probabilidade pré-teste de aortopatia hereditária, mesmo sem diagnóstico sindrômico prévio no paciente"
+          ],
+          "suggested_tests": [
+            "Avaliar a aorta inteira na linha de base; considerar aconselhamento genético e rastreamento em cascata de parentes de primeiro grau"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-gestante-remessa-hub-proprio",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "gestante_ou_planeja_gestacao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Gestação ou desejo de gestação com aortopatia genética: manejo específico (estratificação de risco, vigilância na gestação, via de parto) está no hub e documentos dedicados a aortopatia na gravidez, não neste verbete"
+          ]
+        }
+      },
+      {
+        "id": "aortogen-sem-diagnostico-mas-fenotipo-sugestivo",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_confirmada",
+              "op": "eq",
+              "value": "sem_diagnostico_definido"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Definição da condição específica (Marfan, Loeys-Dietz com gene, valva bicúspide com fenótipo, ou familiar não sindrômico) — necessária antes de aplicar qualquer limiar cirúrgico, porque os cortes não são intercambiáveis entre as quatro condições"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "aortopatia genética",
+      "síndrome de Marfan",
+      "síndrome de Loeys-Dietz",
+      "valva aórtica bicúspide",
+      "aneurisma aórtico familiar",
+      "aneurisma de aorta torácica",
+      "FBN1",
+      "TGFBR1",
+      "TGFBR2"
+    ],
+    "source_refs": [
+      "Isselbacher EM, Preventza O, Hamilton Black J 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642. PMCID: PMC9876736 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026; título, periódico, volume/fascículo/páginas e DOI conferidos.",
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026; título, periódico, volume/fascículo/páginas e DOI conferidos.",
+      "Lacro RV, Dietz HC, Sleeper LA, et al; Pediatric Heart Network Investigators. Atenolol versus losartan in children and young adults with Marfan's syndrome. N Engl J Med. 2014;371(22):2061-2071. DOI: 10.1056/NEJMoa1404731. PMID: 25405392 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026; título, periódico, volume/fascículo/páginas e DOI conferidos. Citado apenas pelo achado comparativo do ensaio (ausência de diferença estatística entre as classes na taxa de mudança do escore-z aórtico), sem nenhuma referência a dose de fármaco.",
+      "Bossone E, Eagle KA. Epidemiology and management of aortic disease: aortic aneurysms and acute aortic syndromes. Nat Rev Cardiol. 2021;18(5):331-348. DOI: 10.1038/s41569-020-00472-6. PMID: 33353985 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026.",
+      "Dietz H. FBN1-Related Marfan Syndrome. 2001 Apr 18 [Updated 2022 Feb 17]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301510 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026; usado apenas para o fato geral do padrão de herança autossômico dominante do gene FBN1, sem uso de limiar numérico próprio deste capítulo além do já corroborado pela diretriz ACC/AHA 2022.",
+      "Loeys BL, Dietz HC. Loeys-Dietz Syndrome. 2008 Feb 28 [Updated periodicamente, revisão 2024 Sep 12]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301312 — verificado via NCBI E-utilities (esummary) nesta sessão em 29/08/2026; usado apenas para o fato geral dos genes envolvidos na via de sinalização do TGF-β, sem uso de limiar numérico próprio deste capítulo além do já corroborado pela diretriz ACC/AHA 2022."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36322642/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/",
+      "https://pubmed.ncbi.nlm.nih.gov/39210722/",
+      "https://pubmed.ncbi.nlm.nih.gov/25405392/",
+      "https://pubmed.ncbi.nlm.nih.gov/33353985/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1335/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1133/"
+    ],
+    "related_document_slugs": [
+      "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+      "aortopatias-geneticas-na-crianca-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos",
+      "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro",
+      "aortopatias-marfan-e-participacao-esportiva"
+    ],
+    "patient_material_slug": "valvula-aortica-bicuspide-o-que-significa-esse-diagnostico",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete criado em 29/08/2026 para preencher lacuna confirmada por reconhecimento prévio: existia cobertura profunda de aortopatia genética para a CRIANÇA (content/Cardiologia_pediátrica/...) e para a GESTANTE (content/Gravidez/sindrome-de-marfan-na-gestacao...), mas nenhuma ficha do Guia de Doenças cobria o ADULTO NÃO GESTANTE com síndrome de Marfan, síndrome de Loeys-Dietz, valva aórtica bicúspide com aortopatia associada ou aneurisma/dissecção torácica familiar não sindrômico. Colisão de slug verificada por grep em doencas/metadados.json e doencas/fragmentos/*.json ('aortopatia genetica', 'sindrome de marfan', 'loeys-dietz', 'ehlers-danlos vascular'): os únicos registros existentes que citam esses termos são o hub geral 'doenca-da-aorta' (menção de contexto, sem ficha própria por condição) e o hub 'aortopatia-na-gravidez' (escopo gestacional) — nenhuma ficha própria do adulto não gestante existia, confirmando a lacuna. Este verbete: (1) desbloqueia os 5 itens de evidência já revisados (review_status=revisado, published=false) em evidencias/metadados.json que aguardavam documento narrativo — aneurisma-aortico-na-sindrome-de-loeys-dietz-limiar-por-gene, aneurisma-aortico-na-sindrome-de-marfan-limiar-de-5-0-cm, aneurisma-aortico-na-valva-aortica-bicuspide, cirurgia-de-aortopatia-bicuspide-em-45mm-so-com-troca-valvar-concomitante, e vigilancia-por-imagem-na-valva-aortica-bicuspide; (2) resolve a orfandade do documento content/Cardiopatias_congênitas/valva-aortica-bicuspide-e-aortopatia-associada-esc-2024.md, hoje completo mas não vinculado a nenhum hub, agora incluído em related_document_slugs. PMIDs individualmente reverificados nesta sessão via NCBI E-utilities (esummary), conferindo título, periódico, volume/fascículo/páginas e DOI contra o que os 5 registros de evidência e o documento de valva bicúspide afirmavam: 36322642 (2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease — fonte de todos os limiares de Marfan, Loeys-Dietz por gene, valva bicúspide isolada e vigilância vitalícia na bicúspide), 39210722 (2024 ESC Guidelines for the management of peripheral arterial and aortic diseases — fonte do limiar de cirurgia concomitante em 45 mm e do refinamento por fenótipo da bicúspide) e 25405392 (Lacro RV et al., NEJM 2014, ensaio atenolol vs. losartan em Marfan — usado apenas pelo achado comparativo, sem dose). Também verificados, como reforço de epidemiologia geral (não como fonte de limiar numérico): 33353985 (Bossone & Eagle, epidemiologia de doença aórtica), 20301510 e 20301312 (GeneReviews de Marfan e Loeys-Dietz, usados apenas para o fato genético geral, gene/via de sinalização). Nenhum limiar foi generalizado entre condições: os cortes de Marfan (5,0 cm), Loeys-Dietz (4,0-5,0 cm por gene) e valva bicúspide (5,5 cm isolada / 4,5 cm com cirurgia valvar concomitante / 50 mm no fenótipo de raiz) permanecem específicos por etiologia, com regras de assistente distintas para cada uma, incluindo alerta explícito sobre a confusão de nomenclatura entre os genes TGFB2 e TGFBR2 na Loeys-Dietz. Aconselhamento genético e rastreamento em cascata são citados como etapa do manejo sem aprofundamento técnico, reservado a verbete próprio sobre aconselhamento genético cardiovascular que pode estar em produção por outro agente. Nenhuma dose de fármaco foi incluída em nenhum campo — o achado do ensaio LACRO 2014 é citado apenas como comparação de eficácia entre classes. related_document_slugs inclui os documentos pediátrico e gestacional apenas como contexto de ciclo de vida, sem duplicar seu conteúdo técnico, mais o documento de participação esportiva, o caso clínico e o estudo LACRO 2014 lidos como parte da tarefa. Pendente apenas revisão humana final (review_status=pendente_revisao).",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
