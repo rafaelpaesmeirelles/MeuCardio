@@ -280,3 +280,29 @@ específico no corpus. Despachado como checklist com as 21 classes de
 recomendação (agente a3eeb9f8e1df81fae).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 14 — concluído (1 commit, SHA 71cb516e) — total 36 commits
+
+- checklist `indicacoes-de-dispositivo-cardiaco-eletronico-implantavel-em-pediatria-paces-2021`
+  — 21 itens, maior cluster desbloqueado nesta fase. Todas as classes de
+  recomendação (I/IIa/IIb/III) extraídas literalmente da diretriz PACES
+  2021 (PMID 34363988), incl. nota explícita de que um padrão de risco
+  recebe classes diferentes conforme a cardiomiopatia (não inventada uma
+  tabela consolidada inexistente).
+
+## Resumo cumulativo desta janela (lotes 7-14, 22 commits, ~19 itens de conteúdo novo/aprofundado)
+
+Verbetes novos: cardiomiopatia-restritiva-nao-amiloide, manejo-perioperatorio-cied,
+esclerose-sistemica-cardiaca, cardiomiopatia-por-sobrecarga-de-ferro,
+fenocopias-glicogenicas-danon-prkag2, estenose-aortica-no-idoso-fragilidade-tavi (6)
+Exames novos: teste-ergometrico-ea-pediatrica-vab, angiotomografia-tavi-expandida,
+teste-ergometrico-canalopatias-bavt-pediatrico (3)
+Checklists novos: eco-endocardite-seriado, indicacoes-eco-pediatrico (20 itens),
+paces2021-dispositivos-pediatricos (21 itens) (3)
+Correções: kawasaki JCS 2020 farmacoterapia por tamanho de aneurisma (1)
+Território: Cardiomiopatias, Perioperatório/Dispositivos, Valvopatias/Cardiogeriatria,
+Cardiologia pediátrica — todos dentro do território designado do Claude.
+Nenhuma colisão: PR #599 e #725 seguem abertos e evitados em todas as rodadas
+(reconferidos a cada lote via git fetch + gh pr view).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
