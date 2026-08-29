@@ -268,3 +268,15 @@ _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoi
   específica localizada — declarado.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 14 (em andamento, 1 agente) — maior cluster identificado nesta fase
+
+Backlog pediátrico: cluster "paces2021-*" (21 itens!) — indicações de CDI/
+marca-passo/monitor implantável em pediatria (BAVT congênito, CPVT, QT
+longo, Brugada, CMH, cardiomiopatia arritmogênica, Chagas pediátrico, DNS,
+síncope, RM em portador de dispositivo). Complementar ao hub geral de
+dispositivos (adulto, ainda sob PR #599 — não mexido), sem host pediátrico
+específico no corpus. Despachado como checklist com as 21 classes de
+recomendação (agente a3eeb9f8e1df81fae).
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
