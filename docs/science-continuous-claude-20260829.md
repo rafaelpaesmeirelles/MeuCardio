@@ -806,13 +806,30 @@ Nota: origin/main avançou para 97899cf6 ("recovery emergencial
 certificado", fora do escopo desta branch) — sem colisão nos diretórios
 de conteúdo; branch segue sem rebase.
 
-## Lote 34 (planejado)
+## Lote 34 — concluído (SHA e493eb7c) — total 61 commits
 
-Próximo cluster: "achd2018-*" — recomendações específicas da diretriz
-ESC 2020 / AHA-ACC 2018 de ACHD ainda sem host dedicado: cirurgia/
-ablação em anomalia de Ebstein; Eisenmenger e uso de bosentana; critérios
-de fechamento de CIA/CIV residual no adulto; anticoagulação e vigilância
-hepática em Fontan; manejo de arritmia na TGA com switch atrial. A
-confirmar cobertura existente e ausência de colisão antes de despachar.
+- checklist `recomendacoes-granulares-esc2020-ahaacc2018-ebstein-eisenmenger-cia-civ-fontan-tga-switch`
+  — 5 itens complementando o hub geral `cardiopatia-congenita-do-adulto`
+  (confirmado por grep como transversal, sem este nível de detalhe):
+  reparo em cone vs. ablação de via acessória em Ebstein; bosentana em
+  Eisenmenger (série BREATHE-5 completa, com limitação de desfecho
+  substituto declarada); critérios de fechamento de CIA/CIV — lacuna
+  EXPLÍCITA dos cortes numéricos Qp/Qs e RVSP (sem acesso ao texto
+  integral da diretriz, não inventados); anticoagulação e vigilância
+  hepática em Fontan (RCT Monagle 2011 — sem diferença varfarina vs.
+  AAS); manejo de IART pós-switch atrial (ausência de RCT farmaco vs.
+  ablação declarada). 13 fontes via NCBI e-utils. Nenhuma diretriz SBC
+  específica localizada — declarado. **Fecha o cluster ACHD/achd2018
+  desta janela.**
+
+## Lote 35 (planejado)
+
+Cluster ACHD encerrado. Próximo alvo a auditar: retomar territórios
+ainda pouco explorados nesta janela — candidatos: Cardiomiopatias
+hereditárias (aprofundamento de subtemas específicos ainda não
+cobertos), Dispositivos cardíacos (respeitando colisão com PR #599,
+ainda aberto), ou nova varredura de conectividade Tudo com Tudo em
+verbetes recentes. A confirmar via grep + `gh pr list` antes de
+despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
