@@ -85,7 +85,7 @@ Três frases de plantão:
 2. **Não use “atípico” para desacelerar.** A ESC 2023 inclui dispneia, epigástrio e irradiação para braço/pescoço/mandíbula como equivalentes. A disparidade de sexo no tratamento do IAMCSST (estudo VIRGO, já nesta pasta) começa, muitas vezes, nesta hora.
 3. **Diabetes não pede um ECG diferente — pede que o ECG aconteça.** Sintoma não específico atrasa diagnóstico e acesso; o antídoto operacional é o traçado no tempo-alvo, não um escore.
 
-Cocaína na primeira hora tem via própria (`dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina`): o ECG e a troponina **continuam**; o que muda é o pacote farmacológico da intoxicação aguda (não betabloqueador puro). Perguntar uso recente faz parte desta hora, não “depois se a enzima vier alta”.
+Cocaína na primeira hora tem via própria (`fluxograma-dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina`): o ECG e a troponina **continuam**. O que muda é o pacote farmacológico **quando há intoxicação aguda simpaticomimética em curso**; nesse cenário, evitar betabloqueador puro na fase aguda. Fora de intoxicação ativa, uso recente isolado não cria proibição automática de betabloqueador. Perguntar uso recente faz parte desta hora, não “depois se a enzima vier alta”.
 
 ## hs-cTn: 0/1 h versus 0/2 h versus 0/3 h
 
@@ -162,7 +162,7 @@ Nesta hora vale só o passo 0 daquele documento: supra, choque, dor refratária 
 - [Fluxograma SCA ESC 2023](/biblioteca/fluxograma-sindrome-coronariana-aguda-esc-2023)
 - [Timing da estratégia invasiva no NSTE](/biblioteca/fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023)
 - [Infarto tipo 2 versus lesão miocárdica não isquêmica](/biblioteca/infarto-tipo-2-versus-lesao-miocardica-nao-isquemica)
-- [Dor torácica aguda com cocaína](/biblioteca/dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina)
+- [Dor torácica aguda com cocaína](/biblioteca/fluxograma-dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina)
 - [Fluxograma: cocaína e vasoespasmo](/biblioteca/fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina)
 - [Dispneia aguda — primeira hora](/biblioteca/dispneia-aguda-de-origem-cardiovascular-abordagem-inicial)
 - [Dor torácica ambulatorial estável de baixo risco](/biblioteca/fluxograma-dor-toracica-ambulatorial-estavel-baixo-risco)
