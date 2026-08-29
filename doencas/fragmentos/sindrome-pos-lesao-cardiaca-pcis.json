@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "sindrome-pos-lesao-cardiaca-pcis",
+    "name": "Síndrome pós-lesão cardíaca (PCIS)",
+    "aliases": [
+      "Post-cardiac injury syndrome",
+      "Síndrome pós-injúria cardíaca",
+      "Síndrome pós-pericardiotomia",
+      "Síndrome de Dressler"
+    ],
+    "area": "geral",
+    "category": "doencas_pericardicas",
+    "subtype": "inflamatoria_pos_lesao_cardiaca",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "fonte_producao": "chatgpt",
+    "review_status": "pendente_revisao",
+    "summary": "A síndrome pós-lesão cardíaca (PCIS) reúne síndromes inflamatórias pericárdicas/pleuropericárdicas após agressão ao coração ou pericárdio, principalmente síndrome pós-pericardiotomia, pericardite tardia pós-infarto (Dressler) e pericardite pós-traumática/iatrogênica. O diagnóstico não deve ser feito a partir de derrame pós-operatório isolado: exige contexto clínico e evidência inflamatória com exclusão de infecção, sangramento, isquemia e complicações mecânicas. A ESC 2025 recomenda terapia anti-inflamatória para PCIS estabelecida e considera colchicina perioperatória por 1 mês para prevenção após cirurgia cardíaca em pacientes elegíveis; COPPS e COPPS-2 sustentam a prevenção, com benefício acompanhado de tolerabilidade gastrointestinal especialmente no COPPS-2.",
+    "epidemiology": "A síndrome pós-pericardiotomia ocorre em parcela relevante dos pacientes após cirurgia cardíaca, com incidência variável conforme definição e procedimento; estudos prospectivos contemporâneos relatam aproximadamente 20–30% em algumas populações. A síndrome de Dressler tornou-se rara na era da reperfusão. O aumento de procedimentos cirúrgicos e transcateter torna as formas pós-procedimento proporcionalmente mais relevantes.",
+    "presentation": [
+      "Dor torácica pericardítica ou pleurítica após cirurgia, infarto, intervenção ou trauma",
+      "Febre sem foco alternativo",
+      "Dispneia associada a derrame pericárdico ou pleural",
+      "Atrito pericárdico ou pleural",
+      "Elevação de PCR e outros marcadores inflamatórios",
+      "Derrame pericárdico novo ou progressivo em contexto inflamatório",
+      "Derrame pleural associado a inflamação sistêmica"
+    ],
+    "diagnostic_approach": {
+      "criterios_clinicos": "Considerar PCIS quando houver relação temporal plausível com lesão cardíaca e pelo menos dois elementos compatíveis entre febre sem causa alternativa, dor pericardítica/pleurítica, atrito pericárdico/pleural, derrame pericárdico e derrame pleural com PCR elevada. O conjunto deve ser interpretado clinicamente, não como regra automática isolada.",
+      "avaliacao_basica": "História temporal, exame físico, hemograma, PCR, ECG e ecocardiograma. Troponina é indicada quando houver suspeita de envolvimento miocárdico ou nova lesão isquêmica.",
+      "imagem": "Ecocardiograma é central para quantificar derrame e repercussão hemodinâmica. TC pode avaliar complicações estruturais/pleuropulmonares. RMC pode documentar inflamação pericárdica e envolvimento miocárdico quando o diagnóstico for incerto ou complexo.",
+      "exclusoes_prioritarias": "Após cirurgia/procedimento, excluir infecção, hemopericárdio/sangramento, embolia pulmonar, pneumonia, insuficiência cardíaca e complicação mecânica. Após infarto, excluir isquemia recorrente/reinfarto e complicações mecânicas antes de atribuir dor a pericardite."
+    },
+    "differentials": [
+      "Derrame pericárdico pós-operatório não inflamatório",
+      "Tamponamento por hemopericárdio ou sangramento",
+      "Infecção de sítio cirúrgico, mediastinite ou pericardite bacteriana",
+      "Síndrome coronariana aguda ou reinfarto",
+      "Complicação mecânica pós-infarto",
+      "Embolia pulmonar",
+      "Pneumonia ou pleurite infecciosa",
+      "Insuficiência cardíaca/descompensação volêmica",
+      "Pericardite de outra etiologia"
+    ],
+    "tests": [
+      "ECG de 12 derivações",
+      "Proteína C reativa e hemograma",
+      "Ecocardiograma transtorácico",
+      "Troponina quando houver suspeita de lesão miocárdica/isquêmica",
+      "Radiografia ou tomografia de tórax quando houver pergunta pleuropulmonar",
+      "Ressonância cardíaca em casos selecionados com dúvida diagnóstica ou suspeita de inflamação miopericárdica",
+      "Investigação microbiológica dirigida quando houver febre alta, bacteremia ou suspeita infecciosa"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica, choque ou sinais de tamponamento",
+      "Derrame rapidamente progressivo ou suspeita de hemopericárdio",
+      "Febre alta persistente, bacteremia ou suspeita de infecção bacteriana",
+      "Dor pós-infarto com suspeita de isquemia recorrente ou complicação mecânica",
+      "Hipoxemia ou suspeita de embolia pulmonar",
+      "Disfunção ventricular nova ou elevação importante de troponina",
+      "Sinais de constrição pericárdica durante o seguimento"
+    ],
+    "treatment_summary": "Para PCIS estabelecida, a ESC 2025 recomenda terapia anti-inflamatória para acelerar remissão e reduzir recorrências (Classe I, Nível B). Aspirina/AINE mais colchicina são a base quando apropriados; após infarto, aspirina em dose anti-inflamatória é a primeira escolha segundo ESC 2025 (Classe I, Nível C). Antagonistas de IL-1 são recomendados pela ESC 2025 em PCIS refratária para prevenir recorrências e progressão para constrição (Classe I, Nível B), após exclusão de infecção e avaliação especializada. Para prevenção pós-cirurgia, colchicina iniciada 48–72 horas antes e mantida por 1 mês deve ser considerada em pacientes sem contraindicação e com tolerabilidade adequada (Classe IIa, Nível A). Derrame pós-operatório assintomático sem inflamação não deve ser tratado automaticamente com anti-inflamatório/colchicina apenas para reduzir volume.",
+    "ambulatory_flow": [
+      "Confirmar relação temporal com lesão cardíaca e evidência de inflamação",
+      "Diferenciar PCIS de derrame pós-operatório não inflamatório",
+      "Excluir infecção, sangramento, isquemia e complicações mecânicas conforme o gatilho",
+      "Tratar inflamação pericárdica com esquema apropriado ao contexto e às comorbidades",
+      "Reavaliar sintomas, PCR e derrame conforme evolução",
+      "Se houver recorrência/refratariedade, reconsiderar etiologia e encaminhar para avaliação especializada",
+      "Manter vigilância para constrição quando a evolução for prolongada ou complicada"
+    ],
+    "emergency_flow": [
+      "Tamponamento/choque exige protocolo emergencial e avaliação para drenagem",
+      "Suspeita de hemopericárdio ou sangramento pós-operatório requer avaliação cirúrgica/intervencionista urgente",
+      "Suspeita de reinfarto ou complicação mecânica pós-IAM deve seguir protocolo de síndrome coronariana/complicação mecânica, não ser rotulada como PCIS",
+      "Suspeita de infecção bacteriana exige investigação e tratamento antimicrobiano específicos"
+    ],
+    "monitoring": [
+      "Sintomas, febre e capacidade funcional",
+      "PCR quando previamente elevada",
+      "Tamanho e repercussão do derrame pelo ecocardiograma",
+      "Função renal/hepática e interações quando houver colchicina/AINE",
+      "Tolerabilidade gastrointestinal à colchicina",
+      "Recorrências após redução terapêutica",
+      "Sinais clínicos ou de imagem de constrição"
+    ],
+    "special_populations": [
+      "Pós-IAM: priorizar exclusão de isquemia recorrente e complicações mecânicas; aspirina é o anti-inflamatório preferencial na ESC 2025.",
+      "Pós-cirurgia cardíaca: separar derrame esperado/isolado de síndrome inflamatória verdadeira; considerar profilaxia com colchicina apenas se elegível e tolerada.",
+      "Doença renal/hepática ou polifarmácia: revisar contraindicações, dose e interações da colchicina/AINE antes do uso.",
+      "Imunossuprimidos ou suspeita infecciosa: evitar escalonamento imunomodulador até excluir infecção de forma apropriada."
+    ],
+    "tags": [
+      "PCIS",
+      "síndrome pós-lesão cardíaca",
+      "síndrome pós-pericardiotomia",
+      "Dressler",
+      "pericardite",
+      "cirurgia cardíaca",
+      "colchicina",
+      "COPPS",
+      "COPPS-2",
+      "derrame pericárdico"
+    ],
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Wang TKM, Klein AL, Cremer PC, et al. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Diagnosis and Management of Pericarditis. J Am Coll Cardiol. 2025;86(25):2691-2719. DOI: 10.1016/j.jacc.2025.05.023. PMID: 40767817.",
+      "Imazio M, Trinchero R, Brucato A, et al. COPPS. Eur Heart J. 2010;31(22):2749-2754. DOI: 10.1093/eurheartj/ehq319. PMID: 20805112.",
+      "Imazio M, Brucato A, Ferrazzi P, et al. COPPS-2. JAMA. 2014;312(10):1016-1023. DOI: 10.1001/jama.2014.11026. PMID: 25172965.",
+      "Platek NM, Persits I, Khayata M, et al. Post-Cardiac Injury Syndrome: A Paradigm Shift in Diagnosis and Management. JACC Adv. 2025;4(10 Pt 2):102166. DOI: 10.1016/j.jacadv.2025.102166. PMID: 41136179."
+    ],
+    "related_document_slugs": [
+      "sindrome-pos-lesao-cardiaca-pcis-esc-2025-diagnostico-prevencao-manejo",
+      "copps-colchicina-prevencao-sindrome-pos-pericardiotomia",
+      "copps-2-colchicina-perioperatoria-sindrome-pos-pericardiotomia",
+      "pericardite-recorrente-esc-acc-2025-fenotipo-e-escalonamento"
+    ],
+    "review_note": "Manter pendente_revisao. As classes/níveis ESC 2025 incluídos foram conferidos no slide set oficial da diretriz para PCIS. Antes de qualquer conteúdo operacional com dose, revisar função renal/hepática, interações e formulações disponíveis no Brasil. Não tratar derrame pós-operatório isolado como PCIS sem evidência inflamatória e diagnóstico diferencial adequado."
+  }
+]
