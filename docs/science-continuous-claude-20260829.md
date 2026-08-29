@@ -1151,7 +1151,20 @@ HIV, pós-COVID) fechados nesta janela.
   CAR-T, Buerger/Raynaud, critérios de Padua/ALVC e calculadora de
   risco de ACM já bem cobertos — evitada duplicação.
 
-## Lote 52 (planejado)
+## Lote 52 — concluído (SHA e20cf0f0) — total 80 commits
+
+- checklist `insuficiencia-de-ventriculo-direito-apos-implante-de-lvad-risco-reconhecimento-e-manejo`
+  — 5 itens complementando o checklist geral de acompanhamento pós-LVAD:
+  fisiopatologia (desvio septal, interdependência ventricular);
+  estratificação de risco com 3 escores validados (Kormos, CRITT,
+  EUROMACS-RHF — risco de 11% a 43,1%); reconhecimento clínico-
+  hemodinâmico; manejo médico (vasodilatador pulmonar, redução de
+  velocidade do LVAD); suporte mecânico temporário (Impella RP, ECMO,
+  RVAD). 7 fontes via NCBI e-utils, incluindo consenso ISHLT 2013.
+  Todos os cortes numéricos extraídos diretamente dos abstracts, nenhum
+  inventado.
+
+## Lote 53 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado nesta janela. Confirmar
