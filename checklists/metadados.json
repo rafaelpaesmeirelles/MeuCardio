@@ -32335,5 +32335,84 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "limiares-cirurgicos-de-aneurisma-de-aorta-por-etiologia-marfan-loeys-dietz-bicuspide-esporadico",
+    "condicao": "Aneurisma de aorta — limiares cirúrgicos por etiologia e contexto clínico",
+    "resumo": "Checklist complementar ao documento geral de PAAD ESC 2024 já existente no corpus, detalhando limiares de diâmetro para cirurgia eletiva de aneurisma de aorta estratificados por etiologia (esporádico, síndrome de Marfan, síndrome de Loeys-Dietz, valva aórtica bicúspide) e por segmento anatômico/sexo (aorta ascendente, aorta descendente, aorta abdominal), com classe de recomendação e nível de evidência quando disponíveis nas diretrizes-fonte verificadas. Valores por gene individual em Loeys-Dietz e por sexo em algumas diretrizes específicas de AAA não puderam ser confirmados com precisão e isso está declarado explicitamente nos itens correspondentes.",
+    "documento_origem": null,
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Isselbacher EM, Preventza O, Hamilton Black J 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642.",
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165. (Nota: não há versão 2024 desta diretriz específica de valvopatias no PubMed — a mais recente é a de 2021; declarado por rigor.)",
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722.",
+      "Wanhainen A, Van Herzeele I, Bastos Goncalves F, et al.; ESVS Guidelines Committee. Editor's Choice -- European Society for Vascular Surgery (ESVS) 2024 Clinical Practice Guidelines on the Management of Abdominal Aorto-Iliac Artery Aneurysms. Eur J Vasc Endovasc Surg. 2024;67(2):192-331. DOI: 10.1016/j.ejvs.2023.11.002. PMID: 38307694.",
+      "MacCarrick G, Black JH 3rd, Bowdin S, El-Hamamsy I, Frischmeyer-Guerrerio PA, Guerrerio AL, Sponseller PD, Loeys B, Dietz HC 3rd. Loeys-Dietz syndrome: a primer for diagnosis and management. Genet Med. 2014;16(8):576-587. DOI: 10.1038/gim.2014.11. PMID: 24577266.",
+      "Talvitie M, Jonsson M, Roy J, Hultgren R. Association of women-specific size threshold and mortality in elective abdominal aortic aneurysm repair. Br J Surg. 2024;111(1):znad376. DOI: 10.1093/bjs/znad376. PMID: 37963191."
+    ],
+    "itens": [
+      {
+        "id": "asc-esporadico-tricuspide",
+        "categoria": "Aorta ascendente",
+        "obrigatorio": true,
+        "texto": "Aneurisma de aorta ascendente esporádico, não sindrômico, com valva aórtica tricúspide: cirurgia eletiva indicada quando diâmetro máximo da raiz ou aorta ascendente ≥5,5 cm (Classe I, Nível de evidência B-NR). Também indicada, independentemente do diâmetro absoluto, se a taxa de crescimento confirmada por imagem tomográfica for ≥0,3 cm/ano em 2 anos consecutivos, ou ≥0,5 cm em 1 ano (Classe I, Nível C-LD). Em centros com Equipe Aórtica Multidisciplinar experiente, alguns grupos operam seletivamente entre 5,0-5,4 cm em pacientes de baixo risco cirúrgico — mas isso é descrito no texto como prática observacional de centros de excelência, não como recomendação formal de Classe I do documento.",
+        "origem_secao": "ACC/AHA 2022 (Isselbacher et al., Circulation 2022;146:e334-e482), seção 6.2 'Recommendations for Surgical Intervention for Aortic Root and Ascending Aortic Aneurysms', recomendações 1-3."
+      },
+      {
+        "id": "marfan",
+        "categoria": "Aortopatia sindrômica",
+        "obrigatorio": true,
+        "texto": "Síndrome de Marfan: cirurgia eletiva de raiz/aorta ascendente recomendada quando diâmetro da raiz aórtica ≥5,0 cm (Classe I, Nível B-NR) — limiar 0,5 cm mais baixo que o esporádico. O limiar cai para ≥4,5 cm quando há fatores de risco adicionais para dissecção, como crescimento aórtico rápido ou história familiar de dissecção aórtica (Classe IIa, Nível B-NR), preferencialmente por equipe experiente. Também é razoável indicar cirurgia com razão área transversal da raiz (cm²)/altura (m) ≥10 (Classe IIa, C-LD). No contexto específico de desejo de gestação, o guideline traz uma tabela própria de limiares pré-concepcionais, mais baixos que os limiares eletivos gerais: cirurgia antes de engravidar recomendada se raiz >4,5 cm, e considerada se 4,0-4,5 cm associado a crescimento rápido (≥0,3 cm/ano) ou história familiar de dissecção.",
+        "origem_secao": "ACC/AHA 2022, seção 6.1.2.2.3 'Marfan Syndrome Interventions: Replacement of the Aortic Root in Patients With Marfan Syndrome' e seção 8.3 'Surgery Before Pregnancy in Women With Aortic Disease' (tabela de limiares pré-gestacionais)."
+      },
+      {
+        "id": "loeys-dietz-gene-especifico",
+        "categoria": "Aortopatia sindrômica",
+        "obrigatorio": true,
+        "texto": "Síndrome de Loeys-Dietz: o guideline ACC/AHA 2022 NÃO fornece um único valor numérico fixo de corte para cirurgia da raiz/aorta ascendente — a recomendação formal é que o limiar seja individualizado pela variante genética específica, diâmetro, taxa de crescimento, achados extra-aórticos, história familiar, idade e sexo (Classe I, Nível C-LD, remetendo a tabela de estratificação por gene do documento). Do que está numericamente explícito no texto: (a) para segmentos extra-raiz (arco intacto, aorta descendente ou abdominal) em portadores de variante patogênica em TGFBR1, TGFBR2 ou SMAD3, cirurgia pode ser considerada a partir de ≥4,5 cm (Classe IIb, Nível C-EO); (b) historicamente, o fenótipo agressivo de TGFBR1/TGFBR2 já motivou recomendação antiga de cirurgia da raiz em diâmetro >4,0 cm, mas esse número isolado foi substituído pela abordagem individualizada atual das diretrizes vigentes; (c) variantes em TGFB2/TGFB3 tendem a fenótipo aórtico menos agressivo que TGFBR1/TGFBR2/SMAD3, sem que isso se traduza em um número de corte único e publicado. DECLARAÇÃO EXPLÍCITA DE INCERTEZA: não foi possível confirmar, nos textos-fonte verificados, um valor numérico único e definitivo de corte para cirurgia eletiva da RAIZ aórtica específico para cada gene individual (por exemplo, um número isolado apenas para TGFBR2) — as diretrizes atuais deliberadamente evitam esse número fixo em favor de decisão multifatorial.",
+        "origem_secao": "ACC/AHA 2022, seção 6.1.2.3.3 'Loeys-Dietz Syndrome Surgical Interventions: Replacement of the Aorta in Patients With Loeys-Dietz Syndrome'; complementado por MacCarrick G, Black JH 3rd, Bowdin S, et al. Genet Med. 2014;16(8):576-587 (PMID 24577266), revisão primária de diagnóstico e manejo de LDS."
+      },
+      {
+        "id": "bicuspide-isolado",
+        "categoria": "Valva bicúspide",
+        "obrigatorio": true,
+        "texto": "Aneurisma de aorta em valva aórtica bicúspide (BAV), sem indicação valvar concomitante: cirurgia recomendada quando diâmetro da raiz e/ou aorta ascendente ≥5,5 cm (Classe I, Nível B-NR) — o mesmo limiar numérico do aneurisma esporádico com valva tricúspide. Também é razoável (não uma indicação forte) operar entre 5,0-5,4 cm na ausência de outros fatores de risco para dissecção e em baixo risco cirúrgico, em centro experiente (Classe IIb, Nível B-NR); e é razoável usar razão área/altura ≥10 cm²/m como critério adicional de decisão (Classe IIa, Nível B-NR).",
+        "origem_secao": "ACC/AHA 2022, seção 6.1.3.2 'BAV Aortopathy Interventions: Replacement of the Aorta in Patients With BAV', recomendações 1 e 3."
+      },
+      {
+        "id": "asc-tricuspide-classe-nivel",
+        "categoria": "Aorta ascendente",
+        "obrigatorio": true,
+        "texto": "Recomendação formal de indicação cirúrgica para aorta ascendente em ~5,5 cm com valva tricúspide (mesmo cenário do item 'asc-esporadico-tricuspide', reformulado como recomendação de classe/nível): 'Em pacientes assintomáticos com aneurisma de raiz ou aorta ascendente com diâmetro máximo ≥5,5 cm, a cirurgia está indicada' — Classe I (recomendação forte), Nível de evidência B-NR (estudos não randomizados/observacionais bem desenhados). Cirurgia também está indicada, com Classe I e Nível C-LD, em qualquer paciente sintomático atribuível ao aneurisma, independentemente do diâmetro.",
+        "origem_secao": "ACC/AHA 2022, seção 6.2 'Recommendations for Surgical Intervention for Aortic Root and Ascending Aortic Aneurysms', itens 1-2 do quadro de recomendações."
+      },
+      {
+        "id": "bicuspide-avr-concomitante",
+        "categoria": "Valva bicúspide",
+        "obrigatorio": true,
+        "texto": "Quando há troca valvar aórtica já indicada por outro motivo (ex. estenose ou insuficiência aórtica grave) em paciente com BAV, o limiar para reparo aórtico concomitante cai para ≥4,5 cm de diâmetro da raiz ou aorta ascendente (Classe IIa, Nível B-NR) — 1 cm abaixo do limiar isolado de 5,5 cm. O racional, explicitado no texto de suporte do guideline: (1) estudo de coorte (Borger et al., citado no documento) mostrou que diâmetros basais de 4,5-4,9 cm, mesmo após troca valvar isolada sem reparo aórtico concomitante, já se associam a risco significativamente maior de aneurisma, dissecção ou morte súbita subsequente em seguimento de 10-15 anos; (2) dados de risco relativo por diâmetro (Paruchuri et al., citado no documento) mostram um salto abrupto do risco de dissecção ao redor de 4,0-4,5 cm; (3) operar a aorta na mesma cirurgia evita reoperação cardíaca futura em um paciente já exposto ao risco de esternotomia/circulação extracorpórea — ou seja, o incremento de risco de tratar a aorta na mesma intervenção é considerado menor que o risco de uma segunda cirurgia cardíaca no futuro.",
+        "origem_secao": "ACC/AHA 2022, seção 6.1.3.2, recomendação 4, e texto de suporte da mesma seção (referências a estudo de Borger et al. e de Paruchuri et al. sobre risco relativo de dissecção por diâmetro)."
+      },
+      {
+        "id": "descendente-taaa",
+        "categoria": "Aorta descendente/AAA",
+        "obrigatorio": true,
+        "texto": "Aneurisma de aorta torácica descendente: fisiopatologia distinta da ascendente (predominantemente aterosclerótica/degenerativa, prevalência de calcificação/ateroma de 80-88% vs. 8-9% na ascendente esporádica, acometendo pacientes mais idosos, ~72 vs. ~60-64 anos). Reparo recomendado quando diâmetro ≥5,5 cm (Classe I, Nível B-NR) — coincidentemente o mesmo valor numérico do limiar ascendente esporádico, mas por racional fisiopatológico distinto. Reparo pode ser considerado abaixo de 5,5 cm na presença de fatores de risco para ruptura (crescimento rápido ≥0,5 cm/ano, aneurisma sintomático, doença do tecido conjuntivo/doença aórtica torácica hereditária subjacente, morfologia sacular) (Classe IIb, Nível B-NR). Para aneurisma toracoabdominal degenerativo intacto (segmento mais extenso), o limiar geral é mais alto: reparo recomendado em ≥6,0 cm (Classe I, B-NR), e razoável em ≥5,5 cm se realizado por equipe experiente em centro multidisciplinar (Classe IIa, B-NR).",
+        "origem_secao": "ACC/AHA 2022, seção 6.1.1 'Sporadic and Degenerative TAA' (distinção etiológica/fisiopatológica) e seções 'Recommendations for Size Thresholds for Repair of Descending TAA' e correspondente para TAAA degenerativo."
+      },
+      {
+        "id": "aaa-especifico-por-sexo",
+        "categoria": "Aorta descendente/AAA",
+        "obrigatorio": true,
+        "texto": "Correção eletiva de aneurisma de aorta abdominal (AAA) por diâmetro específico por sexo: reparo recomendado em diâmetro máximo ≥5,5 cm em homens OU ≥5,0 cm em mulheres — Classe I, Nível de evidência A (o nível de evidência mais alto do documento, indicando múltiplos ensaios/metanálises consistentes). Racional/fisiopatologia explicitado no texto do guideline: no UK Small Aneurysm Trial (UKSAT), que incluiu mais mulheres que estudos anteriores, mulheres apresentaram taxas mais altas de ruptura e de morte relacionada ao aneurisma que homens; o diâmetro médio de ruptura em mulheres foi de 5,0 cm (menor que o valor típico em homens), o que sustenta o limiar de intervenção mais baixo nesse sexo. CONTRAPONTO / DEBATE EM ANDAMENTO: um estudo de registro nacional sueco mais recente (Talvitie et al. 2024, Br J Surg, 1642 mulheres tratadas eletivamente) não encontrou associação entre diâmetro de reparo (49-54 mm vs. ≥55 mm) e mortalidade em 90 dias/1 ano/3 anos em mulheres, e concluiu textualmente que 'o maior risco de ruptura em mulheres não deveria se traduzir automaticamente em um limiar mais baixo específico por sexo' — ou seja, evidência recente questiona (sem refutar de forma definitiva) se o valor ideal do limiar mais baixo em mulheres já está bem calibrado, mesmo com a recomendação de guideline já estabelecida em 5,0 cm. DECLARAÇÃO EXPLÍCITA DE INCERTEZA: não foi possível, nos resumos/textos disponíveis via NCBI e-utils para a diretriz ESVS 2024 (AAA) e para o ESC PAAD 2024, confirmar se esses dois documentos europeus adotam exatamente o mesmo valor numérico (5,5 cm/5,0 cm) ou um valor ligeiramente diferente para mulheres — o valor numérico confirmado com precisão neste checklist vem do texto integral verificado do ACC/AHA 2022.",
+        "origem_secao": "ACC/AHA 2022, seção 'Recommendations for the Threshold for AAA Repair' (Classe I, Nível A); contraponto de Talvitie M, Jonsson M, Roy J, Hultgren R. Br J Surg. 2024;111(1):znad376 (PMID 37963191)."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
