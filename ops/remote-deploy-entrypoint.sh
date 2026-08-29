@@ -2,6 +2,7 @@
 # Forced command for the GitHub Actions production key. This key cannot open a
 # shell, forward ports, or execute arbitrary commands. It accepts only:
 #   deploy <40-character current main SHA>
+#   apk <40-character current main SHA>
 #   intelligence <40-character current main SHA>
 set -Eeuo pipefail
 
@@ -23,11 +24,14 @@ EXPECTED_SHA=""
 if [[ "$ORIGINAL_COMMAND" =~ ^deploy[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="deploy"
   EXPECTED_SHA="${BASH_REMATCH[1]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^apk[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="apk"
+  EXPECTED_SHA="${BASH_REMATCH[1]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="intelligence"
   EXPECTED_SHA="${BASH_REMATCH[1]}"
 else
-  deny "expected exactly: deploy <40-character main SHA> or intelligence <40-character main SHA>"
+  deny "expected exactly: deploy <SHA>, apk <SHA>, or intelligence <SHA>"
 fi
 readonly REQUEST_KIND EXPECTED_SHA
 
@@ -60,6 +64,39 @@ if [[ "$REQUEST_KIND" == "intelligence" ]]; then
 
   exec docker compose -f docker-compose.prod.yml exec -T backend \
     python -m app.services.guideline_discovery_cli
+fi
+
+if [[ "$REQUEST_KIND" == "apk" ]]; then
+  deployed_sha="$(git rev-parse --verify HEAD)"
+  if [[ "$deployed_sha" != "$EXPECTED_SHA" ]]; then
+    printf 'APK build refused: production is at %s but current main is %s. Deploy current main first.\n' \
+      "$deployed_sha" "$EXPECTED_SHA" >&2
+    exit 65
+  fi
+
+  cd "$PROJECT_DIR/frontend"
+  [[ -f android/keystore.properties ]] || deny "android/keystore.properties is missing"
+  command -v npx >/dev/null || deny "npx is unavailable"
+  [[ -x android/gradlew ]] || deny "android/gradlew is unavailable"
+
+  npx cap sync android
+  cd android
+  JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 \
+    PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH \
+    ./gradlew assembleRelease
+
+  apk_file="app/build/outputs/apk/release/app-release.apk"
+  [[ -s "$apk_file" ]] || deny "signed release APK was not generated"
+
+  install -d -m 0755 "$PROJECT_DIR/downloads"
+  install -m 0644 "$apk_file" "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk"
+  cp "$PROJECT_DIR/downloads/corvia-os-android-1.0.1.apk" \
+    "$PROJECT_DIR/downloads/corvia-os-android.apk"
+  cd "$PROJECT_DIR/downloads"
+  sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256
+  sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256
+  printf 'Android APK published for %s.\n' "$EXPECTED_SHA"
+  exit 0
 fi
 
 git checkout main
