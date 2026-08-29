@@ -231,3 +231,14 @@ BAVT congênito) — CPVT já tem 2 exames-host, não incluído. Despachado exam
 complementar (agente a25dd7a5b2c95d2e9).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 12 — concluído (1 commit, SHA 94a57a1f) — total 32 commits
+
+- exame `teste-ergometrico-na-sindrome-do-qt-longo-sindrome-de-brugada-e-no-bavt-congenito-pediatrico`
+  — novo, complementar ao exame já existente de CPVT. 3 cenários (QTc de
+  recuperação em SQTL/LQT1, desmascaramento limitado de Brugada, capacidade
+  funcional/incompetência cronotrópica em BAVT congênito para decisão de
+  marca-passo). 11 PMIDs. Sem corte numérico de consenso em nenhum dos 3 —
+  declarado.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
