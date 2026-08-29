@@ -9,13 +9,20 @@ Segue o padrão das outras frentes, com duas diferenças que são deste conteúd
    material é educativo, não prescritivo. A checagem é mecânica e propositalmente
    grosseira — prefere recusar um texto legítimo a deixar passar uma dose para
    um leigo que não tem como julgar se aquilo se aplica a ele.
+
+Correções editoriais pequenas e auditáveis podem ser versionadas em
+`material-paciente/correcoes/*.json`. Elas são aplicadas antes da barreira de
+posologia e, portanto, não enfraquecem a proteção: o texto resultante ainda
+precisa passar integralmente pelo mesmo detector.
 """
 
 from __future__ import annotations
 
+import copy
 import json
 import re
 from pathlib import Path
+from typing import Any
 
 from app.core.db import SessionLocal
 from app.models.patient_material import PatientMaterial
@@ -40,8 +47,77 @@ def _texto_do_registro(item: dict) -> str:
     return "\n".join(partes)
 
 
+def _regex_replace_recursive(value: Any, pattern: re.Pattern[str], replacement: str) -> tuple[Any, int]:
+    if isinstance(value, str):
+        updated, count = pattern.subn(replacement, value)
+        return updated, count
+    if isinstance(value, list):
+        total = 0
+        result = []
+        for item in value:
+            updated, count = _regex_replace_recursive(item, pattern, replacement)
+            result.append(updated)
+            total += count
+        return result, total
+    if isinstance(value, dict):
+        total = 0
+        result: dict[str, Any] = {}
+        for key, item in value.items():
+            updated, count = _regex_replace_recursive(item, pattern, replacement)
+            result[key] = updated
+            total += count
+        return result, total
+    return value, 0
+
+
+def _aplicar_correcoes(dados: list[dict], caminho: Path) -> list[dict]:
+    """Aplica overlays por slug sem alterar o manifesto-fonte.
+
+    Cada `replace_patterns` precisa encontrar ao menos uma ocorrência. Isso
+    impede que uma correção envelhecida passe silenciosamente a não fazer nada.
+    """
+    result = [copy.deepcopy(item) for item in dados]
+    by_slug = {str(item.get("slug") or ""): index for index, item in enumerate(result)}
+    corrections_dir = caminho.parent / "correcoes"
+    if not corrections_dir.exists():
+        return result
+
+    for path in sorted(corrections_dir.glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(payload, list):
+            raise ValueError(f"{path}: correções devem ser uma lista")
+        for correction in payload:
+            if not isinstance(correction, dict):
+                raise ValueError(f"{path}: correção deve ser objeto")
+            slug = str(correction.get("slug") or "").strip()
+            if not slug or slug not in by_slug:
+                raise ValueError(f"{path}: slug inexistente: {slug or '?'}")
+            index = by_slug[slug]
+            record: Any = result[index]
+            operations = correction.get("replace_patterns") or []
+            if not isinstance(operations, list) or not operations:
+                raise ValueError(f"{path}:{slug}: replace_patterns deve ser lista não vazia")
+            for operation in operations:
+                if not isinstance(operation, dict):
+                    raise ValueError(f"{path}:{slug}: operação inválida")
+                pattern_text = operation.get("pattern")
+                replacement = operation.get("replacement")
+                if not isinstance(pattern_text, str) or not pattern_text or not isinstance(replacement, str):
+                    raise ValueError(f"{path}:{slug}: pattern/replacement inválidos")
+                pattern = re.compile(pattern_text, re.I)
+                record, count = _regex_replace_recursive(record, pattern, replacement)
+                if count == 0:
+                    raise ValueError(f"{path}:{slug}: padrão não encontrado: {pattern_text}")
+            result[index] = record
+    return result
+
+
 def carregar(caminho: str = "/material-paciente/metadados.json") -> dict:
-    dados = json.loads(Path(caminho).read_text(encoding="utf-8"))
+    source = Path(caminho)
+    dados_raw = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(dados_raw, list):
+        raise ValueError(f"{source}: manifesto deve ser uma lista")
+    dados = _aplicar_correcoes(dados_raw, source)
     db = SessionLocal()
     novos = atualizados = 0
     recusados: list[dict] = []
