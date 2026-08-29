@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
@@ -13,6 +13,11 @@ type Detalhe = {
   tags: string[];
 };
 
+function urlTraduzida(url: string) {
+  const params = new URLSearchParams({ sl: "auto", tl: "pt", u: url });
+  return `https://translate.google.com/translate?${params.toString()}`;
+}
+
 export default function Estudo() {
   const { slug } = useParams();
   const [s, setS] = useState<Detalhe | null>(null);
@@ -23,6 +28,8 @@ export default function Estudo() {
     api.get<Detalhe>(`/studies/${slug}`).then(setS)
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar."));
   }, [slug]);
+
+  const traducaoUrl = useMemo(() => s?.url ? urlTraduzida(s.url) : null, [s?.url]);
 
   if (erro) return <Erro mensagem={erro} />;
   if (!s) return <Carregando />;
@@ -39,8 +46,22 @@ export default function Estudo() {
         <BotaoFavorito itemType="estudo" itemId={s.id} />
       </div>
 
-      <div className="cartao" style={{ marginTop: "1rem" }}>
-        <p className="eyebrow">Resumo</p>
+      <div className="acoes-linha" style={{ marginTop: "1rem", flexWrap: "wrap" }} aria-label="Opções de leitura do trabalho científico">
+        <a className="btn primario" href="#resumo-corvia">Resumo CorVIA</a>
+        {traducaoUrl && (
+          <a className="btn" href={traducaoUrl} target="_blank" rel="noopener noreferrer">
+            Traduzido ↗
+          </a>
+        )}
+        {s.url && (
+          <a className="btn" href={s.url} target="_blank" rel="noopener noreferrer">
+            Original ↗
+          </a>
+        )}
+      </div>
+
+      <div id="resumo-corvia" className="cartao" style={{ marginTop: "1rem", scrollMarginTop: "1rem" }}>
+        <p className="eyebrow">Resumo CorVIA</p>
         <p>{s.summary}</p>
       </div>
       <div className="cartao" style={{ marginTop: "0.8rem" }}>
@@ -61,7 +82,9 @@ export default function Estudo() {
       <div className="cartao" style={{ marginTop: "0.8rem", fontSize: "0.86rem" }}>
         {s.doi && <div>DOI: {s.doi}</div>}
         {s.pmid && <div>PMID: {s.pmid}</div>}
-        {s.url && <a href={s.url} target="_blank" rel="noopener noreferrer">Ver publicação original</a>}
+        <p style={{ color: "var(--texto-secundario)", margin: "0.55rem 0 0" }}>
+          O resumo é uma síntese original do CorVIA. A opção Traduzido abre uma visualização externa da fonte em português e não republica tradução integral no acervo compartilhado.
+        </p>
       </div>
 
       <TudoSobreEsteTema tema={s.theme} excluirTipo="estudo" excluirSlug={slug} />
