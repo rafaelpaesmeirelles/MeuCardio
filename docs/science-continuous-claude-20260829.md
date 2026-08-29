@@ -107,4 +107,41 @@ Aprofundamentos: doenca-de-kawasaki, miocardite-pediatrica, tronco-arterial-comu
 Tudo-com-Tudo (só links): avaliacao-cardiovascular-pre-concepcional, defeito-septo-atrioventricular, + trio fetal do lote 5 (5 correções)
 Novo tipo de conteúdo: checklist+caso para sarcoidose-cardiaca, exame ecocardiograma-com-contraste (3)
 
+## Lote 6 — concluído (2 commits, SHA 66a516d3) — total 18 commits na branch
+
+- `arritmia-atrial-na-circulacao-de-fontan` — verbete novo (complementa fisiologia-ventriculo-unico)
+- exame `caracterizacao-de-placa-de-alto-risco-por-angiotomografia-coronariana` — novo
+
+Território já bem coberto, confirmado sem lacuna: métodos gráficos (129 exames), DAP (rel=24), canalopatias, cardiomiopatias principais (mas backlog de evidências ainda alto — ver lote 7).
+
+## Lote 7 — concluído (2 commits, SHA 75940ae8) — total 20 commits na branch
+
+- `cardiomiopatia-restritiva-nao-amiloide` — verbete novo (fibrose endomiocárdica/SHE, sinal do "duplo V"; não sobrepõe amiloidose nem não-compactação/hipertrabeculação ESC 2023)
+- `manejo-perioperatorio-de-dispositivo-cardiaco-implantavel` — verbete novo (magneto vs. reprogramação, dependência de estimulação, monopolar/bipolar)
+
+Nota de correção de gate: os related_document_slugs originalmente propostos pelo
+agente do item 2 eram 6 slugs de *doença* (dispositivos-cardiacos-implantaveis,
+bloqueio-atrioventricular, arritmias-ventriculares-e-morte-subita-cardiaca,
+sincope, insuficiencia-cardiaca, parada-cardiorrespiratoria-e-morte-subita-abortada)
+— nenhum resolve contra related_document_slugs, que só aceita documento/fluxograma.
+audit_tudo_com_tudo.py pegou os 6 broken_references antes do commit. Corrigido
+para 5 documentos/fluxogramas reais e clinicamente pertinentes (verificados por
+busca em content/), incl. o doc que já cobre manejo perioperatório de CIED
+(fonte AHA compartilhada) e o análogo de EMI em radioterapia oncológica.
+Gates re-executados limpos (broken_references: [], content_inventory --strict OK)
+antes do commit final.
+
+## Lote 8 (próximo, em preparação)
+
+Candidatos identificados no scouting do backlog de cardiomiopatias (lote 7, não
+ainda acionados): doença de depósito de glicogênio (Danon/Pompe/PRKAG2) como
+fenocópias de CMH (2 itens — fenótipo hipertrófico, não restritivo, não incorporar
+à ficha restritiva); esclerose sistêmica com acometimento cardíaco (5 itens);
+sobrecarga de ferro/hemocromatose como verbete dedicado (hoje só menção breve
+como diferencial dentro de cardiomiopatia-restritiva-nao-amiloide).
+Pendência não acionada: possível quase-duplicata entre
+`doenca-renovascular-e-displasia-fibromuscular` (branch science-overnight) e
+`hipertensao-renovascular-e-estenose-de-arteria-renal` (já em main) — a
+reconciliar quando as branches forem revisadas/mescladas.
+
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
