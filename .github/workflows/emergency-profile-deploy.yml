@@ -5,6 +5,7 @@ name: Emergency profile hotfix deploy
 # 29/08/2026: novas publicações do Intelligence com Resumo CorVIA / Traduzido / Original.
 # 29/08/2026: tradução externa removida; leitura em português passa a ser interna no CorVIA.
 # 29/08/2026: publicação científica só fica visível após resumo/leitura PT; deploy drena backlog do Intelligence.
+# 29/08/2026: fontes confiáveis autoaprovadas + radar adaptativo 4h/1h por congresso/pico.
 
 on:
   push:
