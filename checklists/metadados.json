@@ -32903,5 +32903,79 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "teste-ergometrico-e-tcpe-na-cardiopatia-congenita-do-adulto-fontan-fallot-tga-e-descompensacao",
+    "condicao": "Cardiopatia congênita do adulto — teste ergométrico e TCPE por contexto clínico",
+    "resumo": "Checklist com indicações e particularidades do teste ergométrico/teste cardiopulmonar de exercício (TCPE) em seis cenários de cardiopatia congênita do adulto (ACHD): pós-Fontan, descompensação (contraindicação), cianótica corrigida, insuficiência cardíaca compensada pós-intervenção, Tetralogia de Fallot reparada e TGA com switch atrial/ccTGA. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia sobre teste de esforço em ACHD nas bases consultadas (NCBI PubMed); as referências centrais são a diretriz ESC 2020 de ACHD e o AHA/ACC 2018 ACHD Guideline, complementadas por estudos observacionais primários sobre VO2 pico e desfechos.",
+    "documento_origem": null,
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028.",
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. J Am Coll Cardiol. 2019;73(12):e81-e192. DOI: 10.1016/j.jacc.2018.08.1029. PMID: 30121239.",
+      "Fletcher GF, Ades PA, Kligfield P, et al. Exercise standards for testing and training: a scientific statement from the American Heart Association. Circulation. 2013;128(8):873-934. DOI: 10.1161/CIR.0b013e31829b5b44. PMID: 23877260.",
+      "Ohuchi H, Negishi J, Noritake K, et al. Prognostic value of exercise variables in 335 patients after the Fontan operation: a 23-year single-center experience of cardiopulmonary exercise testing. Congenit Heart Dis. 2015;10(2):105-116. DOI: 10.1111/chd.12222. PMID: 25196547.",
+      "Egbe AC, Driscoll DJ, Khan AR, et al. Cardiopulmonary exercise test in adults with prior Fontan operation: the prognostic value of serial testing. Int J Cardiol. 2017;235:6-10. DOI: 10.1016/j.ijcard.2017.02.140. PMID: 28284501.",
+      "Reybrouck T, Vangesselen S, Gewillig M. Impaired chronotropic response to exercise in children with repaired cyanotic congenital heart disease. Acta Cardiol. 2009;64(6):723-727. DOI: 10.2143/AC.64.6.2044734. PMID: 20128146.",
+      "Diller GP, Dimopoulos K, Okonko D, et al. Exercise intolerance in adult congenital heart disease: comparative severity, correlates, and prognostic implication. Circulation. 2005;112(6):828-835. DOI: 10.1161/CIRCULATIONAHA.104.529800. PMID: 16061735.",
+      "van den Berg J, de Bie S, Meijboom FJ, et al. Changes during exercise of ECG intervals related to increased risk for ventricular arrhythmia in repaired tetralogy of Fallot and their relationship to right ventricular size and function. Int J Cardiol. 2008;124(3):332-338. DOI: 10.1016/j.ijcard.2007.02.009. PMID: 17433470.",
+      "Chiu SN, Chiu HH, Wang JK, et al. Increased microvolt T-wave alternans in patients with repaired tetralogy of Fallot. Int J Cardiol. 2012;159(3):220-224. DOI: 10.1016/j.ijcard.2011.02.063. PMID: 21420183.",
+      "Leonardi B, Secinaro A, Trezzi M, et al. Cardiopulmonary Exercise Testing in Repaired Tetralogy of Fallot: Multiparametric Overview and Correlation with Cardiac Magnetic Resonance and Physical Activity Level. J Cardiovasc Dev Dis. 2022;9(1):26. DOI: 10.3390/jcdd9010026. PMID: 35050237.",
+      "Giardini A, Hager A, Lammers AE, et al. Ventilatory efficiency and aerobic capacity predict event-free survival in adults with atrial repair for complete transposition of the great arteries. J Am Coll Cardiol. 2009;53(17):1548-1555. DOI: 10.1016/j.jacc.2009.02.005. PMID: 19389567.",
+      "Uebing A, Diller GP, Li W, et al. Optimised rate-responsive pacing does not improve either right ventricular haemodynamics or exercise capacity in adults with a systemic right ventricle. Cardiol Young. 2010;20(5):485-494. DOI: 10.1017/S1047951110000454. PMID: 20456818.",
+      "Westhoff-Bleck M, Schieffer B, Tegtbur U, et al. Aerobic training in adults after atrial switch procedure for transposition of the great arteries improves exercise capacity without impairing systemic right ventricular function. Int J Cardiol. 2013;170(1):24-29. DOI: 10.1016/j.ijcard.2013.10.009. PMID: 24207068.",
+      "Ladouceur M, Redheuil A, Soulat G, et al. Longitudinal strain of systemic right ventricle correlates with exercise capacity in adult with transposition of the great arteries after atrial switch. Int J Cardiol. 2016;217:28-34. DOI: 10.1016/j.ijcard.2016.04.166. PMID: 27179205.",
+      "Wagner J, Agostoni P, Arena R, et al. The Role of Gas Exchange Variables in Cardiopulmonary Exercise Testing for Risk Stratification and Management of Heart Failure with Reduced Ejection Fraction. Am Heart J. 2018;202:116-126. DOI: 10.1016/j.ahj.2018.05.009. PMID: 29933148. [população de IC não-congênita; usado por extrapolação metodológica]"
+    ],
+    "itens": [
+      {
+        "id": "fontan-vo2-prognostico",
+        "categoria": "Fontan",
+        "obrigatorio": true,
+        "texto": "Realizar TCPE (não apenas ergometria convencional) em adultos pós-Fontan clinicamente estáveis, com repetição seriada ao longo do seguimento. O VO2 pico (% do previsto) é o marcador prognóstico mais consistentemente validado nessa população: em coorte de 335 pacientes Fontan, o VO2 pico predisse de forma independente mortalidade (HR 0,88 por ponto percentual de VO2% previsto, IC95% 0,76-0,98) e hospitalização não programada (HR 0,95 por ponto percentual, IC95% 0,91-0,99) (Ohuchi et al., 2015). Em coorte de 145 adultos Fontan com TCPE seriado (VO2 basal 63±11% do previsto), a queda de VO2% previsto ≥3 pontos percentuais/ano foi o único preditor independente de evento cardiovascular adverso (óbito ou cirurgia cardíaca) em 5 anos (HR 1,86, IC95% 1,11-3,48) (Egbe et al., 2017). RIGOR: não existe, nas fontes verificadas, um valor de corte único e prospectivamente validado de VO2 pico para decisão clínica isolada nesta população — o valor prognóstico está mais bem estabelecido para a TRAJETÓRIA (declínio seriado) do que para um limiar estático; não inventar corte numérico além do que foi reportado nesses dois estudos.",
+        "origem_secao": "Ohuchi H et al. 2015, Congenit Heart Dis (PMID 25196547); Egbe AC et al. 2017, Int J Cardiol (PMID 28284501)"
+      },
+      {
+        "id": "descompensada-contraindicacao",
+        "categoria": "Contraindicação",
+        "obrigatorio": true,
+        "texto": "Teste ergométrico/TCPE deve ser ADIADO em cardiopatia congênita descompensada — quadro de insuficiência cardíaca aguda/descompensada, arritmia sintomática não controlada, síncope recente sem elucidação diagnóstica, suspeita de miocardite/pericardite ativa, infecção sistêmica ativa, ou qualquer instabilidade hemodinâmica — até estabilização clínica plena. Esse princípio de segurança segue os critérios gerais de contraindicação ao teste de esforço consolidados na diretriz de padrões de teste da American Heart Association (Fletcher et al., 2013), aplicável como referência de segurança também na população ACHD, já que as diretrizes de ACHD (ESC 2020; AHA/ACC 2018) pressupõem avaliação funcional cardiopulmonar em pacientes clinicamente estáveis. DECLARAÇÃO EXPLÍCITA: não foi localizada, nas fontes verificadas via NCBI e-utils, uma lista de contraindicações ao teste ergométrico redigida especificamente para o contexto de cardiopatia congênita do adulto — a referência normativa usada aqui é a diretriz geral de teste de esforço da AHA (2013), e não uma diretriz ACHD-específica; não foi localizada diretriz da SBC sobre o tema.",
+        "origem_secao": "Fletcher GF et al. 2013, Circulation — AHA Scientific Statement (PMID 23877260); contexto geral: ESC 2020 ACHD Guideline (PMID 32860028) e AHA/ACC 2018 ACHD Guideline (PMID 30121239)"
+      },
+      {
+        "id": "cianotica-corrigida-cronotropismo-saturacao",
+        "categoria": "Cardiopatia cianótica corrigida",
+        "obrigatorio": true,
+        "texto": "Na cardiopatia cianótica corrigida (Fallot reparada, TGA com switch arterial, Fontan), a resposta cronotrópica ao esforço é tipicamente comprometida por disfunção sinusal pós-cirúrgica: em coorte pediátrica/adolescente (n=53: TOF reparada, switch arterial e Fontan), a resposta de frequência cardíaca esteve entre -1,7 e -4,6 desvios-padrão abaixo do esperado nos três grupos, e essa redução NÃO se associou necessariamente a VO2 reduzido nos grupos TOF e Fontan — ou seja, a resposta de FC isolada pode ser enganosa como medida de desempenho cardiovascular, devendo-se priorizar variáveis de troca gasosa (VO2, VE/VCO2) (Reybrouck et al., 2009). Dessaturação residual ao esforço também pode persistir mesmo após correção anatômica: em adultos Fontan, a saturação periférica média no pico do esforço foi 86±7% (vs. valores normais >95%), refletindo shunt residual, fenestração ou desacoplamento ventilação-perfusão (Egbe et al., 2017). RIGOR — CAVEAT EXPLÍCITO: o estudo de Reybrouck é pediátrico (crianças/adolescentes), não uma coorte adulta; a extrapolação do achado de incompetência cronotrópica para adultos com cardiopatia cianótica corrigida deve ser feita com cautela. Não foi localizado, nas buscas realizadas, um estudo dedicado à resposta de saturação/cronotropismo ao esforço especificamente em coorte adulta de cardiopatia cianótica corrigida.",
+        "origem_secao": "Reybrouck T et al. 2009, Acta Cardiol (PMID 20128146) — coorte pediátrica; Egbe AC et al. 2017, Int J Cardiol (PMID 28284501) — saturação em Fontan adulto"
+      },
+      {
+        "id": "ic-compensada-pos-intervencao",
+        "categoria": "Pós-intervenção",
+        "obrigatorio": true,
+        "texto": "Em insuficiência cardíaca compensada pós-intervenção (ex.: pós-troca valvar, pós-fechamento de shunt, pós-reparo residual), o TCPE tem papel na reavaliação funcional objetiva e na estratificação de risco ao longo do seguimento. Em coorte ampla de 335 adultos ACHD de etiologias variadas, a capacidade de exercício esteve reduzida em grau comparável ao de pacientes com IC crônica não-congênita de mesma classe funcional NYHA — inclusive em pacientes considerados 'assintomáticos' na consulta clínica —, e o VO2 pico predisse de forma independente hospitalização ou óbito (HR 0,937 por unidade de VO2, p=0,01); falta de resposta cronotrópica ao esforço, hipertensão pulmonar e função pulmonar reduzida foram correlatos importantes de menor VO2 (Diller et al., 2005). Variáveis de troca gasosa (slope VE/VCO2, eficiência ventilatória) agregam valor prognóstico incremental ao VO2 isolado na estratificação de insuficiência cardíaca com fração de ejeção reduzida (Wagner et al., 2018) — RIGOR: este último estudo foi conduzido em população de IC não-congênita, sendo usado aqui por extrapolação metodológica, não como evidência direta em ACHD. A prática recomendada é a reavaliação SERIADA (não teste único) para acompanhar a trajetória funcional pós-intervenção.",
+        "origem_secao": "Diller GP et al. 2005, Circulation (PMID 16061735); Wagner J et al. 2018, Am Heart J (PMID 29933148) — extrapolação de IC não-congênita"
+      },
+      {
+        "id": "fallot-reparada-arritmia-pvr",
+        "categoria": "Tetralogia de Fallot",
+        "obrigatorio": true,
+        "texto": "Na Tetralogia de Fallot reparada, o TCPE tem papel duplo: (1) avaliação objetiva de capacidade funcional, frequentemente discrepante da classe funcional subjetiva referida pelo paciente, e (2) rastreio de substrato eletrofisiológico pró-arrítmico induzido pelo esforço, informação relevante — em conjunto com dados de imagem (RM cardíaca) — na decisão de troca de válvula pulmonar (PVR). Em coorte prospectiva de 31 pacientes TOF reparada com ergometria + RM + Holter, o esforço aumentou a dispersão de QTc e JTc (heterogeneidade de repolarização, substrato de reentrada) de forma mais pronunciada que em controles saudáveis; o aumento de dispersão foi maior em pacientes com maior percentual de regurgitação pulmonar, maior volume de VD e pior massa/função de VD — variáveis também consideradas na indicação de PVR (van den Berg et al., 2008). Em coorte de 101 pacientes TOF reparada, o alternans de onda T em microvolts (MTWA) esteve aumentado em relação a controles (25,1±14,0 vs. 17,6±9,2 μV), particularmente em pacientes com regurgitação pulmonar importante, e correlacionou-se com eventos arrítmicos ventriculares tardios em 9,9% dos pacientes — embora o MTWA isoladamente não tenha superado a duração do QRS como preditor (Chiu et al., 2012). Revisão mais recente reforça o uso de TCPE multiparamétrico correlacionado a RM cardíaca e nível de atividade física na avaliação seriada desses pacientes (Leonardi et al., 2022).",
+        "origem_secao": "van den Berg J et al. 2008, Int J Cardiol (PMID 17433470); Chiu SN et al. 2012, Int J Cardiol (PMID 21420183); Leonardi B et al. 2022, J Cardiovasc Dev Dis (PMID 35050237)"
+      },
+      {
+        "id": "tga-corrigida-cronotropismo-vd-sistemico",
+        "categoria": "TGA corrigida",
+        "obrigatorio": true,
+        "texto": "Em transposição das grandes artérias corrigida por switch atrial (Mustard/Senning) ou ccTGA — ambas com ventrículo direito sistêmico —, o TCPE deve considerar quatro particularidades verificadas na literatura: (1) incompetência cronotrópica é achado consistente: em 9 pacientes com marca-passo e VD sistêmico, o VO2 pico foi marcadamente reduzido em relação a controles (12,6±6,8 vs. 31,4±6,6 mL/kg/min) e a reprogramação para resposta de FC otimizada NÃO melhorou o VO2 — frequências cardíacas mais altas podem inclusive ser deletérias por reduzirem o tempo de enchimento diastólico do VD sistêmico (Uebing et al., 2010); (2) valor prognóstico robusto do TCPE: em 274 adultos pós-Mustard/Senning, slope de VE/VCO2 ≥35,4 (HR 10,7) e VO2% previsto ≤52,3% (HR 3,4) predisseram risco de óbito/internação de emergência cardíaca em 4 anos; a combinação das duas alterações elevou o evento em 4 anos para 78,8% (Giardini et al., 2009); (3) treinamento físico aeróbico estruturado é seguro e eficaz: em ensaio randomizado (n=48, pós-Mustard), 24 semanas de treinamento aumentaram o VO2 pico em 3,8 mL/kg/min (IC95% 1,8-5,7) sem prejudicar volumes/função do VD sistêmico à RM, e sem arritmias induzidas pelo treinamento (Westhoff-Bleck et al., 2013); (4) o strain longitudinal global (GLS) do VD sistêmico correlaciona-se com o VO2 pico (r=0,42, p<0,01), sendo mais sensível que a FEVD por RM para detectar disfunção miocárdica precoce nesse grupo (Ladouceur et al., 2016).",
+        "origem_secao": "Uebing A et al. 2010, Cardiol Young (PMID 20456818); Giardini A et al. 2009, J Am Coll Cardiol (PMID 19389567); Westhoff-Bleck M et al. 2013, Int J Cardiol (PMID 24207068); Ladouceur M et al. 2016, Int J Cardiol (PMID 27179205)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
