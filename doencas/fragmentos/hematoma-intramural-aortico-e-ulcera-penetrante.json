@@ -1,0 +1,131 @@
+[
+  {
+    "slug": "hematoma-intramural-aortico-e-ulcera-penetrante",
+    "name": "Hematoma intramural aórtico e úlcera aterosclerótica penetrante",
+    "aliases": ["HIM", "PAU", "hematoma intramural", "úlcera penetrante aterosclerótica"],
+    "area": "geral",
+    "category": "doenca_vascular",
+    "subtype": "aguda",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "O hematoma intramural aórtico (HIM) e a úlcera aterosclerótica penetrante (PAU) são as duas variantes não dissecantes da síndrome aórtica aguda, ao lado da dissecção clássica já coberta pelo hub 'Doença da aorta' — juntas compõem a classificação TEM (Tipo de síndrome, localização da porta de Entrada, Malperfusão) do ACC/AHA 2022. O mecanismo distingue as três: na dissecção clássica há ruptura franca da íntima com fluxo sanguíneo em canal falso; no HIM há hemorragia contida na camada média da parede aórtica, sem ruptura íntima franca nem canal falso com fluxo; na PAU uma placa aterosclerótica ulcera e penetra a lâmina elástica interna, podendo progredir para hematoma intramural, pseudoaneurisma ou ruptura franca. Ambas seguem, como a dissecção, a divisão por localização em tipo A (acometimento de aorta ascendente) e tipo B (sem acometimento ascendente) para o HIM, e por zona aórtica para a PAU — a decisão entre terapia médica inicial e reparo urgente, e entre reparo aberto e endovascular, depende dessa localização e de critérios de complicação e de alto risco por imagem específicos de cada condição.",
+    "epidemiology": "HIM e PAU são os fenótipos minoritários dentro do espectro da síndrome aórtica aguda — a dissecção clássica é a apresentação mais frequente, e os dados populacionais de incidência global da síndrome aórtica aguda e os fatores de risco compartilhados (hipertensão arterial sistêmica como principal fator modificável, idade avançada, tabagismo, doença aterosclerótica difusa) já estão descritos no hub 'Doença da aorta', para onde este verbete remete sem duplicar. A PAU, por definição, ocorre em aorta com doença aterosclerótica estabelecida e por isso concentra-se em paciente mais idoso e com carga aterosclerótica sistêmica maior; o HIM compartilha o perfil de risco da dissecção clássica (hipertensão mal controlada como principal condição predisponente).",
+    "presentation": [
+      "Dor torácica ou dorsal aguda, de início súbito e intensidade máxima já no começo, de caráter lancinante ou rasgante — apresentação clínica semelhante à da dissecção clássica",
+      "Dor persistente, refratária ao tratamento clínico ou recorrente — no HIM tipo B inicialmente considerado não complicado, esse achado reclassifica o quadro como complicado",
+      "Dor correlacionada à imagem em úlcera aterosclerótica penetrante isolada — quando presente e persistente, por si só já indica reparo",
+      "Sinais de má perfusão de órgão-alvo, hipotensão, síncope ou choque — sinalizam complicação (malperfusão, hematoma periaórtico, derrame pericárdico com tamponamento ou ruptura)",
+      "Achado assintomático ou oligossintomático em exame de imagem realizado por outro motivo, sobretudo na PAU"
+    ],
+    "diagnostic_approach": {
+      "classificacao_por_localizacao_tipo_a_b_e_por_zona": [
+        "HIM: classificado por localização à semelhança da dissecção clássica — tipo A acomete a aorta ascendente, tipo B não a acomete",
+        "PAU: classificada por zona aórtica — zonas 0 e 1 correspondem à aorta ascendente e ao arco proximal; zonas 2 e 3, à aorta descendente e à abdominal",
+        "Em ambas, a distinção mecanística da dissecção clássica se mantém: HIM é hemorragia na camada média sem ruptura íntima franca nem canal falso perfundido; PAU é ulceração de placa aterosclerótica que penetra a lâmina elástica interna, podendo evoluir com hematoma intramural associado"
+      ],
+      "achados_de_imagem_que_diferenciam_him_de_pau": [
+        "HIM: espessamento da parede aórtica em crescente ou circunferencial, sem realce de contraste no interior do espessamento e sem retalho intimal nem canal falso perfundido",
+        "PAU: imagem de contraste ultrapassando o contorno esperado da luz aórtica, penetrando a parede além da linha da íntima calcificada, tipicamente sobre placa aterosclerótica"
+      ],
+      "criterios_de_complicacao_e_alto_risco_do_him_por_imagem": [
+        "HIM complicado: malperfusão, hematoma periaórtico, derrame pericárdico com tamponamento, dor persistente/refratária/recorrente, ou ruptura",
+        "Achados de imagem de alto risco no HIM tipo A: diâmetro aórtico máximo acima de 45 a 50 mm; espessura do hematoma igual ou maior que 10 mm",
+        "Achados de imagem de alto risco no HIM tipo B: diâmetro aórtico máximo acima de 47 a 50 mm; espessura do hematoma igual ou maior que 13 mm",
+        "Achados de alto risco válidos para os dois tipos: progressão para dissecção, aumento do diâmetro aórtico e aumento da espessura do hematoma em exames seriados"
+      ],
+      "criterios_de_alto_risco_da_pau_por_imagem": [
+        "Diâmetro máximo da úlcera igual ou maior que 13 a 20 mm",
+        "Profundidade máxima da úlcera igual ou maior que 10 mm",
+        "Crescimento significativo de diâmetro ou de profundidade em exames seriados",
+        "Úlcera associada a aneurisma sacular",
+        "Derrame pleural crescente"
+      ],
+      "ressonancia_magnetica_no_diagnostico": [
+        "A ressonância magnética é recomendada no diagnóstico do hematoma intramural aórtico (SBC 2024) — particularmente boa em datar e caracterizar o conteúdo hemático",
+        "Na prática de emergência, a angiotomografia segue como exame de primeira linha por disponibilidade e velocidade; a ressonância é alternativa quando a caracterização precisa ser datada com mais precisão ou há restrição a contraste iodado/radiação"
+      ],
+      "limite_do_assistente": "O assistente organiza sinais de alarme, dados ausentes e sugestão de exames a partir da localização, da zona aórtica na PAU e dos critérios de complicação/alto risco descritos acima; não interpreta a angiotomografia ou a ressonância, não mede o hematoma ou a úlcera na imagem, e não substitui a avaliação compartilhada entre cardiologia, cirurgia vascular/cardíaca e radiologia."
+    },
+    "differentials": [
+      "Dissecção aórtica clássica — mecanismo distinto (ruptura íntima franca com canal falso perfundido), já coberta em profundidade no hub 'Doença da aorta'",
+      "Aneurisma de aorta simples (degenerativo, sem hematoma de parede nem úlcera penetrante) — indicação de reparo segue os cortes de diâmetro por etiologia já descritos no hub 'Doença da aorta', não os critérios deste verbete"
+    ],
+    "tests": [
+      "Angiotomografia de aorta sincronizada ao ECG, do pescoço à pelve — exame inicial para caracterizar HIM e PAU, definir localização e identificar achados de complicação ou de alto risco",
+      "Ressonância magnética — recomendada especificamente no diagnóstico do hematoma intramural aórtico, por sua capacidade de datar e caracterizar o conteúdo hemático"
+    ],
+    "red_flags": [
+      "Hematoma intramural tipo A (acometimento de aorta ascendente) — indicação de reparo urgente",
+      "Hematoma intramural tipo B complicado — malperfusão, hematoma periaórtico, derrame pericárdico com tamponamento, dor persistente/refratária/recorrente, ou ruptura",
+      "Úlcera aterosclerótica penetrante com ruptura, ou em aorta ascendente com hematoma intramural associado",
+      "Úlcera aterosclerótica penetrante isolada e sintomática, com dor persistente correlacionada à imagem",
+      "Achado de imagem de alto risco no HIM ou na PAU (ver diagnostic_approach)"
+    ],
+    "ambulatory_flow": [
+      "Confirmar tipo (A/B) do hematoma intramural ou zona aórtica da úlcera penetrante, e ausência de complicação/achado de alto risco, antes de definir terapia médica como estratégia inicial",
+      "HIM tipo B não complicado: terapia médica como estratégia inicial, com controle rigoroso de pressão arterial",
+      "PAU assintomática, isolada, sem achado de alto risco: acompanhamento com imagem seriada; reparo eletivo pode ser considerado se surgir achado de alto risco",
+      "Programar reimagem seriada por TC ou RM para detectar progressão",
+      "Otimizar controle de fatores de risco cardiovascular, sobretudo na PAU"
+    ],
+    "emergency_flow": [
+      "HIM tipo A: reparo cirúrgico aberto imediato; em risco operatório aumentado e sem achados de alto risco, manejo clínico expectante pode ser considerado caso a caso",
+      "HIM tipo B complicado: reparo urgente — endovascular se anatomia favorável em zonas 2 a 5, aberto se anatomia desfavorável",
+      "PAU com ruptura, ou em aorta ascendente com hematoma intramural associado: reparo urgente; em arco/aorta torácica descendente com hematoma associado, reparo urgente é razoável; em aorta abdominal, pode ser considerado",
+      "PAU isolada e sintomática, com dor persistente correlacionada à imagem: reparo",
+      "Manter controle de pressão arterial e frequência cardíaca em paralelo à definição do reparo, buscando a menor pressão sistólica compatível com perfusão de órgão-alvo"
+    ],
+    "treatment_summary": "O tratamento do HIM e da PAU segue a mesma lógica territorial da dissecção clássica — decisão por localização e por presença de complicação — mas com critérios numéricos próprios. No HIM, tipo A tem indicação de reparo cirúrgico aberto imediato (exceto risco operatório aumentado sem achados de alto risco, quando manejo expectante pode ser considerado). Tipo B complicado também tem indicação de reparo urgente; tipo B não complicado tem terapia médica como estratégia inicial, com reparo endovascular ou aberto conforme anatomia se surgir achado de alto risco ou complicação. Na PAU, a decisão de reparar depende de zona aórtica e de sintoma/critério de alto risco, não de uma classificação A/B: úlcera isolada e sintomática deve ser reparada; úlcera assintomática com achado de alto risco pode ter reparo eletivo considerado; úlcera com ruptura ou em ascendente com hematoma associado tem indicação de reparo urgente. A escolha entre reparo aberto e endovascular segue a zona: zonas 0 e 1, reparo aberto recomendado; zonas 2 e 3, aberto ou endovascular conforme anatomia e comorbidades. Em qualquer cenário, o controle de pressão arterial e frequência cardíaca é prioridade terapêutica desde a suspeita, sem que este registro defina dose — apenas a lógica qualitativa de escolha de classe e a meta de menor pressão sistólica compatível com perfusão de órgão-alvo.",
+    "monitoring": [
+      "Reimagem seriada por TC ou RM no HIM tipo B não complicado em terapia médica",
+      "Reimagem seriada por TC ou RM na PAU assintomática em vigilância",
+      "Pressão arterial e frequência cardíaca, com meta de controle rigoroso durante toda a fase de vigilância",
+      "Sinais de alarme para reclassificação de não complicado para complicado — dor nova, persistente ou recorrente, sinais de má perfusão, hipotensão ou choque"
+    ],
+    "special_populations": [
+      "Paciente com carga aterosclerótica sistêmica relevante — perfil de risco típico da PAU",
+      "Paciente com risco operatório aumentado e HIM tipo A sem achados de alto risco — subgrupo em que manejo clínico expectante pode ser considerado",
+      "Gestante ou pessoa com aortopatia hereditária predisponente (Marfan, Loeys-Dietz, Ehlers-Danlos vascular) — este verbete não traz critérios específicos de HIM/PAU para essa população; a estratificação de risco de dissecção na gestação é abordada no hub-irmão 'Aortopatia na gravidez'"
+    ],
+    "assistant_questions": [
+      {"id": "sudden_tearing_pain", "label": "Dor torácica, dorsal ou abdominal de início súbito, lancinante/rasgante ou em pontada?", "type": "boolean", "required": true, "section": "Segurança"},
+      {"id": "ascending_aorta_involvement", "label": "O segmento acometido inclui a aorta ascendente (HIM tipo A, ou PAU em zona 0/1)?", "type": "boolean", "required": true, "section": "Localização"},
+      {"id": "complication_signs", "label": "Há sinal de complicação — malperfusão, hematoma periaórtico, tamponamento, dor persistente/refratária/recorrente, ou ruptura?", "type": "boolean", "required": true, "section": "Segurança"},
+      {"id": "pau_isolated_symptomatic", "label": "É úlcera aterosclerótica penetrante isolada e sintomática, com dor persistente correlacionada ao achado de imagem?", "type": "boolean", "section": "Apresentação"},
+      {"id": "high_risk_imaging_finding", "label": "A imagem mostra critério de alto risco (diâmetro/espessura/profundidade acima do corte, aneurisma sacular associado, derrame pleural crescente, ou progressão em exame seriado)?", "type": "boolean", "section": "Imagem"},
+      {"id": "operative_risk_increased", "label": "Risco operatório aumentado, diante de HIM tipo A sem achados de alto risco por imagem?", "type": "boolean", "section": "Perfil"},
+      {"id": "pau_aortic_zone", "label": "Zona aórtica acometida pela úlcera penetrante (quando aplicável)", "type": "select", "section": "Localização", "options": [
+        {"value": "zona_0_1", "label": "Zona 0 ou 1 — aorta ascendente e arco proximal"},
+        {"value": "zona_2_3", "label": "Zona 2 ou 3 — aorta descendente ou abdominal"},
+        {"value": "nao_aplicavel", "label": "Não aplicável (hematoma intramural sem úlcera penetrante)"}
+      ]}
+    ],
+    "assistant_rules": [
+      {"id": "him-pau-ascendente-ou-complicado-reparo-urgente", "priority": 100, "when": {"any": [{"field": "ascending_aorta_involvement", "op": "truthy"}, {"field": "complication_signs", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Hematoma intramural em aorta ascendente (tipo A), úlcera penetrante em aorta ascendente com hematoma associado, ou sinal de complicação — indicação de reparo urgente"], "emergency_flow": ["Acionar cirurgia vascular/cardiovascular para reparo urgente; controle de pressão arterial e frequência cardíaca em paralelo, sem atraso por exames não essenciais"]}},
+      {"id": "him-tipo-a-risco-operatorio-excecao", "priority": 60, "when": {"all": [{"field": "ascending_aorta_involvement", "op": "truthy"}, {"field": "operative_risk_increased", "op": "truthy"}, {"field": "high_risk_imaging_finding", "op": "falsy"}]}, "add": {"messages": ["Em risco operatório aumentado e sem achados de alto risco por imagem, o manejo clínico expectante pode ser considerado no HIM tipo A, decisão compartilhada com cirurgia vascular/cardiovascular"]}},
+      {"id": "pau-isolada-sintomatica-reparo", "priority": 90, "when": {"all": [{"field": "pau_isolated_symptomatic", "op": "truthy"}]}, "add": {"risk": "urgente", "messages": ["Úlcera aterosclerótica penetrante isolada e sintomática, com dor persistente correlacionada à imagem, deve ser reparada"]}},
+      {"id": "him-pau-nao-complicado-terapia-medica-inicial", "priority": 50, "when": {"all": [{"field": "ascending_aorta_involvement", "op": "falsy"}, {"field": "complication_signs", "op": "falsy"}]}, "add": {"messages": ["Sem acometimento de aorta ascendente e sem sinal de complicação, a terapia médica é a estratégia inicial recomendada, com vigilância por imagem seriada"], "missing_information": ["Diâmetro/espessura do hematoma (HIM) ou diâmetro/profundidade da úlcera (PAU) no exame mais recente, para checar critério de alto risco"]}},
+      {"id": "him-pau-achado-alto-risco-imagem", "priority": 45, "when": {"all": [{"field": "high_risk_imaging_finding", "op": "truthy"}]}, "add": {"messages": ["Achado de imagem de alto risco presente — reabrir discussão de reparo mesmo sem complicação franca"], "suggested_tests": ["Reimagem por TC ou RM em intervalo mais curto para confirmar progressão"]}},
+      {"id": "pau-zona-tecnica-de-reparo", "priority": 35, "when": {"all": [{"field": "pau_aortic_zone", "op": "eq", "value": "zona_0_1"}]}, "add": {"messages": ["Zona 0/1 (ascendente e arco proximal): reparo aberto é a técnica recomendada"]}},
+      {"id": "pau-zona-2-3-tecnica-por-anatomia", "priority": 35, "when": {"all": [{"field": "pau_aortic_zone", "op": "eq", "value": "zona_2_3"}]}, "add": {"messages": ["Zona 2/3 (descendente ou abdominal): reparo aberto ou endovascular conforme anatomia e comorbidades — decisão compartilhada com cirurgia vascular"]}}
+    ],
+    "tags": ["hematoma intramural aórtico", "úlcera aterosclerótica penetrante", "síndrome aórtica aguda", "HIM", "PAU", "aorta", "TEVAR", "reparo endovascular", "reparo aberto"],
+    "source_refs": [
+      "Isselbacher EM, Preventza O, Black JH 3rd, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease. Circulation. 2022;146(24):e334-e482. PMID: 36322642.",
+      "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. PMID: 39475988."
+    ],
+    "source_urls": ["https://pubmed.ncbi.nlm.nih.gov/36322642/", "https://pubmed.ncbi.nlm.nih.gov/39475988/"],
+    "related_document_slugs": [
+      "sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo",
+      "fluxograma-sindrome-aortica-aguda-esc-2024",
+      "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+      "exercicio-moderado-domiciliar-apos-disseccao-aortica-rct-multicentrico-2026"
+    ],
+    "patient_material_slug": null,
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete novo criado em 29/08/2026, desbloqueando 7 itens de evidência já revisados (review_status=revisado, published=false) em evidencias/metadados.json aguardando documento narrativo: pau-com-ruptura-ou-em-aorta-ascendente-reparo-urgente, pau-escolha-entre-reparo-aberto-e-endovascular-por-zona, pau-isolada-sintomatica-e-criterios-de-alto-risco, him-criterios-de-complicacao-e-de-alto-risco-por-imagem, him-tipo-a-ou-b-complicado-reparo-urgente, him-tipo-b-nao-complicado-terapia-medica-inicial, rm-no-hematoma-intramural-aortico. Nenhum dado de fonte, corte ou classificação foi acrescentado além do que já constava nesses 7 registros. PMIDs 36322642 e 39475988 reverificados via NCBI eSummary. Sem colisão de slug.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
