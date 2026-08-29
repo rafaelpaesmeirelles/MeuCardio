@@ -320,3 +320,13 @@ como contexto, verbete estruturado ainda não existia. Despachado (agente
 a9fd2a92b9f72117f).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
+
+## Lote 15 — concluído (1 commit, SHA faba1d15) — total 38 commits
+
+- `aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos`
+  — verbete novo, area=cardiopediatria. Escore Z vs. diâmetro absoluto,
+  técnica valve-sparing com crescimento residual, diferenciação de
+  agressividade entre as 3 síndromes, restrição esportiva. 14 PMIDs.
+  Complementar (não duplicado) ao verbete de adulto da outra branch.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
