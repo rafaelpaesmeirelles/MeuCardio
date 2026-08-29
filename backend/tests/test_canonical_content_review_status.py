@@ -31,7 +31,17 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Lote de aprofundamento Tudo com Tudo de 29/08/2026: ficha
+        # planejamento-parto-cardiopatia-fetal passou de completeness=
+        # basico (só catalogação) para completo. Mantida pendente_revisao
+        # (não autoaprovada) — gate canônico deste arquivo falhará
+        # intencionalmente até revisão humana, política vigente desde
+        # 28/08/2026.
+        "planejamento-parto-cardiopatia-fetal",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 
 

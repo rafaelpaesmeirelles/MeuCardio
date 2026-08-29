@@ -21478,7 +21478,7 @@
     "category": "cardiologia_fetal",
     "subtype": "planejamento_perinatal",
     "prevalence_rank": 41,
-    "completeness": "basico",
+    "completeness": "completo",
     "summary": "Coordenação do local, tempo, equipe e recursos do nascimento conforme risco de instabilidade e necessidade de intervenção neonatal.",
     "tags": [
       "parto",
@@ -21486,18 +21486,539 @@
       "equipe perinatal"
     ],
     "source_refs": [
-      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"
+      "AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease",
+      "Moray A, et al. Predicting High-Risk Fetal Cardiac Disease Anticipated to Need Immediate Postnatal Stabilization and Intervention with Planned Pediatric Cardiac Operating Room Delivery. J Am Heart Assoc. 2024. PMID 38497437",
+      "Donofrio MT, et al. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID 24763516",
+      "Divanović A, et al. Prediction and Perinatal Management of Severely Restrictive Atrial Septum in Fetuses With Critical Left Heart Obstruction. J Thorac Cardiovasc Surg. 2011. PMID 21130471",
+      "Punn R, Silverman NH. Fetal Predictors of Urgent Balloon Atrial Septostomy in Neonates With Complete Transposition. J Am Soc Echocardiogr. 2011. PMID 21324642",
+      "Seale AN, et al. Total Anomalous Pulmonary Venous Connection: Impact of Prenatal Diagnosis. Ultrasound Obstet Gynecol. 2012. PMID 22262371",
+      "Buca D, et al. Prenatal Risk Factors for Urgent Atrial Septostomy at Birth in Fetuses With Transposition of the Great Arteries: A Systematic Review and Meta-analysis. J Matern Fetal Neonatal Med. 2022. PMID 32041458"
     ],
     "source_urls": [
-      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"
+      "https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know",
+      "https://pubmed.ncbi.nlm.nih.gov/38497437/",
+      "https://pubmed.ncbi.nlm.nih.gov/24763516/",
+      "https://pubmed.ncbi.nlm.nih.gov/21130471/",
+      "https://pubmed.ncbi.nlm.nih.gov/21324642/",
+      "https://pubmed.ncbi.nlm.nih.gov/22262371/",
+      "https://pubmed.ncbi.nlm.nih.gov/32041458/"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.",
-    "version": 1,
+    "review_status": "pendente_revisao",
+    "review_note": "Aprofundamento Tudo com Tudo em 29/08/2026: ficha estava completeness=basico, só catalogação (1 source_ref AHA), zero campos clínicos. Passa a completo com epidemiologia, abordagem diagnóstica (categorização de risco perinatal, definição de local do parto, definição de intervenção imediata), condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico. related_document_slugs expandido de 1 para 5, os 4 novos verificados por leitura direta do documento completo, descartando explicitamente documentos que tratam de cardiopatia MATERNA na gestação (tema irmão mas distinto). 6 PMIDs verificados individualmente via NCBI e-utils. Nenhuma dose de fármaco citada.",
+    "version": 2,
     "related_document_slugs": [
-      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento"
+      "planejamento-do-parto-na-cardiopatia-fetal-local-tempo-equipe-e-recursos-do-nascimento",
+      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
+      "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos",
+      "d-tga-com-mistura-atrial-restritiva-e-hipoxemia-grave-no-neonato",
+      "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario"
     ],
-    "patient_material_slug": "planejamento-parto-cardiopatia-fetal"
+    "patient_material_slug": "planejamento-parto-cardiopatia-fetal",
+    "epidemiology": "A taxa de detecção pré-natal de cardiopatia congênita crítica varia amplamente conforme a região, o protocolo de rastreamento obstétrico e o acesso à ecocardiografia fetal, situando-se historicamente entre 30% e 50% e ultrapassando 60-70% em sistemas com protocolos padronizados de imagem de vias de saída e encaminhamento sistemático a centros de referência. O diagnóstico pré-natal permite planejamento estruturado do local, do momento, da via de parto e da equipe presente na sala de parto, reduzindo de forma consistente a morbimortalidade neonatal quando comparado ao diagnóstico pós-natal inesperado: recém-nascidos com cardiopatia crítica diagnosticada antes do nascimento e nascidos em centro apropriado chegam à intervenção com menor acidose, menor instabilidade hemodinâmica pré-procedimento, menor necessidade de reanimação emergencial e menor mortalidade pré-operatória do que aqueles identificados após alta hospitalar em colapso cardiovascular. O planejamento antecipado também reduz o tempo entre o nascimento e a intervenção crítica (septostomia atrial, infusão de prostaglandina, cateterismo ou cirurgia), elemento diretamente associado a desfechos neurológicos e sobrevida em lesões dependentes de shunt ou de septo atrial não restritivo.",
+    "presentation": [
+      "Transposição das grandes artérias (d-TGA) com septo interatrial restritivo ou íntegro e comunicação interventricular ausente ou inadequada",
+      "Síndrome do coração esquerdo hipoplásico (SCEH) com septo atrial restritivo ou intacto",
+      "Tetralogia de Fallot com síndrome da valva pulmonar ausente, especialmente com dilatação importante de ramos pulmonares e risco de compressão de via aérea",
+      "Retorno venoso pulmonar anômalo total (RVPAT), particularmente infracardíaco ou com obstrução documentada ao fluxo venoso pulmonar",
+      "Anomalia de Ebstein grave com cardiomegalia acentuada, disfunção ventricular direita e/ou obstrução funcional da via de saída pulmonar",
+      "Taquiarritmia fetal sustentada (taquicardia supraventricular, flutter atrial) refratária a terapia transplacentária, com ou sem hidropisia associada",
+      "Bloqueio atrioventricular total com frequência ventricular criticamente baixa, disfunção ventricular ou hidropisia",
+      "Estenose aórtica crítica com risco de evolução intraparto/pós-natal para fisiologia univentricular ou comprometimento hemodinâmico grave",
+      "Atresia pulmonar com septo interventricular íntegro e circulação coronariana dependente do ventrículo direito",
+      "Fisiologia univentricular com obstrução ao fluxo sistêmico ou pulmonar dependente de canal arterial",
+      "Cardiopatia congênita associada a hidropisia fetal não imune de origem cardíaca"
+    ],
+    "diagnostic_approach": {
+      "categorizacao_de_risco": "A abordagem contemporânea de planejamento de parto em cardiopatia fetal utiliza escalas de categorização de risco perinatal que estratificam cada lesão pela probabilidade e pela velocidade esperada de instabilidade hemodinâmica ou respiratória após o clampeamento do cordão, conforme sistematizado por Moray et al. (JAHA, 2024) e por protocolos multidisciplinares análogos: categoria de baixo risco (lesões com fisiologia estável ao nascer, sem necessidade antecipada de intervenção imediata), categoria de risco intermediário (lesões canal-dependentes responsivas a manejo farmacológico, com possibilidade de deterioração em horas a dias), categoria de alto risco (lesões com probabilidade relevante de instabilidade nas primeiras horas, exigindo unidade de terapia intensiva cardíaca neonatal imediatamente disponível) e categoria de risco crítico/emergencial (lesões com septo atrial restritivo ou obstrução grave ao retorno venoso, nas quais a sobrevida depende de intervenção mecânica nos primeiros minutos de vida, como septostomia atrial).",
+      "definicao_do_local_do_parto": "A partir da categoria de risco, define-se o nível de cuidado do local do parto: lesões de baixo risco podem nascer em maternidade padrão com plano de transporte neonatal pactuado; lesões de risco intermediário devem nascer em centro com cardiologia pediátrica e neonatologia disponíveis, com UTI neonatal apta a iniciar suporte canal-dependente; lesões de alto risco e de risco crítico devem nascer em centro terciário/quaternário com cirurgia cardíaca pediátrica, hemodinâmica intervencionista e equipe de anestesia cardíaca disponíveis 24 horas, podendo incluir estratégias de parto realizado nas proximidades imediatas de sala híbrida ou centro cirúrgico (delivery room to operating room) nos casos de septo atrial restritivo grave.",
+      "definicao_de_intervencao_imediata": "O plano de parto documenta explicitamente se há indicação antecipada de intervenção imediata pós-natal (septostomia atrial com balão, manutenção da patência do canal arterial, via aérea avançada por compressão traqueobrônquica, ou reanimação com suporte circulatório mecânico), o momento habitual do parto (em geral próximo ao termo, salvo deterioração fetal que motive antecipação), a via de parto (vaginal preferencial na maioria das cardiopatias isoladas, reservando cesariana a indicações obstétricas ou a cenários selecionados de arritmia/hidropisia grave) e a composição da equipe presente (obstetrícia/medicina fetal, neonatologia, cardiologia pediátrica, anestesia e, quando indicado, cirurgia cardíaca ou hemodinâmica em prontidão)."
+    },
+    "differentials": [
+      "Fisiologia estável ao nascer, sem necessidade antecipada de intervenção (ex.: comunicação interventricular isolada, coarctação leve)",
+      "Risco de instabilidade tardia/gradual nas primeiras horas a dias, geralmente responsiva a manejo clínico (ex.: coarctação significativa, obstrução do arco aórtico canal-dependente sem septo restritivo)",
+      "Risco de deterioração hemodinâmica precoce, mas responsiva a manutenção farmacológica da patência do canal arterial, sem necessidade de intervenção mecânica imediata",
+      "Risco de colapso hemodinâmico imediato ao nascer exigindo intervenção mecânica de emergência nos primeiros minutos de vida (septo atrial restritivo em TGA ou SCEH, obstrução grave ao retorno venoso pulmonar)",
+      "Risco predominantemente respiratório por compressão de via aérea, exigindo manejo avançado de via aérea imediato (ex.: síndrome da valva pulmonar ausente)",
+      "Risco arrítmico com necessidade de suporte hemodinâmico, cardioversão ou estimulação cardíaca neonatal imediata (bloqueio atrioventricular total com frequência crítica)",
+      "Risco combinado cardíaco e hidrópico, com necessidade de reanimação volêmica e/ou drenagem de derrames cavitários ao nascimento"
+    ],
+    "tests": [
+      "Ecocardiograma fetal seriado com avaliação anatômica e funcional ao longo da gestação",
+      "Avaliação Doppler dedicada do septo interatrial (grau de restrição, direção e velocidade do shunt)",
+      "Doppler do fluxo venoso pulmonar, com atenção ao padrão bifásico e à onda 'a' reversa como marcador de septo restritivo",
+      "Ressonância magnética fetal, quando disponível, para avaliação de compressão de vias aéreas em cardiomegalia acentuada (ex.: valva pulmonar ausente)",
+      "Avaliação do ritmo fetal por ecocardiografia M-mode e Doppler pulsado (relação atrioventricular, frequência e regularidade)",
+      "Avaliação seriada de sinais de hidropisia fetal por ultrassonografia obstétrica (derrames cavitários, edema subcutâneo, hidrâmnio)",
+      "Dopplervelocimetria da artéria umbilical, artéria cerebral média e ducto venoso, e perfil biofísico fetal",
+      "Estudo genético (cariótipo, microarray ou sequenciamento) para investigação de síndromes associadas à cardiopatia identificada"
+    ],
+    "red_flags": [
+      "Septo interatrial restritivo ou intacto documentado em transposição das grandes artérias ou em síndrome do coração esquerdo hipoplásico",
+      "Padrão de fluxo venoso pulmonar bifásico com onda 'a' reversa proeminente, sugerindo hipertensão em átrio esquerdo",
+      "Hidropisia fetal de qualquer etiologia associada à cardiopatia estrutural ou à arritmia",
+      "Taquiarritmia sustentada refratária à terapia transplacentária",
+      "Bloqueio atrioventricular total com frequência ventricular criticamente baixa ou disfunção ventricular associada",
+      "Cardiomegalia acentuada com compressão de via aérea (ex.: síndrome da valva pulmonar ausente)",
+      "Obstrução grave documentada ao retorno venoso pulmonar em retorno venoso anômalo total",
+      "Deterioração progressiva da função ventricular ou surgimento de novos sinais de descompensação em avaliações ecocardiográficas seriadas"
+    ],
+    "treatment_summary": "O planejamento do parto na cardiopatia congênita fetal é um processo multidisciplinar estruturado que se inicia no momento do diagnóstico fetal e é continuamente revisado até o nascimento, com o objetivo de garantir que o recém-nascido chegue ao ambiente assistencial adequado à sua lesão específica, no momento certo e com a equipe certa disponível. O primeiro pilar é a estratificação de risco perinatal, que classifica a cardiopatia conforme a probabilidade de instabilidade hemodinâmica imediata ao nascimento: lesões ductodependentes para circulação pulmonar (como atresia pulmonar), ductodependentes para circulação sistêmica (como síndrome do coração esquerdo hipoplásico e coarctação crítica) e lesões com mistura intracardíaca dependente de comunicação interatrial adequada, como a transposição das grandes artérias, exigem grau de vigilância e infraestrutura distintos das cardiopatias mais estáveis ao nascimento. A partir dessa categorização define-se o local do parto, que deve ocorrer preferencialmente em centro terciário ou quaternário com cardiologia pediátrica, neonatologia e, quando indicado pela lesão, cirurgia cardíaca pediátrica ou hemodinâmica intervencionista disponíveis no mesmo sítio ou em tempo de resposta compatível com a urgência potencial. Um plano de contingência formal deve ser documentado antes do parto, contemplando a possibilidade de intervenção imediata, como septostomia atrial urgente em fetos com transposição das grandes artérias e septo interatrial restritivo, sem que este documento precise especificar posologias, que são de competência da equipe assistente no momento do procedimento. A via de parto é definida majoritariamente por indicação obstétrica, já que a cardiopatia fetal isoladamente raramente constitui indicação de cesariana eletiva, reservando-se essa via para situações específicas como instabilidade hemodinâmica materna, arritmias fetais graves não controladas ou necessidade de coordenação estrita do horário de nascimento com disponibilidade de equipe cirúrgica. A comunicação estruturada entre obstetrícia, cardiologia fetal e equipe neonatal é elemento central do plano, envolvendo reuniões multidisciplinares antes do parto, checklist de handoff no momento do nascimento e definição prévia de responsabilidades para reanimação neonatal adaptada à fisiologia cardíaca esperada. O acompanhamento ambulatorial seriado permite reavaliar a categoria de risco, identificar sinais de deterioração hemodinâmica fetal e ajustar o plano de nascimento conforme a evolução da gestação, sempre priorizando a segurança materno-fetal e a continuidade assistencial imediata após o parto.",
+    "ambulatory_flow": [
+      "Confirmar diagnóstico ecocardiográfico fetal detalhado com definição precisa da lesão e de lesões associadas",
+      "Classificar a cardiopatia quanto à categoria de risco perinatal (baixo, intermediário, alto, crítico)",
+      "Definir, em reunião multidisciplinar, o centro de referência para o parto conforme a categoria de risco",
+      "Avaliar necessidade de cirurgia cardíaca ou hemodinâmica intervencionista disponível no local do parto",
+      "Elaborar plano de contingência escrito para intervenção imediata ao nascimento, quando aplicável",
+      "Programar ecocardiogramas fetais seriados para monitorar restrição do septo interatrial e função ventricular",
+      "Discutir com a família o plano de nascimento, incluindo local, via de parto prevista e expectativa de cuidados neonatais",
+      "Articular contato prévio entre obstetrícia, cardiologia fetal, neonatologia e, se necessário, cirurgia cardíaca pediátrica",
+      "Rever periodicamente o plano de parto conforme evolução da gestação e achados ecocardiográficos seriados",
+      "Planejar data e via de nascimento de forma coordenada com a disponibilidade da equipe cardiológica e cirúrgica"
+    ],
+    "emergency_flow": [
+      "Sinais de hidropsia fetal ou derrame pericárdico progressivo em avaliação seriada",
+      "Arritmia fetal sustentada com repercussão hemodinâmica identificada no período periparto",
+      "Evidência de septo interatrial altamente restritivo ou intacto em cardiopatia com mistura dependente de comunicação interatrial",
+      "Cianose grave ou hipoxemia neonatal refratária à manobra inicial de estabilização, sugerindo necessidade de intervenção imediata",
+      "Deterioração aguda do padrão de cardiotocografia associada a cardiopatia estrutural grave",
+      "Sinais clínicos de baixo débito sistêmico ao nascimento em lesão ductodependente sistêmica"
+    ],
+    "monitoring": [
+      "Ecocardiografia fetal seriada para acompanhar anatomia, função ventricular e grau de restrição do septo interatrial",
+      "Avaliação seriada do fluxo em ducto arterioso e forame oval por Doppler",
+      "Monitoramento do ritmo cardíaco fetal para detecção precoce de arritmias",
+      "Vigilância de sinais de insuficiência cardíaca fetal (hidropsia, derrame pericárdico, cardiomegalia)",
+      "Cardiotocografia intraparto conforme protocolo obstétrico",
+      "Reavaliação periódica da categoria de risco perinatal ao longo da gestação",
+      "Monitorização neonatal imediata de saturação de oxigênio pré e pós-ductal ao nascimento",
+      "Acompanhamento do crescimento fetal e do líquido amniótico como marcadores de bem-estar geral"
+    ],
+    "assistant_questions": [
+      {
+        "id": "categoria_risco_perinatal",
+        "label": "Qual a categoria de risco perinatal atribuída à cardiopatia fetal?",
+        "type": "select",
+        "options": [
+          {
+            "value": "baixo",
+            "label": "Baixo risco"
+          },
+          {
+            "value": "intermediario",
+            "label": "Risco intermediário"
+          },
+          {
+            "value": "alto",
+            "label": "Alto risco"
+          },
+          {
+            "value": "critico",
+            "label": "Risco crítico"
+          }
+        ]
+      },
+      {
+        "id": "classificacao_lesao_ductodependente",
+        "label": "Como a lesão cardíaca é classificada quanto à dependência ductal?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ductodependente_sistemica",
+            "label": "Ductodependente para circulação sistêmica"
+          },
+          {
+            "value": "ductodependente_pulmonar",
+            "label": "Ductodependente para circulação pulmonar"
+          },
+          {
+            "value": "mistura_interatrial_dependente",
+            "label": "Dependente de mistura interatrial adequada"
+          },
+          {
+            "value": "nao_ductodependente",
+            "label": "Não ductodependente"
+          }
+        ]
+      },
+      {
+        "id": "septo_atrial_restritivo",
+        "label": "Há evidência de septo interatrial restritivo ou intacto na ecocardiografia fetal?",
+        "type": "boolean"
+      },
+      {
+        "id": "necessidade_septostomia_urgente_prevista",
+        "label": "Há previsão de necessidade de septostomia atrial urgente ao nascimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "local_planejado_parto",
+        "label": "Qual o local planejado para o parto?",
+        "type": "select",
+        "options": [
+          {
+            "value": "centro_com_cirurgia_cardiaca_local",
+            "label": "Centro terciário com cirurgia cardíaca pediátrica no local"
+          },
+          {
+            "value": "centro_com_cardiologia_sem_cirurgia",
+            "label": "Centro com cardiologia pediátrica, sem cirurgia cardíaca no local"
+          },
+          {
+            "value": "maternidade_regional",
+            "label": "Maternidade regional sem suporte cardiológico especializado"
+          }
+        ]
+      },
+      {
+        "id": "equipe_cardiologia_pediatrica_disponivel",
+        "label": "Equipe de cardiologia pediátrica está disponível no momento previsto do parto?",
+        "type": "boolean"
+      },
+      {
+        "id": "equipe_cirurgia_cardiaca_disponivel",
+        "label": "Equipe de cirurgia cardíaca pediátrica está disponível ou acionável no momento previsto do parto?",
+        "type": "boolean"
+      },
+      {
+        "id": "via_parto_planejada",
+        "label": "Qual a via de parto planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vaginal",
+            "label": "Parto vaginal"
+          },
+          {
+            "value": "cesarea_indicacao_obstetrica",
+            "label": "Cesárea por indicação obstétrica"
+          },
+          {
+            "value": "cesarea_eletiva_por_coordenacao",
+            "label": "Cesárea eletiva por coordenação com equipe cardiológica/cirúrgica"
+          }
+        ]
+      },
+      {
+        "id": "idade_gestacional_planejada_parto",
+        "label": "Qual a idade gestacional planejada para o parto (em semanas)?",
+        "type": "number"
+      },
+      {
+        "id": "arritmia_fetal_associada",
+        "label": "Há arritmia fetal associada identificada?",
+        "type": "boolean"
+      },
+      {
+        "id": "sinais_insuficiencia_cardiaca_fetal",
+        "label": "Quais sinais de insuficiência cardíaca fetal estão presentes?",
+        "type": "multiselect",
+        "options": [
+          {
+            "value": "hidropsia",
+            "label": "Hidropsia fetal"
+          },
+          {
+            "value": "derrame_pericardico",
+            "label": "Derrame pericárdico"
+          },
+          {
+            "value": "cardiomegalia",
+            "label": "Cardiomegalia"
+          },
+          {
+            "value": "insuficiencia_valvar_significativa",
+            "label": "Insuficiência valvar significativa"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum sinal presente"
+          }
+        ]
+      },
+      {
+        "id": "plano_contingencia_documentado",
+        "label": "Existe plano de contingência formalmente documentado para intervenção imediata ao nascimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "comunicacao_estruturada_realizada",
+        "label": "Foi realizada reunião ou comunicação estruturada entre obstetrícia, cardiologia fetal e equipe neonatal?",
+        "type": "boolean"
+      },
+      {
+        "id": "anomalias_extracardiacas_associadas",
+        "label": "Há anomalias extracardíacas ou síndromes genéticas associadas?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "regra_septo_restritivo_dtga",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "classificacao_lesao_ductodependente",
+              "op": "eq",
+              "value": "mistura_interatrial_dependente"
+            },
+            {
+              "field": "septo_atrial_restritivo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Septo interatrial restritivo em lesão dependente de mistura, com risco de hipoxemia grave imediata ao nascimento"
+          ],
+          "emergency_flow": [
+            "Acionar imediatamente equipe apta a realizar septostomia atrial de urgência na sala de parto ou em transferência imediata"
+          ],
+          "messages": [
+            "Parto deve ocorrer em centro com capacidade de intervenção intervencionista imediata no septo interatrial"
+          ]
+        }
+      },
+      {
+        "id": "regra_septostomia_prevista",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "necessidade_septostomia_urgente_prevista",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Necessidade prevista de septostomia atrial urgente ao nascimento"
+          ],
+          "missing_information": [
+            "Confirmar disponibilidade imediata de equipe de hemodinâmica ou cardiologia intervencionista pediátrica no local do parto"
+          ]
+        }
+      },
+      {
+        "id": "regra_local_inadequado_risco_alto",
+        "priority": 88,
+        "when": {
+          "any": [
+            {
+              "field": "categoria_risco_perinatal",
+              "op": "eq",
+              "value": "alto"
+            },
+            {
+              "field": "categoria_risco_perinatal",
+              "op": "eq",
+              "value": "critico"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Confirmar se o local planejado do parto possui suporte de cardiologia pediátrica, neonatologia e, se necessário, cirurgia cardíaca compatível com a categoria de risco"
+          ]
+        }
+      },
+      {
+        "id": "regra_maternidade_regional_risco_elevado",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "local_planejado_parto",
+              "op": "eq",
+              "value": "maternidade_regional"
+            },
+            {
+              "field": "categoria_risco_perinatal",
+              "op": "in",
+              "value": [
+                "alto",
+                "critico"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Parto planejado em local sem suporte cardiológico compatível com cardiopatia de alto risco perinatal"
+          ],
+          "opposing": [
+            "Manter plano de parto em maternidade regional sem reavaliação, dado o risco perinatal elevado"
+          ]
+        }
+      },
+      {
+        "id": "regra_cirurgia_indisponivel_ductodependente_sistemica",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "classificacao_lesao_ductodependente",
+              "op": "eq",
+              "value": "ductodependente_sistemica"
+            },
+            {
+              "field": "equipe_cirurgia_cardiaca_disponivel",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Lesão ductodependente sistêmica sem cirurgia cardíaca pediátrica disponível ou acionável no local previsto do parto"
+          ],
+          "missing_information": [
+            "Definir plano de transferência neonatal imediata para centro com cirurgia cardíaca, caso necessário"
+          ]
+        }
+      },
+      {
+        "id": "regra_sinais_insuficiencia_cardiaca_fetal",
+        "priority": 87,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_insuficiencia_cardiaca_fetal",
+              "op": "contains",
+              "value": "hidropsia"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Hidropsia fetal associada à cardiopatia congênita, indicativa de descompensação hemodinâmica fetal"
+          ],
+          "suggested_tests": [
+            "Ecocardiografia fetal urgente com avaliação funcional e Doppler detalhado"
+          ]
+        }
+      },
+      {
+        "id": "regra_arritmia_fetal",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_fetal_associada",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Ecocardiografia fetal com avaliação detalhada do ritmo e monitorização seriada"
+          ],
+          "missing_information": [
+            "Avaliar necessidade de ajuste do plano de parto conforme resposta da arritmia fetal ao tratamento"
+          ]
+        }
+      },
+      {
+        "id": "regra_plano_contingencia_ausente",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "plano_contingencia_documentado",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Documentar formalmente o plano de contingência para intervenção imediata ao nascimento"
+          ]
+        }
+      },
+      {
+        "id": "regra_comunicacao_estruturada_ausente",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "comunicacao_estruturada_realizada",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Agendar reunião multidisciplinar estruturada entre obstetrícia, cardiologia fetal e equipe neonatal antes do parto"
+          ]
+        }
+      },
+      {
+        "id": "regra_via_parto_sem_indicacao_obstetrica",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "via_parto_planejada",
+              "op": "eq",
+              "value": "cesarea_eletiva_por_coordenacao"
+            },
+            {
+              "field": "categoria_risco_perinatal",
+              "op": "eq",
+              "value": "baixo"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Cesárea eletiva sem indicação obstétrica específica em cardiopatia fetal de baixo risco perinatal"
+          ],
+          "missing_information": [
+            "Reavaliar se há indicação obstétrica ou cardiológica real para cesárea eletiva neste caso"
+          ]
+        }
+      },
+      {
+        "id": "regra_anomalias_extracardiacas_associadas",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "anomalias_extracardiacas_associadas",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Síndrome genética ou cromossômica associada à cardiopatia congênita"
+          ],
+          "suggested_tests": [
+            "Avaliação genética e investigação de anomalias extracardíacas associadas"
+          ]
+        }
+      }
+    ],
+    "special_populations": [
+      "Feto com transposição das grandes artérias e septo interatrial restritivo (candidato a septostomia atrial urgente)",
+      "Feto com síndrome do coração esquerdo hipoplásico e septo atrial restritivo",
+      "Feto com tetralogia de Fallot e síndrome da valva pulmonar ausente (risco de compressão de via aérea)",
+      "Feto com retorno venoso pulmonar anômalo total obstrutivo",
+      "Feto com taquiarritmia sustentada ou bloqueio atrioventricular total com repercussão hemodinâmica",
+      "Feto com cardiopatia congênita e hidropisia associada",
+      "Gestante com acesso geográfico limitado a centro terciário de referência"
+    ],
+    "fonte_producao": "claude"
   },
   {
     "slug": "avaliacao-multidimensional-cardiogeriatrica",
