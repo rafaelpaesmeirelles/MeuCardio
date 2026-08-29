@@ -47,6 +47,9 @@ PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
         "avaliacao-cardiovascular-perioperatoria",
         "insuficiencia-cardiaca-pediatrica",
         "transplante-cardiaco-pediatrico",
+        "aconselhamento-genetico-cardiovascular",
+        "morte-subita-cardiaca-no-esporte-causas-e-prevencao",
+        "pericardite-pediatrica",
     },
 }
 PENDENTES_MARKDOWN_AVC: set[str] = set()
