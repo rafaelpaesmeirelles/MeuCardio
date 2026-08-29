@@ -1,0 +1,614 @@
+[
+  {
+    "slug": "avaliacao-cardiovascular-perioperatoria",
+    "name": "Avaliação e risco cardiovascular perioperatório em cirurgia não cardíaca",
+    "aliases": [
+      "avaliação pré-operatória cardiovascular",
+      "risco cirúrgico cardiovascular",
+      "avaliação cardiovascular perioperatória",
+      "estratificação de risco cardíaco pré-operatório",
+      "risco cardiovascular em cirurgia não cardíaca"
+    ],
+    "area": "geral",
+    "category": "avaliacao_perioperatoria",
+    "subtype": "avaliacao_de_risco_e_manejo_cardiovascular_perioperatorio_em_cirurgia_nao_cardiaca",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A avaliação cardiovascular perioperatória em cirurgia não cardíaca não é uma doença, mas um processo estruturado de estratificação de risco e manejo que se aplica a qualquer paciente com fator de risco, doença cardiovascular conhecida ou idade avançada programado para procedimento cirúrgico não cardíaco. O processo integra dois eixos independentes — o risco intrínseco do procedimento (baixo, intermediário ou alto, conforme a classificação da SBC 2024) e o risco clínico do paciente, estimado por escores como RCRI (Lee), Gupta-MICA, AUB-HAS2 ou VSG-CRI (este último preferido pela SBC 2024 em cirurgia vascular arterial) — e é modulado pela presença de condições cardiovasculares ativas/instáveis, que têm prioridade sobre qualquer escore. A hierarquia de fontes usada nesta ficha segue SBC 2024, ESC 2022 e AHA/ACC 2024, que convergem num algoritmo escalonado: excluir instabilidade aguda, estimar risco combinado, avaliar capacidade funcional de forma estruturada (DASI, não estimativa subjetiva) e só então solicitar biomarcadores ou exames adicionais — exclusivamente quando o resultado tiver potencial real de mudar a conduta. Fragilidade (FRAIL Scale) é reconhecida como modificador de risco independente em idosos, sobretudo em cirurgia de risco elevado. No pós-operatório, o processo continua com vigilância seriada de troponina/ECG em pacientes selecionados, permitindo reconhecer MINS (myocardial injury after noncardiac surgery) — entidade distinta do infarto clássico, majoritariamente assintomática e associada a mortalidade progressivamente maior conforme o pico de troponina. Dois pontos de manejo exigem cautela específica e não devem ser generalizados: a decisão sobre antiagregantes/anticoagulantes perioperatórios (aspirina não reduziu morte/infarto e aumentou sangramento maior no POISE-2, mas DAPT após stent recente segue racional próprio) e a decisão sobre betabloqueador (o POISE mostrou que iniciar betabloqueador de forma aguda e sem titulação antes da cirurgia reduz infarto mas aumenta morte e AVC — a recomendação atual é manter o uso crônico e não iniciar rotineiramente apenas por causa da cirurgia). Portadores de dispositivo cardíaco eletrônico implantável (CIED) exigem um plano específico de manejo do dispositivo diante de interferência eletromagnética, não apenas o registro de que o dispositivo existe.",
+    "epidemiology": "A cirurgia não cardíaca é um evento extremamente comum ao longo da vida, e a proporção de pacientes com fator de risco cardiovascular ou doença cardiovascular estabelecida entre os candidatos a cirurgia cresce com o envelhecimento populacional, tornando a avaliação perioperatória uma das interfaces mais frequentes entre cardiologia e demais especialidades cirúrgicas. A magnitude do problema de lesão miocárdica perioperatória foi caracterizada pelo estudo VISION (JAMA 2017), que acompanhou 21.842 pacientes com idade ≥45 anos submetidos a cirurgia não cardíaca com internação, medindo troponina de alta sensibilidade nas primeiras 6-12 horas e diariamente nos três primeiros dias pós-operatórios: a mortalidade em 30 dias subiu de forma progressiva conforme o pico de troponina, de 0,5% nos pacientes com pico <20 ng/L até 29,6% naqueles com pico ≥1.000 ng/L — e a grande maioria dos pacientes classificados como MINS não apresentou nenhum sintoma isquêmico típico, o que caracteriza a lesão miocárdica pós-operatória como um problema predominantemente silencioso e subdiagnosticado sem vigilância ativa. A fragilidade, modificador de risco cada vez mais relevante numa população cirúrgica envelhecida, foi associada em metanálise de 56 estudos e aproximadamente 1,1 milhão de adultos mais velhos a maior mortalidade em 30 dias (RR 3,71; IC95% 2,89-4,77) e maior risco de complicações em 30 dias (RR 2,39; IC95% 2,02-2,83) após cirurgia não cardíaca — associação populacional que não deve ser convertida em probabilidade individual exata. Historicamente, a tentativa de reduzir esse risco com betabloqueador perioperatório iniciado de forma aguda (testada em larga escala pelo POISE, Lancet 2008, em pacientes com risco cardiovascular aumentado) reduziu infarto do miocárdio não fatal, mas às custas de excesso de mortalidade geral e de AVC (dobro do risco) — um dos exemplos mais citados na literatura de medicina perioperatória de como uma intervenção fisiologicamente plausível pode causar dano líquido quando aplicada de forma indiscriminada e sem titulação.",
+    "presentation": [
+      "Paciente com fator de risco cardiovascular (hipertensão, diabetes, tabagismo, dislipidemia) candidato a cirurgia eletiva não cardíaca de risco intermediário ou alto",
+      "Paciente com doença cardiovascular estabelecida (doença arterial coronariana, insuficiência cardíaca, valvopatia, arritmia) programado para cirurgia não cardíaca",
+      "Paciente idoso (≥65 anos) ou com fragilidade percebida clinicamente candidato a cirurgia de risco elevado",
+      "Paciente com cardiopatia congênita do adulto candidato a cirurgia não cardíaca, modificador de risco independente do escore clínico calculado",
+      "Paciente portador de dispositivo cardíaco eletrônico implantável (marca-passo, CDI, ressincronizador, dispositivo sem eletrodo, CDI subcutâneo) candidato a procedimento com fonte relevante de interferência eletromagnética",
+      "Paciente em uso crônico de antiagregante plaquetário ou anticoagulante oral candidato a cirurgia eletiva com necessidade de definir estratégia perioperatória",
+      "Paciente com stent coronário recente (metálico ou farmacológico) candidato a cirurgia não cardíaca não adiável dentro da janela de maior risco de trombose de stent",
+      "Condição cardiovascular aguda/instável identificada durante a avaliação pré-operatória (síndrome coronariana aguda, insuficiência cardíaca descompensada, arritmia instável, valvopatia grave sintomática, hipertensão não controlada), mudando a prioridade de operar para estabilizar",
+      "Cirurgia de urgência/emergência em paciente com risco cardiovascular não totalmente caracterizado, exigindo prosseguir com manejo perioperatório apropriado sem completar a estratificação eletiva",
+      "Paciente no pós-operatório de cirurgia não cardíaca com troponina elevada na vigilância seriada ou com sintomas/sinais sugestivos de complicação cardiovascular, motivando investigação de MINS"
+    ],
+    "diagnostic_approach": {
+      "dois_eixos_independentes_paciente_e_procedimento": "A avaliação nunca deve ser reduzida a 'qual o escore do paciente?'. A SBC 2024, a ESC 2022 e a AHA/ACC 2024 convergem num modelo de dois eixos independentes: o risco intrínseco do procedimento cirúrgico (determinado pelo tipo e duração da operação, sem considerar as características do paciente) e o risco clínico do paciente (estimado por escore validado). Um paciente clinicamente saudável pode se submeter a uma cirurgia intrinsecamente de alto risco, enquanto um paciente com cardiopatia grave pode ter risco elevado mesmo diante de um procedimento simples — por isso os dois eixos são avaliados e apresentados separadamente antes de se definir a rota de investigação.",
+      "condicoes_cardiovasculares_ativas_ou_instaveis_tem_prioridade": "Antes de calcular qualquer escore, a SBC 2024 e a AHA/ACC 2024 exigem excluir condição cardiovascular grave/instável — entre os exemplos citados pela Tabela 2 da diretriz brasileira estão síndrome coronariana aguda, doença instável da aorta torácica, edema agudo de pulmão, choque cardiogênico, insuficiência cardíaca NYHA III/IV, angina CCS III/IV, estenose aórtica ou mitral importante sintomática, bradiarritmias ou taquiarritmias graves (incluindo BAV total e taquicardia ventricular), fibrilação atrial com frequência cardíaca muito elevada (>120 bpm) e hipertensão não controlada (PA >180x110 mmHg). Presente uma dessas condições, o objetivo passa a ser estabilizar/tratar a doença cardiovascular antes da cirurgia eletiva, quando o contexto clínico permite adiar; em cirurgia de emergência, prossegue-se diretamente com manejo perioperatório apropriado e planejamento de cardioproteção e monitorização.",
+      "risco_intrinseco_do_procedimento_sbc_2024": "A SBC 2024 classifica o risco cardiovascular intrínseco do procedimento, independentemente do paciente, em três faixas: baixo risco (<1% de evento cardiovascular maior estimado — exemplos citados incluem cirurgia de mama, procedimentos dentários, cirurgia ocular, tireoide, ginecológica menor e ortopedia menor), risco intermediário (1-5% — exemplos incluem cabeça e pescoço, colecistectomia, hérnia hiatal, esplenectomia, correção endovascular de aneurisma de aorta e procedimentos vasculares/carotídeos selecionados) e alto risco (>5% — exemplos incluem cirurgia aórtica/vascular de grande porte e revascularização periférica aberta por isquemia aguda ou amputação). A classificação exata de um procedimento específico deve ser consultada na tabela da diretriz, não inferida apenas pelo nome genérico da especialidade cirúrgica.",
+      "escolha_do_escore_de_risco_clinico": "Para operações gerais, a SBC 2024 privilegia RCRI (Revised Cardiac Risk Index de Lee) ou AUB-HAS2; para cirurgia vascular arterial, recomenda substituir por VSG-CRI, desenvolvido especificamente nessa população. O RCRI soma 1 ponto para cada um de seis critérios binários (cirurgia de alto risco, cardiopatia isquêmica, insuficiência cardíaca, doença cerebrovascular, diabetes tratado com insulina, creatinina pré-operatória >2,0 mg/dL) e produz quatro classes cuja taxa de evento cardíaco grave na coorte original de derivação/validação foi de aproximadamente 0,4% (classe I, zero pontos), 0,9% (classe II, um ponto), 7,0% (classe III, dois pontos) e 11,0% (classe IV, três ou mais pontos) — taxas históricas da coorte original, não probabilidade individual contemporânea exata. Na AHA/ACC 2024, RCRI >1 é citado como limiar tradicional de risco elevado, mas isso não encerra a avaliação: valvopatia grave, hipertensão pulmonar grave, cardiopatia congênita de alto risco, stent/CABG prévio, AVC recente, CIED e fragilidade são modificadores que podem exigir estratégia específica independentemente do número final. O Gupta-MICA, alternativa desenvolvida a partir do ACS-NSQIP, usa regressão logística com cinco preditores (tipo de cirurgia, status funcional dependente, creatinina anormal, classe ASA, idade) para estimar percentualmente o risco de infarto do miocárdio ou parada cardíaca em 30 dias — um desfecho composto mais restrito que o do RCRI — e apresentou, na validação de 2008, estatística C de 0,874 contra 0,747 do RCRI na mesma base, ou seja, melhor discriminação nessa comparação específica. Nenhum dos dois escores substitui a avaliação de doença cardiovascular ativa nem dispensa a checagem de modificadores de risco.",
+      "capacidade_funcional_estruturada": "A avaliação de capacidade funcional deixou de se basear apenas na pergunta subjetiva 'sobe dois lances de escada?': o estudo METS (Lancet 2018) mostrou desempenho prognóstico limitado da estimativa subjetiva do médico, e a ESC 2022 reconhece explicitamente que o corte histórico de <4 METs por entrevista não tem valor prognóstico comprovado. A alternativa estruturada recomendada por AHA/ACC 2024, SBC 2024 e ESC 2022 é o Duke Activity Status Index (DASI), questionário de 12 atividades cotidianas cuja soma de pesos varia de 0 a 58,2; a AHA/ACC 2024 usa DASI ≤34 como ponto de corte operacional para capacidade funcional ruim no seu algoritmo de decisão (a ESC 2022, ao citar a mesma associação prognóstica, usa DASI <34). O DASI não diagnostica isquemia nem substitui a avaliação de doença cardiovascular ativa ou do risco intrínseco do procedimento — ele responde apenas 'qual é a capacidade funcional?', não 'o paciente pode operar?'.",
+      "fragilidade_como_eixo_adicional": "A AHA/ACC 2024 recomenda (Classe 2a, nível B-NR) considerar avaliação estruturada de fragilidade com instrumento validado em todos os pacientes ≥65 anos e nos mais jovens com fragilidade percebida candidatos a cirurgia de risco elevado; a SBC 2024 recomenda avaliar rotineiramente fragilidade em idosos submetidos a cirurgia de risco intermediário ou alto e mensurá-la objetivamente (ambas Classe IIa). A FRAIL Scale é um instrumento de cinco perguntas (fadiga, resistência para subir escadas, deambulação, número de doenças crônicas, perda de peso) que classifica o paciente em robusto (0 pontos), pré-frágil (1-2) ou frágil (3-5); fragilidade não substitui RCRI/Gupta-MICA/DASI, mas acrescenta uma pergunta diferente sobre reserva fisiológica para suportar o estresse cirúrgico e se recuperar depois.",
+      "algoritmo_escalonado_e_biomarcadores_aha_acc_2024": "O princípio central da AHA/ACC 2024 é evitar investigação cardiovascular indiscriminada: solicitar exame adicional apenas quando o resultado puder modificar a decisão de operar, o momento da cirurgia ou o manejo perioperatório. Após excluir condição cardiovascular ativa e estimar o risco combinado, se a capacidade funcional for adequada (DASI >34), em geral prossegue-se sem testes adicionais rotineiros; se ruim ou desconhecida, considera-se biomarcador pré-operatório (BNP/NT-proBNP é considerado razoável; troponina pode ser considerada em pacientes selecionados) antes de cirurgia de risco elevado em pacientes com doença cardiovascular conhecida, idade ≥65 anos, ou idade ≥45 anos com sintomas sugestivos — com os limiares citados pela diretriz sendo troponina acima do percentil 99 do limite superior de referência do ensaio, BNP >92 ng/L e NT-proBNP ≥300 ng/L. Teste isquêmico (ergométrico, cintilografia, eco de estresse) ou angiotomografia coronária não devem ser usados rotineiramente em paciente de baixo risco ou boa capacidade funcional; em risco elevado com capacidade funcional ruim ou desconhecida, só devem ser considerados se o resultado tiver potencial real de mudar a decisão ou o manejo — nunca como rastreamento indiscriminado ou pré-requisito automático para 'liberar' o paciente."
+    },
+    "differentials": [
+      "Síndrome coronariana aguda tipo 1 (ruptura/erosão de placa com trombose coronária) — exige tratamento como instabilidade aguda e estratégia de reperfusão quando indicada, distinta do manejo de MINS estável",
+      "Desequilíbrio entre oferta e demanda de oxigênio miocárdico (hipotensão, taquicardia, anemia, hipoxemia) causando lesão miocárdica sem trombose coronária associada",
+      "Embolia pulmonar como causa de elevação de troponina no pós-operatório",
+      "Sepse/choque distributivo como causa não isquêmica de lesão miocárdica perioperatória",
+      "Insuficiência cardíaca aguda descompensada no pós-operatório como causa de troponina elevada",
+      "Taquiarritmia sustentada perioperatória como causa de lesão miocárdica por aumento de demanda",
+      "Miocardite ou outra causa inflamatória de lesão miocárdica, conforme o contexto clínico",
+      "Elevação crônica/basal de troponina por disfunção renal ou cardiopatia estrutural prévia, sem variação dinâmica compatível com lesão aguda perioperatória"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações basal (pré-operatório) em pacientes com fator de risco ou doença cardiovascular conhecida",
+      "Troponina de alta sensibilidade basal, conforme risco clínico e risco intrínseco do procedimento combinados",
+      "Troponina seriada no 1º e 2º dias pós-operatórios em pacientes de risco clínico intermediário/alto submetidos a cirurgia de risco intermediário/alto (SBC 2024, recomendação de maior força de evidência da diretriz brasileira para essa combinação)",
+      "Eletrocardiograma seriado no 1º e 2º dias pós-operatórios na mesma população de maior risco",
+      "BNP ou NT-proBNP pré-operatório em pacientes selecionados (idade ≥65 anos, ou 45-64 anos com doença cardiovascular estabelecida ou fator de risco cardiovascular, conforme SBC 2024/AHA-ACC 2024)",
+      "Avaliação estruturada de capacidade funcional pelo Duke Activity Status Index (DASI), preferível à estimativa subjetiva do examinador",
+      "Triagem de fragilidade com instrumento validado (ex.: FRAIL Scale) em pacientes ≥65 anos ou com fragilidade percebida candidatos a cirurgia de risco elevado",
+      "Ecocardiograma transtorácico quando há suspeita de doença estrutural cardíaca não caracterizada ou condição cardiovascular ativa",
+      "Teste isquêmico (ergométrico, cintilografia, eco de estresse) ou angiotomografia coronária, reservados a pacientes de risco elevado com capacidade funcional ruim/desconhecida e apenas quando o resultado pode mudar a conduta",
+      "Interrogação do dispositivo cardíaco eletrônico implantável (CIED) e definição da dependência de estimulação, com relatório de interrogação recente disponível, em portadores de marca-passo/CDI"
+    ],
+    "red_flags": [
+      "Síndrome coronariana aguda, insuficiência cardíaca NYHA III/IV descompensada, arritmia instável (incluindo BAV total e taquicardia ventricular) ou valvopatia grave sintomática identificada na avaliação pré-operatória",
+      "Hipertensão não controlada (PA >180x110 mmHg) ou taquiarritmia com frequência ventricular muito elevada (ex.: fibrilação atrial com FC >120 bpm) antes de cirurgia eletiva",
+      "Troponina pós-operatória com elevação dinâmica relevante acima do percentil 99 do limite superior de referência, sobretudo se acompanhada de sintomas, alteração eletrocardiográfica ou instabilidade",
+      "Supradesnivelamento de ST, isquemia persistente, choque ou arritmia instável associados a troponina elevada no pós-operatório — tratar imediatamente como síndrome coronariana aguda/instabilidade aguda",
+      "Capacidade funcional claramente ruim (DASI muito reduzido) em paciente candidato a cirurgia de risco elevado, sem avaliação adicional definida",
+      "Fragilidade importante (FRAIL 3-5) em paciente idoso candidato a cirurgia de risco elevado sem plano de otimização/pré-habilitação",
+      "Cirurgia não adiável em paciente com stent coronário implantado ainda dentro da janela de maior risco de trombose de stent, sem decisão multidisciplinar definida sobre antiagregação",
+      "Paciente dependente de estimulação por CIED submetido a procedimento com fonte relevante de interferência eletromagnética (eletrocautério monopolar, ablação por radiofrequência) sem plano prévio do dispositivo definido"
+    ],
+    "ambulatory_flow": [
+      "Identificar o cenário clínico: cirurgia eletiva versus urgência/emergência, e presença de condição cardiovascular ativa/instável (SBC 2024, AHA/ACC 2024)",
+      "Diante de condição cardiovascular grave/instável, priorizar estabilização/tratamento antes da cirurgia eletiva quando o contexto permitir adiamento; em cirurgia de emergência, prosseguir com manejo perioperatório apropriado",
+      "Classificar o risco intrínseco do procedimento planejado (baixo/intermediário/alto, SBC 2024), independentemente das características do paciente",
+      "Escolher e calcular o escore de risco clínico apropriado: RCRI ou AUB-HAS2 para cirurgia geral; VSG-CRI para cirurgia vascular arterial; Gupta-MICA como alternativa com desempenho discriminatório distinto do RCRI na validação original",
+      "Avaliar capacidade funcional de forma estruturada (DASI) em cirurgia de risco intermediário/alto, evitando confiar apenas na estimativa subjetiva",
+      "Rastrear fragilidade com instrumento validado (ex.: FRAIL Scale) em pacientes ≥65 anos ou com fragilidade percebida candidatos a cirurgia de risco elevado",
+      "Definir necessidade de biomarcadores pré-operatórios (BNP/NT-proBNP; troponina em pacientes selecionados) conforme idade, doença cardiovascular conhecida e fatores de risco",
+      "Solicitar exame adicional (ecocardiograma, teste isquêmico, angiotomografia coronária) apenas quando o resultado tiver potencial real de mudar a decisão de operar, o momento da cirurgia ou o manejo perioperatório",
+      "Revisar uso crônico de antiagregante/anticoagulante e planejar, junto com cirurgia e anestesia, a estratégia de manutenção, suspensão temporária ou ponte conforme risco trombótico e hemorrágico individual",
+      "Revisar uso crônico de betabloqueador: manter se já em uso; não iniciar rotineiramente apenas por causa da cirurgia; se houver indicação cardiovascular independente, seguir a indicação da condição de base com titulação gradual e antecedência suficiente",
+      "Em portador de CIED, confirmar tipo de dispositivo, dependência de estimulação e plano de manejo intraoperatório (reprogramação e/ou uso de ímã, conforme o dispositivo) antes do procedimento",
+      "Definir a estratégia de monitorização pós-operatória (troponina/ECG seriados, nível de vigilância clínica ou em UTI) conforme o risco clínico e cirúrgico combinado"
+    ],
+    "emergency_flow": [
+      "Reconhecer que troponina elevada no pós-operatório indica lesão miocárdica, não necessariamente trombose coronária, e que a maioria dos casos de MINS é clinicamente silenciosa",
+      "Diante de troponina acima do limite de referência ou com elevação dinâmica relevante, reavaliar imediatamente sintomas, ECG, pressão arterial, frequência cardíaca, saturação, hemoglobina e contexto clínico",
+      "Excluir primeiro instabilidade aguda (supradesnivelamento de ST, isquemia persistente, choque ou arritmia instável); quando presente, tratar como síndrome coronariana aguda/instabilidade aguda e acionar a cardiologia, considerando estratégia de reperfusão quando indicada",
+      "Na ausência de instabilidade aguda, investigar o mecanismo provável da lesão: infarto tipo 1, desequilíbrio entre oferta e demanda de oxigênio, tromboembolismo pulmonar, sepse, insuficiência cardíaca aguda, taquiarritmia, miocardite ou outra causa",
+      "Quando há causa não isquêmica claramente predominante, tratar a causa específica e não rotular automaticamente o quadro como MINS isquêmico",
+      "Quando o mecanismo é provavelmente isquêmico, considerar MINS e definir o fenótipo (infarto tipo 1, desequilíbrio oferta-demanda, ou lesão isquêmica sem infarto clínico manifesto)",
+      "Corrigir precipitantes reversíveis identificados (anemia, hipoxemia, hipotensão, taquicardia, dor) e revisar a prevenção cardiovascular secundária e os fatores de risco do paciente",
+      "Avaliar de forma individualizada se o risco hemorrágico e o contexto cirúrgico permitem considerar intensificação da terapia antitrombótica, sem intensificar de forma automática diante de qualquer troponina elevada",
+      "Planejar seguimento cardiovascular ambulatorial após a alta em todo paciente que apresentou MINS no pós-operatório, independentemente da decisão antitrombótica tomada"
+    ],
+    "treatment_summary": "O manejo perioperatório cardiovascular não é uma lista fixa de condutas por escore, mas uma sequência de decisões que integra o risco combinado (paciente + procedimento), a presença de condição cardiovascular ativa e dois eixos de manejo farmacológico que exigem cautela específica, além do plano de dispositivo cardíaco quando aplicável. Em antiagregação e anticoagulação, a conduta não deve ser generalizada como 'sempre suspender antes da cirurgia': o POISE-2 (mais de 10.000 pacientes) mostrou que iniciar ou manter aspirina perioperatoriamente na população geral de risco vascular não reduziu o composto de morte ou infarto não fatal em 30 dias e aumentou o risco de sangramento maior — resultado que sustenta uma decisão individualizada sobre aspirina, e não a presunção de que mantê-la é, por padrão, protetor. Já o paciente com stent coronário recente tem racional totalmente diferente, centrado no risco de trombose de stent: a decisão sobre manter, suspender temporariamente ou fazer ponte com antiagregação intravenosa depende do tempo desde o implante, do tipo de stent e é feita em conjunto por cardiologia, cirurgia e anestesia — esse cenário não deve ser confundido com a população geral do POISE-2. Anticoagulantes orais diretos e antagonistas de vitamina K seguem protocolos próprios de suspensão/ponte conforme função renal e risco de sangramento do procedimento, também definidos em conjunto pela equipe. Em relação a betabloqueador, a conduta também não deve ser generalizada como 'sempre iniciar antes de cirurgia de alto risco': o ensaio POISE (2008) testou exatamente essa estratégia — início agudo, em dose fixa e sem titulação, pouco antes da cirurgia — e mostrou redução de infarto não fatal às custas de excesso de mortalidade geral e do dobro do risco de AVC, achados sustentados também em um ano de seguimento; hipotensão e bradicardia clinicamente significativas foram mais frequentes no grupo tratado e associaram-se tanto a morte quanto a AVC no ensaio, sugerindo o mecanismo do dano. A lógica clínica atual, por isso, distingue dois cenários: no paciente já em uso crônico de betabloqueador, a recomendação é manter a medicação no perioperatório, evitando suspensão abrupta pelo risco de rebote (hipertensão, taquicardia, isquemia); no paciente sem uso prévio, a recomendação é não iniciar rotineiramente betabloqueador apenas por causa da cirurgia — se houver indicação cardiovascular independente da cirurgia (por exemplo, síndrome coronariana recente ou insuficiência cardíaca com fração reduzida), a decisão de iniciar segue as indicações da própria condição de base, com titulação gradual e antecedência suficiente antes do procedimento, não como estratégia isolada de 'profilaxia perioperatória'. O manejo do alvo pressórico intraoperatório também não deve ser generalizado: o POISE-3 testou uma estratégia protocolizada para evitar hipotensão (alvo de pressão arterial média mais alto e suspensão ampla de inibidores do sistema renina-angiotensina-aldosterona) contra uma estratégia para evitar hipertensão (alvo mais permissivo e manutenção dos anti-hipertensivos habituais) em pacientes de risco vascular sob tratamento anti-hipertensivo crônico, sem encontrar diferença no composto de morte vascular, lesão miocárdica, AVC ou parada cardíaca em 30 dias — o que enfraquece a ideia de que elevar sistematicamente o alvo pressórico e suspender amplamente anti-hipertensivos melhora, por si só, o prognóstico cardiovascular perioperatório; a decisão continua dependente do perfil hemodinâmico individual. Em portador de CIED, o manejo intraoperatório depende de três perguntas — o paciente é dependente de estimulação? haverá interferência eletromagnética relevante prevista (sobretudo eletrocautério monopolar)? qual é a resposta específica deste modelo de dispositivo a um ímã? — sendo importante lembrar que a resposta ao ímã em marca-passo (geralmente estimulação assíncrona) é diferente da resposta em CDI (o ímã, quando funciona, apenas suspende a terapia antitaquicardia/choque, nunca muda o modo de estimulação); toda alteração feita para o procedimento precisa ser restaurada antes da alta para ambiente sem monitorização contínua. Finalmente, no paciente com MINS estável (sem instabilidade aguda), o manejo prioriza corrigir precipitantes reversíveis e revisar prevenção cardiovascular secundária; a intensificação da terapia antitrombótica pode ser considerada em pacientes selecionados (o MANAGE mostrou redução de desfecho vascular composto sem sinal de aumento significativo de sangramento maior com essa estratégia em pacientes com MINS), mas essa decisão é individualizada — depende de hemostasia cirúrgica, função renal, risco hemorrágico e mecanismo provável da lesão — e não deve ser um reflexo automático diante de qualquer troponina elevada. Fragilidade identificada não funciona como veto automático à cirurgia: deve orientar objetivos de cuidado, possibilidade de pré-habilitação, estratégia anestésica/cirúrgica e necessidade de monitorização intensiva pós-operatória, de forma proporcional à urgência do procedimento.",
+    "monitoring": [
+      "Troponina de alta sensibilidade basal e seriada no 1º e 2º dias pós-operatórios em pacientes de risco clínico intermediário/alto submetidos a cirurgia de risco intermediário/alto (SBC 2024)",
+      "Eletrocardiograma seriado no 1º e 2º dias pós-operatórios na mesma população de maior risco combinado",
+      "Vigilância clínica habitual, sem rastreamento rotineiro de troponina, em pacientes de baixo risco clínico e cirúrgico combinado",
+      "Nível de vigilância pós-operatória escalonado conforme o risco clínico: monitorização clínica habitual, vigilância intensificada, ou monitorização intensiva/UTI por até 48 horas conforme o contexto e a disponibilidade assistencial",
+      "Reavaliação clínica imediata diante de qualquer elevação de troponina ou alteração eletrocardiográfica detectada na vigilância seriada",
+      "Seguimento cardiovascular ambulatorial planejado após a alta em todo paciente que apresentou MINS no pós-operatório",
+      "Reinterrogação do dispositivo cardíaco eletrônico implantável no pós-operatório quando houve reprogramação ou desabilitação de terapia para o procedimento, confirmando a restauração da programação original antes da alta para ambiente sem monitorização contínua"
+    ],
+    "special_populations": [
+      "Idoso frágil (FRAIL 3-5, ou fragilidade percebida clinicamente) candidato a cirurgia de risco elevado — avaliação estruturada de fragilidade recomendada (Classe 2a AHA/ACC 2024, Classe IIa SBC 2024) além dos escores cardiovasculares tradicionais, com possível indicação de pré-habilitação e planejamento de nível de cuidado pós-operatório",
+      "Cardiopata congênito do adulto candidato a cirurgia não cardíaca — modificador de risco reconhecido pela AHA/ACC 2024 independentemente do RCRI/Gupta-MICA calculado, exigindo avaliação em equipe conforme a complexidade da cardiopatia de base",
+      "Portador de dispositivo cardíaco eletrônico implantável (marca-passo, CDI, ressincronizador, dispositivo sem eletrodo, CDI subcutâneo) candidato a procedimento com eletrocautério monopolar ou outra fonte relevante de interferência eletromagnética — exige identificação do dispositivo, definição de dependência de estimulação e plano específico de manejo intraoperatório",
+      "Usuário crônico de antiagregante plaquetário, incluindo dupla antiagregação após stent coronário recente, candidato a cirurgia não adiável dentro da janela de maior risco de trombose de stent — decisão multidisciplinar sobre manutenção, suspensão temporária ou ponte",
+      "Usuário crônico de anticoagulante oral (DOAC ou antagonista de vitamina K), especialmente por fibrilação atrial, candidato a procedimento com risco de sangramento variável — estratégia de suspensão/ponte conforme função renal e risco hemorrágico do procedimento",
+      "Paciente com valvopatia grave (por exemplo, estenose aórtica importante), sobretudo se sintomática, candidato a cirurgia não cardíaca — risco elevado reconhecido como modificador independentemente do escore clínico calculado",
+      "Paciente em uso crônico de betabloqueador candidato a cirurgia não cardíaca — a conduta recomendada é manter a medicação no perioperatório, e não suspendê-la nem substituí-la por início agudo de outro esquema"
+    ],
+    "assistant_questions": [
+      {
+        "id": "cirurgia_emergente",
+        "label": "A cirurgia é de emergência/urgência, sem possibilidade de adiamento?",
+        "type": "boolean"
+      },
+      {
+        "id": "condicao_cardiovascular_ativa_instavel",
+        "label": "Há condição cardiovascular ativa/instável (síndrome coronariana aguda, insuficiência cardíaca descompensada, arritmia instável, valvopatia grave sintomática, hipertensão não controlada)?",
+        "type": "boolean"
+      },
+      {
+        "id": "tipo_cirurgia",
+        "label": "Qual o tipo de cirurgia planejada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "vascular_arterial",
+            "label": "Vascular arterial"
+          },
+          {
+            "value": "geral",
+            "label": "Demais cirurgias"
+          }
+        ]
+      },
+      {
+        "id": "risco_intrinseco_procedimento",
+        "label": "Qual a classificação de risco intrínseco do procedimento, conforme SBC 2024?",
+        "type": "select",
+        "options": [
+          {
+            "value": "baixo",
+            "label": "Baixo (<1%)"
+          },
+          {
+            "value": "intermediario",
+            "label": "Intermediário (1-5%)"
+          },
+          {
+            "value": "alto",
+            "label": "Alto (>5%)"
+          }
+        ]
+      },
+      {
+        "id": "pontuacao_rcri",
+        "label": "Qual a pontuação RCRI calculada (0 a 6)?",
+        "type": "number",
+        "min": 0,
+        "max": 6
+      },
+      {
+        "id": "dasi_score",
+        "label": "Qual a pontuação DASI calculada (capacidade funcional, 0 a 58,2)?",
+        "type": "number",
+        "min": 0,
+        "max": 58.2
+      },
+      {
+        "id": "idade_paciente",
+        "label": "Qual a idade do paciente, em anos?",
+        "type": "number",
+        "min": 0,
+        "max": 120
+      },
+      {
+        "id": "fragilidade_percebida_ou_idade_65",
+        "label": "O paciente tem 65 anos ou mais, ou apresenta fragilidade percebida clinicamente?",
+        "type": "boolean"
+      },
+      {
+        "id": "pontuacao_frail",
+        "label": "Qual a pontuação FRAIL Scale, se aplicada (0 a 5)?",
+        "type": "number",
+        "min": 0,
+        "max": 5
+      },
+      {
+        "id": "uso_cronico_antiagregante_ou_anticoagulante",
+        "label": "O paciente está em uso crônico de antiagregante plaquetário ou anticoagulante oral?",
+        "type": "boolean"
+      },
+      {
+        "id": "stent_coronario_recente",
+        "label": "O paciente tem stent coronário implantado?",
+        "type": "boolean"
+      },
+      {
+        "id": "tempo_desde_stent_meses",
+        "label": "Há quantos meses o stent coronário foi implantado?",
+        "type": "number",
+        "min": 0,
+        "max": 600
+      },
+      {
+        "id": "uso_cronico_betabloqueador",
+        "label": "O paciente está em uso crônico de betabloqueador?",
+        "type": "boolean"
+      },
+      {
+        "id": "portador_cied",
+        "label": "O paciente é portador de dispositivo cardíaco eletrônico implantável (marca-passo, CDI, ressincronizador)?",
+        "type": "boolean"
+      },
+      {
+        "id": "dependente_estimulacao",
+        "label": "O paciente é dependente de estimulação pelo dispositivo (CIED)?",
+        "type": "boolean"
+      },
+      {
+        "id": "troponina_pos_operatoria_elevada",
+        "label": "Há elevação de troponina no pós-operatório acima do limite de referência ou com variação dinâmica relevante?",
+        "type": "boolean"
+      },
+      {
+        "id": "instabilidade_aguda_pos_operatoria",
+        "label": "Há supradesnivelamento de ST, isquemia persistente, choque ou arritmia instável associados à troponina elevada?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "cirurgia_emergente_prosseguir",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "cirurgia_emergente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": [
+            "Cirurgia de emergência: prosseguir diretamente com manejo perioperatório apropriado, cardioproteção e monitorização, sem aguardar estratificação eletiva completa"
+          ]
+        }
+      },
+      {
+        "id": "condicao_cardiovascular_ativa_instavel_pausar",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "condicao_cardiovascular_ativa_instavel",
+              "op": "truthy"
+            },
+            {
+              "field": "cirurgia_emergente",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Condição cardiovascular ativa/instável identificada antes de cirurgia eletiva"
+          ],
+          "messages": [
+            "Priorizar estabilização/tratamento da condição cardiovascular antes de prosseguir com a cirurgia eletiva, quando o contexto permitir adiamento"
+          ]
+        }
+      },
+      {
+        "id": "instabilidade_aguda_pos_operatoria_emergencia",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "instabilidade_aguda_pos_operatoria",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Supradesnivelamento de ST, isquemia persistente, choque ou arritmia instável associados a troponina elevada no pós-operatório"
+          ],
+          "emergency_flow": [
+            "Tratar como síndrome coronariana aguda/instabilidade aguda; acionar cardiologia e considerar estratégia de reperfusão quando indicada"
+          ]
+        }
+      },
+      {
+        "id": "mins_suspeita_pos_operatoria",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "troponina_pos_operatoria_elevada",
+              "op": "truthy"
+            },
+            {
+              "field": "instabilidade_aguda_pos_operatoria",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "differentials": [
+            "Considerar MINS (lesão miocárdica após cirurgia não cardíaca) e investigar o mecanismo antes de rotular automaticamente como MINS isquêmico"
+          ],
+          "suggested_tests": [
+            "Reavaliar sintomas, ECG, pressão arterial, frequência cardíaca, saturação e hemoglobina; investigar causas isquêmicas e não isquêmicas de lesão miocárdica"
+          ]
+        }
+      },
+      {
+        "id": "alto_risco_cirurgico_baixa_capacidade_funcional",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "risco_intrinseco_procedimento",
+              "op": "eq",
+              "value": "alto"
+            },
+            {
+              "field": "dasi_score",
+              "op": "lte",
+              "value": 34
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Cirurgia de alto risco intrínseco combinada a capacidade funcional ruim (DASI ≤34) aumenta a probabilidade de complicação cardiovascular perioperatória"
+          ],
+          "suggested_tests": [
+            "Considerar biomarcadores pré-operatórios (BNP/NT-proBNP) e avaliação adicional apenas se o resultado puder mudar a conduta"
+          ]
+        }
+      },
+      {
+        "id": "stent_recente_janela_risco",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "stent_coronario_recente",
+              "op": "truthy"
+            },
+            {
+              "field": "tempo_desde_stent_meses",
+              "op": "lt",
+              "value": 6
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Stent coronário implantado há menos de 6 meses mantém risco relevante de trombose de stent; suspensão de antiagregante exige decisão multidisciplinar"
+          ],
+          "missing_information": [
+            "Definir tipo de stent (metálico ou farmacológico) e decisão multidisciplinar entre cardiologia, cirurgia e anestesia sobre manutenção, suspensão temporária ou terapia de ponte"
+          ]
+        }
+      },
+      {
+        "id": "cied_dependente_estimulacao_plano",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "portador_cied",
+              "op": "truthy"
+            },
+            {
+              "field": "dependente_estimulacao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Confirmar tipo de dispositivo, modelo, resposta ao ímã e definir plano de reprogramação/manejo intraoperatório antes de procedimento com eletrocautério ou outra fonte de interferência eletromagnética"
+          ],
+          "suggested_tests": [
+            "Interrogar o dispositivo e obter relatório da interrogação mais recente"
+          ]
+        }
+      },
+      {
+        "id": "rcri_elevado_avaliar_capacidade_funcional",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "pontuacao_rcri",
+              "op": "gte",
+              "value": 2
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "RCRI ≥2 é tradicionalmente associado a maior risco de evento cardíaco perioperatório"
+          ],
+          "suggested_tests": [
+            "Avaliar capacidade funcional de forma estruturada (DASI) antes de decidir sobre investigação adicional"
+          ]
+        }
+      },
+      {
+        "id": "frail_score_alto",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "pontuacao_frail",
+              "op": "gte",
+              "value": 3
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Fragilidade (FRAIL 3-5) associa-se a maior mortalidade e complicações em 30 dias; considerar avaliação geriátrica/funcional dirigida e pré-habilitação"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulante_antiagregante_planejar_manejo",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "uso_cronico_antiagregante_ou_anticoagulante",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Definir estratégia de manutenção, suspensão temporária ou terapia de ponte para o antiagregante/anticoagulante conforme risco trombótico e hemorrágico, em decisão multidisciplinar"
+          ]
+        }
+      },
+      {
+        "id": "fragilidade_avaliar_instrumento",
+        "priority": 50,
+        "when": {
+          "any": [
+            {
+              "field": "fragilidade_percebida_ou_idade_65",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Aplicar instrumento validado de fragilidade (ex.: FRAIL Scale) antes de cirurgia de risco elevado"
+          ]
+        }
+      },
+      {
+        "id": "cied_nao_dependente_plano_ainda_necessario",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "portador_cied",
+              "op": "truthy"
+            },
+            {
+              "field": "dependente_estimulacao",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Paciente portador de CIED não dependente de estimulação: reprogramação para modo assíncrono não é obrigatória, mas o plano do dispositivo ainda deve ser definido conforme a fonte de interferência eletromagnética prevista"
+          ]
+        }
+      },
+      {
+        "id": "betabloqueador_cronico_manter",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "uso_cronico_betabloqueador",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Paciente em uso crônico de betabloqueador: a conduta recomendada é manter a medicação no perioperatório, evitando suspensão abrupta pelo risco de rebote"
+          ],
+          "opposing": [
+            "Não há indicação de iniciar betabloqueador adicional apenas por causa da cirurgia"
+          ]
+        }
+      },
+      {
+        "id": "sem_betabloqueador_nao_iniciar_rotineiramente",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "uso_cronico_betabloqueador",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Não iniciar betabloqueador rotineiramente apenas por causa da cirurgia não cardíaca; início agudo e sem titulação foi associado a excesso de morte e AVC no ensaio POISE"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "perioperatório",
+      "cirurgia não cardíaca",
+      "risco cardiovascular perioperatório",
+      "RCRI",
+      "Gupta-MICA",
+      "AUB-HAS2",
+      "VSG-CRI",
+      "capacidade funcional",
+      "DASI",
+      "fragilidade",
+      "FRAIL Scale",
+      "MINS",
+      "lesão miocárdica pós-operatória",
+      "troponina perioperatória",
+      "POISE",
+      "POISE-2",
+      "POISE-3",
+      "betabloqueador perioperatório",
+      "antitrombóticos perioperatórios",
+      "DAPT perioperatória",
+      "CIED perioperatório",
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "SBC 2024",
+      "ESC 2022",
+      "AHA/ACC 2024"
+    ],
+    "source_refs": [
+      "Gualandro DM, Fornari LS, Caramelli B, et al. Guideline for Perioperative Cardiovascular Evaluation of the Brazilian Society of Cardiology - 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131.",
+      "Halvorsen S, Mehilli J, Cassese S, et al; ESC Scientific Document Group. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553.",
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661.",
+      "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. DOI: 10.1161/01.CIR.100.10.1043. PMID: 10477528.",
+      "Gupta PK, Gupta H, Sundaram A, et al. Development and validation of a risk calculator for prediction of cardiac risk after surgery. Circulation. 2011;124(4):381-387. DOI: 10.1161/CIRCULATIONAHA.110.015701. PMID: 21730309.",
+      "Devereaux PJ, Yang H, Yusuf S, et al; POISE Study Group. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744.",
+      "Devereaux PJ, Mrkobrada M, Sessler DI, et al; POISE-2 Investigators. Aspirin in patients undergoing noncardiac surgery. N Engl J Med. 2014;370(16):1494-1503. DOI: 10.1056/NEJMoa1401105. PMID: 24679062.",
+      "Marcucci M, Painter TW, Conen D, et al. Hypotension-Avoidance Versus Hypertension-Avoidance Strategies in Noncardiac Surgery: An International Randomized Controlled Trial. Ann Intern Med. 2023;176(5):605-614. DOI: 10.7326/M22-3157. PMID: 37094336.",
+      "Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. DOI: 10.1001/jama.2017.4360. PMID: 28444280.",
+      "Devereaux PJ, Duceppe E, Guyatt G, et al; MANAGE Investigators. Dabigatran in patients with myocardial injury after non-cardiac surgery (MANAGE): an international, randomised, placebo-controlled trial. Lancet. 2018;391(10137):2325-2334. DOI: 10.1016/S0140-6736(18)30832-8. PMID: 29900874.",
+      "Hlatky MA, Boineau RE, Higginbotham MB, et al. A brief self-administered questionnaire to determine functional capacity (the Duke Activity Status Index). Am J Cardiol. 1989;64(10):651-654. DOI: 10.1016/0002-9149(89)90496-7. PMID: 2782256.",
+      "Wijeysundera DN, Pearse RM, Shulman MA, et al; METS study investigators. Assessment of functional capacity before major non-cardiac surgery: an international, prospective cohort study. Lancet. 2018;391(10140):2631-2640. DOI: 10.1016/S0140-6736(18)31131-0. PMID: 30070222.",
+      "Morley JE, Malmstrom TK, Miller DK. A simple frailty questionnaire (FRAIL) predicts outcomes in middle aged African Americans. J Nutr Health Aging. 2012;16(7):601-608. DOI: 10.1007/s12603-012-0084-2. PMID: 22836700.",
+      "American Society of Anesthesiologists Task Force on Perioperative Management of Patients with Cardiac Implantable Electronic Devices. Practice Advisory for the Perioperative Management of Patients with Cardiac Implantable Electronic Devices: Pacemakers and Implantable Cardioverter-Defibrillators 2020 — An Updated Report. Anesthesiology. 2020;132(2):225-252. DOI: 10.1097/ALN.0000000000002821. PMID: 31939838."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39442131/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017553/",
+      "https://pubmed.ncbi.nlm.nih.gov/39316661/",
+      "https://pubmed.ncbi.nlm.nih.gov/10477528/",
+      "https://pubmed.ncbi.nlm.nih.gov/21730309/",
+      "https://pubmed.ncbi.nlm.nih.gov/18479744/",
+      "https://pubmed.ncbi.nlm.nih.gov/24679062/",
+      "https://pubmed.ncbi.nlm.nih.gov/37094336/",
+      "https://pubmed.ncbi.nlm.nih.gov/28444280/",
+      "https://pubmed.ncbi.nlm.nih.gov/29900874/",
+      "https://pubmed.ncbi.nlm.nih.gov/2782256/",
+      "https://pubmed.ncbi.nlm.nih.gov/30070222/",
+      "https://pubmed.ncbi.nlm.nih.gov/22836700/",
+      "https://pubmed.ncbi.nlm.nih.gov/31939838/"
+    ],
+    "related_document_slugs": [
+      "diretriz-sbc-2024-algoritmo-avaliacao-cardiovascular-perioperatoria",
+      "algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024",
+      "arvore-decisao-rcri-lee",
+      "arvore-decisao-gupta-mica",
+      "mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao",
+      "manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais",
+      "betabloqueador-perioperatorio-poise-e-recomendacao-atual"
+    ],
+    "patient_material_slug": "avaliacao-cardiologica-antes-de-uma-cirurgia",
+    "review_status": "pendente_revisao",
+    "review_note": "Verbete NOVO criado em 29/08/2026 pela sessão autônoma de produção de conteúdo do Guia de Doenças (Corvia), corrigindo a maior lacuna estrutural identificada nesta rodada: content/Perioperatório/ tem mais de 70 documentos publicados (RCRI, Gupta-MICA, AUB-HAS2, VSG-CRI, DASI, FRAIL Scale, algoritmo integrado AHA/ACC 2024, algoritmo SBC 2024, ESC 2022, MINS, manejo perioperatório de antitrombóticos, betabloqueador perioperatório/POISE, POISE-2, POISE-3, manejo de CIED) e, apesar disso, não existia nenhum registro central em doencas/metadados.json nem em doencas/fragmentos/ com área ou hub dedicado a avaliação cardiovascular perioperatória — confirmado por grep -ri 'perioperator' em doencas/metadados.json e doencas/fragmentos/*.json antes e depois da pesquisa (únicas ocorrências pré-existentes eram campos internos de outras fichas, como 'contexto_perioperatorio' em cardiomiopatia-de-takotsubo.json, não uma ficha própria). DECISÃO EDITORIAL 1 — campo 'area': o campo é ENUM FECHADO, validado em backend/app/services/carregar_doencas_especializadas.py (AREAS = {'geral', 'cardiopediatria', 'cardiogeriatria', 'cardiooncologia', 'gravidez'}); 'perioperatorio' NÃO é um valor aceito e um verbete com esse valor seria rejeitado no carregamento ('área inválida'). Usado area='geral' como fallback seguro conforme instrução da missão. Fica como decisão editorial pendente de confirmação por Rafael: se a área 'perioperatorio' deve ser formalmente adicionada ao enum AREAS (o volume de 70+ documentos e a transversalidade do tema — toda especialidade cirúrgica, não uma faixa etária ou população específica — sugerem que pode justificar um enum próprio no futuro, em vez de ficar diluído em 'geral'). DECISÃO EDITORIAL 2 — campo 'category': 'avaliacao_perioperatoria' é categoria NOVA. Nenhuma categoria existente encaixava sem forçar: 'avaliacao_pre_procedimento' já está em uso por fragilidade-pre-procedimento-cardiovascular (área cardiogeriatria), com escopo estreito e específico de fragilidade antes de procedimento CARDIOVASCULAR (ex.: TAVI), não o hub amplo de avaliação de risco cardíaco antes de cirurgia NÃO cardíaca coberto por este verbete; 'avaliacao_basal', 'avaliacao_global', 'prevencao_e_risco' e 'planejamento' são genéricas demais e usadas em contextos não relacionados. Segue o precedente já aberto nesta mesma rodada de produção pelo verbete bloqueio-atrioventricular (category='disturbio_de_conducao', 29/08/2026): categoria nova quando nenhuma existente encaixa sem forçar. MAGNITUDE DA LACUNA: este é o hub estrutural mais denso da biblioteca sem ficha própria em doencas/ — 70+ documentos publicados e cross-referenciados na frente Tudo com Tudo de vários outros verbetes (ex.: obesidade-e-coracao cita paradoxo-da-obesidade-no-risco-cardiovascular-perioperatorio; pr599-dispositivos-cardiacos-implantaveis cita manejo perioperatório de CIED; hipertensao-pulmonar cita risco perioperatório) sem um ponto de entrada central navegável como doença/processo clínico no Guia. Os 7 related_document_slugs foram lidos por completo e verificados individualmente como discussão central do tema (não tangencial), priorizando um documento central por eixo do processo: algoritmo SBC 2024 (hierarquia de fonte #1), algoritmo integrado AHA/ACC 2024, os dois escores mais citados (RCRI e Gupta-MICA), MINS como entidade distinta, manejo de antitrombóticos, e betabloqueador/POISE — este último cobre centralmente o ensaio POISE-1 (PMID 18479744), satisfazendo o pedido de incluir 'algum POISE' sem exceder o limite de 5-7 slugs pedido pela missão; POISE-2 e POISE-3 foram lidos e verificados para a síntese de summary/epidemiology/treatment_summary mas não incluídos como related_document_slugs adicionais por já haver 7 slugs centrais selecionados. Todos os 7 estão em content/Perioperatório/, fora de Farmacologia/Calculadoras/Exames. 14 PMIDs verificados individualmente via NCBI E-utilities (esummary/esearch) antes da montagem — título, revista, ano e primeiro autor conferidos contra cada citação usada: 39442131 (SBC 2024, Gualandro — PMID não estava declarado nos documentos de origem, que citavam apenas o DOI; localizado e verificado especificamente para esta ficha), 36017553 (ESC 2022, Halvorsen), 39316661 (AHA/ACC 2024, Thompson), 10477528 (RCRI, Lee), 21730309 (Gupta-MICA, Gupta), 18479744 (POISE, Devereaux), 24679062 (POISE-2 aspirina, Devereaux), 37094336 (POISE-3, Marcucci), 28444280 (VISION, Devereaux), 29900874 (MANAGE, Devereaux), 2782256 (DASI, Hlatky), 30070222 (METS study, Wijeysundera), 22836700 (FRAIL Scale, Morley), 31939838 (Practice Advisory CIED da ASA 2020 — PMID do artigo original, não da errata 32032098; a distinção já havia sido documentada e corrigida por verificação anterior em fluxograma-manejo-perioperatorio-marcapasso-cdi-cied.md desta mesma pasta, reconferida aqui). ATENÇÃO ESPECIAL APLICADA — regra determinística da missão: nenhuma generalização de 'sempre suspender antiagregante antes de cirurgia' (POISE-2: aspirina não reduziu morte/infarto e aumentou sangramento maior na população geral, mas DAPT após stent recente tem racional e evidência totalmente diferentes, tratados separadamente) nem de 'sempre iniciar betabloqueador antes de cirurgia de alto risco' (POISE mostrou dano líquido — excesso de morte e o dobro de AVC — com início agudo, dose fixa, sem titulação; a lógica correta distingue manter uso crônico versus não iniciar rotineiramente); essa nuance foi mantida de forma explícita em treatment_summary e nas assistant_rules betabloqueador_cronico_manter/sem_betabloqueador_nao_iniciar_rotineiramente. MINS tratado como entidade distinta de IAM clássico em todo o verbete (differentials, emergency_flow, assistant_rules), sem herdar critérios diagnósticos de SCA sem fonte — troponina elevada é tratada como 'lesão miocárdica', com investigação obrigatória do mecanismo antes de qualquer rótulo. NENHUMA dose de fármaco em nenhum campo (inclusive nas seções sobre POISE, MANAGE e POISE-2, onde as doses testadas nos ensaios originais foram deliberadamente omitidas, mantendo apenas o racional clínico e o resultado). patient_material_slug encontrado em material-paciente/metadados.json: 'avaliacao-cardiologica-antes-de-uma-cirurgia' (documento_slug correspondente é justamente avaliacao-cardiovascular-e-manejo-em-cirurgia-nao-cardiaca-esc-2022, um dos documentos-fonte desta ficha). prevalence_rank deixado null (não é doença de prevalência mensurável isolada; é um processo aplicado transversalmente). Campos presentation/diagnostic_approach/differentials/tests/ambulatory_flow/emergency_flow foram deliberadamente adaptados do padrão 'doença com apresentação própria' para o padrão 'processo de avaliação', conforme instrução da missão: presentation lista cenários clínicos que motivam a avaliação (não sintomas de uma doença), differentials lista diagnósticos a excluir/considerar no contexto de MINS pós-operatória, ambulatory_flow é o fluxo de avaliação pré-operatória eletiva e emergency_flow é o reconhecimento/investigação de MINS no pós-operatório. Nenhum overlap de related_document_slugs verificado contra outras fichas já compostas em doencas/metadados.json e doencas/fragmentos/. Criado via doencas/fragmentos/ (não via edição direta de doencas/metadados.json) para minimizar colisão com outras frentes de produção concorrentes na mesma noite.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
