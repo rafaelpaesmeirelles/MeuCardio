@@ -36,6 +36,7 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
+from app.services.carregar_triagem_sintomas import load_triage_records
 from app.services.disease_manifest import load_disease_records
 from app.services.importer import _resolve_markdown_slug, import_directory
 from app.services.knowledge_graph import backfill_mesmo_tema
@@ -122,6 +123,8 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
 
     if front == "doencas_especializadas":
         data = load_disease_records(source)
+    elif front == "triagem_sintomas":
+        data = load_triage_records(source)
     else:
         data = json.loads(source.read_text(encoding="utf-8"))
     if not isinstance(data, list):
