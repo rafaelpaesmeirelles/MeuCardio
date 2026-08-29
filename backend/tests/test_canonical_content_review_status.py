@@ -53,6 +53,8 @@ PATH_TO_FRONT = {
     "material-paciente/metadados.json": "material_paciente",
     "emergencia/metadados.json": "emergencia",
     "casos-clinicos/metadados.json": "casos_clinicos",
+    "doencas/metadados.json": "doencas_especializadas",
+    "triagem-sintomas/metadados.json": "triagem_sintomas",
 }
 
 
