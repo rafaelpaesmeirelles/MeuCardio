@@ -56,8 +56,18 @@ def test_analysis_schema_requires_explicit_source_support_flag():
     assert "source_url" in change["required"]
 
 
-def test_runtime_install_replaces_core_helpers_with_idempotent_guards():
+def test_runtime_install_replaces_core_helpers_with_idempotent_guards(monkeypatch):
+    original_plain = clinical._plain_override
+    original_strip = clinical._strip_plain_override
+    original_apply = clinical._apply_override
+    original_summary = clinical._ensure_summary_document
+
     runtime.install_runtime_guards()
     assert clinical._plain_override is runtime._plain_override
     assert clinical._strip_plain_override is runtime._strip_plain_override
     assert clinical._apply_override is runtime._guarded_apply_override
+
+    monkeypatch.setattr(clinical, "_plain_override", original_plain)
+    monkeypatch.setattr(clinical, "_strip_plain_override", original_strip)
+    monkeypatch.setattr(clinical, "_apply_override", original_apply)
+    monkeypatch.setattr(clinical, "_ensure_summary_document", original_summary)
