@@ -33105,5 +33105,65 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "vigilancia-e-manejo-pos-transplante-cardiaco-rejeicao-e-vasculopatia-do-enxerto",
+    "condicao": "Transplante cardíaco — vigilância de rejeição e vasculopatia do enxerto",
+    "resumo": "Checklist clínico para a vigilância pós-transplante cardíaco propriamente dita, cobrindo biópsia endomiocárdica seriada com a classificação ISHLT de rejeição celular aguda (0R-3R), manejo estratificado por gravidade da rejeição celular e da rejeição mediada por anticorpos, rastreio sistemático de vasculopatia do enxerto (CAV) e vigilância de efeitos adversos da imunossupressão de manutenção de longo prazo. Baseado em documentos de consenso e diretrizes da International Society for Heart and Lung Transplantation (ISHLT); busca dedicada não localizou diretriz específica da Sociedade Brasileira de Cardiologia sobre este tema exato (rejeição/CAV pós-transplante), apenas um documento conjunto EACVI/SBC sobre imagem de seguimento, não usado como fonte central aqui.",
+    "documento_origem": null,
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Stewart S, Winters GL, Fishbein MC, Tazelaar HD, Kobashigawa J, Abrams J, et al. Revision of the 1990 working formulation for the standardization of nomenclature in the diagnosis of heart rejection. J Heart Lung Transplant. 2005;24(11):1710-1720. DOI: 10.1016/j.healun.2005.03.019. PMID: 16297770.",
+      "Reed EF, Demetris AJ, Hammond E, Itescu S, Kobashigawa JA, Reinsmoen NL, et al; International Society for Heart and Lung Transplantation. Acute antibody-mediated rejection of cardiac transplants. J Heart Lung Transplant. 2006;25(2):153-159. DOI: 10.1016/j.healun.2005.09.003. PMID: 16446213.",
+      "Kobashigawa J, Crespo-Leiro MG, Ensminger SM, Reichenspurner H, Angelini A, Berry G, et al; Consensus Conference Participants. Report from a consensus conference on antibody-mediated rejection in heart transplantation. J Heart Lung Transplant. 2011;30(3):252-269. DOI: 10.1016/j.healun.2010.11.003. PMID: 21300295; PMCID: PMC3829685.",
+      "Berry GJ, Angelini A, Burke MM, Bruneval P, Fishbein MC, Hammond E, et al. The ISHLT working formulation for pathologic diagnosis of antibody-mediated rejection in heart transplantation: evolution and current status (2005-2011). J Heart Lung Transplant. 2011;30(6):601-611. DOI: 10.1016/j.healun.2011.02.015. PMID: 21555100.",
+      "Mehra MR, Crespo-Leiro MG, Dipchand A, Ensminger SM, Hiemann NE, Kobashigawa JA, et al. International Society for Heart and Lung Transplantation working formulation of a standardized nomenclature for cardiac allograft vasculopathy-2010. J Heart Lung Transplant. 2010;29(7):717-727. DOI: 10.1016/j.healun.2010.05.017. PMID: 20620917.",
+      "Costanzo MR, Dipchand A, Starling R, Anderson A, Chan M, Desai S, et al; International Society of Heart and Lung Transplantation Guidelines. The International Society of Heart and Lung Transplantation Guidelines for the care of heart transplant recipients. J Heart Lung Transplant. 2010;29(8):914-956. DOI: 10.1016/j.healun.2010.05.034. PMID: 20643330.",
+      "Lampert BC, Teuteberg JJ, Shullo MA, Holtz J, Smith KJ. Cost-effectiveness of routine surveillance endomyocardial biopsy after 12 months post-heart transplantation. Circ Heart Fail. 2014;7(5):807-813. DOI: 10.1161/CIRCHEARTFAILURE.114.001199. PMID: 25104042. [Estudo observacional/análise de custo-efetividade — não é diretriz]",
+      "Söderlund C, Rådegran G. Immunosuppressive therapies after heart transplantation — the balance between under- and over-immunosuppression. Transplant Rev (Orlando). 2015;29(3):181-189. DOI: 10.1016/j.trre.2015.02.005. PMID: 25812489. [Revisão narrativa — não é diretriz]"
+    ],
+    "itens": [
+      {
+        "id": "biopsia-vigilancia-grading-ishlt",
+        "categoria": "Biópsia de vigilância",
+        "obrigatorio": true,
+        "texto": "A vigilância de rejeição no pós-transplante cardíaco baseia-se em biópsias endomiocárdicas seriadas, tipicamente mais frequentes nas primeiras semanas/meses após o transplante e espaçadas progressivamente ao longo do primeiro ano conforme protocolo institucional. O cronograma numérico exato (frequência em cada intervalo) varia por centro e é detalhado na diretriz ISHLT de Costanzo et al. (2010); os intervalos específicos não foram confirmados de forma independente neste levantamento (apenas o título/abstract da diretriz foi verificado, não o texto completo) e não devem ser assumidos sem checagem da fonte primária antes de uso clínico direto. Cada amostra é graduada pela classificação ISHLT revisada de 2004 (Stewart et al., 2005) de rejeição celular aguda: Grau 0R (ausência de rejeição), Grau 1R (rejeição leve, correspondendo aos antigos graus 1A/1B/2), Grau 2R (rejeição moderada, correspondendo ao antigo grau 3A) e Grau 3R (rejeição grave, correspondendo aos antigos graus 3B/4); as designações histológicas 'Quilty A/B' foram eliminadas por não terem significância clínica comprovada. Após o primeiro ano, evidência observacional de análise de custo-efetividade sugere baixo rendimento incremental e questionável custo-efetividade da biópsia sistemática em pacientes assintomáticos de risco basal (Lampert et al., 2014) — achado observacional, não recomendação formal de diretriz — devendo a decisão de manter vigilância prolongada ser individualizada.",
+        "origem_secao": "Stewart et al. 2005 (PMID 16297770), classificação ISHLT revisada; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor; Lampert et al. 2014 (PMID 25104042), evidência observacional sobre biópsia após 12 meses"
+      },
+      {
+        "id": "rejeicao-celular-manejo-por-gravidade",
+        "categoria": "Rejeição celular",
+        "obrigatorio": true,
+        "texto": "O manejo da rejeição celular aguda é estratificado pela gravidade histológica (grau ISHLT) e pela repercussão clínica/hemodinâmica: rejeição leve (Grau 1R), geralmente assintomática, é habitualmente conduzida com observação clínica e manutenção/otimização da imunossupressão basal, sem intensificação adicional; rejeição moderada (Grau 2R) ou rejeição celular sintomática tipicamente indica pulsoterapia com corticoide em altas doses (metilprednisolona intravenosa); rejeição grave (Grau 3R), ou qualquer grau acompanhado de comprometimento hemodinâmico significativo ou refratariedade ao corticoide, pode exigir terapia de depleção linfocitária (p.ex., globulina antitimocítica) e escalonamento da imunossupressão, com biópsia de reavaliação para confirmar resposta terapêutica. Doses, esquemas posológicos e critérios operacionais exatos de escalonamento não foram verificados neste levantamento (não confirmados a partir de abstract) e devem seguir o protocolo institucional vigente.",
+        "origem_secao": "Stewart et al. 2005 (PMID 16297770), definição dos graus 0R-3R; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor, como referência de estratificação terapêutica por gravidade"
+      },
+      {
+        "id": "rejeicao-humoral-diagnostico-e-manejo",
+        "categoria": "Rejeição humoral",
+        "obrigatorio": true,
+        "texto": "A rejeição mediada por anticorpos (humoral, AMR) tem diagnóstico baseado na combinação de achados histológicos característicos (edema e injúria endotelial capilar, capilarite, agregados intravasculares de macrófagos/monócitos) com imuno-histoquímica positiva para C4d (ou C3d) no endotélio capilar miocárdico e, idealmente, presença de anticorpos doador-específicos (DSA) circulantes — sistema de graduação patológica pAMR0 a pAMR3, conforme working formulation da ISHLT (Berry et al., 2011). Diferentemente da rejeição celular, a AMR pode ocorrer de forma assintomática (sem disfunção ventricular detectável) e, mesmo assim, associa-se a maior mortalidade e maior risco subsequente de vasculopatia do enxerto (Kobashigawa et al., 2011); além disso, o DSA circulante nem sempre é detectável no momento do episódio, pois pode estar fixado/adsorvido ao próprio enxerto (Reed et al., 2006). O manejo tende a diferir do da rejeição puramente celular por envolver, além do corticoide, estratégias direcionadas à depuração ou neutralização de anticorpos, conforme discutido nos documentos de consenso ISHLT; protocolos terapêuticos específicos (agentes, doses, sequenciamento) não foram detalhados nem verificados neste levantamento a partir dos abstracts disponíveis.",
+        "origem_secao": "Berry et al. 2011 (PMID 21555100), graduação patológica pAMR; Kobashigawa et al. 2011 (PMID 21300295), conferência de consenso ISHLT sobre AMR; Reed et al. 2006 (PMID 16446213), critérios clínicos/sorológicos de AMR"
+      },
+      {
+        "id": "vasculopatia-enxerto-rastreio-anual",
+        "categoria": "Vasculopatia do enxerto",
+        "obrigatorio": true,
+        "texto": "A vasculopatia do enxerto cardíaco (cardiac allograft vasculopathy, CAV) é uma arteriopatia difusa, concêntrica e acelerada do enxerto, reconhecida como principal determinante de falência tardia e perda do enxerto em sobreviventes de longo prazo, com nomenclatura e estadiamento padronizados pelo documento de consenso ISHLT (Mehra et al., 2010: CAV0 ausente, CAV1 leve, CAV2 moderada, CAV3 grave). O rastreio deve ser sistemático e não guiado apenas por sintomas — classicamente com angiografia coronária invasiva realizada em bases periódicas/anuais, podendo ser complementada por ultrassom intracoronário (USIC) e, quando disponível, tomografia de coronárias, para maior sensibilidade à doença difusa subclínica que a angiografia luminal isolada pode subestimar. Isso porque a denervação simpática/parassimpática do enxerto transplantado compromete a percepção de isquemia, tornando a angina frequentemente silenciosa ou oligossintomática mesmo na presença de doença coronariana significativa — de modo que a triagem baseada apenas em sintomas não é confiável nessa população.",
+        "origem_secao": "Mehra et al. 2010 (PMID 20620917), working formulation ISHLT de nomenclatura padronizada da CAV; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor, como referência complementar sobre rastreio no seguimento"
+      },
+      {
+        "id": "imunossupressao-manutencao-vigilancia-efeitos-adversos",
+        "categoria": "Imunossupressão de manutenção",
+        "obrigatorio": true,
+        "texto": "A imunossupressão de manutenção de longo prazo no transplante cardíaco combina classicamente um inibidor de calcineurina (ciclosporina ou tacrolimo) com um agente antiproliferativo (azatioprina ou micofenolato mofetil), associados ou não a corticoide em baixa dose. A conversão para um inibidor de mTOR (everolimo ou sirolimo), substituindo total ou parcialmente o inibidor de calcineurina ou o antiproliferativo, é uma estratégia considerada em cenários selecionados — como nefrotoxicidade progressiva, vasculopatia do enxerto ou determinadas neoplasias —, conforme revisado por Söderlund & Rådegran (2015). A vigilância de efeitos adversos deve ser contínua e inclui, no mínimo: monitorização de função renal (nefrotoxicidade cumulativa associada a inibidores de calcineurina), rastreio dermatológico e oncológico (maior incidência de neoplasias cutâneas e de doença linfoproliferativa pós-transplante associada à imunossupressão crônica) e vigilância clínica/laboratorial para infecções oportunistas — no contexto do equilíbrio contínuo entre sub- e superimunossupressão que caracteriza o seguimento tardio desses pacientes.",
+        "origem_secao": "Söderlund & Rådegran 2015 (PMID 25812489), revisão sobre balanço entre sub- e superimunossupressão; Costanzo et al. 2010 (PMID 20643330), diretriz ISHLT de cuidado ao receptor, como referência complementar sobre classes de imunossupressor e vigilância de efeitos adversos"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
