@@ -17903,5 +17903,28 @@
       "Allderdice C, Marcu C, Kabirdas D. Intracardiac Thrombus in Leukemia: Role of Cardiac Magnetic Resonance Imaging in Eosinophilic Myocarditis. CASE (Phila). 2018;2(3):114-117. DOI: 10.1016/j.case.2017.12.003. PMID: 30062326."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "caso-sca-cocaina-vasoespasmo-betabloqueador-contraindicado",
+    "titulo": "Dor Torácica Após Uso de Cocaína: A Armadilha do Betabloqueador",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem, 27 anos, previamente hígido e sem fatores de risco cardiovascular conhecidos, chega ao pronto-socorro com dor torácica opressiva de início há 1 hora, associada a sudorese e taquicardia. Questionado ativamente sobre uso de substâncias, refere ter usado cocaína inalada há cerca de 2 horas, em uma festa. Ao exame: PA 168x104 mmHg, FC 118bpm, agitado, sem déficits focais. O ECG mostra infradesnivelamento discreto do segmento ST em parede inferior, sem supra; a troponina inicial está pendente.",
+    "pergunta": "Qual das opções abaixo representa a conduta farmacológica inicial mais apropriada para esse paciente?",
+    "opcoes": [
+      "Aspirina, benzodiazepínico (para reduzir o tônus simpático) e nitrato ou bloqueador de canal de cálcio não di-hidropiridínico (ex.: diltiazem) para tratar o vasoespasmo coronariano, evitando betabloqueador puro",
+      "Metoprolol intravenoso associado a aspirina, seguindo o protocolo padrão de síndrome coronariana aguda, para controle imediato de frequência cardíaca e pressão arterial",
+      "Propranolol oral em dose única, por ser um betabloqueador amplamente estudado em síndrome coronariana aguda, associado a aspirina",
+      "Observação sem qualquer intervenção farmacológica até o resultado da troponina, para evitar qualquer risco de interação medicamentosa com a cocaína"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A dor torácica associada à cocaína tem mecanismo diferente da síndrome coronariana aguda 'clássica': Lange RA et al. (N Engl J Med. 1989;321(23):1557-1562, PMID 2573838) demonstraram, em cateterismo cardíaco, que a cocaína provoca vasoconstrição coronariana mediada por estímulo alfa-adrenérgico não contraposto — com queda do fluxo sanguíneo no seio coronariano e redução de 8-12% no diâmetro da artéria coronária esquerda, revertida pela fentolamina (bloqueador alfa). O ponto crítico é terapêutico: no ensaio randomizado, duplo-cego e controlado por placebo de Lange RA et al. (Ann Intern Med. 1990;112(12):897-903, PMID 1971166), a administração de propranolol intracoronariano após a cocaína **piorou** o quadro — o fluxo sanguíneo coronariano caiu ainda mais (de 120±20 para 100±14mL/min) e a resistência vascular coronariana subiu ainda mais (de 1,05±0,10 para 1,20±0,12mmHg/mL·min), levando os próprios autores a concluir que 'os agentes bloqueadores betaadrenérgicos provavelmente devem ser evitados em pacientes com isquemia ou infarto miocárdico associados à cocaína'. Isso ocorre porque o bloqueio beta2 deixa a estimulação alfa-adrenérgica sem oposição, agravando o vasoespasmo — por isso as alternativas B (metoprolol) e C (propranolol) são armadilhas clássicas de conduta reflexa de protocolo de SCA, contraindicadas nesse contexto. A revisão sistemática de Richards JR et al. (Clin Toxicol (Phila). 2016;54(5):345-364, PMID 26919414), que reuniu 120 estudos com 2.358 sujeitos graduados pelos critérios do Oxford CEBM, sustenta o uso de benzodiazepínicos, bloqueadores de canal de cálcio (preferencialmente não di-hidropiridínicos, como diltiazem, para evitar taquicardia reflexa) e nitratos como terapia de primeira linha para taquicardia, hipertensão e vasoespasmo associados à cocaína — com o betabloqueador puro associado a eventos adversos e falhas de tratamento na revisão, ao passo que apenas betabloqueadores combinados alfa/beta (labetalol) mostraram-se seguros, sem eventos adversos relatados, e foram posteriormente aprovados pela diretriz ACC/AHA 2012 (Anderson JL et al., J Am Coll Cardiol. 2013;61(23):e179-e347, PMID 23639841) especificamente para SCA associada a cocaína — mas não é essa a opção testada aqui. A alternativa D está incorreta porque a aspirina e a terapia sintomática dirigida ao vasoespasmo (benzodiazepínico, nitrato ou bloqueador de canal de cálcio) são indicadas mesmo com troponina pendente, diante de sintomas e alteração eletrocardiográfica compatíveis com isquemia; não há justificativa para reter tratamento validado por medo de interação não descrita nessas fontes.",
+    "source_refs": [
+      "Lange RA, Cigarroa RG, Yancy CW Jr, et al. Cocaine-Induced Coronary-Artery Vasoconstriction. N Engl J Med. 1989;321(23):1557-1562. DOI: 10.1056/NEJM198912073212301. PMID: 2573838",
+      "Lange RA, Cigarroa RG, Flores ED, et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. DOI: 10.7326/0003-4819-112-12-897. PMID: 1971166",
+      "Richards JR, Garber D, Laurin EG, Albertson TE, Derlet RW, Amsterdam EA, Olson KR, Ramoska EA, Lange RA. Treatment of cocaine cardiovascular toxicity: a systematic review. Clin Toxicol (Phila). 2016;54(5):345-364. DOI: 10.3109/15563650.2016.1142090. PMID: 26919414",
+      "Richards JR, Le JK. Cocaine Toxicity. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695. NCBI Bookshelf NBK430976"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
