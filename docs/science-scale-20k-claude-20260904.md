@@ -907,3 +907,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 27 (3 descartados por colisão) | 173 |
 | **Total** | **4.900** | **165** | **4.735** |
+
+## Lote 45 — concluído (commit bd094743)
+
+- **7 documentos** (infectocontagioso/ambiental/tóxico, vein mineirada por grep de 17 candidatos, todos genuinamente ausentes): dengue e acometimento cardiovascular (miocardite, bradicardia relativa, BAV, diferenciação choque hipovolêmico vs. cardiogênico — `content/Geral`), envenenamento botrópico/jararaca (coagulopatia de consumo, hemorragia intracraniana, ligação histórica ao captopril — `content/Terapia_intensiva`), miocardite diftérica (BAV total, marca-passo temporário, contexto de reemergência por queda vacinal — `content/Geral`), golpe de calor não exertivo/exertivo (choque distributivo, disfunção miocárdica direta, CIVD, diferencial com SNM/hipertermia maligna/serotoninérgica — `content/Terapia_intensiva`), onda de Osborn e progressão arrítmica na hipotermia acidental (documento estreito só sobre mecanismo elétrico — `content/Terapia_intensiva`), leptospirose e comprometimento cardiovascular (miocardite, arritmias em séries de óbito, síndrome de Weil com hemorragia pulmonar — `content/Geral`), doença de Chagas aguda por transmissão oral (surtos amazônicos por açaí, miocardite fulminante — `content/Geral`).
+- **doencas**: +7, pareadas 1:1 — `acometimento-cardiovascular-na-dengue`, `envenenamento-botropico-picada-de-jararaca`, `miocardite-difterica`, `golpe-de-calor-cardiovascular`, `hipotermia-acidental`, `leptospirose-com-comprometimento-cardiovascular`, `doenca-de-chagas-aguda-oral`.
+- **Padrão novo identificado: mensagens de agente truncadas.** 4 dos 7 agentes ("Golpe de calor", "Envenenamento botrópico", "Leptospirose", "Hipotermia") encerraram a primeira notificação só com notas de processo, sem os blocos `=== DOCUMENTO ===`/`=== DOENCA_JSON ===`. Corrigido pedindo reenvio explícito via `SendMessage` a cada caso — o conteúdo já estava pronto no agente, só não tinha sido colado na mensagem final. Mesmo padrão já visto pontualmente no Lote 44 (escorpionismo); neste lote foi a maioria dos agentes, vale monitorar se persiste.
+- **Colisão de conteúdo tratada com decisão editorial, não descarte:** o agente de hipotermia encontrou overlap quase total com o protocolo já revisado `hipotermia-acidental-e-parada-cardiorrespiratoria-erc-2021` (estadiamento, RCP, reaquecimento, ECMO). Em vez de descartar o lote ou publicar duplicata, direcionei o agente para um recorte estreito e complementar — só o mecanismo elétrico (onda de Osborn, progressão bradicardia→FA→FV→assistolia, por que o coração hipotérmico resiste a droga/choque) — sem repetir nada do protocolo, apenas linkando-o. Mesma lógica aplicada ao documento de Chagas oral, que tem overlap parcial com `miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022` (já revisado): mantido como complementar, com nota editorial explícita no topo do documento apontando a diferença de escopo (epidemiologia quantitativa dos surtos no Pará, mecanismo de contaminação do açaí, rendimento diagnóstico da gota espessa, seguimento por RM cardíaca — eixos ausentes do documento geral).
+- **Correções na integração**: 2 dos 7 slugs de doença propostos colidiam com o slug do documento pareado (golpe de calor, Chagas oral) — renomeados para slugs curtos e distintos. `prevalence_rank` recalculado ao vivo (área geral: 33-39, sem colisão). Entidades HTML corrigidas em 2 documentos; `theme` com underscore corrigido para o padrão com espaço em 2 documentos (golpe de calor, botrópico — confirmado por auditoria de 100% dos arquivos de `content/Terapia_intensiva/*.md`). `source_urls` do documento de hipotermia corrigido de vazio para as 5 URLs correspondentes.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.366 itens.
+
+### Status consolidado (após Lote 45)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 40 | 2.360 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 34 (3 descartados por colisão) | 166 |
+| **Total** | **4.900** | **179** | **4.721** |
