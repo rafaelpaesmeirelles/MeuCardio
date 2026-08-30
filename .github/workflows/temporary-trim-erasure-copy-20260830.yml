@@ -1,0 +1,41 @@
+name: Temporary trim erasure copy
+
+on:
+  push:
+    branches: [fix/admin-hard-delete-20260830]
+
+permissions:
+  contents: write
+
+jobs:
+  trim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: fix/admin-hard-delete-20260830
+          fetch-depth: 1
+      - name: Shorten explanatory copy
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('frontend/src/pages/AdminGerenciarUsuario.tsx')
+          text = p.read_text(encoding='utf-8')
+          old = '''          Esta ação é irreversível. Remove o acesso, as credenciais e os dados cadastrais da conta e, se houver, a caixa nativa do CorVIA Mail.\n          Registros históricos que precisem ser conservados ficam desidentificados, sem manter os dados cadastrais do titular.\n          Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.\n'''
+          new = '''          Esta ação é irreversível. Remove acesso, credenciais, dados cadastrais e, se houver, a caixa nativa do CorVIA Mail.\n          Histórico sujeito a retenção fica desidentificado. Contas administrativas ou com cobrança Stripe relevante são bloqueadas.\n'''
+          if old in text:
+              p.write_text(text.replace(old, new, 1), encoding='utf-8')
+          elif new not in text:
+              raise SystemExit('copy alvo não encontrada')
+          PY
+      - name: Commit
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- frontend/src/pages/AdminGerenciarUsuario.tsx; then exit 0; fi
+          git config user.name corvia-fix-bot
+          git config user.email actions@users.noreply.github.com
+          git add frontend/src/pages/AdminGerenciarUsuario.tsx
+          git diff --cached --check
+          git commit -m 'fix(ci): manter aviso de exclusão dentro do budget'
+          git push origin HEAD:fix/admin-hard-delete-20260830
