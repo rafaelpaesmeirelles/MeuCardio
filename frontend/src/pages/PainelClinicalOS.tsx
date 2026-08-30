@@ -150,6 +150,11 @@ function saudacao() {
   if (hora < 18) return "Boa tarde";
   return "Boa noite";
 }
+function tratamento(nome?: string) {
+  const t = (nome || "").trim();
+  if (/^dra\.?\b/i.test(t)) return "Dra.";
+  return "Dr.";
+}
 function primeiroNome(nome?: string) {
   const partes = (nome || "").trim().split(/\s+/).filter(Boolean);
   const primeira = /^(dr|dra)\.?$/i.test(partes[0] || "") ? partes[1] : partes[0];
@@ -428,14 +433,14 @@ export default function PainelClinicalOS() {
     <div className="ccc-home ccc-home--board ccc-reference-board">
       <main className="ccc-home__main">
         <header className="ccc-home__welcome">
-          <h1>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}! <span aria-hidden="true">👋</span></h1>
+          <h1>{saudacao()}, {tratamento(usuario?.full_name)} {primeiroNome(usuario?.full_name)}</h1>
           <p>O que você precisa resolver agora?</p>
         </header>
 
         <form className="ccc-command" onSubmit={executar} role="search">
           <Icone nome="busca" />
           <input ref={inputRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute uma ação..." aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
-          <kbd>⌘ K</kbd>
+          <kbd>/</kbd>
           <button type="submit" aria-label="Executar comando"><Icone nome="seta" /></button>
         </form>
         <div className="ccc-examples" aria-label="Exemplos de comandos"><span>Exemplos:</span>{EXEMPLOS.map((texto) => <button key={texto} type="button" onClick={() => usarExemplo(texto)}>{texto}</button>)}</div>
@@ -445,10 +450,10 @@ export default function PainelClinicalOS() {
           <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
         </section>
 
-        <section className="ccc-mobile-summary ccc-reference-summary" aria-label="Resumo do dia e próximo deslocamento">
+        <section className={`ccc-mobile-summary ccc-reference-summary${destinoMapeavel ? " has-commute" : ""}`} aria-label="Resumo do dia e próximo deslocamento">
           <Link className="ccc-mobile-summary__card ccc-reference-day" to="/agenda"><span><small>Seu dia</small><strong>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"} hoje</strong><p>{proximo ? `Próximo: ${horario(proximo.scheduled_at)} · ${proximo.patient_name || "Compromisso"}` : "Agenda livre para novos compromissos"}</p></span><Icone nome="agenda" /></Link>
 
-          <article className="ccc-mobile-commute ccc-reference-commute" aria-label="Próximo Deslocamento">
+          {destinoMapeavel ? <article className="ccc-mobile-commute ccc-reference-commute" aria-label="Próximo Deslocamento">
             <header>
               <span><small>{retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}</small><strong>{destino?.location?.name || proximo?.patient_name || "Próximo compromisso"}</strong>{proximo && <p>{proximo.appointment_type} · {horario(proximo.scheduled_at)}</p>}</span>
               <span className="ccc-mobile-commute__icon"><Icone nome="rota" /></span>
@@ -469,9 +474,9 @@ export default function PainelClinicalOS() {
               <footer><Link to="/agenda">{rota ? "Ver rota" : "Abrir Agenda"} <Icone nome="seta" /></Link>{mobilidade?.enabled && destino?.location && (!mobilidade.automatic_foreground_refresh || !rota || erroRota) && <button type="button" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando..." : !usaOrigemSalva && permissao === "negada" ? "Tentar novamente" : rota ? "Atualizar rota" : "Calcular rota"}</button>}</footer>
             </div>
             <div className="ccc-mobile-commute__map ccc-reference-commute__map">
-              {destinoMapeavel && destino?.location ? <MapaDeslocamento compact rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>{retornoAtivo ? "Mapa do retorno" : "Mapa do próximo deslocamento"}</strong><span>{descricaoDeslocamento}</span></div>}
+              {destino?.location ? <MapaDeslocamento compact rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /> : <div className="ccc-reference-map-empty"><Icone nome="rota" /><strong>{retornoAtivo ? "Mapa do retorno" : "Mapa do próximo deslocamento"}</strong><span>{descricaoDeslocamento}</span></div>}
             </div>
-          </article>
+          </article> : null}
 
           <button className="ccc-mobile-summary__card ccc-mobile-summary__card--assistant ccc-reference-assistant-summary" type="button" onClick={abrirAssistentePessoal}><span><small>Assistente</small><strong>{pendencias || pacientes || 0} item(ns) para acompanhar</strong><p>Agenda, pendências e comunicação</p></span><span className="ccc-spark">✦</span></button>
           <Link className="ccc-mobile-summary__card ccc-reference-updates-summary" to="/diretrizes"><span><small>Atualizações</small><strong>{atualizacoes.length ? `${atualizacoes.length} atualização(ões)` : "Central científica"}</strong><p>{atualizacoes[0]?.title || "Guidelines e estudos recentes"}</p></span><Icone nome="evidencia" /></Link>
@@ -508,9 +513,9 @@ export default function PainelClinicalOS() {
         <section className="ccc-rail-card ccc-intelligence-card">
           <header><span><Icone nome="assistente" /> CorVIA Intelligence</span><Link to="/busca">Ver tudo</Link></header>
           <div className="ccc-intelligence-list">
-            <Link to="/diretrizes"><span><Icone nome="evidencia" /></span><strong>{atualizacoes.length || "—"}</strong><p>atualizações científicas nas últimas 24 horas</p></Link>
+            <Link to="/diretrizes"><span><Icone nome="evidencia" /></span><strong>{atualizacoes.length || "—"}</strong><p>atualizações científicas em revisão</p></Link>
             <Link to="/diretrizes"><span><Icone nome="conhecimento" /></span><strong>{atualizacoes[0] ? "1" : "—"}</strong><p>{atualizacoes[0]?.title || "Guideline nova"}</p></Link>
-            <Link to="/biblioteca" title="O total conta registros canônicos únicos; aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam o mesmo conteúdo."><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos únicos publicados · +{Math.max((catalogo?.published_total ?? catalogo?.total ?? 9452) - 9452, 0)} novos desde 26/08</p></Link>
+            <Link to="/biblioteca" title="O total conta registros canônicos únicos; aprofundamentos, revisões e vínculos Tudo com Tudo não duplicam o mesmo conteúdo."><span><Icone nome="check" /></span><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"}</strong><p>conteúdos únicos publicados</p></Link>
             <Link to={contextos[0]?.path || "/busca"}><span><Icone nome={contextos[0]?.icone || "busca"} /></span><strong>↻</strong><p>Continuar: {contextos[0]?.titulo || "última pesquisa"}</p></Link>
           </div>
           <Link to="/busca" className="ccc-intelligence-graph"><span>◎</span><span><strong>Explorar relações</strong><small>Tudo com Tudo</small></span><Icone nome="seta" /></Link>
@@ -521,13 +526,13 @@ export default function PainelClinicalOS() {
       <aside className="ccc-home__assistant" aria-label="Assistente Pessoal">
         <section className="ccc-rail-card ccc-assistant-card ccc-assistant-card--window">
           <header><span><span className="ccc-spark">✦</span> Assistente Pessoal</span><span className="ccc-assistant-window-controls" aria-hidden="true"><i>−</i><i>×</i></span></header>
-          <div className="ccc-assistant-greeting"><span className="ccc-spark">✦</span><div><strong>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}!</strong><small>Aqui está o resumo do seu dia.</small></div></div>
+          <div className="ccc-assistant-greeting"><span className="ccc-spark">✦</span><div><strong>{saudacao()}, {tratamento(usuario?.full_name)} {primeiroNome(usuario?.full_name)}</strong><small>Aqui está o resumo do seu dia.</small></div></div>
           <div className="ccc-assistant-block"><small>Seu dia</small><div className="ccc-assistant-row"><span><Icone nome="agenda" /></span><div><strong>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"}</strong><p>{proximo ? `${dataCurta(proximo.scheduled_at)} · ${horario(proximo.scheduled_at)}` : "Nenhum compromisso pendente"}</p></div></div></div>
           <div className="ccc-assistant-block"><small>Próximo compromisso</small><div className="ccc-assistant-row"><span><Icone nome="pin" /></span><div><strong>{destino?.location?.name || proximo?.patient_name || "Agenda disponível"}</strong><p>{destino ? `${destino.service_name} · ${horario(proximo?.scheduled_at)}` : proximo ? `${proximo.appointment_type} · ${horario(proximo.scheduled_at)}` : "Sem próximo compromisso definido"}</p></div></div><Link to="/agenda" className="ccc-assistant-inline-action">Ver agenda</Link></div>
-          <div className="ccc-assistant-block ccc-assistant-block--commute"><small>{retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}</small><div className="ccc-assistant-row"><span><Icone nome="rota" /></span><div><strong>{saidaRecomendada ? `Sair às ${horario(saidaRecomendada.toISOString())}` : descricaoDeslocamento}</strong><p>{rota ? `${Math.ceil(rota.duration_seconds / 60)} min · ${(rota.distance_meters / 1000).toFixed(1)} km${rota.traffic_delay_seconds > 0 ? ` · +${Math.ceil(rota.traffic_delay_seconds / 60)} min` : ""}` : destinoMapeavel ? (usaOrigemSalva ? `Origem: ${origemNome}` : "Destino localizado no mapa; rota depende da localização atual.") : "A rota nunca é substituída por outro compromisso."}</p></div></div>
-            {destinoMapeavel && destino?.location && <div className="ccc-assistant-commute-map"><MapaDeslocamento rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /></div>}
+          {destinoMapeavel ? <div className="ccc-assistant-block ccc-assistant-block--commute"><small>{retornoAtivo ? "Retorno do último compromisso" : "Próximo Deslocamento"}</small><div className="ccc-assistant-row"><span><Icone nome="rota" /></span><div><strong>{saidaRecomendada ? `Sair às ${horario(saidaRecomendada.toISOString())}` : descricaoDeslocamento}</strong><p>{rota ? `${Math.ceil(rota.duration_seconds / 60)} min · ${(rota.distance_meters / 1000).toFixed(1)} km${rota.traffic_delay_seconds > 0 ? ` · +${Math.ceil(rota.traffic_delay_seconds / 60)} min` : ""}` : usaOrigemSalva ? `Origem: ${origemNome}` : "Destino localizado no mapa; rota depende da localização atual."}</p></div></div>
+            {destino?.location && <div className="ccc-assistant-commute-map"><MapaDeslocamento rotas={deslocamento?.routes || []} origem={origemMapa} destino={{ latitude: destino.location.latitude, longitude: destino.location.longitude, name: destino.location.name }} provider={provedorMapa} updatedAt={deslocamento?.updated_at} googleMapsApiKey={configMapa?.api_key} /></div>}
             <div className="ccc-assistant-commute-actions"><Link to="/agenda" className="ccc-assistant-inline-action">Ver agenda</Link>{mobilidade?.enabled && destino?.location && <button type="button" className="ccc-assistant-inline-action" onClick={() => calcularDeslocamento(true)} disabled={calculandoRota}>{calculandoRota ? "Atualizando…" : rota ? "Atualizar rota" : "Calcular rota"}</button>}</div>
-          </div>
+          </div> : null}
           <div className="ccc-assistant-block"><small>Pendências</small><div className="ccc-assistant-checks"><span><i />{pendencias} agendamento{pendencias === 1 ? "" : "s"} a revisar</span><span><i />{pacientes ?? 0} paciente{pacientes === 1 ? "" : "s"} no round</span></div></div>
           <button type="button" className="ccc-assistant-input" onClick={abrirAssistentePessoal}><span>Pergunte ou peça algo...</span><Icone nome="assistente" /></button>
         </section>

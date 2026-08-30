@@ -1,0 +1,146 @@
+/* HOME — hierarquia visual
+   Comando e ações primeiro. Mapa só com destino. Catálogo abaixo da dobra. */
+
+@media (min-width: 901px) {
+  .ccc-reference-board {
+    grid-template-rows: auto auto auto auto minmax(0, auto) auto auto auto !important;
+  }
+
+  .ccc-reference-board .ccc-home__main > .ccc-command,
+  .ccc-reference-board .ccc-home__main > .ccc-examples {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    white-space: normal !important;
+  }
+
+  .ccc-reference-board .ccc-home__welcome {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .ccc-reference-board .ccc-home__main > .ccc-command {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    display: grid !important;
+    min-height: 52px !important;
+    align-items: center;
+    padding: 6px 8px 6px 12px !important;
+  }
+
+  .ccc-reference-board .ccc-home__main > .ccc-examples {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    margin: 0 !important;
+  }
+
+  .ccc-reference-board .ccc-actions-section {
+    grid-column: 1 !important;
+    grid-row: 4 !important;
+  }
+
+  .ccc-reference-board .ccc-reference-summary {
+    grid-column: 1 !important;
+    grid-row: 5 !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .ccc-reference-board .ccc-home__intelligence {
+    grid-column: 2 !important;
+    grid-row: 1 / 6 !important;
+  }
+
+  .ccc-reference-board .ccc-home__assistant {
+    grid-column: 3 !important;
+    grid-row: 1 / 6 !important;
+  }
+
+  .ccc-reference-board .ccc-reference-updates {
+    grid-column: 1 / -1 !important;
+    grid-row: 6 !important;
+  }
+
+  .ccc-reference-board .ccc-module-directory {
+    grid-column: 1 / -1 !important;
+    grid-row: 7 !important;
+  }
+
+  .ccc-reference-board .ccc-reference-trust {
+    grid-column: 1 / -1 !important;
+    grid-row: 8 !important;
+    opacity: .82;
+  }
+
+  .ccc-reference-board .ccc-actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-rows: none !important;
+  }
+
+  .ccc-reference-summary > .ccc-reference-day {
+    display: grid !important;
+    min-height: 72px !important;
+  }
+
+  .ccc-reference-summary.has-commute > .ccc-reference-day {
+    display: none !important;
+  }
+
+  .ccc-reference-board .ccc-reference-summary,
+  .ccc-reference-board .ccc-reference-summary > .ccc-reference-commute {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .ccc-reference-commute {
+    min-height: 0 !important;
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr) !important;
+  }
+
+  .ccc-reference-commute__map,
+  .ccc-reference-commute__map > * {
+    min-height: 168px !important;
+    max-height: 168px !important;
+    height: 168px !important;
+  }
+
+  .ccc-module-directory__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .ccc-module-group nav a {
+    color: #8ea3ab !important;
+  }
+
+  .ccc-home--board .ccc-home__welcome h1,
+  .ccc-reference-board .ccc-home__welcome h1 {
+    font-size: 1.18rem !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1280px) {
+  .ccc-reference-board .ccc-actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .ccc-reference-board .ccc-command {
+    order: 1;
+  }
+  .ccc-reference-board .ccc-actions-section {
+    order: 2;
+  }
+  .ccc-reference-summary {
+    order: 3;
+  }
+  .ccc-reference-summary:not(.has-commute) > .ccc-reference-commute {
+    display: none !important;
+  }
+}

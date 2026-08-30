@@ -74,6 +74,7 @@ import "./styles/home-desktop-symmetric-personalizable.css";
 import "./styles/clinical-ecg-featured.css";
 import "./styles/tudo-com-tudo.css";
 import "./styles/clinical-form-control-contrast.css";
+import "./styles/home-hierarchy-refinement.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
