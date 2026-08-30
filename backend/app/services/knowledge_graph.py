@@ -1623,8 +1623,14 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 def relacionados_de(
     db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
+    incluir_contexto_tematico: bool = True,
 ) -> dict | None:
-    """Devolve relacionados ativos nas duas direções da aresta."""
+    """Devolve relacionados ativos nas duas direções da aresta.
+
+    A expansão por tema é opcional porque compartilhar uma coleção ampla não
+    prova relação clínica com o assunto específico. A API pública a desativa
+    por padrão; chamadas editoriais e testes podem solicitá-la explicitamente.
+    """
     origem = db.execute(
         select(KnowledgeEntity).where(
             KnowledgeEntity.entity_type == entity_type,
@@ -1694,7 +1700,7 @@ def relacionados_de(
         and not (origem.entity_type == "medicamento" and outro.title == "Farmacologia")
     }
     vizinhos_de_tema: list[tuple[KnowledgeRelation, KnowledgeEntity]] = []
-    if topicos:
+    if topicos and incluir_contexto_tematico:
         vizinhos_de_tema = db.execute(
             select(KnowledgeRelation, KnowledgeEntity)
             .join(

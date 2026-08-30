@@ -23,6 +23,12 @@ from app.api.specialty_guides import (
     _normalize_search_term,
     list_disease_facets,
 )
+from app.services.disease_manifest import load_disease_records
+from app.services.disease_taxonomy import (
+    CATEGORY_TO_CLINICAL_DOMAIN,
+    CLINICAL_DOMAINS,
+    categories_for_domain,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -82,15 +88,34 @@ def test_facetas_aplicam_filtro_cruzado_de_area_e_categoria():
     result = list_disease_facets(
         area="geral",
         category="hipertensao",
+        clinical_domain=None,
         db=session,
     )
 
-    assert result == {"areas": [], "categories": []}
+    assert result == {"areas": [], "clinical_domains": [], "categories": []}
     assert len(session.queries) == 2
     area_filters = " ".join(_compiled(item) for item in session.queries[0].filters)
     category_filters = " ".join(_compiled(item) for item in session.queries[1].filters)
     assert "specialty_diseases.category = 'hipertensao'" in area_filters
     assert "specialty_diseases.area = 'geral'" in category_filters
+
+
+def test_taxonomia_clinica_agrega_todas_as_categorias_sem_grupos_unitarios():
+    records = load_disease_records(ROOT / "doencas/metadados.json")
+    categories = {item["category"] for item in records}
+
+    assert categories <= set(CATEGORY_TO_CLINICAL_DOMAIN)
+    assert len(CLINICAL_DOMAINS) < len(categories) / 2
+
+    counts = {
+        domain["id"]: sum(
+            item["category"] in categories_for_domain(str(domain["id"]))
+            for item in records
+        )
+        for domain in CLINICAL_DOMAINS
+    }
+    assert min(counts.values()) >= 2
+    assert sum(counts.values()) == len(records)
 
 
 def test_catalogo_sincroniza_url_e_descarta_filtros_invisiveis():
@@ -100,7 +125,7 @@ def test_catalogo_sincroniza_url_e_descarta_filtros_invisiveis():
     assert 'setQ(params.get("q") || "")' in source
     assert 'setParams(nextParams, { replace: true })' in source
     assert 'nextParams.delete("area")' in source
-    assert 'nextParams.delete("category")' in source
+    assert 'nextParams.delete("clinical_domain")' in source
     assert 'nextParams.delete("cyanosis")' in source
     assert '`/specialty-guides/disease-facets${search ? `?${search}` : ""}`' in source
     assert 'onChange={(event) => updateAreaFilter(event.target.value)}' in source

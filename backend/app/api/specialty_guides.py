@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.services.clinical_rule_engine import evaluate_rules, validate_answers
+from app.services.disease_taxonomy import CLINICAL_DOMAINS, categories_for_domain
 
 router = APIRouter(prefix="/api/specialty-guides", tags=["guias especializados"])
 
@@ -165,6 +166,7 @@ def list_areas(db: Session = Depends(get_db)):
 def list_disease_facets(
     area: str | None = Query(None, max_length=60),
     category: str | None = Query(None, max_length=100),
+    clinical_domain: str | None = Query(None, max_length=100),
     db: Session = Depends(get_db),
 ):
     """Facetas publicadas e condicionais para combinações sempre acionáveis.
@@ -177,7 +179,13 @@ def list_disease_facets(
         SpecialtyDisease.area,
         func.count(SpecialtyDisease.id),
     ).filter(SpecialtyDisease.published.is_(True))
-    if category:
+    if clinical_domain:
+        domain_categories = categories_for_domain(clinical_domain)
+        if domain_categories:
+            area_query = area_query.filter(SpecialtyDisease.category.in_(domain_categories))
+        else:
+            area_query = area_query.filter(False)
+    elif category:
         area_query = area_query.filter(SpecialtyDisease.category == category)
     areas = (
         area_query
@@ -198,8 +206,21 @@ def list_disease_facets(
         .order_by(SpecialtyDisease.category)
         .all()
     )
+    category_counts = {
+        category: int(count) for category, count in categories if category
+    }
+    clinical_domains = []
+    for domain in CLINICAL_DOMAINS:
+        count = sum(category_counts.get(category, 0) for category in domain["categories"])
+        if count:
+            clinical_domains.append({
+                "id": domain["id"],
+                "label": domain["label"],
+                "count": count,
+            })
     return {
         "areas": [{"id": area, "count": int(count)} for area, count in areas],
+        "clinical_domains": clinical_domains,
         "categories": [
             {"id": category, "count": int(count)}
             for category, count in categories
@@ -213,6 +234,7 @@ def list_diseases(
     q: str | None = Query(None, max_length=160),
     area: str | None = Query(None, max_length=60),
     category: str | None = Query(None, max_length=100),
+    clinical_domain: str | None = Query(None, max_length=100),
     subtype: str | None = Query(None, max_length=120),
     cyanosis_class: str | None = Query(None, max_length=20),
     assistant_only: bool = False,
@@ -223,7 +245,13 @@ def list_diseases(
     query = db.query(SpecialtyDisease).filter(SpecialtyDisease.published.is_(True))
     if area:
         query = query.filter(SpecialtyDisease.area == area)
-    if category:
+    if clinical_domain:
+        domain_categories = categories_for_domain(clinical_domain)
+        if domain_categories:
+            query = query.filter(SpecialtyDisease.category.in_(domain_categories))
+        else:
+            query = query.filter(False)
+    elif category:
         query = query.filter(SpecialtyDisease.category == category)
     if subtype:
         query = query.filter(SpecialtyDisease.subtype == subtype)

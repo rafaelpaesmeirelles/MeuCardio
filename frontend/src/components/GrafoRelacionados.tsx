@@ -6,8 +6,9 @@ import { api } from "../lib/api";
 /**
  * Painel do Grafo de Conhecimento Clínico (issue #52) — complementar ao
  * `TudoSobreEsteTema` já existente (que cruza por TEMA exato). Este consome
- * `GET /api/grafo/relacionados`, que devolve relações diretas e associações
- * taxonômicas em dois saltos, com pontuação de relevância própria.
+ * `GET /api/grafo/relacionados`, que devolve relações clínicas diretas. A
+ * expansão opcional por tema amplo fica desativada nesta superfície para não
+ * sugerir que mera vizinhança taxonômica seja relação com o assunto atual.
  *
  * Mesma disciplina do painel de tema: some por inteiro (`return null`)
  * quando não há nada no grafo para este item, quando a chamada falha
@@ -111,10 +112,9 @@ export default function GrafoRelacionados({ entityType, slug, limitePorTipo, tit
       </p>
 
       <div style={{ marginTop: "0.7rem" }}>
-        <DicaContextual id="grafo-relacionados" titulo="Tudo na Corvia está conectado">
-          Relações diretas aparecem primeiro. Itens marcados como “mesmo tema” são conexões
-          taxonômicas mais amplas. Siga por qualquer um deles sem perder o contexto — e volte
-          quando quiser.
+        <DicaContextual id="grafo-relacionados" titulo="Conexões clínicas verificáveis">
+          Esta seção prioriza vínculos editoriais e estruturados com o assunto atual. Compartilhar
+          apenas uma coleção ampla não é suficiente para um item aparecer aqui.
         </DicaContextual>
       </div>
 
