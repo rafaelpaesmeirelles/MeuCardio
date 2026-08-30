@@ -6,7 +6,7 @@ from app.services.disease_manifest import load_disease_records
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas" / "metadados.json"
-CANONICAL_DISEASE_COUNT = 163
+CANONICAL_DISEASE_COUNT = 172
 
 
 def _load_script(name: str, path: Path):
@@ -17,7 +17,7 @@ def _load_script(name: str, path: Path):
     return module
 
 
-def test_catalogo_canonico_tem_163_doencas_incluindo_fragmentos():
+def test_catalogo_canonico_tem_172_doencas_incluindo_fragmentos():
     records = load_disease_records(BASE)
     assert len(records) == CANONICAL_DISEASE_COUNT
     slugs = {item["slug"] for item in records}

@@ -70,19 +70,17 @@ def test_apple_uses_signed_client_secret_and_verified_identity_token():
     assert 'issuer="https://appleid.apple.com"' in social
 
 
-def test_login_screen_uses_dynamic_viewport_and_social_buttons():
+def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     login = read(FRONTEND / "pages" / "Entrar.tsx")
     css = compact(read(FRONTEND / "styles" / "login-fullscreen-social.css"))
     assert 'prehome--login prehome--fullscreen' in login
     assert 'login-fullscreen-social.css' in login
-    assert '/auth/social/providers' in login
-    assert '/auth/social/${provider}/start' in login
-    for provider in ("google", "microsoft", "apple", "github"):
-        assert provider in login
+    assert '/auth/social/providers' not in login
+    assert '/auth/social/${provider}/start' not in login
+    assert 'prehome-social' not in login
     assert "height:100dvh" in css
     assert "min-height:100svh" in css
     assert "@media(max-width:820px)" in css
-    assert ".prehome-social__button" in css
 
 
 def test_login_route_stays_online_first_instead_of_inflating_pwa_preload():

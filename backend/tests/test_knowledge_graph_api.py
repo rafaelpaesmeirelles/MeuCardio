@@ -75,7 +75,7 @@ def test_relacionados_exige_assinatura_ativa(client, db, criar_usuario):
     assert resposta.status_code == 402
 
 
-def test_relacionados_funciona_para_assinante_ativo(client, db, criar_usuario):
+def test_relacionados_prioriza_relacoes_diretas_e_permite_contexto_tematico_explicito(client, db, criar_usuario):
     _limpar(db)
     _semear(db)
     client.post("/api/admin/grafo/backfill", headers=_headers_admin(criar_usuario))
@@ -88,7 +88,20 @@ def test_relacionados_funciona_para_assinante_ativo(client, db, criar_usuario):
     corpo = resposta.json()
     assert corpo["slug"] == "ic-doc-api"
     tipos = {g["tipo"] for g in corpo["grupos"]}
-    assert "evidencia" in tipos
+    assert "evidencia" not in tipos
+
+    resposta_expandida = client.get(
+        "/api/grafo/relacionados",
+        params={
+            "entity_type": "documento",
+            "slug": "ic-doc-api",
+            "incluir_contexto_tematico": True,
+        },
+        headers=headers,
+    )
+    assert resposta_expandida.status_code == 200
+    tipos_expandidos = {g["tipo"] for g in resposta_expandida.json()["grupos"]}
+    assert "evidencia" in tipos_expandidos
 
 
 def test_relacionados_rejeita_entity_type_desconhecido(client, db, criar_usuario):

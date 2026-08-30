@@ -137,7 +137,7 @@ def test_mapa_preenche_area_no_desktop():
 
 
 def test_identidade_de_navegador_canonica():
-    """Aba/PWA usam a identidade canônica CorVIA — Clinical OS.
+    """Aba/PWA usam a identidade canônica CorVIA — Cardiology Spaces.
 
     O título legado ("Corvia — O caminho do coração") e o favicon antigo não
     podem voltar à identidade de NAVEGADOR (title/favicon/manifest/metas).
@@ -147,15 +147,15 @@ def test_identidade_de_navegador_canonica():
     index = (ROOT / "frontend/index.html").read_text(encoding="utf-8")
     vite = (ROOT / "frontend/vite.config.ts").read_text(encoding="utf-8")
 
-    assert "<title>CorVIA — Clinical OS</title>" in index
+    assert "<title>CorVIA — Cardiology Spaces</title>" in index
     assert "O caminho do coração" not in index
     assert "Corvia —" not in index  # grafia legada na identidade de navegador
     assert '<link rel="icon" type="image/svg+xml" href="/corvia-mark-canonical.svg" />' in index
-    assert 'property="og:title" content="CorVIA — Clinical OS"' in index
+    assert 'property="og:title" content="CorVIA — Cardiology Spaces"' in index
     assert 'content="#03101A"' in index  # theme-color alinhado ao manifest
 
     # Manifest PWA canônico e sem referências mortas de assets.
-    assert '"CorVIA — Clinical OS do médico"' in vite or "'CorVIA — Clinical OS do médico'" in vite
+    assert '"CorVIA — Cardiology Spaces"' in vite or "'CorVIA — Cardiology Spaces'" in vite
     assert "logo-horizontal.png" not in vite and "brasao.png" not in vite
     for asset in ("corvia-mark-canonical.svg", "favicon.png", "apple-touch-icon.png",
                   "icon-192.png", "icon-512.png", "icon-maskable.png"):

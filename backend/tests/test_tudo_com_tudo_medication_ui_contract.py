@@ -56,7 +56,8 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
     ):
         assert area in fonte
     assert "Tudo sobre ${assunto}" in fonte
-    assert "/relacionados?tema=" in fonte
+    assert "new URLSearchParams({ tema, assunto: termo })" in fonte
+    assert "`/relacionados?${query.toString()}`" in fonte
     assert ".find((x) => norm(x) === n)" in fonte
     assert "if (!medicamentoForte)" in fonte
     assert "new Set(itens.map" in fonte
