@@ -33825,5 +33825,70 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "acometimento-cardiaco-na-doenca-de-pompe-cardiomiopatia-infantil-e-terapia-de-reposicao-enzimatica",
+    "condicao": "Doença de Pompe — acometimento cardíaco, forma infantil e tardia",
+    "resumo": "Checklist sobre o acometimento cardíaco na doença de Pompe (deficiência de alfa-glicosidase ácida/GAA, glicogenose tipo II): fisiopatologia lisossômica distinta da via AMPK/PRKAG2, cardiomiopatia hipertrófica maciça e potencialmente fatal na forma infantil clássica, papel do rastreio neonatal, impacto da terapia de reposição enzimática com alglucosidase alfa e necessidade de seguimento cardiológico vitalício mesmo após resposta ao tratamento.",
+    "documento_origem": null,
+    "theme": "Cardiomiopatias hereditárias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sperry E, Leslie N, Berry L, Pena L. Pompe Disease. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews(R) [Internet]. Seattle: University of Washington; 2007 Aug 31 [atualizado 2025 Aug 21]. PMID: 20301438.",
+      "van den Hout HM, Hop W, van Diggelen OP, et al. The natural course of infantile Pompe's disease: 20 original cases compared with 133 cases from the literature. Pediatrics. 2003;112(2):332-340. PMID: 12897283.",
+      "Kishnani PS, Hwu WL, Mandel H, Nicolino M, et al. A retrospective, multinational, multicenter study on the natural history of infantile-onset Pompe disease. J Pediatr. 2006;148(5):671-676. PMID: 16737883.",
+      "Ansong AK, Li JS, Nozik-Grayck E, et al. Electrocardiographic response to enzyme replacement therapy for Pompe disease. Genet Med. 2006;8(5):297-301. DOI: 10.1097/01.gim.0000195896.04069.5f. PMID: 16702879.",
+      "Cook AL, Kishnani PS, Carboni MP, Kanter RJ, et al. Ambulatory electrocardiogram analysis in infants treated with recombinant human acid alpha-glucosidase enzyme replacement therapy for Pompe disease. Genet Med. 2006;8(5):313-317. DOI: 10.1097/01.gim.0000217786.79173.a8. PMID: 16702882.",
+      "Chien YH, Chiang SC, Zhang XK, Keutzer J, et al. Early detection of Pompe disease by newborn screening is feasible: results from the Taiwan screening program. Pediatrics. 2008;122(1):e39-e45. DOI: 10.1542/peds.2007-2222. PMID: 18519449.",
+      "Kishnani PS, Corzo D, Nicolino M, Byrne B, et al. Recombinant human acid alpha-glucosidase: major clinical benefits in infantile-onset Pompe disease. Neurology. 2007;68(2):99-109. PMID: 17151339.",
+      "Chen LR, Chen CA, Chiu SN, Chien YH, et al. Reversal of cardiac dysfunction after enzyme replacement in patients with infantile-onset Pompe disease. J Pediatr. 2009;155(2):271-275. DOI: 10.1016/j.jpeds.2009.03.015. PMID: 19486996.",
+      "Hahn SH, Kronn D, Leslie ND, et al. Efficacy, safety profile, and immunogenicity of alglucosidase alfa produced at the 4,000-liter scale in US children and adolescents with Pompe disease: ADVANCE, a phase IV, open-label, prospective study. Genet Med. 2018;20(10):1284-1294. DOI: 10.1038/gim.2018.2. PMID: 29565424.",
+      "Byrne BJ, Colan SD, Kishnani PS, et al.; Pompe ADVANCE Study Consortium. Cardiac responses in paediatric Pompe disease in the ADVANCE patient cohort. Cardiol Young. 2022;32(3):364-373. DOI: 10.1017/S1047951121002079. PMID: 34420548.",
+      "Wang LY, Ross AK, Li JS, Dearmey SM, et al. Cardiac arrhythmias following anesthesia induction in infantile-onset Pompe disease: a case series. Paediatr Anaesth. 2007;17(8):738-748. DOI: 10.1111/j.1460-9592.2007.02215.x. PMID: 17596219.",
+      "van der Beek NA, Soliman OI, van Capelle CI, et al. Cardiac evaluation in children and adults with Pompe disease sharing the common c.-32-13T>G genotype rarely reveals abnormalities. J Neurol Sci. 2008;275(1-2):46-50. DOI: 10.1016/j.jns.2008.07.013. PMID: 18757064.",
+      "Al-Hassnan Z, Hashmi NA, Makhseed N, et al. Expert Group Consensus on early diagnosis and management of infantile-onset Pompe disease in the Gulf Region. Orphanet J Rare Dis. 2022;17(1):390. DOI: 10.1186/s13023-022-02545-w. PMID: 36303251. (Nota: consenso regional de especialistas, nao diretriz da SBC; busca dedicada nao localizou diretriz brasileira/SBC especifica sobre doenca de Pompe.)"
+    ],
+    "itens": [
+      {
+        "id": "pompe-01-fisiopatologia",
+        "categoria": "Fisiopatologia e espectro clínico",
+        "obrigatorio": true,
+        "texto": "A doença de Pompe (glicogenose tipo II) é causada por deficiência da enzima lisossômica alfa-glicosidase ácida (GAA), levando ao acúmulo progressivo de glicogênio dentro dos lisossomos — mecanismo fisiopatológico distinto das outras fenocópias glicogênicas de cardiomiopatia hipertrófica já cobertas no corpus (Danon, ligada a LAMP2/via autofágico-lisossômica; PRKAG2, ligada a sinalização de AMPK, sem acúmulo lisossômico primário). Por definição fenotípica, a forma infantil clássica (IOPD — infantile-onset Pompe disease) tem início antes dos 12 meses de vida COM cardiomiopatia; nesses pacientes a atividade da GAA é quase nula e, sem tratamento, a doença evolui com hipertrofia ventricular maciça e insuficiência cardíaca grave, com óbito tipicamente nos primeiros dois anos de vida por insuficiência cardiopulmonar. A forma de início tardio (LOPD) inclui todo paciente com início antes de 12 meses SEM cardiomiopatia e todo paciente com início após os 12 meses; nela o acometimento é predominantemente de musculatura esquelética e respiratória, e o comprometimento cardíaco é menos proeminente — mas não está ausente: aortopatia/dilatação de aorta ascendente e cardiomiopatia ocasional já foram descritas em subgrupos de LOPD, o que justifica avaliação cardiológica basal mesmo nesse fenótipo.",
+        "origem_secao": "GeneReviews — Sperry et al., atualizado 2025 (PMID 20301438); van den Hout et al., Pediatrics 2003 (PMID 12897283); Kishnani et al., J Pediatr 2006 (PMID 16737883)"
+      },
+      {
+        "id": "pompe-02-imagem-ecg",
+        "categoria": "Achados de imagem/ECG",
+        "obrigatorio": true,
+        "texto": "Na forma infantil clássica não tratada, o ecocardiograma tipicamente mostra hipertrofia ventricular concêntrica maciça (espessamento septal e de parede posterior, massa de VE muito acima do esperado para idade), podendo evoluir com obstrução dinâmica de via de saída de VE — achado que contraindica inotrópicos, digoxina e diuréticos em determinadas fases da doença, pois podem agravar a obstrução. No ECG, os achados descritos como típicos da Pompe infantil não tratada são intervalo PR encurtado, aumento da dispersão do QT (QTd) e voltagens de VE muito elevadas (critério SV1+RV6). Em coorte de 19 lactentes com Pompe infantil antes do tratamento (Ansong et al., 2006), a mediana do PR foi 83 ms (variação 42-110 ms) e a mediana da voltagem de VE (SV1+RV6) foi 67 mV (variação 17-83 mV); após terapia de reposição enzimática houve alongamento do PR (mediana 107 ms) e redução da voltagem de VE (mediana 48 mV), mudanças que se correlacionaram com redução de massa de VE ao ecocardiograma — sugerindo que PR/QTd/voltagem podem servir como marcadores não invasivos de gravidade e resposta ao tratamento. Não foi possível confirmar, nesta revisão, um valor de corte numérico único e universalmente aceito de 'PR curto' ou 'alta voltagem' para triagem diagnóstica fora de contexto de pesquisa — a orientação prática é a suspeita clínica diante de PR desproporcionalmente curto associado a critérios de hipertrofia de VE em lactente hipotônico/miopático.",
+        "origem_secao": "Ansong et al., Genet Med 2006 (PMID 16702879); van den Hout et al., Pediatrics 2003 (PMID 12897283); GeneReviews (PMID 20301438)"
+      },
+      {
+        "id": "pompe-03-rastreio",
+        "categoria": "Rastreio neonatal",
+        "obrigatorio": true,
+        "texto": "O teste de atividade da GAA em amostra de sangue seco em papel filtro (dried blood spot) é tecnicamente viável para uso em programas de rastreio neonatal, conforme demonstrado pelo programa-piloto de Taiwan (Chien et al., 2008), que identificou casos de Pompe infantil por rastreio antes do início dos sintomas. O racional central do rastreio neonatal é permitir diagnóstico e início da TRE antes do estabelecimento de dano cardíaco irreversível, já que a hipertrofia ventricular e a disfunção miocárdica progridem rapidamente nas primeiras semanas/meses de vida na forma infantil não tratada. Para irmãos em risco de um caso índice já identificado, o GeneReviews recomenda teste dirigido (variantes familiares conhecidas ou dosagem de atividade de GAA) em paralelo ao rastreio neonatal padrão, além de testagem molecular pré-natal quando aplicável. IMPORTANTE: busca dedicada nesta revisão (PubMed/NCBI e-utils) NÃO localizou diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre rastreio ou manejo cardiológico da doença de Pompe; as recomendações de rastreio aqui citadas baseiam-se em GeneReviews e em documentos de consenso de grupos de especialistas regionais (ex. consenso do Golfo — Al-Hassnan et al., 2022), não em diretriz nacional brasileira. Essa lacuna deve ser declarada explicitamente a quem usar este checklist.",
+        "origem_secao": "Chien et al., Pediatrics 2008 (PMID 18519449); GeneReviews (PMID 20301438); Al-Hassnan et al., Orphanet J Rare Dis 2022 (PMID 36303251) — sem diretriz SBC identificada"
+      },
+      {
+        "id": "pompe-04-tre",
+        "categoria": "Terapia de reposição enzimática",
+        "obrigatorio": true,
+        "texto": "A terapia de reposição enzimática (TRE) com alglucosidase alfa (rhGAA recombinante) foi avaliada em ensaio clínico pivotal aberto (Kishnani et al., Neurology 2007), que demonstrou benefício clínico maior em sobrevida global e sobrevida livre de ventilação em lactentes com Pompe infantil tratados, comparados a coortes históricas não tratadas. Estudo dedicado ao desfecho cardíaco (Chen et al., J Pediatr 2009) demonstrou reversão de disfunção cardíaca — redução de massa de VE e melhora de função sistólica — em pacientes com Pompe infantil após início da TRE, reforçando que a hipertrofia miocárdica é potencialmente reversível quando o tratamento é iniciado precocemente. O GeneReviews (atualizado 2025) resume que início da TRE antes dos 6 meses de idade e antes da necessidade de suporte ventilatório está associado a melhor sobrevida, maior sobrevida livre de ventilação, redução de massa cardíaca e melhor aquisição de marcos motores, comparado a início mais tardio. Estudos de coorte de longo prazo em pacientes mais velhos/já em tratamento crônico (ADVANCE: Hahn et al., 2018; Byrne et al., 2022) mostram que a manutenção da TRE em dose alta (formulação 4.000 L) sustenta ou melhora o escore-z de massa de VE mesmo em pacientes previamente tratados, mas a resposta cardíaca adicional parece proporcionalmente menor quanto maior a fração de vida já vivida sob TRE prévia — ou seja, quanto mais tardio/prolongado o curso da doença antes da otimização terapêutica, menor o ganho adicional observado em massa de VE. Não foi possível confirmar, com base em fonte específica verificada nesta revisão, um valor numérico de corte único de 'reversibilidade' (ex. percentual fixo de redução de massa) aplicável de forma genérica — a literatura reporta reduções variáveis conforme idade de início e status imunológico (CRIM positivo/negativo), sem consenso de corte único citável aqui.",
+        "origem_secao": "Kishnani et al., Neurology 2007 (PMID 17151339); Chen et al., J Pediatr 2009 (PMID 19486996); GeneReviews (PMID 20301438); Hahn et al., Genet Med 2018 (PMID 29565424); Byrne et al., Cardiol Young 2022 (PMID 34420548)"
+      },
+      {
+        "id": "pompe-05-seguimento",
+        "categoria": "Seguimento de longo prazo",
+        "obrigatorio": true,
+        "texto": "Mesmo após resposta favorável da função ventricular à TRE, o seguimento cardiológico deve ser mantido indefinidamente pelo risco residual de arritmia. Na coorte ADVANCE (Byrne et al., Cardiol Young 2022; 113 crianças em TRE crônica com alglucosidase alfa 4.000 L), 8 pacientes apresentaram síndrome de Wolff-Parkinson-White (pré-excitação) documentada — achado descrito explicitamente pelos autores como parte do espectro de disritmia típica da doença de Pompe, presente na coorte mesmo com melhora funcional cardíaca sob tratamento prolongado. Em análise de ECG ambulatorial de 24h em lactentes sob TRE (Cook et al., Genet Med 2006), ectopia ventricular significativa foi identificada em parte dos pacientes tanto antes quanto durante o tratamento, com os autores recomendando monitorização ambulatorial de ECG de rotina — o período de maior risco parece ser o início da TRE, quando há queda relativamente rápida da massa de VE e, inicialmente, da fração de ejeção. Adicionalmente, série de casos retrospectiva (Wang et al., Paediatr Anaesth 2007) documentou arritmia ou parada cardiopulmonar em 6% (9/139) dos pacientes com Pompe infantil logo após indução anestésica, associando eventos a propofol e a altas concentrações de sevoflurano — recomendando evitar esses agentes e preferir indução com cetamina nessa população, dado o ventrículo hipertrófico não complacente. O GeneReviews recomenda avaliação cardiológica contínua ao longo da vida — ECG, ecocardiograma e, quando clinicamente indicado, Holter de 24h — em toda consulta de seguimento, independentemente da melhora aparente da função ventricular.",
+        "origem_secao": "Byrne et al., Cardiol Young 2022 (PMID 34420548); Cook et al., Genet Med 2006 (PMID 16702882); Wang et al., Paediatr Anaesth 2007 (PMID 17596219); GeneReviews (PMID 20301438)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
