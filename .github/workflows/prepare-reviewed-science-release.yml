@@ -1,0 +1,114 @@
+name: Prepare reviewed science release
+
+on:
+  push:
+    branches: [release/reviewed-science-grok-claude-20260829]
+    paths:
+      - .github/workflows/prepare-reviewed-science-release.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-reviewed-science-release-20260829
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: release/reviewed-science-grok-claude-20260829
+          fetch-depth: 0
+
+      - name: Fetch exact source branches
+        run: |
+          set -euo pipefail
+          git fetch origin \
+            claude/science-continuous-prevalence-gaps-20260829 \
+            grok/science-continuous-prevalence-gaps-20260829 \
+            main
+          test "$(git rev-parse origin/claude/science-continuous-prevalence-gaps-20260829)" = "84e376fb25c9faab0a8940b4a40506849b2c52e5"
+          echo "Claude source SHA confirmed."
+          echo "Grok remote currently: $(git rev-parse origin/grok/science-continuous-prevalence-gaps-20260829)"
+
+      - name: Merge Claude production into release branch
+        run: |
+          set -euo pipefail
+          git config user.name corvia-release-bot
+          git config user.email actions@users.noreply.github.com
+          git merge --no-ff --no-edit origin/claude/science-continuous-prevalence-gaps-20260829
+
+      - name: Apply independent editorial review and corrections
+        run: |
+          set -euo pipefail
+          python3 scripts/review_science_release_20260829.py
+
+      - name: Structural validation
+        run: |
+          set -euo pipefail
+          git diff --check
+          python3 scripts/content_inventory.py --strict
+          python3 scripts/audit_tudo_com_tudo.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for path in [
+              Path('checklists/metadados.json'),
+              Path('exames/metadados.json'),
+              Path('casos-clinicos/metadados.json'),
+          ]:
+              json.loads(path.read_text(encoding='utf-8'))
+          for path in Path('doencas/fragmentos').glob('*.json'):
+              json.loads(path.read_text(encoding='utf-8'))
+          for path in Path('doencas/correcoes').glob('*.json'):
+              json.loads(path.read_text(encoding='utf-8'))
+          print('JSON structural validation: OK')
+          PY
+
+      - name: Assert Claude review status on changed records
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+
+          def base(path):
+              try:
+                  raw=subprocess.check_output(['git','show',f'origin/main:{path}'],text=True)
+              except subprocess.CalledProcessError:
+                  return []
+              return json.loads(raw)
+          def m(rows):
+              return {r.get('slug'):r for r in rows if isinstance(r,dict) and r.get('slug')}
+
+          for name in ('checklists/metadados.json','exames/metadados.json','casos-clinicos/metadados.json'):
+              cur=m(json.loads(Path(name).read_text(encoding='utf-8')))
+              old=m(base(name))
+              bad=[]
+              for slug, rec in cur.items():
+                  if old.get(slug) != rec and rec.get('review_status') != 'revisado':
+                      bad.append(slug)
+              if bad:
+                  raise SystemExit(f'{name}: altered records not reviewed: {bad}')
+
+          changed=subprocess.check_output(['git','diff','--name-only','origin/main...HEAD'],text=True).splitlines()
+          for name in changed:
+              if not name.endswith('.json') or not (name.startswith('doencas/fragmentos/') or name.startswith('doencas/correcoes/')):
+                  continue
+              rows=json.loads(Path(name).read_text(encoding='utf-8'))
+              for row in rows:
+                  payload=row.get('set',row) if isinstance(row,dict) else {}
+                  if isinstance(payload,dict) and payload.get('review_status') != 'revisado':
+                      raise SystemExit(f'{name}: {row.get("slug")} not reviewed')
+          print('Claude altered records: all reviewed')
+          PY
+
+      - name: Commit reviewed release preparation
+        run: |
+          set -euo pipefail
+          git add -A
+          git diff --cached --quiet || git commit -m 'release: revisar e corrigir produção Claude para publicação'
+          git push origin HEAD:release/reviewed-science-grok-claude-20260829

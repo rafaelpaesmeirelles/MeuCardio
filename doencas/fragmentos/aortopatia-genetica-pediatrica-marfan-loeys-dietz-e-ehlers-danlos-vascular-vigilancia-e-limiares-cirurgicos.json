@@ -1,0 +1,551 @@
+[
+  {
+    "slug": "aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos",
+    "name": "Aortopatia Genética Pediátrica: Marfan, Loeys-Dietz e Ehlers-Danlos Vascular — Vigilância por Escore Z e Limiares Cirúrgicos",
+    "aliases": [
+      "Aortopatia genética na criança e no adolescente",
+      "Dilatação de raiz aórtica pediátrica em síndromes do tecido conectivo",
+      "Vigilância aórtica pediátrica em Marfan e Loeys-Dietz",
+      "Escore Z da raiz aórtica em pediatria",
+      "Doença hereditária da aorta torácica em crianças"
+    ],
+    "area": "cardiopediatria",
+    "category": "cardiogenetica",
+    "subtype": "Síndrome de Marfan pediátrica (FBN1); Síndrome de Loeys-Dietz pediátrica (TGFBR1/2, SMAD3, TGFB2/3 e outros genes da via TGF-beta); Síndrome de Ehlers-Danlos vascular pediátrica (COL3A1)",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "intermediario",
+    "summary": "Verbete complementar, focado em criança e adolescente, ao verbete de aortopatias genéticas do adulto. Em pediatria a avaliação seriada da raiz aórtica não deve usar diâmetro absoluto em milímetros — que varia com superfície corporal e idade — e sim o escore Z indexado, acompanhado ao longo do tempo. Não existe um corte único de escore Z validado para indicar cirurgia em criança: a decisão pediátrica integra o valor absoluto do escore Z, a taxa de crescimento da raiz (histórico consagrado: ≥0,5–1,0 cm/ano), o gene envolvido, a presença de regurgitação aórtica progressiva e a história familiar de dissecção. Loeys-Dietz tem fenótipo classicamente mais agressivo que Marfan, com dissecção descrita em diâmetros e idades menores; Ehlers-Danlos vascular acrescenta risco de eventos arteriais fora da aorta e de ruptura de vísceras, com fragilidade tecidual que contraindica procedimentos invasivos eletivos. Prolapso mitral mixomatoso é manifestação pediátrica frequente na síndrome de Marfan e tem vigilância própria. A escolha de técnica cirúrgica (quando indicada) e a restrição esportiva também têm particularidades pediátricas.",
+    "epidemiology": "A síndrome de Marfan tem prevalência estimada em torno de 1:5.000, com dilatação da raiz aórtica frequentemente já detectável na infância e progressão que tende a acelerar na puberdade. A síndrome de Loeys-Dietz é mais rara, com estimativas de prevalência não bem estabelecidas na população geral, e é reconhecida por manifestações vasculares mais precoces e mais agressivas, incluindo apresentação neonatal descrita na literatura. A síndrome de Ehlers-Danlos vascular (tipo COL3A1) é a mais rara das três e, embora eventos vasculares graves predominem na vida adulta, casos pediátricos de dissecção e outros eventos vasculares já foram documentados, incluindo eventos cerebrovasculares em crianças. Em coorte pediátrica cirúrgica de referência (Fraser et al., 2019), 51% dos pacientes submetidos a cirurgia valve-sparing tinham Marfan e 39% Loeys-Dietz, refletindo o peso relativo dessas duas condições na prática cirúrgica pediátrica de aorta.",
+    "presentation": [
+      "Dilatação assintomática da raiz aórtica detectada em rastreamento ecocardiográfico de rotina (achado mais comum)",
+      "Estigmas marfanoides: dolicostenomelia, aracnodactilia, pectus excavatum ou carinatum, escoliose, frouxidão ligamentar",
+      "Ectopia lentis (sugere fortemente Marfan) e miopia importante",
+      "Em Loeys-Dietz: hipertelorismo, úvula bífida ou fenda palatina, tortuosidade arterial difusa, craniossinostose, instabilidade cervical",
+      "Em Ehlers-Danlos vascular: pele fina e translúcida com veias visíveis, equimoses fáceis, fácies característica, ausência frequente de manifestações esqueléticas marcantes",
+      "Sopro de regurgitação aórtica ou mitral em ausculta de rotina",
+      "Dor torácica ou abdominal aguda como manifestação de dissecção, ruptura arterial ou ruptura visceral (mais característica de Ehlers-Danlos vascular)",
+      "Frouxidão articular generalizada e hérnias de repetição",
+      "Pneumotórax espontâneo (mais associado a Loeys-Dietz)"
+    ],
+    "diagnostic_approach": {
+      "escore_z_e_por_que_nao_diametro_absoluto": "Em crianças, o diâmetro absoluto da raiz aórtica em milímetros não tem o mesmo significado em diferentes idades e superfícies corporais — um diâmetro que seria trivial em um adolescente de 16 anos pode representar dilatação intensa em uma criança de 5 anos. Por isso a avaliação seriada pediátrica deve sempre usar o escore Z (desvios-padrão em relação ao esperado para superfície corporal/idade), calculado de forma consistente ao longo do seguimento, idealmente pelo mesmo software/fórmula de normatização em cada serviço, já que escores Z calculados por fórmulas diferentes não são diretamente comparáveis entre si.",
+      "frequencia_de_vigilancia_serial": "A frequência de ecocardiograma seriado deve ser individualizada conforme o escore Z basal, a taxa de crescimento observada e o gene envolvido, não havendo um intervalo único validado para todas as crianças. Como referência de diretriz: no GeneReviews de Loeys-Dietz, ecocardiograma é recomendado ao menos anualmente para acompanhar raiz aórtica/aorta ascendente, com angio-RM ou angio-TC de todo o leito arterial ao menos a cada dois anos, podendo ser mais frequente conforme genótipo, história familiar e achados. Em crianças com escore Z basal mais alto, crescimento recente documentado ou diagnóstico de Loeys-Dietz, é prática pediátrica corrente encurtar esse intervalo (ecocardiogramas a cada 3–6 meses) até estabilização documentada; a declaração científica da American Heart Association de 2024 sobre aortopatia em crianças reconhece que a evidência publicada para orientar a frequência exata de vigilância em pediatria é limitada e baseia a recomendação em consenso de especialistas mais do que em corte numérico único.",
+      "diferenciacao_entre_as_tres_sindromes": "Loeys-Dietz é classicamente descrita como tendo progressão mais rápida da dilatação aórtica e dissecção em diâmetros e idades menores do que a síndrome de Marfan, o que justifica limiares de vigilância e de intervenção cirúrgica proporcionalmente mais baixos nessa condição. A síndrome de Ehlers-Danlos vascular, por outro lado, cursa com risco proporcionalmente menor de evento aórtico isolado, mas risco expressivamente maior de eventos arteriais fora da aorta (dissecção/ruptura de artérias periféricas, viscerais ou cerebrais) e de ruptura de vísceras ocas — em coorte multicêntrica recente (Calderon-Martinez et al., 2025, Montalcino Aortic Consortium), eventos arteriais extra-aórticos ocorreram em 20,8% dos portadores de variante em COL3A1, contra 1,5% em FBN1 e 5,6–7,7% nos genes da via TGF-beta, com eventos mais precoces em COL3A1. Isso significa que a vigilância por imagem em Ehlers-Danlos vascular deve, sempre que possível, avaliar o leito arterial além da aorta, e que procedimentos invasivos (incluindo cateterismo diagnóstico) devem ser evitados quando existir alternativa não invasiva, pela fragilidade tecidual documentada nessa síndrome.",
+      "avaliacao_inicial": "Além do escore Z seriado, a avaliação pediátrica inclui exame oftalmológico com lâmpada de fenda para ectopia lentis, avaliação musculoesquelética, história familiar detalhada de dissecção/morte súbita/aneurisma em idade jovem, e teste genético direcionado (painel de genes de aortopatia hereditária: FBN1, TGFBR1, TGFBR2, SMAD3, TGFB2, TGFB3, COL3A1, entre outros) para confirmação diagnóstica e estratificação de risco — os critérios diagnósticos específicos de cada síndrome (Ghent revisada para Marfan, critérios de Loeys-Dietz e de Ehlers-Danlos vascular) são tratados no verbete de aortopatias genéticas do adulto e não são repetidos aqui."
+    },
+    "differentials": [
+      "Valva aórtica bicúspide isolada com dilatação de aorta ascendente (sem síndrome genética sistêmica associada)",
+      "Aneurisma/dissecção torácica familiar não sindrômica (TAAD não sindrômico)",
+      "Síndrome de Turner com aortopatia associada",
+      "Síndrome de Shprintzen-Goldberg",
+      "Síndrome de tortuosidade arterial",
+      "Homocistinúria (diferencial de hábito marfanoide com ectopia lentis, porém sem dilatação aórtica típica)",
+      "Aortite inflamatória (Takayasu, Kawasaki com aneurisma coronariano/aórtico) como causa adquirida de dilatação em criança",
+      "Outras síndromes de Ehlers-Danlos (hipermóvel, clássica) sem envolvimento vascular arterial significativo"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico seriado com cálculo de escore Z da raiz aórtica (fórmula de normatização consistente ao longo do seguimento)",
+      "Painel genético multigênico para aortopatia hereditária (FBN1, TGFBR1, TGFBR2, SMAD3, TGFB2, TGFB3, COL3A1 e outros genes correlatos conforme fenótipo)",
+      "Exame oftalmológico com lâmpada de fenda (ectopia lentis)",
+      "Avaliação musculoesquelética/ortopédica (escoliose, deformidade torácica, frouxidão articular)",
+      "Angio-RM ou angio-TC de corpo inteiro (crânio a pelve) para avaliar leito arterial extra-aórtico, particularmente em Loeys-Dietz e Ehlers-Danlos vascular",
+      "Ressonância magnética cardíaca quando a janela ecocardiográfica for inadequada para medida confiável da raiz aórtica",
+      "Avaliação genética familiar em cascata quando variante patogênica é identificada no probando"
+    ],
+    "red_flags": [
+      "Taxa de crescimento da raiz aórtica ≥0,5 a 1,0 cm/ano, mesmo sem diâmetro absoluto alarmante",
+      "Escore Z em elevação progressiva e consistente em exames seriados",
+      "Dor torácica, dorsal ou abdominal aguda de início súbito em criança com aortopatia genética conhecida — suspeitar de dissecção, ruptura arterial ou ruptura visceral",
+      "Diagnóstico de síndrome de Loeys-Dietz (fenótipo classicamente mais agressivo, dissecção descrita em diâmetros/idades menores)",
+      "Diagnóstico de Ehlers-Danlos vascular com sintomas abdominais agudos (risco de ruptura esplênica, intestinal ou uterina)",
+      "Regurgitação aórtica ou mitral nova ou em piora progressiva",
+      "História familiar de dissecção aórtica ou morte súbita em idade jovem (<40 anos)",
+      "Novo déficit neurológico focal (possível evento vascular cerebral, sobretudo em Ehlers-Danlos vascular)",
+      "Necessidade de procedimento invasivo eletivo em criança com Ehlers-Danlos vascular confirmado"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico sindrômico (clínico e, sempre que possível, genético) e registrar o escore Z basal da raiz aórtica com a fórmula usada",
+      "Estabelecer intervalo de vigilância ecocardiográfica individualizado conforme escore Z basal, taxa de crescimento e gene envolvido, reavaliando o intervalo a cada consulta",
+      "Encaminhar a equipe multidisciplinar: cardiologia pediátrica, genética clínica, oftalmologia, ortopedia e, quando indicado, cirurgia cardiovascular pediátrica",
+      "Rever restrição de atividade física/esportiva a cada consulta, conforme escore Z, taxa de crescimento, gene envolvido e presença de regurgitação valvar",
+      "Avaliar prolapso e regurgitação mitral em cada ecocardiograma, com atenção a piora funcional isolada da valva mitral",
+      "Planejar transição programada para cuidado cardiológico de adultos ao final da adolescência, com resumo estruturado da história aórtica",
+      "Discutir aconselhamento genético familiar e testagem em cascata de parentes de primeiro grau"
+    ],
+    "emergency_flow": [
+      "Dor torácica ou dorsal aguda em criança com aortopatia genética conhecida: tratar como possível dissecção até prova em contrário, com avaliação de emergência e imagem urgente (angio-TC ou angio-RM conforme disponibilidade e estabilidade)",
+      "Dor abdominal aguda inexplicada em Ehlers-Danlos vascular: considerar ruptura visceral ou arterial como diagnóstico diferencial prioritário e acionar avaliação cirúrgica de emergência",
+      "Evitar procedimentos invasivos desnecessários (incluindo arteriografia por cateter) em Ehlers-Danlos vascular pela fragilidade tecidual, preferindo imagem não invasiva sempre que a estabilidade clínica permitir",
+      "Novo sopro de regurgitação aórtica ou mitral com instabilidade hemodinâmica: avaliação cardiológica/cirúrgica de urgência",
+      "Déficit neurológico agudo em criança com Loeys-Dietz ou Ehlers-Danlos vascular: investigar evento vascular cerebral com imagem vascular apropriada",
+      "Contato precoce com cirurgia cardiovascular pediátrica e, quando disponível, com centro de referência em aortopatia hereditária"
+    ],
+    "treatment_summary": "Não há corte numérico único de escore Z validado para indicação cirúrgica em criança, e a literatura pediátrica recomenda evitar extrapolar diretamente o limiar de diâmetro absoluto usado em adultos. Historicamente, o GeneReviews de síndrome de Marfan orienta que, em crianças menores, a cirurgia de raiz aórtica seja considerada quando a taxa de crescimento se aproxima de 0,5–1,0 cm/ano ou há regurgitação aórtica progressiva e grave — usando a velocidade de progressão, e não apenas o valor absoluto, como gatilho. Em séries cirúrgicas pediátricas de referência, a mediana do escore Z pré-operatório observada foi elevada (por exemplo, Z 7,3, IQR 5,7–9,3, em Fraser et al., 2019), o que reflete a prática real desses centros, mas não deve ser lido como um corte prescritivo aplicável a toda criança — a decisão é individualizada e envolve equipe multidisciplinar. A declaração científica da American Heart Association de 2024 sobre aortopatia em crianças reforça essa abordagem de decisão compartilhada, apoiada em evidência limitada e consenso de especialistas, dado que as diretrizes de aorta torácica da AHA/ACC são majoritariamente construídas para adultos e não se aplicam adeptamente a crianças em crescimento. Loeys-Dietz é reconhecida como tendo fenótipo mais agressivo, com dissecção descrita em diâmetros e idades menores do que em Marfan; por isso, muitos centros pediátricos adotam limiar cirúrgico proporcionalmente mais baixo nessa síndrome, embora, novamente, sem um corte numérico único validado em estudo controlado — há relato de reparo valve-sparing em lactente de 8 meses com Loeys-Dietz e escore Z +9,3 diante de dilatação rapidamente progressiva (Wisniewski et al., 2019), ilustrando que a decisão cirúrgica pode ser necessária mesmo em idades muito precoces quando a progressão é agressiva. Quando indicada cirurgia em criança que ainda vai crescer, a técnica valve-sparing (reimplante segundo David/técnica de reimplantação com enxerto, preferida sobre a técnica de remodelamento de Yacoub em séries pediátricas por menor taxa de reoperação valvar tardia) é a opção preferida sempre que a anatomia valvar permitir, por preservar a valva aórtica nativa e permitir crescimento somático subsequente sem prótese fixa; séries de 100 casos consecutivos (Fraser et al., 2019) mostraram mortalidade perioperatória de 2% e menor taxa de substituição valvar tardia com reimplantação (5,9%) versus remodelamento (33,3%). Em seguimento de longo prazo (Park et al., 2024), a incidência acumulada em 10 anos de reoperação por aneurisma ou dissecção aórtica após valve-sparing pediátrico foi de 29,1%, e cirurgia antes dos 13 anos foi fator de risco independente para o desfecho composto de morte e reoperação cardiovascular — reforçando a necessidade de vigilância vitalícia após cirurgia, especialmente quando realizada em criança muito jovem. Ehlers-Danlos vascular não tem, em geral, indicação de reparo eletivo de aorta pelos mesmos critérios de tamanho usados em Marfan/Loeys-Dietz, dado o risco elevado de complicação cirúrgica pela fragilidade tecidual (dificuldade de sutura, ruptura de tecido adjacente); a conduta tende a ser mais conservadora, reservando intervenção para eventos agudos ou aneurismas com risco iminente, com decisão sempre individualizada em centro experiente. A restrição de atividade física é recomendada em toda criança com aortopatia genética confirmada: a declaração da AHA/ACC (Task Force 7, Braverman et al., 2015) recomenda evitar esportes competitivos de alta intensidade estática/dinâmica e esportes de contato/colisão em portadores de síndrome de Marfan e de outras aortopatias genéticas, permitindo geralmente atividades recreativas de baixa a moderada intensidade dinâmica e baixa intensidade estática, com essa recomendação sendo reavaliada periodicamente conforme escore Z, taxa de crescimento e presença de regurgitação valvar significativa — a decisão final deve ser individualizada pela cardiologia pediátrica.",
+    "monitoring": [
+      "Ecocardiograma seriado com escore Z da raiz aórtica em intervalo individualizado (tipicamente anual quando estável e escore Z baixo; encurtado para 3-6 meses quando escore Z elevado, crescimento recente documentado ou diagnóstico de Loeys-Dietz)",
+      "Angio-RM ou angio-TC de corpo inteiro periódica (ao menos a cada 1-2 anos conforme síndrome e achados prévios), essencial em Loeys-Dietz e Ehlers-Danlos vascular pelo risco de vasculopatia extra-aórtica",
+      "Avaliação seriada da valva mitral (prolapso, grau de regurgitação, repercussão sobre câmaras esquerdas) em cada ecocardiograma na síndrome de Marfan",
+      "Acompanhamento oftalmológico anual (ectopia lentis, erro refracional, risco de descolamento de retina)",
+      "Acompanhamento ortopédico para escoliose e deformidades torácicas em crescimento",
+      "Reavaliação periódica da restrição de atividade física conforme evolução do escore Z e da função valvar",
+      "Vigilância vitalícia após cirurgia de raiz aórtica pediátrica, com atenção a pseudoaneurisma e recorrência de dilatação/dissecção em outros segmentos, particularmente se a cirurgia ocorreu antes dos 13 anos",
+      "Aferição e controle da pressão arterial em toda consulta, com atenção especial ao controle pressórico e cessação de exposição a tabagismo passivo/ativo na adolescência (fator modificável de risco de evento arterial)"
+    ],
+    "special_populations": [
+      "Lactentes e neonatos com fenótipo grave e rapidamente progressivo (mais descrito em Loeys-Dietz e Marfan neonatal): podem necessitar vigilância ecocardiográfica muito frequente e, raramente, cirurgia no primeiro ano de vida",
+      "Adolescentes em transição para cuidado cardiológico de adultos: necessitam resumo estruturado de história aórtica, escore Z seriado e plano de vigilância para continuidade do cuidado",
+      "Adolescentes grávidas com síndrome de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular: gestação eleva significativamente o risco de dissecção/ruptura nessas síndromes e exige acompanhamento obstétrico-cardiológico de alto risco (fora do escopo detalhado deste verbete pediátrico)",
+      "Crianças com Ehlers-Danlos vascular candidatas a qualquer procedimento invasivo (incluindo cateterismo, biópsias, cirurgias eletivas não cardíacas): risco aumentado de complicação hemorrágica/vascular pela fragilidade tecidual, exigindo avaliação de risco-benefício cuidadosa e, quando possível, técnica menos invasiva",
+      "Crianças e adolescentes que praticam ou desejam praticar esporte competitivo: necessitam avaliação e liberação individualizada por cardiologia pediátrica antes de participação, conforme recomendações de elegibilidade esportiva para aortopatias",
+      "Crianças assintomáticas identificadas por testagem genética em cascata familiar antes de qualquer manifestação clínica: necessitam plano de vigilância basal mesmo sem sintomas"
+    ],
+    "assistant_questions": [
+      {
+        "id": "escore_z_raiz_aortica_atual",
+        "type": "number",
+        "label": "Qual o escore Z atual da raiz aórtica (último ecocardiograma)?"
+      },
+      {
+        "id": "idade_anos",
+        "type": "number",
+        "label": "Qual a idade atual da criança ou adolescente, em anos?"
+      },
+      {
+        "id": "taxa_crescimento_raiz_aortica",
+        "type": "select",
+        "label": "Qual a taxa de crescimento da raiz aórtica observada no último ano de seguimento?",
+        "options": [
+          {
+            "value": "estavel",
+            "label": "Estável, sem variação relevante do escore Z"
+          },
+          {
+            "value": "lento",
+            "label": "Crescimento presente, porém menor que 0,5 cm/ano"
+          },
+          {
+            "value": "rapido",
+            "label": "Crescimento rápido, 0,5 a 1,0 cm/ano ou mais"
+          }
+        ]
+      },
+      {
+        "id": "diagnostico_genetico_confirmado",
+        "type": "select",
+        "label": "Qual o diagnóstico genético/sindrômico confirmado, se houver?",
+        "options": [
+          {
+            "value": "marfan_fbn1",
+            "label": "Síndrome de Marfan (FBN1)"
+          },
+          {
+            "value": "loeys_dietz",
+            "label": "Síndrome de Loeys-Dietz (TGFBR1/2, SMAD3, TGFB2/3 ou outro gene da via TGF-beta)"
+          },
+          {
+            "value": "eds_vascular",
+            "label": "Ehlers-Danlos vascular (COL3A1)"
+          },
+          {
+            "value": "clinico_sem_teste",
+            "label": "Diagnóstico clínico, sem confirmação genética"
+          },
+          {
+            "value": "indefinido",
+            "label": "Em investigação / não definido"
+          }
+        ]
+      },
+      {
+        "id": "historia_familiar_dissecacao_precoce",
+        "type": "select",
+        "label": "Há história familiar de dissecção aórtica, aneurisma roto ou morte súbita em idade jovem (menos de 40 anos)?",
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Desconhecido / não investigado"
+          }
+        ]
+      },
+      {
+        "id": "envolvimento_mitral",
+        "type": "select",
+        "label": "Há prolapso ou regurgitação da valva mitral ao ecocardiograma?",
+        "options": [
+          {
+            "value": "ausente",
+            "label": "Ausente"
+          },
+          {
+            "value": "leve",
+            "label": "Prolapso presente, sem regurgitação significativa"
+          },
+          {
+            "value": "moderada_grave",
+            "label": "Prolapso com regurgitação moderada a grave"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_agudos_torax_abdome",
+        "type": "select",
+        "label": "A criança apresenta dor torácica, dorsal ou abdominal aguda de início recente?",
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          }
+        ]
+      },
+      {
+        "id": "pratica_esportiva",
+        "type": "select",
+        "label": "A criança pratica ou deseja praticar esporte competitivo, de contato ou de alta intensidade?",
+        "options": [
+          {
+            "value": "nao",
+            "label": "Não pratica esporte competitivo"
+          },
+          {
+            "value": "recreativo_baixa_intensidade",
+            "label": "Pratica esporte recreativo de baixa a moderada intensidade"
+          },
+          {
+            "value": "competitivo_ou_contato",
+            "label": "Pratica ou deseja praticar esporte competitivo, de contato ou isométrico intenso"
+          }
+        ]
+      },
+      {
+        "id": "cirurgia_aortica_previa",
+        "type": "select",
+        "label": "A criança já foi submetida a cirurgia prévia de raiz aórtica (por exemplo, técnica valve-sparing)?",
+        "options": [
+          {
+            "value": "sim",
+            "label": "Sim"
+          },
+          {
+            "value": "nao",
+            "label": "Não"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "r1_crescimento_rapido",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "taxa_crescimento_raiz_aortica",
+              "op": "eq",
+              "value": "rapido"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Taxa de crescimento da raiz aórtica ≥0,5–1,0 cm/ano é gatilho histórico para considerar avaliação cirúrgica em criança, mesmo sem diâmetro absoluto alarmante, já que o diâmetro absoluto tem significado limitado em idades pequenas."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma seriado em intervalo mais curto (3-6 meses)",
+            "Avaliação por cirurgia cardiovascular pediátrica de referência"
+          ]
+        }
+      },
+      {
+        "id": "r2_escore_z_muito_elevado",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "escore_z_raiz_aortica_atual",
+              "op": "gte",
+              "value": 6
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Escore Z ≥6 aproxima-se da faixa observada em séries cirúrgicas pediátricas de referência no momento do reparo (mediana Z 7,3; IQR 5,7-9,3 em Fraser et al., 2019). Não existe corte numérico único validado para indicação cirúrgica pediátrica — a decisão deve integrar taxa de crescimento, gene envolvido, regurgitação aórtica e história familiar."
+          ],
+          "suggested_tests": [
+            "Avaliação em centro de referência para cirurgia de aorta pediátrica"
+          ]
+        }
+      },
+      {
+        "id": "r3_loeys_dietz_agressivo",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_genetico_confirmado",
+              "op": "eq",
+              "value": "loeys_dietz"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Síndrome de Loeys-Dietz associa-se a progressão mais rápida da dilatação aórtica e a dissecção em diâmetros e idades menores do que na síndrome de Marfan."
+          ],
+          "messages": [
+            "Considerar limiar cirúrgico proporcionalmente mais baixo e vigilância mais frequente do que em Marfan, incluindo angio-RM/angio-TC de corpo inteiro pela vasculopatia extra-aórtica associada."
+          ],
+          "suggested_tests": [
+            "Angio-RM ou angio-TC de corpo inteiro (crânio a pelve)"
+          ]
+        }
+      },
+      {
+        "id": "r4_eds_vascular_sintomas_agudos",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "diagnostico_genetico_confirmado",
+              "op": "eq",
+              "value": "eds_vascular"
+            },
+            {
+              "field": "sintomas_agudos_torax_abdome",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor abdominal ou torácica aguda em Ehlers-Danlos vascular pode indicar ruptura arterial ou visceral — emergência potencialmente fatal."
+          ],
+          "emergency_flow": [
+            "Avaliação de emergência imediata",
+            "Evitar procedimentos invasivos desnecessários (ex: arteriografia por cateter) pelo risco de lesão vascular iatrogênica",
+            "Priorizar imagem não invasiva (angio-TC/angio-RM) conforme estabilidade clínica"
+          ]
+        }
+      },
+      {
+        "id": "r5_sintomas_agudos_geral",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_agudos_torax_abdome",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dor torácica, dorsal ou abdominal aguda em criança com aortopatia genética conhecida exige exclusão de dissecção ou ruptura."
+          ],
+          "emergency_flow": [
+            "Considerar angio-TC ou angio-RM de tórax e abdome com urgência",
+            "Contato imediato com cirurgia cardiovascular"
+          ]
+        }
+      },
+      {
+        "id": "r6_historia_familiar_dissecacao",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "historia_familiar_dissecacao_precoce",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "História familiar de dissecção ou morte súbita em idade jovem justifica limiar de vigilância e de intervenção mais conservador (mais baixo) mesmo com escore Z moderado."
+          ],
+          "missing_information": [
+            "Confirmar se o familiar afetado tem diagnóstico genético estabelecido, para orientar testagem em cascata."
+          ]
+        }
+      },
+      {
+        "id": "r7_envolvimento_mitral_significativo",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "envolvimento_mitral",
+              "op": "eq",
+              "value": "moderada_grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Prolapso mitral mixomatoso com regurgitação moderada a grave em criança com síndrome de Marfan requer vigilância ecocardiográfica própria e avaliação quanto a repercussão sobre câmaras esquerdas; considerar encaminhamento para cirurgia valvar quando houver disfunção ventricular ou sintomas."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação detalhada de volumes/função de câmaras esquerdas"
+          ]
+        }
+      },
+      {
+        "id": "r8_restricao_esportiva",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "pratica_esportiva",
+              "op": "eq",
+              "value": "competitivo_ou_contato"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Recomendações de elegibilidade esportiva da AHA/ACC (Task Force 7, Braverman et al., 2015) orientam evitar esportes competitivos de alta intensidade estática/dinâmica e esportes de contato/colisão em portadores de aortopatia genética confirmada; a decisão final deve ser individualizada pela cardiologia pediátrica, reavaliada periodicamente conforme escore Z e função valvar."
+          ]
+        }
+      },
+      {
+        "id": "r9_pos_operatorio_vigilancia",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "cirurgia_aortica_previa",
+              "op": "eq",
+              "value": "sim"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Após cirurgia valve-sparing pediátrica, a incidência acumulada em 10 anos de reoperação por aneurisma/dissecção é de aproximadamente 29%, com risco maior quando a cirurgia ocorreu antes dos 13 anos — manter vigilância vitalícia por imagem, incluindo segmentos aórticos distais ao reparo."
+          ],
+          "suggested_tests": [
+            "Ecocardiograma seriado pós-operatório",
+            "Angio-RM/angio-TC periódica de toda a aorta"
+          ]
+        }
+      },
+      {
+        "id": "r10_escore_z_nao_informado",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "escore_z_raiz_aortica_atual",
+              "op": "missing"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "missing_information": [
+            "Escore Z atual da raiz aórtica não informado — necessário para calibrar a frequência de vigilância e avaliar a necessidade de cirurgia."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "aortopatia pediátrica",
+      "síndrome de Marfan",
+      "síndrome de Loeys-Dietz",
+      "Ehlers-Danlos vascular",
+      "escore Z",
+      "raiz aórtica",
+      "cardiogenética",
+      "cirurgia valve-sparing",
+      "prolapso mitral",
+      "restrição esportiva",
+      "vigilância ecocardiográfica",
+      "FBN1",
+      "TGFBR1",
+      "TGFBR2",
+      "COL3A1",
+      "dissecção aórtica",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Morris SA, Flyer JN, Yetman AT, Quezada E, Cappella ES, Dietz HC, Milewicz DM, Ouzounian M, Rigelsky CM, Tierney S, Lacro RV; American Heart Association. Cardiovascular Management of Aortopathy in Children: A Scientific Statement From the American Heart Association. Circulation. 2024;150(11):e228-e254. PMID 39129620. doi:10.1161/CIR.0000000000001265",
+      "Calderon-Martinez E, Velasco WV, Guo D, et al. Differences in Arterial Events in Vascular Ehlers-Danlos, Loeys-Dietz, and Marfan Syndrome. J Am Coll Cardiol. 2025;85(24):2355-2367. PMID 40533124. doi:10.1016/j.jacc.2025.04.023",
+      "Fraser CD 3rd, Liu RH, Zhou X, Patel ND, Lui C, Pierre AS, Jacobs ML, Dietz HC, Habashi J, Hibino N, Cameron DE, Vricella LA. Valve-sparing aortic root replacement in children: Outcomes from 100 consecutive cases. J Thorac Cardiovasc Surg. 2019;157(3):1100-1109. PMID 30982542. doi:10.1016/j.jtcvs.2018.09.148",
+      "Park I, Yang JH, Sung K, Jun TG, Kang IS, Huh J, Song JY, Park PW. Valve-sparing root replacement in children with connective tissue disease: Long-term risk of aortic events. J Thorac Cardiovasc Surg. 2024;168(1):182-192.e1. PMID 37890658. doi:10.1016/j.jtcvs.2023.10.041",
+      "Akazawa Y, Motoki N, Tada A, Yamazaki S, Hachiya A, Matsuzaki S, Kamiya M, Nakamura T, Kosho T, Inaba Y. Decreased Aortic Elasticity in Children With Marfan Syndrome or Loeys-Dietz Syndrome. Circ J. 2016;80(11):2369-2375. PMID 27733734. doi:10.1253/circj.CJ-16-0739",
+      "Stark VC, Olfe J, Pesch J, Tahir E, Weinrich JM, Wiegand P, Kozlik-Feldmann R, von Kodolitsch Y, Mir TS. Tricuspid valve prolapse as an early predictor for severe phenotype in children with Marfan syndrome. Acta Paediatr. 2022;111(6):1261-1266. PMID 35194851. doi:10.1111/apa.16307",
+      "Braverman AC, Harris KM, Kovacs RJ, Maron BJ. Eligibility and Disqualification Recommendations for Competitive Athletes With Cardiovascular Abnormalities: Task Force 7: Aortic Diseases, Including Marfan Syndrome. A Scientific Statement From the American Heart Association and American College of Cardiology. J Am Coll Cardiol. 2015;66(21):2398-2405. PMID 26542664. doi:10.1016/j.jacc.2015.09.039",
+      "Dietz H. FBN1-Related Marfan Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2001 Apr 18 [updated 2022 Feb 17]. PMID 20301510",
+      "Loeys BL, Dietz HC. Loeys-Dietz Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2008 Feb 28 [updated 2024 Sep 12]. PMID 20301312",
+      "Milewicz DM, Braverman AC, De Backer J, Morris SA, Boileau C, Maumenee IH, Jondeau G, Evangelista A, Pyeritz RE. Marfan syndrome. Nat Rev Dis Primers. 2021;7(1):64. PMID 34475413. doi:10.1038/s41572-021-00298-7",
+      "Skei Sekkelsten AI, Skattør TH, Holmstrøm H, Krohg-Sørensen K, Paus B. Vascular findings in five unrelated children with vascular Ehlers-Danlos syndrome: A multi-case report. Eur J Med Genet. 2025;77:105035. PMID 40812464. doi:10.1016/j.ejmg.2025.105035",
+      "Jolley MA, Hammer PE, Ghelani SJ, Adar A, Sleeper LA, Lacro RV, Marx GR, Nathan M, Harrild DM. Three-Dimensional Mitral Valve Morphology in Children and Young Adults With Marfan Syndrome. J Am Soc Echocardiogr. 2018;31(11):1168-1177.e1. PMID 30098871. doi:10.1016/j.echo.2018.06.009",
+      "Wisniewski K, Singer S, Kehl HG, Nawrocki P, Januszewska K, Malec E. Valve-Sparing Aortic Root Replacement in an 8-Month-Old Infant With Loeys-Dietz Syndrome. Ann Thorac Surg. 2019;107(5):e321-e323. PMID 30315797. doi:10.1016/j.athoracsur.2018.07.094",
+      "Bowen JM, Hernandez M, Johnson DS, Green C, Kammin T, Baker D, Keigwin S, Makino S, Taylor N, Watson O, Wheeldon NM, Sobey GJ. Diagnosis and management of vascular Ehlers-Danlos syndrome: Experience of the UK national diagnostic service, Sheffield. Eur J Hum Genet. 2023;31(7):749-760. PMID 36977837. doi:10.1038/s41431-023-01343-7"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39129620/",
+      "https://doi.org/10.1161/CIR.0000000000001265",
+      "https://pubmed.ncbi.nlm.nih.gov/40533124/",
+      "https://doi.org/10.1016/j.jacc.2025.04.023",
+      "https://pubmed.ncbi.nlm.nih.gov/30982542/",
+      "https://doi.org/10.1016/j.jtcvs.2018.09.148",
+      "https://pubmed.ncbi.nlm.nih.gov/37890658/",
+      "https://doi.org/10.1016/j.jtcvs.2023.10.041",
+      "https://pubmed.ncbi.nlm.nih.gov/27733734/",
+      "https://doi.org/10.1253/circj.CJ-16-0739",
+      "https://pubmed.ncbi.nlm.nih.gov/35194851/",
+      "https://doi.org/10.1111/apa.16307",
+      "https://pubmed.ncbi.nlm.nih.gov/26542664/",
+      "https://doi.org/10.1016/j.jacc.2015.09.039",
+      "https://pubmed.ncbi.nlm.nih.gov/20301510/",
+      "https://pubmed.ncbi.nlm.nih.gov/20301312/",
+      "https://pubmed.ncbi.nlm.nih.gov/34475413/",
+      "https://doi.org/10.1038/s41572-021-00298-7",
+      "https://pubmed.ncbi.nlm.nih.gov/40812464/",
+      "https://doi.org/10.1016/j.ejmg.2025.105035",
+      "https://pubmed.ncbi.nlm.nih.gov/30098871/",
+      "https://doi.org/10.1016/j.echo.2018.06.009",
+      "https://pubmed.ncbi.nlm.nih.gov/30315797/",
+      "https://doi.org/10.1016/j.athoracsur.2018.07.094",
+      "https://pubmed.ncbi.nlm.nih.gov/36977837/",
+      "https://doi.org/10.1038/s41431-023-01343-7"
+    ],
+    "related_document_slugs": [
+      "aortopatias-geneticas-na-crianca-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos",
+      "aortopatias-marfan-e-participacao-esportiva",
+      "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro",
+      "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Verbete complementar e distinto de 'aortopatias-geneticas-do-adulto': foco exclusivo em criança/adolescente, com ênfase em escore Z (não diâmetro absoluto) para vigilância seriada, ausência de corte cirúrgico pediátrico único validado (declarada explicitamente, sem extrapolar limiar de adulto), técnica valve-sparing em paciente com crescimento residual, diferenciação de agressividade entre Marfan/Loeys-Dietz/Ehlers-Danlos vascular, envolvimento mitral pediátrico e restrição esportiva. Não foi localizada diretriz SBC específica para aortopatia genética pediátrica nas buscas realizadas — nenhuma recomendação SBC foi inventada. related_document_slugs preenchido na integração com 4 documentos/fluxogramas reais verificados no corpus. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

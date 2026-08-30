@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade",
+    "name": "Estenose Aórtica no Idoso: Fragilidade, TAVI e Futilidade",
+    "aliases": [
+      "EAo no idoso frágil",
+      "estenose aórtica grave no idoso frágil",
+      "avaliação geriátrica ampliada em estenose aórtica",
+      "futilidade em TAVI",
+      "fragilidade e TAVI"
+    ],
+    "area": "cardiogeriatria",
+    "category": "valvopatia",
+    "subtype": "estenose aórtica calcificada degenerativa — decisão terapêutica no idoso frágil",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "intermediario",
+    "summary": "Ficha complementar ao verbete geral de estenose aórtica (EAo), focada na dimensão geriátrica da decisão terapêutica no paciente idoso — especialmente o muito idoso (≥80-85 anos) e/ou frágil. Não repete critérios ecocardiográficos de gravidade nem a classificação-padrão ESC/EACTS de indicação de TAVI vs. cirurgia, já cobertos no verbete geral. O eixo central aqui é que fragilidade — avaliada por escalas validadas, não apenas idade cronológica ou escores de risco cirúrgico convencionais (STS-PROM, EuroSCORE II) — é o modificador que desloca a escolha entre TAVI, cirurgia, valvoplastia por balão (ponte ou paliativa) e tratamento clínico exclusivo. Aborda também o conceito de futilidade (intervenção tecnicamente exequível sem benefício líquido de sobrevida/qualidade de vida), a peculiaridade do manejo da hipertensão arterial associada à EAo grave (via de saída fixa — iniciar com dose baixa) e o fato de estatinas não frearem a progressão hemodinâmica da valvopatia, o que não deve ser confundido com sua indicação para prevenção cardiovascular geral.",
+    "epidemiology": "A prevalência de fragilidade entre idosos avaliados para TAVI ou cirurgia de troca valvar aórtica varia amplamente conforme o instrumento utilizado: no estudo multicêntrico FRAILTY-AVR (1.020 pacientes, idade mediana 82 anos, 14 centros em 3 países), a prevalência oscilou entre 26% e 68% a depender da escala empregada (Fried, Fried+, Rockwood/Clinical Frailty Scale, Short Physical Performance Battery, Bern, Columbia, Essential Frailty Toolset) (PMID 28693934). Com o envelhecimento populacional, a proporção de octogenários e nonagenários encaminhados para correção de EAo grave vem crescendo, tornando a triagem sistemática de fragilidade cada vez mais relevante na prática — não como substituto, mas como complemento aos dados epidemiológicos gerais da EAo já descritos no verbete principal.",
+    "presentation": [
+      "Apresentação frequentemente atípica ou atenuada no idoso frágil: declínio funcional inespecífico pode substituir angina, síncope ou dispneia como equivalente sintomático",
+      "Quedas de repetição, delirium ou confusão aguda como manifestação inicial, especialmente em quem tem reserva hemodinâmica reduzida",
+      "Perda de peso não intencional, redução do apetite e piora da mobilidade referidas pelo cuidador antes de qualquer queixa cardiovascular explícita pelo paciente",
+      "Lentificação da marcha e maior tempo de recuperação após esforços leves, muitas vezes atribuídos erroneamente apenas ao envelhecimento",
+      "Sintomas mascarados por polifarmácia (anti-hipertensivos, sedativos) ou por comprometimento cognitivo que limita a queixa espontânea",
+      "Apatia ou quadro depressivo concomitante que pode confundir-se com ou mascarar a limitação funcional da EAo",
+      "Informação sintomática predominantemente heteroanamnésica (cuidador/familiar), especialmente quando há comprometimento cognitivo associado"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_geriatrica_ampliada": "A avaliação geriátrica ampliada deve ser incorporada à decisão, sobretudo no muito idoso, no paciente frágil ou quando o benefício funcional da intervenção é incerto. Ela complementa — e não substitui — a avaliação ecocardiográfica, anatômica e do Heart Team, documentando função física, cognição, nutrição, ADL/IADL, humor, suporte social, multimorbidade e polifarmácia. Nenhuma escala isolada define futilidade.",
+      "escalas_de_fragilidade_validadas_no_contexto": "O estudo FRAILTY-AVR (JACC 2017, PMID 28693934) comparou 7 escalas de fragilidade (Fried, Fried+, Rockwood/Clinical Frailty Scale, Short Physical Performance Battery, Bern, Columbia e Essential Frailty Toolset — EFT) quanto ao valor preditivo incremental para mortalidade e incapacidade em 1 ano após TAVI ou cirurgia. O EFT — escala breve de 4 itens (força/velocidade de membros inferiores, comprometimento cognitivo, anemia e hipoalbuminemia) — foi a que mais agregou valor preditivo: odds ratio ajustado de 3,72 (IC95% 2,54–5,45) para óbito em 1 ano e de 2,13 (IC95% 1,57–2,87) para piora de incapacidade em 1 ano, superando os escores cardíacos tradicionais. Isso reforça que a avaliação de fragilidade nesse contexto deve necessariamente incluir os domínios cognitivo e nutricional, não apenas desempenho físico.",
+      "fragilidade_nao_e_sinonimo_de_comorbidade_ou_incapacidade": "Fragilidade é uma síndrome geriátrica de reserva fisiológica reduzida frente a estressores, distinta (ainda que sobreposta) de comorbidade (número de doenças crônicas) e de incapacidade (perda de função já instalada). As três dimensões devem ser avaliadas separadamente, pois têm implicações prognósticas distintas na decisão sobre intervenção valvar.",
+      "papel_do_escore_de_risco_cardiaco_tradicional": "Escores cirúrgicos convencionais (STS-PROM, EuroSCORE II) têm valor preditivo limitado para desfechos funcionais no muito idoso: em coorte prospectiva de 330 pacientes ≥70 anos submetidos a TAVI, foi o índice de fragilidade — e não os escores cardíacos — que predisse declínio funcional em atividades básicas de vida diária (ADL) em 1 ano (JAGS 2021, PMID 33156520). Ainda assim, esse mesmo estudo mostrou que, mesmo entre os pacientes classificados como muito frágeis e sobreviventes, 64,7% mantiveram função estável ou melhora funcional em 1 ano — dado que recomenda cautela contra o uso isolado da fragilidade como critério determinístico de futilidade.",
+      "papel_do_heart_team_multidisciplinar": "A decisão deve envolver heart team multidisciplinar com participação de geriatra (além de cardiologia clínica, intervencionista e cirurgia cardiovascular), integrando CGA, escores de risco tradicionais e, sempre que possível, discussão explícita de objetivos de cuidado com paciente e família — reconhecendo a incerteza prognóstica inerente a esse cenário."
+    },
+    "differentials": [
+      "Causas potencialmente reversíveis de declínio funcional erroneamente atribuídas apenas à progressão da EAo: anemia carencial (ferropriva, B12), hipotireoidismo, depressão",
+      "Sarcopenia por desuso, potencialmente responsiva a reabilitação, distinta de fragilidade estrutural irreversível",
+      "Efeitos adversos de polifarmácia (hipotensores, sedativos, anticolinérgicos) mimetizando fragilidade ou piora funcional",
+      "Doença pulmonar concomitante (DPOC, doença intersticial) contribuindo para dispneia e limitação funcional além da valvopatia",
+      "Desnutrição proteico-calórica corrigível vs. caquexia estabelecida de doença avançada",
+      "Comprometimento cognitivo leve reversível (delirium sobreposto, deficiências vitamínicas) vs. demência estabelecida"
+    ],
+    "tests": [
+      "Clinical Frailty Scale (Rockwood) — avaliação clínica rápida e amplamente utilizada em heart teams",
+      "Essential Frailty Toolset (EFT) — força/velocidade de membros inferiores, cognição, anemia, albumina",
+      "Teste de velocidade de marcha em 5 metros",
+      "Teste cronometrado de levantar-sentar da cadeira (chair rise test)",
+      "Dinamometria de preensão palmar (handgrip strength)",
+      "Rastreio cognitivo: MMSE ou MoCA",
+      "Katz (ADL) e Lawton (IADL) para independência funcional",
+      "Mini Nutritional Assessment (MNA) e albumina sérica",
+      "Hemograma completo (rastreio de anemia)",
+      "Índice de comorbidade de Charlson",
+      "Revisão estruturada de polifarmácia",
+      "Avaliação de suporte social e disponibilidade de cuidador para reabilitação pós-procedimento"
+    ],
+    "red_flags": [
+      "Fragilidade severa (Clinical Frailty Scale 7–9)",
+      "Demência em estágio avançado com comprometimento da capacidade decisória",
+      "Insuficiência de múltiplos órgãos, grave e irreversível (hepática, renal dialítica associada a múltiplas comorbidades, pulmonar terminal)",
+      "Expectativa de vida estimada inferior a 1 ano por doença não cardíaca (ex.: câncer avançado, DPOC terminal)",
+      "Desnutrição grave/caquexia com hipoalbuminemia e anemia associadas (perfil de alto risco no Essential Frailty Toolset)",
+      "Ausência de rede de suporte social/cuidador para reabilitação e adesão pós-procedimento",
+      "Recusa informada e reiterada do paciente e/ou família após discussão explícita de objetivos de cuidado",
+      "Múltiplas hospitalizações recorrentes por descompensação, sugerindo trajetória de declínio avançado"
+    ],
+    "ambulatory_flow": [
+      "Rastrear fragilidade em toda consulta ambulatorial de EAo grave sintomática em paciente idoso (≥75-80 anos), com pelo menos uma escala validada (Clinical Frailty Scale ou Essential Frailty Toolset)",
+      "Se fragilidade ausente/leve e risco cirúrgico aceitável, seguir o fluxo padrão de decisão TAVI vs. cirurgia já descrito no verbete geral de estenose aórtica",
+      "Se fragilidade moderada a severa, encaminhar para avaliação geriátrica ampliada formal antes da reunião de heart team",
+      "Discutir objetivos de cuidado (goals of care) com paciente e família, incluindo expectativa realista de benefício funcional e de sobrevida, antes de qualquer decisão de intervenção",
+      "Levar CGA completa e escores de risco tradicionais para discussão conjunta em heart team multidisciplinar (cardiologia clínica, intervencionista, cirurgia cardiovascular, geriatria)",
+      "Quando a fragilidade for potencialmente reversível (ex.: anemia corrigível, desnutrição, desuso), considerar otimização pré-procedimento (reabilitação, correção nutricional) com reavaliação em 4–6 semanas antes da decisão final",
+      "Se critérios de futilidade predominarem após discussão multidisciplinar, conduzir conversa estruturada sobre cuidados paliativos ou tratamento clínico exclusivo, sem fechar a porta a reavaliação futura caso o quadro clínico mude"
+    ],
+    "emergency_flow": [
+      "Estabilizar com monitorização contínua, reconhecendo que a EAo grave é sensível a mudanças bruscas de pré-carga e pós-carga; congestão e hipertensão continuam exigindo tratamento individualizado.",
+      "Evitar redução reflexa e não monitorizada da pré-carga ou da pressão arterial. Diuréticos e vasodilatadores podem ser utilizados em pacientes selecionados quando clinicamente indicados, com titulação cuidadosa e vigilância hemodinâmica; EAo grave não constitui proibição absoluta a essas classes.",
+      "Acionar Heart Team com urgência diante de choque cardiogênico ou edema agudo de pulmão refratário em paciente com EAo grave.",
+      "Considerar valvoplastia aórtica por balão como ponte em paciente hemodinamicamente instável quando TAVI/SAVR definitivos não puderem ser realizados imediatamente; não usar hipertensão pulmonar isolada como gatilho automático para BAV.",
+      "BAV paliativa pode ser discutida quando intervenção definitiva não é apropriada após decisão multidisciplinar e alinhamento de objetivos de cuidado; o objetivo é alívio sintomático, não benefício de sobrevida presumido.",
+      "Reavaliar fragilidade, reversibilidade de déficits e objetivos de cuidado após estabilização antes da decisão definitiva."
+    ],
+    "treatment_summary": "A decisão entre TAVI, cirurgia convencional, valvoplastia por balão isolada e tratamento clínico exclusivo no idoso frágil com EAo grave deve ser guiada pela fragilidade e pelos objetivos de cuidado, e não apenas pela idade cronológica ou pelos escores de risco cirúrgico tradicionais (STS-PROM, EuroSCORE II), cujo valor preditivo para desfechos funcionais é limitado nessa população (PMID 33156520). Em muito idosos e/ou frágeis, a via transcateter tende a ser preferida por seu menor trauma cirúrgico, mas a indicação continua condicionada a uma expectativa de benefício funcional e de sobrevida que justifique o procedimento — daí a centralidade do conceito de futilidade: intervenção tecnicamente exequível, porém sem benefício líquido esperado, seja por óbito precoce (a maioria das definições da literatura usa mortalidade em 1 ano como corte, PMID 39787130), seja por ausência de melhora funcional relevante mesmo com sobrevida mantida. Modelos preditivos de futilidade pós-TAVI (ex.: Futile TAVI Simple score, derivado de coorte francesa com mais de 20.000 pacientes, PMID 32622502) incorporam variáveis como insuficiência cardíaca prévia, fibrilação atrial, AVC prévio, doença vascular, renal, hepática e pulmonar, anemia, câncer, depressão e desnutrição — sem, no entanto, consenso definitivo sobre um único modelo ideal; nenhuma escala isolada deve ser usada como critério determinístico e automático de exclusão de tratamento. É essencial reconhecer a incerteza: mesmo entre pacientes muito frágeis, uma parcela relevante mantém função estável ou melhora após TAVI (PMID 33156520), de modo que a fragilidade deve pesar na decisão sem, isoladamente, ditá-la. Quanto à hipertensão arterial associada à EAo grave: a via de saída fixa reduz a reserva hemodinâmica, de modo que reduções abruptas ou intensas da pós-carga podem precipitar hipotensão sintomática e síncope; a recomendação prática é iniciar anti-hipertensivos em dose baixa e titular lentamente, com atenção a sintomas ortostáticos — particularidade que não se aplica à hipertensão arterial sistêmica em geral. Em pacientes com estenose aórtica de baixo gradiente e fração de ejeção preservada associada a hipertensão sistêmica significativa, dados de hemodinâmica invasiva mostram que a redução da pós-carga com vasodilatador pode reduzir pressões de enchimento e pressão pulmonar, além de aumentar discretamente a área valvar calculada — reforçando a necessidade de controle pressórico cuidadoso antes de reclassificar a gravidade da estenose (PMID 23956211). Quanto ao uso de estatina: ensaios clínicos randomizados dedicados (SEAS, com sinvastatina + ezetimiba, PMID 18765433; ASTRONOMER, com rosuvastatina 40 mg, PMID 20048204) e metanálise de estudos placebo-controlados (PMID 21742465) não demonstraram redução da progressão hemodinâmica da EAo com terapia hipolipemiante — no SEAS, a necessidade de troca valvar foi virtualmente idêntica entre os grupos (28,3% vs. 29,9%), e no ASTRONOMER o incremento anual do gradiente de pico foi praticamente sobreponível (6,3 vs. 6,1 mmHg/ano). Ou seja: estatina não deve ser prescrita ou mantida com o objetivo específico de frear a progressão da EAo — isso deve ser claramente distinguido da indicação de estatina por prevenção cardiovascular geral (dislipidemia, doença arterial coronariana associada), que segue válida quando presente. Por fim, a valvoplastia aórtica por balão (BAV), procedimento historicamente associado a alta taxa de reestenose e sem benefício de sobrevida quando usada como tratamento definitivo isolado, mantém papel atual restrito como ponte para estabilização hemodinâmica (permitindo definir TAVI/cirurgia em melhores condições clínicas, inclusive em quadros de instabilidade ou hipertensão pulmonar grave) ou como medida paliativa em pacientes muito frágeis nos quais TAVI e cirurgia foram consideradas fúteis ou contraindicadas após discussão multidisciplinar (PMID 34459762; PMID 37456354) — mortalidade em 12 meses permanece elevada nessa população selecionada (na casuística de Bil et al., 38,9% em 1 ano), refletindo o perfil de gravidade e fragilidade dos pacientes selecionados para esse manejo, e não necessariamente um efeito do procedimento em si.",
+    "monitoring": [
+      "Reavaliação funcional (ADL/IADL) estruturada em 30 dias e em 1 ano após TAVI ou cirurgia, não apenas desfechos de mortalidade",
+      "Monitorização de pressão arterial e sintomas ortostáticos após correção valvar, já que a mudança aguda de pós-carga pode exigir reajuste dos anti-hipertensivos previamente em dose baixa",
+      "Reavaliação periódica de fragilidade/CGA, pois alguns domínios (nutricional, físico) podem melhorar com reabilitação pós-procedimento",
+      "Vigilância de declínio funcional precoce (primeiros 30 dias) como sinal de alerta para ausência de benefício líquido",
+      "Revisão periódica da indicação de estatina, evitando manutenção com a falsa expectativa de frear a progressão valvar",
+      "Em pacientes submetidos a BAV como ponte, reavaliação hemodinâmica e clínica programada para definição do próximo passo (TAVI/cirurgia) em intervalo curto, dado o alto risco de reestenose"
+    ],
+    "special_populations": [
+      "Nonagenários — decisão especialmente sensível ao equilíbrio entre expectativa de vida basal, fragilidade e desejo do paciente, mais do que à idade isolada",
+      "Pacientes oncológicos com prognóstico limitado por doença neoplásica ativa — expectativa de vida da doença não cardíaca deve ser considerada explicitamente na decisão",
+      "Pacientes com demência estabelecida — atenção à capacidade decisória, envolvimento de representante legal/cuidador e à limitada evidência de benefício funcional pós-procedimento nesse grupo",
+      "Pacientes sem cuidador ou rede de suporte social identificável para reabilitação pós-procedimento",
+      "Pacientes com hipertensão pulmonar grave associada — maior risco periprocedimento e cenário em que BAV como ponte pode ser considerada",
+      "Pacientes institucionalizados (ILPI) — avaliar objetivos de cuidado e expectativa realista de retorno à independência prévia"
+    ],
+    "assistant_questions": [
+      {
+        "id": "grau_fragilidade",
+        "label": "Qual o grau de fragilidade do paciente, idealmente por uma escala validada (ex.: Clinical Frailty Scale de Rockwood)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "robusto",
+            "label": "Robusto / não frágil (CFS 1-3)"
+          },
+          {
+            "value": "pre_fragil",
+            "label": "Pré-frágil (CFS 4)"
+          },
+          {
+            "value": "fragil_leve_moderado",
+            "label": "Frágil leve a moderado (CFS 5-6)"
+          },
+          {
+            "value": "fragil_severo",
+            "label": "Frágil severo (CFS 7-9)"
+          },
+          {
+            "value": "nao_avaliado",
+            "label": "Ainda não avaliado formalmente"
+          }
+        ]
+      },
+      {
+        "id": "cognicao_gravidade",
+        "label": "Há comprometimento cognitivo documentado (rastreio ou diagnóstico de demência) e qual a gravidade estimada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ausente",
+            "label": "Ausente"
+          },
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "nao_avaliada",
+            "label": "Ainda não avaliada"
+          }
+        ]
+      },
+      {
+        "id": "suporte_cuidador",
+        "label": "O paciente tem cuidador ou rede de suporte social disponível para reabilitação após o procedimento?",
+        "type": "boolean"
+      },
+      {
+        "id": "expectativa_vida_nao_cardiaca",
+        "label": "Existe alguma comorbidade não cardíaca (câncer avançado, DPOC terminal, doença renal em diálise com múltiplas comorbidades, etc.) que limite a expectativa de vida a menos de 1 ano?",
+        "type": "boolean"
+      },
+      {
+        "id": "objetivos_cuidado",
+        "label": "Os objetivos de cuidado (prioridade entre prolongar sobrevida vs. preservar qualidade de vida/conforto) já foram discutidos explicitamente com o paciente e a família?",
+        "type": "boolean"
+      },
+      {
+        "id": "hipertensao_pulmonar_instabilidade",
+        "label": "Há hipertensão pulmonar grave associada ou instabilidade hemodinâmica que sugira necessidade de valvoplastia por balão como ponte?",
+        "type": "boolean"
+      },
+      {
+        "id": "uso_estatina_motivo",
+        "label": "A estatina em uso (se houver) foi prescrita com o objetivo de frear a progressão da estenose aórtica, ou por indicação de prevenção cardiovascular geral?",
+        "type": "select",
+        "options": [
+          {
+            "value": "frear_progressao_estenose",
+            "label": "Com expectativa de frear a progressão da estenose"
+          },
+          {
+            "value": "prevencao_cardiovascular_geral",
+            "label": "Por prevenção cardiovascular geral (dislipidemia/DAC)"
+          },
+          {
+            "value": "nao_usa",
+            "label": "Não está em uso de estatina"
+          }
+        ]
+      },
+      {
+        "id": "gravidade_estenose",
+        "label": "Qual a gravidade da estenose aórtica já documentada (ecocardiograma)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "nao_avaliada",
+            "label": "Ainda não avaliada"
+          }
+        ]
+      },
+      {
+        "id": "tem_hipertensao_arterial",
+        "label": "O paciente tem hipertensão arterial associada?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "eaoi-r1-fragilidade-severa",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "grau_fragilidade",
+              "op": "eq",
+              "value": "fragil_severo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Fragilidade severa (Clinical Frailty Scale 7-9) — marcador consistente de maior mortalidade e menor probabilidade de benefício funcional após intervenção valvar"
+          ],
+          "missing_information": [
+            "avaliação geriátrica ampliada completa (cognição, nutrição, ADL/IADL)",
+            "expectativa de vida estimada por comorbidades não cardíacas"
+          ],
+          "messages": [
+            "Antes de indicar TAVI ou cirurgia, discutir em heart team multidisciplinar (cardiologia + geriatria + cirurgia) se o benefício líquido esperado supera o risco; fragilidade severa isolada não deve, por si só, excluir automaticamente o tratamento, mas exige avaliação cuidadosa de possível futilidade."
+          ]
+        }
+      },
+      {
+        "id": "eaoi-r2-demencia-avancada",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "cognicao_gravidade",
+              "op": "eq",
+              "value": "grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "opposing": [
+            "Demência em estágio avançado reduz a probabilidade de benefício funcional e de adesão a cuidados pós-procedimento, sendo um dos critérios mais citados na literatura sobre futilidade em TAVI"
+          ],
+          "missing_information": [
+            "avaliação formal de capacidade decisória e envolvimento de cuidador/representante legal"
+          ]
+        }
+      },
+      {
+        "id": "eaoi-r3-sem-suporte-social",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "suporte_cuidador",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "rede de suporte social/cuidador para reabilitação e adesão pós-procedimento"
+          ]
+        }
+      },
+      {
+        "id": "eaoi-r4-estatina-nao-freia-progressao",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "uso_estatina_motivo",
+              "op": "eq",
+              "value": "frear_progressao_estenose"
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Ensaios randomizados (SEAS, ASTRONOMER) e metanálise de estudos placebo-controlados não demonstraram redução da progressão hemodinâmica da estenose aórtica com estatina"
+          ],
+          "messages": [
+            "Não manter ou iniciar estatina com o objetivo de frear a progressão da estenose aórtica; reavaliar a indicação apenas sob critérios de prevenção cardiovascular geral (dislipidemia, doença arterial coronariana associada)."
+          ]
+        }
+      },
+      {
+        "id": "eaoi-r5-has-eao-grave-dose-baixa",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade_estenose",
+              "op": "eq",
+              "value": "grave"
+            },
+            {
+              "field": "tem_hipertensao_arterial",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Em estenose aórtica grave, iniciar anti-hipertensivo em dose baixa e titular lentamente: a via de saída fixa reduz a reserva hemodinâmica e aumenta o risco de hipotensão sintomática e síncope com redução abrupta da pós-carga."
+          ],
+          "suggested_tests": [
+            "reavaliação de pressão arterial em ortostatismo após qualquer ajuste de dose anti-hipertensiva"
+          ]
+        }
+      },
+      {
+        "id": "eaoi-r6-bav-ponte-paliacao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hipertensao_pulmonar_instabilidade",
+              "op": "truthy"
+            },
+            {
+              "field": "grau_fragilidade",
+              "op": "in",
+              "value": [
+                "fragil_leve_moderado",
+                "fragil_severo"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "ambulatory_flow": [
+            "Considerar valvoplastia aórtica por balão como ponte para estabilização hemodinâmica e decisão definitiva (TAVI/cirurgia), ou como medida paliativa isolada em paciente frágil com hipertensão pulmonar grave e alto risco para intervenção definitiva imediata."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiogeriatria",
+      "fragilidade",
+      "TAVI",
+      "estenose aortica",
+      "futilidade",
+      "valvopatia",
+      "idoso",
+      "geriatria cardiovascular",
+      "Essential Frailty Toolset",
+      "valvoplastia por balao",
+      "avaliacao geriatrica ampliada"
+    ],
+    "source_refs": [
+      "Afilalo J, et al. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934.",
+      "Bendayan M, et al. Frailty and Bleeding in Older Adults Undergoing TAVR or SAVR: Insights From the FRAILTY-AVR Study. JACC Cardiovasc Interv. 2020;13(9):1058-1068. PMID: 32381184.",
+      "Puri R, Iung B, Cohen DJ, Rodés-Cabau J. TAVI or No TAVI: identifying patients unlikely to benefit from transcatheter aortic valve implantation. Eur Heart J. 2016;37(28):2217-2225. PMID: 26819226.",
+      "Ferry C, et al. Futility in TAVI: A scoping review of definitions, predictive criteria, and medical predictive models. PLoS One. 2025;20(1):e0313399. PMID: 39787130.",
+      "Solla-Suárez P, et al. Frailty Assessment in a Cohort of Elderly Patients with Severe Symptomatic Aortic Stenosis: Insights from the FRESAS Registry. J Clin Med. 2021;10(11):2345. PMID: 34071871.",
+      "Lantelme P, et al. Futility Risk Model for Predicting Outcome After Transcatheter Aortic Valve Implantation. Am J Cardiol. 2020;130:100-107. PMID: 32622502.",
+      "Eleid MF, et al. Systemic hypertension in low-gradient severe aortic stenosis with preserved ejection fraction. Circulation. 2013;128(12):1349-1353. PMID: 23956211.",
+      "Chan KL, et al. Effect of lipid lowering with rosuvastatin on progression of aortic stenosis: results of the ASTRONOMER trial. Circulation. 2010;121(2):306-314. PMID: 20048204.",
+      "Rossebø AB, et al. Intensive lipid lowering with simvastatin and ezetimibe in aortic stenosis (SEAS trial). N Engl J Med. 2008;359(13):1343-1356. PMID: 18765433.",
+      "Teo KK, et al. Lipid lowering on progression of mild to moderate aortic stenosis: meta-analysis of randomized placebo-controlled clinical trials on 2344 patients. Can J Cardiol. 2011;27(6):800-808. PMID: 21742465.",
+      "Bil J, et al. Balloon aortic valvuloplasty with Valver balloon catheter in adults with severe aortic stenosis as a bridge or palliative treatment. Wiad Lek. 2021;74(7):1622-1627. PMID: 34459762.",
+      "Samaja GA. Balloon Aortic Valvuloplasty in the Transcatheter Aortic Valve Implantation Era. Heart Int. 2023;17(1):13-18. PMID: 37456354.",
+      "Vahanian A, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMID: 34453165.",
+      "Bertschi D, et al. Evolution of Basic Activities of Daily Living Function in Older Patients One Year After Transcatheter Aortic Valve Implantation. J Am Geriatr Soc. 2021;69(2):500-505. PMID: 33156520."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1016/j.jacc.2017.06.024",
+      "https://doi.org/10.1016/j.jcin.2020.01.238",
+      "https://doi.org/10.1093/eurheartj/ehv756",
+      "https://doi.org/10.1371/journal.pone.0313399",
+      "https://doi.org/10.3390/jcm10112345",
+      "https://doi.org/10.1016/j.amjcard.2020.05.043",
+      "https://doi.org/10.1161/CIRCULATIONAHA.113.003071",
+      "https://doi.org/10.1161/CIRCULATIONAHA.109.900027",
+      "https://doi.org/10.1056/NEJMoa0804602",
+      "https://doi.org/10.1016/j.cjca.2011.03.012",
+      "https://pubmed.ncbi.nlm.nih.gov/34459762/",
+      "https://doi.org/10.17925/HI.2023.17.1.13",
+      "https://doi.org/10.1093/eurheartj/ehab395",
+      "https://doi.org/10.1111/jgs.16927"
+    ],
+    "related_document_slugs": [
+      "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+      "fragilidade-como-modificador-de-decisao-cardiovascular",
+      "fluxograma-estenose-aortica-grave-sintomatica-tavi-vs-cirurgia-escolha-da-modalidade-esc-eacts-2025",
+      "fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao-esc-eacts-2025"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Ficha de aprofundamento geriátrico, complementar ao verbete geral 'estenose-aortica' (que já contém a frase 'ver ficha específica de estenose aórtica e TAVI no idoso para avaliação geriátrica ampliada, fragilidade e futilidade'). Não repete critérios ecocardiográficos de gravidade, classificação ESC/EACTS ou indicações-padrão de TAVI vs. cirurgia por risco cirúrgico convencional — isso já está coberto no verbete geral. Não foi localizada diretriz específica da SBC sobre valvopatia no idoso/fragilidade indexada no PubMed; a referência de diretriz usada foi a 2021 ESC/EACTS Guidelines for the Management of Valvular Heart Disease (PMID 34453165). Todas as demais referências são PMID/DOI verificados via NCBI e-utils. Correção de integração: assistant_rules do rascunho original referenciavam ids de pergunta inexistentes (frailty_cfs_category, cognitive_impairment_severity, caregiver_support, statin_intent, aortic_stenosis_severity, hypertension_present, pulmonary_hypertension_severe) — corrigidos para os ids reais definidos em assistant_questions (grau_fragilidade, cognicao_gravidade, suporte_cuidador, uso_estatina_motivo, gravidade_estenose, tem_hipertensao_arterial, hipertensao_pulmonar_instabilidade); pergunta de cognição convertida de texto livre para select estruturado para permitir a regra de demência avançada; 2 perguntas novas adicionadas (gravidade_estenose, tem_hipertensao_arterial) para sustentar a regra de HAS em EAo grave. related_document_slugs preenchido na integração com o verbete geral 'estenose-aortica' e o documento narrativo já existente sobre TAVI e futilidade no idoso frágil. Revisão científica independente concluída para o release consolidado de 29/08/2026; conteúdo liberado como revisado após correções de segurança, deduplicação e rastreabilidade. Publicação autorizada pelo responsável técnico nesta sessão.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]
