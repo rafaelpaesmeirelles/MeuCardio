@@ -1277,10 +1277,33 @@ Ordem recebida: "prossiga com a produção". Produção retomada.
   pós-transplante, SCAD, Löffler e beriberi já estavam bem cobertos —
   evitada duplicação.
 
-## Lote 57 (planejado)
+## Lote 57 — concluído (SHA 15ae85fe) — total 85 commits
+
+- exame `vetorcardiograma-fonocardiograma-e-apexcardiograma-metodos-graficos-classicos-papel-historico-e-uso-atual`
+  — último território confirmado com zero cobertura ao longo de toda a
+  janela (Métodos gráficos e funcionais). Redigido com rigor
+  deliberadamente honesto: instrução explícita para não inflar
+  relevância clínica atual, dado que os 3 métodos foram amplamente
+  substituídos por ECG 12 derivações e ecocardiograma. Nichos de uso
+  ATUAL genuinamente verificados (não inventados): QRS area derivado
+  matematicamente do ECG digital como preditor de resposta a TRC;
+  fonocardiograma digital com IA em pesquisa pediátrica translacional,
+  ainda sem adoção assistencial; apexcardiograma quase exclusivamente
+  histórico. 10 fontes via NCBI e-utils. Nesta auditoria extensa (waves
+  56-57) confirmado saturação quase completa: acromegalia,
+  feocromocitoma, cor pulmonale, Wellens, TAVI-LBBB, Turner, Brugada
+  storm, QT por antipsicóticos — todos já bem cobertos.
+
+**Nota de saturação desta janela**: após 36 lotes efetivos desde a
+retomada (waves 22-57, líquido de remoções), o território de Claude
+está substancialmente exaurido nos gaps facilmente descobríveis.
+Continuar exigirá auditorias progressivamente mais estreitas ou
+aprofundamento pontual de hubs existentes.
+
+## Lote 58 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list`): território ainda não explorado nesta janela. Confirmar
-cobertura antes de despachar.
+`gh pr list`): território ainda não explorado, ou aprofundamento
+pontual em hub existente. Confirmar cobertura antes de despachar.
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
