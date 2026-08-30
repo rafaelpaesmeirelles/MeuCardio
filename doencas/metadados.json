@@ -40238,5 +40238,794 @@
       "intoxicacao-por-bufotoxinas-sapo-cururu-cardiotoxicidade-tipo-digitalico"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "acometimento-cardiovascular-na-dengue",
+    "name": "Acometimento cardiovascular na dengue",
+    "aliases": [
+      "miocardite por dengue",
+      "cardite da dengue",
+      "disfunção miocárdica na dengue",
+      "complicações cardíacas da dengue",
+      "coração na síndrome de choque da dengue"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 33,
+    "completeness": "completo",
+    "summary": "Espectro de manifestações cardiovasculares associadas à infecção pelo vírus da dengue, desde bradicardia sinusal relativa e distúrbios de condução atrioventricular descritos mesmo em casos não graves, até miocardite e disfunção miocárdica transitória na dengue grave/síndrome de choque da dengue. A distinção entre choque predominantemente hipovolêmico por extravasamento plasmático e um componente cardiogênico verdadeiro associado é central para calibrar a reposição volêmica com segurança.",
+    "presentation": [
+      "Bradicardia sinusal relativa desproporcional à febre, presente inclusive em dengue sem sinais de alarme",
+      "Extrassistolia atrial ou ventricular, geralmente benigna e autolimitada",
+      "Bloqueio atrioventricular de qualquer grau, incluindo bloqueio total, mesmo sem miocardite clinicamente evidente",
+      "Alterações inespecíficas de repolarização (segmento ST e onda T) ao eletrocardiograma",
+      "Dispneia, taquipneia, estertores pulmonares ou hipoxemia sugerindo edema pulmonar em paciente com disfunção miocárdica na fase crítica",
+      "Sinais de baixo débito (extremidades frias, tempo de enchimento capilar prolongado, oligúria) desproporcionais ao grau estimado de extravasamento plasmático",
+      "Choque refratário ou resposta hemodinâmica inadequada apesar de reposição volêmica guiada por protocolo"
+    ],
+    "differentials": [
+      "Choque hipovolêmico puro por extravasamento plasmático sem componente cardiogênico",
+      "Choque séptico concomitante (coinfecção bacteriana)",
+      "Miocardite por outra etiologia viral (enterovírus, influenza, SARS-CoV-2, entre outras)",
+      "Cardiomiopatia prévia descompensada pela infecção aguda",
+      "Distúrbio hidroeletrolítico isolado (hipocalemia) como causa de arritmia, sem disfunção miocárdica estrutural",
+      "Pericardite associada à dengue sem miocardite"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações seriado, com atenção a frequência cardíaca, intervalo PR e repolarização",
+      "Ecocardiograma transtorácico (idealmente point-of-care na fase crítica) avaliando função sistólica biventricular",
+      "Troponina e BNP/NT-proBNP seriados quando houver suspeita clínica de acometimento miocárdico",
+      "Hematócrito seriado e albumina para quantificar o grau de extravasamento plasmático",
+      "Eletrólitos (potássio em particular) e função renal",
+      "Monitorização hemodinâmica contínua e reavaliação clínica frequente durante a reposição volêmica"
+    ],
+    "red_flags": [
+      "Bloqueio atrioventricular de alto grau ou bradicardia sintomática",
+      "Disfunção sistólica documentada ao ecocardiograma na fase crítica",
+      "Piora respiratória (hipoxemia, estertores) durante ou logo após reposição volêmica",
+      "Choque refratário à expansão volêmica guiada por protocolo",
+      "Elevação importante de troponina ou BNP associada a sinais clínicos de baixo débito",
+      "Arritmia ventricular sustentada",
+      "Gestante, criança pequena ou cardiopata prévio com qualquer sinal de instabilidade hemodinâmica"
+    ],
+    "ambulatory_flow": [
+      "Em dengue sem sinais de alarme, registrar frequência cardíaca e ritmo; bradicardia relativa isolada, assintomática e sem outros achados de alarme pode ser acompanhada ambulatorialmente com orientação de retorno",
+      "Orientar sinais de alarme para reavaliação presencial imediata: dor abdominal intensa, vômitos persistentes, sangramento, letargia, hipotensão postural",
+      "Não atribuir bradicardia a bom condicionamento físico sem considerar o contexto infeccioso agudo",
+      "Evitar anti-inflamatórios não esteroidais pelo risco hemorrágico já conhecido na dengue, independentemente do componente cardíaco"
+    ],
+    "emergency_flow": [
+      "Classificar gravidade conforme critérios de dengue com sinais de alarme e dengue grave, estabelecendo acesso venoso e monitorização contínua",
+      "Iniciar reposição volêmica guiada por protocolo, com reavaliação hemodinâmica frequente",
+      "Solicitar ecocardiograma point-of-care precocemente em paciente com choque refratário, bradiarritmia associada ou piora respiratória durante a expansão volêmica",
+      "Se disfunção miocárdica for documentada ou fortemente suspeita, individualizar a reposição volêmica com volumes menores e reavaliação mais frequente, evitando bolus repetidos sob a premissa de choque puramente hipovolêmico",
+      "Considerar suporte inotrópico/vasoativo precoce quando sinais de baixo débito persistirem apesar de volemia já corrigida",
+      "Monitorizar eletrocardiograma continuamente em paciente com bradicardia sintomática ou bloqueio atrioventricular, com disponibilidade de marca-passo transcutâneo se indicado",
+      "Envolver equipe de terapia intensiva precocemente em gestante, criança pequena ou cardiopata prévio com qualquer sinal de instabilidade"
+    ],
+    "tags": [
+      "dengue",
+      "miocardite",
+      "arritmia",
+      "bloqueio atrioventricular",
+      "bradicardia sinusal",
+      "choque",
+      "disfunção miocárdica",
+      "troponina",
+      "BNP",
+      "ecocardiograma",
+      "doença infecciosa tropical",
+      "epidemiologia Brasil"
+    ],
+    "source_refs": [
+      "Yacoub S, Wertheim H. Cardiovascular manifestations of the emerging dengue pandemic. Nat Rev Cardiol. 2014. PMID: 24710495.",
+      "Junior JBS, Massad E. Epidemiology and costs of dengue in Brazil: a systematic literature review. Int J Infect Dis. 2022. PMID: 35793756.",
+      "Sandeep M, Padhi BK, Yella SST, et al. Myocarditis manifestations in dengue cases: a systematic review and meta-analysis. J Infect Public Health. 2023. PMID: 37738692.",
+      "Rahim A, Hameed A, Ishaq U, et al. Cardiovascular sequelae of dengue fever: a systematic review. Expert Rev Cardiovasc Ther. 2022. PMID: 35612830.",
+      "Bhatt M, Soneja M, Farooqui FA, et al. Myocarditis in admitted patients with dengue fever. Infection. 2020. PMID: 32780310.",
+      "Lateef A, Fisher DA, Tambyah PA. Dengue and relative bradycardia. Emerg Infect Dis. 2007. PMID: 17561566.",
+      "Navinan MR, Yudhishdran J. Complete heart block in dengue complicating management of shock due to associated cardiac dysfunction: a case report. BMC Res Notes. 2015. PMID: 25884693.",
+      "Khongphatthanayothin A, Lertsapcharoen P, Supachokchaiwattana P, et al. Myocardial depression in dengue hemorrhagic fever: prevalence and clinical description. Pediatr Crit Care Med. 2007. PMID: 17906598.",
+      "Kirawittaya T, Yoon IK, Wichit S, et al. Evaluation of cardiac involvement in children with dengue by serial echocardiographic studies. PLoS Negl Trop Dis. 2015. PMID: 26226658.",
+      "Mansanguan C, Hanboonkunupakarn B, Muangnoicharoen S, et al. Cardiac evaluation in adults with dengue virus infection by serial echocardiography. BMC Infect Dis. 2021. PMID: 34507547.",
+      "Miranda CH, Borges Mde C, Matsuno AK, et al. Evaluation of cardiac involvement during dengue viral infection. Clin Infect Dis. 2013. PMID: 23784923.",
+      "Lakshman A, Balasubramanian P, Nampoothiri RV, et al. Elevated cardiac biomarkers and echocardiographic left ventricular dysfunction at admission in patients with dengue fever. Trop Doct. 2018. PMID: 29991327."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/24710495/",
+      "https://pubmed.ncbi.nlm.nih.gov/35793756/",
+      "https://pubmed.ncbi.nlm.nih.gov/37738692/",
+      "https://pubmed.ncbi.nlm.nih.gov/35612830/",
+      "https://pubmed.ncbi.nlm.nih.gov/32780310/",
+      "https://pubmed.ncbi.nlm.nih.gov/17561566/",
+      "https://pubmed.ncbi.nlm.nih.gov/25884693/",
+      "https://pubmed.ncbi.nlm.nih.gov/17906598/",
+      "https://pubmed.ncbi.nlm.nih.gov/26226658/",
+      "https://pubmed.ncbi.nlm.nih.gov/34507547/",
+      "https://pubmed.ncbi.nlm.nih.gov/23784923/",
+      "https://pubmed.ncbi.nlm.nih.gov/29991327/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "dengue-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "envenenamento-botropico-picada-de-jararaca",
+    "name": "Envenenamento botrópico (picada de jararaca e correlatas)",
+    "aliases": [
+      "acidente botrópico",
+      "acidente ofídico por Bothrops",
+      "picada de jararaca",
+      "envenenamento por Bothrops spp"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 34,
+    "completeness": "completo",
+    "summary": "Envenenamento por serpentes do gênero Bothrops (jararaca e correlatas), o tipo de acidente ofídico mais frequente no Brasil. O veneno combina metaloproteinases e serinoproteases que consomem fatores de coagulação (coagulopatia de consumo induzida pelo veneno), hemorraginas que fragilizam a parede microvascular, fosfolipases A2 que lesam tecido e endotélio, e peptídeos potenciadores de bradicinina que vasodilatam por inibição da ECA — mecanismo historicamente ligado ao desenho do captopril. O resultado clínico combina risco hemorrágico sistêmico (incluindo hemorragia intracraniana), choque hipovolêmico hemorrágico, choque distributivo por extravasamento capilar e hipotensão vasodilatadora. O tratamento específico é o soro antibotrópico precoce, com dose determinada pela classificação de gravidade, associado a suporte hemodinâmico e hemoderivados quando indicado.",
+    "presentation": [
+      "Dor e edema progressivo no local da picada, com ou sem marcas de presas visíveis",
+      "Equimoses, flictenas hemorrágicas ou necrose local em casos mais graves",
+      "Gengivorragia, epistaxe ou sangramento em sítios de punção venosa antiga",
+      "Sangramento sistêmico: hematúria, hematêmese, melena ou hemoptise",
+      "Hipotensão e taquicardia, com ou sem sinais evidentes de perda sanguínea externa",
+      "Cefaleia súbita intensa, déficit neurológico focal ou rebaixamento do sensório sugerindo hemorragia intracraniana",
+      "Oligúria ou anúria sugerindo lesão renal aguda associada"
+    ],
+    "differentials": [
+      "Acidente crotálico (Crotalus) — mionecrose e fácies miastênica predominam sobre coagulopatia hemorrágica exuberante",
+      "Acidente laquético (Lachesis) — coagulopatia semelhante à botrópica, mas com manifestações vagais (bradicardia, hipotensão, diarreia) associadas",
+      "Acidente elapídico (coral verdadeira) — quadro neurotóxico predominante, sem coagulopatia relevante",
+      "Coagulação intravascular disseminada de outra etiologia (sepse, complicação obstétrica, neoplasia)",
+      "Púrpura trombocitopênica ou outra coagulopatia primária não relacionada a picada",
+      "Picada por aranha ou outro animal peçonhento sem envenenamento sistêmico hemostático"
+    ],
+    "tests": [
+      "Tempo de coagulação em tubo (teste de Lee-White) à beira do leito para triagem rápida de coagulopatia",
+      "Coagulograma laboratorial (fibrinogênio, TP/INR, TTPa) quando disponível, para refinar avaliação e monitorar resposta à soroterapia",
+      "Hemograma seriado para acompanhar sangramento e hemoconcentração/hemodiluição",
+      "Função renal e exame de urina, incluindo pesquisa de hematúria e mioglobinúria",
+      "Tomografia de crânio sem contraste diante de qualquer sinal neurológico novo, para investigar hemorragia intracraniana",
+      "Classificação clínica de gravidade (leve, moderado, grave) conforme critérios do Ministério da Saúde, que orienta diretamente a dose de soro"
+    ],
+    "red_flags": [
+      "Sangramento sistêmico ativo (não apenas local) em qualquer sítio",
+      "Cefaleia súbita intensa, déficit neurológico focal ou alteração do nível de consciência",
+      "Hipotensão ou choque, com ou sem sangramento externo evidente",
+      "Tempo de coagulação muito prolongado ou sangue incoagulável",
+      "Sinais de tamponamento cardíaco (turgência jugular, hipotensão, abafamento de bulhas) em contexto hemorrágico sistêmico",
+      "Oligúria, anúria ou urina escura sugerindo lesão renal aguda",
+      "Progressão rápida do edema local com sinais de síndrome compartimental",
+      "Retardo maior que algumas horas entre a picada e o início da soroterapia, fator associado a maior gravidade e mortalidade"
+    ],
+    "ambulatory_flow": [
+      "Todo paciente com suspeita de picada de serpente peçonhenta deve ser encaminhado a serviço com soro antiofídico disponível — não é quadro de manejo ambulatorial isolado",
+      "Não aplicar torniquete, incisão local, sucção ou qualquer manipulação da ferida que atrase o transporte",
+      "Orientar repouso do membro acometido e transporte rápido, sem tentar identificar ou capturar a serpente com risco de nova picada",
+      "Reforçar retorno imediato se surgir sangramento, dor abdominal, cefaleia intensa ou qualquer sinal neurológico após alta, mesmo em quadro inicialmente classificado como leve"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, obter acesso venoso calibroso e monitorizar sinais vitais e perfusão",
+      "Classificar gravidade (leve, moderado, grave) combinando achados locais, manifestações sistêmicas e tempo de coagulação",
+      "Iniciar soro antibotrópico o quanto antes, com dose determinada pela gravidade — não pelo peso do paciente nem pela espécie presumida isoladamente",
+      "Repor volume guiado por resposta clínica, considerando que extravasamento capilar e vasodilatação por bradicinina podem exigir cautela contra hiper-hidratação",
+      "Iniciar vasopressor se hipotensão persistir apesar de volume e soroterapia já em curso, sem que isso substitua ou atrase a neutralização do veneno",
+      "Reservar hemoderivados (concentrado de hemácias, plasma fresco congelado, crioprecipitado, plaquetas) para sangramento ativo com repercussão hemodinâmica ou procedimento inadiável, sempre após ou concomitante à soroterapia",
+      "Investigar hemorragia intracraniana com tomografia de crânio diante de qualquer sinal neurológico novo",
+      "Repetir tempo de coagulação (ou coagulograma) seriadamente para guiar doses adicionais de soro",
+      "Evitar anti-inflamatórios não esteroidais e procedimentos invasivos eletivos até correção da coagulopatia"
+    ],
+    "tags": [
+      "envenenamento",
+      "acidente ofídico",
+      "Bothrops",
+      "jararaca",
+      "coagulopatia de consumo",
+      "choque hemorrágico",
+      "choque distributivo",
+      "hemorragia intracraniana",
+      "soro antibotrópico",
+      "bradicinina",
+      "captopril",
+      "toxicologia de emergência"
+    ],
+    "source_refs": [
+      "Bochner R, Struchiner CJ. Snake bite epidemiology in the last 100 years in Brazil: a review. Cad Saude Publica. 2003;19(1):7-16. DOI: 10.1590/S0102-311X2003000100002. PMID: 12700779",
+      "Gutiérrez JM, Calvete JJ, Habib AG, Harrison RA, Williams DJ, Warrell DA. Snakebite envenoming. Nat Rev Dis Primers. 2017;3:17063. DOI: 10.1038/nrdp.2017.63. PMID: 28905944",
+      "Warrell DA. Snake bite. Lancet. 2010;375(9708):77-88. DOI: 10.1016/S0140-6736(09)61754-2. PMID: 20109866",
+      "Cardoso JL, Fan HW, França FOS, Jorge MT, Leite RP, Nishioka SA, et al. Randomized comparative trial of three antivenoms in the treatment of envenoming by lance-headed vipers (Bothrops jararaca) in São Paulo, Brazil. Q J Med. 1993;86(5):315-325. PMID: 8327649",
+      "Feitosa EL, Sampaio VS, Salinas JL, Queiroz AM, da Silva IM, Gomes AA, et al. Older Age and Time to Medical Assistance Are Associated with Severity and Mortality of Snakebites in the Brazilian Amazon: A Case-Control Study. PLoS One. 2015;10(7):e0132237. DOI: 10.1371/journal.pone.0132237. PMID: 26168155",
+      "Bucaretchi F, Herrera SR, Hyslop S, Baracat EC, Vieira RJ. Snakebites by Bothrops spp in children in Campinas, São Paulo, Brazil. Rev Inst Med Trop Sao Paulo. 2001;43(6):329-333. DOI: 10.1590/S0036-46652001000600006. PMID: 11781603",
+      "Ferreira SH, Rocha e Silva M. Potentiation of bradykinin and eledoisin by BPF (bradykinin potentiating factor) from Bothrops jararaca venom. Experientia. 1965;21(6):347-349. DOI: 10.1007/BF02144709. PMID: 5870517",
+      "Ondetti MA, Rubin B, Cushman DW. Design of specific inhibitors of angiotensin-converting enzyme: new class of orally active antihypertensive agents. Science. 1977;196(4288):441-444. DOI: 10.1126/science.191908. PMID: 191908",
+      "Machado AS, et al. Hemorrhagic stroke related to Bothrops snakebite. Rev Soc Bras Med Trop. 2010;43(5):602-604. DOI: 10.1590/S0037-86822010000500028. PMID: 21085881",
+      "Silveira GG, et al. Intracranial Bleeding Following Bothrops sp. Snakebite. Neurologist. 2016;21(1):11-12. DOI: 10.1097/NRL.0000000000000063. PMID: 26703003",
+      "Ministério da Saúde (Brasil). Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos. Brasília: Fundação Nacional de Saúde, 2001."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12700779/",
+      "https://pubmed.ncbi.nlm.nih.gov/28905944/",
+      "https://pubmed.ncbi.nlm.nih.gov/20109866/",
+      "https://pubmed.ncbi.nlm.nih.gov/8327649/",
+      "https://pubmed.ncbi.nlm.nih.gov/26168155/",
+      "https://pubmed.ncbi.nlm.nih.gov/11781603/",
+      "https://pubmed.ncbi.nlm.nih.gov/5870517/",
+      "https://pubmed.ncbi.nlm.nih.gov/191908/",
+      "https://pubmed.ncbi.nlm.nih.gov/21085881/",
+      "https://pubmed.ncbi.nlm.nih.gov/26703003/",
+      "https://bvsms.saude.gov.br/bvs/publicacoes/funasa/manu_peconhentos.pdf"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "envenenamento-botropico-jararaca-coagulopatia-e-choque-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miocardite-difterica",
+    "name": "Miocardite diftérica",
+    "aliases": [
+      "miocardite da difteria",
+      "cardiomiopatia diftérica",
+      "miocardite tóxica por Corynebacterium diphtheriae",
+      "cardiotoxicidade diftérica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 35,
+    "completeness": "completo",
+    "summary": "Miocardite tóxica causada pela exotoxina da Corynebacterium diphtheriae, que inibe a síntese proteica por ADP-ribosilação do fator de elongação eEF-2 em células cardíacas e neurais — não é infecção direta do miocárdio pela bactéria, que permanece localizada na via respiratória. Surge tipicamente entre a 1ª e a 3ª semana da doença, manifesta-se por distúrbios de condução progressivos (incluindo bloqueio atrioventricular total), arritmias ventriculares e insuficiência cardíaca, e é a principal causa de óbito na difteria. O soro antidiftérico neutraliza apenas a toxina circulante livre, não a já fixada aos tecidos, o que torna sua administração precoce o determinante terapêutico central; o suporte cardiológico inclui marca-passo temporário para bloqueio atrioventricular avançado.",
+    "presentation": [
+      "Paciente com faringite/laringite diftérica (pseudomembrana aderente, por vezes com 'pescoço taurino' por edema cervical e linfadenopatia) que, dias a poucas semanas após o quadro respiratório, desenvolve bradicardia, palpitações ou mal-estar inespecífico",
+      "Bloqueio atrioventricular de primeiro ou segundo grau à monitorização, muitas vezes assintomático até progressão",
+      "Bloqueio atrioventricular total com síncope, pré-síncope, tontura ou instabilidade hemodinâmica",
+      "Extrassistolia ventricular frequente, taquicardia ventricular ou palpitações sustentadas",
+      "Sinais de insuficiência cardíaca — dispneia, ortopneia, edema, hipoperfusão — de início subagudo",
+      "Choque cardiogênico em quadro grave e tardiamente reconhecido ou tratado",
+      "Achado incidental de anormalidade eletrocardiográfica em paciente com difteria confirmada, ainda assintomático do ponto de vista cardíaco, durante monitorização seriada de rotina"
+    ],
+    "differentials": [
+      "Miocardite viral ou outras miocardites infecciosas",
+      "Miocardite de outras etiologias tóxicas (fármacos, toxinas exógenas)",
+      "Bloqueio atrioventricular congênito ou degenerativo não relacionado à difteria",
+      "Cardite de Lyme (bloqueio atrioventricular de alto grau potencialmente reversível, em contexto epidemiológico distinto)",
+      "Distúrbio eletrolítico como causa isolada de bradiarritmia",
+      "Sepse com disfunção miocárdica associada",
+      "Polineuropatia diftérica sem acometimento cardíaco concomitante, quando a apresentação neurológica predomina"
+    ],
+    "tests": [
+      "Eletrocardiograma seriado ou monitorização eletrocardiográfica contínua desde a suspeita/confirmação de difteria, mantida durante toda a janela de risco (1ª a 3ª semana)",
+      "Troponina seriada para quantificar e acompanhar a lesão miocárdica",
+      "Ecocardiograma para avaliar função sistólica biventricular e acompanhar evolução",
+      "Cultura de secreção de orofaringe/lesão e, quando disponível, detecção do gene tox (PCR) para confirmação microbiológica — sem atrasar o tratamento clínico diante de suspeita compatível",
+      "Avaliação clínica seriada da extensão da pseudomembrana e de sinais como 'pescoço taurino', que se associam a maior risco de acometimento cardíaco"
+    ],
+    "red_flags": [
+      "Progressão de bloqueio atrioventricular de primeiro/segundo grau para bloqueio atrioventricular total",
+      "Ectopia ventricular já na apresentação inicial, associada a maior risco de desfecho fatal",
+      "Pseudomembrana extensa (dois ou mais sítios) ou 'pescoço taurino', preditores de miocardite diftérica",
+      "Sinais de insuficiência cardíaca ou choque cardiogênico em paciente com difteria",
+      "Atraso na administração do soro antidiftérico diante de suspeita clínica compatível",
+      "Ausência de monitorização eletrocardiográfica contínua em paciente internado por difteria grave"
+    ],
+    "ambulatory_flow": [
+      "Seguimento cardiológico após a alta hospitalar para reavaliar função ventricular e ritmo, já que a recuperação da condução e da função sistólica pode ser incompleta ou tardia",
+      "Reavaliação da necessidade de marca-passo definitivo em paciente que permaneceu com bloqueio atrioventricular avançado após a fase aguda",
+      "Verificação e atualização do esquema de vacinação com toxoide diftérico do paciente e de contatos próximos",
+      "Orientação sobre sinais de alarme cardíaco tardio (síncope, palpitações, dispneia) para retorno precoce"
+    ],
+    "emergency_flow": [
+      "Suspeitar de difteria diante de faringite/laringite com pseudomembrana aderente, sobretudo em paciente não vacinado ou com esquema incompleto",
+      "Administrar soro antidiftérico o mais precocemente possível diante de suspeita clínica compatível, sem aguardar confirmação laboratorial",
+      "Iniciar monitorização eletrocardiográfica contínua e troponina seriada assim que a difteria for suspeitada ou confirmada, mantendo vigilância durante toda a janela de risco de miocardite",
+      "Internar em unidade com capacidade de resposta rápida a bradiarritmia e acesso a marca-passo temporário transvenoso",
+      "Indicar marca-passo temporário diante de bloqueio atrioventricular avançado (Mobitz II ou total), sem aguardar instabilidade hemodinâmica plena",
+      "Manejar insuficiência cardíaca e choque cardiogênico conforme apresentação hemodinâmica, com suporte individualizado",
+      "Associar antibioticoterapia para erradicar o foco produtor de toxina, como complemento ao soro antidiftérico"
+    ],
+    "tags": [
+      "difteria",
+      "miocardite",
+      "toxina diftérica",
+      "bloqueio atrioventricular",
+      "marca-passo temporário",
+      "soro antidiftérico",
+      "doença reemergente",
+      "cobertura vacinal"
+    ],
+    "source_refs": [
+      "Sharma NC, Efstratiou A, Mokrousov I, Mutreja A, Das B, Ramamurthy T. Diphtheria. Nat Rev Dis Primers. 2019;5(1):81. DOI: 10.1038/s41572-019-0131-y. PMID: 31804499.",
+      "Collier RJ. Understanding the mode of action of diphtheria toxin: a perspective on progress during the 20th century. Toxicon. 2001;39(11):1793-1803. DOI: 10.1016/s0041-0101(01)00165-9. PMID: 11595641.",
+      "Havaldar PV, Sankpal MN, Doddannavar RP. Diphtheritic myocarditis: clinical and laboratory parameters of prognosis and fatal outcome. Ann Trop Paediatr. 2000;20(3):209-215. DOI: 10.1080/02724936.2000.11748136. PMID: 11064774.",
+      "Kneen R, Nguyen MD, Solomon T, Pham NG, Parry CM, Nguyen TT, Ha TL, Taylor A, Vo TT, Nguyen TT, Day NPJ, White NJ. Clinical features and predictors of diphtheritic cardiomyopathy in Vietnamese children. Clin Infect Dis. 2004;39(11):1591-1598. DOI: 10.1086/425305. PMID: 15578357.",
+      "Bethell DB, Nguyen Minh Dung, Ha Thi Loan, Le Thi Nguyet Minh, Nguyen Quoc Dung, Day NP, White NJ. Prognostic value of electrocardiographic monitoring of patients with severe diphtheria. Clin Infect Dis. 1995;20(5):1259-1265. DOI: 10.1093/clinids/20.5.1259. PMID: 7620007.",
+      "Dung NM, Kneen R, Kiem N, Bethell DB, Phu NH, Solomon T, Chau TT, Mai NT, Day NPJ, White NJ. Treatment of severe diphtheritic myocarditis by temporary insertion of a cardiac pacemaker. Clin Infect Dis. 2002;35(11):1425-1429. DOI: 10.1086/344176. PMID: 12439808.",
+      "Clarke KEN, MacNeil A, Hadler S, Scott C, Tiwari TSP, Cherian T. Global Epidemiology of Diphtheria, 2000-2017. Emerg Infect Dis. 2019;25(10):1834-1842. DOI: 10.3201/eid2510.190271. PMID: 31538559.",
+      "Truelove SA, Keegan LT, Moss WJ, Chaisson LH, Macher E, Azman AS, Lessler J. Clinical and Epidemiological Aspects of Diphtheria: A Systematic Review and Pooled Analysis. Clin Infect Dis. 2020;71(1):89-97. DOI: 10.1093/cid/ciz808. PMID: 31425581.",
+      "Diphtheria vaccine: WHO position paper – August 2017. Wkly Epidemiol Rec. 2017;92(31):417-435. PMID: 28776357."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31804499/",
+      "https://pubmed.ncbi.nlm.nih.gov/11595641/",
+      "https://pubmed.ncbi.nlm.nih.gov/11064774/",
+      "https://pubmed.ncbi.nlm.nih.gov/15578357/",
+      "https://pubmed.ncbi.nlm.nih.gov/7620007/",
+      "https://pubmed.ncbi.nlm.nih.gov/12439808/",
+      "https://pubmed.ncbi.nlm.nih.gov/31538559/",
+      "https://pubmed.ncbi.nlm.nih.gov/31425581/",
+      "https://pubmed.ncbi.nlm.nih.gov/28776357/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "miocardite-difterica-bloqueio-atrioventricular-total-e-marca-passo-temporario"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "golpe-de-calor-cardiovascular",
+    "name": "Golpe de calor (hipertermia não exertiva e exertiva) com acometimento cardiovascular",
+    "aliases": [
+      "insolação",
+      "heat stroke",
+      "golpe de calor clássico",
+      "golpe de calor por esforço",
+      "hipertermia não exertiva",
+      "hipertermia exertiva"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "sindrome_ambiental",
+    "prevalence_rank": 36,
+    "completeness": "completo",
+    "summary": "Emergência ambiental definida por temperatura central elevada (em geral acima de 40°C) com disfunção aguda do sistema nervoso central, em que a falência circulatória é o principal determinante de mortalidade precoce. Cursa com choque distributivo por vasodilatação cutânea maciça, taquicardia extrema, disfunção miocárdica direta pelo calor, arritmias e coagulação intravascular disseminada; distingue-se em fenótipo clássico (não exertivo, idosos e comorbidades) e exertivo (jovens, atletas, militares). O resfriamento externo rápido é a prioridade terapêutica absoluta, iniciado antes mesmo da estabilização hemodinâmica completa.",
+    "presentation": [
+      "Temperatura central acima de 40°C (aferida por via retal ou esofágica, nunca oral, axilar ou timpânica)",
+      "Alteração aguda do estado mental: confusão, delirium, convulsão ou coma",
+      "Pele quente e seca no golpe clássico (falência da sudorese); pele ainda úmida é comum no golpe exertivo",
+      "Taquicardia sinusal extrema, frequentemente desproporcional ao grau de febre",
+      "Hipotensão com extremidades inicialmente quentes, evoluindo para hipoperfusão franca",
+      "Taquipneia e hiperventilação",
+      "Sangramento inesperado, petéquias ou equimoses sugerindo coagulopatia de consumo",
+      "Contexto de exposição a calor ambiental extremo (clássico) ou esforço físico intenso em calor/umidade (exertivo)"
+    ],
+    "differentials": [
+      "Síndrome neuroléptica maligna",
+      "Hipertermia maligna anestésica",
+      "Síndrome serotoninérgica",
+      "Sepse grave e choque séptico",
+      "Tireotoxicose e tempestade tireoidiana",
+      "Abstinência alcoólica grave / delirium tremens",
+      "Intoxicação por estimulantes (cocaína, anfetaminas, MDMA)",
+      "Meningoencefalite"
+    ],
+    "tests": [
+      "Temperatura central contínua por sonda retal ou esofágica",
+      "Hemograma completo e coagulograma (TP, TTPA, fibrinogênio, D-dímero) para rastreio de CIVD",
+      "Função renal e eletrólitos, incluindo potássio, sódio, cálcio e fósforo",
+      "CPK e mioglobina para rabdomiólise",
+      "Transaminases e função hepática",
+      "Troponina e ECG seriados para lesão miocárdica e arritmia",
+      "Gasometria arterial e lactato",
+      "Exame toxicológico dirigido quando houver dúvida com síndrome serotoninérgica, síndrome neuroléptica maligna ou intoxicação por estimulantes",
+      "Hemoculturas e marcadores infecciosos quando o quadro for atípico e sepse não puder ser excluída clinicamente"
+    ],
+    "red_flags": [
+      "Temperatura central acima de 40°C com alteração do estado mental",
+      "Hipotensão refratária ao resfriamento e à reposição volêmica inicial",
+      "Sangramento espontâneo ou em sítios de punção sugerindo CIVD",
+      "Arritmia ventricular ou instabilidade elétrica",
+      "Oligúria/anúria associada a CPK muito elevada, sugerindo rabdomiólise grave com lesão renal aguda",
+      "Coma ou convulsão persistente",
+      "Falha em reduzir a temperatura central apesar de resfriamento ativo em curso"
+    ],
+    "ambulatory_flow": [
+      "Reconhecer o golpe de calor como emergência tempo-dependente; não aguardar confirmação laboratorial para iniciar resfriamento",
+      "Remover a pessoa do ambiente quente e retirar excesso de roupas imediatamente",
+      "Iniciar resfriamento com os meios disponíveis (água, gelo, ventilação) enquanto se aciona o serviço de emergência",
+      "Não administrar antipiréticos (paracetamol, anti-inflamatórios não esteroidais) — ineficazes e potencialmente deletérios na hipertermia verdadeira",
+      "Encaminhar com urgência para unidade capaz de resfriamento ativo, monitorização contínua e suporte hemodinâmico"
+    ],
+    "emergency_flow": [
+      "Iniciar resfriamento externo rápido imediatamente, em paralelo e antes mesmo de completar a estabilização hemodinâmica formal",
+      "Priorizar imersão em água gelada quando disponível e tolerada; usar resfriamento evaporativo-convectivo como alternativa, especialmente em idosos frágeis ou golpe clássico",
+      "Monitorizar temperatura central de forma contínua e interromper o resfriamento ativo próximo de 38,5–39°C para evitar hipotermia iatrogênica",
+      "Conduzir suporte hemodinâmico de forma cautelosa: reposição volêmica guiada por resposta, evitando sobrecarga em coração com disfunção contrátil direta pelo calor",
+      "Reservar vasopressor para hipotensão persistente após resfriamento e volume adequados, com atenção ao potencial arritmogênico",
+      "Investigar e tratar ativamente CIVD, rabdomiólise e lesão renal aguda concomitantes",
+      "Manter monitorização eletrocardiográfica contínua para detecção precoce de arritmias",
+      "Diferenciar de síndrome neuroléptica maligna, hipertermia maligna anestésica e síndrome serotoninérgica pelo contexto de exposição farmacológica/anestésica e pelo padrão neuromuscular",
+      "Reservar dantroleno para hipertermia maligna anestésica confirmada ou fortemente suspeita; não é terapia de rotina do golpe de calor ambiental ou por esforço"
+    ],
+    "tags": [
+      "golpe de calor",
+      "hipertermia",
+      "choque distributivo",
+      "coagulação intravascular disseminada",
+      "disfunção miocárdica",
+      "rabdomiólise",
+      "síndrome neuroléptica maligna",
+      "hipertermia maligna",
+      "síndrome serotoninérgica",
+      "resfriamento",
+      "terapia intensiva",
+      "emergência ambiental"
+    ],
+    "source_refs": [
+      "Bouchama A, Knochel JP. Heat Stroke. N Engl J Med. 2002;346(25):1978-1988. PMID: 12075060. DOI: 10.1056/NEJMra011089",
+      "Epstein Y, Yanovich R. Heatstroke. N Engl J Med. 2019;380(25):2449-2459. PMID: 31216400. DOI: 10.1056/NEJMra1810762",
+      "Bouchama A, Abuyassin B, Lehe C, Laitano O, Jay O, O'Connor FG, Leon LR. Classic and exertional heatstroke. Nat Rev Dis Primers. 2022;8(1):8. PMID: 35115565. DOI: 10.1038/s41572-021-00334-6",
+      "Zhuang Y, Zhuang XH, Zhang XY, Wang DC, Yang Y. Mechanisms and Intervention Strategies for Heat Stroke-Associated Myocardial Dysfunction: A Narrative Review. West J Emerg Med. 2026;27(3):526-533. PMID: 42258868. DOI: 10.5811/westjem.53045",
+      "Roberts WO, Armstrong LE, Sawka MN, Yeargin SW, Heled Y, O'Connor FG. ACSM Expert Consensus Statement on Exertional Heat Illness: Recognition, Management, and Return to Activity. Curr Sports Med Rep. 2023;22(4):134-149. PMID: 37036463. DOI: 10.1249/JSR.0000000000001058",
+      "Bosch X, Poch E, Grau JM. Rhabdomyolysis and acute kidney injury. N Engl J Med. 2009;361(1):62-72. PMID: 19571284. DOI: 10.1056/NEJMra0801327",
+      "Boyer EW, Shannon M. The serotonin syndrome. N Engl J Med. 2005;352(11):1112-1120. PMID: 15784664. DOI: 10.1056/NEJMra041867",
+      "Ware MR, Feller DB, Hall KL. Neuroleptic Malignant Syndrome: Diagnosis and Management. Prim Care Companion CNS Disord. 2018;20(1):17r02185. PMID: 29325237. DOI: 10.4088/PCC.17r02185",
+      "Rosenberg H, Pollock N, Schiemann A, Bulger T, Stowell K. Malignant hyperthermia: a review. Orphanet J Rare Dis. 2015;10:93. PMID: 26238698. DOI: 10.1186/s13023-015-0310-1"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12075060/",
+      "https://pubmed.ncbi.nlm.nih.gov/31216400/",
+      "https://pubmed.ncbi.nlm.nih.gov/35115565/",
+      "https://pubmed.ncbi.nlm.nih.gov/42258868/",
+      "https://pubmed.ncbi.nlm.nih.gov/37036463/",
+      "https://pubmed.ncbi.nlm.nih.gov/19571284/",
+      "https://pubmed.ncbi.nlm.nih.gov/15784664/",
+      "https://pubmed.ncbi.nlm.nih.gov/29325237/",
+      "https://pubmed.ncbi.nlm.nih.gov/26238698/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "golpe-de-calor-hipertermia-nao-exertiva-exertiva-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "hipotermia-acidental",
+    "name": "Hipotermia acidental",
+    "aliases": [
+      "hipotermia",
+      "queda acidental de temperatura central",
+      "hipotermia por exposição ao frio"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "sindrome_ambiental",
+    "prevalence_rank": 37,
+    "completeness": "completo",
+    "summary": "Queda involuntária da temperatura corporal central abaixo de 35°C, primária (exposição ao frio) ou secundária (doença ou outra causa externa que prejudica a termorregulação). Compromete o sistema de condução cardíaco de forma progressiva com a queda de temperatura — bradicardia sinusal, depois fibrilação atrial, depois fibrilação ventricular e, no extremo, assistolia — e pode simular morte aparente; a decisão de interromper a reanimação não deve se basear em avaliação clínica isolada sem temperatura central medida e reaquecimento adequado.",
+    "presentation": [
+      "Tremores e alteração leve de coordenação e julgamento em hipotermia leve",
+      "Confusão, apatia ou comprometimento progressivo da consciência, com tremor que pode desaparecer, em hipotermia moderada",
+      "Inconsciência com sinais vitais ainda presentes em hipotermia grave",
+      "Rigidez, pupilas fixas, pulso e respiração não detectáveis ao exame superficial — quadro que pode simular óbito",
+      "Bradicardia desproporcional ao quadro geral, irregularidade de pulso sugerindo fibrilação atrial, ou colapso com parada cardiorrespiratória",
+      "Onda de Osborn (onda J) ao ECG, mais evidente em derivações inferiores e precordiais laterais, com amplitude que tende a crescer com a queda de temperatura"
+    ],
+    "differentials": [
+      "Intoxicação exógena com depressão do nível de consciência",
+      "Hipoglicemia",
+      "Acidente vascular cerebral ou outra causa neurológica primária de coma",
+      "Sepse com hipotermia secundária à própria infecção grave",
+      "Hipotireoidismo grave (coma mixedematoso)",
+      "Morte já estabelecida por causa não relacionada ao frio"
+    ],
+    "tests": [
+      "Temperatura central por termômetro de leitura baixa — timpânica se respiração espontânea, esofágica se via aérea avançada",
+      "ECG de 12 derivações, incluindo pesquisa de onda de Osborn e do ritmo de base",
+      "Glicemia capilar",
+      "Eletrólitos, incluindo potássio sérico",
+      "Gasometria arterial",
+      "Exames dirigidos a causa secundária suspeita (infecção, intoxicação, endocrinopatia) conforme contexto clínico"
+    ],
+    "red_flags": [
+      "Temperatura central abaixo de 30°C",
+      "Fibrilação ventricular ou outra arritmia ventricular",
+      "Instabilidade hemodinâmica (pressão arterial sistólica menor que 90 mmHg)",
+      "Nível de consciência comprometido ou ausência de sinais vitais ao exame inicial",
+      "Ausência de resposta a manuseio breve — risco de precipitar fibrilação ventricular por movimentação"
+    ],
+    "ambulatory_flow": [
+      "Hipotermia acidental com risco de deterioração ou de parada não tem fluxo ambulatorial — encaminhar para emergência",
+      "Após reaquecimento e estabilização, investigar e tratar causa secundária quando presente (endócrina, infecciosa, tóxica, neurológica)",
+      "Orientar prevenção de exposição ao frio em população de risco (idoso, situação de rua, esportista ao ar livre)",
+      "Reavaliar medicação que prejudique termorregulação ou nível de consciência em causa secundária"
+    ],
+    "emergency_flow": [
+      "Medir temperatura central com termômetro de leitura baixa e técnica adequada (timpânica ou esofágica) antes de definir gravidade",
+      "Manusear o paciente com cuidado e movimentação mínima — miocárdio hipotérmico é irritável e pode fibrilar com estímulo mecânico",
+      "Isolar do frio e transferir para reaquecimento; considerar transferência direta a centro com suporte de vida extracorpóreo quando houver risco de instabilidade ou parada",
+      "Em parada cardiorrespiratória, seguir o protocolo específico de hipotermia acidental — que modifica limiares de desfibrilação e de drogas conforme a temperatura central",
+      "Não declarar óbito por hipotermia sem reaquecimento adequado ou outro critério clínico definitivo de morte irreversível"
+    ],
+    "tags": [
+      "hipotermia acidental",
+      "onda de Osborn",
+      "onda J",
+      "bradicardia",
+      "fibrilação ventricular",
+      "parada cardiorrespiratória",
+      "reaquecimento",
+      "ECMO"
+    ],
+    "source_refs": [
+      "Osborn JJ. Experimental hypothermia: respiratory and blood pH changes in relation to cardiac function. Am J Physiol. 1953;175(3):389-398. PMID: 13114420",
+      "Maruyama M, Kobayashi Y, Kodani E, Hirayama Y, Atarashi H, Katoh T, Takano T. Osborn waves: history and significance. Indian Pacing Electrophysiol J. 2004;4(1):33-39. PMID: 16943886",
+      "Mallet ML. Pathophysiology of accidental hypothermia. QJM. 2002;95(12):775-785. DOI: 10.1093/qjmed/95.12.775. PMID: 12454320",
+      "Danzl DF, Pozos RS. Accidental hypothermia. N Engl J Med. 1994;331(26):1756-1760. DOI: 10.1056/NEJM199412293312607. PMID: 7984198",
+      "Lott C, Truhlář A, Alfonzo A, et al.; ERC Special Circumstances Writing Group Collaborators. European Resuscitation Council Guidelines 2021: Cardiac arrest in special circumstances. Resuscitation. 2021;161:152-219. DOI: 10.1016/j.resuscitation.2021.02.011. PMID: 33773826"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/13114420/",
+      "https://pubmed.ncbi.nlm.nih.gov/16943886/",
+      "https://pubmed.ncbi.nlm.nih.gov/12454320/",
+      "https://pubmed.ncbi.nlm.nih.gov/7984198/",
+      "https://pubmed.ncbi.nlm.nih.gov/33773826/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "onda-de-osborn-e-progressao-arritmica-na-hipotermia-acidental"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "leptospirose-com-comprometimento-cardiovascular",
+    "name": "Leptospirose com comprometimento cardiovascular",
+    "aliases": [
+      "miocardite leptospirótica",
+      "síndrome de Weil",
+      "leptospirose grave",
+      "doença de Weil",
+      "síndrome hemorrágica pulmonar da leptospirose"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 38,
+    "completeness": "completo",
+    "summary": "Zoonose bacteriana por Leptospira spp., transmitida por contato com água ou lama contaminada por urina de roedor, com relevância epidemiológica no Brasil ligada a enchentes urbanas e exposição ocupacional/recreacional. O acometimento cardíaco decorre principalmente de resposta inflamatória e vasculite, não de invasão direta maciça, produzindo miocardite com espectro de arritmias — inclusive fibrilação atrial — e alterações de repolarização descritas em séries de óbito. A forma grave (síndrome de Weil) combina icterícia, insuficiência renal aguda e hemorragias, podendo evoluir com hemorragia pulmonar maciça e instabilidade hemodinâmica, quadro de alta letalidade que exige suporte intensivo multimodal.",
+    "presentation": [
+      "Febre de início agudo, mialgia (classicamente em panturrilhas), cefaleia e hiperemia conjuntival",
+      "Histórico de exposição a água ou lama de enchente, esgoto, ou atividade ocupacional/recreacional em coleção de água doce",
+      "Icterícia associada a disfunção renal (síndrome de Weil)",
+      "Arritmia nova, incluindo fibrilação atrial, ou alteração de repolarização ao ECG",
+      "Dispneia, hemoptise ou hipoxemia progressiva sugestivas de hemorragia pulmonar",
+      "Sinais de choque: hipotensão, taquicardia, perfusão periférica reduzida, alteração de consciência",
+      "Manifestações hemorrágicas mucocutâneas ou viscerais associadas a plaquetopenia"
+    ],
+    "differentials": [
+      "Dengue e outras arboviroses com fase de alarme ou choque",
+      "Hantavirose (síndrome pulmonar por hantavírus), que pode mimetizar leptospirose em área endêmica",
+      "Malária grave",
+      "Febre tifoide e outras sepses de foco não definido",
+      "Miocardite viral de outra etiologia",
+      "Síndrome coronariana aguda ou outra causa de choque cardiogênico primário",
+      "Vasculites sistêmicas com disfunção renal e pulmonar (síndrome pulmão-rim)"
+    ],
+    "tests": [
+      "Sorologia por microaglutinação (MAT), método de referência, idealmente com soro pareado (fase aguda e convalescença)",
+      "ELISA IgM como triagem inicial, com sensibilidade limitada na primeira semana",
+      "PCR em sangue na fase leptospirêmica (primeira semana) e em urina a partir da segunda semana",
+      "Função renal, bilirrubinas, transaminases, creatinofosfoquinase, potássio e hemograma com plaquetas",
+      "Gasometria arterial e avaliação de troca gasosa diante de sintoma respiratório",
+      "Eletrocardiograma em todo paciente internado com critério de gravidade",
+      "Imagem de tórax (radiografia ou tomografia) diante de suspeita de hemorragia pulmonar"
+    ],
+    "red_flags": [
+      "Hipotensão, choque ou necessidade de vasopressor",
+      "Hemoptise ou infiltrado pulmonar difuso com hipoxemia progressiva, sugestivos de hemorragia pulmonar maciça",
+      "Arritmia nova, especialmente fibrilação atrial ou bloqueio atrioventricular",
+      "Oligúria, elevação rápida de creatinina ou hiperpotassemia",
+      "Icterícia com disfunção renal associada (síndrome de Weil)",
+      "Alteração do nível de consciência",
+      "Plaquetopenia com sangramento espontâneo ou queda rápida de hemoglobina",
+      "Taquipneia importante à apresentação"
+    ],
+    "ambulatory_flow": [
+      "Considerar leptospirose em febre aguda com mialgia intensa e exposição epidemiológica compatível, mesmo sem icterícia",
+      "Não aguardar confirmação sorológica para iniciar antibioticoterapia quando a suspeita clínico-epidemiológica é consistente",
+      "Coletar exames de triagem de gravidade (função renal, bilirrubinas, plaquetas, potássio) já na primeira avaliação",
+      "Orientar retorno ou encaminhamento imediato diante de qualquer sinal de alarme (dispneia, hemoptise, oligúria, icterícia, arritmia percebida, hipotensão)",
+      "Não conduzir de forma ambulatorial paciente com qualquer critério de gravidade; encaminhar para avaliação hospitalar"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, obter acesso venoso e monitorização cardíaca contínua diante de qualquer critério de gravidade",
+      "Iniciar antibioticoterapia precocemente (penicilina G cristalina ou ceftriaxona, conforme disponibilidade e contraindicações) sem aguardar confirmação sorológica",
+      "Obter eletrocardiograma e reavaliar diante de qualquer arritmia nova, tratando-a como marcador de doença sistêmica grave",
+      "Rastrear ativamente sinais precoces de síndrome hemorrágica pulmonar (taquipneia, hipoxemia, hemoptise, potássio elevado, creatinina elevada, choque, alteração de consciência) e antecipar suporte ventilatório",
+      "Instituir suporte hemodinâmico multimodal (volume criterioso, vasopressor para componente distributivo, suporte inotrópico se houver disfunção miocárdica por miocardite) diante de choque misto",
+      "Considerar terapia renal substitutiva conforme critérios habituais de lesão renal aguda grave",
+      "Corrigir coagulopatia e trombocitopenia clinicamente relevantes diante de sangramento ativo, incluindo hemorragia pulmonar",
+      "Transferir precocemente para unidade de terapia intensiva diante de qualquer sinal de gravidade pulmonar, renal, hemodinâmica ou arritmia nova, dada a letalidade elevada da síndrome hemorrágica pulmonar descrita em séries brasileiras"
+    ],
+    "tags": [
+      "leptospirose",
+      "síndrome de Weil",
+      "miocardite",
+      "arritmia",
+      "fibrilação atrial",
+      "hemorragia pulmonar",
+      "choque",
+      "enchente",
+      "zoonose",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Ko AI, Galvão Reis M, Ribeiro Dourado CM, Johnson WD Jr, Riley LW; Salvador Leptospirosis Study Group. Urban epidemic of severe leptospirosis in Brazil. Lancet. 1999;354(9181):820-825. DOI: 10.1016/S0140-6736(99)80012-9. PMID: 10485724",
+      "Reis RB, Ribeiro GS, Felzemburgh RD, et al. Impact of environment and social gradient on Leptospira infection in urban slums. PLoS Negl Trop Dis. 2008;2(4):e228. DOI: 10.1371/journal.pntd.0000228. PMID: 18431445",
+      "Bharti AR, Nally JE, Ricaldi JN, et al. Leptospirosis: a zoonotic disease of global importance. Lancet Infect Dis. 2003;3(12):757-771. DOI: 10.1016/S1473-3099(03)00830-2. PMID: 14652202",
+      "Trevejo RT, Rigau-Pérez JG, Ashford DA, et al. Epidemic leptospirosis associated with pulmonary hemorrhage-Nicaragua, 1995. J Infect Dis. 1998;178(5):1457-1463. DOI: 10.1086/314424. PMID: 9780268",
+      "Marotto PC, Nascimento CM, Eluf-Neto J, et al. Acute lung injury in leptospirosis: clinical and laboratory features, outcome, and factors associated with mortality. Clin Infect Dis. 1999;29(6):1561-1563. DOI: 10.1086/313501. PMID: 10585813",
+      "Spichler AS, Vilaça PJ, Athanazio DA, et al. Predictors of lethality in severe leptospirosis in urban Brazil. Am J Trop Med Hyg. 2008;79(6):911-914. PMID: 19052303",
+      "Panaphut T, Domrongkitchaiporn S, Vibhagool A, Thinkamrop B, Susaengrat W. Ceftriaxone compared with sodium penicillin G for treatment of severe leptospirosis. Clin Infect Dis. 2003;36(12):1507-1513. DOI: 10.1086/375226. PMID: 12802748",
+      "de Brito T, Silva AMG, Abreu PAE. Pathology and pathogenesis of human leptospirosis: a commented review. Rev Inst Med Trop Sao Paulo. 2018;60:e23. DOI: 10.1590/S1678-9946201860023. PMID: 29846473",
+      "Costa E, Lopes AA, Sacramento E, Costa YA, Matos ED, Lopes MB, Bina JC. Penicillin at the late stage of leptospirosis: a randomized controlled trial. Rev Inst Med Trop Sao Paulo. 2003;45(3):141-145. DOI: 10.1590/S0036-46652003000300005. PMID: 12870063",
+      "Sacramento E, Lopes AA, Costa E, et al. Electrocardiographic alterations in patients hospitalized with leptospirosis in the Brazilian city of Salvador. Arq Bras Cardiol. 2002;78(3):267-270. DOI: 10.1590/S0066-782X2002000300002. PMID: 11967582",
+      "Gouveia EL, Metcalfe J, de Carvalho ALF, et al. Leptospirosis-associated severe pulmonary hemorrhagic syndrome, Salvador, Brazil. Emerg Infect Dis. 2008;14(3):505-508. DOI: 10.3201/eid1403.071064. PMID: 18325275",
+      "Marotto PC, Ko AI, Murta-Nascimento C, et al. Early identification of leptospirosis-associated pulmonary hemorrhage syndrome by use of a validated prediction model. J Infect. 2010;60(3):218-223. DOI: 10.1016/j.jinf.2009.12.005. PMID: 20026189",
+      "Daher EF, Lima RS, Silva Júnior GB, et al. Different patterns in a cohort of patients with severe leptospirosis (Weil syndrome). Am J Trop Med Hyg. 2011;85(3):479-484. DOI: 10.4269/ajtmh.2011.11-0080. PMID: 21896808",
+      "Ramachandran S, Perera MV. Cardiac and pulmonary involvement in leptospirosis. Trans R Soc Trop Med Hyg. 1977;71(1):56-59. DOI: 10.1016/0035-9203(77)90209-7. PMID: 871034"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/10485724/",
+      "https://pubmed.ncbi.nlm.nih.gov/18431445/",
+      "https://pubmed.ncbi.nlm.nih.gov/14652202/",
+      "https://pubmed.ncbi.nlm.nih.gov/9780268/",
+      "https://pubmed.ncbi.nlm.nih.gov/10585813/",
+      "https://pubmed.ncbi.nlm.nih.gov/19052303/",
+      "https://pubmed.ncbi.nlm.nih.gov/12802748/",
+      "https://pubmed.ncbi.nlm.nih.gov/29846473/",
+      "https://pubmed.ncbi.nlm.nih.gov/12870063/",
+      "https://pubmed.ncbi.nlm.nih.gov/11967582/",
+      "https://pubmed.ncbi.nlm.nih.gov/18325275/",
+      "https://pubmed.ncbi.nlm.nih.gov/20026189/",
+      "https://pubmed.ncbi.nlm.nih.gov/21896808/",
+      "https://pubmed.ncbi.nlm.nih.gov/871034/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "leptospirose-e-comprometimento-cardiovascular-miocardite-arritmias-e-sindrome-de-weil-com-hemorragia-pulmonar"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "doenca-de-chagas-aguda-oral",
+    "name": "Doença de Chagas aguda por transmissão oral",
+    "aliases": [
+      "Chagas agudo por via oral",
+      "Doença de Chagas aguda alimentar",
+      "Miocardite chagásica aguda por surto oral",
+      "Chagas oral amazônico",
+      "Surto de Chagas por açaí"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 39,
+    "completeness": "completo",
+    "summary": "Forma aguda da infecção por Trypanosoma cruzi adquirida por ingestão de alimento ou bebida contaminados — sobretudo derivados de açaí e caldo de cana processados artesanalmente —, hoje a principal via de infecção aguda descrita em séries da Amazônia brasileira (até 87% dos casos notificados no Pará em análise 2013-2023), produzindo surtos por compartilhamento de fonte alimentar comum. A carga parasitária ingerida é maior e a barreira imune de contenção inicial é diferente da via vetorial clássica, o que se associa a apresentação mais grave e de instalação mais rápida, incluindo miocardite aguda por vezes fulminante e derrame pericárdico. O diagnóstico na fase aguda é parasitológico direto (gota espessa/exame a fresco), e o tratamento com benznidazol tem indicação Classe I independentemente da via de transmissão. O prognóstico do episódio agudo tratado costuma ser favorável, mas lesão miocárdica subclínica pode persistir por anos em parte dos pacientes, justificando seguimento cardiológico estruturado além da resolução da febre.",
+    "presentation": [
+      "Síndrome febril aguda inespecífica, presente na grande maioria dos casos confirmados em surto",
+      "Mialgia, cefaleia, astenia e edema de face e/ou membros",
+      "Manifestação digestiva, por vezes com sangramento, mais descrita na via oral que na vetorial",
+      "Hepatoesplenomegalia e linfadenopatia na fase de disseminação hematogênica aguda",
+      "Sinais de insuficiência cardíaca aguda (dispneia, ortopneia, edema) em parcela dos casos sintomáticos",
+      "Derrame pericárdico, com risco de evolução para tamponamento cardíaco — a alteração cardíaca mais frequente nas séries de surto",
+      "Alteração eletrocardiográfica nova (repolarização ventricular, distúrbio de condução) em paciente previamente hígido de área de surto",
+      "Miocardite aguda de instalação rápida, por vezes fulminante, com comprometimento hemodinâmico",
+      "Casos assintomáticos ou oligossintomáticos em parcela dos expostos à mesma fonte alimentar",
+      "Múltiplos casos simultâneos ou em sequência temporal curta ligados a alimento ou bebida compartilhados (padrão de surto)"
+    ],
+    "differentials": [
+      "Arboviroses (dengue, chikungunya, Zika, febre amarela) em área endêmica sobreposta",
+      "Malária, sobretudo em região amazônica com transmissão ativa",
+      "Miocardite aguda de outra etiologia (viral, autoimune), quando não há contexto epidemiológico de surto",
+      "Leptospirose e outras doenças febris agudas com acometimento hepático/renal",
+      "Febre tifoide e outras infecções bacterianas sistêmicas",
+      "Doença de Chagas aguda por via vetorial clássica (chagoma de inoculação, sinal de Romaña, ausência de padrão de surto alimentar)",
+      "Outras causas de derrame pericárdico agudo e tamponamento cardíaco não relacionadas à infecção por T. cruzi",
+      "Reagudização/reativação de doença de Chagas crônica em paciente imunossuprimido, quando há sorologia crônica prévia desconhecida"
+    ],
+    "tests": [
+      "Exame parasitológico direto (pesquisa a fresco/gota espessa) em sangue periférico, idealmente com paciente febril e dentro do primeiro mês de sintomas — método mais sensível na fase aguda",
+      "Métodos de concentração (Strout, micro-hematócrito, creme leucocitário) quando o exame direto é negativo ou o quadro já ultrapassou um mês",
+      "PCR para Trypanosoma cruzi (kDNA), útil para detecção precoce e para tipagem da unidade discreta de tipagem (DTU) em investigação de surto",
+      "Sorologia com dois testes de princípios metodológicos distintos, reservada para quando os métodos parasitológicos diretos são persistentemente negativos com suspeita mantida",
+      "Eletrocardiograma de 12 derivações na avaliação inicial e seriado durante o seguimento",
+      "Ecocardiograma transtorácico, com pesquisa dirigida de derrame pericárdico e de função sistólica global",
+      "Ressonância magnética cardíaca com realce tardio, quando disponível, para caracterização e seguimento de lesão miocárdica",
+      "Transaminases (AST/ALT), que se correlacionam com a carga parasitária circulante",
+      "Investigação epidemiológica da fonte alimentar comum e testagem de outros indivíduos expostos ao mesmo alimento/bebida"
+    ],
+    "red_flags": [
+      "Sinais de tamponamento cardíaco (hipotensão, turgência jugular, bulhas abafadas) em paciente com derrame pericárdico documentado",
+      "Apresentação de miocardite fulminante, com comprometimento hemodinâmico de instalação rápida",
+      "Febre persistente além de um mês sem diagnóstico alternativo confirmado",
+      "Sinais novos de insuficiência cardíaca em pessoa previamente hígida com exposição compatível com surto",
+      "Múltiplos casos simultâneos associados à mesma fonte alimentar — sinal de surto que exige notificação compulsória e investigação ativa de outros expostos",
+      "Elevação importante de AST/ALT, marcador indireto de alta carga parasitária",
+      "Alteração eletrocardiográfica nova em paciente febril de área com surto ativo",
+      "Diagnóstico não confirmado apenas por sorologia negativa isolada na fase aguda — método pouco sensível nessa janela"
+    ],
+    "ambulatory_flow": [
+      "Diante de suspeita clínica e epidemiológica compatível (febre, área de surto, exposição alimentar comum), colher exame parasitológico direto (gota espessa/exame a fresco) com o paciente ainda febril.",
+      "Se negativo e sintomas com menos de um mês, repetir ou associar método de concentração; se mais de um mês ou persistentemente negativo com suspeita mantida, associar sorologia (dois testes) e considerar PCR.",
+      "Confirmado o diagnóstico, notificar a vigilância epidemiológica (doença de notificação compulsória) e investigar ativamente outros indivíduos que compartilharam a mesma fonte alimentar, mesmo assintomáticos.",
+      "Solicitar eletrocardiograma e ecocardiograma transtorácico basais em todo caso confirmado, com atenção dirigida a derrame pericárdico.",
+      "Iniciar benznidazol assim que confirmado o diagnóstico, independentemente da via de transmissão (indicação Classe I na fase aguda), seguindo protocolo de dose/duração vigente.",
+      "Monitorizar efeitos adversos hematológicos, hepáticos, dermatológicos e neurológicos ao longo dos 60 dias de tratamento.",
+      "Reavaliar com eletrocardiograma e ecocardiograma ao final do tratamento e novamente em torno de 1 ano, mesmo sem sintomas cardíacos na apresentação inicial.",
+      "Manter seguimento cardiológico até normalização documentada dos achados ou estabilização clara — alta da fase febril não equivale a alta cardiológica."
+    ],
+    "emergency_flow": [
+      "Insuficiência cardíaca aguda ou choque cardiogênico em paciente de área endêmica/surto: manejar conforme protocolo geral de insuficiência cardíaca aguda/choque cardiogênico e colher exame parasitológico direto (gota espessa) sem aguardar sorologia antes de iniciar tratamento etiológico.",
+      "Suspeita de derrame pericárdico com fisiologia de tamponamento: ecocardiograma point-of-care urgente e pericardiocentese conforme protocolo geral de tamponamento cardíaco quando indicada.",
+      "Febre de início recente com edema e exposição alimentar compatível em área de surto: coletar gota espessa imediatamente enquanto o paciente estiver febril, notificar a vigilância epidemiológica e orientar testagem de outros expostos à mesma fonte.",
+      "Miocardite aguda inexplicada em paciente de área endêmica amazônica: incluir doença de Chagas aguda no diagnóstico diferencial inicial junto às causas virais, priorizando exame parasitológico direto e PCR precoces em vez de aguardar biópsia endomiocárdica."
+    ],
+    "tags": [
+      "doença de chagas",
+      "trypanosoma cruzi",
+      "transmissão oral",
+      "amazônia",
+      "surto alimentar",
+      "açaí",
+      "miocardite aguda",
+      "miocardite fulminante",
+      "derrame pericárdico",
+      "benznidazol",
+      "doença tropical negligenciada",
+      "gota espessa"
+    ],
+    "source_refs": [
+      "Nóbrega AA, Garcia MH, Tatto E, Obara MT, Costa E, Sobel J, Araujo WN. Oral transmission of Chagas disease by consumption of açaí palm fruit, Brazil. Emerg Infect Dis. 2009;15(4):653-655. DOI: 10.3201/eid1504.081450. PMID: 19331764.",
+      "Barbosa MDGV, et al. Oral Transmission of Trypanosoma cruzi, Brazilian Amazon. Emerg Infect Dis. 2019;25(1). DOI: 10.3201/eid2501.180646. PMID: 30561299.",
+      "Epidemiology of Acute Chagas Disease in the Amazon: Association between the açaí production chain and case reports in Pará state, Brazil. Rev Soc Bras Med Trop. 2026. DOI: 10.1590/0037-8682-0360-2025. PMID: 41920169.",
+      "Virulence of Trypanosoma cruzi from vector and reservoir in in natura açaí pulp resulting in food-borne acute Chagas disease. Exp Parasitol. 2019. DOI: 10.1016/j.exppara.2018.10.012. PMID: 30439347.",
+      "Shikanai-Yasuda MA, Carvalho NB. Oral transmission of Chagas disease. Clin Infect Dis. 2012;54(6):845-852. DOI: 10.1093/cid/cir956. PMID: 22238161.",
+      "Acute Chagas disease associated with ingestion of contaminated food in Brazilian western Amazon. Trop Med Int Health. 2023. DOI: 10.1111/tmi.13899. PMID: 37278113.",
+      "Human acute Chagas disease: changes in factor VII, activated protein C and hepatic enzymes from patients of oral outbreaks in Pará State. Mem Inst Oswaldo Cruz. 2020. DOI: 10.1590/0074-02760190364. PMID: 32130371.",
+      "Cardiac Evaluation in the Acute Phase of Chagas' Disease with Post-Treatment Evolution in Patients Attended in the State of Amazonas, Brazil. Arq Bras Cardiol. 2019. DOI: 10.5935/abc.20190007. PMID: 30916205.",
+      "Myocardial Injury in Patients With Acute and Subacute Chagas Disease in the Brazilian Amazon Using Cardiovascular Magnetic Resonance. J Am Heart Assoc. 2022. DOI: 10.1161/JAHA.121.021806. PMID: 35730620.",
+      "The Selvester QRS score as an estimative of myocardial injury in acute chagasic patients from the Brazilian Amazon. BMC Infect Dis. 2021. DOI: 10.1186/s12879-021-06083-x. PMID: 33926389.",
+      "Detection of Trypanosoma cruzi DTUs TcI and TcIV in two outbreaks of orally-transmitted Chagas disease in the Northern region of Brazil. Rev Inst Med Trop Sao Paulo. 2023. DOI: 10.1590/S1678-9946202365007. PMID: 36651468.",
+      "Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6). DOI: 10.36660/abc.20230269."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/19331764/",
+      "https://pubmed.ncbi.nlm.nih.gov/30561299/",
+      "https://pubmed.ncbi.nlm.nih.gov/41920169/",
+      "https://pubmed.ncbi.nlm.nih.gov/30439347/",
+      "https://pubmed.ncbi.nlm.nih.gov/22238161/",
+      "https://pubmed.ncbi.nlm.nih.gov/37278113/",
+      "https://pubmed.ncbi.nlm.nih.gov/32130371/",
+      "https://pubmed.ncbi.nlm.nih.gov/30916205/",
+      "https://pubmed.ncbi.nlm.nih.gov/35730620/",
+      "https://pubmed.ncbi.nlm.nih.gov/33926389/",
+      "https://pubmed.ncbi.nlm.nih.gov/36651468/",
+      "https://doi.org/10.36660/abc.20230269"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-chagas-aguda-por-transmissao-oral-surtos-na-amazonia-e-miocardite-fulminante"
+    ],
+    "patient_material_slug": null
   }
 ]
