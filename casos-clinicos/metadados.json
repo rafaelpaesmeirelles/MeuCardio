@@ -17541,5 +17541,27 @@
       "Boehnel C, Rickli H, Graf L, Maeder MT. Coronary angiography with or without percutaneous coronary intervention in patients with hemophilia-Systematic review. Catheter Cardiovasc Interv. 2018 Jul;92(1):1-15. doi: 10.1002/ccd.27255. PMID: 28895303."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cardiomiopatia-acromegalica",
+    "titulo": "Cardiomiopatia acromegálica: hipertrofia biventricular e valvopatia",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Homem de 44 anos procura atendimento por dispneia aos esforços progressiva há 8 meses e palpitações ocasionais. Ao exame, chamam atenção o aumento do tamanho das mãos e dos pés (relata ter trocado luvas e sapatos nos últimos dois anos), prognatismo, sulcos faciais grosseiros e macroglossia. O ecocardiograma transtorácico mostra hipertrofia biventricular concêntrica, fração de ejeção do ventrículo esquerdo de 42% e insuficiência mitral moderada com folhetos espessados, sem calcificação valvar significativa.",
+    "pergunta": "Diante do quadro sugestivo de cardiomiopatia acromegálica com disfunção sistólica e valvopatia, qual é a conduta essencial para deter a progressão do comprometimento cardíaco?",
+    "opcoes": [
+      "Iniciar tratamento dirigido ao excesso de GH/IGF-1 (cirurgia transesfenoidal do adenoma hipofisário e/ou análogos de somatostatina), já que o controle da doença de base é determinante para deter a progressão da cardiomiopatia",
+      "Prescrever estatina de alta potência, pois a valvopatia decorre de calcificação senil acelerada pelo excesso de GH",
+      "Encaminhar diretamente para troca valvar cirúrgica, independentemente do controle hormonal, já que a lesão valvar é a prioridade terapêutica isolada nesse cenário",
+      "Iniciar apenas otimização de terapia padrão para insuficiência cardíaca (IECA, betabloqueador, diurético), sem necessidade de investigar ou tratar a acromegalia subjacente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O quadro descreve a cardiomiopatia acromegálica, principal causa de morbimortalidade em pacientes com acromegalia não tratada. O excesso crônico de GH e IGF-1 exerce efeito trófico direto sobre miócitos e sobre o tecido valvar, levando a hipertrofia biventricular concêntrica, disfunção diastólica que evolui para disfunção sistólica, arritmias e espessamento/regurgitação valvar (mitral e aórtica são as mais acometidas) por um mecanismo distinto da calcificação senil degenerativa — por isso os folhetos aparecem espessados, mas sem calcificação relevante (Sharma AN et al., Clin Cardiol 2018, PMID 29574794). O estudo caso-controle de Colao et al. (J Clin Endocrinol Metab 2003, PMID 12843165) demonstrou prevalência muito maior de valvopatia em acromegálicos ativos (86%) e mesmo em curados (73%) comparados a controles (24%), reforçando que o dano valvar tende a persistir e que o reconhecimento e tratamento precoces do excesso hormonal são cruciais para limitar a progressão do acometimento cardíaco. O pilar terapêutico, portanto, não é a terapia sintomática de insuficiência cardíaca isolada nem a cirurgia valvar isolada, mas sim normalizar GH/IGF-1 por ressecção transesfenoidal do adenoma hipofisário e/ou terapia medicamentosa (análogos de somatostatina, antagonista do receptor de GH, agonistas dopaminérgicos), o que reduz a hipertrofia miocárdica, melhora a função sistólica e diminui a mortalidade cardiovascular (Sherin RPV et al., Endocr Pract 2024, PMID 39332498). A terapia de insuficiência cardíaca e, quando indicada, a correção valvar cirúrgica são complementares, mas não substituem o controle da doença hormonal de base.",
+    "source_refs": [
+      "Sharma AN, Tan M, Amsterdam EA, Singh GD. Acromegalic cardiomyopathy: Epidemiology, diagnosis, and management. Clin Cardiol. 2018;41(3):419-425. doi:10.1002/clc.22867. PMID: 29574794.",
+      "Colao A, Spinelli L, Marzullo P, et al. High prevalence of cardiac valve disease in acromegaly: an observational, analytical, case-control study. J Clin Endocrinol Metab. 2003;88(7):3196-3201. doi:10.1210/jc.2002-021099. PMID: 12843165.",
+      "Sherin RPV, et al. Cardiovascular Disorders Associated With Acromegaly: an Update. Endocr Pract. 2024;30(12):1212-1219. doi:10.1016/j.eprac.2024.09.014. PMID: 39332498."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
