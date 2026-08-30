@@ -842,3 +842,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 16 (3 descartados por colisão) | 184 |
 | **Total** | **4.900** | **137** | **4.763** |
+
+## Lote 42 — concluído (commit dfd2598b)
+
+- **doencas**: +2 — `crise-adrenal`, `tempestade-tireotoxica` (pareadas com lote 41; slugs curtos e distintos dos documentos técnicos irmãos).
+- **checklists**: +2 — choque refratário/crise adrenal; tempestade tireotóxica.
+- **casos-clinicos**: +2 — intoxicação por Nerium oleander em criança; "chá de sapo" (bufotoxinas) mimetizando toxicidade digitálica — dois casos gêmeos de glicosídeo cardíaco natural com a mesma armadilha central (descartar por ausência de digoxina prescrita).
+- **material-paciente**: +2 — corticoide crônico/crise adrenal (dose de estresse, pulseira, kit de emergência); Gaucher tipo 3c e o coração (público: famílias de crianças/adolescentes).
+- **Correção durante integração**: dois agentes calcularam `prevalence_rank` livre de forma independente e ambos chegaram a 11 (cada um sem visibilidade do outro); ajustado para 11 e 12 antes de integrar, evitando duplicata.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.332 (10.281 revisado + 51 pendente_revisao).
+
+### Status consolidado (após Lote 42)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 24 | 2.376 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 28 | 572 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 18 (3 descartados por colisão) | 182 |
+| **Total** | **4.900** | **145** | **4.755** |
