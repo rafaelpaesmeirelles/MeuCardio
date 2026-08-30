@@ -194,3 +194,11 @@ registros totais.
 
 **Total canônico projetado após Lote 8**: 10.219 (10.189 revisado + 30
 pendente_revisao nesta branch).
+
+## Lote 9 — concluído (commit ver git log, 30/08/2026)
+
+3 itens (GPA, policondrite recidivante, EGPA). Gates limpos, 10.222
+registros totais.
+
+**Total canônico projetado após Lote 9**: 10.222 (10.189 revisado + 33
+pendente_revisao nesta branch).
