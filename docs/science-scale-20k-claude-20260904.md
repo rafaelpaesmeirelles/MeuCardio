@@ -202,3 +202,23 @@ registros totais.
 
 **Total canônico projetado após Lote 9**: 10.222 (10.189 revisado + 33
 pendente_revisao nesta branch).
+
+## Lote 10 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (PRKAG2, Naxos/Carvajal). Gates limpos, 10.224 registros
+totais.
+
+**Total canônico projetado após Lote 10**: 10.224 (10.189 revisado +
+35 pendente_revisao nesta branch).
+
+## Status consolidado após 10 lotes
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 4 | 2.396 |
+| Casos clínicos | 900 | 14 | 886 |
+| Checklists | 600 | 8 | 592 |
+| Materiais-paciente | 500 | 9 | 491 |
+| Trilhas | 300 | 0 | 300 |
+| Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
+| **Total** | **4.900** | **35** | **4.865** |
