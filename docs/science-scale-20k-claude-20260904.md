@@ -555,3 +555,32 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 5 (3 descartados por colisão) | 195 |
 | **Total** | **4.900** | **82** | **4.818** |
+
+## Lote 30 — concluído (commit 8260bbb7)
+
+- **checklists**: +2 — `fibroelastoma-papilar-cardiaco-decisao-ressecao-vs-vigilancia` (lote 22), `rastreio-de-amiloidose-cardiaca-por-transtirretina-em-idoso-encaminhado-para-tavi` (lote 24).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.271 (10.189 revisado + 82 pendente_revisao).
+
+### Status consolidado (após Lote 30) — marco: 30 lotes, 84 itens entregues
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 11 | 2.389 |
+| Casos clínicos | 900 | 30 | 870 |
+| Checklists | 600 | 14 | 586 |
+| Materiais-paciente | 500 | 22 | 478 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 5 (3 descartados por colisão) | 195 |
+| **Total** | **4.900** | **84** | **4.816** |
+
+**Nota de ritmo**: 84 itens em 30 lotes ao longo desta sessão contínua.
+No ritmo atual, a cota completa exigiria muitas sessões adicionais —
+consistente com a natureza indefinida da diretiva (prazo 04/09,
+trabalho contínuo até ordem explícita do Rafael para pausar). Padrões
+consolidados que seguem sendo reaplicados: mineração em interseções
+raras cardiovasculares (alta taxa de acerto, ~0 colisões nos últimos
+15 lotes), verificação manual de cada link "Tudo com Tudo" antes do
+commit (pegou 1 alucinação real no lote 20, 1 falso-positivo por
+aspas no lote 28), e pareamento retroativo de documento_slug quando
+um documento novo cobre um material-paciente pré-existente.
