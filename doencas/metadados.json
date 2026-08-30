@@ -37437,5 +37437,98 @@
       "doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "doenca-de-behcet",
+    "name": "Doença de Behçet",
+    "aliases": [
+      "Behçet",
+      "síndrome de Behçet",
+      "doença de Adamantiades-Behçet",
+      "Behçet vascular"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Vasculite sistêmica primária de adultos jovens, notável por ser a única vasculite a acometer de forma tipicamente esperada tanto artérias quanto veias no mesmo paciente — aneurismas de artéria pulmonar, síndrome de Hughes-Stovin, trombose intracardíaca de ventrículo direito e regurgitação aórtica por aortite —, com uma inversão terapêutica central: o tratamento da trombose vascular é a imunossupressão, e a anticoagulação pode ser contraindicada quando há aneurisma de artéria pulmonar não excluído, pelo risco de hemoptise maciça fatal.",
+    "presentation": [
+      "Adulto jovem (20-40 anos), com predomínio de gravidade vascular e ocular em homens, associação com HLA-B51 e distribuição geográfica clássica ao longo da antiga Rota da Seda",
+      "Úlceras orais recorrentes, úlceras genitais, lesões cutâneas (eritema nodoso, pseudofoliculite), uveíte e teste de patergia cutânea positivo",
+      "Tromboflebite superficial migratória recorrente",
+      "Trombose venosa profunda multissegmentar ou em sítios atípicos (veia cava, veias suprahepáticas — síndrome de Budd-Chiari, seios venosos cerebrais)",
+      "Trombose arterial ou aneurisma (aorta, artéria pulmonar) em paciente jovem sem os fatores de risco cardiovascular habituais",
+      "Hemoptise, que pode ser a primeira manifestação de aneurisma de artéria pulmonar",
+      "Achado incidental de trombo intracardíaco — com predomínio incomum em ventrículo direito — ou de insuficiência aórtica por aortite"
+    ],
+    "differentials": [
+      "Doença relacionada a IgG4 (aortite/periaortite)",
+      "Doença de Erdheim-Chester",
+      "Arterite de Takayasu e arterite de células gigantes",
+      "Trombofilias hereditárias (fator V de Leiden, mutação da protrombina, deficiência de antitrombina/proteína C/proteína S) e síndrome antifosfolípide",
+      "Tromboembolismo pulmonar 'comum', sem componente aneurismático/vasculítico associado",
+      "Poliarterite nodosa e vasculites ANCA-associadas",
+      "Outras massas intracardíacas: mixoma, endocardite trombótica não bacteriana, trombo mural por disfunção ventricular"
+    ],
+    "tests": [
+      "Avaliação clínica baseada em critérios de classificação (International Study Group / International Criteria for Behçet's Disease)",
+      "Teste de patergia cutânea",
+      "Angiotomografia de tórax para rastreio obrigatório de aneurisma de artéria pulmonar antes de qualquer anticoagulação",
+      "Ecocardiograma transtorácico/transesofágico e ressonância cardíaca para caracterização de trombo intracardíaco, valvopatia aórtica ou massa cardíaca",
+      "Angiotomografia ou angiorressonância de aorta e demais territórios arteriais para mapeamento de aneurismas e pseudoaneurismas",
+      "Doppler venoso de membros e avaliação de territórios atípicos (veia cava, veias suprahepáticas, seios venosos cerebrais) quando indicado",
+      "HLA-B51 como dado de apoio, sem valor de critério diagnóstico isolado"
+    ],
+    "red_flags": [
+      "Hemoptise em paciente com Behçet conhecido ou suspeito é emergência que exige investigação imediata de aneurisma de artéria pulmonar",
+      "Trombo intracardíaco em ventrículo direito em paciente jovem sem cardiopatia estrutural prévia",
+      "Trombose venosa recorrente, multissegmentar, em sítio atípico ou refratária à anticoagulação isolada",
+      "Aneurisma de artéria pulmonar não rastreado antes de anticoagular TVP ou trombo intracardíaco em paciente com Behçet",
+      "Pseudoaneurisma após qualquer intervenção sobre a parede vascular (punção, cirurgia, endoprótese, sutura valvar) em paciente com Behçet"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de Behçet vascular em paciente jovem com trombose atípica, recorrente, multissegmentar ou refratária, especialmente associada a úlceras orais/genitais recorrentes ou uveíte",
+      "Encaminhar para avaliação reumatológica para confirmação diagnóstica por critérios de classificação",
+      "Antes de qualquer anticoagulação, rastrear aneurisma de artéria pulmonar com angiotomografia de tórax",
+      "Planejar imunossupressão (glicocorticoide associado a azatioprina, ciclofosfamida ou ciclosporina A; anti-TNF em refratariedade) como pilar terapêutico da doença vascular, não a anticoagulação isolada",
+      "Se cirurgia vascular ou valvar eletiva for necessária, priorizar controle inflamatório prévio com imunossupressão para reduzir o risco de pseudoaneurisma ou deiscência no sítio de reparo"
+    ],
+    "emergency_flow": [
+      "Hemoptise em paciente com Behçet conhecido ou suspeito: investigação imediata de aneurisma de artéria pulmonar, sem assumir por default causa infecciosa ou TEP comum",
+      "Suspeita de trombo intracardíaco ou TVP nova em paciente com Behçet: não anticoagular antes de excluir aneurisma de artéria pulmonar por angiotomografia de tórax",
+      "Instabilidade por insuficiência aórtica aguda, pseudoaneurisma ou dissecção: avaliação de emergência com imagem cardíaca e discussão com cirurgia cardiovascular, considerando controle inflamatório prévio quando a urgência clínica permitir",
+      "Discussão multidisciplinar precoce (cardiologia, reumatologia, cirurgia vascular/cardíaca) diante de aneurisma de artéria pulmonar sintomático, em crescimento ou já sangrando"
+    ],
+    "tags": [
+      "vasculite",
+      "trombose",
+      "aneurisma de artéria pulmonar",
+      "síndrome de hughes-stovin",
+      "trombo intracardíaco",
+      "regurgitação aórtica",
+      "imunossupressão",
+      "hemoptise"
+    ],
+    "source_refs": [
+      "Yazici Y, Hatemi G, Bodaghi B, et al. Behçet syndrome. Nat Rev Dis Primers. 2021;7:67. PMID: 34531393",
+      "Hatemi G, Christensen R, Bang D, et al. 2018 update of the EULAR recommendations for the management of Behçet's syndrome. Ann Rheum Dis. 2018;77(6):808-818. PMID: 29625968",
+      "Bettiol A, Alibaz-Oner F, Direskeneli H, et al. Vascular Behçet syndrome: from pathogenesis to treatment. Nat Rev Rheumatol. 2023;19(2):111-126. PMID: 36544027",
+      "Emmi G, Bettiol A, Silvestri E, et al. Vascular Behçet's syndrome: an update. Intern Emerg Med. 2019;14(5):645-652. PMID: 30499073",
+      "Khalid U, Saleem T. Hughes-Stovin syndrome. Orphanet J Rare Dis. 2011;6:15. PMID: 21489283",
+      "Geri G, Wechsler B, Thi Huong DL, et al. Spectrum of cardiac lesions in Behçet disease: a series of 52 patients. Medicine (Baltimore). 2012;91(1):25-34. PMID: 22198500",
+      "Aksu T, Tufekcioglu O. Intracardiac thrombus in Behçet's disease: four new cases and a comprehensive literature review. Rheumatol Int. 2015;35(12):1969-1978. PMID: 25381640",
+      "Ahn JK, Lee YS, Jeon CH, Koh EM, Cha HS. Treatment of venous thrombosis associated with Behçet's disease: immunosuppressive therapy alone versus immunosuppressive therapy plus anticoagulation. Clin Rheumatol. 2008;27(2):201-205. PMID: 17636362",
+      "Chuklin A, Chiasakul T, Uaprasert N. Anticoagulants and immunosuppressive therapy for thrombosis in Behçet's syndrome: a systematic review and meta-analysis. J Thromb Haemost. 2025. PMID: 40769432",
+      "Veilleux SP, et al. What the Cardiologist Should Know About Cardiac Involvement in Behçet Disease. Can J Cardiol. 2015;31(12):1485-1488. PMID: 26215987"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin"
+    ],
+    "patient_material_slug": null
   }
 ]

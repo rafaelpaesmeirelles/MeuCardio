@@ -35118,5 +35118,98 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "anticoagulacao-em-trombose-venosa-ou-trombo-intracardiaco-na-doenca-de-behcet",
+    "condicao": "Decisão de anticoagular trombose venosa profunda ou trombo intracardíaco em paciente com doença de Behçet confirmada ou suspeita",
+    "resumo": "Checklist de decisão para anticoagulação de TVP ou trombo intracardíaco em Behçet: reconhecer o gatilho clínico, rastrear obrigatoriamente aneurisma de artéria pulmonar com angiotomografia de tórax antes de anticoagular (risco de hemoptise maciça fatal), priorizar imunossupressão como pilar terapêutico e cobrir os cuidados periprocedimentais em caso de reparo de aneurisma.",
+    "documento_origem": "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Yazici Y, Hatemi G, Bodaghi B, et al. Behçet syndrome. Nat Rev Dis Primers. 2021;7:67. PMID: 34531393",
+      "Hatemi G, Christensen R, Bang D, et al. 2018 update of the EULAR recommendations for the management of Behçet's syndrome. Ann Rheum Dis. 2018;77(6):808-818. PMID: 29625968",
+      "Bettiol A, Alibaz-Oner F, Direskeneli H, et al. Vascular Behçet syndrome: from pathogenesis to treatment. Nat Rev Rheumatol. 2023;19(2):111-126. PMID: 36544027",
+      "Emmi G, Bettiol A, Silvestri E, et al. Vascular Behçet's syndrome: an update. Intern Emerg Med. 2019;14(5):645-652. PMID: 30499073",
+      "Khalid U, Saleem T. Hughes-Stovin syndrome. Orphanet J Rare Dis. 2011;6:15. PMID: 21489283",
+      "Geri G, Wechsler B, Thi Huong DL, et al. Spectrum of cardiac lesions in Behçet disease: a series of 52 patients. Medicine (Baltimore). 2012;91(1):25-34. PMID: 22198500",
+      "Aksu T, Tufekcioglu O. Intracardiac thrombus in Behçet's disease: four new cases and a comprehensive literature review. Rheumatol Int. 2015;35(12):1969-1978. PMID: 25381640",
+      "Ahn JK, Lee YS, Jeon CH, Koh EM, Cha HS. Treatment of venous thrombosis associated with Behçet's disease: immunosuppressive therapy alone versus immunosuppressive therapy plus anticoagulation. Clin Rheumatol. 2008;27(2):201-205. PMID: 17636362",
+      "Chuklin A, Chiasakul T, Uaprasert N. Anticoagulants and immunosuppressive therapy for thrombosis in Behçet's syndrome: a systematic review and meta-analysis. J Thromb Haemost. 2025. PMID: 40769432",
+      "Veilleux SP, et al. What the Cardiologist Should Know About Cardiac Involvement in Behçet Disease. Can J Cardiol. 2015;31(12):1485-1488. PMID: 26215987"
+    ],
+    "itens": [
+      {
+        "id": "behcet-gatilho-clinico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perfil clínico sugestivo de Behçet vascular reconhecido diante de TVP atípica, recorrente, multissegmentar ou refratária em paciente jovem, especialmente associada a úlceras orais/genitais recorrentes ou uveíte",
+        "origem_secao": "Quando suspeitar: perfil clínico e diagnóstico"
+      },
+      {
+        "id": "behcet-nao-assumir-tep-comum",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "TEV inaugural em paciente jovem com resposta inadequada à anticoagulação isolada, ou acompanhado de hemoptise, não foi assumido como tromboembolismo pulmonar comum sem excluir Behçet vascular",
+        "origem_secao": "Quando suspeitar: perfil clínico e diagnóstico"
+      },
+      {
+        "id": "behcet-angiotc-obrigatoria",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Angiotomografia de tórax para rastreio de aneurisma de artéria pulmonar solicitada e revisada ANTES de iniciar anticoagulação ou trombólise em qualquer TVP ou trombo intracardíaco de VD em paciente com Behçet confirmado ou suspeito",
+        "origem_secao": "A peculiaridade terapêutica central: imunossupressão, não apenas anticoagulação"
+      },
+      {
+        "id": "behcet-aneurisma-identificado-contraindicacao",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Se aneurisma de artéria pulmonar identificado (ou já conhecido), anticoagulação/trombólise reconhecida como potencialmente contraindicada pelo risco de hemoptise maciça fatal por ruptura, e decisão terapêutica discutida com reumatologia antes de qualquer anticoagulação",
+        "origem_secao": "A peculiaridade terapêutica central: imunossupressão, não apenas anticoagulação"
+      },
+      {
+        "id": "behcet-nao-confundir-trombo-tep",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Trombose in situ dentro de aneurisma de artéria pulmonar ou em ramos adjacentes não foi confundida radiologicamente com tromboembolismo pulmonar agudo antes de decidir por anticoagulação",
+        "origem_secao": "Aneurismas arteriais: o eixo pulmonar e a síndrome de Hughes-Stovin"
+      },
+      {
+        "id": "behcet-trombo-vd-especifico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Trombo intracardíaco localizado em ventrículo direito, em paciente jovem sem cardiopatia estrutural prévia, reconhecido como achado relativamente específico de Behçet e investigado com ecocardiograma transtorácico/transesofágico e ressonância cardíaca para diferenciar de mixoma, endocardite trombótica não bacteriana e trombo mural",
+        "origem_secao": "Trombose intracardíaca: o achado relativamente específico de Behçet"
+      },
+      {
+        "id": "behcet-imunossupressao-pilar",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Imunossupressão (glicocorticoide associado a azatioprina, ciclofosfamida ou ciclosporina A conforme gravidade/território, ou anti-TNF em refratariedade) estabelecida como pilar terapêutico central da trombose vascular de Behçet, não substituída por anticoagulação isolada",
+        "origem_secao": "A peculiaridade terapêutica central: imunossupressão, não apenas anticoagulação"
+      },
+      {
+        "id": "behcet-anticoag-nao-automatica",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação não iniciada de forma automática/reflexa como no TEV comum; benefício incerto da adição de anticoagulação à imunossupressão isolada reconhecido e discutido antes da decisão",
+        "origem_secao": "A peculiaridade terapêutica central: imunossupressão, não apenas anticoagulação"
+      },
+      {
+        "id": "behcet-periprocedimental-imunossupressao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se houver indicação de reparo cirúrgico ou endovascular de aneurisma (grande, em crescimento ou sangrando) ou de cirurgia valvar aórtica eletiva, imunossupressão iniciada/otimizada antes e mantida no perioperatório para reduzir risco de pseudoaneurisma ou deiscência no sítio de sutura/endoprótese",
+        "origem_secao": "Aneurismas arteriais: o eixo pulmonar e a síndrome de Hughes-Stovin; Acometimento valvar: regurgitação aórtica por aortite"
+      },
+      {
+        "id": "behcet-hemoptise-emergencia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Hemoptise em paciente com Behçet conhecido ou suspeito tratada como emergência com investigação imediata de aneurisma de artéria pulmonar, não assumida por default como infecciosa ou por TEP comum",
+        "origem_secao": "Pontos-chave para a prática cardiológica"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
