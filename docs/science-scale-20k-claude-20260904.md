@@ -178,3 +178,11 @@ limpos, 10.213 registros totais.
 pendente_revisao nesta branch: 8 checklists + 5 casos + 6 material-
 paciente + 2 documentos + 3 casos adicionais... ver commits para
 contagem exata por tipo).
+
+## Lote 7 — concluído (commit `ecd10b6e`, 30/08/2026)
+
+3 itens (FMF/pericardite, hiperparatireoidismo, cardiomiopatia por
+deficiência de carnitina). Gates limpos, 10.216 registros totais.
+
+**Total canônico projetado após Lote 7**: 10.216 (10.189 revisado + 27
+pendente_revisao nesta branch).
