@@ -61,6 +61,41 @@ def test_authenticated_home_matches_reference_board_structure():
     assert main.index(reference_import) < main.index(contrast_import)
 
 
+def test_home_clinical_cortex_keeps_every_action_real_and_responsive():
+    panel = _read("pages/PainelClinicalOS.tsx")
+    cortex = _read("styles/clinical-home-cortex.css")
+    main = _read("main.tsx")
+
+    for token in (
+        'ccc-clinical-cortex',
+        'O que este paciente precisa agora?',
+        'ccc-cortex__stage',
+        'ccc-cortex__connections',
+        'ccc-cortex__core',
+        'src="/corvia-mark-canonical.svg"',
+        'Tudo com Tudo',
+        'ccc-cortex__signals',
+        'A decisão final permanece médica.',
+    ):
+        assert token in panel
+
+    for token in (
+        '.ccc-cortex__network',
+        '.ccc-cortex__connections .ccc-action',
+        '.ccc-cortex__core',
+        '@media (max-width: 900px)',
+        '@media (prefers-reduced-motion: reduce)',
+    ):
+        assert token in cortex
+
+    cortex_import = 'import "./styles/clinical-home-cortex.css";'
+    personalization_import = 'import "./styles/home-desktop-symmetric-personalizable.css";'
+    contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
+    assert personalization_import in main
+    assert cortex_import in main
+    assert main.index(personalization_import) < main.index(cortex_import) < main.index(contrast_import)
+
+
 def test_mobile_quick_actions_default_to_two_rows_without_duplicate_originals():
     personalizer = _read("components/HomeQuickActionsPersonalizer.tsx")
     css = _read("styles/home-desktop-symmetric-personalizable.css")

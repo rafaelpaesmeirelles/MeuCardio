@@ -428,21 +428,56 @@ export default function PainelClinicalOS() {
     <div className="ccc-home ccc-home--board ccc-reference-board">
       <main className="ccc-home__main">
         <header className="ccc-home__welcome">
-          <h1>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}! <span aria-hidden="true">👋</span></h1>
-          <p>O que você precisa resolver agora?</p>
+          <span className="ccc-home__live"><i /> CorVIA Clinical OS</span>
+          <div>
+            <h1>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}!</h1>
+            <p>Seu centro de decisão clínica está pronto.</p>
+          </div>
         </header>
 
-        <form className="ccc-command" onSubmit={executar} role="search">
-          <Icone nome="busca" />
-          <input ref={inputRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute uma ação..." aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
-          <kbd>⌘ K</kbd>
-          <button type="submit" aria-label="Executar comando"><Icone nome="seta" /></button>
-        </form>
-        <div className="ccc-examples" aria-label="Exemplos de comandos"><span>Exemplos:</span>{EXEMPLOS.map((texto) => <button key={texto} type="button" onClick={() => usarExemplo(texto)}>{texto}</button>)}</div>
+        <section className="ccc-clinical-cortex" aria-labelledby="ccc-cortex-title">
+          <header className="ccc-cortex__copy">
+            <span><i /> Decisão conectada em tempo real</span>
+            <h2 id="ccc-cortex-title">O que este paciente precisa agora?</h2>
+            <p>Comece por uma pergunta. O CorVIA conecta clínica, exames, medicamentos, evidências e ações em um único raciocínio.</p>
+          </header>
 
-        <section className="ccc-section ccc-actions-section" aria-labelledby="ccc-actions-title">
-          <div className="ccc-section__head"><h2 id="ccc-actions-title">Ações rápidas</h2><Link to="/busca"><Icone nome="configuracao" /> Personalizar</Link></div>
-          <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
+          <div className="ccc-cortex__stage">
+            <div className="ccc-cortex__network" aria-hidden="true">
+              <i /><i /><i /><i />
+            </div>
+
+            <section className="ccc-section ccc-actions-section ccc-cortex__connections" aria-labelledby="ccc-actions-title">
+              <div className="ccc-section__head"><h2 id="ccc-actions-title">Conexões clínicas</h2><Link to="/busca"><Icone nome="configuracao" /> Personalizar</Link></div>
+              <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span><Icone nome="seta" className="ccc-action__arrow" /></Link>)}</div>
+            </section>
+
+            <div className="ccc-cortex__core">
+              <div className="ccc-cortex__mark" aria-hidden="true">
+                <span /><span /><span />
+                <img src="/corvia-mark-canonical.svg" alt="" />
+              </div>
+              <span className="ccc-cortex__eyebrow">CorVIA Intelligence</span>
+              <strong>Tudo com Tudo</strong>
+              <p>Um assunto, todas as conexões</p>
+              <form className="ccc-command" onSubmit={executar} role="search">
+                <Icone nome="busca" />
+                <input ref={inputRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute..." aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
+                <kbd>⌘ K</kbd>
+                <button type="submit" aria-label="Conectar e executar"><span>Conectar</span><Icone nome="seta" /></button>
+              </form>
+              <div className="ccc-examples" aria-label="Exemplos de comandos">{EXEMPLOS.slice(0, 3).map((texto) => <button key={texto} type="button" onClick={() => usarExemplo(texto)}>{texto}</button>)}</div>
+            </div>
+          </div>
+
+          <div className="ccc-cortex__signals" aria-label="Sinais do centro clínico">
+            <Link to="/agenda" data-tone="cyan"><Icone nome="agenda" /><span><small>Hoje</small><strong>{compromissosHoje.length} compromisso{compromissosHoje.length === 1 ? "" : "s"}</strong></span></Link>
+            <Link to="/biblioteca" data-tone="blue"><Icone nome="conhecimento" /><span><small>Conhecimento</small><strong>{catalogo?.published_total ?? catalogo?.total ?? "—"} conteúdos</strong></span></Link>
+            <Link to="/evidencias" data-tone="violet"><Icone nome="evidencia" /><span><small>Decisão</small><strong>{evidencias ?? "—"} evidências</strong></span></Link>
+            <Link to="/estudos" data-tone="amber"><Icone nome="indicadores" /><span><small>Ciência</small><strong>{estudos ?? "—"} estudos</strong></span></Link>
+            <button type="button" onClick={abrirAssistentePessoal}><span className="ccc-spark">✦</span><span><small>Assistente pessoal</small><strong>{pendencias || pacientes || 0} item(ns) em atenção</strong></span><Icone nome="seta" /></button>
+          </div>
+          <p className="ccc-cortex__safety"><Icone nome="check" /> Apoio à decisão com evidências rastreáveis. A decisão final permanece médica.</p>
         </section>
 
         <section className="ccc-mobile-summary ccc-reference-summary" aria-label="Resumo do dia e próximo deslocamento">
