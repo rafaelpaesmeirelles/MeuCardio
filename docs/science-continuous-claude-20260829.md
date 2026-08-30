@@ -1403,7 +1403,30 @@ métodos gráficos.
   via NCBI e-utils. Nenhuma diretriz SBC/AHA-ACC dedicada localizada —
   declarado. Gates limpos. Total: 423 checklists.
 
-## Lote 63 (planejado)
+## Lote 63 — concluído (SHA 4eefa8de) — total 91 commits
+
+- checklist `fistula-arterial-coronariana-congenita` — gap genuíno:
+  zero menção no corpus sob qualquer grafia. Nenhum PR aberto (PR #697
+  é MINOCA/SCAD, entidade adquirida distinta). 6 itens: classificação
+  de Sakakibara (1966) com ressalva de que só título/resumo foi
+  verificado, não texto integral; diferenciação formal frente a AAOCA
+  (terminação distal anômala vs. origem/curso proximal anômalo);
+  epidemiologia — 0,18% em série angiográfica de 126.595 pacientes,
+  fechamento espontâneo em 30,3% de crianças pequenas, com
+  inconsistência aritmética sinalizada explicitamente numa cifra
+  publicada em Arq Bras Cardiol; apresentação clínica estratificada por
+  idade (79% assintomática em crianças vs. 71% sintomática em adultos);
+  abordagem diagnóstica; indicações de fechamento — declarado que a
+  diretriz AHA/ACC 2018 não pôde ser verificada quanto a COR/LOE
+  específico (paywall, sem cópia PMC) e nenhuma diretriz SBC localizada;
+  desfechos do fechamento percutâneo vs. cirúrgico. 15 fontes via NCBI
+  e-utils. Correção de processo: o subagente inicialmente removeu toda
+  acentuação do texto corrido (mal-entendido da instrução "ASCII", que
+  deveria valer só para slug/id) — reenviado ao mesmo agente para
+  correção antes de integrar, sem re-pesquisar. Gates limpos. Total:
+  424 checklists.
+
+## Lote 64 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
