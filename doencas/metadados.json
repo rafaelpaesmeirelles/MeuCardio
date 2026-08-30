@@ -37530,5 +37530,172 @@
       "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "fibroelastoma-papilar-cardiaco",
+    "name": "Fibroelastoma papilar cardíaco",
+    "aliases": [
+      "fibroelastoma papilar",
+      "papillary fibroelastoma",
+      "tumor valvar fibroelastoma",
+      "fibroelastoma cardíaco"
+    ],
+    "area": "geral",
+    "category": "tumor_cardiaco",
+    "subtype": "tumor_valvar_benigno",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Neoplasia benigna de origem endocárdica, pediculada, que se implanta preferencialmente nas valvas do coração esquerdo — o tumor cardíaco valvar primário mais comum do adulto. É quase sempre assintomática e achada de forma incidental ao ecocardiograma; quando sintomática, a apresentação é dominada por fenômeno embólico (AVC/AIT, embolia coronariana ou periférica), e não por disfunção valvar.",
+    "presentation": [
+      "Achado incidental assintomático em ecocardiograma pedido por outro motivo",
+      "AVC isquêmico ou ataque isquêmico transitório sem outra fonte cardioembólica óbvia, especialmente em paciente jovem",
+      "Síndrome coronariana aguda por embolia coronariana, sobretudo com fibroelastoma aórtico próximo a óstio coronariano, inclusive sem fatores de risco aterosclerótico",
+      "Embolia sistêmica periférica (membro, rim, baço) a partir de fibroelastoma em valva esquerda",
+      "Embolia pulmonar quando a origem é em valva tricúspide ou pulmonar (bem menos comum)",
+      "Raramente sopro novo ou sinais de disfunção valvar, já que o tumor raramente causa estenose ou insuficiência hemodinamicamente relevante"
+    ],
+    "differentials": [
+      "Vegetação infecciosa (endocardite) — contorno mais irregular, acomete a linha de coaptação, contexto de febre/hemoculturas positivas/critérios de Duke-ISCVID",
+      "Trombo valvar ou mural — base de implantação mais larga, movimento em bloco, contexto de fibrilação atrial, disfunção ventricular, cateter ou prótese",
+      "Mixoma — tipicamente maior, nasce no septo interatrial (fossa oval) e não na superfície valvar, mobilidade em bloco pedunculado, sintomas obstrutivos posicionais",
+      "Excrescência de Lambl (valvular strand) — filiforme, mais fina, frequentemente múltipla, implantada na própria linha de coaptação, de origem degenerativa e não neoplásica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico como exame de triagem inicial",
+      "Ecocardiograma transesofágico quando a suspeita persiste ou quando tamanho, mobilidade e implantação mudam a conduta — maior sensibilidade para massas pequenas e móveis",
+      "Avaliação clínica e laboratorial dirigida a excluir endocardite infecciosa (hemoculturas, critérios de Duke-ISCVID) quando o quadro é ambíguo",
+      "Investigação de fonte cardioembólica alternativa (fibrilação atrial, trombo em VE, placa aórtica complexa) diante de evento embólico sem etiologia aparente",
+      "Confirmação anatomopatológica quando há ressecção cirúrgica"
+    ],
+    "red_flags": [
+      "Evento embólico prévio atribuível ao tumor (AVC, AIT, embolia coronariana ou periférica sem outra causa mais provável)",
+      "Localização em valva do coração esquerdo (aórtica ou mitral)",
+      "Tamanho maior, próximo ou acima de aproximadamente 1 cm",
+      "Mobilidade alta, com excursão livre e ampla das frondes",
+      "Pedículo longo e fino, particularmente próximo a óstio coronariano"
+    ],
+    "ambulatory_flow": [
+      "Diante de achado ecocardiográfico incidental sugestivo (massa pequena, pediculada, bem demarcada, móvel, aspecto cintilante), correlacionar localização, tamanho e mobilidade antes de definir conduta",
+      "Excluir diagnósticos diferenciais pelo contexto clínico (febre e hemoculturas para endocardite; fibrilação atrial, disfunção ventricular ou prótese para trombo) antes de assumir fibroelastoma",
+      "Em tumor assintomático, sem evento embólico prévio, em valva direita, pequeno e de mobilidade limitada, ou com risco cirúrgico proibitivo: seguir vigilância com ecocardiograma seriado",
+      "No seguimento, reavaliar crescimento, mudança de mobilidade e qualquer novo sintoma compatível com embolia, o que reabre a indicação cirúrgica de imediato",
+      "Encaminhar para avaliação de cirurgia cardíaca quando os fatores de risco embólico se acumulam (valva esquerda, tamanho maior, mobilidade alta, pedículo próximo a óstio coronariano), mesmo sem evento prévio"
+    ],
+    "emergency_flow": [
+      "Diante de AVC/AIT, síndrome coronariana aguda ou embolia periférica em paciente jovem ou sem fonte cardioembólica óbvia, incluir ecocardiograma (transtorácico e, se necessário, transesofágico) na investigação etiológica",
+      "Uma vez identificado fibroelastoma como fonte embólica provável, tratar o evento agudo conforme protocolo específico (AVC, SCA ou isquemia de membro) e encaminhar para avaliação cirúrgica cardíaca",
+      "Não iniciar antibioticoterapia empírica prolongada para massa valvar móvel sem reavaliar o contexto clínico de endocardite (febre, hemoculturas, critérios de Duke-ISCVID)",
+      "Evento embólico prévio já atribuído ao tumor é indicação de ressecção cirúrgica para prevenir recorrência — não adiar por o tumor 'ser pequeno'"
+    ],
+    "tags": [
+      "fibroelastoma papilar",
+      "tumor cardíaco",
+      "tumor valvar",
+      "embolia",
+      "AVC criptogênico",
+      "ecocardiograma transesofágico",
+      "cirurgia cardíaca",
+      "diagnóstico diferencial de massa valvar"
+    ],
+    "source_refs": [
+      "Gowda RM, Khan IA, Nair CK, Mehta NJ, Vasavada BC, Sacchi TJ. Cardiac papillary fibroelastoma: a comprehensive analysis of 725 cases. Am Heart J. 2003;146(3):404-410. PMID: 12947356",
+      "Klarich KW, Enriquez-Sarano M, Gura GM, Edwards WD, Tajik AJ, Seward JB. Papillary fibroelastoma: echocardiographic characteristics for diagnosis and pathologic correlation. J Am Coll Cardiol. 1997;30(3):784-790. PMID: 9283541",
+      "Tamin SS, Maleszewski JJ, Scott CG, Khan SK, Edwards WD, Bruce CJ, Klarich KW. Prognostic and Bioepidemiologic Implications of Papillary Fibroelastomas. J Am Coll Cardiol. 2015;65(22):2420-2429. PMID: 26046736",
+      "Wolf RC, Spiess J, Vasic N, Wolf SS, Beisse F, Klöppel S, Otti A, Grön G, Freudenmann RW. Valvular strands and ischemic stroke. Eur Neurol. 2007. PMID: 17312371"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "fibroelastoma-papilar-cardiaco-diagnostico-ecocardiografico-risco-embolico-e-indicacao-cirurgica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-poems",
+    "name": "Síndrome POEMS",
+    "aliases": [
+      "síndrome de Crow-Fukase",
+      "doença de Takatsuki",
+      "PEP syndrome"
+    ],
+    "area": "geral",
+    "category": "circulacao_pulmonar",
+    "subtype": "grupo_5_esc_ers_2022_doenca_sistemica",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Síndrome paraneoplásica rara decorrente de discrasia plasmocitária clonal produtora de cadeia leve lambda, com hipersecreção de VEGF como elo fisiopatológico central; hipertensão pulmonar e sobrecarga de volume extravascular (derrame pericárdico, derrame pleural, ascite, edema) são manifestações cardiovasculares reconhecidas e, muitas vezes, a pista inicial que leva o paciente ao cardiologista antes da suspeita hematológica.",
+    "presentation": [
+      "Polineuropatia sensitivo-motora simétrica, subaguda e de predomínio distal, com hipoestesia em bota e arreflexia",
+      "Organomegalia: hepatomegalia, esplenomegalia ou linfadenopatia",
+      "Endocrinopatia: hipotireoidismo, insuficiência adrenal, hipogonadismo, alterações do metabolismo da glicose",
+      "Proteína monoclonal (proteína M), quase sempre de cadeia leve lambda, à eletroforese/imunofixação sérica",
+      "Alterações de pele: hiperpigmentação difusa, espessamento cutâneo, angiomas rubi, hipertricose",
+      "Hipertensão pulmonar, muitas vezes identificada por ecocardiograma em investigação de dispneia progressiva",
+      "Sobrecarga de volume extravascular: derrame pericárdico, derrame pleural, ascite e edema periférico refratário a diurético",
+      "Papiledema e alterações hematológicas (trombocitose, policitemia) em subgrupo de pacientes"
+    ],
+    "differentials": [
+      "Amiloidose de cadeia leve (AL) — diferencial central; tipicamente cadeia leve kappa, cardiomiopatia restritiva com padrão 'sparkling' ao ecocardiograma e biomarcadores muito elevados, sem lesões ósseas escleróticas nem endocrinopatia típicas de POEMS",
+      "Hipertensão arterial pulmonar idiopática — risco de fechamento diagnóstico prematuro se a neuropatia, a organomegalia e as alterações de pele não forem valorizadas como parte de uma síndrome sistêmica",
+      "Mieloma múltiplo — infiltração plasmocitária medular tipicamente baixa na POEMS (não preenche critérios CRAB), ao contrário do mieloma",
+      "Macroglobulinemia de Waldenström ou outra gamopatia monoclonal sem os critérios maiores/menores de POEMS",
+      "Polineuropatia desmielinizante inflamatória crônica (CIDP) isolada, sem discrasia plasmocitária ou demais achados sistêmicos",
+      "Doença de Castleman isolada, sem critérios diagnósticos completos de POEMS"
+    ],
+    "tests": [
+      "Eletroforese de proteínas séricas com imunofixação, tipicamente demonstrando componente monoclonal de cadeia leve lambda",
+      "VEGF sérico ou plasmático, elo fisiopatológico central e critério maior diagnóstico",
+      "Pesquisa de lesões ósseas escleróticas por radiografia de corpo inteiro ou PET-CT",
+      "Rastreio de doença de Castleman associada (biópsia linfonodal quando linfadenopatia presente)",
+      "Ecocardiograma transtorácico para pressão sistólica de artéria pulmonar estimada, função de ventrículo direito e derrame pericárdico",
+      "Avaliação endócrina (tireoide, eixo adrenal, gonadal, glicemia)",
+      "Mielograma e biópsia de medula óssea, geralmente com baixa infiltração plasmocitária clonal",
+      "Eletroneuromiografia para caracterizar a polineuropatia sensitivo-motora"
+    ],
+    "red_flags": [
+      "Hipertensão pulmonar ou derrame pericárdico sem causa identificada após investigação padrão (tromboembolismo crônico, doença intersticial, hipertensão portal, colagenose, HIV)",
+      "Sinais de tamponamento pericárdico associados a derrame de origem não esclarecida",
+      "Polineuropatia sensitivo-motora progressiva concomitante a organomegalia, alterações de pele ou proteína monoclonal",
+      "Edema, ascite ou derrame pleural refratários a diurético em paciente com neuropatia periférica não explicada por diabetes",
+      "Papiledema associado a manifestações sistêmicas sugestivas de POEMS"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de POEMS diante da combinação de polineuropatia distal progressiva, organomegalia, endocrinopatia, proteína monoclonal e alterações de pele, especialmente quando associada a hipertensão pulmonar ou sobrecarga de volume não explicadas",
+      "Solicitar eletroforese/imunofixação sérica, VEGF, pesquisa de lesões ósseas escleróticas (radiografia de corpo inteiro ou PET-CT) e rastreio de doença de Castleman",
+      "Encaminhar a hematologia para confirmação diagnóstica e definição de tratamento dirigido ao clone plasmocitário (radioterapia, quimioterapia com alquilante e dexametasona, lenalidomida-dexametasona ou transplante autólogo de células-tronco conforme extensão da doença)",
+      "Acompanhar em conjunto com cardiologia a hipertensão pulmonar e a sobrecarga de volume, que tendem a ser reversíveis com o tratamento hematológico eficaz",
+      "Evitar tratar a hipertensão pulmonar isoladamente com vasodilatador pulmonar específico sem investigar e tratar a doença de base"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de tamponamento pericárdico em paciente com derrame pericárdico e dispneia aguda; pericardiocentese se instabilidade hemodinâmica",
+      "Estabilizar sobrecarga de volume grave (ascite, derrame pleural volumoso, edema anasarca) com medidas de suporte enquanto se investiga a causa sistêmica",
+      "Não postergar a investigação hematológica direcionada (VEGF, eletroforese/imunofixação, imagem óssea) em paciente internado por hipertensão pulmonar ou derrame pericárdico de causa não esclarecida",
+      "Encaminhar precocemente à hematologia quando a suspeita de POEMS for consistente, pois o tratamento do clone plasmocitário é o que reverte as manifestações cardiopulmonares"
+    ],
+    "tags": [
+      "POEMS",
+      "hipertensão pulmonar",
+      "derrame pericárdico",
+      "proteína M",
+      "discrasia plasmocitária",
+      "VEGF",
+      "polineuropatia",
+      "doença de Castleman",
+      "sobrecarga de volume"
+    ],
+    "source_refs": [
+      "Dispenzieri A. POEMS syndrome: Update on diagnosis, risk-stratification, and management. Am J Hematol. 2023;98(12):1934-1950. doi:10.1002/ajh.27081. PMID: 37732822",
+      "Dispenzieri A. POEMS Syndrome: 2019 Update on diagnosis, risk-stratification, and management. Am J Hematol. 2019;94(7):812-827. doi:10.1002/ajh.25495. PMID: 31012139",
+      "Li J, Tian Z, Zheng HY, Zhang W, Duan MH, Liu YT, Cao XX, Zhou DB. Pulmonary hypertension in POEMS syndrome. Haematologica. 2013;98(3):393-398. doi:10.3324/haematol.2012.073031. PMID: 22983590",
+      "Nozza A. POEMS Syndrome: an Update. Mediterr J Hematol Infect Dis. 2017;9(1):e2017051. doi:10.4084/mjhid.2017.051. PMID: 28894560"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [],
+    "patient_material_slug": null
   }
 ]

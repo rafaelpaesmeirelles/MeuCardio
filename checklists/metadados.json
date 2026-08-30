@@ -35211,5 +35211,124 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "vigilancia-de-reativacao-da-doenca-de-chagas-pos-transplante-cardiaco",
+    "condicao": "Vigilância de reativação da doença de Chagas no primeiro ano pós-transplante cardíaco",
+    "resumo": "Checklist operacional para o primeiro ano pós-transplante em receptor chagásico: cronograma de PCR quantitativa seriada em sangue periférico, PCR no tecido da biópsia endomiocárdica de rotina, busca ativa de amastigotas em lesão de pele nova e o alerta crítico de não tratar infiltrado inflamatório na biópsia como rejeição sem antes excluir reativação.",
+    "documento_origem": "reativacao-da-doenca-de-chagas-apos-transplante-cardiaco",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Benatti RD, Al-Kindi SG, Bacal F, Oliveira GH. Heart transplant outcomes in patients with Chagas cardiomyopathy in the United States. Clin Transplant. 2018;32(6):e13279. PMID: 29744939",
+      "Echeverría LE, Figueredo A, Rodriguez MJ, Salazar L, Pizarro C, Morillo CA, Rojas LZ, Gómez-Ochoa SA, Castillo VR. Survival after heart transplantation for Chagas cardiomyopathy using a conventional protocol: a 10-year experience in a single center. Transpl Infect Dis. 2021;23(4):e13549. PMID: 33345420",
+      "Benatti RD, Oliveira GH, Bacal F. Heart Transplantation for Chagas Cardiomyopathy. J Heart Lung Transplant. 2017;36(6):597-603. PMID: 28284779",
+      "Campos SV, Strabelli TM, Amato Neto V, Silva CP, Bacal F, Bocchi EA, Stolf NA. Risk factors for Chagas' disease reactivation after heart transplantation. J Heart Lung Transplant. 2008;27(6):597-602. PMID: 18503957",
+      "Moreira MDCV, Cunha-Melo JR. Chagas Disease Infection Reactivation after Heart Transplant. Trop Med Infect Dis. 2020;5(3):106. PMID: 32610473 (texto integral em acesso aberto, PMC7558140)",
+      "Saraiva RM, Costa AR. Chagas Disease Reactivation after Heart Transplant: Importance of New Predictors. Arq Bras Cardiol. 2024;121(6):e20240284. PMID: 39016416 (texto integral em acesso aberto, PMC12080714)",
+      "Kransdorf EP, Zakowski PC, Kobashigawa JA. Chagas disease in solid organ and heart transplantation. Curr Opin Infect Dis. 2014;27(5):418-424. PMID: 25023742",
+      "Wahadneh OA, Neppala S, Sharma S, et al. Cardiovascular outcomes of Chagas-induced non-ischemic cardiomyopathy versus other nonischemic cardiomyopathies: a regression matched national cohort analysis. Am J Cardiovasc Dis. 2025;15(2):139-148. PMID: 40401271"
+    ],
+    "itens": [
+      {
+        "id": "chagas-tx-pcr-sangue-cronograma",
+        "categoria": "vigilancia",
+        "obrigatorio": true,
+        "texto": "PCR quantitativa em sangue periférico solicitada conforme cronograma intensificado: semanal nos primeiros 2 meses, a cada 2 semanas até o 6º mês, mensal do 6º ao 12º mês pós-transplante",
+        "origem_secao": "Estratégia de monitoramento"
+      },
+      {
+        "id": "chagas-tx-pcr-trajetoria",
+        "categoria": "vigilancia",
+        "obrigatorio": true,
+        "texto": "Resultado de cada PCR comparado à trajetória do paciente, não a um ponto de corte isolado: reativação definida por PCR positiva quando a anterior era negativa, ou carga parasitária quantitativamente maior que a PCR positiva anterior",
+        "origem_secao": "Estratégia de monitoramento"
+      },
+      {
+        "id": "chagas-tx-pcr-biopsia-tecido",
+        "categoria": "vigilancia",
+        "obrigatorio": true,
+        "texto": "PCR para T. cruzi realizada no próprio tecido de cada biópsia endomiocárdica de rotina, aproveitando o procedimento já indicado para vigilância de rejeição",
+        "origem_secao": "Estratégia de monitoramento"
+      },
+      {
+        "id": "chagas-tx-biopsia-cronograma",
+        "categoria": "vigilancia",
+        "obrigatorio": false,
+        "texto": "Vigilância histológica seriada da biópsia endomiocárdica programada nos meses 1, 3, 5, 6, 9 e 12 pós-transplante, quando essa for a abordagem adotada pelo centro",
+        "origem_secao": "Estratégia de monitoramento"
+      },
+      {
+        "id": "chagas-tx-amastigotas-biopsia",
+        "categoria": "alerta_critico",
+        "obrigatorio": true,
+        "texto": "Toda biópsia endomiocárdica com infiltrado inflamatório relevante lida com busca ativa por ninhos de amastigotas ou pesquisa de antígeno parasitário (imuno-histoquímica/imunofluorescência) em cortes seriados, não apenas classificada para rejeição",
+        "origem_secao": "O problema central: reativação e rejeição podem ser indistinguíveis na biópsia"
+      },
+      {
+        "id": "chagas-tx-nao-tratar-como-rejeicao",
+        "categoria": "alerta_critico",
+        "obrigatorio": true,
+        "texto": "ALERTA CRÍTICO: infiltrado inflamatório (graus 2R/3R) não tratado como rejeição por intensificação da imunossupressão antes de excluir reativação — até 43% desses infiltrados são reativação não reconhecida, que responde a antitripanossômico e piora com mais imunossupressão",
+        "origem_secao": "O problema central: reativação e rejeição podem ser indistinguíveis na biópsia"
+      },
+      {
+        "id": "chagas-tx-pulsoterapia-sem-resposta",
+        "categoria": "alerta_critico",
+        "obrigatorio": true,
+        "texto": "Ausência de resposta clínica à pulsoterapia para suposta rejeição reacende a suspeita de reativação, em vez de motivar escalonamento adicional da imunossupressão",
+        "origem_secao": "O problema central: reativação e rejeição podem ser indistinguíveis na biópsia"
+      },
+      {
+        "id": "chagas-tx-lesao-pele",
+        "categoria": "vigilancia",
+        "obrigatorio": true,
+        "texto": "Qualquer lesão de pele ou subcutânea nova no receptor chagásico (nódulo, possível chagoma) biopsiada para busca ativa de amastigotas, independentemente de sintomas cardíacos",
+        "origem_secao": "Manifestações clínicas: pele e miocárdio do enxerto"
+      },
+      {
+        "id": "chagas-tx-linfocitos-precoces",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Contagem de linfócitos totais nas primeiras 2 semanas pós-transplante verificada como marcador precoce de risco; valor abaixo de 550/mm³ direciona a vigilância por PCR mais intensa",
+        "origem_secao": "O mecanismo: uma infecção crônica de baixa carga, descontida pela imunossupressão"
+      },
+      {
+        "id": "chagas-tx-sindrome-febril-inexplicada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reativação incluída no diagnóstico diferencial de qualquer síndrome febril ou infecciosa inexplicada no receptor chagásico, mesmo sem lesão de pele ou disfunção do enxerto evidentes",
+        "origem_secao": "Manifestações clínicas: pele e miocárdio do enxerto"
+      },
+      {
+        "id": "chagas-tx-tratamento-benznidazol",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Reativação confirmada (PCR com trajetória compatível, achado parasitológico direto ou ninhos de amastigotas) tratada com benznidazol 2,5 a 5 mg/kg duas vezes ao dia por 60 dias, com possível extensão a 90 dias conforme evolução",
+        "origem_secao": "Tratamento da reativação confirmada"
+      },
+      {
+        "id": "chagas-tx-ajuste-imunossupressao",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Ajuste pontual do esquema imunossupressor considerado apenas quando a reativação é confirmada — evitando doses excessivas e considerando substituição de micofenolato mofetila por azatioprina ou redução de sua dose — sem redução automática e generalizada em todo receptor chagásico assintomático",
+        "origem_secao": "Tratamento da reativação confirmada"
+      },
+      {
+        "id": "chagas-tx-exantema-benznidazol",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Paciente em benznidazol monitorado para exantema urticariforme (30–60% dos casos, geralmente na primeira semana), manejado com anti-histamínico ou corticoide em dose baixa com cautela, dado o quadro de base de excesso de imunossupressão",
+        "origem_secao": "Tratamento da reativação confirmada"
+      },
+      {
+        "id": "chagas-tx-sem-profilaxia-universal",
+        "categoria": "alerta_critico",
+        "obrigatorio": false,
+        "texto": "Profilaxia universal com benznidazol não iniciada em receptor chagásico assintomático sem reativação confirmada — o tratamento é reservado para reativação documentada, não para prevenção generalizada",
+        "origem_secao": "Tratamento da reativação confirmada"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
