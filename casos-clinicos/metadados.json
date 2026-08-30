@@ -17391,5 +17391,66 @@
       "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "flutter-atrial-tipico-anticoagulacao-cha2ds2-va",
+    "titulo": "Flutter atrial típico: quando anticoagular?",
+    "tema": "Fibrilação atrial",
+    "nivel": "básico",
+    "enunciado": "Homem, 72 anos, hipertenso e diabético, procura o pronto-socorro por palpitações regulares e cansaço leve há 3 dias, sem dor torácica ou síncope. Ao exame: FC 148 bpm regular, PA 128/82 mmHg, ausculta cardíaca sem sopros, sem sinais de baixo débito ou congestão. O ECG mostra ondas em serrote (ondas F), mais evidentes nas derivações inferiores (II, III e aVF), com resposta ventricular regular em torno de 150 bpm, compatível com condução atrioventricular 2:1.",
+    "pergunta": "Diante do diagnóstico de flutter atrial típico (istmo cavotricuspídeo-dependente), qual a conduta correta em relação à anticoagulação oral?",
+    "opcoes": [
+      "Calcular o escore CHA2DS2-VA e indicar anticoagulação oral se a pontuação for elegível, da mesma forma que se faria na fibrilação atrial, pois o flutter atrial tem risco tromboembólico equivalente ao da FA.",
+      "Dispensar a anticoagulação, já que o flutter atrial tem atividade elétrica atrial organizada (macrorreentrada única), e não caótica como na FA, o que torna o risco de trombo em átrio esquerdo desprezível.",
+      "Anticoagular apenas no período de uma cardioversão elétrica programada, podendo suspender o anticoagulante assim que o ritmo sinusal for restaurado, independentemente do escore de risco calculado.",
+      "Prescrever aspirina isolada como profilaxia tromboembólica padrão para flutter atrial, reservando os anticoagulantes orais diretos apenas para os casos de flutter atípico."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A resposta correta é calcular o CHA2DS2-VA e anticoagular conforme o mesmo critério usado na fibrilação atrial. A diretriz ESC 2024 para manejo da fibrilação atrial (Van Gelder et al., Eur Heart J 2024;45(36):3314-3414, PMID 39210723, doi:10.1093/eurheartj/ehae176) trata o flutter atrial no mesmo documento e reforça que ele frequentemente coexiste com FA (o mesmo paciente pode alternar entre os dois ritmos) e compartilha risco tromboembólico equivalente ao da FA, apesar de sua ativação elétrica ser organizada (macrorreentrada dependente do istmo cavotricuspídeo) em vez de caótica. Por isso, a decisão de anticoagular deve seguir a mesma estratificação de risco usada na FA — o escore CHA2DS2-VA (nomenclatura atualizada nesta diretriz, que retirou o antigo 'Sc' de sexo feminino como fator de risco independente) — e não critérios próprios ou mais permissivos para o flutter. A alternativa B está errada porque a organização elétrica do flutter não reduz a estase em apêndice atrial esquerdo nem o risco embólico documentado em coortes e ensaios clínicos, que é comparável ao da FA. A alternativa C está errada porque a anticoagulação no flutter, assim como na FA, não deve ser interrompida ao simples retorno do ritmo sinusal quando o escore de risco persiste elevado (risco de recorrência assintomática e de trombo residual); a decisão de manter ou suspender depende do CHA2DS2-VA, não da reversão pontual do ritmo. A alternativa D está errada porque aspirina isolada não é terapia antitrombótica adequada para prevenção de AVC em flutter/FA com escore de risco elevado — os anticoagulantes orais (diretos ou antagonistas de vitamina K) são a base do tratamento tanto no flutter típico quanto no atípico, sem essa distinção artificial.",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, Casado-Arroyo R, Caso V, Crijns HJGM, et al; ESC Scientific Document Group. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024 Sep 29;45(36):3314-3414. doi:10.1093/eurheartj/ehae176. PMID: 39210723."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "avnrt-adulto-jovem-manejo-agudo-emergencia",
+    "titulo": "AVNRT no adulto jovem: manejo agudo na emergência",
+    "tema": "Arritmias",
+    "nivel": "básico",
+    "enunciado": "Mulher de 24 anos, previamente hígida, procura o pronto-socorro por palpitações de início súbito há 30 minutos, associadas a leve desconforto torácico, sem dispneia ou síncope. Ao exame: pressão arterial 118/76 mmHg, frequência cardíaca 182 bpm, ausculta cardíaca rítmica em taquicardia, sem sinais de insuficiência cardíaca. O ECG mostra taquicardia regular de QRS estreito, sem onda P visível, compatível com taquicardia por reentrada nodal atrioventricular (AVNRT). Foi realizada manobra de Valsalva modificada (posição semi-reclinada com elevação passiva das pernas ao final do esforço expiratório), sem reversão do ritmo.",
+    "pergunta": "Diante da falha da manobra vagal modificada e da paciente hemodinamicamente estável, qual é a conduta mais apropriada para reverter a taquicardia?",
+    "opcoes": [
+      "Administrar adenosina 6 mg em bolus intravenoso rápido, seguida imediatamente de flush salino de 20 mL, com aumento progressivo da dose se necessário",
+      "Iniciar verapamil intravenoso em infusão lenta como primeira escolha, reservando a adenosina apenas para casos de instabilidade hemodinâmica",
+      "Realizar cardioversão elétrica sincronizada imediata, já que a manobra vagal falhou e o ECG confirma taquicardia de QRS estreito",
+      "Encaminhar a paciente diretamente para estudo eletrofisiológico e ablação por cateter na própria visita à emergência, sem tentar reversão farmacológica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Nas taquicardias supraventriculares regulares de QRS estreito (como a AVNRT) em pacientes hemodinamicamente estáveis, a sequência terapêutica recomendada pelo guideline ESC 2019 de manejo da taquicardia supraventricular (Brugada et al., Eur Heart J 2020;41(5):655-720, PMID 31504425) é: (1) manobras vagais como primeira linha, com evidência de que a manobra de Valsalva modificada — posição semi-reclinada seguida de elevação passiva das pernas a 45° por 15 segundos ao final da fase expiratória, conforme demonstrado no ensaio clínico randomizado REVERT (Appelboam et al., Lancet 2015;386(10005):1747-53, PMID 26314489) — praticamente triplica a taxa de reversão em comparação à manobra de Valsalva padrão (43% vs 17%); e (2), em caso de falha, adenosina intravenosa em bolus rápido (dose inicial usual de 6 mg, podendo escalar para 12 mg e depois 12-18 mg se não houver resposta), sempre seguida imediatamente de flush salino de 20 mL, dada sua meia-vida ultracurta (segundos) — o que justifica o bolus rápido e o flush para garantir que a droga alcance o coração antes de ser metabolizada. Verapamil intravenoso é alternativa válida, mas não é a primeira escolha farmacológica após falha vagal em paciente estável, sendo reservado principalmente para casos de contraindicação à adenosina ou recorrência; a cardioversão elétrica sincronizada é reservada para instabilidade hemodinâmica ou falha de todas as medidas farmacológicas, não sendo indicada de forma imediata em paciente estável. Após reversão do episódio agudo, a ablação por cateter deve ser oferecida como tratamento definitivo e curativo para pacientes com AVNRT sintomática recorrente, sendo preferida em relação à terapia farmacológica crônica — mas trata-se de procedimento eletivo, agendado após a resolução do quadro agudo, e não uma conduta a ser realizada na própria visita à emergência.",
+    "source_refs": [
+      "Appelboam A, Reuben A, Mann C, et al. Postural modification to the standard Valsalva manoeuvre for emergency treatment of supraventricular tachycardias (REVERT): a randomised controlled trial. Lancet. 2015;386(10005):1747-1753. doi:10.1016/S0140-6736(15)61485-4. PMID: 26314489.",
+      "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. doi:10.1093/eurheartj/ehz467. PMID: 31504425."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "bavt-degenerativo-idoso-marcapasso-definitivo",
+    "titulo": "BAVT degenerativo do idoso: da estabilização na emergência ao marca-passo definitivo",
+    "tema": "Arritmias",
+    "nivel": "básico",
+    "enunciado": "Homem de 82 anos, hipertenso, é trazido ao pronto-socorro após episódio de síncope precedida por tontura, sem pródromos vasovagais, enquanto caminhava em casa. Nega dor torácica, dispneia ou início recente de betabloqueador, digoxina ou outros fármacos bradicardizantes. Ao exame: PA 128/74 mmHg, FC 34 bpm, ritmo irregular à ausculta com variação da intensidade da primeira bulha (fenômeno de canhão). O ECG mostra dissociação completa entre ondas P (regulares, 88 bpm) e complexos QRS estreitos (34 bpm), sem qualquer relação entre eles. Potássio, função renal e troponina são normais, e não há sinais eletrocardiográficos de isquemia aguda.",
+    "pergunta": "Diante deste quadro de bloqueio atrioventricular total (BAVT) sem causa reversível identificável, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Estabilização inicial com marca-passo transcutâneo (ou transvenoso temporário, se necessário) na emergência, seguida de implante de marca-passo definitivo, pois o BAVT sintomático por doença degenerativa idiopática do sistema de condução (doença de Lenègre-Lev) tem indicação classe I de marca-passo permanente",
+      "Manter apenas monitorização com atropina intravenosa isolada e liberar o paciente assim que a frequência cardíaca se estabilizar, sem necessidade de marca-passo definitivo, pois o BAVT do idoso costuma ser transitório",
+      "Iniciar isoproterenol venoso contínuo como terapia definitiva, evitando o implante de marca-passo permanente pelo risco cirúrgico elevado em pacientes idosos",
+      "Solicitar apenas Holter ambulatorial e reavaliar em consulta eletiva, já que síncope sem dor torácica associada não sugere bloqueio atrioventricular de alto grau"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Este é o cenário mais prevalente de bloqueio atrioventricular total (BAVT) adquirido: paciente idoso, sem etiologia secundária reversível (potássio, função renal e troponina normais, sem fármacos bradicardizantes, sem isquemia aguda ao ECG), com dissociação completa entre P e QRS. Nessa faixa etária, a causa mais comum de BAVT adquirido não é uma etiologia rara (sarcoidose cardíaca, bloqueio congênito por anti-Ro/SSA, doença de Lyme), mas sim a doença degenerativa idiopática do sistema de condução — fibrose e calcificação progressivas do nó AV e do sistema His-Purkinje, classicamente descrita como doença de Lenègre-Lev. Na emergência, um paciente sintomático e bradicárdico (síncope, hipotensão, sinais de baixo débito) deve ser estabilizado com marca-passo transcutâneo imediato e, se a bradicardia persistir ou o paciente permanecer instável, com marca-passo transvenoso temporário como ponte. Como não há causa reversível a corrigir, essa bradiarritmia não vai regredir espontaneamente, e o próximo passo é o implante de marca-passo definitivo. A diretriz ACC/AHA/HRS 2018 sobre avaliação e manejo de bradicardia e distúrbios de condução cardíaca (Kusumoto et al., Circulation 2019) estabelece indicação de classe I para marca-passo permanente em BAVT (terceiro grau) ou bloqueio AV avançado de segundo grau associado a sintomas atribuíveis à bradicardia, quando não há causa reversível ou fisiológica identificada — exatamente a situação descrita. Atropina e isoproterenol podem ser usados como medidas temporárias em bloqueios nodais (acima do feixe de His) responsivos a estímulo simpático/vagolítico, mas no BAVT infra-hissiano do idoso (o padrão típico da doença degenerativa do sistema de condução) a resposta é imprevisível e não substituem a estimulação elétrica; não são terapia definitiva e não devem atrasar a indicação de marca-passo permanente. Observação isolada ou investigação ambulatorial tardia (alternativas B e D) expõem o paciente a risco de assistolia e morte súbita, sendo condutas inadequadas diante de um BAVT sintomático documentado.",
+    "source_refs": [
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society. Circulation. 2019;140(8):e382-e482. doi:10.1161/CIR.0000000000000628. PMID: 30586772."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
