@@ -1,0 +1,26 @@
+{
+  "reviewed_at": "2026-08-30",
+  "scope": {
+    "studies": 227,
+    "evidence": 338,
+    "total": 565
+  },
+  "source": "PubMed XML/abstract",
+  "resolved_pmids": 227,
+  "doi_mismatches": 0,
+  "year_mismatches": 0,
+  "unsupported_numeric_claims": 0,
+  "duplicate_identifiers_against_main": 0,
+  "evidence_theme_links_normalized": 162,
+  "broken_references": 0,
+  "review_status": "revisado",
+  "published": false,
+  "evidence_recommendation_class": "Não aplicável",
+  "gates": {
+    "inventory": "PASS",
+    "tudo_com_tudo": "PASS",
+    "canonical_review_status": "PASS",
+    "evidence_document_theme": "PASS"
+  },
+  "note": "Conteúdo de estudo revisado contra o abstract. Não representa recomendação normativa de diretriz."
+}
