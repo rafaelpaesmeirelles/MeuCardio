@@ -37795,5 +37795,114 @@
       "tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "cardiomiopatia-por-deficiencia-de-selenio",
+    "name": "Cardiomiopatia por deficiência de selênio (doença de Keshan)",
+    "aliases": [
+      "doença de Keshan",
+      "Keshan disease",
+      "cardiomiopatia por selênio",
+      "cardiomiopatia nutricional por deficiência de selênio",
+      "cardiomiopatia dilatada por deficiência de selênio"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "nutricional",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia dilatada causada por deficiência do oligoelemento selênio, cofator da glutationa peroxidase antioxidante miocárdica — na forma clássica endêmica chinesa (doença de Keshan), agravada por seleção de coxsackievírus mais virulento em hospedeiro deficiente; nas formas adquiridas ocidentais (NPT prolongada sem suplementação, má absorção grave incluindo fibrose cística, dietas extremamente restritas e alcoolismo crônico), é diagnóstico diferencial tratável e substancialmente reversível de cardiomiopatia dilatada não isquêmica quando reconhecida a tempo.",
+    "presentation": [
+      "Cardiomiopatia dilatada com dispneia, edema, fadiga, cardiomegalia radiológica e FEVE reduzida ao ecocardiograma, indistinguível à primeira vista de outras cardiomiopatias dilatadas não isquêmicas",
+      "Miopatia esquelética concomitante — fraqueza muscular proximal e mialgia, por vezes com elevação de creatina-quinase — é a pista clínica diferencial chave, refletindo o mesmo dano oxidativo por déficit de glutationa peroxidase atuando também na musculatura esquelética",
+      "Arritmia, incluindo formas ventriculares malignas, podendo ocorrer em apresentações fulminantes",
+      "Na doença de Keshan clássica: forma aguda/subaguda com insuficiência cardíaca de início rápido, arritmia e choque cardiogênico, ou forma crônica com cardiomiopatia dilatada de evolução insidiosa",
+      "Contexto de risco nutricional associado: NPT domiciliar prolongada sem suplementação de oligoelementos, síndrome de má absorção grave (intestino curto, doença inflamatória intestinal extensa, fibrose cística), dieta extremamente restritiva, ou alcoolismo crônico com desnutrição",
+      "Perfil demográfico da forma endêmica: crianças e mulheres em idade fértil, especialmente gestantes e lactantes, por maior demanda metabólica de selênio"
+    ],
+    "differentials": [
+      "Beribéri cardíaco (deficiência de tiamina) — outra cardiomiopatia nutricional reversível, tipicamente com padrão de alto débito",
+      "Cardiomiopatia alcoólica — o alcoolismo é fator de risco compartilhado, e a deficiência de selênio pode ser cofator nutricional adicional no mesmo paciente",
+      "Deficiência de carnitina — outra cardiomiopatia metabólica/nutricional potencialmente reversível a considerar no mesmo espectro diagnóstico",
+      "Cardiomiopatia dilatada idiopática — diagnóstico de exclusão que não deve ser fechado sem considerar deficiência de selênio quando há contexto de risco nutricional ou miopatia esquelética associada",
+      "Miocardite viral (incluindo por coxsackievírus) — relevante sobretudo na doença de Keshan clássica, em que a deficiência de selênio favorece a seleção de cepas virais mais virulentas como cofator patogênico",
+      "Cardiomiopatia da fibrose cística por outras causas (relacionada a doença pulmonar avançada, hipoxemia crônica) — a forma nutricional por deficiência de selênio deve ser considerada em paralelo"
+    ],
+    "tests": [
+      "Selênio sérico ou plasmático — exame diagnóstico central, sempre interpretado no contexto do risco nutricional do paciente, pois tem baixo valor de triagem isolado em população geral",
+      "Contexto de risco nutricional dirigido: história de NPT prolongada, síndrome de má absorção grave (intestino curto, DII extensa, fibrose cística), dieta extremamente restrita ou alcoolismo crônico com desnutrição",
+      "Atividade da glutationa peroxidase eritrocitária — marcador funcional complementar do status de selênio",
+      "Creatina-quinase e avaliação de força muscular proximal — apoia a identificação da miopatia esquelética associada",
+      "Ecocardiograma — caracteriza a disfunção sistólica e o padrão de cardiomiopatia dilatada, sem achado específico que distinga a etiologia por selênio de outras causas",
+      "Revisão periódica do perfil de oligoelementos em pacientes sob NPT domiciliar prolongada, como rotina preventiva e não apenas investigação reativa após sintomas cardíacos"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de início rápido com arritmia e choque cardiogênico (apresentação aguda/fulminante, descrita tanto na doença de Keshan quanto em casos adquiridos graves)",
+      "Arritmia ventricular maligna em paciente com cardiomiopatia dilatada e contexto de risco nutricional",
+      "Diagnóstico tardio ou não realizado — os desfechos fatais documentados na literatura ocorreram justamente quando a deficiência de selênio não foi investigada a tempo, e não por refratariedade intrínseca ao tratamento",
+      "NPT domiciliar prolongada sem revisão periódica de oligoelementos — situação de risco silencioso que pode evoluir para cardiomiopatia grave antes de ser reconhecida",
+      "Cardiomiopatia dilatada de etiologia não esclarecida associada a fraqueza muscular proximal/mialgia — combinação que deve disparar dosagem de selênio antes de rotular o quadro como idiopático"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar diante de cardiomiopatia dilatada de etiologia não esclarecida associada a contexto de risco nutricional (NPT prolongada, má absorção grave incluindo fibrose cística, dieta extremamente restrita, alcoolismo crônico) e/ou miopatia esquelética concomitante",
+      "Dosar selênio sérico/plasmático, reforçado pela presença de fraqueza muscular proximal ou mialgia associada",
+      "Investigar e tratar a causa de base da deficiência em paralelo à reposição — revisão da formulação de NPT, otimização do manejo da doença de má absorção, abordagem nutricional da dieta restritiva, ou encaminhamento para tratamento do alcoolismo",
+      "Iniciar reposição de selênio (tipicamente selenito de sódio, oral ou parenteral conforme a via de acesso nutricional disponível) associada ao manejo padrão de insuficiência cardíaca conforme o quadro hemodinâmico",
+      "Instituir revisão periódica do perfil de oligoelementos como rotina preventiva em todo paciente sob NPT domiciliar prolongada, independentemente de sintomas",
+      "Reavaliar função ventricular e força muscular ao longo do seguimento — a recuperação de ambas com a reposição é o próprio teste diagnóstico retrospectivo de deficiência de selênio como causa"
+    ],
+    "emergency_flow": [
+      "Reconhecer a apresentação aguda/fulminante — insuficiência cardíaca de início rápido, arritmia (incluindo formas ventriculares malignas) e choque cardiogênico — como possível manifestação de cardiomiopatia por deficiência de selênio em paciente com contexto de risco nutricional",
+      "Tratar o choque cardiogênico e a insuficiência cardíaca aguda conforme suporte hemodinâmico padrão, sem aguardar confirmação laboratorial da deficiência de selênio para estabilização inicial",
+      "Considerar deficiência de selênio no diferencial de cardiomiopatia dilatada de causa não esclarecida em paciente crítico com NPT prolongada, má absorção grave, dieta extremamente restrita ou alcoolismo, especialmente se houver miopatia esquelética associada",
+      "Colher selênio sérico assim que suspeitado e, uma vez confirmado ou fortemente suspeito pelo contexto, iniciar reposição de selênio em paralelo ao tratamento padrão da insuficiência cardíaca aguda",
+      "Investigar e corrigir de forma coordenada a causa de base da deficiência (revisão urgente da formulação de NPT, manejo da má absorção) como parte do plano de estabilização, dado o potencial de reversibilidade substancial da disfunção ventricular"
+    ],
+    "tags": [
+      "cardiomiopatia nutricional",
+      "doença de Keshan",
+      "deficiência de selênio",
+      "NPT prolongada",
+      "má absorção",
+      "fibrose cística",
+      "cardiomiopatia dilatada reversível",
+      "miopatia esquelética",
+      "glutationa peroxidase",
+      "alcoolismo crônico",
+      "coxsackievírus",
+      "oligoelemento"
+    ],
+    "source_refs": [
+      "Rayman MP. Selenium and human health. Lancet. 2012;379(9822):1256-1268. DOI: 10.1016/S0140-6736(11)61452-9. PMID: 22381456.",
+      "Rayman MP. The importance of selenium to human health. Lancet. 2000;356(9225):233-241. DOI: 10.1016/S0140-6736(00)02490-9. PMID: 10963212.",
+      "Xu GL et al. Further investigation on the role of selenium deficiency in the aetiology and pathogenesis of Keshan disease. Biomed Environ Sci. 1997;10(2-3):316-326. PMID: 9315325.",
+      "Levander OA, Beck MA. Interacting nutritional and infectious etiologies of Keshan disease. Biol Trace Elem Res. 1997;56(1):5-21. DOI: 10.1007/BF02778980. PMID: 9152508.",
+      "Beck MA, Kolbeck PC, Rohr LH, Shi Q, Morris VC, Levander OA. Rapid genomic evolution of a non-virulent coxsackievirus B3 in selenium-deficient mice results in selection of identical virulent isolates. Nat Med. 1995;1(5):433-436. DOI: 10.1038/nm0595-433. PMID: 7585090.",
+      "Beck MA, Nelson HK, Shi Q, et al. Increased virulence of coxsackievirus B3 in mice due to vitamin E or selenium deficiency. J Nutr. 1997;127(5 Suppl):966S-970S. DOI: 10.1093/jn/127.5.966S. PMID: 9164275.",
+      "Zhou H et al. Prevention of Keshan Disease by Selenium Supplementation: a Systematic Review and Meta-analysis. Biol Trace Elem Res. 2018;186(1):98-105. DOI: 10.1007/s12011-018-1302-5. PMID: 29627894.",
+      "Chen J. An original discovery: selenium deficiency and Keshan disease (an endemic heart disease). Asia Pac J Clin Nutr. 2012;21(3):320-326. PMID: 22705420.",
+      "Goldman IS, Kantrowitz NE. Cardiomyopathy associated with selenium deficiency. N Engl J Med. 1981;305(12):701. DOI: 10.1056/NEJM198109173051219. PMID: 7266610.",
+      "Fleming CR, Lie JT, McCall JT, O'Brien JF, Baillie EE, Thistle JL. Selenium deficiency and fatal cardiomyopathy in a patient on home parenteral nutrition. Gastroenterology. 1982;83(3):689-693. PMID: 6807740.",
+      "Quercia RA et al. Selenium deficiency and fatal cardiomyopathy in a patient receiving long-term home parenteral nutrition. Clin Pharm. 1984;3(5):531-535. PMID: 6435941.",
+      "Reeves WC, Marcuard SP, Willis SE, Movahed A. Reversible cardiomyopathy due to selenium deficiency. JPEN J Parenter Enteral Nutr. 1989;13(6):663-665. DOI: 10.1177/0148607189013006663. PMID: 2614867.",
+      "Bolhack SM. Selenium deficiency and cardiomyopathy. JPEN J Parenter Enteral Nutr. 1990;14(4):433. DOI: 10.1177/0148607190014004433. PMID: 2119451.",
+      "Lockitch G, Taylor GP, Wong LT, et al. Cardiomyopathy associated with nonendemic selenium deficiency in a Caucasian adolescent. Am J Clin Nutr. 1990;52(3):572-577. DOI: 10.1093/ajcn/52.3.572. PMID: 2168125.",
+      "Marcus RW, Huang PC. Myopathy and cardiomyopathy associated with selenium deficiency: case report, literature review, and hypothesis. Md Med J. 1993;42(7):669-674. PMID: 8412527.",
+      "Rannem T, Ladefoged K, Hylander E, Hegnhøj J, Staun M. The effect of selenium supplementation on skeletal and cardiac muscle in selenium-depleted patients. JPEN J Parenter Enteral Nutr. 1995;19(5):351-355. DOI: 10.1177/0148607195019005351. PMID: 8577010.",
+      "Chariot P, Bignani O. Skeletal muscle disorders associated with selenium deficiency in humans. Muscle Nerve. 2003;27(6):662-668. DOI: 10.1002/mus.10304. PMID: 12766976.",
+      "Burke MP, Opeskin K. Fulminant heart failure due to selenium deficiency cardiomyopathy (Keshan disease). Med Sci Law. 2002;42(1):10-13. DOI: 10.1177/002580240204200103. PMID: 11848134.",
+      "Segovia-Cubero J et al. The cardiomyopathy of cystic fibrosis: a modern form of Keshan disease. Front Cardiovasc Med. 2024;11:1285223. DOI: 10.3389/fcvm.2024.1285223. PMID: 38361580.",
+      "Volk DM et al. Selenium deficiency and cardiomyopathy in a patient with cystic fibrosis. J Ky Med Assoc. 1986;84(5):222-224. PMID: 3722990.",
+      "Liu S et al. Selenium deficiency in inflammatory bowel disease: A comprehensive meta-analysis. Heliyon. 2024;10(22):e40139. DOI: 10.1016/j.heliyon.2024.e40139. PMID: 39584095.",
+      "Thuong T et al. Decrease of the serum level of selenium in chronic alcoholics with or without dilated cardiomyopathy. Presse Med. 1986;15(15):693-696. PMID: 2941733."
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas"
+    ],
+    "patient_material_slug": null
   }
 ]
