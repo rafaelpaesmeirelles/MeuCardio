@@ -795,3 +795,27 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 12 (3 descartados por colisão) | 188 |
 | **Total** | **4.900** | **121** | **4.779** |
+
+## Lote 40 — concluído (commit 4833be12)
+
+- **content/Insuficiência_cardíaca**: +1 — `pelagra-deficiencia-de-niacina-e-acometimento-cardiovascular` (documento honesto sobre limite de evidência: paralelo mecanístico com beribéri é sólido, mas não há série hemodinâmica dedicada de "IC por pelagra" isolada).
+- **content/Valvopatias**: +1 — `doenca-de-gaucher-acometimento-cardiovascular-tipo-3c-...` (variante 3c/D409H, calcificação valvar precoce, TRE/TRS não reverte calcificação já estabelecida).
+- **doencas**: +2 — `hipertireoidismo-apatico-idoso` (nova categoria `sindrome_geriatrica` usada corretamente), `cardiomiopatia-cushingoide` (pareadas com lote 39).
+- **checklists**: +2 — hipertireoidismo apático no idoso; avaliação/manejo cardiovascular na síndrome de Cushing.
+- **material-paciente**: +2 — hipertireoidismo silencioso no idoso (voltado a cuidadores); síndrome de Cushing/cardiomiopatia/risco residual.
+- **Achado editorial**: já existia material-paciente sobre Cushing no corpus (`sindrome-cushing-coracao-cortisol-pressao-alta`, revisado, foco hipertensão/trombose, sem `documento_slug`). Comparei os dois item a item antes de integrar — o novo cobre três eixos ausentes no antigo (efeito direto no músculo cardíaco, corticoide exógeno crônico dose-dependente, risco residual pós-cura) — não é duplicata, mantido como complementar.
+- **Correção durante integração**: um agente incluiu `fonte_producao: claude` no front-matter do documento de pelagra — campo exclusivo da revisão editorial Codex/Rafael, nunca autoatribuível; removido antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.316 (10.281 revisado + 35 pendente_revisao).
+
+### Status consolidado (após Lote 40)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 22 | 2.378 |
+| Casos clínicos | 900 | 37 | 863 |
+| Checklists | 600 | 25 | 575 |
+| Materiais-paciente | 500 | 28 | 472 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 14 (3 descartados por colisão) | 186 |
+| **Total** | **4.900** | **129** | **4.771** |
