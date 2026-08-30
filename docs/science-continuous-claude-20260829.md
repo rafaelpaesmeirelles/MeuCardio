@@ -1335,7 +1335,31 @@ aprofundamento pontual de hubs existentes.
   ao descartar tópico de complicações de CSP — hub geral de 21k linhas
   já em revisão.
 
-## Lote 60 (planejado)
+## Lote 60 — concluído (SHA 786c304b) — total 88 commits — MARCO
+
+- checklist `cardiopatia-congenita-associada-a-sindrome-de-alagille-vacterl-e-charge-espectro-e-manejo`
+  — fecha o subcluster de síndromes genéticas com CHD (Down, DiGeorge/
+  22q11, Williams, Noonan já confirmados). 3 condições bundladas:
+  Alagille (94% de acometimento CV, estenose de ramos pulmonares
+  DIFUSA/multifocal em 76%, reestenose intra-stent de 24% nesse
+  subgrupo); VACTERL (explicitamente NÃO é síndrome genética única,
+  critério ≥3 componentes); CHARGE (cardiopatia em 74% dos CHD7+,
+  anomalias de arco associadas a outro defeito em 81% dos casos);
+  aconselhamento genético com padrões de herança distintos entre as
+  três. 11 fontes via NCBI e-utils, incluindo GeneReviews.
+
+**Resumo do marco 60 lotes**: desde o início desta janela contínua
+(lote 22), 39 itens novos líquidos integrados (3 removidos por
+duplicata na correção crítica), 1 correção crítica de procedimento
+documentada e resolvida, PR #760 aberto e atualizado automaticamente a
+cada push. Territórios agora extensivamente cobertos: imagem
+cardiovascular (todas as modalidades), ACHD completo, síndromes
+genéticas com CHD, cardiomiopatias de depósito lisossômico, transplante
+de órgão sólido bilateral (doador+receptor, cardíaco/hepático/renal),
+populações especiais (falciforme, HIV, pós-COVID, hEDS), canalopatias,
+métodos gráficos.
+
+## Lote 61 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
