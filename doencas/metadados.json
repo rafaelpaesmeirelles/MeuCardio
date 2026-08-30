@@ -37697,5 +37697,103 @@
     "version": 1,
     "related_document_slugs": [],
     "patient_material_slug": null
+  },
+  {
+    "slug": "tumores-cardiacos-malignos-primarios",
+    "name": "Tumores cardíacos malignos primários (angiossarcoma e linfoma cardíaco primário)",
+    "aliases": [
+      "angiossarcoma cardíaco",
+      "sarcoma cardíaco primário",
+      "linfoma cardíaco primário",
+      "linfoma não-Hodgkin primário do coração",
+      "tumor maligno primário do coração",
+      "massa cardíaca maligna"
+    ],
+    "area": "geral",
+    "category": "tumor_cardiaco",
+    "subtype": "tumor_maligno_primario",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Angiossarcoma cardíaco e linfoma cardíaco primário são os dois tumores malignos primários mais relevantes do coração no adulto: ambos predominam no átrio direito e cursam com derrame pericárdico recorrente, mas têm biologia e prognóstico muito diferentes — o angiossarcoma tem comportamento agressivo e mortalidade elevada, enquanto o linfoma cardíaco primário responde bem à quimioterapia sistêmica.",
+    "presentation": [
+      "Dispneia, presente na maioria dos casos de angiossarcoma cardíaco",
+      "Derrame pericárdico recorrente, frequentemente hemorrágico no angiossarcoma e com tamponamento recorrente no linfoma cardíaco primário",
+      "Dor torácica",
+      "Arritmias atriais ou distúrbios de condução, por infiltração miocárdica",
+      "Insuficiência cardíaca direita, por obstrução mecânica ao influxo do átrio direito",
+      "Sintomas constitucionais (perda de peso, febre, sudorese noturna, fadiga) — mais típicos do linfoma, mas também presentes em doença metastática de angiossarcoma",
+      "Síndrome de veia cava superior, quando há massa mediastinal contígua no linfoma cardíaco primário",
+      "Achado incidental de massa cardíaca ou derrame pericárdico em exame de imagem"
+    ],
+    "differentials": [
+      "Mixoma cardíaco (tumor benigno, tipicamente pediculado e móvel em átrio esquerdo)",
+      "Fibroelastoma papilar (tumor benigno valvar, pequeno, bem delimitado)",
+      "Metástase cardíaca de tumor extracardíaco (muito mais comum que tumor maligno primário)",
+      "Endocardite trombótica não bacteriana (NBTE)",
+      "Trombo intracavitário",
+      "Linfoma cardíaco secundário (acometimento cardíaco por linfoma nodal disseminado, não confinado ao coração)",
+      "Pericardite ou derrame pericárdico de causa inflamatória, infecciosa ou urêmica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico e, quando disponível, transesofágico — exame inicial de maior sensibilidade para detectar massa e derrame pericárdico associado",
+      "Ressonância magnética cardíaca — exame de escolha para caracterização tecidual: avalia margens (infiltrativas vs. bem definidas), acometimento de múltiplas câmaras, extensão pericárdica contígua, necrose/heterogeneidade e invasão extracardíaca",
+      "Tomografia de tórax/abdome ou PET-CT para estadiamento, já que metástase pulmonar, hepática e óssea é comum ao diagnóstico do angiossarcoma",
+      "Biópsia tecidual (cirúrgica, guiada por imagem ou endomiocárdica) — necessária para diagnóstico definitivo em ambos os tumores; nenhum achado de imagem isoladamente fecha o diagnóstico",
+      "Imuno-histoquímica para origem endotelial no angiossarcoma (CD31, CD34, FLI-1, fator de von Willebrand)",
+      "Imunofenotipagem para subtipagem do linfoma (mais comumente difuso de grandes células B)",
+      "Citologia do líquido de pericardiocentese, quando há derrame — pode sugerir malignidade, mas raramente é suficiente para tipificação completa",
+      "Sorologia para HIV e triagem de imunossupressão em todo caso de linfoma cardíaco primário, dado o impacto prognóstico do status imunológico"
+    ],
+    "red_flags": [
+      "Derrame pericárdico hemorrágico recorrente após drenagem, sobretudo em átrio direito",
+      "Tamponamento cardíaco recorrente sem causa inflamatória ou infecciosa evidente",
+      "Massa cardíaca com margens infiltrativas e mal definidas à RM",
+      "Acometimento de múltiplas câmaras cardíacas",
+      "Invasão extracardíaca (pericárdio parietal, grandes vasos, mediastino) — achado praticamente definidor de malignidade",
+      "Acometimento de ventrículo esquerdo no linfoma cardíaco primário — associado a sobrevida drasticamente pior",
+      "Doença extracardíaca (metastática) já presente ao diagnóstico"
+    ],
+    "ambulatory_flow": [
+      "Massa cardíaca ou derrame pericárdico com características atípicas (margens infiltrativas, múltiplas câmaras, extensão pericárdica) identificados em ecocardiograma eletivo devem ser encaminhados para RM cardíaca em caráter prioritário, não como achado de rotina a ser reavaliado em retorno de longo prazo",
+      "Não assumir etiologia benigna (mixoma, fibroelastoma) sem caracterização tecidual quando a imagem mostrar padrão infiltrativo ou multifocal",
+      "Encaminhar precocemente a serviço com oncologia cardíaca ou oncologia clínica e cirurgia cardíaca para definição de biópsia e estadiamento",
+      "Em linfoma suspeito, iniciar triagem para imunossupressão (HIV, história de transplante) como parte da avaliação ambulatorial inicial"
+    ],
+    "emergency_flow": [
+      "Derrame pericárdico com repercussão hemodinâmica ou tamponamento exige pericardiocentese ou janela pericárdica de urgência, com envio do líquido para citologia",
+      "Após drenagem, reacúmulo rápido e hemorrágico do derrame deve levantar suspeita ativa de etiologia neoplásica e motivar investigação por imagem dirigida (RM cardíaca) antes da alta",
+      "Estabilizar arritmias e insuficiência cardíaca decorrentes de infiltração miocárdica ou obstrução mecânica ao influxo",
+      "Não tratar como pericardite idiopática recorrente sem excluir massa cardíaca em paciente com derrame pericárdico hemorrágico recorrente",
+      "Acionar precocemente equipe de cirurgia cardíaca e oncologia diante de suspeita de tumor maligno cardíaco para biópsia e planejamento terapêutico multimodal"
+    ],
+    "tags": [
+      "tumor cardíaco maligno",
+      "angiossarcoma",
+      "linfoma cardíaco primário",
+      "sarcoma cardíaco",
+      "derrame pericárdico hemorrágico",
+      "massa cardíaca",
+      "átrio direito",
+      "tamponamento cardíaco",
+      "oncologia cardíaca"
+    ],
+    "source_refs": [
+      "Patel SD, Peterson A, Bartczak A, et al. Primary cardiac angiosarcoma - a review. Med Sci Monit. 2014;20:103-9. DOI: 10.12659/MSM.889875. PMID: 24452054",
+      "Chambergo-Michilot D, et al. Clinical characteristics, management, and outcomes of patients with primary cardiac angiosarcoma: a systematic review. J Cardiovasc Thorac Res. 2023;15(1):1-8. DOI: 10.34172/jcvtr.2023.30531. PMID: 37342661",
+      "Stergioula A, et al. Multimodality treatment of primary cardiac angiosarcoma: a systematic literature review. Cancer Treat Rev. 2023;120:102617. DOI: 10.1016/j.ctrv.2023.102617. PMID: 37603906",
+      "Jeudy J, et al. Cardiac Lymphoma. Radiol Clin North Am. 2016;54(4):689-710. DOI: 10.1016/j.rcl.2016.03.006. PMID: 27265603",
+      "Chalabreysse L, et al. Primary cardiac lymphoma in immunocompetent patients: a report of three cases and review of the literature. Virchows Arch. 2002;441(5):456-61. DOI: 10.1007/s00428-002-0711-0. PMID: 12447675",
+      "Ceresoli GL, et al. Primary cardiac lymphoma in immunocompetent patients: diagnostic and therapeutic management. Cancer. 1997;80(8):1497-506. PMID: 9338475",
+      "Petrich A, et al. Primary cardiac lymphoma: an analysis of presentation, treatment, and outcome patterns. Cancer. 2011;117(3):581-9. DOI: 10.1002/cncr.25444. PMID: 20922788",
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario"
+    ],
+    "patient_material_slug": null
   }
 ]
