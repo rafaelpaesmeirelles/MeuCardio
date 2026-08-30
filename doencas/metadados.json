@@ -39015,5 +39015,221 @@
       "pelagra-deficiencia-de-niacina-e-acometimento-cardiovascular"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "crise-adrenal",
+    "name": "Crise adrenal (insuficiência adrenal aguda)",
+    "aliases": [
+      "insuficiência adrenal aguda",
+      "crise addisoniana",
+      "descompensação da doença de Addison",
+      "choque por insuficiência adrenal",
+      "insuficiência adrenal aguda com choque refratário"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "endocrina",
+    "prevalence_rank": 12,
+    "completeness": "completo",
+    "summary": "Emergência endócrina subdiagnosticada em que a perda aguda e grave de cortisol — por insuficiência adrenal primária estrutural (destruição do córtex adrenal, como na doença de Addison) ou secundária (supressão do eixo hipotálamo-hipófise-adrenal por corticoterapia crônica) descompensada diante de um estressor agudo — causa choque distributivo por perda do efeito permissivo do cortisol sobre o tônus vascular e a resposta a catecolaminas. O quadro é clinicamente indistinguível, à beira do leito, do choque séptico vasoplégico refratário, e é tipicamente tratado como sepse não controlada até que a refratariedade a volume e vasopressor obrigue a busca de uma explicação alternativa. O tratamento (hidrocortisona intravenosa em dose de estresse) deve ser empírico e imediato, sem aguardar confirmação laboratorial, pois a intervenção tem risco mínimo e o atraso pode ser fatal.",
+    "presentation": [
+      "Choque distributivo refratário a reposição volêmica agressiva e a doses crescentes de vasopressor, indistinguível à beira do leito do choque séptico vasoplégico",
+      "Desproporção entre a gravidade do choque e o foco infeccioso identificado, ou choque que não desacelera com o controle aparente do foco",
+      "Hiponatremia (perda do efeito inibitório do cortisol sobre a secreção de ADH, presente em ambas as formas) e, na insuficiência adrenal primária, hipercalemia concomitante por perda do efeito da aldosterona",
+      "Hipoglicemia associada",
+      "Hiperpigmentação cutânea e de mucosas — achado da insuficiência adrenal primária crônica, por elevação de ACTH e de peptídeos relacionados à pró-opiomelanocortina — tipicamente ausente na insuficiência adrenal secundária, em que o ACTH está baixo",
+      "Dor abdominal, náusea, vômitos e febre inexplicada desproporcionais ao quadro de base — pródromo clássico, porém inespecífico",
+      "Fator de risco identificável: corticoterapia sistêmica crônica (mesmo em dose baixa, ou inalatória/tópica em alta dose) com suspensão abrupta ou ausência de cobertura com dose de estresse em evento agudo; doença autoimune conhecida; cirurgia hipofisária ou adrenal prévia; uso de etomidato na indução anestésica; hemorragia adrenal bilateral em paciente anticoagulado, com coagulopatia ou sepse meningocócica"
+    ],
+    "differentials": [
+      "Choque séptico isolado, sem insuficiência adrenal estrutural subjacente (incluindo insuficiência adrenal relativa/funcional da doença crítica, entidade distinta tratada em documento correlato sobre corticosteroide no choque séptico refratário)",
+      "Choque cardiogênico",
+      "Choque hipovolêmico ou hemorrágico",
+      "Choque obstrutivo (tamponamento, embolia pulmonar maciça, pneumotórax hipertensivo)",
+      "Choque misto com componentes cardiogênico e vasodilatador simultâneos",
+      "Outras causas endócrinas de choque refratário: tempestade tireotóxica, coma mixedematoso",
+      "Síndrome BRASH (bradicardia, insuficiência renal, bloqueio nodal, choque e hipercalemia) como diagnóstico diferencial da associação choque mais hipercalemia"
+    ],
+    "tests": [
+      "Cortisol sérico aleatório, idealmente coletado antes da primeira dose de hidrocortisona, mas sem que a coleta atrase a administração do fármaco",
+      "Eletrólitos (sódio, potássio) e glicemia",
+      "ACTH plasmático, quando disponível: elevado com cortisol baixo aponta insuficiência primária; baixo ou inapropriadamente normal com cortisol baixo aponta insuficiência secundária",
+      "Teste de estimulação com ACTH (cosintropina) — padrão-ouro para confirmação em paciente estável, mas de utilidade limitada na fase aguda do choque; a confirmação formal deve ser buscada após a estabilização, nunca antes do tratamento empírico",
+      "Investigação do gatilho precipitante concomitante (hemograma, culturas, imagem conforme suspeita clínica), sem que essa investigação atrase o início da hidrocortisona"
+    ],
+    "red_flags": [
+      "Choque refratário a volume e a doses crescentes de vasopressor, sobretudo quando o foco infeccioso identificado não explica a gravidade do quadro",
+      "Hiponatremia e hipercalemia concomitantes, mesmo na ausência de outros dados sugestivos",
+      "Uso atual ou crônico recente de corticoide sistêmico (qualquer via, inclusive inalatória ou tópica em alta dose), especialmente com suspensão abrupta ou sem cobertura de dose de estresse em evento agudo",
+      "Hiperpigmentação cutânea/mucosa em paciente em choque",
+      "Uso de etomidato na indução anestésica ou intubação recente",
+      "Hemorragia adrenal bilateral em paciente anticoagulado, com coagulopatia, síndrome antifosfolípide ou sepse meningocócica (síndrome de Waterhouse-Friderichsen), mesmo sem diagnóstico prévio de insuficiência adrenal",
+      "Doença autoimune associada (tireoidite de Hashimoto, diabetes tipo 1, vitiligo) sugerindo síndrome poliglandular autoimune com doença de Addison"
+    ],
+    "ambulatory_flow": [
+      "Educar estruturadamente todo paciente em corticoterapia crônica sobre o conceito de dose de estresse: dobrar ou triplicar a dose oral habitual em doença aguda leve a moderada, ou substituir por hidrocortisona parenteral em vômitos, cirurgia de grande porte ou doença grave",
+      "Orientar reconhecimento de sinais de alarme (náusea persistente, hipotensão, confusão) que exigem atendimento de emergência imediato",
+      "Prescrever cartão ou pulseira de identificação médica indicando insuficiência adrenal e necessidade de hidrocortisona parenteral de emergência",
+      "Fornecer kit de hidrocortisona injetável de emergência ao paciente e a cuidadores, com treinamento para autoaplicação intramuscular",
+      "Aplicar protocolo perioperatório de dose de estresse para qualquer paciente com uso atual ou crônico recente de corticoide sistêmico submetido a cirurgia, ajustado à magnitude do procedimento",
+      "Nunca suspender corticoide crônico de forma abrupta — desmame sempre gradual e planejado, com reavaliação do eixo hipotálamo-hipófise-adrenal quando clinicamente indicada antes da suspensão completa"
+    ],
+    "emergency_flow": [
+      "Administrar hidrocortisona intravenosa empiricamente assim que a suspeita surgir em paciente instável, sem aguardar confirmação laboratorial: 100 mg IV em bolus, seguida de 50 mg IV a cada 6 horas (ou infusão contínua equivalente, cerca de 200 mg/24h), com desescalonamento progressivo conforme resposta clínica",
+      "Não adicionar fludrocortisona na fase aguda enquanto a dose de hidrocortisona for ≥ 50 mg a cada 6 horas, pois já há atividade mineralocorticoide suficiente; reintroduzir fludrocortisona apenas quando a dose de hidrocortisona for reduzida a níveis de manutenção, na insuficiência adrenal primária",
+      "Repor volume agressivamente com solução salina isotônica, corrigindo simultaneamente hipovolemia e hiponatremia, e corrigir hipoglicemia concomitante com glicose intravenosa",
+      "Manter ou iniciar suporte vasopressor (norepinefrina como agente de primeira linha) em paralelo à hidrocortisona — a reposição de corticosteroide não substitui o suporte hemodinâmico padrão, mas restaura a responsividade vascular às catecolaminas",
+      "Reconhecer que a refratariedade a volume e vasopressor isolados é, em si, um dado que reforça a suspeita diagnóstica e não deve adiar o tratamento hormonal",
+      "Em paciente já em corticoterapia crônica com choque, presumir insuficiência adrenal relativa até prova em contrário e não aguardar qualquer resultado laboratorial para iniciar o tratamento empírico",
+      "Investigar e tratar concomitantemente o fator precipitante (infecção, cirurgia, trauma, suspensão de corticoide)",
+      "Coletar cortisol sérico aleatório e, quando disponível, ACTH plasmático antes da primeira dose de hidrocortisona, sem que a coleta atrase a administração do fármaco; reservar o teste de estimulação com ACTH para depois da estabilização"
+    ],
+    "tags": [
+      "crise adrenal",
+      "insuficiência adrenal aguda",
+      "doença de Addison",
+      "choque distributivo",
+      "choque refratário",
+      "hidrocortisona",
+      "eixo hipotálamo-hipófise-adrenal",
+      "hiponatremia",
+      "hipercalemia",
+      "corticoterapia crônica",
+      "dose de estresse",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Rushworth RL, Torpy DJ, Falhammar H. Adrenal Crisis. N Engl J Med. 2019;381(9):852-861. PMID 31461595",
+      "Bornstein SR, Allolio B, Arlt W, et al. Diagnosis and Treatment of Primary Adrenal Insufficiency: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2016;101(2):364-389. PMID 26760044",
+      "Arlt W, Allolio B. Adrenal insufficiency. Lancet. 2003;361(9372):1881-1893. PMID 12788587",
+      "Cooper MS, Stewart PM. Corticosteroid insufficiency in acutely ill patients. N Engl J Med. 2003;348(8):727-734. PMID 12594318",
+      "Annane D, Sébille V, Charpentier C, et al. Effect of treatment with low doses of hydrocortisone and fludrocortisone on mortality in patients with septic shock. JAMA. 2002;288(7):862-871. PMID 12186604",
+      "Annane D, Pastores SM, Rochwerg B, et al. Guidelines for the Diagnosis and Management of Critical Illness-Related Corticosteroid Insufficiency (CIRCI) in Critically Ill Patients (Part I): SCCM and ESICM 2017. Crit Care Med. 2017;45(12):2078-2088. PMID 28938253",
+      "Marik PE, Varon J. Requirement of perioperative stress doses of corticosteroids: a systematic review of the literature. Arch Surg. 2008;143(12):1222-1226. PMID 19075176"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31461595/",
+      "https://pubmed.ncbi.nlm.nih.gov/26760044/",
+      "https://pubmed.ncbi.nlm.nih.gov/12788587/",
+      "https://pubmed.ncbi.nlm.nih.gov/12594318/",
+      "https://pubmed.ncbi.nlm.nih.gov/12186604/",
+      "https://pubmed.ncbi.nlm.nih.gov/28938253/",
+      "https://pubmed.ncbi.nlm.nih.gov/19075176/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "crise-adrenal-insuficiencia-adrenal-aguda-choque-cardiovascular-refratario"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "tempestade-tireotoxica",
+    "name": "Tempestade tireotóxica",
+    "aliases": [
+      "crise tireotóxica",
+      "thyroid storm",
+      "tireotoxicose descompensada com falência multissistêmica"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "endocrina",
+    "prevalence_rank": 11,
+    "completeness": "completo",
+    "summary": "Emergência endócrino-cardiovascular potencialmente fatal, definida pela resposta sistêmica desproporcional ao excesso de hormônio tireoidiano associada a um evento precipitante identificável (infecção, cirurgia sem preparo pré-operatório, trauma, parto, suspensão abrupta de tionamida, contraste iodado, cetoacidose diabética). Os níveis séricos de T3 e T4 livres não diferenciam a tempestade tireotóxica da tireotoxicose grave não complicada — o diagnóstico é clínico, apoiado no escore de Burch-Wartofsky, que soma pontos por disfunção termorregulatória, efeitos sobre o sistema nervoso central, disfunção gastrointestinal-hepática, taquicardia, fibrilação atrial, insuficiência cardíaca congestiva e presença de fator precipitante. A instabilidade cardiovascular — taquiarritmia, sobretudo fibrilação atrial de difícil controle, e insuficiência cardíaca de alto débito evoluindo para choque cardiogênico — é o principal eixo de mortalidade, ao lado de falência de múltiplos órgãos e insuficiência respiratória. O tratamento é multimodal e sequencial, com sequência inegociável: tionamida (bloqueio da síntese) antes do iodo (bloqueio da liberação, administrado pelo menos uma hora após a tionamida), betabloqueador (propranolol preferencialmente), corticosteroide (hidrocortisona) e suporte intensivo com tratamento agressivo do fator precipitante.",
+    "presentation": [
+      "Fibrilação atrial com resposta ventricular muito elevada, de difícil controle enquanto o substrato tireotóxico não é tratado em paralelo",
+      "Insuficiência cardíaca de alto débito que pode inverter rapidamente para choque cardiogênico franco (taquicardiomiopatia sobreposta a um estado circulatório hiperdinâmico)",
+      "Hipertermia extrema, muitas vezes desproporcional a qualquer foco infeccioso identificado, refletindo o hipermetabolismo sistêmico",
+      "Agitação, delirium, psicose ou outra alteração aguda do estado mental — o achado clínico que mais discrimina tempestade tireotóxica de tireotoxicose compensada",
+      "Os níveis séricos de T3 e T4 livres não diferenciam tempestade tireotóxica de tireotoxicose grave não complicada; não existe corte bioquímico que separe os dois estados — o diagnóstico é clínico, baseado no escore de Burch-Wartofsky",
+      "Evento precipitante identificável na maioria dos casos: infecção, cirurgia (sobretudo tireoidectomia sem preparo pré-operatório), trauma, parto/período periparto, suspensão abrupta de tionamida, uso de contraste iodado ou cetoacidose diabética"
+    ],
+    "differentials": [
+      "Sepse (hipertermia, taquicardia e alteração do estado mental sobrepostas)",
+      "Síndrome neuroléptica maligna",
+      "Hipertermia maligna",
+      "Feocromocitoma / crise catecolaminérgica",
+      "Tireotoxicose grave não complicada (compensada), que não preenche critérios clínicos de tempestade no escore de Burch-Wartofsky",
+      "Delirium tremens / síndrome de abstinência alcoólica",
+      "Síndrome serotoninérgica"
+    ],
+    "tests": [
+      "TSH, T3 e T4 livres — confirmam tireotoxicose, mas não diferenciam tempestade de tireotoxicose não complicada",
+      "Escore de Burch-Wartofsky (BWPS) — instrumento clínico de referência para o diagnóstico, somando disfunção termorregulatória, efeitos sobre o SNC, disfunção gastrointestinal-hepática, taquicardia, fibrilação atrial, insuficiência cardíaca congestiva e fator precipitante",
+      "Critérios da Japan Thyroid Association/Japan Endocrine Society (graus TS1/TS2) como sistema clínico alternativo de escore",
+      "Eletrocardiograma para caracterizar a taquiarritmia, sobretudo fibrilação atrial",
+      "Investigação dirigida ao fator precipitante (por exemplo hemoculturas se suspeita de infecção, avaliação metabólica se suspeita de cetoacidose diabética associada)",
+      "Função hepática (disfunção gastrointestinal-hepática grave, como icterícia inexplicada, pontua no escore)",
+      "Avaliação hemodinâmica e ecocardiograma quando há sinais de insuficiência cardíaca de alto débito ou choque cardiogênico"
+    ],
+    "red_flags": [
+      "Escore de Burch-Wartofsky ≥ 45 (altamente sugestivo de tempestade tireotóxica) ou 25-44 (tempestade iminente)",
+      "Fibrilação atrial com resposta ventricular muito elevada em paciente tireotóxico",
+      "Sinais de insuficiência cardíaca de alto débito com potencial de evoluir para choque cardiogênico",
+      "Hipertermia extrema desproporcional a qualquer foco infeccioso identificado",
+      "Alteração aguda do estado mental (agitação, delirium, psicose, letargia extrema, convulsão ou coma) em paciente tireotóxico",
+      "Fator precipitante ativo não controlado (infecção, cirurgia recente sem preparo, suspensão de tionamida, uso de contraste iodado, parto)"
+    ],
+    "ambulatory_flow": [
+      "Tempestade tireotóxica não deve ser manejada em nível ambulatorial — qualquer suspeita clínica compatível com escore de Burch-Wartofsky ≥25 exige encaminhamento imediato para emergência/UTI",
+      "Em paciente com hipertireoidismo conhecido e sinais de descompensação aguda (taquicardia importante, febre, alteração mental), orientar busca imediata de serviço de emergência, sem aguardar resultado de TSH/T3/T4",
+      "Reforçar ativamente a adesão à tionamida em pacientes com hipertireoidismo de base, já que a suspensão abrupta é um precipitante reconhecido",
+      "Antes de procedimentos eletivos (cirurgia, uso de contraste iodado) em paciente com hipertireoidismo não controlado, garantir preparo farmacológico prévio para reduzir o risco de precipitar a tempestade"
+    ],
+    "emergency_flow": [
+      "Aplicar o escore de Burch-Wartofsky para confirmar a suspeita clínica; não aguardar resultado hormonal para iniciar o tratamento",
+      "Iniciar tionamida (metimazol ou propiltiouracila) para bloquear a síntese hormonal — primeiro passo obrigatório da sequência terapêutica",
+      "Administrar solução de iodo (Lugol ou solução saturada de iodeto de potássio) pelo menos uma hora após a tionamida, nunca antes nem simultaneamente sem esse intervalo, para bloquear a liberação hormonal sem fornecer substrato adicional à síntese",
+      "Associar betabloqueador, preferencialmente propranolol em doses altas, para controle da resposta adrenérgica, da frequência cardíaca e bloqueio adicional da conversão periférica de T4 em T3",
+      "Administrar corticosteroide (hidrocortisona) para bloquear a conversão periférica de T4 em T3 e cobrir possível insuficiência adrenal relativa",
+      "Suporte intensivo: controle térmico ativo, reposição volêmica, correção hidroeletrolítica e tratamento agressivo do fator precipitante (antibioticoterapia se infecção, correção metabólica se cetoacidose associada)",
+      "Em choque cardiogênico, usar suporte hemodinâmico e drogas vasoativas como medida de ponte — nunca como substituto do bloqueio hormonal sequencial",
+      "Considerar plasmaférese terapêutica ou tireoidectomia de emergência em casos refratários ao tratamento farmacológico máximo"
+    ],
+    "tags": [
+      "tempestade tireotóxica",
+      "thyroid storm",
+      "tireotoxicose",
+      "hipertireoidismo",
+      "fibrilação atrial",
+      "choque cardiogênico",
+      "insuficiência cardíaca de alto débito",
+      "escore de Burch-Wartofsky",
+      "emergência endócrina",
+      "propranolol"
+    ],
+    "source_refs": [
+      "Burch HB, Wartofsky L. Life-threatening thyrotoxicosis. Thyroid storm. Endocrinol Metab Clin North Am. 1993;22(2):263-277. PMID: 8325286",
+      "Akamizu T, Satoh T, Isozaki O, Suzuki A, Wakino S, Iburi T, Tsuboi K, Monden T, Kouki T, Otani H, Teramukai S, Uehara R, Nakamura Y, Nagai M, Mori M; Japan Thyroid Association. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. Thyroid. 2012;22(7):661-679. PMID: 22690898",
+      "Akamizu T. Thyroid Storm: A Japanese Perspective. Thyroid. 2018;28(1):32-40. PMID: 28899229",
+      "Angell TE, Lechner MG, Nguyen CT, Salvato VL, Nicoloff JT, LoPresti JS. Clinical features and hospital outcomes in thyroid storm: a retrospective cohort study. J Clin Endocrinol Metab. 2015;100(2):451-459. PMID: 25343237",
+      "Chiha M, Samarasinghe S, Kabaker AS. Thyroid storm: an updated review. J Intensive Care Med. 2015;30(3):131-140. PMID: 23920160",
+      "Carroll R, Matfin G. Endocrine and metabolic emergencies: thyroid storm. Ther Adv Endocrinol Metab. 2010;1(3):139-145. PMID: 23148158",
+      "Ross DS, Burch HB, Cooper DS, Greenlee MC, Laurberg P, Maia AL, Rivkees SA, Samuels M, Sosa JA, Stan MN, Walter MA. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067",
+      "De Leo S, Lee SY, Braverman LE. Hyperthyroidism. Lancet. 2016;388(10047):906-918. PMID: 27038492",
+      "Klubo-Gwiezdzinska J, Wartofsky L. Thyroid emergencies. Med Clin North Am. 2012;96(2):385-403. PMID: 22443982",
+      "Pokhrel B, Aiman W, Bhusal K. Thyroid Storm. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em janeiro de 2026. PMID: 28846289"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8325286/",
+      "https://pubmed.ncbi.nlm.nih.gov/22690898/",
+      "https://pubmed.ncbi.nlm.nih.gov/28899229/",
+      "https://pubmed.ncbi.nlm.nih.gov/25343237/",
+      "https://pubmed.ncbi.nlm.nih.gov/23920160/",
+      "https://pubmed.ncbi.nlm.nih.gov/23148158/",
+      "https://pubmed.ncbi.nlm.nih.gov/27521067/",
+      "https://pubmed.ncbi.nlm.nih.gov/27038492/",
+      "https://pubmed.ncbi.nlm.nih.gov/22443982/",
+      "https://pubmed.ncbi.nlm.nih.gov/28846289/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "tempestade-tireotoxica-emergencia-cardiovascular-diagnostico-clinico-e-tratamento-sequenciado"
+    ],
+    "patient_material_slug": null
   }
 ]

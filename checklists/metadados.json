@@ -36927,5 +36927,209 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "choque-refratario-volume-vasopressor-suspeitar-crise-adrenal",
+    "condicao": "Choque cardiovascular refratário a volume e vasopressor com suspeita de crise adrenal (insuficiência adrenal aguda)",
+    "resumo": "Checklist de reconhecimento e conduta imediata diante de choque refratário a reposição volêmica e a doses crescentes de vasopressor, para não perder a janela de tratamento da crise adrenal: identificar fatores de risco, coletar cortisol sérico aleatório sem aguardar o resultado, administrar hidrocortisona intravenosa empírica de imediato e não descartar a hipótese apenas pela ausência de hiperpigmentação.",
+    "documento_origem": "crise-adrenal-insuficiencia-adrenal-aguda-choque-cardiovascular-refratario",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Rushworth RL, Torpy DJ, Falhammar H. Adrenal Crisis. N Engl J Med. 2019;381(9):852-861. PMID 31461595",
+      "Bornstein SR, Allolio B, Arlt W, et al. Diagnosis and Treatment of Primary Adrenal Insufficiency: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2016;101(2):364-389. PMID 26760044",
+      "Arlt W, Allolio B. Adrenal insufficiency. Lancet. 2003;361(9372):1881-1893. PMID 12788587",
+      "Cooper MS, Stewart PM. Corticosteroid insufficiency in acutely ill patients. N Engl J Med. 2003;348(8):727-734. PMID 12594318",
+      "Annane D, Sébille V, Charpentier C, et al. Effect of treatment with low doses of hydrocortisone and fludrocortisone on mortality in patients with septic shock. JAMA. 2002;288(7):862-871. PMID 12186604",
+      "Annane D, Pastores SM, Rochwerg B, et al. Guidelines for the Diagnosis and Management of Critical Illness-Related Corticosteroid Insufficiency (CIRCI) in Critically Ill Patients (Part I): SCCM and ESICM 2017. Crit Care Med. 2017;45(12):2078-2088. PMID 28938253",
+      "Marik PE, Varon J. Requirement of perioperative stress doses of corticosteroids: a systematic review of the literature. Arch Surg. 2008;143(12):1222-1226. PMID 19075176"
+    ],
+    "itens": [
+      {
+        "id": "crise-adrenal-suspeita-refrataria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de crise adrenal levantada diante de choque que não responde de forma esperada a reposição volêmica e a doses crescentes de vasopressor",
+        "origem_secao": "3. A armadilha diagnóstica central"
+      },
+      {
+        "id": "crise-adrenal-fatores-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores de risco pesquisados ativamente: corticoterapia sistêmica crônica (mesmo em dose baixa, ou inalatório/tópico em alta dose), doença autoimune conhecida, cirurgia hipofisária/adrenal prévia, uso recente de opioides, megestrol ou etomidato",
+        "origem_secao": "3. A armadilha diagnóstica central"
+      },
+      {
+        "id": "crise-adrenal-eletrolitos",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Hiponatremia e hipercalemia concomitantes verificadas como sinal de alerta adicional para crise adrenal, mesmo na ausência de outros dados",
+        "origem_secao": "3. A armadilha diagnóstica central"
+      },
+      {
+        "id": "crise-adrenal-hiperpigmentacao-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de hiperpigmentação cutânea/mucosa não foi usada para descartar crise adrenal — esse achado é exclusivo da insuficiência adrenal primária crônica (ACTH elevado) e tipicamente ausente na forma secundária",
+        "origem_secao": "3. A armadilha diagnóstica central"
+      },
+      {
+        "id": "crise-adrenal-cortisol-aleatorio",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Cortisol sérico aleatório coletado, idealmente antes da primeira dose de hidrocortisona, sem que a coleta atrase a administração do fármaco",
+        "origem_secao": "4. Diagnóstico: não aguardar o teste de estimulação com ACTH"
+      },
+      {
+        "id": "crise-adrenal-sem-teste-acth",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Teste de estimulação com ACTH (cosintropina) não aguardado para iniciar o tratamento; confirmação diagnóstica formal reservada para depois da estabilização hemodinâmica",
+        "origem_secao": "4. Diagnóstico: não aguardar o teste de estimulação com ACTH"
+      },
+      {
+        "id": "crise-adrenal-hidrocortisona-empirica",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Hidrocortisona 100 mg IV em bolus administrada empiricamente, sem aguardar confirmação laboratorial, seguida de 50 mg IV a cada 6 horas (ou infusão contínua equivalente, cerca de 200 mg/24h)",
+        "origem_secao": "5.1 Hidrocortisona intravenosa em dose de estresse — administração empírica imediata"
+      },
+      {
+        "id": "crise-adrenal-reposicao-volemica",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Reposição volêmica agressiva com solução salina isotônica (soro fisiológico 0,9%) iniciada, com correção de hipoglicemia concomitante quando presente",
+        "origem_secao": "5.2 Reposição volêmica"
+      },
+      {
+        "id": "crise-adrenal-vasopressor-concomitante",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Vasopressor (norepinefrina como agente de primeira linha) mantido ou iniciado em paralelo à hidrocortisona, sem que a reposição hormonal substitua o suporte hemodinâmico padrão",
+        "origem_secao": "5.3 Suporte vasopressor concomitante"
+      },
+      {
+        "id": "crise-adrenal-fator-precipitante",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Fator precipitante investigado e tratado em paralelo (infecção, cirurgia, trauma, suspensão inadvertida de corticoide crônico)",
+        "origem_secao": "5.4 Tratamento do fator precipitante"
+      },
+      {
+        "id": "crise-adrenal-etomidato-agravante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Uso de etomidato na indução anestésica ou intubação considerado fator agravante da supressão adrenal aguda, reforçando a indicação de corticoide de resgate",
+        "origem_secao": "5.1 Hidrocortisona intravenosa em dose de estresse — administração empírica imediata"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "checklist-tempestade-tireotoxica-diagnostico-e-tratamento-sequenciado",
+    "condicao": "Tempestade tireotóxica: reconhecimento clínico e tratamento sequenciado da emergência cardiovascular",
+    "resumo": "Checklist de execução para suspeitar e diagnosticar a tempestade tireotóxica pelo escore de Burch-Wartofsky — sem aguardar exame laboratorial específico —, identificar o fator precipitante e conduzir o tratamento multimodal na sequência correta: tionamida antes do iodo (intervalo mínimo de 1 hora), betabloqueador (propranolol) e corticosteroide.",
+    "documento_origem": "tempestade-tireotoxica-emergencia-cardiovascular-diagnostico-clinico-e-tratamento-sequenciado",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Burch HB, Wartofsky L. Life-threatening thyrotoxicosis. Thyroid storm. Endocrinol Metab Clin North Am. 1993;22(2):263-277. PMID: 8325286",
+      "Akamizu T, Satoh T, Isozaki O, Suzuki A, Wakino S, Iburi T, Tsuboi K, Monden T, Kouki T, Otani H, Teramukai S, Uehara R, Nakamura Y, Nagai M, Mori M; Japan Thyroid Association. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. Thyroid. 2012;22(7):661-679. PMID: 22690898",
+      "Akamizu T. Thyroid Storm: A Japanese Perspective. Thyroid. 2018;28(1):32-40. PMID: 28899229",
+      "Angell TE, Lechner MG, Nguyen CT, Salvato VL, Nicoloff JT, LoPresti JS. Clinical features and hospital outcomes in thyroid storm: a retrospective cohort study. J Clin Endocrinol Metab. 2015;100(2):451-459. PMID: 25343237",
+      "Chiha M, Samarasinghe S, Kabaker AS. Thyroid storm: an updated review. J Intensive Care Med. 2015;30(3):131-140. PMID: 23920160",
+      "Carroll R, Matfin G. Endocrine and metabolic emergencies: thyroid storm. Ther Adv Endocrinol Metab. 2010;1(3):139-145. PMID: 23148158",
+      "Ross DS, Burch HB, Cooper DS, Greenlee MC, Laurberg P, Maia AL, Rivkees SA, Samuels M, Sosa JA, Stan MN, Walter MA. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067",
+      "De Leo S, Lee SY, Braverman LE. Hyperthyroidism. Lancet. 2016;388(10047):906-918. PMID: 27038492",
+      "Klubo-Gwiezdzinska J, Wartofsky L. Thyroid emergencies. Med Clin North Am. 2012;96(2):385-403. PMID: 22443982",
+      "Pokhrel B, Aiman W, Bhusal K. Thyroid Storm. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em janeiro de 2026. PMID: 28846289"
+    ],
+    "itens": [
+      {
+        "id": "tt-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de tempestade tireotóxica levantada diante de taquiarritmia, insuficiência cardíaca de causa indeterminada, hipertermia desproporcional e/ou alteração do estado mental associadas — antes de esgotar apenas as medidas cardiológicas padrão",
+        "origem_secao": "A armadilha final: tratar a arritmia e a insuficiência cardíaca como se fossem apenas cardiológicas"
+      },
+      {
+        "id": "tt-diagnostico-nao-espera-laboratorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conduta não foi postergada à espera de resultado de T3, T4 livre ou TSH: reconhecido que não há corte bioquímico que diferencie tempestade de tireotoxicose não complicada e que o diagnóstico é clínico",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-escore-burch-wartofsky",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore de Burch-Wartofsky (BWPS) calculado somando os sete domínios: disfunção termorregulatória, efeitos no SNC, disfunção gastrointestinal-hepática, taquicardia, fibrilação atrial, insuficiência cardíaca congestiva e fator precipitante",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-interpretacao-escore",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Resultado do BWPS interpretado nos cortes de referência: ≥45 altamente sugestivo de tempestade; 25-44 sustenta o diagnóstico (tempestade iminente); <25 torna o diagnóstico improvável",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-fator-precipitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fator precipitante pesquisado ativamente: infecção, cirurgia (incluindo tireoidectomia sem preparo pré-operatório), trauma, parto/período periparto, suspensão abrupta de tionamida, uso de contraste iodado e cetoacidose diabética",
+        "origem_secao": "Fatores precipitantes: o gatilho que descompensa um equilíbrio já frágil"
+      },
+      {
+        "id": "tt-tionamida-primeiro",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Tionamida (metimazol ou propiltiouracila) administrada como primeira medida farmacológica, antes de qualquer solução de iodo, para bloquear a síntese hormonal",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-iodo-apos-intervalo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Iodo (Lugol ou solução saturada de iodeto de potássio) administrado somente após intervalo mínimo de 1 hora da tionamida — nunca antes e nunca simultaneamente sem esse intervalo",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-betabloqueador",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Betabloqueador iniciado para controle da resposta adrenérgica e da frequência cardíaca, com propranolol como agente preferencial pelo efeito adicional de bloqueio da conversão periférica de T4 em T3",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-corticosteroide",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Corticosteroide (tipicamente hidrocortisona) administrado para bloquear a conversão periférica de T4 em T3 e cobrir possível insuficiência adrenal relativa",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-tratamento-precipitante",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Tratamento do fator precipitante conduzido em paralelo ao bloqueio hormonal (antibioticoterapia se infecção, controle glicêmico e correção metabólica se cetoacidose associada, entre outros)",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-suporte-intensivo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Suporte intensivo instituído: controle térmico ativo, reposição volêmica e correção de distúrbios hidroeletrolíticos, evitando diuréticos agressivos e vasodilatadores padrão de baixo débito sem correção da causa tireotóxica",
+        "origem_secao": "A armadilha final: tratar a arritmia e a insuficiência cardíaca como se fossem apenas cardiológicas"
+      },
+      {
+        "id": "tt-resgate-refratario",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Em caso de refratariedade ao tratamento farmacológico máximo, plasmaférese terapêutica ou tireoidectomia de emergência consideradas como medidas de resgate",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
