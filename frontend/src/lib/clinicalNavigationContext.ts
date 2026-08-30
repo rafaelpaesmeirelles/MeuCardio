@@ -25,7 +25,7 @@ const contexts: Array<{ prefixes: string[]; context: ClinicalNavigationContext }
     ] },
   },
   {
-    prefixes: ["/doencas", "/triagem-sintomas", "/condicoes"],
+    prefixes: ["/doencas", "/triagem-sintomas", "/condicoes", "/calculadoras"],
     context: { key: "decisao", title: "Decisão clínica", detail: "Doença, triagem e conduta", icon: "doencas", actions: [
       { to: "/diretrizes", label: "Diretrizes", detail: "Conduta recomendada", icon: "evidencia" },
       { to: "/calculadoras", label: "Escores", detail: "Estratificar risco", icon: "calculadora" },
@@ -126,12 +126,12 @@ export function commandDestination(value: string) {
   const normalized = term.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
   const commands: Array<[RegExp, string]> = [
     [/\b(ecg|eletrocardiograma|holter|mapa|ecocardiograma|ressonancia|tomografia|exame cardiovascular)\b/, "/exames-ia"],
-    [/\b(prescrev|prescri|receita|receitu)\b/, "/receituario"],
+    [/\b(prescrev\w*|prescri\w*|receit\w*)\b/, "/receituario"],
     [/\b(atestado|documento|relatorio|encaminhamento|solicitar exames?|pedido de exames?)\b/, "/documentos"],
-    [/\b(calcul|escore|score)\b/, "/calculadoras"],
+    [/\b(calcul\w*|escore\w*|score\w*)\b/, "/calculadoras"],
     [/\b(emergencia|urgencia)\b/, "/emergencia"],
     [/\b(interacao|interacoes)\b/, "/interacoes"],
-    [/\b(favorit|salvos?)\b/, "/favoritos"],
+    [/\b(favorit\w*|salvos?)\b/, "/favoritos"],
     [/\b(agenda|compromisso)\b/, "/agenda"],
     [/\b(prontuario|paciente)\b/, "/prontuario"],
     [/\b(round|internados?)\b/, "/round"],

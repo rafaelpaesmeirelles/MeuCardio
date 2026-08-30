@@ -25,7 +25,9 @@ export default function Favoritos() {
     setRemovendo(chave); setErro("");
     try {
       await api.delete(`/favorites/${f.item_type}/${f.item_id}`);
-      setItens((atuais) => atuais?.filter((item) => item.item_type !== f.item_type || item.item_id !== f.item_id) ?? []);
+      const restantes = (itens ?? []).filter((item) => item.item_type !== f.item_type || item.item_id !== f.item_id);
+      setItens(restantes);
+      if (filtro === f.item_type && !restantes.some((item) => item.item_type === f.item_type)) setFiltro("todos");
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível remover o favorito.");
     } finally { setRemovendo(null); }

@@ -72,6 +72,10 @@ test("navegação usa contexto clínico e elimina rotas duplicadas do catálogo"
   for (const token of ["Farmacologia clínica", "Contexto do paciente", "Produção clínica", "Tudo com Tudo", "commandDestination"]) {
     assert.equal(context.includes(token), true, `falta contexto: ${token}`);
   }
+  assert.equal(context.includes('prefixes: ["/doencas", "/triagem-sintomas", "/condicoes", "/calculadoras"]'), true, "calculadoras precisam manter contexto de decisão clínica");
+  for (const stem of ["prescrev\\w*", "prescri\\w*", "receit\\w*", "calcul\\w*", "favorit\\w*"]) {
+    assert.equal(context.includes(stem), true, `comando precisa aceitar a flexão ${stem}`);
+  }
   assert.equal(desktop.includes("<details"), true, "seções desktop precisam de revelação progressiva");
   assert.equal(desktop.includes("No seu contexto"), true);
   assert.equal(mobile.includes("cc-mobile-more__context"), true);
@@ -98,6 +102,7 @@ test("busca tem refinamento progressivo e favoritos fecham o fluxo prometido", (
   }
   assert.equal(favorites.includes("Filtrar favoritos"), true);
   assert.equal(favorites.includes("Buscar conteúdo"), true);
+  assert.equal(favorites.includes('setFiltro("todos")'), true, "remover o último favorito filtrado precisa retornar a Todos");
   assert.equal(favoriteButton.includes("Atualizando…"), true);
   assert.equal(drug.includes('itemType="medicamento"'), true);
   assert.equal(document.includes('itemType="documento"'), true);

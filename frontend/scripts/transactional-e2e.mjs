@@ -203,6 +203,17 @@ async function navigationAndFavorites() {
   await api(`/api/favorites/medicamento/${drug.id}`, { method: "DELETE" });
 
   await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  const command = page.locator(".cos-command-mini input");
+  await command.fill("prescrever");
+  await command.press("Enter");
+  await page.waitForURL((url) => url.pathname === "/receituario");
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  await page.locator(".cos-command-mini input").fill("calcular risco");
+  await page.locator(".cos-command-mini input").press("Enter");
+  await page.waitForURL((url) => url.pathname === "/calculadoras");
+  assert.ok((await page.locator(".ccc-nav__context").innerText()).includes("Decisão clínica"));
+
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
   const favoriteButton = page.getByRole("button", { name: "☆ Favoritar", exact: true });
   await favoriteButton.waitFor({ state: "visible" });
   await favoriteButton.click();
