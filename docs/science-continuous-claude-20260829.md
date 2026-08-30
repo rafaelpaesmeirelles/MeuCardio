@@ -1300,7 +1300,24 @@ está substancialmente exaurido nos gaps facilmente descobríveis.
 Continuar exigirá auditorias progressivamente mais estreitas ou
 aprofundamento pontual de hubs existentes.
 
-## Lote 58 (planejado)
+## Lote 58 — concluído (SHA 12517a83) — total 86 commits
+
+- checklist `avaliacao-cardiovascular-do-doador-cardiaco-criterios-de-aceitacao-do-enxerto`
+  — 5 itens do lado do DOADOR, complementando toda a cobertura já
+  construída do lado do receptor: critérios do doador (ausência de
+  corte etário único confirmado, declarado); ecocardiograma do doador
+  (disfunção sistólica inicial NÃO é contraindicação automática —
+  "tempestade catecolaminérgica" da morte encefálica é reversível,
+  recuperação de FE de 48% para 59% em protocolo ativo); ECG e morte
+  encefálica (QTc longo NÃO se associou a recusa após ajuste, mas HVE
+  foi preditor forte); rastreio coronariano seletivo; otimização
+  hemodinâmica (pacote combinado com respaldo retrospectivo sólido,
+  mas RCT de T4 isolado NÃO mostrou melhora significativa — distinção
+  preservada com honestidade). 11 fontes via NCBI e-utils. Confirmado
+  extensa saturação nesta auditoria: SGLT2i em CMH, PFA, leadless
+  pacemaker, clozapina, sarcopenia — já cobertos.
+
+## Lote 59 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
