@@ -41027,5 +41027,685 @@
       "doenca-de-chagas-aguda-por-transmissao-oral-surtos-na-amazonia-e-miocardite-fulminante"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "malaria-grave",
+    "name": "Malária grave",
+    "aliases": [
+      "malária grave por Plasmodium falciparum",
+      "malária complicada",
+      "severe malaria",
+      "malária álgida",
+      "choque malárico"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 40,
+    "completeness": "completo",
+    "summary": "Forma grave da malária, predominantemente por Plasmodium falciparum, na qual o sequestro de hemácias parasitadas na microcirculação — incluindo o leito coronariano e miocárdico — soma-se a choque circulatório ('malária álgida'), acidose lática e hipoglicemia graves para produzir disfunção cardiovascular multifatorial; a cardiotoxicidade dos antimaláricos usados no tratamento (quinina, cloroquina, halofantrina, lumefantrina), sobretudo o prolongamento do intervalo QT, é componente adicional a monitorizar. Concentra-se na Amazônia Legal brasileira.",
+    "presentation": [
+      "Febre alta, calafrios e mal-estar em paciente com residência ou viagem recente à Amazônia Legal ou outra área endêmica",
+      "Choque circulatório com extremidades frias, hipotensão e má perfusão ('malária álgida')",
+      "Rebaixamento do nível de consciência ou convulsão (malária cerebral)",
+      "Palidez, icterícia e hemoglobinúria por hemólise intensa",
+      "Taquicardia desproporcional, achados eletrocardiográficos inespecíficos (alteração de segmento PR, sinal de Spodick) ou derrame pericárdico",
+      "Sinais de hipoglicemia (sudorese, confusão, convulsão), especialmente em uso de quinina, gestante ou criança",
+      "Dispneia e taquipneia por acidose metabólica ou síndrome do desconforto respiratório agudo",
+      "Sangramento espontâneo ou coagulopatia em casos graves"
+    ],
+    "differentials": [
+      "Sepse bacteriana e choque séptico de outra origem, incluindo coinfecção bacteriana concomitante à malária",
+      "Febre amarela, dengue grave, leptospirose e outras arboviroses/zoonoses endêmicas na Amazônia",
+      "Doença de Chagas aguda e outras miocardites tropicais",
+      "Meningite ou encefalite infecciosa em paciente com rebaixamento de consciência",
+      "Insuficiência adrenal aguda como causa concorrente do choque",
+      "Cardiotoxicidade primária de outra origem (intoxicação exógena, distúrbio eletrolítico) mimetizando o quadro cardiovascular"
+    ],
+    "tests": [
+      "Gota espessa e esfregaço fino para identificação e quantificação da parasitemia por microscopia",
+      "Teste rápido antigênico para malária quando microscopia não estiver imediatamente disponível",
+      "Hemograma completo, glicemia, lactato e gasometria arterial ou venosa seriados",
+      "Função renal, função hepática, bilirrubinas e eletrólitos (potássio, magnésio)",
+      "Eletrocardiograma basal e seriado, com atenção ao QTc, especialmente antes e durante uso de quinina, cloroquina em dose alta, halofantrina ou lumefantrina",
+      "Ecocardiografia à beira-leito quando disponível, para avaliar função sistólica e volemia no choque",
+      "Hemoculturas quando houver suspeita de coinfecção bacteriana ('malária álgida' como diagnóstico sindrômico)",
+      "Coagulograma e função renal seriada em quadros com sangramento ou disfunção multiorgânica"
+    ],
+    "red_flags": [
+      "Choque circulatório ou hipotensão persistente apesar de reposição volêmica inicial",
+      "Rebaixamento do nível de consciência, convulsão ou coma (malária cerebral)",
+      "Hipoglicemia grave, sobretudo em uso de quinina, gestante ou criança",
+      "Acidose metabólica grave ou lactato muito elevado, preditor robusto de mortalidade",
+      "Insuficiência renal aguda, hemoglobinúria maciça ou disfunção multiorgânica",
+      "Parasitemia muito elevada por P. falciparum",
+      "QTc muito prolongado ou arritmia ventricular durante tratamento antimalárico",
+      "Sangramento espontâneo ou coagulopatia"
+    ],
+    "ambulatory_flow": [
+      "Malária grave não é manejada em nível ambulatorial: qualquer sinal de gravidade exige internação imediata, idealmente em unidade com suporte intensivo",
+      "Em malária não complicada já em tratamento ambulatorial, orientar retorno imediato se surgir confusão mental, sangramento, diminuição do volume urinário, vômitos incoercíveis ou piora clínica",
+      "Reforçar adesão ao esquema antimalárico completo e orientar sobre sintomas de alarme antes da alta de qualquer atendimento inicial",
+      "Considerar ECG basal em quem vai iniciar quinina, cloroquina em dose alta ou halofantrina, mesmo em contexto ambulatorial, quando disponível"
+    ],
+    "emergency_flow": [
+      "Confirmar o diagnóstico parasitológico (gota espessa ou teste rápido) sem atrasar o início do tratamento em quadro grave",
+      "Iniciar antimalárico específico para malária grave (via de regra artesunato parenteral, conforme protocolo institucional) o mais rápido possível",
+      "Investigar e tratar ativamente causas concorrentes do choque ('malária álgida' como diagnóstico sindrômico): reposição volêmica guiada, cobertura antibiótica empírica se houver suspeita de coinfecção bacteriana, e avaliação de insuficiência adrenal",
+      "Monitorizar glicemia e lactato de forma seriada, com correção imediata de hipoglicemia",
+      "Obter e reavaliar ECG durante o tratamento, corrigindo hipocalemia e hipomagnesemia, com atenção redobrada ao QTc na fase de defervescência e em uso de mais de um fármaco pró-QT",
+      "Avaliar função cardíaca por ecocardiografia à beira-leito quando disponível em choque refratário à volemia",
+      "Escalonar para suporte de terapia intensiva diante de disfunção multiorgânica, coma, insuficiência renal ou choque refratário"
+    ],
+    "tags": [
+      "malária grave",
+      "Plasmodium falciparum",
+      "malária álgida",
+      "sequestro microvascular",
+      "miocardite",
+      "choque",
+      "acidose lática",
+      "hipoglicemia",
+      "QT longo adquirido",
+      "cardiotoxicidade de antimaláricos",
+      "quinina",
+      "cloroquina",
+      "halofantrina",
+      "lumefantrina",
+      "Amazônia Legal",
+      "doença tropical"
+    ],
+    "source_refs": [
+      "Oliveira-Ferreira J, Lacerda MV, Brasil P, Ladislau JL, Tauil PL, Daniel-Ribeiro CT. Malaria in Brazil: an overview. Malar J. 2010;9:115. DOI: 10.1186/1475-2875-9-115. PMID: 20433744",
+      "Ferreira MU, Castro MC. Challenges for malaria elimination in Brazil. Malar J. 2016;15(1):284. DOI: 10.1186/s12936-016-1335-1. PMID: 27206924",
+      "White NJ, Pukrittayakamee S, Hien TT, Faiz MA, Mokuolu OA, Dondorp AM. Malaria. Lancet. 2014;383(9918):723-735. DOI: 10.1016/S0140-6736(13)60024-0. PMID: 23953767",
+      "Holm AE, Gomes LC, Marinho CRF, Silvestre OM, Vestergaard LS, Biering-Sørensen T, Brainin P. Prevalence of Cardiovascular Complications in Malaria: A Systematic Review and Meta-Analysis. Am J Trop Med Hyg. 2021;104(5):1643-1650. DOI: 10.4269/ajtmh.20-1414. PMID: 33724926",
+      "Yacoub S, Lang HJ, Shebbe M, Timbwa M, Ohuma E, Tulloh R, Maitland K. Cardiac function and hemodynamics in Kenyan children with severe malaria. Crit Care Med. 2010;38(3):940-945. DOI: 10.1097/CCM.0b013e3181cd114a. PMID: 20068463",
+      "Lacerda MV, Mourão MP, Santos PJ, Alecrim Md. Algid malaria: a syndromic diagnosis. Rev Soc Bras Med Trop. 2009;42(1):79-81. DOI: 10.1590/s0037-86822009000100017. PMID: 19287942",
+      "White NJ, Warrell DA, Chanthavanich P, Looareesuwan S, Warrell MJ, Krishna S, Williamson DH, Turner RC. Severe hypoglycemia and hyperinsulinemia in falciparum malaria. N Engl J Med. 1983;309(2):61-66. DOI: 10.1056/NEJM198307143090201. PMID: 6343877",
+      "Day NP, Phu NH, Mai NT, Chau TT, Loc PP, Chuong LV, Sinh DX, Holloway P, Hien TT, White NJ. The pathophysiologic and prognostic significance of acidosis in severe adult malaria. Crit Care Med. 2000;28(6):1833-1840. PMID: 10890629",
+      "English M, Sauerwein R, Waruiru C, Mosobo M, Obiero J, Lowe B, Marsh K. Acidosis in severe childhood malaria. QJM. 1997;90(4):263-270. DOI: 10.1093/qjmed/90.4.263. PMID: 9307760",
+      "Chan XHS, Win YN, Haeusler IL, et al. Factors affecting the electrocardiographic QT interval in malaria: A systematic review and meta-analysis of individual patient data. PLoS Med. 2020;17(3):e1003040. DOI: 10.1371/journal.pmed.1003040. PMID: 32134952",
+      "Haeusler IL, Chan XHS, Guérin PJ, White NJ. The arrhythmogenic cardiotoxicity of the quinoline and structurally related antimalarial drugs: a systematic review. BMC Med. 2018;16(1):200. DOI: 10.1186/s12916-018-1188-2. PMID: 30400791",
+      "White NJ. Cardiotoxicity of antimalarial drugs. Lancet Infect Dis. 2007;7(8):549-558. PMID: 17646028",
+      "Wesche DL, Schuster BG, Wang WX, Woosley RL. Mechanism of cardiotoxicity of halofantrine. Clin Pharmacol Ther. 2000;67(5):521-529. DOI: 10.1067/mcp.2000.106127. PMID: 10824631",
+      "Mhamilawa LE, Wikström S, Mmbando BP, Ngasala B, Mårtensson A. Electrocardiographic safety evaluation of extended artemether-lumefantrine treatment in patients with uncomplicated Plasmodium falciparum malaria in Bagamoyo District, Tanzania. Malar J. 2020;19(1):250. DOI: 10.1186/s12936-020-03309-2. PMID: 32664948",
+      "Kaagaard MD, Matos LO, Holm AE, et al. Frequency of Electrocardiographic Alterations and Pericardial Effusion in Patients With Uncomplicated Malaria. Am J Cardiol. 2022;165:116-123. DOI: 10.1016/j.amjcard.2021.11.009. PMID: 34906368",
+      "Wassmer SC, Grau GE. Severe malaria: what's new on the pathogenesis front? Int J Parasitol. 2017;47(2-3):145-152. DOI: 10.1016/j.ijpara.2016.08.002. PMID: 27670365"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20433744/",
+      "https://pubmed.ncbi.nlm.nih.gov/27206924/",
+      "https://pubmed.ncbi.nlm.nih.gov/23953767/",
+      "https://pubmed.ncbi.nlm.nih.gov/33724926/",
+      "https://pubmed.ncbi.nlm.nih.gov/20068463/",
+      "https://pubmed.ncbi.nlm.nih.gov/19287942/",
+      "https://pubmed.ncbi.nlm.nih.gov/6343877/",
+      "https://pubmed.ncbi.nlm.nih.gov/10890629/",
+      "https://pubmed.ncbi.nlm.nih.gov/9307760/",
+      "https://pubmed.ncbi.nlm.nih.gov/32134952/",
+      "https://pubmed.ncbi.nlm.nih.gov/30400791/",
+      "https://pubmed.ncbi.nlm.nih.gov/17646028/",
+      "https://pubmed.ncbi.nlm.nih.gov/10824631/",
+      "https://pubmed.ncbi.nlm.nih.gov/32664948/",
+      "https://pubmed.ncbi.nlm.nih.gov/34906368/",
+      "https://pubmed.ncbi.nlm.nih.gov/27670365/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "malaria-grave-e-acometimento-cardiovascular-sequestro-microvascular-malaria-algida-e-cardiotoxicidade"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miocardite-e-disfuncao-cardiovascular-na-febre-amarela",
+    "name": "Miocardite e disfunção cardiovascular na febre amarela",
+    "aliases": [
+      "cardiopatia da febre amarela",
+      "acometimento cardíaco na febre amarela grave",
+      "miocardite por vírus da febre amarela",
+      "sinal de Faget"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 41,
+    "completeness": "completo",
+    "summary": "Acometimento miocárdico direto e disfunção cardiovascular na forma grave da febre amarela, doença reemergente em surtos silvestres no Sudeste do Brasil: bradicardia relativa (sinal de Faget), alterações eletrocardiográficas frequentes, miocardite confirmada por autópsia com detecção viral no tecido cardíaco, e choque multifatorial associado a disfunção hepática e coagulopatia, sem antiviral específico disponível.",
+    "presentation": [
+      "Quadro febril bifásico: período de infecção inespecífico (febre, mialgia, cefaleia) seguido de remissão breve e, em parcela dos casos, reintrodução na forma tóxica com icterícia e hemorragia",
+      "Bradicardia relativa/sinusal desproporcional à febre (sinal de Faget), presente em cerca de um quarto dos pacientes hospitalizados, sem diferir entre forma leve/moderada e grave",
+      "Alterações eletrocardiográficas inespecíficas, mais frequentes na forma grave",
+      "Sinais de disfunção miocárdica (espessamento de parede com textura hiper-refringente, disfunção de ventrículo esquerdo) na forma grave",
+      "Sinais de choque multifatorial: hipotensão, hipoperfusão, sangramento digestivo ('vômito negro'), icterícia e encefalopatia hepática nos casos mais graves",
+      "Contexto epidemiológico: exposição em área de transmissão silvestre ativa (Minas Gerais, Espírito Santo, Rio de Janeiro, São Paulo e áreas de risco correlatas), ausência de vacinação ou situação vacinal incerta"
+    ],
+    "differentials": [
+      "Dengue grave",
+      "Leptospirose (síndrome de Weil)",
+      "Malária grave",
+      "Hepatite viral fulminante",
+      "Febre maculosa brasileira",
+      "Outras miocardites virais tropicais (Chagas aguda, Chikungunya, Zika)",
+      "Sepse com disfunção miocárdica"
+    ],
+    "tests": [
+      "RT-PCR para vírus da febre amarela na fase de viremia",
+      "Sorologia IgM/IgG por ELISA a partir do 5º-7º dia, com atenção a reação cruzada com outros flavivírus",
+      "ECG em todo caso suspeito, dada a frequência de alterações mesmo em formas leves/moderadas",
+      "Ecocardiograma em casos moderados a graves ou com ECG alterado",
+      "Transaminases, bilirrubina, coagulograma/INR, função renal e hemograma",
+      "Ressonância cardíaca quando clinicamente indicada e o paciente estiver estável"
+    ],
+    "red_flags": [
+      "Bradicardia relativa associada a hipotensão ou hipoperfusão — pode mascarar gravidade se a equipe aguardar taquicardia compensatória clássica",
+      "Icterícia com coagulopatia (INR elevado) e/ou sangramento ativo",
+      "Encefalopatia hepática, sobretudo grau IV",
+      "Disfunção ventricular ao ecocardiograma ou alterações eletrocardiográficas significativas",
+      "Arritmia, bloqueio de condução ou instabilidade elétrica",
+      "Choque sem resposta clara a volume, sugerindo componente cardiogênico sobreposto"
+    ],
+    "ambulatory_flow": [
+      "Não afastar febre amarela apenas pela ausência de taquicardia — bradicardia relativa é achado esperado, não sinal de estabilidade",
+      "Notificar compulsoriamente e colher RT-PCR/sorologia diante de febre + exposição em área de transmissão silvestre ativa, especialmente em não vacinados",
+      "Encaminhar com urgência para avaliação hospitalar todo caso com icterícia, sangramento ou sinais de gravidade, sem aguardar confirmação laboratorial",
+      "Confirmar situação vacinal e orientar vacinação/reforço quando indicado em área de risco, fora do episódio agudo"
+    ],
+    "emergency_flow": [
+      "Monitorização cardíaca contínua e ECG na admissão de todo caso moderado a grave",
+      "Avaliação hemodinâmica individualizada (idealmente com ecocardiografia point-of-care) antes de reposição volêmica agressiva, pelo risco de componente cardiogênico concomitante",
+      "Correção de coagulopatia dirigida a sangramento ativo, não à correção profilática isolada de INR",
+      "Suporte hepático e renal, incluindo terapia de substituição renal quando indicada",
+      "Não há antiviral específico: manejo é de suporte, com reavaliação hemodinâmica e laboratorial seriada",
+      "Considerar transferência para centro com suporte intensivo/circulatório diante de deterioração hemodinâmica ou elétrica"
+    ],
+    "tags": [
+      "febre amarela",
+      "miocardite",
+      "sinal de Faget",
+      "bradicardia relativa",
+      "choque multifatorial",
+      "coagulopatia",
+      "arbovirose",
+      "surto silvestre",
+      "Minas Gerais"
+    ],
+    "source_refs": [
+      "Monath TP, Vasconcelos PF. Yellow fever. J Clin Virol. 2015;64:160-173. DOI: 10.1016/j.jcv.2014.08.030. PMID: 25453327",
+      "Giugni FR, Aiello VD, Faria CS, et al. Understanding yellow fever-associated myocardial injury: an autopsy study. EBioMedicine. 2023;96:104810. DOI: 10.1016/j.ebiom.2023.104810. PMID: 37757571",
+      "Paixão GMM, Nunes MCP, Beato BDVG, et al. Cardiac Involvement by Yellow Fever (from the PROVAR+ Study). Am J Cardiol. 2019;123(5):833-838. DOI: 10.1016/j.amjcard.2018.11.032. PMID: 30545483",
+      "de Ávila RE, José Fernandes H, Barbosa GM, et al. Clinical profiles and factors associated with mortality in adults with yellow fever admitted to an intensive care unit in Minas Gerais, Brazil. Int J Infect Dis. 2020;93:90-97. DOI: 10.1016/j.ijid.2020.01.039. PMID: 32004691",
+      "de Thoisy B, Silva NIO, Sacchetto L, de Souza Trindade G, Drumond BP. Spatial epidemiology of yellow fever: Identification of determinants of the 2016-2018 epidemics and at-risk areas in Brazil. PLoS Negl Trop Dis. 2020;14(10):e0008691. DOI: 10.1371/journal.pntd.0008691. PMID: 33001982",
+      "Moreira-Soto A, Torres MC, Lima de Mendonça MC, et al. Evidence for multiple sylvatic transmission cycles during the 2016-2017 yellow fever virus outbreak, Brazil. Clin Microbiol Infect. 2018;24(9):1019.e1-1019.e4. DOI: 10.1016/j.cmi.2018.01.026. PMID: 29427798",
+      "Hamer DH, Angelo K, Caumes E, et al. Fatal Yellow Fever in Travelers to Brazil, 2018. MMWR Morb Mortal Wkly Rep. 2018;67(11):340-341. DOI: 10.15585/mmwr.mm6711e1. PMID: 29565840",
+      "Meregildo-Rodriguez ED, Villegas-Chiroque M. Fiebre amarilla selvática con serología positiva para leptospira en un varón joven peruano. Rev Peru Med Exp Salud Publica. 2019;36(4):700-704. DOI: 10.17843/rpmesp.2019.364.4347. PMID: 31967265"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25453327/",
+      "https://pubmed.ncbi.nlm.nih.gov/37757571/",
+      "https://pubmed.ncbi.nlm.nih.gov/30545483/",
+      "https://pubmed.ncbi.nlm.nih.gov/32004691/",
+      "https://pubmed.ncbi.nlm.nih.gov/33001982/",
+      "https://pubmed.ncbi.nlm.nih.gov/29427798/",
+      "https://pubmed.ncbi.nlm.nih.gov/29565840/",
+      "https://pubmed.ncbi.nlm.nih.gov/31967265/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "febre-amarela-grave-miocardite-disfuncao-cardiovascular-e-sinal-de-faget"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "pots-pos-covid",
+    "name": "POTS pós-COVID (disautonomia cardiovascular na COVID longa)",
+    "aliases": [
+      "síndrome de taquicardia postural ortostática pós-COVID",
+      "POTS pós-infeccioso",
+      "disautonomia pós-COVID",
+      "taquicardia postural na COVID longa",
+      "intolerância ortostática pós-COVID"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "disautonomia",
+    "prevalence_rank": 42,
+    "completeness": "completo",
+    "summary": "Síndrome de taquicardia postural ortostática (POTS) desencadeada ou desmascarada após infecção por SARS-CoV-2, definida por aumento sustentado de frequência cardíaca ≥30 bpm (≥40 bpm em adolescentes) nos primeiros 10 minutos em pé, sem hipotensão ortostática significativa associada. Mecanismos propostos incluem autoimunidade contra receptores adrenérgicos e muscarínicos, neuroinflamação, descondicionamento físico pós-doença prolongada e disfunção microvascular; nenhum é isoladamente suficiente para explicar todos os casos. Quadro clínico combina palpitações, tontura e intolerância ortostática com fadiga e 'brain fog' característicos da COVID longa. Diagnóstico é clínico, com triagem por teste ortostático ativo à beira do leito e confirmação por tilt test formal quando necessário. Diferencial obrigatório com descondicionamento cardiovascular pós-COVID (que se sobrepõe clinicamente e responde a reabilitação progressiva) e com miocardite/pericardite pós-COVID (que exige investigação cardíaca estrutural própria antes de atribuir os sintomas a disautonomia). Tratamento escalonado: hidratação, sal, meias compressivas e exercício gradual iniciado em posição não ortostática como primeira linha; betabloqueador em baixa dose, ivabradina, fludrocortisona ou midodrina conforme fenótipo quando medidas não farmacológicas são insuficientes.",
+    "presentation": [
+      "Palpitações e sensação de taquicardia ao assumir ortostatismo ou após tempo prolongado em pé",
+      "Tontura, tremor, visão turva ou sensação de desmaio iminente em pé, aliviados ao deitar ou sentar",
+      "Intolerância ao esforço físico, com resposta de frequência cardíaca e fadiga desproporcional ao esforço realizado",
+      "Fadiga persistente e desproporcional, frequentemente o sintoma mais incapacitante",
+      "\"Brain fog\": dificuldade de concentração, lentificação cognitiva e falhas de memória de curto prazo, piores em ortostatismo prolongado",
+      "Cefaleia, náusea, intolerância ao calor e distúrbios do sono associados",
+      "Ausência de hipotensão ortostática franca acompanhando a taquicardia postural",
+      "Início dos sintomas dentro de semanas a poucos meses após infecção confirmada ou fortemente suspeita por SARS-CoV-2, em pessoa sem intolerância ortostática relevante prévia"
+    ],
+    "differentials": [
+      "Síndrome de descondicionamento cardiovascular pós-COVID — sobreposição clínica frequente; repouso prolongado reduz volume plasmático e retorno venoso, produzindo taquicardia postural e intolerância ao esforço que respondem principalmente a reabilitação física progressiva",
+      "Miocardite ou pericardite pós-COVID — exige investigação cardíaca estrutural própria (troponina, ECG, ecocardiograma, ressonância cardíaca quando indicada) antes de rotular o quadro como POTS isolado",
+      "Hipotensão ortostática clássica — queda pressórica ≥20/10 mmHg redireciona o diagnóstico, pois POTS exige ausência de hipotensão ortostática significativa",
+      "Taquicardia sinusal inapropriada — taquicardia sinusal persistente não restrita ao ortostatismo, sem o padrão postural característico da POTS",
+      "Causas secundárias de taquicardia sinusal: anemia, hipertireoidismo, desidratação aguda, uso de estimulantes ou cafeína em excesso, ansiedade/transtorno de pânico",
+      "POTS pré-existente ou de outra etiologia (idiopática, associada a hipermobilidade articular/síndrome de Ehlers-Danlos, paraneoplásica, autoimune não relacionada a COVID) — a atribuição a COVID depende do contexto temporal claro com a infecção"
+    ],
+    "tests": [
+      "Teste ortostático ativo à beira do leito: frequência cardíaca e pressão arterial em decúbito após repouso ≥5 minutos, repetidas em 1, 3, 5 e 10 minutos em pé — ferramenta de triagem inicial",
+      "Tilt test (teste de inclinação) formal em mesa basculante, quando o teste à beira do leito é inconclusivo, o quadro é atípico ou há necessidade de documentação mais robusta",
+      "Eletrocardiograma de 12 derivações, para afastar arritmia e alterações compatíveis com acometimento inflamatório cardíaco",
+      "Troponina, quando há dor torácica, dispneia desproporcional ou outro sinal sugestivo de miocardite/pericardite associada",
+      "Ecocardiograma transtorácico e, quando indicado, ressonância magnética cardíaca, diante de sinais de alarme cardíacos antes de atribuir o quadro a POTS",
+      "Hemograma, função tireoidiana e avaliação de volemia, para excluir causas secundárias de taquicardia sinusal"
+    ],
+    "red_flags": [
+      "Dor torácica típica, elevação de troponina ou alterações eletrocardiográficas novas — investigar miocardite/pericardite antes de firmar diagnóstico de POTS",
+      "Hipotensão ortostática franca (queda ≥20/10 mmHg) — redireciona a investigação para fora do espectro POTS",
+      "Síncope franca com perda de consciência, distinta de pré-síncope — amplia o diferencial e pode indicar síncope reflexa ou cardíaca concomitante",
+      "Derrame pericárdico ou disfunção sistólica ao ecocardiograma",
+      "Sinais de descompensação cardiovascular estrutural (dispneia progressiva, edema, ortopneia) não explicados por descondicionamento isolado"
+    ],
+    "ambulatory_flow": [
+      "Confirmar contexto temporal com infecção por SARS-CoV-2 e caracterizar sintomas de intolerância ortostática, fadiga e \"brain fog\"",
+      "Realizar teste ortostático ativo à beira do leito como triagem; encaminhar para tilt test formal quando inconclusivo ou atípico",
+      "Excluir hipotensão ortostática franca e causas secundárias de taquicardia sinusal antes de firmar o diagnóstico",
+      "Investigar miocardite/pericardite pós-COVID (troponina, ECG, ecocardiograma) diante de sintomas cardíacos além da intolerância ortostática isolada",
+      "Iniciar medidas não farmacológicas (hidratação, sal, meias compressivas, reabilitação progressiva iniciada em posição não ortostática) como primeira linha",
+      "Adicionar farmacoterapia (betabloqueador em baixa dose, ivabradina, fludrocortisona ou midodrina) conforme fenótipo, quando as medidas não farmacológicas são insuficientes",
+      "Reavaliar periodicamente tolerância ortostática, capacidade funcional e resposta terapêutica, ajustando o plano de forma escalonada"
+    ],
+    "emergency_flow": [
+      "Avaliar e excluir causas agudas e potencialmente graves de taquicardia e intolerância ortostática (arritmia instável, tromboembolismo pulmonar, sangramento, sepse) antes de considerar POTS",
+      "Diante de dor torácica ou dispneia associada, investigar síndrome coronariana aguda, miocardite/pericardite e tromboembolismo pulmonar conforme apresentação, antes de atribuir o quadro a disautonomia",
+      "Estabilizar sintomas agudos (hidratação intravenosa se hipovolemia significativa, posicionamento) e encaminhar para investigação ambulatorial estruturada — POTS não é diagnóstico de emergência a ser fechado no pronto-socorro"
+    ],
+    "tags": [
+      "POTS",
+      "síndrome de taquicardia postural ortostática",
+      "disautonomia",
+      "COVID longa",
+      "long COVID",
+      "pós-COVID",
+      "intolerância ortostática",
+      "brain fog",
+      "descondicionamento cardiovascular",
+      "miocardite pós-COVID"
+    ],
+    "source_refs": [
+      "Sheldon RS, Grubb BP 2nd, Olshansky B, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576.",
+      "Fedorowski A. Postural orthostatic tachycardia syndrome: clinical presentation, aetiology and management. J Intern Med. 2019;285(4):352-366. DOI: 10.1111/joim.12852. PMID: 30372565.",
+      "Raj SR, Arnold AC, Barboi A, et al; American Autonomic Society. Long-COVID postural tachycardia syndrome: an American Autonomic Society statement. Clin Auton Res. 2021;31(3):365-368. DOI: 10.1007/s10286-021-00798-2. PMID: 33740207.",
+      "Blitshteyn S, Whitelaw S. Postural orthostatic tachycardia syndrome (POTS) and other autonomic disorders after COVID-19 infection: a case series of 20 patients. Immunol Res. 2021;69(2):205-211. DOI: 10.1007/s12026-021-09185-5. PMID: 33786700.",
+      "Ståhlberg M, Reistam U, Fedorowski A, et al. Post-COVID-19 Tachycardia Syndrome: A Distinct Phenotype of Post-Acute COVID-19 Syndrome. Am J Med. 2021;134(12):1451-1456. DOI: 10.1016/j.amjmed.2021.07.004. PMID: 34390682.",
+      "Larsen NW, Stiles LE, Shaik R, et al. Characterization of autonomic symptom burden in long COVID: A global survey of 2,314 adults. Front Neurol. 2022;13:1012668. DOI: 10.3389/fneur.2022.1012668. PMID: 36353127.",
+      "Kwan AC, Ebinger JE, Botting P, et al. Apparent risks of postural orthostatic tachycardia syndrome diagnoses after COVID-19 vaccination and SARS-CoV-2 infection. Nat Cardiovasc Res. 2022;1(12):1187-1194. DOI: 10.1038/s44161-022-00177-8. PMID: 37303827.",
+      "Dani M, Dirksen A, Taraborrelli P, et al. Autonomic dysfunction in 'long COVID': rationale, physiology and management strategies. Clin Med (Lond). 2021;21(1):e63-e67. DOI: 10.7861/clinmed.2020-0896. PMID: 33243837.",
+      "Joy G, Artico J, Kurdi H, et al. Prospective Case-Control Study of Cardiovascular Abnormalities 6 Months Following Mild COVID-19 in Healthcare Workers. JACC Cardiovasc Imaging. 2021;14(11):2155-2166. DOI: 10.1016/j.jcmg.2021.04.011. PMID: 33975819.",
+      "Puntmann VO, Carerj ML, Wieters I, et al. Outcomes of Cardiovascular Magnetic Resonance Imaging in Patients Recently Recovered From Coronavirus Disease 2019 (COVID-19). JAMA Cardiol. 2020;5(11):1265-1273. DOI: 10.1001/jamacardio.2020.3557. PMID: 32730619.",
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25980576/",
+      "https://pubmed.ncbi.nlm.nih.gov/30372565/",
+      "https://pubmed.ncbi.nlm.nih.gov/33740207/",
+      "https://pubmed.ncbi.nlm.nih.gov/33786700/",
+      "https://pubmed.ncbi.nlm.nih.gov/34390682/",
+      "https://pubmed.ncbi.nlm.nih.gov/36353127/",
+      "https://pubmed.ncbi.nlm.nih.gov/37303827/",
+      "https://pubmed.ncbi.nlm.nih.gov/33243837/",
+      "https://pubmed.ncbi.nlm.nih.gov/33975819/",
+      "https://pubmed.ncbi.nlm.nih.gov/32730619/",
+      "https://pubmed.ncbi.nlm.nih.gov/29562304/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "pots-pos-covid-disautonomia-cardiovascular-na-covid-longa"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "botulismo",
+    "name": "Botulismo",
+    "aliases": [
+      "intoxicação botulínica",
+      "botulismo alimentar",
+      "botulismo de ferida",
+      "botulismo infantil",
+      "paralisia flácida por toxina botulínica"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 43,
+    "completeness": "completo",
+    "summary": "Doença neurotóxica causada pela toxina botulínica, que cliva proteínas SNARE e bloqueia a liberação pré-sináptica de acetilcolina na junção neuromuscular e em terminações autonômicas colinérgicas. Causa paralisia flácida descendente simétrica, com risco dominante de insuficiência respiratória por paralisia da musculatura respiratória e perda de proteção de via aérea; disautonomia cardiovascular (labilidade pressórica, arritmia, variabilidade anormal da frequência cardíaca) é achado secundário descrito em relatos de caso, sem magnitude populacional estabelecida. Tipos principais: alimentar, de ferida, infantil e iatrogênico.",
+    "presentation": [
+      "Paralisia flácida descendente, simétrica, afebril (exceto infecção de ferida associada)",
+      "Diplopia, ptose, disartria, disfagia e outros sinais bulbares precoces",
+      "Midríase com resposta lenta, boca seca, íleo paralítico e retenção urinária (disfunção autonômica parassimpática)",
+      "Fraqueza progressiva de membros e musculatura respiratória, sem alteração sensitiva",
+      "Nível de consciência preservado",
+      "Lactente: constipação, sucção fraca, choro fraco, hipotonia ('floppy baby')",
+      "Labilidade pressórica, arritmia ou variabilidade anormal da frequência cardíaca em casos graves (achado secundário, descrito em relatos de caso)"
+    ],
+    "differentials": [
+      "Síndrome de Guillain-Barré (padrão ascendente, dissociação albumino-citológica)",
+      "Miastenia gravis",
+      "Síndrome miastênica de Lambert-Eaton",
+      "Acidente vascular do tronco encefálico",
+      "Intoxicação por organofosforado, carbamato ou outras neurotoxinas paralisantes",
+      "Difteria com neuropatia associada",
+      "Porfiria aguda intermitente"
+    ],
+    "tests": [
+      "Avaliação clínica seriada de força muscular, pares cranianos e capacidade vital",
+      "Eletroneuromiografia: resposta incremental à estimulação repetitiva de alta frequência (achado sugestivo, nem sempre presente)",
+      "Identificação da toxina ou do gene toxigênico em soro, fezes, ferida ou alimento suspeito, via laboratório de referência em saúde pública",
+      "Líquor para excluir Guillain-Barré quando houver dúvida diagnóstica",
+      "Monitorização cardíaca contínua e pressão arterial seriada em caso grave",
+      "Investigação de ferida e uso de drogas injetáveis quando suspeita de botulismo de ferida"
+    ],
+    "red_flags": [
+      "Dispneia, uso de musculatura acessória ou queda progressiva da capacidade vital",
+      "Disfagia importante ou perda da proteção de via aérea",
+      "Progressão rápida da paralisia descendente",
+      "Diplopia, ptose e disartria de início agudo, sobretudo com caso simultâneo em contato alimentar",
+      "Labilidade pressórica ou arritmia em paciente com paralisia flácida aguda",
+      "Lactente com hipotonia, sucção fraca e constipação de início recente"
+    ],
+    "ambulatory_flow": [
+      "Botulismo não tem fluxo ambulatorial na fase aguda: suspeita clínica exige encaminhamento imediato para avaliação hospitalar",
+      "Notificar autoridade de saúde pública diante de suspeita, para investigação de fonte alimentar e acionamento de antitoxina",
+      "Após alta, acompanhamento de reabilitação motora e nutricional conforme gravidade e tempo de ventilação mecânica"
+    ],
+    "emergency_flow": [
+      "Avaliar via aérea, capacidade vital e sinais bulbares; internar em unidade de terapia intensiva se houver sinal de gravidade",
+      "Não aguardar confirmação laboratorial para iniciar antitoxina diante de suspeita clínica compatível",
+      "Administrar antitoxina heptavalente equina (adulto/criança maior) ou imunoglobulina humana antibotulínica BabyBIG (lactente) o mais precocemente possível",
+      "Monitorizar cardíaca e pressão arterial continuamente em caso grave; evitar succinilcolina na sequência rápida de intubação",
+      "Em botulismo de ferida: desbridamento cirúrgico e antibioticoterapia dirigida (penicilina G ou metronidazol), evitando aminoglicosídeos",
+      "Intubar e ventilar precocemente diante de fadiga respiratória ou perda de proteção de via aérea, sem aguardar hipoxemia franca"
+    ],
+    "tags": [
+      "botulismo",
+      "toxina botulínica",
+      "disautonomia",
+      "paralisia flácida",
+      "insuficiência respiratória",
+      "antitoxina botulínica",
+      "botulismo infantil",
+      "botulismo de ferida",
+      "terapia intensiva",
+      "toxicologia"
+    ],
+    "source_refs": [
+      "Schiavo G, Benfenati F, Poulain B, Rossetto O, Polverino de Laureto P, DasGupta BR, Montecucco C. Tetanus and botulinum-B neurotoxins block neurotransmitter release by proteolytic cleavage of synaptobrevin. Nature. 1992;359(6398):832-835. DOI: 10.1038/359832a0. PMID: 1331807",
+      "Sobel J. Botulism. Clin Infect Dis. 2005;41(8):1167-1173. DOI: 10.1086/444507. PMID: 16163636",
+      "Cherington M. Clinical spectrum of botulism. Muscle Nerve. 1998;21(6):701-710. PMID: 9585323",
+      "Topakian R, Heibl C, Stieglbauer K, et al. Quantitative autonomic testing in the management of botulism. J Neurol. 2009;256(5):803-809. DOI: 10.1007/s00415-009-5022-9. PMID: 19240955",
+      "Tonomura S, Kakehi Y, Sato M, et al. Takotsubo-like myocardial dysfunction in a patient with botulism. Intern Med. 2017;56(21):2925-2927. DOI: 10.2169/internalmedicine.8968-17. PMID: 28924131",
+      "Rosow LK, Strober JB. Infant botulism: review and clinical update. Pediatr Neurol. 2015;52(5):487-492. DOI: 10.1016/j.pediatrneurol.2015.01.006. PMID: 25882077",
+      "Arnon SS, Schechter R, Maslanka SE, Jewell NP, Hatheway CL. Human botulism immune globulin for the treatment of infant botulism. N Engl J Med. 2006;354(5):462-471. DOI: 10.1056/NEJMoa051926. PMID: 16452558",
+      "Rao AK, Sobel J, Chatham-Stephens K, Luquez C. Clinical Guidelines for Diagnosis and Treatment of Botulism, 2021. MMWR Recomm Rep. 2021;70(2):1-30. DOI: 10.15585/mmwr.rr7002a1. PMID: 33956777",
+      "Kılboz BB, Ervatan Z, Dumlu R, Akan O. Iatrogenic systemic botulism after intragastric botulinum neurotoxin injection: case report. Eur J Neurol. 2023;30(10):3394-3396. DOI: 10.1111/ene.16005. PMID: 37505930",
+      "Chakravarty EF, Kirsch CM, Jensen WA, Kagawa FT. Cardiac arrest due to succinylcholine-induced hyperkalemia in a patient with wound botulism. J Clin Anesth. 2000;12(1):80-82. DOI: 10.1016/s0952-8180(99)00136-1. PMID: 10773516",
+      "Beliveau M, Anderson D, Barker D, et al. Exposure-response modeling and simulation to support human dosing of botulism antitoxin heptavalent product. Clin Pharmacol Ther. 2022;112(1):171-180. DOI: 10.1002/cpt.2620. PMID: 35467014"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/1331807/",
+      "https://pubmed.ncbi.nlm.nih.gov/16163636/",
+      "https://pubmed.ncbi.nlm.nih.gov/9585323/",
+      "https://pubmed.ncbi.nlm.nih.gov/19240955/",
+      "https://pubmed.ncbi.nlm.nih.gov/28924131/",
+      "https://pubmed.ncbi.nlm.nih.gov/25882077/",
+      "https://pubmed.ncbi.nlm.nih.gov/16452558/",
+      "https://pubmed.ncbi.nlm.nih.gov/33956777/",
+      "https://pubmed.ncbi.nlm.nih.gov/37505930/",
+      "https://pubmed.ncbi.nlm.nih.gov/10773516/",
+      "https://pubmed.ncbi.nlm.nih.gov/35467014/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "botulismo-e-disautonomia-cardiovascular-mecanismo-manifestacoes-e-monitorizacao"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "loxoscelismo-picada-de-aranha-marrom",
+    "name": "Loxoscelismo (picada de aranha-marrom)",
+    "aliases": [
+      "picada de aranha-marrom",
+      "envenenamento por Loxosceles",
+      "aracnidismo necrótico",
+      "loxoscelismo cutâneo-visceral",
+      "acidente loxoscélico"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 44,
+    "completeness": "completo",
+    "summary": "Envenenamento por aranhas do gênero Loxosceles (aranha-marrom), com duas apresentações principais: forma cutânea localizada, a mais comum, com lesão necrótica progressiva; e forma cutâneo-visceral (sistêmica), minoritária mas potencialmente fatal, com hemólise intravascular maciça mediada por complemento, hemoglobinúria, insuficiência renal aguda e coagulação intravascular disseminada. Mais relevante no Sul e Sudeste do Brasil, com o Paraná historicamente entre as áreas de maior densidade do aracnídeo.",
+    "presentation": [
+      "Lesão cutânea inicialmente pouco dolorosa que evolui em 24-72 h para placa marmórea (eritema, edema, equimose central)",
+      "Necrose seca com escara de bordas irregulares na forma cutânea localizada",
+      "Mal-estar, febre baixa e exantema nas primeiras 24-72 h sugerindo evolução sistêmica",
+      "Icterícia e colúria (urina escura) por hemólise intravascular na forma cutâneo-visceral",
+      "Palidez, taquicardia e sinais de hipoperfusão por anemia hemolítica aguda",
+      "Sangramento em múltiplos sítios quando há coagulação intravascular disseminada associada",
+      "Oligúria progressiva quando há lesão renal aguda associada à hemoglobinúria"
+    ],
+    "differentials": [
+      "Celulite ou erisipela bacteriana",
+      "Ectima gangrenoso e outras infecções necrotizantes de pele e partes moles",
+      "Picada de outros artrópodes ou reação alérgica local",
+      "Vasculite cutânea ou pioderma gangrenoso",
+      "Outras causas de anemia hemolítica aguda (autoimune, por drogas, microangiopática)",
+      "Outras causas de coagulação intravascular disseminada (sepse, complicações obstétricas)",
+      "Outras causas de lesão renal aguda no paciente agudamente enfermo"
+    ],
+    "tests": [
+      "Hemograma completo com reticulócitos",
+      "Desidrogenase láctica (LDH)",
+      "Bilirrubinas totais e frações",
+      "Haptoglobina",
+      "Ureia, creatinina e exame de urina (hemoglobinúria, diurese)",
+      "Coagulograma (TP, TTPa, fibrinogênio, plaquetas, D-dímero quando disponível)",
+      "Creatinoquinase (CK), pela possibilidade de rabdomiólise associada",
+      "Reavaliação laboratorial seriada nas primeiras 24-72 horas após o acidente"
+    ],
+    "red_flags": [
+      "Icterícia, colúria ou palidez de instalação rápida nas primeiras 24-72 h após picada suspeita",
+      "Sinais de hipoperfusão, hipotensão ou taquicardia desproporcional à lesão cutânea aparente",
+      "Sangramento em múltiplos sítios sugerindo coagulação intravascular disseminada",
+      "Oligúria ou queda de diurese sugerindo lesão renal aguda em evolução",
+      "Picadas múltiplas ou paciente pediátrico, fatores associados a maior risco de forma grave",
+      "Lesão cutânea inicialmente discreta não afasta evolução sistêmica grave nas horas seguintes"
+    ],
+    "ambulatory_flow": [
+      "Limpeza da lesão, analgesia e atualização vacinal antitetânica na forma cutânea localizada sem sinais sistêmicos",
+      "Orientar retorno imediato se surgir icterícia, colúria, palidez, sangramento ou queda de diurese",
+      "Reavaliação clínica programada nas primeiras 24-72 horas, mesmo com lesão inicialmente discreta",
+      "Encaminhar todo caso com lesão extensa, picadas múltiplas, paciente pediátrico ou qualquer sinal sistêmico para avaliação em serviço de emergência com suporte toxicológico"
+    ],
+    "emergency_flow": [
+      "Avaliar ABCDE, obter acesso venoso e monitorizar sinais vitais e perfusão",
+      "Colher hemograma, LDH, bilirrubinas, haptoglobina, função renal, urina e coagulograma diante de qualquer suspeita de forma sistêmica",
+      "Acionar centro de assistência toxicológica (CIATox) e considerar soro antiloxoscélico precocemente na forma cutâneo-visceral ou na forma cutânea extensa/grave, sem aguardar confirmação laboratorial completa quando a suspeita clínica for consistente",
+      "Individualizar suporte transfusional (concentrado de hemácias) conforme repercussão clínica e trajetória de hemoglobina, não por limiar numérico isolado",
+      "Repor hemocomponentes (plasma fresco congelado, crioprecipitado, plaquetas) conforme sangramento ativo e coagulograma quando houver CIVD",
+      "Hidratação criteriosa para prevenção/tratamento de lesão renal aguda por hemoglobinúria, com monitorização de diurese",
+      "Considerar terapia renal substitutiva conforme critérios convencionais de lesão renal aguda grave no paciente crítico",
+      "Discutir corticosteroide adjuvante conforme protocolo institucional/toxicológico, sem substituir a soroterapia específica quando indicada"
+    ],
+    "tags": [
+      "loxoscelismo",
+      "aranha-marrom",
+      "Loxosceles",
+      "toxicologia",
+      "envenenamento",
+      "hemólise intravascular",
+      "coagulação intravascular disseminada",
+      "lesão renal aguda",
+      "choque",
+      "soro antiloxoscélico",
+      "Paraná",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Sezerino UM, Zannin M, Coelho LK, Gonçalves Júnior J, Grando M, Mattosinho SG, Cardoso JL, von Eickstedt VR, França FO, Barbaro KC, Fan HW. A clinical and epidemiological study of Loxosceles spider envenoming in Santa Catarina, Brazil. Trans R Soc Trop Med Hyg. 1998;92(5):546-548. PMID: 9861376",
+      "Marques-da-Silva E, Fischer ML. Loxosceles Heinecken & Lowe, 1835 (Araneae; Sicariidae) species distribution in the State of Paraná. Rev Soc Bras Med Trop. 2005;38(4):331-335. PMID: 16082481",
+      "Málaque CM, Castro-Valencia JE, Cardoso JL, França FO, Barbaro KC, Fan HW. Clinical and epidemiological features of definitive and presumed loxoscelism in São Paulo, Brazil. Rev Inst Med Trop Sao Paulo. 2002;44(3):139-143. PMID: 12163906",
+      "Malaque CM, Santoro ML, Cardoso JL, Conde MR, Novaes CT, Risk JY, França FO, de Medeiros CR, Fan HW. Clinical picture and laboratorial evaluation in human loxoscelism. Toxicon. 2011;58(8):664-671. PMID: 21986355",
+      "Malaque CMS, Novaes CTG, Piorelli RO, Risk JY, Murad JC, Lara AN, Virgulino CC, Miyaji KT, Santoro ML. Impact of antivenom administration on the evolution of cutaneous lesions in loxoscelism: A prospective observational study. PLoS Negl Trop Dis. 2022;16(10):e0010842. PMID: 36240248",
+      "Tambourgi DV, Morgan BP, de Andrade RM, Magnoli FC, van den Berg CW. Loxosceles intermedia spider envenomation induces activation of an endogenous metalloproteinase, resulting in cleavage of glycophorins from the erythrocyte surface and facilitating complement-mediated lysis. Blood. 2000;95(2):683-691. PMID: 10627480",
+      "Tambourgi DV, Magnoli FC, van den Berg CW, Morgan BP, de Araujo PS, Alves EW, Da Silva WD. Sphingomyelinases in the venom of the spider Loxosceles intermedia are responsible for both dermonecrosis and complement-dependent hemolysis. Biochem Biophys Res Commun. 1998;251(1):366-373. PMID: 9790962",
+      "Tambourgi DV, Paixão-Cavalcante D, Gonçalves de Andrade RM, Fernandes-Pedrosa MF, Magnoli FC, Morgan BP, van den Berg CW. Loxosceles sphingomyelinase induces complement-dependent dermonecrosis, neutrophil infiltration, and endogenous gelatinase expression. J Invest Dermatol. 2005;124(4):725-731. PMID: 15816830",
+      "Okamoto CK, van den Berg CW, Pohl PC, Tambourgi DV. Role of the complement system in kidney cell death induced by Loxosceles venom Sphingomyelinases D. Arch Toxicol. 2024;98(5):1561-1572. PMID: 38498159",
+      "França FO, Barbaro KC, Abdulkader RC. Rhabdomyolysis in presumed viscero-cutaneous loxoscelism: report of two cases. Trans R Soc Trop Med Hyg. 2002;96(3):287-290. PMID: 12174781",
+      "da Silva PH, da Silveira RB, Appel MH, Mangili OC, Gremski W, Veiga SS. Brown spiders and loxoscelism. Toxicon. 2004;44(7):693-709. PMID: 15500846",
+      "Swanson DL, Vetter RS. Loxoscelism. Clin Dermatol. 2006;24(3):213-221. PMID: 16714202",
+      "Miranda ALS, Antunes BC, Minozzo JC, Lima SA, Botelho AFM, Campos MTG, Chávez-Olórtegui C, Soto-Blanco B. The Health Status of Horses Used for at Least Six Complete Cycles of Loxoscelic Antivenom Production. Toxins (Basel). 2023;15(10):589. PMID: 37888620"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/9861376/",
+      "https://pubmed.ncbi.nlm.nih.gov/16082481/",
+      "https://pubmed.ncbi.nlm.nih.gov/12163906/",
+      "https://pubmed.ncbi.nlm.nih.gov/21986355/",
+      "https://pubmed.ncbi.nlm.nih.gov/36240248/",
+      "https://pubmed.ncbi.nlm.nih.gov/10627480/",
+      "https://pubmed.ncbi.nlm.nih.gov/9790962/",
+      "https://pubmed.ncbi.nlm.nih.gov/15816830/",
+      "https://pubmed.ncbi.nlm.nih.gov/38498159/",
+      "https://pubmed.ncbi.nlm.nih.gov/12174781/",
+      "https://pubmed.ncbi.nlm.nih.gov/15500846/",
+      "https://pubmed.ncbi.nlm.nih.gov/16714202/",
+      "https://pubmed.ncbi.nlm.nih.gov/37888620/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Caracterização qualitativa do Paraná como área de alta densidade de Loxosceles intermedia apoiada em Marques-da-Silva & Fischer (2005) e nas revisões de da Silva et al. (2004) e Swanson & Vetter (2006); recomenda-se checagem de estatística numérica junto a SINAN/vigilância epidemiológica do Paraná antes da publicação final.",
+    "version": 1,
+    "related_document_slugs": [
+      "loxoscelismo-forma-cutaneo-visceral-hemolise-civd-e-repercussao-hemodinamica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-cardiopulmonar-por-hantavirus",
+    "name": "Síndrome cardiopulmonar por hantavírus",
+    "aliases": [
+      "hantavirose",
+      "síndrome pulmonar por hantavírus",
+      "SCPH",
+      "hantavirus cardiopulmonary syndrome",
+      "HCPS"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 45,
+    "completeness": "completo",
+    "summary": "Zoonose viral transmitida por inalação de excretas de roedores silvestres infectados, com pródromo febril inespecífico seguido de fase cardiopulmonar abrupta combinando edema pulmonar não cardiogênico por extravasamento capilar imunomediado e choque cardiogênico verdadeiro por disfunção miocárdica direta; relevante sobretudo em contexto rural nas regiões Sul e Sudeste do Brasil.",
+    "presentation": [
+      "Fase prodrômica inespecífica de 3 a 5 dias (febre, mialgia, cefaleia, sintomas gastrointestinais), sem sintomas respiratórios proeminentes",
+      "Transição abrupta para fase cardiopulmonar com tosse, dispneia progressiva e taquipneia evoluindo em horas para insuficiência respiratória hipoxêmica",
+      "Choque cardiogênico com baixo débito, pressões de enchimento não elevadas e resistência vascular sistêmica alta, distinto de choque hipovolêmico ou séptico puro",
+      "Exposição epidemiológica rural: atividade agrícola, limpeza de silos/paióis/celeiros, contato com roedores silvestres ou seus excretas em ambiente fechado",
+      "Deterioração hemodinâmica e respiratória rápida, com maior parte dos óbitos nas primeiras 24-48 horas da fase cardiopulmonar"
+    ],
+    "differentials": [
+      "Sepse grave/choque séptico com SDRA",
+      "Pneumonia comunitária grave",
+      "Leptospirose grave (forma pulmonar hemorrágica)",
+      "Influenza grave com síndrome respiratória aguda",
+      "Miocardite fulminante viral de outra etiologia",
+      "Edema agudo de pulmão cardiogênico por causa estrutural",
+      "Febre hemorrágica de outra etiologia (dengue grave, hantavirose renal em áreas de sobreposição)"
+    ],
+    "tests": [
+      "Sorologia IgM (ELISA) para hantavírus",
+      "RT-PCR para RNA viral em sangue total ou coágulo, especialmente nos primeiros dias antes da soroconversão",
+      "Hemograma completo com atenção a hematócrito, plaquetas e desvio à esquerda/linfócitos atípicos",
+      "Radiografia ou tomografia de tórax (infiltrado intersticial bilateral evoluindo para padrão alveolar, derrame pleural)",
+      "Gasometria arterial, lactato, função renal e hepática, LDH e albumina",
+      "Ecocardiograma para avaliar função ventricular e guiar suporte hemodinâmico"
+    ],
+    "red_flags": [
+      "Trombocitopenia associada a hemoconcentração e leucocitose com desvio à esquerda em paciente com pródromo febril e exposição rural",
+      "Início de dispneia e taquipneia após pródromo febril inespecífico com exposição epidemiológica compatível",
+      "Sinais de baixo débito (hipotensão, extremidades frias, oligúria, lactato elevado) associados a infiltrado pulmonar bilateral",
+      "Deterioração respiratória rápida e progressiva em horas",
+      "Refratariedade a drogas vasoativas e ventilação mecânica, indicando necessidade de avaliação para suporte circulatório mecânico"
+    ],
+    "ambulatory_flow": [
+      "Não é doença de manejo ambulatorial na fase estabelecida; suspeita clínica em atenção primária deve motivar encaminhamento imediato para unidade com suporte de terapia intensiva",
+      "Investigar exposição epidemiológica rural (atividade agrícola, contato com roedores silvestres, limpeza de ambientes fechados) em paciente com síndrome febril inespecífica em área endêmica",
+      "Notificação compulsória e comunicação à vigilância epidemiológica diante de suspeita",
+      "Orientar paciente e contactantes sobre ausência de transmissão pessoa a pessoa consistente para os hantavírus circulantes no Brasil, sem necessidade de isolamento domiciliar por esse motivo"
+    ],
+    "emergency_flow": [
+      "Reconhecer precocemente a transição do pródromo febril para sintomas respiratórios em paciente com exposição rural compatível",
+      "Solicitar hemograma, função renal/hepática, gasometria e radiografia de tórax; coletar sorologia IgM e, se disponível, RT-PCR",
+      "Internar em unidade de terapia intensiva diante de sinais de gravidade respiratória ou hemodinâmica",
+      "Evitar expansão volêmica liberal; guiar reposição de forma cautelosa e criteriosa, reavaliando função ventricular e sinais de congestão pulmonar",
+      "Iniciar suporte inotrópico precocemente diante de evidência de disfunção miocárdica, reconhecendo o componente de choque cardiogênico verdadeiro",
+      "Aplicar ventilação mecânica protetora quando indicada, monitorando impacto hemodinâmico da pressão positiva",
+      "Escalar precocemente para ECMO venoarterial em choque refratário a drogas vasoativas e otimização de volume, antes de disfunção orgânica estabelecida",
+      "Não aguardar confirmação laboratorial específica para iniciar suporte hemodinâmico e respiratório em quadro clínico-epidemiológico compatível com gravidade"
+    ],
+    "tags": [
+      "hantavirose",
+      "síndrome cardiopulmonar por hantavírus",
+      "zoonose",
+      "edema pulmonar não cardiogênico",
+      "choque cardiogênico",
+      "miocardite",
+      "ECMO venoarterial",
+      "doença rural",
+      "roedores silvestres"
+    ],
+    "source_refs": [
+      "Duchin JS, Koster FT, Peters CJ, Simpson GL, Tempest B, Zaki SR, Ksiazek TG, Rollin PE, Nichol S, Umland ET. Hantavirus pulmonary syndrome: a clinical description of 17 patients with a newly recognized disease. N Engl J Med. 1994;330(14):949-955. DOI: 10.1056/NEJM199404073301401. PMID: 8121458",
+      "Zaki SR, Greer PW, Coffield LM, Goldsmith CS, Nolte KB, Foucar K, Feddersen RM, Zumwalt RE, Miller GL, Khan AS, et al. Hantavirus pulmonary syndrome. Pathogenesis of an emerging infectious disease. Am J Pathol. 1995;146(3):552-579. PMID: 7887439",
+      "Hallin GW, Simpson SQ, Crowell RE, James DS, Koster FT, Mertz GJ, Levy H. Cardiopulmonary manifestations of hantavirus pulmonary syndrome. Crit Care Med. 1996;24(2):252-258. DOI: 10.1097/00003246-199602000-00012. PMID: 8605797",
+      "Saggioro FP, Rossi MA, Duarte MIS, Martin CCS, Alves VAF, Moreli ML, Figueiredo LTM, Moreira JE, Borges AA, Neder L. Hantavirus infection induces a typical myocarditis that may be responsible for myocardial depression and shock in hantavirus pulmonary syndrome. J Infect Dis. 2007;195(10):1541-1549. DOI: 10.1086/513874. PMID: 17436235",
+      "Mertz GJ, Miedzinski L, Goade D, Pavia AT, Hjelle B, Hansbarger CO, Levy H, Koster FT, Baum K, Lindemulder A, Wang W, Riser L, Fernandez H, Whitley RJ. Placebo-controlled, double-blind trial of intravenous ribavirin for the treatment of hantavirus cardiopulmonary syndrome in North America. Clin Infect Dis. 2004;39(9):1307-1313. DOI: 10.1086/425007. PMID: 15494907",
+      "Crowley MR, Katz RW, Kessler R, Simpson SQ, Levy H, Hallin GW, Cappon J, Krahling JB, Wernly J. Successful treatment of adults with severe Hantavirus pulmonary syndrome with extracorporeal membrane oxygenation. Crit Care Med. 1998;26(2):409-414. DOI: 10.1097/00003246-199802000-00047. PMID: 9468181",
+      "Wernly JA, Dietl CA, Tabe CE, Pett SB, Crandall C, Milligan K, Crowley MR. Extracorporeal membrane oxygenation support improves survival of patients with Hantavirus cardiopulmonary syndrome refractory to medical treatment. Eur J Cardiothorac Surg. 2011;40(6):1334-1340. DOI: 10.1016/j.ejcts.2011.01.089. PMID: 21900022",
+      "Figueiredo LTM, Souza WM, Ferrés M, Enria DA. Hantaviruses and cardiopulmonary syndrome in South America. Virus Res. 2014;187:43-54. DOI: 10.1016/j.virusres.2014.01.015. PMID: 24508343",
+      "Campos GM, Borges AA, Badra SJ, Figueiredo GG, Souza RL, Moreli ML, Figueiredo LTM. Síndrome pulmonar e cardiovascular por hantavírus: aspectos clínicos de doença emergente no sudeste do Brasil. Rev Soc Bras Med Trop. 2009;42(3):282-289. DOI: 10.1590/s0037-86822009000300009. PMID: 19684976",
+      "Moreli ML, Sousa RLM, Figueiredo LTM. Detection of Brazilian hantavirus by reverse transcription polymerase chain reaction amplification of N gene in patients with hantavirus cardiopulmonary syndrome. Mem Inst Oswaldo Cruz. 2004;99(6):633-638. DOI: 10.1590/s0074-02762004000600018. PMID: 15558177",
+      "Vial PA, Valdivieso F, Ferres M, Riquelme R, Rioseco ML, Calvo M, Castillo C, Díaz R, Scholz L, Cuiza A, Belmar E, Hernandez C, Martinez J, Lee SJ, Mertz GJ. High-dose intravenous methylprednisolone for hantavirus cardiopulmonary syndrome in Chile: a double-blind, randomized controlled clinical trial. Clin Infect Dis. 2013;57(7):943-951. DOI: 10.1093/cid/cit394. PMID: 23784924",
+      "Katz G, Williams RJ, Burt MS, de Souza LT, Pereira LE, Mills JN, Suzuki A, Ferreira IB, Souza RP, Alves VA, Bravo JS, Yates TL, Meyer R, Shieh W, Ksiazek TG, Zaki SR, Khan AS, Peters CJ. Hantavirus pulmonary syndrome in the State of São Paulo, Brazil, 1993-1998. Vector Borne Zoonotic Dis. 2001;1(3):181-190. DOI: 10.1089/153036601753552549. PMID: 12653146"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8121458/",
+      "https://pubmed.ncbi.nlm.nih.gov/7887439/",
+      "https://pubmed.ncbi.nlm.nih.gov/8605797/",
+      "https://pubmed.ncbi.nlm.nih.gov/17436235/",
+      "https://pubmed.ncbi.nlm.nih.gov/15494907/",
+      "https://pubmed.ncbi.nlm.nih.gov/9468181/",
+      "https://pubmed.ncbi.nlm.nih.gov/21900022/",
+      "https://pubmed.ncbi.nlm.nih.gov/24508343/",
+      "https://pubmed.ncbi.nlm.nih.gov/19684976/",
+      "https://pubmed.ncbi.nlm.nih.gov/15558177/",
+      "https://pubmed.ncbi.nlm.nih.gov/23784924/",
+      "https://pubmed.ncbi.nlm.nih.gov/12653146/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-cardiopulmonar-por-hantavirus-fisiopatologia-diagnostico-e-suporte-hemodinamico"
+    ],
+    "patient_material_slug": null
   }
 ]
