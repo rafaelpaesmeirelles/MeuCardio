@@ -238,3 +238,11 @@ limpos, 10.228 registros totais.
 
 **Total canônico projetado após Lote 12**: 10.228 (10.189 revisado +
 39 pendente_revisao nesta branch).
+
+## Lote 13 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (síndrome de Timothy, Jervell-Lange-Nielsen). Gates limpos,
+10.230 registros totais.
+
+**Total canônico projetado após Lote 13**: 10.230 (10.189 revisado +
+41 pendente_revisao nesta branch).
