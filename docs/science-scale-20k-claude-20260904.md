@@ -350,3 +350,25 @@ limpos, 10.243 registros totais.
 | Trilhas | 300 | 1 | 299 |
 | Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
 | **Total** | **4.900** | **56** | **4.844** |
+
+## Lote 21 — concluído (commit 8b98cf19)
+
+- **doencas**: +1 — `erdheim-chester-disease-acometimento-cardiovascular` — primeiro item entregue na frente "doenças especializadas" (0/200 até este lote). Cuidado extra no schema desta vez: `related_document_slugs` e `patient_material_slug` só preenchidos quando confirmados, evitando repetir a colisão de fragmento de lotes anteriores.
+- **checklists**: +1 — `indicacao-e-preparo-para-biopsia-endomiocardica-na-suspeita-de-miocardite-de-celulas-gigantes-ou-sarcoidose-cardiaca` — pareado com o documento de miocardite de células gigantes já publicado; preenche lacuna operacional entre os 2 checklists diagnósticos já existentes sobre o mesmo tema.
+- **casos-clinicos**: +1 — `sindrome-poems-hipertensao-pulmonar-derrame-pericardico` — tema Hipertensão pulmonar, diferencial com amiloidose AL.
+- **PMIDs novos**: Erdheim-Chester acrescentou PMID 22300602, 29188284, 32187362, 25738753, 30569522 (além dos 4 já citados no caso do lote 20); POEMS: PMID 37732822, 31012139, 22983590, 28894560; checklist reaproveitou referências já citadas no documento-origem (Naseeb 2023, Kandolin 2013) mais a Diretriz SBC 2022 (PMID 35830116). Nenhum PMID inventado, nenhuma duplicação de fingerprint detectada.
+- **Slugs pulados por duplicação**: nenhum.
+- **Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`; `content_inventory.py --strict` → exit 0, `invalid: []`, `missing: []`.
+- **Total canônico**: 10.248 (10.189 revisado + 59 pendente_revisao desta frente).
+
+### Status consolidado (após Lote 21)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 5 | 2.395 |
+| Casos clínicos | 900 | 26 | 874 |
+| Checklists | 600 | 9 | 591 |
+| Materiais-paciente | 500 | 17 | 483 |
+| Trilhas | 300 | 1 | 299 |
+| Doenças especializadas | 200 | 1 (3 descartados por colisão) | 199 |
+| **Total** | **4.900** | **59** | **4.841** |
