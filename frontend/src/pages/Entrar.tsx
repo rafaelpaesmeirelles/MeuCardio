@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import CampoSenha from "../components/CampoSenha";
 import Icone from "../components/Icone";
 import PreHomeBrand from "../components/PreHomeBrand";
 import { useAuth } from "../lib/auth";
@@ -9,6 +10,8 @@ import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
+const TITULO_ENTRAR = "Entrar · CorVIA Clinical OS";
+const TITULO_PADRAO = "CorVIA — Clinical OS";
 
 type SocialProvider = {
   id: "google" | "microsoft" | "apple" | "github";
@@ -65,7 +68,13 @@ function MarcaProvider({ provider }: { provider: SocialProvider["id"] }) {
       </span>
     );
   }
-  return <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">GH</span>;
+  return (
+    <span className="prehome-social__mark prehome-social__mark--github" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.9 1.52 2.34 1.08 2.91.83.09-.66.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+      </svg>
+    </span>
+  );
 }
 
 function MarcaAndroid() {
@@ -89,16 +98,26 @@ export default function Entrar() {
   const [params] = useSearchParams();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [mostrarSenha, setMostrarSenha] = useState(false);
   const [permanecerConectado, setPermanecerConectado] = useState(false);
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [providers, setProviders] = useState<SocialProvider[]>([]);
-  const [carregandoProviders, setCarregandoProviders] = useState(true);
+
+  useEffect(() => {
+    document.title = TITULO_ENTRAR;
+    return () => {
+      document.title = TITULO_PADRAO;
+    };
+  }, []);
 
   useEffect(() => {
     const code = params.get("social_error") || "";
-    if (code) setErro(ERROS_SOCIAIS[code] || "Não foi possível entrar com esta conta externa.");
+    if (!code) return;
+    setErro(ERROS_SOCIAIS[code] || "Não foi possível entrar com esta conta externa.");
+    const next = new URLSearchParams(window.location.search);
+    next.delete("social_error");
+    const qs = next.toString();
+    window.history.replaceState(null, "", qs ? `/entrar?${qs}` : "/entrar");
   }, [params]);
 
   useEffect(() => {
@@ -109,8 +128,7 @@ export default function Entrar() {
         return response.json() as Promise<{ providers?: SocialProvider[] }>;
       })
       .then((body) => { if (ativo) setProviders(Array.isArray(body.providers) ? body.providers : []); })
-      .catch(() => { if (ativo) setProviders([]); })
-      .finally(() => { if (ativo) setCarregandoProviders(false); });
+      .catch(() => { if (ativo) setProviders([]); });
     return () => { ativo = false; };
   }, []);
 
@@ -146,6 +164,8 @@ export default function Entrar() {
         title={<>Tudo o que o cardiologista precisa. <strong>Em um só lugar.</strong></>}
         description={<>Seu Clinical OS conecta conhecimento, decisão, assistência e rotina sem tirar o médico do centro.</>}
         benefits={BENEFICIOS}
+        trustTitle="Ambiente seguro para uso profissional"
+        trustText="Trânsito criptografado (TLS). Sessão protegida. Logs de auditoria."
       />
       <section className="prehome-access" aria-labelledby="login-acesso-titulo">
         <div className="prehome-card prehome-card--login">
@@ -157,62 +177,109 @@ export default function Entrar() {
           <form className="login-formulario" onSubmit={enviar}>
             <div className="login-campo">
               <label htmlFor="email">E-mail</label>
-              <input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required autoFocus />
+              <input
+                id="email"
+                type="email"
+                inputMode="email"
+                autoCapitalize="none"
+                autoComplete="username"
+                placeholder="seu@email.com"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                aria-invalid={Boolean(erro)}
+                aria-describedby={erro ? "login-erro" : undefined}
+                required
+              />
             </div>
             <div className="login-campo">
               <label htmlFor="senha">Senha</label>
-              <div className="login-senha">
-                <input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required />
-                <button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}>
-                  <Icone nome={mostrarSenha ? "olho-fechado" : "olho"} />
-                </button>
-              </div>
+              <CampoSenha
+                id="senha"
+                autoComplete="current-password"
+                placeholder="Digite sua senha"
+                value={senha}
+                onChange={(event) => setSenha(event.target.value)}
+                aria-invalid={Boolean(erro)}
+                aria-describedby={erro ? "login-erro" : undefined}
+                required
+              />
             </div>
             <div className="prehome-card__inline-actions">
-              <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Lembrar-me</label>
+              <label htmlFor="permanecer">
+                <input
+                  id="permanecer"
+                  type="checkbox"
+                  checked={permanecerConectado}
+                  onChange={(event) => setPermanecerConectado(event.target.checked)}
+                />
+                Manter-me conectado neste aparelho
+              </label>
               <Link to="/esqueci-senha" className="prehome-link">Esqueci minha senha</Link>
             </div>
             {erro && <p id="login-erro" className="login-formulario__erro" role="alert">{erro}</p>}
             <button className="login-formulario__entrar" type="submit" disabled={enviando || !email.trim() || !senha}>
-              <span>{enviando ? "Abrindo seu Clinical OS…" : "Entrar na minha conta"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
+              <span>{enviando ? "Abrindo seu Clinical OS…" : "Entrar na minha conta"}</span>
+              {!enviando && <Icone nome="seta" aria-hidden="true" />}
+              {enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
             </button>
           </form>
           <div className="prehome-card__actions">
-            <a
-              className="prehome-android-download"
-              href="/downloads/corvia-os-android-1.0.1.apk"
-              download="CorVIA-OS-Android-1.0.1.apk"
-            >
-              <span className="prehome-android-download__icon"><MarcaAndroid /></span>
-              <span><strong>Baixar app para Android</strong><small>Versão 1.0.1 · APK assinado</small></span>
-              <Icone nome="seta" aria-hidden="true" />
-            </a>
-            <a
-              className="prehome-windows-download"
-              href="/downloads/corvia-os-windows.exe"
-              download="CorVIA-OS-Windows-Setup.exe"
-              aria-label="Baixar instalador EXE do CorVIA OS para Windows 10 ou 11"
-            >
-              <span className="prehome-windows-download__icon"><MarcaWindows /></span>
-              <span><strong>Baixar instalador para Windows</strong><small>Arquivo .EXE · Windows 10/11</small></span>
-              <Icone nome="seta" aria-hidden="true" />
-            </a>
-            {(providersAtivos.length > 0 || carregandoProviders) && <div className="prehome-divider">ou entre com sua conta</div>}
             {providersAtivos.length > 0 && (
-              <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 5)}`} aria-label="Entrar com conta externa">
-                {providersAtivos.map((provider) => (
-                  <button key={provider.id} type="button" className="prehome-social__button" onClick={() => entrarCom(provider.id)} aria-label={`Entrar com ${provider.label}`}>
-                    <MarcaProvider provider={provider.id} />
-                    <span>{provider.label}</span>
-                  </button>
-                ))}
-              </div>
+              <>
+                <div className="prehome-divider">ou continue com</div>
+                <div className={`prehome-social prehome-social--${Math.min(providersAtivos.length, 5)}`} aria-label="Entrar com conta externa">
+                  {providersAtivos.map((provider) => (
+                    <button
+                      key={provider.id}
+                      type="button"
+                      className="prehome-social__button"
+                      onClick={() => entrarCom(provider.id)}
+                      aria-label={`Entrar com ${provider.label}`}
+                    >
+                      <MarcaProvider provider={provider.id} />
+                      <span>{provider.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </>
             )}
             <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Solicitar acesso</Link>
+            <details className="prehome-install">
+              <summary>
+                Instalar o app
+                <small>Android e Windows — opcional</small>
+              </summary>
+              <a
+                className="prehome-android-download"
+                href="/downloads/corvia-os-android-1.0.1.apk"
+                download="CorVIA-OS-Android-1.0.1.apk"
+              >
+                <span className="prehome-android-download__icon"><MarcaAndroid /></span>
+                <span><strong>Baixar app para Android</strong><small>Versão 1.0.1 · APK assinado</small></span>
+                <Icone nome="seta" aria-hidden="true" />
+              </a>
+              <a
+                className="prehome-windows-download"
+                href="/downloads/corvia-os-windows.exe"
+                download="CorVIA-OS-Windows-Setup.exe"
+                aria-label="Baixar instalador EXE do CorVIA OS para Windows 10 ou 11"
+              >
+                <span className="prehome-windows-download__icon"><MarcaWindows /></span>
+                <span><strong>Baixar instalador para Windows</strong><small>Arquivo .EXE · Windows 10/11</small></span>
+                <Icone nome="seta" aria-hidden="true" />
+              </a>
+            </details>
           </div>
-          <footer className="prehome-card__footer"><Icone nome="check" /><span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span></footer>
+          <footer className="prehome-card__footer">
+            <Icone nome="check" />
+            <span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span>
+          </footer>
         </div>
-        <nav className="prehome-legal" aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
+        <nav className="prehome-legal" aria-label="Links institucionais">
+          <Link to="/privacidade">Privacidade</Link>
+          <Link to="/termos">Termos</Link>
+          <a href="mailto:contato@corvia.med.br">Suporte</a>
+        </nav>
       </section>
     </main>
   );

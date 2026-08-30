@@ -110,14 +110,13 @@ export default function PreHomeBrand({
       <div className="prehome-brand__aurora prehome-brand__aurora--violet" aria-hidden="true" />
       <div className="prehome-brand__network" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /></div>
 
-      <Link to="/" className="prehome-brand__logo" aria-label="CorVIA — página inicial">
+      <Link to="/produto" className="prehome-brand__logo" aria-label="CorVIA — conhecer o Clinical OS">
         <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
         <span><strong>CorVIA</strong><small>CLINICAL OS</small></span>
       </Link>
 
       <div className="prehome-brand__content">
         <div className="prehome-brand__copy">
-          <span className="prehome-brand__badge">A PLATAFORMA Nº 1</span>
           <h1>Inteligência clínica<br />que <strong>transforma decisões.</strong></h1>
         </div>
 
@@ -163,7 +162,7 @@ export default function PreHomeBrand({
 
       <footer className="prehome-brand__footer">
         <span><Icone nome="check" aria-hidden="true" /> LGPD</span>
-        <span>Criptografia ponta a ponta</span>
+        <span>Trânsito criptografado (TLS)</span>
         <span>Logs de auditoria</span>
       </footer>
     </section>
