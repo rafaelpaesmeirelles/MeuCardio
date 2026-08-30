@@ -622,3 +622,21 @@ um documento novo cobre um material-paciente pré-existente.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 6 (3 descartados por colisão) | 194 |
 | **Total** | **4.900** | **88** | **4.812** |
+
+## Lote 33 — concluído (commit 449da2a9)
+
+- **checklists**: +2 — `cardiomiopatia-deficiencia-primaria-carnitina` (lote 1), `reconhecimento-e-conduta-inicial-complicacoes-vasculares-acesso-cateterismo` (lote 1).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.277 (10.189 revisado + 88 pendente_revisao).
+
+### Status consolidado (após Lote 33)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 12 | 2.388 |
+| Casos clínicos | 900 | 31 | 869 |
+| Checklists | 600 | 16 | 584 |
+| Materiais-paciente | 500 | 23 | 477 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 6 (3 descartados por colisão) | 194 |
+| **Total** | **4.900** | **90** | **4.810** |
