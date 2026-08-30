@@ -33952,5 +33952,69 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "disautonomia-e-pots-na-sindrome-de-ehlers-danlos-hipermovel-triagem-triade-clinica-e-manejo",
+    "condicao": "Disautonomia e POTS na síndrome de Ehlers-Danlos hipermóvel (hEDS)",
+    "resumo": "Checklist clínico sobre a associação entre hipermobilidade articular generalizada/síndrome de Ehlers-Danlos hipermóvel (hEDS) e disautonomia/POTS, cobrindo triagem (escore de Beighton e critérios internacionais de 2017 para hEDS), a tríade hipermobilidade-POTS-síndrome de ativação mastocitária (MCAS), particularidades de manejo não farmacológico e diagnóstico diferencial com EDS vascular e síndrome de Loeys-Dietz. Baseado em literatura internacional; não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia sobre este tema.",
+    "documento_origem": null,
+    "theme": "Síncope",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Malfait F, Francomano C, Byers P, et al. The 2017 international classification of the Ehlers-Danlos syndromes. Am J Med Genet C Semin Med Genet. 2017;175(1):8-26. DOI: 10.1002/ajmg.c.31552. PMID: 28306229.",
+      "Tinkle B, Castori M, Berglund B, et al. Hypermobile Ehlers-Danlos syndrome (a.k.a. Ehlers-Danlos syndrome Type III and Ehlers-Danlos syndrome hypermobility type): Clinical description and natural history. Am J Med Genet C Semin Med Genet. 2017;175(1):48-69. DOI: 10.1002/ajmg.c.31538. PMID: 28145611.",
+      "Beighton P, Solomon L, Soskolne CL. Articular mobility in an African population. Ann Rheum Dis. 1973;32(5):413-418. DOI: 10.1136/ard.32.5.413. PMID: 4751776.",
+      "Gazit Y, Nahir AM, Grahame R, Jacob G. Dysautonomia in the joint hypermobility syndrome. Am J Med. 2003;115(1):33-40. DOI: 10.1016/s0002-9343(03)00235-3. PMID: 12867232.",
+      "Hakim AJ, Grahame R. Non-musculoskeletal symptoms in joint hypermobility syndrome. Indirect evidence for autonomic dysfunction? Rheumatology (Oxford). 2004;43(9):1194-1195. DOI: 10.1093/rheumatology/keh279. PMID: 15317957.",
+      "Wang E, Ganti T, Vaou E, et al. The relationship between mast cell activation syndrome, postural tachycardia syndrome, and Ehlers-Danlos syndrome. Allergy Asthma Proc. 2021;42(3):243-246. DOI: 10.2500/aap.2021.42.210022. PMID: 33980338.",
+      "Yao L, Subramaniam K, Raja KM, et al. Association of postural orthostatic tachycardia syndrome, hypermobility spectrum disorders, and mast cell activation syndrome in young patients. Front Neurol. 2025;16:1513199. DOI: 10.3389/fneur.2025.1513199. PMID: 40352770.",
+      "Engelbert RH, Juul-Kristensen B, Pacey V, et al. The evidence-based rationale for physical therapy treatment of children, adolescents, and adults diagnosed with joint hypermobility syndrome/hypermobile Ehlers Danlos syndrome. Am J Med Genet C Semin Med Genet. 2017;175(1):158-167. DOI: 10.1002/ajmg.c.31545. PMID: 28306230.",
+      "Castori M, Morlino S, Celletti C, et al. Re-writing the natural history of pain and related symptoms in the joint hypermobility syndrome/Ehlers-Danlos syndrome, hypermobility type. Am J Med Genet A. 2013;161A(12):2989-3004. DOI: 10.1002/ajmg.a.36315. PMID: 24254847.",
+      "Sheldon RS, Grubb BP 2nd, Olshansky B, et al. 2015 Heart Rhythm Society expert consensus statement on the diagnosis and treatment of postural tachycardia syndrome, inappropriate sinus tachycardia, and vasovagal syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576.",
+      "Loeys BL, Chen J, Neptune ER, et al. A syndrome of altered cardiovascular, craniofacial, neurocognitive and skeletal development caused by mutations in TGFBR1 or TGFBR2. Nat Genet. 2005;37(3):275-281. DOI: 10.1038/ng1511. PMID: 15731757.",
+      "Aziz Q, Harris LA, Goodman BP, et al. AGA Clinical Practice Update on GI Manifestations and Autonomic or Immune Dysfunction in Hypermobile Ehlers-Danlos Syndrome. Clin Gastroenterol Hepatol. 2025;23(8):1291-1302. DOI: 10.1016/j.cgh.2025.02.015. PMID: 40387691."
+    ],
+    "itens": [
+      {
+        "id": "assoc-epidemio",
+        "categoria": "Associação epidemiológica",
+        "obrigatorio": true,
+        "texto": "Reconhecer a associação bem documentada entre hipermobilidade articular generalizada/hEDS e disautonomia/intolerância ortostática. No estudo de referência de Gazit et al. (2003), hipotensão ortostática, POTS ou intolerância ortostática não categorizada foram documentados em 78% (21/27) dos pacientes com síndrome de hipermobilidade articular, versus 10% (2/21) dos controles, com hiper-responsividade alfa e beta-adrenérgica objetivamente demonstrada em testes autonômicos (queda pressórica maior à hiperventilação e resposta pressórica maior ao teste do frio). Mecanismos fisiopatológicos propostos — ainda não totalmente elucidados nem mutuamente excludentes — incluem fragilidade do tecido conjuntivo da parede venosa favorecendo estase e pooling venoso postural exagerado, e uma possível disautonomia neuropática de pequenas fibras. Não extrapolar esse achado de coorte pequena e específica como prevalência populacional generalizável sem qualificar a fonte.",
+        "origem_secao": "Gazit Y et al., Am J Med 2003 (PMID 12867232); Hakim AJ & Grahame R, Rheumatology 2004 (PMID 15317957)"
+      },
+      {
+        "id": "triagem-beighton-criterios-2017",
+        "categoria": "Triagem de hipermobilidade",
+        "obrigatorio": true,
+        "texto": "Usar o escore de Beighton (0 a 9 pontos: hiperextensão passiva do 5º dedo >90°, oposição do polegar ao antebraço, hiperextensão de cotovelo >10°, hiperextensão de joelho >10° — bilateral em cada item — e flexão anterior de tronco com palmas apoiadas no chão com joelhos estendidos) como ferramenta de triagem clínica simples e validada para hipermobilidade articular generalizada. Aplicar os Critérios Diagnósticos Internacionais de 2017 para hEDS (Tinkle et al., companion do documento de classificação geral de Malfait et al.), que exigem a combinação de: Critério 1 (hipermobilidade articular generalizada, tipicamente aferida pelo Beighton, ajustado por idade/sexo) + Critério 2 (manifestações sistêmicas de tecido conjuntivo, história familiar positiva e/ou complicações musculoesqueléticas como luxações recorrentes/dor crônica) + Critério 3 (exclusão de diagnósticos alternativos, incluindo outros tipos de EDS e outras síndromes de hipermobilidade). Registrar explicitamente que hEDS permanece diagnóstico clínico: não há teste genético confirmatório disponível até o momento para hEDS, ao contrário da EDS vascular (COL3A1) e de outros subtipos molecularmente definidos.",
+        "origem_secao": "Beighton P et al., Ann Rheum Dis 1973 (PMID 4751776); Tinkle B et al., Am J Med Genet C 2017 (PMID 28145611); Malfait F et al., Am J Med Genet C 2017 (PMID 28306229)"
+      },
+      {
+        "id": "triade-hipermobilidade-pots-mcas",
+        "categoria": "Tríade clínica",
+        "obrigatorio": true,
+        "texto": "Reconhecer a sobreposição clínica descrita entre hipermobilidade/hEDS, disautonomia (POTS) e síndrome de ativação mastocitária (MCAS) como uma tríade identificada na literatura, e não como três diagnósticos isolados e coincidentes. Wang et al. (2021) encontraram MCAS em 31% dos pacientes com POTS+EDS versus 2% nos demais pacientes (odds ratio 32,46; IC 95% sem sobreposição com o valor de referência). Yao et al. (2025), em coorte de 100 pacientes jovens com POTS, relataram transtornos do espectro de hipermobilidade em 13% (critérios estritos de hEDS) a 34% (critérios de HSD/transtorno do espectro de hipermobilidade) e MCAS em 2% (critério consenso-1) a 37% (consenso-2) a 87% (critérios clínicos), conforme o critério diagnóstico aplicado — os autores alertam que definições excessivamente restritivas podem levar à subdetecção de condições tratáveis. Diante de sintomas sugestivos de MCAS (flushing, urticária/prurido, sintomas gastrointestinais, broncoespasmo, anafilaxia recorrente/idiopática) em paciente com POTS e hipermobilidade, investigar a tríade completa; não tratar cada componente isoladamente sem considerar a sobreposição, pois a resposta terapêutica de um eixo pode depender do manejo simultâneo dos outros dois.",
+        "origem_secao": "Wang E et al., Allergy Asthma Proc 2021 (PMID 33980338); Yao L et al., Front Neurol 2025 (PMID 40352770)"
+      },
+      {
+        "id": "manejo-pots-heds-fisico-antes-de-cardio",
+        "categoria": "Manejo do POTS",
+        "obrigatorio": true,
+        "texto": "Priorizar medidas físicas não farmacológicas como primeira linha, conforme o consenso da Heart Rhythm Society (2015) para POTS em geral: meias de compressão graduada (preferencialmente até a cintura, dado o padrão de pooling venoso em membros inferiores e potencialmente esplâncnico), expansão volêmica com hidratação abundante e aumento da ingestão de sal, e elevação da cabeceira da cama — medidas cujo racional fisiopatológico é reforçado nesta população pela fragilidade constitucional do tecido conjuntivo da parede venosa descrita em hEDS. Ao prescrever reintrodução de atividade física, adotar cautela redobrada e sequenciamento adequado: Engelbert et al. (2017) recomendam fisioterapia especializada com fortalecimento muscular, estabilização proprioceptiva e controle motor articular ANTES de progredir para exercício cardiovascular tradicional (ex. protocolos de reidealização física tipo Levine usados em POTS), pelo risco somado de intolerância ortostática E de lesão articular/subluxação por hipermobilidade durante o esforço. Os próprios autores destacam que a evidência para protocolos específicos em JHS/hEDS ainda é limitada em tamanho e qualidade metodológica, exigindo individualização e acompanhamento por fisioterapeuta com experiência em hipermobilidade.",
+        "origem_secao": "Sheldon RS et al./Heart Rhythm Society, Heart Rhythm 2015 (PMID 25980576); Engelbert RH et al., Am J Med Genet C 2017 (PMID 28306230); Gazit Y et al., Am J Med 2003 (PMID 12867232)"
+      },
+      {
+        "id": "dx-diferencial-vascular-loeys-dietz",
+        "categoria": "Diagnóstico diferencial",
+        "obrigatorio": true,
+        "texto": "Diferenciar hEDS de condições do tecido conjuntivo com risco vascular estrutural agudo antes de tranquilizar o paciente quanto ao prognóstico cardiovascular: hEDS, isoladamente, não compartilha o mesmo risco de dissecção/ruptura arterial espontânea que caracteriza a EDS vascular (tipo IV, ligada a COL3A1) ou a síndrome de Loeys-Dietz (mutações em TGFBR1/TGFBR2, descrita originalmente por Loeys et al., 2005). Sinais de alerta que devem motivar investigação cardiovascular estrutural (ecocardiograma e angio-TC/angio-RM de aorta e vasos extra-aórticos) em vez de manejo padrão de hEDS incluem: fragilidade cutânea acentuada com equimoses espontâneas fáceis e cicatrizes atróficas ('em papel de cigarro'), história familiar de morte súbita, dissecção arterial ou ruptura visceral/uterina em idade jovem, aneurisma ou tortuosidade arterial documentados, hipertelorismo ocular, úvula bífida ou fenda palatina, e craniossinostose — achados não esperados na hEDS isolada, que reclassificam o quadro para os critérios maiores de vEDS ou para triagem dirigida de Loeys-Dietz, conforme delineado nos Critérios Internacionais de 2017 para os subtipos de EDS.",
+        "origem_secao": "Malfait F et al., Am J Med Genet C 2017 (PMID 28306229); Loeys BL et al., Nat Genet 2005 (PMID 15731757)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
