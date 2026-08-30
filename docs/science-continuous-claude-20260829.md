@@ -1426,7 +1426,29 @@ métodos gráficos.
   correção antes de integrar, sem re-pesquisar. Gates limpos. Total:
   424 checklists.
 
-## Lote 64 (planejado)
+## Lote 64 — concluído (SHA 7740a631) — total 92 commits
+
+- checklist `aneis-vasculares-congenitos` — gap genuíno: anomalias de
+  arco com compressão traqueoesofágica só tinham menções de passagem
+  (22q11.2, Turner). PR #580 (doença da aorta geral) é sobre patologia
+  aórtica do adulto, sem sobreposição. 6 itens: classificação anatômica
+  (duplo arco vs. arco direito com ligamento esquerdo/"loose ring"),
+  nenhuma diretriz SBC localizada (único registro nacional é relato de
+  caso de 1985); sling de artéria pulmonar, diferenciado explicitamente
+  de um "anel" verdadeiro; divertículo de Kommerell, com ressalva
+  explícita contra extrapolar história natural de adultos para
+  seguimento pediátrico assintomático; apresentação clínica por idade,
+  impacto do diagnóstico pré-natal (99% assintomáticos aos 30 meses);
+  investigação diagnóstica (RM com sensibilidade equivalente à TC, sem
+  radiação); tratamento cirúrgico — mortalidade baixa mas liberdade de
+  sintomas residuais caindo de 97% (1 ano) a 86,2% (10 anos) por
+  traqueomalácia residual. 16 fontes via NCBI e-utils. Correção de
+  processo repetida: agente novamente removeu acentuação na primeira
+  entrega (mesmo padrão do lote 63) — reenviado com instrução mais
+  explícita, corrigido sem re-pesquisar. Gates limpos. Total: 425
+  checklists.
+
+## Lote 65 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
