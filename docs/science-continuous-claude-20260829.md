@@ -1246,7 +1246,22 @@ Ordem recebida: "prossiga com a produção". Produção retomada.
   (tafamidis/acoramidis) e TEER tricúspide já confirmados bem cobertos
   — evitada duplicação.
 
-## Lote 55 (planejado)
+## Lote 55 — concluído (SHA b8e465c6) — total 83 commits
+
+- checklist `acometimento-cardiaco-nas-mucopolissacaridoses-valvopatia-cardiomiopatia-e-doenca-coronariana`
+  — 5 itens complementando as menções breves já existentes em docs de
+  diagnóstico diferencial: fisiopatologia por subtipo (MPS I/II/VI mais
+  graves); valvopatia progressiva (regurgitação mitral em 58-74%,
+  relativamente refratária a TRE já estabelecida); doença coronariana
+  por depósito de GAG — mecanismo distinto de aterosclerose clássica,
+  documentado mesmo pós-TCTH; imagem/monitorização com 2 lacunas de
+  evidência declaradas explicitamente; TRE/TCTH com efeito diferencial
+  por componente cardíaco e via aérea difícil perioperatória (1,06% vs.
+  25,6% de complicação com protocolo padronizado). 10 fontes via NCBI
+  e-utils. Cluster de cardiomiopatias de depósito lisossômico (Fabry,
+  Pompe, Danon/PRKAG2, MPS) encerrado nesta janela.
+
+## Lote 56 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado nesta janela. Confirmar
