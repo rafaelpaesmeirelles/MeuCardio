@@ -25,7 +25,7 @@ test("a cascata global tem um único manifesto, sem importações duplicadas", (
 
 test("emergência mantém viewport, texto clínico e alvos seguros", () => {
   const css = read("src/styles/clinical-safety-legibility.css");
-  assert.match(css, /body\.corvia-route--emergencia[\s\S]*?\.emerg\s*\{[\s\S]*?right:\s*0\s*!important;[\s\S]*?width:\s*auto\s*!important;/);
+  assert.match(css, /body\.corvia-route--emergencia[\s\S]*?\.cos-content\s*>\s*\.emerg\s*\{[\s\S]*?right:\s*0\s*!important;[\s\S]*?width:\s*calc\(100vw - var\(--ccc-nav-w\)\)\s*!important;/);
   assert.match(css, /--corvia-clinical-copy:\s*1rem;/);
   assert.match(css, /--corvia-clinical-target:\s*44px;/);
   assert.match(css, /\.emerg-command__quick a\s*\{[\s\S]*?min-height:\s*48px;/);

@@ -16,11 +16,12 @@
  * desktop navigation.  `width:100%` in a late release layer previously made
  * the box end 224px beyond the viewport. */
 @media (min-width: 901px) {
-  body.corvia-route--emergencia .clinical-os .emerg {
+  body.corvia-route--emergencia .clinical-os .cos-content > .emerg {
     left: var(--ccc-nav-w) !important;
     right: 0 !important;
-    width: auto !important;
-    max-width: none !important;
+    width: calc(100vw - var(--ccc-nav-w)) !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - var(--ccc-nav-w)) !important;
   }
 }
 
