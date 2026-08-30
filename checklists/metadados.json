@@ -35025,5 +35025,98 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "indicacao-e-preparo-para-biopsia-endomiocardica-na-suspeita-de-miocardite-de-celulas-gigantes-ou-sarcoidose-cardiaca",
+    "condicao": "Indicação e preparo para biópsia endomiocárdica na suspeita de miocardite de células gigantes ou sarcoidose cardíaca",
+    "resumo": "Checklist operacional para a decisão de indicar biópsia endomiocárdica e para o preparo do procedimento diante de insuficiência cardíaca de início recente, arritmia ventricular ou bloqueio atrioventricular de causa não esclarecida — cenário em que sarcoidose cardíaca e miocardite de células gigantes são o diagnóstico diferencial histológico obrigatório, com força de recomendação de imunossupressão e indicação de transplante cardíaco distintas entre as duas. Cobre o reconhecimento do gatilho clínico, a confirmação dos cenários Classe I da diretriz, o preparo do procedimento (patologia cardíaca experiente avisada com antecedência, suporte hemodinâmico compatível com a gravidade típica desses pacientes, consentimento informado), a leitura correta de um resultado negativo e a armadilha de julgar resposta ao tratamento só pela fração de ejeção em curto prazo.",
+    "documento_origem": "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
+    "theme": "Pericárdio",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487. PMCID: PMC10349211 (acesso aberto, CC BY, texto integral lido diretamente no PMC nesta sessão, 07/08/2026) — revisão narrativa (declarada como tal; não é diretriz de sociedade com classe/nível de recomendação), que sintetiza estudos de registro multicêntrico (Cooper et al. e sucessores), séries de biópsia e relatos de caso publicados até 2023.",
+      "Kandolin R, Lehtonen J, Salmenkivi K, Räisänen-Sokolowski A, Lommi J, Kupari M. Diagnosis, treatment, and outcome of giant-cell myocarditis in the era of combined immunosuppression. Circ Heart Fail. 2013;6(1):15-22. DOI: 10.1161/CIRCHEARTFAILURE.112.969261 — citado dentro da revisão acima como fonte da sensibilidade de 93% da biópsia endomiocárdica; não conferido em texto completo nesta sessão, referência repassada da fonte primária utilizada.",
+      "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — texto integral acessado em acesso aberto (PMC9352123); fonte dos dois cenários Classe I de biópsia endomiocárdica reproduzidos neste checklist e dos critérios da Japanese Circulation Society para envolvimento cardíaco."
+    ],
+    "itens": [
+      {
+        "id": "bemb-01",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecer o gatilho clínico para considerar biópsia endomiocárdica: insuficiência cardíaca de início recente, arritmia ventricular ou bloqueio atrioventricular de causa não esclarecida — sobretudo quando o quadro não responde ao tratamento padrão de IC nem a antiarrítmico agressivo, já que essa refratariedade é, em si, dado clínico relevante de suspeita de miocardite de células gigantes.",
+        "origem_secao": "Apresentação clínica"
+      },
+      {
+        "id": "bemb-02",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o quadro se enquadra em pelo menos um dos dois cenários Classe I da Diretriz de Miocardites SBC 2022 antes de indicar a biópsia: (1) insuficiência cardíaca aguda com grave comprometimento hemodinâmico ou fulminante — incluindo análise de coração explantado no transplante ou de fragmento obtido no implante de assistência circulatória mecânica; ou (2) suspeita de miocardite associada a parada cardíaca, fibrilação ou taquicardia ventricular, bloqueios, ou simulação de infarto agudo do miocárdio.",
+        "origem_secao": "Comparação com a miocardite de células gigantes (SBC 2022)"
+      },
+      {
+        "id": "bemb-03",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não presumir a diferenciação entre sarcoidose cardíaca, miocardite de células gigantes e miocardite linfocítica fulminante apenas pela apresentação inicial — apenas uma fração limitada dos casos pode ser diferenciada só pelo quadro clínico; é essa limitação que torna a biópsia, e não a impressão clínica, a base da indicação e da conduta.",
+        "origem_secao": "Diagnóstico diferencial obrigatório — as três condições que podem se confundir"
+      },
+      {
+        "id": "bemb-04",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Antes do procedimento, avisar e envolver com antecedência o serviço de patologia cardíaca, garantindo leitura por patologista experiente nesse diagnóstico diferencial — granuloma sarcoide e células gigantes da miocardite de células gigantes podem ser confundidos na mesma lâmina, e o erro de leitura muda a urgência terapêutica escolhida.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais"
+      },
+      {
+        "id": "bemb-05",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Planejar o procedimento com suporte hemodinâmico e monitorização compatíveis com a gravidade típica desses pacientes: o próprio cenário que indica a biópsia (choque cardiogênico, arritmia grave, bloqueio de alto grau) já implica risco periprocedural aumentado — o mesmo motivo pelo qual a ressonância magnética cardíaca frequentemente é impraticável nesses casos na fase aguda.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais / Ressonância magnética cardíaca"
+      },
+      {
+        "id": "bemb-06",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Incluir no consentimento informado o risco próprio do procedimento — maior em quem já tem disfunção cardíaca — e a possibilidade de complicação tardia, como regurgitação tricúspide, em caso de biópsias repetidas ao longo do seguimento.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais"
+      },
+      {
+        "id": "bemb-07",
+        "categoria": "documentacao",
+        "obrigatorio": false,
+        "texto": "Registrar história medicamentosa detalhada e cronologia de exposição antes da biópsia e repassá-la ao patologista: miocardite de hipersensibilidade entra no mesmo diferencial inicial, tem padrão histológico distinto (infiltrado eosinofílico predominantemente perivascular), mas já foi documentada com achados semelhantes aos da miocardite de células gigantes em reação medicamentosa, o que exige cautela na leitura sem esse dado.",
+        "origem_secao": "Diagnóstico diferencial obrigatório — as três condições que podem se confundir"
+      },
+      {
+        "id": "bemb-08",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitar ao laudo histopatológico a caracterização completa do achado — padrão difuso de células gigantes multinucleadas versus granuloma não caseoso versus infiltrado eosinofílico perivascular, necrose de miócitos e quantificação da extensão de fibrose —, já que a extensão de fibrose na biópsia foi identificada como preditor independente de mortalidade em um dos estudos citados.",
+        "origem_secao": "Diagnóstico — a biópsia é padrão-ouro, mas tem limitações reais"
+      },
+      {
+        "id": "bemb-09",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não descartar sarcoidose cardíaca nem miocardite de células gigantes diante de biópsia negativa isolada — o acometimento de ambas é focal e a amostra pode não capturar a lesão; nesse cenário, seguir a via de diagnóstico clínico (busca de granuloma não caseoso em outro órgão) antes de encerrar a investigação.",
+        "origem_secao": "Os dois grupos de diagnóstico / Consequência prática"
+      },
+      {
+        "id": "bemb-10",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Manter equipe e recursos de suporte avançado (arritmia/eletrofisiologia, terapia intensiva, e cirurgia cardíaca/assistência circulatória mecânica quando disponível) de prontidão para o procedimento e o período que o cerca, dado que o mesmo cenário clínico que indica a biópsia Classe I — choque cardiogênico, arritmia maligna, bloqueio de alto grau — pode exigir suporte simultâneo ao ato de biopsiar.",
+        "origem_secao": "Apresentação clínica / Comparação com a miocardite de células gigantes (SBC 2022)"
+      },
+      {
+        "id": "bemb-11",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Ao planejar biópsia de controle após início da imunossupressão, não usar variação da fração de ejeção em curto prazo como critério isolado de resposta: em estudo citado, a biópsia de repetição em 4 semanas mostrou redução substancial de células gigantes, de miocardite linfocítica associada, de infiltração eosinofílica e de necrose antes de qualquer mudança significativa da fração de ejeção (p=0,60) — a resposta histológica pode preceder a resposta funcional.",
+        "origem_secao": "Tratamento — imunossupressão combinada, não corticosteroide isolado"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]

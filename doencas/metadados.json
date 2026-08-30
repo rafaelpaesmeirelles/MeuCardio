@@ -37331,5 +37331,111 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, sexto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555, síncope PR #560 e valvopatias PR #563). Nenhum verbete-hub geral de cardiomiopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (cardiomiopatia-periparto, cardiomiopatias-pediatricas, amiloidose-cardiaca-idoso). Conecta 32 documentos já publicados e revisados: 27 de content/Cardiomiopatias/ mais 5 de outras pastas (cardiopediatria, cardiogeriatria, arritmias, esporte, dispositivos) com menção direta e explícita ao tema, sem duplicar o escopo específico dos três verbetes-irmãos de subpopulação, citados em special_populations como texto, nunca como related_document_slugs. Fontes primárias verificadas nesta sessão: diretriz ESC 2023 de cardiomiopatias (primeira diretriz abrangente do tema, PMID 37622657), diretriz brasileira 2024 de CMH, HCM Risk-SCD (O'Mahony 2014, PMID 24126876), registro InterTAK de Takotsubo (Templin 2015, PMID 26332547), algoritmo não invasivo de amiloidose ATTR (Gillmore 2016, PMID 27143678; Garcia-Pavia 2021, PMID 33825853), ATTR-ACT/tafamidis (Maurer 2018, PMID 30145929), e ensaios de inibidores de miosina cardíaca EXPLORER-HCM/SEQUOIA-HCM (mavacamten/aficamten). Nenhuma dose de fármaco foi incluída em nenhum campo novo.",
     "version": 1,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "erdheim-chester-disease-acometimento-cardiovascular",
+    "name": "Doença de Erdheim-Chester — acometimento cardiovascular",
+    "aliases": [
+      "ECD",
+      "histiocitose de Erdheim-Chester",
+      "doença de Erdheim-Chester"
+    ],
+    "area": "geral",
+    "category": "histiocitose",
+    "subtype": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Histiocitose não-Langerhans rara, geralmente associada a mutação somática BRAF V600E na via MAPK-ERK, com tropismo característico por grandes vasos e coração: infiltração periaórtica circunferencial ('aorta em bainha'/coated aorta), pseudotumor infiltrativo de átrio direito, derrame pericárdico e estenose de artérias renais são as apresentações cardiovasculares mais típicas e frequentemente definem o prognóstico.",
+    "presentation": [
+      "Dispneia, ortopneia ou sinais de tamponamento por derrame/espessamento pericárdico infiltrativo",
+      "Massa infiltrativa em átrio direito (pseudotumor) — pode cursar com arritmias, insuficiência cardíaca direita ou achado incidental em exame de imagem",
+      "Infiltração periaórtica circunferencial da aorta torácica e/ou abdominal ('aorta em bainha'/coated aorta), frequentemente assintomática mas associada a maior mortalidade",
+      "Hipertensão renovascular por estenose de artéria(s) renal(is) secundária à infiltração periarterial",
+      "Claudicação ou isquemia de membros por acometimento de artérias periféricas (infiltração periarterial em 'punho de cachimbo')",
+      "Dor óssea simétrica em membros inferiores (osteosclerose de diáfise/metáfise de ossos longos) — achado extracardíaco quase constante e útil para levantar a hipótese diagnóstica",
+      "Diabetes insipidus central e outras disfunções hipotálamo-hipofisárias",
+      "Exoftalmia bilateral (infiltração retro-orbitária), xantelasma",
+      "'Hairy kidney' — infiltração perirrenal em TC/PET, frequentemente associada a estenose de artéria renal",
+      "Sintomas constitucionais (febre, perda de peso, astenia) na doença sistêmica ativa"
+    ],
+    "differentials": [
+      "Doença relacionada a IgG4 com periaortite/periarterite e aneurisma inflamatório",
+      "Sarcoidose cardíaca (infiltração miocárdica/pericárdica, massas intracavitárias)",
+      "Aortite de grandes vasos (arterite de Takayasu, arterite de células gigantes)",
+      "Fibrose retroperitoneal idiopática (periaortite crônica)",
+      "Histiocitose de células de Langerhans (e formas mistas ECD/LCH)",
+      "Doença de Rosai-Dorfman",
+      "Linfoma cardíaco ou pericárdico / carcinomatose pericárdica",
+      "Mixoma ou outro tumor cardíaco primário (para pseudotumor de átrio direito)",
+      "Amiloidose cardíaca (infiltração miocárdica difusa)",
+      "Pericardite tuberculosa ou neoplásica (para derrame pericárdico volumoso)"
+    ],
+    "tests": [
+      "TC de tórax, abdome e pelve com contraste — infiltração periaórtica circunferencial ('aorta em bainha') e perirrenal ('hairy kidney')",
+      "Ressonância cardíaca — caracterização de pseudotumor de átrio direito, derrame/espessamento pericárdico e eventual infiltração miocárdica",
+      "Ecocardiograma transtorácico — triagem de derrame pericárdico e massa em átrio direito",
+      "PET-CT com FDG — extensão e atividade metabólica sistêmica da doença, incluindo acometimento vascular e ósseo",
+      "Radiografia ou cintilografia óssea — osteosclerose simétrica de diáfises/metáfises de ossos longos (achado quase patognomônico, útil para direcionar biópsia)",
+      "Biópsia de tecido acometido (óssea, vascular/periaórtica ou de massa cardíaca) com imuno-histoquímica: histiócitos espumosos CD68+/CD163+, CD1a negativo, S100 variável (distingue de LCH)",
+      "Pesquisa de mutação BRAF V600E no tecido (imuno-histoquímica com clone VE1 e/ou sequenciamento) — determina elegibilidade para inibidor de BRAF",
+      "Pesquisa de mutações alternativas da via MAPK-ERK (MAP2K1 e outras) quando BRAF V600E negativo",
+      "Avaliação endócrina (eixo hipotálamo-hipofisário) se suspeita de diabetes insipidus",
+      "Função renal, Doppler ou angio-TC de artérias renais quando houver hipertensão de difícil controle"
+    ],
+    "red_flags": [
+      "Tamponamento pericárdico ou derrame volumoso com repercussão hemodinâmica",
+      "Arritmia sustentada ou risco de embolização associado a pseudotumor de átrio direito",
+      "Hipertensão renovascular grave ou lesão renal aguda por estenose bilateral de artérias renais",
+      "Isquemia aguda de membro por infiltração/oclusão arterial periférica",
+      "Acometimento de sistema nervoso central (fator de pior prognóstico e maior risco de progressão)",
+      "Insuficiência adrenal ou pan-hipopituitarismo associado"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica a partir de achado incidental de aorta em bainha, pseudotumor de AD ou osteosclerose de ossos longos em exame de imagem",
+      "Investigação sistêmica com TC de tórax/abdome/pelve e PET-CT para mapear extensão da doença",
+      "Encaminhamento a centro de referência em histiocitoses para biópsia diagnóstica e confirmação histológica",
+      "Pesquisa obrigatória de BRAF V600E (e via MAPK-ERK alternativa se negativa) no tecido biopsiado, para orientar terapia-alvo",
+      "Avaliação multidisciplinar (hematologia/oncologia, cardiologia, nefrologia, endocrinologia, radiologia)",
+      "Definição terapêutica: inibidor de BRAF (vemurafenibe) se mutação positiva, ou interferon-alfa/inibidor de MEK como alternativas, com monitoramento seriado por imagem",
+      "Seguimento cardiovascular seriado (ecocardiograma/RM cardíaca) para monitorar pseudotumor, derrame pericárdico e resposta terapêutica"
+    ],
+    "emergency_flow": [
+      "Reconhecer e tratar tamponamento pericárdico com pericardiocentese/drenagem guiada por imagem",
+      "Suporte hemodinâmico e monitorização em sinais de instabilidade por massa em átrio direito ou arritmia associada",
+      "Investigação urgente de hipertensão renovascular refratária ou lesão renal aguda quando houver suspeita de estenose bilateral de artérias renais",
+      "Avaliação vascular urgente diante de isquemia de membro por acometimento arterial periférico",
+      "Encaminhamento urgente a hematologia/centro de referência quando a apresentação cardiovascular grave for a manifestação inicial de suspeita diagnóstica"
+    ],
+    "tags": [
+      "erdheim-chester",
+      "histiocitose não-langerhans",
+      "BRAF V600E",
+      "vemurafenibe",
+      "interferon-alfa",
+      "aorta em bainha",
+      "coated aorta",
+      "pseudotumor de átrio direito",
+      "derrame pericárdico",
+      "estenose de artéria renal",
+      "doença rara",
+      "via MAPK-ERK"
+    ],
+    "source_refs": [
+      "Haroche J, Amoura Z, Dion E, et al. Cardiovascular involvement, an overlooked feature of Erdheim-Chester disease: report of 6 new cases and a literature review. Medicine (Baltimore). 2004 Nov;83(6):371-392. PMID: 15525849",
+      "Haroche J, Cohen-Aubart F, Emile JF, et al. Dramatic efficacy of vemurafenib in both multisystemic and refractory Erdheim-Chester disease and Langerhans cell histiocytosis harboring the BRAF V600E mutation. Blood. 2013 Feb 28;121(9):1495-500. PMID: 23258922",
+      "Hervier B, Arnaud L, Charlotte F, et al. Treatment of Erdheim-Chester disease with long-term high-dose interferon-α. Semin Arthritis Rheum. 2012 Jun;41(6):907-913. PMID: 22300602",
+      "Diamond EL, Subbiah V, Lockhart AC, et al. Vemurafenib for BRAF V600-Mutant Erdheim-Chester Disease and Langerhans Cell Histiocytosis: Analysis of Data From the Histology-Independent, Phase 2, Open-label VE-BASKET Study. JAMA Oncol. 2018 Mar 1;4(3):384-388. PMID: 29188284",
+      "Goyal G, Heaney ML, Collin M, et al. Erdheim-Chester disease: consensus recommendations for evaluation, diagnosis, and treatment in the molecular era. Blood. 2020 May 28;135(22):1929-1945. PMID: 32187362",
+      "Berti A, Ferrarini M, Ferrero E, et al. Cardiovascular manifestations of Erdheim-Chester disease. Clin Exp Rheumatol. 2015 Mar-Apr;33(2 Suppl 89):S155-163. PMID: 25738753",
+      "Ghotra AS, Thompson K, Lopez-Mattei J, et al. Cardiovascular manifestations of Erdheim-Chester disease. Echocardiography. 2019 Feb;36(2):229-236. PMID: 30569522"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio"
+    ],
+    "patient_material_slug": null
   }
 ]
