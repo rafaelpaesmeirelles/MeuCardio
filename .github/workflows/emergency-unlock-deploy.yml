@@ -10,6 +10,7 @@ name: Emergency deploy current main
 # 30/08/2026: recovery após normalizar o contrato textual de revisão dos checklists científicos.
 # 30/08/2026: recovery após validar limites de campos clínicos do corpus contra o esquema SQL.
 # 30/08/2026: publicação final após remover travas editoriais residuais do corpus revisado.
+# 30/08/2026: publicação única de 716 itens científicos revisados (Grok + Claude + Codex).
 on:
   push:
     branches: [main]
