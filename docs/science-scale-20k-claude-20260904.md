@@ -516,3 +516,23 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
 | **Total** | **4.900** | **78** | **4.822** |
+
+## Lote 28 — concluído (commit 530f455c)
+
+- **content/Cardiomiopatias**: +1 — `tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario`.
+- **casos-clinicos**: +1 — `derrame-pericardico-hemorragico-recorrente-angiossarcoma-atrio-direito`.
+- **Achado de verificação**: 1 falso alarme no processo de checagem de links — `grep -rl "^slug: $slug$"` não casa quando o front-matter usa `slug: "valor"` (com aspas); o arquivo existia. Ajustar checagens futuras para `grep -rlE "^slug: \"?$slug\"?$"`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.267 (10.189 revisado + 78 pendente_revisao).
+
+### Status consolidado (após Lote 28)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 11 | 2.389 |
+| Casos clínicos | 900 | 30 | 870 |
+| Checklists | 600 | 12 | 588 |
+| Materiais-paciente | 500 | 21 | 479 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
+| **Total** | **4.900** | **80** | **4.820** |
