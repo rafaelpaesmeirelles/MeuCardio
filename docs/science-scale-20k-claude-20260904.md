@@ -168,3 +168,13 @@ si. Reportando ritmo real a cada lote em vez de prometer a cota cheia.
 
 **Total canônico projetado após Lote 5**: 10.211 (10.189 revisado + 22
 pendente_revisao nesta branch).
+
+## Lote 6 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (cardiomiopatia acromegálica, Cushing e coração). Gates
+limpos, 10.213 registros totais.
+
+**Total canônico projetado após Lote 6**: 10.213 (10.189 revisado + 24
+pendente_revisao nesta branch: 8 checklists + 5 casos + 6 material-
+paciente + 2 documentos + 3 casos adicionais... ver commits para
+contagem exata por tipo).
