@@ -603,3 +603,22 @@ um documento novo cobre um material-paciente pré-existente.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 5 (3 descartados por colisão) | 195 |
 | **Total** | **4.900** | **86** | **4.814** |
+
+## Lote 32 — concluído (commit a32e220a)
+
+- **doencas**: +1 — `cardiomiopatia-por-deficiencia-de-selenio` (pareado com lote 31).
+- **material-paciente**: +1 — `falta-de-selenio-pode-enfraquecer-o-coracao-o-que-saber`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.275 (10.189 revisado + 86 pendente_revisao).
+
+### Status consolidado (após Lote 32)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 12 | 2.388 |
+| Casos clínicos | 900 | 31 | 869 |
+| Checklists | 600 | 14 | 586 |
+| Materiais-paciente | 500 | 23 | 477 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 6 (3 descartados por colisão) | 194 |
+| **Total** | **4.900** | **88** | **4.812** |
