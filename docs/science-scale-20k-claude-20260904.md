@@ -160,3 +160,11 @@ Ritmo real observado: ~2-3 itens por rodada de agentes paralelos
 verificação anticolisão cada vez mais difícil (corpus muito denso) e
 pelo tempo de pesquisa/verificação por item, não pelo paralelismo em
 si. Reportando ritmo real a cada lote em vez de prometer a cota cheia.
+
+## Lote 5 — concluído (commit `94048d49`, 30/08/2026)
+
+2 itens (hemofilia+SCA/stent, trombocitemia essencial). Gates limpos,
+10.211 registros totais.
+
+**Total canônico projetado após Lote 5**: 10.211 (10.189 revisado + 22
+pendente_revisao nesta branch).
