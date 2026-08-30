@@ -28044,7 +28044,7 @@
     "subtitulo": "Entenda a fase crônica, os sinais de alerta e por que o acompanhamento regular faz toda a diferença",
     "tema": "Cardiomiopatias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Este material explica, em linguagem simples, o que acontece no coração na fase crônica da doença de Chagas, por que ela pode passar anos ou décadas sem dar sinais, quais sintomas merecem atenção e por que o acompanhamento cardiológico regular é importante mesmo quando você se sente bem.",
     "secoes": [
       {
@@ -28128,7 +28128,9 @@
     "fontes": [
       "Andrade JP et al. I Diretriz Latino-Americana para o Diagnóstico e Tratamento da Cardiopatia Chagásica. Arquivos Brasileiros de Cardiologia, 2011. PMID 21952638",
       "Nunes MCP et al. Chagas Cardiomyopathy: An Update of Current Clinical Knowledge and Management: A Scientific Statement From the American Heart Association. Circulation, 2018;138:e169-e209. PMID 30354432"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "veia-dura-dolorida-na-perna-trombose-venosa-superficial",
@@ -28136,7 +28138,7 @@
     "subtitulo": "Entenda a diferença entre a trombose venosa superficial e a trombose venosa profunda, e quando esse endurecimento na perna precisa de atendimento urgente",
     "tema": "Tromboembolismo",
     "documento_slug": "fluxograma-trombose-venosa-superficial-quando-anticoagular",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Uma veia dura, vermelha e dolorida na perna geralmente é trombose venosa superficial (TVS), um coágulo numa veia logo abaixo da pele — diferente e, em geral, menos perigoso que a trombose venosa profunda (TVP). Ainda assim, alguns sinais pedem avaliação médica rápida, e o tratamento varia de simples anti-inflamatório a anticoagulante em dose baixa por tempo limitado, dependendo de onde e quão extenso é o coágulo.",
     "secoes": [
       {
@@ -28204,7 +28206,9 @@
     "fontes": [
       "Decousus H et al.; CALISTO Study Group. Fondaparinux for the Treatment of Superficial-Vein Thrombosis in the Legs. New England Journal of Medicine, 2010;363:1222-1232. PMID 20860504",
       "Kearon C et al. Antithrombotic Therapy for VTE Disease: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest, 2012;141(2 Suppl):e419S-e496S. PMID 22315268"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "sodio-baixo-na-insuficiencia-cardiaca-o-que-significa",
@@ -28212,7 +28216,7 @@
     "subtitulo": "Entenda por que isso é comum, o que os sinais de alerta significam e por que corrigir rápido demais pode ser perigoso",
     "tema": "Insuficiência cardíaca",
     "documento_slug": "hiponatremia-na-insuficiencia-cardiaca-abordagem-pratica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Sódio baixo no sangue é comum em quem tem insuficiência cardíaca e, na maioria das vezes, significa que o corpo está retendo água em excesso — não que você comeu pouco sal. Entenda o que isso quer dizer, quais sinais exigem atenção imediata e por que a correção precisa ser feita com cuidado pelo médico, nunca por conta própria.",
     "secoes": [
       {
@@ -28298,7 +28302,9 @@
       "Verbrugge FH et al. Hyponatremia in Acute Decompensated Heart Failure: Depletion Versus Dilution. Journal of the American College of Cardiology, 2015;65(5):480-492. PMID 25660927",
       "Konstam MA et al.; EVEREST Investigators. Effects of Oral Tolvaptan in Patients Hospitalized for Worsening Heart Failure: The EVEREST Outcome Trial. JAMA, 2007;297(12):1319-1331. PMID 17384437",
       "Verbalis JG et al. Diagnosis, Evaluation, and Treatment of Hyponatremia: Expert Panel Recommendations. American Journal of Medicine, 2013;126(10 Suppl 1):S1-42. PMID 24074529"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "policitemia-vera-por-que-manter-hematocrito-baixo",
@@ -28306,7 +28312,7 @@
     "subtitulo": "Sangue mais espesso aumenta o risco de infarto e AVC — entenda por que a meta de hematócrito abaixo de 45%, a sangria terapêutica e a aspirina em baixa dose protegem você",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na policitemia vera, o sangue fica mais espesso pelo excesso de glóbulos vermelhos, o que aumenta o risco de coágulos, infarto e AVC. Manter o hematócrito abaixo de 45% com sangrias regulares e tomar aspirina em baixa dose, conforme orientado, reduzem de forma comprovada esse risco — mesmo quando você se sente bem.",
     "secoes": [
       {
@@ -28354,7 +28360,7 @@
       {
         "titulo": "Aspirina em baixa dose: mais uma camada de proteção",
         "paragrafos": [
-          "Além de controlar o hematócrito, a maioria dos pacientes com policitemia vera é orientada a tomar aspirina em dose baixa (em geral 100 mg por dia) todos os dias, salvo contraindicação específica avaliada pelo médico. A aspirina torna as plaquetas menos propensas a se agregar e formar coágulos.",
+          "Além de controlar o hematócrito, a maioria dos pacientes com policitemia vera é orientada a tomar aspirina em baixa dose, na posologia individualmente prescrita, salvo contraindicação avaliada pelo médico. A aspirina torna as plaquetas menos propensas a se agregar e formar coágulos.",
           "Essa recomendação também tem base em um estudo randomizado com placebo, o ECLAP, publicado no New England Journal of Medicine em 2004 (Landolfi et al.), com 518 pacientes acompanhados por cerca de três anos. O grupo que tomou aspirina teve menos eventos trombóticos (infarto, AVC, morte cardiovascular, embolia pulmonar e trombose venosa) em comparação ao grupo placebo, sem aumento significativo de sangramentos graves.",
           "Por isso é importante tomar a aspirina todos os dias, exatamente como orientado — parar por conta própria remove essa proteção, e ajustar a dose sem orientação médica pode aumentar o risco de sangramento sem necessidade."
         ],
@@ -28395,7 +28401,9 @@
     "fontes": [
       "Marchioli R et al.; CYTO-PV Collaborative Group. Cardiovascular Events and Intensity of Treatment in Polycythemia Vera. New England Journal of Medicine, 2013;368(1):22-33. PMID 23216616",
       "Landolfi R et al.; ECLAP Investigators. Efficacy and Safety of Low-Dose Aspirin in Polycythemia Vera. New England Journal of Medicine, 2004;350(2):114-124. PMID 14711910"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "trombocitemia-essencial-risco-trombose-sangramento",
@@ -28403,7 +28411,7 @@
     "subtitulo": "Entenda esse paradoxo do excesso de plaquetas e como ele orienta o uso de aspirina e dos medicamentos que baixam as plaquetas",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na trombocitemia essencial, o excesso de plaquetas pode aumentar o risco de trombose e, ao mesmo tempo, o risco de sangramento — um paradoxo que tem explicação biológica e que orienta decisões como manter ou suspender a aspirina e usar medicamentos citorredutores.",
     "secoes": [
       {
@@ -28426,7 +28434,7 @@
       {
         "titulo": "Aspirina em dose baixa: por que é usada e por que às vezes é suspensa",
         "paragrafos": [
-          "A aspirina em dose baixa (um antiagregante plaquetário, geralmente em torno de 100 mg por dia) é frequentemente prescrita para pessoas com trombocitemia essencial porque reduz a capacidade das plaquetas de se agregarem, diminuindo o risco de trombose. Ela costuma ser indicada principalmente para quem tem outros fatores de risco cardiovascular, sinais de alteração da microcirculação (como queimação nas mãos ou pés) ou a mutação JAK2.",
+          "A aspirina em baixa dose, na posologia definida pelo médico é frequentemente prescrita para pessoas com trombocitemia essencial porque reduz a capacidade das plaquetas de se agregarem, diminuindo o risco de trombose. Ela costuma ser indicada principalmente para quem tem outros fatores de risco cardiovascular, sinais de alteração da microcirculação (como queimação nas mãos ou pés) ou a mutação JAK2.",
           "No entanto, quando a contagem de plaquetas está extremamente elevada e existe suspeita de síndrome de von Willebrand adquirida, a aspirina pode aumentar o risco de sangramento em vez de proteger — porque o paciente já tem uma dificuldade de coagulação de base, e a aspirina soma mais um fator que dificulta a formação do coágulo. Nessas situações, o médico pode solicitar exames que avaliam a função do fator de von Willebrand e decidir suspender temporariamente a aspirina até que a contagem de plaquetas seja reduzida com outro tratamento.",
           "Por isso, a aspirina nunca deve ser iniciada, suspensa ou retomada por conta própria: a decisão depende do equilíbrio entre risco de trombose e risco de sangramento em cada pessoa, avaliado pelo hematologista."
         ],
@@ -28475,7 +28483,9 @@
     "fontes": [
       "Budde U, van Genderen PJ. Acquired von Willebrand Disease in Patients With High Platelet Counts. Seminars in Thrombosis and Hemostasis, 1997;23(5):425-431. PMID 9387201",
       "Barbui T et al. Development and Validation of an International Prognostic Score of Thrombosis in World Health Organization-Essential Thrombocythemia (IPSET-thrombosis). Blood, 2012;120(26):5128-5133. PMID 23033268"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "sindrome-cushing-coracao-cortisol-pressao-alta",
@@ -28483,7 +28493,7 @@
     "subtitulo": "Entenda por que o cortisol em excesso passa a agir como a aldosterona, por que o risco de trombose aumenta e por que tratar a causa é tão importante quanto controlar a pressão",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na síndrome de Cushing, o excesso de cortisol - seja por um tumor produtor de hormônio, seja pelo uso prolongado de corticoide - eleva a pressão arterial e o risco de trombose por mecanismos próprios, e por isso o controle completo do coração depende de tratar a causa do excesso de cortisol, não apenas de remédios para pressão.",
     "secoes": [
       {
@@ -28557,7 +28567,9 @@
       "Hammer F, Stewart PM. Cortisol metabolism in hypertension. Best Pract Res Clin Endocrinol Metab. 2006.",
       "Akirov A, Fleseriu M. Hypercoagulability in Cushing's syndrome: past, present, future. Arch Endocrinol Metab. 2025.",
       "van Haalen FM et al. Current clinical practice for thromboprophylaxis management in patients with Cushing's syndrome. Orphanet J Rare Dis. 2022."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "hiperparatireoidismo-primario-e-o-coracao",
@@ -28565,7 +28577,7 @@
     "subtitulo": "Por que o excesso de cálcio no sangue importa para quem cuida do seu coração",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "O hiperparatireoidismo primário é uma doença das glândulas paratireoides que eleva o cálcio no sangue e pode, com o tempo, afetar as válvulas do coração e os vasos sanguíneos; a cirurgia para remover a glândula doente é o tratamento definitivo, mas a recuperação do coração depois dela é variável e nem sempre completa.",
     "secoes": [
       {
@@ -28653,7 +28665,9 @@
       "Andersson P, Rydberg E, Willenheimer R. Primary hyperparathyroidism and heart disease--a review. Eur Heart J. 2004.",
       "Carrai P, Camarri S, Pondrelli CR, Gonnelli S, Caffarelli C. Calcification of Cardiac Valves in Metabolic Bone Disease: An Updated Review of Clinical Studies. Clin Interv Aging. 2020.",
       "Garcia de la Torre N, Wass JA, Turner HE. Parathyroid adenomas and cardiovascular risk. Endocr Relat Cancer. 2003."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "egpa-granulomatose-eosinofilica-e-o-coracao",
@@ -28661,7 +28675,7 @@
     "subtitulo": "Entenda por que o coração é um dos órgãos mais vulneráveis na granulomatose eosinofílica com poliangiite (antiga síndrome de Churg-Strauss) e quais sinais nunca devem ser ignorados",
     "tema": "Populações especiais",
     "documento_slug": "granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na granulomatose eosinofílica com poliangiite (EGPA), o coração pode ser atingido por inflamação causada pelos próprios eosinófilos, e essa complicação é considerada a causa mais frequente de morte na doença — entender os sinais de alerta e a importância do tratamento da doença de base é essencial para proteger o coração.",
     "secoes": [
       {
@@ -28745,7 +28759,9 @@
       "Zampieri M et al. Cardiac involvement in eosinophilic granulomatosis with polyangiitis (formerly Churg-Strauss syndrome): Prospective evaluation at a tertiary referral centre. Eur J Intern Med. 2021;85:68-79.",
       "Liu X et al. Cardiac involvement in eosinophilic granulomatosis with polyangiitis: acute eosinophilic myocarditis and chronic inflammatory cardiomyopathy. Rheumatology (Oxford). 2025;64(2):722-731.",
       "Wechsler ME, Akuthota P, Jayne D, et al. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. N Engl J Med. 2017;376(20):1921-1932."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "doenca-de-naxos-sindrome-de-carvajal",
@@ -28753,7 +28769,7 @@
     "subtitulo": "Por que cabelo quebradiço e pele grossa nas mãos e nos pés, presentes desde a infância, podem ser o primeiro sinal de um problema sério no coração",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Doença de Naxos e síndrome de Carvajal são condições genéticas raras que unem alterações típicas de pele e cabelo, presentes desde a infância, a um risco real de arritmia grave e morte súbita no coração — por isso esses sinais precisam ser lidos como um alerta cardiológico, não apenas como uma questão de estética.",
     "secoes": [
       {
@@ -28834,7 +28850,9 @@
       "Protonotarios N, Tsatsopoulou A. Naxos disease and Carvajal syndrome: cardiocutaneous disorders that highlight the pathogenesis and broaden the spectrum of arrhythmogenic right ventricular cardiomyopathy. Cardiovasc Pathol. 2004.",
       "Protonotarios N, Tsatsopoulou A. Naxos disease: cardiocutaneous syndrome due to cell adhesion defect. Orphanet J Rare Dis. 2006.",
       "Keller DI, Stepowski D, Balmer C, et al. De novo heterozygous desmoplakin mutations leading to Naxos-Carvajal disease. Swiss Med Wkly. 2012."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "amiloidose-cardiaca-al-pressao-baixa",
@@ -28842,7 +28860,7 @@
     "subtitulo": "Entenda por que a tontura ao levantar é tão comum nesse tipo de amiloidose e por que o tratamento dos remédios do coração exige cuidado redobrado",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na amiloidose cardíaca do tipo AL, é comum ter pressão baixa e tontura ao levantar, o que muda a forma como os remédios de insuficiência cardíaca são usados e reforça a importância do tratamento da doença da medula óssea que está na origem do problema.",
     "secoes": [
       {
@@ -28938,7 +28956,9 @@
       "Kittleson MM, Ruberg FL, Ambardekar AV, et al. 2023 ACC Expert Consensus Decision Pathway on Comprehensive Multidisciplinary Care for the Patient With Cardiac Amyloidosis. J Am Coll Cardiol. 2023;81(11):1076-1126. PMID 36697326.",
       "Kastritis E, Palladini G, Minnema MC, et al. Daratumumab-Based Treatment for Immunoglobulin Light-Chain Amyloidosis. N Engl J Med. 2021;385(1):46-58. PMID 34192431.",
       "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. PMID 33825853."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "sindrome-jervell-lange-nielsen-surdez-coracao",
@@ -28946,7 +28966,7 @@
     "subtitulo": "Como uma mesma alteração genética explica a perda auditiva e uma arritmia grave chamada QT longo",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "A síndrome de Jervell e Lange-Nielsen é uma doença genética rara que combina surdez neurossensorial bilateral de nascença com a síndrome do QT longo, uma arritmia grave que pode causar desmaios e morte súbita — por isso toda criança que nasce surda dos dois ouvidos deve fazer também um eletrocardiograma.",
     "secoes": [
       {
@@ -29046,7 +29066,9 @@
       "Tranebjærg L, Samson RA, Green GE. Jervell and Lange-Nielsen Syndrome. GeneReviews [Internet]. Seattle: University of Washington; 2002, atualizado em 2017. NCBI Bookshelf NBK1405.",
       "Schwartz PJ, Spazzolini C, Crotti L, et al. The Jervell and Lange-Nielsen syndrome: natural history, molecular basis, and clinical outcome. Circulation. 2006;113(6):783-790. PMID 16461811.",
       "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "distrofia-muscular-emery-dreifuss-coracao",
@@ -29054,7 +29076,7 @@
     "subtitulo": "Nessa doença genética rara, o coração pode estar em risco grave mesmo quando os músculos parecem pouco afetados",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na distrofia muscular de Emery-Dreifuss, arritmias graves e bloqueio cardíaco podem se desenvolver de forma desproporcional à fraqueza muscular, por isso o acompanhamento cardiológico regular — incluindo, muitas vezes, marca-passo ou CDI — é indicado mesmo quando a pessoa se sente bem.",
     "secoes": [
       {
@@ -29141,7 +29163,9 @@
       "Ben Yaou R, Leturcq F, Bonne G. Emery-Dreifuss Muscular Dystrophy. GeneReviews [Internet]. Seattle: University of Washington; 2004, com atualizações. NCBI Bookshelf NBK1436.",
       "Groh WJ, Bhakta D, Tomaselli GF, et al. 2022 HRS expert consensus statement on evaluation and management of arrhythmic risk in neuromuscular disorders. Heart Rhythm. 2022;19(10):e61-e120. PMID 35500790.",
       "van Rijsingen IA, Arbustini E, Elliott PM, et al. Risk factors for malignant ventricular arrhythmias in lamin a/c mutation carriers: a European cohort study. J Am Coll Cardiol. 2012;59(5):493-500. PMID 22281253."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "progeria-sindrome-hutchinson-gilford-e-o-coracao",
@@ -29149,7 +29173,7 @@
     "subtitulo": "Um guia acolhedor para famílias sobre a síndrome de Hutchinson-Gilford, o risco cardiovascular e o tratamento hoje disponível",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Este material explica, com honestidade e cuidado, por que doenças do coração e dos vasos sanguíneos são a principal causa de morte na progeria — mesmo em crianças muito pequenas — quais sinais de alerta observar e o que a ciência já sabe sobre o tratamento existente.",
     "secoes": [
       {
@@ -29223,7 +29247,9 @@
       "Gordon LB, Massaro J, D'Agostino RB, et al. Impact of farnesylation inhibitors on survival in Hutchinson-Gilford progeria syndrome. Circulation. 2014;130(1):27-34. PMID 24795390.",
       "Gordon LB, et al. Association of Lonafarnib Treatment vs No Treatment With Mortality Rate in Patients With Hutchinson-Gilford Progeria Syndrome. JAMA. 2018;319(16):1687-1695. PMID 29710166.",
       "Suzuki M, et al. FDA approval summary for lonafarnib (Zokinvy) for the treatment of Hutchinson-Gilford progeria syndrome and processing-deficient progeroid laminopathies. Genet Med. 2023;25(2):100335. PMID 36507973."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "distrofia-duchenne-coracao-vigilancia-precoce",
@@ -29231,7 +29257,7 @@
     "subtitulo": "Entenda por que quase todo menino com Duchenne desenvolve algum grau de comprometimento cardíaco - e por que o cardiologista pode agir antes de qualquer sintoma ou alteração de exame aparecer",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na distrofia muscular de Duchenne, a falta de distrofina não afeta só os músculos que movem o corpo: ela também atinge o músculo do coração. Por isso, o acompanhamento cardiológico regular - e, muitas vezes, o início preventivo de remédios para o coração - faz parte do cuidado desde cedo, mesmo antes de qualquer sintoma ou sinal no exame.",
     "secoes": [
       {
@@ -29308,7 +29334,9 @@
       "Birnkrant DJ, Bushby K, Bann CM, et al. Diagnosis and management of Duchenne muscular dystrophy, part 2: respiratory, cardiac, bone health, and orthopaedic management. Lancet Neurol. 2018;17(4):347-361. PMID: 29395990.",
       "Duboc D, Meune C, Pierre B, et al. Perindopril preventive treatment on mortality in Duchenne muscular dystrophy: 10 years' follow-up. Am Heart J. 2007;154(3):596-602. PMID: 17719312.",
       "McNally EM, Kaltman JR, Benson DW, et al. Contemporary cardiac issues in Duchenne muscular dystrophy. Working Group of the National Heart, Lung, and Blood Institute in collaboration with Parent Project Muscular Dystrophy. Circulation. 2015;131(18):1590-1598. PMID: 25940966."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "sindrome-de-wolfram-e-o-coracao",
@@ -29316,7 +29344,7 @@
     "subtitulo": "Entendendo a disautonomia, o risco de arritmia e o cuidado cardíaco em famílias que convivem com a síndrome de Wolfram (WFS1/DIDMOAD)",
     "tema": "Populações especiais",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "A síndrome de Wolfram é conhecida principalmente pelo diabetes e pela perda de visão e audição, mas o gene por trás dela também afeta o coração: alterações estruturais, falhas do sistema nervoso autônomo e arritmias já foram documentadas na literatura médica, por isso o acompanhamento cardiológico regular faz parte do cuidado completo dessas famílias.",
     "secoes": [
       {
@@ -29413,7 +29441,9 @@
       "Villatore A, Frontino G, Cascavilla ML, Vignale D, Lazzeroni D, Peretto G. Cardiac Wolframinopathies: A Case Report of Myocarditis and a Literature Review of Cardiac Involvement in Wolfram Syndrome 1. J Clin Med. 2024;13(6):1803. PMID: 38542026.",
       "Rohayem J, Ehlers C, Wiedemann B, et al. Diabetes and neurodegeneration in Wolfram syndrome: a multicenter study of phenotype and genotype. Diabetes Care. 2011;34(7):1503-1510. PMID: 21602428.",
       "Urano F. Wolfram Syndrome: Diagnosis, Management, and Treatment. Curr Diab Rep. 2016;16(1):6. PMID: 26742931."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "hemocromatose-e-insuficiencia-cardiaca-reversivel",
@@ -29421,7 +29451,7 @@
     "subtitulo": "Como o ferro acumulado no músculo cardíaco pode levar à insuficiência cardíaca, e por que o tratamento a tempo costuma trazer o coração de volta ao normal",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Na hemocromatose, o ferro que se acumula em excesso no organismo pode se depositar no músculo do coração e causar um tipo de insuficiência cardíaca com arritmias — mas, ao contrário de muitas outras causas, essa forma costuma ser reversível quando identificada e tratada antes que o dano se torne extenso.",
     "secoes": [
       {
@@ -29498,7 +29528,9 @@
       "Anderson LJ, Holden S, Davis B, et al. Cardiovascular T2-star (T2*) magnetic resonance for the early diagnosis of myocardial iron overload. Eur Heart J. 2001;22(23):2171-2179. PMID: 11913479.",
       "Kirk P, Roughton M, Porter JB, et al. Cardiac T2* magnetic resonance for prediction of cardiac complications in thalassemia major. Circulation. 2009;120(20):1961-1968. PMID: 19801505.",
       "Modell B, Khan M, Darlison M, Westwood MA, Ingram D, Pennell DJ. Improved survival of thalassaemia major in the UK and relation to T2* cardiovascular magnetic resonance. J Cardiovasc Magn Reson. 2008;10:42. PMID: 18817553."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "cardiomiopatia-arritmogenica-surtos-restricao-esportes",
@@ -29506,7 +29538,7 @@
     "subtitulo": "Entenda por que uma dor no peito com exames alterados pode ser a própria doença — e não um infarto — e por que o exercício intenso pede um cuidado diferente nessa condição genética do coração",
     "tema": "Cardiomiopatias hereditárias",
     "documento_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "A cardiomiopatia arritmogênica é uma doença genética das 'junções' que unem as células do músculo cardíaco; ela pode causar crises agudas parecidas com infarto ou miocardite e piora de forma diferente com o exercício intenso, o que torna a restrição de esportes competitivos uma parte central do tratamento, não apenas uma cautela genérica.",
     "secoes": [
       {
@@ -29596,7 +29628,9 @@
       "Towbin JA, McKenna WJ, Abrams DJ, et al. 2019 HRS expert consensus statement on evaluation, risk stratification, and management of arrhythmogenic cardiomyopathy. Heart Rhythm. 2019;16(11):e301-e372. PMID: 31078652.",
       "Wang W, Orgeron G, Tichnell C, et al. Impact of Exercise Restriction on Arrhythmic Risk Among Patients With Arrhythmogenic Right Ventricular Cardiomyopathy. J Am Heart Assoc. 2018;7(12):e008843. PMID: 29909402.",
       "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2022;43(32):3053-3067. PMID: 35441664."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "aneurisma-inflamatorio-da-aorta-doenca-relacionada-a-igg4",
@@ -29604,7 +29638,7 @@
     "subtitulo": "Por que esse tipo de aneurisma pode ser diferente do comum — e por que o tratamento pode começar com remédio, não cirurgia",
     "tema": "Aorta e doença arterial periférica",
     "documento_slug": "doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Quando a aorta apresenta um espessamento inflamado ao redor dela, ou um aneurisma com sinais de inflamação, uma causa possível — e tratável com remédio — é a doença relacionada a IgG4. Entenda por que o exame de sangue de IgG4 sozinho não fecha o diagnóstico, por que a biópsia costuma ser necessária, e por que, ao contrário do aneurisma comum, esse tipo pode melhorar com corticoide em vez de precisar sempre de cirurgia.",
     "secoes": [
       {
@@ -29687,7 +29721,9 @@
       "Wallace ZS, Naden RP, et al. The 2019 ACR/EULAR classification criteria for IgG4-related disease. Ann Rheum Dis. 2020.",
       "Khosroshahi A, Wallace ZS, et al. International Consensus Guidance Statement on the Management and Treatment of IgG4-Related Disease. Arthritis Rheumatol. 2015.",
       "Kawano M. Update on IgG4-related periaortitis/retroperitoneal fibrosis and periarteritis. Semin Arthritis Rheum. 2025."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "doenca-de-behcet-e-o-coracao-por-que-ela-causa-trombose-e-aneurismas-ao-mesmo-tempo",
@@ -29695,7 +29731,7 @@
     "subtitulo": "Entenda por que, nessa doença, o médico pode pedir uma tomografia do tórax antes de decidir se você vai tomar anticoagulante",
     "tema": "Aorta e doença arterial periférica",
     "documento_slug": "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "A doença de Behçet é uma doença inflamatória que pode afetar, ao mesmo tempo, as veias e as artérias do corpo, incluindo a artéria que leva sangue ao pulmão. Por isso, uma pessoa com Behçet pode ter tanto coágulos (trombose) em veias quanto dilatações perigosas (aneurismas) em artérias. Essa combinação muda a forma de tratar: diferente de uma trombose comum, o médico pode não receitar anticoagulante de imediato, porque isso pode ser perigoso se houver um aneurisma escondido na artéria do pulmão. Por isso, antes de decidir o tratamento, costuma ser necessário fazer uma tomografia do tórax.",
     "secoes": [
       {
@@ -29791,7 +29827,9 @@
       "Ahn JK, Lee YS, Jeon CH, Koh EM, Cha HS. Treatment of venous thrombosis associated with Behçet's disease: immunosuppressive therapy alone versus immunosuppressive therapy plus anticoagulation. Clin Rheumatol. 2008;27(2):201-205. PMID: 17636362",
       "Chuklin A, Chiasakul T, Uaprasert N. Anticoagulants and immunosuppressive therapy for thrombosis in Behçet's syndrome: a systematic review and meta-analysis. J Thromb Haemost. 2025. PMID: 40769432",
       "Veilleux SP, et al. What the Cardiologist Should Know About Cardiac Involvement in Behçet Disease. Can J Cardiol. 2015;31(12):1485-1488. PMID: 26215987"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "estenose-aortica-e-amiloidose-ao-mesmo-tempo-o-que-significa-para-o-tavi",
@@ -29799,7 +29837,7 @@
     "subtitulo": "Por que o médico pode pedir um exame a mais antes da troca da válvula, e por que isso não significa adiar o procedimento",
     "tema": "Cardiologia geriátrica",
     "documento_slug": "estenose-aortica-e-amiloidose-cardiaca-por-transtirretina-overlap-no-idoso",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Explica, em linguagem simples, por que idosos encaminhados para troca da válvula aórtica por cateter (TAVI) podem precisar de um exame de cintilografia para verificar se, além do desgaste da válvula, também existe um depósito de proteína no músculo do coração (amiloidose). Mostra que ter as duas condições ao mesmo tempo é mais comum do que se pensava, que isso não é motivo para cancelar ou adiar o TAVI, e que o melhor resultado vem de tratar as duas coisas juntas.",
     "secoes": [
       {
@@ -29879,7 +29917,9 @@
       "Treibel TA, Fontana M, Gilbertson JA, et al. Occult Transthyretin Cardiac Amyloid in Severe Calcific Aortic Stenosis: Prevalence and Prognosis in Patients Undergoing Surgical Aortic Valve Replacement. Circ Cardiovasc Imaging. 2016;9(8):e005066. PMID: 27511979.",
       "Nitsche C, et al. Cardiac transthyretin amyloidosis treatment improves outcomes after aortic valve replacement for severe stenosis. Eur Heart J. 2025;46(44):4795-4806. PMID: 40452225.",
       "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. PMID: 27143678."
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "achado-de-massa-no-coracao-entendendo-a-investigacao",
@@ -29887,7 +29927,7 @@
     "subtitulo": "Por que a investigação leva tempo, o que ela envolve, e como lidar com a espera",
     "tema": "Cardiomiopatias",
     "documento_slug": "tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Um exame de imagem do coração mostrou algo que precisa ser mais bem caracterizado antes de se saber o que é. Este material explica, em linguagem simples, o que esse achado pode significar, por que a investigação costuma envolver uma ressonância cardíaca detalhada e, às vezes, uma biópsia, e por que esse processo demora — sem presumir que o resultado final será grave.",
     "secoes": [
       {
@@ -29973,7 +30013,9 @@
       "Jeudy J, et al. Cardiac Lymphoma. Radiol Clin North Am. 2016;54(4):689-710. DOI: 10.1016/j.rcl.2016.03.006. PMID: 27265603",
       "Petrich A, et al. Primary cardiac lymphoma: an analysis of presentation, treatment, and outcome patterns. Cancer. 2011;117(3):581-9. DOI: 10.1002/cncr.25444. PMID: 20922788",
       "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "falta-de-selenio-pode-enfraquecer-o-coracao-o-que-saber",
@@ -29981,7 +30023,7 @@
     "subtitulo": "Por que isso acontece, por que costuma vir junto com fraqueza muscular, e por que geralmente melhora bastante quando o selênio é reposto a tempo",
     "tema": "Insuficiência cardíaca",
     "documento_slug": "cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "resumo": "Selênio é um mineral que o corpo precisa em pequena quantidade, mas que é essencial para proteger as células do coração e dos músculos contra um tipo de desgaste interno. Quando falta selênio por muito tempo — o que pode acontecer em quem recebe nutrição por veia por longos períodos, em quem tem doenças graves do intestino ou fibrose cística, ou em quem bebe álcool em excesso por anos — o coração pode enfraquecer e ficar dilatado, quase sempre junto com fraqueza nos músculos do corpo. A boa notícia é que, diferente de várias outras causas de coração fraco, esse tipo costuma melhorar de forma importante quando o selênio é identificado e reposto antes que o dano seja grande demais.",
     "secoes": [
       {
@@ -30057,6 +30099,8 @@
       "Segovia-Cubero J et al. The cardiomyopathy of cystic fibrosis: a modern form of Keshan disease. Front Cardiovasc Med. 2024;11:1285223. DOI: 10.3389/fcvm.2024.1285223. PMID: 38361580",
       "Liu S et al. Selenium deficiency in inflammatory bowel disease: A comprehensive meta-analysis. Heliyon. 2024;10(22):e40139. DOI: 10.1016/j.heliyon.2024.e40139. PMID: 39584095",
       "Zhou H et al. Prevention of Keshan Disease by Selenium Supplementation: a Systematic Review and Meta-analysis. Biol Trace Elem Res. 2018;186(1):98-105. DOI: 10.1007/s12011-018-1302-5. PMID: 29627894"
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   }
 ]

@@ -3,7 +3,8 @@ title: "Fibroelastoma Papilar Cardíaco: Diagnóstico Ecocardiográfico, Risco E
 slug: fibroelastoma-papilar-cardiaco-diagnostico-ecocardiografico-risco-embolico-e-indicacao-cirurgica
 theme: "Cardiomiopatias"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
+fonte_producao: claude
 source_refs: ["Gowda RM, Khan IA, Nair CK, Mehta NJ, Vasavada BC, Sacchi TJ. Cardiac papillary fibroelastoma: a comprehensive analysis of 725 cases. Am Heart J. 2003;146(3):404-410. PMID: 12947356", "Klarich KW, Enriquez-Sarano M, Gura GM, Edwards WD, Tajik AJ, Seward JB. Papillary fibroelastoma: echocardiographic characteristics for diagnosis and pathologic correlation. J Am Coll Cardiol. 1997;30(3):784-790. PMID: 9283541", "Tamin SS, Maleszewski JJ, Scott CG, Khan SK, Edwards WD, Bruce CJ, Klarich KW. Prognostic and Bioepidemiologic Implications of Papillary Fibroelastomas. J Am Coll Cardiol. 2015;65(22):2420-2429. PMID: 26046736", "Wolf RC, Spiess J, Vasic N, Wolf SS, Beisse F, Klöppel S, Otti A, Grön G, Freudenmann RW. Valvular strands and ischemic stroke. Eur Neurol. 2007. PMID: 17312371"]
 ---
 

@@ -24105,7 +24105,7 @@
     "tema": "Fibrilação atrial",
     "objetivo": "Sair sabendo reconhecer a fibrilação atrial ao exame e ao ECG, distinguir o que é urgência do que pode seguir eletivo, calcular o CHA2DS2-VA e decidir sobre anticoagulação, e identificar quando encaminhar ao cardiologista ou eletrofisiologista.",
     "nivel": "básico",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -24149,7 +24149,9 @@
         "item_slug": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
         "por_que": "Encerra com o encaminhamento: a seção 'Indicação por classificação temporal' já basta para o clínico geral saber quando vale acionar o eletrofisiologista — sintoma refratário ao controle de frequência, ou cenário de controle de ritmo precoce. A técnica de ablação propriamente dita, a tecnologia de campo pulsado e os ensaios que sustentam cada indicação ficam para a trilha avançada de ablação; aqui o objetivo é só reconhecer o gatilho de encaminhamento, não decidir a técnica."
       }
-    ]
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "trilha-aorta-mimetizadores-raros-igg4-erdheim-chester-behcet",
@@ -24157,7 +24159,7 @@
     "tema": "Aorta e doença arterial periférica",
     "objetivo": "Sair reconhecendo que espessamento periaórtico, aneurisma com componente inflamatório e trombose vascular atípica podem ter causas além do aneurisma aterosclerótico comum e das vasculites clássicas de grandes vasos — e que cada mimetizador (IgG4, Erdheim-Chester, Behçet) muda radicalmente a conduta terapêutica, inclusive tornando a anticoagulação contraindicada em um dos cenários.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -24190,6 +24192,8 @@
         "por_que": "O terceiro mimetizador, e o de maior risco prático: uma vasculite que soma trombose venosa a aneurisma de artéria pulmonar, na qual anticoagular sem rastrear o aneurisma pode ser fatal — o oposto do reflexo terapêutico padrão para TVP."
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   }
 ]

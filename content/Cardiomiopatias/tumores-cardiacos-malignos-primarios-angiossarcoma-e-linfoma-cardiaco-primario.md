@@ -3,7 +3,8 @@ title: "Tumores Cardíacos Malignos Primários no Adulto: Angiossarcoma e Linfom
 slug: tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario
 theme: "Cardiomiopatias"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
+fonte_producao: claude
 source_refs: ["Patel SD, Peterson A, Bartczak A, et al. Primary cardiac angiosarcoma - a review. Med Sci Monit. 2014;20:103-9. DOI: 10.12659/MSM.889875. PMID: 24452054", "Chambergo-Michilot D, et al. Clinical characteristics, management, and outcomes of patients with primary cardiac angiosarcoma: a systematic review. J Cardiovasc Thorac Res. 2023;15(1):1-8. DOI: 10.34172/jcvtr.2023.30531. PMID: 37342661", "Stergioula A, et al. Multimodality treatment of primary cardiac angiosarcoma: a systematic literature review. Cancer Treat Rev. 2023;120:102617. DOI: 10.1016/j.ctrv.2023.102617. PMID: 37603906", "Jeudy J, et al. Cardiac Lymphoma. Radiol Clin North Am. 2016;54(4):689-710. DOI: 10.1016/j.rcl.2016.03.006. PMID: 27265603", "Chalabreysse L, et al. Primary cardiac lymphoma in immunocompetent patients: a report of three cases and review of the literature. Virchows Arch. 2002;441(5):456-61. DOI: 10.1007/s00428-002-0711-0. PMID: 12447675", "Ceresoli GL, et al. Primary cardiac lymphoma in immunocompetent patients: diagnostic and therapeutic management. Cancer. 1997;80(8):1497-506. PMID: 9338475", "Petrich A, et al. Primary cardiac lymphoma: an analysis of presentation, treatment, and outcome patterns. Cancer. 2011;117(3):581-9. DOI: 10.1002/cncr.25444. PMID: 20922788", "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988"]
 ---
 

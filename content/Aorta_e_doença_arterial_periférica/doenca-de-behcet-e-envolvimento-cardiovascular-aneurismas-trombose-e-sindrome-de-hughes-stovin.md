@@ -3,7 +3,8 @@ title: "Doença de Behçet e Envolvimento Cardiovascular: Aneurismas, Trombose e
 slug: doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin
 theme: "Aorta e doença arterial periférica"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
+fonte_producao: claude
 source_refs: ["Yazici Y, Hatemi G, Bodaghi B, et al. Behçet syndrome. Nat Rev Dis Primers. 2021;7:67. PMID: 34531393", "Hatemi G, Christensen R, Bang D, et al. 2018 update of the EULAR recommendations for the management of Behçet's syndrome. Ann Rheum Dis. 2018;77(6):808-818. PMID: 29625968", "Bettiol A, Alibaz-Oner F, Direskeneli H, et al. Vascular Behçet syndrome: from pathogenesis to treatment. Nat Rev Rheumatol. 2023;19(2):111-126. PMID: 36544027", "Emmi G, Bettiol A, Silvestri E, et al. Vascular Behçet's syndrome: an update. Intern Emerg Med. 2019;14(5):645-652. PMID: 30499073", "Khalid U, Saleem T. Hughes-Stovin syndrome. Orphanet J Rare Dis. 2011;6:15. PMID: 21489283", "Geri G, Wechsler B, Thi Huong DL, et al. Spectrum of cardiac lesions in Behçet disease: a series of 52 patients. Medicine (Baltimore). 2012;91(1):25-34. PMID: 22198500", "Aksu T, Tufekcioglu O. Intracardiac thrombus in Behçet's disease: four new cases and a comprehensive literature review. Rheumatol Int. 2015;35(12):1969-1978. PMID: 25381640", "Ahn JK, Lee YS, Jeon CH, Koh EM, Cha HS. Treatment of venous thrombosis associated with Behçet's disease: immunosuppressive therapy alone versus immunosuppressive therapy plus anticoagulation. Clin Rheumatol. 2008;27(2):201-205. PMID: 17636362", "Chuklin A, Chiasakul T, Uaprasert N. Anticoagulants and immunosuppressive therapy for thrombosis in Behçet's syndrome: a systematic review and meta-analysis. J Thromb Haemost. 2025. PMID: 40769432", "Veilleux SP, et al. What the Cardiologist Should Know About Cardiac Involvement in Behçet Disease. Can J Cardiol. 2015;31(12):1485-1488. PMID: 26215987"]
 ---
 

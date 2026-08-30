@@ -34476,7 +34476,7 @@
     "resumo": "Checklist clínico sobre o reconhecimento, a fisiopatologia, o rastreio e o manejo do acometimento cardiovascular na púrpura trombocitopênica trombótica (PTT), microangiopatia trombótica por deficiência grave de ADAMTS13 (adquirida/autoimune ou congênita — síndrome de Upshaw-Schulman). Aborda o valor prognóstico independente da troponina elevada, a diferenciação fisiopatológica entre lesão miocárdica por microtrombose difusa da microvasculatura coronariana e o infarto agudo do miocárdio aterosclerótico clássico, a recomendação prática de dosagem sistemática de troponina em toda PTT confirmada, o impacto do tratamento definitivo (troca plasmática terapêutica, corticoide e caplacizumabe) sobre a resolução do acometimento cardíaco, e a armadilha de tratar a elevação de troponina como síndrome coronariana aguda clássica — com dupla antiagregação plaquetária e/ou anticoagulação plena — antes de tratar a microangiopatia de base, em paciente já trombocitopênico e sob risco de sangramento maior.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID 32914582 - ISTH guidelines for the diagnosis of thrombotic thrombocytopenic purpura, J Thromb Haemost 2020",
       "PMID 32914526 - ISTH guidelines for treatment of thrombotic thrombocytopenic purpura, J Thromb Haemost 2020",
@@ -34540,7 +34540,9 @@
         "origem_secao": "Espectro clínico e lacunas de evidência/diretrizes"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "acometimento-cardiaco-sindrome-antifosfolipide-catastrofica",
@@ -34548,7 +34550,7 @@
     "resumo": "A síndrome antifosfolípide catastrófica (CAPS) é a forma mais grave e mais rara da síndrome antifosfolípide (SAF), representando menos de 1% de todos os casos de SAF, com trombose de múltiplos órgãos em intervalo tipicamente inferior a uma semana e mortalidade histórica próxima de 50%, reduzida para a faixa de 30-40% com o tratamento tríplice combinado. O diagnóstico segue os critérios preliminares internacionais de consenso (Taormina, 2002/2003; PMID 12892393), validados no CAPS Registry (PMID 15708888), com boa acurácia (sensibilidade 90,3%, especificidade 99,4%). O coração está entre os órgãos mais frequentemente acometidos (cerca de metade dos eventos de CAPS no CAPS Registry, PMID 38552300), com espectro que inclui insuficiência cardíaca, disfunção valvar por vegetações trombóticas estéreis (padrão Libman-Sacks), infarto do miocárdio por microtrombose coronariana - inclusive com coronárias epicárdicas sem lesão obstrutiva relevante (padrão MINOCA) - e miocardiopatia aguda/choque cardiogênico, com confirmação histopatológica de microangiopatia trombótica cardíaca na maioria dos casos biopsiados/necropsiados. O gatilho mais frequentemente identificável é infecção, seguido de gestação e cirurgia, com papel de destaque para a suspensão ou subdosagem de anticoagulação em pacientes com SAF prévia - achado com relevância prática direta para o cardiologista no perioperatório. O tratamento padrão combina anticoagulação plena, corticoide em altas doses e plasmaférese e/ou imunoglobulina intravenosa; o eculizumabe (e inibidores de complemento em geral) tem papel emergente, ainda não consolidado, reservado a casos refratários. Lacunas declaradas: (1) não foi localizada diretriz específica da SBC/Arq Bras Cardiol sobre CAPS ou SAF - a busca em PubMed recuperou apenas relatos de caso isolados nesse periódico (ex.: PMID 23184102, PMID 22735914, PMID 15320558), não um documento de diretriz; (2) as recomendações EULAR de 2019 para SAF em adultos (PMID 31092409) tratam principalmente de SAF trombótica e obstétrica, sem recomendações graduadas específicas para o manejo da CAPS, cujo corpo de evidência permanece apoiado majoritariamente no CAPS Registry e em séries de casos, não em ensaios clínicos randomizados.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID 12892393",
       "PMID 15708888",
@@ -34605,7 +34607,9 @@
         "origem_secao": "Terapias direcionadas ao complemento em casos refratários"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "doenca-arterial-coronariana-hemofilia-manejo-cardiovascular",
@@ -34613,7 +34617,7 @@
     "resumo": "O aumento expressivo da expectativa de vida de pessoas com hemofilia nas últimas décadas - impulsionado pela reposição de concentrado de fator, mais recentemente por terapias não-fator (ex.: emicizumab) e, mais recentemente ainda, pela terapia gênica - fez emergir um problema clínico antes raro: o envelhecimento com doença arterial coronariana (DAC) e a eventual necessidade de angioplastia com stent ou cirurgia de revascularização miocárdica nesses pacientes (PMID 36700406; PMID 30592034; PMID 41348043; PMID 22956409). Não existem ensaios clínicos randomizados dedicados a essa população, e o corpo de evidência disponível é formado por consensos de especialistas (destaque para o WFH Guidelines for the Management of Hemophilia, 3ª edição, PMID 32744769, e para o posicionamento da ADVANCE Working Group sobre aplicabilidade das diretrizes da European Society of Cardiology, PMID 23710576), revisões sistemáticas de pequenas séries (PMID 28895303), coortes unicêntricas (PMID 33749973; PMID 38379212) e relatos de caso (PMID 22956409; PMID 33780095; PMID 31294330). Buscas estruturadas em PubMed não localizaram diretriz específica da Sociedade Brasileira de Cardiologia (SBC) ou publicada nos Arquivos Brasileiros de Cardiologia sobre manejo cardiovascular/intervencionista em hemofilia - essa lacuna nacional é declarada explicitamente e deve ser comunicada ao usuário final do conteúdo. O eixo clínico central é o equilíbrio entre a terapia antiplaquetária dupla (DAPT), necessária após implante de stent coronariano, e o risco hemorrágico basal da hemofilia, com participação obrigatória de um centro de tratamento de hemofilia (equipe multidisciplinar com hematologista) em qualquer decisão cardiológica invasiva.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Staritz P, de Moerloose P, Schutgens R, Dolan G; ADVANCE Working Group. Applicability of the European Society of Cardiology guidelines on management of acute coronary syndromes to people with haemophilia - an assessment by the ADVANCE Working Group. Haemophilia. 2013 Nov;19(6):833-40. doi: 10.1111/hae.12189. PMID 23710576",
       "Franchini M, Focosi D, Mannucci PM. How we manage cardiovascular disease in patients with hemophilia. Haematologica. 2023 Jul 1;108(7):1748-1757. doi: 10.3324/haematol.2022.282407. PMID 36700406",
@@ -34674,7 +34678,9 @@
         "origem_secao": "Terapias nao-fator (emicizumab) e lacunas de evidencia incluindo terapia genica"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "sindrome-de-hiperviscosidade-acometimento-cardiovascular",
@@ -34682,7 +34688,7 @@
     "resumo": "A síndrome de hiperviscosidade decorre do acúmulo de paraproteína monoclonal (mais frequentemente IgM na macroglobulinemia de Waldenström, e IgG/IgA em mieloma múltiplo) e compromete diretamente a perfusão microvascular coronariana e cerebral por mecanismo hemorreológico, podendo causar isquemia miocárdica de baixo fluxo mesmo sem doença coronariana obstrutiva relevante. A transfusão de concentrado de hemácias exige cautela nesse contexto por elevar agudamente a viscosidade do sangue total, com racional fisiopatológico consistente mas sem estudo controlado dedicado que quantifique o risco de descompensação. A plasmaférese terapêutica é o tratamento de emergência definitivo da hiperviscosidade sintomática, com efeito rápido documentado sobre sintomas cardiovasculares, neurológicos e oculares. A amiloidose cardíaca por cadeia leve (AL) é complicação relacionada e coexistente em fração desses pacientes, com painel de consenso dedicado do 11º International Workshop on Waldenström's Macroglobulinemia (IWWM-11) sobre o tema; não foi localizada diretriz da Sociedade Brasileira de Cardiologia (SBC)/Arquivos Brasileiros de Cardiologia específica sobre hiperviscosidade ou acometimento cardiovascular da macroglobulinemia de Waldenström — a referência nacional disponível trata de amiloidose cardíaca de forma geral (AL e ATTR) e deve ser adaptada a esse contexto. O manejo cardiovascular geral (diuréticos, hidratação, anticoagulação) carece de ensaios clínicos dedicados e apoia-se em extrapolação fisiopatológica e em diretrizes hematológicas de manejo geral da doença de base.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID 14631546",
       "PMID 16182994",
@@ -34747,7 +34753,9 @@
         "origem_secao": "Considerações práticas de manejo cardiovascular geral"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "hipertensao-pulmonar-neoplasias-mieloproliferativas-mielofibrose",
@@ -34755,7 +34763,7 @@
     "resumo": "A mielofibrose primária e as demais neoplasias mieloproliferativas (NMP) Philadelphia-negativas cursam com acometimento cardiovascular multifatorial que vai além do risco trombótico clássico. A hipertensão pulmonar (HP) associada a NMP é classificada pela diretriz ESC/ERS 2022 (PMID 36017548) no grupo 5 (mecanismos multifatoriais/incertos), mas dados hemodinâmicos de registro (PMID 37311222) mostram que a mielofibrose associa-se preferencialmente a HP grupo 5 'verdadeira', enquanto policitemia vera e trombocitemia essencial associam-se mais a tromboembolismo pulmonar crônico (grupo 4/HPTEC) — distinção com implicação terapêutica direta. Os mecanismos multifatoriais incluem hematopoiese extramedular esplênica, hepática e raramente pulmonar; estado de alto débito cardíaco por anemia crônica e esplenomegalia maciça funcionando como shunt arteriovenoso de baixa resistência (gerando insuficiência cardíaca de alto débito); tromboembolismo pulmonar crônico pela hipercoagulabilidade basal das NMP; e um componente pré-capilar direto mediado por ativação da via JAK/STAT e células progenitoras endoteliais derivadas da medula óssea. A mutação JAK2 V617F, além de driver molecular, é marcador robusto e quantificado de risco trombótico aumentado, com relevância direta para eventos coronarianos e cerebrovasculares, tanto no contexto de NMP estabelecida quanto de hematopoiese clonal (CHIP) na população geral. O transplante alogênico de células-tronco hematopoiéticas (TCTH) é a única terapia potencialmente curativa da mielofibrose (recomendações EBMT/ELN 2024, PMID 38061384), mas não foi localizado estudo dedicado que quantifique o impacto perioperatório específico da HP e da insuficiência cardíaca de alto débito pré-existentes sobre desfechos do TCTH em mielofibrose — lacuna explicitamente declarada. Busca por diretriz específica da SBC/Arquivos Brasileiros de Cardiologia sobre HP em NMP não retornou resultado; a única diretriz brasileira de HP indexada no PubMed data de 2003 (PMID 15108641), é anterior à classificação atual e não aborda NMP, permanecendo como lacuna nacional.",
     "documento_origem": null,
     "theme": "Hipertensão pulmonar",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID: 36017548",
       "PMID: 40668166",
@@ -34819,7 +34827,9 @@
         "origem_secao": "Transplante de células-tronco hematopoiéticas como terapia curativa e seu risco cardiovascular perioperatório na mielofibrose"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "risco-cardiovascular-trombotico-policitemia-vera",
@@ -34827,7 +34837,7 @@
     "resumo": "A policitemia vera (PV) é uma neoplasia mieloproliferativa crônica cursando com eritrocitose e, na quase totalidade dos casos, mutação ativadora JAK2 V617F. Seu principal determinante prognóstico modificável não é a progressão hematológica (mielofibrose secundária ou leucemia mieloide aguda), mas sim a trombose arterial (infarto do miocárdio, acidente vascular cerebral isquêmico) e venosa — incluindo apresentações atípicas particularmente associadas a esta doença, como síndrome de Budd-Chiari e trombose de veia porta. A estratificação de risco trombótico validada pelo European LeukemiaNet (ELN) usa idade acima de 60 anos e história prévia de trombose como os dois fatores de maior peso para definir alto risco e orientar a intensidade da citorredução. A leucocitose, historicamente subestimada frente à eritrocitose, vem sendo cada vez mais reconhecida como fator de risco trombótico adicional, tendo sido incorporada explicitamente aos critérios de indicação de citorredução no consenso ELN 2021. O ensaio randomizado CYTO-PV forneceu a primeira confirmação de nível 1 de que manter hematócrito abaixo de 45% reduz eventos cardiovasculares maiores e morte cardiovascular em comparação com a faixa de 45-50%, validando por evidência direta uma meta que antes se apoiava sobretudo em raciocínio fisiopatológico sobre viscosidade sanguínea. A aspirina em baixa dose (100 mg/dia), validada pelo ensaio ECLAP, é recomendada como profilaxia antitrombótica basal para a maioria dos pacientes com PV sem contraindicação. Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) nem publicação de consenso dedicada ao tema nos Arquivos Brasileiros de Cardiologia — a busca nesse periódico retornou apenas dois relatos de caso isolados (PMID 40862402 e PMID 32428108), sem diretriz formal; essa lacuna é declarada explicitamente, e a hierarquia de evidência adotada neste checklist baseia-se nos consensos ELN e nos ensaios randomizados CYTO-PV e ECLAP.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Marchioli R, Finazzi G, Specchia G, et al.; CYTO-PV Collaborative Group. Cardiovascular events and intensity of treatment in polycythemia vera. N Engl J Med. 2013;368(1):22-33. doi:10.1056/NEJMoa1208500. PMID: 23216616.",
       "Marchioli R, Finazzi G, Specchia G, Masciulli A, Mennitto MR, Barbui T. The CYTO-PV: a large-scale trial testing the intensity of cytoreductive therapy to prevent cardiovascular events in patients with polycythemia vera. Thrombosis. 2011;2011:794240. doi:10.1155/2011/794240. PMID: 22084668.",
@@ -34886,7 +34896,9 @@
         "origem_secao": "Síndrome de Budd-Chiari e trombose de veia porta como manifestações características da PV"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "risco-cardiovascular-trombotico-trombocitemia-essencial",
@@ -34894,7 +34906,7 @@
     "resumo": "Checklist de rigor clínico sobre risco cardiovascular e trombótico na trombocitemia essencial (TE), neoplasia mieloproliferativa Ph-negativa caracterizada por trombocitose clonal persistente e mutações driver em JAK2, CALR ou MPL (ou tripla-negatividade). Cobre a estratificação de risco trombótico pelo escore IPSET-thrombosis (e sua revisão prática de 4 níveis) como determinante da decisão de citorredução; a diferença de risco trombótico — predominantemente arterial — entre TE JAK2-mutada e CALR-mutada, incluindo o subgrupo tripla-negativo; o paradoxo hemorrágico da síndrome de von Willebrand adquirida em trombocitose extrema (>1.000-1.500 x10⁹/L), que pode contraindicar a antiagregação; o papel da hidroxiureia como citorredução de primeira linha frente à anagrelida (ensaio PT1) e ao interferon peguilado; a indicação e as contraindicações da aspirina em baixa dose; e a relevância de investigar trombocitose persistente inexplicada como possível MPN antes de presumir causa reativa. Nenhuma diretriz específica da Sociedade Brasileira de Cardiologia/Arquivos Brasileiros de Cardiologia sobre trombocitemia essencial ou risco trombótico em neoplasias mieloproliferativas foi localizada em busca direcionada no PubMed; a base de evidência é, portanto, hematológica, ancorada em consensos do European LeukemiaNet, no escore IPSET-thrombosis e em ensaios randomizados/coortes validadas, hierarquia seguida neste documento.",
     "documento_origem": null,
     "theme": "Populações especiais",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID 23033268 — Barbui T et al., Blood 2012;120(26):5128-33 — Development and validation of IPSET-thrombosis — DOI 10.1182/blood-2012-07-444067",
       "PMID 26617062 — Barbui T et al., Blood Cancer J 2015;5:e369 — Practice-relevant revision of IPSET-thrombosis (1019 pacientes) — DOI 10.1038/bcj.2015.94",
@@ -34953,7 +34965,9 @@
         "origem_secao": "Relevância de investigar trombocitose persistente inexplicada como possível MPN antes de atribuí-la a causa reativa"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "doenca-de-von-willebrand-sindrome-de-heyde-cirurgia-cardiaca",
@@ -34961,7 +34975,7 @@
     "resumo": "O estresse de cisalhamento elevado gerado por uma valva aórtica estenótica, por um dispositivo de assistência ventricular esquerda (LVAD) ou pelo circuito de circulação extracorpórea (CEC) desdobra os multímeros de alto peso molecular do fator de von Willebrand (FvW), expondo o domínio A2 à clivagem proteolítica pela ADAMTS13 e produzindo uma síndrome de von Willebrand adquirida (SVWa) tipo 2A-símile. Na estenose aórtica grave, essa SVWa compõe a síndrome de Heyde — associação clássica entre estenose aórtica, SVWa e sangramento gastrointestinal recorrente por angiodisplasia — que tende a resolver após a troca valvar (cirúrgica ou por TAVI), restaurando o fluxo laminar e normalizando os multímeros de alto peso molecular. Em pacientes com LVAD, a SVWa é praticamente universal e contribui de forma independente para o risco hemorrágico gastrointestinal recorrente, exigindo individualização da intensidade antitrombótica. Já na doença de von Willebrand hereditária conhecida submetida a cirurgia cardíaca, o manejo hemostático perioperatório segue as diretrizes ASH/ISTH/NHF/WFH 2021, com teste de resposta à desmopressina nos tipos responsivos e reposição de concentrado de FvW/fator VIII com metas de atividade e monitorização por cofator de ristocetina (FvW:RCo) nos demais. Não foi localizada diretriz específica da SBC/Arq Bras Cardiol sobre este cruzamento temático, e as diretrizes de valvopatia ESC/EACTS (2021) e ACC/AHA (2020) não formalizam uma recomendação graduada (classe/nível) dedicada ao rastreio de SVWa como critério de indicação cirúrgica — lacunas explicitadas nos itens abaixo.",
     "documento_origem": null,
     "theme": "Valvopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "PMID 23150964 - Loscalzo J. From clinical observation to mechanism--Heyde's syndrome. N Engl J Med. 2012;367(20):1954-6",
       "PMID 12878741 - Vincentelli A et al. Acquired von Willebrand syndrome in aortic stenosis. N Engl J Med. 2003;349(4):343-9",
@@ -35024,7 +35038,9 @@
         "origem_secao": "Lacuna de evidência - ausência de diretriz SBC/ABC e de recomendação graduada ESC/EACTS/ACC-AHA"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "indicacao-e-preparo-para-biopsia-endomiocardica-na-suspeita-de-miocardite-de-celulas-gigantes-ou-sarcoidose-cardiaca",
@@ -35032,7 +35048,7 @@
     "resumo": "Checklist operacional para a decisão de indicar biópsia endomiocárdica e para o preparo do procedimento diante de insuficiência cardíaca de início recente, arritmia ventricular ou bloqueio atrioventricular de causa não esclarecida — cenário em que sarcoidose cardíaca e miocardite de células gigantes são o diagnóstico diferencial histológico obrigatório, com força de recomendação de imunossupressão e indicação de transplante cardíaco distintas entre as duas. Cobre o reconhecimento do gatilho clínico, a confirmação dos cenários Classe I da diretriz, o preparo do procedimento (patologia cardíaca experiente avisada com antecedência, suporte hemodinâmico compatível com a gravidade típica desses pacientes, consentimento informado), a leitura correta de um resultado negativo e a armadilha de julgar resposta ao tratamento só pela fração de ejeção em curto prazo.",
     "documento_origem": "miocardite-de-celulas-gigantes-diagnostico-diferencial-com-sarcoidose-cardiaca-e-terapia-imunossupressora",
     "theme": "Pericárdio",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Naseeb MW, Adedara VO, Haseeb MT, et al. Immunomodulatory Therapy for Giant Cell Myocarditis: A Narrative Review. Cureus. 2023;15(6):e40439. DOI: 10.7759/cureus.40439. PMID: 37456487. PMCID: PMC10349211 (acesso aberto, CC BY, texto integral lido diretamente no PMC nesta sessão, 07/08/2026) — revisão narrativa (declarada como tal; não é diretriz de sociedade com classe/nível de recomendação), que sintetiza estudos de registro multicêntrico (Cooper et al. e sucessores), séries de biópsia e relatos de caso publicados até 2023.",
       "Kandolin R, Lehtonen J, Salmenkivi K, Räisänen-Sokolowski A, Lommi J, Kupari M. Diagnosis, treatment, and outcome of giant-cell myocarditis in the era of combined immunosuppression. Circ Heart Fail. 2013;6(1):15-22. DOI: 10.1161/CIRCHEARTFAILURE.112.969261 — citado dentro da revisão acima como fonte da sensibilidade de 93% da biópsia endomiocárdica; não conferido em texto completo nesta sessão, referência repassada da fonte primária utilizada.",
@@ -35117,7 +35133,9 @@
         "origem_secao": "Tratamento — imunossupressão combinada, não corticosteroide isolado"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "anticoagulacao-em-trombose-venosa-ou-trombo-intracardiaco-na-doenca-de-behcet",
@@ -35125,7 +35143,7 @@
     "resumo": "Checklist de decisão para anticoagulação de TVP ou trombo intracardíaco em Behçet: reconhecer o gatilho clínico, rastrear obrigatoriamente aneurisma de artéria pulmonar com angiotomografia de tórax antes de anticoagular (risco de hemoptise maciça fatal), priorizar imunossupressão como pilar terapêutico e cobrir os cuidados periprocedimentais em caso de reparo de aneurisma.",
     "documento_origem": "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin",
     "theme": "Aorta e doença arterial periférica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Yazici Y, Hatemi G, Bodaghi B, et al. Behçet syndrome. Nat Rev Dis Primers. 2021;7:67. PMID: 34531393",
       "Hatemi G, Christensen R, Bang D, et al. 2018 update of the EULAR recommendations for the management of Behçet's syndrome. Ann Rheum Dis. 2018;77(6):808-818. PMID: 29625968",
@@ -35210,7 +35228,9 @@
         "origem_secao": "Pontos-chave para a prática cardiológica"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "vigilancia-de-reativacao-da-doenca-de-chagas-pos-transplante-cardiaco",
@@ -35218,7 +35238,7 @@
     "resumo": "Checklist operacional para o primeiro ano pós-transplante em receptor chagásico: cronograma de PCR quantitativa seriada em sangue periférico, PCR no tecido da biópsia endomiocárdica de rotina, busca ativa de amastigotas em lesão de pele nova e o alerta crítico de não tratar infiltrado inflamatório na biópsia como rejeição sem antes excluir reativação.",
     "documento_origem": "reativacao-da-doenca-de-chagas-apos-transplante-cardiaco",
     "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Benatti RD, Al-Kindi SG, Bacal F, Oliveira GH. Heart transplant outcomes in patients with Chagas cardiomyopathy in the United States. Clin Transplant. 2018;32(6):e13279. PMID: 29744939",
       "Echeverría LE, Figueredo A, Rodriguez MJ, Salazar L, Pizarro C, Morillo CA, Rojas LZ, Gómez-Ochoa SA, Castillo VR. Survival after heart transplantation for Chagas cardiomyopathy using a conventional protocol: a 10-year experience in a single center. Transpl Infect Dis. 2021;23(4):e13549. PMID: 33345420",
@@ -35329,7 +35349,9 @@
         "origem_secao": "Tratamento da reativação confirmada"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "rastreio-de-amiloidose-cardiaca-por-transtirretina-em-idoso-encaminhado-para-tavi",
@@ -35337,7 +35359,7 @@
     "resumo": "Checklist para reconhecer sinais clínicos, eletrocardiográficos e ecocardiográficos sugestivos de amiloidose ATTR concomitante em idosos com estenose aórtica grave candidatos a TAVI, conduzir a confirmação diagnóstica (cintilografia óssea associada à exclusão de discrasia de cadeia leve) e assegurar que o achado positivo não adie nem cancele o TAVI planejado, motivando em vez disso o início em paralelo de terapia específica (tafamidis).",
     "documento_origem": "estenose-aortica-e-amiloidose-cardiaca-por-transtirretina-overlap-no-idoso",
     "theme": "Cardiologia geriátrica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Castaño A, Narotsky DL, Hamid N, et al. Unveiling transthyretin cardiac amyloidosis and its predictors among elderly patients with severe aortic stenosis undergoing transcatheter aortic valve replacement. Eur Heart J. 2017;38(38):2879-2887. PMID: 29019612 — abstract conferido via PubMed E-utilities em 30/08/2026: coorte de 151 pacientes (84±6 anos, 68% homens) rastreados para ATTR-CA por cintilografia antes de TAVI; prevalência 16% (n=24); no grupo com amiloidose, septo mais espesso (1,3 vs. 1,1 cm, p=0,007), massa de VE maior (130 vs. 98 g/m², p=0,002), volume sistólico indexado menor (30 vs. 36 mL/m², p=0,009), strain longitudinal global mais alterado (-12 vs. -16%, p=0,007), FEVE menor (48% vs. 56%, p=0,011), relação E/A maior (2,3 vs. 0,9, p=0,001); onda S' média ao Doppler tecidual foi o melhor preditor isolado (razão de chances 16,67 por queda de 1 cm/s; AUC 0,96, IC95% 0,90-0,99, p=0,002), com ponto de corte ≤6 cm/s alcançando sensibilidade de 100% para amiloidose ao rastreio de imagem.",
       "Nitsche C, Scully PR, Patel KP, et al. Prevalence and Outcomes of Concomitant Aortic Stenosis and Cardiac Amyloidosis. J Am Coll Cardiol. 2021;77(2):128-139. PMID: 33181246 — abstract conferido via PubMed E-utilities em 30/08/2026: coorte de 407 pacientes (83,4±6,5 anos, 49,8% homens) encaminhados para troca valvar, com cintilografia com difosfonato; amiloidose presente em 11,8% (48 pacientes: grau 1 em 3,9% [n=16, incluindo 1 caso AL], grau 2/3 em 7,9% [n=32]); escore clínico RAISE prediz presença de amiloidose com AUC 0,86 (IC95% 0,78-0,94, p<0,001); tratamento realizado foi TAVI em 81,6% (333), TAVR cirúrgico em 2,5% (10) e manejo clínico em 15,9% (65); em seguimento mediano de 1,7 ano, mortalidade global 23%; mortalidade em 1 ano maior no grupo com amiloidose (24,5% vs. 13,9%, p=0,05); porém, entre os pacientes efetivamente submetidos a TAVI, a sobrevida do subgrupo com amiloidose foi semelhante à do subgrupo sem amiloidose (p=0,36).",
@@ -35449,7 +35471,9 @@
         "origem_secao": "TAVI na presença de amiloidose: a evidência sobre proceder ou não, e o papel da terapia farmacológica em paralelo"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "fibroelastoma-papilar-cardiaco-decisao-ressecao-vs-vigilancia",
@@ -35457,7 +35481,7 @@
     "resumo": "Checklist para orientar a decisão entre ressecção cirúrgica e vigilância conservadora diante de massa valvar compatível com fibroelastoma papilar ao ecocardiograma, cobrindo o diagnóstico diferencial obrigatório (vegetação infecciosa, trombo, mixoma, excrescência de Lambl) e os eixos que pesam a favor de cirurgia (evento embólico prévio atribuível, valva esquerda, tamanho, mobilidade alta, pedículo próximo a óstio coronariano) versus vigilância (assintomático, valva direita, pequeno, mobilidade limitada, risco cirúrgico proibitivo).",
     "documento_origem": "fibroelastoma-papilar-cardiaco-diagnostico-ecocardiografico-risco-embolico-e-indicacao-cirurgica",
     "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Gowda RM, Khan IA, Nair CK, Mehta NJ, Vasavada BC, Sacchi TJ. Cardiac papillary fibroelastoma: a comprehensive analysis of 725 cases. Am Heart J. 2003;146(3):404-410. PMID: 12947356",
       "Klarich KW, Enriquez-Sarano M, Gura GM, Edwards WD, Tajik AJ, Seward JB. Papillary fibroelastoma: echocardiographic characteristics for diagnosis and pathologic correlation. J Am Coll Cardiol. 1997;30(3):784-790. PMID: 9283541",
@@ -35571,7 +35595,9 @@
         "origem_secao": "Armadilhas clínicas"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "cardiomiopatia-deficiencia-primaria-carnitina",
@@ -35579,7 +35605,7 @@
     "resumo": "Checklist de suspeição, confirmação diagnóstica e tratamento da deficiência primária de carnitina (SLC22A5/OCTN2) como causa rara e genuinamente reversível de cardiomiopatia dilatada, com ênfase no reconhecimento precoce, na diferenciação de causas secundárias de carnitina baixa e na reposição de L-carnitina em alta dose antes de dano estrutural irreversível.",
     "documento_origem": "cardiomiopatia-deficiencia-primaria-carnitina",
     "theme": "Cardiomiopatias",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Nezu J, Tamai I, Oku A, et al. Primary systemic carnitine deficiency is caused by mutations in a gene encoding sodium ion-dependent carnitine transporter. Nat Genet. 1999;21(1):91-94. PMID 9916797.",
       "El-Hattab AW, Almannai M. Primary Carnitine Deficiency. In: Adam MP, Feldman J, Mirzaa GM, et al., eds. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2012 Mar 15 [Updated 2024 Dec 5]. NCBI Bookshelf NBK84551.",
@@ -35679,7 +35705,9 @@
         "origem_secao": "Apresentação clínica: um espectro amplo, do lactente ao adulto"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "reconhecimento-e-conduta-inicial-complicacoes-vasculares-acesso-cateterismo",
@@ -35687,7 +35715,7 @@
     "resumo": "Checklist de execução para reconhecer à beira-leito hematoma expansivo, pseudoaneurisma femoral e fístula arteriovenosa, decidir a investigação por ultrassom Doppler, conduzir compressão ou trombina guiadas por imagem e escalar para correção cirúrgica/endovascular quando indicado, mantendo alto índice de suspeição para hemorragia retroperitoneal diante de dor lombar ou hipotensão sem sangramento externo visível.",
     "documento_origem": "complicacoes-vasculares-acesso-cateterismo-hematoma-pseudoaneurisma-fistula-av",
     "theme": "Doença coronariana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Feres F, et al. Diretriz da Sociedade Brasileira de Cardiologia e da Sociedade Brasileira de Hemodinâmica e Cardiologia Intervencionista sobre Intervenção Coronária Percutânea. Arq Bras Cardiol. 2017;109(1 Supl 1):1-81, PMID 28792984",
       "Shroff AR, et al. SCAI expert consensus statement update on best practices for transradial angiography and intervention. Catheter Cardiovasc Interv. 2020;95(2):245-252, PMID 31880380",
@@ -35812,7 +35840,9 @@
         "origem_secao": "7. Dispositivos de fechamento vascular e prevenção"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   },
   {
     "slug": "investigacao-de-cardiomiopatia-dilatada-com-suspeita-de-hipocalcemia-grave",
@@ -35820,7 +35850,7 @@
     "resumo": "Checklist de investigação para não deixar passar a hipocalcemia grave como causa reversível de cardiomiopatia dilatada: dosar cálcio ionizado em vez de confiar no total corrigido, buscar sinais neuromusculares e história de cirurgia cervical, usar PTH e 25-OH-vitamina D para diferenciar hipoparatireoidismo, pseudo-hipoparatireoidismo e deficiência de vitamina D, tratar a causa e só então reavaliar a FEVE antes de avançar para investigação invasiva ou terapias definitivas.",
     "documento_origem": "cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave",
     "theme": "Insuficiência cardíaca",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Bers DM. Cardiac excitation-contraction coupling. Nature. 2002;415(6868):198-205. DOI: 10.1038/415198a. PMID: 11805843",
       "Slomp J, van der Voort PH, Gerritsen RT, Berk JA, Bakker AJ. Albumin-adjusted calcium is not suitable for diagnosis of hyper- and hypocalcemia in the critically ill. Crit Care Med. 2003;31(5):1389-1393. DOI: 10.1097/01.CCM.0000063044.55669.3C. PMID: 12771607",
@@ -35918,6 +35948,8 @@
         "origem_secao": "O ponto central: reversibilidade rápida e geralmente completa"
       }
     ],
-    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   }
 ]
