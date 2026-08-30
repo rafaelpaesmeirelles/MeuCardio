@@ -372,7 +372,8 @@ def listar_usuarios(
 ):
     from app.models.user import User
 
-    q = db.query(User)
+    # ACCOUNT_ERASURE_HIDE_TOMBSTONES_V1
+    q = db.query(User).filter(User.status != "excluido")
     if status:
         q = q.filter(User.status == status)
     itens = q.order_by(User.status, User.full_name).all()
@@ -1158,7 +1159,7 @@ def listar_usuarios_ficha(
             detail=f"subscription_status inválido. Use um de: {sorted(_ASSINATURA_STATUS_VALORES)}",
         )
 
-    query = db.query(User)
+    query = db.query(User).filter(User.status != "excluido")
     if status:
         query = query.filter(User.status == status)
     if convidado is not None:

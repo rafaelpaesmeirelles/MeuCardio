@@ -368,7 +368,8 @@ export default function AdminGerenciarUsuario() {
         <p className="eyebrow" style={{ color: "#fb7185" }}>Zona de exclusão definitiva</p>
         <h2 style={{ marginTop: 4 }}>Excluir definitivamente do CorVIA OS + CorVIA Mail</h2>
         <p style={{ color: "var(--texto-secundario)" }}>
-          Esta ação é irreversível. Remove a conta local e, se houver, a caixa nativa do CorVIA Mail.
+          Esta ação é irreversível. Remove o acesso, as credenciais e os dados cadastrais da conta e, se houver, a caixa nativa do CorVIA Mail.
+          Registros históricos que precisem ser conservados ficam desidentificados, sem manter os dados cadastrais do titular.
           Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.
         </p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>

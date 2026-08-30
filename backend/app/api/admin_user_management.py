@@ -1,11 +1,12 @@
 from __future__ import annotations
 
 import logging
+import secrets
 from datetime import date, datetime, timezone
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
 from pydantic import BaseModel, Field, field_validator
-from sqlalchemy import delete, inspect, text, update
+from sqlalchemy import MetaData, Table, delete, inspect, text, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
@@ -402,33 +403,134 @@ def redefinir_senha_corvia_mail(
     return {"user_id": user_id, "email_address": conta.email_address, "senha_redefinida": True}
 
 
+# ACCOUNT_ERASURE_TOMBSTONE_V1
+def _desvincular_referencias_anulaveis(db: Session, user_id: int) -> None:
+    """Anonimiza proveniência opcional sem destruir histórico compartilhado.
+
+    A exclusão administrativa não pode apagar prontuários/documentos de outro
+    controlador só porque o usuário excluído aparece como revisor/autor. Toda
+    FK anulável para ``users.id`` é, portanto, desidentificada. Referências
+    não anuláveis permanecem apontando para o tombstone sem PII.
+    """
+    bind = db.get_bind()
+    inspector = inspect(bind)
+    metadata = MetaData()
+    reflected: dict[str, Table] = {}
+    for table_name in inspector.get_table_names():
+        columns = {item["name"]: item for item in inspector.get_columns(table_name)}
+        for fk in inspector.get_foreign_keys(table_name):
+            if fk.get("referred_table") != "users" or fk.get("referred_columns") != ["id"]:
+                continue
+            constrained = fk.get("constrained_columns") or []
+            if len(constrained) != 1:
+                continue
+            column_name = constrained[0]
+            if not columns.get(column_name, {}).get("nullable"):
+                continue
+            table = reflected.get(table_name)
+            if table is None:
+                table = Table(table_name, metadata, autoload_with=bind)
+                reflected[table_name] = table
+            db.execute(
+                update(table)
+                .where(table.c[column_name] == user_id)
+                .values({column_name: None})
+            )
+
+
+def _apagar_linha_privada_se_existir(
+    db: Session, table_name: str, column_name: str, user_id: int, nomes: set[str]
+) -> None:
+    if table_name not in nomes:
+        return
+    table = Table(table_name, MetaData(), autoload_with=db.get_bind())
+    if column_name not in table.c:
+        return
+    db.execute(delete(table).where(table.c[column_name] == user_id))
+
+
 def _preparar_referencias_para_exclusao(db: Session, user_id: int) -> None:
-    # Histórico administrativo deve sobreviver; apenas solta a FK do ator.
-    db.execute(update(AuditLog).where(AuditLog.user_id == user_id).values(user_id=None))
-    db.execute(update(User).where(User.reviewed_by == user_id).values(reviewed_by=None))
-
+    # Política alinhada à página pública /excluir-conta: elimina credenciais e
+    # identidade da conta; histórico que precise sobreviver fica desidentificado.
+    _desvincular_referencias_anulaveis(db, user_id)
     nomes = set(inspect(db.get_bind()).get_table_names())
-    if "convidados_pre_autorizados" in nomes:
-        db.execute(text("UPDATE convidados_pre_autorizados SET criado_por = NULL WHERE criado_por = :uid"), {"uid": user_id})
-        db.execute(text("UPDATE convidados_pre_autorizados SET usado_por_user_id = NULL WHERE usado_por_user_id = :uid"), {"uid": user_id})
-    if "google_test_user_requests" in nomes:
-        db.execute(text("DELETE FROM google_test_user_requests WHERE user_id = :uid"), {"uid": user_id})
 
-    # Legados sem ON DELETE CASCADE. Só chegamos aqui depois de confirmar que
-    # não existe vínculo Stripe relevante, portanto nenhum histórico financeiro
-    # ativo é descartado silenciosamente.
+    # Dados de identidade/autenticação não têm motivo para sobreviver ao
+    # encerramento definitivo da conta. Os dados clínicos históricos não são
+    # varridos indiscriminadamente: podem ter dever de retenção e permanecerão
+    # ligados somente ao tombstone sem PII.
+    for table_name, column_name in (
+        ("account_recovery_emails", "user_id"),
+        ("password_reset_tokens", "user_id"),
+        ("kyc_requirement_waivers", "owner_id"),
+        ("kyc_verifications", "owner_id"),
+        ("google_test_user_requests", "user_id"),
+    ):
+        _apagar_linha_privada_se_existir(db, table_name, column_name, user_id, nomes)
+
+    # Histórico financeiro ativo é bloqueado antes desta etapa. Assinaturas
+    # legadas/inativas e a caixa local deixam de identificar a conta removida.
     db.execute(delete(Subscription).where(Subscription.user_id == user_id))
     db.execute(delete(EmailAccount).where(EmailAccount.user_id == user_id))
 
 
+def _anonimizar_usuario_excluido(alvo: User) -> None:
+    """Transforma a linha referencial em tombstone impossível de autenticar.
+
+    Manter o id evita quebrar FKs históricas não anuláveis; nenhum dado
+    cadastral ou credencial do titular permanece nessa linha.
+    """
+    agora = datetime.now(timezone.utc)
+    alvo.email = f"excluido-{alvo.id}@deleted.corvia.invalid"
+    alvo.full_name = "Conta excluída"
+    alvo.password_hash = hash_password(secrets.token_urlsafe(48))
+    alvo.role = "leitor"
+    alvo.is_active = False
+    alvo.status = "excluido"
+    alvo.sessions_valid_after = agora
+    alvo.active_session_id = None
+    alvo.convidado = False
+    alvo.investidor = False
+    alvo.profile_completion_required = False
+    alvo.boas_vindas_pendente = False
+    alvo.onboarding_visto = True
+
+    nullable_personal = (
+        "birth_date", "cpf", "profession", "council_name", "council_number",
+        "council_state", "council_name_other", "council_state_other",
+        "specialty", "rqe", "professional_title", "workplace_name",
+        "workplace_department", "workplace_role", "workplace_notes",
+        "photo_url", "crm", "document_logo_url", "home_street", "home_number",
+        "home_complement", "home_neighborhood", "home_city", "home_state",
+        "home_zip", "practice_street", "practice_number", "practice_complement",
+        "practice_neighborhood", "practice_city", "practice_state",
+        "practice_zip", "practice_phone", "reviewed_by", "reviewed_at",
+        "rejection_note", "convidado_plano_preferido", "last_seen_at",
+        "assinatura_metodo_preferido", "ia_ferramentas_consent_em",
+        "ia_ferramentas_consent_versao", "email_conta_padrao_envio",
+        "instagram_handle", "instagram_photo_url",
+    )
+    for attr in nullable_personal:
+        if hasattr(alvo, attr):
+            setattr(alvo, attr, None)
+
+    for attr in (
+        "include_workplace_on_documents", "show_online_status",
+        "email_assinatura_ativa", "email_assinatura_digital_ativa",
+        "email_assinatura_incluir_telefone", "email_assinatura_incluir_endereco",
+    ):
+        if hasattr(alvo, attr):
+            setattr(alvo, attr, False)
+
+
 def _validar_exclusao_local(db: Session, user_id: int) -> None:
-    # SAVEPOINT: prova que o banco aceita a remoção antes de tocar no Mail360.
+    # SAVEPOINT: prova o erase/anonymize local antes de tocar no Mail360.
     nested = db.begin_nested()
     try:
         _preparar_referencias_para_exclusao(db, user_id)
         alvo = db.get(User, user_id)
         if alvo:
-            db.delete(alvo)
+            _anonimizar_usuario_excluido(alvo)
         db.flush()
     except IntegrityError as exc:
         nested.rollback()
@@ -436,7 +538,7 @@ def _validar_exclusao_local(db: Session, user_id: int) -> None:
         log.warning("Exclusão de user_id=%s bloqueada por dependência: %s", user_id, exc)
         raise HTTPException(
             status_code=409,
-            detail="A conta possui dados vinculados que precisam ser tratados antes da exclusão definitiva. Nada foi apagado.",
+            detail="A conta possui uma dependência incompatível com a política de exclusão. Nada foi apagado.",
         ) from exc
     else:
         nested.rollback()
@@ -448,13 +550,13 @@ def excluir_usuario(
     user_id: int,
     dados: ExcluirUsuario,
     db: Session = Depends(get_db),
-    admin=Depends(require_admin),
+    owner=Depends(require_owner_admin),
 ):
     alvo = db.get(User, user_id)
     if not alvo:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
 
-    pode, motivo = _pode_excluir(db, alvo, admin)
+    pode, motivo = _pode_excluir(db, alvo, owner)
     if not pode:
         raise HTTPException(status_code=409, detail=motivo or "Exclusão não permitida.")
     if dados.confirmar_email != alvo.email.strip().lower():
@@ -483,11 +585,11 @@ def excluir_usuario(
 
     _preparar_referencias_para_exclusao(db, user_id)
     alvo = db.get(User, user_id)
-    if not alvo:
+    if not alvo or alvo.status == "excluido":
         raise HTTPException(status_code=409, detail="A conta mudou durante a exclusão; recarregue e tente novamente.")
-    db.delete(alvo)
+    _anonimizar_usuario_excluido(alvo)
     db.add(AuditLog(
-        user_id=admin.id,
+        user_id=owner.id,
         action="admin_excluir_usuario_definitivamente",
         entity="user_excluido",
         entity_id=str(user_id),
@@ -502,7 +604,7 @@ def excluir_usuario(
         db.commit()
     except IntegrityError as exc:
         db.rollback()
-        log.critical("Corrida na exclusão definitiva de user_id=%s após Mail360: %s", user_id, exc)
+        log.critical("Falha na conclusão da exclusão definitiva de user_id=%s após Mail360: %s", user_id, exc)
         raise HTTPException(
             status_code=409,
             detail="A conta mudou durante a exclusão. O administrador deve revisar o estado antes de repetir.",
@@ -514,4 +616,5 @@ def excluir_usuario(
         "email": email_login,
         "corvia_mail_excluido": bool(mail_address),
         "corvia_mail_endereco": mail_address,
+        "dados_cadastrais_anonimizados": True,
     }
