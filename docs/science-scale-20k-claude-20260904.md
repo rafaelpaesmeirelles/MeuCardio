@@ -222,3 +222,11 @@ totais.
 | Trilhas | 300 | 0 | 300 |
 | Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
 | **Total** | **4.900** | **35** | **4.865** |
+
+## Lote 11 — concluído (commit `63c51051`, 30/08/2026)
+
+2 itens (esclerose sistêmica, trilha básica de FA — primeira trilha
+desta expansão). Gates limpos, 10.226 registros totais.
+
+**Total canônico projetado após Lote 11**: 10.226 (10.189 revisado +
+37 pendente_revisao nesta branch).
