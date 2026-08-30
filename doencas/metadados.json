@@ -38020,5 +38020,211 @@
     ],
     "patient_material_slug": null,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "cardiomiopatia-acromegalica",
+    "name": "Cardiomiopatia acromegálica",
+    "aliases": [
+      "cardiomiopatia da acromegalia",
+      "cardiopatia acromegálica",
+      "doença cardíaca por excesso de GH/IGF-1",
+      "cardiomiopatia por excesso de hormônio de crescimento"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "endocrina",
+    "prevalence_rank": 22,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia causada pela exposição crônica ao excesso de GH e IGF-1 na acromegalia (quase sempre por adenoma hipofisário somatotrofo), com efeito trófico direto sobre o miócito somado a mecanismos indiretos (hipertensão, resistência insulínica/diabetes, apneia obstrutiva do sono, doença valvar). Evolui em três fases — hiperdinâmica, hipertrofia concêntrica com disfunção diastólica, e dilatação com disfunção sistólica/insuficiência cardíaca — e é a principal causa de morte na acromegalia não tratada. É parcialmente reversível com o controle bioquímico da doença de base, de forma mais completa quanto mais precoce o diagnóstico e o tratamento.",
+    "presentation": [
+      "Fase hiperdinâmica inicial: débito cardíaco aumentado, taquicardia relativa, resistência vascular periférica reduzida, geralmente assintomática ou com sintomas inespecíficos",
+      "Fase intermediária: hipertrofia ventricular esquerda concêntrica biventricular com disfunção diastólica, frequentemente subclínica, independente de hipertensão ou de outras causas de sobrecarga",
+      "Fase tardia (se não tratada): dilatação ventricular com queda da fração de ejeção, evoluindo para insuficiência cardíaca; pode se apresentar como insuficiência cardíaca de alto débito já ao diagnóstico da acromegalia",
+      "Dispneia aos esforços, fadiga, edema e palpitações tendem a surgir apenas em fase avançada, quando parte do dano estrutural já não é totalmente reversível",
+      "Arritmias, sobretudo ventriculares, associadas ao remodelamento e à hipertrofia miocárdica",
+      "Sinais e sintomas somáticos da acromegalia (crescimento de extremidades, alterações faciais, artropatia) costumam preceder o reconhecimento do envolvimento cardíaco, dado o curso insidioso da doença de base"
+    ],
+    "differentials": [
+      "Cardiomiopatia hipertensiva sem excesso de GH/IGF-1",
+      "Cardiomiopatia hipertrófica genética (sarcomérica)",
+      "Outras causas de hipertrofia ventricular esquerda secundária (estenose aórtica, coartação da aorta, doenças infiltrativas como amiloidose cardíaca)",
+      "Coração de atleta (hipertrofia fisiológica por treinamento)",
+      "Cardiomiopatia dilatada de outra etiologia (isquêmica, idiopática, valvar) quando o paciente já se apresenta em fase tardia",
+      "Insuficiência cardíaca de alto débito por outras causas (tireotoxicose, anemia grave, fístula arteriovenosa, beribéri)",
+      "Doença valvar primária não relacionada à acromegalia"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico obrigatório na avaliação inicial de todo paciente com acromegalia confirmada, independentemente de sintomas cardíacos (massa e geometria ventricular, função sistólica e diastólica, triagem de doença valvar)",
+      "IGF-1 sérico para confirmação bioquímica e acompanhamento da atividade da acromegalia",
+      "Teste de supressão de GH com sobrecarga oral de glicose para confirmação diagnóstica da acromegalia",
+      "Aferição de pressão arterial e rastreio de diabetes/resistência insulínica",
+      "Triagem clínica (ou polissonografia quando indicada) para apneia obstrutiva do sono",
+      "Eletrocardiograma e, quando pertinente, Holter para rastreio de arritmias",
+      "Reavaliação ecocardiográfica seriada após início do tratamento da acromegalia para acompanhar a reversibilidade da hipertrofia e da função diastólica/sistólica"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de alto débito já presente ao diagnóstico da acromegalia",
+      "Fração de ejeção reduzida ou dilatação ventricular ao ecocardiograma",
+      "Hipertrofia ventricular esquerda importante, sobretudo desproporcional aos fatores de risco cardiovascular tradicionais",
+      "Arritmias ventriculares frequentes",
+      "Dispneia, edema ou palpitações em paciente com acromegalia não tratada ou não controlada — sinal de possível fase tardia da cardiomiopatia",
+      "Diagnóstico tardio de acromegalia (longa duração estimada de doença), associado a maior risco de complicação cardíaca e a menor reversibilidade"
+    ],
+    "ambulatory_flow": [
+      "Confirmar bioquimicamente a acromegalia (IGF-1 e teste de supressão de GH) antes ou em paralelo à avaliação cardiológica",
+      "Solicitar ecocardiograma transtorácico na avaliação inicial de todo paciente com acromegalia, mesmo assintomático do ponto de vista cardíaco",
+      "Rastrear ativamente hipertensão, diabetes/resistência insulínica e apneia obstrutiva do sono como amplificadores do dano cardíaco",
+      "Encaminhar para tratamento definitivo da acromegalia (cirurgia transesfenoidal, análogo de somatostatina e/ou pegvisomanto) assim que confirmado o diagnóstico, priorizando o controle bioquímico precoce como estratégia de proteção cardíaca",
+      "Reavaliar com ecocardiograma seriado após o início do tratamento, para documentar a regressão parcial da hipertrofia e da disfunção diastólica",
+      "Manter seguimento cardiológico e endocrinológico conjunto mesmo após normalização bioquímica, dado o potencial de disfunção residual em casos de diagnóstico tardio"
+    ],
+    "emergency_flow": [
+      "Considerar acromegalia não diagnosticada como causa de insuficiência cardíaca de alto débito em paciente com fenótipo compatível (crescimento de extremidades, alterações faciais)",
+      "Estabilizar a insuficiência cardíaca de forma convencional enquanto se investiga a etiologia",
+      "Solicitar ecocardiograma para caracterizar padrão hemodinâmico (dilatação, massa ventricular indexada, fração de ejeção) e orientar gravidade",
+      "Investigar IGF-1 em paciente com insuficiência cardíaca de etiologia não esclarecida associada a características somáticas sugestivas de acromegalia",
+      "Articular avaliação endocrinológica urgente para confirmação diagnóstica e definição do tratamento da doença de base assim que a estabilização hemodinâmica permitir"
+    ],
+    "tags": [
+      "acromegalia",
+      "GH",
+      "IGF-1",
+      "cardiomiopatia",
+      "hipertrofia ventricular esquerda",
+      "disfunção diastólica",
+      "insuficiência cardíaca de alto débito",
+      "endocrinologia",
+      "adenoma hipofisário",
+      "reversibilidade"
+    ],
+    "source_refs": [
+      "Melmed S. Acromegaly. N Engl J Med. 2006;355(24):2558-2573. PMID 17167139",
+      "Colao A, Ferone D, Marzullo P, Lombardi G. Systemic complications of acromegaly: epidemiology, pathogenesis, and management. Endocr Rev. 2004;25(1):102-152. PMID 14769829",
+      "Saccà L, Cittadini A, Fazio S. Growth hormone and the heart. Endocr Rev. 1994;15(5):555-573. PMID 7843068",
+      "Colao A, Spinelli L, Marzullo P, et al. Determinants of cardiac disease in newly diagnosed patients with acromegaly: results of a 10 year survey study. Eur J Endocrinol. 2011;165(5):713-721. PMID 21868601",
+      "Damjanovic SS, Neskovic AN, Petakov MS, et al. High output heart failure in patients with newly diagnosed acromegaly. Am J Med. 2002;112(8):610-616. PMID 12034409",
+      "Lombardi G, Colao A, Ferone D, et al. Improvement of left ventricular hypertrophy and arrhythmias after lanreotide-induced GH and IGF-I decrease in acromegaly. J Endocrinol Invest. 2002;25(11):971-976. PMID 12553557",
+      "Auriemma RS, Pivonello R, Galdiero M, et al. Effects of long-term combined treatment with somatostatin analogues and pegvisomant on cardiac structure and performance in acromegaly. Endocrine. 2017;55(3):872-884. PMID 27295183",
+      "Katznelson L, Laws ER Jr, Melmed S, et al. Acromegaly: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(11):3933-3951. PMID 25356808",
+      "Fleseriu M, Biermasz NR, Gadelha M, et al. A Pituitary Society update to acromegaly management guidelines. Pituitary. 2021;24(1):1-13. PMID 33079318",
+      "Melmed S, Bronstein MD, Chanson P, et al. A Consensus Statement on acromegaly therapeutic outcomes. Nat Rev Endocrinol. 2018;14(9):552-561. PMID 30050156"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/17167139/",
+      "https://pubmed.ncbi.nlm.nih.gov/14769829/",
+      "https://pubmed.ncbi.nlm.nih.gov/7843068/",
+      "https://pubmed.ncbi.nlm.nih.gov/21868601/",
+      "https://pubmed.ncbi.nlm.nih.gov/12034409/",
+      "https://pubmed.ncbi.nlm.nih.gov/12553557/",
+      "https://pubmed.ncbi.nlm.nih.gov/27295183/",
+      "https://pubmed.ncbi.nlm.nih.gov/25356808/",
+      "https://pubmed.ncbi.nlm.nih.gov/33079318/",
+      "https://pubmed.ncbi.nlm.nih.gov/30050156/"
+    ],
+    "review_status": "revisado",
+    "review_note": " Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-acromegalica-historia-natural-mecanismos-e-reversibilidade"
+    ],
+    "patient_material_slug": null,
+    "published": false,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "granulomatose-eosinofilica-com-poliangiite-egpa",
+    "name": "Granulomatose Eosinofílica com Poliangiite (EGPA)",
+    "aliases": [
+      "Síndrome de Churg-Strauss",
+      "EGPA",
+      "vasculite eosinofílica ANCA-associada"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": 10,
+    "completeness": "intermediario",
+    "summary": "Vasculite necrosante de pequenos e médios vasos associada a ANCA, precedida por asma de início tardio e rinossinusite crônica; ao contrário de outras vasculites ANCA-associadas, o determinante dominante de mortalidade é o acometimento cardíaco — miocardite eosinofílica aguda que pode evoluir para fibrose endomiocárdica restritiva — e não a doença renal.",
+    "presentation": [
+      "Pródromo respiratório: asma de início tardio, frequentemente grave e de difícil controle, associada a rinossinusite crônica com polipose nasal, podendo preceder em anos o diagnóstico de vasculite",
+      "Fase de eosinofilia tecidual e periférica: infiltrados pulmonares migratórios, gastroenterite eosinofílica, eosinofilia periférica marcada",
+      "Fase vasculítica (parte dos pacientes): mononeurite múltipla, púrpura cutânea, glomerulonefrite, hemorragia alveolar",
+      "Miocardite eosinofílica aguda: infiltração miocárdica por eosinófilos ativados, podendo se manifestar como insuficiência cardíaca aguda, choque cardiogênico ou arritmia ventricular, com elevação de troponina",
+      "Fibrose endomiocárdica na fase crônica, quando a miocardite eosinofílica não é reconhecida a tempo: padrão restritivo com obliteração apical, trombo mural e insuficiência valvar atrioventricular por tração de cordoalhas",
+      "Pericardite aguda com derrame pericárdico — manifestação cardíaca mais comum e geralmente mais benigna, mas tamponamento é descrito",
+      "Coronariite (vasculite coronariana) causando isquemia miocárdica sem doença aterosclerótica obstrutiva subjacente",
+      "Acometimento cardíaco frequentemente assintomático ou pouco sintomático até estágios avançados, exigindo rastreio ativo mesmo sem sintomas cardiovasculares"
+    ],
+    "differentials": [
+      "Síndrome hipereosinofílica idiopática / endocardite de Löffler",
+      "Miocardite de células gigantes",
+      "Outras vasculites ANCA-associadas: granulomatose com poliangiite (GPA) e poliangiite microscópica (MPA)",
+      "Asma grave refratária isolada, sem componente vasculítico ou eosinofilia sistêmica",
+      "Outras causas de infiltrado pulmonar eosinofílico ou eosinofilia periférica secundária (parasitose, reação medicamentosa)"
+    ],
+    "tests": [
+      "ANCA (tipicamente p-ANCA/anti-mieloperoxidase, positivo em apenas uma minoria dos pacientes)",
+      "Eosinofilia periférica (contagem absoluta de eosinófilos)",
+      "Troponina e ECG na avaliação de todo paciente com diagnóstico novo, independentemente de sintomas cardiovasculares",
+      "Ecocardiograma para avaliação de função ventricular, derrame pericárdico e trombo mural",
+      "Ressonância magnética cardíaca com realce tardio, quando disponível, para identificar acometimento cardíaco subclínico e diferenciar fase inflamatória ativa de fibrose já estabelecida",
+      "Angiografia coronariana quando há suspeita de coronariite (pode ser normal ou mostrar irregularidades difusas de pequenos vasos)"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca aguda, choque cardiogênico ou arritmia ventricular nova em paciente com EGPA ativa",
+      "Dor torácica ou alteração eletrocardiográfica isquêmica em paciente jovem com EGPA ativa, sugerindo coronariite",
+      "Dispneia nova em EGPA ativa, levantando suspeita de tamponamento pericárdico",
+      "Paciente ANCA-negativo: fenótipo associado a maior risco cardíaco relativo, não menor, apesar de menos glomerulonefrite/mononeurite evidentes",
+      "Mononeurite múltipla, glomerulonefrite ou hemorragia alveolar indicando manifestação órgão-ameaçadora que exige indução clássica imediata"
+    ],
+    "ambulatory_flow": [
+      "Em todo paciente com diagnóstico novo de EGPA, investigar ativamente envolvimento cardíaco (ECG, troponina, ecocardiograma e, quando disponível, ressonância cardíaca), independentemente de sintomas cardiovasculares",
+      "Verificar status ANCA e ajustar o grau de vigilância cardiológica: ANCA-negativo aponta para o fenótipo de maior risco cardíaco",
+      "Definir a fase da doença (inflamatória ativa vs. fibrose já estabelecida), pois isso muda tanto a expectativa de resposta à imunossupressão/anti-IL-5 quanto a necessidade de manejo cardiológico específico",
+      "Seguimento conjunto com reumatologia/vasculite para decisão de indução clássica vs. terapia biológica (mepolizumabe) conforme gravidade e fase"
+    ],
+    "emergency_flow": [
+      "Suspeita de miocardite eosinofílica aguda: priorizar avaliação de instabilidade hemodinâmica, troponina, ECG e ecocardiograma urgentes",
+      "Choque cardiogênico ou arritmia ventricular: suporte hemodinâmico e discussão imediata com cardiologia/terapia intensiva, com indução imunossupressora precoce conforme gravidade",
+      "Dispneia nova com suspeita de tamponamento: avaliação ecocardiográfica emergencial",
+      "Dor torácica com EGPA ativa: considerar coronariite como mecanismo mesmo na ausência de doença aterosclerótica obstrutiva à angiografia",
+      "Manifestação órgão-ameaçadora associada (glomerulonefrite rapidamente progressiva, mononeurite múltipla grave, hemorragia alveolar): não atrasar indução clássica com glicocorticoide em dose alta associado a ciclofosfamida ou rituximabe conforme gravidade"
+    ],
+    "tags": [
+      "vasculite ANCA-associada",
+      "EGPA",
+      "miocardite eosinofílica",
+      "fibrose endomiocárdica",
+      "eosinofilia",
+      "asma",
+      "cardiomiopatia"
+    ],
+    "source_refs": [
+      "Grayson PC, Ponte C, Suppiah R, Robson JC, Craven A, Judge A, Khalid S, Hutchings A, Luqmani RA, Watts RA, Merkel PA; DCVAS Study Group. 2022 American College of Rheumatology/European Alliance of Associations for Rheumatology Classification Criteria for Eosinophilic Granulomatosis With Polyangiitis. Arthritis & Rheumatology. 2022;74(3):386-392. DOI: 10.1002/art.41982. PMID: 35106968",
+      "Comarmond C, Pagnoux C, Khellaf M, Cordier JF, Hamidou M, Viallard JF, Maurier F, Jouneau S, Bienvenu B, Puéchal X, Aumaître O, Le Guenno G, Le Quellec A, Cevallos R, Fain O, Godeau B, Seror R, Dunogué B, Mahr A, Guilpain P, Cohen P, Aouba A, Mouthon L, Guillevin L; French Vasculitis Study Group. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss): clinical characteristics and long-term followup of the 383 patients enrolled in the French Vasculitis Study Group cohort. Arthritis and Rheumatism. 2013;65(1):270-281. DOI: 10.1002/art.37721. PMID: 23044708",
+      "Sablé-Fourtassou R, Cohen P, Mahr A, Pagnoux C, Mouthon L, Jayne D, Blockmans D, Cordier JF, Delaval P, Puechal X, Lauque D, Viallard JF, Zoulim A, Guillevin L. Antineutrophil cytoplasmic antibodies and the Churg-Strauss syndrome. Annals of Internal Medicine. 2005;143(9):632-638. DOI: 10.7326/0003-4819-143-9-200511010-00006. PMID: 16263885",
+      "Dennert RM, van Paassen P, Schalla S, Kuznetsova T, Alzand BS, Staessen JA, Velthuis S, Crijns HJ, Tervaert JW, Heymans S. Cardiac involvement in Churg-Strauss syndrome. Arthritis and Rheumatism. 2010;62(2):627-634. DOI: 10.1002/art.27263. PMID: 20112390",
+      "Hazebroek MR, Kemna MJ, Schalla S, Sanders-van Wijk S, Gerretsen SC, Dennert R, Merken J, Kuznetsova T, Staessen JA, Brunner-La Rocca HP, van Paassen P, Cohen Tervaert JW, Heymans S. Prevalence and prognostic relevance of cardiac involvement in ANCA-associated vasculitis: eosinophilic granulomatosis with polyangiitis and granulomatosis with polyangiitis. International Journal of Cardiology. 2015;199:170-179. DOI: 10.1016/j.ijcard.2015.06.087. PMID: 26209947",
+      "Groh M, Pagnoux C, Baldini C, Bel E, Bottero P, Cottin V, Dalhoff K, Dunogué B, Gross W, Holle J, Humbert M, Jayne D, Jennette JC, Lazor R, Mahr A, Merkel PA, Mouthon L, Sinico RA, Specks U, Vaglio A, Wechsler ME, Cordier JF, Guillevin L. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss) (EGPA) Consensus Task Force recommendations for evaluation and management. European Journal of Internal Medicine. 2015;26(7):545-553. DOI: 10.1016/j.ejim.2015.04.022. PMID: 25971154",
+      "Wechsler ME, Akuthota P, Jayne D, Khoury P, Klion A, Langford CA, Merkel PA, Moosig F, Specks U, Cid MC, Luqmani R, Brown J, Mallett S, Philipson R, Yancey SW, Steinfeld J, Weller PF, Gleich GJ; EGPA Mepolizumab Study Team. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. New England Journal of Medicine. 2017;376(20):1921-1932. DOI: 10.1056/NEJMoa1702079. PMID: 28514601"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35106968/",
+      "https://pubmed.ncbi.nlm.nih.gov/23044708/",
+      "https://pubmed.ncbi.nlm.nih.gov/16263885/",
+      "https://pubmed.ncbi.nlm.nih.gov/20112390/",
+      "https://pubmed.ncbi.nlm.nih.gov/26209947/",
+      "https://pubmed.ncbi.nlm.nih.gov/25971154/",
+      "https://pubmed.ncbi.nlm.nih.gov/28514601/"
+    ],
+    "review_status": "revisado",
+    "review_note": " Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas.",
+    "version": 1,
+    "related_document_slugs": [
+      "granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular"
+    ],
+    "patient_material_slug": "egpa-granulomatose-eosinofilica-e-o-coracao",
+    "published": false,
+    "fonte_producao": "claude"
   }
 ]

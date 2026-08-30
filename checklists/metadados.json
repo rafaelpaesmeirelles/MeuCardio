@@ -35951,5 +35951,228 @@
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
     "fonte_producao": "claude",
     "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-inicial-e-seguimento-na-acromegalia",
+    "condicao": "Avaliação cardiovascular inicial e seguimento em paciente com acromegalia confirmada",
+    "resumo": "Checklist para não deixar a cardiomiopatia acromegálica passar despercebida: ecocardiograma obrigatório na avaliação inicial independentemente de sintomas, rastreio ativo de hipertensão, diabetes e apneia obstrutiva do sono, definição do tratamento de controle bioquímico e reavaliação ecocardiográfica programada — com a mensagem central de que a reversibilidade da hipertrofia e da disfunção diastólica é real, mas parcial e tempo-dependente.",
+    "documento_origem": "cardiomiopatia-acromegalica-historia-natural-mecanismos-e-reversibilidade",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Melmed S. Acromegaly. N Engl J Med. 2006;355(24):2558-2573. PMID 17167139",
+      "Colao A, Ferone D, Marzullo P, Lombardi G. Systemic complications of acromegaly: epidemiology, pathogenesis, and management. Endocr Rev. 2004;25(1):102-152. PMID 14769829",
+      "Saccà L, Cittadini A, Fazio S. Growth hormone and the heart. Endocr Rev. 1994;15(5):555-573. PMID 7843068",
+      "Colao A, Spinelli L, Marzullo P, et al. Determinants of cardiac disease in newly diagnosed patients with acromegaly: results of a 10 year survey study. Eur J Endocrinol. 2011;165(5):713-721. PMID 21868601",
+      "Damjanovic SS, Neskovic AN, Petakov MS, et al. High output heart failure in patients with newly diagnosed acromegaly. Am J Med. 2002;112(8):610-616. PMID 12034409",
+      "Lombardi G, Colao A, Ferone D, et al. Improvement of left ventricular hypertrophy and arrhythmias after lanreotide-induced GH and IGF-I decrease in acromegaly. J Endocrinol Invest. 2002;25(11):971-976. PMID 12553557",
+      "Auriemma RS, Pivonello R, Galdiero M, et al. Effects of long-term combined treatment with somatostatin analogues and pegvisomant on cardiac structure and performance in acromegaly. Endocrine. 2017;55(3):872-884. PMID 27295183",
+      "Katznelson L, Laws ER Jr, Melmed S, et al. Acromegaly: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(11):3933-3951. PMID 25356808",
+      "Fleseriu M, Biermasz NR, Gadelha M, et al. A Pituitary Society update to acromegaly management guidelines. Pituitary. 2021;24(1):1-13. PMID 33079318",
+      "Melmed S, Bronstein MD, Chanson P, et al. A Consensus Statement on acromegaly therapeutic outcomes. Nat Rev Endocrinol. 2018;14(9):552-561. PMID 30050156"
+    ],
+    "itens": [
+      {
+        "id": "acromegalia-eco-obrigatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico realizado como parte da avaliação cardiovascular inicial em todo paciente com acromegalia bioquimicamente confirmada, independentemente da presença de sintomas cardíacos",
+        "origem_secao": "Diagnóstico: ecocardiograma como parte obrigatória da avaliação inicial"
+      },
+      {
+        "id": "acromegalia-eco-parametros",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma avaliou massa e geometria ventricular esquerda, função sistólica e diastólica, e incluiu triagem de doença valvar (sobretudo mitral e aórtica)",
+        "origem_secao": "Diagnóstico: ecocardiograma como parte obrigatória da avaliação inicial"
+      },
+      {
+        "id": "acromegalia-rastreio-has",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão arterial aferida e hipertensão investigada ativamente, como comorbidade que se soma (não substitui) ao efeito trófico direto do GH/IGF-1 sobre o miócito",
+        "origem_secao": "Mecanismos indiretos: as comorbidades que amplificam o dano"
+      },
+      {
+        "id": "acromegalia-rastreio-dm",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreio de resistência insulínica/diabetes mellitus realizado, dado o risco mais que dobrado (OR 2,14) documentado em coorte controlada de acromegalia recém-diagnosticada",
+        "origem_secao": "Mecanismos indiretos: as comorbidades que amplificam o dano"
+      },
+      {
+        "id": "acromegalia-rastreio-aos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triagem clínica (ou polissonográfica quando indicada) para apneia obstrutiva do sono realizada, por seu papel de fator de risco cardiovascular independente e amplificador de dano na acromegalia",
+        "origem_secao": "Mecanismos indiretos: as comorbidades que amplificam o dano"
+      },
+      {
+        "id": "acromegalia-nao-esperar-sintomas",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cardiovascular não foi postergada à espera de dispneia, edema ou palpitações — a hipertrofia ventricular é frequentemente assintomática e detectável antes de qualquer sintoma",
+        "origem_secao": "Diagnóstico: ecocardiograma como parte obrigatória da avaliação inicial"
+      },
+      {
+        "id": "acromegalia-rastreio-arritmia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Investigação de arritmia considerada (ex.: Holter de 24h), dado o risco aumentado (OR 4,93) e a redução documentada de ectopia ventricular com tratamento eficaz",
+        "origem_secao": "Mecanismos indiretos: as comorbidades que amplificam o dano"
+      },
+      {
+        "id": "acromegalia-tratamento-definido",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Estratégia de controle bioquímico definida (cirurgia transesfenoidal, análogo de somatostatina e/ou pegvisomanto, isolados ou combinados), com objetivo de normalizar a exposição miocárdica ao excesso de GH/IGF-1",
+        "origem_secao": "Tratamento: reversibilidade tempo-dependente após normalização bioquímica"
+      },
+      {
+        "id": "acromegalia-eco-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação ecocardiográfica programada após início do tratamento, para documentar evolução de massa ventricular, função diastólica e função sistólica",
+        "origem_secao": "Tratamento: reversibilidade tempo-dependente após normalização bioquímica"
+      },
+      {
+        "id": "acromegalia-reversibilidade-parcial-e-tempo-dependente",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado de que a reversão da hipertrofia e da disfunção diastólica é possível, mas parcial (não universal) e tempo-dependente — quanto mais tardio o diagnóstico e o início do tratamento, menor a janela de reversibilidade completa",
+        "origem_secao": "Tratamento: reversibilidade tempo-dependente após normalização bioquímica"
+      },
+      {
+        "id": "acromegalia-seguimento-longitudinal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Seguimento cardiovascular longitudinal mantido mesmo após normalização bioquímica inicial, já que a melhora de massa ventricular e função diastólica pode ser progressiva ao longo de anos de tratamento sustentado",
+        "origem_secao": "Tratamento: reversibilidade tempo-dependente após normalização bioquímica"
+      },
+      {
+        "id": "acromegalia-disfuncao-residual-reconhecida",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Possibilidade de disfunção sistólica residual reconhecida em pacientes com diagnóstico tardio ou cardiomiopatia dilatada já estabelecida, mesmo após controle bioquímico completo e sustentado",
+        "origem_secao": "Tratamento: reversibilidade tempo-dependente após normalização bioquímica"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "published": false,
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas."
+  },
+  {
+    "slug": "rastreio-cardiovascular-ativo-na-egpa-recem-diagnosticada",
+    "condicao": "Rastreio cardiovascular ativo na granulomatose eosinofílica com poliangiite (EGPA) recém-diagnosticada",
+    "resumo": "Checklist de execução para o paciente com EGPA recém-diagnosticada: rastreio cardíaco ativo (ECG, troponina, ecocardiograma e RM com realce tardio) independentemente de sintomas, interpretação correta do risco em paciente ANCA-negativo, reconhecimento de miocardite eosinofílica aguda e uso racional do mepolizumabe — que não substitui a indução clássica em doença órgão-ameaçadora nem reverte fibrose já estabelecida.",
+    "documento_origem": "granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Comarmond C, Pagnoux C, Khellaf M, Cordier JF, Hamidou M, Viallard JF, Maurier F, Jouneau S, Bienvenu B, Puéchal X, Aumaître O, Le Guenno G, Le Quellec A, Cevallos R, Fain O, Godeau B, Seror R, Dunogué B, Mahr A, Guilpain P, Cohen P, Aouba A, Mouthon L, Guillevin L; French Vasculitis Study Group. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss): clinical characteristics and long-term followup of the 383 patients enrolled in the French Vasculitis Study Group cohort. Arthritis and Rheumatism. 2013;65(1):270-281. DOI: 10.1002/art.37721. PMID: 23044708",
+      "Dennert RM, van Paassen P, Schalla S, Kuznetsova T, Alzand BS, Staessen JA, Velthuis S, Crijns HJ, Tervaert JW, Heymans S. Cardiac involvement in Churg-Strauss syndrome. Arthritis and Rheumatism. 2010;62(2):627-634. DOI: 10.1002/art.27263. PMID: 20112390",
+      "Hazebroek MR, Kemna MJ, Schalla S, Sanders-van Wijk S, Gerretsen SC, Dennert R, Merken J, Kuznetsova T, Staessen JA, Brunner-La Rocca HP, van Paassen P, Cohen Tervaert JW, Heymans S. Prevalence and prognostic relevance of cardiac involvement in ANCA-associated vasculitis: eosinophilic granulomatosis with polyangiitis and granulomatosis with polyangiitis. International Journal of Cardiology. 2015;199:170-179. DOI: 10.1016/j.ijcard.2015.06.087. PMID: 26209947",
+      "Sablé-Fourtassou R, Cohen P, Mahr A, Pagnoux C, Mouthon L, Jayne D, Blockmans D, Cordier JF, Delaval P, Puechal X, Lauque D, Viallard JF, Zoulim A, Guillevin L. Antineutrophil cytoplasmic antibodies and the Churg-Strauss syndrome. Annals of Internal Medicine. 2005;143(9):632-638. DOI: 10.7326/0003-4819-143-9-200511010-00006. PMID: 16263885",
+      "Groh M, Pagnoux C, Baldini C, Bel E, Bottero P, Cottin V, Dalhoff K, Dunogué B, Gross W, Holle J, Humbert M, Jayne D, Jennette JC, Lazor R, Mahr A, Merkel PA, Mouthon L, Sinico RA, Specks U, Vaglio A, Wechsler ME, Cordier JF, Guillevin L. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss) (EGPA) Consensus Task Force recommendations for evaluation and management. European Journal of Internal Medicine. 2015;26(7):545-553. DOI: 10.1016/j.ejim.2015.04.022. PMID: 25971154",
+      "Wechsler ME, Akuthota P, Jayne D, Khoury P, Klion A, Langford CA, Merkel PA, Moosig F, Specks U, Cid MC, Luqmani R, Brown J, Mallett S, Philipson R, Yancey SW, Steinfeld J, Weller PF, Gleich GJ; EGPA Mepolizumab Study Team. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. New England Journal of Medicine. 2017;376(20):1921-1932. DOI: 10.1056/NEJMoa1702079. PMID: 28514601"
+    ],
+    "itens": [
+      {
+        "id": "egpa-cv-ecg-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações solicitado ao diagnóstico de EGPA, independentemente de sintomas cardiovasculares",
+        "origem_secao": "O espectro de manifestações cardíacas — Miocardite eosinofílica aguda"
+      },
+      {
+        "id": "egpa-cv-troponina-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Troponina dosada ao diagnóstico, independentemente de sintomas, como marcador de lesão miocárdica subclínica",
+        "origem_secao": "O espectro de manifestações cardíacas — Miocardite eosinofílica aguda"
+      },
+      {
+        "id": "egpa-cv-ecocardiograma-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico realizado ao diagnóstico, independentemente de sintomas, avaliando função ventricular, derrame pericárdico e trombo mural",
+        "origem_secao": "Por que o coração — e não o rim — domina o prognóstico em EGPA"
+      },
+      {
+        "id": "egpa-cv-rm-realce-tardio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ressonância cardíaca com realce tardio solicitada quando disponível, mesmo sem sintomas, por identificar lesão subclínica com frequência maior do que a suspeita clínica isolada sugeriria",
+        "origem_secao": "O espectro de manifestações cardíacas (Hazebroek et al., International Journal of Cardiology 2015)"
+      },
+      {
+        "id": "egpa-cv-status-anca-interpretado",
+        "categoria": "risco",
+        "obrigatorio": true,
+        "texto": "Status ANCA verificado e interpretado corretamente: paciente ANCA-negativo reconhecido como fenótipo de MAIOR risco cardíaco (lesão eosinofílica direta de órgão), não de doença mais leve",
+        "origem_secao": "ANCA-positivo versus ANCA-negativo: dois fenótipos clínicos"
+      },
+      {
+        "id": "egpa-cv-vigilancia-mantida-anca-negativo",
+        "categoria": "risco",
+        "obrigatorio": true,
+        "texto": "Em paciente ANCA-negativo, vigilância cardiovascular mantida ou intensificada, sem ser reduzida pela ausência de glomerulonefrite ou mononeurite múltipla evidentes",
+        "origem_secao": "ANCA-positivo versus ANCA-negativo: dois fenótipos clínicos"
+      },
+      {
+        "id": "egpa-cv-reconhecimento-miocardite-aguda",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Miocardite eosinofílica aguda considerada ativamente diante de insuficiência cardíaca aguda, choque cardiogênico ou arritmia ventricular nova em paciente com EGPA ativa",
+        "origem_secao": "Miocardite eosinofílica aguda"
+      },
+      {
+        "id": "egpa-cv-coronariite-dor-toracica",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Coronariite (vasculite coronariana) considerada em paciente com EGPA ativa e dor torácica ou alteração eletrocardiográfica isquêmica, mesmo com angiografia coronariana normal ou inespecífica",
+        "origem_secao": "Coronariite (vasculite coronariana)"
+      },
+      {
+        "id": "egpa-cv-tamponamento-pericardico",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Tamponamento pericárdico considerado em paciente com EGPA ativa e dispneia nova, apesar de a pericardite geralmente responder bem a glicocorticoide",
+        "origem_secao": "Pericardite"
+      },
+      {
+        "id": "egpa-cv-fase-ativa-vs-fibrose-estabelecida",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Fase da doença classificada como inflamatória ativa (potencialmente reversível) ou fibrótica já estabelecida (em grande parte irreversível), definindo a expectativa de resposta à imunossupressão",
+        "origem_secao": "Fibrose endomiocárdica (fase crônica)"
+      },
+      {
+        "id": "egpa-cv-mepolizumabe-nao-substitui-inducao",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Mepolizumabe NÃO utilizado como substituto da indução clássica (glicocorticoide em dose alta associado a ciclofosfamida ou rituximabe) diante de manifestação órgão-ameaçadora aguda, incluindo miocardite eosinofílica ativa",
+        "origem_secao": "O papel do mepolizumabe (anti-IL-5) — Posicionamento terapêutico"
+      },
+      {
+        "id": "egpa-cv-mepolizumabe-nao-reverte-fibrose",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Reconhecido que o mepolizumabe não reverte fibrose endomiocárdica já estabelecida; seu valor está em impedir a progressão da fase inflamatória ativa para a fase fibrótica irreversível",
+        "origem_secao": "O papel do mepolizumabe (anti-IL-5) — item 2"
+      },
+      {
+        "id": "egpa-cv-manejo-cardiologico-fibrose",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Diante de fibrose já estabelecida, manejo especificamente cardiológico avaliado: anticoagulação por trombo mural, manejo de insuficiência cardíaca restritiva e avaliação cirúrgica valvar quando indicado",
+        "origem_secao": "Síntese para a decisão clínica"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "published": false,
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas."
   }
 ]

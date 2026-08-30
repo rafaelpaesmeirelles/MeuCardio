@@ -1,35 +1,19 @@
-# Candidato científico consolidado — 30/08/2026
+# Candidato científico consolidado — publicação única
 
-## Escopo líquido
-
-| Origem | Tipo | Itens |
+| Origem | Tipos | Itens |
 |---|---|---:|
-| Claude | Casos clínicos | 32 |
-| Claude | Checklists | 16 |
-| Claude | Doenças | 7 |
-| Claude | Materiais ao paciente | 22 |
-| Claude | Trilhas | 2 |
-| Claude | Documentos Markdown | 13 |
-| Grok | Estudos | 227 |
-| Grok | Evidências | 338 |
-| Codex | Estudos | 12 |
-| Codex | Evidências | 12 |
-| **Total** |  | **681** |
+| Claude | casos, checklists, doenças, materiais, trilhas e documentos | 103 |
+| Grok | 227 estudos + 338 evidências | 565 |
+| Codex | 24 estudos + 24 evidências | 48 |
+| **Total** |  | **716** |
 
-Total canônico projetado: **10.870** itens (base `main`: 10.189).
+Total canônico projetado: **10.905** itens (base: 10.189).
 
-## Estado editorial
+- corpus canônico: todos os itens resolvidos como `revisado` pelo loader de produção
+- zero colisões novas de slug, PMID, DOI ou título normalizado
+- 79/79 PMIDs declarados na ampliação Claude resolveram no PubMed
+- evidências derivadas de estudos: `recommendation_class: N/A`
+- `published: false` preservado nos manifests; a reconciliação do deploy publica os revisados
+- lotes Grok/Codex revisados contra metadados e abstracts PubMed; artigo integral não conferido
 
-- 681/681 itens com `review_status: revisado`
-- `published: false` preservado até decisão de merge/deploy
-- origem preservada em `fonte_producao`
-- evidências derivadas de estudos usam `recommendation_class: Não aplicável`
-- materiais leigos sem posologia explícita acionável
-- revisão dos lotes Grok/Codex limitada aos metadados e abstracts PubMed declarados; artigo integral não conferido
-- nenhum merge ou deploy faz parte deste candidato
-
-## Procedência
-
-- Claude: PR #778, revisão independente Codex
-- Grok: PR #781, revisão independente Codex
-- Codex: PR #782
+Este é o único candidato para merge e deploy.

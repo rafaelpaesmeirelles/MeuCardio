@@ -24195,5 +24195,54 @@
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
     "fonte_producao": "claude",
     "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
+  },
+  {
+    "slug": "trilha-cardiomiopatias-metabolicas-reversiveis-do-adulto",
+    "titulo": "Cardiomiopatias metabólicas e endócrinas reversíveis do adulto",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair reconhecendo o padrão comum a um grupo de cardiomiopatias do adulto que compartilham uma mesma lógica clínica — causa metabólica ou endócrina identificável, história dirigida que aponta o mecanismo antes de qualquer exame, e reversibilidade real mas tempo-dependente com a correção da causa de base — em vez de tratar cada uma como achado isolado e raro.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas",
+        "por_que": "Abre a trilha pelo protótipo do grupo: um oligoelemento (selênio), um cofator enzimático específico, e reversibilidade documentada com reposição — o molde mental que se repete nas próximas etapas com outros nutrientes e outros mecanismos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-causas-adquiridas-doenca-de-menkes-e-reversibilidade",
+        "por_que": "Segundo oligoelemento do grupo, com um perfil de risco moderno específico — cirurgia bariátrica, excesso de zinco, nutrição parenteral — e uma pista clínica associada (citopenia, mielopatia) que, como no selênio, aponta o mecanismo antes de qualquer ecocardiograma."
+      },
+      {
+        "ordem": 3,
+        "item_type": "caso_clinico",
+        "item_slug": "beriberi-cardiaco-pos-cirurgia-bariatrica-ic-alto-debito-reversivel-com-tiamina",
+        "por_que": "Muda o eixo de oligoelemento para vitamina (tiamina) e de disfunção sistólica para insuficiência cardíaca de alto débito — mesmo pano de fundo de risco (má absorção pós-bariátrica) já visto na etapa do cobre, mas mecanismo hemodinâmico oposto, o que testa se o padrão foi realmente entendido e não apenas memorizado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave",
+        "por_que": "Terceiro eixo metabólico: um eletrólito, não um oligoelemento ou vitamina, mas a mesma lógica de causa identificável, tratamento simples e reversibilidade real — reforça que o padrão vale além de deficiências nutricionais estritas."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-acromegalica-historia-natural-mecanismos-e-reversibilidade",
+        "por_que": "Primeiro caso do grupo em que o problema não é falta, e sim excesso — exposição crônica a GH/IGF-1 — e em que a reversibilidade é a mais claramente tempo-dependente de toda a trilha, com três fases bem definidas até a disfunção deixar de ser totalmente reversível."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-alcoolica-reversibilidade-com-abstinencia-e-diferenca-prognostica-para-a-forma-idiopatica",
+        "por_que": "Fecha a trilha com a causa reversível mais prevalente do grupo na prática clínica real, e com a mensagem central que amarra tudo: a reversibilidade com abstinência é genuína, mas a distinção prognóstica em relação à cardiomiopatia dilatada idiopática só se sustenta quando a causa é ativamente procurada — exatamente o hábito que esta trilha inteira treinou."
+      }
+    ],
+    "published": false,
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas."
   }
 ]
