@@ -11,7 +11,6 @@ import "./styles/clinical-os.css";
 import "./styles/clinical-os-polish.css";
 import "./styles/clinical-os-a11y.css";
 import "./styles/produto.css";
-import "./styles/tour.css";
 import "./styles/tour-clinical-os.css";
 import "./styles/tour-branding-hotfix.css";
 import "./styles/clinical-command-center-v2.css";
