@@ -28109,6 +28109,25 @@
           "Mito: ter Chagas é motivo para esconder o diagnóstico por vergonha. Fato: é uma condição de saúde como outra, e falar sobre ela abertamente ajuda no cuidado e combate o preconceito."
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Palpitações: sensação de coração acelerado, batendo forte ou \"falhando\"",
+      "Falta de ar durante esforços que antes não causavam cansaço, ou falta de ar ao deitar",
+      "Inchaço nas pernas, nos pés, no tornozelo ou no abdômen",
+      "Cansaço incomum para atividades do cotidiano",
+      "Tontura, escurecimento da vista ou desmaio (síncope) — procure atendimento rápido",
+      "Dor ou desconforto no peito"
+    ],
+    "perguntas": [
+      "Eu estou na fase indeterminada da doença de Chagas, ou já existe algum comprometimento do coração?",
+      "Com que frequência preciso repetir o eletrocardiograma e o ecocardiograma?",
+      "Quais sinais eu devo observar no dia a dia que indicariam a necessidade de voltar à consulta antes do previsto?",
+      "Ter Chagas limita, no meu caso, minha vida profissional ou minha atividade física?",
+      "Se eu notar preconceito em algum serviço de saúde ou no trabalho por causa do diagnóstico, como devo agir?"
+    ],
+    "fontes": [
+      "Andrade JP et al. I Diretriz Latino-Americana para o Diagnóstico e Tratamento da Cardiopatia Chagásica. Arquivos Brasileiros de Cardiologia, 2011. PMID 21952638",
+      "Nunes MCP et al. Chagas Cardiomyopathy: An Update of Current Clinical Knowledge and Management: A Scientific Statement From the American Heart Association. Circulation, 2018;138:e169-e209. PMID 30354432"
     ]
   },
   {
@@ -28167,6 +28186,24 @@
         ],
         "itens": []
       }
+    ],
+    "sinais_de_alerta": [
+      "Endurecimento e vermelhidão numa veia próxima da virilha ou na parte de cima da coxa",
+      "Inchaço importante de toda a perna, não só do trecho endurecido",
+      "Dor no peito ou falta de ar de início súbito — pode indicar que um fragmento do coágulo chegou ao pulmão; procure emergência",
+      "Febre, calafrios ou saída de secreção purulenta no local (sinal de infecção)",
+      "Episódios repetidos de veia endurecida e dolorida em locais diferentes ao longo do tempo"
+    ],
+    "perguntas": [
+      "O eco-Doppler mostrou, no meu caso, alguma trombose venosa profunda associada?",
+      "A que distância meu coágulo está da junção com o sistema venoso profundo?",
+      "O trecho de veia comprometido é curto ou longo, e isso muda meu tratamento?",
+      "Eu preciso de anticoagulante, e por quanto tempo?",
+      "Preciso repetir o eco-Doppler em uma ou duas semanas para confirmar que não houve progressão?"
+    ],
+    "fontes": [
+      "Decousus H et al.; CALISTO Study Group. Fondaparinux for the Treatment of Superficial-Vein Thrombosis in the Legs. New England Journal of Medicine, 2010;363:1222-1232. PMID 20860504",
+      "Kearon C et al. Antithrombotic Therapy for VTE Disease: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest, 2012;141(2 Suppl):e419S-e496S. PMID 22315268"
     ]
   },
   {
@@ -28241,6 +28278,26 @@
           "A correção do sódio é feita com acompanhamento médico, de forma gradual"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Confusão mental, desorientação ou dificuldade de raciocinar que não é habitual",
+      "Sonolência incomum, dificuldade de ficar acordado ou de despertar",
+      "Convulsão",
+      "Vômitos repetidos que não param",
+      "Piora rápida do inchaço nas pernas, na barriga, ou da falta de ar",
+      "Fraqueza importante ou mal-estar geral fora do padrão de sempre"
+    ],
+    "perguntas": [
+      "No meu caso, o sódio baixo é por excesso de água retida, e não por falta de sal na comida?",
+      "Eu preciso restringir a quantidade de líquido que tomo por dia? Qual é o limite recomendado?",
+      "Meu diurético está na dose certa para tratar esse problema?",
+      "Existe indicação de algum remédio específico (aquarético) no meu caso?",
+      "Se eu precisar corrigir o sódio, isso será feito de forma gradual e com acompanhamento em ambiente hospitalar?"
+    ],
+    "fontes": [
+      "Verbrugge FH et al. Hyponatremia in Acute Decompensated Heart Failure: Depletion Versus Dilution. Journal of the American College of Cardiology, 2015;65(5):480-492. PMID 25660927",
+      "Konstam MA et al.; EVEREST Investigators. Effects of Oral Tolvaptan in Patients Hospitalized for Worsening Heart Failure: The EVEREST Outcome Trial. JAMA, 2007;297(12):1319-1331. PMID 17384437",
+      "Verbalis JG et al. Diagnosis, Evaluation, and Treatment of Hyponatremia: Expert Panel Recommendations. American Journal of Medicine, 2013;126(10 Suppl 1):S1-42. PMID 24074529"
     ]
   },
   {
@@ -28318,6 +28375,26 @@
           "Dor abdominal forte e persistente, especialmente se vier com inchaço da barriga"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito, especialmente com falta de ar, suor frio ou dor irradiando para o braço ou a mandíbula",
+      "Fraqueza ou dormência súbita de um lado do corpo, no rosto, braço ou perna",
+      "Dificuldade súbita para falar, entender, enxergar ou manter o equilíbrio",
+      "Dor de cabeça muito forte e repentina, diferente das habituais",
+      "Inchaço, dor, calor ou vermelhidão em uma perna, especialmente na panturrilha",
+      "Falta de ar súbita, respiração acelerada ou dor ao respirar fundo",
+      "Dor abdominal forte e persistente, especialmente com inchaço da barriga"
+    ],
+    "perguntas": [
+      "Qual é o meu hematócrito atual, e ele está dentro da meta de menos de 45%?",
+      "Com que frequência eu preciso fazer sangria (flebotomia)?",
+      "Devo tomar aspirina em baixa dose todos os dias, ou existe alguma contraindicação no meu caso?",
+      "Se eu desenvolver deficiência de ferro por causa das sangrias, devo tomar suplemento de ferro?",
+      "O que eu devo fazer se perder uma sessão de sangria programada?"
+    ],
+    "fontes": [
+      "Marchioli R et al.; CYTO-PV Collaborative Group. Cardiovascular Events and Intensity of Treatment in Polycythemia Vera. New England Journal of Medicine, 2013;368(1):22-33. PMID 23216616",
+      "Landolfi R et al.; ECLAP Investigators. Efficacy and Safety of Low-Dose Aspirin in Polycythemia Vera. New England Journal of Medicine, 2004;350(2):114-124. PMID 14711910"
     ]
   },
   {
@@ -28381,6 +28458,23 @@
           "Sinais de sangramento mais grave: sangue nas fezes ou fezes muito escuras, vômito com sangue, sangue na urina, qualquer sangramento que não pare com pressão local"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Sinais de possível trombose maior: fraqueza súbita de um lado do corpo, dificuldade repentina para falar ou enxergar, dor no peito, falta de ar de início súbito, dor/inchaço/vermelhidão em uma perna",
+      "Sinais de trombose de pequenos vasos: queimação e vermelhidão nas mãos ou nos pés (eritromelalgia), dor de cabeça forte e incomum, alterações visuais passageiras, formigamento nas extremidades",
+      "Sinais de sangramento: sangramento nasal frequente ou difícil de estancar, manchas roxas (equimoses) sem explicação, sangramento nas gengivas, menstruação muito mais intensa que o habitual",
+      "Sinais de sangramento mais grave: sangue nas fezes ou fezes muito escuras, vômito com sangue, sangue na urina, sangramento que não para com pressão local"
+    ],
+    "perguntas": [
+      "Qual é a minha contagem atual de plaquetas, e ela está muito acima de 1 milhão por microlitro?",
+      "No meu caso, existe risco de síndrome de von Willebrand adquirida que mude a indicação de aspirina?",
+      "Qual é o meu escore de risco de trombose (por exemplo, o IPSET-thrombosis), e isso muda meu tratamento?",
+      "Eu preciso de tratamento citorredutor? Qual medicamento seria indicado para mim?",
+      "Se eu tiver algum sinal novo de trombose ou de sangramento, devo ajustar algum remédio por conta própria ou procurar avaliação médica primeiro?"
+    ],
+    "fontes": [
+      "Budde U, van Genderen PJ. Acquired von Willebrand Disease in Patients With High Platelet Counts. Seminars in Thrombosis and Hemostasis, 1997;23(5):425-431. PMID 9387201",
+      "Barbui T et al. Development and Validation of an International Prognostic Score of Thrombosis in World Health Organization-Essential Thrombocythemia (IPSET-thrombosis). Blood, 2012;120(26):5128-5133. PMID 23033268"
     ]
   },
   {
@@ -28442,6 +28536,27 @@
           "Pergunte ao seu médico sobre a necessidade de controlar potássio, glicose e colesterol, que também costumam ser afetados pelo excesso de cortisol e contribuem para o risco cardiovascular."
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Inchaço, dor ou vermelhidão em uma perna — pode ser sinal de trombose venosa",
+      "Falta de ar súbita — pode indicar embolia pulmonar, uma complicação da trombose",
+      "Dor no peito súbita ou intensa",
+      "Fraqueza extrema, náusea, vômitos, tontura ou desmaio após redução ou suspensão do corticoide — pode ser insuficiência adrenal, uma emergência médica",
+      "Pressão arterial muito elevada que não melhora com a medicação prescrita"
+    ],
+    "perguntas": [
+      "Minha síndrome de Cushing é causada por um tumor (hipófise, suprarrenal ou outro local) ou pelo uso de corticoide?",
+      "Qual é o plano para tratar a causa do excesso de cortisol, e não só a pressão arterial?",
+      "Eu preciso de anticoagulante ou meias de compressão para prevenir trombose, principalmente se eu for operar?",
+      "Como devo reduzir a dose do corticoide com segurança, sem risco de insuficiência adrenal?",
+      "Depois que o cortisol normalizar, por quanto tempo vou precisar continuar o acompanhamento cardiológico?",
+      "Além da pressão, preciso controlar também potássio, glicose e colesterol?"
+    ],
+    "fontes": [
+      "Quinkler M, Stewart PM. Hypertension and the cortisol-cortisone shuttle. J Clin Endocrinol Metab. 2003.",
+      "Hammer F, Stewart PM. Cortisol metabolism in hypertension. Best Pract Res Clin Endocrinol Metab. 2006.",
+      "Akirov A, Fleseriu M. Hypercoagulability in Cushing's syndrome: past, present, future. Arch Endocrinol Metab. 2025.",
+      "van Haalen FM et al. Current clinical practice for thromboprophylaxis management in patients with Cushing's syndrome. Orphanet J Rare Dis. 2022."
     ]
   },
   {
@@ -28519,6 +28634,25 @@
           "Se for operar, pergunte como será o acompanhamento da pressão arterial e do coração depois da cirurgia"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar, palpitações ou dor no peito",
+      "Pressão arterial que fica difícil de controlar mesmo com medicação",
+      "Fraqueza muscular intensa, confusão mental ou sonolência excessiva — podem indicar cálcio muito alto no sangue",
+      "Dores ósseas importantes ou fratura após trauma leve",
+      "Dor forte nas costas ou na lateral do abdômen, sugerindo cólica por cálculo renal"
+    ],
+    "perguntas": [
+      "Meu caso tem indicação de cirurgia (paratireoidectomia), ou o acompanhamento será só clínico?",
+      "Vale a pena investigar meu coração com um ecocardiograma, já que tenho pressão alta ou sopro cardíaco?",
+      "Se eu operar, o que posso esperar da pressão arterial e do coração depois?",
+      "Alguma alteração já encontrada no meu coração (como calcificação de válvula) é reversível depois da cirurgia?",
+      "Com que frequência preciso repetir os exames de cálcio e o acompanhamento cardiológico?"
+    ],
+    "fontes": [
+      "Andersson P, Rydberg E, Willenheimer R. Primary hyperparathyroidism and heart disease--a review. Eur Heart J. 2004.",
+      "Carrai P, Camarri S, Pondrelli CR, Gonnelli S, Caffarelli C. Calcification of Cardiac Valves in Metabolic Bone Disease: An Updated Review of Clinical Studies. Clin Interv Aging. 2020.",
+      "Garcia de la Torre N, Wass JA, Turner HE. Parathyroid adenomas and cardiovascular risk. Endocr Relat Cancer. 2003."
     ]
   },
   {
@@ -28590,6 +28724,27 @@
           "Lembrar que sintomas respiratórios controlados não significam, necessariamente, que o coração está protegido"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar nova ou que piora, inclusive em repouso ou ao deitar",
+      "Palpitações — coração acelerado, batendo forte ou de forma irregular",
+      "Inchaço nas pernas, tornozelos ou abdômen",
+      "Cansaço desproporcional a esforços antes tolerados",
+      "Dor ou desconforto no peito",
+      "Tontura ou sensação de desmaio",
+      "Dificuldade para deitar sem sentir falta de ar (ortopneia)"
+    ],
+    "perguntas": [
+      "Meu caso de EGPA já tem algum sinal de envolvimento cardíaco (miocardite, pericardite, vasculite coronariana)?",
+      "Preciso fazer ecocardiograma, eletrocardiograma ou ressonância cardíaca de rotina, mesmo sem sintomas?",
+      "Meu tratamento atual (corticoide, imunossupressor ou mepolizumabe) é suficiente para proteger o coração, dada a gravidade do meu caso?",
+      "Que sintomas cardíacos devo relatar imediatamente, sem esperar a próxima consulta?",
+      "É seguro reduzir a dose do corticoide agora, considerando o risco cardíaco?"
+    ],
+    "fontes": [
+      "Zampieri M et al. Cardiac involvement in eosinophilic granulomatosis with polyangiitis (formerly Churg-Strauss syndrome): Prospective evaluation at a tertiary referral centre. Eur J Intern Med. 2021;85:68-79.",
+      "Liu X et al. Cardiac involvement in eosinophilic granulomatosis with polyangiitis: acute eosinophilic myocarditis and chronic inflammatory cardiomyopathy. Rheumatology (Oxford). 2025;64(2):722-731.",
+      "Wechsler ME, Akuthota P, Jayne D, et al. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. N Engl J Med. 2017;376(20):1921-1932."
     ]
   },
   {
@@ -28658,6 +28813,27 @@
         ],
         "itens": []
       }
+    ],
+    "sinais_de_alerta": [
+      "Palpitações — sensação de coração acelerado ou batendo de forma irregular",
+      "Tontura ou desmaio (síncope), principalmente durante ou logo após esforço físico",
+      "Perda de consciência súbita durante atividade física",
+      "Dor no peito",
+      "Falta de ar nova ou súbita",
+      "Cabelo lanoso e queratodermia palmoplantar (pele grossa nas palmas e solas) desde a infância — sinal de que a avaliação cardiológica deve ser feita, mesmo sem sintomas no coração"
+    ],
+    "perguntas": [
+      "Meus exames cardiológicos (eletrocardiograma, Holter, ecocardiograma, ressonância) mostram sinais de cardiomiopatia arritmogênica?",
+      "Existe indicação de teste genético para confirmar a mutação (JUP, DSP ou outro gene) na minha família?",
+      "Meus irmãos e outros parentes próximos precisam ser avaliados, mesmo sem sintomas?",
+      "Há restrição de esportes competitivos ou esforço físico intenso no meu caso?",
+      "Com que frequência preciso repetir os exames cardiológicos ao longo da vida?",
+      "Devo procurar aconselhamento genético para planejamento familiar?"
+    ],
+    "fontes": [
+      "Protonotarios N, Tsatsopoulou A. Naxos disease and Carvajal syndrome: cardiocutaneous disorders that highlight the pathogenesis and broaden the spectrum of arrhythmogenic right ventricular cardiomyopathy. Cardiovasc Pathol. 2004.",
+      "Protonotarios N, Tsatsopoulou A. Naxos disease: cardiocutaneous syndrome due to cell adhesion defect. Orphanet J Rare Dis. 2006.",
+      "Keller DI, Stepowski D, Balmer C, et al. De novo heterozygous desmoplakin mutations leading to Naxos-Carvajal disease. Swiss Med Wkly. 2012."
     ]
   },
   {
@@ -28738,6 +28914,30 @@
           "Nunca ajustar ou suspender remédios de insuficiência cardíaca por conta própria — sempre falar com a equipe médica antes"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio ou quase desmaio ao levantar",
+      "Tontura intensa, escurecimento da visão ou sensação de cabeça leve ao ficar de pé",
+      "Dor no peito",
+      "Palpitações intensas ou batimento cardíaco muito acelerado ou irregular",
+      "Falta de ar que piora rapidamente",
+      "Inchaço súbito nas pernas ou no abdômen",
+      "Sinais de desidratação (sede intensa, boca seca, urina muito escura) durante o uso de diuréticos",
+      "Quedas de repetição, principalmente ao levantar da cama ou de uma cadeira"
+    ],
+    "perguntas": [
+      "Meus remédios de insuficiência cardíaca (IECA/BRA, betabloqueador, diurético) precisam de ajuste de dose por causa da minha pressão baixa?",
+      "O que devo fazer se sentir muita tontura depois de tomar minha medicação?",
+      "Já estou sendo acompanhado por um hematologista para tratar a causa da amiloidose, o problema na medula óssea?",
+      "Que esquema de tratamento hematológico, incluindo daratumumabe, é indicado no meu caso?",
+      "Quais medidas do dia a dia, como levantar devagar e usar meias de compressão, posso usar para reduzir a tontura?",
+      "Como vou saber se o tratamento da doença de base está funcionando?",
+      "Em que situação devo procurar atendimento de urgência por causa da pressão baixa?"
+    ],
+    "fontes": [
+      "Kittleson MM, Ruberg FL, Ambardekar AV, et al. 2023 ACC Expert Consensus Decision Pathway on Comprehensive Multidisciplinary Care for the Patient With Cardiac Amyloidosis. J Am Coll Cardiol. 2023;81(11):1076-1126. PMID 36697326.",
+      "Kastritis E, Palladini G, Minnema MC, et al. Daratumumab-Based Treatment for Immunoglobulin Light-Chain Amyloidosis. N Engl J Med. 2021;385(1):46-58. PMID 34192431.",
+      "Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases. Eur Heart J. 2021;42(16):1554-1568. PMID 33825853."
     ]
   },
   {
@@ -28824,6 +29024,28 @@
           "revisão periódica sobre quais atividades físicas são seguras, com liberação médica individualizada"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio (síncope) durante esforço físico, natação, susto, choro intenso ou emoção forte",
+      "Episódios que parecem convulsão, mas ocorrem junto com perda de consciência súbita",
+      "Palpitação súbita ou sensação de coração disparado antes de um desmaio",
+      "Novo episódio de desmaio mesmo em uso regular do betabloqueador",
+      "Mal-estar ou palpitação após despertar brusco por som alto ou susto",
+      "Interrupção do betabloqueador por conta própria — nunca deve ser feita sem falar com o cardiologista"
+    ],
+    "perguntas": [
+      "Meu filho pode nadar ou praticar esportes? Quais atividades físicas são seguras?",
+      "O betabloqueador precisa ser tomado para sempre? O que fazemos se esquecermos uma dose?",
+      "Meu filho já tem indicação de desfibrilador implantável (CDI), ou isso será reavaliado com o tempo?",
+      "Quais medicamentos, inclusive de venda livre, devemos evitar por prolongarem o QT?",
+      "Os irmãos precisam fazer eletrocardiograma também? Como funciona o aconselhamento genético para nós?",
+      "O que a escola e os cuidadores precisam saber para agir em caso de desmaio?",
+      "Precisamos avisar a equipe de anestesia antes de qualquer cirurgia, incluindo o implante coclear?"
+    ],
+    "fontes": [
+      "Tranebjærg L, Samson RA, Green GE. Jervell and Lange-Nielsen Syndrome. GeneReviews [Internet]. Seattle: University of Washington; 2002, atualizado em 2017. NCBI Bookshelf NBK1405.",
+      "Schwartz PJ, Spazzolini C, Crotti L, et al. The Jervell and Lange-Nielsen syndrome: natural history, molecular basis, and clinical outcome. Circulation. 2006;113(6):783-790. PMID 16461811.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572."
     ]
   },
   {
@@ -28897,6 +29119,28 @@
           "Atenção também a portadoras (no caso de mutações no gene EMD) e a parentes com a mesma mutação em famílias com LMNA, mesmo sem sintomas musculares completos"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Palpitação ou sensação de coração acelerado ou irregular",
+      "Sensação de desmaio iminente ou desmaio (síncope), mesmo sem esforço",
+      "Falta de ar ou cansaço desproporcional ao esforço, ou piora súbita da tolerância a atividades habituais",
+      "Qualquer desmaio deve ser avaliado com urgência, mesmo em quem já usa marca-passo",
+      "Dor no peito",
+      "Sensação de batimento cardíaco muito lento ou tontura persistente, que podem indicar bloqueio ou bradicardia"
+    ],
+    "perguntas": [
+      "Com que frequência preciso repetir ECG, Holter e ecocardiograma?",
+      "Já tenho indicação de marca-passo ou CDI, ou isso será decidido conforme os exames de acompanhamento?",
+      "O tipo de mutação, EMD ou LMNA, muda meu risco cardíaco ou a frequência dos exames?",
+      "Mulheres portadoras da mutação, mesmo sem fraqueza muscular, precisam de acompanhamento cardíaco também?",
+      "Meus parentes de primeiro grau devem ser testados ou avaliados, mesmo sem sintomas?",
+      "O marca-passo elimina o risco de arritmia grave, ou ainda preciso de cuidados adicionais, como o CDI?",
+      "A fraqueza muscular leve significa que meu coração também está protegido?"
+    ],
+    "fontes": [
+      "Ben Yaou R, Leturcq F, Bonne G. Emery-Dreifuss Muscular Dystrophy. GeneReviews [Internet]. Seattle: University of Washington; 2004, com atualizações. NCBI Bookshelf NBK1436.",
+      "Groh WJ, Bhakta D, Tomaselli GF, et al. 2022 HRS expert consensus statement on evaluation and management of arrhythmic risk in neuromuscular disorders. Heart Rhythm. 2022;19(10):e61-e120. PMID 35500790.",
+      "van Rijsingen IA, Arbustini E, Elliott PM, et al. Risk factors for malignant ventricular arrhythmias in lamin a/c mutation carriers: a European cohort study. J Am Coll Cardiol. 2012;59(5):493-500. PMID 22281253."
     ]
   },
   {
@@ -28957,6 +29201,28 @@
         ],
         "itens": []
       }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou desconforto no peito, mesmo descrito de forma vaga pela criança",
+      "Cansaço ou falta de ar desproporcional ao esforço, parar no meio de uma atividade que antes fazia sem problema",
+      "Fraqueza ou dormência súbita em um lado do corpo, dificuldade para falar ou assimetria no rosto — procurar emergência imediatamente, sinal de possível AVC",
+      "Desmaios ou tonturas intensas",
+      "Palpitações ou sensação de coração acelerado fora do esforço físico",
+      "Mudança perceptível na cor da pele, como palidez ou lábios arroxeados, durante atividades cotidianas",
+      "Inchaço incomum em pernas, pés ou abdômen"
+    ],
+    "perguntas": [
+      "Meu filho(a) tem indicação para uso do lonafarnibe? Quais são os critérios e a partir de que idade ele é aprovado?",
+      "Com que frequência devemos repetir pressão arterial, eletrocardiograma, ecocardiograma e doppler das carótidas?",
+      "Aspirina em dose baixa ou estatina são indicadas no caso dele(a)? Por quê?",
+      "Existe um centro de referência em progeria para onde possamos ser encaminhados?",
+      "Como os sinais de alerta cardiovascular se encaixam na rotina escolar e nas atividades físicas do dia a dia?",
+      "Existem estudos clínicos em andamento nos quais possamos participar?"
+    ],
+    "fontes": [
+      "Gordon LB, Massaro J, D'Agostino RB, et al. Impact of farnesylation inhibitors on survival in Hutchinson-Gilford progeria syndrome. Circulation. 2014;130(1):27-34. PMID 24795390.",
+      "Gordon LB, et al. Association of Lonafarnib Treatment vs No Treatment With Mortality Rate in Patients With Hutchinson-Gilford Progeria Syndrome. JAMA. 2018;319(16):1687-1695. PMID 29710166.",
+      "Suzuki M, et al. FDA approval summary for lonafarnib (Zokinvy) for the treatment of Hutchinson-Gilford progeria syndrome and processing-deficient progeroid laminopathies. Genet Med. 2023;25(2):100335. PMID 36507973."
     ]
   },
   {
@@ -29019,6 +29285,29 @@
           "Atenção a qualquer sinal novo e sutil - cansaço fora do padrão habitual, perda de apetite, palpitações, inchaço - e comunicação rápida com a equipe médica caso algo assim apareça, mesmo sem falta de ar evidente."
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Cansaço ou fadiga fora do padrão habitual da criança ou adolescente",
+      "Perda de apetite sem outra explicação aparente",
+      "Palpitações (sensação de coração acelerado ou batendo forte)",
+      "Inchaço nas pernas, pés ou abdômen",
+      "Falta de ar, mesmo que pareça desproporcional ao esforço que a criança consegue fazer",
+      "Desmaio ou quase-desmaio — procurar atendimento de emergência",
+      "Dor no peito súbita — procurar atendimento de emergência"
+    ],
+    "perguntas": [
+      "Em que idade e com que frequência meu filho deve repetir o ecocardiograma de acompanhamento?",
+      "Faz sentido, no caso dele, considerar ressonância cardíaca para procurar fibrose antes de o ecocardiograma mostrar alteração?",
+      "Já é o momento de conversar sobre iniciar o IECA de forma preventiva, mesmo com os exames ainda normais?",
+      "Os corticoides que ele usa (ou pode vir a usar) têm algum efeito sobre o coração que devemos acompanhar junto com a equipe neuromuscular?",
+      "Quais sinais no dia a dia devem me fazer contatar a equipe médica antes da próxima consulta agendada?"
+    ],
+    "fontes": [
+      "Schram G, Fournier A, Leduc H, et al. All-cause mortality and cardiovascular outcomes with prophylactic steroid therapy in Duchenne muscular dystrophy. J Am Coll Cardiol. 2013;61(9):948-954. PMID: 23352781.",
+      "Bourke JP, Bueser T, Quinlivan R. Interventions for preventing and treating cardiac complications in Duchenne and Becker muscular dystrophy and X-linked dilated cardiomyopathy. Cochrane Database Syst Rev. 2018;10:CD009068. PMID: 30326162.",
+      "Birnkrant DJ, Bushby K, Bann CM, et al. Diagnosis and management of Duchenne muscular dystrophy, part 2: respiratory, cardiac, bone health, and orthopaedic management. Lancet Neurol. 2018;17(4):347-361. PMID: 29395990.",
+      "Duboc D, Meune C, Pierre B, et al. Perindopril preventive treatment on mortality in Duchenne muscular dystrophy: 10 years' follow-up. Am Heart J. 2007;154(3):596-602. PMID: 17719312.",
+      "McNally EM, Kaltman JR, Benson DW, et al. Contemporary cardiac issues in Duchenne muscular dystrophy. Working Group of the National Heart, Lung, and Blood Institute in collaboration with Parent Project Muscular Dystrophy. Circulation. 2015;131(18):1590-1598. PMID: 25940966."
     ]
   },
   {
@@ -29102,6 +29391,28 @@
           "Manter o controle glicêmico e o acompanhamento de pressão e colesterol como parte da proteção do coração a longo prazo"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Tontura ou sensação de \"cabeça leve\" ao levantar rapidamente",
+      "Desmaios ou quase-desmaios",
+      "Palpitações (coração acelerado ou \"batendo forte\")",
+      "Falta de ar aos esforços",
+      "Dor no peito",
+      "Frequência cardíaca muito rápida ou muito lenta sem explicação óbvia",
+      "Dificuldade de regular suor e temperatura corporal, com mal-estar ao ficar em pé"
+    ],
+    "perguntas": [
+      "Meu filho(a) precisa de avaliação cardiológica agora, mesmo sem nenhum sintoma no coração?",
+      "Que exames cardíacos basais são recomendados (eletrocardiograma, ecocardiograma) e com que frequência devem ser repetidos?",
+      "Como podemos investigar se há disautonomia, incluindo medir a pressão arterial deitado e em pé?",
+      "O diagnóstico genético (WFS1) muda em algo o acompanhamento que o cardiologista vai propor?",
+      "Precisamos de acompanhamento conjunto com o endocrinologista para alinhar o controle do diabetes com a proteção cardiovascular?"
+    ],
+    "fontes": [
+      "Barrett T, Tranebjærg L, Gupta R, et al. WFS1 Spectrum Disorder. GeneReviews®. University of Washington, Seattle. Atualizado em 2022. Bookshelf ID: NBK4144. PMID: 20301750.",
+      "Villatore A, Frontino G, Cascavilla ML, Vignale D, Lazzeroni D, Peretto G. Cardiac Wolframinopathies: A Case Report of Myocarditis and a Literature Review of Cardiac Involvement in Wolfram Syndrome 1. J Clin Med. 2024;13(6):1803. PMID: 38542026.",
+      "Rohayem J, Ehlers C, Wiedemann B, et al. Diabetes and neurodegeneration in Wolfram syndrome: a multicenter study of phenotype and genotype. Diabetes Care. 2011;34(7):1503-1510. PMID: 21602428.",
+      "Urano F. Wolfram Syndrome: Diagnosis, Management, and Treatment. Curr Diab Rep. 2016;16(1):6. PMID: 26742931."
     ]
   },
   {
@@ -29165,6 +29476,28 @@
           "Sintomas como palpitações, cansaço incomum ou inchaço nas pernas nunca devem ser o primeiro sinal a levar à investigação — o ideal é que a investigação já esteja em curso antes deles"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Ferritina sérica ou saturação de transferrina persistentemente elevadas, mesmo sem sintomas",
+      "Palpitações ou frequência cardíaca irregular",
+      "Cansaço incomum ou queda perceptível da capacidade de esforço",
+      "Inchaço nas pernas",
+      "Falta de ar, principalmente se for nova ou estiver piorando",
+      "Dor no peito súbita ou desmaio — procurar atendimento de emergência"
+    ],
+    "perguntas": [
+      "Meus níveis de ferro já indicam que devo fazer uma avaliação cardíaca, mesmo sem sintomas?",
+      "Eu preciso de ressonância cardíaca com a técnica T2* para medir o ferro depositado no coração?",
+      "No meu caso — hemocromatose hereditária ou dependência transfusional — qual é o tratamento indicado para reduzir o ferro?",
+      "Com que frequência devo repetir os exames de ferro e a avaliação cardíaca durante e depois do tratamento?",
+      "Meus parentes de primeiro grau precisam ser rastreados para hemocromatose?",
+      "Se minha função cardíaca já está reduzida, existe chance real de melhora com o tratamento?"
+    ],
+    "fontes": [
+      "Kowdley KV, Brown KE, Ahn J, Sundaram V. ACG Clinical Guideline: Hereditary Hemochromatosis. Am J Gastroenterol. 2019;114(8):1202-1218. PMID: 31335359.",
+      "Anderson LJ, Holden S, Davis B, et al. Cardiovascular T2-star (T2*) magnetic resonance for the early diagnosis of myocardial iron overload. Eur Heart J. 2001;22(23):2171-2179. PMID: 11913479.",
+      "Kirk P, Roughton M, Porter JB, et al. Cardiac T2* magnetic resonance for prediction of cardiac complications in thalassemia major. Circulation. 2009;120(20):1961-1968. PMID: 19801505.",
+      "Modell B, Khan M, Darlison M, Westwood MA, Ingram D, Pennell DJ. Improved survival of thalassaemia major in the UK and relation to T2* cardiovascular magnetic resonance. J Cardiovasc Magn Reson. 2008;10:42. PMID: 18817553."
     ]
   },
   {
@@ -29244,6 +29577,25 @@
           "Procurar apoio psicológico se a doença ou a restrição de esportes estiver trazendo sofrimento emocional, especialmente em atletas jovens"
         ]
       }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito — mesmo que pareça uma \"crise\" já conhecida da própria doença, procure emergência sempre: não é seguro tentar diferenciar em casa de um infarto real",
+      "Palpitações súbitas ou sensação de coração muito acelerado",
+      "Desmaio ou quase-desmaio",
+      "Falta de ar nova ou que piora"
+    ],
+    "perguntas": [
+      "Qual gene está envolvido no meu caso (PKP2, DSP, DSG2, DSC2, JUP), e isso muda meu risco ou o acompanhamento recomendado?",
+      "Que nível e tipo de atividade física é seguro para mim, e com que frequência essa avaliação deve ser revista?",
+      "Eu preciso de desfibrilador implantável? Como esse risco é calculado no meu caso?",
+      "Se eu tiver uma crise parecida com infarto, como os médicos vão diferenciar isso de um infarto de verdade ou de uma miocardite viral?",
+      "Meus parentes de primeiro grau devem fazer rastreamento genético e avaliação cardiológica, mesmo sem sintomas?"
+    ],
+    "fontes": [
+      "Bariani R, Cipriani A, Rizzo S, et al. 'Hot phase' clinical presentation in arrhythmogenic cardiomyopathy. Europace. 2021;23(6):907-917. PMID: 33313835.",
+      "Towbin JA, McKenna WJ, Abrams DJ, et al. 2019 HRS expert consensus statement on evaluation, risk stratification, and management of arrhythmogenic cardiomyopathy. Heart Rhythm. 2019;16(11):e301-e372. PMID: 31078652.",
+      "Wang W, Orgeron G, Tichnell C, et al. Impact of Exercise Restriction on Arrhythmic Risk Among Patients With Arrhythmogenic Right Ventricular Cardiomyopathy. J Am Heart Assoc. 2018;7(12):e008843. PMID: 29909402.",
+      "Cadrin-Tourigny J, Bosman LP, Nozza A, et al. A new prediction model for ventricular arrhythmias in arrhythmogenic right ventricular cardiomyopathy. Eur Heart J. 2022;43(32):3053-3067. PMID: 35441664."
     ]
   },
   {
