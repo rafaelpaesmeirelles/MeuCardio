@@ -497,3 +497,22 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
 | **Total** | **4.900** | **76** | **4.824** |
+
+## Lote 27 — concluído (commit b9d8c683)
+
+- **content/Cardiomiopatias**: +1 — `granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular`. Pareado retroativamente com o material-paciente `egpa-granulomatose-eosinofilica-e-o-coracao` (documento_slug atualizado).
+- **casos-clinicos**: +1 — `amiloidose-atrial-isolada-vs-amiloidose-sistemica-achado-incidental`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.265 (10.189 revisado + 76 pendente_revisao).
+
+### Status consolidado (após Lote 27)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 10 | 2.390 |
+| Casos clínicos | 900 | 29 | 871 |
+| Checklists | 600 | 12 | 588 |
+| Materiais-paciente | 500 | 21 | 479 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
+| **Total** | **4.900** | **78** | **4.822** |
