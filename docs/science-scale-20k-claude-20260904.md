@@ -282,3 +282,11 @@ registros totais.
 
 **Total canônico projetado após Lote 16**: 10.237 (10.189 revisado +
 48 pendente_revisao nesta branch).
+
+## Lote 17 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (ataxia-telangiectasia, síndrome de Wolfram). Gates limpos,
+10.239 registros totais.
+
+**Total canônico projetado após Lote 17**: 10.239 (10.189 revisado +
+50 pendente_revisao nesta branch).
