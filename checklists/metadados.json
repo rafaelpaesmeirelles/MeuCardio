@@ -36579,5 +36579,232 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "nao-perder-hipertireoidismo-apatico-no-idoso",
+    "condicao": "Suspeita de hipertireoidismo apático no idoso diante de fibrilação atrial nova, perda de peso involuntária ou insuficiência cardíaca de início/piora recente",
+    "resumo": "Checklist de suspeição para não deixar passar hipertireoidismo apático no idoso: baixa o limiar para dosar TSH diante de FA nova, perda de peso involuntária ou IC de início/piora recente, mesmo sem sinais hiperadrenérgicos clássicos; reconhece o risco cardiovascular do hipertireoidismo subclínico; e orienta a cautela diagnóstica e terapêutica com amiodarona, incluindo a diferenciação entre AIT tipo 1 e tipo 2.",
+    "documento_origem": "hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca",
+    "theme": "Cardiologia geriátrica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Lahey FH. Apathetic Thyroidism. Ann Surg. 1931;93(5):1026-1030. DOI: 10.1097/00000658-193105000-00008. PMID: 17866558",
+      "Trivalle C, Doucet J, Chassagne P, Landrin I, Kadri N, Menard JF, Bercoff E. Differences in the signs and symptoms of hyperthyroidism in older and younger patients. J Am Geriatr Soc. 1996;44(1):50-53. PMID: 8537590",
+      "Boelaert K, Torlinska B, Holder RL, Franklyn JA. Older subjects with hyperthyroidism present with a paucity of symptoms and signs: a large cross-sectional study. J Clin Endocrinol Metab. 2010;95(6):2715-2726. PMID: 20392869",
+      "Sawin CT, Geller A, Wolf PA, Belanger AJ, Baker E, Bacharach P, Wilson PW, Benjamin EJ, D'Agostino RB. Low serum thyrotropin concentrations as a risk factor for atrial fibrillation in older persons. N Engl J Med. 1994;331(19):1249-1252. PMID: 7935681",
+      "Cappola AR, Fried LP, Arnold AM, Danese MD, Kuller LH, Burke GL, Tracy RP, Ladenson PW. Thyroid status, cardiovascular risk, and mortality in older adults. JAMA. 2006;295(9):1033-1041. PMID: 16507804",
+      "Collet TH, Gussekloo J, Bauer DC, den Elzen WP, Cappola AR, et al. Subclinical hyperthyroidism and the risk of coronary heart disease and mortality. Arch Intern Med. 2012;172(10):799-809. PMID: 22529182",
+      "Gencer B, Collet TH, Virgini V, Bauer DC, Gussekloo J, Cappola AR, et al. Subclinical thyroid dysfunction and the risk of heart failure events: an individual participant data analysis from 6 prospective cohorts. Circulation. 2012;126(9):1040-1049. PMID: 22821943",
+      "Ross DS, Burch HB, Cooper DS, Greenlee MC, Laurberg P, Maia AL, Rivkees SA, Samuels M, Sosa JA, Stan MN, Walter MA. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. PMID: 27521067",
+      "Bartalena L, Bogazzi F, Chiovato L, Hubalewska-Dydejczyk A, Links TP, Vanderpump M. 2018 European Thyroid Association (ETA) Guidelines for the Management of Amiodarone-Associated Thyroid Dysfunction. Eur Thyroid J. 2018;7(2):55-66. PMID: 29594056"
+    ],
+    "itens": [
+      {
+        "id": "hpa-limiar-tsh-fa-nova",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "TSH solicitado diante de fibrilação atrial nova no idoso, mesmo na ausência de tremor, agitação ou intolerância ao calor",
+        "origem_secao": "Fibrilação atrial: a manifestação cardíaca dominante — e às vezes a única evidente"
+      },
+      {
+        "id": "hpa-limiar-tsh-perda-peso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "TSH solicitado diante de perda de peso involuntária no idoso, antes de encerrar a investigação como neoplasia oculta ou em paralelo a ela",
+        "origem_secao": "O fenótipo apático: o que ele imita e por que engana"
+      },
+      {
+        "id": "hpa-limiar-tsh-ic-nova",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "TSH solicitado diante de insuficiência cardíaca de início ou piora recente no idoso, incluindo o paciente já rotulado como cardiopata conhecido",
+        "origem_secao": "A armadilha diagnóstica central"
+      },
+      {
+        "id": "hpa-nao-exigir-hiperadrenergico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de sinais hiperadrenérgicos clássicos (tremor, agitação, sudorese, intolerância ao calor, bócio palpável) não foi usada para descartar hipertireoidismo no idoso",
+        "origem_secao": "O conceito clássico: por que o hipertireoidismo do idoso não parece hipertireoidismo"
+      },
+      {
+        "id": "hpa-diferenciais-nao-encerram-sem-tsh",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de encerrar o quadro como depressão, demência/declínio cognitivo ou 'é a idade', o TSH foi verificado",
+        "origem_secao": "Na prática clínica, esse 'outra coisa' tem um repertório previsível"
+      },
+      {
+        "id": "hpa-subclinico-nao-descartado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Hipertireoidismo subclínico (TSH suprimido com T4 livre e T3 livre normais) não foi descartado como achado laboratorial incidental irrelevante, dado seu risco documentado de FA, mortalidade e IC",
+        "origem_secao": "Hipertireoidismo subclínico: o mesmo risco, sem o T4 livre elevado"
+      },
+      {
+        "id": "hpa-confirmacao-t4-t3",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "TSH suprimido confirmado com dosagem de T4 livre e/ou T3 livre, diferenciando hipertireoidismo franco de subclínico",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "hpa-mecanismo-ic-investigado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Nos casos de IC nova ou de piora, considerados os dois mecanismos possíveis — taquicardiomiopatia por FA não controlada e descompensação de cardiopatia estrutural prévia pela sobrecarga hemodinâmica do estado hipertireóideo",
+        "origem_secao": "Risco de insuficiência cardíaca: dois mecanismos, reserva cardiovascular menor"
+      },
+      {
+        "id": "hpa-betabloqueador-titulacao",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Betabloqueador considerado como primeira linha para controle de frequência/sintomas enquanto se define o tratamento definitivo da tireotoxicose, com titulação cuidadosa no idoso frágil e atenção a hipotensão ou disfunção sinusal/de condução não diagnosticada",
+        "origem_secao": "Tratamento no idoso: controle de frequência como ponte, tratamento definitivo, e a cautela com amiodarona"
+      },
+      {
+        "id": "hpa-amiodarona-dupla-face",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Em uso ou consideração de amiodarona, reconhecido que a droga pode tanto causar quanto tratar disfunção tireoidiana, disparando avaliação tireoidiana dirigida quando indicado",
+        "origem_secao": "Um ponto de atenção específico deste contexto é a amiodarona"
+      },
+      {
+        "id": "hpa-ait-tipo1-tipo2",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diante de tireotoxicose associada à amiodarona (AIT), diferenciado o tipo 1 (tireoide previamente doente, tratado com tionamida ± perclorato) do tipo 2 (tireoidite destrutiva, tratada com glicocorticoide), reconhecendo formas mistas ou de diagnóstico indefinido",
+        "origem_secao": "AIT tipo 1 / AIT tipo 2 / Formas mistas ou de diagnóstico indefinido"
+      },
+      {
+        "id": "hpa-decisao-amiodarona-conjunta",
+        "categoria": "equipe",
+        "obrigatorio": false,
+        "texto": "Decisão de manter ou suspender a amiodarona tomada de forma individualizada e em conjunto entre cardiologia e endocrinologia, ponderando risco de recorrência arrítmica sem a droga versus tireotoxicose induzida por ela",
+        "origem_secao": "A decisão sobre manter ou suspender a amiodarona nesse cenário deve ser individualizada"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "avaliacao-e-manejo-cardiovascular-na-sindrome-de-cushing",
+    "condicao": "Avaliação e manejo cardiovascular no paciente com síndrome de Cushing (endógena ou exógena por corticoterapia crônica)",
+    "resumo": "Checklist de rastreio e manejo cardiovascular no paciente com síndrome de Cushing, endógena ou exógena por corticoterapia crônica: avaliação inicial de hipertensão, dislipidemia, resistência insulínica/diabetes e cardiomiopatia do hipercortisolismo, atenção ao estado pró-trombótico com tromboprofilaxia perioperatória, revisão ativa e periódica da dose/duração da corticoterapia crônica em vez da atribuição passiva aos \"efeitos esperados\", e seguimento cardiovascular prolongado mesmo após a cura bioquímica, dado o risco residual documentado em coortes de pacientes curados.",
+    "documento_origem": "sindrome-de-cushing-e-risco-cardiovascular-mecanismos-cardiomiopatia-e-risco-residual",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Lacroix A, Feelders RA, Stratakis CA, Nieman LK. Cushing's syndrome. Lancet. 2015;386(9996):913-927. DOI: 10.1016/S0140-6736(14)61375-1. PMID: 26004339",
+      "Fallo F, Di Dalmazi G, Beuschlein F, et al. Diagnosis and management of hypertension in patients with Cushing's syndrome: a position statement by the Working Group on Endocrine Hypertension of the European Society of Hypertension. J Hypertens. 2022;40(11):2085-2101. DOI: 10.1097/HJH.0000000000003252. PMID: 35950979",
+      "Isidori AM, Graziadio C, Paragliola RM, et al. The hypertension of Cushing's syndrome: controversies in the pathophysiology and focus on cardiovascular complications. J Hypertens. 2015;33(1):44-60. DOI: 10.1097/HJH.0000000000000415. PMID: 25415766",
+      "Pivonello R, De Martino MC, Iacuaniello D, et al. Metabolic Alterations and Cardiovascular Outcomes of Cortisol Excess. Front Horm Res. 2016;46:54-65. DOI: 10.1159/000443864. PMID: 27212264",
+      "Fleseriu M, Auchus R, Bancos I, et al. Consensus on diagnosis and management of Cushing's disease: a guideline update. Lancet Diabetes Endocrinol. 2021;9(12):847-875. DOI: 10.1016/S2213-8587(21)00235-7. PMID: 34687601",
+      "Nieman LK, Biller BMK, Findling JW, et al. The diagnosis of Cushing's syndrome: an Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2008;93(5):1526-1540. DOI: 10.1210/jc.2008-0125. PMID: 18334580",
+      "Wei L, MacDonald TM, Walker BR. Taking glucocorticoids by prescription is associated with cardiovascular disease. Ann Intern Med. 2004;141(10):764-770. DOI: 10.7326/0003-4819-141-10-200411160-00007. PMID: 15545676",
+      "Pujades-Rodriguez M, Morgan AW, Cubbon RM, Wu J. Dose-dependent oral glucocorticoid cardiovascular risks in people with immune-mediated inflammatory diseases: A population-based cohort study. PLoS Med. 2020;17(12):e1003432. DOI: 10.1371/journal.pmed.1003432. PMID: 33270649",
+      "Mebrahtu TF, Morgan AW, Keeley A, et al. Dose Dependency of Iatrogenic Glucocorticoid Excess and Mortality and Morbidity Rates in a Retrospective Cohort. J Clin Endocrinol Metab. 2019;104(9):3757-3767. DOI: 10.1210/jc.2019-00153. PMID: 31009052",
+      "Muiesan ML, Lupia M, Salvetti M, et al. Left ventricular structural and functional characteristics in Cushing's syndrome. J Am Coll Cardiol. 2003;41(12):2275-2279. DOI: 10.1016/s0735-1097(03)00493-5. PMID: 12821259",
+      "Feola T, Cozzolino A, De Alcubierre D, et al. Cardiac magnetic resonance reveals biventricular impairment in Cushing's syndrome. Endocrine. 2024;85(2):937-946. DOI: 10.1007/s12020-024-03856-7. PMID: 38775914",
+      "Barahona MJ, Sucunza N, Resmini E, et al. Persistent body fat mass and inflammatory marker increases after long-term cure of Cushing's syndrome. J Clin Endocrinol Metab. 2009;94(9):3365-3371. DOI: 10.1210/jc.2009-0766. PMID: 19509101",
+      "Barahona MJ, Resmini E, Viladés D, et al. Coronary artery disease detected by multislice computed tomography in patients after long-term cure of Cushing's syndrome. J Clin Endocrinol Metab. 2013;98(3):1093-1099. DOI: 10.1210/jc.2012-3547. PMID: 23393183",
+      "Van Zaane B, Nur E, Squizzato A, et al. Hypercoagulable state in Cushing's syndrome: a systematic review. J Clin Endocrinol Metab. 2009;94(8):2743-2750. DOI: 10.1210/jc.2009-0290. PMID: 19454584",
+      "Marchand L, Segrestin B, Lapoirie M, et al. Dilated Cardiomyopathy Revealing Cushing Disease: A Case Report and Literature Review. Medicine (Baltimore). 2015;94(46):e2011. DOI: 10.1097/MD.0000000000002011. PMID: 26579807",
+      "Chiodini I, Albani A, Ambrogio AG, et al. Six controversial issues on subclinical Cushing's syndrome. Endocrine. 2017;56(2):262-266. DOI: 10.1007/s12020-016-1017-3. PMID: 27406391",
+      "Muscogiuri G, Albertelli M, Arnaldi G, et al. Dyslipidemias associated with endocrine disorders: a position statement of the Working Group of the Nutrition Hormones and Metabolism Club of the Italian Society of Endocrinology (SIE). J Endocrinol Invest. 2026;49(8):1699-1742. DOI: 10.1007/s40618-026-02862-y. PMID: 42171669"
+    ],
+    "itens": [
+      {
+        "id": "cushing-cv-rastreio-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ao diagnóstico de síndrome de Cushing (endógena ou exógena), rastreio cardiovascular realizado: pressão arterial, perfil lipídico completo, glicemia/HbA1c e avaliação de obesidade central (circunferência abdominal)",
+        "origem_secao": "Os demais eixos do dano metabólico: dislipidemia, resistência insulínica, obesidade central"
+      },
+      {
+        "id": "cushing-cv-eco-ecg",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG e ecocardiograma solicitados na avaliação inicial, com atenção a hipertrofia ventricular concêntrica e disfunção diastólica mesmo com fração de ejeção convencional preservada",
+        "origem_secao": "A cardiomiopatia do hipercortisolismo: hipertrofia, disfunção diastólica e, nos casos graves, dilatação"
+      },
+      {
+        "id": "cushing-cv-rm-cardiaca",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ressonância magnética cardíaca considerada quando houver suspeita de comprometimento biventricular ou disfunção sistólica não totalmente explicada pelo ecocardiograma",
+        "origem_secao": "A cardiomiopatia do hipercortisolismo: hipertrofia, disfunção diastólica e, nos casos graves, dilatação"
+      },
+      {
+        "id": "cushing-cv-hipertensao-mecanismo",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Hipertensão tratada reconhecendo os múltiplos mecanismos concorrentes (ocupação do receptor mineralocorticoide, ativação do SRAA, potencialização catecolaminérgica, remodelamento vascular); antagonista do receptor mineralocorticoide considerado nos hipercortisolismos mais intensos e nos casos refratários a anti-hipertensivos convencionais",
+        "origem_secao": "Os mecanismos da hipertensão arterial no excesso de cortisol"
+      },
+      {
+        "id": "cushing-cv-dislipidemia-glicemia",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Dislipidemia e resistência insulínica/diabetes tratadas de forma intensiva e reconhecidas como manifestação do hipercortisolismo — não isoladas como dislipidemia ou diabetes primárias sem investigar a causa hormonal",
+        "origem_secao": "Os demais eixos do dano metabólico: dislipidemia, resistência insulínica, obesidade central"
+      },
+      {
+        "id": "cushing-cv-tromboprofilaxia",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Estado pró-trombótico reconhecido ativamente; tromboprofilaxia perioperatória estendida considerada em cirurgia hipofisária ou adrenal, e risco tromboembólico avaliado mesmo fora do contexto cirúrgico",
+        "origem_secao": "O estado pró-trombótico: um mecanismo frequentemente esquecido"
+      },
+      {
+        "id": "cushing-cv-cmd-triagem",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em cardiomiopatia dilatada de causa não esclarecida, hipercortisolismo (endógeno ou por uso não revelado de corticoide) incluído entre os diagnósticos diferenciais a excluir",
+        "origem_secao": "A cardiomiopatia do hipercortisolismo: hipertrofia, disfunção diastólica e, nos casos graves, dilatação"
+      },
+      {
+        "id": "cushing-cv-revisao-dose-corticoide",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Em paciente sob corticoterapia sistêmica crônica, dose e duração revisadas periodicamente como variável ativa a ser minimizada — não aceitas passivamente como parâmetro fixo definido no início do tratamento",
+        "origem_secao": "A armadilha do corticoide crônico"
+      },
+      {
+        "id": "cushing-cv-eixo-hha",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Supressão do eixo hipotálamo-hipófise-adrenal pelo uso exógeno crônico monitorada como parte contínua do raciocínio de risco cardiovascular, não apenas no momento da retirada do corticoide",
+        "origem_secao": "A armadilha do corticoide crônico"
+      },
+      {
+        "id": "cushing-cv-nao-atribuir-passivamente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de hipertensão de difícil controle, ganho de peso central progressivo ou diabetes de início recente em uso de corticoide crônico, a atribuição aos \"efeitos esperados\" do medicamento não encerrou a investigação sem revisitar dose/duração e supressão do eixo",
+        "origem_secao": "A armadilha do corticoide crônico"
+      },
+      {
+        "id": "cushing-cv-seguimento-pos-cura",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento cardiovascular mantido de forma ativa e prolongada após a cura bioquímica confirmada, sem encerramento do acompanhamento apenas pela normalização do cortisol",
+        "origem_secao": "O risco cardiovascular residual"
+      },
+      {
+        "id": "cushing-cv-risco-residual-avaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "No paciente curado, risco cardiovascular residual reavaliado periodicamente (perfil lipídico, glicemia, pressão arterial e, quando indicado clinicamente, investigação de aterosclerose coronariana subclínica), reconhecendo que massa gorda visceral e marcadores inflamatórios podem permanecer alterados anos após a remissão",
+        "origem_secao": "O risco cardiovascular residual"
+      },
+      {
+        "id": "cushing-cv-diagnostico-precoce",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Diagnóstico etiológico conduzido sem atraso desnecessário, reconhecendo que a exposição cumulativa (intensidade × duração) ao excesso de cortisol determina o risco residual esperado, inclusive nas formas subclínicas de hipercortisolismo endógeno",
+        "origem_secao": "O risco cardiovascular residual"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
