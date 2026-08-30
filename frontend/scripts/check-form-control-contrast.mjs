@@ -7,10 +7,12 @@ const cssPath = path.join(raiz, "src/styles/clinical-form-control-contrast.css")
 const assistantCssPath = path.join(raiz, "src/styles/clinical-assistant-command.css");
 const assistantPagePath = path.join(raiz, "src/pages/Assistente.tsx");
 const mainPath = path.join(raiz, "src/main.tsx");
+const manifestPath = path.join(raiz, "src/styles/app.css");
 const css = fs.readFileSync(cssPath, "utf8");
 const assistantCss = fs.readFileSync(assistantCssPath, "utf8");
 const assistantPage = fs.readFileSync(assistantPagePath, "utf8");
 const main = fs.readFileSync(mainPath, "utf8");
+const manifest = fs.readFileSync(manifestPath, "utf8");
 
 function exigir(condicao, mensagem) {
   if (!condicao) {
@@ -19,15 +21,20 @@ function exigir(condicao, mensagem) {
   }
 }
 
-const importContrato = 'import "./styles/clinical-form-control-contrast.css";';
-const indiceContrato = main.indexOf(importContrato);
-const ultimoImportCss = [...main.matchAll(/^import "\.\/styles\/[^\"]+\.css";$/gm)].at(-1)?.index ?? -1;
+const importManifesto = 'import "./styles/app.css";';
+const importContrato = '@import "./clinical-form-control-contrast.css";';
+const importSegurancaClinica = '@import "./clinical-safety-legibility.css";';
+const indiceContrato = manifest.indexOf(importContrato);
+const indiceSegurancaClinica = manifest.indexOf(importSegurancaClinica);
 
 exigir(fs.existsSync(cssPath), "clinical-form-control-contrast.css precisa existir.");
 exigir(fs.existsSync(assistantCssPath), "clinical-assistant-command.css precisa existir.");
 exigir(fs.existsSync(assistantPagePath), "Assistente.tsx precisa existir.");
-exigir(indiceContrato >= 0, "main.tsx precisa importar o contrato global de contraste.");
-exigir(indiceContrato === ultimoImportCss, "o contrato de contraste precisa ser a última folha CSS importada.");
+exigir(fs.existsSync(manifestPath), "app.css precisa ser o manifesto da cascata global.");
+exigir(main.includes(importManifesto), "main.tsx precisa importar o manifesto global app.css.");
+exigir(indiceContrato >= 0, "app.css precisa importar o contrato global de contraste.");
+exigir(indiceSegurancaClinica > indiceContrato,
+  "contraste deve permanecer imediatamente antes do contrato final de segurança clínica.");
 
 for (const trecho of [
   ".clinical-os input:not([type=\"checkbox\"])",

@@ -1,0 +1,83 @@
+/* CorVIA global cascade manifest.
+ *
+ * Keep this file as the only global stylesheet imported by main.tsx.  The
+ * sections below document the intentional cascade from foundations to release
+ * compatibility.  Page-local styles remain colocated with their components.
+ * The safety contracts at the end must always win the global cascade.
+ */
+
+/* 1. Foundations and public surfaces. */
+@import "./tokens.css";
+@import "./shell.css";
+@import "./clinical-os.css";
+@import "./clinical-os-polish.css";
+@import "./clinical-os-a11y.css";
+@import "./produto.css";
+@import "./tour.css";
+@import "./tour-clinical-os.css";
+@import "./tour-branding-hotfix.css";
+
+/* 2. Clinical domains. */
+@import "./clinical-command-center-v2.css";
+@import "./clinical-pages-v2.css";
+@import "./clinical-interactions-v2.css";
+@import "./clinical-tools-v2.css";
+@import "./clinical-exams-v2.css";
+@import "./clinical-guidelines-v2.css";
+@import "./clinical-medications-v2.css";
+@import "./clinical-knowledge-v2.css";
+@import "./clinical-evidence-v2.css";
+@import "./clinical-work-v2.css";
+@import "./clinical-mobile-nav-v2.css";
+@import "./public-clinical-command-v2.css";
+@import "./clinical-command-center-canonical.css";
+@import "./clinical-mobile-more-canonical.css";
+@import "./corvia-mail-clinical-command.css";
+@import "./corvia-mail-brand.css";
+@import "./clinical-domains-canonical.css";
+@import "./clinical-patient-command.css";
+@import "./clinical-agenda-command.css";
+@import "./clinical-documents-command.css";
+@import "./clinical-assistant-command.css";
+@import "./clinical-intelligence-context.css";
+@import "./clinical-account-admin-command.css";
+@import "./clinical-editorial-safety.css";
+@import "./clinical-contextual-tip.css";
+@import "./clinical-agenda-final-polish.css";
+@import "./clinical-brand-final.css";
+@import "./clinical-overlay-safety.css";
+@import "./clinical-command-center-compat.css";
+
+/* 3. Canonical fidelity layers. */
+@import "./clinical-canonical-fidelity.css";
+@import "./clinical-home-board-fidelity.css";
+@import "./clinical-shell-board-fidelity.css";
+@import "./clinical-medication-board-fidelity.css";
+@import "./clinical-patient-board-fidelity.css";
+@import "./clinical-emergency-board-fidelity.css";
+@import "./clinical-assistant-board-fidelity.css";
+@import "./clinical-home-mobile-final.css";
+@import "./clinical-full-viewport.css";
+@import "./clinical-release-hardening.css";
+@import "./prehome-approved-auth-flow.css";
+@import "./prehome-reference-final.css";
+@import "./clinical-reference-board-final.css";
+@import "./clinical-navigation-reference-final.css";
+@import "./clinical-reference-fidelity-release.css";
+
+/* 4. Legacy release compatibility.  New component styling should not be
+ * added here; migrate it into the owning clinical-domain sheet instead. */
+@import "./release-candidate-hotfix.css";
+@import "./clinical-interior-board-lock.css";
+@import "./postdeploy-home-density.css";
+@import "./mobile-header-composed.css";
+@import "./corvia-via-blue-global.css";
+@import "./product-stabilization-final.css";
+@import "./clinical-pixel-polish-conservative.css";
+@import "./home-desktop-symmetric-personalizable.css";
+@import "./clinical-ecg-featured.css";
+@import "./tudo-com-tudo.css";
+
+/* 5. Non-negotiable accessibility and clinical-safety contracts. */
+@import "./clinical-form-control-contrast.css";
+@import "./clinical-safety-legibility.css";
