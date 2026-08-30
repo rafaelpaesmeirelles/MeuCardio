@@ -4,12 +4,12 @@ slug: fluxograma-proxima-camada-diuretica-apos-alca-advor-clorotic
 theme: "Insuficiência cardíaca"
 kind: fluxograma
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Árvore estrita da camada depois da alça já otimizada: portas de NÃO associar, escolha entre acetazolamida IV (ADVOR) e hidroclorotiazida oral (CLOROTIC), parada na euvolemia. Não substitui o fluxograma amplo de resistência (que inclui ultrafiltração) nem o de sódio urinário. Números citados nas folhas vêm dos abstracts MEDLINE PMID 36027559 e 36423214 lidos nesta sessão. Classe IIa B1 extraída da Recommendation Table 9 da ESC 2026 (DOI 10.1093/eurheartj/ehag100); PDF 403. Sem corte numérico inventado de débito urinário."
+review_status: revisado
+review_note: "Árvore estrita da camada depois da alça já otimizada: portas de NÃO associar, escolha entre acetazolamida IV (ADVOR) e hidroclorotiazida oral (CLOROTIC), parada na euvolemia. Não substitui o fluxograma amplo de resistência (que inclui ultrafiltração) nem o de sódio urinário. Números citados nas folhas vêm dos abstracts MEDLINE PMID 36027559 e 36423214 lidos nesta revisão editorial. Classe IIa B1 extraída da Recommendation Table 9 da ESC 2026 (DOI 10.1093/eurheartj/ehag100); PDF 403. Sem corte numérico inventado de débito urinário."
 source_refs:
-  - "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559. Abstract MEDLINE lido via E-utilities nesta sessão."
-  - "Trullàs JC, Morales-Rull JL, Casado J, et al.; CLOROTIC trial investigators. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214. Abstract MEDLINE lido via E-utilities nesta sessão."
-  - "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9 extraída da página oficial nesta sessão."
+  - "Mullens W, Dauw J, Martens P, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559. Abstract MEDLINE lido via E-utilities nesta revisão editorial."
+  - "Trullàs JC, Morales-Rull JL, Casado J, et al.; CLOROTIC trial investigators. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214. Abstract MEDLINE lido via E-utilities nesta revisão editorial."
+  - "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9 extraída da página oficial nesta revisão editorial."
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992."
 legacy_source: "Fluxograma novo, 29/08/2026. Zoom de um único nó que o fluxograma-resistencia-diuretica-e-congestao-refrataria-na-ic-aguda.md trata como escolha binária acetazolamida vs. tiazídico, sem as portas de segurança nem o que cada ensaio autoriza a prometer. Não reescreve aquela árvore, nem a de IC aguda descompensada, nem a de sódio urinário."
 ---

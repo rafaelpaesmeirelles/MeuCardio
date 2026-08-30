@@ -90,19 +90,126 @@
       "Gestação: limites diagnósticos e estratégia de reposição são específicos e requerem protocolo obstétrico."
     ],
     "assistant_questions": [
-      {"id": "acute_bleeding", "label": "Há sangramento ativo, instabilidade ou queda aguda importante de hemoglobina?", "type": "boolean", "required": true, "section": "Red flags"},
-      {"id": "heart_failure", "label": "Há insuficiência cardíaca sintomática?", "type": "boolean", "section": "Fenótipo"},
-      {"id": "iron_studies", "label": "Ferritina e saturação de transferrina estão disponíveis?", "type": "boolean", "section": "Ferro"},
-      {"id": "acute_mi", "label": "Há infarto agudo do miocárdio ou isquemia miocárdica em curso?", "type": "boolean", "section": "Isquemia"},
-      {"id": "antithrombotic", "label": "O paciente usa anticoagulante ou antiagregante?", "type": "boolean", "section": "Sangramento"}
+      {
+        "id": "acute_bleeding",
+        "label": "Há sangramento ativo, instabilidade ou queda aguda importante de hemoglobina?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "heart_failure",
+        "label": "Há insuficiência cardíaca sintomática?",
+        "type": "boolean",
+        "section": "Fenótipo"
+      },
+      {
+        "id": "iron_studies",
+        "label": "Ferritina e saturação de transferrina estão disponíveis?",
+        "type": "boolean",
+        "section": "Ferro"
+      },
+      {
+        "id": "acute_mi",
+        "label": "Há infarto agudo do miocárdio ou isquemia miocárdica em curso?",
+        "type": "boolean",
+        "section": "Isquemia"
+      },
+      {
+        "id": "antithrombotic",
+        "label": "O paciente usa anticoagulante ou antiagregante?",
+        "type": "boolean",
+        "section": "Sangramento"
+      }
     ],
     "assistant_rules": [
-      {"id": "anemia-bleeding-redflag", "priority": 100, "when": {"all": [{"field": "acute_bleeding", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Anemia associada a sangramento/instabilidade requer avaliação imediata."], "emergency_flow": ["Estabilizar, localizar/controlar sangramento e individualizar transfusão conforme quadro clínico."]}},
-      {"id": "hf-iron", "priority": 80, "when": {"all": [{"field": "heart_failure", "op": "truthy"}]}, "add": {"suggested_tests": ["Ferritina e saturação de transferrina"], "supporting": ["Na insuficiência cardíaca, deficiência de ferro pode ser relevante mesmo sem anemia."]}},
-      {"id": "mi-anemia", "priority": 90, "when": {"all": [{"field": "acute_mi", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["IAM com anemia exige estratégia transfusional individualizada; não aplicar automaticamente limiar restritivo de pacientes estáveis sem isquemia."]}},
-      {"id": "antithrombotic-anemia", "priority": 70, "when": {"all": [{"field": "antithrombotic", "op": "truthy"}]}, "add": {"supporting": ["Em uso de antitrombóticos, queda de hemoglobina aumenta a prioridade de excluir sangramento oculto ou ativo."]}}
+      {
+        "id": "anemia-bleeding-redflag",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "acute_bleeding",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Anemia associada a sangramento/instabilidade requer avaliação imediata."
+          ],
+          "emergency_flow": [
+            "Estabilizar, localizar/controlar sangramento e individualizar transfusão conforme quadro clínico."
+          ]
+        }
+      },
+      {
+        "id": "hf-iron",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "heart_failure",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Ferritina e saturação de transferrina"
+          ],
+          "supporting": [
+            "Na insuficiência cardíaca, deficiência de ferro pode ser relevante mesmo sem anemia."
+          ]
+        }
+      },
+      {
+        "id": "mi-anemia",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "acute_mi",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "IAM com anemia exige estratégia transfusional individualizada; não aplicar automaticamente limiar restritivo de pacientes estáveis sem isquemia."
+          ]
+        }
+      },
+      {
+        "id": "antithrombotic-anemia",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "antithrombotic",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Em uso de antitrombóticos, queda de hemoglobina aumenta a prioridade de excluir sangramento oculto ou ativo."
+          ]
+        }
+      }
     ],
-    "tags": ["anemia", "deficiencia de ferro", "ferro intravenoso", "insuficiencia cardiaca", "MINT", "ferritina", "TSAT", "transfusao"],
+    "tags": [
+      "anemia",
+      "deficiencia de ferro",
+      "ferro intravenoso",
+      "insuficiencia cardiaca",
+      "MINT",
+      "ferritina",
+      "TSAT",
+      "transfusao"
+    ],
     "source_refs": [
       "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. doi:10.1161/CIR.0000000000001063.",
       "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44:3627-3639.",
@@ -117,7 +224,7 @@
     ],
     "related_document_slugs": [],
     "patient_material_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "review_note": "Novo hub aditivo de anemia/ferro com ênfase cardiovascular. PRs #249/#284 têm checklists de deficiência de ferro na IC, mas não criam hub de doença; busca na main não confirmou documento central com slug estável para relacionamento, então related_document_slugs permanece vazio. Manter pendente até revisão editorial humana."
   }
 ]

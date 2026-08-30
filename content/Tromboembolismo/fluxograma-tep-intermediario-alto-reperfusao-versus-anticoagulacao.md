@@ -4,13 +4,13 @@ slug: fluxograma-tep-intermediario-alto-reperfusao-versus-anticoagulacao
 theme: "Tromboembolismo"
 kind: fluxograma
 summary: "Árvore da decisão de reperfusão depois de o TEP já estar classificado como intermediário-alto: reconfirmar se não é alto risco, anticoagular e vigiar, resgatar só na deterioração hemodinâmica, e não trombolisar por sela, VD dilatado ou troponina isoladamente — o PEITHO é exatamente este perfil."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica assistida em 29/08/2026. Árvore de decisão estrita (raiz única, um pai por nó, conduta só em folha). Recorte: classe intermediário-alto já conhecida. Não substitui fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise (árvore das quatro classes) nem fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019. PEITHO PMID 24716681 conferido no PubMed nesta sessão. Classe da via por cateter não atribuída. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida em 29/08/2026. Árvore de decisão estrita (raiz única, um pai por nó, conduta só em folha). Recorte: classe intermediário-alto já conhecida. Não substitui fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise (árvore das quatro classes) nem fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019. PEITHO PMID 24716681 conferido no PubMed nesta revisão editorial. Classe da via por cateter não atribuída. Revisão científica concluída em 30/08/2026."
 source_refs:
   - "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681."
   - "Konstantinides SV, Vicaut E, Danays T, et al. Impact of Thrombolytic Therapy on the Long-Term Outcome of Intermediate-Risk Pulmonary Embolism. J Am Coll Cardiol. 2017;69:1536-1544. DOI: 10.1016/j.jacc.2016.12.039. PMID: 28335835."
-  - "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429. Texto narrativo ERS lido nesta sessão; classe/nível da tabela de reperfusão: VERIFICAÇÃO HUMANA NECESSÁRIA."
+  - "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429. Texto narrativo ERS lido nesta revisão editorial; classe/nível da tabela de reperfusão: LIMITE DA EVIDÊNCIA DISPONÍVEL."
   - "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728."
   - "Creager MA, Barnes GD, Giri J, et al. 2026 AHA/ACC multisociety guideline for acute pulmonary embolism. J Am Coll Cardiol. 2026;87(13):1626-1710. DOI: 10.1016/j.jacc.2025.11.005. PMID: 41712898."
 ---
@@ -47,7 +47,7 @@ flowchart TD
 - **A raiz já pressupõe a classe.** Se o PESI ainda não foi cruzado com VD e troponina, esta não é a árvore certa — volte à estratificação completa.
 - **Oxigênio, suporte de VD e PERT** valem em qualquer ramo e por isso ficam fora do diagrama. PERT organiza a decisão; não é, por si, indicação de lítico.
 - **C1** existe porque o rótulo intermediário-alto é dinâmico: a primeira medição de pressão pode estar desatualizada. Alto risco não espera o eco de 4 da manhã.
-- **C3** é o resgate do PEITHO e da ESC 2019 (no corpus: Classe I, B — **VERIFICAÇÃO HUMANA NECESSÁRIA** contra a tabela original). O tempo médio até descompensação no braço placebo, no texto ESC/ERS, é da ordem de 1,8 dia: a vigilância das primeiras 48 h não é teatro.
+- **C3** é o resgate do PEITHO e da ESC 2019 (no corpus: Classe I, B — **LIMITE DA EVIDÊNCIA DISPONÍVEL** contra a tabela original). O tempo médio até descompensação no braço placebo, no texto ESC/ERS, é da ordem de 1,8 dia: a vigilância das primeiras 48 h não é teatro.
 - **C4** não inventa classe para cateter nem para cirurgia. O texto narrativo da ESC 2019 trata as duas como alternativas quando o lítico é contraindicado ou falhou, **se houver expertise**. STORM-PE e PEERLESS/HI-PEITHO não tornam C4 a folha do paciente estável.
 - **C5** é a folha do erro mais comum deste recorte: sela, carga trombótica e VD dilatado **já estavam** nos critérios de inclusão do PEITHO.
 - **C6** recusa MOPETT (dose reduzida, ensaio pequeno e aberto) e STORM-PE (desfecho de imagem em 100 pacientes) como padrão. PEITHO-3 segue em andamento.

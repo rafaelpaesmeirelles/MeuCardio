@@ -1,0 +1,742 @@
+[
+  {
+    "slug": "valvopatia-elegibilidade-esportiva-atleta",
+    "name": "Doença valvar e elegibilidade esportiva no atleta",
+    "aliases": [
+      "Valvopatia no atleta e participação esportiva",
+      "Elegibilidade esportiva na doença valvar",
+      "Valvular heart disease and sports eligibility in athletes",
+      "Estenose e regurgitação valvar no atleta: critérios de liberação esportiva",
+      "Participação esportiva em cardiopatia valvar (ESC 2020 / AHA-ACC 2025)"
+    ],
+    "area": "geral",
+    "category": "avaliacao_esportiva",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Este verbete organiza, de forma multiparamétrica e por lesão, a decisão de elegibilidade esportiva (esporte recreativo e competitivo) em atletas e praticantes de exercício com doença valvar estrutural — estenose aórtica, regurgitação aórtica, valva aórtica bicúspide sem aortopatia relevante, regurgitação mitral primária, prolapso da valva mitral, estenose mitral, regurgitação tricúspide e prótese valvar. É o maior bloco de evidência pendente identificado na auditoria do tema Cardiologia do Esporte e do Exercício, com recomendações graduadas por classe e nível para cada combinação de lesão × gravidade × tipo de esporte na 2020 ESC Guidelines on Sports Cardiology and Exercise, complementadas pelo statement AHA/ACC 2025 e pelo position statement da EAPC dedicado a valvopatia e esporte competitivo (van Buuren et al., 2021). A lógica central, consistente em todas as lesões, é que nenhuma variável isolada decide elegibilidade: gravidade anatômica/hemodinâmica, presença de sintomas, função ventricular, pressão pulmonar, resposta pressórica e arrítmica ao esforço, e eventual aortopatia associada precisam ser integradas antes de qualquer liberação ou restrição — e, quando a lesão já preenche critério de intervenção pela diretriz valvar vigente (ESC/EACTS 2025), a discussão deixa de ser sobre esporte e passa a ser sobre tratamento da valvopatia. Este verbete deliberadamente NÃO trata de triagem pré-participação esportiva em geral, de coração de atleta versus cardiomiopatia hipertrófica, nem de morte súbita cardíaca no esporte além da CMH — temas já produzidos em outra frente desta mesma sessão — nem reproduz o corpo completo das oito tabelas graduadas por classe/nível já publicadas no documento narrativo companheiro desta biblioteca.",
+    "epidemiology": "Doença valvar clinicamente relevante é incomum, mas não rara, em populações de atletas e praticantes de exercício estruturado, sobretudo quando se somam causas congênitas (valva aórtica bicúspide, prolapso mitral), degenerativas em atletas master e sequelas de febre reumática. A valva aórtica bicúspide é a malformação cardíaca congênita mais comum na população geral e, por isso, também a lesão valvar mais frequentemente encontrada incidentalmente em triagem pré-participação esportiva. O prolapso da valva mitral é achado ecocardiográfico frequente na população em geral e, na grande maioria dos casos, não define por si só risco relevante — o desafio específico em cardiologia do esporte é reconhecer o subgrupo com fenótipo arrítmico (Perazzolo Marra et al., JACC Clin Electrophysiol 2024, PMID 38340116; Chakrabarti et al., Circ Arrhythm Electrophysiol 2025, PMID 39973752), já descrito como causa não incomum de morte súbita em jovens e mulheres, incluindo atletas. A literatura de cardiologia do esporte mudou de paradigma na última década: abordagens históricas de desqualificação automática por diagnóstico valvar deram lugar a estratificação de risco individualizada e decisão compartilhada, formalizada tanto pela EAPC em 2021 (van Buuren et al., Eur J Prev Cardiol 2021, PMID 33846742) quanto pelo statement conjunto AHA/ACC de 2025 (Kim et al., Circulation 2025, PMID 39973614). Ao mesmo tempo, a diretriz valvar de referência para gravidade e indicação de intervenção foi atualizada em 2025 (Praz et al., Eur J Cardiothorac Surg 2025, PMID 40878291), o que exige reconciliação permanente entre os cortes esportivos (baseados na diretriz de esportes de 2020) e os critérios de gravidade/intervenção mais atuais.",
+    "presentation": [
+      "Sopro cardíaco identificado em exame físico de rotina ou em avaliação pré-participação esportiva, sem sintomas referidos pelo atleta",
+      "Achado ecocardiográfico incidental de espessamento, calcificação, prolapso ou refluxo valvar em atleta assintomático",
+      "Diagnóstico prévio conhecido de valvopatia (congênita, reumática, degenerativa ou pós-endocardite) em atleta que busca orientação sobre qual modalidade e intensidade de esporte pode praticar",
+      "Sintomas relacionados a esforço em atleta com valvopatia conhecida ou não diagnosticada — dispneia desproporcional, dor torácica, palpitações, síncope ou pré-síncope",
+      "Investigação de alteração eletrocardiográfica ou de desempenho em teste de esforço que motiva ecocardiograma e revela lesão valvar não conhecida previamente",
+      "Atleta com prótese valvar (mecânica ou biológica) ou pós-intervenção valvar percutânea/cirúrgica buscando orientação sobre retorno ao esporte",
+      "Atleta em fibrilação atrial associada a valvopatia (sobretudo estenose mitral), em uso de anticoagulação, buscando orientação sobre esportes de contato ou colisão",
+      "Achado de prolapso mitral com uma ou mais características do fenótipo arrítmico identificado durante investigação de palpitações ou síncope no atleta"
+    ],
+    "diagnostic_approach": {
+      "principio_geral": "A decisão de elegibilidade esportiva em doença valvar nunca se apoia em um único parâmetro. As oito lesões cobertas pela 2020 ESC Guidelines on Sports Cardiology integram sistematicamente: gravidade anatômica/hemodinâmica, sintomas, função ventricular, pressão pulmonar, resposta pressórica e arrítmica ao teste de esforço e, quando aplicável, aortopatia associada e ritmo cardíaco. Antes de aplicar qualquer corte de gravidade, a indicação de intervenção deve ser reconciliada com a diretriz valvar vigente (ESC/EACTS 2025, PMID 40878291) — se já há indicação formal de troca/reparo valvar, a discussão deixa de ser sobre elegibilidade esportiva e passa a ser sobre tratamento da valvopatia.",
+      "estenose_aortica": "Gravidade definida por velocidade transvalvar por Doppler, gradiente médio e área valvar calculada. Achado de alerta ao esforço: queda progressiva da pressão sistólica, ou falha em elevá-la em pelo menos 20 mmHg. Em gradiente baixo com área reduzida e fração de ejeção deprimida, ecocardiograma sob estresse com dobutamina em dose baixa diferencia estenose pseudograve de verdadeiramente grave (SBC 2024, PMID 38896581). Estenose leve não restringe esporte; moderada e grave dependem de função ventricular preservada, boa capacidade funcional e resposta pressórica normal ao esforço; sintomas contraindicam esporte competitivo, com indicação de troca valvar.",
+      "regurgitacao_aortica": "Remodelamento fisiológico do VE em atletas de endurance pode mimetizar dilatação patológica — cortes de diâmetro diastólico e sistólico final do VE, diferentes por sexo, ajudam nessa diferenciação. Leve não restringe; moderada e grave dependem de VE não dilatado (ou leve a moderadamente), fração de ejeção preservada e teste de esforço normal. Grave com FE reduzida ou arritmia induzida contraindica esporte competitivo, com indicação cirúrgica.",
+      "valva_aortica_bicuspide": "Sem corte numérico próprio na diretriz de esportes. Exige avaliação de dois eixos independentes — repercussão valvar (estenose/regurgitação) e dimensão/comportamento da aorta ascendente. Sem disfunção valvar nem aortopatia associada, recomendação segue igual à valva tricúspide normal.",
+      "regurgitacao_mitral_primaria": "Quatro critérios integrados: diâmetro diastólico final do VE (indexado por sexo), fração de ejeção preservada, PSAP de repouso normal, e teste de esforço normal. Preenchidos os quatro, leve a moderada permite ampla participação; grave permite participação mais restrita. FE abaixo do limiar contraindica esporte competitivo independentemente da gravidade. FA associada com anticoagulação de longo prazo: esporte de contato/colisão não deve ser praticado.",
+      "prolapso_mitral": "Prolapso isolado (sem regurgitação relevante) não deve gerar desqualificação automática. O desafio é reconhecer o subgrupo com fenótipo arrítmico: ectopia ventricular frequente/complexa, TV documentada, disjunção do anel mitral (MAD), fibrose/realce tardio em RM, ou história de parada cardíaca/arritmia ventricular sustentada. Carga de exercício ao longo da vida, isoladamente, não mostrou relação simples com arritmia grave em coorte de PVM (Perazzolo Marra et al., PMID 38340116; Chakrabarti et al., PMID 39973752).",
+      "estenose_mitral": "Gravidade por área valvar mitral. Mesmo leve/moderada, participação ampla exige PSAP de repouso normal e teste de esforço normal. Grave contraindica esporte de intensidade moderada/alta. Sintomas redirecionam para intervenção. FA associada exige anticoagulação e contraindica esporte de contato/colisão. Após valvuloplastia por balão com bom resultado, esporte competitivo pode ser reconsiderado.",
+      "regurgitacao_tricuspide": "Orientação em texto corrido, não tabela graduada. Leve é achado comum e fisiológico no atleta. Grave cursa com dilatação anular progressiva e eventual disfunção de VD. Liberação ampla depende de assintomático, boa capacidade funcional, VD não dilatado, função preservada, PSAP normal e ausência de arritmia complexa.",
+      "protese_valvar_lacuna_de_evidencia": "A 2020 ESC Guidelines on Sports Cardiology não contém seção dedicada a cortes de elegibilidade esportiva para prótese valvar — lacuna confirmada. O único ponto relacionado é a restrição genérica de esporte de contato/colisão sob anticoagulação de longo prazo por FA. Nenhum corte numérico específico de prótese deve ser inventado; conduta prática é reavaliação individualizada por Heart Team.",
+      "populacoes_especificas": "Atleta feminina: cortes de dimensão ventricular são explicitamente diferentes por sexo. Atleta master: maior probabilidade de valvopatia degenerativa coexistir com risco cardiovascular tradicional. Atleta com PVM: fenótipo arrítmico exige reconhecimento ativo. Atleta com prótese: lacuna declarada de evidência esportiva específica."
+    },
+    "differentials": [
+      "Remodelamento cardíaco fisiológico do atleta ('coração de atleta'), que pode mimetizar dilatação ventricular leve",
+      "Sopro funcional/inocente sem substrato estrutural, a diferenciar de sopro orgânico",
+      "Hipertensão pulmonar de outra causa quando há pressão pulmonar elevada desproporcional à gravidade valvar documentada",
+      "Cardiomiopatia (dilatada, hipertrófica ou arritmogênica) como causa primária, quando a valvopatia identificada é leve e não explica o quadro",
+      "Doença coronariana associada, sobretudo em atleta master, coexistindo com valvopatia degenerativa",
+      "Endocardite infecciosa como causa aguda de disfunção valvar nova ou piora de valvopatia prévia"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico como exame inicial obrigatório para classificar lesão, mecanismo e gravidade",
+      "Teste ergométrico ou cardiopulmonar de esforço, reproduzindo quando possível a intensidade da modalidade praticada",
+      "Ecocardiograma sob estresse (esforço ou dobutamina em dose baixa), reservado a discrepância entre sintomas e gravidade — uso formalizado pela diretriz brasileira de ergometria (SBC 2024)",
+      "Escore de cálcio valvar aórtico por tomografia, em casos limítrofes de gravidade da estenose aórtica com gradiente baixo",
+      "Ressonância magnética cardíaca, quando ecocardiografia é inconclusiva ou há suspeita de fenótipo arrítmico associado ao prolapso mitral",
+      "Holter ou monitorização de ritmo prolongada, quando há palpitações, ectopia ventricular ou suspeita de arritmia",
+      "Eletrocardiograma de 12 derivações, como parte da avaliação cardiovascular geral",
+      "Cateterismo cardíaco, reservado a casos selecionados com avaliação não invasiva inconclusiva"
+    ],
+    "red_flags": [
+      "Sintomas relacionados a esforço em atleta com valvopatia conhecida ou suspeita",
+      "Queda progressiva da PAS ao esforço, ou falha em elevá-la em pelo menos 20 mmHg, em estenose aórtica",
+      "Fração de ejeção reduzida abaixo do limiar exigido pela lesão (≥50% nas lesões aórticas, ≥60% na regurgitação mitral primária)",
+      "PSAP de repouso elevada acima do limiar da lesão",
+      "Arritmia ventricular complexa ou taquicardia ventricular documentada ou induzida por esforço",
+      "Achados do fenótipo arrítmico do prolapso mitral: disjunção do anel mitral, fibrose/realce tardio, ectopia frequente, história de parada cardíaca",
+      "Fibrilação atrial associada com anticoagulação em atleta de esporte de contato/colisão",
+      "Estenose aórtica ou mitral grave, mesmo levemente sintomática, que já reclassifica para intervenção",
+      "Achado já compatível com critério de intervenção pela diretriz valvar vigente (ESC/EACTS 2025)",
+      "Febre, sopro novo ou piora clínica inexplicada em atleta com valvopatia conhecida"
+    ],
+    "ambulatory_flow": [
+      "Confirmar e classificar a lesão valvar por ecocardiograma transtorácico: mecanismo, gravidade, função ventricular e pressão pulmonar estimada.",
+      "Reconciliar gravidade e eventual indicação de intervenção com a diretriz valvar vigente (ESC/EACTS 2025) antes de discutir elegibilidade esportiva.",
+      "Investigar sintomas de forma dirigida; presença de sintomas contraindica, na maioria das lesões, esporte competitivo e recreativo de intensidade relevante.",
+      "Realizar teste de esforço reproduzindo a intensidade da modalidade pretendida.",
+      "Quando houver discrepância entre sintomas e gravidade, considerar ecocardiograma sob estresse.",
+      "Classificar a modalidade como recreativa ou competitiva e seu componente dinâmico/estático/contato antes de aplicar recomendação.",
+      "Integrar todos os parâmetros para chegar à faixa de recomendação — nunca decidir por um parâmetro isolado.",
+      "No prolapso mitral, pesquisar ativamente elementos do fenótipo arrítmico antes de tratar como prolapso simples.",
+      "Em prótese valvar, avaliar função protética e esquema antitrombótico; restringir contato/colisão se houver anticoagulação.",
+      "Formalizar decisão compartilhada com o atleta, documentando risco, incerteza e sinais de alerta.",
+      "Programar reavaliação periódica estruturada, com intervalo conforme gravidade, e reavaliação obrigatória após intervenção valvar antes de retorno competitivo."
+    ],
+    "emergency_flow": [
+      "Síncope ou pré-síncope durante/após exercício em atleta com valvopatia conhecida ou suspeita: interromper atividade, ECG e monitorização, ecocardiograma para excluir obstrução crítica ou arritmia.",
+      "Dor torácica com dispneia súbita ou instabilidade em estenose aórtica grave ou outra lesão grave: tratar como emergência cardiovascular.",
+      "Parada cardiorrespiratória ou TV sustentada durante esforço em valvopatia ou PVM arrítmico: suporte avançado de vida, DEA na cadeia de sobrevivência do ambiente esportivo.",
+      "Suspeita de disfunção aguda de prótese (trombose, deiscência): emergência com imagem urgente e decisão entre fibrinólise/cirurgia.",
+      "Febre com sopro novo, embolização ou deterioração em atleta com valvopatia/prótese: investigar endocardite como emergência.",
+      "Nenhum achado tranquilizador prévio autoriza dispensar avaliação de emergência em atleta sintomático agudo."
+    ],
+    "treatment_summary": "Este verbete é sobre diferenciação de gravidade e elegibilidade esportiva, não sobre tratamento definitivo de cada valvopatia (tratado nas fichas próprias de cada lesão e no hub geral de Valvopatias). Lesão leve, assintomática, com função ventricular/pressão pulmonar normais e teste de esforço normal: liberação ampla, com reavaliação periódica. Lesão moderada: depende de cumprir critérios específicos (função ventricular preservada, pressão pulmonar normal, teste de esforço normal), habilitando participação total ou parcial. Lesão grave, sintomática, ou que já preenche critério formal de intervenção: prioridade passa a ser tratamento da valvopatia — esporte competitivo não deve ser liberado, embora exercício leve assintomático frequentemente permaneça indicado. Após intervenção valvar bem sucedida, retorno ao esporte deve ser progressivo dentro de programa de reabilitação estruturado, com reavaliação funcional antes de intensidades competitivas — nunca por critério cronológico isolado. Em FA associada, decisão sobre esporte de contato/colisão deve considerar o esquema antitrombótico vigente, sem detalhar classe, via ou posologia. Nenhuma dose de fármaco é abordada.",
+    "monitoring": [
+      "Reavaliação ecocardiográfica periódica conforme gravidade da lesão.",
+      "Reavaliação de teste de esforço periódica em lesões moderadas a graves liberadas condicionalmente, sobretudo antes de temporadas competitivas.",
+      "Reavaliação funcional estruturada após qualquer intervenção valvar antes de progressão a intensidades competitivas.",
+      "Reavaliação sempre que houver sintoma novo ou alteração de desempenho inexplicada.",
+      "Em PVM com fenótipo arrítmico, acompanhamento longitudinal de ectopia ventricular com eletrofisiologia.",
+      "Em anticoagulado por FA associada, reforço periódico da restrição a contato/colisão.",
+      "Avaliação clínica e ecocardiográfica anual de prótese valvar.",
+      "Em atleta master, integração longitudinal de achados valvares com risco cardiovascular tradicional."
+    ],
+    "special_populations": [
+      "Atleta feminina: cortes de dimensão do VE diferentes por sexo na regurgitação aórtica e mitral.",
+      "Atleta master: maior probabilidade de valvopatia degenerativa coexistir com doença coronariana subclínica.",
+      "Atleta com PVM: maioria sem risco relevante; fenótipo arrítmico exige investigação multimodal.",
+      "Atleta com valva aórtica bicúspide: avaliar separadamente repercussão valvar e dimensão/comportamento da aorta ascendente.",
+      "Atleta com prótese valvar: lacuna declarada de evidência esportiva específica; conduta individualizada por Heart Team.",
+      "Atleta com valvopatia reumática (estenose mitral predominante): mesmos critérios de gravidade/sintomas/pressão pulmonar/teste de esforço, com atenção adicional a FA e anticoagulação."
+    ],
+    "assistant_questions": [
+      {
+        "id": "lesao_valvar",
+        "label": "Qual a lesão valvar identificada?",
+        "type": "select",
+        "options": [
+          {
+            "value": "estenose_aortica",
+            "label": "Estenose aórtica"
+          },
+          {
+            "value": "regurgitacao_aortica",
+            "label": "Regurgitação aórtica"
+          },
+          {
+            "value": "valva_aortica_bicuspide_sem_disfuncao",
+            "label": "Valva aórtica bicúspide sem disfunção nem aortopatia"
+          },
+          {
+            "value": "regurgitacao_mitral_primaria",
+            "label": "Regurgitação mitral primária"
+          },
+          {
+            "value": "prolapso_mitral",
+            "label": "Prolapso da valva mitral"
+          },
+          {
+            "value": "estenose_mitral",
+            "label": "Estenose mitral"
+          },
+          {
+            "value": "regurgitacao_tricuspide",
+            "label": "Regurgitação tricúspide"
+          },
+          {
+            "value": "protese_valvar",
+            "label": "Prótese valvar (mecânica ou biológica)"
+          }
+        ]
+      },
+      {
+        "id": "gravidade",
+        "label": "Qual a gravidade da lesão valvar?",
+        "type": "select",
+        "options": [
+          {
+            "value": "leve",
+            "label": "Leve"
+          },
+          {
+            "value": "moderada",
+            "label": "Moderada"
+          },
+          {
+            "value": "grave",
+            "label": "Grave"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável / sem disfunção"
+          }
+        ]
+      },
+      {
+        "id": "sintomatico",
+        "label": "O atleta apresenta sintomas relacionados à valvopatia?",
+        "type": "boolean"
+      },
+      {
+        "id": "fracao_ejecao_percentual",
+        "label": "Qual a fração de ejeção do ventrículo esquerdo (%)?",
+        "type": "number",
+        "min": 0,
+        "max": 80
+      },
+      {
+        "id": "pasp_mmhg",
+        "label": "Qual a pressão sistólica de artéria pulmonar estimada em repouso (mmHg)?",
+        "type": "number",
+        "min": 0,
+        "max": 150
+      },
+      {
+        "id": "teste_esforco_normal",
+        "label": "O teste de esforço foi normal, sem resposta pressórica inadequada nem arritmia induzida?",
+        "type": "boolean"
+      },
+      {
+        "id": "resposta_pressorica_anormal_esforco",
+        "label": "Houve queda da pressão sistólica ao esforço, ou falha em elevá-la em pelo menos 20 mmHg?",
+        "type": "boolean"
+      },
+      {
+        "id": "arritmia_complexa_induzida_esforco",
+        "label": "Foi documentada arritmia ventricular complexa ou TV, espontânea ou induzida por esforço?",
+        "type": "boolean"
+      },
+      {
+        "id": "ve_dilatado",
+        "label": "Como estão as dimensões do VE (regurgitação aórtica ou mitral)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_dilatado",
+            "label": "Não dilatado"
+          },
+          {
+            "value": "leve_a_moderado",
+            "label": "Leve a moderadamente dilatado"
+          },
+          {
+            "value": "importante",
+            "label": "Dilatação importante"
+          },
+          {
+            "value": "nao_aplicavel",
+            "label": "Não aplicável"
+          }
+        ]
+      },
+      {
+        "id": "fenotipo_arritmico_pvm",
+        "label": "No prolapso mitral, há elemento do fenótipo arrítmico?",
+        "type": "boolean"
+      },
+      {
+        "id": "fibrilacao_atrial_com_anticoagulacao",
+        "label": "O atleta está em fibrilação atrial associada à valvopatia, em uso de anticoagulação de longo prazo?",
+        "type": "boolean"
+      },
+      {
+        "id": "esporte_contato_colisao",
+        "label": "A modalidade pretendida é esporte de contato ou colisão?",
+        "type": "boolean"
+      },
+      {
+        "id": "modalidade_esportiva",
+        "label": "A modalidade pretendida é recreativa ou competitiva?",
+        "type": "select",
+        "options": [
+          {
+            "value": "recreativo",
+            "label": "Recreativo/lazer"
+          },
+          {
+            "value": "competitivo",
+            "label": "Competitivo"
+          }
+        ]
+      },
+      {
+        "id": "criterio_intervencao_pela_diretriz_valvar",
+        "label": "A lesão já preenche critério formal de intervenção pela diretriz valvar vigente (ESC/EACTS 2025)?",
+        "type": "boolean"
+      },
+      {
+        "id": "pos_intervencao_valvar_recente",
+        "label": "O atleta está em retorno ao esporte após intervenção valvar recente?",
+        "type": "boolean"
+      },
+      {
+        "id": "suspeita_endocardite",
+        "label": "Há suspeita clínica de endocardite infecciosa?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "endocardite_emergencia",
+        "priority": 99,
+        "when": {
+          "all": [
+            {
+              "field": "suspeita_endocardite",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita clínica de endocardite infecciosa em atleta com valvopatia ou prótese: investigação urgente com hemoculturas e ecocardiograma antes de qualquer retorno à atividade física."
+          ],
+          "emergency_flow": [
+            "Investigar endocardite infecciosa como emergência: hemoculturas seriadas e ecocardiograma antes de qualquer decisão esportiva."
+          ]
+        }
+      },
+      {
+        "id": "sintoma_red_flag",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "sintomatico",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Sintomas relacionados a esforço em atleta com valvopatia conhecida ou suspeita contraindicam, na maioria das lesões, esporte competitivo e redirecionam a prioridade para tratamento da valvopatia."
+          ],
+          "suggested_tests": [
+            "Reavaliação ecocardiográfica completa e reconciliação com critérios de intervenção da diretriz valvar vigente."
+          ]
+        }
+      },
+      {
+        "id": "criterio_intervencao_prevalece",
+        "priority": 96,
+        "when": {
+          "all": [
+            {
+              "field": "criterio_intervencao_pela_diretriz_valvar",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "A lesão já preenche critério formal de intervenção pela diretriz valvar vigente: a prioridade clínica passa a ser o tratamento da valvopatia (Heart Team), não a decisão de elegibilidade esportiva."
+          ]
+        }
+      },
+      {
+        "id": "gravidade_grave",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade",
+              "op": "eq",
+              "value": "grave"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Lesão valvar grave: participação esportiva, quando ainda considerada, restringe-se a intensidade leve e depende do cumprimento de todos os critérios funcionais da lesão; esporte competitivo de intensidade moderada a alta não é recomendado."
+          ]
+        }
+      },
+      {
+        "id": "gravidade_moderada",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade",
+              "op": "eq",
+              "value": "moderada"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Lesão valvar moderada: liberação depende de função ventricular preservada, pressão pulmonar normal e teste de esforço normal."
+          ],
+          "suggested_tests": [
+            "Teste de esforço reproduzindo a intensidade da modalidade pretendida."
+          ]
+        }
+      },
+      {
+        "id": "fe_reduzida_aortica_generico",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "fracao_ejecao_percentual",
+              "op": "lt",
+              "value": 50
+            },
+            {
+              "field": "lesao_valvar",
+              "op": "in",
+              "value": [
+                "estenose_aortica",
+                "regurgitacao_aortica"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Fração de ejeção abaixo de 50% em lesão aórtica: critério de exclusão para liberação esportiva competitiva ou recreativa de intensidade relevante."
+          ]
+        }
+      },
+      {
+        "id": "fe_reduzida_mitral_generico",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "fracao_ejecao_percentual",
+              "op": "lt",
+              "value": 60
+            },
+            {
+              "field": "lesao_valvar",
+              "op": "eq",
+              "value": "regurgitacao_mitral_primaria"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Fração de ejeção abaixo de 60% em regurgitação mitral primária: critério exigido não é preenchido; esporte competitivo não é recomendado."
+          ]
+        }
+      },
+      {
+        "id": "pasp_elevada",
+        "priority": 78,
+        "when": {
+          "all": [
+            {
+              "field": "pasp_mmhg",
+              "op": "gte",
+              "value": 50
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "PSAP de repouso elevada (≥50 mmHg): parâmetro que isoladamente já excede o limiar tolerado na maioria das lesões valvares; investigar causa e reconsiderar intensidade permitida."
+          ]
+        }
+      },
+      {
+        "id": "teste_esforco_anormal",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "teste_esforco_normal",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Teste de esforço anormal é critério exigido para liberação em praticamente todas as tabelas; sua ausência impede liberação ampla mesmo em lesão leve a moderada."
+          ],
+          "suggested_tests": [
+            "Repetir teste de esforço após otimização clínica, ou considerar ecocardiograma sob estresse."
+          ]
+        }
+      },
+      {
+        "id": "resposta_pressorica_anormal_red_flag",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "resposta_pressorica_anormal_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Queda da pressão sistólica ao esforço, ou falha em elevá-la em pelo menos 20 mmHg, identifica indivíduo de maior risco e restringe a intensidade esportiva permitida."
+          ]
+        }
+      },
+      {
+        "id": "arritmia_complexa_red_flag",
+        "priority": 92,
+        "when": {
+          "all": [
+            {
+              "field": "arritmia_complexa_induzida_esforco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Arritmia ventricular complexa ou TV documentada ou induzida por esforço: critério de exclusão para esporte competitivo em todas as lesões valvares cobertas."
+          ],
+          "suggested_tests": [
+            "Holter ou monitorização prolongada e avaliação por eletrofisiologia."
+          ]
+        }
+      },
+      {
+        "id": "ve_dilatacao_importante",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "ve_dilatado",
+              "op": "eq",
+              "value": "importante"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Dilatação importante do VE em regurgitação aórtica ou mitral ultrapassa o limite tolerado nas tabelas de liberação esportiva parcial."
+          ]
+        }
+      },
+      {
+        "id": "fenotipo_arritmico_pvm_red_flag",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_valvar",
+              "op": "eq",
+              "value": "prolapso_mitral"
+            },
+            {
+              "field": "fenotipo_arritmico_pvm",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Prolapso mitral com elemento do fenótipo arrítmico: subgrupo de maior risco descrito como causa não incomum de morte súbita em jovens e mulheres; investigação multimodal completa antes de qualquer liberação esportiva de intensidade relevante."
+          ],
+          "suggested_tests": [
+            "Ressonância magnética cardíaca; Holter ou monitorização prolongada; avaliação por eletrofisiologia."
+          ]
+        }
+      },
+      {
+        "id": "pvm_sem_fenotipo_arritmico",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_valvar",
+              "op": "eq",
+              "value": "prolapso_mitral"
+            },
+            {
+              "field": "fenotipo_arritmico_pvm",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Prolapso mitral sem elemento do fenótipo arrítmico identificado: presença isolada não deve gerar desqualificação automática."
+          ]
+        }
+      },
+      {
+        "id": "fa_anticoagulado_contato",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "fibrilacao_atrial_com_anticoagulacao",
+              "op": "truthy"
+            },
+            {
+              "field": "esporte_contato_colisao",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Fibrilação atrial associada à valvopatia com anticoagulação de longo prazo e modalidade de contato/colisão: combinação contraindicada nas tabelas da diretriz de esportes."
+          ]
+        }
+      },
+      {
+        "id": "protese_lacuna_evidencia",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "lesao_valvar",
+              "op": "eq",
+              "value": "protese_valvar"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "A diretriz de esportes de 2020 não define corte numérico específico de elegibilidade esportiva para prótese valvar: decisão deve ser individualizada por Heart Team."
+          ],
+          "messages": [
+            "Avaliar função protética, esquema antitrombótico vigente e restringir contato/colisão se houver anticoagulação de longo prazo."
+          ]
+        }
+      },
+      {
+        "id": "pos_intervencao_reabilitacao",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "pos_intervencao_valvar_recente",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "ambulatory_flow": [
+            "Conduzir o retorno ao esporte dentro de programa de reabilitação estruturado, com reavaliação funcional formal antes de qualquer progressão a intensidade competitiva."
+          ]
+        }
+      },
+      {
+        "id": "modalidade_competitiva_exige_criterios_completos",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "modalidade_esportiva",
+              "op": "eq",
+              "value": "competitivo"
+            },
+            {
+              "field": "gravidade",
+              "op": "in",
+              "value": [
+                "moderada",
+                "grave"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Para esporte competitivo em lesão valvar moderada ou grave, todos os critérios funcionais precisam estar simultaneamente preenchidos."
+          ]
+        }
+      },
+      {
+        "id": "lesao_leve_assintomatica_liberacao",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "gravidade",
+              "op": "eq",
+              "value": "leve"
+            },
+            {
+              "field": "sintomatico",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Lesão valvar leve e assintomática: cenário de liberação ampla para esporte recreativo e competitivo, mantendo reavaliação periódica de rotina."
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiologia do esporte",
+      "valvopatia",
+      "elegibilidade esportiva",
+      "estenose aórtica",
+      "regurgitação aórtica",
+      "valva aórtica bicúspide",
+      "regurgitação mitral",
+      "prolapso mitral",
+      "estenose mitral",
+      "regurgitação tricúspide",
+      "prótese valvar",
+      "decisão compartilhada",
+      "teste de esforço",
+      "ecocardiograma sob estresse"
+    ],
+    "source_refs": [
+      "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412.",
+      "Corrigendum to: 2020 ESC Guidelines on Sports Cardiology. Eur Heart J. 2021;42(5):548-549. PMID: 33532850.",
+      "van Buuren F, Gati S, Sharma S, et al. Athletes with valvular heart disease and competitive sports: a position statement of the Sport Cardiology Section of the EAPC. Eur J Prev Cardiol. 2021. PMID: 33846742.",
+      "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. Circulation. 2025;151(11):e716-e761. PMID: 39973614.",
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. PMID: 40878291.",
+      "Corrigendum to: 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2026;68(7):ezag193. PMID: 42452857.",
+      "Carvalho T, Freitas OGA, Chalela WA, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. PMID: 38896581.",
+      "Perazzolo Marra M, et al. Determinants of Ventricular Arrhythmias in Mitral Valve Prolapse. JACC Clin Electrophysiol. 2024;10:670-681. PMID: 38340116.",
+      "Chakrabarti A, et al. Characteristics of Patients With the Arrhythmogenic Mitral Valve Prolapse Syndrome and Sudden Cardiac Arrest and Sustained Ventricular Arrhythmias. Circ Arrhythm Electrophysiol. 2025. PMID: 39973752."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/32860412/",
+      "https://pubmed.ncbi.nlm.nih.gov/33532850/",
+      "https://pubmed.ncbi.nlm.nih.gov/33846742/",
+      "https://pubmed.ncbi.nlm.nih.gov/39973614/",
+      "https://pubmed.ncbi.nlm.nih.gov/40878291/",
+      "https://pubmed.ncbi.nlm.nih.gov/42452857/",
+      "https://pubmed.ncbi.nlm.nih.gov/38896581/",
+      "https://pubmed.ncbi.nlm.nih.gov/38340116/",
+      "https://pubmed.ncbi.nlm.nih.gov/39973752/"
+    ],
+    "related_document_slugs": [
+      "doenca-valvar-elegibilidade-esportiva-no-atleta",
+      "prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas",
+      "prolapso-mitral-arritmico-atleta-risco-esporte",
+      "aortopatias-marfan-e-participacao-esportiva",
+      "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Revisão científica editorial concluída em 30/08/2026; referências, coerência clínica e integração estrutural validadas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

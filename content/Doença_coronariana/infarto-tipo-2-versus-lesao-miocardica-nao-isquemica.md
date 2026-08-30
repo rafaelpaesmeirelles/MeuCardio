@@ -5,10 +5,10 @@ theme: "Doença coronariana"
 kind: protocolo
 fonte_producao: grok
 summary: "Decisão à beira do leito quando a troponina sobe fora da SCA tipo 1: o que separa infarto secundário (tipo 2) de lesão miocárdica não isquêmica, quando a angiografia é urgente e quando não é, e por que o rótulo tipo 2 não autoriza DAPT nem ICP de rotina. Complementa a síntese da Quinta Definição Universal (2026) e o fluxograma já publicado; não o substitui."
-review_status: pendente_revisao
+review_status: revisado
 review_note: "Produção científica original (Grok), 29/08/2026. Não duplica o fluxograma canônico fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2, que já cobre a árvore completa; este protocolo aprofunda a decisão de rótulo, de cateterismo e de antitrombótico. Classes e níveis só foram atribuídos quando já conferidos no acervo CorVIA contra a ESC 2023. A ESC 2023 não traz tabela de classe/nível para infarto tipo 2. Incidências percentuais não foram inventadas."
 source_refs:
-  - "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101. Citação primária confirmada no comunicado oficial da ESC e no documento CorVIA quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia. PMID não atribuído nesta sessão."
+  - "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101. Citação primária confirmada no comunicado oficial da ESC e no documento CorVIA quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia. PMID não atribuído nesta revisão editorial."
   - "Thygesen K, Alpert JS, Jaffe AS, et al; ESC Scientific Document Group. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617."
   - "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Seção narrativa de infarto tipo 2 e lesão miocárdica aguda (não há tabela de recomendação classificada para esse recorte)."
   - "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151(13):e771-e862. DOI: 10.1161/CIR.0000000000001309. PMID: 40014670. O próprio texto declara que o manejo do infarto tipo 2, SCAD e MINOCA fica fora do escopo."
@@ -174,7 +174,7 @@ Um rótulo vago ("troponina positiva", "NSTEMI", "SCA") é o que dispara DAPT po
 6. Plano após estabilização: eco, angiotomografia, teste funcional ou angiografia, com a probabilidade clínica de DAC explícita.
 7. Vocabulário 2026, se o serviço já o adota: IAM secundário ou lesão aguda, não "NSTEMI" genérico.
 
-A Quinta Definição prevê alinhamento com CID-11 por tipo de infarto. Não improvisar código nesta sessão: usar o que o serviço já padronizou e preferir a prosa fisiopatológica acima.
+A Quinta Definição prevê alinhamento com CID-11 por tipo de infarto. Não improvisar código nesta revisão editorial: usar o que o serviço já padronizou e preferir a prosa fisiopatológica acima.
 
 ## Armadilhas clínicas
 

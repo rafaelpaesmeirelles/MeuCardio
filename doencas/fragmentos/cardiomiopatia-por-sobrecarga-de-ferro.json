@@ -1,0 +1,449 @@
+[
+  {
+    "slug": "cardiomiopatia-por-sobrecarga-de-ferro",
+    "name": "Cardiomiopatia por Sobrecarga de Ferro",
+    "aliases": [
+      "Cardiomiopatia por depósito de ferro",
+      "Cardiotoxicidade por ferro",
+      "Siderose miocárdica",
+      "Hemocromatose cardíaca",
+      "Iron overload cardiomyopathy",
+      "Cardiomiopatia da talassemia"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "sobrecarga_de_ferro",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia causada pelo acúmulo de ferro não ligado à transferrina no miocárdio, decorrente de hemocromatose hereditária (sobrecarga primária, por absorção intestinal excessiva) ou de sobrecarga secundária/transfusional (talassemia major, síndromes mielodisplásicas transfusão-dependentes, anemia falciforme com transfusões repetidas, entre outras anemias crônicas). O fenótipo pode ser dilatado ou predominantemente restritivo/diastólico, nem sempre restritivo puro, e cursa com risco elevado de insuficiência cardíaca e arritmias. A ressonância magnética cardíaca com mapeamento T2* é o método central de diagnóstico, estadiamento e monitorização, permitindo detectar siderose miocárdica antes da disfunção clínica e guiar a intensidade da quelação de ferro.",
+    "epidemiology": "A hemocromatose hereditária relacionada ao gene HFE (tipo 1) é uma das doenças genéticas autossômicas recessivas mais comuns em populações de ascendência europeia (homozigose C282Y em torno de 1:200-300), mas com penetrância clínica variável; a cardiomiopatia por sobrecarga de ferro responde por cerca de um terço dos óbitos nessa condição. Na sobrecarga secundária/transfusional, a cardiomiopatia por depósito de ferro foi historicamente a principal causa de morte em pacientes com talassemia major antes da era da ressonância cardíaca guiando a quelação; permanece uma ameaça relevante em síndromes mielodisplásicas transfusão-dependentes, anemia falciforme com múltiplas transfusões e outras anemias congênitas ou adquiridas dependentes de transfusão crônica. Com a introdução da monitorização seriada por T2* e da quelação guiada por imagem, a mortalidade cardíaca nessas populações caiu de forma expressiva nas últimas décadas (observação de séries de centros de referência, não ensaio controlado).",
+    "presentation": [
+      "Fase inicial frequentemente assintomática, com disfunção diastólica subclínica detectável apenas por strain longitudinal global (GLS) ou T2* alterado",
+      "Fenótipo dilatado: remodelamento e dilatação do ventrículo esquerdo com redução progressiva da fração de ejeção (padrão mais comum quando a sobrecarga não é tratada)",
+      "Fenótipo restritivo/misto: disfunção diastólica com padrão de enchimento restritivo, FEVE preservada, hipertensão pulmonar e dilatação do ventrículo direito secundária (~10% dos casos, mais frequentemente em fases avançadas)",
+      "Padrão de alto débito cardíaco com dilatação de câmaras e hipertrofia ventricular esquerda excêntrica em alguns pacientes anêmicos",
+      "Arritmias supraventriculares (fibrilação/flutter atrial) e ventriculares, incluindo risco de morte súbita em sobrecarga grave",
+      "Distúrbios de condução, sobretudo nodo atrioventricular, refletindo depósito de ferro no sistema de condução",
+      "Sinais e sintomas de insuficiência cardíaca (dispneia, edema, intolerância ao esforço), que podem se instalar e progredir rapidamente uma vez estabelecidos",
+      "Padrão pseudonormal ao fluxo transmitral mascarado pelo estado de alto débito da anemia de base, exigindo refinamento com Doppler tecidual/veias pulmonares",
+      "Sintomas sistêmicos associados à condição de base (hepatopatia, diabetes, hipogonadismo na hemocromatose; manifestações da hemoglobinopatia/anemia crônica na sobrecarga transfusional)"
+    ],
+    "diagnostic_approach": {
+      "avaliacao_inicial": "Suspeitar em qualquer paciente com insuficiência cardíaca de etiologia não esclarecida associada a condição de risco para sobrecarga de ferro (hemocromatose hereditária, talassemia major, SMD transfusão-dependente, anemia falciforme multitransfundida, outras anemias congênitas transfusão-dependentes). O diagnóstico de cardiomiopatia por sobrecarga de ferro exige a combinação de (1) evidência de sobrecarga de ferro sistêmica, (2) siderose cardíaca confirmada por imagem e (3) evidência de doença cardíaca (disfunção ventricular e/ou alteração de geometria).",
+      "laboratorio": "Ferritina sérica e saturação de transferrina elevadas sugerem sobrecarga de ferro sistêmica (valores de referência citados em posicionamento de imagem multimodal: ferritina > 300 ng/mL e saturação de transferrina > 55%), mas a ferritina não se correlaciona de forma confiável com a quantidade de ferro miocárdico - pode haver siderose cardíaca importante com ferritina relativamente baixa. Teste genético para variantes do gene HFE (C282Y/H63D) e genes relacionados (HJV, HAMP, TFR2, ferroportina) confirma/tipifica a hemocromatose hereditária primária quando indicado.",
+      "ecocardiografia": "Método de rastreio inicial, simples e amplamente disponível, mas com achados inespecíficos e baixa sensibilidade para quantificar o ferro miocárdico. Deve incluir avaliação biventricular de geometria e função sistólica, função diastólica com Doppler tecidual do anel mitral medial e lateral, e strain longitudinal global (GLS), que pode revelar disfunção subclínica antes da queda da FEVE.",
+      "ressonancia_magnetica_t2_estrela": "É o exame central para quantificação não invasiva do ferro miocárdico, com boa correlação com concentração de ferro em biópsia e cobertura de todo o ventrículo (evitando erro de amostragem da biópsia). Interpretação por faixas de tempo de relaxamento T2*: >20 ms é considerado normal/sem sobrecarga clinicamente relevante; 10-20 ms indica sobrecarga de ferro miocárdica leve a moderada; <10 ms indica sobrecarga grave, associada a risco muito elevado de disfunção sistólica e arritmias graves. Em estudo multicêntrico observacional em talassemia major (n=652, 1.442 exames), o risco relativo de insuficiência cardíaca no ano seguinte foi 160 vezes maior (IC95% 39-653) com T2* <10 ms comparado a T2* >10 ms, chegando a 47% de incidência de IC em 1 ano quando T2* <6 ms; o risco relativo de arritmia com T2* <20 ms (vs. >20 ms) foi 4,6 (IC95% 2,66-7,95). São dados observacionais robustos de associação/predição de risco, não de causalidade experimental, mas com desempenho discriminativo (AUC) muito superior ao da ferritina sérica e do T2* hepático para prever eventos cardíacos.",
+      "t1_mapping": "Ferramenta complementar ao T2*: em sobrecarga já estabelecida, T1 e T2* são concordantes, mas na faixa de 20-30 ms de T2* o T1 mapping nativo parece detectar depósito de ferro mais precocemente, sendo útil para identificar casos limítrofes.",
+      "realce_tardio_e_fibrose": "Em casos avançados, o realce tardio pode identificar fibrose miocárdica associada a pior prognóstico; é achado incomum na hemocromatose primária, mas sua presença em sobrecarga secundária (ex.: talassemias) pode sinalizar doença mais avançada.",
+      "fenotipagem": "Após confirmação diagnóstica, classificar o padrão predominante (dilatado vs. restritivo/misto) orienta prognóstico e acompanhamento, reconhecendo que a apresentação é heterogênea e nem sempre puramente restritiva, ao contrário do que pode sugerir a associação clássica de hemocromatose com cardiomiopatia restritiva."
+    },
+    "differentials": [
+      "Cardiomiopatia restritiva não amiloide (outras causas infiltrativas/de depósito)",
+      "Amiloidose cardíaca (transtirretina ou cadeia leve)",
+      "Cardiomiopatia dilatada de outras etiologias (isquêmica, genética, induzida por álcool)",
+      "Cardiotoxicidade por antraciclina/quimioterapia (relevante em pacientes com SMD ou neoplasia hematológica que também recebem quimioterapia)",
+      "Cardiomiopatia associada à hemoglobinopatia por mecanismo de alto débito/anemia crônica sem siderose miocárdica significativa",
+      "Sarcoidose cardíaca e outras doenças infiltrativas sistêmicas",
+      "Hipertensão pulmonar de outras causas quando predomina disfunção de VD (fenótipo restritivo)"
+    ],
+    "tests": [
+      "Ferritina sérica",
+      "Saturação de transferrina",
+      "Teste genético para hemocromatose hereditária (HFE C282Y/H63D; considerar HJV, HAMP, TFR2, ferroportina se HFE negativo com fenótipo sugestivo)",
+      "Ressonância magnética cardíaca com T2* (obrigatória em todos os pacientes com sobrecarga de ferro suspeita ou confirmada)",
+      "Ressonância magnética hepática com T2*/R2* para quantificação de ferro hepático",
+      "T1 mapping cardíaco (complementar, útil em faixas limítrofes de T2*, 20-30 ms)",
+      "Ecocardiograma transtorácico com avaliação biventricular, função diastólica (Doppler tecidual) e strain longitudinal global",
+      "Eletrocardiograma e Holter para rastreio de arritmias",
+      "BNP/NT-proBNP como auxiliar na avaliação de insuficiência cardíaca",
+      "Biópsia hepática (reservada a situações específicas, hoje amplamente substituída pela RM)",
+      "Avaliação hepática, endócrina e metabólica associada (função hepática, glicemia, função gonadal) na hemocromatose primária"
+    ],
+    "red_flags": [
+      "T2* cardíaco < 10 ms: alto risco de disfunção sistólica e arritmias graves",
+      "T2* cardíaco < 6 ms: risco muito elevado de insuficiência cardíaca no ano seguinte (observado em coorte de talassemia major)",
+      "Queda progressiva ou abrupta da FEVE em paciente com sobrecarga de ferro conhecida",
+      "Arritmia ventricular sustentada ou síncope",
+      "Sinais de insuficiência cardíaca descompensada (dispneia progressiva, edema, baixo débito)",
+      "Hipertensão pulmonar de início recente com dilatação de VD em paciente com sobrecarga de ferro",
+      "Não adesão à quelação de ferro associada a tendência ascendente de ferritina e/ou queda de T2*"
+    ],
+    "ambulatory_flow": [
+      "Identificar condição de risco (hemocromatose hereditária, talassemia major, SMD transfusão-dependente, anemia falciforme multitransfundida, outra anemia crônica transfusão-dependente)",
+      "Solicitar ferritina sérica e saturação de transferrina; considerar teste genético quando aplicável (hemocromatose primária)",
+      "Encaminhar para ressonância magnética cardíaca com T2* (e hepática com R2*/T2*) para quantificar siderose e estadiar risco",
+      "Complementar com ecocardiograma (função biventricular, diastólica, strain) e ECG/Holter",
+      "Definir estratégia terapêutica conforme etiologia: flebotomia terapêutica (hemocromatose hereditária primária) ou quelação de ferro (sobrecarga transfusional) e intensidade conforme faixa de T2*",
+      "Programar monitorização seriada por T2* cardíaco (frequência conforme gravidade - ver monitorização) e reavaliação clínica/ecocardiográfica periódica",
+      "Articular seguimento multidisciplinar com hematologia/hepatologia/genética médica conforme etiologia de base"
+    ],
+    "emergency_flow": [
+      "Paciente com sobrecarga de ferro conhecida e sintomas novos de insuficiência cardíaca ou arritmia: avaliação cardiológica em caráter de urgência",
+      "ECG imediato e monitorização de ritmo; investigar e tratar arritmias sustentadas conforme protocolo específico",
+      "Ecocardiograma para reavaliação de função biventricular e descartar descompensação aguda",
+      "Otimizar terapia de insuficiência cardíaca guiada por diretriz, com atenção a peculiaridades hemodinâmicas de pacientes cronicamente anêmicos",
+      "Discutir com hematologia/centro de referência a intensificação ou combinação de quelantes de ferro (incluindo via parenteral) em casos de siderose grave (T2* < 10 ms) com descompensação",
+      "Não indicar flebotomia em pacientes com sobrecarga transfusional descompensados - agravaria a anemia de base"
+    ],
+    "treatment_summary": "O tratamento depende da etiologia da sobrecarga de ferro. Na hemocromatose hereditária primária, a flebotomia terapêutica é o tratamento de escolha por reduzir diretamente o estoque de ferro corporal, sendo os quelantes reservados a pacientes com anemia significativa, comorbidade que contraindique flebotomia ou acesso venoso inadequado. Na sobrecarga de ferro secundária/transfusional (talassemia major, SMD transfusão-dependente, anemia falciforme multitransfundida e outras anemias crônicas dependentes de transfusão), a flebotomia não é indicada, pois agravaria a anemia de base; o pilar terapêutico é a quelação de ferro, com três classes/agentes principais em uso clínico - deferoxamina (parenteral), deferasirox (oral) e deferiprona (oral), frequentemente combinados ou intensificados em pacientes com siderose miocárdica grave (T2* < 10 ms), sob orientação de centro especializado em hemoglobinopatias/hematologia. Este verbete descreve a classe terapêutica e o princípio de ação de cada quelante; doses e esquemas posológicos específicos não são apresentados aqui por não terem sido verificados com uma fonte primária confiável nesta pesquisa, e devem seguir bula/protocolo institucional e orientação do especialista. A resposta ao tratamento (flebotomia ou quelação) deve ser monitorada de forma seriada por T2* cardíaco, já que a melhora do T2* ao longo do tempo se associa a recuperação da função cardíaca e menos eventos adversos em estudos longitudinais de talassemia. O manejo de insuficiência cardíaca e arritmias associadas segue as diretrizes gerais de cardiologia para essas condições, adaptadas ao contexto de anemia crônica quando presente. Uma estratégia adjuvante emergente, ainda não estabelecida como padrão de cuidado, é o uso de anlodipino (bloqueador de canal de cálcio) para reduzir o influxo de ferro não ligado à transferrina pelos canais de cálcio tipo L no cardiomiócito; tratamentos modificadores de doença ou potencialmente curativos para talassemia (como luspatercepte, mitapivat e terapia gênica) também vêm sendo estudados por abordarem a causa da sobrecarga transfusional, mas ainda não substituem a quelação e a monitorização por T2* como abordagem estabelecida.",
+    "monitoring": [
+      "Ressonância magnética cardíaca com T2* seriada: repetir a cada 6-12 meses se T2* < 20 ms, e a cada 6 meses ou menos se o paciente se tornar sintomático; em pacientes com T2* normal, intervalos anuais costumam ser suficientes conforme risco individual",
+      "Ecocardiograma transtorácico periódico (a cada 6-12 meses se T2* < 20 ms, mais frequente se sintomático; a cada 1-2 anos em pacientes assintomáticos com avaliação de função diastólica)",
+      "Ferritina sérica e saturação de transferrina seriadas, cientes de que não substituem o T2* para estimar risco cardíaco",
+      "ECG periódico e Holter conforme sintomas ou achados de risco",
+      "Reavaliação de T2* hepático e função hepática em paralelo, já que a sobrecarga hepática costuma preceder e acompanhar a cardíaca",
+      "Ajuste de intensidade/combinação de quelantes (ou intervalo de flebotomia) conforme evolução do T2* e da ferritina, com melhora do T2* correlacionando-se a recuperação funcional e menos eventos adversos"
+    ],
+    "special_populations": [
+      "Crianças e adolescentes transfusão-dependentes (talassemia major e outras anemias crônicas transfusão-dependentes): iniciar vigilância de sobrecarga de ferro e considerar RM cardíaca com T2* assim que houver cooperação para o exame (tipicamente a partir dos 8-10 anos em centros especializados), com quelação iniciada precocemente conforme protocolo hematológico pediátrico; adesão à quelação ao longo da infância/adolescência é determinante para o risco cardíaco na vida adulta",
+      "Síndromes mielodisplásicas transfusão-dependentes: risco de sobrecarga de ferro cumulativa com o volume transfusional; avaliar necessidade de quelação e monitorização cardíaca conforme carga transfusional e prognóstico hematológico de base",
+      "Anemia falciforme com múltiplas transfusões: sobrecarga de ferro secundária relevante, com padrão de distribuição de ferro por vezes diferente da talassemia; quelação e monitorização por T2* também indicadas quando há sobrecarga confirmada",
+      "Hemocromatose hereditária com hepatopatia associada: avaliação hepática (RM R2*/T2*, função hepática, rastreio de cirrose/hepatocarcinoma) deve acompanhar a avaliação cardíaca",
+      "Gestação: dados sobre segurança dos quelantes de ferro na gravidez são limitados; decisões terapêuticas devem ser individualizadas com equipe multidisciplinar (hematologia obstétrica/alto risco), evitando extrapolar posologia não gestacional sem orientação especializada",
+      "Familiares de primeiro grau de pacientes com hemocromatose hereditária confirmada geneticamente: considerar rastreio genético e bioquímico (ferritina/saturação de transferrina) mesmo assintomáticos"
+    ],
+    "assistant_questions": [
+      {
+        "id": "t2_star_ms",
+        "label": "Qual o valor de T2* cardíaco medido na ressonância magnética (ms)?",
+        "type": "number",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "underlying_condition",
+        "label": "Qual a condição de base associada à sobrecarga de ferro?",
+        "type": "select",
+        "required": false,
+        "section": "contexto",
+        "options": [
+          {
+            "value": "hemocromatose_hereditaria",
+            "label": "Hemocromatose hereditária"
+          },
+          {
+            "value": "talassemia_maior",
+            "label": "Talassemia major"
+          },
+          {
+            "value": "sindrome_mielodisplasica_transfusao_dependente",
+            "label": "Síndrome mielodisplásica transfusão-dependente"
+          },
+          {
+            "value": "anemia_falciforme_multiplas_transfusoes",
+            "label": "Anemia falciforme com múltiplas transfusões"
+          },
+          {
+            "value": "outra_anemia_transfusao_dependente",
+            "label": "Outra anemia transfusão-dependente"
+          },
+          {
+            "value": "nao_identificada",
+            "label": "Não identificada"
+          }
+        ]
+      },
+      {
+        "id": "transfusion_dependent",
+        "label": "O paciente é transfusão-dependente (transfusões regulares de hemácias)?",
+        "type": "boolean",
+        "required": false,
+        "section": "contexto"
+      },
+      {
+        "id": "ferritina_serica",
+        "label": "Qual o valor de ferritina sérica mais recente (ng/mL)?",
+        "type": "number",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "transferrin_saturation_pct",
+        "label": "Qual a saturação de transferrina mais recente (%)?",
+        "type": "number",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "symptoms_hf_arrhythmia",
+        "label": "Há sintomas de insuficiência cardíaca ou arritmia (palpitações, síncope, dispneia, edema)?",
+        "type": "boolean",
+        "required": false,
+        "section": "clinica"
+      },
+      {
+        "id": "lvef_pct",
+        "label": "Qual a fração de ejeção do ventrículo esquerdo mais recente (%)?",
+        "type": "number",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "on_chelation_therapy",
+        "label": "O paciente está em terapia quelante de ferro atualmente (deferoxamina, deferasirox ou deferiprona)?",
+        "type": "boolean",
+        "required": false,
+        "section": "tratamento"
+      },
+      {
+        "id": "eligible_phlebotomy",
+        "label": "O paciente tem hemocromatose hereditária primária (potencialmente elegível a flebotomia terapêutica)?",
+        "type": "boolean",
+        "required": false,
+        "section": "tratamento"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "t2star_normal",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "t2_star_ms",
+              "op": "gte",
+              "value": 20
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "supporting": [
+            "T2* cardíaco ≥ 20 ms sugere ausência de sobrecarga de ferro miocárdica clinicamente relevante"
+          ],
+          "messages": [
+            "T2* dentro da faixa normal (≥ 20 ms); manter monitorização periódica conforme protocolo (RM anual costuma ser suficiente, ajustada ao risco individual)."
+          ]
+        }
+      },
+      {
+        "id": "t2star_leve_moderada",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "t2_star_ms",
+              "op": "gte",
+              "value": 10
+            },
+            {
+              "field": "t2_star_ms",
+              "op": "lt",
+              "value": 20
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "T2* cardíaco entre 10 e 20 ms indica sobrecarga de ferro miocárdica leve a moderada, com risco de arritmia aumentado (RR ~4,6 vs. T2* > 20 ms)"
+          ],
+          "suggested_tests": [
+            "Repetir RM cardíaca com T2* em 6 a 12 meses",
+            "Ecocardiograma com avaliação de strain longitudinal global",
+            "ECG/Holter para rastreio de arritmia"
+          ],
+          "missing_information": [
+            "Adesão e intensidade da terapia quelante ou frequência de flebotomia atual"
+          ]
+        }
+      },
+      {
+        "id": "t2star_grave",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "t2_star_ms",
+              "op": "lt",
+              "value": 10
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "T2* cardíaco < 10 ms: alto risco de disfunção sistólica e arritmias graves"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com avaliação de função biventricular",
+            "ECG e Holter para rastreio de arritmia",
+            "Avaliação cardiológica/hematológica para intensificação da quelação"
+          ],
+          "messages": [
+            "T2* < 10 ms associado a risco muito elevado de insuficiência cardíaca e arritmias graves (RR de IC ~160 vs. T2* > 10 ms em coorte de talassemia major); indicar reavaliação cardiológica próxima e discutir intensificação/combinação de quelantes com centro de referência."
+          ]
+        }
+      },
+      {
+        "id": "hemocromatose_flebotomia",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "underlying_condition",
+              "op": "eq",
+              "value": "hemocromatose_hereditaria"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Hemocromatose hereditária primária: a flebotomia terapêutica é o tratamento de escolha; quelantes são reservados a casos com anemia significativa ou contraindicação à flebotomia"
+          ],
+          "suggested_tests": [
+            "Teste genético HFE (C282Y/H63D)",
+            "Avaliação hepática (RM R2*/T2* hepático e função hepática)"
+          ]
+        }
+      },
+      {
+        "id": "transfusao_dependente_quelacao",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "transfusion_dependent",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Flebotomia terapêutica não é indicada em sobrecarga de ferro transfusional, pois agravaria a anemia de base"
+          ],
+          "supporting": [
+            "Sobrecarga de ferro transfusional: quelação de ferro (deferoxamina, deferasirox ou deferiprona) é o pilar terapêutico"
+          ],
+          "missing_information": [
+            "Volume total estimado de concentrados de hemácias transfundidos e tendência de ferritina sérica seriada"
+          ]
+        }
+      },
+      {
+        "id": "disfuncao_sistolica_sintomatica",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "symptoms_hf_arrhythmia",
+              "op": "truthy",
+              "value": true
+            },
+            {
+              "field": "lvef_pct",
+              "op": "lt",
+              "value": 40
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sintomas de insuficiência cardíaca ou arritmia associados a FEVE < 40% em paciente com sobrecarga de ferro conhecida ou suspeita"
+          ],
+          "emergency_flow": [
+            "Avaliação cardiológica em caráter de urgência/emergência",
+            "ECG imediato e monitorização de ritmo",
+            "Otimizar terapia de insuficiência cardíaca guiada por diretriz e discutir quelação intensiva/parenteral com centro de referência"
+          ]
+        }
+      },
+      {
+        "id": "sem_quelacao_com_sobrecarga",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "on_chelation_therapy",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "transfusion_dependent",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Motivo da ausência de terapia quelante em paciente transfusão-dependente (não iniciada, interrompida por efeito adverso, não adesão)"
+          ],
+          "suggested_tests": [
+            "RM cardíaca e hepática com T2*/R2* para definir necessidade e urgência de iniciar quelação"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiomiopatia por sobrecarga de ferro",
+      "hemocromatose hereditária",
+      "hemocromatose secundária",
+      "talassemia major",
+      "síndrome mielodisplásica transfusão-dependente",
+      "anemia falciforme",
+      "siderose miocárdica",
+      "T2 estrela",
+      "ressonância magnética cardíaca",
+      "quelação de ferro",
+      "deferoxamina",
+      "deferasirox",
+      "deferiprona",
+      "flebotomia terapêutica",
+      "cardiomiopatia dilatada",
+      "cardiomiopatia restritiva",
+      "arritmia",
+      "insuficiência cardíaca",
+      "transfusão crônica de hemácias",
+      "gene HFE"
+    ],
+    "source_refs": [
+      "Hotta VT, Costa IBSDS, Felix RCM, et al. Position Statement on Multimodal Cardiac Imaging in Patients with Systemic Diseases - 2026 (Seção 5.1, Iron Overload Cardiomyopathy). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840.",
+      "Anderson LJ, Holden S, Davis B, et al. Cardiovascular T2-star (T2*) magnetic resonance for the early diagnosis of myocardial iron overload. Eur Heart J. 2001;22(23):2171-2179. DOI: 10.1053/euhj.2001.2822. PMID: 11913479.",
+      "Kirk P, Roughton M, Porter JB, et al. Cardiac T2* magnetic resonance for prediction of cardiac complications in thalassemia major. Circulation. 2009;120(20):1961-1968. DOI: 10.1161/CIRCULATIONAHA.109.874487. PMID: 19801505.",
+      "Alpendurada F, Carpenter JP, Deac M, et al. Relation of myocardial T2* to right ventricular function in thalassaemia major. Eur Heart J. 2010;31(13):1648-1654. DOI: 10.1093/eurheartj/ehq106. PMID: 20413399.",
+      "Carpenter JP, He T, Kirk P, et al. On T2* magnetic resonance and cardiac iron. Circulation. 2011;123(14):1519-1528. DOI: 10.1161/CIRCULATIONAHA.110.007641. PMID: 21444881.",
+      "Kremastinos DT, Farmakis D. Iron overload cardiomyopathy in clinical practice. Circulation. 2011;124(20):2253-2263. DOI: 10.1161/CIRCULATIONAHA.111.050773. PMID: 22083147.",
+      "Pennell DJ, Udelson JE, Arai AE, et al. Cardiovascular function and treatment in β-thalassemia major: a consensus statement from the American Heart Association. Circulation. 2013;128(3):281-308. DOI: 10.1161/CIR.0b013e31829b2be6. PMID: 23775258.",
+      "Gujja P, Rosing DR, Tripodi DJ, Shizukuda Y. Iron overload cardiomyopathy: better understanding of an increasing disorder. J Am Coll Cardiol. 2010;56(13):1001-1012. DOI: 10.1016/j.jacc.2010.03.083. PMID: 20846597.",
+      "Papingiotis G, Mantzourani M, Gogas H, Filippatos G, Farmakis D. Iron overload cardiomyopathy. Heart Fail Rev. 2026;31(1):91. DOI: 10.1007/s10741-026-10663-x. PMID: 42566087.",
+      "European Association for the Study of the Liver (EASL). EASL Clinical Practice Guidelines on haemochromatosis. J Hepatol. 2022;77(2):479-502. DOI: 10.1016/j.jhep.2022.03.033. PMID: 35662478."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/42233840/",
+      "https://doi.org/10.36660/abc.20260221",
+      "https://pubmed.ncbi.nlm.nih.gov/11913479/",
+      "https://doi.org/10.1053/euhj.2001.2822",
+      "https://pubmed.ncbi.nlm.nih.gov/19801505/",
+      "https://doi.org/10.1161/CIRCULATIONAHA.109.874487",
+      "https://pubmed.ncbi.nlm.nih.gov/20413399/",
+      "https://doi.org/10.1093/eurheartj/ehq106",
+      "https://pubmed.ncbi.nlm.nih.gov/21444881/",
+      "https://doi.org/10.1161/CIRCULATIONAHA.110.007641",
+      "https://pubmed.ncbi.nlm.nih.gov/22083147/",
+      "https://doi.org/10.1161/CIRCULATIONAHA.111.050773",
+      "https://pubmed.ncbi.nlm.nih.gov/23775258/",
+      "https://doi.org/10.1161/CIR.0b013e31829b2be6",
+      "https://pubmed.ncbi.nlm.nih.gov/20846597/",
+      "https://doi.org/10.1016/j.jacc.2010.03.083",
+      "https://pubmed.ncbi.nlm.nih.gov/42566087/",
+      "https://doi.org/10.1007/s10741-026-10663-x",
+      "https://pubmed.ncbi.nlm.nih.gov/35662478/",
+      "https://doi.org/10.1016/j.jhep.2022.03.033"
+    ],
+    "related_document_slugs": [
+      "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
+      "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+      "fluxograma-pericardite-constritiva-versus-cardiomiopatia-restritiva",
+      "cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Revisão científica editorial concluída em 30/08/2026; referências, coerência clínica e integração estrutural validadas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

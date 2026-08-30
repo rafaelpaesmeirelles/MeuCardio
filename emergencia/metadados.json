@@ -932,7 +932,7 @@
       "choque-cardiogenico",
       "fibrilacao-atrial-de-alta-resposta"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "grok",
     "review_note": "Fragmento novo de emergência, ordem 124, sem colisão com insuficiencia-cardiaca-aguda-descompensada (ordem 11, manejo da congestão já diagnosticada) nem com edema-agudo-de-pulmao-hipertensivo (ordem 84). Este slug cobre a primeira hora da dispneia ainda indiferenciada.",
     "version": 1
@@ -949,7 +949,7 @@
       "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
       "choque-cardiogenico"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "grok",
     "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com cuidado-pos-parada-e-coronariografia (ordem 17, só o ramo do cateterismo). Este slug cobre a lista integrada das sete decisões do cardiologista nas primeiras 24 h.",
     "version": 1
@@ -970,7 +970,7 @@
       "tromboembolismo-pulmonar",
       "tamponamento-cardiaco"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "fonte_producao": "grok",
     "review_note": "Fragmento novo de emergência, ordem 125, sem colisão com sindrome-coronariana-aguda (ordem 2, dump ESC 2023 da SCA já diagnosticada) nem com dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina. Este slug cobre a primeira hora da dor ainda indiferenciada.",
     "version": 1

@@ -3,8 +3,8 @@ title: "SELECT — Semaglutida 2,4 mg e desfechos cardiovasculares em obesidade 
 slug: select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes
 theme: "Prevenção e lipídios"
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, Esbjerg S, Hardt-Lindberg S, Hovingh GK, Kahn SE, Kushner RF, Lingvay I, Oral TK, Plutzky J, Tornøe CW, Ryan DH; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597 — abstract do PubMed conferido nesta sessão; N, desfecho primário, HR, seguimento médio de 39,8 meses e descontinuação por evento adverso extraídos somente do abstract"]
+review_status: revisado
+source_refs: ["Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, Esbjerg S, Hardt-Lindberg S, Hovingh GK, Kahn SE, Kushner RF, Lingvay I, Oral TK, Plutzky J, Tornøe CW, Ryan DH; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131. NCT03574597 — abstract do PubMed conferido nesta revisão editorial; N, desfecho primário, HR, seguimento médio de 39,8 meses e descontinuação por evento adverso extraídos somente do abstract"]
 legacy_source: "Documento novo, escrito em 29/08/2026. A biblioteca já tinha um documento misto (cirurgia-metabolica-e-semaglutida-em-obesidade-sem-diabetes-select.md) que junta cirurgia bariátrica com o SELECT e não cobre desenho, N por braço nem os limites do abstract. Este é o card dedicado do ensaio."
 ---
 

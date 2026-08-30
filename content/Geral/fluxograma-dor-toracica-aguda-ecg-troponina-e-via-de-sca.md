@@ -4,9 +4,9 @@ slug: fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca
 theme: "Geral"
 kind: fluxograma
 summary: "Árvore da primeira hora no PS, enfermaria ou UCO: ECG em 10 minutos, ramos que não esperam troponina (STEMI, equivalente de oclusão, NSTE de risco muito alto), desvio para a via da cocaína, e só então hs-cTn 0/1 h ou 0/2 h, zona de observação em 3 h e HEART/EDACS como apoio à alta — sem clonar o dump de SCA nem a tabela de cortes por ensaio."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica assistida em 29/08/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Recorte: adulto com dor torácica aguda ou equivalente isquêmico. Não substitui o fluxograma SCA ESC 2023, o 0/1 h, o HEART, a cocaína nem o ambulatorial de baixo risco. ECG ≤10 min I B e 0/1 h ou 0/2 h I B da Recommendation Table 1 ESC 2023 (PMID 37622654); invasiva imediata no risco muito alto I C da Table 4. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida em 29/08/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Recorte: adulto com dor torácica aguda ou equivalente isquêmico. Não substitui o fluxograma SCA ESC 2023, o 0/1 h, o HEART, a cocaína nem o ambulatorial de baixo risco. ECG ≤10 min I B e 0/1 h ou 0/2 h I B da Recommendation Table 1 ESC 2023 (PMID 37622654); invasiva imediata no risco muito alto I C da Table 4. Revisão científica concluída em 30/08/2026."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
   - "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354."

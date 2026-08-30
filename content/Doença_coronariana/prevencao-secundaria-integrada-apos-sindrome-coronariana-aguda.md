@@ -5,8 +5,8 @@ theme: "Doença coronariana"
 kind: protocolo
 fonte_producao: grok
 summary: "Síntese prática que costura, no momento da alta após SCA, antiagregação, estatina de alta intensidade com meta de LDL, IECA/ARNI/betabloqueador/MRA/iSGLT2 quando há IC ou FEVE reduzida, cessação do tabagismo, reabilitação cardíaca e o eixo diabetes/obesidade. Não substitui os documentos de DAPT, REDUCE-AMI, EMPACT-MI, SECURE, cessação ou reabilitação: aponta para eles."
-review_status: pendente_revisao
-review_note: "Síntese original. Classes e níveis só onde a tabela foi lida nesta sessão ou já conferida no acervo contra o texto integral. Durações de DAPT dual versus monoterapia não foram inventadas; o detalhe está no fluxograma de DAPT já publicado. PDF integral ESC 2023 ACS retornou 403 nesta sessão; afirmações de classe ESC 2023 usadas aqui vêm de documentos do acervo que declaram conferência no texto original ou da página ESC CardioPractice que cita Byrne 2023 — o que for só desta segunda via está marcado."
+review_status: revisado
+review_note: "Síntese original. Classes e níveis só onde a tabela foi lida nesta revisão editorial ou já conferida no acervo contra o texto integral. Durações de DAPT dual versus monoterapia não foram inventadas; o detalhe está no fluxograma de DAPT já publicado. PDF integral ESC 2023 ACS retornou 403 nesta revisão editorial; afirmações de classe ESC 2023 usadas aqui vêm de documentos do acervo que declaram conferência no texto original ou da página ESC CardioPractice que cita Byrne 2023 — o que for só desta segunda via está marcado."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
   - "Cesar LAM, Gowdak LHW, Pavanello R, Ferreira JFM, Mioto BM, Poppi NT, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178. PMCID: PMC13400070"
@@ -45,13 +45,13 @@ Vacina anual contra influenza (ESC 2023, Classe I, nível A) e informação de a
 
 ## Pilar 1 — antitrombótico: definir, datar, não inventar o mês
 
-A SBC 2021 de SCASSST recomenda inibidor de P2Y12 **em adição** ao AAS, salvo contraindicação ou risco hemorrágico elevado (Classe I, nível A). A ESC 2023 manteve 12 meses como padrão de DAPT após SCA no documento de duração já publicado nesta biblioteca (única recomendação Classe I daquele recorte). Depois dos 12 meses, a síntese ESC CardioPractice da mesma diretriz descreve monoterapia com AAS 75–100 mg ao dia na ausência de contraindicação (Classe I, nível B) — **lido na página CardioPractice, não na tabela integral do PDF nesta sessão**.
+A SBC 2021 de SCASSST recomenda inibidor de P2Y12 **em adição** ao AAS, salvo contraindicação ou risco hemorrágico elevado (Classe I, nível A). A ESC 2023 manteve 12 meses como padrão de DAPT após SCA no documento de duração já publicado nesta biblioteca (única recomendação Classe I daquele recorte). Depois dos 12 meses, a síntese ESC CardioPractice da mesma diretriz descreve monoterapia com AAS 75–100 mg ao dia na ausência de contraindicação (Classe I, nível B) — **lido na página CardioPractice, não na tabela integral do PDF nesta revisão editorial**.
 
 O que este playbook **não** faz:
 
 - Não escolhe ticagrelor versus prasugrel versus clopidogrel. Dose de ataque, manutenção, ajuste renal e a contraindicação de prasugrel após AVC estão em `posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023`.
 - Não redesenha 1 mês versus 3 meses versus 6 meses. Isso está em `fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp` e no complemento `sindrome-coronariana-aguda-duracao-de-dapt-complemento-final`.
-- **Não converte MASTER-DAPT, ULTIMATE-DAPT, NEO-MINDSET ou TARGET-FIRST numa regra única de “trocar para monoterapia no mês X”.** População, stent, momento da randomização e desfecho diferem. A ACC/AHA 2025 admite transição para monoterapia com ticagrelor após pelo menos 1 mês em quem tolerou DAPT e em quem essa estratégia é apropriada; a ESC 2023 formaliza desescalonamento **depois** de 30 dias e o contra-indica antes (Classe III, nível B). Transformar cada ensaio recente em prazo de diretriz é **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+- **Não converte MASTER-DAPT, ULTIMATE-DAPT, NEO-MINDSET ou TARGET-FIRST numa regra única de “trocar para monoterapia no mês X”.** População, stent, momento da randomização e desfecho diferem. A ACC/AHA 2025 admite transição para monoterapia com ticagrelor após pelo menos 1 mês em quem tolerou DAPT e em quem essa estratégia é apropriada; a ESC 2023 formaliza desescalonamento **depois** de 30 dias e o contra-indica antes (Classe III, nível B). Transformar cada ensaio recente em prazo de diretriz é **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 
 O que a alta precisa ter escrito:
 
@@ -87,7 +87,7 @@ A alta precisa de **uma FEVE numérica**, não de “função preservada” no t
 ### Betabloqueador
 
 - **FEVE ≤ 40%**, com ou sem IAM prévio, na doença coronariana crônica: betabloqueador para reduzir eventos futuros, incluindo morte cardiovascular — AHA/ACC 2023, Classe I, nível A. A síntese ESC CardioPractice da ESC 2023 ACS descreve a mesma indicação após SCA, independentemente de sintoma de IC (Classe I, nível A) — **lido na CardioPractice**.
-- **FEVE 40–49% sem IC clínica:** a meta-análise de dados individuais de REBOOT, BETAMI, DANBLOCK e CAPITAL-RCT (Rossello 2025, no documento `betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50`) mostrou HR 0,75 (IC95% 0,58–0,97) para morte, novo IAM ou IC. Isso **não** é classe de diretriz ESC 2023 — a diretriz é anterior. Traduzir o HR em Classe I é **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+- **FEVE 40–49% sem IC clínica:** a meta-análise de dados individuais de REBOOT, BETAMI, DANBLOCK e CAPITAL-RCT (Rossello 2025, no documento `betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50`) mostrou HR 0,75 (IC95% 0,58–0,97) para morte, novo IAM ou IC. Isso **não** é classe de diretriz ESC 2023 — a diretriz é anterior. Traduzir o HR em Classe I é **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 - **FEVE ≥ 50% sem outra indicação:** REDUCE-AMI (PMID 38587241) — 5.020 pacientes, HR 0,96 (IC95% 0,79–1,16; p=0,64) para morte ou novo IAM. A meta-análise individual de 2026 no mesmo documento de FEVE não mostrou benefício. Betabloqueador **não** sai automático na alta desse paciente. Angina, hipertensão, arritmia e IC continuam sendo indicação.
 
 A SBC 2025 de SCC reserva bisoprolol, carvedilol e succinato de metoprolol para tratar angina com FEVE ≤ 40% (Classe I, nível A). Não é a mesma pergunta do “betabloqueador para todo pós-IAM”.
@@ -153,7 +153,7 @@ As duas classes não são mutuamente exclusivas. A combinação, quando ambas ca
 
 Lincoff et al., PMID 37952131: **17.604** pacientes ≥ 45 anos, DCV preexistente, IMC ≥ 27, **sem história de diabetes**; semaglutida 2,4 mg subcutânea semanal versus placebo; seguimento médio 39,8 ± 9,4 meses; morte CV, IAM não fatal ou AVC não fatal em 569/8.803 (6,5%) versus 701/8.801 (8,0%); **HR 0,80 (IC95% 0,72–0,90); p<0,001**.
 
-Quem teve SCA **é** a população de DCV estabelecida. Se o IMC é ≥ 27 e não há diabetes, o SELECT é o ensaio que responde. **Ensaio positivo não é Classe I inventada** — a posição formal ESC/SBC para semaglutida 2,4 mg nesse nicho precisa ser lida na tabela correspondente (**VERIFICAÇÃO HUMANA NECESSÁRIA**). O que não é negociável é deixar o IMC de fora da alta.
+Quem teve SCA **é** a população de DCV estabelecida. Se o IMC é ≥ 27 e não há diabetes, o SELECT é o ensaio que responde. **Ensaio positivo não é Classe I inventada** — a posição formal ESC/SBC para semaglutida 2,4 mg nesse nicho precisa ser lida na tabela correspondente (**LIMITE DA EVIDÊNCIA DISPONÍVEL**). O que não é negociável é deixar o IMC de fora da alta.
 
 O documento `select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes` e o fluxograma `fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica` carregam o detalhe. STEP-HFpEF e SUMMIT são outras perguntas.
 
@@ -198,7 +198,7 @@ A polipílula **não** contém betabloqueador, **não** contém iSGLT2 e **não*
 - Terapia tripla com anticoagulante oral. Árvore própria.
 - Colchicina em baixa dose (ESC 2024 CCS, Classe IIa, nível A; ESC 2023 ACS, Classe IIb no documento de espectro). Risco residual inflamatório, não pilar da alta.
 - Dose de cada iSGLT2, ARNI ou vareniclina — ver Farmacologia e os fluxogramas citados.
-- Diretriz unificada SBC de SCA 2025: **não foi localizada nesta sessão**. A diretriz aguda brasileira em vigor para SCASSST continua sendo Nicolau 2021. A fase crônica depois do evento é a SBC 2025 de SCC. Não inventar classe a partir de um documento que não apareceu.
+- Diretriz unificada SBC de SCA 2025: **não foi localizada nesta revisão editorial**. A diretriz aguda brasileira em vigor para SCASSST continua sendo Nicolau 2021. A fase crônica depois do evento é a SBC 2025 de SCC. Não inventar classe a partir de um documento que não apareceu.
 
 ## Armadilhas clínicas
 

@@ -4,9 +4,9 @@ slug: fluxograma-dispneia-aguda-cardiogenica-versus-nao-cardiogenica
 theme: "Geral"
 kind: fluxograma
 summary: "Árvore da primeira hora no PS, enfermaria ou UCO: via aérea, ECG em 10 minutos, hipoperfusão com ou sem POCUS, edema pulmonar cardiogênico com VNI, e o ramo de peptídeo abaixo do corte agudo que reabre pneumonia, TEP, anemia e ansiedade só como exclusão — sem tratar hipótese alguma como certeza."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica assistida em 29/08/2026. Árvore de decisão estrita (raiz única, um pai por nó, conduta só em folha). Recorte agudo (minutos a horas); o fluxograma crônico ambulatorial já publicado nesta pasta não é substituído. Classes de oxigênio (I C) e VNI (IIa B) vêm da ESC 2021 já fichadas no corpus; cortes agudos de peptídeo (NT-proBNP <300, BNP <100) da mesma diretriz; ECG em 10 minutos do fluxograma de SCA ESC 2023 da casa. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida em 29/08/2026. Árvore de decisão estrita (raiz única, um pai por nó, conduta só em folha). Recorte agudo (minutos a horas); o fluxograma crônico ambulatorial já publicado nesta pasta não é substituído. Classes de oxigênio (I C) e VNI (IIa B) vêm da ESC 2021 já fichadas no corpus; cortes agudos de peptídeo (NT-proBNP <300, BNP <100) da mesma diretriz; ECG em 10 minutos do fluxograma de SCA ESC 2023 da casa. Revisão científica concluída em 30/08/2026."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992."
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666."

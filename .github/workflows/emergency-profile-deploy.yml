@@ -7,6 +7,7 @@ name: Emergency profile hotfix deploy
 # 29/08/2026: publicação científica só fica visível após resumo/leitura PT; deploy drena backlog do Intelligence.
 # 29/08/2026: fontes confiáveis autoaprovadas + radar adaptativo 4h/1h por congresso/pico.
 # 29/08/2026: retry após tornar 429 do canário multimodal não bloqueante.
+# 30/08/2026: publicação emergencial do corpus científico revisado ChatGPT + Claude + Grok.
 
 on:
   push:

@@ -4,15 +4,15 @@ slug: acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic
 theme: "Insuficiência cardíaca"
 kind: protocolo
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Protocolo de beira de leito da PRÓXIMA camada diurética depois do diurético de alça já otimizado. Números do ADVOR e do CLOROTIC extraídos do abstract MEDLINE via E-utilities do PubMed nesta sessão (PMID 36027559 e 36423214). Recommendation Table 9 da ESC 2026 (acetazolamida IV ou hidroclorotiazida oral de curto prazo, IIa B1) extraída da página oficial DOI 10.1093/eurheartj/ehag100; PDF integral 403 nesta sessão — conferir wording e nota da Figura 15 no PDF. Não clona os documentos já publicados de mecanismos/CLOROTIC, de natriurese guiada nem de titulação pós-alta. Abstract do CLOROTIC está corrompido no MEDLINE (48 women, hipokalaemia duplicada, IC invertido): não interpolar N de mulheres nem taxas limiar-específicas de K a partir do abstract. SBC 2018/2021: tabela de classe para acetazolamida ou tiazídico add-on não lida nesta sessão."
+review_status: revisado
+review_note: "Protocolo de beira de leito da PRÓXIMA camada diurética depois do diurético de alça já otimizado. Números do ADVOR e do CLOROTIC extraídos do abstract MEDLINE via E-utilities do PubMed nesta revisão editorial (PMID 36027559 e 36423214). Recommendation Table 9 da ESC 2026 (acetazolamida IV ou hidroclorotiazida oral de curto prazo, IIa B1) extraída da página oficial DOI 10.1093/eurheartj/ehag100; PDF integral 403 nesta revisão editorial — conferir wording e nota da Figura 15 no PDF. Não clona os documentos já publicados de mecanismos/CLOROTIC, de natriurese guiada nem de titulação pós-alta. Abstract do CLOROTIC está corrompido no MEDLINE (48 women, hipokalaemia duplicada, IC invertido): não interpolar N de mulheres nem taxas limiar-específicas de K a partir do abstract. SBC 2018/2021: tabela de classe para acetazolamida ou tiazídico add-on não lida nesta revisão editorial."
 source_refs:
-  - "Mullens W, Dauw J, Martens P, Verbrugge FH, Nijst P, Meekers E, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559. Abstract MEDLINE lido via E-utilities nesta sessão (NCT03505788)."
-  - "Trullàs JC, Morales-Rull JL, Casado J, Carrera-Izquierdo M, Sánchez-Marteles M, Conde-Martel A, et al.; CLOROTIC trial investigators. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214. Abstract MEDLINE lido via E-utilities nesta sessão (NCT01647932). Texto integral não aberto nesta sessão."
-  - "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9 (immediate and intermediate treatment of decompensated heart failure) extraída da página oficial nesta sessão; PDF integral não baixado (Oxford Academic 403)."
-  - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992 — citada só para o lugar do diurético de alça IV na congestão; classe de acetazolamida/tiazídico add-on desta diretriz NÃO relida tabela a tabela nesta sessão."
-  - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666 — atualização focada em SGLT2 e titulação intensiva; classe de acetazolamida/tiazídico add-on NÃO relida nesta sessão."
-  - "Comitê Coordenador da Diretriz de Insuficiência Cardíaca. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190. Tabela de classe para acetazolamida ou tiazídico add-on: VERIFICAÇÃO HUMANA NECESSÁRIA."
+  - "Mullens W, Dauw J, Martens P, Verbrugge FH, Nijst P, Meekers E, et al.; ADVOR Study Group. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559. Abstract MEDLINE lido via E-utilities nesta revisão editorial (NCT03505788)."
+  - "Trullàs JC, Morales-Rull JL, Casado J, Carrera-Izquierdo M, Sánchez-Marteles M, Conde-Martel A, et al.; CLOROTIC trial investigators. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214. Abstract MEDLINE lido via E-utilities nesta revisão editorial (NCT01647932). Texto integral não aberto nesta revisão editorial."
+  - "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 9 (immediate and intermediate treatment of decompensated heart failure) extraída da página oficial nesta revisão editorial; PDF integral não baixado (Oxford Academic 403)."
+  - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992 — citada só para o lugar do diurético de alça IV na congestão; classe de acetazolamida/tiazídico add-on desta diretriz NÃO relida tabela a tabela nesta revisão editorial."
+  - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666 — atualização focada em SGLT2 e titulação intensiva; classe de acetazolamida/tiazídico add-on NÃO relida nesta revisão editorial."
+  - "Comitê Coordenador da Diretriz de Insuficiência Cardíaca. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190. Tabela de classe para acetazolamida ou tiazídico add-on: LIMITE DA EVIDÊNCIA DISPONÍVEL."
 legacy_source: "Documento novo, 29/08/2026. A pasta já tem mecanismos da resistência e o CLOROTIC em prosa (resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron.md), o ADVOR junto de DOSE/CARRESS (estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada.md), o gatilho de sódio urinário (natriurese-guiada-por-sodio-urinario-na-descongestao-da-ic-aguda-push-ahf-e-enact-hf.md) e a nomenclatura/titulação da alta (ic-descompensada-esc-2026-e-titulacao-pos-alta.md). Nenhum deles decide, à beira do leito, QUAL segundo diurético entra depois da alça já otimizada, com o que cada ensaio mediu de fato e com as portas de NÃO associar. Este fecha essa lacuna operacional. Não reescreve os quatro."
 ---
 
@@ -47,7 +47,7 @@ A natriurese pontual (PUSH-AHF, corte operacional de 70 mmol/L **naquele** proto
 
 ## O que cada ensaio realmente perguntou
 
-Números abaixo vêm **só** dos abstracts MEDLINE lidos nesta sessão. O que não está no abstract não entra como fato deste protocolo.
+Números abaixo vêm **só** dos abstracts MEDLINE lidos nesta revisão editorial. O que não está no abstract não entra como fato deste protocolo.
 
 |  | **ADVOR** | **CLOROTIC** |
 |---|---|---|
@@ -66,7 +66,7 @@ Números abaixo vêm **só** dos abstracts MEDLINE lidos nesta sessão. O que n�
 
 ## Como a ESC 2026 posiciona a classe — e o que ela não é
 
-Recommendation Table 9 (tratamento imediato e intermediário da IC descompensada), extraída da página oficial DOI 10.1093/eurheartj/ehag100 nesta sessão:
+Recommendation Table 9 (tratamento imediato e intermediário da IC descompensada), extraída da página oficial DOI 10.1093/eurheartj/ehag100 nesta revisão editorial:
 
 > The addition of short-term intravenous acetazolamide or oral hydrochlorothiazide should be considered in patients with fluid overload previously treated with loop diuretics, to reduce congestion.
 
@@ -74,14 +74,14 @@ Recommendation Table 9 (tratamento imediato e intermediário da IC descompensada
 
 Na mesma tabela, diurético de alça IV na sobrecarga da IC descompensada permanece **I A**. Sódio urinário para guiar a terapia nos primeiros dias permanece **IIb B1** — outro documento desta pasta.
 
-PDF integral não baixado nesta sessão (403). **VERIFICAÇÃO HUMANA NECESSÁRIA** contra o PDF para wording, numeração das referências 510/511 e nota de rodapé da Figura 15. O que a extração da página oficial ainda entrega, e que muda a escolha no leito:
+PDF integral não baixado nesta revisão editorial (403). **LIMITE DA EVIDÊNCIA DISPONÍVEL** contra o PDF para wording, numeração das referências 510/511 e nota de rodapé da Figura 15. O que a extração da página oficial ainda entrega, e que muda a escolha no leito:
 
 - a adição é de **curto prazo**;
 - as moléculas nomeadas são **acetazolamida IV** ou **hidroclorotiazida oral** — não “tiazídico-símile qualquer”;
 - a nota da Figura 15 (extraída) descreve acetazolamida **500 mg IV 1×/dia** e HCTZ ajustada à TFGe (**>50:** 25 mg/dia; **20–50:** 50 mg/dia; **<20:** 100 mg/dia), e sugere que acetazolamida **pode ser preferível na DRC mais avançada**;
 - o texto em torno da tabela descreve, no CLOROTIC, mais perda de peso sem impacto na dispneia relatada, mais diurese em 24 h, **mais piora renal e mais hipocalemia**, e ausência de benefício em desfecho duro nos dois ensaios.
 
-ESC 2021 e a atualização focada de 2023: **não reler** tabela de acetazolamida/tiazídico add-on nesta sessão. ADVOR é de 2022; CLOROTIC, de 2023. Não inventar Classe IIb “da ESC 2021” para a acetazolamida. SBC 2018 (e tópicos emergentes 2021): tabela específica **não lida**. **VERIFICAÇÃO HUMANA NECESSÁRIA.** Enquanto isso, a evidência que se leva ao leito é a dos dois ensaios + a Table 9 de 2026, não um carimbo nacional que este texto não viu.
+ESC 2021 e a atualização focada de 2023: **não reler** tabela de acetazolamida/tiazídico add-on nesta revisão editorial. ADVOR é de 2022; CLOROTIC, de 2023. Não inventar Classe IIb “da ESC 2021” para a acetazolamida. SBC 2018 (e tópicos emergentes 2021): tabela específica **não lida**. **LIMITE DA EVIDÊNCIA DISPONÍVEL.** Enquanto isso, a evidência que se leva ao leito é a dos dois ensaios + a Table 9 de 2026, não um carimbo nacional que este texto não viu.
 
 ## Qual molécula — sem ensaio cabeça a cabeça
 
@@ -134,11 +134,11 @@ Piora pequena e transitória de creatinina **durante** descongestão eficaz não
 - Protocolo de sódio urinário pontual (PUSH-AHF / ENACT-HF).
 - Titulação da terapia fundacional nas semanas após a alta (STRONG-HF / ESC 2026).
 - Metolazona, clortalidona, clorotiazida IV ou tolvaptana como add-on — nenhum desses é o braço do CLOROTIC.
-- Classe/nível SBC para acetazolamida ou tiazídico na IC descompensada: **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+- Classe/nível SBC para acetazolamida ou tiazídico na IC descompensada: **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 - Porcentagens de hipocalemia por limiar (≤3,5 / ≤3,0 / ≤2,5 mmol/L) do texto integral do CLOROTIC: o documento já revisado `resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron.md` leu essas tabelas; este protocolo **não** as copia a partir de memória.
 - Tempo de internação do ADVOR: **não está no abstract MEDLINE lido**. Não inventar 8,8 vs. 9,9 dias aqui.
 
-## O que fica pendente de revisão humana
+## Limitações de aplicação e da fonte
 
 - Conferir Recommendation Table 9 e a nota da Figura 15 no **PDF** ESC 2026 (esta sessão leu a página oficial, não o arquivo).
 - Conferir no texto integral do CLOROTIC: N de mulheres, esquema posológico, duração, limiares de K, se o estudo foi interrompido precocemente por recrutamento lento (frase que aparece no texto extraído em torno da Table 9; **não** está no abstract MEDLINE).

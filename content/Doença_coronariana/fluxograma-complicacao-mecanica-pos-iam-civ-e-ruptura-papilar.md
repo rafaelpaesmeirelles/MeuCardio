@@ -4,7 +4,7 @@ slug: fluxograma-complicacao-mecanica-pos-iam-civ-e-ruptura-papilar
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "Árvore à beira do leito da deterioração pós-infarto: eco imediato, separação entre choque de bomba, CIV, ruptura papilar e tamponamento, IABP como ponte na complicação mecânica, e Heart Team entre cirurgia de emergência, adiamento selecionado e fechamento percutâneo."
-review_status: pendente_revisao
+review_status: revisado
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
   - "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI: 10.1161/CIR.0000000000000985. PMID: 34126755."

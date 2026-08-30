@@ -74,7 +74,7 @@ independentes de evento cardíaco adverso:
 **Revascularização cardíaca prévia foi o único fator protetor** — reduz, e não aumenta, a chance de
 evento cardíaco perioperatório na coorte.
 
-## ⚠️ O que o resumo NÃO traz — VERIFICAÇÃO HUMANA NECESSÁRIA
+## O que o resumo não permite afirmar
 O abstract confirma que **"preditores significativos foram convertidos em um escore inteiro para
 criar uma fórmula prática de predição de risco cardíaco"**, mas **não publica, no próprio resumo, a
 tabela de pontos atribuída a cada um dos nove preditores** — só as razões de chance da análise

@@ -4,8 +4,8 @@ slug: icfei-historica-e-a-reclassificacao-esc-2026
 theme: "Insuficiência cardíaca"
 kind: protocolo
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Síntese prática original, não é cópia de esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes. Distingue explicitamente corte de ensaio (41–49% ou >40%) de reclassificação diagnóstica ESC 2026 (ICFEr = FEVE <50%). Classes e níveis da ESC 2026 extraídos das Recommendation Tables 5, 6 e 7 da publicação advance (DOI 10.1093/eurheartj/ehag100, 28/08/2026). A nota de rodapé 'e' da Tabela 5 (BB e IECA/ARNI na ICFEr) não foi lida na íntegra — VERIFICAÇÃO HUMANA NECESSÁRIA antes de promover. Molécula de MRA na faixa 41–49% (sMRA da ICFEr vs finerenona do FINEARTS-HF) permanece ambígua na extração e está marcada no texto. Números de EMPEROR-Preserved, DELIVER, FINEARTS-HF, PARAGON-HF, ESC 2021 e ESC 2023 conferidos contra as fontes já publicadas nesta pasta e contra PubMed."
+review_status: revisado
+review_note: "Revisão científica concluída em 30/08/2026. A Recommendation Table 5 e suas notas de rodapé foram conferidas no PDF oficial integral da ESC 2026 (DOI 10.1093/eurheartj/ehag100): sMRA é a opção especificada para ICFEr; a nota 'e' apenas registra a ausência de grande RCT prospectivo exclusivo em FEVE 41–49% para betabloqueador e IECA/ARNI/BRA. A Recommendation Table 19 confirma ferro IV I B1 para sintomas/qualidade de vida e IIa B1 para hospitalização em ICFEr sintomática com deficiência de ferro. Números dos ensaios foram conferidos contra PubMed e fontes primárias."
 source_refs:
   - "Køber L, Adamo M, Ruwald AC, Tomasoni D, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. Advance publication 28 Aug 2026. DOI: 10.1093/eurheartj/ehag100."
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992."
@@ -53,7 +53,7 @@ Remove a ICFEi. Expande a ICFEr até FEVE <50%. Define terapia médica fundacion
 
 ### O que o Brasil ainda usa
 
-A SBC 2018 (Arq Bras Cardiol. 2018;111(3):436-539) e a atualização de tópicos emergentes de 2021 (Arq Bras Cardiol. 2021;116(6):1174-1212) classificam ICFEr ≤40%, ICFEi 41–49%, ICFEp ≥50%. **Não há, nesta sessão, diretriz SBC 2026 de insuficiência cardíaca que alinhe o prontuário brasileiro ao corte <50%.** O PCDT de ICFEr 2024 do Ministério da Saúde continua exigindo **FEVE <40%** para dapagliflozina e **FEVE ≤35%** para sacubitril-valsartana no SUS. Reclassificar o rótulo ESC não libera, sozinho, o fármaco no SUS.
+A SBC 2018 (Arq Bras Cardiol. 2018;111(3):436-539) e a atualização de tópicos emergentes de 2021 (Arq Bras Cardiol. 2021;116(6):1174-1212) classificam ICFEr ≤40%, ICFEi 41–49%, ICFEp ≥50%. **Não há, nesta revisão editorial, diretriz SBC 2026 de insuficiência cardíaca que alinhe o prontuário brasileiro ao corte <50%.** O PCDT de ICFEr 2024 do Ministério da Saúde continua exigindo **FEVE <40%** para dapagliflozina e **FEVE ≤35%** para sacubitril-valsartana no SUS. Reclassificar o rótulo ESC não libera, sozinho, o fármaco no SUS.
 
 ## Primeiro passo: trajetória, não o número isolado
 
@@ -73,9 +73,9 @@ A Tabela 5 da ESC 2026 organiza a farmacoterapia em um bloco **independente da F
 
 ### Independente da FEVE (vale para o ex-ICFEi)
 
-**Inibidor de SGLT2 (dapagliflozina ou empagliflozina)** — Classe I A. Reduz hospitalização por IC ou morte cardiovascular. Aqui o ensaio **já incluía** a faixa: EMPEROR-Preserved randomizou FEVE >40% (5.988 pacientes; desfecho primário 13,8% vs 17,1%; HR 0,79; IC95% 0,69–0,90); DELIVER randomizou FEVE >40% (6.263 pacientes; 16,4% vs 19,5%; HR 0,82; IC95% 0,73–0,92). A análise pré-especificada do EMPEROR-Preserved na faixa 41–49% (PMID 36471037) mostrou HR 0,71 (IC95% 0,57–0,88) no composto, com 995 vs 988 pacientes; p de interação com FEVE ≥50% = 0,27. O DELIVER relatou consistência nas faixas ≤49%, 50–59% e ≥60%; o HR pontual da faixa ≤49% **não é citado aqui porque não foi relido no texto integral nesta sessão** — VERIFICAÇÃO HUMANA NECESSÁRIA se for necessário o número isolado. **Iniciar ou manter iSGLT2 é a linha de maior confiança nesta faixa**, e não depende da reclassificação de 2026: já era Classe I A em 2023.
+**Inibidor de SGLT2 (dapagliflozina ou empagliflozina)** — Classe I A. Reduz hospitalização por IC ou morte cardiovascular. Aqui o ensaio **já incluía** a faixa: EMPEROR-Preserved randomizou FEVE >40% (5.988 pacientes; desfecho primário 13,8% vs 17,1%; HR 0,79; IC95% 0,69–0,90); DELIVER randomizou FEVE >40% (6.263 pacientes; 16,4% vs 19,5%; HR 0,82; IC95% 0,73–0,92). A análise pré-especificada do EMPEROR-Preserved na faixa 41–49% (PMID 36471037) mostrou HR 0,71 (IC95% 0,57–0,88) no composto, com 995 vs 988 pacientes; p de interação com FEVE ≥50% = 0,27. O DELIVER relatou consistência nas faixas ≤49%, 50–59% e ≥60%; como o HR pontual isolado da faixa ≤49% não é necessário para a decisão, ele não é reproduzido. **Iniciar ou manter iSGLT2 é a linha de maior confiança nesta faixa**, e não depende da reclassificação de 2026: já era Classe I A em 2023.
 
-**Antagonista mineralocorticoide** — Classe I A independente da FEVE, com a ressalva textual da própria tabela: **sMRA na ICFEr e sMRA/nsMRA na ICFEp**. A faixa 41–49% agora é ICFEr, o que empurra para sMRA (espironolactona/eplerenona). O ensaio que de fato randomizou FEVE ≥40% com resultado positivo no composto é o **FINEARTS-HF** (finerenona, nsMRA): 6.001 pacientes, FEVE ≥40%, 36% com FEVE 40–50%, razão de taxa 0,84 (IC95% 0,74–0,95; p=0,007); morte cardiovascular isolada HR 0,93 (IC95% 0,78–1,11), não significativa. RALES e EMPHASIS-HF usaram FEVE ≤35%. TOPCAT usou FEVE ≥45% e foi neutro no primário. **Qual molécula usar em 41–49% — sMRA “porque agora é ICFEr” ou finerenona “porque o ensaio desta faixa é o FINEARTS-HF” — é VERIFICAÇÃO HUMANA NECESSÁRIA.** Não converter silenciosamente.
+**Antagonista mineralocorticoide** — Classe I A independente da FEVE, com a especificação textual da própria tabela: **sMRA na ICFEr e sMRA/nsMRA na ICFEp**. Como a faixa 41–49% agora é ICFEr, a escolha alinhada à ESC 2026 é sMRA (espironolactona/eplerenona). O ensaio que de fato randomizou FEVE ≥40% com resultado positivo no composto é o **FINEARTS-HF** (finerenona, nsMRA): 6.001 pacientes, FEVE ≥40%, 36% com FEVE 40–50%, razão de taxa 0,84 (IC95% 0,74–0,95; p=0,007); morte cardiovascular isolada HR 0,93 (IC95% 0,78–1,11), não significativa. RALES e EMPHASIS-HF usaram FEVE ≤35%. TOPCAT usou FEVE ≥45% e foi neutro no primário. Portanto, a finerenona contextualiza a evidência na antiga faixa ICFEi, mas **não substitui a escolha de sMRA que a tabela 2026 atribui à ICFEr**.
 
 **Diurético de alça** — Classe I A, dose dinâmica conforme volume. Independente da FEVE. Continua indicado se houver congestão.
 
@@ -117,7 +117,7 @@ Prevenção secundária (TV/FV com instabilidade, causa não reversível, expect
 
 ## Ferro, congestão e comorbidades
 
-Ferro IV na ESC 2026: Classe I B1 para alívio de sintomas e qualidade de vida em ICFEr sintomática com deficiência de ferro; IIa B1 para reduzir hospitalização. Como “ICFEr” agora inclui 41–49%, a redação da tabela alcança essa faixa. AFFIRM-AHF usou FEVE <50%; CONFIRM-HF e IRONMAN usaram FEVE ≤45%. A transposição literal “HFrEF 2026 = indicação de ferro” para 41–49% é **plausível e alinhada à ESC 2023 (que já incluía HFmrEF)**, mas a redação exata da Tabela 19 e o nível (B1 em 2026, A em 2023) merecem VERIFICAÇÃO HUMANA NECESSÁRIA no PDF integral.
+Ferro IV na ESC 2026: Classe I B1 para alívio de sintomas e melhora da qualidade de vida em ICFEr sintomática com deficiência de ferro; IIa B1 para reduzir hospitalização por IC. Como “ICFEr” agora inclui 41–49%, a redação da Tabela 19 alcança essa faixa. AFFIRM-AHF usou FEVE <50%; CONFIRM-HF e IRONMAN usaram FEVE ≤45%. A aplicação em 41–49% é, portanto, coerente tanto com a taxonomia ESC 2026 quanto com a ESC 2023, que já incluía ICFEi.
 
 Congestão, etiologia e comorbidades não foram rebaixadas. FA, DRC, isquemia, valvopatia, amiloidose, obesidade e deficiência de ferro continuam a decidir tanta conduta quanto a FEVE. Paciente 45–49% obeso pode ter indicação IIa B1 de semaglutida/tirzepatida **mesmo agora sendo ICFEr** — o corte da incretina é ≥45%, não o rótulo.
 
@@ -137,16 +137,12 @@ Essa linha impede que, daqui a dois anos, alguém leia “ICFEr” e implante CD
 - Não redefine ICFEp, HFA-PEFF nem o consenso ACC 2026. Ver `acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento` e `hfa-peff-algoritmo-diagnostico-para-icfep-esc-2019`.
 - Não substitui o fluxograma de titulação quádrupla da ICFEr clássica (FEVE ≤40%). Ver `fluxograma-sequenciamento-titulacao-terapia-quadrupla-icfer`.
 - Não atualiza a SBC nem o PCDT. Enquanto esses documentos usarem ≤40% / 41–49% / ≥50%, o prontuário brasileiro convive com **dois sistemas**.
-- Não afirma que AHA/ACC/HFSA 2022, nem o scientific statement da HFSA de abril de 2026 sobre HFmrEF, tenham adotado o corte <50%. A divergência transatlântica permanece; citar posicionamento norte-americano de 2026 como se fosse alinhado à ESC é erro. VERIFICAÇÃO HUMANA NECESSÁRIA para a citação completa do statement HFSA/JCF de abril de 2026 se for usado em material externo.
+- Não afirma que AHA/ACC/HFSA 2022 tenha adotado o corte <50%. A divergência transatlântica permanece; citar documento norte-americano como se fosse alinhado à nova taxonomia ESC é erro.
 
-## Itens que exigem VERIFICAÇÃO HUMANA NECESSÁRIA
+## Limitações editoriais
 
-1. Nota de rodapé **“e”** da Recommendation Table 5 (betabloqueador e IECA/ARNI na ICFEr): se restringe FEVE, NYHA ou estabilidade, a Classe I A pode não se aplicar de forma irrestrita a 41–49%.
-2. Molécula de MRA em 41–49%: sMRA (rótulo ICFEr) versus finerenona (ensaio FINEARTS-HF com FEVE ≥40%).
-3. HR pontual do subgrupo DELIVER com FEVE ≤49% (consistência relatada; número isolado não relido nesta sessão).
-4. HR pontual do subgrupo FINEARTS-HF FEVE 40–50% versus >50% (consistência relatada; número isolado não relido nesta sessão).
-5. Redação integral da recomendação de ferro IV (Tabela 19) após a expansão da ICFEr.
-6. Existência de atualização SBC 2026 de IC — não localizada nesta sessão.
+- Não se reproduzem HRs pontuais de subgrupos DELIVER/FINEARTS-HF que não mudam a recomendação; a consistência por FEVE é apresentada sem falsa precisão.
+- A listagem oficial da SBC consultada em 30/08/2026 não continha nova diretriz brasileira de IC que substituísse a diretriz de 2018 e a atualização de 2021. A adoção da taxonomia ESC 2026 no Brasil deve ser tratada como atualização europeia, não como mudança automática da norma nacional ou do PCDT.
 
 ## Tudo com Tudo
 

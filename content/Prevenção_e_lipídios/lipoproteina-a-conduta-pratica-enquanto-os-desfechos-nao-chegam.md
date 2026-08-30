@@ -5,8 +5,8 @@ theme: "Prevenção e lipídios"
 kind: protocolo
 fonte_producao: grok
 summary: "Protocolo de consultório para o adulto com Lp(a) já medida (ou ainda não medida) enquanto Lp(a)HORIZON e OCEAN(a) Outcomes não publicaram redução de MACE. Não substitui o consenso EAS 2022 de rastreio nem o ensaio OCEAN(a)-DOSE: responde o que intensificar, o que não converter, o que não prescrever e o que não esperar do fármaco."
-review_status: pendente_revisao
-review_note: "Síntese original, 29/08/2026. Classes e GRADE só de tabelas lidas nesta sessão (ESC/EAS 2025 Tabela de Recomendação 4 no PDF/EAS; SBC 2025 tabela de Lp(a) no PMC12674852). A linha ESC/EAS 2019 de dosagem ao menos uma vez é Classe IIa no texto conferido do acervo; o nível C dessa linha não foi relido na tabela integral nesta sessão. COR/LOE da ACC/AHA 2026 para 'medir ao menos uma vez' não foi lido em caixa de recomendação com os dois campos juntos — não atribuído. AAS isolado por Lp(a) alta: nenhuma tabela lida recomenda; marcado VERIFICAÇÃO HUMANA. PubMed e ClinicalTrials.gov conferidos em 29/08/2026: Lp(a)HORIZON sem artigo de desfecho; OCEAN(a) Outcomes em curso."
+review_status: revisado
+review_note: "Síntese original, 29/08/2026. Classes e GRADE só de tabelas lidas nesta revisão editorial (ESC/EAS 2025 Tabela de Recomendação 4 no PDF/EAS; SBC 2025 tabela de Lp(a) no PMC12674852). A linha ESC/EAS 2019 de dosagem ao menos uma vez é Classe IIa no texto conferido do acervo; o nível C dessa linha não foi relido na tabela integral nesta revisão editorial. COR/LOE da ACC/AHA 2026 para 'medir ao menos uma vez' não foi lido em caixa de recomendação com os dois campos juntos — não atribuído. AAS isolado por Lp(a) alta: nenhuma tabela lida recomenda; marcado LIMITE DA EVIDÊNCIA. PubMed e ClinicalTrials.gov conferidos em 29/08/2026: Lp(a)HORIZON sem artigo de desfecho; OCEAN(a) Outcomes em curso."
 source_refs:
   - "Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785. PMCID: PMC9639807"
   - "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418"
@@ -65,7 +65,7 @@ cedo e quase não se mexe com dieta, estatina ou ezetimiba. Essa é a lógica do
 EAS 2022 (PMID 36036785) e da diretriz ESC/EAS 2019 (PMID 31504418), que considera a
 dosagem ao menos uma vez na vida de cada adulto — **Classe IIa** no texto da diretriz
 já fichado neste acervo. O nível de evidência dessa linha (a ficha existente registra
-Nível C) **não foi relido na tabela integral nesta sessão**.
+Nível C) **não foi relido na tabela integral nesta revisão editorial**.
 
 A atualização focada ESC/EAS 2025 (PMID 40878289) **endossa a dosagem ao menos uma vez**
 no texto corrido, no primeiro perfil lipídico ou no próximo disponível. A **Tabela de
@@ -85,8 +85,8 @@ de Lp(a) lida no acesso aberto:
 | Em DAC precoce, estenose aórtica, hipercolesterolemia familiar, história familiar de DCVA precoce ou de Lp(a) aumentada, dosar uma vez na vida quando disponível | Forte | Alta |
 
 A ACC/AHA 2026 (PMID 41824590) também pede medição ao menos uma vez no adulto.
-**COR e LOE dessa caixa não foram lidos juntos nesta sessão** — não atribuir classe
-americana aqui. **VERIFICAÇÃO HUMANA** antes de ficha de evidência com Classe I ACC.
+**COR e LOE dessa caixa não foram lidos juntos nesta revisão editorial** — não atribuir classe
+americana aqui. **LIMITE DA EVIDÊNCIA** antes de ficha de evidência com Classe I ACC.
 
 Repetir sem motivo (doença renal, hepática, infecção aguda, menopausa com valor
 pré-menopausa limítrofe) não melhora predição. Isso está no consenso EAS 2022;
@@ -151,7 +151,7 @@ como se fosse o mesmo em todo mundo.
 
 ## Passo 4 — Cascata familiar quando está alta, não "para todo mundo"
 
-SBC 2025, mesma tabela, lida nesta sessão: em Lp(a) **≥50 mg/dL ou ≥125 nmol/L**,
+SBC 2025, mesma tabela, lida nesta revisão editorial: em Lp(a) **≥50 mg/dL ou ≥125 nmol/L**,
 concentração predominantemente genética, **investigação em cascata nos familiares**
 para achar outros portadores e avaliar risco cedo. Força **Forte**, certeza **Alta**.
 
@@ -208,12 +208,12 @@ Tradução operacional, sem inventar classe de "meta de LDL por causa da Lp(a)":
   CVOT um dia seja positivo, a magnitude, a população (secundária, corte de
   entrada ≥70 mg/dL no HORIZON) e o NNT não se conhecem ainda.
 - **Ácido acetilsalicílico só porque a Lp(a) está alta: não.** Nenhuma tabela
-  lida nesta sessão (ESC/EAS 2019, ESC/EAS 2025 Tabela 4, SBC 2025 Lp(a), trecho
+  lida nesta revisão editorial (ESC/EAS 2019, ESC/EAS 2025 Tabela 4, SBC 2025 Lp(a), trecho
   visível da ACC/AHA 2026) recomenda AAS como tratamento da Lp(a). A ACC/AHA 2026,
   no texto de suporte, cita análises *post hoc* de dois ensaios de prevenção
   primária com sinal de benefício em Lp(a) alta e afirma que **ensaios prospectivos
   nessa população ainda são necessários**. Isso não é recomendação. AAS segue as
-  regras de prevenção primária/secundária que já existem. **VERIFICAÇÃO HUMANA**
+  regras de prevenção primária/secundária que já existem. **LIMITE DA EVIDÊNCIA**
   se alguma sociedade publicar caixa específica depois desta data.
 - **Niacina não.** AIM-HIGH e HPS2-THRIVE já estão nesta pasta: não usá-las como
   atalho para Lp(a).

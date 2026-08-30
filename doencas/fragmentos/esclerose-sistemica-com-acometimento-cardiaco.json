@@ -1,0 +1,447 @@
+[
+  {
+    "slug": "esclerose-sistemica-com-acometimento-cardiaco",
+    "name": "Acometimento cardíaco primário da esclerose sistêmica (miocardiopatia esclerodérmica)",
+    "aliases": [
+      "miocardiopatia esclerodérmica",
+      "cardiopatia esclerodérmica primária",
+      "envolvimento cardíaco primário na esclerose sistêmica",
+      "SSc-PHI (systemic sclerosis primary heart involvement)",
+      "coração na esclerodermia"
+    ],
+    "area": "geral",
+    "category": "cardiopatia_adquirida",
+    "subtype": "acometimento cardíaco primário (miocárdico, pericárdico e do sistema de condução) associado a doença do tecido conjuntivo",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Acometimento cardíaco primário da esclerose sistêmica (também chamado de miocardiopatia esclerodérmica) é o dano direto do coração pela própria doença — fibrose miocárdica multifocal/irregular, disfunção microvascular coronariana sem obstrução epicárdica significativa, distúrbios de condução e arritmias, derrame pericárdico e, mais raramente, miocardite ativa. É conceitualmente distinto do acometimento cardíaco secundário à hipertensão arterial pulmonar associada à esclerose sistêmica (HP-ESc), à doença pulmonar intersticial ou à crise renal esclerodérmica, embora essas condições sejam diagnósticos diferenciais e comorbidades frequentes que precisam ser excluídas antes de atribuir um achado cardíaco à doença miocárdica primária. É frequentemente subclínico, mas quando clinicamente manifesto associa-se a maior mortalidade nas coortes observacionais.",
+    "epidemiology": "Estudos de necropsia clássicos (Kahan et al., 2006, PMID 16980717) já descreviam fibrose miocárdica focal em proporção substancial de pacientes com esclerose sistêmica, frequentemente silenciosa em vida. Revisões sistemáticas mais recentes (Ross et al., 2019, PMID 30170705; Bruni et al., 2022, PMID 35386946) mostram grande heterogeneidade nas taxas relatadas de acometimento cardíaco primário — variando amplamente conforme a definição usada e o método diagnóstico empregado (ECG, ecocardiograma, ressonância magnética [RM] cardíaca ou necropsia) — o que motivou a elaboração de um consenso EUSTAR para padronizar critérios diagnósticos (Bruni et al., 2023, PMID 37744047). Estudos com RM cardíaca (T1 mapping) identificam fibrose miocárdica difusa subclínica em proporção relevante de pacientes assintomáticos, mesmo com função sistólica preservada ao ecocardiograma convencional (Poindron et al., 2020; Terrier et al., 2020, PMID 32379399). Um estudo de coorte EUSTAR (Györfi et al., 2025, PMID 40008525) avaliou especificamente a prevalência de acometimento cardíaco primário e insuficiência cardíaca crônica nessa população. Em conjunto, os dados observacionais indicam que o acometimento cardíaco primário está entre as principais causas de morte relacionada à doença, embora a proporção exata varie entre estudos e coortes — não há um número único e consensual de prevalência que possa ser citado sem qualificação.",
+    "presentation": [
+      "Frequentemente assintomático/subclínico, detectado apenas em exames de rastreio (ECG, ecocardiograma, RM cardíaca)",
+      "Dispneia aos esforços e fadiga inespecíficas, muitas vezes sobrepostas a acometimento pulmonar (DPI ou HP-ESc), exigindo diagnóstico diferencial cuidadoso",
+      "Palpitações, síncope ou pré-síncope relacionadas a arritmias supraventriculares/ventriculares ou distúrbios de condução",
+      "Dor torácica atípica, por vezes relacionada a disfunção microvascular coronariana (angina microvascular) na ausência de doença coronariana epicárdica obstrutiva",
+      "Sinais de insuficiência cardíaca (edema de membros inferiores, ortopneia, turgência jugular) em fases mais avançadas de disfunção miocárdica",
+      "Derrame pericárdico frequentemente assintomático e de pequeno volume, identificado incidentalmente ao ecocardiograma; ocasionalmente progride para tamponamento",
+      "Atrito pericárdico à ausculta (achado pouco sensível e inespecífico)",
+      "Quadro de miocardite ativa (mais raro), podendo se apresentar com dor torácica, elevação de troponina e disfunção ventricular de início relativamente agudo"
+    ],
+    "diagnostic_approach": "O diagnóstico de acometimento cardíaco primário na esclerose sistêmica é de exclusão e de integração multimodal, não existindo um teste isolado com sensibilidade e especificidade suficientes. O consenso EUSTAR (Bruni et al., 2023, PMID 37744047) propõe uma abordagem estruturada: (1) rastreio inicial com ECG de 12 derivações, ecocardiograma transtorácico com avaliação de strain longitudinal global e biomarcadores (NT-proBNP/BNP e troponina de alta sensibilidade) em todo paciente com esclerose sistêmica, mesmo assintomático, dado o caráter frequentemente silencioso da doença; (2) em caso de sintomas cardíacos, ECG anormal, biomarcadores elevados ou strain reduzido, avançar para investigação de segunda linha — Holter de 24-48h (ou monitorização prolongada, se alta suspeita de arritmia), RM cardíaca com mapeamento T1/T2 e realce tardio (útil para caracterizar fibrose difusa/focal e inflamação miocárdica ativa) e, quando indicado, teste de perfusão miocárdica (RM de perfusão, PET ou cintilografia) para avaliar disfunção microvascular coronariana; (3) antes de atribuir um achado cardíaco ao acometimento primário, é obrigatório excluir causas secundárias — hipertensão arterial pulmonar associada à esclerose sistêmica (avaliação dirigida com protocolo de rastreio como o DETECT, ecocardiograma com estimativa de PSAP e, se indicado, cateterismo cardíaco direito), doença pulmonar intersticial com cor pulmonale, crise renal esclerodérmica com cardiopatia hipertensiva, doença arterial coronariana aterosclerótica obstrutiva (angiografia coronariana ou angiotomografia quando há suspeita) e cardiotoxicidade por medicamentos (ex.: ciclofosfamida em dose alta). A angiografia coronariana é tipicamente normal ou sem lesões obstrutivas significativas nos casos de acometimento microvascular primário, o que reforça (mas não prova isoladamente) a origem esclerodérmica do quadro. Não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) dedicada ao acometimento cardíaco da esclerose sistêmica; a abordagem aqui descrita baseia-se em revisões sistemáticas, estudos de coorte EUSTAR e no documento de consenso EUSTAR publicado em periódico de reumatologia (não é uma diretriz formal de sociedade cardiológica).",
+    "differentials": [
+      "Hipertensão arterial pulmonar associada à esclerose sistêmica (HP-ESc) com sobrecarga/disfunção de ventrículo direito — avaliar com protocolo de rastreio (ex. DETECT) e ecocardiograma dirigido; documento específico do corpus trata desse tema",
+      "Doença pulmonar intersticial associada à esclerose sistêmica com hipertensão pulmonar do grupo 3 e cor pulmonale",
+      "Crise renal esclerodérmica com cardiopatia hipertensiva secundária (não é o escopo desta ficha)",
+      "Doença arterial coronariana aterosclerótica obstrutiva (epicárdica), especialmente em pacientes de maior risco cardiovascular tradicional",
+      "Miocardite de outra etiologia (viral, de células gigantes, sarcoidose cardíaca, outras doenças autoimunes sistêmicas)",
+      "Amiloidose cardíaca (diagnóstico diferencial de espessamento/infiltração miocárdica em paciente idoso)",
+      "Cardiotoxicidade induzida por fármacos (ex.: ciclofosfamida em dose alta)",
+      "Disfunção tireoidiana (hipotireoidismo) como causa de derrame pericárdico",
+      "Doença cardíaca hipertensiva de outra causa"
+    ],
+    "tests": [
+      "ECG de 12 derivações (rastreio inicial e seguimento)",
+      "Ecocardiograma transtorácico com strain longitudinal global e estimativa de pressão sistólica de artéria pulmonar",
+      "NT-proBNP ou BNP",
+      "Troponina de alta sensibilidade",
+      "Holter de 24-48h ou monitorização prolongada de ritmo, conforme suspeita clínica",
+      "Ressonância magnética cardíaca com mapeamento T1/T2 e realce tardio com gadolínio",
+      "Avaliação de perfusão miocárdica (RM de perfusão, PET ou cintilografia) quando há suspeita de disfunção microvascular coronariana",
+      "Angiografia coronariana ou angiotomografia de coronárias para excluir doença epicárdica obstrutiva quando clinicamente indicado",
+      "Cateterismo cardíaco direito quando há suspeita de hipertensão pulmonar associada, como parte do diagnóstico diferencial",
+      "Endomiocárdio-biópsia (reservada a cenários de pesquisa ou casos refratários/atípicos com dúvida diagnóstica relevante)"
+    ],
+    "red_flags": [
+      "Síncope ou pré-síncope",
+      "Arritmia ventricular sustentada documentada",
+      "Bloqueio atrioventricular de alto grau (Mobitz II ou bloqueio atrioventricular total) ou bloqueio de ramo de início recente",
+      "Sinais de tamponamento pericárdico (hipotensão, turgência jugular, pulso paradoxal, abafamento de bulhas)",
+      "Insuficiência cardíaca de instalação ou progressão rápida",
+      "Elevação significativa e progressiva de troponina ou NT-proBNP",
+      "Dor torácica associada a alterações eletrocardiográficas novas, exigindo exclusão de síndrome coronariana aguda"
+    ],
+    "ambulatory_flow": [
+      "Rastreio cardíaco basal em todo paciente com diagnóstico confirmado de esclerose sistêmica: ECG, ecocardiograma com strain e biomarcadores (NT-proBNP, troponina de alta sensibilidade), mesmo na ausência de sintomas",
+      "Reforçar história dirigida a sintomas cardíacos (dispneia, palpitações, síncope, dor torácica) em cada consulta de seguimento reumatológico/cardiológico",
+      "Se rastreio normal e assintomático: reavaliação periódica conforme julgamento clínico e evolução da doença (intervalo não padronizado na literatura disponível)",
+      "Se rastreio alterado (ECG anormal, biomarcadores elevados, strain reduzido) ou sintomas sugestivos: encaminhar para investigação de segunda linha com Holter e RM cardíaca com mapeamento T1/T2 e realce tardio",
+      "Excluir sistematicamente HP-ESc, doença pulmonar intersticial significativa e crise renal antes de atribuir achados ao acometimento primário",
+      "Discussão multidisciplinar entre reumatologia e cardiologia para definição de conduta, especialmente diante de fibrose miocárdica ou disfunção microvascular confirmadas"
+    ],
+    "emergency_flow": [
+      "Paciente com esclerose sistêmica e suspeita de tamponamento pericárdico: ecocardiograma point-of-care imediato e avaliação hemodinâmica; considerar pericardiocentese/drenagem guiada por imagem conforme gravidade",
+      "Síncope, pré-síncope ou palpitações com instabilidade: ECG imediato, monitorização contínua e avaliação de bloqueio de condução avançado ou arritmia ventricular sustentada; acionar eletrofisiologia/cardiologia",
+      "Dor torácica aguda: tratar inicialmente como possível síndrome coronariana aguda até exclusão (ECG seriado, troponina seriada), independentemente da hipótese de disfunção microvascular esclerodérmica",
+      "Dispneia aguda: diagnóstico diferencial amplo incluindo descompensação de insuficiência cardíaca por acometimento miocárdico primário, tromboembolismo pulmonar, agudização de doença pulmonar intersticial e HP-ESc descompensada — avaliação conjunta com ecocardiograma e biomarcadores",
+      "Internação com monitorização contínua para qualquer arritmia ventricular sustentada, bloqueio avançado sintomático ou instabilidade hemodinâmica de origem cardíaca"
+    ],
+    "treatment_summary": "Não existe terapia farmacológica específica aprovada ou com evidência de ensaio clínico randomizado dedicada ao acometimento cardíaco primário da esclerose sistêmica; o manejo é extrapolado das diretrizes gerais de insuficiência cardíaca, arritmias e derrame pericárdico (ex.: diretrizes da ESC para as respectivas condições), ajustado ao contexto reumatológico. Em quadros com evidência de inflamação miocárdica ativa (miocardite documentada por RM cardíaca com critérios de Lake Louise, conforme Chan et al./Krumm et al. na literatura de imagem — ver referências) alguns relatos e séries observacionais descrevem uso de imunossupressão (corticoide e/ou outros imunossupressores, conforme protocolo reumatológico vigente para a doença de base), mas essa conduta é baseada em séries de casos e coortes pequenas, não em ensaios clínicos randomizados controlados — a decisão deve ser individualizada e compartilhada entre reumatologia e cardiologia. O uso de corticoide em dose alta é classicamente associado a maior risco de crise renal esclerodérmica (achado bem estabelecido na literatura de esclerose sistêmica, independente do acometimento cardíaco) e deve ser ponderado com cautela, com monitorização de pressão arterial e função renal. Fibrose miocárdica estabelecida não tem terapia que comprovadamente a revirta; o foco nesse cenário é o manejo da disfunção ventricular e do risco arrítmico resultante, conforme diretrizes gerais de cardiologia. Distúrbios de condução avançados (BAV de alto grau) seguem indicação convencional de marca-passo definitivo conforme diretrizes de estimulação cardíaca. Derrame pericárdico volumoso ou com repercussão hemodinâmica segue manejo convencional (drenagem quando indicada); derrames pequenos e assintomáticos podem ser apenas monitorados.",
+    "monitoring": [
+      "Reavaliação clínica cardiológica periódica integrada ao seguimento reumatológico da esclerose sistêmica",
+      "ECG seriado em pacientes com alteração basal ou fatores de risco para progressão",
+      "Ecocardiograma com strain em intervalos definidos conforme achados basais e evolução clínica",
+      "Biomarcadores (NT-proBNP, troponina de alta sensibilidade) seriados quando alterados na avaliação inicial",
+      "Holter de repetição em pacientes com arritmia documentada ou sintomas recorrentes",
+      "RM cardíaca de controle em casos selecionados com fibrose ou inflamação miocárdica documentada, conforme evolução clínica",
+      "Monitorização de pressão arterial e função renal em pacientes em uso de corticoide, pelo risco de crise renal esclerodérmica"
+    ],
+    "special_populations": [
+      "Forma cutânea difusa da esclerose sistêmica: associada a maior frequência relatada de acometimento cardíaco primário do que a forma limitada nos estudos observacionais disponíveis",
+      "Pacientes com anticorpo anti-RNA polimerase III: subgrupo classicamente associado a maior risco de crise renal esclerodérmica, o que reforça cautela especial com corticoide em dose alta nesse perfil, mesmo quando a indicação é cardiológica",
+      "Pacientes idosos com fatores de risco cardiovascular tradicionais: maior probabilidade de doença arterial coronariana epicárdica concomitante, exigindo exclusão cuidadosa antes de atribuir sintomas à disfunção microvascular esclerodérmica",
+      "Gestantes com esclerose sistêmica: monitorização cardíaca deve ser individualizada; literatura específica sobre acometimento cardíaco primário nesse contexto é limitada",
+      "Síndromes de sobreposição (overlap) com outras doenças do tecido conjuntivo: podem somar mecanismos de acometimento cardíaco, dificultando a atribuição etiológica"
+    ],
+    "assistant_questions": [
+      {
+        "id": "subtipo_cutaneo",
+        "label": "Qual o subtipo cutâneo da esclerose sistêmica?",
+        "type": "select",
+        "required": false,
+        "section": "contexto",
+        "options": [
+          {
+            "value": "limitada",
+            "label": "Limitada"
+          },
+          {
+            "value": "difusa",
+            "label": "Difusa"
+          },
+          {
+            "value": "sine_escleroderma",
+            "label": "Sine escleroderma"
+          },
+          {
+            "value": "indeterminado",
+            "label": "Indeterminado/desconhecido"
+          }
+        ]
+      },
+      {
+        "id": "autoanticorpo",
+        "label": "Qual autoanticorpo predominante, se conhecido?",
+        "type": "select",
+        "required": false,
+        "section": "contexto",
+        "options": [
+          {
+            "value": "anti_centromero",
+            "label": "Anti-centrômero"
+          },
+          {
+            "value": "anti_scl70",
+            "label": "Anti-Scl-70 (anti-topoisomerase I)"
+          },
+          {
+            "value": "anti_rna_pol3",
+            "label": "Anti-RNA polimerase III"
+          },
+          {
+            "value": "outro",
+            "label": "Outro/desconhecido"
+          }
+        ]
+      },
+      {
+        "id": "sintomas_cardiacos",
+        "label": "O paciente apresenta sintomas cardíacos (dispneia, palpitações, dor torácica atípica)?",
+        "type": "boolean",
+        "required": true,
+        "section": "triagem"
+      },
+      {
+        "id": "sincope_ou_arritmia_grave",
+        "label": "Houve síncope, pré-síncope ou arritmia ventricular sustentada documentada?",
+        "type": "boolean",
+        "required": true,
+        "section": "triagem"
+      },
+      {
+        "id": "sinais_tamponamento",
+        "label": "Há sinais clínicos sugestivos de tamponamento pericárdico (hipotensão, turgência jugular, pulso paradoxal)?",
+        "type": "boolean",
+        "required": true,
+        "section": "triagem"
+      },
+      {
+        "id": "ecg_bloqueio_avancado",
+        "label": "O ECG mostra bloqueio atrioventricular de alto grau (Mobitz II ou BAVT) ou bloqueio de ramo novo?",
+        "type": "boolean",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "sinais_hp_associada",
+        "label": "Há suspeita clínica ou ecocardiográfica de hipertensão pulmonar associada (B2 hiperfonética, dilatação de VD, PSAP elevada)?",
+        "type": "boolean",
+        "required": false,
+        "section": "diferenciais"
+      },
+      {
+        "id": "uso_corticoide_dose_alta",
+        "label": "O paciente está em uso de corticoide em dose alta?",
+        "type": "boolean",
+        "required": false,
+        "section": "risco"
+      },
+      {
+        "id": "rm_cardiaca_realizada",
+        "label": "Já foi realizada ressonância cardíaca com mapeamento T1/T2 e realce tardio?",
+        "type": "boolean",
+        "required": false,
+        "section": "exames"
+      },
+      {
+        "id": "derrame_pericardico_tamanho",
+        "label": "O ecocardiograma identificou derrame pericárdico? Se sim, qual o tamanho estimado?",
+        "type": "text",
+        "required": false,
+        "section": "exames"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "ssc-cor-tamponamento",
+        "priority": 98,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_tamponamento",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais sugestivos de tamponamento pericárdico — avaliação ecocardiográfica emergencial e considerar pericardiocentese"
+          ],
+          "emergency_flow": [
+            "Ecocardiograma point-of-care imediato",
+            "Avaliação hemodinâmica e considerar drenagem pericárdica guiada por imagem"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-sincope-arritmia-grave",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "sincope_ou_arritmia_grave",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Síncope ou arritmia ventricular sustentada em esclerose sistêmica — investigar bloqueio avançado e considerar internação com monitorização contínua"
+          ],
+          "suggested_tests": [
+            "ECG seriado",
+            "Holter/monitorização contínua de ritmo",
+            "Ressonância cardíaca com realce tardio",
+            "Ecocardiograma transtorácico"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-bloqueio-av",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "ecg_bloqueio_avancado",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Avaliação por eletrofisiologia/cardiologia para possível indicação de marca-passo definitivo"
+          ],
+          "differentials": [
+            "Bloqueio de condução por fibrose miocárdica esclerodérmica",
+            "Doença do sistema de condução de outra etiologia (isquêmica, degenerativa, sarcoidose cardíaca)"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-sintomas-triagem",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_cardiacos",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "sincope_ou_arritmia_grave",
+              "op": "neq",
+              "value": true
+            },
+            {
+              "field": "sinais_tamponamento",
+              "op": "neq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "ECG de repouso",
+            "Ecocardiograma transtorácico com strain",
+            "NT-proBNP",
+            "Troponina de alta sensibilidade",
+            "Holter de 24-48h"
+          ],
+          "missing_information": [
+            "Resultado de ressonância cardíaca com mapeamento T1/T2, se ainda não realizada"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-diferencial-hp",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "sinais_hp_associada",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "differentials": [
+            "Hipertensão arterial pulmonar associada à esclerose sistêmica (avaliar com protocolo de rastreio específico e ecocardiograma dirigido)"
+          ],
+          "opposing": [
+            "Sintomas podem refletir doença vascular pulmonar em vez de acometimento miocárdico primário"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-corticoide-alerta",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "uso_corticoide_dose_alta",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "messages": [
+            "Corticoide em dose alta é classicamente associado a maior risco de crise renal esclerodérmica; monitorar pressão arterial e função renal, independentemente do motivo cardiológico do uso"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-subtipo-difuso",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "subtipo_cutaneo",
+              "op": "eq",
+              "value": "difusa"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Forma cutânea difusa está associada a maior frequência de acometimento cardíaco primário nas séries observacionais disponíveis"
+          ]
+        }
+      },
+      {
+        "id": "ssc-cor-rm-pendente",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "rm_cardiaca_realizada",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Ressonância cardíaca com mapeamento T1/T2 e realce tardio ainda não realizada — considerar se houver alteração em ECG, biomarcadores ou strain"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "esclerose sistêmica",
+      "esclerodermia",
+      "miocardiopatia esclerodérmica",
+      "fibrose miocárdica",
+      "disfunção microvascular coronariana",
+      "angina microvascular",
+      "doença do tecido conjuntivo",
+      "arritmia",
+      "distúrbio de condução",
+      "bloqueio atrioventricular",
+      "derrame pericárdico",
+      "tamponamento pericárdico",
+      "miocardite",
+      "doença autoimune",
+      "cardiologia reumatológica",
+      "EUSTAR"
+    ],
+    "source_refs": [
+      "Bruni C, et al. Consensus on the assessment of systemic sclerosis-associated primary heart involvement. J Scleroderma Relat Disord. 2023;8(3):169-182. doi:10.1177/23971983231163413. PMID: 37744047",
+      "Györfi AH, et al. Evaluation of Systemic Sclerosis Primary Heart Involvement and Chronic Heart Failure in the European Scleroderma Trials and Research Cohort. J Am Heart Assoc. 2025;14(5):e036730. doi:10.1161/JAHA.124.036730. PMID: 40008525",
+      "Ross L, et al. Defining primary systemic sclerosis heart involvement: A scoping literature review. Semin Arthritis Rheum. 2019;48(5):874-887. doi:10.1016/j.semarthrit.2018.07.008. PMID: 30170705",
+      "Bruni C, et al. Primary systemic sclerosis heart involvement: A systematic literature review. J Scleroderma Relat Disord. 2022;7(1):24-32. doi:10.1177/23971983211053246. PMID: 35386946",
+      "Terrier B, et al. Cardiac Intravoxel Incoherent Motion Diffusion-Weighted Magnetic Resonance Imaging With T1 Mapping to Assess Myocardial Perfusion and Fibrosis in Systemic Sclerosis. Arthritis Rheumatol. 2020;72(9):1571-1580. doi:10.1002/art.41308. PMID: 32379399",
+      "Ross L, et al. Myocardial fibrosis and arrhythmic burden in systemic sclerosis. Rheumatology (Oxford). 2022;61(11):4497-4502. doi:10.1093/rheumatology/keac065. PMID: 35136975",
+      "Faccini A, et al. Coronary microvascular dysfunction in asymptomatic patients affected by systemic sclerosis. Circ J. 2015;79(4):825-829. doi:10.1253/circj.CJ-14-1114. PMID: 25740209",
+      "Vrancianu CA, et al. Arrhythmias and Conduction Disturbances in Patients with Systemic Sclerosis-A Systematic Review. Int J Mol Sci. 2022;23(21):12963. doi:10.3390/ijms232112963. PMID: 36361752",
+      "Sebestyén V, et al. Electrocardiographic markers for the prediction of ventricular arrhythmias in patients with systemic sclerosis. Rheumatology (Oxford). 2020;59(3):478-486. doi:10.1093/rheumatology/kez644. PMID: 31943100",
+      "Fernández Morales A, et al. Cardiac tamponade and severe pericardial effusion in systemic sclerosis: report of nine patients and review of the literature. Int J Rheum Dis. 2017;20(10):1582-1592. doi:10.1111/1756-185X.12952. PMID: 27943614",
+      "Kahan A, Allanore Y. Primary myocardial involvement in systemic sclerosis. Rheumatology (Oxford). 2006;45(Suppl 4):iv14-7. doi:10.1093/rheumatology/kel312. PMID: 16980717",
+      "Krumm P, et al. Silent myocarditis in systemic sclerosis detected by cardiovascular magnetic resonance using Lake Louise criteria. BMC Cardiovasc Disord. 2017;17(1):187. doi:10.1186/s12872-017-0619-x. PMID: 28716007"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37744047/",
+      "https://pubmed.ncbi.nlm.nih.gov/40008525/",
+      "https://pubmed.ncbi.nlm.nih.gov/30170705/",
+      "https://pubmed.ncbi.nlm.nih.gov/35386946/",
+      "https://pubmed.ncbi.nlm.nih.gov/32379399/",
+      "https://pubmed.ncbi.nlm.nih.gov/35136975/",
+      "https://pubmed.ncbi.nlm.nih.gov/25740209/",
+      "https://pubmed.ncbi.nlm.nih.gov/36361752/",
+      "https://pubmed.ncbi.nlm.nih.gov/31943100/",
+      "https://pubmed.ncbi.nlm.nih.gov/27943614/",
+      "https://pubmed.ncbi.nlm.nih.gov/16980717/",
+      "https://pubmed.ncbi.nlm.nih.gov/28716007/"
+    ],
+    "related_document_slugs": [
+      "hipertensao-arterial-pulmonar-associada-a-esclerose-sistemica-algoritmo-detect",
+      "fluxograma-rastreio-hipertensao-pulmonar-esclerose-sistemica-detect",
+      "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+      "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica",
+      "fluxograma-derrame-pericardico-diagnostico-diferencial-e-drenagem"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Revisão científica editorial concluída em 30/08/2026; referências, coerência clínica e integração estrutural validadas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

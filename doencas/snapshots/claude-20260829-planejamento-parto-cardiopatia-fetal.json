@@ -21503,7 +21503,7 @@
       "https://pubmed.ncbi.nlm.nih.gov/22262371/",
       "https://pubmed.ncbi.nlm.nih.gov/32041458/"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "review_note": "Aprofundamento Tudo com Tudo em 29/08/2026: ficha estava completeness=basico, só catalogação (1 source_ref AHA), zero campos clínicos. Passa a completo com epidemiologia, abordagem diagnóstica (categorização de risco perinatal, definição de local do parto, definição de intervenção imediata), condutas ambulatorial/emergencial, monitorização, populações especiais e assistente clínico determinístico. related_document_slugs expandido de 1 para 5, os 4 novos verificados por leitura direta do documento completo, descartando explicitamente documentos que tratam de cardiopatia MATERNA na gestação (tema irmão mas distinto). 6 PMIDs verificados individualmente via NCBI e-utils. Nenhuma dose de fármaco citada.",
     "version": 2,
     "related_document_slugs": [

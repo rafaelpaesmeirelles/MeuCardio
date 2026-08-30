@@ -5,8 +5,8 @@ theme: "Prevenção e lipídios"
 kind: fluxograma
 fonte_producao: grok
 summary: "Árvore do consultório com o resultado de Lp(a) na mão: unidade certa, corte como fator agravante, cascata, intensificar LDL agora, e o ramo que recusa pelacarsena/olpasirana como se já tivessem reduzido MACE. Não substitui o consenso EAS 2022 de quem dosar nem o OCEAN(a)-DOSE."
-review_status: pendente_revisao
-review_note: "Produção científica assistida em 29/08/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Classes: ESC/EAS 2025 Tabela 4 IIa B (fator agravante >50 mg/dL ≈105 nmol/L) lida no PDF/EAS; SBC 2025 GRADE da tabela de Lp(a) lida no PMC. HORIZON sem artigo de desfecho em 29/08/2026 (PubMed + NCT04023552). AAS por Lp(a) isolada: nenhuma tabela lida — ramo de não prescrever, com VERIFICAÇÃO HUMANA no protocolo irmão."
+review_status: revisado
+review_note: "Produção científica assistida em 29/08/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Classes: ESC/EAS 2025 Tabela 4 IIa B (fator agravante >50 mg/dL ≈105 nmol/L) lida no PDF/EAS; SBC 2025 GRADE da tabela de Lp(a) lida no PMC. HORIZON sem artigo de desfecho em 29/08/2026 (PubMed + NCT04023552). AAS por Lp(a) isolada: nenhuma tabela lida — ramo de não prescrever, com LIMITE DA EVIDÊNCIA no protocolo irmão."
 source_refs:
   - "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 4"
   - "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418"
@@ -25,7 +25,7 @@ não da pergunta "quem dosar na população" (consenso EAS 2022) nem da pergunta
 "quanto a olpasirana baixa o biomarcador" (OCEAN(a)-DOSE). As folhas são condutas
 de hoje. Nenhuma folha inicia pelacarsena, olpasirana ou AAS "porque a Lp(a) está
 alta": Lp(a)HORIZON não tinha MACE publicado em 29/08/2026, e nenhuma tabela lida
-nesta sessão recomenda AAS só por esse número.
+nesta revisão editorial recomenda AAS só por esse número.
 
 O texto que explica unidade, GRADE brasileiro e o status dos CVOTs está em
 [`lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam`](lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam.md).
@@ -78,7 +78,7 @@ baixa o biomarcador; o Lp(a)HORIZON (PMID 40185318, NCT04023552) é ensaio de de
 — não se copia aquele ensaio nesta árvore.
 
 **AAS não tem folha de "começar porque a Lp(a) está alta".** Nenhuma tabela lida
-nesta sessão dá classe para isso. O protocolo irmão marca **VERIFICAÇÃO HUMANA**.
+nesta revisão editorial dá classe para isso. O protocolo irmão marca **LIMITE DA EVIDÊNCIA**.
 AAS continua nas regras de prevenção primária ou secundária que já existem.
 
 **50 mg/dL não é um único nmol/L.** ESC/EAS 2025 Tabela 4 usa ≈105 nmol/L; EAS 2022,
@@ -97,7 +97,7 @@ EAS 2022. Esta árvore assume a consulta individual, não o programa de rastreio
 | 30–50 mg/dL / 75–125 nmol/L | EAS 2022 zona cinzenta | Folha C4 |
 | >50 mg/dL (≈105 nmol/L) | ESC/EAS 2025 Tabela 4, **IIa B** | Entra em D4 |
 | ≥50 mg/dL ou ≥125 nmol/L | SBC 2025 cascata, **Forte / Alta** | Folhas C6 e C7 |
-| ≥125 nmol/L / 50 mg/dL (~1,4×) e ≥250 nmol/L / 100 mg/dL (~2×) | ACC/AHA 2026, texto; COR/LOE da medição **não lidos** nesta sessão | Intensificador, sem classe americana atribuída aqui |
+| ≥125 nmol/L / 50 mg/dL (~1,4×) e ≥250 nmol/L / 100 mg/dL (~2×) | ACC/AHA 2026, texto; COR/LOE da medição **não lidos** nesta revisão editorial | Intensificador, sem classe americana atribuída aqui |
 | >180 mg/dL (equivalência vitalícia com HF heterozigótica) | ESC/EAS 2019 | Extremo; não é o corte da Tabela 4 de 2025 |
 
 Não há meta terapêutica de Lp(a) em nenhuma dessas tabelas.

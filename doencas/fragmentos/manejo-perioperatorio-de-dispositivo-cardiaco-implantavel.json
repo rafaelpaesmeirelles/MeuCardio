@@ -1,0 +1,437 @@
+[
+  {
+    "slug": "manejo-perioperatorio-de-dispositivo-cardiaco-implantavel",
+    "name": "Manejo perioperatório de dispositivo cardíaco eletrônico implantável",
+    "aliases": [
+      "CIED em cirurgia",
+      "marca-passo em cirurgia não cardíaca",
+      "CDI em cirurgia não cardíaca",
+      "eletrocautério e dispositivo cardíaco",
+      "magneto sobre CDI",
+      "manejo perioperatório de CIED"
+    ],
+    "area": "geral",
+    "category": "dispositivo_cardiaco",
+    "subtype": null,
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Manejo da interação entre eletrocautério cirúrgico, campo magnético e a programação temporária do marca-passo, cardiodesfibrilador implantável (CDI) ou ressincronizador (TRC) durante cirurgia não cardíaca — a decisão prática entre aplicar magneto ou reprogramar o dispositivo, como o grau de dependência de estimulação e o tipo de eletrocautério (monopolar versus bipolar) mudam essa decisão, a inativação temporária da terapia antitaquicardia/choque do CDI durante o procedimento com reativação garantida antes da alta do ambiente monitorado, e a distinção entre a resposta ao ímã do eletrocautério e o protocolo de ressonância magnética condicional. Não cobre a avaliação de risco cardiovascular perioperatório geral nem as indicações de implante do dispositivo em si — ambos têm verbetes próprios; este verbete começa no momento em que o paciente já é portador de um CIED e vai à sala de cirurgia.",
+    "epidemiology": "Pacientes portadores de marca-passo, CDI ou TRC são submetidos a procedimentos cirúrgicos não cardíacos com frequência crescente, acompanhando o envelhecimento populacional e a ampliação das indicações de dispositivo cardíaco eletrônico implantável (CIED). A interferência eletromagnética (IEM) gerada pelo eletrocautério é a causa mais comum de mau funcionamento perioperatório de CIED, com risco concentrado no eletrocautério monopolar: a incidência de IEM detectada por telemetria chega a cerca de 47% quando o sítio cirúrgico está a menos de 15 cm do gerador, contra incidência substancialmente menor com o eletrocautério bipolar (Özkartal T et al., J Clin Med. 2022;11(3):691, PMID 35160149). O consenso HRS/ASA de 2011 (Crossley GH et al., Heart Rhythm. 2011;8(7):1114-1154, PMID 21722856) e a declaração científica da American Heart Association de 2024 (Wan EY et al., Circulation. 2024;150(8):e183-e196, PMID 38984417) documentam óbitos relatados por falha em reativar a terapia antitaquicardia do CDI após procedimentos eletivos — evento raro, mas evitável.",
+    "presentation": [
+      "Paciente portador de marca-passo, CDI ou TRC em programação de cirurgia não cardíaca eletiva com uso previsto de eletrocautério",
+      "Necessidade de cirurgia de urgência ou emergência em portador de CIED sem tempo hábil para interrogação completa do dispositivo antes do procedimento",
+      "Bradicardia ou assistolia inesperada durante o ato cirúrgico em paciente marca-passo-dependente, sugestiva de inibição por interferência eletromagnética (oversensing)",
+      "Dúvida da equipe cirúrgica ou anestésica sobre a necessidade de aplicar magneto, reprogramar o dispositivo, ou apenas monitorizar durante o procedimento",
+      "Choque(s) do CDI ocorrendo durante ou logo após a cirurgia, sem histórico claro de inativação prévia da terapia",
+      "Necessidade de esclarecer a diferença entre a resposta ao ímã durante o eletrocautério e o protocolo de ressonância magnética em dispositivo condicional a RM"
+    ],
+    "diagnostic_approach": {
+      "caracterizacao_do_dispositivo_e_da_dependencia": "Antes de qualquer decisão, três informações são obrigatórias: o tipo de dispositivo (marca-passo convencional, marca-passo sem eletrodo/leadless, CDI transvenoso ou subcutâneo, TRC-P ou TRC-D), o fabricante e modelo — porque a resposta ao ímã não é padronizada entre fabricantes —, e o grau de dependência de estimulação do paciente. Dependência de estimulação significa ausência de ritmo de escape adequado na ausência de estimulação artificial (ritmo próprio abaixo de 30-40 bpm, bloqueio atrioventricular completo, ou história de ablação do nó atrioventricular) — essa informação, mais do que o porte da cirurgia, determina a urgência e o tipo de proteção necessária diante do eletrocautério. Um caso particular relevante é o marca-passo sem eletrodo (Micra): ele não tem resposta programada a ímã externo, de modo que, no paciente dependente de estimulação, a proteção exige reprogramação para modo assíncrono (VOO) antes do eletrocautério monopolar, e não a simples aplicação de magneto sobre o tórax (Wan EY et al., Circulation. 2024;150(8):e183-e196, PMID 38984417).",
+      "risco_pelo_tipo_de_eletrocauterio": "O eletrocautério monopolar é a principal fonte de interferência eletromagnética sobre o CIED: a corrente percorre o corpo entre o eletrodo ativo e a placa de retorno (neutra), e esse trajeto pode atravessar o gerador ou os eletrodos do dispositivo, gerando sinal espúrio interpretado pelo circuito de sensing como atividade cardíaca (oversensing) — com risco de inibição da estimulação em paciente dependente, ou de terapia de choque inapropriada em portador de CDI com detecção ativa. O eletrocautério bipolar, em que a corrente circula entre as duas pontas do próprio instrumento sem uso de placa de retorno corporal, tem risco de interferência substancialmente menor e deve ser preferido sempre que a técnica cirúrgica permitir (Teixeira RA et al., Arq Bras Cardiol. 2023;120(1):e20220892, PMID 36700596 — Classe I, Nível A; Özkartal T et al., J Clin Med. 2022;11(3):691, PMID 35160149). Quando o eletrocautério monopolar é inevitável, medidas adicionais reduzem — mas não eliminam — o risco: posicionar a placa de retorno de modo que o trajeto da corrente não cruze o gerador nem os eletrodos, idealmente abaixo do umbigo e distante do dispositivo; usar rajadas curtas na menor potência eficaz; e manter o eletrodo ativo a pelo menos 15 cm de distância do gerador sempre que possível.",
+      "decisao_magneto_versus_reprogramacao": "Em paciente NÃO dependente de estimulação com CDI, a aplicação de magneto sobre a loja do dispositivo durante o eletrocautério monopolar é segura e prática: ela suspende a detecção e a terapia de taquiarritmia — evitando choque inapropriado por interferência mal interpretada como fibrilação/taquicardia ventricular — sem necessidade de reprogramação formal, e a terapia é restaurada automaticamente à remoção do ímã (Teixeira RA et al., Arq Bras Cardiol. 2023;120(1):e20220892, PMID 36700596 — Classe I, Nível A). Em paciente DEPENDENTE de estimulação com marca-passo convencional ou CDI com função de marca-passo, o magneto também costuma converter o dispositivo para modo assíncrono de frequência fixa (VOO/DOO), mas essa resposta magnética não é padronizada entre fabricantes e pode ser imprevisível — motivo pelo qual a reprogramação formal para modo assíncrono antes do procedimento é a estratégia preferida sempre que houver acesso a programador e tempo hábil, reservando o magneto para quando o dispositivo não está acessível para reprogramação ou como medida de resgate. O ímã deve permanecer fixo e estável sobre o gerador durante toda a exposição ao eletrocautério: deslocamento inadvertido durante o procedimento restaura a resposta normal do dispositivo sem que a equipe perceba, e por isso a monitorização contínua do ritmo (ECG e pulso periférico) durante toda a cirurgia é obrigatória independentemente da estratégia escolhida.",
+      "distincao_entre_resposta_ao_ima_e_protocolo_de_rm": "É um erro conceitual comum tratar a resposta ao ímã durante o eletrocautério e o protocolo de ressonância magnética (RM) como o mesmo fenômeno — são interferências fisicamente distintas. O ímã de uso perioperatório ativa um interruptor reed switch simples, de efeito imediato e reversível à sua remoção; a RM expõe o dispositivo a um campo estático intenso e contínuo, a gradientes de campo variável e a radiofrequência, com potencial de aquecimento do eletrodo, reset elétrico e força de torque sobre o gerador — riscos que a simples aplicação de um ímã não neutraliza. Dispositivo condicional a RM só é seguro para o exame quando programado no 'modo RM' específico do fabricante, dentro de fluxo de trabalho estruturado com interrogação antes e depois do exame — protocolo detalhado no verbete geral de dispositivos cardíacos eletrônicos implantáveis, e não deve ser confundido com as medidas descritas acima para o eletrocautério (Teixeira RA et al., Arq Bras Cardiol. 2023;120(1):e20220892, PMID 36700596 — Classe I, Nível A). No contexto perioperatório especificamente, essa distinção importa quando a RM é necessária como parte do próprio cuidado cirúrgico ou pós-operatório em paciente com dispositivo não condicional ou de status desconhecido: cenário que exige contato dedicado com a eletrofisiologia e não se resolve com magneto ou reprogramação voltados ao eletrocautério."
+    },
+    "differentials": [
+      "Bradicardia ou assistolia por reflexo vagal intraoperatório (por exemplo, tração peritoneal, laringoscopia) — pode coexistir com o dispositivo funcionando normalmente e ser confundida com falha de estimulação",
+      "Distúrbio eletrolítico (hipercalemia) ou efeito de fármaco anestésico como causa de alteração de limiar de captura ou de condução, mimetizando disfunção do CIED",
+      "Perda de captura verdadeira por deslocamento ou fratura de eletrodo, não relacionada à cirurgia em curso — diferencia-se da inibição transitória por interferência eletromagnética pela persistência do achado após o término do eletrocautério",
+      "Taquiarritmia atrial nativa detectada pelo canal atrial do dispositivo, gerando resposta ventricular rápida durante o perioperatório, sem relação com reprogramação ou magneto",
+      "Choque inapropriado do CDI por sobredetecção de miopotencial ou artefato do próprio eletrocautério antes da inativação planejada da terapia, em vez de arritmia ventricular verdadeira"
+    ],
+    "tests": [
+      "Interrogação completa do dispositivo antes do procedimento eletivo — tipo, fabricante, modelo, dependência de estimulação, programação vigente e resposta ao ímã",
+      "Eletrocardiograma de 12 derivações ou tira de ritmo basal, para documentar o ritmo espontâneo do paciente antes da indução anestésica",
+      "Monitorização contínua de ECG e de pulso periférico (oximetria de pulso ou linha arterial) durante todo o ato cirúrgico, independentemente da estratégia de proteção escolhida",
+      "Disponibilidade imediata de eletrodos de desfibrilação/estimulação transcutânea externa na sala, prontos para uso, em todo paciente dependente de estimulação ou portador de CDI com terapia inativada",
+      "Reinterrogação do dispositivo após o procedimento, confirmando parâmetros de estimulação, limiares e — no CDI — a reativação da detecção e da terapia antitaquicardia, antes da alta do ambiente monitorado"
+    ],
+    "red_flags": [
+      "Terapia antitaquicardia/choque do CDI ainda inativada (por magneto ou reprogramação) sem confirmação documentada de reativação antes da saída do ambiente monitorado — há óbitos relatados por essa falha",
+      "Paciente dependente de estimulação submetido a eletrocautério monopolar sem magneto posicionado nem reprogramação prévia para modo assíncrono",
+      "Marca-passo sem eletrodo (leadless/Micra) em paciente dependente de estimulação, com plano de usar apenas magneto — este dispositivo não tem resposta magnética programada e exige reprogramação formal para VOO antes do eletrocautério monopolar",
+      "Bradicardia ou assistolia intraoperatória inesperada em paciente teoricamente protegido, sem interrupção imediata do eletrocautério e reavaliação do ritmo",
+      "Cirurgia de urgência/emergência em portador de CIED sem qualquer informação disponível sobre tipo de dispositivo ou dependência de estimulação, iniciada sem medidas cautelares mínimas",
+      "Choque(s) do CDI ocorrendo durante ou logo após o procedimento sem interrogação de urgência para diferenciar terapia apropriada de artefato/interferência residual"
+    ],
+    "ambulatory_flow": [
+      "Identificar o tipo de dispositivo, fabricante, modelo e grau de dependência de estimulação com antecedência suficiente para contato com a equipe de eletrofisiologia/clínica de dispositivo",
+      "Definir com a equipe cirúrgica se o eletrocautério previsto é monopolar ou bipolar, priorizando o bipolar sempre que a técnica permitir",
+      "Programar a estratégia de proteção conforme a dependência de estimulação: magneto para o paciente não dependente com CDI; reprogramação formal para modo assíncrono preferida ao magneto no paciente dependente, obrigatória no marca-passo sem eletrodo",
+      "Agendar a reinterrogação do dispositivo para o período pós-operatório imediato, antes da alta do ambiente monitorado, com responsável claramente designado",
+      "Comunicar por escrito à sala de cirurgia e à recuperação pós-anestésica o plano de proteção do dispositivo e a necessidade de reativação/reinterrogação, para que a informação não dependa de memória verbal"
+    ],
+    "emergency_flow": [
+      "Na impossibilidade de interrogação prévia por urgência do procedimento, assumir o paciente como dependente de estimulação e com terapia de CDI ativa até prova em contrário",
+      "Posicionar eletrodos de desfibrilação/estimulação transcutânea externa antes do início do procedimento em todo paciente com CIED de status desconhecido",
+      "Ter magneto disponível na sala e posicioná-lo sobre o gerador durante o uso de eletrocautério monopolar quando a reprogramação formal não for viável no tempo disponível",
+      "Manter monitorização contínua de ECG e pulso periférico durante todo o procedimento, com interrupção imediata do eletrocautério diante de qualquer alteração inesperada do ritmo",
+      "Realizar interrogação do dispositivo assim que possível após o procedimento, mesmo em cenário de urgência, antes de transferir o paciente para fora do ambiente monitorado"
+    ],
+    "treatment_summary": "O manejo perioperatório do dispositivo cardíaco eletrônico implantável (CIED) em cirurgia não cardíaca se organiza em quatro decisões sequenciais. PRIMEIRO, caracterizar o dispositivo e a dependência de estimulação: tipo (marca-passo, CDI, TRC), fabricante/modelo e se o paciente tem ritmo de escape adequado na ausência de estimulação artificial. SEGUNDO, definir o tipo de eletrocautério: o bipolar deve ser preferido sempre que a técnica cirúrgica permitir, por ter risco de interferência eletromagnética substancialmente menor que o monopolar (Classe I, Nível A, SBC 2023); quando o monopolar for inevitável, posicionar a placa de retorno distante do gerador e dos eletrodos — idealmente abaixo do umbigo — e usar rajadas curtas na menor potência eficaz. TERCEIRO, escolher entre magneto e reprogramação formal: no paciente NÃO dependente de estimulação com CDI, o magneto sobre a loja do dispositivo é seguro e prático — suspende detecção e terapia de taquiarritmia durante o eletrocautério monopolar, com restauração automática à remoção (Classe I, Nível A, SBC 2023); no paciente DEPENDENTE de estimulação, a reprogramação formal para modo assíncrono (VOO/DOO) antes do procedimento é preferida ao magneto sempre que houver programador e tempo disponíveis, porque a resposta magnética não é padronizada entre fabricantes — e é obrigatória, não apenas preferida, no marca-passo sem eletrodo (Micra). QUARTO, garantir a reativação: toda terapia antitaquicardia/choque de CDI inativada para o procedimento deve ser formalmente reativada, e a reinterrogação do dispositivo deve confirmar essa reativação antes de o paciente deixar o ambiente monitorado — a literatura documenta óbitos por falha nessa etapa final, o que a torna, na prática, o passo de maior risco de todo o fluxo (Wan EY et al., Circulation. 2024;150(8):e183-e196, PMID 38984417).\n\nA ressonância magnética não faz parte desse mesmo fluxo de proteção: é fonte de interferência fisicamente distinta do eletrocautério, e dispositivo condicional a RM só é seguro quando programado no modo RM específico do fabricante, dentro de protocolo estruturado de interrogação antes e depois do exame. No contexto perioperatório, essa distinção importa principalmente quando a RM é necessária como parte do próprio cuidado cirúrgico em paciente com dispositivo não condicional ou de status desconhecido — cenário que exige contato dedicado com a eletrofisiologia.\n\nEm cirurgia de urgência ou emergência, quando não há tempo para interrogação prévia, a conduta padrão é assumir o pior cenário — paciente dependente de estimulação e com terapia de CDI ativa — e aplicar medidas cautelares mínimas: eletrodos de desfibrilação/estimulação transcutânea externa posicionados antes do início, magneto disponível na sala, monitorização contínua durante todo o procedimento, e interrogação assim que possível no pós-operatório imediato.",
+    "monitoring": [
+      "ECG contínuo e pulso periférico durante toda a exposição ao eletrocautério, independentemente da estratégia de proteção escolhida",
+      "Posição do magneto sobre o gerador verificada periodicamente durante procedimentos longos, para detectar deslocamento inadvertido",
+      "Confirmação documentada da reinterrogação do dispositivo no pós-operatório imediato, incluindo parâmetros de estimulação, limiares de captura e — no CDI — a reativação formal da detecção e da terapia antitaquicardia",
+      "Registro escrito, na passagem de plantão para a recuperação pós-anestésica, de qualquer terapia do dispositivo que tenha permanecido inativada e ainda dependa de reativação"
+    ],
+    "special_populations": [
+      "Marca-passo sem eletrodo (leadless/Micra): sem resposta magnética programada — no paciente dependente de estimulação, a proteção exige reprogramação formal para modo assíncrono (VOO) antes do eletrocautério monopolar",
+      "CDI subcutâneo (S-ICD): o magneto suspende a detecção e a terapia de taquiarritmia, mas o dispositivo não tem função de estimulação bradicárdica crônica",
+      "Portador de TRC (ressincronizador) dependente de estimulação biventricular: inibição transitória interrompe também a ressincronização — relevante em paciente com insuficiência cardíaca avançada durante procedimentos prolongados",
+      "Cirurgia de urgência/emergência sem tempo para caracterização completa: aplicar por padrão as medidas cautelares do paciente dependente de estimulação com CDI ativo, mesmo sem confirmação",
+      "Paciente pediátrico ou de baixo peso corporal com CIED: mesmos princípios de proteção, com atenção ao posicionamento do magneto e da placa de retorno em relação ao tamanho corporal reduzido"
+    ],
+    "assistant_questions": [
+      {
+        "id": "device_type",
+        "label": "Qual o tipo de dispositivo implantado?",
+        "type": "select",
+        "required": true,
+        "section": "Dispositivo",
+        "options": [
+          {
+            "value": "marcapasso",
+            "label": "Marca-passo convencional"
+          },
+          {
+            "value": "cdi",
+            "label": "Cardiodesfibrilador implantável (CDI)"
+          },
+          {
+            "value": "trc_p",
+            "label": "Ressincronizador sem desfibrilador (TRC-P)"
+          },
+          {
+            "value": "trc_d",
+            "label": "Ressincronizador com desfibrilador (TRC-D)"
+          },
+          {
+            "value": "marcapasso_sem_eletrodo",
+            "label": "Marca-passo sem eletrodo (leadless)"
+          }
+        ]
+      },
+      {
+        "id": "pacing_dependency",
+        "label": "O paciente depende de estimulação artificial (sem ritmo de escape adequado)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Dispositivo"
+      },
+      {
+        "id": "electrocautery_type",
+        "label": "Qual o tipo de eletrocautério previsto na cirurgia?",
+        "type": "select",
+        "required": true,
+        "section": "Procedimento",
+        "options": [
+          {
+            "value": "bipolar",
+            "label": "Bipolar"
+          },
+          {
+            "value": "monopolar",
+            "label": "Monopolar"
+          },
+          {
+            "value": "nenhum",
+            "label": "Nenhum eletrocautério previsto"
+          }
+        ]
+      },
+      {
+        "id": "icd_therapy_active",
+        "label": "O dispositivo tem terapia antitaquicardia/choque programada e ativa (CDI ou TRC-D)?",
+        "type": "boolean",
+        "section": "Dispositivo"
+      },
+      {
+        "id": "surgery_urgency",
+        "label": "Qual a urgência da cirurgia?",
+        "type": "select",
+        "required": true,
+        "section": "Procedimento",
+        "options": [
+          {
+            "value": "eletiva",
+            "label": "Eletiva"
+          },
+          {
+            "value": "urgente",
+            "label": "Urgente"
+          },
+          {
+            "value": "emergencia",
+            "label": "Emergência"
+          }
+        ]
+      },
+      {
+        "id": "device_interrogated_before_procedure",
+        "label": "O dispositivo foi interrogado e caracterizado antes do procedimento?",
+        "type": "boolean",
+        "section": "Procedimento"
+      },
+      {
+        "id": "icd_therapy_disabled_intraop",
+        "label": "A terapia antitaquicardia/choque foi inativada (magneto ou reprogramação) para o procedimento?",
+        "type": "boolean",
+        "section": "Procedimento"
+      },
+      {
+        "id": "device_reactivated_confirmed",
+        "label": "A reativação da terapia e a reinterrogação do dispositivo foram confirmadas antes da alta do ambiente monitorado?",
+        "type": "boolean",
+        "section": "Pós-procedimento"
+      },
+      {
+        "id": "mri_needed_perioperative",
+        "label": "Há necessidade de ressonância magnética no período perioperatório (antes, durante ou logo após a cirurgia)?",
+        "type": "boolean",
+        "section": "Procedimento"
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "cied-terapia-nao-reativada-alta",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "icd_therapy_disabled_intraop",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "device_reactivated_confirmed",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Terapia antitaquicardia/choque do CDI ainda inativada, sem confirmação documentada de reativação antes da saída do ambiente monitorado — há óbitos relatados por essa falha"
+          ],
+          "emergency_flow": [
+            "Não transferir o paciente para fora do ambiente monitorado até reinterrogação do dispositivo e confirmação formal de reativação da terapia"
+          ]
+        }
+      },
+      {
+        "id": "cied-emergencia-sem-interrogacao",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "surgery_urgency",
+              "op": "eq",
+              "value": "emergencia"
+            },
+            {
+              "field": "device_interrogated_before_procedure",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "missing_information": [
+            "Tipo de dispositivo, fabricante/modelo e grau de dependência de estimulação não confirmados antes da cirurgia de emergência"
+          ],
+          "messages": [
+            "Assumir o paciente como dependente de estimulação e com terapia de CDI ativa até prova em contrário",
+            "Posicionar eletrodos de desfibrilação/estimulação transcutânea externa antes do início do procedimento",
+            "Ter magneto disponível na sala"
+          ],
+          "emergency_flow": [
+            "Interrogar o dispositivo assim que possível no pós-operatório imediato, antes de transferir o paciente para fora do ambiente monitorado"
+          ]
+        }
+      },
+      {
+        "id": "cied-leadless-dependente-monopolar",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "device_type",
+              "op": "eq",
+              "value": "marcapasso_sem_eletrodo"
+            },
+            {
+              "field": "pacing_dependency",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Marca-passo sem eletrodo (leadless) em paciente dependente de estimulação — este dispositivo não tem resposta magnética programada"
+          ],
+          "messages": [
+            "Reprogramar formalmente para modo assíncrono (VOO) antes do eletrocautério monopolar; não contar apenas com a aplicação de magneto"
+          ]
+        }
+      },
+      {
+        "id": "cied-monopolar-dependente-sem-protecao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "pacing_dependency",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "electrocautery_type",
+              "op": "eq",
+              "value": "monopolar"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Paciente dependente de estimulação será submetido a eletrocautério monopolar — risco de inibição da estimulação por interferência eletromagnética (oversensing) durante o procedimento"
+          ],
+          "messages": [
+            "Preferir reprogramação formal para modo assíncrono (VOO/DOO) à aplicação isolada de magneto, sempre que houver programador e tempo disponíveis",
+            "Manter monitorização contínua de ECG e pulso periférico durante toda a exposição ao eletrocautério"
+          ]
+        }
+      },
+      {
+        "id": "cied-rm-periop-status-desconhecido",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "mri_needed_perioperative",
+              "op": "eq",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Status de compatibilidade com ressonância magnética (condicional ou não condicional) do dispositivo implantado"
+          ],
+          "messages": [
+            "A resposta ao ímã do eletrocautério não equivale ao protocolo de segurança para ressonância magnética — dispositivo condicional a RM exige programação em 'modo RM' específico e fluxo estruturado com interrogação antes e depois do exame; contatar a eletrofisiologia antes de agendar a RM"
+          ]
+        }
+      },
+      {
+        "id": "cied-retorno-eletrocauterio-monopolar-posicionamento",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "electrocautery_type",
+              "op": "eq",
+              "value": "monopolar"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Posicionar a placa de retorno (neutra) de modo que o trajeto da corrente não cruze o gerador nem os eletrodos — idealmente abaixo do umbigo e distante do dispositivo",
+            "Usar rajadas curtas na menor potência eficaz e manter o eletrodo ativo a pelo menos 15 cm de distância do gerador sempre que possível"
+          ]
+        }
+      },
+      {
+        "id": "cied-magneto-cdi-nao-dependente",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "pacing_dependency",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "field": "device_type",
+              "op": "in",
+              "value": [
+                "cdi",
+                "trc_d"
+              ]
+            },
+            {
+              "field": "electrocautery_type",
+              "op": "eq",
+              "value": "monopolar"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Aplicação de magneto sobre a loja do CDI é segura e prática neste cenário: suspende detecção e terapia de taquiarritmia durante o eletrocautério monopolar, com restauração automática à remoção do ímã",
+            "Verificar periodicamente a posição do magneto durante procedimentos longos — deslocamento inadvertido restaura a resposta normal do dispositivo sem que a equipe perceba"
+          ]
+        }
+      },
+      {
+        "id": "cied-bipolar-preferencial",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "electrocautery_type",
+              "op": "eq",
+              "value": "bipolar"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Eletrocautério bipolar tem risco de interferência eletromagnética substancialmente menor que o monopolar; manter a preferência sempre que a técnica cirúrgica permitir",
+            "Monitorização contínua de ECG e pulso periférico permanece recomendada mesmo com eletrocautério bipolar"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "CIED",
+      "eletrocautério",
+      "magneto",
+      "marca-passo dependente",
+      "CDI",
+      "perioperatório",
+      "cirurgia não cardíaca",
+      "ressonância magnética"
+    ],
+    "source_refs": [
+      "Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892. PMID: 36700596.",
+      "Crossley GH, Poole JE, Rozner MA, et al. The Heart Rhythm Society (HRS)/American Society of Anesthesiologists (ASA) Expert Consensus Statement on the perioperative management of patients with implantable defibrillators, pacemakers and arrhythmia monitors. Heart Rhythm. 2011;8(7):1114-1154. DOI: 10.1016/j.hrthm.2010.12.023. PMID: 21722856.",
+      "Wan EY, Rogers AJ, Lavelle M, et al. Periprocedural Management and Multidisciplinary Care Pathways for Patients With Cardiac Implantable Electronic Devices: A Scientific Statement From the American Heart Association. Circulation. 2024;150(8):e183-e196. DOI: 10.1161/CIR.0000000000001264. PMID: 38984417.",
+      "Özkartal T, Demarchi A, Caputo ML, Baldi E, Conte G, Auricchio A. Perioperative Management of Patients with Cardiac Implantable Electronic Devices and Utility of Magnet Application. J Clin Med. 2022;11(3):691. DOI: 10.3390/jcm11030691. PMID: 35160149."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36700596/",
+      "https://pubmed.ncbi.nlm.nih.gov/21722856/",
+      "https://pubmed.ncbi.nlm.nih.gov/38984417/",
+      "https://pubmed.ncbi.nlm.nih.gov/35160149/"
+    ],
+    "related_document_slugs": [
+      "marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco",
+      "manejo-de-marcapasso-e-cdi-durante-radioterapia-oncologica",
+      "fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo",
+      "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+      "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Revisão científica editorial concluída em 30/08/2026; referências, coerência clínica e integração estrutural validadas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

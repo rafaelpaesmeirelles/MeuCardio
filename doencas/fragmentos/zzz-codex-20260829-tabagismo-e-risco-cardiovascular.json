@@ -86,19 +86,128 @@
       "Doença renal/hepática: ajustar escolha de farmacoterapia às características de depuração e contraindicações do agente."
     ],
     "assistant_questions": [
-      {"id": "current_tobacco", "label": "Há uso atual de cigarro, tabaco, vape ou outro produto com nicotina?", "type": "boolean", "required": true, "section": "Exposição"},
-      {"id": "secondhand_smoke", "label": "Há exposição passiva frequente à fumaça de tabaco em casa, carro ou trabalho?", "type": "boolean", "section": "Exposição"},
-      {"id": "cv_symptoms", "label": "Há dor torácica, dispneia aguda, síncope, déficit neurológico ou sinais de isquemia de membro?", "type": "boolean", "required": true, "section": "Red flags"},
-      {"id": "ready_to_quit", "label": "O paciente aceita construir uma estratégia de cessação agora?", "type": "boolean", "section": "Cessação"},
-      {"id": "prior_relapse", "label": "Houve tentativa prévia com recaída ou sintomas de abstinência relevantes?", "type": "boolean", "section": "Dependência"}
+      {
+        "id": "current_tobacco",
+        "label": "Há uso atual de cigarro, tabaco, vape ou outro produto com nicotina?",
+        "type": "boolean",
+        "required": true,
+        "section": "Exposição"
+      },
+      {
+        "id": "secondhand_smoke",
+        "label": "Há exposição passiva frequente à fumaça de tabaco em casa, carro ou trabalho?",
+        "type": "boolean",
+        "section": "Exposição"
+      },
+      {
+        "id": "cv_symptoms",
+        "label": "Há dor torácica, dispneia aguda, síncope, déficit neurológico ou sinais de isquemia de membro?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "ready_to_quit",
+        "label": "O paciente aceita construir uma estratégia de cessação agora?",
+        "type": "boolean",
+        "section": "Cessação"
+      },
+      {
+        "id": "prior_relapse",
+        "label": "Houve tentativa prévia com recaída ou sintomas de abstinência relevantes?",
+        "type": "boolean",
+        "section": "Dependência"
+      }
     ],
     "assistant_rules": [
-      {"id": "tobacco-cessation", "priority": 80, "when": {"all": [{"field": "current_tobacco", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Uso atual de tabaco é fator de risco cardiovascular modificável e deve gerar intervenção de cessação."], "messages": ["Oferecer aconselhamento e discutir farmacoterapia baseada em evidência quando apropriada."]}},
-      {"id": "acute-cv-red-flag", "priority": 100, "when": {"all": [{"field": "cv_symptoms", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Sintomas compatíveis com evento cardiovascular agudo em pessoa exposta ao tabaco."], "emergency_flow": ["Avaliar imediatamente segundo o protocolo da síndrome aguda; não atribuir o quadro à abstinência."]}},
-      {"id": "passive-exposure", "priority": 50, "when": {"all": [{"field": "secondhand_smoke", "op": "truthy"}]}, "add": {"supporting": ["Exposição passiva à fumaça aumenta risco cardiovascular e deve ser eliminada sempre que possível."]}},
-      {"id": "relapse-support", "priority": 65, "when": {"all": [{"field": "prior_relapse", "op": "truthy"}]}, "add": {"messages": ["Recaída prévia não deve encerrar o tratamento; intensificar suporte, revisar gatilhos e ajustar a estratégia de cessação."]}}
+      {
+        "id": "tobacco-cessation",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "current_tobacco",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Uso atual de tabaco é fator de risco cardiovascular modificável e deve gerar intervenção de cessação."
+          ],
+          "messages": [
+            "Oferecer aconselhamento e discutir farmacoterapia baseada em evidência quando apropriada."
+          ]
+        }
+      },
+      {
+        "id": "acute-cv-red-flag",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "cv_symptoms",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sintomas compatíveis com evento cardiovascular agudo em pessoa exposta ao tabaco."
+          ],
+          "emergency_flow": [
+            "Avaliar imediatamente segundo o protocolo da síndrome aguda; não atribuir o quadro à abstinência."
+          ]
+        }
+      },
+      {
+        "id": "passive-exposure",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "secondhand_smoke",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Exposição passiva à fumaça aumenta risco cardiovascular e deve ser eliminada sempre que possível."
+          ]
+        }
+      },
+      {
+        "id": "relapse-support",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "prior_relapse",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Recaída prévia não deve encerrar o tratamento; intensificar suporte, revisar gatilhos e ajustar a estratégia de cessação."
+          ]
+        }
+      }
     ],
-    "tags": ["tabagismo", "nicotina", "prevenção cardiovascular", "cessação", "vareniclina", "reposicao de nicotina", "bupropiona", "vape", "fumo passivo"],
+    "tags": [
+      "tabagismo",
+      "nicotina",
+      "prevenção cardiovascular",
+      "cessação",
+      "vareniclina",
+      "reposicao de nicotina",
+      "bupropiona",
+      "vape",
+      "fumo passivo"
+    ],
     "source_refs": [
       "Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140:e596-e646. doi:10.1161/CIR.0000000000000678.",
       "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42:3227-3337. doi:10.1093/eurheartj/ehab484.",
@@ -113,7 +222,7 @@
     ],
     "related_document_slugs": [],
     "patient_material_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "review_note": "Novo hub aditivo para fator de risco cardiovascular de alta carga assistencial. A auditoria da main não encontrou hub dedicado nem documento científico central de tabagismo já publicado e revisado que justificasse relação Tudo com Tudo forte; por isso related_document_slugs permanece vazio em vez de criar vínculo tangencial. Manter pendente até revisão editorial humana."
   }
 ]
