@@ -113,7 +113,8 @@ async function prescriptionFlow() {
   assert.equal(reread.destinatario.nome, `Paciente Sintético ${marker}`);
   assert.equal(reread.documentos[0].status, "emitido");
   await page.goto(`${baseUrl}/receituario`, { waitUntil: "networkidle" });
-  assert.ok((await page.locator("body").innerText()).includes(`Paciente Sintético ${marker}`));
+  await page.getByRole("tab", { name: "Histórico", exact: true }).click();
+  await page.getByText(`Paciente Sintético ${marker}`, { exact: false }).first().waitFor({ state: "visible" });
   await page.screenshot({ path: path.join(artifactDir, "screenshots", "receituario.png"), fullPage: false });
   record("prescription", { prescriptionId: created.prescricao_id, documentId, pdfBytes: emitted.byteLength });
 }
