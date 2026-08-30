@@ -124,3 +124,41 @@
     content:none!important;
   }
 }
+
+/* Hierarquia aprovada 29/08/2026: login → SSO → cadastro; downloads recolhidos; sem clipping. */
+@media(min-width:821px){
+  .prehome--fullscreen>.prehome-access{
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+  }
+  .prehome--fullscreen .prehome-card--login{
+    max-height:calc(100dvh - 28px)!important;
+    overflow:auto!important;
+  }
+}
+
+.prehome-install{display:grid;gap:8px;margin-top:2px}
+.prehome-install>summary{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;
+  min-height:36px;padding:8px 2px;color:#8aa0b3;font-size:.66rem;font-weight:650;
+  cursor:pointer;list-style:none;
+}
+.prehome-install>summary::-webkit-details-marker{display:none}
+.prehome-install>summary::before{content:"▸";color:#55d9e1}
+.prehome-install[open]>summary::before{content:"▾"}
+.prehome-install>summary small{color:#6e879d;font-size:.56rem;font-weight:500}
+.prehome-social-status{margin:0;color:#7a8fa2;font-size:.6rem;text-align:center}
+
+@media(max-width:900px){
+  .prehome--login .prehome-legal{
+    position:static!important;display:flex!important;justify-content:center;
+    gap:16px;margin-top:8px;padding:12px 0 4px;color:#7a8fa2;font-size:.62rem!important;
+  }
+  .prehome--login .prehome-legal a{color:inherit}
+}
+
+@media(max-width:820px){
+  .prehome--login .prehome-windows-download{display:none!important}
+  .prehome--login .prehome-install>summary small{display:none}
+}
+
