@@ -1209,3 +1209,31 @@ por Claude, conforme regra do briefing original. Pronto para revisão
 humana e decisão de publicação pelo Rafael.
 
 _(fim da produção contínua desta janela — aguardando nova instrução)_
+
+## RETOMADA — ordem do Rafael (30/08/2026)
+
+Ordem recebida: "prossiga com a produção". Produção retomada.
+
+## Lote 53 — concluído (SHA f2b455f8) — total 81 commits
+
+- checklist `trombose-subclinica-de-folheto-em-bioproteses-halt-deteccao-por-4d-ct-e-manejo`
+  — item já pesquisado integralmente pelo agente antes da pausa;
+  integrado normalmente na retomada (sem redespachar). Slug corrigido
+  (removido caractere acentuado "biopróteses"→"bioproteses" para manter
+  convenção ASCII). 5 itens: definição HALT vs. HAT; angio-TC 4D como
+  método de escolha; prevalência 12% geral/4% cirúrgica vs. 13% TAVI
+  (RESOLVE/SAVORY) e 10%→24% em 1 ano (PARTNER 3 CT substudy);
+  significado clínico com controvérsia preservada (associação com
+  AIT/AVC combinado, não com AVC isolado); manejo — achado central do
+  GALILEO-4D: rivaroxabana resolveu HALT mas o ensaio principal mostrou
+  PIOR desfecho clínico em quem não tinha indicação prévia de
+  anticoagulação. 9 fontes via NCBI e-utils, leitura de abstract
+  completo via efetch.
+
+## Lote 54 (planejado)
+
+A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
+`gh pr list`): território ainda não explorado nesta janela. Confirmar
+cobertura antes de despachar.
+
+_(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
