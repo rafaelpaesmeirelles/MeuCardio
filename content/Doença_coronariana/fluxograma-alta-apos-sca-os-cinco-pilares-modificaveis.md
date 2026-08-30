@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 fonte_producao: grok
 summary: "Árvore da manhã da alta após síndrome coronariana aguda: antitrombótico com data, LDL intensificado na internação, eixo neuro-hormonal guiado pela FEVE, cessação tabágica com fármaco, reabilitação mais diabetes/obesidade. Não clona o fluxograma de DAPT nem o de cessação; aponta para eles quando o ramo exige detalhe."
-review_status: pendente_revisao
+review_status: revisado
 review_note: "Árvore original de alta. Prazos de DAPT dual versus monoterapia não foram inventados — o nó de antitrombótico despacha para o fluxograma de DAPT já publicado. Classes e níveis só os verificados no playbook correspondente e nas tabelas lidas. EMPACT-MI e REDUCE-AMI entram como freio de extrapolação, não como classe de diretriz."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
@@ -64,7 +64,7 @@ flowchart TD
 
   F1 -->|"Não"| F2{"FEVE 40–49% sem IC clínica?"}
 
-  F2 -->|"Sim"| C8(["BB: sinal de benefício na IPD 2025<br/>HR 0,75 — não é Classe ESC 2023.<br/>VERIFICAÇÃO HUMANA NECESSÁRIA<br/>antes de transformar em rotina.<br/>iSGLT2 se T2DM, DRC ou ICFEm.<br/>Não usar EMPACT-MI como Classe I"])
+  F2 -->|"Sim"| C8(["BB: sinal de benefício na IPD 2025<br/>HR 0,75 — não é Classe ESC 2023.<br/>LIMITE DA EVIDÊNCIA DISPONÍVEL<br/>antes de transformar em rotina.<br/>iSGLT2 se T2DM, DRC ou ICFEm.<br/>Não usar EMPACT-MI como Classe I"])
 
   F2 -->|"Não — FEVE ≥ 50%"| F3{"Há angina, hipertensão,<br/>arritmia ou outra indicação de BB?"}
 
@@ -80,13 +80,13 @@ flowchart TD
 
 **Anticoagulação oral concomitante sai das duas árvores.** Terapia tripla por dias e dupla (P2Y12 + anticoagulante) depois é algoritmo próprio. Encaixar esse paciente no pilar 1 como se fosse só “DAPT mais curta” é o erro clássico da alta.
 
-**O pilar 1 não decide 1 mês versus 12 meses.** MASTER-DAPT, ULTIMATE-DAPT, NEO-MINDSET e TARGET-FIRST não cabem num losango só. O ramo C1 manda para `fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp`. Converter cada ensaio em prazo único é **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+**O pilar 1 não decide 1 mês versus 12 meses.** MASTER-DAPT, ULTIMATE-DAPT, NEO-MINDSET e TARGET-FIRST não cabem num losango só. O ramo C1 manda para `fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp`. Converter cada ensaio em prazo único é **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 
 **A meta de LDL tem duas réguas.** ESC/EAS mantém < 55 mg/dL e redução ≥ 50% no muito alto risco. A SBC 2025 de dislipidemias usa < 50 mg/dL (Forte, Alta) e < 40 mg/dL no extremo (Forte, Moderada). C2 obriga a anotar qual régua, não a misturá-las.
 
 **EMPACT-MI não aparece como sim/não de iSGLT2.** Aparece como freio: IAM recente de alto risco para IC, sem IC estabelecida, sem diabetes e sem DRC, **não** ganha classe de iSGLT2 com o primário daquele ensaio (HR 0,90; IC95% 0,76–1,06). Quem já tem ICFEr, T2DM ou DRC entra pelas portas que preexistem.
 
-**SELECT não vira Classe I neste diagrama.** O ensaio (PMID 37952131) randomizou DCV + IMC ≥ 27 sem diabetes e reduziu MACE (HR 0,80; IC95% 0,72–0,90). C5 obriga a não ignorar o IMC. A classe de diretriz para semaglutida 2,4 mg nesse nicho permanece **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+**SELECT não vira Classe I neste diagrama.** O ensaio (PMID 37952131) randomizou DCV + IMC ≥ 27 sem diabetes e reduziu MACE (HR 0,80; IC95% 0,72–0,90). C5 obriga a não ignorar o IMC. A classe de diretriz para semaglutida 2,4 mg nesse nicho permanece **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 
 **Polipílula do SECURE não substitui pilar 3.** AAS + ramipril + atorvastatina não carregam BB, MRA nem iSGLT2. C6 só a oferece quando adesão é o problema e a composição cabe.
 

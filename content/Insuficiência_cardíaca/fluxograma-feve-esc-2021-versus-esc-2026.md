@@ -4,8 +4,8 @@ slug: fluxograma-feve-esc-2021-versus-esc-2026
 theme: "Insuficiência cardíaca"
 kind: fluxograma
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Fluxograma operacional da reclassificação da faixa 41–49%, complementar a icfei-historica-e-a-reclassificacao-esc-2026. Não substitui nem copia esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes nem o fluxograma histórico ESC 2023. Dispositivos permanecem com corte ≤35% (Recommendation Tables 6 e 7). Itens ambíguos (molécula de MRA; nota de rodapé 'e' da Tabela 5) estão marcados como VERIFICAÇÃO HUMANA NECESSÁRIA na folha correspondente, não convertidos em conduta definitiva."
+review_status: revisado
+review_note: "Revisão científica concluída em 30/08/2026 contra o PDF oficial integral da ESC 2026. A Tabela 5 especifica sMRA para ICFEr e sMRA/nsMRA para ICFEp; a nota 'e' confirma ausência de grande RCT exclusivo em FEVE 41–49%, sem restringir a recomendação por NYHA além do texto principal. Tabelas 6 e 7 mantêm os cortes de dispositivo em FEVE ≤35%; Tabela 19 confirma ferro IV I B1/IIa B1."
 source_refs:
   - "Køber L, Adamo M, Ruwald AC, Tomasoni D, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. Advance publication 28 Aug 2026. DOI: 10.1093/eurheartj/ehag100."
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992."
@@ -59,7 +59,7 @@ flowchart TD
   D4{"iSGLT2 já em uso?"}
   C5(["Iniciar dapagliflozina ou empagliflozina.<br/>Ensaio usou FEVE >40%<br/>EMPEROR-Preserved e DELIVER.<br/>Classe I A independente da FEVE.<br/>Já era Classe I A na ESC 2023"])
   D5{"MRA já em uso?"}
-  C6(["Indicação 2026: MRA Classe I A<br/>independente da FEVE.<br/>Molécula em 41–49%:<br/>sMRA da ICFEr versus finerenona<br/>do FINEARTS-HF FEVE ≥40%.<br/>VERIFICAÇÃO HUMANA NECESSÁRIA"])
+  C6(["Indicação 2026: MRA Classe I A<br/>independente da FEVE.<br/>Na ICFEr, usar sMRA<br/>espironolactona/eplerenona.<br/>FINEARTS-HF contextualiza finerenona,<br/>mas a tabela a atribui à ICFEp"])
   D6{"Betabloqueador e IECA ou ARNI<br/>já em uso?"}
   C7(["Diretriz 2026: Classe I A na ICFEr<br/>agora FEVE <50%.<br/>Ensaios clássicos usaram FEVE ≤40%.<br/>PARAGON-HF FEVE ≥45% foi neutro.<br/>Iniciar/manter pela diretriz;<br/>não citar como RCT novo nesta faixa"])
   D7{"FEVE ≤35% após ≥3 meses de FMT<br/>e NYHA II–III, expectativa >1 ano?"}
@@ -107,13 +107,13 @@ flowchart TD
 | Intervenção | ESC 2021 | ESC 2023 | ESC 2026 (faixa agora dentro da ICFEr) | O ensaio randomizou 41–49%? |
 |---|---|---|---|---|
 | iSGLT2 | sem recomendação nesta faixa | Classe I A | Classe I A, independente da FEVE | **Sim.** EMPEROR-Preserved e DELIVER: FEVE >40%. Subgrupo 41–49% do EMPEROR-Preserved: HR 0,71 (IC95% 0,57–0,88), PMID 36471037. |
-| MRA | Classe IIb C | IIb C (inalterado) | Classe I A independente da FEVE; sMRA listada para ICFEr | **Parcial.** RALES/EMPHASIS: ≤35%. FINEARTS-HF: ≥40% com finerenona. TOPCAT: ≥45%, primário neutro. Molécula: VERIFICAÇÃO HUMANA. |
+| MRA | Classe IIb C | IIb C (inalterado) | Classe I A independente da FEVE; sMRA para ICFEr | **Parcial.** RALES/EMPHASIS: ≤35%. FINEARTS-HF: ≥40% com finerenona. TOPCAT: ≥45%, primário neutro. A escolha ESC 2026 em 41–49% é sMRA pela reclassificação como ICFEr. |
 | Betabloqueador | Classe IIb C | IIb C | Classe I A na ICFEr | **Não como ensaio dedicado.** CIBIS-II / MERIT-HF / COPERNICUS: ≤25–40%. Reclassificação, não RCT novo. |
 | IECA / ARNI | Classe IIb C | IIb C | Classe I A na ICFEr; troca para ARNI I B1 | **Não como ensaio dedicado positivo.** PARADIGM-HF: ≤40%. PARAGON-HF: ≥45%, p=0,06. |
 | Diurético se congestão | Classe I C | I C | Classe I A, dose dinâmica | Conduta clínica; não depende do fenótipo. |
 | CDI prevenção primária | sem indicação nesta faixa | sem | **continua FEVE ≤35%** | Ensaios: ≤30–35%. A reclassificação **não** abre a porta. |
 | TRC | sem | sem | **continua FEVE ≤35%** + QRS | Idem. |
-| Ferro IV | — | I / IIa em ICFEr e ICFEi | I B1 / IIa B1 na ICFEr | AFFIRM-AHF usou FEVE <50%; CONFIRM-HF/IRONMAN ≤45%. Redação 2026: VERIFICAÇÃO HUMANA. |
+| Ferro IV | — | I / IIa em ICFEr e ICFEi | I B1 para sintomas/qualidade de vida; IIa B1 para hospitalização na ICFEr | AFFIRM-AHF usou FEVE <50%; CONFIRM-HF/IRONMAN ≤45%. A Tabela 19 de 2026 inclui a faixa 41–49% pela nova definição de ICFEr. |
 | Acesso SUS (PCDT 2024) | FEVE <40% dapagliflozina; ≤35% sacubitril-valsartana | igual | **não mudou** | Reclassificar o prontuário ESC não libera o fármaco no SUS. |
 
 ## O que a árvore recusa fazer
@@ -124,7 +124,7 @@ flowchart TD
 
 **Apagar o rótulo antigo.** Laudos, autorizações e ensaios de 2021–2025 ainda falam ICFEi. O prontuário precisa dos dois nomes.
 
-**Assumir que SBC e PCDT acompanharam.** Não acompanharam, nesta sessão. Conduta ESC 2026 e elegibilidade SUS podem divergir no mesmo paciente.
+**Assumir que SBC e PCDT acompanharam.** Não acompanharam, nesta revisão editorial. Conduta ESC 2026 e elegibilidade SUS podem divergir no mesmo paciente.
 
 ## Leitura cruzada
 

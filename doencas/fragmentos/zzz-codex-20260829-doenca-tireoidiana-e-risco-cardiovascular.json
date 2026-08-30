@@ -88,19 +88,127 @@
       "Uso de amiodarona: distinguir hipotireoidismo de tireotoxicose tipo 1, tipo 2 ou mista, pois a conduta difere e a necessidade da amiodarona deve ser discutida com cardiologia/endocrinologia."
     ],
     "assistant_questions": [
-      {"id": "thyroid_labs", "label": "Há TSH e T4 livre recentes e interpretáveis?", "type": "boolean", "required": true, "section": "Diagnóstico"},
-      {"id": "af_or_hf", "label": "Há fibrilação atrial, taquicardia persistente ou insuficiência cardíaca?", "type": "boolean", "section": "Cardiovascular"},
-      {"id": "thyroid_emergency", "label": "Há febre/alteração neurológica/instabilidade na tireotoxicose ou hipotermia/rebaixamento no hipotireoidismo grave?", "type": "boolean", "required": true, "section": "Red flags"},
-      {"id": "amiodarone", "label": "O paciente usa ou usou recentemente amiodarona?", "type": "boolean", "section": "Etiologia"},
-      {"id": "subclinical", "label": "A alteração é subclínica (T4 livre normal)?", "type": "boolean", "section": "Classificação"}
+      {
+        "id": "thyroid_labs",
+        "label": "Há TSH e T4 livre recentes e interpretáveis?",
+        "type": "boolean",
+        "required": true,
+        "section": "Diagnóstico"
+      },
+      {
+        "id": "af_or_hf",
+        "label": "Há fibrilação atrial, taquicardia persistente ou insuficiência cardíaca?",
+        "type": "boolean",
+        "section": "Cardiovascular"
+      },
+      {
+        "id": "thyroid_emergency",
+        "label": "Há febre/alteração neurológica/instabilidade na tireotoxicose ou hipotermia/rebaixamento no hipotireoidismo grave?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "amiodarone",
+        "label": "O paciente usa ou usou recentemente amiodarona?",
+        "type": "boolean",
+        "section": "Etiologia"
+      },
+      {
+        "id": "subclinical",
+        "label": "A alteração é subclínica (T4 livre normal)?",
+        "type": "boolean",
+        "section": "Classificação"
+      }
     ],
     "assistant_rules": [
-      {"id": "thyroid-emergency", "priority": 100, "when": {"all": [{"field": "thyroid_emergency", "op": "truthy"}]}, "add": {"risk": "emergencia", "red_flags": ["Possível tempestade tireotóxica ou coma mixedematoso."], "emergency_flow": ["Encaminhar para tratamento emergencial e suporte de órgãos; não aguardar investigação ambulatorial completa."]}},
-      {"id": "thyroid-af-hf", "priority": 80, "when": {"all": [{"field": "af_or_hf", "op": "truthy"}]}, "add": {"risk": "prioritario", "suggested_tests": ["ECG e TSH/T4 livre; avaliar ecocardiograma conforme quadro"], "messages": ["Tratar simultaneamente a manifestação cardiovascular e a disfunção tireoidiana confirmada."]}},
-      {"id": "amiodarone-thyroid", "priority": 75, "when": {"all": [{"field": "amiodarone", "op": "truthy"}]}, "add": {"supporting": ["Amiodarona pode causar hipotireoidismo ou diferentes formas de tireotoxicose; definir o fenótipo antes de escolher o tratamento."]}},
-      {"id": "need-thyroid-labs", "priority": 60, "when": {"all": [{"field": "thyroid_labs", "op": "falsy"}]}, "add": {"missing_information": ["TSH e T4 livre interpretáveis antes de atribuir a manifestação cardiovascular à tireoide"]}}
+      {
+        "id": "thyroid-emergency",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "thyroid_emergency",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível tempestade tireotóxica ou coma mixedematoso."
+          ],
+          "emergency_flow": [
+            "Encaminhar para tratamento emergencial e suporte de órgãos; não aguardar investigação ambulatorial completa."
+          ]
+        }
+      },
+      {
+        "id": "thyroid-af-hf",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "af_or_hf",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "ECG e TSH/T4 livre; avaliar ecocardiograma conforme quadro"
+          ],
+          "messages": [
+            "Tratar simultaneamente a manifestação cardiovascular e a disfunção tireoidiana confirmada."
+          ]
+        }
+      },
+      {
+        "id": "amiodarone-thyroid",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "amiodarone",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Amiodarona pode causar hipotireoidismo ou diferentes formas de tireotoxicose; definir o fenótipo antes de escolher o tratamento."
+          ]
+        }
+      },
+      {
+        "id": "need-thyroid-labs",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "thyroid_labs",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "TSH e T4 livre interpretáveis antes de atribuir a manifestação cardiovascular à tireoide"
+          ]
+        }
+      }
     ],
-    "tags": ["tireoide", "hipertireoidismo", "hipotireoidismo", "fibrilacao atrial", "insuficiencia cardiaca", "amiodarona", "TSH", "levotiroxina"],
+    "tags": [
+      "tireoide",
+      "hipertireoidismo",
+      "hipotireoidismo",
+      "fibrilacao atrial",
+      "insuficiencia cardiaca",
+      "amiodarona",
+      "TSH",
+      "levotiroxina"
+    ],
     "source_refs": [
       "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45:3314-3414.",
       "Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26:1343-1421. doi:10.1089/thy.2016.0229.",
@@ -115,7 +223,7 @@
     ],
     "related_document_slugs": [],
     "patient_material_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "review_note": "Novo hub aditivo para interação tireoide-cardiovascular. Não foi identificado na main um documento científico central revisado com slug inequívoco para vínculo Tudo com Tudo; relações foram mantidas vazias para evitar associação tangencial. Não há diretriz SBC cardiovascular específica recente de tireoide que substitua as referências endocrinológicas/ESC utilizadas. Manter pendente até revisão editorial humana."
   }
 ]

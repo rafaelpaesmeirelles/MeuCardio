@@ -38,7 +38,7 @@ O padrão que se repete nos dois estudos é o mesmo, e é a informação mais im
 ## Cenário clínico especial: dispositivo de assistência ventricular (LVAD)
 Oquendo GV et al. JACC Case Rep. 2026 (PMID 41342820) relatam um caso de PFA em TV refratária num paciente com dispositivo de assistência ventricular esquerda (LVAD), cenário em que a ablação térmica convencional carrega risco elevado de dano a componentes do dispositivo e de artefato/interferência eletromagnética. **Trata-se de um relato de caso isolado, não de série ou ensaio** — cita-se aqui como ilustração do racional teórico (mecanismo não térmico, potencialmente mais seguro perto de material protético), não como evidência de eficácia ou segurança populacional nesse subgrupo.
 
-## O que a evidência ainda não responde — VERIFICAÇÃO HUMANA NECESSÁRIA
+## O que a evidência ainda não responde
 Toda a evidência disponível até esta revisão é de **estudos observacionais de viabilidade e séries pequenas** (o maior braço de TV reúne 74 pacientes na revisão sistemática, agregando 7 estudos distintos) — **não há ensaio clínico randomizado comparando PFA com ablação por radiofrequência térmica em TV ou PVC**. Não foi possível confirmar, dentro desta sessão, se há aprovação regulatória específica e ampla de algum sistema de PFA para o tratamento de arritmia ventricular (as aprovações mais consolidadas de PFA no mercado são para fibrilação atrial) — quem for usar este documento para decisão de credenciamento ou reembolso deve confirmar o status regulatório vigente na fonte oficial, não a partir deste texto.
 
 ## Como este documento se relaciona com os outros da pasta

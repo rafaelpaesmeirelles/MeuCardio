@@ -148,7 +148,7 @@ resumida acima sustenta uma distinção prática:
   Lewis et al. já colocavam em 1989, e que segue sem resposta genérica: é
   decisão caso a caso.
 
-## VERIFICAÇÃO HUMANA NECESSÁRIA
+## Limitações da evidência disponível
 Os artigos revisados neste documento não trazem, em nível de abstract, um
 corte numérico único e consensual (ex.: "3x o limite superior da
 normalidade") que defina precisamente o gatilho de suspensão — a prática

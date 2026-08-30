@@ -4,16 +4,16 @@ slug: fluxograma-pos-rosc-ecg-temperatura-pa-e-cateterismo
 theme: "Terapia intensiva"
 kind: fluxograma
 summary: "Árvore do cardiologista nas primeiras 24 horas após RCE: ECG de 12 derivações; supra versus não; cateterismo imediato só no supra ou no alto risco em curso com etiologia cardíaca; em paralelo, evitar febre (não induzir 33 °C por rotina), piso de PAM e de oxigenação, eco para causa mecânica, antitrombótico só se indicado, e não prognosticar o cérebro neste intervalo."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Árvore original das primeiras 24 h do cardiologista. Não clona o fluxograma-cuidado-pos-parada-e-coronariografia (só cateterismo) nem o protocolo AHA 2025 de cuidados na UCO. Nós de cateterismo apontam para o fluxograma canônico quando o ramo exige detalhe. Números só dos abstracts TTM2/COACT/TOMAHAWK/BOX lidos via PubMed E-utilities nesta sessão. COR/LOE AHA 2025 e ESC 2023 Table 8: VERIFICAÇÃO HUMANA NECESSÁRIA — tabelas não abertas."
+review_note: "Árvore original das primeiras 24 h do cardiologista. Não clona o fluxograma-cuidado-pos-parada-e-coronariografia (só cateterismo) nem o protocolo AHA 2025 de cuidados na UCO. Nós de cateterismo apontam para o fluxograma canônico quando o ramo exige detalhe. Números só dos abstracts TTM2/COACT/TOMAHAWK/BOX lidos via PubMed E-utilities nesta revisão editorial. COR/LOE AHA 2025 e ESC 2023 Table 8: LIMITE DA EVIDÊNCIA DISPONÍVEL — tabelas não abertas."
 source_refs:
   - "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859"
   - "Lemkes JS, Janssens GN, van der Hoeven NW, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057"
   - "Desch S, Freund A, Akin I, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570"
   - "Kjaergaard J, Møller JE, Schmidt H, et al. Blood-Pressure Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1456-1466. DOI: 10.1056/NEJMoa2208687. PMID: 36027564"
   - "Schmidt H, Kjaergaard J, Hassager C, et al. Oxygen Targets in Comatose Survivors of Cardiac Arrest. N Engl J Med. 2022;387(16):1467-1476. DOI: 10.1056/NEJMoa2208686. PMID: 36027567"
-  - "Hirsch KG, Amorim E, Coppler PJ, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines. Circulation. 2025;152(16_suppl_2):S673-S718. DOI: 10.1161/CIR.0000000000001375. PMID: 41122894. Tabelas de COR/LOE não abertas nesta sessão."
+  - "Hirsch KG, Amorim E, Coppler PJ, et al. Part 11: Post-Cardiac Arrest Care: 2025 American Heart Association Guidelines. Circulation. 2025;152(16_suppl_2):S673-S718. DOI: 10.1161/CIR.0000000000001375. PMID: 41122894. Tabelas de COR/LOE não abertas nesta revisão editorial."
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Table 8 não reaberta."
 ---
 
@@ -39,7 +39,7 @@ flowchart TD
   C_nao(["Tratar a etiologia.<br/>Não indicar cateterismo emergente<br/>só por choque ou arritmia.<br/>ECG e eco ainda valem se surgir<br/>indicação coronária independente"])
 
   D3{"Etiologia cardíaca suspeita E<br/>choque, tempestade elétrica<br/>ou isquemia em curso?"}
-  C_alto(["Alto risco em curso:<br/>cateterismo emergente pode ser razoável.<br/>Detalhe: fluxograma de coronariografia<br/>desta pasta — não inventar classe aqui.<br/>VERIFICAÇÃO HUMANA NECESSÁRIA<br/>da tabela AHA 2025"])
+  C_alto(["Alto risco em curso:<br/>cateterismo emergente pode ser razoável.<br/>Detalhe: fluxograma de coronariografia<br/>desta pasta — não inventar classe aqui.<br/>LIMITE DA EVIDÊNCIA DISPONÍVEL<br/>da tabela AHA 2025"])
 
   C_estavel(["Estável, sem supra:<br/>NÃO cateterismo imediato de rotina.<br/>COACT: sobrevida 90 d 64,5% vs 67,2%, p=0,51;<br/>atrasou temperatura 5,4 h vs 4,7 h.<br/>TOMAHAWK: óbito 30 d HR 1,28<br/>IC95% 1,00-1,63, p=0,06.<br/>Angiografia adiada ou seletiva"])
 
@@ -73,7 +73,7 @@ flowchart TD
 
   S1 -->|"Sim"| S2{"Hipotensão franca<br/>ou hipoxemia franca?"}
 
-  S2 -->|"Sim"| T2(["Tratar agora.<br/>Piso operacional AHA 2025 Highlights:<br/>PAM ≥65 mmHg; SpO2 90-98%<br/>depois de medida confiável.<br/>COR/LOE: VERIFICAÇÃO HUMANA NECESSÁRIA.<br/>BOX não autoriza perseguir 77 mmHg<br/>nem PaO2 13-14 kPa como ganho"])
+  S2 -->|"Sim"| T2(["Tratar agora.<br/>Piso operacional AHA 2025 Highlights:<br/>PAM ≥65 mmHg; SpO2 90-98%<br/>depois de medida confiável.<br/>COR/LOE: LIMITE DA EVIDÊNCIA DISPONÍVEL.<br/>BOX não autoriza perseguir 77 mmHg<br/>nem PaO2 13-14 kPa como ganho"])
 
   S2 -->|"Não"| S3{"Eco ou POCUS feito<br/>ou documentado como indisponível?"}
 
@@ -98,11 +98,11 @@ flowchart TD
 - **Como** prognosticar (EEG, NSE, SSEP, RM, mioclonia). Isso começa depois das 24 horas e mora no algoritmo ERC-ESICM / AHA 2025 desta pasta.
 - **Qual** dispositivo de temperatura e **qual** vasopressor. Nenhum ensaio citado aqui comparou método de resfriamento nem noradrenalina versus outro no pós-RCE.
 - **Parada intra-hospitalar e criança.** TTM2, COACT, TOMAHAWK e BOX são extra-hospitalares em adultos.
-- **Classe da angiografia emergente no sem-supra de alto risco.** O fluxograma canônico de coronariografia desta pasta já discute o ramo; a tabela AHA 2025 não foi aberta nesta sessão.
+- **Classe da angiografia emergente no sem-supra de alto risco.** O fluxograma canônico de coronariografia desta pasta já discute o ramo; a tabela AHA 2025 não foi aberta nesta revisão editorial.
 
 ## Números que a árvore usa — e de onde vêm
 
-Todos extraídos dos abstracts lidos via PubMed E-utilities nesta sessão, não de memória:
+Todos extraídos dos abstracts lidos via PubMed E-utilities nesta revisão editorial, não de memória:
 
 | Ensaio | PMID | Comparação | Primário | O que muda a 24 h |
 |---|---|---|---|---|

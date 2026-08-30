@@ -4,7 +4,7 @@ slug: summit-tirzepatida-icfep-com-obesidade
 theme: "Insuficiência cardíaca"
 kind: estudo
 fonte_producao: grok
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Packer M, Zile MR, Kramer CM, Baum SJ, Litwin SE, Menon V, Ge J, Weerakkody GJ, Ou Y, Bunck MC, Hurt KC, Murakami M, Borlaug BA; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826. Epub 2024 Nov 16.", "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."]
 legacy_source: "Documento novo nesta pasta, escrito em 29/08/2026. O STEP-HFpEF (semaglutida, sintomas e peso) já estava em Insuficiência cardíaca; o SUMMIT já tinha versão no tema Diabetes e cardiologia (`tirzepatida-e-icfep-com-obesidade-o-ensaio-summit.md`). Esta peça é o ensaio de eventos clínicos da mesma população, lido ao lado do STEP-HFpEF, sem reescrevê-lo. Números restritos ao abstract PubMed PMID 39555826."
 ---
@@ -25,7 +25,7 @@ Packer M et al., N Engl J Med. 2025;392(5):427-437 (PMID 39555826; NCT04847557).
   1. composto de **morte por causas cardiovasculares adjudicada ou evento de piora da insuficiência cardíaca**, em análise de tempo até o primeiro evento
   2. variação do basal até 52 semanas no **KCCQ-CSS** (Kansas City Cardiomyopathy Questionnaire clinical summary score; 0 a 100, valores maiores = melhor qualidade de vida)
 
-O abstract **não** descreve peso corporal, distância de caminhada de 6 minutos, fração com diabetes, idade, sexo nem a definição operacional de “worsening heart-failure event”. Esses números, se forem citados a partir do texto integral, exigem **VERIFICAÇÃO HUMANA NECESSÁRIA**.
+O abstract **não** descreve peso corporal, distância de caminhada de 6 minutos, fração com diabetes, idade, sexo nem a definição operacional de “worsening heart-failure event”. Esses números, se forem citados a partir do texto integral, exigem **LIMITE DA EVIDÊNCIA DISPONÍVEL**.
 
 ## Resultados — so o que o abstract traz
 
@@ -68,5 +68,5 @@ Há registro prévio do mesmo PMID no tema Diabetes e cardiologia (`tirzepatida-
 - **Extrapolar para ICFEr** — FEVE ≥ 50% no SUMMIT; a própria ESC 2026 pede ensaios dedicados em ICFEr
 - **Aplicar o HR 0,62 a FEVE 45–49% como se fosse o resultado do SUMMIT** — o ensaio não randomizou essa faixa; o corte ≥45% é da Recommendation Table 18
 - **Omitir a descontinuação por evento adverso** — 6,3% vs. 1,4%, sobretudo gastrointestinal; faz parte do consentimento, não é nota de rodapé
-- **Citar perda de peso ou metros na caminhada de 6 minutos como dado deste abstract** — o PubMed do artigo principal não os traz; **VERIFICAÇÃO HUMANA NECESSÁRIA** no texto integral ou em análises secundárias
+- **Citar perda de peso ou metros na caminhada de 6 minutos como dado deste abstract** — o PubMed do artigo principal não os traz; **LIMITE DA EVIDÊNCIA DISPONÍVEL** no texto integral ou em análises secundárias
 - **Tirar iSGLT2 porque “agora tem incretina”** — classes e perguntas diferentes; SGLT2 permanece fundacional

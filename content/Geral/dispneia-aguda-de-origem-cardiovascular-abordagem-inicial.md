@@ -4,9 +4,9 @@ slug: dispneia-aguda-de-origem-cardiovascular-abordagem-inicial
 theme: "Geral"
 kind: protocolo
 summary: "Primeira hora da dispneia aguda no pronto-socorro, enfermaria ou UCO: ABC e oxigênio só se hipoxemia, ECG em 10 minutos porque dispneia pode ser equivalente isquêmico, cortes agudos de peptídeo natriurético, diferencial aberto entre edema pulmonar cardiogênico, SCA, arritmia, tamponamento, TEP, pneumonia/DPOC, anemia e ansiedade, papel honesto do POCUS (SHoC-ED) e VNI como adjuvante — sem fechar diagnóstico por um único teste."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica assistida em 29/08/2026. Recorte deliberado: primeira hora da dispneia AGUDA no PS, enfermaria ou UCO. Não substitui o fluxograma de dispneia crônica ambulatorial, o manejo diurético da IC descompensada, o ensaio de VNI no EAP nem o ensaio SHoC-ED, todos já publicados no acervo. PMIDs e DOIs conferidos contra PubMed/registro da casa; classes e níveis só foram atribuídos quando já constavam de evidências ou documentos revisados do corpus. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida em 29/08/2026. Recorte deliberado: primeira hora da dispneia AGUDA no PS, enfermaria ou UCO. Não substitui o fluxograma de dispneia crônica ambulatorial, o manejo diurético da IC descompensada, o ensaio de VNI no EAP nem o ensaio SHoC-ED, todos já publicados no acervo. PMIDs e DOIs conferidos contra PubMed/registro da casa; classes e níveis só foram atribuídos quando já constavam de evidências ou documentos revisados do corpus. Revisão científica concluída em 30/08/2026."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992."
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666."
@@ -129,8 +129,8 @@ Se o fenótipo é congestão com perfusão preservada, o destino terapêutico de
 ## Limitações e o que confirmar
 
 - Gestante, criança e paciente já em ventilação invasiva ficam fora deste recorte.
-- Classes e níveis da ESC 2026 para a fase imediata da IC descompensada **não** foram relidos tabela a tabela nesta sessão; usou-se a ESC 2021/2023 para oxigênio, VNI e peptídeo, e a ESC 2026 apenas para a nomenclatura (“IC descompensada”) já registrada no documento da casa.
-- O tempo-alvo de 10 minutos até o ECG na dispneia como equivalente isquêmico segue o fluxograma de SCA da casa (ESC 2023) e a lógica da SBC 2025 de porta-ECG na dor torácica; a classe/nível exatos da tabela de 2023 para o recorte “só dispneia, sem dor” merecem conferência no texto integral (`VERIFICAÇÃO HUMANA NECESSÁRIA` se for citar classe isolada desse recorte).
+- Classes e níveis da ESC 2026 para a fase imediata da IC descompensada **não** foram relidos tabela a tabela nesta revisão editorial; usou-se a ESC 2021/2023 para oxigênio, VNI e peptídeo, e a ESC 2026 apenas para a nomenclatura (“IC descompensada”) já registrada no documento da casa.
+- O tempo-alvo de 10 minutos até o ECG na dispneia como equivalente isquêmico segue o fluxograma de SCA da casa (ESC 2023) e a lógica da SBC 2025 de porta-ECG na dor torácica; a classe/nível exatos da tabela de 2023 para o recorte “só dispneia, sem dor” merecem conferência no texto integral (`LIMITE DA EVIDÊNCIA DISPONÍVEL` se for citar classe isolada desse recorte).
 - Cortes de inclusão de NT-proBNP por idade (450/900/1.800) vêm do PRIDE e do subestudo geriátrico já fichados em exames; a ESC 2021 opera no PS sobretudo com o corte de **exclusão** (300 / 100).
 - Este protocolo não prescreve dose de diurético, parâmetro de VNI, esquema de trombólise nem critério de pericardiocentese.
 

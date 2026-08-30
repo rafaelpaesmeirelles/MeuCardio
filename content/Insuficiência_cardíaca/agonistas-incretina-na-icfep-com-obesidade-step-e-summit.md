@@ -3,7 +3,7 @@ title: "Agonistas de Incretina na ICFEp com Obesidade: STEP-HFpEF versus SUMMIT"
 slug: agonistas-incretina-na-icfep-com-obesidade-step-e-summit
 theme: "Insuficiência cardíaca"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Kosiborod MN, Abildstrøm SZ, Borlaug BA, Butler J, Rasmussen S, Davies M, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681", "Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826", "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."]
 legacy_source: "Protocolo novo, escrito em 29/08/2026. Não reescreve o STEP-HFpEF já publicado nesta pasta; não substitui o SUMMIT do tema Diabetes e cardiologia. Cruza os dois abstracts (PMID 37622681 e 39555826) com a Recommendation Table 18 da ESC 2026 para a decisão à beira do leito."
 ---
@@ -32,7 +32,7 @@ Documentos de origem, sem reescrita:
 | O que melhorou de fato | KCCQ-CSS **+16,6 vs. +8,7** (diferença **+7,8**; IC95% 4,8 a 10,9; p<0,001). Peso **−13,3% vs. −2,6%** (diferença **−10,7 pp**; IC95% −11,9 a −9,4; p<0,001). Caminhada de 6 min **+21,5 vs. +1,2 m** (diferença **+20,3 m**; IC95% 8,6 a 32,1; p<0,001). Win ratio do composto hierárquico **1,72** (IC95% 1,37 a 2,15). PCR **−43,5% vs. −7,3%** (razão 0,61). | Composto de morte CV ou piora da IC: **9,9% vs. 15,3%** (HR **0,62**; IC95% 0,41 a 0,95; p=0,026). Piora da IC: **8,0% vs. 14,2%** (HR **0,54**; IC95% 0,34 a 0,85). Morte CV: **2,2% (8) vs. 1,4% (5)** (HR **1,58**; IC95% 0,52 a 4,83). KCCQ-CSS **+19,5 vs. +12,7** (diferença **6,9**; IC95% 3,3 a 10,6; p<0,001). |
 | Segurança no abstract | Eventos adversos graves **13,3% vs. 26,7%** (menos no braço ativo) | Descontinuação por evento adverso (sobretudo GI) **6,3% vs. 1,4%** |
 | O que **não** demonstra | Redução de mortalidade ou de hospitalização por IC — não foram coprimários | Redução de mortalidade cardiovascular isolada — 8 vs. 5 mortes, IC que cruza 1 |
-| Peso / 6 min no abstract | Sim, ambos | **Não reportados** no abstract do artigo principal. **VERIFICAÇÃO HUMANA NECESSÁRIA** se forem citados a partir do texto integral |
+| Peso / 6 min no abstract | Sim, ambos | **Não reportados** no abstract do artigo principal. **LIMITE DA EVIDÊNCIA DISPONÍVEL** se forem citados a partir do texto integral |
 
 KCCQ-CSS subiu em magnitude parecida nos dois (diferença entre grupos 7,8 e 6,9 pontos). Isso **não** autoriza a dizer que as moléculas são equivalentes: os ensaios não se comparam, o SUMMIT acompanhou o dobro do tempo e mediu evento clínico que o STEP não mediu como primário.
 
@@ -79,7 +79,7 @@ A ESC 2026 não prefere uma. Na prática:
 - Intolerância gastrointestinal que impede a titulação: troca de molécula é decisão clínica, não dado destes dois abstracts.
 - ICFEr, IMC < 30, ou ICFEp sem evidência objetiva: **fora**.
 
-Titulação, contraindicações de bula (incluindo a distinção brasileira vs. norte-americana para carcinoma medular de tireoide/NEM2) e manejo perioperatório do esvaziamento gástrico **não** estão nos abstracts do STEP nem do SUMMIT. Usar o rótulo e os documentos já desta base (`agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024.md`; checklist de início de GLP-1 no diabetes). **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de transpor esquema de dose semana a semana para a indicação de ICFEp.
+Titulação, contraindicações de bula (incluindo a distinção brasileira vs. norte-americana para carcinoma medular de tireoide/NEM2) e manejo perioperatório do esvaziamento gástrico **não** estão nos abstracts do STEP nem do SUMMIT. Usar o rótulo e os documentos já desta base (`agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024.md`; checklist de início de GLP-1 no diabetes). **LIMITE DA EVIDÊNCIA DISPONÍVEL** antes de transpor esquema de dose semana a semana para a indicação de ICFEp.
 
 ## O que dizer — e o que nao dizer
 Dizer: *em ICFEp com obesidade, semaglutida melhorou sintomas, função e peso no STEP-HFpEF; tirzepatida reduziu o composto de morte cardiovascular ou piora da IC no SUMMIT, sobretudo por menos piora, e também melhorou o KCCQ; a ESC 2026 considera uma ou outra (IIa B1) para peso, exercício e qualidade de vida, independente de diabetes, com FEVE ≥ 45% e IMC ≥ 30.*

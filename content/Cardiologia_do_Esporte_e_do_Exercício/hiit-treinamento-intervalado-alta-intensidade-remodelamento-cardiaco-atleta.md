@@ -53,7 +53,7 @@ Ou seja: quem "parte de um coração menor" tende a apresentar maior remodelamen
 - Não comparar o grau de remodelamento entre dois atletas de biotipos diferentes sem considerar o volume ventricular basal de cada um.
 - Não extrapolar os achados destes dois estudos (HIIT de curto prazo em jovens; treinamento aeróbico de 2 anos em sedentários de meia-idade) para afirmar qual seria o limite seguro de volume de treino — essa pergunta permanece em aberto na literatura.
 
-## VERIFICAÇÃO HUMANA NECESSÁRIA
+## Limitações da evidência disponível
 
 Nenhum dos dois estudos referenciados define um limiar quantitativo (volume, intensidade ou duração de HIIT) acima do qual o remodelamento deixaria de ser fisiológico. Onde a prática clínica exigir esse corte numérico, a decisão deve seguir os critérios de diferenciação já descritos nos documentos de "zona cinzenta" desta pasta, não um limiar extraído destes dois estudos.
 

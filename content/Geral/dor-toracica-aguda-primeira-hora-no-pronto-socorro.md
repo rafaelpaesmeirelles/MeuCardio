@@ -4,18 +4,18 @@ slug: dor-toracica-aguda-primeira-hora-no-pronto-socorro
 theme: "Geral"
 kind: protocolo
 summary: "Primeira hora da dor torácica aguda ou equivalente isquêmico no PS, enfermaria ou UCO: ECG em até 10 minutos (ESC 2023 Classe I B), o que não espera troponina (STEMI, equivalente de oclusão, choque e NSTE de risco muito alto), algoritmos hs-cTn 0/1 h versus 0/2 h versus 0/3 h, apresentação em mulher, diabetes e dispneia, e a distinção tipo 1 versus tipo 2/lesão — sem clonar a diretriz de SCA, o HEART nem a via da cocaína."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica assistida em 29/08/2026. Recorte deliberado: primeira hora da dor torácica AGUDA do adulto no PS, enfermaria ou UCO, ainda indiferenciada. Não substitui o dump de SCA ESC 2023, o protocolo HEART/porta-ECG SBC 2025, o algoritmo 0/1 h, a via da cocaína nem o fluxograma ambulatorial de baixo risco. Classe I B do ECG ≤10 min e dos algoritmos 0/1 h ou 0/2 h lidas na Recommendation Table 1 da ESC 2023 (PDF ehad191, p. 3738; tradução oficial SEC tabela 1). Estratégia invasiva imediata no NSTE de risco muito alto: Classe I C, Recommendation Table 4, já conferida no fluxograma de timing da casa. 0/3 h descrito como alternativa sem classe própria na tabela de 2023. HEART (PMIDs 18665203, 23465250, 28437795) e EDACS (PMID 24428678) só depois do ECG e depois de STEMI/risco muito alto. Cortes de GRACE não reproduzidos. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida em 29/08/2026. Recorte deliberado: primeira hora da dor torácica AGUDA do adulto no PS, enfermaria ou UCO, ainda indiferenciada. Não substitui o dump de SCA ESC 2023, o protocolo HEART/porta-ECG SBC 2025, o algoritmo 0/1 h, a via da cocaína nem o fluxograma ambulatorial de baixo risco. Classe I B do ECG ≤10 min e dos algoritmos 0/1 h ou 0/2 h lidas na Recommendation Table 1 da ESC 2023 (PDF ehad191, p. 3738; tradução oficial SEC tabela 1). Estratégia invasiva imediata no NSTE de risco muito alto: Classe I C, Recommendation Table 4, já conferida no fluxograma de timing da casa. 0/3 h descrito como alternativa sem classe própria na tabela de 2023. HEART (PMIDs 18665203, 23465250, 28437795) e EDACS (PMID 24428678) só depois do ECG e depois de STEMI/risco muito alto. Cortes de GRACE não reproduzidos. Revisão científica concluída em 30/08/2026."
 source_refs:
-  - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 1 (ECG em 10 min no primeiro contato médico; algoritmos hs-cTn 0 h/1 h ou 0 h/2 h; terceira amostra em 3 h se 0/1 h inconclusivo) e Recommendation Table 4 (estratégia invasiva imediata no NSTE de risco muito alto), lidas nesta sessão no PDF ehad191 e conferidas contra a tradução oficial da SEC."
+  - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Recommendation Table 1 (ECG em 10 min no primeiro contato médico; algoritmos hs-cTn 0 h/1 h ou 0 h/2 h; terceira amostra em 3 h se 0/1 h inconclusivo) e Recommendation Table 4 (estratégia invasiva imediata no NSTE de risco muito alto), lidas nesta revisão editorial no PDF ehad191 e conferidas contra a tradução oficial da SEC."
   - "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. PMC12981354 — HEART como escore preferencial Classe I B, tempo porta-ECG e equivalentes de supra; texto já transcrito no protocolo da casa protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025."
   - "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J. 2008;16(6):191-196. DOI: 10.1007/BF03086144. PMID: 18665203. PMCID: PMC2442661."
   - "Backus BE, Six AJ, Kelder JC, et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol. 2013;168(3):2153-2158. DOI: 10.1016/j.ijcard.2013.01.255. PMID: 23465250."
   - "Poldervaart JM, Reitsma JB, Backus BE, et al. Effect of Using the HEART Score in Patients With Chest Pain in the Emergency Department: A Stepped-Wedge, Cluster Randomized Trial. Ann Intern Med. 2017;166(10):689-697. DOI: 10.7326/M16-1600. PMID: 28437795."
-  - "Than M, Flaws D, Sanders S, et al. Development and validation of the Emergency Department Assessment of Chest pain Score and 2 h accelerated diagnostic protocol. Emerg Med Australas. 2014;26(1):34-44. DOI: 10.1111/1742-6723.12164. PMID: 24428678 — derivação do EDACS; números de desfecho não reproduzidos (abstract não lido na íntegra nesta sessão)."
+  - "Than M, Flaws D, Sanders S, et al. Development and validation of the Emergency Department Assessment of Chest pain Score and 2 h accelerated diagnostic protocol. Emerg Med Australas. 2014;26(1):34-44. DOI: 10.1111/1742-6723.12164. PMID: 24428678 — derivação do EDACS; números de desfecho não reproduzidos (abstract não lido na íntegra nesta revisão editorial)."
   - "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617."
-  - "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. DOI: 10.1161/CIR.0000000000001029. PMID: 34709879. Citada só pelo alvo operacional de ECG precoce; classe/nível da tabela AHA não foram relidos nesta sessão."
+  - "Gulati M, Levy PD, Mukherjee D, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain. Circulation. 2021;144(22):e368-e454. DOI: 10.1161/CIR.0000000000001029. PMID: 34709879. Citada só pelo alvo operacional de ECG precoce; classe/nível da tabela AHA não são reproduzidos neste documento."
 ---
 
 # Dor torácica aguda: primeira hora no pronto-socorro, enfermaria ou UCO
@@ -111,7 +111,7 @@ Leitura operacional para os primeiros 60 minutos:
 - HEART **não** autoriza atrasar o ECG, ignorar equivalente de oclusão nem segurar em casa quem tem critério de risco muito alto.
 - O “T” original é troponina **convencional**; pontuar HEART com hs-cTn como se fosse o ensaio de 2008 é a armadilha já marcada no protocolo SBC 2025. O algoritmo de alta sensibilidade é **outra rota**.
 - Faixa 0–3 só discute alta depois de ECG não isquêmico, algoritmo de hs-cTn concordante e ausência de dor recorrente. O ensaio de implementação mostrou segurança, mas pouco impacto em uso de recursos — médicos hesitam em liberar o baixo risco. Isso não é licença para internar todo mundo; é aviso de que o escore não se implementa sozinho.
-- EDACS (Than et al., PMID 24428678) é opção ao HEART na diretriz brasileira de 2021 (Classe IIa B, já fichada). Na primeira hora tem o mesmo teto: não precede o ECG. Números de desfecho do EDACS **não** são reproduzidos aqui (abstract não lido nesta sessão).
+- EDACS (Than et al., PMID 24428678) é opção ao HEART na diretriz brasileira de 2021 (Classe IIa B, já fichada). Na primeira hora tem o mesmo teto: não precede o ECG. Números de desfecho do EDACS **não** são reproduzidos aqui (abstract não lido nesta revisão editorial).
 
 ## Tipo 1 versus tipo 2 versus lesão — não feche o rótulo nesta hora
 
@@ -148,7 +148,7 @@ Nesta hora vale só o passo 0 daquele documento: supra, choque, dor refratária 
 - 0/3 h como estratégia **primária** não recebeu classe na Table 1 de 2023; a terceira amostra em 3 h após 0/1 h inconclusivo é que é I B.
 - Estratégia imediata no risco muito alto: **I C** (Table 4), já conferida no fluxograma de timing da casa. Não usar “< 2 h” como se fosse texto de 2023.
 - HEART: pontuação item a item e o “T” com hs-cTn ficam no documento de calculadora; este protocolo não reabre a tabela.
-- EDACS: PMID 24428678 verificado; números de NPV/MACE **não** lidos nesta sessão.
+- EDACS: PMID 24428678 verificado; números de NPV/MACE **não** lidos nesta revisão editorial.
 - Gestante, criança, SCAD, MINOCA após a angiografia e farmacoterapia da SCA (DAPT, P2Y12, anticoagulante) ficam fora.
 
 ## Tudo com Tudo

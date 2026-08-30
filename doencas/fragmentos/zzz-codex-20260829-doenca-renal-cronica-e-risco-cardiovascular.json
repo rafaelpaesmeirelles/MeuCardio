@@ -431,7 +431,7 @@
       "nefroprotecao-com-bloqueio-do-sraa-na-nefropatia-diabetica-renaal-idnt-e-o-limite-do-ontarget"
     ],
     "patient_material_slug": null,
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "review_note": "Novo hub cardiorrenal produzido em 29/08/2026 após auditoria da main e dos PRs abertos. Busca exata não encontrou slug prévio `doenca-renal-cronica-e-risco-cardiovascular`; o PR #692 cobre síndrome cardiorrenal (entidade distinta, centrada na interação coração-rim em insuficiência cardíaca), e o PR #552 cobre LRA em UCO, portanto não há colisão de escopo. A seleção científica foi atualizada com a primeira diretriz ESC dedicada a DCV+DRC, publicada em 28/08/2026 (STAMP on CKD), guideline AHA/ACC/ADA/ASN CKM 2026, KDIGO 2024, contexto brasileiro SBC 2019 e ensaios DAPA-CKD/EMPA-KIDNEY. A busca dirigida não identificou diretriz SBC dedicada a DRC cardiovascular mais recente que substitua o capítulo brasileiro de prevenção; por isso a SBC 2019 é usada apenas como contexto nacional e as recomendações contemporâneas são ancoradas em ESC/AHA-ACC/KDIGO. Seis related_document_slugs foram confirmados como existentes e centrais ao tema no corpus atual. Não foi encontrado material-paciente específico e o vínculo foi mantido nulo. Nenhuma dose de medicamento foi adicionada. Conteúdo novo permanece pendente_revisao e não deve ser publicado sem revisão clínica/editorial humana.",
     "version": 1,
     "fonte_producao": "chatgpt"

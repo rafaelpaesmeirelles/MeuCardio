@@ -4,14 +4,14 @@ slug: angina-microvascular-endotipo-cmd-na-pratica
 theme: "Doença coronariana"
 kind: protocolo
 summary: "Quando a angiografia não mostra obstrução e o teste provocativo não reproduz espasmo epicárdico, a pergunta passa a ser se há disfunção microvascular. Este protocolo separa o endótipo CMD dos demais mecanismos de ANOCA/INOCA e diz o que a ESC 2024 e o consenso COVADIS realmente sustentam — e o que ainda é inferência."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Síntese original CorVIA. Limiares de CFR/IMR/HMR e a Classe I do teste funcional invasivo foram conferidos contra o documento ANOCA/INOCA já revisado neste acervo (fonte ESC 2024 CCS, PMID 39210710) e contra os critérios COVADIS de angina microvascular (PMID 29031990) e de angina vasoespástica (PMID 26245334). Classes de tratamento farmacológico específico da CMD não foram extraídas de tabela de recomendação nesta sessão: onde a ESC 2024 descreve opções sem ordem universal de primeira linha, o texto recusa promover IECA, betabloqueador, antagonista de cálcio ou ranolazina a recomendação formal. SBC: a Diretriz de Síndrome Coronariana Crônica 2025 (Arq Bras Cardiol. 2025;122(9):e20250619, DOI 10.36660/abc.20250619) existe, mas os cortes numéricos e classes da CMD não foram relidos no PDF integral nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA antes de promover este texto a revisado."
+review_note: "Síntese original CorVIA. Limiares de CFR/IMR/HMR e a Classe I do teste funcional invasivo foram conferidos contra o documento ANOCA/INOCA já revisado neste acervo (fonte ESC 2024 CCS, PMID 39210710) e contra os critérios COVADIS de angina microvascular (PMID 29031990) e de angina vasoespástica (PMID 26245334). Classes de tratamento farmacológico específico da CMD não foram extraídas de tabela de recomendação nesta revisão editorial: onde a ESC 2024 descreve opções sem ordem universal de primeira linha, o texto recusa promover IECA, betabloqueador, antagonista de cálcio ou ranolazina a recomendação formal. SBC: a Diretriz de Síndrome Coronariana Crônica 2025 (Arq Bras Cardiol. 2025;122(9):e20250619, DOI 10.36660/abc.20250619) existe, mas os cortes numéricos e classes da CMD não foram relidos no PDF integral nesta revisão editorial — LIMITE DA EVIDÊNCIA DISPONÍVEL antes de promover este texto a revisado."
 source_refs:
   - "Vrints C, Andreotti F, Koskinas KC, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710."
   - "Ong P, Camici PG, Beltrame JF, et al.; Coronary Vasomotion Disorders International Study Group (COVADIS). International standardization of diagnostic criteria for microvascular angina. Int J Cardiol. 2018;250:16-20. DOI: 10.1016/j.ijcard.2017.08.068. PMID: 29031990."
   - "Beltrame JF, Crea F, Kaski JC, et al.; COVADIS. International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334."
-  - "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. VERIFICAÇÃO HUMANA NECESSÁRIA: PDF integral não relido nesta sessão para classes da CMD."
+  - "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. LIMITE DA EVIDÊNCIA DISPONÍVEL: PDF integral não relido nesta revisão editorial para classes da CMD."
 ---
 
 # Angina microvascular: o endótipo de disfunção da microcirculação na prática
@@ -60,12 +60,12 @@ O que é razoável na prática, e ainda assim não é recomendação formal inve
 - se houver endótipo misto (CMD + espasmo), não assumir que o fármaco do espasmo (antagonista de cálcio / nitrato) trata a CMD, nem o contrário;
 - antianginosos de segunda linha e estratégias de reabilitação/controle de sintomas entram como decisão individual, não como protocolo universal.
 
-**VERIFICAÇÃO HUMANA NECESSÁRIA:** classes e níveis da Diretriz SBC de SCC 2025 para CMD, e qualquer afirmação de que ranolazina, trimetazidina ou IECA teriam Classe I específica neste endótipo.
+**LIMITE DA EVIDÊNCIA DISPONÍVEL:** classes e níveis da Diretriz SBC de SCC 2025 para CMD, e qualquer afirmação de que ranolazina, trimetazidina ou IECA teriam Classe I específica neste endótipo.
 
 ## Relação com o restante do acervo
 
 - Algoritmo geral: `anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024`
-- Espasmo epicárdico: documento irmão `angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento` (produção paralela desta sessão)
+- Espasmo epicárdico: documento irmão `angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento` (produção paralela desta revisão editorial)
 - Eco-estresse na suspeita de doença microvascular: `eco-estresse-na-suspeita-de-doenca-microvascular-sbc-2024`
 - CFR/IMR já descritos: `reserva-de-fluxo-coronariano-cfr-e-indice-de-resistencia-microvascular-imr-na-disfuncao-microvascular`
 

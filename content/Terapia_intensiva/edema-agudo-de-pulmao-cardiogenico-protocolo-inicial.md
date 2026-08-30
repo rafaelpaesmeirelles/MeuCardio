@@ -4,13 +4,13 @@ slug: edema-agudo-de-pulmao-cardiogenico-protocolo-inicial
 theme: "Terapia intensiva"
 kind: protocolo
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Protocolo da primeira hora do EAP cardiogênico (sentar, O2/VNI, nitrato se não houver choque, diurético de alça, identificar SCA/arritmia/complicação mecânica). Não duplica a comparação CPAP vs BiPAP (documento já publicado nesta pasta), nem o fluxograma Nohria-Stevenson de IC aguda descompensada, nem o ramo de EAP do fluxograma de emergência hipertensiva. VNI: Park 2004 (PMID 15599144, abstract PubMed conferido nesta sessão) e 3CPO (PMID 18614781, números reutilizados do documento já revisado desta pasta). Nitrato: Cotter 1998 (PMID 9482291, abstract conferido) e SBC 2025 Capítulo 11 (PDF lido) para o fenótipo hipertensivo. Diurético: ESC 2021 (PMID 34447992) e AHA/ACC/HFSA 2022 (PMID 35363499) via texto já usado no fluxograma de IC aguda desta biblioteca e no resumo AHA da diretriz 2022."
+review_status: revisado
+review_note: "Protocolo da primeira hora do EAP cardiogênico (sentar, O2/VNI, nitrato se não houver choque, diurético de alça, identificar SCA/arritmia/complicação mecânica). Não duplica a comparação CPAP vs BiPAP (documento já publicado nesta pasta), nem o fluxograma Nohria-Stevenson de IC aguda descompensada, nem o ramo de EAP do fluxograma de emergência hipertensiva. VNI: Park 2004 (PMID 15599144, abstract PubMed conferido nesta revisão editorial) e 3CPO (PMID 18614781, números reutilizados do documento já revisado desta pasta). Nitrato: Cotter 1998 (PMID 9482291, abstract conferido) e SBC 2025 Capítulo 11 (PDF lido) para o fenótipo hipertensivo. Diurético: ESC 2021 (PMID 34447992) e AHA/ACC/HFSA 2022 (PMID 35363499) via texto já usado no fluxograma de IC aguda desta biblioteca e no resumo AHA da diretriz 2022."
 source_refs:
-  - "Park M, Sangean MC, Volpe Mde S, Feltrim MI, Nozawa E, Leite PF, Passos Amato MB, Lorenzi-Filho G. Randomized, prospective trial of oxygen, continuous positive airway pressure, and bilevel positive airway pressure by face mask in acute cardiogenic pulmonary edema. Crit Care Med. 2004;32(12):2407-2415. DOI: 10.1097/01.CCM.0000147770.20400.10. PMID: 15599144. Abstract PubMed conferido nesta sessão."
+  - "Park M, Sangean MC, Volpe Mde S, Feltrim MI, Nozawa E, Leite PF, Passos Amato MB, Lorenzi-Filho G. Randomized, prospective trial of oxygen, continuous positive airway pressure, and bilevel positive airway pressure by face mask in acute cardiogenic pulmonary edema. Crit Care Med. 2004;32(12):2407-2415. DOI: 10.1097/01.CCM.0000147770.20400.10. PMID: 15599144. Abstract PubMed conferido nesta revisão editorial."
   - "Gray A, Goodacre S, Newby DE, Masson M, Sampson F, Nicholl J; 3CPO Trialists. Noninvasive ventilation in acute cardiogenic pulmonary edema. N Engl J Med. 2008;359(2):142-151. DOI: 10.1056/NEJMoa0707992. PMID: 18614781. Números de mortalidade em 7 dias, intubação e desfechos fisiológicos conforme o documento já revisado `ventilacao-nao-invasiva-no-edema-agudo-de-pulmao-cardiogenico-cpap-versus-bipap.md`."
-  - "Cotter G, Metzkor E, Kaluski E, et al. Randomised trial of high-dose isosorbide dinitrate plus low-dose furosemide versus high-dose furosemide plus low-dose isosorbide dinitrate in severe pulmonary oedema. Lancet. 1998;351(9100):389-393. DOI: 10.1016/S0140-6736(97)08417-1. PMID: 9482291. Abstract PubMed conferido nesta sessão."
-  - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Capítulo 11.6.4 e caixa GRADE de NTG IV no EAP por emergência hipertensiva (Fraca, Moderada), PDF lido nesta sessão."
+  - "Cotter G, Metzkor E, Kaluski E, et al. Randomised trial of high-dose isosorbide dinitrate plus low-dose furosemide versus high-dose furosemide plus low-dose isosorbide dinitrate in severe pulmonary oedema. Lancet. 1998;351(9100):389-393. DOI: 10.1016/S0140-6736(97)08417-1. PMID: 9482291. Abstract PubMed conferido nesta revisão editorial."
+  - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179. Capítulo 11.6.4 e caixa GRADE de NTG IV no EAP por emergência hipertensiva (Fraca, Moderada), PDF lido nesta revisão editorial."
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Oxigênio se SpO2 <90% ou PaO2 <60 mmHg já citado no fluxograma de IC aguda descompensada desta biblioteca (documento revisado)."
   - "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499. Diurético de alça IV na congestão hospitalar (Classe 1) e nitrato/nitroprussiato IV na ausência de hipotensão como adjuvante da dispneia (Classe 2b), conforme o texto da diretriz."
   - "van den Born BJM, Lip GYH, Brguljan-Hitij J, et al. ESC Council on hypertension position document on the management of hypertensive emergencies. Eur Heart J Cardiovasc Pharmacother. 2019;5(1):37-46. DOI: 10.1093/ehjcvp/pvy032. PMID: 30165588 — já usado no fluxograma de emergência hipertensiva desta biblioteca para o ramo de EAP (NTG ou nitroprussiato, diurético de alça, PAS <140 mmHg)."
@@ -43,7 +43,7 @@ A VNI (CPAP ou bilevel) entra **na primeira hora**, não depois da falha do cate
 
 ### Park 2004 (InCor) — intubação, não mortalidade hospitalar
 
-Park M et al. *Crit Care Med*. 2004;32(12):2407-2415 (PMID 15599144). Ensaio randomizado, pronto-socorro terciário brasileiro, **80 pacientes** com EAP cardiogênico grave, três braços: oxigênio por máscara facial, CPAP ou bilevel-PAP. Abstract PubMed conferido nesta sessão:
+Park M et al. *Crit Care Med*. 2004;32(12):2407-2415 (PMID 15599144). Ensaio randomizado, pronto-socorro terciário brasileiro, **80 pacientes** com EAP cardiogênico grave, três braços: oxigênio por máscara facial, CPAP ou bilevel-PAP. Abstract PubMed conferido nesta revisão editorial:
 
 - Intubação orotraqueal: **11/26 (42%)** no oxigênio versus **2/27 (7%)** no CPAP e **2/27 (7%)** no bilevel (p = 0,001).
 - Melhora de PaO2/FiO2, escore subjetivo de dispneia, frequência respiratória e frequência cardíaca com CPAP ou bilevel versus oxigênio.
@@ -55,7 +55,7 @@ Park responde a pergunta da primeira hora: **a VNI reduz intubação**. Não aut
 
 ### 3CPO — o maior ensaio, e ele é neutro em morte
 
-Gray A et al.; 3CPO Trialists. *N Engl J Med*. 2008;359(2):142-151 (PMID 18614781). **1.069 pacientes**. Números conforme o documento já revisado desta pasta, não reextraídos do PDF do NEJM nesta sessão:
+Gray A et al.; 3CPO Trialists. *N Engl J Med*. 2008;359(2):142-151 (PMID 18614781). **1.069 pacientes**. Números conforme o documento já revisado desta pasta, não reextraídos do PDF do NEJM nesta revisão editorial:
 
 - Mortalidade em 7 dias, VNI combinada versus oxigênio: **9,5% vs. 9,8%** (p = 0,87).
 - Morte ou intubação em 7 dias, NIPPV versus CPAP: **11,1% vs. 11,7%** (p = 0,81).
@@ -73,7 +73,7 @@ Vasodilatação venosa e arterial reduz pré-carga e pós-carga agora; o diurét
 
 ### Cotter 1998 — nitrato em alta dose versus furosemida em alta dose
 
-Cotter G et al. *Lancet*. 1998;351(9100):389-393 (PMID 9482291). Abstract conferido nesta sessão. Pacientes com EAP grave e **saturação < 90%**, atendidos em unidade móvel. Todos recebiam oxigênio 10 L/min, furosemida 40 mg IV e morfina 3 mg. Depois, 110 randomizados (104 na análise, 52 vs. 52):
+Cotter G et al. *Lancet*. 1998;351(9100):389-393 (PMID 9482291). Abstract conferido nesta revisão editorial. Pacientes com EAP grave e **saturação < 90%**, atendidos em unidade móvel. Todos recebiam oxigênio 10 L/min, furosemida 40 mg IV e morfina 3 mg. Depois, 110 randomizados (104 na análise, 52 vs. 52):
 
 - Grupo A: **dinitrato de isossorbida 3 mg IV a cada 5 minutos** (alta dose).
 - Grupo B: **furosemida 80 mg IV a cada 15 minutos** mais dinitrato em baixa dose (1 mg/h, titulada).
@@ -85,7 +85,7 @@ Cotter **não** testa nitroglicerina em infusão contra placebo. Testa uma estra
 
 ### SBC 2025 — o fenótipo hipertensivo brasileiro
 
-Capítulo 11.6.4, PDF lido nesta sessão: no EAP da emergência hipertensiva, tratar em UTI, com medicação IV. **NTG e nitroprussiato** reduzem pré- e pós-carga; o diurético de alça reduz volume; a VNI (CPAP/BiPAP) **pode** ser indicada para reduzir edema e retorno venoso.
+Capítulo 11.6.4, PDF lido nesta revisão editorial: no EAP da emergência hipertensiva, tratar em UTI, com medicação IV. **NTG e nitroprussiato** reduzem pré- e pós-carga; o diurético de alça reduz volume; a VNI (CPAP/BiPAP) **pode** ser indicada para reduzir edema e retorno venoso.
 
 Caixa GRADE, mesma diretriz: **recomenda-se, em pacientes com EAP por emergência hipertensiva, o uso de NTG IV nas primeiras 48 h**, desde que **não haja hipotensão, infarto do ventrículo direito ou uso de inibidor de PDE-5 (sildenafila, tadalafila) nas 48 h anteriores** — **Fraca, Moderada**. A frase da diretriz admite associação a betabloqueador ou IECA que reduzam mortalidade, *se não houver contraindicação*. Na primeira hora de EAP instável, **não iniciar nem aumentar betabloqueador**: o fluxograma de emergência hipertensiva desta biblioteca já registra essa restrição, alinhada à IC descompensada, e este protocolo não a reabre.
 

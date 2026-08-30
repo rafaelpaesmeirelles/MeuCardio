@@ -1,0 +1,405 @@
+[
+  {
+    "slug": "fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2",
+    "name": "Fenocópias Glicogênicas da Cardiomiopatia Hipertrófica: Doença de Danon e Cardiomiopatia por PRKAG2",
+    "aliases": [
+      "Doença de Danon",
+      "Cardiomiopatia por PRKAG2",
+      "Síndrome de PRKAG2",
+      "Glicogenose cardíaca por PRKAG2",
+      "Cardiomiopatia por deficiência de LAMP2",
+      "Doença de depósito de glicogênio tipo IIb (Danon)",
+      "Fenocópia glicogênica de cardiomiopatia hipertrófica",
+      "CMH com pré-excitação ventricular"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "fenocopia_glicogenica",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "intermediario",
+    "summary": "Doença de Danon (mutação em LAMP2, ligada ao X) e cardiomiopatia por PRKAG2 (autossômica dominante) são doenças monogênicas de depósito de glicogênio que produzem hipertrofia ventricular esquerda capaz de mimetizar a cardiomiopatia hipertrófica (CMH) sarcomérica ao ecocardiograma. Ambas são doenças raras cuja prevalência populacional exata não é bem estabelecida na literatura. A pista diagnóstica mais característica que as separa da CMH sarcomérica clássica é a pré-excitação ventricular (padrão Wolff-Parkinson-White ou intervalo PR curto), presente com frequência variável em ambas. Danon associa-se a miopatia esquelética, deficiência intelectual leve e retinopatia pigmentar, com curso mais grave e precoce em homens; PRKAG2 cursa com doença progressiva do sistema de condução (podendo exigir marca-passo) e fibrilação/flutter atrial precoces, sem o comprometimento extracardíaco de Danon. Ambas exigem confirmação genética e rastreamento familiar em cascata, e o diagnóstico diferencial deve sempre excluir doença de Fabry e CMH sarcomérica (MYH7/MYBPC3).",
+    "epidemiology": "Doença de Danon e cardiomiopatia por PRKAG2 são causas raras de hipertrofia ventricular esquerda dentro do espectro de fenocópias/etiologias não sarcoméricas de CMH. Em coorte multicêntrica europeia de 818 pacientes com diagnóstico clínico de CMH, causas sindrômicas (incluindo Danon e PRKAG2, entre outras) responderam por 19% dos casos, e pacientes com Danon e PRKAG2 foram identificados predominantemente na adolescência (idade média 16 ± 8 anos), mais precocemente que a CMH sarcomérica típica (Maurizi et al., Eur Heart J 2025, PMID 39928417). Não há número de prevalência populacional consensual na literatura para nenhuma das duas condições; ambas são classificadas como doenças raras. Danon é ligada ao X (gene LAMP2, Xq24) e tipicamente mais grave em homens hemizigotos, com mulheres heterozigotas apresentando fenótipo cardíaco variável e geralmente mais tardio devido à inativação aleatória do X (Cenacchi et al., Neuropathol Appl Neurobiol 2020, PMID 31698507; Hong et al., JACC 2023, PMID 37821174). PRKAG2 é autossômica dominante (gene PRKAG2, 7q36, subunidade regulatória γ2 da AMPK) e acomete igualmente ambos os sexos; em coorte europeia de 90 portadores de variantes PRKAG2 (53% homens, idade mediana 33 anos), hipertrofia ventricular esquerda estava presente em 67% na avaliação basal e evoluiu para 71% ao longo do seguimento (Lopez-Sainz et al., JACC 2020, PMID 32646569). Não foi localizada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) dedicada a estas duas condições; as recomendações desta ficha derivam da diretriz ESC 2023 de cardiomiopatias e de revisões/séries internacionais especializadas — este ponto deve ser declarado explicitamente ao usuário sempre que a ficha for consultada em contexto de diretriz nacional.",
+    "presentation": [
+      "Hipertrofia ventricular esquerda concêntrica ao ecocardiograma, à primeira vista indistinguível de CMH sarcomérica clássica",
+      "Padrão eletrocardiográfico de pré-excitação ventricular (onda delta, PR curto) ou intervalo PR curto isolado sem delta evidente — achado-chave que diferencia estas fenocópias da CMH sarcomérica",
+      "Doença de Danon em homens: início na adolescência/idade adulta jovem, cardiomiopatia agressiva (geralmente hipertrófica, podendo evoluir para fenótipo dilatado/insuficiência cardíaca terminal), com necessidade frequente de transplante cardíaco já na terceira década de vida",
+      "Doença de Danon em mulheres portadoras: fenótipo cardíaco mais variável e em geral mais tardio, podendo ser subclínico por período prolongado, mas não necessariamente benigno",
+      "Doença de Danon: miopatia esquelética proximal com elevação de CK, mais proeminente e precoce em homens",
+      "Doença de Danon: deficiência intelectual leve ou dificuldade de aprendizagem, predominantemente descrita em homens afetados",
+      "Doença de Danon: retinopatia pigmentar, achado extracardíaco de apoio diagnóstico",
+      "Cardiomiopatia por PRKAG2: hipertrofia ventricular associada a doença progressiva do sistema de condução, podendo evoluir para bloqueio atrioventricular e indicação de marca-passo em idade jovem (mediana de implante ao redor dos 36-37 anos em coorte de referência)",
+      "Cardiomiopatia por PRKAG2: fibrilação e/ou flutter atrial em idade mais precoce que a população geral, por vezes com menos comorbidades associadas",
+      "Cardiomiopatia por PRKAG2: ausência de miopatia esquelética, comprometimento cognitivo ou retinopatia — achado negativo importante para diferenciar de Danon",
+      "História familiar sem transmissão homem-homem sugere padrão ligado ao X compatível com Danon; história familiar com transmissão em ambos os sexos ao longo de gerações, associada a marca-passo precoce, sugere PRKAG2"
+    ],
+    "diagnostic_approach": {
+      "suspeita_clinica_inicial": "A suspeita de fenocópia glicogênica deve surgir em qualquer paciente rotulado como CMH que apresente pré-excitação ventricular ao ECG, início da hipertrofia antes dos 20-30 anos, progressão incomumente rápida para insuficiência cardíaca, ou achados extracardíacos (miopatia, comprometimento cognitivo, retinopatia). A diretriz ESC 2023 de cardiomiopatias recomenda busca sistemática por 'red flags' diagnósticos em todo paciente com fenótipo de CMH antes de assumir etiologia sarcomérica isolada (Arbelo et al., Eur Heart J 2023, PMID 37622657).",
+      "eletrocardiograma_e_holter": "ECG de 12 derivações deve ser avaliado especificamente para PR curto, onda delta/pré-excitação e sinais de doença de condução (bloqueios, alargamento de QRS). Holter de 24-48h ajuda a documentar arritmias atriais e episódios de bloqueio intermitente, particularmente relevantes em PRKAG2, onde fibrilação/flutter atrial e doença de condução progressiva são achados centrais (Lopez-Sainz et al., JACC 2020, PMID 32646569; Magalhães et al., Arq Bras Cardiol 2022, PMID 36102422).",
+      "ecocardiograma_e_ressonancia": "O ecocardiograma tipicamente mostra hipertrofia concêntrica que pode ser indistinguível de CMH sarcomérica; a ressonância magnética cardíaca com realce tardio por gadolínio pode ajudar a caracterizar o padrão de acometimento miocárdico, embora não exista um padrão de fibrose patognomônico validado para diferenciar de forma isolada as duas fenocópias da CMH sarcomérica — a confirmação segue dependendo de dados clínicos, extracardíacos e genéticos.",
+      "avaliacao_extracardiaca_para_danon": "Diante de suspeita de Danon, solicitar CK sérica, avaliação neurológica/cognitiva formal e exame oftalmológico com fundoscopia para retinopatia pigmentar. Biópsia de músculo esquelético (mostrando vacúolos autofágicos) ou endomiocárdica pode auxiliar em casos de dúvida diagnóstica, mas não substitui o teste genético (Cenacchi et al., Neuropathol Appl Neurobiol 2020, PMID 31698507).",
+      "confirmacao_genetica": "O diagnóstico definitivo é molecular: sequenciamento de LAMP2 para doença de Danon e de PRKAG2 para a cardiomiopatia homônima, idealmente dentro de um painel multigênico ampliado para cardiomiopatia que inclua também os genes sarcoméricos clássicos (MYH7, MYBPC3, entre outros) e GLA (Fabry), dado o alto grau de sobreposição fenotípica inicial (Hong et al., JACC 2023, PMID 37821174; Taylor e Adler, GeneReviews, PMID 32134616).",
+      "exclusao_de_diferenciais_bioquimicos": "Antes de encerrar a investigação como fenocópia glicogênica isolada, deve-se ativamente excluir doença de Fabry por dosagem de atividade de alfa-galactosidase A (mais informativa em homens) e/ou Lyso-Gb3 plasmático, já que Fabry é outra causa monogênica de pseudo-hipertrofia com implicações terapêuticas e de rastreamento familiar distintas — Fabry possui ficha própria neste corpus e não deve ser detalhada aqui além do papel como diagnóstico diferencial a ser excluído."
+    },
+    "differentials": [
+      "CMH sarcomérica clássica (MYH7, MYBPC3, entre outros genes sarcoméricos) — em geral sem pré-excitação ventricular, início mais tardio, sem miopatia esquelética/retinopatia/comprometimento cognitivo associados",
+      "Doença de Fabry (deficiência de alfa-galactosidase A, gene GLA) — outra causa monogênica ligada ao X de pseudo-hipertrofia ventricular; possui documento próprio neste corpus e deve ser sempre excluída antes de fechar diagnóstico de fenocópia glicogênica isolada",
+      "Amiloidose cardíaca por transtirretina (ATTR) — fenocópia infiltrativa de CMH mais comum em faixa etária mais avançada, com achados eletrocardiográficos e de imagem distintos",
+      "RASopatias (síndrome de Noonan e relacionadas) — fenocópia de CMH tipicamente identificada em período neonatal/primeira infância, associada a dismorfismos e outras manifestações sindrômicas",
+      "Ataxia de Friedreich — causa de hipertrofia ventricular associada a manifestações neurológicas, outro diferencial sindrômico de CMH a ser considerado no mesmo raciocínio de 'red flags'"
+    ],
+    "tests": [
+      "ECG de 12 derivações, com busca ativa por PR curto e onda delta/pré-excitação",
+      "Holter de 24-48h para arritmias atriais e episódios de bloqueio",
+      "Ecocardiograma transtorácico com avaliação detalhada do padrão de hipertrofia e função ventricular",
+      "Ressonância magnética cardíaca com realce tardio",
+      "CK sérica",
+      "Avaliação neurocognitiva formal",
+      "Exame oftalmológico com fundoscopia",
+      "Painel genético multigênico para cardiomiopatia, incluindo LAMP2, PRKAG2, GLA e genes sarcoméricos",
+      "Atividade de alfa-galactosidase A e/ou Lyso-Gb3 plasmático para excluir Fabry",
+      "Biópsia muscular esquelética ou endomiocárdica em casos selecionados de dúvida diagnóstica",
+      "Estudo eletrofisiológico quando há via acessória sintomática ou suspeita de necessidade de ablação"
+    ],
+    "red_flags": [
+      "Pré-excitação ventricular (padrão WPW) ou PR curto em paciente com hipertrofia ventricular esquerda",
+      "Hipertrofia ventricular associada a bloqueio atrioventricular progressivo ou necessidade de marca-passo em idade jovem",
+      "Hipertrofia ventricular associada a miopatia esquelética proximal e/ou CK elevada",
+      "Hipertrofia ventricular associada a deficiência intelectual ou dificuldade de aprendizagem",
+      "Hipertrofia ventricular associada a retinopatia pigmentar",
+      "Progressão incomumente rápida para insuficiência cardíaca terminal ou evolução para fenótipo dilatado em homem jovem",
+      "Início de hipertrofia ventricular esquerda antes dos 20 anos sem causa aparente",
+      "Padrão de herança na história familiar sem transmissão homem-homem, compatível com condição ligada ao X",
+      "Fibrilação ou flutter atrial em idade jovem associado a hipertrofia ventricular e/ou pré-excitação"
+    ],
+    "ambulatory_flow": [
+      "Identificar red flags clínicos, eletrocardiográficos e de história familiar em todo paciente com fenótipo de CMH antes de assumir etiologia sarcomérica isolada",
+      "Solicitar ECG, Holter e ecocardiograma detalhado; considerar ressonância cardíaca",
+      "Se pré-excitação, doença de condução precoce, miopatia esquelética, comprometimento cognitivo ou retinopatia estiverem presentes, encaminhar para centro de referência em cardiomiopatias/doenças raras",
+      "Solicitar painel genético multigênico incluindo LAMP2, PRKAG2, GLA e genes sarcoméricos, com aconselhamento genético pré e pós-teste",
+      "Diante de diagnóstico molecular confirmado, iniciar rastreamento familiar em cascata em parentes de primeiro grau, respeitando o padrão de herança específico (ligado ao X para Danon; autossômico dominante para PRKAG2)",
+      "Programar seguimento cardiológico periódico com ECG/Holter e ecocardiograma seriados para monitorar progressão de hipertrofia, função ventricular e doença de condução",
+      "Em Danon, incluir seguimento multidisciplinar (neurologia, oftalmologia, ortopedia/reabilitação conforme miopatia) e discussão precoce sobre elegibilidade para transplante cardíaco em homens com progressão rápida",
+      "Em PRKAG2, monitorar indicação de marca-passo e risco de fibrilação atrial ao longo do seguimento"
+    ],
+    "emergency_flow": [
+      "Síncope ou pré-síncope em paciente com hipertrofia ventricular e suspeita de bloqueio atrioventricular avançado: avaliar necessidade de marca-passo temporário/definitivo em caráter de urgência",
+      "Taquiarritmia sintomática por via acessória (WPW) em paciente com hipertrofia ventricular: manejo conforme protocolo de taquicardia com pré-excitação, evitando bloqueadores do nó AV isolados quando há fibrilação atrial pré-excitada",
+      "Descompensação de insuficiência cardíaca aguda, mais frequente em Danon com progressão para fenótipo dilatado: manejo padrão de IC aguda com avaliação precoce de necessidade de suporte avançado/transplante em casos refratários, especialmente em homens jovens",
+      "Parada cardíaca ou morte súbita abortada em paciente jovem com hipertrofia ventricular não explicada: investigar ativamente pré-excitação, doença de condução e causas genéticas não sarcoméricas após estabilização"
+    ],
+    "treatment_summary": "Não existe terapia de reposição enzimática ou tratamento etiológico específico aprovado para doença de Danon ou cardiomiopatia por PRKAG2 (diferentemente da doença de Fabry, onde há terapia de reposição enzimática estabelecida) — este é um ponto de diferenciação terapêutica relevante. O manejo é predominantemente de suporte: tratamento farmacológico padrão de insuficiência cardíaca conforme fenótipo (hipertrófico ou, em Danon avançado, dilatado), manejo de arritmias (ablação de via acessória sintomática, controle de fibrilação/flutter atrial), implante de marca-passo diante de doença de condução progressiva (frequente em PRKAG2) e avaliação individualizada de risco de morte súbita para eventual indicação de CDI — os escores de estratificação de risco validados para CMH sarcomérica não foram validados especificamente para estas fenocópias, o que exige julgamento clínico caso a caso. Em doença de Danon com progressão para insuficiência cardíaca terminal, especialmente em homens jovens, o transplante cardíaco é frequentemente a intervenção definitiva (Hong et al., JACC 2023, PMID 37821174). Terapia gênica (vetores AAV9 para reposição de LAMP2) está em fase de ensaios clínicos iniciais para Danon, ainda investigacional e não padrão de cuidado, com riscos descritos de toxicidade dose-dependente (reações imunológicas, hepatotoxicidade, miocardite) — deve ser mencionada como perspectiva futura, não como tratamento disponível na prática clínica atual (Argiro et al., JACC Heart Fail 2024, PMID 37966402). Aconselhamento genético é parte obrigatória do manejo em ambas as condições, dado o caráter monogênico e as implicações reprodutivas e familiares.",
+    "monitoring": [
+      "Ecocardiograma seriado para acompanhar progressão da hipertrofia e função sistólica/diastólica, com atenção à possível transição para fenótipo dilatado em Danon",
+      "ECG e Holter periódicos para detectar progressão de doença de condução e arritmias atriais, particularmente relevante em PRKAG2",
+      "Reavaliação periódica de indicação de marca-passo e, quando aplicável, de CDI",
+      "Em Danon: monitoramento seriado de CK, força muscular e função respiratória relacionadas à miopatia esquelética",
+      "Em Danon: acompanhamento neurocognitivo e exame oftalmológico anual para retinopatia pigmentar",
+      "Avaliação periódica de classe funcional e sinais de insuficiência cardíaca, com discussão antecipada sobre elegibilidade para transplante em casos de progressão rápida (mais comum em homens com Danon)",
+      "Reavaliação de familiares rastreados em cascata conforme resultado do teste genético e fenótipo emergente ao longo do tempo"
+    ],
+    "special_populations": [
+      "Rastreamento familiar em cascata: por serem doenças monogênicas com padrão de herança definido, uma vez confirmado o diagnóstico molecular no caso-índice, todos os parentes de primeiro grau devem ser oferecidos teste genético direcionado e avaliação cardiológica, respeitando o padrão de herança (ligado ao X em Danon, autossômico dominante em PRKAG2), conforme recomendado de forma geral pela diretriz ESC 2023 de cardiomiopatias para doenças genéticas cardíacas (PMID 37622657)",
+      "Homens com doença de Danon: grupo de maior gravidade, com necessidade de seguimento cardiológico intensivo e discussão precoce sobre transplante cardíaco, dado o curso tipicamente agressivo já na segunda/terceira década de vida",
+      "Mulheres portadoras de mutação LAMP2 (Danon): fenótipo cardíaco variável e geralmente mais tardio, mas não devem ser consideradas 'apenas portadoras assintomáticas' — necessitam seguimento cardiológico ao longo da vida",
+      "Planejamento reprodutivo e gestação: aconselhamento genético pré-concepcional é recomendado para portadores(as) de LAMP2 ou PRKAG2, dado o risco de transmissão (herança ligada ao X em Danon, com implicações diferentes para filhos e filhas; autossômica dominante de 50% em PRKAG2); avaliação cardiológica especializada durante a gestação em mulheres afetadas, dado o risco de sobrecarga hemodinâmica em cardiomiopatia estrutural de base",
+      "Crianças e adolescentes: apresentação sindrômica de CMH nesta faixa etária deve motivar investigação ampliada para fenocópias genéticas, incluindo Danon e PRKAG2, e não apenas painel sarcomérico isolado",
+      "Atletas jovens com achado incidental de pré-excitação e hipertrofia ventricular ao ECG de triagem: cenário em que a suspeita de fenocópia glicogênica deve ser ativamente considerada antes de liberação para esporte competitivo"
+    ],
+    "assistant_questions": [
+      {
+        "id": "pre_excitacao",
+        "label": "O ECG mostra padrão de pré-excitação ventricular (WPW) ou intervalo PR curto associado à hipertrofia ventricular?",
+        "type": "boolean"
+      },
+      {
+        "id": "sexo_idade_inicio",
+        "label": "Qual o sexo do paciente e a idade aproximada de início dos sintomas ou achados cardíacos?",
+        "type": "text"
+      },
+      {
+        "id": "sintomas_extracardiacos",
+        "label": "Há sinais de miopatia esquelética (fraqueza proximal, CK elevada), deficiência intelectual/dificuldade de aprendizagem ou retinopatia associados à hipertrofia?",
+        "type": "boolean"
+      },
+      {
+        "id": "disturbio_conducao",
+        "label": "Há evidência de doença progressiva do sistema de condução (bloqueio atrioventricular, necessidade de marca-passo em idade jovem)?",
+        "type": "boolean"
+      },
+      {
+        "id": "historico_familiar",
+        "label": "Há história familiar de cardiomiopatia hipertrófica, marca-passo precoce, morte súbita, ou padrão sugestivo de herança ligada ao X (sem transmissão homem-homem)?",
+        "type": "text"
+      },
+      {
+        "id": "teste_genetico_previo",
+        "label": "Já foi realizado teste genético para cardiomiopatia (painel sarcomérico, LAMP2, PRKAG2, GLA)?",
+        "type": "select",
+        "options": [
+          {
+            "value": "nao_realizado",
+            "label": "Não realizado"
+          },
+          {
+            "value": "sarcomerico_negativo",
+            "label": "Painel sarcomérico negativo"
+          },
+          {
+            "value": "lamp2_positivo",
+            "label": "LAMP2 positivo (doença de Danon)"
+          },
+          {
+            "value": "prkag2_positivo",
+            "label": "PRKAG2 positivo"
+          },
+          {
+            "value": "gla_positivo",
+            "label": "GLA positivo (doença de Fabry)"
+          },
+          {
+            "value": "resultado_indeterminado",
+            "label": "Resultado indeterminado/variante de significado incerto"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "phenocopy_flag_pre_excitacao",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "pre_excitacao",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Pré-excitação ventricular (WPW ou PR curto) em paciente com hipertrofia ventricular esquerda — pista para fenocópia glicogênica (Danon ou PRKAG2), atípica para CMH sarcomérica clássica"
+          ],
+          "suggested_tests": [
+            "ECG de 12 derivações seriado",
+            "Holter de 24-48h",
+            "Estudo eletrofisiológico se taquiarritmia sintomática",
+            "Painel genético ampliado incluindo LAMP2 e PRKAG2"
+          ],
+          "differentials": [
+            "Doença de Danon (LAMP2)",
+            "Cardiomiopatia por PRKAG2",
+            "CMH sarcomérica com via acessória coincidente (achado raro)"
+          ]
+        }
+      },
+      {
+        "id": "extracardiac_danon_suspeita",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "sintomas_extracardiacos",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Miopatia esquelética, deficiência intelectual leve e/ou retinopatia associadas à hipertrofia ventricular sugerem doença de Danon em vez de CMH sarcomérica isolada"
+          ],
+          "suggested_tests": [
+            "CK sérica",
+            "Avaliação neurológica e cognitiva formal",
+            "Exame oftalmológico com fundoscopia",
+            "Teste genético para LAMP2",
+            "Considerar biópsia muscular esquelética (vacúolos autofágicos)"
+          ],
+          "differentials": [
+            "Doença de Danon (LAMP2)"
+          ]
+        }
+      },
+      {
+        "id": "conducao_progressiva_prkag2",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "disturbio_conducao",
+              "op": "truthy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Doença progressiva do sistema de condução (bloqueio atrioventricular, necessidade de marca-passo em idade jovem) associada a hipertrofia ventricular sugere cardiomiopatia por PRKAG2"
+          ],
+          "suggested_tests": [
+            "ECG seriado",
+            "Holter de 24-48h",
+            "Avaliação para indicação de marca-passo",
+            "Teste genético para PRKAG2"
+          ],
+          "differentials": [
+            "Cardiomiopatia por PRKAG2"
+          ]
+        }
+      },
+      {
+        "id": "genetico_lamp2_confirmado",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "teste_genetico_previo",
+              "op": "eq",
+              "value": "lamp2_positivo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "messages": [
+            "Diagnóstico molecular de doença de Danon confirmado (LAMP2). Iniciar rastreamento familiar em cascata e encaminhar para centro de referência em cardiomiopatias/insuficiência cardíaca avançada, especialmente se paciente do sexo masculino."
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para cardiologia especializada em cardiomiopatias e, se indicado, avaliação para transplante cardíaco",
+            "Rastreamento em cascata de familiares de primeiro grau com aconselhamento genético"
+          ]
+        }
+      },
+      {
+        "id": "genetico_prkag2_confirmado",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "teste_genetico_previo",
+              "op": "eq",
+              "value": "prkag2_positivo"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Diagnóstico molecular de cardiomiopatia por PRKAG2 confirmado. Monitorar progressão da doença do sistema de condução e risco de fibrilação/flutter atrial; rastrear familiares de primeiro grau (herança autossômica dominante)."
+          ],
+          "ambulatory_flow": [
+            "Seguimento cardiológico com ECG/Holter periódicos",
+            "Avaliação eletrofisiológica se sintomas de arritmia",
+            "Rastreamento em cascata de familiares de primeiro grau"
+          ]
+        }
+      },
+      {
+        "id": "excluir_fabry_antes_fenocopia",
+        "priority": 60,
+        "when": {
+          "any": [
+            {
+              "field": "teste_genetico_previo",
+              "op": "eq",
+              "value": "sarcomerico_negativo"
+            },
+            {
+              "field": "teste_genetico_previo",
+              "op": "eq",
+              "value": "nao_realizado"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "Excluir doença de Fabry (atividade de alfa-galactosidase A e/ou Lyso-Gb3, especialmente em homens) antes de fechar diagnóstico de fenocópia glicogênica isolada, dada a sobreposição fenotípica com hipertrofia ventricular e pré-excitação"
+          ],
+          "differentials": [
+            "Doença de Fabry (GLA)",
+            "Doença de Danon (LAMP2)",
+            "Cardiomiopatia por PRKAG2"
+          ],
+          "suggested_tests": [
+            "Atividade de alfa-galactosidase A (homens)",
+            "Lyso-Gb3 plasmático",
+            "Painel genético ampliado (LAMP2, PRKAG2, GLA, genes sarcoméricos)"
+          ]
+        }
+      },
+      {
+        "id": "ausencia_pre_excitacao_reduz_probabilidade",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "pre_excitacao",
+              "op": "falsy",
+              "value": true
+            }
+          ]
+        },
+        "add": {
+          "risk": "informativo",
+          "opposing": [
+            "Ausência de pré-excitação ventricular não exclui fenocópia glicogênica, mas reduz a probabilidade pré-teste; achado mais consistente com CMH sarcomérica clássica na ausência de outros sinais extracardíacos"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "cardiomiopatia_hipertrofica",
+      "fenocopia",
+      "doenca_de_danon",
+      "LAMP2",
+      "PRKAG2",
+      "doenca_de_deposito_de_glicogenio",
+      "pre_excitacao_ventricular",
+      "WPW",
+      "cardiomiopatia_genetica",
+      "rastreamento_familiar",
+      "cascata_genetica",
+      "doenca_rara",
+      "cardiomiopatia_metabolica",
+      "diagnostico_diferencial_CMH",
+      "doenca_de_fabry_diferencial"
+    ],
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. doi:10.1093/eurheartj/ehad194. PMID: 37622657.",
+      "Hong KN, Eshraghian EA, Arad M, et al. International Consensus on Differential Diagnosis and Management of Patients With Danon Disease: JACC State-of-the-Art Review. J Am Coll Cardiol. 2023;82(16):1628-1647. doi:10.1016/j.jacc.2023.08.014. PMID: 37821174.",
+      "Cenacchi G, Papa V, Pegoraro V, Marozzo R, Fanin M, Angelini C. Danon disease: Review of natural history and recent advances. Neuropathol Appl Neurobiol. 2020;46(4):303-322. doi:10.1111/nan.12587. PMID: 31698507.",
+      "Taylor MRG, Adler ED. Danon Disease. In: Adam MP, Feldman J, Mirzaa GM, et al, eds. GeneReviews(®). Seattle (WA): University of Washington, Seattle; 1993-2024 (atualizado 2020). NCBI Bookshelf ID: NBK554742. PMID: 32134616.",
+      "Lopez-Sainz A, Dominguez F, Lopes LR, et al; European Genetic Cardiomyopathies Initiative Investigators. Clinical Features and Natural History of PRKAG2 Variant Cardiac Glycogenosis. J Am Coll Cardiol. 2020;76(2):186-197. doi:10.1016/j.jacc.2020.05.029. PMID: 32646569.",
+      "Magalhães EFS, Magalhães LP, Pinheiro JO, Guabiru AT, Aras R. Atrial Flutter in PRKAG2 Syndrome: Clinical and Electrophysiological Characteristics. Arq Bras Cardiol. 2022;119(5):681-688. doi:10.36660/abc.20210792. PMID: 36102422.",
+      "Maurizi N, Monda E, Biagini E, et al. Hypertrophic cardiomyopathy: prevalence of disease-specific red flags. Eur Heart J. 2025;46(31):3082-3094. doi:10.1093/eurheartj/ehaf026. PMID: 39928417.",
+      "Argiro A, Bui Q, Hong KN, Ammirati E, Olivotto I, Adler E. Applications of Gene Therapy in Cardiomyopathies. JACC Heart Fail. 2024;12(2):248-260. doi:10.1016/j.jchf.2023.09.015. PMID: 37966402."
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehad194",
+      "https://doi.org/10.1016/j.jacc.2023.08.014",
+      "https://doi.org/10.1111/nan.12587",
+      "https://www.ncbi.nlm.nih.gov/books/NBK554742/",
+      "https://doi.org/10.1016/j.jacc.2020.05.029",
+      "https://doi.org/10.36660/abc.20210792",
+      "https://doi.org/10.1093/eurheartj/ehaf026",
+      "https://doi.org/10.1016/j.jchf.2023.09.015"
+    ],
+    "related_document_slugs": [
+      "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+      "wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassistoles",
+      "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+      "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+      "sindrome-de-noonan-na-crianca-espectro-cardiaco-genetica-ras-mapk-e-inibidores-de-mek-na-cardiomiopatia-hipertrofica"
+    ],
+    "patient_material_slug": null,
+    "review_status": "revisado",
+    "review_note": "Revisão científica editorial concluída em 30/08/2026; referências, coerência clínica e integração estrutural validadas.",
+    "version": 1,
+    "fonte_producao": "claude"
+  }
+]

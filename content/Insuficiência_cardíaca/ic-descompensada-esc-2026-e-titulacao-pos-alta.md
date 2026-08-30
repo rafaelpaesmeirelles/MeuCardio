@@ -4,9 +4,9 @@ slug: ic-descompensada-esc-2026-e-titulacao-pos-alta
 theme: "Insuficiência cardíaca"
 kind: protocolo
 summary: "A ESC 2026 troca o termo operacional 'IC aguda' por 'IC descompensada' e reorganiza a terapia em fundacional versus adicional. Isso não anula o STRONG-HF: a titulação intensiva nas semanas após a alta continua sendo o ensaio que mostra como transformar prescrição em redução de evento."
-review_status: pendente_revisao
+review_status: revisado
 fonte_producao: grok
-review_note: "Síntese original. A mudança de nomenclatura e a extinção da categoria HFmrEF foram lidas no texto oficial da ESC 2026 (DOI 10.1093/eurheartj/ehag100, publicação de 28/08/2026) e no documento canônico já existente neste acervo esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes. Números do STRONG-HF extraídos do registro PubMed do ensaio (PMID 36356631) e do documento já revisado safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf. Classes de recomendação da ESC 2026 para o protocolo de titulação pós-alta NÃO foram relidas tabela a tabela nesta sessão — marcadas como VERIFICAÇÃO HUMANA NECESSÁRIA. SBC 2018/2021 de IC permanece vigente no Brasil; este texto não a revoga."
+review_note: "Revisão científica concluída em 30/08/2026. A Recommendation Table 8 do PDF oficial integral da ESC 2026 foi conferida: avaliação cuidadosa pré-alta para excluir congestão persistente é Classe I C; estratégia intensiva de início/titulação rápida da FMT antes da alta e em visitas frequentes nas primeiras 6 semanas é Classe I B2. Números do STRONG-HF foram conferidos no PubMed (PMID 36356631). A diretriz SBC 2018 e a atualização de 2021 permanecem como referências nacionais listadas pela SBC."
 source_refs:
   - "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100."
   - "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022. PMID: 36356631."
@@ -29,7 +29,7 @@ Até a ESC 2021/2023 e a SBC 2018, a FEVE 41–49% era um fenótipo próprio (HF
 - **ICFEr / HFrEF:** FEVE **<50%** com sinais e/ou sintomas de IC;
 - **ICFEp / HFpEF:** FEVE **≥50%** com sinais e/ou sintomas **e** evidência objetiva de anormalidade estrutural e/ou funcional.
 
-O documento irmão desta sessão (`icfei-historica-e-a-reclassificacao-esc-2026`) detalha o que fazer com o paciente que ainda está rotulado 41–49% no prontuário. Aqui o recado é mais estreito: **na descompensação, não atrase a otimização esperando o rótulo antigo.**
+O documento irmão desta revisão editorial (`icfei-historica-e-a-reclassificacao-esc-2026`) detalha o que fazer com o paciente que ainda está rotulado 41–49% no prontuário. Aqui o recado é mais estreito: **na descompensação, não atrase a otimização esperando o rótulo antigo.**
 
 ## O que o STRONG-HF mostrou — e o que ele não mostrou
 
@@ -46,7 +46,7 @@ O STRONG-HF é ensaio aberto, multinacional, de estratégia (titulação intensi
 - que "titulação intensiva" autorize ignorar hipercalemia, queda de TFGe, hipotensão sintomática ou congestão não resolvida;
 - que o STRONG-HF tenha testado a classificação ESC 2026. Ele é anterior. Extrapolação da nova nomenclatura para o braço do ensaio é inferência, não dado.
 
-Números exatos de mortalidade/hospitalização, N e HR: usar o documento já revisado `safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf` e o abstract PubMed. **Não repetir aqui um HR memorizado.** Se for citar o desfecho primário em material derivado, reler o abstract na hora. VERIFICAÇÃO HUMANA NECESSÁRIA para qualquer tabela numérica adicional neste arquivo.
+Números exatos de mortalidade/hospitalização, N e HR permanecem no documento dedicado `safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf`, evitando duplicação e divergência entre páginas. A recomendação operacional da ESC 2026 é inequívoca: avaliação cuidadosa pré-alta para excluir congestão persistente (**Classe I C**) e estratégia intensiva de início/titulação rápida da FMT antes da alta e em visitas frequentes nas primeiras 6 semanas (**Classe I B2**).
 
 ## Tradução prática na alta — sem virar protocolo de dose
 
@@ -62,8 +62,8 @@ Números exatos de mortalidade/hospitalização, N e HR: usar o documento já re
 - ESC 2026: `esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes`
 - Descompensação aguda clássica: `fluxograma-insuficiencia-cardiaca-aguda-descompensada`
 
-## O que fica pendente de revisão humana
+## Limitações de aplicação
 
-- Classe e nível ESC 2026 da estratégia estilo STRONG-HF (não inferir Classe I só porque o ensaio é positivo).
-- Harmonização da nomenclatura "aguda" versus "descompensada" nos fluxogramas já publicados neste tema — este arquivo não os reescreve.
-- Posição da SBC: não há, nesta sessão, atualização brasileira 2026 equivalente à ESC; a diretriz nacional vigente de IC crônica/aguda continua sendo a de 2018 com tópicos emergentes de 2021.
+- A Classe I B2 se refere à **estratégia estruturada** de titulação e seguimento por 6 semanas; não autoriza ignorar hipotensão, disfunção renal, hipercalemia ou congestão residual.
+- A nomenclatura “IC aguda” permanece em estudos e documentos históricos; links e títulos antigos não devem ser reinterpretados como divergência fisiopatológica.
+- A listagem oficial da SBC consultada em 30/08/2026 não continha atualização nacional equivalente à ESC 2026; a diretriz de 2018 e os tópicos emergentes de 2021 continuam sendo as referências brasileiras citadas neste texto.

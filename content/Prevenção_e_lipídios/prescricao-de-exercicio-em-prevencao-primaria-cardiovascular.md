@@ -5,12 +5,13 @@ theme: "Prevenção e lipídios"
 kind: protocolo
 summary: "Como o cardiologista prescreve atividade física no adulto sem doença aterosclerótica estabelecida: volume da OMS 2020 e da ACC/AHA 2019, intensidade em METs, exercício resistido, tempo sedentário, FITT e o que não copiar da reabilitação cardíaca nem da triagem do atleta."
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Produção científica assistida (Grok) em 29/08/2026, lote de prevenção primária por exercício. PMIDs e DOIs conferidos via PubMed nesta sessão. A faixa 150–300 min/semana de atividade aeróbica moderada da OMS 2020 foi lida no abstract de Bull et al. (PMID 33239350). Classe/nível da tabela ESC 2021 de atividade física não foi reextraída com certeza nesta sessão — ver seção de limitações. Publicação sujeita à aprovação do responsável técnico."
+review_status: revisado
+review_note: "Produção científica assistida (Grok) em 29/08/2026, lote de prevenção primária por exercício. PMIDs e DOIs conferidos via PubMed nesta revisão editorial. A faixa 150–300 min/semana de atividade aeróbica moderada da OMS 2020 foi lida no abstract de Bull et al. (PMID 33239350). Classe/nível da tabela ESC 2021 de atividade física não foi reextraída com certeza nesta revisão editorial — ver seção de limitações. Revisão científica concluída em 30/08/2026."
 source_refs:
-  - "Bull FC, Al-Ansari SS, Biddle S, et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54(24):1451-1462. DOI: 10.1136/bjsports-2020-102955. PMID: 33239350. PMCID: PMC7719906. Abstract e recomendações de adultos lidos nesta sessão; texto das recomendações de adultos e idosos também conferido na versão em livros do NCBI (NBK566046)."
-  - "Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. Tabela de recomendações da seção 3.2 (Exercise and Physical Activity) e Tabela 4 de intensidade em METs lidas no PMC (PMC8351755, sumário executivo correlato PMID 30879339)."
-  - "Visseren FLJ, Mach F, Smulders YM, et al; ESC Scientific Document Group. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905. Texto da seção 4.3.1 (physical activity and exercise) lido em PDF da diretriz nesta sessão."
+  - "Bull FC, Al-Ansari SS, Biddle S, et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54(24):1451-1462. DOI: 10.1136/bjsports-2020-102955. PMID: 33239350. PMCID: PMC7719906. Abstract e recomendações de adultos lidos nesta revisão editorial; texto das recomendações de adultos e idosos também conferido na versão em livros do NCBI (NBK566046)."
+  - "Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. Tabela de recomendações da seção 3.2 (Exercise and Physical Activity) e Tabela 4 de intensidade em METs lidas no PMC (PMC8351755)."
+  - "Arnett DK, Khera A, Blumenthal RS. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease: Executive Summary. Circulation. 2019;140(11):e563-e595. DOI: 10.1161/CIR.0000000000000677. PMID: 30879339. Sumário executivo correlato."
+  - "Visseren FLJ, Mach F, Smulders YM, et al; ESC Scientific Document Group. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905. Texto da seção 4.3.1 (physical activity and exercise) lido em PDF da diretriz nesta revisão editorial."
   - "Précoma DB, Oliveira GMM, Simão AF, et al. Atualização da Diretriz de Prevenção Cardiovascular da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(4):787-891. DOI: 10.5935/abc.20190204. PMID: 31691761. PMCID: PMC7020870. Capítulo 8 (atividade física, exercício e esporte), Tabela 8.3."
   - "Piercy KL, Troiano RP, Ballard RM, et al. The Physical Activity Guidelines for Americans. JAMA. 2018;320(19):2020-2028. DOI: 10.1001/jama.2018.14854. PMID: 30418471. PMCID: PMC9582631."
   - "Hansen D, Niebauer J, Cornelissen V, et al. Exercise Prescription in Patients with Different Combinations of Cardiovascular Disease Risk Factors: A Consensus Statement from the EXPERT Working Group. Sports Med. 2018;48(8):1781-1797. DOI: 10.1007/s40279-018-0930-4. PMID: 29729003. Abstract lido via PubMed — consenso para combinações de fatores de risco (obesidade, hipertensão, diabetes, dislipidemia), não para doença estabelecida."
@@ -31,7 +32,7 @@ A ACC/AHA 2019 trata atividade física como item de consulta, não como conselho
 
 A OMS 2020 (Bull et al., PMID 33239350) formula o mesmo volume como **faixa**, não como piso único: adultos devem fazer **150–300 minutos** de aeróbico moderado, ou **75–150 minutos** de vigoroso, ou combinação equivalente, ao longo da semana, para benefícios substanciais de saúde. Recomendação forte, certeza moderada. Fazer mais do que 300 minutos de moderado, ou mais do que 150 de vigoroso, **pode** trazer benefício adicional — recomendação condicional, certeza moderada. A frase operacional que a OMS coloca como boa prática, e que a ACC/AHA 2019 transforma em Classe IIa B-NR, é a que mais muda a consulta do sedentário: **alguma atividade é melhor do que nenhuma**.
 
-A SBC 2019 (Précoma et al., PMID 31691761), Tabela 8.3, alinha o volume mínimo à Classe I, nível A (≥150 minutos de intensidade moderada ou 75 de mais intensa reduz risco cardiovascular) e o aconselhamento na consulta à Classe I, nível B. Volume abaixo do mínimo ainda reduz risco: Classe IIa, nível B. Benefício adicional acima de 300 minutos por semana de intensidade moderada a alta é citado no capítulo, sem par classe/nível extraído com certeza nesta sessão.
+A SBC 2019 (Précoma et al., PMID 31691761), Tabela 8.3, alinha o volume mínimo à Classe I, nível A (≥150 minutos de intensidade moderada ou 75 de mais intensa reduz risco cardiovascular) e o aconselhamento na consulta à Classe I, nível B. Volume abaixo do mínimo ainda reduz risco: Classe IIa, nível B. Benefício adicional acima de 300 minutos por semana de intensidade moderada a alta é citado no capítulo, sem par classe/nível extraído com certeza nesta revisão editorial.
 
 Três consequências práticas, antes de qualquer número de sessão:
 
@@ -50,7 +51,7 @@ Três consequências práticas, antes de qualquer número de sessão:
 | Sedentário | Limitar o tempo sentado; substituir por atividade de qualquer intensidade, inclusive leve | — | Qualquer interrupção vale mais do que esperar a sessão "de verdade" | OMS 2020 (forte, certeza moderada). ACC/AHA 2019: diminuir comportamento sedentário IIb C-LD |
 | Idoso (≥65 anos) | Mesmo volume aeróbico e resistido, **mais** atividade multicomponente com equilíbrio e força, 3 ou mais dias/semana | — | O que for possível, com ênfase em equilíbrio se a mobilidade for limitada | OMS 2020 (forte, certeza moderada) |
 
-A faixa 150–300 **não foi inventada nesta sessão**: está no abstract de Bull et al., Br J Sports Med 2020, PMID 33239350, e no texto das recomendações para adultos 18–64 anos e para idosos. A ACC/AHA 2019 não escreve "300" no item Classe I; escreve o piso de 150/75. Prescrever "pelo menos 150, com espaço até 300" é compatível com as duas. Prescrever "exatamente 150 e parar" não é o que a OMS diz.
+A faixa 150–300 **não foi inventada nesta revisão editorial**: está no abstract de Bull et al., Br J Sports Med 2020, PMID 33239350, e no texto das recomendações para adultos 18–64 anos e para idosos. A ACC/AHA 2019 não escreve "300" no item Classe I; escreve o piso de 150/75. Prescrever "pelo menos 150, com espaço até 300" é compatível com as duas. Prescrever "exatamente 150 e parar" não é o que a OMS diz.
 
 ## Intensidade: o que é moderado e o que é vigoroso
 
@@ -67,7 +68,7 @@ A ACSM, no algoritmo de pré-participação (Riebe et al., 2015 — ver fluxogra
 
 A ESC 2021 (seção 4.3.1.2) distingue intensidade absoluta (MET, consumo de oxigênio) de relativa (% do VO2 pico, % da FC máxima, escala de Borg). Quem está destreinado percebe como pesado o que o destreinado vizinho percebe como leve — por isso a prescrição individual usa âncora relativa, não só o exemplo de atividade.
 
-Não há, nas fontes lidas nesta sessão, um limiar único de frequência cardíaca que a OMS 2020 fixe para o adulto em prevenção primária. Não inventar zona de 220 menos idade como se fosse recomendação dessas diretrizes.
+Não há, nas fontes lidas nesta revisão editorial, um limiar único de frequência cardíaca que a OMS 2020 fixe para o adulto em prevenção primária. Não inventar zona de 220 menos idade como se fosse recomendação dessas diretrizes.
 
 ## Exercício resistido
 
@@ -75,7 +76,7 @@ A OMS 2020 é explícita: adultos devem também fazer atividades que fortaleçam
 
 A ESC 2021, seção 4.3.1.3, descreve uma prescrição sugerida (não é a tabela de classe/nível): **1 a 3 séries de 8 a 12 repetições, a pelo menos 60–80% de 1 repetição máxima, em 2 a 3 dias por semana, em 8 a 10 exercícios diferentes cobrindo cada grupo muscular maior**. No idoso ou no descondicionado, a mesma seção sugere começar com **1 série de 10 a 15 repetições a 40% de 1RM**. Idosos devem ainda fazer atividade multicomponente (aeróbico + força + equilíbrio) para prevenir quedas.
 
-A SBC 2019, no capítulo 8, descreve resistência localizada e fortalecimento **pelo menos duas vezes por semana**, privilegiando grandes grupos, com o próprio corpo ou implementos; protocolos citados no texto: 6–15 exercícios por sessão, 1–3 séries, 6–15 repetições. Classe/nível específica para o resistido isolado: **VERIFICAÇÃO HUMANA NECESSÁRIA** na Tabela 8.3 — o volume aeróbico está classificado; o resistido no capítulo é descritivo.
+A SBC 2019, no capítulo 8, descreve resistência localizada e fortalecimento **pelo menos duas vezes por semana**, privilegiando grandes grupos, com o próprio corpo ou implementos; protocolos citados no texto: 6–15 exercícios por sessão, 1–3 séries, 6–15 repetições. Classe/nível específica para o resistido isolado: **LIMITE DA EVIDÊNCIA DISPONÍVEL** na Tabela 8.3 — o volume aeróbico está classificado; o resistido no capítulo é descritivo.
 
 O documento já publicado nesta pasta sobre prevenção **secundária** atribui Classe I ESC 2021 ao resistido em 2 ou mais dias. Esta sessão não reextraiu o par classe/nível da tabela 4.3.1 com certeza suficiente para republicá-lo como fato novo; o texto da recomendação ("performing resistance exercise, in addition to aerobic activity, is recommended on 2 or more days per week to reduce all-cause mortality") foi lido no PDF. Não tratar o resistido como opcional só porque a ACC/AHA 2019 não o colocou na tabela da seção 3.2.
 
@@ -98,7 +99,7 @@ Um modelo mínimo, no adulto assintomático sem doença conhecida, depois da tri
 - **Sedentário:** interromper períodos longos sentado com atividade leve; não esperar o dia de treino.
 - **Progressão:** primeiro volume, depois intensidade. Não saltar de zero para vigoroso.
 
-Quando hipertensão, diabetes, dislipidemia e obesidade se combinam, o consenso EXPERT (Hansen et al., Sports Med. 2018, PMID 29729003) existe justamente porque a prescrição "genérica de 150 minutos" não individualiza essas combinações. O abstract descreve recomendações de intensidade, frequência, volume, tipo, duração de sessão e de programa, e precauções de segurança, integradas a uma ferramenta digital. **Números FITT específicos por combinação de fatores de risco: VERIFICAÇÃO HUMANA NECESSÁRIA** — esta sessão leu o abstract, não as tabelas do consenso. Não copiar FITT de reabilitação de ICFEr (HF-ACTION) nem de CCS 2024 para esse paciente.
+Quando hipertensão, diabetes, dislipidemia e obesidade se combinam, o consenso EXPERT (Hansen et al., Sports Med. 2018, PMID 29729003) existe justamente porque a prescrição "genérica de 150 minutos" não individualiza essas combinações. O abstract descreve recomendações de intensidade, frequência, volume, tipo, duração de sessão e de programa, e precauções de segurança, integradas a uma ferramenta digital. **Números FITT específicos por combinação de fatores de risco: LIMITE DA EVIDÊNCIA DISPONÍVEL** — esta sessão leu o abstract, não as tabelas do consenso. Não copiar FITT de reabilitação de ICFEr (HF-ACTION) nem de CCS 2024 para esse paciente.
 
 ## Idoso em prevenção primária
 
@@ -129,8 +130,8 @@ Passos por dia no idoso têm platô mais baixo (6.000–8.000 na metanálise de 
 ## Limitações e o que confirmar
 
 - A faixa **150–300 min/semana** de aeróbico moderado (e 75–150 de vigoroso) da OMS 2020 foi lida no abstract de Bull et al., PMID 33239350, e no texto das recomendações para adultos. Não foi inventada.
-- O par **classe/nível de cada linha da tabela ESC 2021 de atividade física** não foi reextraído com certeza nesta sessão (a extração automática do PDF misturou I/A e IIa/B no resistido). O texto das recomendações foi lido. Não republicar classe ESC 2021 de PA como conferida aqui; a ACC/AHA 2019 e a SBC 2019 Tabela 8.3 têm pares conferidos acima.
-- FITT de resistido da seção 4.3.1.3 da ESC 2021 (séries, repetições, % de 1RM) veio da leitura do PDF nesta sessão; conferir contra a página impressa antes de transformar em protocolo institucional.
+- O par **classe/nível de cada linha da tabela ESC 2021 de atividade física** não foi reextraído com certeza nesta revisão editorial (a extração automática do PDF misturou I/A e IIa/B no resistido). O texto das recomendações foi lido. Não republicar classe ESC 2021 de PA como conferida aqui; a ACC/AHA 2019 e a SBC 2019 Tabela 8.3 têm pares conferidos acima.
+- FITT de resistido da seção 4.3.1.3 da ESC 2021 (séries, repetições, % de 1RM) veio da leitura do PDF nesta revisão editorial; conferir contra a página impressa antes de transformar em protocolo institucional.
 - Números FITT do consenso EXPERT 2018 por combinação de fatores de risco: abstract apenas.
 - A SBC 2019 cita ECG na avaliação inicial do capítulo 8; isso não é o programa italiano de triagem de atleta e não deve ser lido como indicação de ECG em massa da população que vai caminhar. Individualizar.
 - Gestante, puerpério e pessoa com deficiência têm recomendações próprias na OMS 2020; não foram o objeto deste documento.

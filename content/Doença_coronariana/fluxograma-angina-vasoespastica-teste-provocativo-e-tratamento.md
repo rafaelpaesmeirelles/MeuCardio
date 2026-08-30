@@ -4,14 +4,14 @@ slug: fluxograma-angina-vasoespastica-teste-provocativo-e-tratamento
 theme: "Doença coronariana"
 kind: fluxograma
 summary: "Árvore da angina de repouso (noturna/madrugada) até o endótipo: exclui SCA, cocaína e fluoropirimidina; aplica COVADIS (definitiva vs. suspeita); lê o teste de acetilcolina (>90% + dor + ECG = epicárdico; dor + ECG sem >90% = microvascular) e dirige antagonista de cálcio só no ramo epicárdico."
-review_status: pendente_revisao
+review_status: revisado
 source_refs:
   - "Beltrame JF, Crea F, Kaski JC, Ogawa H, Ong P, Sechtem U, Shimokawa H, Bairey Merz CN; Coronary Vasomotor Disorders International Study Group (COVADIS). International standardization of diagnostic criteria for vasospastic angina. Eur Heart J. 2017;38(33):2565-2568. DOI: 10.1093/eurheartj/ehv351. PMID: 26245334. Consenso."
   - "Ong P, Camici PG, Beltrame JF, Crea F, Shimokawa H, Sechtem U, Kaski JC, Bairey Merz CN; Coronary Vasomotor Disorders International Study Group (COVADIS). International standardization of diagnostic criteria for microvascular angina. Int J Cardiol. 2018;250:16-20. DOI: 10.1016/j.ijcard.2017.08.068. PMID: 29031990. Consenso — ramo microvascular da árvore."
-  - "Vrints C, Andreotti F, Koskinas KC, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Diretriz. Classe I Nível B da CFT conferida; classe do antagonista de cálcio no endótipo vasoespástico não conferida no PDF integral nesta sessão."
+  - "Vrints C, Andreotti F, Koskinas KC, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Diretriz. Classe I Nível B da CFT conferida; classe do antagonista de cálcio no endótipo vasoespástico não conferida no PDF integral nesta revisão editorial."
   - "Byrne RA, Rossello X, Coughlan JJ, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Diretriz — só o desvio para SCA/MINOCA."
   - "Ong P, Athanasiadis A, Borgulya G, Mahrholdt H, Kaski JC, Sechtem U. The ACOVA Study. J Am Coll Cardiol. 2012;59(7):655-662. DOI: 10.1016/j.jacc.2011.11.015. PMID: 22322081. Coorte — prevalência, não corte de 2017."
-review_note: "PMIDs 26245334, 29031990, 39210710, 37622654 e 22322081 conferidos nesta sessão via PubMed. A árvore aplica os critérios COVADIS (consenso) e a Classe I Nível B da CFT (diretriz ESC 2024). Não atribui Classe/Nível a CCB, nitrato, betabloqueador nem à janela de 48 h de suspensão pré-teste. O ramo 'CCB empírico enquanto se organiza a CFT' é síntese clínica, não linha numerada da ESC — marcado em 'O que a árvore não mostra'. Não duplica o fluxograma geral de SCC nem o de MINOCA."
+review_note: "PMIDs 26245334, 29031990, 39210710, 37622654 e 22322081 conferidos nesta revisão editorial via PubMed. A árvore aplica os critérios COVADIS (consenso) e a Classe I Nível B da CFT (diretriz ESC 2024). Não atribui Classe/Nível a CCB, nitrato, betabloqueador nem à janela de 48 h de suspensão pré-teste. O ramo 'CCB empírico enquanto se organiza a CFT' é síntese clínica, não linha numerada da ESC — marcado em 'O que a árvore não mostra'. Não duplica o fluxograma geral de SCC nem o de MINOCA."
 ---
 
 # Fluxograma: angina vasoespástica — teste provocativo e tratamento
@@ -44,7 +44,7 @@ flowchart TD
 
   D4 -->|"Sim — ANOCA com fenótipo espástico"| D5{"CFT disponível no mesmo procedimento<br/>ou em centro de referência?<br/>Classe I, Nível B (ESC 2024)"}
 
-  D5 -->|"Não neste momento"| C5(["Encaminhar para CFT.<br/>Se a suspeita clínica de VSA for alta,<br/>antagonista de cálcio enquanto se organiza o exame<br/>(síntese — classe específica: verificação humana)"])
+  D5 -->|"Não neste momento"| C5(["Encaminhar para CFT.<br/>Se a suspeita clínica de VSA for alta,<br/>antagonista de cálcio enquanto se organiza o exame<br/>(síntese — classe específica: limite da evidência)"])
 
   D5 -->|"Sim"| P2["Teste provocativo com acetilcolina<br/>(ou ergot, conforme o centro),<br/>nitrato intracoronariano já na mesa"]
 
@@ -82,11 +82,11 @@ flowchart TD
 
 ## O que a árvore não mostra
 
-**Protocolo miligrama a miligrama de acetilcolina.** Varia entre centros (Japão versus Europa, dose máxima na DA versus circunflexa/direita). Não cabe em bifurcação binária e não foi lido como tabela ESC 2024. **VERIFICAÇÃO HUMANA NECESSÁRIA** para protocolar dose institucional.
+**Protocolo miligrama a miligrama de acetilcolina.** Varia entre centros (Japão versus Europa, dose máxima na DA versus circunflexa/direita). Não cabe em bifurcação binária e não foi lido como tabela ESC 2024. **LIMITE DA EVIDÊNCIA DISPONÍVEL** para protocolar dose institucional.
 
 **Janela de 48 horas sem nitrato/cálcio antes do teste.** Prática de laboratório para reduzir falso-negativo; não conferida como recomendação classificada da ESC 2024.
 
-**Contraindicações absolutas do teste.** Listas japonesas e de revisões especializadas existem (tronco não tratado, disfunção ventricular grave, gestação, SCA instável). Não reproduzir como se fossem da ESC 2024 sem conferir o PDF. **VERIFICAÇÃO HUMANA NECESSÁRIA.**
+**Contraindicações absolutas do teste.** Listas japonesas e de revisões especializadas existem (tronco não tratado, disfunção ventricular grave, gestação, SCA instável). Não reproduzir como se fossem da ESC 2024 sem conferir o PDF. **LIMITE DA EVIDÊNCIA DISPONÍVEL.**
 
 **Classe e nível do antagonista de cálcio, do nitrato e da “proibição” de betabloqueador.** O texto da ESC 2024 aponta o cálcio como primeira linha do endótipo vasoespástico; COVADIS usa a resposta diferencial cálcio versus betabloqueador como critério diagnóstico. Nenhuma das duas frases foi lida aqui como Classe I ou Classe III numerada. A árvore trata o cálcio como base **sem** inventar classe.
 

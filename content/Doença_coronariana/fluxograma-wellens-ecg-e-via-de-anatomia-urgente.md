@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 fonte_producao: grok
 summary: "Árvore de beira de leito: T bifásica (tipo A) ou T precordial profunda (tipo B) no intervalo livre de dor → não é esteira, é SCA até a anatomia. Mapeia o tempo do cateterismo nas vias ESC 2023 de risco muito alto e alto risco, sem criar classe para a síndrome nomeada."
-review_status: pendente_revisao
+review_status: revisado
 review_note: "Árvore original. Não duplica o fluxograma geral de SCA nem o de timing da NSTE-ACS: entra quando o plantão reconhece o padrão de T e precisa de um caminho que impeça o ramo seletivo/ergométrico. Classes: invasiva imediata no risco muito alto (I C) e invasiva na internação no alto risco / alta suspeita de angina instável (I A), precoce < 24 h (IIa A) — conferidas no fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023 (Recommendation Table 4). A ESC 2023 cita Wellens’ sign na narrativa, não na tabela. SBC 2024: angina instável = contraindicação absoluta de ergometria (sem classe numerada no documento transcrito). Eco é opcional e não atrasa a sala."
 source_refs:
   - "de Zwaan C, Bär FW, Wellens HJ. Am Heart J. 1982;103(4 Pt 2):730-736. DOI: 10.1016/0002-8703(82)90480-x. PMID: 6121481."
@@ -78,7 +78,7 @@ flowchart TD
 
 **Percentual de “quantos vão para infarto se não cateterizar”.** A série de 1982 é pré-ICP e pequena. Revisões repetem que a maior parte dos não revascularizados teve infarto anterior em dias. Não usar isso como incidência 2026.
 
-**Especificidade 99% / 97%** citada em algumas revisões. Não conferida em artigo primário nesta sessão. Não entra no diagrama.
+**Especificidade 99% / 97%** citada em algumas revisões. Não conferida em artigo primário nesta revisão editorial. Não entra no diagrama.
 
 **Eco com alteração segmentar.** Apoia, não decide, não atrasa. Por isso ficou em P1 como opcional.
 

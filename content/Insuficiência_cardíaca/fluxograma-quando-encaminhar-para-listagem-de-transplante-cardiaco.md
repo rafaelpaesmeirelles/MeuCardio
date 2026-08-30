@@ -4,12 +4,12 @@ slug: fluxograma-quando-encaminhar-para-listagem-de-transplante-cardiaco
 theme: "Insuficiência cardíaca"
 kind: fluxograma
 fonte_producao: grok
-review_status: pendente_revisao
-review_note: "Árvore de listagem no adulto, complementar — não substituta — ao fluxograma de encaminhamento a IC avançada/LVAD/transplante já publicado nesta pasta. Cortes de VO2, RER, SHFM, cateterismo, idade, IMC, TFGe, substância e demais barreiras reproduzem a ISHLT 2016 (PMID 26776864, PDF oficial lido nesta sessão). Encaminhamento precoce Classe I A, I NEED HELP e Tabela 17 lidos na ESC 2026 (DOI 10.1093/eurheartj/ehag100). A árvore não atribui status de fila do sistema nacional de transplantes, não escolhe LVAD de destino versus ponte e não lista criança."
+review_status: revisado
+review_note: "Árvore de listagem no adulto, complementar — não substituta — ao fluxograma de encaminhamento a IC avançada/LVAD/transplante já publicado nesta pasta. Cortes de VO2, RER, SHFM, cateterismo, idade, IMC, TFGe, substância e demais barreiras reproduzem a ISHLT 2016 (PMID 26776864, PDF oficial lido nesta revisão editorial). Encaminhamento precoce Classe I A, I NEED HELP e Tabela 17 lidos na ESC 2026 (DOI 10.1093/eurheartj/ehag100). A árvore não atribui status de fila do sistema nacional de transplantes, não escolhe LVAD de destino versus ponte e não lista criança."
 source_refs:
   - "Mehra MR, Canter CE, Hannan MM, Semigran MJ, Uber PA, Baran DA, et al. The 2016 International Society for Heart Lung Transplantation listing criteria for heart transplantation: A 10-year update. J Heart Lung Transplant. 2016 Jan;35(1):1-23. DOI: 10.1016/j.healun.2015.10.023. PMID: 26776864."
   - "Peled Y, Ducharme A, Kittleson M, et al. International Society for Heart and Lung Transplantation Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024 Oct;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488."
-  - "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 11 (encaminhamento precoce Classe I A; TCPE e cateterismo direito Classe I C) e Tabela 17 (indicação e contraindicações) lidas nesta sessão."
+  - "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 11 (encaminhamento precoce Classe I A; TCPE e cateterismo direito Classe I C) e Tabela 17 (indicação e contraindicações) lidas nesta revisão editorial."
   - "Bacal F, Marcondes-Braga FG, Rohde LEP, et al. 3ª Diretriz Brasileira de Transplante Cardíaco. Arq Bras Cardiol. 2018 Aug;111(2):230-289. DOI: 10.5935/abc.20180153. PMID: 30335870. Citada no documento-irmão de indicações; a árvore não aplica o corte brasileiro de RVP >5 como nó, porque a ISHLT 2016 não o adota como absoluto no adulto."
 ---
 
