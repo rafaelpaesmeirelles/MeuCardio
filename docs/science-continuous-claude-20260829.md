@@ -1230,7 +1230,23 @@ Ordem recebida: "prossiga com a produção". Produção retomada.
   anticoagulação. 9 fontes via NCBI e-utils, leitura de abstract
   completo via efetch.
 
-## Lote 54 (planejado)
+## Lote 54 — concluído (SHA a644487f) — total 82 commits
+
+- checklist `acometimento-cardiaco-na-doenca-de-pompe-cardiomiopatia-infantil-e-terapia-de-reposicao-enzimatica`
+  — 5 itens complementando as fenocópias glicogênicas Danon/PRKAG2 já
+  cobertas, com mecanismo lisossômico distinto (GAA): fisiopatologia
+  (IOPD vs. LOPD, cardiomiopatia obrigatória por definição na forma
+  infantil); achados de imagem/ECG (PR curto e voltagem elevada como
+  marcadores de gravidade/resposta); rastreio neonatal (piloto de
+  Taiwan); TRE com alglucosidase alfa (reversão documentada, mas ganho
+  menor quanto mais tardio o início); seguimento de longo prazo (WPW em
+  8/113 mesmo com melhora funcional; 6% de parada cardiopulmonar na
+  indução anestésica — propofol/sevoflurano contraindicados). 13 fontes
+  via NCBI e-utils. Endocardite protética, Takayasu/tocilizumabe, ATTR
+  (tafamidis/acoramidis) e TEER tricúspide já confirmados bem cobertos
+  — evitada duplicação.
+
+## Lote 55 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado nesta janela. Confirmar
