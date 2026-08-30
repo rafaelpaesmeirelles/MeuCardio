@@ -104,6 +104,7 @@ jobs:
           docker cp medicamentos "$BACKEND_ID:/medicamentos"
           docker compose exec -T backend python - <<'PY'
           from app.core.db import SessionLocal
+          from app.models.drug import Drug
           from app.services.carregar_controlados import carregar as carregar_controlados
           from app.services.carregar_drugs import carregar as carregar_drugs
 
@@ -113,6 +114,19 @@ jobs:
           finally:
               db.close()
           print(carregar_drugs("/medicamentos/metadados.json"))
+
+          # Equivale à etapa publish-reviewed da reconciliação, limitada ao
+          # catálogo carregado neste banco descartável.
+          db = SessionLocal()
+          try:
+              published = db.query(Drug).filter(
+                  Drug.review_status == "revisado",
+                  Drug.published.is_(False),
+              ).update({Drug.published: True}, synchronize_session=False)
+              db.commit()
+              print({"medicamentos_publicados_para_e2e": published})
+          finally:
+              db.close()
           PY
 
       - name: Create synthetic administrator
