@@ -453,7 +453,7 @@ export default function PainelClinicalOS() {
 
         <section className="ccc-clinical-cortex" aria-labelledby="ccc-cortex-title">
           <header className="ccc-cortex__copy">
-            <h2 id="ccc-cortex-title">O que este paciente precisa agora?</h2>
+            <h2 id="ccc-cortex-title">O que você precisa agora?</h2>
           </header>
 
           <div className="ccc-cortex__stage">
