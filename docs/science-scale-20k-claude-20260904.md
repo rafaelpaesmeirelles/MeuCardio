@@ -254,3 +254,23 @@ Dreifuss). Gates limpos, 10.233 registros totais.
 
 **Total canônico projetado após Lote 14**: 10.233 (10.189 revisado +
 44 pendente_revisao nesta branch).
+
+## Lote 15 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (NF1 vasculopatia/HAS, progeria). Gates limpos, 10.235
+registros totais.
+
+**Total canônico projetado após Lote 15**: 10.235 (10.189 revisado +
+46 pendente_revisao nesta branch).
+
+## Status consolidado após 15 lotes
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 4 | 2.396 |
+| Casos clínicos | 900 | 20 | 880 |
+| Checklists | 600 | 8 | 592 |
+| Materiais-paciente | 500 | 13 | 487 |
+| Trilhas | 300 | 1 | 299 |
+| Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
+| **Total** | **4.900** | **46** | **4.854** |
