@@ -4649,5 +4649,547 @@
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
     "version": 2
+  },
+  {
+    "slug": "complicacao-local-pos-cateterismo-procedimento-vascular",
+    "name": "Dor, hematoma, sangramento ou isquemia de membro após cateterismo ou procedimento vascular",
+    "aliases": [
+      "dor no local da punção",
+      "hematoma pós-cateterismo",
+      "mão fria após exame",
+      "sangramento na virilha após procedimento",
+      "perna fria após cateterismo",
+      "sangramento no pulso após cateterismo",
+      "inchaço no local do acesso vascular"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem de qualquer dor, hematoma, sangramento ou sinal de má perfusão de membro após cateterismo cardíaco ou outro procedimento vascular (radial ou femoral), para reconhecer imediatamente isquemia aguda de membro, hematoma expansivo/sangramento não controlado e suspeita de sangramento retroperitoneal, e distinguir esses quadros de equimose leve e estável, sem indicar conduta invasiva para achado benigno.",
+    "questions": [
+      {
+        "id": "access_site",
+        "label": "Qual foi o sítio de acesso do procedimento?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "radial",
+            "label": "Radial ou ulnar (punho/antebraço)"
+          },
+          {
+            "value": "femoral",
+            "label": "Femoral (virilha)"
+          },
+          {
+            "value": "other",
+            "label": "Outro sítio (braquial, axilar ou não sabe informar)"
+          }
+        ],
+        "section": "Contexto"
+      },
+      {
+        "id": "time_since_procedure",
+        "label": "Quanto tempo se passou desde o procedimento?",
+        "type": "select",
+        "required": true,
+        "options": [
+          {
+            "value": "lt_6h",
+            "label": "Menos de 6 horas"
+          },
+          {
+            "value": "6_24h",
+            "label": "Entre 6 e 24 horas"
+          },
+          {
+            "value": "1_7d",
+            "label": "Entre 24 horas e 1 semana"
+          },
+          {
+            "value": "gt_7d",
+            "label": "Mais de 1 semana"
+          }
+        ],
+        "section": "Contexto"
+      },
+      {
+        "id": "anticoagulant_or_antiplatelet",
+        "label": "Está em uso de anticoagulante e/ou antiagregante (incluindo o administrado durante o procedimento)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Modificadores"
+      },
+      {
+        "id": "hematoma_present",
+        "label": "Há hematoma (mancha arroxeada/inchaço) visível ou palpável no local de acesso?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sítio"
+      },
+      {
+        "id": "hematoma_expanding_or_pulsatile",
+        "label": "O hematoma está aumentando de tamanho, é pulsátil ou continua crescendo apesar de compressão adequada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "active_bleeding_uncontrolled",
+        "label": "Há sangramento ativo no local que não cede após 10-15 minutos de compressão manual direta?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "pain_disproportionate",
+        "label": "A dor no membro é desproporcional ao que o exame local mostra (muito mais intensa do que o hematoma ou sinal visível sugere)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "limb_pallor_or_coldness",
+        "label": "O membro distal ao acesso está pálido, frio ou com coloração diferente do lado oposto?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "paresthesia_or_motor_weakness",
+        "label": "Há formigamento, dormência ou fraqueza motora nova no membro distal ao acesso?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "distal_pulse_absent_or_reduced",
+        "label": "Pulso distal ausente ou nitidamente reduzido comparado ao lado oposto (radial/ulnar ou pedioso/tibial posterior, conforme o sítio)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "capillary_refill_delayed",
+        "label": "O enchimento capilar está lentificado no membro distal ao acesso?",
+        "type": "boolean",
+        "required": false,
+        "section": "Red flags"
+      },
+      {
+        "id": "hypotension_or_hypoperfusion",
+        "label": "Há hipotensão, taquicardia ou outro sinal de hipoperfusão desde o procedimento?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sinais vitais"
+      },
+      {
+        "id": "abdominal_flank_or_back_pain",
+        "label": "Há dor lombar, no flanco ou abdominal nova, sem outra explicação, desde o procedimento (especialmente após acesso femoral)?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "pulsatile_mass_or_bruit",
+        "label": "Há massa pulsátil localizada no sítio de acesso, com ou sem sopro à ausculta?",
+        "type": "boolean",
+        "required": false,
+        "section": "Sinais"
+      }
+    ],
+    "rules": [
+      {
+        "id": "isquemia-aguda-membro-palidez-frieza-pulso-ausente",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "limb_pallor_or_coldness",
+              "op": "truthy"
+            },
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Palidez/frieza do membro associada a pulso distal ausente ou reduzido após acesso vascular sugere isquemia aguda de membro — risco de perda de membro dependente do tempo até revascularização"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação vascular de urgência imediatamente; não aguardar exame de imagem prolongado quando houver perda de perfusão distal"
+          ]
+        }
+      },
+      {
+        "id": "isquemia-aguda-deficit-neurologico-com-pulso-ausente",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "paresthesia_or_motor_weakness",
+              "op": "truthy"
+            },
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Déficit sensitivo ou motor novo associado a pulso distal ausente/reduzido indica isquemia de membro em estágio avançado — janela de salvamento estreita"
+          ],
+          "emergency_flow": [
+            "Acionar atendimento vascular de urgência sem atraso; sedação/analgesia não devem mascarar a reavaliação seriada de sensibilidade e força"
+          ]
+        }
+      },
+      {
+        "id": "sangramento-retroperitoneal-suspeito",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "access_site",
+              "op": "eq",
+              "value": "femoral"
+            },
+            {
+              "field": "abdominal_flank_or_back_pain",
+              "op": "truthy"
+            },
+            {
+              "field": "hypotension_or_hypoperfusion",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Dor lombar/abdominal nova associada a hipotensão após acesso femoral sugere sangramento retroperitoneal — POCUS abdominal normal não exclui o diagnóstico"
+          ],
+          "emergency_flow": [
+            "Acionar avaliação vascular/intervencionista de urgência; considerar TC de abdome/pelve contrastada conforme estabilidade hemodinâmica; não atribuir a hipotensão apenas a causa cardíaca sem excluir sangramento retroperitoneal"
+          ]
+        }
+      },
+      {
+        "id": "hematoma-expansivo-ou-sangramento-ativo-nao-controlado",
+        "priority": 90,
+        "when": {
+          "any": [
+            {
+              "field": "hematoma_expanding_or_pulsatile",
+              "op": "truthy"
+            },
+            {
+              "field": "active_bleeding_uncontrolled",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hematoma expansivo/pulsátil ou sangramento ativo não controlado por compressão manual adequada exige controle da fonte sem demora"
+          ],
+          "suggested_tests": [
+            "Hemograma e sinais vitais seriados",
+            "Ultrassom Doppler do sítio de acesso quando disponível"
+          ]
+        }
+      },
+      {
+        "id": "pulso-distal-ausente-ou-reduzido-isolado",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Pulso distal ausente ou reduzido após procedimento vascular exige avaliação de perfusão de forma urgente, mesmo sem palidez ou déficit neurológico associados"
+          ],
+          "suggested_tests": [
+            "Doppler vascular do membro",
+            "Avaliação vascular urgente à beira do leito"
+          ]
+        }
+      },
+      {
+        "id": "dor-desproporcional",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "pain_disproportionate",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Dor desproporcional ao exame local é sinal precoce de isquemia e pode preceder palidez, frieza ou ausência de pulso"
+          ],
+          "messages": [
+            "Não aguardar palidez ou ausência de pulso para investigar; dor desproporcional isoladamente já indica avaliação vascular"
+          ]
+        }
+      },
+      {
+        "id": "hipotensao-ou-hipoperfusao-isolada",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "hypotension_or_hypoperfusion",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Hipotensão ou sinal de hipoperfusão após procedimento vascular exige excluir sangramento local visível ou oculto/retroperitoneal antes de atribuir a outra causa"
+          ],
+          "suggested_tests": [
+            "Hemograma seriado",
+            "Sinais vitais seriados",
+            "TC de abdome/pelve contrastada se estável e a suspeita de sangramento oculto persistir"
+          ]
+        }
+      },
+      {
+        "id": "enchimento-capilar-lentificado",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "capillary_refill_delayed",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Enchimento capilar lentificado é sinal adicional de comprometimento de perfusão distal, mesmo sem palidez ou pulso ausente já confirmados"
+          ],
+          "suggested_tests": [
+            "Reavaliação seriada de perfusão distal e pulsos"
+          ]
+        }
+      },
+      {
+        "id": "pseudoaneurisma-suspeito-massa-pulsatil",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "pulsatile_mass_or_bruit",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "differentials": [
+            "Pseudoaneurisma no local de punção",
+            "Fístula arteriovenosa iatrogênica"
+          ],
+          "suggested_tests": [
+            "Ultrassom Doppler do sítio de acesso"
+          ]
+        }
+      },
+      {
+        "id": "anticoagulante-ou-antiplaquetario-em-uso",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "anticoagulant_or_antiplatelet",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Uso de anticoagulante/antiagregante aumenta risco e pode prolongar sangramento no sítio de acesso"
+          ],
+          "messages": [
+            "Não há indicação de suspender anticoagulação/antiagregante de rotina apenas por hematoma leve e estável; a decisão deve considerar a gravidade do sangramento e a indicação da terapia"
+          ]
+        }
+      },
+      {
+        "id": "deteccao-tardia-possivel-rao-radial",
+        "priority": 25,
+        "when": {
+          "all": [
+            {
+              "field": "access_site",
+              "op": "eq",
+              "value": "radial"
+            },
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "truthy"
+            },
+            {
+              "field": "limb_pallor_or_coldness",
+              "op": "falsy"
+            },
+            {
+              "field": "time_since_procedure",
+              "op": "in",
+              "value": [
+                "1_7d",
+                "gt_7d"
+              ]
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "differentials": [
+            "Oclusão de artéria radial (RAO) pós-cateterismo, geralmente assintomática"
+          ],
+          "suggested_tests": [
+            "Teste de Barbeau (oximetria de pulso/pletismografia) para confirmar patência da radial"
+          ],
+          "messages": [
+            "Pulso radial ausente dias após o procedimento, sem palidez/frieza, é compatível com RAO assintomática — a mão segue perfundida pelo arco palmar via ulnar, mas o acesso deixa de estar disponível para reintervenção, enxerto cirúrgico ou fístula arteriovenosa futuros; registrar o achado"
+          ]
+        }
+      },
+      {
+        "id": "equimose-leve-estavel-sem-outros-sinais",
+        "priority": 20,
+        "when": {
+          "all": [
+            {
+              "field": "hematoma_present",
+              "op": "truthy"
+            },
+            {
+              "field": "hematoma_expanding_or_pulsatile",
+              "op": "falsy"
+            },
+            {
+              "field": "active_bleeding_uncontrolled",
+              "op": "falsy"
+            },
+            {
+              "field": "pain_disproportionate",
+              "op": "falsy"
+            },
+            {
+              "field": "limb_pallor_or_coldness",
+              "op": "falsy"
+            },
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Equimose leve e estável, sem expansão, sangramento ativo, dor desproporcional ou comprometimento de perfusão distal, costuma ser achado benigno e autolimitado"
+          ],
+          "ambulatory_flow": [
+            "Orientar observação domiciliar, compressa fria intermitente nas primeiras 24-48 horas e retorno se houver crescimento do hematoma, dor nova ou sinal de má perfusão"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Palpação e comparação de pulsos distais entre os membros (radial/ulnar ou pedioso/tibial posterior, conforme o sítio)",
+      "Sinais vitais seriados e avaliação de perfusão distal (temperatura, cor, enchimento capilar)",
+      "Hemograma quando houver hematoma expansivo, sangramento ativo ou suspeita de sangramento oculto/retroperitoneal",
+      "Ultrassom Doppler do sítio de acesso quando houver suspeita de pseudoaneurisma, fístula arteriovenosa ou oclusão/trombose arterial",
+      "Teste de Barbeau (oximetria de pulso e pletismografia no polegar) para confirmar patência da artéria radial quando o acesso foi radial",
+      "TC de abdome/pelve contrastada, conforme estabilidade hemodinâmica, quando houver suspeita de sangramento retroperitoneal em acesso femoral"
+    ],
+    "differentials": [
+      "Hematoma local simples/equimose autolimitada no sítio de punção",
+      "Hematoma expansivo ou sangramento ativo não controlado no sítio de punção",
+      "Pseudoaneurisma no local de acesso",
+      "Fístula arteriovenosa iatrogênica",
+      "Oclusão de artéria radial (RAO) pós-cateterismo",
+      "Dissecção ou trombose arterial relacionada ao acesso",
+      "Isquemia aguda de membro por embolia, trombose ou oclusão relacionada ao acesso",
+      "Sangramento retroperitoneal por punção femoral alta",
+      "Síndrome compartimental secundária a hematoma ou isquemia prolongada"
+    ],
+    "red_flags": [
+      "Palidez, frieza e pulso distal ausente ou reduzido — isquemia aguda de membro",
+      "Perda sensitiva ou motora nova no membro distal ao acesso",
+      "Dor desproporcional ao exame local",
+      "Hematoma expansivo/pulsátil ou sangramento ativo não controlado por compressão",
+      "Dor lombar/abdominal nova associada a hipotensão após acesso femoral — suspeita de sangramento retroperitoneal",
+      "Hipotensão, taquicardia ou outro sinal de hipoperfusão desde o procedimento"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar sítio de acesso, tempo desde o procedimento, tipo de sinal (hematoma estável vs. expansivo, sangramento, dor, sinais de isquemia) e uso de anticoagulante/antiagregante",
+      "Comparar pulsos, temperatura e coloração entre os dois membros",
+      "Aplicar compressão manual direta prolongada sobre hematoma/sangramento leve e reavaliar a resposta",
+      "Orientar equimose leve e estável, sem outros sinais de alarme, como achado benigno autolimitado, com retorno se houver piora",
+      "Verificar a patência da artéria radial (pulso palpável) antes da alta em acesso radial; considerar teste de Barbeau quando disponível",
+      "Não suspender anticoagulação/antiagregante de rotina apenas por hematoma leve; a decisão deve considerar a gravidade do sangramento e a indicação da terapia"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, sinais vitais e perfusão distal imediatamente",
+      "Acionar avaliação vascular de urgência diante de palidez/frieza associada a pulso distal ausente/reduzido, dor desproporcional isolada ou déficit sensitivo-motor novo — risco de perda de membro",
+      "Suspeitar de sangramento retroperitoneal diante de dor lombar/abdominal nova e hipotensão após acesso femoral; POCUS abdominal normal não exclui — considerar TC contrastada conforme estabilidade",
+      "Controlar hematoma expansivo/sangramento ativo com compressão direcionada e acionar equipe vascular/intervencionista; não atrasar o controle da fonte esperando exame de imagem extenso",
+      "Não atribuir hipotensão pós-procedimento apenas a causa cardíaca sem excluir sangramento local ou retroperitoneal"
+    ],
+    "tags": [
+      "cateterismo",
+      "procedimento vascular",
+      "hematoma",
+      "sangramento",
+      "isquemia de membro",
+      "acesso radial",
+      "acesso femoral",
+      "sangramento retroperitoneal",
+      "pseudoaneurisma",
+      "oclusão de artéria radial"
+    ],
+    "source_refs": [
+      "Rashid M, Kwok CS, Pancholy S, et al. Radial Artery Occlusion After Transradial Interventions: A Systematic Review and Meta-Analysis. J Am Heart Assoc. 2016;5(1):e002686. PMID: 26811162 — citada em content/Terapia_intensiva/oclusao-de-arteria-radial-pos-cateterismo-hemostasia-patente-e-tecnica-de-barbeau.md; PMID reconferido via NCBI E-utilities em 29/08/2026.",
+      "Pancholy S, Coppola J, Patel T, Roke-Thomas M. Prevention of radial artery occlusion-patent hemostasis evaluation trial (PROPHET study). Catheter Cardiovasc Interv. 2008;72(3):335-340. PMID: 18726956 — citada no mesmo documento; PMID reconferido em 29/08/2026.",
+      "Pancholy SB, Bernat I, Bertrand OF, Patel TM. Prevention of Radial Artery Occlusion After Transradial Catheterization: The PROPHET-II Randomized Trial. JACC Cardiovasc Interv. 2016;9(19):1992-1999. PMID: 27712733 — citada no mesmo documento; PMID reconferido em 29/08/2026.",
+      "SCAI. Best Contemporary Practices for Large-Bore Femoral Arterial Access for Structural Interventions. 2024; e Naidu SS, Abbott JD, Bagai J, et al. SCAI Expert Consensus Update on Best Practices in the Cardiac Catheterization Laboratory. Catheter Cardiovasc Interv. 2021;98:255-276 — citadas em content/Terapia_intensiva/acesso-vascular-large-bore-em-tmcs-prevencao-de-sangramento-isquemia-e-fechamento.md, seções sobre sangramento retroperitoneal, isquemia de membro e complicações do sítio de acesso femoral.",
+      "Metkus TS, Schulman SP, Marine JE, Eid SM. Complications and Outcomes of Temporary Transvenous Pacing: An Analysis of > 360,000 Patients From the National Inpatient Sample. Chest. 2019;155(4):749-757. PMID: 30543806 — citada em content/Dispositivos/marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia.md; PMID reconferido em 29/08/2026.",
+      "Pereira RA, Barcellos G, Lenz G, et al. Complications of Temporary Transvenous Cardiac Pacing by Access Site: A Systematic Review and Meta-Analysis. Pacing Clin Electrophysiol. 2026;online ahead of print. PMID: 42132883 — citada no mesmo documento (comparação jugular vs. femoral, incluindo sangramento e infecção do sítio de acesso); PMID reconferido em 29/08/2026.",
+      "Conteúdo interno corroborante, sem PMID próprio adicional: content/Terapia_intensiva/complicacoes-da-bomba-microaxial-hemolise-succao-sangramento-isquemia-e-anticoagulacao.md, seções 7-8 (isquemia de membro e sangramento retroperitoneal em acesso femoral large-bore)."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26811162/",
+      "https://pubmed.ncbi.nlm.nih.gov/18726956/",
+      "https://pubmed.ncbi.nlm.nih.gov/27712733/",
+      "https://pubmed.ncbi.nlm.nih.gov/30543806/",
+      "https://pubmed.ncbi.nlm.nih.gov/42132883/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Registro novo de triagem de sintomas construído a partir de três documentos já publicados e verificados desta base (oclusão de artéria radial pós-cateterismo/hemostasia patente, acesso vascular large-bore em tMCS, marca-passo temporário transvenoso) e de conteúdo corroborante em complicações da bomba microaxial (sangramento retroperitoneal e isquemia de membro em acesso femoral). PMIDs centrais reconferidos via NCBI E-utilities em 29/08/2026. Nenhuma dose de fármaco incluída em nenhum campo. Aguarda revisão médica e aval de publicação do responsável.",
+    "version": 1
   }
 ]
