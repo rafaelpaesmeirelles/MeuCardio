@@ -290,7 +290,11 @@ jobs:
             const requiredDesktopLinks = ['/triagem-sintomas','/interacoes','/condicoes','/fluxogramas','/biblioteca','/avaliacao-preoperatoria','/telediagnostico','/indicadores','/cursos','/apresentacao','/admin','/admin/usuarios','/fila-telediagnostico'];
             for (const href of requiredDesktopLinks) {
               const link = desktop.page.locator(`.ccc-nav a[href="${href}"]`).first();
-              if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature sem acesso visível ${href}`);
+              const disclosure = link.locator('xpath=ancestor::details[1]');
+              if (await disclosure.count() && !await disclosure.getAttribute('open')) {
+                await disclosure.locator(':scope > summary').click();
+              }
+              if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature inacessível após abrir a seção ${href}`);
             }
             await desktop.context.close();
 

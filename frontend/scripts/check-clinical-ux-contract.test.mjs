@@ -68,12 +68,14 @@ test("navegação usa contexto clínico e elimina rotas duplicadas do catálogo"
   const context = read("src/lib/clinicalNavigationContext.ts");
   const desktop = read("src/components/ClinicalDesktopNav.tsx");
   const mobile = read("src/components/ClinicalMobileNav.tsx");
+  const visualQa = read("../.github/workflows/visual-qa.yml");
   for (const token of ["Farmacologia clínica", "Contexto do paciente", "Produção clínica", "Tudo com Tudo", "commandDestination"]) {
     assert.equal(context.includes(token), true, `falta contexto: ${token}`);
   }
   assert.equal(desktop.includes("<details"), true, "seções desktop precisam de revelação progressiva");
   assert.equal(desktop.includes("No seu contexto"), true);
   assert.equal(mobile.includes("cc-mobile-more__context"), true);
+  assert.equal(visualQa.includes("ancestor::details[1]"), true, "QA visual precisa abrir a seção antes de validar o link");
   for (const [source, name] of [[desktop, "desktop"], [mobile, "mobile"]]) {
     assert.equal((source.match(/to: "\/calculadoras"/g) ?? []).length, 1, `calculadoras duplicada no ${name}`);
     assert.equal((source.match(/to: "\/telediagnostico"/g) ?? []).length, 1, `telediagnóstico duplicado no ${name}`);
