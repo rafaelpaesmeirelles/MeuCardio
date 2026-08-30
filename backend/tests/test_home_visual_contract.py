@@ -71,17 +71,26 @@ def test_home_clinical_cortex_keeps_every_action_real_and_responsive():
         'O que este paciente precisa agora?',
         'ccc-cortex__stage',
         'ccc-cortex__connections',
+        'ccc-cortex__heart',
         'ccc-cortex__core',
         'src="/corvia-mark-canonical.svg"',
         'Tudo com Tudo',
-        'ccc-cortex__signals',
-        'A decisão final permanece médica.',
+        'ccc-cortex-card',
+        'ccc-cortex__mobile-actions',
     ):
         assert token in panel
 
+    for slot in (
+        "left-1", "left-2", "left-3", "left-4",
+        "right-1", "right-2", "right-3", "right-4",
+        "bottom-1", "bottom-2", "bottom-3", "bottom-4",
+    ):
+        assert f'slot: "{slot}"' in panel
+
     for token in (
         '.ccc-cortex__network',
-        '.ccc-cortex__connections .ccc-action',
+        '.ccc-cortex-card',
+        '.ccc-cortex__heart',
         '.ccc-cortex__core',
         '@media (max-width: 900px)',
         '@media (prefers-reduced-motion: reduce)',
