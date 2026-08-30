@@ -99,3 +99,36 @@ para não repetir o retrabalho deste lote. Candidatos a reverificar com
 o método correto: síndrome aórtica aguda, DAP/claudicação intermitente,
 crise hipertensiva (separada da urgência), tako-tsubo, apneia do sono
 e coração, obesidade e risco cardiovascular, tabagismo e DCV.
+
+## Lote 3 — concluído (commit `1dd7e359`, 30/08/2026)
+
+2 itens: 1 caso clínico (intolerância a estatina/reexposição, com
+efeito nocebo documentado em StatinWISE PMID 33627334 e SAMSON PMID
+33196154), 1 material-paciente (hiponatremia na IC). Gates limpos,
+10.206 registros totais.
+
+## Achado crítico de CI: gate `test_canonical_content_review_status.py`
+
+O job "Backend tests" do PR #778 falhou (não é bug de conteúdo/código):
+`backend/tests/test_canonical_content_review_status.py` garante que
+**nenhum item `pendente_revisao` entre em manifesto canônico ou
+documento markdown sem uma decisão editorial explícita** registrada em
+`editorial-approvals/*.json`. Como todo o conteúdo desta branch é
+propositalmente `pendente_revisao` (regime de dois estágios da diretiva
+de 30/08), esse teste específico vai continuar vermelho até que o
+segundo estágio de revisão aconteça e marque os itens como `revisado`,
+ou até que alguém com autoridade editorial (não eu) crie o arquivo de
+aprovação explícita.
+
+**Não vou criar esse arquivo de aprovação** — seria efetivamente uma
+autoaprovação do meu próprio conteúdo, o que a regra permanente desta
+produção proíbe (Claude/Grok geram, ChatGPT revisa e publica).
+Reportado como comentário no PR #778 para transparência.
+
+Meus dois gates obrigatórios (`audit_tudo_com_tudo.py`,
+`content_inventory.py --strict`) continuam sendo o critério de qualidade
+que rodo e reporto a cada lote — esses seguem limpos em todos os lotes
+até aqui.
+
+**Total canônico projetado após Lote 3**: 10.206 (10.189 revisado + 17
+pendente_revisao desta branch: 8 do Lote 1 + 7 do Lote 2 + 2 do Lote 3).
