@@ -864,3 +864,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 18 (3 descartados por colisão) | 182 |
 | **Total** | **4.900** | **145** | **4.755** |
+
+## Lote 43 — concluído (commits fb913e5c + 89b76ab2)
+
+- **content/Cardiomiopatias**: +1 — `doenca-de-pompe-acometimento-cardiaco-...` (contraste forma infantil fatal vs. forma tardia poupadora de coração; fenocópia de CMH com tratamento causal específico).
+- **content/Arritmias**: +1 — `sindrome-de-bartter-e-de-gitelman-...` (tubulopatias hereditárias, hipocalemia crônica, risco de QT longo/torsades).
+- **doencas**: +2 — `doenca-de-pompe-cardiaca`, `sindrome-de-bartter-e-gitelman` (pareadas).
+- **checklists**: +2 — red flags de Pompe em lactente; diferenciação/monitorização/reposição em Bartter-Gitelman.
+- **Correção durante integração**: `prevalence_rank` de um agente colidia com registro já existente (Wilson, lote 41); ajustado antes de integrar.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.338 (10.281 revisado + 57 pendente_revisao).
+
+### Status consolidado (após Lote 43)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 26 | 2.374 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 20 (3 descartados por colisão) | 180 |
+| **Total** | **4.900** | **151** | **4.749** |
