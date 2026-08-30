@@ -75,3 +75,10 @@ O rastreio em cascata é o elemento que mais diferencia o manejo de FTAAD do man
 3. Não aplicar o limiar de 5,0–5,5 cm da população geral: usar o limiar específico do gene identificado (tabela acima) ou, na ausência de threshold estabelecido, considerar a história de dissecção precoce/em diâmetro pequeno na família.
 4. Iniciar rastreio de imagem em todos os parentes de primeiro grau, independentemente de idade e sexo, e oferecer teste em cascata quando houver variante causal identificada no probando.
 5. Manter betabloqueador/losartana e restrição de exercício isométrico e esportes de contato como medidas adjuntas em todos os portadores, sindrômicos ou não.
+
+## Tudo com Tudo
+
+- [Aneurisma de Aorta Torácica: Cortes por Etiologia e Seguimento (ESC 2024)](/biblioteca/aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024)
+- [Fluxograma: Síndrome aórtica aguda — da dor torácica ao tratamento (ESC 2024)](/biblioteca/fluxograma-sindrome-aortica-aguda-esc-2024)
+- [Aortopatias Genéticas na Criança: Marfan, Loeys-Dietz e Ehlers-Danlos Vascular](/biblioteca/aortopatias-geneticas-na-crianca-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos)
+- [Síndrome de Marfan na Gestação: Risco de Dissecção Aórtica e Limiares de Manejo pelo Diâmetro](/biblioteca/sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro)

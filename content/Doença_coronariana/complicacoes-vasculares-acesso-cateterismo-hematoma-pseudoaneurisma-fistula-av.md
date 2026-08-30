@@ -94,3 +94,10 @@ Dispositivos de fechamento vascular (vascular closure devices, VCDs) reduzem o t
 4. Trombina guiada por ultrassom é a primeira escolha na maioria dos pseudoaneurismas, inclusive sob anticoagulação; compressão guiada por ultrassom é alternativa razoável em pacientes não anticoagulados, com sucesso menor e mais trabalhoso se houver anticoagulação; cirurgia é reserva para falha, infecção, compressão neurovascular ou isquemia.
 5. Sopro contínuo (não apenas sistólico) com frêmito contínuo na virilha sugere FAV — confirmar por Doppler; compressão tem baixa taxa de sucesso nessa complicação, e correção endovascular/cirúrgica costuma ser necessária se sintomática.
 6. Dor lombar/flanco, hipotensão sem sangramento externo visível, ou queda de hemoglobina inexplicada após acesso femoral são hemorragia retroperitoneal até prova em contrário — solicitar tomografia sem atrasar estabilização hemodinâmica; é a complicação vascular do acesso com maior mortalidade absoluta e a mais facilmente perdida por ausência de sinal externo.
+
+## Tudo com Tudo
+
+- [Oclusão de Artéria Radial Pós-Cateterismo: por que é Silenciosa e Como a Hemostasia Patente Reduz o Risco](/biblioteca/oclusao-de-arteria-radial-pos-cateterismo-hemostasia-patente-e-tecnica-de-barbeau)
+- [Isquemia Aguda de Membro: Classificação de Rutherford e Conduta](/biblioteca/isquemia-aguda-de-membro-classificacao-de-rutherford-e-conduta)
+- [Reversão de Anticoagulante em Sangramento Maior: Idarucizumabe e Andexanet Alfa](/biblioteca/reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa)
+- [Cateterismo Cardíaco Direito na Hipertensão Pulmonar: Técnica, Armadilhas e Segurança](/biblioteca/cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca)

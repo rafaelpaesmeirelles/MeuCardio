@@ -72,3 +72,10 @@ Vale contrastar explicitamente com o restante do universo de cardiomiopatias mon
 3. **Considerar rastreamento familiar**, incluindo dos pais, quando um recém-nascido apresenta carnitina livre baixa na triagem neonatal — pode refletir doença materna não diagnosticada, com risco cumulativo de morte súbita ao longo da vida adulta (Schimmenti et al., 2007, PMID 17126586).
 4. **Tratar precocemente**: a reversibilidade da cardiomiopatia é tempo-dependente. O atraso diagnóstico é o principal determinante de dano irreversível — e, no espectro mais grave, de morte súbita, com risco quantificado em até 54 vezes (348 vezes em mulheres) na coorte Faroesa de deficiência não tratada (Rasmussen et al., 2020, PMID 31373028).
 5. **Monitorar clinicamente após o diagnóstico**: ecocardiograma, eletrocardiograma, creatinoquinase e glicemia pré-prandial como avaliação basal, com reavaliação periódica sob tratamento (Magoulas & El-Hattab, 2012, PMID 22989098).
+
+## Tudo com Tudo
+
+- [Cardiomiopatia Dilatada (CMD): Diagnóstico Genético e Manejo (ESC 2023)](/biblioteca/cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023)
+- [Fluxograma: Cardiomiopatia Dilatada — Investigação Etiológica](/biblioteca/fluxograma-cardiomiopatia-dilatada-investigacao-etiologica)
+- [Fluxograma: Cardiomiopatia Dilatada — Risco de Morte Súbita e CDI](/biblioteca/fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi)
+- [Triagem Neonatal de Cardiopatia Congênita Crítica por Oximetria de Pulso](/biblioteca/triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso)

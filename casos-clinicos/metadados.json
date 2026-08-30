@@ -17926,5 +17926,28 @@
       "Richards JR, Le JK. Cocaine Toxicity. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695. NCBI Bookshelf NBK430976"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "erdheim-chester-aorta-em-bainha-braf",
+    "titulo": "Aorta em bainha e infiltração cardíaca na doença de Erdheim-Chester",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos é encaminhada por dor óssea bilateral em pernas há 8 meses, associada a diabetes insipidus de início recente. Angiotomografia de tórax e abdome mostra espessamento circunferencial de partes moles envolvendo toda a extensão da aorta torácica e abdominal, poupando a luz vascular (\"aorta em bainha\"), além de espessamento pericárdico com derrame de moderado volume e uma massa infiltrativa em átrio direito. Radiografia de ossos longos revela osteoesclerose diafisometafisária simétrica em fêmures e tíbias.",
+    "pergunta": "Diante desse quadro, fortemente sugestivo de doença de Erdheim-Chester com acometimento cardiovascular, qual é a conduta mais apropriada para definir o tratamento sistêmico?",
+    "opcoes": [
+      "Realizar biópsia de lesão óssea ou de tecido acometido e pesquisar a mutação BRAF V600E, pois sua presença direciona o tratamento para um inibidor de BRAF (vemurafenibe), em vez de interferon-alfa isolado",
+      "Iniciar corticoterapia em dose alta empírica para aortite de Takayasu, sem necessidade de biópsia, já que o padrão de imagem é diagnóstico dessa vasculite",
+      "Tratar como fibrose retroperitoneal idiopática (doença de Ormond) com tamoxifeno, dispensando avaliação genética molecular",
+      "Encaminhar diretamente para pericardiectomia e ressecção da massa atrial, sem investigar a etiologia sistêmica subjacente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O quadro descrito é característico da doença de Erdheim-Chester (DEC), uma histiocitose não-Langerhans rara. A tríade dor óssea com osteoesclerose simétrica de ossos longos, diabetes insipidus (infiltração hipotálamo-hipofisária) e achados cardiovasculares típicos — espessamento periaórtico circunferencial que poupa a luz (o sinal da \"aorta em bainha\" ou \"coated aorta\") e infiltração de átrio direito/pericárdio, podendo simular massa cardíaca ou causar derrame/tamponamento — é fortemente sugestiva do diagnóstico. Esses achados de imagem foram descritos em detalhe por Dion et al. (AJR 2004; PMID 15505288) e por Haroche et al., que relataram acometimento cardiovascular em uma grande série de pacientes com DEC, incluindo periaortite em 55,6% e envolvimento pericárdico em 44,4% dos casos, além de massas atriais direitas (Medicine (Baltimore) 2004; PMID 15525849). O diagnóstico definitivo exige biópsia (óssea ou de outro sítio acometido) com confirmação histológica (histiócitos espumosos CD68+/CD1a-/S100 geralmente negativo) e pesquisa da mutação BRAF V600E, presente em cerca de 54% dos casos de DEC (Haroche et al., Blood 2012; PMID 22879539). Essa pesquisa molecular tem impacto terapêutico direto: pacientes com mutação BRAF V600E respondem de forma marcante a inibidores de BRAF, como o vemurafenibe, enquanto o tratamento clássico com interferon-alfa (ainda usado em doença sem a mutação ou como primeira linha em alguns protocolos) tem eficácia mais limitada nos casos multissistêmicos ou refratários (Haroche et al., Blood 2013; PMID 23258922). As demais alternativas são incorretas: tratar empiricamente como aortite de Takayasu ou fibrose retroperitoneal idiopática ignora o quadro sistêmico multiorgânico (ósseo, hipofisário, cardíaco) incompatível com essas condições, e intervenção cirúrgica cardíaca isolada sem diagnóstico etiológico e sem terapia sistêmica dirigida não trata a doença de base nem evita progressão/recidiva.",
+    "source_refs": [
+      "Haroche J, Amoura Z, Dion E, et al. Cardiovascular involvement, an overlooked feature of Erdheim-Chester disease: report of 6 new cases and a literature review. Medicine (Baltimore). 2004;83(6):371-392. PMID 15525849.",
+      "Dion E, Graef C, Haroche J, Renard-Penna R, Cluzel P, Wechsler B, Piette JC, Grenier PA. Imaging of thoracoabdominal involvement in Erdheim-Chester disease. AJR Am J Roentgenol. 2004;183(5):1253-1260. PMID 15505288.",
+      "Haroche J, Charlotte F, Arnaud L, et al. High prevalence of BRAF V600E mutations in Erdheim-Chester disease but not in other non-Langerhans cell histiocytoses. Blood. 2012;120(13):2700-2703. PMID 22879539.",
+      "Haroche J, Cohen-Aubart F, Emile JF, et al. Dramatic efficacy of vemurafenib in both multisystemic and refractory Erdheim-Chester disease and Langerhans cell histiocytosis harboring the BRAF V600E mutation. Blood. 2013;121(9):1495-1500. PMID 23258922."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
