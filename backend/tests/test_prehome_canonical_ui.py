@@ -82,8 +82,14 @@ def test_no_browser_scale_or_zoom_workaround():
     assert "scale(" not in css
 
 
-def test_global_contrast_guard_remains_last_global_stylesheet():
+def test_global_safety_stylesheets_remain_at_the_end_of_the_manifest():
     main = _read("main.tsx")
+    manifest = _read("styles/app.css")
     imports = [line.strip() for line in main.splitlines() if line.strip().startswith('import "./styles/')]
-    assert imports[-1] == 'import "./styles/clinical-form-control-contrast.css";'
-    assert not any("prehome-register-bridge" in line or "prehome-fidelity-polish" in line for line in imports)
+    manifest_imports = [line.strip() for line in manifest.splitlines() if line.strip().startswith("@import")]
+    assert imports == ['import "./styles/app.css";']
+    assert manifest_imports[-2:] == [
+        '@import "./clinical-form-control-contrast.css";',
+        '@import "./clinical-safety-legibility.css";',
+    ]
+    assert not any("prehome-register-bridge" in line or "prehome-fidelity-polish" in line for line in manifest_imports)

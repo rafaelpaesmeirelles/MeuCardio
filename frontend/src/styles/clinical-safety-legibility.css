@@ -1,0 +1,286 @@
+/* Clinical safety legibility contract.
+ *
+ * Loaded last on purpose: historical fidelity/hotfix layers compress several
+ * clinical surfaces below a safe reading size.  This file establishes the
+ * final, testable floor for information used during care without changing the
+ * brand, routes, data or clinical content.
+ */
+
+:root {
+  --corvia-clinical-copy: 1rem;
+  --corvia-clinical-meta: .875rem;
+  --corvia-clinical-target: 44px;
+}
+
+/* Emergency: the fixed surface must occupy only the space to the right of the
+ * desktop navigation.  `width:100%` in a late release layer previously made
+ * the box end 224px beyond the viewport. */
+@media (min-width: 901px) {
+  body.corvia-route--emergencia .clinical-os .cos-content > .emerg {
+    left: var(--ccc-nav-w) !important;
+    right: 0 !important;
+    width: calc(100vw - var(--ccc-nav-w)) !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - var(--ccc-nav-w)) !important;
+  }
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command {
+  width: min(100%, 1180px);
+  max-width: 1180px;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg__marca,
+body.corvia-route--emergencia .clinical-os .emerg-command__hero > small,
+body.corvia-route--emergencia .clinical-os .emerg-command__quick > small,
+body.corvia-route--emergencia .clinical-os .emerg-command__footer strong,
+body.corvia-route--emergencia .clinical-os .emerg__origem {
+  font-size: var(--corvia-clinical-meta) !important;
+  line-height: 1.4 !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__hero h1 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+  line-height: 1.2 !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__hero p,
+body.corvia-route--emergencia .clinical-os .emerg-command__steps .emerg__corpo,
+body.corvia-route--emergencia .clinical-os .emerg-command__steps .emerg__corpo p,
+body.corvia-route--emergencia .clinical-os .emerg-command__steps .emerg__corpo li {
+  font-size: var(--corvia-clinical-copy) !important;
+  line-height: 1.55 !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__steps .emerg__secaoTitulo {
+  min-height: 48px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  padding: .65rem .75rem;
+  font-size: var(--corvia-clinical-copy) !important;
+  line-height: 1.35;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__step-number {
+  width: 28px;
+  height: 28px;
+  font-size: var(--corvia-clinical-meta) !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__quick a {
+  min-height: 48px;
+  grid-template-columns: 24px minmax(0, 1fr);
+  padding: .6rem .7rem;
+  font-size: .9375rem !important;
+  line-height: 1.3;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg-command__quick a svg {
+  width: 18px;
+  height: 18px;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg__diagrama h2 {
+  font-size: 1.125rem !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg__diagrama > div {
+  background: #f7fbfc !important;
+  border: 2px solid #78a9bb !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg__diagrama :where(.nodeLabel, .label, .edgeLabel),
+body.corvia-route--emergencia .clinical-os .emerg__diagrama foreignObject div {
+  color: #17313f !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  opacity: 1 !important;
+}
+
+body.corvia-route--emergencia .clinical-os .emerg__diagrama svg text {
+  fill: #17313f !important;
+  opacity: 1 !important;
+}
+
+@media (min-width: 901px) {
+  body.corvia-route--emergencia .clinical-os .emerg__diagrama .fluxograma__recipiente {
+    max-height: 72vh;
+    overflow: auto;
+  }
+}
+
+/* Medication command: dose, indication, interactions and monitoring are
+ * clinical content, not decorative microcopy. */
+.clinical-os .mc-command__back,
+.clinical-os .mc-command__favorite,
+.clinical-os .mc-command__prescribe,
+.clinical-os .mc-command__tabs button {
+  min-width: var(--corvia-clinical-target);
+  min-height: var(--corvia-clinical-target);
+}
+
+.clinical-os .mc-command__identity h1 { font-size: 1.375rem !important; }
+.clinical-os .mc-command__identity p,
+.clinical-os .mc-command__prescribe,
+.clinical-os .mc-command__tabs button,
+.clinical-os .mc-command__primary-block > small,
+.clinical-os .mc-command__intelligence section > small,
+.clinical-os .mc-command__primary-block--evidence > p,
+.clinical-os .mc-command__intelligence > header strong,
+.clinical-os .mc-command__intelligence section > p,
+.clinical-os .mc-command__facts small,
+.clinical-os .mc-command__facts span {
+  font-size: var(--corvia-clinical-meta) !important;
+  line-height: 1.4 !important;
+}
+
+.clinical-os .mc-command__primary-block > strong,
+.clinical-os .mc-command__primary-block .clinical-richtext,
+.clinical-os .mc-command__primary-block .clinical-richtext p,
+.clinical-os .mc-command__primary-block--dose .clinical-richtext p,
+.clinical-os .mc-command__intel-item .clinical-richtext,
+.clinical-os .mc-command__intel-item .clinical-richtext p,
+.clinical-os .mc-command__condition span,
+.clinical-os .mc-command__facts strong {
+  font-size: var(--corvia-clinical-copy) !important;
+  line-height: 1.5 !important;
+}
+
+.clinical-os .mc-command__facts article { min-height: 92px; }
+
+/* Agenda: preserve the dense calendar, but keep every actionable control and
+ * every patient/time label readable. */
+body.corvia-route--agenda .clinical-os :where(
+  .agenda-cabecalho .eyebrow,
+  .agenda-cabecalho h1 + p,
+  .agenda-status,
+  .agenda-contas-destaque__topo p:last-child,
+  .agenda-conta-provider small,
+  .agenda-navegacao h2,
+  .agenda-filtros input,
+  .agenda-filtros select,
+  .agenda-dia > header span,
+  .agenda-dia > header i,
+  .agenda-evento__hora span,
+  .agenda-evento__meta,
+  .agenda-evento__corpo p,
+  .agenda-pill,
+  .agenda-insights .eyebrow,
+  .agenda-insights span,
+  .agenda-insights__mobilidade button
+) {
+  font-size: var(--corvia-clinical-meta) !important;
+  line-height: 1.4 !important;
+}
+
+body.corvia-route--agenda .clinical-os :where(
+  .agenda-cabecalho__acoes .botao,
+  .agenda-status button,
+  .agenda-navegacao button,
+  .agenda-visoes button,
+  .agenda-filtros input,
+  .agenda-filtros select,
+  .agenda-filtro-contas > button
+) {
+  min-height: var(--corvia-clinical-target) !important;
+  font-size: var(--corvia-clinical-meta) !important;
+}
+
+body.corvia-route--agenda .clinical-os :where(
+  .agenda-conta-provider strong,
+  .agenda-evento__hora strong,
+  .agenda-evento__linha h3,
+  .agenda-insights strong
+) {
+  font-size: var(--corvia-clinical-copy) !important;
+  line-height: 1.4 !important;
+}
+
+body.corvia-route--agenda .clinical-os .agenda-dia > header { min-height: 44px; }
+
+/* Evidence and the shared command primitives. */
+.clinical-os .cc-evidence-page :where(
+  .cc-page-header__description,
+  .cc-section__heading p:not(.eyebrow),
+  .cc-metric__top,
+  .cc-metric > small,
+  .cc-filter-grid label > span,
+  .cc-filterbar__result,
+  .cc-filter-summary,
+  .cc-recommendation-row small,
+  .cc-recommendation-row__meta,
+  .cc-context-link small
+) {
+  font-size: var(--corvia-clinical-meta) !important;
+  line-height: 1.45 !important;
+}
+
+.clinical-os .cc-evidence-page :where(
+  .cc-recommendation-row strong,
+  .cc-recommendation-row p,
+  .cc-context-link strong
+) {
+  font-size: var(--corvia-clinical-copy) !important;
+  line-height: 1.5 !important;
+}
+
+.clinical-os .cc-evidence-page :where(.cc-action, button, input, select, a.cc-context-link) {
+  min-height: var(--corvia-clinical-target);
+}
+
+/* Desktop home rails: they are context and clinical work queues, therefore
+ * their text must remain legible even when the three-column board is active. */
+@media (min-width: 901px) {
+  .clinical-os .ccc-reference-board :where(
+    .ccc-home__intelligence,
+    .ccc-home__assistant
+  ) :where(small, p, span, button, a) {
+    font-size: .8125rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .clinical-os .ccc-reference-board :where(
+    .ccc-home__intelligence,
+    .ccc-home__assistant
+  ) strong {
+    font-size: .9375rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .clinical-os .ccc-reference-board :where(
+    .ccc-home__intelligence,
+    .ccc-home__assistant
+  ) :where(button, a) {
+    min-height: var(--corvia-clinical-target);
+  }
+}
+
+/* Registration uses one document scroll.  A second 872px scroll container
+ * previously trapped the lower form and produced a visible inner scrollbar. */
+@media (min-width: 901px) {
+  .prehome--register,
+  .prehome--register .prehome-access {
+    height: auto !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .prehome--register .prehome-access { align-items: flex-start; }
+  .prehome--register .prehome-card--register {
+    max-height: none !important;
+    margin-block: 1.5rem;
+    overflow: visible !important;
+  }
+}
+
+.prehome--register :where(.prehome-step, label, .login-formulario__secao-nota, .login-formulario__aviso) {
+  font-size: var(--corvia-clinical-meta) !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 900px) {
+  body.corvia-route--emergencia .clinical-os .emerg-command__layout { grid-template-columns: 1fr; }
+  body.corvia-route--emergencia .clinical-os .emerg-command__quick { grid-template-columns: 1fr; }
+  .clinical-os .mc-command__identity h1 { font-size: 1.25rem !important; }
+  .clinical-os .mc-command__facts { grid-template-columns: 1fr; }
+}

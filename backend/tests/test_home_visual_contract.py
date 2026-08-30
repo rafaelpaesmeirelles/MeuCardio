@@ -18,7 +18,7 @@ def test_anonymous_root_enters_canonical_login_not_legacy_marketing_landing():
 def test_authenticated_home_matches_reference_board_structure():
     panel = _read("pages/PainelClinicalOS.tsx")
     final_css = _read("styles/clinical-reference-board-final.css")
-    main = _read("main.tsx")
+    manifest = _read("styles/app.css")
 
     for token in (
         'ccc-reference-board',
@@ -55,10 +55,10 @@ def test_authenticated_home_matches_reference_board_structure():
 
     # O override final precisa vir depois de todas as camadas históricas da Home
     # e antes do contrato global de contraste dos formulários.
-    reference_import = 'import "./styles/clinical-reference-board-final.css";'
-    contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
-    assert reference_import in main
-    assert main.index(reference_import) < main.index(contrast_import)
+    reference_import = '@import "./clinical-reference-board-final.css";'
+    contrast_import = '@import "./clinical-form-control-contrast.css";'
+    assert reference_import in manifest
+    assert manifest.index(reference_import) < manifest.index(contrast_import)
 
 
 def test_mobile_quick_actions_default_to_two_rows_without_duplicate_originals():

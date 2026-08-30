@@ -2,7 +2,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-MAIN = ROOT / "frontend" / "src" / "main.tsx"
+STYLE_MANIFEST = ROOT / "frontend" / "src" / "styles" / "app.css"
 APP = ROOT / "frontend" / "src" / "App.tsx"
 CONTEXT = ROOT / "frontend" / "src" / "components" / "ClinicalRouteContext.tsx"
 BOARD_LOCK = ROOT / "frontend" / "src" / "styles" / "clinical-interior-board-lock.css"
@@ -13,13 +13,13 @@ def compact(text: str) -> str:
 
 
 def test_approved_board_lock_is_loaded_after_legacy_fidelity_layers():
-    main = MAIN.read_text(encoding="utf-8")
-    board_import = 'import "./styles/clinical-interior-board-lock.css";'
-    contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
-    assert board_import in main
-    assert contrast_import in main
-    assert main.index(board_import) < main.index(contrast_import)
-    assert main.index(board_import) > main.index('import "./styles/clinical-reference-fidelity-release.css";')
+    manifest = STYLE_MANIFEST.read_text(encoding="utf-8")
+    board_import = '@import "./clinical-interior-board-lock.css";'
+    contrast_import = '@import "./clinical-form-control-contrast.css";'
+    assert board_import in manifest
+    assert contrast_import in manifest
+    assert manifest.index(board_import) < manifest.index(contrast_import)
+    assert manifest.index(board_import) > manifest.index('@import "./clinical-reference-fidelity-release.css";')
 
 
 def test_approved_home_is_isolated_from_the_internal_page_lock():

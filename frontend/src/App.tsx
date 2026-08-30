@@ -79,6 +79,25 @@ const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade")
 const Tour = lazy(() => import("./pages/Tour"));
 const ValidarDocumento = lazy(() => import("./pages/ValidarDocumento"));
 
+const TITULOS_PUBLICOS: Record<string, string> = {
+  "/produto": "CorVIA Clinical OS — Plataforma médica",
+  "/entrar": "Entrar — CorVIA Clinical OS",
+  "/solicitar-acesso": "Solicitar acesso — CorVIA Clinical OS",
+  "/esqueci-senha": "Recuperar acesso — CorVIA Clinical OS",
+  "/redefinir-senha": "Redefinir senha — CorVIA Clinical OS",
+  "/corvia-mail": "CorVIA Mail — CorVIA Clinical OS",
+  "/privacidade": "Política de Privacidade — CorVIA Clinical OS",
+  "/excluir-conta": "Exclusão de conta — CorVIA Clinical OS",
+  "/termos": "Termos de Uso — CorVIA Clinical OS",
+};
+
+function tituloDaRota(pathname: string) {
+  if (pathname === "/validar" || pathname.startsWith("/validar/")) {
+    return "Validar documento clínico — CorVIA Clinical OS";
+  }
+  return TITULOS_PUBLICOS[pathname] ?? "CorVIA — Clinical OS";
+}
+
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
     <Suspense fallback={<Carregando texto="Carregando a tela…" />}>
@@ -92,6 +111,7 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = tituloDaRota(location.pathname);
     (window as unknown as { __corviaVerificarAtualizacao?: () => void })
       .__corviaVerificarAtualizacao?.();
   }, [location.pathname]);

@@ -252,6 +252,10 @@ jobs:
         working-directory: frontend
         run: node scripts/check-form-control-contrast.mjs
 
+      - name: Test clinical legibility, CSS architecture and public UX contracts
+        working-directory: frontend
+        run: node --test scripts/check-clinical-ux-contract.test.mjs
+
       - name: Enforce admin ficha (Histórico) contrast and legible rendering
         working-directory: frontend
         run: node scripts/check-admin-ficha-historico.mjs

@@ -5,11 +5,11 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_release_candidate_hotfix_is_last_visual_override_before_form_contrast():
-    main = (ROOT / "frontend/src/main.tsx").read_text(encoding="utf-8")
-    hotfix_import = 'import "./styles/release-candidate-hotfix.css";'
-    contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
-    assert hotfix_import in main
-    assert main.index(hotfix_import) < main.index(contrast_import)
+    manifest = (ROOT / "frontend/src/styles/app.css").read_text(encoding="utf-8")
+    hotfix_import = '@import "./release-candidate-hotfix.css";'
+    contrast_import = '@import "./clinical-form-control-contrast.css";'
+    assert hotfix_import in manifest
+    assert manifest.index(hotfix_import) < manifest.index(contrast_import)
 
 
 def test_post_86_review_regressions_are_explicitly_hardened():

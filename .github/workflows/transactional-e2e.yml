@@ -1,0 +1,227 @@
+name: Transactional E2E — Clinical workflows
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/transactional-e2e.yml"
+      - "backend/**"
+      - "frontend/**"
+      - "controlados/**"
+      - "medicamentos/**"
+
+permissions:
+  contents: read
+
+jobs:
+  transactional-e2e:
+    name: Synthetic prescriptions, documents, mail and integrations
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      COMPOSE_PROJECT_NAME: corvia_transactional_e2e
+      ENVIRONMENT: test
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: corvia_e2e
+      POSTGRES_PASSWORD: e2e-test
+      POSTGRES_DB: corvia_e2e
+      REDIS_URL: redis://redis:6379/0
+      STORAGE_ENCRYPTION_KEY: MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+      JWT_SECRET: chave-e2e-nao-usar-em-producao
+      ADMIN_EMAIL: transactional-e2e@teste.local
+      ADMIN_PASSWORD: transactional-e2e-seguro-123
+      AI_ENABLED: "false"
+      MAIL360_CLIENT_ID: id-de-teste
+      MAIL360_CLIENT_SECRET: secret-de-teste
+      MAIL360_REFRESH_TOKEN: refresh-de-teste
+      CORVIA_MAIL_PRECO_CENTAVOS: "1000"
+      STRIPE_SECRET_KEY: sk_test_dummy
+      STRIPE_WEBHOOK_SECRET: whsec_e2e_dummy
+      PUBLIC_URL: http://127.0.0.1:8080
+      UPLOADS_DIR: /tmp/corvia-e2e/uploads
+      EXAMES_DIR: /tmp/corvia-e2e/exames-pacientes
+      DOCUMENTOS_DIR: /tmp/corvia-e2e/documentos-emitidos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Create isolated runtime environment
+        run: |
+          cat > .env <<'ENV'
+          COMPOSE_PROJECT_NAME=corvia_transactional_e2e
+          ENVIRONMENT=test
+          POSTGRES_HOST=db
+          POSTGRES_PORT=5432
+          POSTGRES_USER=corvia_e2e
+          POSTGRES_PASSWORD=e2e-test
+          POSTGRES_DB=corvia_e2e
+          REDIS_URL=redis://redis:6379/0
+          STORAGE_ENCRYPTION_KEY=MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+          JWT_SECRET=chave-e2e-nao-usar-em-producao
+          ADMIN_EMAIL=transactional-e2e@teste.local
+          ADMIN_PASSWORD=transactional-e2e-seguro-123
+          AI_ENABLED=false
+          MAIL360_CLIENT_ID=id-de-teste
+          MAIL360_CLIENT_SECRET=secret-de-teste
+          MAIL360_REFRESH_TOKEN=refresh-de-teste
+          CORVIA_MAIL_PRECO_CENTAVOS=1000
+          STRIPE_SECRET_KEY=sk_test_dummy
+          STRIPE_WEBHOOK_SECRET=whsec_e2e_dummy
+          PUBLIC_URL=http://127.0.0.1:8080
+          UPLOADS_DIR=/tmp/corvia-e2e/uploads
+          EXAMES_DIR=/tmp/corvia-e2e/exames-pacientes
+          DOCUMENTOS_DIR=/tmp/corvia-e2e/documentos-emitidos
+          ENV
+
+      - name: Start isolated API stack
+        run: docker compose up -d --build db redis backend
+
+      - name: Wait for database migrations and API readiness
+        run: |
+          for attempt in $(seq 1 90); do
+            if curl --fail --silent http://127.0.0.1:8000/api/ready >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose ps
+          docker compose logs --no-color backend
+          exit 1
+
+      - name: Seed only versioned clinical fixtures required by the test
+        run: |
+          BACKEND_ID="$(docker compose ps -q backend)"
+          docker cp controlados "$BACKEND_ID:/controlados"
+          docker cp medicamentos "$BACKEND_ID:/medicamentos"
+          docker compose exec -T backend python - <<'PY'
+          from app.core.db import SessionLocal
+          from app.models.drug import Drug
+          from app.services.carregar_controlados import carregar as carregar_controlados
+          from app.services.carregar_drugs import carregar as carregar_drugs
+
+          db = SessionLocal()
+          try:
+              print(carregar_controlados(db, "/controlados/listas-344-98.json"))
+          finally:
+              db.close()
+          print(carregar_drugs("/medicamentos/metadados.json"))
+
+          # Equivale à etapa publish-reviewed da reconciliação, limitada ao
+          # catálogo carregado neste banco descartável.
+          db = SessionLocal()
+          try:
+              published = db.query(Drug).filter(
+                  Drug.review_status == "revisado",
+                  Drug.published.is_(False),
+              ).update({Drug.published: True}, synchronize_session=False)
+              db.commit()
+              print({"medicamentos_publicados_para_e2e": published})
+          finally:
+              db.close()
+          PY
+
+      - name: Create synthetic administrator
+        run: |
+          docker compose exec -T backend python -m app.commands.create_admin \
+            --email transactional-e2e@teste.local \
+            --password transactional-e2e-seguro-123 \
+            --name "Dr. Fluxo E2E"
+
+      - name: Build production frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Serve production build through isolated Nginx
+        run: |
+          mkdir -p transactional-e2e
+          cat > transactional-e2e/nginx.conf <<'NGINX'
+          server {
+            listen 80;
+            server_name _;
+            root /usr/share/nginx/html;
+            index index.html;
+            add_header X-Content-Type-Options "nosniff" always;
+            add_header X-Frame-Options "DENY" always;
+            add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+            location /api/ {
+              proxy_pass http://backend:8000/api/;
+              proxy_http_version 1.1;
+              proxy_set_header Host $host;
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header X-Forwarded-Proto $scheme;
+              proxy_buffering off;
+            }
+            location / { try_files $uri $uri/ /index.html; }
+          }
+          NGINX
+          docker run -d --name corvia-transactional-e2e-nginx \
+            --network corvia_transactional_e2e_default \
+            -p 8080:80 \
+            -v "$PWD/frontend/dist:/usr/share/nginx/html:ro" \
+            -v "$PWD/transactional-e2e/nginx.conf:/etc/nginx/conf.d/default.conf:ro" \
+            nginx:1.27-alpine
+
+      - name: Wait for production HTTP readiness
+        run: |
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:8080/api/ready >/dev/null \
+              && curl --fail --silent http://127.0.0.1:8080/entrar >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose logs --no-color backend
+          docker logs corvia-transactional-e2e-nginx || true
+          exit 1
+
+      - name: Install ephemeral Chromium runner
+        run: |
+          mkdir -p /tmp/corvia-transactional-e2e
+          cd /tmp/corvia-transactional-e2e
+          npm init -y >/dev/null
+          npm install --no-audit --no-fund playwright@1.54.2
+          npx playwright install --with-deps chromium
+
+      - name: Run synthetic transactional E2E
+        env:
+          BASE_URL: http://127.0.0.1:8080
+          E2E_EMAIL: transactional-e2e@teste.local
+          E2E_PASSWORD: transactional-e2e-seguro-123
+          ARTIFACT_DIR: ${{ github.workspace }}/transactional-e2e
+        run: |
+          cp frontend/scripts/transactional-e2e.mjs /tmp/corvia-transactional-e2e/transactional-e2e.mjs
+          cd /tmp/corvia-transactional-e2e
+          node transactional-e2e.mjs
+
+      - name: Upload transactional report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: corvia-transactional-e2e
+          path: transactional-e2e/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Show stack logs on failure
+        if: failure()
+        run: |
+          docker compose logs --no-color --tail=300 backend
+          docker logs corvia-transactional-e2e-nginx || true
+
+      - name: Destroy isolated data
+        if: always()
+        run: |
+          docker rm -f corvia-transactional-e2e-nginx 2>/dev/null || true
+          docker compose down -v --remove-orphans
