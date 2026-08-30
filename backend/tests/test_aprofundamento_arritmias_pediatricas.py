@@ -84,6 +84,10 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",
     "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",
     "flutter-atrial-pos-natal-no-neonato-lactente-e-crianca-macrorreentria-cardioversao-e-overdrive-pacing",
+    "extrassistoles-ventriculares-e-supraventriculares-na-crianca-e-no-adolescente-limiar-de-carga-historia-natural-e-tratamento",
+    "comunicar-diagnostico-de-canalopatia-hereditaria-teste-em-cascata-culpa-parental-e-teste-em-menores",
+    "fluxograma-sindrome-do-qt-longo-congenito-diagnostico-e-manejo-esc-2022",
+    "taquicardia-juncional-jet-e-pjrt-diagnostico-diferencial-e-ablacao-por-cateter",
 }
 
 

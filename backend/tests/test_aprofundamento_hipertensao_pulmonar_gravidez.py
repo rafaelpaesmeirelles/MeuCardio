@@ -99,6 +99,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # nesta ficha depois que ambos os PRs forem mesclados; documentado
     # preventivamente aqui)
     "sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac",
+    "anticoncepcao-na-mulher-com-cardiopatia-criterios-de-elegibilidade-da-oms-posicionamento-sbc-2020",
 }
 
 

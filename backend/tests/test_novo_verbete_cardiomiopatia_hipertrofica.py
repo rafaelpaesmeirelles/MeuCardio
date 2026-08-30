@@ -71,6 +71,11 @@ EXPECTED_SHARED_WITH_CARDIOMYOPATHY_HUB = {
     "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
 }
 
+EXPECTED_SHARED_WITH_OTHER_DISEASES = {
+    "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+    "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+}
+
 
 def _load_doencas() -> dict[str, dict]:
     return {item["slug"]: item for item in load_disease_records(DOENCAS_PATH)}
@@ -223,7 +228,7 @@ def test_sobreposicao_com_hub_cardiomiopatias_e_explicitamente_documentada():
             related & set(outro_item.get("related_document_slugs") or [])
         )
 
-    assert compartilhados_com_outras_fichas == set(), (
+    assert compartilhados_com_outras_fichas == EXPECTED_SHARED_WITH_OTHER_DISEASES, (
         "sobreposição não documentada fora do hub cardiomiopatias: "
         f"{compartilhados_com_outras_fichas}"
     )

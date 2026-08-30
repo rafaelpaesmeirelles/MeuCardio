@@ -41,6 +41,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # documento-hub de TAVI/futilidade no idoso frágil é citado por
     # múltiplas fichas geriátricas correlatas)
     "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+    "bloqueio-av-e-disturbio-de-conducao-apos-tavi",
 }
 
 

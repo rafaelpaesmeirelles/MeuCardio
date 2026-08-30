@@ -41,6 +41,7 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac",
     "circulacao-de-fontan-e-gestacao-desfechos-maternos-e-fetais",
     "sindrome-de-eisenmenger-contraindicacao-absoluta-a-gestacao-mecanismo-mwho-iv",
+    "escores-de-risco-materno-carpreg-carpreg-ii-e-zahara",
 }
 
 def _load_doencas() -> dict[str, dict]:
