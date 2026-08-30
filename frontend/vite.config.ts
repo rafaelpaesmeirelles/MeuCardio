@@ -22,10 +22,6 @@ const buscaTudoComTudoSomenteOnline = /(?:^|\/)Busca-[^/]*\.js$/;
 // chunks não os torna utilizáveis offline; eles permanecem disponíveis pelo
 // cache NetworkFirst de assets quando acessados.
 const conteudoConectadoSomenteOnline = /(?:^|\/)(?:ChecklistModelo|ChecklistAlta|MaterialPaciente|MaterialPacienteDetalhe|Trilha)-[^/]*\.js$/;
-// A nova home Cardiology Spaces permanece protegida por feature flag. Enquanto
-// não for promovida a experiência padrão, seus chunks são carregados sob
-// demanda e não ocupam o orçamento do precache inicial dos usuários atuais.
-const cardiologySpacesSomenteOnline = /(?:^|\/)CardiologySpacesHome-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -67,7 +63,6 @@ export default defineConfig({
               if (analiseCardiovascularSomenteOnline.test(entry.url)) return false;
               if (buscaTudoComTudoSomenteOnline.test(entry.url)) return false;
               if (conteudoConectadoSomenteOnline.test(entry.url)) return false;
-              if (cardiologySpacesSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;

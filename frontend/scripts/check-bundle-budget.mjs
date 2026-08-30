@@ -157,13 +157,11 @@ for (const path of await listarArquivos(dist.pathname)) {
 // O precache medido foi 2935732 B, 948 B acima do teto. O acréscimo mínimo de
 // 1 KiB preserva inalterados entrypoint, gzip, code splitting e chunks opcionais.
 //
-// Ajustado de 2867 KB para 2880 KB em 30/08/2026: a identidade Cardiology
-// Spaces reutiliza o coração holográfico canônico em um chunk compartilhado e
-// levou o precache base a 2935980 B. Os chunks completos da nova home continuam
-// excluídos do precache enquanto a feature flag estiver desligada; a margem de
-// ~13 KiB acomoda o ativo compartilhado sem relaxar entrypoint, gzip, divisão
-// por rotas ou o teto individual de chunks opcionais.
-const maxPrecacheBytes = 2880 * 1024;
+// Ajustado para 2920 KB na promoção de Cardiology Spaces em 30/08/2026. A home
+// canônica passa a integrar o precache (JS + CSS), elevando a medição para
+// 2974215 B. A margem permanece estreita (~15 KiB) e não relaxa entrypoint,
+// gzip, divisão por rotas nem o teto individual de chunks opcionais.
+const maxPrecacheBytes = 2920 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

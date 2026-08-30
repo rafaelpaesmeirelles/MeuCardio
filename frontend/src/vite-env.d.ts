@@ -3,6 +3,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_API_URL?: string;
+  readonly VITE_CARDIOLOGY_SPACES_ENABLED?: string;
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;
