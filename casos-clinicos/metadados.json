@@ -17724,5 +17724,28 @@
       "Bissell LA, Dumitru RB, Erhayiem B, et al. Incidental significant arrhythmia in scleroderma associates with cardiac magnetic resonance measure of fibrosis and hs-TnI and NT-proBNP. Rheumatology (Oxford). 2019;58(7):1221-1226. doi:10.1093/rheumatology/key430. PMID: 30690570."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "bav-jovem-sarcoidose-cardiaca-cdi-vs-marcapasso",
+    "titulo": "BAV avançado em jovem: suspeitar de sarcoidose cardíaca",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Homem de 38 anos, previamente hígido, sem hipertensão, diabetes, uso de drogas cronotrópicas negativas ou história de doença de Lyme, é internado por pré-síncope. O ECG mostra bloqueio atrioventricular (BAV) Mobitz II progredindo para BAV total, exigindo marca-passo transvenoso temporário. O ecocardiograma mostra função biventricular preservada, com discreto espessamento septal basal.",
+    "pergunta": "Diante de BAV avançado inexplicado em um paciente jovem sem causa aparente, qual é a conduta diagnóstica e terapêutica mais apropriada, em vez de simplesmente indicar um marca-passo convencional?",
+    "opcoes": [
+      "Implantar marca-passo definitivo convencional (câmara única ou dupla) sem investigação etiológica adicional, pois BAV avançado inexplicado em adultos jovens é geralmente atribuído a doença degenerativa idiopática do sistema de condução",
+      "Investigar sarcoidose cardíaca com ressonância magnética cardíaca com realce tardio por gadolínio e PET-FDG cardíaco; se confirmado o diagnóstico, optar por CDI em vez de marca-passo convencional isolado, dada a prevalência relevante de sarcoidose nessa população e o risco de morte súbita arrítmica",
+      "Solicitar apenas sorologia para doença de Lyme e, caso negativa, prosseguir com implante de marca-passo convencional, reservando a investigação de doenças infiltrativas apenas para pacientes com disfunção ventricular já estabelecida",
+      "Encaminhar diretamente para estudo eletrofisiológico invasivo para localizar o nível anatômico do bloqueio, já que a escolha entre marca-passo e CDI deve se basear exclusivamente na fração de ejeção medida após o implante do dispositivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "BAV de alto grau (2º grau Mobitz II ou total) sem causa aparente em pacientes ≤60 anos não deve ser rotulado como doença degenerativa idiopática do sistema de condução sem investigação etiológica. No estudo prospectivo de Nery et al. (J Cardiovasc Electrophysiol 2014;25(8):875-881, PMID 24602015), 34% (11/32) dos pacientes de 18-60 anos com BAV 2º/3º grau inexplicado tinham sarcoidose cardíaca (SC) previamente não diagnosticada, identificada por PET-FDG cardíaco e critérios do Japanese Ministry of Health and Welfare; todos os eventos adversos (insuficiência cardíaca, taquicardia ventricular com choques de CDI) ocorreram exclusivamente no grupo com SC, e nenhum no grupo com BAV idiopático. Isso sustenta a recomendação de investigar sistematicamente SC em todo BAV inexplicado nessa faixa etária. A RM cardíaca com realce tardio por gadolínio e o PET-FDG cardíaco (que avalia inflamação ativa, complementando a RM, que mostra fibrose/cicatriz) são os pilares diagnósticos e de estratificação de risco, conforme o consenso de especialistas da Heart Rhythm Society (Birnie DH et al., Heart Rhythm 2014;11(7):1305-1323, PMID 24819193) e reforçados pelo valor prognóstico do PET-FDG demonstrado por Blankstein et al. (J Am Coll Cardiol 2014;63(4):329-336, PMID 24140661), em que a captação anormal de FDG se associou a maior risco de morte e taquicardia ventricular, mesmo com função sistólica preservada. Uma vez confirmada a SC, a recomendação do consenso da HRS 2014 — reafirmada por revisões recentes que alinham as diretrizes da AHA e da ESC (Alhareth D et al., Cardiol Res Pract 2026;2026:4913082, PMID 42369165) — é implantar CDI em vez de marca-passo convencional isolado quando há indicação de estimulação, pelo risco substancial de morte súbita por arritmia ventricular associado ao substrato inflamatório/fibrótico da sarcoidose, independentemente da fração de ejeção no momento do diagnóstico. As demais alternativas (marca-passo convencional sem investigação, sorologia isolada para Lyme, ou decisão de dispositivo baseada só na fração de ejeção pós-implante) ignoram a prevalência relevante de SC nessa apresentação e o risco arrítmico específico que motiva a preferência por CDI.",
+    "source_refs": [
+      "Nery PB, Beanlands RS, Nair GM, et al. Atrioventricular block as the initial manifestation of cardiac sarcoidosis in middle-aged adults. J Cardiovasc Electrophysiol. 2014;25(8):875-881. doi:10.1111/jce.12401. PMID 24602015.",
+      "Birnie DH, Sauer WH, Bogun F, et al. HRS expert consensus statement on the diagnosis and management of arrhythmias associated with cardiac sarcoidosis. Heart Rhythm. 2014;11(7):1305-1323. doi:10.1016/j.hrthm.2014.03.043. PMID 24819193.",
+      "Blankstein R, Osborne M, Naya M, et al. Cardiac positron emission tomography enhances prognostic assessments of patients with suspected cardiac sarcoidosis. J Am Coll Cardiol. 2014;63(4):329-336. doi:10.1016/j.jacc.2013.09.022. PMID 24140661.",
+      "Alhareth D, Ghazawi AE, Ajami S, Saifi Z, Refaat M. Latest Management of Cardiac Sarcoidosis: A Comprehensive Review. Cardiol Res Pract. 2026;2026:4913082. doi:10.1155/crp/4913082. PMID 42369165."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
