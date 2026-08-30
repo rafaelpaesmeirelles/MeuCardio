@@ -1261,7 +1261,23 @@ Ordem recebida: "prossiga com a produção". Produção retomada.
   e-utils. Cluster de cardiomiopatias de depósito lisossômico (Fabry,
   Pompe, Danon/PRKAG2, MPS) encerrado nesta janela.
 
-## Lote 56 (planejado)
+## Lote 56 — concluído (SHA 838dc722) — total 84 commits
+
+- checklist `disautonomia-e-pots-na-sindrome-de-ehlers-danlos-hipermovel-triagem-triade-clinica-e-manejo`
+  — 5 itens distintos tanto do POTS pós-COVID (gatilho viral) quanto da
+  EDS vascular (risco arterial estrutural): associação epidemiológica
+  (78% vs. 10%, coorte pequena não extrapolada); triagem por Beighton +
+  Critérios 2017, com nota de que hEDS é diagnóstico clínico sem teste
+  confirmatório; tríade hipermobilidade-POTS-MCAS (OR 32,46, faixas de
+  2-87% conforme critério, sem número único apresentado como
+  definitivo); manejo — fisioterapia de fortalecimento antes de
+  exercício cardiovascular; diagnóstico diferencial com red flags que
+  reclassificam para vEDS/Loeys-Dietz. 12 fontes via NCBI e-utils.
+  Confirmado que hemocromatose hereditária, reativação de Chagas
+  pós-transplante, SCAD, Löffler e beriberi já estavam bem cobertos —
+  evitada duplicação.
+
+## Lote 57 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado nesta janela. Confirmar
