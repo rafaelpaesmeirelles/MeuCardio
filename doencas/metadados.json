@@ -39434,5 +39434,809 @@
       "sindrome-de-bartter-e-de-gitelman-tubulopatias-hereditarias-hipocalemia-e-risco-arritmico"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "hemocromatose-cardiaca",
+    "name": "Hemocromatose e acometimento cardiovascular (sobrecarga hereditária e transfusional de ferro)",
+    "aliases": [
+      "cardiomiopatia por sobrecarga de ferro",
+      "cardiomiopatia hemocromatótica",
+      "siderose miocárdica",
+      "cardiopatia da hemocromatose",
+      "cardiomiopatia por depósito de ferro transfusional",
+      "cardiotoxicidade por ferro em talassemia"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "sobrecarga_de_ferro",
+    "prevalence_rank": 28,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia causada pelo depósito de ferro no miócito, decorrente de hemocromatose hereditária (mutações HFE, absorção intestinal excessiva e crônica de ferro) ou de sobrecarga secundária/transfusional (talassemia major, síndromes mielodisplásicas transfusão-dependentes). Evolui de disfunção diastólica assintomática para cardiomiopatia dilatada, arritmias e insuficiência cardíaca; a RM cardíaca T2* é o padrão-ouro para quantificação não invasiva e estadiamento. É potencialmente reversível com remoção adequada do ferro — flebotomia terapêutica na forma hereditária, quelação farmacológica (deferoxamina, deferasirox, deferiprona) na forma secundária.",
+    "presentation": [
+      "Fase inicial frequentemente assintomática, com sobrecarga de ferro miocárdico já detectável por RM T2* antes de qualquer alteração na fração de ejeção ao ecocardiograma",
+      "Disfunção diastólica subclínica, podendo evoluir para padrão restritivo em fases mais avançadas",
+      "Dispneia progressiva, fadiga, edema e demais sinais de insuficiência cardíaca congestiva quando evolui para cardiomiopatia dilatada com fração de ejeção reduzida",
+      "Palpitações e fibrilação atrial ou outras taquiarritmias supraventriculares",
+      "Síncope ou pré-síncope por disfunção do nó sinusal ou distúrbio de condução atrioventricular",
+      "Arritmias ventriculares e risco de morte súbita cardíaca em siderose miocárdica grave não tratada",
+      "Na hemocromatose hereditária, manifestações extracardíacas associadas: hepatopatia, diabetes, artropatia, hiperpigmentação cutânea, hipogonadismo",
+      "Na sobrecarga transfusional, história de transfusões crônicas de concentrado de hemácias (talassemia major, síndrome mielodisplásica, anemia falciforme transfusão-dependente, aplasia medular)"
+    ],
+    "differentials": [
+      "Amiloidose cardíaca (outra cardiomiopatia infiltrativa/restritiva, mecanismo de depósito diferente)",
+      "Fibrose endomiocárdica e síndrome hipereosinofílica (cardiomiopatia restritiva não amiloide)",
+      "Doença de Fabry (cardiomiopatia de depósito de origem genética distinta)",
+      "Cardiomiopatia dilatada de outras etiologias (isquêmica, viral, alcoólica, induzida por taquicardia)",
+      "Cardiotoxicidade por antracíclicos, em pacientes oncológicos com exposição concomitante a transfusões",
+      "Pericardite constritiva, quando a apresentação for predominantemente restritiva"
+    ],
+    "tests": [
+      "Ferritina sérica e saturação de transferrina — triagem inicial de sobrecarga sistêmica de ferro",
+      "Teste genético para mutações de HFE (p.C282Y, p.H63D) quando há suspeita de hemocromatose hereditária",
+      "RM cardíaca com sequência T2* — padrão-ouro para quantificação não invasiva do ferro miocárdico e estadiamento de risco",
+      "RM hepática com quantificação de ferro (T2* ou R2), lembrando que a concordância com o T2* cardíaco é apenas parcial",
+      "Ecocardiograma transtorácico — avalia função sistólica e diastólica, mas não quantifica ferro miocárdico",
+      "Eletrocardiograma — rastreio de distúrbios de condução e arritmias associadas ao depósito de ferro no sistema de condução",
+      "Monitorização de ritmo (Holter) quando há palpitações, síncope ou suspeita de arritmia",
+      "Avaliação hepática, endócrina (glicemia) e articular na hemocromatose hereditária, para estadiamento sistêmico da doença"
+    ],
+    "red_flags": [
+      "Sinais e sintomas de insuficiência cardíaca em paciente com hemocromatose hereditária ou história de transfusões crônicas",
+      "Síncope ou arritmia ventricular em paciente com sobrecarga de ferro conhecida",
+      "T2* cardíaco muito reduzido (especialmente abaixo de 10 ms, e mais ainda abaixo de 6 ms), marcador de risco elevado de disfunção sistólica e insuficiência cardíaca",
+      "Fibrilação atrial ou outra arritmia de início recente em paciente com sobrecarga de ferro não investigada por RM cardíaca",
+      "Deterioração da função ventricular apesar de quelação ou flebotomia em curso, sugerindo inadequação do esquema terapêutico"
+    ],
+    "ambulatory_flow": [
+      "Confirmar e estadiar a sobrecarga de ferro (ferritina, saturação de transferrina, teste genético HFE quando pertinente) e solicitar RM cardíaca T2* mesmo em paciente assintomático de risco",
+      "Na hemocromatose hereditária, iniciar flebotomia terapêutica em fase de indução até normalização dos índices de ferro, seguida de fase de manutenção",
+      "Na sobrecarga secundária/transfusional, encaminhar a hematologista/especialista em hemoglobinopatias para definição e ajuste do esquema de quelação (deferoxamina, deferasirox ou deferiprona, isolados ou combinados) conforme o grau de siderose cardíaca e hepática",
+      "Repetir RM cardíaca T2* de forma seriada para monitorar resposta ao tratamento e ajustar intensidade da quelação ou da flebotomia",
+      "Rastrear e tratar arritmias associadas, com avaliação cardiológica dedicada quando houver palpitações, síncope ou alterações eletrocardiográficas",
+      "Investigar e manejar manifestações extracardíacas na hemocromatose hereditária (hepatopatia, diabetes, artropatia, hipogonadismo) em conjunto com as especialidades pertinentes",
+      "Orientar aconselhamento familiar e rastreio de parentes de primeiro grau na hemocromatose hereditária, dada a herança autossômica recessiva"
+    ],
+    "emergency_flow": [
+      "Avaliar e estabilizar sinais de insuficiência cardíaca aguda ou choque cardiogênico em paciente com cardiomiopatia por sobrecarga de ferro conhecida ou suspeita",
+      "Monitorização eletrocardiográfica contínua diante de arritmia sintomática, síncope ou instabilidade hemodinâmica, pelo risco de disfunção do sistema de condução e arritmia ventricular",
+      "Não suspender abruptamente a quelação de ferro em curso sem orientação de hematologia/especialista, exceto por toxicidade aguda do próprio quelante",
+      "Investigar e tratar causas agudas concomitantes de descompensação (infecção, arritmia nova, não adesão ao tratamento) antes de atribuir toda a piora à progressão da sobrecarga de ferro",
+      "Acionar equipe multidisciplinar (cardiologia, hematologia/hepatologia) para definição de conduta em siderose cardíaca grave com instabilidade clínica",
+      "Considerar suporte avançado de insuficiência cardíaca conforme gravidade, mantendo em paralelo a intensificação da remoção de ferro, dado o potencial de reversibilidade do quadro"
+    ],
+    "tags": [
+      "hemocromatose",
+      "HFE",
+      "sobrecarga de ferro",
+      "cardiomiopatia restritiva",
+      "cardiomiopatia dilatada",
+      "RM cardíaca T2*",
+      "talassemia major",
+      "síndrome mielodisplásica",
+      "quelação de ferro",
+      "deferoxamina",
+      "deferasirox",
+      "deferiprona",
+      "flebotomia terapêutica",
+      "arritmia",
+      "cardiomiopatia infiltrativa"
+    ],
+    "source_refs": [
+      "Feder JN, Gnirke A, Thomas W, et al. A novel MHC class I-like gene is mutated in patients with hereditary haemochromatosis. Nat Genet. 1996;13(4):399-408. PMID: 8696333.",
+      "Brissot P, Pietrangelo A, Adams PC, de Graaff B, McLaren CE, Loréal O. Haemochromatosis. Nat Rev Dis Primers. 2018;4:18016. PMID: 29653732.",
+      "European Association for the Study of the Liver (EASL). EASL clinical practice guidelines for HFE hemochromatosis. J Hepatol. 2010;53(1):3-22. PMID: 20471109.",
+      "Anderson LJ, Holden S, Davis B, et al. Cardiovascular T2-star (T2*) magnetic resonance for the early diagnosis of myocardial iron overload. Eur Heart J. 2001;22(23):2171-2179. PMID: 11913479.",
+      "Kirk P, Roughton M, Porter JB, et al. Cardiac T2* magnetic resonance for prediction of cardiac complications in thalassemia major. Circulation. 2009;120(20):1961-1968. PMID: 19801505.",
+      "Pennell DJ, Udelson JE, Arai AE, et al.; American Heart Association Committee on Heart Failure and Transplantation. Cardiovascular function and treatment in β-thalassemia major: a consensus statement from the American Heart Association. Circulation. 2013;128(3):281-308. PMID: 23775113.",
+      "Pennell DJ, Berdoukas V, Karagiorga M, et al. Randomized controlled trial of deferiprone or deferoxamine in beta-thalassemia major patients with asymptomatic myocardial siderosis. Blood. 2006;107(9):3738-3744. PMID: 16352815.",
+      "Pennell DJ, Porter JB, Cappellini MD, et al. Efficacy of deferasirox in reducing and preventing cardiac iron overload in beta-thalassemia. Blood. 2010;115(12):2364-2371. PMID: 20101026.",
+      "Kremastinos DT, Farmakis D. Iron overload cardiomyopathy in clinical practice. Circulation. 2011;124(20):2253-2263. PMID: 22105196."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8696333/",
+      "https://pubmed.ncbi.nlm.nih.gov/29653732/",
+      "https://pubmed.ncbi.nlm.nih.gov/20471109/",
+      "https://pubmed.ncbi.nlm.nih.gov/11913479/",
+      "https://pubmed.ncbi.nlm.nih.gov/19801505/",
+      "https://pubmed.ncbi.nlm.nih.gov/23775113/",
+      "https://pubmed.ncbi.nlm.nih.gov/16352815/",
+      "https://pubmed.ncbi.nlm.nih.gov/20101026/",
+      "https://pubmed.ncbi.nlm.nih.gov/22105196/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "hemocromatose-cardiovascular-hereditaria-hfe-e-transfusional-rm-t2-estrela-quelacao-e-flebotomia"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "escorbuto-deficiencia-grave-de-vitamina-c",
+    "name": "Escorbuto (deficiência grave de vitamina C) com acometimento cardiovascular",
+    "aliases": [
+      "escorbuto",
+      "deficiência grave de vitamina C",
+      "deficiência de ácido ascórbico",
+      "hemopericárdio escorbútico",
+      "cardiomiopatia por deficiência de vitamina C"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "deficiencia_nutricional",
+    "prevalence_rank": 29,
+    "completeness": "completo",
+    "summary": "Deficiência grave e prolongada de vitamina C compromete a síntese de colágeno (fragilidade capilar difusa, sangramento incluindo hemopericárdio e tamponamento) e a síntese de norepinefrina via dopamina-beta-hidroxilase (disfunção autonômica com hipotensão e bradicardia). Casos graves associam-se a insuficiência cardíaca, hipertensão pulmonar e relatos de morte súbita. O diagnóstico é clínico, apoiado por dosagem de vitamina C plasmática, e a reversão com reposição de ácido ascórbico costuma ser rápida e completa. Populações de risco incluem idosos institucionalizados, transtornos alimentares restritivos, alcoolismo e dietas de eliminação extremas.",
+    "presentation": [
+      "Petéquias perifoliculares com pelos em saca-rolha e hiperqueratose folicular",
+      "Equimoses espontâneas ou desproporcionais a trauma mínimo",
+      "Gengivorragia e gengivite hemorrágica em pacientes dentados",
+      "Fadiga, dor musculoesquelética e retardo de cicatrização de feridas",
+      "Hipotensão (frequentemente ortostática) e bradicardia relativa",
+      "Dispneia, edema e sinais de insuficiência cardíaca ou hipertensão pulmonar em casos graves",
+      "Derrame pericárdico, por vezes hemorrágico, podendo evoluir para tamponamento cardíaco",
+      "Hemorragias subperiosteais com dor óssea e claudicação, sobretudo em crianças"
+    ],
+    "differentials": [
+      "Derrame pericárdico de outra etiologia (neoplásica, urêmica, infecciosa/tuberculosa, pós-pericardiotomia)",
+      "Vasculite leucocitoclástica ou púrpura de Henoch-Schönlein/IgA",
+      "Coagulopatia por deficiência de fator ou trombocitopenia",
+      "Disautonomia primária ou hipotensão por outra causa farmacológica",
+      "Hipotireoidismo com bradicardia e derrame associados",
+      "Outras cardiomiopatias nutricionais reversíveis (selênio, cobre, hipocalcemia, tiamina)",
+      "Abuso físico ou negligência, no diagnóstico diferencial de equimoses em crianças"
+    ],
+    "tests": [
+      "Dosagem de ácido ascórbico plasmático",
+      "Hemograma completo e coagulograma",
+      "Ecocardiograma quando houver suspeita de derrame pericárdico ou disfunção ventricular",
+      "Avaliação nutricional dirigida (história dietética detalhada, peso, IMC, marcadores de desnutrição associada)",
+      "Função tireoidiana para diferencial de bradicardia e derrame pericárdico",
+      "Resposta clínica à reposição empírica de vitamina C como confirmação diagnóstica prática"
+    ],
+    "red_flags": [
+      "Sinais de tamponamento cardíaco: hipotensão, turgência jugular, abafamento de bulhas, pulso paradoxal",
+      "Instabilidade hemodinâmica ou colapso cardiovascular em paciente com fator de risco nutricional",
+      "Sangramento em local crítico associado a sinais cutâneos de fragilidade capilar",
+      "Disfunção ventricular ou hipertensão pulmonar nova em criança com dieta restrita",
+      "Contexto de negligência, isolamento extremo ou privação alimentar grave"
+    ],
+    "ambulatory_flow": [
+      "Investigar ativamente história dietética em idosos institucionalizados, pacientes com transtorno alimentar restritivo, alcoolismo grave ou dieta de eliminação extrema",
+      "Reconhecer sinais cutâneos característicos (petéquias perifoliculares, gengivorragia, equimoses atípicas) como gatilho para dosagem de vitamina C",
+      "Não aguardar confirmação laboratorial para iniciar reposição empírica de ácido ascórbico diante de forte suspeita clínica",
+      "Encaminhar para avaliação cardiológica se houver dispneia, edema, hipotensão significativa ou suspeita de derrame pericárdico",
+      "Corrigir a causa nutricional de base e orientar dieta após a fase aguda"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de tamponamento cardíaco e obter ecocardiograma com urgência se suspeitado",
+      "Estabilizar hemodinamicamente e considerar pericardiocentese em tamponamento estabelecido, com atenção ao risco hemorrágico da própria fragilidade capilar",
+      "Iniciar reposição de vitamina C (oral ou parenteral conforme gravidade e capacidade de absorção) sem aguardar resultado laboratorial confirmatório diante de suspeita forte",
+      "Investigar e corrigir coagulopatias ou trombocitopenia concomitantes que possam agravar o sangramento",
+      "Monitorar resposta hemodinâmica e ecocardiográfica à reposição como parte da confirmação diagnóstica"
+    ],
+    "tags": [
+      "escorbuto",
+      "vitamina C",
+      "ácido ascórbico",
+      "deficiência nutricional",
+      "hemopericárdio",
+      "tamponamento cardíaco",
+      "disautonomia",
+      "norepinefrina",
+      "colágeno",
+      "transtorno alimentar",
+      "alcoolismo",
+      "idoso institucionalizado"
+    ],
+    "source_refs": [
+      "Sament S. Cardiac disorders in scurvy. N Engl J Med. 1970;282(5):282-283. PMID: 5410226",
+      "Spodick DH. Another cardiac disorder in scurvy. N Engl J Med. 1970;282(12):686. PMID: 5417733",
+      "Frey WG 3rd. Scorbutic hemopericardium. N Engl J Med. 1970;282(18):1047. PMID: 4910085",
+      "Alnaimat S, Amoateng R, et al. Missing Vitamin C: A Case of Scorbutic Cardiac Tamponade. JACC Case Rep. 2019;1(3):404-407. DOI: 10.1016/j.jaccas.2019.07.006. PMID: 34316783",
+      "Joulal H, et al. Haemorrhagic Pericardial Effusion as the Presenting Symptom of Scurvy. Eur J Case Rep Intern Med. 2023;10(9):004026. DOI: 10.12890/2023_004026. PMID: 37680776",
+      "Hirschmann JV, Raugi GJ. Adult scurvy. J Am Acad Dermatol. 1999;41(6):895-906. DOI: 10.1016/s0190-9622(99)70244-6. PMID: 10570371",
+      "Pimentel L. Scurvy: historical review and current diagnostic approach. Am J Emerg Med. 2003;21(4):328-332. DOI: 10.1016/s0735-6757(03)00083-4. PMID: 12898492",
+      "Amisha F, Malik P, Dabas A, Jain S. Scurvy in the Modern World: Extinct or Not? Cureus. 2022;14(2):e22622. DOI: 10.7759/cureus.22622. PMID: 35371727",
+      "Byard RW. Scurvy-Characteristic Features and Forensic Issues. Am J Forensic Med Pathol. 2019;40(4):287-289. DOI: 10.1097/PAF.0000000000000442. PMID: 30422823",
+      "May JM, Qu ZC. Ascorbic acid efficiently enhances neuronal synthesis of norepinephrine from dopamine. Brain Res Bull. 2013;90:35-42. DOI: 10.1016/j.brainresbull.2012.09.009. PMID: 23022576",
+      "Bornstein SR, Yoshida-Hiroi M, Sotiriou S, et al. Impaired adrenal catecholamine system function in mice with deficiency of the ascorbic acid transporter (SVCT2). FASEB J. 2003;17(13):1928-1930. DOI: 10.1096/fj.02-1167fje. PMID: 12897061",
+      "Carr AC, Vissers MCM, Cook JS. Ascorbate-dependent vasopressor synthesis: a rationale for vitamin C administration in severe sepsis and septic shock? Crit Care. 2015;19:418. DOI: 10.1186/s13054-015-1131-2. PMID: 26612352",
+      "Shibao CA, et al. Congenital absence of norepinephrine due to CYB561 mutations. Neurology. 2020;94(2):e200-e204. DOI: 10.1212/WNL.0000000000008734. PMID: 31822578",
+      "Peterkofsky B. Ascorbate requirement for hydroxylation and secretion of procollagen: relationship to inhibition of collagen synthesis in scurvy. Am J Clin Nutr. 1991;54(6 Suppl):1135S-1140S. DOI: 10.1093/ajcn/54.6.1135s. PMID: 1720597",
+      "Woodgate T, Patel J, Day T, et al. Pulmonary Hypertension Associated With Vitamin C Deficiency Is Rapidly Reversible. Pediatrics. 2026. DOI: 10.1542/peds.2025-073645. PMID: 41839225",
+      "Golder JE, et al. Prevalence, risk factors, and clinical outcomes of vitamin C deficiency in adult hospitalized patients: a scoping review. Nutr Rev. 2024;82(9):1605-1621. DOI: 10.1093/nutrit/nuad157. PMID: 38219216",
+      "Ramirez IA, et al. Scurvy in children with food selectivity. Medicina. 2026;86(4):885-892. PMID: 42604498",
+      "Yule S, Wanik J, Holm EM, et al. Nutritional Deficiency Disease Secondary to ARFID Symptoms Associated with Autism and the Broad Autism Phenotype. J Acad Nutr Diet. 2021;121(3):467-492. DOI: 10.1016/j.jand.2020.10.017. PMID: 33221247",
+      "Brambilla A, et al. Pediatric Scurvy: When Contemporary Eating Habits Bring Back the Past. Front Pediatr. 2018;6:126. DOI: 10.3389/fped.2018.00126. PMID: 29780794",
+      "Masuda Y, et al. A Case of Scurvy Associated With Intracerebral Hemorrhage in a Patient With Alcohol Use Disorder. Cureus. 2024;16(2):e54777. DOI: 10.7759/cureus.54777. PMID: 38523974",
+      "Sun T, et al. Scurvy presenting in a homeless 32-year-old male: a case report. Eur J Clin Nutr. 2024;78(12):1111-1113. DOI: 10.1038/s41430-024-01498-6. PMID: 39179654",
+      "Roy-Lavallee J, et al. Scurvy: An Unexpected Nutritional Complication in an Adolescent Female With Anorexia Nervosa. J Adolesc Health. 2020;67(4):618-620. DOI: 10.1016/j.jadohealth.2020.02.022. PMID: 32291151"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/5410226/",
+      "https://pubmed.ncbi.nlm.nih.gov/5417733/",
+      "https://pubmed.ncbi.nlm.nih.gov/4910085/",
+      "https://pubmed.ncbi.nlm.nih.gov/34316783/",
+      "https://pubmed.ncbi.nlm.nih.gov/37680776/",
+      "https://pubmed.ncbi.nlm.nih.gov/10570371/",
+      "https://pubmed.ncbi.nlm.nih.gov/12898492/",
+      "https://pubmed.ncbi.nlm.nih.gov/35371727/",
+      "https://pubmed.ncbi.nlm.nih.gov/30422823/",
+      "https://pubmed.ncbi.nlm.nih.gov/23022576/",
+      "https://pubmed.ncbi.nlm.nih.gov/12897061/",
+      "https://pubmed.ncbi.nlm.nih.gov/26612352/",
+      "https://pubmed.ncbi.nlm.nih.gov/31822578/",
+      "https://pubmed.ncbi.nlm.nih.gov/1720597/",
+      "https://pubmed.ncbi.nlm.nih.gov/41839225/",
+      "https://pubmed.ncbi.nlm.nih.gov/38219216/",
+      "https://pubmed.ncbi.nlm.nih.gov/42604498/",
+      "https://pubmed.ncbi.nlm.nih.gov/33221247/",
+      "https://pubmed.ncbi.nlm.nih.gov/29780794/",
+      "https://pubmed.ncbi.nlm.nih.gov/38523974/",
+      "https://pubmed.ncbi.nlm.nih.gov/39179654/",
+      "https://pubmed.ncbi.nlm.nih.gov/32291151/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "escorbuto-deficiencia-grave-de-vitamina-c-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-alstrom",
+    "name": "Síndrome de Alström",
+    "aliases": [
+      "Síndrome de Alström-Hallgren",
+      "Ciliopatia por variantes em ALMS1",
+      "Alström syndrome"
+    ],
+    "area": "cardiopediatria",
+    "category": "cardiomiopatia",
+    "subtype": "sindrome_genetica",
+    "prevalence_rank": 43,
+    "completeness": "completo",
+    "summary": "Ciliopatia autossômica recessiva ultrarrara por variantes bialélicas em ALMS1, caracterizada por cardiomiopatia dilatada com padrão bifásico — episódio de insuficiência cardíaca aguda no lactente com recuperação parcial da função ventricular, seguido de intervalo assintomático e recorrência na adolescência ou vida adulta — associada a distrofia cone-bastonete com cegueira progressiva, obesidade de início precoce, resistência insulínica/diabetes tipo 2 precoce, perda auditiva neurossensorial progressiva e disfunção renal e hepática progressivas. Diagnóstico confirmado por teste genético molecular; diferencial principal é a síndrome de Bardet-Biedl.",
+    "presentation": [
+      "Insuficiência cardíaca aguda em lactente (tipicamente entre 4 semanas e 5 meses de vida) sem outra causa estrutural identificada",
+      "Recuperação parcial ou completa da função ventricular após o episódio infantil, seguida de intervalo livre de disfunção manifesta por anos",
+      "Recorrência de cardiomiopatia dilatada na adolescência ou vida adulta jovem, por vezes sem episódio infantil prévio identificado",
+      "Nistagmo e fotofobia nos primeiros meses de vida, evoluindo para perda progressiva de acuidade visual e cegueira legal na segunda década",
+      "Obesidade truncal de início precoce, já nos primeiros anos de vida",
+      "Acantose nigricans, resistência insulínica grave e diabetes tipo 2 de início na infância ou adolescência",
+      "Perda auditiva neurossensorial progressiva de início na primeira década",
+      "Hepatomegalia, esteato-hepatite e disfunção renal tubulointersticial progressiva",
+      "Estatura final baixa apesar de crescimento inicial normal ou acelerado"
+    ],
+    "differentials": [
+      "Síndrome de Bardet-Biedl (outra ciliopatia recessiva com distrofia cone-bastonete e obesidade, mas com polidactilia e disfunção cognitiva mais frequentes e sem cardiomiopatia dilatada precoce como achado central)",
+      "Cardiomiopatia dilatada pediátrica idiopática ou sarcomérica sem componente sindrômico extracardíaco",
+      "Cardiomiopatia associada a distrofia muscular (Duchenne, Becker, distrofias de cintura)",
+      "Laminopatia (mutação em LMNA) com cardiomiopatia dilatada e distúrbio de condução",
+      "Cardiomiopatia não compactada do ventrículo esquerdo",
+      "Síndrome de Noonan (cardiomiopatia hipertrófica predominante, não dilatada bifásica)",
+      "Miocardite viral prévia com disfunção ventricular residual",
+      "Doença mitocondrial com fenótipo de cardiomiopatia dilatada e comprometimento multissistêmico"
+    ],
+    "tests": [
+      "Ecocardiograma com avaliação biventricular seriada, inclusive em fases assintomáticas",
+      "Teste genético molecular de ALMS1 (sequenciamento) para confirmação diagnóstica",
+      "Eletrorretinograma e avaliação oftalmológica especializada (distrofia cone-bastonete)",
+      "Audiometria",
+      "Glicemia de jejum, hemoglobina glicada e perfil lipídico",
+      "Função renal (creatinina, taxa de filtração estimada, exame de urina) e função hepática (transaminases)",
+      "Eletrocardiograma e Holter conforme sintomas de arritmia",
+      "Avaliação endócrina adicional (função tireoidiana, eixo gonadal) conforme idade"
+    ],
+    "red_flags": [
+      "Sinais de insuficiência cardíaca aguda em lactente com cardiomiopatia dilatada de causa não esclarecida",
+      "Recorrência ou piora de disfunção ventricular em adolescente/adulto jovem com história de cardiomiopatia dilatada na lactância",
+      "Combinação de cardiomiopatia dilatada com nistagmo/fotofobia e obesidade de início precoce",
+      "Sinais de choque cardiogênico ou baixo débito no contexto de doença sistêmica conhecida",
+      "Deterioração renal ou hepática progressiva concomitante à disfunção ventricular"
+    ],
+    "ambulatory_flow": [
+      "Manter seguimento cardiológico programado indefinidamente mesmo após recuperação aparente da função ventricular no episódio infantil",
+      "Intensificar vigilância ecocardiográfica na transição para adolescência e vida adulta jovem, período de maior risco de recorrência",
+      "Coordenar avaliação multidisciplinar (oftalmologia, endocrinologia, nefrologia, audiologia, hepatologia) e tratar agressivamente diabetes, obesidade e hipertensão como parte do cuidado cardiovascular",
+      "Encaminhar para teste genético e aconselhamento genético familiar diante de cardiomiopatia dilatada de início no lactente associada a achados sensoriais ou metabólicos sugestivos",
+      "Orientar retorno imediato diante de sintomas de descompensação (dispneia, edema, intolerância a esforço, síncope)"
+    ],
+    "emergency_flow": [
+      "Tratar o episódio agudo como insuficiência cardíaca/choque cardiogênico conforme protocolo pediátrico por idade e peso, com suporte inotrópico e, se refratário, suporte mecânico",
+      "Investigar e tratar fatores metabólicos concomitantes (hipoglicemia, descompensação diabética) que possam agravar o quadro agudo",
+      "Considerar avaliação para transplante cardíaco em disfunção ventricular refratária, com avaliação cuidadosa do impacto de comorbidades renais, hepáticas e metabólicas sobre elegibilidade e prognóstico",
+      "Não assumir etiologia adquirida isolada em lactente com cardiomiopatia dilatada sem investigação de achados sindrômicos associados",
+      "Reavaliar e ajustar terapia de insuficiência cardíaca crônica assim que estabilizado, mantendo plano de seguimento ao longo da vida"
+    ],
+    "tags": [
+      "síndrome de Alström",
+      "ALMS1",
+      "ciliopatia",
+      "cardiomiopatia dilatada",
+      "cardiomiopatia pediátrica",
+      "distrofia cone-bastonete",
+      "cegueira progressiva",
+      "obesidade",
+      "diabetes tipo 2 precoce",
+      "perda auditiva neurossensorial",
+      "doença renal crônica",
+      "síndrome de Bardet-Biedl",
+      "genética cardiovascular pediátrica"
+    ],
+    "source_refs": [
+      "Michaud JL, Héon E, Guilbert F, et al. Natural history of Alström syndrome in early childhood: onset with dilated cardiomyopathy. J Pediatr. 1996;128(2):225-229. DOI: 10.1016/s0022-3476(96)70394-3. PMID: 8636816.",
+      "Marshall JD, Bronson RT, Collin GB, et al. New Alström syndrome phenotypes based on the evaluation of 182 cases. Arch Intern Med. 2005;165(6):675-683. DOI: 10.1001/archinte.165.6.675. PMID: 15795345.",
+      "Marshall JD, Beck S, Maffei P, Naggert JK. Alström syndrome. Eur J Hum Genet. 2007;15(12):1193-1202. DOI: 10.1038/sj.ejhg.5201933. PMID: 17940554.",
+      "Marshall JD, Maffei P, Collin GB, Naggert JK. Alström syndrome: genetics and clinical overview. Curr Genomics. 2011;12(3):225-235. DOI: 10.2174/138920211795677912. PMID: 22043170.",
+      "Shenje LT, Andersen P, Halushka MK, et al. Mutations in Alström protein impair terminal differentiation of cardiomyocytes. Nat Commun. 2014;5:3416. DOI: 10.1038/ncomms4416. PMID: 24595103.",
+      "Marshall JD, Muller J, Collin GB, et al. Alström Syndrome: Mutation Spectrum of ALMS1. Hum Mutat. 2015;36(7):660-668. DOI: 10.1002/humu.22796. PMID: 25846608.",
+      "Paisey RB, Steeds R, Barrett T, Williams D, Geberhiwot T, Gunay-Aygun M. Alström Syndrome. GeneReviews® [Internet]. Bookshelf ID: NBK1267. PMID: 20301444.",
+      "Forsyth R, Gunay-Aygun M. Bardet-Biedl Syndrome Overview. GeneReviews® [Internet]. Bookshelf ID: NBK1363. PMID: 20301537.",
+      "Alzarka B, Charnaya O, Gunay-Aygun M. Diseases of the primary cilia: a clinical characteristics review. Pediatr Nephrol. 2025;40(3):611-627. DOI: 10.1007/s00467-024-06528-w. PMID: 39340573.",
+      "Huang Y, Wang L, Zhang Q, et al. Alström syndrome: a cross-sectional and follow-up study of 127 patients in China. Orphanet J Rare Dis. 2025;20(1):630. DOI: 10.1186/s13023-025-04139-8. PMID: 41466426."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8636816/",
+      "https://pubmed.ncbi.nlm.nih.gov/15795345/",
+      "https://pubmed.ncbi.nlm.nih.gov/17940554/",
+      "https://pubmed.ncbi.nlm.nih.gov/22043170/",
+      "https://pubmed.ncbi.nlm.nih.gov/24595103/",
+      "https://pubmed.ncbi.nlm.nih.gov/25846608/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1267/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1363/",
+      "https://pubmed.ncbi.nlm.nih.gov/39340573/",
+      "https://pubmed.ncbi.nlm.nih.gov/41466426/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-alstrom-cardiomiopatia-dilatada-bifasica-ciliopatia-e-diagnostico-diferencial-na-crianca"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "latrodectismo-envenenamento-por-aranha-viuva-negra",
+    "name": "Latrodectismo (envenenamento por aranha viúva-negra)",
+    "aliases": [
+      "picada de viúva-negra",
+      "envenenamento por Latrodectus",
+      "síndrome do latrodectismo",
+      "black widow spider bite"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 30,
+    "completeness": "completo",
+    "summary": "Síndrome sistêmica causada pela alfa-latrotoxina do veneno de aranhas do gênero Latrodectus (viúva-negra e correlatas), que deflagra liberação maciça e descontrolada de acetilcolina na junção neuromuscular e de catecolaminas nas terminações simpáticas e medula adrenal. O quadro clássico combina dor muscular/abdominal intensa com rigidez de parede em tábua, hipertensão arterial, taquicardia e sudorese profusa, frequentemente confundido com abdome agudo cirúrgico ou com outras crises adrenérgicas. Complicações cardiovasculares relatadas na literatura incluem dor torácica com alteração eletrocardiográfica, miocardite e pericardite reversíveis e edema agudo de pulmão em casos graves. O tratamento é predominantemente sintomático (analgesia, benzodiazepínico, controle pressórico), com antiveneno reservado a envenenamento sistêmico grave; ensaios randomizados com o antiveneno australiano não demonstraram superioridade sobre placebo para resolução da dor.",
+    "presentation": [
+      "Dor imediata ou de início rápido no sítio da picada, por vezes com marcas de punção discretas e achado local desproporcional aos sintomas sistêmicos",
+      "Dor muscular e abdominal intensa com rigidez de parede abdominal ('abdome em tábua'), frequentemente associada a dor lombar e de membros",
+      "Hipertensão arterial, por vezes com picos significativos",
+      "Taquicardia sinusal",
+      "Sudorese profusa generalizada",
+      "Náusea, vômitos, cefaleia, ansiedade, agitação, tremor e fasciculações",
+      "Dor torácica e, em casos graves, dispneia sugerindo comprometimento cardiovascular"
+    ],
+    "differentials": [
+      "Abdome agudo cirúrgico (apendicite, colecistite, perfuração de víscera, peritonite)",
+      "Feocromocitoma ou paraganglioma com crise catecolaminérgica endógena",
+      "Intoxicação simpaticomimética (cocaína, anfetaminas) ou síndrome serotoninérgica",
+      "Tempestade tireotóxica",
+      "Tétano ou intoxicação por estricnina",
+      "Envenenamento escorpiônico com tempestade adrenérgica",
+      "Síndrome coronariana aguda ou síndrome de Kounis quando há dor torácica com alteração eletrocardiográfica"
+    ],
+    "tests": [
+      "Anamnese dirigida à exposição (picada referida, ambiente de risco) e ao tempo de início dos sintomas — não há biomarcador laboratorial específico amplamente disponível",
+      "Eletrocardiograma em todo paciente com dor torácica, instabilidade hemodinâmica ou suspeita de complicação cardiovascular",
+      "Troponina seriada diante de dor torácica ou alteração eletrocardiográfica sugestiva de lesão miocárdica",
+      "Exame abdominal seriado para diferenciar rigidez muscular generalizada de sinal peritoneal localizado e progressivo",
+      "Avaliação toxicológica dirigida quando a história de exposição a aranha não for clara, para excluir diferenciais simpaticomiméticos"
+    ],
+    "red_flags": [
+      "Dor torácica ou alteração eletrocardiográfica sugestiva de isquemia ou miocardite",
+      "Instabilidade hemodinâmica, hipertensão grave ou labilidade pressórica acentuada",
+      "Sinais de edema agudo de pulmão ou dispneia progressiva",
+      "Rigidez abdominal intensa sem clareza diagnóstica, com risco de laparotomia desnecessária caso o latrodectismo não seja considerado",
+      "Envenenamento sistêmico grave refratário a analgesia e suporte inicial"
+    ],
+    "ambulatory_flow": [
+      "Casos leves, com sintomas locais e sistêmicos discretos, podem ser observados ambulatorialmente com orientação de retorno imediato se houver progressão",
+      "Orientar reconhecimento de sinais de alarme: dor torácica, dispneia, rigidez abdominal progressiva, hipertensão importante ou piora do estado geral",
+      "Não postergar avaliação em pronto-socorro diante de dor sistêmica intensa, mesmo sem certeza sobre a picada"
+    ],
+    "emergency_flow": [
+      "Estabilização inicial com monitorização cardiovascular contínua (ECG, pressão arterial, oximetria)",
+      "Analgesia com opioide e benzodiazepínico adjuvante para rigidez/espasmo muscular refratário",
+      "Controle pressórico da hipertensão sintomática ou grave, evitando betabloqueio isolado sem bloqueio alfa concomitante diante de crise catecolaminérgica",
+      "Considerar soro antilatrodectus em envenenamento sistêmico grave, refratário ao suporte inicial, ou com complicação cardiovascular/respiratória — pesando risco de reação ao soro (anafilaxia, doença do soro) e reconhecendo que ensaios randomizados não mostraram superioridade sobre placebo para o desfecho dor",
+      "Investigar e afastar abdome agudo cirúrgico e outras crises adrenérgicas antes de indicar intervenção cirúrgica",
+      "Reavaliação cardiovascular seriada (ECG, biomarcadores) diante de qualquer sinal de acometimento miocárdico",
+      "Observação hospitalar para monitorar evolução do quadro sistêmico, que pode progredir ao longo de horas"
+    ],
+    "tags": [
+      "toxicologia",
+      "envenenamento animal",
+      "latrodectismo",
+      "aranha viúva-negra",
+      "alfa-latrotoxina",
+      "crise catecolaminérgica",
+      "abdome agudo",
+      "hipertensão",
+      "miocardite",
+      "emergência"
+    ],
+    "source_refs": [
+      "Clark RF, Wethern-Kestner S, Vance MV, Gerkin R. Clinical presentation and treatment of black widow spider envenomation: a review of 163 cases. Ann Emerg Med. 1992;21(7):782-787. DOI: 10.1016/s0196-0644(05)81021-2. PMID: 1351707.",
+      "Vetter RS, Isbister GK. Medical aspects of spider bites. Annu Rev Entomol. 2008;53:409-429. DOI: 10.1146/annurev.ento.53.103106.093503. PMID: 17877450.",
+      "Isbister GK, Fan HW. Spider bite. Lancet. 2011;378(9808):2039-2047. DOI: 10.1016/S0140-6736(10)62230-1. PMID: 21762981.",
+      "Ushkaryov YA, Rohou A, Sugita S. alpha-Latrotoxin and its receptors. Handb Exp Pharmacol. 2008;(184):171-206. DOI: 10.1007/978-3-540-74805-2_7. PMID: 18064415.",
+      "Isbister GK, Page CB, Buckley NA, et al. Randomized controlled trial of intravenous antivenom versus placebo for latrodectism: the second Redback Antivenom Evaluation (RAVE-II) study. Ann Emerg Med. 2014;64(6):620-628.e2. DOI: 10.1016/j.annemergmed.2014.06.006. PMID: 24999282.",
+      "Isbister GK, Brown SG, Miller M, et al. A randomised controlled trial of intramuscular vs. intravenous antivenom for latrodectism--the RAVE study. QJM. 2008;101(7):557-565. DOI: 10.1093/qjmed/hcn048. PMID: 18400776.",
+      "Isbister GK, White J. Clinical consequences of spider bites: recent advances in our understanding. Toxicon. 2004;43(5):477-492. DOI: 10.1016/j.toxicon.2004.02.002. PMID: 15066408.",
+      "Yaman M, Mete T, Ozer I, Yaman E, Beton O. Reversible Myocarditis and Pericarditis after Black Widow Spider Bite or Kounis Syndrome? Case Rep Cardiol. 2015;2015:768089. DOI: 10.1155/2015/768089. PMID: 26509087.",
+      "Bush SP. Black widow spider envenomation mimicking cholecystitis. Am J Emerg Med. 1999;17(3):315. DOI: 10.1016/s0735-6757(99)90137-7. PMID: 10337902."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/1351707/",
+      "https://pubmed.ncbi.nlm.nih.gov/17877450/",
+      "https://pubmed.ncbi.nlm.nih.gov/21762981/",
+      "https://pubmed.ncbi.nlm.nih.gov/18064415/",
+      "https://pubmed.ncbi.nlm.nih.gov/24999282/",
+      "https://pubmed.ncbi.nlm.nih.gov/18400776/",
+      "https://pubmed.ncbi.nlm.nih.gov/15066408/",
+      "https://pubmed.ncbi.nlm.nih.gov/26509087/",
+      "https://pubmed.ncbi.nlm.nih.gov/10337902/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "latrodectismo-picada-de-viuva-negra-e-manifestacoes-cardiovasculares"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "escorpionismo-grave-cardiovascular",
+    "name": "Escorpionismo grave com acometimento cardiovascular",
+    "aliases": [
+      "envenenamento escorpiônico grave",
+      "acidente escorpiônico grave",
+      "picada de escorpião com disfunção cardiovascular",
+      "miocardite por veneno de Tityus",
+      "tempestade autonômica por escorpionismo"
+    ],
+    "area": "cardiopediatria",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 44,
+    "completeness": "completo",
+    "summary": "Envenenamento por escorpiões do gênero Tityus (principalmente T. serrulatus) que evolui com tempestade autonômica — liberação maciça e simultânea de catecolaminas e acetilcolina — capaz de causar miocardite tóxica, edema agudo de pulmão não cardiogênico/catecolaminérgico e choque. Concentra praticamente toda a mortalidade do escorpionismo, com risco desproporcionalmente maior em crianças pequenas pela relação entre dose de veneno e massa corporal. O soro antiescorpiônico precoce associado a suporte hemodinâmico e respiratório agressivo é a base do tratamento.",
+    "presentation": [
+      "Dor local intensa e parestesia no sítio da picada, seguidas de manifestações sistêmicas: sudorese, sialorreia, náuseas e vômitos, agitação",
+      "Taquicardia e hipertensão arterial na fase inicial de predomínio simpático",
+      "Vômitos incoercíveis e sudorese profusa persistente — marcadores de gravidade associados a maior risco de óbito em crianças",
+      "Taquipneia progressiva, estertores pulmonares e hipoxemia evoluindo para edema agudo de pulmão",
+      "Extremidades frias e má perfusão apesar de pressão arterial inicialmente normal ou elevada",
+      "Choque com hipotensão (sinal tardio na criança), pulsos finos e rebaixamento do nível de consciência",
+      "Priapismo em meninos, nos casos graves",
+      "Convulsões nos casos mais graves, sobretudo em lactentes"
+    ],
+    "differentials": [
+      "Síndrome coronariana aguda (pelas alterações eletrocardiográficas isquêmicas mimetizadoras)",
+      "Miocardite viral ou outra miocardite fulminante não tóxica",
+      "Feocromocitoma/paraganglioma com tempestade catecolaminérgica",
+      "Sepse com choque séptico",
+      "Intoxicação exógena por outras substâncias simpaticomiméticas ou anticolinesterásicas (organofosforados/carbamatos)",
+      "Cardiomiopatia induzida por estresse (takotsubo) de outra causa",
+      "Edema agudo de pulmão cardiogênico por cardiopatia estrutural prévia",
+      "Abdome agudo (pelos vômitos e dor abdominal associados à sialorreia/cólica)"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações seriado — taquicardia sinusal, alterações de ST-T mimetizando isquemia, distúrbios de condução, prolongamento de QT, arritmias",
+      "Troponina seriada para lesão miocárdica",
+      "CK e CK-MB",
+      "Ecocardiograma para disfunção sistólica segmentar/global do VE e sinais de hipertensão pulmonar transitória",
+      "Radiografia de tórax para infiltrado alveolar compatível com edema pulmonar",
+      "Glicemia, eletrólitos, gasometria arterial/venosa e lactato",
+      "Oximetria de pulso contínua",
+      "Pressão arterial contínua/frequente, idealmente invasiva no paciente instável"
+    ],
+    "red_flags": [
+      "Vômitos incoercíveis e sudorese profusa persistente",
+      "Taquicardia e taquipneia desproporcionais à agitação ou dor referida",
+      "Qualquer estertor pulmonar novo, mesmo sem dessaturação evidente",
+      "Extremidades frias, enchimento capilar lento ou pressão de pulso estreita mesmo com PA sistólica normal",
+      "Idade muito baixa (lactente/pré-escolar)",
+      "Intervalo longo entre a picada e o primeiro atendimento médico",
+      "Priapismo, sialorreia intensa ou alteração do nível de consciência",
+      "Alterações eletrocardiográficas isquêmicas ou arritmia em criança com picada de escorpião confirmada ou suspeita"
+    ],
+    "ambulatory_flow": [
+      "Escorpionismo grave ou moderado com fatores de risco não tem fluxo ambulatorial primário: encaminhar para emergência com capacidade de soroterapia e monitorização cardiovascular",
+      "Após alta de caso grave estabilizado, seguimento cardiológico pediátrico para reavaliar função ventricular até documentar recuperação completa",
+      "Orientar famílias em área endêmica sobre prevenção (inspeção de calçados/roupas, controle de infestação domiciliar) e sobre buscar atendimento imediato diante de qualquer picada em criança pequena, mesmo sem sinais sistêmicos iniciais",
+      "Notificação compulsória ao sistema de vigilância epidemiológico, conforme normas do Ministério da Saúde"
+    ],
+    "emergency_flow": [
+      "Classificar gravidade (leve/moderado/grave) imediatamente e reclassificar a intervalos curtos, pela possibilidade de progressão rápida",
+      "Indicar soroterapia antiescorpiônica precocemente em casos moderados e graves, sem aguardar confirmação laboratorial de gravidade",
+      "Monitorização contínua de ECG, oximetria e pressão arterial em todo caso moderado/grave, especialmente em criança pequena",
+      "Suporte respiratório guiado por oximetria, com limiar baixo para ventilação não invasiva ou via aérea avançada diante de edema pulmonar com esforço respiratório aumentado",
+      "Reposição volêmica cautelosa e guiada por sinais dinâmicos de resposta, evitando bolus fixo não reavaliado em paciente com sinais de edema pulmonar/disfunção miocárdica",
+      "Suporte inotrópico/vasoativo individualizado pelo perfil hemodinâmico quando houver choque estabelecido",
+      "Reservar vasodilatador (quando considerado) para equipe experiente com monitorização hemodinâmica contínua, pelo risco de agravar hipotensão em fase vasoplégica",
+      "Escalar para terapia intensiva pediátrica diante de qualquer sinal de disfunção cardiovascular ou respiratória estabelecida"
+    ],
+    "tags": [
+      "escorpionismo",
+      "Tityus serrulatus",
+      "envenenamento",
+      "toxicologia pediátrica",
+      "tempestade autonômica",
+      "miocardite tóxica",
+      "edema agudo de pulmão",
+      "choque cardiogênico pediátrico",
+      "soro antiescorpiônico",
+      "cardiologia pediátrica",
+      "emergência pediátrica"
+    ],
+    "source_refs": [
+      "Cupo P. Clinical update on scorpion envenoming. Rev Soc Bras Med Trop. 2015;48(6):642-649. DOI: 10.1590/0037-8682-0237-2015. PMID: 26676487.",
+      "Amaral CF, de Rezende NA, Freire-Maia L. Acute pulmonary edema after Tityus serrulatus scorpion sting in children. Am J Cardiol. 1993;71(2):242-245. DOI: 10.1016/0002-9149(93)90746-y. PMID: 8421991.",
+      "Amaral CF, Lopes JA, Magalhães RA. Electrocardiographic, enzymatic and echocardiographic evidence of myocardial damage after Tityus serrulatus scorpion poisoning. Am J Cardiol. 1991;67(7):655-657. DOI: 10.1016/0002-9149(91)90912-5. PMID: 1705750.",
+      "Bucaretchi F, Fernandes LC, Fernandes CB, et al. Clinical consequences of Tityus bahiensis and Tityus serrulatus scorpion stings in the region of Campinas, southeastern Brazil. Toxicon. 2014;89:17-25. DOI: 10.1016/j.toxicon.2014.06.022. PMID: 25011046.",
+      "Reckziegel GC, Pinto VL Jr. Scorpionism in Brazil in the years 2000 to 2012. J Venom Anim Toxins Incl Trop Dis. 2014;20:46. DOI: 10.1186/1678-9199-20-46. PMID: 25873937.",
+      "Pardal PP, Castro LC, Jennings E. Epidemiological and clinical aspects of scorpion envenomation in the region of Santarém, Pará, Brazil. Rev Soc Bras Med Trop. 2003;36(3):349-353. DOI: 10.1590/s0037-86822003000300006. PMID: 12908035.",
+      "Bahloul M, Kallel H, Rekik N. Cardiovascular dysfunction following severe scorpion envenomation. Mechanisms and physiopathology. Presse Med. 2005;34(2 Pt 1):115-120. DOI: 10.1016/s0755-4982(05)88241-7. PMID: 15687982.",
+      "Almeida ACC, Carvalho FM, Mise YF, et al. Risk factors for fatal scorpion envenoming among Brazilian children: a case-control study. Trans R Soc Trop Med Hyg. 2021;115(9):975-983. DOI: 10.1093/trstmh/trab120. PMID: 34352889.",
+      "Lacerda AB, Cândido D, de Azevedo TS, et al. Scorpionism in Brazil: space-time approach and risk areas in 2012 to 2024. PLoS Negl Trop Dis. 2025;19(10):e0013602. DOI: 10.1371/journal.pntd.0013602. PMID: 41091795.",
+      "Chippaux JP. Emerging options for the management of scorpion stings. Drug Des Devel Ther. 2012;6:165-173. DOI: 10.2147/DDDT.S24754. PMID: 22826633."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26676487/",
+      "https://pubmed.ncbi.nlm.nih.gov/8421991/",
+      "https://pubmed.ncbi.nlm.nih.gov/1705750/",
+      "https://pubmed.ncbi.nlm.nih.gov/25011046/",
+      "https://pubmed.ncbi.nlm.nih.gov/25873937/",
+      "https://pubmed.ncbi.nlm.nih.gov/12908035/",
+      "https://pubmed.ncbi.nlm.nih.gov/15687982/",
+      "https://pubmed.ncbi.nlm.nih.gov/34352889/",
+      "https://pubmed.ncbi.nlm.nih.gov/41091795/",
+      "https://pubmed.ncbi.nlm.nih.gov/22826633/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "escorpionismo-grave-e-acometimento-cardiovascular-na-crianca"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "porfiria-aguda-intermitente",
+    "name": "Porfiria aguda intermitente com manifestações cardiovasculares",
+    "aliases": [
+      "crise porfírica aguda",
+      "porfiria aguda intermitente",
+      "PAI",
+      "disautonomia da porfiria aguda",
+      "taquicardia e hipertensão na crise porfírica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_metabolica",
+    "prevalence_rank": 31,
+    "completeness": "completo",
+    "summary": "Doença metabólica hereditária por deficiência da hidroximetilbilano sintase na via do heme, com acúmulo de ALA e porfobilinogênio durante crises agudas desencadeadas por jejum, infecção, hormônios ou fármacos indutores enzimáticos. A crise combina dor abdominal intensa, neuropatia e manifestações cardiovasculares quase constantes — taquicardia sinusal desproporcional à dor, hipertensão arterial lábil de início agudo e disautonomia — além de hiponatremia por SIADH com risco arrítmico e convulsivo secundário. O diagnóstico de triagem é o porfobilinogênio urinário, e o tratamento específico é heme-arginato intravenoso associado a glicose em alta carga calórica, com atenção à lista de fármacos porfirinogênicos, entre eles alguns usados rotineiramente em cardiologia.",
+    "presentation": [
+      "Dor abdominal intensa, difusa, de início agudo, frequentemente sem sinais de irritação peritoneal proporcionais",
+      "Taquicardia sinusal precoce e persistente, tipicamente desproporcional à intensidade da dor referida e pouco responsiva a analgesia isolada",
+      "Hipertensão arterial de início agudo, lábil, sem histórico prévio de hipertensão crônica na maioria dos casos",
+      "Náuseas, vômitos e constipação",
+      "Sudorese excessiva, tremor e outros sinais de descarga adrenérgica",
+      "Sintomas neuropsiquiátricos: agitação, ansiedade, confusão, insônia, alucinações em casos graves",
+      "Fraqueza muscular progressiva por neuropatia motora axonal, podendo evoluir para tetraparesia e insuficiência respiratória",
+      "Hiponatremia, por vezes sintomática com convulsão ou rebaixamento do nível de consciência",
+      "Urina de coloração escurecida (âmbar a avermelhada) ao repouso ou exposição à luz"
+    ],
+    "differentials": [
+      "Abdome agudo cirúrgico (apendicite, colecistite, obstrução intestinal)",
+      "Feocromocitoma e outras causas de crise adrenérgica com taquicardia e hipertensão",
+      "Tireotoxicose",
+      "Síndrome de abstinência alcoólica ou de sedativos",
+      "Intoxicação por simpaticomiméticos ou síndrome serotoninérgica",
+      "Síndrome de Guillain-Barré (quando predomina a neuropatia motora)",
+      "Outras porfirias agudas hepáticas: coproporfiria hereditária e porfiria variegata",
+      "Hiponatremia por outras causas (SIADH de outra etiologia, uso de diuréticos, polidipsia)",
+      "Chumbo ou intoxicação por metais pesados (elevação de ALA sem elevação proporcional de PBG)"
+    ],
+    "tests": [
+      "Porfobilinogênio (PBG) em amostra de urina isolada, protegida da luz — teste de triagem inicial em urgência",
+      "ALA e PBG urinários quantitativos de 24 horas para confirmação",
+      "Porfirinas fecais e plasmáticas para diferenciação entre PAI, coproporfiria hereditária e porfiria variegata",
+      "Teste genético para identificação da mutação causal e aconselhamento familiar",
+      "Sódio sérico seriado e osmolalidade urinária/sérica para caracterizar a hiponatremia",
+      "Eletrocardiograma com atenção ao intervalo QT corrigido",
+      "Função renal e hepática",
+      "Revisão completa da lista de medicamentos em uso quanto ao potencial porfirinogênico"
+    ],
+    "red_flags": [
+      "Taquicardia sinusal persistente e desproporcional apesar de analgesia adequada",
+      "Hipertensão arterial de início agudo associada a dor abdominal inexplicada",
+      "Fraqueza muscular progressiva, especialmente proximal ou com padrão ascendente",
+      "Sinais de insuficiência respiratória iminente (acometimento de nervos frênicos/bulbares)",
+      "Hiponatremia grave ou de instalação rápida, com risco convulsivo e arrítmico",
+      "Convulsão em paciente com dor abdominal e neuropatia associadas",
+      "Uso recente de fármaco porfirinogênico conhecido (indutor de citocromo P450) em paciente com PAI conhecida ou suspeita",
+      "Instabilidade hemodinâmica com labilidade tensional acentuada"
+    ],
+    "ambulatory_flow": [
+      "Em portador conhecido de PAI, revisar toda nova prescrição contra base de dados de segurança medicamentosa em porfiria antes de iniciar o fármaco",
+      "Rastrear e tratar hipertensão arterial persistente e função renal fora de crise, complicações tardias reconhecidas da doença",
+      "Orientar evitar jejum prolongado, restrição calórica extrema e consumo excessivo de álcool como prevenção de crises",
+      "Avaliar indicação de terapia de manutenção com givosiran em pacientes com crises recorrentes (4 ou mais ao ano)",
+      "Encaminhar para aconselhamento genético familiar após confirmação diagnóstica",
+      "Reforçar sinais de alarme para procura de emergência em caso de dor abdominal intensa recorrente"
+    ],
+    "emergency_flow": [
+      "Suspeitar diante de dor abdominal intensa inexplicada associada a taquicardia sinusal desproporcional e/ou hipertensão de início agudo",
+      "Coletar porfobilinogênio urinário antes de iniciar tratamento específico, sem atrasar o suporte inicial",
+      "Monitorizar frequência cardíaca, pressão arterial e sódio sérico seriado",
+      "Iniciar heme-arginato intravenoso 3 mg/kg/dia por 4 dias assim que a suspeita for razoável, associado a glicose intravenosa em alta carga calórica",
+      "Controlar taquicardia e hipertensão sintomáticas com betabloqueador (propranolol) quando hemodinamicamente tolerado, evitando fármacos porfirinogênicos alternativos",
+      "Corrigir hiponatremia de forma gradual, atento ao risco de síndrome de desmielinização osmótica em correção rápida",
+      "Suspender todo fármaco potencialmente porfirinogênico em uso e revisar prescrição médica completa",
+      "Escalar para unidade de terapia intensiva diante de neuropatia motora progressiva, convulsões ou instabilidade autonômica refratária"
+    ],
+    "tags": [
+      "porfiria",
+      "porfiria aguda intermitente",
+      "disautonomia",
+      "taquicardia sinusal",
+      "hipertensão secundária",
+      "hiponatremia",
+      "SIADH",
+      "arritmia",
+      "fármacos porfirinogênicos",
+      "heme-arginato",
+      "doença metabólica hereditária",
+      "crise porfírica"
+    ],
+    "source_refs": [
+      "Puy H, Gouya L, Deybach JC. Porphyrias. Lancet. 2010;375(9718):924-937. PMID: 20226990",
+      "Bissell DM, Wang B. Acute Hepatic Porphyria. J Clin Transl Hepatol. 2015;3(1):17-26. PMID: 26357631",
+      "Pischik E, Kauppinen R. An update of clinical management of acute intermittent porphyria. Appl Clin Genet. 2015;8:201-214. PMID: 26366103",
+      "Stein PE, Badminton MN, Rees DC. Update review of the acute porphyrias. Br J Haematol. 2017;176(4):527-538. PMID: 27982422",
+      "Anderson KE, Bonkovsky HL, Bloomer JR, Shedlofsky SI. Reconstitution of hematin therapy for acute porphyrias. J Gastroenterol Hepatol. 2005 (review of heme therapy). PMID: 15767622",
+      "Laiwah AC, Macphee GJ, Boyle P, Moore MR, Goldberg A. Autonomic neuropathy in acute intermittent porphyria. J Neurol Neurosurg Psychiatry. 1985;48(11):1025-1030. PMID: 4056804",
+      "Suarez JI, Cohen ML, Larkin J, Kernich CA, Hricik DE, Daroff RB. Acute intermittent porphyria: clinicopathologic correlation. Report of a case and review of the literature. Neurology. 1997;48(6):1678-1683. PMID: 9191786",
+      "Balwani M, Sardh E, Ventura P, et al. Phase 3 Trial of RNAi Therapeutic Givosiran for Acute Intermittent Porphyria. N Engl J Med. 2020;382(24):2289-2301. PMID: 32521132"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20226990/",
+      "https://pubmed.ncbi.nlm.nih.gov/26357631/",
+      "https://pubmed.ncbi.nlm.nih.gov/26366103/",
+      "https://pubmed.ncbi.nlm.nih.gov/27982422/",
+      "https://pubmed.ncbi.nlm.nih.gov/15767622/",
+      "https://pubmed.ncbi.nlm.nih.gov/4056804/",
+      "https://pubmed.ncbi.nlm.nih.gov/9191786/",
+      "https://pubmed.ncbi.nlm.nih.gov/32521132/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "porfiria-aguda-intermitente-manifestacoes-cardiovasculares"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "intoxicacao-por-bufotoxinas",
+    "name": "Intoxicação por bufotoxinas (sapo-cururu, Rhinella spp.)",
+    "aliases": [
+      "intoxicação por veneno de sapo",
+      "cardiotoxicidade por bufadienolídeos",
+      "intoxicação por Rhinella spp.",
+      "envenenamento por Bufo",
+      "toad venom poisoning"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 32,
+    "completeness": "completo",
+    "summary": "Intoxicação por bufotoxinas de sapos do gênero Rhinella (antigo Bufo), como o sapo-cururu, decorrente de ingestão acidental, uso como 'chá'/afrodisíaco ou contato com a secreção da pele/glândulas parotoides. Os bufadienolídeos presentes na secreção inibem a Na+/K+-ATPase pelo mesmo mecanismo dos glicosídeos cardíacos, produzindo quadro clínico e eletrocardiográfico praticamente indistinguível da intoxicação digitálica: bradiarritmias, bloqueio atrioventricular, taquiarritmias ventriculares e hipercalemia.",
+    "presentation": [
+      "Náuseas, vômitos, sialorreia intensa e dor abdominal logo após a exposição",
+      "Confusão mental, agitação, alucinações e midríase (atribuíveis à bufotenina)",
+      "Bradicardia sinusal sintomática",
+      "Bloqueio atrioventricular de 1º, 2º ou 3º grau",
+      "Extrassístoles ventriculares, taquicardia ventricular (incluindo padrão bidirecional) e fibrilação ventricular",
+      "Hipotensão e choque em casos graves",
+      "Hipercalemia proporcional à gravidade da intoxicação"
+    ],
+    "differentials": [
+      "Intoxicação digitálica por uso terapêutico de digoxina com fator precipitante",
+      "Intoxicação por outras plantas com glicosídeos cardíacos (oleandro, dedaleira, lírio-do-vale)",
+      "Preparações de medicina tradicional com bufadienolídeos (chan su, Kyushin) usadas como afrodisíaco",
+      "Hipercalemia de outra causa sem exposição a glicosídeo cardíaco",
+      "Intoxicação por betabloqueador ou bloqueador de canal de cálcio",
+      "Doença primária do nó sinusal ou do sistema de condução",
+      "Síndrome BRASH (bradicardia, insuficiência renal aguda, bloqueio AV, choque e hipercalemia)"
+    ],
+    "tests": [
+      "ECG de 12 derivações seriado",
+      "Potássio sérico e função renal",
+      "Monitorização cardíaca contínua",
+      "Nível de digoxina por imunoensaio (interpretar com cautela: reatividade cruzada variável — pode ser falsamente positivo por método policlonal ou falsamente negativo por método monoclonal)",
+      "Gasometria e lactato em choque ou instabilidade hemodinâmica",
+      "Investigação toxicológica dirigida pela história (exposição a sapo, chá não identificado, produto atribuído como afrodisíaco)"
+    ],
+    "red_flags": [
+      "Bloqueio atrioventricular de 2º grau Mobitz II ou 3º grau",
+      "Taquicardia ventricular, especialmente padrão bidirecional, ou fibrilação ventricular",
+      "Bradicardia sintomática refratária à atropina",
+      "Hipercalemia significativa com alterações eletrocardiográficas",
+      "Hipotensão ou choque",
+      "Rebaixamento do nível de consciência ou convulsão"
+    ],
+    "ambulatory_flow": [
+      "Contato cutâneo/mucoso assintomático ou paucissintomático com secreção de sapo: orientar lavagem local, observação clínica e retorno imediato se surgir sintoma cardiovascular, gastrointestinal ou neurológico",
+      "Não afastar ingestão relevante apenas por ausência de sintomas nas primeiras horas; orientar procura de emergência diante de qualquer suspeita de ingestão"
+    ],
+    "emergency_flow": [
+      "Monitorização cardíaca contínua e ECG seriado desde a admissão",
+      "Considerar descontaminação gastrointestinal (carvão ativado) em ingestão recente com via aérea protegida",
+      "Atropina intravenosa para bradicardia ou BAV sintomático",
+      "Marca-passo transcutâneo ou transvenoso para bradiarritmia refratária ou BAV avançado com instabilidade",
+      "Corrigir hipercalemia conforme protocolo institucional de hipercalemia grave, com a mesma cautela historicamente atribuída ao cálcio intravenoso na toxicidade por glicosídeo cardíaco",
+      "Considerar anticorpo antidigoxina (Fab) off-label, com resposta variável descrita na literatura, em discussão com toxicologia clínica/CIATox",
+      "Suporte avançado de vida conforme protocolo institucional para arritmia ventricular maligna refratária"
+    ],
+    "tags": [
+      "bufotoxina",
+      "sapo-cururu",
+      "Rhinella",
+      "bufadienolídeo",
+      "intoxicação digitálica",
+      "bradiarritmia",
+      "bloqueio atrioventricular",
+      "hipercalemia",
+      "anticorpo antidigoxina",
+      "toxicologia"
+    ],
+    "source_refs": [
+      "Gowda RM, Cohen RA, Khan IA. Toad venom poisoning: resemblance to digoxin toxicity and therapeutic implications. Heart. 2003;89(4):e14. PMID: 12639891.",
+      "Brubacher JR, Ravikumar PR, Bania T, Heller MB, Hoffman RS. Treatment of toad venom poisoning with digoxin-specific Fab fragments. Chest. 1996;110(5):1282-1288. PMID: 8915235.",
+      "Brubacher JR, Lachmanen D, Ravikumar PR, Hoffman RS. Efficacy of digoxin specific Fab fragments (Digibind) in the treatment of toad venom poisoning. Toxicon. 1999;37(6):931-942. PMID: 10340832.",
+      "Brubacher JR, Hoffman RS, Bar-Or D, Vandenberg M. Toad venom poisoning: failure of a monoclonal digoxin immunoassay to cross-react with the cardioactive steroids. J Toxicol Clin Toxicol. 1996;34(2):205-207. PMID: 8800193.",
+      "Chern MS, Ray CY, Wu D. Biologic intoxication due to digitalis-like substance after ingestion of cooked toad soup. Am J Cardiol. 1991;67(5):443-444. PMID: 1994674.",
+      "Ashok G, et al. An interesting case of cardiotoxicity due to bufotoxin (toad toxin). J Assoc Physicians India. 2011;59:737-738. PMID: 22616345.",
+      "Centers for Disease Control and Prevention (CDC). Deaths associated with a purported aphrodisiac--New York City, February 1993-May 1995. MMWR Morb Mortal Wkly Rep. 1995;44(46):853-855, 861. PMID: 7476839.",
+      "Barrueto F Jr, et al. Cardioactive steroid poisoning from an herbal cleansing preparation. Ann Emerg Med. 2003;41(3):396-399. PMID: 12605208."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12639891/",
+      "https://pubmed.ncbi.nlm.nih.gov/8915235/",
+      "https://pubmed.ncbi.nlm.nih.gov/10340832/",
+      "https://pubmed.ncbi.nlm.nih.gov/8800193/",
+      "https://pubmed.ncbi.nlm.nih.gov/1994674/",
+      "https://pubmed.ncbi.nlm.nih.gov/22616345/",
+      "https://pubmed.ncbi.nlm.nih.gov/7476839/",
+      "https://pubmed.ncbi.nlm.nih.gov/12605208/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "intoxicacao-por-bufotoxinas-sapo-cururu-cardiotoxicidade-tipo-digitalico"
+    ],
+    "patient_material_slug": null
   }
 ]
