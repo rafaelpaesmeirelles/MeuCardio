@@ -83,12 +83,12 @@ def test_header_mobile_composto():
     a barra inferior / "Mais") e só o PRIMEIRO nome ao lado do avatar; o
     desktop segue com o nome completo.
     """
-    main = (ROOT / "frontend/src/main.tsx").read_text(encoding="utf-8")
+    manifest = (ROOT / "frontend/src/styles/app.css").read_text(encoding="utf-8")
     css = (ROOT / "frontend/src/styles/mobile-header-composed.css").read_text(encoding="utf-8")
     shell = (ROOT / "frontend/src/components/ShellClinicalOSLaunch.tsx").read_text(encoding="utf-8")
-    assert 'import "./styles/mobile-header-composed.css";' in main
+    assert '@import "./mobile-header-composed.css";' in manifest
     # antes do form-control-contrast (que precisa seguir por último)
-    assert main.index("mobile-header-composed.css") < main.index("clinical-form-control-contrast.css")
+    assert manifest.index("mobile-header-composed.css") < manifest.index("clinical-form-control-contrast.css")
     assert ".clinical-os .cos-command-mini" in css and "display: flex !important" in css
     assert ".clinical-os .cos-account__identity" in css
     assert "text-overflow: ellipsis" in css
@@ -105,19 +105,19 @@ def test_header_mobile_composto():
 
 
 def test_css_de_pagina_entra_no_bundle():
-    """As folhas *-v2 usadas por páginas reais PRECISAM estar no main.tsx.
+    """As folhas *-v2 usadas por páginas reais PRECISAM estar no manifesto.
 
     Causa raiz da paleta quebrada em /interacoes: clinical-interactions-v2.css
     existia no repositório mas nunca era importado — a página renderizava a
     metade inferior sem estilo (chips/cards brancos do user-agent sobre o
     dark). O mesmo valia para tools/exams/guidelines.
     """
-    main = (ROOT / "frontend/src/main.tsx").read_text(encoding="utf-8")
+    manifest = (ROOT / "frontend/src/styles/app.css").read_text(encoding="utf-8")
     for folha in ("clinical-interactions-v2.css", "clinical-tools-v2.css",
                   "clinical-exams-v2.css", "clinical-guidelines-v2.css"):
-        assert f'import "./styles/{folha}";' in main, f"{folha} fora do bundle"
+        assert f'@import "./{folha}";' in manifest, f"{folha} fora do bundle"
     # form-control-contrast continua sendo o último import de estilos
-    posicoes = [main.index(f'import "./styles/{f}";') for f in (
+    posicoes = [manifest.index(f'@import "./{f}";') for f in (
         "clinical-interactions-v2.css", "clinical-form-control-contrast.css")]
     assert posicoes[0] < posicoes[1], "cascata violada: interactions após form-control-contrast"
 
