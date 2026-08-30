@@ -1448,7 +1448,27 @@ métodos gráficos.
   explícita, corrigido sem re-pesquisar. Gates limpos. Total: 425
   checklists.
 
-## Lote 65 (planejado)
+## Lote 65 — concluído (SHA 500c4306) — total 93 commits
+
+- checklist `cardiomiopatia-sobrecarga-de-ferro` — gap genuíno: zero
+  menção a hemocromatose, sobrecarga de ferro, talassemia, quelação ou
+  T2* em todo o corpus, apesar da extensa cobertura de anemia
+  falciforme já construída nesta janela. Nenhum PR aberto. 6 itens:
+  fisiopatologia (HFE vs. secundária/transfusional, com ressalva contra
+  generalizar dados de talassemia para outras anemias); espectro
+  clínico (arritmia RR 4,6x com T2*<20ms); triagem laboratorial
+  (ferritina NÃO substitui avaliação direta de ferro miocárdico, AUC
+  0,629 vs. 0,948); RM cardíaca T2* como padrão-ouro (RR de IC de 160x
+  com T2*<10ms, com ressalva de que os cortes foram validados em
+  talassemia maior, extrapolação razoável mas não formalmente validada
+  para outras etiologias); tratamento (flebotomia vs. quelação,
+  deferiprona com remoção cardíaca superior); seguimento com T2*
+  seriado, sem taxa de reversibilidade numérica inventada. 12 fontes
+  via NCBI e-utils (consenso AHA 2013 talassemia + EASL 2022
+  hemocromatose). Nenhuma diretriz SBC localizada — declarado. Gates
+  limpos. Total: 426 checklists.
+
+## Lote 66 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
