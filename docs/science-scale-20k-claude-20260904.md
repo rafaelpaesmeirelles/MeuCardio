@@ -416,3 +416,23 @@ conteúdo — meus dois achados de dívida nesta frente (revisao como
 objeto vs. string; e agora estes 3 campos ausentes) vieram de nunca
 ter conferido um item completo e real antes da primeira produção
 daquele tipo.
+
+## Lote 23 — concluído (commit 31ff546b)
+
+- **doencas**: +1 — `doenca-de-behcet`.
+- **checklists**: +1 — `anticoagulacao-em-trombose-venosa-ou-trombo-intracardiaco-na-doenca-de-behcet`.
+- **trilhas**: +1 — `trilha-aorta-mimetizadores-raros-igg4-erdheim-chester-behcet` (5 etapas: síndrome aórtica aguda → Takayasu/células gigantes → IgG4-RD → caso Erdheim-Chester → Behçet). Verificado contra `trilha-aorta-vasculites-e-doenca-renovascular` pré-existente para confirmar ausência de sobreposição (foco distinto: aneurisma/mimetizador inflamatório vs. doença oclusiva).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.254 (10.189 revisado + 65 pendente_revisao).
+
+### Status consolidado (após Lote 23)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 7 | 2.393 |
+| Casos clínicos | 900 | 26 | 874 |
+| Checklists | 600 | 11 | 589 |
+| Materiais-paciente | 500 | 18 | 482 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
+| **Total** | **4.900** | **66** | **4.834** |
