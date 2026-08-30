@@ -5,7 +5,7 @@ theme: "Geral"
 kind: fluxograma
 summary: "Árvore de decisão para o adulto ambulatorial com dispneia crônica sem causa definida: avaliação inicial com ECG, radiografia e peptídeo natriurético pelo algoritmo da ESC 2021, ecocardiograma quando o peptídeo ou o ECG estão alterados, HFA-PEFF/H2FPEF quando o eco é normal, espirometria e difusão/TC pelo ramo pulmonar da GOLD 2025, e teste cardiopulmonar de exercício quando a dúvida persiste."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. https://academic.oup.com/eurheartj/article/42/36/3599/6358045"
   - "American College of Cardiology. 2021 ESC Guidelines for Acute and Chronic Heart Failure: Key Points. 2021. https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/29/18/05/2021-esc-guidelines-for-hf-esc-2021"

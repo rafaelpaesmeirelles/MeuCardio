@@ -5,7 +5,7 @@ theme: "Cardiologia geriátrica"
 kind: fluxograma
 summary: "Árvore de decisão do recorte geriátrico da ESC 2024: quem sai do alvo sistólico de 120–129 mmHg para o alvo individualizado tão baixo quanto razoavelmente alcançável, quando adiar o início do fármaco, como iniciar no muito idoso e no frágil, e quando desintensificar diante de queda ou hipotensão ortostática."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. Texto integral lido em cópia do Wayback Machine: https://web.archive.org/web/2025/https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
   - "Zhang W, Zhang S, Deng Y, et al; STEP Study Group. Trial of Intensive Blood-Pressure Control in Older Patients with Hypertension. N Engl J Med. 2021;385(14):1268-1279. DOI: 10.1056/NEJMoa2111437. PMID: 34491661. Abstract lido via PubMed E-utilities."

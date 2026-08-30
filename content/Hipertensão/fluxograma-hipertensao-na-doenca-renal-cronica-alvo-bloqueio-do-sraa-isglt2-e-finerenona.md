@@ -5,7 +5,7 @@ theme: "Hipertensão"
 kind: fluxograma
 summary: "Árvore de decisão para o hipertenso com doença renal crônica não dialítica: albuminúria define IECA ou BRA em dose máxima tolerada, a resposta de creatinina e potássio define se o bloqueio continua, a TFGe define iSGLT2 e diurético de alça, e o diabetes tipo 2 com albuminúria persistente define finerenona — com o alvo sistólico de 120 a 129 mmHg da ESC 2024 ou abaixo de 120 mmHg do KDIGO."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803. PDF lido em https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf"
   - "Kidney Disease: Improving Global Outcomes (KDIGO) Blood Pressure Work Group. KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease. Kidney Int. 2021;99(3S):S1-S87. DOI: 10.1016/j.kint.2020.11.003. PMID: 33637192. PDF lido em https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2021-BP-GL.pdf"

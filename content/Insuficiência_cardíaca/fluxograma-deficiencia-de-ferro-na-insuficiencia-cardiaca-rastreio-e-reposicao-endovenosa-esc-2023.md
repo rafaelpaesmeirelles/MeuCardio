@@ -5,7 +5,7 @@ theme: "Insuficiência cardíaca"
 kind: fluxograma
 summary: "Rastreio periódico de deficiência de ferro em todo paciente com IC por ferritina e saturação de transferrina, definição operacional da deficiência, e a decisão de repor ferro endovenoso na ICFEr e na ICFElr sintomáticas conforme a atualização focada ESC 2023, com investigação de causa quando a deficiência é absoluta."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666. https://academic.oup.com/eurheartj/article/44/37/3627/7246292"
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Tabela de novas recomendações lida em https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2333 (publicação companheira, Eur J Heart Fail)"

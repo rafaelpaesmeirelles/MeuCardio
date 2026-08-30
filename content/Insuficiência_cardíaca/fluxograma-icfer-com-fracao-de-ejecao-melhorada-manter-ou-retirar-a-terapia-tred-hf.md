@@ -5,7 +5,7 @@ theme: "Insuficiência cardíaca"
 kind: fluxograma
 summary: "Decisão diante da FEVE que subiu de 40% ou menos para acima de 40%: confirmar a melhora e manter a terapia modificadora da ICFEr, inclusive no assintomático e nas etiologias potencialmente reversíveis; o TRED-HF demonstrou recaída frequente após retirada e não definiu um subgrupo seguro para suspensão."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Halliday BP, Wassall R, Lota AS, et al. Withdrawal of pharmacological treatment for heart failure in patients with recovered dilated cardiomyopathy (TRED-HF): an open-label, pilot, randomised trial. Lancet. 2019;393(10166):61-73. DOI: 10.1016/S0140-6736(18)32484-X. PMID: 30429050. Texto integral: https://pmc.ncbi.nlm.nih.gov/articles/PMC6319251/"
   - "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. Síntese oficial: https://professional.heart.org/en/science-news/2022-guideline-for-the-management-of%20heart-failure/top-things-to-know"

@@ -5,7 +5,7 @@ theme: "Valvopatias"
 kind: fluxograma
 summary: "Com a indicação de intervenção já estabelecida, a árvore percorre a decisão do Heart Team pela Recommendation Table 4 da ESC/EACTS 2025: expectativa de vida, doença concomitante que exige cirurgia, valva bicúspide, o novo corte de 70 anos, adequação anatômica ao TAVI e risco cirúrgico."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — seções 8.4.1 e 8.5.1, Recommendation Tables 4 e 5, Figure 9. Texto integral lido em https://academic.oup.com/eurheartj/article/46/44/4635/8234488 (via cópia arquivada de 14/08/2026)."
   - "Derivado de 'estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021.md' (protocolo da diretriz 2021, mantido como registro histórico) e de 'valvopatias-atualizacao-diretriz-esceacts-2025.md' (mudança do corte etário de 75 para 70 anos), ambos já publicados e revisados na pasta Valvopatias."

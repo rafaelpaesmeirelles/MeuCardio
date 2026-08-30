@@ -5,7 +5,7 @@ theme: "Tromboembolismo"
 kind: fluxograma
 summary: "Árvore para escolher o anticoagulante do TEV agudo: HNF na instabilidade com reperfusão possível, HBPM na gestação e no câncer com mucosa luminal ou alto risco de sangramento, varfarina na síndrome antifosfolípide e no clearance abaixo de 30 mL/min, e DOAC como padrão para todos os demais — com ou sem fase parenteral conforme o fármaco."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMCID: PMC7556153. https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/ — texto integral lido: recomendações 3, 4 e 6 e remarks."
   - "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMCID: PMC12401105. https://pmc.ncbi.nlm.nih.gov/articles/PMC12401105/ — texto integral lido."

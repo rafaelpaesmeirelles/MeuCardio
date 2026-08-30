@@ -6,7 +6,7 @@ kind: fluxograma
 summary: "OPTIMAAL: losartana 50 vs captopril, morte P=0,07 a favor do IECA. VALIANT: valsartana vs captopril (arquivo próprio). ELITE II e HEAAL são IC crônica, não pós-IAM. SAVE/AIRE/TRACE sustentam IECA. CAPRICORN é carvedilol; primário composto NS."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em OPTIMAAL PMID 12241832 e CAPRICORN 11356434. VALIANT/ELITE II/HEAAL/SAVE já na casa. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em OPTIMAAL PMID 12241832 e CAPRICORN 11356434. VALIANT/ELITE II/HEAAL/SAVE já na casa. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Dickstein K, Kjekshus J. OPTIMAAL. Lancet. 2002;360(9335):752-760. PMID: 12241832."
   - "Dargie HJ. CAPRICORN. Lancet. 2001;357(9266):1385-1390. PMID: 11356434."

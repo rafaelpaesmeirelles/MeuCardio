@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 summary: "Árvore de decisão do algoritmo ESC 0 h/1 h de troponina de alta sensibilidade: exclusão isolada na chegada quando a dor começou há mais de 3 h, exclusão pelo par 0 h/1 h, inclusão por valor alto ou delta grande, zona de observação com terceira dosagem em 3 h e o destino de cada via — alta com teste, observação ou estratégia invasiva."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654 — Supplementary data, seções 3.3.2.1 a 3.3.2.3 e Tabela S4 (cortes por ensaio em ng/L), lido na íntegra em https://www.uniklinik-ulm.de/fileadmin/default/09_Sonstige/Klinische-Chemie/Downloads/ehad191_supplementary_data_ESC_Guideline_ACS_2023.pdf"
   - "Byrne RA, Rossello X, Coughlan JJ, et al. Guía ESC 2023 sobre el diagnóstico y tratamiento de los síndromes coronarios agudos (tradução oficial da Sociedad Española de Cardiología do texto integral da diretriz ESC 2023, DOI original 10.1093/eurheartj/ehad191) — seções 3.3 a 3.4, Figura 6 e tabelas de recomendações, lidas em https://secardiologia.es/images/2024/Gu%C3%ADas/Gui%CC%81a_ESC_2023_sobre_SCA.pdf"
@@ -104,7 +104,7 @@ Algoritmo 0 h/1 h:
 | hs-cTnI TriageTrue, Quidel | < 4 | < 5 | < 3 | ≥ 60 | ≥ 8 |
 | hs-cTnI Dimension EXL, Siemens | < 9 | < 9 | < 5 | ≥ 160 | ≥ 100 |
 
-Algoritmo 0 h/2 h (TBD = ainda não determinado pela diretriz):
+Algoritmo 0 h/2 h (“não determinado” indica ausência de corte definido pela diretriz):
 
 | Ensaio | Muito baixa | Baixa | Sem delta 2 h | Alta | Delta 2 h |
 |---|---|---|---|---|---|
@@ -112,10 +112,10 @@ Algoritmo 0 h/2 h (TBD = ainda não determinado pela diretriz):
 | hs-cTnI Architect, Abbott | < 4 | < 6 | < 2 | ≥ 64 | ≥ 15 |
 | hs-cTnI Centaur, Siemens | < 3 | < 8 | < 7 | ≥ 120 | ≥ 20 |
 | hs-cTnI Access, Beckman Coulter | < 4 | < 5 | < 5 | ≥ 50 | ≥ 20 |
-| hs-cTnI Clarity, Singulex | < 1 | TBD | TBD | ≥ 30 | TBD |
-| hs-cTnI Vitros, Clinical Diagnostics | < 1 | TBD | TBD | ≥ 40 | TBD |
-| hs-cTnI Pathfast, LSI Medience | < 3 | TBD | TBD | ≥ 90 | TBD |
-| hs-cTnI TriageTrue, Quidel | < 4 | TBD | TBD | ≥ 60 | TBD |
+| hs-cTnI Clarity, Singulex | < 1 | não determinado | não determinado | ≥ 30 | não determinado |
+| hs-cTnI Vitros, Clinical Diagnostics | < 1 | não determinado | não determinado | ≥ 40 | não determinado |
+| hs-cTnI Pathfast, LSI Medience | < 3 | não determinado | não determinado | ≥ 90 | não determinado |
+| hs-cTnI TriageTrue, Quidel | < 4 | não determinado | não determinado | ≥ 60 | não determinado |
 
 Os cortes valem independentemente de idade, sexo e função renal: cortes otimizados para maiores de 75 anos e para disfunção renal foram avaliados sem ganho consistente de equilíbrio entre segurança e eficácia. Os cortes foram escolhidos para sensibilidade e valor preditivo negativo mínimos de 99% no descarte e valor preditivo positivo mínimo de 70% na confirmação. Idade, função renal, tempo desde o início da dor e, em menor grau, sexo alteram a concentração basal, mas a variação absoluta mantém valor diagnóstico e prognóstico.
 

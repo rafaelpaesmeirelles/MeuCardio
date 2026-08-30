@@ -6,7 +6,7 @@ kind: fluxograma
 summary: "ESSENCE: tríplice com angina, era conservadora. TIMI 11B: composto com IC que toca 1,00; fase extra-hospitalar sangra. SYNERGY: era invasiva, primário NS, mais TIMI major. ExTRACT: STEMI com lise. FRISC I é dalteparina vs placebo. OASIS-5 é fondaparinux."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em ESSENCE PMID 9250846, TIMI 11B 10517729, SYNERGY 15238590, ExTRACT 16537665, FRISC 8596317. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em ESSENCE PMID 9250846, TIMI 11B 10517729, SYNERGY 15238590, ExTRACT 16537665, FRISC 8596317. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "Cohen M, et al. ESSENCE. N Engl J Med. 1997;337(7):447-452. PMID: 9250846."
   - "Antman EM, et al. TIMI 11B. Circulation. 1999;100(15):1593-1601. PMID: 10517729."

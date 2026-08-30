@@ -5,7 +5,7 @@ theme: "Cardiologia geriátrica"
 kind: fluxograma
 summary: "Árvore de decisão para a revisão estruturada da lista de medicamentos do idoso cardiopata: o que sai quando a expectativa de vida é limitada (estatina, aspirina de prevenção primária), o que sai quando há queda ou ortostatismo, o que não se retira por idade na doença cardiovascular estabelecida, e como STOPP/START v3 e Beers 2023 entram como gatilhos de revisão."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Kutner JS, Blatchford PJ, Taylor DH Jr, et al. Safety and benefit of discontinuing statin therapy in the setting of advanced, life-limiting illness: a randomized clinical trial. JAMA Intern Med. 2015;175(5):691-700. DOI: 10.1001/jamainternmed.2015.0289. PMID: 25798575. PMCID: PMC4618294. Texto integral lido em https://pmc.ncbi.nlm.nih.gov/articles/PMC4618294/"
   - "McNeil JJ, Wolfe R, Woods RL, et al; ASPREE Investigator Group. Effect of Aspirin on Cardiovascular Events and Bleeding in the Healthy Elderly. N Engl J Med. 2018;379(16):1509-1518. DOI: 10.1056/NEJMoa1805819. PMID: 30221597. PMCID: PMC6289056. Texto integral lido em https://pmc.ncbi.nlm.nih.gov/articles/PMC6289056/"
