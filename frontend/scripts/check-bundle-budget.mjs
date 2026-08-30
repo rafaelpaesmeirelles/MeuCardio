@@ -156,7 +156,14 @@ for (const path of await listarArquivos(dist.pathname)) {
 // (Resumo CorVIA / Traduzido / Original) foi estendida a todo documento publicado.
 // O precache medido foi 2935732 B, 948 B acima do teto. O acréscimo mínimo de
 // 1 KiB preserva inalterados entrypoint, gzip, code splitting e chunks opcionais.
-const maxPrecacheBytes = 2867 * 1024;
+//
+// Ajustado de 2867 KB para 2880 KB em 30/08/2026: a identidade Cardiology
+// Spaces reutiliza o coração holográfico canônico em um chunk compartilhado e
+// levou o precache base a 2935980 B. Os chunks completos da nova home continuam
+// excluídos do precache enquanto a feature flag estiver desligada; a margem de
+// ~13 KiB acomoda o ativo compartilhado sem relaxar entrypoint, gzip, divisão
+// por rotas ou o teto individual de chunks opcionais.
+const maxPrecacheBytes = 2880 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
