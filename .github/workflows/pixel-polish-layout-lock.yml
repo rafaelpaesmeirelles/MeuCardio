@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "frontend/src/styles/clinical-pixel-polish-conservative.css"
+      - "frontend/src/styles/app.css"
       - "frontend/src/main.tsx"
       - ".github/workflows/pixel-polish-layout-lock.yml"
 
@@ -25,8 +26,10 @@ jobs:
 
           css_path = pathlib.Path('frontend/src/styles/clinical-pixel-polish-conservative.css')
           main_path = pathlib.Path('frontend/src/main.tsx')
+          manifest_path = pathlib.Path('frontend/src/styles/app.css')
           css = css_path.read_text(encoding='utf-8')
           main = main_path.read_text(encoding='utf-8')
+          manifest = manifest_path.read_text(encoding='utf-8')
 
           # Properties that can alter geometry, composition, ordering or viewport behavior.
           forbidden = {
@@ -60,13 +63,18 @@ jobs:
               print('Potential structural/responsive override is forbidden:', ', '.join(found_tokens))
               sys.exit(1)
 
-          polish_import = 'import "./styles/clinical-pixel-polish-conservative.css";'
-          contrast_import = 'import "./styles/clinical-form-control-contrast.css";'
-          if polish_import not in main:
-              print('Conservative pixel polish stylesheet is not imported.')
+          manifest_import = 'import "./styles/app.css";'
+          polish_import = '@import "./clinical-pixel-polish-conservative.css";'
+          contrast_import = '@import "./clinical-form-control-contrast.css";'
+          safety_import = '@import "./clinical-safety-legibility.css";'
+          if manifest_import not in main:
+              print('The global CSS manifest is not imported by main.tsx.')
               sys.exit(1)
-          if main.index(polish_import) > main.index(contrast_import):
-              print('Form-control contrast must remain the last visual lock after conservative polish.')
+          if polish_import not in manifest:
+              print('Conservative pixel polish stylesheet is not imported by the manifest.')
+              sys.exit(1)
+          if not manifest.index(polish_import) < manifest.index(contrast_import) < manifest.index(safety_import):
+              print('Contrast and clinical safety must remain the final visual locks after conservative polish.')
               sys.exit(1)
 
           print('PASS: approved layout remains immutable; conservative polish contains optical declarations only.')
