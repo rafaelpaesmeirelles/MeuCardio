@@ -34079,5 +34079,66 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "cuidado-cardiovascular-no-adulto-com-sindrome-de-down-espectro-congenito-e-valvopatia-adquirida",
+    "condicao": "Síndrome de Down (trissomia do 21) — cuidado cardiovascular do adulto",
+    "resumo": "Checklist para triagem e acompanhamento cardiovascular de adultos com síndrome de Down, cobrindo o espectro de cardiopatia congênita associada, o risco aumentado e precoce de hipertensão pulmonar/doença vascular pulmonar, a valvopatia adquirida no adulto (mitral e aórtica, mesmo sem cardiopatia estrutural prévia) e considerações perioperatórias específicas (instabilidade atlantoaxial, via aérea difícil, apneia obstrutiva do sono, hipotireoidismo).",
+    "documento_origem": null,
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Bull MJ, Trotter T, Santoro SL, et al. Health Supervision for Children and Adolescents With Down Syndrome. Pediatrics. 2022;149(5):e2022057010. DOI: 10.1542/peds.2022-057010. PMID: 35490285.",
+      "Dimopoulos K, Constantine A, Opotowsky AR, et al. Cardiovascular Complications of Down Syndrome: Scoping Review and Expert Consensus. Circulation. 2023;147(5):425-441. DOI: 10.1161/CIRCULATIONAHA.122.059706. PMID: 36716257. PMCID: PMC9977420.",
+      "Bermudez BEBV, Medeiros SL, Bermudez MB, et al. Down syndrome: Prevalence and distribution of congenital heart disease in Brazil. São Paulo Med J. 2015;133(6):521-524. DOI: 10.1590/1516-3180.2015.00710108. PMID: 26648279.",
+      "Clapp S, Perry BL, Farooki ZQ, et al. Down's syndrome, complete atrioventricular canal, and pulmonary vascular obstructive disease. J Thorac Cardiovasc Surg. 1990;100(1):115-121. PMID: 2142250.",
+      "Suzuki K, Yamaki S, Mimori S, et al. Pulmonary vascular disease in Down's syndrome with complete atrioventricular septal defect. Am J Cardiol. 2000;86(4):434-437. DOI: 10.1016/s0002-9149(00)00960-7. PMID: 10946038.",
+      "Goldhaber SZ, Brown WD, St John Sutton MG. High frequency of mitral valve prolapse and aortic regurgitation among asymptomatic adults with Down's syndrome. JAMA. 1987;258(13):1793-1795. PMID: 2957521.",
+      "Geggel RL, O'Brien JE, Feingold M. Development of valve dysfunction in adolescents and young adults with Down syndrome and no known congenital heart disease. J Pediatr. 1993;122(5):821-823. DOI: 10.1016/s0022-3476(06)80036-3. PMID: 8496770.",
+      "Malinzak EB. Perioperative care of adults with Down syndrome: a narrative review. Can J Anaesth. 2021;68(10):1549-1561. DOI: 10.1007/s12630-021-02052-9. PMID: 34165727.",
+      "Aboud MA, et al. Anesthetic Considerations for Adult Patients With Both Down Syndrome and Congenital Heart Disease Undergoing Noncardiac Surgery. J Cardiothorac Vasc Anesth. 2023;37(4):613-626. DOI: 10.1053/j.jvca.2022.12.001. PMID: 36610856."
+    ],
+    "itens": [
+      {
+        "id": "espectro-congenito-1",
+        "categoria": "Espectro congênito",
+        "obrigatorio": true,
+        "texto": "Cardiopatia congênita afeta cerca de metade dos nascidos vivos com síndrome de Down, contra ~1% na população geral. O defeito do septo atrioventricular (canal AV, completo ou parcial) é a lesão mais frequente na maioria das séries; também são comuns CIV isolada (~4-17%), CIA, tetralogia de Fallot isolada (~13%) e a combinação AVSD+tetralogia (~9%), além de PCA. Todo recém-nascido com diagnóstico pré ou pós-natal de síndrome de Down deve ser avaliado para sinais de cardiopatia congênita e, idealmente, submetido a ecocardiograma — mesmo na ausência de sopro audível — porque muitos defeitos relevantes (sobretudo AVSD e CIV) podem não gerar sopro no período neonatal enquanto a resistência vascular pulmonar ainda está elevada. Onde ecocardiograma neonatal não é prontamente disponível, recomenda-se ao menos exame físico direcionado, ECG e radiografia de tórax, com encaminhamento para ecocardiograma o quanto antes.",
+        "origem_secao": "Dimopoulos et al. 2023, Circulation (PMID 36716257): prevalência ~50% vs ~1%, AVSD como lesão mais comum, recomendação de ecocardiografia independente do exame físico; Bermudez et al. 2015 (PMID 26648279): distribuição por tipo de defeito em coorte brasileira; Bull et al. 2022, AAP Pediatrics (PMID 35490285): diretriz de supervisão de saúde."
+      },
+      {
+        "id": "hipertensao-pulmonar-2",
+        "categoria": "Hipertensão pulmonar",
+        "obrigatorio": true,
+        "texto": "Crianças com síndrome de Down e shunt esquerda-direita não corrigido precocemente — especialmente shunts pós-tricuspídeos grandes (CIV, PCA) ou combinados (AVSD) — têm risco desproporcionalmente maior e mais precoce de hipertensão arterial pulmonar, frequentemente já no primeiro ano de vida (incidência descrita entre 6% e 37,5% conforme a série). Estudo clássico (Clapp et al., 1990) documentou doença vascular pulmonar obstrutiva fixa já diagnosticada antes de 1 ano de idade em 10 de 81 lactentes com Down e canal AV completo, contra nenhum caso em 40 lactentes sem Down, com taxa de operabilidade reduzida (47% vs 80%). Isso significa que a 'janela segura' para correção eletiva usada em crianças sem síndrome de Down pode não se aplicar — avaliação e encaminhamento cardiológico devem ser mais precoces e proativos nessa população. Mesmo após correção cirúrgica tecnicamente adequada, hipertensão pulmonar residual ou recorrente não é incomum e pode exigir terapia no pós-operatório imediato e a longo prazo; o rastreio de HP deve ser considerado parte do acompanhamento vitalício.",
+        "origem_secao": "Dimopoulos et al. 2023 (PMID 36716257): incidência 6-37,5% no 1º ano de vida em Down+CHD, HP residual pós-correção; Clapp et al. 1990 (PMID 2142250): DVPO fixa antes de 1 ano em 10/81 vs 0/40, operabilidade 47% vs 80%; Suzuki et al. 2000 (PMID 10946038): fatores morfológicos de risco para progressão da doença vascular pulmonar em AVSD completo."
+      },
+      {
+        "id": "valvopatia-adquirida-3",
+        "categoria": "Valvopatia adquirida",
+        "obrigatorio": true,
+        "texto": "Adultos com síndrome de Down — inclusive aqueles sem cardiopatia congênita estrutural conhecida ao nascimento — apresentam prevalência elevada de valvopatia adquirida ao ecocardiograma de rastreio: prolapso de valva mitral (MVP) em até 57% e regurgitação aórtica em cerca de 11% de adultos assintomáticos em uma série (Goldhaber et al., 1987, n=35, idade média 26 anos). Estudo em adolescentes/adultos jovens sem cardiopatia congênita conhecida (Geggel et al., 1993) encontrou MVP em 46% e regurgitação valvar em 17% dos pacientes acima de 18 anos, contra nenhum caso entre os ≤18 anos — sugerindo desenvolvimento e progressão da valvopatia ao longo da vida adulta, não apenas persistência de achado congênito. Diante disso, recomenda-se triagem cardiovascular periódica (exame clínico e ecocardiograma) ao longo de toda a vida adulta, independentemente do status cardíaco congênito, com atenção especial antes de procedimentos odontológicos ou cirúrgicos, quando a competência valvar deve ser reavaliada.",
+        "origem_secao": "Goldhaber et al. 1987, JAMA (PMID 2957521): MVP 57%, RA 11% em adultos assintomáticos; Geggel et al. 1993, J Pediatr (PMID 8496770): MVP 46%, regurgitação em 17% dos >18a vs 0% dos ≤18a, sem CHD conhecida; Dimopoulos et al. 2023 (PMID 36716257): reoperação tardia por regurgitação/estenose valvar residual ou progressiva após reparo de AVSD."
+      },
+      {
+        "id": "consideracoes-perioperatorias-4",
+        "categoria": "Considerações perioperatórias",
+        "obrigatorio": true,
+        "texto": "A avaliação pré-operatória de qualquer procedimento — cardíaco ou não cardíaco — em adulto com síndrome de Down deve rastrear proativamente: (a) instabilidade atlantoaxial, relevante para posicionamento cervical e extensão do pescoço durante laringoscopia/intubação; (b) via aérea potencialmente difícil, por macroglossia e hipoplasia do terço médio da face, com risco descrito de estridor pós-extubação significativo (relatado em 24% em uma série após cirurgia cardíaca) — planejar extubação cuidadosa e escalonada; (c) alta prevalência de apneia obstrutiva do sono, que deve ser rastreada e otimizada antes de cirurgia eletiva; (d) hipotireoidismo e outras comorbidades endócrinas/hematológicas, com função tireoidiana verificada no pré-operatório; (e) cautela com sevoflurano, associado a bradicardia significativa nessa população, exigindo monitorização e ajuste de dose.",
+        "origem_secao": "Dimopoulos et al. 2023 (PMID 36716257): comorbidades a considerar no pré-operatório (obstrução de via aérea superior, instabilidade atlantoaxial, complicações endócrinas/hematológicas), estridor pós-extubação em 24%, bradicardia por sevoflurano; Malinzak 2021, Can J Anaesth (PMID 34165727): revisão de cuidado perioperatório do adulto com Down; Aboud et al. 2023, J Cardiothorac Vasc Anesth (PMID 36610856): considerações anestésicas em adultos com Down e cardiopatia congênita para cirurgia não cardíaca."
+      },
+      {
+        "id": "rastreio-vida-adulta-5",
+        "categoria": "Rastreio ao longo da vida",
+        "obrigatorio": true,
+        "texto": "A diretriz de supervisão de saúde da American Academy of Pediatrics (Bull et al., 2022) recomenda avaliação ecocardiográfica para cardiopatia congênita no diagnóstico (pré-natal ou neonatal), independentemente do exame físico. O consenso de especialistas publicado na Circulation (Dimopoulos et al., 2023) afirma que o 'rastreio de hipertensão pulmonar faz parte do cuidado vitalício' na síndrome de Down e que 'investigações de seguimento devem ser realizadas em intervalos regulares' para quem tem síndrome de Down, cardiopatia congênita ou hipertensão pulmonar, incluindo avaliação periódica objetiva da capacidade de exercício — mas NÃO especifica um intervalo numérico padronizado (ex.: anual, a cada 2-3 anos). Não foi possível confirmar, nas fontes revisadas, uma periodicidade universalmente endossada para reavaliação cardiológica do adulto assintomático; essa lacuna é declarada explicitamente em vez de inventar um valor. Também não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia sobre acompanhamento cardiovascular do adulto com síndrome de Down nesta busca. Na prática, dado o risco documentado de valvopatia de início tardio (ver itens acima), adultos com Down sem cardiopatia congênita conhecida devem manter reavaliação cardiológica periódica, e aqueles com história de shunt ou hipertensão pulmonar devem ter seguimento mais próximo e individualizado (ecocardiograma e, quando indicado, cateterismo cardíaco direito).",
+        "origem_secao": "Bull et al. 2022, AAP Pediatrics (PMID 35490285): diretriz de supervisão de saúde, recomendação de ecocardiograma ao diagnóstico; Dimopoulos et al. 2023, Circulation (PMID 36716257): rastreio de HP como parte do cuidado vitalício, investigações em intervalos regulares sem número específico — gap declarado; nenhuma diretriz SBC específica localizada."
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
