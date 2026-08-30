@@ -76,6 +76,7 @@ test("navegação usa contexto clínico e elimina rotas duplicadas do catálogo"
   assert.equal(desktop.includes("No seu contexto"), true);
   assert.equal(mobile.includes("cc-mobile-more__context"), true);
   assert.equal(visualQa.includes("ancestor::details[1]"), true, "QA visual precisa abrir a seção antes de validar o link");
+  assert.equal(visualQa.includes("scrollIntoViewIfNeeded"), true, "QA visual precisa rolar a navegação progressiva antes de validar o link");
   for (const [source, name] of [[desktop, "desktop"], [mobile, "mobile"]]) {
     assert.equal((source.match(/to: "\/calculadoras"/g) ?? []).length, 1, `calculadoras duplicada no ${name}`);
     assert.equal((source.match(/to: "\/telediagnostico"/g) ?? []).length, 1, `telediagnóstico duplicado no ${name}`);

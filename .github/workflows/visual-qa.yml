@@ -294,6 +294,7 @@ jobs:
               if (await disclosure.count() && !await disclosure.getAttribute('open')) {
                 await disclosure.locator(':scope > summary').click();
               }
+              await link.scrollIntoViewIfNeeded().catch(() => {});
               if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature inacessível após abrir a seção ${href}`);
             }
             await desktop.context.close();
