@@ -186,3 +186,11 @@ deficiência de carnitina). Gates limpos, 10.216 registros totais.
 
 **Total canônico projetado após Lote 7**: 10.216 (10.189 revisado + 27
 pendente_revisao nesta branch).
+
+## Lote 8 — concluído (commit `9d17e656`, 30/08/2026)
+
+3 itens (crise adrenal, miocardite DRESS, FTAAD). Gates limpos, 10.219
+registros totais.
+
+**Total canônico projetado após Lote 8**: 10.219 (10.189 revisado + 30
+pendente_revisao nesta branch).
